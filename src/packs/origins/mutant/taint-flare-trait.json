@@ -1,0 +1,56 @@
+{
+  "_id": "LM0o1d9TaqZDjhU4",
+  "_key": "!items!LM0o1d9TaqZDjhU4",
+  "name": "GHOSTWIRE.Peoples.Mutant.TaintFlare.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/eyes/humanoid-single-red-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Mutant.TaintFlare.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "taint-flare",
+    "advancements": {
+      "JAujtpQYcsHxSolb": {
+        "name": "GHOSTWIRE.Peoples.Mutant.TaintFlare.Name",
+        "img": "icons/creatures/eyes/humanoid-single-red-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "JAujtpQYcsHxSolb",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.91UYvxXgCyETqxIh"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

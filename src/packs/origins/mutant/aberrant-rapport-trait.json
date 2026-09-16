@@ -1,0 +1,53 @@
+{
+  "_id": "dzbVd5iIaHGBULBC",
+  "_key": "!items!dzbVd5iIaHGBULBC",
+  "name": "GHOSTWIRE.Peoples.Mutant.AberrantRapport.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Mutant.AberrantRapport.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "aberrant-rapport",
+    "advancements": {
+      "phloB0LxDAmAb2Ri": {
+        "type": "skill",
+        "_id": "phloB0LxDAmAb2Ri",
+        "chooseN": 1,
+        "skills": {
+          "groups": [
+            "interpersonal"
+          ],
+          "choices": []
+        },
+        "name": "",
+        "img": null,
+        "description": "",
+        "requirements": {
+          "level": null
+        },
+        "sort": 0,
+        "repick": {}
+      }
+    },
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

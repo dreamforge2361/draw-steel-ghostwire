@@ -1,0 +1,90 @@
+{
+  "_id": "ZLOoBT1GCUlj7uZ0",
+  "_key": "!items!ZLOoBT1GCUlj7uZ0",
+  "name": "GHOSTWIRE.Peoples.Mutant.Name",
+  "type": "ancestry",
+  "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Mutant.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mutant",
+    "advancements": {
+      "naZdlT1bVvunetMK": {
+        "type": "itemGrant",
+        "_id": "naZdlT1bVvunetMK",
+        "name": "Signature Trait",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.dzbVd5iIaHGBULBC"
+          }
+        ],
+        "img": null,
+        "description": "",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "og8i2kLFkS6stO04": {
+        "name": "GHOSTWIRE.Peoples.Mutant.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "og8i2kLFkS6stO04",
+        "description": "GHOSTWIRE.Peoples.Mutant.PurchasedTraits.Description",
+        "chooseN": 3,
+        "additional": {
+          "type": "ancestryTrait",
+          "perkType": []
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.oSFPoMJn8orsYLUY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.ukswcD6uWCcwIg62"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.LM0o1d9TaqZDjhU4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.CQ1T0rjR6SbKe4VO"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.7xCzjYKMltkS2PiM"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.9MFaJjqNH5uGtN2s"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.a5qD9riHweABLtJO"
+          }
+        ],
+        "sort": 0,
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

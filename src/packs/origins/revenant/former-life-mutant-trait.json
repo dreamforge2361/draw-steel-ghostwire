@@ -3,7 +3,7 @@
   "_key": "!items!GDoxeZM9K62j9dgl",
   "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.Mutant.Name",
   "type": "ancestryTrait",
-  "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+  "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Peoples.Revenant.FormerLife.Mutant.Description",
@@ -33,7 +33,7 @@
     "draw-steel-ghostwire": {
       "formerLife": {
         "people": "mutant",
-        "folder": null
+        "folder": "OXyStO90oLoHDy47"
       }
     }
   }

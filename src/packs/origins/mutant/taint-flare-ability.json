@@ -1,0 +1,68 @@
+{
+  "_id": "91UYvxXgCyETqxIh",
+  "_key": "!items!91UYvxXgCyETqxIh",
+  "name": "GHOSTWIRE.Peoples.Mutant.TaintFlareAbility.Name",
+  "type": "ability",
+  "img": "icons/creatures/eyes/humanoid-single-red-brown.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "taint-flare",
+    "story": "GHOSTWIRE.Peoples.Mutant.TaintFlareAbility.Story",
+    "keywords": [],
+    "type": "triggered",
+    "category": "",
+    "resource": null,
+    "trigger": "Whenever you take damage from a creature.",
+    "distance": {
+      "type": "special",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Peoples.Mutant.TaintFlareAbility.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

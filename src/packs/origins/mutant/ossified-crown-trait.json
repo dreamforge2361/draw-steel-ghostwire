@@ -1,0 +1,80 @@
+{
+  "_id": "7xCzjYKMltkS2PiM",
+  "_key": "!items!7xCzjYKMltkS2PiM",
+  "name": "GHOSTWIRE.Peoples.Mutant.OssifiedCrown.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Mutant.OssifiedCrown.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ossified-crown",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "WjQxWva5Vjtpnyiw",
+      "_key": "!items.effects!7xCzjYKMltkS2PiM.WjQxWva5Vjtpnyiw",
+      "name": "GHOSTWIRE.Peoples.Mutant.OssifiedCrown.EffectName",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.7xCzjYKMltkS2PiM",
+      "img": "icons/creatures/mammals/beast-horned-scaled-glowing-orange.webp",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.save.threshold",
+            "value": 5,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "GHOSTWIRE.Peoples.Mutant.OssifiedCrown.EffectDescription",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

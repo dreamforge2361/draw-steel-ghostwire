@@ -1,0 +1,33 @@
+{
+  "_id": "oSFPoMJn8orsYLUY",
+  "_key": "!items!oSFPoMJn8orsYLUY",
+  "name": "GHOSTWIRE.Peoples.Mutant.BarbedMutation.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/abilities/stinger-poison-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Mutant.BarbedMutation.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "barbed-mutation",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

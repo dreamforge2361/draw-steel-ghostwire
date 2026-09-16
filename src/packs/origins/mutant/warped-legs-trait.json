@@ -1,0 +1,80 @@
+{
+  "_id": "ukswcD6uWCcwIg62",
+  "_key": "!items!ukswcD6uWCcwIg62",
+  "name": "GHOSTWIRE.Peoples.Mutant.WarpedLegs.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/abilities/paw-print-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Mutant.WarpedLegs.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "warped-legs",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "BeqDfRvWAn3gBOBM",
+      "_key": "!items.effects!ukswcD6uWCcwIg62.BeqDfRvWAn3gBOBM",
+      "name": "GHOSTWIRE.Peoples.Mutant.WarpedLegs.EffectName",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.ukswcD6uWCcwIg62",
+      "img": "icons/creatures/abilities/paw-print-orange.webp",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.value",
+            "value": 6,
+            "priority": 5,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "GHOSTWIRE.Peoples.Mutant.WarpedLegs.EffectDescription",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "OXyStO90oLoHDy47",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

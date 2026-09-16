@@ -240,6 +240,61 @@
           "MissingLineage": "{name} is a Changer without a Lineage. Open the Changer ancestry, find the Lineage advancement, and reconfigure it to choose Raven, Rat, or Wolf."
         }
       },
+      "Mutant": {
+        "Name": "Mutant",
+        "Description": "<p>Powerful, unstable, endlessly customizable — human clay reshaped by the Dark One’s touch.</p><p>Humans whose flesh has been rewritten — inherited taint, corrupted-zone exposure, magical accident, infernal bargain, or corp gene-forging. Born or made carries no mechanical difference. They are the People most directly marked by the cosmic war: living proof the Dark One’s touch can remake baseline humanity into something else.</p><h4>Mutant Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.dzbVd5iIaHGBULBC]{Aberrant Rapport}</p><h4>Purchased Mutant Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Warped Legs, Ossified Crown.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.oSFPoMJn8orsYLUY]{Barbed Mutation (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.ukswcD6uWCcwIg62]{Warped Legs (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.LM0o1d9TaqZDjhU4]{Taint Flare (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.CQ1T0rjR6SbKe4VO]{Taint Sight (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.7xCzjYKMltkS2PiM]{Ossified Crown (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.9MFaJjqNH5uGtN2s]{Prehensile Mutation (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.a5qD9riHweABLtJO]{Membrane Wings (2 Points)}</p><h4>Corruptive Flaw (optional)</h4><p>At creation you can pick a cosmetic Corruptive Flaw, such as Visible Taint, Hungering Cells, Unstable Form, Taint Sink, or Fractured Mind. It costs no ancestry points and has no mechanical effect: it is color for tells, roleplay, and scenes. There is no Corruption Load meter.</p>",
+        "PurchasedTraits": {
+          "Name": "Purchased Traits",
+          "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Warped Legs, Ossified Crown.)</p>"
+        },
+        "AberrantRapport": {
+          "Name": "Aberrant Rapport",
+          "Description": "<p>Your taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have one skill of your choice from the interpersonal skill group, and you gain an edge on tests when attempting to discover an NPC’s motivations and pitfalls during a negotiation.</p>"
+        },
+        "BarbedMutation": {
+          "Name": "Barbed Mutation",
+          "Description": "<p>A barbed spur, spine, or tendril punctuates your strikes. Once per round when you make a melee strike, you can deal extra damage with the strike equal to [[/damage max(@M,@A,@R,@I,@P)]]{your highest characteristic score}.</p>"
+        },
+        "WarpedLegs": {
+          "Name": "Warped Legs",
+          "Description": "<p>Your mutated legs make you faster. You have speed 6.</p>",
+          "EffectName": "Warped Legs",
+          "EffectDescription": "<p>Your mutated legs make you faster. You have speed 6.</p>"
+        },
+        "TaintFlare": {
+          "Name": "Taint Flare",
+          "Description": "<p>When your taint flares under stress, it lashes back. Whenever you take damage from a creature, you can use a triggered action to deal that creature psychic damage equal to [[/damage 1d10+@level type=psychic]]{1d10 + your level}.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.91UYvxXgCyETqxIh]{Taint Flare}</p>"
+        },
+        "TaintFlareAbility": {
+          "Name": "Taint Flare",
+          "Story": "Your taint flares under stress and lashes back.",
+          "Effect": "<p>You deal [[/damage 1d10+@level type=psychic]]{1d10 + your level psychic damage} to that creature.</p>"
+        },
+        "TaintSight": {
+          "Name": "Taint Sight",
+          "Description": "<p>Mutated eyes see through darkness, fog, and other obscuring effects. You don’t take a bane on strikes made against creatures with concealment.</p>"
+        },
+        "OssifiedCrown": {
+          "Name": "Ossified Crown",
+          "Description": "<p>Bone plates, horn-like growths, or a hardened cranial ridge mark your force of will. Whenever you make a saving throw, you succeed on a roll of 5 or higher.</p>",
+          "EffectName": "Ossified Crown",
+          "EffectDescription": "<p>Whenever you make a saving throw, you succeed on a roll of 5 or higher.</p>"
+        },
+        "PrehensileMutation": {
+          "Name": "Prehensile Mutation",
+          "Description": "<p>A prehensile tendril, extra limb, or living appendage lets you challenge foes on all sides. You can’t be flanked.</p>",
+          "EffectName": "Prehensile Mutation",
+          "EffectDescription": "<p>You can’t be flanked.</p>"
+        },
+        "MembraneWings": {
+          "Name": "Membrane Wings",
+          "Description": "<p>Patagia, bone-and-skin wings, or similar membranes are strong enough to take you airborne. While using them to fly, you can stay aloft for a number of rounds equal to [[lookup formula=\"max(@M, 1)\" evaluate=true]]{your Physique score (minimum 1 round)} before you fall. While flying at 3rd level or lower, you have damage weakness 5.</p><p>Enable a Membrane Wings effect on your sheet while you fly: echelon 1 (fly and damage weakness 5) at 3rd level or lower, or echelon 2+ (fly only) from 4th level.</p>",
+          "Echelon1Name": "Membrane Wings (echelon 1)",
+          "Echelon1Description": "<p>You fly. While flying at 3rd level or lower, you have damage weakness 5. You can stay aloft for a number of rounds equal to your Physique score (minimum 1 round) before you fall.</p>",
+          "Echelon2Name": "Membrane Wings (echelon 2+)",
+          "Echelon2Description": "<p>You fly. You can stay aloft for a number of rounds equal to your Physique score (minimum 1 round) before you fall.</p>"
+        }
+      },
       "Revenant": {
         "Name": "Revenant",
         "Description": "<p>The dead who refused to stay down — driven by unfinished vengeance.</p><p>No one is born a Revenant. A person who died with a burning purpose rises again, sustained by will, keeping memories and personality.</p><h4>Revenant Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo]{Tough But Withered}</p><p>Former Life (choose one People you were before you died):</p><ul><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.E50vuGbpRAR1tEiG]{Former Life: Pure Human}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.kcq8w02zX4pf8qxl]{Former Life: Corran}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.FOXPE9fot3N9Jxs4]{Former Life: Elvani}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.nCpyldyrfOVS3OG9]{Former Life: Goliar}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.X4ai6DF083LzFtjc]{Former Life: Changer}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GDoxeZM9K62j9dgl]{Former Life: Mutant}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.UYu7KmyAIL1xVGe7]{Former Life: Cyborg}</li></ul><h4>Purchased Revenant Traits</h4><p>You have 2 ancestry points to spend on the following traits, or 3 ancestry points if your size is 1S (use the Revenant (Small) ancestry). (Quick Build: Bloodless, plus Undead Influence if size 1S.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GpVnUPocyfBDlOLU]{Bloodless (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1e7sbAXjl4JFHKWl]{Previous Life: 1 Point (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.EFsFl4QlFNKWhojE]{Previous Life: 2 Points (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zSrXEtjbsdDzbPEY]{Undead Influence (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1CCRqQC3LzYkpAhs]{Vengeance Mark (2 Points)}</p>",
@@ -281,7 +336,7 @@
           },
           "Mutant": {
             "Name": "Former Life: Mutant",
-            "Description": "<p>You were a Mutant before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> The Mutant People isn’t in Ghostwire Origins yet, so Previous Life has no traits to pick from.</p>"
+            "Description": "<p>You were a Mutant before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Barbed Mutation, Taint Flare, Taint Sight, Warped Legs. 2-point: Membrane Wings, Ossified Crown, Prehensile Mutation.</p>"
           },
           "Cyborg": {
             "Name": "Former Life: Cyborg",
