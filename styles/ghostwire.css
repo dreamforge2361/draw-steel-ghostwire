@@ -1,0 +1,11 @@
+/* Draw Steel - Ghostwire Build
+ * Presentation hooks only. Keep Draw Steel system CSS untouched.
+ */
+
+:root {
+  --ghostwire-accent: #6ee7ff;
+}
+
+body.ghostwire-theme {
+  /* Theme tokens land here in a later pass. */
+}
