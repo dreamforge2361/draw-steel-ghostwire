@@ -70,7 +70,7 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.intimidate.edges",
+            "key": "system.skills.modifiers.intimidation.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",
@@ -110,28 +110,14 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.hide.edges",
+            "key": "system.skills.modifiers.stealth.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",
             "priority": null
           },
           {
-            "key": "system.skills.modifiers.sneak.edges",
-            "type": "add",
-            "value": 1,
-            "phase": "initial",
-            "priority": null
-          },
-          {
-            "key": "system.skills.modifiers.alertness.edges",
-            "type": "add",
-            "value": 1,
-            "phase": "initial",
-            "priority": null
-          },
-          {
-            "key": "system.skills.modifiers.search.edges",
+            "key": "system.skills.modifiers.perception.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",

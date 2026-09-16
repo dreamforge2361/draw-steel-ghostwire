@@ -59,7 +59,7 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.mechanics.edges",
+            "key": "system.skills.modifiers.repair.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",

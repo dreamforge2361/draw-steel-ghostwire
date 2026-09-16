@@ -42,6 +42,62 @@
         "Description": "<p>A creature can take the Drive move action only while piloting a vehicle. When a creature takes the Drive move action, they cause their vehicle to move up to the vehicle’s speed, taking the driver and any passengers with it. Alternatively, a creature can use the Drive move action to have their vehicle use the Disengage move action as a free triggered action. A creature can use the Drive move action only once per round. A vehicle can only have this move action applied to it once per round. This movement can be broken up with the driver’s maneuver and main action however they wish.</p>"
       }
     },
+    "Skills": {
+      "Groups": {
+        "Action": "Action",
+        "Technical": "Technical",
+        "Knowledge": "Knowledge",
+        "Social": "Social",
+        "Vehicle": "Vehicle & Drone",
+        "Magic": "Magic & Supernatural"
+      },
+      "List": {
+        "Athletics": "Athletics",
+        "Brawl": "Brawl",
+        "Melee": "Melee",
+        "Firearms": "Firearms",
+        "HeavyWeapons": "Heavy Weapons",
+        "Stealth": "Stealth",
+        "Acrobatics": "Acrobatics",
+        "Perception": "Perception",
+        "Survival": "Survival",
+        "Hacking": "Hacking",
+        "Electronics": "Electronics",
+        "Engineering": "Engineering",
+        "Repair": "Repair",
+        "Cybertech": "Cybertech",
+        "Medicine": "Medicine",
+        "Demolitions": "Demolitions",
+        "SecuritySystems": "Security Systems",
+        "Streetwise": "Streetwise",
+        "Corporate": "Corporate",
+        "History": "History",
+        "Occult": "Occult",
+        "Religion": "Religion",
+        "MatrixTheory": "Matrix Theory",
+        "MedicineLore": "Medicine Lore",
+        "Xenology": "Xenology",
+        "Negotiation": "Negotiation",
+        "Persuasion": "Persuasion",
+        "Deception": "Deception",
+        "Intimidation": "Intimidation",
+        "Command": "Command",
+        "Insight": "Insight",
+        "Performance": "Performance",
+        "Contacts": "Contacts",
+        "Driving": "Driving",
+        "Piloting": "Piloting",
+        "Rigging": "Rigging",
+        "Gunnery": "Gunnery",
+        "Navigation": "Navigation",
+        "Spellcraft": "Spellcraft",
+        "Rituals": "Rituals",
+        "Warding": "Warding",
+        "Resonance": "Resonance",
+        "Corruption": "Corruption",
+        "Summoning": "Summoning"
+      }
+    },
     "Integrity": {
       "Label": "Body Integrity",
       "Current": "Current",
@@ -62,8 +118,8 @@
       },
       "CyberEyes": {
         "Name": "Cyber-Eyes",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Eyes / Optics · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥2,000 · <strong>Availability:</strong> Professional</p><p>An optical suite with low-light, thermal, magnification, and recording modes. You gain an edge on Alertness and Search tests (automated). You also ignore the bane from darkness or smoke on strikes (apply manually). Cyber-eyes are a discrete, destroyable target for called shots.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Eyes / Optics slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>Edge on Alertness and Search tests. Ignore darkness or smoke banes on strikes (apply manually).</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Eyes / Optics · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥2,000 · <strong>Availability:</strong> Professional</p><p>An optical suite with low-light, thermal, magnification, and recording modes. You gain an edge on Perception tests (automated). You also ignore the bane from darkness or smoke on strikes (apply manually). Cyber-eyes are a discrete, destroyable target for called shots.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Eyes / Optics slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Edge on Perception tests. Ignore darkness or smoke banes on strikes (apply manually).</p>"
       },
       "ReactionEnhancer": {
         "Name": "Reaction Enhancer",
@@ -82,8 +138,8 @@
       },
       "VocalModulator": {
         "Name": "Vocal Modulator",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 1 · <strong>Price:</strong> ¥800 · <strong>Availability:</strong> Professional</p><p>A laryngeal implant that reshapes pitch, timbre, and accent on command, or mimics a voice you’ve recorded. You gain an edge on Lie tests when your voice sells the deception (automated as an edge on Lie). Face chrome — a Soft/bioware version reads as less obviously artificial.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 1 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>Edge on Lie tests.</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 1 · <strong>Price:</strong> ¥800 · <strong>Availability:</strong> Professional</p><p>A laryngeal implant that reshapes pitch, timbre, and accent on command, or mimics a voice you’ve recorded. You gain an edge on Deception tests when your voice sells the lie (automated). Face chrome — a Soft/bioware version reads as less obviously artificial.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 1 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Edge on Deception tests.</p>"
       },
       "ImplantWeapon": {
         "Name": "Implant Weapon (Spur)",
@@ -97,23 +153,23 @@
       },
       "CyberEars": {
         "Name": "Cyber-Ears",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Ears / Aural · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥1,800 · <strong>Availability:</strong> Professional</p><p>An audio suite with amplification, spatial tracking, dampers against sudden noise, and live translation. You gain an edge on Eavesdrop tests (automated), and on Alertness tests that rely on hearing (apply manually; this doesn’t stack with Cyber-Eyes for the same test).</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Ears / Aural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>Edge on Eavesdrop tests. Edge on hearing-based Alertness tests (manual).</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Ears / Aural · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥1,800 · <strong>Availability:</strong> Professional</p><p>An audio suite with amplification, spatial tracking, dampers against sudden noise, and live translation. You gain an edge on Perception tests (automated). This doesn’t stack with the Perception edge from Cyber-Eyes.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Ears / Aural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Edge on Perception tests (doesn’t stack with Cyber-Eyes).</p>"
       },
       "RunningGear": {
         "Name": "Running Gear",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Legs / Locomotion · <strong>Body Integrity:</strong> 3 · <strong>Price:</strong> ¥2,500 · <strong>Availability:</strong> Professional</p><p>Reinforced leg actuators and shock-absorbing joints. Your speed increases by 1, and you gain an edge on Jump tests (both automated). This doesn’t stack with another speed bonus from chrome that serves the same purpose — take the better.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 3 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Legs / Locomotion slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>+1 speed. Edge on Jump tests.</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Legs / Locomotion · <strong>Body Integrity:</strong> 3 · <strong>Price:</strong> ¥2,500 · <strong>Availability:</strong> Professional</p><p>Reinforced leg actuators and shock-absorbing joints. Your speed increases by 1, and you gain an edge on Athletics tests (both automated; doesn’t stack with Muscle / Bone Lacing’s Athletics edge). This doesn’t stack with another speed bonus from chrome that serves the same purpose — take the better.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 3 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Legs / Locomotion slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 speed. Edge on Athletics tests.</p>"
       },
       "Skillwires": {
         "Name": "Skillwires / Encephalon",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 4 · <strong>Price:</strong> ¥5,000 · <strong>Availability:</strong> Restricted</p><p>A skillsoft socket and co-processor that loads expertise directly into muscle memory. The default skillsoft gives an edge on Mechanics tests (automated). To load a different skillsoft, edit this implant’s effect and change the skill in the key (for example <code>system.skills.modifiers.sneak.edges</code>). Neural chrome erodes magic heavily.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 4 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>Loaded skillsoft: edge on Mechanics tests (edit the effect key to swap the skill).</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 4 · <strong>Price:</strong> ¥5,000 · <strong>Availability:</strong> Restricted</p><p>A skillsoft socket and co-processor that loads expertise directly into muscle memory. The default skillsoft gives an edge on Repair tests (automated). To load a different skillsoft, edit this implant’s effect and change the skill in the key (for example <code>system.skills.modifiers.hacking.edges</code>). Neural chrome erodes magic heavily.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 4 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Loaded skillsoft: edge on Repair tests (edit the effect key to swap the skill).</p>"
       },
       "MuscleBoneLacing": {
         "Name": "Muscle / Bone Lacing",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Torso / Core · <strong>Body Integrity:</strong> 5 · <strong>Price:</strong> ¥6,000 · <strong>Availability:</strong> Restricted</p><p>Synthetic muscle bundles and ceramic-laced bone. Your stability increases by 1, and you gain an edge on Lift tests (both automated). Heavy Integrity draw.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 5 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Torso / Core slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>+1 stability. Edge on Lift tests.</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Torso / Core · <strong>Body Integrity:</strong> 5 · <strong>Price:</strong> ¥6,000 · <strong>Availability:</strong> Restricted</p><p>Synthetic muscle bundles and ceramic-laced bone. Your stability increases by 1, and you gain an edge on Athletics tests (both automated; doesn’t stack with Running Gear’s Athletics edge). Heavy Integrity draw.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 5 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Torso / Core slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 stability. Edge on Athletics tests.</p>"
       },
       "WiredReflexes": {
         "Name": "Wired Reflexes",
@@ -422,9 +478,9 @@
       },
       "SynthWeave": {
         "Name": "Synth-Weave Coat",
-        "Description": "<p><strong>Price:</strong> ¥800 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> No armor (does not count as Kit armor)</p><p>Light adaptive-fiber coat for no-armor runners. It doesn’t satisfy light, medium, or heavy armor and never grants Kit armor Stamina.</p><p><strong>Effect (provisional):</strong> Worn: edge on Hide tests (the fabric shifts to match shadows). No Stamina. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "Description": "<p><strong>Price:</strong> ¥800 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> No armor (does not count as Kit armor)</p><p>Light adaptive-fiber coat for no-armor runners. It doesn’t satisfy light, medium, or heavy armor and never grants Kit armor Stamina.</p><p><strong>Effect (provisional):</strong> Worn: edge on Stealth tests (the fabric shifts to match shadows). No Stamina. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
         "EffectName": "Synth-Weave Coat",
-        "EffectDescription": "<p>Worn: edge on Hide tests (the fabric shifts to match shadows). No Stamina.</p>"
+        "EffectDescription": "<p>Worn: edge on Stealth tests (the fabric shifts to match shadows). No Stamina.</p>"
       },
       "EnsnaringNet": {
         "Name": "Tangle-Net Launcher",
@@ -466,8 +522,8 @@
         },
         "Perseverance": {
           "Name": "Perseverance",
-          "Description": "<p>Giving up is for other people. You gain an edge on tests made using the Endurance skill. Additionally, when you are slowed, your speed is reduced to 3 instead of 2.</p>",
-          "EffectDescription": "<p>You gain an edge on tests made using the Endurance skill. Additionally, when you are slowed, your speed is reduced to 3 instead of 2.</p>"
+          "Description": "<p>Giving up is for other people. You gain an edge on tests made using the Athletics skill when endurance is what’s being tested. Additionally, when you are slowed, your speed is reduced to 3 instead of 2.</p>",
+          "EffectDescription": "<p>You gain an edge on tests made using the Athletics skill when endurance is what’s being tested. Additionally, when you are slowed, your speed is reduced to 3 instead of 2.</p>"
         },
         "ResistTheUnnatural": {
           "Name": "Resist the Unnatural",
@@ -527,7 +583,7 @@
         },
         "CorpGlamor": {
           "Name": "Corp Glamor",
-          "Description": "<p>A carefully cultivated presence makes others perceive you as interesting and engaging, granting you an edge on Persona tests using the Flirt or Persuade skills. This glamor makes you appear and sound slightly different to each creature you meet, since what is engaging to one might be different for another. However, you never appear to be anyone other than yourself.</p>"
+          "Description": "<p>A carefully cultivated presence makes others perceive you as interesting and engaging, granting you an edge on Persona tests using the Persuasion skill. This glamor makes you appear and sound slightly different to each creature you meet, since what is engaging to one might be different for another. However, you never appear to be anyone other than yourself.</p>"
         },
         "GlamorOfTerror": {
           "Name": "Glamor of Terror",
@@ -659,11 +715,11 @@
           },
           "Hybrid": {
             "Name": "Form: Hybrid",
-            "Description": "<p>You gain an edge on Intimidation tests (automated as an edge on Intimidate). Your melee free strikes deal +1 damage (not automated — add it to the roll). You are visibly a war-beast and can’t pass as human.</p>"
+            "Description": "<p>You gain an edge on Intimidation tests (automated). Your melee free strikes deal +1 damage (not automated — add it to the roll). You are visibly a war-beast and can’t pass as human.</p>"
           },
           "Beast": {
             "Name": "Form: Beast",
-            "Description": "<p>You gain an edge on Stealth and Perception tests (automated as edges on Hide, Sneak, Alertness, and Search). You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p>"
+            "Description": "<p>You gain an edge on Stealth and Perception tests (automated). You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p>"
           }
         },
         "Warnings": {
@@ -679,7 +735,7 @@
         },
         "AberrantRapport": {
           "Name": "Aberrant Rapport",
-          "Description": "<p>Your taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have one skill of your choice from the interpersonal skill group, and you gain an edge on tests when attempting to discover an NPC’s motivations and pitfalls during a negotiation.</p>"
+          "Description": "<p>Your taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have one skill of your choice from the social skill group, and you gain an edge on tests when attempting to discover an NPC’s motivations and pitfalls during a negotiation.</p>"
         },
         "BarbedMutation": {
           "Name": "Barbed Mutation",
@@ -754,7 +810,7 @@
         },
         "AuxiliaryLimbsAthletics": {
           "Name": "Auxiliary Limbs — Athletics",
-          "Description": "<p>You gain an edge on Climb, Gymnastics, or Swim tests when you can use all your limbs.</p>"
+          "Description": "<p>You gain an edge on Athletics and Acrobatics tests when you can use all your limbs.</p>"
         },
         "AuxiliaryLimbsCombat": {
           "Name": "Auxiliary Limbs — Combat",

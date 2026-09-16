@@ -59,15 +59,8 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.alertness.edges",
-            "type": "add",
-            "value": 1,
-            "phase": "initial",
-            "priority": null
-          },
-          {
-            "key": "system.skills.modifiers.search.edges",
-            "type": "add",
+            "key": "system.skills.modifiers.perception.edges",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null

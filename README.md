@@ -72,12 +72,71 @@ Use Foundry **Install Module** / update from:
 - `0.1.16` — Ghostwire Chrome now has 13 Standard implants, each with a price and Availability (the header line in its description, plus a line under the name on the item sheet). New implants: Vocal Modulator, Implant Weapon (grants Spur Strike), Internal Air / Filtration, Cyber-Ears, Running Gear, Skillwires / Encephalon, Muscle / Bone Lacing, and Wired Reflexes. Location slot caps are enforced (Nervous System 1, so Reaction Enhancer and Wired Reflexes can’t stack).
 - `0.1.17` — **Ghostwire Kits** compendium with all 21 Kits in role folders, cloned from the Draw Steel kits with stock bonus numbers as a provisional benchmark and reskinned signature abilities. The Duelist signature uses the Tech keyword instead of Psionic. Kit sheets relabel weapon categories: Firearm / Bow, Unarmed / Cyberlimb, Whip / Monowhip.
 - `0.1.18` — **Ghostwire Gear** compendium: 17 Kit-qualifying weapons, shields, and special gear plus 4 armors, each with ¥, Availability, and the Kit categories it satisfies (in the description header and under the name on the item sheet). Street gear adds no numbers because the Kit supplies doctrine. Armor Stamina is a no-Kit-only toggle, and a few premium items have small wielded toggles.
+- `0.1.19` — **Ghostwire skills**: the 44 skills in 6 groups (Action, Technical, Knowledge, Social, Vehicle & Drone, Magic & Supernatural) replace the Draw Steel skill list everywhere skills are picked or shown. Draw Steel skill and group grants (stock Backgrounds, Professions, classes) translate to Ghostwire skills. Module content that referenced Draw Steel skills now uses Ghostwire skills.
 
 ## Origins pack layout (Ghostwire Ancestries)
 
 The pack id and path are `origins`; Foundry shows it as **Ghostwire Ancestries** (`GHOSTWIRE.COMPENDIUM.origins`). Keep the id so UUIDs stay stable.
 
 Each People gets one compendium Folder named after it (Pure Human, Corran, Elvani, …). The People's ancestry and all of its traits and abilities go inside that folder, never at the pack root. The source mirrors this: `src/packs/origins/<people>/` holds a `_folder.json` (the Folder document) plus that People's items, and each item's `folder` is set to that Folder's `_id`. The build fails if an item's `folder` doesn't match its directory.
+
+## Skills (v1)
+
+Rules: `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`. Skills use the five Ghostwire characteristics (Physique, Reflex, Logic, Instinct, Persona); the social skill is **Insight**.
+
+- **How:** `scripts/skills.mjs` replaces `ds.CONFIG.skills.groups` and `ds.CONFIG.skills.list` during `init` (Draw Steel localizes them afterwards), so the hero sheet, skill pickers, and test rolls show only Ghostwire skills, grouped. Keys are camelCase (`firearms`, `securitySystems`, `matrixTheory`, …); effects use `system.skills.modifiers.<key>.edges`.
+- **Draw Steel grants:** skill advancements that name Draw Steel skills or groups — stock Backgrounds, Professions, and classes — are translated when the picker opens. A Draw Steel skill becomes its Ghostwire skill below; a Draw Steel group becomes the Ghostwire skills its members map to (for example *interpersonal* offers Command, Deception, Insight, Intimidation, Negotiation, Performance, Persuasion, and Survival from Handle Animals). If two Draw Steel skills map to the same Ghostwire skill, the grant offers it once.
+- **Module content updated to Ghostwire keys:** Cyber-Eyes and Cyber-Ears (Perception), Running Gear and Muscle / Bone Lacing (Athletics), Skillwires (Repair), Vocal Modulator (Deception), Synth-Weave Coat (Stealth), Changer Forms (Stealth, Perception, Intimidation), Auxiliary Limbs — Athletics (Athletics, Acrobatics), Corp Glamor (Persuasion), Perseverance (Athletics), Aberrant Rapport (social group). Chrome edges on the same skill don’t stack.
+- **Existing heroes:** skills they already picked under Draw Steel keys no longer display. Re-pick them (or re-run the skill advancement) on heroes made before this version.
+
+| Group | Skills |
+|---|---|
+| Action | Athletics, Brawl, Melee, Firearms, Heavy Weapons, Stealth, Acrobatics, Perception, Survival |
+| Technical | Hacking, Electronics, Engineering, Repair, Cybertech, Medicine, Demolitions, Security Systems |
+| Knowledge | Streetwise, Corporate, History, Occult, Religion, Matrix Theory, Medicine Lore, Xenology |
+| Social | Negotiation, Persuasion, Deception, Intimidation, Command, Insight, Performance, Contacts |
+| Vehicle & Drone | Driving, Piloting, Rigging, Gunnery, Navigation |
+| Magic & Supernatural | Spellcraft, Rituals, Warding, Resonance, Corruption, Summoning |
+
+**Draw Steel → Ghostwire skill map** (used to translate stock grants)
+
+| Ghostwire skill | Draw Steel skills |
+|---|---|
+| Athletics | Climb, Endurance, Jump, Lift, Swim |
+| Stealth | Conceal Object, Hide, Pick Pocket, Sneak |
+| Acrobatics | Gymnastics, Escape Artist |
+| Perception | Alertness, Eavesdrop, Search |
+| Survival | Cooking, Handle Animals, Track, Nature |
+| Electronics | Jewelry |
+| Engineering | Architecture, Carpentry |
+| Repair | Blacksmithing, Fletching, Mechanics, Tailoring |
+| Medicine | Heal |
+| Demolitions | Sabotage |
+| Security Systems | Pick Lock |
+| Streetwise | Criminal Underworld, Rumors |
+| Corporate | Society |
+| History | Culture, History |
+| Occult | Magic, Monsters |
+| Religion | Religion |
+| Matrix Theory | Timescape |
+| Medicine Lore | Alchemy |
+| Negotiation | Gamble |
+| Persuasion | Flirt, Persuade |
+| Deception | Forgery, Lie, Disguise |
+| Intimidation | Interrogate, Intimidate |
+| Command | Lead, Strategy |
+| Insight | Empathize, Read Person |
+| Performance | Brag, Music, Perform |
+| Driving | Drive, Ride |
+| Navigation | Navigate |
+| Resonance | Psionics |
+
+**Test click-path**
+
+1. Create a new hero → **Stats** tab → switch to **Edit** mode → open the skills selector: it lists only Ghostwire skills in six groups (Firearms, Hacking, Streetwise, Insight, …) — no Alchemy, Blacksmithing, or other crafting skills.
+2. Drag **Mutant** from **Ghostwire Ancestries**: Aberrant Rapport asks for one **Social** skill (Insight, Persuasion, …).
+3. Add a stock Draw Steel Background (culture) or Profession (career) with a skill choice: the picker offers Ghostwire skills.
+4. Drag **Cyber-Eyes** from **Ghostwire Chrome**: roll a Perception test — it has an edge.
 
 ## Kits (v1)
 

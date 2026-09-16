@@ -59,7 +59,7 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.lie.edges",
+            "key": "system.skills.modifiers.deception.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",

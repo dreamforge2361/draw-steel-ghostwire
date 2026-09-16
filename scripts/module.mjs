@@ -1,3 +1,5 @@
+import { registerGhostwireSkills } from "./skills.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 
 // Draw Steel copies ds.CONFIG.hero.defaultItems onto every new hero.
@@ -29,6 +31,7 @@ Hooks.once("init", () => {
   // Draw Steel localizes keyword labels at i18nInit, after this hook.
   ds.CONFIG.abilities.keywords.tech ??= { label: "GHOSTWIRE.Abilities.Keywords.Tech" };
 
+  registerGhostwireSkills();
   patchPreviousLifeFilter();
 });
 

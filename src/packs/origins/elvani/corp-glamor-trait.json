@@ -9,11 +9,19 @@
       "value": "GHOSTWIRE.Peoples.Elvani.CorpGlamor.Description",
       "director": ""
     },
-    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
     "_dsid": "corp-glamor",
     "advancements": {},
     "points": null,
-    "prerequisites": { "value": "", "dsid": [], "level": null }
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
   },
   "effects": [
     {
@@ -25,14 +33,26 @@
       "type": "base",
       "description": "GHOSTWIRE.Peoples.Elvani.CorpGlamor.Description",
       "system": {
-        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
         "changes": [
-          { "key": "system.skills.modifiers.flirt.edges", "type": "add", "value": 1, "phase": "initial", "priority": null },
-          { "key": "system.skills.modifiers.persuade.edges", "type": "add", "value": 1, "phase": "initial", "priority": null }
+          {
+            "key": "system.skills.modifiers.persuasion.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
         ]
       },
       "disabled": false,
-      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
       "tint": "#ffffff",
       "transfer": true,
       "statuses": [],
@@ -43,6 +63,8 @@
   ],
   "folder": "8ZeBJDKQYdnngrIY",
   "sort": 0,
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {}
 }

@@ -9,11 +9,19 @@
       "value": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Description",
       "director": ""
     },
-    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
     "_dsid": "perseverance",
     "advancements": {},
     "points": 1,
-    "prerequisites": { "value": "", "dsid": [], "level": null }
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
   },
   "effects": [
     {
@@ -25,14 +33,33 @@
       "type": "base",
       "description": "GHOSTWIRE.Peoples.PureHuman.Perseverance.EffectDescription",
       "system": {
-        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
         "changes": [
-          { "key": "system.statuses.slowed.speed", "type": "override", "value": 3, "phase": "initial", "priority": 5 },
-          { "key": "system.skills.modifiers.endurance.edges", "type": "add", "value": 1, "phase": "initial", "priority": null }
+          {
+            "key": "system.statuses.slowed.speed",
+            "type": "override",
+            "value": 3,
+            "phase": "initial",
+            "priority": 5
+          },
+          {
+            "key": "system.skills.modifiers.athletics.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
         ]
       },
       "disabled": false,
-      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
       "tint": "#ffffff",
       "transfer": true,
       "statuses": [],
@@ -43,6 +70,8 @@
   ],
   "folder": "mPByk1DZrfGgfSPX",
   "sort": 0,
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {}
 }

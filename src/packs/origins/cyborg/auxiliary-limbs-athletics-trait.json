@@ -34,21 +34,14 @@
       "system": {
         "changes": [
           {
-            "key": "system.skills.modifiers.climb.edges",
+            "key": "system.skills.modifiers.athletics.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",
             "priority": null
           },
           {
-            "key": "system.skills.modifiers.gymnastics.edges",
-            "type": "add",
-            "value": 1,
-            "phase": "initial",
-            "priority": null
-          },
-          {
-            "key": "system.skills.modifiers.swim.edges",
+            "key": "system.skills.modifiers.acrobatics.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",

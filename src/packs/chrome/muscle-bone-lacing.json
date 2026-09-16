@@ -66,8 +66,8 @@
             "priority": null
           },
           {
-            "key": "system.skills.modifiers.lift.edges",
-            "type": "add",
+            "key": "system.skills.modifiers.athletics.edges",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null

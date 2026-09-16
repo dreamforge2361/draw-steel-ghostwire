@@ -59,7 +59,7 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.hide.edges",
+            "key": "system.skills.modifiers.stealth.edges",
             "type": "add",
             "value": 1,
             "phase": "initial",

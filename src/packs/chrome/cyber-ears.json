@@ -59,8 +59,8 @@
         },
         "changes": [
           {
-            "key": "system.skills.modifiers.eavesdrop.edges",
-            "type": "add",
+            "key": "system.skills.modifiers.perception.edges",
+            "type": "upgrade",
             "value": 1,
             "phase": "initial",
             "priority": null
