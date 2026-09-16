@@ -39,7 +39,7 @@ You are a quintessential **Edgerunner** — the setting's term for the deniable-
 
 | Stat | Value |
 |---|---|
-| **Core Characteristics** | Persona (Presence) — primary; Instinct (Intuition) — secondary |
+| **Core Characteristics** | Persona — primary; Instinct — secondary |
 | **Heroic Resource** | Influence |
 | **Epic Resource / Capstone** | Command (10th level) |
 | **Potency: Weak / Average / Strong** | Persona − 2 / Persona − 1 / Persona (command effects); Instinct scales read-based Influence generation per Q5=B |
@@ -49,14 +49,14 @@ You are a quintessential **Edgerunner** — the setting's term for the deniable-
 | **Kit Slot** | Light — most Commander/Face builds work through allies, not a personal weapon; a bodyguard-Commander (Corp-Exec enforcer) or street-enforcer (Street-Fixer with heavy backup) may take a light weapon Kit |
 | **Skills** | **Leadership/Command** and **Persuasion/Negotiation** are the class's two anchor skills — spend **at least half your starting Skill Points** on them, per the Class-framework rule. **Instinct**-keyed reading (motivations, pitfalls, tells) rounds out the baseline. A fourth free pick follows your subclass: **Corporate/Bureaucracy** or **Etiquette** (Corp-Exec), **Streetwise** (Street-Fixer), or **Performance** (Bard). |
 
-*Design note (chassis rationale, per DS Tactician's baseline stats + GHOSTWIRE's command-and-negotiate identity): the Commander/Face mirrors the Tactician's Stamina/Recoveries curve exactly (21 starting, +9/level, 10 Recoveries) — a mid-weight frame appropriate for a class that stands near the front of a fight directing it, without being built to absorb the front line's punishment the way the Operator is. Species mods stack on top of the class chassis in the standard way. Potency is dual-tracked per Q5=B: command-flavored Power Rolls (Command Persona, Fearful Awe, Battle Cry, Turn the Tide's combat mode) key their tiers to **Persona**, while Instinct governs how efficiently the class generates Influence off successful reads rather than gating a separate potency track of its own.*
+*Design note (chassis rationale, per DS Tactician's baseline stats + GHOSTWIRE's command-and-negotiate identity): the Commander/Face mirrors the Tactician's Stamina/Recoveries curve exactly (21 starting, +9/level, 10 Recoveries) — a mid-weight frame appropriate for a class that stands near the front of a fight directing it, without being built to absorb the front line's punishment the way the Operator is. Species mods stack on top of the class chassis in the standard way. Potency is dual-tracked per Q5=B: command-flavored Power Rolls (Command Persona, Fearful Awe, Battle Cry, Turn the Tide's combat mode) key their potency to **Persona**, while Instinct governs how efficiently the class generates Influence off successful reads rather than gating a separate potency track of its own.*
 
 **No Wired, no Veil.** The Commander/Face is fully mundane — reliable, always-available leadership and negotiation with no supernatural or digital infrastructure required. Per Design Ruling #6, this is now true of **every** subclass, including the Bard.
 
 **Characteristic Increases:**
-- **4th level:** Persona (Presence) and Instinct (Intuition) each rise to 3.
+- **4th level:** Persona and Instinct each rise to 3.
 - **7th level:** all five characteristics rise by +1 (max 4).
-- **10th level:** Persona (Presence) and Instinct (Intuition) each rise to 5.
+- **10th level:** Persona and Instinct each rise to 5.
 
 **Advancement table shape:** DS levels 1-10, matching the Hacker/Elementalist/Operator/Wrench/Street Priest/Medic masters — see the **Level 1-10 Progression Table**, below, for the full level-by-level breakdown of features, abilities, and doctrine grants.
 
@@ -115,7 +115,7 @@ Per **Q2 = Both**, the Commander/Face's signature "designate the important actor
 >
 > **Passive benefit.** You and your allies gain an **edge on Persona-based argument rolls** against the Marked NPC for the rest of the scene.
 >
-> **Enhance (spend 1 Influence, free triggered).** When an ally makes an argument against the Marked NPC and wins it (Outcome Tier 1 or Tier 2), choose **one**:
+> **Enhance (spend 1 Influence, free triggered).** When an ally makes an argument against the Marked NPC and wins it (a middle or high result), choose **one**:
 > - Learn a second piece of information about the NPC
 > - Grant that ally an edge on their **next** argument roll in this scene
 > - Bump the NPC's **Interest track** up one step immediately
@@ -156,13 +156,13 @@ You have **four** signatures — all free, at-will, from 1st level, all enhanced
 
 ---
 
-### Heroic Abilities — Cost Tiers 1 Through 11
+### Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen by cost tier as you level, layered on top of the always-on Signature kit above. On our reversed Outcome Tiers (Tier 1 = 17+ = best, Tier 2 = 12-16, Tier 3 = ≤11 = worst). Costs mirror the Draw Steel caster ladder shared by every GHOSTWIRE class: **1 / 3 / 5 / 7 / 9 / 11.**
+Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+). Costs mirror the Draw Steel caster ladder shared by every GHOSTWIRE class: **1 / 3 / 5 / 7 / 9 / 11.**
 
-#### 1-Cost Tier (chosen at 1st level)
+#### 1-Cost Band (chosen at 1st level)
 
-*The DS Tactician SRD has no 1-cost band (its ladder runs 3/5/7/9/11), but canon's own Face chapter names **Seize the Initiative** directly at cost 1. **A Word** is a GHOSTWIRE-original invention filling out the tier to match the Hacker/Elementalist/Operator/Wrench/Street Priest/Medic templates' ladder shape, all of which open at cost 1. Flagged for Michael's sign-off — see Part 2, Known Bugs #2.*
+*The DS Tactician SRD has no 1-cost band (its ladder runs 3/5/7/9/11), but canon's own Face chapter names **Seize the Initiative** directly at cost 1. **A Word** is a GHOSTWIRE-original invention filling out the band to match the Hacker/Elementalist/Operator/Wrench/Street Priest/Medic templates' ladder shape, all of which open at cost 1. Flagged for Michael's sign-off — see Part 2, Known Bugs #2.*
 
 > **Seize the Initiative** *(canon, 1 Influence, maneuver)*
 > Grant an ally within Ranged 10 an **immediate free move** (up to their speed), OR **one triggered strike** against a target within their weapon range, OR let an ally who hasn't acted yet **swap into initiative order** to act immediately after you.
@@ -172,9 +172,9 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 > Grant an ally within Ranged 10 either **+1 to their next Power Roll this round**, OR **clear one minor morale/social condition** on them (fear, taunted, frightened).
 > *A quiet aside at exactly the right moment — the cheapest possible spend when every other point of Influence is earmarked for something bigger.*
 
-#### 3-Cost Tier (chosen at 1st level)
+#### 3-Cost Band (chosen at 1st level)
 
-*Coordinated Assault and Command Persona/Fearful Awe are canon, named directly in the Face's class chapter. Battle Cry and Concussive Command are reskinned wholesale from the DS Tactician's own 3-cost tier (Battle Cry, Concussive Strike), preserved verbatim in grammar and mechanically retextured for the Face. Flagged for Michael's sign-off — see Part 2, Known Bugs #3.*
+*Coordinated Assault and Command Persona/Fearful Awe are canon, named directly in the Face's class chapter. Battle Cry and Concussive Command are reskinned wholesale from the DS Tactician's own 3-cost band (Battle Cry, Concussive Strike), preserved verbatim in grammar and mechanically retextured for the Face. Flagged for Michael's sign-off — see Part 2, Known Bugs #3.*
 
 > **Coordinated Assault** *(canon, 3 Influence, main action)*
 > *Ranged 10 · Target: up to 3 allies in area/within range*
@@ -183,23 +183,23 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Command Persona / Fearful Awe** *(canon, 3 Influence, main action)*
 > Choose one mode:
-> - **Command Presence:** 3-cube in Ranged 10; **you make one Power Roll + Persona**. The tier of success determines how many enemies in the area are affected and the effect applied to each. On **≤11 (Tier 3)**: only the enemy nearest to the cube's center is affected, and takes a **bane** on its next Power Roll. On **12-16 (Tier 2)**: up to **2** enemies of your choice in the area are **taunted by you** until the end of their next turn. On **17+ (Tier 1)**: up to **3** enemies of your choice in the area are **taunted by you** until the end of their next turn AND take a **bane** on their next Power Roll. *(Grammar note per Michael's 2026-07-29 ruling: the hero rolls, and the tier of success cascades to determine how many enemies are impacted — this replaces the earlier per-target save-style resolution.)*
-> - **Fearful Awe:** one target within Ranged 10; Power Roll + Persona. Tier 1: the target is **frightened of you, save ends**. Tier 2: **taunted** by you until end of its next turn. Tier 3: the target is **Weakened** for 1 round.
+> - **Command Presence:** 3-cube in Ranged 10; **you make one Power Roll + Persona**. The tier of success determines how many enemies in the area are affected and the effect applied to each. On **≤11 (low)**: only the enemy nearest to the cube's center is affected, and takes a **bane** on its next Power Roll. On **12–16 (middle)**: up to **2** enemies of your choice in the area are **taunted by you** until the end of their next turn. On **17+ (high)**: up to **3** enemies of your choice in the area are **taunted by you** until the end of their next turn AND take a **bane** on their next Power Roll. *(Grammar note per Michael's 2026-07-29 ruling: the hero rolls, and the result band cascades to determine how many enemies are impacted — this replaces the earlier per-target save-style resolution.)*
+> - **Fearful Awe:** one target within Ranged 10; Power Roll + Persona. high (17+): the target is **frightened of you, save ends**. middle (12–16): **taunted** by you until end of its next turn. low (≤11): the target is **Weakened** for 1 round.
 > *The anti-morale teeth — the Face's version of area denial, aimed at will rather than bodies.*
 
 > **Battle Cry** *(3 Influence, reskinned from DS Tactician)*
 > *Ranged 10 · Target: three allies*
-> Power Roll + Persona. Tier 1: each target gains **3 surges** (temporary Stamina equal to surges × Persona). Tier 2: **2 surges** each. Tier 3: **1 surge** each.
+> Power Roll + Persona. high (17+): each target gains **3 surges** (temporary Stamina equal to surges × Persona). middle (12–16): **2 surges** each. low (≤11): **1 surge** each.
 > *The rallying shout — a leader's voice cutting through the noise of a fight to put fresh wind in everyone's sails.*
 
 > **Concussive Command** *(3 Influence, reskinned from DS Tactician's Concussive Strike)*
 > *Ranged 10 · Target: one enemy*
-> Designate the target: one ally within Ranged 10 makes a free signature strike against it. Power Roll + Persona. Tier 1: the strike gains an **edge**, and the target is **dazed, save ends**. Tier 2: the strike gains an edge, and the target is **dazed until end of its next turn**. Tier 3: the strike gains no edge, and the target has a **bane** on its next Power Roll.
+> Designate the target: one ally within Ranged 10 makes a free signature strike against it. Power Roll + Persona. high (17+): the strike gains an **edge**, and the target is **dazed, save ends**. middle (12–16): the strike gains an edge, and the target is **dazed until end of its next turn**. low (≤11): the strike gains no edge, and the target has a **bane** on its next Power Roll.
 > *"Strike him down!" — a sharp, single-word command that turns an ally's next hit into exactly the opening the crew needed.*
 
-#### 5-Cost Tier (chosen at 1st level)
+#### 5-Cost Band (chosen at 1st level)
 
-*Rally the Crew is canon, named directly in the Face's class chapter. Coordinated Strike, Now!, and This Is What We Planned For are reskinned wholesale from the DS Tactician's own 5-cost tier (Hammer and Anvil, Now!, This Is What We Planned For). Flagged for Michael's sign-off — see Part 2, Known Bugs #4.*
+*Rally the Crew is canon, named directly in the Face's class chapter. Coordinated Strike, Now!, and This Is What We Planned For are reskinned wholesale from the DS Tactician's own 5-cost band (Hammer and Anvil, Now!, This Is What We Planned For). Flagged for Michael's sign-off — see Part 2, Known Bugs #4.*
 
 > **Rally the Crew** *(canon, 5 Influence, main action)*
 > *Range: 5-burst, self and allies*
@@ -209,7 +209,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Coordinated Strike** *(5 Influence, reskinned from DS Tactician's Hammer and Anvil)*
 > *Ranged 10*
-> Command directs one ally within Ranged 10 to make a free strike against your designated target. Power Roll + Persona. Tier 1: **2 allies** each make a free strike that gains an edge. Tier 2: **1 ally** makes a free strike that gains an edge. Tier 3: **1 ally** makes a free strike (no edge).
+> Command directs one ally within Ranged 10 to make a free strike against your designated target. Power Roll + Persona. high (17+): **2 allies** each make a free strike that gains an edge. middle (12–16): **1 ally** makes a free strike that gains an edge. low (≤11): **1 ally** makes a free strike (no edge).
 > *The hammer-and-anvil moment — you call the shot, and someone else lands it.*
 
 > **Now!** *(canon Tactician, 5 Influence, maneuver)*
@@ -222,9 +222,9 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 > Each ally who hasn't acted yet this round takes their turn, in any order, **immediately after yours**.
 > *The setup-payoff moment — the plan you called three turns ago clicking into place exactly on schedule.*
 
-#### 7-Cost Tier (chosen at 3rd level) — includes Turn the Tide
+#### 7-Cost Band (chosen at 3rd level) — includes Turn the Tide
 
-*This tier is headlined by **Turn the Tide**, canon's own apex ability, named directly in the Face's class chapter. Full mechanics are broken out in their own section below — see "Turn the Tide — Deep Dive." The remaining 7-cost options (Hit 'Em Hard!, Rout, Break Formation) are reskinned wholesale from the DS Tactician's own 7-cost tier. Flagged for Michael's sign-off — see Part 2, Known Bugs #5.*
+*This band is headlined by **Turn the Tide**, canon's own apex ability, named directly in the Face's class chapter. Full mechanics are broken out in their own section below — see "Turn the Tide — Deep Dive." The remaining 7-cost options (Hit 'Em Hard!, Rout, Break Formation) are reskinned wholesale from the DS Tactician's own 7-cost band. Flagged for Michael's sign-off — see Part 2, Known Bugs #5.*
 
 > **Turn the Tide** — *see the full Deep Dive section below.*
 
@@ -243,9 +243,9 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 > The first time on a turn that you or any ally deals damage to a target Marked by you, the damaging creature can push the target up to **2 squares**, then shift up to **2 squares**. Any ally using Charge against a Marked target may use a signature-strike or heroic-strike instead of a free strike.
 > *The tactical repositioning state — the crew doesn't just hit the mark, it reshapes the whole fight around it.*
 
-#### 9-Cost Tier (chosen at 5th level) — Q4=A, all four invented
+#### 9-Cost Band (chosen at 5th level) — Q4=A, all four invented
 
-*Canon's Face chapter leaves the 9-cost tier entirely unspecified, per Michael's **Q4=A ruling** that both the 9-cost and 11-cost tiers should be filled with four abilities each. All four below are GHOSTWIRE-original, sourced from DS Tactician's own 9-cost tier grammar where a direct reskin fit, and invented outright where the Face's dual combat/social identity needed something the Tactician has no analog for. Flagged for Michael's sign-off — see Part 2, Known Bugs #6.*
+*Canon's Face chapter leaves the 9-cost band entirely unspecified, per Michael's **Q4=A ruling** that both the 9-cost and 11-cost bands should be filled with four abilities each. All four below are GHOSTWIRE-original, sourced from DS Tactician's own 9-cost band grammar where a direct reskin fit, and invented outright where the Face's dual combat/social identity needed something the Tactician has no analog for. Flagged for Michael's sign-off — see Part 2, Known Bugs #6.*
 
 > **Coordinated Strike Team** *(9 Influence, main action, reskinned from Tactician's Squad! Remember Your Training!)*
 > *Ranged 10 · Target: self and up to 2 allies*
@@ -264,12 +264,12 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Break Their Nerve** *(9 Influence, main action, GHOSTWIRE-original)*
 > *3-burst in Ranged 10*
-> Each enemy in the area makes a Power Roll + Persona. Tier 1: **frightened of you, save ends,** AND **Weakened, save ends**. Tier 2: **frightened of you, save ends**. Tier 3: **frightened until end of its next turn**.
+> Each enemy in the area makes a Power Roll + Persona. high (17+): **frightened of you, save ends,** AND **Weakened, save ends**. middle (12–16): **frightened of you, save ends**. low (≤11): **frightened until end of its next turn**.
 > *The crowd-cascade fear moment — the instant a whole line of enemies decides, all at once, that this fight isn't worth it.*
 
-#### 11-Cost Tier (chosen at 8th level) — Q4=A, all four invented
+#### 11-Cost Band (chosen at 8th level) — Q4=A, all four invented
 
-*Canon's Face chapter leaves the 11-cost tier entirely unspecified, per the same **Q4=A ruling**. All four below are GHOSTWIRE-original, again sourced from DS Tactician's 11-cost grammar where it reskinned cleanly, and invented outright for the Face-unique social/network plays. Flagged for Michael's sign-off — see Part 2, Known Bugs #7.*
+*Canon's Face chapter leaves the 11-cost band entirely unspecified, per the same **Q4=A ruling**. All four below are GHOSTWIRE-original, again sourced from DS Tactician's 11-cost grammar where it reskinned cleanly, and invented outright for the Face-unique social/network plays. Flagged for Michael's sign-off — see Part 2, Known Bugs #7.*
 
 > **Total Command** *(11 Influence, main action, reskinned from Tactician's Floodgates Open)*
 > *3-burst, self and each ally in the area*
@@ -284,19 +284,19 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Marshal the Network** *(11 Influence, main action, GHOSTWIRE-original)*
 > *In-scene or between-scene*
-> Call in a network favor: a Contact from your web arrives to help this scene. Effect depends on the Contact's tier (Director-adjudicated per the Contacts chapter). **Once per session per Contact.**
+> Call in a network favor: a Contact from your web arrives to help this scene. Effect depends on the Contact's standing (Director-adjudicated per the Contacts chapter). **Once per session per Contact.**
 > *Pulling the strategic-lever emergency card — the moment the web of people you've cultivated pays off exactly when you need it most.*
 
 > **Speak With One Voice** *(11 Influence, main action, GHOSTWIRE-original)*
 > *In a social scene, with a crowd/faction/room*
-> Impose your framing on an entire crowd, faction, or room. Every present NPC who can see or hear you makes a Power Roll + Persona vs. their Instinct-scaled resistance. Tier 1: **all** present NPCs shift Attitude one step toward Cooperative. Tier 2: **half** shift. Tier 3: only the **leader** shifts.
+> Impose your framing on an entire crowd, faction, or room. Every present NPC who can see or hear you makes a Power Roll + Persona vs. their Instinct-scaled resistance. high (17+): **all** present NPCs shift Attitude one step toward Cooperative. middle (12–16): **half** shift. low (≤11): only the **leader** shifts.
 > *The apex crowd-mover — riots, rallies, panic-quells, mass loyalty pledges, all turning on the sound of your voice.*
 
 ---
 
 ### Turn the Tide — Deep Dive
 
-*The class's defining high-Influence play, and the headline entry of the 7-cost tier, unlocked at 3rd level. Full mechanics below; this section exists separately from the tier list above because Turn the Tide carries the Commander/Face's core apex fantasy and deserves the same standalone treatment the Medic gives Miracle Worker and the Street Priest gives Invoke the Pact.*
+*The class's defining high-Influence play, and the headline entry of the 7-cost band, unlocked at 3rd level. Full mechanics below; this section exists separately from the band list above because Turn the Tide carries the Commander/Face's core apex fantasy and deserves the same standalone treatment the Medic gives Miracle Worker and the Street Priest gives Invoke the Pact.*
 
 > **Turn the Tide** *(canon, 7 Influence, main action)*
 > Choose **one** mode:
@@ -360,17 +360,17 @@ The whole undercity on speed-dial: deals, favors, and the fixer's web. Reskinned
 |---|---|---|
 | **1** | **The Fixer's Web** *(canon)* | The strongest Contacts engine in the game (per the Followers/Contacts chapter): extra starting contacts, faster cultivation, mid-run favor calls. Edges to **Streetwise** legwork and negotiations framed around **Freedom/Greed/Vengeance**. Grants use of the Insurgent's **Covert Operations** mechanic reskinned to social — edges on intrigue-skill-group tests, using Lead to assist Streetwise/intrigue tests, and doing research/reconnaissance **during** negotiations. |
 | **1** | **Advanced Tactics** *(canon Insurgent, triggered)* | When an ally deals damage to your Marked target, the target gains **2 surges** (temporary Stamina) that the damaging ally can use on the triggering damage; spend **1 Influence** to increase potency by 1 if applicable. |
-| **1** | **Undercity Whisper** *(triggered, GHOSTWIRE-original — flagged)* | Free triggered, once per encounter: when a Marked enemy or NPC is affected by one of your abilities, spend **1 Influence** to declare a contact from your Fixer's Web has intel on them — grants an automatic Tier 1 read on that target's Motivation. |
+| **1** | **Undercity Whisper** *(triggered, GHOSTWIRE-original — flagged)* | Free triggered, once per encounter: when a Marked enemy or NPC is affected by one of your abilities, spend **1 Influence** to declare a contact from your Fixer's Web has intel on them — grants an automatic high-quality read on that target's Motivation. |
 | — | Subclass bonus skill | **Streetwise** (or a free pick from the intrigue skill group) |
 | — | Starting contact | A **fixer** or **gang lieutenant** |
 | **2** | **Infiltration Tactics** *(canon)* | Whenever you or any ally within 10 sq becomes hidden, that creature gains **1 surge**. |
-| **2** | Doctrine ability (choose 1) | See Street-Fixer Ability Table, below (2nd-tier options). |
+| **2** | Doctrine ability (choose 1) | See Street-Fixer Ability Table, below (2nd-band options). |
 | **3** | **Grey Market Access** *(GHOSTWIRE-original — flagged)* | Once per session, call in one gear item from your Fixer's Web at **half price**. |
 | **5** | **Distracted** + **Leave No Trace** *(canon)* | *Distracted:* creatures Marked by you don't count as observers for hiding purposes; allies can use each other as cover. *Leave No Trace:* you and allies within 10 sq can sneak at full speed; enemies within 10 sq take a **bane** on Search rolls. |
-| **6** | Doctrine ability (choose 1) | See Street-Fixer Ability Table, below (6th-tier options). |
+| **6** | Doctrine ability (choose 1) | See Street-Fixer Ability Table, below (6th-band options). |
 | **7** | **Undercity Advantage** *(canon, reskinned from Asymmetric Warfare)* | During a montage or negotiation, automatic success on one intrigue-skill-group test; can conceal large groups of people (escapees, civilians). |
 | **8** | **Set Up the Play** *(canon, reskinned from Bait and Ambush)* | When you or any ally makes a strike against a Marked target, spend **2 Influence**: the striker shifts up to **Persona** squares AND uses Hide as a free maneuver during the shift. The shift may occur before or after the strike. |
-| **9** | Doctrine ability (choose 1) | See Street-Fixer Ability Table, below (9th-tier, apex options). |
+| **9** | Doctrine ability (choose 1) | See Street-Fixer Ability Table, below (9-band, apex options). |
 
 **Street-Fixer Ability Table** *(Doctrine-ability-style picks, per DS Tactician's Insurgent ability cadence — flagged items are GHOSTWIRE-original; the rest are canon Insurgent abilities reskinned)*
 
@@ -399,13 +399,13 @@ Credentials, protocol, and the weight of institutional power: the one who walks 
 | — | Subclass bonus skill | **Corporate/Bureaucracy** or **Etiquette** (choose one) |
 | — | Starting contact | A **corp insider** or **handler** |
 | **2** | **Goaded** *(canon)* | Whenever a creature Marked by you uses a strike targeting you or an ally in your line of effect, use a free triggered action to change one target of that strike to you or another ally in line of effect within distance. |
-| **2** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (2nd-tier options). |
+| **2** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (2nd-band options). |
 | **3** | **Access Protocol** *(GHOSTWIRE-original — flagged)* | Start each session with one Renown-tier bump toward a corp faction you name, representing pre-run legwork. |
-| **5** | **Anticipation** + **I Predicted That** *(canon)* | *Anticipation:* your Mark ability may target **two** creatures at once. *I Predicted That:* you and any ally within 10 sq gain an edge on **Logic (Reason)** tests. |
-| **6** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (6th-tier options). |
+| **5** | **Anticipation** + **I Predicted That** *(canon)* | *Anticipation:* your Mark ability may target **two** creatures at once. *I Predicted That:* you and any ally within 10 sq gain an edge on **Logic** tests. |
+| **6** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (6th-band options). |
 | **7** | **The Big Picture** *(canon, reskinned from Grand Strategy)* | During a montage or negotiation, automatic success on one lore-group skill test; may make a project roll for a research project in addition to another respite activity. |
 | **8** | **Executive Play** *(canon, reskinned from Pincer Movement)* | When you or any ally strikes a Marked target, spend **2 Influence**: the striker shifts up to **Persona** squares before the strike. If you didn't make the strike, you can shift too. If you did make the strike, one ally within 10 sq shifts too. |
-| **9** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (9th-tier, apex options). |
+| **9** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (9-band, apex options). |
 
 **Corp-Exec Ability Table** *(Doctrine-ability-style picks, per DS Tactician's Mastermind ability cadence — flagged items are GHOSTWIRE-original; the rest are canon Mastermind abilities reskinned)*
 
@@ -430,17 +430,17 @@ Credentials, protocol, and the weight of institutional power: the one who walks 
 |---|---|---|
 | **1** | **Resonant Performance** *(canon, reskinned)* | Your performances — music, oratory, streaming, holo-work, augmented vocal work, deepfake charisma — inspire allies and sway crowds. Grants edges on Performance tests and mass/crowd-influence tests. During negotiations, each hero with you treats Renown as **2 higher**. During combat, gain **double edge** on tests to stop combat and start a negotiation. |
 | **1** | **Deflect the Beat** *(canon Vanguard, reskinned from Parry, triggered)* | When a creature deals damage to you or an ally, shift **1 square**. If you're the target, or you end adjacent to the target, they take **half damage**; potency decreases by 1 if applicable. Spend **1 Influence:** extend distance to **Melee 1 + Persona** and shift up to **Persona** squares. |
-| **1** | **Riff on the Room** *(triggered, GHOSTWIRE-original — flagged)* | Free triggered, once per encounter: when the room's mood swings your way (any Attitude shift toward Cooperative, or an ally rolls Tier 1 on a Performance/social test), gain **2 Influence**. |
+| **1** | **Riff on the Room** *(triggered, GHOSTWIRE-original — flagged)* | Free triggered, once per encounter: when the room's mood swings your way (any Attitude shift toward Cooperative, or an ally rolls high (17+) on a Performance/social test), gain **2 Influence**. |
 | — | Subclass bonus skill | **Performance** |
 | — | Starting contact | A **promoter**, **journalist**, **streamer**, or **scene-fixer** |
 | **2** | **Command the Stage** *(canon, reskinned from Melee Superiority)* | When you make an opportunity attack, the target's speed is reduced to 0 until the end of its next turn. Mark Benefit: when a Marked creature attempts to move or shift within your melee free-strike distance, use a free triggered action and spend **2 Influence** to make a melee free strike. |
-| **2** | Doctrine ability (choose 1) | See Bard Ability Table, below (2nd-tier options). |
+| **2** | Doctrine ability (choose 1) | See Bard Ability Table, below (2nd-band options). |
 | **3** | **The Signature Beat** *(GHOSTWIRE-original — flagged)* | You have a signature performance — a song, a slogan, a catchphrase, a media hook. When you perform it, all allies within 10 sq gain **+1 to Instinct-based reads** for the rest of the scene. |
 | **5** | **Shake It Off** + **Set the Beat** *(canon)* | *Shake It Off:* spend 1d6 Stamina as a free maneuver to ignore the consequence of a test, or end one effect on you that ends by save or end of turn; adjacent allies can do the same. *Set the Beat* (reskinned from Tactical Offensive): when you Charge a Marked target, use a signature or heroic strike instead of a free strike. |
-| **6** | Doctrine ability (choose 1) | See Bard Ability Table, below (6th-tier options). |
+| **6** | Doctrine ability (choose 1) | See Bard Ability Table, below (6th-band options). |
 | **7** | **The Show** *(canon, reskinned from Shock and Awe)* | During a montage or negotiation, automatic success on one interpersonal-group test; convince a group to help with crafting or social projects during respite. |
 | **8** | **Bring the House Down** *(canon, reskinned from See Your Enemies Driven Before You)* | When you or an ally makes a melee strike against a Marked target, spend **2 Influence**: the striker pushes the target up to **Persona** squares, then shifts up to **Persona** squares, ending adjacent to the target. |
-| **9** | Doctrine ability (choose 1) | See Bard Ability Table, below (9th-tier, apex options). |
+| **9** | Doctrine ability (choose 1) | See Bard Ability Table, below (9-band, apex options). |
 
 **Bard Ability Table** *(Doctrine-ability-style picks, per DS Tactician's Vanguard ability cadence — flagged items are GHOSTWIRE-original; the rest are canon Vanguard abilities reskinned)*
 
@@ -465,12 +465,12 @@ Credentials, protocol, and the weight of institutional power: the one who walks 
 |---|---|---|---|
 | **1** | Command Doctrine (subclass) choice, Influence (heroic resource), **Field Presence** (light Kit access), Signatures (Mark, Direct Ally, Read the Room, The Right Word) | Signature ×4, 1-cost, 3-cost, 5-cost | L1 doctrine features + triggered action |
 | **2** | Perk, Doctrine Feature | (same) | +L2 doctrine ability |
-| **3** | **Read the Angles** (free triggered Mark at start of encounter, slide Marked target 3 sq), 7-cost tier unlocked (Turn the Tide) | +7-cost | +L3 doctrine feature |
+| **3** | **Read the Angles** (free triggered Mark at start of encounter, slide Marked target 3 sq), 7-cost band unlocked (Turn the Tide) | +7-cost | +L3 doctrine feature |
 | **4** | Characteristic Increase (Persona & Instinct to 3), **Watch Their Weaknesses** (first ally damage on Marked/Read target = +2 Influence instead of +1), **Improved Field Presence** (edge on Kit signature abilities), Perk, Skill | (same) | (same) |
-| **5** | Doctrine Feature (choice), 9-cost tier unlocked | +9-cost | +L5 doctrine feature choice |
+| **5** | Doctrine Feature (choice), 9-cost band unlocked | +9-cost | +L5 doctrine feature choice |
 | **6** | **Master of Words** (negate a bane on Kit signature Power Rolls), Perk | (same) | +L6 doctrine ability |
 | **7** | Characteristic Increase (+1 all, max 4), **Heightened Influence** (gain 3 Influence/turn instead of 2), **Seize the Initiative** (as feature — your side goes first if not surprised), Skill, Doctrine Feature | (same) | (same) |
-| **8** | Perk, Doctrine Feature, 11-cost tier unlocked | +11-cost | +L8 doctrine feature |
+| **8** | Perk, Doctrine Feature, 11-cost band unlocked | +11-cost | +L8 doctrine feature |
 | **9** | **Grandmaster of Words** (auto-Tier-1 on Kit signatures), Doctrine ability | (same) | +L9 doctrine ability |
 | **10** | Characteristic Increase (Persona & Instinct to 5), **Command** (epic resource), **True Influence** (gain 4 Influence/turn), **Master of Voice** (allies rolling against Marked/Read targets roll 3 dice keep 2; heroic abilities targeting Marked targets cost 2 less Influence, minimum 1), Perk, Skill | (same) | (same) |
 
@@ -485,7 +485,7 @@ Credentials, protocol, and the weight of institutional power: the one who walks 
 - **Master of Words** (6th) — Once per round, negate a bane on a Power Roll made with your Kit's signature abilities (if any).
 - **Heightened Influence** (7th) — Your per-turn Influence drip increases to **3** (from 2).
 - **Seize the Initiative** (7th, as feature) — If your side is not surprised, your side always acts first in the initiative order.
-- **Grandmaster of Words** (9th) — Once per encounter, a Power Roll made with your Kit's signature abilities automatically counts as Tier 1.
+- **Grandmaster of Words** (9th) — Once per encounter, a Power Roll made with your Kit's signature abilities automatically counts as high (17+).
 - **Command** (10th, epic resource) — Your Influence generation carries a small overflow: the first Influence you would lose at the end of an encounter (up to 2) instead carries into the next scene as **Command**, usable exactly like Influence but only on your very next activation. This is the class's epic-tier answer to "the authority a great leader radiates doesn't vanish the instant the fight ends."
 - **True Influence** (10th) — Your per-turn Influence drip increases to **4** (from 3).
 - **Master of Voice** (10th) — Allies rolling against your Marked or Read-the-Room target roll **3 dice, keep the best 2** (a house "double edge, best-two-of-three" treatment). Heroic abilities that target a Marked creature cost **2 less Influence** (minimum 1).

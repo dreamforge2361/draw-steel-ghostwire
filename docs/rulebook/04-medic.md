@@ -34,7 +34,7 @@ Your chemistry cuts both ways. The same compounds that heal an ally can drop an 
 
 | Stat | Value |
 |---|---|
-| **Core Characteristics** | Instinct (Intuition) — primary; Logic (Reason) — secondary |
+| **Core Characteristics** | Instinct — primary; Logic — secondary |
 | **Heroic Resource** | Reagents |
 | **Epic Resource / Capstone** | Master Chemist (10th level) |
 | **Potency: Weak / Average / Strong** | Prime − 2 / Prime − 1 / Prime |
@@ -49,9 +49,9 @@ Your chemistry cuts both ways. The same compounds that heal an ally can drop an 
 **No Wired, no Veil.** The Medic is fully mundane — reliable, always-available support with no supernatural or digital infrastructure required. This is a deliberate design pole opposite the Elementalist and Street Priest (Veil-casters) and the Hacker/Technomancer (Wired-dependent): a Medic's kit works the same in a dead zone, a Faraday-shielded bunker, or a desanctified ruin as it does anywhere else.
 
 **Characteristic Increases:**
-- **4th level:** Instinct (Intuition) and Logic (Reason) each rise to 3.
+- **4th level:** Instinct and Logic each rise to 3.
 - **7th level:** all five characteristics rise by +1 (max 4).
-- **10th level:** Instinct (Intuition) and Logic (Reason) each rise to 5.
+- **10th level:** Instinct and Logic each rise to 5.
 
 **Advancement table shape:** DS levels 1-10, matching the Hacker/Elementalist/Operator/Wrench/Street Priest masters — see the **Level 1-10 Progression Table**, below, for the full level-by-level breakdown of features, abilities, and subclass grants.
 
@@ -142,19 +142,19 @@ Poisons, neurotoxins, blister agents, knockout gas, acid.
 
 ### Signature Abilities (No Reagent Cost)
 
-Every Medic has these **three signatures**, free, at-will, from 1st level — no choice involved, unlike a class that picks 2-of-N. All three key off **Instinct (Intuition)**, all three can be enhanced by spending Reagents for a stronger effect, and none of them ever costs Reagents at their base effect.
+Every Medic has these **three signatures**, free, at-will, from 1st level — no choice involved, unlike a class that picks 2-of-N. All three key off **Instinct**, all three can be enhanced by spending Reagents for a stronger effect, and none of them ever costs Reagents at their base effect.
 
 *Reskin note: DS Troubadour has four signatures (choose 1) — Artful Flourish, Cutting Sarcasm, Instigator, Witty Banter. The Medic replaces this entire menu with canon's own three named signatures (First Aid, Administer Dose, Diagnose), all three granted for free rather than chosen from a longer list. This mirrors how the Street Priest ported the DS Conduit's signature slots one-to-one but is a deliberate departure here: the Medic's canon chapter already specifies exactly three signatures and does not gesture at a larger pool to choose from.*
 
 > **First Aid** *(Class Feature Signature)*
 > *Main action (or maneuver, for a quick patch) · Distance: touch · Target: one living ally or self*
-> **Power Roll:** 2d10 + Instinct (Intuition) + Medicine.
+> **Power Roll:** 2d10 + Instinct + Medicine.
 >
 > | Tier | Effect |
 > |---|---|
-> | Tier 3 (≤11) | Small patch, or stabilize a dying target without healing. |
-> | Tier 2 (12-16) | Heal Recovery value. |
-> | Tier 1 (17+) | Heal Recovery value + clear a minor condition (Bleeding, Dazed). |
+> | low (≤11) | Small patch, or stabilize a dying target without healing. |
+> | middle (12–16) | Heal Recovery value. |
+> | high (17+) | Heal Recovery value + clear a minor condition (Bleeding, Dazed). |
 >
 > **Enhance (spend 2+ Reagents):** apply a full Restorative compound for a much larger heal, revive a downed ally to their feet, or heal at range via thrown patch/injector.
 > *Your baseline, every-turn lifeline — the class's answer to "someone's bleeding and there's no time to think."*
@@ -163,7 +163,7 @@ Every Medic has these **three signatures**, free, at-will, from 1st level — no
 > *Main action · Distance: touch or thrown short (Ranged 5) · Target: one creature, ally OR enemy*
 > **Effect:** the same action heals a friend or harms a foe depending on what's loaded in the injector.
 > - **Ally target:** no roll. Deliver a Stimulant compound — the target gains +1 edge OR ignores 1 condition for 1 round. (Crash rider applies per Q3=A.)
-> - **Enemy target:** **Power Roll** 2d10 + Instinct (Intuition). Deliver a Toxin compound — the target takes light-weapon-band damage over 2 rounds + Weakened.
+> - **Enemy target:** **Power Roll** 2d10 + Instinct. Deliver a Toxin compound — the target takes light-weapon-band damage over 2 rounds + Weakened.
 >
 > **Enhance (spend 2+ Reagents):** a stronger or longer-duration compound, or dose an extra target.
 > *This is the Medic's core identity beat — the exact same tool that saves your friend's life can end your enemy's. Nothing else in the class states the flex-lane fantasy more directly than this ability.*
@@ -174,20 +174,20 @@ Every Medic has these **three signatures**, free, at-will, from 1st level — no
 >
 > | Tier | Effect |
 > |---|---|
-> | Tier 3 (≤11) | Partial read — Stamina band only. |
-> | Tier 2 (12-16) | Learn the target's condition and one weakness. |
-> | Tier 1 (17+) | Full read + grant the whole crew an edge against the target for 1 round. |
+> | low (≤11) | Partial read — Stamina band only. |
+> | middle (12–16) | Learn the target's condition and one weakness. |
+> | high (17+) | Full read + grant the whole crew an edge against the target for 1 round. |
 >
 > **Enhance (spend 2+ Reagents):** read multiple targets in one maneuver, or grant a crew-wide edge for the full encounter.
 > *The class's intel tool — a Medic reads a body the way a Hacker reads a network, and every fight goes smoother once you know exactly what you're dealing with.*
 
 ---
 
-### Heroic Abilities — Cost Tiers 1 Through 11
+### Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tier as you level, layered on top of the always-on Signature kit above. On our reversed Outcome Tiers (Tier 1 = 17+ = best, Tier 2 = 12-16, Tier 3 = ≤11 = worst). Costs mirror the Draw Steel caster ladder shared by every GHOSTWIRE class: **1 / 3 / 5 / 7 / 9 / 11.**
+Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+). Costs mirror the Draw Steel caster ladder shared by every GHOSTWIRE class: **1 / 3 / 5 / 7 / 9 / 11.**
 
-#### 1-Cost Tier (chosen at 1st level)
+#### 1-Cost Band (chosen at 1st level)
 
 *The DS Troubadour SRD has no 1-cost band, and neither does the Medic's own canon chapter (canon's cheapest heroic ability, Field Synthesis, is moved to a free once-per-encounter maneuver per Q2=B — see below). These two abilities are GHOSTWIRE-original inventions, written specifically to keep the ladder floor consistent with the Hacker/Elementalist/Operator/Wrench/Street Priest templates, all of which open at cost 1. **Flagged for Michael's sign-off — see Part 2, Known Bugs #1.***
 
@@ -201,9 +201,9 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > No Power Roll. Choose one: the target gains a **save-end** against one active condition, OR the target gains **+1 to their next Power Roll.** (This is a mild stim — no crash rider; the dose is too small to trigger the comedown.)
 > *The class's floor-level support option — quick, cheap, always useful, and gentle enough that it doesn't tax the recipient afterward.*
 
-#### 3-Cost Tier (chosen at 1st level)
+#### 3-Cost Band (chosen at 1st level)
 
-*Combat Stims and Toxic Cloud are canon, named directly in the Medic's class chapter. Rapid Field Diagnosis and Blood Doping are GHOSTWIRE-original inventions filling out the tier to match the Wrench/Street Priest/Elementalist four-per-tier shape. **Flagged for Michael's sign-off — see Part 2, Known Bugs #2.***
+*Combat Stims and Toxic Cloud are canon, named directly in the Medic's class chapter. Rapid Field Diagnosis and Blood Doping are GHOSTWIRE-original inventions filling out the band to match the Wrench/Street Priest/Elementalist four-per-tier shape. **Flagged for Michael's sign-off — see Part 2, Known Bugs #2.***
 
 > **Combat Stims** *(canon, 3 Reagents)*
 > *Main action · Distance: touch or short range · Target: up to 2 allies*
@@ -226,7 +226,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > No Power Roll. Target reduces incoming damage by 5 for 1 round, and immediately gains temporary Stamina equal to your Recovery value.
 > *A pre-emptive hedge for the ally about to walk into the worst of it.*
 
-#### 5-Cost Tier (chosen at 1st level)
+#### 5-Cost Band (chosen at 1st level)
 
 *Triage is canon, named directly in the Medic's class chapter. Purge Toxins, Focus Serum, and Anesthetize are GHOSTWIRE-original inventions filling out the tier. **Flagged for Michael's sign-off — see Part 2, Known Bugs #3.***
 
@@ -248,18 +248,18 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Anesthetize** *(5 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged 5 · Target: one enemy*
-> The target makes a Physique (Might) save vs. sleep/dazed. On a failure, the target is removed from the encounter for 1 round (unconscious, out cold).
+> The target makes a Physique save vs. sleep/dazed. On a failure, the target is removed from the encounter for 1 round (unconscious, out cold).
 > *A surgeon's tool turned weapon — the same anesthetic that puts a patient under safely can put an enemy down hard.*
 
-#### 7-Cost Tier (chosen at 3rd level) — includes Miracle Worker
+#### 7-Cost Band (chosen at 3rd level) — includes Miracle Worker
 
-*This tier is headlined by **Miracle Worker**, canon's own apex ability, named directly in the Medic's class chapter. Full mechanics are broken out in their own section immediately below this tier list — see "Miracle Worker — Deep Dive." The remaining 7-cost options (Nerve Toxin, Chemical Interrogation, Field Adrenal) are GHOSTWIRE-original inventions filling out the tier. **Flagged for Michael's sign-off — see Part 2, Known Bugs #4.***
+*This band is headlined by **Miracle Worker**, canon's own apex ability, named directly in the Medic's class chapter. Full mechanics are broken out in their own section immediately below this tier list — see "Miracle Worker — Deep Dive." The remaining 7-cost options (Nerve Toxin, Chemical Interrogation, Field Adrenal) are GHOSTWIRE-original inventions filling out the tier. **Flagged for Michael's sign-off — see Part 2, Known Bugs #4.***
 
 > **Miracle Worker** — *see the full Deep Dive section below.*
 
 > **Nerve Toxin** *(7 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged 10 · Target: one creature*
-> **Power Roll:** 2d10 + Instinct (Intuition). Heavy-weapon-band damage over 3 rounds; the target is Slowed and Weakened for the full duration.
+> **Power Roll:** 2d10 + Instinct. Heavy-weapon-band damage over 3 rounds; the target is Slowed and Weakened for the full duration.
 > *The class's heaviest single-target Toxin — the compound you save for the thing that really needs to go down slowly and stay down.*
 
 > **Chemical Interrogation** *(7 Reagents, GHOSTWIRE-original)*
@@ -273,9 +273,9 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > **Crash Rider (automatic, enhanced-tier, Q3=A):** all recipients take **−2** to their next Power Roll after the buff ends.
 > *The most dangerous compound in the base tier list — a full extra turn's worth of action, paid for with the harshest standard crash in the class.*
 
-#### 9-Cost Tier (chosen at 5th level) — 4 inventions
+#### 9-Cost Band (chosen at 5th level) — 4 inventions
 
-*Canon's class chapter leaves the 9-cost tier entirely unspecified, per Michael's Q4=A ruling that both the 9-cost and 11-cost tiers should be filled with four abilities each. All four below are GHOSTWIRE-original. **Flagged for Michael's sign-off — see Part 2, Known Bugs #5.***
+*Canon's class chapter leaves the 9-cost band entirely unspecified, per Michael's Q4=A ruling that both the 9-cost and 11-cost bands should be filled with four abilities each. All four below are GHOSTWIRE-original. **Flagged for Michael's sign-off — see Part 2, Known Bugs #5.***
 
 > **Chemical Warfare** *(9 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged area, cube 5 (dist 10) · Target: enemies in the cube*
@@ -297,9 +297,9 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > No Power Roll. Target heals Recovery value × 5, and all conditions and toxins on them are purged. For the next 3 attacks made against the target, they gain resistance 5.
 > *A single-target apex heal — the Medic performing genuine field surgery under fire.*
 
-#### 11-Cost Tier (chosen at 8th level) — 4 inventions
+#### 11-Cost Band (chosen at 8th level) — 4 inventions
 
-*Canon's class chapter leaves the 11-cost tier entirely unspecified, per the same Q4=A ruling. All four below are GHOSTWIRE-original. **Flagged for Michael's sign-off — see Part 2, Known Bugs #6.***
+*Canon's class chapter leaves the 11-cost band entirely unspecified, per the same Q4=A ruling. All four below are GHOSTWIRE-original. **Flagged for Michael's sign-off — see Part 2, Known Bugs #6.***
 
 > **Wonder Drug** *(11 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged 10 · Target: entire crew*
@@ -326,7 +326,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 ### Miracle Worker — Deep Dive
 
-*The class's defining high-Reagent play, and the headline entry of the 7-cost tier, unlocked at 3rd level. Full mechanics below; this section exists separately from the tier list above because Miracle Worker carries the Medic's core apex fantasy and deserves the same standalone treatment the Street Priest gives Invoke the Pact and the Elementalist gives Summon Elemental.*
+*The class's defining high-Reagent play, and the headline entry of the 7-cost band, unlocked at 3rd level. Full mechanics below; this section exists separately from the band list above because Miracle Worker carries the Medic's core apex fantasy and deserves the same standalone treatment the Street Priest gives Invoke the Pact and the Elementalist gives Summon Elemental.*
 
 > **Miracle Worker** *(canon)*
 > *Main action · Distance: touch or Ranged 10 (per chosen effect, see below) · Cost: 7 Reagents*
@@ -338,7 +338,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > | **Total purge** | Purge **all** toxins, diseases, and conditions from one target. |
 > | **Massive single-target heal** | Restore Recovery value × 3 to one critical ally. |
 
-**Cost breakdown.** 7 Reagents, once selected, produces exactly one of the three effects above — you do not get to layer them. This is deliberately the most expensive single action in the 7-cost tier band, positioned as the class's apex trauma-medicine play rather than a routine tool.
+**Cost breakdown.** 7 Reagents, once selected, produces exactly one of the three effects above — you do not get to layer them. This is deliberately the most expensive single action in the 7-cost band band, positioned as the class's apex trauma-medicine play rather than a routine tool.
 
 **The three effect options, in practice:**
 - **Full revive** is the "this fight just turned around" button — pulling a genuinely downed teammate back onto their feet, functional again if only barely, at the cost of a real chunk of your reserve.
@@ -351,7 +351,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 **Mundane apex framing.** There is no magic anywhere in Miracle Worker. What looks miraculous is **impossible skill and the right compound at the right second** — years of trauma training compressed into one perfect intervention, backed by a chemistry that actually works. This is the load-bearing distinction between the Medic's apex and the Street Priest's: Invoke the Pact reaches across the Veil for outside help; Miracle Worker reaches into the Medic's own training and kit and finds exactly enough to make the impossible happen anyway.
 
-**Comparison to Street-Priest's Invoke the Pact.** Both abilities sit at the identical 7-cost tier, unlocked at the identical 3rd level, and both represent their class's single biggest "turn the fight around" play. Where Invoke the Pact is a **gamble** — a Bind Check that can fail, with a real downside if it does, because you're relying on someone else answering across the Veil — Miracle Worker has **no roll to fail.** You spend the 7 Reagents, you choose your effect, it happens. That reliability is the entire point of a mundane apex ability: the Medic's power comes from things that are yours (skill, stock, dosing math), not from a bargain that can go sideways. The tradeoff is resource-side rather than roll-side — Miracle Worker's cost is real and persistent (it eats a huge chunk of a bag that doesn't refill until downtime), while Invoke the Pact's Conviction resets every encounter regardless of outcome.
+**Comparison to Street-Priest's Invoke the Pact.** Both abilities sit at the identical 7-cost band, unlocked at the identical 3rd level, and both represent their class's single biggest "turn the fight around" play. Where Invoke the Pact is a **gamble** — a Bind Check that can fail, with a real downside if it does, because you're relying on someone else answering across the Veil — Miracle Worker has **no roll to fail.** You spend the 7 Reagents, you choose your effect, it happens. That reliability is the entire point of a mundane apex ability: the Medic's power comes from things that are yours (skill, stock, dosing math), not from a bargain that can go sideways. The tradeoff is resource-side rather than roll-side — Miracle Worker's cost is real and persistent (it eats a huge chunk of a bag that doesn't refill until downtime), while Invoke the Pact's Conviction resets every encounter regardless of outcome.
 
 ---
 
@@ -415,12 +415,12 @@ The scrappy, improvisational medic who's kept half the neighborhood alive withou
 | **1** | **Make Do** *(canon)* | You improvise and restock Reagents faster and cheaper. Field Synthesis can be used **twice** per encounter instead of once, and produces a **two-thirds-strength** compound instead of half-strength. |
 | **1** | **Back-Alley Wits** *(canon)* | First Aid gains an edge when targeting an ally below half Stamina. |
 | **1** | **Improvise!** *(triggered, GHOSTWIRE-original)* | Free triggered action, once per encounter: when your kit has 3 or fewer Reagents remaining, gain 2 Reagents back — you found something in the trash. |
-| **2** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (2nd-tier options). |
+| **2** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (2nd-band options). |
 | **3** | Subclass feature (invented) | **Scrounger's Eye** — once per respite, when restocking, you may reduce the nuyen cost of a full kit refill by 25% by spending extra time (Director's table on exact time cost). |
 | **5** | Subclass feature (choice, invented) | **Back-Alley Network** — choose one: gain a free Renown tier bump among street clinics, OR gain an edge on all Field Synthesis productions. |
-| **6** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (6th-tier options). |
+| **6** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (6th-band options). |
 | **8** | Subclass feature (invented) | **Nothing Wasted** — Emergency Patch and Slap-Injector cost 0 Reagents once per encounter each. |
-| **9** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (9th-tier, apex options). |
+| **9** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (9-band, apex options). |
 
 **Street-Doc Ability Table** *(Class-Act-style picks, per DS Troubadour's ability cadence — all invented)*
 
@@ -445,12 +445,12 @@ The licensed, polished practitioner — better product, cleaner delivery, and a 
 | **1** | **Pharmaceutical Grade** *(canon, REVISED per Q3=A — see Design Rulings #10)* | Compounds you produce are **+50% base magnitude OR +1 buff round OR +1 additional target** (pick per compound, at the moment it's produced). Crash duration is **1 round shorter** on any Stimulant compound you produce (still happens, just recovers faster). |
 | **1** | **Licensed Protocol** *(canon)* | Combat Stims and Administer Dose compounds last **1 additional round.** |
 | **1** | **Clean Delivery** *(triggered, GHOSTWIRE-original)* | When you use Administer Dose and the target is within 3 squares, gain +1 target for free (no additional Reagent cost). |
-| **2** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (2nd-tier options). |
+| **2** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (2nd-band options). |
 | **3** | Subclass feature (invented) | **Standardized Dosing** — your Restorative and Antidote compounds' magnitudes no longer vary with improvisation penalties (Director's table: removes any narrative "you're working with substandard equipment" penalty the Director might otherwise apply). |
 | **5** | Subclass feature (choice, invented) | **Corporate Requisition** — choose one: gain a free Renown tier bump among corp-med circles, OR reduce your next kit-refill nuyen cost by 25%. |
-| **6** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (6th-tier options). |
+| **6** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (6th-band options). |
 | **8** | Subclass feature (invented) | **Premium Stock** — the Pharmaceutical Grade bonus can be applied twice to a single compound (stacking the chosen bonuses, or choosing two different ones) once per encounter. |
-| **9** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (9th-tier, apex options). |
+| **9** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (9-band, apex options). |
 
 **Corp-Medtech Ability Table** *(Class-Act-style picks, per DS Troubadour's ability cadence — all invented)*
 
@@ -475,12 +475,12 @@ The most chromed of the three specializations — a surgeon who has made the ope
 | **1** | **Under the Knife** *(canon)* | Premier chrome installer/repairer. Gain an edge on install, repair, and removal downtime projects; reduced botch risk; access to rarer implants. Resonance-adjacent flesh work extends to Cyborgs' organic components (you can work on the meat parts of a chromed-out Cyborg the way other Medics can't). |
 | **1** | **Metal & Meat** *(canon)* | First Aid and Diagnose work at an edge on chrome-heavy patients and partial-Cyborgs where other Medics struggle. |
 | **1** | **Cutter's Reflex** *(triggered, GHOSTWIRE-original)* | When a chromed ally (2+ chrome pieces installed) takes damage, you may spend 1 Reagent to reduce that damage by 5. |
-| **2** | Subclass ability (choose 1) | See Ripperdoc Ability Table, below (2nd-tier options). |
+| **2** | Subclass ability (choose 1) | See Ripperdoc Ability Table, below (2nd-band options). |
 | **3** | Subclass feature (invented) | **Steady Hands** — your downtime install/repair/removal projects take 25% less time. |
 | **5** | Subclass feature (choice, invented) | **Chop-Shop Connections** — choose one: gain a free Renown tier bump among ripperdoc networks, OR gain access to one rare/black-market implant per tier at reduced nuyen cost. |
-| **6** | Subclass ability (choose 1) | See Ripperdoc Ability Table, below (6th-tier options). |
+| **6** | Subclass ability (choose 1) | See Ripperdoc Ability Table, below (6th-band options). |
 | **8** | **Nano-Adrenal Auto-Injector** *(CAPSTONE, Q1=B ruling — see full writeup below)* | Self-revive capstone. |
-| **9** | Subclass ability (choose 1) | See Ripperdoc Ability Table, below (9th-tier, apex options). |
+| **9** | Subclass ability (choose 1) | See Ripperdoc Ability Table, below (9-band, apex options). |
 
 **Ripperdoc Ability Table** *(Class-Act-style picks, per DS Troubadour's ability cadence — all invented)*
 
@@ -488,7 +488,7 @@ The most chromed of the three specializations — a surgeon who has made the ope
 |---|---|---|
 | 2 | **Chrome Whisperer** | Cutter's Reflex's damage reduction increases to 8. |
 | 2 | **Black-Market Parts** | Gain a standing chop-shop or chrome-fence contact who sells rare implants at reduced availability restriction. |
-| 6 | **Surgical Precision** | Once per encounter, First Aid on a chrome-heavy or partial-Cyborg target automatically counts as Tier 1, regardless of the roll. |
+| 6 | **Surgical Precision** | Once per encounter, First Aid on a chrome-heavy or partial-Cyborg target automatically counts as high (17+), regardless of the roll. |
 | 6 | **Overclock Protocol** | Once per encounter, grant a chromed ally (2+ pieces) a free Combat Stims-equivalent effect targeting only them, for 0 Reagents (crash rider still applies). |
 | 9 | **The Whole Package** | Once per session, perform a full chrome tune-up on an ally during a respite: they gain a temporary edge on their next chrome-reliant roll for the following encounter. |
 
@@ -513,12 +513,12 @@ This is the **only** self-revive mechanic anywhere in the Medic class. Street-Do
 |---|---|---|---|
 | **1** | Specialization choice, Reagents (heroic resource), Kit, **Field Partner**, **Established Protocols**, Signatures (First Aid, Administer Dose, Diagnose) | Signature ×3, 1-cost, 3-cost, 5-cost | L1 subclass features + triggered action |
 | **2** | **Field Synthesis** (feature — the free improv valve), **Advanced Chem-Prep** (+2 to Reagent kit capacity), Perk | (same) | +L2 subclass ability |
-| **3** | 7-cost tier unlocked (Miracle Worker) | +7-cost | +L3 subclass feature |
+| **3** | 7-cost band unlocked (Miracle Worker) | +7-cost | +L3 subclass feature |
 | **4** | Characteristic Increase (Instinct & Logic to 3), **Compound Mastery**, Perk, Skill, **Field Reputation** | (same) | (same) |
-| **5** | 9-cost tier unlocked | +9-cost | +L5 subclass feature (choice) |
+| **5** | 9-cost band unlocked | +9-cost | +L5 subclass feature (choice) |
 | **6** | Perk, **Emergency Priority** | (same) | +L6 subclass ability |
 | **7** | Characteristic Increase (+1 all, max 4), **Colleague & Mentor**, **Cross-Trained**, Skill | (same) | (same) |
-| **8** | Perk, 11-cost tier unlocked | +11-cost | +L8 subclass feature (Ripperdoc = **Nano-Adrenal Auto-Injector** capstone) |
+| **8** | Perk, 11-cost band unlocked | +11-cost | +L8 subclass feature (Ripperdoc = **Nano-Adrenal Auto-Injector** capstone) |
 | **9** | **Battlefield Renown** | (same) | +L9 subclass ability |
 | **10** | Characteristic Increase (Instinct & Logic to 5), **Reputation**, **Master Chemist**, **Legend of the Street**, Perk, Skill | (same) | (same) |
 
@@ -552,11 +552,11 @@ This is the **only** self-revive mechanic anywhere in the Medic class. Street-Do
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Profile |
 |---|---|---|---|---|
-| **Trauma Patch / MediPatch** | T5 | 5 | ¥100 | Heals 1 Recovery value OR stops Bleeding. |
-| **Stim Patch / Combat Stimulant** | T4 | 4 | ¥350 | Clears Dazed/Slowed/Weakened OR gain a maneuver this turn; crash = Weakened next round. |
-| **Field Surgery Kit / Trauma Kit** | T3 | 3 | ¥2,000 | Reusable — enables stabilizing a dying ally + edge on First Aid. |
-| **Antidote Dose / Broad Antitox** | T3 | 3 | ¥1,500 | Cancels one poison/toxin. |
-| **Slap-Doc Kit / Nanite Med-Foam** | T2 | 2 | ¥8,000 | Heals 2 Recovery values + clears one condition. |
+| **Trauma Patch / MediPatch** | Avail. street | 5 | ¥100 | Heals 1 Recovery value OR stops Bleeding. |
+| **Stim Patch / Combat Stimulant** | Avail. professional | 4 | ¥350 | Clears Dazed/Slowed/Weakened OR gain a maneuver this turn; crash = Weakened next round. |
+| **Field Surgery Kit / Trauma Kit** | Avail. specialist | 3 | ¥2,000 | Reusable — enables stabilizing a dying ally + edge on First Aid. |
+| **Antidote Dose / Broad Antitox** | Avail. specialist | 3 | ¥1,500 | Cancels one poison/toxin. |
+| **Slap-Doc Kit / Nanite Med-Foam** | Avail. milspec | 2 | ¥8,000 | Heals 2 Recovery values + clears one condition. |
 
 **Note:** all store-bought consumables cap at (at most) 2× Recovery value, so store-bought supply never rivals a trained Medic's own compounds — the shelf exists so a non-Medic crew isn't entirely helpless, not to compete with the class.
 

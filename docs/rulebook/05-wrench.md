@@ -33,27 +33,27 @@ Your power is neither spellcraft nor raw force of arms. It is **Uptime** — the
 
 ### Attribute Doctrine
 
-The Wrench's primary characteristic is **Logic (Reason)** — the attribute that drives Rigging, Gunnery-through-a-sensor-feed, and the cold read of a targeting solution. Its natural secondary is **Reflex (Agility)** — hands-on piloting, direct fire, and the reflexive save when the meat body has to move on its own.
+The Wrench's primary characteristic is **Logic** — the attribute that drives Rigging, Gunnery-through-a-sensor-feed, and the cold read of a targeting solution. Its natural secondary is **Reflex** — hands-on piloting, direct fire, and the reflexive save when the meat body has to move on its own.
 
 **Canonical five-attribute reference table** (locked project convention — Foundry label first, DS attribute in parens, abbreviation last). **Five characteristics only. The older six-attribute variant (Cognition/Insight/Resolve) is defunct per Foundry Build Log V2 doctrine correction.**
 
 | GHOSTWIRE Display | DS Attribute | Abbrev | Governs (representative) |
 |---|---|---|---|
-| **Physique** | (Might) | PHY | Melee power, carrying capacity, physical resistance |
-| **Reflex** | (Agility) | REF | Piloting, direct fire, initiative, evasion |
-| **Logic** | (Reason) | LOG | Rigging, Gunnery-via-sensor, hacking-adjacent tech tests, tactical calculation |
+| **Physique** | *(legacy: Might)* | PHY | Melee power, carrying capacity, physical resistance |
+| **Reflex** | *(legacy: Agility)* | REF | Piloting, direct fire, initiative, evasion |
+| **Logic** | *(legacy: Reason)* | LOG | Rigging, Gunnery-via-sensor, hacking-adjacent tech tests, tactical calculation |
 | **Instinct** | (Intuition) | INS | Perception, read-the-room, danger sense |
 | **Persona** | (Presence) | PER | Social tests, force of personality, command presence |
 
-*Purge note: any prior document using "Cognition (Reason)," "Reflexes (Agility)" (plural), "Insight," "Resolve," or "Persona (Will)" is using defunct labels. This document — and all future Wrench work — uses **Logic (Reason)**, **Reflex (Agility)**, **Physique (Might)**, **Instinct (Intuition)**, and **Persona (Presence)** exclusively. There is no DS attribute called "Will" in current GHOSTWIRE canon — Persona maps to (Presence).*
+*Purge note: any prior document using "Cognition (Reason)," "Reflexes (Agility)" (plural), "Insight," "Resolve," or "Persona (Will)" is using defunct labels. This document — and all future Wrench work — uses **Logic**, **Reflex**, **Physique**, **Instinct**, and **Persona** exclusively. There is no DS attribute called "Will" in current GHOSTWIRE canon — Persona maps to (Presence).*
 
 ### Class Chassis
 
-*DS Talent reskin explanation: the Wrench's mechanical spine is the DS Talent class — a Reason-primary, resource-economy class built around banking a Heroic Resource from successful use and spending it on tiered abilities, with a signature-ability baseline and a subclass ("Tradition") ladder. GHOSTWIRE strips every psionic/telepathic reference from the Talent SRD and replaces it wholesale with drone-command, remote-piloting, and rig-signal flavor. Where DS Talent "manifests" a psychic effect, the Wrench **deploys** a machine or **commands** one already in the field. Where DS Talent reads minds or projects thought, the Wrench reads a sensor feed or projects a rig-signal override. No mind, no thought, no psionics anywhere in this document.*
+*DS Talent reskin explanation: the Wrench's mechanical spine is the DS Talent class — a Logic-primary, resource-economy class built around banking a Heroic Resource from successful use and spending it on cost-banded abilities, with a signature-ability baseline and a subclass ("Tradition") ladder. GHOSTWIRE strips every psionic/telepathic reference from the Talent SRD and replaces it wholesale with drone-command, remote-piloting, and rig-signal flavor. Where DS Talent "manifests" a psychic effect, the Wrench **deploys** a machine or **commands** one already in the field. Where DS Talent reads minds or projects thought, the Wrench reads a sensor feed or projects a rig-signal override. No mind, no thought, no psionics anywhere in this document.*
 
 | Stat | Value |
 |---|---|
-| **Core Characteristics** | Logic (Reason), Reflex (Agility) |
+| **Core Characteristics** | Logic, Reflex |
 | **Heroic Resource** | Uptime |
 | **Epic Resource / Capstone** | Overclock (10th level, epic capstone) *(v1 estimate — name pending)* |
 | **Starting Stamina** | 18 |
@@ -83,7 +83,7 @@ Uptime is machine-runtime — the fuel that keeps your fleet online, responsive,
 - **Signal jamming** — any enemy Electronic Warfare effect that jams, spoofs, or otherwise interferes with your control link drains Uptime directly (typically **2–4 Uptime per jam pulse**, *v1 estimate*) rather than (or in addition to) imposing the usual EW penalty.
 - **Asset destruction** — a machine dropping to 0 Integrity costs you a lump **3 Uptime** *(v1 estimate)* — the shock of losing hardware outright, distinct from the smaller per-hit drain above.
 
-**Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 tier ladder used by every other GHOSTWIRE Heroic Resource.
+**Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 cost-band ladder used by every other GHOSTWIRE Heroic Resource.
 
 **End-of-encounter loss doctrine.** You lose any remaining Uptime at the end of the encounter — the engines spin down, the rig goes quiet, the fleet powers to standby. Uptime never carries between encounters and is never banked toward downtime; downtime fabrication (see THE MACHINES, below) is a wholly separate nuyen-and-time system, not an Uptime spend.
 
@@ -99,7 +99,7 @@ Uptime is machine-runtime — the fuel that keeps your fleet online, responsive,
 
 ### Signature Abilities (No Uptime Cost)
 
-Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st level — your always-on toolkit, all rolled with **Logic (Reason)** unless the ability explicitly calls for a Reflex-driven direct-pilot roll. *(Quick Build: **Deploy & Command**, **Rigged Fire**.)*
+Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st level — your always-on toolkit, all rolled with **Logic** unless the ability explicitly calls for a Reflex-driven direct-pilot roll. *(Quick Build: **Deploy & Command**, **Rigged Fire**.)*
 
 > **Deploy & Command** (Signature)
 > *Deploy or Command · Main Action or Maneuver · Range 10*
@@ -162,23 +162,23 @@ Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st 
 - **Exploit-the-mark (fleet analog — "Exposed Target"):** whenever a machine you control damages a target that is already Marked, Suppressed, or otherwise debuffed by another crew member's ability, you gain **+1 Uptime**. *(v1 estimate.)*
 - **Reposition:** whenever a machine you control repositions and ends adjacent to (or in firing arc of) a target it then damages this round, gain **+1 Uptime**. *(v1 estimate — the fleet-command version of the Scout's Reposition income line.)*
 
-### Heroic Abilities — Cost Tiers 1 Through 11
+### Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are the Wrench's subclass-flavored spell-equivalent — chosen by cost tier as you level, layered on top of the always-on Signature kit above. Every subclass (Drone Jockey, Vehicle Rig-Pilot, Facility Rigger) has its own full ability ladder across all four tiers; see the subclass sections below for the actual ability text. The tier structure itself is shared across all three subclasses and matches the Hacker/Elementalist/Operator pattern exactly:
+Heroic Abilities are the Wrench's subclass-flavored spell-equivalent — chosen by cost band as you level, layered on top of the always-on Signature kit above. Every subclass (Drone Jockey, Vehicle Rig-Pilot, Facility Rigger) has its own full ability ladder across all four tiers; see the subclass sections below for the actual ability text. The tier structure itself is shared across all three subclasses and matches the Hacker/Elementalist/Operator pattern exactly:
 
-#### Base Tier (1-5 Uptime, chosen at 1st level)
+#### Base Band (1-5 Uptime, chosen at 1st level)
 
 Low-cost, always-useful openers — the first abilities a Wrench of any subclass picks up. Drawn from each subclass's own Base Tier list (see Drone Jockey / Vehicle Rig-Pilot / Facility Rigger, below).
 
-#### 7-Cost Tier (chosen at 3rd level)
+#### 7-Cost Band (chosen at 3rd level)
 
 Mid-power abilities that come online once a Wrench's fleet doctrine has had a chance to mature. Also the tier that unlocks **Focus Fire** (see below) as a purchasable pick.
 
-#### 9-Cost Tier (chosen at 5th level)
+#### 9-Cost Band (chosen at 5th level)
 
 High-power abilities — the point where a subclass's core fantasy (the swarm, the platform, the building) really opens up.
 
-#### 11-Cost Tier (chosen at 8th level)
+#### 11-Cost Band (chosen at 8th level)
 
 Apex abilities — the capstone-adjacent tier just below the 10th-level epic capstone, each one a full-encounter-defining play.
 
@@ -186,7 +186,7 @@ Apex abilities — the capstone-adjacent tier just below the 10th-level epic cap
 
 Every Wrench has one burst mechanic that turns the whole fleet loose at once. This is the Wrench's answer to the Scout's stacked-surge burst and the Elementalist's channel-burst — defined inline, adjacent to the Uptime economy it spends, per Scout v2's near-use doctrine.
 
-> **Focus Fire** (Heroic, 7-Cost Tier, unlocked at 3rd level)
+> **Focus Fire** (Heroic, 7-Cost Band, unlocked at 3rd level)
 > *Command · Main Action · Range = each firing machine's weapon range · Uptime cost 7*
 > Target: 1 creature or object, or split among up to 2 targets
 > **Power Roll** — each participating machine rolls its own **Rigged Fire** independently against the chosen target(s)
@@ -214,7 +214,7 @@ Every drone is a **device** (Wired-spine convention) with a compact stat block. 
 | **Name / Chassis type** | e.g. recon quadrotor, kamikaze microdrone, taser-bee, spotter-drone, autogun turret-drone |
 | **Scale** | Personal or Light (drones are never Vehicle-scale or above; a Vehicle-scale combat drone is handled on the Vehicle stat card, below) |
 | **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. |
-| **Handling** | Agility rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |
+| **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |
 | **Speed** | Movement in squares or Speed bands. |
 | **Armor** | Flat damage reduction, if any (most small drones have 0–1). |
 | **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |
@@ -222,7 +222,7 @@ Every drone is a **device** (Wired-spine convention) with a compact stat block. 
 | **Upgrade Slots** | See below. |
 | **Uptime Upkeep** | 1 Uptime/turn while active, contributing to your fielded-fleet drip (see Heroic Resource: Uptime, above). |
 
-**Drone Upgrade Slots — doctrine.** Every drone chassis has a fixed number of **Upgrade Slots**, gated by its size/cost tier, not by level:
+**Drone Upgrade Slots — doctrine.** Every drone chassis has a fixed number of **Upgrade Slots**, gated by its size/cost band, not by level:
 
 | Chassis tier | Upgrade Slots | Representative examples |
 |---|---|---|
@@ -284,7 +284,7 @@ A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utili
 - **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.
 - **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform.
 
-**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic (Reason) or Reflex (Agility) test against a moderate difficulty** *(v1 estimate — exact DC deferred to the numeric pass)*, modified by the target frame's Handling. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(v1 estimate: +4 at 1st through 6th level, rising to +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a critical failure (roll ≤ 5, *v1 estimate*) triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
+**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test against a moderate difficulty** *(v1 estimate — exact DC deferred to the numeric pass)*, modified by the target frame's Handling. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(v1 estimate: +4 at 1st through 6th level, rising to +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a critical failure (roll ≤ 5, *v1 estimate*) triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
 
 **Chase Modes (reference).** Vehicle combat runs in one of two modes, Director's call:
 - **Positional (default):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot.
@@ -384,7 +384,7 @@ Officially nothing — Drone Jockeys rarely have corp paperwork at all. Street n
 | 1 | **Salvage Sense** (passive, triggered) | When a drone you control is wrecked, you may immediately strip it for parts as a free triggered action (grants the standard Salvage Tick Uptime, see Heroic Resource: Uptime, above) |
 | 2 | **Suppressing Volume** (passive) | Focus Fire with 3+ drones auto-suppresses the target regardless of individual roll results |
 | 3 | **Cheap and Many** (passive) | A wrecked Micro-tier drone can be redeployed from spare parts as a maneuver instead of a main action, once per encounter |
-| 5 | **Swarm Sense** (passive) | While 3+ drones are active, you gain an edge on Instinct (Intuition) tests to notice ambushes or hidden threats (distributed sensor coverage) |
+| 5 | **Swarm Sense** (passive) | While 3+ drones are active, you gain an edge on Instinct tests to notice ambushes or hidden threats (distributed sensor coverage) |
 | 6 | **Overwhelm** (passive) | When 4 or more drones you control target the same creature in one Focus Fire, that target's Armor is treated as 1 lower for that action |
 | 7 | **Endless Swarm** (passive) | Fleet size cap raised by a further +2 (total +4 over baseline); Deploy Momentum income doubles |
 | 8 | **Wide Band, Redoubled** (passive) *(9th-level ability tier companion — see below)* | The Wide Band Command-the-whole-swarm maneuver no longer requires all drones be within Range; it reaches any drone you currently control |
@@ -452,7 +452,7 @@ Officially nothing — Drone Jockeys rarely have corp paperwork at all. Street n
 >
 > *Trigger: an enemy targets you or an ally with a ranged attack. Effect: a drone broadcasts a false heat/comm signature, and the attack must retarget the drone instead if it is a valid target in range.*
 
-*7-Cost Tier (chosen at 3rd level; 5-6 abilities):*
+*7-Cost Band (chosen at 3rd level; 5-6 abilities):*
 
 > **Bee Storm**
 > *Command · Main Action · Uptime cost 5 (v1 estimate)*
@@ -503,7 +503,7 @@ Officially nothing — Drone Jockeys rarely have corp paperwork at all. Street n
 >
 > *Trigger: an ally within 10 squares of any of your active drones is about to be flanked or ambushed. Effect: the ally gains a free Reposition of 2 squares before the triggering effect resolves (your recon net calls the warning a half-second early).*
 
-*9-Cost Tier (chosen at 5th level; 4-5 abilities):*
+*9-Cost Band (chosen at 5th level; 4-5 abilities):*
 
 > **Saturation Fire**
 > *Command · Main Action · Uptime cost 7 (v1 estimate)*
@@ -542,7 +542,7 @@ Officially nothing — Drone Jockeys rarely have corp paperwork at all. Street n
 >
 > *Trigger: a drone you control would be destroyed. Effect: it survives at 1 Integrity, and you may immediately reposition it up to its Speed away from danger.*
 
-*11-Cost Tier (chosen at 8th level; 2-3 apex abilities):*
+*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*
 
 > **Total Swarm Protocol** (apex)
 > *Command · Main Action · Uptime cost 11 (v1 estimate)*
@@ -641,7 +641,7 @@ Officially nothing — no corp built this. Street name: **the driver**, **the ri
 > | 12-16 | Target pushed off, falls prone. |
 > | 17+ | Target pushed off, takes 4 damage *(v1 estimate)*, falls prone. |
 
-*7-Cost Tier (chosen at 3rd level; 5-6 abilities):*
+*7-Cost Band (chosen at 3rd level; 5-6 abilities):*
 
 > **Overdrive Charge**
 > *Command · Main Action · Uptime cost 5 (v1 estimate)*
@@ -685,7 +685,7 @@ Officially nothing — no corp built this. Street name: **the driver**, **the ri
 >
 > *Your platform smashes through an obstacle, clearing a path and potentially damaging anything sheltering behind it (Director's call on secondary targets).*
 
-*9-Cost Tier (chosen at 5th level; 4-5 abilities):*
+*9-Cost Band (chosen at 5th level; 4-5 abilities):*
 
 > **Redline Barrage**
 > *Command · Main Action · Uptime cost 7 (v1 estimate)*
@@ -719,7 +719,7 @@ Officially nothing — no corp built this. Street name: **the driver**, **the ri
 >
 > *Trigger: your platform would be targeted by an enemy lock/mark effect. Effect: the lock fails; your platform's sensor ghosting sells a false position.*
 
-*11-Cost Tier (chosen at 8th level; 2-3 apex abilities):*
+*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*
 
 > **One Machine, One Will** (apex)
 > *Command · Main Action · Uptime cost 11 (v1 estimate)*
@@ -809,7 +809,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 >
 > *You know the location and status of every pre-placed asset and every enemy detected by your base's sensors, without needing line of sight, as long as you are inside or adjacent to the base.*
 
-*7-Cost Tier (chosen at 3rd level; 5-6 abilities):*
+*7-Cost Band (chosen at 3rd level; 5-6 abilities):*
 
 > **Crossfire Grid**
 > *Command · Main Action · Uptime cost 5 (v1 estimate)*
@@ -850,7 +850,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 >
 > *Trigger: a hostile Hacker attempts to breach your base's Node. Effect: roll 2d10 + Logic contested against their attempt; success deals Wired-side biofeedback to the attacker and denies the breach.*
 
-*9-Cost Tier (chosen at 5th level; 4-5 abilities):*
+*9-Cost Band (chosen at 5th level; 4-5 abilities):*
 
 > **Total Lockdown**
 > *Command · Main Action · Uptime cost 7 (v1 estimate)*
@@ -879,7 +879,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 >
 > *Trigger: an enemy attempts to flee through a corridor inside your base. Effect: a pre-wired structural charge seals the route (Director's call on collateral); the enemy is Restrained until they force their way through.*
 
-*11-Cost Tier (chosen at 8th level; 2-3 apex abilities):*
+*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*
 
 > **Turn the Building** (apex — matches the 6th-level passive of the same intent, made explicit as an activated ability)
 > *Command · Main Action · Uptime cost 11 (v1 estimate)*
@@ -902,7 +902,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 |---|---|---|---|
 | **1** | Uptime resource (heroic resource) - Deploy & Command / Rigged Fire / Field Repair / Override Ping (signatures) - Kit - Choose subclass - Choose a Base Tier (1-5 Uptime) ability | -- | Subclass passive + subclass triggered action |
 | **2** | Fleet Size Doctrine online (base 3) | Perk (choice) | Subclass 2nd-level feature |
-| **3** | Focus Fire (7-Cost tier, unlocked) - Choose a 7-Cost ability | -- | Subclass 3rd-level feature |
+| **3** | Focus Fire (7-Cost band, unlocked) - Choose a 7-Cost ability | -- | Subclass 3rd-level feature |
 | **4** | Fleet Cap +1 (fleet size 4) | Characteristic Increase - Perk (choice) - Skill | -- |
 | **5** | Choose a 9-Cost ability - Uptime cap 10→12 | -- | Subclass 5th-level feature |
 | **6** | Jump-In Integrity buffer step (see THE MACHINES) | Perk (choice) | Subclass 6th-level feature |
@@ -966,7 +966,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 
 *Every locked design ruling from this session, enumerated for future-agent reference.*
 
-1. **Attribute canon is locked:** Physique (Might), Reflex (Agility), Logic (Reason), Instinct (Intuition), Persona (Presence). No "Cognition." No "Reflexes" (plural). This document purges both defunct terms wherever the older Wrench/Scout docs used them.
+1. **Attribute canon is locked:** Physique, Reflex, Logic, Instinct, Persona. No "Cognition." No "Reflexes" (plural). This document purges both defunct terms wherever the older Wrench/Scout docs used them.
 2. **Class identity is locked verbatim** to Michael's 2026-07-29 9:13am directive (quoted in full in the Design Conversation section, above) — the Wrench is a fielded-force class, not a soldier, not a spellcaster, board presence is external, Uptime is the Heroic Resource.
 3. **Three subclasses by role, all street-taught, no corp academy:** Drone Jockey (swarm), Vehicle Rig-Pilot (one big platform), Facility Rigger (building-as-weapon). This is a deliberate structural contrast with the Scout, whose subclasses ARE corp/street schools.
 4. **Origin doctrine is a class rule, not just flavor:** corp affiliations are player-choice backstory only, never a required academy, for any Wrench subclass.
