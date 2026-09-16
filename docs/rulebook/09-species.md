@@ -1,6 +1,8 @@
 # Ghostwire Core Rulebook — Chapter: Species (The Nine Peoples)
 
-**Status:** Stage 2.5 draft — DS alignment pass (no Ghostwire tier ladder)  
+**Status:** Stage 2.5 draft — DS alignment pass (interim)
+**Ancestry map:** see `docs/rulebook/SPECIES-DS-MAP.md` (Ghostwire Peoples ↔ Heroes ancestries)
+**Template:** Changer should follow the Dragon Knight field-for-field reskin (creation-time signature + point budget), not level-gated BP options  
 **Source of record:** `docs/masters/GHOSTWIRE_SPECIES_MASTER.md`  
 **Context:** Drafted after class batch approval (2026-09-16). Shared chargen / ancestry layer for all eight classes.
 
@@ -11,6 +13,23 @@
 - Old Ghostwire **tier** ladder removed; gates use **level** (and echelon where banding matters)
 - Attribute labels must be the locked five: Physique, Reflex, Logic, Instinct, Persona (old Logic/Instinct/Instinct remapped)
 - Tri-register naming (street / corp / formal) should stay consistent book-wide
+
+
+
+## Draw Steel ancestry alignment (v1 target)
+
+| Ghostwire | Draw Steel spine |
+|---|---|
+| Pure Human | Human |
+| Corran | Dwarf |
+| Elvani | High Elf |
+| Goliar | Orc |
+| Changer | Dragon Knight *(field-for-field reskin already designed)* |
+| Revenant | Revenant |
+| Mutant Human | Devil *(candidate)* or GW-original on DS budget |
+| Cyborg | Time Raider *(loose)* or GW-original on DS budget |
+
+**Structural target:** each species becomes a DS-style ancestry (free signature + ancestry points at creation). The level-gated Species Options tables below are **interim legacy** until that rewrite lands.
 
 ---
 
