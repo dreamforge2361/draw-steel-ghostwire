@@ -10,7 +10,8 @@
 - Chrome costs **¥ + Body Integrity**, never BP/XP/class power
 - Attributes remain Physique, Reflex, Logic, Instinct, Persona
 - Availability bands: street → professional → restricted → military → prototype (not a GW tier ladder)
-- Starting funds v1: **¥5,000** liquid + **one free starting Kit**
+- Starting funds v1: **¥5,000** liquid + **one free starting Kit** (includes street-band qualifying gear)
+- **Kit doctrine never costs ¥** — ¥ buys gear / mods / chrome / services only
 
 ---
 
@@ -24,8 +25,8 @@ Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, k
 
 | Spend | Notes |
 |---|---|
-| **Kits (after chargen)** | Additional Kit doctrines / loadouts beyond the free starting Kit — see below |
-| **Gear** | Weapons, armor, tools, mods that satisfy Kit categories or standalone use |
+| **Gear** | Weapons, armor, tools that satisfy Kit categories or standalone use |
+| **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) |
 | **Chrome** | Implants and chrome packages — **also** spends Body Integrity (Chrome chapter) |
 | **Lifestyle** | Thin burn: pay upkeep or take a street complication (placeholder) |
 | **Bribes / favors** | Access, silence, fixers, corp doors |
@@ -47,9 +48,9 @@ Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, k
 Every new hero starts with:
 
 1. **¥5,000** liquid nuyen
-2. **One free starting Kit** (chosen from the Kits chapter / class guidance)
+2. **One free starting Kit** (doctrine) **including street-band qualifying gear** for that Kit’s category (so the Kit is live on day one)
 
-**No free starting chrome package.** Buy chrome with ¥ if Body Integrity allows. Additional kits, gear, and chrome after chargen are bought with ¥.
+**No free starting chrome.** Buy chrome with ¥ + Body Integrity if allowed.
 
 Directors may later grant a ¥ bonus from Background/Profession — **flagged open** (amount / table deferred).
 
@@ -80,13 +81,20 @@ Mark **provisional** — tune after playtest. Per-run (or per-job) liquid for a 
 
 Directors may pay partly in gear, chrome credits, or favors. Payouts should fund chrome/gear progression without trivializing Body Integrity or Availability gates.
 
-## How Kits are purchased after chargen
+## Kits ↔ Economy bridge (locked 2026-09-16)
 
-- **Chargen:** one Kit free (doctrine + the implication that the hero owns qualifying starter gear appropriate to that Kit — Directors may treat starter qualifying gear as covered by the free Kit for v1 simplicity, or require spending part of the ¥5,000; **open**).
-- **After chargen:** additional Kits cost ¥ (training / doctrine acquisition fee — exact schedule deferred to gear pass). The hero must still **own** Availability-appropriate qualifying weapons/armor for the new Kit's bonuses to apply (Kits ownership rule).
-- Swapping the *active* Kit during a respite remains a respite activity (Kits chapter); buying a *new* Kit into the hero's repertoire is an Economy spend.
+**Kit doctrine never costs ¥.** A Kit is trained technique (class/BP side of the firewall), same as the Kits chapter.
 
-**Tension to resolve on review:** Kits chapter currently says Kit doctrine never costs ¥ (training on BP side). Economy v1 locks additional Kits as ¥ purchases. Prefer: ¥ unlocks the doctrine slot; BP/class still never sold for cash. Confirm with Michael.
+| Spend | ¥? |
+|---|---|
+| Learn / know a Kit (doctrine) | **No** — chargen free Kit; later Kits via class features, mentors, or downtime **training** (time/story), not a cash menu |
+| Swap which known Kit is active | **No** — respite activity (Kits chapter) |
+| Qualifying weapons / armor | **Yes** — Economy + Availability |
+| Gear mods (smartlink, etc.) | **Yes** |
+| Chrome that *is* the qualifying gear (cyber-limb, implant weapon) | **Yes** + Body Integrity (Chrome chapter) |
+| Cyborg frame mounts that satisfy a Kit category | **Yes** + hardpoints (Frame Modules stub) |
+
+**Ownership rule (unchanged):** without a qualifying item in hand/worn, Kit bonuses are inert (improvised fallback). Better Availability gear upgrades the *object*; Kit bonus lines stay the same.
 
 ## Link to Chrome / Body Integrity
 
@@ -103,9 +111,7 @@ Module lang remaps Draw Steel's **wealth** label to **Nuyen**. Track ¥ on the h
 ## Open questions (Michael)
 
 1. Background/Profession ¥ bonus — amount and whether it is always liquid.
-2. Does the free starting Kit include qualifying street-band gear, or must ¥5,000 cover that gear?
-3. Exact ¥ price for additional Kits after chargen (training fee schedule).
-4. Reconcile Kits chapter "doctrine never costs ¥" vs Economy v1 "additional kits bought with ¥."
-5. Lifestyle rates — when to expand beyond the pay-or-complication placeholder.
-6. Run payout bands — keep provisional numbers or retune after first table.
-7. Bribes / Wired access sample price points for the gear pass.
+2. Lifestyle rates — when to expand beyond the pay-or-complication placeholder.
+3. Run payout bands — keep provisional numbers or retune after first table.
+4. Bribes / Wired access sample price points for the gear pass.
+5. How additional Kits are unlocked after chargen (class list / mentor / downtime training length) — still not ¥.
