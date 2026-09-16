@@ -1,0 +1,64 @@
+{
+  "_id": "pJY4ybZUtkH9HDxy",
+  "_key": "!items!pJY4ybZUtkH9HDxy",
+  "name": "GHOSTWIRE.Abilities.PatchUp.Name",
+  "type": "ability",
+  "img": "icons/tools/medical/bandages-adhesive.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "heal",
+    "keywords": [],
+    "type": "main",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "story": "",
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.PatchUp.Description",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,17 +1,29 @@
 const MODULE_ID = "draw-steel-ghostwire";
 
 // Draw Steel copies ds.CONFIG.hero.defaultItems onto every new hero.
-// Ghostwire swaps the stock Ride move action for Drive (vehicles, not mounts).
-const DS_RIDE = "Compendium.draw-steel.abilities.Item.QXOkflcYF6DITJE3";
-const GHOSTWIRE_DRIVE = `Compendium.${MODULE_ID}.abilities.Item.Xc5MebcXHYG1hdQR`;
+// Ghostwire swaps stock actions for street-themed copies with the same mechanics.
+const DEFAULT_ITEM_SWAPS = {
+  // Ride -> Drive (vehicles, not mounts)
+  "Compendium.draw-steel.abilities.Item.QXOkflcYF6DITJE3": `Compendium.${MODULE_ID}.abilities.Item.Xc5MebcXHYG1hdQR`,
+  // Charge -> Rush
+  "Compendium.draw-steel.abilities.Item.wNqJWJbgAbnJBqZf": `Compendium.${MODULE_ID}.abilities.Item.Od6u2idYoCRmoDYD`,
+  // Defend -> Take Cover
+  "Compendium.draw-steel.abilities.Item.fjtY7RKBGWx2u5tK": `Compendium.${MODULE_ID}.abilities.Item.1W0HIoL2SAcbTU6W`,
+  // Heal -> Patch Up
+  "Compendium.draw-steel.abilities.Item.2qWHDVB7SBS9anLB": `Compendium.${MODULE_ID}.abilities.Item.pJY4ybZUtkH9HDxy`,
+  // Aid Attack -> Spot Target
+  "Compendium.draw-steel.abilities.Item.Xb3S5N1fZyICD58D": `Compendium.${MODULE_ID}.abilities.Item.Lc7LhoqWg9ydP5Jm`,
+};
 
 Hooks.once("init", () => {
   console.log(`${MODULE_ID} | Draw Steel - Ghostwire Build initialized`);
   document.body.classList.add("ghostwire", "ghostwire-theme");
 
   const defaultItems = ds.CONFIG.hero.defaultItems;
-  if (defaultItems.delete(DS_RIDE)) defaultItems.add(GHOSTWIRE_DRIVE);
-  else console.warn(`${MODULE_ID} | Ride not found in hero default items; Drive not added`);
+  for (const [stock, ghostwire] of Object.entries(DEFAULT_ITEM_SWAPS)) {
+    if (defaultItems.delete(stock)) defaultItems.add(ghostwire);
+    else console.warn(`${MODULE_ID} | ${stock} not found in hero default items; ${ghostwire} not added`);
+  }
 
   // Tech: non-Magic, non-Psionic ability keyword for machine abilities (Cyborg Installed Suite).
   // Draw Steel localizes keyword labels at i18nInit, after this hook.

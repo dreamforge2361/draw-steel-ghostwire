@@ -16,6 +16,24 @@
       "Keywords": {
         "Tech": "Tech"
       },
+      "Rush": {
+        "Name": "Rush",
+        "Description": "<p>When a creature takes the Rush main action, they move up to their speed in a straight line without jumping, then make a @UUID[Compendium.draw-steel.abilities.Item.wU69Y06G9lYFrvp6]{melee free strike} against a target when they end their move. If the creature has an ability with the Rush keyword, they can use that ability against the target instead of a free strike.</p><p>A creature can’t move through difficult terrain or shift when they rush. They can fly or burrow as part of the Rush main action if they have that movement available to them — thrusters, grav rigs, and tunneling gear included — but they can’t climb or swim while rushing unless they can automatically use that movement at full speed.</p>"
+      },
+      "TakeCover": {
+        "Name": "Take Cover",
+        "Description": "<p>When a creature takes the [[/apply TYggdI2Kwa302NjW]]{Take Cover main action}, they get low behind whatever the street offers — an engine block, a dumpster, a doorframe — and ability rolls made against them have a double bane until the start of their next turn. Additionally, you have a double edge on tests when called for to resist environmental effects or a creature’s traits or abilities. A creature gains no benefit from this action while another creature is taunted by them.</p>",
+        "EffectName": "Taking Cover",
+        "EffectDescription": "<p>Ability rolls made against you have a double bane until the start of your next turn. You have a double edge on tests when called for to resist environmental effects or a creature’s traits or abilities. You gain no benefit from this while another creature is taunted by you.</p>"
+      },
+      "PatchUp": {
+        "Name": "Patch Up",
+        "Description": "<p>A creature who uses the Patch Up main action slaps on a trauma patch, jabs a stim, or talks an adjacent creature through the pain to keep them in the fight. The target creature can spend a Recovery to regain Stamina, or can make a saving throw against one effect they are suffering that is ended by a saving throw.</p>"
+      },
+      "SpotTarget": {
+        "Name": "Spot Target",
+        "Description": "<p>Choose an enemy adjacent to you and tag it for your crew — a callout, a laser dot, a ping on the shared feed. The next ability power roll an ally makes against that creature before the start of your next turn has an edge.</p>"
+      },
       "Drive": {
         "Name": "Drive",
         "Description": "<p>A creature can take the Drive move action only while piloting a vehicle. When a creature takes the Drive move action, they cause their vehicle to move up to the vehicle’s speed, taking the driver and any passengers with it. Alternatively, a creature can use the Drive move action to have their vehicle use the Disengage move action as a free triggered action. A creature can use the Drive move action only once per round. A vehicle can only have this move action applied to it once per round. This movement can be broken up with the driver’s maneuver and main action however they wish.</p>"
@@ -471,6 +489,13 @@
               "label": "Nuyen"
             }
           }
+        }
+      }
+    },
+    "Item": {
+      "ability": {
+        "Keywords": {
+          "Charge": "Rush"
         }
       }
     },
