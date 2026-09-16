@@ -1,18 +1,20 @@
 # Ghostwire Core Rulebook — Chapter: Species (The Peoples)
 
-**Status:** Stage 2.5 — **Draw Steel ancestry packages** (creation-time; six Peoples rewritten)
+**Status:** Stage 2.5 — **Draw Steel ancestry packages** (creation-time; all eight Peoples)
 **Ancestry map:** `docs/rulebook/SPECIES-DS-MAP.md`
 **Template:** Changer = Dragon Knight field-for-field reskin (`docs/masters/Changer-Dragon-Knight-Reskin.md`)
 **Source of record (fiction):** `docs/masters/GHOSTWIRE_SPECIES_MASTER.md`
 **Context:** Shared chargen / ancestry layer for all eight classes. Stock Foundry system is Draw Steel; Ghostwire is world + module. This chapter is **rulebook text only**.
 
 **Notes for Michael (review):**
-- Six Peoples are now DS-style: free signature trait(s) + fixed ancestry-point budget + purchased-trait menu with DS costs. **No level-gated BP Species Options** on those six.
-- Mutant Human and Cyborg are **short deferred stubs** until Devil / Time Raider chassis is decided.
+- All eight Peoples are now DS-style: free signature trait(s) + fixed ancestry-point budget + purchased-trait menu with DS costs. **No level-gated BP Species Options**.
+- **Mutant Human = Devil** chassis (mutagenic Ghostwire fiction). **Cyborg = Time Raider** chassis (chrome/full-conversion fiction).
 - Attribute labels locked: **Physique, Reflex, Logic, Instinct, Persona** (map from Might / Agility / Reason / Intuition / Presence).
 - Power Roll bands: **≤11 / 12–16 / 17+**.
 - Changer lineages are **Raven / Rat / Wolf** only (three forms = maneuver fiction). Older five-family subtype table retired.
 - Revenant **Decay ladder removed** as mechanics; fire while inert still destroys permanently (Tough But Withered).
+- Mutant **Corruption Load** BP mutation track retired; optional cosmetic Corruptive Flaw only (no Load bands).
+- Cyborg hard limits (Arcane Severance, tech-only recovery, System Crisis) are **chargen/setting constraints**, not ancestry-point costs.
 - Costs are **not invented** — copied from the mapped DS ancestry (or the Changer reskin master).
 
 ---
@@ -25,7 +27,7 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 2. A fixed **ancestry-point budget** spent across a purchased-trait menu
 3. **No per-level ancestry unlock track** and **no Ghostwire tier ladder** — growth after creation comes from class / characteristics / kits
 
-Do **not** buy species options with BP gated by level. That pattern is retired for the six rewritten Peoples.
+Do **not** buy species options with BP gated by level. That pattern is retired for all eight Peoples.
 
 ---
 
@@ -39,8 +41,8 @@ Do **not** buy species options with BP gated by level. That pattern is retired f
 | Goliar (“Ogre”) | Orc | 3 |
 | Changer | Dragon Knight *(field-for-field reskin)* | 3 |
 | Revenant | Revenant | 2 (or 3 if size 1S) |
-| Mutant Human | Devil *(candidate)* or GW-original | **Deferred** |
-| Cyborg | Time Raider *(loose)* or GW-original | **Deferred** |
+| Mutant Human | Devil | 3 |
+| Cyborg | Time Raider | 3 |
 
 ---
 
@@ -54,8 +56,8 @@ Do **not** buy species options with BP gated by level. That pattern is retired f
 | [Goliar (“Ogre”)](#goliar-ogre) | Engineered heavy | Relentless | 3 pts | Ancestry package |
 | [Changer](#changer) | Were-blooded three-form shapeshifter | Beast-Hide | 3 pts | Ancestry package |
 | [Revenant](#revenant) | Death-returned, unfinished purpose | Former Life + Tough But Withered | 2 pts (3 if 1S) | Ancestry package |
-| [Mutant Human](#mutant-human-deferred) | Powerful, unstable, customizable | — | — | Deferred stub |
-| [Cyborg](#cyborg-deferred) | Machine-first, no magic | — | — | Deferred stub |
+| [Mutant Human](#mutant-human) | Powerful, unstable, customizable | Aberrant Rapport | 3 pts | Ancestry package |
+| [Cyborg](#cyborg) | Machine-first, no magic | Cortical Firewall | 3 pts | Ancestry package |
 
 ---
 
@@ -82,8 +84,8 @@ Every People carries a **scientific** name (corp/lab classification), a **corpor
 - Three engineered class-breeds anchor the corp social ladder: the **Corran** (“Squat,” skilled-labor underclass), the **Goliar** (“Ogre,” heavy-labor/security muscle), and the **Elvani** (“Elf,” aesthetic aristocracy). Corran and Elvani are deliberate social opposites with mutual contempt.
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
 - **Revenants** are embodied undead. They use Draw Steel **Former Life** + **Tough But Withered** (inert instead of dying; fire while inert = permanent destruction). There is **no** level/echelon Decay ladder as a mechanical progression.
-- **Mutants** (deferred package) can be born or made; they always carry a Corruptive Flaw whose severity tracks Corruption Load — power is self-limiting via the flaw.
-- **Full Cyborgs** (deferred package) are machine-first, cannot use any magic (**Arcane Severance**), are Presence/Persona-capped, healed only by tech, and enter Director-controlled System Crisis at 0 Stamina instead of normal dying. Class bans (Cyborg vs Elementalist / Street Priest) remain chargen rules.
+- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation; the old Corruption Load BP mutation track is **retired** in favor of the Devil-chassis ancestry menu.
+- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist and Street Priest / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
 ---
 
@@ -278,7 +280,7 @@ No one is born a Revenant. A person who died with a burning purpose rises again,
 
 Choose the ancestry you were before you died. Your **size** is that ancestry’s size and your **speed is 5**. Unless you select one of the Previous Life traits (see below), you don’t receive any other ancestral traits from your original ancestry.
 
-**Ghostwire Former Life choices:** Pure Human, Corran, Elvani, Goliar, or Changer. **Mutant Human** and **Cyborg** may be chosen **only as size/speed placeholders** until those ancestry packages exist — you do **not** gain deferred Mutant/Cyborg traits this way.
+**Ghostwire Former Life choices:** Pure Human, Corran, Elvani, Goliar, Changer, **Mutant Human**, or **Cyborg**. Unless you select Previous Life traits, you don’t receive other ancestral traits from that People — only size and speed 5 from Former Life.
 
 ### Signature Trait — Tough But Withered (free)
 
@@ -319,23 +321,121 @@ Additionally, when your Stamina reaches the **negative of your winded value**, y
 
 ---
 
-## Mutant Human (deferred)
+## Mutant Human
 
 **Names:** Scientific *Homo sapiens aberrans* · Corporate/common **Aberrant / Mutagenic Type** · Slang *Muties, Tainted, Wrongborn*.
 
 **Tagline:** Powerful, unstable, endlessly customizable — human clay reshaped by the Dark One’s touch.
 
-Full ancestry package is **deferred**. Chassis decision pending: **Devil** (best fantasy match — corruption, purchased power, dangerous bargains) **or** a Ghostwire-original built on the same creation-time signature + point-budget rules. Until that lands, Mutants remain fiction-complete in the master document but are **not** playable as a finished DS ancestry package in this chapter. Revenants may use Mutant **only as a Former Life size/speed placeholder**.
+**Draw Steel spine:** Devil · **3 ancestry points**  
+**Quick Build:** Warped Legs, Ossified Crown
+
+### Origin and nature
+
+Humans whose flesh has been rewritten — inherited taint, corrupted-zone exposure, magical accident, infernal bargain, or corp gene-forging. **Born or made carries no mechanical difference.** They are the People most directly marked by the cosmic war: living proof the Dark One’s touch can remake baseline humanity into something else.
+
+### Signature Trait — Aberrant Rapport (free)
+
+*(Devil Silver Tongue mechanics.)*
+
+Your taint twists how your words and presence are read, giving you a better read on people and a way to steer them. You have **one skill of your choice from the interpersonal skill group**, and you gain an **edge on tests** when attempting to discover an NPC’s motivations and pitfalls during a negotiation.
+
+### Purchased Traits — 3 ancestry points
+
+- **Barbed Mutation (1):** *(Barbed Tail.)* A barbed spur, spine, or tendril punctuates your strikes. Once per round when you make a melee strike, you can deal extra damage with the strike equal to your **highest characteristic score**.
+- **Warped Legs (1):** *(Beast Legs.)* Your mutated legs make you faster. You have **speed 6**.
+- **Taint Flare (1):** *(Glowing Eyes.)* When your taint flares under stress, it lashes back. Whenever you take damage from a creature, you can use a triggered action to deal that creature **psychic damage equal to 1d10 + your level**.
+- **Taint Sight (1):** *(Hellsight.)* Mutated eyes see through darkness, fog, and other obscuring effects. You don’t take a bane on strikes made against creatures with concealment.
+- **Ossified Crown (2):** *(Impressive Horns.)* Bone plates, horn-like growths, or a hardened cranial ridge mark your force of will. Whenever you make a saving throw, you succeed on a roll of **5 or higher**.
+- **Prehensile Mutation (2):** *(Prehensile Tail.)* A prehensile tendril, extra limb, or living appendage lets you challenge foes on all sides. You **can’t be flanked**.
+- **Membrane Wings (2):** *(Wings.)* Patagia, bone-and-skin wings, or similar membranes are strong enough to take you airborne. While using them to fly, you can stay aloft for a number of rounds equal to your **Physique** score (minimum 1 round) before you fall. While flying at **3rd level or lower**, you have **damage weakness 5**.
+
+### Corruptive Flaw (optional fiction)
+
+Visible taint and social “reads as wrong” are **fiction / Director color** layered on this package — not a second economy. The old **Corruption Load** meter and BP mutation track are **retired** in favor of this ancestry menu.
+
+**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only.
+
+**Setting hooks:** Feared as Wrongborn, recruited as assets, hunted as evidence of the Dark One. Ideal for runners who weaponize being “other,” and for stories about how far remaking the body can go before the self breaks.
 
 ---
 
-## Cyborg (deferred)
+## Cyborg
 
 **Names:** Scientific *Machina sapiens* · Corporate/common **Full-Conversion Cyborg** · Slang *Borgs, Chrome, Tin-men, Husks*.
 
 **Tagline:** Machine-first threshold beings — integrated, augmented, existentially unstable. Distinct from chrome-augmented meat.
 
-Full ancestry package is **deferred**. Chassis decision pending: **Time Raider** (loose advanced-ancestry fit) **or** a Ghostwire-original on the same point-budget rules. Hard canon limits (Arcane Severance, Persona cap, tech-only recovery, System Crisis) stay as setting/chargen constraints and will be folded into the eventual package. Revenants may use Cyborg **only as a Former Life size/speed placeholder**.
+**Draw Steel spine:** Time Raider · **3 ancestry points**  
+**Quick Build:** Penetration Optics, Installed Suite with Particle Lance
+
+### Origin and nature
+
+A Cyborg is the far end of the chrome spectrum: effectively all organic Body Integrity spent, frame and cortex first. Living, non-Cyborg heroes who want implants use the Chrome chapter (when drafted); the Cyborg does **not**. Full-conversion is made, not bred — surgery, battlefield salvage, corp programs, or voluntary upload into a shell.
+
+### Signature Trait — Cortical Firewall (free)
+
+*(Time Raider Psychic Scar mechanics.)*
+
+Hardened cortex shielding and trauma-scarred processors blunt psychic assault. You have **psychic immunity equal to your level**.
+
+### Purchased Traits — 3 ancestry points
+
+- **Penetration Optics (1):** *(Beyondsight.)* As a maneuver, you adjust your vision to see through mundane obstructions up to **1 square** thick. While your vision is adjusted this way, you **can’t see** and have **no line of effect** to creatures or objects within **1 square** of you. You can restore your normal vision as a maneuver.
+- **Predictive Sensors (1):** *(Foresight.)* Your sensors auto-know the location of **concealed** (not hidden) creatures within **20 squares**, and you negate the bane on strikes against them. When you are targeted by a strike, you can use a triggered action to impose a **bane** on the power roll.
+- **Auxiliary Limbs — Athletics (1):** *(Four-Armed Athletics.)* You gain an edge on **Climb, Gymnastics, or Swim** tests when you can use all your limbs.
+- **Auxiliary Limbs — Combat (2):** *(Four-Armed Martial Arts.)* When you use Grab or Knockback against an adjacent creature, you can target **one additional** adjacent creature (same power roll). You can have up to **two** creatures grabbed at once.
+- **Installed Suite (2):** *(Psionic Gift.)* Choose **one** of the following signature abilities (usable at will). Keywords may remain **Psionic** for Foundry compatibility; fictionally they are **Tech** (chrome, particle, servo).
+
+  #### Kinetic Driver
+
+  *(Concussive Slam.)* A focused kinetic discharge hammers a target.
+
+  | Psionic, Ranged, Strike | Main action |
+  |---|---|
+  | 📏 Ranged 10 | 🎯 One creature or object |
+
+  *Power Roll + Logic, Instinct, or Persona:*
+  - **≤11:** 2 + L, I, or P damage
+  - **12–16:** 5 + L, I, or P damage; push 1
+  - **17+:** 7 + L, I, or P damage; push 2
+
+  **Effect:** **Physique < STRONG** → the target is **prone**.
+
+  #### Particle Lance
+
+  *(Psionic Bolt.)* A coherent energy/psychic lance from an installed projector.
+
+  | Psionic, Ranged, Strike | Main action |
+  |---|---|
+  | 📏 Ranged 10 | 🎯 One creature or object |
+
+  *Power Roll + Logic, Instinct, or Persona:*
+  - **≤11:** 2 + L, I, or P **energy/psychic** damage
+  - **12–16:** 5 + L, I, or P **energy/psychic** damage
+  - **17+:** 7 + L, I, or P **energy/psychic** damage
+
+  #### Servo Overclock
+
+  *(Minor Acceleration.)* You dump power into servos — yours or an ally’s.
+
+  | Psionic, Melee | Maneuver |
+  |---|---|
+  | 📏 Melee 1 | 🎯 Self or one ally |
+
+  **Effect:** The target gains a bonus to speed equal to your **Logic, Instinct, or Persona** score (choose when you use this ability) until the start of your next turn.
+
+- **Locked Processors (2):** *(Unstoppable Mind.)* Hardened process priority keeps your mind online. You can’t be made **dazed**.
+
+### Hard constraints (chargen / setting — not ancestry-point costs)
+
+These limits are **Ghostwire setting and chargen rules**. They do **not** cost ancestry points and are not cheats against the Time Raider budget.
+
+- **Arcane Severance:** You cannot use **Magic**-keyword abilities. You are barred from **Elementalist** and **Street Priest**, and from any Veil-casting path that requires Magic. **Psionic/Tech** suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.
+- **Tech-only recovery:** You are healed by tech / Wrench-style repair / Medic tech procedures as your table defines — **not** by Magic healing (Director call on Troubadour-style and similar effects).
+- **System Crisis:** When you would die under the usual 0 Stamina / dying rules, you instead enter Director-facing **System Crisis** (machine failure) rather than a normal organic death spiral. Treat this as a short rule pointer for the Director; a full Crisis table is not defined in this chapter.
+
+**Setting hooks:** Center of the soul-vs-machine question. Feared as inhuman, prized as assets, claimed as property, or revered as humanity’s next stage. Chrome-augmented meat is not the same People.
 
 ---
 
@@ -350,15 +450,18 @@ Full ancestry package is **deferred**. Chassis decision pending: **Time Raider**
 
 ## Review checklist (Species) — for Michael
 
-- [x] Six Peoples rewritten as creation-time DS ancestry packages (signature + points)
-- [x] No level-gated BP Species Options on those six
+- [x] All eight Peoples rewritten as creation-time DS ancestry packages (signature + points)
+- [x] No level-gated BP Species Options
 - [x] Changer = Dragon Knight reskin (Raven/Rat/Wolf; three forms as maneuver fiction)
 - [x] Revenant Decay ladder removed; fire-while-inert kept
+- [x] Mutant Human = Devil (Aberrant Rapport + 3 pts menu)
+- [x] Cyborg = Time Raider (Cortical Firewall + 3 pts menu; Arcane Severance / tech-only / System Crisis as chargen constraints)
 - [x] Attribute labels: Physique / Reflex / Logic / Instinct / Persona
 - [x] Power Roll bands ≤11 / 12–16 / 17+
 - [x] Tri-register naming for all eight Peoples
-- [ ] Mutant / Cyborg chassis decision (Devil / Time Raider vs GW-original)
-- [ ] Foundry ancestry docs for the six packages
+- [x] Revenant Former Life may pick Mutant or Cyborg as real ancestries
+- [ ] Foundry ancestry docs for the eight packages
 - [ ] Cross-check class chapters for residual tier / six-stat language
+- [ ] Optional: expand System Crisis into a Director table (not in this chapter)
 
-**Changelog (2026-09-16):** Replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant. Mutant and Cyborg reduced to deferred stubs.
+**Changelog (2026-09-16):** Added Mutant Human (Devil chassis) and Cyborg (Time Raider chassis) as full DS ancestry packages. Retired Mutant Corruption Load BP track (optional cosmetic Corruptive Flaw only). Revenant Former Life may now select Mutant or Cyborg. Earlier same-day pass: replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant.
