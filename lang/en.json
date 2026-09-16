@@ -1,5 +1,56 @@
 {
-  "GHOSTWIRE.ModuleTitle": "Draw Steel - Ghostwire Build",
-  "GHOSTWIRE.ModuleDescription": "Ghostwire content and presentation for Draw Steel on Foundry VTT.",
-  "GHOSTWIRE.Stub.ComingSoon": "Coming soon"
+  "GHOSTWIRE": {
+    "ModuleTitle": "Draw Steel - Ghostwire Build",
+    "ModuleDescription": "Ghostwire content and presentation for Draw Steel on Foundry VTT.",
+    "Stub": {
+      "ComingSoon": "Coming soon"
+    },
+    "Characteristics": {
+      "MapHint": "Ghostwire display labels map onto Draw Steel characteristics: Physique=Might, Reflex=Agility, Logic=Reason, Instinct=Intuition, Persona=Presence."
+    }
+  },
+  "DRAW_STEEL": {
+    "Actor": {
+      "characteristics": {
+        "might": {
+          "full": "Physique"
+        },
+        "agility": {
+          "full": "Reflex"
+        },
+        "reason": {
+          "full": "Logic"
+        },
+        "intuition": {
+          "full": "Instinct"
+        },
+        "presence": {
+          "full": "Persona"
+        }
+      },
+      "hero": {
+        "FIELDS": {
+          "hero": {
+            "wealth": {
+              "label": "Nuyen"
+            }
+          }
+        }
+      }
+    },
+    "SHEET": {
+      "Labels": {
+        "Character": "Ghostwire Character Sheet",
+        "NPC": "Ghostwire NPC Sheet",
+        "Object": "Ghostwire Object Sheet",
+        "Party": "Ghostwire Party Sheet",
+        "Retainer": "Ghostwire Retainer Sheet",
+        "Item": "Ghostwire Item Sheet",
+        "JournalEntry": "Ghostwire Journal Entry Sheet",
+        "ActiveEffect": "Ghostwire Active Effect Config",
+        "CombatantGroup": "Ghostwire Combatant Group Config",
+        "WallDocument": "Ghostwire Wall Config"
+      }
+    }
+  }
 }
