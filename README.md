@@ -17,6 +17,22 @@ Class design rules live in Ghostwire Development Master docs outside this repo. 
 - Foundry VTT **14** (minimum / verified **14.367**)
 - Draw Steel **1.1.2+**
 
+## Characteristic lang map (0.1.1+)
+
+Ghostwire display labels override Draw Steel characteristic **full** names. Abbreviations (M / A / R / I / P) stay Draw Steel so potency text keeps working.
+
+| Draw Steel | Ghostwire label |
+| --- | --- |
+| Might | Physique |
+| Agility | Reflex |
+| Reason | Logic |
+| Intuition | Instinct |
+| Presence | Persona |
+
+Also: Wealth → **Nuyen**; sheet chrome labels say Ghostwire instead of Draw Steel.
+
+Style tokens live in `styles/ghostwire.css` (`--ghostwire-*`). The module adds `ghostwire` / `ghostwire-theme` classes on `document.body` at init.
+
 ## Install (dev)
 
 1. Install Draw Steel from Foundry’s system browser.
@@ -31,10 +47,11 @@ Data/modules/draw-steel-ghostwire
 
 ## Install (release)
 
-When a release is published, use Foundry **Install Module** with:
+Use Foundry **Install Module** / update from:
 
 `https://github.com/dreamforge2361/draw-steel-ghostwire/releases/latest/download/module.json`
 
 ## Status
 
-`0.1.0` — skeleton only (manifest, entry script, style/lang stubs). No class packs yet.
+- `0.1.0` — skeleton
+- `0.1.1` — lang pass (characteristics + nuyen + sheet labels) and CSS style tokens
