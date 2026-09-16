@@ -30,6 +30,25 @@
         "repick": {},
         "chooseN": null,
         "additional": { "type": "", "perkType": [] }
+      },
+      "Pk3wQz7LmN2vR8sT": {
+        "_id": "Pk3wQz7LmN2vR8sT",
+        "name": "GHOSTWIRE.Peoples.PureHuman.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.IKlIxTf6cZBswcDp" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.BRyUSHVG9fjDwjRo" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GLkKrRMeWpCMQD88" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.XltgAaOrbUeRoX36" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.b7PH3aCTK3kMDiqA" }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.PureHuman.PurchasedTraits.Description",
+        "repick": {},
+        "chooseN": 3,
+        "additional": { "type": "ancestryTrait", "perkType": [] }
       }
     }
   },

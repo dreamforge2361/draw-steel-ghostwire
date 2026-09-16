@@ -1,0 +1,39 @@
+{
+  "_id": "XltgAaOrbUeRoX36",
+  "_key": "!items!XltgAaOrbUeRoX36",
+  "name": "GHOSTWIRE.Peoples.PureHuman.ResistTheUnnatural.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/wounds/injury-body-pain-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.ResistTheUnnatural.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "resist-the-unnatural",
+    "advancements": {
+      "o3Sb2EmmaGWquQbc": {
+        "_id": "o3Sb2EmmaGWquQbc",
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.RqDesnZbHLN6idDj" }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": { "type": "", "perkType": [] }
+      }
+    },
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

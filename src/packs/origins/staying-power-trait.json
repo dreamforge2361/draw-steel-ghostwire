@@ -1,0 +1,47 @@
+{
+  "_id": "b7PH3aCTK3kMDiqA",
+  "_key": "!items!b7PH3aCTK3kMDiqA",
+  "name": "GHOSTWIRE.Peoples.PureHuman.StayingPower.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.StayingPower.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "staying-power",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "3ZtzplV9qLjMPXmT",
+      "_key": "!items.effects!b7PH3aCTK3kMDiqA.3ZtzplV9qLjMPXmT",
+      "name": "GHOSTWIRE.Peoples.PureHuman.StayingPower.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.b7PH3aCTK3kMDiqA",
+      "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.PureHuman.StayingPower.Description",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "system.recoveries.max", "type": "add", "value": 2, "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": false,
+      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

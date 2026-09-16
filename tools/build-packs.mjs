@@ -29,7 +29,13 @@ for (const pack of readdirSync("src/packs")) {
   const db = new ClassicLevel(out, { valueEncoding: "json" });
   for (const file of readdirSync(join("src/packs", pack)).filter(f => f.endsWith(".json"))) {
     const { _key, ...doc } = resolve(JSON.parse(readFileSync(join("src/packs", pack, file), "utf8")));
-    doc._stats = { coreVersion: "14.367", systemId: "draw-steel", systemVersion: "1.1.2" };
+    const stats = { coreVersion: "14.367", systemId: "draw-steel", systemVersion: "1.1.2" };
+    // Embedded effects are stored under their own keys; the parent keeps only their ids.
+    for (const { _key: effectKey, ...effect } of doc.effects) {
+      await db.put(effectKey, { ...effect, _stats: stats });
+    }
+    doc.effects = doc.effects.map(e => e._id);
+    doc._stats = stats;
     await db.put(_key, doc);
     console.log(`${pack}: ${doc.type} "${doc.name}"`);
   }

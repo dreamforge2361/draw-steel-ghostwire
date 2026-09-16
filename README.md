@@ -56,6 +56,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.0` — skeleton
 - `0.1.1` — lang pass (characteristics + nuyen + sheet labels) and CSS style tokens
 - `0.1.2` — Foundry spike: **Ghostwire Origins** compendium with Pure Human (ancestry) and its signature trait Detect the Supernatural (trait + maneuver), cloned from DS Human. Purchased traits not yet implemented.
+- `0.1.3` — Pure Human purchased traits: 3-point picker with Can’t Take Hold (1), Perseverance (1), Resist the Unnatural (1), Determination (2), and Staying Power (2), cloned from DS Human. The build script now writes embedded Active Effects.
 
 ## Building packs
 

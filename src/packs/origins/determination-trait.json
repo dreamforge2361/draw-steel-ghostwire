@@ -1,0 +1,39 @@
+{
+  "_id": "BRyUSHVG9fjDwjRo",
+  "_key": "!items!BRyUSHVG9fjDwjRo",
+  "name": "GHOSTWIRE.Peoples.PureHuman.Determination.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/social/thumbsup-approval-like.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.Determination.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "determination",
+    "advancements": {
+      "B0VlQB9LYxPsxRWs": {
+        "_id": "B0VlQB9LYxPsxRWs",
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.qo3iMKY9yCduPkKy" }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": { "type": "", "perkType": [] }
+      }
+    },
+    "points": 2,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

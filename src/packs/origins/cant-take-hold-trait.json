@@ -1,0 +1,23 @@
+{
+  "_id": "IKlIxTf6cZBswcDp",
+  "_key": "!items!IKlIxTf6cZBswcDp",
+  "name": "GHOSTWIRE.Peoples.PureHuman.CantTakeHold.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/movement/chevrons-down-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.CantTakeHold.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "cant-take-hold",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}
