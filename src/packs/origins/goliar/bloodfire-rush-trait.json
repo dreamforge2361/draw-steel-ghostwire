@@ -1,0 +1,47 @@
+{
+  "_id": "gGW48sXk6lvWf9ZW",
+  "_key": "!items!gGW48sXk6lvWf9ZW",
+  "name": "GHOSTWIRE.Peoples.Goliar.BloodfireRush.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Goliar.BloodfireRush.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "bloodfire-rush",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "NVGTtYA1twMvPbnS",
+      "_key": "!items.effects!gGW48sXk6lvWf9ZW.NVGTtYA1twMvPbnS",
+      "name": "GHOSTWIRE.Peoples.Goliar.BloodfireRush.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.gGW48sXk6lvWf9ZW",
+      "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Goliar.BloodfireRush.EffectDescription",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "system.movement.value", "type": "add", "value": 2, "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": false,
+      "duration": { "value": 0, "units": "rounds", "expiry": "roundEnd", "expired": false },
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "MdVpaqVT0W2coeX4",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

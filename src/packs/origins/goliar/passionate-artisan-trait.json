@@ -1,0 +1,23 @@
+{
+  "_id": "xXwSo2wd3KC2Jdj4",
+  "_key": "!items!xXwSo2wd3KC2Jdj4",
+  "name": "GHOSTWIRE.Peoples.Goliar.PassionateArtisan.Name",
+  "type": "ancestryTrait",
+  "img": "icons/tools/smithing/furnace-fire-metal-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Goliar.PassionateArtisan.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "passionate-artisan",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": "MdVpaqVT0W2coeX4",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

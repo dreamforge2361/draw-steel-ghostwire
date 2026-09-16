@@ -1,0 +1,56 @@
+{
+  "_id": "waxGDHVD6GvZl21u",
+  "_key": "!items!waxGDHVD6GvZl21u",
+  "name": "GHOSTWIRE.Peoples.Goliar.Name",
+  "type": "ancestry",
+  "img": "icons/weapons/axes/axe-double-white-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Goliar.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "goliar",
+    "advancements": {
+      "7RI7hs32Sp81Dxk0": {
+        "_id": "7RI7hs32Sp81Dxk0",
+        "name": "Signature Trait",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.UsFQr3y8rzouYwYc" }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": { "type": "", "perkType": [] }
+      },
+      "OjZKp2aiUzU6rJsh": {
+        "_id": "OjZKp2aiUzU6rJsh",
+        "name": "GHOSTWIRE.Peoples.Goliar.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.gGW48sXk6lvWf9ZW" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.4ouhc5JKDMhvC0U8" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.vjDH1qtb77NudzhG" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.ynIDjBrAlk0fCREn" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.xXwSo2wd3KC2Jdj4" }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.Goliar.PurchasedTraits.Description",
+        "repick": {},
+        "chooseN": 3,
+        "additional": { "type": "ancestryTrait", "perkType": [] }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "MdVpaqVT0W2coeX4",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

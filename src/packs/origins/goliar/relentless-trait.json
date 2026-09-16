@@ -1,0 +1,23 @@
+{
+  "_id": "UsFQr3y8rzouYwYc",
+  "_key": "!items!UsFQr3y8rzouYwYc",
+  "name": "GHOSTWIRE.Peoples.Goliar.Relentless.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Goliar.Relentless.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "relentless",
+    "advancements": {},
+    "points": null,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": "MdVpaqVT0W2coeX4",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

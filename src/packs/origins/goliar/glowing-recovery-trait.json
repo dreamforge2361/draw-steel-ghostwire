@@ -1,0 +1,23 @@
+{
+  "_id": "4ouhc5JKDMhvC0U8",
+  "_key": "!items!4ouhc5JKDMhvC0U8",
+  "name": "GHOSTWIRE.Peoples.Goliar.GlowingRecovery.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/wounds/injury-stitched-flesh-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Goliar.GlowingRecovery.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "glowing-recovery",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": "MdVpaqVT0W2coeX4",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

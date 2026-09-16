@@ -123,6 +123,39 @@
           "Name": "Unstoppable Mind",
           "Description": "<p>Your mind allows you to maintain your focus in any situation. You can’t be made dazed.</p>"
         }
+      },
+      "Goliar": {
+        "Name": "Goliar",
+        "Description": "<p>The engineered heavy — towering, crushing, and impossible to ignore.</p><h4>Goliar Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.UsFQr3y8rzouYwYc]{Relentless}</p><h4>Purchased Goliar Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Glowing Recovery, Grounded.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.gGW48sXk6lvWf9ZW]{Bloodfire Rush (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.4ouhc5JKDMhvC0U8]{Glowing Recovery (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.vjDH1qtb77NudzhG]{Grounded (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.ynIDjBrAlk0fCREn]{Nonstop (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.xXwSo2wd3KC2Jdj4]{Passionate Artisan (1 Point)}</p>",
+        "PurchasedTraits": {
+          "Name": "Purchased Traits",
+          "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Glowing Recovery, Grounded.)</p>"
+        },
+        "Relentless": {
+          "Name": "Relentless",
+          "Description": "<p>Whenever a creature deals damage to you that leaves you dying, you can make a free strike against any creature. If that creature is reduced to 0 Stamina by your strike, you can spend a Recovery.</p>"
+        },
+        "BloodfireRush": {
+          "Name": "Bloodfire Rush",
+          "Description": "<p>The engineered fire in your veins makes you run faster in the heat of battle. The first time in any combat round that you take damage, you gain a +2 bonus to speed until the end of the round.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.gGW48sXk6lvWf9ZW.ActiveEffect.NVGTtYA1twMvPbnS]</p>",
+          "EffectDescription": "<p>The engineered fire in your veins makes you run faster in the heat of battle. The first time in any combat round that you take damage, you gain a +2 bonus to speed until the end of the round.</p>"
+        },
+        "GlowingRecovery": {
+          "Name": "Glowing Recovery",
+          "Description": "<p>Your bloodfire allows you to regain your strength quicker than others. Whenever you use the Catch Breath maneuver, you can spend as many Recoveries as you like.</p>"
+        },
+        "Grounded": {
+          "Name": "Grounded",
+          "Description": "<p>The density of your frame makes it difficult for others to move you. You have a +1 bonus to stability.</p>"
+        },
+        "Nonstop": {
+          "Name": "Nonstop",
+          "Description": "<p>Your bloodfire supplies you with a constant rush of adrenaline. You can’t be made slowed.</p>"
+        },
+        "PassionateArtisan": {
+          "Name": "Passionate Artisan",
+          "Description": "<p>When you are stirred by a passion for creation, your bloodfire lets you work longer and harder. When you gain your initial skills from your career, culture, class, or other source, choose two skills from the crafting skill group, whether you have those skills or not. Whenever you make a project roll for a crafting project that uses these skills, you gain a +2 bonus to the roll.</p>"
+        }
       }
     }
   },
