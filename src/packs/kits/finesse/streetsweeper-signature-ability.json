@@ -1,0 +1,149 @@
+{
+  "_id": "Xr0xY0VYVOjGg42E",
+  "_key": "!items!Xr0xY0VYVOjGg42E",
+  "name": "GHOSTWIRE.Kits.Streetsweeper.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/wounds/bone-broken-knee-beam.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "kneecap-shot",
+    "story": "GHOSTWIRE.Kits.Streetsweeper.Signature.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "dz26cT1hJwbDuWg1": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "dz26cT1hJwbDuWg1",
+          "damage": {
+            "tier2": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        },
+        "NsGLHSzmKm8kX34F": {
+          "name": "Slow",
+          "img": null,
+          "type": "applied",
+          "_id": "NsGLHSzmKm8kX34F",
+          "applied": {
+            "tier3": {
+              "display": "{{potency}}, slowed (save ends)",
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "{{potency}}, slowed (save ends)",
+              "potency": {
+                "characteristic": "agility",
+                "value": "@potency.weak"
+              }
+            },
+            "tier2": {
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "{{potency}}, slowed (save ends)",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "folder": "jYz1cXYD65Qf2lH6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

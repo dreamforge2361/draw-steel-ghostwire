@@ -1,0 +1,80 @@
+{
+  "_id": "FQ71pyWDEPw3iLgf",
+  "_key": "!items!FQ71pyWDEPw3iLgf",
+  "name": "GHOSTWIRE.Kits.Snarehunter.Name",
+  "type": "kit",
+  "img": "icons/tools/fishing/net-simple-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Snarehunter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "snarehunter",
+    "advancements": {
+      "nKuPGMbSoCrHmJFI": {
+        "name": "GHOSTWIRE.Kits.Snarehunter.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "nKuPGMbSoCrHmJFI",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.zpf3izX3422X2wwT"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "ensnaring",
+        "polearm"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": 1
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 3,
+      "speed": 1,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

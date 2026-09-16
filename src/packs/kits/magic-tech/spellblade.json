@@ -1,0 +1,79 @@
+{
+  "_id": "xcGhoSk8Ht4VKksG",
+  "_key": "!items!xcGhoSk8Ht4VKksG",
+  "name": "GHOSTWIRE.Kits.Spellblade.Name",
+  "type": "kit",
+  "img": "icons/weapons/swords/sword-guard-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Spellblade.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "spellblade",
+    "advancements": {
+      "cMuMLKLvEK1jwP6h": {
+        "name": "GHOSTWIRE.Kits.Spellblade.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "cMuMLKLvEK1jwP6h",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.czc9IstoVCRaECJo"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "medium"
+      ],
+      "shield": true
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 6,
+      "speed": 1,
+      "stability": 1,
+      "disengage": 0
+    }
+  },
+  "effects": [],
+  "folder": "BetZn4M0Udrd7LUH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

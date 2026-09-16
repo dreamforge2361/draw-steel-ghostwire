@@ -1,0 +1,79 @@
+{
+  "_id": "SAcWR4RstQocW4Ii",
+  "_key": "!items!SAcWR4RstQocW4Ii",
+  "name": "GHOSTWIRE.Kits.Sanctified.Name",
+  "type": "kit",
+  "img": "icons/weapons/maces/mace-flanged-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Sanctified.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sanctified",
+    "advancements": {
+      "5e0dJP5RORgzcLVG": {
+        "name": "GHOSTWIRE.Kits.Sanctified.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "5e0dJP5RORgzcLVG",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.6hAki6do3O90cKe6"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "heavy",
+      "weapon": [
+        "light"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 9,
+      "speed": 1,
+      "stability": 1,
+      "disengage": null
+    }
+  },
+  "effects": [],
+  "folder": "BetZn4M0Udrd7LUH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

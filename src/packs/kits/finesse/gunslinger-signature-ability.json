@@ -1,0 +1,151 @@
+{
+  "_id": "qCA7JBLzwDSXpBXe",
+  "_key": "!items!qCA7JBLzwDSXpBXe",
+  "name": "GHOSTWIRE.Kits.Gunslinger.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "quickdraw-shuffle",
+    "story": "GHOSTWIRE.Kits.Gunslinger.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "gW8ZNLQSQFBThmaK": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "gW8ZNLQSQFBThmaK",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "8 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "5zi5cT6uxGbRH4KZ": {
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "_id": "5zi5cT6uxGbRH4KZ",
+          "forced": {
+            "tier1": {
+              "display": "",
+              "movement": [],
+              "distance": "1",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "distance": "1",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "distance": "2",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Gunslinger.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "jYz1cXYD65Qf2lH6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

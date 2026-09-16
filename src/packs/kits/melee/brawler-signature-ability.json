@@ -1,0 +1,151 @@
+{
+  "_id": "aiLAPXQI5uu9qsBT",
+  "_key": "!items!aiLAPXQI5uu9qsBT",
+  "name": "GHOSTWIRE.Kits.Brawler.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "stagger-combo",
+    "story": "GHOSTWIRE.Kits.Brawler.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "NzzDSnmolUMymVmp": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "NzzDSnmolUMymVmp",
+          "damage": {
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        },
+        "cEReIDIpRHcBkKxV": {
+          "name": "Slide",
+          "img": null,
+          "type": "forced",
+          "_id": "cEReIDIpRHcBkKxV",
+          "forced": {
+            "tier1": {
+              "movement": [],
+              "distance": "",
+              "display": "",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "slide"
+              ],
+              "display": "{{forced}}",
+              "distance": "1",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Brawler.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

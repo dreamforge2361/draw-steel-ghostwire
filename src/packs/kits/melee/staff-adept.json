@@ -1,0 +1,79 @@
+{
+  "_id": "0D8oboOrBY7BSy9w",
+  "_key": "!items!0D8oboOrBY7BSy9w",
+  "name": "GHOSTWIRE.Kits.StaffAdept.Name",
+  "type": "kit",
+  "img": "icons/weapons/staves/staff-simple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.StaffAdept.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "staff-adept",
+    "advancements": {
+      "XqKqV15yGEOepHDC": {
+        "name": "GHOSTWIRE.Kits.StaffAdept.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "XqKqV15yGEOepHDC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.v5bhxreNXoXzT9Wz"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "polearm"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 1
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 3,
+      "speed": 2,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

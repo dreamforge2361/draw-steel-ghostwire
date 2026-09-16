@@ -1,0 +1,109 @@
+{
+  "_id": "mc8pOldWlUt6zDJ0",
+  "_key": "!items!mc8pOldWlUt6zDJ0",
+  "name": "GHOSTWIRE.Kits.Raider.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/ranged/arrow-flying-gray-brown.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shock-and-awe",
+    "story": "GHOSTWIRE.Kits.Raider.Signature.Story",
+    "keywords": [
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "OlwlVM5uitUAcIrg": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "OlwlVM5uitUAcIrg",
+          "damage": {
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Raider.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "jYz1cXYD65Qf2lH6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

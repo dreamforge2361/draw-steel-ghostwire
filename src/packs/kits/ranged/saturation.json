@@ -1,0 +1,79 @@
+{
+  "_id": "UXuWGAKRGAkZ6Z6r",
+  "_key": "!items!UXuWGAKRGAkZ6Z6r",
+  "name": "GHOSTWIRE.Kits.Saturation.Name",
+  "type": "kit",
+  "img": "icons/weapons/guns/machine-gun-sub-large.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Saturation.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "saturation",
+    "advancements": {
+      "aVAXarbjjp2f688V": {
+        "name": "GHOSTWIRE.Kits.Saturation.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "aVAXarbjjp2f688V",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.Hb9dXVTwzOkI2goG"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "bow"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": 7
+      },
+      "stamina": 3,
+      "speed": 1,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "ggHtFmJuOx2pkwyl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

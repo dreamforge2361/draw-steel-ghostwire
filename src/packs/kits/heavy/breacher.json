@@ -1,0 +1,79 @@
+{
+  "_id": "NI3QWa2kizsYNBM2",
+  "_key": "!items!NI3QWa2kizsYNBM2",
+  "name": "GHOSTWIRE.Kits.Breacher.Name",
+  "type": "kit",
+  "img": "icons/equipment/shield/heater-steel-worn.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Breacher.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breacher",
+    "advancements": {
+      "awk6CThKdV6JXyau": {
+        "name": "GHOSTWIRE.Kits.Breacher.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "awk6CThKdV6JXyau",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.zQNVqHFWN5TI6e6E"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "medium",
+      "weapon": [
+        "medium"
+      ],
+      "shield": true
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 9,
+      "speed": null,
+      "stability": 1,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "BE4frWP9fcIOBAoH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

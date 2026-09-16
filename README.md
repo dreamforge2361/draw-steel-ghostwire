@@ -70,12 +70,54 @@ Use Foundry **Install Module** / update from:
 - `0.1.14` — The Origins compendium is now labeled **Ghostwire Ancestries** in Foundry. Its pack id and path stay `origins`, so existing `Compendium.draw-steel-ghostwire.origins.*` UUIDs and links don’t change.
 - `0.1.15` — **Body Integrity** (actor flag, shown at the top of the hero Stats tab; living heroes 20/20; Cyborgs see N/A), new heroes start with **¥5,000**, and a **Ghostwire Chrome** compendium with five Standard implants that have working effects: Datajack (1), Cyber-Eyes (2, edge on Alertness and Search), Reaction Enhancer (3, +1 Disengage), Dermal Plating (4, damage immunity 2), and Cyberlimb (Arm) (5, +1 melee weapon damage). Dropping an implant on a hero spends its Integrity; deleting it refunds 75%. Cyborgs and heroes without enough Integrity are blocked.
 - `0.1.16` — Ghostwire Chrome now has 13 Standard implants, each with a price and Availability (the header line in its description, plus a line under the name on the item sheet). New implants: Vocal Modulator, Implant Weapon (grants Spur Strike), Internal Air / Filtration, Cyber-Ears, Running Gear, Skillwires / Encephalon, Muscle / Bone Lacing, and Wired Reflexes. Location slot caps are enforced (Nervous System 1, so Reaction Enhancer and Wired Reflexes can’t stack).
+- `0.1.17` — **Ghostwire Kits** compendium with all 21 Kits in role folders, cloned from the Draw Steel kits with stock bonus numbers as a provisional benchmark and reskinned signature abilities. The Duelist signature uses the Tech keyword instead of Psionic. Kit sheets relabel weapon categories: Firearm / Bow, Unarmed / Cyberlimb, Whip / Monowhip.
 
 ## Origins pack layout (Ghostwire Ancestries)
 
 The pack id and path are `origins`; Foundry shows it as **Ghostwire Ancestries** (`GHOSTWIRE.COMPENDIUM.origins`). Keep the id so UUIDs stay stable.
 
 Each People gets one compendium Folder named after it (Pure Human, Corran, Elvani, …). The People's ancestry and all of its traits and abilities go inside that folder, never at the pack root. The source mirrors this: `src/packs/origins/<people>/` holds a `_folder.json` (the Folder document) plus that People's items, and each item's `folder` is set to that Folder's `_id`. The build fails if an item's `folder` doesn't match its directory.
+
+## Kits (v1)
+
+Rules: `docs/rulebook/10-kits.md`. The **Ghostwire Kits** compendium (pack id `kits`) holds all 21 Kits in five role folders. Each Kit folder also holds that Kit’s signature ability.
+
+- **Structure:** each Kit is a Draw Steel `kit` item cloned from its source kit. It has the same equipment block and bonus fields (Stamina per echelon, speed, stability, disengage, melee/ranged damage by result, distance) and a signature-ability grant pointing at the Ghostwire copy.
+- **Numbers are provisional.** They are the Draw Steel kit benchmarks unchanged, pending the Kits numeric pass. Signature abilities keep their Draw Steel numbers; names, story, and effect text are reskinned (Might/Agility read as Physique/Reflex).
+- **Doctrine never costs ¥**, so Kits have no price. Every description repeats the ownership rule: no qualifying gear owned means no Kit bonuses (not automated; the Director and player apply it).
+- **Keywords:** Duelist’s Gravity Cut uses **Tech** instead of Psionic. Hexshot, Spellblade, and Sanctified signatures keep **Magic** (Cyborgs can’t use them under Arcane Severance).
+
+| Kit | Folder | Draw Steel source | Gear category | Bonuses (damage low/mid/high) | Signature |
+|---|---|---|---|---|---|
+| Longshot | Ranged specialists | Sniper | Precision rifle; no armor | Speed +1, Disengage +1, Ranged +0/+0/+4, Ranged distance +10 | Held Breath |
+| Saturation | Ranged specialists | Rapid-Fire | SMG or carbine; light armor | Stamina +3, Speed +1, Disengage +1, Ranged +2/+2/+2, Ranged distance +7 | Double Tap |
+| Ghost | Ranged specialists | Cloak and Dagger | One or two silenced light weapons; light armor | Stamina +3, Speed +2, Disengage +1, Melee +1/+1/+1, Ranged +1/+1/+1, Ranged distance +5 | Ghost Out |
+| Hexshot | Ranged specialists | Arcane Archer | Bow, crossbow, or dartgun; no armor | Speed +1, Disengage +1, Ranged +2/+2/+2, Ranged distance +10 | Hex Round |
+| Gunslinger | Gun/blade finesse | Swashbuckler | Medium sidearm or blade; light armor | Stamina +3, Speed +3, Disengage +1, Melee +2/+2/+2 | Quickdraw Shuffle |
+| Streetsweeper | Gun/blade finesse | Ranger | Shotgun or carbine plus a medium weapon; medium armor | Stamina +6, Speed +1, Disengage +1, Melee +1/+1/+1, Ranged +1/+1/+1, Ranged distance +5 | Kneecap Shot |
+| Raider | Gun/blade finesse | Raider | Light weapon plus a shield; light armor | Stamina +6, Speed +1, Disengage +1, Melee +1/+1/+1, Ranged +1/+1/+1, Ranged distance +5 | Shock and Awe |
+| Juggernaut | Heavy / tank | Mountain | Heavy weapon; heavy armor | Stamina +9, Stability +2, Melee +0/+0/+4 | Payback |
+| Warframe | Heavy / tank | Shining Armor | Medium weapon plus a shield; heavy armor | Stamina +12, Stability +1, Melee +2/+2/+2 | Hold the Line |
+| Breacher | Heavy / tank | Sword and Board | Medium weapon plus a ballistic shield; medium armor | Stamina +9, Stability +1, Disengage +1, Melee +2/+2/+2 | Breach and Bash |
+| Bulldozer | Heavy / tank | Panther | Heavy weapon; no armor | Stamina +6, Speed +1, Stability +1, Melee +0/+0/+4 | Freight Train |
+| Brawler | Melee / martial | Pugilist | Unarmed or cyberlimb strikes; no armor | Stamina +6, Speed +2, Stability +1, Melee +1/+1/+1 | Stagger Combo |
+| Mantis | Melee / martial | Martial Artist | Unarmed or cyberlimb strikes; no armor | Stamina +3, Speed +3, Disengage +1, Melee +2/+2/+2 | Mantis Feint |
+| Chromeblade | Melee / martial | Dual Wielder | A light plus a medium melee weapon; medium armor | Stamina +6, Speed +2, Disengage +1, Melee +2/+2/+2 | Twin Cut |
+| Reach | Melee / martial | Guisarmier | Polearm or long cyber-weapon; medium armor | Stamina +6, Stability +1, Melee +2/+2/+2, Melee distance +1 | Haft and Blade |
+| Monowhip | Melee / martial | Whirlwind | Whip, monofilament, or chain; no armor | Speed +3, Disengage +1, Melee +1/+1/+1, Melee distance +1 | Monofilament Lash |
+| Snarehunter | Melee / martial | Retiarius | Net or ensnaring gear plus a polearm; light armor | Stamina +3, Speed +1, Disengage +1, Melee +2/+2/+2, Melee distance +1 | Tangle and Stab |
+| Staff Adept | Melee / martial | Stick and Robe | Staff or polearm; light armor | Stamina +3, Speed +2, Disengage +1, Melee +1/+1/+1, Melee distance +1 | Staff Redirect |
+| Duelist | Melee / martial | Battlemind | Medium melee weapon; light armor | Stamina +3, Speed +2, Stability +1, Melee +2/+2/+2 | Gravity Cut |
+| Spellblade | Magic-tech | Spellsword | Medium melee weapon plus a shield; light armor | Stamina +6, Speed +1, Stability +1, Melee +2/+2/+2 | Arc Blade |
+| Sanctified | Magic-tech | Warrior Priest | Light weapon; heavy armor | Stamina +9, Speed +1, Stability +1, Melee +1/+1/+1 | Veil Brand |
+
+**Test click-path**
+
+1. Compendium sidebar → **Ghostwire Kits** → five folders (Ranged specialists, Gun/blade finesse, Heavy / tank, Melee / martial, Magic-tech) holding 21 Kits.
+2. Open **Longshot**: the description shows gear, ownership rule, provisional bonuses, and a link to Held Breath; the details show Firearm / Bow and no armor.
+3. Drag **Longshot** onto a hero (with a class): the Kit appears on the sheet, **Held Breath** is added to Abilities, speed is +1, and Held Breath and the ranged free strike show +10 distance and +4 damage on the high result.
+4. Swap to **Brawler**: Stamina max rises by 6 (echelon 1), stability +1, speed +2, melee free strike +1/+1/+1, and **Stagger Combo** is added.
+5. Swap to **Juggernaut**: Stamina +9, stability +2, melee free strike +0/+0/+4, and **Payback** is added.
 
 ## Chrome & Body Integrity (v1)
 

@@ -1,0 +1,111 @@
+{
+  "_id": "kiiQqRr5CRnyCwIR",
+  "_key": "!items!kiiQqRr5CRnyCwIR",
+  "name": "GHOSTWIRE.Kits.Duelist.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/sword-engraved-glow-purple.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gravity-cut",
+    "story": "GHOSTWIRE.Kits.Duelist.Signature.Story",
+    "keywords": [
+      "melee",
+      "tech",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "reason",
+          "intuition",
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "R9zctOREjtLxuFoJ": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "R9zctOREjtLxuFoJ",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Duelist.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

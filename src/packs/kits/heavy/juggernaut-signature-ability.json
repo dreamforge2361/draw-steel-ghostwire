@@ -1,0 +1,108 @@
+{
+  "_id": "VikPrMlInG6JN6Y7",
+  "_key": "!items!VikPrMlInG6JN6Y7",
+  "name": "GHOSTWIRE.Kits.Juggernaut.Signature.Name",
+  "type": "ability",
+  "img": "icons/weapons/swords/greatsword-crossguard-barbed.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "payback",
+    "story": "GHOSTWIRE.Kits.Juggernaut.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "2puO1Aom4997HRC7": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "2puO1Aom4997HRC7",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Juggernaut.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BE4frWP9fcIOBAoH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

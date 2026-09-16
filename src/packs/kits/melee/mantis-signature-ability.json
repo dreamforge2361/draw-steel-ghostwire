@@ -1,0 +1,138 @@
+{
+  "_id": "INhuUABdmfmOva3G",
+  "_key": "!items!INhuUABdmfmOva3G",
+  "name": "GHOSTWIRE.Kits.Mantis.Signature.Name",
+  "type": "ability",
+  "img": "icons/weapons/fist/fist-knuckles-brass.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mantis-feint",
+    "story": "GHOSTWIRE.Kits.Mantis.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "EOsCDcdiELdqs420": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "EOsCDcdiELdqs420",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "FDbgYX6exoXLTkNR": {
+          "name": "Other",
+          "img": null,
+          "type": "other",
+          "_id": "FDbgYX6exoXLTkNR",
+          "other": {
+            "tier2": {
+              "display": "you can swap places with the target",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "you can swap places with the target",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "display": "",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Mantis.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,79 @@
+{
+  "_id": "wkSKI1OkyVUIbg0P",
+  "_key": "!items!wkSKI1OkyVUIbg0P",
+  "name": "GHOSTWIRE.Kits.Mantis.Name",
+  "type": "kit",
+  "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Mantis.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mantis",
+    "advancements": {
+      "ogb8TY2zm3XIeZax": {
+        "name": "GHOSTWIRE.Kits.Mantis.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "ogb8TY2zm3XIeZax",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.INhuUABdmfmOva3G"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [
+        "unarmed"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 3,
+      "speed": 3,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

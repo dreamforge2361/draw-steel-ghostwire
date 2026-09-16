@@ -1,0 +1,117 @@
+{
+  "_id": "6hAki6do3O90cKe6",
+  "_key": "!items!6hAki6do3O90cKe6",
+  "name": "GHOSTWIRE.Kits.Sanctified.Signature.Name",
+  "type": "ability",
+  "img": "icons/magic/light/projectile-bolts-salvo-white.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "veil-brand",
+    "story": "GHOSTWIRE.Kits.Sanctified.Signature.Story",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "reason",
+          "intuition",
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "hJLolFQAfc1LnHfs": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "hJLolFQAfc1LnHfs",
+          "damage": {
+            "tier1": {
+              "types": [
+                "holy"
+              ],
+              "value": "2 + @chr",
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Sanctified.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BetZn4M0Udrd7LUH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,149 @@
+{
+  "_id": "zpf3izX3422X2wwT",
+  "_key": "!items!zpf3izX3422X2wwT",
+  "name": "GHOSTWIRE.Kits.Snarehunter.Signature.Name",
+  "type": "ability",
+  "img": "icons/weapons/polearms/trident-curved-steel.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tangle-and-stab",
+    "story": "GHOSTWIRE.Kits.Snarehunter.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "aqW1nVMW5g1RJJHL": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "aqW1nVMW5g1RJJHL",
+          "damage": {
+            "tier2": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        },
+        "di2TGvRsz8cxCrNN": {
+          "name": "Slow",
+          "img": null,
+          "type": "applied",
+          "_id": "di2TGvRsz8cxCrNN",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}} slowed (EoT)",
+              "potency": {
+                "characteristic": "agility",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "turn",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "{{potency}} slowed (EoT)",
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "turn",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "{{potency}} restrained (EoT)",
+              "effects": {
+                "restrained": {
+                  "condition": "failure",
+                  "end": "turn",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

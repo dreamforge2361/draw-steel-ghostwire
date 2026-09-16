@@ -1,0 +1,79 @@
+{
+  "_id": "bMaYHPVIjpDwj3aX",
+  "_key": "!items!bMaYHPVIjpDwj3aX",
+  "name": "GHOSTWIRE.Kits.Ghost.Name",
+  "type": "kit",
+  "img": "icons/weapons/guns/pistol-automatic-silenced.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Ghost.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost",
+    "advancements": {
+      "I6bmg0Iq9xdhhf2I": {
+        "name": "GHOSTWIRE.Kits.Ghost.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "I6bmg0Iq9xdhhf2I",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.EBlqhuYGrfDPDyoE"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "light"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 5
+      },
+      "stamina": 3,
+      "speed": 2,
+      "stability": 0,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "ggHtFmJuOx2pkwyl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

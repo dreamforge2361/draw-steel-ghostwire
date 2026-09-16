@@ -1,0 +1,149 @@
+{
+  "_id": "EJdmbXZL19UQvYvj",
+  "_key": "!items!EJdmbXZL19UQvYvj",
+  "name": "GHOSTWIRE.Kits.Monowhip.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-flail-spiked-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "monofilament-lash",
+    "story": "GHOSTWIRE.Kits.Monowhip.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "2",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "ilwvOSeCikrmqdXn": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "ilwvOSeCikrmqdXn",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "xUFQM2onRFudgQye": {
+          "name": "Pull",
+          "img": null,
+          "type": "forced",
+          "_id": "xUFQM2onRFudgQye",
+          "forced": {
+            "tier1": {
+              "movement": [
+                "pull"
+              ],
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "distance": "1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "pull"
+              ],
+              "properties": [
+                "vertical"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "pull"
+              ],
+              "distance": "3",
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

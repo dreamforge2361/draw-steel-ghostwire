@@ -1,0 +1,79 @@
+{
+  "_id": "m7DTBTD2zvW0TViV",
+  "_key": "!items!m7DTBTD2zvW0TViV",
+  "name": "GHOSTWIRE.Kits.Bulldozer.Name",
+  "type": "kit",
+  "img": "icons/weapons/maces/mace-round-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Bulldozer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "bulldozer",
+    "advancements": {
+      "iCOS98pyguCqGwty": {
+        "name": "GHOSTWIRE.Kits.Bulldozer.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "iCOS98pyguCqGwty",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.iQul4XUDNrK0kYgO"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [
+        "heavy"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 4
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 6,
+      "speed": 1,
+      "stability": 1,
+      "disengage": null
+    }
+  },
+  "effects": [],
+  "folder": "BE4frWP9fcIOBAoH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

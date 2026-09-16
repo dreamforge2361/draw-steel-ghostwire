@@ -11,7 +11,8 @@
     "COMPENDIUM": {
       "origins": "Ghostwire Ancestries",
       "abilities": "Ghostwire Abilities",
-      "chrome": "Ghostwire Chrome"
+      "chrome": "Ghostwire Chrome",
+      "kits": "Ghostwire Kits"
     },
     "Abilities": {
       "Keywords": {
@@ -145,6 +146,196 @@
         "soft": "Soft"
       },
       "SheetLine": "{grade} · {location} · Body Integrity {integrity} · {price} · {availability}"
+    },
+    "Kits": {
+      "Folders": {
+        "Ranged": "Ranged specialists",
+        "Finesse": "Gun/blade finesse",
+        "Heavy": "Heavy / tank",
+        "Melee": "Melee / martial",
+        "MagicTech": "Magic-tech"
+      },
+      "Longshot": {
+        "Name": "Longshot",
+        "Description": "<p>Rooftop overwatch and one-shot problem solving. Longshots trade mobility for distance and a huge payoff when the shot lands clean.</p><p><strong>Gear category:</strong> Precision rifle; no armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Sniper benchmark):</strong> Speed +1 · Disengage +1 · Ranged damage +0/+0/+4 · Ranged distance +10. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.eyTvU2KKgnfr6dM1]{Held Breath}</p>",
+        "Signature": {
+          "Name": "Held Breath",
+          "Story": "Breathe … settle the reticle … wait … then squeeze.",
+          "Effect": "<p>If you don’t take a move action this turn, this strike deals extra damage equal to [[lookup @chr]]{your Physique or Reflex score (your choice)}.</p>"
+        }
+      },
+      "Saturation": {
+        "Name": "Saturation",
+        "Description": "<p>Volume of fire wins arguments. Saturation runners keep two targets’ heads down at once.</p><p><strong>Gear category:</strong> SMG or carbine; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Rapid-Fire benchmark):</strong> Stamina +3 per echelon · Speed +1 · Disengage +1 · Ranged damage +2/+2/+2 · Ranged distance +7. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.Hb9dXVTwzOkI2goG]{Double Tap}</p>",
+        "Signature": {
+          "Name": "Double Tap",
+          "Story": "Two quick bursts, two targets, both on the mark."
+        }
+      },
+      "Ghost": {
+        "Name": "Ghost",
+        "Description": "<p>Infiltration doctrine: a suppressed pistol, a short blade, and gone before the alarm finishes ringing.</p><p><strong>Gear category:</strong> One or two silenced light weapons; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Cloak and Dagger benchmark):</strong> Stamina +3 per echelon · Speed +2 · Disengage +1 · Melee damage +1/+1/+1 · Ranged damage +1/+1/+1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.EBlqhuYGrfDPDyoE]{Ghost Out}</p>",
+        "Signature": {
+          "Name": "Ghost Out",
+          "Story": "A quiet shot or a quick stab, then a few careful steps into the dark."
+        }
+      },
+      "Hexshot": {
+        "Name": "Hexshot",
+        "Description": "<p>Ammunition carrying a rider — alchemical, hexed, or tech-loaded — that bursts on impact and splashes a second target.</p><p><strong>Gear category:</strong> Bow, crossbow, or dartgun; no armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Arcane Archer benchmark):</strong> Speed +1 · Disengage +1 · Ranged damage +2/+2/+2 · Ranged distance +10. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.O6BfTGzM6qxxMit8]{Hex Round}</p>",
+        "Signature": {
+          "Name": "Hex Round",
+          "Story": "Your round detonates in a burst of hexfire.",
+          "Effect": "<p>One creature or object of your choice within 2 squares of the target takes [[/damage @chr type=fire]]{fire damage} equal to the characteristic score used for this ability’s power roll.</p>"
+        }
+      },
+      "Gunslinger": {
+        "Name": "Gunslinger",
+        "Description": "<p>Fast hands and faster feet. Gunslingers push enemies out of position and step into the gap.</p><p><strong>Gear category:</strong> Medium sidearm or blade; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Swashbuckler benchmark):</strong> Stamina +3 per echelon · Speed +3 · Disengage +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.qCA7JBLzwDSXpBXe]{Quickdraw Shuffle}</p>",
+        "Signature": {
+          "Name": "Quickdraw Shuffle",
+          "Story": "Every gunfight is a dance, and you lead.",
+          "Effect": "<p>You can shift into any square the target leaves after you push them.</p>"
+        }
+      },
+      "Streetsweeper": {
+        "Name": "Streetsweeper",
+        "Description": "<p>Flexible mid-range hybrid for alleys and stairwells: scatter-fire to slow them, steel when they close.</p><p><strong>Gear category:</strong> Shotgun or carbine plus a medium weapon; medium armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Ranger benchmark):</strong> Stamina +6 per echelon · Speed +1 · Disengage +1 · Melee damage +1/+1/+1 · Ranged damage +1/+1/+1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.Xr0xY0VYVOjGg42E]{Kneecap Shot}</p>",
+        "Signature": {
+          "Name": "Kneecap Shot",
+          "Story": "A low, ugly shot that leaves them limping."
+        }
+      },
+      "Raider": {
+        "Name": "Raider",
+        "Description": "<p>Hit-and-run melee with a thrown or close-range option. Raiders rattle a target so their next move goes wrong.</p><p><strong>Gear category:</strong> Light weapon plus a shield; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Raider benchmark):</strong> Stamina +6 per echelon · Speed +1 · Disengage +1 · Melee damage +1/+1/+1 · Ranged damage +1/+1/+1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.mc8pOldWlUt6zDJ0]{Shock and Awe}</p>",
+        "Signature": {
+          "Name": "Shock and Awe",
+          "Story": "A brutal hit that leaves your target reeling.",
+          "Effect": "<p>The target takes a bane on their next power roll made before the end of their next turn.</p>"
+        }
+      },
+      "Juggernaut": {
+        "Name": "Juggernaut",
+        "Description": "<p>Tank doctrine: soak the hit, stay standing, and make whoever landed it regret the decision.</p><p><strong>Gear category:</strong> Heavy weapon; heavy armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Mountain benchmark):</strong> Stamina +9 per echelon · Stability +2 · Melee damage +0/+0/+4. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.VikPrMlInG6JN6Y7]{Payback}</p>",
+        "Signature": {
+          "Name": "Payback",
+          "Story": "Whoever tagged you is about to pay for it.",
+          "Effect": "<p>If the target dealt damage to you since the end of your last turn, this strike deals additional damage equal to [[lookup @chr]]{your Physique or Reflex score (your choice)}.</p>"
+        }
+      },
+      "Warframe": {
+        "Name": "Warframe",
+        "Description": "<p>The highest-Stamina doctrine. Warframes hold the line and force enemies to deal with them first.</p><p><strong>Gear category:</strong> Medium weapon plus a shield; heavy armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Shining Armor benchmark):</strong> Stamina +12 per echelon · Stability +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.F2r0lNCpZXl5AbHr]{Hold the Line}</p>",
+        "Signature": {
+          "Name": "Hold the Line",
+          "Story": "Your assault is impossible to ignore.",
+          "Effect": "<p>The target is taunted until the end of their next turn.</p>"
+        }
+      },
+      "Breacher": {
+        "Name": "Breacher",
+        "Description": "<p>First through the door. Breachers use the shield as a battering ram to push and drop defenders.</p><p><strong>Gear category:</strong> Medium weapon plus a ballistic shield; medium armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Sword and Board benchmark):</strong> Stamina +9 per echelon · Stability +1 · Disengage +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.zQNVqHFWN5TI6e6E]{Breach and Bash}</p>",
+        "Signature": {
+          "Name": "Breach and Bash",
+          "Story": "A ballistic shield is a door-opener in every sense."
+        }
+      },
+      "Bulldozer": {
+        "Name": "Bulldozer",
+        "Description": "<p>A mobile heavy hitter who builds momentum across the room before the hit lands.</p><p><strong>Gear category:</strong> Heavy weapon; no armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Panther benchmark):</strong> Stamina +6 per echelon · Speed +1 · Stability +1 · Melee damage +0/+0/+4. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.iQul4XUDNrK0kYgO]{Freight Train}</p>",
+        "Signature": {
+          "Name": "Freight Train",
+          "Story": "The faster you move, the harder you hit.",
+          "Effect": "<p>You can move up to 3 squares straight toward the target before this strike, which deals [[/damage @scaling scaling]]{extra damage} equal to the number of squares you move this way.</p>"
+        }
+      },
+      "Brawler": {
+        "Name": "Brawler",
+        "Description": "<p>Durable street fighter. Fists, knees, and chrome knuckles keep enemies stumbling where you want them. A cyberlimb or implant weapon can be the qualifying gear.</p><p><strong>Gear category:</strong> Unarmed or cyberlimb strikes; no armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Pugilist benchmark):</strong> Stamina +6 per echelon · Speed +2 · Stability +1 · Melee damage +1/+1/+1. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.aiLAPXQI5uu9qsBT]{Stagger Combo}</p>",
+        "Signature": {
+          "Name": "Stagger Combo",
+          "Story": "Keep them stumbling, keep them close.",
+          "Effect": "<p>You can shift into any square the target leaves after you slide them.</p>"
+        }
+      },
+      "Mantis": {
+        "Name": "Mantis",
+        "Description": "<p>Fast martial artist doctrine built on feints and repositioning. A cyberlimb or implant weapon can be the qualifying gear.</p><p><strong>Gear category:</strong> Unarmed or cyberlimb strikes; no armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Martial Artist benchmark):</strong> Stamina +3 per echelon · Speed +3 · Disengage +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.INhuUABdmfmOva3G]{Mantis Feint}</p>",
+        "Signature": {
+          "Name": "Mantis Feint",
+          "Story": "You feint, and suddenly they’re standing where you were.",
+          "Effect": "<p>If you obtain a tier 2 or tier 3 outcome and can’t swap places with the target because one or both of you is too big to fit into the swapped space, you both remain in your original spaces and the target takes 1 extra damage.</p>"
+        }
+      },
+      "Chromeblade": {
+        "Name": "Chromeblade",
+        "Description": "<p>Twin-blade doctrine: strike, move, strike again before the target can turn.</p><p><strong>Gear category:</strong> A light plus a medium melee weapon; medium armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Dual Wielder benchmark):</strong> Stamina +6 per echelon · Speed +2 · Disengage +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.8iZA3VkW3aYrlzAb]{Twin Cut}</p>",
+        "Signature": {
+          "Name": "Twin Cut",
+          "Story": "Why cut once when you can cut twice?",
+          "Effect": "<p>If you use this ability on your turn, you can use it against one target, then use your maneuver and your move action for that turn before using the ability against a second target. You still use the same power roll for both targets.</p>"
+        }
+      },
+      "Reach": {
+        "Name": "Reach",
+        "Description": "<p>Extended melee reach. The haft is as dangerous as the head, and both ends hit something.</p><p><strong>Gear category:</strong> Polearm or long cyber-weapon; medium armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Guisarmier benchmark):</strong> Stamina +6 per echelon · Stability +1 · Melee damage +2/+2/+2 · Melee distance +1. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.GQIuKhnP5jCRyJW8]{Haft and Blade}</p>",
+        "Signature": {
+          "Name": "Haft and Blade",
+          "Story": "Forward with the blade, back with the haft."
+        }
+      },
+      "Monowhip": {
+        "Name": "Monowhip",
+        "Description": "<p>Very fast and very dangerous at reach: a monofilament line that drags targets where you want them.</p><p><strong>Gear category:</strong> Whip, monofilament, or chain; no armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Whirlwind benchmark):</strong> Speed +3 · Disengage +1 · Melee damage +1/+1/+1 · Melee distance +1. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.EJdmbXZL19UQvYvj]{Monofilament Lash}</p>",
+        "Signature": {
+          "Name": "Monofilament Lash",
+          "Story": "The line snaps back and drags your target with it."
+        }
+      },
+      "Snarehunter": {
+        "Name": "Snarehunter",
+        "Description": "<p>Control specialist: tangle-guns, bolas, and shock-nets that pin a target for the finishing stab.</p><p><strong>Gear category:</strong> Net or ensnaring gear plus a polearm; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Retiarius benchmark):</strong> Stamina +3 per echelon · Speed +1 · Disengage +1 · Melee damage +2/+2/+2 · Melee distance +1. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.zpf3izX3422X2wwT]{Tangle and Stab}</p>",
+        "Signature": {
+          "Name": "Tangle and Stab",
+          "Story": "A tangle-net follows the strike and leaves them right where you want them."
+        }
+      },
+      "StaffAdept": {
+        "Name": "Staff Adept",
+        "Description": "<p>Mobile reach with a shock-staff or bo, sliding enemies around the fight.</p><p><strong>Gear category:</strong> Staff or polearm; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Stick and Robe benchmark):</strong> Stamina +3 per echelon · Speed +2 · Disengage +1 · Melee damage +1/+1/+1 · Melee distance +1. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.v5bhxreNXoXzT9Wz]{Staff Redirect}</p>",
+        "Signature": {
+          "Name": "Staff Redirect",
+          "Story": "When your staff speaks, your enemy moves."
+        }
+      },
+      "Duelist": {
+        "Name": "Duelist",
+        "Description": "<p>Balanced blade doctrine with a grav-emitter hilt that makes a struck target light and easy to throw around.</p><p><strong>Gear category:</strong> Medium melee weapon; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Battlemind benchmark):</strong> Stamina +3 per echelon · Speed +2 · Stability +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.kiiQqRr5CRnyCwIR]{Gravity Cut}</p>",
+        "Signature": {
+          "Name": "Gravity Cut",
+          "Story": "Your blade’s grav-emitter pulses, and the target suddenly weighs almost nothing.",
+          "Effect": "<p>Until the end of the target’s next turn, any forced movement that affects the target has its distance increased by 2.</p>"
+        }
+      },
+      "Spellblade": {
+        "Name": "Spellblade",
+        "Description": "<p>A melee weapon that carries an elemental or tech strike — arc-coil, charm, or Veil-channel — that jumps to a second foe.</p><p><strong>Gear category:</strong> Medium melee weapon plus a shield; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Spellsword benchmark):</strong> Stamina +6 per echelon · Speed +1 · Stability +1 · Melee damage +2/+2/+2. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.czc9IstoVCRaECJo]{Arc Blade}</p>",
+        "Signature": {
+          "Name": "Arc Blade",
+          "Story": "Current leaps from your weapon to a nearby foe.",
+          "Effect": "<p>A creature or object of your choice within 2 squares of the target takes [[/damage @chr type=lightning]]{lightning damage} equal to the characteristic score used for this ability’s power roll.</p>"
+        }
+      },
+      "Sanctified": {
+        "Name": "Sanctified",
+        "Description": "<p>Armored faith-warrior of the Veil. Each hit brands the target, opening them up to the rest of the crew.</p><p><strong>Gear category:</strong> Light weapon; heavy armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, Draw Steel Warrior Priest benchmark):</strong> Stamina +9 per echelon · Speed +1 · Stability +1 · Melee damage +1/+1/+1. Damage is listed low / middle / high result.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.6hAki6do3O90cKe6]{Veil Brand}</p>",
+        "Signature": {
+          "Name": "Veil Brand",
+          "Story": "The impact brands your target for destruction.",
+          "Effect": "<p>Until the end of the target’s next turn, they have damage weakness equal to [[lookup @chr]]{the characteristic score used for this ability’s power roll}.</p>"
+        }
+      }
     },
     "Peoples": {
       "PureHuman": {
@@ -600,6 +791,13 @@
       }
     },
     "Item": {
+      "treasure": {
+        "Weapons": {
+          "Bow": "Firearm / Bow",
+          "Unarmed": "Unarmed / Cyberlimb",
+          "Whip": "Whip / Monowhip"
+        }
+      },
       "ability": {
         "Keywords": {
           "Charge": "Rush"

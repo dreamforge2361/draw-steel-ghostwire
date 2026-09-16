@@ -1,0 +1,117 @@
+{
+  "_id": "O6BfTGzM6qxxMit8",
+  "_key": "!items!O6BfTGzM6qxxMit8",
+  "name": "GHOSTWIRE.Kits.Hexshot.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/ranged/arrows-flying-salvo-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hex-round",
+    "story": "GHOSTWIRE.Kits.Hexshot.Signature.Story",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility",
+          "reason",
+          "intuition",
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "fYrplP2lLMh1CkGW": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "fYrplP2lLMh1CkGW",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "8 + @chr",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.Hexshot.Signature.Effect",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "ggHtFmJuOx2pkwyl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

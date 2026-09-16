@@ -1,0 +1,79 @@
+{
+  "_id": "wBUl1vkVVZYuQX3G",
+  "_key": "!items!wBUl1vkVVZYuQX3G",
+  "name": "GHOSTWIRE.Kits.Reach.Name",
+  "type": "kit",
+  "img": "icons/weapons/polearms/glaive-simple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Reach.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "reach",
+    "advancements": {
+      "aHhGfXEKyJmxXQIL": {
+        "name": "GHOSTWIRE.Kits.Reach.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "aHhGfXEKyJmxXQIL",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.GQIuKhnP5jCRyJW8"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "medium",
+      "weapon": [
+        "polearm"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": 1
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 6,
+      "speed": null,
+      "stability": 1,
+      "disengage": null
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

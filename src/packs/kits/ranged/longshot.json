@@ -1,0 +1,79 @@
+{
+  "_id": "fuSNyUlJYPVBXltk",
+  "_key": "!items!fuSNyUlJYPVBXltk",
+  "name": "GHOSTWIRE.Kits.Longshot.Name",
+  "type": "kit",
+  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Longshot.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "longshot",
+    "advancements": {
+      "KVkT9bIQMKrRC4Dz": {
+        "name": "GHOSTWIRE.Kits.Longshot.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "KVkT9bIQMKrRC4Dz",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.eyTvU2KKgnfr6dM1"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [
+        "bow"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 4
+        },
+        "distance": 10
+      },
+      "stamina": null,
+      "speed": 1,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "ggHtFmJuOx2pkwyl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

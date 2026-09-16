@@ -1,0 +1,79 @@
+{
+  "_id": "m0Xsm28kSSVDYVPk",
+  "_key": "!items!m0Xsm28kSSVDYVPk",
+  "name": "GHOSTWIRE.Kits.Raider.Name",
+  "type": "kit",
+  "img": "icons/weapons/axes/axe-broad-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Raider.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "raider",
+    "advancements": {
+      "MnyFftZXJ6tA47bc": {
+        "name": "GHOSTWIRE.Kits.Raider.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "MnyFftZXJ6tA47bc",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.mc8pOldWlUt6zDJ0"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "light"
+      ],
+      "shield": true
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 5
+      },
+      "stamina": 6,
+      "speed": 1,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "jYz1cXYD65Qf2lH6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

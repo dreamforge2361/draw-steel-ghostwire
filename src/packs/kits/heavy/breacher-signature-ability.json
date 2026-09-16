@@ -1,0 +1,181 @@
+{
+  "_id": "zQNVqHFWN5TI6e6E",
+  "_key": "!items!zQNVqHFWN5TI6e6E",
+  "name": "GHOSTWIRE.Kits.Breacher.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/shield-block-bash-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breach-and-bash",
+    "story": "GHOSTWIRE.Kits.Breacher.Signature.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "fptrZEJxl0ZFrbCt": {
+          "name": "Damage",
+          "img": null,
+          "type": "damage",
+          "_id": "fptrZEJxl0ZFrbCt",
+          "damage": {
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        },
+        "eb1HaQwUBIp8OUaa": {
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "_id": "eb1HaQwUBIp8OUaa",
+          "forced": {
+            "tier2": {
+              "distance": "2",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "distance": "3",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "distance": "1",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        },
+        "CZ3vpjVexOB52bBq": {
+          "name": "prone",
+          "img": null,
+          "type": "applied",
+          "_id": "CZ3vpjVexOB52bBq",
+          "applied": {
+            "tier1": {
+              "display": "",
+              "potency": {
+                "characteristic": "might",
+                "value": "@potency.weak"
+              },
+              "effects": {}
+            },
+            "tier3": {
+              "display": "{{potency}}, prone",
+              "effects": {
+                "prone": {
+                  "condition": "failure",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier2": {
+              "display": "",
+              "effects": {},
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "folder": "BE4frWP9fcIOBAoH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,80 @@
+{
+  "_id": "NIv1KQfV2JBzkeWk",
+  "_key": "!items!NIv1KQfV2JBzkeWk",
+  "name": "GHOSTWIRE.Kits.Chromeblade.Name",
+  "type": "kit",
+  "img": "icons/weapons/swords/swords-short.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Chromeblade.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chromeblade",
+    "advancements": {
+      "vC2fdGhqshVnooGx": {
+        "name": "GHOSTWIRE.Kits.Chromeblade.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "vC2fdGhqshVnooGx",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.8iZA3VkW3aYrlzAb"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "medium",
+      "weapon": [
+        "light",
+        "medium"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 6,
+      "speed": 2,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,79 @@
+{
+  "_id": "uSTe6AiFvh081JSm",
+  "_key": "!items!uSTe6AiFvh081JSm",
+  "name": "GHOSTWIRE.Kits.Hexshot.Name",
+  "type": "kit",
+  "img": "icons/weapons/guns/pistol-energy-plasma.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Hexshot.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hexshot",
+    "advancements": {
+      "WB4jziAOOfyJvhU3": {
+        "type": "itemGrant",
+        "_id": "WB4jziAOOfyJvhU3",
+        "name": "GHOSTWIRE.Kits.Hexshot.Signature.Name",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.O6BfTGzM6qxxMit8"
+          }
+        ],
+        "img": null,
+        "description": "",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [
+        "bow"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": 10
+      },
+      "stamina": 0,
+      "speed": 1,
+      "stability": 0,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "ggHtFmJuOx2pkwyl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

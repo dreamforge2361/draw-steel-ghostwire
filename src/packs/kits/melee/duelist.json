@@ -1,0 +1,79 @@
+{
+  "_id": "9P2atUoP2dnT22Zn",
+  "_key": "!items!9P2atUoP2dnT22Zn",
+  "name": "GHOSTWIRE.Kits.Duelist.Name",
+  "type": "kit",
+  "img": "icons/weapons/swords/greatsword-guard.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Duelist.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "duelist",
+    "advancements": {
+      "v8DE5pImdstCo8pV": {
+        "name": "GHOSTWIRE.Kits.Duelist.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "v8DE5pImdstCo8pV",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.kiiQqRr5CRnyCwIR"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "medium"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 2,
+          "tier2": 2,
+          "tier3": 2
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 3,
+      "speed": 2,
+      "stability": 1,
+      "disengage": null
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

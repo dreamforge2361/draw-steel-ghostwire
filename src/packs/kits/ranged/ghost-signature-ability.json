@@ -1,0 +1,129 @@
+{
+  "_id": "EBlqhuYGrfDPDyoE",
+  "_key": "!items!EBlqhuYGrfDPDyoE",
+  "name": "GHOSTWIRE.Kits.Ghost.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-out",
+    "story": "GHOSTWIRE.Kits.Ghost.Signature.Story",
+    "keywords": [
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "fm9HgAGlqlQNyc0a": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "fm9HgAGlqlQNyc0a",
+          "damage": {
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        },
+        "Ruaq0pHydGUciDz7": {
+          "name": "Shift",
+          "img": null,
+          "type": "other",
+          "_id": "Ruaq0pHydGUciDz7",
+          "other": {
+            "tier1": {
+              "display": "you can shift 1 square",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "you can shift up to 2 squares",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "you can shift up to 3 squares",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "folder": "ggHtFmJuOx2pkwyl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

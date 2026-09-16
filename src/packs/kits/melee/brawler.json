@@ -1,0 +1,79 @@
+{
+  "_id": "P9QejdFeowoVpGZd",
+  "_key": "!items!P9QejdFeowoVpGZd",
+  "name": "GHOSTWIRE.Kits.Brawler.Name",
+  "type": "kit",
+  "img": "icons/skills/melee/unarmed-punch-fist.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Brawler.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "brawler",
+    "advancements": {
+      "z1CMvkZlfCyEOh1Y": {
+        "name": "GHOSTWIRE.Kits.Brawler.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "z1CMvkZlfCyEOh1Y",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.aiLAPXQI5uu9qsBT"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [
+        "unarmed"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 6,
+      "speed": 2,
+      "stability": 1,
+      "disengage": null
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,79 @@
+{
+  "_id": "yFjhbFJU76MB8rUi",
+  "_key": "!items!yFjhbFJU76MB8rUi",
+  "name": "GHOSTWIRE.Kits.Monowhip.Name",
+  "type": "kit",
+  "img": "icons/weapons/misc/whip-red-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Monowhip.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "monowhip",
+    "advancements": {
+      "yObEvruqSgXSwAnW": {
+        "name": "GHOSTWIRE.Kits.Monowhip.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "yObEvruqSgXSwAnW",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.EJdmbXZL19UQvYvj"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [
+        "whip"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 1
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": null,
+      "speed": 3,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "6j5jqitykLmVQKGg",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

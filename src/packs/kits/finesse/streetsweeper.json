@@ -1,0 +1,80 @@
+{
+  "_id": "DqdYHRagtNp8BkCq",
+  "_key": "!items!DqdYHRagtNp8BkCq",
+  "name": "GHOSTWIRE.Kits.Streetsweeper.Name",
+  "type": "kit",
+  "img": "icons/weapons/guns/shotgun-pump.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Streetsweeper.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "streetsweeper",
+    "advancements": {
+      "1gjFknWi9Pf8rjv1": {
+        "name": "GHOSTWIRE.Kits.Streetsweeper.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "1gjFknWi9Pf8rjv1",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.Xr0xY0VYVOjGg42E"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "medium",
+      "weapon": [
+        "bow",
+        "medium"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 5
+      },
+      "stamina": 6,
+      "speed": 1,
+      "stability": null,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "jYz1cXYD65Qf2lH6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
