@@ -1,80 +1,89 @@
-# Ghostwire Core Rulebook — Chapter: Species (The Nine Peoples)
+# Ghostwire Core Rulebook — Chapter: Species (The Peoples)
 
-**Status:** Stage 2.5 draft — DS alignment pass (interim)
-**Ancestry map:** see `docs/rulebook/SPECIES-DS-MAP.md` (Ghostwire Peoples ↔ Heroes ancestries)
-**Template:** Changer should follow the Dragon Knight field-for-field reskin (creation-time signature + point budget), not level-gated BP options  
-**Source of record:** `docs/masters/GHOSTWIRE_SPECIES_MASTER.md`  
-**Context:** Drafted after class batch approval (2026-09-16). Shared chargen / ancestry layer for all eight classes.
+**Status:** Stage 2.5 — **Draw Steel ancestry packages** (creation-time; six Peoples rewritten)
+**Ancestry map:** `docs/rulebook/SPECIES-DS-MAP.md`
+**Template:** Changer = Dragon Knight field-for-field reskin (`docs/masters/Changer-Dragon-Knight-Reskin.md`)
+**Source of record (fiction):** `docs/masters/GHOSTWIRE_SPECIES_MASTER.md`
+**Context:** Shared chargen / ancestry layer for all eight classes. Stock Foundry system is Draw Steel; Ghostwire is world + module. This chapter is **rulebook text only**.
 
-**Notes for review:**
-- Roster includes Pure Human, Mutant Human, Changer, Revenant, Corran, Elvani, Goliar, Cyborg (plus reserved Changer subtypes if listed)
-- Hard constraints (e.g. Cyborg Arcane Severance vs Elementalist / Street Priest) must stay consistent with class chapters
-- BP / level-or-echelon-gated options and numeric packages may still need the shared numeric pass
-- Old Ghostwire **tier** ladder removed; gates use **level** (and echelon where banding matters)
-- Attribute labels must be the locked five: Physique, Reflex, Logic, Instinct, Persona (old Logic/Instinct/Instinct remapped)
-- Tri-register naming (street / corp / formal) should stay consistent book-wide
-
-
-
-## Draw Steel ancestry alignment (v1 target)
-
-| Ghostwire | Draw Steel spine |
-|---|---|
-| Pure Human | Human |
-| Corran | Dwarf |
-| Elvani | High Elf |
-| Goliar | Orc |
-| Changer | Dragon Knight *(field-for-field reskin already designed)* |
-| Revenant | Revenant |
-| Mutant Human | Devil *(candidate)* or GW-original on DS budget |
-| Cyborg | Time Raider *(loose)* or GW-original on DS budget |
-
-**Structural target:** each species becomes a DS-style ancestry (free signature + ancestry points at creation). The level-gated Species Options tables below are **interim legacy** until that rewrite lands.
+**Notes for Michael (review):**
+- Six Peoples are now DS-style: free signature trait(s) + fixed ancestry-point budget + purchased-trait menu with DS costs. **No level-gated BP Species Options** on those six.
+- Mutant Human and Cyborg are **short deferred stubs** until Devil / Time Raider chassis is decided.
+- Attribute labels locked: **Physique, Reflex, Logic, Instinct, Persona** (map from Might / Agility / Reason / Intuition / Presence).
+- Power Roll bands: **≤11 / 12–16 / 17+**.
+- Changer lineages are **Raven / Rat / Wolf** only (three forms = maneuver fiction). Older five-family subtype table retired.
+- Revenant **Decay ladder removed** as mechanics; fire while inert still destroys permanently (Tough But Withered).
+- Costs are **not invented** — copied from the mapped DS ancestry (or the Changer reskin master).
 
 ---
 
-*Compiled for review, 2026-09-16. Canon source: species sections in `master_rules_baseline.md`. All eight core species are fully detailed and the roster is complete (finalized 2026-07-15). Attribute names are the locked five: Physique (Might), Reflex (Agility), Logic (Reason), Instinct (Intuition), Persona (Presence). Older Logic / Instinct / Instinct labels in source material are remapped. On any conflict with individual chapter pages, the baseline document wins.*
+## Structural rule (Draw Steel aligned)
 
-All species share a unified template on the Draw Steel advancement spine (**levels 1–10**, **echelon** bands). Species identity is **free at level 1** (the Starting Package). Further species growth is bought as **Species Options** from the shared BP pool (Advancement: 5 XP = 1 BP), gated by **minimum level** so species never outcompete class choices. Price bands: **Minor 2 BP · Standard 4 BP · Signature 6 BP.**
+Ghostwire Peoples are **creation-time ancestry packages**:
+
+1. **Free signature trait(s)** (always on; no point cost)
+2. A fixed **ancestry-point budget** spent across a purchased-trait menu
+3. **No per-level ancestry unlock track** and **no Ghostwire tier ladder** — growth after creation comes from class / characteristics / kits
+
+Do **not** buy species options with BP gated by level. That pattern is retired for the six rewritten Peoples.
+
+---
+
+## Mapping (Ghostwire ↔ Draw Steel)
+
+| Ghostwire People | Draw Steel spine | Ancestry points |
+|---|---|---|
+| Pure Human | Human | 3 |
+| Corran (“Squat”) | Dwarf | 3 |
+| Elvani (“Elf”) | High Elf | 3 |
+| Goliar (“Ogre”) | Orc | 3 |
+| Changer | Dragon Knight *(field-for-field reskin)* | 3 |
+| Revenant | Revenant | 2 (or 3 if size 1S) |
+| Mutant Human | Devil *(candidate)* or GW-original | **Deferred** |
+| Cyborg | Time Raider *(loose)* or GW-original | **Deferred** |
+
+---
 
 ## Roster at a glance
 
-| Species | Tagline | Attribute profile | Status |
-|---|---|---|---|
-| [Pure Human](#pure-human) | Adaptable, balanced, widely compatible | Floating +1 to any | Fully detailed (canon) |
-| [Mutant Human](#mutant-human) | Powerful, unstable, customizable | Floating +1 / floating -1 (different attrs) | Fully detailed (2026-07-15) |
-| [Changer](#changer) | Human-animal hybrid, form-shifting | +1 Instinct + subtype adjustment | Fully detailed (2026-07-14) |
-| [Revenant](#revenant) | Death-returned, decaying toward a ghost | +1 Instinct, +1 Instinct, -1 Physique or Presence | Fully detailed (2026-07-15) |
-| [Corran ("Squat")](#corran-squat) | Engineered underclass — sturdy, unbreakable, immovable | +1 Physique, +1 Instinct, -1 Reflex | Fully detailed (2026-07-15) |
-| [Elvani ("Elf")](#elvani-elf) | Engineered aristocracy — beautiful, poised, quick, fragile | +1 Reflex, +1 Presence, -1 Physique | Fully detailed (2026-07-15) |
-| [Goliar ("Ogre")](#goliar-ogre) | Engineered heavy — towering, crushing, intimidating | +2 Physique, -1 Reflex, -1 Presence | Fully detailed (2026-07-15) |
-| [Cyborg](#cyborg) | Machine-first, no magic | +1 Logic; choose +1 Physique or +1 Reflex; −1 Presence or −1 Instinct | Fully detailed (canon) |
+| People | Tagline | Signature | Budget | Status |
+|---|---|---|---|---|
+| [Pure Human](#pure-human) | Baseline humanity | Detect the Supernatural | 3 pts | Ancestry package |
+| [Corran (“Squat”)](#corran-squat) | Engineered labor underclass | Labor Brand | 3 pts | Ancestry package |
+| [Elvani (“Elf”)](#elvani-elf) | Engineered aesthetic aristocracy | Corp Glamor | 3 pts | Ancestry package |
+| [Goliar (“Ogre”)](#goliar-ogre) | Engineered heavy | Relentless | 3 pts | Ancestry package |
+| [Changer](#changer) | Were-blooded three-form shapeshifter | Beast-Hide | 3 pts | Ancestry package |
+| [Revenant](#revenant) | Death-returned, unfinished purpose | Former Life + Tough But Withered | 2 pts (3 if 1S) | Ancestry package |
+| [Mutant Human](#mutant-human-deferred) | Powerful, unstable, customizable | — | — | Deferred stub |
+| [Cyborg](#cyborg-deferred) | Machine-first, no magic | — | — | Deferred stub |
+
+---
 
 ## Species naming (tri-register)
 
-Every species carries a **scientific** name (corp/lab classification), a **corporate/common** name, and **slang**. Cyborgs deliberately break the *Homo* genus as *Machina sapiens* (machine-first).
+Every People carries a **scientific** name (corp/lab classification), a **corporate/common** name, and **slang**. Cyborgs deliberately break the *Homo* genus as *Machina sapiens* (machine-first).
 
-| Species | Scientific | Corporate / common | Slang |
+| People | Scientific | Corporate / common | Slang |
 |---|---|---|---|
 | Pure Human | *Homo sapiens basalis* | Baseline Human | Norms, Naturals, Purebloods, flatlines |
 | Corran | *Homo sapiens fossor* | Corran / Labor-Class Type | Squats, Deepers, dust-eaters |
-| Changer | *Homo sapiens versipellis* | Metamorphic Type | Changers, Shifters, skins, weres |
-| Mutant Human | *Homo sapiens aberrans* | Aberrant / Mutagenic Type | Muties, Tainted, Wrongborn |
-| Revenant | *Homo mortuus redivivus* | Reanimate / Post-Mortem Type | Revs, Deaders, Rotters, Ghosts |
-| Cyborg | *Machina sapiens* | Full-Conversion Cyborg | Borgs, Chrome, Tin-men, Husks |
 | Elvani | *Homo sapiens gracilis* | Elvani / Aesthetic-Class Type | Elves, corp-dolls, Prettyboys, Pointers, Highborn |
 | Goliar | *Homo sapiens giganticus* | Goliar / Heavy-Class Type | Ogres, slabs, Wallbreakers, Big-uns, Grunts |
+| Changer | *Homo sapiens versipellis* | Metamorphic Type | Changers, Shifters, skins, weres |
+| Revenant | *Homo mortuus redivivus* | Reanimate / Post-Mortem Type | Revs, Deaders, Rotters, Ghosts |
+| Mutant Human | *Homo sapiens aberrans* | Aberrant / Mutagenic Type | Muties, Tainted, Wrongborn |
+| Cyborg | *Machina sapiens* | Full-Conversion Cyborg | Borgs, Chrome, Tin-men, Husks |
+
+---
 
 ## Key species constraints (canon)
 
-- Changers are one species with subtypes; five families are active (Wolf, Rat, Feline, Reptile, Avian), two reserved.
-- Revenants are embodied undead governed by a level/echelon Decay ladder: Fleshbound (levels 1–3 / Echelon 1) → Withered/Skeletal (levels 4–6 / Echelon 2, gains DR) → Spectral partial (levels 7–9 / Echelon 3, incorporeal unlocks) → full Spectral (level 10 / Echelon 4, kinetic resistance). Incorporeal phasing costs Stamina; there are **no immunities** — magic/elemental/fire always land — and **fire destroys an inert Revenant permanently**.
-- **Genetic incompatibility (universal):** engineered species cannot interbreed — cross-species marriage is normal but never produces offspring; each breeds true. No born hybrids (Changer/Mutant/Cyborg/Revenant are *made*, not bred).
-- Three engineered class-breeds anchor the corp social ladder: the **Corran** ("Squat," skilled-labor underclass), the **Goliar** ("Ogre," heavy-labor/security muscle), and the **Elvani** ("Elf," aesthetic aristocracy). Corran and Elvani are deliberate social opposites with mutual contempt.
-- Mutants can be born or made (no mechanical difference); they always carry a **Corruptive Flaw** whose severity scales with a hidden **Corruption Load** meter (raised by buying Standard/Signature mutations) — power is self-limiting via the flaw, not a slot cap.
-- Full Cyborgs are machine-first, cannot use ANY magic, are Presence-capped, healed only by tech/Technomancer, and enter Director-controlled System Crisis at 0 Stamina instead of normal dying.
-
-Benchmarked against Draw Steel ancestries (1–2 free signature traits + ~6–8 purchased traits across several categories), each species below names one free Signature Trait and offers eight or more options across four or more categories.
+- **Genetic incompatibility (universal):** engineered Peoples cannot interbreed — cross-species marriage is normal but never produces offspring; each breeds true. No born hybrids (Changer / Mutant / Cyborg / Revenant are *made*, not bred).
+- Three engineered class-breeds anchor the corp social ladder: the **Corran** (“Squat,” skilled-labor underclass), the **Goliar** (“Ogre,” heavy-labor/security muscle), and the **Elvani** (“Elf,” aesthetic aristocracy). Corran and Elvani are deliberate social opposites with mutual contempt.
+- **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
+- **Revenants** are embodied undead. They use Draw Steel **Former Life** + **Tough But Withered** (inert instead of dying; fire while inert = permanent destruction). There is **no** level/echelon Decay ladder as a mechanical progression.
+- **Mutants** (deferred package) can be born or made; they always carry a Corruptive Flaw whose severity tracks Corruption Load — power is self-limiting via the flaw.
+- **Full Cyborgs** (deferred package) are machine-first, cannot use any magic (**Arcane Severance**), are Presence/Persona-capped, healed only by tech, and enter Director-controlled System Crisis at 0 Stamina instead of normal dying. Class bans (Cyborg vs Elementalist / Street Priest) remain chargen rules.
 
 ---
 
@@ -82,96 +91,122 @@ Benchmarked against Draw Steel ancestries (1–2 free signature traits + ~6–8 
 
 **Names:** Scientific *Homo sapiens basalis* · Corporate/common **Baseline Human** · Slang *Norms, Naturals, Purebloods, flatlines*.
 
-**Tagline:** Baseline humanity — adaptable, balanced, widely compatible. The default point of comparison and the most open-build ancestry.
+**Tagline:** Baseline humanity — adaptable, balanced, widely compatible. The default point of comparison.
 
-**Attribute Profile:** One floating +1 to any attribute. No species Presence cap. Normal Draw Steel level/echelon attribute caps only.
+**Draw Steel spine:** Human · **3 ancestry points**  
+**Quick Build:** Perseverance, Staying Power
 
-### Level 1 starting package (free)
+### Signature Trait — Detect the Supernatural (free)
 
-- **Signature Trait — Adaptive Edge:** once per scene, after seeing the situation but before resolution, gain an edge on a test/attack/resistance roll. Appears in every Human stat block.
-- **Human Presence:** no species Presence cap; no species banes on empathy/negotiation/rapport.
-- **Versatile:** once per mission, treat one untrained skill as trained for a single test.
-- **Detect the Supernatural:** maneuver — detect active supernatural creatures/objects/phenomena in a short radius; learn creature vs. object/effect. (Draw Steel-inspired.)
+As a maneuver, you can open your awareness to detect supernatural creatures and phenomena. Until the end of your next turn, you know the location of any supernatural object, or any undead, construct, or creature from another world within 5 squares, even if you don’t have line of effect to that object or creature. You know if you’re detecting an item or a creature, and you know the nature of any creature you detect.
 
-### Species Options (BP-purchased, level-gated)
+### Purchased Traits — 3 ancestry points
 
-| Option | Cost | Min level | Effect |
-|---|---|---|---|
-| Open Potential | 2 BP | Level 1 | Once per echelon, ignore a non-level species prerequisite on a qualifying BP buy |
-| Staying Power | 2 BP | Level 1 | +1 Recovery (repeatable once at Level 5) |
-| Broad Competence | 2 BP | Level 1 | Edge on one test/scene with a chosen skill group |
-| Sidestep *(movement)* | 2 BP | Level 1 | Once per round when hit by a strike, move a short distance before damage; may impose a bane if it breaks line/reach |
-| Social Instinct | 4 BP | Level 3 | Edge on first Presence test vs. each new NPC/faction rep per scene |
-| Determination | 4 BP | Level 3 | Once per scene end frightened/slowed/weakened on self (maneuver) |
-| Resist the Unnatural | 4 BP | Level 5 | Once per respite halve damage from a magic/psionic/corrupt source |
-| Adaptive Edge+ | 6 BP | Level 5 | +1 use of Adaptive Edge/scene (max 1/round) |
-| Boundless Adaptation | 6 BP | Level 7 | Once per scene convert Adaptive Edge into a double edge |
+- **Can’t Take Hold (1):** Your connection to the natural world allows you to resist certain supernatural effects. You ignore temporary difficult terrain created by magic and psionic abilities. Additionally, when you are force moved by a magic or psionic ability, you can reduce the forced movement distance by 1.
+- **Determination (2):** A tolerance for pain and distress allows you to push through difficult situations. If you are frightened, slowed, or weakened, you can use a maneuver to immediately end one of those conditions.
+- **Perseverance (1):** Giving up is for other people. You gain an edge on tests made using the Endurance skill. Additionally, when you are slowed, your speed is reduced to 3 instead of 2.
+- **Resist the Unnatural (1):** Your instinctive resilience protects you from injuries beyond the routine. Whenever you take damage that isn’t untyped, you can use a triggered action to take half the damage.
+- **Staying Power (2):** Your human physiology allows you to fight, run, and stay awake longer than others. You increase your number of Recoveries by 2.
 
-**Setting hooks:** Least visibly altered by the cosmic war — ideal vessels, agents, converts, and victims. The baseline demographic institutions are built around them.
+**Setting hooks:** Least visibly altered by the cosmic war — ideal vessels, agents, converts, and victims. Institutions are built around them.
 
 ---
 
-## Mutant Human
+## Corran (“Squat”)
 
-**Names:** Scientific *Homo sapiens aberrans* · Corporate/common **Aberrant / Mutagenic Type** · Slang *Muties, Tainted, Wrongborn*.
+**Names:** Scientific *Homo sapiens fossor* (“digger”) · Corporate/common **Corran** (Labor-Class Engineered Type) · Slang *Squats, Deepers, dust-eaters*.
 
-**Tagline:** Powerful, unstable, endlessly customizable — human clay reshaped by the Dark One's touch.
+**Tagline:** The engineered underclass — short, sturdy, unbreakable, and done being looked down on.
 
-**Attribute Profile:** Floating +1 to any one attribute and floating -1 to a different attribute (the mutation gives and takes). No fixed cap shifts at creation.
+**Draw Steel spine:** Dwarf · **3 ancestry points**  
+**Quick Build:** Grounded, Hardened Hide
 
-**Origin:** Humans whose flesh has been rewritten — inherited taint, corrupted-zone exposure, magical accident, infernal bargain, or corp gene-forging. Born or made carries no mechanical difference. The species most directly marked by the cosmic war.
+### Origin and nature
 
-### Corruptive Flaw + Corruption Load (signature subsystem)
+Centuries ago the megacorps engineered the Corran as a laborer breed — compact, immensely strong and hardy, built for deep mines and cramped, high-pressure spaces machines couldn’t reach and baseline humans couldn’t survive. Hundreds of years on they are a fully distinct People with guild-clans, dialects, and culture — no longer owned by anyone. Like all engineered Peoples they breed true and cannot interbreed. The megacorps still read them as “just labor,” which the Corran repay with solidarity, long memory, and a chip on the shoulder the size of a mine cart.
 
-The Mutant's version of the Cyborg's hard limits — a permanent cost that can't be bought off and deepens as you buy power.
+### Signature Trait — Labor Brand (free)
 
-- **Choose one Corruptive Flaw at creation** (free, permanent, always on). It is the price of the floating +1 and the mutation track.
-- **Corruption Load** = hidden species meter. Starts at 0. +1 per Standard mutation, +2 per Signature mutation, +0 for Minor. Not a spendable resource.
-- **Flaw severity scales with Corruption Load, not level** — the core balancing lever. Chase mutation power and you drift toward monstrosity.
+*(Reskin of Dwarf Runic Carving — same mechanics.)*
 
-| Corruption Load | Band | Effect |
-|---|---|---|
-| 0–2 | Latent | Quirk: cosmetic marker, minor tell, narrow situational bane |
-| 3–5 | Manifest | Visible + mechanical: recurring bane, drain, or standing vulnerability |
-| 6+ | Ascendant | Dangerous: strong penalty, Instinct test to stay in control, openly Dark One-touched |
+You can carve a brand or rune onto your skin with **10 uninterrupted minutes** of work, activated by the engineered resilience in your body. The brand you carve determines the benefit, chosen from:
 
-**Corruptive Flaws (pick one):** Visible Taint · Hungering Cells · Unstable Form · Taint Sink · Fractured Mind. Each has a Latent/Manifest/Ascendant expression (see baseline table).
+- **Detection:** Pick a specific type of creature (such as Corran or Goliar) or object (such as gems or medkits). Your brand glows softly when you are within **20 squares** of any creature or object of that type, even if you don’t have line of effect. You can change the type of creature or object as a maneuver.
+- **Light:** Your skin sheds light for **10 squares**. You can turn this light on and off as a maneuver.
+- **Voice:** As a maneuver, you can communicate telepathically with a willing creature you have met before and who is within **1 mile** of you. You must know the creature’s name, and they must speak and understand a language you know. You and the creature can respond as if having a spoken conversation. You can communicate with a different creature by changing the brand.
 
-### Level 1 starting package (free)
+You can have **one** brand active at a time, and can change or remove a brand with **10 uninterrupted minutes** of work.
 
-- **Corruptive Flaw** — chosen above; permanent, scales with Load.
-- **Mutant Adaptation** — one free Minor mutation at creation (no BP, no Load).
-- **Aberrant Resilience** — once per respite reduce harm from a mutation or corruption effect by a small fixed amount.
-- **Reads as Wrong** — option to reveal mutant nature for edge on intimidation; taint-sense always identifies you. Cuts both ways.
+### Purchased Traits — 3 ancestry points
 
-### Species Options — Mutations (BP, level-gated; no slot cap)
+- **Great Fortitude (2):** Your hearty constitution prevents you from losing strength. You can’t be made weakened.
+- **Grounded (1):** Your dense frame and connection to the work make it difficult for others to move you. You have a **+1 bonus to stability**.
+- **Hardened Hide (2):** *(Spark Off Your Skin numbers.)* Your engineered skin affords potent protection. You have a **+6 bonus to Stamina**, and that bonus increases by **6** at **4th, 7th, and 10th** levels.
+- **Stand Tough (1):** Your body is made to withstand the blows of your enemies. Your **Physique** score is treated as **1 higher** for the purpose of resisting potencies, and you gain an edge on **Physique** tests when called for to resist environmental effects or a creature’s traits or abilities.
+- **Stone Shaper (1):** *(Stone Singer limits.)* When you spend **1 uninterrupted hour** singing or working, you can reshape any unworked mundane stone within **3 squares**. You can’t destroy this stone, but you can move each square of it anywhere within 3 squares, piling it off to one side to dig a hole or building it up to create a wall.
 
-Standard 4 BP = +1 Load · Signature 6 BP = +2 Load · Minor 2 BP = +0 Load. Corruption Load is the throttle instead of slots.
+**Setting hooks:** Bottom of the corp class ladder — natural runners, union agitators, undercity power-brokers. Guild-clans are information networks and safehouse chains. Feuds and debts run for generations.
 
-| Mutation | Cost | Min level | Load | Effect |
-|---|---|---|---|---|
-| Dermal Hardening | 2 BP | Level 1 | 0 | Small fixed DR vs. physical hits |
-| Heightened Sense | 2 BP | Level 1 | 0 | Edge on perception tests for one chosen sense |
-| Prehensile Adaptation | 2 BP | Level 1 | 0 | Edge on climbing/balance/manipulation-under-pressure |
-| Chameleon Hide *(utility/stealth)* | 2 BP | Level 1 | 0 | Edge on Stealth (stationary/slow); can suppress the Visible Taint tell for one scene |
-| Toxic Blood | 4 BP | Level 3 | 1 | Melee attacker takes small corrosive/toxic damage in return |
-| Adrenal Mutation | 4 BP | Level 3 | 1 | Once per scene extra move action |
-| Regenerative Tissue | 4 BP | Level 5 | 1 | Once per respite recover Stamina outside rest (not at 0 Stamina) |
-| Natural Weaponry | 4 BP | Level 5 | 1 | Built-in melee weapon, can't be disarmed |
-| Corrupted Conduit | 6 BP | Level 5 | 2 | Once per scene short-range taint burst; then bane on next Instinct |
-| Apex Mutation | 6 BP | Level 7 | 2 | Once per scene double edge on a roll tied to signature mutation |
-| Living Weapon | 6 BP | Level 9 | 2 | Bio-weapon: extended reach; once per scene treat a middle Power Roll result as a high result |
+---
 
-### Strains (loose concept families — not hard-divided)
+## Elvani (“Elf”)
 
-| Strain | Lean | Typical picks |
-|---|---|---|
-| Brute | Physical overgrowth | Dermal Hardening, Natural Weaponry, Adrenal Mutation |
-| Aberrant | Sensory/predatory strangeness | Heightened Sense, Prehensile Adaptation, Toxic Blood |
-| Tainted | Openly corruption-touched | Corrupted Conduit, Taint Sink flaw, Regenerative Tissue |
-| Latent | Subtle, passing, controlled | Minor mutations only, Latent-band flaw, social play |
+**Names:** Scientific *Homo sapiens gracilis* (“slender/graceful”) · Corporate/common **Elvani** (Aesthetic-Class Engineered Type) · Slang *Elves, corp-dolls, Prettyboys, Pointers, Highborn*.
 
-**Setting hooks:** Living proof of the Dark One's reach. Revered by cults as vessels; pitied, suspected, or hunted by Light-aligned orders. Social standing tracks flaw severity — the deeper the taint, the greater the fear.
+**Tagline:** The engineered aristocracy — beautiful, poised, quick, and effortlessly above you.
+
+**Draw Steel spine:** High Elf · **3 ancestry points**  
+**Quick Build:** High Senses, Otherworldly Grace
+
+### Origin and nature
+
+The megacorps engineered the Elvani as the aesthetic breed — boardroom faces, media, diplomatic suites, pleasure decks. Where Corran endure the deep, Elvani were built to be seen: slender, striking, unnervingly graceful, slow to age. Centuries on they are a distinct People with salons, patron-houses, and exacting social codes. Their beauty and charm are engineered traits — a fact they are happy to let others forget. They look down on the Corran as brute labor; the Corran return the sentiment with interest.
+
+### Signature Trait — Corp Glamor (free)
+
+*(High Elf Glamor mechanics.)*
+
+A carefully cultivated presence makes others perceive you as interesting and engaging, granting you an **edge on Persona tests using the Flirt or Persuade skills**. This glamor makes you appear and sound slightly different to each creature you meet, since what is engaging to one might be different for another. However, you **never appear to be anyone other than yourself**.
+
+### Purchased Traits — 3 ancestry points
+
+- **Glamor of Terror (2):** When a foe strikes, you reverse the magic of your glamor to instill fear into their heart. Whenever you take damage from a creature, you can use a triggered action to make that creature **frightened** of you until the end of their next turn.
+- **Graceful Retreat (1):** You gain a **+1 bonus** to the distance you can shift when you take the Disengage move action.
+- **High Senses (1):** Your senses are especially keen and perceptive. You gain an edge on tests made to notice threats.
+- **Otherworldly Grace (2):** Your engineered body and mind can’t be contained for long. Whenever you make a saving throw, you succeed on a roll of **5 or higher**.
+- **Revisit Memory (1):** Accessing memories is as easy as living in the present for you. You gain an edge on tests made to recall lore.
+- **Unstoppable Mind (2):** Your mind allows you to maintain your focus in any situation. You can’t be made **dazed**.
+
+**Setting hooks:** Top of the corp social ladder, rarely allowed to forget who put them there — gilded-cage resentment and patron intrigue. Mutual contempt with the Corran is ready-made table tension.
+
+---
+
+## Goliar (“Ogre”)
+
+**Names:** Scientific *Homo sapiens giganticus* (“giant”) · Corporate/common **Goliar** (Heavy-Class Engineered Type) · Slang *Ogres, slabs, Wallbreakers, Big-uns, Grunts*.
+
+**Tagline:** The engineered heavy — towering, crushing, and impossible to ignore.
+
+**Draw Steel spine:** Orc · **3 ancestry points**  
+**Quick Build:** Glowing Recovery, Grounded
+
+### Origin and nature
+
+The megacorps engineered the Goliar as the heavy breed — towering slabs of muscle for hazardous industry, demolition, load-bearing, and security work no baseline human could survive and no Corran was big enough to do. Centuries on they are a distinct People with kinship-crews and a culture of loyalty, plain speech, and slow-burning pride. The corps still deploy them as muscle and still underestimate them as “just grunts.”
+
+### Signature Trait — Relentless (free)
+
+Whenever a creature deals damage to you that leaves you dying, you can make a **free strike** against any creature. If that creature is reduced to **0 Stamina** by your strike, you can spend a Recovery.
+
+### Purchased Traits — 3 ancestry points
+
+- **Bloodfire Rush (1):** The engineered fire in your veins makes you run faster in the heat of battle. The first time in any combat round that you take damage, you gain a **+2 bonus to speed** until the end of the round.
+- **Glowing Recovery (2):** Your bloodfire allows you to regain your strength quicker than others. Whenever you use the Catch Breath maneuver, you can spend **as many Recoveries as you like**.
+- **Grounded (1):** The density of your frame makes it difficult for others to move you. You have a **+1 bonus to stability**.
+- **Nonstop (2):** Your bloodfire supplies you with a constant rush of adrenaline. You can’t be made **slowed**.
+- **Passionate Artisan (1):** When you are stirred by a passion for creation, your bloodfire lets you work longer and harder. When you gain your initial skills from your career, culture, class, or other source, choose **two skills from the crafting skill group**, whether you have those skills or not. Whenever you make a project roll for a crafting project that uses these skills, you gain a **+2 bonus** to the roll.
+
+**Setting hooks:** The muscle the corps point at problems — and the muscle those problems point back at when a Goliar decides they’ve had enough. Loyalty and memory run deep.
 
 ---
 
@@ -179,56 +214,50 @@ Standard 4 BP = +1 Load · Signature 6 BP = +2 Load · Minor 2 BP = +0 Load. Cor
 
 **Names:** Scientific *Homo sapiens versipellis* · Corporate/common **Metamorphic Type** · Slang *Changers, Shifters, skins, weres*.
 
-**Tagline:** Human-animal hybrid lines; instinctive, adaptive, form-shifting.
+**Tagline:** A were-blooded shapeshifter who walks as a human, fights as a hybrid war-beast, and runs as a true animal.
 
-Changers are one species with internal subtype lines. Every Changer is a permanent **subtype family** (chosen at creation) plus the shared **Alternate Form** subsystem.
+**Draw Steel spine:** Dragon Knight · **3 ancestry points** *(field-for-field reskin)*  
+**Quick Build:** Savage Burst + Layered Hide  
+**SoR:** `docs/masters/Changer-Dragon-Knight-Reskin.md`
 
-### Species baseline (all Changers)
+### Design principle
 
-- **Attribute:** +1 Instinct, plus the subtype's adjustment.
-- **Signature Trait — Alternate Form:** three forms — Human / Hybrid / Beast.
-- **Heightened Senses:** edge on Perception using the subtype's dominant sense.
-- **Instinctive Response:** cannot be surprised while aware of a threat, but takes a bane on Instinct tests when an enemy deliberately baits the Feral Tell.
-- **Feral Tell:** situational Presence bane when the animal marker is exposed to a hostile audience (never among allies).
+The Dragon Knight chassis is kept **untouched** (signature + 3 points + six purchased traits + numbers). Only names, flavor, and cosmetic form-language change. Lineage and forms are **fiction/positioning** — they do not alter costs, budget, or leveling.
 
-### Alternate Form subsystem
+### Lineages (pick one at creation)
 
-| Form | Role | Social passing |
-|---|---|---|
-| Human | Baseline, default | Full |
-| Hybrid | Combat form (claws, fangs, muscle) | None |
-| Beast | Full animal — mobility/stealth/utility | None (reads as an animal) |
-
-- **Shift = a maneuver**, once per round, on your turn. No roll, can't fail normally.
-- **Duress shift:** one free triggered shift per scene at ≤ half Stamina or under fear/pain/corruption pressure.
-- **Gear:** integrates in Hybrid; suppressed in Beast (no armor bonus, held items dropped) unless Changer-adaptive.
-- **Wounded lock:** locked into current form at 0 Stamina / dying until stabilized.
-- **Suppression:** anti-magic, warding, corruption, or Cyborg anti-occult tech can lock the form.
-
-### Subtype families (5 active, 2 reserved)
-
-| Family | Attribute (+ species +1 Instinct) | Dominant sense | Hybrid benefit | Beast benefit |
+| Lineage | Concept | Beast-Hide reads as | Feral Cry / Savage Burst | Beast Movement |
 |---|---|---|---|---|
-| Wolf | +1 Physique | Scent | Pack Instinct: edge vs. target near an ally | Relentless Lope: +speed, ignore natural difficult terrain, edge to chase |
-| Rat | +1 Reflex | Smell/low-light | Gutter Reflexes: once per scene halve a hit (triggered) | Squeeze & Scurry: fit small gaps, edge Stealth in urban/tunnel/debris, edge to climb |
-| Feline | +1 Reflex | Sight/motion | Pounce: move-then-melee = edge, Outcome 3 knocks prone | Silent Stalk: edge Stealth at half speed, no move-while-hidden bane |
-| Reptile | +1 Instinct | Heat/vibration | Scaled Hide: DR vs. first hit/round; resist poison/heat/cold | Ambush Coil: edge Stealth stationary, edge first ambush attack, long stakeouts |
-| Avian | +1 Instinct (→ +2 total) | Long-range sight | Aerial Poise: edge Acrobatics, no short-fall damage, short glide | Flight: full flight, edge aerial scouting/observation |
+| **Raven** | Cunning, aerial, uncanny | Oily black feathers, iridescent sheen | Piercing shriek / battering downdraft of wings and beak | **True flight** (identical to Dragon Knight Wings) |
+| **Rat** | Fast, resilient, swarming | Matted grey fur, scarred and tough | Chittering screech / filthy, venomous savage lunge | Scrabbling wall-run & prodigious leaps (Wings rules, reflavored) |
+| **Wolf** | Ferocious, pack-minded, direct | Thick pelt, bristling hackles | Bone-deep howl / rending pounce | Loping, ground-eating bounds & leaps (Wings rules, reflavored) |
 
-### Species Options (BP, level-gated)
+### Forms (all Changers)
 
-| Option | Cost | Min level | Effect |
-|---|---|---|---|
-| Second Skin | 2 BP | Level 1 | One worn item survives into Beast Form (repeatable) |
-| Buried Humanity | 2 BP | Level 1 | Feral Tell bane only vs. actively hostile crowds |
-| Predator's Presence *(social/utility)* | 2 BP | Level 1 | Once per scene reveal your Feral Tell for an edge on Intimidation/coerce — turns the downside into a weapon |
-| Apex Senses | 4 BP | Level 3 | Add a second dominant sense |
-| Instinct Over Bait | 4 BP | Level 3 | Remove the Instinctive Response baiting downside |
-| Fluid Shift | 4 BP | Level 5 | Once per scene Shift as a free action |
-| Feral Surge | 6 BP | Level 5 | Once per scene in Hybrid: edge + increased effect on one attack |
-| Master of Forms | 6 BP | Level 7 | Gain a Hybrid/Beast benefit from a second family (needs fiction) |
+Changing form is a **maneuver** and confers **no mechanical bonus** by itself. All traits and Beast-Hide work in every form unless a form’s fiction obviously forbids it (Director’s call).
 
-**Setting hooks:** Tied to primal, predatory, protective, or totemic forces — vulnerable to both sacred and corrupt influence. Viewed as dangerous, exotic, impure, or useful; recruited by black-ops groups, cults, and feral communities.
+| Form | Fiction | Typical use |
+|---|---|---|
+| **Human Form** | Fully passing human; no obvious beast tells | Social infiltration, blending, daily life |
+| **Hybrid (War) Form** | Upright beast-humanoid — claws, fangs, feathers or fur | Combat default |
+| **Beast Form** | Full animal — raven, rat, or wolf | Scouting, escape, flight (Raven), gaps (Rat), chase (Wolf) |
+
+### Signature Trait — Beast-Hide (free)
+
+Your hardened hide, fur, or feathers grant you **damage immunity equal to your level** to one of the following damage types: acid, cold, corruption, fire, lightning, or poison. You can change your immunity type when you finish a respite.
+
+### Purchased Traits — 3 ancestry points
+
+- **Pack Guard (1):** Whenever you or an adjacent creature takes damage from a strike, you can use a triggered action to guard against the blow, reducing that damage by an amount equal to your level.
+- **Feral Cry (2):** Signature ability — a 1 burst roar/shriek/howl. *Power Roll + Physique or Persona:* **≤11:** 2 damage · **12–16:** 5 damage, push 1 · **17+:** 7 damage, push 2.
+- **Savage Burst (2):** Signature ability — a 3 cube within 1. *Power Roll + Physique or Persona:* **≤11:** 2 damage · **12–16:** 4 damage · **17+:** 6 damage. Choose the damage type from acid, cold, corruption, fire, lightning, or poison.
+- **Layered Hide (1):** Select one damage immunity from Beast-Hide; you always have this immunity in addition to Beast-Hide’s current choice.
+- **Beast’s Resolve (1):** As a maneuver, recite your resolve. Until the start of your next turn, whenever you make a saving throw, you succeed on a **4 or higher**.
+- **Beast Movement (2):** You can move as your lineage flies or bounds. **Raven:** true flight. **Rat/Wolf:** prodigious leaping/climbing bounds. Either way you stay “aloft” a number of rounds equal to your **Physique** score (minimum 1) before you come down, and while doing so at **3rd level or lower** you have **damage weakness 5**.
+
+**Leveling note:** Ancestry traits are bought **once at creation**. Beast-Hide immunity value equals your **level**. No additional ancestry points on level-up — class handles growth, exactly as Dragon Knight.
+
+**Setting hooks:** Tied to primal, predatory, protective, or totemic forces — recruited by black-ops groups, cults, and feral communities; viewed as dangerous, exotic, impure, or useful.
 
 ---
 
@@ -236,300 +265,100 @@ Changers are one species with internal subtype lines. Every Changer is a permane
 
 **Names:** Scientific *Homo mortuus redivivus* · Corporate/common **Reanimate / Post-Mortem Type** · Slang *Revs, Deaders, Rotters, Ghosts*.
 
-**Tagline:** The dead who refused to stay down — driven by unfinished vengeance, decaying toward a ghost.
+**Tagline:** The dead who refused to stay down — driven by unfinished vengeance.
 
-**Attribute Profile:** +1 Instinct, +1 Instinct, and -1 to either Physique or Presence (chosen at creation). Normal Draw Steel level/echelon attribute caps.
+**Draw Steel spine:** Revenant · **2 ancestry points** (or **3** if your size is **1S**)  
+**Quick Build:** Bloodless (plus Undead Influence if size 1S)
 
-**Origin:** No one is born a Revenant. A person who died with a burning purpose rises again, sustained by will, keeping their memories and personality. In-setting the cosmic war drives it (the Light returning a soul to finish its work, the Dark One denying rest, or resurrection-tech gone "wrong"). Embodied undead at first; loses corporeality only slowly.
+### Origin
 
-### Signature Trait — Undying Return
+No one is born a Revenant. A person who died with a burning purpose rises again, sustained by will, keeping memories and personality. In-setting the cosmic war drives it (the Light returning a soul to finish its work, the Dark One denying rest, or resurrection-tech gone “wrong”).
 
-Reduced to 0 Stamina, a Revenant does not run the normal dying rules. Instead they collapse inert (prone, aware, can't act/speak/move), cannot be finished by ordinary means, and after rest rise again at their Recovery value. Each rise decays the flesh further (fuels the Decay ladder). **Exception: fire.** See True Death, below.
+### Signature Trait — Former Life (free)
 
-### Level 1 starting package (free)
+Choose the ancestry you were before you died. Your **size** is that ancestry’s size and your **speed is 5**. Unless you select one of the Previous Life traits (see below), you don’t receive any other ancestral traits from your original ancestry.
 
-- **Signature Trait — Undying Return** (inert-and-rise instead of dying).
-- **Deathless Physiology:** no need to eat/drink/breathe/sleep; can't suffocate or drown; resistance to poison, disease, and raw corruption. Bane on passing as living under close scrutiny.
-- **Deathsight (Glowing Eyes):** low-light sight plus sense recent dead / active undead at short range. Glowing eyes are a light-flavor tell — can give you away in the dark, trivially concealed, no standing penalty.
-- **Former Life:** choose the ancestry you were before death (size for fiction; a Species Option can reclaim one former trait). You do NOT gain that ancestry's package.
-- **Decay Stage = Fleshbound** at creation; advances with level/echelon, not deaths.
+**Ghostwire Former Life choices:** Pure Human, Corran, Elvani, Goliar, or Changer. **Mutant Human** and **Cyborg** may be chosen **only as size/speed placeholders** until those ancestry packages exist — you do **not** gain deferred Mutant/Cyborg traits this way.
 
-### Decay Ladder (level / echelon)
+### Signature Trait — Tough But Withered (free)
 
-| Level / Echelon | Stage | Body | Benefit | Flavor cost |
-|---|---|---|---|---|
-| Levels 1–3 (Echelon 1) | Fleshbound | Zombie-like, rotting | Undying Return; poison/disease/corruption resistance | Faint stench (light situational bane, easily masked) |
-| Level 5 | Withered / Skeletal | Hardening toward bone | Small fixed damage reduction; stench fades | Visibly a corpse (light flavor) |
-| Level 7 | Spectral (partial) | Translucent | Incorporeality unlocks | Can be pulled toward the ethereal (Director hook) |
-| Level 9 | Spectral (full) | Ghostlike | Incorporeal mastery + Grave-Cold Resilience: resistance (not immunity) to kinetic/physical damage | Nearly untethered (narrative) |
+Your undead body grants you **immunity to cold, corruption, lightning, and poison damage equal to your level**, but you have **fire weakness 5**. You can’t suffocate, and you don’t need to eat or drink to stay alive.
 
-### Incorporeality (unlocks at levels 7–9 / Echelon 3)
+Additionally, when your Stamina reaches the **negative of your winded value**, you become **inert** instead of dying. You fall prone and can’t stand. You continue to observe your surroundings, but you can’t speak, take main actions, maneuvers, move actions, or triggered actions. While inert this way, **if you take any fire damage, your body is destroyed and you die**. Otherwise, after **12 hours**, you regain Stamina equal to your recovery value.
 
-- Maneuver to go incorporeal; move through solid objects. Each pass through a solid costs Stamina. Can't pay means can't complete the pass (never strands you fatally, but can drain you dangerously low).
-- Defensive vs. physical/kinetic attacks while phased, BUT fully vulnerable to magic and elemental — fire, lightning, cold, force, holy. No immunities, ever (a ghost that magic can still kill).
-- Level 10 / Echelon 4 adds standing kinetic resistance even while corporeal, plus smoother/cheaper phasing.
+*(There is no level/echelon Decay ladder. Fire while inert is the hard True Death.)*
 
-### True Death (hard limit)
+### Purchased Traits — 2 ancestry points (3 if size 1S)
 
-Undying Return is not true immortality. Fire damage to an inert Revenant destroys them permanently. So do consecrated/annihilating "lay the dead to rest" effects and deliberate destruction of the inert body. Fire is the Revenant's dread.
+- **Bloodless (2):** For you, an open wound is indistinguishable from a scratch. You can’t be made bleeding even while dying.
+- **Previous Life: 1 Point (1):** You select a purchased trait that costs **1** ancestry point from your previous ancestry. You can take this trait multiple times, selecting a different 1-point trait from your previous ancestry each time.
+- **Previous Life: 2 Points (2):** You select a purchased trait that costs **2** ancestry points from your previous ancestry.
+- **Undead Influence (1):** Your supernatural gifts allow you to influence other undead. You gain an edge on **Logic, Instinct, and Persona** tests made to interact with undead creatures.
+- **Vengeance Mark (2):** As a maneuver, you place a magic sigil on a creature within **10 squares**. When you place a sigil, you decide where it appears on the creature’s body, and whether the sigil is visible to only you or to all creatures.
 
-### Species Options (BP, level-gated)
+  You always know the direction to the exact location of a creature who bears one of your sigils and is on the same world. You can have a number of active sigils equal to your **level**, and can remove a sigil from a creature at will (no action required). If you already have the maximum number of sigils activated and you place a new one, your oldest sigil disappears with no other effect.
 
-| Option | Cost | Min level | Effect |
-|---|---|---|---|
-| Echo of a Former Life *(utility)* | 2 BP | Level 1 | Reclaim one trait/skill from your former ancestry (repeatable) |
-| Grave Calm *(defense)* | 2 BP | Level 1 | Edge on Instinct vs. fear/intimidation/mind effects |
-| Deathspeaker *(social/utility)* | 2 BP | Level 1 | Edge to interact with/command lesser undead, ghosts, recent dead |
-| Withered Hardness *(defense)* | 4 BP | Level 3 | Bring Skeletal DR early, or deepen it at Skeletal |
-| Relentless Pursuer *(movement)* | 4 BP | Level 3 | Once per scene ignore difficult terrain + forced movement; never tire in a chase |
-| Vengeance Mark *(utility)* | 4 BP | Level 5 | Mark a creature; always know its direction on the same world |
-| Quickened Rising | 4 BP | Level 5 | Rise faster from Undying Return and with more Stamina |
-| Ephemeral Step *(movement/defense)* | 6 BP | Level 7 | Cheaper phasing; once per scene phase as a free action (needs Spectral) |
-| Wraithform Mastery *(capstone)* | 6 BP | Level 9 | Extended phasing at reduced cost; deeper kinetic resistance. No immunity — magic/elemental still land full |
+  Additionally, you have the following signature ability (usable at will):
 
-**Setting hooks:** Walking proof death isn't final in the war. Light orders see a second chance — or an abomination to lay to rest. Dark One cults covet them as souls halfway to the other side. Corps that dabble in resurrection-tech create and hunt them. Every Revenant carries an unfinished purpose — a natural bridge to the Background/Career layer's "What Was Taken From You."
+  #### Detonate Sigil
 
----
+  A magic sigil you placed on a creature explodes with energy.
 
-## Corran ("Squat")
+  | Magic, Ranged, Strike | Main action |
+  |---|---|
+  | 📏 Ranged 10 | 🎯 One creature bearing your sigil |
 
-**Names:** Scientific *Homo sapiens fossor* ("digger") · Corporate/common **Corran** (Labor-Class Engineered Type) · Slang *Squats, Deepers, dust-eaters*.
+  *Power Roll + Logic, Instinct, or Persona:*
+  - **≤11:** 3 + L, I, or P damage; slide 1
+  - **12–16:** 5 + L, I, or P damage; slide 2
+  - **17+:** 7 + L, I, or P damage; slide 3
 
-**Tagline:** The engineered underclass — short, sturdy, unbreakable, and done being looked down on.
+  **Effect:** The sigil disappears from the creature.
 
-### Origin and nature
-
-Centuries ago the megacorps engineered the Corran as a laborer breed — compact, immensely strong and hardy, built to work the deep mines and the cramped, high-pressure, low-clearance spaces machines couldn't reach and baseline humans couldn't survive. They are dwarves in build and constitution but stripped of old fantasy trappings: no beards-on-everyone, no rune-magic birthright — just Corran men and women, proud and practical.
-
-Hundreds of years on they are a fully distinct species with their own communities, dialects, guild-clans, and culture, no longer owned by anyone. Like all engineered species they breed true and cannot interbreed (see the universal genetic-incompatibility rule). The megacorps still read them as low-class — "just labor" — which the Corran repay with deep solidarity, long memory, and a chip on the shoulder the size of a mine cart.
-
-### Mechanics
-
-- **Attribute profile:** +1 Physique, +1 Instinct, -1 Reflex. Normal Draw Steel level/echelon attribute caps apply.
-- **Structure:** Unified species (no subtypes) with a deep option menu.
-
-### Signature Trait — Unyielding
-
-Standing bonus to stability: much harder to push, pull, knock prone, or forcibly move; edge on tests to resist forced movement and hold ground. Once per scene, when an effect would knock you prone or move you against your will, simply refuse it. The iconic always-on Corran trait — the immovable laborer.
-
-### Level 1 starting package (free)
-
-| Trait | Effect |
-|---|---|
-| Unyielding (Signature) | Stability + once/scene refuse forced movement or prone |
-| Hardy Constitution | Edge to resist poison, disease, exhaustion, harsh environments; can't be weakened by ordinary fatigue |
-| Deepsight | See clearly in low light/darkness; no banes for acting in the dark |
-| Cramped-Space Mastery | No penalties in tight/confined spaces; edge to squeeze, brace, navigate tunnels/ducts/wreckage/machinery |
-| Laborer's Read | Edge to assess structural integrity, load/rigging, mining/excavation, industrial machinery |
-
-### Species Options (BP-purchased, level-gated)
-
-| Option | Cost | Min level | Category | Effect |
-|---|---|---|---|---|
-| Ironhold Grip | 2 BP | Level 1 | Defense/utility | Can't be disarmed against your will; edge to hold/carry/hang on under duress |
-| Tunnel-Sense | 2 BP | Level 1 | Sensory | Short-range tremorsense through ground/solid surfaces — feel movement, digging, structural stress |
-| Beast of Burden | 2 BP | Level 1 | Utility | Physique treated as +1 for carrying/lifting/hauling; ignore first speed penalty from heavy loads |
-| Toxin-Forged Lungs | 4 BP | Level 3 | Defense | Once per respite, ignore or halve a gas/smoke/poison/airborne-hazard effect |
-| Set and Brace | 4 BP | Level 3 | Movement/defense | Maneuver: plant yourself; until you move, DR vs first hit each round + bane on shove/reposition attempts |
-| Unbreakable Will | 4 BP | Level 5 | Defense | Edge on Instinct tests vs fear, intimidation, coercion |
-| Guild-Clan Standing | 4 BP | Level 5 | Social/utility | Edge on social tests in Corran communities/labor guilds/undercity crews; foothold contact in most industrial districts |
-| Living Bulwark | 6 BP | Level 7 | Signature-lite | Once per scene become an immovable wall: allies behind you gain cover; forced-movement that would push you (or those you shield) fails |
-| Adamant Frame | 6 BP | Level 9 | Capstone | Standing Stamina/DR increase (tuned in damage pass) + immunity to prone/stun from purely physical force |
-
-**Setting hooks:** Bottom of the corp class ladder and they know it — natural runners, union agitators, undercity power-brokers, and reluctant heroes with real grievances. Light-aligned faiths find fertile ground among a people who value endurance, loyalty, and standing firm; the Dark One's agents prey on their resentment. Their tight guild-clans are information networks and safehouse chains a crew ignores at its peril. Because they breed true and remember everything, Corran feuds and debts run for generations.
-
-*Draw Steel dwarf ancestry (Grounded, Great Fortitude, Stand Tough) informs the durability flavor; reskinned to an engineered genetic breed with no literal stone-magic.*
+**Setting hooks:** Walking proof death isn’t final. Light orders see a second chance — or an abomination to lay to rest. Dark One cults covet them. Every Revenant carries unfinished purpose — a natural bridge to Background/Career.
 
 ---
 
-## Elvani ("Elf")
+## Mutant Human (deferred)
 
-**Names:** Scientific *Homo sapiens gracilis* ("slender/graceful") · Corporate/common **Elvani** (Aesthetic-Class Engineered Type) · Slang *Elves, corp-dolls, Prettyboys, Pointers, Highborn*.
+**Names:** Scientific *Homo sapiens aberrans* · Corporate/common **Aberrant / Mutagenic Type** · Slang *Muties, Tainted, Wrongborn*.
 
-**Tagline:** The engineered aristocracy — beautiful, poised, quick, and effortlessly above you.
+**Tagline:** Powerful, unstable, endlessly customizable — human clay reshaped by the Dark One’s touch.
 
-### Origin and nature
-
-The megacorps engineered the Elvani as the aesthetic breed — the faces of the boardroom, the media, the diplomatic suite, and the pleasure decks. Where the Corran were built to endure the deep, the Elvani were built to be seen: slender, striking, unnervingly graceful, and slow to age.
-
-Centuries on they are a fully distinct species with their own high culture, salons, patron-houses, and exacting social codes. The corps still prize them — an Elvani on staff is a status symbol — which cuts both ways: adored and objectified, elevated and owned. They look down on the Corran as brute labor; the Corran return the sentiment with interest. Like all engineered species they breed true and cannot interbreed. Their beauty and charm are engineered traits, not magic — a fact they are happy to let others forget.
-
-### Mechanics
-
-- **Attribute profile:** +1 Reflex, +1 Presence, -1 Physique. Normal Draw Steel level/echelon attribute caps apply.
-- **Structure:** Unified species (no subtypes) with a deep option menu.
-- **Fully mundane** — no innate magic; never steps on caster classes.
-
-### Signature Trait — Ephemeral Grace
-
-Two always-on halves:
-
-- **Alluring Poise:** edge on social tests to charm/persuade/deceive/command; others take a bane to read your true intentions or catch your lies.
-- **Fluid Motion:** edge on dodge/tumble/footing tests; once per scene, turn a hit that would land into a near-miss (reduce to a lesser effect, tuned in the damage pass).
-
-### Level 1 starting package (free)
-
-| Trait | Effect |
-|---|---|
-| Ephemeral Grace (Signature) | Social edge + hard to read + once/scene fluid evasion |
-| Ageless | Edge to resist exhaustion; effectively immune to natural aging (flavor + long-memory hooks) |
-| Keen Senses | Edge to notice threats, spot the hidden, catch social tells |
-| Elegant Bearing | Edge on social tests in status/refinement/beauty settings; assumed to belong |
-| Graceful Step | No penalties for difficult footing; small bonus to disengage/withdraw movement |
-
-### Species Options (BP-purchased, level-gated)
-
-| Option | Cost | Min level | Category | Effect |
-|---|---|---|---|---|
-| Silver Tongue | 2 BP | Level 1 | Social | Once per scene, treat a failed or middling social Power Roll as one result band better |
-| Duelist's Poise | 2 BP | Level 1 | Movement/defense | Edge to parry, riposte, or keep balance in a fight |
-| Perfect Recall | 2 BP | Level 1 | Utility | Edge to recall lore, names, faces, conversations, floor plans |
-| Unshakable Composure | 4 BP | Level 3 | Defense/mental | Can't be dazed or rattled; edge on Instinct vs social/supernatural pressure |
-| Disarming Beauty | 4 BP | Level 3 | Social/control | Maneuver: fix attention on one creature; until your next turn they take a bane on attacks vs anyone but you and to resist your influence |
-| Blur of Motion | 4 BP | Level 5 | Movement/defense | On Disengage/full-move, standing minor defense vs opportunity attacks + first ranged attack that round |
-| Court Connections | 4 BP | Level 5 | Social/utility | Edge on social tests in corp high society, patron-houses, media/diplomatic circles; foothold contact among the powerful |
-| Ephemeral Evasion | 6 BP | Level 7 | Signature-lite | Fluid evasion usable twice per scene; can fully avoid a non-area attack once per scene |
-| Untouchable Grace | 6 BP | Level 9 | Capstone | Standing defense/evasion increase (tuned later); always act as if you have cover vs first attack each round; enemies take a standing bane to grab/trip/restrain you |
-
-**Setting hooks:** Top of the corp social ladder, rarely allowed to forget who put them there — gilded-cage resentment, patron intrigue, and the occasional beautiful runner who walks away from everything. Light-aligned faiths court them as influential converts; the Dark One's agents whisper that freedom lies in power, not patronage, and a discarded Elvani is fertile ground. Their salons and patron-houses are webs of favors, blackmail, and paydata. Long-lived and breeding true, an Elvani grudge can outlast the humans who earned it. Their mutual contempt with the Corran is a ready-made table-level tension.
-
-*Draw Steel High Elf ancestry (Glamor, Otherworldly Grace, High Senses) informs the flavor; reskinned as a fully mundane engineered aesthetic breed with no innate magic.*
+Full ancestry package is **deferred**. Chassis decision pending: **Devil** (best fantasy match — corruption, purchased power, dangerous bargains) **or** a Ghostwire-original built on the same creation-time signature + point-budget rules. Until that lands, Mutants remain fiction-complete in the master document but are **not** playable as a finished DS ancestry package in this chapter. Revenants may use Mutant **only as a Former Life size/speed placeholder**.
 
 ---
 
-## Goliar ("Ogre")
+## Cyborg (deferred)
 
-**Names:** Scientific *Homo sapiens giganticus* ("giant") · Corporate/common **Goliar** (Heavy-Class Engineered Type) · Slang *Ogres, slabs, Wallbreakers, Big-uns, Grunts*.
+**Names:** Scientific *Machina sapiens* · Corporate/common **Full-Conversion Cyborg** · Slang *Borgs, Chrome, Tin-men, Husks*.
 
-**Tagline:** The engineered heavy — towering, crushing, and impossible to ignore.
+**Tagline:** Machine-first threshold beings — integrated, augmented, existentially unstable. Distinct from chrome-augmented meat.
 
-### Origin and nature
-
-The megacorps engineered the Goliar as the heavy breed — towering slabs of muscle built for hazardous heavy industry, demolition, load-bearing, and security/enforcement work no baseline human could survive and no Corran was big enough to do. Where the Corran are compact and durable, the Goliar are enormous and overpowering.
-
-Centuries on they are a fully distinct species with their own communities, kinship-crews, and a hard-won culture of loyalty, plain speech, and slow-burning pride. The corps still deploy them as muscle — bouncers, breachers, bodyguards, riot-line — and still underestimate them as "just grunts," mistaking a slow tongue for a slow mind. Like all engineered species they breed true and cannot interbreed. A Goliar who tires of being someone's blunt instrument makes a formidable runner — or a very bad enemy.
-
-### Mechanics
-
-- **Attribute profile:** +2 Physique, -1 Reflex, -1 Presence. The only +2 chassis in the game — the most physically front-loaded species. Normal Draw Steel level/echelon attribute caps apply.
-- **Structure:** Unified species (no subtypes) with a deep option menu.
-
-### Signature Trait — Towering Menace
-
-Three linked parts:
-
-- **Large Size:** size Large; longer reach, oversized gear, easy grabs/shoves/bull-rushes on smaller creatures.
-- **Crushing Might:** edge to break/lift/haul/force; force-move creatures and objects noticeably farther.
-- **Intimidating Bulk:** edge to intimidate/frighten — low Presence becomes fear-based power, not charm.
-
-### Level 1 starting package (free)
-
-| Trait | Effect |
-|---|---|
-| Towering Menace (Signature) | Large size + crushing might + intimidation edge |
-| Powerful Build | Count as one size larger for carrying, grabbing, dragging, resisting movement; heavy loads barely slow you |
-| Thick Hide | Small standing damage reduction vs physical harm (tuned in the damage pass) |
-| Iron Stomach | Eat/drink/endure what sickens others; edge vs ingested poison, spoilage, privation |
-| Hard to Move | Edge to resist forced movement and being knocked prone (lighter cousin of the Corran's Unyielding) |
-
-### Species Options (BP-purchased, level-gated)
-
-| Option | Cost | Min level | Category | Effect |
-|---|---|---|---|---|
-| Sledgehammer Fists | 2 BP | Level 1 | Offense | Unarmed/improvised strikes hit harder; can damage structures, doors, cover |
-| Long Reach | 2 BP | Level 1 | Control | Extended reach; opportunity attacks and grabs a step beyond normal range |
-| Beast of Burden | 2 BP | Level 1 | Utility | Physique +1 again for carrying/dragging/encumbrance; haul an ally or heavy object at full speed |
-| Unstoppable Charge | 4 BP | Level 3 | Movement/offense | Move a straight line + hit: knock target back and push through to keep moving |
-| Cannot Be Weakened | 4 BP | Level 3 | Defense | Can't be made weakened; edge to resist exhaustion |
-| Terrifying Roar | 4 BP | Level 5 | Control/social | Once per scene maneuver: frighten nearby enemies who hear you until end of their next turn |
-| Living Battering Ram | 4 BP | Level 5 | Offense/utility | Break through walls/doors/barricades fast; edge to grapple, pin, throw creatures |
-| Bulwark of Flesh | 6 BP | Level 7 | Signature-lite | Once per scene living cover: allies behind you gain cover; intercept an attack on an adjacent ally at reduced damage |
-| Colossus | 6 BP | Level 9 | Capstone | Standing Stamina/DR/force-move increase (tuned later); size counts as Huge for grabs/bull-rushes; enemies take standing bane to move/trip/restrain you |
-
-**Setting hooks:** The muscle the corps point at problems — and the muscle those problems point back at when a Goliar decides he's had enough. Loyalty runs deep; memory of who treated them like people vs equipment runs deeper — fertile ground for the Light's message of dignity and the Dark One's promise of power to the discarded. A Goliar crew-boss commands respect no corp badge can buy. Their plain-spoken honesty makes them the most trusted crew member — or the one who never sees the double-cross coming. An angry Goliar coming through the wall ends most negotiations early.
-
-*Draw Steel Hakaan/giant ancestry (Big!, All Is a Feather, Forceful, Great Fortitude, Stand Tough) informs the flavor; reskinned as an engineered corp heavy-labor/security breed.*
-
----
-
-## Cyborg
-
-**Tagline:** Human-machine threshold beings — integrated, augmented, existentially unstable. Machine-first, distinct from cyber-augmented humans.
-
-*Chrome distinction: a living, non-Cyborg hero who wants implants uses the Chrome chapter (nuyen + Body Integrity). The Cyborg is the far end of that same spectrum — effectively all Body Integrity spent — and uses frame modules plus BP instead; it does NOT use the Chrome chapter.*
-
-**Attribute Profile:** +1 Logic; choose +1 Physique or +1 Reflex; -1 Presence or -1 Instinct. Carries a Presence ceiling (species cap below the normal level/echelon attribute cap).
-
-### Fundamental limits (hard canon)
-
-- **Arcane Severance:** Can NEVER use any magic (arcane/divine/elemental/spiritual/infernal/holy/ritual). Can still be targeted/harmed/protected by magic. Locked out of magic engines except as a target.
-- **Presence cap:** Presence and Presence-dependent traits/skills capped.
-- **Tech-Only Recovery:** Heals only via medtech, Cyborg repair abilities, Technomancer resonance healing, or downtime maintenance.
-- **System Crisis at 0 Stamina:** Enters Director-controlled psychosis/berserk instead of normal dying. Not a player resource.
-- **Module scaling limit:** Modules don't stack numerically by level — constrained by slots/trade-offs.
-
-### Level 1 starting package (free)
-
-**Signature Trait — Machine-First Chassis** · Emotionally Damped · System Crisis · Tech-Only Recovery · Arcane Severance · Frame module slots.
-
-### Species Options — Modules (BP, level-gated, slot-limited)
-
-| Module | Cost | Min level | Effect |
-|---|---|---|---|
-| Reinforced Plating | 2 BP | Level 1 | DR vs. first hit each round (1 slot) |
-| Diagnostic Suite | 2 BP | Level 1 | Edge on Logic to analyze machines/security/self (1 slot) |
-| Optical Sensor Array *(sensory)* | 2 BP | Level 1 | Low-light/thermal/magnification optics; edge on sight perception; ignore darkness/smoke banes on strikes (1 slot) |
-| Locomotion Upgrade *(movement)* | 4 BP | Level 3 | Servo-legs/treads/thruster; +speed and ignore one chosen difficult-terrain type (1 slot) |
-| Hardened Systems | 4 BP | Level 3 | Reduce EMP/invasive-tech/disruption severity by 1 step (1 slot) |
-| Repair Protocol | 4 BP | Level 3 | Once per respite restore Stamina (Tech-Only Recovery) (1 slot) |
-| Servo Overclock | 4 BP | Level 5 | Once per scene extra maneuver (1 slot) |
-| Integrated Weapon Mount | 4 BP | Level 5 | Built-in weapon, can't be disarmed/dropped (1 slot) |
-| Combat Governor Release | 6 BP | Level 7 | Once per scene double edge on attack/physical resist; bane on next Instinct (1 slot) |
-| Frame Expansion | 6 BP | Level 7 | +1 module slot (repeatable once at Level 9) |
-
-### Frames (active roster)
-
-| Frame | Focus | Slots | Frame trait |
-|---|---|---|---|
-| Warframe | Heavy combat | 3 | Bulwark — once per scene ignore first forced movement/knockdown |
-| Infiltrator | Stealth/insertion | 2 | Ghost Protocol — edge on Stealth vs. electronic/sensor detection |
-| Medtech | Field medical/repair | 2 | Field Surgeon — Repair Protocol/medtech can target other machine/augmented allies |
-
-Two further frames are reserved for later.
-
-**Setting hooks:** Center of the soul-vs-machine question. Feared as inhuman, prized as assets, claimed as property, or revered as humanity's next stage.
+Full ancestry package is **deferred**. Chassis decision pending: **Time Raider** (loose advanced-ancestry fit) **or** a Ghostwire-original on the same point-budget rules. Hard canon limits (Arcane Severance, Persona cap, tech-only recovery, System Crisis) stay as setting/chargen constraints and will be folded into the eventual package. Revenants may use Cyborg **only as a Former Life size/speed placeholder**.
 
 ---
 
 ## Related chapters
 
-- Unified template & scaling framework (level 1 → level 10 / echelon)
-- Advancement (5 XP = 1 BP)
-- Chrome chapter (cyber-implants for non-Cyborg heroes — nuyen + Body Integrity)
-- The Veil (spirit world — feeds Changer subtype flavor and the Mutant Corruption Load echo)
-- The Wired (Matrix/hacking/rigging — the Cyborg's tech-only frame overlaps here)
-
+- Kits (`docs/rulebook/10-kits.md`)
+- Chrome (cyber-implants for non-Cyborg heroes — when drafted)
+- The Veil / The Wired (setting layers)
+- DS alignment brief (`docs/rulebook/DS-ALIGNMENT.md`)
 
 ---
 
-## Review checklist (Species)
+## Review checklist (Species) — for Michael
 
-- [ ] Nine Peoples roster complete and named correctly
-- [ ] Hard constraints match class chapters (Cyborg bans, chrome ceilings, etc.)
-- [ ] Signature traits / starting packages clear enough for v1
-- [ ] BP / level-gated options: keep provisional numbers or hold for numeric pass?
-- [ ] Cross-links to Chrome, Veil, Wire, Kits OK?
+- [x] Six Peoples rewritten as creation-time DS ancestry packages (signature + points)
+- [x] No level-gated BP Species Options on those six
+- [x] Changer = Dragon Knight reskin (Raven/Rat/Wolf; three forms as maneuver fiction)
+- [x] Revenant Decay ladder removed; fire-while-inert kept
+- [x] Attribute labels: Physique / Reflex / Logic / Instinct / Persona
+- [x] Power Roll bands ≤11 / 12–16 / 17+
+- [x] Tri-register naming for all eight Peoples
+- [ ] Mutant / Cyborg chassis decision (Devil / Time Raider vs GW-original)
+- [ ] Foundry ancestry docs for the six packages
+- [ ] Cross-check class chapters for residual tier / six-stat language
 
-**Next:** Kits chapter (paired draft).
-
----
-
-## DS alignment changelog (2026-09-16)
-
-- Removed the old Ghostwire **tier** progression ladder (T5→T1).
-- Species option gates and starting packages now use **character level** (with echelon noted on the Revenant Decay ladder).
-- Kits use **Draw Steel Power Roll result order** (low / middle / high); the inverted “Outcome Tier” note is deleted.
-- Gear under Kits progresses by **Availability / echelon-appropriate lists**, not gear-tiers.
-- Species attribute labels remapped toward the locked five (**Logic / Instinct / Persona** replacing Cognition / Insight / Resolve).
-
-**Still owed (full book pass):** class chapters 01–08 likely still contain residual Ghostwire tier language, inverted outcome ladders, or six-stat names — schedule a DS alignment sweep next.
+**Changelog (2026-09-16):** Replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant. Mutant and Cyborg reduced to deferred stubs.
