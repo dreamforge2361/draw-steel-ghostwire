@@ -9,7 +9,14 @@
       "MapHint": "Ghostwire display labels map onto Draw Steel characteristics: Physique=Might, Reflex=Agility, Logic=Reason, Instinct=Intuition, Persona=Presence."
     },
     "COMPENDIUM": {
-      "origins": "Ghostwire Origins"
+      "origins": "Ghostwire Origins",
+      "abilities": "Ghostwire Abilities"
+    },
+    "Abilities": {
+      "Drive": {
+        "Name": "Drive",
+        "Description": "<p>A creature can take the Drive move action only while piloting a vehicle. When a creature takes the Drive move action, they cause their vehicle to move up to the vehicle’s speed, taking the driver and any passengers with it. Alternatively, a creature can use the Drive move action to have their vehicle use the Disengage move action as a free triggered action. A creature can use the Drive move action only once per round. A vehicle can only have this move action applied to it once per round. This movement can be broken up with the driver’s maneuver and main action however they wish.</p>"
+      }
     },
     "Peoples": {
       "PureHuman": {

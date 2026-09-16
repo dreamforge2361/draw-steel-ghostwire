@@ -2,7 +2,7 @@
   "id": "draw-steel-ghostwire",
   "title": "Draw Steel - Ghostwire Build",
   "description": "Ghostwire content and presentation module for Foundry VTT, running on the stock Draw Steel system. Reskin, localization, and compendium packs — does not replace draw-steel.",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "compatibility": {
     "minimum": "14.367",
     "verified": "14.367",
@@ -43,6 +43,17 @@
       "name": "origins",
       "label": "GHOSTWIRE.COMPENDIUM.origins",
       "path": "packs/origins",
+      "type": "Item",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "abilities",
+      "label": "GHOSTWIRE.COMPENDIUM.abilities",
+      "path": "packs/abilities",
       "type": "Item",
       "system": "draw-steel",
       "ownership": {

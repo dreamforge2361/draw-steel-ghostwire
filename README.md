@@ -60,6 +60,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.4` — Lang: item type labels Culture → **Background**, Career → **Profession** (`TYPES.Item.*`), so the hero sheet header shows "+ Add Background" and "No Profession". Class is unchanged.
 - `0.1.5` — Corran ancestry: signature trait Labor Brand (a reskin of Runic Carving; the Light brand is an effect you toggle on the sheet) and a 3-point picker with Great Fortitude (2), Grounded (1), Hardened Hide (2), Stand Tough (1), and Stone Shaper (1), cloned from DS Dwarf.
 - `0.1.6` — Ghostwire Origins now has one folder per People. Adds the Elvani ancestry: signature trait Corp Glamor and a 3-point picker with Glamor of Terror (2), Graceful Retreat (1), High Senses (1), Otherworldly Grace (2), Revisit Memory (1), and Unstoppable Mind (2), cloned from DS High Elf.
+- `0.1.7` — New heroes get **Drive** (vehicles) instead of the Draw Steel **Ride** move action. Drive lives in a new **Ghostwire Abilities** compendium; `scripts/module.mjs` swaps it into `ds.CONFIG.hero.defaultItems` at init.
 
 ## Origins pack layout
 
