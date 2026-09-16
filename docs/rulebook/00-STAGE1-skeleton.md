@@ -75,26 +75,29 @@ This is the workhorse for Stages 2–4 and 6.
 | 9 | Commander / Face | Tactician | Dual combat/social Mark |
 | 10 | Medic | Troubadour | Reagents persist across encounters — GW-specific resource rule |
 | 11 | Elementalist | Elementalist | Essence + Veil hooks; Cyborg exclusion |
-| 12 | Hacker | Custom / Wired-heavy | Depends on Wire chapter; place after Wire or with forward refs |
-| — | Wrench | TBD | Need Development Master if in roster |
-| — | Street Priest | TBD | Need Development Master if in roster |
+| 12 | Wrench | Talent | Uptime; Drone/Vehicle/Building machine sub-system (street class) |
+| 13 | Street Priest | Conduit | Conviction + Light/Dark pact; Cyborg-barred; Veil-dependent |
+| 14 | Hacker | Custom / Wired-heavy | Depends on Wire chapter; draft after Wire or with forward refs |
 
-**Recommended draft order for Stage 2:** Operator → Scout → Commander/Face → Medic → Elementalist → Hacker.
+**Full v1 class roster (8):** Operator, Scout, Commander/Face, Medic, Elementalist, Wrench, Street Priest, Hacker.
+
+**Recommended draft order for Stage 2:** Operator → Scout → Commander/Face → Medic → Wrench → Elementalist → Street Priest → Hacker (Hacker last; Wire chapter first or interleaved).
 
 ### C. Ghostwire-only systems
 
 | Ch | Title | Type | Notes |
 |---|---|---|---|
-| 13 | The Wire (Matrix) | **GW-new** | Nodes, Overlay / Jacked In, Trace Alert, Track 1/2 — required by Hacker; keep numbers tied to Hacker master |
-| 14 | The Veil | **GW-new (minimal)** | Only what Elementalist (and later Street Priest) need; don’t build a second magic encyclopedia early |
-| 15 | Advancement & echelons | DS reskin | Levels 1–10 primary; Echelon as gear/kit band only if masters require |
+| 15 | The Wire (Matrix) | **GW-new** | Nodes, Overlay / Jacked In, Trace Alert, Track 1/2 — required by Hacker; keep numbers tied to Hacker master |
+| 16 | The Veil | **GW-new (minimal)** | Only what Elementalist and Street Priest need; don’t build a second magic encyclopedia early |
+| 17 | Machines (drones / vehicles / buildings) | **GW-new (lean)** | Stat cards + slots for Wrench; mod SKU catalog deferred |
+| 18 | Advancement & echelons | DS reskin | Levels 1–10 primary; Echelon as gear/kit band only if masters require |
 
 ### D. Director tools *(later)*
 
 | Ch | Title | Notes |
 |---|---|---|
-| 16 | Running Ghostwire | Tone, payouts, contacts — after classes playtest |
-| 17 | Opposition / Malice | Align to DS Director tools where possible |
+| 19 | Running Ghostwire | Tone, payouts, contacts — after classes playtest |
+| 20 | Opposition / Malice | Align to DS Director tools where possible |
 
 ---
 
@@ -120,10 +123,11 @@ This is the workhorse for Stages 2–4 and 6.
 
 ## Open questions for Michael
 
-1. Confirm class roster for **v1 rulebook**: are Wrench and Street Priest in, and do you have Development Masters for them?  
-2. Confirm draft order: Operator first, Hacker after Wire — OK?  
+1. ~~Class roster~~ — **Resolved 2026-09-16:** Wrench (DS Talent) and Street Priest (DS Conduit) masters received; v1 roster is 8 classes.  
+2. Confirm draft order: Operator first; Wrench before Elementalist/Priest; Hacker after Wire — OK?  
 3. Attribute display convention locked as GW label + (DS name) everywhere in the book?  
-4. For invented Medic/Commander high-tier abilities still marked “sign-off”: draft as **provisional** callouts, or hold those tiers empty until you approve?
+4. For invented Medic/Commander/Priest high-tier abilities still marked “sign-off”: draft as **provisional** callouts, or hold those tiers empty until you approve?  
+5. Wrench machine sub-system (Drone/Vehicle/Building cards) — own chapter after shared core, or appendix inside Wrench chapter for v1?
 
 ---
 
