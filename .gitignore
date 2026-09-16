@@ -11,4 +11,5 @@ node_modules/
 # Foundry LevelDB lock/bookkeeping files
 packs/**/LOCK
 packs/**/LOG
+packs/**/LOG.old
 packs/**/*.log

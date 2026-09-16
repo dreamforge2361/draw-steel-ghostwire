@@ -1,0 +1,2 @@
+# Foundry LevelDB packs are byte-exact; never convert line endings.
+packs/** -text
