@@ -1,0 +1,46 @@
+{
+  "_id": "EVOv8YBFslZMP2CT",
+  "_key": "!items!EVOv8YBFslZMP2CT",
+  "name": "GHOSTWIRE.Peoples.PureHuman.DetectTheSupernatural.Name",
+  "type": "ability",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "detect-the-supernatural",
+    "story": "",
+    "keywords": [],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": { "type": "self", "primary": "1", "secondary": "1", "tertiary": "1" },
+    "damageDisplay": "melee",
+    "target": { "type": "self", "custom": "", "value": null },
+    "power": {
+      "roll": { "formula": "@chr", "characteristics": [], "reactive": false },
+      "effects": {}
+    },
+    "spend": { "text": "", "value": null },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Peoples.PureHuman.DetectTheSupernatural.Description",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

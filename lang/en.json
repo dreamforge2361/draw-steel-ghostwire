@@ -7,6 +7,19 @@
     },
     "Characteristics": {
       "MapHint": "Ghostwire display labels map onto Draw Steel characteristics: Physique=Might, Reflex=Agility, Logic=Reason, Instinct=Intuition, Persona=Presence."
+    },
+    "COMPENDIUM": {
+      "origins": "Ghostwire Origins"
+    },
+    "Peoples": {
+      "PureHuman": {
+        "Name": "Pure Human",
+        "Description": "<p>Baseline humanity — adaptable, balanced, widely compatible. The default point of comparison.</p><h4>Pure Human Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.PBCgnAAsXDXQYBnK]{Detect the Supernatural}</p><p><em>Purchased traits (3 ancestry points) are not yet implemented in Foundry.</em></p>",
+        "DetectTheSupernatural": {
+          "Name": "Detect the Supernatural",
+          "Description": "<p>As a maneuver, you can open your awareness to detect supernatural creatures and phenomena. Until the end of your next turn, you know the location of any supernatural object, or any undead, construct, or creature from another world within 5 squares, even if you don’t have line of effect to that object or creature. You know if you’re detecting an item or a creature, and you know the nature of any creature you detect.</p>"
+        }
+      }
     }
   },
   "DRAW_STEEL": {

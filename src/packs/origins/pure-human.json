@@ -1,0 +1,41 @@
+{
+  "_id": "aZiWptCTibijrA8s",
+  "_key": "!items!aZiWptCTibijrA8s",
+  "name": "GHOSTWIRE.Peoples.PureHuman.Name",
+  "type": "ancestry",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pure-human",
+    "advancements": {
+      "Xfv3BaYtnilyS0au": {
+        "_id": "Xfv3BaYtnilyS0au",
+        "name": "Signature Trait",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.PBCgnAAsXDXQYBnK" }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": { "type": "", "perkType": [] }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

@@ -55,6 +55,11 @@ Use Foundry **Install Module** / update from:
 
 - `0.1.0` — skeleton
 - `0.1.1` — lang pass (characteristics + nuyen + sheet labels) and CSS style tokens
+- `0.1.2` — Foundry spike: **Ghostwire Origins** compendium with Pure Human (ancestry) and its signature trait Detect the Supernatural (trait + maneuver), cloned from DS Human. Purchased traits not yet implemented.
+
+## Building packs
+
+Pack sources live in `src/packs/<pack>/*.json`. Names and descriptions are `GHOSTWIRE.*` lang keys, filled in from `lang/en.json` at build time. With Foundry closed, run `node tools/build-packs.mjs` to rebuild `packs/`. It uses the `classic-level` package bundled with Foundry; set `FOUNDRY_APP` if Foundry isn't installed in the default location.
 
 ## Rulebook
 

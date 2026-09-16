@@ -1,0 +1,43 @@
+{
+  "_id": "PBCgnAAsXDXQYBnK",
+  "_key": "!items!PBCgnAAsXDXQYBnK",
+  "name": "GHOSTWIRE.Peoples.PureHuman.DetectTheSupernatural.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.DetectTheSupernatural.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "detect-the-supernatural",
+    "advancements": {
+      "ZJaTJXEjU5pEAJJJ": {
+        "_id": "ZJaTJXEjU5pEAJJJ",
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.EVOv8YBFslZMP2CT" }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": { "type": "", "perkType": [] }
+      }
+    },
+    "points": null,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}
