@@ -1,0 +1,40 @@
+{
+  "_id": "E50vuGbpRAR1tEiG",
+  "_key": "!items!E50vuGbpRAR1tEiG",
+  "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.PureHuman.Name",
+  "type": "ancestryTrait",
+  "img": "icons/environment/people/commoner.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.FormerLife.PureHuman.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "former-life-pure-human",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "formerLife": {
+        "people": "pure-human",
+        "folder": "mPByk1DZrfGgfSPX"
+      }
+    }
+  }
+}

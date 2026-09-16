@@ -1,0 +1,107 @@
+{
+  "_id": "0p57KgobeWujYhPL",
+  "_key": "!items!0p57KgobeWujYhPL",
+  "name": "GHOSTWIRE.Peoples.Revenant.VengeanceMarkAbility.Name",
+  "type": "ability",
+  "img": "icons/magic/symbols/rune-sigil-hook-white-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vengeance-mark",
+    "story": "",
+    "keywords": [],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Peoples.Revenant.VengeanceMarkAbility.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "h5HrY0cC4yFo2740",
+      "_key": "!items.effects!0p57KgobeWujYhPL.h5HrY0cC4yFo2740",
+      "name": "GHOSTWIRE.Peoples.Revenant.VengeanceMark.Name",
+      "img": "icons/magic/symbols/rune-sigil-hook-white-red.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.0p57KgobeWujYhPL",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "GHOSTWIRE.Peoples.Revenant.VengeanceMarkAbility.StatusDescription",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

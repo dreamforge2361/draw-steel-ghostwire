@@ -1,0 +1,59 @@
+{
+  "_id": "1CCRqQC3LzYkpAhs",
+  "_key": "!items!1CCRqQC3LzYkpAhs",
+  "name": "GHOSTWIRE.Peoples.Revenant.VengeanceMark.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/symbols/rune-sigil-hook-white-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.VengeanceMark.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vengeance-mark",
+    "advancements": {
+      "UQjCQ1jQa3hRRsvL": {
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "UQjCQ1jQa3hRRsvL",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.0p57KgobeWujYhPL"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.3zJpWFMccRzRgK1y"
+          }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

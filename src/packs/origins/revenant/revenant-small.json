@@ -1,0 +1,171 @@
+{
+  "_id": "GvgOswi58qSZ4lMs",
+  "_key": "!items!GvgOswi58qSZ4lMs",
+  "name": "GHOSTWIRE.Peoples.Revenant.Small.Name",
+  "type": "ancestry",
+  "img": "icons/magic/death/hand-dirt-undead-zombie.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.Small.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "revenant",
+    "advancements": {
+      "6QeV1AgB4VaBXFC9": {
+        "name": "Signature Trait",
+        "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "6QeV1AgB4VaBXFC9",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo"
+          }
+        ],
+        "description": "",
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        },
+        "sort": 0,
+        "repick": {}
+      },
+      "CI6MdsEJD6xPLY3A": {
+        "_id": "CI6MdsEJD6xPLY3A",
+        "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.AdvancementName",
+        "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.E50vuGbpRAR1tEiG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.kcq8w02zX4pf8qxl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.FOXPE9fot3N9Jxs4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.nCpyldyrfOVS3OG9"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.X4ai6DF083LzFtjc"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GDoxeZM9K62j9dgl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.UYu7KmyAIL1xVGe7"
+          }
+        ],
+        "sort": 1,
+        "description": "GHOSTWIRE.Peoples.Revenant.FormerLife.AdvancementDescription",
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wjCnH9cOfQON5aTl": {
+        "name": "GHOSTWIRE.Peoples.Revenant.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "wjCnH9cOfQON5aTl",
+        "description": "GHOSTWIRE.Peoples.Revenant.Small.PurchasedTraits.Description",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GpVnUPocyfBDlOLU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.1e7sbAXjl4JFHKWl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.EFsFl4QlFNKWhojE"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.zSrXEtjbsdDzbPEY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.1CCRqQC3LzYkpAhs"
+          }
+        ],
+        "chooseN": 3,
+        "additional": {
+          "type": "ancestryTrait",
+          "perkType": []
+        },
+        "sort": 2,
+        "repick": {}
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "GVjHMRfMXtPUVAif",
+      "_key": "!items.effects!GvgOswi58qSZ4lMs.GVjHMRfMXtPUVAif",
+      "name": "GHOSTWIRE.Peoples.Revenant.Small.EffectName",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.GvgOswi58qSZ4lMs",
+      "img": "icons/magic/death/hand-dirt-undead-zombie.webp",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.size.letter",
+            "value": "S",
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "GHOSTWIRE.Peoples.Revenant.Small.EffectDescription",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

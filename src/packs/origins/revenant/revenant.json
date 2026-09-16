@@ -1,0 +1,124 @@
+{
+  "_id": "I4KCOS6naXCYuZFn",
+  "_key": "!items!I4KCOS6naXCYuZFn",
+  "name": "GHOSTWIRE.Peoples.Revenant.Name",
+  "type": "ancestry",
+  "img": "icons/magic/death/hand-dirt-undead-zombie.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "revenant",
+    "advancements": {
+      "6QeV1AgB4VaBXFC9": {
+        "name": "Signature Trait",
+        "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "6QeV1AgB4VaBXFC9",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "CI6MdsEJD6xPLY3A": {
+        "_id": "CI6MdsEJD6xPLY3A",
+        "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.AdvancementName",
+        "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.E50vuGbpRAR1tEiG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.kcq8w02zX4pf8qxl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.FOXPE9fot3N9Jxs4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.nCpyldyrfOVS3OG9"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.X4ai6DF083LzFtjc"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GDoxeZM9K62j9dgl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.UYu7KmyAIL1xVGe7"
+          }
+        ],
+        "sort": 1,
+        "description": "GHOSTWIRE.Peoples.Revenant.FormerLife.AdvancementDescription",
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wjCnH9cOfQON5aTl": {
+        "name": "GHOSTWIRE.Peoples.Revenant.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "wjCnH9cOfQON5aTl",
+        "description": "GHOSTWIRE.Peoples.Revenant.PurchasedTraits.Description",
+        "additional": {
+          "type": "ancestryTrait",
+          "perkType": []
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GpVnUPocyfBDlOLU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.1e7sbAXjl4JFHKWl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.EFsFl4QlFNKWhojE"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.zSrXEtjbsdDzbPEY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.1CCRqQC3LzYkpAhs"
+          }
+        ],
+        "chooseN": 2,
+        "sort": 2,
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

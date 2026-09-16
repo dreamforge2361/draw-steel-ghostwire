@@ -1,0 +1,40 @@
+{
+  "_id": "X4ai6DF083LzFtjc",
+  "_key": "!items!X4ai6DF083LzFtjc",
+  "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.Changer.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.FormerLife.Changer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "former-life-changer",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "formerLife": {
+        "people": "changer",
+        "folder": "v9M12QKDwPuznTOY"
+      }
+    }
+  }
+}

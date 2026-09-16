@@ -1,0 +1,40 @@
+{
+  "_id": "kcq8w02zX4pf8qxl",
+  "_key": "!items!kcq8w02zX4pf8qxl",
+  "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.Corran.Name",
+  "type": "ancestryTrait",
+  "img": "icons/environment/wilderness/cave-entrance-dwarven-hill.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.FormerLife.Corran.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "former-life-corran",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "formerLife": {
+        "people": "corran",
+        "folder": "LhLB3FpsJOXXugiy"
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "_id": "JD7nJvUCKOHMCTWo",
+  "_key": "!items!JD7nJvUCKOHMCTWo",
+  "name": "GHOSTWIRE.Peoples.Revenant.ToughButWithered.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/death/undead-skeleton-deformed-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.ToughButWithered.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tough-but-withered",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "o6jQgG4VANoob2XI",
+      "_key": "!items.effects!JD7nJvUCKOHMCTWo.o6jQgG4VANoob2XI",
+      "name": "GHOSTWIRE.Peoples.Revenant.ToughButWithered.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo",
+      "img": "icons/magic/death/undead-skeleton-deformed-red.webp",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.cold",
+            "type": "upgrade",
+            "value": "@level",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.corruption",
+            "type": "upgrade",
+            "value": "@level",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.lightning",
+            "type": "upgrade",
+            "value": "@level",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.poison",
+            "type": "upgrade",
+            "value": "@level",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.weaknesses.fire",
+            "type": "upgrade",
+            "value": 5,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

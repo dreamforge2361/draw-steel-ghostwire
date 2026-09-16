@@ -12,7 +12,38 @@ Hooks.once("init", () => {
   const defaultItems = ds.CONFIG.hero.defaultItems;
   if (defaultItems.delete(DS_RIDE)) defaultItems.add(GHOSTWIRE_DRIVE);
   else console.warn(`${MODULE_ID} | Ride not found in hero default items; Drive not added`);
+
+  patchPreviousLifeFilter();
 });
+
+// Revenant Previous Life: its trait picker only enables traits from the Former Life People's Origins folder.
+// Draw Steel's own prerequisite check only knows class and subclass DSIDs, so extend it here.
+function patchPreviousLifeFilter() {
+  const dialog = ds.applications.apps.advancement?.ItemGrantConfigurationDialog;
+  if (!dialog?.prototype.fulfillsRequirements) {
+    console.warn(`${MODULE_ID} | ItemGrantConfigurationDialog not found; Revenant Previous Life is unfiltered`);
+    return;
+  }
+  const original = dialog.prototype.fulfillsRequirements;
+  dialog.prototype.fulfillsRequirements = function(item) {
+    if (!original.call(this, item)) return false;
+    if (!this.advancement.document?.getFlag(MODULE_ID, "previousLife")) return true;
+    const formerLife = findFormerLife(this.node.chain);
+    return !!formerLife?.folder && ((item._source?.folder ?? item.folder?.id) === formerLife.folder);
+  };
+}
+
+// The Former Life chosen earlier in this advancement chain, or already on the actor.
+function findFormerLife(chain) {
+  for (const node of chain.activeNodes()) {
+    if (node.advancement.type !== "itemGrant") continue;
+    for (const uuid of node.chosenSelection ?? []) {
+      const formerLife = node.choices[uuid]?.item?.getFlag(MODULE_ID, "formerLife");
+      if (formerLife) return formerLife;
+    }
+  }
+  return chain.actor.items.find(i => i.getFlag(MODULE_ID, "formerLife"))?.getFlag(MODULE_ID, "formerLife") ?? null;
+}
 
 // Changer forms: enabling one form effect disables the others, so exactly one form is active.
 Hooks.on("updateActiveEffect", (effect, changes, options, userId) => {

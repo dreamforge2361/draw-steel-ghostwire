@@ -1,0 +1,33 @@
+{
+  "_id": "zSrXEtjbsdDzbPEY",
+  "_key": "!items!zSrXEtjbsdDzbPEY",
+  "name": "GHOSTWIRE.Peoples.Revenant.UndeadInfluence.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/death/undead-ghosts-trio-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.UndeadInfluence.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "undead-influence",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

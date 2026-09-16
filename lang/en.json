@@ -239,6 +239,93 @@
         "Warnings": {
           "MissingLineage": "{name} is a Changer without a Lineage. Open the Changer ancestry, find the Lineage advancement, and reconfigure it to choose Raven, Rat, or Wolf."
         }
+      },
+      "Revenant": {
+        "Name": "Revenant",
+        "Description": "<p>The dead who refused to stay down — driven by unfinished vengeance.</p><p>No one is born a Revenant. A person who died with a burning purpose rises again, sustained by will, keeping memories and personality.</p><h4>Revenant Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo]{Tough But Withered}</p><p>Former Life (choose one People you were before you died):</p><ul><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.E50vuGbpRAR1tEiG]{Former Life: Pure Human}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.kcq8w02zX4pf8qxl]{Former Life: Corran}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.FOXPE9fot3N9Jxs4]{Former Life: Elvani}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.nCpyldyrfOVS3OG9]{Former Life: Goliar}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.X4ai6DF083LzFtjc]{Former Life: Changer}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GDoxeZM9K62j9dgl]{Former Life: Mutant}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.UYu7KmyAIL1xVGe7]{Former Life: Cyborg}</li></ul><h4>Purchased Revenant Traits</h4><p>You have 2 ancestry points to spend on the following traits, or 3 ancestry points if your size is 1S (use the Revenant (Small) ancestry). (Quick Build: Bloodless, plus Undead Influence if size 1S.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GpVnUPocyfBDlOLU]{Bloodless (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1e7sbAXjl4JFHKWl]{Previous Life: 1 Point (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.EFsFl4QlFNKWhojE]{Previous Life: 2 Points (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zSrXEtjbsdDzbPEY]{Undead Influence (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1CCRqQC3LzYkpAhs]{Vengeance Mark (2 Points)}</p>",
+        "PurchasedTraits": {
+          "Name": "Purchased Traits",
+          "Description": "<p>You have 2 ancestry points to spend on the following traits. (<em>Quick Build:</em> Bloodless.)</p>"
+        },
+        "Small": {
+          "Name": "Revenant (Small)",
+          "Description": "<p>Use this version of the Revenant if your Former Life size is 1S (such as a Rat-lineage Changer). It sets your size to 1S and gives you 3 ancestry points instead of 2.</p><h4>Revenant Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo]{Tough But Withered}</p><p>Former Life (choose one People you were before you died):</p><ul><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.E50vuGbpRAR1tEiG]{Former Life: Pure Human}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.kcq8w02zX4pf8qxl]{Former Life: Corran}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.FOXPE9fot3N9Jxs4]{Former Life: Elvani}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.nCpyldyrfOVS3OG9]{Former Life: Goliar}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.X4ai6DF083LzFtjc]{Former Life: Changer}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GDoxeZM9K62j9dgl]{Former Life: Mutant}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.UYu7KmyAIL1xVGe7]{Former Life: Cyborg}</li></ul><h4>Purchased Revenant Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Bloodless, Undead Influence.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GpVnUPocyfBDlOLU]{Bloodless (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1e7sbAXjl4JFHKWl]{Previous Life: 1 Point (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.EFsFl4QlFNKWhojE]{Previous Life: 2 Points (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zSrXEtjbsdDzbPEY]{Undead Influence (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1CCRqQC3LzYkpAhs]{Vengeance Mark (2 Points)}</p>",
+          "PurchasedTraits": {
+            "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Bloodless, Undead Influence.)</p>"
+          },
+          "EffectName": "Small",
+          "EffectDescription": "<p>Your size is 1S.</p>"
+        },
+        "FormerLife": {
+          "AdvancementName": "Former Life (Signature Trait)",
+          "AdvancementDescription": "<p>Choose exactly one People you were before you died. You keep that People’s size, your speed is 5, and you get no other traits from that People unless you buy Previous Life: 1 Point or Previous Life: 2 Points, which pick purchased traits from this People only. Pick your Former Life before configuring Previous Life.</p>",
+          "PureHuman": {
+            "Name": "Former Life: Pure Human",
+            "Description": "<p>You were a Pure Human before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Can’t Take Hold, Perseverance, Resist the Unnatural. 2-point: Determination, Staying Power.</p>"
+          },
+          "Corran": {
+            "Name": "Former Life: Corran",
+            "Description": "<p>You were a Corran before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Grounded, Stand Tough, Stone Shaper. 2-point: Great Fortitude, Hardened Hide.</p>"
+          },
+          "Elvani": {
+            "Name": "Former Life: Elvani",
+            "Description": "<p>You were an Elvani before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Graceful Retreat, High Senses, Revisit Memory. 2-point: Glamor of Terror, Otherworldly Grace, Unstoppable Mind.</p>"
+          },
+          "Goliar": {
+            "Name": "Former Life: Goliar",
+            "Description": "<p>You were a Goliar before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Bloodfire Rush, Grounded, Passionate Artisan. 2-point: Glowing Recovery, Nonstop.</p>"
+          },
+          "Changer": {
+            "Name": "Former Life: Changer",
+            "Description": "<p>You were a Changer before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M, or 1S if you were a Rat-lineage Changer (use the Revenant (Small) ancestry for 1S). <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Beast’s Resolve, Layered Hide, Pack Guard. 2-point: Beast Movement, Feral Cry, Savage Burst. You don’t keep a Lineage or Changer Forms.</p>"
+          },
+          "Mutant": {
+            "Name": "Former Life: Mutant",
+            "Description": "<p>You were a Mutant before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> The Mutant People isn’t in Ghostwire Origins yet, so Previous Life has no traits to pick from.</p>"
+          },
+          "Cyborg": {
+            "Name": "Former Life: Cyborg",
+            "Description": "<p>You were a Cyborg before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> The Cyborg People isn’t in Ghostwire Origins yet, so Previous Life has no traits to pick from.</p>"
+          }
+        },
+        "ToughButWithered": {
+          "Name": "Tough But Withered",
+          "Description": "<p>Your undead body grants you immunity to cold, corruption, lightning, and poison damage equal to [[lookup @level]]{your level}, but you have fire weakness 5. You can’t suffocate, and you don’t need to eat or drink to stay alive.</p><p>Additionally, when your Stamina reaches the negative of your winded value, you become inert instead of dying. You fall prone and can’t stand. You continue to observe your surroundings, but you can’t speak, take main actions, maneuvers, move actions, or triggered actions. While inert this way, if you take any fire damage, your body is destroyed and you die. Otherwise, after 12 hours, you [[/heal @recoveries.recoveryValue]]{regain Stamina} equal to your recovery value.</p>"
+        },
+        "Bloodless": {
+          "Name": "Bloodless",
+          "Description": "<p>For you, an open wound is indistinguishable from a scratch. You can’t be made bleeding even while dying.</p>"
+        },
+        "PreviousLife1": {
+          "Name": "Previous Life: 1 Point",
+          "Description": "<p>Choose one purchased trait that costs 1 ancestry point from your Former Life People’s trait list. You gain that trait. You can only pick from the People you chose for Former Life. For example, a Former Life: Corran can pick Grounded, Stand Tough, or Stone Shaper.</p>",
+          "AdvancementName": "Previous Life: 1-Point Trait",
+          "AdvancementDescription": "<p>Pick one 1-point purchased trait from your Former Life People. Traits from other Peoples are disabled. If every option is disabled, configure Former Life first.</p>"
+        },
+        "PreviousLife2": {
+          "Name": "Previous Life: 2 Points",
+          "Description": "<p>Choose one purchased trait that costs 2 ancestry points from your Former Life People’s trait list. You gain that trait. You can only pick from the People you chose for Former Life. For example, a Former Life: Corran can pick Great Fortitude or Hardened Hide.</p>",
+          "AdvancementName": "Previous Life: 2-Point Trait",
+          "AdvancementDescription": "<p>Pick one 2-point purchased trait from your Former Life People. Traits from other Peoples are disabled. If every option is disabled, configure Former Life first.</p>"
+        },
+        "UndeadInfluence": {
+          "Name": "Undead Influence",
+          "Description": "<p>Your supernatural gifts allow you to influence other undead. You gain an edge on Logic, Instinct, and Persona tests made to interact with undead creatures.</p>"
+        },
+        "VengeanceMark": {
+          "Name": "Vengeance Mark",
+          "Description": "<p>As a maneuver, you place a magic sigil on a creature within 10 squares. When you place a sigil, you decide where it appears on the creature’s body, and whether the sigil is visible to only you or to all creatures.</p><p>You always know the direction to the exact location of a creature who bears one of your sigils and is on the same world. You can have a number of active sigils equal to [[lookup @level]]{your level}, and can remove a sigil from a creature at will (no action required). If you already have the maximum number of sigils activated and you place a new one, your oldest sigil disappears with no other effect.</p><p>Additionally, you have the following signature ability. Signature abilities can be used at will.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.3zJpWFMccRzRgK1y]{Detonate Sigil}</p>"
+        },
+        "VengeanceMarkAbility": {
+          "Name": "Vengeance Mark",
+          "Effect": "<p>As a maneuver, you place a magic sigil on a creature within 10 squares. When you place a sigil, you decide where it appears on the creature’s body, and whether the sigil is visible to only you or to all creatures. [[/apply h5HrY0cC4yFo2740]]</p><p>You always know the direction to the exact location of a creature who bears one of your sigils and is on the same world. You can have a number of active sigils equal to [[lookup @level]]{your level}, and can remove a sigil from a creature at will (no action required). If you already have the maximum number of sigils activated and you place a new one, your oldest sigil disappears with no other effect.</p>",
+          "StatusDescription": "<p>You always know the direction to the exact location of a creature who bears one of your sigils and is on the same world. You can have a number of active sigils equal to your level, and can remove a sigil from a creature at will (no action required). If you already have the maximum number of sigils activated and you place a new one, your oldest sigil disappears with no other effect.</p>"
+        },
+        "DetonateSigil": {
+          "Name": "Detonate Sigil",
+          "Story": "A magic sigil you placed on a creature explodes with energy.",
+          "Effect": "<p>The sigil disappears from the creature.</p>"
+        }
       }
     }
   },

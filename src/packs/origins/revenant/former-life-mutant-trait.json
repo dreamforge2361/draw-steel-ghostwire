@@ -1,0 +1,40 @@
+{
+  "_id": "GDoxeZM9K62j9dgl",
+  "_key": "!items!GDoxeZM9K62j9dgl",
+  "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.Mutant.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.FormerLife.Mutant.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "former-life-mutant",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "formerLife": {
+        "people": "mutant",
+        "folder": null
+      }
+    }
+  }
+}

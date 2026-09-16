@@ -1,0 +1,93 @@
+{
+  "_id": "EFsFl4QlFNKWhojE",
+  "_key": "!items!EFsFl4QlFNKWhojE",
+  "name": "GHOSTWIRE.Peoples.Revenant.PreviousLife2.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/death/skull-humanoid-white-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Revenant.PreviousLife2.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "previous-life-2-points",
+    "advancements": {
+      "R6xqtPAQUaZny9LT": {
+        "_id": "R6xqtPAQUaZny9LT",
+        "name": "GHOSTWIRE.Peoples.Revenant.PreviousLife2.AdvancementName",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.BRyUSHVG9fjDwjRo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.b7PH3aCTK3kMDiqA"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.habR3HLaizrL2bqS"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.NkjLgRzuwa9AMGyt"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.BkApfnE52q6O7XBb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.ApeGL1aixrw7aRUP"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.H6bwZLNUhvVENjab"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.4ouhc5JKDMhvC0U8"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.ynIDjBrAlk0fCREn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.2c4zUgqqgULDY4WR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.AnY2ro2slwfNEZSc"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.SZT2y1ndFs2vR5IG"
+          }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.Revenant.PreviousLife2.AdvancementDescription",
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WvX5eqyakEpT5wxm",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "previousLife": 2
+    }
+  }
+}
