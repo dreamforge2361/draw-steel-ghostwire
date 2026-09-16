@@ -1,0 +1,47 @@
+{
+  "_id": "habR3HLaizrL2bqS",
+  "_key": "!items!habR3HLaizrL2bqS",
+  "name": "GHOSTWIRE.Peoples.Corran.GreatFortitude.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/earth/strike-fist-stone-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Corran.GreatFortitude.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "great-fortitude",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "zLnUxeovjXblM4k3",
+      "_key": "!items.effects!habR3HLaizrL2bqS.zLnUxeovjXblM4k3",
+      "name": "GHOSTWIRE.Peoples.Corran.GreatFortitude.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.habR3HLaizrL2bqS",
+      "img": "icons/magic/earth/strike-fist-stone-gray.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Corran.GreatFortitude.Description",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "system.statuses.immunities", "type": "add", "value": "weakened", "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": false,
+      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

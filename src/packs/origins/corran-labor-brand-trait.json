@@ -1,0 +1,47 @@
+{
+  "_id": "ba1Y2sMZbvtNYExs",
+  "_key": "!items!ba1Y2sMZbvtNYExs",
+  "name": "GHOSTWIRE.Peoples.Corran.LaborBrand.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/control/buff-flight-wings-runes-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Corran.LaborBrand.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "labor-brand",
+    "advancements": {},
+    "points": null,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "MOzPPoQV93avbwDU",
+      "_key": "!items.effects!ba1Y2sMZbvtNYExs.MOzPPoQV93avbwDU",
+      "name": "GHOSTWIRE.Peoples.Corran.LaborBrand.LightEffectName",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.ba1Y2sMZbvtNYExs",
+      "img": "icons/magic/control/buff-flight-wings-runes-purple.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Corran.LaborBrand.LightEffectDescription",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "token.light.bright", "type": "upgrade", "value": 10, "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": true,
+      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

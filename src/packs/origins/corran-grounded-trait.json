@@ -1,0 +1,47 @@
+{
+  "_id": "QK9VmXg8GMSAihLL",
+  "_key": "!items!QK9VmXg8GMSAihLL",
+  "name": "GHOSTWIRE.Peoples.Corran.Grounded.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/magical/construct-stone-earth-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Corran.Grounded.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "grounded",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "jSGRcrmJH7nvfXqv",
+      "_key": "!items.effects!QK9VmXg8GMSAihLL.jSGRcrmJH7nvfXqv",
+      "name": "GHOSTWIRE.Peoples.Corran.Grounded.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.QK9VmXg8GMSAihLL",
+      "img": "icons/creatures/magical/construct-stone-earth-gray.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Corran.Grounded.Description",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "system.combat.stability", "type": "add", "value": 1, "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": false,
+      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

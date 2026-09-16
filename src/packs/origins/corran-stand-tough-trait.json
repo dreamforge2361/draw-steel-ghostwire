@@ -1,0 +1,23 @@
+{
+  "_id": "jiUO0B9qZWmoD300",
+  "_key": "!items!jiUO0B9qZWmoD300",
+  "name": "GHOSTWIRE.Peoples.Corran.StandTough.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/earth/construct-stone.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Corran.StandTough.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "stand-tough",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

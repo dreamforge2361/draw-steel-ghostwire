@@ -1,0 +1,56 @@
+{
+  "_id": "QX9T5jpGGjbEXE8Y",
+  "_key": "!items!QX9T5jpGGjbEXE8Y",
+  "name": "GHOSTWIRE.Peoples.Corran.Name",
+  "type": "ancestry",
+  "img": "icons/environment/wilderness/cave-entrance-dwarven-hill.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Corran.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "corran",
+    "advancements": {
+      "pY6FI5KDXSJnZsR1": {
+        "_id": "pY6FI5KDXSJnZsR1",
+        "name": "Signature Trait",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.ba1Y2sMZbvtNYExs" }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": { "type": "", "perkType": [] }
+      },
+      "Rt9Nfqwh4yhIFSCQ": {
+        "_id": "Rt9Nfqwh4yhIFSCQ",
+        "name": "GHOSTWIRE.Peoples.Corran.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.habR3HLaizrL2bqS" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.QK9VmXg8GMSAihLL" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.NkjLgRzuwa9AMGyt" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.jiUO0B9qZWmoD300" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.C5BuTGq5er1JPPcS" }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.Corran.PurchasedTraits.Description",
+        "repick": {},
+        "chooseN": 3,
+        "additional": { "type": "ancestryTrait", "perkType": [] }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

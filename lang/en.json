@@ -46,6 +46,40 @@
           "Name": "Detect the Supernatural",
           "Description": "<p>As a maneuver, you can open your awareness to detect supernatural creatures and phenomena. Until the end of your next turn, you know the location of any supernatural object, or any undead, construct, or creature from another world within 5 squares, even if you don’t have line of effect to that object or creature. You know if you’re detecting an item or a creature, and you know the nature of any creature you detect.</p>"
         }
+      },
+      "Corran": {
+        "Name": "Corran",
+        "Description": "<p>The engineered underclass — short, sturdy, unbreakable, and done being looked down on.</p><h4>Corran Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.ba1Y2sMZbvtNYExs]{Labor Brand}</p><h4>Purchased Corran Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Grounded, Hardened Hide.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.habR3HLaizrL2bqS]{Great Fortitude (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.QK9VmXg8GMSAihLL]{Grounded (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.NkjLgRzuwa9AMGyt]{Hardened Hide (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.jiUO0B9qZWmoD300]{Stand Tough (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.C5BuTGq5er1JPPcS]{Stone Shaper (1 Point)}</p>",
+        "PurchasedTraits": {
+          "Name": "Purchased Traits",
+          "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Grounded, Hardened Hide.)</p>"
+        },
+        "LaborBrand": {
+          "Name": "Labor Brand",
+          "Description": "<p>You can carve a brand or rune onto your skin with 10 uninterrupted minutes of work, activated by the engineered resilience in your body. The brand you carve determines the benefit, chosen from:</p><p><strong>Detection</strong>: Pick a specific type of creature (such as Corran or Goliar) or object (such as gems or medkits). Your brand glows softly when you are within 20 squares of any creature or object of that type, even if you don’t have line of effect. You can change the type of creature or object as a maneuver.</p><p><strong>Light</strong>: Your skin sheds light for 10 squares. You can turn this light on and off as a maneuver.</p><p><strong>Voice</strong>: As a maneuver, you can communicate telepathically with a willing creature you have met before and who is within 1 mile of you. You must know the creature’s name, and they must speak and understand a language you know. You and the creature can respond as if having a spoken conversation. You can communicate with a different creature by changing the brand.</p><p>You can have one brand active at a time, and can change or remove a brand with 10 uninterrupted minutes of work.</p>",
+          "LightEffectName": "Labor Brand: Light",
+          "LightEffectDescription": "<p>Your skin sheds light for 10 squares. You can turn this light on and off as a maneuver.</p>"
+        },
+        "GreatFortitude": {
+          "Name": "Great Fortitude",
+          "Description": "<p>Your hearty constitution prevents you from losing strength. You can’t be made weakened.</p>"
+        },
+        "Grounded": {
+          "Name": "Grounded",
+          "Description": "<p>Your dense frame and connection to the work make it difficult for others to move you. You have a +1 bonus to stability.</p>"
+        },
+        "HardenedHide": {
+          "Name": "Hardened Hide",
+          "Description": "<p>Your engineered skin affords potent protection. You have a +6 bonus to Stamina, and that bonus increases by 6 at 4th, 7th, and 10th levels.</p>"
+        },
+        "StandTough": {
+          "Name": "Stand Tough",
+          "Description": "<p>Your body is made to withstand the blows of your enemies. Your Physique score is treated as 1 higher for the purpose of resisting potencies, and you gain an edge on Physique tests when called for to resist environmental effects or a creature’s traits or abilities.</p>"
+        },
+        "StoneShaper": {
+          "Name": "Stone Shaper",
+          "Description": "<p>When you spend 1 uninterrupted hour singing or working, you can reshape any unworked mundane stone within 3 squares. You can’t destroy this stone, but you can move each square of it anywhere within 3 squares, piling it off to one side to dig a hole or building it up to create a wall.</p>"
+        }
       }
     }
   },

@@ -1,0 +1,23 @@
+{
+  "_id": "C5BuTGq5er1JPPcS",
+  "_key": "!items!C5BuTGq5er1JPPcS",
+  "name": "GHOSTWIRE.Peoples.Corran.StoneShaper.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Corran.StoneShaper.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "stone-shaper",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}
