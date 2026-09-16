@@ -1,0 +1,167 @@
+{
+  "_id": "qhrDc59fcOPiaNMh",
+  "_key": "!items!qhrDc59fcOPiaNMh",
+  "name": "GHOSTWIRE.Peoples.Changer.Forms.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.Forms.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "changer-forms",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "NIuVF2gQWtBpOreJ",
+      "_key": "!items.effects!qhrDc59fcOPiaNMh.NIuVF2gQWtBpOreJ",
+      "name": "GHOSTWIRE.Peoples.Changer.Forms.Human.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh",
+      "img": "icons/environment/people/commoner.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.Forms.Human.Description",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {
+        "draw-steel-ghostwire": {
+          "changerForm": "human"
+        }
+      },
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "yNysARX9fk1SQeW0",
+      "_key": "!items.effects!qhrDc59fcOPiaNMh.yNysARX9fk1SQeW0",
+      "name": "GHOSTWIRE.Peoples.Changer.Forms.Hybrid.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh",
+      "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.Forms.Hybrid.Description",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.intimidate.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {
+        "draw-steel-ghostwire": {
+          "changerForm": "hybrid"
+        }
+      },
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "a28N1ISd6VpRwyMk",
+      "_key": "!items.effects!qhrDc59fcOPiaNMh.a28N1ISd6VpRwyMk",
+      "name": "GHOSTWIRE.Peoples.Changer.Forms.Beast.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh",
+      "img": "icons/creatures/mammals/wolf-shadow-black.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.Forms.Beast.Description",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.hide.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.skills.modifiers.sneak.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.skills.modifiers.alertness.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.skills.modifiers.search.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {
+        "draw-steel-ghostwire": {
+          "changerForm": "beast"
+        }
+      },
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

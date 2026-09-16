@@ -1,0 +1,33 @@
+{
+  "_id": "yw3LAnJVKy0R4PS1",
+  "_key": "!items!yw3LAnJVKy0R4PS1",
+  "name": "GHOSTWIRE.Peoples.Changer.PackGuard.Name",
+  "type": "ancestryTrait",
+  "img": "icons/equipment/shield/kite-wooden-dragon-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.PackGuard.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pack-guard",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

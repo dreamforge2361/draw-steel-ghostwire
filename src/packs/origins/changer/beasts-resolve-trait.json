@@ -1,0 +1,93 @@
+{
+  "_id": "IeVv5koMNTrHIJn8",
+  "_key": "!items!IeVv5koMNTrHIJn8",
+  "name": "GHOSTWIRE.Peoples.Changer.BeastsResolve.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.BeastsResolve.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "beasts-resolve",
+    "advancements": {
+      "UugodbrVLk7gvZgQ": {
+        "_id": "UugodbrVLk7gvZgQ",
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.bWI5mmYAMp9oRjIs"
+          }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "gGZMCwqrVT4fYndq",
+      "_key": "!items.effects!IeVv5koMNTrHIJn8.gGZMCwqrVT4fYndq",
+      "name": "GHOSTWIRE.Peoples.Changer.BeastsResolve.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.IeVv5koMNTrHIJn8",
+      "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.BeastsResolve.EffectDescription",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.save.threshold",
+            "type": "downgrade",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

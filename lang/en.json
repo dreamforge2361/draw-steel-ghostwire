@@ -156,6 +156,89 @@
           "Name": "Passionate Artisan",
           "Description": "<p>When you are stirred by a passion for creation, your bloodfire lets you work longer and harder. When you gain your initial skills from your career, culture, class, or other source, choose two skills from the crafting skill group, whether you have those skills or not. Whenever you make a project roll for a crafting project that uses these skills, you gain a +2 bonus to the roll.</p>"
         }
+      },
+      "Changer": {
+        "Name": "Changer",
+        "Description": "<p>A were-blooded shapeshifter who walks as a human, fights as a hybrid war-beast, and runs as a true animal.</p><h4>Lineage (required)</h4><p>Pick one lineage at creation. It is always on and stays on your sheet as a feature: @UUID[Compendium.draw-steel-ghostwire.origins.Item.liCuEIuHFCtAZwzi]{Raven} (Walk + Fly), @UUID[Compendium.draw-steel-ghostwire.origins.Item.L5Fj6nVEju6s361I]{Rat} (size 1S), or @UUID[Compendium.draw-steel-ghostwire.origins.Item.7KRwCZ8xwI2nuOhI]{Wolf} (+2 speed).</p><h4>Forms</h4><p>Every Changer gains @UUID[Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh]{Changer Forms}: Human, Hybrid (War), and Beast. Changing form is a maneuver, and exactly one form is active at a time. You start in Human Form.</p><h4>Changer Traits</h4><p>Changer heroes have access to the following traits.</p><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.GvoBzKeb871MArtN]{Beast-Hide}</p><h4>Purchased Changer Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Savage Burst, Layered Hide.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.yw3LAnJVKy0R4PS1]{Pack Guard (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.AnY2ro2slwfNEZSc]{Feral Cry (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.SZT2y1ndFs2vR5IG]{Savage Burst (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.fvEbDEwHmBGxLc4A]{Layered Hide (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.IeVv5koMNTrHIJn8]{Beast’s Resolve (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.2c4zUgqqgULDY4WR]{Beast Movement (2 Points)}</p>",
+        "PurchasedTraits": {
+          "Name": "Purchased Traits",
+          "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Savage Burst, Layered Hide.)</p>"
+        },
+        "Lineage": {
+          "Name": "Lineage (required)",
+          "Description": "<p>Choose exactly one lineage: Raven, Rat, or Wolf. Your lineage is always on. Don’t confirm character creation without choosing one.</p>"
+        },
+        "BeastHide": {
+          "Name": "Beast-Hide",
+          "Description": "<p>Your hardened hide, fur, or feathers grant you damage immunity equal to [[lookup @level]]{your level} to one of the following damage types: acid, cold, corruption, fire, lightning, or poison. You can change your immunity type when you finish a respite.</p>"
+        },
+        "PackGuard": {
+          "Name": "Pack Guard",
+          "Description": "<p>Whenever you or an adjacent creature takes damage from a strike, you can use a triggered action to guard against the blow. You reduce any damage from the strike by an [[/heal @level]]{amount equal to your level}.</p>"
+        },
+        "FeralCry": {
+          "Name": "Feral Cry",
+          "Description": "<p>You have the following signature ability.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.uPwkJ2WIJaWhNvLH]{Feral Cry}</p>",
+          "Story": "You let loose a piercing shriek, chittering screech, or bone-deep howl to shake your foes’ spirits."
+        },
+        "SavageBurst": {
+          "Name": "Savage Burst",
+          "Description": "<p>You have the following signature ability.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.tnsdHYC6QGYpVacn]{Savage Burst}</p>",
+          "Story": "A battering downdraft, a filthy venomous lunge, or a rending pounce tears into your foes.",
+          "Effect": "<p>You choose the ability’s damage type from acid, cold, corruption, fire, lightning, or poison.</p>"
+        },
+        "LayeredHide": {
+          "Name": "Layered Hide",
+          "Description": "<p>Select one damage immunity granted by your Beast-Hide trait. You always have this immunity, in addition to the immunity granted by Beast-Hide.</p>"
+        },
+        "BeastsResolve": {
+          "Name": "Beast’s Resolve",
+          "Description": "<p>As a maneuver, you can recite your resolve. Until the start of your next turn, whenever you make a saving throw, you succeed on a 4 or higher.</p>",
+          "EffectDescription": "<p>Until the start of your next turn, whenever you make a saving throw, you succeed on a 4 or higher.</p>"
+        },
+        "BeastMovement": {
+          "Name": "Beast Movement",
+          "Description": "<p>You can move as your lineage flies or bounds. <strong>Raven:</strong> true flight. <strong>Rat/Wolf:</strong> prodigious leaping and climbing bounds. Either way, you can stay aloft for a number of rounds equal to [[lookup formula=\"max(@M, 1)\" evaluate=true]]{your Physique score (minimum 1 round)} before you come down. While moving this way at 3rd level or lower, you have damage weakness 5.</p>",
+          "Director": "<p>Two active effects are included in this trait: one for heroes in echelon 1, another for echelon 2+. Players should keep the one that applies.</p>",
+          "Echelon1Name": "Beast Movement (echelon 1)",
+          "Echelon1Description": "<p>While moving this way, you can stay aloft for a number of rounds equal to [[lookup @M]]{your Physique score} (minimum 1 round) before you come down. At 3rd level or lower, you have damage weakness 5 while doing so.</p>",
+          "Echelon2Name": "Beast Movement (echelon 2+)",
+          "Echelon2Description": "<p>While moving this way, you can stay aloft for a number of rounds equal to [[lookup @M]]{your Physique score} (minimum 1 round) before you come down.</p>"
+        },
+        "Raven": {
+          "Name": "Raven Lineage",
+          "Description": "<p><strong>Cunning, aerial, uncanny.</strong> Your movement types are <strong>Walk and Fly</strong>.</p><p>Your Beast-Hide reads as oily black feathers with an iridescent sheen. Your Feral Cry is a piercing shriek and your Savage Burst a battering downdraft of wings and beak. In Beast Form you are a raven.</p>",
+          "EffectDescription": "<p>Your movement types are Walk and Fly.</p>"
+        },
+        "Rat": {
+          "Name": "Rat Lineage",
+          "Description": "<p><strong>Fast, resilient, swarming.</strong> Your size is <strong>1S</strong>.</p><p>Your Beast-Hide reads as matted grey fur, scarred and tough. Your Feral Cry is a chittering screech and your Savage Burst a filthy, venomous lunge. In Beast Form you are a rat.</p>",
+          "EffectDescription": "<p>Your size is 1S.</p>"
+        },
+        "Wolf": {
+          "Name": "Wolf Lineage",
+          "Description": "<p><strong>Ferocious, pack-minded, direct.</strong> You gain a <strong>+2 bonus to speed</strong>.</p><p>Your Beast-Hide reads as a thick pelt with bristling hackles. Your Feral Cry is a bone-deep howl and your Savage Burst a rending pounce. In Beast Form you are a wolf.</p>",
+          "EffectDescription": "<p>You gain a +2 bonus to speed.</p>"
+        },
+        "Forms": {
+          "Name": "Changer Forms",
+          "Description": "<p>You have three forms. Changing form is a <strong>maneuver</strong>. Exactly one form is active at a time, and you start in Human Form.</p><p><strong>Human Form:</strong> You gain an edge on tests to pass as or blend in among baseline humans. You show no obvious beast tells.</p><p><strong>Hybrid (War) Form:</strong> You gain an edge on Intimidation tests, and your melee free strikes deal +1 damage. You are visibly a war-beast and can’t pass as human.</p><p><strong>Beast Form:</strong> You gain an edge on Stealth and Perception tests. You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p><p><em>In Foundry:</em> enable the matching form effect on the Effects tab when you change form; enabling one form turns the others off.</p>",
+          "Human": {
+            "Name": "Form: Human",
+            "Description": "<p>You gain an edge on tests to pass as or blend in among baseline humans (not automated — apply the edge when the test calls for it). You show no obvious beast tells.</p>"
+          },
+          "Hybrid": {
+            "Name": "Form: Hybrid",
+            "Description": "<p>You gain an edge on Intimidation tests (automated as an edge on Intimidate). Your melee free strikes deal +1 damage (not automated — add it to the roll). You are visibly a war-beast and can’t pass as human.</p>"
+          },
+          "Beast": {
+            "Name": "Form: Beast",
+            "Description": "<p>You gain an edge on Stealth and Perception tests (automated as edges on Hide, Sneak, Alertness, and Search). You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p>"
+          }
+        },
+        "Warnings": {
+          "MissingLineage": "{name} is a Changer without a Lineage. Open the Changer ancestry, find the Lineage advancement, and reconfigure it to choose Raven, Rat, or Wolf."
+        }
       }
     }
   },

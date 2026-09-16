@@ -1,0 +1,74 @@
+{
+  "_id": "L5Fj6nVEju6s361I",
+  "_key": "!items!L5Fj6nVEju6s361I",
+  "name": "GHOSTWIRE.Peoples.Changer.Rat.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/mammals/rodent-rat-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.Rat.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "changer-rat",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "decIForwO2Yt42FV",
+      "_key": "!items.effects!L5Fj6nVEju6s361I.decIForwO2Yt42FV",
+      "name": "GHOSTWIRE.Peoples.Changer.Rat.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.L5Fj6nVEju6s361I",
+      "img": "icons/creatures/mammals/rodent-rat-green.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.Rat.EffectDescription",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.size.letter",
+            "type": "override",
+            "value": "S",
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "changerLineage": "rat"
+    }
+  }
+}

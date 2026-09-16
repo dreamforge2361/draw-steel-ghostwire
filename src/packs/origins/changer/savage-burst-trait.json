@@ -1,0 +1,56 @@
+{
+  "_id": "SZT2y1ndFs2vR5IG",
+  "_key": "!items!SZT2y1ndFs2vR5IG",
+  "name": "GHOSTWIRE.Peoples.Changer.SavageBurst.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.SavageBurst.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "savage-burst",
+    "advancements": {
+      "bOrtsZgYQ8pGhZaf": {
+        "_id": "bOrtsZgYQ8pGhZaf",
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.tnsdHYC6QGYpVacn"
+          }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

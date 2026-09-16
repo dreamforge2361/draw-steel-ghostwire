@@ -1,0 +1,137 @@
+{
+  "_id": "pc4GZJ3tsucdCQKD",
+  "_key": "!items!pc4GZJ3tsucdCQKD",
+  "name": "GHOSTWIRE.Peoples.Changer.Name",
+  "type": "ancestry",
+  "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "changer",
+    "advancements": {
+      "CJ3GXkUOgkvbXFQf": {
+        "_id": "CJ3GXkUOgkvbXFQf",
+        "name": "Signature Trait",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GvoBzKeb871MArtN"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "J0IVTGhDu1132rk1": {
+        "_id": "J0IVTGhDu1132rk1",
+        "name": "GHOSTWIRE.Peoples.Changer.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.yw3LAnJVKy0R4PS1"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.AnY2ro2slwfNEZSc"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.SZT2y1ndFs2vR5IG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.fvEbDEwHmBGxLc4A"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.IeVv5koMNTrHIJn8"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.2c4zUgqqgULDY4WR"
+          }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.Changer.PurchasedTraits.Description",
+        "repick": {},
+        "chooseN": 3,
+        "additional": {
+          "type": "ancestryTrait",
+          "perkType": []
+        }
+      },
+      "zNmqjN0WgzGR0EjS": {
+        "_id": "zNmqjN0WgzGR0EjS",
+        "name": "GHOSTWIRE.Peoples.Changer.Lineage.Name",
+        "img": "icons/creatures/mammals/wolf-howl-moon-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.liCuEIuHFCtAZwzi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.L5Fj6nVEju6s361I"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.7KRwCZ8xwI2nuOhI"
+          }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.Changer.Lineage.Description",
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "IwldSdCHustDdPCP": {
+        "_id": "IwldSdCHustDdPCP",
+        "name": "GHOSTWIRE.Peoples.Changer.Forms.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

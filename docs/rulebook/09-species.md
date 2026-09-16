@@ -224,25 +224,25 @@ Whenever a creature deals damage to you that leaves you dying, you can make a **
 
 ### Design principle
 
-The Dragon Knight chassis is kept **untouched** (signature + 3 points + six purchased traits + numbers). Only names, flavor, and cosmetic form-language change. Lineage and forms are **fiction/positioning** — they do not alter costs, budget, or leveling.
+The Dragon Knight chassis is kept **untouched** (signature + 3 points + six purchased traits + numbers). **Ghostwire canon (2026-09-16):** lineage and forms are **no longer fiction-only** — each has a small locked mechanical effect below. They add no ancestry-point cost, budget, or leveling change, and they do not alter Beast-Hide or the purchased traits.
 
-### Lineages (pick one at creation)
+### Lineages (pick one at creation — required, always on)
 
-| Lineage | Concept | Beast-Hide reads as | Feral Cry / Savage Burst | Beast Movement |
-|---|---|---|---|---|
-| **Raven** | Cunning, aerial, uncanny | Oily black feathers, iridescent sheen | Piercing shriek / battering downdraft of wings and beak | **True flight** (identical to Dragon Knight Wings) |
-| **Rat** | Fast, resilient, swarming | Matted grey fur, scarred and tough | Chittering screech / filthy, venomous savage lunge | Scrabbling wall-run & prodigious leaps (Wings rules, reflavored) |
-| **Wolf** | Ferocious, pack-minded, direct | Thick pelt, bristling hackles | Bone-deep howl / rending pounce | Loping, ground-eating bounds & leaps (Wings rules, reflavored) |
+| Lineage | Concept | Mechanics | Beast-Hide reads as | Feral Cry / Savage Burst | Beast Movement |
+|---|---|---|---|---|---|
+| **Raven** | Cunning, aerial, uncanny | Movement types **Walk + Fly** | Oily black feathers, iridescent sheen | Piercing shriek / battering downdraft of wings and beak | True flight (Dragon Knight Wings rules) |
+| **Rat** | Fast, resilient, swarming | Size **1S** | Matted grey fur, scarred and tough | Chittering screech / filthy, venomous savage lunge | Scrabbling wall-run & prodigious leaps (Wings rules, reflavored) |
+| **Wolf** | Ferocious, pack-minded, direct | **+2 speed** | Thick pelt, bristling hackles | Bone-deep howl / rending pounce | Loping, ground-eating bounds & leaps (Wings rules, reflavored) |
 
 ### Forms (all Changers)
 
-Changing form is a **maneuver** and confers **no mechanical bonus** by itself. All traits and Beast-Hide work in every form unless a form’s fiction obviously forbids it (Director’s call).
+Changing form is a **maneuver**. Exactly **one** form is active at a time; a new Changer starts in **Human Form**. All traits and Beast-Hide work in every form unless a form’s rules or fiction obviously forbid it (Director’s call).
 
-| Form | Fiction | Typical use |
+| Form | Mechanics | Limits / fiction |
 |---|---|---|
-| **Human Form** | Fully passing human; no obvious beast tells | Social infiltration, blending, daily life |
-| **Hybrid (War) Form** | Upright beast-humanoid — claws, fangs, feathers or fur | Combat default |
-| **Beast Form** | Full animal — raven, rat, or wolf | Scouting, escape, flight (Raven), gaps (Rat), chase (Wolf) |
+| **Human Form** | Edge on tests to pass as or blend in among baseline humans | No obvious beast tells |
+| **Hybrid (War) Form** | Edge on **Intimidation** tests; melee free strikes deal **+1 damage** | Visibly a war-beast — can’t pass as human |
+| **Beast Form** | Edge on **Stealth** and **Perception** tests | Full raven, rat, or wolf. Can’t use manufactured weapons; can’t speak clear language (growls and body language only) |
 
 ### Signature Trait — Beast-Hide (free)
 
@@ -464,4 +464,4 @@ These limits are **Ghostwire setting and chargen rules**. They do **not** cost a
 - [ ] Cross-check class chapters for residual tier / six-stat language
 - [ ] Optional: expand System Crisis into a Director table (not in this chapter)
 
-**Changelog (2026-09-16):** Added Mutant Human (Devil chassis) and Cyborg (Time Raider chassis) as full DS ancestry packages. Retired Mutant Corruption Load BP track (optional cosmetic Corruptive Flaw only). Revenant Former Life may now select Mutant or Cyborg. Earlier same-day pass: replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant.
+**Changelog (2026-09-16):** Changer lineages and forms now carry locked mechanics (Raven Walk + Fly, Rat size 1S, Wolf +2 speed; Human / Hybrid / Beast form edges and limits) instead of being fiction-only. Earlier: Added Mutant Human (Devil chassis) and Cyborg (Time Raider chassis) as full DS ancestry packages. Retired Mutant Corruption Load BP track (optional cosmetic Corruptive Flaw only). Revenant Former Life may now select Mutant or Cyborg. Earlier same-day pass: replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant.

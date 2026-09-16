@@ -1,0 +1,113 @@
+{
+  "_id": "2c4zUgqqgULDY4WR",
+  "_key": "!items!2c4zUgqqgULDY4WR",
+  "name": "GHOSTWIRE.Peoples.Changer.BeastMovement.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.BeastMovement.Description",
+      "director": "GHOSTWIRE.Peoples.Changer.BeastMovement.Director"
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "beast-movement",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "R1AMkw1KpGxQxarp",
+      "_key": "!items.effects!2c4zUgqqgULDY4WR.R1AMkw1KpGxQxarp",
+      "name": "GHOSTWIRE.Peoples.Changer.BeastMovement.Echelon1Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.2c4zUgqqgULDY4WR",
+      "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.BeastMovement.Echelon1Description",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.types",
+            "type": "add",
+            "value": "fly",
+            "phase": "initial",
+            "priority": 20
+          },
+          {
+            "key": "system.damage.weaknesses.all",
+            "type": "upgrade",
+            "value": 5,
+            "phase": "initial",
+            "priority": 20
+          }
+        ]
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "riEea2J0Zqq58jPa",
+      "_key": "!items.effects!2c4zUgqqgULDY4WR.riEea2J0Zqq58jPa",
+      "name": "GHOSTWIRE.Peoples.Changer.BeastMovement.Echelon2Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.2c4zUgqqgULDY4WR",
+      "img": "icons/creatures/abilities/wings-birdlike-blue.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.BeastMovement.Echelon2Description",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.types",
+            "type": "add",
+            "value": "fly",
+            "phase": "initial",
+            "priority": 20
+          }
+        ]
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

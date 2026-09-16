@@ -62,6 +62,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.6` — Ghostwire Origins now has one folder per People. Adds the Elvani ancestry: signature trait Corp Glamor and a 3-point picker with Glamor of Terror (2), Graceful Retreat (1), High Senses (1), Otherworldly Grace (2), Revisit Memory (1), and Unstoppable Mind (2), cloned from DS High Elf.
 - `0.1.7` — New heroes get **Drive** (vehicles) instead of the Draw Steel **Ride** move action. Drive lives in a new **Ghostwire Abilities** compendium; `scripts/module.mjs` swaps it into `ds.CONFIG.hero.defaultItems` at init.
 - `0.1.8` — Goliar ancestry (in its own Origins folder): signature trait Relentless and a 3-point picker with Bloodfire Rush (1; its +2 speed is an effect you apply by clicking a link in the trait), Glowing Recovery (2), Grounded (1), Nonstop (2), and Passionate Artisan (1), cloned from DS Orc.
+- `0.1.9` — Changer ancestry (in its own Origins folder), cloned from DS Dragon Knight: signature trait Beast-Hide and a 3-point picker with Pack Guard (1), Feral Cry (2), Savage Burst (2), Layered Hide (1), Beast’s Resolve (1), and Beast Movement (2). A required **Lineage** pick gives Raven Walk + Fly, Rat size 1S, or Wolf +2 speed. **Changer Forms** has three form effects (Human, the default; Hybrid; Beast), and `scripts/module.mjs` keeps only one enabled and warns if a Changer is created without a lineage.
 
 ## Origins pack layout
 

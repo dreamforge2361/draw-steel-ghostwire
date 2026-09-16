@@ -1,0 +1,69 @@
+{
+  "_id": "fvEbDEwHmBGxLc4A",
+  "_key": "!items!fvEbDEwHmBGxLc4A",
+  "name": "GHOSTWIRE.Peoples.Changer.LayeredHide.Name",
+  "type": "ancestryTrait",
+  "img": "icons/equipment/shield/heater-crystal-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.LayeredHide.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "layered-hide",
+    "advancements": {
+      "hCRriZ5ej1aK2lzM": {
+        "_id": "hCRriZ5ej1aK2lzM",
+        "name": "",
+        "img": null,
+        "type": "effectGrant",
+        "requirements": {
+          "level": null
+        },
+        "description": "",
+        "repick": {
+          "respite": "finish"
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel.effects.ActiveEffect.bjWsBuewU5nOjrLv"
+          },
+          {
+            "uuid": "Compendium.draw-steel.effects.ActiveEffect.FBHxesSD21wqQFP7"
+          },
+          {
+            "uuid": "Compendium.draw-steel.effects.ActiveEffect.W4T6T0JqqCgLqlLs"
+          },
+          {
+            "uuid": "Compendium.draw-steel.effects.ActiveEffect.jUiKGskq9GfYC07P"
+          },
+          {
+            "uuid": "Compendium.draw-steel.effects.ActiveEffect.UTOMzPUJOec3H0Iq"
+          },
+          {
+            "uuid": "Compendium.draw-steel.effects.ActiveEffect.UULfS7oSIvyCJEfl"
+          }
+        ],
+        "chooseN": 1,
+        "sort": 100000
+      }
+    },
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

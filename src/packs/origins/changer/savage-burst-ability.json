@@ -1,0 +1,132 @@
+{
+  "_id": "tnsdHYC6QGYpVacn",
+  "_key": "!items!tnsdHYC6QGYpVacn",
+  "name": "GHOSTWIRE.Peoples.Changer.SavageBurst.Name",
+  "type": "ability",
+  "img": "icons/creatures/abilities/dragon-fire-breath-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "savage-burst",
+    "story": "GHOSTWIRE.Peoples.Changer.SavageBurst.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "EiSwvul8dTb7ymKl": {
+          "_id": "EiSwvul8dTb7ymKl",
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "acid",
+                "cold",
+                "corruption",
+                "fire",
+                "lightning",
+                "poison"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [
+                "acid",
+                "cold",
+                "corruption",
+                "fire",
+                "lightning",
+                "poison"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [
+                "acid",
+                "cold",
+                "corruption",
+                "fire",
+                "lightning",
+                "poison"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Peoples.Changer.SavageBurst.Effect",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

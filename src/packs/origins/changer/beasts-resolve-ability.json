@@ -1,0 +1,105 @@
+{
+  "_id": "bWI5mmYAMp9oRjIs",
+  "_key": "!items!bWI5mmYAMp9oRjIs",
+  "name": "GHOSTWIRE.Peoples.Changer.BeastsResolve.Name",
+  "type": "ability",
+  "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "beasts-resolve",
+    "story": "",
+    "keywords": [],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Peoples.Changer.BeastsResolve.Description",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "fViOjwAtKQ1SqOxU",
+      "_key": "!items.effects!bWI5mmYAMp9oRjIs.fViOjwAtKQ1SqOxU",
+      "name": "GHOSTWIRE.Peoples.Changer.BeastsResolve.Name",
+      "origin": null,
+      "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.BeastsResolve.EffectDescription",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.save.threshold",
+            "type": "override",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

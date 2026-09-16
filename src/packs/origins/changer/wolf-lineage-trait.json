@@ -1,0 +1,74 @@
+{
+  "_id": "7KRwCZ8xwI2nuOhI",
+  "_key": "!items!7KRwCZ8xwI2nuOhI",
+  "name": "GHOSTWIRE.Peoples.Changer.Wolf.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/mammals/wolf-howl-moon-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.Wolf.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "changer-wolf",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "5r6gM3jjZcdaxnrF",
+      "_key": "!items.effects!7KRwCZ8xwI2nuOhI.5r6gM3jjZcdaxnrF",
+      "name": "GHOSTWIRE.Peoples.Changer.Wolf.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.7KRwCZ8xwI2nuOhI",
+      "img": "icons/creatures/mammals/wolf-howl-moon-gray.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Changer.Wolf.EffectDescription",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.value",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "changerLineage": "wolf"
+    }
+  }
+}

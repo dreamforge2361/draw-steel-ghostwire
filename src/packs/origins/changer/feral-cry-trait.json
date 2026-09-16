@@ -1,0 +1,56 @@
+{
+  "_id": "AnY2ro2slwfNEZSc",
+  "_key": "!items!AnY2ro2slwfNEZSc",
+  "name": "GHOSTWIRE.Peoples.Changer.FeralCry.Name",
+  "type": "ancestryTrait",
+  "img": "icons/creatures/abilities/wolf-howl-moon-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Changer.FeralCry.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "feral-cry",
+    "advancements": {
+      "yBLXYGgOCg7V5qwd": {
+        "_id": "yBLXYGgOCg7V5qwd",
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.uPwkJ2WIJaWhNvLH"
+          }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

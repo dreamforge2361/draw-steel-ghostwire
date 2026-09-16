@@ -1,0 +1,144 @@
+{
+  "_id": "uPwkJ2WIJaWhNvLH",
+  "_key": "!items!uPwkJ2WIJaWhNvLH",
+  "name": "GHOSTWIRE.Peoples.Changer.FeralCry.Name",
+  "type": "ability",
+  "img": "icons/creatures/abilities/wolf-howl-moon-purple.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "feral-cry",
+    "story": "GHOSTWIRE.Peoples.Changer.FeralCry.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "NBA5OVLG7DN7YoGA": {
+          "_id": "NBA5OVLG7DN7YoGA",
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "Rx2qHPx7Oa7TYAJk": {
+          "_id": "Rx2qHPx7Oa7TYAJk",
+          "name": "",
+          "img": null,
+          "type": "forced",
+          "sort": 0,
+          "forced": {
+            "tier1": {
+              "distance": "",
+              "display": "{{forced}}",
+              "movement": [],
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "distance": "1",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "distance": "2",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "v9M12QKDwPuznTOY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
