@@ -55,3 +55,7 @@ Use Foundry **Install Module** / update from:
 
 - `0.1.0` — skeleton
 - `0.1.1` — lang pass (characteristics + nuyen + sheet labels) and CSS style tokens
+
+## Rulebook
+
+- [Stage 1 — Core Rulebook skeleton](docs/rulebook/00-STAGE1-skeleton.md) (awaiting review)
