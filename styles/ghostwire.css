@@ -1,11 +1,58 @@
 /* Draw Steel - Ghostwire Build
- * Presentation hooks only. Keep Draw Steel system CSS untouched.
+ * Presentation tokens + light chrome. Does not replace Draw Steel layout CSS.
  */
 
-:root {
+:root,
+body.system-draw-steel,
+body.ghostwire-theme {
+  /* Surfaces */
+  --ghostwire-bg: #0b0f14;
+  --ghostwire-surface: #121821;
+  --ghostwire-surface-2: #1a2330;
+  --ghostwire-border: #2a3a4d;
+  --ghostwire-border-strong: #3d5570;
+
+  /* Text */
+  --ghostwire-text: #e8eef5;
+  --ghostwire-text-muted: #9aabbd;
+  --ghostwire-text-dim: #6d7f93;
+
+  /* Accents */
   --ghostwire-accent: #6ee7ff;
+  --ghostwire-accent-2: #a78bfa;
+  --ghostwire-accent-hot: #ff4d9a;
+  --ghostwire-success: #34d399;
+  --ghostwire-warning: #fbbf24;
+  --ghostwire-danger: #f87171;
+  --ghostwire-focus: #6ee7ff;
+
+  /* Effects */
+  --ghostwire-glow: 0 0 0 1px color-mix(in srgb, var(--ghostwire-accent) 55%, transparent),
+    0 0 18px color-mix(in srgb, var(--ghostwire-accent) 25%, transparent);
+  --ghostwire-radius: 6px;
+  --ghostwire-font-ui: "Segoe UI", system-ui, sans-serif;
 }
 
-body.ghostwire-theme {
-  /* Theme tokens land here in a later pass. */
+/* Soft theme hooks — scoped, non-destructive */
+body.ghostwire-theme .application.draw-steel,
+body.ghostwire-theme .application.ds-sheet,
+body.ghostwire-theme .window-app.draw-steel {
+  border-color: color-mix(in srgb, var(--ghostwire-accent) 35%, var(--ghostwire-border));
+  box-shadow: var(--ghostwire-glow);
+}
+
+body.ghostwire-theme .application.draw-steel .window-header,
+body.ghostwire-theme .application.ds-sheet .window-header {
+  border-bottom: 1px solid color-mix(in srgb, var(--ghostwire-accent) 40%, transparent);
+}
+
+body.ghostwire-theme .application.draw-steel a:hover,
+body.ghostwire-theme .application.ds-sheet a:hover {
+  color: var(--ghostwire-accent);
+}
+
+body.ghostwire-theme .application.draw-steel :focus-visible,
+body.ghostwire-theme .application.ds-sheet :focus-visible {
+  outline: 2px solid var(--ghostwire-focus);
+  outline-offset: 2px;
 }
