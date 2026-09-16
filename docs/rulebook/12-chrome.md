@@ -140,6 +140,23 @@ Exact ¥ and Availability: gear pass.
 - **Casters (Elementalist / Street-Priest / …)** — Track 4 discourages; Soft sliver only late and expensive.
 - **Cyborg** — **excluded** from this chapter entirely.
 
+
+## Cyborg Frame Modules (stub — separate track)
+
+Cyborgs do **not** spend Body Integrity or buy living Chrome implants. “More machine” uses **Frame Modules**:
+
+| Rule | v1 stub |
+|---|---|
+| Currency | **¥** (+ Availability); downtime install (Wrench / machine-doc) |
+| Capacity | **Hardpoints** by location (Head / Torso / Arms / Legs / Core OS) — rhyme with chrome slots, **not** Integrity |
+| Effect | Modules upgrade the frame (plating, actuators, weapon mounts, battery, Firewall, drone-link, redundant cortex) |
+| Magic | Still **Arcane Severance** — modules never restore Magic casting |
+| Fail state | Module damage / **System Crisis** (not implant Suppress/Destroy from this chapter) |
+
+**Sample modules (catalog later):** Reinforced Plating · Actuator Overdrive · Integrated Weapon Mount · Expanded Battery · Cortical Firewall+ · Drone Hard-Link.
+
+Full module list, hardpoint caps, and ¥ schedule = later pass. Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.
+
 ## Point to full master
 
 Itemized balance notes, package non-stacking detail, and deferred number lists live in `docs/masters/GHOSTWIRE_CHROME_MASTER.md`. On conflict, the master (baseline-aligned) wins until this chapter is approved.
