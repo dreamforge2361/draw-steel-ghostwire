@@ -14,7 +14,9 @@
       "chrome": "Ghostwire Chrome",
       "kits": "Ghostwire Kits",
       "gear": "Ghostwire Gear",
-      "classes": "Ghostwire Classes"
+      "classes": "Ghostwire Classes",
+      "backgrounds": "Ghostwire Backgrounds",
+      "professions": "Ghostwire Professions"
     },
     "Abilities": {
       "Keywords": {
@@ -876,6 +878,104 @@
             "Description": "<p>You gain certain benefits in combat based on the amount of Adrenaline you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of Adrenaline you spend during your turn. Some Growing Adrenaline benefits can be applied only if you are a specific level or higher, with the level of those benefits noted in the various Growing Adrenaline tables in this section.</p><table><thead><tr><th><p>Adrenaline</p></th><th><p>Benefit</p></th></tr></thead><tbody><tr><td><p>2</p></td><td><p>Whenever you use the Knockback maneuver, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr><tr><td><p>4</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 1]].</p></td></tr><tr><td><p>6</p></td><td><p>You gain an edge on Reflex tests and the Knockback maneuver</p></td></tr><tr><td><p>8 (4th Level)</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 2]].</p></td></tr><tr><td><p>10 (7th Level)</p></td><td><p>You have a double edge on Reflex tests and the Knockback maneuver.</p></td></tr><tr><td><p>12 (10th Level)</p></td><td><p>Whenever you use a heroic ability, you gain [[/heal 10 temporary]]. Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr></tbody></table>"
           }
         }
+      }
+    },
+    "Backgrounds": {
+      "PickName": "Background Skill (choose 1)",
+      "UndercityBarrens": {
+        "Name": "Undercity Barrens",
+        "Description": "<p>You grew up below the city’s foundations — flooded transit tunnels, collapsed arcades, and squatter blocks the corps wrote off decades ago. Down there you learned who runs each tunnel and how to move without being noticed.</p><p><strong>Skills:</strong> you gain <strong>Stealth</strong>, and choose one of Streetwise, Survival, Perception, or Athletics. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know the Undercity’s squatter blocks, tunnel gangs, and scavenger crews. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "CorpArcology": {
+        "Name": "Corp Arcology",
+        "Description": "<p>You were raised inside a megacorp arcology — company school, company clinic, company everything. You know how departments really work and how to talk your way up a chain of command.</p><p><strong>Skills:</strong> you gain <strong>Corporate</strong>, and choose one of Persuasion, Negotiation, Insight, or Security Systems. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know your arcology’s departments, company families, and internal security. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "SprawlDistrict": {
+        "Name": "Sprawl District",
+        "Description": "<p>You came up in the endless mid-city Sprawl, where every block has its own fixer, its own gang tax, and its own price for everything. You learned to haggle before you learned to read.</p><p><strong>Skills:</strong> you gain <strong>Streetwise</strong>, and choose one of Negotiation, Contacts, Perception, or Brawl. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know your district’s street vendors, fixers, block associations, and local gangs. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "TransitHub": {
+        "Name": "Transit Hub / Freeport",
+        "Description": "<p>You grew up where everything moves: a maglev terminus, a cargo freeport, or an orbital elevator’s base. Everyone passes through, everyone owes someone, and you know every route in and out.</p><p><strong>Skills:</strong> you gain <strong>Navigation</strong>, and choose one of Contacts, Driving, Piloting, or Negotiation. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know dockworkers, freight crews, customs brokers, and travelers passing through your hub. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "OutlandWastes": {
+        "Name": "Outland Wastes",
+        "Description": "<p>You’re from beyond the city walls — dead farmland, toxic scrub, and nomad convoys between ruined towns. You’re hard to kill and you know how to keep going when the water runs out.</p><p><strong>Skills:</strong> you gain <strong>Survival</strong>, and choose one of Athletics, Driving, Perception, or Firearms. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know Outland nomad clans, convoy runners, and wasteland settlements. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "AcademicSpire": {
+        "Name": "Academic Spire",
+        "Description": "<p>You were raised among a university or research spire’s archives and restricted stacks, where old histories and older forbidden texts sit side by side. You learned what the official record leaves out.</p><p><strong>Skills:</strong> you gain <strong>History</strong>, and choose one of Occult, Matrix Theory, Medicine Lore, or Xenology. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know your spire’s faculty, archivists, research departments, and rival scholars. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "FaithDistrict": {
+        "Name": "Faith District",
+        "Description": "<p>You grew up in the shadow of a cathedral of the Light — shelters, soup lines, confessionals, and street preachers. You learned the dogma, and you learned to read the desperate people who came looking for it.</p><p><strong>Skills:</strong> you gain <strong>Religion</strong>, and choose one of Insight, Occult, Warding, or Medicine. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know the district’s churches, shelters, orders of the Light, and the faithful who depend on them. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      },
+      "IndustrialDeep": {
+        "Name": "Industrial Deep",
+        "Description": "<p>You come from the foundries, mines, and reactor levels under the city — Corran labor towns most often, but open to anyone who grew up on shift work. You can keep any machine running with scrap and stubbornness.</p><p><strong>Skills:</strong> you gain <strong>Engineering</strong>, and choose one of Repair, Athletics, Demolitions, or Electronics. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Your community:</strong> you know foundry crews, labor unions, and Industrial Deep shift towns. You have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>"
+      }
+    },
+    "Professions": {
+      "PickName": "Profession Skills (choose 2)",
+      "WageSlave": {
+        "Name": "Wage-Slave",
+        "Description": "<p>You worked a corporate desk job — cubicle hives, quarterly targets, and contracts you weren’t allowed to read. You know the system from the bottom and how to bargain your way through it.</p><p><strong>Skills:</strong> you gain <strong>Negotiation</strong>, and choose two of Corporate, Persuasion, Insight, or Electronics. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "StreetDoc": {
+        "Name": "Street Doc",
+        "Description": "<p>You patched up people who couldn’t go to a real clinic: gunshot wounds, back-alley chrome, and overdoses, no questions asked. You learned to read a patient who’s lying about how they got hurt.</p><p><strong>Skills:</strong> you gain <strong>Medicine</strong>, and choose two of Cybertech, Insight, Streetwise, or Medicine Lore. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "Fixer": {
+        "Name": "Fixer",
+        "Description": "<p>You connected people who needed things done with people who could do them, and took your cut. Your commlink is the most valuable thing you own.</p><p><strong>Skills:</strong> you gain <strong>Contacts</strong>, and choose two of Negotiation, Streetwise, Insight, or Deception. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "Courier": {
+        "Name": "Courier",
+        "Description": "<p>You moved packages that couldn’t go through the mail — data chips, cash, sometimes things that were still breathing. Fast, quiet, and never late.</p><p><strong>Skills:</strong> you gain <strong>Driving</strong>, and choose two of Stealth, Navigation, Athletics, or Streetwise. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "GangSoldier": {
+        "Name": "Gang Soldier",
+        "Description": "<p>You held a corner for a gang: collecting protection money, running off rivals, and shooting when talking stopped working.</p><p><strong>Skills:</strong> you gain <strong>Firearms</strong>, and choose two of Intimidation, Streetwise, Brawl, or Melee. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "SecurityGuard": {
+        "Name": "Security Guard",
+        "Description": "<p>You stood post for a corp, a mall, or a private security contractor. Long hours watching cameras and doorways taught you to spot trouble before it starts.</p><p><strong>Skills:</strong> you gain <strong>Perception</strong>, and choose two of Firearms, Intimidation, Security Systems, or Brawl. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "Smuggler": {
+        "Name": "Smuggler",
+        "Description": "<p>You moved contraband past checkpoints and scanners — bypassing seals, forging manifests, and knowing which inspector could be paid.</p><p><strong>Skills:</strong> you gain <strong>Security Systems</strong>, and choose two of Deception, Contacts, Driving, or Stealth. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "RigTech": {
+        "Name": "Rig-Tech",
+        "Description": "<p>You maintained and flew drones and remote vehicles for a delivery firm, a security company, or a salvage crew, jacked into the rig.</p><p><strong>Skills:</strong> you gain <strong>Rigging</strong>, and choose two of Electronics, Repair, Driving, or Piloting. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "DeckJockey": {
+        "Name": "Deck Jockey",
+        "Description": "<p>You made a living in the Wired: freelance intrusion work, data brokering, or corp pen-testing. You built your own deck and you know how the network actually thinks.</p><p><strong>Skills:</strong> you gain <strong>Hacking</strong>, and choose two of Matrix Theory, Electronics, Security Systems, or Streetwise. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "Entertainer": {
+        "Name": "Entertainer",
+        "Description": "<p>You performed for a living — club stages, simstim streams, or street-corner shows. You know how to work a crowd and how to be whoever the audience wants.</p><p><strong>Skills:</strong> you gain <strong>Performance</strong>, and choose two of Persuasion, Deception, Insight, or Contacts. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "BeatReporter": {
+        "Name": "Beat Reporter",
+        "Description": "<p>You chased stories for a newsfeed until one got too close to a corp that didn’t want it told. You notice details, you know how companies hide things, and you have sources everywhere.</p><p><strong>Skills:</strong> you gain <strong>Perception</strong>, and choose two of Corporate, Contacts, Insight, or Electronics. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "Hauler": {
+        "Name": "Hauler / Labor",
+        "Description": "<p>You drove freight rigs, loaded cargo, or worked heavy labor crews. Hard work, long hauls, and keeping old trucks alive.</p><p><strong>Skills:</strong> you gain <strong>Athletics</strong>, and choose two of Driving, Repair, Brawl, or Engineering. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "MercRecruit": {
+        "Name": "Merc Recruit",
+        "Description": "<p>You signed with a private military company or a free company and did a tour in someone else’s war zone. You learned to shoot, march, and survive in the field.</p><p><strong>Skills:</strong> you gain <strong>Firearms</strong>, and choose two of Athletics, Survival, Melee, or Heavy Weapons. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "Acolyte": {
+        "Name": "Acolyte",
+        "Description": "<p>You served an order of the Light (or a less reputable faith) — rites, exorcisms, and the long nights listening to people confess what they’d seen in the dark.</p><p><strong>Skills:</strong> you gain <strong>Occult</strong>, and choose two of Religion, Insight, Warding, or Rituals. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "ChopDocAssistant": {
+        "Name": "Chop-Doc Assistant",
+        "Description": "<p>You assisted a black-clinic chop-doc: holding patients down, sterilizing salvaged chrome, and knowing which gang would pay for which part.</p><p><strong>Skills:</strong> you gain <strong>Cybertech</strong>, and choose two of Medicine, Streetwise, Demolitions, or Electronics. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
       }
     },
     "Peoples": {

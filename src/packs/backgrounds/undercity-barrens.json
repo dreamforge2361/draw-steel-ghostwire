@@ -1,0 +1,69 @@
+{
+  "_id": "38GL2Yy4oPm8tSZw",
+  "_key": "!items!38GL2Yy4oPm8tSZw",
+  "name": "GHOSTWIRE.Backgrounds.UndercityBarrens.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/building-rubble.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.UndercityBarrens.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "undercity-barrens",
+    "advancements": {
+      "FrpMpHapPjWcbawo": {
+        "_id": "FrpMpHapPjWcbawo",
+        "name": "GHOSTWIRE.Skills.List.Stealth",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "stealth"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "f2m8wGy8vp7fQ6cn": {
+        "_id": "f2m8wGy8vp7fQ6cn",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "streetwise",
+            "survival",
+            "perception",
+            "athletics"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

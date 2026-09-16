@@ -1,0 +1,72 @@
+{
+  "_id": "tsgrZp2U9cqXZ7FH",
+  "_key": "!items!tsgrZp2U9cqXZ7FH",
+  "name": "GHOSTWIRE.Professions.MercRecruit.Name",
+  "type": "career",
+  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.MercRecruit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "merc-recruit",
+    "advancements": {
+      "ACQFDrF74pAiWr0L": {
+        "_id": "ACQFDrF74pAiWr0L",
+        "name": "GHOSTWIRE.Skills.List.Firearms",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "firearms"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "vKQvmdMdJ6DJsLSf": {
+        "_id": "vKQvmdMdJ6DJsLSf",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "athletics",
+            "survival",
+            "melee",
+            "heavyWeapons"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

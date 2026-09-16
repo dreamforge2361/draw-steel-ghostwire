@@ -1,0 +1,72 @@
+{
+  "_id": "BQqDaAxSjh6qKTqK",
+  "_key": "!items!BQqDaAxSjh6qKTqK",
+  "name": "GHOSTWIRE.Professions.WageSlave.Name",
+  "type": "career",
+  "img": "icons/commodities/tech/data-pad.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.WageSlave.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wage-slave",
+    "advancements": {
+      "9wASnUStQ6Z6MvyI": {
+        "_id": "9wASnUStQ6Z6MvyI",
+        "name": "GHOSTWIRE.Skills.List.Negotiation",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "negotiation"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "lNJUAeQteFuHSjN8": {
+        "_id": "lNJUAeQteFuHSjN8",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "corporate",
+            "persuasion",
+            "insight",
+            "electronics"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

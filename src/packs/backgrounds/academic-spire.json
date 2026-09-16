@@ -1,0 +1,69 @@
+{
+  "_id": "6p89RMImOeHTEtGC",
+  "_key": "!items!6p89RMImOeHTEtGC",
+  "name": "GHOSTWIRE.Backgrounds.AcademicSpire.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/columned-forum.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.AcademicSpire.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "academic-spire",
+    "advancements": {
+      "uPtw9CY68cCrhIUq": {
+        "_id": "uPtw9CY68cCrhIUq",
+        "name": "GHOSTWIRE.Skills.List.History",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "history"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "kCw6SZrAzlFIm2mq": {
+        "_id": "kCw6SZrAzlFIm2mq",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "occult",
+            "matrixTheory",
+            "medicineLore",
+            "xenology"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

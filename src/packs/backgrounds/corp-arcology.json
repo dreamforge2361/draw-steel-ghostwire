@@ -1,0 +1,69 @@
+{
+  "_id": "Tpd3tB7cJV48FLrU",
+  "_key": "!items!Tpd3tB7cJV48FLrU",
+  "name": "GHOSTWIRE.Backgrounds.CorpArcology.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/city-night-spire.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.CorpArcology.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "corp-arcology",
+    "advancements": {
+      "pzxiGq8MFZZq8wlU": {
+        "_id": "pzxiGq8MFZZq8wlU",
+        "name": "GHOSTWIRE.Skills.List.Corporate",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "corporate"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "hCN6RcIsglXTs6mc": {
+        "_id": "hCN6RcIsglXTs6mc",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "persuasion",
+            "negotiation",
+            "insight",
+            "securitySystems"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

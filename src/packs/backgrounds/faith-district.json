@@ -1,0 +1,69 @@
+{
+  "_id": "AylRFS43SxVAezWj",
+  "_key": "!items!AylRFS43SxVAezWj",
+  "name": "GHOSTWIRE.Backgrounds.FaithDistrict.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/church.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.FaithDistrict.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "faith-district",
+    "advancements": {
+      "2VNB719kS75BJOgo": {
+        "_id": "2VNB719kS75BJOgo",
+        "name": "GHOSTWIRE.Skills.List.Religion",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "religion"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "o2qgWknmxx77C5K5": {
+        "_id": "o2qgWknmxx77C5K5",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "insight",
+            "occult",
+            "warding",
+            "medicine"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

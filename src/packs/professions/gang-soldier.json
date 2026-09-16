@@ -1,0 +1,72 @@
+{
+  "_id": "7vIuPXq7uFXgmH0Y",
+  "_key": "!items!7vIuPXq7uFXgmH0Y",
+  "name": "GHOSTWIRE.Professions.GangSoldier.Name",
+  "type": "career",
+  "img": "icons/weapons/guns/pistol-battered-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.GangSoldier.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gang-soldier",
+    "advancements": {
+      "hX0H3NSKdcRWYRXE": {
+        "_id": "hX0H3NSKdcRWYRXE",
+        "name": "GHOSTWIRE.Skills.List.Firearms",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "firearms"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "C8fMPJdtrqLbOdMy": {
+        "_id": "C8fMPJdtrqLbOdMy",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "intimidation",
+            "streetwise",
+            "brawl",
+            "melee"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

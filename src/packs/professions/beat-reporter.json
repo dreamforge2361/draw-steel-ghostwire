@@ -1,0 +1,72 @@
+{
+  "_id": "bl85vdpQimXR4He5",
+  "_key": "!items!bl85vdpQimXR4He5",
+  "name": "GHOSTWIRE.Professions.BeatReporter.Name",
+  "type": "career",
+  "img": "icons/tools/tech/camera.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.BeatReporter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "beat-reporter",
+    "advancements": {
+      "uvU6lc75bBmMQ2c2": {
+        "_id": "uvU6lc75bBmMQ2c2",
+        "name": "GHOSTWIRE.Skills.List.Perception",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "perception"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "qDp4WigrazEiNsJZ": {
+        "_id": "qDp4WigrazEiNsJZ",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "corporate",
+            "contacts",
+            "insight",
+            "electronics"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

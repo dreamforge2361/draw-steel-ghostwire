@@ -33,7 +33,24 @@ Hooks.once("init", () => {
 
   registerGhostwireSkills();
   patchPreviousLifeFilter();
+  patchAddOrigin();
 });
+
+// Hero sheet "+ Add Ancestry / Background / Profession" opens the Ghostwire compendiums instead of draw-steel.origins.
+const ORIGIN_PACKS = { ancestry: `${MODULE_ID}.origins`, culture: `${MODULE_ID}.backgrounds`, career: `${MODULE_ID}.professions` };
+function patchAddOrigin() {
+  const actions = ds.applications.sheets?.DrawSteelHeroSheet?.DEFAULT_OPTIONS?.actions;
+  if (!actions?.addOrigin) {
+    console.warn(`${MODULE_ID} | DrawSteelHeroSheet addOrigin action not found; + Add buttons open Draw Steel compendiums`);
+    return;
+  }
+  const original = actions.addOrigin;
+  actions.addOrigin = function(event, target) {
+    const pack = game.packs.get(ORIGIN_PACKS[target.dataset.type]);
+    if (pack) return pack.render(true);
+    return original.call(this, event, target);
+  };
+}
 
 // Revenant Previous Life: its trait picker only enables traits from the Former Life People's Origins folder.
 // Draw Steel's own prerequisite check only knows class and subclass DSIDs, so extend it here.

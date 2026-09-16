@@ -1,0 +1,72 @@
+{
+  "_id": "k2UUNY7coGYoApZG",
+  "_key": "!items!k2UUNY7coGYoApZG",
+  "name": "GHOSTWIRE.Professions.RigTech.Name",
+  "type": "career",
+  "img": "icons/commodities/tech/remote-control-steel-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.RigTech.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rig-tech",
+    "advancements": {
+      "g9hXxOduoq34X1Th": {
+        "_id": "g9hXxOduoq34X1Th",
+        "name": "GHOSTWIRE.Skills.List.Rigging",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "rigging"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "jrd5U8bVGP70Isek": {
+        "_id": "jrd5U8bVGP70Isek",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "electronics",
+            "repair",
+            "driving",
+            "piloting"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

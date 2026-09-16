@@ -1,0 +1,72 @@
+{
+  "_id": "OsBCsDhYx7SDdmPV",
+  "_key": "!items!OsBCsDhYx7SDdmPV",
+  "name": "GHOSTWIRE.Professions.Acolyte.Name",
+  "type": "career",
+  "img": "icons/sundries/books/book-embossed-gold-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.Acolyte.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "acolyte",
+    "advancements": {
+      "yrrt1wKSWPZidBoQ": {
+        "_id": "yrrt1wKSWPZidBoQ",
+        "name": "GHOSTWIRE.Skills.List.Occult",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "occult"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "eG0lRyrL8pL9QdFg": {
+        "_id": "eG0lRyrL8pL9QdFg",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "religion",
+            "insight",
+            "warding",
+            "rituals"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

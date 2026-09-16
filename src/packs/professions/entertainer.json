@@ -1,0 +1,72 @@
+{
+  "_id": "SplrdMvWLWkhamha",
+  "_key": "!items!SplrdMvWLWkhamha",
+  "name": "GHOSTWIRE.Professions.Entertainer.Name",
+  "type": "career",
+  "img": "icons/tools/instruments/drum-snare-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.Entertainer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "entertainer",
+    "advancements": {
+      "KmnTub1FZ7q2GLwd": {
+        "_id": "KmnTub1FZ7q2GLwd",
+        "name": "GHOSTWIRE.Skills.List.Performance",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "performance"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "E7DGEKSfRG92lisT": {
+        "_id": "E7DGEKSfRG92lisT",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "persuasion",
+            "deception",
+            "insight",
+            "contacts"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

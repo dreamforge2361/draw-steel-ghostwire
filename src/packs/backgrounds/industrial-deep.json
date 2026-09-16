@@ -1,0 +1,69 @@
+{
+  "_id": "vPyg6hqL49mf5lMh",
+  "_key": "!items!vPyg6hqL49mf5lMh",
+  "name": "GHOSTWIRE.Backgrounds.IndustrialDeep.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/mine-cart-rocks-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.IndustrialDeep.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "industrial-deep",
+    "advancements": {
+      "jDADMYVYHWnqq1ai": {
+        "_id": "jDADMYVYHWnqq1ai",
+        "name": "GHOSTWIRE.Skills.List.Engineering",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "engineering"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "Z39tke0I204BAkHv": {
+        "_id": "Z39tke0I204BAkHv",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "repair",
+            "athletics",
+            "demolitions",
+            "electronics"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

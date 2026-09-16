@@ -74,6 +74,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.18` — **Ghostwire Gear** compendium: 17 Kit-qualifying weapons, shields, and special gear plus 4 armors, each with ¥, Availability, and the Kit categories it satisfies (in the description header and under the name on the item sheet). Street gear adds no numbers because the Kit supplies doctrine. Armor Stamina is a no-Kit-only toggle, and a few premium items have small wielded toggles.
 - `0.1.19` — **Ghostwire skills**: the 44 skills in 6 groups (Action, Technical, Knowledge, Social, Vehicle & Drone, Magic & Supernatural) replace the Draw Steel skill list everywhere skills are picked or shown. Draw Steel skill and group grants (stock Backgrounds, Professions, classes) translate to Ghostwire skills. Module content that referenced Draw Steel skills now uses Ghostwire skills.
 - `0.1.20` — **Ghostwire Classes** compendium with the **Operator** (Adrenaline), cloned from the Draw Steel Fury: class, three Origins (Corp-Milspec, Merc with two Kits, Street-vet), Ghostwire signatures Controlled Pair + Suppressing Fire, the Ghostwire 1–5 Adrenaline base band, and every level 1–10 feature and 7/9/11 ability with Draw Steel mechanics under chapter names.
+- `0.1.21` — **Ghostwire Backgrounds** (8) and **Ghostwire Professions** (15). A Background grants one fixed skill and a choice of 1 from four; a Profession grants one fixed skill and a choice of 2 from four. Skill pickers leave out skills the hero already has. The hero sheet’s **+ Add Ancestry / Background / Profession** buttons open the Ghostwire compendiums.
 
 ## Origins pack layout (Ghostwire Ancestries)
 
@@ -138,6 +139,50 @@ Rules: `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`. Skills use the five Ghostwire 
 2. Drag **Mutant** from **Ghostwire Ancestries**: Aberrant Rapport asks for one **Social** skill (Insight, Persuasion, …).
 3. Add a stock Draw Steel Background (culture) or Profession (career) with a skill choice: the picker offers Ghostwire skills.
 4. Drag **Cyber-Eyes** from **Ghostwire Chrome**: roll a Perception test — it has an edge.
+
+## Backgrounds & Professions (v1)
+
+Rules: `docs/rulebook/13-backgrounds-professions.md`. Draw Steel’s *culture* and *career* item types are labeled **Background** and **Profession** on the sheet.
+
+- **Packs:** **Ghostwire Backgrounds** (`backgrounds`, `culture` items) and **Ghostwire Professions** (`professions`, `career` items). Each item has two skill advancements, both using Ghostwire skill keys: a fixed skill (`chooseN` empty, one choice) and a pick (`chooseN` 1 for Backgrounds, 2 for Professions, from four choices). No languages or perks. Professions set Renown, ¥, and project points to 0.
+- **No duplicate picks:** `scripts/skills.mjs` filters a skill picker while it’s open. It leaves out skills the hero already has (sheet skills from any source) and skills chosen elsewhere in the same advancement run, but keeps the advancement’s own current picks when you reconfigure. If fewer than *choose N + 1* options remain, it pads the list with unowned skills from the same Ghostwire groups (then any group), so it’s always a real choice. The filter only applies while the picker is open — Draw Steel’s own data preparation sees the unfiltered list, so saved picks stay valid.
+- **Fixed skills don’t collide:** Background fixed skills, Profession fixed skills, and Operator Origin skills (Command, Demolitions, Intimidation) are disjoint, so a Background + Profession never wastes a fixed grant. A fixed skill already granted by some other source (for example an ancestry pick made first) is not rerouted automatically; pick a replacement on the sheet.
+- **Sheet buttons:** `scripts/module.mjs` points the hero sheet’s **+ Add** action at the Ghostwire packs for Ancestry (Ghostwire Ancestries), Background, and Profession. Class still opens the Draw Steel classes compendium.
+
+| Background | Fixed | Choose 1 |
+|---|---|---|
+| Undercity Barrens | Stealth | Streetwise, Survival, Perception, Athletics |
+| Corp Arcology | Corporate | Persuasion, Negotiation, Insight, Security Systems |
+| Sprawl District | Streetwise | Negotiation, Contacts, Perception, Brawl |
+| Transit Hub / Freeport | Navigation | Contacts, Driving, Piloting, Negotiation |
+| Outland Wastes | Survival | Athletics, Driving, Perception, Firearms |
+| Academic Spire | History | Occult, Matrix Theory, Medicine Lore, Xenology |
+| Faith District | Religion | Insight, Occult, Warding, Medicine |
+| Industrial Deep | Engineering | Repair, Athletics, Demolitions, Electronics |
+
+| Profession | Fixed | Choose 2 |
+|---|---|---|
+| Wage-Slave | Negotiation | Corporate, Persuasion, Insight, Electronics |
+| Street Doc | Medicine | Cybertech, Insight, Streetwise, Medicine Lore |
+| Fixer | Contacts | Negotiation, Streetwise, Insight, Deception |
+| Courier | Driving | Stealth, Navigation, Athletics, Streetwise |
+| Gang Soldier | Firearms | Intimidation, Streetwise, Brawl, Melee |
+| Security Guard | Perception | Firearms, Intimidation, Security Systems, Brawl |
+| Smuggler | Security Systems | Deception, Contacts, Driving, Stealth |
+| Rig-Tech | Rigging | Electronics, Repair, Driving, Piloting |
+| Deck Jockey | Hacking | Matrix Theory, Electronics, Security Systems, Streetwise |
+| Entertainer | Performance | Persuasion, Deception, Insight, Contacts |
+| Beat Reporter | Perception | Corporate, Contacts, Insight, Electronics |
+| Hauler / Labor | Athletics | Driving, Repair, Brawl, Engineering |
+| Merc Recruit | Firearms | Athletics, Survival, Melee, Heavy Weapons |
+| Acolyte | Occult | Religion, Insight, Warding, Rituals |
+| Chop-Doc Assistant | Cybertech | Medicine, Streetwise, Demolitions, Electronics |
+
+**Test click-path**
+
+1. Create a new hero. Click **+ Add Background** (opens **Ghostwire Backgrounds**) and drag **Sprawl District** onto the hero. The advancement window shows the fixed **Streetwise** and a **Background Skill (choose 1)** picker: Negotiation, Contacts, Perception, Brawl. Pick **Negotiation**.
+2. Click **+ Add Profession** and drag **Fixer**. Its fixed skill is **Contacts**. The **Profession Skills (choose 2)** picker would normally offer Negotiation, Streetwise, Insight, Deception — Negotiation and Streetwise are already yours, so it shows Insight and Deception plus one unowned skill from the same groups (Corporate) to keep it a real choice. Pick two.
+3. **Stats** tab → Skills lists Streetwise, Negotiation, Contacts, and your two new picks — five different Ghostwire skills, no duplicates, no Draw Steel skills.
 
 ## Classes (v1)
 

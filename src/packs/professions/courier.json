@@ -1,0 +1,72 @@
+{
+  "_id": "O3Yk0AXKnZMzHsf0",
+  "_key": "!items!O3Yk0AXKnZMzHsf0",
+  "name": "GHOSTWIRE.Professions.Courier.Name",
+  "type": "career",
+  "img": "icons/containers/bags/pack-leather-black-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.Courier.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "courier",
+    "advancements": {
+      "AjJ167NLavSIVxrw": {
+        "_id": "AjJ167NLavSIVxrw",
+        "name": "GHOSTWIRE.Skills.List.Driving",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "driving"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "JpPeu7gN8iaqjdBk": {
+        "_id": "JpPeu7gN8iaqjdBk",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "stealth",
+            "navigation",
+            "athletics",
+            "streetwise"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "2UwrX4iqZBzJDCGa",
+  "_key": "!items!2UwrX4iqZBzJDCGa",
+  "name": "GHOSTWIRE.Backgrounds.OutlandWastes.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/house-shelter-stone.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.OutlandWastes.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "outland-wastes",
+    "advancements": {
+      "p1kbzdaiAwYbIvuI": {
+        "_id": "p1kbzdaiAwYbIvuI",
+        "name": "GHOSTWIRE.Skills.List.Survival",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "survival"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "YNNJ2VqSRCjKjmDI": {
+        "_id": "YNNJ2VqSRCjKjmDI",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "athletics",
+            "driving",
+            "perception",
+            "firearms"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

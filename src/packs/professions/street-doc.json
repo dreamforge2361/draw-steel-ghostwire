@@ -1,0 +1,72 @@
+{
+  "_id": "t2QLmiCUmzwFsWPz",
+  "_key": "!items!t2QLmiCUmzwFsWPz",
+  "name": "GHOSTWIRE.Professions.StreetDoc.Name",
+  "type": "career",
+  "img": "icons/tools/medical/bandages-gauze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.StreetDoc.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-doc",
+    "advancements": {
+      "hUoBc1KPmGhQmSF3": {
+        "_id": "hUoBc1KPmGhQmSF3",
+        "name": "GHOSTWIRE.Skills.List.Medicine",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "medicine"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "mX6jF1MebKHeSjwt": {
+        "_id": "mX6jF1MebKHeSjwt",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "cybertech",
+            "insight",
+            "streetwise",
+            "medicineLore"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

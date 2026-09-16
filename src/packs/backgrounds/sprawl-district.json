@@ -1,0 +1,69 @@
+{
+  "_id": "6HNDnZrQV2Nx7KB8",
+  "_key": "!items!6HNDnZrQV2Nx7KB8",
+  "name": "GHOSTWIRE.Backgrounds.SprawlDistrict.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/city-night.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.SprawlDistrict.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sprawl-district",
+    "advancements": {
+      "77GGiMF82eQsqOB1": {
+        "_id": "77GGiMF82eQsqOB1",
+        "name": "GHOSTWIRE.Skills.List.Streetwise",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "streetwise"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "4fDvUjq452OHgUmW": {
+        "_id": "4fDvUjq452OHgUmW",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "negotiation",
+            "contacts",
+            "perception",
+            "brawl"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "6xWIKXnbjscFslEo",
+  "_key": "!items!6xWIKXnbjscFslEo",
+  "name": "GHOSTWIRE.Professions.SecurityGuard.Name",
+  "type": "career",
+  "img": "icons/tools/tech/badge-communicator.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.SecurityGuard.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "security-guard",
+    "advancements": {
+      "eiEbl3n25oTz8f2p": {
+        "_id": "eiEbl3n25oTz8f2p",
+        "name": "GHOSTWIRE.Skills.List.Perception",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "perception"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "R76h5Sn2sSn2wbTi": {
+        "_id": "R76h5Sn2sSn2wbTi",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "firearms",
+            "intimidation",
+            "securitySystems",
+            "brawl"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

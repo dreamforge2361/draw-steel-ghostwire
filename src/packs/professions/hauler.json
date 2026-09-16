@@ -1,0 +1,72 @@
+{
+  "_id": "Ro8phhioIxX9nUHy",
+  "_key": "!items!Ro8phhioIxX9nUHy",
+  "name": "GHOSTWIRE.Professions.Hauler.Name",
+  "type": "career",
+  "img": "icons/commodities/tech/crank.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.Hauler.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hauler",
+    "advancements": {
+      "CfBFnUmTBdOjWpIU": {
+        "_id": "CfBFnUmTBdOjWpIU",
+        "name": "GHOSTWIRE.Skills.List.Athletics",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "athletics"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "o2lPX4pNxtHQbMof": {
+        "_id": "o2lPX4pNxtHQbMof",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "driving",
+            "repair",
+            "brawl",
+            "engineering"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

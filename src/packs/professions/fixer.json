@@ -1,0 +1,72 @@
+{
+  "_id": "1QtQhAPcFqyUttu5",
+  "_key": "!items!1QtQhAPcFqyUttu5",
+  "name": "GHOSTWIRE.Professions.Fixer.Name",
+  "type": "career",
+  "img": "icons/commodities/tech/phone-smart-tablet.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.Fixer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fixer",
+    "advancements": {
+      "FpD5KVpycZok71BN": {
+        "_id": "FpD5KVpycZok71BN",
+        "name": "GHOSTWIRE.Skills.List.Contacts",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "contacts"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "RMudpwfiflBO6IG9": {
+        "_id": "RMudpwfiflBO6IG9",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "negotiation",
+            "streetwise",
+            "insight",
+            "deception"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "CehrHn82ukLvAGfr",
+  "_key": "!items!CehrHn82ukLvAGfr",
+  "name": "GHOSTWIRE.Professions.ChopDocAssistant.Name",
+  "type": "career",
+  "img": "icons/tools/tech/torch-welding-plasma-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.ChopDocAssistant.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chop-doc-assistant",
+    "advancements": {
+      "9RHZXqTlG95kGme7": {
+        "_id": "9RHZXqTlG95kGme7",
+        "name": "GHOSTWIRE.Skills.List.Cybertech",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "cybertech"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "mtx7Peh3YNfcPVcx": {
+        "_id": "mtx7Peh3YNfcPVcx",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "medicine",
+            "streetwise",
+            "demolitions",
+            "electronics"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

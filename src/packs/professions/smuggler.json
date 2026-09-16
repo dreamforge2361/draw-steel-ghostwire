@@ -1,0 +1,72 @@
+{
+  "_id": "cF20LwVEDIMqf5C9",
+  "_key": "!items!cF20LwVEDIMqf5C9",
+  "name": "GHOSTWIRE.Professions.Smuggler.Name",
+  "type": "career",
+  "img": "icons/containers/boxes/crate-heavy-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.Smuggler.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "smuggler",
+    "advancements": {
+      "zlfdXr3Iv7M7tQap": {
+        "_id": "zlfdXr3Iv7M7tQap",
+        "name": "GHOSTWIRE.Skills.List.SecuritySystems",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "securitySystems"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "m8uE6Ihvqy8HPUNA": {
+        "_id": "m8uE6Ihvqy8HPUNA",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "deception",
+            "contacts",
+            "driving",
+            "stealth"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

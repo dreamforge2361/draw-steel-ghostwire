@@ -1,0 +1,69 @@
+{
+  "_id": "BSHJ0SD7K44sXizm",
+  "_key": "!items!BSHJ0SD7K44sXizm",
+  "name": "GHOSTWIRE.Backgrounds.TransitHub.Name",
+  "type": "culture",
+  "img": "icons/environment/settlement/city-gate.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Backgrounds.TransitHub.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "transit-hub",
+    "advancements": {
+      "OqeRjbAH12uaUyQr": {
+        "_id": "OqeRjbAH12uaUyQr",
+        "name": "GHOSTWIRE.Skills.List.Navigation",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "navigation"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "TYtgGcmkWZeGJsrz": {
+        "_id": "TYtgGcmkWZeGJsrz",
+        "name": "GHOSTWIRE.Backgrounds.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "contacts",
+            "driving",
+            "piloting",
+            "negotiation"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

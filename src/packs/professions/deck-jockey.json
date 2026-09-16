@@ -1,0 +1,72 @@
+{
+  "_id": "qwoupRMQAtOMoOKW",
+  "_key": "!items!qwoupRMQAtOMoOKW",
+  "name": "GHOSTWIRE.Professions.DeckJockey.Name",
+  "type": "career",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.DeckJockey.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deck-jockey",
+    "advancements": {
+      "dSUUa0xMg31Pqpte": {
+        "_id": "dSUUa0xMg31Pqpte",
+        "name": "GHOSTWIRE.Skills.List.Hacking",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "hacking"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "enKBERhBzqjIeImC": {
+        "_id": "enKBERhBzqjIeImC",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "matrixTheory",
+            "electronics",
+            "securitySystems",
+            "streetwise"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
