@@ -1,0 +1,88 @@
+{
+  "_id": "kIaJniwqTtJ58Q18",
+  "_key": "!items!kIaJniwqTtJ58Q18",
+  "name": "GHOSTWIRE.Chrome.VocalModulator.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.VocalModulator.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vocal-modulator",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "ap7RjKFRVNjMTqDQ",
+      "_key": "!items.effects!kIaJniwqTtJ58Q18.ap7RjKFRVNjMTqDQ",
+      "name": "GHOSTWIRE.Chrome.VocalModulator.Name",
+      "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.kIaJniwqTtJ58Q18",
+      "description": "GHOSTWIRE.Chrome.VocalModulator.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.lie.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "standard",
+        "location": "head",
+        "integrity": 1,
+        "price": 800,
+        "availability": "professional"
+      }
+    }
+  }
+}

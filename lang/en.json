@@ -10,7 +10,8 @@
     },
     "COMPENDIUM": {
       "origins": "Ghostwire Ancestries",
-      "abilities": "Ghostwire Abilities"
+      "abilities": "Ghostwire Abilities",
+      "chrome": "Ghostwire Chrome"
     },
     "Abilities": {
       "Keywords": {
@@ -38,6 +39,112 @@
         "Name": "Drive",
         "Description": "<p>A creature can take the Drive move action only while piloting a vehicle. When a creature takes the Drive move action, they cause their vehicle to move up to the vehicle’s speed, taking the driver and any passengers with it. Alternatively, a creature can use the Drive move action to have their vehicle use the Disengage move action as a free triggered action. A creature can use the Drive move action only once per round. A vehicle can only have this move action applied to it once per round. This movement can be broken up with the driver’s maneuver and main action however they wish.</p>"
       }
+    },
+    "Integrity": {
+      "Label": "Body Integrity",
+      "Current": "Current",
+      "Max": "Max",
+      "Hint": "Flesh left for chrome. Installing an implant spends its Integrity; removing it returns 75% (round down). Integrity doesn’t recover with rest.",
+      "CyborgNA": "Not used — Cyborgs upgrade with Frame Modules, not chrome.",
+      "Installed": "{name} installed: {cost} Body Integrity spent ({value}/{max} left).",
+      "Removed": "{name} removed: {refund} Body Integrity returned ({value}/{max}).",
+      "Insufficient": "{actor} can’t install {name}: it needs {cost} Body Integrity and only {value} is left.",
+      "CyborgBlocked": "{actor} is a Cyborg and can’t install chrome implants like {name}. Cyborgs use Frame Modules.",
+      "SlotFull": "{actor} can’t install {name}: the {location} location already holds {count} of {cap} implants."
+    },
+    "Chrome": {
+      "Datajack": {
+        "Name": "Datajack",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 1 · <strong>Price:</strong> ¥500 · <strong>Availability:</strong> Street</p><p>A direct-neural port behind the ear or at the base of the skull. You can jack straight into the Wired and compatible devices without a manual interface — the decker and rigger baseline. Hacking and Wired rules that require a neural interface treat you as having one.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 1 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Wired interface: you have a direct neural connection to the Wired and compatible devices.</p>"
+      },
+      "CyberEyes": {
+        "Name": "Cyber-Eyes",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Eyes / Optics · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥2,000 · <strong>Availability:</strong> Professional</p><p>An optical suite with low-light, thermal, magnification, and recording modes. You gain an edge on Alertness and Search tests (automated). You also ignore the bane from darkness or smoke on strikes (apply manually). Cyber-eyes are a discrete, destroyable target for called shots.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Eyes / Optics slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Edge on Alertness and Search tests. Ignore darkness or smoke banes on strikes (apply manually).</p>"
+      },
+      "ReactionEnhancer": {
+        "Name": "Reaction Enhancer",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Nervous System · <strong>Body Integrity:</strong> 3 · <strong>Price:</strong> ¥3,500 · <strong>Availability:</strong> Restricted</p><p>A budget cousin of wired reflexes that shaves milliseconds off every reaction. When you take the Disengage move action, you can shift 1 additional square (automated). Nervous System holds one implant, so this can’t be combined with Wired Reflexes.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 3 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Nervous System slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 square when you shift with Disengage.</p>"
+      },
+      "DermalPlating": {
+        "Name": "Dermal Plating",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Torso / Core · <strong>Body Integrity:</strong> 4 · <strong>Price:</strong> ¥4,000 · <strong>Availability:</strong> Restricted</p><p>Sub-dermal armor plates under the skin. You have damage immunity 2 against all damage (automated; provisional value). The plating is visibly chromed, which can cost you with people who distrust metal.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 4 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Torso / Core slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Damage immunity 2 against all damage.</p>"
+      },
+      "CyberlimbArm": {
+        "Name": "Cyberlimb (Arm)",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Arms / Hands · <strong>Body Integrity:</strong> 5 · <strong>Price:</strong> ¥7,500 · <strong>Availability:</strong> Restricted</p><p>A full replacement arm with reinforced servos and a mounting point for integral tools or weapons. Your melee weapon abilities, including your melee free strike and unarmed Brawler or Mantis kit strikes, deal +1 damage on every tier (automated). A cyberlimb counts as the fists, blades, or grips that unarmed kits require. It is a large slot draw and a called-shot target.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 5 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Arms / Hands slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 damage on melee weapon abilities (all tiers).</p>"
+      },
+      "VocalModulator": {
+        "Name": "Vocal Modulator",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 1 · <strong>Price:</strong> ¥800 · <strong>Availability:</strong> Professional</p><p>A laryngeal implant that reshapes pitch, timbre, and accent on command, or mimics a voice you’ve recorded. You gain an edge on Lie tests when your voice sells the deception (automated as an edge on Lie). Face chrome — a Soft/bioware version reads as less obviously artificial.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 1 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Edge on Lie tests.</p>"
+      },
+      "ImplantWeapon": {
+        "Name": "Implant Weapon (Spur)",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Arms / Hands · <strong>Body Integrity:</strong> 1 · <strong>Price:</strong> ¥1,000 · <strong>Availability:</strong> Restricted</p><p>A retractable blade spur housed in the forearm. It is concealed until deployed and can’t be disarmed. Installing it grants the <strong>Spur Strike</strong> signature ability, which is removed again if the implant is deleted.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 1 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Arms / Hands slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Concealed, non-disarmable forearm spur. Grants Spur Strike.</p>"
+      },
+      "InternalAir": {
+        "Name": "Internal Air / Filtration",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Torso / Core · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥1,500 · <strong>Availability:</strong> Professional</p><p>Sealed filters and a reserve air bladder in the chest. You can hold your breath for up to 10 minutes and filter smoke, gas, and airborne toxins. You have poison immunity 2 (automated), and you gain an edge on tests to resist inhaled gases and toxins (apply manually).</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Torso / Core slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Poison immunity 2. Edge on tests to resist inhaled gases and toxins (manual).</p>"
+      },
+      "CyberEars": {
+        "Name": "Cyber-Ears",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Ears / Aural · <strong>Body Integrity:</strong> 2 · <strong>Price:</strong> ¥1,800 · <strong>Availability:</strong> Professional</p><p>An audio suite with amplification, spatial tracking, dampers against sudden noise, and live translation. You gain an edge on Eavesdrop tests (automated), and on Alertness tests that rely on hearing (apply manually; this doesn’t stack with Cyber-Eyes for the same test).</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 2 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Ears / Aural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Edge on Eavesdrop tests. Edge on hearing-based Alertness tests (manual).</p>"
+      },
+      "RunningGear": {
+        "Name": "Running Gear",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Legs / Locomotion · <strong>Body Integrity:</strong> 3 · <strong>Price:</strong> ¥2,500 · <strong>Availability:</strong> Professional</p><p>Reinforced leg actuators and shock-absorbing joints. Your speed increases by 1, and you gain an edge on Jump tests (both automated). This doesn’t stack with another speed bonus from chrome that serves the same purpose — take the better.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 3 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Legs / Locomotion slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 speed. Edge on Jump tests.</p>"
+      },
+      "Skillwires": {
+        "Name": "Skillwires / Encephalon",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Head / Neural · <strong>Body Integrity:</strong> 4 · <strong>Price:</strong> ¥5,000 · <strong>Availability:</strong> Restricted</p><p>A skillsoft socket and co-processor that loads expertise directly into muscle memory. The default skillsoft gives an edge on Mechanics tests (automated). To load a different skillsoft, edit this implant’s effect and change the skill in the key (for example <code>system.skills.modifiers.sneak.edges</code>). Neural chrome erodes magic heavily.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 4 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Head / Neural slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>Loaded skillsoft: edge on Mechanics tests (edit the effect key to swap the skill).</p>"
+      },
+      "MuscleBoneLacing": {
+        "Name": "Muscle / Bone Lacing",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Torso / Core · <strong>Body Integrity:</strong> 5 · <strong>Price:</strong> ¥6,000 · <strong>Availability:</strong> Restricted</p><p>Synthetic muscle bundles and ceramic-laced bone. Your stability increases by 1, and you gain an edge on Lift tests (both automated). Heavy Integrity draw.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 5 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Torso / Core slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 stability. Edge on Lift tests.</p>"
+      },
+      "WiredReflexes": {
+        "Name": "Wired Reflexes",
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Nervous System · <strong>Body Integrity:</strong> 6 · <strong>Price:</strong> ¥12,000 · <strong>Availability:</strong> Military</p><p>Military-grade neural boosters that fire your body before you finish deciding to move. Your speed increases by 1, and you can shift 2 additional squares when you take the Disengage move action (both automated). When the Director checks which side acts first, the Director can count you as alert even when you’d otherwise be surprised (Director’s call). Nervous System holds one implant, so this can’t be combined with a Reaction Enhancer.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 6 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Nervous System slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 speed. +2 squares when you shift with Disengage.</p>"
+      },
+      "SpurStrike": {
+        "Name": "Spur Strike",
+        "Story": "A blade snaps out of your forearm and back in before anyone sees it.",
+        "Effect": "<p>Your spur is concealed until it strikes and can’t be disarmed. If the target didn’t know you had an implant weapon, you have an edge on this strike.</p>"
+      },
+      "Locations": {
+        "head": "Head / Neural",
+        "eyes": "Eyes / Optics",
+        "ears": "Ears / Aural",
+        "torso": "Torso / Core",
+        "arms": "Arms / Hands",
+        "legs": "Legs / Locomotion",
+        "nervous": "Nervous System"
+      },
+      "Availability": {
+        "street": "Street",
+        "professional": "Professional",
+        "restricted": "Restricted",
+        "military": "Military",
+        "prototype": "Prototype"
+      },
+      "Grades": {
+        "standard": "Standard",
+        "salvage": "Salvage",
+        "soft": "Soft"
+      },
+      "SheetLine": "{grade} · {location} · Body Integrity {integrity} · {price} · {availability}"
     },
     "Peoples": {
       "PureHuman": {

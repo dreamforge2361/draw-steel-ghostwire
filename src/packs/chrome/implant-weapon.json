@@ -1,0 +1,83 @@
+{
+  "_id": "kPSIWHa9L2i0Z3D0",
+  "_key": "!items!kPSIWHa9L2i0Z3D0",
+  "name": "GHOSTWIRE.Chrome.ImplantWeapon.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/blade-mechanical-cutter.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.ImplantWeapon.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "implant-weapon",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "Jx4S8W6EBh5cksgT",
+      "_key": "!items.effects!kPSIWHa9L2i0Z3D0.Jx4S8W6EBh5cksgT",
+      "name": "GHOSTWIRE.Chrome.ImplantWeapon.Name",
+      "img": "icons/commodities/tech/blade-mechanical-cutter.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.kPSIWHa9L2i0Z3D0",
+      "description": "GHOSTWIRE.Chrome.ImplantWeapon.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": []
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "standard",
+        "location": "arms",
+        "integrity": 1,
+        "price": 1000,
+        "availability": "restricted",
+        "grants": [
+          "Compendium.draw-steel-ghostwire.chrome.Item.cMGe3YMuPCJSFjw9"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "BwwUfaHERDyVGgRY",
+  "_key": "!items!BwwUfaHERDyVGgRY",
+  "name": "GHOSTWIRE.Chrome.Skillwires.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/usb-thumb-drive.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.Skillwires.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "skillwires",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "YGebgluzOpf4UMNQ",
+      "_key": "!items.effects!BwwUfaHERDyVGgRY.YGebgluzOpf4UMNQ",
+      "name": "GHOSTWIRE.Chrome.Skillwires.Name",
+      "img": "icons/commodities/tech/usb-thumb-drive.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.BwwUfaHERDyVGgRY",
+      "description": "GHOSTWIRE.Chrome.Skillwires.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.mechanics.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "standard",
+        "location": "head",
+        "integrity": 4,
+        "price": 5000,
+        "availability": "restricted"
+      }
+    }
+  }
+}

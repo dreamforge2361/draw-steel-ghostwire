@@ -1,0 +1,94 @@
+{
+  "_id": "em8EMmH1hczBjSl8",
+  "_key": "!items!em8EMmH1hczBjSl8",
+  "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.CyberlimbArm.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cyberlimb-arm",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "bkJLDQroTx7kVNpw",
+      "_key": "!items.effects!em8EMmH1hczBjSl8.bkJLDQroTx7kVNpw",
+      "name": "GHOSTWIRE.Chrome.CyberlimbArm.Name",
+      "img": "icons/commodities/tech/metal-pistons.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.em8EMmH1hczBjSl8",
+      "description": "GHOSTWIRE.Chrome.CyberlimbArm.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "abilityModifier",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "melee",
+            "weapon"
+          ]
+        },
+        "changes": [
+          {
+            "key": "damage.bonuses.value",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "standard",
+        "location": "arms",
+        "integrity": 5,
+        "price": 7500,
+        "availability": "restricted"
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "_id": "cMGe3YMuPCJSFjw9",
+  "_key": "!items!cMGe3YMuPCJSFjw9",
+  "name": "GHOSTWIRE.Chrome.SpurStrike.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/blade-mechanical-cutter.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "spur-strike",
+    "story": "GHOSTWIRE.Chrome.SpurStrike.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "nSoUuJT99spSQgNN": {
+          "_id": "nSoUuJT99spSQgNN",
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "sort": 0,
+          "damage": {
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Chrome.SpurStrike.Effect",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

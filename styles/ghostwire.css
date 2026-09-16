@@ -56,3 +56,21 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   outline: 2px solid var(--ghostwire-focus);
   outline-offset: 2px;
 }
+
+/* Body Integrity fieldset injected into the hero Stats tab */
+.ghostwire-integrity {
+  gap: 0.5rem;
+  align-items: end;
+}
+
+.ghostwire-integrity .form-group.stacked input {
+  width: 4em;
+  text-align: center;
+}
+
+/* Chrome implant summary line under the item name */
+.ghostwire-chrome-line {
+  font-size: var(--font-size-12, 12px);
+  color: var(--ghostwire-accent, inherit);
+  letter-spacing: 0.02em;
+}

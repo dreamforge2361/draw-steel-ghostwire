@@ -1,0 +1,88 @@
+{
+  "_id": "hNnidLQ8UJQaJum6",
+  "_key": "!items!hNnidLQ8UJQaJum6",
+  "name": "GHOSTWIRE.Chrome.DermalPlating.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.DermalPlating.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "dermal-plating",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "QRhVsvzqzUoali2u",
+      "_key": "!items.effects!hNnidLQ8UJQaJum6.QRhVsvzqzUoali2u",
+      "name": "GHOSTWIRE.Chrome.DermalPlating.Name",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.hNnidLQ8UJQaJum6",
+      "description": "GHOSTWIRE.Chrome.DermalPlating.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.all",
+            "type": "upgrade",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "standard",
+        "location": "torso",
+        "integrity": 4,
+        "price": 4000,
+        "availability": "restricted"
+      }
+    }
+  }
+}

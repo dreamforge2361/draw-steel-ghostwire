@@ -1,0 +1,95 @@
+{
+  "_id": "HC2xvD49OLZMG4Jm",
+  "_key": "!items!HC2xvD49OLZMG4Jm",
+  "name": "GHOSTWIRE.Chrome.WiredReflexes.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.WiredReflexes.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wired-reflexes",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "2OfPdZYgW9wBodxZ",
+      "_key": "!items.effects!HC2xvD49OLZMG4Jm.2OfPdZYgW9wBodxZ",
+      "name": "GHOSTWIRE.Chrome.WiredReflexes.Name",
+      "img": "icons/commodities/tech/electronics-tech-sensor-orange-teal.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.HC2xvD49OLZMG4Jm",
+      "description": "GHOSTWIRE.Chrome.WiredReflexes.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.disengage",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.movement.value",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "standard",
+        "location": "nervous",
+        "integrity": 6,
+        "price": 12000,
+        "availability": "military"
+      }
+    }
+  }
+}

@@ -68,12 +68,59 @@ Use Foundry **Install Module** / update from:
 - `0.1.12` — Cyborg ancestry (in its own Origins folder), cloned from DS Time Raider. Signature trait Cortical Firewall (psychic immunity equal to level) plus a free **Arcane Severance** feature holding the hard constraints: no Magic abilities, no Elementalist or Street Priest, tech-only recovery, and a System Crisis pointer. There’s a 3-point picker with Penetration Optics (1, grants a maneuver), Predictive Sensors (1), Auxiliary Limbs — Athletics (1), Auxiliary Limbs — Combat (2), Installed Suite (2: pick Kinetic Driver, Particle Lance, or Servo Overclock; these use a **Tech** keyword that `scripts/module.mjs` registers, not Psionic), and Locked Processors (2, can’t be dazed). Particle Lance follows the Ghostwire text, so it has no slide. Cyborgs don’t use the Chrome chapter. Revenant Former Life: Cyborg now offers these traits to Previous Life.
 - `0.1.13` — Street-themed default hero actions with unchanged mechanics: Charge → **Rush** (the Charge keyword label also reads Rush), Defend → **Take Cover**, Heal → **Patch Up**, Aid Attack → **Spot Target**, alongside Ride → Drive. They are Ghostwire Abilities copies that `scripts/module.mjs` swaps into the hero default items. Hide, Search for Hidden Creatures, Use Consumable, and Make/Assist Test are rules text in Draw Steel, not hero ability items, so they aren’t renamed.
 - `0.1.14` — The Origins compendium is now labeled **Ghostwire Ancestries** in Foundry. Its pack id and path stay `origins`, so existing `Compendium.draw-steel-ghostwire.origins.*` UUIDs and links don’t change.
+- `0.1.15` — **Body Integrity** (actor flag, shown at the top of the hero Stats tab; living heroes 20/20; Cyborgs see N/A), new heroes start with **¥5,000**, and a **Ghostwire Chrome** compendium with five Standard implants that have working effects: Datajack (1), Cyber-Eyes (2, edge on Alertness and Search), Reaction Enhancer (3, +1 Disengage), Dermal Plating (4, damage immunity 2), and Cyberlimb (Arm) (5, +1 melee weapon damage). Dropping an implant on a hero spends its Integrity; deleting it refunds 75%. Cyborgs and heroes without enough Integrity are blocked.
+- `0.1.16` — Ghostwire Chrome now has 13 Standard implants, each with a price and Availability (the header line in its description, plus a line under the name on the item sheet). New implants: Vocal Modulator, Implant Weapon (grants Spur Strike), Internal Air / Filtration, Cyber-Ears, Running Gear, Skillwires / Encephalon, Muscle / Bone Lacing, and Wired Reflexes. Location slot caps are enforced (Nervous System 1, so Reaction Enhancer and Wired Reflexes can’t stack).
 
 ## Origins pack layout (Ghostwire Ancestries)
 
 The pack id and path are `origins`; Foundry shows it as **Ghostwire Ancestries** (`GHOSTWIRE.COMPENDIUM.origins`). Keep the id so UUIDs stay stable.
 
 Each People gets one compendium Folder named after it (Pure Human, Corran, Elvani, …). The People's ancestry and all of its traits and abilities go inside that folder, never at the pack root. The source mirrors this: `src/packs/origins/<people>/` holds a `_folder.json` (the Folder document) plus that People's items, and each item's `folder` is set to that Folder's `_id`. The build fails if an item's `folder` doesn't match its directory.
+
+## Chrome & Body Integrity (v1)
+
+Rules: `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`.
+
+- **Nuyen** is Draw Steel `system.hero.wealth`, relabeled in lang. It’s shown in the hero **Biography** tab; switch the sheet to **Edit** mode to type a value. Heroes created with Ghostwire enabled start at ¥5,000. Older heroes keep whatever they had (default 1), so set 5000 by hand for tests.
+- **Body Integrity** is stored in `flags.draw-steel-ghostwire.integrity` (`value`/`max`, default 20/20) and edited in the **Body Integrity** box at the top of the **Stats** tab. Heroes with the Cyborg ancestry see “Not used” instead.
+- **Chrome** implants are `treasure` items in **Ghostwire Chrome**. Each carries `flags.draw-steel-ghostwire.chrome` (`grade`, `location`, `integrity`, `price`, `availability`, optional `grants`) and an always-on transferred effect. Draw Steel treasure has no price field, so ¥ shows in the description header and in a line under the name on the item sheet.
+- **Install** = drag onto a hero. `scripts/module.mjs` blocks Cyborgs, heroes without enough Integrity, and full locations; then it spends the Integrity and adds any granted abilities (Implant Weapon → Spur Strike). **Delete** returns 75% of the Integrity (round down) and removes granted abilities.
+- **Slot caps:** Head 3 · Eyes 1 · Ears 1 · Torso 3 · Arms 4 (2 per arm) · Legs 4 (2 per leg) · Nervous System 1.
+- **Not automated yet:** buying (¥ isn’t deducted), Availability gating, the no-double-dip rule between different implants, surgery Projects, and Suppressed/Damaged states.
+
+| Implant | Location | Integrity | Price | Availability | Automated |
+|---|---|---|---|---|---|
+| Datajack | Head | 1 | ¥500 | Street | effect marker |
+| Vocal Modulator | Head | 1 | ¥800 | Professional | edge on Lie |
+| Implant Weapon (Spur) | Arms | 1 | ¥1,000 | Restricted | grants Spur Strike |
+| Internal Air / Filtration | Torso | 2 | ¥1,500 | Professional | poison immunity 2 |
+| Cyber-Ears | Ears | 2 | ¥1,800 | Professional | edge on Eavesdrop |
+| Cyber-Eyes | Eyes | 2 | ¥2,000 | Professional | edge on Alertness, Search |
+| Running Gear | Legs | 3 | ¥2,500 | Professional | +1 speed, edge on Jump |
+| Reaction Enhancer | Nervous | 3 | ¥3,500 | Restricted | +1 Disengage |
+| Dermal Plating | Torso | 4 | ¥4,000 | Restricted | damage immunity 2 (all) |
+| Skillwires / Encephalon | Head | 4 | ¥5,000 | Restricted | edge on Mechanics (edit key to swap) |
+| Muscle / Bone Lacing | Torso | 5 | ¥6,000 | Restricted | +1 stability, edge on Lift |
+| Cyberlimb (Arm) | Arms | 5 | ¥7,500 | Restricted | +1 melee weapon damage |
+| Wired Reflexes | Nervous | 6 | ¥12,000 | Military | +1 speed, +2 Disengage |
+
+**Prices are provisional** (Standard grade only). Grade variants are a later pass; rough rule for now:
+- **Salvage / Used** ≈ 0.5× ¥ and 1.5× Body Integrity.
+- **Soft / Bioware** ≈ 3× ¥ and 0.4× Body Integrity (round up).
+
+Chrome **packages** (Roadrunner, Argus, Bulwark, …) are not in the compendium yet.
+
+**Test click-path**
+
+1. Create a new hero → **Biography** tab: Nuyen 5000.
+2. **Stats** tab: **Body Integrity** Current 20 / Max 20.
+3. Compendium sidebar → **Ghostwire Chrome** → open **Wired Reflexes**: under the name the sheet reads “Standard · Nervous System · Body Integrity 6 · ¥12,000 · Military”, and the description starts with the same header.
+4. Drag **Cyber-Eyes** onto the hero: notice says 2 spent; Integrity 18/20; item in **Equipment**; effect in **Effects**; Alertness and Search tests roll with an edge.
+5. Drag **Implant Weapon (Spur)**: Integrity 17/20 and **Spur Strike** appears in **Abilities**. Delete the implant: Spur Strike is removed (Integrity back to 17, since 75% of 1 rounds down to 0).
+6. Drag **Reaction Enhancer** (Disengage 2 in Movement), then try **Wired Reflexes**: blocked because Nervous System is full.
+7. Drag **Dermal Plating** (Stats → Immunities: All 2) and **Cyberlimb (Arm)** (melee free strike +1 damage on each tier). Keep adding until an implant costs more than the Integrity left: it’s blocked with a warning.
+8. Delete Cyberlimb (Arm): 3 Integrity returns.
+9. Hero with the **Cyborg** ancestry: Stats shows Body Integrity “Not used”, and dragging any chrome is blocked.
 
 ## Building packs
 
