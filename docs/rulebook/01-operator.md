@@ -1,19 +1,13 @@
-# Operator
+# Ghostwire Core Rulebook — Chapter: The Operator
 
-**Rulebook draft — Stage 2 / Class 1 of 8**  
-**Status:** Awaiting Michael review  
-**Source:** `docs/masters/GHOSTWIRE_OPERATOR_DEVELOPMENT_MASTER.md` Part 1 (SoR)  
-**DS spine:** Heroes martial doctrines (Corp-Milspec / Merc / Street-vet); 7/9/11-cost tiers adapted from Heroes pp. 136–141  
-**Foundry note:** Greenfield restart — ignore any old item IDs or live-dump provenance in the master.
-
-### Editorial flags for this draft
-- Merc **dual-kit stacking** rule still open (master Known Bugs).
-- Some doctrine ability lines still say “Magic” keyword from DS Heroes — Stage 6 DS/Ghostwire scrub should rekeyword to tech/chrome where needed (Operator is mundane chrome-forward).
-- Signature table notes Controlled Pair scales with `@chr` / Physique; confirm vs Reflex for the attack roll (master text mixes Reflex for signatures and Physique for `@chr`).
+**Status:** Stage 2 draft — awaiting Michael review  
+**Source of record:** `docs/masters/GHOSTWIRE_OPERATOR_DEVELOPMENT_MASTER.md` Part 1 (2026-07-28)  
+**Draw Steel spine:** Heroes martial doctrines (Conscript / Mercenary / Vindicator–style Origins), reskinned  
+**Notes for review:** Foundry item IDs and old-build dump references removed. Merc dual-kit stacking rule still **open**. 7/9/11-cost abilities remain Heroes-adapted (Creator License attribution). Provisional DS-alignment flags inline where Ghostwire flavor leans on “deep network / breach point” — keep for now; Wire chapter will cross-link later.
 
 ---
 
-## The Operator
+## PART 1 -- PLAYER-FACING: THE OPERATOR
 
 ### Who You Are
 
@@ -263,3 +257,17 @@ Kit choices are drawn from the shared `ghostwire-kits` compendium (19 possible k
 Body Integrity (chrome capacity) uses the same formula as every other class: `6 + Physique (Might) + Echelon` (or the leaner `4 + Physique (Might) + Echelon`, still under review per the Chrome Rules v1 draft) -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
 
 ---
+
+---
+
+## Stage 2 review checklist (Operator)
+
+- [ ] Chassis numbers (Stamina 21 / +9 / Recoveries 10) stay
+- [ ] Adrenaline income text matches intended play
+- [ ] Signature + heroic ladders complete enough for v1 book
+- [ ] Three Origins (Corp-Milspec / Merc / Street-vet) names and ladders OK
+- [ ] Merc **two kits** — decide stacking rule before Foundry
+- [ ] Breach Point / deep-network framing — keep as Operator chrome-tech, or move under Wire chapter?
+- [ ] Any Heroes ability names/flavor still too fantasy — rename list?
+
+**Next after approval:** Scout chapter (DS Shadow / mundane tech reskin).
