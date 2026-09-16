@@ -1,0 +1,51 @@
+{
+  "_id": "G9uEmPyWNkxoDm6s",
+  "_key": "!items!G9uEmPyWNkxoDm6s",
+  "name": "GHOSTWIRE.Gear.MediumBlade.Name",
+  "type": "treasure",
+  "img": "icons/weapons/swords/sword-guard-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.MediumBlade.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "11-economy",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "medium-blade",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "medium"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "Nac1gjnZCXUIqX7w",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "price": 900,
+        "availability": "street",
+        "satisfies": "Medium melee weapon (Gunslinger blade, Chromeblade medium, Duelist, Spellblade, Breacher)"
+      }
+    }
+  }
+}

@@ -71,6 +71,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.15` — **Body Integrity** (actor flag, shown at the top of the hero Stats tab; living heroes 20/20; Cyborgs see N/A), new heroes start with **¥5,000**, and a **Ghostwire Chrome** compendium with five Standard implants that have working effects: Datajack (1), Cyber-Eyes (2, edge on Alertness and Search), Reaction Enhancer (3, +1 Disengage), Dermal Plating (4, damage immunity 2), and Cyberlimb (Arm) (5, +1 melee weapon damage). Dropping an implant on a hero spends its Integrity; deleting it refunds 75%. Cyborgs and heroes without enough Integrity are blocked.
 - `0.1.16` — Ghostwire Chrome now has 13 Standard implants, each with a price and Availability (the header line in its description, plus a line under the name on the item sheet). New implants: Vocal Modulator, Implant Weapon (grants Spur Strike), Internal Air / Filtration, Cyber-Ears, Running Gear, Skillwires / Encephalon, Muscle / Bone Lacing, and Wired Reflexes. Location slot caps are enforced (Nervous System 1, so Reaction Enhancer and Wired Reflexes can’t stack).
 - `0.1.17` — **Ghostwire Kits** compendium with all 21 Kits in role folders, cloned from the Draw Steel kits with stock bonus numbers as a provisional benchmark and reskinned signature abilities. The Duelist signature uses the Tech keyword instead of Psionic. Kit sheets relabel weapon categories: Firearm / Bow, Unarmed / Cyberlimb, Whip / Monowhip.
+- `0.1.18` — **Ghostwire Gear** compendium: 17 Kit-qualifying weapons, shields, and special gear plus 4 armors, each with ¥, Availability, and the Kit categories it satisfies (in the description header and under the name on the item sheet). Street gear adds no numbers because the Kit supplies doctrine. Armor Stamina is a no-Kit-only toggle, and a few premium items have small wielded toggles.
 
 ## Origins pack layout (Ghostwire Ancestries)
 
@@ -118,6 +119,46 @@ Rules: `docs/rulebook/10-kits.md`. The **Ghostwire Kits** compendium (pack id `k
 3. Drag **Longshot** onto a hero (with a class): the Kit appears on the sheet, **Held Breath** is added to Abilities, speed is +1, and Held Breath and the ranged free strike show +10 distance and +4 damage on the high result.
 4. Swap to **Brawler**: Stamina max rises by 6 (echelon 1), stability +1, speed +2, melee free strike +1/+1/+1, and **Stagger Combo** is added.
 5. Swap to **Juggernaut**: Stamina +9, stability +2, melee free strike +0/+0/+4, and **Payback** is added.
+
+## Gear (v1)
+
+Rules: `docs/rulebook/10-kits.md` (ownership rule), `docs/rulebook/11-economy.md`. The **Ghostwire Gear** compendium (pack id `gear`) holds the weapons and armor that make a Kit live. Gear costs ¥; Kit doctrine never does.
+
+- **Structure:** Draw Steel `treasure` items with `kind` weapon or armor. The Draw Steel weapon/armor category goes in `keywords` (`light`, `medium`, `heavy`, `bow` = firearms and dartguns, `polearm`, `whip`, `ensnaring`, `shield`), matching the categories on each Kit’s sheet. Price, Availability, and Kit fit are in `flags.draw-steel-ghostwire.gear`; treasure has no price field, so the item sheet shows them under the name.
+- **Stats (provisional):** Draw Steel puts weapon damage and distance on the Kit, so street weapons add no numbers. Armor Stamina follows the Kits chapter: with a Kit, the Kit’s Stamina already *is* the armor’s Stamina, so each armor’s Stamina effect is a **no-Kit-only** toggle (light +3, medium +6, heavy +9 at echelon 1). Sniper Rifle (+2 ranged weapon distance) and Monofilament Whip (+1 melee weapon damage) have wielded toggles; Synth-Weave has a worn toggle for an edge on Hide. All effects start disabled, as in Draw Steel.
+- **Not automated:** buying (¥ isn’t deducted), Availability gating, checking that a hero owns gear matching their Kit, weapon mods, and Stamina scaling past echelon 1.
+
+| Item | Folder | Kind (keywords) | Price | Availability | Satisfies | Toggle effect |
+|---|---|---|---|---|---|---|
+| Holdout Pistol | Weapons | weapon (light) | ¥400 | Street | Light weapon (Ghost) | — |
+| Heavy Pistol | Weapons | weapon (medium) | ¥800 | Street | Medium weapon (Gunslinger sidearm) | — |
+| SMG | Weapons | weapon (bow) | ¥1,200 | Street | SMG / carbine (Saturation) | — |
+| Assault Carbine | Weapons | weapon (bow) | ¥2,000 | Professional | SMG / carbine (Saturation), carbine (Streetsweeper) | — |
+| Combat Shotgun | Weapons | weapon (bow) | ¥1,500 | Street | Shotgun (Streetsweeper) | — |
+| Precision Rifle | Weapons | weapon (bow) | ¥3,500 | Professional | Precision rifle (Longshot) | — |
+| Sniper Rifle | Weapons | weapon (bow) | ¥6,000 | Restricted | Precision rifle (Longshot) | +2 distance on ranged weapon abilities while wielded. |
+| Mono-Knife | Weapons | weapon (light) | ¥300 | Street | Light melee weapon (Chromeblade light, Raider, Sanctified) | — |
+| Katana | Weapons | weapon (medium) | ¥900 | Street | Medium melee weapon (Gunslinger blade, Chromeblade medium, Duelist, Spellblade, Breacher) | — |
+| Maul | Weapons | weapon (heavy) | ¥1,200 | Street | Heavy weapon (Juggernaut, Bulldozer) | — |
+| Combat Spear | Weapons | weapon (polearm) | ¥700 | Street | Polearm (Reach, Staff Adept, Snarehunter) | — |
+| Composite Staff | Weapons | weapon (polearm) | ¥200 | Street | Staff (Staff Adept) | — |
+| Dartgun | Weapons | weapon (bow) | ¥1,000 | Professional | Bow / crossbow / dartgun (Hexshot) | — |
+| Lined Coat | Armor & Shields | armor (light) | ¥600 | Street | Light armor | Worn with no Kit: +3 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. |
+| Ballistic Vest | Armor & Shields | armor (medium) | ¥1,500 | Professional | Medium armor | Worn with no Kit: +6 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. |
+| Hard Armor | Armor & Shields | armor (heavy) | ¥4,000 | Restricted | Heavy armor | Worn with no Kit: +9 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. |
+| Ballistic Shield | Armor & Shields | armor (shield) | ¥800 | Street | Shield (Breacher, Warframe, Raider, Spellblade) | — |
+| Synth-Weave Coat | Armor & Shields | armor (no armor) | ¥800 | Professional | No armor (does not count as Kit armor) | Worn: edge on Hide tests (the fabric shifts to match shadows). No Stamina. |
+| Tangle-Net Launcher | Thrown & Special | weapon (ensnaring) | ¥400 | Street | Ensnaring gear (Snarehunter net) | — |
+| Monofilament Whip | Thrown & Special | weapon (whip) | ¥2,500 | Restricted | Whip / monofilament (Monowhip) | +1 damage on melee weapon abilities while wielded. |
+| Silenced Holdout | Thrown & Special | weapon (light) | ¥1,200 | Professional | Silenced light weapon (Ghost) | — |
+
+**Test click-path**
+
+1. Compendium sidebar → **Ghostwire Gear** → folders Weapons, Armor & Shields, Thrown & Special.
+2. Open **Precision Rifle**: under the name the sheet reads “¥3,500 · Professional · Satisfies: Precision rifle (Longshot)”; the description starts with the same header.
+3. Hero with the **Longshot** Kit: drag **Precision Rifle** onto the hero (it lands in Equipment). Longshot calls for no armor, so skip armor; Kit bonuses already apply. Optionally drag **Sniper Rifle** and enable its effect: ranged weapon abilities gain +2 distance.
+4. Drag **Lined Coat** onto the same hero: it lands in Equipment with its Stamina effect disabled. Leave it off (the hero has a Kit). Enable it on a hero with no Kit to see +3 Stamina.
+5. Hero with the **Ghost** Kit: drag **Silenced Holdout** and **Lined Coat**. Both land in Equipment and satisfy the Kit (light weapon + light armor).
 
 ## Chrome & Body Integrity (v1)
 

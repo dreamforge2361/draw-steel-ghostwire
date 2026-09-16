@@ -1,0 +1,51 @@
+{
+  "_id": "rl3dv87jah9Um99y",
+  "_key": "!items!rl3dv87jah9Um99y",
+  "name": "GHOSTWIRE.Gear.CombatShotgun.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/shotgun-pump.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.CombatShotgun.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "11-economy",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "combat-shotgun",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "Nac1gjnZCXUIqX7w",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "price": 1500,
+        "availability": "street",
+        "satisfies": "Shotgun (Streetsweeper)"
+      }
+    }
+  }
+}

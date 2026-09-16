@@ -1,0 +1,94 @@
+{
+  "_id": "LRQy8m9mhMn5PfRA",
+  "_key": "!items!LRQy8m9mhMn5PfRA",
+  "name": "GHOSTWIRE.Gear.MonofilamentWhip.Name",
+  "type": "treasure",
+  "img": "icons/weapons/misc/whip-red-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.MonofilamentWhip.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "11-economy",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "monofilament-whip",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "whip"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "ZjJ0KdXyEuYihRzB",
+      "_key": "!items.effects!LRQy8m9mhMn5PfRA.ZjJ0KdXyEuYihRzB",
+      "name": "GHOSTWIRE.Gear.MonofilamentWhip.EffectName",
+      "img": "icons/weapons/misc/whip-red-yellow.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.LRQy8m9mhMn5PfRA",
+      "description": "GHOSTWIRE.Gear.MonofilamentWhip.EffectDescription",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "abilityModifier",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "melee",
+            "weapon"
+          ]
+        },
+        "changes": [
+          {
+            "key": "damage.bonuses.treasure",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "3N1BB6aSRn39wWzN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "price": 2500,
+        "availability": "restricted",
+        "satisfies": "Whip / monofilament (Monowhip)"
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "_id": "JsDP8WLVfj6sxMxq",
+  "_key": "!items!JsDP8WLVfj6sxMxq",
+  "name": "GHOSTWIRE.Gear.SniperRifle.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.SniperRifle.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "11-economy",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sniper-rifle",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "lJnIWZSbYZTh01WS",
+      "_key": "!items.effects!JsDP8WLVfj6sxMxq.lJnIWZSbYZTh01WS",
+      "name": "GHOSTWIRE.Gear.SniperRifle.EffectName",
+      "img": "icons/weapons/guns/rifle-sniper-long.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.JsDP8WLVfj6sxMxq",
+      "description": "GHOSTWIRE.Gear.SniperRifle.EffectDescription",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "abilityModifier",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "ranged",
+            "weapon"
+          ]
+        },
+        "changes": [
+          {
+            "key": "distance",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "Nac1gjnZCXUIqX7w",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "price": 6000,
+        "availability": "restricted",
+        "satisfies": "Precision rifle (Longshot)"
+      }
+    }
+  }
+}

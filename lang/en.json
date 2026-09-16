@@ -12,7 +12,8 @@
       "origins": "Ghostwire Ancestries",
       "abilities": "Ghostwire Abilities",
       "chrome": "Ghostwire Chrome",
-      "kits": "Ghostwire Kits"
+      "kits": "Ghostwire Kits",
+      "gear": "Ghostwire Gear"
     },
     "Abilities": {
       "Keywords": {
@@ -335,6 +336,116 @@
           "Story": "The impact brands your target for destruction.",
           "Effect": "<p>Until the end of the target’s next turn, they have damage weakness equal to [[lookup @chr]]{the characteristic score used for this ability’s power roll}.</p>"
         }
+      }
+    },
+    "Gear": {
+      "Folders": {
+        "Weapons": "Weapons",
+        "Armor": "Armor & Shields",
+        "Special": "Thrown & Special"
+      },
+      "HoldoutPistol": {
+        "Name": "Holdout Pistol",
+        "Description": "<p><strong>Price:</strong> ¥400 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Light weapon (Ghost)</p><p>Compact, concealable sidearm. Ranged; easy to hide under a jacket. Loud unless silenced.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "HeavyPistol": {
+        "Name": "Heavy Pistol",
+        "Description": "<p><strong>Price:</strong> ¥800 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Medium weapon (Gunslinger sidearm)</p><p>Full-size, hard-hitting sidearm. Ranged; loud.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "SMG": {
+        "Name": "SMG",
+        "Description": "<p><strong>Price:</strong> ¥1,200 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> SMG / carbine (Saturation)</p><p>Compact automatic weapon built for volume fire. Ranged; loud; two-handed.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "AssaultCarbine": {
+        "Name": "Assault Carbine",
+        "Description": "<p><strong>Price:</strong> ¥2,000 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> SMG / carbine (Saturation), carbine (Streetsweeper)</p><p>Short-barreled rifle with select fire. Ranged; loud; two-handed.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "CombatShotgun": {
+        "Name": "Combat Shotgun",
+        "Description": "<p><strong>Price:</strong> ¥1,500 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Shotgun (Streetsweeper)</p><p>Pump or semi-auto scattergun for close quarters. Ranged; loud; two-handed.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "PrecisionRifle": {
+        "Name": "Precision Rifle",
+        "Description": "<p><strong>Price:</strong> ¥3,500 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> Precision rifle (Longshot)</p><p>Scoped marksman rifle. Ranged; loud; two-handed; best when braced.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "SniperRifle": {
+        "Name": "Sniper Rifle",
+        "Description": "<p><strong>Price:</strong> ¥6,000 · <strong>Availability:</strong> Restricted · <strong>Satisfies:</strong> Precision rifle (Longshot)</p><p>Long-barreled anti-personnel rifle with smart optics. Ranged; very loud; two-handed; needs a firing position.</p><p><strong>Effect (provisional):</strong> +2 distance on ranged weapon abilities while wielded. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "EffectName": "Sniper Rifle",
+        "EffectDescription": "<p>+2 distance on ranged weapon abilities while wielded.</p>"
+      },
+      "LightBlade": {
+        "Name": "Mono-Knife",
+        "Description": "<p><strong>Price:</strong> ¥300 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Light melee weapon (Chromeblade light, Raider, Sanctified)</p><p>Short monomolecular-edge knife. Melee; concealable; can be thrown.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "MediumBlade": {
+        "Name": "Katana",
+        "Description": "<p><strong>Price:</strong> ¥900 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Medium melee weapon (Gunslinger blade, Chromeblade medium, Duelist, Spellblade, Breacher)</p><p>A katana, machete, or combat sword. Melee.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "HeavyWeapon": {
+        "Name": "Maul",
+        "Description": "<p><strong>Price:</strong> ¥1,200 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Heavy weapon (Juggernaut, Bulldozer)</p><p>Sledge, breaching axe, or powered maul. Melee; two-handed.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "Polearm": {
+        "Name": "Combat Spear",
+        "Description": "<p><strong>Price:</strong> ¥700 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Polearm (Reach, Staff Adept, Snarehunter)</p><p>Spear, naginata, or shock-prod on a long haft. Melee; two-handed; reach.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "Staff": {
+        "Name": "Composite Staff",
+        "Description": "<p><strong>Price:</strong> ¥200 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Staff (Staff Adept)</p><p>Collapsible composite bo staff. Melee; two-handed.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "Dartgun": {
+        "Name": "Dartgun",
+        "Description": "<p><strong>Price:</strong> ¥1,000 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> Bow / crossbow / dartgun (Hexshot)</p><p>Compressed-gas dartgun or compact crossbow that carries payload rounds. Ranged; quiet; two-handed.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "LinedCoat": {
+        "Name": "Lined Coat",
+        "Description": "<p><strong>Price:</strong> ¥600 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Light armor</p><p>Armored long coat with ballistic lining. Looks like streetwear.</p><p><strong>Effect (provisional):</strong> Worn with no Kit: +3 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "EffectName": "Lined Coat",
+        "EffectDescription": "<p>Worn with no Kit: +3 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina.</p>"
+      },
+      "BallisticVest": {
+        "Name": "Ballistic Vest",
+        "Description": "<p><strong>Price:</strong> ¥1,500 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> Medium armor</p><p>Plated tactical vest with trauma pads. Visible under anything but a heavy coat.</p><p><strong>Effect (provisional):</strong> Worn with no Kit: +6 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "EffectName": "Ballistic Vest",
+        "EffectDescription": "<p>Worn with no Kit: +6 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina.</p>"
+      },
+      "HardArmor": {
+        "Name": "Hard Armor",
+        "Description": "<p><strong>Price:</strong> ¥4,000 · <strong>Availability:</strong> Restricted · <strong>Satisfies:</strong> Heavy armor</p><p>Full rigid plate-and-mesh riot or security armor. Obvious, heavy, and restricted.</p><p><strong>Effect (provisional):</strong> Worn with no Kit: +9 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "EffectName": "Hard Armor",
+        "EffectDescription": "<p>Worn with no Kit: +9 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina.</p>"
+      },
+      "BallisticShield": {
+        "Name": "Ballistic Shield",
+        "Description": "<p><strong>Price:</strong> ¥800 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Shield (Breacher, Warframe, Raider, Spellblade)</p><p>Composite riot shield with a view port. Takes a hand.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "SynthWeave": {
+        "Name": "Synth-Weave Coat",
+        "Description": "<p><strong>Price:</strong> ¥800 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> No armor (does not count as Kit armor)</p><p>Light adaptive-fiber coat for no-armor runners. It doesn’t satisfy light, medium, or heavy armor and never grants Kit armor Stamina.</p><p><strong>Effect (provisional):</strong> Worn: edge on Hide tests (the fabric shifts to match shadows). No Stamina. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s Stamina and stability bonuses need qualifying armor worn. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "EffectName": "Synth-Weave Coat",
+        "EffectDescription": "<p>Worn: edge on Hide tests (the fabric shifts to match shadows). No Stamina.</p>"
+      },
+      "EnsnaringNet": {
+        "Name": "Tangle-Net Launcher",
+        "Description": "<p><strong>Price:</strong> ¥400 · <strong>Availability:</strong> Street · <strong>Satisfies:</strong> Ensnaring gear (Snarehunter net)</p><p>Wrist-mounted or hand-thrown weighted net with polymer lines. Thrown.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "MonofilamentWhip": {
+        "Name": "Monofilament Whip",
+        "Description": "<p><strong>Price:</strong> ¥2,500 · <strong>Availability:</strong> Restricted · <strong>Satisfies:</strong> Whip / monofilament (Monowhip)</p><p>A weighted monofilament line that cuts through almost anything. Melee; reach; dangerous to the careless wielder.</p><p><strong>Effect (provisional):</strong> +1 damage on melee weapon abilities while wielded. Enable the effect on your sheet when it applies; it starts disabled like Draw Steel treasure.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>",
+        "EffectName": "Monofilament Whip",
+        "EffectDescription": "<p>+1 damage on melee weapon abilities while wielded.</p>"
+      },
+      "SilencedHoldout": {
+        "Name": "Silenced Holdout",
+        "Description": "<p><strong>Price:</strong> ¥1,200 · <strong>Availability:</strong> Professional · <strong>Satisfies:</strong> Silenced light weapon (Ghost)</p><p>Integrally suppressed holdout pistol. Ranged; concealable; quiet — shots don’t automatically reveal you.</p><p><strong>Kit rule:</strong> a Kit’s weapon bonuses and signature ability need a qualifying weapon in hand. The Kit supplies damage and distance; this item is what makes the Kit live.</p><p><em>Gear costs ¥; Kit doctrine never does.</em></p>"
+      },
+      "SheetLine": "{price} · {availability} · Satisfies: {satisfies}",
+      "Availability": {
+        "street": "Street",
+        "professional": "Professional",
+        "restricted": "Restricted",
+        "military": "Military"
       }
     },
     "Peoples": {

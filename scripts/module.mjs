@@ -164,21 +164,30 @@ Hooks.on("deleteItem", (item, options, userId) => {
   if (granted.length) actor.deleteEmbeddedDocuments("Item", granted);
 });
 
-// Item sheet: chrome implants show "Grade · Location · Body Integrity · ¥ · Availability" under the name.
-// Draw Steel treasure has no price field, so the price lives in flags.draw-steel-ghostwire.chrome.price.
+// Item sheet: chrome and gear show their ¥ and Availability under the name.
+// Draw Steel treasure has no price field, so price lives in flags.draw-steel-ghostwire.{chrome,gear}.price.
+const formatYen = price => `¥${Number(price ?? 0).toLocaleString(game.i18n.lang)}`;
+
 Hooks.on("renderDrawSteelItemSheet", (app, element) => {
   const chrome = app.document.getFlag(MODULE_ID, "chrome");
+  const gear = app.document.getFlag(MODULE_ID, "gear");
   const name = element.querySelector(".sheet-header .document-name");
-  if (!chrome || !name || element.querySelector(".ghostwire-chrome-line")) return;
+  if (!(chrome || gear) || !name || element.querySelector(".ghostwire-chrome-line")) return;
   const line = document.createElement("div");
   line.className = "ghostwire-chrome-line";
-  line.textContent = game.i18n.format("GHOSTWIRE.Chrome.SheetLine", {
-    grade: game.i18n.localize(`GHOSTWIRE.Chrome.Grades.${chrome.grade}`),
-    location: game.i18n.localize(`GHOSTWIRE.Chrome.Locations.${chrome.location}`),
-    integrity: chrome.integrity,
-    price: `¥${Number(chrome.price ?? 0).toLocaleString(game.i18n.lang)}`,
-    availability: game.i18n.localize(`GHOSTWIRE.Chrome.Availability.${chrome.availability}`),
-  });
+  line.textContent = chrome
+    ? game.i18n.format("GHOSTWIRE.Chrome.SheetLine", {
+      grade: game.i18n.localize(`GHOSTWIRE.Chrome.Grades.${chrome.grade}`),
+      location: game.i18n.localize(`GHOSTWIRE.Chrome.Locations.${chrome.location}`),
+      integrity: chrome.integrity,
+      price: formatYen(chrome.price),
+      availability: game.i18n.localize(`GHOSTWIRE.Chrome.Availability.${chrome.availability}`),
+    })
+    : game.i18n.format("GHOSTWIRE.Gear.SheetLine", {
+      price: formatYen(gear.price),
+      availability: game.i18n.localize(`GHOSTWIRE.Gear.Availability.${gear.availability}`),
+      satisfies: gear.satisfies,
+    });
   name.after(line);
 });
 
