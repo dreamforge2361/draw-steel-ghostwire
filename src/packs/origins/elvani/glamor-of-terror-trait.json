@@ -1,22 +1,22 @@
 {
-  "_id": "C5BuTGq5er1JPPcS",
-  "_key": "!items!C5BuTGq5er1JPPcS",
-  "name": "GHOSTWIRE.Peoples.Corran.StoneShaper.Name",
+  "_id": "BkApfnE52q6O7XBb",
+  "_key": "!items!BkApfnE52q6O7XBb",
+  "name": "GHOSTWIRE.Peoples.Elvani.GlamorOfTerror.Name",
   "type": "ancestryTrait",
-  "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
+  "img": "icons/magic/control/fear-fright-monster-grin-purple-blue.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Peoples.Corran.StoneShaper.Description",
+      "value": "GHOSTWIRE.Peoples.Elvani.GlamorOfTerror.Description",
       "director": ""
     },
     "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
-    "_dsid": "stone-shaper",
+    "_dsid": "glamor-of-terror",
     "advancements": {},
-    "points": 1,
+    "points": 2,
     "prerequisites": { "value": "", "dsid": [], "level": null }
   },
   "effects": [],
-  "folder": null,
+  "folder": "8ZeBJDKQYdnngrIY",
   "sort": 0,
   "ownership": { "default": 0 },
   "flags": {}

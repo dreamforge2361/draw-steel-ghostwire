@@ -1,22 +1,22 @@
 {
-  "_id": "jiUO0B9qZWmoD300",
-  "_key": "!items!jiUO0B9qZWmoD300",
-  "name": "GHOSTWIRE.Peoples.Corran.StandTough.Name",
+  "_id": "C5BuTGq5er1JPPcS",
+  "_key": "!items!C5BuTGq5er1JPPcS",
+  "name": "GHOSTWIRE.Peoples.Corran.StoneShaper.Name",
   "type": "ancestryTrait",
-  "img": "icons/magic/earth/construct-stone.webp",
+  "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Peoples.Corran.StandTough.Description",
+      "value": "GHOSTWIRE.Peoples.Corran.StoneShaper.Description",
       "director": ""
     },
     "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
-    "_dsid": "stand-tough",
+    "_dsid": "stone-shaper",
     "advancements": {},
     "points": 1,
     "prerequisites": { "value": "", "dsid": [], "level": null }
   },
   "effects": [],
-  "folder": null,
+  "folder": "LhLB3FpsJOXXugiy",
   "sort": 0,
   "ownership": { "default": 0 },
   "flags": {}

@@ -1,0 +1,48 @@
+{
+  "_id": "GLkKrRMeWpCMQD88",
+  "_key": "!items!GLkKrRMeWpCMQD88",
+  "name": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/movement/feet-winged-boots-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "perseverance",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "TIz74oPzWlQeAmJI",
+      "_key": "!items.effects!GLkKrRMeWpCMQD88.TIz74oPzWlQeAmJI",
+      "name": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.GLkKrRMeWpCMQD88",
+      "img": "icons/skills/movement/feet-winged-boots-blue.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.PureHuman.Perseverance.EffectDescription",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "system.statuses.slowed.speed", "type": "override", "value": 3, "phase": "initial", "priority": 5 },
+          { "key": "system.skills.modifiers.endurance.edges", "type": "add", "value": 1, "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": false,
+      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "mPByk1DZrfGgfSPX",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

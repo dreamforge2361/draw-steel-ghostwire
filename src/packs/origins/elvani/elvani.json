@@ -1,0 +1,57 @@
+{
+  "_id": "2N22tpMSqPy7KtM9",
+  "_key": "!items!2N22tpMSqPy7KtM9",
+  "name": "GHOSTWIRE.Peoples.Elvani.Name",
+  "type": "ancestry",
+  "img": "icons/environment/settlement/watchtower-cliff.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Elvani.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "elvani",
+    "advancements": {
+      "BEIAgT3o8EIcIsnb": {
+        "_id": "BEIAgT3o8EIcIsnb",
+        "name": "Signature Trait",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.QjFD2vrzmuFFr47T" }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": { "type": "", "perkType": [] }
+      },
+      "jBPrEA0vkjiG77d4": {
+        "_id": "jBPrEA0vkjiG77d4",
+        "name": "GHOSTWIRE.Peoples.Elvani.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": { "level": null },
+        "pool": [
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.BkApfnE52q6O7XBb" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.CLe3qQ18f2lUheyp" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.pTMx0vJGcnvmQlB0" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.ApeGL1aixrw7aRUP" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.6VKm9YiHiWS0CPER" },
+          { "uuid": "Compendium.draw-steel-ghostwire.origins.Item.H6bwZLNUhvVENjab" }
+        ],
+        "sort": 0,
+        "description": "GHOSTWIRE.Peoples.Elvani.PurchasedTraits.Description",
+        "repick": {},
+        "chooseN": 3,
+        "additional": { "type": "ancestryTrait", "perkType": [] }
+      }
+    }
+  },
+  "effects": [],
+  "folder": "8ZeBJDKQYdnngrIY",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

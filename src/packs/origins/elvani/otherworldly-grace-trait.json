@@ -1,0 +1,47 @@
+{
+  "_id": "ApeGL1aixrw7aRUP",
+  "_key": "!items!ApeGL1aixrw7aRUP",
+  "name": "GHOSTWIRE.Peoples.Elvani.OtherworldlyGrace.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/social/peace-luck-insult.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Elvani.OtherworldlyGrace.Description",
+      "director": ""
+    },
+    "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
+    "_dsid": "otherworldly-grace",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": { "value": "", "dsid": [], "level": null }
+  },
+  "effects": [
+    {
+      "_id": "i35ju0eTPf79f2Xc",
+      "_key": "!items.effects!ApeGL1aixrw7aRUP.i35ju0eTPf79f2Xc",
+      "name": "GHOSTWIRE.Peoples.Elvani.OtherworldlyGrace.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.ApeGL1aixrw7aRUP",
+      "img": "icons/skills/social/peace-luck-insult.webp",
+      "type": "base",
+      "description": "GHOSTWIRE.Peoples.Elvani.OtherworldlyGrace.Description",
+      "system": {
+        "end": { "roll": "1d10 + @combat.save.bonus" },
+        "changes": [
+          { "key": "system.combat.save.threshold", "type": "override", "value": 5, "phase": "initial", "priority": null }
+        ]
+      },
+      "disabled": false,
+      "duration": { "value": null, "units": "seconds", "expiry": null, "expired": false },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "8ZeBJDKQYdnngrIY",
+  "sort": 0,
+  "ownership": { "default": 0 },
+  "flags": {}
+}

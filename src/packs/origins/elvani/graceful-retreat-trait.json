@@ -1,34 +1,33 @@
 {
-  "_id": "GLkKrRMeWpCMQD88",
-  "_key": "!items!GLkKrRMeWpCMQD88",
-  "name": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Name",
+  "_id": "CLe3qQ18f2lUheyp",
+  "_key": "!items!CLe3qQ18f2lUheyp",
+  "name": "GHOSTWIRE.Peoples.Elvani.GracefulRetreat.Name",
   "type": "ancestryTrait",
   "img": "icons/skills/movement/feet-winged-boots-blue.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Description",
+      "value": "GHOSTWIRE.Peoples.Elvani.GracefulRetreat.Description",
       "director": ""
     },
     "source": { "book": "Ghostwire Core Rulebook", "page": "09-species", "license": "Draw Steel Creator License" },
-    "_dsid": "perseverance",
+    "_dsid": "graceful-retreat",
     "advancements": {},
     "points": 1,
     "prerequisites": { "value": "", "dsid": [], "level": null }
   },
   "effects": [
     {
-      "_id": "TIz74oPzWlQeAmJI",
-      "_key": "!items.effects!GLkKrRMeWpCMQD88.TIz74oPzWlQeAmJI",
-      "name": "GHOSTWIRE.Peoples.PureHuman.Perseverance.Name",
-      "origin": "Compendium.draw-steel-ghostwire.origins.Item.GLkKrRMeWpCMQD88",
+      "_id": "yNTndwst0VAWy2lM",
+      "_key": "!items.effects!CLe3qQ18f2lUheyp.yNTndwst0VAWy2lM",
+      "name": "GHOSTWIRE.Peoples.Elvani.GracefulRetreat.Name",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.CLe3qQ18f2lUheyp",
       "img": "icons/skills/movement/feet-winged-boots-blue.webp",
       "type": "base",
-      "description": "GHOSTWIRE.Peoples.PureHuman.Perseverance.EffectDescription",
+      "description": "GHOSTWIRE.Peoples.Elvani.GracefulRetreat.Description",
       "system": {
         "end": { "roll": "1d10 + @combat.save.bonus" },
         "changes": [
-          { "key": "system.statuses.slowed.speed", "type": "override", "value": 3, "phase": "initial", "priority": 5 },
-          { "key": "system.skills.modifiers.endurance.edges", "type": "add", "value": 1, "phase": "initial", "priority": null }
+          { "key": "system.movement.disengage", "type": "add", "value": 1, "phase": "initial", "priority": null }
         ]
       },
       "disabled": false,
@@ -41,7 +40,7 @@
       "showIcon": 1
     }
   ],
-  "folder": null,
+  "folder": "8ZeBJDKQYdnngrIY",
   "sort": 0,
   "ownership": { "default": 0 },
   "flags": {}

@@ -1,10 +1,12 @@
-// Compiles src/packs/<pack>/*.json into LevelDB packs under packs/<pack>.
+// Compiles src/packs/<pack>/**/*.json into LevelDB packs under packs/<pack>.
 // String values that are GHOSTWIRE.* lang keys are replaced with lang/en.json text,
 // so lang/en.json stays the source of truth for names and descriptions.
+// A subfolder's _folder.json is a compendium Folder; every item in that subfolder
+// must set "folder" to that Folder's _id (the build fails otherwise).
 // Run with Foundry closed:  node tools/build-packs.mjs
 import { createRequire } from "node:module";
-import { readFileSync, readdirSync, rmSync } from "node:fs";
-import { join } from "node:path";
+import { readFileSync, readdirSync, rmSync, existsSync } from "node:fs";
+import { dirname, join } from "node:path";
 
 const FOUNDRY_APP = process.env.FOUNDRY_APP ?? "C:/Program Files/Foundry Virtual Tabletop/resources/app";
 const { ClassicLevel } = createRequire(join(FOUNDRY_APP, "package.json"))("classic-level");
@@ -23,13 +25,25 @@ function resolve(value) {
   return value;
 }
 
+const readJson = path => resolve(JSON.parse(readFileSync(path, "utf8")));
+
 for (const pack of readdirSync("src/packs")) {
+  const src = join("src/packs", pack);
   const out = join("packs", pack);
   rmSync(out, { recursive: true, force: true });
   const db = new ClassicLevel(out, { valueEncoding: "json" });
-  for (const file of readdirSync(join("src/packs", pack)).filter(f => f.endsWith(".json"))) {
-    const { _key, ...doc } = resolve(JSON.parse(readFileSync(join("src/packs", pack, file), "utf8")));
-    const stats = { coreVersion: "14.367", systemId: "draw-steel", systemVersion: "1.1.2" };
+  const stats = { coreVersion: "14.367", systemId: "draw-steel", systemVersion: "1.1.2" };
+  const files = readdirSync(src, { recursive: true }).filter(f => f.endsWith(".json")).sort();
+  for (const file of files) {
+    const { _key, ...doc } = readJson(join(src, file));
+    if (_key.startsWith("!folders!")) {
+      await db.put(_key, { ...doc, _stats: stats });
+      console.log(`${pack}: Folder "${doc.name}"`);
+      continue;
+    }
+    const folderFile = join(src, dirname(file), "_folder.json");
+    const expected = existsSync(folderFile) ? JSON.parse(readFileSync(folderFile, "utf8"))._id : null;
+    if (doc.folder !== expected) throw new Error(`${file}: folder is ${doc.folder}, expected ${expected}`);
     // Embedded effects are stored under their own keys; the parent keeps only their ids.
     for (const { _key: effectKey, ...effect } of doc.effects) {
       await db.put(effectKey, { ...effect, _stats: stats });
