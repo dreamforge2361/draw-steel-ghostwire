@@ -1,0 +1,80 @@
+{
+  "_id": "zLXYWyfkOXSA7IEx",
+  "_key": "!items!zLXYWyfkOXSA7IEx",
+  "name": "GHOSTWIRE.Peoples.Cyborg.LockedProcessors.Name",
+  "type": "ancestryTrait",
+  "img": "icons/skills/wounds/anatomy-organ-brain-pink-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.LockedProcessors.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "locked-processors",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "FVDwnS6mgzqDsjmu",
+      "_key": "!items.effects!zLXYWyfkOXSA7IEx.FVDwnS6mgzqDsjmu",
+      "name": "GHOSTWIRE.Peoples.Cyborg.LockedProcessors.Name",
+      "img": "icons/skills/wounds/anatomy-organ-brain-pink-red.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.origins.Item.zLXYWyfkOXSA7IEx",
+      "system": {
+        "changes": [
+          {
+            "key": "system.statuses.immunities",
+            "type": "add",
+            "value": "dazed",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "GHOSTWIRE.Peoples.Cyborg.LockedProcessors.Description",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    }
+  ],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

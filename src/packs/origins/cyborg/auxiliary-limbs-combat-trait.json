@@ -1,0 +1,33 @@
+{
+  "_id": "bEJrcH33ekVQ92H6",
+  "_key": "!items!bEJrcH33ekVQ92H6",
+  "name": "GHOSTWIRE.Peoples.Cyborg.AuxiliaryLimbsCombat.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/control/debuff-chains-shackles-movement-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.AuxiliaryLimbsCombat.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "auxiliary-limbs-combat",
+    "advancements": {},
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

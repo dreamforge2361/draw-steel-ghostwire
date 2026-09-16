@@ -1,0 +1,90 @@
+{
+  "_id": "l1B7YXk6ESpqGubu",
+  "_key": "!items!l1B7YXk6ESpqGubu",
+  "name": "GHOSTWIRE.Peoples.Cyborg.Name",
+  "type": "ancestry",
+  "img": "icons/creatures/magical/construct-golem-robot-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cyborg",
+    "advancements": {
+      "M0sCxSH1EmFEgbgq": {
+        "name": "Signature Trait",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "M0sCxSH1EmFEgbgq",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.GKKVzsE7uO4HLYDi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.dgBmVGmpoJ8cqmVO"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "OivTe7bRC3hYc8db": {
+        "name": "GHOSTWIRE.Peoples.Cyborg.PurchasedTraits.Name",
+        "img": "icons/skills/social/trading-injustice-scale-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "OivTe7bRC3hYc8db",
+        "description": "GHOSTWIRE.Peoples.Cyborg.PurchasedTraits.Description",
+        "additional": {
+          "type": "ancestryTrait",
+          "perkType": []
+        },
+        "chooseN": 3,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.wEQTCGWeWxbrD3Y3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.1AEnOK1gTEHjOLEj"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.hFbUGmW7WZXkc7kp"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.bEJrcH33ekVQ92H6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.pVsfJpZi2gkskLqr"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.zLXYWyfkOXSA7IEx"
+          }
+        ],
+        "sort": 0,
+        "repick": {}
+      }
+    }
+  },
+  "effects": [],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

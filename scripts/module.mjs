@@ -13,6 +13,10 @@ Hooks.once("init", () => {
   if (defaultItems.delete(DS_RIDE)) defaultItems.add(GHOSTWIRE_DRIVE);
   else console.warn(`${MODULE_ID} | Ride not found in hero default items; Drive not added`);
 
+  // Tech: non-Magic, non-Psionic ability keyword for machine abilities (Cyborg Installed Suite).
+  // Draw Steel localizes keyword labels at i18nInit, after this hook.
+  ds.CONFIG.abilities.keywords.tech ??= { label: "GHOSTWIRE.Abilities.Keywords.Tech" };
+
   patchPreviousLifeFilter();
 });
 

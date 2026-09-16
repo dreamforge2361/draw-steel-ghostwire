@@ -1,0 +1,33 @@
+{
+  "_id": "1AEnOK1gTEHjOLEj",
+  "_key": "!items!1AEnOK1gTEHjOLEj",
+  "name": "GHOSTWIRE.Peoples.Cyborg.PredictiveSensors.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.PredictiveSensors.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "predictive-sensors",
+    "advancements": {},
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

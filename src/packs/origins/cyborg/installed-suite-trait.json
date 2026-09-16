@@ -1,0 +1,62 @@
+{
+  "_id": "pVsfJpZi2gkskLqr",
+  "_key": "!items!pVsfJpZi2gkskLqr",
+  "name": "GHOSTWIRE.Peoples.Cyborg.InstalledSuite.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/perception/third-eye-blue-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.InstalledSuite.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "installed-suite",
+    "advancements": {
+      "tVKZxxDNAwwjcmmF": {
+        "name": "GHOSTWIRE.Peoples.Cyborg.InstalledSuite.AdvancementName",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "tVKZxxDNAwwjcmmF",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.Peqr7g7HZOH2OscM"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.HVyHEUARAnj2D0f6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.HYHaUsaTfTMvV8ws"
+          }
+        ],
+        "chooseN": 1,
+        "description": "",
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 2,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

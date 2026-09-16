@@ -3,7 +3,7 @@
   "_key": "!items!UYu7KmyAIL1xVGe7",
   "name": "GHOSTWIRE.Peoples.Revenant.FormerLife.Cyborg.Name",
   "type": "ancestryTrait",
-  "img": "icons/magic/death/grave-tombstone-glow-tan.webp",
+  "img": "icons/creatures/magical/construct-golem-robot-blue.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Peoples.Revenant.FormerLife.Cyborg.Description",
@@ -33,7 +33,7 @@
     "draw-steel-ghostwire": {
       "formerLife": {
         "people": "cyborg",
-        "folder": null
+        "folder": "CFXIiUsRsGr8AEqc"
       }
     }
   }

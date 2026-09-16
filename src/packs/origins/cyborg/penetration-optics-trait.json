@@ -1,0 +1,56 @@
+{
+  "_id": "wEQTCGWeWxbrD3Y3",
+  "_key": "!items!wEQTCGWeWxbrD3Y3",
+  "name": "GHOSTWIRE.Peoples.Cyborg.PenetrationOptics.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/perception/eye-slit-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.PenetrationOptics.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "penetration-optics",
+    "advancements": {
+      "wIDFLAsR45xf49om": {
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "wIDFLAsR45xf49om",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.origins.Item.gk78dbMJirlXnW6y"
+          }
+        ],
+        "description": "",
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "points": 1,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

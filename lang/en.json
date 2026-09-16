@@ -13,6 +13,9 @@
       "abilities": "Ghostwire Abilities"
     },
     "Abilities": {
+      "Keywords": {
+        "Tech": "Tech"
+      },
       "Drive": {
         "Name": "Drive",
         "Description": "<p>A creature can take the Drive move action only while piloting a vehicle. When a creature takes the Drive move action, they cause their vehicle to move up to the vehicle’s speed, taking the driver and any passengers with it. Alternatively, a creature can use the Drive move action to have their vehicle use the Disengage move action as a free triggered action. A creature can use the Drive move action only once per round. A vehicle can only have this move action applied to it once per round. This movement can be broken up with the driver’s maneuver and main action however they wish.</p>"
@@ -295,6 +298,64 @@
           "Echelon2Description": "<p>You fly. You can stay aloft for a number of rounds equal to your Physique score (minimum 1 round) before you fall.</p>"
         }
       },
+      "Cyborg": {
+        "Name": "Cyborg",
+        "Description": "<p>Machine-first threshold beings — integrated, augmented, existentially unstable. Distinct from chrome-augmented meat.</p><p>A Cyborg is the far end of the chrome spectrum: effectively all organic Body Integrity spent, frame and cortex first. Living, non-Cyborg heroes who want implants use the Chrome chapter; the Cyborg does not. Full conversion is made, not bred — surgery, battlefield salvage, corp programs, or voluntary upload into a shell.</p><h4>Cyborg Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.GKKVzsE7uO4HLYDi]{Cortical Firewall}</p><p>Hard constraints: @UUID[Compendium.draw-steel-ghostwire.origins.Item.dgBmVGmpoJ8cqmVO]{Arcane Severance}</p><h4>Purchased Cyborg Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Penetration Optics, Installed Suite with Particle Lance.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.wEQTCGWeWxbrD3Y3]{Penetration Optics (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1AEnOK1gTEHjOLEj]{Predictive Sensors (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.hFbUGmW7WZXkc7kp]{Auxiliary Limbs — Athletics (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.bEJrcH33ekVQ92H6]{Auxiliary Limbs — Combat (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.pVsfJpZi2gkskLqr]{Installed Suite (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zLXYWyfkOXSA7IEx]{Locked Processors (2 Points)}</p><h4>Hard Constraints</h4><p><strong>Arcane Severance:</strong> You can’t use Magic-keyword abilities. You are barred from the Elementalist and Street Priest classes, and from any Veil-casting path that requires Magic. The Tech-keyword Installed Suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.</p><p><strong>Tech-only recovery:</strong> You are healed by tech, Wrench-style repair, or Medic tech procedures as your table defines, not by Magic healing (Director’s call on Troubadour-style and similar effects).</p><p><strong>System Crisis:</strong> When you would die under the usual 0 Stamina and dying rules, you instead enter a Director-facing System Crisis (machine failure) rather than a normal organic death spiral. This is a rule pointer only; the full Crisis table isn’t defined yet.</p><p><em>These are Ghostwire chargen and setting rules. They cost no ancestry points. Cyborgs don’t use the Chrome / Body Integrity chapter.</em></p>",
+        "PurchasedTraits": {
+          "Name": "Purchased Traits",
+          "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Penetration Optics, Installed Suite with Particle Lance.)</p>"
+        },
+        "CorticalFirewall": {
+          "Name": "Cortical Firewall",
+          "Description": "<p>Hardened cortex shielding and trauma-scarred processors blunt psychic assault. You have psychic immunity equal to [[lookup @level]]{your level}.</p>"
+        },
+        "ArcaneSeverance": {
+          "Name": "Arcane Severance",
+          "Description": "<p><strong>Arcane Severance:</strong> You can’t use Magic-keyword abilities. You are barred from the Elementalist and Street Priest classes, and from any Veil-casting path that requires Magic. The Tech-keyword Installed Suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.</p><p><strong>Tech-only recovery:</strong> You are healed by tech, Wrench-style repair, or Medic tech procedures as your table defines, not by Magic healing (Director’s call on Troubadour-style and similar effects).</p><p><strong>System Crisis:</strong> When you would die under the usual 0 Stamina and dying rules, you instead enter a Director-facing System Crisis (machine failure) rather than a normal organic death spiral. This is a rule pointer only; the full Crisis table isn’t defined yet.</p><p><em>These are Ghostwire chargen and setting rules. They cost no ancestry points. Cyborgs don’t use the Chrome / Body Integrity chapter.</em></p>"
+        },
+        "PenetrationOptics": {
+          "Name": "Penetration Optics",
+          "Description": "<p>As a maneuver, you adjust your vision to see through mundane obstructions up to 1 square thick. While your vision is adjusted this way, you can’t see and have no line of effect to creatures or objects within 1 square of you. You can restore your normal vision as a maneuver.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.gk78dbMJirlXnW6y]{Penetration Optics}</p>"
+        },
+        "PenetrationOpticsAbility": {
+          "Name": "Penetration Optics",
+          "Effect": "<p>You adjust your vision to see through mundane obstructions up to 1 square thick. While your vision is adjusted this way, you can’t see and have no line of effect to creatures or objects within 1 square of you. You can restore your normal vision as a maneuver.</p>"
+        },
+        "PredictiveSensors": {
+          "Name": "Predictive Sensors",
+          "Description": "<p>Your sensors automatically know the location of concealed (not hidden) creatures within 20 squares, and you negate the bane on strikes against them. When you are targeted by a strike, you can use a triggered action to impose a bane on the power roll.</p>"
+        },
+        "AuxiliaryLimbsAthletics": {
+          "Name": "Auxiliary Limbs — Athletics",
+          "Description": "<p>You gain an edge on Climb, Gymnastics, or Swim tests when you can use all your limbs.</p>"
+        },
+        "AuxiliaryLimbsCombat": {
+          "Name": "Auxiliary Limbs — Combat",
+          "Description": "<p>When you use Grab or Knockback against an adjacent creature, you can target one additional adjacent creature, using the same power roll for both. You can have up to two creatures grabbed at once.</p>"
+        },
+        "InstalledSuite": {
+          "Name": "Installed Suite",
+          "AdvancementName": "Installed Suite",
+          "Description": "<p>Choose one piece of installed hardware. It grants one of the following signature abilities, usable at will. These are Tech abilities — chrome weapon mounts, particle projectors, and servo overrides — not psionic or magic powers.</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.Peqr7g7HZOH2OscM]{Kinetic Driver}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.HVyHEUARAnj2D0f6]{Particle Lance}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.HYHaUsaTfTMvV8ws]{Servo Overclock}</p>"
+        },
+        "KineticDriver": {
+          "Name": "Kinetic Driver",
+          "Story": "A mag-rail driver in your frame fires a focused kinetic slug that hammers the target."
+        },
+        "ParticleLance": {
+          "Name": "Particle Lance",
+          "Story": "A coherent particle lance fires from a projector built into your frame."
+        },
+        "ServoOverclock": {
+          "Name": "Servo Overclock",
+          "Story": "You dump power into servos — your own, or an ally’s gear through a wireless override.",
+          "Effect": "<p>The target gains a bonus to speed equal to [[lookup formula=\"max(@R, @I, @P)\" evaluate=true]]{your Logic, Instinct, or Persona score (your choice)} until the start of your next turn.</p>"
+        },
+        "LockedProcessors": {
+          "Name": "Locked Processors",
+          "Description": "<p>Hardened process priority keeps your mind online. You can’t be made dazed.</p>"
+        }
+      },
       "Revenant": {
         "Name": "Revenant",
         "Description": "<p>The dead who refused to stay down — driven by unfinished vengeance.</p><p>No one is born a Revenant. A person who died with a burning purpose rises again, sustained by will, keeping memories and personality.</p><h4>Revenant Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.JD7nJvUCKOHMCTWo]{Tough But Withered}</p><p>Former Life (choose one People you were before you died):</p><ul><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.E50vuGbpRAR1tEiG]{Former Life: Pure Human}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.kcq8w02zX4pf8qxl]{Former Life: Corran}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.FOXPE9fot3N9Jxs4]{Former Life: Elvani}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.nCpyldyrfOVS3OG9]{Former Life: Goliar}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.X4ai6DF083LzFtjc]{Former Life: Changer}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GDoxeZM9K62j9dgl]{Former Life: Mutant}</li><li>@UUID[Compendium.draw-steel-ghostwire.origins.Item.UYu7KmyAIL1xVGe7]{Former Life: Cyborg}</li></ul><h4>Purchased Revenant Traits</h4><p>You have 2 ancestry points to spend on the following traits, or 3 ancestry points if your size is 1S (use the Revenant (Small) ancestry). (Quick Build: Bloodless, plus Undead Influence if size 1S.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.GpVnUPocyfBDlOLU]{Bloodless (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1e7sbAXjl4JFHKWl]{Previous Life: 1 Point (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.EFsFl4QlFNKWhojE]{Previous Life: 2 Points (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zSrXEtjbsdDzbPEY]{Undead Influence (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1CCRqQC3LzYkpAhs]{Vengeance Mark (2 Points)}</p>",
@@ -340,7 +401,7 @@
           },
           "Cyborg": {
             "Name": "Former Life: Cyborg",
-            "Description": "<p>You were a Cyborg before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> The Cyborg People isn’t in Ghostwire Origins yet, so Previous Life has no traits to pick from.</p>"
+            "Description": "<p>You were a Cyborg before you died. Your size is that People’s size and your speed is 5. You don’t receive any other ancestral traits from that People unless you buy them with Previous Life: 1 Point or Previous Life: 2 Points, which can only pick purchased traits from this People.</p><p><strong>Size:</strong> 1M. <strong>Speed:</strong> 5.</p><p><strong>Previous Life options:</strong> 1-point: Auxiliary Limbs — Athletics, Penetration Optics, Predictive Sensors. 2-point: Auxiliary Limbs — Combat, Installed Suite, Locked Processors.</p>"
           }
         },
         "ToughButWithered": {

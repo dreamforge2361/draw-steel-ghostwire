@@ -1,0 +1,33 @@
+{
+  "_id": "dgBmVGmpoJ8cqmVO",
+  "_key": "!items!dgBmVGmpoJ8cqmVO",
+  "name": "GHOSTWIRE.Peoples.Cyborg.ArcaneSeverance.Name",
+  "type": "ancestryTrait",
+  "img": "icons/magic/symbols/cross-circle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Peoples.Cyborg.ArcaneSeverance.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "09-species",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "arcane-severance",
+    "advancements": {},
+    "points": null,
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CFXIiUsRsGr8AEqc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
