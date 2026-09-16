@@ -1,6 +1,6 @@
 # Ghostwire Core Rulebook — Chapter: Kits
 
-**Status:** Stage 2.5 draft — DS alignment pass (no Ghostwire tier ladder)  
+**Status:** Stage 2.5 draft — DS alignment pass; **Economy/Chrome bridge locked 2026-09-16**  
 **Source of record:** `docs/masters/GHOSTWIRE_KITS_MASTER.md`  
 **Context:** Drafted after class batch approval (2026-09-16). Loadout doctrines shared across classes (Operator Merc dual-kit still an open stacking rule).
 
@@ -109,10 +109,18 @@ Weapon/armor "category" is what the Economy item must satisfy; bonus lines are i
 
 ---
 
+
+## Economy + Chrome bridge (locked 2026-09-16)
+
+- **Doctrine never costs ¥.** Starting: one free Kit **including street-band qualifying gear**. Later Kits: class / mentor / downtime training — not a nuyen purchase.
+- **¥ buys objects:** weapons, armor, mods, chrome, Cyborg frame modules.
+- **Ownership rule** keeps Economy meaningful: no qualifying gear → no Kit bonuses.
+- See `docs/rulebook/11-economy.md` and `docs/rulebook/12-chrome.md`.
+
 ## How Kits connect to the rest of the game
 
 - **Economy (hard dependency):** the Kit's weapon/armor category must be satisfied by nuyen-bought, Availability-gated gear; mods stack on top via mod-slot crafting. The Economy is the prerequisite and the progression axis; the Kit is the doctrine layer. This is the deliberate reconciliation that keeps Kits from replacing or bypassing the Economy and gadget system — Kits sit on top of it and require it.
-- **Chrome:** unarmed/cyber-limb Kits (**Brawler, Mantis**) and implanted weapons interlock with the Chrome chapter — a cyber-limb or implant weapon can be the "gear" that satisfies an unarmed or light-weapon Kit, and Chrome mods tune it. Body Integrity, not nuyen, is the cost of the implant; the Kit is still free training.
+- **Chrome:** unarmed/cyber-limb Kits (**Brawler, Mantis**) and implanted weapons interlock with the Chrome chapter — a cyber-limb or implant weapon can be the **qualifying gear** for those Kits. The implant costs **¥ + Body Integrity**; the Kit doctrine is still free training. Cyborgs use **Frame Modules** / hardpoint mounts the same way (no Body Integrity).
 - **Combat:** Kit bonuses and the signature ability plug straight into the Combat chapter's Power Roll result bands, action economy, forced movement, and conditions — a Kit is just a trained set of options within that engine.
 - **Downtime:** swapping a Kit is a respite activity; acquiring/upgrading the gear a Kit needs is Economy/Downtime work (purchase, acquisition project, or mod crafting).
 - **Classes (attachment point):** class writeups define which classes get a Kit, how many signature options, and any class-specific Kit perks (extra slots, bonus Kit abilities, doctrine tweaks). Martial classes — **Operator, Scout, Commander** — lean hard on Kits; casters/specialists lean on their resource systems (the Veil, the Wired). Numbers for every bonus line are set in the numeric pass.
