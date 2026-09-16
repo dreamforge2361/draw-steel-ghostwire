@@ -26,6 +26,8 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 - [x] All eight Peoples as DS creation-time ancestry packages (Mutant=Devil, Cyborg=Time Raider; commit `2cde39a`)
 - [x] Kits chapter interim DS pass
 - [x] SPECIES-DS-MAP + DS-ALIGNMENT doctrine locked
+- [x] Economy v1 + Chrome v1 rulebook drafts (2026-09-16) — Michael review pending
+- [x] Chrome master ingested to `docs/masters/GHOSTWIRE_CHROME_MASTER.md`
 
 ### Module / tooling bootstrap
 - [x] Module repo exists; package id `draw-steel-ghostwire` v0.1.1
@@ -44,9 +46,11 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 
 | Item | Status | Notes |
 |---|---|---|
-| Stage 3 shared core (How to Play, characteristics, Power Rolls, combat basics, kits/wealth) | **Todo** | DS reskin chapters |
+| Stage 3 shared core (How to Play, characteristics, Power Rolls, combat basics) | **Todo** | DS reskin chapters |
+| Economy chapter (`11-economy.md`) | **Drafted** 2026-09-16 | ¥5,000 + one free Kit; Availability bands; BP firewall; Michael review |
+| Chrome chapter (`12-chrome.md`) + master ingest | **Drafted** 2026-09-16 | Body Integrity 20; grades; packages; Cyborg excluded; Michael review |
 | Stage 4 Wire / Veil (minimal) / Machines | **Todo** | Forced by Hacker / casters / Wrench |
-| Kits chapter full polish | Interim | After shared core if needed |
+| Kits chapter full polish | Interim | After shared core if needed; reconcile Kit ¥ vs doctrine firewall |
 | Cyborg System Crisis Director table | Optional | Pointer exists in Species |
 | Veil entity-grade tables (old T-labels) | Later | Stage 4 cleanup |
 | Lore/art harvest | Later | Stage 5 |
@@ -68,7 +72,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B5 | Class content pack (start Operator) | Todo | Mirror Development Masters / rulebook 01 |
 | B6 | Classes 02–08 | Todo | Same pattern as Operator |
 | B7 | Wire / Veil / Machines lean packs | Todo | After Stage 4 rule text exists (or thin stubs) |
-| B8 | Chrome / Body Integrity data | Todo | Thin; depends on Stage 3/4 |
+| B8 | Chrome / Body Integrity data | **Next after review** | Rule text drafted; Foundry Integrity resource + sample implants after Michael approves |
 
 **Rule:** do not invent Foundry schemas that fight `draw-steel`. Read stock DS packs first; reskin/override/add module packs.
 
@@ -106,9 +110,9 @@ This is **separate** from “data exists in a pack.” Data first, then wire cre
 
 ## Suggested next 3 moves (narrow)
 
-1. **Finish B1** — Pure Human Detect the Supernatural visible in Foundry (current Claude Code spike).
-2. **C0** — Create empty Draw Steel test world; enable module; reload; confirm B1.
-3. **B2 or Track A Stage 3** — either complete Pure Human ancestry menu, or draft shared core text (pick one focus week).
+1. **Michael review** — Economy v1 + Chrome v1 (+ Chrome master). Resolve open questions (Kit ¥ vs doctrine firewall; starter gear vs ¥5,000).
+2. **B8** — Foundry Body Integrity resource + sample implants (after review). Class packs after.
+3. **B2b / B3 / C0** — lang remaps, remaining Peoples (eight Peoples rulebook done), or dedicated test world — pick one Foundry focus after B8 or in parallel.
 
 ---
 
@@ -122,3 +126,4 @@ After each spike:
 ### Changelog
 - **2026-09-16** — Plan created. Rulebook foundation marked done. Spike B1 (Pure Human signature) started as Claude Code learning exercise.
 - **2026-09-16** — B1+B2 done locally: `f88a8f0` signature, `b5fcd69` 3-point menu. Sheet labels locked Background/Profession/Class. Next: push, B2b lang remaps, then Corran (B3).
+- **2026-09-16** — Economy v1 + Chrome v1 drafts + Chrome master ingest. Eight Peoples Foundry/rulebook ancestry packages already done. Next: Michael review → B8 Integrity + sample implants → class packs.
