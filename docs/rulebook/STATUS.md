@@ -9,6 +9,7 @@
 | Species↔DS map | `docs/rulebook/SPECIES-DS-MAP.md` | Chassis locked |
 | DS alignment brief | `docs/rulebook/DS-ALIGNMENT.md` | Locked doctrine |
 | **Foundry build plan** | `docs/rulebook/FOUNDRY-BUILD-PLAN.md` | **Living done/todo log** |
+| Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
 
 ## Next (rulebook)
 
