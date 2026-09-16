@@ -2,119 +2,131 @@
 
 **Status:** Awaiting Michael review  
 **Date:** 2026-09-16  
-**Purpose:** Lock the rebuild plan before drafting class chapters or exporting PDF.
+**Goal:** Lock book structure and authority rules before drafting class chapters.
 
 ---
 
-## Authority stack (conflict order)
+## Purpose of Stage 1
 
-1. **Class Development Master Part 1** — live system of record for class rules (Operator, Hacker, Scout, Elementalist, Medic, Commander/Face).
-2. **Draw Steel core** (Heroes / official DS rules + stock `draw-steel` Foundry behavior) — default for anything not overridden by (1).
-3. **Ghostwire-new systems** — only where DS has no equivalent and Ghostwire requires it (The Wire, chrome/Body Integrity, Veil bindings as needed by casters, setting economy flavor).
-4. **Ghostwire PDFs** — lore and artwork harvest only. **PDF rules text is obsolete** and must not override (1)–(3).
-5. **Old Foundry Ghostwire build / Part 2 implement guides** — discarded for implementation; may be mined for wording only if it matches (1).
+Agree on:
 
----
+1. What this rulebook is (and is not)
+2. Which sources win when they conflict
+3. Chapter order for the rebuild
+4. What counts as a Draw Steel reskin vs a Ghostwire-only rule
 
-## Rebuild doctrine
-
-- Reskin Draw Steel wherever possible (names, fiction, chrome/tech flavor).
-- Invent new rules only when a Development Master or the setting forces a gap (especially **The Wire**).
-- Staged reviews: no stage advances without Michael sign-off.
-- Deliverable format: editable markdown source → PDF export for review. Do not edit the old designed PDFs in place.
+No full chapter prose in this stage. No PDF export yet. No Foundry compendium content yet.
 
 ---
 
-## Proposed volume structure
+## Authority stack (when sources conflict)
 
-### Book One — The World (light pass later)
-Deferred as first-draft lore. Harvest from lore markdown / Lore Book / Ossian Reach when Stage 5 runs. Not blocking Stage 2–4.
+| Priority | Source | Use for |
+|---|---|---|
+| 1 | Development Master **Part 1** (class docs) | Class chassis, resources, subclasses, ability ladders |
+| 2 | Draw Steel core (Heroes / official DS rules + `draw-steel` system intent) | Shared engine: characteristics, Power Rolls, combat loop, surges, conditions, kits pattern |
+| 3 | Ghostwire Design Rulings locked inside the masters | Attribute labels, cost ladder 1/3/5/7/9/11, chrome-positive vs Veil rules, etc. |
+| 4 | Ghostwire PDFs (Core / Lore / Ossian Reach) | **Lore + art only** — discard outdated rules text |
+| 5 | Old Foundry dumps / deploy scripts | **Do not use** (greenfield restart) |
 
-Suggested later chapters (not drafting now):
-- Cosmology & Great Conflict
-- Ossian Reach & the Ten
-- Peoples
-- Factions & life
-- Theme & tone
-- The Wired (setting fiction; mechanics live in Book Two)
-
-### Book Two — The Rules (primary rebuild)
-
-| Ch | Working title | Kind | Notes |
-|----|---------------|------|--------|
-| 0 | How to use this book / what’s Draw Steel here | Meta | Map DS terms ↔ Ghostwire labels |
-| 1 | Heroes & characteristics | DS-reskin | Physique (Might), Reflex (Agility), Logic (Reason), Instinct (Intuition), Persona (Presence) |
-| 2 | Power Rolls, edges, surges, conditions | DS-reskin | Shared glossary; surge defined once |
-| 3 | Combat & downtime loop | DS-reskin | Victories, respites, heroic resources pattern |
-| 4 | Kits, gear, nuyen | DS-reskin + GW | Kits as loadouts; ¥ not Wealth |
-| 5 | Chrome & Body Integrity | Ghostwire-new | Catalog later; class chrome notes |
-| 6 | The Wire | Ghostwire-new | Nodes, Overlay / Jacked In, Trace Alert, Track 1/2 — required by Hacker; keep lean until Hacker chapter |
-| 7 | The Veil (minimal) | Ghostwire-new / light | Only what Elementalist (and later priest) need |
-| 8 | Classes overview | Meta | Roster, cost ladder 1/3/5/7/9/11, levels 1–10 |
-| 9 | Operator | Class master | First full class chapter |
-| 10 | Scout | Class master | DS Shadow spine |
-| 11 | Commander / Face | Class master | DS Tactician spine |
-| 12 | Medic | Class master | DS Troubadour spine; Reagents exception |
-| 13 | Elementalist | Class master | Essence / Channel; Veil touch |
-| 14 | Hacker | Class master | Bandwidth + Wire; largest new-system dependency |
-| 15 | Wrench / Street Priest | TBD | Pending Development Masters |
-| 16 | Director tools | DS-reskin + GW | Malice / pressure hooks only as classes require |
+**Doctrine:** Reskin Draw Steel wherever possible. Invent new rules only where Ghostwire forces it (especially **The Wire**, chrome / Body Integrity depth, and Veil systems required by caster classes).
 
 ---
 
-## Class chapter order (Stage 2)
+## Proposed volumes
 
-1. **Operator** — cleanest DS-shaped martial; Adrenaline loop is DS-familiar  
-2. **Scout** — Shadow reskin; tech-only (no magic)  
-3. **Commander / Face** — Tactician; dual Mark  
-4. **Medic** — Troubadour; Reagents persist across encounters (flag as intentional DS divergence)  
-5. **Elementalist** — caster; needs minimal Veil chapter first or inline  
-6. **Hacker** — last of the six; depends on Wire chapter  
+### Book One — The World *(light pass later)*
 
-After each class chapter: **Michael review gate** (especially invented 9/11-cost and subclass tables already flagged in masters).
+Deferred until rules chapters stabilize. Harvest lore/art from existing Ghostwire PDFs in Stage 5. Treat current lore as first draft.
+
+Suggested parts (from existing lore source, not final):
+
+- Cosmology & the Great Conflict
+- The World & Its Structure (Ossian Reach)
+- Peoples of the World
+- Powers, Factions & Life (Ten Conglomerates, street)
+- Time, Theme & Tone
+
+### Book Two — The Rules *(primary rebuild)*
+
+This is the workhorse for Stages 2–4 and 6.
 
 ---
 
-## Later stage gates
+## Book Two — chapter outline
 
-| Stage | Deliverable | Michael gate |
-|-------|-------------|--------------|
-| **1** (this doc) | Skeleton + authority + order | Approve / mark up |
-| **2** | Class chapters one-by-one from masters | Sign-off per class |
-| **3** | Shared core chapters (1–5, 8) DS-reskin | Approve core |
-| **4** | Wire + minimal Veil | Approve new systems |
-| **5** | Lore/art harvest into Book One | Light pass OK as draft |
-| **6** | Full DS-alignment audit | List intentional divergences |
+### A. Shared core (Draw Steel reskin)
 
-**Parallel track (Foundry):** module `draw-steel-ghostwire` — lang/style tokens and comps follow approved rules text; do not implement Foundry classes ahead of signed chapters.
+| Ch | Title | Type | Notes |
+|---|---|---|---|
+| 1 | How to Play / The Director | DS reskin | Table roles; Ghostwire terms (Director, Edgerunner, ¥) |
+| 2 | Heroes & Characteristics | DS reskin | Five traits: Physique (Might), Reflex (Agility), Logic (Reason), Instinct (Intuition), Persona (Presence) |
+| 3 | Tests, Power Rolls & Heroes’ Fortune | DS reskin | Keep DS math; rename flavor only where needed |
+| 4 | Combat basics | DS reskin | Turns, actions/maneuvers, stamina, recoveries, conditions, surges (define once, glossary) |
+| 5 | Kits, gear & wealth | DS reskin + GW | Kits as DS; nuyen (¥); Availability bands |
+| 6 | Chrome & Body Integrity | **GW-new / expand** | Required by Operator/Hacker/Medic chrome doctrine; keep as thin as possible |
+
+### B. Class chapters (from Development Masters)
+
+| Ch | Class | DS spine | Notes |
+|---|---|---|---|
+| 7 | Operator | Heroes martial / live master | Cleanest martial; good first draft chapter |
+| 8 | Scout | Shadow | Mundane tech reskin; no magic |
+| 9 | Commander / Face | Tactician | Dual combat/social Mark |
+| 10 | Medic | Troubadour | Reagents persist across encounters — GW-specific resource rule |
+| 11 | Elementalist | Elementalist | Essence + Veil hooks; Cyborg exclusion |
+| 12 | Hacker | Custom / Wired-heavy | Depends on Wire chapter; place after Wire or with forward refs |
+| — | Wrench | TBD | Need Development Master if in roster |
+| — | Street Priest | TBD | Need Development Master if in roster |
+
+**Recommended draft order for Stage 2:** Operator → Scout → Commander/Face → Medic → Elementalist → Hacker.
+
+### C. Ghostwire-only systems
+
+| Ch | Title | Type | Notes |
+|---|---|---|---|
+| 13 | The Wire (Matrix) | **GW-new** | Nodes, Overlay / Jacked In, Trace Alert, Track 1/2 — required by Hacker; keep numbers tied to Hacker master |
+| 14 | The Veil | **GW-new (minimal)** | Only what Elementalist (and later Street Priest) need; don’t build a second magic encyclopedia early |
+| 15 | Advancement & echelons | DS reskin | Levels 1–10 primary; Echelon as gear/kit band only if masters require |
+
+### D. Director tools *(later)*
+
+| Ch | Title | Notes |
+|---|---|---|
+| 16 | Running Ghostwire | Tone, payouts, contacts — after classes playtest |
+| 17 | Opposition / Malice | Align to DS Director tools where possible |
+
+---
+
+## Stage gates (review after each)
+
+1. **Skeleton** ← you are here  
+2. **Class chapters** — one class at a time from Master Part 1; pause for sign-off  
+3. **Shared core chapters** — DS-aligned engine text  
+4. **Wire + Veil (minimal)** — only forced systems  
+5. **Lore/art harvest** — world prose + PDF art into layout source  
+6. **Full DS alignment pass** — every intentional divergence flagged  
 
 ---
 
 ## Non-goals for Stage 1
 
-- No full class prose yet  
-- No PDF export yet  
-- No Foundry compendium content yet  
-- No rewriting Book One lore yet  
+- Full ability text paste from masters  
+- Foundry `lang` / CSS / packs work (parallel track; does not block skeleton)  
+- Final PDF layout  
+- Playtest balancing of invented 9/11-cost Medic/Commander abilities (flag in Stage 2)
 
 ---
 
 ## Open questions for Michael
 
-1. Confirm class order above (or reorder).  
-2. Are **Wrench** and **Street Priest** in the v1 rulebook roster? If yes, please attach their Development Masters before those chapters.  
-3. Is **Technomancer** a class or only a setting role?  
-4. For Medic/Commander invented 9/11-cost lists: sign-off **before** drafting those chapters, or draft as provisional and review in Stage 2 gates?  
-5. Preferred export for review PDFs: simple typographic PDF from markdown, or match Ghostwire Core Sourcebook visual style later?
+1. Confirm class roster for **v1 rulebook**: are Wrench and Street Priest in, and do you have Development Masters for them?  
+2. Confirm draft order: Operator first, Hacker after Wire — OK?  
+3. Attribute display convention locked as GW label + (DS name) everywhere in the book?  
+4. For invented Medic/Commander high-tier abilities still marked “sign-off”: draft as **provisional** callouts, or hold those tiers empty until you approve?
 
 ---
 
-## Approval
+## PDF production note
 
-- [ ] Stage 1 skeleton approved as-is  
-- [ ] Stage 1 approved with markups (Michael notes below)
-
-**Michael notes:**
-
-_…
-_
+Rebuild from editable markdown (or similar) chapter sources, then export PDF for review. Do not treat in-place editing of the old Core Sourcebook PDF as the workflow — its rules layer is obsolete.
