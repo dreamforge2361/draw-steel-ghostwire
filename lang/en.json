@@ -92,5 +92,11 @@
         "WallDocument": "Ghostwire Wall Config"
       }
     }
+  },
+  "TYPES": {
+    "Item": {
+      "culture": "Background",
+      "career": "Profession"
+    }
   }
 }
