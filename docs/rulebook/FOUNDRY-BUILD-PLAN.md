@@ -33,7 +33,10 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 - [x] Loads `scripts/module.mjs`, `styles/ghostwire.css`, `lang/en.json` (incl. characteristic label remaps)
 - [x] Git clone live under Foundry `Data/modules/` (old non-git skeleton renamed aside)
 - [x] Claude Code installed, logged in, read-only dry-run succeeded
-- [ ] **Spike 1 in progress:** Pure Human signature only — Detect the Supernatural (module-only; no full 3-pt menu yet)
+- [x] **B1** Pure Human signature — Detect the Supernatural (local `f88a8f0`)
+- [x] **B2** Pure Human 3-point purchased traits (local `b5fcd69`)
+- [ ] Push local Pure Human commits to GitHub (`main` ahead 2)
+- [ ] Lang remaps: Culture→Background, Career→Profession (Class stays)
 
 ---
 
@@ -57,9 +60,10 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | # | Spike | Status | Deliverable |
 |---|---|---|---|
 | B0 | Module shell | **Done** | module.json, init log, theme CSS, lang remaps |
-| B1 | Pure Human signature | **In progress** | Detect the Supernatural visible in Foundry |
-| B2 | Pure Human full ancestry (3 AP menu) | Todo | After B1 works end-to-end |
-| B3 | Remaining Peoples (Corran → Cyborg) | Todo | One People per spike preferred |
+| B1 | Pure Human signature | **Done** (local `f88a8f0`) | Detect the Supernatural grants on hero |
+| B2 | Pure Human full ancestry (3 AP menu) | **Done** (local `b5fcd69`) | Point-buy purchased traits work in Foundry |
+| B2b | Sheet labels Culture/Career | Todo | Culture→Background, Career→Profession; Class stays |
+| B3 | Remaining Peoples (start Corran) | Todo | One People per spike preferred |
 | B4 | Kits pack (v1 subset) | Todo | After ancestry path proven |
 | B5 | Class content pack (start Operator) | Todo | Mirror Development Masters / rulebook 01 |
 | B6 | Classes 02–08 | Todo | Same pattern as Operator |
@@ -117,3 +121,4 @@ After each spike:
 
 ### Changelog
 - **2026-09-16** — Plan created. Rulebook foundation marked done. Spike B1 (Pure Human signature) started as Claude Code learning exercise.
+- **2026-09-16** — B1+B2 done locally: `f88a8f0` signature, `b5fcd69` 3-point menu. Sheet labels locked Background/Profession/Class. Next: push, B2b lang remaps, then Corran (B3).
