@@ -1,0 +1,134 @@
+{
+  "_id": "eZuaQXIbw4ffG9lp",
+  "_key": "!items!eZuaQXIbw4ffG9lp",
+  "name": "GHOSTWIRE.Classes.Operator.Items.LastWord.Name",
+  "type": "ability",
+  "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "last-word",
+    "story": "GHOSTWIRE.Classes.Operator.Items.LastWord.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "jaAEwq1H6qcQ8aq2": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "jaAEwq1H6qcQ8aq2",
+          "damage": {
+            "tier1": {
+              "value": "4",
+              "types": [
+                "psychic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6",
+              "types": [
+                "psychic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10",
+              "types": [
+                "psychic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "nsyitYfudlUh1DIP": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "nsyitYfudlUh1DIP",
+          "other": {
+            "tier1": {
+              "display": "any target who is a minion is reduced to 0 Stamina",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "any target who is a minion is reduced to 0 Stamina, as does one winded target who is not a leader or solo creature",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "each target who is not a leader or solo creature is winded; any target who is a minion is reduced to 0 Stamina, as does one winded target who is not a leader or solo creature",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "street-vet"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

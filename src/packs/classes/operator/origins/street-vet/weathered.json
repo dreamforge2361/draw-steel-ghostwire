@@ -1,0 +1,32 @@
+{
+  "_id": "HHQ2T2NsCj9gPDf4",
+  "_key": "!items!HHQ2T2NsCj9gPDf4",
+  "name": "GHOSTWIRE.Classes.Operator.Items.Weathered.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/bolt-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.Weathered.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "weathered",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

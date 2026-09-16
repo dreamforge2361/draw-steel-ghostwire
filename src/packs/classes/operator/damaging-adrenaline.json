@@ -1,0 +1,32 @@
+{
+  "_id": "7axaM6GghbaBQFKj",
+  "_key": "!items!7axaM6GghbaBQFKj",
+  "name": "GHOSTWIRE.Classes.Operator.Items.DamagingAdrenaline.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/flame-burning-fist-strike.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.DamagingAdrenaline.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "damaging-adrenaline",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,104 @@
+{
+  "_id": "pPjxmTI0CvXZ8ecJ",
+  "_key": "!items!pPjxmTI0CvXZ8ecJ",
+  "name": "GHOSTWIRE.Classes.Operator.Items.Relentless.Name",
+  "type": "ability",
+  "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "relentless",
+    "story": "GHOSTWIRE.Classes.Operator.Items.Relentless.Story",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "LTsU7FOxoOrpMWwR": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "LTsU7FOxoOrpMWwR",
+          "other": {
+            "tier1": {
+              "display": "Any target whose Stamina is equal to or less than 8 dies.",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "Any target whose Stamina is equal to or less than 11 dies.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "Any target whose Stamina is equal to or less than 17 dies.",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "operator"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.Relentless.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

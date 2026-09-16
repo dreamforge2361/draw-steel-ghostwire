@@ -1,0 +1,159 @@
+{
+  "_id": "rkS9wXiO0qudd2vA",
+  "_key": "!items!rkS9wXiO0qudd2vA",
+  "name": "GHOSTWIRE.Classes.Operator.Items.FormationBreaker.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/shield-damaged-broken-brown.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "formation-breaker",
+    "story": "GHOSTWIRE.Classes.Operator.Items.FormationBreaker.Story",
+    "keywords": [
+      "melee",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "oElrmGaVGyqsdBY8": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "oElrmGaVGyqsdBY8",
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "4",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "6",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "9XhfRtHztz1yuS3e": {
+          "name": "Dazed",
+          "img": null,
+          "type": "applied",
+          "_id": "9XhfRtHztz1yuS3e",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, dazed (save ends)",
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "characteristic": "agility",
+                "value": "@potency.weak"
+              }
+            },
+            "tier2": {
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "merc"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.FormationBreaker.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

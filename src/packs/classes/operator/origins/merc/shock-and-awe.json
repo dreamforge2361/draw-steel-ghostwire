@@ -1,0 +1,170 @@
+{
+  "_id": "uEaiDILlHGpwbFjx",
+  "_key": "!items!uEaiDILlHGpwbFjx",
+  "name": "GHOSTWIRE.Classes.Operator.Items.ShockAndAwe.Name",
+  "type": "ability",
+  "img": "icons/skills/wounds/blood-cells-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shock-and-awe",
+    "story": "GHOSTWIRE.Classes.Operator.Items.ShockAndAwe.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "Us2JFvHn6bQZVz4x": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "Us2JFvHn6bQZVz4x",
+          "damage": {
+            "tier1": {
+              "value": "12 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "18 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "24 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "merc"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.ShockAndAwe.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "zHTb3Mf1HdJ20Jbg",
+      "_key": "!items.effects!uEaiDILlHGpwbFjx.zHTb3Mf1HdJ20Jbg",
+      "name": "Distracted",
+      "img": "icons/skills/wounds/blood-cells-red.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.uEaiDILlHGpwbFjx",
+      "transfer": false,
+      "system": {
+        "changes": [
+          {
+            "key": "system.restrictions.type",
+            "type": "add",
+            "value": "triggered",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.restrictions.type",
+            "type": "add",
+            "value": "freeTriggered",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.combat.targetModifiers.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You can’t take triggered actions or free triggered actions,</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    }
+  ],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

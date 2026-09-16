@@ -1,0 +1,32 @@
+{
+  "_id": "WG99zz4NzyeFukL7",
+  "_key": "!items!WG99zz4NzyeFukL7",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GreaterAdrenaline.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/flame-burning-fist-strike.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.GreaterAdrenaline.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "greater-adrenaline",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

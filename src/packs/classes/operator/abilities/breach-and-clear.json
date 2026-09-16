@@ -1,0 +1,159 @@
+{
+  "_id": "ClXRQ7sq3JDEfLXp",
+  "_key": "!items!ClXRQ7sq3JDEfLXp",
+  "name": "GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Name",
+  "type": "ability",
+  "img": "icons/weapons/guns/shotgun-pump.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breach-and-clear",
+    "story": "GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 1,
+    "trigger": "",
+    "distance": {
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1",
+      "type": "ranged"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "custom": "",
+      "value": 1,
+      "type": "creatureObject"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "3KKZ12OgLj6oAgqB": {
+          "_id": "3KKZ12OgLj6oAgqB",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "damage",
+          "damage": {
+            "tier1": {
+              "value": "3",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "ef1649EB6orJTnXM": {
+          "_id": "ef1649EB6orJTnXM",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "forced",
+          "forced": {
+            "tier1": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "3",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "5",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.BreachAndClear.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "operator"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

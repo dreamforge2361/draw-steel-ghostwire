@@ -1,0 +1,32 @@
+{
+  "_id": "YGRgoE1bJfHbyp8S",
+  "_key": "!items!YGRgoE1bJfHbyp8S",
+  "name": "GHOSTWIRE.Classes.Operator.Items.JumpRig.Name",
+  "type": "feature",
+  "img": "icons/skills/movement/arrow-upward-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.JumpRig.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "jump-rig",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

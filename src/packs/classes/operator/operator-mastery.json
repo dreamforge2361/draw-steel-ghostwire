@@ -1,0 +1,32 @@
+{
+  "_id": "Bcav9cqOQLZNChYJ",
+  "_key": "!items!Bcav9cqOQLZNChYJ",
+  "name": "GHOSTWIRE.Classes.Operator.Items.OperatorMastery.Name",
+  "type": "feature",
+  "img": "icons/creatures/abilities/fang-tooth-blood-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.OperatorMastery.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "operator-mastery",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,79 @@
+{
+  "_id": "UwdslM5Gyzxs8MKx",
+  "_key": "!items!UwdslM5Gyzxs8MKx",
+  "name": "GHOSTWIRE.Classes.Operator.Items.RunAndGun.Name",
+  "type": "feature",
+  "img": "icons/skills/movement/feet-winged-sandals-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.RunAndGun.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "run-and-gun",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "xobeBk1SW679Jw3M",
+      "_key": "!items.effects!UwdslM5Gyzxs8MKx.xobeBk1SW679Jw3M",
+      "name": "Run and Gun Effect",
+      "img": "icons/skills/movement/feet-winged-sandals-tan.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.UwdslM5Gyzxs8MKx",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.value",
+            "type": "add",
+            "value": "@A",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have a bonus to speed equal to your Reflex score, and you ignore difficult terrain.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

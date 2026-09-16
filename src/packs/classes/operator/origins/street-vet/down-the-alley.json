@@ -1,0 +1,160 @@
+{
+  "_id": "QlBy1fdeZli32MWF",
+  "_key": "!items!QlBy1fdeZli32MWF",
+  "name": "GHOSTWIRE.Classes.Operator.Items.DownTheAlley.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "down-the-alley",
+    "story": "GHOSTWIRE.Classes.Operator.Items.DownTheAlley.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "uxqYDrJPuH4Za0Lb": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "uxqYDrJPuH4Za0Lb",
+          "damage": {
+            "tier1": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "CSU2UsZILKz14scA": {
+          "name": "Slowed",
+          "img": null,
+          "type": "applied",
+          "_id": "CSU2UsZILKz14scA",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, slowed (save ends)",
+              "potency": {
+                "characteristic": "intuition",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "street-vet"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.DownTheAlley.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

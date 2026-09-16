@@ -73,6 +73,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.17` — **Ghostwire Kits** compendium with all 21 Kits in role folders, cloned from the Draw Steel kits with stock bonus numbers as a provisional benchmark and reskinned signature abilities. The Duelist signature uses the Tech keyword instead of Psionic. Kit sheets relabel weapon categories: Firearm / Bow, Unarmed / Cyberlimb, Whip / Monowhip.
 - `0.1.18` — **Ghostwire Gear** compendium: 17 Kit-qualifying weapons, shields, and special gear plus 4 armors, each with ¥, Availability, and the Kit categories it satisfies (in the description header and under the name on the item sheet). Street gear adds no numbers because the Kit supplies doctrine. Armor Stamina is a no-Kit-only toggle, and a few premium items have small wielded toggles.
 - `0.1.19` — **Ghostwire skills**: the 44 skills in 6 groups (Action, Technical, Knowledge, Social, Vehicle & Drone, Magic & Supernatural) replace the Draw Steel skill list everywhere skills are picked or shown. Draw Steel skill and group grants (stock Backgrounds, Professions, classes) translate to Ghostwire skills. Module content that referenced Draw Steel skills now uses Ghostwire skills.
+- `0.1.20` — **Ghostwire Classes** compendium with the **Operator** (Adrenaline), cloned from the Draw Steel Fury: class, three Origins (Corp-Milspec, Merc with two Kits, Street-vet), Ghostwire signatures Controlled Pair + Suppressing Fire, the Ghostwire 1–5 Adrenaline base band, and every level 1–10 feature and 7/9/11 ability with Draw Steel mechanics under chapter names.
 
 ## Origins pack layout (Ghostwire Ancestries)
 
@@ -137,6 +138,26 @@ Rules: `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`. Skills use the five Ghostwire 
 2. Drag **Mutant** from **Ghostwire Ancestries**: Aberrant Rapport asks for one **Social** skill (Insight, Persuasion, …).
 3. Add a stock Draw Steel Background (culture) or Profession (career) with a skill choice: the picker offers Ghostwire skills.
 4. Drag **Cyber-Eyes** from **Ghostwire Chrome**: roll a Perception test — it has an edge.
+
+## Classes (v1)
+
+Rules: `docs/rulebook/01-operator.md` (authoritative), `docs/masters/GHOSTWIRE_OPERATOR_DEVELOPMENT_MASTER.md`. The **Ghostwire Classes** compendium (pack id `classes`) holds folder **Operator** › **Abilities** / **Origins** › Corp-Milspec, Merc, Street-vet.
+
+### Operator
+
+- **Structure:** the Operator is the Draw Steel **Fury** tree cloned and renamed (Ferocity → Adrenaline, Berserker → Corp-Milspec, Reaver → Merc, Stormwight → Street-vet). Every 7/9/11 ability, Origin doctrine ability, and level 1–10 feature keeps its Draw Steel power rolls, effects, and advancement level; names come from the chapter and text is reskinned (chapter prose where the chapter describes a feature). Class: Physique + Reflex, Stamina 21 (+9), Recoveries 10, heroic resource **Adrenaline** (1d3 per turn), epic resource **Combat Legend**.
+- **Ghostwire-original:** signatures **Controlled Pair** (ranged 10, 3/6/9 + characteristic) and **Suppressing Fire** (3 cube within 10, 1/2/3), both granted at 1st level; base band **Breach & Clear** (1), **Trigger Cadence** (2), **Hold the Line** (2), **Overwatch** (3), **Adrenaline Dump** (5), choose one at 1st level. Base-band damage is flat as printed in the chapter.
+- **Origins:** Corp-Milspec (Command, 1 Kit), Merc (Demolitions, **2 Kits**), Street-vet (Intimidation, 1 Kit, plus a chosen *loadout damage type* — cryo, toxin, incendiary, or shock — that replaces the Stormwight’s animal-form storm type). Kit picks draw from the 21 Ghostwire Kits.
+- **Merc dual Kit:** Draw Steel supports several kits natively — a hero uses the best Stamina, speed, stability, disengage, and distance across their kits and the damage bonus of the **preferred** kit (set on the sheet). No module code needed.
+- **Differences from the chapter (Draw Steel structure kept):** Anchored Stance is 3rd level (chapter says 6th); Veteran of the Sprawl and Breach Point are 6th level and Combat Form, Greater Adrenaline, and Growing Adrenaline II are 7th (chapter lists them at 4th); Growing Adrenaline tables use the Draw Steel thresholds. Fury’s Mighty Leap and the fixed Nature skill are omitted (not in the chapter). Street-vet gets a Growing Adrenaline table cloned from the Merc’s, since the Stormwight’s lived in its animal-form kits.
+
+**Create an Operator hero**
+
+1. Create a hero. Drag an ancestry from **Ghostwire Ancestries** (for example Pure Human).
+2. Drag **Operator** from **Ghostwire Classes** › Operator. In the advancement window, pick two skills, an **Operator Origin**, and one **Heroic Ability (1–5 Adrenaline)**; Adrenaline, Controlled Pair, and Suppressing Fire are granted automatically.
+3. Configure the Origin: its skill is automatic; pick the Kit (Merc picks two).
+4. Drag a gun from **Ghostwire Gear** (for example Precision Rifle for Longshot) onto the hero.
+5. Check: the Stats tab shows **Adrenaline** as the heroic resource; Abilities lists Controlled Pair, Suppressing Fire, the chosen heroic ability, and the Origin’s triggered ability (Kinetic Redirect, Wired Reflexes, or Overclock Nerves).
 
 ## Kits (v1)
 

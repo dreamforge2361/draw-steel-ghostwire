@@ -1,0 +1,188 @@
+{
+  "_id": "ieGJV4l66nywzuxo",
+  "_key": "!items!ieGJV4l66nywzuxo",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineMerc.Name",
+  "type": "feature",
+  "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineMerc.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "growing-adrenaline-merc",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "fUFYVJwHiDE6eUbQ",
+      "_key": "!items.effects!ieGJV4l66nywzuxo.fUFYVJwHiDE6eUbQ",
+      "name": "12 Adrenaline",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "type": "abilityModifier",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.ieGJV4l66nywzuxo",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "forced.bonuses.push",
+            "type": "add",
+            "value": "@A",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "forced.bonuses.pull",
+            "type": "add",
+            "value": "@A",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "forced.bonuses.slide",
+            "type": "add",
+            "value": "@A",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        },
+        "filters": {
+          "keywords": []
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "ricTN2ECowVAD6zT",
+      "_key": "!items.effects!ieGJV4l66nywzuxo.ricTN2ECowVAD6zT",
+      "name": "6 Adrenaline",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.ieGJV4l66nywzuxo",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.characteristics.agility.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You gain an edge on Reflex tests.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "uHGoezytIE148v8M",
+      "_key": "!items.effects!ieGJV4l66nywzuxo.uHGoezytIE148v8M",
+      "name": "10 Adrenaline",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.ieGJV4l66nywzuxo",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.characteristics.agility.edges",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have a double edge on Reflex tests.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    }
+  ],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

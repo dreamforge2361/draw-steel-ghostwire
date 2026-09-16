@@ -1,0 +1,506 @@
+{
+  "_id": "jbygMpx7Na2ZvnHW",
+  "_key": "!items!jbygMpx7Na2ZvnHW",
+  "name": "GHOSTWIRE.Classes.Operator.Items.TargetMarked.Name",
+  "type": "ability",
+  "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "target-marked",
+    "story": "GHOSTWIRE.Classes.Operator.Items.TargetMarked.Story",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "fFEXQ7umoiZMMgzP": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "fFEXQ7umoiZMMgzP",
+          "damage": {
+            "tier1": {
+              "value": "11 + @chr",
+              "types": [
+                "acid",
+                "cold",
+                "corruption",
+                "fire",
+                "lightning",
+                "poison",
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "16 + @chr",
+              "types": [
+                "acid",
+                "cold",
+                "corruption",
+                "fire",
+                "lightning",
+                "poison",
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "21 + @chr",
+              "types": [
+                "acid",
+                "cold",
+                "corruption",
+                "fire",
+                "lightning",
+                "poison",
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "merc"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.TargetMarked.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "MGQmrgFa7IchnX8z",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.MGQmrgFa7IchnX8z",
+      "name": "Acid Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.acid",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.acid",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "Z25OIEpHpelUvKWe",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.Z25OIEpHpelUvKWe",
+      "name": "Cold Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.cold",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.cold",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "Tp4YLa282D8CY9eX",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.Tp4YLa282D8CY9eX",
+      "name": "Corruption Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.corruption",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.corruption",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "GZkQv6kUtb5gccNI",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.GZkQv6kUtb5gccNI",
+      "name": "Fire Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.fire",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.fire",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "2SJ7L3LBeALSQ4JA",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.2SJ7L3LBeALSQ4JA",
+      "name": "Lightning Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.lightning",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.lightning",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "d12CIjzP0dulOpUI",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.d12CIjzP0dulOpUI",
+      "name": "Poison Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.poison",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.poison",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "twQIogmZMlG19c4n",
+      "_key": "!items.effects!jbygMpx7Na2ZvnHW.twQIogmZMlG19c4n",
+      "name": "Sonic Weakness 10",
+      "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.sonic",
+            "value": 0,
+            "priority": null,
+            "type": "override",
+            "phase": "initial"
+          },
+          {
+            "key": "system.damage.weaknesses.sonic",
+            "value": 10,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

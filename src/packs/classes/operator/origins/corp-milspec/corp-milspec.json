@@ -1,0 +1,337 @@
+{
+  "_id": "ibssXJlEiS4jwG7U",
+  "_key": "!items!ibssXJlEiS4jwG7U",
+  "name": "GHOSTWIRE.Classes.Operator.Items.CorpMilspec.Name",
+  "type": "subclass",
+  "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.CorpMilspec.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "corp-milspec",
+    "advancements": {
+      "qcrRk0Nh1YoLFGR5": {
+        "name": "Breaching Force",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "qcrRk0Nh1YoLFGR5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LN6Dw39J19TCgafI"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "iC58F6iBYfJyZ9zR": {
+        "name": "Kinetic Redirect",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "iC58F6iBYfJyZ9zR",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.r12FzR7TabVMKH5k"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "DSpkLQm0bsqMoUfP": {
+        "name": "GHOSTWIRE.Skills.List.Command",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "DSpkLQm0bsqMoUfP",
+        "skills": {
+          "choices": [
+            "command"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Operator Origin grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "cPTJfFw4ACuLzXQg": {
+        "name": "Kit",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "cPTJfFw4ACuLzXQg",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NI3QWa2kizsYNBM2"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m7DTBTD2zvW0TViV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.XbRoZ9XXytwThX68"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SC8BSZFZ9PQsD2nV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SAcWR4RstQocW4Ii"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.xcGhoSk8Ht4VKksG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NIv1KQfV2JBzkeWk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wBUl1vkVVZYuQX3G"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.uSTe6AiFvh081JSm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          }
+        ],
+        "description": "<p>Choose one Kit.</p>",
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        },
+        "sort": 0,
+        "repick": {}
+      },
+      "TGW14CxYsXyXF2XU": {
+        "name": "Breach Charge",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "TGW14CxYsXyXF2XU",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IdUHNDXUkenUq0f7"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "yzuWE8Hc3nbYnTZ0": {
+        "name": "2nd-Level Corp-Milspec Ability",
+        "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "yzuWE8Hc3nbYnTZ0",
+        "description": "<p>Choose one of the following abilities.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.hvGPY6JhT9unBQir"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rBoQ36kCaW7Mt4Mh"
+          }
+        ],
+        "chooseN": 1,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "CERH6ocqIdA43kOj": {
+        "name": "Anchored Stance",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "CERH6ocqIdA43kOj",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Z7jffbS3BHpgDiTy"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "VBOG0IUIeFONxU2D": {
+        "name": "6th-Level Corp-Milspec Ability",
+        "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "VBOG0IUIeFONxU2D",
+        "description": "<p>Your Operator Origin grants your choice of one of two heroic abilities.</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.VSWMFvxnVJ0wc79S"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.KTEyD1aKFK7GpKdJ"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "zGkf3qXhd9L3TtkJ": {
+        "name": "Jump Rig",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "zGkf3qXhd9L3TtkJ",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YGRgoE1bJfHbyp8S"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "vT3wBmoG6ETYq7oP": {
+        "name": "Overpowering Build",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "vT3wBmoG6ETYq7oP",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6oHEximQV2O6VVIc"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "lLyosZe5ELlGrn5t": {
+        "name": "9th-Level Corp-Milspec Abilities",
+        "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "lLyosZe5ELlGrn5t",
+        "description": "<p>Choose one of the following abilities.</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rXrhO1Ccf8pz6Ii9"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9a8RgKN2yZuJoMzE"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "operator"
+  },
+  "effects": [],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,110 @@
+{
+  "_id": "sb0DhAu3dWZp6i5A",
+  "_key": "!items!sb0DhAu3dWZp6i5A",
+  "name": "GHOSTWIRE.Classes.Operator.Items.Crossfire.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-cloud-sky-white.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crossfire",
+    "story": "GHOSTWIRE.Classes.Operator.Items.Crossfire.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "aura",
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "street-vet"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.Crossfire.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "t7CYKliC6xtRG9gk",
+      "_key": "!items.effects!sb0DhAu3dWZp6i5A.t7CYKliC6xtRG9gk",
+      "name": "Fly",
+      "img": "icons/magic/lightning/bolt-cloud-sky-white.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.sb0DhAu3dWZp6i5A",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [
+        "fly"
+      ],
+      "flags": {},
+      "showIcon": 2,
+      "start": null
+    }
+  ],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

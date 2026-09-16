@@ -1,0 +1,337 @@
+{
+  "_id": "WbxNDtQJyk3dCnS0",
+  "_key": "!items!WbxNDtQJyk3dCnS0",
+  "name": "GHOSTWIRE.Classes.Operator.Items.Merc.Name",
+  "type": "subclass",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.Merc.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "merc",
+    "advancements": {
+      "x1OMeLaVv14Ytert": {
+        "name": "Combat Instinct",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "x1OMeLaVv14Ytert",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DoPGigLbE3n2DHj7"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7VRpAxONCZtWcYs3": {
+        "name": "Wired Reflexes",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "7VRpAxONCZtWcYs3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.r1RUdiD5E6wcXBmM"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "VwoCOtpp9ne4DEgq": {
+        "name": "Kits",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "VwoCOtpp9ne4DEgq",
+        "chooseN": 2,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NI3QWa2kizsYNBM2"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m7DTBTD2zvW0TViV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.XbRoZ9XXytwThX68"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SC8BSZFZ9PQsD2nV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SAcWR4RstQocW4Ii"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.xcGhoSk8Ht4VKksG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NIv1KQfV2JBzkeWk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wBUl1vkVVZYuQX3G"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.uSTe6AiFvh081JSm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          }
+        ],
+        "description": "<p>Choose two Kits. You use the better Stamina, speed, stability, disengage, and distance bonus of the two, and the damage bonus of your preferred Kit.</p>",
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        },
+        "sort": 0,
+        "repick": {}
+      },
+      "86dezZH7IFwXBLG4": {
+        "name": "GHOSTWIRE.Skills.List.Demolitions",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "86dezZH7IFwXBLG4",
+        "skills": {
+          "choices": [
+            "demolitions"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Operator Origin grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "DIThO62imszo6fpP": {
+        "name": "Run and Gun",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "DIThO62imszo6fpP",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.UwdslM5Gyzxs8MKx"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "o7p4DsHlsDfvghi7": {
+        "name": "2nd-Level Merc Ability",
+        "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "o7p4DsHlsDfvghi7",
+        "description": "<p>Choose one of the following abilities.</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9mdMPck6M7t1ewN3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rkS9wXiO0qudd2vA"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FosBgSM3PTdkvCMf": {
+        "name": "Read the Mark",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "FosBgSM3PTdkvCMf",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.g0kZUSjCv7BucRXh"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "PxIovvGmwPdjYkEF": {
+        "name": "6th-Level Merc Ability",
+        "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "PxIovvGmwPdjYkEF",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aeQ9rPwCoJQBwpi6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EFZTZXuePxbPwdwn"
+          }
+        ],
+        "description": "<p>Your Operator Origin grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "AZpxnJYN7NotCTaz": {
+        "name": "Slip the Cuffs",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "AZpxnJYN7NotCTaz",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.t87nnub1g21r7fOZ"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "3nJSZgIYr5coweDr": {
+        "name": "Always Moving",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "3nJSZgIYr5coweDr",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.wtIiF5mcz8nDT3Cl"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "QgU8LO5tbfCZ1uY4": {
+        "name": "9th-Level Merc Abilities",
+        "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "QgU8LO5tbfCZ1uY4",
+        "description": "<p>Choose one of the following abilities.</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jbygMpx7Na2ZvnHW"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.uEaiDILlHGpwbFjx"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "operator"
+  },
+  "effects": [],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

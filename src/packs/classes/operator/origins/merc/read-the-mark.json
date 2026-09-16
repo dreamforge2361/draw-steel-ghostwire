@@ -1,0 +1,32 @@
+{
+  "_id": "g0kZUSjCv7BucRXh",
+  "_key": "!items!g0kZUSjCv7BucRXh",
+  "name": "GHOSTWIRE.Classes.Operator.Items.ReadTheMark.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-slit-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.ReadTheMark.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "read-the-mark",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

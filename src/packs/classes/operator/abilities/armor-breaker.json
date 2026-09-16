@@ -1,0 +1,68 @@
+{
+  "_id": "5fjNFssowmxRTMKO",
+  "_key": "!items!5fjNFssowmxRTMKO",
+  "name": "GHOSTWIRE.Classes.Operator.Items.ArmorBreaker.Name",
+  "type": "ability",
+  "img": "icons/magic/life/heart-area-circle-red-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "armor-breaker",
+    "story": "GHOSTWIRE.Classes.Operator.Items.ArmorBreaker.Story",
+    "keywords": [
+      "magic"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "prerequisites": {
+      "dsid": [
+        "operator"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.ArmorBreaker.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

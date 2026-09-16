@@ -1,0 +1,55 @@
+{
+  "_id": "LN6Dw39J19TCgafI",
+  "_key": "!items!LN6Dw39J19TCgafI",
+  "name": "GHOSTWIRE.Classes.Operator.Items.BreachingForce.Name",
+  "type": "feature",
+  "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.BreachingForce.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breaching-force",
+    "advancements": {
+      "sO1rk9A3x1BWfmjZ": {
+        "name": "Growing Adrenaline",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "sO1rk9A3x1BWfmjZ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

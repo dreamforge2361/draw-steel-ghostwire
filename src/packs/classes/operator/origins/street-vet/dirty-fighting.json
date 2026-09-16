@@ -1,0 +1,32 @@
+{
+  "_id": "kAeuWHlY8DHpbUPz",
+  "_key": "!items!kAeuWHlY8DHpbUPz",
+  "name": "GHOSTWIRE.Classes.Operator.Items.DirtyFighting.Name",
+  "type": "feature",
+  "img": "icons/creatures/abilities/fangs-teeth-bite.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.DirtyFighting.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "dirty-fighting",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

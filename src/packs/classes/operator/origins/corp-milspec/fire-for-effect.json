@@ -1,0 +1,155 @@
+{
+  "_id": "rXrhO1Ccf8pz6Ii9",
+  "_key": "!items!rXrhO1Ccf8pz6Ii9",
+  "name": "GHOSTWIRE.Classes.Operator.Items.FireForEffect.Name",
+  "type": "ability",
+  "img": "icons/magic/sonic/explosion-impact-shock-wave.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fire-for-effect",
+    "story": "GHOSTWIRE.Classes.Operator.Items.FireForEffect.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "melee",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "FktowM98RDIWnWap": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "FktowM98RDIWnWap",
+          "damage": {
+            "tier1": {
+              "value": "7",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "10",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "15",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "u6sXfxm8IGYCthQk": {
+          "name": "Push",
+          "img": null,
+          "type": "forced",
+          "_id": "u6sXfxm8IGYCthQk",
+          "forced": {
+            "tier1": {
+              "distance": "3",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "distance": "5",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "distance": "7",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "corp-milspec"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.FireForEffect.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,79 @@
+{
+  "_id": "Z7jffbS3BHpgDiTy",
+  "_key": "!items!Z7jffbS3BHpgDiTy",
+  "name": "GHOSTWIRE.Classes.Operator.Items.AnchoredStance.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.AnchoredStance.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "anchored-stance",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "PrLyqZ4hQtYFOTxP",
+      "_key": "!items.effects!Z7jffbS3BHpgDiTy.PrLyqZ4hQtYFOTxP",
+      "name": "Anchored Stance Effect",
+      "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.Z7jffbS3BHpgDiTy",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.stability",
+            "type": "add",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have a bonus to stability equal to [[lookup @M]]{your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,161 @@
+{
+  "_id": "9a8RgKN2yZuJoMzE",
+  "_key": "!items!9a8RgKN2yZuJoMzE",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GravityWellCharge.Name",
+  "type": "ability",
+  "img": "icons/magic/air/wind-vortex-swirl-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gravity-well-charge",
+    "story": "GHOSTWIRE.Classes.Operator.Items.GravityWellCharge.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "melee",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "TxiZUS63fVvQBmOF": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "TxiZUS63fVvQBmOF",
+          "damage": {
+            "tier1": {
+              "value": "3",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "8",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "ena0i3fDyt2WhMYJ": {
+          "name": "Pull",
+          "img": null,
+          "type": "forced",
+          "_id": "ena0i3fDyt2WhMYJ",
+          "forced": {
+            "tier1": {
+              "movement": [
+                "pull"
+              ],
+              "properties": [
+                "vertical"
+              ],
+              "distance": "3",
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "distance": "5",
+              "movement": [
+                "pull"
+              ],
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "pull"
+              ],
+              "distance": "7",
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "corp-milspec"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.GravityWellCharge.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

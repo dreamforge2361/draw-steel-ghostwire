@@ -1,0 +1,32 @@
+{
+  "_id": "IhmMnegZdRYiYkGX",
+  "_key": "!items!IhmMnegZdRYiYkGX",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineII.Name",
+  "type": "feature",
+  "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineII.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "growing-adrenaline-ii",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

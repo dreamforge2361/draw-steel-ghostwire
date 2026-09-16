@@ -1,0 +1,104 @@
+{
+  "_id": "SbljEOo0Q9J3T2ci",
+  "_key": "!items!SbljEOo0Q9J3T2ci",
+  "name": "GHOSTWIRE.Classes.Operator.Items.SuppressingFire.Name",
+  "type": "ability",
+  "img": "icons/weapons/guns/machine-gun-drum.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "suppressing-fire",
+    "story": "GHOSTWIRE.Classes.Operator.Items.SuppressingFire.Story",
+    "keywords": [
+      "area",
+      "ranged",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1",
+      "type": "cube"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "custom": "",
+      "value": null,
+      "type": "enemy"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "PqwsIDlfiUsCQnv3": {
+          "_id": "PqwsIDlfiUsCQnv3",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "damage",
+          "damage": {
+            "tier1": {
+              "value": "1",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "3",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "operator"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

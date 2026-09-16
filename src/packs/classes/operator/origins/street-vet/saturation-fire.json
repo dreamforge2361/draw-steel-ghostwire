@@ -1,0 +1,130 @@
+{
+  "_id": "TlbVhylOa7K48eeN",
+  "_key": "!items!TlbVhylOa7K48eeN",
+  "name": "GHOSTWIRE.Classes.Operator.Items.SaturationFire.Name",
+  "type": "ability",
+  "img": "icons/magic/air/air-wave-gust-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "saturation-fire",
+    "story": "GHOSTWIRE.Classes.Operator.Items.SaturationFire.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "5",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "ByMHDv84pobN5NKk": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "ByMHDv84pobN5NKk",
+          "damage": {
+            "tier1": {
+              "value": "7",
+              "types": [
+                "cold",
+                "corruption",
+                "fire",
+                "lightning"
+              ],
+              "ignoredImmunities": [
+                "all"
+              ],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "10",
+              "types": [
+                "cold",
+                "corruption",
+                "fire",
+                "lightning"
+              ],
+              "ignoredImmunities": [
+                "all"
+              ],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "15",
+              "types": [
+                "cold",
+                "corruption",
+                "fire",
+                "lightning"
+              ],
+              "ignoredImmunities": [
+                "all"
+              ],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "street-vet"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.SaturationFire.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,201 @@
+{
+  "_id": "dVdgMRmmxMcmREgE",
+  "_key": "!items!dVdgMRmmxMcmREgE",
+  "name": "GHOSTWIRE.Classes.Operator.Items.CripplingBurst.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-flail-destructive-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crippling-burst",
+    "story": "GHOSTWIRE.Classes.Operator.Items.CripplingBurst.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "Dx2nHDunKSEfbwnY": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "Dx2nHDunKSEfbwnY",
+          "damage": {
+            "tier1": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "14 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "20 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "qnRfDKKT1eYmPNU0": {
+          "name": "Slowed",
+          "img": null,
+          "type": "applied",
+          "_id": "qnRfDKKT1eYmPNU0",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, slowed (save ends)",
+              "effects": {
+                "QevpI7ACSq52Q46m": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "characteristic": "might",
+                "value": "@potency.weak"
+              }
+            },
+            "tier2": {
+              "effects": {
+                "QevpI7ACSq52Q46m": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "QevpI7ACSq52Q46m": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "operator"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.CripplingBurst.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "QevpI7ACSq52Q46m",
+      "_key": "!items.effects!dVdgMRmmxMcmREgE.QevpI7ACSq52Q46m",
+      "name": "Slowed",
+      "img": "icons/skills/melee/strike-flail-destructive-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.dVdgMRmmxMcmREgE",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "<p>While slowed this way, the target takes 1 damage for every square they move, including from forced movement.</p>",
+      "tint": "#ffffff",
+      "statuses": [
+        "slowed"
+      ],
+      "flags": {},
+      "showIcon": 2,
+      "start": null
+    }
+  ],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

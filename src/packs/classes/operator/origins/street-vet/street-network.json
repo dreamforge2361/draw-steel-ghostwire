@@ -1,0 +1,32 @@
+{
+  "_id": "E2R61h9KQYhZ9P5w",
+  "_key": "!items!E2R61h9KQYhZ9P5w",
+  "name": "GHOSTWIRE.Classes.Operator.Items.StreetNetwork.Name",
+  "type": "feature",
+  "img": "icons/magic/nature/hand-weapon-wood-bark-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.StreetNetwork.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-network",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

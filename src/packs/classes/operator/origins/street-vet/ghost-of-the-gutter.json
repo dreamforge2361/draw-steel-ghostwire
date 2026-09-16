@@ -1,0 +1,32 @@
+{
+  "_id": "O0xyKU5gmKI8sZnv",
+  "_key": "!items!O0xyKU5gmKI8sZnv",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GhostOfTheGutter.Name",
+  "type": "feature",
+  "img": "icons/creatures/abilities/paw-print-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.GhostOfTheGutter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-of-the-gutter",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,188 @@
+{
+  "_id": "3t5oRaCIWuHaazPt",
+  "_key": "!items!3t5oRaCIWuHaazPt",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineCorpMilspec.Name",
+  "type": "feature",
+  "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.GrowingAdrenalineCorpMilspec.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "growing-adrenaline-corp-milspec",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "vhYHJVHcRjlrR8gJ",
+      "_key": "!items.effects!3t5oRaCIWuHaazPt.vhYHJVHcRjlrR8gJ",
+      "name": "12 Adrenaline",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "type": "abilityModifier",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "forced.bonuses.push",
+            "type": "add",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "forced.bonuses.pull",
+            "type": "add",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "forced.bonuses.slide",
+            "type": "add",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        },
+        "filters": {
+          "keywords": []
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @M]]{your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "qC9bPoMq9HkAyLBk",
+      "_key": "!items.effects!3t5oRaCIWuHaazPt.qC9bPoMq9HkAyLBk",
+      "name": "6 Adrenaline",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.characteristics.might.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You gain an edge on Physique tests.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "CRhRstiTWzk3pZ42",
+      "_key": "!items.effects!3t5oRaCIWuHaazPt.CRhRstiTWzk3pZ42",
+      "name": "10 Adrenaline",
+      "img": "icons/creatures/abilities/bear-roar-bite-brown-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.characteristics.might.edges",
+            "type": "add",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You have a double edge on Physique tests.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    }
+  ],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

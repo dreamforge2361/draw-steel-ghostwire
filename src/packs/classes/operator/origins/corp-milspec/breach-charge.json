@@ -1,0 +1,32 @@
+{
+  "_id": "IdUHNDXUkenUq0f7",
+  "_key": "!items!IdUHNDXUkenUq0f7",
+  "name": "GHOSTWIRE.Classes.Operator.Items.BreachCharge.Name",
+  "type": "feature",
+  "img": "icons/magic/light/beam-strike-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.BreachCharge.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breach-charge",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

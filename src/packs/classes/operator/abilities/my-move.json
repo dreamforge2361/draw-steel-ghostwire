@@ -1,0 +1,109 @@
+{
+  "_id": "zL1TDPnnYOXV8ATh",
+  "_key": "!items!zL1TDPnnYOXV8ATh",
+  "name": "GHOSTWIRE.Classes.Operator.Items.MyMove.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-sword-blood-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "my-move",
+    "story": "GHOSTWIRE.Classes.Operator.Items.MyMove.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "GHOSTWIRE.Classes.Operator.Items.MyMove.Trigger",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "The triggering creature",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "YlxPnB1UtdNCoYbl": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "YlxPnB1UtdNCoYbl",
+          "damage": {
+            "tier1": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "13 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "operator"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.MyMove.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

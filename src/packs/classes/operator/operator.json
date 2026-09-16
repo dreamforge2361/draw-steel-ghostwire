@@ -1,0 +1,628 @@
+{
+  "_id": "AHQuzfWMKQluvMHw",
+  "_key": "!items!AHQuzfWMKQluvMHw",
+  "name": "GHOSTWIRE.Classes.Operator.Items.Class.Name",
+  "type": "class",
+  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "operator",
+    "advancements": {
+      "UkhBvtjA3OxcP4c4": {
+        "name": "Skills",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "UkhBvtjA3OxcP4c4",
+        "chooseN": 2,
+        "skills": {
+          "groups": [
+            "exploration",
+            "intrigue"
+          ],
+          "choices": []
+        },
+        "description": "<p>Choose any two skills from the exploration or intrigue skill groups. <em>(Quick Build: Alertness, Jump.)</em></p>",
+        "sort": -47000,
+        "repick": {}
+      },
+      "F1SV8pE24DkIDxtA": {
+        "name": "Operator Origin",
+        "img": "icons/creatures/abilities/wolf-heads-swirl-purple.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "F1SV8pE24DkIDxtA",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ibssXJlEiS4jwG7U"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WbxNDtQJyk3dCnS0"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oQxPB9QvTkJxFfyg"
+          }
+        ],
+        "description": "<p>Choose your Operator Origin: Corp-Milspec, Merc, or Street-vet. Each grants a skill and your Kit choice. <em>(Quick Build: Corp-Milspec.)</em></p>",
+        "sort": 14000,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "2gM4VoC4XmaJAxpi": {
+        "name": "Adrenaline",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "2gM4VoC4XmaJAxpi",
+        "description": "<p>You gain the following features.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YxnFFEXlk2vy6Eo9"
+          }
+        ],
+        "sort": 3000,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "OCayU87edJQCroxu": {
+        "name": "Signature Abilities",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "OCayU87edJQCroxu",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.G8yLYKWridHzcaoT"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SbljEOo0Q9J3T2ci"
+          }
+        ],
+        "description": "<p>You know both Operator signature abilities.</p>",
+        "chooseN": null,
+        "sort": 15000,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "pHoGNliceTIIehzI": {
+        "name": "Heroic Ability (1–5 Adrenaline)",
+        "img": "icons/weapons/hammers/hammer-double-wood.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "pHoGNliceTIIehzI",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ClXRQ7sq3JDEfLXp"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.u9bCszog9eNxjiZA"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.knNP71xwcAGj7Mno"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.p4PGrWwEpRtN7zyi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RYQQsbcZDNuIsivX"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the base band (1–5 Adrenaline).</p>",
+        "sort": 22000,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "qpOkC2pqAKsdSFJO": {
+        "name": "Perk",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "qpOkC2pqAKsdSFJO",
+        "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 9000,
+        "repick": {},
+        "pool": []
+      },
+      "Fuep5ltkI9rweisR": {
+        "name": "7 Adrenaline Ability",
+        "img": "icons/weapons/hammers/hammer-double-engraved-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "Fuep5ltkI9rweisR",
+        "chooseN": 1,
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Adrenaline to use.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ExouaIu067LW2hk7"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.X6h1ygTn3ErOt06u"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5fjNFssowmxRTMKO"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1Ir2tPHmuwV58gpD"
+          }
+        ],
+        "sort": 24000,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "x1UyQl0VGl5GZ70H": {
+        "name": "",
+        "img": null,
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "x1UyQl0VGl5GZ70H",
+        "description": "<p>Your Might and Agility scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1
+        },
+        "sort": 0,
+        "repick": {},
+        "max": 3
+      },
+      "jH4R9rt6LyLphEX1": {
+        "name": "",
+        "img": null,
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "jH4R9rt6LyLphEX1",
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "max": 4,
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "sort": 1000,
+        "repick": {}
+      },
+      "PFqG7t29d5oz1l6N": {
+        "name": "",
+        "img": null,
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "_id": "PFqG7t29d5oz1l6N",
+        "description": "<p>Your Might and Agility scores each increase to 5.</p>",
+        "max": 5,
+        "characteristics": {
+          "might": 1,
+          "agility": 1
+        },
+        "sort": 2000,
+        "repick": {}
+      },
+      "3PpPkWNV8FKTEqeY": {
+        "name": "Perk",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "3PpPkWNV8FKTEqeY",
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 10000,
+        "repick": {},
+        "pool": []
+      },
+      "O9gmhBM5M2FrpFv1": {
+        "name": "Perk",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "O9gmhBM5M2FrpFv1",
+        "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 11000,
+        "repick": {},
+        "pool": []
+      },
+      "2dvrlOFVLXIk9yTQ": {
+        "name": "Perk",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "2dvrlOFVLXIk9yTQ",
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 12000,
+        "repick": {},
+        "pool": []
+      },
+      "1o8WajVxMEMqNbrs": {
+        "name": "Perk",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "_id": "1o8WajVxMEMqNbrs",
+        "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 13000,
+        "repick": {},
+        "pool": []
+      },
+      "znSGxZWBgtDGH4jQ": {
+        "name": "Features",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "znSGxZWBgtDGH4jQ",
+        "description": "<p>You gain the following features.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Do51WyTVix9gnNva"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mSnafw2N5cqKNQvc"
+          }
+        ],
+        "sort": 4000,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "HBFnY9ZsEucLUjHT": {
+        "name": "Skill",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "HBFnY9ZsEucLUjHT",
+        "skills": {
+          "groups": [
+            "crafting",
+            "exploration",
+            "interpersonal",
+            "intrigue",
+            "lore"
+          ],
+          "choices": []
+        },
+        "chooseN": 1,
+        "description": "<p>You gain one skill of your choice.</p>",
+        "sort": 17000,
+        "repick": {}
+      },
+      "zLNTbfLZGyYVEnCX": {
+        "name": "Features",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "zLNTbfLZGyYVEnCX",
+        "description": "<p>You gain the following features.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WG99zz4NzyeFukL7"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IhmMnegZdRYiYkGX"
+          }
+        ],
+        "sort": 5000,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "PbAQ5g22NEIqce2Z": {
+        "name": "Skill",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "PbAQ5g22NEIqce2Z",
+        "description": "<p>You gain one skill of your choice.</p>",
+        "chooseN": 1,
+        "skills": {
+          "groups": [
+            "crafting",
+            "exploration",
+            "interpersonal",
+            "intrigue",
+            "lore"
+          ],
+          "choices": []
+        },
+        "sort": 18000,
+        "repick": {}
+      },
+      "jUB4nTpkEm2PFYUu": {
+        "name": "Features",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "jUB4nTpkEm2PFYUu",
+        "description": "<p>You gain the following features.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7axaM6GghbaBQFKj"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1NrfeXeyVXvXSLYQ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CltbYTfSgPMn3yvb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BwbvL7t5nyRxYXf3"
+          }
+        ],
+        "sort": 6000,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "E8M24H2NQdz7hmwH": {
+        "name": "9 Adrenaline Ability",
+        "img": "icons/weapons/hammers/hammer-double-engraved-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "E8M24H2NQdz7hmwH",
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Adrenaline to use.</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dVdgMRmmxMcmREgE"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zL1TDPnnYOXV8ATh"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dSjewK0pU3OHFt0V"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NPIHqtsSM8Xb4E24"
+          }
+        ],
+        "sort": 25000,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Vnge25ZGYqndHupJ": {
+        "name": "11 Adrenaline Ability",
+        "img": "icons/weapons/hammers/hammer-double-engraved-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "Vnge25ZGYqndHupJ",
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Adrenaline to use.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iFUY6SLRabsFFiRY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0vlpwAYu2CllxICo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7nI2Hy88ILMeo2hu"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pPjxmTI0CvXZ8ecJ"
+          }
+        ],
+        "chooseN": 1,
+        "sort": 21000,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jvcOhluju0mCwZvf": {
+        "name": "Ghost of the Sprawl",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "jvcOhluju0mCwZvf",
+        "description": "<p>You gain the following features.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oXZOIaVSJ0WJwpuw"
+          }
+        ],
+        "sort": 8000,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dQpHpFb39L7C1SKp": {
+        "name": "Skill",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "_id": "dQpHpFb39L7C1SKp",
+        "description": "<p>You gain one skill of your choice.</p>",
+        "chooseN": 1,
+        "skills": {
+          "groups": [
+            "crafting",
+            "exploration",
+            "interpersonal",
+            "intrigue",
+            "lore"
+          ],
+          "choices": []
+        },
+        "sort": 19000,
+        "repick": {}
+      },
+      "UIC80u8IQZlybGHh": {
+        "name": "Features",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "_id": "UIC80u8IQZlybGHh",
+        "description": "<p>You gain the following features.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HVbjTydvVYVZeZCm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7zvBepekFoFB8HzT"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Bcav9cqOQLZNChYJ"
+          }
+        ],
+        "sort": 7000,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "level": 0,
+    "primary": "Adrenaline",
+    "epic": "Combat Legend",
+    "turnGain": "1d3",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "might",
+        "agility"
+      ]
+    },
+    "stamina": {
+      "starting": 21,
+      "level": 9
+    },
+    "recoveries": 10
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

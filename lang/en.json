@@ -13,7 +13,8 @@
       "abilities": "Ghostwire Abilities",
       "chrome": "Ghostwire Chrome",
       "kits": "Ghostwire Kits",
-      "gear": "Ghostwire Gear"
+      "gear": "Ghostwire Gear",
+      "classes": "Ghostwire Classes"
     },
     "Abilities": {
       "Keywords": {
@@ -502,6 +503,379 @@
         "professional": "Professional",
         "restricted": "Restricted",
         "military": "Military"
+      }
+    },
+    "Classes": {
+      "Operator": {
+        "Folders": {
+          "Operator": "Operator",
+          "Abilities": "Abilities",
+          "Origins": "Origins",
+          "CorpMilspec": "Corp-Milspec",
+          "Merc": "Merc",
+          "StreetVet": "Street-vet"
+        },
+        "Items": {
+          "ControlledPair": {
+            "Name": "Controlled Pair",
+            "Story": "Two aimed shots, center mass, before they can blink."
+          },
+          "SuppressingFire": {
+            "Name": "Suppressing Fire",
+            "Story": "You hose down a zone to keep heads low and pin enemies in place."
+          },
+          "BreachAndClear": {
+            "Name": "Breach & Clear",
+            "Effect_after00000000000": "<p>If you or an ally moves into a square the target vacated this turn, an opportunity attack that creature would have taken against you or that ally targets the slid target instead.</p>",
+            "Story": "Put them where you want them, then take the space they left."
+          },
+          "TriggerCadence": {
+            "Name": "Trigger Cadence",
+            "Effect_before0000000000": "<p>You gain 1 surge, and the next ability power roll you make this turn automatically obtains a tier 3 outcome.</p>",
+            "Story": "Breathe. Squeeze. Your nervous system does the rest."
+          },
+          "HoldTheLine": {
+            "Name": "Hold the Line",
+            "Story": "Nobody crosses that line standing.",
+            "Trigger": "An enemy moves adjacent to you or within 3 squares of you."
+          },
+          "Overwatch": {
+            "Name": "Overwatch",
+            "Effect_after00000000000": "<p>You can use this ability against each enemy only once per encounter.</p>",
+            "Story": "You’ve had the lane covered since before they walked into it.",
+            "Trigger": "An enemy within distance moves or uses an action for the first time this encounter."
+          },
+          "AdrenalineDump": {
+            "Name": "Adrenaline Dump",
+            "Effect_after00000000000": "<p>For one target, you can take [[/damage 1d6]]{1d6 damage} to deal an extra [[/damage 1d6]]{1d6 damage} to that target.</p>",
+            "Story": "Everything you’ve got, all at once."
+          },
+          "Class": {
+            "Name": "Operator",
+            "Description": "<p>You are an Operator — a street samurai, edgerunner, or professional shooter who fights with chrome, discipline, and a body wired to run hotter than anyone else on the field. You don’t hack the Wired and you don’t burn magic; you close distance, put rounds and blades where they count, and keep coming back for more when everyone else would already be down.</p><p>Whether you’re a Corp-Milspec asset running fire-team doctrine, a Merc carrying two kits into every job, or a Street-vet who survived the gutter long enough to become a professional, your identity is the same: chrome-forward, casts nothing, and dangerous specifically because you do not stop.</p><p><strong>Core characteristics:</strong> Physique, Reflex · <strong>Heroic resource:</strong> Adrenaline · <strong>Starting Stamina:</strong> 21 (+9 per level) · <strong>Recoveries:</strong> 10 · <strong>Kit:</strong> yes (Merc carries two).</p>"
+          },
+          "Adrenaline": {
+            "Name": "Adrenaline",
+            "Description": "<p><strong>Adrenaline in Combat.</strong> At the start of a combat encounter (or any other tense situation the Director tracks in combat rounds), you gain Adrenaline equal to your Victories. At the start of each of your turns during combat, you gain 1d3 Adrenaline. Additionally, the first time each combat round that you take damage, you gain 1 Adrenaline. The first time you become winded or are dying in an encounter, you gain 1d3 Adrenaline. You lose any remaining Adrenaline at the end of the encounter.</p><p><strong>Adrenaline Outside of Combat.</strong> You can’t gain Adrenaline outside of combat, but you can still use your heroic abilities and effects that cost Adrenaline without spending it. Whenever you use an ability or effect outside of combat that costs Adrenaline, you can’t use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite. When you use an ability outside of combat that lets you spend unlimited Adrenaline on its effect, you can use it as if you had spent an amount of Adrenaline equal to your Victories.</p><p><strong>Growing Adrenaline.</strong> You gain certain benefits in combat based on the amount of Adrenaline you currently have (see your Origin’s Growing Adrenaline table). These benefits last until the end of your turn, even if a benefit would become unavailable because you spent Adrenaline during that turn.</p>"
+          },
+          "ChromeUnleashed": {
+            "Name": "Chrome Unleashed",
+            "Story": "Foes tremble at the sight of you.",
+            "Effect_before0000000000": "<p>Until the end of the encounter or until you are dying, each enemy who starts their turn adjacent to you and has [[potency P strong]] is [[/apply frightened turn]] until the end of their turn.</p>"
+          },
+          "FaceTheHail": {
+            "Name": "Face the Hail",
+            "Story": "Shocked in the face of your naked brutality, your enemy’s instincts take over.",
+            "Effect_before0000000000": "<p>Until the end of the encounter or until you are dying, each creature you make a melee strike against who has [[potency p average]] is taunted until the end of their next turn. Additionally, when you use an ability that deals rolled damage against any enemy taunted by you, the ability deals [[/damage 2*@M]]{extra damage} equal to twice your Physique score and increases its potency by 1.</p>"
+          },
+          "ArmorBreaker": {
+            "Name": "Armor Breaker",
+            "Story": "See how useless their weapons are!",
+            "Effect_before0000000000": "<p>You gain [[/heal 20 type=temporary]].</p>"
+          },
+          "AlreadyFlatlined": {
+            "Name": "Already Flatlined",
+            "Story": "Slash. Walk away.",
+            "Effect_before0000000000": "<p>If the target is not a leader or solo creature, they are reduced to 0 Stamina at the end of their next turn. If the target is a leader or solo creature, you [[/surge 3]] and can make a melee free strike against them.</p>"
+          },
+          "CripplingBurst": {
+            "Name": "Crippling Burst",
+            "Story": "You need just one blow to sabotage your target.",
+            "Effect_after00000000000": "<p>While slowed this way, the target takes 1 damage for every square they move, including from forced movement.</p>"
+          },
+          "MyMove": {
+            "Name": "My Move!",
+            "Story": "You quickly strike back at a foe.",
+            "Trigger": "A creature causes you to be winded or dying, or damages you while you are winded or dying.",
+            "Effect_after00000000000": "<p>You can spend a Recovery.</p>"
+          },
+          "ReboundingFire": {
+            "Name": "Rebounding Fire",
+            "Story": "You knock around enemies like playthings.",
+            "Effect_after00000000000": "<p>When a target would end this forced movement by colliding with a creature or object, they take damage as usual, then are pushed the remaining distance away from the creature or object in the direction they came from. As long as forced movement remains, this effect continues if the target collides with another creature or object.</p>"
+          },
+          "LockDown": {
+            "Name": "Lock Down!",
+            "Story": "Your strikes overload the target’s nervous system until their body simply stops answering.",
+            "Effect_after00000000000": "<p>While the target is slowed this way, any other effect that would make the target slowed instead makes them [[/apply Restrained]] by this ability. Additionally, a creature who fails the saving throw while restrained this way is <strong>locked down</strong> — [[/apply Petrified]] — until they receive specialist medical attention or you choose to reverse the effect (no action required).</p>"
+          },
+          "OverclockedAdrenaline": {
+            "Name": "Overclocked Adrenaline",
+            "Story": "Your overclocked nervous system turns every hit you take into instant retribution.",
+            "Effect_before0000000000": "<p>You gain [[/heal 10 temp]]. Additionally, choose acid, cold, corruption, fire, lightning, poison, or sonic damage. Until the end of the encounter or until you are dying, whenever an enemy damages you, they take [[/damage 10 type=acid/cold/corruption/fire/lightning/poison/sonic]] damage of the chosen type. If this damage reduces the enemy to 0 Stamina, you gain [[/heal 10 temp]].</p>"
+          },
+          "Overkill": {
+            "Name": "Overkill",
+            "Story": "You strike so no damage is wasted.",
+            "Effect_after00000000000": "<p>If the target is a minion or is winded but isn’t a leader or solo creature, they are reduced to 0 Stamina before this ability’s damage is dealt. If the target is killed by this damage, you can deal any damage over what was required to kill them to another creature within 5 squares of the target.</p>"
+          },
+          "CombatTrance": {
+            "Name": "Combat Trance",
+            "Story": "The world slows down, and your Adrenaline turns into pure violence.",
+            "Effect_before0000000000": "<p>Choose acid, cold, corruption, fire, lightning, poison, or sonic damage. Until the end of the encounter or until you are dying, you can choose one target of any ability you use, with that target taking an extra [[/damage 15 type=acid/cold/corruption/fire/lightning/poison/sonic]] damage of the chosen type. Additionally, whenever you gain Adrenaline from taking damage, the source of the damage takes [[/damage 5 type=acid/cold/corruption/fire/lightning/poison/sonic]] damage of the chosen type.</p>"
+          },
+          "Relentless": {
+            "Name": "Relentless",
+            "Story": "You won’t escape your fate.",
+            "Effect_before0000000000": "<p>You shift up to your speed. Each enemy you move adjacent to during this movement takes [[/damage 2*@M]]{damage equal to twice your Physique score}. Then make one power roll that targets each enemy you move adjacent to during this shift. You [[/gain 1 heroic]]{gain 1 Adrenaline} for each target who dies as a result of this ability (maximum 11 Adrenaline).</p>"
+          },
+          "DamagingAdrenaline": {
+            "Name": "Damaging Adrenaline",
+            "Description": "<p>The first time you take damage each combat round, you gain 2 Adrenaline instead of 1.</p>"
+          },
+          "GrowingAdrenalineI": {
+            "Name": "Growing Adrenaline I",
+            "Description": "<p>Your Growing Adrenaline feature provides additional benefits when you have 8 or more Adrenaline.</p>"
+          },
+          "CombatAttunement": {
+            "Name": "Combat Attunement",
+            "Description": "<p>Combat-grade sensors and hard-won instinct tell you how damage interacts with everyone around you. You automatically sense whether any creature within 10 squares has damage immunity or damage weakness to acid, cold, corruption, fire, lightning, poison, or sonic damage, learning whether they have immunity or weakness, its value, and the damage type. Additionally, you automatically sense any source of one of those damage types within 10 squares, such as a fire, a live cable, or a chemical spill.</p>"
+          },
+          "PrecisionStrike": {
+            "Name": "Precision Strike",
+            "Description": "<p>You channel your Adrenaline into a perfectly placed hit. As part of any strike, you can spend 1 Adrenaline to [[/surge 1]] that must be used for that strike. The extra damage dealt by the surge can be acid, cold, corruption, fire, lightning, poison, or sonic (your choice) — the round, blade, or charge you loaded for it.</p>"
+          },
+          "VeteranOfTheSprawl": {
+            "Name": "Veteran of the Sprawl",
+            "Description": "<p>You passively detect security systems, drones, and Corp-Milspec presence within 1 mile, and you read corp and gang signal traffic fluently. Treat your Renown as 1 higher with corp and gang contacts. The first time a Corp-Milspec operative becomes aware of you, they are frightened of you until the end of the encounter if they have Persona lower than your average potency.</p>"
+          },
+          "BreachPoint": {
+            "Name": "Breach Point",
+            "Description": "<p>A breach point is a standing, reusable tear you personally open between the physical world and <strong>the deep network</strong> — a hidden, secured layer of the Wired reachable only through a breach point and anchored on your end to a <strong>live relay node</strong> (a node you or an ally has set up and is actively maintaining; see Ghost of the Sprawl).</p><p>As a main action, touch a live relay node to open a breach point into the deep network. You can then spend a main action to route yourself and any willing creatures within 10 squares of you through the breach onto a secured <strong>safehouse node</strong>, or to route back the same way. You can maintain a number of breach points equal to your Physique score, and every breach point you hold leads to the same safehouse node. If a breach point is destroyed, it drops out of your network; you can remove one voluntarily at any distance, no action required. Exploring the deep network beyond your safehouse node is possible, but safety there isn’t guaranteed.</p>"
+          },
+          "CombatForm": {
+            "Name": "Combat Form",
+            "Description": "<p>Your chrome and nervous system show the strain of how hot you run. Whenever you show strong emotion or increase your Adrenaline, your chrome flares — heat shimmer, static, or a visible glow in your implants.</p><p>Additionally, if you are a Corp-Milspec or Merc, you have immunity to acid, cold, corruption, fire, lightning, poison, and sonic damage equal to [[lookup @M]]{your Physique score}. If you are a Street-vet, you have immunity to your loadout damage type equal to [[lookup 2*@M evaluate=true]]{twice your Physique score}.</p>"
+          },
+          "GreaterAdrenaline": {
+            "Name": "Greater Adrenaline",
+            "Description": "<p>When you gain Adrenaline at the start of each of your turns during combat, you gain 1d3 + 1 Adrenaline instead of 1d3.</p>"
+          },
+          "GrowingAdrenalineII": {
+            "Name": "Growing Adrenaline II",
+            "Description": "<p>Your Growing Adrenaline feature provides additional benefits when you have 10 or more Adrenaline.</p>"
+          },
+          "GhostOfTheSprawl": {
+            "Name": "Ghost of the Sprawl",
+            "Description": "<p>As a respite activity, you establish a temporary secured relay node that lasts 24 hours. You can use it with your Breach Point feature to open a breach point into the deep network; if you do, the relay node persists as long as you maintain that breach point.</p>"
+          },
+          "WarzoneIncarnate": {
+            "Name": "Warzone Incarnate",
+            "Description": "<p>You’ve walked through every kind of fire the Sprawl can throw. If you are a Corp-Milspec or Merc, you have immunity to acid, cold, corruption, fire, lightning, poison, and sonic damage equal to [[lookup 2*@M evaluate=true]]{twice your Physique score}. If you are a Street-vet, your immunity to your loadout damage type increases to [[lookup 3*@M evaluate=true]]{three times your Physique score}.</p><p>When any creature whose abilities deal acid, cold, corruption, fire, lightning, poison, or sonic damage first becomes aware of you in combat, if they have [[potency P strong]], they are [[/apply frightened save]].</p><p>Additionally, when you use Precision Strike, you can spend up to 3 Adrenaline, [[/surge 1]]{gaining 1 surge} per Adrenaline spent to use for that strike.</p>",
+            "Director": "<p>This feature is an upgrade of the effects granted by the 7th level feature “Combat Form.” You can increase the values of the effect you already have to match the values of this feature.</p>"
+          },
+          "GrowingAdrenalineIII": {
+            "Name": "Growing Adrenaline III",
+            "Description": "<p>Your Growing Adrenaline feature provides additional benefits when you have 12 or more Adrenaline.</p>"
+          },
+          "PeakAdrenaline": {
+            "Name": "Peak Adrenaline",
+            "Description": "<p>The first time you take damage each combat round, you gain 3 Adrenaline instead of 2.</p>"
+          },
+          "OperatorMastery": {
+            "Name": "Operator Mastery",
+            "Description": "<p>You gain an epic resource called <strong>Overclock</strong>. Each time you finish a respite, you gain Overclock equal to the XP you gain. You can spend Overclock on your abilities as if it were Adrenaline. You can also spend any amount of Overclock as a free maneuver to end one effect on you per Overclock spent, and you can spend 3 Overclock to open a breach point into the deep network without needing a live relay node. Overclock remains until you spend it.</p>"
+          },
+          "CorpMilspec": {
+            "Name": "Corp-Milspec",
+            "Description": "<p><em>“Company Asset.”</em> Fire-team doctrine drilled into you by a corporate or military program: breaching, controlling space, and hitting hard enough to move people.</p><p>At 1st level you gain the Command skill and choose one Kit.</p>"
+          },
+          "BreachingForce": {
+            "Name": "Breaching Force",
+            "Description": "<p>Whenever you damage an object with a weapon strike, the strike deals extra damage equal to [[lookup @M]]{your Physique score}. Additionally, whenever you push another creature into an object, the creature takes extra damage equal to [[lookup @M]]{your Physique score}.</p><p>As your Adrenaline grows, you gain benefits as noted on the @UUID[Compendium.draw-steel-ghostwire.classes.Item.3t5oRaCIWuHaazPt]{Corp-Milspec Growing Adrenaline} table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>"
+          },
+          "GrowingAdrenalineCorpMilspec": {
+            "Name": "Growing Adrenaline",
+            "Description": "<p>You gain certain benefits in combat based on the amount of Adrenaline you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of Adrenaline you spend during your turn. Some Growing Adrenaline benefits can be applied only if you are a specific level or higher, with the level of those benefits noted in the various Growing Adrenaline tables in this section.</p><table><thead><tr><th><p>Adrenaline</p></th><th><p>Benefit</p></th></tr></thead><tbody><tr><td><p>2</p></td><td><p>Whenever you use the Knockback maneuver, the forced movement distance gains a bonus equal to [[lookup @M]]{your Physique score}.</p></td></tr><tr><td><p>4</p></td><td><p>The first time you push a creature on a turn, you [[/surge 1]].</p></td></tr><tr><td><p>6</p></td><td><p>You gain an edge on Physique tests and the Knockback maneuver</p></td></tr><tr><td><p>8 (4th Level)</p></td><td><p>The first time you push a creature on a turn, you [[/surge 2]].</p></td></tr><tr><td><p>10 (7th Level)</p></td><td><p>You have a double edge on Physique tests and the Knockback maneuver.</p></td></tr><tr><td><p>12 (10th Level)</p></td><td><p>Whenever you use a heroic ability, you gain [[/heal 10 temporary]]. Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @M]]{your Physique score}.</p></td></tr></tbody></table>"
+          },
+          "KineticRedirect": {
+            "Name": "Kinetic Redirect",
+            "Story": "You redirect the energy of motion.",
+            "Trigger": "The target would be force moved",
+            "Effect_spend00000000000": "<p>The forced movement distance gains a bonus equal to twice your Physique score instead.</p>",
+            "Effect_before0000000000": "<p>You can select a new target of the same size or smaller within distance to be force moved instead. You become the source of the forced movement, determine the new target’s destination, and can push the target instead of using the original forced movement type. Additionally, the forced movement distance gains a bonus equal to [[lookup @M]]{your Physique score}.</p>"
+          },
+          "BreachCharge": {
+            "Name": "Breach Charge",
+            "Description": "<p>Whenever you use the @UUID[Compendium.draw-steel.abilities.Item.wNqJWJbgAbnJBqZf]{Charge} main action, you can use a strike signature ability or a strike heroic ability instead of a free strike. Additionally, you can jump as part of your charge.</p>"
+          },
+          "DangerClose": {
+            "Name": "Danger Close",
+            "Story": "You ready?",
+            "Effect_before0000000000": "<p>You vertically push the target up to 4 squares. This forced movement ignores the target’s stability, and the target takes no damage from colliding with creatures or objects. At the end of this movement, the target can make a free strike that deals extra damage equal to [[lookup @M]]{your Physique score}.</p>"
+          },
+          "DemolitionSwing": {
+            "Name": "Demolition Swing",
+            "Story": "It’s easier to destroy than to create. Much easier, in fact!",
+            "Effect_before0000000000": "<p>You move up to your speed in a straight line. During this movement, you can move through mundane structures, including walls, which are difficult terrain for you. You automatically destroy each square of structure you move through and leave behind a square of difficult terrain.</p><p>Additionally, you make one power roll that targets each enemy you move adjacent to during this movement.</p>"
+          },
+          "AnchoredStance": {
+            "Name": "Anchored Stance",
+            "Description": "<p>You add your level to your effective size for the purpose of interacting with creatures and objects, including determining whether you can lift an object, are affected by forced movement, and so forth. This has no effect on whether you can be grabbed.</p><p>Additionally, you have a bonus to stability equal to [[lookup @M]]{your Physique score}.</p>"
+          },
+          "JumpRig": {
+            "Name": "Jump Rig",
+            "Description": "<p>Your jump distance and height double. Additionally, when you fall, you reduce the effective height of your fall by a number of squares equal to your jump distance for the purpose of determining damage and whether you land prone. You are not prone after falling and landing on another creature.</p>"
+          },
+          "OrbitalDrop": {
+            "Name": "Orbital Drop",
+            "Story": "You leap and crash down, causing a shockwave that devastates foes.",
+            "Effect_before0000000000": "<p>You jump up to your maximum jump distance and make one power roll that targets each creature adjacent to the space where you land.</p>"
+          },
+          "ConcussiveThrow": {
+            "Name": "Concussive Throw",
+            "Story": "You strike an enemy hard enough to be a projectile that knocks a crowd of creatures around.",
+            "Effect_after00000000000": "<p>When the target ends this forced movement, each creature within 2 squares of the target is pushed 3 squares.</p>"
+          },
+          "OverpoweringBuild": {
+            "Name": "Overpowering Build",
+            "Description": "<p>Your strength is unmatched. Whenever you make a Physique test, you can roll three dice and choose which two to use. Additionally, whenever you use the Knockback maneuver, the forced movement distance gains a bonus equal to [[lookup @M]]{your Physique score}.</p>"
+          },
+          "FireForEffect": {
+            "Name": "Fire For Effect",
+            "Story": "You use your weapon to create a destructive shockwave.",
+            "Effect_after00000000000": "<p>If this forced movement causes a target to be hurled through an object, that target takes an extra [[/damage 10]].</p>"
+          },
+          "GravityWellCharge": {
+            "Name": "Gravity Well Charge",
+            "Story": "A shaped gravitic charge detonates and drags everyone toward you.",
+            "Effect_after00000000000": "<p>If this forced movement causes a target to slam into you, you take no damage from the collision and the target takes the damage you would have taken.</p>"
+          },
+          "Merc": {
+            "Name": "Merc",
+            "Description": "<p><em>“Free Company Veteran.”</em> Field Arsenal training — the only Origin that maintains <strong>two</strong> Kits at once — built on staying a step ahead of the job and the people paying for it.</p><p>At 1st level you gain the Demolitions skill and choose two Kits. With two Kits, you use the better Stamina, speed, stability, disengage, and distance bonus of the two, and the damage bonus of your preferred Kit (mark it on the sheet).</p>"
+          },
+          "CombatInstinct": {
+            "Name": "Combat Instinct",
+            "Description": "<p>You are never surprised. Additionally, whenever you would push a target with forced movement, you can slide them instead.</p><p>As your Adrenaline grows, you gain benefits as noted on the @UUID[Compendium.draw-steel-ghostwire.classes.Item.ieGJV4l66nywzuxo]{Merc Growing Adrenaline} table. Benefits are cumulative except where an improved benefit replaces a lesser benefit.</p>"
+          },
+          "GrowingAdrenalineMerc": {
+            "Name": "Growing Adrenaline",
+            "Description": "<p>You gain certain benefits in combat based on the amount of Adrenaline you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of Adrenaline you spend during your turn. Some Growing Adrenaline benefits can be applied only if you are a specific level or higher, with the level of those benefits noted in the various Growing Adrenaline tables in this section.</p><table><thead><tr><th><p>Adrenaline</p></th><th><p>Benefit</p></th></tr></thead><tbody><tr><td><p>2</p></td><td><p>Whenever you use the Knockback maneuver, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr><tr><td><p>4</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 1]].</p></td></tr><tr><td><p>6</p></td><td><p>You gain an edge on Reflex tests and the Knockback maneuver</p></td></tr><tr><td><p>8 (4th Level)</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 2]].</p></td></tr><tr><td><p>10 (7th Level)</p></td><td><p>You have a double edge on Reflex tests and the Knockback maneuver.</p></td></tr><tr><td><p>12 (10th Level)</p></td><td><p>Whenever you use a heroic ability, you gain [[/heal 10 temporary]]. Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr></tbody></table>"
+          },
+          "WiredReflexes": {
+            "Name": "Wired Reflexes",
+            "Story": "You are as elusive as a hummingbird.",
+            "Trigger": "You take damage.",
+            "Effect_spend00000000000": "<p>If the damage has any potency effects associated  with it, the potency is reduced by 1 for you.</p>",
+            "Effect_before0000000000": "<p>You take half the damage from the triggering effect and can shift up to a number of squares equal to [[lookup @A]]{your Reflex score}.</p>"
+          },
+          "RunAndGun": {
+            "Name": "Run and Gun",
+            "Description": "<p>You have a bonus to speed equal to [[lookup @A]]{your Reflex score}, and you ignore difficult terrain.</p>"
+          },
+          "SuppressionKill": {
+            "Name": "Suppression Kill",
+            "Story": "Your controlled violence strikes terror into everyone watching."
+          },
+          "FormationBreaker": {
+            "Name": "Formation Breaker",
+            "Story": "Organizing your forces like feckless creatures of Law. Pitiful.",
+            "Effect_before0000000000": "<p>You shift up to your speed and make one power roll that targets up to three enemies you move adjacent to during this shift.</p>"
+          },
+          "ReadTheMark": {
+            "Name": "Read the Mark",
+            "Description": "<p>You have a double edge on tests made to search for hidden creatures, discern hidden motives, or detect lies. You also have a double edge on tests made to gamble!</p>"
+          },
+          "SlipTheCuffs": {
+            "Name": "Slip the Cuffs",
+            "Description": "<p>At the start of your turn, you can end any restrained condition on you. Additionally, you have a double edge on tests made to escape being confined or imprisoned.</p>"
+          },
+          "ContractFulfilled": {
+            "Name": "Contract Fulfilled",
+            "Story": "Once the first target drops, you get efficient — every kill is a chance to line up the next.",
+            "Trigger": "You reduce a creature to 0 Stamina with a strike.",
+            "Effect_before0000000000": "<p>You target a creature adjacent to you with the same strike, using the same power roll as the triggering strike.</p>"
+          },
+          "BreachTheLine": {
+            "Name": "Breach the Line",
+            "Story": "You break through the enemy lines to make an example.",
+            "Effect_before0000000000": "<p>You shift up to your speed.</p>",
+            "Effect_after00000000000": "<p>If a target who is not a leader or solo creature is winded by this strike, they are reduced to 0 Stamina and you choose an enemy within 5 squares of you. If that enemy has [[potency P average]], they are [[/apply frightened save]].</p>"
+          },
+          "AlwaysMoving": {
+            "Name": "Always Moving",
+            "Description": "<p>You move with legendary grace. Whenever you make an Reflex test, you can roll three dice and choose which two to use. Additionally, whenever you use the Disengage move action, the distance you can shift gains a bonus equal to [[lookup @A]]{your Reflex score}.</p>"
+          },
+          "TargetMarked": {
+            "Name": "Target Marked",
+            "Story": "You attune the target to be weaker to a specific element.",
+            "Effect_after00000000000": "<p>Choose acid, cold, corruption, fire, lightning, poison, or sonic damage. The target loses any damage immunity to the chosen type and gains weakness 10 to the chosen type (save ends). </p><p>[[/apply MGQmrgFa7IchnX8z]] [[/apply Z25OIEpHpelUvKWe]]  [[/apply Tp4YLa282D8CY9eX]] [[/apply GZkQv6kUtb5gccNI]] [[/apply 2SJ7L3LBeALSQ4JA]] [[/apply d12CIjzP0dulOpUI]] [[/apply twQIogmZMlG19c4n]]</p>"
+          },
+          "ShockAndAwe": {
+            "Name": "Shock and Awe",
+            "Story": "You shock your foes with the brutality of your strike, resetting the balance of combat.",
+            "Effect_after00000000000": "<p>Each enemy within 5 squares of you is distracted until the end of the round. While a creature is distracted this way, they can’t take triggered actions or free triggered actions, ability rolls made against them gain an edge, and their characteristic scores are considered 1 lower for the purpose of resisting potencies.</p>"
+          },
+          "StreetVet": {
+            "Name": "Street-vet",
+            "Description": "<p><em>“Self-Made Killer.”</em> Gutter Instinct training — you survived the street long enough to turn it into a profession, and you can’t be caught flat-footed.</p><p>At 1st level you gain the Intimidation skill and choose one Kit.</p><p><strong>Loadout damage type.</strong> At 1st level, choose the rounds and rigs you favor: cryo (cold), toxin (corruption), incendiary (fire), or shock (lightning). Street-vet abilities and features that refer to your loadout damage type use this type. You can change it when you finish a respite.</p>"
+          },
+          "GutterInstinct": {
+            "Name": "Gutter Instinct",
+            "Description": "<p>You can’t be surprised. Once per encounter when you are hit by a strike, you can turn that hit into a glancing blow: you take half the damage (round down) and gain 1 Adrenaline.</p>"
+          },
+          "OverclockNerves": {
+            "Name": "Overclock Nerves",
+            "Story": "In your anger, you revert to a more bestial form.",
+            "Trigger": "You lose Stamina and are not dying.",
+            "Effect_spend00000000000": "<p>if you are not dying, you can spend a Recovery.</p>",
+            "Effect_before0000000000": "<p>You gain [[/heal @M temp]]{temporary Stamina} equal to your Physique score as your nerves overclock and pain stops registering.</p>"
+          },
+          "SurvivorsNose": {
+            "Name": "Survivor’s Nose",
+            "Description": "<p>You gain an edge on tests made using the Survival skill.</p>"
+          },
+          "DirtyFighting": {
+            "Name": "Dirty Fighting",
+            "Description": "<p>At the end of each of your turns, each enemy adjacent to you takes [[/damage @M]]{damage} equal to your Physique score.</p>"
+          },
+          "DownTheAlley": {
+            "Name": "Down the Alley",
+            "Story": "I will hunt you down.",
+            "Effect_after00000000000": "<p>The target can’t be hidden from you for 24 hours. Until the end of the encounter, whenever the target willingly moves, you can use a free triggered action to move.</p>"
+          },
+          "KillerRep": {
+            "Name": "Killer Rep",
+            "Story": "Your reputation hits before you do, and your opening burst staggers them.",
+            "Effect_after00000000000": "<p>This ability deals your loadout damage type.</p>"
+          },
+          "StreetNetwork": {
+            "Name": "Street Network",
+            "Description": "<p>You can talk your way to information from gangers, fixers, and street contacts, and you automatically sense the presence of any such contact within 10 squares of you, even if they’re hidden. When negotiating with a ganger, fixer, or street contact, treat your Renown as 1 higher than usual.</p>"
+          },
+          "Weathered": {
+            "Name": "Weathered",
+            "Description": "<p>You and each ally within 5 squares of you ignore banes and other negative effects from urban and industrial hazards — toxic fumes, structural collapse, crossfire, and similar. Once per respite, you can call in a favor from a street contact to gain the benefit of a skill of your choice from the exploration group for one scene.</p>"
+          },
+          "AmbushRush": {
+            "Name": "Ambush Rush",
+            "Story": "You strike at the target like the ultimate predator you are.",
+            "Effect_after00000000000": "<p>You can shift up to 4 squares, bringing the target with you. While grabbed this way, the target takes [[/damage 2*@M]]{damage} equal to twice your Physique score at the start of each of your turns .</p>"
+          },
+          "Crossfire": {
+            "Name": "Crossfire",
+            "Story": "You set up interlocking fields of fire and a grav-lift field for your crew.",
+            "Effect_after00000000000": "<p>Until the end of the encounter or until you are dying, each enemy target takes damage of your loadout damage type equal to [[/damage 2*@M type=cold/fire/corruption/lightning]]{twice your Physique score} at the end of each of your turns.</p><p>Additionally, you can [[/apply t7CYKliC6xtRG9gk]] (fly, using the grav-lift field) while the aura is active. Each ally target who starts or ends their turn in the area can also [[/apply t7CYKliC6xtRG9gk]] until the start of their next turn or until the effect ends.</p><p><strong>Special</strong>: When you use this ability outside of combat without spending Adrenaline, you must spend 1 uninterrupted minute setting up the field, and you take [[/damage 1d6]] damage before the ability takes effect. The field lasts for 1 hour or until a combat encounter begins.</p>"
+          },
+          "GhostOfTheGutter": {
+            "Name": "Ghost of the Gutter",
+            "Description": "<p>You can use any Kit. During a respite, you can swap your Kit and still take another respite activity. Street Network’s sense range extends to 1 mile. Whenever you make a test to track another creature, roll three dice and choose which two to use.</p>"
+          },
+          "LastWord": {
+            "Name": "Last Word",
+            "Story": "You unleash an otherworldly cry that rips through your enemies, killing the weakest of them."
+          },
+          "SaturationFire": {
+            "Name": "Saturation Fire",
+            "Story": "You empty everything you’re carrying into the kill zone.",
+            "Effect_after00000000000": "<p>This ability deals your loadout damage type and ignores damage immunity.</p>"
+          },
+          "GrowingAdrenalineStreetVet": {
+            "Name": "Growing Adrenaline",
+            "Description": "<p>You gain certain benefits in combat based on the amount of Adrenaline you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of Adrenaline you spend during your turn. Some Growing Adrenaline benefits can be applied only if you are a specific level or higher, with the level of those benefits noted in the various Growing Adrenaline tables in this section.</p><table><thead><tr><th><p>Adrenaline</p></th><th><p>Benefit</p></th></tr></thead><tbody><tr><td><p>2</p></td><td><p>Whenever you use the Knockback maneuver, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr><tr><td><p>4</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 1]].</p></td></tr><tr><td><p>6</p></td><td><p>You gain an edge on Reflex tests and the Knockback maneuver</p></td></tr><tr><td><p>8 (4th Level)</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 2]].</p></td></tr><tr><td><p>10 (7th Level)</p></td><td><p>You have a double edge on Reflex tests and the Knockback maneuver.</p></td></tr><tr><td><p>12 (10th Level)</p></td><td><p>Whenever you use a heroic ability, you gain [[/heal 10 temporary]]. Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr></tbody></table>"
+          }
+        }
       }
     },
     "Peoples": {

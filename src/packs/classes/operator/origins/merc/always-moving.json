@@ -1,0 +1,86 @@
+{
+  "_id": "wtIiF5mcz8nDT3Cl",
+  "_key": "!items!wtIiF5mcz8nDT3Cl",
+  "name": "GHOSTWIRE.Classes.Operator.Items.AlwaysMoving.Name",
+  "type": "feature",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.AlwaysMoving.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "always-moving",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "bvb72TqzClK9flij",
+      "_key": "!items.effects!wtIiF5mcz8nDT3Cl.bvb72TqzClK9flij",
+      "name": "Always Moving",
+      "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.wtIiF5mcz8nDT3Cl",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.characteristics.agility.dice.number",
+            "type": "upgrade",
+            "value": 3,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.movement.disengage",
+            "type": "add",
+            "value": "@A",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You move with legendary grace. Whenever you make an Reflex test, you can roll three dice and choose which two to use. Additionally, whenever you use the Disengage move action, the distance you can shift gains a bonus equal to your Reflex score.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

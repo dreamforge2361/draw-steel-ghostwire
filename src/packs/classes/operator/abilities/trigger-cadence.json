@@ -1,0 +1,70 @@
+{
+  "_id": "u9bCszog9eNxjiZA",
+  "_key": "!items!u9bCszog9eNxjiZA",
+  "name": "GHOSTWIRE.Classes.Operator.Items.TriggerCadence.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "trigger-cadence",
+    "story": "GHOSTWIRE.Classes.Operator.Items.TriggerCadence.Story",
+    "keywords": [],
+    "type": "freeManeuver",
+    "category": "heroic",
+    "resource": 2,
+    "trigger": "",
+    "distance": {
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1",
+      "type": "self"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "custom": "",
+      "value": null,
+      "type": "self"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.TriggerCadence.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "operator"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

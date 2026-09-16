@@ -1,0 +1,305 @@
+{
+  "_id": "yBUqJ5PtCHamTBrI",
+  "_key": "!items!yBUqJ5PtCHamTBrI",
+  "name": "GHOSTWIRE.Classes.Operator.Items.CombatForm.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.CombatForm.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "combat-form",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "WCiqfPNIdD6mtKHV",
+      "_key": "!items.effects!yBUqJ5PtCHamTBrI.WCiqfPNIdD6mtKHV",
+      "name": "Immunity=Physique",
+      "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI",
+      "transfer": true,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.acid",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.cold",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.corruption",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.fire",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.lightning",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.poison",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.sonic",
+            "type": "upgrade",
+            "value": "@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Immunity to acid, cold, corruption, fire, lightning, poison, and sonic damage equal to [[lookup @M]]{your Physique score}.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "tTRJufpV4d3UcJ2H",
+      "_key": "!items.effects!yBUqJ5PtCHamTBrI.tTRJufpV4d3UcJ2H",
+      "name": "Immunity Cold = 2*Physique",
+      "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI",
+      "transfer": true,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.cold",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Immunity to cold equal to [[lookup 2*@M]]{twice your Physique score}.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "2yrhy36OsqexJ3lr",
+      "_key": "!items.effects!yBUqJ5PtCHamTBrI.2yrhy36OsqexJ3lr",
+      "name": "Immunity Fire = 2*Physique",
+      "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI",
+      "transfer": true,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.fire",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Immunity to fire equal to [[lookup 2*@M]]{twice your Physique score}.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "NIN16Bgq0gq6a5S9",
+      "_key": "!items.effects!yBUqJ5PtCHamTBrI.NIN16Bgq0gq6a5S9",
+      "name": "Immunity Corruption = 2*Physique",
+      "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI",
+      "transfer": true,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.corruption",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Immunity to corruption equal to [[lookup 2*@M]]{twice your Physique score}.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    },
+    {
+      "_id": "gEbfDZ2yKruAeVsE",
+      "_key": "!items.effects!yBUqJ5PtCHamTBrI.gEbfDZ2yKruAeVsE",
+      "name": "Immunity Lightning = 2*Physique",
+      "img": "icons/magic/fire/elemental-fire-humanoid.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI",
+      "transfer": true,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.lightning",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": true,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Immunity to lightning equal to [[lookup 2*@M]]{twice your Physique score}.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,168 @@
+{
+  "_id": "EFZTZXuePxbPwdwn",
+  "_key": "!items!EFZTZXuePxbPwdwn",
+  "name": "GHOSTWIRE.Classes.Operator.Items.BreachTheLine.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breach-the-line",
+    "story": "GHOSTWIRE.Classes.Operator.Items.BreachTheLine.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "e08cgScJoDNm1eSl": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "e08cgScJoDNm1eSl",
+          "damage": {
+            "tier1": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "NYVcSO7ZwHe7C6qH": {
+          "name": "",
+          "img": null,
+          "type": "applied",
+          "_id": "NYVcSO7ZwHe7C6qH",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, frightened (save ends)",
+              "potency": {
+                "characteristic": "presence",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "failure",
+                  "end": "",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "effects": {
+                "frightened": {
+                  "condition": "failure",
+                  "end": "",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "frightened": {
+                  "condition": "failure",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "merc"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.BreachTheLine.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.BreachTheLine.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

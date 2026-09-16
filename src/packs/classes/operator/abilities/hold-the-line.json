@@ -1,0 +1,104 @@
+{
+  "_id": "knNP71xwcAGj7Mno",
+  "_key": "!items!knNP71xwcAGj7Mno",
+  "name": "GHOSTWIRE.Classes.Operator.Items.HoldTheLine.Name",
+  "type": "ability",
+  "img": "icons/weapons/guns/pistol-handgun-large.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hold-the-line",
+    "story": "GHOSTWIRE.Classes.Operator.Items.HoldTheLine.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 2,
+    "trigger": "GHOSTWIRE.Classes.Operator.Items.HoldTheLine.Trigger",
+    "distance": {
+      "primary": "3",
+      "secondary": "1",
+      "tertiary": "1",
+      "type": "ranged"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "custom": "The triggering enemy",
+      "value": null,
+      "type": "creature"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "o2RdFmMHePkoSiuw": {
+          "_id": "o2RdFmMHePkoSiuw",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "damage",
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "operator"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

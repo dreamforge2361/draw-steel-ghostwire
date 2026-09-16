@@ -1,0 +1,32 @@
+{
+  "_id": "t87nnub1g21r7fOZ",
+  "_key": "!items!t87nnub1g21r7fOZ",
+  "name": "GHOSTWIRE.Classes.Operator.Items.SlipTheCuffs.Name",
+  "type": "feature",
+  "img": "icons/skills/movement/figure-running-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.SlipTheCuffs.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "slip-the-cuffs",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

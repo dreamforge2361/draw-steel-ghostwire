@@ -1,0 +1,359 @@
+{
+  "_id": "oQxPB9QvTkJxFfyg",
+  "_key": "!items!oQxPB9QvTkJxFfyg",
+  "name": "GHOSTWIRE.Classes.Operator.Items.StreetVet.Name",
+  "type": "subclass",
+  "img": "icons/magic/lightning/bolt-forked-large-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.StreetVet.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-vet",
+    "advancements": {
+      "6JSWpmx65q69uZsT": {
+        "name": "Gutter Instinct",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "6JSWpmx65q69uZsT",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0M5B12KRAwSyT5Ab"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "PbW4nyEfzOpEwiLH": {
+        "name": "Overclock Nerves",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "PbW4nyEfzOpEwiLH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PIAMvqd7BpwJrRy6"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "OHpogW72HJrjWDEX": {
+        "name": "Survivor’s Nose",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "OHpogW72HJrjWDEX",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.vVI0JnYCdjpWVFUQ"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "O8eOlmafJcRbY2CV": {
+        "name": "GHOSTWIRE.Skills.List.Intimidation",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "O8eOlmafJcRbY2CV",
+        "skills": {
+          "choices": [
+            "intimidation"
+          ],
+          "groups": []
+        },
+        "sort": 0,
+        "description": "<p>Your Operator Origin grants you the following skill.</p>",
+        "repick": {},
+        "chooseN": null
+      },
+      "srCkUFtuq0tE4KA3": {
+        "name": "Kit",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "srCkUFtuq0tE4KA3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NI3QWa2kizsYNBM2"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m7DTBTD2zvW0TViV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.XbRoZ9XXytwThX68"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SC8BSZFZ9PQsD2nV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SAcWR4RstQocW4Ii"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.xcGhoSk8Ht4VKksG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NIv1KQfV2JBzkeWk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wBUl1vkVVZYuQX3G"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.uSTe6AiFvh081JSm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          }
+        ],
+        "chooseN": 1,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        },
+        "sort": 0,
+        "description": "<p>Choose one Kit.</p>",
+        "repick": {}
+      },
+      "otFZquaHKi7Px3aE": {
+        "name": "Dirty Fighting",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "otFZquaHKi7Px3aE",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kAeuWHlY8DHpbUPz"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "oS3X5jPcaIzX9oCG": {
+        "name": "2nd-Level Street-vet Ability",
+        "img": "icons/magic/lightning/bolt-forked-large-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "oS3X5jPcaIzX9oCG",
+        "chooseN": 1,
+        "description": "<p>Choose one of the following abilities.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QlBy1fdeZli32MWF"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.FmKJCn1RfpIoX1RG"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "J5GPwwo5c9UABh6W": {
+        "name": "Street Network",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "J5GPwwo5c9UABh6W",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.E2R61h9KQYhZ9P5w"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "B5l0OVajfLaOFpgT": {
+        "name": "6th-Level Street-vet Ability",
+        "img": "icons/magic/lightning/bolt-forked-large-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "B5l0OVajfLaOFpgT",
+        "chooseN": 1,
+        "description": "<p>Your Operator Origin grants your choice of one of two heroic abilities.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gx5TrYJW41QMRaEH"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sb0DhAu3dWZp6i5A"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "3Zqp2HBTaQ1Zmrqg": {
+        "name": "Weathered",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "3Zqp2HBTaQ1Zmrqg",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HHQ2T2NsCj9gPDf4"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "QMCx2nJmGjw7EMQJ": {
+        "name": "Ghost of the Gutter",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "QMCx2nJmGjw7EMQJ",
+        "description": "<p>Your Operator Origin grants you the following feature.</p>",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.O0xyKU5gmKI8sZnv"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "SM2lTYPgJasY5p9G": {
+        "name": "9th-Level Street-vet Abilities",
+        "img": "icons/magic/lightning/bolt-forked-large-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "SM2lTYPgJasY5p9G",
+        "description": "<p>Choose one of the following abilities.</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.eZuaQXIbw4ffG9lp"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.TlbVhylOa7K48eeN"
+          }
+        ],
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "operator"
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

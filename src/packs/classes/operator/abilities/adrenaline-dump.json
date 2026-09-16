@@ -1,0 +1,114 @@
+{
+  "_id": "RYQQsbcZDNuIsivX",
+  "_key": "!items!RYQQsbcZDNuIsivX",
+  "name": "GHOSTWIRE.Classes.Operator.Items.AdrenalineDump.Name",
+  "type": "ability",
+  "img": "icons/weapons/guns/gun-chain-gatling-belt.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "adrenaline-dump",
+    "story": "GHOSTWIRE.Classes.Operator.Items.AdrenalineDump.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1",
+      "type": "ranged"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "custom": "",
+      "value": 3,
+      "type": "creatureObject"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might",
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "9AtX16ghK3oSD7p1": {
+          "_id": "9AtX16ghK3oSD7p1",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "damage",
+          "damage": {
+            "tier1": {
+              "value": "3",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.AdrenalineDump.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "operator"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

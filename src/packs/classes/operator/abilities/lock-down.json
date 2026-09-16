@@ -1,0 +1,280 @@
+{
+  "_id": "NPIHqtsSM8Xb4E24",
+  "_key": "!items!NPIHqtsSM8Xb4E24",
+  "name": "GHOSTWIRE.Classes.Operator.Items.LockDown.Name",
+  "type": "ability",
+  "img": "icons/magic/earth/strike-body-stone-crumble.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lock-down",
+    "story": "GHOSTWIRE.Classes.Operator.Items.LockDown.Story",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "8NER0eBr7MxTu6sa": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "8NER0eBr7MxTu6sa",
+          "damage": {
+            "tier1": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "13 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "18 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "VwSyswiB3fTwYpDp": {
+          "name": "Slowed",
+          "img": null,
+          "type": "applied",
+          "_id": "VwSyswiB3fTwYpDp",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, slowed (save ends)",
+              "potency": {
+                "characteristic": "might",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "IOeJcovdBiIZuh35": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "{{potency}}, restrained (save ends)",
+              "effects": {
+                "1NiegIDac5q4O7Qv": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier2": {
+              "effects": {
+                "IOeJcovdBiIZuh35": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "operator"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.LockDown.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "IOeJcovdBiIZuh35",
+      "_key": "!items.effects!NPIHqtsSM8Xb4E24.IOeJcovdBiIZuh35",
+      "name": "Slowed",
+      "img": "icons/magic/earth/strike-body-stone-crumble.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.NPIHqtsSM8Xb4E24",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "<p>While the target is slowed this way, any other effect that would make the target slowed instead makes them [[/apply restrained]] by this ability. Additionally, a creature who fails the saving throw while restrained this way is petrified until they are given a supernatural cure or you choose to reverse the effect (no action required). </p>",
+      "tint": "#ffffff",
+      "statuses": [
+        "slowed"
+      ],
+      "flags": {},
+      "showIcon": 2,
+      "start": null
+    },
+    {
+      "_id": "1NiegIDac5q4O7Qv",
+      "_key": "!items.effects!NPIHqtsSM8Xb4E24.1NiegIDac5q4O7Qv",
+      "name": "Restrained",
+      "img": "icons/magic/earth/strike-body-stone-crumble.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.NPIHqtsSM8Xb4E24",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "<p>While the target is slowed this way, any other effect that would make the target slowed instead makes them restrained by this ability. Additionally, a creature who fails the saving throw while restrained this way is petrified until they are given a supernatural cure or you choose to reverse the effect (no action required).</p>",
+      "tint": "#ffffff",
+      "statuses": [
+        "restrained"
+      ],
+      "flags": {},
+      "showIcon": 2,
+      "start": null
+    },
+    {
+      "_id": "5EGXtB03LNgei8IT",
+      "_key": "!items.effects!NPIHqtsSM8Xb4E24.5EGXtB03LNgei8IT",
+      "name": "Petrified",
+      "img": "icons/magic/earth/strike-body-stone-crumble.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.NPIHqtsSM8Xb4E24",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Petrified until they are given a supernatural cure or you choose to reverse the effect (no action required).</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "mOA5WmFf5OVsWV2N",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

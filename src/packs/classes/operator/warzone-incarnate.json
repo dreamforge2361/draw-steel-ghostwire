@@ -1,0 +1,305 @@
+{
+  "_id": "6ZVfYbsw2qUe0ZHz",
+  "_key": "!items!6ZVfYbsw2qUe0ZHz",
+  "name": "GHOSTWIRE.Classes.Operator.Items.WarzoneIncarnate.Name",
+  "type": "feature",
+  "img": "icons/magic/control/fear-fright-shadow-monster-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.WarzoneIncarnate.Description",
+      "director": "GHOSTWIRE.Classes.Operator.Items.WarzoneIncarnate.Director"
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "warzone-incarnate",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "IxI90rWGvOQOCju2",
+      "_key": "!items.effects!6ZVfYbsw2qUe0ZHz.IxI90rWGvOQOCju2",
+      "name": "Warzone Incarnate - Corp-Milspec or Merc",
+      "img": "icons/magic/control/fear-fright-shadow-monster-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.damage.immunities.acid",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.cold",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.corruption",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.fire",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.lightning",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.poison",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.damage.immunities.sonic",
+            "type": "upgrade",
+            "value": "2*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>If you are a Corp-Milspec or Merc, you have immunity to acid, cold, corruption, fire, lightning, poison, and sonic damage equal to [[lookup 2*@M evaluate]]{twice your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "7mq7bfYMW0wX6ERB",
+      "_key": "!items.effects!6ZVfYbsw2qUe0ZHz.7mq7bfYMW0wX6ERB",
+      "name": "Warzone Incarnate - Street-vet - Cold",
+      "img": "icons/magic/control/fear-fright-shadow-monster-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.damage.immunities.cold",
+            "type": "upgrade",
+            "value": "3*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>If you are a Street-vet, your immunity to your loadout damage type increases to [[lookup 3*@M evaluate]]{three times your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "yLS4ZCuBpa96Nbf8",
+      "_key": "!items.effects!6ZVfYbsw2qUe0ZHz.yLS4ZCuBpa96Nbf8",
+      "name": "Warzone Incarnate - Street-vet - Fire",
+      "img": "icons/magic/control/fear-fright-shadow-monster-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.damage.immunities.fire",
+            "type": "upgrade",
+            "value": "3*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>If you are a Street-vet, your immunity to your loadout damage type increases to [[lookup 3*@M evaluate]]{three times your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "bBH8nktO2PJxD3II",
+      "_key": "!items.effects!6ZVfYbsw2qUe0ZHz.bBH8nktO2PJxD3II",
+      "name": "Warzone Incarnate - Street-vet - Corruption",
+      "img": "icons/magic/control/fear-fright-shadow-monster-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.damage.immunities.corruption",
+            "type": "upgrade",
+            "value": "3*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>If you are a Street-vet, your immunity to your loadout damage type increases to [[lookup 3*@M evaluate]]{three times your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    },
+    {
+      "_id": "EBWHVaucdVbfmyNa",
+      "_key": "!items.effects!6ZVfYbsw2qUe0ZHz.EBWHVaucdVbfmyNa",
+      "name": "Warzone Incarnate - Street-vet - Lightning",
+      "img": "icons/magic/control/fear-fright-shadow-monster-green.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6ZVfYbsw2qUe0ZHz",
+      "disabled": true,
+      "system": {
+        "changes": [
+          {
+            "key": "system.damage.immunities.lightning",
+            "type": "upgrade",
+            "value": "3*@M",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>If you are a Street-vet, your immunity to your loadout damage type increases to [[lookup 3*@M evaluate]]{three times your Physique score}.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    }
+  ],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

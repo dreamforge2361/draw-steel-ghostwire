@@ -1,0 +1,219 @@
+{
+  "_id": "FmKJCn1RfpIoX1RG",
+  "_key": "!items!FmKJCn1RfpIoX1RG",
+  "name": "GHOSTWIRE.Classes.Operator.Items.KillerRep.Name",
+  "type": "ability",
+  "img": "icons/creatures/abilities/mouth-teeth-human.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "killer-rep",
+    "story": "GHOSTWIRE.Classes.Operator.Items.KillerRep.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "2",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "GRhnqrcsJjohWs16": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "GRhnqrcsJjohWs16",
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "cold",
+                "corruption",
+                "fire",
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [
+                "cold",
+                "corruption",
+                "fire",
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7",
+              "types": [
+                "cold",
+                "corruption",
+                "fire",
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "gorORM9hxCR28eSu": {
+          "name": "",
+          "img": null,
+          "type": "forced",
+          "_id": "gorORM9hxCR28eSu",
+          "forced": {
+            "tier2": {
+              "distance": "2",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "distance": "3",
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            },
+            "tier1": {
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "distance": "1",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            }
+          },
+          "sort": 0
+        },
+        "zndmWLZT9u2K6iSz": {
+          "name": "dazed",
+          "img": null,
+          "type": "applied",
+          "_id": "zndmWLZT9u2K6iSz",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, dazed (save ends)",
+              "potency": {
+                "characteristic": "might",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "street-vet"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Operator.Items.KillerRep.Effect_after00000000000",
+        "name": "",
+        "img": null,
+        "sort": 0,
+        "before": false
+      }
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

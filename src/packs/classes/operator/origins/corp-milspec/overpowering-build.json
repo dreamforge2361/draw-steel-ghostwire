@@ -1,0 +1,79 @@
+{
+  "_id": "6oHEximQV2O6VVIc",
+  "_key": "!items!6oHEximQV2O6VVIc",
+  "name": "GHOSTWIRE.Classes.Operator.Items.OverpoweringBuild.Name",
+  "type": "feature",
+  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.OverpoweringBuild.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overpowering-build",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "6aTZxT7onOX03PIu",
+      "_key": "!items.effects!6oHEximQV2O6VVIc.6aTZxT7onOX03PIu",
+      "name": "Overpowering Build",
+      "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.6oHEximQV2O6VVIc",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.characteristics.might.dice.number",
+            "value": 3,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Whenever you make a Physique test, you can roll three dice and choose which two to use.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "yy6thXe1W7LlID0F",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

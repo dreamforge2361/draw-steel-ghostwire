@@ -1,0 +1,32 @@
+{
+  "_id": "Do51WyTVix9gnNva",
+  "_key": "!items!Do51WyTVix9gnNva",
+  "name": "GHOSTWIRE.Classes.Operator.Items.VeteranOfTheSprawl.Name",
+  "type": "feature",
+  "img": "icons/magic/control/fear-fright-shadow-monster-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.VeteranOfTheSprawl.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "veteran-of-the-sprawl",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,192 @@
+{
+  "_id": "9mdMPck6M7t1ewN3",
+  "_key": "!items!9mdMPck6M7t1ewN3",
+  "name": "GHOSTWIRE.Classes.Operator.Items.SuppressionKill.Name",
+  "type": "ability",
+  "img": "icons/magic/death/projectile-skull-flaming-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "suppression-kill",
+    "story": "GHOSTWIRE.Classes.Operator.Items.SuppressionKill.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "might"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "6lMkVWMImkTYSKMU": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "6lMkVWMImkTYSKMU",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "8 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "JGHX0IxtKw2HWNzb": {
+          "name": "Dazed and Frightened (save ends)",
+          "img": null,
+          "type": "applied",
+          "_id": "JGHX0IxtKw2HWNzb",
+          "applied": {
+            "tier1": {
+              "potency": {
+                "characteristic": "presence",
+                "value": "@potency.weak"
+              },
+              "display": "{{potency}}, dazed and frightened (save ends)",
+              "effects": {
+                "PR8Gy5DvastyogbF": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "effects": {
+                "PR8Gy5DvastyogbF": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "PR8Gy5DvastyogbF": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "dsid": [
+        "merc"
+      ],
+      "value": "",
+      "level": null
+    },
+    "effects": {}
+  },
+  "effects": [
+    {
+      "_id": "PR8Gy5DvastyogbF",
+      "_key": "!items.effects!9mdMPck6M7t1ewN3.PR8Gy5DvastyogbF",
+      "name": "dazed and frightened",
+      "img": "icons/magic/death/projectile-skull-flaming-yellow.webp",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.9mdMPck6M7t1ewN3",
+      "transfer": false,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "save",
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [
+        "dazed",
+        "frightened"
+      ],
+      "flags": {},
+      "showIcon": 2,
+      "start": null
+    }
+  ],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

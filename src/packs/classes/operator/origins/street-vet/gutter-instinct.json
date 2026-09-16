@@ -1,0 +1,102 @@
+{
+  "_id": "0M5B12KRAwSyT5Ab",
+  "_key": "!items!0M5B12KRAwSyT5Ab",
+  "name": "GHOSTWIRE.Classes.Operator.Items.GutterInstinct.Name",
+  "type": "feature",
+  "img": "icons/creatures/mammals/wolf-howl-moon-forest-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.GutterInstinct.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gutter-instinct",
+    "advancements": {
+      "tjQBjIFxrzjJJ00x": {
+        "_id": "tjQBjIFxrzjJJ00x",
+        "name": "Growing Adrenaline",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.wzfevLx48nCPrNSe"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "AjSZ1DHQNID76Dns",
+      "_key": "!items.effects!0M5B12KRAwSyT5Ab.AjSZ1DHQNID76Dns",
+      "name": "Gutter Instinct",
+      "img": "icons/magic/control/silhouette-aura-energy.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.0M5B12KRAwSyT5Ab",
+      "system": {
+        "changes": [
+          {
+            "key": "system.statuses.immunities",
+            "type": "add",
+            "value": "surprised",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>You can’t be surprised.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "flags": {}
+    }
+  ],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

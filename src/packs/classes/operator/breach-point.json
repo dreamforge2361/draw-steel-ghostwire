@@ -1,0 +1,32 @@
+{
+  "_id": "mSnafw2N5cqKNQvc",
+  "_key": "!items!mSnafw2N5cqKNQvc",
+  "name": "GHOSTWIRE.Classes.Operator.Items.BreachPoint.Name",
+  "type": "feature",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.BreachPoint.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "breach-point",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "VdeSkot9wwUD1iy4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
