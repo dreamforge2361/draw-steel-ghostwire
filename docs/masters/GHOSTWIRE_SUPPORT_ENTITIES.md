@@ -19,6 +19,21 @@
 
 ---
 
+
+### Dual representation (LOCKED 2026-09-17) — drones & vehicles
+
+Anything that occupies space and moves on the Scene is an **Actor + token**, not Item-only.
+
+| Layer | Role |
+|---|---|
+| **Item** (`vehicles` pack) | Ownership, ¥, Availability, mod slots, Echelon grade, garage/inventory |
+| **Actor** (`summons` pack, `machines/` folders) | Scene token, size, Integrity/Stamina, speed, weapons, Jump-In / crew |
+
+**Deploy** (Wrench Deploy & Command, or anyone’s single-drone link) spawns or links the Actor to the Item + owner via `flags.draw-steel-ghostwire` (`ownerUuid`, `gearItemUuid`, `kind: drone|vehicle`). **Recall / wreck** removes or parks the Actor; the Item remains.
+
+**v1 stamping:** prefer scale-band Actor templates (micro/small/medium drone; bike/car/truck/…) stamped from Item data on Deploy, then expand to 1:1 SKU Actors. Conjured sprites/elementals/spirits remain **Actor-only** (no Item).
+
+
 ## 2. Shared Foundry schema (proposed)
 
 New pack (Phase 1+): `summons` (Actors — DS NPC/monster model + Ghostwire flags).  
@@ -91,7 +106,7 @@ Ship **3 companions** first; Rank ladder + greaters as scaffolds until Veil chap
 ### 3.4 Wrench — Drones & vehicles (Phase 4)
 
 SoR: `docs/rulebook/15-drones.md` (**36** chassis by Echelon) and `16-vehicles.md` (**32** entries).  
-Foundry: expand existing `vehicles` pack (and drone subset). Not part of `summons` pack — these are ¥ gear.
+Foundry: **Item catalog** stays in `vehicles` pack; **Actor templates** live under `summons/machines` (dual representation — see lock above). Phase 4 ships Item sync + Deploy-spawns-token pipeline.
 
 ### 3.5 Hacker — Nodes & ICE (Phase 5) — **10 Director templates**
 
@@ -117,9 +132,9 @@ Operator, Scout, Commander, Medic — narrative contacts/followers only (Command
 
 | Pack | Contents |
 |---|---|
-| **`summons`** (new) | Technomancer sprites, Elementalist companions/elementals, Street Priest spirits |
-| **`vehicles`** (existing) | Drones + vehicles expansion |
-| **Hacker templates** | Prefer Actors in `summons/hacker-nodes` **or** Journal + Console-only — see Open Questions |
+| **`summons`** (Actor pack) | Technomancer sprites; Elementalist companions/elementals; Street Priest spirits; **drone/vehicle Actor templates** under `machines/`; optional later hacker node Actors |
+| **`vehicles`** (Item pack, existing) | Drone + vehicle **gear catalog** (¥, mods, ownership) |
+| **Hacker templates (v1)** | Journal + Wired Console (Actors later) |
 
 `module.json` pack registration + `src/packs/summons/**` + `node tools/build-packs.mjs` in Phase 1+.
 

@@ -181,6 +181,17 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "summons",
+      "label": "GHOSTWIRE.COMPENDIUM.summons",
+      "path": "packs/summons",
+      "type": "Actor",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "url": "https://github.com/dreamforge2361/draw-steel-ghostwire",

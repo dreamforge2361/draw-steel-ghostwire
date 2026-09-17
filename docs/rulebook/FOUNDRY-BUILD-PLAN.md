@@ -290,5 +290,7 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 - **B33 Phase 1:** Technomancer sprite Actors (12 SKUs).
 - **B34 Phase 2:** Elementalist companions + elemental scaffolds.
 - **B35 Phase 3:** Street Priest pact spirits (3 + Light/Dark tint).
-- **B36 Phase 4:** Wrench drones (36) + vehicles (32) Foundry sync.
+- **B36 Phase 4:** Wrench drones (36) + vehicles (32) Item sync **and** Actor templates under `summons/machines` + Deploy-spawns-token (dual Item+Actor lock 2026-09-17).
 - **B37 Phase 5:** Hacker Node/ICE Director templates (10).
+
+- **Summons pack scaffold (2026-09-17):** Actor pack `summons` registered; folders sprites/elementals/spirits/machines/nodes ready for Phase 1+.

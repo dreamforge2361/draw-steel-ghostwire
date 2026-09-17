@@ -21,7 +21,8 @@
       "matrix": "Ghostwire Matrix",
       "vehicles": "Ghostwire Vehicles & Drones",
       "foci": "Ghostwire Foci",
-      "perks": "Ghostwire Perks"
+      "perks": "Ghostwire Perks",
+      "summons": "Ghostwire Summons & Machines"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
