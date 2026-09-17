@@ -10,6 +10,7 @@
 | **Chrome** | `docs/rulebook/12-chrome.md` | **Stage 3 draft** (2026-09-16) — distilled from master |
 | **Backgrounds & Professions** | `docs/rulebook/13-backgrounds-professions.md` | **v1 draft** (2026-09-16) — Foundry packs shipped |
 | **Mods** | `docs/rulebook/14-mods.md` | **Stage 3 draft locked** 2026-09-16/17 — Invent a Mod; echelon gear remap |
+| **Drones** | `docs/rulebook/15-drones.md` | **Stage 3 draft** 2026-09-16 — inventory (25) + anyone-vs-Wrench; lore extract in masters |
 | **ART-STYLE** | `docs/rulebook/ART-STYLE.md` | **Locked** 2026-09-16 |
 | Chrome master | `docs/masters/GHOSTWIRE_CHROME_MASTER.md` | **Ingested** 2026-09-16 |
 | **Gear master** | `docs/masters/GHOSTWIRE_GEAR_MASTER.md` | **Ingested** + DS ALIGNMENT OVERRIDE (2026-09-16) |
@@ -22,7 +23,8 @@
 
 ## Next (rulebook)
 
-1. Journal / PDF delivery pass (chapters → Foundry Journal + printable PDF) — later.
+1. Michael review: **15-drones** (anyone-vs-Wrench + inventory) → then **16-vehicles** stub expansion.
+2. Journal / PDF delivery pass (chapters → Foundry Journal + printable PDF) — later.
 2. Stage 3 shared core / Stage 4 Wire–Veil–Machines (parallel track).
 3. Armor + gadget mod family writeups as B20 lands.
 
