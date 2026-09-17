@@ -1,6 +1,7 @@
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
+import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
@@ -76,6 +77,7 @@ Hooks.once("init", () => {
   patchPersistentReagents();
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
+  registerRunGenerator();
   registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
   registerMachines();
   registerMods();

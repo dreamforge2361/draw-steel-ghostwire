@@ -1,0 +1,244 @@
+{
+  "crown": {
+    "name": "The Crown (the Halo)",
+    "security": 4,
+    "scaleFloor": "corp",
+    "ladder": "corp",
+    "nodeRatings": [4, 5],
+    "wired": ["none", "overlay", "jackedIn"],
+    "blurb": "HALO’s orbital-lit apex: arcology penthouses, executive enclaves, real sky. A drawn pistol brings Aureole Security in seconds.",
+    "places": [
+      "a HALO Ascendant executive enclave",
+      "a sky-garden penthouse above the Solar Crown",
+      "an Obsidian Holdings private simsense salon",
+      "a Congress delegate’s guest suite"
+    ],
+    "complications": [
+      "Aureole Security runs a surprise protocol sweep of the level.",
+      "The target is live on a HALO feed — half the hive is watching.",
+      "A Radiant Concord benefit gala fills the level with cameras and clergy."
+    ],
+    "response": {
+      "low": "Aureole patrols tighten and every door on the level locks.",
+      "medium": "An Aureole response squad arrives: Corp Security Officers under a Response Lieutenant.",
+      "high": "A Contract Enforcer is dispatched with drone cover.",
+      "extreme": "Full lockdown: Ironclad-grade security seals the level and the lifts stop."
+    },
+    "support": [
+      { "label": "An Obsidian Holdings concierge on the take", "note": "Sells guest credentials and service-lift schedules." },
+      { "actor": "Mama Cassavir, “the Switchboard”", "note": "Can broker a clean identity to get in — at a price." }
+    ]
+  },
+  "spires": {
+    "name": "The Spires",
+    "security": 3,
+    "scaleFloor": "corp",
+    "ladder": "corp",
+    "nodeRatings": [3, 5],
+    "wired": ["none", "overlay", "jackedIn"],
+    "blurb": "Upper corp towers: research floors, trading vaults, and boardrooms above the smog line, all of it patrolled and logged.",
+    "places": [
+      "a Caduceus research tower lab floor",
+      "an Argent Exchange trading vault",
+      "a Ferrum Dynastic boardroom level",
+      "a Kestrel Dynamics logistics control deck"
+    ],
+    "complications": [
+      "A shift change puts twice the guards in the lobby.",
+      "The tower’s host is running an audit — the Wired is watching every login.",
+      "A rival crew was hired for the same target tonight."
+    ],
+    "response": {
+      "low": "Floor security checks badges and the elevators slow down.",
+      "medium": "A Response Lieutenant leads a corp security squad to the floor.",
+      "high": "A Contract Enforcer arrives to close the file.",
+      "extreme": "Ironclad contractors under an Ironclad Warden seal the tower."
+    },
+    "support": [
+      { "label": "A disgruntled facilities tech", "note": "Knows which service shafts skip the cameras." },
+      { "actor": "Street Doc", "note": "Patches the crew afterward, no records." }
+    ]
+  },
+  "grid": {
+    "name": "The Grid",
+    "security": 2,
+    "scaleFloor": "street",
+    "ladder": "corp",
+    "nodeRatings": [2, 4],
+    "wired": ["none", "overlay", "jackedIn"],
+    "blurb": "The hive’s wage-body: licensed commerce, patrolled corridors, artificial light. Order is real but rented.",
+    "places": [
+      "a Metermen-run residential corridor",
+      "a lift-stack maintenance hub",
+      "a licensed noodle arcade over a data closet",
+      "a corp facilities-management office"
+    ],
+    "complications": [
+      "The Metermen want their cut before anyone works this corridor.",
+      "Warden Krael’s SIN-flag sweep is today — everyone’s ID gets checked.",
+      "A missed-payment eviction turns the corridor into an angry crowd."
+    ],
+    "response": {
+      "low": "A Metermen crew and the corridor cameras take notice.",
+      "medium": "Corp Security Officers answer the call with a Response Lieutenant.",
+      "high": "The corp sends a Contract Enforcer to clean it up.",
+      "extreme": "Ironclad contractors lock down the level under an Ironclad Warden."
+    },
+    "support": [
+      { "actor": "Warden Krael, “the Landlord”", "note": "Can make a SIN flag disappear — or appear." },
+      { "label": "A Metermen corridor boss", "note": "Keys, access, and the name of whoever is behind on rent." }
+    ]
+  },
+  "flats": {
+    "name": "The Flats",
+    "security": 1,
+    "scaleFloor": "street",
+    "ladder": "street",
+    "nodeRatings": [1, 3],
+    "wired": ["none", "overlay", "jackedIn"],
+    "blurb": "Dense, dim, semi-lawless underlevels where gangs, fixers, and level-bosses fill the gap corp authority left. Most runs begin here.",
+    "places": [
+      "a Ninth Ward Kings market block",
+      "a Rust Saints salvage yard",
+      "a Glass Vipers grey-transit shaft",
+      "a shuttered transit exchange",
+      "a soup-kitchen block run as a congregation"
+    ],
+    "complications": [
+      "The Ninth Ward Kings demand a tax to work their turf.",
+      "Glass Vipers are filming the run for the feeds.",
+      "A Hollow Men block sits across the only exit."
+    ],
+    "response": {
+      "low": "Local crews notice and start asking questions.",
+      "medium": "A Colors Boss rolls up with the crew.",
+      "high": "The Gang Boss calls in every set on the block.",
+      "extreme": "The Warlord answers — and the whole block answers with him."
+    },
+    "support": [
+      { "actor": "Mama Cassavir, “the Switchboard”", "note": "Brokers peace with whichever gang owns the turf." },
+      { "actor": "Street Doc", "note": "Patches anyone with nuyen." },
+      { "actor": "The Choirmother", "note": "Offers sanctuary on her block — and asks questions later." }
+    ]
+  },
+  "sinks": {
+    "name": "The Sinks",
+    "security": 0,
+    "scaleFloor": "street",
+    "ladder": "deep",
+    "nodeRatings": [1, 2],
+    "wired": ["none", "overlay"],
+    "blurb": "The sunless, half-flooded deep hive where Nyx’s Churn drifts and the Signal barely reaches. Nothing is illegal because nothing is enforced.",
+    "places": [
+      "a drifting stall in Nyx’s Churn",
+      "a half-flooded pump station",
+      "a Ferrum foundation stair gone to rust",
+      "the Ferryman’s last crossing"
+    ],
+    "complications": [
+      "The Signal drops out — no comms for the rest of the scene.",
+      "Floodwater rises through the lower level.",
+      "The Ferryman’s toll just doubled."
+    ],
+    "response": {
+      "low": "Scavengers and critters gather at the noise.",
+      "medium": "A Veil cult cell takes an interest.",
+      "high": "Something big wakes up in the silt.",
+      "extreme": "The dark itself answers — Signal horrors climb toward the light."
+    },
+    "support": [
+      { "actor": "The Ferryman", "note": "Owns the crossings. Pay the toll." },
+      { "label": "A Churn broker for Nyx", "note": "Sells gear, maps, and bad news." }
+    ]
+  },
+  "deadfall": {
+    "name": "Deadfall Nine (the Quiet Floor)",
+    "security": 0,
+    "scaleFloor": "district",
+    "ladder": "deep",
+    "nodeRatings": [1, 2],
+    "wired": ["none", "overlay"],
+    "blurb": "Sublevel 9, walled off a generation ago. Sound thins, then signal, then thought. The closest surfaced wound of the Incursion in the Reach.",
+    "places": [
+      "the leaking seal of Sublevel 9",
+      "a Ferrum Deepworks maintenance lock",
+      "a dead-air chapel where sound goes thin",
+      "an abandoned transit platform past the wall"
+    ],
+    "complications": [
+      "Dead-air: comms fail and voices carry no distance.",
+      "A crew member hears their own name from the dark.",
+      "Ferrum Deepworks techs are patching the wall — and don’t want witnesses."
+    ],
+    "response": {
+      "low": "The quiet deepens; something notices the living.",
+      "medium": "The emptied rise and walk toward warmth.",
+      "high": "Something that used to be a crawler comes up from below.",
+      "extreme": "The Incursion leans through: Signal horrors walk the floor."
+    },
+    "support": [
+      { "actor": "The Ferryman", "note": "The last friendly face before the wall." },
+      { "label": "A hidden-remnant Street Priest", "note": "Knows the prayers that still carry down here." }
+    ]
+  },
+  "cinderhold": {
+    "name": "Cinderhold",
+    "security": 1,
+    "scaleFloor": "street",
+    "ladder": "frontier",
+    "nodeRatings": [1, 2],
+    "wired": ["none", "overlay"],
+    "blurb": "The scrappy, half-free settlement at the Reach’s outer gate: cast-offs, exiles, and the closest thing to unowned ground in the campaign.",
+    "places": [
+      "Cinderhold’s outer gate",
+      "the salvage market under the gate arch",
+      "a Goliar kinship-crew longhouse",
+      "the Greenline forward post"
+    ],
+    "complications": [
+      "Kestrel Dynamics surveyors are at the gate with contracts and clean water.",
+      "Raiders are testing the wall tonight.",
+      "Marrow bars the crew until they explain themselves."
+    ],
+    "response": {
+      "low": "The militia takes a hard look at the crew.",
+      "medium": "Wasteland raiders strike while the gate is distracted.",
+      "high": "Chrome Raiders hit the salvage market in force.",
+      "extreme": "The wall alarm sounds — something vehicle-sized is coming."
+    },
+    "support": [
+      { "actor": "Ranger-Captain Cael Marrow, “the Gate”", "note": "Gives wasteland work; bars those who cross the settlement." },
+      { "label": "A Greenline Ranger contact", "note": "Seed, water-tech, and ammunition off the books." }
+    ]
+  },
+  "wastes": {
+    "name": "Wastes – Outer Wall",
+    "security": 0,
+    "scaleFloor": "district",
+    "ladder": "frontier",
+    "nodeRatings": [1, 2],
+    "wired": ["none", "overlay"],
+    "blurb": "Beyond the gate: poisoned wastes, dead cities, and the jungle past the Outer Wall. No security, no Signal, no rescue.",
+    "places": [
+      "the Outer Wall watch-line",
+      "a dead city on the caravan route",
+      "a canopy trail beyond the wall",
+      "a reclaimed-ground survey marker gone quiet"
+    ],
+    "complications": [
+      "The wall alarm sounds — something big is moving.",
+      "The caravan route has gone quiet.",
+      "Poisoned weather forces the crew to shelter."
+    ],
+    "response": {
+      "low": "Scavenger beasts follow the crew’s trail.",
+      "medium": "Wasteland raiders move to intercept.",
+      "high": "Canopy predators start hunting the crew.",
+      "extreme": "A Reach Behemoth comes out of the green."
+    },
+    "support": [
+      { "actor": "Ranger-Captain Cael Marrow, “the Gate”", "note": "Reads the ground better than anyone alive." },
+      { "label": "A Greenline Ranger scout", "note": "Knows which trails came back wrong." }
+    ]
+  }
+}

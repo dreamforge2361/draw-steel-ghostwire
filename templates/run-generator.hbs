@@ -1,0 +1,127 @@
+<div class="rg-deck">
+  <section class="rg-dials">
+    <div class="rg-field rg-field-wide">
+      <label for="rg-name">{{localize "GHOSTWIRE.RunGenerator.Name"}}</label>
+      <input id="rg-name" class="rg-input" type="text" data-dial="name" value="{{dials.name}}" placeholder="{{localize "GHOSTWIRE.RunGenerator.NamePlaceholder"}}">
+    </div>
+    <div class="rg-field">
+      <label for="rg-level">{{localize "GHOSTWIRE.RunGenerator.Level"}}</label>
+      <select id="rg-level" class="rg-input" data-dial="level">
+        {{#each levelOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="rg-field">
+      <label for="rg-echelon">{{localize "GHOSTWIRE.RunGenerator.Echelon"}}</label>
+      <select id="rg-echelon" class="rg-input" data-dial="echelon">
+        {{#each echelonOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="rg-field">
+      <label for="rg-type">{{localize "GHOSTWIRE.RunGenerator.Type"}}</label>
+      <select id="rg-type" class="rg-input" data-dial="type">
+        {{#each typeOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="rg-field">
+      <label for="rg-stratum">{{localize "GHOSTWIRE.RunGenerator.Stratum"}}</label>
+      <select id="rg-stratum" class="rg-input" data-dial="stratum">
+        {{#each stratumOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="rg-field">
+      <label for="rg-heat">{{localize "GHOSTWIRE.RunGenerator.Heat"}}</label>
+      <select id="rg-heat" class="rg-input" data-dial="heat">
+        {{#each heatOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="rg-field">
+      <label for="rg-wired">{{localize "GHOSTWIRE.RunGenerator.Wired"}}</label>
+      <select id="rg-wired" class="rg-input" data-dial="wired">
+        {{#each wiredOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </div>
+    <div class="rg-field">
+      <label for="rg-seed">{{localize "GHOSTWIRE.RunGenerator.Seed"}}</label>
+      <input id="rg-seed" class="rg-input" type="text" data-dial="seed" value="{{dials.seed}}" placeholder="{{localize "GHOSTWIRE.RunGenerator.SeedPlaceholder"}}" data-tooltip="GHOSTWIRE.RunGenerator.SeedHint">
+    </div>
+    <div class="rg-actions">
+      <button type="button" class="rg-btn rg-btn-hot" data-action="generate"><i class="fa-solid fa-bolt"></i> {{localize "GHOSTWIRE.RunGenerator.Generate"}}</button>
+      <button type="button" class="rg-btn" data-action="reroll" data-tooltip="GHOSTWIRE.RunGenerator.RerollHint"><i class="fa-solid fa-dice"></i> {{localize "GHOSTWIRE.RunGenerator.Reroll"}}</button>
+      <button type="button" class="rg-btn" data-action="createJournal" {{disabled (not hasResult)}}><i class="fa-solid fa-book-open"></i> {{localize "GHOSTWIRE.RunGenerator.CreateJournal"}}</button>
+    </div>
+    {{#if packMissing}}<p class="rg-missing rg-field-wide">{{localize "GHOSTWIRE.RunGenerator.PackMissing"}}</p>{{/if}}
+  </section>
+
+  <section class="rg-result">
+    {{#if run}}
+    <header class="rg-run-head">
+      <h2>{{run.name}}</h2>
+      <p class="rg-dim">{{run.summary}}</p>
+    </header>
+
+    <div class="rg-grid">
+      <article class="rg-card rg-brief">
+        <h3>{{localize "GHOSTWIRE.RunGenerator.Sections.Brief"}}</h3>
+        <p><strong>{{localize "GHOSTWIRE.RunGenerator.Patron"}}:</strong> {{{run.patron}}} — {{run.pitch}}</p>
+        <p><strong>{{localize "GHOSTWIRE.RunGenerator.Meet"}}:</strong> {{run.meet}}</p>
+        <p class="rg-objective"><strong>{{localize "GHOSTWIRE.RunGenerator.Objective"}}:</strong> {{run.objective}}</p>
+        <p class="rg-dim">{{run.blurb}}</p>
+        <ul class="rg-clocks">
+          <li><i class="fa-solid fa-circle-half-stroke"></i> {{run.objectiveClock}}</li>
+          <li><i class="fa-solid fa-triangle-exclamation"></i> {{run.alertClock}}</li>
+        </ul>
+      </article>
+
+      <article class="rg-card rg-pay">
+        <h3>{{localize "GHOSTWIRE.RunGenerator.Sections.Pay"}}</h3>
+        <p class="rg-yen">{{run.payRange}}</p>
+        <p><strong>{{run.payMid}}</strong></p>
+        <p class="rg-dim">{{run.payScale}} · {{run.payPays}}</p>
+        {{#if run.payExtra}}<p>{{run.payExtra}}</p>{{/if}}
+        {{#if run.data}}
+        <h4>{{localize "GHOSTWIRE.RunGenerator.Sections.DataValue"}}</h4>
+        <p>{{run.data.rating}}</p>
+        {{#if run.data.paydata}}<p>{{run.data.paydata}}</p>{{/if}}
+        <p><strong>{{localize "GHOSTWIRE.RunGenerator.IceLadder"}}:</strong> {{{run.data.ladder}}}</p>
+        {{/if}}
+      </article>
+    </div>
+
+    <article class="rg-card">
+      <h3>{{localize "GHOSTWIRE.RunGenerator.Sections.Beats"}}</h3>
+      <ol class="rg-beats">
+        {{#each run.beats}}
+        <li class="kind-{{kind}}"><span class="rg-kind">{{kindLabel}}</span> {{text}}</li>
+        {{/each}}
+      </ol>
+    </article>
+
+    <div class="rg-grid">
+      <article class="rg-card">
+        <h3>{{localize "GHOSTWIRE.RunGenerator.Sections.Opposition"}}</h3>
+        <ul class="rg-list">{{{run.opposition}}}</ul>
+        {{#if run.wiredOpposition}}
+        <h4>{{localize "GHOSTWIRE.RunGenerator.Sections.WiredOpposition"}}</h4>
+        <ul class="rg-list">{{{run.wiredOpposition}}}</ul>
+        {{/if}}
+        {{#if run.escalation}}
+        <h4>{{localize "GHOSTWIRE.RunGenerator.Sections.Escalation"}}</h4>
+        <ul class="rg-list">{{{run.escalation}}}</ul>
+        {{/if}}
+        {{#if run.scaleUp}}<p class="rg-dim">{{localize "GHOSTWIRE.RunGenerator.ScaleUp"}}</p>{{/if}}
+      </article>
+
+      <article class="rg-card">
+        <h3>{{localize "GHOSTWIRE.RunGenerator.Sections.Support"}}</h3>
+        <ul class="rg-list">{{{run.support}}}</ul>
+        <h4>{{localize "GHOSTWIRE.RunGenerator.Sections.Scenes"}}</h4>
+        <ul class="rg-list">
+          {{#each run.scenes}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </article>
+    </div>
+    {{else}}
+    <p class="rg-empty">{{localize "GHOSTWIRE.RunGenerator.Empty"}}</p>
+    {{/if}}
+  </section>
+</div>

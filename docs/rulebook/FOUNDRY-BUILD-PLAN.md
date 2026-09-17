@@ -467,21 +467,31 @@ Spec: `docs/spikes/B38b-BESTIARY-ORIGINALS-WAVE2.md`. **20 new Actors** adapted 
 
 #### B38b.1 Named lore bosses (2026-09-17)
 Spec: `docs/spikes/B38b1-NAMED-LORE-BOSSES.md`. Five named level-bosses from the Lore Source, adapted from Draw Steel spines with full Director biographies (stratum, hook, holds, answers to / leans on, table use) and Draw Steel negotiation values: **Mama Cassavir** (Reach Streets, Rival Tactician 2nd echelon → L5 elite), **Warden Krael** (Corp & Security, Devil High Judge → L6 leader), **The Ferryman** (Reach Streets, Time Raider Tyrannis → L3 leader), **The Choirmother** (Reach Streets, High Elf Ordinator → L3 leader; Mid default, Early / Mid / Late (Fallen) dial in the Director bio), **Cael Marrow** (Wilds & Jungles, Wode Elf Warleader → L3 leader). Firearms / chrome doctrine applied; Human Malice; flags `decision: "Original"`, `role: "named-boss"`, `loreName`.
-- [ ] **B38b.1** (module v0.1.53) — **implemented, pending Foundry verification**. Done when:
-  - [ ] Compendium shows Mama Cassavir, Warden Krael, The Ferryman, The Choirmother, Cael Marrow
-  - [ ] Cassavir reads social-first; Ferryman or Marrow combat abilities are guns / chrome
-  - [ ] Choirmother Director bio has the Early / Mid / Fallen dial, default Mid
-  - [ ] Two dragged to a Scene; sheets open; abilities usable
-  - [ ] Master § D marked shipped
+- [x] **B38b.1** (module v0.1.53) — **Foundry-verified, committed `84a104f`**. Done when:
+  - [x] Compendium shows Mama Cassavir, Warden Krael, The Ferryman, The Choirmother, Cael Marrow
+  - [x] Cassavir reads social-first; Ferryman or Marrow combat abilities are guns / chrome
+  - [x] Choirmother Director bio has the Early / Mid / Fallen dial, default Mid
+  - [x] Two dragged to a Scene; sheets open; abilities usable
+  - [x] Master § D marked shipped
 - [ ] **B38b Wave 2b** — Nyx Fixer, The Ripper, Null-Prophet, Stall-Keeper / Flats Worker / Chore-Sprite, Data-Sprite / Wisp / Ghost-in-the-Wire.
+
+#### B39 Director Run Generator v1 (2026-09-17)
+Spec: `docs/spikes/B39-RUN-GENERATOR.md`; design + as-built: `docs/directors/run-generator.md`. ApplicationV2 popup in the Wired Console family: Token controls › **Run Generator** (GM-only button, unbound GM keybinding, `game.ghostwire.openRunGenerator()`). Dials: run name, hero level, echelon (auto / override), run type (8 + Wilds Survey stub), stratum (Crown → Wastes–Outer Wall), heat, Wired intensity (auto / none / Overlay / Jacked-in), seed. Generate / Reroll / Create Journal. Pure seeded generator `scripts/run-tables.mjs` over JSON tables in `scripts/data/runs/` (run types, strata, patrons, Economy pay bands, opposition map). Opposition resolves against the live `bestiary` pack by name and Draw Steel level; ICE ladder Watchdog → Scrambler → Black ICE for Jacked-in runs; escalation ladders by stratum. Journal: Ghostwire Runs folder, pages Brief / Pay / Beats / Opposition / Support / Scenes, params in `flags.draw-steel-ghostwire.run`. Offline check: 4,608 dial combinations generate without errors, unfilled tokens, empty opposition, or unresolved Actor names; same seed reproduces.
+- [ ] **B39** (module v0.1.54) — **implemented, pending Foundry verification**. Done when:
+  - [ ] GM opens Run Generator from scene controls; players don't see it
+  - [ ] Flats + Extraction + medium heat + level 3 → Brief, ¥ band, beats, opposition (e.g. Colors Boss / Chrome Bruiser)
+  - [ ] Create Journal appears under Ghostwire Runs with params in flags
+  - [ ] Data Steal + Jacked-in shows the Watchdog → Scrambler → Black ICE ladder
+  - [ ] Same seed reproduces; Reroll differs
+  - [ ] Wired Console still opens and works
 
 ## Backlog add (2026-09-17)
 
 - **B38** Bestiary review + reskin Wave 1 — **Foundry-verified** (module v0.1.50; 35 Actors).
 - **B38c** Bestiary firearms / chrome ability pass — **Foundry-verified** (module v0.1.51).
 - **B38b** Handbook originals Wave 2a — **Foundry-verified** (module v0.1.52; 20 Actors).
-- **B38b.1** Named lore bosses — **built, pending Foundry verification** (module v0.1.53; 5 Actors). Wave 2b next.
-- **B39** Director Run Generator — `docs/directors/run-generator.md` (after bestiary recommendations exist).
+- **B38b.1** Named lore bosses — **Foundry-verified** (module v0.1.53; 5 Actors). Wave 2b next.
+- **B39** Director Run Generator v1 — **built, pending Foundry verification** (module v0.1.54) — `docs/directors/run-generator.md`.
 - Wilds Pandora-like lore pass — later; ship only Canopy-Stalker + Reach Behemoth seeds until then.
 - **B40** Ability/weapon/gear SFX — `docs/directors/ability-sfx.md` (settings + FilePicker; Michael supplies assets).
 - **B41** Wired node topology minimap — `docs/directors/wired-node-minimap.md` (Overlay dual-view; Jacked In node-primary).

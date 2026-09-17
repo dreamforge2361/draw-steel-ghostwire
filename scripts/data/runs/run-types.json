@@ -1,0 +1,757 @@
+{
+  "types": {
+    "extraction": {
+      "scale": "corp",
+      "wired": "overlay",
+      "heatBias": 1,
+      "targets": [
+        {
+          "name": "a Caduceus geneticist who wants out",
+          "short": "the geneticist"
+        },
+        {
+          "name": "a Kestrel logistics engineer holding the Clean Route survey",
+          "short": "the engineer"
+        },
+        {
+          "name": "a Metermen bookkeeper who saw the real ledger",
+          "short": "the bookkeeper"
+        },
+        {
+          "name": "a runaway Choir novice",
+          "short": "the novice"
+        },
+        {
+          "name": "a burned-SIN courier who can identify a face",
+          "short": "the courier"
+        }
+      ],
+      "objectives": [
+        "Get {target} out of {place} alive and deliver them to the patron’s safehouse.",
+        "Pull {target} from {place} before they’re relocated tonight.",
+        "Extract {target} from {place} — willing or not."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "infiltrate",
+            "text": "Get inside {place} on a borrowed identity, a service route, or a very good lie."
+          },
+          {
+            "kind": "social",
+            "text": "Make contact with {short} and convince them the crew is the way out, not another threat."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "combat",
+            "text": "Guards catch the crew moving {short} between rooms — hold the corridor."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "{Short} is tagged with a tracker implant that has to come out or be spoofed."
+          },
+          {
+            "kind": "social",
+            "text": "{Short} panics and wants to bring someone they love along."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "combat",
+            "text": "The response team corners the crew at the exit with {short} in tow."
+          },
+          {
+            "kind": "chase",
+            "text": "Break contact through {place} with {short} slowing everyone down."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "chase",
+            "text": "Lose the pursuit and hand {short} over at the safehouse before the clock runs out."
+          },
+          {
+            "kind": "social",
+            "text": "The handoff goes sideways: the patron wants {short} now, and {short} wants guarantees."
+          }
+        ]
+      }
+    },
+    "dataSteal": {
+      "scale": "corp",
+      "wired": "jackedIn",
+      "heatBias": 0,
+      "targets": [
+        {
+          "name": "a paydata cache of prototype chrome schematics",
+          "short": "the schematics"
+        },
+        {
+          "name": "an Argent Exchange ledger shard",
+          "short": "the ledger shard"
+        },
+        {
+          "name": "HALO feed-suppression logs",
+          "short": "the logs"
+        },
+        {
+          "name": "a Radiant Concord “counseling” roster",
+          "short": "the roster"
+        },
+        {
+          "name": "Ferrum Deepworks maintenance records for the Quiet Floor",
+          "short": "the records"
+        }
+      ],
+      "objectives": [
+        "Copy {target} from a node inside {place} and get out clean.",
+        "Steal {target} from {place} and wipe the original — the patron wants the only copy.",
+        "Find {target} somewhere in the host behind {place} and bring it back intact."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "infiltrate",
+            "text": "Get the decker physically close enough to {place} to reach the host."
+          },
+          {
+            "kind": "social",
+            "text": "Talk, bribe, or blackmail a login out of someone who works at {place}."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "wired",
+            "text": "The data isn’t where the patron said — search the cluster while the node Alert climbs."
+          },
+          {
+            "kind": "combat",
+            "text": "Meatspace security finds the decker’s body while they’re jacked in. Protect it."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "The node is air-gapped: someone has to plug in by hand at {place}."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "wired",
+            "text": "Pull {short} through the node while the ICE ladder escalates."
+          },
+          {
+            "kind": "combat",
+            "text": "The download is at 80% when the response team kicks the door."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "chase",
+            "text": "Get the drive out of {place} before the trace resolves to a location."
+          },
+          {
+            "kind": "social",
+            "text": "The patron wants to verify {short} before paying — and doesn’t like what’s in it."
+          }
+        ]
+      }
+    },
+    "sabotage": {
+      "scale": "district",
+      "wired": "overlay",
+      "heatBias": 0,
+      "targets": [
+        {
+          "name": "a Ferrum pump-station controller",
+          "short": "the controller"
+        },
+        {
+          "name": "a Kestrel autonomous-freight relay",
+          "short": "the relay"
+        },
+        {
+          "name": "a Metermen-run lift-stack",
+          "short": "the lift-stack"
+        },
+        {
+          "name": "a corp drone-picket hangar",
+          "short": "the hangar"
+        },
+        {
+          "name": "a Radiant Concord broadcast spire",
+          "short": "the spire"
+        }
+      ],
+      "objectives": [
+        "Break {target} at {place} so it stays broken for a week.",
+        "Make {target} at {place} fail in a way that looks like an accident.",
+        "Take {target} at {place} offline during a very specific ten-minute window."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "infiltrate",
+            "text": "Case {place} and find a way to {short} that doesn’t go through the front."
+          },
+          {
+            "kind": "social",
+            "text": "Find the tech who maintains {short} and learn its weak point."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "combat",
+            "text": "A maintenance crew and their security escort are working on {short} right now."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "{Short} has a failsafe that has to be defeated first."
+          },
+          {
+            "kind": "wired",
+            "text": "Spoof the monitoring feed so no one sees {short} go down."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "combat",
+            "text": "Plant the charge and hold the position while it arms."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "Rig {short} to fail on schedule without leaving a signature."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "chase",
+            "text": "Get clear of {place} before the failure cascades."
+          },
+          {
+            "kind": "social",
+            "text": "Someone innocent is about to be blamed — and they saw the crew."
+          }
+        ]
+      }
+    },
+    "protection": {
+      "scale": "district",
+      "wired": "none",
+      "heatBias": 0,
+      "targets": [
+        {
+          "name": "a Flats union speaker",
+          "short": "the speaker"
+        },
+        {
+          "name": "a street doc under a contract hit",
+          "short": "the doc"
+        },
+        {
+          "name": "a Cinderhold caravan master",
+          "short": "the caravan master"
+        },
+        {
+          "name": "a witness to a Concord “counseling”",
+          "short": "the witness"
+        },
+        {
+          "name": "a Glass Vipers defector",
+          "short": "the defector"
+        }
+      ],
+      "objectives": [
+        "Keep {target} alive through {place} until dawn.",
+        "Escort {target} across {place} to the handoff.",
+        "Guard {target} at {place} while they do one thing that can’t be moved."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "social",
+            "text": "Meet {short}, who doesn’t trust the crew and has their own plans."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "Sweep {place} for bugs, bombs, and bought-off guards before {short} arrives."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "combat",
+            "text": "A rival crew makes its first attempt — a probe to see how good the crew is."
+          },
+          {
+            "kind": "social",
+            "text": "{Short} insists on a detour that puts everyone in the open."
+          },
+          {
+            "kind": "chase",
+            "text": "The planned route through {place} is blocked; improvise a new one."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "combat",
+            "text": "The real hit: professionals hit {short} from two directions at once."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "chase",
+            "text": "Move {short} to the handoff before the next wave."
+          },
+          {
+            "kind": "social",
+            "text": "Find out who put the contract out — or it starts again tomorrow."
+          }
+        ]
+      }
+    },
+    "wetwork": {
+      "scale": "corp",
+      "wired": "none",
+      "heatBias": 1,
+      "targets": [
+        {
+          "name": "a Colors Boss who broke a truce",
+          "short": "the Colors Boss"
+        },
+        {
+          "name": "a corp Response Lieutenant running a disappearance squad",
+          "short": "the lieutenant"
+        },
+        {
+          "name": "a Veil cult cell leader",
+          "short": "the cell leader"
+        },
+        {
+          "name": "a rival crew’s commander",
+          "short": "the commander"
+        },
+        {
+          "name": "a Skinjobs dealer selling debt-chrome to kids",
+          "short": "the dealer"
+        }
+      ],
+      "objectives": [
+        "Remove {target} at {place}. Capture, ruin, or exposure all count if the patron agrees.",
+        "Make sure {target} never operates out of {place} again.",
+        "Take {target} out of the picture at {place} and make it look like someone else did it."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "infiltrate",
+            "text": "Learn {short}’s routine at {place} without being seen asking."
+          },
+          {
+            "kind": "social",
+            "text": "Find someone close to {short} who wants them gone too."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "combat",
+            "text": "{Short}’s bodyguards are better than advertised."
+          },
+          {
+            "kind": "social",
+            "text": "The crew learns {short} is less of a monster than the patron said."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "{Short} changes the schedule at the last minute."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "combat",
+            "text": "Face {short} and their people at {place}."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "chase",
+            "text": "Get out before {short}’s allies seal {place}."
+          },
+          {
+            "kind": "social",
+            "text": "Deal with the witnesses — every choice here has consequences."
+          }
+        ]
+      }
+    },
+    "courier": {
+      "scale": "street",
+      "wired": "none",
+      "heatBias": 0,
+      "targets": [
+        {
+          "name": "a sealed chrome-organ cooler",
+          "short": "the cooler"
+        },
+        {
+          "name": "a Churn package that must not be opened",
+          "short": "the package"
+        },
+        {
+          "name": "a data drive holding a dead man’s key",
+          "short": "the drive"
+        },
+        {
+          "name": "a crate of Greenline seed stock",
+          "short": "the seed crate"
+        },
+        {
+          "name": "a person in a crate who says they volunteered",
+          "short": "the crate"
+        }
+      ],
+      "objectives": [
+        "Carry {target} through {place} to the drop before the clock runs out.",
+        "Get {target} past {place} without anyone scanning it.",
+        "Move {target} from the patron to the buyer across {place} — tonight."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "social",
+            "text": "Pick up {short} and read the fine print on the delivery."
+          },
+          {
+            "kind": "infiltrate",
+            "text": "Plot a route across {place} that avoids the scanners."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "chase",
+            "text": "A crew on bikes has been tailing the package since pickup."
+          },
+          {
+            "kind": "social",
+            "text": "A checkpoint wants to look inside."
+          },
+          {
+            "kind": "combat",
+            "text": "Ambush at a chokepoint in {place}."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "chase",
+            "text": "Run the last stretch through {place} with everyone after {short}."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "social",
+            "text": "The buyer isn’t who the patron said."
+          },
+          {
+            "kind": "combat",
+            "text": "The drop is a setup — hold on to {short} or cut losses."
+          }
+        ]
+      }
+    },
+    "recon": {
+      "scale": "street",
+      "wired": "overlay",
+      "heatBias": 0,
+      "targets": [
+        {
+          "name": "a new gang’s safehouse",
+          "short": "the safehouse"
+        },
+        {
+          "name": "a corp black site’s shift pattern",
+          "short": "the black site"
+        },
+        {
+          "name": "whatever is coming up out of the Sinks",
+          "short": "whatever is coming up"
+        },
+        {
+          "name": "a caravan route that went quiet",
+          "short": "the route"
+        },
+        {
+          "name": "a Concord “community center” that never opens its doors",
+          "short": "the center"
+        }
+      ],
+      "objectives": [
+        "Case {place} and bring back proof about {target} — no contact.",
+        "Find out the truth about {target} at {place} and report back before anyone knows you were there.",
+        "Map {place} and identify {target} for a follow-up run."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "infiltrate",
+            "text": "Find an observation point on {place} and settle in."
+          },
+          {
+            "kind": "social",
+            "text": "Ask around about {short} without tipping anyone off."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "infiltrate",
+            "text": "A patrol walks straight toward the crew’s hide."
+          },
+          {
+            "kind": "wired",
+            "text": "Scrape camera feeds around {place} while a watchdog routine sniffs for intruders."
+          },
+          {
+            "kind": "social",
+            "text": "A local recognizes a crew member."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "infiltrate",
+            "text": "Get close enough to {short} for proof that can’t be faked."
+          },
+          {
+            "kind": "chase",
+            "text": "Spotted — break contact without leading them home."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "social",
+            "text": "The intel is worth more to someone else than to the patron."
+          },
+          {
+            "kind": "chase",
+            "text": "Get the proof out before {place} goes on alert."
+          }
+        ]
+      }
+    },
+    "exorcism": {
+      "scale": "district",
+      "wired": "none",
+      "heatBias": 0,
+      "targets": [
+        {
+          "name": "a haunted transit platform",
+          "short": "the platform"
+        },
+        {
+          "name": "a Veil cult’s summoning room",
+          "short": "the summoning room"
+        },
+        {
+          "name": "a block where people come home emptied",
+          "short": "the block"
+        },
+        {
+          "name": "a node the Wired says is screaming",
+          "short": "the node"
+        },
+        {
+          "name": "a chapel where the prayers stopped working",
+          "short": "the chapel"
+        }
+      ],
+      "objectives": [
+        "Cleanse {target} at {place} before the corruption spreads a level.",
+        "Find what is feeding {target} at {place} and end it.",
+        "Get the living out of {target} at {place}, then close the thin place."
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "social",
+            "text": "Talk to the survivors around {place} — their stories don’t match."
+          },
+          {
+            "kind": "veil",
+            "text": "Read the Veil around {place}: find where it’s thin and what’s pressing through."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "veil",
+            "text": "Dead-air creeps in: comms fail, and a crew member starts losing time."
+          },
+          {
+            "kind": "combat",
+            "text": "The emptied defend {short}."
+          },
+          {
+            "kind": "social",
+            "text": "A cult member begs the crew not to “kill the only thing that listens.”"
+          }
+        ],
+        "climax": [
+          {
+            "kind": "veil",
+            "text": "Confront what is on the other side of {short} — faith, pact, or firepower."
+          },
+          {
+            "kind": "combat",
+            "text": "The source manifests at {place} and fights to stay."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "veil",
+            "text": "Seal the thin place, or mark it and warn the block."
+          },
+          {
+            "kind": "social",
+            "text": "Someone powerful wanted {short} left open — and now knows the crew’s names."
+          }
+        ]
+      }
+    },
+    "wildsSurvey": {
+      "stub": true,
+      "scale": "district",
+      "wired": "none",
+      "heatBias": 0,
+      "strata": [
+        "cinderhold",
+        "wastes"
+      ],
+      "targets": [
+        {
+          "name": "a caravan route gone quiet",
+          "short": "the route"
+        },
+        {
+          "name": "a reclaimed-ground survey marker",
+          "short": "the marker"
+        },
+        {
+          "name": "a canopy trail past the Outer Wall",
+          "short": "the trail"
+        }
+      ],
+      "objectives": [
+        "Survey {target} out past {place} and report what’s out there. (Thin tables until the wilds lore pass.)"
+      ],
+      "beats": {
+        "approach": [
+          {
+            "kind": "social",
+            "text": "Get Marrow or the Greenline to sign off on going past {place}."
+          }
+        ],
+        "obstacle": [
+          {
+            "kind": "chase",
+            "text": "Poisoned weather rolls in; find shelter or push through."
+          },
+          {
+            "kind": "combat",
+            "text": "Something follows the crew’s trail."
+          }
+        ],
+        "climax": [
+          {
+            "kind": "combat",
+            "text": "An apex predator claims {short} as its territory."
+          }
+        ],
+        "exit": [
+          {
+            "kind": "chase",
+            "text": "Make it back to the wall before full dark."
+          }
+        ]
+      }
+    }
+  },
+  "common": {
+    "twist": [
+      {
+        "kind": "social",
+        "text": "The patron lied about one important detail."
+      },
+      {
+        "kind": "combat",
+        "text": "A rival crew was hired for the same job."
+      },
+      {
+        "kind": "social",
+        "text": "Someone on the other side wants to defect mid-run."
+      },
+      {
+        "kind": "chase",
+        "text": "The timeline just got cut in half."
+      }
+    ],
+    "wired": {
+      "overlay": [
+        {
+          "kind": "wired",
+          "text": "Scrape the Overlay for camera feeds and door states around {place} while Watchdog ICE sniffs for intruders."
+        },
+        {
+          "kind": "wired",
+          "text": "Spoof {place}’s Overlay tags so the crew reads as maintenance."
+        }
+      ],
+      "jackedIn": [
+        {
+          "kind": "wired",
+          "text": "Jack in to the host behind {place}: breach the node cluster while the Alert climbs from stir to malice to hunting."
+        },
+        {
+          "kind": "wired",
+          "text": "Ride the node ladder inside {place}’s host — Watchdog ICE first, then worse."
+        }
+      ]
+    },
+    "veil": [
+      {
+        "kind": "veil",
+        "text": "The Veil is thin here: a crew member sees something that isn’t there — yet."
+      },
+      {
+        "kind": "veil",
+        "text": "Dead-air drifts through {place}; sound and Signal thin out for a round."
+      }
+    ],
+    "nameFirst": [
+      "Glass",
+      "Quiet",
+      "Iron",
+      "Neon",
+      "Hollow",
+      "Rust",
+      "Silent",
+      "Burning",
+      "Paper",
+      "Last",
+      "Grey",
+      "Sunless",
+      "Broken",
+      "Cold"
+    ],
+    "nameSecond": [
+      "Lantern",
+      "Ledger",
+      "Crossing",
+      "Switchboard",
+      "Choir",
+      "Gate",
+      "Tithe",
+      "Circuit",
+      "Harbor",
+      "Crown",
+      "Ferry",
+      "Signal",
+      "Wire",
+      "Halo"
+    ]
+  }
+}

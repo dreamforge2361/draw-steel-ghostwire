@@ -1,0 +1,216 @@
+[
+  {
+    "key": "cassavir",
+    "name": "Mama Cassavir, “the Switchboard”",
+    "actor": "Mama Cassavir, “the Switchboard”",
+    "meet": "her shuttered transit exchange on the upper Flats",
+    "pays": "clean ¥ through her exchange, minus her cut",
+    "weights": {
+      "crown": 1,
+      "spires": 2,
+      "grid": 3,
+      "flats": 5,
+      "sinks": 2,
+      "deadfall": 1,
+      "cinderhold": 1,
+      "wastes": 0
+    },
+    "typeBias": {},
+    "pitch": [
+      "Cassavir calls from the switchboard with a job she vouches for.",
+      "Cassavir has a client who needs discreet professionals, and she named the crew.",
+      "Cassavir is calling in a favor — and paying for it anyway."
+    ]
+  },
+  {
+    "key": "nyx",
+    "name": "a Nyx Churn broker",
+    "meet": "a drifting stall in the Churn",
+    "pays": "cash chips, no questions — and a favor owed to Nyx",
+    "weights": {
+      "crown": 0,
+      "spires": 1,
+      "grid": 1,
+      "flats": 3,
+      "sinks": 5,
+      "deadfall": 3,
+      "cinderhold": 3,
+      "wastes": 2
+    },
+    "typeBias": {
+      "courier": 3,
+      "dataSteal": 2,
+      "wetwork": 2,
+      "sabotage": 2
+    },
+    "pitch": [
+      "A Churn broker speaking for Nyx has a job and doesn’t want anyone asking why.",
+      "Nyx’s people have a problem they’d rather someone else be seen solving.",
+      "The Churn is paying double, which means the job is worth triple to somebody."
+    ]
+  },
+  {
+    "key": "corp",
+    "name": "an anonymous corp cut-out",
+    "meet": "a rented executive booth in a Grid noodle arcade",
+    "pays": "¥ in escrow, half up front, plus corp scrip",
+    "weights": {
+      "crown": 5,
+      "spires": 5,
+      "grid": 3,
+      "flats": 1,
+      "sinks": 0,
+      "deadfall": 0,
+      "cinderhold": 1,
+      "wastes": 1
+    },
+    "typeBias": {
+      "extraction": 3,
+      "dataSteal": 3,
+      "wetwork": 2,
+      "sabotage": 2
+    },
+    "pitch": [
+      "A cut-out in a good suit represents a conglomerate that will never admit it hired anyone.",
+      "A corp fixer offers deniable work with a very precise deadline.",
+      "The client is one of the Ten. The cut-out won’t say which, and the pay says it doesn’t matter."
+    ]
+  },
+  {
+    "key": "greenline",
+    "name": "a Greenline Ranger officer (Verdant Provision)",
+    "meet": "the Greenline forward post at Cinderhold",
+    "pays": "¥ plus seed, water-tech, or ammunition off the books",
+    "weights": {
+      "crown": 0,
+      "spires": 0,
+      "grid": 0,
+      "flats": 0,
+      "sinks": 0,
+      "deadfall": 0,
+      "cinderhold": 3,
+      "wastes": 5
+    },
+    "typeBias": {
+      "recon": 3,
+      "wildsSurvey": 4,
+      "protection": 2
+    },
+    "pitch": [
+      "A Greenline officer needs eyes past the wall that Verdant won’t sign off on.",
+      "The Rangers have a problem past the wall they can’t be seen handling.",
+      "Verdant wants a problem handled quietly before it reaches the corporate reports."
+    ]
+  },
+  {
+    "key": "marrow",
+    "name": "Ranger-Captain Cael Marrow, “the Gate”",
+    "actor": "Ranger-Captain Cael Marrow, “the Gate”",
+    "meet": "the gatehouse at Cinderhold",
+    "pays": "¥ the settlement scraped together, and standing at the gate",
+    "weights": {
+      "crown": 0,
+      "spires": 0,
+      "grid": 0,
+      "flats": 0,
+      "sinks": 1,
+      "deadfall": 1,
+      "cinderhold": 5,
+      "wastes": 4
+    },
+    "typeBias": {
+      "protection": 3,
+      "recon": 3,
+      "wildsSurvey": 3,
+      "sabotage": 2
+    },
+    "pitch": [
+      "Marrow doesn’t ask twice: Cinderhold needs something done and he trusts the crew to do it.",
+      "Marrow has read something in the ground he doesn’t like, and he needs proof.",
+      "Kestrel’s Clean Route is creeping closer, and Marrow needs the crew for something it can’t see."
+    ]
+  },
+  {
+    "key": "krael",
+    "name": "Warden Krael, “the Landlord”",
+    "actor": "Warden Krael, “the Landlord”",
+    "meet": "his facilities office on the Grid",
+    "pays": "¥ and a blind eye on one SIN flag",
+    "weights": {
+      "crown": 0,
+      "spires": 1,
+      "grid": 5,
+      "flats": 1,
+      "sinks": 0,
+      "deadfall": 0,
+      "cinderhold": 0,
+      "wastes": 0
+    },
+    "typeBias": {
+      "sabotage": 2,
+      "extraction": 2,
+      "wetwork": 2,
+      "recon": 2
+    },
+    "pitch": [
+      "Krael needs a problem on his levels solved without it touching his license.",
+      "The Landlord wants a rival warden embarrassed — or worse.",
+      "Krael is being squeezed from above and wants leverage of his own."
+    ]
+  },
+  {
+    "key": "ferryman",
+    "name": "The Ferryman",
+    "actor": "The Ferryman",
+    "meet": "the last controlled crossing down to the Sinks",
+    "pays": "¥ and free passage down — once",
+    "weights": {
+      "crown": 0,
+      "spires": 0,
+      "grid": 0,
+      "flats": 1,
+      "sinks": 4,
+      "deadfall": 4,
+      "cinderhold": 1,
+      "wastes": 0
+    },
+    "typeBias": {
+      "courier": 3,
+      "recon": 2,
+      "exorcism": 2,
+      "protection": 2
+    },
+    "pitch": [
+      "The Ferryman has a job past his crossings that he won’t touch himself.",
+      "Something below has stopped answering the Ferryman, and he wants to know why.",
+      "The Ferryman offers the toll waived for a job no one else will take."
+    ]
+  },
+  {
+    "key": "choirmother",
+    "name": "The Choirmother",
+    "actor": "The Choirmother",
+    "meet": "the back room of her soup kitchen",
+    "pays": "what her flock can gather, plus sanctuary on her block",
+    "weights": {
+      "crown": 0,
+      "spires": 0,
+      "grid": 1,
+      "flats": 2,
+      "sinks": 1,
+      "deadfall": 1,
+      "cinderhold": 0,
+      "wastes": 0
+    },
+    "typeBias": {
+      "exorcism": 4,
+      "protection": 3,
+      "extraction": 2
+    },
+    "pitch": [
+      "The Choirmother asks, gently, for help protecting her people.",
+      "Something threatens her block, and the Choirmother is afraid of who is behind it.",
+      "The Choirmother says the Light sent the crew to her door."
+    ]
+  }
+]

@@ -1,0 +1,235 @@
+{
+  "_note": "Names must match Actors in the Ghostwire Bestiary pack. Tiers come from each Actor's Draw Steel organization; named bosses are patrons and support, never opposition.",
+  "strata": {
+    "crown": [
+      "Corp Security Officer",
+      "Corp Enforcer",
+      "Response Lieutenant",
+      "Corp Netrunner",
+      "Contract Enforcer",
+      "Rival Commander (Echelon 1)",
+      "Rival Hacker (Echelon 1)",
+      "Rival Scout (Echelon 1)"
+    ],
+    "spires": [
+      "Corp Security Officer",
+      "Corp Enforcer",
+      "Response Lieutenant",
+      "Corp Netrunner",
+      "Contract Enforcer",
+      "Ironclad Commando",
+      "Ironclad Sharpshooter",
+      "Rival Operator (Echelon 1)",
+      "Rival Technomancer (Echelon 1)"
+    ],
+    "grid": [
+      "Corp Security Officer",
+      "Street Punk",
+      "Hustler",
+      "Street Cutter",
+      "Corp Enforcer",
+      "Response Lieutenant",
+      "Chrome Bruiser",
+      "Corp Netrunner",
+      "Wrench Rigger"
+    ],
+    "flats": [
+      "Gang Raider",
+      "Street Punk",
+      "Street Cutter",
+      "Rooftop Shooter",
+      "Trick Shooter",
+      "Street Brawler",
+      "Hustler",
+      "Colors Boss",
+      "Chrome Bruiser",
+      "Wrench Rigger",
+      "Gang Boss",
+      "Razorline Prime",
+      "The Warlord"
+    ],
+    "sinks": [
+      "Chrome-Rat",
+      "Scrap-Hound",
+      "Street Cutter",
+      "Gutter-Serpent",
+      "Veil Cultist",
+      "Ghoul",
+      "Zombie",
+      "Sink-Crawler",
+      "Chrome Raider Hijack",
+      "Chrome Raider Armiger"
+    ],
+    "deadfall": [
+      "Tunnel-Bat",
+      "Zombie",
+      "Skeleton",
+      "Ghoul",
+      "Veil Cultist",
+      "Ghost",
+      "Sink-Crawler",
+      "Signal Mindkiller Whelp",
+      "Signal Talker Invader"
+    ],
+    "cinderhold": [
+      "Gang Raider",
+      "Scrap-Hound",
+      "Street Brawler",
+      "Rooftop Shooter",
+      "Feral Beast",
+      "Chrome Raider Hijack",
+      "Chrome Raider Armiger",
+      "Rival Scout (Echelon 1)",
+      "Jungle Predator"
+    ],
+    "wastes": [
+      "Vermin Swarm",
+      "Feral Beast",
+      "Jungle Beast",
+      "Jungle Predator",
+      "Chrome Raider Hijack",
+      "Chrome Raider Armiger",
+      "Zombie",
+      "Canopy-Stalker",
+      "Reach Behemoth"
+    ]
+  },
+  "types": {
+    "extraction": [
+      "Rooftop Shooter",
+      "Street Cutter"
+    ],
+    "dataSteal": [
+      "Corp Netrunner"
+    ],
+    "sabotage": [
+      "Wrench Rigger",
+      "Ironclad Sharpshooter"
+    ],
+    "protection": [
+      "Rival Scout (Echelon 1)",
+      "Rival Operator (Echelon 1)",
+      "Rival Commander (Echelon 1)",
+      "Street Cutter"
+    ],
+    "wetwork": [
+      "Razorline Prime",
+      "Chrome Bruiser"
+    ],
+    "courier": [
+      "Gang Raider",
+      "Rooftop Shooter",
+      "Wrench Rigger"
+    ],
+    "recon": [
+      "Scrap-Hound",
+      "Rooftop Shooter"
+    ],
+    "exorcism": [
+      "Veil Cultist",
+      "Ghost",
+      "Zombie",
+      "Skeleton",
+      "Ghoul"
+    ],
+    "wildsSurvey": [
+      "Feral Beast",
+      "Jungle Predator",
+      "Canopy-Stalker"
+    ]
+  },
+  "typeWeight": 2,
+  "wired": {
+    "overlay": [
+      "Watchdog ICE"
+    ],
+    "jackedIn": [
+      "Watchdog ICE",
+      "Scrambler ICE",
+      "Black ICE"
+    ]
+  },
+  "iceLadder": [
+    "Watchdog ICE",
+    "Scrambler ICE",
+    "Black ICE"
+  ],
+  "ladders": {
+    "corp": {
+      "medium": [
+        "Response Lieutenant"
+      ],
+      "high": [
+        "Contract Enforcer"
+      ],
+      "extreme": [
+        "Ironclad Warden"
+      ]
+    },
+    "street": {
+      "medium": [
+        "Colors Boss"
+      ],
+      "high": [
+        "Gang Boss"
+      ],
+      "extreme": [
+        "The Warlord"
+      ]
+    },
+    "deep": {
+      "medium": [
+        "Veil Cultist"
+      ],
+      "high": [
+        "Sink-Crawler"
+      ],
+      "extreme": [
+        "Signal Talker Invader"
+      ]
+    },
+    "frontier": {
+      "medium": [
+        "Chrome Raider Hijack"
+      ],
+      "high": [
+        "Chrome Raider Armiger"
+      ],
+      "extreme": [
+        "Reach Behemoth"
+      ]
+    }
+  },
+  "composition": {
+    "low": {
+      "minion": 1,
+      "core": 1,
+      "leader": 0,
+      "boss": 0
+    },
+    "medium": {
+      "minion": 1,
+      "core": 2,
+      "leader": 1,
+      "boss": 0
+    },
+    "high": {
+      "minion": 2,
+      "core": 2,
+      "leader": 1,
+      "boss": 0
+    },
+    "extreme": {
+      "minion": 2,
+      "core": 3,
+      "leader": 1,
+      "boss": 1
+    }
+  },
+  "levelReach": {
+    "low": 0,
+    "medium": 1,
+    "high": 2,
+    "extreme": 3
+  }
+}
