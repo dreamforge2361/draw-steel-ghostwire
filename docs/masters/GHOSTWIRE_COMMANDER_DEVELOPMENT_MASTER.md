@@ -61,7 +61,7 @@ You are a quintessential **Edgerunner** — the setting's term for the deniable-
 | **Stamina per Level (2+)** | +9 |
 | **Recoveries** | 10 |
 | **Kit Slot** | Light — most Commander/Face builds work through allies, not a personal weapon; a bodyguard-Commander (Corp-Exec enforcer) or street-enforcer (Street-Fixer with heavy backup) may take a light weapon Kit |
-| **Skills** | **Leadership/Command** and **Persuasion/Negotiation** are the class's two anchor skills — spend **at least half your starting Skill Points** on them, per the Class-framework rule. **Instinct**-keyed reading (motivations, pitfalls, tells) rounds out the baseline. A fourth free pick follows your subclass: **Corporate/Bureaucracy** or **Etiquette** (Corp-Exec), **Streetwise** (Street-Fixer), or **Performance** (Bard). |
+| **Skills** | You gain **Command** and **Negotiation** free, then choose any **two** additional skills from the Social or Knowledge skill groups — **Instinct**-keyed reading (motivations, pitfalls, tells) is what rounds out the baseline. Your Command Doctrine grants a further skill of its own on top of these: **Streetwise** (Street-Fixer), **Corporate/Bureaucracy** or **Etiquette** (Corp-Exec), or **Performance** (Bard). (Quick Build: Command, Negotiation, Insight, Contacts.) *There is no "Skill Points" currency in Draw Steel or Ghostwire; the earlier "spend half your starting Skill Points" wording is retired in favor of the shipped pack's skill-pick advancements.* |
 
 *Design note (chassis rationale, per DS Tactician's baseline stats + GHOSTWIRE's command-and-negotiate identity): the Commander/Face mirrors the Tactician's Stamina/Recoveries curve exactly (21 starting, +9/level, 10 Recoveries) — a mid-weight frame appropriate for a class that stands near the front of a fight directing it, without being built to absorb the front line's punishment the way the Operator is. Species mods stack on top of the class chassis in the standard way. Potency is dual-tracked per Q5=B: command-flavored Power Rolls (Command Persona, Fearful Awe, Battle Cry, Turn the Tide's combat mode) key their tiers to **Persona**, while Instinct governs how efficiently the class generates Influence off successful reads rather than gating a separate potency track of its own.*
 
@@ -91,7 +91,7 @@ You are a quintessential **Edgerunner** — the setting's term for the deniable-
 | **First time each round you succeed on a Read the Room that reveals new information (Q5=B dual-stat generation)** | **+1 Influence** (canon Face "Reading the room" trigger, preserved and Instinct-scaled — rewards *understanding* people, not just commanding them) |
 | **End of encounter** | Lose all remaining Influence |
 
-**Outside combat use.** You may use an Influence ability without spending, in a social scene (negotiation, infiltration, a performance) — but only **once each per rest or Victory** (canon Focus outside-combat rule, preserved). This represents the negotiation itself being the Face's battlefield: the room is a fight you're already winning, one exchange at a time.
+**Influence Outside of Combat.** You can't gain Influence outside of combat, but you can still use your heroic abilities and effects that cost Influence without spending it. Whenever you use an ability or effect outside of combat that costs Influence — in a negotiation, an infiltration, a performance — you can't use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite (canon Focus outside-combat rule, preserved, in the same phrasing every other Ghostwire Heroic-Resource class uses). This represents the negotiation itself being the Face's battlefield: the room is a fight you're already winning, one exchange at a time.
 
 **Firewall note.** Influence is class power on the BP side of the firewall. It is never bought, raised, or fed by nuyen or Body Integrity. The Economy's **Renown**, **Lifestyle**, and **nuyen** are the class's **strategic levers** — what it grows and spends *out of scene* — and they can grant **edges** to social rolls, but they do not manufacture Influence, and Influence never converts to nuyen or Renown. This resolves the canon chapter's original **Access-vs-Influence** fork: strategic leverage (doors, favors, credentials) lives permanently in the Renown/Contacts systems; Influence is the **in-scene, live-table fuel** that never leaves the fight or the negotiation it was earned in.
 
@@ -278,7 +278,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Break Their Nerve** *(9 Influence, main action, GHOSTWIRE-original)*
 > *3-burst in Ranged 10*
-> Each enemy in the area makes a Power Roll + Persona. Tier 1: **frightened of you, save ends,** AND **Weakened, save ends**. Tier 2: **frightened of you, save ends**. Tier 3: **frightened until end of its next turn**.
+> **You make one Power Roll + Persona**, and the result applies to every enemy in the area — the enemies do not roll (same hero-rolls grammar as Command Persona / Fearful Awe, per Michael's 2026-07-29 ruling). Tier 1: **frightened of you, save ends,** AND **Weakened, save ends**. Tier 2: **frightened of you, save ends**. Tier 3: **frightened until end of its next turn**.
 > *The crowd-cascade fear moment — the instant a whole line of enemies decides, all at once, that this fight isn't worth it.*
 
 #### 11-Cost Tier (chosen at 8th level) — Q4=A, all four invented
@@ -303,7 +303,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Speak With One Voice** *(11 Influence, main action, GHOSTWIRE-original)*
 > *In a social scene, with a crowd/faction/room*
-> Impose your framing on an entire crowd, faction, or room. Every present NPC who can see or hear you makes a Power Roll + Persona vs. their Instinct-scaled resistance. Tier 1: **all** present NPCs shift Attitude one step toward Cooperative. Tier 2: **half** shift. Tier 3: only the **leader** shifts.
+> Impose your framing on an entire crowd, faction, or room. **You make one Power Roll + Persona**, and the result decides how far the framing carries — the NPCs do not roll, and there is no separate resistance value (the earlier "Instinct-scaled resistance" was never defined and is dropped; the shipped pack has no such value). Tier 1: **all** present NPCs shift Attitude one step toward Cooperative. Tier 2: **half** shift. Tier 3: only the **leader** shifts.
 > *The apex crowd-mover — riots, rallies, panic-quells, mass loyalty pledges, all turning on the sound of your voice.*
 
 ---
@@ -358,7 +358,7 @@ Where the Medic's version is chemical and the Wrench's is mechanical, The Right 
 
 ### Command Doctrines (Subclasses)
 
-At 1st level, every Commander/Face chooses one of three **Command Doctrines** — Street-Fixer, Corp-Exec, or Bard — reskinned respectively from the DS Tactician's Insurgent, Mastermind, and Vanguard Tactical Doctrines. All three share the identical Persona/Instinct chassis and Influence engine; each grants a feature ladder across levels 1, 2, 3, 5, 6, 8, and 9.
+At 1st level, every Commander/Face chooses one of three **Command Doctrines** — Street-Fixer, Corp-Exec, or Bard — reskinned respectively from the DS Tactician's Insurgent, Mastermind, and Vanguard Tactical Doctrines. All three share the identical Persona/Instinct chassis and Influence engine; each grants a feature ladder across levels **1, 2, 3, 5, 6, 7, 8, and 9** — the level-7 rung (Undercity Advantage, The Big Picture, The Show) included, as the doctrine tables below and the shipped subclass advancements both show.
 
 *Corp records list each doctrine differently; the street calls all three simply "the Face."*
 

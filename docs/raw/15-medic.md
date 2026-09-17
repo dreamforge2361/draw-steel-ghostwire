@@ -17,7 +17,7 @@
 | **Stamina per Level (2+)** | +6 |
 | **Recoveries** | 8 |
 | **Kit Slot** | Light-to-moderate — most Medics work through the bag alone; a Combat-Medic build may take a weapon Kit for melee/ranged self-sufficiency |
-| **Skills** | **Medicine** (signature skill — first aid, trauma care, surgery support, biological stabilization) and **Medicine Lore / chemistry-alchemy** (pathogens, drugs, toxins, physiology) are the class's two anchor skills — spend **at least half your starting Skill Points** on them, per the Class-framework rule. An interpersonal or perception skill (bedside manner, reading patients) rounds out the baseline. A fourth free pick follows your subclass: streetwise/contacts (Street-Doc), corporate/pharma-science (Corp-Medtech), or cybertech/mechanics (Ripperdoc). |
+| **Skills** | You gain **Medicine** and **Medicine Lore** free, then choose any **two** additional skills from the Technical, Social, or Knowledge skill groups — a bedside-manner or reading-people skill rounds out a Medic. Your specialization grants a further skill of its own: **Streetwise** (Street-Doc), **Corporate** (Corp-Medtech), or **Cybertech** (Ripperdoc). (Quick Build: Medicine, Medicine Lore, Insight, Contacts.) |
 
 **No Wired, no Veil.** The Medic is fully mundane — reliable, always-available support with no supernatural or digital infrastructure required: a Medic's kit works the same in a dead zone, a Faraday-shielded bunker, or a desanctified ruin as it does anywhere else.
 
@@ -47,9 +47,11 @@
 
 **Expend in the field.** Every heroic ability and every signature enhancement spends Reagents from this pool. When the pool hits zero, you fall back on raw Medicine skill — basic first aid (Established Protocols, see Core Class Features) still works — but every potent option is gone until you restock.
 
-**Field Synthesis — the free improv valve.** Once per encounter, as a maneuver, you may produce a **half-strength compound for 0 Reagents.** This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.
+**Field Synthesis — the free improv valve.** From **2nd level**, once per encounter (twice for a Street-Doc with Make Do), as a maneuver, you may produce a **half-strength compound for 0 Reagents.** This represents scrounging the battlefield for whatever will do the job — a stripped first-aid kit off a downed enemy, a jury-rigged antidote from spare parts. It never taxes the bag. Full mechanics in its own Deep Dive section, below.
 
-**Restock in downtime.** Refilling to full kit capacity is a project/lifestyle activity handled at respite, tied to nuyen and the Economy's crafting subsystem — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch.
+**Restock in downtime.** Refilling to full kit capacity is a **lifestyle / downtime-project activity** taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is **no per-Reagent price list**: the **Director quotes the cost** of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.
+
+**Restock discounts** (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to **that quoted cost**. A full ¥ price band waits on the Economy's lifestyle chapter (`08-kits-gear-wealth.md`).
 
 **CRITICAL — Reagents persist across encounters.** This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. **Reagents do not.** The bag empties across a **run**, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.
 
@@ -95,7 +97,7 @@ Stims, focus boosters, pain-blockers, adrenal spikes.
 
 | Property | Value |
 |---|---|
-| **Base** | +1 edge, or ignore 1 condition, for 1 round |
+| **Base** | An **edge**, or ignore 1 condition, for 1 round |
 | **Enhanced (+2 Reagents)** | +1 round duration, or +1 additional ally |
 | **Crash Rider (automatic)** | **−1 to next Power Roll after the buff ends** (**−2** if the buff was enhanced). No save, no opt-out. Corp-Medtech reduces crash *duration* by 1 round (see Subclasses, below) — the crash still happens, it just recovers faster. |
 
@@ -130,7 +132,7 @@ Every Medic has these **three signatures**, free, at-will, from 1st level — no
 > **Administer Dose** *(Class Feature Signature)*
 > *Main action · Distance: touch or thrown short (Ranged 5) · Target: one creature, ally OR enemy*
 > **Effect:** the same action heals a friend or harms a foe depending on what's loaded in the injector.
-> - **Ally target:** no roll. Deliver a Stimulant compound — the target gains +1 edge OR ignores 1 condition for 1 round. (Crash rider applies.)
+> - **Ally target:** no roll. Deliver a Stimulant compound — the target gains an **edge** on Power Rolls OR ignores 1 condition, for 1 round. (Crash rider applies.)
 > - **Enemy target:** **Power Roll** 2d10 + Instinct. Deliver a Toxin compound — the target takes **2 + Instinct** poison damage over 2 rounds (half each round, round up on the first tick) and is **Weakened** until the end of its next turn after the last tick. Enhanced (+2 Reagents): **4 + Instinct** over 2 rounds, **Weakened** and **Slowed**.
 >
 > **Enhance (spend 2+ Reagents):** a stronger or longer-duration compound, or dose an extra target.
@@ -161,18 +163,18 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Slap-Injector** *(1 Reagent)*
 > *Maneuver · Distance: touch · Target: self or one ally*
-> No Power Roll. Choose one: the target gains a **save-end** against one active condition, OR the target gains **+1 to their next Power Roll.** (This is a mild stim — no crash rider.)
+> No Power Roll. Choose one: the target gains a **save-end** against one active condition, OR the target gains an **edge on their next Power Roll.** (This is a mild stim — no crash rider.)
 
 ### 3-Cost Band (chosen at 1st level)
 
 > **Combat Stims** *(3 Reagents)*
 > *Main action · Distance: touch or short range · Target: up to 2 allies*
-> No Power Roll. Each target gains an extra maneuver this turn, a significant edge on their next roll, and temporary Stamina equal to your Recovery value, all for 1 round.
+> No Power Roll. Each target gains an extra maneuver this turn, an **edge** on their next Power Roll, and temporary Stamina equal to your Recovery value, all for 1 round.
 > **Crash Rider (automatic):** each recipient takes −1 to their next Power Roll after the buff ends (−2 if enhanced).
 
 > **Toxic Cloud** *(3 Reagents)*
 > *Main action · Ranged area, cube 3 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or a **Power Roll** of 2d10 + Instinct per Director's table). Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** poison damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick; the zone becomes hazardous terrain — enemies must leave it or keep suffering.
+> No Power Roll. Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** poison damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick. The area stays hazardous for those **2 rounds**: an enemy that enters it or starts its turn there suffers the effect again.
 
 > **Rapid Field Diagnosis** *(3 Reagents)*
 > *Maneuver · Ranged area, burst 5 · Target: enemies in the burst*
@@ -194,7 +196,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Focus Serum** *(5 Reagents)*
 > *Main action · Distance: touch or short range · Target: up to 2 allies*
-> No Power Roll. Each target gains **+2 on all Power Rolls** for 1 round.
+> No Power Roll. Each target gains an **edge on all Power Rolls** for 1 round.
 > **Crash Rider (automatic):** each recipient takes −1 to their next Power Roll after the buff ends (this is a combat drug — the rider applies exactly as it does for any Stimulant compound).
 
 > **Anesthetize** *(5 Reagents)*
@@ -217,7 +219,8 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Chemical Interrogation** *(7 Reagents)*
 > *Main action · Ranged 5 · Target: one creature*
-> No Power Roll (or a contested Instinct-vs-Physique check for a resistant target, Director's call). For 3 rounds, the target answers questions truthfully. Out of combat, this is a social apex tool; in combat, it compels the target to reveal one piece of intel.
+> No Power Roll. For 3 rounds, the target answers questions truthfully. Out of combat, this is a social apex tool; in combat, it compels the target to reveal one piece of intel of your choice.
+> **Resistant targets.** Against a target the Director rules is chem-hardened, chromed against interrogation drugs, or trained to resist (Director's call), the dose lands only on **Physique < AVERAGE**; otherwise the target shrugs it off and the Reagents are spent.
 
 > **Field Adrenal** *(7 Reagents)*
 > *Main action · Self-centered, adjacent · Target: self + up to 2 adjacent allies*
@@ -228,7 +231,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Chemical Warfare** *(9 Reagents)*
 > *Main action · Ranged area, cube 5 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or a **Power Roll** of 2d10 + Instinct, Director's table). A massive gas cloud fills the area for 3 rounds. Every enemy in the area takes poison damage-over-time and is Weakened and Slowed; the zone remains hazardous terrain for its full duration.
+> No Power Roll. A massive gas cloud fills the area for **3 rounds**. Each enemy in the area takes the **enhanced** Toxin dose — **4 + Instinct** poison damage over 2 rounds (half each round, round up on the first tick) — and is **Weakened** and **Slowed** until the end of its next turn after the last tick. The area stays hazardous terrain for all 3 rounds: an enemy that enters it or starts its turn there takes the dose again.
 
 > **Emergency Transfusion** *(9 Reagents)*
 > *Main action · Ranged 10 · Target: up to 4 allies*
@@ -246,16 +249,16 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Wonder Drug** *(11 Reagents)*
 > *Main action · Ranged 10 · Target: entire crew*
-> No Power Roll. For the rest of the encounter, all crew gain +1 to all Power Rolls, an extra maneuver each turn, and temporary Stamina equal to your Recovery value.
+> No Power Roll. For the rest of the encounter, all crew gain an **edge on all Power Rolls**, an extra maneuver each turn, and temporary Stamina equal to your Recovery value.
 > **Crash Rider (automatic, enhanced step):** at the end of the encounter, all crew take **−2** to the first Power Roll of the next scene.
 
 > **Nerve Agent** *(11 Reagents)*
-> *Main action · Battlefield-wide (Director's table) · Target: all enemies present*
-> Each enemy makes a save or is Weakened and Slowed; all affected enemies take **6 + Instinct** poison damage total over **3 rounds** (equal ticks, round up on earlier ticks) regardless of save result.
+> *Main action · Battlefield-wide — the Director sets the exact area · Target: all enemies in the area*
+> Each enemy in the area makes a saving throw; on a failure, it is **Weakened** and **Slowed** (save ends). Every enemy in the area takes **6 + Instinct** poison damage total over **3 rounds** (equal ticks, round up on earlier ticks), whether or not it failed the save.
 
 > **Full Kit Purge** *(minimum 11 Reagents)*
-> *Main action · Ranged 10 · Target: Director's table, scales with spend*
-> Spend **all** remaining Reagents in your kit at once (minimum 11). The effect scales directly with the amount spent: mass revive, mass heal, and mass condition-clear, scaled by Reagents burned. This empties your kit completely.
+> *Main action · Ranged 10 · Target: self and each ally within distance*
+> Spend **all** remaining Reagents in your kit at once (minimum 11). At the **minimum 11-Reagent spend**, each target gets exactly what **The Doctor Is In** delivers: heals **Recovery value × 2**, has **all conditions cleared**, and **revives if dying or dead** (within the Director's freshly-killed line). **Every Reagent spent beyond 11 adds +1 Recovery value of healing to each target.** This empties your kit completely.
 
 > **The Doctor Is In** *(11 Reagents)*
 > *Main action · Ranged 10 · Target: entire crew*
@@ -285,7 +288,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 ## Field Synthesis — The Improv Valve
 
-> **Field Synthesis** *(0 Reagents, maneuver, once per encounter)*
+> **Field Synthesis** *(2nd-level class feature · 0 Reagents, maneuver, once per encounter)*
 > Produce a **half-strength compound** of any of the four families (Restorative, Antidote, Stimulant, or Toxin), scrounged from whatever's on hand — a stripped first-aid kit off a downed enemy, spare chemical stock jury-rigged into something usable, a gas canister repurposed on the spot.
 
 **What "half-strength" means per family:**
@@ -293,13 +296,13 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 | Family | Half-Strength Effect |
 |---|---|
 | **Restorative** | Heal **half** Recovery value in Stamina. |
-| **Antidote** | Removes **½ step** of a poison/disease/Exposure-clock effect (Director's table: round down, or treat as a partial/temporary suppression rather than a full step-clear). |
-| **Stimulant** | Same **+1 edge**, but the duration is only **half a round** (effectively: the edge applies to the very next roll only, not the full round). |
+| **Antidote** | **Suppresses 1 step** of a poison/disease/Exposure-clock effect until the end of the encounter (the Director calls whether it clears fully when the fight ends). |
+| **Stimulant** | The same **edge**, but only on the target's **next Power Roll**, not for the full round. Crash rider: a **−1** on the Power Roll after that. |
 | **Toxin** | **Half damage** of the base Toxin magnitude, over the same 2-round window. |
 
 **Cannot be enhanced.** Field Synthesis produces an already-half-strength dose by definition — there is no "spend 2 more Reagents to enhance it" option.
 
-**Once per encounter, no exceptions.** A Medic cannot chain multiple Field Syntheses in a single fight.
+**Once per encounter — one exception.** A Medic cannot chain Field Syntheses in a single fight. The only exception in this chapter is the Street-Doc's **Make Do** (1st level), which raises the cap to **twice per encounter** and the output to two-thirds strength; Make Do does nothing until you gain Field Synthesis at 2nd level.
 
 ---
 
@@ -307,12 +310,16 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 **Automatic. No save. No opt-out.** Every time a Stimulant/combat-drug compound's buff ends — whether from Administer Dose, Combat Stims, Focus Serum, Field Adrenal, or Wonder Drug — the recipient takes the crash rider. There is no roll to avoid it, no resistance that reduces it, and no way to decline the dose and still get the buff. If you take the stim, you take the crash.
 
-| Crash Step | Penalty |
-|---|---|
-| **Base** | **−1** to the recipient's next Power Roll after the buff ends. |
-| **Enhanced** | **−2** to the recipient's next Power Roll after the buff ends. |
+| Crash Step | Penalty | Duration |
+|---|---|---|
+| **Base** | **−1** to the recipient's Power Rolls | **1 round** after the buff ends |
+| **Enhanced** | **−2** to the recipient's Power Rolls | **2 rounds** after the buff ends |
 
-**Corp-Medtech's partial mitigation.** The Corp-Medtech subclass's Pharmaceutical Grade feature reduces crash **duration** by 1 round — the crash still happens, at the same −1/−2 magnitude, but the affected character recovers from it one round sooner than they otherwise would. This does **not** eliminate the crash, reduce its magnitude, or grant immunity; it only shortens how long the penalty window lasts. See Subclasses, below, for the full Pharmaceutical Grade writeup.
+The penalty applies to every Power Roll the recipient makes inside that window, not just the next one.
+
+**Corp-Medtech's partial mitigation.** The Corp-Medtech subclass's Pharmaceutical Grade feature cuts **1 round** off that window — an enhanced crash lasts 1 round instead of 2, and a base crash ends before it applies to anything. The magnitude is untouched: the crash still happens at −1/−2, and **Reduced Comedown** still caps the rider at −1. See Subclasses, below, for the full Pharmaceutical Grade writeup.
+
+The −1/−2 crash magnitude stays a flat penalty rather than a bane: Reduced Comedown's cap depends on the number.
 
 ---
 
@@ -328,11 +335,11 @@ Best kit-economy of the three — you stretch Reagents further and recover faste
 
 | Level | Feature | Effect |
 |---|---|---|
-| **1** | **Make Do** | You improvise and restock Reagents faster and cheaper. Field Synthesis can be used **twice** per encounter instead of once, and produces a **two-thirds-strength** compound instead of half-strength. |
+| **1** | **Make Do** | You improvise and restock Reagents faster and cheaper. Once you have Field Synthesis (2nd level), you can use it **twice** per encounter instead of once, and it produces a **two-thirds-strength** compound instead of half-strength. |
 | **1** | **Back-Alley Wits** | First Aid gains an edge when targeting an ally below half Stamina. |
 | **1** | **Improvise!** *(triggered)* | Free triggered action, once per encounter: when your kit has 3 or fewer Reagents remaining, gain 2 Reagents back — you found something in the trash. |
 | **2** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (2nd-band options). |
-| **3** | Subclass feature | **Scrounger's Eye** — once per respite, when restocking, you may reduce the nuyen cost of a full kit refill by 25% by spending extra time (Director's table on exact time cost). |
+| **3** | Subclass feature | **Scrounger's Eye** — once per respite, when you restock, you can spend extra downtime (the Director says how much, against whatever else that respite's downtime could buy) to reduce the nuyen cost of a full kit refill by 25%. *(Exact time cost depends on the restock procedure — see the restock marker under Reagents, above.)* |
 | **5** | Subclass feature (choice) | **Back-Alley Network** — choose one: gain a free Renown bump among street clinics, OR gain an edge on all Field Synthesis productions. |
 | **6** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (6th-band options). |
 | **8** | Subclass feature | **Nothing Wasted** — Emergency Patch and Slap-Injector cost 0 Reagents once per encounter each. |
@@ -342,11 +349,11 @@ Best kit-economy of the three — you stretch Reagents further and recover faste
 
 | Level | Ability | Effect |
 |---|---|---|
-| 2 | **Trash-Bin Chemistry** | Field Synthesis may produce a Toxin-family compound in addition to the other three families. |
+| 2 | **Trash-Bin Chemistry** | Field Synthesis can **always** produce a Toxin compound, even when the Director would otherwise limit what there is to scrounge. |
 | 2 | **Regular Customer** | Gain a standing black-market-pharma contact who sells Reagent restocks at a 15% discount. |
 | 6 | **Back-Alley Miracle** | Once per encounter, Emergency Patch may target 2 allies instead of 1 for no additional Reagent cost. |
 | 6 | **Fast Hands** | First Aid may be performed as a maneuver (instead of a main action) once per round, at base effect only (no enhancement). |
-| 9 | **The Doc Who Never Left** | Once per session, treat a failed restock roll (nuyen shortfall, supplier unavailable) as a success — you find a way, no questions asked. |
+| 9 | **The Doc Who Never Left** | Once per session, treat a **failed restock** — a nuyen shortfall, a supplier who didn't show — as a success. You find a way, no questions asked. (There is no restock roll; this rescues the outcome, whatever caused it.) |
 | 9 | **Last Syringe** | Once per session, when your kit is at 0 Reagents, produce one base (non-enhanced) compound for free. |
 
 *Corp cover: "unlicensed neighborhood doctor" / "street medical services." Bonus skill: streetwise/contacts, plus a fixer, ganger-clinic, or black-market-pharma contact.*
@@ -359,7 +366,7 @@ Better product, cleaner delivery, and a recovery curve on the crash rider that n
 
 | Level | Feature | Effect |
 |---|---|---|
-| **1** | **Pharmaceutical Grade** | Compounds you produce are **+50% base magnitude OR +1 buff round OR +1 additional target** (pick per compound, at the moment it's produced). Crash duration is **1 round shorter** on any Stimulant compound you produce (still happens, just recovers faster). |
+| **1** | **Pharmaceutical Grade** | Compounds you produce are **+50% base magnitude OR +1 buff round OR +1 additional target** (pick per compound, at the moment it's produced). Crash duration is **1 round shorter** on any Stimulant compound you produce — an enhanced crash lasts 1 round instead of 2, and a base crash expires before it applies to a roll (still happens, just recovers faster). |
 | **1** | **Licensed Protocol** | Combat Stims and Administer Dose compounds last **1 additional round.** |
 | **1** | **Clean Delivery** *(triggered)* | When you use Administer Dose and the target is within 3 squares, gain +1 target for free (no additional Reagent cost). |
 | **2** | Subclass ability (choose 1) | See Corp-Medtech Ability Table, below (2nd-band options). |
@@ -417,8 +424,9 @@ The only specialization with a self-revive capstone.
 
 > **Nano-Adrenal Auto-Injector** *(Ripperdoc 8th-level capstone)*
 > A nano-adrenal auto-injector wired directly into the Ripperdoc's own chrome. When reduced to 0 Stamina, you may trigger the injector: **burn 30 Reagents from your kit, OR permanently lose 1 Body Integrity,** to auto-revive at **1 Stamina** at the start of your next turn.
-> - **Once per session.** Even if both payment options are available, the injector can only fire once between full rests/session boundaries (Director's table on exact reset cadence).
-> - **Reagents payment requires availability.** If your kit has fewer than 30 Reagents banked at the moment of death, the Reagent-payment option simply isn't on the table — only the Body Integrity option remains.
+> - **Once per session.** Even if both payment options are available, the injector fires once per session — it resets when the session does, not at a respite.
+> - **Reagents payment requires availability.** If your kit has fewer than 30 Reagents banked at the moment you drop, the Reagent-payment option simply isn't on the table — only the Body Integrity option remains.
+> - **In practice, that means Body Integrity for most of your career.** You gain this capstone at 8th level, which is **Echelon 3**: kit capacity 20, or 22 with Advanced Chem-Prep. You cannot hold 30 Reagents. The Reagent payment only becomes reachable at **Echelon 4** (10th level, capacity 38 — 40 with Advanced Chem-Prep), and even then only if you've kept most of the bag full. This is deliberate, not a typo: for two levels the injector costs a permanent piece of your body, full stop.
 > - **Body Integrity loss is permanent.** This is not a temporary penalty and does not heal on its own; it represents genuine physical cost to a body that's already been substantially chromed.
 
 This is the **only** self-revive mechanic anywhere in the Medic class. Street-Doc and Corp-Medtech Medics cannot self-revive by any means available in this chapter — if they hit 0 Stamina without outside help, they need Miracle Worker, Emergency Transfusion, or The Doctor Is In from an ally, exactly like every other class in the game.
@@ -444,9 +452,9 @@ This is the **only** self-revive mechanic anywhere in the Medic class. Street-Do
 
 ## Core Class Features (Non-Subclass)
 
-- **Field Partner** (1st) — Bond with one ally per encounter. That ally gains **+1 to saves** and **+1 to any healing you apply to them**; you gain **+1 Reagent** back whenever that ally is healed by one of your abilities.
+- **Field Partner** (1st) — At the start of each encounter, bond with one ally. Until the end of the encounter that ally gains an **edge on saving throws** and **+1 to any healing you apply to them**; you regain **1 Reagent** whenever one of your abilities heals that ally.
 - **Established Protocols** (1st) — Two rote procedures, usable at will, at no Reagent cost, with no roll: **stabilize a dying ally** who has hit 0 Stamina, and **identify a substance or toxin at a glance.** This is the floor the Medic never falls below, even at 0 Reagents.
-- **Field Synthesis** (2nd, feature) — The free improv valve. See its own Deep Dive section, above, for full mechanics.
+- **Field Synthesis** (2nd, feature) — The free improv valve. See its own Deep Dive section, above, for full mechanics. Street-Doc features that reference it (Make Do at 1st, Trash-Bin Chemistry at 2nd) do nothing until this feature arrives.
 - **Advanced Chem-Prep** (2nd) — Your kit capacity increases by **+2** on top of your echelon's baseline.
 - **Compound Mastery** (4th) — Pick one compound family (Restorative, Antidote, Stimulant, or Toxin). Compounds from that family are automatically enhanced at **no extra Reagent cost.**
 - **Field Reputation** (4th) — A Renown boost among street clinics or corp-med circles (per your specialization's usual social lane), plus a narrative foothold with local medical infrastructure.
@@ -475,6 +483,8 @@ This is the **only** self-revive mechanic anywhere in the Medic class. Street-Do
 | **Slap-Doc Kit / Nanite Med-Foam** | Milspec | 3 | ¥8,000 | Heals 2 Recovery values + clears one condition. |
 
 **Note:** all store-bought consumables cap at (at most) 2× Recovery value, so store-bought supply never rivals a trained Medic's own compounds.
+
+**Note on the Stim Patch's crash.** The class **crash rider** (−1/−2 on the recipient's next Power Roll) applies only to **Stimulant compounds a Medic produces** — Administer Dose, Combat Stims, Focus Serum, Field Adrenal, Wonder Drug. A store-bought Stim Patch is mass-market product, not a Medic's compound: it carries its own printed comedown (**Weakened** next round) instead, and Corp-Medtech's Pharmaceutical Grade and Reduced Comedown do nothing for it.
 
 **Chrome interaction — fully mundane, chrome-positive.** The Medic has **no magic to erode**. **Cyborgs are allowed**, and any Medic of any species can augment freely, up to their Body Integrity limit, with zero mechanical penalty to Reagent capacity, compound access, or any class feature.
 

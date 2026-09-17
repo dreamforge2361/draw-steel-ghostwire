@@ -465,7 +465,7 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 - **Ordained / Sworn** (9th, renamed by pact) — A permanent title with narrative weight (Ordained for Light, Sworn for Dark) and one mechanical perk of your choice from the standard Perk list, gained specifically for reaching this milestone in your patron's eyes.
 - **Avatar of the Pact** (10th, epic capstone) — Once per encounter, briefly manifest your patron's presence directly through you: for one round, all your holy/corruption damage rolls gain an edge, and your Persona-based Power Rolls cannot roll below a middle (12–16) result regardless of the actual roll.
 - **Manifest Will** (10th) — Spend 5 Conviction to automatically succeed on one Power Roll (treat as a guaranteed high (17+)), once per encounter.
-- **Most Faithful** (10th) — Capstone perk. Your Conviction cap increases by a final +4 on top of all prior increases, and the Prayer Gamble's "1-2" floor result is removed entirely — rerolling any 1 or 2 once, automatically, at no cost.
+- **Most Faithful** (10th) — Capstone perk. Your Conviction cap increases by a final +4 on top of all prior increases, and when you roll a **1 or 2** on the Prayer Gamble you **automatically reroll it once**, at no cost. (The floor result is not removed — you get one free second roll, and the second roll stands.)
 
 ---
 
@@ -478,7 +478,7 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 | Item (slang / corp / sci) | Tier | Avail | Cost ¥ | Benefit | Mod Slots · Tags |
 |---|---|---|---|---|---|
 | **Prayer-bead / Rosarium / devotional focus string** | Avail. street | 5 | ¥200 | An edge on the prayer gamble (the pre-roll faith die); the acolyte's first focus, worn openly. | 1 · Veil, Faith |
-| **Creed-brand / Fidei Sigil / conviction-anchor seal** | Avail. street | 5 | ¥300 | Steadies the Conviction drip against a bad prayer result (softens backlash on the gamble's worst outcome). | 1 · Veil, Faith |
+| **Creed-brand / Fidei Sigil / conviction-anchor seal** | Avail. street | 5 | ¥300 | Steadies the Conviction drip against a bad prayer result. (The gamble never causes backlash in the first place — this focus softens the *opportunity* cost of a 1–2, not a penalty.) | 1 · Veil, Faith |
 | **Censer / Thuribulum / sanctified aerosol focus** | Avail. professional | 4 | ¥750 | An edge on warding/blessing workings and helps sustain a warded zone (the Shepherd's ground). | 2 · Veil, Ward |
 | **Judgment-mark / Iudex Brand / anathema focus-iron** | Avail. professional | 4 | ¥1,000 | An edge on the Templar's Judgment mark and its Conviction feedback; **Templar-flavored.** | 2 · Veil, Judgment |
 | **Reliquary / Sanctum Vessel / consecrated relic-housing** | Avail. specialist | 3 | ¥3,000 | An edge on healing/support invocations (the Shepherd) *or* anti-spirit rites (the Exorcist); houses a splinter of the pact's power. | 3 · Veil, Faith |

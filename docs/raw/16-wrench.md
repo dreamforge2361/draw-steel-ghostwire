@@ -48,9 +48,9 @@ Uptime is machine-runtime — the fuel that keeps your fleet online, responsive,
 - **Salvage tick:** destroying an enemy machine, or stripping a wreck (yours or theirs) for parts as a maneuver, banks **+1 Uptime**.
 
 **Drained.** Uptime is drained, not just capped, by four conditions:
-- **Damage to the Wrench's own body** — taking damage while Jumped-In or otherwise engaged bleeds Uptime (see Jump-In plumbing, below) — represents the feedback spike breaking your focus on the fleet.
+- **Damage to the Wrench's own body** — taking damage while Jumped-In or otherwise engaged with the fleet bleeds Uptime (see Jump-In plumbing, below) — the feedback spike breaking your focus. **The amount is the Director's call**, scaled to how hard the hit landed; there is no fixed figure.
 - **Damage to fielded assets** — every time a machine you control takes a hit, you lose **1 Uptime**, on top of whatever the machine's own Integrity track absorbs. Your attention is a finite resource and every hit on your hardware is a hit on your bandwidth.
-- **Signal jamming** — any enemy Electronic Warfare effect that jams, spoofs, or otherwise interferes with your control link drains Uptime directly (typically **2–4 Uptime per jam pulse**) rather than (or in addition to) imposing the usual EW penalty.
+- **Signal jamming** — any enemy Electronic Warfare effect that jams, spoofs, or otherwise interferes with your control link drains **2–4 Uptime per jam pulse** (Director's call within that range, by the strength of the pulse) rather than (or in addition to) imposing the usual EW penalty.
 - **Asset destruction** — a machine dropping to 0 Integrity costs you a lump **3 Uptime** — the shock of losing hardware outright, distinct from the smaller per-hit drain above.
 
 **Spent.** Command actions, Deploy actions, Override actions, and burst-buff abilities all cost Uptime — see the Signature Abilities and Heroic Abilities sections, below, for exact costs. As a rule of thumb, costs sit on the same 1/3/5/7/9/11 cost-band ladder used by every other GHOSTWIRE Heroic Resource.
@@ -210,7 +210,7 @@ The Vehicle Rig-Pilot's platform — and any vehicle a Wrench of any subclass bu
 | **Heavy** | APC, tank, gunship, fighter craft, submarine, large truck |
 | **Capital** | Airship, warship, orbital shuttle, building-scale construct |
 
-**Cross-scale rule (what a Wrench needs to know in a fight):** bigger-vs-smaller attacks get an edge and a damage multiplier scaled to the band gap; smaller-vs-bigger attacks take a bane and divide damage down to chip damage, unless the attacker uses a called shot at a vulnerable system or a scale-appropriate weapon/tag. Same band = normal combat, no translation. Treat one band gap as one edge-step + one damage-multiplier step.
+**Cross-scale rule (what a Wrench needs to know in a fight):** bigger-vs-smaller attacks get an edge and a damage multiplier scaled to the band gap; smaller-vs-bigger attacks take a bane and divide damage down to chip damage, unless the attacker uses a called shot at a vulnerable system or a scale-appropriate weapon/tag. Same band = normal combat, no translation. Treat one band gap as one edge-step **and** one damage-multiplier step, where a step is **×2 damage** shooting down the scale ladder and **×½ damage** (round down) shooting up it. Two band gaps double again: ×4 down, ×¼ up.
 
 **Vehicle Stat Card fields:**
 
@@ -246,7 +246,7 @@ A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utili
 - **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.
 - **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform.
 
-**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test against a moderate difficulty**, modified by the target frame's Handling. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a critical failure (roll ≤ 5) triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
+**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test at medium difficulty** (test difficulties as Draw Steel Heroes prints them), taking the **edge or bane the target frame's Handling gives**. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a failed test whose **total is 5 or lower** also triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
 
 **Chase Modes (reference).** Vehicle combat runs in one of two modes, Director's call:
 - **Positional (default):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot.
@@ -300,7 +300,7 @@ The Facility Rigger's signature system — but any Wrench who sets up a safehous
 
 Wired Upgrade Slots hold Node-side upgrades — firewall hardening, intrusion countermeasures, a dedicated Hacker's nest, mesh-web tripwires (a Facility Rigger favorite — see below), sensor-fusion feeds for the building's own turrets. A building with an unhardened Node (0 Wired Upgrade Slots filled) is trivially easy for a hostile Hacker to breach; this is the building-scale version of the same Wired-exposure risk a Jumped-In Wrench runs personally.
 
-**Nuyen Cost Bands.** Nuyen (¥) is the currency. A building is acquired and upgraded on one of four cost tracks:
+**Nuyen Cost Bands.** Nuyen (¥) is the currency. A building is acquired and upgraded on one of five cost tracks:
 
 | Acquisition | Cost band | Notes |
 |---|---|---|
@@ -326,7 +326,7 @@ Three subclasses, one per role: **Drone Jockey** (swarm of small deployables), *
 
 ### Drone Jockey — *"the Swarm"* — Street-Taught (No Corp Academy)
 
-Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact**. Starter Kit: **Fabricator's Bench** (light Kit; mobile tool rig + sidearm; +1 to field repair rolls on your own drones).
+Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact**. Starter Kit: **Fabricator's Bench** (light Kit; mobile tool rig + sidearm; an **edge** on Field Repair rolls made on your own drones).
 
 **Signature reskin:** Deploy & Command becomes a **swarm launch** — a single Deploy action can bring up to 2 microdrones online at once (instead of 1) at the cost of each being individually fragile. Rigged Fire, when made by 3 or more active drones in the same Focus Fire action, auto-applies the Suppressed rider regardless of roll. Field Repair on a drone restores full Integrity in one action rather than a partial amount.
 
@@ -503,15 +503,15 @@ Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact
 
 > **Unbreakable Hive** (apex passive)
 >
-> *Whenever a drone you control would be destroyed, roll a d6; on a 4+, it instead drops to 1 Integrity and is Systems Down (inactive but not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.*
+> *Whenever a drone you control would be destroyed, make a **saving throw** for it (Draw Steel saving throws succeed on 6 or higher). On a success it instead drops to 1 Integrity and is Systems Down (inactive but not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.*
 
-**Skill grants:** Electronics (1st). **Contact grant:** a drone-parts/grey-market salvage contact. **Kit grant:** Fabricator's Bench (light Kit; +1 to field repair rolls on your own drones). **Signature chrome:** none required.
+**Skill grants:** Electronics (1st). **Contact grant:** a drone-parts/grey-market salvage contact. **Kit grant:** Fabricator's Bench (light Kit; an **edge** on Field Repair rolls made on your own drones). **Signature chrome:** none required.
 
 ---
 
 ### Vehicle Rig-Pilot — *"the Driver"* — Street-Taught (No Corp Academy)
 
-Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; +1 to Jump-In checks).
+Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests).
 
 **Signature reskin:** Deploy & Command, for a Rig-Pilot, is really "wake the platform up" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline.
 
@@ -571,8 +571,14 @@ Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit
 
 > **Systems Purge**
 > *Command · Free Triggered · Uptime cost 2*
+> Trigger: your platform would gain a mechanical condition (Crippled, Systems Down, On Fire/Leaking)
+> **Power Roll** — **2d10 + Logic**
 >
-> *Trigger: your platform would gain a mechanical condition (Crippled, Systems Down, On Fire/Leaking). Effect: roll 2d10 + Logic; 12+ prevents the condition entirely.*
+> | Roll | Effect |
+> |---|---|
+> | ≤11 | The purge doesn't take — the condition applies as normal. |
+> | 12-16 | The condition is prevented entirely. |
+> | 17+ | The condition is prevented entirely. |
 
 > **Boarding Repel**
 > *Command · Main Action · Melee 1 · Uptime cost 3*
@@ -674,13 +680,13 @@ Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit
 >
 > *Once per encounter, when your platform would drop to 0 Integrity, it instead drops to 1 and you may immediately spend a maneuver to Full Stabilization at no Uptime cost.*
 
-**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; +1 to Jump-In checks). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.
+**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.
 
 ---
 
 ### Facility Rigger — *"the Warlord"* — Street-Taught (No Corp Academy)
 
-Grants the **Security Systems** skill and a **parts-supplier/quartermaster contact**. Starter Kit: **Field Chassis** (light Kit; portable turret-control tablet + sidearm; +1 to Deploy checks for pre-placed assets).
+Grants the **Security Systems** skill and a **parts-supplier/quartermaster contact**. Starter Kit: **Field Chassis** (light Kit; portable turret-control tablet + sidearm; an **edge** on Deploy tests for pre-placed assets).
 
 **Signature reskin:** Deploy & Command, for a Facility Rigger, doesn't deploy from a carried machine — it **activates** a pre-placed asset already wired into their base of operations (see Building Stat Card, above), at reduced Uptime cost since the hard work (installation) happened during downtime, not in the fight. Rigged Fire from a pre-placed turret benefits from the terrain the Rigger chose for it — always treat pre-placed turret fire as having prepared cover unless the enemy specifically flanks it. Field Repair on a Physical Upgrade Slot asset (a turret, a mesh-web generator) is faster and cheaper than field-repairing a mobile drone, since the Rigger built it to be serviced in place.
 
@@ -691,10 +697,10 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 | 1 | **Home Ground** (passive) | While fighting inside or adjacent to your registered base of operations, all Deploy actions for pre-placed assets cost 1 fewer Uptime |
 | 1 | **Pre-Wired** (passive) | You may pre-designate up to 2 Physical Upgrade Slot assets as "primed" during downtime; primed assets activate as a free triggered action the first time combat starts at that site |
 | 2 | **Killbox Instinct** (passive) | Your base of operations gains +1 Physical Upgrade Slot if designated Killbox (stacks with the Killbox baseline, see THE MACHINES, above) |
-| 3 | **Mesh-Web Doctrine** (passive) | Mesh-web tripwires you place impose a bane on any enemy's first attack roll after triggering one, in addition to their normal effect |
+| 3 | **Mesh-Web Doctrine** (passive) | Mesh-web tripwires you place impose a bane on the enemy's next Power Roll after it triggers one, in addition to their normal effect |
 | 5 | **Fortified Node** (passive) | Your base's Node gains +1 Wired Upgrade Slot, and any hostile Hacker attempting to breach it takes a bane on the attempt while you are present |
-| 6 | **Turn the Building** (passive) | Once per encounter, you may activate every Physical Upgrade Slot asset in your base simultaneously as a single main action (a building-scale Focus Fire) |
-| 7 | **The Building Remembers** (passive) | Your base of operations never loses Downtime Fabrication progress even if abandoned and later reclaimed; additionally, Physical Upgrade Slot assets repair themselves 1 Integrity per downtime cycle automatically |
+| 6 | **Turn the Building** (passive) | You unlock the **Turn the Building** ability — one working, defined once in the 11-Cost Band, below. This feature is how a Facility Rigger gets it at 6th level instead of spending an 11-cost band pick on it at 8th |
+| 7 | **The Building Remembers** (passive) | Your base of operations never loses Downtime Fabrication progress even if abandoned and later reclaimed; additionally, Physical Upgrade Slot assets repair themselves 1 Integrity per downtime cycle automatically. (The apex passive **The Building Remembers (Apex)**, below, is a separate, later effect that shares the name — it covers what survives a collapse, not downtime memory) |
 | 8 | **Fortress Doctrine** (passive) | Pre-Wired's "primed assets" cap rises from 2 to 4 |
 | 9 | **The Warlord's Reach** (passive) | Home Ground's Uptime discount now also applies to any secondary site you've spent at least one Downtime Fabrication cycle upgrading, not just your primary base |
 
@@ -722,7 +728,7 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 > **Trip the Web**
 > *Command · Free Triggered · Range = mesh-web's placement · Uptime cost 1*
 >
-> *Trigger: an enemy enters a square containing your mesh-web. Effect: the enemy is Restrained (save ends) and takes a bane on their next attack roll (Mesh-Web Doctrine, once unlocked).*
+> *Trigger: an enemy enters a square containing your mesh-web. Effect: the enemy is Restrained (save ends) and takes a bane on its next Power Roll (Mesh-Web Doctrine, once unlocked).*
 
 > **Breach Charge**
 > *Command · Main Action · Uptime cost 3*
@@ -824,13 +830,13 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 > Target: all valid enemy targets within your base of operations
 > **Power Roll** — 2d10 + Logic + Gunnery, rolled once per Physical Upgrade Slot asset active
 >
-> *Every turret, sentry, mesh-web, and breaching charge in your base activates simultaneously. This is the Facility Rigger's Focus Fire equivalent at building scale, once per encounter.*
+> *Every turret, sentry, mesh-web, and breaching charge in your base activates simultaneously. This is the Facility Rigger's Focus Fire equivalent at building scale, once per encounter. This block is the ability's only definition; the 6th-level **Turn the Building** feature simply unlocks it early.*
 
-> **The Building Remembers** (apex passive)
+> **The Building Remembers (Apex)** (apex passive)
 >
-> *Your base of operations never fully falls. Even reduced to 0 Structural Integrity, one Physical Upgrade Slot asset survives (Director's choice) and can be the seed of rebuilding it in downtime.*
+> *Your base of operations never fully falls. Even reduced to 0 Structural Integrity, one Physical Upgrade Slot asset survives (Director's choice) and can be the seed of rebuilding it in downtime. This is a distinct effect from the 7th-level feature of the same name, which covers Downtime Fabrication memory and slow self-repair.*
 
-**Skill grants:** Security Systems (1st). **Contact grant:** a parts-supplier/quartermaster contact. **Kit grant:** Field Chassis (light Kit; portable turret-control tablet + sidearm; +1 to Deploy checks for pre-placed assets). **Signature chrome:** none required at baseline, but a control rig or sensor-suite implant amplifies the Node-hardening features. See Kit & Chrome Interaction, below.
+**Skill grants:** Security Systems (1st). **Contact grant:** a parts-supplier/quartermaster contact. **Kit grant:** Field Chassis (light Kit; portable turret-control tablet + sidearm; an **edge** on Deploy tests for pre-placed assets). **Signature chrome:** none required at baseline, but a control rig or sensor-suite implant amplifies the Node-hardening features. See Kit & Chrome Interaction, below.
 
 ---
 

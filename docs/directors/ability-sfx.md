@@ -34,3 +34,17 @@ Full Foley for footsteps/doors; music stingers; Animated Spell Effects dependenc
 
 ## Done when (future spike)
 Settings toggle works; sample pistol + laser + one Veil ability play on use; override on one Item; docs + STATUS; Foundry-verify; no commit until Michael says.
+
+## Foundry core placeholders (testing until custom pack)
+Reference root-relative core paths — do **not** copy into the module. Swap to `modules/draw-steel-ghostwire/assets/sfx/` when Michael’s files land.
+
+| Keyword family | Placeholder `src` |
+|---|---|
+| Generic / UI | `sounds/notify.wav` |
+| Mechanical / chrome click | `sounds/lock.wav` |
+| Impact / heavy hit | `sounds/drums.wav` or `sounds/combat/epic-turn-1hit.ogg` |
+| Tech / laser-ish | `sounds/doors/futuristic/open-fast.ogg`, `…/open-forcefield.ogg` |
+| Spell / Veil | `sounds/doors/magic/door-open.ogg`, `…/wall-open.ogg` |
+| Industrial | `sounds/doors/industrial/open.ogg`, `sounds/doors/metal/heavy-sliding-open.ogg` |
+
+Core Foundry does **not** ship gunshots — pistols/SMGs/rifles stay on tech placeholders until custom SFX arrive.

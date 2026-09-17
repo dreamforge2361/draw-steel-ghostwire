@@ -262,3 +262,70 @@
 - **Wrench:** “four cost tracks” vs five table rows; Jump-In “moderate difficulty”; d6 and flat-threshold rolls (Unbreakable Hive, Systems Purge); Turn the Building / The Building Remembers each defined twice.
 - **Commander:** missing action types; “Skill Points”; Master of Voice 3d10-keep-2; worked example misapplies The Right Word.
 - **Book-wide:** flat “+1 / +2 to a roll” bonuses that Draw Steel would express as edge / bane (Medic, Wrench, Commander Kit and feature lines) — not covered by A14 as written.
+
+---
+
+## Pass C — applied 2026-09-17 (B42e, pending Michael review)
+
+Source-of-truth order used everywhere: **Development Master → shipped Foundry pack (`src/packs/**`) → Draw Steel spine by reference**. No combat math was invented; anything unresolvable carries an inline `[PASS-C NEEDS MICHAEL: …]` marker in the RAW chapter.
+
+| Chapter | Filled (source) | Still open |
+|---|---|---|
+| **18 Street Priest** | ~25 abilities got their low/middle/high damage and rider values from the class pack (Smite / Rebuke, Blessed Light, Call the Thunder Down, Penance 4/7/11, Beacon of Grace 8/13/17+Persona, Drag the Unworthy 9/13/18+Persona, Curse of Terror, Soul Siphon, …). Warden’s Grace = Persona score; Priest’s Ward = 2 temporary Stamina; Judgment fully defined; Invoke the Pact’s “per Veil §C3” replaced with the pack’s extension-form strike (4/7/10+Persona); unnamed L5/L8 subclass bumps named; Most Faithful = reroll once; Creed-brand vs backlash; subclass ladder rebuilt from pack advancements (features L1/4/5/7/8/9, ability picks L1/2/6, L9 auto-granted). | 4 markers: independent-form stat block, failed-bind strike damage, Judgment’s optional damage rider, and **Faith Is Our Armor** (see below). |
+| **15 Medic** | Toxic Cloud, Nerve Agent, Chemical Interrogation (now `Physique < AVERAGE` potency), Full Kit Purge targeting — all from the pack. Field Synthesis “½ step” = suppress 1 step; Field Synthesis is a **2nd-level** feature and Make Do raises it to twice per encounter; Trash-Bin Chemistry reworded to a guarantee; Nano-Adrenal reset = once per session, and its 30-Reagent cost is printed as deliberately unreachable until Echelon 4; restock is never a roll. | 3 markers: restock ¥ cost/procedure, Full Kit Purge magnitude, crash-rider duration vs Pharmaceutical Grade. |
+| **20 Technomancer** | “Sprite HP rank” replaced by ordinary **Stamina** (shipped sprite Actors); per-archetype Stamina formulas cited; attack-sprite low/middle/high spread printed; Resonance Strike roll (2d10 + Logic) and damage filled, “Feedback Spike” corrected to the Hacker’s **Flatline Jab**; Resonance Mending signature entry aligned to the pack (maneuver, self allowed, one Recovery); Decompile settled in favour of the stat table; Compile Sprite base is **free** and 3 Resonance is the Enhance cost; sprite caps don’t stack; sprites take their own turn (no initiative roll); worked example now reconciles (5 / 9 / 6). | 1 marker: “Winded, save ends” has no end state. |
+| **17 Elementalist** | Five 9th-level specialization abilities at cost 11 confirmed correct (grants, not band picks — master + pack agree); World-Fissure is one ability at cost 9; Essence Cap +4 at 7th **is** the Echelon 3 step, not an extra; Sanctum Stone = Persistent 2; World-Sundering = no Power Roll; Fortress Stance = Physique test. | 1 marker: what grants the level-10 cap of 24 (vs Echelon 4 = 20). “Provisional” stays on the 7/9/11 bands — the master has **not** locked them. |
+| **16 Wrench** | “Four cost tracks” → five; Jump-In = **medium** Logic or Reflex test with the frame’s Handling as edge/bane, failure total 5 or lower; Systems Purge reshaped as a Power Roll (same odds); Unbreakable Hive → a Draw Steel saving throw (same 50%); Turn the Building collapsed to one definition; The Building Remembers split into feature + **Apex** per the pack; jam drain 2–4 Uptime; body-damage drain is the pack’s Director’s call. | 1 marker: what one damage-multiplier step is worth across scale bands. |
+| **14 Commander** | Action types for Battle Cry (maneuver), Concussive Command, Coordinated Strike (main), Break Formation (maneuver); Break Their Nerve and Speak With One Voice now say **the hero rolls once**; doctrine ladder gains its level-7 rung; Covert Operations / Studied Commander / Discover Lore defined by reference to the Draw Steel Tactician; worked example now applies The Right Word as written; Influence-outside-combat uses the house paragraph. | 2 markers: the Command Persona / Command Presence name clash, and whether Master of Voice keeps its 3-dice-keep-2 capstone. |
+| **Book-wide** | Flat “+1 / +2 to a roll” → **edge** (Medic Slap-Injector / Focus Serum / Wonder Drug / Combat Stims / Field Partner; Wrench Kit lines; Commander A Word / The Right Word / The Signature Beat). Flat bonuses to Stamina, damage, distance and Handling stay numbers. **“Skill Points” retired from the last three Skills rows** (Medic, Street Priest, Technomancer), rebuilt from each class pack’s level-1 skill advancements. | Medic crash rider **−1/−2** deliberately not converted: the magnitude is load-bearing (Reduced Comedown caps it at −1). |
+
+### Michael decisions carried in RAW (12 `[PASS-C NEEDS MICHAEL]` markers)
+`14-commander` ×2 · `15-medic` ×3 · `16-wrench` ×1 · `17-elementalist` ×1 · `18-street-priest` ×4 · `20-technomancer` ×1.
+
+**Two calls worth a second look** (filled, not marked — both are derivations rather than printed numbers):
+1. **Medic Chemical Warfare** = enhanced Toxin dose (4 + Instinct over 2 rounds), derived from the chapter’s own locked Compounds table, not printed anywhere.
+2. **Technomancer** sprite “+1 / +2 defense” → **bane / double bane**, and Bone Deep Communion’s advanced-sprite bonus Stamina (**+6**, or **+8** for Attack) derived from the shipped sprite Actors’ intermediate→advanced step.
+
+**Also contradicting the spike brief:** `18-street-priest` **Faith Is Our Armor** — the spike asked for four echelon values, but the shipped pack makes 5 / 10 / 15 Power Roll result bands (weak/average/strong potency) and no source offers a fourth. RAW prints the result-band reading and carries a marker.
+
+### Foundry-sync backlog (packs NOT edited — needs its own spike)
+The shipped packs still carry pre-Pass-A/B text in several places: Technomancer `light-chrome-tolerance.json` (old name and old erosion model), Technomancer and sprite strings using DC saves / “tier” / “+N defense”, Street Priest foci Availability labels and a `saints-relic` description that still says “BP/SP”, several `Provisional magnitude` notes whose numbers are now printed, Medic and Commander “+1 / +2 to a roll” strings that RAW now calls edge, Wrench `UnbreakableHive` d6 and “attack roll” strings, and Street Priest action types that differ from the master. Where RAW and a pack disagreed, RAW followed the master and the pack was left alone.
+
+
+---
+
+## Pass C — Michael locks 2026-09-17 — **APPLIED 2026-09-17 (B42e1), pending Michael verify**
+
+All twelve `[PASS-C NEEDS MICHAEL]` markers are resolved in `docs/raw/` and **zero markers remain** (`grep -rn "PASS-C NEEDS MICHAEL" docs/raw` → no hits). Journals regenerated from RAW. Pack/lang renames — including the Commander **Command Persona** mode string in `lang/en.json` — ride **B47 Foundry-sync**; no pack JSON was edited here.
+
+How each lock landed in the text:
+
+| # | Chapter | Now reads |
+|---|---|---|
+| 1 | `14-commander` | First mode renamed **Command Persona**; ability title still Command Persona / Fearful Awe. |
+| 2 | `14-commander` | Master of Voice keeps **3 dice, choose 2**; the "Deliberate exception" note stays and says it is locked as written. |
+| 3 | `18-street-priest` | Faith Is Our Armor prints **5 / 10 / 15** temporary Stamina as low / middle / high result bands, with the note that these are result bands, not echelons. |
+| 4 | `15-medic` | Restock is a **lifestyle / downtime-project** activity; the Director quotes the cost and the four discounts apply to that quote; no ¥ table until the Economy lifestyle chapter. |
+| 5 | `15-medic` | Full Kit Purge at 11 = The Doctor Is In's effect (Recovery ×2, clear all conditions, revive in the freshly-killed line); **each Reagent past 11 = +1 Recovery value of healing per target**. |
+| 6 | `15-medic` | Crash lasts **1 round** (base, −1) / **2 rounds** (enhanced, −2) and applies to every Power Roll in that window; **Pharmaceutical Grade cuts 1 round** (feature text aligned); magnitude and Reduced Comedown's −1 cap unchanged. |
+| 7 | `16-wrench` | One scale-band gap = one edge/bane step **and ×2 damage down / ×½ up** (round down); two gaps = ×4 / ×¼. |
+| 8 | `17-elementalist` | Essence cap tops out at **20** at Echelon 4; the orphan "may reach 24" line is gone. |
+| 9 | `20-technomancer` | Resonance Slam and The Weaver's Web inflict **weakened (save ends)**; the Winded note now says nothing in the chapter inflicts Winded — it is the biofeedback floor only. |
+| 10 | `18-street-priest` | Invoke the Pact's independent form uses the shipped **Guardian / Warrior / Hunter Spirit** template by ministry (Shepherd / Templar / Exorcist); strike stays 4 / 7 / 10 + Persona; a Veil Entities pass may refine. |
+| 11 | `18-street-priest` | Dark failed-bind strike deals **4 + Persona**. |
+| 12 | `18-street-priest` | Judgment is **bane + Conviction bank** only; the optional bonus-damage rider is gone. |
+
+| # | Chapter | Lock |
+|---|---|---|
+| 1 | Commander | Ability title stays **Command Persona / Fearful Awe**. Rename first mode **Command Presence → Command Persona**. |
+| 2 | Commander | **Master of Voice** keeps **3 dice, choose 2** as deliberate L10 Power Roll exception. |
+| 3 | Street Priest | **Faith Is Our Armor** = **5 / 10 / 15** temporary Stamina as Power Roll **low / middle / high** result bands (not an echelon ladder). |
+| 4 | Medic | Reagent **restock** = **lifestyle / project abstraction** at respite. Director quotes the cost; Scrounger's Eye / Corporate Requisition / Regular Customer / Doc Who Never Left discounts apply to that quoted cost. No ¥ table until Economy/lifestyle chapter. |
+| 5 | Medic | **Full Kit Purge** at minimum 11 = same as **The Doctor Is In** (Recovery ×2 heal, clear all conditions, revive in freshly-killed line). Each Reagent beyond 11 = **+1 Recovery value of healing** to each target. |
+| 6 | Medic | Crash lasts **1 round** (base) / **2 rounds** (enhanced); penalty applies to Power Rolls during that window. **Pharmaceutical Grade** cuts **1 round**. Magnitude stays **−1 / −2** (Reduced Comedown still caps at −1). |
+| 7 | Wrench | One scale-band gap = one edge/bane step **and** **×2 / ×½** damage per band gap. |
+| 8 | Elementalist | Essence cap at Echelon 4 = **20**. Drop the orphan “may reach 24” line (no L10 +4 feature exists). |
+| 9 | Technomancer | Resonance Slam / The Weaver's Web inflict **Weakened (save ends)**, not Winded-as-condition. Winded remains Stamina-threshold / biofeedback floor only. |
+| 10 | Street Priest | Invoke the Pact **independent form** uses shipped **summons/spirits** templates (Guardian / Warrior / Hunter by subclass); strike stays **4 / 7 / 10 + Persona**. Veil Entities pass may refine later. |
+| 11 | Street Priest | Dark failed-bind strike = **4 + Persona** (extension-form low). |
+| 12 | Street Priest | **Judgment** = **bane + Conviction bank** only. Drop optional bonus-damage rider. |

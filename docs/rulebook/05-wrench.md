@@ -340,7 +340,7 @@ As with drone and vehicle slots, **the specific mod catalog (which turret, which
 
 Wired Upgrade Slots hold Node-side upgrades — firewall hardening, intrusion countermeasures, a dedicated Hacker's nest, mesh-web tripwires (a Facility Rigger favorite — see below), sensor-fusion feeds for the building's own turrets. **Mod catalog deferred to the gear doc**, same as Physical slots. A building with an unhardened Node (0 Wired Upgrade Slots filled) is trivially easy for a hostile Hacker to breach; this is the building-scale version of the same Wired-exposure risk a Jumped-In Wrench runs personally.
 
-**Nuyen Cost Bands.** Nuyen (¥) is the currency (locked project doctrine — never "Wealth"). A building is acquired and upgraded on one of four cost tracks:
+**Nuyen Cost Bands.** Nuyen (¥) is the currency (locked project doctrine — never "Wealth"). A building is acquired and upgraded on one of five cost tracks:
 
 | Acquisition | Cost band *(v1 estimate, pending gear-doc calibration)* | Notes |
 |---|---|---|

@@ -226,13 +226,13 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Combat Stims** *(canon, 3 Reagents)*
 > *Main action · Distance: touch or short range · Target: up to 2 allies*
-> No Power Roll. Each target gains an extra maneuver this turn, a significant edge on their next roll, and temporary Stamina equal to your Recovery value, all for 1 round.
+> No Power Roll. Each target gains an extra maneuver this turn, an **edge** on their next Power Roll, and temporary Stamina equal to your Recovery value, all for 1 round.
 > **Crash Rider (automatic, Q3=A):** each recipient takes −1 to their next Power Roll after the buff ends (−2 if enhanced).
 > *The force-multiplier play — Shadowrun-style hard combat drugs that genuinely turn a fight around, at an honest cost the recipient signs up for knowingly.*
 
 > **Toxic Cloud** *(canon, 3 Reagents)*
 > *Main action · Ranged area, cube 3 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or Instinct-vs-defense per Director's table, numeric pass). Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick; the zone becomes hazardous terrain — enemies must leave it or keep suffering.
+> No Power Roll. Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick. The area stays hazardous for those **2 rounds**: an enemy that enters it or starts its turn there suffers the effect again.
 > *The Medic's area-denial signature — the same chemistry that saves lives, weaponized into a room nobody wants to stand in.*
 
 > **Rapid Field Diagnosis** *(3 Reagents, GHOSTWIRE-original)*
@@ -304,7 +304,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Chemical Warfare** *(9 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged area, cube 5 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or Instinct-vs-defense, Director's table). A massive gas cloud fills the area for 3 rounds. Every enemy in the area takes damage-over-time and is Weakened and Slowed; the zone remains hazardous terrain for its full duration.
+> No Power Roll. A massive gas cloud fills the area for **3 rounds**. Each enemy in the area takes the **enhanced** Toxin dose — **4 + Instinct** damage over 2 rounds (half each round, round up on the first tick) — and is **Weakened** and **Slowed** until the end of its next turn after the last tick. The area stays hazardous terrain for all 3 rounds: an enemy that enters it or starts its turn there takes the dose again. *(B42e: magnitude derived from this document's own enhanced Toxin compound — see Known Bugs #20 — which is the profile Chemical Warfare already described in words.)*
 > *Toxic Cloud's older, meaner sibling — the room-clearer.*
 
 > **Emergency Transfusion** *(9 Reagents, GHOSTWIRE-original)*
@@ -333,8 +333,8 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > *The single biggest whole-crew buff in the class — an encounter-spanning combat-drug cocktail with a cost that follows everyone into whatever comes next.*
 
 > **Nerve Agent** *(11 Reagents, GHOSTWIRE-original)*
-> *Main action · Battlefield-wide (Director's table, numeric pass on exact radius) · Target: all enemies present*
-> Each enemy makes a save or is Weakened and Slowed; all affected enemies take **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks) regardless of save result.
+> *Main action · Battlefield-wide — the Director sets the exact area · Target: all enemies in the area*
+> Each enemy in the area makes a saving throw; on a failure, it is **Weakened** and **Slowed** (save ends). Every enemy in the area takes **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks), whether or not it failed the save.
 > *Nerve Toxin's whole-battlefield apex form — the compound that ends fights by itself.*
 
 > **Full Kit Purge** *(minimum 11 Reagents, GHOSTWIRE-original)*
@@ -392,13 +392,13 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 | Family | Half-Strength Effect |
 |---|---|
 | **Restorative** | Heal **half** Recovery value in Stamina. |
-| **Antidote** | Removes **½ step** of a poison/disease/Exposure-clock effect (Director's table: round down, or treat as a partial/temporary suppression rather than a full step-clear — numeric pass). |
+| **Antidote** | **Suppresses 1 step** of a poison/disease/Exposure-clock effect until the end of the encounter (the Director calls whether it clears fully when the fight ends). *(B42e: resolved to the shipped Foundry pack wording; the old "½ step" was never defined.)* |
 | **Stimulant** | Same **+1 edge**, but the duration is only **half a round** (effectively: the edge applies to the very next roll only, not the full round). |
 | **Toxin** | **Half damage** of the base Toxin magnitude, over the same 2-round window. |
 
 **Cannot be enhanced.** Field Synthesis produces an already-half-strength dose by definition — there is no "spend 2 more Reagents to enhance it" option, because the whole point is that it costs **zero** Reagents. Enhancing an already-free effect would break the resource logic that makes Reagents meaningful.
 
-**Once per encounter, no exceptions.** This is the hard cap that keeps Field Synthesis a fallback rather than a replacement for the real kit. A Medic cannot chain multiple Field Syntheses in a single fight by any means short of a future feat/multiclass exception, should one ever be authored.
+**Once per encounter — one exception.** This is the hard cap that keeps Field Synthesis a fallback rather than a replacement for the real kit. A Medic cannot chain Field Syntheses in a single fight. The one exception already in this document is the Street-Doc’s **Make Do**, which raises the cap to **twice per encounter**; Make Do does nothing until Field Synthesis arrives at 2nd level.
 
 **The "always has something" line.** This is the design promise Field Synthesis exists to keep: **the Medic is never truly out of options, even with an empty bag.** A Medic who has burned every Reagent in the kit down to zero across a brutal run still has one more trick per fight — weaker, but real. This matters enormously given how punishing an empty kit can be mid-run; without Field Synthesis, a Medic who mismanages Reagents becomes dead weight for the rest of a multi-encounter run. With it, they're diminished, not useless.
 
@@ -437,7 +437,7 @@ The scrappy, improvisational medic who's kept half the neighborhood alive withou
 
 | Level | Feature | Effect |
 |---|---|---|
-| **1** | **Make Do** *(canon)* | You improvise and restock Reagents faster and cheaper. Field Synthesis can be used **twice** per encounter instead of once, and produces a **two-thirds-strength** compound instead of half-strength. |
+| **1** | **Make Do** *(canon)* | You improvise and restock Reagents faster and cheaper. Once you have Field Synthesis (2nd level), you can use it **twice** per encounter instead of once, and it produces a **two-thirds-strength** compound instead of half-strength. |
 | **1** | **Back-Alley Wits** *(canon)* | First Aid gains an edge when targeting an ally below half Stamina. |
 | **1** | **Improvise!** *(triggered, GHOSTWIRE-original)* | Free triggered action, once per encounter: when your kit has 3 or fewer Reagents remaining, gain 2 Reagents back — you found something in the trash. |
 | **2** | Subclass ability (choose 1) | See Street-Doc Ability Table, below (2nd-tier options). |
@@ -451,11 +451,11 @@ The scrappy, improvisational medic who's kept half the neighborhood alive withou
 
 | Tier | Ability | Effect |
 |---|---|---|
-| 2 | **Trash-Bin Chemistry** | Field Synthesis may produce a Toxin-family compound in addition to the other three families (canon's baseline Field Synthesis doesn't specify family access; this opens all four to the Street-Doc specifically). |
+| 2 | **Trash-Bin Chemistry** | Field Synthesis can **always** produce a Toxin compound, even when the Director would otherwise limit what there is to scrounge. *(B42e: base Field Synthesis already grants all four families, so this is a guarantee, not new access.)* |
 | 2 | **Regular Customer** | Gain a standing black-market-pharma contact who sells Reagent restocks at a 15% discount. |
 | 6 | **Back-Alley Miracle** | Once per encounter, Emergency Patch may target 2 allies instead of 1 for no additional Reagent cost. |
 | 6 | **Fast Hands** | First Aid may be performed as a maneuver (instead of a main action) once per round, at base-tier effect only (no enhancement). |
-| 9 | **The Doc Who Never Left** | Once per session, treat a failed restock roll (nuyen shortfall, supplier unavailable) as a success — you find a way, no questions asked. |
+| 9 | **The Doc Who Never Left** | Once per session, treat a **failed restock** (a nuyen shortfall, a supplier who didn’t show) as a success — you find a way, no questions asked. There is no restock roll; this rescues the outcome, whatever caused it. |
 | 9 | **Last Syringe** | Once per session, when your kit is at 0 Reagents, produce one base (non-enhanced) compound for free. |
 
 *Corp cover: "unlicensed neighborhood doctor" / "street medical services." Bonus skill: streetwise/contacts, plus a fixer, ganger-clinic, or black-market-pharma contact. Chrome flavor: moderate, practical — the Street-Doc chromes up for utility, not showmanship.*
@@ -526,8 +526,9 @@ The most chromed of the three specializations — a surgeon who has made the ope
 
 > **Nano-Adrenal Auto-Injector** *(Ripperdoc 8th-level capstone)*
 > A nano-adrenal auto-injector wired directly into the Ripperdoc's own chrome. When reduced to 0 Stamina, you may trigger the injector: **burn 30 Reagents from your kit, OR permanently lose 1 Body Integrity,** to auto-revive at **1 Stamina** at the start of your next turn.
-> - **Once per session.** Even if both payment options are available, the injector can only fire once between full rests/session boundaries (Director's table on exact reset cadence).
+> - **Once per session.** Even if both payment options are available, the injector fires once per session — it resets when the session does, not at a respite.
 > - **Reagents payment requires availability.** If your kit has fewer than 30 Reagents banked at the moment of death, the Reagent-payment option simply isn't on the table — only the Body Integrity option remains.
+> - **At 8th level that means Body Integrity, full stop.** This capstone arrives at 8th level = **Echelon 3**: kit capacity 20, or 22 with Advanced Chem-Prep. A Ripperdoc cannot hold 30 Reagents. The Reagent payment first becomes reachable at **Echelon 4** (10th level, capacity 38 — 40 with Advanced Chem-Prep). *(B42e: deliberate, per the availability clause above; the two caps are not in conflict.)*
 > - **Body Integrity loss is permanent.** This is not a temporary penalty and does not heal on its own; it represents genuine physical cost to a body that's already been substantially chromed.
 > - **Flavor:** the surgeon is their own patient. Only a Ripperdoc — the specialization most comfortable operating on themselves as readily as on anyone else — would have installed this in the first place.
 

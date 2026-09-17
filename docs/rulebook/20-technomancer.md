@@ -104,7 +104,9 @@ Sprites are your summoned companions — the Wired-side equivalent of the Veil's
 
 **Sprite cap.** At 1st level you may have up to **2 sprites** compiled and under your command at once (Ruling #8). Sprite-Weaver's Wide Compile raises this to **3** starting at 1st level, and further scales upward through that discipline's higher-level features (see the Sprite-Weaver table, below). The general baseline cap rises to **3** at 5th level and **4** at 8th level for every Technomancer, regardless of discipline.
 
-**Compile cost.** Compiling a new sprite costs **3 Resonance** (base). Sprite-Weaver reduces this to **2 Resonance** per its Wide Compile feature.
+**Compile cost.** Compiling a sprite with the **Compile Sprite** signature is **free** — Compile Sprite is a signature ability and never costs Resonance at its base effect (`src/packs/classes/technomancer/abilities/compile-sprite.json`: `category: "signature"`, `resource: null`). The **3 Resonance** (Sprite-Weaver: **2**, per Wide Compile) is the cost of the signature's **Enhance**, which compiles a *second* sprite in the same action. Either way you can never exceed your sprite cap.
+
+**Sprite caps do not stack.** Each cap-raising feature sets the cap to its listed number *if it isn't already higher* (`sprite-cap3.json` / `sprite-cap4.json`); always use the single highest number you qualify for, never a sum.
 
 #### The Four Sprite Archetypes
 
@@ -163,7 +165,7 @@ The Technomancer's sprites follow the same "extension vs. independent" ladder th
 
 A sprite decompiles when:
 - **The encounter ends** (canon) — the congregation doesn't persist between fights.
-- **It is destroyed** — reduced to 0 Sprite HP. Benchmark Sprite HP for a minor sprite: **10 + (Logic × Level)**; intermediate and advanced sprites scale upward from that baseline (final numbers land in the numeric pass — see Part 2, Known Bugs #13).
+- **It is destroyed** — reduced to **0 Stamina** (a sprite's hit points are ordinary Stamina; there is no separate Sprite HP unit). Stamina is per-archetype and per-tier, per the Sprite Stat Block Reference table above, which now matches the shipped Actors in `src/packs/summons/sprites/`: Data 8/14/20, Attack 12/18/26, Machine 10/16/22, Ward 10/16/22, each + (Logic × Level). Known Bugs #13 is resolved by those files.
 - **You dismiss it voluntarily** — a free maneuver, no Resonance cost.
 
 ---
@@ -207,14 +209,14 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 
 > **Resonance Strike** *(Class Feature Signature — the damage)*
 > *Keywords: Wired, Resonance · Type: Main action · Distance: Wired range (or a sprite's reach) · Target: one enemy (a wired target directly; a flesh target through a device it carries or a sprite jacked into it)*
-> **Power Roll:** 2d10 + Logic + Resonance skill.
+> **Power Roll:** 2d10 + Logic. (Power rolls never add a skill.) **Damage on a hit: 2d10 + Logic** (Resonance-Warrior: 3d10 + Logic), per `src/packs/classes/technomancer/abilities/resonance-strike.json`.
 > **Effect:** You (or a commanded Attack-sprite) lash a target with hostile code and biofeedback. **high (17+):** full damage plus a rider — a Wired condition (glitched, blinded-sensor) or a free sprite reposition. **middle (12–16):** full damage. **low (≤11):** the strike fails to connect, and the current recoils — a minor biofeedback risk to you (see Biofeedback, above, if this triggers a cost-5+ enhance).
 >
 > **Enhance (spend Resonance):** a **second sprite** strikes too, OR add an edge via deep communion.
-> *Like the Hacker's Feedback Spike, direct personal damage leans on wired/deviced targets — but the sprite congregation is your true offense, exactly as drones are the Wrench's.*
+> *Like the Hacker's Flatline Jab, direct personal damage leans on wired/deviced targets — but the sprite congregation is your true offense, exactly as drones are the Wrench's.*
 
 > **Resonance Mending** *(Class Feature Signature — the unique niche; see its own Deep Dive section below)*
-> *Keywords: Wired, Resonance · Type: Main action (or maneuver for a quick patch) · Distance: touch or Wired range · Target: one machine, drone, vehicle, piece of chrome, or a Cyborg*
+> *Keywords: Wired, Resonance, Healing · Type: **maneuver** at its base effect, **main action** only when enhanced and mending against resistance · Distance: touch, or Wired range for a jacked/networked target · Target: **self**, or one machine, drone, vehicle, piece of chrome, or a Cyborg (per `src/packs/classes/technomancer/abilities/resonance-mending.json`)*
 > **Effect:** Channel Resonance to **restore Integrity/Stamina** to a machine, drone, vehicle, **or a Cyborg** (base at 1st level, per Ruling #10), mend damaged chrome, or clear a mechanical/Wired condition (glitch, jam, suppression). This is the class's signature niche — the only healing in the game that works on Cyborgs and tech. **high (17+):** mend more, and clear a condition. **middle (12–16):** mend the base amount. **low (≤11):** the patch is unstable — it holds until the target's next hit.
 >
 > **Enhance (spend Resonance):** mend at greater range or a second target, OR restore a wrecked machine/crashing Cyborg to minimal function.
@@ -443,11 +445,11 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 
 **Setup:** Priya, a 5th-level Sprite-Weaver Technomancer (Logic 4, Persona 3), enters combat against a corp security team backed by a single combat drone. She rolled 2 Victories before combat, so she attunes for **2 Resonance** the moment she compiles her first sprite (Attunement, first communion).
 
-**Round 1.** Priya opens with **Compile Sprite**, calling a Data-sprite to scan the room (Wide Compile drops this to 2 Resonance — she doesn't need to spend any, since Compile Sprite's base signature effect is free; the discount only matters when she later compiles a *second* sprite via the signature's Enhance). Her Data-sprite lands its scan (an effect), triggering **Harmonic Echo**: +1 Resonance. She now has 3 Resonance banked (2 from Attunement + 1 from Harmonic Echo). At start of her turn she'd also gain Resonance equal to compiled-sprite-count, but that trigger fires at the *start* of a turn, so it won't apply until Round 2.
+**Round 1.** Priya opens with **Compile Sprite**, calling a Data-sprite to scan the room (Wide Compile drops this to 2 Resonance — she doesn't need to spend any, since Compile Sprite's base signature effect is free; the discount only matters when she later compiles a *second* sprite via the signature's Enhance). Her Data-sprite lands its scan (an effect), triggering **Harmonic Echo**: +1 Resonance. Compiling a new sprite also fires **Compile Momentum**, doubled by Wide Compile: +2 Resonance. She now has 5 Resonance banked (2 Attunement + 2 momentum + 1 echo). At start of her turn she'd also gain Resonance equal to compiled-sprite-count, but that trigger fires at the *start* of a turn, so it won't apply until Round 2.
 
-**Round 2.** At the start of her turn, the congregation trigger fires: she has 1 sprite compiled, so she gains +1 Resonance (now 4 banked). She spends 2 Resonance (Wide Compile discount) to compile an Attack-sprite — compile momentum (doubled by Wide Compile) grants +2 Resonance immediately, netting her to 4 Resonance after the spend. Her Attack-sprite strikes the drone and hits, triggering Harmonic Echo again: +1 Resonance (5 banked). She still has 2 Resonance left after paying for the compile, plus the momentum and echo gains — a full accounting: 4 (start) − 2 (compile cost) + 2 (momentum) + 1 (echo) = 5 Resonance banked at end of round.
+**Round 2.** At the start of her turn, the congregation trigger fires: she has 1 sprite compiled, so she gains +1 Resonance (now 6 banked). She uses **Compile Sprite** again — a fresh use of the free base signature, not its Enhance, so it costs nothing — and calls an Attack-sprite, inside her 5th-level Sprite-Weaver cap of 4. Compile momentum (doubled by Wide Compile) grants +2 Resonance (8 banked). Her Attack-sprite strikes the drone and hits, triggering Harmonic Echo again: +1 Resonance. Full accounting: 5 (carried) + 1 (congregation) + 2 (momentum) + 1 (echo) = 9 Resonance banked at end of round.
 
-**Round 3.** Start-of-turn congregation trigger: 2 sprites compiled, +2 Resonance (7 banked). Priya now has enough for **Resonance Ward** (5-cost) — she deploys it, and because this is a cost-5+ ability, she makes her biofeedback save (DC 12, Sprite-Weaver's −2 discipline modifier applies, so effectively DC 10). She succeeds, the Ward deploys clean, and she's down to 2 Resonance banked, with a Data-sprite and an Attack-sprite still active plus a fresh defensive zone protecting the party.
+**Round 3.** Start-of-turn congregation trigger: 2 sprites compiled, +2 Resonance (11 banked). Priya deploys **Resonance Ward** (5-cost), and because this is a cost-5+ ability, she makes her biofeedback save (DC 12, Sprite-Weaver's −2 discipline modifier applies, so effectively DC 10). She succeeds, the Ward deploys clean, and she is down to 6 Resonance banked — 11 − 5 — with a Data-sprite and an Attack-sprite still active plus a fresh warded zone protecting the party.
 
 **Why this matters as a reference:** note how the loop naturally accelerates the longer a fight runs and the more sprites stay alive — this is the intended shape (a slow-building summoner engine, not a burst-nova class), and it's also why Total Resonance (7th-level tier, doubling the congregation-trigger gain) is such a dramatic power spike when it lands mid-fight rather than at the very start.
 
