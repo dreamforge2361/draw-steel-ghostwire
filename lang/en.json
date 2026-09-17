@@ -4638,7 +4638,8 @@
         "NoGrade": "Echelon —",
         "Price": "{price}",
         "ModSlots": "Mod slots {slots}",
-        "SlotCost": "Slot cost {slots}"
+        "SlotCost": "Slot cost {slots}",
+        "ModSlotsUsed": "Mod slots {used} / {slots}"
       }
     },
     "Mods": {
@@ -4772,6 +4773,38 @@
         "BeaconSquelch": {
           "Name": "Beacon Squelch",
           "Description": "<p><em>Beacon Squelch · Emission Mask · locator-suppression firmware</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥1,000 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Wired</p><p><strong>Effect:</strong> Fits any Wired gadget. Bane on enemy attempts to remotely locate this device.</p><p><strong>Fits:</strong> Wired gadget. Uses 1 mod slot.</p><p><strong>Install:</strong> install, swap, or remove as a downtime Project (§Craft) keyed to Electronics. Toggle an already-installed mod on or off in the field.</p>"
+        }
+      },
+      "Install": {
+        "Menu": {
+          "Install": "Install onto…",
+          "Uninstall": "Uninstall mod"
+        },
+        "Title": "Install {mod}",
+        "Prompt": "Install <strong>{mod}</strong> (slot cost {cost}; fits {families}) onto a host this hero owns. Installing is a downtime §Craft Project at the table; this records the result.",
+        "Host": "Host",
+        "Confirm": "Install",
+        "Installed": "{mod} installed on {host} (mod slots {used} / {slots}).",
+        "Uninstalled": "{mod} uninstalled from {host}.",
+        "SheetInstalled": "Installed: {mods}",
+        "SheetInstalledOn": "Installed on: {host}",
+        "Short": {
+          "NotMod": "not a mod",
+          "NotHost": "takes no mods",
+          "SameActor": "different owner",
+          "AlreadyInstalled": "mod already installed",
+          "WrongFamily": "wrong family",
+          "NoSlots": "no free slots"
+        },
+        "Blocked": {
+          "NotMod": "{mod} isn’t a mod.",
+          "NotHost": "{host} takes no mods (no mod slots).",
+          "SameActor": "{mod} and {host} must belong to the same hero.",
+          "AlreadyInstalled": "{mod} is already installed on {host}. Uninstall it first.",
+          "WrongFamily": "{mod} fits {families}; {host} takes {hostFamilies}.",
+          "NoSlots": "{mod} needs {cost} free slot(s); {host} has {free}.",
+          "NoHosts": "This hero owns no gear, vehicle, or matrix Item with mod slots.",
+          "NoFamilyHost": "{mod} fits {families}; no host this hero owns takes that family."
         }
       }
     },

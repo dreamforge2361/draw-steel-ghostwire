@@ -95,6 +95,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B31 | Technomancer class pack | **Done** (Foundry-verified 2026-09-17) | `20-technomancer.md` Stage 2 extract of master Part 1; three disciplines; sprites text-only; Cyborgs barred (Arcane Severance gate) |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
+| B20c | Mod install tracker (mods ↔ hosts, used / max slots) | **Done** (Foundry-verified 2026-09-17) | `scripts/mods.mjs`; spec `docs/spikes/B20c-MOD-INSTALL-TRACKER.md` |
 
 **Rule:** do not invent Foundry schemas that fight `draw-steel`. Read stock DS packs first; reskin/override/add module packs.
 
@@ -165,6 +166,14 @@ After each spike:
 ### B19 / B20 (Foundry-verified 2026-09-16)
 - [x] **B19** Full Gear master Categories 1�6 into packs: gear, mods, matrix, vehicles, foci (module v0.1.24)
 - [x] **B20** Mods expansion (armor/gadgets/weapons/vehicles) + �Craft skill text � Michael verified working
+
+### B20c Mod install tracker (2026-09-17)
+Spec: `docs/spikes/B20c-MOD-INSTALL-TRACKER.md`. New `scripts/mods.mjs` (registered from `module.mjs` init). **Data:** host `flags.draw-steel-ghostwire.installedMods = [modItemId, …]` (list only); mod `flags.draw-steel-ghostwire.mod.installedOn = hostItemId | null`. **Used slots** = sum of `slotCost` over the Actor's mods whose `mod.installedOn` is the host; **capacity** = `modSlots` of the host's `matrix`, `vehicle`, or `gear` flag; **family** = mod `hosts` / `host` (normalized) must overlap host `modFamily`. **UX:** hero sheet → right-click a mod row (or ⋮) → **Install onto…** (dialog lists the hero's hosts; illegal ones disabled with the reason) / **Uninstall mod**. Host sheet catalog line reads `Mod slots used / max` plus `Installed: …`; mod sheet shows `Installed on: …`. **Blocks** (warning): wrong family, not enough free slots, already installed, not a host, different Actor. Deleting an installed mod or its host cleans the link. Install / uninstall write both Items in one embedded update (one hero-sheet render). No auto-install from compendium drops; §Craft Projects, Invent a Mod, and field toggles stay out of scope.
+- [x] **B20c** mod install tracker (module v0.1.44) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Weapon / armor / vehicle / matrix mod installs onto a legal host: host shows `used / max` + names; mod shows host
+  - [x] Over-capacity and wrong-family installs are blocked
+  - [x] Uninstall clears both flags and restores `0 / max`
+  - [x] Matrix Items with `modSlots` work as hosts
 
 ### B21 Scout (2026-09-16)
 - [ ] **B21** Scout class pack from `02-scout.md`: class, Hunter / Ghost / Face-in-crowd, signatures, 3/5/7/9/11 bands, level 1–10 features; Chrome/Optics keywords; Advantage costs enforced in combat (module v0.1.25) — **pending Michael Foundry test**

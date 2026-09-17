@@ -2,7 +2,7 @@
 
 **Status:** Stage 3 draft locked 2026-09-16/17  
 **Pairs with:** `docs/rulebook/11-economy.md`, `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, skills master (`docs/masters/GHOSTWIRE_SKILLS_MASTER.md`)  
-**Foundry:** Mods pack + Invent a Mod rules (B20 expansion); Gear master remains source of record for published families.
+**Foundry:** Mods pack + Invent a Mod rules (B20 expansion); Gear master remains source of record for published families. **B20c install tracker (v0.1.44, Foundry-verified):** record a finished install with **Install onto…** on the hero sheet; hosts show mod slots used / max.
 
 **Design locks (do not reopen in this draft):**
 - Mods cost **¥**; stack with Kit doctrine (different numbers); never rewrite Kit damage/Stamina lines

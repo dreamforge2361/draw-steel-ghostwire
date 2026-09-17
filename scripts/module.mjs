@@ -2,6 +2,7 @@ import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerMachines } from "./machines.mjs";
+import { registerMods, modSlotsLabel } from "./mods.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -75,6 +76,7 @@ Hooks.once("init", () => {
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
   registerMachines();
+  registerMods();
 });
 
 // ---------- Wired connection states ----------
@@ -571,14 +573,15 @@ Hooks.on("deleteItem", (item, options, userId) => {
 const formatYen = price => `¥${Number(price ?? 0).toLocaleString(game.i18n.lang)}`;
 const CATALOG_FLAGS = ["gear", "mod", "matrix", "vehicle", "focus"];
 
-function catalogLine(entry) {
+function catalogLine(entry, item) {
   const parts = [
     entry.echelon ? game.i18n.format("GHOSTWIRE.Gear.SheetLine.Echelon", { echelon: entry.echelon }) : game.i18n.localize("GHOSTWIRE.Gear.SheetLine.NoGrade"),
   ];
   if (entry.availability) parts.push(game.i18n.localize(`GHOSTWIRE.Gear.Availability.${entry.availability}`));
   parts.push(entry.price != null ? `${formatYen(entry.price)}${entry.priceNote ?? ""}` : (entry.priceText ?? "—"));
   if (entry.slotCost) parts.push(game.i18n.format("GHOSTWIRE.Gear.SheetLine.SlotCost", { slots: entry.slotCost }));
-  else if (entry.modSlots) parts.push(game.i18n.format("GHOSTWIRE.Gear.SheetLine.ModSlots", { slots: entry.modSlots }));
+  // Owned hosts show used / max (B20c mod install tracker); catalog copies show capacity only.
+  else if (entry.modSlots) parts.push(modSlotsLabel(item) ?? game.i18n.format("GHOSTWIRE.Gear.SheetLine.ModSlots", { slots: entry.modSlots }));
   return parts.join(" · ");
 }
 
@@ -597,7 +600,7 @@ Hooks.on("renderDrawSteelItemSheet", (app, element) => {
       price: formatYen(chrome.price),
       availability: game.i18n.localize(`GHOSTWIRE.Chrome.Availability.${chrome.availability}`),
     })
-    : catalogLine(catalog);
+    : catalogLine(catalog, app.document);
   name.after(line);
 });
 
