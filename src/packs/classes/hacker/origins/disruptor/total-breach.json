@@ -1,0 +1,32 @@
+{
+  "_id": "OuqXUhGqSzz7qGIP",
+  "_key": "!items!OuqXUhGqSzz7qGIP",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.TotalBreach.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.TotalBreach.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "total-breach",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

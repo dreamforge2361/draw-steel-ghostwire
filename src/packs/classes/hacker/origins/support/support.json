@@ -1,0 +1,227 @@
+{
+  "_id": "BGKd8T1ocNY4AHGr",
+  "_key": "!items!BGKd8T1ocNY4AHGr",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.Support.Name",
+  "type": "subclass",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.Support.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hacker-support",
+    "advancements": {
+      "FShU3dkGSifDFzkt": {
+        "name": "Wired Guard",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "FShU3dkGSifDFzkt",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YYU77LdmCCRXT0XI"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Lk5J3Zgr0IJXKE4J": {
+        "name": "Dampen",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Lk5J3Zgr0IJXKE4J",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.lfKuTYjJB4GeQ9y5"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "YDcArPZOf7bF3saf": {
+        "name": "Watchful Relay",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "YDcArPZOf7bF3saf",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SncDuNauVcyaGNk7"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "3mHnErMW76LUgOhd": {
+        "name": "Signal Boost",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "3mHnErMW76LUgOhd",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WzTRCTbz2we5pbjf"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "2F76SynZ56RGHdKY": {
+        "name": "Standing Watch",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "2F76SynZ56RGHdKY",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ex4j51Ff2B1NxjCn"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Y9Bfb2PUSLfgZTle": {
+        "name": "Emergency Patch",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "Y9Bfb2PUSLfgZTle",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9PlP3wyaXfAGAssD"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "hQlzSjNGEXVGDGZs": {
+        "name": "Anchor Point",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "hQlzSjNGEXVGDGZs",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EwwfFAem55NXuhsE"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "bK2Joez740Vyk067": {
+        "name": "Full Coverage",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "bK2Joez740Vyk067",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OGWAzcSQcddAjDJh"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "c55zARXio1oQWIn3": {
+        "name": "Guardian Angel in the Net",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "c55zARXio1oQWIn3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kDN9CeEvnx2awbzJ"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "hacker"
+  },
+  "effects": [],
+  "folder": "pfJLxwVUhlasVlqK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

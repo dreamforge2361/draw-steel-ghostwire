@@ -1,0 +1,72 @@
+{
+  "_id": "aH7F1O7A1Z7Ozmnp",
+  "_key": "!items!aH7F1O7A1Z7Ozmnp",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.CascadeFailure.Name",
+  "type": "ability",
+  "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cascade-failure",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.CascadeFailure.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "triggered",
+    "category": "",
+    "resource": 2,
+    "trigger": "GHOSTWIRE.Classes.Hacker.Items.CascadeFailure.Trigger",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Another Track 2 target within Reach"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.CascadeFailure.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "disruptor"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

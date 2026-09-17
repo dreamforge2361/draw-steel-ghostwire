@@ -1,0 +1,106 @@
+{
+  "_id": "fuWjwbyDyai0H3AH",
+  "_key": "!items!fuWjwbyDyai0H3AH",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.DeepScan.Name",
+  "type": "ability",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deep-scan",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.DeepScan.Story",
+    "keywords": [
+      "ranged",
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": 0,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 person within Reach"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "8Gh0xCF6qf706GGD": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "8Gh0xCF6qf706GGD",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.DeepScan.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.DeepScan.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.DeepScan.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.DeepScan.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "rACDDp0N9PLzhhnB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

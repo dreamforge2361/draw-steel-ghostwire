@@ -1,0 +1,72 @@
+{
+  "_id": "9H1QUQcpbbQaQqj4",
+  "_key": "!items!9H1QUQcpbbQaQqj4",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.PuppetStrings.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "puppet-strings",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.PuppetStrings.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 4,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 interactive node you hold"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.PuppetStrings.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "controller"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "8JpFrSojCEiUfOW9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

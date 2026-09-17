@@ -1,0 +1,106 @@
+{
+  "_id": "WfeHKZ7uPkBNnv4O",
+  "_key": "!items!WfeHKZ7uPkBNnv4O",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.OverwhelmIce.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overwhelm-ice",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.OverwhelmIce.Story",
+    "keywords": [
+      "ranged",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 4,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 Track 2 target within Reach"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "FXOK3G5ilOF0skip": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "FXOK3G5ilOF0skip",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.OverwhelmIce.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.OverwhelmIce.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.OverwhelmIce.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.OverwhelmIce.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "disruptor"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

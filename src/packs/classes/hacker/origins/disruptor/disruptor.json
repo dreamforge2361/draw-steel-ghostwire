@@ -1,0 +1,227 @@
+{
+  "_id": "Up9P5s9Zf08Gvaxw",
+  "_key": "!items!Up9P5s9Zf08Gvaxw",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.Disruptor.Name",
+  "type": "subclass",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.Disruptor.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "disruptor",
+    "advancements": {
+      "mJZWvDGas6MRIwzx": {
+        "name": "Overclocked Damage",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "mJZWvDGas6MRIwzx",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.eC2vdHhqm7R3Vw2a"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FbEg9Ogp8TNxK8WI": {
+        "name": "Cascade Strike",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "FbEg9Ogp8TNxK8WI",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5MLifXRv9lnYKFCq"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "JM5L1poNJGNw5oGm": {
+        "name": "Overclocked Strikes",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "JM5L1poNJGNw5oGm",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QBiDCqDzcV0sdxxV"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "TkPREpHfaspBBQR4": {
+        "name": "Cascade Failure",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "TkPREpHfaspBBQR4",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aH7F1O7A1Z7Ozmnp"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "a8GKttFIg5FYnZKU": {
+        "name": "No Second Chances",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "a8GKttFIg5FYnZKU",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.q8Ld08cA3PvYH65i"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "EoZrgMJpNzgeBLEk": {
+        "name": "Overwhelm ICE",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "EoZrgMJpNzgeBLEk",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WfeHKZ7uPkBNnv4O"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "fkmhLfbcpOtHWxiK": {
+        "name": "Hair Trigger",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "fkmhLfbcpOtHWxiK",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LdsqzoAsXlkHqCeo"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "kkHeT4mMrpRQlKdC": {
+        "name": "Total Breach",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "kkHeT4mMrpRQlKdC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OuqXUhGqSzz7qGIP"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "6i1bFsAmHUoHfvDf": {
+        "name": "Zero Day",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "6i1bFsAmHUoHfvDf",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jPBfIoRDYQ6tnvyz"
+          }
+        ],
+        "description": "<p>Your Hacking Doctrine grants you the following ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "hacker"
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

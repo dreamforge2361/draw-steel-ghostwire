@@ -1,0 +1,77 @@
+{
+  "_id": "iRwHI3THYIKTFFVt",
+  "_key": "!items!iRwHI3THYIKTFFVt",
+  "name": "GHOSTWIRE.Kits.Switchblade.Name",
+  "type": "kit",
+  "img": "icons/weapons/daggers/dagger-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Switchblade.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "nyx-switchblade",
+    "advancements": {
+      "3G4H8Qu9OGFOHEEB": {
+        "name": "GHOSTWIRE.Kits.Switchblade.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "3G4H8Qu9OGFOHEEB",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.05Z8fYQ525FvPqjY"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 0,
+      "speed": 0,
+      "stability": 0,
+      "disengage": 0
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

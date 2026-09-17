@@ -1,0 +1,32 @@
+{
+  "_id": "SncDuNauVcyaGNk7",
+  "_key": "!items!SncDuNauVcyaGNk7",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.WatchfulRelay.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.WatchfulRelay.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "watchful-relay",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "pfJLxwVUhlasVlqK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

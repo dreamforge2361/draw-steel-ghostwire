@@ -1,0 +1,72 @@
+{
+  "_id": "3h3H3wK3a0YDDJ4p",
+  "_key": "!items!3h3H3wK3a0YDDJ4p",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.Lockout.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lockout",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.Lockout.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "triggered",
+    "category": "",
+    "resource": 1,
+    "trigger": "GHOSTWIRE.Classes.Hacker.Items.Lockout.Trigger",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "The enemy attempting the retake"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.Lockout.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "controller"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "8JpFrSojCEiUfOW9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

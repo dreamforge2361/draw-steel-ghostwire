@@ -1,0 +1,32 @@
+{
+  "_id": "6G7od4mGlqtitVnO",
+  "_key": "!items!6G7od4mGlqtitVnO",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.TotalAwareness.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.TotalAwareness.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "total-awareness",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "8JpFrSojCEiUfOW9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

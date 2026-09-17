@@ -1,0 +1,32 @@
+{
+  "_id": "eC2vdHhqm7R3Vw2a",
+  "_key": "!items!eC2vdHhqm7R3Vw2a",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.OverclockedDamage.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.OverclockedDamage.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overclocked-damage",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

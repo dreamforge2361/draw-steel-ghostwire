@@ -1,0 +1,106 @@
+{
+  "_id": "m16h6v4FDMKFpEHk",
+  "_key": "!items!m16h6v4FDMKFpEHk",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.NetworkPurge.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "network-purge",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.NetworkPurge.Story",
+    "keywords": [
+      "ranged",
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Up to 2 Track 2 targets within Reach"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "zE8x6oN3jFb4w5mn": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "zE8x6oN3jFb4w5mn",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.NetworkPurge.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.NetworkPurge.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.NetworkPurge.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.NetworkPurge.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "rACDDp0N9PLzhhnB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

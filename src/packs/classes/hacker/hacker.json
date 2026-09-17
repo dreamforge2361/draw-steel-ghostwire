@@ -1,0 +1,653 @@
+{
+  "_id": "tEEPyr0Kt1A1HQJq",
+  "_key": "!items!tEEPyr0Kt1A1HQJq",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.Class.Name",
+  "type": "class",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hacker",
+    "advancements": {
+      "3zBofwQNG8C5jTF3": {
+        "_id": "3zBofwQNG8C5jTF3",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Hacking",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Hacking skill. It gives you an edge on every rolled Matrix Verb.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "hacking"
+          ]
+        },
+        "chooseN": null,
+        "sort": 1000
+      },
+      "LI4M98ZKXo690HGe": {
+        "_id": "LI4M98ZKXo690HGe",
+        "img": null,
+        "repick": {},
+        "name": "Skills",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose any two skills from the Technical or Knowledge skill groups — Electronics, Security Systems, Matrix Theory, Streetwise, and the like. (<em>Quick Build:</em> Electronics, Matrix Theory.)</p>",
+        "skills": {
+          "groups": [
+            "technical",
+            "knowledge"
+          ],
+          "choices": []
+        },
+        "chooseN": 2,
+        "sort": 2000
+      },
+      "3LYLJHZ6YOJyO97G": {
+        "_id": "3LYLJHZ6YOJyO97G",
+        "img": null,
+        "repick": {},
+        "name": "Bandwidth",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kqrLlWjr3usG50Bq"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 3000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "pMQBSPgHaldfi9iE": {
+        "_id": "pMQBSPgHaldfi9iE",
+        "img": "icons/commodities/tech/cog-steel.webp",
+        "repick": {},
+        "name": "Cyberdeck",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.iRwHI3THYIKTFFVt"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.vxDqmfGHEDNpaDH0"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.okUQpFJi2ubY4dOH"
+          }
+        ],
+        "description": "<p>Choose your street-grade cyberdeck — your Kit slot. Any Hacker can run any deck: Nyx Cartel “Switchblade” (Disruptor-leaning), Ferrum “Padlock-6” (Controller-leaning), or Meridian “Lookout” (Support-leaning). (<em>Quick Build:</em> your doctrine’s deck.)</p>",
+        "chooseN": 1,
+        "sort": 4000,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        }
+      },
+      "v4PPcdQBWZeNI1yY": {
+        "_id": "v4PPcdQBWZeNI1yY",
+        "img": "icons/magic/lightning/bolt-strike-blue.webp",
+        "repick": {},
+        "name": "Hacking Doctrine",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Up9P5s9Zf08Gvaxw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NZNRBwExWv6AkWeF"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BGKd8T1ocNY4AHGr"
+          }
+        ],
+        "description": "<p>Choose your Hacking Doctrine: <strong>Disruptor</strong> (striker, Integrity damage amplification), <strong>Controller</strong> (the sysop: seize and hold nodes), or <strong>Support</strong> (guardian angel in the net: ally protection). (<em>Quick Build:</em> Disruptor.)</p>",
+        "chooseN": 1,
+        "sort": 5000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "n888QxbDoCdXC3DQ": {
+        "_id": "n888QxbDoCdXC3DQ",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Programs",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LKyCRMTeGDc67lmD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.fuWjwbyDyai0H3AH"
+          }
+        ],
+        "description": "<p>You automatically know Seize Control and Deep Scan. (You already have the nine Matrix Verbs, like every hero.)</p>",
+        "chooseN": null,
+        "sort": 6000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "19GCBks4XC2lxuqT": {
+        "_id": "19GCBks4XC2lxuqT",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "3 Bandwidth Program",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.61dSVkYIHjD0h7vb"
+          }
+        ],
+        "description": "<p>You gain the 3-Bandwidth Program. (The chapter lists one Program at this cost.)</p>",
+        "chooseN": null,
+        "sort": 7000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "I2u9kr7QgiCZZ58G": {
+        "_id": "I2u9kr7QgiCZZ58G",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "5 Bandwidth Program",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.coBzWvvnyjKHb2Ws"
+          }
+        ],
+        "description": "<p>You gain the 5-Bandwidth Program. (The chapter lists one Program at this cost.)</p>",
+        "chooseN": null,
+        "sort": 8000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "MTjiaB5Es4k0JSLY": {
+        "_id": "MTjiaB5Es4k0JSLY",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one crafting, intrigue, or lore perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "intrigue",
+            "lore"
+          ]
+        },
+        "sort": 9000,
+        "pool": []
+      },
+      "lDue0hCOs3GfHCjM": {
+        "_id": "lDue0hCOs3GfHCjM",
+        "img": null,
+        "repick": {},
+        "name": "Ghost Step",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CNArkrwLlRDszypG"
+          }
+        ],
+        "description": "<p>You gain the following ability.</p>",
+        "chooseN": null,
+        "sort": 10000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "AboWKzyBukgr6KBO": {
+        "_id": "AboWKzyBukgr6KBO",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "7 Bandwidth Program",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.v0ZWsKHzXUTBIWsD"
+          }
+        ],
+        "description": "<p>You gain the 7-Bandwidth Program. (The chapter lists one Program at this cost.)</p>",
+        "chooseN": null,
+        "sort": 11000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "3GDE7gwHheeEzZlf": {
+        "_id": "3GDE7gwHheeEzZlf",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Logic and Instinct scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 0
+        },
+        "max": 3,
+        "sort": 12000
+      },
+      "GsExtCoCwgqQ1uj4": {
+        "_id": "GsExtCoCwgqQ1uj4",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 13000,
+        "pool": []
+      },
+      "kO1Wel5pfAml8Pqi": {
+        "_id": "kO1Wel5pfAml8Pqi",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 14000
+      },
+      "xK71EGAA5shYMfLh": {
+        "_id": "xK71EGAA5shYMfLh",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9vAdtNCqzsT7zGZy"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qn0uVZPHzTQ53G6R"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 15000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "cAXnzzaU5sjWuOHG": {
+        "_id": "cAXnzzaU5sjWuOHG",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "9 Bandwidth Program",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.m16h6v4FDMKFpEHk"
+          }
+        ],
+        "description": "<p>You gain the 9-Bandwidth Program. (The chapter lists one Program at this cost.)</p>",
+        "chooseN": null,
+        "sort": 16000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "YE7dbWfHpf1eg3Vp": {
+        "_id": "YE7dbWfHpf1eg3Vp",
+        "img": null,
+        "repick": {},
+        "name": "Dual Boot",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.F9xMnH1GUG23CDCp"
+          }
+        ],
+        "description": "<p>You gain the following ability.</p>",
+        "chooseN": null,
+        "sort": 17000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Xude4wy1WeoNfgWA": {
+        "_id": "Xude4wy1WeoNfgWA",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one crafting, intrigue, or lore perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "intrigue",
+            "lore"
+          ]
+        },
+        "sort": 18000,
+        "pool": []
+      },
+      "zkPZtpcTtc0yGXNt": {
+        "_id": "zkPZtpcTtc0yGXNt",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 19000
+      },
+      "Pw098Qybu0t46R2J": {
+        "_id": "Pw098Qybu0t46R2J",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 20000
+      },
+      "e5UHPl28lGz8sC5U": {
+        "_id": "e5UHPl28lGz8sC5U",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PdpAwAP7fTn7SSrP"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GAUcNnWKEfvMfaro"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 21000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dBVamRytWYxGRP0s": {
+        "_id": "dBVamRytWYxGRP0s",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "11 Bandwidth Program",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nXmz1i7XBjxlgJIs"
+          }
+        ],
+        "description": "<p>You gain the 11-Bandwidth Program. (The chapter lists one Program at this cost.)</p>",
+        "chooseN": null,
+        "sort": 22000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "0G2mTofmGJXRB9Ta": {
+        "_id": "0G2mTofmGJXRB9Ta",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 23000,
+        "pool": []
+      },
+      "nTQD5WH1PaHydnJF": {
+        "_id": "nTQD5WH1PaHydnJF",
+        "img": null,
+        "repick": {},
+        "name": "Root Access",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.34yVjLRCgqG9bC9E"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 24000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Br1GwheTauG4jsaB": {
+        "_id": "Br1GwheTauG4jsaB",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Logic and Instinct scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 0
+        },
+        "max": 5,
+        "sort": 25000
+      },
+      "Ar4PDq23GDM74plF": {
+        "_id": "Ar4PDq23GDM74plF",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tqi3VUq8GSfQ7Wmq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.P4Cin8SxmiPzGeS2"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.48vnyx8dBPAPcdkY"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 26000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "odFdTReDDNkv3FpC": {
+        "_id": "odFdTReDDNkv3FpC",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one crafting, intrigue, or lore perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "intrigue",
+            "lore"
+          ]
+        },
+        "sort": 27000,
+        "pool": []
+      },
+      "TGSrmOfqOwzdCBOu": {
+        "_id": "TGSrmOfqOwzdCBOu",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 28000
+      }
+    },
+    "level": 0,
+    "primary": "Bandwidth",
+    "epic": "Ghost in the Machine",
+    "turnGain": "1",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "reason",
+        "intuition"
+      ]
+    },
+    "stamina": {
+      "starting": 19,
+      "level": 7
+    },
+    "recoveries": 9
+  },
+  "effects": [],
+  "folder": "765Qc9GiUlgir7Ld",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

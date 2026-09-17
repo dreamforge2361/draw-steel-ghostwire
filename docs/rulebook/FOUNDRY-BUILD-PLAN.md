@@ -90,6 +90,8 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B27 | Wrench class pack | **Done** (Foundry-verified 2026-09-16) | Wrench (Uptime, turnGain "1" v1 baseline) + Drone Jockey / Vehicle Rig-Pilot / Facility Rigger in Ghostwire Classes; DS Talent spine, psionics scrubbed; machines inventory still backlog; module v0.1.32 |
 | B28 | Elementalist class pack | **Done** (Foundry-verified 2026-09-16) | Elementalist (Essence, turnGain "1" drip; Channel/Resonance in feature text) + Pyromancer / Stormcaller / Geomancer; signature summons + Elementalist foci grants; module v0.1.35 |
 | B29 | Street Priest class pack | **Done** (Foundry-verified 2026-09-17) | Street Priest (Conviction, turnGain "2"; Prayer Gamble in feature text) + Light/Dark pact overlay + Shepherd / Templar / Exorcist; Cyborg-blocked; module v0.1.37 |
+| B30 | Hacker class pack | **Done** (Foundry-verified 2026-09-17) | Hacker (Bandwidth, turnGain "1") + Disruptor / Controller / Support; three street cyberdeck Kits; Programs; Matrix Verbs not duplicated; Cyborgs allowed; module v0.1.38 |
+| B31 | Technomancer class pack | **Next** | Master ingested (`GHOSTWIRE_TECHNOMANCER_DEVELOPMENT_MASTER.md`); stub `20-technomancer.md`; Cyborgs barred (add `technomancer` to the Arcane Severance gate) |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -257,4 +259,14 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Ministry picker: Shepherd / Templar / Exorcist with skill (Medicine / Melee / Occult), ladders, and ability picks at 1/2/6 (+ apex at 9)
   - [x] L1: three class signatures + choose 2 of 8 signatures + 1/3/5 picks; 7 at L3 (incl. Invoke the Pact), 9 at L5, 11 at L8
   - [x] Kit grant: No Kit / Sanctified / Raider / Duelist; Cyborg can't take Street Priest
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B30 Hacker (2026-09-17)
+**Cyberdecks:** three new Kits in Ghostwire Kits › Tech / rigger — Nyx Cartel "Switchblade" (Flatline Jab), Ferrum "Padlock-6" (Seize), Meridian "Lookout" (Overwatch Ping). Deck stats (Bandwidth Bonus, Alert Discount, Biofeedback Resistance, Intrusion Roll Mod, Integrity Damage Bonus bands, Reach, Ghost Distance) are description tables; the Kits grant no Stamina, speed, or weapon damage. The Ghostwire Matrix pack's gear decks (Scrapdeck, Street Deck, Ghostbox, Blackdeck, Fairlight Ghost) are separate nuyen gear and unchanged. **Matrix Verbs** stay on every hero (B23a) and are not in the class pack. **Bandwidth:** +1 per turn automatic; deck bonus, natural 19/20, cap, and Infinite Loop carry-over are feature text with gain buttons. **Cyborgs are allowed** (not in the Arcane Severance list).
+- [x] **B30** Hacker class pack from `08-hacker.md` (module v0.1.38) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Class picker shows Hacker; Bandwidth (+1 per turn); core Logic / Instinct; Stamina 19 (+7), Recoveries 9
+  - [x] Cyberdeck Kit choice: Switchblade / Padlock-6 / Lookout, each granting its signature
+  - [x] Hacking Doctrine picker: Disruptor / Controller / Support, ladders 1–9
+  - [x] L1: Seize Control + Deep Scan + Ghost Signal; Kill Switch L2, Failsafe Cascade L3, Network Purge L5, Backdoor Override L8; no duplicate Matrix Verbs
+  - [x] A Cyborg can take Hacker
   - [x] `node tools/build-packs.mjs` succeeds

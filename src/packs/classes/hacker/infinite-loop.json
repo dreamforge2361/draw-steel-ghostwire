@@ -1,0 +1,32 @@
+{
+  "_id": "P4Cin8SxmiPzGeS2",
+  "_key": "!items!P4Cin8SxmiPzGeS2",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.InfiniteLoop.Name",
+  "type": "feature",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.InfiniteLoop.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "infinite-loop",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "765Qc9GiUlgir7Ld",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "qn0uVZPHzTQ53G6R",
+  "_key": "!items!qn0uVZPHzTQ53G6R",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.ImprovedCyberdeck.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.ImprovedCyberdeck.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "improved-cyberdeck",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "765Qc9GiUlgir7Ld",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "vxDqmfGHEDNpaDH0",
+  "_key": "!items!vxDqmfGHEDNpaDH0",
+  "name": "GHOSTWIRE.Kits.Padlock6.Name",
+  "type": "kit",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.Padlock6.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ferrum-padlock-6",
+    "advancements": {
+      "9ztRzHk2VaFW3BX3": {
+        "name": "GHOSTWIRE.Kits.Padlock6.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "9ztRzHk2VaFW3BX3",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.iWDs7qNPc6KYCZRe"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "none",
+      "weapon": [],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 0,
+      "speed": 0,
+      "stability": 0,
+      "disengage": 0
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

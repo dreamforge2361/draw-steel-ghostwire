@@ -1,0 +1,106 @@
+{
+  "_id": "jPBfIoRDYQ6tnvyz",
+  "_key": "!items!jPBfIoRDYQ6tnvyz",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.ZeroDay.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "zero-day",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.ZeroDay.Story",
+    "keywords": [
+      "ranged",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 6,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 Track 2 target within Reach"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "tiGk69r2vD6erv2C": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "tiGk69r2vD6erv2C",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.ZeroDay.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Hacker.Items.ZeroDay.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.ZeroDay.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "disruptor"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

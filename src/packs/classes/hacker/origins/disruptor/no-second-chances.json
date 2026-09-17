@@ -1,0 +1,32 @@
+{
+  "_id": "q8Ld08cA3PvYH65i",
+  "_key": "!items!q8Ld08cA3PvYH65i",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.NoSecondChances.Name",
+  "type": "feature",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.NoSecondChances.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "no-second-chances",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AeSWAuwwTDMHNa4b",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

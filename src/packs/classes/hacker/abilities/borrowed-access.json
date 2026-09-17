@@ -1,0 +1,73 @@
+{
+  "_id": "48vnyx8dBPAPcdkY",
+  "_key": "!items!48vnyx8dBPAPcdkY",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.BorrowedAccess.Name",
+  "type": "ability",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "borrowed-access",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.BorrowedAccess.Story",
+    "keywords": [
+      "ranged",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 ally within Reach who is Jacked In or Overlaid"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.BorrowedAccess.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "rACDDp0N9PLzhhnB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

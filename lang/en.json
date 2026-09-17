@@ -541,6 +541,39 @@
       "NoKit": {
         "Name": "No Kit (Pure Caster)",
         "Description": "<p>You fight with no weapon Kit: no armor or weapon doctrine, no bonuses, and no Kit signature ability. Pick this in a class Kit grant when your build is a pure caster (for example, an artillery Elementalist whose signature focus does the work of a weapon). You can still take a Kit later.</p>"
+      },
+      "Switchblade": {
+        "Name": "Nyx Cartel “Switchblade”",
+        "Description": "<p>A Nyx Cartel street deck built to cut: fast, cheap, and loud. A street-grade (echelon 1) Hacker cyberdeck, leaning <strong>Disruptor</strong> — any Hacker can run it.</p><table><tbody><tr><td>Price</td><td>¥800</td></tr><tr><td>Bandwidth Bonus (per turn)</td><td>+2</td></tr><tr><td>Alert Discount</td><td>+0</td></tr><tr><td>Biofeedback Resistance</td><td>+1</td></tr><tr><td>Intrusion Roll Modifier</td><td>+1</td></tr><tr><td>Integrity Damage Bonus (low / middle / high)</td><td>+1 / +2 / +3</td></tr><tr><td>Reach</td><td>1</td></tr><tr><td>Ghost Distance</td><td>+0</td></tr></tbody></table><p>The Intrusion Roll Modifier applies to Program power rolls; the Integrity Damage Bonus is the flat damage a successful Program hit deals to a Track 2 target. Improved Cyberdeck (4th level) and Root Access (9th level) add to both. A cyberdeck is not a weapon Kit: it grants no Stamina, speed, or weapon damage.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.05Z8fYQ525FvPqjY]{Flatline Jab}</p>",
+        "Signature": {
+          "Name": "Flatline Jab",
+          "Story": "A quick intrusion strike, loud by design.",
+          "Effect": "<p>A quick, single-target intrusion strike. It always raises the target host’s Trace Alert by 1, whatever the result. Against a Track 2 target, add your deck’s Integrity Damage Bonus.</p>"
+        }
+      },
+      "Padlock6": {
+        "Name": "Ferrum “Padlock-6”",
+        "Description": "<p>Ferrum Dynastic hardware: overbuilt, stubborn, made to hold what it takes. A street-grade (echelon 1) Hacker cyberdeck, leaning <strong>Controller</strong> — any Hacker can run it.</p><table><tbody><tr><td>Price</td><td>¥900</td></tr><tr><td>Bandwidth Bonus (per turn)</td><td>+1</td></tr><tr><td>Alert Discount</td><td>+1</td></tr><tr><td>Biofeedback Resistance</td><td>+2</td></tr><tr><td>Intrusion Roll Modifier</td><td>+0</td></tr><tr><td>Integrity Damage Bonus (low / middle / high)</td><td>+0 / +1 / +2</td></tr><tr><td>Reach</td><td>2</td></tr><tr><td>Ghost Distance</td><td>+1</td></tr></tbody></table><p>The Intrusion Roll Modifier applies to Program power rolls; the Integrity Damage Bonus is the flat damage a successful Program hit deals to a Track 2 target. Improved Cyberdeck (4th level) and Root Access (9th level) add to both. A cyberdeck is not a weapon Kit: it grants no Stamina, speed, or weapon damage.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.iWDs7qNPc6KYCZRe]{Seize}</p>",
+        "Signature": {
+          "Name": "Seize",
+          "Story": "Hold what you’ve got.",
+          "Effect": "<p>Take temporary control of a node that’s already compromised and hold it steady. It favors holding what you have over grabbing more.</p>",
+          "Tier1": "You keep your hold on the node this round.",
+          "Tier2": "You take steady temporary control of the node and deal 1 + Logic Integrity damage to anything contesting it.",
+          "Tier3": "You take steady temporary control of the node and deal 2 + Logic Integrity damage to anything contesting it."
+        }
+      },
+      "Lookout": {
+        "Name": "Meridian “Lookout”",
+        "Description": "<p>A Meridian civic-grade deck repurposed as a spotter’s console: long reach, quiet footprint. A street-grade (echelon 1) Hacker cyberdeck, leaning <strong>Support</strong> — any Hacker can run it.</p><table><tbody><tr><td>Price</td><td>¥750</td></tr><tr><td>Bandwidth Bonus (per turn)</td><td>+1</td></tr><tr><td>Alert Discount</td><td>+2</td></tr><tr><td>Biofeedback Resistance</td><td>+1</td></tr><tr><td>Intrusion Roll Modifier</td><td>+0</td></tr><tr><td>Integrity Damage Bonus (low / middle / high)</td><td>+0 / +0 / +1</td></tr><tr><td>Reach</td><td>3</td></tr><tr><td>Ghost Distance</td><td>+1</td></tr></tbody></table><p>The Intrusion Roll Modifier applies to Program power rolls; the Integrity Damage Bonus is the flat damage a successful Program hit deals to a Track 2 target. Improved Cyberdeck (4th level) and Root Access (9th level) add to both. A cyberdeck is not a weapon Kit: it grants no Stamina, speed, or weapon damage.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.TsxYhiFWjcsNut2K]{Overwatch Ping}</p>",
+        "Signature": {
+          "Name": "Overwatch Ping",
+          "Story": "Real-time Wired data, fed to a crewmate.",
+          "Effect": "<p>Feed one ally within Reach real-time Wired data. No damage.</p>",
+          "Tier1": "The ally gains an edge on their next power roll before the end of your next turn; Trace Alert increases.",
+          "Tier2": "The ally gains an edge on their next power roll before the end of your next turn.",
+          "Tier3": "The ally gains an edge on their next power roll, and you learn one enemy position they can’t see."
+        }
       }
     },
     "Classes": {
@@ -3485,6 +3518,271 @@
           "TheLastRite": {
             "Name": "The Last Rite",
             "Description": "<p>Once per encounter, as a free action, spend any amount of Conviction (minimum 5) to attempt an immediate banishment of a spirit or corrupted creature within range, whatever its tier.</p>"
+          }
+        }
+      },
+      "Hacker": {
+        "Folders": {
+          "Hacker": "Hacker",
+          "Abilities": "Programs & Abilities",
+          "Origins": "Hacking Doctrines",
+          "Disruptor": "Disruptor",
+          "Controller": "Controller",
+          "Support": "Support"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Hacker",
+            "Description": "<p>You are a Hacker — a ghost in the machine who fights wars in the Wired before the first physical shot is fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. Outside combat you are the crew’s key to any door, camera, lock, drone, or vault with a wire running to it; inside combat you are a second front the enemy usually can’t see coming.</p><p><strong>The Wired:</strong> every hero has the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write) and the Overlay / Jacked In connection states. Your <strong>Hacking</strong> skill gives you an edge on every rolled Matrix Verb, and Jacked In adds an edge on Wired power rolls. Programs that require you or an ally to be “Jacked In or Overlaid” read those same statuses.</p><p>Your kit is a <strong>cyberdeck</strong>, not a weapon. Your subclass is your Hacking Doctrine: <strong>Disruptor</strong> (striker), <strong>Controller</strong> (the sysop), or <strong>Support</strong> (guardian angel in the net).</p><p>You are <strong>chrome-positive</strong>: Wired implants (Sub-Dermal Radio, Encephalon, Simsense Booster, Signal Ghost) make you better, and Cyborgs make superb Hackers.</p><p><strong>Core characteristics:</strong> Logic, Instinct · <strong>Heroic resource:</strong> Bandwidth · <strong>Starting Stamina:</strong> 19 (+7 per level) · <strong>Recoveries:</strong> 9 · <strong>Kit:</strong> cyberdeck. <em>Quick Build:</em> Disruptor, Nyx Cartel “Switchblade”.</p>"
+          },
+          "Bandwidth": {
+            "Name": "Bandwidth",
+            "Description": "<p>Bandwidth is the Hacker’s fuel for Programs.</p><h4>Bandwidth in Combat</h4><ul><li><p><strong>Start of combat:</strong> gain Bandwidth equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>Income:</strong> at the start of each of your turns, gain [[/gain 1 hr]]{1 Bandwidth} (automatic in Foundry), plus your cyberdeck’s <strong>Bandwidth Bonus</strong> (Switchblade [[/gain 2 hr]]{+2}, Padlock-6 or Lookout [[/gain 1 hr]]{+1}). Bandwidth Overclock (7th level) raises the base income to +2.</p></li><li><p><strong>Natural 19 or 20:</strong> whenever you roll a natural 19 or 20 on any power roll, [[/gain 1 hr]]{gain 1 Bandwidth}.</p></li></ul><p><strong>Cap:</strong> 6 × your echelon (8 × echelon with Bandwidth Overclock).</p><p><strong>Reset:</strong> you lose all Bandwidth at the end of the encounter, unless you have Infinite Loop (10th level).</p><h4>Bandwidth Outside of Combat</h4><p>You can’t gain Bandwidth outside combat, but you can use Bandwidth-costing Programs without spending it. Once you do, you can’t use that same Program outside combat again until you earn 1 or more Victories or finish a respite. Programs with their own outside-combat clauses (Seize Control, Deep Scan, Ghost Signal, Backdoor Override) work as their text says.</p><p><strong>Trace Alert:</strong> a low (≤11) result on a Wired power roll usually raises the target host’s 12-step Trace Alert (tracked on the Wired Console); your deck’s <strong>Alert Discount</strong> reduces those increases.</p><p><em>In Foundry, the base +1 is automatic; your deck bonus, natural 19/20 gains, and the cap use the buttons above.</em></p>"
+          },
+          "ExploitTheBreach": {
+            "Name": "Exploit the Breach",
+            "Description": "<p>Whenever your Deep Scan gets a high (17+) result, the target has a marked exploitable weakness until the end of the encounter (or until it’s scanned again). The next Wired hit against it from you or an ally gains an edge, and a Track 2 hit also deals +2 Integrity damage. Only one target can be marked at a time.</p>"
+          },
+          "ImprovedCyberdeck": {
+            "Name": "Improved Cyberdeck",
+            "Description": "<p>You gain +1 to your Intrusion Roll Modifier and +1 Integrity Damage Bonus at every result band, on top of your equipped deck. This comes from the class, not the deck, so it persists if you swap decks.</p>"
+          },
+          "BandwidthOverclock": {
+            "Name": "Bandwidth Overclock",
+            "Description": "<p>Your base Bandwidth income increases from +1 to +2 per turn ([[/gain 1 hr]]{add the extra 1}), and your Bandwidth cap increases from 6 × echelon to 8 × echelon.</p>"
+          },
+          "RootAccess": {
+            "Name": "Root Access",
+            "Description": "<p>You can use Dual Boot twice per encounter. Improved Cyberdeck’s bonus becomes +2 to your Intrusion Roll Modifier and +2 Integrity Damage Bonus at every result band (replacing the +1).</p>"
+          },
+          "InfiniteLoop": {
+            "Name": "Infinite Loop",
+            "Description": "<p>Your Bandwidth no longer fully resets between encounters: you keep Bandwidth equal to your echelon (4 at 10th level) instead of dropping to 0. The first 2 points of Bandwidth over your cap in a round are kept for one round instead of lost.</p><p><em>In Foundry, Draw Steel sets your Bandwidth to your Victories when combat starts; add your retained Bandwidth with a button.</em> [[/gain 4 hr]]{Gain 4 retained Bandwidth}</p>"
+          },
+          "GhostSignal": {
+            "Name": "Ghost Signal",
+            "Story": "Untraceable, unlisted.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. The target is untraceable and unlisted on the Wired until the end of the encounter, or until they take a hostile Wired action themselves.</p><p><strong>Outside combat:</strong> scrub a commlink signature from local logs and cameras for a scene.</p>"
+          },
+          "KillSwitch": {
+            "Name": "Kill Switch",
+            "Story": "Cut the target’s legs out from under it.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p>",
+            "Tier1": "No damage; Trace Alert increases.",
+            "Tier2": "Integrity damage equal to your deck’s middle-band Integrity Damage Bonus; the target loses its maneuver on its next turn.",
+            "Tier3": "Integrity damage equal to your deck’s middle-band bonus; the target loses its main action on its next turn."
+          },
+          "FailsafeCascade": {
+            "Name": "Failsafe Cascade",
+            "Story": "The net catches you before the fall.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. The target regains Stamina equal to twice your deck’s Biofeedback Resistance, and is shielded from the next instance of Integrity-to-Stamina biofeedback bleed-through this encounter.</p>"
+          },
+          "NetworkPurge": {
+            "Name": "Network Purge",
+            "Story": "Two hosts, one sweep.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>One roll for both targets.</p>",
+            "Tier1": "Trace Alert increases only.",
+            "Tier2": "Each target takes Integrity damage equal to your deck’s middle-band bonus.",
+            "Tier3": "Each target takes Integrity damage equal to your deck’s middle-band bonus and has a bane on its next power roll."
+          },
+          "BackdoorOverride": {
+            "Name": "Backdoor Override",
+            "Story": "The intrusion leaves no trace.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll, by design.</p><ul><li><p><strong>Track 1 object:</strong> an automatic high (17+) breach.</p></li><li><p><strong>Track 2 target:</strong> Integrity damage equal to your deck’s middle-band bonus, with <strong>no Trace Alert increase</strong>.</p></li></ul><p><strong>Outside combat:</strong> an automatic clean breach of any lock, vault, or system, with no roll and no Alert cost.</p>"
+          },
+          "SeizeControl": {
+            "Name": "Seize Control",
+            "Story": "Breach it and use it, in the same breath.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>One activation breaches the target’s security and lets you use it this turn. This is your primary out-of-combat lever: doors, lights, and power matter even with no ICE present. Add your deck’s Intrusion Roll Modifier.</p>",
+            "Tier1": "Brief, one-shot control; Trace Alert increases.",
+            "Tier2": "Solid, lasting control.",
+            "Tier3": "Solid, lasting control, and choose one: refund the maneuver, or leave no trace."
+          },
+          "DeepScan": {
+            "Name": "Deep Scan",
+            "Story": "Scan’s person-targeted big sibling.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>Free, but still a real power roll. Passive observation doesn’t raise Trace Alert. Sets up a follow-up Seize Control.</p>",
+            "Tier1": "Surface-level information only.",
+            "Tier2": "The specific make and model of one or two Wired items on the target.",
+            "Tier3": "A full readout of everything Wired-connected on the target, and a marked exploitable weakness (Exploit the Breach)."
+          },
+          "GhostStep": {
+            "Name": "Ghost Step",
+            "Story": "Gone before the trace resolves.",
+            "Trigger": "A Track 2 target (ICE, a hostile AI Persona, a rival decker) targets you directly, or the Trace Alert increases from your own action.",
+            "Effect_before0000000000": "<p>No Bandwidth cost. Choose one: immediately use a maneuver-cost Matrix Verb for free, or cancel the Trace Alert increase entirely (once per encounter).</p>"
+          },
+          "DualBoot": {
+            "Name": "Dual Boot",
+            "Story": "Swap decks mid-roll.",
+            "Trigger": "You make a Program, Matrix Verb, or signature power roll.",
+            "Effect_before0000000000": "<p>Once per encounter (twice with Root Access), apply a second deck you own’s Intrusion Roll Modifier and Integrity Damage Bonus to this roll instead of your equipped deck’s, whichever is better. Bandwidth Bonus, Alert Discount, Biofeedback Resistance, Reach, and Ghost Distance don’t change.</p>"
+          },
+          "GhostProtocol": {
+            "Name": "Ghost Protocol",
+            "Story": "The pre-encounter sweep.",
+            "Trigger": "An encounter begins, after you had at least one uninterrupted round of Overlay or Jacked In access before initiative (Director’s call).",
+            "Effect_before0000000000": "<p>You and your allies gain an edge on your first power roll of the encounter, and you can use one free Matrix Verb or Deep Scan before the first turn begins.</p>"
+          },
+          "GhostInTheMachine": {
+            "Name": "Ghost in the Machine",
+            "Story": "Your epic capstone.",
+            "Trigger": "You make a power roll.",
+            "Effect_before0000000000": "<p>Once per encounter, treat the roll as a natural 19 if the actual result was lower: a low or middle result becomes a guaranteed high (17+), and it also triggers the natural 19/20 bonus Bandwidth ([[/gain 1 hr]]).</p>"
+          },
+          "BorrowedAccess": {
+            "Name": "Borrowed Access",
+            "Story": "Lend your deck to a crewmate.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>The ally immediately uses one Program you know that costs 5 Bandwidth or less, using your deck’s stats and your Bandwidth, without spending their own action.</p>"
+          },
+          "Disruptor": {
+            "Name": "Disruptor",
+            "Description": "<p><em>Striker, damage amplification.</em> Hard, fast, single-target intrusion strikes that punish Track 2 targets and amplify the whole crew’s damage against ICE, hostile deckers, and AI Personas.</p><p>At 1st level you gain Overclocked Damage and the Cascade Strike triggered action. <strong>Quick Build deck:</strong> Nyx Cartel “Switchblade”.</p>"
+          },
+          "OverclockedDamage": {
+            "Name": "Overclocked Damage",
+            "Description": "<p>Your own successful Track 2 hits deal +1 Integrity damage.</p>"
+          },
+          "CascadeStrike": {
+            "Name": "Cascade Strike",
+            "Story": "Pile on.",
+            "Trigger": "Any Track 2 target takes Integrity damage from anyone.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>Add +2 Integrity damage to that hit.</p>"
+          },
+          "OverclockedStrikes": {
+            "Name": "Overclocked Strikes",
+            "Description": "<p>Overclocked Damage’s bonus on your own hits increases from +1 to +2. (Cascade Strike’s bonus on others’ hits stays +2.)</p>"
+          },
+          "CascadeFailure": {
+            "Name": "Cascade Failure",
+            "Story": "One host goes down and takes another with it.",
+            "Trigger": "You reduce a Track 2 target to 0 Integrity.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>Another Track 2 target within Reach immediately takes Integrity damage equal to your deck’s low-band Integrity Damage Bonus.</p>"
+          },
+          "NoSecondChances": {
+            "Name": "No Second Chances",
+            "Description": "<p>Cascade Strike can also apply Exploit the Breach’s marked-weakness edge to the same hit, even if you didn’t scan the target.</p>"
+          },
+          "OverwhelmIce": {
+            "Name": "Overwhelm ICE",
+            "Story": "Drown the ICE in traffic.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p>",
+            "Tier1": "Integrity damage equal to half your deck’s low-band bonus (round down); Trace Alert increases.",
+            "Tier2": "Integrity damage equal to your deck’s middle-band bonus, plus Overclocked Damage.",
+            "Tier3": "Integrity damage equal to your deck’s high-band bonus, plus Overclocked Damage, and the target has a bane on its next roll."
+          },
+          "HairTrigger": {
+            "Name": "Hair Trigger",
+            "Description": "<p>You can use Cascade Strike twice per round (still 1 Bandwidth each).</p>"
+          },
+          "TotalBreach": {
+            "Name": "Total Breach",
+            "Description": "<p>Overclocked Damage’s bonus on your own hits increases to +3, and whenever you reduce a Track 2 target to 0 Integrity, you [[/gain 2 hr]]{regain 2 Bandwidth}.</p>"
+          },
+          "ZeroDay": {
+            "Name": "Zero Day",
+            "Story": "An exploit nobody has patched.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>The roll has an edge. Whatever the result, the target takes Integrity damage equal to your deck’s high-band bonus, plus Overclocked Damage (a low result still raises Trace Alert).</p>",
+            "Tier1": "Trace Alert increases.",
+            "Tier3": "The target also can’t act on its next turn."
+          },
+          "Controller": {
+            "Name": "Controller",
+            "Description": "<p><em>“The Sysop.” Lockdown, node control and holding.</em> A specialist in seizing and holding fixed systems, turning nodes into weapons and tripwires against anyone who tries to take them back.</p><p>At 1st level you gain Extra Node and the Lockout triggered action. <strong>Quick Build deck:</strong> Ferrum “Padlock-6”.</p>"
+          },
+          "ExtraNode": {
+            "Name": "Extra Node",
+            "Description": "<p>You can hold 1 more node than your deck’s normal limit.</p>"
+          },
+          "Lockout": {
+            "Name": "Lockout",
+            "Story": "Not on my watch.",
+            "Trigger": "An enemy attempts to retake or break your hold on a node you seized.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>The attempt takes a bane.</p>"
+          },
+          "RedundantSystems": {
+            "Name": "Redundant Systems",
+            "Story": "There’s always a backup route.",
+            "Trigger": "You lose control of a node you hold.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>Once per encounter, attempt to re-seize the node with no maneuver or main action cost.</p>",
+            "Tier1": "You fail to re-seize it; Trace Alert increases.",
+            "Tier2": "You re-seize the node.",
+            "Tier3": "You re-seize the node, and it counts as freshly seized."
+          },
+          "Chokepoint": {
+            "Name": "Chokepoint",
+            "Story": "Every route runs through you.",
+            "Effect_before0000000000": "<p>No roll. Until your next turn, any Track 2 target that breaches, retakes, or routes through a node you hold takes a bane and alerts you immediately, even if you aren’t Jacked In.</p>"
+          },
+          "WiderNet": {
+            "Name": "Wider Net",
+            "Description": "<p>Extra Node’s bonus increases from 1 to 2 extra held nodes.</p>"
+          },
+          "PuppetStrings": {
+            "Name": "Puppet Strings",
+            "Story": "The turret is yours now.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. Use the held node’s normal function once (a turret, camera, drone, or smartlink) without counting against its own action economy.</p>"
+          },
+          "IronGrip": {
+            "Name": "Iron Grip",
+            "Description": "<p>Lockout imposes a double bane instead of a bane.</p>"
+          },
+          "TotalAwareness": {
+            "Name": "Total Awareness",
+            "Description": "<p>You always know when a node you hold is targeted for a retake, breach, or disruption, even off-map or out of Reach, and you can spend a maneuver to act on it as though it were in Reach.</p>"
+          },
+          "MasterSysop": {
+            "Name": "Master Sysop",
+            "Story": "Every node answers to you.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>One roll against all targets.</p>",
+            "Tier1": "Seize 1 of them (your choice); Trace Alert increases.",
+            "Tier2": "Seize 2 of them.",
+            "Tier3": "Seize all 3; none count against your held-node limit for the rest of the encounter."
+          },
+          "Support": {
+            "Name": "Support",
+            "Description": "<p><em>“Guardian angel in the net.” Tank, anchor, ally protection.</em> Your value extends to the whole crew: feeding allies edges and softening Wired-side blows before they reach flesh.</p><p>At 1st level you gain Wired Guard and the Dampen triggered action. <strong>Quick Build deck:</strong> Meridian “Lookout”.</p>"
+          },
+          "WiredGuard": {
+            "Name": "Wired Guard",
+            "Description": "<p>Allies within your Reach who are Jacked In or Overlaid gain a +1 defense bonus against Track 2 attacks.</p>"
+          },
+          "Dampen": {
+            "Name": "Dampen",
+            "Story": "Soften the blow before it reaches flesh.",
+            "Trigger": "A nearby Jacked In ally takes a hit from a Track 2 target.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>The hit deals 2 less damage.</p>"
+          },
+          "WatchfulRelay": {
+            "Name": "Watchful Relay",
+            "Description": "<p>Wired Guard’s defense bonus increases from +1 to +2.</p>"
+          },
+          "SignalBoost": {
+            "Name": "Signal Boost",
+            "Story": "A clean feed for a crewmate.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. The target gains an edge on their next power roll (Wired or physical) before your next turn.</p>"
+          },
+          "StandingWatch": {
+            "Name": "Standing Watch",
+            "Description": "<p>Dampen can trigger off a Track 2 hit against any ally within Reach, not just Jacked In or Overlaid allies. The reduction stays 2.</p>"
+          },
+          "EmergencyPatchHacker": {
+            "Name": "Emergency Patch",
+            "Story": "Patch the crewmate, not just the connection.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. The target regains Stamina equal to 2 + your echelon. If the target is Jacked In, this also cancels the next biofeedback bleed-through against them this encounter.</p>"
+          },
+          "AnchorPoint": {
+            "Name": "Anchor Point",
+            "Description": "<p>Wired Guard’s defense bonus increases to +3, and allies within Reach who are Jacked In also gain your deck’s Biofeedback Resistance as bonus resistance of their own.</p>"
+          },
+          "FullCoverage": {
+            "Name": "Full Coverage",
+            "Description": "<p>The first Dampen you use each round costs 0 Bandwidth; additional uses still cost 1.</p>"
+          },
+          "GuardianAngelInTheNet": {
+            "Name": "Guardian Angel in the Net",
+            "Story": "Nothing gets through.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. Until your next turn, each target gains double your Wired Guard defense bonus (+6 at 7th level and later) against Track 2 attacks, and biofeedback bleed-through against them is reduced by an additional 3.</p>"
           }
         }
       }

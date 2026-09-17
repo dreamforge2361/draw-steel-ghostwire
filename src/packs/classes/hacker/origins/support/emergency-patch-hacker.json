@@ -1,0 +1,73 @@
+{
+  "_id": "9PlP3wyaXfAGAssD",
+  "_key": "!items!9PlP3wyaXfAGAssD",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.EmergencyPatchHacker.Name",
+  "type": "ability",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hacker-emergency-patch",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.EmergencyPatchHacker.Story",
+    "keywords": [
+      "ranged",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 4,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.EmergencyPatchHacker.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker-support"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "pfJLxwVUhlasVlqK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

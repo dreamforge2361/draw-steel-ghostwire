@@ -19,6 +19,8 @@
 | **Wrench (Foundry)** | `src/packs/classes/wrench/` | **B27 Foundry-verified** (2026-09-16) — Uptime v1; machines inventory backlog. **B27b polish** (Overclock / L6 / L9 rules, three rigger Kits: Fabricator's Bench, Rigger's Harness, Field Chassis) Foundry-verified |
 | **Elementalist (Foundry)** | `src/packs/classes/elementalist/` | **B28 Foundry-verified** (2026-09-16) — Essence drip; Cyborg exclusion enforced (Arcane Severance gate); Veil chapter still backlog |
 | **Street Priest (Foundry)** | `src/packs/classes/street-priest/` | **B29 Foundry-verified** (2026-09-17) — Light/Dark pact overlay; Cyborg-blocked; Veil chapter still backlog |
+| **Hacker (Foundry)** | `src/packs/classes/hacker/` | **B30 Foundry-verified** (2026-09-17) — three street cyberdeck Kits; Matrix Verbs stay universal |
+| **Technomancer** | `docs/masters/GHOSTWIRE_TECHNOMANCER_DEVELOPMENT_MASTER.md` + stub `docs/rulebook/20-technomancer.md` | **9th class master ingested** (2026-09-17); rulebook chapter + Foundry pack (B31) after the Hacker |
 | Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
 | **Languages** | `docs/rulebook/19-languages.md` + `docs/masters/GHOSTWIRE_LANGUAGES.md` | **Names locked** 2026-09-16 (B25) — stub chapter; lore backlog |
 | Species↔DS map | `docs/rulebook/SPECIES-DS-MAP.md` | Chassis locked |

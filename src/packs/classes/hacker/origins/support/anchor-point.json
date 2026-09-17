@@ -1,0 +1,32 @@
+{
+  "_id": "EwwfFAem55NXuhsE",
+  "_key": "!items!EwwfFAem55NXuhsE",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.AnchorPoint.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.AnchorPoint.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "anchor-point",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "pfJLxwVUhlasVlqK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

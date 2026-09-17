@@ -1,0 +1,32 @@
+{
+  "_id": "afdGTH9LGwHsruwd",
+  "_key": "!items!afdGTH9LGwHsruwd",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.WiderNet.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.WiderNet.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wider-net",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "8JpFrSojCEiUfOW9",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

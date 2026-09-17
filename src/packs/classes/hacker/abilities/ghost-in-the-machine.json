@@ -1,0 +1,72 @@
+{
+  "_id": "tqi3VUq8GSfQ7Wmq",
+  "_key": "!items!tqi3VUq8GSfQ7Wmq",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.GhostInTheMachine.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-in-the-machine",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.GhostInTheMachine.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Hacker.Items.GhostInTheMachine.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.GhostInTheMachine.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "rACDDp0N9PLzhhnB",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "PdpAwAP7fTn7SSrP",
+  "_key": "!items!PdpAwAP7fTn7SSrP",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.BandwidthOverclock.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Hacker.Items.BandwidthOverclock.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "bandwidth-overclock",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "765Qc9GiUlgir7Ld",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
