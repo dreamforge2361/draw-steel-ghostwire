@@ -1,0 +1,72 @@
+{
+  "_id": "MscOnWD7isdgsmGZ",
+  "_key": "!items!MscOnWD7isdgsmGZ",
+  "name": "GHOSTWIRE.Classes.Scout.Items.FaceCut.Name",
+  "type": "ability",
+  "img": "icons/equipment/head/mask-horned-brown.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "face-cut",
+    "story": "GHOSTWIRE.Classes.Scout.Items.FaceCut.Story",
+    "keywords": [
+      "chrome"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "GHOSTWIRE.Classes.Scout.Items.FaceCut.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.FaceCut.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "face-in-crowd"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "llx1vW723FwCENSF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

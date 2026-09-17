@@ -1,0 +1,32 @@
+{
+  "_id": "aNSlYZ9mxBPE7S0Z",
+  "_key": "!items!aNSlYZ9mxBPE7S0Z",
+  "name": "GHOSTWIRE.Classes.Scout.Items.FaceThief.Name",
+  "type": "feature",
+  "img": "icons/magic/control/silhouette-hold-change-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.FaceThief.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "face-thief",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "llx1vW723FwCENSF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

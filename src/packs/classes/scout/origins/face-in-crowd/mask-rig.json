@@ -1,0 +1,186 @@
+{
+  "_id": "67Wf882yfIs1zSYY",
+  "_key": "!items!67Wf882yfIs1zSYY",
+  "name": "GHOSTWIRE.Classes.Scout.Items.MaskRig.Name",
+  "type": "ability",
+  "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mask-rig",
+    "story": "GHOSTWIRE.Classes.Scout.Items.MaskRig.Story",
+    "keywords": [
+      "chrome",
+      "optics"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Scout.Items.MaskRig.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      },
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.MaskRig.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "face-in-crowd"
+      ],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Mask Rig - Edge on Strikes",
+      "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+      "type": "abilityModifier",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.67Wf882yfIs1zSYY",
+      "transfer": false,
+      "_id": "DnVjn9uwuzhIZO5w",
+      "system": {
+        "changes": [
+          {
+            "key": "power.roll.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        },
+        "filters": {
+          "keywords": [
+            "strike"
+          ]
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>While the Mask Rig is active, your strikes gain an edge.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "showIcon": 1,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!67Wf882yfIs1zSYY.DnVjn9uwuzhIZO5w"
+    },
+    {
+      "name": "Mask Rig - Disengage Bonus",
+      "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.67Wf882yfIs1zSYY",
+      "transfer": false,
+      "_id": "QxuE5FbdA84eu4ca",
+      "system": {
+        "changes": [
+          {
+            "key": "system.movement.disengage",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>While the Mask Rig is active, when you take the Disengage move action, you gain a +1 bonus to the distance you can shift.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "showIcon": 1,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!67Wf882yfIs1zSYY.QxuE5FbdA84eu4ca"
+    }
+  ],
+  "folder": "llx1vW723FwCENSF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

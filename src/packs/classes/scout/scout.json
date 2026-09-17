@@ -1,0 +1,734 @@
+{
+  "_id": "zJ1b3dODa5KXPeaT",
+  "_key": "!items!zJ1b3dODa5KXPeaT",
+  "name": "GHOSTWIRE.Classes.Scout.Items.Class.Name",
+  "type": "class",
+  "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "scout",
+    "advancements": {
+      "6d9ev13YtIId9GQp": {
+        "_id": "6d9ev13YtIId9GQp",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Stealth",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Stealth skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "stealth"
+          ]
+        },
+        "chooseN": null,
+        "sort": -96000
+      },
+      "bDDXNdaPZ4TfLjpR": {
+        "_id": "bDDXNdaPZ4TfLjpR",
+        "img": null,
+        "repick": {},
+        "name": "Skills",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose any five skills from the Action, Social, Technical, or Knowledge skill groups — the infiltrator’s kit of Perception, Acrobatics, Deception, Security Systems, Streetwise, and the like. Skip your subclass skill (Hunter: Survival, Ghost: Demolitions, Face-in-crowd: Deception); it’s granted separately. (<em>Quick Build:</em> Streetwise, Security Systems, Perception, Acrobatics, Electronics.)</p>",
+        "skills": {
+          "groups": [
+            "action",
+            "social",
+            "technical",
+            "knowledge"
+          ],
+          "choices": []
+        },
+        "chooseN": 5,
+        "sort": -46000
+      },
+      "sfr3y00cU0jJSZ8N": {
+        "_id": "sfr3y00cU0jJSZ8N",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Z2V2Jf3gIIfk8Jki"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tcs6UkDCRjU8h6Gn"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 4000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FWLieQG9m45HeK0m": {
+        "_id": "FWLieQG9m45HeK0m",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "repick": {},
+        "name": "Kit",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You can use and gain the benefits of a light Kit: no armor or light armor, and no heavy weapon. (<em>Quick Build:</em> Ghost.)</p>",
+        "chooseN": 1,
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          }
+        ],
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        },
+        "sort": 9000
+      },
+      "aZ6I2HcyWlkVVEJ9": {
+        "_id": "aZ6I2HcyWlkVVEJ9",
+        "img": "icons/magic/perception/shadow-stealth-eyes-purple.webp",
+        "repick": {},
+        "name": "Scout Subclass",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.FOAxBIuTkLsc12k3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bPb1OXIMpe9tR9ks"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gxlQV6PbSPKGTzgz"
+          }
+        ],
+        "description": "<p>Choose your Scout subclass. Each is a different school, and each grants a skill: Hunter (Ironclad Longshot Division), Ghost (Ferrum Dynastic Deep-Dark Program), or Face-in-crowd (Nyx Cartel Mask-Line). (<em>Quick Build:</em> Ghost.)</p>",
+        "chooseN": 1,
+        "sort": 15000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "sBM4VStQv5jVXSqj": {
+        "_id": "sBM4VStQv5jVXSqj",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Signature Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SJV62SN3lF6GYNne"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J07QMvknEAsHr51d"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.eniIzbhSzI1hbw4e"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1OCTmyWqyNCIMBir"
+          }
+        ],
+        "description": "<p>Choose one signature ability from the following options. Signature abilities can be used at will and roll with Reflex. (<em>Quick Build:</em> Teamwork Has Its Place.)</p>",
+        "chooseN": 1,
+        "sort": 16000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jZGx1NUeUJ7oBQWn": {
+        "_id": "jZGx1NUeUJ7oBQWn",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "3 Advantage Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EKCE24rMbAUY2UsV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Ru8V39NsKcCJS3GR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xAV4U8sgUptK764l"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4GyZsR50cmGHgfjp"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 3 Advantage to use. (<em>Quick Build:</em> Get In Get Out.)</p>",
+        "chooseN": 1,
+        "sort": 23000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "xMPwi9Ypf2h97o08": {
+        "_id": "xMPwi9Ypf2h97o08",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "5 Advantage Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tnV2RqJs2ISl3gu2"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aPKiRGPeGT7FGcUx"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zte3A22212Enc0AD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PcDOAkx5P9m0a0mc"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Advantage to use. (<em>Quick Build:</em> Coup de Grâce.)</p>",
+        "chooseN": 1,
+        "sort": 25000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "eetslWvD18ivOGn5": {
+        "_id": "eetslWvD18ivOGn5",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one exploration, interpersonal, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "exploration",
+            "interpersonal",
+            "intrigue"
+          ]
+        },
+        "sort": 1000,
+        "pool": []
+      },
+      "kXgsvoXsheWVxZ25": {
+        "_id": "kXgsvoXsheWVxZ25",
+        "img": null,
+        "repick": {},
+        "name": "Careful Observation",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dVaK5dlFvzPVKOAl"
+          }
+        ],
+        "description": "<p>You gain the following ability.</p>",
+        "chooseN": null,
+        "sort": 2000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "IXbWzQ73lkyzmkJs": {
+        "_id": "IXbWzQ73lkyzmkJs",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "7 Advantage Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2xAf7P5KAQolLfaX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RRuOk9Dm3V75juYZ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4wHFUq5Wn0zfNfQy"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3TOjSTYbh2IR2LJ5"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Advantage to use.</p>",
+        "chooseN": 1,
+        "sort": 27000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "gGxfjQ74sHjoP5gn": {
+        "_id": "gGxfjQ74sHjoP5gn",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Reflex and Logic scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 0,
+          "presence": 0
+        },
+        "max": 3,
+        "sort": 0
+      },
+      "zGLnkAjfbPFCWPdk": {
+        "_id": "zGLnkAjfbPFCWPdk",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 3000,
+        "pool": []
+      },
+      "sXZAgupgFFX47nuT": {
+        "_id": "sXZAgupgFFX47nuT",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "sort": 4000
+      },
+      "AN0DeYK5z9UqPr8j": {
+        "_id": "AN0DeYK5z9UqPr8j",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qF8MqL4VOh3zIR0c"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZugfjXBNqyhoBLrs"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gVM2fBKT7w2dx5wa"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 5000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "vA7rbkRJaplrer43": {
+        "_id": "vA7rbkRJaplrer43",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "9 Advantage Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kaRzDlqfr1jXZqhR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DR34y1c0YMjUNIzw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2Zn26KPG5J6IV63H"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.o32Qy4L1H71KcLTP"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Advantage to use.</p>",
+        "chooseN": 1,
+        "sort": 29000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "0IAMpAwT23wFoCYJ": {
+        "_id": "0IAMpAwT23wFoCYJ",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 6000,
+        "pool": []
+      },
+      "CR0ppO7va4t5a3Fg": {
+        "_id": "CR0ppO7va4t5a3Fg",
+        "img": null,
+        "repick": {},
+        "name": "Ghost Suite",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.MMCSXG0jAaA8ZZxb"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 7000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "KFhyZnh4BroKBvmu": {
+        "_id": "KFhyZnh4BroKBvmu",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 1000
+      },
+      "NIWSbCDsfM0XvhXM": {
+        "_id": "NIWSbCDsfM0XvhXM",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "sort": 8000
+      },
+      "6QsEfygFEamVjW9v": {
+        "_id": "6QsEfygFEamVjW9v",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.T0cyPIXp0yM7Bavd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.n5CV9PUUZuuid3zN"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LwrZ2DLJeH5zk0sp"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 9000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "VuuLBtVnEOf12H9L": {
+        "_id": "VuuLBtVnEOf12H9L",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 10000,
+        "pool": []
+      },
+      "xg0f6y5O9KVGhC7e": {
+        "_id": "xg0f6y5O9KVGhC7e",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "11 Advantage Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GPP4wrdJaKOHah12"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YB3MqJBUSdx0IEGE"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.L1Iv9GtrihA1Zl3A"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.vu2eNZopdNxm4T2U"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Advantage to use.</p>",
+        "chooseN": 1,
+        "sort": 31000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "cFqbHkHuL8yu6cZf": {
+        "_id": "cFqbHkHuL8yu6cZf",
+        "img": null,
+        "repick": {},
+        "name": "Ghost Squad",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.btpmi7EJ078dLzwn"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 11000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7J5kkgYjPqTbPaNE": {
+        "_id": "7J5kkgYjPqTbPaNE",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Reflex and Logic scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 0,
+          "presence": 0
+        },
+        "max": 5,
+        "sort": 2000
+      },
+      "t77UVAipp2Nhdwz9": {
+        "_id": "t77UVAipp2Nhdwz9",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 12000,
+        "pool": []
+      },
+      "7IuJJjbw6Ym8aBoB": {
+        "_id": "7IuJJjbw6Ym8aBoB",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "chooseN": 1,
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "sort": 13000
+      },
+      "bDCQ1tQslDRa1cBj": {
+        "_id": "bDCQ1tQslDRa1cBj",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.x1S7OHPNPuvqRHME"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.S8qTztVDdqGHuFjY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yrFxF0llaxQVLZ5x"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JJYshmwsb0jxDGhZ"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 14000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "level": 0,
+    "primary": "Advantage",
+    "epic": "Subterfuge",
+    "turnGain": "1d3",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "agility",
+        "reason"
+      ]
+    },
+    "stamina": {
+      "starting": 18,
+      "level": 6
+    },
+    "recoveries": 8
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

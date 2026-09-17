@@ -1,0 +1,32 @@
+{
+  "_id": "LwrZ2DLJeH5zk0sp",
+  "_key": "!items!LwrZ2DLJeH5zk0sp",
+  "name": "GHOSTWIRE.Classes.Scout.Items.Ventriloquist.Name",
+  "type": "feature",
+  "img": "icons/magic/sonic/projectile-sound-rings-wave.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.Ventriloquist.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ventriloquist",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

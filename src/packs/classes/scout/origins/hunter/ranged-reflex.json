@@ -1,0 +1,32 @@
+{
+  "_id": "SBjkYy0rVgTW8cVn",
+  "_key": "!items!SBjkYy0rVgTW8cVn",
+  "name": "GHOSTWIRE.Classes.Scout.Items.RangedReflex.Name",
+  "type": "feature",
+  "img": "icons/skills/targeting/crosshair-ringed-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.RangedReflex.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ranged-reflex",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

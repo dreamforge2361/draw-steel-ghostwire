@@ -1,0 +1,55 @@
+{
+  "_id": "ZugfjXBNqyhoBLrs",
+  "_key": "!items!ZugfjXBNqyhoBLrs",
+  "name": "GHOSTWIRE.Classes.Scout.Items.NightWatch.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.NightWatch.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "night-watch",
+    "advancements": {
+      "xp4PUfcH0Id7PquI": {
+        "name": "",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "xp4PUfcH0Id7PquI",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xJJOaLYRohQybKBB"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,72 @@
+{
+  "_id": "msdLsorVExJLADnN",
+  "_key": "!items!msdLsorVExJLADnN",
+  "name": "GHOSTWIRE.Classes.Scout.Items.StormTheVent.Name",
+  "type": "ability",
+  "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "storm-the-vent",
+    "story": "GHOSTWIRE.Classes.Scout.Items.StormTheVent.Story",
+    "keywords": [
+      "chrome"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "4",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfAlly",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.StormTheVent.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "ghost"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

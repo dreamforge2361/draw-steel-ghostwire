@@ -1,0 +1,113 @@
+{
+  "_id": "xAV4U8sgUptK764l",
+  "_key": "!items!xAV4U8sgUptK764l",
+  "name": "GHOSTWIRE.Classes.Scout.Items.GetInGetOut.Name",
+  "type": "ability",
+  "img": "icons/skills/movement/arrows-up-trio-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "get-in-get-out",
+    "story": "GHOSTWIRE.Classes.Scout.Items.GetInGetOut.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "gdKcCGwtcYsz89kp": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "gdKcCGwtcYsz89kp",
+          "damage": {
+            "tier1": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "8 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "11 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.GetInGetOut.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

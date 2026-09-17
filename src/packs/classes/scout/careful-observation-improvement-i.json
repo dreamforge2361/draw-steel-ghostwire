@@ -1,0 +1,32 @@
+{
+  "_id": "n5CV9PUUZuuid3zN",
+  "_key": "!items!n5CV9PUUZuuid3zN",
+  "name": "GHOSTWIRE.Classes.Scout.Items.CarefulObservationImprovementI.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.CarefulObservationImprovementI.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "careful-observation-improvement-i",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

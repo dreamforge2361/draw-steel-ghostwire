@@ -1,0 +1,73 @@
+{
+  "_id": "ZU6kJy1sx2oo59Py",
+  "_key": "!items!ZU6kJy1sx2oo59Py",
+  "name": "GHOSTWIRE.Classes.Scout.Items.OverwatchLane.Name",
+  "type": "ability",
+  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overwatch-lane",
+    "story": "GHOSTWIRE.Classes.Scout.Items.OverwatchLane.Story",
+    "keywords": [
+      "ranged",
+      "weapon"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "20",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "special",
+      "custom": "A 5-square-wide firing lane",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.OverwatchLane.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hunter"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

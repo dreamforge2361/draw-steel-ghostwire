@@ -1,0 +1,107 @@
+{
+  "_id": "mKCHEKVJZp9WNKaF",
+  "_key": "!items!mKCHEKVJZp9WNKaF",
+  "name": "GHOSTWIRE.Classes.Scout.Items.ChainBlink.Name",
+  "type": "ability",
+  "img": "icons/magic/movement/trail-streak-zigzag-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chain-blink",
+    "story": "GHOSTWIRE.Classes.Scout.Items.ChainBlink.Story",
+    "keywords": [
+      "chrome",
+      "melee",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "YCJiZ9PqddRufvjR": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "YCJiZ9PqddRufvjR",
+          "other": {
+            "tier1": {
+              "display": "An enemy takes 6 damage; an ally can Blink up to 3 squares.",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "An enemy takes 10 damage; an ally can Blink up to 5 squares.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "An enemy takes 14 damage; an ally can Blink up to 7 squares.",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.ChainBlink.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "ghost"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -78,6 +78,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.22` — Operator polish: feature levels follow `01-operator.md`; heroic abilities use the Tech keyword instead of Magic; signatures and base band roll with Reflex; skill picks use Ghostwire groups; Merc gets a Field Arsenal feature (two Kits, preferred Kit); Street-vet picks a Loadout Damage Type; remaining Fury flavor text rewritten. Heroic abilities can’t be used in combat without enough heroic resource (Adrenaline).
 - `0.1.23` — **Full Master Gear List import** (`docs/masters/GHOSTWIRE_GEAR_MASTER.md`): every table row is an item — **Ghostwire Gear** (107: general & lifestyle, armor, weapons), **Ghostwire Mods** (16), **Ghostwire Matrix** (33), **Ghostwire Vehicles & Drones** (31), **Ghostwire Foci** (41). Grade is Draw Steel **echelon 1–4 + Availability band** (no Item Tier). Replaces the 0.1.18 Kit-subset gear.
 - `0.1.24` — **Mods expansion:** Ghostwire Mods now has Weapon, Vehicle & Drone, **Armor & Shield** (7), and **Gadget** (8) mods (31 total); Ghostwire Matrix adds **RCC Autosofts** (4). Every item with mod slots lists the mods that fit it; items with no mod family (foci, Field Surgery Kit, Designer Threads, Faraday Bag) have 0 slots. §Craft text is the downtime Project procedure keyed to Repair, Electronics, Hacking (autosofts: Hacking or Rigging), or Cybertech — no “Gunsmithing”. Rules: `docs/rulebook/14-mods.md` (mod doctrine + Invent a Mod).
+- `0.1.25` — **Scout** class (Advantage) in **Ghostwire Classes**, cloned from the Draw Steel Shadow: class, three subclasses (**Hunter** — Ironclad Longshot, **Ghost** — Ferrum Deep-Dark, **Face-in-crowd** — Nyx Mask-Line), four signatures, the 3/5/7/9/11 Advantage bands, and every level 1–10 feature, per `docs/rulebook/02-scout.md`. New **Chrome** and **Optics** ability keywords. *Pending Foundry verification.*
 
 ## Origins pack layout (Ghostwire Ancestries)
 
@@ -211,6 +212,18 @@ Rules: `docs/rulebook/01-operator.md` (authoritative), `docs/masters/GHOSTWIRE_O
 5. **Merc only:** Equipment tab → right-click the Kit whose damage you want → **Make Preferred Kit**.
 6. Drag qualifying gear from **Ghostwire Gear** (for example the **Longshot** marksman rifle for the Longshot Kit, or the **Sleeve-Gun** + **Armored Jacket** for Ghost).
 7. Check: Stats shows **Adrenaline**; Skills are all Ghostwire skills with no duplicates; Abilities lists Controlled Pair, Suppressing Fire, the chosen heroic ability, the Kit signature ability, and the Origin’s triggered ability (Kinetic Redirect, Wired Reflexes, or Overclock Nerves); Features include Field Arsenal (Merc) or your Loadout (Street-vet).
+
+### Scout
+
+Rules: `docs/rulebook/02-scout.md` (authoritative), `docs/masters/GHOSTWIRE_SCOUT_DEVELOPMENT_MASTER.md`. Folder **Scout** › **Abilities** / **Origins** › Hunter, Ghost, Face-in-crowd.
+
+- **Structure:** the Draw Steel **Shadow** tree cloned and renamed (Insight → **Advantage**, Umbral Form → **Ghost Suite**, Gloom Squad → **Ghost Squad**, Keen Insight → **Sharper Eye**, Surge of Insight → **Surge of Advantage**). Class: Reflex + Logic, Stamina 18 (+6), Recoveries 8, 1d3 Advantage per turn, epic resource **Subterfuge**. Heroic abilities keep Draw Steel power rolls; names and text come from the chapter, and strikes roll with **Reflex**.
+- **Subclasses:** **Hunter** is Ghostwire-original (Quarry, Ranged Reflex, Steady the Scope, Called Shots, Overwatch Lane, Ghost Round, One Shot One Kill, Vantage Trap). **Ghost** reskins Black Ash (Blink Rig: “Blink” = reposition, not teleport). **Face-in-crowd** reskins Harlequin Mask (Mask Rig keeps I’m No Threat’s edge and Disengage effects). Subclass skills: Survival, Demolitions (sabotage), Deception (lie).
+- **No magic:** no Scout ability has Magic. Former Magic abilities use **Chrome** (implant-driven) or **Optics** (emitter/holo-driven), registered in `scripts/module.mjs`. Corruption damage became untyped damage called thermal-optic or thermal-kinetic in the text; Ghost Suite’s thermal-optic immunity is rules text.
+- **Advantage costs:** heroic abilities carry their cost in `resource`, so the existing in-combat check blocks a heroic ability when current Advantage is below its cost (Hesitation Is Weakness and Diversion cost 1). The Scout’s “1 fewer Advantage with an edge” discount isn’t automated; the check uses the full cost.
+- **Surges:** feature text gives the Ghostwire value (+2/+3/+4/+5 damage per surge by echelon). Gaining surges uses Draw Steel’s `[[/surge]]` links; how much damage a spent surge adds is still Draw Steel’s own calculation.
+- **Skills and Kit:** Stealth is free; then choose five from Action, Social, Technical, or Knowledge (owned skills are left out). 4th/7th/10th: any skill. Kit pool is the 11 light Kits (no or light armor, no heavy weapon, not Hexshot/Spellblade/Sanctified); Quick Build Ghost.
+- **Ghost Suite** is an effect you apply from the feature (climb, edge on strikes against you, bane on Persona tests; ends at combat end). Quarry has a **Marked (Quarry)** effect to apply to the target.
 
 ## Kits (v1)
 

@@ -1,0 +1,32 @@
+{
+  "_id": "J4CR1QnFRKRgGVst",
+  "_key": "!items!J4CR1QnFRKRgGVst",
+  "name": "GHOSTWIRE.Classes.Scout.Items.ColdRead.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.ColdRead.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cold-read",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

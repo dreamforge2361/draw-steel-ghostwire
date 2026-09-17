@@ -1,0 +1,70 @@
+{
+  "_id": "0Vh182VbRYNznClB",
+  "_key": "!items!0Vh182VbRYNznClB",
+  "name": "GHOSTWIRE.Classes.Scout.Items.SteadyTheScope.Name",
+  "type": "ability",
+  "img": "icons/tools/navigation/spyglass-telescope-brass.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "steady-the-scope",
+    "story": "GHOSTWIRE.Classes.Scout.Items.SteadyTheScope.Story",
+    "keywords": [],
+    "type": "triggered",
+    "category": "",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Scout.Items.SteadyTheScope.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.SteadyTheScope.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hunter"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

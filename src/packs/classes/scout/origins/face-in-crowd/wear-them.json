@@ -1,0 +1,144 @@
+{
+  "_id": "Wzmye6HKNQkswvrV",
+  "_key": "!items!Wzmye6HKNQkswvrV",
+  "name": "GHOSTWIRE.Classes.Scout.Items.WearThem.Name",
+  "type": "ability",
+  "img": "icons/magic/control/hypnosis-mesmerism-eye-tan.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wear-them",
+    "story": "GHOSTWIRE.Classes.Scout.Items.WearThem.Story",
+    "keywords": [
+      "chrome",
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "",
+      "value": 2
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "Di3dEqx4vqIH5r9H": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "Di3dEqx4vqIH5r9H",
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "B7KoLajOD0Khvbqi": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "B7KoLajOD0Khvbqi",
+          "other": {
+            "tier1": {
+              "potency": {
+                "characteristic": "reason",
+                "value": "@potency.weak"
+              },
+              "display": "if the target has {{potency}}, before the damage is resolved, the Rig sells them the wrong enemy and they make a free strike."
+            },
+            "tier2": {
+              "display": "if the target has {{potency}}, before the damage is resolved, they use a main action ability of your choice.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "if the target has {{potency}}, before the damage is resolved, they can shift up to their speed and use a main action ability of your choice.",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.WearThem.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "face-in-crowd"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "llx1vW723FwCENSF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

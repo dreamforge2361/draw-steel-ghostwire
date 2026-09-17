@@ -1,0 +1,205 @@
+{
+  "_id": "o32Qy4L1H71KcLTP",
+  "_key": "!items!o32Qy4L1H71KcLTP",
+  "name": "GHOSTWIRE.Classes.Scout.Items.YouTalkTooMuch.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-dagger-skull-white.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "you-talk-too-much",
+    "story": "GHOSTWIRE.Classes.Scout.Items.YouTalkTooMuch.Story",
+    "keywords": [
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "K5kDZkgvrOrvvsu5": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "K5kDZkgvrOrvvsu5",
+          "damage": {
+            "tier1": {
+              "value": "10+ @chr",
+              "potency": {
+                "characteristic": "none",
+                "value": "@potency.weak"
+              },
+              "types": [],
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "15 + @chr",
+              "potency": {
+                "characteristic": "",
+                "value": "@potency.average"
+              },
+              "types": [],
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "21 + @chr",
+              "potency": {
+                "characteristic": "",
+                "value": "@potency.strong"
+              },
+              "types": [],
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        },
+        "ojTOHnIXcwECLQYI": {
+          "name": "Dazed",
+          "img": null,
+          "type": "applied",
+          "_id": "ojTOHnIXcwECLQYI",
+          "applied": {
+            "tier1": {
+              "potency": {
+                "characteristic": "presence",
+                "value": "@potency.weak"
+              },
+              "display": "{{potency}}, dazed (save ends)",
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "dazed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.YouTalkTooMuch.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Silenced",
+      "img": "icons/skills/melee/strike-dagger-skull-white.webp",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.o32Qy4L1H71KcLTP",
+      "transfer": false,
+      "_id": "QcDNVWsfPwbqgWbU",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1,
+      "_key": "!items.effects!o32Qy4L1H71KcLTP.QcDNVWsfPwbqgWbU"
+    }
+  ],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

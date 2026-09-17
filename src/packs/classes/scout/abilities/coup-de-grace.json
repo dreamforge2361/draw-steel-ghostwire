@@ -1,0 +1,104 @@
+{
+  "_id": "tnV2RqJs2ISl3gu2",
+  "_key": "!items!tnV2RqJs2ISl3gu2",
+  "name": "GHOSTWIRE.Classes.Scout.Items.CoupDeGrace.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-sword-blood-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "coup-de-grace",
+    "story": "GHOSTWIRE.Classes.Scout.Items.CoupDeGrace.Story",
+    "keywords": [
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "JInSxfOtZ5PQSoNr": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "JInSxfOtZ5PQSoNr",
+          "damage": {
+            "tier1": {
+              "value": "2d6 +7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "2d6 + 11 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "2d6 + 16 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "RRIinN79nYIbCtY5",
+  "_key": "!items!RRIinN79nYIbCtY5",
+  "name": "GHOSTWIRE.Classes.Scout.Items.RigNativeMovement.Name",
+  "type": "feature",
+  "img": "icons/magic/movement/trail-streak-zigzag-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.RigNativeMovement.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rig-native-movement",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

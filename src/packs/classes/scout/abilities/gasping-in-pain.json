@@ -1,0 +1,151 @@
+{
+  "_id": "SJV62SN3lF6GYNne",
+  "_key": "!items!SJV62SN3lF6GYNne",
+  "name": "GHOSTWIRE.Classes.Scout.Items.GaspingInPain.Name",
+  "type": "ability",
+  "img": "icons/skills/wounds/injury-face-impact-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gasping-in-pain",
+    "story": "GHOSTWIRE.Classes.Scout.Items.GaspingInPain.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "QEp70zgOT7JvvAsj": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "QEp70zgOT7JvvAsj",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "8 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        },
+        "ZDAkGVNcvWDeydrN": {
+          "name": "Prone",
+          "img": null,
+          "type": "applied",
+          "_id": "ZDAkGVNcvWDeydrN",
+          "applied": {
+            "tier1": {
+              "display": "",
+              "effects": {},
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "",
+              "effects": {},
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": "none"
+              }
+            },
+            "tier3": {
+              "display": "{{potency}}, prone",
+              "effects": {
+                "prone": {
+                  "condition": "failure",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": "intuition"
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.GaspingInPain.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

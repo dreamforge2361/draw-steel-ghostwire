@@ -1,0 +1,113 @@
+{
+  "_id": "2Zn26KPG5J6IV63H",
+  "_key": "!items!2Zn26KPG5J6IV63H",
+  "name": "GHOSTWIRE.Classes.Scout.Items.RooftopRush.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-dagger-white-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rooftop-rush",
+    "story": "GHOSTWIRE.Classes.Scout.Items.RooftopRush.Story",
+    "keywords": [
+      "area",
+      "melee",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "line",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "custom": "Each enemy in the area",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "LiiThCiGsFKlGijH": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "LiiThCiGsFKlGijH",
+          "damage": {
+            "tier1": {
+              "value": "10",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "14",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "20",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.RooftopRush.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

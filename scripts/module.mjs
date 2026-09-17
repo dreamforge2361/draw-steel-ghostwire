@@ -30,6 +30,9 @@ Hooks.once("init", () => {
   // Tech: non-Magic, non-Psionic ability keyword for machine abilities (Cyborg Installed Suite).
   // Draw Steel localizes keyword labels at i18nInit, after this hook.
   ds.CONFIG.abilities.keywords.tech ??= { label: "GHOSTWIRE.Abilities.Keywords.Tech" };
+  // Chrome / Optics: Scout gear keywords (implant-driven and emitter/holo-driven abilities).
+  ds.CONFIG.abilities.keywords.chrome ??= { label: "GHOSTWIRE.Abilities.Keywords.Chrome" };
+  ds.CONFIG.abilities.keywords.optics ??= { label: "GHOSTWIRE.Abilities.Keywords.Optics" };
 
   registerGhostwireSkills();
   patchPreviousLifeFilter();

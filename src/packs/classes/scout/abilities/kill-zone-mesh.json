@@ -1,0 +1,163 @@
+{
+  "_id": "YB3MqJBUSdx0IEGE",
+  "_key": "!items!YB3MqJBUSdx0IEGE",
+  "name": "GHOSTWIRE.Classes.Scout.Items.KillZoneMesh.Name",
+  "type": "ability",
+  "img": "icons/magic/control/debuff-chains-ropes-net-red-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "kill-zone-mesh",
+    "story": "GHOSTWIRE.Classes.Scout.Items.KillZoneMesh.Story",
+    "keywords": [
+      "area",
+      "optics"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "2",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "ZxIkKlKqRJD1hfgX": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "ZxIkKlKqRJD1hfgX",
+          "damage": {
+            "tier1": {
+              "value": "11",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "16",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "21",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "NQoEDzmvUyKOW5wb": {
+          "name": "Restrained",
+          "img": null,
+          "type": "applied",
+          "_id": "NQoEDzmvUyKOW5wb",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, restrained (save ends)",
+              "effects": {
+                "restrained": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "characteristic": "agility",
+                "value": "@potency.weak"
+              }
+            },
+            "tier2": {
+              "effects": {
+                "restrained": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "restrained": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.KillZoneMesh.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

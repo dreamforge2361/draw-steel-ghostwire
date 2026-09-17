@@ -1,0 +1,32 @@
+{
+  "_id": "T0cyPIXp0yM7Bavd",
+  "_key": "!items!T0cyPIXp0yM7Bavd",
+  "name": "GHOSTWIRE.Classes.Scout.Items.SharperEye.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-large-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.SharperEye.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sharper-eye",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

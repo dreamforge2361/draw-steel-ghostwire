@@ -1,0 +1,155 @@
+{
+  "_id": "Ru8V39NsKcCJS3GR",
+  "_key": "!items!Ru8V39NsKcCJS3GR",
+  "name": "GHOSTWIRE.Classes.Scout.Items.Eviscerate.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "eviscerate",
+    "story": "GHOSTWIRE.Classes.Scout.Items.Eviscerate.Story",
+    "keywords": [
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "usNmGX1G4kLRGect": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "usNmGX1G4kLRGect",
+          "damage": {
+            "tier1": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "oJxRlmVITpM6ArAR": {
+          "name": "Bleed",
+          "img": null,
+          "type": "applied",
+          "_id": "oJxRlmVITpM6ArAR",
+          "applied": {
+            "tier1": {
+              "effects": {
+                "bleeding": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "characteristic": "agility",
+                "value": "@potency.weak"
+              },
+              "display": "{{potency}}, bleeding (save ends)"
+            },
+            "tier2": {
+              "effects": {
+                "bleeding": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "characteristic": "",
+                "value": "@potency.average"
+              },
+              "display": ""
+            },
+            "tier3": {
+              "effects": {
+                "bleeding": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "characteristic": "",
+                "value": "@potency.strong"
+              },
+              "display": ""
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

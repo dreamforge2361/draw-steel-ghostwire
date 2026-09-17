@@ -1,0 +1,113 @@
+{
+  "_id": "1OCTmyWqyNCIMBir",
+  "_key": "!items!1OCTmyWqyNCIMBir",
+  "name": "GHOSTWIRE.Classes.Scout.Items.YouWereWatchingTheWrongOne.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/weapons-crossed-daggers-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "you-were-watching-the-wrong-one",
+    "story": "GHOSTWIRE.Classes.Scout.Items.YouWereWatchingTheWrongOne.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "Rg07lIS1mEqsl7gZ": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "Rg07lIS1mEqsl7gZ",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "8 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.YouWereWatchingTheWrongOne.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

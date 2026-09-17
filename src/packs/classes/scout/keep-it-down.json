@@ -1,0 +1,32 @@
+{
+  "_id": "qF8MqL4VOh3zIR0c",
+  "_key": "!items!qF8MqL4VOh3zIR0c",
+  "name": "GHOSTWIRE.Classes.Scout.Items.KeepItDown.Name",
+  "type": "feature",
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.KeepItDown.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "keep-it-down",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

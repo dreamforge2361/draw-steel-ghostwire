@@ -1,0 +1,32 @@
+{
+  "_id": "x1S7OHPNPuvqRHME",
+  "_key": "!items!x1S7OHPNPuvqRHME",
+  "name": "GHOSTWIRE.Classes.Scout.Items.DeathPool.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/hand-eye-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.DeathPool.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "death-pool",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

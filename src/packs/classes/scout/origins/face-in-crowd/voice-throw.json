@@ -1,0 +1,128 @@
+{
+  "_id": "lSioHxhEyWlLht8E",
+  "_key": "!items!lSioHxhEyWlLht8E",
+  "name": "GHOSTWIRE.Classes.Scout.Items.VoiceThrow.Name",
+  "type": "ability",
+  "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "voice-throw",
+    "story": "GHOSTWIRE.Classes.Scout.Items.VoiceThrow.Story",
+    "keywords": [
+      "area",
+      "optics",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "tODm3eK8eNbCPZBY": {
+          "name": "Slide",
+          "img": null,
+          "type": "forced",
+          "_id": "tODm3eK8eNbCPZBY",
+          "forced": {
+            "tier1": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "4",
+              "properties": [
+                "ignoresImmunity"
+              ],
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "5",
+              "properties": [
+                "ignoresImmunity"
+              ],
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "7",
+              "properties": [
+                "ignoresImmunity"
+              ],
+              "display": "{{forced}}",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.VoiceThrow.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "face-in-crowd"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "llx1vW723FwCENSF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

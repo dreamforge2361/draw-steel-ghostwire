@@ -1,0 +1,165 @@
+{
+  "_id": "4et6kX5gQ3KUENlx",
+  "_key": "!items!4et6kX5gQ3KUENlx",
+  "name": "GHOSTWIRE.Classes.Scout.Items.RooftopSnap.Name",
+  "type": "ability",
+  "img": "icons/magic/symbols/rune-sigil-hook-white-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rooftop-snap",
+    "story": "GHOSTWIRE.Classes.Scout.Items.RooftopSnap.Story",
+    "keywords": [
+      "chrome",
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "kqeVvVrRVggFAe6o": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "kqeVvVrRVggFAe6o",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "U10GqUtVEtQRWXoM": {
+          "name": "Vertical Push",
+          "img": null,
+          "type": "forced",
+          "_id": "U10GqUtVEtQRWXoM",
+          "forced": {
+            "tier1": {
+              "distance": "5",
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "distance": "10",
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "distance": "15",
+              "properties": [
+                "vertical"
+              ],
+              "display": "{{forced}}",
+              "movement": [
+                "push"
+              ],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.RooftopSnap.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "ghost"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

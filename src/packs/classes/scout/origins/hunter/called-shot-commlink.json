@@ -1,0 +1,133 @@
+{
+  "_id": "tco6188b0wi1xyX5",
+  "_key": "!items!tco6188b0wi1xyX5",
+  "name": "GHOSTWIRE.Classes.Scout.Items.CalledShotCommlink.Name",
+  "type": "ability",
+  "img": "icons/magic/sonic/bell-alarm-red-purple.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "called-shot-commlink",
+    "story": "GHOSTWIRE.Classes.Scout.Items.CalledShotCommlink.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "CSCdamage0000000": {
+          "_id": "CSCdamage0000000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "damage",
+          "damage": {
+            "tier1": {
+              "value": "5 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "13 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "CSCcomms00000000": {
+          "_id": "CSCcomms00000000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "other",
+          "other": {
+            "tier1": {
+              "display": "The target’s next commlink or Wired action fails (comm blown out).",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "The target can’t communicate until the end of the encounter.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "The target can’t communicate until the end of the encounter, and takes Wired-side biofeedback if their crew tries to contact them.",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hunter"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

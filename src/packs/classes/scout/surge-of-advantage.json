@@ -1,0 +1,32 @@
+{
+  "_id": "gVM2fBKT7w2dx5wa",
+  "_key": "!items!gVM2fBKT7w2dx5wa",
+  "name": "GHOSTWIRE.Classes.Scout.Items.SurgeOfAdvantage.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.SurgeOfAdvantage.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "surge-of-advantage",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

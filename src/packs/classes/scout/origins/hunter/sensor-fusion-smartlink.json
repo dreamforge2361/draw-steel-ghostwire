@@ -1,0 +1,32 @@
+{
+  "_id": "mKORgVCCmFc04HMH",
+  "_key": "!items!mKORgVCCmFc04HMH",
+  "name": "GHOSTWIRE.Classes.Scout.Items.SensorFusionSmartlink.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/electronics-tech-interface-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.SensorFusionSmartlink.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sensor-fusion-smartlink",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

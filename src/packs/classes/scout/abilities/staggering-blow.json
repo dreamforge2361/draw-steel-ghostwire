@@ -1,0 +1,205 @@
+{
+  "_id": "3TOjSTYbh2IR2LJ5",
+  "_key": "!items!3TOjSTYbh2IR2LJ5",
+  "name": "GHOSTWIRE.Classes.Scout.Items.StaggeringBlow.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/strike-flail-destructive-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "staggering-blow",
+    "story": "GHOSTWIRE.Classes.Scout.Items.StaggeringBlow.Story",
+    "keywords": [
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "xogjpMYIAMvhjlPV": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "xogjpMYIAMvhjlPV",
+          "damage": {
+            "tier1": {
+              "value": "7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "11 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "16 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "MrMTb6aMk3Vlu7AC": {
+          "name": "Slowed or Prone",
+          "img": null,
+          "type": "applied",
+          "_id": "MrMTb6aMk3Vlu7AC",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, slowed (save ends)",
+              "potency": {
+                "characteristic": "might",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "slowed": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "{{potency}}, prone and can't stand (save ends)",
+              "effects": {
+                "prone": {
+                  "condition": "failure",
+                  "end": "",
+                  "properties": []
+                },
+                "GbHGAVFUWyiAm7yx": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "prone": {
+                  "condition": "failure",
+                  "end": "",
+                  "properties": []
+                },
+                "GbHGAVFUWyiAm7yx": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Can't Stand",
+      "img": "icons/skills/melee/strike-flail-destructive-yellow.webp",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.3TOjSTYbh2IR2LJ5",
+      "transfer": false,
+      "_id": "GbHGAVFUWyiAm7yx",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1,
+      "_key": "!items.effects!3TOjSTYbh2IR2LJ5.GbHGAVFUWyiAm7yx"
+    }
+  ],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

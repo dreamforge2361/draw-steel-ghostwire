@@ -1,0 +1,32 @@
+{
+  "_id": "IXxc2yHbYwz1oeoM",
+  "_key": "!items!IXxc2yHbYwz1oeoM",
+  "name": "GHOSTWIRE.Classes.Scout.Items.KillBlink.Name",
+  "type": "feature",
+  "img": "icons/magic/movement/trail-streak-impact-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.KillBlink.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "kill-blink",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

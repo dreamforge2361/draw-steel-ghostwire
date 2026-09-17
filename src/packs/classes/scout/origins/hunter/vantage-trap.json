@@ -1,0 +1,74 @@
+{
+  "_id": "HHwETIXk5I0Fi8o7",
+  "_key": "!items!HHwETIXk5I0Fi8o7",
+  "name": "GHOSTWIRE.Classes.Scout.Items.VantageTrap.Name",
+  "type": "ability",
+  "img": "icons/magic/control/debuff-chains-ropes-net-purple-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vantage-trap",
+    "story": "GHOSTWIRE.Classes.Scout.Items.VantageTrap.Story",
+    "keywords": [
+      "area",
+      "optics",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "20",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "special",
+      "custom": "A zone with a 5-square radius",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.VantageTrap.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hunter"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

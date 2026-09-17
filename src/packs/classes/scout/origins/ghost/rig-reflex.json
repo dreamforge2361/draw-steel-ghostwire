@@ -1,0 +1,72 @@
+{
+  "_id": "2cE75wfpbV2GCxbV",
+  "_key": "!items!2cE75wfpbV2GCxbV",
+  "name": "GHOSTWIRE.Classes.Scout.Items.RigReflex.Name",
+  "type": "ability",
+  "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rig-reflex",
+    "story": "GHOSTWIRE.Classes.Scout.Items.RigReflex.Story",
+    "keywords": [
+      "chrome"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "GHOSTWIRE.Classes.Scout.Items.RigReflex.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.RigReflex.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "ghost"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

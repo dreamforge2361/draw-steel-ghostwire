@@ -1,0 +1,202 @@
+{
+  "_id": "zte3A22212Enc0AD",
+  "_key": "!items!zte3A22212Enc0AD",
+  "name": "GHOSTWIRE.Classes.Scout.Items.Setup.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-mark-rough-pink.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "setup",
+    "story": "GHOSTWIRE.Classes.Scout.Items.Setup.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "t8iRG5mpyr4cbhsy": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "t8iRG5mpyr4cbhsy",
+          "damage": {
+            "tier1": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "9 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "13 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "LIwqV5doVVKJLHhd": {
+          "name": "Setup",
+          "img": null,
+          "type": "applied",
+          "_id": "LIwqV5doVVKJLHhd",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, the target has damage weakness 5 (save ends)",
+              "potency": {
+                "characteristic": "reason",
+                "value": "@potency.weak"
+              },
+              "effects": {
+                "BUYv96JTyhyHrnDN": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "effects": {
+                "BUYv96JTyhyHrnDN": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "effects": {
+                "BUYv96JTyhyHrnDN": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              },
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Setup",
+      "img": "icons/skills/targeting/crosshair-mark-rough-pink.webp",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.zte3A22212Enc0AD",
+      "transfer": false,
+      "_id": "BUYv96JTyhyHrnDN",
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.weaknesses.all",
+            "value": 5,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1,
+      "_key": "!items.effects!zte3A22212Enc0AD.BUYv96JTyhyHrnDN"
+    }
+  ],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

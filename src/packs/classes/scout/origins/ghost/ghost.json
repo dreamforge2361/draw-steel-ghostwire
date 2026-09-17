@@ -1,0 +1,233 @@
+{
+  "_id": "bPb1OXIMpe9tR9ks",
+  "_key": "!items!bPb1OXIMpe9tR9ks",
+  "name": "GHOSTWIRE.Classes.Scout.Items.Ghost.Name",
+  "type": "subclass",
+  "img": "icons/weapons/daggers/dagger-twin-curved-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.Ghost.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost",
+    "advancements": {
+      "jcwDkiXVQ4EvfQh1": {
+        "name": "GHOSTWIRE.Skills.List.Demolitions",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "jcwDkiXVQ4EvfQh1",
+        "skills": {
+          "choices": [
+            "demolitions"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Scout subclass grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "vz7N8kOBuwsnkZyw": {
+        "name": "Grapnel-Blink",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "vz7N8kOBuwsnkZyw",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AlfyX7k0XUYgU0fq"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ZHrzextjx6llJwHL": {
+        "name": "Rig Recovery",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "ZHrzextjx6llJwHL",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7F2DBgsnt0f1QFbi"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "D1QiMjxWeqjeI9d7": {
+        "name": "Kicked Sparks",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "D1QiMjxWeqjeI9d7",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RH9U6XezCdIjZgau"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "f4B71CyNajLZSgzw": {
+        "name": "2nd-Level Ghost Ability",
+        "img": "icons/weapons/daggers/dagger-twin-curved-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "f4B71CyNajLZSgzw",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oiXh9ICwtzP6IbHW"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2cE75wfpbV2GCxbV"
+          }
+        ],
+        "description": "<p>Choose one of the following abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "XYOW4bTAcgrGyZtX": {
+        "name": "Kill-Blink",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "XYOW4bTAcgrGyZtX",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IXxc2yHbYwz1oeoM"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "AXeuRWS5N36s9HmA": {
+        "name": "6th-Level Ghost Ability",
+        "img": "icons/weapons/daggers/dagger-twin-curved-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "AXeuRWS5N36s9HmA",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4et6kX5gQ3KUENlx"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.msdLsorVExJLADnN"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "YfiUrYmtJJCuoec1": {
+        "name": "Rig-Native Movement",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "YfiUrYmtJJCuoec1",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RRIinN79nYIbCtY5"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "US1K0XRX24u8e8sG": {
+        "name": "9th-Level Ghost Ability",
+        "img": "icons/weapons/daggers/dagger-twin-curved-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "US1K0XRX24u8e8sG",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mKCHEKVJZp9WNKaF"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.TNv445D95vehv4KY"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "scout"
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

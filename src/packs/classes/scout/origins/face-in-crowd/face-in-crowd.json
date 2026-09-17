@@ -1,0 +1,233 @@
+{
+  "_id": "gxlQV6PbSPKGTzgz",
+  "_key": "!items!gxlQV6PbSPKGTzgz",
+  "name": "GHOSTWIRE.Classes.Scout.Items.FaceInCrowd.Name",
+  "type": "subclass",
+  "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.FaceInCrowd.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "face-in-crowd",
+    "advancements": {
+      "aG47T3j6y5V7FQz3": {
+        "name": "GHOSTWIRE.Skills.List.Deception",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "aG47T3j6y5V7FQz3",
+        "skills": {
+          "choices": [
+            "deception"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Scout subclass grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "sHYKLWZm6GpWQ0Ot": {
+        "name": "Mask Rig",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "sHYKLWZm6GpWQ0Ot",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.67Wf882yfIs1zSYY"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Zl22g9NH10v7k3wo": {
+        "name": "Diversion",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Zl22g9NH10v7k3wo",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7WTV0a03NoaFUV5K"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "v8NbAK6oP7I2ziz9": {
+        "name": "Wrong Target",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "v8NbAK6oP7I2ziz9",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Xi7oHArye8sxpkAk"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "qkihOhBndQORUcRy": {
+        "name": "2nd-Level Face-in-crowd Ability",
+        "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "qkihOhBndQORUcRy",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.lSioHxhEyWlLht8E"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.MscOnWD7isdgsmGZ"
+          }
+        ],
+        "description": "<p>Choose one of the following abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "niaDdAUAfsP58mlv": {
+        "name": "Face-Thief",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "niaDdAUAfsP58mlv",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aNSlYZ9mxBPE7S0Z"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "4Le00cqnFAaJdVKy": {
+        "name": "6th-Level Face-in-crowd Ability",
+        "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "4Le00cqnFAaJdVKy",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.23JQfFLCtpqnobj6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Wzmye6HKNQkswvrV"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "vPa9QaOD7DIt1F25": {
+        "name": "Blend",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "vPa9QaOD7DIt1F25",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Oe1eIvHLKacGLE7A"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "iOv8htZVmWa9xEE5": {
+        "name": "9th-Level Face-in-crowd Ability",
+        "img": "icons/equipment/head/mask-carved-wood-pink.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "iOv8htZVmWa9xEE5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.i4OFdIlhabbHAUwK"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LI5BJN0Kp9U0Q4D7"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "scout"
+  },
+  "effects": [],
+  "folder": "llx1vW723FwCENSF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

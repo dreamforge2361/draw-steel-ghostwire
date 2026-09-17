@@ -1,0 +1,135 @@
+{
+  "_id": "oiXh9ICwtzP6IbHW",
+  "_key": "!items!oiXh9ICwtzP6IbHW",
+  "name": "GHOSTWIRE.Classes.Scout.Items.GrapnelSnatch.Name",
+  "type": "ability",
+  "img": "icons/weapons/polearms/spear-hooked-broad.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grapnel-snatch",
+    "story": "GHOSTWIRE.Classes.Scout.Items.GrapnelSnatch.Story",
+    "keywords": [
+      "chrome",
+      "melee",
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "rfxqJyiv0tTLD3MZ": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "rfxqJyiv0tTLD3MZ",
+          "damage": {
+            "tier1": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "14 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "hYZCbzd50rGmJ1SC": {
+          "name": "Teleport",
+          "img": null,
+          "type": "other",
+          "_id": "hYZCbzd50rGmJ1SC",
+          "other": {
+            "tier1": {
+              "display": "you can reposition the target 1 square with a grapnel yank",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "you can reposition the target up to 3 squares",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "you can reposition the target up to 5 squares",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "ghost"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "W9emgXN5pHU4vNjj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "x7DLypSA71H7Q4AC",
+  "_key": "!items!x7DLypSA71H7Q4AC",
+  "name": "GHOSTWIRE.Classes.Scout.Items.RangeDiscipline.Name",
+  "type": "feature",
+  "img": "icons/skills/ranged/target-bullseye-arrow-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.RangeDiscipline.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "range-discipline",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

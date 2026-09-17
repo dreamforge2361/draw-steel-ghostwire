@@ -1,0 +1,32 @@
+{
+  "_id": "S8qTztVDdqGHuFjY",
+  "_key": "!items!S8qTztVDdqGHuFjY",
+  "name": "GHOSTWIRE.Classes.Scout.Items.CarefulObservationImprovementII.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/third-eye-blue-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.CarefulObservationImprovementII.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "careful-observation-improvement-ii",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

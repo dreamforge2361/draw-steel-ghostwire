@@ -1,0 +1,164 @@
+{
+  "_id": "kcY2OReOaG4FG44Y",
+  "_key": "!items!kcY2OReOaG4FG44Y",
+  "name": "GHOSTWIRE.Classes.Scout.Items.CalledShotVitals.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "called-shot-vitals",
+    "story": "GHOSTWIRE.Classes.Scout.Items.CalledShotVitals.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "creature",
+      "custom": "",
+      "value": 1
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "CSVdamage0000000": {
+          "_id": "CSVdamage0000000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "damage",
+          "damage": {
+            "tier1": {
+              "value": "8 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "12 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "16 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        },
+        "CSVbleed00000000": {
+          "_id": "CSVbleed00000000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "applied",
+          "applied": {
+            "tier1": {
+              "display": "{{potency}}, bleeding (save ends)",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "agility"
+              },
+              "effects": {
+                "bleeding": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "effects": {
+                "bleeding": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "effects": {
+                "bleeding": {
+                  "condition": "failure",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.CalledShotVitals.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hunter"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

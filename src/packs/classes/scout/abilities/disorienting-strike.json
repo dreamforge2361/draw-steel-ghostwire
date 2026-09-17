@@ -1,0 +1,158 @@
+{
+  "_id": "EKCE24rMbAUY2UsV",
+  "_key": "!items!EKCE24rMbAUY2UsV",
+  "name": "GHOSTWIRE.Classes.Scout.Items.DisorientingStrike.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/hand-grip-sword-strike-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "disorienting-strike",
+    "story": "GHOSTWIRE.Classes.Scout.Items.DisorientingStrike.Story",
+    "keywords": [
+      "melee",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "qd50FlsYfrxTVaNT": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "qd50FlsYfrxTVaNT",
+          "damage": {
+            "tier1": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "6 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "NnAuNYuytTeAgHIE": {
+          "name": "Slide",
+          "img": null,
+          "type": "forced",
+          "_id": "NnAuNYuytTeAgHIE",
+          "forced": {
+            "tier1": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "2",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "3",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "movement": [
+                "slide"
+              ],
+              "distance": "5",
+              "display": "{{forced}}",
+              "properties": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Scout.Items.DisorientingStrike.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "scout"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "6bkslOUXu452LnvY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

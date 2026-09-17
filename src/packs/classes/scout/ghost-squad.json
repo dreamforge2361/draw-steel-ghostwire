@@ -1,0 +1,32 @@
+{
+  "_id": "btpmi7EJ078dLzwn",
+  "_key": "!items!btpmi7EJ078dLzwn",
+  "name": "GHOSTWIRE.Classes.Scout.Items.GhostSquad.Name",
+  "type": "feature",
+  "img": "icons/magic/control/silhouette-aura-energy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.GhostSquad.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-squad",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "oTtGNL1UNchTreqr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

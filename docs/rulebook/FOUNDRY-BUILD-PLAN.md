@@ -80,6 +80,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B6 | Classes 02â€“08 | Todo | Same pattern as Operator |
 | B7 | Wire / Veil / Machines lean packs | Todo | After Stage 4 rule text exists (or thin stubs) |
 | B8 | Chrome / Body Integrity data | **Done** (pack shipped) | Chrome pack with Integrity costs + provisional Â¥ |
+| B21 | Scout class pack | **Pending Michael test** | Scout (Advantage) + Hunter / Ghost / Face-in-crowd in Ghostwire Classes; mirrors Operator; module v0.1.25 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master â†’ Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -152,3 +153,9 @@ After each spike:
 ### B19 / B20 (Foundry-verified 2026-09-16)
 - [x] **B19** Full Gear master Categories 1–6 into packs: gear, mods, matrix, vehicles, foci (module v0.1.24)
 - [x] **B20** Mods expansion (armor/gadgets/weapons/vehicles) + §Craft skill text — Michael verified working
+
+### B21 Scout (2026-09-16)
+- [ ] **B21** Scout class pack from `02-scout.md`: class, Hunter / Ghost / Face-in-crowd, signatures, 3/5/7/9/11 bands, level 1â€“10 features; Chrome/Optics keywords; Advantage costs enforced in combat (module v0.1.25) â€” **pending Michael Foundry test**
+
+- [x] **B21** Scout class pack — Foundry-verified 2026-09-16 (Advantage; Hunter/Ghost/Face-in-crowd)
+

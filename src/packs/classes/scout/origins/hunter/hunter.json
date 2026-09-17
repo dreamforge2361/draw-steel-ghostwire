@@ -1,0 +1,255 @@
+{
+  "_id": "FOAxBIuTkLsc12k3",
+  "_key": "!items!FOAxBIuTkLsc12k3",
+  "name": "GHOSTWIRE.Classes.Scout.Items.Hunter.Name",
+  "type": "subclass",
+  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Scout.Items.Hunter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "02-scout",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hunter",
+    "advancements": {
+      "Vtil5ZGHchhKBAhM": {
+        "name": "GHOSTWIRE.Skills.List.Survival",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Vtil5ZGHchhKBAhM",
+        "skills": {
+          "choices": [
+            "survival"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Scout subclass grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "D17R1ZQ02Fp3J2XW": {
+        "name": "Quarry",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "D17R1ZQ02Fp3J2XW",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DarrEtCdLdGBy8xB"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "oaUOMReXNWaoHAeC": {
+        "name": "Ranged Reflex",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "oaUOMReXNWaoHAeC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SBjkYy0rVgTW8cVn"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Ms1qtImJsCiIizpj": {
+        "name": "Steady the Scope",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Ms1qtImJsCiIizpj",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0Vh182VbRYNznClB"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "PBcudyLHU0TiaEKn": {
+        "name": "Cold Read",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "PBcudyLHU0TiaEKn",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J4CR1QnFRKRgGVst"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "8tFOxwfh2lWIrtnV": {
+        "name": "2nd-Level Hunter Ability",
+        "img": "icons/weapons/guns/rifle-sniper-long.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "8tFOxwfh2lWIrtnV",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kcY2OReOaG4FG44Y"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tco6188b0wi1xyX5"
+          }
+        ],
+        "description": "<p>Choose one of the following abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "89xBizLZEDmctkfH": {
+        "name": "Range Discipline",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "89xBizLZEDmctkfH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.x7DLypSA71H7Q4AC"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "tbULwWXEjaUA0Zrh": {
+        "name": "6th-Level Hunter Ability",
+        "img": "icons/weapons/guns/rifle-sniper-long.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "tbULwWXEjaUA0Zrh",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZU6kJy1sx2oo59Py"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZMr1Fn1xCA96HWav"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wGZ3gchdON8fEj1c": {
+        "name": "Sensor-Fusion Smartlink",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "wGZ3gchdON8fEj1c",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mKORgVCCmFc04HMH"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "fd0WB7FwwcruJuXC": {
+        "name": "9th-Level Hunter Ability",
+        "img": "icons/weapons/guns/rifle-sniper-long.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "fd0WB7FwwcruJuXC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.i4x3Gelt6e65dQA5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HHwETIXk5I0Fi8o7"
+          }
+        ],
+        "description": "<p>Your Scout subclass grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "scout"
+  },
+  "effects": [],
+  "folder": "m6IvLjcvTrhI6N8j",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

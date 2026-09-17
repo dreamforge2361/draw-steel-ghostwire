@@ -25,7 +25,9 @@
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
       "Keywords": {
-        "Tech": "Tech"
+        "Tech": "Tech",
+        "Chrome": "Chrome",
+        "Optics": "Optics"
       },
       "Rush": {
         "Name": "Rush",
@@ -791,6 +793,383 @@
           "LoadoutShock": {
             "Name": "Loadout: Shock",
             "Description": "<p>Taser rounds, arc-grenades, and capacitor-charged knuckles. Your loadout damage type is <strong>lightning</strong>.</p><p>At 4th level, when you gain Combat Form, enable its lightning immunity effect on your sheet (and Warzone Incarnate’s Street-vet lightning effect at 10th level).</p>"
+          }
+        }
+      },
+      "Scout": {
+        "Folders": {
+          "Scout": "Scout",
+          "Abilities": "Abilities",
+          "Origins": "Origins",
+          "Hunter": "Hunter",
+          "Ghost": "Ghost",
+          "FaceInCrowd": "Face-in-crowd"
+        },
+        "Items": {
+          "GaspingInPain": {
+            "Name": "Gasping in Pain",
+            "Story": "Your precise strikes let your crew take advantage of a target’s agony.",
+            "Effect_after00000000000": "<p>One ally within 5 squares of the target [[/surge 1]].</p>"
+          },
+          "IWorkBetterAlone": {
+            "Name": "I Work Better Alone",
+            "Story": "“It’s better, just you and me. Isn’t it?”",
+            "Effect_after00000000000": "<p>If the target has none of your allies adjacent to them, you [[/surge 1]] before making the power roll.</p>"
+          },
+          "TeamworkHasItsPlace": {
+            "Name": "Teamwork Has Its Place",
+            "Story": "You hit an enemy the moment a crewmate exposes their weakness.",
+            "Effect_after00000000000": "<p>If any ally is adjacent to the target, you [[/surge 1]] before making the power roll.</p>"
+          },
+          "YouWereWatchingTheWrongOne": {
+            "Name": "You Were Watching the Wrong One",
+            "Story": "They can’t watch both of you at once.",
+            "Effect_after00000000000": "<p>As long as you have one or more allies within 5 squares of the target, you [[/surge 1]]. If you are flanking the target when you use this ability, choose one ally who is flanking with you. That ally also [[/surge 1]].</p>"
+          },
+          "DisorientingStrike": {
+            "Name": "Disorienting Strike",
+            "Story": "Your hit leaves them reeling, and you follow them into the gap.",
+            "Effect_after00000000000": "<p>You can shift into any square the target leaves when you slide them.</p>"
+          },
+          "Eviscerate": {
+            "Name": "Eviscerate",
+            "Story": "You leave your mark bleeding out after one devastating cut."
+          },
+          "GetInGetOut": {
+            "Name": "Get In Get Out",
+            "Story": "Move unexpectedly, strike fast, and be gone.",
+            "Effect_after00000000000": "<p>You can shift up to your speed, dividing that movement before or after your strike as desired.</p>"
+          },
+          "TwoThroatsAtOnce": {
+            "Name": "Two Throats at Once",
+            "Story": "A bargain."
+          },
+          "CoupDeGrace": {
+            "Name": "Coup de Grâce",
+            "Story": "Your blade — or your round — might be the last thing they see."
+          },
+          "OneHundredThroats": {
+            "Name": "One Hundred Throats",
+            "Story": "As you cross the floor, every enemy within reach feels it.",
+            "Effect_before0000000000": "<p>You shift up to your speed and make one power roll that targets up to three enemies who came adjacent to you during the move.</p>"
+          },
+          "Setup": {
+            "Name": "Setup",
+            "Story": "Your crew will thank you."
+          },
+          "Neurospike": {
+            "Name": "Neurospike",
+            "Story": "Your wired-reflex implant dumps a quarter-second of overclock into your nervous system — two strikes inside one heartbeat.",
+            "Effect_before0000000000": "<p>You use a strike signature ability twice.</p>"
+          },
+          "Dancer": {
+            "Name": "Dancer",
+            "Story": "You drop into a flow state that makes you nearly impossible to pin down.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, whenever an enemy moves or is force moved adjacent to you or damages you, you can take the Disengage move action as a free triggered action.</p>"
+          },
+          "MisdirectingStrike": {
+            "Name": "Misdirecting Strike",
+            "Story": "“Why are you looking at ME?!”",
+            "Effect_after00000000000": "<p>The target is taunted by a willing ally within 5 squares of you until the end of the target’s next turn.</p>"
+          },
+          "PinningShot": {
+            "Name": "Pinning Shot",
+            "Story": "One round — placed well and placed hard."
+          },
+          "StaggeringBlow": {
+            "Name": "Staggering Blow",
+            "Story": "There’s no recovering from this."
+          },
+          "FlashScreen": {
+            "Name": "Flash-Screen",
+            "Story": "A wrist-emitter pulse floods the area with broad-spectrum flash — dazzled sensors, thermal-white, saturated HUDs.",
+            "Effect_before0000000000": "<p>A flash-emitter screen fills the area until the end of your next turn, granting you and your allies concealment against enemies. While you are in the area, whenever an enemy ends their turn in the area, you can use a free triggered action to shift to a new location within the area and make a free strike against them.</p>"
+          },
+          "BlindsideShift": {
+            "Name": "Blindside Shift",
+            "Story": "A wired-reflex snatch-and-drag behind the nearest column, into a maintenance duct, or over a railing — and a Ghost Suite emitter pulse on the way back.",
+            "Effect_before0000000000": "<p>You and the target are removed from the encounter map until the start of your next turn. You reappear in the spaces you left or the nearest unoccupied spaces. Make the power roll upon your return; its damage is a thermal-optic pulse.</p>"
+          },
+          "RooftopRush": {
+            "Name": "Rooftop Rush",
+            "Story": "A mag-grip parkour vault and an optical stutter. You vanish. They fall. You reappear.",
+            "Effect_after00000000000": "<p>You disappear before making the power roll. After the power roll is resolved, you appear in the first unoccupied space at the far end of the line.</p>"
+          },
+          "YouTalkTooMuch": {
+            "Name": "You Talk Too Much",
+            "Story": "Silence is a virtue. A round through the larynx — or a jammed commlink — is the next best thing.",
+            "Effect_after00000000000": "<p>The target can’t communicate with anyone until the end of the encounter. [[/apply QcDNVWsfPwbqgWbU]]</p>"
+          },
+          "Assassinate": {
+            "Name": "Assassinate",
+            "Story": "A practiced kill on an already weakened mark.",
+            "Effect_after00000000000": "<p>A target who is not a minion, leader, or solo creature and who is winded after taking this damage is reduced to 0 Stamina.</p>"
+          },
+          "KillZoneMesh": {
+            "Name": "Kill-Zone Mesh",
+            "Story": "A throwable micro-emitter mesh snaps open — low-yield thermal lasers on tripwire paint a kill zone.",
+            "Effect_after00000000000": "<p>The mesh deals thermal-optic damage.</p>"
+          },
+          "OverclockCascade": {
+            "Name": "Overclock Cascade",
+            "Story": "Your wired-reflex chrome runs at redline for one second, and the room is already over.",
+            "Effect_before0000000000": "<p>You can use a strike signature ability four times, use a strike signature ability that gains an edge three times, or use a strike signature ability that has a double edge twice. You can shift up to 2 squares between each use.</p>"
+          },
+          "TheyAlwaysLineUp": {
+            "Name": "They Always Line Up",
+            "Story": "One round, fast enough to pass through a line of enemies and hamstring every one of them."
+          },
+          "HesitationIsWeakness": {
+            "Name": "Hesitation Is Weakness",
+            "Story": "You read a crewmate’s cue and step into the seam.",
+            "Trigger": "Another hero ends their turn. That hero can’t have used this ability to start their turn.",
+            "Effect_before0000000000": "<p>You take your turn after the triggering hero.</p>"
+          },
+          "CarefulObservation": {
+            "Name": "Careful Observation",
+            "Story": "A moment of focus leaves a foe firmly in your sights.",
+            "Effect_before0000000000": "<p>As long as you remain within distance of the target, maintain line of effect to them, and strike no other creature first, you gain an edge on the next strike you make against the assessed creature, and [[/surge 1]] you can use only on that strike.</p>"
+          },
+          "NightWatchStrike": {
+            "Name": "Night Watch",
+            "Story": "A silenced round from nowhere knocks another weapon off course.",
+            "Trigger": "The target takes damage from another creature’s ability while you are hidden.",
+            "Effect_before0000000000": "<p>The target takes half the damage. You remain hidden.</p>"
+          },
+          "Advantage": {
+            "Name": "Advantage",
+            "Description": "<p>Advantage is the read — the fraction of a second in which an enemy has committed to a bad decision, cashed into precision. You are a fully mundane class: no Veil, no Signal, no magic. Chrome never generates Advantage directly.</p><h4>Advantage in Combat</h4><p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain Advantage equal to [[lookup @hero.victories]]{your Victories}. At the start of each of your turns during combat, you [[/gain 1d3 hr]]{gain 1d3 Advantage}.</p><p>Additionally, the first time each combat round that you deal damage incorporating 1 or more surges, you [[/gain 1 hr]]{gain 1 Advantage}.</p><p>Whenever you use a heroic ability that makes use of a power roll, that ability costs 1 fewer Advantage if you have an edge or double edge on it. If the ability has multiple targets, the cost is reduced even if the ability gains an edge or has a double edge against only one target.</p><p>You lose any remaining Advantage at the end of the encounter.</p><h4>Advantage Outside of Combat</h4><p>Although you can’t gain Advantage outside of combat, you can use your heroic abilities and effects that cost Advantage without spending it. Whenever you use an ability or effect outside of combat that costs Advantage, you can’t use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite.</p><p>When you use an ability outside of combat that lets you spend unlimited Advantage on its effect, such as the Ghost subclass’s Grapnel-Blink, you can use it as if you had spent an amount of Advantage equal to [[lookup @hero.victories]]{your Victories}.</p><h4>Surges</h4><p>A <strong>surge</strong> is a stored, one-shot damage boost — the read paying off on the trigger pull, the cut, or the placed shot. Several Scout abilities and features give you surges. You spend a surge by adding damage to a strike: <strong>+2 damage at Echelon 1, +3 at Echelon 2, +4 at Echelon 3, +5 at Echelon 4</strong>. A single strike can use multiple surges, and they stack. Unspent surges are lost at the end of the encounter.</p><p><em>In Foundry, Advantage costs are enforced in combat at the ability’s full cost: you can’t use a heroic ability with less Advantage than it costs. Apply the edge discount by adjusting the spend in the use dialog.</em></p>"
+          },
+          "KeepItDown": {
+            "Name": "Keep It Down",
+            "Description": "<p>While conversing with any creature you share a language with, you can decide whether anyone else can perceive what you’re conveying, even while yelling (throat-modulator and laryngeal-focus chrome).</p>"
+          },
+          "NightWatch": {
+            "Name": "Night Watch",
+            "Description": "<p>Your sense for stealth shows those around you how to evade notice. While you are hidden, enemies take a bane on tests made to search for you or other hidden creatures within 10 squares of you.</p><p>Additionally, you have the Night Watch triggered ability.</p>"
+          },
+          "SurgeOfAdvantage": {
+            "Name": "Surge of Advantage",
+            "Description": "<p>The first time each combat round that you deal damage incorporating 1 or more surges, you gain 2 Advantage instead of 1.</p>"
+          },
+          "GhostSuite": {
+            "Name": "Ghost Suite",
+            "Description": "<p>Your prototype optical-camo and dermal chromatic-camo array is class-granted chrome: it doesn’t use a chrome slot or Body Integrity.</p><p>As a maneuver, you activate the suite. You stay in Ghost Suite mode until the end of the encounter, until you are dying, or until you deactivate it after 1 uninterrupted hour of quiet focus outside of combat. While it’s active, you gain the following effects: [[/apply GS0000000000suit]]</p><ul><li><p>You can automatically climb at full speed while moving (mag-grip gauntlets and boots).</p></li><li><p>Enemies’ spaces don’t count as difficult terrain for you. An enemy takes thermal-optic damage equal to [[lookup @A]]{your Reflex score} the first time you pass through their space on a turn. [[/damage @A]]</p></li><li><p>If you end your turn with cover or concealment from another creature, you are automatically hidden from that creature.</p></li><li><p>You [[/surge 1]] at the start of each of your turns.</p></li><li><p>You have thermal-optic damage immunity equal to 5 + your level.</p></li><li><p>The suite’s emitters run hot: creatures gain an edge on strikes against you.</p></li><li><p>You take a bane on Persona tests made to interact with other creatures.</p></li></ul>"
+          },
+          "SharperEye": {
+            "Name": "Sharper Eye",
+            "Description": "<p>At the start of each of your turns during combat, you [[/gain 1d3+1 hr]]{gain 1d3 + 1 Advantage} instead of 1d3.</p>"
+          },
+          "CarefulObservationImprovementI": {
+            "Name": "Careful Observation Improvement I",
+            "Description": "<p>You can target two creatures simultaneously with your Careful Observation ability, observing both. Making a strike against one target doesn’t end your observation of the other target.</p>"
+          },
+          "Ventriloquist": {
+            "Name": "Ventriloquist",
+            "Description": "<p>Whenever you communicate, you can throw your voice so that it seems to originate from a creature or object within 10 squares (the same laryngeal-modulator chrome the Mask Rig fields at higher fidelity). If you are hidden, talking this way doesn’t cause you to be revealed.</p>"
+          },
+          "GhostSquad": {
+            "Name": "Ghost Squad",
+            "Description": "<p>Your Ghost Suite paints persistent, moving optical-camo decoys of you, backed by your crew’s shared HUD feed. At the start of each of your turns, you can forgo gaining Advantage to create [[/roll 1d6]] chromatic decoys of yourself in unoccupied adjacent spaces. A decoy acts on your turn and uses your statistics, except they have 1 Stamina. They are affected by any conditions and effects on you, and last until the start of your next turn. A decoy doesn’t have Advantage and can’t use the Careful Observation ability, the Ghost Suite feature, or any triggered actions. On their turn, a decoy has a move action, a maneuver, and a main action that they can use only to make a free strike. While making a free strike, a decoy must choose targets that you or another decoy aren’t also striking.</p><p>Outside of combat, you can have one decoy active for every 2 Victories you have. If a decoy is destroyed, you must wait 1 hour before creating another one.</p>"
+          },
+          "DeathPool": {
+            "Name": "Death Pool",
+            "Description": "<p>The first time each combat round that you deal damage incorporating 1 or more surges, you gain 3 Advantage instead of 2.</p>"
+          },
+          "CarefulObservationImprovementII": {
+            "Name": "Careful Observation Improvement II",
+            "Description": "<p>You can target three creatures simultaneously with your Careful Observation ability.</p>"
+          },
+          "GhostSuiteImproved": {
+            "Name": "Ghost Suite Improved",
+            "Description": "<p>You gain full control over your Ghost Suite, and you can end it at will (no action required). The suite now runs cold: while it’s active you are always wreathed in optical distortion that grants you concealment, and creatures no longer gain an edge on strikes against you.</p><p>Once per day, while your Ghost Suite is active, you can spend 1 uninterrupted minute concentrating on a location where you’ve previously placed a Ghost Suite navigation beacon. At the end of that minute, you and each willing creature of your choice within 10 squares of you are extracted to unoccupied spaces of your choice within that location (a pre-scouted grapnel and mag-cable route through a vertical shaft or ductwork). Each creature who travels this way is invisible for 1 hour or until they use an ability.</p>"
+          },
+          "Subterfuge": {
+            "Name": "Subterfuge",
+            "Description": "<p>You have an epic resource called Subterfuge. Each time you finish a respite, you gain Subterfuge equal to the XP you gain. You can spend Subterfuge on your abilities as if it were Advantage.</p><p>Additionally, you can spend Subterfuge to take additional maneuvers on your turn. You can use one maneuver for each Subterfuge you spend.</p><p>Subterfuge remains until you spend it.</p>"
+          },
+          "Quarry": {
+            "Name": "Quarry",
+            "Story": "You mark the target the way an old-line hunter marks a deer, and the mark stays.",
+            "Effect_spend00000000000": "<p>You [[/surge 1]] for each Advantage spent. You can use these surges only on your first strike against the Marked target this round.</p>",
+            "Effect_before0000000000": "<p>The target is Marked by you until the end of the encounter, until it dies, or until you use this ability on another target. [[/apply QR00000000marked]] You always know a Marked target’s direction and general distance from you while it is within the same hive stratum, even through walls or cover.</p><p>The first strike you make against a Marked target each round deals +1 damage at Echelon 1, +2 at Echelon 2, +3 at Echelon 3, and +4 at Echelon 4.</p>"
+          },
+          "RangedReflex": {
+            "Name": "Ranged Reflex",
+            "Description": "<p>The shooter finds the calm in the perch. Your ranged strikes gain an edge against any target that is at least 5 squares away from you and Marked by you.</p>"
+          },
+          "SteadyTheScope": {
+            "Name": "Steady the Scope",
+            "Story": "You feel the wind, hold the breath, wait the beat.",
+            "Trigger": "You would take a bane on a ranged strike from being observed, dazed, harried, or knocked off a firing position.",
+            "Effect_before0000000000": "<p>You ignore the bane on this strike, and you [[/surge 1]] that you can use only on this strike.</p>"
+          },
+          "ColdRead": {
+            "Name": "Cold Read",
+            "Description": "<p>The first Marked target you damage from 5 or more squares away each round becomes visible to all your allies through walls and cover (a thermal-signature call-out from your smartlink to their HUDs) until the start of your next turn.</p>"
+          },
+          "CalledShotVitals": {
+            "Name": "Called Shot (Vitals)",
+            "Story": "Center of the mark, where the body can’t afford to lose it.",
+            "Effect_after00000000000": "<p>If the target is Marked by you, this ability deals 2 extra damage.</p>"
+          },
+          "CalledShotCommlink": {
+            "Name": "Called Shot (Comm-link)",
+            "Story": "You put the round through their comm rig, and their crew goes quiet."
+          },
+          "RangeDiscipline": {
+            "Name": "Range Discipline",
+            "Description": "<p>Any Scout ability that has a ranged distance of 5 has a ranged distance of 10 for you. Additionally, your Quarry first-strike damage bonus doubles (+2 at Echelon 1, +4 at Echelon 2, +6 at Echelon 3, +8 at Echelon 4).</p>"
+          },
+          "OverwatchLane": {
+            "Name": "Overwatch Lane",
+            "Story": "Pure Longshot control: you own a lane, and anything in it is yours.",
+            "Effect_before0000000000": "<p>You take a stance and designate a firing lane 5 squares wide within distance. Until the start of your next turn, the first enemy each turn to enter the lane or take an action inside it triggers a free ranged strike from you (main-action equivalent).</p>"
+          },
+          "GhostRound": {
+            "Name": "Ghost Round",
+            "Story": "A subsonic, thermally baffled round. Nobody sees where it came from.",
+            "Effect_after00000000000": "<p>The target and all enemies within 5 squares of the target don’t detect the shot’s origin: they can’t use the shot to impose a bane on you, and can’t mark your position for their allies. On a high result, you remain hidden from the target and its allies, even if observed.</p>"
+          },
+          "SensorFusionSmartlink": {
+            "Name": "Sensor-Fusion Smartlink",
+            "Description": "<p>Your smartlink stack backs out the geometry: Marked targets gain no benefit from cover against you. Additionally, you can make ranged strikes with the Longshot Kit at a distance of 20.</p>"
+          },
+          "OneShotOneKill": {
+            "Name": "One Shot One Kill",
+            "Story": "The Longshot Division’s promise: one trigger pull, one closed contract.",
+            "Effect_after00000000000": "<p>A Marked target who is not a minion, leader, or solo creature and who is winded after taking this damage is reduced to 0 Stamina.</p>"
+          },
+          "VantageTrap": {
+            "Name": "Vantage Trap",
+            "Story": "You pre-laid the kill zone: climb spots, mag-grip anchors, thermal-baffle panels, one dropped emitter.",
+            "Effect_before0000000000": "<p>You place a zone with a 5-square radius within distance. Until the end of the encounter or until you leave the encounter map, you can make one free ranged strike (main-action equivalent) each round against an enemy who enters the zone or takes an action inside it. When you make that strike, you can move up to your speed for free.</p>"
+          },
+          "Hunter": {
+            "Name": "Hunter",
+            "Description": "<p><em>“The Longshot.”</em> <strong>Ironclad Longshot Division</strong> — a corporate black-program for the long-range marksman: optics, ballistics, static-position observation, and Ironclad’s sensor-fusion smartlink stack. You read a room from four hundred meters up, tag the mark, and call the shot before your crew crosses the threshold.</p><p>At 1st level you gain the Survival skill, the Quarry and Ranged Reflex features, and the Steady the Scope triggered action. Recommended Kit: <strong>Longshot</strong>.</p>"
+          },
+          "GrapnelBlink": {
+            "Name": "Grapnel-Blink",
+            "Story": "A micro-jet grapnel burst, mag-grip catch, and gas-kick landing. From where they stand, it looks like a teleport. It isn’t.",
+            "Effect_spend00000000000": "<p>You Blink 1 additional square for each Advantage spent.</p>",
+            "Effect_before0000000000": "<p>You Blink: you reposition up to 5 squares via your Blink Rig. If you have concealment or cover at your destination, you can use the Hide maneuver even if you are observed. If you successfully hide using this maneuver, you [[/surge 1]].</p>"
+          },
+          "RigRecovery": {
+            "Name": "Rig Recovery",
+            "Story": "The Rig sees the hit coming half a beat before your brain does.",
+            "Trigger": "You take damage.",
+            "Effect_spend00000000000": "<p>You Blink 1 additional square for each Advantage spent.</p>",
+            "Effect_before0000000000": "<p>You take half the damage, then can Blink up to 4 squares after the triggering effect resolves.</p>"
+          },
+          "KickedSparks": {
+            "Name": "Kicked Sparks",
+            "Description": "<p>The Rig’s compressed-gas thrust and mag-grip strike-plates throw off a thermal-kinetic bloom. The first time on a turn that you Blink away from or into a space adjacent to an enemy, that enemy takes thermal-kinetic damage equal to [[lookup @A]]{your Reflex score}. [[/damage @A]]</p>"
+          },
+          "GrapnelSnatch": {
+            "Name": "Grapnel Snatch",
+            "Story": "The grapnel bites into their harness and yanks them where you want them."
+          },
+          "RigReflex": {
+            "Name": "Rig Reflex",
+            "Story": "The Rig throws you clear and your hand is already moving.",
+            "Trigger": "You use your Rig Recovery ability.",
+            "Effect_before0000000000": "<p>You ignore any effects associated with the damage that triggered your Rig Recovery ability. Before you Blink, you can make a free strike against a creature who damaged you to trigger Rig Recovery. After you Blink, you can spend a Recovery.</p>"
+          },
+          "KillBlink": {
+            "Name": "Kill-Blink",
+            "Description": "<p>Whenever you reduce a non-minion creature to 0 Stamina, you can immediately use a free maneuver to use your Grapnel-Blink ability. Additionally, whenever you Blink, you can bring an adjacent willing creature along with you (the Rig’s tandem-carry mode). The creature appears in an unoccupied space adjacent to the space you Blinked into. If no such space exists, they can’t come with you.</p>"
+          },
+          "RooftopSnap": {
+            "Name": "Rooftop Snap",
+            "Story": "The grapnel hooks their harness, gear, or cyberlimb and hauls them up the wall.",
+            "Effect_after00000000000": "<p>A creature force moved by this ability must be moved straight upward.</p>"
+          },
+          "StormTheVent": {
+            "Name": "Storm the Vent",
+            "Story": "Every Rig in the crew fires at once — or piggybacks on yours.",
+            "Effect_before0000000000": "<p>Each target can Blink up to 5 squares. For each target in addition to you who Blinks away from or into a space adjacent to an enemy, that enemy takes thermal-kinetic damage equal to [[lookup @A]]{your Reflex score}. [[/damage @A]] Additionally, a target who ends this movement in concealment or cover can use the Hide maneuver even if they are observed.</p>"
+          },
+          "RigNativeMovement": {
+            "Name": "Rig-Native Movement",
+            "Description": "<p>Whenever you willingly move, you can Blink instead. When you Blink this way, it counts as using a Scout ability for the purpose of triggering your Kicked Sparks and Kill-Blink features.</p>"
+          },
+          "ChainBlink": {
+            "Name": "Chain-Blink",
+            "Story": "Anchor, burst, catch, cut, anchor again — a chain of Blinks through the whole crew.",
+            "Effect_before0000000000": "<p>You Blink up to twice your speed, making one power roll that targets each creature you come adjacent to during the Blink chain.</p>"
+          },
+          "TheGrate": {
+            "Name": "The Grate",
+            "Story": "They are alive. They are somewhere else. Deep-Dark Recovery will find them, or nobody will.",
+            "Effect_after00000000000": "<p>This ability deals thermal-kinetic damage. On a critical hit, the target is grapnel-hooked and dragged into the nearest unsealed vent, maintenance grate, or utility shaft, and doesn’t reappear on the encounter map.</p>"
+          },
+          "Ghost": {
+            "Name": "Ghost",
+            "Description": "<p><em>“The Knife.”</em> <strong>Ferrum Dynastic Deep-Dark Program</strong> — a corporate wetwork cadre trained in the sealed strata below the Warrens. You close the distance, take the target with a blade, and leave through a maintenance grate nobody knew was there. Your signature gear is the <strong>Blink Rig</strong>: a micro-jet grapnel, mag-grip gauntlets, and a compressed-gas kick module. When you <strong>Blink</strong>, you reposition via the Rig; it looks like a teleport, and it’s very good corp engineering.</p><p>At 1st level you gain the Demolitions skill (sabotage), the Grapnel-Blink ability, and the Rig Recovery triggered action. Recommended Kit: <strong>Ghost</strong>.</p>"
+          },
+          "MaskRig": {
+            "Name": "Mask Rig",
+            "Story": "Your dermal-holo array paints a friendly face; the Rig’s smartlink sells the arcology’s own badge geometry back to its sensors.",
+            "Effect_spend00000000000": "<p>Choose a creature whose size is no more than 1 greater than yours and who is within 10 squares. The Rig makes you appear as that creature: full body silhouette plus laryngeal voice modulation. You gain an edge on tests made to convince the creature’s allies that you are the creature.</p>",
+            "Effect_before0000000000": "<p>You activate the Rig. It makes you appear nonthreatening and harmless to your enemies — their HUDs read you as a low-priority civilian, badge-carrier, or maintenance worker. While the Rig is active, your strikes gain an edge, and when you take the Disengage move action, you gain a +1 bonus to the distance you can shift.</p><p>The Rig deactivates when you harm another creature, when you physically interact with a creature, when you use this ability again, or when you end it (no action required). If you end the Rig by harming another creature, you [[/surge 1]].</p>"
+          },
+          "Diversion": {
+            "Name": "Diversion",
+            "Story": "A Rig-projected shout, a chest-cam glare, a badge-reader ping in the wrong direction.",
+            "Trigger": "An enemy targets you with a strike.",
+            "Effect_before0000000000": "<p>Choose an enemy within distance of the triggering strike, including the enemy who targeted you. The strike targets that enemy instead.</p>"
+          },
+          "WrongTarget": {
+            "Name": "Wrong Target",
+            "Description": "<p>Your Rig sells you as friendly hard enough to fool an area targeting system. Whenever an enemy uses an ability or trait that targets multiple of their allies and you are within distance of the effect, you can choose to be a target of the effect as well.</p><p>Additionally, when you activate your Mask Rig, you can take the Disengage move action as part of that activation.</p>"
+          },
+          "VoiceThrow": {
+            "Name": "Voice Throw",
+            "Story": "You throw a laryngeal-modulator projection into the crowd — a bark, a shout, an order.",
+            "Effect_after00000000000": "<p>This forced movement ignores stability. Instead, the forced movement is reduced by a number equal to the target’s Instinct score.</p>"
+          },
+          "FaceCut": {
+            "Name": "Face-Cut",
+            "Story": "A fast Rig-projected feint, and you’re somewhere they aren’t looking.",
+            "Trigger": "Another creature targets you with a strike.",
+            "Effect_before0000000000": "<p>You use your Diversion ability with no Advantage cost against the triggering creature and strike. You can reposition to an unoccupied space within 3 squares of that creature and can make a free strike against them. You can then spend a Recovery.</p>"
+          },
+          "FaceThief": {
+            "Name": "Face-Thief",
+            "Description": "<p>Whenever you reduce an adjacent non-minion creature to 0 Stamina, you can immediately use a free maneuver to activate your Mask Rig and then move up to your speed. If the creature is the same size as you, your Rig can present as them (a stolen face capture from your chin-line optics) without spending Advantage. If you do, while the Rig is active, the corpse is dermal-holographed to look like you. The projection on the body ends if another creature physically interacts with it. When the projection would end for either you or the corpse, it ends for both.</p>"
+          },
+          "EverybodysLooking": {
+            "Name": "Everybody’s Looking",
+            "Story": "Your Rig broadcasts a swarm of projection decoys; their targeting systems track three ghosts of every friendly.",
+            "Effect_before0000000000": "<p>Until the start of your next turn, any ability roll made against a target gains an edge.</p>"
+          },
+          "WearThem": {
+            "Name": "Wear Them",
+            "Story": "The Rig sells them the wrong enemy, then speaks with their commander’s voice.",
+            "Effect_after00000000000": "<p>You choose the new targets for the original target’s free strike or ability. Additionally, if your Rig is active (you are hidden or disguised), using this ability doesn’t cause you to be revealed.</p>"
+          },
+          "Blend": {
+            "Name": "Blend",
+            "Description": "<p>Your movement no longer provokes opportunity attacks (the Rig sells you as staff or civilian to the targeting stack). Additionally, you can use your Face-Thief feature as a free triggered action when a creature is reduced to 0 Stamina by your Diversion ability.</p>"
+          },
+          "IAmYou": {
+            "Name": "I Am You",
+            "Story": "Your Rig runs a full-fidelity capture of the target — retina, gait, voice, badge chip.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, you gain the target’s damage immunities and speed (if they are better than yours), and can use any types of movement they can use. You can also use the target’s signature ability, using their bonus for the power roll.</p>"
+          },
+          "TheWearersCut": {
+            "Name": "The Wearer’s Cut",
+            "Story": "The target sees a friend, a lover, a boss — and dies mid-relief.",
+            "Effect_after00000000000": "<p>If your Mask Rig disguises you as a creature the target knew, this ability deals extra [[/damage 3*@A]]{damage} equal to three times your Reflex score.</p>"
+          },
+          "FaceInCrowd": {
+            "Name": "Face-in-crowd",
+            "Description": "<p><em>“The Mask.”</em> <strong>Nyx Cartel Mask-Line</strong> — the street-independent face-thief crew that slips through corp badges wearing someone else’s face. Where a Ferrum knife takes a target hard, a Nyx Mask takes them soft. Your signature gear is the <strong>Mask Rig</strong>: a dermal-holographic projection array, synth-skin face-plate, laryngeal voice modulator, and an off-brand smartlink that hijacks badge geometry in real time. It isn’t illusion magic; it’s very good black-market chrome.</p><p>At 1st level you gain the Deception skill (lie), the Mask Rig ability, and the Diversion triggered action. Recommended Kit: <strong>Ghost</strong> or <strong>Saturation</strong>.</p>"
+          },
+          "Class": {
+            "Name": "Scout",
+            "Description": "<p>You are a Scout — on a clean corp badge an “asymmetric-operations specialist,” on the street a ghost, a shade, a kite, or simply the knife. You are the crew’s infiltrator, marksman, long eye, and assassin: somewhere else the moment the fight arrives, and already gone the moment it’s over. Where the Operator wins the firefight with discipline and chrome, you win it by never being in the fight the enemy thought they were in.</p><p>You are fully mundane — no Veil, no Signal, no magic. Your edge is the read: the disciplined study of an enemy’s tells, feeding a stack of chrome and gear that turns the read into precision. From it you bank <strong>Advantage</strong> and spend it on precision strikes, escapes, misdirections, and kills so decisive the target is dead before they know they were engaged.</p><p>You trained at one of three schools, and your school is your subclass: <strong>Hunter</strong> (Ironclad Longshot Division), <strong>Ghost</strong> (Ferrum Dynastic Deep-Dark Program), or <strong>Face-in-crowd</strong> (Nyx Cartel Mask-Line).</p><p><strong>Core characteristics:</strong> Reflex, Logic · <strong>Heroic resource:</strong> Advantage · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> yes (light Kits).</p>"
           }
         }
       }
