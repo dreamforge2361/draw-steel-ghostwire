@@ -345,6 +345,37 @@
           "type": "",
           "perkType": []
         }
+      },
+      "GYg5OJWNSZHeBUKp": {
+        "_id": "GYg5OJWNSZHeBUKp",
+        "name": "Loadout Damage Type",
+        "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BQ3UQIiQgvXBAIio"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.REe7uNiuRJwD5svh"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OU85EAk2wlCbozAy"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RWNOimppB4tiQ4m8"
+          }
+        ],
+        "sort": 0,
+        "description": "<p>Choose the rounds and rigs you favor. Street-vet abilities and features that refer to your loadout damage type use this type.</p>",
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
       }
     },
     "classLink": "operator"

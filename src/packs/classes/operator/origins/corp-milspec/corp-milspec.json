@@ -213,7 +213,7 @@
         "img": null,
         "type": "itemGrant",
         "requirements": {
-          "level": 3
+          "level": 6
         },
         "_id": "CERH6ocqIdA43kOj",
         "description": "<p>Your Operator Origin grants you the following feature.</p>",

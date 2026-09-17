@@ -1,0 +1,32 @@
+{
+  "_id": "5P7f0Xf4LbrxPJRy",
+  "_key": "!items!5P7f0Xf4LbrxPJRy",
+  "name": "GHOSTWIRE.Classes.Operator.Items.FieldArsenal.Name",
+  "type": "feature",
+  "img": "icons/containers/bags/pack-leather-black-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.FieldArsenal.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-arsenal",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DXXacIuPdX5M1mVE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

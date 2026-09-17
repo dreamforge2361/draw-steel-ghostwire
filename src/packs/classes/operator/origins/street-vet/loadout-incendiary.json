@@ -1,0 +1,32 @@
+{
+  "_id": "OU85EAk2wlCbozAy",
+  "_key": "!items!OU85EAk2wlCbozAy",
+  "name": "GHOSTWIRE.Classes.Operator.Items.LoadoutIncendiary.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/flame-burning-campfire-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.LoadoutIncendiary.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "loadout-incendiary",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

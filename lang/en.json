@@ -745,7 +745,7 @@
           },
           "Merc": {
             "Name": "Merc",
-            "Description": "<p><em>“Free Company Veteran.”</em> Field Arsenal training — the only Origin that maintains <strong>two</strong> Kits at once — built on staying a step ahead of the job and the people paying for it.</p><p>At 1st level you gain the Demolitions skill and choose two Kits. With two Kits, you use the better Stamina, speed, stability, disengage, and distance bonus of the two, and the damage bonus of your preferred Kit (mark it on the sheet).</p>"
+            "Description": "<p><em>“Free Company Veteran.”</em> Field Arsenal training — the only Origin that maintains <strong>two</strong> Kits at once — built on staying a step ahead of the job and the people paying for it.</p><p>At 1st level you gain the Demolitions skill and choose two Kits (see Field Arsenal).</p>"
           },
           "CombatInstinct": {
             "Name": "Combat Instinct",
@@ -757,7 +757,7 @@
           },
           "WiredReflexes": {
             "Name": "Wired Reflexes",
-            "Story": "You are as elusive as a hummingbird.",
+            "Story": "Your boosted nervous system moves you before the hit fully lands.",
             "Trigger": "You take damage.",
             "Effect_spend00000000000": "<p>If the damage has any potency effects associated  with it, the potency is reduced by 1 for you.</p>",
             "Effect_before0000000000": "<p>You take half the damage from the triggering effect and can shift up to a number of squares equal to [[lookup @A]]{your Reflex score}.</p>"
@@ -811,7 +811,7 @@
           },
           "StreetVet": {
             "Name": "Street-vet",
-            "Description": "<p><em>“Self-Made Killer.”</em> Gutter Instinct training — you survived the street long enough to turn it into a profession, and you can’t be caught flat-footed.</p><p>At 1st level you gain the Intimidation skill and choose one Kit.</p><p><strong>Loadout damage type.</strong> At 1st level, choose the rounds and rigs you favor: cryo (cold), toxin (corruption), incendiary (fire), or shock (lightning). Street-vet abilities and features that refer to your loadout damage type use this type. You can change it when you finish a respite.</p>"
+            "Description": "<p><em>“Self-Made Killer.”</em> Gutter Instinct training — you survived the street long enough to turn it into a profession, and you can’t be caught flat-footed.</p><p>At 1st level you gain the Intimidation skill, choose one Kit, and choose your <strong>loadout damage type</strong>: cryo (cold), toxin (corruption), incendiary (fire), or shock (lightning). Street-vet abilities and features that refer to your loadout damage type use it.</p>"
           },
           "GutterInstinct": {
             "Name": "Gutter Instinct",
@@ -819,7 +819,7 @@
           },
           "OverclockNerves": {
             "Name": "Overclock Nerves",
-            "Story": "In your anger, you revert to a more bestial form.",
+            "Story": "Pain spikes, your nerves overclock, and your body stops listening to it.",
             "Trigger": "You lose Stamina and are not dying.",
             "Effect_spend00000000000": "<p>if you are not dying, you can spend a Recovery.</p>",
             "Effect_before0000000000": "<p>You gain [[/heal @M temp]]{temporary Stamina} equal to your Physique score as your nerves overclock and pain stops registering.</p>"
@@ -876,6 +876,26 @@
           "GrowingAdrenalineStreetVet": {
             "Name": "Growing Adrenaline",
             "Description": "<p>You gain certain benefits in combat based on the amount of Adrenaline you have. These benefits last until the end of your turn, even if a benefit would become unavailable to you because of the amount of Adrenaline you spend during your turn. Some Growing Adrenaline benefits can be applied only if you are a specific level or higher, with the level of those benefits noted in the various Growing Adrenaline tables in this section.</p><table><thead><tr><th><p>Adrenaline</p></th><th><p>Benefit</p></th></tr></thead><tbody><tr><td><p>2</p></td><td><p>Whenever you use the Knockback maneuver, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr><tr><td><p>4</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 1]].</p></td></tr><tr><td><p>6</p></td><td><p>You gain an edge on Reflex tests and the Knockback maneuver</p></td></tr><tr><td><p>8 (4th Level)</p></td><td><p>The first time you slide a creature on a turn, you [[/surge 2]].</p></td></tr><tr><td><p>10 (7th Level)</p></td><td><p>You have a double edge on Reflex tests and the Knockback maneuver.</p></td></tr><tr><td><p>12 (10th Level)</p></td><td><p>Whenever you use a heroic ability, you gain [[/heal 10 temporary]]. Additionally, whenever you make a power roll that imposes forced movement on a target, the forced movement distance gains a bonus equal to [[lookup @A]]{your Reflex score}.</p></td></tr></tbody></table>"
+          },
+          "FieldArsenal": {
+            "Name": "Field Arsenal",
+            "Description": "<p>You carry two Kits. You use the better Stamina, speed, stability, disengage, and melee/ranged distance bonus of the two, and the <strong>damage</strong> bonus of your <strong>preferred Kit</strong>.</p><p><strong>Set your preferred Kit:</strong> on your hero sheet’s <strong>Equipment</strong> tab, right-click a Kit and choose <strong>Make Preferred Kit</strong>. A star marks it. Switch it whenever you swap weapons.</p><p>Each Kit still needs its own qualifying gear (see the Kits chapter ownership rule).</p>"
+          },
+          "LoadoutCryo": {
+            "Name": "Loadout: Cryo",
+            "Description": "<p>Liquid-nitrogen rounds, freeze grenades, and cryo-lines that lock joints solid. Your loadout damage type is <strong>cold</strong>.</p><p>At 4th level, when you gain Combat Form, enable its cold immunity effect on your sheet (and Warzone Incarnate’s Street-vet cold effect at 10th level).</p>"
+          },
+          "LoadoutToxin": {
+            "Name": "Loadout: Toxin",
+            "Description": "<p>Nerve-agent darts, bio-hazard slugs, and corrosive payloads from the black clinics. Your loadout damage type is <strong>corruption</strong>.</p><p>At 4th level, when you gain Combat Form, enable its corruption immunity effect on your sheet (and Warzone Incarnate’s Street-vet corruption effect at 10th level).</p>"
+          },
+          "LoadoutIncendiary": {
+            "Name": "Loadout: Incendiary",
+            "Description": "<p>Dragon’s-breath shells, thermite charges, and phosphorus tracers. Your loadout damage type is <strong>fire</strong>.</p><p>At 4th level, when you gain Combat Form, enable its fire immunity effect on your sheet (and Warzone Incarnate’s Street-vet fire effect at 10th level).</p>"
+          },
+          "LoadoutShock": {
+            "Name": "Loadout: Shock",
+            "Description": "<p>Taser rounds, arc-grenades, and capacitor-charged knuckles. Your loadout damage type is <strong>lightning</strong>.</p><p>At 4th level, when you gain Combat Form, enable its lightning immunity effect on your sheet (and Warzone Incarnate’s Street-vet lightning effect at 10th level).</p>"
           }
         }
       }

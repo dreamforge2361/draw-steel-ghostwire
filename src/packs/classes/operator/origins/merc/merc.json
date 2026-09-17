@@ -323,6 +323,28 @@
           "type": "",
           "perkType": []
         }
+      },
+      "p53Y5PRm5sAeSqzm": {
+        "_id": "p53Y5PRm5sAeSqzm",
+        "name": "Field Arsenal",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5P7f0Xf4LbrxPJRy"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
       }
     },
     "classLink": "operator"

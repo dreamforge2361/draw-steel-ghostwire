@@ -27,12 +27,12 @@
         "chooseN": 2,
         "skills": {
           "groups": [
-            "exploration",
-            "intrigue"
+            "action",
+            "vehicle"
           ],
           "choices": []
         },
-        "description": "<p>Choose any two skills from the exploration or intrigue skill groups. <em>(Quick Build: Alertness, Jump.)</em></p>",
+        "description": "<p>Choose any two skills from the Action or Vehicle & Drone skill groups. <em>(Quick Build: Perception, Athletics.)</em></p>",
         "sort": -47000,
         "repick": {}
       },
@@ -206,7 +206,7 @@
           "level": 4
         },
         "_id": "x1UyQl0VGl5GZ70H",
-        "description": "<p>Your Might and Agility scores each increase to 3.</p>",
+        "description": "<p>Your Physique and Reflex scores each increase to 3.</p>",
         "characteristics": {
           "might": 1,
           "agility": 1
@@ -243,7 +243,7 @@
           "level": 10
         },
         "_id": "PFqG7t29d5oz1l6N",
-        "description": "<p>Your Might and Agility scores each increase to 5.</p>",
+        "description": "<p>Your Physique and Reflex scores each increase to 5.</p>",
         "max": 5,
         "characteristics": {
           "might": 1,
@@ -332,31 +332,6 @@
         "repick": {},
         "pool": []
       },
-      "znSGxZWBgtDGH4jQ": {
-        "name": "Features",
-        "img": "icons/magic/symbols/runes-star-magenta.webp",
-        "type": "itemGrant",
-        "requirements": {
-          "level": 6
-        },
-        "_id": "znSGxZWBgtDGH4jQ",
-        "description": "<p>You gain the following features.</p>",
-        "pool": [
-          {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Do51WyTVix9gnNva"
-          },
-          {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mSnafw2N5cqKNQvc"
-          }
-        ],
-        "sort": 4000,
-        "repick": {},
-        "chooseN": null,
-        "additional": {
-          "type": "",
-          "perkType": []
-        }
-      },
       "HBFnY9ZsEucLUjHT": {
         "name": "Skill",
         "img": null,
@@ -366,17 +341,11 @@
         },
         "_id": "HBFnY9ZsEucLUjHT",
         "skills": {
-          "groups": [
-            "crafting",
-            "exploration",
-            "interpersonal",
-            "intrigue",
-            "lore"
-          ],
+          "groups": [],
           "choices": []
         },
         "chooseN": 1,
-        "description": "<p>You gain one skill of your choice.</p>",
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
         "sort": 17000,
         "repick": {}
       },
@@ -390,12 +359,6 @@
         "_id": "zLNTbfLZGyYVEnCX",
         "description": "<p>You gain the following features.</p>",
         "pool": [
-          {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI"
-          },
-          {
-            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WG99zz4NzyeFukL7"
-          },
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IhmMnegZdRYiYkGX"
           }
@@ -416,16 +379,10 @@
           "level": 4
         },
         "_id": "PbAQ5g22NEIqce2Z",
-        "description": "<p>You gain one skill of your choice.</p>",
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
         "chooseN": 1,
         "skills": {
-          "groups": [
-            "crafting",
-            "exploration",
-            "interpersonal",
-            "intrigue",
-            "lore"
-          ],
+          "groups": [],
           "choices": []
         },
         "sort": 18000,
@@ -452,6 +409,18 @@
           },
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BwbvL7t5nyRxYXf3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Do51WyTVix9gnNva"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mSnafw2N5cqKNQvc"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yBUqJ5PtCHamTBrI"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WG99zz4NzyeFukL7"
           }
         ],
         "sort": 6000,
@@ -554,16 +523,10 @@
           "level": 10
         },
         "_id": "dQpHpFb39L7C1SKp",
-        "description": "<p>You gain one skill of your choice.</p>",
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
         "chooseN": 1,
         "skills": {
-          "groups": [
-            "crafting",
-            "exploration",
-            "interpersonal",
-            "intrigue",
-            "lore"
-          ],
+          "groups": [],
           "choices": []
         },
         "sort": 19000,

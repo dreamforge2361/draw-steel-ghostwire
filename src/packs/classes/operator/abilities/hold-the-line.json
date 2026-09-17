@@ -37,7 +37,6 @@
       "roll": {
         "formula": "@chr",
         "characteristics": [
-          "might",
           "agility"
         ],
         "reactive": false

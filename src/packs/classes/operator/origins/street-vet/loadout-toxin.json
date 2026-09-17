@@ -1,0 +1,32 @@
+{
+  "_id": "REe7uNiuRJwD5svh",
+  "_key": "!items!REe7uNiuRJwD5svh",
+  "name": "GHOSTWIRE.Classes.Operator.Items.LoadoutToxin.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Operator.Items.LoadoutToxin.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "01-operator",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "loadout-toxin",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "87RJclofujp81Hoo",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
