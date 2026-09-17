@@ -84,6 +84,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B22 | Ghostwire Perks pack | **Pending Michael test** | 47 reskinned perks by type; perk grants list Ghostwire perks only; `17-perks.md`; module v0.1.26 |
 | B23a | Matrix Verbs + Overlay / Jacked In on the sheet | **Done** (`53a4b59`) | 9 verbs on every hero; token statuses; `18-wired-foundry.md`; module v0.1.27 |
 | B23b | Wired Console | **Done, pending Michael test** | ApplicationV2 console: connection roster, Scene nodes (`wiredBoard` flag), Integrity, Trace Alert, reveal to players; module v0.1.28 |
+| B23c | Wired vision tints (Overlay / Jacked In) | **Backlog** (after Phase 5) | Status-driven vision: Overlay = world-readable color wash; Jacked In = dark/shadowed meatspace, Wire-forward |
 | B24 | Commander class pack | **Done** (`d336ea7`, Foundry-verified 2026-09-16) | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
 | B25 | Languages CONFIG remap | **Done** (Foundry-verified 2026-09-16) | All 42 DS language keys relabeled with locked Ghostwire names (`scripts/languages.mjs`, `GHOSTWIRE.Languages.*`); keys unchanged; module v0.1.30 |
 | B26 | Medic class pack | **Done** (Foundry-verified 2026-09-16) | Medic (Reagents, **persist across encounters — turnGain "0", no reset at combat start**) + Street-Doc / Corp-Medtech / Ripperdoc in Ghostwire Classes; DS Troubadour spine; module v0.1.31 |
@@ -177,6 +178,22 @@ After each spike:
 ### B23a Wired on the sheet (2026-09-16)
 - [x] **B23a** Matrix Verbs (9, Wired keyword) granted to every hero + one-time grant for existing heroes; Overlay / Jacked In token statuses set by Connect / Toggle Connection State / Jack Out; roll modifiers; `flags.draw-steel-ghostwire.wired`; `docs/rulebook/18-wired-foundry.md` (module v0.1.27) — **done** (`53a4b59`)
 - [x] **B23b** Wired Console: ApplicationV2 popout (token controls button + assignable keybinding) with connection roster from Overlay / Jacked In statuses, per-Scene nodes in `flags.draw-steel-ghostwire.wiredBoard` (Track, Rating, Integrity from the System Stat Card, Trace Alert 0–12 with lockout/reset-to-6), GM edit + reveal-to-players, player read-only view (module v0.1.28) — **done, pending Michael Foundry test**
+
+
+### B23c Wired vision tints (LOCKED design 2026-09-17 — implement after Phase 5)
+
+Status-driven (reuse existing Overlay / Jacked In Active Effects from B23a; any hero who can Overlay or Jack In gets it).
+
+| State | Player vision | Feel |
+|---|---|---|
+| **Overlay** | World still readable; color wash / mild saturation (cyan–pink HUD tint) | HUD on top of the street |
+| **Jacked In** | Dark / high-contrast / desaturated or neon-forward; meatspace heavily shadowed | In the Wire; physical world is a ghost |
+
+**Foundry approach (v1):** custom Detection/Vision mode or token sight override applied when the matching status AE is active; cleared on Jack Out / Toggle off. Optional soft light radius so Jacked-In runners can still navigate Wired Console nodes.
+
+- [ ] **B23c** Overlay vision tint (world-readable color wash)
+- [ ] **B23c** Jacked In vision (dark/shadowed meatspace)
+- [ ] Clears correctly when status ends; works for Hacker and any Overlay/Jacked In user
 
 ### B24 Commander (2026-09-16)
 **Naming lock:** the class label is **Commander** everywhere in Foundry (item names, folders, advancements, descriptions). “Face” is retired as a class name. Scout’s **Face-in-crowd** subclass is unrelated and keeps its name.
@@ -290,8 +307,9 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 - **B33 Phase 1 (B32 Phase 1 spike):** Technomancer sprite Actors (12 SKUs) — **Foundry-verified 2026-09-17** (module v0.1.40). See checklist below.
 - **B34 Phase 2 (B32 Phase 2 spike):** Elementalist companions + elemental scaffolds (7 Actors) — **Foundry-verified 2026-09-17** (module v0.1.41). See checklist below.
 - **B35 Phase 3 (B32 Phase 3 spike):** Street Priest pact spirits (3 Actors + Light/Dark tint) — **Foundry-verified 2026-09-17** (module v0.1.42). See checklist below.
-- **B36 Phase 4:** Wrench drones (36) + vehicles (32) Item sync **and** Actor templates under `summons/machines` + Deploy-spawns-token (dual Item+Actor lock 2026-09-17).
+- **B36 Phase 4 (B32 Phase 4 spike):** scale-band Actor templates under `summons/machines` + Deploy / Recall pipeline (dual Item+Actor lock 2026-09-17) — **implemented, pending Foundry verification** (module v0.1.43). See checklist below. Item catalog sync to the chapters' full chassis lists (drones 36, vehicles 32) is still open.
 - **B37 Phase 5:** Hacker Node/ICE Director templates (10).
+- **B23c (after Phase 5):** Overlay / Jacked In **vision tints** — see checklist below.
 
 - **Summons pack scaffold (2026-09-17):** Actor pack `summons` registered; folders sprites/elementals/spirits/machines/nodes ready for Phase 1+.
 
@@ -321,5 +339,17 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Guardian drags to a Scene and moves
   - [x] Enabling Pact: Light on a placed Warrior makes Pact Blade deal holy damage and tints the token; switching to Pact: Dark turns Light off, deals corruption, and re-tints
   - [x] Each sheet shows the Invoke the Pact text; Hunter shows its spirit restrain rider; Guardian shows Warding Aegis and the Sentinel note
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B32 Phase 4 — Drones & vehicles: band templates + Deploy / Recall (2026-09-17)
+**Templates:** 9 scale-band npc Actors in `src/packs/summons/machines/` — `machine-drone-micro / small / medium`, `machine-vehicle-bike / car / heavy / air / water / space` (`construct` keyword, friendly, provisional Stamina / size / speed). No large drone band (no SKU needs one). **Band map:** `docs/masters/GHOSTWIRE_MACHINE_BANDS.md` lists all 31 current vehicles-pack Items → template, resolved at runtime from the existing `flags.draw-steel-ghostwire.vehicle` (`drone`, `domain`, `scale`) — **no Item changes, vehicles pack not rebuilt for this**.
+**Deploy / Recall:** new `scripts/machines.mjs` (registered from `module.mjs` init). Click path: hero sheet → open a drone/vehicle Item → **Deploy** (under the sheet header). Deploy imports the band template into a world Actor in the **Deployed Machines** folder, named and imaged after the Item, owned by the hero's owners; stamps Stamina = template × echelon multiplier (×1 / 1.5 / 2 / 2.5), speed (vehicles ± chapter Speed band), movement type from domain, level = echelon; places a **linked** token next to the owner's token (or the view centre); sets Actor `flags = { kind, band, ownerUuid, gearItemUuid, dsid, gearDsid, echelon, speedBand }` and Item `flags.deployed = { actorUuid }`. The button then reads **Recall**: deletes the machine's tokens on every Scene and its Actor; the Item stays. **Guardrails:** one deployed Actor per Item; deleting the Actor by hand removes its tokens and clears the link; deleting the Item recalls its machine; 0 Stamina posts a wrecked warning. Deploy needs Create Actors + Create Tokens (Director by default). Macro API: `game.modules.get("draw-steel-ghostwire").api.deployMachine / recallMachine / machineBand / deployedMachine`.
+**Not in this phase:** the Items-catalog sync to the chapters' full chassis lists (15-drones.md 36, 16-vehicles.md 32; the pack has 11 drones + 20 vehicles), Wrench Deploy & Command automation, Fleet Size, Jump-In, player-side Deploy without permissions.
+- [ ] **B32 Phase 4** machine band templates + Deploy / Recall (module v0.1.43) — **implemented, pending Foundry verification**. Done when:
+  - [ ] Ghostwire Summons & Machines › Drones & Vehicles (Actors) lists 9 band templates
+  - [ ] A hero with a drone Item (e.g. Guard-Dog): open the Item → Deploy places a movable token next to the hero, named after the Item, with stamped Stamina (Guard-Dog 18)
+  - [ ] The deployed Actor sits in the Deployed Machines folder with ownerUuid / gearItemUuid flags; Deploy again is refused
+  - [ ] Recall removes the token and Actor; the Item stays on the hero and shows Deploy again
+  - [ ] A vehicle Item (e.g. Getaway) deploys as a 2-square token
   - [x] `node tools/build-packs.mjs` succeeds
 

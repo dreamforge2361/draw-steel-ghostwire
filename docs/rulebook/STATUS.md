@@ -22,6 +22,7 @@
 | **Hacker (Foundry)** | `src/packs/classes/hacker/` | **B30 Foundry-verified** (2026-09-17) — three street cyberdeck Kits; Matrix Verbs stay universal |
 | **Technomancer** | `docs/rulebook/20-technomancer.md` (from `docs/masters/GHOSTWIRE_TECHNOMANCER_DEVELOPMENT_MASTER.md` Part 1) | **Stage 2 draft** (2026-09-17) — Power Roll results in DS print order; pending Michael review |
 | **Technomancer (Foundry)** | `src/packs/classes/technomancer/` | **B31 Foundry-verified** (2026-09-17) — nine classes in Ghostwire Classes; Cyborg-blocked |
+| **Summons — Drones & vehicles (Foundry)** | `src/packs/summons/machines/` + `scripts/machines.mjs` | **B32 Phase 4 built, pending Michael Foundry verify** (2026-09-17) — 9 scale-band templates; Item sheet Deploy / Recall spawns a linked token and cleans it up; band map `docs/masters/GHOSTWIRE_MACHINE_BANDS.md`; provisional numbers; Item catalog sync still open |
 | **Summons — Street Priest pact spirits (Foundry)** | `src/packs/summons/spirits/` | **B32 Phase 3 Foundry-verified** (2026-09-17) — Guardian / Warrior / Hunter; one Actor per ministry with Pact: Light / Pact: Dark tint effects (holy vs corruption strikes, token tint, flags.pact); provisional Stamina 20 |
 | **Summons — Elementalist companions + elementals (Foundry)** | `src/packs/summons/elementals/` | **B32 Phase 2 Foundry-verified** (2026-09-17) — Ember / Zephyr / Boulder Companions with strikes; Rank 1–3 + Greater elemental scaffolds; provisional Stamina 15 × Rank until Veil §C3 |
 | **Summons — Technomancer sprites (Foundry)** | `src/packs/summons/sprites/` | **B32 Phase 1 Foundry-verified** (2026-09-17) — 12 sprite npc Actors (4 archetypes × 3 hybrid tiers), Known Bugs #13 HP placeholders; Compile Sprite token stamping is backlog |
@@ -62,3 +63,5 @@
 
 | **Support entities program (Phase 0 done 2026-09-17)** | Master: `docs/masters/GHOSTWIRE_SUPPORT_ENTITIES.md`. Phase 1 Technomancer sprites (12) → 2 Elementalist → 3 Street Priest spirits → 4 drones/vehicles → 5 Hacker ICE/nodes. |
 
+
+| **Wired vision tints (Overlay / Jacked In)** | B23c | **Backlog** (after Support Entities Phase 5) - Overlay = color wash, world readable; Jacked In = dark/shadowed meatspace; status-driven from B23a AEs |
