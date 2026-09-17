@@ -288,7 +288,7 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 
 - **B32 Phase 0 (done):** `GHOSTWIRE_SUPPORT_ENTITIES.md` inventory + schema.
 - **B33 Phase 1 (B32 Phase 1 spike):** Technomancer sprite Actors (12 SKUs) — **Foundry-verified 2026-09-17** (module v0.1.40). See checklist below.
-- **B34 Phase 2:** Elementalist companions + elemental scaffolds.
+- **B34 Phase 2 (B32 Phase 2 spike):** Elementalist companions + elemental scaffolds (7 Actors) — **Foundry-verified 2026-09-17** (module v0.1.41). See checklist below.
 - **B35 Phase 3:** Street Priest pact spirits (3 + Light/Dark tint).
 - **B36 Phase 4:** Wrench drones (36) + vehicles (32) Item sync **and** Actor templates under `summons/machines` + Deploy-spawns-token (dual Item+Actor lock 2026-09-17).
 - **B37 Phase 5:** Hacker Node/ICE Director templates (10).
@@ -302,5 +302,14 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Dragging a sprite to a Scene makes a 1T friendly token that moves
   - [x] Attack Sprite sheets show Code Strike and the baked Stamina; the damage button rolls the band
   - [x] Data / Machine / Ward sprite sheets show their feature and description
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B32 Phase 2 — Elementalist companions + elemental scaffolds (2026-09-17)
+**Actors:** 7 Draw Steel `npc` Actors in `src/packs/summons/elementals/`, same schema as the Phase 1 sprites (friendly token, `elemental` keyword, EV 0). **Companions** (full, usable): Ember (fire), Zephyr (air/water, fly + hover), Boulder (earth/void) — Rank 1 extensions (minion), 0 Essence, once per encounter, 3 rounds, no sustain. Each embeds its chapter strike as a real damage effect with the caster's Logic: Lash of Flame 4/7/10 fire; Striking Wind 3/5/8 (cold/lightning/sonic chosen on summon) with slide 1 on middle/high; Stone Fist 4/7/10 (acid/corruption chosen on summon) with push 1 on middle/high. **Scaffolds:** Bound Elemental Rank 1 (extension; Summon Elemental 5 Essence, Persistent 2 = −4/turn; Elemental Lash 4/7/10 + a Twin Elemental Summon note feature — no twin Actor), Rank 2 and Rank 3 (independent, Persistent 4 = −8/turn), Greater Elemental (Rank 4 independent, Greater Elemental Summon 11 Essence, Persistent 6 = −12/turn; Rank 5 at echelon 4 noted as Stamina 75). Rank 2+ carry no strike yet (Veil §C3). **Provisional numbers:** Stamina = 15 × Rank (15 / 30 / 45 / 60); size 1S (companions, Rank 1) / 1M / 1L / 2; speed 5; Reason = caster Logic at the Rank's unlock level (L1 2, L5 3, L7 4, L8 4). **Flags:** `{ kind: "elemental", subtype: "companion"|"elemental", element, rank, hybridTier: "extension"|"independent", ownerUuid: null, dsid }`. The Cyborg bar stays on the class.
+- [x] **B32 Phase 2** Elementalist companion + elemental Actors (module v0.1.41) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Ghostwire Summons & Machines › Elementals & Companions lists 7 entries (3 companions, Rank 1–3, Greater)
+  - [x] Each drags to a Scene as a friendly token at its size (1S / 1M / 1L / 2) and moves
+  - [x] Companion sheets show their strike; Striking Wind and Stone Fist show the slide / push rider on middle and high
+  - [x] Scaffold descriptions show the provisional Stamina, defense note, and Persistent drain reminder; Rank 1 shows the Twin note
   - [x] `node tools/build-packs.mjs` succeeds
 
