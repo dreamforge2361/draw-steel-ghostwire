@@ -1,0 +1,86 @@
+{
+  "_id": "GyYZfuzlQ4BaEEVA",
+  "_key": "!items!GyYZfuzlQ4BaEEVA",
+  "name": "GHOSTWIRE.Classes.Commander.Items.DeflectTheBeat.Name",
+  "type": "ability",
+  "img": "icons/skills/melee/swords-parry-block-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deflect-the-beat",
+    "story": "GHOSTWIRE.Classes.Commander.Items.DeflectTheBeat.Story",
+    "keywords": [
+      "command",
+      "melee"
+    ],
+    "type": "triggered",
+    "category": "signature",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Commander.Items.DeflectTheBeat.Trigger",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.DeflectTheBeat.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Commander.Items.DeflectTheBeat.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "bard"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

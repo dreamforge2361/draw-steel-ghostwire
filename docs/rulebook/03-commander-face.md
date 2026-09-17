@@ -3,6 +3,7 @@
 **Status:** Stage 2 draft — batch review  
 **Source of record:** `docs/masters/GHOSTWIRE_COMMANDER_DEVELOPMENT_MASTER.md` Part 1  
 **Draw Steel spine:** Tactician (Steel Compendium)  
+**Foundry class label:** Commander (Face retired as class name)  
 **Prior:** Operator + Scout **approved** 2026-09-16; remaining classes drafted together for one review pass
 
 **Notes for review:**

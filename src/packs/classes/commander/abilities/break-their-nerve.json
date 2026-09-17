@@ -1,0 +1,123 @@
+{
+  "_id": "TtDMVr8DZCF6Hcxr",
+  "_key": "!items!TtDMVr8DZCF6Hcxr",
+  "name": "GHOSTWIRE.Classes.Commander.Items.BreakTheirNerve.Name",
+  "type": "ability",
+  "img": "icons/skills/social/peace-luck-insult.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "break-their-nerve",
+    "story": "GHOSTWIRE.Classes.Commander.Items.BreakTheirNerve.Story",
+    "keywords": [
+      "area",
+      "command",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "FzzErivQWi5s2P0P": {
+          "name": "",
+          "img": null,
+          "type": "applied",
+          "_id": "FzzErivQWi5s2P0P",
+          "applied": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Commander.Items.BreakTheirNerve.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "always",
+                  "end": "turn",
+                  "properties": []
+                }
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Commander.Items.BreakTheirNerve.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "always",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Commander.Items.BreakTheirNerve.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "effects": {
+                "frightened": {
+                  "condition": "always",
+                  "end": "save",
+                  "properties": []
+                },
+                "weakened": {
+                  "condition": "always",
+                  "end": "save",
+                  "properties": []
+                }
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

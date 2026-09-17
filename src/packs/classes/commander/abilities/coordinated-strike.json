@@ -1,0 +1,106 @@
+{
+  "_id": "DWqjUxARDRrYHoZb",
+  "_key": "!items!DWqjUxARDRrYHoZb",
+  "name": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrike.Name",
+  "type": "ability",
+  "img": "icons/skills/trades/smithing-anvil-silver-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "coordinated-strike",
+    "story": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrike.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "qVT9VKh0NiQXa6at": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "qVT9VKh0NiQXa6at",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrike.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrike.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrike.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrike.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

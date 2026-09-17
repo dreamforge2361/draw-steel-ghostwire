@@ -1,0 +1,32 @@
+{
+  "_id": "3zgAEfYVCr6Y1CE7",
+  "_key": "!items!3zgAEfYVCr6Y1CE7",
+  "name": "GHOSTWIRE.Classes.Commander.Items.ReadTheAngles.Name",
+  "type": "feature",
+  "img": "icons/sundries/gaming/chess-pawn-white-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.ReadTheAngles.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "read-the-angles",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

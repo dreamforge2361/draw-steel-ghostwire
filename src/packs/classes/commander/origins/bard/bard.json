@@ -1,0 +1,321 @@
+{
+  "_id": "QqlKrj8QAIPrysaV",
+  "_key": "!items!QqlKrj8QAIPrysaV",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Bard.Name",
+  "type": "subclass",
+  "img": "icons/tools/instruments/chimes-wood-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.Bard.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "bard",
+    "advancements": {
+      "d8yronghseMFyWtE": {
+        "name": "GHOSTWIRE.Skills.List.Performance",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "d8yronghseMFyWtE",
+        "skills": {
+          "choices": [
+            "performance"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Command Doctrine grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "BsLDAba466R2FGXP": {
+        "name": "Resonant Performance",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "BsLDAba466R2FGXP",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.e18CnlDG5kflhKNf"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "IGfD8gt5kl3OYC5L": {
+        "name": "Deflect the Beat",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "IGfD8gt5kl3OYC5L",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GyYZfuzlQ4BaEEVA"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WQWpi1gSrym2O1JU": {
+        "name": "Riff on the Room",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "WQWpi1gSrym2O1JU",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JGSsnViLTLIneNXu"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7Mt1RXqKwrxE1dtu": {
+        "name": "Command the Stage",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "7Mt1RXqKwrxE1dtu",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mKKJj0WtxJjcBn1S"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "GCV4DuCGeZl1GotM": {
+        "name": "2nd-Level Bard Ability",
+        "img": "icons/tools/instruments/chimes-wood-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "GCV4DuCGeZl1GotM",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.agGGuMB4ALX0VyTW"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EyaGdRjuPhRlcx4X"
+          }
+        ],
+        "description": "<p>Choose one of the following abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "6zxuiyPNNNTXQKZC": {
+        "name": "The Signature Beat",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "6zxuiyPNNNTXQKZC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QwDhSIsYgEELcaN4"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "3YApiXfwMnDDlJ6G": {
+        "name": "Shake It Off",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "3YApiXfwMnDDlJ6G",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NdXN197eu9OuBocN"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "tAcEC1k1As1iGBlQ": {
+        "name": "Set the Beat",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "tAcEC1k1As1iGBlQ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Ue8eq1eClRI4Gp2n"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "H1Nb6vkgY9Ny4HIF": {
+        "name": "6th-Level Bard Ability",
+        "img": "icons/tools/instruments/chimes-wood-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "H1Nb6vkgY9Ny4HIF",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.VTMJDeq1a0cIFNlw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4SIAOVAmlfEeLBig"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "4IUhqQd0gM29z8xV": {
+        "name": "The Show",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "4IUhqQd0gM29z8xV",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.C3TyAVDxcEayncd2"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "pcsqtiuUb2fuYIwT": {
+        "name": "Bring the House Down",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "pcsqtiuUb2fuYIwT",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zmCIpf4qtEEMWJz0"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "zDbkbFICGwAFHrxp": {
+        "name": "9th-Level Bard Ability",
+        "img": "icons/tools/instruments/chimes-wood-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "zDbkbFICGwAFHrxp",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jxE85yvaNHEAoEBm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yvmYws3R7OdOylgz"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "commander"
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

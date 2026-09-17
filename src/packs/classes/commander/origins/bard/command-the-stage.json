@@ -1,0 +1,32 @@
+{
+  "_id": "mKKJj0WtxJjcBn1S",
+  "_key": "!items!mKKJj0WtxJjcBn1S",
+  "name": "GHOSTWIRE.Classes.Commander.Items.CommandTheStage.Name",
+  "type": "feature",
+  "img": "icons/skills/melee/hand-grip-sword-white-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.CommandTheStage.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "command-the-stage",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

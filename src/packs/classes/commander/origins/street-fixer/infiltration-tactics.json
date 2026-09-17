@@ -1,0 +1,32 @@
+{
+  "_id": "J4ZXuTR3vJtzR2dV",
+  "_key": "!items!J4ZXuTR3vJtzR2dV",
+  "name": "GHOSTWIRE.Classes.Commander.Items.InfiltrationTactics.Name",
+  "type": "feature",
+  "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.InfiltrationTactics.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "infiltration-tactics",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

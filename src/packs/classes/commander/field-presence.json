@@ -1,0 +1,32 @@
+{
+  "_id": "e0uM41s1QGuXXCbS",
+  "_key": "!items!e0uM41s1QGuXXCbS",
+  "name": "GHOSTWIRE.Classes.Commander.Items.FieldPresence.Name",
+  "type": "feature",
+  "img": "icons/skills/melee/spear-tips-quintuple-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.FieldPresence.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-presence",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

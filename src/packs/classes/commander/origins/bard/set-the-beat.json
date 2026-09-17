@@ -1,0 +1,32 @@
+{
+  "_id": "Ue8eq1eClRI4Gp2n",
+  "_key": "!items!Ue8eq1eClRI4Gp2n",
+  "name": "GHOSTWIRE.Classes.Commander.Items.SetTheBeat.Name",
+  "type": "feature",
+  "img": "icons/skills/melee/strike-polearm-glowing-white.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.SetTheBeat.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "set-the-beat",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

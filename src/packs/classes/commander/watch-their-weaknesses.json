@@ -1,0 +1,32 @@
+{
+  "_id": "7764xCNJr1dW5XyV",
+  "_key": "!items!7764xCNJr1dW5XyV",
+  "name": "GHOSTWIRE.Classes.Commander.Items.WatchTheirWeaknesses.Name",
+  "type": "feature",
+  "img": "icons/creatures/eyes/human-single-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.WatchTheirWeaknesses.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "watch-their-weaknesses",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

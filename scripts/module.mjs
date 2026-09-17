@@ -57,6 +57,8 @@ Hooks.once("init", () => {
   ds.CONFIG.abilities.keywords.optics ??= { label: "GHOSTWIRE.Abilities.Keywords.Optics" };
   // Wired: Matrix Verbs, Programs, and other abilities that act in the Wired.
   ds.CONFIG.abilities.keywords.wired ??= { label: "GHOSTWIRE.Abilities.Keywords.Wired" };
+  // Command: Commander abilities driven by command presence (orders, rallies, reads).
+  ds.CONFIG.abilities.keywords.command ??= { label: "GHOSTWIRE.Abilities.Keywords.Command" };
 
   registerGhostwireSkills();
   registerPerkTypes();

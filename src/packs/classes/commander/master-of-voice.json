@@ -1,0 +1,32 @@
+{
+  "_id": "YfZbOFG7Nh6DFDqf",
+  "_key": "!items!YfZbOFG7Nh6DFDqf",
+  "name": "GHOSTWIRE.Classes.Commander.Items.MasterOfVoice.Name",
+  "type": "feature",
+  "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.MasterOfVoice.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "master-of-voice",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

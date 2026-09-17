@@ -1,0 +1,321 @@
+{
+  "_id": "xoM6Z3D1FzQV0ALG",
+  "_key": "!items!xoM6Z3D1FzQV0ALG",
+  "name": "GHOSTWIRE.Classes.Commander.Items.StreetFixer.Name",
+  "type": "subclass",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.StreetFixer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-fixer",
+    "advancements": {
+      "ARW7YJoykOdvG7ck": {
+        "name": "GHOSTWIRE.Skills.List.Streetwise",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "ARW7YJoykOdvG7ck",
+        "skills": {
+          "choices": [
+            "streetwise"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Command Doctrine grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "I4hOJyFL1CixTUXV": {
+        "name": "The Fixer’s Web",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "I4hOJyFL1CixTUXV",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.glKErgW0C2L8EVKl"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "UxEFC8nwOCP7BKJx": {
+        "name": "Advanced Tactics",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "UxEFC8nwOCP7BKJx",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4CJQ4VcnD14GD7Dx"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ErsFNpyrEm8CaftD": {
+        "name": "Undercity Whisper",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "ErsFNpyrEm8CaftD",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.FXasmLeHdd6R8IoI"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "h0NFeqPVMRpUDmlD": {
+        "name": "Infiltration Tactics",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "h0NFeqPVMRpUDmlD",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J4ZXuTR3vJtzR2dV"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "JJESGleCOGV0CDrH": {
+        "name": "2nd-Level Street-Fixer Ability",
+        "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "JJESGleCOGV0CDrH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AevLlG7J9NoPN4Gu"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dOl8F5cDR85xk65E"
+          }
+        ],
+        "description": "<p>Choose one of the following abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uA6PPKgUVMgPjB4S": {
+        "name": "Grey Market Access",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "uA6PPKgUVMgPjB4S",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.vaNurJnxI7qZDmAm"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "9oOMI0HipzWODXFM": {
+        "name": "Distracted",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "9oOMI0HipzWODXFM",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5s1nwodbzC9o83vO"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "bamGYFYuqCTtG66u": {
+        "name": "Leave No Trace",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "bamGYFYuqCTtG66u",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HAcSOVeMvS0Lwr5R"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "xa0Wc015qTwce8TL": {
+        "name": "6th-Level Street-Fixer Ability",
+        "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "xa0Wc015qTwce8TL",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.R7nDOgZJiAOtFyUl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.cH25HfpsMjLmPpse"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FyGyqDqmglGA4Qcr": {
+        "name": "Undercity Advantage",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "FyGyqDqmglGA4Qcr",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pHcZLSAdRCRWJAzG"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "iVhFAKVWNW890qE5": {
+        "name": "Set Up the Play",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "iVhFAKVWNW890qE5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9MWNKoIcKlTrmAcA"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "nvnrcHSbvArwNJdz": {
+        "name": "9th-Level Street-Fixer Ability",
+        "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "nvnrcHSbvArwNJdz",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Ejdht21GczBGFkbo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5OB3cv8hGbCBM5w8"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "commander"
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

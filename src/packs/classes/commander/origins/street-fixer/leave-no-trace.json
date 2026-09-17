@@ -1,0 +1,32 @@
+{
+  "_id": "HAcSOVeMvS0Lwr5R",
+  "_key": "!items!HAcSOVeMvS0Lwr5R",
+  "name": "GHOSTWIRE.Classes.Commander.Items.LeaveNoTrace.Name",
+  "type": "feature",
+  "img": "icons/skills/movement/feet-spurred-boots-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.LeaveNoTrace.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "leave-no-trace",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

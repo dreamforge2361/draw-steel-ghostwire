@@ -1,0 +1,86 @@
+{
+  "_id": "xLVCiuEhexdLh6NR",
+  "_key": "!items!xLVCiuEhexdLh6NR",
+  "name": "GHOSTWIRE.Classes.Commander.Items.DirectAlly.Name",
+  "type": "ability",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "direct-ally",
+    "story": "GHOSTWIRE.Classes.Commander.Items.DirectAlly.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.DirectAlly.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 2,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Commander.Items.DirectAlly.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

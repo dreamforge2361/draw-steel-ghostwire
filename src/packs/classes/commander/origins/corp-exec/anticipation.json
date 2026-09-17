@@ -1,0 +1,32 @@
+{
+  "_id": "aVqhKyMJGbpbucS4",
+  "_key": "!items!aVqhKyMJGbpbucS4",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Anticipation.Name",
+  "type": "feature",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.Anticipation.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "anticipation",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

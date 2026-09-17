@@ -1,0 +1,72 @@
+{
+  "_id": "cH25HfpsMjLmPpse",
+  "_key": "!items!cH25HfpsMjLmPpse",
+  "name": "GHOSTWIRE.Classes.Commander.Items.PanicInTheirLines.Name",
+  "type": "ability",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "panic-in-their-lines",
+    "story": "GHOSTWIRE.Classes.Commander.Items.PanicInTheirLines.Story",
+    "keywords": [
+      "command"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.PanicInTheirLines.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-fixer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

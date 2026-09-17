@@ -1,0 +1,32 @@
+{
+  "_id": "cPmOrU9eUmeWy5j3",
+  "_key": "!items!cPmOrU9eUmeWy5j3",
+  "name": "GHOSTWIRE.Classes.Commander.Items.GrandmasterOfWords.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-flaming-diamond-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.GrandmasterOfWords.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grandmaster-of-words",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

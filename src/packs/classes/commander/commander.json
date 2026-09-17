@@ -1,0 +1,775 @@
+{
+  "_id": "48CeDQpXAEK9ObOz",
+  "_key": "!items!48CeDQpXAEK9ObOz",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Class.Name",
+  "type": "class",
+  "img": "icons/skills/social/intimidation-impressing.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "commander",
+    "advancements": {
+      "9PxVOF6AANVOeVEV": {
+        "_id": "9PxVOF6AANVOeVEV",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Command",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Command skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "command"
+          ]
+        },
+        "chooseN": null,
+        "sort": 1000
+      },
+      "2kS9jEjxZFKvq6L2": {
+        "_id": "2kS9jEjxZFKvq6L2",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Negotiation",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Negotiation skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "negotiation"
+          ]
+        },
+        "chooseN": null,
+        "sort": 2000
+      },
+      "4gWhUy3VxOnCuSfQ": {
+        "_id": "4gWhUy3VxOnCuSfQ",
+        "img": null,
+        "repick": {},
+        "name": "Skills",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose any two skills from the Social or Knowledge skill groups — Instinct-keyed reading like Insight rounds out a Commander. Skip your Command Doctrine skill (Street-Fixer: Streetwise, Corp-Exec: Corporate, Bard: Performance); it’s granted separately. (<em>Quick Build:</em> Insight, Contacts.)</p>",
+        "skills": {
+          "groups": [
+            "social",
+            "knowledge"
+          ],
+          "choices": []
+        },
+        "chooseN": 2,
+        "sort": 3000
+      },
+      "GcJnCiVp5ipfZqKf": {
+        "_id": "GcJnCiVp5ipfZqKf",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iWgFF0ISYaP3DH5K"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.e0uM41s1QGuXXCbS"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 4000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "hcj1YC3aTtFzbWV9": {
+        "_id": "hcj1YC3aTtFzbWV9",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "repick": {},
+        "name": "Kit",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          }
+        ],
+        "description": "<p>You can use and gain the benefits of a light Kit: no armor or light armor, and no heavy weapon. (<em>Quick Build:</em> Ghost or Duelist.)</p>",
+        "chooseN": 1,
+        "sort": 5000,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        }
+      },
+      "VsRikpokRucoGVjB": {
+        "_id": "VsRikpokRucoGVjB",
+        "img": "icons/skills/social/intimidation-impressing.webp",
+        "repick": {},
+        "name": "Command Doctrine",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xoM6Z3D1FzQV0ALG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AeQ7bqy5YsaRHUsu"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QqlKrj8QAIPrysaV"
+          }
+        ],
+        "description": "<p>Choose your Command Doctrine: <strong>Street-Fixer</strong> (deals, favors, and the fixer’s web), <strong>Corp-Exec</strong> (credentials, protocol, and institutional power), or <strong>Bard</strong> (the techno-performer who moves a crowd). Each grants a skill. (<em>Quick Build:</em> Street-Fixer.)</p><p>Your doctrine is your subclass, and it determines many of the features you gain as you level.</p>",
+        "chooseN": 1,
+        "sort": 6000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uzchKZASfePaNpem": {
+        "_id": "uzchKZASfePaNpem",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Signature Abilities",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xLVCiuEhexdLh6NR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1F4jfVDchFmu6YL7"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PC0wySEDvA2fHgGf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2FCK1Z0Rju4sBqw4"
+          }
+        ],
+        "description": "<p>You gain all four Commander signature abilities: Direct Ally, Mark, Read the Room, and The Right Word. None of them costs Influence; spending Influence enhances them.</p>",
+        "chooseN": null,
+        "sort": 7000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WAdAW5sG22AwycPK": {
+        "_id": "WAdAW5sG22AwycPK",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "1 Influence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J3D3rGbZT1GRD2v5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WRzs8Mh0rVrYxWQV"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 1 Influence to use. (<em>Quick Build:</em> Seize the Initiative.)</p>",
+        "chooseN": 1,
+        "sort": 8000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Ui5lCEHjsLhcVPQB": {
+        "_id": "Ui5lCEHjsLhcVPQB",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "3 Influence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RAL6LmxOn1ByAQ5F"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oS4dIdjQbB8N5Icy"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kLnRrLHEWdoI14vN"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HcCS36QmEkzgwWSb"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 3 Influence to use. (<em>Quick Build:</em> Coordinated Assault.)</p>",
+        "chooseN": 1,
+        "sort": 9000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "JmnZlUChDOPd3doZ": {
+        "_id": "JmnZlUChDOPd3doZ",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "5 Influence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.fkYraxVpl3X0WcoV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DWqjUxARDRrYHoZb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QnCQkVW8yG32hnVr"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nvg7WGsbWRIdGYmv"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Influence to use. (<em>Quick Build:</em> Rally the Crew.)</p>",
+        "chooseN": 1,
+        "sort": 10000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Erf98zizEzUdmLun": {
+        "_id": "Erf98zizEzUdmLun",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one exploration, interpersonal, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "exploration",
+            "interpersonal",
+            "intrigue"
+          ]
+        },
+        "sort": 11000,
+        "pool": []
+      },
+      "9wQLQfjl5G4M7MS7": {
+        "_id": "9wQLQfjl5G4M7MS7",
+        "img": null,
+        "repick": {},
+        "name": "Read the Angles",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3zgAEfYVCr6Y1CE7"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 12000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wtl6v1BBwUUvJiOM": {
+        "_id": "wtl6v1BBwUUvJiOM",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "7 Influence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BP5ewLexoOegSrr4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2KkBVE4Kg1H2kMd6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AGRJiGGfcBLEnGAg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zGc9PDqjHRxoJqO8"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Influence to use.</p>",
+        "chooseN": 1,
+        "sort": 13000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "oHUfKzCg5yySDLIm": {
+        "_id": "oHUfKzCg5yySDLIm",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Persona and Instinct scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 0,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 3,
+        "sort": 14000
+      },
+      "9zgzDceWpgMJUEAK": {
+        "_id": "9zgzDceWpgMJUEAK",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 15000,
+        "pool": []
+      },
+      "y8he3SSUodSzHEvz": {
+        "_id": "y8he3SSUodSzHEvz",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 16000
+      },
+      "IWgRK6XOFvXMCWxG": {
+        "_id": "IWgRK6XOFvXMCWxG",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7764xCNJr1dW5XyV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.flHVVXs8uCand6qK"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 17000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "JBgUodSXZU2PbQwO": {
+        "_id": "JBgUodSXZU2PbQwO",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "9 Influence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.beyYw5Tj5BRL96hJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nhZ5D84dvgHgFfiw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oTBkwiwTuf0xUxbC"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.TtDMVr8DZCF6Hcxr"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Influence to use.</p>",
+        "chooseN": 1,
+        "sort": 18000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Hj5BvRVjT8qUJzij": {
+        "_id": "Hj5BvRVjT8qUJzij",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one exploration, interpersonal, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "exploration",
+            "interpersonal",
+            "intrigue"
+          ]
+        },
+        "sort": 19000,
+        "pool": []
+      },
+      "FpUoMv581cPv2Buj": {
+        "_id": "FpUoMv581cPv2Buj",
+        "img": null,
+        "repick": {},
+        "name": "Master of Words",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3mzoZE7Qwh4R1tSx"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 20000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "v4lzutuDfm5CfBd5": {
+        "_id": "v4lzutuDfm5CfBd5",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 21000
+      },
+      "vc1wzMr6Crbts9l8": {
+        "_id": "vc1wzMr6Crbts9l8",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 22000
+      },
+      "Ct2YFno5Ilbj1QZC": {
+        "_id": "Ct2YFno5Ilbj1QZC",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Wban6zymxzkNdvFN"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Zg0IcOvFjVYmuGD0"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 23000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "1nigdkeI05FhlydO": {
+        "_id": "1nigdkeI05FhlydO",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 24000,
+        "pool": []
+      },
+      "WjVyRGHRd6IleYd7": {
+        "_id": "WjVyRGHRd6IleYd7",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "11 Influence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qrBdX6RCemu2ATAS"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kO25WPZr3g0AZzwq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Nyjhk9VcqFLQD0k5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2wKBFDrENz9mtom5"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Influence to use.</p>",
+        "chooseN": 1,
+        "sort": 25000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ZphTSQ9BGLXk7T4W": {
+        "_id": "ZphTSQ9BGLXk7T4W",
+        "img": null,
+        "repick": {},
+        "name": "Grandmaster of Words",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.cPmOrU9eUmeWy5j3"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 26000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "LPuypTcYLSXMqr4L": {
+        "_id": "LPuypTcYLSXMqr4L",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Persona and Instinct scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 0,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 5,
+        "sort": 27000
+      },
+      "wcB4xr3UKcFuKWXB": {
+        "_id": "wcB4xr3UKcFuKWXB",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one exploration, interpersonal, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "exploration",
+            "interpersonal",
+            "intrigue"
+          ]
+        },
+        "sort": 28000,
+        "pool": []
+      },
+      "Z9UbzFu4NOuzYG8Z": {
+        "_id": "Z9UbzFu4NOuzYG8Z",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 29000
+      },
+      "b0cvcdjKyyIO9RS8": {
+        "_id": "b0cvcdjKyyIO9RS8",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J1mBEQNqwpFmqmGT"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ALx2RU0eqZ3sppXk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YfZbOFG7Nh6DFDqf"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 30000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "level": 0,
+    "primary": "Influence",
+    "epic": "Command",
+    "turnGain": "2",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "presence",
+        "intuition"
+      ]
+    },
+    "stamina": {
+      "starting": 21,
+      "level": 9
+    },
+    "recoveries": 10
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

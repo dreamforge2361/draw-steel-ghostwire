@@ -1,0 +1,32 @@
+{
+  "_id": "e18CnlDG5kflhKNf",
+  "_key": "!items!e18CnlDG5kflhKNf",
+  "name": "GHOSTWIRE.Classes.Commander.Items.ResonantPerformance.Name",
+  "type": "feature",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.ResonantPerformance.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "resonant-performance",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

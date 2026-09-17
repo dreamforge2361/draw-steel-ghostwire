@@ -1,0 +1,86 @@
+{
+  "_id": "4CJQ4VcnD14GD7Dx",
+  "_key": "!items!4CJQ4VcnD14GD7Dx",
+  "name": "GHOSTWIRE.Classes.Commander.Items.AdvancedTactics.Name",
+  "type": "ability",
+  "img": "icons/sundries/gaming/chess-knight-white-glass.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "advanced-tactics",
+    "story": "GHOSTWIRE.Classes.Commander.Items.AdvancedTactics.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "signature",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Commander.Items.AdvancedTactics.Trigger",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.AdvancedTactics.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Commander.Items.AdvancedTactics.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-fixer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

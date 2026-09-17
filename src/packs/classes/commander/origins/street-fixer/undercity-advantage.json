@@ -1,0 +1,32 @@
+{
+  "_id": "pHcZLSAdRCRWJAzG",
+  "_key": "!items!pHcZLSAdRCRWJAzG",
+  "name": "GHOSTWIRE.Classes.Commander.Items.UndercityAdvantage.Name",
+  "type": "feature",
+  "img": "icons/magic/nature/stealth-hide-eyes-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.UndercityAdvantage.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "undercity-advantage",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

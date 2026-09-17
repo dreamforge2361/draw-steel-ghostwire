@@ -1,0 +1,73 @@
+{
+  "_id": "beyYw5Tj5BRL96hJ",
+  "_key": "!items!beyYw5Tj5BRL96hJ",
+  "name": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrikeTeam.Name",
+  "type": "ability",
+  "img": "icons/weapons/swords/swords-short.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "coordinated-strike-team",
+    "story": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrikeTeam.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfAlly",
+      "value": 2,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.CoordinatedStrikeTeam.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

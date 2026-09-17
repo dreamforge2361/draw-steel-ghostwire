@@ -84,6 +84,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B22 | Ghostwire Perks pack | **Pending Michael test** | 47 reskinned perks by type; perk grants list Ghostwire perks only; `17-perks.md`; module v0.1.26 |
 | B23a | Matrix Verbs + Overlay / Jacked In on the sheet | **Done** (`53a4b59`) | 9 verbs on every hero; token statuses; `18-wired-foundry.md`; module v0.1.27 |
 | B23b | Wired Console | **Done, pending Michael test** | ApplicationV2 console: connection roster, Scene nodes (`wiredBoard` flag), Integrity, Trace Alert, reveal to players; module v0.1.28 |
+| B24 | Commander class pack | **Done, pending Michael test** | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -169,3 +170,16 @@ After each spike:
 ### B23a Wired on the sheet (2026-09-16)
 - [x] **B23a** Matrix Verbs (9, Wired keyword) granted to every hero + one-time grant for existing heroes; Overlay / Jacked In token statuses set by Connect / Toggle Connection State / Jack Out; roll modifiers; `flags.draw-steel-ghostwire.wired`; `docs/rulebook/18-wired-foundry.md` (module v0.1.27) — **done** (`53a4b59`)
 - [x] **B23b** Wired Console: ApplicationV2 popout (token controls button + assignable keybinding) with connection roster from Overlay / Jacked In statuses, per-Scene nodes in `flags.draw-steel-ghostwire.wiredBoard` (Track, Rating, Integrity from the System Stat Card, Trace Alert 0–12 with lockout/reset-to-6), GM edit + reveal-to-players, player read-only view (module v0.1.28) — **done, pending Michael Foundry test**
+
+### B24 Commander (2026-09-16)
+**Naming lock:** the class label is **Commander** everywhere in Foundry (item names, folders, advancements, descriptions). “Face” is retired as a class name. Scout’s **Face-in-crowd** subclass is unrelated and keeps its name.
+- [ ] **B24** Commander class pack from `03-commander-face.md` (module v0.1.29) — **pending Michael Foundry test**. Done when:
+  - [ ] New hero can pick Class → Commander
+  - [ ] Influence shows as the heroic resource (2 per turn); core characteristics Persona / Instinct; Stamina 21 (+9), Recoveries 10; light Kit
+  - [ ] Skills: Command + Negotiation fixed, choose 2 from Social / Knowledge; doctrine skill (Streetwise / Corporate / Performance)
+  - [ ] Command Doctrine picker: Street-Fixer / Corp-Exec / Bard, each with L1 feature + two triggered actions, and ladders at 2/3/5/6/7/8/9
+  - [ ] L1: four signatures (Direct Ally, Mark, Read the Room, The Right Word) + 1/3/5-Influence picks; 7 at L3, 9 at L5, 11 at L8
+  - [ ] Mark applies the Marked effect (edge on power rolls against the target, ends at combat end)
+  - [ ] Influence costs enforced in combat; new **Command** ability keyword shows its label
+  - [ ] No UI string calls the class “Face”
+  - [x] `node tools/build-packs.mjs` succeeds

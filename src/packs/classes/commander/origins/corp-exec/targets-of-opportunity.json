@@ -1,0 +1,73 @@
+{
+  "_id": "8VLbGcQJFqe3Wpky",
+  "_key": "!items!8VLbGcQJFqe3Wpky",
+  "name": "GHOSTWIRE.Classes.Commander.Items.TargetsOfOpportunity.Name",
+  "type": "ability",
+  "img": "icons/skills/ranged/target-bullseye-arrow-white.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "targets-of-opportunity",
+    "story": "GHOSTWIRE.Classes.Commander.Items.TargetsOfOpportunity.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "GHOSTWIRE.Classes.Commander.Items.TargetsOfOpportunity.Trigger",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.TargetsOfOpportunity.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "corp-exec"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

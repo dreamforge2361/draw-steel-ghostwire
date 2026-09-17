@@ -1,0 +1,72 @@
+{
+  "_id": "1boy33QtmPpawkeF",
+  "_key": "!items!1boy33QtmPpawkeF",
+  "name": "GHOSTWIRE.Classes.Commander.Items.BattlePlan.Name",
+  "type": "ability",
+  "img": "icons/tools/navigation/map-marked-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "battle-plan",
+    "story": "GHOSTWIRE.Classes.Commander.Items.BattlePlan.Story",
+    "keywords": [
+      "command"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "GHOSTWIRE.Classes.Commander.Items.BattlePlan.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfAlly",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.BattlePlan.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "corp-exec"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

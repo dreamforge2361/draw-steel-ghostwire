@@ -1,0 +1,32 @@
+{
+  "_id": "C3TyAVDxcEayncd2",
+  "_key": "!items!C3TyAVDxcEayncd2",
+  "name": "GHOSTWIRE.Classes.Commander.Items.TheShow.Name",
+  "type": "feature",
+  "img": "icons/magic/earth/explosion-lava-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.TheShow.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-show",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

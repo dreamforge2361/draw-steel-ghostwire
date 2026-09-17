@@ -1,0 +1,32 @@
+{
+  "_id": "NdXN197eu9OuBocN",
+  "_key": "!items!NdXN197eu9OuBocN",
+  "name": "GHOSTWIRE.Classes.Commander.Items.ShakeItOff.Name",
+  "type": "feature",
+  "img": "icons/equipment/chest/breastplate-layered-leather-studded-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.ShakeItOff.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shake-it-off",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "WHRoQyKJHJUakO28",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

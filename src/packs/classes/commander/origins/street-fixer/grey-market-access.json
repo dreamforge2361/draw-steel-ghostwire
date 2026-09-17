@@ -1,0 +1,32 @@
+{
+  "_id": "vaNurJnxI7qZDmAm",
+  "_key": "!items!vaNurJnxI7qZDmAm",
+  "name": "GHOSTWIRE.Classes.Commander.Items.GreyMarketAccess.Name",
+  "type": "feature",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.GreyMarketAccess.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grey-market-access",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "J1mBEQNqwpFmqmGT",
+  "_key": "!items!J1mBEQNqwpFmqmGT",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Command.Name",
+  "type": "feature",
+  "img": "icons/skills/targeting/crosshair-triple-strike-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.Command.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "command",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

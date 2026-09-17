@@ -1,0 +1,32 @@
+{
+  "_id": "24rcsOCCLrvvMNoT",
+  "_key": "!items!24rcsOCCLrvvMNoT",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Goaded.Name",
+  "type": "feature",
+  "img": "icons/magic/time/arrows-circling-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.Goaded.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "goaded",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,73 @@
+{
+  "_id": "QnCQkVW8yG32hnVr",
+  "_key": "!items!QnCQkVW8yG32hnVr",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Now.Name",
+  "type": "ability",
+  "img": "icons/magic/time/clock-spinning-gold-pink.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "now-commander",
+    "story": "GHOSTWIRE.Classes.Commander.Items.Now.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 3,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.Now.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

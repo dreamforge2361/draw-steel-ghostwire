@@ -29,7 +29,8 @@
         "Tech": "Tech",
         "Chrome": "Chrome",
         "Optics": "Optics",
-        "Wired": "Wired"
+        "Wired": "Wired",
+        "Command": "Command"
       },
       "Rush": {
         "Name": "Rush",
@@ -1220,6 +1221,453 @@
           "Class": {
             "Name": "Scout",
             "Description": "<p>You are a Scout — on a clean corp badge an “asymmetric-operations specialist,” on the street a ghost, a shade, a kite, or simply the knife. You are the crew’s infiltrator, marksman, long eye, and assassin: somewhere else the moment the fight arrives, and already gone the moment it’s over. Where the Operator wins the firefight with discipline and chrome, you win it by never being in the fight the enemy thought they were in.</p><p>You are fully mundane — no Veil, no Signal, no magic. Your edge is the read: the disciplined study of an enemy’s tells, feeding a stack of chrome and gear that turns the read into precision. From it you bank <strong>Advantage</strong> and spend it on precision strikes, escapes, misdirections, and kills so decisive the target is dead before they know they were engaged.</p><p>You trained at one of three schools, and your school is your subclass: <strong>Hunter</strong> (Ironclad Longshot Division), <strong>Ghost</strong> (Ferrum Dynastic Deep-Dark Program), or <strong>Face-in-crowd</strong> (Nyx Cartel Mask-Line).</p><p><strong>Core characteristics:</strong> Reflex, Logic · <strong>Heroic resource:</strong> Advantage · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> yes (light Kits).</p>"
+          }
+        }
+      },
+      "Commander": {
+        "Folders": {
+          "Commander": "Commander",
+          "Abilities": "Abilities",
+          "Origins": "Command Doctrines",
+          "StreetFixer": "Street-Fixer",
+          "CorpExec": "Corp-Exec",
+          "Bard": "Bard"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Commander",
+            "Description": "<p>You are a Commander — on the street the boss, the voice, or simply <em>the one who does the talking</em>. Corp paperwork, when it bothers to name you at all, files you as a “liaison,” “talent,” or “handler.” None of that captures what you actually are: the <strong>crew’s voice and its will</strong>, the one who wins the room and directs the fight without ever firing a shot.</p><p>Where the Operator wins the firefight and the Hacker owns the net, you win the <strong>room</strong> — and when the room turns loud, you’re at the crew’s shoulder calling the shots that let everyone else fight above their weight. Your power is <strong>command presence</strong>: the trained, magnetic authority of someone people listen to. Your own damage is low by design; your impact, measured in what your allies accomplish because of you, is the highest in the game.</p><p>You are <strong>fully mundane</strong> — no Veil, no Wired specialty — and chrome-positive: Cyborgs make superb Commanders. Every doctrine, the Bard included, carries no magic-erosion penalty.</p><p>You run on two battlefields with one skill set: a <strong>combat Mark</strong> for the fight and a <strong>social Mark</strong> (Read the Room) for the negotiation, both fed by <strong>Influence</strong>. Your subclass is your <strong>Command Doctrine</strong>: <strong>Street-Fixer</strong>, <strong>Corp-Exec</strong>, or <strong>Bard</strong>.</p><p><strong>Core characteristics:</strong> Persona, Instinct · <strong>Heroic resource:</strong> Influence · <strong>Starting Stamina:</strong> 21 (+9 per level) · <strong>Recoveries:</strong> 10 · <strong>Kit:</strong> yes (light Kits).</p>"
+          },
+          "Influence": {
+            "Name": "Influence",
+            "Description": "<p>Influence is your command authority made mechanical: momentum earned by leading and reading people well, spent on heroic abilities and signature enhancements. You are fully mundane: Influence is never bought, raised, or fed by nuyen, Renown, or Body Integrity, and it never converts to them.</p><h4>Influence in Combat</h4><p>At the start of a combat encounter or some other stressful situation tracked in combat rounds (as determined by the Director), you gain Influence equal to [[lookup @hero.victories]]{your Victories}. At the start of each of your turns during combat, you [[/gain 2 hr]]{gain 2 Influence} (3 at 7th level from Heightened Influence, 4 at 10th level from True Influence).</p><p>Additionally, you gain 1 Influence the first time each combat round that:</p><ul><li><p>any ally within 10 squares of you damages a creature Marked by you ([[/gain 1 hr]]);</p></li><li><p>any ally within 10 squares of you uses a heroic ability ([[/gain 1 hr]]);</p></li><li><p>you succeed on a Read the Room that reveals new information ([[/gain 1 hr]]).</p></li></ul><p>You lose any remaining Influence at the end of the encounter.</p><h4>Influence Outside of Combat</h4><p>Though you can’t gain Influence outside of combat, in a social scene (a negotiation, an infiltration, a performance) you can use your heroic abilities and effects that cost Influence without spending it. Whenever you do, you can’t use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite.</p><h4>Two Marks</h4><p>You can have <strong>one combat Mark</strong> (the Mark signature) and <strong>one social Mark</strong> (the Read the Room signature) active at the same time. Each track has its own target, duration, and benefits. Abilities that refer to a “Marked” creature mean your combat Mark unless they say otherwise.</p><p><em>In Foundry, Influence costs are enforced in combat at the ability’s full cost. The per-turn drip is a flat 2; at 7th and 10th level, add the extra with the Heightened Influence and True Influence buttons.</em></p>"
+          },
+          "FieldPresence": {
+            "Name": "Field Presence",
+            "Description": "<p>You are not a Kit-forward class — most of your impact comes through allies, not personal weapon technique — but you can use and gain the benefits of a light Kit (no armor or light armor, and no heavy weapon) when your build calls for personal self-sufficiency in a fight: a Corp-Exec running executive protection, or a Street-Fixer who backs their word with a gun.</p>"
+          },
+          "ReadTheAngles": {
+            "Name": "Read the Angles",
+            "Description": "<p>The leader who has already read the battlefield before the first shot is fired. At the start of an encounter, you can use a free triggered action to use your Mark ability against one enemy you have line of effect to, even if you are surprised. You can then slide the Marked target up to 3 squares, ignoring stability. The target can’t be moved in a way that would harm them (such as over a ledge), leave them dying, or result in them suffering a condition or other negative effect.</p>"
+          },
+          "WatchTheirWeaknesses": {
+            "Name": "Watch Their Weaknesses",
+            "Description": "<p>The first time each combat round that an ally damages a creature Marked by you, or that you succeed on a Read the Room, you gain 2 Influence instead of 1. [[/gain 1 hr]]{Gain the extra Influence.}</p>"
+          },
+          "ImprovedFieldPresence": {
+            "Name": "Improved Field Presence",
+            "Description": "<p>If you have a Kit, you gain an edge on power rolls made with your Kit’s signature abilities.</p>"
+          },
+          "MasterOfWords": {
+            "Name": "Master of Words",
+            "Description": "<p>Once per round, you can negate a bane on a power roll made with your Kit’s signature abilities (if you have a Kit).</p>"
+          },
+          "HeightenedInfluence": {
+            "Name": "Heightened Influence",
+            "Description": "<p>At the start of each of your turns during combat, you gain 3 Influence instead of 2. [[/gain 1 hr]]{Gain the extra Influence.}</p>"
+          },
+          "SeizeTheInitiativeFeature": {
+            "Name": "Seize the Initiative",
+            "Description": "<p>If your side is not surprised when combat begins, your side goes first.</p><p>If an enemy has an ability that allows their side to go first, roll as usual to determine who goes first.</p><p><em>This feature is separate from the 1-Influence heroic ability of the same name.</em></p>"
+          },
+          "GrandmasterOfWords": {
+            "Name": "Grandmaster of Words",
+            "Description": "<p>Once per encounter, a power roll made with your Kit’s signature abilities (if you have a Kit) automatically counts as a high (17+) result.</p>"
+          },
+          "Command": {
+            "Name": "Command",
+            "Description": "<p>You have an epic resource called Command: the authority a great leader radiates doesn’t vanish the instant the fight ends. The first Influence you would lose at the end of an encounter (up to 2) instead carries into the next scene as Command. You can spend Command exactly like Influence, but only on your very next activation of an ability or effect that costs Influence.</p>"
+          },
+          "TrueInfluence": {
+            "Name": "True Influence",
+            "Description": "<p>At the start of each of your turns during combat, you gain 4 Influence instead of 3. [[/gain 1 hr]]{Gain the extra Influence.}</p>"
+          },
+          "MasterOfVoice": {
+            "Name": "Master of Voice",
+            "Description": "<p>Whenever an ally makes a power roll against a creature Marked by you or the target of your Read the Room, they roll three dice and choose which two to use.</p><p>Additionally, heroic abilities that target one or more creatures Marked by you cost 2 less Influence (minimum 1).</p>"
+          },
+          "DirectAlly": {
+            "Name": "Direct Ally",
+            "Story": "The crew simply fights better with you calling it.",
+            "Effect_before0000000000": "<p>The target must be able to see or hear you. Choose one:</p><ul><li><p>The target gains an edge on their next power roll.</p></li><li><p>The target can move up to their speed.</p></li><li><p>The target deals +1 damage on their next strike, or gains +1 damage reduction until the start of their next turn.</p></li></ul>",
+            "Effect_spend00000000000": "<p>You target up to 3 allies instead of one, <strong>or</strong> you upgrade the benefit: the movement becomes a free strike, the edge becomes a double edge, or the damage bonus becomes +3.</p>"
+          },
+          "Mark": {
+            "Name": "Mark",
+            "Story": "You point at the thing that matters, and the whole crew gets better at dealing with it.",
+            "Effect_before0000000000": "<p>This is your <strong>combat Mark</strong>. The target is [[/apply CMD0000000marked]]{Marked} by you until the end of the encounter, until you are dying, or until you use this ability again. You can have only one combat-Marked creature at a time (the Corp-Exec’s Anticipation raises this to two), and you can willingly end your Mark (no action required). When a creature Marked by you is reduced to 0 Stamina, you can use a free triggered action to Mark a new target within distance.</p><p>While a creature Marked by you is within your line of effect, you and allies within your line of effect gain an edge on power rolls made against it.</p><p>Your combat Mark is independent of your social Mark (Read the Room); both can be active at once.</p>",
+            "Effect_spend00000000000": "<p>Whenever you or an ally deals rolled damage to a creature Marked by you, you can spend 1 Influence as a free triggered action to gain one of the following benefits (only one per trigger):</p><ul><li><p>The ability deals extra [[/damage 2*@P]]{damage} equal to twice your Persona score.</p></li><li><p>The creature dealing the damage can spend a Recovery.</p></li><li><p>The creature dealing the damage can shift up to [[lookup @P]]{your Persona score} squares.</p></li><li><p>If the damage was dealt with a melee ability, the Marked creature is [[/apply taunted turn]]{taunted} by you until the end of its next turn.</p></li></ul>"
+          },
+          "ReadTheRoom": {
+            "Name": "Read the Room",
+            "Story": "You read the mark across the table before they know they’re being read.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Sight or hearing, in a social scene.</p><p>This is your <strong>social Mark</strong>. The target is Read by you until the end of the scene, until the scene resets, or until you use this ability again. You can have only one Read NPC at a time; this doesn’t end your combat Mark.</p><p>When you Read the target, learn one of the following, whichever the Director judges easiest to read in the moment: a <strong>Motivation</strong>, a <strong>Pitfall</strong>, their current <strong>Attitude</strong> toward you or the crew, or a <strong>tell</strong> (for example, “she’s lying about the payout”). The first time each round this reveals new information, you gain 1 Influence ([[/gain 1 hr]]).</p><p>For the rest of the scene, you and your allies gain an edge on Persona-based argument rolls against the Read NPC.</p>",
+            "Effect_spend00000000000": "<p>When an ally makes an argument against the Read NPC and wins it (a middle or high result), you can spend 1 Influence as a free triggered action to choose one: learn a second piece of information about the NPC; grant that ally an edge on their next argument roll this scene; or move the NPC’s Interest up one step immediately.</p>"
+          },
+          "TheRightWord": {
+            "Name": "The Right Word",
+            "Story": "The same charged line heals a friend’s nerve or breaks an enemy’s.",
+            "Effect_before0000000000": "<p>You can use this ability as a main action or a maneuver. The target must be able to see or hear you. Choose one mode:</p><ul><li><p><strong>Rally (ally):</strong> no power roll. End one fear or morale condition on the target (such as frightened or taunted), let them make a saving throw against one effect, or steel them: +2 to their next saving throw against fear, corruption, or dread.</p></li><li><p><strong>Rattle (enemy):</strong> make the power roll below.</p></li></ul>",
+            "Effect_spend00000000000": "<p>You target up to 3 creatures within distance instead of one, <strong>or</strong> you upgrade the effect: a rally ends all fear and morale conditions on the target, or a rattle’s condition lasts until the target ends it with a saving throw (save ends) instead.</p>",
+            "Tier1": "Rattle: no effect.",
+            "Tier2": "Rattle: the target has a bane on their next power roll.",
+            "Tier3": "Rattle: the target is taunted by you until the end of their next turn, or frightened of you until the end of your next turn (your choice)."
+          },
+          "SeizeTheInitiative": {
+            "Name": "Seize the Initiative",
+            "Story": "The everyday warlord command: cheap, flexible, always useful.",
+            "Effect_before0000000000": "<p>Choose one: the target can immediately move up to their speed; the target can make a free strike against a creature within their weapon’s distance; or, if the target hasn’t acted yet this round, they take their turn immediately after yours.</p>"
+          },
+          "AWord": {
+            "Name": "A Word",
+            "Story": "A quiet aside at exactly the right moment.",
+            "Effect_before0000000000": "<p>Choose one: the target gains +1 on their next power roll this round, or the target ends one frightened or taunted condition on themselves.</p>"
+          },
+          "CoordinatedAssault": {
+            "Name": "Coordinated Assault",
+            "Story": "The moment the crew moves as one strike team.",
+            "Effect_before0000000000": "<p>Choose one:</p><ul><li><p>Each target gains an edge on their next strike this round, and that strike deals extra damage equal to [[lookup @P]]{your Persona score}.</p></li><li><p>One target gains an extra main action this turn.</p></li></ul>"
+          },
+          "CommandPresence": {
+            "Name": "Command Persona / Fearful Awe",
+            "Story": "The anti-morale teeth: area denial, aimed at will rather than bodies.",
+            "Effect_before0000000000": "<p>Choose one mode before you roll:</p><ul><li><p><strong>Command Presence:</strong> a 3 cube within 10 squares. The power roll decides how many enemies in the area are affected.</p></li><li><p><strong>Fearful Awe:</strong> one enemy within 10 squares.</p></li></ul>",
+            "Tier1": "Command Presence: the enemy nearest the cube’s center has a bane on its next power roll. Fearful Awe: the target is weakened until the end of its next turn.",
+            "Tier2": "Command Presence: up to 2 enemies of your choice in the area are taunted by you until the end of their next turn. Fearful Awe: the target is taunted by you until the end of its next turn.",
+            "Tier3": "Command Presence: up to 3 enemies of your choice in the area are taunted by you until the end of their next turn and have a bane on their next power roll. Fearful Awe: the target is frightened of you (save ends)."
+          },
+          "BattleCry": {
+            "Name": "Battle Cry",
+            "Story": "A leader’s voice cutting through the noise to put fresh wind in everyone’s sails."
+          },
+          "ConcussiveCommand": {
+            "Name": "Concussive Command",
+            "Story": "“Strike him down!” A single word turns an ally’s next hit into exactly the opening the crew needed.",
+            "Effect_before0000000000": "<p>One ally within 10 squares can make a free strike (using a signature ability) against the target. Roll to determine the command’s effect on that strike.</p>",
+            "Tier1": "The strike doesn’t gain an edge, and the target has a bane on its next power roll.",
+            "Tier2": "The strike gains an edge; the target is dazed until the end of its next turn.",
+            "Tier3": "The strike gains an edge; the target is dazed (save ends)."
+          },
+          "RallyTheCrew": {
+            "Name": "Rally the Crew",
+            "Story": "The mass pick-me-up: healing morale and momentum rather than wounds.",
+            "Effect_before0000000000": "<p><strong>Combat:</strong> each ally in the area ends one condition on themselves, can spend a Recovery, gains temporary Stamina equal to [[lookup @P]]{your Persona score}, and gains an edge on their next power roll.</p><p><strong>Social:</strong> in a social scene, instead either shift the room’s Attitude one full step, or grant the crew an edge on all social rolls for the rest of the scene.</p>"
+          },
+          "CoordinatedStrike": {
+            "Name": "Coordinated Strike",
+            "Story": "The hammer-and-anvil moment: you call the shot, and someone else lands it.",
+            "Effect_before0000000000": "<p>You designate the target, and your allies within 10 squares strike it.</p>",
+            "Tier1": "One ally makes a free strike against the target.",
+            "Tier2": "One ally makes a free strike against the target with an edge.",
+            "Tier3": "Two allies each make a free strike against the target with an edge."
+          },
+          "Now": {
+            "Name": "Now!",
+            "Story": "The single sharpest word in your vocabulary.",
+            "Effect_before0000000000": "<p>Each target can immediately make a free strike, using any signature ability that is a strike.</p>"
+          },
+          "ThisIsWhatWePlannedFor": {
+            "Name": "This Is What We Planned For",
+            "Story": "The plan you called three turns ago, clicking into place on schedule.",
+            "Effect_before0000000000": "<p>Each target who hasn’t acted yet this round takes their turn immediately after yours, in any order.</p>"
+          },
+          "TurnTheTide": {
+            "Name": "Turn the Tide",
+            "Story": "The moment. Not a repeatable button.",
+            "Effect_before0000000000": "<p>Choose exactly one mode; the modes don’t stack.</p><ul><li><p><strong>Combat:</strong> each target gains a main action or a free strike this round, can move up to their speed, gains an edge on power rolls until the end of their next turn, and deals extra damage equal to [[lookup @P]]{your Persona score} on their strikes until the end of the round.</p></li><li><p><strong>Social:</strong> the decisive stroke. Win the current negotiation exchange outright (skip its remaining arguments and secure the deal), or bend a powerful NPC to a major concession that lies within their actual authority (Director-adjudicated). This resolves the current scene decisively; it doesn’t erase ground already lost or bind the NPC in future scenes.</p></li></ul>"
+          },
+          "HitEmHard": {
+            "Name": "Hit ’Em Hard!",
+            "Story": "Every hit against your mark turns into fuel for whoever landed it.",
+            "Effect_before0000000000": "<p>Until the end of the encounter or until you are dying, whenever you or any ally deals damage to a creature Marked by you, the creature who dealt the damage [[/surge 2]], which they can use immediately.</p>"
+          },
+          "Rout": {
+            "Name": "Rout",
+            "Story": "Once the line starts to break, it keeps breaking.",
+            "Effect_before0000000000": "<p>Until the end of the encounter or until you are dying, whenever you or any ally deals damage to a creature Marked by you whose Persona is lower than average, that creature is [[/apply frightened save]]{frightened} of the creature who dealt the damage (save ends).</p>"
+          },
+          "BreakFormation": {
+            "Name": "Break Formation",
+            "Story": "The crew doesn’t just hit the mark; it reshapes the whole fight around it.",
+            "Effect_before0000000000": "<p>Until the end of the encounter or until you are dying, the first time on a turn that you or any ally deals damage to a creature Marked by you, the creature who dealt the damage can push the Marked creature up to 2 squares, then shift up to 2 squares. Additionally, whenever an ally uses the Charge main action against a creature Marked by you, they can use a signature or heroic ability that is a strike instead of a free strike.</p>"
+          },
+          "CoordinatedStrikeTeam": {
+            "Name": "Coordinated Strike Team",
+            "Story": "The masterclass moment: everyone executes the play exactly as drilled.",
+            "Effect_before0000000000": "<p>Each target [[/surge 1]] and can use a signature ability as a free triggered action. That ability has a double edge on its power roll.</p>"
+          },
+          "EmpireOfWords": {
+            "Name": "Empire of Words",
+            "Story": "You stop reacting to the room and start writing its script.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Social scene.</p><p>Set the frame of the negotiation for the rest of the scene. Choose one:</p><ul><li><p>Force the negotiation’s topic to a subject of your choice.</p></li><li><p>Declare one Motivation you’ve learned on-record and unchangeable.</p></li><li><p>Declare one Pitfall neutralized for the rest of the scene.</p></li><li><p>Your next argument this scene automatically succeeds.</p></li></ul>"
+          },
+          "SetThePieces": {
+            "Name": "Set the Pieces",
+            "Story": "“Everyone up. We do this again, together.”",
+            "Effect_before0000000000": "<p>Each target [[/surge 2]], can spend a Recovery, ends any conditions or effects on themselves, and stands up if prone.</p>"
+          },
+          "BreakTheirNerve": {
+            "Name": "Break Their Nerve",
+            "Story": "The instant a whole line of enemies decides, all at once, that this fight isn’t worth it.",
+            "Tier1": "Frightened of you until the end of its next turn.",
+            "Tier2": "Frightened of you (save ends).",
+            "Tier3": "Frightened of you (save ends) and weakened (save ends)."
+          },
+          "TotalCommand": {
+            "Name": "Total Command",
+            "Story": "Everyone acts NOW: the fight is decided in this instant.",
+            "Effect_before0000000000": "<p>Each target [[/surge 1]] and can use a signature ability as a free triggered action. That ability gains an edge on its power roll, and any potency it has increases by 1.</p>"
+          },
+          "CoupDeGrace": {
+            "Name": "Coup de Grâce",
+            "Story": "The moment that ends the fight, or the negotiation, permanently.",
+            "Trigger": "Combat: the target is not a leader or solo creature, and becomes winded. Social: an argument reaches its final phase.",
+            "Effect_before0000000000": "<p><strong>Combat:</strong> the target is killed, and the creature who caused the target to be winded can spend a Recovery.</p><p><strong>Social:</strong> force an immediate resolution in your favor: the NPC concedes fully, or walks away with your key demand met.</p>"
+          },
+          "MarshalTheNetwork": {
+            "Name": "Marshal the Network",
+            "Story": "The web of people you’ve cultivated pays off exactly when you need it most.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> In-scene or between scenes.</p><p>Call in a network favor: a Contact from your web arrives to help in this scene. What they can do depends on the Contact’s standing (Director-adjudicated, per the Contacts rules). You can call on each Contact this way only once per session.</p>"
+          },
+          "SpeakWithOneVoice": {
+            "Name": "Speak With One Voice",
+            "Story": "Riots, rallies, panic-quells, and mass loyalty pledges, all turning on the sound of your voice.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Social scene.</p><p>You impose your framing on an entire crowd, faction, or room.</p>",
+            "Tier1": "Only the leader shifts Attitude one step toward Cooperative.",
+            "Tier2": "Half of the present NPCs (the leader’s choice of who holds out) shift Attitude one step toward Cooperative.",
+            "Tier3": "Every present NPC shifts Attitude one step toward Cooperative."
+          },
+          "StreetFixer": {
+            "Name": "Street-Fixer",
+            "Description": "<p><em>“Deniable-ops undercity operator.”</em> The whole undercity on speed-dial: deals, favors, and the fixer’s web. Corp cover: “independent contractor” or “unlicensed logistics.” You chrome up for utility, not showmanship.</p><p>At 1st level you gain the <strong>Streetwise</strong> skill, the Fixer’s Web feature, and the Advanced Tactics and Undercity Whisper triggered actions. You start with a <strong>fixer</strong> or <strong>gang lieutenant</strong> contact.</p>"
+          },
+          "FixersWeb": {
+            "Name": "The Fixer’s Web",
+            "Description": "<p>You run the strongest contact web in the game: you start with extra contacts, cultivate them faster, and can call favors mid-run (see the Followers, Strongholds &amp; Contacts rules). You gain an edge on Streetwise legwork and on negotiations framed around Freedom, Greed, or Vengeance.</p><p>While in your presence or working according to your plans, each ally gains an edge on intrigue tests (Stealth, Deception, Streetwise, Security Systems, and the like). You can use the Command skill to assist another creature with any intrigue test, and at the Director’s discretion you and your allies can use intrigue tests to attempt research or reconnaissance during a negotiation.</p>"
+          },
+          "InfiltrationTactics": {
+            "Name": "Infiltration Tactics",
+            "Description": "<p>Whenever you or any ally within 10 squares of you becomes hidden, that creature [[/surge 1]].</p>"
+          },
+          "GreyMarketAccess": {
+            "Name": "Grey Market Access",
+            "Description": "<p>Once per session, you can call in one gear item from your Fixer’s Web at half price.</p>"
+          },
+          "Distracted": {
+            "Name": "Distracted",
+            "Description": "<p>Creatures Marked by you don’t count as observers for the purpose of hiding. Additionally, you and your allies can use each other as cover when hiding.</p>"
+          },
+          "LeaveNoTrace": {
+            "Name": "Leave No Trace",
+            "Description": "<p>You and allies within 10 squares of you can move at full speed while sneaking. Enemies within 10 squares of you take a bane on tests made to search for hidden creatures.</p>"
+          },
+          "UndercityAdvantage": {
+            "Name": "Undercity Advantage",
+            "Description": "<p>During a montage test or a negotiation, you can automatically succeed on one intrigue test (Stealth, Deception, Streetwise, Security Systems, and the like). Additionally, you know how to conceal large groups of people, such as escapees or civilians, from pursuit.</p>"
+          },
+          "SetUpThePlay": {
+            "Name": "Set Up the Play",
+            "Description": "<p>Whenever you or any ally makes a strike against a creature Marked by you, you can spend 2 Influence to let the striker shift up to [[lookup @P]]{your Persona score} squares and use the Hide maneuver as a free maneuver during the shift. The shift can happen before or after the strike.</p>"
+          },
+          "AdvancedTactics": {
+            "Name": "Advanced Tactics",
+            "Story": "Your leadership turns an ally’s hit into something more.",
+            "Trigger": "The target deals damage to a creature Marked by you.",
+            "Effect_before0000000000": "<p>The target [[/surge 2]], which they can use on the triggering damage.</p>",
+            "Effect_spend00000000000": "<p>If the damage has any potency effect associated with it, the potency increases by 1.</p>"
+          },
+          "UndercityWhisper": {
+            "Name": "Undercity Whisper",
+            "Story": "Somebody in your web always knows somebody.",
+            "Trigger": "A creature Marked by you, or an NPC Read by you, is affected by one of your abilities.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Any.</p><p>Once per encounter, you can spend 1 Influence to declare that a contact from your Fixer’s Web has intel on the target. You automatically learn the target’s Motivation.</p>"
+          },
+          "FogOfWar": {
+            "Name": "Fog of War",
+            "Story": "Smoke, jammed feeds, crowd noise: nobody sees the crew clearly.",
+            "Effect_before0000000000": "<p>You create a zone of confusion (smoke, jammed feeds, crowd noise). Until the end of the encounter, you and your allies have concealment while in the area, and enemies take a bane on Perception-based tests made within it.</p>"
+          },
+          "TryMeInstead": {
+            "Name": "Try Me Instead",
+            "Story": "You step into the line of fire and dare them.",
+            "Trigger": "An enemy makes an attack that targets an ally within 10 squares of you.",
+            "Effect_before0000000000": "<p>You become the target of the triggering attack instead.</p>"
+          },
+          "CoordinatedExecution": {
+            "Name": "Coordinated Execution",
+            "Story": "Three angles, one heartbeat.",
+            "Effect_before0000000000": "<p>Once per encounter. The target must be Marked by you. You and up to 2 allies within 10 squares of the target can each make a free strike against it.</p>"
+          },
+          "PanicInTheirLines": {
+            "Name": "Panic in Their Lines",
+            "Story": "They watched their best go down, and now they don’t want to be next.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, whenever a creature Marked by you takes damage from you or an ally, each enemy within 10 squares of it that can see it is [[/apply frightened save]]{frightened} (save ends).</p>"
+          },
+          "SquadHitAndRun": {
+            "Name": "Squad! Hit and Run!",
+            "Story": "Strike and gone before they turn.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, whenever you or an ally within 10 squares of you resolves a strike against a creature Marked by you, that creature can immediately shift up to their speed (no action required).</p>"
+          },
+          "TheirLackOfFocus": {
+            "Name": "Their Lack of Focus Is Their Undoing",
+            "Story": "Every missed shot tells you where they’ll be next.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, whenever an enemy ends its turn without damaging you or an ally within 10 squares of you, you and that ally gain an edge on your next power rolls against that enemy.</p>"
+          },
+          "CorpExec": {
+            "Name": "Corp-Exec",
+            "Description": "<p><em>“Boardroom strategist.”</em> Credentials, protocol, and the weight of institutional power: you walk into the arcology like you own a floor of it. Corp cover: “executive liaison” or “corporate handler.” Your chrome is clean and soft — vocal modulators and diagnostic implants, nothing that reads as augmented in a boardroom.</p><p>At 1st level you gain the <strong>Corporate</strong> skill, the Credentials &amp; Protocol feature, and the Overwatch and The Board Reads triggered actions. You start with a <strong>corp insider</strong> or <strong>handler</strong> contact.</p>"
+          },
+          "CredentialsAndProtocol": {
+            "Name": "Credentials & Protocol",
+            "Description": "<p>You carry plausible authority for access, clearance, and hierarchy. You gain an edge on tests to command NPCs who respect hierarchy, and on negotiations framed around Higher Authority or Greed.</p><p>Research projects about war, security operations, or corporate conflict are one category cheaper for you, and during a respite you can research an upcoming encounter you know about.</p>"
+          },
+          "Goaded": {
+            "Name": "Goaded",
+            "Description": "<p>Whenever a creature Marked by you uses a strike that targets you or an ally in your line of effect, you can use a free triggered action to change one target of that strike to you or another ally within the strike’s distance and your line of effect.</p>"
+          },
+          "AccessProtocol": {
+            "Name": "Access Protocol",
+            "Description": "<p>Pre-run legwork: at the start of each session, name a corp faction. You gain a one-step Renown bump toward that faction for the session.</p>"
+          },
+          "Anticipation": {
+            "Name": "Anticipation",
+            "Description": "<p>Your Mark ability can target two creatures at once, and both are Marked by you.</p>"
+          },
+          "IPredictedThat": {
+            "Name": "I Predicted That",
+            "Description": "<p>You and each ally within 10 squares of you gain an edge on Logic tests.</p>"
+          },
+          "TheBigPicture": {
+            "Name": "The Big Picture",
+            "Description": "<p>During a montage test or a negotiation, you can automatically succeed on one knowledge test. Additionally, during a respite you can make a project roll for a research project in addition to taking another respite activity.</p>"
+          },
+          "ExecutivePlay": {
+            "Name": "Executive Play",
+            "Description": "<p>Whenever you or any ally strikes a creature Marked by you, you can spend 2 Influence to let the striker shift up to [[lookup @P]]{your Persona score} squares before the strike. If you didn’t make the strike, you can also shift up to [[lookup @P]]{your Persona score} squares. If you made the strike, one ally within 10 squares of you can also shift up to [[lookup @P]]{your Persona score} squares.</p>"
+          },
+          "Overwatch": {
+            "Name": "Overwatch",
+            "Story": "You saw the move before they made it, and someone is already waiting.",
+            "Trigger": "A creature Marked by you moves.",
+            "Effect_before0000000000": "<p>At any point during the target’s movement, one ally can make a free strike against it.</p>",
+            "Effect_spend00000000000": "<p>If the target has a Reflex score lower than average, it is also [[/apply slowed turn]]{slowed} until the end of its turn.</p>"
+          },
+          "TheBoardReads": {
+            "Name": "The Board Reads",
+            "Story": "Titles, org charts, and who actually holds the knife.",
+            "Trigger": "You succeed on a Read the Room against an NPC with corp authority.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Social scene.</p><p>You learn the NPC’s corp faction and that faction’s current Renown standing toward your crew, and you [[/gain 1 hr]]{gain 1 Influence}.</p>"
+          },
+          "IveGotYourBack": {
+            "Name": "I’ve Got Your Back",
+            "Story": "The contingency plan was always you.",
+            "Trigger": "The target takes damage.",
+            "Effect_before0000000000": "<p>The target gains damage immunity equal to [[lookup @P]]{your Persona score} against the triggering damage.</p>"
+          },
+          "TargetsOfOpportunity": {
+            "Name": "Targets of Opportunity",
+            "Story": "You flag the target, and the crew is already moving.",
+            "Trigger": "An enemy becomes Marked by you.",
+            "Effect_before0000000000": "<p>One ally within 10 squares who hasn’t acted yet this round can immediately make a free strike against the Marked enemy.</p>"
+          },
+          "BattlePlan": {
+            "Name": "Battle Plan",
+            "Story": "The deck was printed before anyone walked into the room.",
+            "Trigger": "An encounter begins.",
+            "Effect_before0000000000": "<p>Designate a plan: name one action (for example, “focus the sniper,” “hold the door,” “get the package out”). The first time each ally takes that action this encounter, they gain an edge on the power roll it involves.</p>"
+          },
+          "Hustle": {
+            "Name": "Hustle!",
+            "Story": "Move. Now. Everyone.",
+            "Effect_before0000000000": "<p>Each target can shift up to their speed (no action required).</p>"
+          },
+          "BlotOutTheSun": {
+            "Name": "Blot Out the Sun!",
+            "Story": "Every gun they have, pointed at the wrong problem.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 5 burst centered on a creature Marked by you.</p><p>Each enemy in a 5 burst centered on a creature Marked by you takes a bane on power rolls against you and your allies until the end of the encounter.</p>"
+          },
+          "Counterstrategy": {
+            "Name": "Counterstrategy",
+            "Story": "You planned for this exact play.",
+            "Trigger": "An enemy’s ability would affect 3 or more of your allies.",
+            "Effect_before0000000000": "<p>Once per encounter. The ability affects only one of those allies (your choice); it has no effect on the others.</p>"
+          },
+          "Bard": {
+            "Name": "Bard",
+            "Description": "<p><em>“Techno-performer.”</em> A techno-musician, media personality, streaming presence, holo-performer, augmented vocal artist, and deepfake-charisma specialist whose spectacle carries the crew. The Bard is <strong>fully mundane</strong>: no Veil, no half-caster lane, and no magic-erosion penalty. Augmented vocal cords, subdermal light-rigs, and streaming implants are all on-brand. Corp cover: “media talent” or “content producer.”</p><p>At 1st level you gain the <strong>Performance</strong> skill, the Resonant Performance feature, and the Deflect the Beat and Riff on the Room triggered actions. You start with a <strong>promoter</strong>, <strong>journalist</strong>, <strong>streamer</strong>, or <strong>scene-fixer</strong> contact.</p>"
+          },
+          "ResonantPerformance": {
+            "Name": "Resonant Performance",
+            "Description": "<p>Your performances — music, oratory, streaming, holo-work, augmented vocal work, deepfake charisma — inspire allies and sway crowds. You gain an edge on Performance tests and on tests to influence a crowd or mass audience.</p><p>During a negotiation, each hero with you treats their Renown as 2 higher. During combat, you gain a double edge on tests made to stop combat and start a negotiation.</p>"
+          },
+          "CommandTheStage": {
+            "Name": "Command the Stage",
+            "Description": "<p>Whenever you make an opportunity attack against a creature, that creature’s speed becomes 0 until the end of its next turn.</p><p>Additionally, whenever a creature Marked by you attempts to move or shift while within distance of your melee free strike, you can use a free triggered action and spend 2 Influence to make a melee free strike against it.</p>"
+          },
+          "TheSignatureBeat": {
+            "Name": "The Signature Beat",
+            "Description": "<p>You have a signature performance: a song, a slogan, a catchphrase, a media hook. When you perform it, each ally within 10 squares of you gains +1 on Instinct-based tests to read people and situations for the rest of the scene.</p>"
+          },
+          "ShakeItOff": {
+            "Name": "Shake It Off",
+            "Description": "<p>As a free maneuver, you can take [[/damage 1d6]]{1d6 damage} that can’t be reduced in any way to ignore the consequence of a failed test, or to end one effect on you that is ended by a saving throw or that ends at the end of your turn. Each adjacent ally can do the same.</p>"
+          },
+          "SetTheBeat": {
+            "Name": "Set the Beat",
+            "Description": "<p>Whenever you use the Charge main action against a creature Marked by you, you can use a signature or heroic ability that is a strike instead of a free strike.</p>"
+          },
+          "TheShow": {
+            "Name": "The Show",
+            "Description": "<p>During a montage test or a negotiation, you can automatically succeed on one social test. Additionally, during a respite you can convince a group of people to help with a crafting or social project.</p>"
+          },
+          "BringTheHouseDown": {
+            "Name": "Bring the House Down",
+            "Description": "<p>Whenever you or an ally makes a melee strike against a creature Marked by you, you can spend 2 Influence to let the striker push the target up to [[lookup @P]]{your Persona score} squares, then shift up to [[lookup @P]]{your Persona score} squares, ending adjacent to the target.</p>"
+          },
+          "DeflectTheBeat": {
+            "Name": "Deflect the Beat",
+            "Story": "You move with the hit like it’s a downbeat, and it lands on nothing.",
+            "Trigger": "A creature deals damage to the target.",
+            "Effect_before0000000000": "<p>You can shift 1 square. If the target is you, or if you end this shift adjacent to the target, the target takes half the damage. If the damage has any potency effect associated with it, the potency decreases by 1.</p>",
+            "Effect_spend00000000000": "<p>This ability’s distance becomes Melee [[lookup 1+@P evaluate]]{1 + your Persona score}, and you can shift up to [[lookup @P]]{your Persona score} squares instead of 1.</p>"
+          },
+          "RiffOnTheRoom": {
+            "Name": "Riff on the Room",
+            "Story": "The crowd leans in, and you ride it.",
+            "Trigger": "The room’s mood swings your way: any Attitude shifts toward Cooperative, or an ally gets a high (17+) result on a Performance or social test.",
+            "Effect_before0000000000": "<p>Once per encounter, you [[/gain 2 hr]]{gain 2 Influence}.</p>"
+          },
+          "NoDyingOnMyWatch": {
+            "Name": "No Dying on My Watch",
+            "Story": "Not tonight. Not on your stage.",
+            "Trigger": "The target would be reduced to 0 Stamina.",
+            "Effect_before0000000000": "<p>Before the damage resolves, the target gains temporary Stamina equal to [[lookup @P]]{your Persona score}.</p>"
+          },
+          "SquadOnMe": {
+            "Name": "Squad! On Me!",
+            "Story": "Everyone to the spotlight.",
+            "Effect_before0000000000": "<p>Each target is pulled to an unoccupied square adjacent to you (no action required for them).</p>"
+          },
+          "InstantRetaliation": {
+            "Name": "Instant Retaliation",
+            "Story": "Heckle the headliner, get the mic in your teeth.",
+            "Trigger": "A creature Marked by you deals damage to you.",
+            "Effect_before0000000000": "<p>You make a melee free strike against the target.</p>"
+          },
+          "ToMeSquad": {
+            "Name": "To Me Squad!",
+            "Story": "The light-rig flares, and the crew is simply there.",
+            "Effect_before0000000000": "<p>Each target is teleported to an unoccupied square adjacent to you.</p>"
+          },
+          "NoEscape": {
+            "Name": "No Escape",
+            "Story": "Nobody walks out on the show.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, whenever a creature Marked by you willingly moves away from you or one of your allies, the nearest ally can make a free strike against it.</p>"
+          },
+          "ThatOneIsMine": {
+            "Name": "That One Is Mine!",
+            "Story": "Center stage. Just the two of you.",
+            "Effect_before0000000000": "<p>Once per encounter. The target must be Marked by you. Until the end of the encounter, you have a double edge on power rolls against the target, and the target has a bane on power rolls against creatures other than you.</p>"
           }
         }
       }

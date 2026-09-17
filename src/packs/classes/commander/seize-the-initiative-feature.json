@@ -1,0 +1,32 @@
+{
+  "_id": "Zg0IcOvFjVYmuGD0",
+  "_key": "!items!Zg0IcOvFjVYmuGD0",
+  "name": "GHOSTWIRE.Classes.Commander.Items.SeizeTheInitiativeFeature.Name",
+  "type": "feature",
+  "img": "icons/environment/people/charge.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.SeizeTheInitiativeFeature.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "seize-the-initiative-feature",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

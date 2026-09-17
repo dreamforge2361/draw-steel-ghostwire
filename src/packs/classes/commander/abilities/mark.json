@@ -1,0 +1,134 @@
+{
+  "_id": "1F4jfVDchFmu6YL7",
+  "_key": "!items!1F4jfVDchFmu6YL7",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Mark.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mark",
+    "story": "GHOSTWIRE.Classes.Commander.Items.Mark.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Commander.Items.Mark.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Commander.Items.Mark.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "CMD0000000marked",
+      "_key": "!items.effects!1F4jfVDchFmu6YL7.CMD0000000marked",
+      "name": "Marked",
+      "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.1F4jfVDchFmu6YL7",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.combat.targetModifiers.edges",
+            "value": 1,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "combatEnd",
+        "expired": false
+      },
+      "description": "<p>Marked by a Commander: while this creature is within the Commander’s line of effect, the Commander and allies within their line of effect gain an edge on power rolls made against it.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

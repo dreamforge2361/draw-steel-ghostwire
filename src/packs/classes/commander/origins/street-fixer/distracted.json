@@ -1,0 +1,32 @@
+{
+  "_id": "5s1nwodbzC9o83vO",
+  "_key": "!items!5s1nwodbzC9o83vO",
+  "name": "GHOSTWIRE.Classes.Commander.Items.Distracted.Name",
+  "type": "feature",
+  "img": "icons/magic/time/clock-spinning-gold-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.Distracted.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "distracted",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

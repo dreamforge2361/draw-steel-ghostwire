@@ -1,0 +1,32 @@
+{
+  "_id": "ALx2RU0eqZ3sppXk",
+  "_key": "!items!ALx2RU0eqZ3sppXk",
+  "name": "GHOSTWIRE.Classes.Commander.Items.TrueInfluence.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.TrueInfluence.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "true-influence",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5r2EJTTGLG0Ww5Z2",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,321 @@
+{
+  "_id": "AeQ7bqy5YsaRHUsu",
+  "_key": "!items!AeQ7bqy5YsaRHUsu",
+  "name": "GHOSTWIRE.Classes.Commander.Items.CorpExec.Name",
+  "type": "subclass",
+  "img": "icons/skills/social/diplomacy-handshake-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.CorpExec.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "corp-exec",
+    "advancements": {
+      "PPxt0jPGtltOwcxS": {
+        "name": "GHOSTWIRE.Skills.List.Corporate",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "PPxt0jPGtltOwcxS",
+        "skills": {
+          "choices": [
+            "corporate"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your Command Doctrine grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "MdHYbHf3EPWGmiFv": {
+        "name": "Credentials & Protocol",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "MdHYbHf3EPWGmiFv",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Vv93lC9m2a5JaQGK"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dE2znEjHZsiC65Fh": {
+        "name": "Overwatch",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "dE2znEjHZsiC65Fh",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QsiPstrjOXDsfCAT"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Az9xcVB0zPdoAH4H": {
+        "name": "The Board Reads",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Az9xcVB0zPdoAH4H",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YNCX6Qo6poQiViaK"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "CVYJxNlquAGOPxp7": {
+        "name": "Goaded",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "CVYJxNlquAGOPxp7",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.24rcsOCCLrvvMNoT"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "pPAZj58tfUW3sUyp": {
+        "name": "2nd-Level Corp-Exec Ability",
+        "img": "icons/skills/social/diplomacy-handshake-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "pPAZj58tfUW3sUyp",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.77AKvlemQXkTEmdJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.8VLbGcQJFqe3Wpky"
+          }
+        ],
+        "description": "<p>Choose one of the following abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "kbp62Tt9H7FOOafi": {
+        "name": "Access Protocol",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "kbp62Tt9H7FOOafi",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xYvg6RuykFHRej8x"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "oTwpIcYJyobchmVS": {
+        "name": "Anticipation",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "oTwpIcYJyobchmVS",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aVqhKyMJGbpbucS4"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "5avf9SuSgNhFYjM4": {
+        "name": "I Predicted That",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "5avf9SuSgNhFYjM4",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.hQzGAiNQQDKiLMR0"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "et3fGSVBGsLfUTl2": {
+        "name": "6th-Level Corp-Exec Ability",
+        "img": "icons/skills/social/diplomacy-handshake-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "et3fGSVBGsLfUTl2",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1boy33QtmPpawkeF"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qKp9W1Vb9AluMKKO"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "XcUeCuEENNqkLGTK": {
+        "name": "The Big Picture",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "XcUeCuEENNqkLGTK",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WDdAns4AVFbQCkUR"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "zMAmhnX6jaCHIqan": {
+        "name": "Executive Play",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "zMAmhnX6jaCHIqan",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rKwPlJpASovqN2y4"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "rr637iI9qDGnnFxF": {
+        "name": "9th-Level Corp-Exec Ability",
+        "img": "icons/skills/social/diplomacy-handshake-gray.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "rr637iI9qDGnnFxF",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bSEN4mHvotCVF0Lg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sydWNPjHOJ6QB0cp"
+          }
+        ],
+        "description": "<p>Your Command Doctrine grants your choice of one of two heroic abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "commander"
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

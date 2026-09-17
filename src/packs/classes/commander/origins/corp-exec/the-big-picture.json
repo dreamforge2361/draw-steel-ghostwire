@@ -1,0 +1,32 @@
+{
+  "_id": "WDdAns4AVFbQCkUR",
+  "_key": "!items!WDdAns4AVFbQCkUR",
+  "name": "GHOSTWIRE.Classes.Commander.Items.TheBigPicture.Name",
+  "type": "feature",
+  "img": "icons/tools/navigation/map-chart-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.TheBigPicture.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-big-picture",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

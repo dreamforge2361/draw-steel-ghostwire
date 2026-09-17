@@ -1,0 +1,102 @@
+{
+  "_id": "kLnRrLHEWdoI14vN",
+  "_key": "!items!kLnRrLHEWdoI14vN",
+  "name": "GHOSTWIRE.Classes.Commander.Items.BattleCry.Name",
+  "type": "ability",
+  "img": "icons/creatures/abilities/lion-roar-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "battle-cry",
+    "story": "GHOSTWIRE.Classes.Commander.Items.BattleCry.Story",
+    "keywords": [
+      "command",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 3,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "APqUcFIxrMaBc5bY": {
+          "sort": 100000,
+          "name": "",
+          "img": null,
+          "type": "resource",
+          "_id": "APqUcFIxrMaBc5bY",
+          "resource": {
+            "tier1": {
+              "amount": 1,
+              "type": "surge",
+              "display": "",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "amount": 2,
+              "type": "surge",
+              "display": "",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "amount": 3,
+              "type": "surge",
+              "display": "",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "commander"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "gPtrRMHcNeLVs6Dp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

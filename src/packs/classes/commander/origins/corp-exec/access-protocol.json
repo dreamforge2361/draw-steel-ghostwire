@@ -1,0 +1,32 @@
+{
+  "_id": "xYvg6RuykFHRej8x",
+  "_key": "!items!xYvg6RuykFHRej8x",
+  "name": "GHOSTWIRE.Classes.Commander.Items.AccessProtocol.Name",
+  "type": "feature",
+  "img": "icons/sundries/documents/blueprint-shield.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.AccessProtocol.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "access-protocol",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9M5P9JWD0R4QBToQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

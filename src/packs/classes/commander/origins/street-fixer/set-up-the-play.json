@@ -1,0 +1,32 @@
+{
+  "_id": "9MWNKoIcKlTrmAcA",
+  "_key": "!items!9MWNKoIcKlTrmAcA",
+  "name": "GHOSTWIRE.Classes.Commander.Items.SetUpThePlay.Name",
+  "type": "feature",
+  "img": "icons/magic/nature/stealth-hide-beast-eyes-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Commander.Items.SetUpThePlay.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "03-commander",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "set-up-the-play",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "lH25Sz0DjDk1JzVn",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
