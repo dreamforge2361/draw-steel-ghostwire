@@ -384,3 +384,18 @@ Spec: `docs/spikes/B32-PHASE5B-NODE-TOKENS-WIRED-MAP.md`. **Wired map:** a matri
   - [x] Remove from canvas / delete node / reset board clean up tokens and Actors
   - [x] `node tools/build-packs.mjs` succeeds
 
+
+
+### Backlog - Ghostwire Bestiary / NPC Compendium (LOCKED 2026-09-17)
+
+Director-facing monster/NPC pipeline for Ghostwire (not stock fantasy dump).
+
+1. **Review** Draw Steel Monsters + NPC lists: tag each as Keep (reskin), Adapt (heavy theme), or Skip.
+2. **Create** new themed Actors for **The Reach**, surrounding **wild jungles**, and Ghostwire setting threats (corps, streets, Wire-adjacent, Veil-adjacent as needed) using DS bestiary math as the template where stock creatures don't fit.
+3. **Ship** a Foundry **Bestiary / NPC** Actor pack (or folder tree under a new compendium) containing only reviewed keepers + Ghostwire originals — so the table knows every entry has been approved for the setting.
+4. **Docs:** master inventory (e.g. `docs/masters/GHOSTWIRE_BESTIARY.md`) listing keep / adapt / skip / original with source DS creature when applicable.
+
+- [ ] DS monster/NPC review pass (Keep / Adapt / Skip)
+- [ ] Reach + jungle + setting original creature wave
+- [ ] Foundry Ghostwire Bestiary/NPC pack with only reviewed entries
+- [ ] `GHOSTWIRE_BESTIARY.md` master
