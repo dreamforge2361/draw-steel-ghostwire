@@ -3785,6 +3785,292 @@
             "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. Until your next turn, each target gains double your Wired Guard defense bonus (+6 at 7th level and later) against Track 2 attacks, and biofeedback bleed-through against them is reduced by an additional 3.</p>"
           }
         }
+      },
+      "Technomancer": {
+        "Folders": {
+          "Technomancer": "Technomancer",
+          "Abilities": "Abilities",
+          "Origins": "Sprite/Resonance Disciplines",
+          "SpriteWeaver": "Sprite-Weaver",
+          "MachineWhisperer": "Machine-Whisperer",
+          "ResonanceWarrior": "Resonance-Warrior"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Technomancer",
+            "Description": "<p><strong>Closest to a Talent with an Elementalist's conjured-presence trigger and one Conduit signature; Cyborgs cannot take this class.</strong></p><p>You are a Technomancer — a shaman, ghost-talker, the one who speaks to the net. You reach into the Wired with your mind alone, and what answers are <strong>sprites</strong>: fragments of living code that swarm to your will. A Data-sprite scouts, an Attack-sprite bites, a Machine-sprite mends, a Ward-sprite shields. Sprites are <strong>conjured Resonance</strong> — free, temporary, immaterial, and gone when the current fades — not the Wrench’s bought-and-built drones.</p><p>Your techno-magic fills a niche no one else can: <strong>Resonance Mending heals machines, drones, vehicles, chrome, and Cyborgs.</strong></p><p><strong>⚠ Cyborgs can never be Technomancers.</strong> Arcane Severance blocks all magic, including Resonance. You can heal a Cyborg; a Cyborg can’t become you. The hero sheet refuses the combination.</p><p><strong>Light chrome tolerance:</strong> you sit between the chrome-positive Hacker and Wrench and the chrome-averse Veil casters. Each point of Body Integrity spent on chrome beyond a free allowance of 2 gives a cumulative −1 to Resonance-based power rolls (at most −3).</p><p>Your subclass is your discipline: <strong>Sprite-Weaver</strong> (go wide), <strong>Machine-Whisperer</strong> (the Cyborg-mending specialist), or <strong>Resonance-Warrior</strong> (offense at higher risk).</p><p><strong>Core characteristics:</strong> Logic, Persona · <strong>Heroic resource:</strong> Resonance · <strong>Starting Stamina:</strong> 18 (+8 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> light, optional. <em>Quick Build:</em> Sprite-Weaver, No Kit.</p>"
+          },
+          "Resonance": {
+            "Name": "Resonance",
+            "Description": "<p>Resonance is your live bond with the Wired’s spirit world, deepening as your congregation of sprites grows and works.</p><h4>Earning Resonance</h4><ul><li><p><strong>Attunement:</strong> the first time each encounter you commune with the Wired (compile a sprite or take a Resonance action), gain Resonance equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>The congregation:</strong> at the start of each of your turns, gain 1 Resonance for each sprite currently compiled under your command (up to your sprite cap). Foundry adds [[/gain 1 hr]]{1} automatically; add the rest.</p></li><li><p><strong>Compile momentum:</strong> when you compile a new sprite, [[/gain 1 hr]]{gain 1 Resonance} (Sprite-Weaver: [[/gain 2 hr]]{+2}).</p></li><li><p><strong>Harmonic echo:</strong> the first time each round one of your sprites lands an effect (an attack connects, a heal lands, a Wired verb succeeds), [[/gain 1 hr]]{gain 1 Resonance}.</p></li></ul><p>You lose all Resonance at the end of the encounter, and sprites still compiled then decompile (unless a feature says otherwise).</p><h4>Outside of Combat</h4><p>You can use a Resonance ability without spending Resonance in a social or exploration scene. You can’t use that same ability outside combat again until you earn a Victory or finish a respite.</p><p><strong>Firewall:</strong> Resonance is never bought or fed by nuyen or Body Integrity; chrome and foci can make abilities better but never generate Resonance.</p><p><em>In Foundry, Draw Steel sets Resonance to your Victories when combat starts and adds 1 each turn; the per-sprite drip, momentum, and echo use the buttons above.</em></p>"
+          },
+          "SpriteCongregation": {
+            "Name": "Sprite Congregation",
+            "Description": "<p>Sprites are conjured code-spirits: compiled from Resonance, acting under your command, and decompiling when dismissed (a free maneuver), destroyed (0 Sprite HP), or at the end of the encounter.</p><p><strong>Sprite cap:</strong> 2 at 1st level (Sprite-Weaver 3). The baseline rises to 3 at 5th level and 4 at 8th level. <strong>Compile cost:</strong> 3 Resonance for an extra sprite beyond Compile Sprite’s free one (Sprite-Weaver 2).</p><h4>Archetypes</h4><ul><li><p><strong>Data-sprite</strong> (scout and screen): an edge on Search, Scan, breach, or command rolls made by you or an ally directing it; allies gain an edge on power rolls against a target it scanned this round.</p></li><li><p><strong>Attack-sprite</strong> (damage): strikes Wired targets directly, or flesh through a device or jack, for [[/damage 2d10+@R]]{2d10 + Logic} damage.</p></li><li><p><strong>Machine-sprite</strong> (mender): repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</p></li><li><p><strong>Ward-sprite</strong> (shield): a defense bonus against Wired and EW attacks for you (and nearby allies at higher tiers); resists ICE and EW on your behalf.</p></li></ul><h4>Sprite Stats (placeholder benchmarks)</h4><table><thead><tr><th>Archetype</th><th>Minor (L1–3)</th><th>Intermediate (L4–7)</th><th>Advanced (L8–10)</th></tr></thead><tbody><tr><td>Data</td><td>HP 8 + Logic × level; edge on 1 roll type</td><td>HP 14 + Logic × level; 2 roll types</td><td>HP 20 + Logic × level; all Wired rolls it can see</td></tr><tr><td>Attack</td><td>HP 12 + Logic × level; 2d10 + Logic</td><td>HP 18 + Logic × level; 2d10 + Logic + 1d6</td><td>HP 26 + Logic × level; 3d10 + Logic</td></tr><tr><td>Machine</td><td>HP 10 + Logic × level; mends 1 Recovery-worth</td><td>HP 16 + Logic × level; +1 target</td><td>HP 22 + Logic × level; a full Resonance Mending</td></tr><tr><td>Ward</td><td>HP 10 + Logic × level; +1 defense, self</td><td>HP 16 + Logic × level; +1, self + 1 adjacent ally</td><td>HP 22 + Logic × level; +2, self + all adjacent allies</td></tr></tbody></table><p>Every sprite’s Wired defense is your Persona score; its Reflex/Physique defense is a flat 10.</p><h4>Hybrid-by-Tier</h4><ul><li><p><strong>Minor (1st–3rd level) — extension:</strong> sprites act on your turn as extensions of you. No separate initiative.</p></li><li><p><strong>Intermediate (4th–7th) — commanded:</strong> sprites act on their own turn, but only if you issue a command (Compile Sprite as a maneuver) each round.</p></li><li><p><strong>Advanced (8th–10th) — independent:</strong> sprites roll their own initiative and act like a proper summon.</p></li></ul><p>Sprites acting on your own turn never trigger biofeedback for you.</p><p><em>Sprite actors aren’t in Foundry yet (backlog): track sprites with tokens or notes.</em></p>"
+          },
+          "Biofeedback": {
+            "Name": "Biofeedback",
+            "Description": "<p>Overreach bites back, but gently. <strong>Only abilities where you spend 5 or more Resonance</strong> trigger a biofeedback risk: make a Physique save against the ability’s DC.</p><table><thead><tr><th>Resonance spent</th><th>Save DC</th></tr></thead><tbody><tr><td>5</td><td>12</td></tr><tr><td>7</td><td>15</td></tr><tr><td>9</td><td>18</td></tr><tr><td>11</td><td>20</td></tr></tbody></table><p>Sprite-Weavers save at DC −2; Resonance-Warriors at DC +2. On a success, nothing happens. On a failure, you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina, and the ability still resolves.</p><p><strong>Never lethal:</strong> if biofeedback would drop you to 0 Stamina, you are <strong>Winded</strong> instead of dying, and you regain 1 Stamina per turn until stabilized. Only external damage can kill you.</p>"
+          },
+          "WiredNative": {
+            "Name": "Wired Native",
+            "Description": "<p>You are a full citizen of the Wired: you use nodes, Trace Alert, and the Matrix Verbs exactly as the Hacker and Wrench do, with no deck or rig. Your body is the interface.</p>"
+          },
+          "CongregationSense": {
+            "Name": "Congregation Sense",
+            "Description": "<p>You always know the current Sprite HP, position, and hybrid tier of every sprite you command within Wired range, even through walls.</p>"
+          },
+          "CyborgMending": {
+            "Name": "Cyborg Mending",
+            "Description": "<p>Resonance Mending’s Cyborg branch is yours from 1st level, whatever your discipline: a Cyborg you mend spends one of their own Recoveries at no Resonance cost, and you can bring a Cyborg at 0 Stamina back to minimal function. This is the class’s headline niche and is never discipline-gated.</p>"
+          },
+          "LightChromeTolerance": {
+            "Name": "Light Chrome Tolerance",
+            "Description": "<p>Chrome gently erodes your Resonance. Each point of Body Integrity spent on chrome beyond your free allowance of 2 gives a cumulative −1 to Resonance-based power rolls, to a maximum of −3. A resonance-tuned focus item (a totem, jury-rigged antenna, or string of compiled charms) can grant +1 to Resonance-based power rolls without counting against the allowance.</p><p><strong>Arcane Severance:</strong> Cyborgs can never take Technomancer levels. A Technomancer who becomes a Cyborg loses all access to Resonance, sprites, and this class’s abilities unless the conversion is reversed.</p>"
+          },
+          "SpriteCap3": {
+            "Name": "Sprite Cap 3",
+            "Description": "<p>Your baseline sprite cap rises to 3 (if it isn’t already higher).</p>"
+          },
+          "SpriteCap4": {
+            "Name": "Sprite Cap 4",
+            "Description": "<p>Your baseline sprite cap rises to 4 (if it isn’t already higher).</p>"
+          },
+          "MasterOfTheCurrent": {
+            "Name": "Master of the Current",
+            "Description": "<p>Your capstone. Once per encounter, you can use any one heroic ability you know without spending Resonance, and that use never triggers a biofeedback save. The first time you use this each session, your sprite cap is also unlimited for the rest of the encounter (compiles beyond the free use still cost Resonance).</p>"
+          },
+          "CompileSprite": {
+            "Name": "Compile Sprite",
+            "Story": "Your baseline, every-turn presence.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p><strong>Compile (main action):</strong> a sprite of your choice (Data, Attack, Machine, or Ward) manifests under your control, if you are under your sprite cap. <strong>Command (maneuver):</strong> your compiled sprites move and act (on your turn, per the extension model).</p>",
+            "Effect_spend00000000000": "<p>Compile a second sprite in the same action (Sprite-Weaver: 2 Resonance), or command your whole congregation at once.</p>",
+            "Tier1": "The sprite manifests unstable (it acts next turn instead of now), or a command garbles (Director’s call).",
+            "Tier2": "The sprite compiles, or the command resolves, normally.",
+            "Tier3": "You compile a sprite and issue a free command in the same action."
+          },
+          "ResonanceStrike": {
+            "Name": "Resonance Strike",
+            "Story": "Hostile code and biofeedback.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range, or a sprite’s reach.</p><p>You, or a commanded Attack-sprite, lash one enemy with hostile code: a Wired target directly, or a flesh target through a device it carries or a sprite jacked into it. Add your Resonance skill. Damage on a hit: [[/damage 2d10+@R]]{2d10 + Logic} (Resonance-Warrior: [[/damage 3d10+@R]]{3d10 + Logic}).</p>",
+            "Effect_spend00000000000": "<p>A second sprite strikes too, or the roll gains an edge through deep communion.</p>",
+            "Tier1": "The strike fails to connect, and the current recoils (a minor biofeedback risk if you enhanced it past 5 Resonance).",
+            "Tier2": "Full damage.",
+            "Tier3": "Full damage, plus a rider: a Wired condition (glitched: a bane on the target’s next power roll, or blinded sensors) or a free sprite reposition."
+          },
+          "ResonanceMending": {
+            "Name": "Resonance Mending",
+            "Story": "The only healing in the game that puts a Cyborg back together.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Touch, or Wired range for a jacked or networked target (Machine-Whisperer: Wired range always).</p><p><strong>Base effect (free):</strong> the target regains Stamina or Integrity equal to one Recovery’s worth. A Cyborg target instead spends one of their own Recoveries at no Resonance cost. Every Technomancer can mend a Cyborg from 1st level. No roll is needed unless you mend against resistance (a hostile EW field or contested Wired space) as an enhanced main action.</p>",
+            "Effect_spend00000000000": "<p>For each Resonance spent, choose one (repeatable): reach one additional target; clear one save-ends mechanical condition (a jam, glitch, suppression, or chrome malfunction); grant one additional Recovery spend. For <strong>2 Resonance</strong>, restore a dead machine, failed chrome, or a Cyborg at 0 Stamina to minimal function (1 Stamina or Integrity). Spending 5 or more on one use triggers biofeedback.</p>",
+            "Tier1": "Contested: the mend is unstable; after one round the target loses half of what was restored unless stabilized.",
+            "Tier2": "Contested: the mend lands as purchased.",
+            "Tier3": "Contested: the mend lands, and the target also clears one minor condition."
+          },
+          "Recompile": {
+            "Name": "Recompile",
+            "Story": "Always the right ghost to hand.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Reshape a compiled sprite into another archetype (Data → Attack, Attack → Ward, and so on), or instantly recompile a sprite destroyed this round at reduced power (half Sprite HP).</p>"
+          },
+          "HarmonicAdjustment": {
+            "Name": "Harmonic Adjustment",
+            "Story": "Correcting a ghost’s aim mid-fight.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Choose one: the sprite gains +1 on its attack roll this turn, +2 to its defense until the end of your next turn, or a free shift up to its full movement.</p>"
+          },
+          "SwarmTheSignal": {
+            "Name": "Swarm the Signal",
+            "Story": "The summoner’s burst.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Every sprite you command takes an action at once against a single target or objective: all attack one foe, all mend one machine, or all pile onto one node. (Sprite-Weaver 5th level: split across up to 3 targets.)</p>"
+          },
+          "DeepCommunion": {
+            "Name": "Deep Communion",
+            "Story": "The communion is the interface.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The Wired, or a machine, drone, or Cyborg you’re attuned to.</p><p>You project fully into the Wired (or into an attuned machine, drone, or Cyborg), gaining edges on Wired verbs and sprite commands and using the system’s own reach and senses. Your body goes inert and exposed, as if Jacked In. No control rig needed. (Machine-Whisperer: 2 Resonance.)</p>"
+          },
+          "ResonanceCascade": {
+            "Name": "Resonance Cascade",
+            "Story": "A lash of hostile code that fans out.",
+            "Tier1": "One enemy takes [[/damage @R]]{damage equal to your Logic score} and is dazed until the end of its next turn.",
+            "Tier2": "Up to 2 enemies within 3 squares of each other each take damage equal to your Logic score.",
+            "Tier3": "Up to 3 enemies within distance each take damage equal to your Logic score and are dazed until the end of their next turn."
+          },
+          "SpriteRedirect": {
+            "Name": "Sprite Redirect",
+            "Story": "A code-spirit thrown into the path of a bullet.",
+            "Trigger": "An ally within Wired range or 10 squares is hit by a Wired attack.",
+            "Effect_before0000000000": "<p>Redirect the attack to one of your compiled sprites; the sprite absorbs the hit in the ally’s place.</p>"
+          },
+          "ResonanceWard": {
+            "Name": "Resonance Ward",
+            "Story": "Sanctuary Ward, in code.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> A zone around you.</p><p>Until your next turn, you weave a zone of resonant protection with Ward-sprites and a standing harmonic: allies in it gain defenses against Wired and EW attacks, chrome and devices in it are screened from hijack, and you can counter hostile intrusion in the area.</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "Overclock": {
+            "Name": "Overclock",
+            "Story": "A temporary frenzy.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Each compiled sprite acts twice this turn.</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "TranceCompile": {
+            "Name": "Trance Compile",
+            "Story": "Two ghosts at once.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Compile two new sprites (any archetypes) in a single action, within your sprite cap. Both act normally after compiling.</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "SignalWeave": {
+            "Name": "Signal Weave",
+            "Story": "Tuning forks laid across the battlefield’s signal.",
+            "Effect_before0000000000": "<p>All allies gain +1 on Wired-based rolls for the rest of the round, and one enemy of your choice within distance is glitched (a bane on its next power roll).</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "TotalResonance": {
+            "Name": "Total Resonance",
+            "Story": "Let the current run wild.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>For the rest of the encounter, every sprite you command rises one tier on the hybrid ladder (minor acts as intermediate; intermediate as advanced), your congregation drip doubles, and you immediately compile one additional sprite for free, ignoring your sprite cap for the rest of the encounter. The tier boost is unconditional; the roll only decides the free sprite.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>",
+            "Tier1": "The free sprite compiles unstable (half Sprite HP); the tier boost still applies.",
+            "Tier2": "The free sprite compiles at full strength but acts next turn.",
+            "Tier3": "The free sprite compiles at full strength and acts immediately."
+          },
+          "CascadeFailureTechno": {
+            "Name": "Cascade Failure",
+            "Story": "One roll, and the whole cube shorts out.",
+            "Effect_before0000000000": "<p>Each affected enemy takes [[/damage 2*@R]]{damage equal to twice your Logic score}.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>",
+            "Tier1": "Only the nearest enemy is affected: it takes the damage and is stunned (save ends).",
+            "Tier2": "Up to 2 enemies of your choice take the damage and are stunned until the end of their next turn.",
+            "Tier3": "Up to 4 enemies of your choice take the damage, are stunned (save ends), and their next Wired ability fizzles."
+          },
+          "SpriteStorm": {
+            "Name": "Sprite Storm",
+            "Story": "A storm of ghost-code.",
+            "Effect_before0000000000": "<p>Compile 3 sprites in a single action (Sprite-Weaver: 4). All your compiled sprites strike different targets within 10 squares as part of the same action.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "ResonanceSlam": {
+            "Name": "Resonance Slam",
+            "Story": "The current hits like a wall.",
+            "Effect_before0000000000": "<p>Choose one mode. <strong>Slam:</strong> one target takes [[/damage 3*@R]]{damage equal to three times your Logic score}, is pushed 3 squares, and is Winded (save ends). <strong>Slam Group:</strong> each enemy in a 3 cube within 5 squares takes damage equal to your Logic score and is knocked prone.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "TheChoirSingsTogether": {
+            "Name": "The Choir Sings Together",
+            "Story": "A resonant chord that steels the crew.",
+            "Effect_before0000000000": "<p>Each target gains [[/heal 2*@P temp]]{temporary Stamina equal to twice your Persona score}, and a Machine-sprite channels a mending pulse: each target can spend a Recovery.</p><p><strong>Biofeedback:</strong> DC 18 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "RewireReality": {
+            "Name": "Rewire Reality",
+            "Story": "Hijack a mind or machine into your congregation.",
+            "Effect_before0000000000": "<p>The target makes a Persona save against DC 18. On a failure, for the rest of the encounter it counts as one of your compiled sprites: it still acts on its own initiative, but you can Command it as a maneuver. On a success, it takes [[/damage 2*@R]]{damage equal to twice your Logic score} instead.</p><p><strong>Biofeedback:</strong> DC 18 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "WiredSilence": {
+            "Name": "Wired Silence",
+            "Story": "The net goes dark.",
+            "Effect_before0000000000": "<p>For the next round, no Wired-based attack (Hacker, Wrench, Technomancer, device, or drone) functions in the area. Hostile sprites in the area decompile; friendly sprites lose one action tier for the round.</p><p><strong>Biofeedback:</strong> DC 18 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "BoneDeepCommunion": {
+            "Name": "Bone Deep Communion",
+            "Story": "Go deep into the current.",
+            "Effect_before0000000000": "<p>For the rest of the encounter, your sprites count as one tier higher (advanced sprites gain +1 Sprite HP tier) and your Resonance drip gains +1 per turn.</p><p><strong>Biofeedback:</strong> DC 18 Physique save on cast <em>and</em> at the start of each later round (Sprite-Weaver −2, Resonance-Warrior +2). On a failure, take [[/damage @P]]{damage equal to your Persona score}; you can’t drop below Winded.</p>"
+          },
+          "SunlightInTheWire": {
+            "Name": "Sunlight in the Wire",
+            "Story": "The net answers with full illumination.",
+            "Effect_before0000000000": "<p>Enemy sprites within distance decompile. Allied sprites in the area act at the highest tier for the rest of the encounter. Each ally in the area can spend a Recovery and gains temporary Stamina equal to a minor sprite’s HP.</p><p><strong>Biofeedback:</strong> DC 20 Physique save; on a failure, take [[/damage 3*@P]]{damage equal to three times your Persona score} (can’t drop you below Winded).</p>"
+          },
+          "MachineGodsRite": {
+            "Name": "Machine God’s Rite",
+            "Story": "Restore the crew’s tech-flesh whole.",
+            "Effect_before0000000000": "<p>An in-scene ritual of at least 5 minutes. Restore the target to full Stamina or Integrity. You can’t use this on the same target again for 24 in-game hours.</p><p><strong>Biofeedback:</strong> DC 20 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "RecompileReality": {
+            "Name": "Recompile Reality",
+            "Story": "Rewrite the current’s memory.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The past scene.</p><p>An in-scene ritual of at least 10 minutes, once per session. Undo one significant Wired event from the past scene (a lockdown, a destroyed drone, a hit to a Cyborg’s chrome): force a reroll, or treat it as though it never happened.</p><p><strong>Biofeedback:</strong> DC 20 Physique save; on a failure, take [[/damage 3*@P]]{damage equal to three times your Persona score} and lose one Recovery (can’t drop you below Winded).</p>"
+          },
+          "TheWeaversWeb": {
+            "Name": "The Weaver’s Web",
+            "Story": "The entire net answers.",
+            "Effect_before0000000000": "<p>Compile 5 sprites in a single action; all 5 strike different targets within distance. Each target hit makes a DC 18 Physique save; on a failure it takes [[/damage 3*@R]]{damage equal to three times your Logic score} and is Winded.</p><p><strong>Biofeedback:</strong> DC 20 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+          },
+          "SpriteWeaver": {
+            "Name": "Sprite-Weaver",
+            "Description": "<p><em>Wide congregation.</em> More sprites, cheaper sprites, and a bigger board presence than any other discipline. You save against biofeedback at DC −2: your power lives in quantity and coordination, not any single risky cast.</p><p>At 1st level you gain the <strong>Summoning</strong> skill and Wide Compile.</p>"
+          },
+          "WideCompile": {
+            "Name": "Wide Compile",
+            "Description": "<p>Your sprite cap rises to 3. Compiling an extra sprite costs 2 Resonance instead of 3, and compile momentum grants [[/gain 2 hr]]{+2 Resonance} per new sprite instead of +1. You save against biofeedback at DC −2.</p>"
+          },
+          "OverlappingSignals": {
+            "Name": "Overlapping Signals",
+            "Description": "<p>When Compile Sprite gets a high (17+) result, you can compile a second sprite for free as part of the same action (instead of, not in addition to, its enhancement).</p>"
+          },
+          "CongregationsChorus": {
+            "Name": "Congregation’s Chorus",
+            "Description": "<p>Once per round, when two or more of your sprites act on the same turn, each of their rolls gains an edge.</p>"
+          },
+          "TheWideningGyre": {
+            "Name": "The Widening Gyre",
+            "Description": "<p>Your sprite cap rises to 4. Swarm the Signal can split the swarm across up to 3 targets.</p>"
+          },
+          "LegionOfTheCurrent": {
+            "Name": "Legion of the Current",
+            "Description": "<p>Your sprite cap rises to 5. Once per encounter, you can use Compile Sprite as a free action.</p>"
+          },
+          "UnbrokenCongregation": {
+            "Name": "Unbroken Congregation",
+            "Description": "<p>Your capstone. Once per session, one sprite doesn’t decompile at the end of an encounter and carries into the next scene (it can still be destroyed). Your sprite cap rises to 6.</p>"
+          },
+          "MachineWhisperer": {
+            "Name": "Machine-Whisperer",
+            "Description": "<p><em>Interface and healer.</em> The discipline that makes the class’s Cyborg-mending niche its whole identity: the best answer in the game to a downed Cyborg, a wrecked drone, or failing chrome. Biofeedback at the class baseline.</p><p>At 1st level you gain the <strong>Repair</strong> skill and Deep Interface.</p>"
+          },
+          "DeepInterface": {
+            "Name": "Deep Interface",
+            "Description": "<p>Deep Communion costs 2 Resonance instead of 3, and your Physique saves against biofeedback while in communion gain an edge. Resonance Mending reaches Wired range even for its free base effect.</p>"
+          },
+          "MachineEmpathy": {
+            "Name": "Machine Empathy",
+            "Description": "<p>Resonance Mending’s enhancements cost 1 less Resonance (minimum 1): restoring a dead machine, chrome, or Cyborg costs 1 instead of 2.</p>"
+          },
+          "WhisperedDiagnostics": {
+            "Name": "Whispered Diagnostics",
+            "Description": "<p>Once per round as a free action, inspect one machine, drone, vehicle, or Cyborg within Wired range: learn its exact Stamina or Integrity, its active conditions, and one exploitable weakness.</p>"
+          },
+          "BondedRepair": {
+            "Name": "Bonded Repair",
+            "Description": "<p>Once per encounter, use Resonance Mending’s enhanced effect as if you had spent 3 Resonance, at no Resonance cost and with no biofeedback.</p>"
+          },
+          "TheMachineRemembers": {
+            "Name": "The Machine Remembers",
+            "Description": "<p>When Resonance Mending restores a dead machine, drone, chrome, or Cyborg, it returns at half its Stamina or Integrity instead of 1, and clears one additional condition.</p>"
+          },
+          "WhisperersCommunion": {
+            "Name": "Whisperer’s Communion",
+            "Description": "<p>Your capstone. One Resonance Mending can target any number of machines, drones, and Cyborgs within Wired range: the base effect applies to all of them, and enhancements still apply individually.</p>"
+          },
+          "ResonanceWarrior": {
+            "Name": "Resonance-Warrior",
+            "Description": "<p><em>Offensive mystic.</em> The congregation as a weapon, with the highest biofeedback risk for the highest damage ceiling. You save against biofeedback at DC +2.</p><p>At 1st level you gain the <strong>Security Systems</strong> skill (electronic warfare) and Overcharged Strike.</p>"
+          },
+          "OverchargedStrike": {
+            "Name": "Overcharged Strike",
+            "Description": "<p>Resonance Strike deals [[/damage 3d10+@R]]{3d10 + Logic} instead of 2d10 + Logic, and Attack-sprites you command deal an extra [[/damage 1d6]]{1d6} on a hit. You save against biofeedback at DC +2.</p>"
+          },
+          "AggressiveCompile": {
+            "Name": "Aggressive Compile",
+            "Description": "<p>When you compile an Attack-sprite, it can act immediately, even on a low (unstable) compile result.</p>"
+          },
+          "FeedbackWeapon": {
+            "Name": "Feedback Weapon",
+            "Description": "<p>Once per round, when you take biofeedback damage from your own ability, you can deal the same amount of psychic damage to one enemy within 5 squares.</p>"
+          },
+          "BurningTheCurrent": {
+            "Name": "Burning the Current",
+            "Description": "<p>Once per turn, you can voluntarily make a 5-cost biofeedback save (DC 12, +2 for your discipline) on an ability that wouldn’t normally trigger one, to add your Logic score to that ability’s damage.</p>"
+          },
+          "NoSuchThingAsTooMuch": {
+            "Name": "No Such Thing As Too Much",
+            "Description": "<p>Cascade Failure and Resonance Slam gain +1 on their power rolls, and their damage increases by [[/damage 1d6]]{1d6}.</p>"
+          },
+          "ApexCurrent": {
+            "Name": "Apex Current",
+            "Description": "<p>Your capstone. Once per encounter, treat a failed biofeedback save as a success. The Resonance spent isn’t refunded.</p>"
+          }
+        }
       }
     },
     "Backgrounds": {
@@ -5239,7 +5525,7 @@
       },
       "Cyborg": {
         "Name": "Cyborg",
-        "Description": "<p>Machine-first threshold beings — integrated, augmented, existentially unstable. Distinct from chrome-augmented meat.</p><p>A Cyborg is the far end of the chrome spectrum: effectively all organic Body Integrity spent, frame and cortex first. Living, non-Cyborg heroes who want implants use the Chrome chapter; the Cyborg does not. Full conversion is made, not bred — surgery, battlefield salvage, corp programs, or voluntary upload into a shell.</p><h4>Cyborg Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.GKKVzsE7uO4HLYDi]{Cortical Firewall}</p><p>Hard constraints: @UUID[Compendium.draw-steel-ghostwire.origins.Item.dgBmVGmpoJ8cqmVO]{Arcane Severance}</p><h4>Purchased Cyborg Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Penetration Optics, Installed Suite with Particle Lance.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.wEQTCGWeWxbrD3Y3]{Penetration Optics (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1AEnOK1gTEHjOLEj]{Predictive Sensors (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.hFbUGmW7WZXkc7kp]{Auxiliary Limbs — Athletics (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.bEJrcH33ekVQ92H6]{Auxiliary Limbs — Combat (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.pVsfJpZi2gkskLqr]{Installed Suite (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zLXYWyfkOXSA7IEx]{Locked Processors (2 Points)}</p><h4>Hard Constraints</h4><p><strong>Arcane Severance:</strong> You can’t use Magic-keyword abilities. You are barred from the Elementalist and Street Priest classes, and from any Veil-casting path that requires Magic. The Tech-keyword Installed Suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.</p><p><strong>Tech-only recovery:</strong> You are healed by tech, Wrench-style repair, or Medic tech procedures as your table defines, not by Magic healing (Director’s call on Troubadour-style and similar effects).</p><p><strong>System Crisis:</strong> When you would die under the usual 0 Stamina and dying rules, you instead enter a Director-facing System Crisis (machine failure) rather than a normal organic death spiral. This is a rule pointer only; the full Crisis table isn’t defined yet.</p><p><em>These are Ghostwire chargen and setting rules. They cost no ancestry points. Cyborgs don’t use the Chrome / Body Integrity chapter.</em></p>",
+        "Description": "<p>Machine-first threshold beings — integrated, augmented, existentially unstable. Distinct from chrome-augmented meat.</p><p>A Cyborg is the far end of the chrome spectrum: effectively all organic Body Integrity spent, frame and cortex first. Living, non-Cyborg heroes who want implants use the Chrome chapter; the Cyborg does not. Full conversion is made, not bred — surgery, battlefield salvage, corp programs, or voluntary upload into a shell.</p><h4>Cyborg Traits</h4><p>Signature Trait: @UUID[Compendium.draw-steel-ghostwire.origins.Item.GKKVzsE7uO4HLYDi]{Cortical Firewall}</p><p>Hard constraints: @UUID[Compendium.draw-steel-ghostwire.origins.Item.dgBmVGmpoJ8cqmVO]{Arcane Severance}</p><h4>Purchased Cyborg Traits</h4><p>You have 3 ancestry points to spend on the following traits. (Quick Build: Penetration Optics, Installed Suite with Particle Lance.)</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.wEQTCGWeWxbrD3Y3]{Penetration Optics (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.1AEnOK1gTEHjOLEj]{Predictive Sensors (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.hFbUGmW7WZXkc7kp]{Auxiliary Limbs — Athletics (1 Point)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.bEJrcH33ekVQ92H6]{Auxiliary Limbs — Combat (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.pVsfJpZi2gkskLqr]{Installed Suite (2 Points)}</p><p>@UUID[Compendium.draw-steel-ghostwire.origins.Item.zLXYWyfkOXSA7IEx]{Locked Processors (2 Points)}</p><h4>Hard Constraints</h4><p><strong>Arcane Severance:</strong> You can’t use Magic-keyword abilities. You are barred from the Elementalist, Street Priest, and Technomancer classes, and from any Veil-casting path that requires Magic. The Tech-keyword Installed Suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.</p><p><strong>Tech-only recovery:</strong> You are healed by tech, Wrench-style repair, Medic tech procedures, or a Technomancer’s Resonance Mending as your table defines, not by Magic healing (Director’s call on Troubadour-style and similar effects).</p><p><strong>System Crisis:</strong> When you would die under the usual 0 Stamina and dying rules, you instead enter a Director-facing System Crisis (machine failure) rather than a normal organic death spiral. This is a rule pointer only; the full Crisis table isn’t defined yet.</p><p><em>These are Ghostwire chargen and setting rules. They cost no ancestry points. Cyborgs don’t use the Chrome / Body Integrity chapter.</em></p>",
         "PurchasedTraits": {
           "Name": "Purchased Traits",
           "Description": "<p>You have 3 ancestry points to spend on the following traits. (<em>Quick Build:</em> Penetration Optics, Installed Suite with Particle Lance.)</p>"

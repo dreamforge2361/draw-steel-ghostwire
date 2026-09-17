@@ -1,0 +1,73 @@
+{
+  "_id": "cV9uXepQMZ4kkG6Y",
+  "_key": "!items!cV9uXepQMZ4kkG6Y",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.TheChoirSingsTogether.Name",
+  "type": "ability",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-choir-sings-together",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.TheChoirSingsTogether.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfAlly",
+      "value": 2,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.TheChoirSingsTogether.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

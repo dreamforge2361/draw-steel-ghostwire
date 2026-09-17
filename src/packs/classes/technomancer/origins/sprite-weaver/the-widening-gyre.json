@@ -1,0 +1,32 @@
+{
+  "_id": "SyvaLpJtX8dv05sq",
+  "_key": "!items!SyvaLpJtX8dv05sq",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.TheWideningGyre.Name",
+  "type": "feature",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.TheWideningGyre.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-widening-gyre",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "nHve7qF85ndIKXCL",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

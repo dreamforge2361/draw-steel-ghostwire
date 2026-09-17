@@ -1,0 +1,32 @@
+{
+  "_id": "3HY41UdwcW7v0LyR",
+  "_key": "!items!3HY41UdwcW7v0LyR",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.OverchargedStrike.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.OverchargedStrike.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overcharged-strike",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "fHT8074ucB27FxrO",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

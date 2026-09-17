@@ -1,0 +1,32 @@
+{
+  "_id": "0EiJ5lKoQhs6isWm",
+  "_key": "!items!0EiJ5lKoQhs6isWm",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.SpriteCap3.Name",
+  "type": "feature",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.SpriteCap3.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sprite-cap-3",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2jWYsRxO15CiklLe",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,73 @@
+{
+  "_id": "7kAy7Y6z4jDkVUah",
+  "_key": "!items!7kAy7Y6z4jDkVUah",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.SignalWeave.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "signal-weave",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.SignalWeave.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "All allies, and 1 enemy"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.SignalWeave.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

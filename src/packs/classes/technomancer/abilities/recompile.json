@@ -1,0 +1,73 @@
+{
+  "_id": "uqwKT7JjOHDlSrnP",
+  "_key": "!items!uqwKT7JjOHDlSrnP",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.Recompile.Name",
+  "type": "ability",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "recompile",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.Recompile.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 1,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 compiled or just-destroyed sprite"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.Recompile.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

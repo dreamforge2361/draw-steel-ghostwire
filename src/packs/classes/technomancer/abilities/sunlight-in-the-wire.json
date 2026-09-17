@@ -1,0 +1,73 @@
+{
+  "_id": "bDUNCRa8Be3hus10",
+  "_key": "!items!bDUNCRa8Be3hus10",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.SunlightInTheWire.Name",
+  "type": "ability",
+  "img": "icons/magic/light/beam-rays-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sunlight-in-the-wire",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.SunlightInTheWire.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "You, allies, and sprites within distance"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.SunlightInTheWire.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

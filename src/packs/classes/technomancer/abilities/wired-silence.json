@@ -1,0 +1,74 @@
+{
+  "_id": "a23NHMmY1OCSTyR7",
+  "_key": "!items!a23NHMmY1OCSTyR7",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.WiredSilence.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/orb-ball-purple.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wired-silence",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.WiredSilence.Story",
+    "keywords": [
+      "magic",
+      "wired",
+      "area"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "5",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Everything Wired in the area"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.WiredSilence.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

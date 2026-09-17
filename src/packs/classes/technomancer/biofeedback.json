@@ -1,0 +1,32 @@
+{
+  "_id": "PHP9DScmpbuWYpV2",
+  "_key": "!items!PHP9DScmpbuWYpV2",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.Biofeedback.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.Biofeedback.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "technomancer-biofeedback",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2jWYsRxO15CiklLe",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

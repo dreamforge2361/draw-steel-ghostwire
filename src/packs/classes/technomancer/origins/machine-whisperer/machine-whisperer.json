@@ -1,0 +1,180 @@
+{
+  "_id": "cms7noDHLXskuLN8",
+  "_key": "!items!cms7noDHLXskuLN8",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.MachineWhisperer.Name",
+  "type": "subclass",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.MachineWhisperer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "machine-whisperer",
+    "advancements": {
+      "vdIuOqqzW6DcFde5": {
+        "name": "GHOSTWIRE.Skills.List.Repair",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "vdIuOqqzW6DcFde5",
+        "skills": {
+          "choices": [
+            "repair"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your discipline grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "UxkO6nLtT2CsJE6X": {
+        "name": "Deep Interface",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "UxkO6nLtT2CsJE6X",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iQVTjjMbjYUAxu0y"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ma5aB7961inoduk6": {
+        "name": "Machine Empathy",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "ma5aB7961inoduk6",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9T8CSbUVssf0z51O"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "HNZRXDLUBTR8AdVP": {
+        "name": "Whispered Diagnostics",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "HNZRXDLUBTR8AdVP",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pm5GxLuJmcirt6j5"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "x6EBG2bQ0SlJlhLX": {
+        "name": "Bonded Repair",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "x6EBG2bQ0SlJlhLX",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BL01mCW1rN9uByh9"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WxdgtP2nsM5HurC7": {
+        "name": "The Machine Remembers",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "WxdgtP2nsM5HurC7",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pJSW7g5KHvrjSPmJ"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "2u8MLMNw2UCXhhvK": {
+        "name": "Whisperer’s Communion",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "2u8MLMNw2UCXhhvK",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.y0J76SpNmp3hOo6Z"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "technomancer"
+  },
+  "effects": [],
+  "folder": "dMBIrhw0qqomLWwD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

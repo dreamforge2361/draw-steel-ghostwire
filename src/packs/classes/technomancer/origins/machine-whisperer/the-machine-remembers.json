@@ -1,0 +1,32 @@
+{
+  "_id": "pJSW7g5KHvrjSPmJ",
+  "_key": "!items!pJSW7g5KHvrjSPmJ",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.TheMachineRemembers.Name",
+  "type": "feature",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.TheMachineRemembers.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-machine-remembers",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "dMBIrhw0qqomLWwD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,180 @@
+{
+  "_id": "BD9jUg8qhJutjOY5",
+  "_key": "!items!BD9jUg8qhJutjOY5",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceWarrior.Name",
+  "type": "subclass",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceWarrior.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "resonance-warrior",
+    "advancements": {
+      "keFRkLv0Xd2LDNPk": {
+        "name": "GHOSTWIRE.Skills.List.SecuritySystems",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "keFRkLv0Xd2LDNPk",
+        "skills": {
+          "choices": [
+            "securitySystems"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your discipline grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "lXXhKFAKeJWBWbo1": {
+        "name": "Overcharged Strike",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "lXXhKFAKeJWBWbo1",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3HY41UdwcW7v0LyR"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jn8g4DlXBYdDCVBH": {
+        "name": "Aggressive Compile",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "jn8g4DlXBYdDCVBH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3LCTR6IJ2SEE64KM"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "lc5JczJABtSKue8P": {
+        "name": "Feedback Weapon",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "lc5JczJABtSKue8P",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ICvHi9UTTWlZCZDc"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "xcIdGADbmgLnkSZt": {
+        "name": "Burning the Current",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "xcIdGADbmgLnkSZt",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.K5jnY9rpJFZQ9lCl"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "spmzjMbsoSV3bxOh": {
+        "name": "No Such Thing As Too Much",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "spmzjMbsoSV3bxOh",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.14D2MFbbd2DXNd1H"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "42lCDYMuHDm2WKoL": {
+        "name": "Apex Current",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "42lCDYMuHDm2WKoL",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ruU6RL9DlGMIzKCv"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "technomancer"
+  },
+  "effects": [],
+  "folder": "fHT8074ucB27FxrO",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

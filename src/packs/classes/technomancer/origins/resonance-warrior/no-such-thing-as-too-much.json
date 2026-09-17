@@ -1,0 +1,32 @@
+{
+  "_id": "14D2MFbbd2DXNd1H",
+  "_key": "!items!14D2MFbbd2DXNd1H",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.NoSuchThingAsTooMuch.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.NoSuchThingAsTooMuch.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "no-such-thing-as-too-much",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "fHT8074ucB27FxrO",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

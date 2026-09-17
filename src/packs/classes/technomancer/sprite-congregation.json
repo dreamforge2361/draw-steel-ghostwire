@@ -1,0 +1,32 @@
+{
+  "_id": "9J1ZNSUZ7iubRWw9",
+  "_key": "!items!9J1ZNSUZ7iubRWw9",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.SpriteCongregation.Name",
+  "type": "feature",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.SpriteCongregation.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sprite-congregation",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2jWYsRxO15CiklLe",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

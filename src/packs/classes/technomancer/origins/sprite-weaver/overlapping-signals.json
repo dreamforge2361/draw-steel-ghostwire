@@ -1,0 +1,32 @@
+{
+  "_id": "ahYWePgs4IZ5DPgr",
+  "_key": "!items!ahYWePgs4IZ5DPgr",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.OverlappingSignals.Name",
+  "type": "feature",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.OverlappingSignals.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overlapping-signals",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "nHve7qF85ndIKXCL",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

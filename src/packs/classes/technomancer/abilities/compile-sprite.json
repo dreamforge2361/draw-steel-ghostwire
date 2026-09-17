@@ -1,0 +1,119 @@
+{
+  "_id": "D1UpzNjkD7imCD6g",
+  "_key": "!items!D1UpzNjkD7imCD6g",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Name",
+  "type": "ability",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "compile-sprite",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "The net (to compile) or your sprites (to command)"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "sOXK5mcFOcgGndUm": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "sOXK5mcFOcgGndUm",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 3,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.CompileSprite.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Nl6Oxuc7MAcmAwxE",
+  "_key": "!items!Nl6Oxuc7MAcmAwxE",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.MasterOfTheCurrent.Name",
+  "type": "feature",
+  "img": "icons/magic/lightning/orb-ball-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.MasterOfTheCurrent.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "master-of-the-current",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2jWYsRxO15CiklLe",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

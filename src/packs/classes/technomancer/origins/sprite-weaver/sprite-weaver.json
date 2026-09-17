@@ -1,0 +1,180 @@
+{
+  "_id": "mutor3AlAoiiOvxK",
+  "_key": "!items!mutor3AlAoiiOvxK",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.SpriteWeaver.Name",
+  "type": "subclass",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.SpriteWeaver.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sprite-weaver",
+    "advancements": {
+      "xIJGyqHrhWMOeCVm": {
+        "name": "GHOSTWIRE.Skills.List.Summoning",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "xIJGyqHrhWMOeCVm",
+        "skills": {
+          "choices": [
+            "summoning"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your discipline grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "eAuf9qCnqOo36a2p": {
+        "name": "Wide Compile",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "eAuf9qCnqOo36a2p",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OIEKLt9EPoOBkG4i"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "APxowO4SCpYdKFGr": {
+        "name": "Overlapping Signals",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "APxowO4SCpYdKFGr",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ahYWePgs4IZ5DPgr"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "mzYtFpEZv7xqBdaT": {
+        "name": "Congregation’s Chorus",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "mzYtFpEZv7xqBdaT",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.y2IHtWQxxbYTKIId"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "C8IKKuhbLEvxl0vu": {
+        "name": "The Widening Gyre",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "C8IKKuhbLEvxl0vu",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SyvaLpJtX8dv05sq"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uwMDxJGtCfH9SsDm": {
+        "name": "Legion of the Current",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "uwMDxJGtCfH9SsDm",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.m9kPeU5Gwm2wWCuy"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "BeuhsIPQuyyf6Cb5": {
+        "name": "Unbroken Congregation",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "BeuhsIPQuyyf6Cb5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QmX6aEKyEQY4lDYy"
+          }
+        ],
+        "description": "<p>Your discipline grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "technomancer"
+  },
+  "effects": [],
+  "folder": "nHve7qF85ndIKXCL",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

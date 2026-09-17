@@ -1,0 +1,75 @@
+{
+  "_id": "2mmPCZU2q0FANTX6",
+  "_key": "!items!2mmPCZU2q0FANTX6",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceSlam.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "resonance-slam",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceSlam.Story",
+    "keywords": [
+      "magic",
+      "wired",
+      "melee",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 creature, or each enemy in a 3 cube within 5 squares"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceSlam.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "K5jnY9rpJFZQ9lCl",
+  "_key": "!items!K5jnY9rpJFZQ9lCl",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.BurningTheCurrent.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.BurningTheCurrent.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "burning-the-current",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "fHT8074ucB27FxrO",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

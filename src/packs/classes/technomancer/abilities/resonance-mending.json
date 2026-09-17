@@ -1,0 +1,119 @@
+{
+  "_id": "LFCiX6KD1lFXj7Ey",
+  "_key": "!items!LFCiX6KD1lFXj7Ey",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Name",
+  "type": "ability",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "resonance-mending",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Self, or one machine, drone, vehicle, piece of chrome, or Cyborg"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "D1RuFzcyi9gRQ0RM": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "D1RuFzcyi9gRQ0RM",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": true
+        },
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceMending.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

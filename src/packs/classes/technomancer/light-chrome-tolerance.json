@@ -1,0 +1,32 @@
+{
+  "_id": "3bne6BJ5SFvu6KWx",
+  "_key": "!items!3bne6BJ5SFvu6KWx",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.LightChromeTolerance.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.LightChromeTolerance.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "light-chrome-tolerance",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2jWYsRxO15CiklLe",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

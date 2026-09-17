@@ -428,10 +428,11 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
   actor.updateSource(updates);
 });
 
-// Arcane Severance (09-species.md, 06-elementalist.md): Cyborgs can never take a Veil-caster class.
+// Arcane Severance (09-species.md, 06-elementalist.md, 20-technomancer.md): Cyborgs can never take a magic class
+// (the Veil casters and the Technomancer).
 // Checked on the hero sheet drop, before Draw Steel opens the advancement dialog, so nothing is half-created;
 // the preCreateItem hook below is a backstop for any other creation path.
-const VEIL_CASTER_CLASSES = new Set(["elementalist", "street-priest"]);
+const VEIL_CASTER_CLASSES = new Set(["elementalist", "street-priest", "technomancer"]);
 
 function arcaneSeveranceBlock(actor, item) {
   if (actor?.type !== "hero") return null;

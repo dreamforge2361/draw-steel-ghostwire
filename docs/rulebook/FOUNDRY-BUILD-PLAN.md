@@ -91,7 +91,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B28 | Elementalist class pack | **Done** (Foundry-verified 2026-09-16) | Elementalist (Essence, turnGain "1" drip; Channel/Resonance in feature text) + Pyromancer / Stormcaller / Geomancer; signature summons + Elementalist foci grants; module v0.1.35 |
 | B29 | Street Priest class pack | **Done** (Foundry-verified 2026-09-17) | Street Priest (Conviction, turnGain "2"; Prayer Gamble in feature text) + Light/Dark pact overlay + Shepherd / Templar / Exorcist; Cyborg-blocked; module v0.1.37 |
 | B30 | Hacker class pack | **Done** (Foundry-verified 2026-09-17) | Hacker (Bandwidth, turnGain "1") + Disruptor / Controller / Support; three street cyberdeck Kits; Programs; Matrix Verbs not duplicated; Cyborgs allowed; module v0.1.38 |
-| B31 | Technomancer class pack | **Next** | Master ingested (`GHOSTWIRE_TECHNOMANCER_DEVELOPMENT_MASTER.md`); stub `20-technomancer.md`; Cyborgs barred (add `technomancer` to the Arcane Severance gate) |
+| B31 | Technomancer class pack | **Done** (Foundry-verified 2026-09-17) | `20-technomancer.md` Stage 2 extract of master Part 1; three disciplines; sprites text-only; Cyborgs barred (Arcane Severance gate) |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -269,4 +269,16 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Hacking Doctrine picker: Disruptor / Controller / Support, ladders 1–9
   - [x] L1: Seize Control + Deep Scan + Ghost Signal; Kill Switch L2, Failsafe Cascade L3, Network Purge L5, Backdoor Override L8; no duplicate Matrix Verbs
   - [x] A Cyborg can take Hacker
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B31 Technomancer (2026-09-17)
+**Chapter:** `20-technomancer.md` is now a Stage 2 extract of the master's Part 1, with Power Roll results normalized to Draw Steel print order (low ≤11 / middle 12–16 / high 17+). **Resonance:** +1 per turn automatic; Victories on first communion, per-sprite drip, compile momentum, and harmonic echo are feature text with gain buttons. **Sprites:** text only (Sprite Congregation feature with the archetype and hybrid-tier table); no Sprite Actor compendium yet (backlog). **Biofeedback:** only on 5+ Resonance spends, DC 12/15/18/20, Weaver −2 / Warrior +2, never lethal (Winded floor), written into each 5+ ability. **Kit:** optional light Kit — No Kit (Pure Caster), Hexshot, Spellblade, Sanctified. **Cyborgs are barred:** `technomancer` added to the Arcane Severance gate (`VEIL_CASTER_CLASSES`), and the Cyborg ancestry text names the class. Perks (2/4/6/8/10) and skills (4/7/10) follow the standard cadence; the master's progression table lists neither.
+- [x] **B31** Technomancer class pack from `20-technomancer.md` / master Part 1 (module v0.1.39) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Class picker shows Technomancer; Resonance (+1 per turn); core Logic / Persona; Stamina 18 (+8), Recoveries 8
+  - [x] L1 skills: Resonance + Rituals, choose Electronics or Matrix Theory; discipline skill Summoning / Repair / Security Systems
+  - [x] Kit (Optional): No Kit / Hexshot / Spellblade / Sanctified
+  - [x] Discipline picker: Sprite-Weaver / Machine-Whisperer / Resonance-Warrior, ladders 1/2/3/5/7/8
+  - [x] L1: Compile Sprite + Resonance Strike + Resonance Mending; pick one each of 1/3/5-cost; 7-cost at L3, 9-cost at L5, 11-cost at L8
+  - [x] Sprite Cap 3 (L5), Sprite Cap 4 (L8), Master of the Current (L10)
+  - [x] A Cyborg can't take Technomancer, and a Technomancer can't become a Cyborg
   - [x] `node tools/build-packs.mjs` succeeds

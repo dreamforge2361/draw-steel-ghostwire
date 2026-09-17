@@ -85,7 +85,7 @@ Every People carries a **scientific** name (corp/lab classification), a **corpor
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
 - **Revenants** are embodied undead. They use Draw Steel **Former Life** + **Tough But Withered** (inert instead of dying; fire while inert = permanent destruction). There is **no** level/echelon Decay ladder as a mechanical progression.
 - **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation; the old Corruption Load BP mutation track is **retired** in favor of the Devil-chassis ancestry menu.
-- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist and Street Priest / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
+- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
 ---
 

@@ -1,0 +1,96 @@
+{
+  "_id": "TiBjQScysRA55ybj",
+  "_key": "!items!TiBjQScysRA55ybj",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceCascade.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "resonance-cascade",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceCascade.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 3,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "kuWGuiTKO3dROfCX": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "kuWGuiTKO3dROfCX",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceCascade.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceCascade.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceCascade.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

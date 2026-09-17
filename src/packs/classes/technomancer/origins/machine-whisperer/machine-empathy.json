@@ -1,0 +1,32 @@
+{
+  "_id": "9T8CSbUVssf0z51O",
+  "_key": "!items!9T8CSbUVssf0z51O",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.MachineEmpathy.Name",
+  "type": "feature",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Technomancer.Items.MachineEmpathy.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "machine-empathy",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "dMBIrhw0qqomLWwD",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
