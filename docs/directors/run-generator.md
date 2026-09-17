@@ -1,6 +1,6 @@
 # B39 — Director Run Generator
 
-**Status:** v1 implemented 2026-09-17 (module v0.1.54) — **pending Foundry verification**. Spike: `docs/spikes/B39-RUN-GENERATOR.md`.  
+**Status:** Done — Foundry-verified (module v0.1.54+).
 **UX model:** ApplicationV2 popup like **Wired Console** (`scripts/wired-console.mjs`) — Director-facing, not on the hero sheet.
 
 ## Goal

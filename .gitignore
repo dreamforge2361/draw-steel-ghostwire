@@ -13,3 +13,5 @@ packs/**/LOCK
 packs/**/LOG
 packs/**/LOG.old
 packs/**/*.log
+# B44 pregen source PDF stays local (~13 MB binary; see docs/masters/pregens/README.md)
+docs/masters/pregens/*.pdf

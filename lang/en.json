@@ -25,7 +25,9 @@
       "summons": "Ghostwire Summons & Machines",
       "bestiary": "Ghostwire Bestiary",
       "rulebook": "Ghostwire Rulebook",
-      "wiredFlats": "Ghostwire — The Wired: Flats"
+      "wiredFlats": "Ghostwire — The Wired: Flats",
+      "pregens": "Ghostwire Pregens",
+      "pregenFiction": "Ghostwire Pregen Fiction"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -6893,6 +6895,45 @@
     "WiredFlats": {
       "Journals": {
         "Gazetteer": "The Wired — The Flats: Matrix Gazetteer"
+      }
+    },
+    "Pregens": {
+      "Actors": {
+        "Vessa": {
+          "Name": "Vessa Corran-Dov — “the Preacher of Ninth”",
+          "Description": "A Corran Street Priest of the Shepherd ministry, holding a lamp-lit corner at Ninth-and-Fold in the Flats. Her Light pact buys mercy and protection, and costs her every time she spends it."
+        },
+        "Kaes": {
+          "Name": "Kaïs Vahn-Estal — “the Static Saint”",
+          "Description": "An Elvani Stormcaller who came down off the Glass Tier and stayed down. He runs no chrome — the current he channels will not share a body with metal."
+        },
+        "Krow": {
+          "Name": "KRV-9 “Krow”, the Decommissioned Wall",
+          "Description": "A corp-built Warframe chassis that outlived its contract and its serial number's owner. Arcane Severance cut it off from magic for good; it holds a doorway instead."
+        },
+        "Barak": {
+          "Name": "Barak Voss-Hallor — “the Foreman”",
+          "Description": "Nine feet of grey demolition plate and a voice that gets crews paid. The Foreman brokers work in the sprawl and expects the word he gives to be kept."
+        },
+        "Wren": {
+          "Name": "Wren Sable-Corvin — “the Kite”",
+          "Description": "A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it."
+        },
+        "Sabbat": {
+          "Name": "Sabbat Vane — “the Dead Frequency”",
+          "Description": "A Revenant who came back wrong and wired, compiling sprites out of a coffin-motel cell. The dead net answers when he calls, which is not the same as obeying."
+        },
+        "Vira": {
+          "Name": "Vira Kellis-Nade — “the Warren-Wire”",
+          "Description": "A Changer of the Rat lineage who fights through a fleet she built herself, in warrens she knows nine ways out of. Every drone is a door she left open."
+        },
+        "Kessic": {
+          "Name": "Kessic Draye — “Null”",
+          "Description": "An Aberrant-strain Mutant deckhead who turns a site's own defences against the people who paid for them. The taint that marks him is also how he reads a system."
+        }
+      },
+      "Journals": {
+        "Fiction": "Dossiers & Fiction — The Eight"
       }
     }
   },

@@ -1,0 +1,143 @@
+{
+  "vessa-corran-dov": {
+    "armor": "src/packs/gear/armor/heavy/hardshell.json",
+    "weapons": [
+      "src/packs/gear/weapons/light-firearms/workhorse.json",
+      "src/packs/gear/weapons/melee/street-blade.json"
+    ],
+    "gear": [
+      "src/packs/gear/general/comms/burner.json",
+      "src/packs/gear/general/medical/trauma-patch.json",
+      "src/packs/gear/general/medical/field-surgery-kit.json",
+      "src/packs/gear/general/ammunition/standard-rounds.json"
+    ],
+    "chrome": [],
+    "biTotal": 0,
+    "languages": ["FlatsCant", "CorranWorkCant", "SaintCant", "RiteSpeech"],
+    "why": "A Flats soup-line preacher in cheap entry Heavy plate (Sanctified kit wants heavy) with a plain service pistol she'd rather not draw, a knife, a burner and the medical kit that keeps the lamp-room a clinic four mornings a week; no chrome, because the Veil erodes under metal and she is Corran-stubborn about staying flesh."
+  },
+  "kaes-vahn-estal": {
+    "armor": null,
+    "weapons": [
+      "src/packs/gear/weapons/light-firearms/zapper.json",
+      "src/packs/gear/weapons/light-firearms/sleeve-gun.json"
+    ],
+    "gear": [
+      "src/packs/gear/general/comms/pocket-sec.json",
+      "src/packs/gear/general/lifestyle/fake-sin-basic.json",
+      "src/packs/gear/general/medical/trauma-patch.json",
+      "src/packs/gear/general/ammunition/standard-rounds.json"
+    ],
+    "chrome": [],
+    "biTotal": 0,
+    "languages": ["ElvaniHighCant", "ElvaniSoftspeech", "CorpCant", "ReachMetro"],
+    "why": "Unarmoured by kit doctrine (Hexshot is an armor:none caster kit), the Static Saint carries a capacitive Zapper because a Stormcaller's sidearm should throw the same element he does, a holdout in the sleeve out of patron-house habit, and a fake SIN because the Spires filed him as a liability; no chrome at all — magic erosion, and Soft-grade implants don't exist as pack SKUs yet."
+  },
+  "krv-9-krow": {
+    "armor": "src/packs/gear/armor/heavy/security-rig.json",
+    "weapons": [
+      "src/packs/gear/weapons/longarms/chopper.json",
+      "src/packs/gear/weapons/light-firearms/hand-cannon.json"
+    ],
+    "gear": [
+      "src/packs/gear/armor/shields/riot-shield.json",
+      "src/packs/gear/general/comms/pocket-sec.json",
+      "src/packs/gear/general/ammunition/standard-rounds.json",
+      "src/packs/gear/general/ammunition/ap-rounds.json"
+    ],
+    "chrome": [],
+    "biTotal": 0,
+    "languages": ["CyborgFrameCant", "OpsDialects", "CorpCant", "HiveTechnical"],
+    "why": "The decommissioned wall keeps wearing the corp-sec hardshell he was issued, a Warframe-legal medium assault rifle plus a heavy pistol for when the shield hand is full, and AP rounds for doors; Krow is a Cyborg, so he spends no Body Integrity and installs no chrome — he runs Frame Modules (docs/raw/09-chrome-body-integrity.md excludes Cyborgs from the chapter entirely)."
+  },
+  "barak-voss-hallor": {
+    "armor": "src/packs/gear/armor/heavy/hardshell.json",
+    "weapons": [
+      "src/packs/gear/weapons/heavy/chatterbox.json",
+      "src/packs/gear/weapons/melee/knuckles.json"
+    ],
+    "gear": [
+      "src/packs/gear/general/comms/pocket-sec.json",
+      "src/packs/gear/general/lifestyle/certified-credstick.json",
+      "src/packs/gear/general/lifestyle/fake-sin-basic.json",
+      "src/packs/gear/general/medical/stim-patch.json"
+    ],
+    "chrome": [
+      {"path": "src/packs/chrome/cyberlimb-arm.json", "grade": "Standard", "bi": 5},
+      {"path": "src/packs/chrome/dermal-plating.json", "grade": "Standard", "bi": 4}
+    ],
+    "biTotal": 9,
+    "languages": ["GoliarBattleCant", "SprawlArgot", "TradeCant", "CorpCant"],
+    "why": "The Foreman negotiates in demolition plate on purpose: the Juggernaut kit's heavy weapon is the Chatterbox LMG, the Ares Persuader is the part of the conversation that doesn't need bullets, and the story's hydraulic ram forearm and plated torso are literally the Cyberlimb (5 BI) and Dermal Plating (4 BI) — 9 of 20 spent, credstick and fake SIN because a fixer closes deals with both."
+  },
+  "wren-sable-corvin": {
+    "armor": "src/packs/gear/armor/light/armored-jacket.json",
+    "weapons": [
+      "src/packs/gear/weapons/longarms/longshot.json",
+      "src/packs/gear/weapons/light-firearms/popper.json"
+    ],
+    "gear": [
+      "src/packs/gear/general/comms/burner.json",
+      "src/packs/gear/general/sensors/cheap-shades.json",
+      "src/packs/gear/general/ammunition/standard-rounds.json",
+      "src/packs/gear/general/medical/trauma-patch.json"
+    ],
+    "chrome": [],
+    "biTotal": 0,
+    "languages": ["ChangerPackTongue", "ReachMetro", "TradeCant", "SprawlArgot"],
+    "why": "The Kite wears an unremarkable armored coat she can shrug off before she changes, carries the Ranger Arms Reach marksman rifle her Longshot kit is named for and a pocket pistol for the climb down, and takes no chrome — implanted metal doesn't fold into a raven, and the long sight is already in her eye."
+  },
+  "sabbat-vane": {
+    "armor": "src/packs/gear/armor/light/secure-threads.json",
+    "weapons": [
+      "src/packs/gear/weapons/light-firearms/popper.json"
+    ],
+    "gear": [
+      "src/packs/gear/general/comms/pocket-sec.json",
+      "src/packs/gear/general/lifestyle/fake-sin-basic.json",
+      "src/packs/gear/general/ammunition/standard-rounds.json",
+      "src/packs/matrix/support/faraday-bag.json"
+    ],
+    "chrome": [],
+    "biTotal": 0,
+    "languages": ["RevenantMemorySpeech", "ResonanceNotation", "WireSpeak", "SprawlArgot"],
+    "why": "A dead man in ballistic-weave streetwear that reads as ordinary clothes, one cheap pistol he barely uses, a fake SIN because the coffin-motel wants a living renter, and a Faraday bag to keep the ghosts he's carrying off the grid; a Technomancer's Resonance is the worst thing to put chrome next to, so nothing is installed."
+  },
+  "vira-kellis-nade": {
+    "armor": "src/packs/gear/armor/light/secure-threads.json",
+    "weapons": [
+      "src/packs/gear/weapons/light-firearms/popper.json"
+    ],
+    "gear": [
+      "src/packs/matrix/rccs/fleet-deck.json",
+      "src/packs/matrix/autosofts/targeting-autosoft.json",
+      "src/packs/gear/general/comms/burner.json",
+      "src/packs/gear/general/infiltration/lockpick-set.json"
+    ],
+    "chrome": [
+      {"path": "src/packs/chrome/datajack.json", "grade": "Standard", "bi": 1}
+    ],
+    "biTotal": 1,
+    "languages": ["ChangerPackTongue", "WireSpeak", "MachineMarkup", "SprawlArgot"],
+    "why": "The Warren-Wire dresses in soft ballistic weave that squeezes through a duct grille with her, keeps a compact pistol as a last resort, and does her real work through a Fleet Deck RCC with a targeting autosoft feeding Rigged Fire; one Datajack (1 of 20 BI) is the rigger's minimum — the least metal a Wererat can carry and still jump in."
+  },
+  "kessic-draye": {
+    "armor": "src/packs/gear/armor/light/secure-threads.json",
+    "weapons": [
+      "src/packs/gear/weapons/light-firearms/sleeve-gun.json"
+    ],
+    "gear": [
+      "src/packs/gear/general/comms/pocket-sec.json",
+      "src/packs/matrix/programs/sneak.json",
+      "src/packs/matrix/payloads/crash.json",
+      "src/packs/gear/general/medical/trauma-patch.json"
+    ],
+    "chrome": [
+      {"path": "src/packs/chrome/datajack.json", "grade": "Standard", "bi": 1},
+      {"path": "src/packs/chrome/cyber-eyes.json", "grade": "Standard", "bi": 2}
+    ],
+    "biTotal": 3,
+    "languages": ["MutantEnclaveCant", "WireSpeak", "OldCode", "SprawlArgot"],
+    "why": "Null keeps the Street Deck he already carries and adds the two programs a Disruptor runs on the way in — Sneak to stay quiet and Crash to dissolve cheap ICE — plus a holdout in the sleeve for the meat that's left behind; the port behind his ear from the story is the Datajack (1 BI) and the optics that read a lattice of light are Cyber-Eyes (2 BI), 3 of 20."
+  }
+}
