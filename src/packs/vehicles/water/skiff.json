@@ -44,13 +44,17 @@
         "availability": "street",
         "price": 300,
         "modSlots": 1,
-        "tags": [],
+        "tags": [
+          "Aquatic",
+          "Transit"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Water",
         "scale": "Light",
-        "drone": false
+        "drone": false,
+        "speedBand": "standard"
       }
     }
   }

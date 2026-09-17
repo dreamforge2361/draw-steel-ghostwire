@@ -45,14 +45,16 @@
         "price": 7000,
         "modSlots": 3,
         "tags": [
-          "Sealed"
+          "Sealed",
+          "Transit"
         ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Space",
         "scale": "Vehicle",
-        "drone": false
+        "drone": false,
+        "speedBand": "extreme"
       }
     }
   }

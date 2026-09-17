@@ -1,0 +1,61 @@
+{
+  "_id": "0EB2ZpklF2ItG7BN",
+  "_key": "!items!0EB2ZpklF2ItG7BN",
+  "name": "GHOSTWIRE.Vehicles.Items.Ripper.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Ripper.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ripper",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 11000,
+        "modSlots": 4,
+        "tags": [
+          "Breach",
+          "Assault",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground (drone)",
+        "scale": "Light",
+        "drone": true
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "8EHxspXd4d0q97gG",
+  "_key": "!items!8EHxspXd4d0q97gG",
+  "name": "GHOSTWIRE.Vehicles.Items.TaserBee.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.TaserBee.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "taser-bee",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 750,
+        "modSlots": 2,
+        "tags": [
+          "Nonlethal",
+          "Swarm",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air (drone)",
+        "scale": "Personal",
+        "drone": true
+      }
+    }
+  }
+}

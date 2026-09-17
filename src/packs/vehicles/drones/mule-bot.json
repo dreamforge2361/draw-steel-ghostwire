@@ -44,7 +44,11 @@
         "availability": "professional",
         "price": 1100,
         "modSlots": 2,
-        "tags": [],
+        "tags": [
+          "Cargo",
+          "Cover",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

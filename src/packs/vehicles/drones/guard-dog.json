@@ -44,7 +44,11 @@
         "availability": "restricted",
         "price": 3200,
         "modSlots": 3,
-        "tags": [],
+        "tags": [
+          "Sentry",
+          "Mount",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

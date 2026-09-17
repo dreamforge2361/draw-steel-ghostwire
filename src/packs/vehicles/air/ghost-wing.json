@@ -44,13 +44,18 @@
         "availability": "prototype",
         "price": 60000,
         "modSlots": 5,
-        "tags": [],
+        "tags": [
+          "Stealth",
+          "Insertion",
+          "Heavy"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Air",
         "scale": "Heavy",
-        "drone": false
+        "drone": false,
+        "speedBand": "fast"
       }
     }
   }

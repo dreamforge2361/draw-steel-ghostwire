@@ -44,7 +44,12 @@
         "availability": "military",
         "price": 14000,
         "modSlots": 4,
-        "tags": [],
+        "tags": [
+          "Anthro",
+          "Infiltrate",
+          "Jump-In-Capable",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

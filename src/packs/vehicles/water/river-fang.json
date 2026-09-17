@@ -1,0 +1,62 @@
+{
+  "_id": "MFyNOhIIv6zBeL9j",
+  "_key": "!items!MFyNOhIIv6zBeL9j",
+  "name": "GHOSTWIRE.Vehicles.Items.RiverFang.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.RiverFang.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "16-vehicles",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "river-fang",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "NowzLYKCGDkEWIwh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 15000,
+        "modSlots": 4,
+        "tags": [
+          "Combat",
+          "Aquatic",
+          "Mount"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "fast"
+      }
+    }
+  }
+}

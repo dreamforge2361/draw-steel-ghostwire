@@ -44,13 +44,17 @@
         "availability": "restricted",
         "price": 4500,
         "modSlots": 3,
-        "tags": [],
+        "tags": [
+          "Armor",
+          "Extraction"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Ground",
         "scale": "Vehicle",
-        "drone": false
+        "drone": false,
+        "speedBand": "standard"
       }
     }
   }

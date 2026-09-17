@@ -106,7 +106,7 @@ Ship **3 companions** first; Rank ladder + greaters as scaffolds until Veil chap
 ### 3.4 Wrench — Drones & vehicles (Phase 4)
 
 SoR: `docs/rulebook/15-drones.md` (**36** chassis by Echelon) and `16-vehicles.md` (**32** entries).  
-Foundry: **Item catalog** stays in `vehicles` pack; **Actor templates** live under `summons/machines` (dual representation — see lock above). Phase 4 v1 (2026-09-17) ships **9 scale-band templates + Deploy / Recall** from the Item sheet — band map, provisional numbers, and click path in **`GHOSTWIRE_MACHINE_BANDS.md`**. The Item catalog sync to the chapters' full chassis lists is still open.
+Foundry: **Item catalog** stays in `vehicles` pack; **Actor templates** live under `summons/machines` (dual representation — see lock above). Phase 4 v1 (2026-09-17) ships **9 scale-band templates + Deploy / Recall** from the Item sheet — band map, provisional numbers, and click path in **`GHOSTWIRE_MACHINE_BANDS.md`**. **B36b (Foundry-verified 2026-09-17):** the `vehicles` pack now carries the full chapter lists — 36 drones and 32 crewed platforms — each resolving to an existing band.
 
 ### 3.5 Hacker — Nodes & ICE (Phase 5) — **10 Director templates**
 

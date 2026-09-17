@@ -1,0 +1,61 @@
+{
+  "_id": "XoTe1S8QPXFrnSMC",
+  "_key": "!items!XoTe1S8QPXFrnSMC",
+  "name": "GHOSTWIRE.Vehicles.Items.GreyCab.Name",
+  "type": "treasure",
+  "img": "icons/environment/settlement/wagon.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.GreyCab.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "16-vehicles",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grey-cab",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 3800,
+        "modSlots": 3,
+        "tags": [
+          "Covert",
+          "Transit"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "standard"
+      }
+    }
+  }
+}

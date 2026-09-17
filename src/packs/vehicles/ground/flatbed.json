@@ -1,0 +1,61 @@
+{
+  "_id": "rR5JmxUSfzlEDxwE",
+  "_key": "!items!rR5JmxUSfzlEDxwE",
+  "name": "GHOSTWIRE.Vehicles.Items.Flatbed.Name",
+  "type": "treasure",
+  "img": "icons/environment/settlement/wagon.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Flatbed.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "16-vehicles",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "flatbed",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 5500,
+        "modSlots": 3,
+        "tags": [
+          "Cargo",
+          "Heavy"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Heavy",
+        "drone": false,
+        "speedBand": "slow"
+      }
+    }
+  }
+}

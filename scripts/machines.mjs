@@ -23,6 +23,7 @@ const BANDS = {
 };
 
 // Provisional stamping until the Machines numeric pass: Stamina × echelon multiplier, vehicle speed by chapter Speed band.
+// Vehicle Items carry flags.vehicle.speedBand (B36b); the table below is the fallback for Items that predate it.
 const ECHELON_MULTIPLIER = { 1: 1, 2: 1.5, 3: 2, 4: 2.5 };
 const SPEED_BAND_BONUS = { slow: -2, standard: 0, fast: 2, extreme: 4 };
 const VEHICLE_SPEED_BANDS = {
@@ -105,7 +106,7 @@ export async function deployMachine(item) {
   const owner = item.parent instanceof Actor ? item.parent : null;
   const base = BANDS[band];
   const stamina = Math.round(base.stamina * (ECHELON_MULTIPLIER[vehicle.echelon] ?? 1));
-  const speedBand = VEHICLE_SPEED_BANDS[item.system._dsid];
+  const speedBand = vehicle.speedBand ?? VEHICLE_SPEED_BANDS[item.system._dsid];
   const speed = base.speed + (vehicle.drone ? 0 : (SPEED_BAND_BONUS[speedBand] ?? 0));
   // The owner's players own the machine, so they can move its token and track its Integrity.
   const ownership = { default: 0 };

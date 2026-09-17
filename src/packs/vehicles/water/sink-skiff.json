@@ -1,0 +1,62 @@
+{
+  "_id": "7XGwQZHzcA8IPclL",
+  "_key": "!items!7XGwQZHzcA8IPclL",
+  "name": "GHOSTWIRE.Vehicles.Items.SinkSkiff.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.SinkSkiff.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "16-vehicles",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sink-skiff",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "NowzLYKCGDkEWIwh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 220,
+        "modSlots": 1,
+        "tags": [
+          "Clunker",
+          "Beater",
+          "Aquatic"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water",
+        "scale": "Light",
+        "drone": false,
+        "speedBand": "slow"
+      }
+    }
+  }
+}

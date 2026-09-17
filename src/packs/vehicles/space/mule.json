@@ -45,14 +45,17 @@
         "price": 22000,
         "modSlots": 4,
         "tags": [
-          "Sealed"
+          "Sealed",
+          "Boarding",
+          "Heavy"
         ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Space",
         "scale": "Heavy",
-        "drone": false
+        "drone": false,
+        "speedBand": "extreme"
       }
     }
   }

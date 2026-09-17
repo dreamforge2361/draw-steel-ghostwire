@@ -44,13 +44,17 @@
         "availability": "professional",
         "price": 1200,
         "modSlots": 2,
-        "tags": [],
+        "tags": [
+          "Crew-car",
+          "Transit"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Ground",
         "scale": "Vehicle",
-        "drone": false
+        "drone": false,
+        "speedBand": "standard"
       }
     }
   }

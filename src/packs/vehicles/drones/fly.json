@@ -44,7 +44,11 @@
         "availability": "street",
         "price": 200,
         "modSlots": 1,
-        "tags": [],
+        "tags": [
+          "Recon",
+          "Expendable",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

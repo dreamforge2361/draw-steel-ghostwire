@@ -44,13 +44,18 @@
         "availability": "restricted",
         "price": 6000,
         "modSlots": 3,
-        "tags": [],
+        "tags": [
+          "Stealth",
+          "Aquatic",
+          "Infiltrate"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Water",
         "scale": "Vehicle",
-        "drone": false
+        "drone": false,
+        "speedBand": "slow"
       }
     }
   }

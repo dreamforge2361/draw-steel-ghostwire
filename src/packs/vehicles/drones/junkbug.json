@@ -1,0 +1,63 @@
+{
+  "_id": "PZjKDBrg7mijABbC",
+  "_key": "!items!PZjKDBrg7mijABbC",
+  "name": "GHOSTWIRE.Vehicles.Items.Junkbug.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Junkbug.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "junkbug",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 120,
+        "modSlots": 1,
+        "tags": [
+          "Recon",
+          "Climb",
+          "Clunker",
+          "Unreliable",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground (drone)",
+        "scale": "Personal",
+        "drone": true
+      }
+    }
+  }
+}

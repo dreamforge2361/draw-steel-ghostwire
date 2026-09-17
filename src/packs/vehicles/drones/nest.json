@@ -1,0 +1,61 @@
+{
+  "_id": "z25iKBjeAyJGYvsl",
+  "_key": "!items!z25iKBjeAyJGYvsl",
+  "name": "GHOSTWIRE.Vehicles.Items.Nest.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Nest.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "nest",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 3800,
+        "modSlots": 3,
+        "tags": [
+          "Sentry",
+          "Mount",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground (drone)",
+        "scale": "Light",
+        "drone": true
+      }
+    }
+  }
+}

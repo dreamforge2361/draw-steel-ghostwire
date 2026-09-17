@@ -44,7 +44,11 @@
         "availability": "restricted",
         "price": 3500,
         "modSlots": 3,
-        "tags": [],
+        "tags": [
+          "Medic",
+          "Support",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

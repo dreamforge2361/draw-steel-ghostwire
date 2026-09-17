@@ -44,13 +44,17 @@
         "availability": "professional",
         "price": 1000,
         "modSlots": 2,
-        "tags": [],
+        "tags": [
+          "Courier",
+          "Pursuit"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Ground",
         "scale": "Light",
-        "drone": false
+        "drone": false,
+        "speedBand": "fast"
       }
     }
   }

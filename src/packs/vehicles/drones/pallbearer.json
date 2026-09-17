@@ -1,0 +1,62 @@
+{
+  "_id": "Glh8CXQpFKhxVMDq",
+  "_key": "!items!Glh8CXQpFKhxVMDq",
+  "name": "GHOSTWIRE.Vehicles.Items.Pallbearer.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Pallbearer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pallbearer",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 12000,
+        "modSlots": 4,
+        "tags": [
+          "Cargo",
+          "Armor",
+          "Medic",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground (drone)",
+        "scale": "Vehicle",
+        "drone": true
+      }
+    }
+  }
+}

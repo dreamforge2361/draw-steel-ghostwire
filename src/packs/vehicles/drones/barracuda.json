@@ -44,7 +44,11 @@
         "availability": "restricted",
         "price": 4000,
         "modSlots": 3,
-        "tags": [],
+        "tags": [
+          "Aquatic",
+          "Sabotage",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

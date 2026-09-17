@@ -1,0 +1,63 @@
+{
+  "_id": "gkh2WKWfLzRQUJRs",
+  "_key": "!items!gkh2WKWfLzRQUJRs",
+  "name": "GHOSTWIRE.Vehicles.Items.SinkFloater.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.SinkFloater.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sink-floater",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 180,
+        "modSlots": 1,
+        "tags": [
+          "Aquatic",
+          "Recon",
+          "Clunker",
+          "Unreliable",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water (drone)",
+        "scale": "Personal",
+        "drone": true
+      }
+    }
+  }
+}

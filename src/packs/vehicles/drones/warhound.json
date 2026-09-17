@@ -44,7 +44,12 @@
         "availability": "prototype",
         "price": 40000,
         "modSlots": 5,
-        "tags": [],
+        "tags": [
+          "Combat",
+          "Heavy",
+          "Jump-In-Capable",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

@@ -44,13 +44,17 @@
         "availability": "professional",
         "price": 1200,
         "modSlots": 2,
-        "tags": [],
+        "tags": [
+          "Recon",
+          "Insertion"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Air",
         "scale": "Light",
-        "drone": false
+        "drone": false,
+        "speedBand": "fast"
       }
     }
   }

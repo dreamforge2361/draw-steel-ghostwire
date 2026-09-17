@@ -1,0 +1,62 @@
+{
+  "_id": "mlrWPsFWK90Xgpxv",
+  "_key": "!items!mlrWPsFWK90Xgpxv",
+  "name": "GHOSTWIRE.Vehicles.Items.DeepViper.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.DeepViper.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deep-viper",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 16000,
+        "modSlots": 4,
+        "tags": [
+          "Aquatic",
+          "Combat",
+          "Jump-In-Capable",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water (drone)",
+        "scale": "Vehicle",
+        "drone": true
+      }
+    }
+  }
+}

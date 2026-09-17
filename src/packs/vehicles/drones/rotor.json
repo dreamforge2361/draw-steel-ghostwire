@@ -44,7 +44,11 @@
         "availability": "professional",
         "price": 900,
         "modSlots": 2,
-        "tags": [],
+        "tags": [
+          "Recon",
+          "Swarm",
+          "Wired"
+        ],
         "modFamily": [
           "vehicle"
         ],

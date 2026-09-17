@@ -44,13 +44,17 @@
         "availability": "restricted",
         "price": 4000,
         "modSlots": 3,
-        "tags": [],
+        "tags": [
+          "Transit",
+          "Pursuit"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Air",
         "scale": "Vehicle",
-        "drone": false
+        "drone": false,
+        "speedBand": "fast"
       }
     }
   }

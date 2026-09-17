@@ -1,0 +1,62 @@
+{
+  "_id": "Jly3id45kchaAAT6",
+  "_key": "!items!Jly3id45kchaAAT6",
+  "name": "GHOSTWIRE.Vehicles.Items.JunkRotor.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.JunkRotor.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "16-vehicles",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "junk-rotor",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "a7XeWmGqPhQSlDcK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 400,
+        "modSlots": 1,
+        "tags": [
+          "Clunker",
+          "Beater",
+          "Fragile"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air",
+        "scale": "Light",
+        "drone": false,
+        "speedBand": "standard"
+      }
+    }
+  }
+}

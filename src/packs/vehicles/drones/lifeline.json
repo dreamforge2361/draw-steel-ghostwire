@@ -1,0 +1,63 @@
+{
+  "_id": "Xxw1QLECiTAPy9kx",
+  "_key": "!items!Xxw1QLECiTAPy9kx",
+  "name": "GHOSTWIRE.Vehicles.Items.Lifeline.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Lifeline.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "15-drones",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lifeline",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 35000,
+        "modSlots": 5,
+        "tags": [
+          "Medic",
+          "Armor",
+          "Cargo",
+          "Jump-In-Capable",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground (drone)",
+        "scale": "Vehicle",
+        "drone": true
+      }
+    }
+  }
+}

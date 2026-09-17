@@ -44,13 +44,17 @@
         "availability": "professional",
         "price": 900,
         "modSlots": 2,
-        "tags": [],
+        "tags": [
+          "Cargo",
+          "Workshop"
+        ],
         "modFamily": [
           "vehicle"
         ],
         "domain": "Ground",
         "scale": "Vehicle",
-        "drone": false
+        "drone": false,
+        "speedBand": "slow"
       }
     }
   }

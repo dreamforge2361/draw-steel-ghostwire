@@ -45,7 +45,9 @@
         "price": 80000,
         "modSlots": 5,
         "tags": [
-          "Sealed"
+          "Sealed",
+          "Capital",
+          "Combat"
         ],
         "priceNote": "+",
         "modFamily": [
@@ -53,7 +55,8 @@
         ],
         "domain": "Space",
         "scale": "Capital",
-        "drone": false
+        "drone": false,
+        "speedBand": "extreme"
       }
     }
   }
