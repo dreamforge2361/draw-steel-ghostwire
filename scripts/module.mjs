@@ -214,7 +214,8 @@ function patchPersistentReagents() {
 
 // Heroic abilities: Draw Steel's use dialog lets a hero spend Adrenaline (or any heroic resource) they don't have.
 // In combat, refuse to use an ability whose cost is more than the hero's current heroic resource.
-// Outside combat, heroic abilities stay usable without spending (chapter rule), so nothing is checked.
+// Outside combat, most classes' chapters let heroic abilities be used without spending, so nothing is checked,
+// except for Medic Reagents: a physical kit that still spends outside combat (04-medic.md), so it's always checked.
 function enforceHeroicResourceCost() {
   const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
   if (!AbilityModel?.prototype.use) {
@@ -225,7 +226,8 @@ function enforceHeroicResourceCost() {
   AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
     const actor = this.actor;
     const cost = Number(this.resource) || 0;
-    if ((cost > 0) && (actor?.type === "hero") && actor.inCombat) {
+    const persistent = PERSISTENT_RESOURCE_CLASSES.has(actor?.system.class?.system._dsid);
+    if ((cost > 0) && (actor?.type === "hero") && (actor.inCombat || persistent)) {
       const resource = actor.system.coreResource;
       const current = Number(foundry.utils.getProperty(resource.target, resource.path)) || 0;
       if (current < cost) {

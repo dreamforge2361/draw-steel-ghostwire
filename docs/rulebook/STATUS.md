@@ -15,7 +15,7 @@
 | **ART-STYLE** | `docs/rulebook/ART-STYLE.md` | **Locked** 2026-09-16 |
 | Chrome master | `docs/masters/GHOSTWIRE_CHROME_MASTER.md` | **Ingested** 2026-09-16 |
 | **Gear master** | `docs/masters/GHOSTWIRE_GEAR_MASTER.md` | **Ingested** + DS ALIGNMENT OVERRIDE (2026-09-16) |
-| **Medic (Foundry)** | `src/packs/classes/medic/` | **B26 Foundry-verified** (2026-09-16) — Reagents persist across encounters |
+| **Medic (Foundry)** | `src/packs/classes/medic/` | **B26 Foundry-verified** (2026-09-16) — Reagents persist across encounters. **B26b gap locks** (toxin numbers, 2× L9 picks, Anesthetize power roll, Reagents spend outside combat) Foundry-verified |
 | **Wrench (Foundry)** | `src/packs/classes/wrench/` | **B27 Foundry-verified** (2026-09-16) — Uptime v1; machines inventory backlog |
 | Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
 | **Languages** | `docs/rulebook/19-languages.md` + `docs/masters/GHOSTWIRE_LANGUAGES.md` | **Names locked** 2026-09-16 (B25) — stub chapter; lore backlog |

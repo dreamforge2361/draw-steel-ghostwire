@@ -1,0 +1,32 @@
+{
+  "_id": "nF7GDbUlZds041Iy",
+  "_key": "!items!nF7GDbUlZds041Iy",
+  "name": "GHOSTWIRE.Classes.Medic.Items.LastSyringe.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/vial-cork-empty.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.LastSyringe.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "last-syringe",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

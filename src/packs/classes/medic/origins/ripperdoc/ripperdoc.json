@@ -218,8 +218,8 @@
         }
       },
       "O9Gvzw3CZYg3pJz8": {
-        "name": "The Whole Package",
-        "img": null,
+        "name": "9th-Level Ripperdoc Ability",
+        "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
         "type": "itemGrant",
         "requirements": {
           "level": 9
@@ -228,12 +228,15 @@
         "pool": [
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NMsEvaEevL1oex12"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.m564XJnUcN3DeDKz"
           }
         ],
-        "description": "<p>Your specialization grants you the following feature.</p>",
+        "description": "<p>Choose one of the following.</p>",
         "sort": 0,
         "repick": {},
-        "chooseN": null,
+        "chooseN": 1,
         "additional": {
           "type": "",
           "perkType": []

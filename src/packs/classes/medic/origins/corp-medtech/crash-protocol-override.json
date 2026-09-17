@@ -1,0 +1,32 @@
+{
+  "_id": "C6FCydxRLl5DA59f",
+  "_key": "!items!C6FCydxRLl5DA59f",
+  "name": "GHOSTWIRE.Classes.Medic.Items.CrashProtocolOverride.Name",
+  "type": "feature",
+  "img": "icons/magic/life/heart-glowing-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.CrashProtocolOverride.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crash-protocol-override",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

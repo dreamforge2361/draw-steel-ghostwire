@@ -218,8 +218,8 @@
         }
       },
       "HVlIHrnPJxpwCXFP": {
-        "name": "Gold-Standard Protocol",
-        "img": null,
+        "name": "9th-Level Corp-Medtech Ability",
+        "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
         "type": "itemGrant",
         "requirements": {
           "level": 9
@@ -228,12 +228,15 @@
         "pool": [
           {
             "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2cammRviYtS2jQho"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.C6FCydxRLl5DA59f"
           }
         ],
-        "description": "<p>Your specialization grants you the following feature.</p>",
+        "description": "<p>Choose one of the following.</p>",
         "sort": 0,
         "repick": {},
-        "chooseN": null,
+        "chooseN": 1,
         "additional": {
           "type": "",
           "perkType": []

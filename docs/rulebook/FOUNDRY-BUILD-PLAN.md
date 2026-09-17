@@ -205,6 +205,18 @@ After each spike:
   - [x] L1: First Aid, Administer Dose, Diagnose + 1/3/5-Reagent picks; Field Synthesis + Advanced Chem-Prep at L2; 7 at L3, 9 at L5, 11 at L8
   - [x] `node tools/build-packs.mjs` succeeds
 
+### B26b Medic gap locks (2026-09-16)
+Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
+1. **Toxins & Gas:** base 2 + Instinct over 2 rounds + Weakened; enhanced 4 + Instinct + Weakened and Slowed (Administer Dose enemy mode, Toxic Cloud, Field Synthesis toxin, Reagents feature).
+2. **Level 9:** a second pick per specialization — Last Syringe (Street-Doc), Crash Protocol Override (Corp-Medtech), Emergency Excision (Ripperdoc); L9 grants now choose 1 of 2.
+3. **Anesthetize:** power roll 2d10 + Instinct (dazed EoT / dazed save ends / unconscious), no Physique save.
+4. **Reagents outside combat (lock A):** Reagents still spend outside combat; Established Protocols stay free; Field Synthesis is encounter-only. `enforceHeroicResourceCost` now blocks an unaffordable Reagent cost outside combat too (there was no free out-of-combat spend to remove).
+- [x] **B26b** — **Foundry-verified 2026-09-16**. Done when:
+  - [x] Administer Dose / Toxic Cloud show 2 + Instinct toxin text; Anesthetize rolls Instinct with three tiers
+  - [x] L9 specialization grant offers two picks for each specialization
+  - [x] A Medic can't use a Reagent ability they can't afford outside combat
+  - [x] `node tools/build-packs.mjs` succeeds
+
 ### B27 Wrench (2026-09-16)
 **Uptime v1:** class `turnGain` is a flat `"1"`; the full earn/drain loop (1 per active machine, Deploy momentum, maintenance/salvage ticks, drains from hits, jamming, and wrecks), the 10/12/14 Uptime cap, and fleet size 3/4/5/6 live in feature text (Uptime, Fleet Size Doctrine, Fleet Cap +1, Uptime Cap Increase). No fleet counter UI. **Machines inventory Foundry sync (`15-drones.md`, `16-vehicles.md`) is still backlog** — class items only reference machines; a Fleet & Jump-In feature summarizes THE MACHINES.
 - [x] **B27** Wrench class pack from `05-wrench.md` (module v0.1.32) — **Foundry-verified 2026-09-16**. Done when:

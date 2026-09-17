@@ -1731,7 +1731,7 @@
           },
           "Reagents": {
             "Name": "Reagents",
-            "Description": "<p>Reagents are your kit, literally: trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more. Every heroic ability and every signature enhancement spends Reagents.</p><h4>Kit Capacity</h4><table><thead><tr><th>Echelon</th><th>Kit capacity</th></tr></thead><tbody><tr><td>1</td><td>10</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>20</td></tr><tr><td>4</td><td>38</td></tr></tbody></table><p>Advanced Chem-Prep (2nd level) adds 2 to your capacity. You can never hold more Reagents than your capacity.</p><h4>Reagents Persist</h4><p>Unlike every other class’s heroic resource, Reagents <strong>don’t reset at the start or end of an encounter</strong>, and you gain none at the start of your turns. The bag you bring is the bag you have: unspent Reagents carry from fight to fight across a run.</p><p>A basic compound or a signature enhancement usually costs <strong>2 Reagents</strong>, one dose. At Echelon 1 that is five doses before the bag runs dry. When it’s empty, you still have Established Protocols and (from 2nd level) Field Synthesis.</p><h4>Restocking</h4><p>At a respite, or during downtime, you restock up to your kit capacity. Restocking is a project or lifestyle activity paid in nuyen (buying raw stock, calling a supplier, or synthesizing from scratch). Money buys <strong>supply</strong>, never <strong>capability</strong>: nuyen refills the bag, but never unlocks a compound or a feature.</p><h4>Outside of Combat</h4><p>Outside combat, abilities still spend Reagents from the kit: the dose is real whether or not initiative has been rolled.</p><h4>Compound Families</h4><ul><li><p><strong>Restoratives</strong> heal [[lookup @recoveries.recoveryValue]]{your Recovery value} in Stamina (enhanced, +50% rounded up), stabilize the dying, and revive the downed.</p></li><li><p><strong>Antidotes &amp; Cures</strong> remove 1 step of poison, disease, or the Exposure clock (enhanced, 2 steps).</p></li><li><p><strong>Stimulants &amp; Combat Drugs</strong> grant an edge or let the target ignore 1 condition for 1 round (enhanced, +1 round or +1 ally). Every Stimulant carries the crash rider: −1 on the recipient’s next power roll after the buff ends (−2 if enhanced), automatic, no save.</p></li><li><p><strong>Toxins &amp; Gas</strong> deal light-weapon damage over 2 rounds and weaken the target (enhanced, medium-weapon damage and the target is also slowed).</p></li></ul><p><em>In Foundry, Reagents are your heroic resource pool: Draw Steel doesn’t reset them when combat starts and adds nothing at the start of your turns. Capacity isn’t enforced; set your pool when you restock. Costs are enforced in combat at the ability’s full cost.</em></p>"
+            "Description": "<p>Reagents are your kit, literally: trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more. Every heroic ability and every signature enhancement spends Reagents.</p><h4>Kit Capacity</h4><table><thead><tr><th>Echelon</th><th>Kit capacity</th></tr></thead><tbody><tr><td>1</td><td>10</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>20</td></tr><tr><td>4</td><td>38</td></tr></tbody></table><p>Advanced Chem-Prep (2nd level) adds 2 to your capacity. You can never hold more Reagents than your capacity.</p><h4>Reagents Persist</h4><p>Unlike every other class’s heroic resource, Reagents <strong>don’t reset at the start or end of an encounter</strong>, and you gain none at the start of your turns. The bag you bring is the bag you have: unspent Reagents carry from fight to fight across a run.</p><p>A basic compound or a signature enhancement usually costs <strong>2 Reagents</strong>, one dose. At Echelon 1 that is five doses before the bag runs dry. When it’s empty, you still have Established Protocols and (from 2nd level) Field Synthesis.</p><h4>Restocking</h4><p>At a respite, or during downtime, you restock up to your kit capacity. Restocking is a project or lifestyle activity paid in nuyen (buying raw stock, calling a supplier, or synthesizing from scratch). Money buys <strong>supply</strong>, never <strong>capability</strong>: nuyen refills the bag, but never unlocks a compound or a feature.</p><h4>Outside of Combat</h4><p>Reagents are a physical kit, so they <strong>still spend outside combat</strong>. Unlike other classes’ heroic resources, you get no free out-of-combat uses of Reagent abilities or signature enhancements: every dose comes out of the same bag.</p><ul><li><p><strong>Established Protocols</strong> stay free at all times.</p></li><li><p><strong>Field Synthesis</strong> is encounter-only: it isn’t a free compound between encounters or in downtime.</p></li></ul><h4>Compound Families</h4><ul><li><p><strong>Restoratives</strong> heal [[lookup @recoveries.recoveryValue]]{your Recovery value} in Stamina (enhanced, +50% rounded up), stabilize the dying, and revive the downed.</p></li><li><p><strong>Antidotes &amp; Cures</strong> remove 1 step of poison, disease, or the Exposure clock (enhanced, 2 steps).</p></li><li><p><strong>Stimulants &amp; Combat Drugs</strong> grant an edge or let the target ignore 1 condition for 1 round (enhanced, +1 round or +1 ally). Every Stimulant carries the crash rider: −1 on the recipient’s next power roll after the buff ends (−2 if enhanced), automatic, no save.</p></li><li><p><strong>Toxins &amp; Gas</strong> deal <strong>2 + Instinct</strong> damage over 2 rounds (half each round, rounding up on the first tick), and the target is weakened until the end of its next turn after the last tick. Enhanced: <strong>4 + Instinct</strong> over 2 rounds, and the target is weakened and slowed.</p></li></ul><p><em>In Foundry, Reagents are your heroic resource pool: Draw Steel doesn’t reset them when combat starts and adds nothing at the start of your turns. Capacity isn’t enforced; set your pool when you restock. You can’t use an ability that costs more Reagents than you have, in or out of combat.</em></p>"
           },
           "FieldPartner": {
             "Name": "Field Partner",
@@ -1794,8 +1794,8 @@
           "AdministerDose": {
             "Name": "Administer Dose",
             "Story": "The same injector saves your friend’s life or ends your enemy’s.",
-            "Effect_before0000000000": "<p>What’s loaded in the injector depends on the target.</p><ul><li><p><strong>Ally (Stimulant, no roll):</strong> the target gains an edge on power rolls, or ignores one condition, for 1 round.</p></li><li><p><strong>Enemy (Toxin, power roll):</strong> the target takes light-weapon damage over 2 rounds and is weakened for the duration.</p></li></ul><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their next power roll (−2 if the dose was enhanced). No save, no opt-out.</p>",
-            "Effect_spend00000000000": "<p>A stronger dose: for each 2 Reagents spent, the Stimulant lasts 1 more round, the Toxin becomes medium-weapon damage and also slows the target, or you dose one additional target.</p>"
+            "Effect_before0000000000": "<p>What’s loaded in the injector depends on the target.</p><ul><li><p><strong>Ally (Stimulant, no roll):</strong> the target gains an edge on power rolls, or ignores one condition, for 1 round.</p></li><li><p><strong>Enemy (Toxin, power roll):</strong> the target takes [[lookup 2+@I evaluate]]{2 + Instinct} damage over 2 rounds (half each round, rounding up on the first tick) and is weakened until the end of its next turn after the last tick.</p></li></ul><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their next power roll (−2 if the dose was enhanced). No save, no opt-out.</p>",
+            "Effect_spend00000000000": "<p>A stronger dose: for each 2 Reagents spent, the Stimulant lasts 1 more round, the Toxin becomes [[lookup 4+@I evaluate]]{4 + Instinct} damage over 2 rounds and also slows the target, or you dose one additional target.</p>"
           },
           "Diagnose": {
             "Name": "Diagnose",
@@ -1824,7 +1824,7 @@
           "ToxicCloud": {
             "Name": "Toxic Cloud",
             "Story": "The same chemistry that saves lives, weaponized into a room nobody wants to stand in.",
-            "Effect_before0000000000": "<p>You deploy a gas cloud. Each enemy in the area takes light-weapon damage over 2 rounds and is weakened for the duration. The area stays hazardous for those 2 rounds: an enemy that enters it or starts its turn there suffers the effect again.</p>"
+            "Effect_before0000000000": "<p>You deploy a gas cloud. Each enemy in the area takes the base Toxin dose: [[lookup 2+@I evaluate]]{2 + Instinct} damage over 2 rounds (half each round, rounding up on the first tick), and it is weakened until the end of its next turn after the last tick. The area stays hazardous for those 2 rounds: an enemy that enters it or starts its turn there suffers the effect again.</p>"
           },
           "RapidFieldDiagnosis": {
             "Name": "Rapid Field Diagnosis",
@@ -1854,7 +1854,9 @@
           "Anesthetize": {
             "Name": "Anesthetize",
             "Story": "The anesthetic that puts a patient under safely can put an enemy down hard.",
-            "Effect_before0000000000": "<p>The target makes a Physique resistance test against the sedative (Director sets the difficulty). On a failure, the target falls unconscious and is out of the encounter for 1 round.</p>"
+            "Tier1": "The target is dazed until the end of its next turn.",
+            "Tier2": "The target is dazed (save ends).",
+            "Tier3": "The target falls unconscious: it’s out of the fight until the end of its next turn, or until it takes damage (Director’s call which)."
           },
           "MiracleWorker": {
             "Name": "Miracle Worker",
@@ -1920,7 +1922,7 @@
           "FieldSynthesis": {
             "Name": "Field Synthesis",
             "Story": "A stripped first-aid kit off a downed enemy, spare stock jury-rigged into something usable.",
-            "Effect_before0000000000": "<p>Once per encounter (Street-Doc: twice), you produce a half-strength compound (Street-Doc: two-thirds strength) for 0 Reagents, from any of the four families:</p><ul><li><p><strong>Restorative:</strong> heal half your Recovery value in Stamina ([[/heal floor(@recoveries.recoveryValue/2)]]).</p></li><li><p><strong>Antidote:</strong> suppress one step of a poison, disease, or Exposure-clock effect until the end of the encounter (Director’s call on whether it clears fully).</p></li><li><p><strong>Stimulant:</strong> an edge on the target’s next power roll only. Crash rider: −1 on their power roll after that.</p></li><li><p><strong>Toxin:</strong> half the base Toxin damage over 2 rounds, and the target is weakened for the duration.</p></li></ul><p>Field Synthesis can’t be enhanced.</p>"
+            "Effect_before0000000000": "<p>Once per encounter (Street-Doc: twice), you produce a half-strength compound (Street-Doc: two-thirds strength) for 0 Reagents, from any of the four families:</p><ul><li><p><strong>Restorative:</strong> heal half your Recovery value in Stamina ([[/heal floor(@recoveries.recoveryValue/2)]]).</p></li><li><p><strong>Antidote:</strong> suppress one step of a poison, disease, or Exposure-clock effect until the end of the encounter (Director’s call on whether it clears fully).</p></li><li><p><strong>Stimulant:</strong> an edge on the target’s next power roll only. Crash rider: −1 on their power roll after that.</p></li><li><p><strong>Toxin:</strong> half the base Toxin damage (half of 2 + Instinct) over 2 rounds, and the target is weakened until the end of its next turn after the last tick.</p></li></ul><p>Field Synthesis can’t be enhanced.</p>"
           },
           "StreetDoc": {
             "Name": "Street-Doc",
@@ -1972,6 +1974,10 @@
             "Name": "The Doc Who Never Left",
             "Description": "<p>Once per session, you can treat a failed restock (a nuyen shortfall, a supplier who didn’t show) as a success. You find a way, no questions asked.</p>"
           },
+          "LastSyringe": {
+            "Name": "Last Syringe",
+            "Description": "<p>Once per session, when your kit is at 0 Reagents, you can produce one base (non-enhanced) compound for free.</p>"
+          },
           "CorpMedtech": {
             "Name": "Corp-Medtech",
             "Description": "<p><em>“Clean professional.”</em> The licensed, polished practitioner: better product, cleaner delivery, and a faster recovery from the crash rider than anyone else can manage. Corp cover: “licensed medical practitioner” or “pharmaceutical specialist.” Your chrome is clean, high-grade bioware and diagnostic implants.</p><p>At 1st level you gain the <strong>Corporate</strong> skill, the Pharmaceutical Grade and Licensed Protocol features, and the Clean Delivery triggered action. You have a corp-clinic, pharma-supplier, or medical-datahaus contact.</p>"
@@ -2021,6 +2027,10 @@
           "GoldStandardProtocol": {
             "Name": "Gold-Standard Protocol",
             "Description": "<p>Once per session, you produce a compound with every Pharmaceutical Grade benefit at once (+50% magnitude, +1 round, and +1 target, plus the shorter crash), at no extra Reagent cost.</p>"
+          },
+          "CrashProtocolOverride": {
+            "Name": "Crash Protocol Override",
+            "Description": "<p>Once per session, you can waive the crash rider entirely on one Stimulant compound you produce.</p>"
           },
           "Ripperdoc": {
             "Name": "Ripperdoc",
@@ -2073,6 +2083,11 @@
           "TheWholePackage": {
             "Name": "The Whole Package",
             "Description": "<p>Once per session, during a respite, you give an ally a full chrome tune-up: they gain an edge on their first chrome-reliant power roll or test in the next encounter.</p>"
+          },
+          "EmergencyExcision": {
+            "Name": "Emergency Excision",
+            "Story": "One cut, and the implant goes dark.",
+            "Effect_before0000000000": "<p>Once per session. The target is an enemy you touch, or a willing ally. You disable one chrome implant of your choice on the target until their next respite. Body Integrity isn’t refunded mid-fight.</p>"
           }
         }
       },

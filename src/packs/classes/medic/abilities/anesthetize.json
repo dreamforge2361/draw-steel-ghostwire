@@ -34,26 +34,49 @@
     "power": {
       "roll": {
         "formula": "@chr",
-        "characteristics": [],
+        "characteristics": [
+          "intuition"
+        ],
         "reactive": false
       },
-      "effects": {}
+      "effects": {
+        "h2rsR8eBbup6hCQ3": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "h2rsR8eBbup6hCQ3",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Medic.Items.Anesthetize.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Medic.Items.Anesthetize.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Medic.Items.Anesthetize.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
     },
     "spend": {
       "text": "",
       "value": null
     },
-    "effects": {
-      "before0000000000": {
-        "_id": "before0000000000",
-        "type": "base",
-        "description": "GHOSTWIRE.Classes.Medic.Items.Anesthetize.Effect_before0000000000",
-        "before": true,
-        "name": "",
-        "img": null,
-        "sort": 0
-      }
-    },
+    "effects": {},
     "prerequisites": {
       "value": "",
       "dsid": [
