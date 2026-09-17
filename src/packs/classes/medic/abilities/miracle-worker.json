@@ -1,0 +1,73 @@
+{
+  "_id": "awANi1JOtyt8dgNV",
+  "_key": "!items!awANi1JOtyt8dgNV",
+  "name": "GHOSTWIRE.Classes.Medic.Items.MiracleWorker.Name",
+  "type": "ability",
+  "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "miracle-worker",
+    "story": "GHOSTWIRE.Classes.Medic.Items.MiracleWorker.Story",
+    "keywords": [
+      "melee",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "meleeRanged",
+      "primary": "1",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.MiracleWorker.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

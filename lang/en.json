@@ -1714,6 +1714,367 @@
             "Effect_before0000000000": "<p>Once per encounter. The target must be Marked by you. Until the end of the encounter, you have a double edge on power rolls against the target, and the target has a bane on power rolls against creatures other than you.</p>"
           }
         }
+      },
+      "Medic": {
+        "Folders": {
+          "Medic": "Medic",
+          "Abilities": "Abilities",
+          "Origins": "Specializations",
+          "StreetDoc": "Street-Doc",
+          "CorpMedtech": "Corp-Medtech",
+          "Ripperdoc": "Ripperdoc"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Medic",
+            "Description": "<p>You are a Medic — on the street the doc, the sawbones, the fixer’s fixer, or simply <em>the one who keeps you breathing</em>. Corp paperwork files you as a “field medical contractor” or a “trauma-response asset.” You are a trained practitioner of medicine and chemistry who carries syringes, trauma patches, gas grenades, combat stims, and brewed compounds into places where the nearest hospital is a rumor.</p><p>You are the only flesh-and-blood healer of living heroes in the Reach — healing, curing poison and disease, and neutralizing toxins by chemistry alone. Your chemistry cuts both ways: the same kit that stims a friend can gas a room full of hostiles. You are fully mundane and chrome-positive; any People, Cyborgs included, can carry the bag.</p><p>Your heroic resource is <strong>Reagents</strong>: a physical kit you fill at a respite and spend down across a whole run. <strong>Reagents don’t reset between encounters and don’t refill on their own.</strong> Kit capacity is 10 Reagents at Echelon 1, 14 at Echelon 2, 20 at Echelon 3, and 38 at Echelon 4.</p><p>Your subclass is your specialization: <strong>Street-Doc</strong>, <strong>Corp-Medtech</strong>, or <strong>Ripperdoc</strong>.</p><p><strong>Core characteristics:</strong> Instinct, Logic · <strong>Heroic resource:</strong> Reagents · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> yes (light Kits, or a combat-medic medium Kit). <em>Quick Build:</em> Street-Doc, Gunslinger.</p>"
+          },
+          "Reagents": {
+            "Name": "Reagents",
+            "Description": "<p>Reagents are your kit, literally: trauma patches, syringes, antitoxin vials, gas canisters, stim injectors, and the raw chemical stock to brew more. Every heroic ability and every signature enhancement spends Reagents.</p><h4>Kit Capacity</h4><table><thead><tr><th>Echelon</th><th>Kit capacity</th></tr></thead><tbody><tr><td>1</td><td>10</td></tr><tr><td>2</td><td>14</td></tr><tr><td>3</td><td>20</td></tr><tr><td>4</td><td>38</td></tr></tbody></table><p>Advanced Chem-Prep (2nd level) adds 2 to your capacity. You can never hold more Reagents than your capacity.</p><h4>Reagents Persist</h4><p>Unlike every other class’s heroic resource, Reagents <strong>don’t reset at the start or end of an encounter</strong>, and you gain none at the start of your turns. The bag you bring is the bag you have: unspent Reagents carry from fight to fight across a run.</p><p>A basic compound or a signature enhancement usually costs <strong>2 Reagents</strong>, one dose. At Echelon 1 that is five doses before the bag runs dry. When it’s empty, you still have Established Protocols and (from 2nd level) Field Synthesis.</p><h4>Restocking</h4><p>At a respite, or during downtime, you restock up to your kit capacity. Restocking is a project or lifestyle activity paid in nuyen (buying raw stock, calling a supplier, or synthesizing from scratch). Money buys <strong>supply</strong>, never <strong>capability</strong>: nuyen refills the bag, but never unlocks a compound or a feature.</p><h4>Outside of Combat</h4><p>Outside combat, abilities still spend Reagents from the kit: the dose is real whether or not initiative has been rolled.</p><h4>Compound Families</h4><ul><li><p><strong>Restoratives</strong> heal [[lookup @recoveries.recoveryValue]]{your Recovery value} in Stamina (enhanced, +50% rounded up), stabilize the dying, and revive the downed.</p></li><li><p><strong>Antidotes &amp; Cures</strong> remove 1 step of poison, disease, or the Exposure clock (enhanced, 2 steps).</p></li><li><p><strong>Stimulants &amp; Combat Drugs</strong> grant an edge or let the target ignore 1 condition for 1 round (enhanced, +1 round or +1 ally). Every Stimulant carries the crash rider: −1 on the recipient’s next power roll after the buff ends (−2 if enhanced), automatic, no save.</p></li><li><p><strong>Toxins &amp; Gas</strong> deal light-weapon damage over 2 rounds and weaken the target (enhanced, medium-weapon damage and the target is also slowed).</p></li></ul><p><em>In Foundry, Reagents are your heroic resource pool: Draw Steel doesn’t reset them when combat starts and adds nothing at the start of your turns. Capacity isn’t enforced; set your pool when you restock. Costs are enforced in combat at the ability’s full cost.</em></p>"
+          },
+          "FieldPartner": {
+            "Name": "Field Partner",
+            "Description": "<p>At the start of each encounter, bond with one ally. Until the end of the encounter, that ally gains +1 on saving throws and +1 to any healing you apply to them, and whenever one of your abilities heals that ally, you [[/gain 1 hr]]{regain 1 Reagent}.</p>"
+          },
+          "EstablishedProtocols": {
+            "Name": "Established Protocols",
+            "Description": "<p>Two rote procedures you can perform at will, with no Reagent cost and no roll:</p><ul><li><p><strong>Stabilize:</strong> stabilize an adjacent ally who is dying at 0 Stamina or lower.</p></li><li><p><strong>Identify:</strong> identify a substance or toxin at a glance.</p></li></ul><p>This is the floor you never fall below, even with an empty kit.</p>"
+          },
+          "AdvancedChemPrep": {
+            "Name": "Advanced Chem-Prep",
+            "Description": "<p>Your kit capacity increases by 2 (Echelon 1: 12, Echelon 2: 16, Echelon 3: 22, Echelon 4: 40).</p>"
+          },
+          "CompoundMastery": {
+            "Name": "Compound Mastery",
+            "Description": "<p>Choose one compound family: Restoratives, Antidotes &amp; Cures, Stimulants &amp; Combat Drugs, or Toxins &amp; Gas. Compounds you produce from that family are automatically enhanced at no extra Reagent cost. (An enhanced Stimulant still carries the enhanced crash rider.)</p>"
+          },
+          "FieldReputation": {
+            "Name": "Field Reputation",
+            "Description": "<p>You gain a Renown boost among street clinics or corp-med circles (whichever fits your specialization’s social lane), and a narrative foothold with the local medical infrastructure: a clinic that will take your patients, a pharmacist who picks up.</p>"
+          },
+          "EmergencyPriority": {
+            "Name": "Emergency Priority",
+            "Description": "<p>Once per session, on your first turn of an encounter, you can use one ability without paying its Reagent cost.</p>"
+          },
+          "ColleagueAndMentor": {
+            "Name": "Colleague & Mentor",
+            "Description": "<p>You gain a bonus contact from the medical world. Additionally, you gain an edge on tests made to teach a skill to an ally during downtime.</p>"
+          },
+          "CrossTrained": {
+            "Name": "Cross-Trained",
+            "Description": "<p>When you finish a respite, you can swap one of your skills for a related skill, reflecting how a working Medic’s practical education keeps shifting with the jobs they take.</p>"
+          },
+          "BattlefieldRenown": {
+            "Name": "Battlefield Renown",
+            "Description": "<p>Whenever you use Miracle Worker or Triage, each ally gains an edge on their next power roll: the crew rallies visibly the moment the doc goes to work.</p>"
+          },
+          "Reputation": {
+            "Name": "Reputation",
+            "Description": "<p>At the start of each encounter, you gain bonus Reagents equal to [[lookup @hero.victories]]{your Victories}, up to your kit capacity.</p>"
+          },
+          "MasterChemist": {
+            "Name": "Master Chemist",
+            "Description": "<p>Your epic capstone, Master Chemist: every compound you produce is automatically enhanced, without spending the extra Reagents an enhancement normally costs. Enhanced Stimulants still carry the enhanced crash rider.</p>"
+          },
+          "LegendOfTheStreet": {
+            "Name": "Legend of the Street",
+            "Description": "<p>Once per session, you can perform one impossible feat of medicine — narrative in scope and adjudicated by the Director. It’s the Medic’s answer to “surely that shouldn’t be possible.”</p>"
+          },
+          "FirstAid": {
+            "Name": "First Aid",
+            "Story": "Someone’s bleeding and there’s no time to think.",
+            "Effect_before0000000000": "<p>You can use this ability as a maneuver for a quick patch. The target must be a living creature. Add your Medicine skill to the roll if you have it.</p>",
+            "Effect_after00000000000": "<p>Heal: [[/heal @recoveries.recoveryValue]]</p>",
+            "Effect_spend00000000000": "<p>Apply a full Restorative instead: the heal increases by 50% (round up) for each 2 Reagents spent, or you revive a downed ally to their feet, or the distance becomes Ranged 5 (a thrown patch or injector).</p>",
+            "Tier1": "A small patch: the target stabilizes if dying, without healing.",
+            "Tier2": "The target heals Stamina equal to your Recovery value.",
+            "Tier3": "The target heals Stamina equal to your Recovery value and ends one bleeding or dazed condition."
+          },
+          "AdministerDose": {
+            "Name": "Administer Dose",
+            "Story": "The same injector saves your friend’s life or ends your enemy’s.",
+            "Effect_before0000000000": "<p>What’s loaded in the injector depends on the target.</p><ul><li><p><strong>Ally (Stimulant, no roll):</strong> the target gains an edge on power rolls, or ignores one condition, for 1 round.</p></li><li><p><strong>Enemy (Toxin, power roll):</strong> the target takes light-weapon damage over 2 rounds and is weakened for the duration.</p></li></ul><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their next power roll (−2 if the dose was enhanced). No save, no opt-out.</p>",
+            "Effect_spend00000000000": "<p>A stronger dose: for each 2 Reagents spent, the Stimulant lasts 1 more round, the Toxin becomes medium-weapon damage and also slows the target, or you dose one additional target.</p>"
+          },
+          "Diagnose": {
+            "Name": "Diagnose",
+            "Story": "A Medic reads a body the way a Hacker reads a network.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Sight.</p><p>You read the target’s condition: remaining Stamina, active conditions, poisons, diseases, and weaknesses.</p>",
+            "Effect_spend00000000000": "<p>Read multiple targets with the same maneuver, or the crew-wide edge lasts until the end of the encounter.</p>",
+            "Tier1": "A partial read: you learn roughly how much Stamina the target has left (unhurt, winded, or near death).",
+            "Tier2": "You learn the target’s conditions and one weakness.",
+            "Tier3": "A full read, and you and each ally gain an edge on power rolls against the target for 1 round."
+          },
+          "EmergencyPatch": {
+            "Name": "Emergency Patch",
+            "Story": "Someone’s losing blood right now.",
+            "Effect_before0000000000": "<p>The target heals Stamina equal to half your Recovery value ([[/heal floor(@recoveries.recoveryValue/2)]]), and if they are bleeding, the bleeding ends.</p>"
+          },
+          "SlapInjector": {
+            "Name": "Slap-Injector",
+            "Story": "Quick, cheap, and gentle enough that it doesn’t tax the recipient.",
+            "Effect_before0000000000": "<p>Choose one: the target can make a saving throw against one active effect that a save can end, or the target gains +1 on their next power roll. This is a mild stim: no crash rider.</p>"
+          },
+          "CombatStims": {
+            "Name": "Combat Stims",
+            "Story": "Hard combat drugs that turn a fight around, at an honest cost.",
+            "Effect_before0000000000": "<p>For 1 round, each target gains an extra maneuver this turn, an edge on their next power roll, and [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their next power roll (−2 if the dose was enhanced). No save, no opt-out.</p>"
+          },
+          "ToxicCloud": {
+            "Name": "Toxic Cloud",
+            "Story": "The same chemistry that saves lives, weaponized into a room nobody wants to stand in.",
+            "Effect_before0000000000": "<p>You deploy a gas cloud. Each enemy in the area takes light-weapon damage over 2 rounds and is weakened for the duration. The area stays hazardous for those 2 rounds: an enemy that enters it or starts its turn there suffers the effect again.</p>"
+          },
+          "RapidFieldDiagnosis": {
+            "Name": "Rapid Field Diagnosis",
+            "Story": "The intel signature, scaled up to a whole engagement.",
+            "Effect_before0000000000": "<p>You Diagnose every enemy in the area at once (as a high result on Diagnose, without the edge). You and each ally gain an edge on power rolls against those enemies for 1 round.</p>"
+          },
+          "BloodDoping": {
+            "Name": "Blood Doping",
+            "Story": "A pre-emptive hedge for the ally about to walk into the worst of it.",
+            "Effect_before0000000000": "<p>For 1 round, the target has damage immunity 5. The target also gains [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p>"
+          },
+          "Triage": {
+            "Name": "Triage",
+            "Story": "A burst of field medicine across the whole crew at once.",
+            "Effect_before0000000000": "<p>Each target heals Stamina equal to your Recovery value ([[/heal @recoveries.recoveryValue]]), stabilizes if dying, and ends one condition or poison on themselves.</p>"
+          },
+          "PurgeToxins": {
+            "Name": "Purge Toxins",
+            "Story": "For a target who’s taken on more toxin than a single dose can clear.",
+            "Effect_before0000000000": "<p>The target is cleared of all poisons, diseases, and Exposure-clock steps.</p>"
+          },
+          "FocusSerum": {
+            "Name": "Focus Serum",
+            "Story": "Accuracy over raw output.",
+            "Effect_before0000000000": "<p>Each target gains +2 on power rolls for 1 round.</p><p><strong>Crash rider (automatic):</strong> when the buff ends, each target takes −1 on their next power roll. No save, no opt-out.</p>"
+          },
+          "Anesthetize": {
+            "Name": "Anesthetize",
+            "Story": "The anesthetic that puts a patient under safely can put an enemy down hard.",
+            "Effect_before0000000000": "<p>The target makes a Physique resistance test against the sedative (Director sets the difficulty). On a failure, the target falls unconscious and is out of the encounter for 1 round.</p>"
+          },
+          "MiracleWorker": {
+            "Name": "Miracle Worker",
+            "Story": "Impossible skill and the right compound at the right second. No magic anywhere.",
+            "Effect_before0000000000": "<p>No roll. Choose exactly one effect; they don’t stack.</p><ul><li><p><strong>Full revive:</strong> an ally within 10 squares who is dying, or who died within the last round, is revived at 1 Stamina.</p></li><li><p><strong>Total purge:</strong> end all toxins, diseases, and conditions on one target.</p></li><li><p><strong>Massive heal:</strong> one ally heals Stamina equal to three times your Recovery value ([[/heal 3*@recoveries.recoveryValue]]).</p></li></ul><p>A purge clears toxins, diseases, and conditions only. It doesn’t regrow a limb, undo a permanent injury, or restore lost Body Integrity.</p>"
+          },
+          "NerveToxin": {
+            "Name": "Nerve Toxin",
+            "Story": "For the thing that really needs to go down slowly and stay down.",
+            "Effect_before0000000000": "<p>The target takes heavy-weapon damage over 3 rounds and is slowed and weakened for the full duration.</p>"
+          },
+          "ChemicalInterrogation": {
+            "Name": "Chemical Interrogation",
+            "Story": "Interrogation that doesn’t require a fist.",
+            "Effect_before0000000000": "<p>No roll (for a resistant target, the Director can call for a contested test: your Instinct against the target’s Physique). For 3 rounds, the target answers questions truthfully. In combat, it reveals one piece of intel of your choice.</p>"
+          },
+          "FieldAdrenal": {
+            "Name": "Field Adrenal",
+            "Story": "A full extra turn, paid for with the harshest standard crash in the class.",
+            "Effect_before0000000000": "<p>You and up to 2 adjacent allies each gain an extra main action, maneuver, and move action this turn.</p><p><strong>Crash rider (automatic, enhanced):</strong> each recipient takes −2 on their next power roll after the buff ends.</p>"
+          },
+          "ChemicalWarfare": {
+            "Name": "Chemical Warfare",
+            "Story": "Toxic Cloud’s older, meaner sibling.",
+            "Effect_before0000000000": "<p>A massive gas cloud fills the area for 3 rounds. Each enemy in it takes damage over time and is weakened and slowed while inside. The area is hazardous terrain for the full duration.</p>"
+          },
+          "EmergencyTransfusion": {
+            "Name": "Emergency Transfusion",
+            "Story": "Pull the whole crew back from the brink at once.",
+            "Effect_before0000000000": "<p>Each target heals Stamina equal to your Recovery value ([[/heal @recoveries.recoveryValue]]). Each dying target stabilizes, and each target who died within the last round revives at 1 Stamina.</p>"
+          },
+          "PerfectDiagnosis": {
+            "Name": "Perfect Diagnosis",
+            "Story": "The intel play that changes the whole fight’s math.",
+            "Effect_before0000000000": "<p>You and each ally gain an edge on power rolls against every enemy within distance for 3 rounds. You also learn additional tactical information about the strongest enemy present.</p>"
+          },
+          "BattlefieldSurgery": {
+            "Name": "Battlefield Surgery",
+            "Story": "Genuine field surgery under fire.",
+            "Effect_before0000000000": "<p>The target heals Stamina equal to five times your Recovery value ([[/heal 5*@recoveries.recoveryValue]]), and all conditions and toxins on them end. The target has damage immunity 5 against the next 3 strikes made against them.</p>"
+          },
+          "WonderDrug": {
+            "Name": "Wonder Drug",
+            "Story": "An encounter-spanning cocktail with a cost that follows everyone into what comes next.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, you and each ally within distance gain +1 on power rolls and an extra maneuver on each of your turns, and each gains [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p><p><strong>Crash rider (automatic, enhanced):</strong> at the end of the encounter, each recipient takes −2 on the first power roll of the next scene.</p>"
+          },
+          "NerveAgent": {
+            "Name": "Nerve Agent",
+            "Story": "The compound that ends fights by itself.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The battlefield (Director sets the exact area).</p><p>Each enemy in the area makes a saving throw; on a failure, it is weakened and slowed (save ends). Every enemy in the area takes heavy-weapon damage over 3 rounds, whether or not it failed the save.</p>"
+          },
+          "FullKitPurge": {
+            "Name": "Full Kit Purge",
+            "Story": "Everything, everywhere, all at once — and nothing left for the rest of the run.",
+            "Effect_before0000000000": "<p>You spend <strong>all</strong> remaining Reagents in your kit (minimum 11). The Director scales the effect to the amount spent: mass revive, mass heal, and mass condition-clearing for you and allies within distance. Your kit is empty afterward.</p>",
+            "Effect_spend00000000000": "<p>Every Reagent beyond 11 increases the scale of the effect.</p>"
+          },
+          "TheDoctorIsIn": {
+            "Name": "The Doctor Is In",
+            "Story": "The moment the whole crew gets to stand back up at once.",
+            "Effect_before0000000000": "<p>Each ally within distance heals Stamina equal to twice your Recovery value ([[/heal 2*@recoveries.recoveryValue]]), ends all conditions on themselves, and revives if dying or if they died within the last round. Each also gains [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p>"
+          },
+          "FieldSynthesis": {
+            "Name": "Field Synthesis",
+            "Story": "A stripped first-aid kit off a downed enemy, spare stock jury-rigged into something usable.",
+            "Effect_before0000000000": "<p>Once per encounter (Street-Doc: twice), you produce a half-strength compound (Street-Doc: two-thirds strength) for 0 Reagents, from any of the four families:</p><ul><li><p><strong>Restorative:</strong> heal half your Recovery value in Stamina ([[/heal floor(@recoveries.recoveryValue/2)]]).</p></li><li><p><strong>Antidote:</strong> suppress one step of a poison, disease, or Exposure-clock effect until the end of the encounter (Director’s call on whether it clears fully).</p></li><li><p><strong>Stimulant:</strong> an edge on the target’s next power roll only. Crash rider: −1 on their power roll after that.</p></li><li><p><strong>Toxin:</strong> half the base Toxin damage over 2 rounds, and the target is weakened for the duration.</p></li></ul><p>Field Synthesis can’t be enhanced.</p>"
+          },
+          "StreetDoc": {
+            "Name": "Street-Doc",
+            "Description": "<p><em>“Back-alley generalist.”</em> The scrappy, improvisational medic who’s kept half the neighborhood alive without ever seeing the inside of a licensed clinic. You have the best kit economy of the three: you stretch Reagents further and recover faster from running dry. Corp cover: “unlicensed neighborhood doctor” or “street medical services.” You chrome up for utility, not showmanship.</p><p>At 1st level you gain the <strong>Streetwise</strong> skill, the Make Do and Back-Alley Wits features, and the Improvise! triggered action. You have a fixer, ganger-clinic, or black-market-pharma contact.</p>"
+          },
+          "MakeDo": {
+            "Name": "Make Do",
+            "Description": "<p>You improvise and restock faster and cheaper. Once you have Field Synthesis (2nd level), you can use it <strong>twice</strong> per encounter instead of once, and it produces a <strong>two-thirds-strength</strong> compound instead of half-strength.</p>"
+          },
+          "BackAlleyWits": {
+            "Name": "Back-Alley Wits",
+            "Description": "<p>You have an edge on First Aid when the target is below half their Stamina maximum.</p>"
+          },
+          "ScroungersEye": {
+            "Name": "Scrounger’s Eye",
+            "Description": "<p>Once per respite, when you restock your kit, you can spend extra time (Director’s call on how long) to reduce the nuyen cost of a full refill by 25%.</p>"
+          },
+          "BackAlleyNetwork": {
+            "Name": "Back-Alley Network",
+            "Description": "<p>Choose one when you gain this feature: you gain a one-step Renown bump among street clinics, <strong>or</strong> you gain an edge on power rolls made with compounds from Field Synthesis.</p>"
+          },
+          "NothingWasted": {
+            "Name": "Nothing Wasted",
+            "Description": "<p>Once per encounter each, you can use Emergency Patch and Slap-Injector without spending Reagents (if you have them).</p>"
+          },
+          "Improvise": {
+            "Name": "Improvise!",
+            "Story": "You found something in the trash.",
+            "Trigger": "Your kit has 3 or fewer Reagents remaining.",
+            "Effect_before0000000000": "<p>Once per encounter, you [[/gain 2 hr]]{regain 2 Reagents}, up to your kit capacity.</p>"
+          },
+          "TrashBinChemistry": {
+            "Name": "Trash-Bin Chemistry",
+            "Description": "<p>Field Synthesis can always produce a Toxin compound, even when the Director would otherwise limit what you can scrounge.</p>"
+          },
+          "RegularCustomer": {
+            "Name": "Regular Customer",
+            "Description": "<p>You have a standing black-market-pharma contact who sells you Reagent restocks at a 15% discount.</p>"
+          },
+          "BackAlleyMiracle": {
+            "Name": "Back-Alley Miracle",
+            "Description": "<p>Once per encounter, Emergency Patch can target 2 allies instead of 1, at no additional Reagent cost.</p>"
+          },
+          "FastHands": {
+            "Name": "Fast Hands",
+            "Description": "<p>Once per round, you can use First Aid as a maneuver instead of a main action. First Aid used this way can’t be enhanced.</p>"
+          },
+          "TheDocWhoNeverLeft": {
+            "Name": "The Doc Who Never Left",
+            "Description": "<p>Once per session, you can treat a failed restock (a nuyen shortfall, a supplier who didn’t show) as a success. You find a way, no questions asked.</p>"
+          },
+          "CorpMedtech": {
+            "Name": "Corp-Medtech",
+            "Description": "<p><em>“Clean professional.”</em> The licensed, polished practitioner: better product, cleaner delivery, and a faster recovery from the crash rider than anyone else can manage. Corp cover: “licensed medical practitioner” or “pharmaceutical specialist.” Your chrome is clean, high-grade bioware and diagnostic implants.</p><p>At 1st level you gain the <strong>Corporate</strong> skill, the Pharmaceutical Grade and Licensed Protocol features, and the Clean Delivery triggered action. You have a corp-clinic, pharma-supplier, or medical-datahaus contact.</p>"
+          },
+          "PharmaceuticalGrade": {
+            "Name": "Pharmaceutical Grade",
+            "Description": "<p>When you produce a compound, choose one bonus: +50% base magnitude (round up), +1 round of buff duration, or +1 additional target.</p><p>The crash rider from any Stimulant you produce lasts 1 round less: it still happens, at the same −1/−2, but the recipient recovers sooner.</p>"
+          },
+          "LicensedProtocol": {
+            "Name": "Licensed Protocol",
+            "Description": "<p>Compounds from Combat Stims and Administer Dose last 1 additional round.</p>"
+          },
+          "StandardizedDosing": {
+            "Name": "Standardized Dosing",
+            "Description": "<p>Your Restorative and Antidote compounds never suffer improvisation penalties: the Director doesn’t reduce them for substandard equipment or conditions.</p>"
+          },
+          "CorporateRequisition": {
+            "Name": "Corporate Requisition",
+            "Description": "<p>Choose one when you gain this feature: you gain a one-step Renown bump among corp-med circles, <strong>or</strong> your next full kit refill costs 25% less nuyen.</p>"
+          },
+          "PremiumStock": {
+            "Name": "Premium Stock",
+            "Description": "<p>Once per encounter, you can apply Pharmaceutical Grade twice to a single compound, stacking the same bonus or choosing two different ones.</p>"
+          },
+          "CleanDelivery": {
+            "Name": "Clean Delivery",
+            "Story": "One smooth motion, two patients.",
+            "Trigger": "You use Administer Dose on a target within 3 squares of you.",
+            "Effect_before0000000000": "<p>Administer Dose gains one additional target within its distance, at no additional Reagent cost.</p>"
+          },
+          "DatahausAccess": {
+            "Name": "Datahaus Access",
+            "Description": "<p>When you enhance Diagnose to grant a crew-wide edge, the edge lasts 1 additional round.</p>"
+          },
+          "PharmaSupplier": {
+            "Name": "Pharma Supplier",
+            "Description": "<p>You have a standing corp-clinic contact who sells you Reagent restocks at a 15% discount, with no black-market risk.</p>"
+          },
+          "ReducedComedown": {
+            "Name": "Reduced Comedown",
+            "Description": "<p>The crash rider from compounds you produce never exceeds −1, even when the dose was enhanced.</p>"
+          },
+          "BatchProcessing": {
+            "Name": "Batch Processing",
+            "Description": "<p>Triage can target up to 5 allies instead of 4, at no additional Reagent cost.</p>"
+          },
+          "GoldStandardProtocol": {
+            "Name": "Gold-Standard Protocol",
+            "Description": "<p>Once per session, you produce a compound with every Pharmaceutical Grade benefit at once (+50% magnitude, +1 round, and +1 target, plus the shorter crash), at no extra Reagent cost.</p>"
+          },
+          "Ripperdoc": {
+            "Name": "Ripperdoc",
+            "Description": "<p><em>“Chrome surgeon.”</em> The most chromed of the three specializations: a surgeon who installs and repairs implants as comfortably as setting a bone, and the only Medic with a self-revive capstone. Corp cover: “cybertech specialist” or “surgical prosthetics engineer.” Your implants are still fully mundane.</p><p>At 1st level you gain the <strong>Cybertech</strong> skill, the Under the Knife and Metal &amp; Meat features, and the Cutter’s Reflex triggered action. You have a chop-shop, ripperdoc-network, or chrome-fence contact.</p>"
+          },
+          "UnderTheKnife": {
+            "Name": "Under the Knife",
+            "Description": "<p>You are a premier chrome installer and repairer. You gain an edge on downtime projects to install, repair, or remove chrome, with a reduced risk of botching them, and you have access to rarer implants. You can also work on the organic components of Cyborgs, which other Medics can’t.</p>"
+          },
+          "MetalAndMeat": {
+            "Name": "Metal & Meat",
+            "Description": "<p>You have an edge on First Aid and Diagnose against chrome-heavy creatures and partial Cyborgs.</p>"
+          },
+          "SteadyHands": {
+            "Name": "Steady Hands",
+            "Description": "<p>Your downtime projects to install, repair, or remove chrome take 25% less time.</p>"
+          },
+          "ChopShopConnections": {
+            "Name": "Chop-Shop Connections",
+            "Description": "<p>Choose one when you gain this feature: you gain a one-step Renown bump among ripperdoc networks, <strong>or</strong> you gain access to one rare or black-market implant per echelon at reduced nuyen cost.</p>"
+          },
+          "CuttersReflex": {
+            "Name": "Cutter’s Reflex",
+            "Story": "You know exactly where that implant takes the hit.",
+            "Trigger": "An ally with 2 or more chrome pieces installed takes damage.",
+            "Effect_before0000000000": "<p>Spend 1 Reagent: the target takes 5 less damage from the triggering damage (8 less with Chrome Whisperer).</p>"
+          },
+          "NanoAdrenalAutoInjector": {
+            "Name": "Nano-Adrenal Auto-Injector",
+            "Story": "The surgeon is their own patient.",
+            "Trigger": "You are reduced to 0 Stamina.",
+            "Effect_before0000000000": "<p>Once per session. Choose a payment: spend 30 Reagents from your kit (only if you have at least 30), <strong>or</strong> permanently lose 1 Body Integrity. At the start of your next turn, you revive at 1 Stamina.</p><p>The Body Integrity loss is permanent and doesn’t heal. This is the only self-revive in the Medic class.</p>"
+          },
+          "ChromeWhisperer": {
+            "Name": "Chrome Whisperer",
+            "Description": "<p>Cutter’s Reflex reduces the damage by 8 instead of 5.</p>"
+          },
+          "BlackMarketParts": {
+            "Name": "Black-Market Parts",
+            "Description": "<p>You have a standing chop-shop or chrome-fence contact who sells rare implants with a reduced Availability restriction.</p>"
+          },
+          "SurgicalPrecision": {
+            "Name": "Surgical Precision",
+            "Description": "<p>Once per encounter, when you use First Aid on a chrome-heavy creature or partial Cyborg, the power roll automatically counts as a high (17+) result.</p>"
+          },
+          "OverclockProtocol": {
+            "Name": "Overclock Protocol",
+            "Description": "<p>Once per encounter, you can give an ally with 2 or more chrome pieces the effect of Combat Stims, targeting only them, for 0 Reagents. The crash rider still applies.</p>"
+          },
+          "TheWholePackage": {
+            "Name": "The Whole Package",
+            "Description": "<p>Once per session, during a respite, you give an ally a full chrome tune-up: they gain an edge on their first chrome-reliant power roll or test in the next encounter.</p>"
+          }
+        }
       }
     },
     "Backgrounds": {

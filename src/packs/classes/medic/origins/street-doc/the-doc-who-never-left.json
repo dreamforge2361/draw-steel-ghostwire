@@ -1,0 +1,32 @@
+{
+  "_id": "Ml5PntIwwZqiEvE5",
+  "_key": "!items!Ml5PntIwwZqiEvE5",
+  "name": "GHOSTWIRE.Classes.Medic.Items.TheDocWhoNeverLeft.Name",
+  "type": "feature",
+  "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.TheDocWhoNeverLeft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-doc-who-never-left",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

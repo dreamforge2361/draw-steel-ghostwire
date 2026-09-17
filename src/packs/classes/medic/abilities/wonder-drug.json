@@ -1,0 +1,72 @@
+{
+  "_id": "jzFeNg5lTlEwaNqY",
+  "_key": "!items!jzFeNg5lTlEwaNqY",
+  "name": "GHOSTWIRE.Classes.Medic.Items.WonderDrug.Name",
+  "type": "ability",
+  "img": "icons/consumables/potions/potion-tube-corked-bat-gold-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wonder-drug",
+    "story": "GHOSTWIRE.Classes.Medic.Items.WonderDrug.Story",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfAlly",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.WonderDrug.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

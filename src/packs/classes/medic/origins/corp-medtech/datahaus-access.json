@@ -1,0 +1,32 @@
+{
+  "_id": "qdC8GZquDk6sEWva",
+  "_key": "!items!qdC8GZquDk6sEWva",
+  "name": "GHOSTWIRE.Classes.Medic.Items.DatahausAccess.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.DatahausAccess.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "datahaus-access",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

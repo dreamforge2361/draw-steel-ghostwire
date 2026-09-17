@@ -1,0 +1,32 @@
+{
+  "_id": "8AmAAsv9cNlA3sx0",
+  "_key": "!items!8AmAAsv9cNlA3sx0",
+  "name": "GHOSTWIRE.Classes.Medic.Items.SteadyHands.Name",
+  "type": "feature",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.SteadyHands.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "steady-hands",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

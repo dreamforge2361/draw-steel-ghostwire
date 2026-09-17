@@ -1,0 +1,32 @@
+{
+  "_id": "CDikNwOKqeXzCi6C",
+  "_key": "!items!CDikNwOKqeXzCi6C",
+  "name": "GHOSTWIRE.Classes.Medic.Items.FastHands.Name",
+  "type": "feature",
+  "img": "icons/skills/movement/arrow-upward-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.FastHands.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fast-hands",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

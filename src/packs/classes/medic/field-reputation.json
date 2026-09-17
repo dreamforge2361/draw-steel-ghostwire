@@ -1,0 +1,32 @@
+{
+  "_id": "CkcymzlXAOYFBm9H",
+  "_key": "!items!CkcymzlXAOYFBm9H",
+  "name": "GHOSTWIRE.Classes.Medic.Items.FieldReputation.Name",
+  "type": "feature",
+  "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.FieldReputation.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-reputation",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

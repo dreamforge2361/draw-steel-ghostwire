@@ -1,0 +1,73 @@
+{
+  "_id": "q7UThpgMt6AFdZOa",
+  "_key": "!items!q7UThpgMt6AFdZOa",
+  "name": "GHOSTWIRE.Classes.Medic.Items.ChemicalWarfare.Name",
+  "type": "ability",
+  "img": "icons/magic/air/fog-gas-smoke-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chemical-warfare",
+    "story": "GHOSTWIRE.Classes.Medic.Items.ChemicalWarfare.Story",
+    "keywords": [
+      "area",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "5",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.ChemicalWarfare.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

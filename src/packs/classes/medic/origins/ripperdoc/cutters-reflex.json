@@ -1,0 +1,72 @@
+{
+  "_id": "rmOUHGnCpnGULShz",
+  "_key": "!items!rmOUHGnCpnGULShz",
+  "name": "GHOSTWIRE.Classes.Medic.Items.CuttersReflex.Name",
+  "type": "ability",
+  "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cutters-reflex",
+    "story": "GHOSTWIRE.Classes.Medic.Items.CuttersReflex.Story",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Medic.Items.CuttersReflex.Trigger",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.CuttersReflex.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "ripperdoc"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

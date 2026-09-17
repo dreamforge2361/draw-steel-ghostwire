@@ -1,0 +1,32 @@
+{
+  "_id": "q8iWL2GkGYB6WGlf",
+  "_key": "!items!q8iWL2GkGYB6WGlf",
+  "name": "GHOSTWIRE.Classes.Medic.Items.LicensedProtocol.Name",
+  "type": "feature",
+  "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.LicensedProtocol.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "licensed-protocol",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

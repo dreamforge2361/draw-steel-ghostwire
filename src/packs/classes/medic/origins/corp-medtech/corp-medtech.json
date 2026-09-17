@@ -1,0 +1,252 @@
+{
+  "_id": "6te8aG842jbpqHjH",
+  "_key": "!items!6te8aG842jbpqHjH",
+  "name": "GHOSTWIRE.Classes.Medic.Items.CorpMedtech.Name",
+  "type": "subclass",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.CorpMedtech.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "corp-medtech",
+    "advancements": {
+      "o09ljSvnNIqTunqP": {
+        "name": "GHOSTWIRE.Skills.List.Corporate",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "o09ljSvnNIqTunqP",
+        "skills": {
+          "choices": [
+            "corporate"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your specialization grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "MsrsZJ1ix6RW0TZZ": {
+        "name": "Pharmaceutical Grade",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "MsrsZJ1ix6RW0TZZ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.leKzBAKS81FZ1w1j"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "4j4liP1mBuoD7BTD": {
+        "name": "Licensed Protocol",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "4j4liP1mBuoD7BTD",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.q8iWL2GkGYB6WGlf"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "8f9SfOS5miv7FXgU": {
+        "name": "Clean Delivery",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "8f9SfOS5miv7FXgU",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xT5yxyWgwF5TKGWV"
+          }
+        ],
+        "description": "<p>Your specialization grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jOdOrswrHa5ds7Sy": {
+        "name": "2nd-Level Corp-Medtech Ability",
+        "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "jOdOrswrHa5ds7Sy",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qdC8GZquDk6sEWva"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.r6ljBTwVUGH8tuas"
+          }
+        ],
+        "description": "<p>Choose one of the following.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ONbtOY3WIk8TgG1b": {
+        "name": "Standardized Dosing",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "ONbtOY3WIk8TgG1b",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.uKGEQj69d9UeCDw9"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "I89wcl9B928trk5M": {
+        "name": "Corporate Requisition",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "I89wcl9B928trk5M",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2KGgedplThjm2T1v"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "srFPXPuQJqGtxEvf": {
+        "name": "6th-Level Corp-Medtech Ability",
+        "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "srFPXPuQJqGtxEvf",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AWS0l8S4JOab8G7j"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.SxLxGWxTF8Ed5rmW"
+          }
+        ],
+        "description": "<p>Choose one of the following.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "kqieaLJaaj9P98Uw": {
+        "name": "Premium Stock",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "kqieaLJaaj9P98Uw",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.svqtsELZPqiXrXkr"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "HVlIHrnPJxpwCXFP": {
+        "name": "Gold-Standard Protocol",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "HVlIHrnPJxpwCXFP",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2cammRviYtS2jQho"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "medic"
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

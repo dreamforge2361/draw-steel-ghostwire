@@ -1,0 +1,32 @@
+{
+  "_id": "AleasgIyaZQaeDac",
+  "_key": "!items!AleasgIyaZQaeDac",
+  "name": "GHOSTWIRE.Classes.Medic.Items.ColleagueAndMentor.Name",
+  "type": "feature",
+  "img": "icons/skills/trades/academics-study-reading-book.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.ColleagueAndMentor.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "colleague-and-mentor",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "afWOABILYh7DzUbg",
+  "_key": "!items!afWOABILYh7DzUbg",
+  "name": "GHOSTWIRE.Classes.Medic.Items.AdvancedChemPrep.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.AdvancedChemPrep.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "advanced-chem-prep",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

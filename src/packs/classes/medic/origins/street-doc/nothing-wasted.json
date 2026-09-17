@@ -1,0 +1,32 @@
+{
+  "_id": "mHrofeSTDzD2rXCW",
+  "_key": "!items!mHrofeSTDzD2rXCW",
+  "name": "GHOSTWIRE.Classes.Medic.Items.NothingWasted.Name",
+  "type": "feature",
+  "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.NothingWasted.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "nothing-wasted",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

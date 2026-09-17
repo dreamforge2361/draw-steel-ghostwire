@@ -68,6 +68,7 @@ Hooks.once("init", () => {
   patchPreviousLifeFilter();
   patchAddOrigin();
   enforceHeroicResourceCost();
+  patchPersistentReagents();
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
 });
@@ -183,6 +184,33 @@ Hooks.once("ready", async () => {
   }
   if (count) ui.notifications.info(game.i18n.format("GHOSTWIRE.Wired.Migrated", { count }));
 });
+
+// Medic Reagents (docs/rulebook/04-medic.md) persist across encounters and have no per-turn gain.
+// Draw Steel sets every hero's heroic resource to their Victories when combat starts and rolls the class turnGain
+// ("0" still posts a chat card) at the start of each turn; skip both for Medics.
+const PERSISTENT_RESOURCE_CLASSES = new Set(["medic"]);
+
+function patchPersistentReagents() {
+  const HeroModel = CONFIG.Actor.dataModels?.hero;
+  const parent = HeroModel && Object.getPrototypeOf(HeroModel.prototype);
+  if (!HeroModel?.prototype.startCombat || !HeroModel.prototype._onStartTurn || !parent) {
+    console.warn(`${MODULE_ID} | HeroModel combat hooks not found; Medic Reagents reset when combat starts`);
+    return;
+  }
+  const persistent = model => PERSISTENT_RESOURCE_CLASSES.has(model.class?.system._dsid);
+
+  const startCombat = HeroModel.prototype.startCombat;
+  HeroModel.prototype.startCombat = async function(combatant) {
+    if (!persistent(this)) return startCombat.call(this, combatant);
+    return parent.startCombat.call(this, combatant);
+  };
+
+  const onStartTurn = HeroModel.prototype._onStartTurn;
+  HeroModel.prototype._onStartTurn = async function(combatant) {
+    if (!persistent(this)) return onStartTurn.call(this, combatant);
+    return parent._onStartTurn.call(this, combatant);
+  };
+}
 
 // Heroic abilities: Draw Steel's use dialog lets a hero spend Adrenaline (or any heroic resource) they don't have.
 // In combat, refuse to use an ability whose cost is more than the hero's current heroic resource.

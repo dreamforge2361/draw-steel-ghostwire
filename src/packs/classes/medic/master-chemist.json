@@ -1,0 +1,32 @@
+{
+  "_id": "CfZE0Mp0GuqZkQBf",
+  "_key": "!items!CfZE0Mp0GuqZkQBf",
+  "name": "GHOSTWIRE.Classes.Medic.Items.MasterChemist.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/potion-flask-corked-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.MasterChemist.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "master-chemist",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

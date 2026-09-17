@@ -1,0 +1,32 @@
+{
+  "_id": "u8SDmqIRO2C1VKzZ",
+  "_key": "!items!u8SDmqIRO2C1VKzZ",
+  "name": "GHOSTWIRE.Classes.Medic.Items.EmergencyPriority.Name",
+  "type": "feature",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.EmergencyPriority.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "emergency-priority",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

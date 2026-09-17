@@ -1,0 +1,32 @@
+{
+  "_id": "nYRS1ntf2YLM0FeP",
+  "_key": "!items!nYRS1ntf2YLM0FeP",
+  "name": "GHOSTWIRE.Classes.Medic.Items.OverclockProtocol.Name",
+  "type": "feature",
+  "img": "icons/magic/life/heart-glowing-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.OverclockProtocol.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overclock-protocol",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

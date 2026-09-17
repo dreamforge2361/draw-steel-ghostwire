@@ -1,0 +1,32 @@
+{
+  "_id": "0jld4zBFg20cQwXY",
+  "_key": "!items!0jld4zBFg20cQwXY",
+  "name": "GHOSTWIRE.Classes.Medic.Items.EstablishedProtocols.Name",
+  "type": "feature",
+  "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.EstablishedProtocols.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "established-protocols",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

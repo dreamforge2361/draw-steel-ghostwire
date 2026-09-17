@@ -1,0 +1,72 @@
+{
+  "_id": "gKCh4ByNCKKH80TR",
+  "_key": "!items!gKCh4ByNCKKH80TR",
+  "name": "GHOSTWIRE.Classes.Medic.Items.PerfectDiagnosis.Name",
+  "type": "ability",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "perfect-diagnosis",
+    "story": "GHOSTWIRE.Classes.Medic.Items.PerfectDiagnosis.Story",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.PerfectDiagnosis.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

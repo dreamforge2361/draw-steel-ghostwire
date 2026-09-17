@@ -1,0 +1,804 @@
+{
+  "_id": "BfSHIOET6aOenoBr",
+  "_key": "!items!BfSHIOET6aOenoBr",
+  "name": "GHOSTWIRE.Classes.Medic.Items.Class.Name",
+  "type": "class",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "medic",
+    "advancements": {
+      "qiVLHoCCNoZjb3q0": {
+        "_id": "qiVLHoCCNoZjb3q0",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Medicine",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Medicine skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "medicine"
+          ]
+        },
+        "chooseN": null,
+        "sort": 1000
+      },
+      "OMBEX3pw7iBRRtVF": {
+        "_id": "OMBEX3pw7iBRRtVF",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.MedicineLore",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Medicine Lore skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "medicineLore"
+          ]
+        },
+        "chooseN": null,
+        "sort": 2000
+      },
+      "6h6qzFRGzJ8rxozZ": {
+        "_id": "6h6qzFRGzJ8rxozZ",
+        "img": null,
+        "repick": {},
+        "name": "Skills",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose any two skills from the Technical, Social, or Knowledge skill groups — a bedside-manner or reading-people skill like Insight rounds out a Medic. Skip your specialization skill (Street-Doc: Streetwise, Corp-Medtech: Corporate, Ripperdoc: Cybertech); it’s granted separately. (<em>Quick Build:</em> Insight, Contacts.)</p>",
+        "skills": {
+          "groups": [
+            "technical",
+            "social",
+            "knowledge"
+          ],
+          "choices": []
+        },
+        "chooseN": 2,
+        "sort": 3000
+      },
+      "hEBkOjcSxWWj2oYG": {
+        "_id": "hEBkOjcSxWWj2oYG",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jkyBKFp8oT8OyjQL"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.L4irOHE4fJ7tJOLH"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0jld4zBFg20cQwXY"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 4000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "gyFAbObyt3VnWhix": {
+        "_id": "gyFAbObyt3VnWhix",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "repick": {},
+        "name": "Kit",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.NI3QWa2kizsYNBM2"
+          }
+        ],
+        "description": "<p>You can use and gain the benefits of a light Kit (no armor or light armor, and no heavy weapon), or a combat-medic medium Kit (Streetsweeper or Breacher) if you expect to give and take hits. Most Medics work through the bag alone. (<em>Quick Build:</em> Gunslinger.)</p>",
+        "chooseN": 1,
+        "sort": 5000,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        }
+      },
+      "M1Fba1Zq0VIqRSve": {
+        "_id": "M1Fba1Zq0VIqRSve",
+        "img": "icons/magic/life/cross-worn-green.webp",
+        "repick": {},
+        "name": "Medic Specialization",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.P46wQ4Uv8ulm8Jf6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6te8aG842jbpqHjH"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.UcJmPkGffTA4cAEJ"
+          }
+        ],
+        "description": "<p>Choose your specialization: <strong>Street-Doc</strong> (the back-alley generalist with the best kit economy), <strong>Corp-Medtech</strong> (the clean professional with better product and a softer crash), or <strong>Ripperdoc</strong> (the chrome surgeon with a self-revive capstone). Each grants a skill. (<em>Quick Build:</em> Street-Doc.)</p><p>Your specialization is your subclass, and it determines many of the features you gain as you level.</p>",
+        "chooseN": 1,
+        "sort": 6000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uRB3PN73ojGqu0YL": {
+        "_id": "uRB3PN73ojGqu0YL",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Signature Abilities",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5t0v1bHJidHsgFTH"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7F45cxhkrE5V8PQJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EKWasELr4P5CAhD6"
+          }
+        ],
+        "description": "<p>You gain all three Medic signature abilities: First Aid, Administer Dose, and Diagnose. None of them costs Reagents; spending Reagents enhances them.</p>",
+        "chooseN": null,
+        "sort": 7000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ityCROmZFFpyUmbn": {
+        "_id": "ityCROmZFFpyUmbn",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "1 Reagent Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qXf8hlWBCzzXcezP"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qTUiFfiseFTY8Fjj"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 1 Reagent to use. (<em>Quick Build:</em> Emergency Patch.)</p>",
+        "chooseN": 1,
+        "sort": 8000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "umOfn7Yx2xwjODeW": {
+        "_id": "umOfn7Yx2xwjODeW",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "3 Reagent Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sDbSDFJbbOyJB8TB"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JN8zEhyPbCc4XxfE"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DMMkMkLg8dXc9zNF"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oOtrly4wfNcmHV0P"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 3 Reagents to use. (<em>Quick Build:</em> Combat Stims.)</p>",
+        "chooseN": 1,
+        "sort": 9000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "1KBDPWHs6MPdNQMA": {
+        "_id": "1KBDPWHs6MPdNQMA",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "5 Reagent Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.U0Z4x0W8jTaLKDqG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.z4buOQq8t7y0slA7"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DB0ZecxXNq0dpc09"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BIBAOQYEDUh9y5EF"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Reagents to use. (<em>Quick Build:</em> Triage.)</p>",
+        "chooseN": 1,
+        "sort": 10000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Og2KlgGQ3rQ8jmvE": {
+        "_id": "Og2KlgGQ3rQ8jmvE",
+        "img": null,
+        "repick": {},
+        "name": "Field Synthesis",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZDhcdSP4H8nIP4IB"
+          }
+        ],
+        "description": "<p>You gain the Field Synthesis maneuver: a free, once-per-encounter half-strength compound.</p>",
+        "chooseN": null,
+        "sort": 11000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wzM1nXP91NF23NZy": {
+        "_id": "wzM1nXP91NF23NZy",
+        "img": null,
+        "repick": {},
+        "name": "Advanced Chem-Prep",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.afWOABILYh7DzUbg"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 12000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "eOg8rXg4KXm3AoLg": {
+        "_id": "eOg8rXg4KXm3AoLg",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one crafting, interpersonal, or lore perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "interpersonal",
+            "lore"
+          ]
+        },
+        "sort": 13000,
+        "pool": []
+      },
+      "xTgTx4Vxydqse8vO": {
+        "_id": "xTgTx4Vxydqse8vO",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "7 Reagent Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.awANi1JOtyt8dgNV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OC25b0TEzyJDJGK4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DuN73MpryaSAOIHt"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.T0jsLF3KCojl5dAl"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Reagents to use.</p>",
+        "chooseN": 1,
+        "sort": 14000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "aIJ6ZXRZXA5eTngr": {
+        "_id": "aIJ6ZXRZXA5eTngr",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Instinct and Logic scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 0
+        },
+        "max": 3,
+        "sort": 15000
+      },
+      "FTWY6Lda8TIQIMb8": {
+        "_id": "FTWY6Lda8TIQIMb8",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 16000,
+        "pool": []
+      },
+      "gJxJReQjabQD0mgB": {
+        "_id": "gJxJReQjabQD0mgB",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 17000
+      },
+      "E9YD223DBmGtdpnZ": {
+        "_id": "E9YD223DBmGtdpnZ",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sFtzCWZ4A5Fw79Vd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CkcymzlXAOYFBm9H"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 18000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "opm4ee55zTe9W6OK": {
+        "_id": "opm4ee55zTe9W6OK",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "9 Reagent Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.q7UThpgMt6AFdZOa"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NADFV2eQpcxHAegR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gKCh4ByNCKKH80TR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XDSZUKDDMQqCvBYe"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Reagents to use.</p>",
+        "chooseN": 1,
+        "sort": 19000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ANGkjxkRRawYyQVd": {
+        "_id": "ANGkjxkRRawYyQVd",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one crafting, interpersonal, or lore perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "interpersonal",
+            "lore"
+          ]
+        },
+        "sort": 20000,
+        "pool": []
+      },
+      "U5NaUzupihnAyfhB": {
+        "_id": "U5NaUzupihnAyfhB",
+        "img": null,
+        "repick": {},
+        "name": "Emergency Priority",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.u8SDmqIRO2C1VKzZ"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 21000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ZIcccckKiU24HCTa": {
+        "_id": "ZIcccckKiU24HCTa",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 22000
+      },
+      "r1yq210BBkB7VDHZ": {
+        "_id": "r1yq210BBkB7VDHZ",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 23000
+      },
+      "hBvE531w4iUbUmzI": {
+        "_id": "hBvE531w4iUbUmzI",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AleasgIyaZQaeDac"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZubK8bg4BtC3azy2"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 24000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "cJ4hxsEQiNJEzC99": {
+        "_id": "cJ4hxsEQiNJEzC99",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 25000,
+        "pool": []
+      },
+      "4Obn4etSvgjXoels": {
+        "_id": "4Obn4etSvgjXoels",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "11 Reagent Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jzFeNg5lTlEwaNqY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qpqR9D63XFcSJJtY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HPloO3QftL2xyLl0"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bizMqX1gaKe3bGZD"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Reagents to use.</p>",
+        "chooseN": 1,
+        "sort": 26000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "rM7WTtPWG0GQD1un": {
+        "_id": "rM7WTtPWG0GQD1un",
+        "img": null,
+        "repick": {},
+        "name": "Battlefield Renown",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZRvytQ7lXkDXc3El"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 27000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "LbHVCtCUopiLHUDT": {
+        "_id": "LbHVCtCUopiLHUDT",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Instinct and Logic scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 0
+        },
+        "max": 5,
+        "sort": 28000
+      },
+      "bFQ0ajMWKnGC0tmQ": {
+        "_id": "bFQ0ajMWKnGC0tmQ",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one crafting, interpersonal, or lore perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "interpersonal",
+            "lore"
+          ]
+        },
+        "sort": 29000,
+        "pool": []
+      },
+      "UGGduPJa0OrNcBAZ": {
+        "_id": "UGGduPJa0OrNcBAZ",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 30000
+      },
+      "E9qpMAH21W9SQNip": {
+        "_id": "E9qpMAH21W9SQNip",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.s8yMP4kDi2sOF1w3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CfZE0Mp0GuqZkQBf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.q0mroteMDNr4Anyi"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 31000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "level": 0,
+    "primary": "Reagents",
+    "epic": "Master Chemist",
+    "turnGain": "0",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "intuition",
+        "reason"
+      ]
+    },
+    "stamina": {
+      "starting": 18,
+      "level": 6
+    },
+    "recoveries": 8
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

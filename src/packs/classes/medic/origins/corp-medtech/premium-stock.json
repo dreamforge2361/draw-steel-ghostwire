@@ -1,0 +1,32 @@
+{
+  "_id": "svqtsELZPqiXrXkr",
+  "_key": "!items!svqtsELZPqiXrXkr",
+  "name": "GHOSTWIRE.Classes.Medic.Items.PremiumStock.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/potion-flask-corked-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.PremiumStock.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "premium-stock",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

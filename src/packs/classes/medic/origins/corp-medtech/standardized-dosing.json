@@ -1,0 +1,32 @@
+{
+  "_id": "uKGEQj69d9UeCDw9",
+  "_key": "!items!uKGEQj69d9UeCDw9",
+  "name": "GHOSTWIRE.Classes.Medic.Items.StandardizedDosing.Name",
+  "type": "feature",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.StandardizedDosing.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "standardized-dosing",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

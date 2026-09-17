@@ -1,0 +1,72 @@
+{
+  "_id": "T0jsLF3KCojl5dAl",
+  "_key": "!items!T0jsLF3KCojl5dAl",
+  "name": "GHOSTWIRE.Classes.Medic.Items.FieldAdrenal.Name",
+  "type": "ability",
+  "img": "icons/magic/life/heart-glowing-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-adrenal",
+    "story": "GHOSTWIRE.Classes.Medic.Items.FieldAdrenal.Story",
+    "keywords": [
+      "area"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfAlly",
+      "value": 2,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.FieldAdrenal.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

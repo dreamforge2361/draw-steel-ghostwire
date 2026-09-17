@@ -1,0 +1,32 @@
+{
+  "_id": "leKzBAKS81FZ1w1j",
+  "_key": "!items!leKzBAKS81FZ1w1j",
+  "name": "GHOSTWIRE.Classes.Medic.Items.PharmaceuticalGrade.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.PharmaceuticalGrade.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pharmaceutical-grade",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

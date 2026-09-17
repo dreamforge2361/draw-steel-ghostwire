@@ -1,0 +1,32 @@
+{
+  "_id": "2KGgedplThjm2T1v",
+  "_key": "!items!2KGgedplThjm2T1v",
+  "name": "GHOSTWIRE.Classes.Medic.Items.CorporateRequisition.Name",
+  "type": "feature",
+  "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.CorporateRequisition.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "corporate-requisition",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

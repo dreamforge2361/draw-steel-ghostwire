@@ -1,0 +1,32 @@
+{
+  "_id": "2cammRviYtS2jQho",
+  "_key": "!items!2cammRviYtS2jQho",
+  "name": "GHOSTWIRE.Classes.Medic.Items.GoldStandardProtocol.Name",
+  "type": "feature",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.GoldStandardProtocol.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gold-standard-protocol",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

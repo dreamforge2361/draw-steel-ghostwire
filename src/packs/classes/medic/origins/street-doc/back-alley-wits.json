@@ -1,0 +1,32 @@
+{
+  "_id": "nq0Nq2ZbQ2pP3Yx9",
+  "_key": "!items!nq0Nq2ZbQ2pP3Yx9",
+  "name": "GHOSTWIRE.Classes.Medic.Items.BackAlleyWits.Name",
+  "type": "feature",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.BackAlleyWits.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "back-alley-wits",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

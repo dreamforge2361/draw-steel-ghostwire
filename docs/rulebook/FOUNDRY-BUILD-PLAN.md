@@ -86,6 +86,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B23b | Wired Console | **Done, pending Michael test** | ApplicationV2 console: connection roster, Scene nodes (`wiredBoard` flag), Integrity, Trace Alert, reveal to players; module v0.1.28 |
 | B24 | Commander class pack | **Done** (`d336ea7`, Foundry-verified 2026-09-16) | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
 | B25 | Languages CONFIG remap | **Done** (Foundry-verified 2026-09-16) | All 42 DS language keys relabeled with locked Ghostwire names (`scripts/languages.mjs`, `GHOSTWIRE.Languages.*`); keys unchanged; module v0.1.30 |
+| B26 | Medic class pack | **Done** (Foundry-verified 2026-09-16) | Medic (Reagents, **persist across encounters — turnGain "0", no reset at combat start**) + Street-Doc / Corp-Medtech / Ripperdoc in Ghostwire Classes; DS Troubadour spine; module v0.1.31 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -191,3 +192,14 @@ After each spike:
   - [x] Existing heroes’ languages still show (same keys, new labels); no console warning about missing or unmapped language keys
   - [x] All 42 Draw Steel keys mapped 1:1 (`scripts/languages.mjs`)
   - [ ] Follow-up (not B25): language lore + Journal entries; Background/Peoples language grants
+
+### B26 Medic (2026-09-16)
+**Reagents persist:** no per-turn gain (class `turnGain` is `"0"`), and `scripts/module.mjs` (`patchPersistentReagents`) stops Draw Steel from setting a Medic's heroic resource to Victories at combat start or posting a gain card each turn. Kit capacity (E1 10 / E2 14 / E3 20 / E4 38, +2 from Advanced Chem-Prep) is feature text; the pool isn't capped automatically.
+- [x] **B26** Medic class pack from `04-medic.md` (module v0.1.31) — **Foundry-verified 2026-09-16**. Done when:
+  - [x] Class picker shows Medic; Stamina 18 (+6), Recoveries 8; core Instinct / Logic
+  - [x] Reagents is the heroic resource; nothing is gained at the start of turns and combat start doesn't reset the pool
+  - [x] Skills: Medicine + Medicine Lore fixed, choose 2 from Technical / Social / Knowledge; specialization skill (Streetwise / Corporate / Cybertech)
+  - [x] Kit: light Kits + Streetsweeper / Breacher
+  - [x] Specialization picker: Street-Doc / Corp-Medtech / Ripperdoc, with L1 features + triggered action and ladders at 2/3/5/6/8/9 (Ripperdoc L8 Nano-Adrenal Auto-Injector)
+  - [x] L1: First Aid, Administer Dose, Diagnose + 1/3/5-Reagent picks; Field Synthesis + Advanced Chem-Prep at L2; 7 at L3, 9 at L5, 11 at L8
+  - [x] `node tools/build-packs.mjs` succeeds

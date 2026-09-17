@@ -1,0 +1,32 @@
+{
+  "_id": "nG3EBEcuYHY7ZXem",
+  "_key": "!items!nG3EBEcuYHY7ZXem",
+  "name": "GHOSTWIRE.Classes.Medic.Items.ChopShopConnections.Name",
+  "type": "feature",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.ChopShopConnections.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chop-shop-connections",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

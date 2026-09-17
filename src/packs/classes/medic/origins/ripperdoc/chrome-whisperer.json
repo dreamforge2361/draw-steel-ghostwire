@@ -1,0 +1,32 @@
+{
+  "_id": "BK8LzOp2qu3oWFBC",
+  "_key": "!items!BK8LzOp2qu3oWFBC",
+  "name": "GHOSTWIRE.Classes.Medic.Items.ChromeWhisperer.Name",
+  "type": "feature",
+  "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.ChromeWhisperer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chrome-whisperer",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

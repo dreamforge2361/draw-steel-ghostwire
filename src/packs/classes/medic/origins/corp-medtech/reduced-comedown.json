@@ -1,0 +1,32 @@
+{
+  "_id": "AWS0l8S4JOab8G7j",
+  "_key": "!items!AWS0l8S4JOab8G7j",
+  "name": "GHOSTWIRE.Classes.Medic.Items.ReducedComedown.Name",
+  "type": "feature",
+  "img": "icons/magic/life/heart-glowing-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.ReducedComedown.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "reduced-comedown",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

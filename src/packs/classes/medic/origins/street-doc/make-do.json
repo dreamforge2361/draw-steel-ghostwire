@@ -1,0 +1,32 @@
+{
+  "_id": "pHGl6HKhCu71uoNq",
+  "_key": "!items!pHGl6HKhCu71uoNq",
+  "name": "GHOSTWIRE.Classes.Medic.Items.MakeDo.Name",
+  "type": "feature",
+  "img": "icons/containers/bags/pack-leather-black-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.MakeDo.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "make-do",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

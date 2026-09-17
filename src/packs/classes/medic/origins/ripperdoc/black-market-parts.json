@@ -1,0 +1,32 @@
+{
+  "_id": "3DFFZQrFFFI5mbS9",
+  "_key": "!items!3DFFZQrFFFI5mbS9",
+  "name": "GHOSTWIRE.Classes.Medic.Items.BlackMarketParts.Name",
+  "type": "feature",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.BlackMarketParts.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "black-market-parts",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

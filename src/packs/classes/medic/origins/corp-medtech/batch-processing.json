@@ -1,0 +1,32 @@
+{
+  "_id": "SxLxGWxTF8Ed5rmW",
+  "_key": "!items!SxLxGWxTF8Ed5rmW",
+  "name": "GHOSTWIRE.Classes.Medic.Items.BatchProcessing.Name",
+  "type": "feature",
+  "img": "icons/magic/life/cross-area-circle-green-white.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.BatchProcessing.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "batch-processing",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

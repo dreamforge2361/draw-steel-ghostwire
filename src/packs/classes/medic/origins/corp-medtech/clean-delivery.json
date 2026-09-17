@@ -1,0 +1,70 @@
+{
+  "_id": "xT5yxyWgwF5TKGWV",
+  "_key": "!items!xT5yxyWgwF5TKGWV",
+  "name": "GHOSTWIRE.Classes.Medic.Items.CleanDelivery.Name",
+  "type": "ability",
+  "img": "icons/consumables/potions/vial-cork-empty.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "clean-delivery",
+    "story": "GHOSTWIRE.Classes.Medic.Items.CleanDelivery.Story",
+    "keywords": [],
+    "type": "freeTriggered",
+    "category": "",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Medic.Items.CleanDelivery.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.CleanDelivery.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "corp-medtech"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "5TafQ2DQmIwJLExW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

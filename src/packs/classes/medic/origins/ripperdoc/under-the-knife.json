@@ -1,0 +1,32 @@
+{
+  "_id": "KFK6PEF5WJuXOBSF",
+  "_key": "!items!KFK6PEF5WJuXOBSF",
+  "name": "GHOSTWIRE.Classes.Medic.Items.UnderTheKnife.Name",
+  "type": "feature",
+  "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.UnderTheKnife.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "under-the-knife",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "q0mroteMDNr4Anyi",
+  "_key": "!items!q0mroteMDNr4Anyi",
+  "name": "GHOSTWIRE.Classes.Medic.Items.LegendOfTheStreet.Name",
+  "type": "feature",
+  "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.LegendOfTheStreet.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "legend-of-the-street",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "QgSCvC2Nkvp9mIth",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

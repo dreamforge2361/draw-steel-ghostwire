@@ -1,0 +1,70 @@
+{
+  "_id": "ZDhcdSP4H8nIP4IB",
+  "_key": "!items!ZDhcdSP4H8nIP4IB",
+  "name": "GHOSTWIRE.Classes.Medic.Items.FieldSynthesis.Name",
+  "type": "ability",
+  "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-synthesis",
+    "story": "GHOSTWIRE.Classes.Medic.Items.FieldSynthesis.Story",
+    "keywords": [],
+    "type": "maneuver",
+    "category": "",
+    "resource": 0,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.FieldSynthesis.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

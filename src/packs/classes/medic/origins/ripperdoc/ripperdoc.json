@@ -1,0 +1,252 @@
+{
+  "_id": "UcJmPkGffTA4cAEJ",
+  "_key": "!items!UcJmPkGffTA4cAEJ",
+  "name": "GHOSTWIRE.Classes.Medic.Items.Ripperdoc.Name",
+  "type": "subclass",
+  "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.Ripperdoc.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ripperdoc",
+    "advancements": {
+      "oLXRGGlZ55vyTZ7x": {
+        "name": "GHOSTWIRE.Skills.List.Cybertech",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "oLXRGGlZ55vyTZ7x",
+        "skills": {
+          "choices": [
+            "cybertech"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your specialization grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "s9ymoAmS9FWpLw3p": {
+        "name": "Under the Knife",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "s9ymoAmS9FWpLw3p",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.KFK6PEF5WJuXOBSF"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Jiv5d3Ewz8puiTUV": {
+        "name": "Metal & Meat",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Jiv5d3Ewz8puiTUV",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.IGpTwmKUC7sNkoHU"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7SfBVOY2lbl6uvF0": {
+        "name": "Cutter’s Reflex",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "7SfBVOY2lbl6uvF0",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rmOUHGnCpnGULShz"
+          }
+        ],
+        "description": "<p>Your specialization grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "R5cpZdYOm4DtduBC": {
+        "name": "2nd-Level Ripperdoc Ability",
+        "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "R5cpZdYOm4DtduBC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BK8LzOp2qu3oWFBC"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3DFFZQrFFFI5mbS9"
+          }
+        ],
+        "description": "<p>Choose one of the following.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Non6a2NVm1qN61sq": {
+        "name": "Steady Hands",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "Non6a2NVm1qN61sq",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.8AmAAsv9cNlA3sx0"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jSX4AAcBmCPRFs4z": {
+        "name": "Chop-Shop Connections",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "jSX4AAcBmCPRFs4z",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nG3EBEcuYHY7ZXem"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "QqDEdqxxZgL8vh34": {
+        "name": "6th-Level Ripperdoc Ability",
+        "img": "icons/skills/wounds/injury-stapled-flesh-tan.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "QqDEdqxxZgL8vh34",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CHY9XHVDb5nja7Gq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nYRS1ntf2YLM0FeP"
+          }
+        ],
+        "description": "<p>Choose one of the following.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "4Y8RhnK39zIXvZwC": {
+        "name": "Nano-Adrenal Auto-Injector",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "4Y8RhnK39zIXvZwC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.UpiSr7cFM8uCsHHm"
+          }
+        ],
+        "description": "<p>Your specialization grants you its capstone.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "O9Gvzw3CZYg3pJz8": {
+        "name": "The Whole Package",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "O9Gvzw3CZYg3pJz8",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NMsEvaEevL1oex12"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "medic"
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

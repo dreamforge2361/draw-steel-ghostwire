@@ -1,0 +1,32 @@
+{
+  "_id": "b6ynoy8Q8lJe1qpM",
+  "_key": "!items!b6ynoy8Q8lJe1qpM",
+  "name": "GHOSTWIRE.Classes.Medic.Items.BackAlleyNetwork.Name",
+  "type": "feature",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.BackAlleyNetwork.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "back-alley-network",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

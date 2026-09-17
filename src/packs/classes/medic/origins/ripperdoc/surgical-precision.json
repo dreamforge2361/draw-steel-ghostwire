@@ -1,0 +1,32 @@
+{
+  "_id": "CHY9XHVDb5nja7Gq",
+  "_key": "!items!CHY9XHVDb5nja7Gq",
+  "name": "GHOSTWIRE.Classes.Medic.Items.SurgicalPrecision.Name",
+  "type": "feature",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.SurgicalPrecision.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "surgical-precision",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "9C6zcEmLsUzpZICs",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

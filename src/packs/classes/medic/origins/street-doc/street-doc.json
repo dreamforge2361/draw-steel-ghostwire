@@ -1,0 +1,252 @@
+{
+  "_id": "P46wQ4Uv8ulm8Jf6",
+  "_key": "!items!P46wQ4Uv8ulm8Jf6",
+  "name": "GHOSTWIRE.Classes.Medic.Items.StreetDoc.Name",
+  "type": "subclass",
+  "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Medic.Items.StreetDoc.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "medic-street-doc",
+    "advancements": {
+      "c9NNHV0oW3k4ADWI": {
+        "name": "GHOSTWIRE.Skills.List.Streetwise",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "c9NNHV0oW3k4ADWI",
+        "skills": {
+          "choices": [
+            "streetwise"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your specialization grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "u6wwWODupMKUol2F": {
+        "name": "Make Do",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "u6wwWODupMKUol2F",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pHGl6HKhCu71uoNq"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jtwIIt5XcApqg8BC": {
+        "name": "Back-Alley Wits",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "jtwIIt5XcApqg8BC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nq0Nq2ZbQ2pP3Yx9"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FkAfWAYDmZ61ytwP": {
+        "name": "Improvise!",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "FkAfWAYDmZ61ytwP",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qIeROHs213nlgxRV"
+          }
+        ],
+        "description": "<p>Your specialization grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "xHQvfhsfkY0nuBJV": {
+        "name": "2nd-Level Street-Doc Ability",
+        "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "xHQvfhsfkY0nuBJV",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PLOflh0MufqTAj06"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.cXCZOraf3xpEZgZy"
+          }
+        ],
+        "description": "<p>Choose one of the following.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "KPAwAdeHl72BfFg4": {
+        "name": "Scrounger’s Eye",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "KPAwAdeHl72BfFg4",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tqFodTgfbYC266FF"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "EzUjGxJNWT89R14B": {
+        "name": "Back-Alley Network",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "EzUjGxJNWT89R14B",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.b6ynoy8Q8lJe1qpM"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FJh5t6QHWSnG6Mlc": {
+        "name": "6th-Level Street-Doc Ability",
+        "img": "icons/tools/cooking/mortar-herbs-yellow.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "FJh5t6QHWSnG6Mlc",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sEq8UGSBmR9tZsQf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CDikNwOKqeXzCi6C"
+          }
+        ],
+        "description": "<p>Choose one of the following.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7egyVJECss7XkEjE": {
+        "name": "Nothing Wasted",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "7egyVJECss7XkEjE",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mHrofeSTDzD2rXCW"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dwkoiSSagBmicdZU": {
+        "name": "The Doc Who Never Left",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "dwkoiSSagBmicdZU",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Ml5PntIwwZqiEvE5"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "medic"
+  },
+  "effects": [],
+  "folder": "DxBkFvAjciYSRCQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

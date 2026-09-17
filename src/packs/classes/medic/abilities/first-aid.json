@@ -1,0 +1,127 @@
+{
+  "_id": "5t0v1bHJidHsgFTH",
+  "_key": "!items!5t0v1bHJidHsgFTH",
+  "name": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Name",
+  "type": "ability",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "04-medic",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "first-aid",
+    "story": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Story",
+    "keywords": [
+      "melee"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "intuition"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "gbpOQs9NcV8fesvK": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "gbpOQs9NcV8fesvK",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Effect_after00000000000",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 50000
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 2,
+          "multiple": true
+        },
+        "description": "GHOSTWIRE.Classes.Medic.Items.FirstAid.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "medic"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "BsmdcrsDGLHIZh9G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
