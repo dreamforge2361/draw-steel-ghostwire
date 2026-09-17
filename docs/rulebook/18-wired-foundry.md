@@ -75,6 +75,14 @@ A popout window that makes the net a shared place for the scene everyone is view
 
 Reveal is manual in v1: when a runner Scans, the Director reveals what they found. Revealing a node posts a public **Node revealed** card to chat with its name, Track, Rating, and Description (Notes are never posted). Hiding it again posts nothing. Changing a node’s Rating resets its Integrity maximum from the stat card (a full pool stays full). Reaching Trace Alert 12 posts a persistent warning to the Director: full lockout and counter-trace, then reset the track to 6.
 
+### Wired maps and node tokens (B32 Phase 5b)
+
+**Wired map.** When the party goes fully Jacked In and you move them to a matrix battle map, view that map and use **Wired map for** in the Console header (Director) to pick the meatspace Scene whose board it should use. The Console then shows and edits that board while you view the map; the **Connections** panel still lists the tokens on the map you're viewing. Choose **This Scene** to unlink. Stored as `flags.draw-steel-ghostwire.wiredMapFor = <board Scene id>` on the map Scene.
+
+**Place on canvas.** Select a node and press **Place on canvas** (Director): it creates a linked Actor named after the node in the **Wired Nodes** Actor folder, from the *Wired Node (Track 1/2)* template in Ghostwire Summons & Machines, and drops its token at the centre of the view (stepping right for each node already placed). The token is **hidden until the node is revealed**; Track 2 tokens show an **Integrity bar** (their Stamina), Track 1 tokens show none. A pin icon in the node list marks placed nodes. **Remove from canvas** deletes the token and Actor; the node stays on the board.
+
+**Sync.** The board is the source of truth. Console edits (name, Track, Rating, Integrity damage/restore, reveal/hide) update the placed token and Actor; damage applied to a Track 2 node token (Draw Steel's damage buttons, the sheet, or the bar) writes Integrity back to the board. Deleting a node or resetting the board removes its token and Actor; deleting a node token by hand removes its Actor, and the Console offers **Place on canvas** again. Actor flags: `{ kind: "node", boardSceneId, nodeId, track }`. Trace Alert, Description, and Notes stay in the Console.
+
 ### Data
 
 The board is stored on the Scene, so it persists across reloads and belongs to that scene:
@@ -89,4 +97,4 @@ flags.draw-steel-ghostwire.wiredBoard = {
 
 Only a GM can change it. Connection state is read from actor statuses (and mirrored to `flags.draw-steel-ghostwire.wired`), not stored on the board.
 
-**Not in v1:** Matrix Verb or Program rolls don’t change node Integrity or Alert automatically; no ICE automation; no cross-scene map; no Bandwidth display.
+**Not in v1:** Matrix Verb or Program rolls don’t change node Integrity or Alert automatically; no ICE automation; no Bandwidth display. (Cross-scene Wired maps and node tokens shipped in B32 Phase 5b, above.)

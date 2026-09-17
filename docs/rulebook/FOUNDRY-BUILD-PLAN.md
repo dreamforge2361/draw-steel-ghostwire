@@ -318,6 +318,7 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 - **B35 Phase 3 (B32 Phase 3 spike):** Street Priest pact spirits (3 Actors + Light/Dark tint) — **Foundry-verified 2026-09-17** (module v0.1.42). See checklist below.
 - **B36 Phase 4 (B32 Phase 4 spike):** scale-band Actor templates under `summons/machines` + Deploy / Recall pipeline (dual Item+Actor lock 2026-09-17) — **Foundry-verified 2026-09-17** (module v0.1.43). See checklist below. Item catalog sync to the chapters' full chassis lists (drones 36, vehicles 32) is still open.
 - **B37 Phase 5 (B32 Phase 5 spike):** Hacker Node/ICE Director templates (10) in the Wired Console — **Foundry-verified 2026-09-17** (module v0.1.45). See checklist below.
+- **B32 Phase 5b:** node tokens on the canvas + linked Wired map — **Foundry-verified 2026-09-17** (module v0.1.46). See checklist below.
 - **B23c (after Phase 5):** Overlay / Jacked In **vision tints** — see checklist below.
 
 - **Summons pack scaffold (2026-09-17):** Actor pack `summons` registered; folders sprites/elementals/spirits/machines/nodes ready for Phase 1+.
@@ -369,4 +370,14 @@ Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node
   - [x] Track 1 templates show no Integrity bar; Track 2 show the table's Integrity max
   - [x] Add Node and Random Node still work
   - [x] Board nodes persist on Scene flags after a reload
+
+### B32 Phase 5b — Node tokens on the canvas + linked Wired map (2026-09-17)
+Spec: `docs/spikes/B32-PHASE5B-NODE-TOKENS-WIRED-MAP.md`. **Wired map:** a matrix map Scene sets `flags.draw-steel-ghostwire.wiredMapFor = <boardSceneId>` from the Console header's **Wired map for** select (GM); the Console reads/writes that board while the roster stays on the viewed Scene. **Node tokens:** two npc templates in `src/packs/summons/nodes/` (*Wired Node (Track 1)* / *(Track 2)*, `kind: "node-template"`; folder renamed "Wired Nodes"). New `scripts/wired-node-tokens.mjs`: **Place on canvas** imports the track template into a linked world Actor (Wired Nodes folder) and a token at the view centre on the viewed Scene — hidden unless revealed, Track 2 Stamina = Integrity with bar1, Track 1 1/1 with no bar, level = Rating; Actor flags `{ kind: "node", boardSceneId, nodeId, track }`. **Remove from canvas** deletes tokens + Actor. **Sync:** board writes update placed Actors/tokens (name, Rating, Integrity, track/bar, hidden) with only-changed fields; a GM Stamina change on a node Actor writes Integrity back (sync updates carry an option flag, so no loops); deleted nodes / reset boards remove Actors; deleting the last token removes the Actor. Existing Console tools unchanged. Foundry notes: `18-wired-foundry.md`.
+- [x] **B32 Phase 5b** node tokens + Wired map (module v0.1.46) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] A matrix map linked to a meatspace Scene shows and edits that board
+  - [x] Place on canvas: hidden token on the viewed map; Track 2 Integrity bar; Track 1 no bar
+  - [x] Console damage and token damage stay in sync
+  - [x] Reveal unhides the token (chat card still posts)
+  - [x] Remove from canvas / delete node / reset board clean up tokens and Actors
+  - [x] `node tools/build-packs.mjs` succeeds
 

@@ -85,8 +85,11 @@ Changing a node’s Rating in the detail panel re-reads the System Stat Card, ex
 *Description:* An alpha-corp core: a full active ICE suite that answers any serious intrusion with a counter-trace.  
 *Notes:* Full active ICE suite; automatic counter-trace on any high (17+) roll against it. Integrity 50; biofeedback 22 (33 Jacked In). Plan the exit before the entry.
 
+## Nodes on a Wired map (Phase 5b)
+
+When the party goes fully Jacked In: view the matrix map, set **Wired map for** in the Console header to the meatspace Scene, then select nodes and **Place on canvas**. Tokens stay hidden until you reveal the node; Track 2 tokens carry an Integrity bar that stays in sync with the Console both ways. **Remove from canvas** when the run moves on. Details: `docs/rulebook/18-wired-foundry.md`.
+
 ## Not in this phase
 
-- Placeable node Actor tokens (`src/packs/summons/nodes/` stays an empty folder; deferred).
 - A Foundry Journal pack for Director references (the module has no journals pack yet; this markdown is the reference).
 - B23c Wired vision tints (next).

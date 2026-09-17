@@ -6027,7 +6027,17 @@
       "Template": "Template",
       "AddTemplateConfirm": "Add node",
       "TemplateStats": "Integrity {integrity}, biofeedback {biofeedback}",
-      "TemplateBreach": "breach DC {dc}, no Integrity"
+      "TemplateBreach": "breach DC {dc}, no Integrity",
+      "WiredMapFor": "Wired map for",
+      "WiredMapHint": "Point this Scene at another Scene’s board: the Console shows and edits that board while you view this map, so the Jacked In fight uses the same nodes.",
+      "ThisScene": "This Scene",
+      "PlaceOnCanvas": "Place on canvas",
+      "RemoveFromCanvas": "Remove from canvas",
+      "OnCanvas": "On the canvas",
+      "NodeFolder": "Wired Nodes",
+      "NoCanvasScene": "View a Scene before placing a node on the canvas.",
+      "AlreadyPlaced": "{name} is already on the canvas.",
+      "NoNodeTemplate": "No Wired node token template found in Ghostwire Summons & Machines. Rebuild the summons pack."
     },
     "Summons": {
       "Sprites": {
@@ -6274,6 +6284,16 @@
           "NoPermission": "Deploying creates an Actor and a token; ask the Director to deploy it (players need Create Actors and Create Tokens permission).",
           "NoTemplate": "No Summons & Machines template found for band {band}. Rebuild the summons pack.",
           "Wrecked": "{name} is at 0 Integrity: wrecked. Recall it from its Item when the table is done with it."
+        }
+      },
+      "Nodes": {
+        "Track1": {
+          "Name": "Wired Node (Track 1)",
+          "Description": "<p>A <strong>Track 1</strong> Wired node token: an object or system (door, camera, lock, a person’s smartlink). Track 1 resolves in a single power roll, so it has <strong>no Integrity bar</strong>, ICE, or biofeedback.</p><h4>Placing nodes</h4><p>Don’t drag this template in. In the <strong>Wired Console</strong>, select a node and press <strong>Place on canvas</strong>: it creates a linked Actor named after the node (in the <strong>Wired Nodes</strong> folder) and a token on the Scene you’re viewing, hidden until the node is revealed. <strong>Remove from canvas</strong>, deleting the node, or resetting the board cleans it up. The Console board stays the source of truth for name, Rating, Integrity, Trace Alert, Description, and Notes.</p><p>Rules: docs/rulebook/08-hacker.md (System Stat Card).</p>"
+        },
+        "Track2": {
+          "Name": "Wired Node (Track 2)",
+          "Description": "<p>A <strong>Track 2</strong> Wired node token: a defended host, ICE, or hostile Persona. Its <strong>Stamina is the node’s Integrity</strong>; damage applied to the token writes back to the Wired Console, and Console damage updates the bar.</p><h4>Placing nodes</h4><p>Don’t drag this template in. In the <strong>Wired Console</strong>, select a node and press <strong>Place on canvas</strong>: it creates a linked Actor named after the node (in the <strong>Wired Nodes</strong> folder) and a token on the Scene you’re viewing, hidden until the node is revealed. <strong>Remove from canvas</strong>, deleting the node, or resetting the board cleans it up. The Console board stays the source of truth for name, Rating, Integrity, Trace Alert, Description, and Notes.</p><p>Rules: docs/rulebook/08-hacker.md (System Stat Card).</p>"
         }
       }
     }

@@ -122,7 +122,7 @@ From `08-hacker.md` Node Rating card:
 
 **5× Track 1** (breach-only, no Integrity) + **5× Track 2** (Integrity + ICE) = **10** templates. Wire to Wired Console node tools where possible.
 
-**Shipped (Phase 5, Foundry-verified 2026-09-17):** the 10 templates live in `scripts/wired-node-templates.mjs` (`NODE_TEMPLATES`) next to the System Stat Card `RATING` table, which the Wired Console now imports (single source). Directors add them from the Console's **Add template…** button; reference in `docs/directors/wired-node-templates.md`. Placeable node Actors under `summons/nodes` remain deferred.
+**Shipped (Phase 5, Foundry-verified 2026-09-17):** the 10 templates live in `scripts/wired-node-templates.mjs` (`NODE_TEMPLATES`) next to the System Stat Card `RATING` table, which the Wired Console now imports (single source). Directors add them from the Console's **Add template…** button; reference in `docs/directors/wired-node-templates.md`. **Phase 5b (Foundry-verified 2026-09-17):** Console **Place on canvas** turns a node into a linked token (templates in `summons/nodes`; `scripts/wired-node-tokens.mjs`), synced with the board, and a matrix map Scene can use another Scene's board (**Wired map for**).
 
 ### 3.6 No summon line
 

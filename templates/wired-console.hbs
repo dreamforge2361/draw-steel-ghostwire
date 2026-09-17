@@ -2,6 +2,15 @@
   <header class="wc-header">
     <span class="wc-sigil"><i class="fa-solid fa-network-wired"></i></span>
     <span class="wc-scene">{{sceneName}}</span>
+    {{#if isGM}}{{#if wiredMap}}
+    <label class="wc-wired-map" data-tooltip="GHOSTWIRE.WiredConsole.WiredMapHint">
+      <i class="fa-solid fa-map-location-dot"></i> {{localize "GHOSTWIRE.WiredConsole.WiredMapFor"}}
+      <select class="wc-input" data-wired-map>
+        <option value="">{{localize "GHOSTWIRE.WiredConsole.ThisScene"}}</option>
+        {{#each wiredMap.options}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+      </select>
+    </label>
+    {{/if}}{{/if}}
     <span class="wc-mode">{{#if isGM}}{{localize "GHOSTWIRE.WiredConsole.DirectorMode"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.PlayerMode"}}{{/if}}</span>
     {{#if isGM}}
     <button type="button" class="wc-btn wc-btn-danger" data-action="resetBoard" {{disabled (not hasScene)}}>
@@ -57,6 +66,7 @@
             <span class="wc-node-name">{{name}}</span>
             <span class="wc-tag">T{{track}}</span>
             <span class="wc-tag">R{{rating}}</span>
+            {{#if placed}}{{#if ../isGM}}<i class="fa-solid fa-location-dot wc-dim" data-tooltip="GHOSTWIRE.WiredConsole.OnCanvas"></i>{{/if}}{{/if}}
             {{#if down}}<span class="wc-tag wc-tag-down">{{localize "GHOSTWIRE.WiredConsole.Down"}}</span>{{/if}}
           </div>
           {{#if isTrack2}}
@@ -170,6 +180,11 @@
             <button type="button" class="wc-btn" data-action="toggleReveal">
               {{#if revealed}}<i class="fa-solid fa-eye-slash"></i> {{localize "GHOSTWIRE.WiredConsole.HideFromPlayers"}}{{else}}<i class="fa-solid fa-eye"></i> {{localize "GHOSTWIRE.WiredConsole.RevealToPlayers"}}{{/if}}
             </button>
+            {{#if placed}}
+            <button type="button" class="wc-btn" data-action="removeNode"><i class="fa-solid fa-circle-xmark"></i> {{localize "GHOSTWIRE.WiredConsole.RemoveFromCanvas"}}</button>
+            {{else}}
+            <button type="button" class="wc-btn" data-action="placeNode"><i class="fa-solid fa-location-dot"></i> {{localize "GHOSTWIRE.WiredConsole.PlaceOnCanvas"}}</button>
+            {{/if}}
             <button type="button" class="wc-btn wc-btn-danger" data-action="deleteNode"><i class="fa-solid fa-trash"></i> {{localize "GHOSTWIRE.WiredConsole.DeleteNode"}}</button>
           </div>
         </div>

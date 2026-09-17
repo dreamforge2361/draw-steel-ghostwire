@@ -1,11 +1,13 @@
 // Wired Console (B23b): a Scene-tied view of the Wired — connection roster, nodes, Integrity, and Trace Alert.
-// Board data lives on the viewed Scene: flags.draw-steel-ghostwire.wiredBoard = { nodes: [...], stratum, updated }.
+// Board data lives on a Scene: flags.draw-steel-ghostwire.wiredBoard = { nodes: [...], stratum, updated }. A matrix map can show another
+// Scene's board (flags.draw-steel-ghostwire.wiredMapFor); nodes can be placed on the canvas as tokens (scripts/wired-node-tokens.mjs).
 // Random nodes (B23c) roll from scripts/wired-node-table.mjs; Director templates and the System Stat Card (RATING) come from
 // scripts/wired-node-templates.mjs (B32 Phase 5).
 // Rules: docs/rulebook/08-hacker.md (System Stat Card, Trace Alert). Foundry notes: docs/rulebook/18-wired-foundry.md.
 
 import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
+import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -58,6 +60,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       addNode: WiredConsole.#onAddNode,
       randomNode: WiredConsole.#onRandomNode,
       addTemplate: WiredConsole.#onAddTemplate,
+      placeNode: WiredConsole.#onPlaceNode,
+      removeNode: WiredConsole.#onRemoveNode,
       generateCluster: WiredConsole.#onGenerateCluster,
       deleteNode: WiredConsole.#onDeleteNode,
       alertUp: WiredConsole.#onAlertUp,
@@ -81,7 +85,13 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   /** The node selected in the detail panel. */
   selectedId = null;
 
+  /** The Scene whose board is shown: the viewed Scene, or the board Scene it is the Wired map for. */
   get scene() {
+    return boardScene(game.scenes.viewed);
+  }
+
+  /** The Scene on the canvas (roster, token placement). */
+  get viewedScene() {
     return game.scenes.viewed ?? null;
   }
 
@@ -100,6 +110,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         ...node,
         selected: node.id === this.selectedId,
         isTrack2: node.track === 2,
+        placed: !!(scene && placedNodeActor(scene.id, node.id)),
         integrityPct: Math.round((node.integrity / node.integrityMax) * 100),
         down: (node.track === 2) && (node.integrity <= 0),
         alertBand: alertBand(node.alert),
@@ -120,7 +131,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     // Roster: one row per actor with a token on the scene. Players only see actors they own.
     const roster = [];
     const seen = new Set();
-    for (const token of scene?.tokens ?? []) {
+    for (const token of this.viewedScene?.tokens ?? []) {
       const actor = token.actor;
       if (!actor || seen.has(actor.uuid) || (!isGM && !actor.isOwner)) continue;
       seen.add(actor.uuid);
@@ -134,6 +145,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     return {
       isGM,
       sceneName: scene?.name ?? localize("NoScene"),
+      wiredMap: this.#wiredMapContext(scene),
       hasScene: !!scene,
       stratumLabel: localize(`Strata.${board.stratum}`),
       roster,
@@ -142,14 +154,35 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     };
   }
 
+  // Header select: which Scene's board this viewed Scene shows. Only other Scenes that aren't themselves Wired maps are offered.
+  #wiredMapContext(board) {
+    const viewed = this.viewedScene;
+    if (!viewed) return null;
+    const linkedId = (board && (board !== viewed)) ? board.id : "";
+    const options = game.scenes.filter(s => (s !== viewed) && !s.getFlag(MODULE_ID, "wiredMapFor"))
+      .sort((a, b) => a.name.localeCompare(b.name, game.i18n.lang))
+      .map(s => ({ value: s.id, label: s.name, isSelected: s.id === linkedId }));
+    return { linked: !!linkedId, viewedName: viewed.name, options };
+  }
+
   /** @override */
   _onRender(context, options) {
     super._onRender(context, options);
     if (!game.user.isGM) return;
+    this.element.querySelector("[data-wired-map]")?.addEventListener("change", event => this.#onWiredMapChange(event));
     // Inline edits in the detail panel save on change.
     for (const input of this.element.querySelectorAll("[data-field]")) {
       input.addEventListener("change", event => this.#onFieldChange(event));
     }
+  }
+
+  async #onWiredMapChange(event) {
+    const viewed = this.viewedScene;
+    const target = event.currentTarget.value;
+    if (!game.user.isGM || !viewed) return;
+    this.selectedId = null;
+    if (target) await viewed.setFlag(MODULE_ID, "wiredMapFor", target);
+    else await viewed.unsetFlag(MODULE_ID, "wiredMapFor");
   }
 
   /* ---------- board writes (GM only) ---------- */
@@ -264,6 +297,17 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const node = WiredConsole.#makeNode(template);
     this.selectedId = node.id;
     await this.#updateBoard(nodes => { nodes.push(node); });
+  }
+
+  static async #onPlaceNode(event, target) {
+    const scene = this.scene;
+    const node = getBoard(scene).nodes.find(n => n.id === WiredConsole.#nodeId(target));
+    await placeNode(scene, node);
+  }
+
+  static async #onRemoveNode(event, target) {
+    const scene = this.scene;
+    await removePlacedNode(scene && placedNodeActor(scene.id, WiredConsole.#nodeId(target)));
   }
 
   static async #onGenerateCluster() {
@@ -429,6 +473,7 @@ const rerender = () => {
  */
 export function registerWiredConsole({ getWiredState }) {
   getWiredStateFn = getWiredState;
+  registerNodeTokens({ getBoard });
 
   game.keybindings.register(MODULE_ID, "wiredConsole", {
     name: "GHOSTWIRE.WiredConsole.Keybinding",
@@ -457,8 +502,12 @@ export function registerWiredConsole({ getWiredState }) {
 
   // Live refresh: board changes, connection statuses, tokens entering or leaving, and switching scenes.
   Hooks.on("updateScene", (scene, changes) => {
-    if ((scene === game.scenes.viewed) && foundry.utils.hasProperty(changes, `flags.${MODULE_ID}`)) rerender();
+    const viewed = game.scenes.viewed;
+    if (((scene === viewed) || (scene === boardScene(viewed))) && foundry.utils.hasProperty(changes, `flags.${MODULE_ID}`)) rerender();
   });
+  // Placed node Actors appearing or going away flip Place / Remove on canvas.
+  Hooks.on("createActor", actor => { if (actor.getFlag(MODULE_ID, "kind") === "node") rerender(); });
+  Hooks.on("deleteActor", actor => { if (actor.getFlag(MODULE_ID, "kind") === "node") rerender(); });
   Hooks.on("createActiveEffect", rerender);
   Hooks.on("deleteActiveEffect", rerender);
   Hooks.on("updateActor", (actor, changes) => {

@@ -151,6 +151,15 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 
 .ghostwire-wired-console .wc-sigil { color: var(--wc-cyan); text-shadow: 0 0 8px var(--wc-cyan); }
 .ghostwire-wired-console .wc-scene { font-weight: 600; letter-spacing: 0.04em; flex: 1; }
+.ghostwire-wired-console .wc-wired-map {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--wc-cyan);
+  white-space: nowrap;
+}
+.ghostwire-wired-console .wc-wired-map select { max-width: 12rem; }
 .ghostwire-wired-console .wc-mode {
   font-size: 0.75rem;
   text-transform: uppercase;
