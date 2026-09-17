@@ -56,15 +56,13 @@ Advantage is the Scout's fuel, and it explicitly represents **the read** — the
 
 **Advantage in Combat.** At the start of a combat encounter or other stressful situation tracked in rounds (Director's call), you gain Advantage equal to your Victories — the Scout arrives already partially read-in on the situation (same on-ramp every class gets). At the start of each of your turns during combat, you gain **1d3 Advantage** (rising to **1d3+1** at 7th level via **Sharper Eye**, formerly DS's Keen Insight).
 
-Additionally, the first time each combat round that you deal damage incorporating **1 or more surges** (see the **Surge** box, below, for the full definition), you gain **1 Advantage** (rising to **2** at 4th level via **Surge of Advantage**, formerly Surge of Insight, and **3** at 10th level via **Death Pool**).
+Additionally, the first time each combat round that you deal damage incorporating **1 or more surges** (surges work as in Draw Steel Heroes), you gain **1 Advantage** (rising to **2** at 4th level via **Surge of Advantage**, formerly Surge of Insight, and **3** at 10th level via **Death Pool**).
 
 Whenever you use a heroic ability that makes use of a **power roll**, that ability costs 1 fewer Advantage if you have an **edge** or **double edge** on it. If the ability has multiple targets, the cost is reduced even if the ability gains an edge or has a double edge against only one target. *This is the same "trained shadow spending less to press an opening" rule DS wrote for Insight — kept verbatim in spirit, renamed for the setting.*
 
 You lose any remaining Advantage at the end of the encounter.
 
-> **What is a Surge?** *(Inline definition — the term is used repeatedly in this document. Defined here so it is never more than a paragraph away from the ability that spends it.)*
->
-> A **surge** is a stored, one-shot damage-boost token — narratively, the tactical read paying off on the trigger pull, the cut, or the placed shot. Mechanically, a surge is banked by the character (Coat the Blade, Careful Observation, Ghost Suite, Trained Assassin, and several signatures generate surges) and spent by adding **+2 damage to a strike (Echelon 4)**, scaling **+3 damage at Echelon 3, +4 at Echelon 2, +5 at Echelon 1**. A single strike can incorporate multiple surges, stacking. Surges never persist between encounters — any unspent surge is lost at encounter end. *(This inline definition is the current playtest value inherited from DS. When the master baseline's numeric damage/status pass locks the exact per-Echelon surge value, it will migrate to a shared glossary in `master_rules_baseline.md`; this doc will retain the inline definition and cross-reference the glossary.)*
+**Surges** use the Draw Steel Heroes rules unchanged; Ghostwire adds no surge variant.
 
 **Advantage Outside of Combat.** You can't gain Advantage outside of combat, but you can still use your heroic abilities and effects that cost Advantage without spending it. Whenever you use an ability or effect outside of combat that costs Advantage, you can't use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite. When you use an ability outside of combat that lets you spend **unlimited** Advantage on its effect (such as the Ghost subclass's **Grapnel-Blink**), you can use it as if you had spent an amount of Advantage equal to your Victories.
 

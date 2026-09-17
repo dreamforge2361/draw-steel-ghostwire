@@ -12,7 +12,7 @@ Exact ¥ prices and package Integrity totals are set by the gear catalog (`08-ki
 | Path | What it is | System |
 |---|---|---|
 | **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |
-| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — frame **modules** + BP; **Arcane Severance**; **no Body Integrity** |
+| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |
 
 Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.
 
@@ -47,9 +47,9 @@ Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyb
 
 Slots are a hard ceiling independent of Integrity. Large implants may consume a whole location.
 
-## Magic erosion (provisional)
+## Magic erosion
 
-Casting-resource **cap** reduced by:
+Every living caster — Elementalist, Street Priest, Technomancer — uses this one formula. Casting-resource **cap** reduced by:
 
 | Grade installed | Cap loss |
 |---|---|
@@ -120,7 +120,7 @@ Implant ¥ prices and Availability are not yet published.
 - **Wrench / Medic** — installers/menders (hardware vs flesh).
 - **Hacker** — attack others' chrome across the Wired more than wear it.
 - **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.
-- **Casters (Elementalist / Street-Priest / …)** — magic erosion discourages; Soft sliver only late and expensive.
+- **Casters (Elementalist / Street-Priest / …)** — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.
 - **Cyborg** — **excluded** from this chapter entirely.
 
 ## Cyborg Frame Modules

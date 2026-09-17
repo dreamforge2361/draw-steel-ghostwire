@@ -28,7 +28,7 @@ A **Kit** is a **loadout doctrine** — a package of trained fighting technique 
 
 - A Kit grants a bundle of combat bonuses (Stamina, damage, speed, stability, distance, disengage) and one **signature ability** — a repeatable weapon attack keyed to the Kit.
 - A Kit is **flexible and never locked**: a hero may swap Kits during a respite (a respite activity), exactly as Draw Steel allows. Training can be re-focused between runs; it is not a permanent build choice.
-- **A Kit is training, so it lives on the class/BP side of the firewall — it is never bought with nuyen.** This is the key distinction from gear. A Kit is character capability (like a class feature or skill); the item the Kit uses is Economy gear. Nuyen never buys the doctrine; it buys the tool the doctrine needs.
+- **A Kit is training, so it lives on the character-power side of the firewall — it is never bought with nuyen.** This is the key distinction from gear. A Kit is character capability (like a class feature or skill); the item the Kit uses is Economy gear. Nuyen never buys the doctrine; it buys the tool the doctrine needs.
 - **Not every hero leans on a Kit equally.** Kits are the martial identity layer — the **Operator, Scout, Commander**, and any gun/blade/fist-forward build live here. A pure caster (Elementalist, Street-Priest) or a deck-bound Hacker may take a light Kit or none, fighting instead through the Veil or the Wired resource systems.
 
 ## The bridge to the Economy — the ownership rule
@@ -41,7 +41,7 @@ This is the rule that keeps Kits and the Economy/gadgets system intact and inter
 3. **Kit doctrine and gear mods stack, because they touch different numbers.** The Kit adds doctrine bonuses (damage by Power Roll result band, distance, speed, stability, the signature ability). Nuyen-bought mods (smartlink, silencer, recoil comp, armor weave, drone hardpoint) add situational traits and effects via the mod-slot crafting subsystem. They never overwrite each other — a smartlinked, silenced pistol in the hands of a **Ghost**-Kit runner gets both the Kit's ranged doctrine *and* the mods' effects. A gear-focused hero therefore benefits twice (Kit + deep mods).
 4. **Gear quality still matters underneath the Kit.** The Kit's bonuses are constant, but the item satisfying it climbs Availability / echelon gear lists (street-grade → milspec / prototype). A Longshot Kit is deadlier with a high-Availability rifle than a cheap zip-gun even though the Kit line is unchanged — the Economy remains the axis of material progression, the Kit the axis of trained skill.
 
-**Firewall check:** a Kit costs no nuyen (it's training) and the gear costs no BP (it's an object). Neither converts into the other. The two economies stay separate and both stay meaningful.
+**Firewall check:** a Kit costs no nuyen (it's training) and the gear costs no character power (it's an object). Neither converts into the other. The two economies stay separate and both stay meaningful.
 
 ## What a Kit grants
 

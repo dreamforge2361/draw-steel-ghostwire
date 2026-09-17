@@ -11,7 +11,7 @@ Draw Steel ancestries are **creation-time**:
 - A fixed **ancestry point budget** spent on a purchased-trait menu
 - **No per-level ancestry unlock track** (growth after creation comes from class / characteristics)
 
-**Status (2026-09-16):** All eight Peoples in `docs/rulebook/09-species.md` follow this rule. Level-gated BP Species Options are **retired**. Mutant Human = **Devil** chassis; Cyborg = **Time Raider** chassis (both locked).
+**Status (2026-09-16):** All eight Peoples in `docs/rulebook/09-species.md` follow this rule. Level-gated Species Options are **retired**; ancestry points are the only species budget. Mutant Human = **Devil** chassis; Cyborg = **Time Raider** chassis (both locked).
 
 Attribute labels in Ghostwire: **Physique, Reflex, Logic, Instinct, Persona** (Might / Agility / Reason / Intuition / Presence).  
 Power Roll bands: **≤11 / 12–16 / 17+**.
@@ -26,8 +26,8 @@ Power Roll bands: **≤11 / 12–16 / 17+**.
 | **Goliar (“Ogre”)** | Orc | Relentless | 3 | Glowing Recovery, Grounded | Engineered heavy fiction |
 | **Changer** | Dragon Knight | Beast-Hide *(← Wyrmplate)* | 3 | Savage Burst + Layered Hide | Raven/Rat/Wolf lineages; three forms = maneuver fiction; Physique↔Might, Persona↔Presence |
 | **Revenant** | Revenant | Former Life + Tough But Withered | 2 (3 if size 1S) | Bloodless (+ Undead Influence if 1S) | Decay ladder **removed**; fire while inert = permanent death; Former Life → any of the other seven Peoples |
-| **Mutant Human** | Devil | Aberrant Rapport *(← Silver Tongue)* | 3 | Warped Legs, Ossified Crown | Mutagenic / Dark One fiction; Corruption Load BP track **retired**; optional cosmetic Corruptive Flaw only |
-| **Cyborg** | Time Raider | Cortical Firewall *(← Psychic Scar)* | 3 | Penetration Optics, Installed Suite (Particle Lance) | Chrome/full-conversion fiction; Arcane Severance / tech-only recovery / System Crisis = chargen constraints (not AP costs) |
+| **Mutant Human** | Devil | Aberrant Rapport *(← Silver Tongue)* | 3 | Warped Legs, Ossified Crown | Mutagenic / Dark One fiction; Corruption Load mutation-purchase track **retired**; optional cosmetic Corruptive Flaw only |
+| **Cyborg** | Time Raider | Cortical Firewall *(← Psychic Scar)* | 3 | Penetration Optics, Installed Suite (Particle Lance) | Chrome/full-conversion fiction; Arcane Severance / tech-only recovery / System Crisis = chargen constraints (not ancestry-point costs) |
 
 ## Purchased-trait cost checklist (do not invent)
 

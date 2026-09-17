@@ -90,7 +90,9 @@ function journal(file, folder, sort, sections, key) {
   };
 }
 
-rmSync(OUT, { recursive: true, force: true });
+// Clear the output's contents, not the folder itself (Dropbox can hold a handle on the folder).
+mkdirSync(OUT, { recursive: true });
+for (const entry of readdirSync(OUT)) rmSync(join(OUT, entry), { recursive: true, force: true });
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const rulebookLang = { Folders: {}, Journals: {} };
 let pages = 0;

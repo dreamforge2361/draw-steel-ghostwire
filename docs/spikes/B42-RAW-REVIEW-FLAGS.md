@@ -16,15 +16,15 @@
 
 1. **Copyright check — ancestry trait text.** Many purchased-trait and signature descriptions in `05-ancestries.md` follow Draw Steel Heroes wording closely (for example Detect the Supernatural and Staying Power). Several class abilities also carry Heroes-adapted text (Operator 7/9/11-cost bands). Confirm the Creator License covers this, or rewrite in original wording.
 2. **License attribution statement** is a placeholder in `00-front-matter.md`. Insert MCDM’s required Draw Steel Creator License wording.
-3. **Body Integrity contradiction.** `09-chrome-body-integrity.md` says every living hero starts at **20**. The Operator, Elementalist, and Hacker chrome sections — and the old Wire text — used **`6 + Physique + Echelon`** (removed from `21`, still implied in class chrome notes). Pick one.
-4. **Chrome grades.** Chrome uses Salvage / Standard / Soft. The Hacker chrome section uses “E1 Salvage / E2 Standard / E3 Milspec / E4 Bioware.” Pick one scheme.
-5. **Magic erosion model.** Chrome chapter: −1 cap per 2 / 3 / 1 Integrity by grade. Technomancer: “beyond a free allowance of 2.” Street Priest: “chrome-load essence above a sliver” (unit undefined). Decide whether casters share one model.
-6. **“Persona” means two things:** the characteristic, and your presence in the Wired. The glossary distinguishes them; consider renaming the Wired one (for example “Wired persona” → “avatar” or “icon”).
-7. **“BP” / “SP”** (build points / skill points) appear in class text and the Economy firewall but Draw Steel has no such currency. Define (as the glossary now does) or reword to “character power.”
-8. **Surge definition conflict.** Scout and Elementalist: a surge is +2…+5 damage by echelon, in inverted echelon order. Commander: surges grant temporary Stamina. Draw Steel defines surges by reference; pick the Draw Steel rule and fix both.
-9. **Gear damage tags vs Draw Steel damage types.** Gear tags damage kinetic / AP / electrical / fire / toxin; Draw Steel types are acid, cold, corruption, fire, holy, lightning, poison, psychic, sonic. Confirm the mapping (electrical → lightning? toxin → poison? kinetic and AP → untyped?).
-10. **Weapon damage bands.** The Gear master says weapon base damage is “the Tier-2 standard hit” and is scaled by old Outcome-Tier riders (inverted language). `08` prints only the base bands. Decide how result bands scale weapon base damage in Draw Steel order.
-11. **Armor-as-Stamina has two Echelon 1 columns** (Street and Professional). Decide which one a 1st–3rd level hero uses.
+3. **DONE — Pass A (B42c).** **Body Integrity contradiction.** `09-chrome-body-integrity.md` says every living hero starts at **20**. The Operator, Elementalist, and Hacker chrome sections — and the old Wire text — used **`6 + Physique + Echelon`** (removed from `21`, still implied in class chrome notes). Pick one.
+4. **DONE — Pass A (B42c).** **Chrome grades.** Chrome uses Salvage / Standard / Soft. The Hacker chrome section uses “E1 Salvage / E2 Standard / E3 Milspec / E4 Bioware.” Pick one scheme.
+5. **DONE — Pass A (B42c).** **Magic erosion model.** Chrome chapter: −1 cap per 2 / 3 / 1 Integrity by grade. Technomancer: “beyond a free allowance of 2.” Street Priest: “chrome-load essence above a sliver” (unit undefined). Decide whether casters share one model.
+6. **DONE — Pass A (B42c).** **“Persona” means two things:** the characteristic, and your presence in the Wired. The glossary distinguishes them; consider renaming the Wired one (for example “Wired persona” → “avatar” or “icon”).
+7. **DONE — Pass A (B42c).** **“BP” / “SP”** (build points / skill points) appear in class text and the Economy firewall but Draw Steel has no such currency. Define (as the glossary now does) or reword to “character power.”
+8. **DONE — Pass A (B42c).** **Surge definition conflict.** Scout and Elementalist: a surge is +2…+5 damage by echelon, in inverted echelon order. Commander: surges grant temporary Stamina. Draw Steel defines surges by reference; pick the Draw Steel rule and fix both.
+9. **DONE — Pass A (B42c).** **Gear damage tags vs Draw Steel damage types.** Gear tags damage kinetic / AP / electrical / fire / toxin; Draw Steel types are acid, cold, corruption, fire, holy, lightning, poison, psychic, sonic. Confirm the mapping (electrical → lightning? toxin → poison? kinetic and AP → untyped?).
+10. **DONE — Pass A (B42c).** **Weapon damage bands.** The Gear master says weapon base damage is “the Tier-2 standard hit” and is scaled by old Outcome-Tier riders (inverted language). `08` prints only the base bands. Decide how result bands scale weapon base damage in Draw Steel order.
+11. **DONE — Pass A (B42c).** **Armor-as-Stamina has two Echelon 1 columns** (Street and Professional). Decide which one a 1st–3rd level hero uses.
 12. **Remaining tier language** (means echelon, cost band, or result) — see chapter lists below. Also the Technomancer’s “Hybrid Tier” sprite grammar and “Cost Tiers” headings.
 13. **Inverted echelon or result order** appears in several abilities (flagged below).
 14. **DC-based saves and to-hit language** (Technomancer sprites and biofeedback, Wrench “+1 to hit”) don’t match Draw Steel. Convert to potency / saving throw / edge-bane.
@@ -181,3 +181,45 @@
 ### 23 Machines
 - Drone and vehicle Integrity / Speed / Armor numbers are not published (qualitative profiles only).
 - Wrench chapter slot counts by Scale band vs Gear-master Availability slot counts differ (removed note).
+
+---
+
+## Pass A — LOCKED 2026-09-17 (Michael)
+
+| # | Decision |
+|---|---|
+| A3 | **Body Integrity** starts at **20** for every living non-Cyborg. Scrub `6 + Physique + Echelon` (and any Wire leftovers) everywhere. |
+| A4 | **Chrome grades** = **Salvage / Standard / Soft (Bioware)** only. Do not use Milspec/Bioware as grade labels; Milspec stays an **Availability** band. |
+| A5 | **Magic erosion** = shared Chrome formula for all casters: −1 cast-resource cap per **2** Integrity (Standard), per **3** Soft, per **1** Salvage. Remove Technomancer “free allowance of 2” and Street Priest “sliver” as separate models. |
+| A6 | Wired presence renamed **avatar** (never “persona” alone). Characteristic stays **Persona**. Glossary + Wire/Hacker/Technomancer scrub. |
+| A7 | No **BP/SP** currency. Reword to chargen picks / character power / skill picks. Economy firewall stays “¥ never buys character power.” |
+| A8 | **Surges** = Draw Steel Heroes by reference. Scrub Scout/Elementalist inverted echelon surge-damage boxes and Commander “surge = temp Stamina” unless that is true DS wording — do not invent a Ghostwire surge. |
+| A9 | Gear damage tags map: **electrical → lightning**, **toxin → poison**, **fire → fire**, **kinetic / AP → untyped** (AP remains a gear note: ignores/reduces armor-as-Stamina per gear rules, not a DS damage type). |
+| A10 | Weapon Power Roll results print **low / middle / high** (DS order). Base weapon numbers in `08` are the middle band unless a line explicitly gives all three; scrub inverted Outcome-Tier language. |
+| A11 | **Armor-as-Stamina Echelon 1** default column = **Street**. Professional is the upgraded E1 shopping tier when Availability allows — not the default for levels 1–3. |
+
+**Still open (not Pass A):** A1–A2 Creator License / ancestry copyright wording; A12–A15 tier scrub backlog, DC→potency conversion, missing shared chapters — Pass B+.
+
+**Apply to:** `docs/raw/` (SoR for Journals) **and** matching `docs/rulebook/` / masters sources so the next `raw-to-journals` rebuild stays clean.
+
+### Pass A — applied 2026-09-17 (B42c, pending Michael review)
+
+| # | Status | RAW (`docs/raw/`) | Sources synced |
+|---|---|---|---|
+| A3 | **Done** | `12`, `17`, `19` | rulebook `01`, `06`, `08`; Operator / Elementalist / Hacker masters |
+| A4 | **Done** | `19` | rulebook `08`; Hacker master |
+| A5 | **Done** | `09`, `17`, `18`, `20`, `22` | rulebook `06`, `07`, `12`, `20`; Chrome, Elementalist, Street Priest, Technomancer masters |
+| A6 | **Done** | `00` (glossary: **Avatar**), `19`, `21`, `25` | rulebook `08`; Gear master (deck rows) |
+| A7 | **Done** | `00` (glossary: **Character power**), `08`, `09`, `13`, `15`, `16`, `17`, `18`, `20` | rulebook `02`–`07`, `09`, `10`, `11`, `12`, `20`, `SPECIES-DS-MAP`; Chrome, Gear, Kits, Species masters |
+| A8 | **Done** | `13`, `14`, `17` | rulebook `02`, `03`, `06`; Scout, Commander, Elementalist masters |
+| A9 | **Done** | `04` (mapping table), `08`, `15` (Toxin compounds deal poison damage) | rulebook `04`; Gear master |
+| A10 | **Done** | `08` | Gear master, Kits master (weapon/Kit Outcome-Tier language → low / middle / high) |
+| A11 | **Done** | `08` (Street = E1 default note) | Gear master armor table |
+
+**Journals:** `tools/raw-to-journals.mjs` + `build-packs.mjs` re-run; module 0.1.56.
+
+**Left for Pass B (not Pass A):**
+- Class-ability hybrid damage types that aren’t gear tags: Operator “corrosive” / “kinetic-feedback” (Overclocked Adrenaline, Combat Form, Warzone Incarnate); Scout “thermal-kinetic” (Kicked Sparks, The Grate).
+- Species master: retired BP pool costs relabelled **Minor / Standard / Signature** (legacy 2 / 4 / 6); `09-species` now says ancestry points are the only species budget. Confirm the relabel.
+- Class development masters still carry BP firewall wording and non-weapon Outcome-Tier ability text (dev history; A12 backlog).
+- `Corp-Milspec` (Operator subclass name) and “Avail. milspec” item labels kept — Availability, not chrome grade.

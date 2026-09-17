@@ -13,7 +13,7 @@ A **Kit** is a **loadout doctrine** — a package of trained fighting technique 
 
 - A Kit grants a bundle of combat bonuses (Stamina, damage, speed, stability, distance, disengage) and one **signature ability** — a repeatable weapon attack keyed to the Kit.
 - A Kit is **flexible and never locked**: a hero may swap Kits during a respite (a respite activity), exactly as Draw Steel allows. Training can be re-focused between runs; it is not a permanent build choice.
-- **A Kit is training, so it lives on the class/BP side of the firewall — it is never bought with nuyen.** This is the key distinction from gear. A Kit is character capability (like a class feature or skill); the item the Kit uses is Economy gear. Nuyen never buys the doctrine; it buys the tool the doctrine needs.
+- **A Kit is training, so it lives on the character-power side of the firewall — it is never bought with nuyen.** This is the key distinction from gear. A Kit is character capability (like a class feature or skill); the item the Kit uses is Economy gear. Nuyen never buys the doctrine; it buys the tool the doctrine needs.
 - **Not every hero leans on a Kit equally.** Kits are the martial identity layer — the **Operator, Scout, Commander**, and any gun/blade/fist-forward build live here. A pure caster (Elementalist, Street-Priest) or a deck-bound Hacker may take a light Kit or none, fighting instead through the Veil or the Wired resource systems.
 
 ### The bridge to the Economy — the ownership rule
@@ -26,7 +26,7 @@ This is the rule that keeps Kits and the Economy/gadgets system intact and inter
 3. **Kit doctrine and gear mods stack, because they touch different numbers.** The Kit adds doctrine bonuses (damage by Power Roll result band, distance, speed, stability, the signature ability). Nuyen-bought mods (smartlink, silencer, recoil comp, armor weave, drone hardpoint) add situational traits and effects via the mod-slot crafting subsystem. They never overwrite each other — a smartlinked, silenced pistol in the hands of a **Ghost**-Kit runner gets both the Kit's ranged doctrine *and* the mods' effects. A gear-focused hero therefore benefits twice (Kit + deep mods).
 4. **Gear quality still matters underneath the Kit.** The Kit's bonuses are constant, but the item satisfying it climbs Availability / echelon gear lists (street-grade → milspec / prototype). A Longshot Kit is deadlier with a high-Availability rifle than a cheap zip-gun even though the Kit line is unchanged — the Economy remains the axis of material progression, the Kit the axis of trained skill.
 
-**Firewall check:** a Kit costs no nuyen (it's training) and the gear costs no BP (it's an object). Neither converts into the other. The two economies stay separate and both stay meaningful.
+**Firewall check:** a Kit costs no nuyen (it's training) and the gear costs no character power (it's an object). Neither converts into the other. The two economies stay separate and both stay meaningful.
 
 ### What a Kit grants
 
@@ -118,16 +118,16 @@ Three light Kits built for the Wrench's subclasses (any class with light-Kit acc
 | **Bribes / favors** | Access, silence, fixers, corp doors |
 | **Wired access** | Decks, hosts, illegal node time, black-clinic install facilities |
 
-¥ never buys attributes, skills, class features, or BP/XP equivalents.
+¥ never buys attributes, skills, class features, or any other character power.
 
-### BP firewall (absolute)
+### Character-power firewall (absolute)
 
 **Money never buys character power.**
 
-- Attributes, skills, class features, heroic resources, and BP/XP spends stay on the class/build side.
+- Attributes, skills, class features, heroic resources, and XP-driven advancement stay on the class/build side.
 - ¥ buys **objects and services** (gear, chrome hardware, installs, bribes, access).
-- Chrome is the one exception that looks like power — and it is throttled by **Body Integrity** and magic erosion, not by a BP tax. See Chrome chapter.
-- Converting ¥ → BP (or BP → ¥) is illegal by design. Directors who want to grant a Background/Profession ¥ bonus may do so as liquid cash — still never as free attributes or class picks.
+- Chrome is the one exception that looks like power — and it is throttled by **Body Integrity** and magic erosion, not by a character-power cost. See Chrome chapter.
+- Converting ¥ into character power (or character power into ¥) is illegal by design. Directors who want to grant a Background/Profession ¥ bonus may do so as liquid cash — still never as free attributes or class picks.
 
 ### Starting package
 
@@ -175,7 +175,7 @@ Directors may pay partly in gear, chrome credits, or favors. Payouts should fund
 
 ### Kits ↔ Economy bridge
 
-**Kit doctrine never costs ¥.** A Kit is trained technique (class/BP side of the firewall), same as the Kits chapter.
+**Kit doctrine never costs ¥.** A Kit is trained technique (character-power side of the firewall), same as the Kits chapter.
 
 | Spend | ¥? |
 |---|---|
@@ -235,23 +235,24 @@ Gear is everything ¥ buys that isn’t chrome: general and lifestyle gear, armo
 
 ### Weapons
 
-- Every weapon names a **damage band** in its tags: **Light ≈ 4**, **Medium ≈ 6**, **Heavy ≈ 9**, **Anti-vehicle ≈ 14** (each varies by ±1–2 within its band). This is the weapon’s base damage.
-- Damage carries a **type tag** — kinetic, AP, electrical, fire, or toxin — that interacts with typed immunity and hostile-environment rules. Untagged damage is kinetic.
+- Every weapon names a **damage band** in its tags: **Light ≈ 4**, **Medium ≈ 6**, **Heavy ≈ 9**, **Anti-vehicle ≈ 14** (each varies by ±1–2 within its band). Weapon Power Roll results print in Draw Steel order — **low / middle / high**. When a weapon line gives a single number, that number is its **middle** result; a line that prints all three results uses those.
+- Damage carries a **type tag** that maps to Draw Steel damage: **electrical → lightning**, **toxin → poison**, **fire → fire**, **kinetic → untyped**, **AP → untyped** plus the AP gear note (ignores or reduces armor-as-Stamina per that gear’s rules; AP is not a damage type). Untagged damage is kinetic (untyped).
 - A Kit’s damage bonus lines add on top by Power Roll result (see What a Kit grants).
 
 ### Armor as Stamina
 
 Ghostwire has no armor class and no to-hit-versus-defense roll. Worn armor **raises your maximum Stamina** instead of reducing damage. The bonus scales with your hero **Echelon**:
 
-| Armor | Echelon 1 (Street) | Echelon 1 (Professional) | Echelon 2 | Echelon 3 | Echelon 4 | Encumbrance |
+| Armor | Echelon 1 (Street — default) | Echelon 1 (Professional) | Echelon 2 | Echelon 3 | Echelon 4 | Encumbrance |
 |---|---|---|---|---|---|---|
 | **Light** | +3 | +4 | +6 | +8 | +10 | None |
 | **Medium** | +6 | +8 | +11 | +14 | +18 | Bane on Stealth |
 | **Heavy** | +9 | +12 | +16 | +21 | +27 | −1 speed; bane on Stealth and Reflex tests for agility |
 | **Shield / riot board** (stacks with any armor) | +3 | +4 | +5 | +6 | +8 | Occupies one hand; bane on two-handed weapon use |
 
+- **Echelon 1 default is the Street column.** A 1st–3rd level hero uses Street unless they have bought Professional-Availability armor, which is the upgraded Echelon 1 option when Availability allows.
 - A hero with a Kit who wears the Kit’s qualifying armor uses the Kit’s Stamina bonus instead — the two never stack.
-- The **only** true damage reduction is **typed immunity** (fire, toxin, electricity, cold), carried by sealed and hardened specialty armor.
+- The **only** true damage reduction is **typed immunity** (fire, poison, lightning, cold), carried by sealed and hardened specialty armor.
 - Armor class shifts mod slots: **Heavy +1**, **Light −1**, **Medium** unchanged.
 
 ### Gear categories

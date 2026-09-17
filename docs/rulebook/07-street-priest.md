@@ -25,7 +25,7 @@ Mechanically, you are the crew's **divine switch-hitter**: genuinely competent a
 
 **Cyborgs cannot be Street Priests.** This is not a soft discouragement — it is **Arcane Severance**, the same hard species-locked rule that bars a Cyborg from every Veil-casting class in GHOSTWIRE. A body that has been substantially replaced with machine parts cannot hold a pact; the connection across the Veil requires a soul with room left in it, and a Full-Conversion chassis has none. Any of the other Eight Peoples may be a Street Priest of any subclass and either pact.
 
-**The chrome ceiling.** Even a Pure Human, Elvani, or Corran Street Priest who leans hard into Conviction can tolerate, at most, **a sliver of soft/bioware** — a single low-grade implant, the kind that barely counts as chrome at all. Anything heavier than that erodes the pact directly: your patron's attention is a finite thing, and a soul cluttered with machine parts is a poor vessel for it (see Kits & Chrome Interaction, below, for the exact erosion rule).
+**The chrome ceiling.** Even a Pure Human, Elvani, or Corran Street Priest who leans hard into Conviction still pays for every implant: chrome erodes the pact directly, shrinking your Conviction cap by the shared magic-erosion formula. Your patron's attention is a finite thing, and a soul cluttered with machine parts is a poor vessel for it (see Kits & Chrome Interaction, below, for the exact erosion rule).
 
 ---
 
@@ -78,7 +78,7 @@ Mechanically, you are the crew's **divine switch-hitter**: genuinely competent a
 
 **Outside combat.** You cannot *gain* Conviction outside combat, but you may spend Conviction-costed effects **as if you had Victories worth of Conviction** — this is how ministry, healing, warding, and pact-renewal happen during downtime scenes without breaking the encounter-scoped resource model.
 
-**Firewall note:** Conviction is a class resource on the BP/class side. It never touches **nuyen (¥)** or **Body Integrity**, and chrome never generates it — see Kits & Chrome Interaction, below.
+**Firewall note:** Conviction is a class resource on the character-power side. It never touches **nuyen (¥)** or **Body Integrity**, and chrome never generates it — see Kits & Chrome Interaction, below.
 
 > **What is Conviction?** *(Inline definition, so the term is never more than a paragraph away from first use.)* Conviction is the Street Priest's Heroic Resource: a pool representing your patron's active favor and how much of it you can spend calling aid across the Veil right now. It rises on a steady drip every turn (or via the prayer gamble's spike), and on acting squarely within your pact's creed. It falls when you sustain persistent workings, and resets to zero at the end of every encounter. It is spent on heroic abilities (grouped by cost, below) and on Spend-X enhancement riders. Signature abilities never cost Conviction.
 
@@ -484,11 +484,11 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 | **Reliquary / Sanctum Vessel / consecrated relic-housing** | Avail. specialist | 3 | ¥3,000 | An edge on healing/support invocations (the Shepherd) *or* anti-spirit rites (the Exorcist); houses a splinter of the pact's power. | 3 · Veil, Faith |
 | **Pact-seal / Foedus Sigil / covenant-manifestation seal** | Avail. milspec | 2 | ¥10,000 | An edge on Invoke the Pact and helps sustain the manifested aid at lower ongoing Conviction. | 4 · Veil, Summon |
 | **Exorcist's chain / Malleus Vinculum / abjuration binding-focus** | Avail. milspec | 2 | ¥11,000 | An edge on banishing and anti-corruption rites; the **Exorcist's signature tool** against hostile spirits. | 4 · Veil, Ward |
-| **Saint's relic / Numen Cor / apex covenant reliquary** | Avail. prototype | 1 | ¥22,000 | The Street Priest's masterwork: a broad edge across invocation, warding, and the pact, and the readiest signature-focus bond candidate (BP/SP deepens it). The Price still applies. | 5 · Veil, Signature-capable |
+| **Saint's relic / Numen Cor / apex covenant reliquary** | Avail. prototype | 1 | ¥22,000 | The Street Priest's masterwork: a broad edge across invocation, warding, and the pact, and the readiest signature-focus bond candidate (the bond deepens it). The Price still applies. | 5 · Veil, Signature-capable |
 
-**Chrome erosion rule (locked).** *"For every point of chrome-load essence above a sliver, permanently lose 1 max Conviction. Cyborgs cannot invoke pacts."* A high-tier Street Priest may tolerate, at most, **a sliver of soft/bioware** — a single low-grade implant — without penalty. Beyond that sliver, every additional point of chrome-load essence installed **permanently reduces your maximum Conviction cap by 1**, stacking with every subsequent point. This is not a temporary penalty and does not heal — it represents the pact itself growing thinner as your body fills with machine parts. There is no upper bound stated on this erosion; a Street Priest who chromes up heavily can, in principle, erode their Conviction cap to nothing, at which point the class stops functioning as a caster entirely (Director's call on whether the pact is considered broken at that point).
+**Chrome erosion rule.** Chrome reduces your **Conviction cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). It represents the pact itself growing thinner as your body fills with machine parts. A Street Priest who chromes up heavily can erode their Conviction cap to nothing, at which point the class stops functioning as a caster (Director's call on whether the pact is broken). Cyborgs cannot invoke pacts.
 
-**Cyborgs cannot invoke pacts — restated.** This is the hard species lock from the identity block, restated here for completeness: a Cyborg cannot take the Street Priest class at all, under any circumstances, per Arcane Severance. This is not the same rule as the chrome-erosion sliding scale above (which applies to non-Cyborg species who install cyberware) — it is an absolute bar at character creation.
+**Cyborgs cannot invoke pacts — restated.** This is the hard species lock from the identity block, restated here for completeness: a Cyborg cannot take the Street Priest class at all, under any circumstances, per Arcane Severance. This is not the same rule as the chrome-erosion sliding scale above (which applies to non-Cyborg heroes who install cyberware) — it is an absolute bar at character creation.
 
 ---
 

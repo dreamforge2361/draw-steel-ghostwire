@@ -58,7 +58,7 @@ You leave either connection state with the **Jack Out** Matrix Verb -- a clean d
 
 Every Track 2 target -- and the "system" side of any Wired encounter -- tracks its own **Integrity**: a Stamina-equivalent health pool that Programs and abilities damage directly (via your cyberdeck's Integrity Damage Bonus) rather than dealing physical damage. Reducing a Track 2 target to 0 Integrity takes it down, exactly as reducing a creature to 0 Stamina does.
 
-**Do not confuse this with Body Integrity** (the Chrome chapter's cyberware slot-budget resource, formula `6 + Physique (Might) + Echelon`). They share a name but are entirely different systems: Body Integrity is a permanent character-sheet capacity for how much chrome you can carry; Wired-system Integrity is an encounter-scoped health pool belonging to nodes, ICE, hostile Personas, and rival deckers.
+**Do not confuse this with Body Integrity** (the Chrome chapter's cyberware capacity resource, starting at **20** for every living non-Cyborg hero). They share a name but are entirely different systems: Body Integrity is a permanent character-sheet capacity for how much chrome you can carry; Wired-system Integrity is an encounter-scoped health pool belonging to nodes, ICE, hostile Personas, and rival deckers.
 
 | Wired-System Integrity by Node Tier | Integrity | Source |
 |---|---|---|
@@ -273,14 +273,14 @@ The Hacker whose value extends to the whole team, feeding allies edges and softe
 
 ### Chrome a Hacker Runs
 
-Cyberware relevant to the Wired -- from the Matrix & Signals implant category (Echelon grades E1 Salvage / E2 Standard / E3 Milspec / E4 Bioware):
+Cyberware relevant to the Wired -- from the Matrix & Signals implant category (chrome grades Salvage / Standard / Soft (Bioware); Milspec is an Availability band, not a chrome grade):
 
 - **Sub-Dermal Radio / Ghost Antenna** -- Wired signal-boosting implants.
 - **Encephalon / Cerebral Datastore** -- grants +1 Bandwidth/Uptime cap at E3, +2 Logic (Reason) on Matrix rolls at E4.
 - **Simsense Booster / Hot-Sim Adapter** -- sensory/interface boosters for deeper Wired immersion.
 - **Signal Ghost** -- signature-masking implant.
 
-Body Integrity (chrome capacity) uses the formula `6 + Physique (Might) + Echelon` (or the leaner `4 + Physique (Might) + Echelon`, still under review as of the Chrome Rules v1 draft) -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
 
 ---
 

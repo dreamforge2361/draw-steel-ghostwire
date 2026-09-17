@@ -86,7 +86,7 @@ Each chapter’s header shows **RAW status: draft** or **RAW status: locked**, a
 | **Epic resource** | A class’s 10th-level resource or capstone. | `24` |
 | **People** | Ghostwire’s name for an ancestry. | `05` |
 | **Background / Profession** | Ghostwire’s names for Draw Steel’s culture and career. | `06` |
-| **BP** | Build points: the character-power budget (characteristics, skills, class features). ¥ never converts into BP. | `08` |
+| **Character power** | Characteristics, skills, class features, and heroic resources — gained only from People, Background, Profession, class, perks, and advancement. ¥ never buys it. | `02`, `08` |
 | **Chrome** | Cyberware implants for living heroes. Costs ¥ and Body Integrity. | `09` |
 | **Body Integrity** | A living hero’s capacity for chrome. Starts at 20. Not used by Cyborgs. | `09` |
 | **Grade (chrome)** | Salvage, Standard, or Soft / Bioware — trades ¥ against Body Integrity. | `09` |
@@ -98,7 +98,7 @@ Each chapter’s header shows **RAW status: draft** or **RAW status: locked**, a
 | **Perk** | A trick of the trade; six types. | `11` |
 | **The Wired** | The network layer. The chapter about it is The Wire. | `21` |
 | **Connection state** | Disconnected, **Overlay** (partial immersion), or **Jacked In** (full immersion). | `21` |
-| **Persona (Wired)** | Your presence in the Wired. Not the Persona characteristic. | `21` |
+| **Avatar** | Your presence in the Wired. (**Persona** always means the characteristic.) | `21` |
 | **Node** | Anything addressable in the Wired. **Track 1** = objects and systems; **Track 2** = things that fight back. | `21` |
 | **Node Rating** | A node’s defense grade, 1 (street) to 5 (alpha). Not a level or echelon. | `21` |
 | **Integrity (Wired)** | A Track 2 node’s health pool. Not Body Integrity. | `21` |

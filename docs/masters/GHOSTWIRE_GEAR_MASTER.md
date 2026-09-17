@@ -23,9 +23,9 @@
 
 3. **Program installs (Category 4B+):** §Craft Project skill = **Hacking**.
 
-4. **Armor-as-Stamina** scales with the wearer’s hero **Echelon** (map old T5/T4 columns to E1 street vs professional as appropriate; T3→E2, T2→E3, T1→E4). Kit Stamina per echelon follows Draw Steel. Do not scale armor Stamina by a Ghostwire item-tier ladder.
+4. **Armor-as-Stamina** scales with the wearer’s hero **Echelon** (old T5 column = **Echelon 1 Street — the default** for 1st–3rd level; old T4 column = **Echelon 1 Professional**, the upgraded E1 option when Availability allows; T3→E2, T2→E3, T1→E4). Kit Stamina per echelon follows Draw Steel. Do not scale armor Stamina by a Ghostwire item-tier ladder.
 
-5. **Outcome Tier / Power Roll bands ≠ Item Tier.** Attack results use DS low / middle / high. Legacy “Outcome Tier” / “Hero Tier” prose in this file means Power Roll bands or hero **Echelon** respectively.
+5. **Power Roll bands ≠ Item Tier.** Weapon Power Roll results print in DS order — **low / middle / high**; a weapon line with a single number gives its **middle** result. Any leftover legacy “Tier-N” roll prose in this file means a Power Roll band (Tier 1 = high, Tier 2 = middle, Tier 3 = low); legacy “Hero Tier” means hero **Echelon**.
 
 6. **Slot integrity:** if an item has **modSlots > 0**, a published mod family must exist for that host family; otherwise set slots to **0**. Consumables never have mod slots. Full mod doctrine + Invent a Mod: `docs/rulebook/14-mods.md`.
 
@@ -61,25 +61,27 @@ Every item shares one template:
 
 ### The Damage-Bridge (governs Weapons, Category 3)
 
-Weapons carry an explicit **flat damage value** anchored to the Outcome-Tier damage bands (Appendix §A2), not a replacement for them:
+Weapons carry an explicit **flat damage value** anchored to the Power Roll damage bands (Appendix §A2), not a replacement for them:
 
-1. A weapon's listed damage **is its Weapon Base** — the "Tier-2 standard hit" figure. **Light ≈ 4, Medium ≈ 6, Heavy ≈ 9, Anti-vehicle ≈ 14**, each varying ±1–2 within its band to feel distinct.
-2. The **Outcome Tier still scales it** exactly as §A2 already says (Tier-1 rider, Tier-3 glancing, the attacker's Tier Power-Roll bonus).
+1. A weapon's listed damage **is its Weapon Base** — its **middle** Power Roll result. Weapon Power Roll results print in Draw Steel order — **low / middle / high**; a line that prints all three results uses those. **Light ≈ 4, Medium ≈ 6, Heavy ≈ 9, Anti-vehicle ≈ 14**, each varying ±1–2 within its band to feel distinct.
+2. The **Power Roll result still scales it** exactly as §A2 already says (high-result rider, low-result glancing, the attacker's Power Roll bonus).
 3. Each weapon names its band in Tags (`[Light]` / `[Medium]` / `[Heavy]` / `[Anti-veh]`).
-4. Damage also carries a **type tag** (kinetic / AP / electrical / fire / toxin) that hooks typed-Immunity armor and Hostile-Env. Untagged = kinetic by default.
+4. Damage also carries a **type tag** that maps to Draw Steel damage: **electrical → lightning**, **toxin → poison**, **fire → fire**, **kinetic → untyped**, **AP → untyped** plus the AP gear note (ignores or reduces armor-as-Stamina per that gear’s rules; AP is not a damage type). Tags hook typed-Immunity armor and Hostile-Env. Untagged = kinetic (untyped) by default. Item rows below keep the tag words; read them through this mapping.
 
 ### The Armor-as-Stamina Rule (governs Armor, Category 2)
 
 There is no armor class or to-hit-vs-defense roll. Worn armor **raises maximum Stamina** instead of reducing damage — the bonus scales with the wearer’s hero **Echelon** (legacy T5–T1 columns in the table below map per DS ALIGNMENT OVERRIDE) so it never becomes trivial at high echelons.
 
-| Armor Class | T5 | T4 | T3 | T2 | T1 | Encumbrance |
+| Armor Class | Echelon 1 (Street — default) · legacy T5 | Echelon 1 (Professional) · legacy T4 | Echelon 2 · T3 | Echelon 3 · T2 | Echelon 4 · T1 | Encumbrance |
 |---|---|---|---|---|---|---|
 | **Light** | +3 | +4 | +6 | +8 | +10 | None — full mobility |
 | **Medium** | +6 | +8 | +11 | +14 | +18 | Bane on Stealth |
 | **Heavy** | +9 | +12 | +16 | +21 | +27 | −1 Speed *and* bane on Stealth + Reflex-agility tests |
 | **Shield / riot board** (stacks with any armor) | +3 | +4 | +5 | +6 | +8 | Occupies one hand; bane on two-handed weapon use |
 
-The **only** true damage reduction in the game is **typed Immunity** (fire/toxin/electricity/cold), carried solely by sealed/hardened specialty gear (§2D). Item Tier never changes protection — only price, Availability, and mods (§Armor-2). Mod slots shift by class: **Heavy +1, Light −1, Medium unchanged** (§Armor-5).
+**Echelon 1 default is the Street column.** A 1st–3rd level hero uses Street unless they have bought Professional-Availability armor, which is the upgraded Echelon 1 option when Availability allows.
+
+The **only** true damage reduction in the game is **typed Immunity** (fire/poison/lightning/cold), carried solely by sealed/hardened specialty gear (§2D). Item Tier never changes protection — only price, Availability, and mods (§Armor-2). Mod slots shift by class: **Heavy +1, Light −1, Medium unchanged** (§Armor-5).
 
 ---
 
@@ -92,7 +94,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/toxin
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Profile | Slots | Tags |
 |---|---|---|---|---|---|---|
 | Burner / DataStick Comm / disposable transceiver | T5 | 5 | 60 | Basic encrypted call/text; no trace-hardening. Ditch after a run. | 1 | Wired, Consumable-ish |
-| Pocket Sec / CommLink Mk II / personal network node | T4 | 4 | 500 | Standard runner's phone-computer-node; runs your Matrix persona; holds up to 2 program mods. | 2 | Wired |
+| Pocket Sec / CommLink Mk II / personal network node | T4 | 4 | 500 | Standard runner's phone-computer-node; runs your Matrix avatar; holds up to 2 program mods. | 2 | Wired |
 | Spoof Kit / Identity Overlay / credential-forge suite | T3 | 3 | 2,500 | Edge on one Deception/impersonation or fake-credential check per scene; forged SIN passes casual scans. | 3 | Wired, Concealable |
 | Ghost Relay / Encrypted Mesh / anti-trace comm array | T2 | 2 | 9,000 | Crew-wide encrypted comms; bane on enemy attempts to trace or tap the crew's channel. | 4 | Wired |
 | Corp Blacklink / Executive Uplink / prototype quantum-comm | T1 | 1 | 35,000 | Untappable milspec comms + a genuine (rented) high-Availability SIN opening Lifestyle-2 doors while active. | 5 | Wired |
@@ -345,7 +347,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/toxin
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Profile | Slots | Tags |
 |---|---|---|---|---|---|---|
-| Scrapdeck / Refurb Cyberdeck / salvaged intrusion terminal | T5 | 5 | 300 | Runs a persona and a single program; bane on holding more than one compromised node at once. | 1 | Wired |
+| Scrapdeck / Refurb Cyberdeck / salvaged intrusion terminal | T5 | 5 | 300 | Runs an avatar and a single program; bane on holding more than one compromised node at once. | 1 | Wired |
 | Street Deck / Commlink-Deck / consumer intrusion rig | T4 | 4 | 1,200 | The workhorse runner's deck. Solid Bandwidth buffer, no special edges. | 2 | Wired |
 | Ghostbox / Pro Cyberdeck / professional intrusion suite | T3 | 3 | 5,000 | Edge on one Breach/Intrude per scene; onboard scrubber boosts Ghost-the-Log/Alert-scrub actions. | 3 | Wired, Concealable |
 | Blackdeck / Milspec Cyberdeck / hardened cyberwarfare platform | T2 | 2 | 15,000 | Edge on all EW/Disruptor verbs; larger Bandwidth reservoir; bane on enemy ICE trying to raise your Alert. | 4 | Wired |
@@ -503,7 +505,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/toxin
 
 ## Category 6 — Magical Foci & Ritual Components
 
-*Governing rulings: (1) Each focus lists a qualitative benefit tagged to the class resource it serves (Essence / Conviction / Resonance) — concrete magnitudes are deferred to the damage/status pass. (2) The signature-focus bond is the ONE sanctioned firewall crossing: a caster may permanently bond exactly one signature focus by paying BP/SP for a deeper, persistent benefit beyond the item's ordinary nuyen effect — every other focus stays pure nuyen. (3) The Necromancer's foci are reserved to the Necromancer class pass and are not included here.*
+*Governing rulings: (1) Each focus lists a qualitative benefit tagged to the class resource it serves (Essence / Conviction / Resonance) — concrete magnitudes are deferred to the damage/status pass. (2) The signature-focus bond is the ONE sanctioned firewall crossing: a caster may permanently bond exactly one signature focus through a class feature (e.g. the Elementalist's Signature Bond — never a ¥ or character-power purchase) for a deeper, persistent benefit beyond the item's ordinary nuyen effect — every other focus stays pure nuyen. (3) The Necromancer's foci are reserved to the Necromancer class pass and are not included here.*
 
 ### 6A — Elementalist foci (Essence / Cognition)
 

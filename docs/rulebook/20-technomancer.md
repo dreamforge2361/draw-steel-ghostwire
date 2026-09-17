@@ -92,7 +92,7 @@ And you fill a niche **no other class can touch**: because your magic *is* techn
 
 **End of encounter.** Unused Resonance is lost — the current fades, and you don't bank rapport between fights. **Sprites still compiled at encounter's end decompile** unless a feature explicitly says otherwise; they are temporary conjurations, not gear.
 
-**Firewall note.** Resonance is class power on the BP side of the firewall. It is never bought, raised, or fed by nuyen or Body Integrity. Chrome (light, for this class) or a resonance-tuned focus may make abilities **better** or **wider**, but does not manufacture Resonance — sprites are conjured by the mind, not purchased.
+**Firewall note.** Resonance is class power on the character-power side of the firewall. It is never bought, raised, or fed by nuyen or Body Integrity. Chrome (light, for this class) or a resonance-tuned focus may make abilities **better** or **wider**, but does not manufacture Resonance — sprites are conjured by the mind, not purchased.
 
 > **What is Resonance?** *(Inline definition, so the term is never more than a paragraph away from first use.)* Resonance is the Technomancer's Heroic Resource: the strength of your live bond with the Wired's spirit world, earned by attuning at the start of a fight and deepened as your congregation of sprites grows and lands effects, spent on heroic abilities and signature enhancements. It resets to zero at the start of every encounter and is fully lost at the end — you cannot bank a night's communion into tomorrow's run.
 
@@ -485,7 +485,7 @@ These are granted to **every** Technomancer regardless of discipline, layered on
 
 **Cyborg Mending (base, per Ruling #10).** Resonance Mending's Cyborg-target branch is available to you from 1st level regardless of discipline — see the full Deep Dive section above. This is the class's headline setting niche and is never discipline-gated.
 
-**Light Chrome Tolerance (per Ruling #13).** As a half-caster with genuine magic (Resonance), you experience chrome-driven magic erosion — but more gently than a full Veil caster. See the Kit & Chrome section immediately below for the full mechanical treatment.
+**Chrome Erosion.** You wield genuine magic (Resonance), so chrome erodes your Resonance cap by the same shared formula as every caster. See the Kit & Chrome section immediately below.
 
 **Arcane Severance Bar (per Ruling #12).** Cyborgs cannot take levels in the Technomancer class, under any circumstance, with no buy-back or exception. This is canon-inviolable. A character who becomes a Cyborg after already taking Technomancer levels immediately loses all access to Resonance, sprites, and every ability on this list until (and unless) the Cyborg conversion is reversed — treat this identically to how Arcane Severance already blocks Veil-caster classes elsewhere in canon.
 
@@ -493,23 +493,23 @@ These are granted to **every** Technomancer regardless of discipline, layered on
 
 ---
 
-### Kit & Chrome interaction (the half-caster on the fence)
+### Kit & Chrome interaction
 
 *Canon seed preserved from the Technomancer's class chapter (lines 4170-4183 of the master baseline), expanded here to match the granularity of the equivalent sections in the Hacker, Wrench, Elementalist, and Street-Priest masters.*
 
-The Technomancer sits deliberately **on the fence** of GHOSTWIRE's chrome-tolerance spectrum — neither chrome-positive like the Wired's other two classes, nor chrome-averse like the Veil's summoners:
+The Technomancer is a Wired class that still casts — so, unlike the Wired's other two classes, chrome costs it magic:
 
 | Class | Chrome Relationship |
 |---|---|
 | **Hacker / Wrench** | Chrome-positive — chrome enhances their tech-native abilities directly, no erosion at all. |
-| **Technomancer** | **Light tolerance** — chrome causes gentle magic erosion, but far softer than a full Veil caster's, and never severe enough to threaten the class's core kit. |
-| **Elementalist / Street-Priest** | Chrome-averse — chrome actively degrades their Veil-sourced magic, sometimes severely. |
+| **Technomancer** | **Erodes** — chrome shrinks the Resonance cap by the shared magic-erosion formula, the same as any caster. |
+| **Elementalist / Street-Priest** | Chrome-averse — chrome shrinks their Essence / Conviction cap by the same shared formula. |
 
-**Mechanically:** each point of Body Integrity spent on chrome beyond the Technomancer's **free allowance of 2** imposes a **cumulative −1 to Resonance-based Power Rolls** (capped at −3 total, unlike a full Veil caster's uncapped erosion curve). A Technomancer who chromes up heavily still functions — clumsily — where a Street-Priest or Elementalist in the same position would find their magic genuinely crippled.
+**Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). No caster is exempt.
 
-**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate; see the Wrench and Elementalist masters for the shared focus-item framework) can grant a **+1 to Resonance-based Power Rolls** without counting against the chrome-erosion allowance, since it is a mundane/technomantic item rather than integrated chrome.
+**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate; see the Wrench and Elementalist masters for the shared focus-item framework) can grant a **+1 to Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.
 
-**Why the fence matters narratively.** The Technomancer is the setting's proof that magic and machine were never actually opposites — just two dialects of the same underlying current. A Technomancer who chromes up too far isn't punished for betraying their magic (as a Street-Priest effectively would be); they're simply drowning out a quiet signal with too much noise. The gentleness of the erosion curve is the mechanical expression of that theme: the current doesn't reject chrome, it just gets harder to hear over it.
+**Why it matters narratively.** The Technomancer is the setting's proof that magic and machine were never actually opposites — just two dialects of the same underlying current. A Technomancer who chromes up too far isn't punished for betraying their magic; they're simply drowning out a quiet signal with too much noise. The erosion is the mechanical expression of that theme: the current doesn't reject chrome, it just gets harder to hear over it.
 
 ---
 

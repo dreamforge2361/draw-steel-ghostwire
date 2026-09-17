@@ -503,7 +503,7 @@ These are granted to **every** Technomancer regardless of discipline, layered on
 
 **Cyborg Mending (base, per Ruling #10).** Resonance Mending's Cyborg-target branch is available to you from 1st level regardless of discipline — see the full Deep Dive section above. This is the class's headline setting niche and is never discipline-gated.
 
-**Light Chrome Tolerance (per Ruling #13).** As a half-caster with genuine magic (Resonance), you experience chrome-driven magic erosion — but more gently than a full Veil caster. See the Kit & Chrome section immediately below for the full mechanical treatment.
+**Chrome Erosion (per Ruling #13; locked 2026-09-17).** You wield genuine magic (Resonance), so chrome erodes your Resonance cap by the same shared formula as every caster. See the Kit & Chrome section immediately below.
 
 **Arcane Severance Bar (per Ruling #12).** Cyborgs cannot take levels in the Technomancer class, under any circumstance, with no buy-back or exception. This is canon-inviolable. A character who becomes a Cyborg after already taking Technomancer levels immediately loses all access to Resonance, sprites, and every ability on this list until (and unless) the Cyborg conversion is reversed — treat this identically to how Arcane Severance already blocks Veil-caster classes elsewhere in canon.
 
@@ -511,23 +511,23 @@ These are granted to **every** Technomancer regardless of discipline, layered on
 
 ---
 
-### Kit & Chrome interaction (the half-caster on the fence)
+### Kit & Chrome interaction
 
 *Canon seed preserved from the Technomancer's class chapter (lines 4170-4183 of the master baseline), expanded here to match the granularity of the equivalent sections in the Hacker, Wrench, Elementalist, and Street-Priest masters.*
 
-The Technomancer sits deliberately **on the fence** of GHOSTWIRE's chrome-tolerance spectrum — neither chrome-positive like the Wired's other two classes, nor chrome-averse like the Veil's summoners:
+The Technomancer is a Wired class that still casts — so, unlike the Wired's other two classes, chrome costs it magic:
 
 | Class | Chrome Relationship |
 |---|---|
 | **Hacker / Wrench** | Chrome-positive — chrome enhances their tech-native abilities directly, no erosion at all. |
-| **Technomancer** | **Light tolerance** — chrome causes gentle magic erosion, but far softer than a full Veil caster's, and never severe enough to threaten the class's core kit. |
-| **Elementalist / Street-Priest** | Chrome-averse — chrome actively degrades their Veil-sourced magic, sometimes severely. |
+| **Technomancer** | **Erodes** — chrome shrinks the Resonance cap by the shared magic-erosion formula, the same as any caster. |
+| **Elementalist / Street-Priest** | Chrome-averse — chrome shrinks their Essence / Conviction cap by the same shared formula. |
 
-**Mechanically:** each point of Body Integrity spent on chrome beyond the Technomancer's **free allowance of 2** imposes a **cumulative −1 to Resonance-based Power Rolls** (capped at −3 total, unlike a full Veil caster's uncapped erosion curve). A Technomancer who chromes up heavily still functions — clumsily — where a Street-Priest or Elementalist in the same position would find their magic genuinely crippled.
+**Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`docs/rulebook/12-chrome.md`). No caster is exempt.
 
-**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate; see the Wrench and Elementalist masters for the shared focus-item framework) can grant a **+1 to Resonance-based Power Rolls** without counting against the chrome-erosion allowance, since it is a mundane/technomantic item rather than integrated chrome.
+**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate; see the Wrench and Elementalist masters for the shared focus-item framework) can grant a **+1 to Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.
 
-**Why the fence matters narratively.** The Technomancer is the setting's proof that magic and machine were never actually opposites — just two dialects of the same underlying current. A Technomancer who chromes up too far isn't punished for betraying their magic (as a Street-Priest effectively would be); they're simply drowning out a quiet signal with too much noise. The gentleness of the erosion curve is the mechanical expression of that theme: the current doesn't reject chrome, it just gets harder to hear over it.
+**Why the fence matters narratively.** The Technomancer is the setting's proof that magic and machine were never actually opposites — just two dialects of the same underlying current. A Technomancer who chromes up too far isn't punished for betraying their magic (as a Street-Priest effectively would be); they're simply drowning out a quiet signal with too much noise. The erosion is the mechanical expression of that theme: the current doesn't reject chrome, it just gets harder to hear over it.
 
 ---
 
@@ -594,7 +594,7 @@ This section documents the Foundry VTT implementation of the Technomancer class 
 | Sprite-Weaver discipline features | 6 | 1st, 2nd, 3rd, 5th, 7th, 8th |
 | Machine-Whisperer discipline features | 6 | 1st, 2nd, 3rd, 5th, 7th, 8th |
 | Resonance-Warrior discipline features | 6 | 1st, 2nd, 3rd, 5th, 7th, 8th |
-| Core class features (non-subclass) | 5 | Wired Native, Congregation Sense, Cyborg Mending (base), Light Chrome Tolerance, Arcane Severance Bar |
+| Core class features (non-subclass) | 5 | Wired Native, Congregation Sense, Cyborg Mending (base), Chrome Erosion, Arcane Severance Bar |
 | Sprite archetype definitions | 4 | Data-sprite, Attack-sprite, Machine-sprite, Ward-sprite (implemented as summon-actor templates, not items — see Known Bugs #13) |
 | **Total loose items (excl. class item + sprite actors)** | **43** | 3 signatures + 22 heroics (2+4+4+4+4+4, incl. capstone counted separately) + 18 discipline features + 5 core features — see final summary message for the reconciled authoritative count |
 
@@ -808,7 +808,7 @@ Following the same `Hooks.on()` pattern used by the Wrench module's drone-fleet 
 14. **Compile cost (3 Resonance base, 2 for Sprite-Weaver)** — invented numeric baseline; needs a check against how quickly this lets a Technomancer field their full sprite cap relative to encounter length (a 2-sprite cap filled in the first two turns is a very different pacing than one filled over five turns).
 15. **Harmonic Echo trigger wording** ("first time each round one of your sprites lands an effect") — adapted from the Elementalist's damage-taken-nearby trigger, but changed from a damage-received trigger to an effect-landed trigger. Confirm this reskin still counts as an honest "conjured-presence" trigger per Ruling #2's exact framing, or whether it drifted during the reskin.
 16. **Biofeedback DC ladder numeric values** (12/15/18/20 for cost 5/7/9/11) — invented to match the shape of Michael's approved severity softening (Ruling #9) but the specific numbers were not separately blessed; needs confirmation these land at the intended difficulty relative to the class's Physique save modifier at each level.
-17. **Chrome-erosion cap** ("free allowance of 2, cumulative −1 per point beyond that, capped at −3") — fully invented numeric treatment of Ruling #13's "light tolerance" concept; the free-allowance-of-2 and hard cap-of-3 numbers are GHOSTWIRE-original choices with no canon or SRD precedent, unlike the Veil casters' erosion curve (if one already exists in a sibling master, confirm consistency).
+17. **Chrome-erosion model** — *superseded 2026-09-17:* the earlier Technomancer-only gentle erosion (a capped per-point Power Roll penalty) is retired; the class uses the shared Chrome magic-erosion formula like every caster.
 18. **Resonance Mending's biofeedback interaction** ("only triggers if total spend on a single use reaches 5+") — this is a GHOSTWIRE-original clarification of how the cost-5 floor (Ruling #9) applies to an ability whose base cost is 0 but which can be enhanced arbitrarily high by spending multiple Resonance points on separate enhancement picks; confirm this reading matches Michael's intent for how "ability cost" is measured on flexible-spend abilities generally (may affect other classes' similar abilities too).
 19. **"Restore a dead machine" minimum cost of 2 Resonance** (Resonance Mending enhancement) — an invented numeric floor distinguishing this enhancement from the cheaper 1-Resonance options; flag for consistency against the Street-Priest's own "revive from 0" costs if a directly comparable ability exists there.
 20. **Total Resonance's free-compile-ignoring-cap clause** — invented interaction between the canon ability's name/cost/tier and the cap-ignoring rules text; canon only names the ability, not its full mechanical text, so this entire mechanical writeup (including the doubled Resonance drip) is a GHOSTWIRE-original completion of a canon stub.

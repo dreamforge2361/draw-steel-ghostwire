@@ -33,7 +33,7 @@ Use Draw Steel’s Malice rules. Ghostwire adds one source:
 
 ## Wired opposition
 
-ICE, hostile AI Personas, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).
+ICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).
 
 ## Scaling
 

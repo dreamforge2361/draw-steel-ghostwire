@@ -143,7 +143,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Battle Cry** *(3 Influence)*
 > *Ranged 10 · Target: three allies*
-> Power Roll + Persona. high (17+): each target gains **3 surges** (temporary Stamina equal to surges × Persona). middle (12–16): **2 surges** each. low (≤11): **1 surge** each.
+> Power Roll + Persona. high (17+): each target gains **3 surges**. middle (12–16): **2 surges** each. low (≤11): **1 surge** each.
 
 > **Concussive Command** *(3 Influence)*
 > *Ranged 10 · Target: one enemy*
@@ -174,7 +174,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Hit 'Em Hard!** *(7 Influence, maneuver)*
 > *Self, until end of encounter or you're dying*
-> Whenever you or any ally deals damage to a target Marked by you, that creature gains **2 surges** (temporary Stamina), usable immediately.
+> Whenever you or any ally deals damage to a target Marked by you, that creature gains **2 surges**, usable immediately.
 
 > **Rout** *(7 Influence, maneuver)*
 > *Self, until end of encounter or you're dying*
@@ -188,7 +188,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Coordinated Strike Team** *(9 Influence, main action)*
 > *Ranged 10 · Target: self and up to 2 allies*
-> Each target gains **1 surge** (temporary Stamina equal to your Persona score) and may use a signature ability as a **free triggered action** that has **double edge** on its Power Roll.
+> Each target gains **1 surge** and may use a signature ability as a **free triggered action** that has **double edge** on its Power Roll.
 
 > **Empire of Words** *(9 Influence, main action)*
 > *Social scene*
@@ -261,7 +261,7 @@ The whole undercity on speed-dial: deals, favors, and the fixer's web.
 | Level | Feature | Effect |
 |---|---|---|
 | **1** | **The Fixer's Web** | The strongest Contacts engine in the game (per the Followers/Contacts chapter): extra starting contacts, faster cultivation, mid-run favor calls. Edges to **Streetwise** legwork and negotiations framed around **Freedom/Greed/Vengeance**. Grants use of the **Covert Operations** mechanic — edges on intrigue-skill-group tests, using Lead to assist Streetwise/intrigue tests, and doing research/reconnaissance **during** negotiations. |
-| **1** | **Advanced Tactics** *(triggered)* | When an ally deals damage to your Marked target, the target gains **2 surges** (temporary Stamina) that the damaging ally can use on the triggering damage; spend **1 Influence** to increase potency by 1 if applicable. |
+| **1** | **Advanced Tactics** *(triggered)* | When an ally deals damage to your Marked target, the target gains **2 surges** that the damaging ally can use on the triggering damage; spend **1 Influence** to increase potency by 1 if applicable. |
 | **1** | **Undercity Whisper** *(triggered)* | Free triggered, once per encounter: when a Marked enemy or NPC is affected by one of your abilities, spend **1 Influence** to declare a contact from your Fixer's Web has intel on them — grants an automatic high-quality read on that target's Motivation. |
 | — | Subclass bonus skill | **Streetwise** (or a free pick from the intrigue skill group) |
 | — | Starting contact | A **fixer** or **gang lieutenant** |

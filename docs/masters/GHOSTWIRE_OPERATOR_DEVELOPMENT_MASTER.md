@@ -253,7 +253,7 @@ Kit choices are drawn from the shared `ghostwire-kits` compendium (19 possible k
 
 *(Not yet cross-referenced against `GHOSTWIRE-Chrome-Catalog-v1.md` for Operator-specific implant recommendations -- unlike the Hacker's Matrix & Signals lean, the Operator's chrome profile likely leans Combat/Reflex implant categories. Flagged as an open item for a future pass rather than guessed here, per Pre-Flight Doctrine.)*
 
-Body Integrity (chrome capacity) uses the same formula as every other class: `6 + Physique (Might) + Echelon` (or the leaner `4 + Physique (Might) + Echelon`, still under review per the Chrome Rules v1 draft) -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
 
 ---
 

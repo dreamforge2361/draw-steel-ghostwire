@@ -63,7 +63,7 @@ Uptime is machine-runtime — the fuel that keeps your fleet online, responsive,
 
 **Uptime Outside of Combat.** You can't gain Uptime outside of combat, but you can still use Uptime-costing abilities without spending it — the same convention as every other GHOSTWIRE Heroic-Resource class. Whenever you use an Uptime-costing ability outside of combat, you can't use that same ability outside of combat again until you earn 1 or more Victories or finish a respite.
 
-**Firewall note (Nuyen doctrine):** Uptime is a class resource on the BP/class side of the firewall. It never touches **nuyen** or **Body Integrity**, and chrome never generates it directly.
+**Firewall note (Nuyen doctrine):** Uptime is a class resource on the character-power side of the firewall. It never touches **nuyen** or **Body Integrity**, and chrome never generates it directly.
 
 **Uptime Cap Progression.** The soft cap on your Uptime pool rises with level: **base 10 Uptime at 1st level**, rising to **12 at 5th level**, rising to **14 at 10th level**.
 

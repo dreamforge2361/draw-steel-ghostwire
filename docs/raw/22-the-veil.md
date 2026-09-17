@@ -21,7 +21,7 @@ An ability with the **Magic** keyword draws on the Veil. Magic abilities follow 
 
 ## Chrome erodes magic
 
-Every point of Body Integrity a living caster spends on chrome shrinks their casting-resource **maximum** (Essence, Conviction, and similar):
+Every point of Body Integrity a living caster spends on chrome shrinks their casting-resource **maximum** (Essence, Conviction, Resonance):
 
 | Chrome grade | Casting-resource maximum reduced by |
 |---|---|
@@ -29,7 +29,7 @@ Every point of Body Integrity a living caster spends on chrome shrinks their cas
 | Soft / Bioware | 1 per 3 Integrity spent |
 | Salvage | 1 per 1 Integrity spent |
 
-These numbers are provisional (`09`). The Technomancer suffers a gentler version of this erosion (`20`).
+Every caster uses this one formula, the Technomancer included — there are no class-specific erosion models (`09`, `17`, `18`, `20`).
 
 ## Shared Veil-caster rules
 

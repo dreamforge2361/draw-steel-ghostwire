@@ -170,7 +170,7 @@ Fire, plasma, and destruction -- the archetypal blaster subclass. Grants the **A
 - **Fire Immunity** (5th) -- Immunity to fire damage equal to your Logic (Reason) score. You may walk through fire, sustain a Fire Wall from inside it, and no longer take ambient fire damage from a Cataclysm you sustain.
 - **Fury Rising** (6th) -- Whenever you spend 5 or more Essence in a single turn, gain **1 free surge** (available until end of your next turn) and your next Signature ability this encounter deals +Logic (Reason) extra damage.
 
-  > **What is a surge?** *(inherited Draw Steel term, carried into GHOSTWIRE unchanged)* A **surge** is a stored bonus you can spend on a single strike or ability roll to add **+2 damage to that roll** (scaling with Echelon: +2 at E4-5, +3 at E3, +4 at E2, +5 at E1 -- per DS SRD surge scaling). Surges are banked to the character and consumed when spent; they don't stack with themselves on a single strike unless an ability explicitly says otherwise (e.g., *"spend up to X surges on this strike"*). Fury Rising's "1 free surge" means: on any strike or ability roll of your choice before the end of your next turn, add the surge's damage to that roll. Sibling references: the Operator's Trigger Cadence (*"you surge 1"*), Precision Strike (*"spend 1 Adrenaline as part of any strike to surge 1"*), and Warzone Incarnate (*"gaining 1 surge per Adrenaline spent, for that strike"*) all use the same term the same way. **This box will move to a shared glossary in the master baseline once the numeric damage/status pass locks the exact per-Echelon surge value -- flagged as an author's-note per the Pre-Flight Doctrine.**
+  > **Surges** work as in Draw Steel Heroes; Ghostwire adds no surge variant. Fury Rising's "1 free surge" is an ordinary Draw Steel surge you can use until the end of your next turn.
 - **The Furnace Within** (8th) -- +1 bonus to Logic (Reason)-based power rolls. Whenever you would spend Essence on a fire/lightning/acid working, you spend **1 less** (minimum 0), once per round.
 
 **Specialization Abilities:**
@@ -313,15 +313,11 @@ The natural attachment points are the **magic/tech-flavored Kits** -- **Hexshot*
 
 **Warning to the player (table-enforced, per Ruling of 2026-07-28 -- Michael):** **A Cyborg species character can NEVER be an Elementalist -- Arcane Severance bars all magic access absolutely.** This is a species restriction, not a class restriction, and is enforced at character creation (Step 2 of the character-creation checklist), not by any mechanical gate on this class item. If you built a Cyborg thinking to play a hexer, rebuild your species or your class before the first session.
 
-For **all non-Cyborg** Elementalists, chrome is **strongly discouraged but not forbidden**. Per the Chrome Rules v1 **proportional magic-erosion** doctrine, cyberware collapses a mage's channeling. Concretely:
-
-- **Salvage-grade chrome:** each installed implant reduces your Essence cap by **1** and imposes a **-1 penalty** to your Channel ramp (permanent). Two Salvage implants cripple the class.
-- **Standard-grade chrome:** each installed implant reduces your Essence cap by **1** (but no ramp penalty). One or two Standard implants are survivable but noticeable.
-- **Soft/bioware:** the ONLY grade of chrome a serious Elementalist should install. Reduces Essence cap by **1 per two installed Soft implants** (rounded down -- so 1 Soft implant is free of penalty, 2 costs 1, 3 costs 1, 4 costs 2). A high-tier wealthy hexer *may* tolerate 3-4 Soft implants (a datajack for legwork, minimal sensory, subtle enhancement); anything more erodes Essence and shrinks the pet path.
+For **all non-Cyborg** Elementalists, chrome is **strongly discouraged but not forbidden**. Cyberware collapses a mage's channeling: chrome reduces your **Essence cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`docs/rulebook/12-chrome.md`). Soft is the only grade a serious Elementalist should install.
 
 This is the deliberate **street-sam-vs-mage** line: the Operator spends **Body Integrity** to grow stronger; the Elementalist **guards** their integrity to keep the Veil open. Chrome never generates Essence and never converts into class power (firewall intact).
 
-Body Integrity (chrome capacity) uses the same formula as every other class: `6 + Physique (Might) + Echelon` (or the leaner `4 + Physique (Might) + Echelon`, still under review per Chrome Rules v1 draft) -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
 
 *(No cross-reference against `GHOSTWIRE-Chrome-Catalog-v1.md` for Elementalist-specific implant recommendations has been done yet -- likely leans Sensory/Recovery categories (a datajack for corp records access, subtle body-integrity implants for spirit-attention resistance). Flagged as an open item for a future pass, per Pre-Flight Doctrine.)*
 

@@ -230,6 +230,6 @@ Kit choices are drawn from the same shared pool other classes draw from, not an 
 
 ## Chrome an Operator Runs
 
-Body Integrity (chrome capacity) uses the same formula as every other class: `6 + Physique + Echelon`.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero (`09-chrome-body-integrity.md`).
 
 ---

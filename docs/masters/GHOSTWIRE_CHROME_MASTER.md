@@ -5,19 +5,19 @@
 
 *Compiled for review, 2026-09-16. Canon source: "The Chrome chapter — cyber implants, Body Integrity, and the cost of flesh" in `master_rules_baseline.md` (added 2026-07-15, unchanged through the 2026-07-29 baseline). This is the augmentation path for any living, non-Cyborg hero: trade flesh for capability — a simplified, slightly streamlined take on Shadowrun's cyberware system. On any conflict with the quick-reference chrome page, this baseline text wins.*
 
-**Connects to:** the Cyborg species (the extreme end of this same spectrum), the body-location combat model, the corruption/soul themes and the Veil (why magic hates chrome), the Economy chapter (nuyen buys and installs it; the BP firewall holds), the Downtime chapter (installation/repair/removal are downtime work), and the conditions + Wired biofeedback systems (how chrome gets suppressed, damaged, and destroyed).
+**Connects to:** the Cyborg species (the extreme end of this same spectrum), the body-location combat model, the corruption/soul themes and the Veil (why magic hates chrome), the Economy chapter (nuyen buys and installs it; the character-power firewall holds), the Downtime chapter (installation/repair/removal are downtime work), and the conditions + Wired biofeedback systems (how chrome gets suppressed, damaged, and destroyed).
 
 ## The core distinction — implants are not Cyborgs
 
 This is the load-bearing line of the whole chapter.
 
 - **Cyber-augmented hero** = a living person (human, elf, ogre, revenant, etc.) whose implants **overlay** their natural chassis. They remain their species, keep their soul and their capacity for magic (though chrome erodes it), and are healed by ordinary means for the flesh parts. **Uses this chapter.**
-- **Full-Conversion Cyborg** (*Machina sapiens*, the species) = a **machine-first being** on an artificial chassis that has **replaced** the person — permanently Arcane-Severed, tech-only healing, capped humanity. **Does NOT use this chapter** — uses frame **modules** + BP instead.
+- **Full-Conversion Cyborg** (*Machina sapiens*, the species) = a **machine-first being** on an artificial chassis that has **replaced** the person — permanently Arcane-Severed, tech-only healing, capped humanity. **Does NOT use this chapter** — uses **Frame Modules** (bought with ¥) instead.
 - Pushing Body Integrity to zero does **not** turn a hero into a Cyborg — they flatline/die. Becoming a Cyborg is a character-creation species choice, never a chrome outcome. The two systems rhyme deliberately (both use slots, both trade humanity for power) but never merge.
 
 ## Design pillars
 
-1. **Chrome is bought with wealth and paid for in flesh — never in character-power budget.** Implants cost **nuyen** (to purchase and install) and **Body Integrity** (a permanent flesh-limit pool). They cost **no BP/XP/SP.** The Economy chapter's BP firewall holds absolutely: money and flesh buy chrome; chrome never buys attributes, skills, or class power directly. Balance lives in the Integrity cap and the magic-erosion cost, not in a build-point tax.
+1. **Chrome is bought with wealth and paid for in flesh — never in character-power budget.** Implants cost **nuyen** (to purchase and install) and **Body Integrity** (a permanent flesh-limit pool). They cost **no XP or character power.** The Economy chapter's character-power firewall holds absolutely: money and flesh buy chrome; chrome never buys attributes, skills, or class power directly. Balance lives in the Integrity cap and the magic-erosion cost, not in a character-power cost.
 2. **Every implant gives a real, situational benefit — and stacking is deliberately throttled.** Chrome should be worth it: a genuine capability (an edge, a new sense, a concealed weapon, a reaction boost). But raw numeric stacking is the enemy of balance, so three throttles apply at once: the **Body Integrity cap**, **body-location slot limits**, and a **no-double-dip rule**. A hero can be impressively chromed; never infinitely chromed.
 3. **Flesh is finite and the trade is permanent.** Body Integrity does not regenerate by resting. Once spent on an installed implant it is gone until that implant is surgically removed — a downtime project that returns most, not all, of its Integrity (scar tissue is real). Every implant is a genuine, weighty choice.
 4. **Chrome and magic are at war inside the body.** The same soul-stuff that channels the Veil is what chrome carves away. Every point of Body Integrity spent proportionally erodes a magic-user's casting capacity. Cheap, crude chrome cripples a mage; only rare, very expensive soft/bioware-grade implants at high tiers barely touch the soul — so a mage *can* run a little chrome, but only late and only at ruinous cost. This is the living-hero echo of the Cyborg's absolute Arcane Severance.
@@ -44,7 +44,7 @@ Every implant comes in **grades** that trade nuyen against Body Integrity — th
 | **Standard / Clinic** | Baseline | Baseline Integrity cost | Factory-grade, properly installed. The default. |
 | **Soft / Bioware** | Most expensive (often ruinously so) | Lowest Integrity cost (×0.4 of Standard, round up) | Grown, not bolted — vat-cultured, soul-friendly augmentation. Sips Integrity. The only grade a magic-user can realistically tolerate, and only at high tiers. |
 
-Grade is the knob that makes chrome a money-vs-flesh decision every time, and it is the mechanism behind the mage exception in Pillar 4: soft/bioware's tiny Integrity footprint is what lets a wealthy high-tier caster run a sliver of chrome without gutting their magic.
+Grade is the knob that makes chrome a money-vs-flesh decision every time, and it is the mechanism behind the mage exception in Pillar 4: soft/bioware's tiny Integrity footprint is what lets a wealthy high-tier caster run a little chrome without gutting their magic.
 
 **Representative per-implant Standard Integrity costs:** Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires/Encephalon 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1.
 
@@ -71,7 +71,7 @@ Implants occupy **body locations**, each with limited capacity — the anti-stac
 This is the rule that keeps the mage-versus-street-sam identity meaningful.
 
 - Every point of Body Integrity spent on implants proportionally reduces a magic-user's casting capacity (their magic resource pool / effective magic rating).
-- **Magic-erosion formula (provisional — playtest):** casting-resource cap reduced by **1 point per 2 Body Integrity spent** on Standard-grade chrome (round down); **1 per 3** for Soft/Bioware; **1 per 1** for Salvage.
+- **Magic-erosion formula (shared by every caster — Elementalist, Street Priest, Technomancer; no class-specific variants):** casting-resource cap reduced by **1 point per 2 Body Integrity spent** on Standard-grade chrome (round down); **1 per 3** for Soft/Bioware; **1 per 1** for Salvage.
 - **Grade is the mage's only escape valve.** Because soft/bioware costs the least Integrity, a wealthy caster can install a small amount with only a minor magic hit. Crude salvage/standard chrome guts a mage almost immediately.
 - **Tier gate:** genuinely low-erosion soft implants are high-tier, high-Availability, very expensive items — a mage running chrome is a late-game, rich-character archetype by design, never a starting build.
 - This is the living echo of Arcane Severance: the Cyborg has spent all their Integrity (pure chrome) and has zero magic, permanently. A cyber-augmented mage walks the first steps of that same road and pays the same currency — soul for chrome — just never to the bottom.
@@ -158,7 +158,7 @@ A starter cross-section so classes have concrete pegs to point at. Exact nuyen p
 - **Wrench / Medic / Technomancer** — the installers/menders. Their features should grant edges on install/repair project rolls, reduce botch risk, or unlock rare implants. Medic/street-doc = flesh surgeon, Wrench = hardware mechanic, Technomancer = neural/soft-code specialist.
 - **Hacker** — less about having chrome, more about attacking others' chrome across the Wired (suppress/damage hooks).
 - **Commander / Face** — lightest chrome footprint (soft social chrome — tailored vocal implants, empathy processors — but wary of the Persona-eroding reputation of visible metal).
-- **Casters (Elementalist / Street-Priest / Necromancer)** — strongly discouraged by Track 4. A high-tier, wealthy caster may install a sliver of soft/bioware; anything more collapses their magic. The deliberate street-sam-vs-mage identity line.
+- **Casters (Elementalist / Street-Priest / Necromancer)** — strongly discouraged by Track 4. Every caster uses the shared magic-erosion formula; Soft grade only, late and expensive — anything heavier collapses their magic. The deliberate street-sam-vs-mage identity line.
 - **Cyborg** — does not use this chapter at all (see core distinction).
 
 ## Still to come — numbers deferred to gear/costs and damage passes

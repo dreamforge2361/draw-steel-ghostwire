@@ -24,15 +24,13 @@ Advantage is the Scout's fuel, and it explicitly represents **the read** — the
 
 **Advantage in Combat.** At the start of a combat encounter or other stressful situation tracked in rounds (Director's call), you gain Advantage equal to your Victories. At the start of each of your turns during combat, you gain **1d3 Advantage** (rising to **1d3+1** at 7th level via **Sharper Eye**).
 
-Additionally, the first time each combat round that you deal damage incorporating **1 or more surges** (see the **Surge** box, below, for the full definition), you gain **1 Advantage** (rising to **2** at 4th level via **Surge of Advantage**, and **3** at 10th level via **Death Pool**).
+Additionally, the first time each combat round that you deal damage incorporating **1 or more surges** (surges work as in Draw Steel Heroes), you gain **1 Advantage** (rising to **2** at 4th level via **Surge of Advantage**, and **3** at 10th level via **Death Pool**).
 
 Whenever you use a heroic ability that makes use of a **power roll**, that ability costs 1 fewer Advantage if you have an **edge** or **double edge** on it. If the ability has multiple targets, the cost is reduced even if the ability gains an edge or has a double edge against only one target.
 
 You lose any remaining Advantage at the end of the encounter.
 
-> **What is a Surge?**
->
-> A **surge** is a stored, one-shot damage-boost token. Mechanically, a surge is banked by the character (Coat the Blade, Careful Observation, Ghost Suite, Trained Assassin, and several signatures generate surges) and spent by adding **+2 damage to a strike (Echelon 1)**, scaling **+3 damage at Echelon 2, +4 at Echelon 3, +5 at Echelon 4**. A single strike can incorporate multiple surges, stacking. Surges never persist between encounters — any unspent surge is lost at encounter end.
+**Surges** use the Draw Steel Heroes rules unchanged; Ghostwire adds no surge variant.
 
 **Advantage Outside of Combat.** You can't gain Advantage outside of combat, but you can still use your heroic abilities and effects that cost Advantage without spending it. Whenever you use an ability or effect outside of combat that costs Advantage, you can't use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite. When you use an ability outside of combat that lets you spend **unlimited** Advantage on its effect (such as the Ghost subclass's **Grapnel-Blink**), you can use it as if you had spent an amount of Advantage equal to your Victories.
 
@@ -249,7 +247,7 @@ Grants the **Lie** skill. Starter Kit: **Cloak & Dagger** or **Rapid-Fire**.
 - **Keep It Down** (4th) — While conversing with any creature you share a language with, you can decide whether anyone else can perceive what you are conveying, **even while yelling**.
 - **Night Watch** (4th, passive + triggered) — **Passive:** while you are hidden, enemies take a bane on tests made to search for you or other hidden creatures within 10 squares of you. **Triggered ability (Ranged 5, weapon, 1 ally):** target takes damage from another creature's ability while you are hidden → target takes **half** the damage; you remain hidden.
 - **Surge of Advantage** (4th) — The first time each combat round that you deal damage incorporating 1 or more surges, you gain **2 Advantage** instead of 1 *(replaces the base 1-Advantage-per-surge rider)*.
-- **Ghost Suite** (6th, maneuver) — Ghost Suite is a class-granted chrome integration installed during the Scout's Echelon-2 progression respite — it is treated as class-side gear (BP-granted), not a nuyen/Body-Integrity purchase, and does not consume a chrome slot or stack magic-erosion penalties. As a maneuver, you activate the suite; you enter Ghost Suite mode until end of encounter, until you are dying, or until you deactivate after 1 hour of quiet focus outside of combat. Effects:
+- **Ghost Suite** (6th, maneuver) — Ghost Suite is a class-granted chrome integration installed during the Scout's Echelon-2 progression respite — it is treated as class-granted gear, not a nuyen/Body-Integrity purchase, and does not consume a chrome slot or stack magic-erosion penalties. As a maneuver, you activate the suite; you enter Ghost Suite mode until end of encounter, until you are dying, or until you deactivate after 1 hour of quiet focus outside of combat. Effects:
   - You can automatically climb at full speed while moving (mag-grip gauntlet/boot integration).
   - Enemies' spaces do not count as difficult terrain for you. An enemy takes **thermal-optic damage equal to your Reflex score** the first time you pass through their space on a turn.
   - If you end your turn with cover or concealment from another creature, you are automatically hidden from that creature.

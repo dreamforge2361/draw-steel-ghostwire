@@ -137,8 +137,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "ICE, hostile AI Personas, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).",
-        "content": "<p>ICE, hostile AI Personas, and rival deckers are stated on the <strong>System Stat Card</strong> by <strong>Node Rating 1–5</strong> (<code>21</code>). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).</p>"
+        "markdown": "ICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).",
+        "content": "<p>ICE, hostile AIs, and rival deckers are stated on the <strong>System Stat Card</strong> by <strong>Node Rating 1–5</strong> (<code>21</code>). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).</p>"
       },
       "category": null,
       "ownership": {

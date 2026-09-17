@@ -6,13 +6,13 @@
 **Foundry:** Integrity resource + sample implants **next** (after Michael review); class packs after. Exact ¥ prices deferred to gear pass.
 
 **Design locks:**
-- Chrome costs **¥ + Body Integrity**, never BP/XP/class power
-- **Cyborgs do NOT use this chapter** (machine-first; Arcane Severance; frame modules + BP)
+- Chrome costs **¥ + Body Integrity**, never XP or any other character power
+- **Cyborgs do NOT use this chapter** (machine-first; Arcane Severance; **Frame Modules** bought with ¥)
 - Living chrome ≠ Cyborg species; Integrity 0 does not become Cyborg — it kills/flatlines
 - Body Integrity starts at **20** for non-Cyborgs
 - Grades: Salvage / Standard / Soft-Bioware
 - Removal returns 75% Integrity (round down), 25% scar loss
-- Magic erosion provisional: −1 cast-resource cap per 2 Integrity (Standard); per 3 Soft; per 1 Salvage
+- Magic erosion (one shared formula for every caster): −1 cast-resource cap per 2 Integrity (Standard); per 3 Soft; per 1 Salvage
 
 ---
 
@@ -21,16 +21,16 @@
 | Path | What it is | System |
 |---|---|---|
 | **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |
-| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — frame **modules** + BP; **Arcane Severance**; **no Body Integrity** |
+| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |
 
 Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.
 
 ## Design pillars (5)
 
-1. **Chrome is wealth + flesh — never character-power budget.** No BP/XP/SP cost. Economy BP firewall holds.
+1. **Chrome is wealth + flesh — never character-power budget.** No XP or character-power cost. Economy character-power firewall holds.
 2. **Real situational benefits; stacking throttled.** Integrity cap + location slots + no-double-dip.
 3. **Flesh is finite; the trade is permanent.** Integrity does not regen by rest; removal returns most, not all.
-4. **Chrome and magic are at war.** Integrity spent erodes casting capacity (provisional formula below).
+4. **Chrome and magic are at war.** Integrity spent erodes casting capacity (shared formula below).
 5. **Chrome can fail you.** Suppressed / Damaged / Destroyed via conditions + Wired biofeedback.
 
 ## Body Integrity (start 20)
@@ -64,9 +64,9 @@ Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyb
 
 Slots are a hard ceiling independent of Integrity. Large implants may consume a whole location.
 
-## Magic erosion (provisional)
+## Magic erosion
 
-Casting-resource **cap** reduced by:
+Every living caster — Elementalist, Street Priest, Technomancer — uses this one formula. Casting-resource **cap** reduced by:
 
 | Grade installed | Cap loss |
 |---|---|
@@ -137,7 +137,7 @@ Exact ¥ and Availability: gear pass.
 - **Wrench / Medic** — installers/menders (hardware vs flesh).
 - **Hacker** — attack others' chrome across the Wired more than wear it.
 - **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.
-- **Casters (Elementalist / Street-Priest / …)** — Track 4 discourages; Soft sliver only late and expensive.
+- **Casters (Elementalist / Street-Priest / …)** — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.
 - **Cyborg** — **excluded** from this chapter entirely.
 
 
@@ -167,4 +167,4 @@ Itemized balance notes, package non-stacking detail, and deferred number lists l
 - Foundry: Body Integrity resource + sample implants (FOUNDRY-BUILD-PLAN **B8**)
 - Class packs after Integrity spike
 - Species/Background Integrity nudges — keep or flat 20?
-- Confirm magic-erosion provisional formula in playtest
+- Magic-erosion formula locked 2026-09-17 (shared by every caster; no class-specific variants)

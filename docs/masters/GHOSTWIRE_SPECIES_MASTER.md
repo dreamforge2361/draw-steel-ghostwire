@@ -2,7 +2,7 @@
 
 *Compiled for review, 2026-09-16. Canon source: species sections in `master_rules_baseline.md`. All eight core species are fully detailed and the roster is complete (finalized 2026-07-15). Attribute names are canonical: Physique, Reflex, Cognition, Insight, Resolve, Presence. On any conflict with individual chapter pages, the baseline document wins.*
 
-All species share the unified template and Tier 5 → Tier 1 scaling framework. Species identity is **free at Tier 5** (the Starting Package); all further species growth is bought as tier-gated **Species Options** from the shared BP pool (Advancement: 5 XP = 1 BP), so species never outcompete class choices. Price bands: **Minor 2 BP · Standard 4 BP · Signature 6 BP.**
+All species share the unified template and Tier 5 → Tier 1 scaling framework. Species identity is **free at Tier 5** (the Starting Package); all further species growth was bought as tier-gated **Species Options** from a shared advancement budget, so species never outcompete class choices. Option bands: **Minor · Standard · Signature** (legacy costs 2 / 4 / 6). *Legacy — superseded: `docs/rulebook/09-species.md` uses creation-time Draw Steel **ancestry points** only; the level-gated option menus below are kept as fiction / dev history.*
 
 ## Roster at a glance
 
@@ -60,19 +60,19 @@ Benchmarked against Draw Steel ancestries (1–2 free signature traits + ~6–8 
 - **Versatile:** once per mission, treat one untrained skill as trained for a single test.
 - **Detect the Supernatural:** maneuver — detect active supernatural creatures/objects/phenomena in a short radius; learn creature vs. object/effect. (Draw Steel-inspired.)
 
-### Species Options (BP-purchased, tier-gated)
+### Species Options (legacy, tier-gated)
 
 | Option | Cost | Min tier | Effect |
 |---|---|---|---|
-| Open Potential | 2 BP | T5 | Once per tier, ignore a non-tier species prerequisite on a qualifying BP buy |
-| Staying Power | 2 BP | T5 | +1 Recovery (repeatable once at T3) |
-| Broad Competence | 2 BP | T5 | Edge on one test/scene with a chosen skill group |
-| Sidestep *(movement)* | 2 BP | T5 | Once per round when hit by a strike, move a short distance before damage; may impose a bane if it breaks line/reach |
-| Social Instinct | 4 BP | T4 | Edge on first Presence test vs. each new NPC/faction rep per scene |
-| Determination | 4 BP | T4 | Once per scene end frightened/slowed/weakened on self (maneuver) |
-| Resist the Unnatural | 4 BP | T3 | Once per respite halve damage from a magic/psionic/corrupt source |
-| Adaptive Edge+ | 6 BP | T3 | +1 use of Adaptive Edge/scene (max 1/round) |
-| Boundless Adaptation | 6 BP | T2 | Once per scene convert Adaptive Edge into a double edge |
+| Open Potential | Minor | T5 | Once per tier, ignore a non-tier species prerequisite on a qualifying option buy |
+| Staying Power | Minor | T5 | +1 Recovery (repeatable once at T3) |
+| Broad Competence | Minor | T5 | Edge on one test/scene with a chosen skill group |
+| Sidestep *(movement)* | Minor | T5 | Once per round when hit by a strike, move a short distance before damage; may impose a bane if it breaks line/reach |
+| Social Instinct | Standard | T4 | Edge on first Presence test vs. each new NPC/faction rep per scene |
+| Determination | Standard | T4 | Once per scene end frightened/slowed/weakened on self (maneuver) |
+| Resist the Unnatural | Standard | T3 | Once per respite halve damage from a magic/psionic/corrupt source |
+| Adaptive Edge+ | Signature | T3 | +1 use of Adaptive Edge/scene (max 1/round) |
+| Boundless Adaptation | Signature | T2 | Once per scene convert Adaptive Edge into a double edge |
 
 **Setting hooks:** Least visibly altered by the cosmic war — ideal vessels, agents, converts, and victims. The baseline demographic institutions are built around them.
 
@@ -107,27 +107,27 @@ The Mutant's version of the Cyborg's hard limits — a permanent cost that can't
 ### Tier 5 starting package (free)
 
 - **Corruptive Flaw** — chosen above; permanent, scales with Load.
-- **Mutant Adaptation** — one free Minor mutation at creation (no BP, no Load).
+- **Mutant Adaptation** — one free Minor mutation at creation (no option cost, no Load).
 - **Aberrant Resilience** — once per respite reduce harm from a mutation or corruption effect by a small fixed amount.
 - **Reads as Wrong** — option to reveal mutant nature for edge on intimidation; taint-sense always identifies you. Cuts both ways.
 
-### Species Options — Mutations (BP, tier-gated; no slot cap)
+### Species Options — Mutations (legacy, tier-gated; no slot cap)
 
-Standard 4 BP = +1 Load · Signature 6 BP = +2 Load · Minor 2 BP = +0 Load. Corruption Load is the throttle instead of slots.
+Standard = +1 Load · Signature = +2 Load · Minor = +0 Load. Corruption Load is the throttle instead of slots.
 
 | Mutation | Cost | Min tier | Load | Effect |
 |---|---|---|---|---|
-| Dermal Hardening | 2 BP | T5 | 0 | Small fixed DR vs. physical hits |
-| Heightened Sense | 2 BP | T5 | 0 | Edge on perception tests for one chosen sense |
-| Prehensile Adaptation | 2 BP | T5 | 0 | Edge on climbing/balance/manipulation-under-pressure |
-| Chameleon Hide *(utility/stealth)* | 2 BP | T5 | 0 | Edge on Stealth (stationary/slow); can suppress the Visible Taint tell for one scene |
-| Toxic Blood | 4 BP | T4 | 1 | Melee attacker takes small corrosive/toxic damage in return |
-| Adrenal Mutation | 4 BP | T4 | 1 | Once per scene extra move action |
-| Regenerative Tissue | 4 BP | T3 | 1 | Once per respite recover Stamina outside rest (not at 0 Stamina) |
-| Natural Weaponry | 4 BP | T3 | 1 | Built-in melee weapon, can't be disarmed |
-| Corrupted Conduit | 6 BP | T3 | 2 | Once per scene short-range taint burst; then bane on next Resolve |
-| Apex Mutation | 6 BP | T2 | 2 | Once per scene double edge on a roll tied to signature mutation |
-| Living Weapon | 6 BP | T1 | 2 | Bio-weapon: extended reach; once per scene treat Outcome Tier 2 as Tier 1 |
+| Dermal Hardening | Minor | T5 | 0 | Small fixed DR vs. physical hits |
+| Heightened Sense | Minor | T5 | 0 | Edge on perception tests for one chosen sense |
+| Prehensile Adaptation | Minor | T5 | 0 | Edge on climbing/balance/manipulation-under-pressure |
+| Chameleon Hide *(utility/stealth)* | Minor | T5 | 0 | Edge on Stealth (stationary/slow); can suppress the Visible Taint tell for one scene |
+| Toxic Blood | Standard | T4 | 1 | Melee attacker takes small corrosive/toxic damage in return |
+| Adrenal Mutation | Standard | T4 | 1 | Once per scene extra move action |
+| Regenerative Tissue | Standard | T3 | 1 | Once per respite recover Stamina outside rest (not at 0 Stamina) |
+| Natural Weaponry | Standard | T3 | 1 | Built-in melee weapon, can't be disarmed |
+| Corrupted Conduit | Signature | T3 | 2 | Once per scene short-range taint burst; then bane on next Resolve |
+| Apex Mutation | Signature | T2 | 2 | Once per scene double edge on a roll tied to signature mutation |
+| Living Weapon | Signature | T1 | 2 | Bio-weapon: extended reach; once per scene treat Outcome Tier 2 as Tier 1 |
 
 ### Strains (loose concept families — not hard-divided)
 
@@ -182,18 +182,18 @@ Changers are one species with internal subtype lines. Every Changer is a permane
 | Reptile | +1 Resolve | Heat/vibration | Scaled Hide: DR vs. first hit/round; resist poison/heat/cold | Ambush Coil: edge Stealth stationary, edge first ambush attack, long stakeouts |
 | Avian | +1 Insight (→ +2 total) | Long-range sight | Aerial Poise: edge Acrobatics, no short-fall damage, short glide | Flight: full flight, edge aerial scouting/observation |
 
-### Species Options (BP, tier-gated)
+### Species Options (legacy, tier-gated)
 
 | Option | Cost | Min tier | Effect |
 |---|---|---|---|
-| Second Skin | 2 BP | T5 | One worn item survives into Beast Form (repeatable) |
-| Buried Humanity | 2 BP | T5 | Feral Tell bane only vs. actively hostile crowds |
-| Predator's Presence *(social/utility)* | 2 BP | T5 | Once per scene reveal your Feral Tell for an edge on Intimidation/coerce — turns the downside into a weapon |
-| Apex Senses | 4 BP | T4 | Add a second dominant sense |
-| Instinct Over Bait | 4 BP | T4 | Remove the Instinctive Response baiting downside |
-| Fluid Shift | 4 BP | T3 | Once per scene Shift as a free action |
-| Feral Surge | 6 BP | T3 | Once per scene in Hybrid: edge + increased effect on one attack |
-| Master of Forms | 6 BP | T2 | Gain a Hybrid/Beast benefit from a second family (needs fiction) |
+| Second Skin | Minor | T5 | One worn item survives into Beast Form (repeatable) |
+| Buried Humanity | Minor | T5 | Feral Tell bane only vs. actively hostile crowds |
+| Predator's Presence *(social/utility)* | Minor | T5 | Once per scene reveal your Feral Tell for an edge on Intimidation/coerce — turns the downside into a weapon |
+| Apex Senses | Standard | T4 | Add a second dominant sense |
+| Instinct Over Bait | Standard | T4 | Remove the Instinctive Response baiting downside |
+| Fluid Shift | Standard | T3 | Once per scene Shift as a free action |
+| Feral Surge | Signature | T3 | Once per scene in Hybrid: edge + increased effect on one attack |
+| Master of Forms | Signature | T2 | Gain a Hybrid/Beast benefit from a second family (needs fiction) |
 
 **Setting hooks:** Tied to primal, predatory, protective, or totemic forces — vulnerable to both sacred and corrupt influence. Viewed as dangerous, exotic, impure, or useful; recruited by black-ops groups, cults, and feral communities.
 
@@ -240,19 +240,19 @@ Reduced to 0 Stamina, a Revenant does not run the normal dying rules. Instead th
 
 Undying Return is not true immortality. Fire damage to an inert Revenant destroys them permanently. So do consecrated/annihilating "lay the dead to rest" effects and deliberate destruction of the inert body. Fire is the Revenant's dread.
 
-### Species Options (BP, tier-gated)
+### Species Options (legacy, tier-gated)
 
 | Option | Cost | Min tier | Effect |
 |---|---|---|---|
-| Echo of a Former Life *(utility)* | 2 BP | T5 | Reclaim one trait/skill from your former ancestry (repeatable) |
-| Grave Calm *(defense)* | 2 BP | T5 | Edge on Resolve vs. fear/intimidation/mind effects |
-| Deathspeaker *(social/utility)* | 2 BP | T5 | Edge to interact with/command lesser undead, ghosts, recent dead |
-| Withered Hardness *(defense)* | 4 BP | T4 | Bring Skeletal DR early, or deepen it at Skeletal |
-| Relentless Pursuer *(movement)* | 4 BP | T4 | Once per scene ignore difficult terrain + forced movement; never tire in a chase |
-| Vengeance Mark *(utility)* | 4 BP | T3 | Mark a creature; always know its direction on the same world |
-| Quickened Rising | 4 BP | T3 | Rise faster from Undying Return and with more Stamina |
-| Ephemeral Step *(movement/defense)* | 6 BP | T2 | Cheaper phasing; once per scene phase as a free action (needs Spectral) |
-| Wraithform Mastery *(capstone)* | 6 BP | T1 | Extended phasing at reduced cost; deeper kinetic resistance. No immunity — magic/elemental still land full |
+| Echo of a Former Life *(utility)* | Minor | T5 | Reclaim one trait/skill from your former ancestry (repeatable) |
+| Grave Calm *(defense)* | Minor | T5 | Edge on Resolve vs. fear/intimidation/mind effects |
+| Deathspeaker *(social/utility)* | Minor | T5 | Edge to interact with/command lesser undead, ghosts, recent dead |
+| Withered Hardness *(defense)* | Standard | T4 | Bring Skeletal DR early, or deepen it at Skeletal |
+| Relentless Pursuer *(movement)* | Standard | T4 | Once per scene ignore difficult terrain + forced movement; never tire in a chase |
+| Vengeance Mark *(utility)* | Standard | T3 | Mark a creature; always know its direction on the same world |
+| Quickened Rising | Standard | T3 | Rise faster from Undying Return and with more Stamina |
+| Ephemeral Step *(movement/defense)* | Signature | T2 | Cheaper phasing; once per scene phase as a free action (needs Spectral) |
+| Wraithform Mastery *(capstone)* | Signature | T1 | Extended phasing at reduced cost; deeper kinetic resistance. No immunity — magic/elemental still land full |
 
 **Setting hooks:** Walking proof death isn't final in the war. Light orders see a second chance — or an abomination to lay to rest. Dark One cults covet them as souls halfway to the other side. Corps that dabble in resurrection-tech create and hunt them. Every Revenant carries an unfinished purpose — a natural bridge to the Background/Career layer's "What Was Taken From You."
 
@@ -289,19 +289,19 @@ Standing bonus to stability: much harder to push, pull, knock prone, or forcibly
 | Cramped-Space Mastery | No penalties in tight/confined spaces; edge to squeeze, brace, navigate tunnels/ducts/wreckage/machinery |
 | Laborer's Read | Edge to assess structural integrity, load/rigging, mining/excavation, industrial machinery |
 
-### Species Options (BP-purchased, tier-gated)
+### Species Options (legacy, tier-gated)
 
 | Option | Cost | Min tier | Category | Effect |
 |---|---|---|---|---|
-| Ironhold Grip | 2 BP | T5 | Defense/utility | Can't be disarmed against your will; edge to hold/carry/hang on under duress |
-| Tunnel-Sense | 2 BP | T5 | Sensory | Short-range tremorsense through ground/solid surfaces — feel movement, digging, structural stress |
-| Beast of Burden | 2 BP | T5 | Utility | Physique treated as +1 for carrying/lifting/hauling; ignore first speed penalty from heavy loads |
-| Toxin-Forged Lungs | 4 BP | T4 | Defense | Once per respite, ignore or halve a gas/smoke/poison/airborne-hazard effect |
-| Set and Brace | 4 BP | T4 | Movement/defense | Maneuver: plant yourself; until you move, DR vs first hit each round + bane on shove/reposition attempts |
-| Unbreakable Will | 4 BP | T3 | Defense | Edge on Resolve tests vs fear, intimidation, coercion |
-| Guild-Clan Standing | 4 BP | T3 | Social/utility | Edge on social tests in Corran communities/labor guilds/undercity crews; foothold contact in most industrial districts |
-| Living Bulwark | 6 BP | T2 | Signature-lite | Once per scene become an immovable wall: allies behind you gain cover; forced-movement that would push you (or those you shield) fails |
-| Adamant Frame | 6 BP | T1 | Capstone | Standing Stamina/DR increase (tuned in damage pass) + immunity to prone/stun from purely physical force |
+| Ironhold Grip | Minor | T5 | Defense/utility | Can't be disarmed against your will; edge to hold/carry/hang on under duress |
+| Tunnel-Sense | Minor | T5 | Sensory | Short-range tremorsense through ground/solid surfaces — feel movement, digging, structural stress |
+| Beast of Burden | Minor | T5 | Utility | Physique treated as +1 for carrying/lifting/hauling; ignore first speed penalty from heavy loads |
+| Toxin-Forged Lungs | Standard | T4 | Defense | Once per respite, ignore or halve a gas/smoke/poison/airborne-hazard effect |
+| Set and Brace | Standard | T4 | Movement/defense | Maneuver: plant yourself; until you move, DR vs first hit each round + bane on shove/reposition attempts |
+| Unbreakable Will | Standard | T3 | Defense | Edge on Resolve tests vs fear, intimidation, coercion |
+| Guild-Clan Standing | Standard | T3 | Social/utility | Edge on social tests in Corran communities/labor guilds/undercity crews; foothold contact in most industrial districts |
+| Living Bulwark | Signature | T2 | Signature-lite | Once per scene become an immovable wall: allies behind you gain cover; forced-movement that would push you (or those you shield) fails |
+| Adamant Frame | Signature | T1 | Capstone | Standing Stamina/DR increase (tuned in damage pass) + immunity to prone/stun from purely physical force |
 
 **Setting hooks:** Bottom of the corp class ladder and they know it — natural runners, union agitators, undercity power-brokers, and reluctant heroes with real grievances. Light-aligned faiths find fertile ground among a people who value endurance, loyalty, and standing firm; the Dark One's agents prey on their resentment. Their tight guild-clans are information networks and safehouse chains a crew ignores at its peril. Because they breed true and remember everything, Corran feuds and debts run for generations.
 
@@ -344,19 +344,19 @@ Two always-on halves:
 | Elegant Bearing | Edge on social tests in status/refinement/beauty settings; assumed to belong |
 | Graceful Step | No penalties for difficult footing; small bonus to disengage/withdraw movement |
 
-### Species Options (BP-purchased, tier-gated)
+### Species Options (legacy, tier-gated)
 
 | Option | Cost | Min tier | Category | Effect |
 |---|---|---|---|---|
-| Silver Tongue | 2 BP | T5 | Social | Once per scene, treat a failed/middling social roll as one Outcome Tier better |
-| Duelist's Poise | 2 BP | T5 | Movement/defense | Edge to parry, riposte, or keep balance in a fight |
-| Perfect Recall | 2 BP | T5 | Utility | Edge to recall lore, names, faces, conversations, floor plans |
-| Unshakable Composure | 4 BP | T4 | Defense/mental | Can't be dazed or rattled; edge on Resolve vs social/supernatural pressure |
-| Disarming Beauty | 4 BP | T4 | Social/control | Maneuver: fix attention on one creature; until your next turn they take a bane on attacks vs anyone but you and to resist your influence |
-| Blur of Motion | 4 BP | T3 | Movement/defense | On Disengage/full-move, standing minor defense vs opportunity attacks + first ranged attack that round |
-| Court Connections | 4 BP | T3 | Social/utility | Edge on social tests in corp high society, patron-houses, media/diplomatic circles; foothold contact among the powerful |
-| Ephemeral Evasion | 6 BP | T2 | Signature-lite | Fluid evasion usable twice per scene; can fully avoid a non-area attack once per scene |
-| Untouchable Grace | 6 BP | T1 | Capstone | Standing defense/evasion increase (tuned later); always act as if you have cover vs first attack each round; enemies take a standing bane to grab/trip/restrain you |
+| Silver Tongue | Minor | T5 | Social | Once per scene, treat a failed/middling social roll as one Outcome Tier better |
+| Duelist's Poise | Minor | T5 | Movement/defense | Edge to parry, riposte, or keep balance in a fight |
+| Perfect Recall | Minor | T5 | Utility | Edge to recall lore, names, faces, conversations, floor plans |
+| Unshakable Composure | Standard | T4 | Defense/mental | Can't be dazed or rattled; edge on Resolve vs social/supernatural pressure |
+| Disarming Beauty | Standard | T4 | Social/control | Maneuver: fix attention on one creature; until your next turn they take a bane on attacks vs anyone but you and to resist your influence |
+| Blur of Motion | Standard | T3 | Movement/defense | On Disengage/full-move, standing minor defense vs opportunity attacks + first ranged attack that round |
+| Court Connections | Standard | T3 | Social/utility | Edge on social tests in corp high society, patron-houses, media/diplomatic circles; foothold contact among the powerful |
+| Ephemeral Evasion | Signature | T2 | Signature-lite | Fluid evasion usable twice per scene; can fully avoid a non-area attack once per scene |
+| Untouchable Grace | Signature | T1 | Capstone | Standing defense/evasion increase (tuned later); always act as if you have cover vs first attack each round; enemies take a standing bane to grab/trip/restrain you |
 
 **Setting hooks:** Top of the corp social ladder, rarely allowed to forget who put them there — gilded-cage resentment, patron intrigue, and the occasional beautiful runner who walks away from everything. Light-aligned faiths court them as influential converts; the Dark One's agents whisper that freedom lies in power, not patronage, and a discarded Elvani is fertile ground. Their salons and patron-houses are webs of favors, blackmail, and paydata. Long-lived and breeding true, an Elvani grudge can outlast the humans who earned it. Their mutual contempt with the Corran is a ready-made table-level tension.
 
@@ -399,19 +399,19 @@ Three linked parts:
 | Iron Stomach | Eat/drink/endure what sickens others; edge vs ingested poison, spoilage, privation |
 | Hard to Move | Edge to resist forced movement and being knocked prone (lighter cousin of the Corran's Unyielding) |
 
-### Species Options (BP-purchased, tier-gated)
+### Species Options (legacy, tier-gated)
 
 | Option | Cost | Min tier | Category | Effect |
 |---|---|---|---|---|
-| Sledgehammer Fists | 2 BP | T5 | Offense | Unarmed/improvised strikes hit harder; can damage structures, doors, cover |
-| Long Reach | 2 BP | T5 | Control | Extended reach; opportunity attacks and grabs a step beyond normal range |
-| Beast of Burden | 2 BP | T5 | Utility | Physique +1 again for carrying/dragging/encumbrance; haul an ally or heavy object at full speed |
-| Unstoppable Charge | 4 BP | T4 | Movement/offense | Move a straight line + hit: knock target back and push through to keep moving |
-| Cannot Be Weakened | 4 BP | T4 | Defense | Can't be made weakened; edge to resist exhaustion |
-| Terrifying Roar | 4 BP | T3 | Control/social | Once per scene maneuver: frighten nearby enemies who hear you until end of their next turn |
-| Living Battering Ram | 4 BP | T3 | Offense/utility | Break through walls/doors/barricades fast; edge to grapple, pin, throw creatures |
-| Bulwark of Flesh | 6 BP | T2 | Signature-lite | Once per scene living cover: allies behind you gain cover; intercept an attack on an adjacent ally at reduced damage |
-| Colossus | 6 BP | T1 | Capstone | Standing Stamina/DR/force-move increase (tuned later); size counts as Huge for grabs/bull-rushes; enemies take standing bane to move/trip/restrain you |
+| Sledgehammer Fists | Minor | T5 | Offense | Unarmed/improvised strikes hit harder; can damage structures, doors, cover |
+| Long Reach | Minor | T5 | Control | Extended reach; opportunity attacks and grabs a step beyond normal range |
+| Beast of Burden | Minor | T5 | Utility | Physique +1 again for carrying/dragging/encumbrance; haul an ally or heavy object at full speed |
+| Unstoppable Charge | Standard | T4 | Movement/offense | Move a straight line + hit: knock target back and push through to keep moving |
+| Cannot Be Weakened | Standard | T4 | Defense | Can't be made weakened; edge to resist exhaustion |
+| Terrifying Roar | Standard | T3 | Control/social | Once per scene maneuver: frighten nearby enemies who hear you until end of their next turn |
+| Living Battering Ram | Standard | T3 | Offense/utility | Break through walls/doors/barricades fast; edge to grapple, pin, throw creatures |
+| Bulwark of Flesh | Signature | T2 | Signature-lite | Once per scene living cover: allies behind you gain cover; intercept an attack on an adjacent ally at reduced damage |
+| Colossus | Signature | T1 | Capstone | Standing Stamina/DR/force-move increase (tuned later); size counts as Huge for grabs/bull-rushes; enemies take standing bane to move/trip/restrain you |
 
 **Setting hooks:** The muscle the corps point at problems — and the muscle those problems point back at when a Goliar decides he's had enough. Loyalty runs deep; memory of who treated them like people vs equipment runs deeper — fertile ground for the Light's message of dignity and the Dark One's promise of power to the discarded. A Goliar crew-boss commands respect no corp badge can buy. Their plain-spoken honesty makes them the most trusted crew member — or the one who never sees the double-cross coming. An angry Goliar coming through the wall ends most negotiations early.
 
@@ -423,7 +423,7 @@ Three linked parts:
 
 **Tagline:** Human-machine threshold beings — integrated, augmented, existentially unstable. Machine-first, distinct from cyber-augmented humans.
 
-*Chrome distinction: a living, non-Cyborg hero who wants implants uses the Chrome chapter (nuyen + Body Integrity). The Cyborg is the far end of that same spectrum — effectively all Body Integrity spent — and uses frame modules plus BP instead; it does NOT use the Chrome chapter.*
+*Chrome distinction: a living, non-Cyborg hero who wants implants uses the Chrome chapter (nuyen + Body Integrity). The Cyborg is the far end of that same spectrum — effectively all Body Integrity spent — and uses **Frame Modules** (bought with ¥) instead; it does NOT use the Chrome chapter.*
 
 **Attribute Profile:** +1 Cognition; choose +1 Physique or +1 Reflex; -1 Presence or -1 Resolve. Carries a Presence ceiling (species cap below the normal tier cap).
 
@@ -439,20 +439,20 @@ Three linked parts:
 
 **Signature Trait — Machine-First Chassis** · Emotionally Damped · System Crisis · Tech-Only Recovery · Arcane Severance · Frame module slots.
 
-### Species Options — Modules (BP, tier-gated, slot-limited)
+### Species Options — Modules (legacy, tier-gated, slot-limited; now **Frame Modules** bought with ¥ — `docs/rulebook/12-chrome.md`)
 
 | Module | Cost | Min tier | Effect |
 |---|---|---|---|
-| Reinforced Plating | 2 BP | T5 | DR vs. first hit each round (1 slot) |
-| Diagnostic Suite | 2 BP | T5 | Edge on Cognition to analyze machines/security/self (1 slot) |
-| Optical Sensor Array *(sensory)* | 2 BP | T5 | Low-light/thermal/magnification optics; edge on sight perception; ignore darkness/smoke banes on strikes (1 slot) |
-| Locomotion Upgrade *(movement)* | 4 BP | T4 | Servo-legs/treads/thruster; +speed and ignore one chosen difficult-terrain type (1 slot) |
-| Hardened Systems | 4 BP | T4 | Reduce EMP/invasive-tech/disruption severity by 1 step (1 slot) |
-| Repair Protocol | 4 BP | T4 | Once per respite restore Stamina (Tech-Only Recovery) (1 slot) |
-| Servo Overclock | 4 BP | T3 | Once per scene extra maneuver (1 slot) |
-| Integrated Weapon Mount | 4 BP | T3 | Built-in weapon, can't be disarmed/dropped (1 slot) |
-| Combat Governor Release | 6 BP | T2 | Once per scene double edge on attack/physical resist; bane on next Resolve (1 slot) |
-| Frame Expansion | 6 BP | T2 | +1 module slot (repeatable once at T1) |
+| Reinforced Plating | Minor | T5 | DR vs. first hit each round (1 slot) |
+| Diagnostic Suite | Minor | T5 | Edge on Cognition to analyze machines/security/self (1 slot) |
+| Optical Sensor Array *(sensory)* | Minor | T5 | Low-light/thermal/magnification optics; edge on sight perception; ignore darkness/smoke banes on strikes (1 slot) |
+| Locomotion Upgrade *(movement)* | Standard | T4 | Servo-legs/treads/thruster; +speed and ignore one chosen difficult-terrain type (1 slot) |
+| Hardened Systems | Standard | T4 | Reduce EMP/invasive-tech/disruption severity by 1 step (1 slot) |
+| Repair Protocol | Standard | T4 | Once per respite restore Stamina (Tech-Only Recovery) (1 slot) |
+| Servo Overclock | Standard | T3 | Once per scene extra maneuver (1 slot) |
+| Integrated Weapon Mount | Standard | T3 | Built-in weapon, can't be disarmed/dropped (1 slot) |
+| Combat Governor Release | Signature | T2 | Once per scene double edge on attack/physical resist; bane on next Resolve (1 slot) |
+| Frame Expansion | Signature | T2 | +1 module slot (repeatable once at T1) |
 
 ### Frames (active roster)
 
@@ -471,7 +471,7 @@ Two further frames are reserved for later.
 ## Related chapters
 
 - Unified template & scaling framework (Tier 5 → Tier 1)
-- Advancement (5 XP = 1 BP)
+- Advancement (XP)
 - Chrome chapter (cyber-implants for non-Cyborg heroes — nuyen + Body Integrity)
 - The Veil (spirit world — feeds Changer subtype flavor and the Mutant Corruption Load echo)
 - The Wired (Matrix/hacking/rigging — the Cyborg's tech-only frame overlaps here)

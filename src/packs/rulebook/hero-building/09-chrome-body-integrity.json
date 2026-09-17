@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "| Path | What it is | System |\n|---|---|---|\n| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |\n| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — frame **modules** + BP; **Arcane Severance**; **no Body Integrity** |\n\nPushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.",
-        "content": "<table>\n<thead>\n<tr>\n<th id=\"path\">Path</th>\n<th id=\"what_it_is\">What it is</th>\n<th id=\"system\">System</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Cyber-augmented hero</strong></td>\n<td>Living person (any non-Cyborg People); implants <strong>overlay</strong> flesh</td>\n<td><strong>This chapter</strong> — ¥ + Body Integrity</td>\n</tr>\n<tr>\n<td><strong>Full-Conversion Cyborg</strong> (<em>Machina sapiens</em>)</td>\n<td>Machine-first chassis; person <strong>replaced</strong></td>\n<td>Species rules — frame <strong>modules</strong> + BP; <strong>Arcane Severance</strong>; <strong>no Body Integrity</strong></td>\n</tr>\n</tbody>\n</table>\n<p>Pushing Integrity to zero does <strong>not</strong> turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.</p>"
+        "markdown": "| Path | What it is | System |\n|---|---|---|\n| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |\n| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |\n\nPushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"path\">Path</th>\n<th id=\"what_it_is\">What it is</th>\n<th id=\"system\">System</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Cyber-augmented hero</strong></td>\n<td>Living person (any non-Cyborg People); implants <strong>overlay</strong> flesh</td>\n<td><strong>This chapter</strong> — ¥ + Body Integrity</td>\n</tr>\n<tr>\n<td><strong>Full-Conversion Cyborg</strong> (<em>Machina sapiens</em>)</td>\n<td>Machine-first chassis; person <strong>replaced</strong></td>\n<td>Species rules — <strong>Frame Modules</strong> (¥); <strong>Arcane Severance</strong>; <strong>no Body Integrity</strong></td>\n</tr>\n</tbody>\n</table>\n<p>Pushing Integrity to zero does <strong>not</strong> turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.</p>"
       },
       "category": null,
       "ownership": {
@@ -147,9 +147,9 @@
       "flags": {}
     },
     {
-      "_id": "4gwgMzpQqi2IEB8c",
-      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.4gwgMzpQqi2IEB8c",
-      "name": "Magic erosion (provisional)",
+      "_id": "n9VkLv0D3FoRjDf5",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.n9VkLv0D3FoRjDf5",
+      "name": "Magic erosion",
       "type": "text",
       "sort": 600000,
       "title": {
@@ -165,8 +165,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Casting-resource **cap** reduced by:\n\n| Grade installed | Cap loss |\n|---|---|\n| Standard | **−1 per 2** Integrity spent (round down) |\n| Soft / Bioware | **−1 per 3** Integrity spent |\n| Salvage | **−1 per 1** Integrity spent |\n\nSoft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.",
-        "content": "<p>Casting-resource <strong>cap</strong> reduced by:</p>\n<table>\n<thead>\n<tr>\n<th id=\"grade_installed\">Grade installed</th>\n<th id=\"cap_loss\">Cap loss</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Standard</td>\n<td><strong>−1 per 2</strong> Integrity spent (round down)</td>\n</tr>\n<tr>\n<td>Soft / Bioware</td>\n<td><strong>−1 per 3</strong> Integrity spent</td>\n</tr>\n<tr>\n<td>Salvage</td>\n<td><strong>−1 per 1</strong> Integrity spent</td>\n</tr>\n</tbody>\n</table>\n<p>Soft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.</p>"
+        "markdown": "Every living caster — Elementalist, Street Priest, Technomancer — uses this one formula. Casting-resource **cap** reduced by:\n\n| Grade installed | Cap loss |\n|---|---|\n| Standard | **−1 per 2** Integrity spent (round down) |\n| Soft / Bioware | **−1 per 3** Integrity spent |\n| Salvage | **−1 per 1** Integrity spent |\n\nSoft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.",
+        "content": "<p>Every living caster — Elementalist, Street Priest, Technomancer — uses this one formula. Casting-resource <strong>cap</strong> reduced by:</p>\n<table>\n<thead>\n<tr>\n<th id=\"grade_installed\">Grade installed</th>\n<th id=\"cap_loss\">Cap loss</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Standard</td>\n<td><strong>−1 per 2</strong> Integrity spent (round down)</td>\n</tr>\n<tr>\n<td>Soft / Bioware</td>\n<td><strong>−1 per 3</strong> Integrity spent</td>\n</tr>\n<tr>\n<td>Salvage</td>\n<td><strong>−1 per 1</strong> Integrity spent</td>\n</tr>\n</tbody>\n</table>\n<p>Soft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.</p>"
       },
       "category": null,
       "ownership": {
@@ -305,8 +305,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "- **Operator / Scout** — natural heavy chrome; class edges on Integrity efficiency / combat implants.\n- **Wrench / Medic** — installers/menders (hardware vs flesh).\n- **Hacker** — attack others' chrome across the Wired more than wear it.\n- **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.\n- **Casters (Elementalist / Street-Priest / …)** — magic erosion discourages; Soft sliver only late and expensive.\n- **Cyborg** — **excluded** from this chapter entirely.",
-        "content": "<ul>\n<li><strong>Operator / Scout</strong> — natural heavy chrome; class edges on Integrity efficiency / combat implants.</li>\n<li><strong>Wrench / Medic</strong> — installers/menders (hardware vs flesh).</li>\n<li><strong>Hacker</strong> — attack others' chrome across the Wired more than wear it.</li>\n<li><strong>Commander / Face</strong> — light Soft social chrome; wary of visible metal vs Persona.</li>\n<li><strong>Casters (Elementalist / Street-Priest / …)</strong> — magic erosion discourages; Soft sliver only late and expensive.</li>\n<li><strong>Cyborg</strong> — <strong>excluded</strong> from this chapter entirely.</li>\n</ul>"
+        "markdown": "- **Operator / Scout** — natural heavy chrome; class edges on Integrity efficiency / combat implants.\n- **Wrench / Medic** — installers/menders (hardware vs flesh).\n- **Hacker** — attack others' chrome across the Wired more than wear it.\n- **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.\n- **Casters (Elementalist / Street-Priest / …)** — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.\n- **Cyborg** — **excluded** from this chapter entirely.",
+        "content": "<ul>\n<li><strong>Operator / Scout</strong> — natural heavy chrome; class edges on Integrity efficiency / combat implants.</li>\n<li><strong>Wrench / Medic</strong> — installers/menders (hardware vs flesh).</li>\n<li><strong>Hacker</strong> — attack others' chrome across the Wired more than wear it.</li>\n<li><strong>Commander / Face</strong> — light Soft social chrome; wary of visible metal vs Persona.</li>\n<li><strong>Casters (Elementalist / Street-Priest / …)</strong> — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.</li>\n<li><strong>Cyborg</strong> — <strong>excluded</strong> from this chapter entirely.</li>\n</ul>"
       },
       "category": null,
       "ownership": {

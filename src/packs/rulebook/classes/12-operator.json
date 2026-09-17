@@ -277,8 +277,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Body Integrity (chrome capacity) uses the same formula as every other class: `6 + Physique + Echelon`.",
-        "content": "<p>Body Integrity (chrome capacity) uses the same formula as every other class: <code>6 + Physique + Echelon</code>.</p>"
+        "markdown": "Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.OtC0jRxx9pr0SzEx]{Chrome & Body Integrity}).",
+        "content": "<p>Body Integrity (chrome capacity) starts at <strong>20</strong>, as for every living non-Cyborg hero (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.OtC0jRxx9pr0SzEx]{Chrome &amp; Body Integrity}).</p>"
       },
       "category": null,
       "ownership": {

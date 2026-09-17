@@ -86,7 +86,7 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 
 ## Core Class Features (Non-Subclass)
 
-- **Ghost Step** (3rd) -- Free Triggered Action, no Bandwidth cost. Trigger: a Track 2 target (ICE, hostile AI Persona, rival decker) targets you directly, OR the Alert Track increases from your own action. Effect: choose one -- immediately use a Maneuver-cost Matrix Verb for free, or cancel the Alert increase entirely (once per encounter).
+- **Ghost Step** (3rd) -- Free Triggered Action, no Bandwidth cost. Trigger: a Track 2 target (ICE, hostile AI, rival decker) targets you directly, OR the Alert Track increases from your own action. Effect: choose one -- immediately use a Maneuver-cost Matrix Verb for free, or cancel the Alert increase entirely (once per encounter).
 - **Exploit the Breach** (4th) -- Passive. Whenever your Deep Scan lands a high (17+), the target has a marked exploitable weakness until the end of the encounter (or until re-scanned). The next Track 1/Track 2 Wired-based hit against that target from you or an ally gains an edge, and a Track 2 hit also deals +2 Integrity damage. Only one target can be marked at a time.
 - **Improved Cyberdeck** (4th) -- Passive. +1 Intrusion Roll Modifier and +1 Integrity Damage Bonus at every result band, on top of whatever deck you're currently running. Granted by the class, not the deck.
 - **Dual Boot** (6th) -- Passive enabling a once-per-encounter Free Triggered Action: apply a second owned deck's Roll Modifier/Damage Bonus to a single Program/Verb/signature roll instead of your equipped deck's, whichever is better. Bandwidth Bonus, Alert Discount, Biofeedback Resistance, Reach, and Ghost Distance are unaffected -- only the roll/damage numbers swap.
@@ -99,7 +99,7 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 
 ## Subclass: Disruptor -- *Striker, Damage Amplification*
 
-The Hacker's offensive specialist: hard, fast, single-target Intrusion strikes that punish Track 2 targets and amplify the whole team's damage against ICE, hostile deckers, and AI Personas.
+The Hacker's offensive specialist: hard, fast, single-target Intrusion strikes that punish Track 2 targets and amplify the whole team's damage against ICE, hostile deckers, and hostile AIs.
 
 | Level | Feature | Effect |
 |---|---|---|
@@ -147,13 +147,13 @@ The Hacker whose value extends to the whole team, feeding allies edges and softe
 
 ## Chrome a Hacker Runs
 
-Cyberware relevant to the Wired -- from the Matrix & Signals implant category (Echelon grades E1 Salvage / E2 Standard / E3 Milspec / E4 Bioware):
+Cyberware relevant to the Wired -- from the Matrix & Signals implant category (chrome grades Salvage / Standard / Soft; higher-end implants are gated by Availability — `09-chrome-body-integrity.md`):
 
 - **Sub-Dermal Radio / Ghost Antenna** -- Wired signal-boosting implants.
 - **Encephalon / Cerebral Datastore** -- grants +1 Bandwidth/Uptime cap at E3, +2 Logic on Matrix rolls at E4.
 - **Simsense Booster / Hot-Sim Adapter** -- sensory/interface boosters for deeper Wired immersion.
 - **Signal Ghost** -- signature-masking implant.
 
-Body Integrity (chrome capacity) uses the formula `6 + Physique + Echelon` -- see `GHOSTWIRE-Chrome-Rules-v1.md` and `GHOSTWIRE-Chrome-Catalog-v1.md` for full install rules, Echelon/grade doctrine, and pricing.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero — see `09-chrome-body-integrity.md` for install rules and grades.
 
 ---

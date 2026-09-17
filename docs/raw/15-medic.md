@@ -59,7 +59,7 @@
 - **Established Protocols stay free** at all times — stabilizing a dying ally and identifying a substance never cost Reagents.
 - **Field Synthesis is encounter-only.** It's a scrounged, under-fire improvisation usable once per encounter (twice for a Street-Doc); it is not a free compound between encounters or in downtime.
 
-**Firewall note.** Reagents is class power on the BP side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned with BP/XP, never bought with money. **Nuyen (¥)** pays for *restocking* Reagents at respite and for *buying* better gear, foci, or tools — money buys **supply**, never **capability**. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.
+**Firewall note.** Reagents is class power on the character-power side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned through advancement, never bought with money. **Nuyen (¥)** pays for *restocking* Reagents at respite and for *buying* better gear, foci, or tools — money buys **supply**, never **capability**. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.
 
 > **What are Reagents?** Reagents are the Medic's Heroic Resource: a persistent kit-stock representing your actual physical medical and chemical supplies. You bank it to capacity at respite, spend it down across a run producing compounds and enhancing signatures, and it does **not** refill between encounters — only downtime restocking brings it back up.
 
@@ -105,8 +105,8 @@ Poisons, neurotoxins, blister agents, knockout gas, acid.
 
 | Property | Value |
 |---|---|
-| **Base** | **2 + Instinct** damage total over **2 rounds** (half each round, round up on the first tick) + **Weakened** until the end of the target's next turn after the last tick |
-| **Enhanced (+2 Reagents)** | **4 + Instinct** damage over 2 rounds (same split) + **Weakened** and **Slowed** until the end of the target's next turn after the last tick |
+| **Base** | **2 + Instinct** poison damage total over **2 rounds** (half each round, round up on the first tick) + **Weakened** until the end of the target's next turn after the last tick |
+| **Enhanced (+2 Reagents)** | **4 + Instinct** poison damage over 2 rounds (same split) + **Weakened** and **Slowed** until the end of the target's next turn after the last tick |
 | **Effect** | Damage-over-time, debuffs, area-denial gas clouds |
 
 ---
@@ -131,7 +131,7 @@ Every Medic has these **three signatures**, free, at-will, from 1st level — no
 > *Main action · Distance: touch or thrown short (Ranged 5) · Target: one creature, ally OR enemy*
 > **Effect:** the same action heals a friend or harms a foe depending on what's loaded in the injector.
 > - **Ally target:** no roll. Deliver a Stimulant compound — the target gains +1 edge OR ignores 1 condition for 1 round. (Crash rider applies.)
-> - **Enemy target:** **Power Roll** 2d10 + Instinct. Deliver a Toxin compound — the target takes **2 + Instinct** damage over 2 rounds (half each round, round up on the first tick) and is **Weakened** until the end of its next turn after the last tick. Enhanced (+2 Reagents): **4 + Instinct** over 2 rounds, **Weakened** and **Slowed**.
+> - **Enemy target:** **Power Roll** 2d10 + Instinct. Deliver a Toxin compound — the target takes **2 + Instinct** poison damage over 2 rounds (half each round, round up on the first tick) and is **Weakened** until the end of its next turn after the last tick. Enhanced (+2 Reagents): **4 + Instinct** over 2 rounds, **Weakened** and **Slowed**.
 >
 > **Enhance (spend 2+ Reagents):** a stronger or longer-duration compound, or dose an extra target.
 
@@ -172,7 +172,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Toxic Cloud** *(3 Reagents)*
 > *Main action · Ranged area, cube 3 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or Instinct-vs-defense per Director's table). Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick; the zone becomes hazardous terrain — enemies must leave it or keep suffering.
+> No Power Roll (or Instinct-vs-defense per Director's table). Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** poison damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick; the zone becomes hazardous terrain — enemies must leave it or keep suffering.
 
 > **Rapid Field Diagnosis** *(3 Reagents)*
 > *Maneuver · Ranged area, burst 5 · Target: enemies in the burst*
@@ -213,7 +213,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Nerve Toxin** *(7 Reagents)*
 > *Main action · Ranged 10 · Target: one creature*
-> **Power Roll:** 2d10 + Instinct. **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks); target is Slowed and Weakened for the full duration.
+> **Power Roll:** 2d10 + Instinct. **6 + Instinct** poison damage total over **3 rounds** (equal ticks, round up on earlier ticks); target is Slowed and Weakened for the full duration.
 
 > **Chemical Interrogation** *(7 Reagents)*
 > *Main action · Ranged 5 · Target: one creature*
@@ -228,7 +228,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Chemical Warfare** *(9 Reagents)*
 > *Main action · Ranged area, cube 5 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or Instinct-vs-defense, Director's table). A massive gas cloud fills the area for 3 rounds. Every enemy in the area takes damage-over-time and is Weakened and Slowed; the zone remains hazardous terrain for its full duration.
+> No Power Roll (or Instinct-vs-defense, Director's table). A massive gas cloud fills the area for 3 rounds. Every enemy in the area takes poison damage-over-time and is Weakened and Slowed; the zone remains hazardous terrain for its full duration.
 
 > **Emergency Transfusion** *(9 Reagents)*
 > *Main action · Ranged 10 · Target: up to 4 allies*
@@ -251,7 +251,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Nerve Agent** *(11 Reagents)*
 > *Main action · Battlefield-wide (Director's table) · Target: all enemies present*
-> Each enemy makes a save or is Weakened and Slowed; all affected enemies take **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks) regardless of save result.
+> Each enemy makes a save or is Weakened and Slowed; all affected enemies take **6 + Instinct** poison damage total over **3 rounds** (equal ticks, round up on earlier ticks) regardless of save result.
 
 > **Full Kit Purge** *(minimum 11 Reagents)*
 > *Main action · Ranged 10 · Target: Director's table, scales with spend*

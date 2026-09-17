@@ -62,7 +62,17 @@ Worn armor raises maximum Stamina instead of reducing damage. The only true dama
 
 ### Damage types
 
-Draw Steel’s damage types are used unchanged. Ghostwire gear also tags damage as **kinetic** (untyped), **AP**, **electrical**, **fire**, or **toxin**.
+Draw Steel’s damage types are used unchanged. Ghostwire gear tags map onto them:
+
+| Gear tag | Draw Steel damage |
+|---|---|
+| Electrical | Lightning |
+| Toxin | Poison |
+| Fire | Fire |
+| Kinetic | Untyped |
+| AP (armor-piercing) | Untyped, plus the gear’s AP note (it ignores or reduces armor-as-Stamina as that gear’s rules say) |
+
+AP is a gear note, not a damage type.
 
 ### Connection states in combat
 

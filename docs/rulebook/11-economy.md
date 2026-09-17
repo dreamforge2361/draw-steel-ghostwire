@@ -7,7 +7,7 @@
 **Design locks (do not reopen in this draft):**
 - Ghostwire is world + module on **stock Draw Steel**; rulebook text first, Foundry later
 - **Nuyen (¥)** is the real currency
-- Chrome costs **¥ + Body Integrity**, never BP/XP/class power
+- Chrome costs **¥ + Body Integrity**, never XP or any other character power
 - Attributes remain Physique, Reflex, Logic, Instinct, Persona
 - Availability bands: street → professional → restricted → military → prototype (not a GW tier ladder)
 - Starting funds v1: **¥5,000** liquid + **one free starting Kit** (includes street-band qualifying gear)
@@ -17,7 +17,7 @@
 
 ## Purpose
 
-This chapter defines the **nuyen loop** for Ghostwire on Draw Steel: how heroes earn ¥, what ¥ buys, and the hard wall between money and character-power budget (BP/XP/class features).
+This chapter defines the **nuyen loop** for Ghostwire on Draw Steel: how heroes earn ¥, what ¥ buys, and the hard wall between money and character power (characteristics, skills, class features, XP-driven advancement).
 
 Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, kits' qualifying gear, bribes, lifestyle, and Wired access are material progression axes. Kits remain trained doctrine (see Kits chapter); the objects those doctrines need are Economy items.
 
@@ -32,16 +32,16 @@ Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, k
 | **Bribes / favors** | Access, silence, fixers, corp doors |
 | **Wired access** | Decks, hosts, illegal node time, black-clinic install facilities |
 
-¥ never buys attributes, skills, class features, or BP/XP equivalents.
+¥ never buys attributes, skills, class features, or any other character power.
 
-## BP firewall (absolute)
+## Character-power firewall (absolute)
 
 **Money never buys character power.**
 
-- Attributes, skills, class features, heroic resources, and BP/XP spends stay on the class/build side.
+- Attributes, skills, class features, heroic resources, and XP-driven advancement stay on the class/build side.
 - ¥ buys **objects and services** (gear, chrome hardware, installs, bribes, access).
-- Chrome is the one exception that looks like power — and it is throttled by **Body Integrity** and magic erosion, not by a BP tax. See Chrome chapter.
-- Converting ¥ → BP (or BP → ¥) is illegal by design. Directors who want to grant a Background/Profession ¥ bonus may do so as liquid cash — still never as free attributes or class picks.
+- Chrome is the one exception that looks like power — and it is throttled by **Body Integrity** and magic erosion, not by a character-power cost. See Chrome chapter.
+- Converting ¥ into character power (or character power into ¥) is illegal by design. Directors who want to grant a Background/Profession ¥ bonus may do so as liquid cash — still never as free attributes or class picks.
 
 ## Starting package (v1 locked)
 
@@ -89,7 +89,7 @@ Directors may pay partly in gear, chrome credits, or favors. Payouts should fund
 
 ## Kits ↔ Economy bridge (locked 2026-09-16)
 
-**Kit doctrine never costs ¥.** A Kit is trained technique (class/BP side of the firewall), same as the Kits chapter.
+**Kit doctrine never costs ¥.** A Kit is trained technique (character-power side of the firewall), same as the Kits chapter.
 
 | Spend | ¥? |
 |---|---|

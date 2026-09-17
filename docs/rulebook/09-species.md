@@ -7,13 +7,13 @@
 **Context:** Shared chargen / ancestry layer for all eight classes. Stock Foundry system is Draw Steel; Ghostwire is world + module. This chapter is **rulebook text only**.
 
 **Notes for Michael (review):**
-- All eight Peoples are now DS-style: free signature trait(s) + fixed ancestry-point budget + purchased-trait menu with DS costs. **No level-gated BP Species Options**.
+- All eight Peoples are now DS-style: free signature trait(s) + fixed ancestry-point budget + purchased-trait menu with DS costs. **No level-gated Species Options** — ancestry points are the only species budget.
 - **Mutant Human = Devil** chassis (mutagenic Ghostwire fiction). **Cyborg = Time Raider** chassis (chrome/full-conversion fiction).
 - Attribute labels locked: **Physique, Reflex, Logic, Instinct, Persona** (map from Might / Agility / Reason / Intuition / Presence).
 - Power Roll bands: **≤11 / 12–16 / 17+**.
 - Changer lineages are **Raven / Rat / Wolf** only (three forms = maneuver fiction). Older five-family subtype table retired.
 - Revenant **Decay ladder removed** as mechanics; fire while inert still destroys permanently (Tough But Withered).
-- Mutant **Corruption Load** BP mutation track retired; optional cosmetic Corruptive Flaw only (no Load bands).
+- Mutant **Corruption Load** mutation-purchase track retired; optional cosmetic Corruptive Flaw only (no Load bands).
 - Cyborg hard limits (Arcane Severance, tech-only recovery, System Crisis) are **chargen/setting constraints**, not ancestry-point costs.
 - Costs are **not invented** — copied from the mapped DS ancestry (or the Changer reskin master).
 
@@ -27,7 +27,7 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 2. A fixed **ancestry-point budget** spent across a purchased-trait menu
 3. **No per-level ancestry unlock track** and **no Ghostwire tier ladder** — growth after creation comes from class / characteristics / kits
 
-Do **not** buy species options with BP gated by level. That pattern is retired for all eight Peoples.
+Do **not** gate species options by level or buy them from any budget other than creation-time ancestry points. That pattern is retired for all eight Peoples.
 
 ---
 
@@ -84,7 +84,7 @@ Every People carries a **scientific** name (corp/lab classification), a **corpor
 - Three engineered class-breeds anchor the corp social ladder: the **Corran** (“Squat,” skilled-labor underclass), the **Goliar** (“Ogre,” heavy-labor/security muscle), and the **Elvani** (“Elf,” aesthetic aristocracy). Corran and Elvani are deliberate social opposites with mutual contempt.
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
 - **Revenants** are embodied undead. They use Draw Steel **Former Life** + **Tough But Withered** (inert instead of dying; fire while inert = permanent destruction). There is **no** level/echelon Decay ladder as a mechanical progression.
-- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation; the old Corruption Load BP mutation track is **retired** in favor of the Devil-chassis ancestry menu.
+- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation; the old Corruption Load mutation-purchase track is **retired** in favor of the Devil-chassis ancestry menu.
 - **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
 ---
@@ -352,7 +352,7 @@ Your taint twists how your words and presence are read, giving you a better read
 
 ### Corruptive Flaw (optional fiction)
 
-Visible taint and social “reads as wrong” are **fiction / Director color** layered on this package — not a second economy. The old **Corruption Load** meter and BP mutation track are **retired** in favor of this ancestry menu.
+Visible taint and social “reads as wrong” are **fiction / Director color** layered on this package — not a second economy. The old **Corruption Load** meter and mutation-purchase track are **retired** in favor of this ancestry menu.
 
 **Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only.
 
@@ -451,7 +451,7 @@ These limits are **Ghostwire setting and chargen rules**. They do **not** cost a
 ## Review checklist (Species) — for Michael
 
 - [x] All eight Peoples rewritten as creation-time DS ancestry packages (signature + points)
-- [x] No level-gated BP Species Options
+- [x] No level-gated Species Options (ancestry points only)
 - [x] Changer = Dragon Knight reskin (Raven/Rat/Wolf; three forms as maneuver fiction)
 - [x] Revenant Decay ladder removed; fire-while-inert kept
 - [x] Mutant Human = Devil (Aberrant Rapport + 3 pts menu)
@@ -464,4 +464,4 @@ These limits are **Ghostwire setting and chargen rules**. They do **not** cost a
 - [ ] Cross-check class chapters for residual tier / six-stat language
 - [ ] Optional: expand System Crisis into a Director table (not in this chapter)
 
-**Changelog (2026-09-16):** Changer lineages and forms now carry locked mechanics (Raven Walk + Fly, Rat size 1S, Wolf +2 speed; Human / Hybrid / Beast form edges and limits) instead of being fiction-only. Earlier: Added Mutant Human (Devil chassis) and Cyborg (Time Raider chassis) as full DS ancestry packages. Retired Mutant Corruption Load BP track (optional cosmetic Corruptive Flaw only). Revenant Former Life may now select Mutant or Cyborg. Earlier same-day pass: replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant.
+**Changelog (2026-09-16):** Changer lineages and forms now carry locked mechanics (Raven Walk + Fly, Rat size 1S, Wolf +2 speed; Human / Hybrid / Beast form edges and limits) instead of being fiction-only. Earlier: Added Mutant Human (Devil chassis) and Cyborg (Time Raider chassis) as full DS ancestry packages. Retired Mutant Corruption Load mutation-purchase track (optional cosmetic Corruptive Flaw only). Revenant Former Life may now select Mutant or Cyborg. Earlier same-day pass: replaced interim level-gated Species Options with DS ancestry-point packages for Pure Human, Corran, Elvani, Goliar, Changer, and Revenant.
