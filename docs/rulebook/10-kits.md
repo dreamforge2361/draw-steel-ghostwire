@@ -106,6 +106,17 @@ Weapon/armor "category" is what the Economy item must satisfy; bonus lines are i
 | Heavy / tank | Juggernaut, Warframe, Breacher, Bulldozer |
 | Melee / martial | Brawler, Mantis, Chromeblade, Reach, Monowhip, Snarehunter, Staff Adept, Duelist |
 | Magic/tech-flavored | Spellblade, Sanctified (plus Hexshot above) |
+| Tech / rigger | Fabricator's Bench, Rigger's Harness, Field Chassis |
+
+### Wrench rigger Kits (added 2026-09-16)
+
+Three light Kits built for the Wrench's subclasses (any class with light-Kit access can take them). Doctrine bonuses are a provisional light-Kit benchmark, in Draw Steel Power Roll order (low / middle / high); each signature is a 2/5/7 + characteristic ranged strike.
+
+| Kit | Gear category | Doctrine bonuses | Signature ability | Rigging bonus | Starter Kit for |
+|---|---|---|---|---|---|
+| **Fabricator's Bench** | Light sidearm + mobile tool rig; light armor | Stamina +3 · Speed +1 · Disengage +1 · Melee +1/+1/+1 · Ranged +1/+1/+1 · Ranged distance +5 | **Bench-Rigged Shot** — a machine you control within 5 regains 1/2/3 Integrity | +1 on Field Repair Power Rolls targeting your own drones | Drone Jockey |
+| **Rigger's Harness** | Light sidearm + neural control-interface mount; light armor | Stamina +3 · Speed +2 · Disengage +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Neural Snap Shot** — shift 1/2/2 (high: the target has a bane on its next strike against you) | +1 on Jump-In checks | Vehicle Rig-Pilot |
+| **Field Chassis** | Light sidearm + portable turret-control tablet; light armor | Stamina +3 · Speed +1 · Stability +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Tablet Crossfire** — middle/high: a machine or pre-placed asset you control gains an edge on its next strike against the target (high: target slowed) | +1 on Deploy checks for pre-placed assets | Facility Rigger |
 
 ---
 

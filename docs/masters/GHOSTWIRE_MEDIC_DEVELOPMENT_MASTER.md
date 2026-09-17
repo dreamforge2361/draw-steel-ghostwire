@@ -101,6 +101,10 @@ Your chemistry cuts both ways. The same compounds that heal an ally can drop an 
 
 **Cap & carry-over.** Unspent Reagents persist indefinitely between encounters within the same run; the stock is capped at your tier's kit capacity (you cannot bank more than the cap even by refusing to spend for several fights in a row); only a downtime refill restores you to full.
 
+**Reagents outside combat (locked 2026-09-16).** Reagents are a physical kit, so they **still spend outside combat**. Unlike the per-encounter Heroic Resources of other classes, a Medic does **not** get free out-of-combat uses of Reagent-costing abilities or signature enhancements: every dose used in a negotiation, an infiltration, or a quiet moment between fights comes out of the same bag.
+- **Established Protocols stay free** at all times — stabilizing a dying ally and identifying a substance never cost Reagents.
+- **Field Synthesis is encounter-only.** It's a scrounged, under-fire improvisation usable once per encounter (twice for a Street-Doc); it is not a free compound between encounters or in downtime.
+
 **Firewall note.** Reagents is class power on the BP side of the firewall — kit capacity, compound access, and all heroic abilities are class features earned with BP/XP, never bought with money. **Nuyen (¥)** pays for *restocking* Reagents at respite and for *buying* better gear, foci, or tools — money buys **supply**, never **capability**. A Medic with more nuyen refills the bag faster and starts each run closer to full; they never unlock a new compound family by spending cash.
 
 > **What are Reagents?** *(Inline definition, so the term is never more than a paragraph away from first use.)* Reagents are the Medic's Heroic Resource: a persistent kit-stock representing your actual physical medical and chemical supplies. You bank it to capacity at respite, spend it down across a run producing compounds and enhancing signatures, and it does **not** refill between encounters — only downtime restocking brings it back up. This is the class's defining resource-design quirk relative to every other GHOSTWIRE class.
@@ -147,8 +151,8 @@ Poisons, neurotoxins, blister agents, knockout gas, acid.
 
 | Property | Value |
 |---|---|
-| **Base** | Light-weapon-band damage over 2 rounds + Weakened |
-| **Enhanced (+2 Reagents)** | Medium-weapon-band damage over 2 rounds + Weakened AND Slowed |
+| **Base** | **2 + Instinct** damage total over **2 rounds** (half each round, round up on the first tick) + **Weakened** until the end of the target's next turn after the last tick |
+| **Enhanced (+2 Reagents)** | **4 + Instinct** damage over 2 rounds (same split) + **Weakened** and **Slowed** until the end of the target's next turn after the last tick |
 | **Effect** | Damage-over-time, debuffs, area-denial gas clouds |
 
 *Design note: these four families are the entire vocabulary of everything the Medic does. Every signature and every heroic ability below is built from one or more of these four buckets — a Restorative dressed up as a mass-heal, a Toxin dressed up as a gas cloud, a Stimulant dressed up as a whole-crew buff. Learning the four families is learning the class.*
@@ -178,7 +182,7 @@ Every Medic has these **three signatures**, free, at-will, from 1st level — no
 > *Main action · Distance: touch or thrown short (Ranged 5) · Target: one creature, ally OR enemy*
 > **Effect:** the same action heals a friend or harms a foe depending on what's loaded in the injector.
 > - **Ally target:** no roll. Deliver a Stimulant compound — the target gains +1 edge OR ignores 1 condition for 1 round. (Crash rider applies per Q3=A.)
-> - **Enemy target:** **Power Roll** 2d10 + Instinct (Intuition). Deliver a Toxin compound — the target takes light-weapon-band damage over 2 rounds + Weakened.
+> - **Enemy target:** **Power Roll** 2d10 + Instinct (Intuition). Deliver a Toxin compound — the target takes **2 + Instinct** damage over 2 rounds (half each round, round up on the first tick) and is **Weakened** until the end of its next turn after the last tick. Enhanced (+2 Reagents): **4 + Instinct** over 2 rounds, **Weakened** and **Slowed**.
 >
 > **Enhance (spend 2+ Reagents):** a stronger or longer-duration compound, or dose an extra target.
 > *This is the Medic's core identity beat — the exact same tool that saves your friend's life can end your enemy's. Nothing else in the class states the flex-lane fantasy more directly than this ability.*
@@ -228,7 +232,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Toxic Cloud** *(canon, 3 Reagents)*
 > *Main action · Ranged area, cube 3 (dist 10) · Target: enemies in the cube*
-> No Power Roll (or Instinct-vs-defense per Director's table, numeric pass). Deploy a gas cloud. Each enemy in the area takes light-weapon-band damage over 2 rounds + Weakened; the zone becomes hazardous terrain — enemies must leave it or keep suffering.
+> No Power Roll (or Instinct-vs-defense per Director's table, numeric pass). Deploy a gas cloud. Each enemy in the area takes the base Toxin dose — **2 + Instinct** damage over 2 rounds (half each round, round up on the first tick) and **Weakened** until the end of its next turn after the last tick; the zone becomes hazardous terrain — enemies must leave it or keep suffering.
 > *The Medic's area-denial signature — the same chemistry that saves lives, weaponized into a room nobody wants to stand in.*
 
 > **Rapid Field Diagnosis** *(3 Reagents, GHOSTWIRE-original)*
@@ -263,7 +267,13 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Anesthetize** *(5 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged 5 · Target: one enemy*
-> The target makes a Physique (Might) save vs. sleep/dazed. On a failure, the target is removed from the encounter for 1 round (unconscious, out cold).
+> **Power Roll:** 2d10 + Instinct (Intuition).
+>
+> | Tier | Effect |
+> |---|---|
+> | low (≤11) | **Dazed** until the end of its next turn. |
+> | middle (12–16) | **Dazed** (save ends). |
+> | high (17+) | **Unconscious** — removed from the fight until the end of its next turn, or until it takes damage (Director's call which). |
 > *A surgeon's tool turned weapon — the same anesthetic that puts a patient under safely can put an enemy down hard.*
 
 #### 7-Cost Tier (chosen at 3rd level) — includes Miracle Worker
@@ -274,7 +284,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Nerve Toxin** *(7 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged 10 · Target: one creature*
-> **Power Roll:** 2d10 + Instinct (Intuition). Heavy-weapon-band damage over 3 rounds; the target is Slowed and Weakened for the full duration.
+> **Power Roll:** 2d10 + Instinct (Intuition). **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks); target is Slowed and Weakened for the full duration.
 > *The class's heaviest single-target Toxin — the compound you save for the thing that really needs to go down slowly and stay down.*
 
 > **Chemical Interrogation** *(7 Reagents, GHOSTWIRE-original)*
@@ -324,7 +334,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 > **Nerve Agent** *(11 Reagents, GHOSTWIRE-original)*
 > *Main action · Battlefield-wide (Director's table, numeric pass on exact radius) · Target: all enemies present*
-> Each enemy makes a save or is Weakened and Slowed; all affected enemies take heavy-weapon-band damage over 3 rounds regardless of save result.
+> Each enemy makes a save or is Weakened and Slowed; all affected enemies take **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks) regardless of save result.
 > *Nerve Toxin's whole-battlefield apex form — the compound that ends fights by itself.*
 
 > **Full Kit Purge** *(minimum 11 Reagents, GHOSTWIRE-original)*
@@ -446,6 +456,7 @@ The scrappy, improvisational medic who's kept half the neighborhood alive withou
 | 6 | **Back-Alley Miracle** | Once per encounter, Emergency Patch may target 2 allies instead of 1 for no additional Reagent cost. |
 | 6 | **Fast Hands** | First Aid may be performed as a maneuver (instead of a main action) once per round, at base-tier effect only (no enhancement). |
 | 9 | **The Doc Who Never Left** | Once per session, treat a failed restock roll (nuyen shortfall, supplier unavailable) as a success — you find a way, no questions asked. |
+| 9 | **Last Syringe** | Once per session, when your kit is at 0 Reagents, produce one base (non-enhanced) compound for free. |
 
 *Corp cover: "unlicensed neighborhood doctor" / "street medical services." Bonus skill: streetwise/contacts, plus a fixer, ganger-clinic, or black-market-pharma contact. Chrome flavor: moderate, practical — the Street-Doc chromes up for utility, not showmanship.*
 
@@ -476,6 +487,7 @@ The licensed, polished practitioner — better product, cleaner delivery, and a 
 | 6 | **Reduced Comedown** | Your crash-rider penalty caps at −1 regardless of enhancement tier (the enhanced −2 never applies to compounds you produce). |
 | 6 | **Batch Processing** | Triage may target up to 5 allies instead of 4, for no additional Reagent cost. |
 | 9 | **Gold-Standard Protocol** | Once per session, produce any compound at maximum Pharmaceutical Grade bonus (both a magnitude/round/target bump AND the reduced crash) simultaneously, at no extra Reagent cost. |
+| 9 | **Crash Protocol Override** | Once per session, waive the crash rider entirely on one Stimulant compound you produce. |
 
 *Corp cover: "licensed medical practitioner" / "pharmaceutical specialist." Bonus skill: corporate/pharma-science, plus a corp-clinic, pharma-supplier, or medical-datahaus contact. Chrome flavor: clean, high-grade soft-bioware and diagnostic implants — nothing flashy, everything functional.*
 
@@ -506,6 +518,7 @@ The most chromed of the three specializations — a surgeon who has made the ope
 | 6 | **Surgical Precision** | Once per encounter, First Aid on a chrome-heavy or partial-Cyborg target automatically counts as Tier 1, regardless of the roll. |
 | 6 | **Overclock Protocol** | Once per encounter, grant a chromed ally (2+ pieces) a free Combat Stims-equivalent effect targeting only them, for 0 Reagents (crash rider still applies). |
 | 9 | **The Whole Package** | Once per session, perform a full chrome tune-up on an ally during a respite: they gain a temporary edge on their next chrome-reliant roll for the following encounter. |
+| 9 | **Emergency Excision** | Once per session, as a maneuver, disable one chrome implant on a touched enemy (or willing ally) until their next respite. No Body Integrity refund mid-fight. |
 
 *Corp cover: "cybertech specialist" / "surgical prosthetics engineer." Bonus skill: cybertech/mechanics, plus a chop-shop, ripperdoc-network, or chrome-fence contact. Chrome flavor: the most chromed of the three specializations — a surgeon's own implants, but still fully mundane; magic-erosion is irrelevant.*
 
@@ -646,6 +659,7 @@ The Medic ships to the same **`ghostwire`** Foundry module that houses the Opera
 - Street-Doc: Trash-Bin Chemistry, Regular Customer, Back-Alley Miracle, Fast Hands, The Doc Who Never Left (5)
 - Corp-Medtech: Datahaus Access, Pharma Supplier, Reduced Comedown, Batch Processing, Gold-Standard Protocol (5)
 - Ripperdoc: Chrome Whisperer, Black-Market Parts, Surgical Precision, Overclock Protocol, The Whole Package (5)
+- **Added 2026-09-16 (B26b lock):** a second 9th-level pick per specialization — Last Syringe (Street-Doc), Crash Protocol Override (Corp-Medtech), Emergency Excision (Ripperdoc) — for 18 total.
 
 **Subclass feature entries** (`ghostwire-classes` or `-abilities`, type `feature`, per-subclass ladder at L1 (×3 features)/L3/L5/L8 beyond the L2/L6/L9 ability picks): Street-Doc 5 (Make Do, Back-Alley Wits, Improvise!, Scrounger's Eye, Back-Alley Network, Nothing Wasted — actually 6, see note below), Corp-Medtech 6 (Pharmaceutical Grade, Licensed Protocol, Clean Delivery, Standardized Dosing, Corporate Requisition, Premium Stock), Ripperdoc 6 (Under the Knife, Metal & Meat, Cutter's Reflex, Steady Hands, Chop-Shop Connections, Nano-Adrenal Auto-Injector) = **18 total.**
 
@@ -770,7 +784,7 @@ system: {
 
 14. **INVENTED CONTENT FLAG — Established Protocols (L1 feature), ported from Troubadour's "Routines."** The two named rote procedures (stabilize a dying ally at 0 Stamina; identify a substance/toxin at a glance) are GHOSTWIRE-original choices layered onto the Troubadour's structural "2 rote procedures" chassis slot. Flagged for sign-off.
 
-15. **OPEN CONTENT ITEM — companion actor stat blocks for enemies affected by Toxin/Toxic Cloud/Nerve Toxin/Nerve Agent are not modeled here.** Exactly like the Elementalist's Summon Elemental (Elementalist Known Bugs #6) and the Street Priest's Invoke the Pact (Street Priest Known Bugs #7), the exact numeric magnitude of "light/medium/heavy-weapon-band damage" and the Weakened/Slowed condition stacking rules referenced throughout this document are deferred to the game's shared numeric pass. None of the damage numbers in this document should be treated as final until that pass runs.
+15. **OPEN CONTENT ITEM — companion actor stat blocks for enemies affected by Toxin/Toxic Cloud/Nerve Toxin/Nerve Agent are not modeled here.** Exactly like the Elementalist's Summon Elemental (Elementalist Known Bugs #6) and the Street Priest's Invoke the Pact (Street Priest Known Bugs #7), the exact numeric magnitude of "light/medium/heavy-weapon-band damage" and the Weakened/Slowed condition stacking rules referenced throughout this document are deferred to the game's shared numeric pass. None of the damage numbers in this document should be treated as final until that pass runs. *(Update 2026-09-16: resolved for Medic toxins — see #20.)*
 
 16. **VERIFICATION FLAG — Medical Consumables shelf items already exist in canon 1E; verify Foundry parity.** The 5-item shelf (Trauma Patch through Slap-Doc Kit) is drawn directly from `master_rules_baseline_2XP-1BP_2026-07-29.md`'s 1E chapter and should already be locked canon — but verify the Foundry items (if they exist in `ghostwire-items` already) match the ¥ cost and Availability values listed in this document exactly, since this document's table was transcribed from the lore extract rather than a live Foundry dump.
 
@@ -779,6 +793,10 @@ system: {
 18. **OPEN SCHEMA QUESTION — `persistAcrossEncounters` resource flag has no precedent in any shipped GHOSTWIRE class.** As noted in the Class Item Schema section above, every other class's Heroic Resource resets or refills at encounter boundaries; Reagents explicitly do not. Confirm whether Foundry's DS v1.1.1 system natively supports a non-resetting resource pool, or whether this requires a custom Active Effect / module-level workaround. This is a genuinely new implementation challenge, not just a new field name — flagged as the single highest-priority open technical question in this document.
 
 19. **OPEN SCHEMA QUESTION — `usesPerEncounter` field for Field Synthesis has no precedent in any shipped GHOSTWIRE class.** Field Synthesis is the first ability that is simultaneously zero-cost and capped by a non-resource mechanism (once per encounter). Confirm whether an existing "limited uses" field pattern exists in the DS v1.1.1 ability schema before inventing this wholesale.
+
+20. **RESOLVED 2026-09-16 — Medic toxin damage bands.** The light/medium/heavy weapon-band damage deferral is resolved for Medic Toxins: base 2 + Instinct and enhanced 4 + Instinct over 2 rounds, and Nerve Toxin / Nerve Agent 6 + Instinct over 3 rounds, are locked. Other classes may still defer weapon-band numbers.
+
+21. **RESOLVED 2026-09-16 — Medic chapter locks synced.** Anesthetize is a 2d10 + Instinct Power Roll (no Physique save); Reagents still spend outside combat (Established Protocols free, Field Synthesis encounter-only); each specialization's 9th-level table offers two picks.
 
 ### Source File Index
 

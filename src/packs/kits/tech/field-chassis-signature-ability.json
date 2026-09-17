@@ -1,0 +1,138 @@
+{
+  "_id": "A3PduPaBJLrjt0HE",
+  "_key": "!items!A3PduPaBJLrjt0HE",
+  "name": "GHOSTWIRE.Kits.FieldChassis.Signature.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-triple-strike-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tablet-crossfire",
+    "story": "GHOSTWIRE.Kits.FieldChassis.Signature.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility",
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "UCD26COkWKC4R0OO": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "UCD26COkWKC4R0OO",
+          "damage": {
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        },
+        "0P2cTe2xebXx2lIc": {
+          "name": "Crossfire",
+          "img": null,
+          "type": "other",
+          "_id": "0P2cTe2xebXx2lIc",
+          "other": {
+            "tier1": {
+              "display": "",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Kits.FieldChassis.Signature.Rider2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Kits.FieldChassis.Signature.Rider3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.FieldChassis.Signature.KitBonus",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

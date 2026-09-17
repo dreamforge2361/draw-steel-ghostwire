@@ -226,3 +226,12 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Subclass picker: Drone Jockey / Vehicle Rig-Pilot / Facility Rigger, each with its feature ladder (1–9) and ability picks at 1 (Base Tier), 3 (7-cost + Focus Fire), 5 (9-cost), 8 (11-cost)
   - [x] Four signatures at L1: Deploy & Command, Rigged Fire, Field Repair, Override Ping
   - [x] `node tools/build-packs.mjs` succeeds
+
+### B27b Wrench polish + B26c Medic toxin sync (2026-09-16)
+**B27b (module v0.1.34):** `05-wrench.md` locks — Overclock (once-per-encounter Deploy/Command burst: Uptime costs −2 min 1, machines +2 Integrity buffer, then one turn without fleet drip; v1), Jump-In buffer +4 → +5 at 6th and +5 → +6 at 7th, Uptime Economy Mastery at 9th (once per encounter, +2 Uptime drip tick). New Wrench features `jump-in-buffer-l6` (L6) and `uptime-economy-mastery` (L9); Overclock text replaced (L10). Three new Kits in `src/packs/kits/tech/` (Fabricator's Bench, Rigger's Harness, Field Chassis) with signature abilities, first in the Wrench Kit pool and named as each subclass's starter Kit (Quick Build). No subclass itemGrant of the Kit: the class Kit grant already picks one Kit, and a second grant would give two.
+**B26c:** Nerve Toxin / Nerve Agent 6 + Instinct over 3 rounds (chapter, master, Foundry); Medic master synced to the B26b locks; zero "weapon-band" left in `04-medic.md`.
+- [x] **B27b / B26c** — **Foundry-verified 2026-09-16**. Done when:
+  - [x] Wrench L6 (Jump-In Buffer +5), L7 (+6), L9 (Uptime Economy Mastery), L10 (Overclock) features appear with the new text
+  - [x] Kits pack has a Tech / rigger folder with Fabricator's Bench, Rigger's Harness, Field Chassis and their signatures; the Wrench Kit picker lists them first
+  - [x] Medic Nerve Toxin / Nerve Agent show 6 + Instinct over 3 rounds
+  - [x] `node tools/build-packs.mjs` succeeds (classes + kits)

@@ -1,0 +1,138 @@
+{
+  "_id": "IYZfD6QGPHPpFknO",
+  "_key": "!items!IYZfD6QGPHPpFknO",
+  "name": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Name",
+  "type": "ability",
+  "img": "icons/weapons/guns/gun-pistol-flintlock-metal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "bench-rigged-shot",
+    "story": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Story",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility",
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "dWHc61ZnhcenGMVD": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "dWHc61ZnhcenGMVD",
+          "damage": {
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              },
+              "ignoredImmunities": []
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              },
+              "ignoredImmunities": []
+            }
+          },
+          "sort": 0
+        },
+        "f58EkLCHbNfvVkht": {
+          "name": "Patch",
+          "img": null,
+          "type": "other",
+          "_id": "f58EkLCHbNfvVkht",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Rider1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Rider2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Rider3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "effects": {
+      "after00000000000": {
+        "_id": "after00000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Kits.FabricatorsBench.Signature.KitBonus",
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

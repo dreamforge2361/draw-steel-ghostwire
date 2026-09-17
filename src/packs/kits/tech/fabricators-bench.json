@@ -1,0 +1,79 @@
+{
+  "_id": "odaoLD5Zsk55krGJ",
+  "_key": "!items!odaoLD5Zsk55krGJ",
+  "name": "GHOSTWIRE.Kits.FabricatorsBench.Name",
+  "type": "kit",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.FabricatorsBench.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fabricators-bench",
+    "advancements": {
+      "lllSrmCP00rAHr9I": {
+        "name": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "lllSrmCP00rAHr9I",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.IYZfD6QGPHPpFknO"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "light"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 5
+      },
+      "stamina": 3,
+      "speed": 1,
+      "stability": 0,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

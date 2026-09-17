@@ -315,7 +315,8 @@
         "Finesse": "Gun/blade finesse",
         "Heavy": "Heavy / tank",
         "Melee": "Melee / martial",
-        "MagicTech": "Magic-tech"
+        "MagicTech": "Magic-tech",
+        "Tech": "Tech / rigger"
       },
       "Longshot": {
         "Name": "Longshot",
@@ -496,6 +497,41 @@
           "Name": "Veil Brand",
           "Story": "The impact brands your target for destruction.",
           "Effect": "<p>Until the end of the target’s next turn, they have damage weakness equal to [[lookup @chr]]{the characteristic score used for this ability’s power roll}.</p>"
+        }
+      },
+      "FabricatorsBench": {
+        "Name": "Fabricator’s Bench",
+        "Description": "<p>A mobile tool rig slung across the back, a sidearm on the hip, and every pocket full of spare servos. The Drone Jockey’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a mobile tool rig; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +1 · Disengage +1 · Melee damage +1/1/1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> <strong>+1</strong> on Field Repair power rolls that target <strong>your own drones</strong>.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.IYZfD6QGPHPpFknO]{Bench-Rigged Shot}</p>",
+        "Signature": {
+          "Name": "Bench-Rigged Shot",
+          "Story": "One hand on the trigger, the other already reaching for a drone that needs a patch.",
+          "KitBonus": "<p><strong>Kit bonus (Fabricator’s Bench):</strong> <strong>+1</strong> on Field Repair power rolls that target <strong>your own drones</strong>.</p>",
+          "Rider1": "one machine you control within 5 squares regains 1 Integrity",
+          "Rider2": "one machine you control within 5 squares regains 2 Integrity",
+          "Rider3": "one machine you control within 5 squares regains 3 Integrity"
+        }
+      },
+      "RiggersHarness": {
+        "Name": "Rigger’s Harness",
+        "Description": "<p>A direct-neural control mount strapped over light armor: the jack sits ready at the base of your skull. The Vehicle Rig-Pilot’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a neural control-interface mount; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +2 · Disengage +1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> <strong>+1</strong> on <strong>Jump-In</strong> tests.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.XCukPRyW9GrAdnP8]{Neural Snap Shot}</p>",
+        "Signature": {
+          "Name": "Neural Snap Shot",
+          "Story": "The harness fires the shot a half-beat before your hand finishes deciding to.",
+          "KitBonus": "<p><strong>Kit bonus (Rigger’s Harness):</strong> <strong>+1</strong> on <strong>Jump-In</strong> tests.</p>",
+          "Rider1": "you can shift 1 square",
+          "Rider2": "you can shift up to 2 squares",
+          "Rider3": "you can shift up to 2 squares, and the target has a bane on its next strike against you"
+        }
+      },
+      "FieldChassis": {
+        "Name": "Field Chassis",
+        "Description": "<p>A ruggedized turret-control tablet on a chest mount and a sidearm for when the walls aren’t enough. The Facility Rigger’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a portable turret-control tablet; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +1 · Stability +1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> <strong>+1</strong> on <strong>Deploy</strong> checks for <strong>pre-placed</strong> assets.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.A3PduPaBJLrjt0HE]{Tablet Crossfire}</p>",
+        "Signature": {
+          "Name": "Tablet Crossfire",
+          "Story": "You shoot, and a turret you wired months ago swings to follow your aim.",
+          "KitBonus": "<p><strong>Kit bonus (Field Chassis):</strong> <strong>+1</strong> on <strong>Deploy</strong> checks for <strong>pre-placed</strong> assets.</p>",
+          "Rider2": "one machine or pre-placed asset you control within 10 squares gains an edge on its next strike against the target",
+          "Rider3": "one machine or pre-placed asset you control within 10 squares gains an edge on its next strike against the target, and the target is slowed until the end of its next turn"
         }
       }
     },
@@ -1866,7 +1902,7 @@
           "NerveToxin": {
             "Name": "Nerve Toxin",
             "Story": "For the thing that really needs to go down slowly and stay down.",
-            "Effect_before0000000000": "<p>The target takes heavy-weapon damage over 3 rounds and is slowed and weakened for the full duration.</p>"
+            "Effect_before0000000000": "<p>The target takes [[lookup 6+@I evaluate]]{6 + Instinct} damage over 3 rounds (equal ticks, rounding up on earlier ticks) and is slowed and weakened for the full duration.</p>"
           },
           "ChemicalInterrogation": {
             "Name": "Chemical Interrogation",
@@ -1906,7 +1942,7 @@
           "NerveAgent": {
             "Name": "Nerve Agent",
             "Story": "The compound that ends fights by itself.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> The battlefield (Director sets the exact area).</p><p>Each enemy in the area makes a saving throw; on a failure, it is weakened and slowed (save ends). Every enemy in the area takes heavy-weapon damage over 3 rounds, whether or not it failed the save.</p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The battlefield (Director sets the exact area).</p><p>Each enemy in the area makes a saving throw; on a failure, it is weakened and slowed (save ends). Every enemy in the area takes [[lookup 6+@I evaluate]]{6 + Instinct} damage over 3 rounds (equal ticks, rounding up on earlier ticks), whether or not it failed the save.</p>"
           },
           "FullKitPurge": {
             "Name": "Full Kit Purge",
@@ -2103,7 +2139,7 @@
         "Items": {
           "Class": {
             "Name": "Wrench",
-            "Description": "<p>You are a Wrench — on the street the mechanic, or, if your fleet has a reputation, the warlord. You are the crew’s war machine: not a soldier and not a spellcaster, but an engineer who fights through a fielded force of drones, vehicles, and wired sites. You roll up to the run with a truck full of hardware, deploy it, and command a small mechanized army. Your body is often the least dangerous thing on the map, by design.</p><p>You are a <strong>street class</strong>. Nobody hands you a diploma for this: you learned in a salvage yard, off pirated firmware forums, hauling freight and modding the truck between runs, or fortifying a half-collapsed sub-level. A corp history, if you have one, is backstory only. No Wrench subclass is an academy.</p><p>Your heroic resource is <strong>Uptime</strong>: the runtime of your fielded fleet, earned while your machines are out and working, drained when they (or you) get hit, jammed, or wrecked, and spent to deploy, command, override, and burst-fire. Nuyen buys the hardware; Uptime runs it.</p><p>Your subclass is the role you grew into: <strong>Drone Jockey</strong> (the swarm), <strong>Vehicle Rig-Pilot</strong> (the driver), or <strong>Facility Rigger</strong> (the warlord).</p><p><strong>Core characteristics:</strong> Logic, Reflex · <strong>Heroic resource:</strong> Uptime · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> yes (light-to-moderate). <em>Quick Build:</em> Drone Jockey, Gunslinger.</p>"
+            "Description": "<p>You are a Wrench — on the street the mechanic, or, if your fleet has a reputation, the warlord. You are the crew’s war machine: not a soldier and not a spellcaster, but an engineer who fights through a fielded force of drones, vehicles, and wired sites. You roll up to the run with a truck full of hardware, deploy it, and command a small mechanized army. Your body is often the least dangerous thing on the map, by design.</p><p>You are a <strong>street class</strong>. Nobody hands you a diploma for this: you learned in a salvage yard, off pirated firmware forums, hauling freight and modding the truck between runs, or fortifying a half-collapsed sub-level. A corp history, if you have one, is backstory only. No Wrench subclass is an academy.</p><p>Your heroic resource is <strong>Uptime</strong>: the runtime of your fielded fleet, earned while your machines are out and working, drained when they (or you) get hit, jammed, or wrecked, and spent to deploy, command, override, and burst-fire. Nuyen buys the hardware; Uptime runs it.</p><p>Your subclass is the role you grew into: <strong>Drone Jockey</strong> (the swarm), <strong>Vehicle Rig-Pilot</strong> (the driver), or <strong>Facility Rigger</strong> (the warlord).</p><p><strong>Core characteristics:</strong> Logic, Reflex · <strong>Heroic resource:</strong> Uptime · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> yes (light-to-moderate). <em>Quick Build:</em> Drone Jockey, Fabricator’s Bench.</p>"
           },
           "Uptime": {
             "Name": "Uptime",
@@ -2111,7 +2147,7 @@
           },
           "TheMachines": {
             "Name": "Fleet & Jump-In",
-            "Description": "<p>A table summary of THE MACHINES. Full drone, vehicle, and building catalogs live in the Drones and Vehicles chapters.</p><h4>Machines</h4><p>Every drone, vehicle, turret, and wired site asset has <strong>Integrity</strong> (0 = wrecked), <strong>Handling</strong> (an edge or bane on the controlling roll), <strong>Speed</strong>, <strong>Armor</strong> (flat damage reduction), a <strong>Control Mode</strong> (Autonomous, Commanded, or Jumped-In), and weapon or payload. Drones are Personal or Light scale; vehicles run Light to Capital.</p><p><strong>Upgrade Slots</strong> (mods bought with nuyen): Micro drone 1, Small 2, Standard 3; Light vehicle 2, Vehicle 4, Heavy 6, Capital 8+. Bigger-scale attacks against smaller targets gain an edge and more damage; smaller against bigger take a bane and deal chip damage unless they use a called shot or a scale-appropriate weapon.</p><p><strong>Machine conditions:</strong> Crippled (Handling/Speed penalty), Systems Down (a station offline), On Fire/Leaking (ongoing damage), Stalled/Dead-stick (immobilized).</p><h4>Jump-In</h4><p>As a maneuver, make a Logic or Reflex test (moderate difficulty, modified by Handling) to jack into a Jump-In-capable machine. On a success, your body is <strong>inert and exposed</strong> (biofeedback from machine damage can reach your Stamina), and you gain the machine’s Speed, a weapon-lock edge, and a temporary <strong>Integrity buffer of +4</strong> (+6 from 7th level). Damage to the machine drains your Uptime as usual. On a failure you can retry next turn; on a roll of 5 or lower you take 1 biofeedback damage. Leaving Jump-In is free at the start of your turn, or automatic if the machine is wrecked.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+            "Description": "<p>A table summary of THE MACHINES. Full drone, vehicle, and building catalogs live in the Drones and Vehicles chapters.</p><h4>Machines</h4><p>Every drone, vehicle, turret, and wired site asset has <strong>Integrity</strong> (0 = wrecked), <strong>Handling</strong> (an edge or bane on the controlling roll), <strong>Speed</strong>, <strong>Armor</strong> (flat damage reduction), a <strong>Control Mode</strong> (Autonomous, Commanded, or Jumped-In), and weapon or payload. Drones are Personal or Light scale; vehicles run Light to Capital.</p><p><strong>Upgrade Slots</strong> (mods bought with nuyen): Micro drone 1, Small 2, Standard 3; Light vehicle 2, Vehicle 4, Heavy 6, Capital 8+. Bigger-scale attacks against smaller targets gain an edge and more damage; smaller against bigger take a bane and deal chip damage unless they use a called shot or a scale-appropriate weapon.</p><p><strong>Machine conditions:</strong> Crippled (Handling/Speed penalty), Systems Down (a station offline), On Fire/Leaking (ongoing damage), Stalled/Dead-stick (immobilized).</p><h4>Jump-In</h4><p>As a maneuver, make a Logic or Reflex test (moderate difficulty, modified by Handling) to jack into a Jump-In-capable machine. On a success, your body is <strong>inert and exposed</strong> (biofeedback from machine damage can reach your Stamina), and you gain the machine’s Speed, a weapon-lock edge, and a temporary <strong>Integrity buffer of +4</strong> (+5 from 6th level, +6 from 7th level). Damage to the machine drains your Uptime as usual. On a failure you can retry next turn; on a roll of 5 or lower you take 1 biofeedback damage. Leaving Jump-In is free at the start of your turn, or automatic if the machine is wrecked.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
           },
           "FleetSizeDoctrine": {
             "Name": "Fleet Size Doctrine",
@@ -2129,9 +2165,17 @@
             "Name": "Fleet Cap +1 (5)",
             "Description": "<p>Your fleet size cap increases to 5 machines.</p>"
           },
+          "JumpInBufferL6": {
+            "Name": "Jump-In Buffer Increase (+5)",
+            "Description": "<p>The temporary Integrity buffer you gain on a successful Jump-In increases from +4 to +5.</p>"
+          },
           "JumpInBuffer": {
-            "Name": "Jump-In Buffer Increase",
-            "Description": "<p>The temporary Integrity buffer you gain on a successful Jump-In increases from +4 to +6.</p>"
+            "Name": "Jump-In Buffer Increase (+6)",
+            "Description": "<p>The temporary Integrity buffer you gain on a successful Jump-In increases from +5 to +6.</p>"
+          },
+          "UptimeEconomyMastery": {
+            "Name": "Uptime Economy Mastery",
+            "Description": "<p>Once per encounter, when your fielded-fleet drip resolves at the start of your turn, you gain [[/gain 2 hr]]{2 Uptime} instead of the usual per-machine total for that tick only. Your Uptime cap still applies.</p>"
           },
           "FleetCap6": {
             "Name": "Fleet Cap +1 (6)",
@@ -2143,7 +2187,7 @@
           },
           "Overclock": {
             "Name": "Overclock",
-            "Description": "<p>You have an epic resource called Overclock. Each time you finish a respite, you gain Overclock equal to the XP you gain. You can spend Overclock on your abilities as if it were Uptime, and Overclock ignores your Uptime cap.</p><p>Overclock remains until you spend it.</p><p><em>Provisional: the chapter names Overclock as the 10th-level epic capstone but leaves its mechanics open. This follows the standard Draw Steel epic-resource pattern until it’s designed.</em></p>"
+            "Description": "<p>Your epic capstone. Once per encounter, when you Deploy or Command, you can overclock the fleet as a free triggered action. Until the end of your next turn:</p><ul><li><p>Uptime costs on your abilities are <strong>2 less</strong> (minimum 1).</p></li><li><p>Every machine you control gains a <strong>+2 Integrity</strong> temporary buffer.</p></li></ul><p>When Overclock ends, you can’t gain Uptime from the fielded-fleet drip until the start of your following turn.</p><p><em>v1 — a cross-class epic pass may revisit this.</em></p>"
           },
           "DeployAndCommand": {
             "Name": "Deploy & Command",
@@ -2185,7 +2229,7 @@
           },
           "DroneJockey": {
             "Name": "Drone Jockey",
-            "Description": "<p><em>“The swarm.”</em> Street-taught: you learned in a salvage yard and off pirated firmware forums, bricking three cheap quadrotors before the fourth one flew straight. Now you run a swarm — recon quadrotors, kamikaze microdrones, taser-bees, spotter-drones, autoguns — that individually mean nothing and collectively mean the enemy can’t find a square that isn’t watched, tased, or shot. Street name: the swarm, the jockey, or the wall of bees.</p><p>At 1st level you gain the <strong>Electronics</strong> skill, a drone-parts or grey-market salvage contact, and the Wide Band and Swarm Launch features and the Salvage Sense triggered action. You need no chrome: your power lives in cheap, replaceable hardware.</p>"
+            "Description": "<p><em>“The swarm.”</em> Street-taught: you learned in a salvage yard and off pirated firmware forums, bricking three cheap quadrotors before the fourth one flew straight. Now you run a swarm — recon quadrotors, kamikaze microdrones, taser-bees, spotter-drones, autoguns — that individually mean nothing and collectively mean the enemy can’t find a square that isn’t watched, tased, or shot. Street name: the swarm, the jockey, or the wall of bees.</p><p><strong>Starter Kit:</strong> Fabricator’s Bench (Quick Build).</p><p>At 1st level you gain the <strong>Electronics</strong> skill, a drone-parts or grey-market salvage contact, and the Wide Band and Swarm Launch features and the Salvage Sense triggered action. You need no chrome: your power lives in cheap, replaceable hardware.</p>"
           },
           "WideBand": {
             "Name": "Wide Band",
@@ -2318,7 +2362,7 @@
           },
           "VehicleRigPilot": {
             "Name": "Vehicle Rig-Pilot",
-            "Description": "<p><em>“The driver.”</em> Street-taught: maybe it’s the truck you hauled freight in for six years before the corp cut your route, a spider-tank frame you rebuilt system by system out of a scrapyard, or a platform stolen outright with its VIN burned off. When you Jump in, the line between driver and machine gets thin enough that nobody can say which one they’re shooting at. Street name: the driver, the rig, or whatever you named the machine.</p><p>At 1st level you gain the <strong>Piloting</strong> skill, a chop-shop or transport contact, and the One With the Machine, Pilot and Gunner, and Wake the Platform features. Your defining chrome is the <strong>control rig</strong>, a deep-Jump interface implant.</p>"
+            "Description": "<p><em>“The driver.”</em> Street-taught: maybe it’s the truck you hauled freight in for six years before the corp cut your route, a spider-tank frame you rebuilt system by system out of a scrapyard, or a platform stolen outright with its VIN burned off. When you Jump in, the line between driver and machine gets thin enough that nobody can say which one they’re shooting at. Street name: the driver, the rig, or whatever you named the machine.</p><p><strong>Starter Kit:</strong> Rigger’s Harness (Quick Build).</p><p>At 1st level you gain the <strong>Piloting</strong> skill, a chop-shop or transport contact, and the One With the Machine, Pilot and Gunner, and Wake the Platform features. Your defining chrome is the <strong>control rig</strong>, a deep-Jump interface implant.</p>"
           },
           "OneWithTheMachine": {
             "Name": "One With the Machine",
@@ -2450,7 +2494,7 @@
           },
           "FacilityRigger": {
             "Name": "Facility Rigger",
-            "Description": "<p><em>“The warlord.”</em> Street-taught: what started as a squat in a collapsed sub-level became a fortress one wired sentry at a time — a turret in the stairwell nobody uses, a mesh-web across the service corridor, a breaching charge under the floor where a strike team would stack up. When the fight comes to you, nothing needs deploying; it’s been deployed for months. Street name: the warlord, the landlord, or the ghost in the walls.</p><p>At 1st level you gain the <strong>Security Systems</strong> skill, a parts-supplier or quartermaster contact, and the Home Ground, Pre-Wired, and Built to Be Serviced features. Your power lives in the building (see the Building stat card in THE MACHINES), not the body.</p>"
+            "Description": "<p><em>“The warlord.”</em> Street-taught: what started as a squat in a collapsed sub-level became a fortress one wired sentry at a time — a turret in the stairwell nobody uses, a mesh-web across the service corridor, a breaching charge under the floor where a strike team would stack up. When the fight comes to you, nothing needs deploying; it’s been deployed for months. Street name: the warlord, the landlord, or the ghost in the walls.</p><p><strong>Starter Kit:</strong> Field Chassis (Quick Build).</p><p>At 1st level you gain the <strong>Security Systems</strong> skill, a parts-supplier or quartermaster contact, and the Home Ground, Pre-Wired, and Built to Be Serviced features. Your power lives in the building (see the Building stat card in THE MACHINES), not the body.</p>"
           },
           "HomeGround": {
             "Name": "Home Ground",

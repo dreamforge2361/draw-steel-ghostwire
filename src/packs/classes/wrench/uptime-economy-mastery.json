@@ -1,0 +1,32 @@
+{
+  "_id": "cMu5ruoFVwESOe8C",
+  "_key": "!items!cMu5ruoFVwESOe8C",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.UptimeEconomyMastery.Name",
+  "type": "feature",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.UptimeEconomyMastery.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "uptime-economy-mastery",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "HPjiVesVIy4bBo1V",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

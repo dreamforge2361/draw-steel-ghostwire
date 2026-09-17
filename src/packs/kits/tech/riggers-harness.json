@@ -1,0 +1,79 @@
+{
+  "_id": "xu0YPMxCDaUwC3kX",
+  "_key": "!items!xu0YPMxCDaUwC3kX",
+  "name": "GHOSTWIRE.Kits.RiggersHarness.Name",
+  "type": "kit",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.RiggersHarness.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "riggers-harness",
+    "advancements": {
+      "umVIra8QOXDXacrh": {
+        "name": "GHOSTWIRE.Kits.RiggersHarness.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "umVIra8QOXDXacrh",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.XCukPRyW9GrAdnP8"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "light"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 5
+      },
+      "stamina": 3,
+      "speed": 2,
+      "stability": 0,
+      "disengage": 1
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

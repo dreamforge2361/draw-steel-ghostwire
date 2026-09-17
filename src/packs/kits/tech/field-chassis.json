@@ -1,0 +1,79 @@
+{
+  "_id": "1a0vFHT4XMxb64y2",
+  "_key": "!items!1a0vFHT4XMxb64y2",
+  "name": "GHOSTWIRE.Kits.FieldChassis.Name",
+  "type": "kit",
+  "img": "icons/environment/settlement/watchtower-cliff.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.FieldChassis.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-chassis",
+    "advancements": {
+      "USwyRGY8NoHnrYvt": {
+        "name": "GHOSTWIRE.Kits.FieldChassis.Signature.Name",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": null
+        },
+        "_id": "USwyRGY8NoHnrYvt",
+        "description": "",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.A3PduPaBJLrjt0HE"
+          }
+        ],
+        "chooseN": null,
+        "sort": 0,
+        "repick": {},
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "equipment": {
+      "armor": "light",
+      "weapon": [
+        "light"
+      ],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 1,
+          "tier2": 1,
+          "tier3": 1
+        },
+        "distance": 5
+      },
+      "stamina": 3,
+      "speed": 1,
+      "stability": 1,
+      "disengage": 0
+    }
+  },
+  "effects": [],
+  "folder": "lTAM6n9BAFj6DzOA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

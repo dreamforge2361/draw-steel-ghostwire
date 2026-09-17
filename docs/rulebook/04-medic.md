@@ -269,7 +269,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Nerve Toxin** *(7 Reagents, GHOSTWIRE-original)*
 > *Main action · Ranged 10 · Target: one creature*
-> **Power Roll:** 2d10 + Instinct. Heavy-weapon-band damage over 3 rounds; the target is Slowed and Weakened for the full duration.
+> **Power Roll:** 2d10 + Instinct. **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks); target is Slowed and Weakened for the full duration.
 > *The class's heaviest single-target Toxin — the compound you save for the thing that really needs to go down slowly and stay down.*
 
 > **Chemical Interrogation** *(7 Reagents, GHOSTWIRE-original)*
@@ -319,7 +319,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost ban
 
 > **Nerve Agent** *(11 Reagents, GHOSTWIRE-original)*
 > *Main action · Battlefield-wide (Director's table, numeric pass on exact radius) · Target: all enemies present*
-> Each enemy makes a save or is Weakened and Slowed; all affected enemies take heavy-weapon-band damage over 3 rounds regardless of save result.
+> Each enemy makes a save or is Weakened and Slowed; all affected enemies take **6 + Instinct** damage total over **3 rounds** (equal ticks, round up on earlier ticks) regardless of save result.
 > *Nerve Toxin's whole-battlefield apex form — the compound that ends fights by itself.*
 
 > **Full Kit Purge** *(minimum 11 Reagents, GHOSTWIRE-original)*

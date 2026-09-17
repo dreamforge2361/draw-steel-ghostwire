@@ -55,7 +55,7 @@ The Wrench's primary characteristic is **Logic** — the attribute that drives R
 |---|---|
 | **Core Characteristics** | Logic, Reflex |
 | **Heroic Resource** | Uptime |
-| **Epic Resource / Capstone** | Overclock (10th level, epic capstone) *(v1 estimate — name pending)* |
+| **Epic Resource / Capstone** | Overclock (10th level, epic capstone) — see Core Class Features |
 | **Starting Stamina** | 18 |
 | **Stamina per Level** | +6 |
 | **Recoveries** | 8 |
@@ -284,7 +284,7 @@ A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utili
 - **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.
 - **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform.
 
-**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test against a moderate difficulty** *(v1 estimate — exact DC deferred to the numeric pass)*, modified by the target frame's Handling. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(v1 estimate: +4 at 1st through 6th level, rising to +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a critical failure (roll ≤ 5, *v1 estimate*) triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
+**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test against a moderate difficulty** *(v1 estimate — exact DC deferred to the numeric pass)*, modified by the target frame's Handling. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(v1 estimate: +4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a critical failure (roll ≤ 5, *v1 estimate*) triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
 
 **Chase Modes (reference).** Vehicle combat runs in one of two modes, Director's call:
 - **Positional (default):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot.
@@ -905,10 +905,10 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 | **3** | Focus Fire (7-Cost band, unlocked) - Choose a 7-Cost ability | -- | Subclass 3rd-level feature |
 | **4** | Fleet Cap +1 (fleet size 4) | Characteristic Increase - Perk (choice) - Skill | -- |
 | **5** | Choose a 9-Cost ability - Uptime cap 10→12 | -- | Subclass 5th-level feature |
-| **6** | Jump-In Integrity buffer step (see THE MACHINES) | Perk (choice) | Subclass 6th-level feature |
-| **7** | Fleet Cap +1 (fleet size 5) - Jump-In Integrity buffer +6 | Characteristic Increase - Skill | Subclass 7th-level feature |
+| **6** | Jump-In Buffer Increase (+4 → +5) | Perk (choice) | Subclass 6th-level feature |
+| **7** | Fleet Cap +1 (fleet size 5) - Jump-In Buffer Increase (+5 → +6) | Characteristic Increase - Skill | Subclass 7th-level feature |
 | **8** | Choose an 11-Cost ability | Perk (choice) | Subclass 8th-level feature |
-| **9** | Uptime economy mastery (see Core Class Features) | -- | Subclass 9th-level feature |
+| **9** | Uptime Economy Mastery (once-per-encounter +2 drip tick) | -- | Subclass 9th-level feature |
 | **10** | Overclock (epic capstone) - Fleet Cap +1 (fleet size 6) - Uptime cap 12→14 | Characteristic Increase - Perk (choice) - Skill | -- |
 
 *Design note: this table intentionally mirrors the Hacker/Elementalist/Operator progression table's density (features/perks/characteristic-increases per level) rather than the older Echelon-banded shape. Fleet Size, Uptime cap, and Jump-In buffer milestones are v1 estimates carried forward from the old §E6 fleet-cap shape but converted onto clean DS-level milestones per the current structural pass — see Cleanup Notes in the governing rework spec for the exact conversion. A future numeric pass should validate these level placements once the shared numeric-calibration pass runs.*
@@ -918,8 +918,10 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 - **Fleet Size Doctrine** (2nd) — Passive. Tracks how many machines a Wrench may have active simultaneously; see Fleet Size Doctrine under THE MACHINES, above, for the full cap table (base 3 at 1st, stepping to 4/5/6 at 4th/7th/10th).
 - **Fleet Cap +1** (4th, 7th, 10th) — Passive. Each of these levels raises your Fleet Size Doctrine cap by 1 (see THE MACHINES, above, for the full progression: 3 → 4 → 5 → 6).
 - **Uptime Cap Increase** (5th, 10th) — Passive. Your Uptime pool's soft cap rises from 10 to 12 at 5th level, and from 12 to 14 at 10th level (see Heroic Resource: Uptime, above).
-- **Jump-In Buffer Increase** (7th) — Passive. The temporary Integrity buffer granted on a successful Jump-In check rises from +4 to +6 (see Jump-In Plumbing under THE MACHINES, above).
-- **Overclock** (10th, epic capstone) — *(v1 estimate — name and full mechanics pending, mirroring the Scout's Subterfuge and the Hacker's Ghost in the Machine as the class's apex resource/ability. See Bugs / Open Items, below, for the open design question.)*
+- **Jump-In Buffer Increase** (6th) — Passive. The temporary Integrity buffer granted on a successful Jump-In check rises from **+4 to +5** (see Jump-In Plumbing under THE MACHINES, above).
+- **Jump-In Buffer Increase** (7th) — Passive. The Jump-In Integrity buffer rises again, from **+5 to +6**.
+- **Uptime Economy Mastery** (9th) — Once per encounter, when the fielded-fleet drip resolves at the start of your turn, gain **+2 Uptime** instead of the usual per-machine total for that tick only (still subject to your Uptime pool cap).
+- **Overclock** (10th, epic capstone) — Once per encounter, as a free triggered action when you Deploy or Command: until the end of your next turn, (a) Uptime costs on your abilities are **2 less** (minimum 1), and (b) every machine you control gains a **+2 Integrity** temporary buffer. When it ends, you cannot gain Uptime from the fielded-fleet drip until the start of your following turn. *(v1 — cross-class epic pass later.)*
 
 *Design note: unlike the Hacker (whose Core Class Features are dense, unique passives such as Ghost Step, Dual Boot, Root Access) the Wrench's non-subclass class-wide progression is deliberately lean — most of the class's power growth lives in the subclass ladders and the Fleet Size/Uptime Cap/Jump-In milestones above, which is consistent with the "summoner-adjacent" identity where board presence (the fleet), not a dense personal feature tree, is the main power lever.*
 
@@ -950,7 +952,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 
 7. **OPEN SYSTEM DEPENDENCY — Downtime Projects doc does not exist yet.** Downtime Fabrication gives the minimal plumbing needed to run Facility Rigger downtime today, but the fuller Downtime Project rules (multi-cycle projects, failure states, assistance from other crew members) are explicitly deferred to a future Downtime Projects doc, per directive.
 
-8. **OPEN QUESTION — Epic resource name and mechanics.** "Overclock" is used as a placeholder name for the 10th-level epic resource (mirroring the Scout's Subterfuge, the Hacker's Ghost in the Machine, and the Operator's Combat Legend/Overclock) but no mechanics have been defined. Needs a design pass once the Scout/Elementalist/Hacker/Operator epic-resource pattern is fully cross-referenced.
+8. **RESOLVED 2026-09-16 (v1) — Epic resource name and mechanics.** Overclock is locked as a once-per-encounter Deploy/Command burst (see Core Class Features); a cross-class epic pass may revisit it. *Original note:* "Overclock" is used as a placeholder name for the 10th-level epic resource (mirroring the Scout's Subterfuge, the Hacker's Ghost in the Machine, and the Operator's Combat Legend/Overclock) but no mechanics have been defined. Needs a design pass once the Scout/Elementalist/Hacker/Operator epic-resource pattern is fully cross-referenced.
 
 9. **OPEN QUESTION — Jump-In pilot-check DC.** Jump-In Plumbing (THE MACHINES, above) references "a moderate difficulty" with no number. Needs the shared DS-difficulty-band numbers once the project locks its test-DC table.
 

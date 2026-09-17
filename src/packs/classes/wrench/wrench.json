@@ -111,6 +111,15 @@
         },
         "pool": [
           {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.odaoLD5Zsk55krGJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.xu0YPMxCDaUwC3kX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.1a0vFHT4XMxb64y2"
+          },
+          {
             "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
           },
           {
@@ -147,7 +156,7 @@
             "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
           }
         ],
-        "description": "<p>You can use and gain the benefits of a light Kit (no armor or light armor, and no heavy weapon), or the moderate Streetsweeper Kit. A Wrench carries their weight through the fleet, not the body. (<em>Quick Build:</em> Gunslinger — the closest current Kit to the chapter’s Fabricator’s Bench, Rigger’s Harness, and Field Chassis, which aren’t in the Kits pack yet.)</p>",
+        "description": "<p>You can use and gain the benefits of a light Kit (no armor or light armor, and no heavy weapon), or the moderate Streetsweeper Kit. A Wrench carries their weight through the fleet, not the body. The three rigger Kits come first: <strong>Fabricator’s Bench</strong>, <strong>Rigger’s Harness</strong>, and <strong>Field Chassis</strong>. (<em>Quick Build:</em> your subclass’s starter Kit — Drone Jockey: Fabricator’s Bench, Vehicle Rig-Pilot: Rigger’s Harness, Facility Rigger: Field Chassis.)</p>",
         "chooseN": 1,
         "sort": 5000,
         "additional": {
@@ -379,6 +388,28 @@
         "sort": 15000,
         "pool": []
       },
+      "JIg3r1kB7cps0HxH": {
+        "_id": "JIg3r1kB7cps0HxH",
+        "img": null,
+        "repick": {},
+        "name": "Jump-In Buffer Increase (+5)",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BtjauvupFDWAMoD9"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 16000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
       "HovmJsHevkEuZeKZ": {
         "_id": "HovmJsHevkEuZeKZ",
         "img": null,
@@ -397,7 +428,7 @@
           "presence": 1
         },
         "max": 4,
-        "sort": 16000
+        "sort": 17000
       },
       "IjDs2KO39gBnGG0U": {
         "_id": "IjDs2KO39gBnGG0U",
@@ -414,7 +445,7 @@
           "choices": []
         },
         "chooseN": 1,
-        "sort": 17000
+        "sort": 18000
       },
       "j7GLOjsfZEXqU0RE": {
         "_id": "j7GLOjsfZEXqU0RE",
@@ -435,7 +466,7 @@
         ],
         "description": "<p>You gain the following features.</p>",
         "chooseN": null,
-        "sort": 18000,
+        "sort": 19000,
         "additional": {
           "type": "",
           "perkType": []
@@ -456,8 +487,30 @@
           "type": "perk",
           "perkType": []
         },
-        "sort": 19000,
+        "sort": 20000,
         "pool": []
+      },
+      "FZ3RmnI8Cxh3rJc5": {
+        "_id": "FZ3RmnI8Cxh3rJc5",
+        "img": null,
+        "repick": {},
+        "name": "Uptime Economy Mastery",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.cMu5ruoFVwESOe8C"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 21000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
       },
       "1Sc7O67FUjc49DFZ": {
         "_id": "1Sc7O67FUjc49DFZ",
@@ -477,7 +530,7 @@
           "presence": 0
         },
         "max": 5,
-        "sort": 20000
+        "sort": 22000
       },
       "8uGwAU7V0ZKe2zAQ": {
         "_id": "8uGwAU7V0ZKe2zAQ",
@@ -498,7 +551,7 @@
             "intrigue"
           ]
         },
-        "sort": 21000,
+        "sort": 23000,
         "pool": []
       },
       "orY8kYTT3vSfNIIG": {
@@ -516,7 +569,7 @@
           "choices": []
         },
         "chooseN": 1,
-        "sort": 22000
+        "sort": 24000
       },
       "7sNYKJPIwyOvkBpE": {
         "_id": "7sNYKJPIwyOvkBpE",
@@ -540,7 +593,7 @@
         ],
         "description": "<p>You gain the following features.</p>",
         "chooseN": null,
-        "sort": 23000,
+        "sort": 25000,
         "additional": {
           "type": "",
           "perkType": []
