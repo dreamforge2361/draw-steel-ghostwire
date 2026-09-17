@@ -1,4 +1,5 @@
 import { registerGhostwireSkills } from "./skills.mjs";
+import { registerWiredConsole } from "./wired-console.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -64,6 +65,7 @@ Hooks.once("init", () => {
   patchAddOrigin();
   enforceHeroicResourceCost();
   patchWiredAbilities();
+  registerWiredConsole({ getWiredState });
 });
 
 // ---------- Wired connection states ----------

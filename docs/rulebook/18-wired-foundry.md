@@ -1,8 +1,8 @@
-# Ghostwire Foundry Notes — The Wired on the Hero Sheet (B23a)
+# Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console)
 
 **Status:** v1 (2026-09-16), pending Michael’s Foundry test.
 **Source of record for rules text:** `docs/rulebook/08-hacker.md` — *The Wired System* (Connection States) and *Matrix Verbs (Universal)*. This page only describes how Foundry implements them; if the two disagree, 08-hacker.md wins and this page (and the pack) gets fixed.
-**Next:** B23b — the Wired Console (nodes, Trace Alert tracker). Not built yet.
+**Console:** B23b — see *Wired Console* below.
 
 ## Matrix Verbs on every hero
 
@@ -20,7 +20,7 @@ Every hero gets the nine Matrix Verbs as abilities (Ghostwire Abilities › **Ma
 | Search | Maneuver | Logic |
 | Read/Write | Maneuver | Logic |
 
-Rolling verbs show the low / middle / high result text from 08-hacker.md (low: works, but something goes wrong, usually Trace Alert; high: the maneuver refund, or zero forensic trace for Read/Write). Trace Alert itself is tracked by hand until B23b.
+Rolling verbs show the low / middle / high result text from 08-hacker.md (low: works, but something goes wrong, usually Trace Alert; high: the maneuver refund, or zero forensic trace for Read/Write). Trace Alert is tracked per node in the Wired Console; verb results don’t move it automatically yet.
 
 New heroes get the verbs automatically. Heroes that existed before this version get any missing verbs once, the first time the GM loads the world.
 
@@ -47,3 +47,46 @@ Also automated: a hero with the **Hacking** skill gets an edge on the rolling Ma
 Not automated: the Overlay bane on tests (make it in the test dialog), biofeedback scaling, and Trace Alert.
 
 For the Wired Console, the state is also stored on the actor as `flags.draw-steel-ghostwire.wired = { connected, state }`, with `state` being `"disconnected"`, `"overlay"`, or `"jackedIn"`.
+
+## Wired Console (B23b)
+
+A popout window that makes the net a shared place for the scene everyone is viewing.
+
+**Open it:** the **network** button in the Token controls (left toolbar), or assign a key to *Open the Wired Console* under Configure Controls (no default key). The same button or key closes it. Macro: `game.modules.get("draw-steel-ghostwire").api.openWiredConsole()`.
+
+### Panels
+
+- **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Disconnected). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
+- **Nodes** — the scene’s nodes: Track, Rating, an Integrity bar (Track 2), and a mini Trace Alert track. The eye icon (Director only) shows whether players can see the node.
+- **Selected node** — the System Stat Card read off the Node Rating (08-hacker.md): Breach DC, ICE layers, Biofeedback Value with the Overlay (×0.5, min 1) and Jacked In (×1.5) figures, Integrity, and the 12-step Trace Alert with what the current band does. Track 1 nodes have no Integrity or ICE.
+
+### Director vs. players
+
+| | Director (GM) | Players |
+|---|---|---|
+| Nodes | All; add, **random node**, **generate cluster**, edit (name, Track, Rating), delete, reset the board | Only nodes the Director revealed; read-only |
+| Integrity | Damage / Restore by an amount | See the bar and numbers |
+| Trace Alert | −, +, **Counter-trace (12)**, and **Resolved — reset to 6** at 12 | See the track and band text |
+| Description | Edit | Read (once revealed) |
+| Notes | Edit; Director-only | Hidden |
+| Reveal | **Reveal to players** / **Hide from players** | — |
+
+**Random nodes.** In the Nodes panel title, the **dice** button rolls one themed node and the **cluster** button opens a dialog to roll 1–12 at once. Each rolled node gets a name, Track, a Rating within the stratum’s band (nudged by its owner), a player-facing **Description** (the icon, the owner’s skin, and what Matrix Verbs can do with it), and Director **Notes** (the owner and what’s buried inside). Rolled nodes start hidden. The strata follow Ossian Reach: **Spires** R3–5, **Grid** R2–4, **Flats** R1–3, **Warrens** R1–3, **Sinks** R1–2, or a **Random mix**. The stratum picked in the cluster dialog is saved on the scene and used by the dice button. The tables live in `scripts/wired-node-table.mjs`, and `api.rollNode(stratum)` returns a node without adding it.
+
+Reveal is manual in v1: when a runner Scans, the Director reveals what they found. Revealing a node posts a public **Node revealed** card to chat with its name, Track, Rating, and Description (Notes are never posted). Hiding it again posts nothing. Changing a node’s Rating resets its Integrity maximum from the stat card (a full pool stays full). Reaching Trace Alert 12 posts a persistent warning to the Director: full lockout and counter-trace, then reset the track to 6.
+
+### Data
+
+The board is stored on the Scene, so it persists across reloads and belongs to that scene:
+
+```
+flags.draw-steel-ghostwire.wiredBoard = {
+  nodes: [{ id, name, track: 1|2, rating: 1–5, integrity, integrityMax, alert: 0–12, revealed, description, notes }],
+  stratum: "random" | "spires" | "grid" | "flats" | "warrens" | "sinks",
+  updated: <timestamp>
+}
+```
+
+Only a GM can change it. Connection state is read from actor statuses (and mirrored to `flags.draw-steel-ghostwire.wired`), not stored on the board.
+
+**Not in v1:** Matrix Verb or Program rolls don’t change node Integrity or Alert automatically; no ICE automation; no cross-scene map; no Bandwidth display.

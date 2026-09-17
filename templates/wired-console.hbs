@@ -1,0 +1,180 @@
+<div class="wc-deck">
+  <header class="wc-header">
+    <span class="wc-sigil"><i class="fa-solid fa-network-wired"></i></span>
+    <span class="wc-scene">{{sceneName}}</span>
+    <span class="wc-mode">{{#if isGM}}{{localize "GHOSTWIRE.WiredConsole.DirectorMode"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.PlayerMode"}}{{/if}}</span>
+    {{#if isGM}}
+    <button type="button" class="wc-btn wc-btn-danger" data-action="resetBoard" {{disabled (not hasScene)}}>
+      <i class="fa-solid fa-trash-can"></i> {{localize "GHOSTWIRE.WiredConsole.ResetBoard"}}
+    </button>
+    {{/if}}
+  </header>
+
+  <div class="wc-body">
+    {{!-- Connection roster --}}
+    <section class="wc-panel wc-roster">
+      <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Roster"}}</h3>
+      <ul class="wc-roster-list">
+        {{#each roster}}
+        <li class="wc-roster-row state-{{state}}">
+          <img src="{{img}}" alt="">
+          <span class="wc-roster-name">{{name}}</span>
+          <span class="wc-state-chip state-{{state}}">{{stateLabel}}</span>
+        </li>
+        {{else}}
+        <li class="wc-empty">{{localize "GHOSTWIRE.WiredConsole.NoTokens"}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    {{!-- Nodes --}}
+    <section class="wc-panel wc-nodes">
+      <h3 class="wc-panel-title">
+        {{localize "GHOSTWIRE.WiredConsole.Nodes"}}
+        {{#if isGM}}
+        <span class="wc-title-actions">
+          <button type="button" class="wc-btn wc-btn-small" data-action="addNode" data-tooltip="GHOSTWIRE.WiredConsole.AddNode" aria-label="{{localize "GHOSTWIRE.WiredConsole.AddNode"}}" {{disabled (not hasScene)}}>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button type="button" class="wc-btn wc-btn-small" data-action="randomNode" data-tooltip="{{localize "GHOSTWIRE.WiredConsole.RandomNode"}}: {{stratumLabel}}" aria-label="{{localize "GHOSTWIRE.WiredConsole.RandomNode"}}" {{disabled (not hasScene)}}>
+            <i class="fa-solid fa-dice"></i>
+          </button>
+          <button type="button" class="wc-btn wc-btn-small" data-action="generateCluster" data-tooltip="GHOSTWIRE.WiredConsole.GenerateCluster" aria-label="{{localize "GHOSTWIRE.WiredConsole.GenerateCluster"}}" {{disabled (not hasScene)}}>
+            <i class="fa-solid fa-diagram-project"></i>
+          </button>
+        </span>
+        {{/if}}
+      </h3>
+      <ul class="wc-node-list">
+        {{#each nodes}}
+        <li class="wc-node {{#if selected}}selected{{/if}} {{#if down}}down{{/if}}" data-node-id="{{id}}" data-action="selectNode">
+          <div class="wc-node-head">
+            {{#if ../isGM}}<i class="wc-reveal fa-solid {{#if revealed}}fa-eye{{else}}fa-eye-slash{{/if}}"
+              data-tooltip="{{#if revealed}}{{localize "GHOSTWIRE.WiredConsole.Revealed"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.Hidden"}}{{/if}}"></i>{{/if}}
+            <span class="wc-node-name">{{name}}</span>
+            <span class="wc-tag">T{{track}}</span>
+            <span class="wc-tag">R{{rating}}</span>
+            {{#if down}}<span class="wc-tag wc-tag-down">{{localize "GHOSTWIRE.WiredConsole.Down"}}</span>{{/if}}
+          </div>
+          {{#if isTrack2}}
+          <div class="wc-bar" data-tooltip="{{integrity}} / {{integrityMax}}"><span style="width: {{integrityPct}}%"></span></div>
+          {{/if}}
+          <div class="wc-alert-mini band-{{alertBand}}">
+            {{#each alertSteps}}<span class="{{#if lit}}lit{{/if}} band-{{band}}"></span>{{/each}}
+          </div>
+        </li>
+        {{else}}
+        <li class="wc-empty">{{#if isGM}}{{localize "GHOSTWIRE.WiredConsole.NoNodesGM"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.NoNodesPlayer"}}{{/if}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    {{!-- Selected node --}}
+    <section class="wc-panel wc-detail">
+      {{#with selected}}
+      <div class="wc-detail-inner" data-node-id="{{id}}">
+        <div class="wc-detail-head">
+          {{#if ../isGM}}
+          <input type="text" class="wc-input wc-name-input" data-field="name" value="{{name}}">
+          {{else}}
+          <h3 class="wc-detail-name">{{name}}</h3>
+          {{/if}}
+          {{#if lockout}}<span class="wc-tag wc-tag-down">{{localize "GHOSTWIRE.WiredConsole.Lockout"}}</span>{{/if}}
+        </div>
+
+        <div class="wc-grid">
+          <label>{{localize "GHOSTWIRE.WiredConsole.Track"}}</label>
+          {{#if ../isGM}}
+          <select class="wc-input" data-field="track">
+            {{#each trackOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+          </select>
+          {{else}}
+          <span>{{#if isTrack2}}{{localize "GHOSTWIRE.WiredConsole.Track2"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.Track1"}}{{/if}}</span>
+          {{/if}}
+
+          <label>{{localize "GHOSTWIRE.WiredConsole.Rating"}}</label>
+          {{#if ../isGM}}
+          <select class="wc-input" data-field="rating">
+            {{#each ratingOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+          </select>
+          {{else}}
+          <span>R{{rating}}</span>
+          {{/if}}
+
+          <label>{{localize "GHOSTWIRE.WiredConsole.BreachDC"}}</label>
+          <span>{{breachDC}} <em class="wc-dim">{{localize "GHOSTWIRE.WiredConsole.BreachDCHint"}}</em></span>
+
+          <label>{{localize "GHOSTWIRE.WiredConsole.Ice"}}</label>
+          <span>{{ice}}</span>
+
+          {{#if isTrack2}}
+          <label>{{localize "GHOSTWIRE.WiredConsole.Biofeedback"}}</label>
+          <span>{{biofeedback}} <em class="wc-dim">({{localize "GHOSTWIRE.Wired.States.overlay"}} {{biofeedbackOverlay}} · {{localize "GHOSTWIRE.Wired.States.jackedIn"}} {{biofeedbackJackedIn}})</em></span>
+          {{/if}}
+        </div>
+
+        {{#if isTrack2}}
+        <div class="wc-block">
+          <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.Integrity"}} <span class="wc-readout">{{integrity}} / {{integrityMax}}</span></div>
+          <div class="wc-bar wc-bar-large"><span style="width: {{integrityPct}}%"></span></div>
+          {{#if ../isGM}}
+          <div class="wc-row">
+            <input type="number" class="wc-input wc-amount" name="integrityAmount" min="0" step="1" value="1">
+            <button type="button" class="wc-btn wc-btn-hot" data-action="damageIntegrity"><i class="fa-solid fa-bolt"></i> {{localize "GHOSTWIRE.WiredConsole.Damage"}}</button>
+            <button type="button" class="wc-btn" data-action="restoreIntegrity"><i class="fa-solid fa-rotate-left"></i> {{localize "GHOSTWIRE.WiredConsole.Restore"}}</button>
+          </div>
+          {{/if}}
+        </div>
+        {{else}}
+        <p class="wc-dim">{{localize "GHOSTWIRE.WiredConsole.Track1Hint"}}</p>
+        {{/if}}
+
+        <div class="wc-block">
+          <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.TraceAlert"}} <span class="wc-readout band-{{alertBand}}">{{alert}} / 12</span></div>
+          <div class="wc-alert">
+            {{#each alertSteps}}<span class="{{#if lit}}lit{{/if}} band-{{band}}">{{step}}</span>{{/each}}
+          </div>
+          <p class="wc-alert-label band-{{alertBand}}">{{alertLabel}}</p>
+          {{#if ../isGM}}
+          <div class="wc-row">
+            <button type="button" class="wc-btn" data-action="alertDown"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" class="wc-btn" data-action="alertUp"><i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.WiredConsole.AlertUp"}}</button>
+            <button type="button" class="wc-btn wc-btn-danger" data-action="alertMax"><i class="fa-solid fa-satellite-dish"></i> {{localize "GHOSTWIRE.WiredConsole.AlertMax"}}</button>
+            {{#if lockout}}
+            <button type="button" class="wc-btn" data-action="alertReset"><i class="fa-solid fa-rotate"></i> {{localize "GHOSTWIRE.WiredConsole.AlertReset"}}</button>
+            {{/if}}
+          </div>
+          {{/if}}
+        </div>
+
+        {{#if ../isGM}}
+        <div class="wc-block">
+          <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.Description"}}</div>
+          <textarea class="wc-input wc-notes" data-field="description" rows="3" placeholder="{{localize "GHOSTWIRE.WiredConsole.DescriptionPlaceholder"}}">{{description}}</textarea>
+        </div>
+        {{else if description}}
+        <div class="wc-block">
+          <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.Description"}}</div>
+          <p class="wc-description">{{description}}</p>
+        </div>
+        {{/if}}
+
+        {{#if ../isGM}}
+        <div class="wc-block">
+          <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.Notes"}}</div>
+          <textarea class="wc-input wc-notes" data-field="notes" rows="4" placeholder="{{localize "GHOSTWIRE.WiredConsole.NotesPlaceholder"}}">{{notes}}</textarea>
+          <div class="wc-row">
+            <button type="button" class="wc-btn" data-action="toggleReveal">
+              {{#if revealed}}<i class="fa-solid fa-eye-slash"></i> {{localize "GHOSTWIRE.WiredConsole.HideFromPlayers"}}{{else}}<i class="fa-solid fa-eye"></i> {{localize "GHOSTWIRE.WiredConsole.RevealToPlayers"}}{{/if}}
+            </button>
+            <button type="button" class="wc-btn wc-btn-danger" data-action="deleteNode"><i class="fa-solid fa-trash"></i> {{localize "GHOSTWIRE.WiredConsole.DeleteNode"}}</button>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      {{else}}
+      <p class="wc-empty">{{localize "GHOSTWIRE.WiredConsole.NoSelection"}}</p>
+      {{/with}}
+    </section>
+  </div>
+</div>
