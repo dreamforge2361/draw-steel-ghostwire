@@ -1,0 +1,119 @@
+{
+  "_id": "9tGnu5FEHrSZbGJs",
+  "_key": "!items!9tGnu5FEHrSZbGJs",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.AshenWake.Name",
+  "type": "ability",
+  "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ashen-wake",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.AshenWake.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "5",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "Nd0lzjFAnDPEQOGB": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "Nd0lzjFAnDPEQOGB",
+          "damage": {
+            "tier1": {
+              "value": "8 + @chr",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "12 + @chr",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "16 + @chr",
+              "types": [
+                "fire"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.AshenWake.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "pyromancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2X6KQjS0XJf4u4Hw",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

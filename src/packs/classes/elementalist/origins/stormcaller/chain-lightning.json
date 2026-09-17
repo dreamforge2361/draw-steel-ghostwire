@@ -1,0 +1,119 @@
+{
+  "_id": "wRoEiwbv2D0VidUL",
+  "_key": "!items!wRoEiwbv2D0VidUL",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.ChainLightning.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chain-lightning",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.ChainLightning.Story",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "bULQeKln1SNDQJ4T": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "bULQeKln1SNDQJ4T",
+          "damage": {
+            "tier1": {
+              "value": "8 + @chr",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "11 + @chr",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "14 + @chr",
+              "types": [
+                "lightning"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.ChainLightning.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "stormcaller"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AnS0DoBhq3UHzjjH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

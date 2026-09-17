@@ -1,0 +1,116 @@
+{
+  "_id": "EfhJeGZtX6v9EBeG",
+  "_key": "!items!EfhJeGZtX6v9EBeG",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Name",
+  "type": "ability",
+  "img": "icons/magic/fire/elemental-creature-horse.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "twin-elemental-summon",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Story",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "2 elementals"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "1Vf2WJNiOxaiXkIr": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "1Vf2WJNiOxaiXkIr",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "persistent000000": {
+        "_id": "persistent000000",
+        "type": "persistent",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.TwinElementalSummon.Effect_persistent000000",
+        "essence": 3,
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 200000
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "elementalist"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "k832YWtHQ0twHZFA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

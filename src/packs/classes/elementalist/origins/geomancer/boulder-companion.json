@@ -1,0 +1,113 @@
+{
+  "_id": "cXO4XVzITQsHI9I8",
+  "_key": "!items!cXO4XVzITQsHI9I8",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.BoulderCompanion.Name",
+  "type": "ability",
+  "img": "icons/magic/earth/projectile-stone-landslide.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "boulder-companion",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.BoulderCompanion.Story",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "DMavHemS2MfE2C2X": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "DMavHemS2MfE2C2X",
+          "damage": {
+            "tier1": {
+              "value": "4 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "7 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.BoulderCompanion.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "geomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JZFWJaJ7TnJXJcNF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

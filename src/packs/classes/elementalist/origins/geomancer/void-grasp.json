@@ -1,0 +1,149 @@
+{
+  "_id": "JxcqXDkdZrFs0t3i",
+  "_key": "!items!JxcqXDkdZrFs0t3i",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.VoidGrasp.Name",
+  "type": "ability",
+  "img": "icons/magic/unholy/orb-swirling-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "void-grasp",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.VoidGrasp.Story",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "15",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "jhymtLgReVbRGAbe": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "jhymtLgReVbRGAbe",
+          "damage": {
+            "tier1": {
+              "value": "12 + @chr",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "17 + @chr",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "24 + @chr",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "40eLjlAP1kLhl3nQ": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "40eLjlAP1kLhl3nQ",
+          "other": {
+            "tier1": {
+              "display": "",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.VoidGrasp.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.VoidGrasp.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.VoidGrasp.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "geomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JZFWJaJ7TnJXJcNF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

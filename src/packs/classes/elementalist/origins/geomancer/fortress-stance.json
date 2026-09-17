@@ -1,0 +1,32 @@
+{
+  "_id": "laWk6H6HbQb9DaqA",
+  "_key": "!items!laWk6H6HbQb9DaqA",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.FortressStance.Name",
+  "type": "feature",
+  "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.FortressStance.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fortress-stance",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JZFWJaJ7TnJXJcNF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

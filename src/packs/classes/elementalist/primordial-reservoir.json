@@ -1,0 +1,32 @@
+{
+  "_id": "kpFChWxDaJkIbkfG",
+  "_key": "!items!kpFChWxDaJkIbkfG",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.PrimordialReservoir.Name",
+  "type": "feature",
+  "img": "icons/magic/water/orb-water-bubbles-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.PrimordialReservoir.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "primordial-reservoir",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "wxxXPFtqojua2GRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

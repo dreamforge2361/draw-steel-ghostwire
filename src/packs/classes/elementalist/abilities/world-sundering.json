@@ -1,0 +1,74 @@
+{
+  "_id": "aPQoCBshOo0kpSmo",
+  "_key": "!items!aPQoCBshOo0kpSmo",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.WorldSundering.Name",
+  "type": "ability",
+  "img": "icons/magic/earth/projectile-stone-landslide.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "world-sundering",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.WorldSundering.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 11,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "8",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.WorldSundering.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "elementalist"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "k832YWtHQ0twHZFA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,83 @@
+{
+  "_id": "AaELyFuQvU7XSf0I",
+  "_key": "!items!AaELyFuQvU7XSf0I",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.SanctumStone.Name",
+  "type": "ability",
+  "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sanctum-stone",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.SanctumStone.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Each creature in the aura"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.SanctumStone.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "persistent000000": {
+        "_id": "persistent000000",
+        "type": "persistent",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.SanctumStone.Effect_persistent000000",
+        "essence": 2,
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 200000
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "elementalist"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "k832YWtHQ0twHZFA",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

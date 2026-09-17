@@ -215,6 +215,10 @@
       "CyborgBlocked": "{actor} is a Cyborg and can’t install chrome implants like {name}. Cyborgs use Frame Modules.",
       "SlotFull": "{actor} can’t install {name}: the {location} location already holds {count} of {cap} implants."
     },
+    "ArcaneSeverance": {
+      "ClassBlocked": "{actor} is a Cyborg: Arcane Severance bars all magic, so they can’t take the {name} class.",
+      "AncestryBlocked": "{actor} is a {name}: Arcane Severance bars all magic, so they can’t become a Cyborg."
+    },
     "Chrome": {
       "Datajack": {
         "Name": "Datajack",
@@ -533,6 +537,10 @@
           "Rider2": "one machine or pre-placed asset you control within 10 squares gains an edge on its next strike against the target",
           "Rider3": "one machine or pre-placed asset you control within 10 squares gains an edge on its next strike against the target, and the target is slowed until the end of its next turn"
         }
+      },
+      "NoKit": {
+        "Name": "No Kit (Pure Caster)",
+        "Description": "<p>You fight with no weapon Kit: no armor or weapon doctrine, no bonuses, and no Kit signature ability. Pick this in a class Kit grant when your build is a pure caster (for example, an artillery Elementalist whose signature focus does the work of a weapon). You can still take a Kit later.</p>"
       }
     },
     "Classes": {
@@ -2617,6 +2625,391 @@
           "GhostInTheWalls": {
             "Name": "Ghost in the Walls",
             "Effect_before0000000000": "<p>While you are inside or adjacent to your base, you know the location and status of every pre-placed asset and every enemy your base’s sensors detect, without line of sight.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          }
+        }
+      },
+      "Elementalist": {
+        "Folders": {
+          "Elementalist": "Elementalist",
+          "Abilities": "Abilities",
+          "Origins": "Specializations",
+          "Pyromancer": "Pyromancer",
+          "Stormcaller": "Stormcaller",
+          "Geomancer": "Geomancer"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Elementalist",
+            "Description": "<p>You are an Elementalist — a hexer, a stormhead, or on a clean corp badge an arcano-thaumic contractor. You are the crew’s spellcaster and its artillery: you win by rewriting the battlefield, hurling fire and lightning across a room, freezing a chokepoint solid, raising a wall of stone, and at full power tearing an elemental loose from across the Veil to fight at your side.</p><p>You are always <strong>attuned</strong> to one element — fire, air, water, earth, or void — and your attunement drips <strong>Essence</strong> every turn. Commit a maneuver to <strong>Channel</strong> and you bank a growing ramp on top of the drip, released in a crescendo. Because you reach across the Veil, the Veil’s rules apply to you: backlash, spirit attention, and the Price (nothing for nothing).</p><p><strong>⚠ Cyborgs can never be Elementalists.</strong> Arcane Severance bars a Cyborg from all magic, absolutely. This is enforced at character creation: if you built a Cyborg, choose a different class or People before play.</p><p><strong>Chrome is strongly discouraged.</strong> Cyberware erodes a mage’s channeling: Salvage and Standard implants each cut your Essence cap (Salvage also slows your Channel ramp); only soft bioware is tolerable, at 1 lost cap per two implants. Your gear is foci, not chrome.</p><p>Your subclass is your element cluster: <strong>Pyromancer</strong> (fire), <strong>Stormcaller</strong> (air and water), or <strong>Geomancer</strong> (earth and void).</p><p><strong>Core characteristics:</strong> Logic, Persona · <strong>Heroic resource:</strong> Essence · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> optional (Hexshot, Spellblade, or Sanctified). <em>Quick Build:</em> Pyromancer, no Kit.</p>"
+          },
+          "Essence": {
+            "Name": "Essence",
+            "Description": "<p>Essence is the shaped substance of creation, banked by attunement and spent on workings.</p><h4>Attunement</h4><p>You are always attuned to one element: fire, air, water, earth, or void. Choosing or switching your attunement is free (no action) on your turn. Your attunement sets which element your drip and your Channel produce.</p><h4>Essence in Combat</h4><ul><li><p><strong>Start of combat:</strong> gain Essence equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>The drip:</strong> at the start of each of your turns, gain [[/gain 1 hr]]{1 Essence} (Foundry adds this automatically).</p></li><li><p><strong>Channel (maneuver):</strong> bank extra Essence of your attuned element. Channeling the same element on consecutive turns ramps: [[/gain 2 hr]]{+2} on the first turn, [[/gain 3 hr]]{+3} on the second, [[/gain 4 hr]]{+4} on the third and later. Switching your attunement resets the ramp to +2.</p></li><li><p><strong>Elemental Resonance:</strong> the first time each combat round typed elemental damage from your own workings lands, [[/gain 1 hr]]{gain 1 Essence}.</p></li></ul><p>A committed caster at full ramp banks +5 per turn, or +6 when resonance lands. One who skips Channel banks only the +1 drip.</p><h4>Cap and Loss</h4><p>Your Essence cap is <strong>8</strong> at Echelon 1, <strong>12</strong> at Echelon 2, <strong>16</strong> at Echelon 3, and <strong>20</strong> at Echelon 4 (up to 24 at 10th level). You lose all unspent Essence at the end of the encounter.</p><h4>Sustaining Workings</h4><p>Sustaining a persistent working (a wall, a zone, a bound elemental) reduces the Essence you bank at the start of each turn: <strong>Persistent 1 = −2 per turn</strong>, <strong>Persistent 2 = −4 per turn</strong> (individual workings state their own drain). A heavy hit can break your concentration and end sustained workings (a Persona save against the attack’s potency).</p><h4>Essence Outside of Combat</h4><p>You can’t gain Essence outside of combat, but you can use Essence abilities without spending it. Whenever you do, you can’t use that same ability outside combat again until you earn 1 or more Victories or finish a respite. You can sustain a persistent working outside combat for a number of rounds equal to your Victories.</p><p><strong>Firewall:</strong> Essence never touches nuyen or Body Integrity, and chrome never generates it.</p><p><em>In Foundry, the drip is automatic; Channel, Resonance, sustain drains, and the cap are tracked with the buttons above.</em></p>"
+          },
+          "WeaveSensitivity": {
+            "Name": "Weave Sensitivity",
+            "Description": "<p>You passively detect Veil-adjacent phenomena within 5 squares: spirits, sustained workings, magical effects, and corrupted zones. You know when the Veil is thin near you.</p>"
+          },
+          "AttunementDiscipline": {
+            "Name": "Attunement Discipline",
+            "Description": "<p>You can switch your attuned element as a free action even during another creature’s turn. Whenever you switch elements, you [[/gain 1 hr]]{gain 1 Essence}.</p>"
+          },
+          "PracticedRamp": {
+            "Name": "Practiced Ramp",
+            "Description": "<p>While attuned to your subclass’s primary element (fire for Pyromancer, air or water for Stormcaller, earth or void for Geomancer), your Channel ramp starts at +3 instead of +2.</p>"
+          },
+          "ElementalAttunementII": {
+            "Name": "Elemental Attunement II",
+            "Description": "<p>You have immunity to your subclass’s primary element damage equal to [[lookup @R]]{your Logic score}. This stacks with subclass immunities.</p>"
+          },
+          "SignatureBond": {
+            "Name": "Signature Bond",
+            "Description": "<p>Once per echelon, you can permanently bond one signature focus (from the Elementalist foci in Ghostwire Foci). A bonded focus gains the deeper persistent benefit its own text describes. Bonding costs 1 skill point — the one sanctioned crossing of the BP firewall. You can have only one bonded focus at a time; unbonding requires a respite.</p>"
+          },
+          "BindDiscipline": {
+            "Name": "Bind Discipline",
+            "Description": "<p>You gain +1 on all Persona-based bind rolls (Summon Elemental, Veilbreaker Bind, and subclass equivalents).</p>"
+          },
+          "EssenceCapPlus4": {
+            "Name": "Essence Cap +4",
+            "Description": "<p>Your Essence cap increases by 4.</p>"
+          },
+          "ElementalAttunementIII": {
+            "Name": "Elemental Attunement III",
+            "Description": "<p>Your immunity to your subclass’s primary element damage becomes twice your Logic score. You also gain a permanent secondary attunement type: a Pyromancer picks lightning or acid, a Stormcaller cold or sonic, a Geomancer void or corruption.</p>"
+          },
+          "WeaveMastery": {
+            "Name": "Weave Mastery — The Deep Weave",
+            "Description": "<p>As a respite activity, you can establish a <strong>standing bind</strong> on a signature elemental of any Rank up to your echelon − 1. It persists on the material plane for the current story arc (Director’s discretion), acts independently on the shared round, and costs you 1 Essence per turn to sustain, but only while you are awake and conscious.</p>"
+          },
+          "ElementalAttunementIV": {
+            "Name": "Elemental Attunement IV",
+            "Description": "<p>Your immunity to your subclass’s primary element damage becomes three times your Logic score. You can permanently attune to two elements at once (as Attunement Ascendant), replacing the secondary attunement from Elemental Attunement III.</p>"
+          },
+          "AscendantWeave": {
+            "Name": "Ascendant Weave",
+            "Description": "<p>Your bind rolls to summon and command gain a permanent edge. Your standing bind from Weave Mastery can hold a Rank up to your echelon. Once per encounter, you can sustain one persistent working with no Essence cost, in addition to those you sustain normally.</p>"
+          },
+          "PrimordialReservoir": {
+            "Name": "Primordial Reservoir",
+            "Description": "<p>You have an epic resource called <strong>Reservoir</strong>. Each time you finish a respite, you gain Reservoir equal to the XP you gain. You can spend Reservoir on your abilities as if it were Essence.</p><p>As a free maneuver, you can spend any amount of Reservoir to end one save-ends effect on yourself per Reservoir spent. You can spend 3 Reservoir to sustain any persistent working for one turn at no Essence cost.</p><p>Reservoir remains until you spend it.</p>"
+          },
+          "HurlElement": {
+            "Name": "Hurl Element",
+            "Story": "The everyday blaster tool, typed to whatever you’re attuned to.",
+            "Effect_before0000000000": "<p>The damage type matches your attunement (acid, cold, corruption, fire, lightning, poison, or sonic).</p>",
+            "Effect_spend00000000000": "<p>For each Essence spent: deal 1 extra damage, push the target 1 square, or (spending 2 or more) splash a second target within 2 squares for half damage.</p>"
+          },
+          "ElementalShaping": {
+            "Name": "Elemental Shaping",
+            "Story": "A gust, a stone bridge, a wave, a blink of storm.",
+            "Effect_before0000000000": "<p>Choose one when you use this ability: a burst of elemental damage to a creature, a forced slide of a creature, or a shift for yourself.</p>",
+            "Effect_spend00000000000": "<p>For each Essence spent, the chosen effect increases by 1 (damage, slide, or shift).</p>",
+            "Tier1": "2 elemental damage, or slide 1, or shift 1.",
+            "Tier2": "4 elemental damage, or slide 2, or shift 2.",
+            "Tier3": "6 elemental damage, or slide 3, or shift 3."
+          },
+          "ReadTheWeave": {
+            "Name": "Read the Weave",
+            "Story": "Free intel that sets up binds and banishments.",
+            "Effect_before0000000000": "<p>Sense the Veil around you or read one entity or working you can perceive.</p>",
+            "Tier1": "You sense how thin the Veil is here, or know that magic is present.",
+            "Tier2": "You read an entity’s rank or nature, or identify a working and what it does.",
+            "Tier3": "As a middle result, and you learn a bound creature’s true name: your later Persona-based binds against it gain an edge."
+          },
+          "ElementalConvergence": {
+            "Name": "Elemental Convergence",
+            "Story": "A bigger Tempest, with a rider for every element.",
+            "Effect_before0000000000": "<p>Add a rider by your attunement: <strong>fire</strong> — each target burns for 2 damage (save ends); <strong>cold</strong> — slowed (save ends); <strong>lightning</strong> — dazed (save ends); <strong>acid or corruption</strong> — weakened (save ends); <strong>void</strong> — pull each target 3 squares toward the center of the area.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Re-detonate the area each turn (−4 Essence banked per turn).</p>"
+          },
+          "VeilbreakerBind": {
+            "Name": "Veilbreaker Bind",
+            "Story": "The counter-caster tool: steal a rival’s elemental.",
+            "Effect_before0000000000": "<p>Force a hostile summoned or native elemental into a contested Persona bind. On a success, you control it for the encounter as an allied elemental of its own Rank. On a failure, you take [[/damage 2d6]]{2d6} backlash damage and the elemental gains an edge on its next attack.</p><p><em>First-draft working (playtest tuning pending).</em></p>"
+          },
+          "SecondRamp": {
+            "Name": "Second Ramp",
+            "Story": "The tempo swing: refill and max the ramp.",
+            "Effect_before0000000000": "<p>You immediately [[/gain 3 hr]]{gain 3 Essence}, and your next Channel this encounter grants +4 regardless of your ramp.</p><p><em>First-draft working (playtest tuning pending).</em></p>"
+          },
+          "SanctumStone": {
+            "Name": "Sanctum Stone",
+            "Story": "A warded circle of consecrated element.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Aura 3 centered on a point within 5 squares.</p><p>Enemies in the aura take a bane on attacks, allies in the aura gain an edge on Persona saves, and forced movement into the aura is halved.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Sustain the circle (−4 Essence banked per turn).</p>"
+          },
+          "Cataclysm": {
+            "Name": "Cataclysm",
+            "Story": "The firestorm that strips the Director’s Malice.",
+            "Effect_before0000000000": "<p>Damage typed to your attunement.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Tier1": "Only the primary target is caught, and Alert/spirit attention ticks up by 1.",
+            "Tier2": "The ground in the area stays difficult terrain until the end of the encounter.",
+            "Tier3": "The Director loses 1 Malice."
+          },
+          "VoidVortex": {
+            "Name": "Void Vortex",
+            "Story": "The vortex that destroys the winded.",
+            "Effect_before0000000000": "<p>Void or corruption damage to each enemy in the aura each round. At the start of each enemy’s turn while sustained, pull it 2 squares toward you; an enemy at 0 Stamina or winded when its turn starts inside the vortex is destroyed (Rank 1 elementals, minions, and lower absolutely; Rank 2 and higher take maximum damage instead).</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Sustain the vortex (−4 Essence banked per turn).</p>"
+          },
+          "WorldFissure": {
+            "Name": "World-Fissure",
+            "Story": "The quake opens a fissure.",
+            "Effect_before0000000000": "<p>The ground along the line becomes an impassable fissure for the rest of the encounter, with difficult terrain 3 squares to either side. Geomancers can also take this as their 9th-level specialization ability.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Tier2": "Each target is knocked prone.",
+            "Tier3": "Each target is knocked prone."
+          },
+          "TwinElementalSummon": {
+            "Name": "Twin Elemental Summon",
+            "Story": "Double your action economy, at a huge Essence bite.",
+            "Effect_before0000000000": "<p>Bind two elementals with one action and one bind roll (as Summon Elemental). Both can be extensions, or (echelon 3 or higher) one can be an independent figure. Sustain Persistent 3 for two extensions, or Persistent 5 for an independent plus an extension. A broken bind on either turns both hostile.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Sustain the pair (Persistent 3 for two extensions, Persistent 5 with an independent figure).</p>",
+            "Tier1": "The bind fails: both elementals are hostile and free for one round.",
+            "Tier2": "Both are bound, but each resists one Command per encounter.",
+            "Tier3": "Both are bound cleanly, with an edge on Command rolls."
+          },
+          "GreaterElementalSummon": {
+            "Name": "Greater Elemental Summon",
+            "Story": "The full summoner fantasy realized.",
+            "Effect_before0000000000": "<p>Bind a Rank 4 elemental (Rank 5 at echelon 4) as an independent figure with its own Stamina, maneuvers, and signature (an Ancient Flame, a Roaring Storm, a Living Mountain, a Devouring Void). A willing elemental demands a greater task; coercing one costs 3 corruption and 3 spirit attention.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Sustain the greater elemental (−6 Essence banked per turn).</p>"
+          },
+          "WorldSundering": {
+            "Name": "World-Sundering",
+            "Story": "An elemental scar that lasts the session.",
+            "Effect_before0000000000": "<p>No roll. Each enemy in the area whose potency is strong or weaker takes [[/damage 20+@R]]{20 + Logic} elemental damage and is knocked prone; an enemy of weak potency is instead reduced to 0 Stamina; minions are destroyed. The area becomes an elemental scar for the rest of the session: difficult terrain that deals 3 damage per turn to any non-elemental creature crossing it.</p><p><em>First-draft working (playtest tuning pending).</em></p>"
+          },
+          "AttunementAscendant": {
+            "Name": "Attunement Ascendant",
+            "Story": "A walking hurricane of typed damage.",
+            "Effect_before0000000000": "<p>Until the end of the encounter, your Channel ramp is already at +4 and doesn’t reset when you switch attunement, and you can attune to two elements at once, gaining both drips and resonance. Your signature abilities can combine damage types (fire and lightning make plasma; earth and water make mud; the Director rules on the effect).</p><p><em>First-draft working (playtest tuning pending).</em></p>"
+          },
+          "BreakTheVeil": {
+            "Name": "Break the Veil",
+            "Story": "The team-wide caster apex.",
+            "Effect_before0000000000": "<p>The Veil thins around you. Until the end of the encounter, each ally in the aura sustains persistent workings at reduced cost (Persistent 2 becomes 1; 4 becomes 2), you sustain one persistent working at no Essence cost, and your signature and heroic ability rolls gain an edge.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Break the Veil itself is Persistent 4 on cast.</p>"
+          },
+          "BoltBarrage": {
+            "Name": "Bolt Barrage",
+            "Story": "Two targets banged for real, or one hit twice as hard.",
+            "Effect_before0000000000": "<p>Target up to 2 creatures. If you target only 1 creature, add your Logic score to the damage again.</p>"
+          },
+          "DifficultGround": {
+            "Name": "Difficult Ground",
+            "Story": "A live zone that punishes every step across it.",
+            "Effect_before0000000000": "<p>The ground in the area becomes difficult terrain until the start of your next turn.</p>",
+            "Effect_persistent000000": "<p>Sustain the zone (−2 Essence banked per turn).</p>"
+          },
+          "ElementalWall": {
+            "Name": "Elemental Wall",
+            "Story": "Block a line, force a chokepoint, punish the room.",
+            "Effect_before0000000000": "<p>A wall of flame, stone, ice, or force blocks line of effect and movement as its element allows. The damage applies to each enemy that enters the wall’s space or starts its turn adjacent to it.</p>",
+            "Effect_persistent000000": "<p>Sustain and extend the wall (−2 Essence banked per turn).</p>"
+          },
+          "ConflagrationTempest": {
+            "Name": "Conflagration / Tempest",
+            "Story": "Firestorm, ball lightning, acid rain, choking dust, roiling void.",
+            "Effect_before0000000000": "<p>Heavy elemental damage to each enemy in the area, flavored by your attuned element.</p>",
+            "Effect_persistent000000": "<p>Re-detonate the area each turn without paying the cost again (−4 Essence banked per turn).</p>"
+          },
+          "SummonElemental": {
+            "Name": "Summon Elemental",
+            "Story": "The class’s defining working: the real cost is the upkeep.",
+            "Effect_before0000000000": "<p>You tear an elemental loose from the Veil and bind it. Make the bind roll: a power roll with Logic, with an edge if your Persona is equal to or higher than your Logic (Bind Discipline adds +1).</p><ul><li><p><strong>Extension (1st–5th level):</strong> a Rank 1 elemental that acts on your turn, dealing 4/7/10 + Logic damage by result. Sustain: Persistent 2 (−4 Essence banked per turn).</p></li><li><p><strong>Independent figure (7th level and later, or a properly bound mid-level caster):</strong> its own figure on the map with its own Stamina and turn (Rank 2 from 5th level). Sustain: Persistent 4 (−4 Essence banked per turn).</p></li></ul><p><strong>The Price:</strong> a willing elemental demands a task aligned to its nature; coercing an unwilling one costs 1 corruption and 1 spirit-attention tick per Rank. A heavy hit while you sustain it can break the bind (Persona save against the potency).</p>",
+            "Effect_persistent000000": "<p>Sustain the bound elemental: extension Persistent 2 (−4 Essence banked per turn); independent figure Persistent 4.</p>",
+            "Tier1": "The bind fails: the elemental is hostile and free for one round, then the Veil pulls it back.",
+            "Tier2": "The elemental is bound, but resists one Command per encounter.",
+            "Tier3": "The elemental is bound cleanly, and you gain an edge on Command rolls for it."
+          },
+          "Pyromancer": {
+            "Name": "Pyromancer",
+            "Description": "<p><em>“Combustion-thaumic specialist.”</em> Fire, plasma, and destruction: the archetypal blaster. Street: firehead, candle, or the pyro.</p><p>At 1st level you gain the <strong>Spellcraft</strong> skill (the chapter’s Arcana), the Burn On feature, the Ember Companion signature summon, and a signature focus: the <strong>Spark-ring</strong> (Ghostwire Foci). A Pyromancer takes no weapon Kit by default.</p>"
+          },
+          "BurnOn": {
+            "Name": "Burn On",
+            "Description": "<p>Whenever you deal fire, lightning, or acid damage to a creature with a signature or heroic ability, that creature also takes fire damage at the start of its next turn: 4 at echelon 1, 3 at echelon 2, 2 at echelon 3, and 1 at echelon 4.</p>"
+          },
+          "FirestormAttunement": {
+            "Name": "Firestorm Attunement",
+            "Description": "<p>While attuned to fire, lightning, or acid, your Channel ramp builds a step faster: +3 on the first turn and +4 on the second.</p>"
+          },
+          "FireImmunity": {
+            "Name": "Fire Immunity",
+            "Description": "<p>You have fire immunity equal to [[lookup @R]]{your Logic score}. You can walk through fire, sustain a fire wall from inside it, and take no ambient fire damage from a Cataclysm you sustain.</p>"
+          },
+          "FuryRising": {
+            "Name": "Fury Rising",
+            "Description": "<p>Whenever you spend 5 or more Essence in a single turn, you [[/surge 1]] (usable until the end of your next turn), and your next signature ability this encounter deals extra damage equal to your Logic score.</p>"
+          },
+          "TheFurnaceWithin": {
+            "Name": "The Furnace Within",
+            "Description": "<p>You gain +1 on Logic-based power rolls. Once per round, a fire, lightning, or acid working costs you 1 less Essence (minimum 0).</p>"
+          },
+          "EmberCompanion": {
+            "Name": "Ember Companion",
+            "Story": "A lash of living flame, bound for a moment.",
+            "Effect_before0000000000": "<p>Once per encounter, you summon a Rank 1 elemental as an extension: it appears within distance, acts on your turn, and lasts 3 rounds with no sustain cost. When you use this ability, the elemental makes the strike below.</p><p>It doesn’t replace Summon Elemental; it’s a taste of the summoner fantasy from 1st level.</p>"
+          },
+          "Wildfire": {
+            "Name": "Wildfire",
+            "Story": "The room keeps burning.",
+            "Tier2": "The area becomes a burning zone until the end of the encounter: difficult terrain that deals 3 fire damage per turn to enemies inside.",
+            "Tier3": "The area becomes a burning zone until the end of the encounter: difficult terrain that deals 3 fire damage per turn to enemies inside."
+          },
+          "CleansingFlame": {
+            "Name": "Cleansing Flame",
+            "Story": "A rare healing-adjacent flame.",
+            "Effect_before0000000000": "<p>End all save-ends fire, acid, poison, and corruption effects on the target. The target gains [[/heal 2*@R temporary]]{temporary Stamina equal to twice your Logic score}.</p>"
+          },
+          "SolarLance": {
+            "Name": "Solar Lance",
+            "Story": "A line of sunfire that ignores cover.",
+            "Effect_before0000000000": "<p>The line ignores cover.</p>",
+            "Tier3": "The target is blinded (save ends)."
+          },
+          "CombustionChain": {
+            "Name": "Combustion Chain",
+            "Story": "One burning target lights the next.",
+            "Effect_before0000000000": "<p>If the target is at half Stamina or below, the fire chains to a second creature within 3 squares for 5/8/11 + Logic fire damage by result. If the second target dies from this, it chains to a third within 3 squares for 3/5/8 + Logic.</p>"
+          },
+          "LivingSun": {
+            "Name": "Living Sun",
+            "Story": "The walking sun.",
+            "Effect_before0000000000": "<p>Bright light fills the aura. While it lasts, each enemy in the aura takes the damage at the start of each of its turns, and each ally in the aura can spend a Recovery as a free maneuver once per turn.</p>",
+            "Effect_persistent000000": "<p>Sustain the sun (−4 Essence banked per turn).</p>"
+          },
+          "AshenWake": {
+            "Name": "Ashen Wake",
+            "Story": "Burn the earth.",
+            "Effect_before0000000000": "<p>The area becomes ashen ground until the end of the session: difficult terrain that blocks line of sight through it and deals 3 fire damage per turn to any creature without fire immunity.</p>"
+          },
+          "Stormcaller": {
+            "Name": "Stormcaller",
+            "Description": "<p><em>“Kinetic-atmospheric specialist.”</em> Air, water, and mobility: the battlefield mover. Street: stormhead, windbag (derogatory), or the tempest.</p><p>At 1st level you gain the <strong>Perception</strong> skill, the Kinetic Enlargement feature, the Zephyr Companion signature summon, and a signature focus: the <strong>Storm-tine</strong> or the <strong>Riverstone</strong> (Ghostwire Foci). A Stormcaller takes no weapon Kit by default.</p>"
+          },
+          "KineticEnlargement": {
+            "Name": "Kinetic Enlargement",
+            "Description": "<p>Whenever a signature or heroic ability you use includes forced movement or a shift or teleport for yourself, that movement increases by 3 squares at echelons 1–2, 2 squares at echelon 3, and 1 square at echelon 4.</p>"
+          },
+          "RidingTheStorm": {
+            "Name": "Riding the Storm",
+            "Description": "<p>While attuned to air or water, your speed increases by 2. Once per encounter, when you use Elemental Shaping’s shift option, you can teleport instead, ignoring intervening terrain and creatures.</p>"
+          },
+          "StormsBlessing": {
+            "Name": "Storm’s Blessing",
+            "Description": "<p>You have lightning immunity equal to [[lookup @R]]{your Logic score}. You and each ally within 3 squares of you gain an edge on Reflex saves against elemental effects.</p>"
+          },
+          "RollingThunder": {
+            "Name": "Rolling Thunder",
+            "Description": "<p>Whenever you deal lightning or cold damage to a creature with a signature or heroic ability, the damage arcs to a second creature within 3 squares for 3 damage of the same type at echelon 1, 2 at echelon 2, and 1 at echelons 3–4.</p>"
+          },
+          "EyeOfTheStorm": {
+            "Name": "Eye of the Storm",
+            "Description": "<p>You gain +1 on Logic-based power rolls. Once per round, when a creature within 5 squares of you makes an attack against you or an ally, you can force it to reroll; the second roll stands.</p>"
+          },
+          "ZephyrCompanion": {
+            "Name": "Zephyr Companion",
+            "Story": "A striking wind, bound for a moment.",
+            "Effect_before0000000000": "<p>Once per encounter, you summon a Rank 1 elemental as an extension: it appears within distance, acts on your turn, and lasts 3 rounds with no sustain cost. When you use this ability, the elemental makes the strike below. Choose cold, lightning, or sonic damage when you summon it. On a middle or high result, the strike slides the target 1 square.</p><p>It doesn’t replace Summon Elemental; it’s a taste of the summoner fantasy from 1st level.</p>"
+          },
+          "ChainLightning": {
+            "Name": "Chain Lightning",
+            "Story": "It jumps.",
+            "Effect_before0000000000": "<p>The lightning arcs to a second creature within 3 squares of the target for half the damage, then to a third creature within 3 squares of the second for a quarter.</p>"
+          },
+          "RiptideGrab": {
+            "Name": "Riptide Grab",
+            "Story": "Everyone gets dragged to the middle.",
+            "Effect_before0000000000": "<p>Pull each enemy in the area 3 squares toward the center of the area (5 squares at echelon 2, 7 at echelon 1).</p>",
+            "Tier1": "An enemy pulled into a solid obstacle takes 2 damage.",
+            "Tier2": "An enemy pulled into a solid obstacle takes 4 damage.",
+            "Tier3": "An enemy pulled into a solid obstacle takes 6 damage."
+          },
+          "CycloneTrap": {
+            "Name": "Cyclone Trap",
+            "Story": "Caught in the spin.",
+            "Effect_persistent000000": "<p>Sustain the cyclone (−4 Essence banked per turn).</p>",
+            "Tier2": "Each target is restrained (save ends).",
+            "Tier3": "Each target is restrained (save ends)."
+          },
+          "Skyfall": {
+            "Name": "Skyfall",
+            "Story": "The sky comes down.",
+            "Effect_before0000000000": "<p>Each target with average potency or lower is knocked prone; each target with strong potency or weaker is dazed (save ends).</p>"
+          },
+          "CataclysmsVoice": {
+            "Name": "Cataclysm’s Voice",
+            "Story": "The Stormcaller’s apex.",
+            "Tier2": "Each target is deafened (save ends); a deafened target can’t be commanded by its allies.",
+            "Tier3": "Each target is deafened (save ends); a deafened target can’t be commanded by its allies."
+          },
+          "TheDeluge": {
+            "Name": "The Deluge",
+            "Story": "Flood the room.",
+            "Effect_before0000000000": "<p>Cold or sonic damage. The area fills with water: difficult terrain at half speed, with a chance to drown under the environment rules, and creatures inside take 2 lightning damage per turn from a stormfront overhead.</p>",
+            "Effect_persistent000000": "<p>Sustain the flood (−4 Essence banked per turn).</p>"
+          },
+          "Geomancer": {
+            "Name": "Geomancer",
+            "Description": "<p><em>“Geo-structural / spatial specialist.”</em> Earth, void, and terrain: the fortress. Street: stone-eater, the walls, or grim (for the void-heavy).</p><p>At 1st level you gain the <strong>Athletics</strong> skill (the chapter’s Endurance), the Stone Shield feature, the Boulder Companion signature summon, and a signature focus: the <strong>Grave-anchor</strong> (Ghostwire Foci). A Geomancer takes no weapon Kit by default.</p>"
+          },
+          "StoneShield": {
+            "Name": "Stone Shield",
+            "Description": "<p>Whenever you raise a terrain feature (Elemental Wall, Pillar of Stone, Sanctum Stone, or a Difficult Ground zone), you or one ally within 3 squares gains temporary Stamina equal to your Logic score, doubled at echelon 2 and tripled at echelon 1.</p>"
+          },
+          "WardingTerrain": {
+            "Name": "Warding Terrain",
+            "Description": "<p>Enemies moving through your Difficult Ground zones or terrain features take 2 extra damage per square, typed to your attunement.</p>"
+          },
+          "RootDeep": {
+            "Name": "Root Deep",
+            "Description": "<p>You can’t be force-moved against your will while adjacent to a terrain feature you raised. Your stability increases by 2.</p>"
+          },
+          "FortressStance": {
+            "Name": "Fortress Stance",
+            "Description": "<p>Once per encounter as a free maneuver, you raise the square you occupy into a stone pillar. Each adjacent creature makes a Physique test or falls prone, and you have cover and +2 Stamina from armor until you leave the square.</p>"
+          },
+          "Immutable": {
+            "Name": "Immutable",
+            "Description": "<p>You gain +1 on Logic-based power rolls. You can’t be knocked prone, restrained, or force-moved by any source below Rank 4, though you can choose to fall prone.</p>"
+          },
+          "BoulderCompanion": {
+            "Name": "Boulder Companion",
+            "Story": "A stone fist, bound for a moment.",
+            "Effect_before0000000000": "<p>Once per encounter, you summon a Rank 1 elemental as an extension: it appears within distance, acts on your turn, and lasts 3 rounds with no sustain cost. When you use this ability, the elemental makes the strike below. Choose acid or corruption damage when you summon it. On a middle or high result, the strike can also shove the target 1 square.</p><p>It doesn’t replace Summon Elemental; it’s a taste of the summoner fantasy from 1st level.</p>"
+          },
+          "PillarOfStone": {
+            "Name": "Pillar of Stone",
+            "Story": "Terrain you raise on demand.",
+            "Effect_before0000000000": "<p>Raise a stone pillar up to 4 squares tall in a square within distance; a creature in that square is shoved to an adjacent empty square. The pillar blocks line of sight, provides cover, and is impassable. It lasts until the end of the session or until destroyed (Stamina 5 + your echelon).</p>",
+            "Effect_persistent000000": "<p>Sustain and maintain multiple pillars (−2 Essence banked per turn).</p>"
+          },
+          "CorrosiveRain": {
+            "Name": "Corrosive Rain",
+            "Story": "It eats through everything.",
+            "Effect_before0000000000": "<p>Acid or corruption damage.</p>",
+            "Tier2": "Each target is weakened (save ends).",
+            "Tier3": "Each target is weakened (save ends)."
+          },
+          "Voidstep": {
+            "Name": "Voidstep",
+            "Story": "Step through a tear in the Veil.",
+            "Effect_before0000000000": "<p>Teleport up to 10 squares to a location you can see, bringing one adjacent ally with you. The closing tear deals the damage to each enemy adjacent to your destination.</p>"
+          },
+          "AnchoringField": {
+            "Name": "Anchoring Field",
+            "Story": "Nobody teleports out of this.",
+            "Effect_before0000000000": "<p>Enemies in the aura can’t teleport or be teleported, and their speed is reduced by 2 (save ends).</p>",
+            "Effect_persistent000000": "<p>Sustain the field (Persistent 3).</p>"
+          },
+          "VoidGrasp": {
+            "Name": "Void-Grasp",
+            "Story": "The Veil itself takes hold.",
+            "Effect_before0000000000": "<p>Void damage.</p>",
+            "Tier2": "The target is knocked prone and can’t move (save ends).",
+            "Tier3": "The target is removed from play until the end of your next turn; it returns in the same square and takes [[/damage 2d6]]{2d6} damage."
           }
         }
       }

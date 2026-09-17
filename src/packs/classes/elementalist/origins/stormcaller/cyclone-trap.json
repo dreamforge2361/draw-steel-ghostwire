@@ -1,0 +1,150 @@
+{
+  "_id": "eBvyOqzuqzMut2xb",
+  "_key": "!items!eBvyOqzuqzMut2xb",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.CycloneTrap.Name",
+  "type": "ability",
+  "img": "icons/magic/air/wind-tornado-wall-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cyclone-trap",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.CycloneTrap.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "4",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "dNyHb9RndBcrKpEm": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "dNyHb9RndBcrKpEm",
+          "damage": {
+            "tier1": {
+              "value": "8 + @chr",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "11 + @chr",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "15 + @chr",
+              "types": [
+                "sonic"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "7VbXvBLiJpLJbeCT": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "7VbXvBLiJpLJbeCT",
+          "other": {
+            "tier1": {
+              "display": "",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.CycloneTrap.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.CycloneTrap.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "persistent000000": {
+        "_id": "persistent000000",
+        "type": "persistent",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.CycloneTrap.Effect_persistent000000",
+        "essence": 2,
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 200000
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "stormcaller"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AnS0DoBhq3UHzjjH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

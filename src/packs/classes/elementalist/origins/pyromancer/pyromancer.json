@@ -1,0 +1,277 @@
+{
+  "_id": "Y7XtaWRohRJWNATP",
+  "_key": "!items!Y7XtaWRohRJWNATP",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.Pyromancer.Name",
+  "type": "subclass",
+  "img": "icons/magic/fire/flame-burning-hand-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.Pyromancer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pyromancer",
+    "advancements": {
+      "Bql2k49nZGCjYONr": {
+        "name": "GHOSTWIRE.Skills.List.Spellcraft",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Bql2k49nZGCjYONr",
+        "skills": {
+          "choices": [
+            "spellcraft"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your specialization grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "5iAEcaxOIKiz3rze": {
+        "name": "Burn On",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "5iAEcaxOIKiz3rze",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0OSrRmuaeZYaCoX8"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "97Ejkg0ychDqa9cO": {
+        "name": "Ember Companion",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "97Ejkg0ychDqa9cO",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CtpZ4HDUWW8CiXdt"
+          }
+        ],
+        "description": "<p>Your specialization grants you its signature summon.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Uz1rSqjtUXmyT64e": {
+        "name": "Signature Focus",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Uz1rSqjtUXmyT64e",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.foci.Item.IlGjHbevuwdlsHuJ"
+          }
+        ],
+        "description": "<p>Your specialization grants you its signature focus from the Elementalist foci.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "9twe9Dqc8PKfiqsI": {
+        "name": "Firestorm Attunement",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "9twe9Dqc8PKfiqsI",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gEFh2DSY0xbbRGLu"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "TJZ7ZS9bT2Tl2Cru": {
+        "name": "2nd-Level Pyromancer Ability",
+        "img": "icons/magic/fire/flame-burning-hand-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "TJZ7ZS9bT2Tl2Cru",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WHPj6OZefCAWn8mC"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jjQ1YQBDAW85HGza"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "mfIrAtK2ByoLjlyH": {
+        "name": "Fire Immunity",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "mfIrAtK2ByoLjlyH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Dpuf1vMc9wu0enUP"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "z6CjWb2DXxnHI7N3": {
+        "name": "Fury Rising",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "z6CjWb2DXxnHI7N3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.lkzRzqkXWlGP0PH0"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "XEn0iZTiMWiP694N": {
+        "name": "6th-Level Pyromancer Ability",
+        "img": "icons/magic/fire/flame-burning-hand-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "XEn0iZTiMWiP694N",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9jbKO1G9JiBKHNMy"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YLQlXqPiqRpqkSAz"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "1g87cu7dDaLOyyQV": {
+        "name": "The Furnace Within",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "1g87cu7dDaLOyyQV",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JYG35kCbmphXUwBx"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Vv7pAOqaFQPrJyCH": {
+        "name": "9th-Level Pyromancer Ability",
+        "img": "icons/magic/fire/flame-burning-hand-orange.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "Vv7pAOqaFQPrJyCH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4IM3k4iEhGMqWDiT"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9tGnu5FEHrSZbGJs"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "elementalist"
+  },
+  "effects": [],
+  "folder": "2X6KQjS0XJf4u4Hw",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

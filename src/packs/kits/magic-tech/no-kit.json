@@ -1,0 +1,54 @@
+{
+  "_id": "Fr3eCasterNoKit1",
+  "_key": "!items!Fr3eCasterNoKit1",
+  "name": "GHOSTWIRE.Kits.NoKit.Name",
+  "type": "kit",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Kits.NoKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "10-kits",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "no-kit",
+    "advancements": {},
+    "equipment": {
+      "armor": "none",
+      "weapon": [],
+      "shield": false
+    },
+    "bonuses": {
+      "melee": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "ranged": {
+        "damage": {
+          "tier1": 0,
+          "tier2": 0,
+          "tier3": 0
+        },
+        "distance": null
+      },
+      "stamina": 0,
+      "speed": 0,
+      "stability": 0,
+      "disengage": 0
+    }
+  },
+  "effects": [],
+  "folder": "BetZn4M0Udrd7LUH",
+  "sort": 900000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

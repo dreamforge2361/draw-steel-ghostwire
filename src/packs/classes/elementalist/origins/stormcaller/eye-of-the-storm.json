@@ -1,0 +1,32 @@
+{
+  "_id": "tQJJdkQCfKj5rRFa",
+  "_key": "!items!tQJJdkQCfKj5rRFa",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.EyeOfTheStorm.Name",
+  "type": "feature",
+  "img": "icons/magic/air/wind-tornado-wall-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.EyeOfTheStorm.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "eye-of-the-storm",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AnS0DoBhq3UHzjjH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

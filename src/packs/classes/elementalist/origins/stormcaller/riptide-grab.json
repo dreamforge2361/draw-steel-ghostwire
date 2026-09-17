@@ -1,0 +1,107 @@
+{
+  "_id": "ZUcHUQA2JUh8RCSQ",
+  "_key": "!items!ZUcHUQA2JUh8RCSQ",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.RiptideGrab.Name",
+  "type": "ability",
+  "img": "icons/magic/water/wave-water-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "riptide-grab",
+    "story": "GHOSTWIRE.Classes.Elementalist.Items.RiptideGrab.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "3",
+      "secondary": "5",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "YQtQY6ZH7Fmt5cuG": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "YQtQY6ZH7Fmt5cuG",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.RiptideGrab.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.RiptideGrab.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Elementalist.Items.RiptideGrab.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Elementalist.Items.RiptideGrab.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "stormcaller"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "AnS0DoBhq3UHzjjH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

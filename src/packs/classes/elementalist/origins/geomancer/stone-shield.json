@@ -1,0 +1,32 @@
+{
+  "_id": "ai4q62fr267ttxxj",
+  "_key": "!items!ai4q62fr267ttxxj",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.StoneShield.Name",
+  "type": "feature",
+  "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.StoneShield.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "stone-shield",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JZFWJaJ7TnJXJcNF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

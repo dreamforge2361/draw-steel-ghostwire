@@ -1,0 +1,32 @@
+{
+  "_id": "2yPuWI9d6CZduMDw",
+  "_key": "!items!2yPuWI9d6CZduMDw",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.ElementalAttunementII.Name",
+  "type": "feature",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.ElementalAttunementII.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "elemental-attunement-ii",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "wxxXPFtqojua2GRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -67,6 +67,7 @@ Hooks.once("init", () => {
   patchPerkGrants();
   patchPreviousLifeFilter();
   patchAddOrigin();
+  patchArcaneSeverance();
   enforceHeroicResourceCost();
   patchPersistentReagents();
   patchWiredAbilities();
@@ -304,7 +305,7 @@ function patchPerkGrants() {
 }
 
 // Hero sheet "+ Add Ancestry / Background / Profession" opens the Ghostwire compendiums instead of draw-steel.origins.
-const ORIGIN_PACKS = { ancestry: `${MODULE_ID}.origins`, culture: `${MODULE_ID}.backgrounds`, career: `${MODULE_ID}.professions` };
+const ORIGIN_PACKS = { ancestry: `${MODULE_ID}.origins`, culture: `${MODULE_ID}.backgrounds`, career: `${MODULE_ID}.professions`, class: `${MODULE_ID}.classes` };
 function patchAddOrigin() {
   const actions = ds.applications.sheets?.DrawSteelHeroSheet?.DEFAULT_OPTIONS?.actions;
   if (!actions?.addOrigin) {
@@ -394,6 +395,49 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
   };
   if (foundry.utils.getProperty(data, "system.hero.wealth") === undefined) updates["system.hero.wealth"] = STARTING_NUYEN;
   actor.updateSource(updates);
+});
+
+// Arcane Severance (09-species.md, 06-elementalist.md): Cyborgs can never take a Veil-caster class.
+// Checked on the hero sheet drop, before Draw Steel opens the advancement dialog, so nothing is half-created;
+// the preCreateItem hook below is a backstop for any other creation path.
+const VEIL_CASTER_CLASSES = new Set(["elementalist", "street-priest"]);
+
+function arcaneSeveranceBlock(actor, item) {
+  if (actor?.type !== "hero") return null;
+  const dsid = item.system?._dsid;
+  if ((item.type === "class") && VEIL_CASTER_CLASSES.has(dsid) && isCyborg(actor)) {
+    return game.i18n.format("GHOSTWIRE.ArcaneSeverance.ClassBlocked", { actor: actor.name, name: item.name });
+  }
+  const casterClass = actor.items.find(i => (i.type === "class") && VEIL_CASTER_CLASSES.has(i.system._dsid));
+  if ((item.type === "ancestry") && (dsid === "cyborg") && casterClass) {
+    return game.i18n.format("GHOSTWIRE.ArcaneSeverance.AncestryBlocked", { actor: actor.name, name: casterClass.name });
+  }
+  return null;
+}
+
+function patchArcaneSeverance() {
+  const HeroSheet = ds.applications.sheets?.DrawSteelHeroSheet;
+  if (!HeroSheet?.prototype._onDropItem) {
+    console.warn(`${MODULE_ID} | DrawSteelHeroSheet#_onDropItem not found; Arcane Severance is only checked on item creation`);
+    return;
+  }
+  const onDropItem = HeroSheet.prototype._onDropItem;
+  HeroSheet.prototype._onDropItem = async function(event, item) {
+    const message = (this.actor.uuid !== item.parent?.uuid) && arcaneSeveranceBlock(this.actor, item);
+    if (message) {
+      ui.notifications.warn(message);
+      return null;
+    }
+    return onDropItem.call(this, event, item);
+  };
+}
+
+Hooks.on("preCreateItem", (item, data, options, userId) => {
+  if (userId !== game.user.id) return;
+  const message = arcaneSeveranceBlock(item.parent, item);
+  if (!message) return;
+  ui.notifications.warn(message);
+  return false;
 });
 
 // Chrome install: block Cyborgs and installs the hero can't afford, then spend Integrity once the implant is on the sheet.

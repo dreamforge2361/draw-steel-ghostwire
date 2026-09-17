@@ -1,0 +1,640 @@
+{
+  "_id": "kDup1ODYcU3Sq0EH",
+  "_key": "!items!kDup1ODYcU3Sq0EH",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.Class.Name",
+  "type": "class",
+  "img": "icons/magic/lightning/bolt-forked-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "elementalist",
+    "advancements": {
+      "MuBRI0lcHfMKHshy": {
+        "_id": "MuBRI0lcHfMKHshy",
+        "img": null,
+        "repick": {},
+        "name": "Skills",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose any two skills from the Magic or Knowledge skill groups. Skip your specialization skill (Pyromancer: Spellcraft, Stormcaller: Perception, Geomancer: Athletics); it’s granted separately. (<em>Quick Build:</em> Occult, Rituals.)</p>",
+        "skills": {
+          "groups": [
+            "magic",
+            "knowledge"
+          ],
+          "choices": []
+        },
+        "chooseN": 2,
+        "sort": 1000
+      },
+      "TBTZjmkEywt3YP9T": {
+        "_id": "TBTZjmkEywt3YP9T",
+        "img": null,
+        "repick": {},
+        "name": "Essence",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iWyZgk7P6rqYEzV8"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 2000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "eOPi50E6A0VUJF5S": {
+        "_id": "eOPi50E6A0VUJF5S",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "repick": {},
+        "name": "Kit (Optional)",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.Fr3eCasterNoKit1"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.uSTe6AiFvh081JSm"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.xcGhoSk8Ht4VKksG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SAcWR4RstQocW4Ii"
+          }
+        ],
+        "description": "<p>You can take one light magic/tech Kit — Hexshot (ranged caster), Spellblade (melee-adjacent), or Sanctified — whose magic damage rider reskins as elemental essence. A pure artillery Elementalist picks <strong>No Kit (Pure Caster)</strong>, which grants nothing, and lets their signature focus do the work of a weapon. (<em>Quick Build:</em> No Kit.)</p>",
+        "chooseN": 1,
+        "sort": 3000,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        }
+      },
+      "fGim06njgAUYAvMx": {
+        "_id": "fGim06njgAUYAvMx",
+        "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+        "repick": {},
+        "name": "Elementalist Specialization",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Y7XtaWRohRJWNATP"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.R2scFuzRUwEExdpY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.htFCfr6LEb8tDBro"
+          }
+        ],
+        "description": "<p>Choose your element cluster: <strong>Pyromancer</strong> (fire, the blaster), <strong>Stormcaller</strong> (air and water, the battlefield mover), or <strong>Geomancer</strong> (earth and void, the fortress). Each grants a skill, a signature summon, and a signature focus. (<em>Quick Build:</em> Pyromancer.)</p><p><strong>Cyborgs can’t be Elementalists</strong> (Arcane Severance).</p>",
+        "chooseN": 1,
+        "sort": 4000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WeSp6ZyUFGtsolRb": {
+        "_id": "WeSp6ZyUFGtsolRb",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Signature Abilities",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gMBcO6dBq7m3upna"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.eYZFRohyNHecgwgp"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tWzky4yWGWvI9fd4"
+          }
+        ],
+        "description": "<p>You know all three Elementalist signature abilities: Hurl Element, Elemental Shaping, and Read the Weave. None of them costs Essence; spending Essence boosts them.</p>",
+        "chooseN": null,
+        "sort": 5000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jWpvTq8y8lDYwvHj": {
+        "_id": "jWpvTq8y8lDYwvHj",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "Base Band Heroic Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.FbIdJK5kDc8JgDW6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2DtVclo5wFdajBVi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ERr2VP1GzMjymovk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.MNYOpgW6vlAfqGGl"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HsGFmHYxYeHcGndL"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options (costs 3 or 5 Essence). (<em>Quick Build:</em> Conflagration / Tempest.)</p>",
+        "chooseN": 1,
+        "sort": 6000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WhneUzVTGZHF84wL": {
+        "_id": "WhneUzVTGZHF84wL",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 7000,
+        "pool": []
+      },
+      "xEI6XHBxtLbL0zZO": {
+        "_id": "xEI6XHBxtLbL0zZO",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OuVwO7AtT2bxKONC"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3QGJZSGgEGHSRB3B"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 8000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "tP42A9OlVOlUi7dd": {
+        "_id": "tP42A9OlVOlUi7dd",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "7 Essence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.C9Nh39DhnisGRmqR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5zzdGqaYomOIKGlV"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bsD3FpIoPFvz0CSJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.AaELyFuQvU7XSf0I"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Essence to use.</p>",
+        "chooseN": 1,
+        "sort": 9000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "H8erC3nVGj2ZaZJk": {
+        "_id": "H8erC3nVGj2ZaZJk",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Logic and Persona scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 1,
+          "intuition": 0,
+          "presence": 1
+        },
+        "max": 3,
+        "sort": 10000
+      },
+      "XvHNtChR2heyzcbS": {
+        "_id": "XvHNtChR2heyzcbS",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one supernatural, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "supernatural",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 11000,
+        "pool": []
+      },
+      "F0rHcLkXQpksTwGo": {
+        "_id": "F0rHcLkXQpksTwGo",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 12000
+      },
+      "MWwVGVpJOWYHp3xK": {
+        "_id": "MWwVGVpJOWYHp3xK",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Hj0ppUGYjMrBDaGD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2yPuWI9d6CZduMDw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Kp1dbuQ31Vc5VI4G"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1BNK4GBgFZe8iG1C"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 13000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jmDPfUk98Z9IAZ8f": {
+        "_id": "jmDPfUk98Z9IAZ8f",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "9 Essence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ubcAG1k9U8fCrGEq"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Q0X7f4ac6yPfL2rz"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.j7vd4PZIHhgPO9bG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EfhJeGZtX6v9EBeG"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Essence to use.</p>",
+        "chooseN": 1,
+        "sort": 14000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "sp6JZZ97BewIbciv": {
+        "_id": "sp6JZZ97BewIbciv",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 15000,
+        "pool": []
+      },
+      "N0JGE8q0kn09GGn4": {
+        "_id": "N0JGE8q0kn09GGn4",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 16000
+      },
+      "xAnhZVYZAM7IdYnr": {
+        "_id": "xAnhZVYZAM7IdYnr",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 17000
+      },
+      "zrBRq8J2hE503SBg": {
+        "_id": "zrBRq8J2hE503SBg",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BtpiFntslTAmbHls"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OFEUYt1HdWlrGdLn"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 18000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uAR5C9yHQishOkyP": {
+        "_id": "uAR5C9yHQishOkyP",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one supernatural, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "supernatural",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 19000,
+        "pool": []
+      },
+      "miT5mKOAj9qsftEB": {
+        "_id": "miT5mKOAj9qsftEB",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "11 Essence Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xoSJ8f1aZIIakmOs"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aPQoCBshOo0kpSmo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.FBmVfBRMD7hiNUCb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.fSVskYOKFzuuZLtp"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Essence to use.</p>",
+        "chooseN": 1,
+        "sort": 20000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "QDG9x8l5IGrBn3L5": {
+        "_id": "QDG9x8l5IGrBn3L5",
+        "img": null,
+        "repick": {},
+        "name": "Weave Mastery — The Deep Weave",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Uw9un8h9gzYxLAIu"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 21000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Tsd9yVL6BhWbxEca": {
+        "_id": "Tsd9yVL6BhWbxEca",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Logic and Persona scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 1,
+          "intuition": 0,
+          "presence": 1
+        },
+        "max": 5,
+        "sort": 22000
+      },
+      "6Qq9ZaDqZGzjcokb": {
+        "_id": "6Qq9ZaDqZGzjcokb",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 23000,
+        "pool": []
+      },
+      "XJbNraBkEAIuPimv": {
+        "_id": "XJbNraBkEAIuPimv",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 24000
+      },
+      "eG4BvKHDZNKzH6Gb": {
+        "_id": "eG4BvKHDZNKzH6Gb",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kpFChWxDaJkIbkfG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aWcSn94rIjLEYBpB"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ycn47raafbOzYUy4"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 25000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "level": 0,
+    "primary": "Essence",
+    "epic": "Primordial Reservoir",
+    "turnGain": "1",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "reason",
+        "presence"
+      ]
+    },
+    "stamina": {
+      "starting": 18,
+      "level": 6
+    },
+    "recoveries": 8
+  },
+  "effects": [],
+  "folder": "wxxXPFtqojua2GRq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

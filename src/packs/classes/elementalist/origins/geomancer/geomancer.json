@@ -1,0 +1,277 @@
+{
+  "_id": "htFCfr6LEb8tDBro",
+  "_key": "!items!htFCfr6LEb8tDBro",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.Geomancer.Name",
+  "type": "subclass",
+  "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.Geomancer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "geomancer",
+    "advancements": {
+      "CBMJS3YTvXpUedUP": {
+        "name": "GHOSTWIRE.Skills.List.Athletics",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "CBMJS3YTvXpUedUP",
+        "skills": {
+          "choices": [
+            "athletics"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your specialization grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "qIfB8b2cUNxMVfLD": {
+        "name": "Stone Shield",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "qIfB8b2cUNxMVfLD",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ai4q62fr267ttxxj"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "OcKoQahqh53hmB5b": {
+        "name": "Boulder Companion",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "OcKoQahqh53hmB5b",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.cXO4XVzITQsHI9I8"
+          }
+        ],
+        "description": "<p>Your specialization grants you its signature summon.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ACz6H44lNx5R0DZQ": {
+        "name": "Signature Focus",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "ACz6H44lNx5R0DZQ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.foci.Item.722PELM3YQzgTElx"
+          }
+        ],
+        "description": "<p>Your specialization grants you its signature focus from the Elementalist foci.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ezVFmEUzwpRAVHzC": {
+        "name": "Warding Terrain",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "ezVFmEUzwpRAVHzC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.jTi5dyGKnBGHN9f2"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uwMu2iStjmuBaRVY": {
+        "name": "2nd-Level Geomancer Ability",
+        "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "uwMu2iStjmuBaRVY",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NFsfU5Rt3d66LPMB"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dsTo7UUcAg4zspyy"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "AJNHBB8R6AecuotY": {
+        "name": "Root Deep",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "AJNHBB8R6AecuotY",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DwKokcFfGrVVAeME"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "4a7iAWOxFv3SAqdG": {
+        "name": "Fortress Stance",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "4a7iAWOxFv3SAqdG",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.laWk6H6HbQb9DaqA"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "m4U3JKq8wdniaIfS": {
+        "name": "6th-Level Geomancer Ability",
+        "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "m4U3JKq8wdniaIfS",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yEimV00VyuK1qSkz"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HSQq6xukIchxqBho"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "VldK6WALUhlRpmb0": {
+        "name": "Immutable",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "VldK6WALUhlRpmb0",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ma8yzwDzulojpwMn"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "XxWtEHKghCxyAFMJ": {
+        "name": "9th-Level Geomancer Ability",
+        "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "XxWtEHKghCxyAFMJ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.j7vd4PZIHhgPO9bG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JxcqXDkdZrFs0t3i"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "elementalist"
+  },
+  "effects": [],
+  "folder": "JZFWJaJ7TnJXJcNF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

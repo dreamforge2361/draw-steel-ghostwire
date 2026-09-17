@@ -88,6 +88,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B25 | Languages CONFIG remap | **Done** (Foundry-verified 2026-09-16) | All 42 DS language keys relabeled with locked Ghostwire names (`scripts/languages.mjs`, `GHOSTWIRE.Languages.*`); keys unchanged; module v0.1.30 |
 | B26 | Medic class pack | **Done** (Foundry-verified 2026-09-16) | Medic (Reagents, **persist across encounters — turnGain "0", no reset at combat start**) + Street-Doc / Corp-Medtech / Ripperdoc in Ghostwire Classes; DS Troubadour spine; module v0.1.31 |
 | B27 | Wrench class pack | **Done** (Foundry-verified 2026-09-16) | Wrench (Uptime, turnGain "1" v1 baseline) + Drone Jockey / Vehicle Rig-Pilot / Facility Rigger in Ghostwire Classes; DS Talent spine, psionics scrubbed; machines inventory still backlog; module v0.1.32 |
+| B28 | Elementalist class pack | **Done** (Foundry-verified 2026-09-16) | Elementalist (Essence, turnGain "1" drip; Channel/Resonance in feature text) + Pyromancer / Stormcaller / Geomancer; signature summons + Elementalist foci grants; module v0.1.35 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -235,3 +236,14 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Kits pack has a Tech / rigger folder with Fabricator's Bench, Rigger's Harness, Field Chassis and their signatures; the Wrench Kit picker lists them first
   - [x] Medic Nerve Toxin / Nerve Agent show 6 + Instinct over 3 rounds
   - [x] `node tools/build-packs.mjs` succeeds (classes + kits)
+
+### B28 Elementalist (2026-09-16)
+**Essence:** class `turnGain` `"1"` is the drip; Channel ramp (+2/+3/+4), Elemental Resonance, the echelon cap (8/12/16/20), and sustain drains are feature text with gain buttons. Persistent workings use Draw Steel's `persistent` effect (display only). **Cyborg gate: enforced** (`patchArcaneSeverance` in `scripts/module.mjs`): dropping a Veil-caster class (`elementalist`, `street-priest`) on a Cyborg, or the Cyborg ancestry on a Veil caster, is refused with a warning before the advancement dialog opens; a `preCreateItem` check backs it up. **+ Add Class** on the hero sheet now opens Ghostwire Classes. **Optional Kit:** the Kit grant offers **No Kit (Pure Caster)** (`src/packs/kits/magic-tech/no-kit.json`), since Draw Steel requires a pick. **Locks applied (Michael 2026-09-16):** Persistent 1 = −2 / Persistent 2 = −4; Read the Weave rolls (2d10 + Logic); Hurl / Shaping boost numbers; Summon Elemental bind = Logic roll with an edge if Persona ≥ Logic; World-Fissure cost 9; Riptide Grab obstacle damage by tier; L6 has no core features. Chrome magic-erosion is description only. The standalone Veil chapter is still backlog; the class text is enough to play.
+- [x] **B28** Elementalist class pack from `06-elementalist.md` (module v0.1.35) — **Foundry-verified 2026-09-16**. Done when:
+  - [x] Class picker shows Elementalist; Essence resource (+1 per turn); core Logic / Persona; Stamina 18 (+6), Recoveries 8
+  - [x] Specialization picker: Pyromancer / Stormcaller / Geomancer, each with skill (Spellcraft / Perception / Athletics), signature summon, signature focus (Spark-ring; Storm-tine or Riverstone; Grave-anchor), and ladders at 2/5/6/8/9
+  - [x] L1: Hurl Element, Elemental Shaping, Read the Weave + base-band pick (5 options incl. Summon Elemental); 7 at L3, 9 at L5, 11 at L8
+  - [x] Kit grant offers No Kit (Pure Caster) / Hexshot / Spellblade / Sanctified
+  - [x] A Cyborg can't take Elementalist, and an Elementalist can't take the Cyborg ancestry
+  - [x] + Add Class opens Ghostwire Classes
+  - [x] `node tools/build-packs.mjs` succeeds

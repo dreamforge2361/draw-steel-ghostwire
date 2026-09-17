@@ -1,0 +1,280 @@
+{
+  "_id": "R2scFuzRUwEExdpY",
+  "_key": "!items!R2scFuzRUwEExdpY",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.Stormcaller.Name",
+  "type": "subclass",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.Stormcaller.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "stormcaller",
+    "advancements": {
+      "ip0AuTE7fPZDDYmH": {
+        "name": "GHOSTWIRE.Skills.List.Perception",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "ip0AuTE7fPZDDYmH",
+        "skills": {
+          "choices": [
+            "perception"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your specialization grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "82XVgV0sFl5ol4uF": {
+        "name": "Kinetic Enlargement",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "82XVgV0sFl5ol4uF",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YUMSisTmwDJ6CkfR"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "1cogJZT9DKF8bOu9": {
+        "name": "Zephyr Companion",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "1cogJZT9DKF8bOu9",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.a8Vnitf4qJg4gNii"
+          }
+        ],
+        "description": "<p>Your specialization grants you its signature summon.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7FvfAThkx4bTa4Ck": {
+        "name": "Signature Focus",
+        "img": "icons/magic/lightning/bolt-strike-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "7FvfAThkx4bTa4Ck",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.foci.Item.FtgquIf2s27EHHwe"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.foci.Item.q7n7l4tjYRAunVO3"
+          }
+        ],
+        "description": "<p>Choose your signature focus from the Elementalist foci.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "GQq3U8F8uhzXNahm": {
+        "name": "Riding the Storm",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "GQq3U8F8uhzXNahm",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.huh7j2B69o00hbuh"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "MGQzSuzHicBnB5RH": {
+        "name": "2nd-Level Stormcaller Ability",
+        "img": "icons/magic/lightning/bolt-strike-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "MGQzSuzHicBnB5RH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.wRoEiwbv2D0VidUL"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZUcHUQA2JUh8RCSQ"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Su3ZgARvbR9bRoWC": {
+        "name": "Storm’s Blessing",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "Su3ZgARvbR9bRoWC",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5M9Nzy8Tru5nIoHV"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "75JD8VPvXRKTSdtj": {
+        "name": "Rolling Thunder",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "75JD8VPvXRKTSdtj",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.cVjehcoA3xgEIQAN"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "VpvlS5HqGcj9mbhH": {
+        "name": "6th-Level Stormcaller Ability",
+        "img": "icons/magic/lightning/bolt-strike-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "VpvlS5HqGcj9mbhH",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.eBvyOqzuqzMut2xb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZLfCOAoMvhDSmvGp"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "NFbU3mxtYfPD06AP": {
+        "name": "Eye of the Storm",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "NFbU3mxtYfPD06AP",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tQJJdkQCfKj5rRFa"
+          }
+        ],
+        "description": "<p>Your specialization grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "FTPqCgPCvJAB5GqE": {
+        "name": "9th-Level Stormcaller Ability",
+        "img": "icons/magic/lightning/bolt-strike-blue.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "FTPqCgPCvJAB5GqE",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GcFyVxXtYQUjuOE5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iBYc0FkvzzlfB7qR"
+          }
+        ],
+        "description": "<p>Choose one of the following specialization abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "elementalist"
+  },
+  "effects": [],
+  "folder": "AnS0DoBhq3UHzjjH",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

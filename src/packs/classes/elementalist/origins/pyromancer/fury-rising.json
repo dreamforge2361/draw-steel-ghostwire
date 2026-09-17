@@ -1,0 +1,32 @@
+{
+  "_id": "lkzRzqkXWlGP0PH0",
+  "_key": "!items!lkzRzqkXWlGP0PH0",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.FuryRising.Name",
+  "type": "feature",
+  "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.FuryRising.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fury-rising",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "2X6KQjS0XJf4u4Hw",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "jTi5dyGKnBGHN9f2",
+  "_key": "!items!jTi5dyGKnBGHN9f2",
+  "name": "GHOSTWIRE.Classes.Elementalist.Items.WardingTerrain.Name",
+  "type": "feature",
+  "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Elementalist.Items.WardingTerrain.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "06-elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "warding-terrain",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JZFWJaJ7TnJXJcNF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
