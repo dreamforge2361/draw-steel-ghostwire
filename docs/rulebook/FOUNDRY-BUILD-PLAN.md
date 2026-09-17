@@ -458,20 +458,29 @@ Spec: `docs/spikes/B38c-BESTIARY-FIREARMS-CHROME-PASS.md`. 25 humanoid / Chrome 
 
 #### B38b Bestiary originals Wave 2a — Ossian Reach Handbook (2026-09-17)
 Spec: `docs/spikes/B38b-BESTIARY-ORIGINALS-WAVE2.md`. **20 new Actors** adapted from Draw Steel spines onto Handbook threats (DS math intact; names, rules text, icons, biographies rethemed; firearms / chrome doctrine applied). Reach Streets: Colors Boss, Chrome Bruiser, Street Doc, Wrench Rigger, The Warlord, Razorline Prime. Corp & Security: Response Lieutenant, Corp Netrunner, Contract Enforcer (Handbook “Corp Enforcer”, renamed vs Wave 1), Ironclad Warden. New **Reach Critters** folder: Chrome-Rat, Tunnel-Bat, Scrap-Hound, Sink-Crawler, Gutter-Serpent. Wilds & Jungles seeds: Canopy-Stalker, Reach Behemoth. Wire & Machine: Watchdog ICE, Scrambler ICE, Black ICE. Humanoids get the Human (or Ironclad) Malice set; beasts / ICE carry no ancestry Malice. Each biography has a Director note mapping Handbook Tier → DS level / echelon. Flags add `handbookName` + `echelon`, `decision: "Adapt"`. Spines + status in `GHOSTWIRE_BESTIARY.md` § Originals.
-- [ ] **B38b** Wave 2a (module v0.1.52) — **implemented, pending Foundry verification**. Done when:
-  - [ ] Ghostwire Bestiary shows Reach Critters folder + Wave 2a Actors (Colors Boss, Chrome Bruiser, Canopy-Stalker, Reach Behemoth, Scrap-Hound at minimum)
-  - [ ] Three humanoids show gun / chrome ability names and roll
-  - [ ] A critter + Canopy-Stalker have natural attacks
-  - [ ] Contract Enforcer biography explains the split from Wave 1 Corp Enforcer
-  - [ ] The Warlord or Colors Boss + Ironclad Warden dragged to a Scene
-- [ ] **B38b Wave 2a.1** — lore level-bosses (Mama Cassavir, Warden Krael, The Ferryman, The Choirmother, Cael Marrow).
+- [x] **B38b** Wave 2a (module v0.1.52) — **Foundry-verified, committed `02121c4`**. Done when:
+  - [x] Ghostwire Bestiary shows Reach Critters folder + Wave 2a Actors (Colors Boss, Chrome Bruiser, Canopy-Stalker, Reach Behemoth, Scrap-Hound at minimum)
+  - [x] Three humanoids show gun / chrome ability names and roll
+  - [x] A critter + Canopy-Stalker have natural attacks
+  - [x] Contract Enforcer biography explains the split from Wave 1 Corp Enforcer
+  - [x] The Warlord or Colors Boss + Ironclad Warden dragged to a Scene
+
+#### B38b.1 Named lore bosses (2026-09-17)
+Spec: `docs/spikes/B38b1-NAMED-LORE-BOSSES.md`. Five named level-bosses from the Lore Source, adapted from Draw Steel spines with full Director biographies (stratum, hook, holds, answers to / leans on, table use) and Draw Steel negotiation values: **Mama Cassavir** (Reach Streets, Rival Tactician 2nd echelon → L5 elite), **Warden Krael** (Corp & Security, Devil High Judge → L6 leader), **The Ferryman** (Reach Streets, Time Raider Tyrannis → L3 leader), **The Choirmother** (Reach Streets, High Elf Ordinator → L3 leader; Mid default, Early / Mid / Late (Fallen) dial in the Director bio), **Cael Marrow** (Wilds & Jungles, Wode Elf Warleader → L3 leader). Firearms / chrome doctrine applied; Human Malice; flags `decision: "Original"`, `role: "named-boss"`, `loreName`.
+- [ ] **B38b.1** (module v0.1.53) — **implemented, pending Foundry verification**. Done when:
+  - [ ] Compendium shows Mama Cassavir, Warden Krael, The Ferryman, The Choirmother, Cael Marrow
+  - [ ] Cassavir reads social-first; Ferryman or Marrow combat abilities are guns / chrome
+  - [ ] Choirmother Director bio has the Early / Mid / Fallen dial, default Mid
+  - [ ] Two dragged to a Scene; sheets open; abilities usable
+  - [ ] Master § D marked shipped
 - [ ] **B38b Wave 2b** — Nyx Fixer, The Ripper, Null-Prophet, Stall-Keeper / Flats Worker / Chore-Sprite, Data-Sprite / Wisp / Ghost-in-the-Wire.
 
 ## Backlog add (2026-09-17)
 
 - **B38** Bestiary review + reskin Wave 1 — **Foundry-verified** (module v0.1.50; 35 Actors).
 - **B38c** Bestiary firearms / chrome ability pass — **Foundry-verified** (module v0.1.51).
-- **B38b** Handbook originals Wave 2a — **built, pending Foundry verification** (module v0.1.52; 20 Actors). Wave 2a.1 lore bosses + Wave 2b next.
+- **B38b** Handbook originals Wave 2a — **Foundry-verified** (module v0.1.52; 20 Actors).
+- **B38b.1** Named lore bosses — **built, pending Foundry verification** (module v0.1.53; 5 Actors). Wave 2b next.
 - **B39** Director Run Generator — `docs/directors/run-generator.md` (after bestiary recommendations exist).
 - Wilds Pandora-like lore pass — later; ship only Canopy-Stalker + Reach Behemoth seeds until then.
 - **B40** Ability/weapon/gear SFX — `docs/directors/ability-sfx.md` (settings + FilePicker; Michael supplies assets).

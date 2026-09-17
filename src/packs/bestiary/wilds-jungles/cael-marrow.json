@@ -1,0 +1,1126 @@
+{
+  "name": "GHOSTWIRE.Bestiary.Actors.CaelMarrow.Name",
+  "type": "npc",
+  "img": "systems/draw-steel/assets/roles/leader.webp",
+  "system": {
+    "stamina": {
+      "value": 120,
+      "max": 120,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 3
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "movement": {
+      "value": 7,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.CaelMarrow.Description",
+      "director": "GHOSTWIRE.Bestiary.Actors.CaelMarrow.Director",
+      "languages": []
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "140",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 2,
+      "patience": 3,
+      "motivations": [
+        "freedom",
+        "protection"
+      ],
+      "pitfalls": [
+        "greed"
+      ],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 5,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 3,
+      "role": "",
+      "organization": "leader"
+    },
+    "ev": 20,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "items": [
+    {
+      "name": "End Effect",
+      "type": "feature",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>At the end of each of their turns, Marrow can dump a trauma stim and take [[/damage 5]] damage to end one effect on them that can be ended by a saving throw. This damage can’t be reduced in any way.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "end-effect",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "Z4yuyAmLtTkQF958",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.Z4yuyAmLtTkQF958"
+    },
+    {
+      "name": "Ranger’s Eye",
+      "type": "feature",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "<p>Marrow can attempt to hide at the end of each of their turns.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "into-the-green",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "IGblQdbfWWnyXAEw",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.IGblQdbfWWnyXAEw"
+    },
+    {
+      "name": "Ghillie Cloak",
+      "type": "feature",
+      "img": "icons/magic/nature/plant-sprout-hands-vines.webp",
+      "system": {
+        "description": {
+          "value": "<p>Abilities targeting Marrow that would take a bane from cover or concealment have a double bane instead.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "masking-glamor",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "FGxcWq6gmmbyE5Sm",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.FGxcWq6gmmbyE5Sm"
+    },
+    {
+      "name": "Ranger Longarm",
+      "type": "ability",
+      "img": "icons/weapons/guns/rifle-bolt-action.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "melee",
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "distance": {
+          "type": "meleeRanged",
+          "primary": "1",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 2,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "jxPbbbPpyS2qNyWs": {
+              "_id": "jxPbbbPpyS2qNyWs",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "damage": {
+                "tier1": {
+                  "value": "8",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "12",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "15",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "gAuU4H2SGASwXrzx": {
+              "_id": "gAuU4H2SGASwXrzx",
+              "type": "applied",
+              "name": "Pinned",
+              "img": null,
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}} restrained (save ends)",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "might"
+                  },
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": "might"
+                  },
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "might"
+                  },
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "wodeblade",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 2,
+              "multiple": false
+            },
+            "description": "<p>A target pinned by this ability takes an extra 3 damage.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Marrow can shift up to 3 squares between each strike.</p><p>[[/damage 3]]{3 extra pinned damage}</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "HO1d6QLognztUQNW",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.HO1d6QLognztUQNW"
+    },
+    {
+      "name": "Hold the Gate!",
+      "type": "ability",
+      "img": "icons/equipment/shield/heater-steel-gray.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "heroic",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "fairness-is-a-human-concept",
+        "story": "",
+        "resource": 5,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Each non-minion target can make a free strike, then each target shifts up to 3 squares. A target who has cover or concealment at the end of this shift can attempt to hide at the end of Marrow’s turn.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "0QhWM6vf7L3inlUT",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.0QhWM6vf7L3inlUT"
+    },
+    {
+      "name": "Read the Ground",
+      "type": "ability",
+      "img": "icons/magic/earth/barrier-stone-brown-green.webp",
+      "system": {
+        "type": "triggered",
+        "category": "signature",
+        "keywords": [
+          "ranged"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "enemy",
+          "value": 1,
+          "custom": "One enemy"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "wode-sickness",
+        "story": "",
+        "resource": null,
+        "trigger": "An ally ends their turn.",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The target must not have taken their turn this round. Marrow saw them coming: the target takes their turn immediately, and if they have [[potency P 2]] they are [[/apply bleeding turn]] and take a bane on strikes until the end of their turn.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "Dm8rbulrmJ7Pc3CA",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.Dm8rbulrmJ7Pc3CA"
+    },
+    {
+      "name": "Nobody Takes the Gate",
+      "type": "ability",
+      "img": "icons/weapons/guns/rifle-bolt-action.webp",
+      "system": {
+        "type": "villain",
+        "category": "",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "5",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "you-will-all-witness-my-blade",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Marrow uses Ranger Longarm against each target and gains an edge on the power roll.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "L266oQFv0iipa7DQ",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.L266oQFv0iipa7DQ"
+    },
+    {
+      "name": "Suppressing Volley",
+      "type": "ability",
+      "img": "icons/weapons/guns/rifle-assault-wood-grip.webp",
+      "system": {
+        "type": "villain",
+        "category": "",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "5",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "suppressing-volley",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Marrow can use Ranger Longarm. Each target can then make a free strike.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "jQsMinmaqRxfGNfI",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.jQsMinmaqRxfGNfI"
+    },
+    {
+      "name": "Smoke and Ghillies",
+      "type": "ability",
+      "img": "icons/commodities/tech/smoke-bomb-yellow.webp",
+      "system": {
+        "type": "villain",
+        "category": "signature",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "5",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Self and each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "140"
+        },
+        "_dsid": "is-it-now-or-is-it-then",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Marrow pops smoke: each target is invisible until the start of the next round. Marrow then uses Ranger Longarm.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "2c4zAnjww3phtlQN",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.2c4zAnjww3phtlQN"
+    },
+    {
+      "name": "Exploit Opening",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "exploit-opening",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "A human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each human acting this turn gains an edge on abilities until the end of their turn, or has a double edge on any ability that targets an enemy affected by a condition.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "LYYyN9iD2PjepIFo",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 200000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.LYYyN9iD2PjepIFo"
+    },
+    {
+      "name": "Staying Power",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "staying-power",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "a human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each non-minion human in the encounter slams a trauma stim and regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "vxocmPyA9uKwrgEq",
+      "img": "icons/tools/medical/medkit-heavy.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 300000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.vxocmPyA9uKwrgEq"
+    },
+    {
+      "name": "Blight Grenade",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "alchemical-device",
+        "story": "A street-chem canister of Sinks rot and tangle-foam.",
+        "keywords": [
+          "area",
+          "ranged"
+        ],
+        "category": "maliceAncestry",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "3",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy and object in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "2",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {
+            "MhQwsOqVGfNaQFua": {
+              "name": "Damage",
+              "img": null,
+              "type": "damage",
+              "_id": "MhQwsOqVGfNaQFua",
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "WoQ1Q8BcxmPBSXXN": {
+              "name": "Slowed and Restrained",
+              "img": null,
+              "type": "applied",
+              "_id": "WoQ1Q8BcxmPBSXXN",
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}}, slowed (save ends)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "0",
+                    "characteristic": "agility"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "{{potency}}, restrained (save ends)",
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "2",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p><strong>Special:</strong> This ability can’t be used by a minion.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "lVlwo9eIp8HBjfth",
+      "img": "icons/weapons/thrown/grenade-chemical-gas.webp",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "9Ppluh0c55nL15rB": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!47SCHzz6vNoDwiQf.lVlwo9eIp8HBjfth"
+    }
+  ],
+  "folder": "gwBestiaryWilds0",
+  "_id": "47SCHzz6vNoDwiQf",
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.CaelMarrow.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/leader.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "effects": [],
+  "sort": 95000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "yPvu9Qwb9zl29eFZ",
+        "dsSourceName": "Wode Elf Warleader",
+        "decision": "Original",
+        "region": "wilds",
+        "loreName": "Ranger-Captain Cael Marrow, “the Gate”",
+        "role": "named-boss",
+        "echelon": 1
+      }
+    }
+  },
+  "_key": "!actors!47SCHzz6vNoDwiQf"
+}

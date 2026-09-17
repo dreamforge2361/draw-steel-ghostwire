@@ -1,6 +1,6 @@
 # Ghostwire Bestiary (master)
 
-**Status:** Wave 1 (B38) built 2026-09-17 — DS review proposal + 35-Actor reskin pack; firearms / chrome ability pass (B38c, v0.1.51) verified; originals Wave 2a (B38b, v0.1.52) built — **20 Handbook Actors** pending Foundry verification; lore level-bosses (Wave 2a.1) and Wave 2b queued.  
+**Status:** Wave 1 (B38) built 2026-09-17 — DS review proposal + 35-Actor reskin pack; firearms / chrome ability pass (B38c, v0.1.51) verified; originals Wave 2a (B38b, v0.1.52) — **20 Handbook Actors**, Foundry-verified; five named lore bosses (B38b.1, v0.1.53) pending Foundry verification; Wave 2b queued.  
 **Doctrine:** **Reskin first.** Where a Draw Steel monster/NPC can serve The Reach, keep mechanics/stats as the spine and rewrite name + description (+ light number tweaks only if fiction requires). **Artwork / token pass later.** Greenfield originals when stock does not fit.
 
 ## Firearms / chrome ability doctrine (LOCKED 2026-09-17 — standing rule for every bestiary entry)
@@ -168,15 +168,15 @@ Folder scheme: Warrens / Sinks / Slackwater critters live in a new **Reach Critt
 ICE Actors are **Scene-drag tokens** for Wired encounters; Wired Console node templates (`docs/directors/wired-node-templates.md`) remain the node/alert tool.
 
 ### D. Lore named NPCs (level-bosses — greenfield or Solo Adapt)
-Status: **Wave 2a.1** — next B38b follow-up (spike § E, optional in Wave 2a); needs `GHOSTWIRE-Lore-Source-V2-edit.md`.
+Status: shipped as **B38b.1** (`docs/spikes/B38b1-NAMED-LORE-BOSSES.md`, module v0.1.53) — pending Foundry verification. Director-facing named bosses with full biographies (stratum, hook, holds, answers to / leans on, table use), Draw Steel negotiation values, and firearms / chrome combat. Flags: `decision: "Original"`, `role: "named-boss"`, `loreName`. SoR: `GHOSTWIRE-Lore-Source-V2-edit.md` Ch. 8 / 18 / 21.
 
-| Working name | Role | Region | Notes | Status |
+| Working name | Role | Region / folder | Draw Steel spine (as built) | Status |
 |---|---|---|---|---|
-| Mama Cassavir, "the Switchboard" | Fixer patron | Flats | Social Solo; job-giver — not a street fight first | 2a.1 |
-| Warden Krael, "the Landlord" | Corrupt Grid warden | Grid | Corp badge + Metermen leash | 2a.1 |
-| The Ferryman | Tollkeeper of descent | Flats/Sinks boundary | Chokepoint boss | 2a.1 |
-| The Choirmother | Cult-mother (tragic Light→hollow) | Flats | Director dial Early/Mid/Fallen | 2a.1 |
-| Ranger-Captain Cael Marrow, "the Gate" | Cinderhold protector | Cinderhold / wastes gate | Ally or hard wall; Greenline deserter | 2a.1 |
+| Mama Cassavir, "the Switchboard" | Fixer patron | Upper Flats / Reach Streets | Rival Tactician (2nd echelon) → L5 elite artillery; fights through her people | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
+| Warden Krael, "the Landlord" | Corrupt Grid warden | Grid / Corp & Security | Devil High Judge → L6 leader; licensed sidearm, badge charm, Paper Trail weakness | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
+| The Ferryman | Tollkeeper of descent | Flats/Sinks boundary / Reach Streets | Time Raider Tyrannis → L3 leader; dead-air shotgun, mined crossing | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
+| The Choirmother | Cult-mother (tragic Light→hollow) | Flats / Reach Streets | High Elf Ordinator → L3 leader (keeps Magic); **Mid** default, Early / Mid / Late (Fallen) dial in Director bio | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
+| Ranger-Captain Cael Marrow, "the Gate" | Cinderhold protector | Cinderhold / Wilds & Jungles | Wode Elf Warleader → L3 leader; ranger longarm, ghillie, smoke | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
 
 ### E. Lore opposition flavors (reskin hooks, not separate blocks yet)
 Metermen, Skinjobs, Nightshift, Ninth Ward Kings, Rust Saints, Glass Vipers, Hollow Men; Aureole Security; Greenline Rangers; Ironclad Martial; Deadfall Nine Quiet Floor cults; lesser/greater Incursion demons (Adapt DS Demons).

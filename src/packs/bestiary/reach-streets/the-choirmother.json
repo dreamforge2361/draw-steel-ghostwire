@@ -1,0 +1,1073 @@
+{
+  "name": "GHOSTWIRE.Bestiary.Actors.TheChoirmother.Name",
+  "type": "npc",
+  "img": "systems/draw-steel/assets/roles/leader.webp",
+  "system": {
+    "stamina": {
+      "value": 120,
+      "max": 120,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 0
+      },
+      "agility": {
+        "value": 2
+      },
+      "reason": {
+        "value": 3
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 3
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.TheChoirmother.Description",
+      "director": "GHOSTWIRE.Bestiary.Actors.TheChoirmother.Director",
+      "languages": []
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "124",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 3,
+      "patience": 4,
+      "motivations": [
+        "benevolence",
+        "protection"
+      ],
+      "pitfalls": [
+        "discovery"
+      ],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 5,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 3,
+      "role": "",
+      "organization": "leader"
+    },
+    "ev": 20,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "items": [
+    {
+      "name": "Sustained by Faith",
+      "type": "feature",
+      "img": "icons/magic/light/beam-deflect-path-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>At the start of each of their turns, the Choirmother can choose one or more effects on them that can be ended by a saving throw. The effects instead end at the end of the Choirmother’s turn</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "otherworldly-blessing",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "5Pv5oGt3NOK6Q5q1",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.5Pv5oGt3NOK6Q5q1"
+    },
+    {
+      "name": "Rebuke of the Light",
+      "type": "ability",
+      "img": "icons/magic/light/beam-horizon-strike-yellow.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "magic",
+          "ranged",
+          "strike"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "mTYE5mEZ5cfFgKDs": {
+              "_id": "mTYE5mEZ5cfFgKDs",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "damage": {
+                "tier1": {
+                  "value": "9",
+                  "types": [
+                    "holy"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "14",
+                  "types": [
+                    "holy"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "17",
+                  "types": [
+                    "holy"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "RuComkyz7goaizbI": {
+              "_id": "RuComkyz7goaizbI",
+              "type": "applied",
+              "name": "Dazed",
+              "img": null,
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}} dazed (save ends)",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "reason"
+                  },
+                  "effects": {
+                    "dazed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": "reason"
+                  },
+                  "effects": {
+                    "dazed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "reason"
+                  },
+                  "effects": {
+                    "dazed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "lightning-rod",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Until the start of the Choirmother’s next turn, each ally in her flock gains an edge on ability rolls against the target.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "aG8XOoXOzfJifNov",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.aG8XOoXOzfJifNov"
+    },
+    {
+      "name": "Rise, My Flock",
+      "type": "ability",
+      "img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "signature",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "elemental-uproar",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target can move up to their speed or make a free strike.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "jwUoSfnH2te0r87E",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.jwUoSfnH2te0r87E"
+    },
+    {
+      "name": "Call the Faithful",
+      "type": "ability",
+      "img": "icons/magic/light/beam-explosion-orange.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "heroic",
+        "keywords": [
+          "ranged"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "special",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "summon-elemental",
+        "story": "",
+        "resource": 2,
+        "trigger": "",
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 3,
+              "multiple": false
+            },
+            "description": "<p>The Choirmother instead calls her Choir “mentor”: one winded @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.3FW9As2fW7ekq4mv]{Concord mentor} (use Veil Cultist statistics) appears in an unoccupied space within distance.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Four @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.3rIQkdmxl0kUvznF]{devoted flock members} (use Gang Raider statistics) rush to her side into unoccupied spaces within distance.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "tKcYlWrxOFwN0Ovn",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.tKcYlWrxOFwN0Ovn"
+    },
+    {
+      "name": "Do Not Touch My Children!",
+      "type": "ability",
+      "img": "icons/magic/light/beam-horizon-strike-yellow.webp",
+      "system": {
+        "type": "triggered",
+        "category": "signature",
+        "keywords": [
+          "ranged"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "enemy",
+          "value": 1,
+          "custom": "The triggering enemy"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "enough",
+        "story": "",
+        "resource": null,
+        "trigger": "An enemy within distance uses an ability against the Choirmother or any ally within distance.",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The Choirmother uses Rebuke of the Light against the target after the ability is resolved.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "6FE01JWUDknOVRYr",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.6FE01JWUDknOVRYr"
+    },
+    {
+      "name": "The Light Provides",
+      "type": "ability",
+      "img": "icons/magic/light/beam-deflect-path-yellow.webp",
+      "system": {
+        "type": "villain",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "fountains-roar-now-free-from-the-earth",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target glows briefly, and can end one effect on themself then move up to their speed.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "2btRtS233gNuDFjU",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.2btRtS233gNuDFjU"
+    },
+    {
+      "name": "And the Sun Forsook Her Children",
+      "type": "ability",
+      "img": "icons/magic/light/explosion-beam-impact-silhouette.webp",
+      "system": {
+        "type": "villain",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic",
+          "ranged"
+        ],
+        "distance": {
+          "type": "cube",
+          "primary": "5",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "presence"
+            ],
+            "reactive": true
+          },
+          "effects": {
+            "3fuwa7wfyproFb6Q": {
+              "sort": 100000,
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "3fuwa7wfyproFb6Q",
+              "damage": {
+                "tier1": {
+                  "value": "12",
+                  "types": [
+                    "corruption"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "9",
+                  "types": [
+                    "corruption"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            },
+            "6rtvbCU1kNsLVUpM": {
+              "sort": 200000,
+              "name": "",
+              "img": null,
+              "type": "forced",
+              "_id": "6rtvbCU1kNsLVUpM",
+              "forced": {
+                "tier1": {
+                  "display": "{{forced}} toward the center of the cube",
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "5",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "3",
+                  "display": "{{forced}} toward the center of the cube",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "display": "{{forced}} toward the center of the cube",
+                  "distance": "1",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            }
+          }
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "and-the-sun-forsook-her-children",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target makes a <strong>Presence test</strong>.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          },
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The block’s lights gutter and the air goes quiet — the Silence answering in the Light’s voice. The area turns dark and distorted, and is difficult terrain for enemies.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "jfxWoXONfNK8LvFP",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.jfxWoXONfNK8LvFP"
+    },
+    {
+      "name": "But We Will Change Her Mind",
+      "type": "ability",
+      "img": "icons/magic/light/beam-explosion-orange.webp",
+      "system": {
+        "type": "villain",
+        "category": "",
+        "keywords": [
+          "area",
+          "magic"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "selfAlly",
+          "value": null,
+          "custom": "Self and each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "124"
+        },
+        "_dsid": "but-we-will-change-her-mind",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target’s free strike now has the Magic keyword and can target two creatures or objects. Additionally, each target glows with a soft, sourceless gold light.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "2NPr6x45ZmhSemCQ",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.2NPr6x45ZmhSemCQ"
+    },
+    {
+      "name": "Exploit Opening",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "exploit-opening",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "A human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each human acting this turn gains an edge on abilities until the end of their turn, or has a double edge on any ability that targets an enemy affected by a condition.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "LYYyN9iD2PjepIFo",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 200000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.LYYyN9iD2PjepIFo"
+    },
+    {
+      "name": "Staying Power",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "staying-power",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "a human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each non-minion human in the encounter slams a trauma stim and regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "vxocmPyA9uKwrgEq",
+      "img": "icons/tools/medical/medkit-heavy.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 300000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.vxocmPyA9uKwrgEq"
+    }
+  ],
+  "folder": "gwBestiaryStreet",
+  "_id": "hAaQsq6Gd7eaGqIu",
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.TheChoirmother.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/leader.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "effects": [],
+  "sort": 94000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "GMlN5QMe8ETbrF7p",
+        "dsSourceName": "High Elf Ordinator",
+        "decision": "Original",
+        "region": "streets",
+        "loreName": "The Choirmother",
+        "role": "named-boss",
+        "echelon": 1
+      }
+    }
+  },
+  "_key": "!actors!hAaQsq6Gd7eaGqIu"
+}
