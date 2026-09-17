@@ -1,0 +1,56 @@
+{
+  "_id": "DYCFtuuIHh8NaupK",
+  "_key": "!items!DYCFtuuIHh8NaupK",
+  "name": "GHOSTWIRE.Gear.Items.RadKit.Name",
+  "type": "treasure",
+  "img": "icons/containers/bags/pack-leather-black-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RadKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rad-kit",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "qSfpu7tiC7qo9mKV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2200,
+        "modSlots": 3,
+        "tags": [
+          "Rad-Shielded"
+        ],
+        "modFamily": [
+          "survival"
+        ]
+      }
+    }
+  }
+}

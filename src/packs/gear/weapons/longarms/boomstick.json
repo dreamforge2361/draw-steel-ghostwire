@@ -1,0 +1,64 @@
+{
+  "_id": "CpaYo3gSPvOrn1tm",
+  "_key": "!items!CpaYo3gSPvOrn1tm",
+  "name": "GHOSTWIRE.Gear.Items.Boomstick.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/shotgun-pump.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Boomstick.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "boomstick",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "medium",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "R7lXYyuPF9VB7TDU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 300,
+        "modSlots": 1,
+        "tags": [
+          "Two-handed",
+          "Spread"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 6,
+        "damageType": "kinetic",
+        "range": "Short",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

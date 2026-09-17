@@ -1,0 +1,57 @@
+{
+  "_id": "P4x0b4sItoz1t6wX",
+  "_key": "!items!P4x0b4sItoz1t6wX",
+  "name": "GHOSTWIRE.Gear.Items.FullSensorium.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.FullSensorium.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "full-sensorium",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "IckOgPn0rpSzzCzh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 40000,
+        "modSlots": 5,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "sensors",
+          "wired"
+        ]
+      }
+    }
+  }
+}

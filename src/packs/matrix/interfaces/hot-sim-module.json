@@ -1,0 +1,57 @@
+{
+  "_id": "rM1kPPcC8XHweNpJ",
+  "_key": "!items!rM1kPPcC8XHweNpJ",
+  "name": "GHOSTWIRE.Matrix.Items.HotSimModule.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/wire-spliced.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.HotSimModule.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hot-sim-module",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "5z8zDSCPsEDDkha4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 4000,
+        "modSlots": 3,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "wired"
+        ],
+        "role": "interface"
+      }
+    }
+  }
+}

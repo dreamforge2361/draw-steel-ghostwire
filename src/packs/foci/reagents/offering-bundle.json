@@ -1,0 +1,57 @@
+{
+  "_id": "xfHjn1E9aLBDa4QL",
+  "_key": "!items!xfHjn1E9aLBDa4QL",
+  "name": "GHOSTWIRE.Foci.Items.OfferingBundle.Name",
+  "type": "treasure",
+  "img": "icons/containers/bags/pouch-simple-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.OfferingBundle.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "offering-bundle",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "P9HuByQaOS44C5C4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 750,
+        "modSlots": 0,
+        "tags": [
+          "Ritual",
+          "Consumable",
+          "Drain-trade"
+        ],
+        "consumable": true,
+        "tradition": "reagent"
+      }
+    }
+  }
+}

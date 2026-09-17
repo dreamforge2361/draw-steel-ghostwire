@@ -1,0 +1,63 @@
+{
+  "_id": "tNayDzhkw2fYDvgB",
+  "_key": "!items!tNayDzhkw2fYDvgB",
+  "name": "GHOSTWIRE.Gear.Items.Knuckles.Name",
+  "type": "treasure",
+  "img": "icons/weapons/daggers/dagger-straight-thin-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Knuckles.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "knuckles",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "11xwXjBw1kFPjKuK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 80,
+        "modSlots": 1,
+        "tags": [
+          "Concealable",
+          "Non-lethal-capable"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 3,
+        "damageType": "kinetic",
+        "range": "Adjacent",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

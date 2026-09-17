@@ -1,0 +1,208 @@
+{
+  "_id": "jXeBCLr85XNLW3nb",
+  "_key": "!items!jXeBCLr85XNLW3nb",
+  "name": "GHOSTWIRE.Gear.Items.PoweredHardsuit.Name",
+  "type": "treasure",
+  "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.PoweredHardsuit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "powered-hardsuit",
+    "kind": "armor",
+    "category": "",
+    "echelon": 3,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "gJI3GfZXb5ztuqKa",
+      "_key": "!items.effects!jXeBCLr85XNLW3nb.gJI3GfZXb5ztuqKa",
+      "name": "No Kit — Echelon 1 (+12 Stamina)",
+      "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.jXeBCLr85XNLW3nb",
+      "description": "<p>Worn with no Kit at Echelon 1: +12 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 12,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "jBiS5z0IXN3LQpkL",
+      "_key": "!items.effects!jXeBCLr85XNLW3nb.jBiS5z0IXN3LQpkL",
+      "name": "No Kit — Echelon 2 (+16 Stamina)",
+      "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.jXeBCLr85XNLW3nb",
+      "description": "<p>Worn with no Kit at Echelon 2: +16 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 16,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "ChX7qiQMHkaL9VhH",
+      "_key": "!items.effects!jXeBCLr85XNLW3nb.ChX7qiQMHkaL9VhH",
+      "name": "No Kit — Echelon 3 (+21 Stamina)",
+      "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.jXeBCLr85XNLW3nb",
+      "description": "<p>Worn with no Kit at Echelon 3: +21 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 21,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "TWAKn394MYUwDBKJ",
+      "_key": "!items.effects!jXeBCLr85XNLW3nb.TWAKn394MYUwDBKJ",
+      "name": "No Kit — Echelon 4 (+27 Stamina)",
+      "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.jXeBCLr85XNLW3nb",
+      "description": "<p>Worn with no Kit at Echelon 4: +27 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 27,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "2qZfMaSsil5Kmh4e",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 18000,
+        "modSlots": 5,
+        "tags": [],
+        "modFamily": [
+          "armor"
+        ],
+        "armorClass": "heavy",
+        "staminaByEchelon": [
+          12,
+          16,
+          21,
+          27
+        ]
+      }
+    }
+  }
+}

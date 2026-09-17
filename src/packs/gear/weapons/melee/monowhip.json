@@ -1,0 +1,64 @@
+{
+  "_id": "xSYRAheawkMDuccN",
+  "_key": "!items!xSYRAheawkMDuccN",
+  "name": "GHOSTWIRE.Gear.Items.Monowhip.Name",
+  "type": "treasure",
+  "img": "icons/weapons/misc/whip-red-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Monowhip.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "monowhip",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "medium",
+      "whip"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "11xwXjBw1kFPjKuK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 20000,
+        "modSlots": 5,
+        "tags": [
+          "Concealable",
+          "Dangerous"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 7,
+        "damageType": "AP",
+        "range": "Adjacent",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

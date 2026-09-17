@@ -1,0 +1,61 @@
+{
+  "_id": "PDrB0Cnbj7HDeP3u",
+  "_key": "!items!PDrB0Cnbj7HDeP3u",
+  "name": "GHOSTWIRE.Gear.Items.Workhorse.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/pistol-automatic.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Workhorse.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "workhorse",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "KhSKz1lL1eGjku6B",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 500,
+        "modSlots": 2,
+        "tags": [],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 4,
+        "damageType": "kinetic",
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

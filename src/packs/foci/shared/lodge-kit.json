@@ -1,0 +1,55 @@
+{
+  "_id": "vKhMm52jSPGJRU7d",
+  "_key": "!items!vKhMm52jSPGJRU7d",
+  "name": "GHOSTWIRE.Foci.Items.LodgeKit.Name",
+  "type": "treasure",
+  "img": "icons/tools/scribal/ink-quill-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.LodgeKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lodge-kit",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "NB1iGhFiFviQH7AE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 9000,
+        "modSlots": 0,
+        "tags": [
+          "Ritual",
+          "Lodge"
+        ],
+        "tradition": "shared"
+      }
+    }
+  }
+}

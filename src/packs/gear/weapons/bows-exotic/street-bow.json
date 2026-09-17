@@ -1,0 +1,64 @@
+{
+  "_id": "4s5ODYx8OpvfRC3j",
+  "_key": "!items!4s5ODYx8OpvfRC3j",
+  "name": "GHOSTWIRE.Gear.Items.StreetBow.Name",
+  "type": "treasure",
+  "img": "icons/weapons/bows/longbow-recurve-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.StreetBow.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-bow",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "vwBmeD081if387z3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 200,
+        "modSlots": 1,
+        "tags": [
+          "Two-handed",
+          "Quiet"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 4,
+        "damageType": "kinetic",
+        "range": "Medium",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

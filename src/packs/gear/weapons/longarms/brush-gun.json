@@ -1,0 +1,63 @@
+{
+  "_id": "77mbMe9FuYKB5v1v",
+  "_key": "!items!77mbMe9FuYKB5v1v",
+  "name": "GHOSTWIRE.Gear.Items.BrushGun.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.BrushGun.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "brush-gun",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "medium",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "R7lXYyuPF9VB7TDU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 700,
+        "modSlots": 2,
+        "tags": [
+          "Two-handed"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 6,
+        "damageType": "kinetic",
+        "range": "Medium",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

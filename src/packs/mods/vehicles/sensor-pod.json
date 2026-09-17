@@ -1,0 +1,61 @@
+{
+  "_id": "YAtDg7LUVjASb4xI",
+  "_key": "!items!YAtDg7LUVjASb4xI",
+  "name": "GHOSTWIRE.Mods.Items.SensorPod.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.SensorPod.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sensor-pod",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "aQqOJpCpotlt5MEY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 3000,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": "vehicle",
+        "hosts": [
+          "vehicle"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}

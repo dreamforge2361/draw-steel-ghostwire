@@ -1,0 +1,56 @@
+{
+  "_id": "GCztkIbe6M8nc8O1",
+  "_key": "!items!GCztkIbe6M8nc8O1",
+  "name": "GHOSTWIRE.Foci.Items.OrichalcumTraceVial.Name",
+  "type": "treasure",
+  "img": "icons/containers/bags/pouch-simple-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.OrichalcumTraceVial.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "orichalcum-trace-vial",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "P9HuByQaOS44C5C4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 8000,
+        "modSlots": 0,
+        "tags": [
+          "Ritual",
+          "Consumable"
+        ],
+        "consumable": true,
+        "tradition": "reagent"
+      }
+    }
+  }
+}

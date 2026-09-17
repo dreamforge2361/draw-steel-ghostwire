@@ -1,0 +1,57 @@
+{
+  "_id": "OepS68mz9km9j8EU",
+  "_key": "!items!OepS68mz9km9j8EU",
+  "name": "GHOSTWIRE.Matrix.Items.Static.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/usb-thumb-drive.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.Static.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "static",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "rPSzM2YqrQBEstrv",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2000,
+        "modSlots": 0,
+        "tags": [
+          "Program",
+          "Consumable",
+          "Wired"
+        ],
+        "consumable": true,
+        "role": "payload"
+      }
+    }
+  }
+}

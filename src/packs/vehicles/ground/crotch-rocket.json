@@ -1,0 +1,57 @@
+{
+  "_id": "3iDV2yTQP48UMieH",
+  "_key": "!items!3iDV2yTQP48UMieH",
+  "name": "GHOSTWIRE.Vehicles.Items.CrotchRocket.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.CrotchRocket.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crotch-rocket",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 1000,
+        "modSlots": 2,
+        "tags": [],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Light",
+        "drone": false
+      }
+    }
+  }
+}

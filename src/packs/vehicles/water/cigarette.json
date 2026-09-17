@@ -1,0 +1,57 @@
+{
+  "_id": "xDwGlJdNvWopKp0x",
+  "_key": "!items!xDwGlJdNvWopKp0x",
+  "name": "GHOSTWIRE.Vehicles.Items.Cigarette.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Cigarette.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cigarette",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "NowzLYKCGDkEWIwh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 1500,
+        "modSlots": 2,
+        "tags": [],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water",
+        "scale": "Vehicle",
+        "drone": false
+      }
+    }
+  }
+}

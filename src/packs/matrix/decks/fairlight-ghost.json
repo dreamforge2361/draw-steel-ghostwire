@@ -1,0 +1,57 @@
+{
+  "_id": "XBq6Pkm4tKFPkg5W",
+  "_key": "!items!XBq6Pkm4tKFPkg5W",
+  "name": "GHOSTWIRE.Matrix.Items.FairlightGhost.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.FairlightGhost.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fairlight-ghost",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "7PqOYWHMxEowPWJc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 55000,
+        "modSlots": 5,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "deck"
+        ],
+        "role": "deck"
+      }
+    }
+  }
+}

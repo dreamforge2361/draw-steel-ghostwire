@@ -1,0 +1,210 @@
+{
+  "_id": "STXrgYIKgi864FOt",
+  "_key": "!items!STXrgYIKgi864FOt",
+  "name": "GHOSTWIRE.Gear.Items.Ghostplate.Name",
+  "type": "treasure",
+  "img": "icons/equipment/chest/bullet-proof-vest-kevlar.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Ghostplate.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghostplate",
+    "kind": "armor",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "medium"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "KBM1o2OpOzGTe7UI",
+      "_key": "!items.effects!STXrgYIKgi864FOt.KBM1o2OpOzGTe7UI",
+      "name": "No Kit — Echelon 1 (+8 Stamina)",
+      "img": "icons/equipment/chest/bullet-proof-vest-kevlar.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.STXrgYIKgi864FOt",
+      "description": "<p>Worn with no Kit at Echelon 1: +8 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "QilDVapUWvN9hucv",
+      "_key": "!items.effects!STXrgYIKgi864FOt.QilDVapUWvN9hucv",
+      "name": "No Kit — Echelon 2 (+11 Stamina)",
+      "img": "icons/equipment/chest/bullet-proof-vest-kevlar.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.STXrgYIKgi864FOt",
+      "description": "<p>Worn with no Kit at Echelon 2: +11 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 11,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "0B7tRYVJTV18JU1i",
+      "_key": "!items.effects!STXrgYIKgi864FOt.0B7tRYVJTV18JU1i",
+      "name": "No Kit — Echelon 3 (+14 Stamina)",
+      "img": "icons/equipment/chest/bullet-proof-vest-kevlar.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.STXrgYIKgi864FOt",
+      "description": "<p>Worn with no Kit at Echelon 3: +14 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 14,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "JnLlnGOM0Oo9cgoM",
+      "_key": "!items.effects!STXrgYIKgi864FOt.JnLlnGOM0Oo9cgoM",
+      "name": "No Kit — Echelon 4 (+18 Stamina)",
+      "img": "icons/equipment/chest/bullet-proof-vest-kevlar.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.STXrgYIKgi864FOt",
+      "description": "<p>Worn with no Kit at Echelon 4: +18 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 18,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "cky8sSiRnfwFSOsd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 50000,
+        "modSlots": 5,
+        "tags": [
+          "Concealable"
+        ],
+        "modFamily": [
+          "armor"
+        ],
+        "armorClass": "medium",
+        "staminaByEchelon": [
+          8,
+          11,
+          14,
+          18
+        ]
+      }
+    }
+  }
+}

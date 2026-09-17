@@ -1,0 +1,55 @@
+{
+  "_id": "722PELM3YQzgTElx",
+  "_key": "!items!722PELM3YQzgTElx",
+  "name": "GHOSTWIRE.Foci.Items.GraveAnchor.Name",
+  "type": "treasure",
+  "img": "icons/magic/fire/flame-burning-campfire-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.GraveAnchor.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grave-anchor",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "GDh0KaZ4xl6HtGlq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 900,
+        "modSlots": 0,
+        "tags": [
+          "Veil",
+          "Earth"
+        ],
+        "tradition": "elementalist"
+      }
+    }
+  }
+}

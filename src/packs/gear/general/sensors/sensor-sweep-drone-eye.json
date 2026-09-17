@@ -1,0 +1,57 @@
+{
+  "_id": "CFbf6ivez9js17ZS",
+  "_key": "!items!CFbf6ivez9js17ZS",
+  "name": "GHOSTWIRE.Gear.Items.SensorSweepDroneEye.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.SensorSweepDroneEye.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sensor-sweep-drone-eye",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "IckOgPn0rpSzzCzh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 12000,
+        "modSlots": 4,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "sensors",
+          "wired"
+        ]
+      }
+    }
+  }
+}

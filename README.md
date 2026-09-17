@@ -76,6 +76,8 @@ Use Foundry **Install Module** / update from:
 - `0.1.20` — **Ghostwire Classes** compendium with the **Operator** (Adrenaline), cloned from the Draw Steel Fury: class, three Origins (Corp-Milspec, Merc with two Kits, Street-vet), Ghostwire signatures Controlled Pair + Suppressing Fire, the Ghostwire 1–5 Adrenaline base band, and every level 1–10 feature and 7/9/11 ability with Draw Steel mechanics under chapter names.
 - `0.1.21` — **Ghostwire Backgrounds** (8) and **Ghostwire Professions** (15). A Background grants one fixed skill and a choice of 1 from four; a Profession grants one fixed skill and a choice of 2 from four. Skill pickers leave out skills the hero already has. The hero sheet’s **+ Add Ancestry / Background / Profession** buttons open the Ghostwire compendiums.
 - `0.1.22` — Operator polish: feature levels follow `01-operator.md`; heroic abilities use the Tech keyword instead of Magic; signatures and base band roll with Reflex; skill picks use Ghostwire groups; Merc gets a Field Arsenal feature (two Kits, preferred Kit); Street-vet picks a Loadout Damage Type; remaining Fury flavor text rewritten. Heroic abilities can’t be used in combat without enough heroic resource (Adrenaline).
+- `0.1.23` — **Full Master Gear List import** (`docs/masters/GHOSTWIRE_GEAR_MASTER.md`): every table row is an item — **Ghostwire Gear** (107: general & lifestyle, armor, weapons), **Ghostwire Mods** (16), **Ghostwire Matrix** (33), **Ghostwire Vehicles & Drones** (31), **Ghostwire Foci** (41). Grade is Draw Steel **echelon 1–4 + Availability band** (no Item Tier). Replaces the 0.1.18 Kit-subset gear.
+- `0.1.24` — **Mods expansion:** Ghostwire Mods now has Weapon, Vehicle & Drone, **Armor & Shield** (7), and **Gadget** (8) mods (31 total); Ghostwire Matrix adds **RCC Autosofts** (4). Every item with mod slots lists the mods that fit it; items with no mod family (foci, Field Surgery Kit, Designer Threads, Faraday Bag) have 0 slots. §Craft text is the downtime Project procedure keyed to Repair, Electronics, Hacking (autosofts: Hacking or Rigging), or Cybertech — no “Gunsmithing”. Rules: `docs/rulebook/14-mods.md` (mod doctrine + Invent a Mod).
 
 ## Origins pack layout (Ghostwire Ancestries)
 
@@ -207,7 +209,7 @@ Rules: `docs/rulebook/01-operator.md` (authoritative), `docs/masters/GHOSTWIRE_O
 3. Configure the Origin: its skill is fixed (Command, Demolitions, or Intimidation); pick the Kit (Merc: two Kits; Street-vet: also the Loadout Damage Type).
 4. **+ Add Background** → drag one (for example **Sprawl District**); take the fixed skill and choose 1. **+ Add Profession** → drag one (for example **Gang Soldier**); choose 2. Skills you already have — including your Origin skill — don’t appear in these pickers. *(Add the class before Background/Profession: Origin skills are fixed grants, so a Background/Profession pick made first could duplicate them.)*
 5. **Merc only:** Equipment tab → right-click the Kit whose damage you want → **Make Preferred Kit**.
-6. Drag qualifying gear from **Ghostwire Gear** (for example Precision Rifle for Longshot, or Holdout Pistol + Lined Coat for Ghost).
+6. Drag qualifying gear from **Ghostwire Gear** (for example the **Longshot** marksman rifle for the Longshot Kit, or the **Sleeve-Gun** + **Armored Jacket** for Ghost).
 7. Check: Stats shows **Adrenaline**; Skills are all Ghostwire skills with no duplicates; Abilities lists Controlled Pair, Suppressing Fire, the chosen heroic ability, the Kit signature ability, and the Origin’s triggered ability (Kinetic Redirect, Wired Reflexes, or Overclock Nerves); Features include Field Arsenal (Merc) or your Loadout (Street-vet).
 
 ## Kits (v1)
@@ -251,45 +253,38 @@ Rules: `docs/rulebook/10-kits.md`. The **Ghostwire Kits** compendium (pack id `k
 4. Swap to **Brawler**: Stamina max rises by 6 (echelon 1), stability +1, speed +2, melee free strike +1/+1/+1, and **Stagger Combo** is added.
 5. Swap to **Juggernaut**: Stamina +9, stability +2, melee free strike +0/+0/+4, and **Payback** is added.
 
-## Gear (v1)
+## Gear catalog (v2)
 
-Rules: `docs/rulebook/10-kits.md` (ownership rule), `docs/rulebook/11-economy.md`. The **Ghostwire Gear** compendium (pack id `gear`) holds the weapons and armor that make a Kit live. Gear costs ¥; Kit doctrine never does.
+Source of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md` — every table row is a Foundry item; prices, slots, profiles, and tags are copied from the master. Rules: `docs/rulebook/10-kits.md` (ownership rule), `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`.
 
-- **Structure:** Draw Steel `treasure` items with `kind` weapon or armor. The Draw Steel weapon/armor category goes in `keywords` (`light`, `medium`, `heavy`, `bow` = firearms and dartguns, `polearm`, `whip`, `ensnaring`, `shield`), matching the categories on each Kit’s sheet. Price, Availability, and Kit fit are in `flags.draw-steel-ghostwire.gear`; treasure has no price field, so the item sheet shows them under the name.
-- **Stats (provisional):** Draw Steel puts weapon damage and distance on the Kit, so street weapons add no numbers. Armor Stamina follows the Kits chapter: with a Kit, the Kit’s Stamina already *is* the armor’s Stamina, so each armor’s Stamina effect is a **no-Kit-only** toggle (light +3, medium +6, heavy +9 at echelon 1). Sniper Rifle (+2 ranged weapon distance) and Monofilament Whip (+1 melee weapon damage) have wielded toggles; Synth-Weave has a worn toggle for an edge on Hide. All effects start disabled, as in Draw Steel.
-- **Not automated:** buying (¥ isn’t deducted), Availability gating, checking that a hero owns gear matching their Kit, weapon mods, and Stamina scaling past echelon 1.
+| Compendium | Pack id | Items | Master sections | Folders |
+|---|---|---|---|---|
+| **Ghostwire Gear** | `gear` | 107 | 1A–1G, 2A–2E, 3A–3F | General & Lifestyle › Comms, Sensors, Break-in, Survival, Medical, Ammunition & Thrown, Lifestyle · Armor › Light, Medium, Heavy, Sealed & Hardened, Shields · Weapons › Light Firearms, Longarms, Heavy, Melee & Blades, Thrown & Grenades, Bows/Crossbows/Exotic |
+| **Ghostwire Mods** | `mods` | 31 | 3G, 5F + B20 armor/gadget mods | Weapon Mods · Vehicle & Drone Mods · Armor & Shield Mods · Gadget Mods |
+| **Ghostwire Matrix** | `matrix` | 37 | 4A–4F + B20 RCC autosofts | Cyberdecks · Programs · Payloads · RCCs · RCC Autosofts · Cyberjacks & Interfaces · Matrix-Support |
+| **Ghostwire Vehicles & Drones** | `vehicles` | 31 | 5A–5E | Ground · Air · Water & Submersible · Space · Drones |
+| **Ghostwire Foci** | `foci` | 41 | 6A–6F | Elementalist · Street-Priest · Technomancer · Shared · Material Components · Reagent Packages |
 
-| Item | Folder | Kind (keywords) | Price | Availability | Satisfies | Toggle effect |
-|---|---|---|---|---|---|---|
-| Holdout Pistol | Weapons | weapon (light) | ¥400 | Street | Light weapon (Ghost) | — |
-| Heavy Pistol | Weapons | weapon (medium) | ¥800 | Street | Medium weapon (Gunslinger sidearm) | — |
-| SMG | Weapons | weapon (bow) | ¥1,200 | Street | SMG / carbine (Saturation) | — |
-| Assault Carbine | Weapons | weapon (bow) | ¥2,000 | Professional | SMG / carbine (Saturation), carbine (Streetsweeper) | — |
-| Combat Shotgun | Weapons | weapon (bow) | ¥1,500 | Street | Shotgun (Streetsweeper) | — |
-| Precision Rifle | Weapons | weapon (bow) | ¥3,500 | Professional | Precision rifle (Longshot) | — |
-| Sniper Rifle | Weapons | weapon (bow) | ¥6,000 | Restricted | Precision rifle (Longshot) | +2 distance on ranged weapon abilities while wielded. |
-| Mono-Knife | Weapons | weapon (light) | ¥300 | Street | Light melee weapon (Chromeblade light, Raider, Sanctified) | — |
-| Katana | Weapons | weapon (medium) | ¥900 | Street | Medium melee weapon (Gunslinger blade, Chromeblade medium, Duelist, Spellblade, Breacher) | — |
-| Maul | Weapons | weapon (heavy) | ¥1,200 | Street | Heavy weapon (Juggernaut, Bulldozer) | — |
-| Combat Spear | Weapons | weapon (polearm) | ¥700 | Street | Polearm (Reach, Staff Adept, Snarehunter) | — |
-| Composite Staff | Weapons | weapon (polearm) | ¥200 | Street | Staff (Staff Adept) | — |
-| Dartgun | Weapons | weapon (bow) | ¥1,000 | Professional | Bow / crossbow / dartgun (Hexshot) | — |
-| Lined Coat | Armor & Shields | armor (light) | ¥600 | Street | Light armor | Worn with no Kit: +3 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. |
-| Ballistic Vest | Armor & Shields | armor (medium) | ¥1,500 | Professional | Medium armor | Worn with no Kit: +6 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. |
-| Hard Armor | Armor & Shields | armor (heavy) | ¥4,000 | Restricted | Heavy armor | Worn with no Kit: +9 Stamina (echelon 1). Leave disabled if you have a Kit — the Kit’s Stamina bonus already is this armor’s Stamina. |
-| Ballistic Shield | Armor & Shields | armor (shield) | ¥800 | Street | Shield (Breacher, Warframe, Raider, Spellblade) | — |
-| Synth-Weave Coat | Armor & Shields | armor (no armor) | ¥800 | Professional | No armor (does not count as Kit armor) | Worn: edge on Hide tests (the fabric shifts to match shadows). No Stamina. |
-| Tangle-Net Launcher | Thrown & Special | weapon (ensnaring) | ¥400 | Street | Ensnaring gear (Snarehunter net) | — |
-| Monofilament Whip | Thrown & Special | weapon (whip) | ¥2,500 | Restricted | Whip / monofilament (Monowhip) | +1 damage on melee weapon abilities while wielded. |
-| Silenced Holdout | Thrown & Special | weapon (light) | ¥1,200 | Professional | Silenced light weapon (Ghost) | — |
+- **Grade = echelon + Availability.** Ghostwire uses Draw Steel levels 1–10 and echelons 1–4 only; the master’s old T5–T1 column maps to **Echelon 1 Street** (T5), **Echelon 1 Professional** (T4), **Echelon 2 Restricted** (T3), **Echelon 3 Military** (T2), **Echelon 4 Prototype** (T1). Items store it in `system.echelon` and the flag; descriptions say “Echelon N · Availability: Street/…”. A few row texts that named the old ladder were reworded (for example “Professional-grade (or lower) locks”, “a middle-result Wired roll”). Weapon mods (3G) have no grade in the master, so they show “Echelon —”.
+- **Items:** Draw Steel `treasure`. Weapons `kind: weapon` (keywords: `light`/`medium`/`heavy` from the band — Anti-veh counts as heavy — plus `bow` for firearms, bows, and launchers, `ensnaring` for the Net-Gun, `whip` for the Monowhip); armor and shields `kind: armor` (keyword = armor class or `shield`); everything else `kind: other`, `category: trinket`.
+- **Flags:** `flags.draw-steel-ghostwire.gear | mod | matrix | vehicle | focus` = `{ echelon, availability, price, modSlots, tags, consumable? }`, plus weapons `damage, damageType, range, weaponBand`; armor `armorClass` (`light|medium|heavy|shield|sealed`, sealed also `baseClass`), `staminaByEchelon`, `immunity`; mods `host, slotCost, craftSkill`; matrix `role`; vehicles `domain, scale, drone`; foci `tradition` (components also `drainTrade`). `priceText`/`priceNote` cover “per §F3”, “(holds value)”, and “80,000+”. The item sheet shows “Echelon · Availability · ¥ · Mod slots” under the name.
+- **Weapons:** the description lists the master’s **Weapon Base** damage, type, band, and range. No damage effects — Kit doctrine still supplies Draw Steel damage bands.
+- **Armor as Stamina:** each armor lists its Stamina by hero echelon (Echelon 1 uses the street numbers for Street items and the professional numbers for everything else; Echelons 2–4 use the old T3/T2/T1 columns) and carries four **disabled** “No Kit — Echelon N” effects. With a Kit, the Kit’s Stamina already is the armor’s Stamina — leave them off. Shields stack with any armor. Sealed & Hardened armor also carries a disabled **typed immunity** effect (Flashweave fire 2, Faraday Suit lightning 2, Sealed Armor cold 2, HE Combat Suit fire/cold/poison 2 — toxin maps to poison).
+- **Mods and §Craft:** §Craft is the downtime Project procedure, never a skill. Every mod, program, and autosoft says what it fits, its slot cost, and its Project skill: weapon/armor/shield/vehicle physical mods **Repair**; gadget and smart hardware **Electronics**; programs and payloads **Hacking**; autosofts **Hacking or Rigging**; chrome-adjacent **Cybertech**. Installing/swapping/removing is downtime; toggling an installed mod or loaded program is a field action. Mods are inventory items; there is no attach UI yet. Flags: `mod` = `{ …, host, hosts, slotCost, craftSkill: [skill keys] }`.
+- **Slot integrity:** every item with mod slots has `modFamily` in its flag and lists the fitting mods (as links) in its description — weapons, vehicles & drones, armor, shields, gadgets (comms, sensors, mechanical/electronic break-in tools, survival kits, Wired interfaces and support gear), cyberdecks (programs + payloads), and RCCs (autosofts). 33 items with no mod family have 0 slots and say so: Field Surgery Kit, Designer Threads, Faraday Bag, and the 30 foci. Rules: `docs/rulebook/14-mods.md`.
+- **Consumables:** anything tagged Consumable (plus matrix payloads, ritual components, and reagent packages) has `modSlots: 0`. This overrides two master rows that listed slots on a Consumable (Respirator Mask 1, Cutting Torch 3); the Burner is tagged “Consumable-ish” and keeps its 1 slot.
+- **Implants:** the Cyber-Spur is a price listing that links the chrome **Implant Weapon (Spur)**, which spends Body Integrity.
+- **Not automated:** buying (¥ not deducted), Availability gating, mod slot tracking, vehicle/drone stat blocks (deferred in the master), focus bonding.
 
-**Test click-path**
+**Test plan**
 
-1. Compendium sidebar → **Ghostwire Gear** → folders Weapons, Armor & Shields, Thrown & Special.
-2. Open **Precision Rifle**: under the name the sheet reads “¥3,500 · Professional · Satisfies: Precision rifle (Longshot)”; the description starts with the same header.
-3. Hero with the **Longshot** Kit: drag **Precision Rifle** onto the hero (it lands in Equipment). Longshot calls for no armor, so skip armor; Kit bonuses already apply. Optionally drag **Sniper Rifle** and enable its effect: ranged weapon abilities gain +2 distance.
-4. Drag **Lined Coat** onto the same hero: it lands in Equipment with its Stamina effect disabled. Leave it off (the hero has a Kit). Enable it on a hero with no Kit to see +3 Stamina.
-5. Hero with the **Ghost** Kit: drag **Silenced Holdout** and **Lined Coat**. Both land in Equipment and satisfy the Kit (light weapon + light armor).
+1. Foundry closed → `node tools/build-packs.mjs` (no errors).
+2. Start Foundry, enable the module: the Compendium sidebar lists **Ghostwire Gear**, **Ghostwire Mods**, **Ghostwire Matrix**, **Ghostwire Vehicles & Drones**, **Ghostwire Foci**.
+3. Spot-check: **Smartlink** (Mods › Weapon Mods) ¥500, slot cost 1, Wired/Smart; **Sleeve-Gun** (Gear › Weapons › Light Firearms) Echelon 1 · Street · ¥150; **Hardshell** (Gear › Armor › Heavy) four disabled No Kit effects; **Scrapdeck** (Matrix › Cyberdecks); **Fly** (Vehicles › Drones); **Spark-ring** (Foci › Elementalist).
+4. Open a few folders — nested structure is readable.
+5. Browser console has no errors.
+6. Mods pack shows four folders: Weapon Mods, Vehicle & Drone Mods, Armor & Shield Mods, Gadget Mods. Matrix has an RCC Autosofts folder.
+7. Open **Reader** (Matrix › Programs): its text says Hacking, not Craft. Open **Lockpick Set** (Gear › General › Break-in): its mod slot note links **Quiet Picks**. Open **Spark-ring**: it explains its 0 slots.
 
 ## Chrome & Body Integrity (v1)
 

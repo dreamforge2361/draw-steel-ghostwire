@@ -1,0 +1,62 @@
+{
+  "_id": "EIyfIy8Lc3ARgSsi",
+  "_key": "!items!EIyfIy8Lc3ARgSsi",
+  "name": "GHOSTWIRE.Matrix.Items.RepairTickAutosoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.RepairTickAutosoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "repair-tick-autosoft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "3ushV9l5YOZEAI1E",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 1200,
+        "modSlots": 0,
+        "tags": [
+          "Program",
+          "Wired",
+          "Autosoft"
+        ],
+        "role": "autosoft",
+        "host": "rcc",
+        "slotCost": 1,
+        "craftSkill": [
+          "hacking",
+          "rigging"
+        ]
+      }
+    }
+  }
+}

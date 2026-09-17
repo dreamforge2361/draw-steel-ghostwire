@@ -210,15 +210,27 @@ Hooks.on("deleteItem", (item, options, userId) => {
   if (granted.length) actor.deleteEmbeddedDocuments("Item", granted);
 });
 
-// Item sheet: chrome and gear show their ¥ and Availability under the name.
-// Draw Steel treasure has no price field, so price lives in flags.draw-steel-ghostwire.{chrome,gear}.price.
+// Item sheet: chrome and catalog items (gear, mods, matrix, vehicles, foci) show their grade and ¥ under the name.
+// Draw Steel treasure has no price field, so price lives in flags.draw-steel-ghostwire.<type>.price.
 const formatYen = price => `¥${Number(price ?? 0).toLocaleString(game.i18n.lang)}`;
+const CATALOG_FLAGS = ["gear", "mod", "matrix", "vehicle", "focus"];
+
+function catalogLine(entry) {
+  const parts = [
+    entry.echelon ? game.i18n.format("GHOSTWIRE.Gear.SheetLine.Echelon", { echelon: entry.echelon }) : game.i18n.localize("GHOSTWIRE.Gear.SheetLine.NoGrade"),
+  ];
+  if (entry.availability) parts.push(game.i18n.localize(`GHOSTWIRE.Gear.Availability.${entry.availability}`));
+  parts.push(entry.price != null ? `${formatYen(entry.price)}${entry.priceNote ?? ""}` : (entry.priceText ?? "—"));
+  if (entry.slotCost) parts.push(game.i18n.format("GHOSTWIRE.Gear.SheetLine.SlotCost", { slots: entry.slotCost }));
+  else if (entry.modSlots) parts.push(game.i18n.format("GHOSTWIRE.Gear.SheetLine.ModSlots", { slots: entry.modSlots }));
+  return parts.join(" · ");
+}
 
 Hooks.on("renderDrawSteelItemSheet", (app, element) => {
   const chrome = app.document.getFlag(MODULE_ID, "chrome");
-  const gear = app.document.getFlag(MODULE_ID, "gear");
+  const catalog = CATALOG_FLAGS.map(key => app.document.getFlag(MODULE_ID, key)).find(Boolean);
   const name = element.querySelector(".sheet-header .document-name");
-  if (!(chrome || gear) || !name || element.querySelector(".ghostwire-chrome-line")) return;
+  if (!(chrome || catalog) || !name || element.querySelector(".ghostwire-chrome-line")) return;
   const line = document.createElement("div");
   line.className = "ghostwire-chrome-line";
   line.textContent = chrome
@@ -229,11 +241,7 @@ Hooks.on("renderDrawSteelItemSheet", (app, element) => {
       price: formatYen(chrome.price),
       availability: game.i18n.localize(`GHOSTWIRE.Chrome.Availability.${chrome.availability}`),
     })
-    : game.i18n.format("GHOSTWIRE.Gear.SheetLine", {
-      price: formatYen(gear.price),
-      availability: game.i18n.localize(`GHOSTWIRE.Gear.Availability.${gear.availability}`),
-      satisfies: gear.satisfies,
-    });
+    : catalogLine(catalog);
   name.after(line);
 });
 

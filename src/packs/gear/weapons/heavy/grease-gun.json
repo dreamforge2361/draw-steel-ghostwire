@@ -1,0 +1,64 @@
+{
+  "_id": "8A3zTNWREVuMevmB",
+  "_key": "!items!8A3zTNWREVuMevmB",
+  "name": "GHOSTWIRE.Gear.Items.GreaseGun.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.GreaseGun.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grease-gun",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 3,
+    "keywords": [
+      "heavy",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "Y7tW2YmVuHoZzd7X",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 14000,
+        "modSlots": 4,
+        "tags": [
+          "Two-handed",
+          "Blast"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 9,
+        "damageType": "fire",
+        "range": "Medium",
+        "weaponBand": "heavy"
+      }
+    }
+  }
+}

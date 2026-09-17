@@ -1,0 +1,55 @@
+{
+  "_id": "wsYPljptjYRGEJCV",
+  "_key": "!items!wsYPljptjYRGEJCV",
+  "name": "GHOSTWIRE.Matrix.Items.Skeleton.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.Skeleton.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "skeleton",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "PTNQJZBUr1ZFR36p",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 3000,
+        "modSlots": 0,
+        "tags": [
+          "Program",
+          "Wired"
+        ],
+        "role": "program"
+      }
+    }
+  }
+}

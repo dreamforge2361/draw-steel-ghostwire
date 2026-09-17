@@ -1,0 +1,55 @@
+{
+  "_id": "isWSdu9bw9In4SB9",
+  "_key": "!items!isWSdu9bw9In4SB9",
+  "name": "GHOSTWIRE.Foci.Items.WarGlyph.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-interface-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.WarGlyph.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "war-glyph",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "y7hGiFrI9yoF9Ry7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2800,
+        "modSlots": 0,
+        "tags": [
+          "Veil",
+          "Wired"
+        ],
+        "tradition": "technomancer"
+      }
+    }
+  }
+}

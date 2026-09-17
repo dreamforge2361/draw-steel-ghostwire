@@ -1,0 +1,56 @@
+{
+  "_id": "cbQgs1DGJo0mlfxd",
+  "_key": "!items!cbQgs1DGJo0mlfxd",
+  "name": "GHOSTWIRE.Foci.Items.CircuitCharm.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-interface-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.CircuitCharm.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "circuit-charm",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "y7hGiFrI9yoF9Ry7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 250,
+        "modSlots": 0,
+        "tags": [
+          "Veil",
+          "Wired",
+          "Sprite"
+        ],
+        "tradition": "technomancer"
+      }
+    }
+  }
+}

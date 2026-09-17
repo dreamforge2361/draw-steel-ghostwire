@@ -1,0 +1,55 @@
+{
+  "_id": "InoDLnDJKN2Jj2Ls",
+  "_key": "!items!InoDLnDJKN2Jj2Ls",
+  "name": "GHOSTWIRE.Matrix.Items.Overlord.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.Overlord.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "overlord",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "PTNQJZBUr1ZFR36p",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 22000,
+        "modSlots": 0,
+        "tags": [
+          "Program",
+          "Wired"
+        ],
+        "role": "program"
+      }
+    }
+  }
+}

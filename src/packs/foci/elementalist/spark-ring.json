@@ -1,0 +1,55 @@
+{
+  "_id": "IlGjHbevuwdlsHuJ",
+  "_key": "!items!IlGjHbevuwdlsHuJ",
+  "name": "GHOSTWIRE.Foci.Items.SparkRing.Name",
+  "type": "treasure",
+  "img": "icons/magic/fire/flame-burning-campfire-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.SparkRing.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "spark-ring",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "GDh0KaZ4xl6HtGlq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 250,
+        "modSlots": 0,
+        "tags": [
+          "Veil",
+          "Fire"
+        ],
+        "tradition": "elementalist"
+      }
+    }
+  }
+}

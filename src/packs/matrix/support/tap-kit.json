@@ -1,0 +1,58 @@
+{
+  "_id": "9jGOPIxC63FBfS8n",
+  "_key": "!items!9jGOPIxC63FBfS8n",
+  "name": "GHOSTWIRE.Matrix.Items.TapKit.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/antenna-powered-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.TapKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tap-kit",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "coyCmRxnu5opxytj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 200,
+        "modSlots": 1,
+        "tags": [
+          "Wired",
+          "Concealable"
+        ],
+        "modFamily": [
+          "wired"
+        ],
+        "role": "support"
+      }
+    }
+  }
+}

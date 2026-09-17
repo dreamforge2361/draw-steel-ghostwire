@@ -1,7 +1,7 @@
 # Ghostwire Core Rulebook — Chapter: Economy (Nuyen)
 
 **Status:** Stage 3 draft — for Michael review (2026-09-16)  
-**Pairs with:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, `docs/rulebook/10-kits.md`  
+**Pairs with:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, `docs/rulebook/10-kits.md`, `docs/rulebook/14-mods.md`  
 **Foundry:** stock Draw Steel `wealth` field is remapped to **Nuyen (¥)** in module lang — do not invent a parallel currency field for v1.
 
 **Design locks (do not reopen in this draft):**
@@ -26,7 +26,7 @@ Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, k
 | Spend | Notes |
 |---|---|
 | **Gear** | Weapons, armor, tools that satisfy Kit categories or standalone use |
-| **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) |
+| **Mods** | Smartlink, suppressor, armor liners, gadget firmware, programs, autosofts (stack with Kit doctrine). Slots, §Craft Projects, and Invent a Mod: `14-mods.md` |
 | **Chrome** | Implants and chrome packages — **also** spends Body Integrity (Chrome chapter) |
 | **Lifestyle** | Thin burn: pay upkeep or take a street complication (placeholder) |
 | **Bribes / favors** | Access, silence, fixers, corp doors |

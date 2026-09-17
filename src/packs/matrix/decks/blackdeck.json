@@ -1,0 +1,57 @@
+{
+  "_id": "YBSwx1fv0vO7DbGT",
+  "_key": "!items!YBSwx1fv0vO7DbGT",
+  "name": "GHOSTWIRE.Matrix.Items.Blackdeck.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.Blackdeck.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "blackdeck",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "7PqOYWHMxEowPWJc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 15000,
+        "modSlots": 4,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "deck"
+        ],
+        "role": "deck"
+      }
+    }
+  }
+}

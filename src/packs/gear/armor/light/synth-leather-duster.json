@@ -1,0 +1,210 @@
+{
+  "_id": "Dt7PvhrEaRVsh6fz",
+  "_key": "!items!Dt7PvhrEaRVsh6fz",
+  "name": "GHOSTWIRE.Gear.Items.SynthLeatherDuster.Name",
+  "type": "treasure",
+  "img": "icons/equipment/chest/coat-leather-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.SynthLeatherDuster.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "synth-leather-duster",
+    "kind": "armor",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "light"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "r99FOSN6wo9CxwJg",
+      "_key": "!items.effects!Dt7PvhrEaRVsh6fz.r99FOSN6wo9CxwJg",
+      "name": "No Kit — Echelon 1 (+4 Stamina)",
+      "img": "icons/equipment/chest/coat-leather-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.Dt7PvhrEaRVsh6fz",
+      "description": "<p>Worn with no Kit at Echelon 1: +4 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "qNJOZ043Yu1D37sU",
+      "_key": "!items.effects!Dt7PvhrEaRVsh6fz.qNJOZ043Yu1D37sU",
+      "name": "No Kit — Echelon 2 (+6 Stamina)",
+      "img": "icons/equipment/chest/coat-leather-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.Dt7PvhrEaRVsh6fz",
+      "description": "<p>Worn with no Kit at Echelon 2: +6 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 6,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "OPDpI8zbJYVPWLI4",
+      "_key": "!items.effects!Dt7PvhrEaRVsh6fz.OPDpI8zbJYVPWLI4",
+      "name": "No Kit — Echelon 3 (+8 Stamina)",
+      "img": "icons/equipment/chest/coat-leather-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.Dt7PvhrEaRVsh6fz",
+      "description": "<p>Worn with no Kit at Echelon 3: +8 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "9djNhj7p8hAe3FnE",
+      "_key": "!items.effects!Dt7PvhrEaRVsh6fz.9djNhj7p8hAe3FnE",
+      "name": "No Kit — Echelon 4 (+10 Stamina)",
+      "img": "icons/equipment/chest/coat-leather-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.Dt7PvhrEaRVsh6fz",
+      "description": "<p>Worn with no Kit at Echelon 4: +10 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 10,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "UFLJJBmR8CmONsbr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 3500,
+        "modSlots": 2,
+        "tags": [
+          "Concealable"
+        ],
+        "modFamily": [
+          "armor"
+        ],
+        "armorClass": "light",
+        "staminaByEchelon": [
+          4,
+          6,
+          8,
+          10
+        ]
+      }
+    }
+  }
+}

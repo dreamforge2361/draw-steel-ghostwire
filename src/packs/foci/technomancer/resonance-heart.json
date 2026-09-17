@@ -1,0 +1,56 @@
+{
+  "_id": "QuA2whdn4kT0ImVh",
+  "_key": "!items!QuA2whdn4kT0ImVh",
+  "name": "GHOSTWIRE.Foci.Items.ResonanceHeart.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-interface-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.ResonanceHeart.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "resonance-heart",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "y7hGiFrI9yoF9Ry7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 23000,
+        "modSlots": 0,
+        "tags": [
+          "Veil",
+          "Wired",
+          "Signature-capable"
+        ],
+        "tradition": "technomancer"
+      }
+    }
+  }
+}

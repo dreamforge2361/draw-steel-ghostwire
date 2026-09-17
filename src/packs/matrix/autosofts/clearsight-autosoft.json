@@ -1,0 +1,62 @@
+{
+  "_id": "AXmzeysL13YkNKR9",
+  "_key": "!items!AXmzeysL13YkNKR9",
+  "name": "GHOSTWIRE.Matrix.Items.ClearsightAutosoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.ClearsightAutosoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "clearsight-autosoft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "3ushV9l5YOZEAI1E",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 700,
+        "modSlots": 0,
+        "tags": [
+          "Program",
+          "Wired",
+          "Autosoft"
+        ],
+        "role": "autosoft",
+        "host": "rcc",
+        "slotCost": 1,
+        "craftSkill": [
+          "hacking",
+          "rigging"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_id": "IY30T5hkmX33fPu0",
+  "_key": "!items!IY30T5hkmX33fPu0",
+  "name": "GHOSTWIRE.Vehicles.Items.Mule.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Mule.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mule",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "UDrdYfXpBDCUE3Tr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 22000,
+        "modSlots": 4,
+        "tags": [
+          "Sealed"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Space",
+        "scale": "Heavy",
+        "drone": false
+      }
+    }
+  }
+}

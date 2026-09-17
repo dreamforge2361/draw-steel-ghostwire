@@ -1,0 +1,63 @@
+{
+  "_id": "mIpnc0adnZRDSEiP",
+  "_key": "!items!mIpnc0adnZRDSEiP",
+  "name": "GHOSTWIRE.Gear.Items.TankCracker.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.TankCracker.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tank-cracker",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "heavy",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "Y7tW2YmVuHoZzd7X",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 22000,
+        "modSlots": 0,
+        "tags": [
+          "Two-handed",
+          "Blast",
+          "Consumable"
+        ],
+        "consumable": true,
+        "damage": 14,
+        "damageType": "fire",
+        "range": "Long",
+        "weaponBand": "anti-veh"
+      }
+    }
+  }
+}

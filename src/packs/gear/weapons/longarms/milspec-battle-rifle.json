@@ -1,0 +1,64 @@
+{
+  "_id": "mj0spta0PfZZ8w4e",
+  "_key": "!items!mj0spta0PfZZ8w4e",
+  "name": "GHOSTWIRE.Gear.Items.MilspecBattleRifle.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.MilspecBattleRifle.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "milspec-battle-rifle",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 3,
+    "keywords": [
+      "medium",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "R7lXYyuPF9VB7TDU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 9000,
+        "modSlots": 4,
+        "tags": [
+          "Two-handed",
+          "Auto"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 7,
+        "damageType": "kinetic",
+        "range": "Medium",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

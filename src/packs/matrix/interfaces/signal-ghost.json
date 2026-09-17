@@ -1,0 +1,58 @@
+{
+  "_id": "wETpRh9rUlDQZwUk",
+  "_key": "!items!wETpRh9rUlDQZwUk",
+  "name": "GHOSTWIRE.Matrix.Items.SignalGhost.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/wire-spliced.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.SignalGhost.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "signal-ghost",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "5z8zDSCPsEDDkha4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 11000,
+        "modSlots": 4,
+        "tags": [
+          "Wired",
+          "Concealable"
+        ],
+        "modFamily": [
+          "wired"
+        ],
+        "role": "interface"
+      }
+    }
+  }
+}

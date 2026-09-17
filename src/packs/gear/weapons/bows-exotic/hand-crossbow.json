@@ -1,0 +1,64 @@
+{
+  "_id": "DWU5ubr2MzehxIvs",
+  "_key": "!items!DWU5ubr2MzehxIvs",
+  "name": "GHOSTWIRE.Gear.Items.HandCrossbow.Name",
+  "type": "treasure",
+  "img": "icons/weapons/bows/longbow-recurve-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.HandCrossbow.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hand-crossbow",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "vwBmeD081if387z3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 400,
+        "modSlots": 2,
+        "tags": [
+          "Concealable",
+          "Quiet"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 4,
+        "damageType": "kinetic",
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

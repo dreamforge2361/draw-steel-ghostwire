@@ -1,0 +1,98 @@
+{
+  "_id": "gJrGQ3RAps0Rx0ob",
+  "_key": "!items!gJrGQ3RAps0Rx0ob",
+  "name": "GHOSTWIRE.Mods.Items.StealthWeave.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.StealthWeave.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "stealth-weave",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "6WuGwE9W44ndWZ6A",
+      "_key": "!items.effects!gJrGQ3RAps0Rx0ob.6WuGwE9W44ndWZ6A",
+      "name": "Installed — Stealth edge",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+      "origin": "Compendium.draw-steel-ghostwire.mods.Item.gJrGQ3RAps0Rx0ob",
+      "description": "<p>Edge on Stealth tests. While you are motionless, cancel one source of armor Stealth bane.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.stealth.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "B4auJ3Tjl5Ueylf3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 1200,
+        "modSlots": 0,
+        "tags": [
+          "Stealth"
+        ],
+        "host": "armor",
+        "hosts": [
+          "armor"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

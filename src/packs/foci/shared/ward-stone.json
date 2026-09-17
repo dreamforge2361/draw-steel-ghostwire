@@ -1,0 +1,55 @@
+{
+  "_id": "J76U2yYlnamrDfUt",
+  "_key": "!items!J76U2yYlnamrDfUt",
+  "name": "GHOSTWIRE.Foci.Items.WardStone.Name",
+  "type": "treasure",
+  "img": "icons/tools/scribal/ink-quill-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.WardStone.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ward-stone",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "NB1iGhFiFviQH7AE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 750,
+        "modSlots": 0,
+        "tags": [
+          "Ritual",
+          "Ward"
+        ],
+        "tradition": "shared"
+      }
+    }
+  }
+}

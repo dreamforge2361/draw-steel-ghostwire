@@ -1,0 +1,63 @@
+{
+  "_id": "q6vITBkrAG8O0O2e",
+  "_key": "!items!q6vITBkrAG8O0O2e",
+  "name": "GHOSTWIRE.Gear.Items.Longshot.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Longshot.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "longshot",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "medium",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "R7lXYyuPF9VB7TDU",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 4500,
+        "modSlots": 3,
+        "tags": [
+          "Two-handed"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 7,
+        "damageType": "AP",
+        "range": "Long",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

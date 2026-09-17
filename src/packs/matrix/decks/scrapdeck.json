@@ -1,0 +1,57 @@
+{
+  "_id": "j88oZygUYMshPeEC",
+  "_key": "!items!j88oZygUYMshPeEC",
+  "name": "GHOSTWIRE.Matrix.Items.Scrapdeck.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/console-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.Scrapdeck.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "scrapdeck",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "7PqOYWHMxEowPWJc",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 300,
+        "modSlots": 1,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "deck"
+        ],
+        "role": "deck"
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "PCFCAqAdvEDawuod",
+  "_key": "!items!PCFCAqAdvEDawuod",
+  "name": "GHOSTWIRE.Gear.Items.NetGun.Name",
+  "type": "treasure",
+  "img": "icons/tools/fishing/net-simple-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.NetGun.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "net-gun",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light",
+      "ensnaring"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "vwBmeD081if387z3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 900,
+        "modSlots": 2,
+        "tags": [
+          "Restraining",
+          "Non-lethal-capable"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": null,
+        "damageType": null,
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

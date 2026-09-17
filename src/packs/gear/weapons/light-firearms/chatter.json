@@ -1,0 +1,64 @@
+{
+  "_id": "IHGDP8hU17OIM75u",
+  "_key": "!items!IHGDP8hU17OIM75u",
+  "name": "GHOSTWIRE.Gear.Items.Chatter.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/machine-gun-sub-large.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Chatter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chatter",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "KhSKz1lL1eGjku6B",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2800,
+        "modSlots": 3,
+        "tags": [
+          "Auto",
+          "Quiet"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 5,
+        "damageType": "kinetic",
+        "range": "Medium",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

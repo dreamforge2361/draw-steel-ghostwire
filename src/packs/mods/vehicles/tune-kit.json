@@ -1,0 +1,59 @@
+{
+  "_id": "C84pf5SAJelQ7Ur1",
+  "_key": "!items!C84pf5SAJelQ7Ur1",
+  "name": "GHOSTWIRE.Mods.Items.TuneKit.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.TuneKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tune-kit",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "aQqOJpCpotlt5MEY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2500,
+        "modSlots": 0,
+        "tags": [],
+        "host": "vehicle",
+        "hosts": [
+          "vehicle"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

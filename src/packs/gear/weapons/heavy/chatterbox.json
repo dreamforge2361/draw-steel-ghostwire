@@ -1,0 +1,65 @@
+{
+  "_id": "KHaiD72pw2v5ig8g",
+  "_key": "!items!KHaiD72pw2v5ig8g",
+  "name": "GHOSTWIRE.Gear.Items.Chatterbox.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Chatterbox.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chatterbox",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "heavy",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "Y7tW2YmVuHoZzd7X",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 4800,
+        "modSlots": 3,
+        "tags": [
+          "Two-handed",
+          "Auto",
+          "Loud"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 9,
+        "damageType": "kinetic",
+        "range": "Medium",
+        "weaponBand": "heavy"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "virxBj5UqSHiuUNI",
+  "_key": "!items!virxBj5UqSHiuUNI",
+  "name": "GHOSTWIRE.Gear.Items.ThermiteCharge.Name",
+  "type": "treasure",
+  "img": "icons/weapons/thrown/bomb-fuse-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.ThermiteCharge.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "thermite-charge",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "78iusAOPSM8frLfk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 900,
+        "modSlots": 0,
+        "tags": [
+          "Blast",
+          "Consumable"
+        ],
+        "consumable": true,
+        "damage": 9,
+        "damageType": "fire",
+        "range": "Adjacent",
+        "weaponBand": "heavy"
+      }
+    }
+  }
+}

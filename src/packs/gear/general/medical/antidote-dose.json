@@ -1,0 +1,54 @@
+{
+  "_id": "8KUm6kYDQ9psC1h5",
+  "_key": "!items!8KUm6kYDQ9psC1h5",
+  "name": "GHOSTWIRE.Gear.Items.AntidoteDose.Name",
+  "type": "treasure",
+  "img": "icons/tools/medical/bandages-gauze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.AntidoteDose.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "antidote-dose",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "6OQ8YIl853VINDDp",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 1500,
+        "modSlots": 0,
+        "tags": [
+          "Consumable"
+        ],
+        "consumable": true
+      }
+    }
+  }
+}

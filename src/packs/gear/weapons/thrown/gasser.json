@@ -1,0 +1,61 @@
+{
+  "_id": "DDtpD2lIhgLzupDp",
+  "_key": "!items!DDtpD2lIhgLzupDp",
+  "name": "GHOSTWIRE.Gear.Items.Gasser.Name",
+  "type": "treasure",
+  "img": "icons/weapons/thrown/grenade-round.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Gasser.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gasser",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "78iusAOPSM8frLfk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 220,
+        "modSlots": 0,
+        "tags": [
+          "Blast",
+          "Consumable"
+        ],
+        "consumable": true,
+        "damage": 4,
+        "damageType": "toxin",
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

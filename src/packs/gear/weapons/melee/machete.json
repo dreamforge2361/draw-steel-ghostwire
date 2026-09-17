@@ -1,0 +1,60 @@
+{
+  "_id": "fuBxrmX3pkJCdgWZ",
+  "_key": "!items!fuBxrmX3pkJCdgWZ",
+  "name": "GHOSTWIRE.Gear.Items.Machete.Name",
+  "type": "treasure",
+  "img": "icons/weapons/swords/swords-short.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Machete.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "machete",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "11xwXjBw1kFPjKuK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 300,
+        "modSlots": 2,
+        "tags": [],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 5,
+        "damageType": "kinetic",
+        "range": "Adjacent",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

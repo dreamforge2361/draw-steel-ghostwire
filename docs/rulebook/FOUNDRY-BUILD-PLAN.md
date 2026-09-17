@@ -73,6 +73,8 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B6 | Classes 02–08 | Todo | Same pattern as Operator |
 | B7 | Wire / Veil / Machines lean packs | Todo | After Stage 4 rule text exists (or thin stubs) |
 | B8 | Chrome / Body Integrity data | **Next after review** | Rule text drafted; Foundry Integrity resource + sample implants after Michael approves |
+| B19 | Full Master Gear List import | **Done — pending Michael Foundry test** | gear/mods/matrix/vehicles/foci packs from `GHOSTWIRE_GEAR_MASTER.md`; echelon + Availability grade (no Item Tier) |
+| B20 | Mods expansion + §Craft skill cleanup + Invent a Mod | **Done — pending Michael Foundry test** | Armor/shield + gadget mods, RCC autosofts, host families on every slotted item, §Craft keyed to Repair/Electronics/Hacking/Cybertech, `14-mods.md` |
 
 **Rule:** do not invent Foundry schemas that fight `draw-steel`. Read stock DS packs first; reskin/override/add module packs.
 
@@ -127,8 +129,15 @@ After each spike:
 - **2026-09-16** — Plan created. Rulebook foundation marked done. Spike B1 (Pure Human signature) started as Claude Code learning exercise.
 - **2026-09-16** — B1+B2 done locally: `f88a8f0` signature, `b5fcd69` 3-point menu. Sheet labels locked Background/Profession/Class. Next: push, B2b lang remaps, then Corran (B3).
 - **2026-09-16** — Economy v1 + Chrome v1 drafts + Chrome master ingest. Eight Peoples Foundry/rulebook ancestry packages already done. Next: Michael review → B8 Integrity + sample implants → class packs.
+- **2026-09-16** — B19 full gear import done (pending Michael Foundry test): every Master Gear List row is an item across Gear, Mods, Matrix, Vehicles & Drones, and Foci packs. Grade uses Draw Steel echelon 1–4 + Availability bands (Street/Professional/Restricted/Military/Prototype); Item Tier removed from flags and text.
+- **2026-09-16** — B20 mods expansion done (pending Michael Foundry test): 7 armor/shield mods, 8 gadget mods, 4 RCC autosofts; every slotted item names its mod family (items with no family set to 0 slots); §Craft is the downtime Project procedure keyed to Repair / Electronics / Hacking (autosofts Hacking or Rigging) / Cybertech; `docs/rulebook/14-mods.md` adds mod doctrine and Invent a Mod (v1).
 
 ### Rulebook delivery (locked 2026-09-16)
 - Masters under `docs/masters/` are SoR (including `GHOSTWIRE_GEAR_MASTER.md`).
 - Final product ships as: (1) PDF rulebook built from `docs/rulebook/` + masters, (2) Foundry **Journal** compendium pack with the same chapters as in-world rulebook.
-- Gear/mods/economy numbers come from the Gear master; player-facing text uses Availability bands (Item Tier = gear grade only: price / Avail / mod slots).
+- Gear/mods/economy numbers come from the Gear master; player-facing text uses Draw Steel **echelon (1–4) + Availability band** (Street / Professional / Restricted / Military / Prototype). The master’s old T5–T1 column maps to E1 Street, E1 Professional, E2 Restricted, E3 Military, E4 Prototype — no Item Tier in text or Foundry flags.
+
+
+### B19 / B20 (Foundry-verified 2026-09-16)
+- [x] **B19** Full Gear master Categories 1�6 into packs: gear, mods, matrix, vehicles, foci (v0.1.24)
+- [x] **B20** Mods expansion + �Craft skill text (Hacking/Electronics/Repair) � Michael verified working

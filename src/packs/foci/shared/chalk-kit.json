@@ -1,0 +1,54 @@
+{
+  "_id": "Mcnu13u1UX5xyjG7",
+  "_key": "!items!Mcnu13u1UX5xyjG7",
+  "name": "GHOSTWIRE.Foci.Items.ChalkKit.Name",
+  "type": "treasure",
+  "img": "icons/tools/scribal/ink-quill-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.ChalkKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chalk-kit",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "NB1iGhFiFviQH7AE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 200,
+        "modSlots": 0,
+        "tags": [
+          "Ritual"
+        ],
+        "tradition": "shared"
+      }
+    }
+  }
+}

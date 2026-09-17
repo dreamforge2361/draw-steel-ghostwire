@@ -1,0 +1,54 @@
+{
+  "_id": "ZQRAmlVK3DqGYfFA",
+  "_key": "!items!ZQRAmlVK3DqGYfFA",
+  "name": "GHOSTWIRE.Gear.Items.FlashBang.Name",
+  "type": "treasure",
+  "img": "icons/weapons/ammunition/bullets-cartridge-shell-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.FlashBang.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "flash-bang",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "ahyua5QA62c6lUKF",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 1200,
+        "modSlots": 0,
+        "tags": [
+          "Consumable"
+        ],
+        "consumable": true
+      }
+    }
+  }
+}

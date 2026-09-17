@@ -1,0 +1,54 @@
+{
+  "_id": "sbffP0tz52lsnpw9",
+  "_key": "!items!sbffP0tz52lsnpw9",
+  "name": "GHOSTWIRE.Foci.Items.CascadeBand.Name",
+  "type": "treasure",
+  "img": "icons/magic/fire/flame-burning-campfire-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.CascadeBand.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cascade-band",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "GDh0KaZ4xl6HtGlq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 9000,
+        "modSlots": 0,
+        "tags": [
+          "Veil"
+        ],
+        "tradition": "elementalist"
+      }
+    }
+  }
+}

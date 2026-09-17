@@ -1,0 +1,62 @@
+{
+  "_id": "YYPdo8okZImV1tG2",
+  "_key": "!items!YYPdo8okZImV1tG2",
+  "name": "GHOSTWIRE.Mods.Items.SkeletonKeySoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.SkeletonKeySoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "skeleton-key-soft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 900,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": "bne-electronic",
+        "hosts": [
+          "bne-electronic"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "hacking",
+          "electronics"
+        ]
+      }
+    }
+  }
+}

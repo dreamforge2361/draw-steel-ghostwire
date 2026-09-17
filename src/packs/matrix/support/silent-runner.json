@@ -1,0 +1,58 @@
+{
+  "_id": "StFIS9H20sdduCCz",
+  "_key": "!items!StFIS9H20sdduCCz",
+  "name": "GHOSTWIRE.Matrix.Items.SilentRunner.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/antenna-powered-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.SilentRunner.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "silent-runner",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "coyCmRxnu5opxytj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 8000,
+        "modSlots": 4,
+        "tags": [
+          "Wired",
+          "Concealable"
+        ],
+        "modFamily": [
+          "wired"
+        ],
+        "role": "support"
+      }
+    }
+  }
+}

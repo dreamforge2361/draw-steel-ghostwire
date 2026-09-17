@@ -1,0 +1,57 @@
+{
+  "_id": "w4bLYKVCUfCc9Jor",
+  "_key": "!items!w4bLYKVCUfCc9Jor",
+  "name": "GHOSTWIRE.Matrix.Items.RemoteBox.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/remote-control-steel-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.RemoteBox.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "remote-box",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "WAF8OrqwCN4Tkb6w",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 300,
+        "modSlots": 1,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "rcc"
+        ],
+        "role": "rcc"
+      }
+    }
+  }
+}

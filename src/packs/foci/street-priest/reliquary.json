@@ -1,0 +1,55 @@
+{
+  "_id": "24HfJH4waLfoUIKh",
+  "_key": "!items!24HfJH4waLfoUIKh",
+  "name": "GHOSTWIRE.Foci.Items.Reliquary.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-gold-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.Reliquary.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "reliquary",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "4TICepuBM7QW0lPj",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 3000,
+        "modSlots": 0,
+        "tags": [
+          "Veil",
+          "Faith"
+        ],
+        "tradition": "street-priest"
+      }
+    }
+  }
+}

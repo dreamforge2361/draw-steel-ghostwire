@@ -1,0 +1,210 @@
+{
+  "_id": "DfEteL8WIYrKqsvi",
+  "_key": "!items!DfEteL8WIYrKqsvi",
+  "name": "GHOSTWIRE.Gear.Items.SmartShield.Name",
+  "type": "treasure",
+  "img": "icons/equipment/shield/heater-steel-worn.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.SmartShield.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "smart-shield",
+    "kind": "armor",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "shield"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "R1PKlFSdg07WrUOq",
+      "_key": "!items.effects!DfEteL8WIYrKqsvi.R1PKlFSdg07WrUOq",
+      "name": "No Kit — Echelon 1 (+4 Stamina)",
+      "img": "icons/equipment/shield/heater-steel-worn.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.DfEteL8WIYrKqsvi",
+      "description": "<p>Worn with no Kit at Echelon 1: +4 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "9wAb8Bi7DaPhEUnq",
+      "_key": "!items.effects!DfEteL8WIYrKqsvi.9wAb8Bi7DaPhEUnq",
+      "name": "No Kit — Echelon 2 (+5 Stamina)",
+      "img": "icons/equipment/shield/heater-steel-worn.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.DfEteL8WIYrKqsvi",
+      "description": "<p>Worn with no Kit at Echelon 2: +5 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 5,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "rHnJf7E6MpigSmga",
+      "_key": "!items.effects!DfEteL8WIYrKqsvi.rHnJf7E6MpigSmga",
+      "name": "No Kit — Echelon 3 (+6 Stamina)",
+      "img": "icons/equipment/shield/heater-steel-worn.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.DfEteL8WIYrKqsvi",
+      "description": "<p>Worn with no Kit at Echelon 3: +6 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 6,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "VoQl3Foe91CA1keH",
+      "_key": "!items.effects!DfEteL8WIYrKqsvi.VoQl3Foe91CA1keH",
+      "name": "No Kit — Echelon 4 (+8 Stamina)",
+      "img": "icons/equipment/shield/heater-steel-worn.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.DfEteL8WIYrKqsvi",
+      "description": "<p>Worn with no Kit at Echelon 4: +8 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "BsEL4tzcFqyONELl",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 40000,
+        "modSlots": 5,
+        "tags": [
+          "Wired"
+        ],
+        "modFamily": [
+          "shield"
+        ],
+        "armorClass": "shield",
+        "staminaByEchelon": [
+          4,
+          5,
+          6,
+          8
+        ]
+      }
+    }
+  }
+}

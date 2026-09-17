@@ -1,0 +1,62 @@
+{
+  "_id": "lzlH2V6PVq37lK1h",
+  "_key": "!items!lzlH2V6PVq37lK1h",
+  "name": "GHOSTWIRE.Gear.Items.Warhammer.Name",
+  "type": "treasure",
+  "img": "icons/weapons/hammers/hammer-double-steel-embossed.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Warhammer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "warhammer",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 3,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "11xwXjBw1kFPjKuK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 6500,
+        "modSlots": 4,
+        "tags": [
+          "Two-handed"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 9,
+        "damageType": "kinetic",
+        "range": "Adjacent",
+        "weaponBand": "heavy"
+      }
+    }
+  }
+}

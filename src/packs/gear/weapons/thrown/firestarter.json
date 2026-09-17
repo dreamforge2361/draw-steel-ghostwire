@@ -1,0 +1,61 @@
+{
+  "_id": "XUkvHDqfpxD9GwwS",
+  "_key": "!items!XUkvHDqfpxD9GwwS",
+  "name": "GHOSTWIRE.Gear.Items.Firestarter.Name",
+  "type": "treasure",
+  "img": "icons/weapons/thrown/grenade-round.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Firestarter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "firestarter",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "medium"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "78iusAOPSM8frLfk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 250,
+        "modSlots": 0,
+        "tags": [
+          "Blast",
+          "Consumable"
+        ],
+        "consumable": true,
+        "damage": 6,
+        "damageType": "fire",
+        "range": "Short",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

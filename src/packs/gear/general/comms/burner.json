@@ -1,0 +1,58 @@
+{
+  "_id": "PS7Jfr661TS2RPPM",
+  "_key": "!items!PS7Jfr661TS2RPPM",
+  "name": "GHOSTWIRE.Gear.Items.Burner.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/phone-smart-tablet.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Burner.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "burner",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "onsSFZfzViokfkSC",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 60,
+        "modSlots": 1,
+        "tags": [
+          "Wired",
+          "Consumable-ish"
+        ],
+        "modFamily": [
+          "comms",
+          "wired"
+        ]
+      }
+    }
+  }
+}

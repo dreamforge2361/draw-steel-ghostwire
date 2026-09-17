@@ -1,0 +1,64 @@
+{
+  "_id": "GhN1CQMPbhahuge0",
+  "_key": "!items!GhN1CQMPbhahuge0",
+  "name": "GHOSTWIRE.Gear.Items.DartGun.Name",
+  "type": "treasure",
+  "img": "icons/weapons/crossbows/crossbow-heavy-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.DartGun.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "dart-gun",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "vwBmeD081if387z3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2000,
+        "modSlots": 3,
+        "tags": [
+          "Concealable",
+          "Quiet"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 3,
+        "damageType": "toxin",
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

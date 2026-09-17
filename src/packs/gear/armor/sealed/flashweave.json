@@ -1,0 +1,250 @@
+{
+  "_id": "xHecUquYUho0d4Gp",
+  "_key": "!items!xHecUquYUho0d4Gp",
+  "name": "GHOSTWIRE.Gear.Items.Flashweave.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Flashweave.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "flashweave",
+    "kind": "armor",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "eOAd9EYEG9d98qRv",
+      "_key": "!items.effects!xHecUquYUho0d4Gp.eOAd9EYEG9d98qRv",
+      "name": "No Kit — Echelon 1 (+4 Stamina)",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.xHecUquYUho0d4Gp",
+      "description": "<p>Worn with no Kit at Echelon 1: +4 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 4,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "QJJdGnqnquLFJHWe",
+      "_key": "!items.effects!xHecUquYUho0d4Gp.QJJdGnqnquLFJHWe",
+      "name": "No Kit — Echelon 2 (+6 Stamina)",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.xHecUquYUho0d4Gp",
+      "description": "<p>Worn with no Kit at Echelon 2: +6 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 6,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "q9h3FKqCKCPCooDj",
+      "_key": "!items.effects!xHecUquYUho0d4Gp.q9h3FKqCKCPCooDj",
+      "name": "No Kit — Echelon 3 (+8 Stamina)",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.xHecUquYUho0d4Gp",
+      "description": "<p>Worn with no Kit at Echelon 3: +8 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 8,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "gJFkmsruCyY6XXeb",
+      "_key": "!items.effects!xHecUquYUho0d4Gp.gJFkmsruCyY6XXeb",
+      "name": "No Kit — Echelon 4 (+10 Stamina)",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.xHecUquYUho0d4Gp",
+      "description": "<p>Worn with no Kit at Echelon 4: +10 Stamina.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.stamina.bonuses.treasure",
+            "type": "upgrade",
+            "value": 10,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "7rtxegwdzMVGmvcJ",
+      "_key": "!items.effects!xHecUquYUho0d4Gp.7rtxegwdzMVGmvcJ",
+      "name": "Worn — typed immunity",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-steel-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.xHecUquYUho0d4Gp",
+      "description": "<p>Worn: fire immunity 2 (provisional values).</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.fire",
+            "type": "upgrade",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "NzxM6ms7ygUdbVrY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 1000,
+        "modSlots": 1,
+        "tags": [
+          "Thermal"
+        ],
+        "modFamily": [
+          "armor"
+        ],
+        "armorClass": "sealed",
+        "baseClass": "light",
+        "staminaByEchelon": [
+          4,
+          6,
+          8,
+          10
+        ],
+        "immunity": {
+          "fire": 2
+        }
+      }
+    }
+  }
+}

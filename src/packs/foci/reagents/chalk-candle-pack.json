@@ -1,0 +1,56 @@
+{
+  "_id": "2M920hAfdAYVVWL3",
+  "_key": "!items!2M920hAfdAYVVWL3",
+  "name": "GHOSTWIRE.Foci.Items.ChalkCandlePack.Name",
+  "type": "treasure",
+  "img": "icons/containers/bags/pouch-simple-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.ChalkCandlePack.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chalk-candle-pack",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "P9HuByQaOS44C5C4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 200,
+        "modSlots": 0,
+        "tags": [
+          "Ritual",
+          "Consumable"
+        ],
+        "consumable": true,
+        "tradition": "reagent"
+      }
+    }
+  }
+}

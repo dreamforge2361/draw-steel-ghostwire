@@ -1,0 +1,61 @@
+{
+  "_id": "5ePHUPwCSPZvHN0z",
+  "_key": "!items!5ePHUPwCSPZvHN0z",
+  "name": "GHOSTWIRE.Mods.Items.SoftArmorInsert.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.SoftArmorInsert.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "soft-armor-insert",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "B4auJ3Tjl5Ueylf3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 300,
+        "modSlots": 0,
+        "tags": [
+          "Concealable"
+        ],
+        "host": "armor",
+        "hosts": [
+          "armor"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

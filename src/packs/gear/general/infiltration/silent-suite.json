@@ -1,0 +1,59 @@
+{
+  "_id": "3f981AAxUk5uY21i",
+  "_key": "!items!3f981AAxUk5uY21i",
+  "name": "GHOSTWIRE.Gear.Items.SilentSuite.Name",
+  "type": "treasure",
+  "img": "icons/tools/hand/lockpicks-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.SilentSuite.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "silent-suite",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "us3Nn6wMMvEiw9Gi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 11000,
+        "modSlots": 4,
+        "tags": [
+          "Concealable",
+          "Wired"
+        ],
+        "modFamily": [
+          "bne-mechanical",
+          "bne-electronic",
+          "wired"
+        ]
+      }
+    }
+  }
+}

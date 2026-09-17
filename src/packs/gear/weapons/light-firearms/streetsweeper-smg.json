@@ -1,0 +1,63 @@
+{
+  "_id": "7M0FT3lXGuOvtqNt",
+  "_key": "!items!7M0FT3lXGuOvtqNt",
+  "name": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/machine-gun-sub-large.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "streetsweeper-smg",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 3,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "KhSKz1lL1eGjku6B",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 7500,
+        "modSlots": 4,
+        "tags": [
+          "Auto"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 5,
+        "damageType": "kinetic",
+        "range": "Medium",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "iPXWMF69F2uwDjYe",
+  "_key": "!items!iPXWMF69F2uwDjYe",
+  "name": "GHOSTWIRE.Gear.Items.FlashBang3e.Name",
+  "type": "treasure",
+  "img": "icons/weapons/thrown/grenade-round.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.FlashBang3e.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "flash-bang-3e",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "light"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "78iusAOPSM8frLfk",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 180,
+        "modSlots": 0,
+        "tags": [
+          "Blast",
+          "Consumable",
+          "Non-lethal-capable"
+        ],
+        "consumable": true,
+        "damage": 4,
+        "damageType": "electrical",
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

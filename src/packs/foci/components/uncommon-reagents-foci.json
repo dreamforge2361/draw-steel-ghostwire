@@ -1,0 +1,56 @@
+{
+  "_id": "NX7q2d3GHNmR6wre",
+  "_key": "!items!NX7q2d3GHNmR6wre",
+  "name": "GHOSTWIRE.Foci.Items.UncommonReagentsFoci.Name",
+  "type": "treasure",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.UncommonReagentsFoci.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "uncommon-reagents-foci",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "AyrJMpZ1gAozTuK6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 750,
+        "modSlots": 0,
+        "tags": [
+          "Consumable"
+        ],
+        "consumable": true,
+        "tradition": "component",
+        "drainTrade": "+¥250 → −1 Drain (max 2)"
+      }
+    }
+  }
+}

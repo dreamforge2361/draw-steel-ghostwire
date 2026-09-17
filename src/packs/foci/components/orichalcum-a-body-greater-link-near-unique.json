@@ -1,0 +1,57 @@
+{
+  "_id": "L9Z7PAabthE0vGlx",
+  "_key": "!items!L9Z7PAabthE0vGlx",
+  "name": "GHOSTWIRE.Foci.Items.OrichalcumABodyGreaterLinkNearUnique.Name",
+  "type": "treasure",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Foci.Items.OrichalcumABodyGreaterLinkNearUnique.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "orichalcum-a-body-greater-link-near-unique",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "AyrJMpZ1gAozTuK6",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "focus": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 30000,
+        "modSlots": 0,
+        "tags": [
+          "Consumable"
+        ],
+        "priceNote": "+",
+        "consumable": true,
+        "tradition": "component",
+        "drainTrade": "+¥6,000 → −1 Drain (max 4)"
+      }
+    }
+  }
+}

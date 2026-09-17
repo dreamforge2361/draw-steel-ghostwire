@@ -1,0 +1,65 @@
+{
+  "_id": "Phtr1Yy1UtkTfwtS",
+  "_key": "!items!Phtr1Yy1UtkTfwtS",
+  "name": "GHOSTWIRE.Gear.Items.GhostPistol.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/pistol-automatic.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.GhostPistol.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-pistol",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "light",
+      "bow"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "KhSKz1lL1eGjku6B",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 24000,
+        "modSlots": 5,
+        "tags": [
+          "Concealable",
+          "Quiet",
+          "Smart-ready"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 5,
+        "damageType": "kinetic",
+        "range": "Short",
+        "weaponBand": "light"
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "_id": "ksGZTJrLy5NXud9H",
+  "_key": "!items!ksGZTJrLy5NXud9H",
+  "name": "GHOSTWIRE.Matrix.Items.TrodeNet.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/wire-spliced.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Matrix.Items.TrodeNet.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "trode-net",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "5z8zDSCPsEDDkha4",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 250,
+        "modSlots": 1,
+        "tags": [
+          "Wired",
+          "Concealable"
+        ],
+        "modFamily": [
+          "wired"
+        ],
+        "role": "interface"
+      }
+    }
+  }
+}

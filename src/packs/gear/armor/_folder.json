@@ -1,12 +1,12 @@
 {
-  "_id": "jIbLsMIkU6zbBiAe",
-  "_key": "!folders!jIbLsMIkU6zbBiAe",
+  "_id": "A7Gw6BuWxXH2Vp6l",
+  "_key": "!folders!A7Gw6BuWxXH2Vp6l",
   "name": "GHOSTWIRE.Gear.Folders.Armor",
   "type": "Item",
   "folder": null,
   "description": "",
   "color": null,
   "sorting": "a",
-  "sort": 200000,
+  "sort": 9000,
   "flags": {}
 }

@@ -1,0 +1,61 @@
+{
+  "_id": "jrGKp9PRiyZRKEz8",
+  "_key": "!items!jrGKp9PRiyZRKEz8",
+  "name": "GHOSTWIRE.Mods.Items.ReactiveFlashComp.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.ReactiveFlashComp.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "reactive-flash-comp",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "B4auJ3Tjl5Ueylf3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 1500,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": "armor",
+        "hosts": [
+          "armor"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}
