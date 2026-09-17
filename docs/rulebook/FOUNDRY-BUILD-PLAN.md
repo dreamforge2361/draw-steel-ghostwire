@@ -399,3 +399,22 @@ Director-facing monster/NPC pipeline for Ghostwire (not stock fantasy dump).
 - [ ] Reach + jungle + setting original creature wave
 - [ ] Foundry Ghostwire Bestiary/NPC pack with only reviewed entries
 - [ ] `GHOSTWIRE_BESTIARY.md` master
+
+### Backlog - Ghostwire Bestiary / NPC Compendium (LOCKED 2026-09-17)
+
+Director-facing monster/NPC pipeline. **Doctrine: reskin first.**
+
+1. **Review** Draw Steel Monsters + NPC lists into Keep (reskin) / Adapt / Skip.
+2. **Reskin Keepers:** Ghostwire name, description, and fiction; keep DS mechanics/stats as the spine (retune numbers only when fiction forces it). Placeholder art/tokens OK.
+3. **Adapt** only when stock needs structural changes to fit the Reach.
+4. **Later:** greenfield Reach / wild jungles / setting originals.
+5. **Later still:** artwork / token pass.
+6. **Ship** Foundry Bestiary/NPC Actor pack with only reviewed entries.
+7. **Docs:** `docs/masters/GHOSTWIRE_BESTIARY.md`.
+
+- [ ] DS monster/NPC review pass (Keep / Adapt / Skip)
+- [ ] Reskin wave (mechanics + description + stats; placeholder art)
+- [ ] Reach + jungle + setting original creature wave
+- [ ] Artwork / token pass
+- [ ] Foundry Ghostwire Bestiary/NPC pack (reviewed only)
+- [ ] GHOSTWIRE_BESTIARY.md master
