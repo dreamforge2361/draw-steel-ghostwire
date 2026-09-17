@@ -1,0 +1,33 @@
+{
+  "_id": "vYnkQ8jUkRI82UmQ",
+  "_key": "!items!vYnkQ8jUkRI82UmQ",
+  "name": "GHOSTWIRE.Perks.Items.SignalRead.Name",
+  "type": "perk",
+  "img": "icons/magic/perception/eye-winged-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.SignalRead.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "signal-read",
+    "advancements": {},
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

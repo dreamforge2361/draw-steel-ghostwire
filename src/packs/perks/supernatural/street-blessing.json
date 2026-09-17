@@ -1,0 +1,33 @@
+{
+  "_id": "gvaYYzjmxNtNxrxM",
+  "_key": "!items!gvaYYzjmxNtNxrxM",
+  "name": "GHOSTWIRE.Perks.Items.StreetBlessing.Name",
+  "type": "perk",
+  "img": "icons/magic/symbols/cross-circle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.StreetBlessing.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-blessing",
+    "advancements": {},
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

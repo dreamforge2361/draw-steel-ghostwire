@@ -1,0 +1,33 @@
+{
+  "_id": "LDpCLu77DcVZfcZG",
+  "_key": "!items!LDpCLu77DcVZfcZG",
+  "name": "GHOSTWIRE.Perks.Items.FrequencyMatch.Name",
+  "type": "perk",
+  "img": "icons/skills/trades/music-notes-sound-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.FrequencyMatch.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "frequency-match",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

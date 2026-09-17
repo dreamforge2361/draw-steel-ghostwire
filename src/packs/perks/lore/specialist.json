@@ -1,0 +1,33 @@
+{
+  "_id": "RufG5CchvxZ7T0Xs",
+  "_key": "!items!RufG5CchvxZ7T0Xs",
+  "name": "GHOSTWIRE.Perks.Items.Specialist.Name",
+  "type": "perk",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.Specialist.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "specialist",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

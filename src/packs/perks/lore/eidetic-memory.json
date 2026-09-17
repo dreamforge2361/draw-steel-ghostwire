@@ -1,0 +1,33 @@
+{
+  "_id": "fmj4KVvb2eE3vHlD",
+  "_key": "!items!fmj4KVvb2eE3vHlD",
+  "name": "GHOSTWIRE.Perks.Items.EideticMemory.Name",
+  "type": "perk",
+  "img": "icons/commodities/biological/organ-brain-pink-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.EideticMemory.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "eidetic-memory",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,472 @@
+[
+  {
+    "name": "Invisible Force",
+    "perkType": "supernatural",
+    "_dsid": "invisible-force",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Expert Artisan",
+    "perkType": "crafting",
+    "_dsid": "expert-artisan",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Brawny",
+    "perkType": "exploration",
+    "_dsid": "brawny",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Linguist",
+    "perkType": "lore",
+    "_dsid": "linguist",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Camouflage Hunter",
+    "perkType": "exploration",
+    "_dsid": "camouflage-hunter",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "I've Read About This Place",
+    "perkType": "lore",
+    "_dsid": "ive-read-about-this-place",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Arcane Trick",
+    "perkType": "supernatural",
+    "_dsid": "arcane-trick",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Handy",
+    "perkType": "crafting",
+    "_dsid": "handy",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Master of Disguise",
+    "perkType": "intrigue",
+    "_dsid": "master-of-disguise",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Gum Up the Works",
+    "perkType": "intrigue",
+    "_dsid": "gum-up-the-works",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Creature Sense",
+    "perkType": "supernatural",
+    "_dsid": "creature-sense",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Danger Sense",
+    "perkType": "exploration",
+    "_dsid": "danger-sense",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Traveling Artisan",
+    "perkType": "crafting",
+    "_dsid": "traveling-artisan",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Dazzler",
+    "perkType": "interpersonal",
+    "_dsid": "dazzler",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Harmonizer",
+    "perkType": "interpersonal",
+    "_dsid": "harmonizer",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Familiar",
+    "perkType": "supernatural",
+    "_dsid": "familiar",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Team Leader",
+    "perkType": "exploration",
+    "_dsid": "team-leader",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Thingspeaker",
+    "perkType": "supernatural",
+    "_dsid": "thingspeaker",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Traveling Sage",
+    "perkType": "lore",
+    "_dsid": "traveling-sage",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "I've Got You",
+    "perkType": "exploration",
+    "_dsid": "ive-got-you",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Engrossing Monologue",
+    "perkType": "interpersonal",
+    "_dsid": "engrossing-monologue",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Ritualist",
+    "perkType": "supernatural",
+    "_dsid": "ritualist",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Psychic Whisper",
+    "perkType": "supernatural",
+    "_dsid": "psychic-whisper",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Power Player",
+    "perkType": "interpersonal",
+    "_dsid": "power-player",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Eidetic Memory",
+    "perkType": "lore",
+    "_dsid": "eidetic-memory",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Slipped Lead",
+    "perkType": "intrigue",
+    "_dsid": "slipped-lead",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Area of Expertise",
+    "perkType": "crafting",
+    "_dsid": "area-of-expertise",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Forgettable Face",
+    "perkType": "intrigue",
+    "_dsid": "forgettable-face",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Wood Wise",
+    "perkType": "exploration",
+    "_dsid": "wood-wise",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "So Tell Me ...",
+    "perkType": "interpersonal",
+    "_dsid": "so-tell-me-",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Specialist",
+    "perkType": "lore",
+    "_dsid": "specialist",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Friend Catapult",
+    "perkType": "exploration",
+    "_dsid": "friend-catapult",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Pardon My Friend",
+    "perkType": "interpersonal",
+    "_dsid": "pardon-my-friend",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Open Book",
+    "perkType": "interpersonal",
+    "_dsid": "open-book",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Charming Liar",
+    "perkType": "interpersonal",
+    "_dsid": "charming-liar",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Expert Sage",
+    "perkType": "lore",
+    "_dsid": "expert-sage",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Put Your Back Into It!",
+    "perkType": "exploration",
+    "_dsid": "put-your-back-into-it",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Inspired Artisan",
+    "perkType": "crafting",
+    "_dsid": "inspired-artisan",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Monster Whisperer",
+    "perkType": "exploration",
+    "_dsid": "monster-whisperer",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Teamwork",
+    "perkType": "exploration",
+    "_dsid": "teamwork",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Lucky Dog",
+    "perkType": "intrigue",
+    "_dsid": "lucky-dog",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Improvisation Creation",
+    "perkType": "crafting",
+    "_dsid": "improvisation-creation",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Criminal Contacts",
+    "perkType": "intrigue",
+    "_dsid": "criminal-contacts",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Spot the Tell",
+    "perkType": "interpersonal",
+    "_dsid": "spot-the-tell",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Lie Detector",
+    "perkType": "interpersonal",
+    "_dsid": "lie-detector",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "But I Know Who Does",
+    "perkType": "lore",
+    "_dsid": "but-i-know-who-does",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  {
+    "name": "Polymath",
+    "perkType": "lore",
+    "_dsid": "polymath",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  }
+]

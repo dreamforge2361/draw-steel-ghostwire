@@ -1,0 +1,33 @@
+{
+  "_id": "UMnhObTL1pjTHfMS",
+  "_key": "!items!UMnhObTL1pjTHfMS",
+  "name": "GHOSTWIRE.Perks.Items.UrbanCamouflage.Name",
+  "type": "perk",
+  "img": "icons/magic/nature/stealth-hide-eyes-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.UrbanCamouflage.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "urban-camouflage",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

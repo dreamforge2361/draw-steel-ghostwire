@@ -1,0 +1,88 @@
+{
+  "_id": "cadojV9q2dn2KJzQ",
+  "_key": "!items!cadojV9q2dn2KJzQ",
+  "name": "GHOSTWIRE.Perks.Items.EchoReader.Name",
+  "type": "perk",
+  "img": "icons/skills/social/diplomacy-offering-ritual.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.EchoReader.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "echo-reader",
+    "advancements": {},
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "name": "Overcome by Echoes",
+      "img": "icons/skills/social/diplomacy-offering-ritual.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.perks.Item.cadojV9q2dn2KJzQ",
+      "disabled": true,
+      "_id": "1jmv9vKaOGRuiMuC",
+      "system": {
+        "changes": [
+          {
+            "key": "system.characteristics.intuition.banes",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.characteristics.presence.banes",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "respite",
+        "expired": false
+      },
+      "description": "<p>You take a bane on Instinct and Persona tests until you finish a respite, and you can’t use Echo Reader again while you suffer this bane.</p>",
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "showIcon": 1,
+      "sort": 0,
+      "flags": {},
+      "_key": "!items.effects!cadojV9q2dn2KJzQ.1jmv9vKaOGRuiMuC"
+    }
+  ],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "vweMwlTbb8ljWSYv",
+  "_key": "!items!vweMwlTbb8ljWSYv",
+  "name": "GHOSTWIRE.Perks.Items.SilverTongue.Name",
+  "type": "perk",
+  "img": "icons/magic/light/projectile-stars-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.SilverTongue.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "silver-tongue",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

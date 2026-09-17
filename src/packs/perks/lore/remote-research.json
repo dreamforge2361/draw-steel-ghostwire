@@ -1,0 +1,33 @@
+{
+  "_id": "FGxjI6oMDPEJL1GL",
+  "_key": "!items!FGxjI6oMDPEJL1GL",
+  "name": "GHOSTWIRE.Perks.Items.RemoteResearch.Name",
+  "type": "perk",
+  "img": "icons/environment/settlement/wagon.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.RemoteResearch.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "remote-research",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

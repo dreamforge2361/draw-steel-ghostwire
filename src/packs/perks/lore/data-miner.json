@@ -1,0 +1,33 @@
+{
+  "_id": "MSzOLel62Tby6DMo",
+  "_key": "!items!MSzOLel62Tby6DMo",
+  "name": "GHOSTWIRE.Perks.Items.DataMiner.Name",
+  "type": "perk",
+  "img": "icons/equipment/head/hat-pointed-leather-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.DataMiner.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "data-miner",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

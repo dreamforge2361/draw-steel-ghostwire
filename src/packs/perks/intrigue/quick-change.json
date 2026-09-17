@@ -1,0 +1,33 @@
+{
+  "_id": "hnexXPAjSlM3TyLs",
+  "_key": "!items!hnexXPAjSlM3TyLs",
+  "name": "GHOSTWIRE.Perks.Items.QuickChange.Name",
+  "type": "perk",
+  "img": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.QuickChange.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "quick-change",
+    "advancements": {},
+    "perkType": "intrigue",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "0AQyTMI6i7GrqxWR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

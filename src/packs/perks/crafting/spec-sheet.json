@@ -1,0 +1,33 @@
+{
+  "_id": "HybUIy2p02pCzxPT",
+  "_key": "!items!HybUIy2p02pCzxPT",
+  "name": "GHOSTWIRE.Perks.Items.SpecSheet.Name",
+  "type": "perk",
+  "img": "icons/skills/targeting/target-glowing-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.SpecSheet.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "spec-sheet",
+    "advancements": {},
+    "perkType": "crafting",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "782i2ETDD7MJDCLh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

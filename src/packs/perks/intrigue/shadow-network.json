@@ -1,0 +1,33 @@
+{
+  "_id": "vyFVgS6WdsXHkBD1",
+  "_key": "!items!vyFVgS6WdsXHkBD1",
+  "name": "GHOSTWIRE.Perks.Items.ShadowNetwork.Name",
+  "type": "perk",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.ShadowNetwork.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shadow-network",
+    "advancements": {},
+    "perkType": "intrigue",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "0AQyTMI6i7GrqxWR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

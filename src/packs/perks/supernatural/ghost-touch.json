@@ -1,0 +1,56 @@
+{
+  "_id": "xuSIK8uQ6tZ5YSxg",
+  "_key": "!items!xuSIK8uQ6tZ5YSxg",
+  "name": "GHOSTWIRE.Perks.Items.GhostTouch.Name",
+  "type": "perk",
+  "img": "icons/magic/air/air-smoke-casting.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.GhostTouch.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-touch",
+    "advancements": {
+      "ltS4AuF6KTLalzp5": {
+        "name": "Ghost Touch",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "ltS4AuF6KTLalzp5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.perks.Item.W1Vy2V7G1lbgKUUE"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

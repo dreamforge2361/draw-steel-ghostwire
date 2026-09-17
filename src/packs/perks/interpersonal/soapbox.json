@@ -1,0 +1,33 @@
+{
+  "_id": "7yOluwQS52g0bmXj",
+  "_key": "!items!7yOluwQS52g0bmXj",
+  "name": "GHOSTWIRE.Perks.Items.Soapbox.Name",
+  "type": "perk",
+  "img": "icons/skills/trades/music-singing-voice-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.Soapbox.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "soapbox",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

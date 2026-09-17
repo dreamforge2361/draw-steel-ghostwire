@@ -35,6 +35,8 @@ Hooks.once("init", () => {
   ds.CONFIG.abilities.keywords.optics ??= { label: "GHOSTWIRE.Abilities.Keywords.Optics" };
 
   registerGhostwireSkills();
+  registerPerkTypes();
+  patchPerkGrants();
   patchPreviousLifeFilter();
   patchAddOrigin();
   enforceHeroicResourceCost();
@@ -62,6 +64,70 @@ function enforceHeroicResourceCost() {
       }
     }
     return use.call(this, config, dialogOptions, messageOptions);
+  };
+}
+
+// Perks (docs/rulebook/17-perks.md): the Ghostwire Perks pack replaces the Draw Steel perks.
+const PERK_PACK = `${MODULE_ID}.perks`;
+const STOCK_PERK_PACK = "draw-steel.character-options";
+const PERK_TYPES = ["crafting", "exploration", "interpersonal", "intrigue", "lore", "supernatural"];
+
+// Draw Steel builds perk type options from the skill groups, which Ghostwire replaced, so the Draw Steel perk types
+// lost their labels. List exactly the six perk types instead (Draw Steel localizes the labels at i18nInit).
+function registerPerkTypes() {
+  const perks = ds.CONFIG.perks;
+  perks.types = Object.fromEntries(PERK_TYPES.map(type => [type, { label: `GHOSTWIRE.Perks.Types.${type.charAt(0).toUpperCase()}${type.slice(1)}` }]));
+  Object.defineProperty(perks, "typeOptions", {
+    configurable: true,
+    get: () => Object.entries(perks.types).map(([value, { label }]) => ({ value, label })),
+  });
+}
+
+// Perk grants (additional.type "perk") have an empty pool, so Draw Steel only offers a drop zone.
+// List every Ghostwire perk that matches the grant's perk types as a choice, and refuse dropped Draw Steel perks.
+function patchPerkGrants() {
+  const ItemGrant = ds.CONFIG.Advancement?.itemGrant?.documentClass;
+  const Dialog = ds.applications.apps.advancement?.ItemGrantConfigurationDialog;
+  const Leaf = ds.utils.advancement?.AdvancementLeaf;
+  if (!ItemGrant?.prototype.createLeaves || !Dialog?.prototype._onDrop || !Leaf) {
+    console.warn(`${MODULE_ID} | Draw Steel item grant classes not found; perk grants don't list Ghostwire perks`);
+    return;
+  }
+
+  const createLeaves = ItemGrant.prototype.createLeaves;
+  ItemGrant.prototype.createLeaves = async function(node) {
+    const result = await createLeaves.call(this, node);
+    if ((this.additional.type !== "perk") || !node) return result;
+    const pack = game.packs.get(PERK_PACK);
+    if (!pack) return result;
+    const types = this.additional.perkType;
+    const perks = await pack.getDocuments({ type: "perk" });
+    for (const perk of perks.sort((a, b) => a.name.localeCompare(b.name, game.i18n.lang))) {
+      if (types.size && !types.has(perk.system.perkType)) continue;
+      node.choices[perk.uuid] ??= new Leaf(node, perk.uuid, perk.toAnchor().outerHTML, { item: perk });
+    }
+    return result;
+  };
+
+  const onDrop = Dialog.prototype._onDrop;
+  Dialog.prototype._onDrop = async function(event) {
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
+    const item = data?.uuid ? await fromUuid(data.uuid) : null;
+    if ((item?.type === "perk") && (item.pack === STOCK_PERK_PACK)) {
+      ui.notifications.warn(game.i18n.format("GHOSTWIRE.Perks.Warnings.StockPerk", { name: item.name }));
+      return;
+    }
+    return onDrop.call(this, event);
+  };
+
+  // The registry indexes perks from every pack; keep only non-Draw Steel perks.
+  const initialize = ds.registry.initialize;
+  ds.registry.initialize = async function(...args) {
+    const result = await initialize.apply(this, args);
+    for (const [key, entry] of this.perk.entries()) {
+      if (entry.uuid?.startsWith(`Compendium.${STOCK_PERK_PACK}.`)) this.perk.delete(key);
+    }
+    return result;
   };
 }
 

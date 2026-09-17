@@ -1,0 +1,33 @@
+{
+  "_id": "h1fadsG2wlSf4coR",
+  "_key": "!items!h1fadsG2wlSf4coR",
+  "name": "GHOSTWIRE.Perks.Items.TapeAndPrayer.Name",
+  "type": "perk",
+  "img": "icons/environment/settlement/house-construction.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.TapeAndPrayer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tape-and-prayer",
+    "advancements": {},
+    "perkType": "crafting",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "782i2ETDD7MJDCLh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

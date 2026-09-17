@@ -1,0 +1,33 @@
+{
+  "_id": "FUKFj4DG5yxFRlOw",
+  "_key": "!items!FUKFj4DG5yxFRlOw",
+  "name": "GHOSTWIRE.Perks.Items.JuryRig.Name",
+  "type": "perk",
+  "img": "icons/skills/trades/woodcutting-logging-axe-stump.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.JuryRig.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "jury-rig",
+    "advancements": {},
+    "perkType": "crafting",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "782i2ETDD7MJDCLh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

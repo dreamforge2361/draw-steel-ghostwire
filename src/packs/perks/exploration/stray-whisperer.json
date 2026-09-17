@@ -1,0 +1,33 @@
+{
+  "_id": "XK32kZcp4QI5RDQ2",
+  "_key": "!items!XK32kZcp4QI5RDQ2",
+  "name": "GHOSTWIRE.Perks.Items.StrayWhisperer.Name",
+  "type": "perk",
+  "img": "icons/creatures/unholy/demons-horned-glowing-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.StrayWhisperer.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "stray-whisperer",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

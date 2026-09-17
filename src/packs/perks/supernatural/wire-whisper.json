@@ -1,0 +1,56 @@
+{
+  "_id": "j1eaTxP9UKEkurWA",
+  "_key": "!items!j1eaTxP9UKEkurWA",
+  "name": "GHOSTWIRE.Perks.Items.WireWhisper.Name",
+  "type": "perk",
+  "img": "icons/magic/control/energy-stream-link-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.WireWhisper.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wire-whisper",
+    "advancements": {
+      "fQoMYWqpx6CeWxwD": {
+        "name": "Wire Whisper",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "fQoMYWqpx6CeWxwD",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.perks.Item.A5SUIwZXP616tQTN"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

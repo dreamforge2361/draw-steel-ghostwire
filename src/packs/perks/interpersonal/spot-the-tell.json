@@ -1,0 +1,33 @@
+{
+  "_id": "T7om0VKM0VTDIkog",
+  "_key": "!items!T7om0VKM0VTDIkog",
+  "name": "GHOSTWIRE.Perks.Items.SpotTheTell.Name",
+  "type": "perk",
+  "img": "icons/magic/perception/hand-eye-fire-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.SpotTheTell.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "spot-the-tell",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

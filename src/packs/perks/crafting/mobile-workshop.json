@@ -1,0 +1,33 @@
+{
+  "_id": "WJVkvigpKJhXIpQk",
+  "_key": "!items!WJVkvigpKJhXIpQk",
+  "name": "GHOSTWIRE.Perks.Items.MobileWorkshop.Name",
+  "type": "perk",
+  "img": "icons/environment/creatures/horse-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.MobileWorkshop.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "mobile-workshop",
+    "advancements": {},
+    "perkType": "crafting",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "782i2ETDD7MJDCLh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

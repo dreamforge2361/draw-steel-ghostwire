@@ -1,0 +1,33 @@
+{
+  "_id": "J5dOgTXXniuEomrS",
+  "_key": "!items!J5dOgTXXniuEomrS",
+  "name": "GHOSTWIRE.Perks.Items.ConcreteWise.Name",
+  "type": "perk",
+  "img": "icons/environment/wilderness/tree-oak.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.ConcreteWise.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "concrete-wise",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

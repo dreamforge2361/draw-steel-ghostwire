@@ -1,0 +1,33 @@
+{
+  "_id": "PqE2A5m9UDqh74W0",
+  "_key": "!items!PqE2A5m9UDqh74W0",
+  "name": "GHOSTWIRE.Perks.Items.BullshitDetector.Name",
+  "type": "perk",
+  "img": "icons/skills/trades/academics-investigation-study-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.BullshitDetector.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "bullshit-detector",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "b8i79cZFUCCIy0VW",
+  "_key": "!items!b8i79cZFUCCIy0VW",
+  "name": "GHOSTWIRE.Perks.Items.ButIKnowWhoDoes.Name",
+  "type": "perk",
+  "img": "icons/skills/social/diplomacy-writing-letter.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.ButIKnowWhoDoes.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "but-i-know-who-does",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "9HefNloyUTj8T5MR",
+  "_key": "!items!9HefNloyUTj8T5MR",
+  "name": "GHOSTWIRE.Perks.Items.PutYourBackIntoIt.Name",
+  "type": "perk",
+  "img": "icons/creatures/mammals/ox-buffalo-horned-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.PutYourBackIntoIt.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "put-your-back-into-it",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

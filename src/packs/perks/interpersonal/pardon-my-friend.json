@@ -1,0 +1,33 @@
+{
+  "_id": "N3uT57xHBHaaot14",
+  "_key": "!items!N3uT57xHBHaaot14",
+  "name": "GHOSTWIRE.Perks.Items.PardonMyFriend.Name",
+  "type": "perk",
+  "img": "icons/magic/air/air-smoke-casting.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.PardonMyFriend.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pardon-my-friend",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

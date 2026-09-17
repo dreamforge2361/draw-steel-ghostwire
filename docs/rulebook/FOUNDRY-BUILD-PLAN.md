@@ -81,6 +81,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B7 | Wire / Veil / Machines lean packs | Todo | After Stage 4 rule text exists (or thin stubs) |
 | B8 | Chrome / Body Integrity data | **Done** (pack shipped) | Chrome pack with Integrity costs + provisional ¥ |
 | B21 | Scout class pack | **Pending Michael test** | Scout (Advantage) + Hunter / Ghost / Face-in-crowd in Ghostwire Classes; mirrors Operator; module v0.1.25 |
+| B22 | Ghostwire Perks pack | **Pending Michael test** | 47 reskinned perks by type; perk grants list Ghostwire perks only; `17-perks.md`; module v0.1.26 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -159,3 +160,6 @@ After each spike:
 
 - [x] **B21** Scout class pack � Foundry-verified 2026-09-16 (Advantage; Hunter/Ghost/Face-in-crowd)
 
+
+### B22 Perks (2026-09-16)
+- [ ] **B22** Ghostwire Perks pack: all 47 Draw Steel perks reskinned, folders by perk type, 3 perk abilities cloned; level-up perk grants list only Ghostwire perks filtered by `perkType`; Draw Steel perks refused on drop and removed from the registry; `docs/rulebook/17-perks.md` (module v0.1.26) — **pending Michael Foundry test**

@@ -1,0 +1,33 @@
+{
+  "_id": "vN7Is7egcNsrDXm2",
+  "_key": "!items!vN7Is7egcNsrDXm2",
+  "name": "GHOSTWIRE.Perks.Items.StreetSense.Name",
+  "type": "perk",
+  "img": "icons/magic/perception/eye-ringed-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.StreetSense.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-sense",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

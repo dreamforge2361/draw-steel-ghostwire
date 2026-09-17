@@ -1,0 +1,33 @@
+{
+  "_id": "tLqpuLzQDhMVGoX7",
+  "_key": "!items!tLqpuLzQDhMVGoX7",
+  "name": "GHOSTWIRE.Perks.Items.IveSeenTheFeeds.Name",
+  "type": "perk",
+  "img": "icons/tools/navigation/map-marked-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.IveSeenTheFeeds.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ive-seen-the-feeds",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

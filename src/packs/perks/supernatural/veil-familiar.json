@@ -1,0 +1,33 @@
+{
+  "_id": "0S35p5d8R0TWdIhP",
+  "_key": "!items!0S35p5d8R0TWdIhP",
+  "name": "GHOSTWIRE.Perks.Items.VeilFamiliar.Name",
+  "type": "perk",
+  "img": "icons/creatures/magical/fae-fairy-winged-glowing-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.VeilFamiliar.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "veil-familiar",
+    "advancements": {},
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

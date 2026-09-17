@@ -1,0 +1,33 @@
+{
+  "_id": "TQTek6lMEoRKGp6N",
+  "_key": "!items!TQTek6lMEoRKGp6N",
+  "name": "GHOSTWIRE.Perks.Items.GumUpTheWorks.Name",
+  "type": "perk",
+  "img": "icons/skills/trades/construction-carpentry-hammer-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.GumUpTheWorks.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gum-up-the-works",
+    "advancements": {},
+    "perkType": "intrigue",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "0AQyTMI6i7GrqxWR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

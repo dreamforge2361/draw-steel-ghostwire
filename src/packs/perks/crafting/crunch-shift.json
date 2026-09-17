@@ -1,0 +1,33 @@
+{
+  "_id": "3aCmY7PD77r5im9C",
+  "_key": "!items!3aCmY7PD77r5im9C",
+  "name": "GHOSTWIRE.Perks.Items.CrunchShift.Name",
+  "type": "perk",
+  "img": "icons/environment/settlement/gazebo.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.CrunchShift.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crunch-shift",
+    "advancements": {},
+    "perkType": "crafting",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "782i2ETDD7MJDCLh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

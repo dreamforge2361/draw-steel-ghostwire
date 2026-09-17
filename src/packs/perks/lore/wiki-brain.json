@@ -1,0 +1,33 @@
+{
+  "_id": "zRsIemJqXGLnNgg9",
+  "_key": "!items!zRsIemJqXGLnNgg9",
+  "name": "GHOSTWIRE.Perks.Items.WikiBrain.Name",
+  "type": "perk",
+  "img": "icons/sundries/documents/document-letter-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.WikiBrain.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wiki-brain",
+    "advancements": {},
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

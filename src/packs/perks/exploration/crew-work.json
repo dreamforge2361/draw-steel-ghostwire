@@ -1,0 +1,33 @@
+{
+  "_id": "AlTDn5CgAm97d5PC",
+  "_key": "!items!AlTDn5CgAm97d5PC",
+  "name": "GHOSTWIRE.Perks.Items.CrewWork.Name",
+  "type": "perk",
+  "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.CrewWork.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crew-work",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

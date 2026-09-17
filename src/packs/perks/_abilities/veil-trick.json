@@ -1,0 +1,70 @@
+{
+  "_id": "MaWtVdylWCvf91mA",
+  "_key": "!items!MaWtVdylWCvf91mA",
+  "name": "GHOSTWIRE.Perks.Abilities.VeilTrick.Name",
+  "type": "ability",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "veil-trick",
+    "story": "GHOSTWIRE.Perks.Abilities.VeilTrick.Story",
+    "keywords": [
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Perks.Abilities.VeilTrick.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    }
+  },
+  "effects": [],
+  "folder": "gbFaESSdwm7opMUN",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

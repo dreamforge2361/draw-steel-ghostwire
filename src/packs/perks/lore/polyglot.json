@@ -1,0 +1,48 @@
+{
+  "_id": "ZAxklu5LgIpIwqLd",
+  "_key": "!items!ZAxklu5LgIpIwqLd",
+  "name": "GHOSTWIRE.Perks.Items.Polyglot.Name",
+  "type": "perk",
+  "img": "icons/skills/trades/music-singing-voice-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.Polyglot.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "polyglot",
+    "advancements": {
+      "KS65xUob0wpjb4ix": {
+        "name": "2 Languages",
+        "img": null,
+        "type": "language",
+        "requirements": {
+          "level": null
+        },
+        "_id": "KS65xUob0wpjb4ix",
+        "chooseN": 2,
+        "description": "",
+        "languages": [],
+        "sort": 0,
+        "repick": {}
+      }
+    },
+    "perkType": "lore",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JEeiBcmqUPo5ScAi",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

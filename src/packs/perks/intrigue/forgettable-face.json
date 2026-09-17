@@ -1,0 +1,33 @@
+{
+  "_id": "tr1WKcSQqmeLPzFz",
+  "_key": "!items!tr1WKcSQqmeLPzFz",
+  "name": "GHOSTWIRE.Perks.Items.ForgettableFace.Name",
+  "type": "perk",
+  "img": "icons/magic/control/fear-fright-white.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.ForgettableFace.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "forgettable-face",
+    "advancements": {},
+    "perkType": "intrigue",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "0AQyTMI6i7GrqxWR",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

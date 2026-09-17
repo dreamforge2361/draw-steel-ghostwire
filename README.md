@@ -79,6 +79,7 @@ Use Foundry **Install Module** / update from:
 - `0.1.23` — **Full Master Gear List import** (`docs/masters/GHOSTWIRE_GEAR_MASTER.md`): every table row is an item — **Ghostwire Gear** (107: general & lifestyle, armor, weapons), **Ghostwire Mods** (16), **Ghostwire Matrix** (33), **Ghostwire Vehicles & Drones** (31), **Ghostwire Foci** (41). Grade is Draw Steel **echelon 1–4 + Availability band** (no Item Tier). Replaces the 0.1.18 Kit-subset gear.
 - `0.1.24` — **Mods expansion:** Ghostwire Mods now has Weapon, Vehicle & Drone, **Armor & Shield** (7), and **Gadget** (8) mods (31 total); Ghostwire Matrix adds **RCC Autosofts** (4). Every item with mod slots lists the mods that fit it; items with no mod family (foci, Field Surgery Kit, Designer Threads, Faraday Bag) have 0 slots. §Craft text is the downtime Project procedure keyed to Repair, Electronics, Hacking (autosofts: Hacking or Rigging), or Cybertech — no “Gunsmithing”. Rules: `docs/rulebook/14-mods.md` (mod doctrine + Invent a Mod).
 - `0.1.25` — **Scout** class (Advantage) in **Ghostwire Classes**, cloned from the Draw Steel Shadow: class, three subclasses (**Hunter** — Ironclad Longshot, **Ghost** — Ferrum Deep-Dark, **Face-in-crowd** — Nyx Mask-Line), four signatures, the 3/5/7/9/11 Advantage bands, and every level 1–10 feature, per `docs/rulebook/02-scout.md`. New **Chrome** and **Optics** ability keywords. *Pending Foundry verification.*
+- `0.1.26` — **Ghostwire Perks** compendium: all 47 Draw Steel perks reskinned for the Reach, in one folder per perk type (crafting, exploration, interpersonal, intrigue, lore, supernatural), plus the three perk abilities (Veil Trick, Ghost Touch, Wire Whisper) cloned into the pack. Class perk grants now list the matching Ghostwire perks as choices; Draw Steel perks are refused and removed from the perk registry. Rules: `docs/rulebook/17-perks.md`. *Pending Foundry verification.*
 
 ## Origins pack layout (Ghostwire Ancestries)
 
@@ -224,6 +225,15 @@ Rules: `docs/rulebook/02-scout.md` (authoritative), `docs/masters/GHOSTWIRE_SCOU
 - **Surges:** feature text gives the Ghostwire value (+2/+3/+4/+5 damage per surge by echelon). Gaining surges uses Draw Steel’s `[[/surge]]` links; how much damage a spent surge adds is still Draw Steel’s own calculation.
 - **Skills and Kit:** Stealth is free; then choose five from Action, Social, Technical, or Knowledge (owned skills are left out). 4th/7th/10th: any skill. Kit pool is the 11 light Kits (no or light armor, no heavy weapon, not Hexshot/Spellblade/Sanctified); Quick Build Ghost.
 - **Ghost Suite** is an effect you apply from the feature (climb, edge on strikes against you, bane on Persona tests; ends at combat end). Quarry has a **Marked (Quarry)** effect to apply to the target.
+
+## Perks (v1)
+
+Rules: `docs/rulebook/17-perks.md`. The **Ghostwire Perks** compendium (pack id `perks`) holds 47 perks in six type folders (Crafting 6, Exploration 10, Interpersonal 10, Intrigue 6, Lore 8, Supernatural 7) and a **Perk Abilities** folder.
+
+- **Structure:** each perk is cloned from its Draw Steel perk with the same `perkType` and mechanics; names and text are Ghostwire (skill groups read as Technical / Action / Social / Knowledge, outcomes as low / middle / high results). Polyglot keeps Linguist’s two-language grant; Echo Reader keeps Thingspeaker’s bane effect; Veil Familiar still links the Draw Steel familiar stat block.
+- **Perk abilities:** Veil Trick (Magic), Ghost Touch and Wire Whisper (Psionic, read as the Signal) are module copies; their perks grant the module copies, not the Draw Steel abilities.
+- **Perk grants:** Draw Steel perk advancements have an empty pool and only accept a dropped perk. `scripts/module.mjs` fills the choice list with every Ghostwire perk whose type the grant allows (all six when the grant says any perk), refuses Draw Steel perks dropped from `draw-steel.character-options`, and removes those perks from `ds.registry.perk`. Ghostwire perks can still be dropped in. The six perk types are registered with Ghostwire labels, because Draw Steel derived them from the skill groups Ghostwire replaced.
+- **Not hidden:** the Draw Steel perks still appear if you open the Draw Steel character-options compendium directly (that pack also holds kits and titles).
 
 ## Kits (v1)
 

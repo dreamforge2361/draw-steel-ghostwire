@@ -1,0 +1,33 @@
+{
+  "_id": "7pJlMmuN39zM2SI6",
+  "_key": "!items!7pJlMmuN39zM2SI6",
+  "name": "GHOSTWIRE.Perks.Items.PointRunner.Name",
+  "type": "perk",
+  "img": "icons/magic/control/control-influence-crown-gold.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.PointRunner.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "point-runner",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

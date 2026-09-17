@@ -1,0 +1,56 @@
+{
+  "_id": "5GMP3uvixbROdjG4",
+  "_key": "!items!5GMP3uvixbROdjG4",
+  "name": "GHOSTWIRE.Perks.Items.VeilTrick.Name",
+  "type": "perk",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.VeilTrick.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "veil-trick",
+    "advancements": {
+      "43BkCkh4KV4uEPwn": {
+        "name": "Veil Trick",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "43BkCkh4KV4uEPwn",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.perks.Item.MaWtVdylWCvf91mA"
+          }
+        ],
+        "sort": 0,
+        "description": "",
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "perkType": "supernatural",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "4ZCBmpj9JY2KxuCq",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

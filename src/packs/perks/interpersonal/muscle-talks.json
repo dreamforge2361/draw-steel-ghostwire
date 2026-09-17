@@ -1,0 +1,33 @@
+{
+  "_id": "HtZZ6ZzZ0KxT0nWR",
+  "_key": "!items!HtZZ6ZzZ0KxT0nWR",
+  "name": "GHOSTWIRE.Perks.Items.MuscleTalks.Name",
+  "type": "perk",
+  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.MuscleTalks.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "muscle-talks",
+    "advancements": {},
+    "perkType": "interpersonal",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MPbymU0IVjfVTcrW",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

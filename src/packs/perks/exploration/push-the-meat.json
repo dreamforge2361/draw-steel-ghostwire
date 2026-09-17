@@ -1,0 +1,33 @@
+{
+  "_id": "dgCFnF6UhbSSWLNm",
+  "_key": "!items!dgCFnF6UhbSSWLNm",
+  "name": "GHOSTWIRE.Perks.Items.PushTheMeat.Name",
+  "type": "perk",
+  "img": "icons/magic/control/buff-strength-muscle-damage.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Perks.Items.PushTheMeat.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "17-perks",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "push-the-meat",
+    "advancements": {},
+    "perkType": "exploration",
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Ee26KsnZaBzNhsui",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
