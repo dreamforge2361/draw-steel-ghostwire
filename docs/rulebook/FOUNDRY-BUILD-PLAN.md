@@ -127,3 +127,8 @@ After each spike:
 - **2026-09-16** — Plan created. Rulebook foundation marked done. Spike B1 (Pure Human signature) started as Claude Code learning exercise.
 - **2026-09-16** — B1+B2 done locally: `f88a8f0` signature, `b5fcd69` 3-point menu. Sheet labels locked Background/Profession/Class. Next: push, B2b lang remaps, then Corran (B3).
 - **2026-09-16** — Economy v1 + Chrome v1 drafts + Chrome master ingest. Eight Peoples Foundry/rulebook ancestry packages already done. Next: Michael review → B8 Integrity + sample implants → class packs.
+
+### Rulebook delivery (locked 2026-09-16)
+- Masters under `docs/masters/` are SoR (including `GHOSTWIRE_GEAR_MASTER.md`).
+- Final product ships as: (1) PDF rulebook built from `docs/rulebook/` + masters, (2) Foundry **Journal** compendium pack with the same chapters as in-world rulebook.
+- Gear/mods/economy numbers come from the Gear master; player-facing text uses Availability bands (Item Tier = gear grade only: price / Avail / mod slots).
