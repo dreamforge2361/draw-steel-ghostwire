@@ -23,7 +23,8 @@
       "foci": "Ghostwire Foci",
       "perks": "Ghostwire Perks",
       "summons": "Ghostwire Summons & Machines",
-      "bestiary": "Ghostwire Bestiary"
+      "bestiary": "Ghostwire Bestiary",
+      "rulebook": "Ghostwire Rulebook"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -6848,6 +6849,44 @@
           "Description": "<p>A former Greenline Ranger field-captain who worked this frontier for twenty years, buried too many crews to reclaimed ground that came back wrong, and one day stopped filing reports and stopped going back inside. Verdant lists him as lost on survey; the wastes know him as the reason Cinderhold is still standing. He holds the gate with retired Rangers, Goliar kinship-crews, and anyone who can hold a line.</p><p><strong>Stratum:</strong> Cinderhold, at the Reach’s outer gate onto the poisoned wastes and the Outer Wall.</p><p><strong>Hook:</strong> Kestrel Dynamics’ “Clean Route” wants to pave the gate into a logistics depot, and courts Marrow as its credible local face. He knows what Kestrel doesn’t — the corridor runs through ground that is going quiet.</p><p><strong>Holds:</strong> Cinderhold’s gate and the settlement’s trust: he is its living early-warning system, first to know when a route has gone quiet or the dead-air is spreading.</p><p><strong>Answers to / leans on:</strong> No one. Leans on old Verdant comrades who slip him seed, water-tech, and ammunition off the books, and a professional back-channel to Mama Cassavir.</p><p><strong>Table use:</strong> Both: the patron who gives wasteland work and the hard-but-fair authority who can bar a crew from the one safe settlement in the wastes. Ally or wall.</p><p><em>Named Ghostwire level-boss from the Lore Source. Draw Steel level 3 Wode Elf Warleader (leader) math; abilities rethemed to Ghostwire. Placeholder art.</em></p>",
           "Director": "<p><strong>Named boss — echelon 1.</strong></p><p>Draw Steel level 3 leader spine (Wode Elf Warleader) rethemed to a ranger longarm (Melee 1 or Ranged 10), ghillie cloak, and smoke; he shifts between shots instead of teleporting. Negotiation: Interest 2, Patience 3; motivations Freedom and Protection; pitfall Greed (Kestrel’s offers). Field retired-Ranger militia as Ironclad or Reach Streets stat blocks reskinned at the table.</p>"
         }
+      }
+    },
+    "Rulebook": {
+      "Folders": {
+        "FrontMatter": "Front Matter",
+        "SharedCore": "Shared Core",
+        "HeroBuilding": "Hero Building",
+        "Classes": "Classes",
+        "GhostwireSystems": "Ghostwire Systems"
+      },
+      "Journals": {
+        "RulebookIndex": "Rulebook Index",
+        "FrontMatter": "Front Matter",
+        "HowToPlay": "How to Play",
+        "HeroesCharacteristics": "Heroes and Characteristics",
+        "TestsPowerRolls": "Tests and Power Rolls",
+        "Combat": "Combat",
+        "Advancement": "Advancement and Echelons",
+        "Ancestries": "Ancestries (The Peoples)",
+        "BackgroundsProfessions": "Backgrounds & Professions",
+        "Languages": "Languages",
+        "KitsGearWealth": "Kits, Gear & Wealth (¥)",
+        "ChromeBodyIntegrity": "Chrome & Body Integrity",
+        "Mods": "Mods",
+        "Perks": "Perks",
+        "Operator": "The Operator",
+        "Scout": "The Scout",
+        "Commander": "The Commander / Face",
+        "Medic": "The Medic",
+        "Wrench": "The Wrench",
+        "Elementalist": "The Elementalist",
+        "StreetPriest": "The Street Priest",
+        "Hacker": "The Hacker",
+        "Technomancer": "The Technomancer",
+        "TheWire": "The Wire",
+        "TheVeil": "The Veil",
+        "Machines": "Machines: Drones, Vehicles & Buildings",
+        "Opposition": "Opposition (Director)"
       }
     }
   },

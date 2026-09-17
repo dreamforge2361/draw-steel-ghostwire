@@ -495,5 +495,6 @@ Spec: `docs/spikes/B39-RUN-GENERATOR.md`; design + as-built: `docs/directors/run
 - Wilds Pandora-like lore pass — later; ship only Canopy-Stalker + Reach Behemoth seeds until then.
 - **B40** Ability/weapon/gear SFX — `docs/directors/ability-sfx.md` (settings + FilePicker; Michael supplies assets).
 - **B41** Wired node topology minimap — `docs/directors/wired-node-minimap.md` (Overlay dual-view; Jacked In node-primary).
-- **B42** RAW master rulebook `docs/raw/` (no lore/art) — **first full assemble done, pending Michael review** (docs-only; no module bump). Flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. Then **B42b** Foundry Journal pack from RAW after RAW lock.
+- **B42** RAW master rulebook `docs/raw/` (no lore/art) — **first full assemble done, pending Michael review** (docs-only; no module bump). Flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`.
+- **B42b** Foundry Journal pack **Ghostwire Rulebook** (`packs/rulebook`) mirroring `docs/raw/` — **built 0.1.55, pending Foundry-verify**. One JournalEntry per RAW chapter (Front Matter / Shared Core / Hero Building / Classes / Ghostwire Systems folders + a Rulebook Index), one markdown page per `##` section, chapter refs as `@UUID` links. Source of truth stays `docs/raw/`: `node tools/raw-to-journals.mjs` then `node tools/build-packs.mjs` (Foundry closed). Spike: `docs/spikes/B42b-RULEBOOK-JOURNALS.md`.
 - **B43** Veil Rituals as DS Projects (explore) — `docs/directors/veil-rituals-exploration.md`.

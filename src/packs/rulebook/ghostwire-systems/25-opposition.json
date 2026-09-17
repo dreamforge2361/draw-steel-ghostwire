@@ -1,0 +1,214 @@
+{
+  "_id": "Yv0rtwp3Cp8UoRDH",
+  "_key": "!journal!Yv0rtwp3Cp8UoRDH",
+  "name": "GHOSTWIRE.Rulebook.Journals.Opposition",
+  "folder": "gwRulebookSystem",
+  "sort": 400000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "HuJgX7lKyWCEakWd",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.HuJgX7lKyWCEakWd",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft (thin) · Sources: `docs/masters/GHOSTWIRE_BESTIARY.md` (doctrine sections only), `docs/rulebook/08-hacker.md` (System Stat Card, Trace Alert), `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/11-economy.md`*\n\n**Engine:** Draw Steel Heroes and Draw Steel’s monster rules — use the official rules for monsters, encounter building, and Malice; Ghostwire remaps below.",
+        "content": "<p><em>RAW draft (thin) · Sources: <code>docs/masters/GHOSTWIRE_BESTIARY.md</code> (doctrine sections only), <code>docs/rulebook/08-hacker.md</code> (System Stat Card, Trace Alert), <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/11-economy.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes and Draw Steel’s monster rules — use the official rules for monsters, encounter building, and Malice; Ghostwire remaps below.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "b4TsMTwQEl3jxmmA",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.b4TsMTwQEl3jxmmA",
+      "name": "Foes are Draw Steel monsters",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire opposition uses Draw Steel’s monster rules unchanged: levels, organizations (minion, horde, platoon, elite, leader, solo), roles, Stamina, free strikes, Malice features, villain actions, and encounter budgets.\n\nGhostwire foes are **reskins**: a Draw Steel monster’s numbers with Ghostwire names, abilities, and fiction. A reskin keeps:\n\n- level, organization, role, characteristics, Stamina, speed, size, and stability;\n- every ability’s power roll, damage, distance, targets, and effects.\n\nA reskin changes names, descriptions, and fiction. Light number changes are allowed only when the fiction needs them (for example, a foe that can’t be weakened), and should be noted on the stat block.",
+        "content": "<p>Ghostwire opposition uses Draw Steel’s monster rules unchanged: levels, organizations (minion, horde, platoon, elite, leader, solo), roles, Stamina, free strikes, Malice features, villain actions, and encounter budgets.</p>\n<p>Ghostwire foes are <strong>reskins</strong>: a Draw Steel monster’s numbers with Ghostwire names, abilities, and fiction. A reskin keeps:</p>\n<ul>\n<li>level, organization, role, characteristics, Stamina, speed, size, and stability;</li>\n<li>every ability’s power roll, damage, distance, targets, and effects.</li>\n</ul>\n<p>A reskin changes names, descriptions, and fiction. Light number changes are allowed only when the fiction needs them (for example, a foe that can’t be weakened), and should be noted on the stat block.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "eKCNAravVmuDNfrj",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.eKCNAravVmuDNfrj",
+      "name": "Reskin rules for Ghostwire foes",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **People fight with guns.** Street, corporate, and military humanoids use pistols, SMGs, carbines, rifles, and shotguns, plus grenades, stims, chrome, and cyberdecks. Melee is rare: stun batons, monowire, mono-knives, and cyberarms.\n- **A melee-only weapon ability reskinned as a gun** becomes **Melee X or Ranged 5** with the same damage and effects.\n- **Tech isn’t magic.** Drop the Magic keyword when an ability becomes a grenade, implant, or device; keep it for Veil powers.\n- **Beasts, undead, and horrors** keep their natural attacks.\n- **Stock creature names** in rules text read as the Ghostwire foe’s name.",
+        "content": "<ul>\n<li><strong>People fight with guns.</strong> Street, corporate, and military humanoids use pistols, SMGs, carbines, rifles, and shotguns, plus grenades, stims, chrome, and cyberdecks. Melee is rare: stun batons, monowire, mono-knives, and cyberarms.</li>\n<li><strong>A melee-only weapon ability reskinned as a gun</strong> becomes <strong>Melee X or Ranged 5</strong> with the same damage and effects.</li>\n<li><strong>Tech isn’t magic.</strong> Drop the Magic keyword when an ability becomes a grenade, implant, or device; keep it for Veil powers.</li>\n<li><strong>Beasts, undead, and horrors</strong> keep their natural attacks.</li>\n<li><strong>Stock creature names</strong> in rules text read as the Ghostwire foe’s name.</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8lO8ftIMxaNM3zbc",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.8lO8ftIMxaNM3zbc",
+      "name": "Malice",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Use Draw Steel’s Malice rules. Ghostwire adds one source:\n\n- **Trace Alert:** each step a node’s Trace Alert crosses from **5 to 8** gives the Director **1 Malice** (`21`).",
+        "content": "<p>Use Draw Steel’s Malice rules. Ghostwire adds one source:</p>\n<ul>\n<li><strong>Trace Alert:</strong> each step a node’s Trace Alert crosses from <strong>5 to 8</strong> gives the Director <strong>1 Malice</strong> (<code>21</code>).</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "VCPELUW7IPMX0d6Q",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.VCPELUW7IPMX0d6Q",
+      "name": "Wired opposition",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "ICE, hostile AI Personas, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).",
+        "content": "<p>ICE, hostile AI Personas, and rival deckers are stated on the <strong>System Stat Card</strong> by <strong>Node Rating 1–5</strong> (<code>21</code>). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "LDvaf50gCCtW9JdY",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.LDvaf50gCCtW9JdY",
+      "name": "Scaling",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Crew | Opposition |\n|---|---|\n| Level 1–3 (Echelon 1) | Street crews, corp security squads, Rating 1–2 nodes |\n| Level 4–6 (Echelon 2) | Corporate response, veteran rivals, Rating 2–4 nodes |\n| Level 7–9 (Echelon 3) | Black ops, apex creatures, Rating 3–5 nodes |\n| Level 10 (Echelon 4) | Level-boss solos, Rating 5 cores |\n\nConvert older Ghostwire foe tiers with the table in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Cn3cpBSS1061JGQB]{Advancement and Echelons} (T5 = Level 1 … T1 = Level 9).",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"crew\">Crew</th>\n<th id=\"opposition\">Opposition</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Level 1–3 (Echelon 1)</td>\n<td>Street crews, corp security squads, Rating 1–2 nodes</td>\n</tr>\n<tr>\n<td>Level 4–6 (Echelon 2)</td>\n<td>Corporate response, veteran rivals, Rating 2–4 nodes</td>\n</tr>\n<tr>\n<td>Level 7–9 (Echelon 3)</td>\n<td>Black ops, apex creatures, Rating 3–5 nodes</td>\n</tr>\n<tr>\n<td>Level 10 (Echelon 4)</td>\n<td>Level-boss solos, Rating 5 cores</td>\n</tr>\n</tbody>\n</table>\n<p>Convert older Ghostwire foe tiers with the table in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Cn3cpBSS1061JGQB]{Advancement and Echelons} (T5 = Level 1 … T1 = Level 9).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "TO98nbxDmc4Aq0cS",
+      "_key": "!journal.pages!Yv0rtwp3Cp8UoRDH.TO98nbxDmc4Aq0cS",
+      "name": "Paying the crew",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Use the provisional run payouts in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear & Wealth (¥)}. A patron may pay partly in gear, chrome credit, or favors.",
+        "content": "<p>Use the provisional run payouts in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear &amp; Wealth (¥)}. A patron may pay partly in gear, chrome credit, or favors.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/25-opposition.md"
+    }
+  }
+}

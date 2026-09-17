@@ -1,0 +1,158 @@
+{
+  "_id": "du2ZyhOYRjNGbhnj",
+  "_key": "!journal!du2ZyhOYRjNGbhnj",
+  "name": "GHOSTWIRE.Rulebook.Journals.Combat",
+  "folder": "gwRulebookCore00",
+  "sort": 400000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "iQYZ4abdXRmxwF4F",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.iQYZ4abdXRmxwF4F",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: class chapters (heroic resources), `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (armor as Stamina), `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/rulebook/08-hacker.md`, `docs/rulebook/15-drones.md`, `docs/rulebook/16-vehicles.md`*\n\n**Engine:** Draw Steel Heroes — use the official combat rules; Ghostwire remaps and additions below.",
+        "content": "<p><em>RAW draft · Sources: class chapters (heroic resources), <code>docs/rulebook/10-kits.md</code>, <code>docs/masters/GHOSTWIRE_GEAR_MASTER.md</code> (armor as Stamina), <code>docs/rulebook/12-chrome.md</code>, <code>docs/rulebook/09-species.md</code>, <code>docs/rulebook/08-hacker.md</code>, <code>docs/rulebook/15-drones.md</code>, <code>docs/rulebook/16-vehicles.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official combat rules; Ghostwire remaps and additions below.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "NjFwFjK52bqKjW37",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.NjFwFjK52bqKjW37",
+      "name": "Engine by reference",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Run combat with Draw Steel’s rules for:\n\n- **Starting combat and the round:** surprise, turn order, and taking turns.\n- **Your turn:** main actions, maneuvers, move actions, free and triggered actions.\n- **Movement:** speed, shifting, difficult terrain, flying and climbing, and forced movement (push, pull, slide) against stability.\n- **Attacking:** strikes, abilities, distance and area, line of effect, cover and concealment, flanking, free strikes, and opportunity attacks.\n- **Damage:** damage types, immunity, and weakness.\n- **Staying up:** Stamina, winded, dying and death, Recoveries, and catching your breath.\n- **Conditions:** bleeding, dazed, frightened, grabbed, prone, restrained, slowed, taunted, and weakened.\n- **Heroic resources, surges, and Victories.**\n- **Malice and the Director’s side** (`25`).",
+        "content": "<p>Run combat with Draw Steel’s rules for:</p>\n<ul>\n<li><strong>Starting combat and the round:</strong> surprise, turn order, and taking turns.</li>\n<li><strong>Your turn:</strong> main actions, maneuvers, move actions, free and triggered actions.</li>\n<li><strong>Movement:</strong> speed, shifting, difficult terrain, flying and climbing, and forced movement (push, pull, slide) against stability.</li>\n<li><strong>Attacking:</strong> strikes, abilities, distance and area, line of effect, cover and concealment, flanking, free strikes, and opportunity attacks.</li>\n<li><strong>Damage:</strong> damage types, immunity, and weakness.</li>\n<li><strong>Staying up:</strong> Stamina, winded, dying and death, Recoveries, and catching your breath.</li>\n<li><strong>Conditions:</strong> bleeding, dazed, frightened, grabbed, prone, restrained, slowed, taunted, and weakened.</li>\n<li><strong>Heroic resources, surges, and Victories.</strong></li>\n<li><strong>Malice and the Director’s side</strong> (<code>25</code>).</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "CYSfSdvbzVguLSXB",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.CYSfSdvbzVguLSXB",
+      "name": "Heroic resources",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise, a resource follows Draw Steel’s heroic-resource rules.\n\n| Class | Resource | Notable rule (see class chapter) |\n|---|---|---|\n| Operator | Adrenaline | — |\n| Scout | Advantage | Represents reading the target; surges |\n| Commander / Face | Influence | Gained from combat and social Marks |\n| Medic | **Reagents** | **Persist between encounters** — they don’t reset when combat ends or starts, and they’re spent even outside combat |\n| Wrench | Uptime | Earned and drained by the machines you field |\n| Elementalist | Essence | Sustained workings cost Essence each turn |\n| Street Priest | Conviction | Per-turn drip; Light or Dark pact |\n| Hacker | Bandwidth | Spent on Programs |\n| Technomancer | Resonance | Sprites; biofeedback when overreaching |\n\n**Cost check:** in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.",
+        "content": "<p>Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise, a resource follows Draw Steel’s heroic-resource rules.</p>\n<table>\n<thead>\n<tr>\n<th id=\"class\">Class</th>\n<th id=\"resource\">Resource</th>\n<th id=\"notable_rule_(see_class_chapter)\">Notable rule (see class chapter)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Operator</td>\n<td>Adrenaline</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Scout</td>\n<td>Advantage</td>\n<td>Represents reading the target; surges</td>\n</tr>\n<tr>\n<td>Commander / Face</td>\n<td>Influence</td>\n<td>Gained from combat and social Marks</td>\n</tr>\n<tr>\n<td>Medic</td>\n<td><strong>Reagents</strong></td>\n<td><strong>Persist between encounters</strong> — they don’t reset when combat ends or starts, and they’re spent even outside combat</td>\n</tr>\n<tr>\n<td>Wrench</td>\n<td>Uptime</td>\n<td>Earned and drained by the machines you field</td>\n</tr>\n<tr>\n<td>Elementalist</td>\n<td>Essence</td>\n<td>Sustained workings cost Essence each turn</td>\n</tr>\n<tr>\n<td>Street Priest</td>\n<td>Conviction</td>\n<td>Per-turn drip; Light or Dark pact</td>\n</tr>\n<tr>\n<td>Hacker</td>\n<td>Bandwidth</td>\n<td>Spent on Programs</td>\n</tr>\n<tr>\n<td>Technomancer</td>\n<td>Resonance</td>\n<td>Sprites; biofeedback when overreaching</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Cost check:</strong> in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "05jMrSTXyJwvMZGQ",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.05jMrSTXyJwvMZGQ",
+      "name": "Keywords added by Ghostwire",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire abilities use Draw Steel’s keywords plus:\n\n| Keyword | Meaning |\n|---|---|\n| **Tech** | Powered by machinery, not magic or psionics. Cyborgs can use it. |\n| **Chrome** | Powered by an implant. |\n| **Optics** | Powered by an emitter, holo, or optical system. |\n| **Wired** | Acts in the Wired (connection state rules apply). |\n| **Command** | Driven by command presence: orders, rallies, reads. |",
+        "content": "<p>Ghostwire abilities use Draw Steel’s keywords plus:</p>\n<table>\n<thead>\n<tr>\n<th id=\"keyword\">Keyword</th>\n<th id=\"meaning\">Meaning</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Tech</strong></td>\n<td>Powered by machinery, not magic or psionics. Cyborgs can use it.</td>\n</tr>\n<tr>\n<td><strong>Chrome</strong></td>\n<td>Powered by an implant.</td>\n</tr>\n<tr>\n<td><strong>Optics</strong></td>\n<td>Powered by an emitter, holo, or optical system.</td>\n</tr>\n<tr>\n<td><strong>Wired</strong></td>\n<td>Acts in the Wired (connection state rules apply).</td>\n</tr>\n<tr>\n<td><strong>Command</strong></td>\n<td>Driven by command presence: orders, rallies, reads.</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "iNo7eIPjqso3GRws",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.iNo7eIPjqso3GRws",
+      "name": "Ghostwire combat rules",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Kits need their gear\n\nA Kit’s bonuses and signature ability work only with an owned qualifying weapon and armor. Without them, you fight with an **improvised weapon**: class weapon abilities still work, but no Kit bonuses apply (`08`).\n\n### Armor is Stamina\n\nWorn armor raises maximum Stamina instead of reducing damage. The only true damage reduction is **typed immunity** from sealed and hardened gear (`08`).\n\n### Damage types\n\nDraw Steel’s damage types are used unchanged. Ghostwire gear also tags damage as **kinetic** (untyped), **AP**, **electrical**, **fire**, or **toxin**.\n\n### Connection states in combat\n\n- A **Jacked In** runner’s body is inert and can’t take real-world actions; allies usually guard it.\n- An **Overlaid** runner has a bane on real-world Power Rolls.\n- Biofeedback from the Wired deals damage to the runner’s Stamina (`21`).\n\n### Chrome under fire\n\nAn implant can be **Suppressed** (temporarily offline), **Damaged** (works at a penalty until repaired), or **Destroyed** (benefit lost until repaired or replaced) (`09`).\n\n### Peoples at 0 Stamina\n\n- **Cyborgs** enter **System Crisis** instead of dying normally, and can’t be healed by Magic (`05`).\n- **Revenants** become **inert** at the negative of their winded value instead of dying; fire damage while inert destroys them (`05`).\n\n### Machines in combat\n\nDrones and vehicles fight on the same grid. Anyone can run **one** drone with limits; Wrenches field fleets and can Jump In. Vehicle chases use a range track (`23`).",
+        "content": "<h3>Kits need their gear</h3>\n<p>A Kit’s bonuses and signature ability work only with an owned qualifying weapon and armor. Without them, you fight with an <strong>improvised weapon</strong>: class weapon abilities still work, but no Kit bonuses apply (<code>08</code>).</p>\n<h3>Armor is Stamina</h3>\n<p>Worn armor raises maximum Stamina instead of reducing damage. The only true damage reduction is <strong>typed immunity</strong> from sealed and hardened gear (<code>08</code>).</p>\n<h3>Damage types</h3>\n<p>Draw Steel’s damage types are used unchanged. Ghostwire gear also tags damage as <strong>kinetic</strong> (untyped), <strong>AP</strong>, <strong>electrical</strong>, <strong>fire</strong>, or <strong>toxin</strong>.</p>\n<h3>Connection states in combat</h3>\n<ul>\n<li>A <strong>Jacked In</strong> runner’s body is inert and can’t take real-world actions; allies usually guard it.</li>\n<li>An <strong>Overlaid</strong> runner has a bane on real-world Power Rolls.</li>\n<li>Biofeedback from the Wired deals damage to the runner’s Stamina (<code>21</code>).</li>\n</ul>\n<h3>Chrome under fire</h3>\n<p>An implant can be <strong>Suppressed</strong> (temporarily offline), <strong>Damaged</strong> (works at a penalty until repaired), or <strong>Destroyed</strong> (benefit lost until repaired or replaced) (<code>09</code>).</p>\n<h3>Peoples at 0 Stamina</h3>\n<ul>\n<li><strong>Cyborgs</strong> enter <strong>System Crisis</strong> instead of dying normally, and can’t be healed by Magic (<code>05</code>).</li>\n<li><strong>Revenants</strong> become <strong>inert</strong> at the negative of their winded value instead of dying; fire damage while inert destroys them (<code>05</code>).</li>\n</ul>\n<h3>Machines in combat</h3>\n<p>Drones and vehicles fight on the same grid. Anyone can run <strong>one</strong> drone with limits; Wrenches field fleets and can Jump In. Vehicle chases use a range track (<code>23</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/04-combat.md"
+    }
+  }
+}

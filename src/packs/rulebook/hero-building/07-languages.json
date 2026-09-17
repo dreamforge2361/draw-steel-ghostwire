@@ -1,0 +1,102 @@
+{
+  "_id": "Bc4nTBlJX4nMRdS1",
+  "_key": "!journal!Bc4nTBlJX4nMRdS1",
+  "name": "GHOSTWIRE.Rulebook.Journals.Languages",
+  "folder": "gwRulebookHeroes",
+  "sort": 300000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "q8eJlAkBY6qsOHsP",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.q8eJlAkBY6qsOHsP",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: `docs/rulebook/19-languages.md`, `docs/masters/GHOSTWIRE_LANGUAGES.md`*\n\n**Engine:** Draw Steel Heroes — use the official language rules; Ghostwire renames every language below.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/19-languages.md</code>, <code>docs/masters/GHOSTWIRE_LANGUAGES.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official language rules; Ghostwire renames every language below.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "mBJIDvC5m6nGNfVi",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.mBJIDvC5m6nGNfVi",
+      "name": "Rules",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Trade Cant** is every runner’s starting language. Other languages come from your People, Background, class, education, and perks.\n- **Machine translation** carries simple communication, but it isn’t knowing the language: nuance, code phrases, ritual language, and deception slip through. The Director decides whether a negotiation, a read, or a deception works through a translator.\n- **Knowledge-only languages** need real knowledge; translation gives a surface gloss at best. They are:\n  - every **Arcane & sacred** language,\n  - **Black-Site Code**,\n  - every **Machine & matrix** language except **Wire Speak**,\n  - **Void Cant**, **Infernal Speech**, **Old Liturgical**, **Dead Ops Tongue**, and **Extradimensional Technical**.\n\nLanguages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.",
+        "content": "<ul>\n<li><strong>Trade Cant</strong> is every runner’s starting language. Other languages come from your People, Background, class, education, and perks.</li>\n<li><strong>Machine translation</strong> carries simple communication, but it isn’t knowing the language: nuance, code phrases, ritual language, and deception slip through. The Director decides whether a negotiation, a read, or a deception works through a translator.</li>\n<li><strong>Knowledge-only languages</strong> need real knowledge; translation gives a surface gloss at best. They are:<ul>\n<li>every <strong>Arcane & sacred</strong> language,</li>\n<li><strong>Black-Site Code</strong>,</li>\n<li>every <strong>Machine & matrix</strong> language except <strong>Wire Speak</strong>,</li>\n<li><strong>Void Cant</strong>, <strong>Infernal Speech</strong>, <strong>Old Liturgical</strong>, <strong>Dead Ops Tongue</strong>, and <strong>Extradimensional Technical</strong>.</li></ul></li>\n</ul>\n<p>Languages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8Eq3m0C5X8QhK5DG",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.8Eq3m0C5X8QhK5DG",
+      "name": "Language list",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Category | Languages |\n|---|---|\n| **Common urban** | Trade Cant · Reach Metro · Flats Cant · Sprawl Argot |\n| **National / cultural** | Meridian Standard · Sanctum Formal · Colony Creole · Offworld Trade · Hive Technical · Old Reach |\n| **Corporate** | Corp Cant · Legal Shorthand · Ops Dialects · Black-Site Code |\n| **Arcane & sacred** | Signal Liturgy · True Signal · Saint-Cant · Rite Speech · Demon Names · Ward Formulae |\n| **Machine & matrix** | Wire Speak · Old Code · Machine Markup · AI Symbolic · Resonance Notation |\n| **Ancestral (Peoples)** | Corran Guild-Tongue · Corran Work-Cant · Elvani High Cant · Elvani Softspeech · Goliar Battle-Cant · Changer Pack-Tongue · Revenant Memory-Speech · Mutant Enclave Cant · Cyborg Frame-Cant · Pure-Line Homily |\n| **Extradimensional / dead / deep lore** | Void Cant · Drift Creole · Infernal Speech · Old Liturgical · Dead Ops Tongue · Alien Colony Trade · Extradimensional Technical |\n\nEach Ghostwire language takes the place of one Draw Steel language; a Draw Steel rule or feature that grants a language grants a Ghostwire language instead. **Machine & matrix** languages matter for Wired forensics and deep intrusion.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"category\">Category</th>\n<th id=\"languages\">Languages</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Common urban</strong></td>\n<td>Trade Cant · Reach Metro · Flats Cant · Sprawl Argot</td>\n</tr>\n<tr>\n<td><strong>National / cultural</strong></td>\n<td>Meridian Standard · Sanctum Formal · Colony Creole · Offworld Trade · Hive Technical · Old Reach</td>\n</tr>\n<tr>\n<td><strong>Corporate</strong></td>\n<td>Corp Cant · Legal Shorthand · Ops Dialects · Black-Site Code</td>\n</tr>\n<tr>\n<td><strong>Arcane & sacred</strong></td>\n<td>Signal Liturgy · True Signal · Saint-Cant · Rite Speech · Demon Names · Ward Formulae</td>\n</tr>\n<tr>\n<td><strong>Machine & matrix</strong></td>\n<td>Wire Speak · Old Code · Machine Markup · AI Symbolic · Resonance Notation</td>\n</tr>\n<tr>\n<td><strong>Ancestral (Peoples)</strong></td>\n<td>Corran Guild-Tongue · Corran Work-Cant · Elvani High Cant · Elvani Softspeech · Goliar Battle-Cant · Changer Pack-Tongue · Revenant Memory-Speech · Mutant Enclave Cant · Cyborg Frame-Cant · Pure-Line Homily</td>\n</tr>\n<tr>\n<td><strong>Extradimensional / dead / deep lore</strong></td>\n<td>Void Cant · Drift Creole · Infernal Speech · Old Liturgical · Dead Ops Tongue · Alien Colony Trade · Extradimensional Technical</td>\n</tr>\n</tbody>\n</table>\n<p>Each Ghostwire language takes the place of one Draw Steel language; a Draw Steel rule or feature that grants a language grants a Ghostwire language instead. <strong>Machine & matrix</strong> languages matter for Wired forensics and deep intrusion.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/07-languages.md"
+    }
+  }
+}

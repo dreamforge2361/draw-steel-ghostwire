@@ -1,0 +1,186 @@
+{
+  "_id": "Cn3cpBSS1061JGQB",
+  "_key": "!journal!Cn3cpBSS1061JGQB",
+  "name": "GHOSTWIRE.Rulebook.Journals.Advancement",
+  "folder": "gwRulebookCore00",
+  "sort": 500000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "46RAh6J3CfNWwKlW",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.46RAh6J3CfNWwKlW",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: `docs/rulebook/DS-ALIGNMENT.md`, class progression tables (`docs/rulebook/01`–`08`, `20`), `docs/rulebook/17-perks.md`, `docs/rulebook/14-mods.md`, `docs/rulebook/10-kits.md`*\n\n**Engine:** Draw Steel Heroes — use the official rules for experience, Victories, leveling, and echelons; Ghostwire remaps below.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, class progression tables (<code>docs/rulebook/01</code>–<code>08</code>, <code>20</code>), <code>docs/rulebook/17-perks.md</code>, <code>docs/rulebook/14-mods.md</code>, <code>docs/rulebook/10-kits.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official rules for experience, Victories, leveling, and echelons; Ghostwire remaps below.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "bGBaJWUokhTUFoH3",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.bGBaJWUokhTUFoH3",
+      "name": "Levels and echelons",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Runners advance from **Level 1 to Level 10** by Draw Steel’s rules. Levels group into four **echelons**:\n\n| Echelon | Levels |\n|---|---|\n| **1** | 1–3 |\n| **2** | 4–6 |\n| **3** | 7–9 |\n| **4** | 10 |\n\nGhostwire has **no separate tier ladder** for heroes. Level and echelon are the only progression scales.",
+        "content": "<p>Runners advance from <strong>Level 1 to Level 10</strong> by Draw Steel’s rules. Levels group into four <strong>echelons</strong>:</p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"levels\">Levels</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>1–3</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>4–6</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>7–9</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>10</td>\n</tr>\n</tbody>\n</table>\n<p>Ghostwire has <strong>no separate tier ladder</strong> for heroes. Level and echelon are the only progression scales.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "QiS5zHru9lYLixwM",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.QiS5zHru9lYLixwM",
+      "name": "What the classes gain",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.\n\n| Level | Common gains |\n|---|---|\n| **1** | Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent) |\n| **2** | Perk; subclass feature |\n| **3** | A **7-cost** heroic ability |\n| **4** | Characteristic increase; skill; perk |\n| **5** | A **9-cost** heroic ability |\n| **6** | Perk; subclass feature |\n| **7** | Characteristic increase; skill |\n| **8** | An **11-cost** heroic ability; perk |\n| **9** | Subclass feature or capstone ability |\n| **10** | Characteristic increase; skill; perk; **epic resource** or capstone |\n\nHeroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier.",
+        "content": "<p>Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.</p>\n<table>\n<thead>\n<tr>\n<th id=\"level\">Level</th>\n<th id=\"common_gains\">Common gains</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent)</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>Perk; subclass feature</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>A <strong>7-cost</strong> heroic ability</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>Characteristic increase; skill; perk</td>\n</tr>\n<tr>\n<td><strong>5</strong></td>\n<td>A <strong>9-cost</strong> heroic ability</td>\n</tr>\n<tr>\n<td><strong>6</strong></td>\n<td>Perk; subclass feature</td>\n</tr>\n<tr>\n<td><strong>7</strong></td>\n<td>Characteristic increase; skill</td>\n</tr>\n<tr>\n<td><strong>8</strong></td>\n<td>An <strong>11-cost</strong> heroic ability; perk</td>\n</tr>\n<tr>\n<td><strong>9</strong></td>\n<td>Subclass feature or capstone ability</td>\n</tr>\n<tr>\n<td><strong>10</strong></td>\n<td>Characteristic increase; skill; perk; <strong>epic resource</strong> or capstone</td>\n</tr>\n</tbody>\n</table>\n<p>Heroic ability costs come in <strong>bands</strong> (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "Xwq0cnQnlKB8D9vf",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.Xwq0cnQnlKB8D9vf",
+      "name": "What scales with echelon",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| System | How echelon applies |\n|---|---|\n| **Kit Stamina** | Scales by echelon, as Draw Steel’s Kits do (`08`) |\n| **Armor Stamina** | Uses the wearer’s echelon (`08`) |\n| **Gear grade** | Echelon 1–4 plus Availability sets price and mod slots (`08`) |\n| **Invent a Mod** | A new mod’s power can’t exceed the inventor’s echelon (`10`) |\n| **Class resources** | Some caps and bonuses scale by echelon; see each class |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"system\">System</th>\n<th id=\"how_echelon_applies\">How echelon applies</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Kit Stamina</strong></td>\n<td>Scales by echelon, as Draw Steel’s Kits do (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Armor Stamina</strong></td>\n<td>Uses the wearer’s echelon (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Gear grade</strong></td>\n<td>Echelon 1–4 plus Availability sets price and mod slots (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Invent a Mod</strong></td>\n<td>A new mod’s power can’t exceed the inventor’s echelon (<code>10</code>)</td>\n</tr>\n<tr>\n<td><strong>Class resources</strong></td>\n<td>Some caps and bonuses scale by echelon; see each class</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8kX5PK1Rpujxcxdo",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.8kX5PK1Rpujxcxdo",
+      "name": "What doesn’t scale with level",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Body Integrity** starts at 20 and never grows by leveling (`09`).\n- **¥** comes from runs, not levels (`08`).\n- **Ancestry traits** are bought once at creation (`05`).\n- **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).",
+        "content": "<ul>\n<li><strong>Body Integrity</strong> starts at 20 and never grows by leveling (<code>09</code>).</li>\n<li><strong>¥</strong> comes from runs, not levels (<code>08</code>).</li>\n<li><strong>Ancestry traits</strong> are bought once at creation (<code>05</code>).</li>\n<li><strong>Node Rating</strong> (1–5) is a Wired defense grade, not a level or echelon (<code>21</code>).</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "n4G3mk6Okw13Y1N6",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.n4G3mk6Okw13Y1N6",
+      "name": "Converting older Ghostwire material",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:\n\n| Old tier (hero or foe) | Level |\n|---|---|\n| T5 | 1 |\n| T4 | 3 |\n| T3 | 5 |\n| T2 | 7 |\n| T1 | 9 |\n\n| Old gear tier | Echelon | Availability |\n|---|---|---|\n| T5 | 1 | Street |\n| T4 | 1 | Professional |\n| T3 | 2 | Restricted |\n| T2 | 3 | Military |\n| T1 | 4 | Prototype |\n\n| Old node tier | Node Rating |\n|---|---|\n| T5 | 1 |\n| T4 | 2 |\n| T3 | 3 |\n| T2 | 4 |\n| T1 | 5 |\n\nOlder material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (`03`).",
+        "content": "<p>Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:</p>\n<table>\n<thead>\n<tr>\n<th id=\"old_tier_(hero_or_foe)\">Old tier (hero or foe)</th>\n<th id=\"level\">Level</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>3</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>5</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>7</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>9</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th id=\"old_gear_tier\">Old gear tier</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"availability\">Availability</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n<td>Street</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>1</td>\n<td>Professional</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>2</td>\n<td>Restricted</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>3</td>\n<td>Military</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>4</td>\n<td>Prototype</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th id=\"old_node_tier\">Old node tier</th>\n<th id=\"node_rating\">Node Rating</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>2</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>3</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>4</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>5</td>\n</tr>\n</tbody>\n</table>\n<p>Older material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (<code>03</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/24-advancement.md"
+    }
+  }
+}

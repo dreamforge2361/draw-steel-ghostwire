@@ -1,0 +1,186 @@
+{
+  "_id": "susCeNktlPPcW0Dp",
+  "_key": "!journal!susCeNktlPPcW0Dp",
+  "name": "GHOSTWIRE.Rulebook.Journals.HeroesCharacteristics",
+  "folder": "gwRulebookCore00",
+  "sort": 200000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "cMapPu5WsfGuTjz0",
+      "_key": "!journal.pages!susCeNktlPPcW0Dp.cMapPu5WsfGuTjz0",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/SPECIES-DS-MAP.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, class chapters (chassis tables), `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`*\n\n**Engine:** Draw Steel Heroes — use the official rules for making a hero and for characteristics; Ghostwire remaps below.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/SPECIES-DS-MAP.md</code>, <code>docs/masters/GHOSTWIRE_SKILLS_MASTER.md</code>, class chapters (chassis tables), <code>docs/rulebook/11-economy.md</code>, <code>docs/rulebook/12-chrome.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official rules for making a hero and for characteristics; Ghostwire remaps below.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "C35ddkuVUCJFseUS",
+      "_key": "!journal.pages!susCeNktlPPcW0Dp.C35ddkuVUCJFseUS",
+      "name": "Making a runner",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Follow Draw Steel’s hero creation, with these Ghostwire steps and swaps:\n\n1. **People** (ancestry) — @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)}.\n2. **Background** (culture) and **Profession** (career) — @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.jDbQHMGFFuAA663q]{Backgrounds & Professions}.\n3. **Class** — `12`–`20`.\n4. **Kit** — one free Kit, including Street-grade qualifying gear for it (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear & Wealth (¥)}).\n5. **Skills** — from your People, Background, Profession, and class (skill list below).\n6. **Languages** — @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Bc4nTBlJX4nMRdS1]{Languages}.\n7. **Starting ¥** — **¥5,000** (`08`).\n8. **Body Integrity** — **20** for every People except Cyborg (`09`).\n\nA new runner starts with no chrome and no mods.",
+        "content": "<p>Follow Draw Steel’s hero creation, with these Ghostwire steps and swaps:</p>\n<ol>\n<li><strong>People</strong> (ancestry) — @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)}.</li>\n<li><strong>Background</strong> (culture) and <strong>Profession</strong> (career) — @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.jDbQHMGFFuAA663q]{Backgrounds &amp; Professions}.</li>\n<li><strong>Class</strong> — <code>12</code>–<code>20</code>.</li>\n<li><strong>Kit</strong> — one free Kit, including Street-grade qualifying gear for it (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear &amp; Wealth (¥)}).</li>\n<li><strong>Skills</strong> — from your People, Background, Profession, and class (skill list below).</li>\n<li><strong>Languages</strong> — @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Bc4nTBlJX4nMRdS1]{Languages}.</li>\n<li><strong>Starting ¥</strong> — <strong>¥5,000</strong> (<code>08</code>).</li>\n<li><strong>Body Integrity</strong> — <strong>20</strong> for every People except Cyborg (<code>09</code>).</li>\n</ol>\n<p>A new runner starts with no chrome and no mods.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "IagS4MTlkvhk2CZh",
+      "_key": "!journal.pages!susCeNktlPPcW0Dp.IagS4MTlkvhk2CZh",
+      "name": "Characteristics",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire renames Draw Steel’s five characteristics. The numbers, ranges, and uses are Draw Steel’s.\n\n| Ghostwire | Draw Steel | Covers |\n|---|---|---|\n| **Physique** | Might | Strength, toughness, raw force |\n| **Reflex** | Agility | Speed, coordination, aim, stealth |\n| **Logic** | Reason | Analysis, technical skill, study, most Wired work |\n| **Instinct** | Intuition | Awareness, reading people and situations, connecting to the Wired |\n| **Persona** | Presence | Force of personality, leadership, faith |\n\nAbilities that list a Draw Steel characteristic use its Ghostwire name. **Potency** uses these names too: for example, a potency keyed to Physique uses the target’s Physique score.",
+        "content": "<p>Ghostwire renames Draw Steel’s five characteristics. The numbers, ranges, and uses are Draw Steel’s.</p>\n<table>\n<thead>\n<tr>\n<th id=\"ghostwire\">Ghostwire</th>\n<th id=\"draw_steel\">Draw Steel</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Physique</strong></td>\n<td>Might</td>\n<td>Strength, toughness, raw force</td>\n</tr>\n<tr>\n<td><strong>Reflex</strong></td>\n<td>Agility</td>\n<td>Speed, coordination, aim, stealth</td>\n</tr>\n<tr>\n<td><strong>Logic</strong></td>\n<td>Reason</td>\n<td>Analysis, technical skill, study, most Wired work</td>\n</tr>\n<tr>\n<td><strong>Instinct</strong></td>\n<td>Intuition</td>\n<td>Awareness, reading people and situations, connecting to the Wired</td>\n</tr>\n<tr>\n<td><strong>Persona</strong></td>\n<td>Presence</td>\n<td>Force of personality, leadership, faith</td>\n</tr>\n</tbody>\n</table>\n<p>Abilities that list a Draw Steel characteristic use its Ghostwire name. <strong>Potency</strong> uses these names too: for example, a potency keyed to Physique uses the target’s Physique score.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8OW7o9ou4FOAr3b0",
+      "_key": "!journal.pages!susCeNktlPPcW0Dp.8OW7o9ou4FOAr3b0",
+      "name": "Classes at a glance",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Class | Core characteristics | Heroic resource | Starting Stamina | Stamina per level | Recoveries | Epic resource / capstone (10th) |\n|---|---|---|---|---|---|---|\n| Operator | Physique, Reflex | Adrenaline | 21 | +9 | 10 | Combat Legend (Overclock) |\n| Scout | Reflex, Logic | Advantage | 18 | +6 | 8 | Subterfuge |\n| Commander / Face | Persona, Instinct | Influence | 21 | +9 | 10 | Command |\n| Medic | Instinct, Logic | Reagents | 18 | +6 | 8 | Master Chemist |\n| Wrench | Logic, Reflex | Uptime | 18 | +6 | 8 | Overclock |\n| Elementalist | Logic, Persona | Essence | 18 | +6 | 8 | Primordial Reservoir |\n| Street Priest | Persona, Instinct | Conviction | 18 | +6 | 8 | Manifest Will |\n| Hacker | Logic, Instinct | Bandwidth | 19 | +7 | 9 | Ghost in the Machine |\n| Technomancer | Logic, Persona | Resonance | 18 | +8 | 8 | Master of the Current |\n\nClass chapters have the full chassis.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"class\">Class</th>\n<th id=\"core_characteristics\">Core characteristics</th>\n<th id=\"heroic_resource\">Heroic resource</th>\n<th id=\"starting_stamina\">Starting Stamina</th>\n<th id=\"stamina_per_level\">Stamina per level</th>\n<th id=\"recoveries\">Recoveries</th>\n<th id=\"epic_resource_/_capstone_(10th)\">Epic resource / capstone (10th)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Operator</td>\n<td>Physique, Reflex</td>\n<td>Adrenaline</td>\n<td>21</td>\n<td>+9</td>\n<td>10</td>\n<td>Combat Legend (Overclock)</td>\n</tr>\n<tr>\n<td>Scout</td>\n<td>Reflex, Logic</td>\n<td>Advantage</td>\n<td>18</td>\n<td>+6</td>\n<td>8</td>\n<td>Subterfuge</td>\n</tr>\n<tr>\n<td>Commander / Face</td>\n<td>Persona, Instinct</td>\n<td>Influence</td>\n<td>21</td>\n<td>+9</td>\n<td>10</td>\n<td>Command</td>\n</tr>\n<tr>\n<td>Medic</td>\n<td>Instinct, Logic</td>\n<td>Reagents</td>\n<td>18</td>\n<td>+6</td>\n<td>8</td>\n<td>Master Chemist</td>\n</tr>\n<tr>\n<td>Wrench</td>\n<td>Logic, Reflex</td>\n<td>Uptime</td>\n<td>18</td>\n<td>+6</td>\n<td>8</td>\n<td>Overclock</td>\n</tr>\n<tr>\n<td>Elementalist</td>\n<td>Logic, Persona</td>\n<td>Essence</td>\n<td>18</td>\n<td>+6</td>\n<td>8</td>\n<td>Primordial Reservoir</td>\n</tr>\n<tr>\n<td>Street Priest</td>\n<td>Persona, Instinct</td>\n<td>Conviction</td>\n<td>18</td>\n<td>+6</td>\n<td>8</td>\n<td>Manifest Will</td>\n</tr>\n<tr>\n<td>Hacker</td>\n<td>Logic, Instinct</td>\n<td>Bandwidth</td>\n<td>19</td>\n<td>+7</td>\n<td>9</td>\n<td>Ghost in the Machine</td>\n</tr>\n<tr>\n<td>Technomancer</td>\n<td>Logic, Persona</td>\n<td>Resonance</td>\n<td>18</td>\n<td>+8</td>\n<td>8</td>\n<td>Master of the Current</td>\n</tr>\n</tbody>\n</table>\n<p>Class chapters have the full chassis.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "eCt0NRGPjOCLRpme",
+      "_key": "!journal.pages!susCeNktlPPcW0Dp.eCt0NRGPjOCLRpme",
+      "name": "Skills",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in tests exactly as Draw Steel’s do (`03`). There are **44 skills in six groups**.\n\n### Action skills\n\n| Skill | Covers |\n|---|---|\n| Athletics | Running, climbing, jumping, lifting, swimming, and feats of exertion |\n| Brawl | Unarmed combat, grapples, clinches, and improvised close violence |\n| Melee | Blades, clubs, polearms, and other hand-held weapons |\n| Firearms | Pistols, rifles, SMGs, shotguns, and conventional ranged weapons |\n| Heavy Weapons | Launchers, support weapons, mounted guns, and demolition-facing battlefield pieces |\n| Stealth | Sneaking, shadowing, concealment, infiltration, and moving unseen |\n| Acrobatics | Balance, tumbles, dives, vaults, and difficult physical repositioning |\n| Perception | Spotting danger, scanning scenes, catching details, and sensory sharpness |\n| Survival | Tracking, foraging, navigation, fieldcraft, and staying alive in hostile zones |\n\n### Technical skills\n\n| Skill | Covers |\n|---|---|\n| Hacking | Wired intrusion, device compromise, cybercombat, scanning, and bypassing digital security |\n| Electronics | Circuits, sensors, comms, diagnostics, hardware setup, and signal work |\n| Engineering | Structural, industrial, and mechanical design or problem-solving |\n| Repair | Field fixes, maintenance, patch jobs, and combat repairs on gear or systems |\n| Cybertech | Cyberware installation, diagnosis, tuning, and augmentation knowledge |\n| Medicine | First aid, trauma care, surgery support, and biological stabilization |\n| Demolitions | Breaching charges, bombs, traps, and controlled destruction |\n| Security Systems | Locks, alarms, bypass tools, surveillance nets, and physical security architecture |\n\n### Knowledge skills\n\n| Skill | Covers |\n|---|---|\n| Streetwise | Gangs, neighborhoods, fixers, black markets, criminal habits, and rumor networks |\n| Corporate | Megacorps, departments, contracts, office politics, and institutional procedure |\n| History | Past events, wars, collapses, timelines, and social memory |\n| Occult | Demons, wards, taint, ritual signs, magical theory, and forbidden traditions |\n| Religion | Faiths, saints, cults, dogma, and sacred practice |\n| Matrix Theory | Deep understanding of networks, architecture, AI behavior, and code ecologies |\n| Medicine Lore | Pathogens, drugs, toxins, physiology, and medical systems |\n| Xenology | Colonies, altered peoples, extradimensional cultures, and nonhuman societies |\n\n### Social skills\n\n| Skill | Covers |\n|---|---|\n| Negotiation | Deals, bargaining, settlements, leverage, and practical compromise |\n| Persuasion | Convincing, appealing, motivating, and steering decisions without overt coercion |\n| Deception | Lies, cover identities, misdirection, and forged social positioning |\n| Intimidation | Threats, dominance, pressure, and coercive presence |\n| Command | Giving orders, coordinating teams, rallying allies, and battlefield authority |\n| Insight | Reading intent, lies, fear, leverage points, and emotional tells |\n| Performance | Public speaking, stagecraft, music, distraction, and social spectacle |\n| Contacts | Calling in favors, finding specialists, and navigating social networks |\n\n**Insight** is a skill. **Instinct** is the characteristic.\n\n### Vehicle and drone skills\n\n| Skill | Covers |\n|---|---|\n| Driving | Ground vehicles in normal or high-pressure conditions |\n| Piloting | Aircraft, rotorcraft, gravcraft, or spacecraft |\n| Rigging | Direct neural or remote control of drones and vehicles |\n| Gunnery | Vehicle-mounted weapons, drone weapon systems, and turret control |\n| Navigation | Route planning, pursuit lines, safe corridors, and hazard reading |\n\n### Magic and supernatural skills\n\n| Skill | Covers |\n|---|---|\n| Spellcraft | Understanding, identifying, shaping, and countering spell effects |\n| Rituals | Long-form magical procedures, circles, offerings, and prepared workings |\n| Warding | Protective seals, anti-entity measures, barriers, and sanctified defenses |\n| Resonance | Technomantic harmonics, machine-spirit contact, and digital-supernatural interface work |\n| Corruption | Recognizing taint, surviving exposure, and handling warped forces or zones |\n| Summoning | Calling, binding, bargaining with, or directing supernatural entities |\n\n**Perk types and skill groups:** Crafting perks lean on Technical skills, Exploration on Action skills, Interpersonal on Social skills, and Lore on Knowledge skills (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.rtGumxlpMCvrB7K4]{Perks}).",
+        "content": "<p>Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in tests exactly as Draw Steel’s do (<code>03</code>). There are <strong>44 skills in six groups</strong>.</p>\n<h3>Action skills</h3>\n<table>\n<thead>\n<tr>\n<th id=\"skill\">Skill</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Athletics</td>\n<td>Running, climbing, jumping, lifting, swimming, and feats of exertion</td>\n</tr>\n<tr>\n<td>Brawl</td>\n<td>Unarmed combat, grapples, clinches, and improvised close violence</td>\n</tr>\n<tr>\n<td>Melee</td>\n<td>Blades, clubs, polearms, and other hand-held weapons</td>\n</tr>\n<tr>\n<td>Firearms</td>\n<td>Pistols, rifles, SMGs, shotguns, and conventional ranged weapons</td>\n</tr>\n<tr>\n<td>Heavy Weapons</td>\n<td>Launchers, support weapons, mounted guns, and demolition-facing battlefield pieces</td>\n</tr>\n<tr>\n<td>Stealth</td>\n<td>Sneaking, shadowing, concealment, infiltration, and moving unseen</td>\n</tr>\n<tr>\n<td>Acrobatics</td>\n<td>Balance, tumbles, dives, vaults, and difficult physical repositioning</td>\n</tr>\n<tr>\n<td>Perception</td>\n<td>Spotting danger, scanning scenes, catching details, and sensory sharpness</td>\n</tr>\n<tr>\n<td>Survival</td>\n<td>Tracking, foraging, navigation, fieldcraft, and staying alive in hostile zones</td>\n</tr>\n</tbody>\n</table>\n<h3>Technical skills</h3>\n<table>\n<thead>\n<tr>\n<th id=\"skill\">Skill</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Hacking</td>\n<td>Wired intrusion, device compromise, cybercombat, scanning, and bypassing digital security</td>\n</tr>\n<tr>\n<td>Electronics</td>\n<td>Circuits, sensors, comms, diagnostics, hardware setup, and signal work</td>\n</tr>\n<tr>\n<td>Engineering</td>\n<td>Structural, industrial, and mechanical design or problem-solving</td>\n</tr>\n<tr>\n<td>Repair</td>\n<td>Field fixes, maintenance, patch jobs, and combat repairs on gear or systems</td>\n</tr>\n<tr>\n<td>Cybertech</td>\n<td>Cyberware installation, diagnosis, tuning, and augmentation knowledge</td>\n</tr>\n<tr>\n<td>Medicine</td>\n<td>First aid, trauma care, surgery support, and biological stabilization</td>\n</tr>\n<tr>\n<td>Demolitions</td>\n<td>Breaching charges, bombs, traps, and controlled destruction</td>\n</tr>\n<tr>\n<td>Security Systems</td>\n<td>Locks, alarms, bypass tools, surveillance nets, and physical security architecture</td>\n</tr>\n</tbody>\n</table>\n<h3>Knowledge skills</h3>\n<table>\n<thead>\n<tr>\n<th id=\"skill\">Skill</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Streetwise</td>\n<td>Gangs, neighborhoods, fixers, black markets, criminal habits, and rumor networks</td>\n</tr>\n<tr>\n<td>Corporate</td>\n<td>Megacorps, departments, contracts, office politics, and institutional procedure</td>\n</tr>\n<tr>\n<td>History</td>\n<td>Past events, wars, collapses, timelines, and social memory</td>\n</tr>\n<tr>\n<td>Occult</td>\n<td>Demons, wards, taint, ritual signs, magical theory, and forbidden traditions</td>\n</tr>\n<tr>\n<td>Religion</td>\n<td>Faiths, saints, cults, dogma, and sacred practice</td>\n</tr>\n<tr>\n<td>Matrix Theory</td>\n<td>Deep understanding of networks, architecture, AI behavior, and code ecologies</td>\n</tr>\n<tr>\n<td>Medicine Lore</td>\n<td>Pathogens, drugs, toxins, physiology, and medical systems</td>\n</tr>\n<tr>\n<td>Xenology</td>\n<td>Colonies, altered peoples, extradimensional cultures, and nonhuman societies</td>\n</tr>\n</tbody>\n</table>\n<h3>Social skills</h3>\n<table>\n<thead>\n<tr>\n<th id=\"skill\">Skill</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Negotiation</td>\n<td>Deals, bargaining, settlements, leverage, and practical compromise</td>\n</tr>\n<tr>\n<td>Persuasion</td>\n<td>Convincing, appealing, motivating, and steering decisions without overt coercion</td>\n</tr>\n<tr>\n<td>Deception</td>\n<td>Lies, cover identities, misdirection, and forged social positioning</td>\n</tr>\n<tr>\n<td>Intimidation</td>\n<td>Threats, dominance, pressure, and coercive presence</td>\n</tr>\n<tr>\n<td>Command</td>\n<td>Giving orders, coordinating teams, rallying allies, and battlefield authority</td>\n</tr>\n<tr>\n<td>Insight</td>\n<td>Reading intent, lies, fear, leverage points, and emotional tells</td>\n</tr>\n<tr>\n<td>Performance</td>\n<td>Public speaking, stagecraft, music, distraction, and social spectacle</td>\n</tr>\n<tr>\n<td>Contacts</td>\n<td>Calling in favors, finding specialists, and navigating social networks</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Insight</strong> is a skill. <strong>Instinct</strong> is the characteristic.</p>\n<h3>Vehicle and drone skills</h3>\n<table>\n<thead>\n<tr>\n<th id=\"skill\">Skill</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Driving</td>\n<td>Ground vehicles in normal or high-pressure conditions</td>\n</tr>\n<tr>\n<td>Piloting</td>\n<td>Aircraft, rotorcraft, gravcraft, or spacecraft</td>\n</tr>\n<tr>\n<td>Rigging</td>\n<td>Direct neural or remote control of drones and vehicles</td>\n</tr>\n<tr>\n<td>Gunnery</td>\n<td>Vehicle-mounted weapons, drone weapon systems, and turret control</td>\n</tr>\n<tr>\n<td>Navigation</td>\n<td>Route planning, pursuit lines, safe corridors, and hazard reading</td>\n</tr>\n</tbody>\n</table>\n<h3>Magic and supernatural skills</h3>\n<table>\n<thead>\n<tr>\n<th id=\"skill\">Skill</th>\n<th id=\"covers\">Covers</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Spellcraft</td>\n<td>Understanding, identifying, shaping, and countering spell effects</td>\n</tr>\n<tr>\n<td>Rituals</td>\n<td>Long-form magical procedures, circles, offerings, and prepared workings</td>\n</tr>\n<tr>\n<td>Warding</td>\n<td>Protective seals, anti-entity measures, barriers, and sanctified defenses</td>\n</tr>\n<tr>\n<td>Resonance</td>\n<td>Technomantic harmonics, machine-spirit contact, and digital-supernatural interface work</td>\n</tr>\n<tr>\n<td>Corruption</td>\n<td>Recognizing taint, surviving exposure, and handling warped forces or zones</td>\n</tr>\n<tr>\n<td>Summoning</td>\n<td>Calling, binding, bargaining with, or directing supernatural entities</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Perk types and skill groups:</strong> Crafting perks lean on Technical skills, Exploration on Action skills, Interpersonal on Social skills, and Lore on Knowledge skills (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.rtGumxlpMCvrB7K4]{Perks}).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "xZ0JOBQ7SGEKaZi5",
+      "_key": "!journal.pages!susCeNktlPPcW0Dp.xZ0JOBQ7SGEKaZi5",
+      "name": "Build firewall",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Character power — characteristics, skills, class features, heroic resources — comes only from your People, Background, Profession, class, perks, and advancement. **¥ never buys character power**, and chrome and gear never grant characteristics, skills, or class features (`08`, `09`, `10`).",
+        "content": "<p>Character power — characteristics, skills, class features, heroic resources — comes only from your People, Background, Profession, class, perks, and advancement. <strong>¥ never buys character power</strong>, and chrome and gear never grant characteristics, skills, or class features (<code>08</code>, <code>09</code>, <code>10</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/02-heroes-characteristics.md"
+    }
+  }
+}

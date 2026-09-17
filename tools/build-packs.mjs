@@ -4,6 +4,8 @@
 // A subfolder's _folder.json is a compendium Folder; every item in that subfolder
 // must set "folder" to that Folder's _id (the build fails otherwise).
 // Actor packs work the same way: embedded items carry their own "!actors.items!" _key.
+// Journal packs: embedded pages carry their own "!journal.pages!" _key (src/packs/rulebook is generated
+// from docs/raw by tools/raw-to-journals.mjs).
 // Run with Foundry closed:  node tools/build-packs.mjs
 import { createRequire } from "node:module";
 import { readFileSync, readdirSync, rmSync, existsSync } from "node:fs";
@@ -38,7 +40,7 @@ for (const pack of readdirSync("src/packs")) {
   for (const file of files) {
     const { _key, ...doc } = readJson(join(src, file));
     // Foundry rejects the whole compendium (and the world renders black) on a malformed id.
-    const badId = [doc, ...(doc.effects ?? []), ...(doc.items ?? [])].find(d => !/^[A-Za-z0-9]{16}$/.test(d._id ?? ""));
+    const badId = [doc, ...(doc.effects ?? []), ...(doc.items ?? []), ...(doc.pages ?? [])].find(d => !/^[A-Za-z0-9]{16}$/.test(d._id ?? ""));
     if (badId) throw new Error(`${file}: _id "${badId._id}" must be 16 alphanumeric characters`);
     if (_key.startsWith("!folders!")) {
       await db.put(_key, { ...doc, _stats: stats });
@@ -49,10 +51,19 @@ for (const pack of readdirSync("src/packs")) {
     const expected = existsSync(folderFile) ? JSON.parse(readFileSync(folderFile, "utf8"))._id : null;
     if (doc.folder !== expected) throw new Error(`${file}: folder is ${doc.folder}, expected ${expected}`);
     // Embedded effects are stored under their own keys; the parent keeps only their ids.
-    for (const { _key: effectKey, ...effect } of doc.effects) {
-      await db.put(effectKey, { ...effect, _stats: stats });
+    if (Array.isArray(doc.effects)) {
+      for (const { _key: effectKey, ...effect } of doc.effects) {
+        await db.put(effectKey, { ...effect, _stats: stats });
+      }
+      doc.effects = doc.effects.map(e => e._id);
     }
-    doc.effects = doc.effects.map(e => e._id);
+    // Journal packs: pages ("!journal.pages!<entry>.<page>") get their own keys the same way.
+    if (Array.isArray(doc.pages)) {
+      for (const { _key: pageKey, ...page } of doc.pages) {
+        await db.put(pageKey, { ...page, _stats: stats });
+      }
+      doc.pages = doc.pages.map(p => p._id);
+    }
     // Actor packs: embedded Items ("!actors.items!<actor>.<item>") and their effects
     // ("!actors.items.effects!<actor>.<item>.<effect>") get their own keys the same way.
     if (Array.isArray(doc.items)) {
@@ -67,7 +78,7 @@ for (const pack of readdirSync("src/packs")) {
     }
     doc._stats = stats;
     await db.put(_key, doc);
-    console.log(`${pack}: ${doc.type} "${doc.name}"`);
+    console.log(`${pack}: ${doc.type ?? (doc.pages ? "journal" : "document")} "${doc.name}"`);
   }
   await db.compactRange("\x00", "\uffff");
   await db.close();

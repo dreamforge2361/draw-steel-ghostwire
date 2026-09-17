@@ -1,0 +1,130 @@
+{
+  "_id": "Yg38hFIb7bG8QyZG",
+  "_key": "!journal!Yg38hFIb7bG8QyZG",
+  "name": "GHOSTWIRE.Rulebook.Journals.TestsPowerRolls",
+  "folder": "gwRulebookCore00",
+  "sort": 300000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "cg6a0ICLVP986H5o",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.cg6a0ICLVP986H5o",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/08-hacker.md`, `docs/rulebook/18-wired-foundry.md`, `docs/rulebook/17-perks.md`*\n\n**Engine:** Draw Steel Heroes — use the official rules for tests, power rolls, edges and banes, skills, and saving throws; Ghostwire remaps below.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/08-hacker.md</code>, <code>docs/rulebook/18-wired-foundry.md</code>, <code>docs/rulebook/17-perks.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official rules for tests, power rolls, edges and banes, skills, and saving throws; Ghostwire remaps below.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "6QRcN9PKKVAitmtL",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.6QRcN9PKKVAitmtL",
+      "name": "The Power Roll",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "When a runner acts under pressure, they make a **Power Roll**: roll two ten-sided dice and add a characteristic (and any bonuses). The total lands in one of three **results**:\n\n| Result | Total |\n|---|---|\n| **Low** | 11 or less |\n| **Middle** | 12–16 |\n| **High** | 17 or more |\n\nGhostwire always prints results in this order — low, middle, high — with the weakest effect first.\n\n**“Improve the outcome by one result”** means low becomes middle, or middle becomes high.",
+        "content": "<p>When a runner acts under pressure, they make a <strong>Power Roll</strong>: roll two ten-sided dice and add a characteristic (and any bonuses). The total lands in one of three <strong>results</strong>:</p>\n<table>\n<thead>\n<tr>\n<th id=\"result\">Result</th>\n<th id=\"total\">Total</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Low</strong></td>\n<td>11 or less</td>\n</tr>\n<tr>\n<td><strong>Middle</strong></td>\n<td>12–16</td>\n</tr>\n<tr>\n<td><strong>High</strong></td>\n<td>17 or more</td>\n</tr>\n</tbody>\n</table>\n<p>Ghostwire always prints results in this order — low, middle, high — with the weakest effect first.</p>\n<p><strong>“Improve the outcome by one result”</strong> means low becomes middle, or middle becomes high.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "CMJIQcsJ8dFfWWUC",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.CMJIQcsJ8dFfWWUC",
+      "name": "Engine by reference",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Rule | Use from Draw Steel Heroes | Ghostwire |\n|---|---|---|\n| Making a test | As written | Characteristic names per `02` |\n| Test difficulty | As written | — |\n| Edges and banes | As written | Connection states add edges and banes (below) |\n| Skills in tests | As written | Ghostwire skill list (`02`); the Hacking exception (below) |\n| Critical results | As written | — |\n| Opposed and group tests; montage tests | As written | — |\n| Potency and resisting effects | As written | Ghostwire characteristic names |\n| Saving throws | As written | — |\n| Hero tokens | As written | Some perks spend them (`11`) |\n| Negotiation | As written | Patrons and fixers; Draw Steel motivations and pitfalls |\n| Projects | As written | §Craft Projects use Hacking, Electronics, Repair, or Cybertech (`08`, `10`) |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"rule\">Rule</th>\n<th id=\"use_from_draw_steel_heroes\">Use from Draw Steel Heroes</th>\n<th id=\"ghostwire\">Ghostwire</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Making a test</td>\n<td>As written</td>\n<td>Characteristic names per <code>02</code></td>\n</tr>\n<tr>\n<td>Test difficulty</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Edges and banes</td>\n<td>As written</td>\n<td>Connection states add edges and banes (below)</td>\n</tr>\n<tr>\n<td>Skills in tests</td>\n<td>As written</td>\n<td>Ghostwire skill list (<code>02</code>); the Hacking exception (below)</td>\n</tr>\n<tr>\n<td>Critical results</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Opposed and group tests; montage tests</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Potency and resisting effects</td>\n<td>As written</td>\n<td>Ghostwire characteristic names</td>\n</tr>\n<tr>\n<td>Saving throws</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Hero tokens</td>\n<td>As written</td>\n<td>Some perks spend them (<code>11</code>)</td>\n</tr>\n<tr>\n<td>Negotiation</td>\n<td>As written</td>\n<td>Patrons and fixers; Draw Steel motivations and pitfalls</td>\n</tr>\n<tr>\n<td>Projects</td>\n<td>As written</td>\n<td>§Craft Projects use Hacking, Electronics, Repair, or Cybertech (<code>08</code>, <code>10</code>)</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "rxB9IJ6hTmAZXBS1",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.rxB9IJ6hTmAZXBS1",
+      "name": "Ghostwire modifiers",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Connection states\n\nYour connection to the Wired changes your rolls (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}):\n\n| State | Wired Power Rolls | Real-world Power Rolls |\n|---|---|---|\n| Disconnected | — | — |\n| **Overlay** | — | **Bane** |\n| **Jacked In** | **Edge** | Not allowed — your body is inert |\n\nA Wired roll is any Power Roll for a Matrix Verb, Program, or other ability with the **Wired** keyword.\n\n### The Hacking skill\n\nHaving the **Hacking** skill gives an **edge** on every rolling Matrix Verb and other Wired Power Roll. For those rolls it replaces the usual skill benefit.\n\n### Gear and armor\n\n- **Encumbrance:** medium and heavy armor impose banes on some tests (`08`).\n- **Mods** can add edges in specific situations; installed Wired software can add edges to named rolls (`10`, `19`).\n- **Chrome** grants situational edges; a **Damaged** implant works at a penalty (`09`).\n\n### Result wording in Ghostwire text\n\nAbilities, perks, and gear print their effects by result. Where a Wired ability says **low** “works, but something goes wrong,” that usually means Trace Alert rises (`21`).",
+        "content": "<h3>Connection states</h3>\n<p>Your connection to the Wired changes your rolls (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}):</p>\n<table>\n<thead>\n<tr>\n<th id=\"state\">State</th>\n<th id=\"wired_power_rolls\">Wired Power Rolls</th>\n<th id=\"real-world_power_rolls\">Real-world Power Rolls</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Disconnected</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td><strong>Overlay</strong></td>\n<td>—</td>\n<td><strong>Bane</strong></td>\n</tr>\n<tr>\n<td><strong>Jacked In</strong></td>\n<td><strong>Edge</strong></td>\n<td>Not allowed — your body is inert</td>\n</tr>\n</tbody>\n</table>\n<p>A Wired roll is any Power Roll for a Matrix Verb, Program, or other ability with the <strong>Wired</strong> keyword.</p>\n<h3>The Hacking skill</h3>\n<p>Having the <strong>Hacking</strong> skill gives an <strong>edge</strong> on every rolling Matrix Verb and other Wired Power Roll. For those rolls it replaces the usual skill benefit.</p>\n<h3>Gear and armor</h3>\n<ul>\n<li><strong>Encumbrance:</strong> medium and heavy armor impose banes on some tests (<code>08</code>).</li>\n<li><strong>Mods</strong> can add edges in specific situations; installed Wired software can add edges to named rolls (<code>10</code>, <code>19</code>).</li>\n<li><strong>Chrome</strong> grants situational edges; a <strong>Damaged</strong> implant works at a penalty (<code>09</code>).</li>\n</ul>\n<h3>Result wording in Ghostwire text</h3>\n<p>Abilities, perks, and gear print their effects by result. Where a Wired ability says <strong>low</strong> “works, but something goes wrong,” that usually means Trace Alert rises (<code>21</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/03-tests-power-rolls.md"
+    }
+  }
+}

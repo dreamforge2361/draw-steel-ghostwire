@@ -1,0 +1,130 @@
+{
+  "_id": "jDbQHMGFFuAA663q",
+  "_key": "!journal!jDbQHMGFFuAA663q",
+  "name": "GHOSTWIRE.Rulebook.Journals.BackgroundsProfessions",
+  "folder": "gwRulebookHeroes",
+  "sort": 200000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "gzp4Ln7j5rsWhBpw",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.gzp4Ln7j5rsWhBpw",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: `docs/rulebook/13-backgrounds-professions.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`*\n\nEvery hero picks one **Background** (where you grew up — Draw Steel’s *culture*) and one **Profession** (what you did before the job — Draw Steel’s *career*). Both grant skills from the Ghostwire skill list (see @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}). Neither grants Build Points, attributes, or class features.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/13-backgrounds-professions.md</code>, <code>docs/masters/GHOSTWIRE_SKILLS_MASTER.md</code></em></p>\n<p>Every hero picks one <strong>Background</strong> (where you grew up — Draw Steel’s <em>culture</em>) and one <strong>Profession</strong> (what you did before the job — Draw Steel’s <em>career</em>). Both grant skills from the Ghostwire skill list (see @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}). Neither grants Build Points, attributes, or class features.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "aJMTbTG1i1SwiBor",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.aJMTbTG1i1SwiBor",
+      "name": "Skill grants",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Background:** one **fixed** skill plus **choose 1** from a list of four.\n- **Profession:** one **fixed** skill plus **choose 2** from a list of four.\n- **No wasted duplicates:** You can’t choose a skill you already have — from your ancestry, class, the other of Background/Profession, or an earlier pick. If that leaves too few options, choose any skill you don’t have from the same skill group (then from any group).\n- Fixed skills never overlap by design: no Background fixed skill is a Profession fixed skill, and none of them is a skill an Operator Origin grants (Command, Demolitions, Intimidation). If some other source already gave you a fixed skill, choose another skill from the same Ghostwire group instead.",
+        "content": "<ul>\n<li><strong>Background:</strong> one <strong>fixed</strong> skill plus <strong>choose 1</strong> from a list of four.</li>\n<li><strong>Profession:</strong> one <strong>fixed</strong> skill plus <strong>choose 2</strong> from a list of four.</li>\n<li><strong>No wasted duplicates:</strong> You can’t choose a skill you already have — from your ancestry, class, the other of Background/Profession, or an earlier pick. If that leaves too few options, choose any skill you don’t have from the same skill group (then from any group).</li>\n<li>Fixed skills never overlap by design: no Background fixed skill is a Profession fixed skill, and none of them is a skill an Operator Origin grants (Command, Demolitions, Intimidation). If some other source already gave you a fixed skill, choose another skill from the same Ghostwire group instead.</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "bBVAJNDtrkUWD72m",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.bBVAJNDtrkUWD72m",
+      "name": "Backgrounds",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Each Background also ties you to a community: you have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).\n\n| Background | Fixed skill | Choose 1 | Community |\n|---|---|---|---|\n| **Undercity Barrens** | Stealth | Streetwise, Survival, Perception, Athletics | The Undercity’s squatter blocks, tunnel gangs, and scavenger crews |\n| **Corp Arcology** | Corporate | Persuasion, Negotiation, Insight, Security Systems | Your arcology’s departments, company families, and internal security |\n| **Sprawl District** | Streetwise | Negotiation, Contacts, Perception, Brawl | Your district’s street vendors, fixers, block associations, and local gangs |\n| **Transit Hub / Freeport** | Navigation | Contacts, Driving, Piloting, Negotiation | Dockworkers, freight crews, customs brokers, and travelers passing through your hub |\n| **Outland Wastes** | Survival | Athletics, Driving, Perception, Firearms | Outland nomad clans, convoy runners, and wasteland settlements |\n| **Academic Spire** | History | Occult, Matrix Theory, Medicine Lore, Xenology | Your spire’s faculty, archivists, research departments, and rival scholars |\n| **Faith District** | Religion | Insight, Occult, Warding, Medicine | The district’s churches, shelters, orders of the Light, and the faithful who depend on them |\n| **Industrial Deep** | Engineering | Repair, Athletics, Demolitions, Electronics | Foundry crews, labor unions, and Industrial Deep shift towns |\n\n**Industrial Deep** is Corran-flavored but open to any People.",
+        "content": "<p>Each Background also ties you to a community: you have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>\n<table>\n<thead>\n<tr>\n<th id=\"background\">Background</th>\n<th id=\"fixed_skill\">Fixed skill</th>\n<th id=\"choose_1\">Choose 1</th>\n<th id=\"community\">Community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Undercity Barrens</strong></td>\n<td>Stealth</td>\n<td>Streetwise, Survival, Perception, Athletics</td>\n<td>The Undercity’s squatter blocks, tunnel gangs, and scavenger crews</td>\n</tr>\n<tr>\n<td><strong>Corp Arcology</strong></td>\n<td>Corporate</td>\n<td>Persuasion, Negotiation, Insight, Security Systems</td>\n<td>Your arcology’s departments, company families, and internal security</td>\n</tr>\n<tr>\n<td><strong>Sprawl District</strong></td>\n<td>Streetwise</td>\n<td>Negotiation, Contacts, Perception, Brawl</td>\n<td>Your district’s street vendors, fixers, block associations, and local gangs</td>\n</tr>\n<tr>\n<td><strong>Transit Hub / Freeport</strong></td>\n<td>Navigation</td>\n<td>Contacts, Driving, Piloting, Negotiation</td>\n<td>Dockworkers, freight crews, customs brokers, and travelers passing through your hub</td>\n</tr>\n<tr>\n<td><strong>Outland Wastes</strong></td>\n<td>Survival</td>\n<td>Athletics, Driving, Perception, Firearms</td>\n<td>Outland nomad clans, convoy runners, and wasteland settlements</td>\n</tr>\n<tr>\n<td><strong>Academic Spire</strong></td>\n<td>History</td>\n<td>Occult, Matrix Theory, Medicine Lore, Xenology</td>\n<td>Your spire’s faculty, archivists, research departments, and rival scholars</td>\n</tr>\n<tr>\n<td><strong>Faith District</strong></td>\n<td>Religion</td>\n<td>Insight, Occult, Warding, Medicine</td>\n<td>The district’s churches, shelters, orders of the Light, and the faithful who depend on them</td>\n</tr>\n<tr>\n<td><strong>Industrial Deep</strong></td>\n<td>Engineering</td>\n<td>Repair, Athletics, Demolitions, Electronics</td>\n<td>Foundry crews, labor unions, and Industrial Deep shift towns</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Industrial Deep</strong> is Corran-flavored but open to any People.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "MbXRbtl1lXZCdod6",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.MbXRbtl1lXZCdod6",
+      "name": "Professions",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.\n\n| Profession | Fixed skill | Choose 2 |\n|---|---|---|\n| **Wage-Slave** | Negotiation | Corporate, Persuasion, Insight, Electronics |\n| **Street Doc** | Medicine | Cybertech, Insight, Streetwise, Medicine Lore |\n| **Fixer** | Contacts | Negotiation, Streetwise, Insight, Deception |\n| **Courier** | Driving | Stealth, Navigation, Athletics, Streetwise |\n| **Gang Soldier** | Firearms | Intimidation, Streetwise, Brawl, Melee |\n| **Security Guard** | Perception | Firearms, Intimidation, Security Systems, Brawl |\n| **Smuggler** | Security Systems | Deception, Contacts, Driving, Stealth |\n| **Rig-Tech** | Rigging | Electronics, Repair, Driving, Piloting |\n| **Deck Jockey** | Hacking | Matrix Theory, Electronics, Security Systems, Streetwise |\n| **Entertainer** | Performance | Persuasion, Deception, Insight, Contacts |\n| **Beat Reporter** | Perception | Corporate, Contacts, Insight, Electronics |\n| **Hauler / Labor** | Athletics | Driving, Repair, Brawl, Engineering |\n| **Merc Recruit** | Firearms | Athletics, Survival, Melee, Heavy Weapons |\n| **Acolyte** | Occult | Religion, Insight, Warding, Rituals |\n| **Chop-Doc Assistant** | Cybertech | Medicine, Streetwise, Demolitions, Electronics |",
+        "content": "<p>Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>\n<table>\n<thead>\n<tr>\n<th id=\"profession\">Profession</th>\n<th id=\"fixed_skill\">Fixed skill</th>\n<th id=\"choose_2\">Choose 2</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Wage-Slave</strong></td>\n<td>Negotiation</td>\n<td>Corporate, Persuasion, Insight, Electronics</td>\n</tr>\n<tr>\n<td><strong>Street Doc</strong></td>\n<td>Medicine</td>\n<td>Cybertech, Insight, Streetwise, Medicine Lore</td>\n</tr>\n<tr>\n<td><strong>Fixer</strong></td>\n<td>Contacts</td>\n<td>Negotiation, Streetwise, Insight, Deception</td>\n</tr>\n<tr>\n<td><strong>Courier</strong></td>\n<td>Driving</td>\n<td>Stealth, Navigation, Athletics, Streetwise</td>\n</tr>\n<tr>\n<td><strong>Gang Soldier</strong></td>\n<td>Firearms</td>\n<td>Intimidation, Streetwise, Brawl, Melee</td>\n</tr>\n<tr>\n<td><strong>Security Guard</strong></td>\n<td>Perception</td>\n<td>Firearms, Intimidation, Security Systems, Brawl</td>\n</tr>\n<tr>\n<td><strong>Smuggler</strong></td>\n<td>Security Systems</td>\n<td>Deception, Contacts, Driving, Stealth</td>\n</tr>\n<tr>\n<td><strong>Rig-Tech</strong></td>\n<td>Rigging</td>\n<td>Electronics, Repair, Driving, Piloting</td>\n</tr>\n<tr>\n<td><strong>Deck Jockey</strong></td>\n<td>Hacking</td>\n<td>Matrix Theory, Electronics, Security Systems, Streetwise</td>\n</tr>\n<tr>\n<td><strong>Entertainer</strong></td>\n<td>Performance</td>\n<td>Persuasion, Deception, Insight, Contacts</td>\n</tr>\n<tr>\n<td><strong>Beat Reporter</strong></td>\n<td>Perception</td>\n<td>Corporate, Contacts, Insight, Electronics</td>\n</tr>\n<tr>\n<td><strong>Hauler / Labor</strong></td>\n<td>Athletics</td>\n<td>Driving, Repair, Brawl, Engineering</td>\n</tr>\n<tr>\n<td><strong>Merc Recruit</strong></td>\n<td>Firearms</td>\n<td>Athletics, Survival, Melee, Heavy Weapons</td>\n</tr>\n<tr>\n<td><strong>Acolyte</strong></td>\n<td>Occult</td>\n<td>Religion, Insight, Warding, Rituals</td>\n</tr>\n<tr>\n<td><strong>Chop-Doc Assistant</strong></td>\n<td>Cybertech</td>\n<td>Medicine, Streetwise, Demolitions, Electronics</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/06-backgrounds-professions.md"
+    }
+  }
+}

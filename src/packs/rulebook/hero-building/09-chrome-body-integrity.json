@@ -1,0 +1,354 @@
+{
+  "_id": "OtC0jRxx9pr0SzEx",
+  "_key": "!journal!OtC0jRxx9pr0SzEx",
+  "name": "GHOSTWIRE.Rulebook.Journals.ChromeBodyIntegrity",
+  "folder": "gwRulebookHeroes",
+  "sort": 500000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "OWtcc5lLz7J849TU",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.OWtcc5lLz7J849TU",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft · Sources: `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`*\n\nExact ¥ prices and package Integrity totals are set by the gear catalog (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear & Wealth (¥)}). Cyborgs do not use this chapter.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/12-chrome.md</code>, <code>docs/masters/GHOSTWIRE_CHROME_MASTER.md</code></em></p>\n<p>Exact ¥ prices and package Integrity totals are set by the gear catalog (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear &amp; Wealth (¥)}). Cyborgs do not use this chapter.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "wOfUxlafXPZCsyPQ",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.wOfUxlafXPZCsyPQ",
+      "name": "Core distinction — chrome vs Cyborg",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Path | What it is | System |\n|---|---|---|\n| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |\n| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — frame **modules** + BP; **Arcane Severance**; **no Body Integrity** |\n\nPushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"path\">Path</th>\n<th id=\"what_it_is\">What it is</th>\n<th id=\"system\">System</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Cyber-augmented hero</strong></td>\n<td>Living person (any non-Cyborg People); implants <strong>overlay</strong> flesh</td>\n<td><strong>This chapter</strong> — ¥ + Body Integrity</td>\n</tr>\n<tr>\n<td><strong>Full-Conversion Cyborg</strong> (<em>Machina sapiens</em>)</td>\n<td>Machine-first chassis; person <strong>replaced</strong></td>\n<td>Species rules — frame <strong>modules</strong> + BP; <strong>Arcane Severance</strong>; <strong>no Body Integrity</strong></td>\n</tr>\n</tbody>\n</table>\n<p>Pushing Integrity to zero does <strong>not</strong> turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "TqsxyLcT2rnEbuQ3",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.TqsxyLcT2rnEbuQ3",
+      "name": "Body Integrity (start 20)",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Pool:** every non-Cyborg begins with **Body Integrity 20** (enough for roughly 3–5 mid-grade implants). Species/Background may nudge later — open.\n- **Spend:** installing an implant permanently reduces remaining Integrity by its cost. Insufficient Integrity = cannot install.\n- **Recover:** only by surgical **removal** (downtime). Returns **75%** of that implant's spent Integrity (**round down**); **25%** permanent scar loss.\n- **Integrity 0:** cannot install past flesh; flirting with zero via battle-damage replacement is horror pressure, not a species change.",
+        "content": "<ul>\n<li><strong>Pool:</strong> every non-Cyborg begins with <strong>Body Integrity 20</strong> (enough for roughly 3–5 mid-grade implants). Species/Background may nudge later — open.</li>\n<li><strong>Spend:</strong> installing an implant permanently reduces remaining Integrity by its cost. Insufficient Integrity = cannot install.</li>\n<li><strong>Recover:</strong> only by surgical <strong>removal</strong> (downtime). Returns <strong>75%</strong> of that implant's spent Integrity (<strong>round down</strong>); <strong>25%</strong> permanent scar loss.</li>\n<li><strong>Integrity 0:</strong> cannot install past flesh; flirting with zero via battle-damage replacement is horror pressure, not a species change.</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "nHTTGWPzrYkHQNK6",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.nHTTGWPzrYkHQNK6",
+      "name": "Grades",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Grade | ¥ | Body Integrity | Flavor |\n|---|---|---|---|\n| **Salvage / Used** | Cheap | ×**1.5** of Standard | Black-clinic, ex-corpse; brutal on flesh |\n| **Standard / Clinic** | Baseline | Baseline | Factory-grade default |\n| **Soft / Bioware** | Expensive | ×**0.4** of Standard (**round up**) | Vat-cultured; mage-tolerable at high cost/Availability |\n\n**Representative Standard Integrity costs:** Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires/Encephalon 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"grade\">Grade</th>\n<th id=\"¥\">¥</th>\n<th id=\"body_integrity\">Body Integrity</th>\n<th id=\"flavor\">Flavor</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Salvage / Used</strong></td>\n<td>Cheap</td>\n<td>×<strong>1.5</strong> of Standard</td>\n<td>Black-clinic, ex-corpse; brutal on flesh</td>\n</tr>\n<tr>\n<td><strong>Standard / Clinic</strong></td>\n<td>Baseline</td>\n<td>Baseline</td>\n<td>Factory-grade default</td>\n</tr>\n<tr>\n<td><strong>Soft / Bioware</strong></td>\n<td>Expensive</td>\n<td>×<strong>0.4</strong> of Standard (<strong>round up</strong>)</td>\n<td>Vat-cultured; mage-tolerable at high cost/Availability</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Representative Standard Integrity costs:</strong> Datajack 1 · Cyber-Eyes 2 · Cyber-Ears 2 · Wired Reflexes 6 · Muscle/Bone Lacing 5 · Dermal Plating 4 · Cyberlimb 5/limb · Implant Weapon 1 · Running Gear 3 · Skillwires/Encephalon 4 · Reaction Enhancer 3 · Internal Air/Filtration 2 · Vocal Modulator 1.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "VMka0snFUWkEZaIR",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.VMka0snFUWkEZaIR",
+      "name": "Location slots",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Location | Typical | Slot cap |\n|---|---|---|\n| Head / Neural | Datajacks, skillwires, encephalon, memory | 3 |\n| Eyes / Optics | Cyber-eyes, optical suites, targeting | 1 |\n| Ears / Aural | Cyber-ears, audio suites | 1 |\n| Torso / Core | Lacing, dermal, filtration, secondary hearts | 3 |\n| Arms / Hands | Cyberlimbs, implant weapons, tool-hands | 2 per arm |\n| Legs / Locomotion | Cyberlegs, jacks, running gear | 2 per leg |\n| Nervous system | Wired reflexes, reaction enhancers, governors | **1** |\n\nSlots are a hard ceiling independent of Integrity. Large implants may consume a whole location.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"location\">Location</th>\n<th id=\"typical\">Typical</th>\n<th id=\"slot_cap\">Slot cap</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Head / Neural</td>\n<td>Datajacks, skillwires, encephalon, memory</td>\n<td>3</td>\n</tr>\n<tr>\n<td>Eyes / Optics</td>\n<td>Cyber-eyes, optical suites, targeting</td>\n<td>1</td>\n</tr>\n<tr>\n<td>Ears / Aural</td>\n<td>Cyber-ears, audio suites</td>\n<td>1</td>\n</tr>\n<tr>\n<td>Torso / Core</td>\n<td>Lacing, dermal, filtration, secondary hearts</td>\n<td>3</td>\n</tr>\n<tr>\n<td>Arms / Hands</td>\n<td>Cyberlimbs, implant weapons, tool-hands</td>\n<td>2 per arm</td>\n</tr>\n<tr>\n<td>Legs / Locomotion</td>\n<td>Cyberlegs, jacks, running gear</td>\n<td>2 per leg</td>\n</tr>\n<tr>\n<td>Nervous system</td>\n<td>Wired reflexes, reaction enhancers, governors</td>\n<td><strong>1</strong></td>\n</tr>\n</tbody>\n</table>\n<p>Slots are a hard ceiling independent of Integrity. Large implants may consume a whole location.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "4gwgMzpQqi2IEB8c",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.4gwgMzpQqi2IEB8c",
+      "name": "Magic erosion (provisional)",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Casting-resource **cap** reduced by:\n\n| Grade installed | Cap loss |\n|---|---|\n| Standard | **−1 per 2** Integrity spent (round down) |\n| Soft / Bioware | **−1 per 3** Integrity spent |\n| Salvage | **−1 per 1** Integrity spent |\n\nSoft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.",
+        "content": "<p>Casting-resource <strong>cap</strong> reduced by:</p>\n<table>\n<thead>\n<tr>\n<th id=\"grade_installed\">Grade installed</th>\n<th id=\"cap_loss\">Cap loss</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Standard</td>\n<td><strong>−1 per 2</strong> Integrity spent (round down)</td>\n</tr>\n<tr>\n<td>Soft / Bioware</td>\n<td><strong>−1 per 3</strong> Integrity spent</td>\n</tr>\n<tr>\n<td>Salvage</td>\n<td><strong>−1 per 1</strong> Integrity spent</td>\n</tr>\n</tbody>\n</table>\n<p>Soft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "MsEZZfR7wRUr35FV",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.MsEZZfR7wRUr35FV",
+      "name": "Suppress / Damage / Destroy (summary)",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Reuses conditions + Wired biofeedback (not a bespoke ladder):\n\n- **Suppressed** — temporary offline (EMP, hostile decker, spell); biofeedback jolt possible; recovers when effect ends / reboot.\n- **Damaged** — works at a penalty until downtime repair.\n- **Destroyed** — benefit gone; Integrity **locked out** until repair-or-replace downtime; neural destroy can wound hard.\n\nExact numbers for called shots and anti-cyber effects are not yet published; the Director adjudicates.",
+        "content": "<p>Reuses conditions + Wired biofeedback (not a bespoke ladder):</p>\n<ul>\n<li><strong>Suppressed</strong> — temporary offline (EMP, hostile decker, spell); biofeedback jolt possible; recovers when effect ends / reboot.</li>\n<li><strong>Damaged</strong> — works at a penalty until downtime repair.</li>\n<li><strong>Destroyed</strong> — benefit gone; Integrity <strong>locked out</strong> until repair-or-replace downtime; neural destroy can wound hard.</li>\n</ul>\n<p>Exact numbers for called shots and anti-cyber effects are not yet published; the Director adjudicates.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "diOLvLgel6yBjW8T",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.diOLvLgel6yBjW8T",
+      "name": "Install / remove / repair (downtime loop)",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "1. **Acquire** — buy with ¥; Availability gated (Economy).\n2. **Install** — downtime surgery; spends Integrity; fills slots; botch can cost extra Integrity / lasting condition.\n3. **Battle-damage replacement** — lost limb/eye → cyber fix restores function but spends Integrity.\n4. **Remove** — downtime; frees slots; returns 75% Integrity (scar 25%).\n5. **Repair** — Damaged/Destroyed mended in downtime. Natural installers: **Wrench**, **Medic/street-doc**, **Technomancer**-adjacent features.",
+        "content": "<ol>\n<li><strong>Acquire</strong> — buy with ¥; Availability gated (Economy).</li>\n<li><strong>Install</strong> — downtime surgery; spends Integrity; fills slots; botch can cost extra Integrity / lasting condition.</li>\n<li><strong>Battle-damage replacement</strong> — lost limb/eye → cyber fix restores function but spends Integrity.</li>\n<li><strong>Remove</strong> — downtime; frees slots; returns 75% Integrity (scar 25%).</li>\n<li><strong>Repair</strong> — Damaged/Destroyed mended in downtime. Natural installers: <strong>Wrench</strong>, <strong>Medic/street-doc</strong>, <strong>Technomancer</strong>-adjacent features.</li>\n</ol>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "VLBniDeNIww1KWE8",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.VLBniDeNIww1KWE8",
+      "name": "Packages overview",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "A **Chrome Package** is a pre-vetted suite: one product, one surgery, one ¥ payment, published total Integrity + slot footprint, legal-by-construction. Grade applies to the whole package. Convenience premium vs itemizing; **no more capability** than the equivalent itemized build. **One package per role**; no location overlap; no same-effect double-dip.\n\n### Signature package lines (6)\n\n| Package | Role | Bundled loadout (representative) |\n|---|---|---|\n| **\"Roadrunner\" Kinetic Suite** | Mobility | Running gear + reaction enhancer + balance augmentation |\n| **\"Argus\" Perception Array** | Sensory & Comms | Cyber-eyes + cyber-ears + datajack/comm link |\n| **\"Bulwark\" Hardframe** | Durability | Dermal plating + bone lacing + internal filtration |\n| **\"Lazarus\" Trauma Package** | Health & Recovery | Secondary heart/trauma damper + toxin scrubber + wound-seal weave |\n| **\"Warhound\" Combat Rig** | Combat | Wired reflexes + implant weapon + targeting link |\n| **\"Silvertongue\" Social Suite** | Influence | Vocal modulator + empathy processor + tailored pheromone gland |\n\nBundle prices and Integrity totals are not yet published. Heroes never start with a free chrome package.",
+        "content": "<p>A <strong>Chrome Package</strong> is a pre-vetted suite: one product, one surgery, one ¥ payment, published total Integrity + slot footprint, legal-by-construction. Grade applies to the whole package. Convenience premium vs itemizing; <strong>no more capability</strong> than the equivalent itemized build. <strong>One package per role</strong>; no location overlap; no same-effect double-dip.</p>\n<h3>Signature package lines (6)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"package\">Package</th>\n<th id=\"role\">Role</th>\n<th id=\"bundled_loadout_(representative)\">Bundled loadout (representative)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>\"Roadrunner\" Kinetic Suite</strong></td>\n<td>Mobility</td>\n<td>Running gear + reaction enhancer + balance augmentation</td>\n</tr>\n<tr>\n<td><strong>\"Argus\" Perception Array</strong></td>\n<td>Sensory &amp; Comms</td>\n<td>Cyber-eyes + cyber-ears + datajack/comm link</td>\n</tr>\n<tr>\n<td><strong>\"Bulwark\" Hardframe</strong></td>\n<td>Durability</td>\n<td>Dermal plating + bone lacing + internal filtration</td>\n</tr>\n<tr>\n<td><strong>\"Lazarus\" Trauma Package</strong></td>\n<td>Health &amp; Recovery</td>\n<td>Secondary heart/trauma damper + toxin scrubber + wound-seal weave</td>\n</tr>\n<tr>\n<td><strong>\"Warhound\" Combat Rig</strong></td>\n<td>Combat</td>\n<td>Wired reflexes + implant weapon + targeting link</td>\n</tr>\n<tr>\n<td><strong>\"Silvertongue\" Social Suite</strong></td>\n<td>Influence</td>\n<td>Vocal modulator + empathy processor + tailored pheromone gland</td>\n</tr>\n</tbody>\n</table>\n<p>Bundle prices and Integrity totals are not yet published. Heroes never start with a free chrome package.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "78G8qEpq0ANHBLLO",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.78G8qEpq0ANHBLLO",
+      "name": "Early implant list (representative)",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Implant | Location | Benefit (situational) |\n|---|---|---|\n| Datajack | Head/Neural | Direct-neural Wired/device interface |\n| Cyber-Eyes (optical suite) | Eyes/Optics | Low-light/thermal/mag/record; perception edge; destroyable |\n| Cyber-Ears (audio suite) | Ears/Aural | Amp, spatial, dampers, translation |\n| Wired Reflexes | Nervous system | Premium reaction / first-strike; hardest slot; heavy Integrity |\n| Muscle / Bone Lacing | Torso/Core | Physique/durability edge; heavy Integrity |\n| Dermal Plating | Torso/Core | Sub-dermal DR; visible chrome social cost |\n| Cyberlimb (arm) | Arms/Hands | Limb replace; tool/weapon mount; called-shot target |\n| Implant Weapon | Arms/Hands | Concealed, non-disarmable |\n| Running Gear | Legs/Locomotion | Speed / jump edge |\n| Skillwires / Encephalon | Head/Neural | Skill-soft or cognition edge; high magic erosion |\n| Reaction Enhancer | Nervous system | Budget Wired cousin |\n| Internal Air / Filtration | Torso/Core | Sealed breath; toxin/gas edge |\n| Vocal Modulator / Empathy Processor | Head/Neural | Face chrome; Soft preferred |\n\nImplant ¥ prices and Availability are not yet published.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"implant\">Implant</th>\n<th id=\"location\">Location</th>\n<th id=\"benefit_(situational)\">Benefit (situational)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Datajack</td>\n<td>Head/Neural</td>\n<td>Direct-neural Wired/device interface</td>\n</tr>\n<tr>\n<td>Cyber-Eyes (optical suite)</td>\n<td>Eyes/Optics</td>\n<td>Low-light/thermal/mag/record; perception edge; destroyable</td>\n</tr>\n<tr>\n<td>Cyber-Ears (audio suite)</td>\n<td>Ears/Aural</td>\n<td>Amp, spatial, dampers, translation</td>\n</tr>\n<tr>\n<td>Wired Reflexes</td>\n<td>Nervous system</td>\n<td>Premium reaction / first-strike; hardest slot; heavy Integrity</td>\n</tr>\n<tr>\n<td>Muscle / Bone Lacing</td>\n<td>Torso/Core</td>\n<td>Physique/durability edge; heavy Integrity</td>\n</tr>\n<tr>\n<td>Dermal Plating</td>\n<td>Torso/Core</td>\n<td>Sub-dermal DR; visible chrome social cost</td>\n</tr>\n<tr>\n<td>Cyberlimb (arm)</td>\n<td>Arms/Hands</td>\n<td>Limb replace; tool/weapon mount; called-shot target</td>\n</tr>\n<tr>\n<td>Implant Weapon</td>\n<td>Arms/Hands</td>\n<td>Concealed, non-disarmable</td>\n</tr>\n<tr>\n<td>Running Gear</td>\n<td>Legs/Locomotion</td>\n<td>Speed / jump edge</td>\n</tr>\n<tr>\n<td>Skillwires / Encephalon</td>\n<td>Head/Neural</td>\n<td>Skill-soft or cognition edge; high magic erosion</td>\n</tr>\n<tr>\n<td>Reaction Enhancer</td>\n<td>Nervous system</td>\n<td>Budget Wired cousin</td>\n</tr>\n<tr>\n<td>Internal Air / Filtration</td>\n<td>Torso/Core</td>\n<td>Sealed breath; toxin/gas edge</td>\n</tr>\n<tr>\n<td>Vocal Modulator / Empathy Processor</td>\n<td>Head/Neural</td>\n<td>Face chrome; Soft preferred</td>\n</tr>\n</tbody>\n</table>\n<p>Implant ¥ prices and Availability are not yet published.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "fMWf9TGkeGHvIVBK",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.fMWf9TGkeGHvIVBK",
+      "name": "Class hooks (short)",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Operator / Scout** — natural heavy chrome; class edges on Integrity efficiency / combat implants.\n- **Wrench / Medic** — installers/menders (hardware vs flesh).\n- **Hacker** — attack others' chrome across the Wired more than wear it.\n- **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.\n- **Casters (Elementalist / Street-Priest / …)** — magic erosion discourages; Soft sliver only late and expensive.\n- **Cyborg** — **excluded** from this chapter entirely.",
+        "content": "<ul>\n<li><strong>Operator / Scout</strong> — natural heavy chrome; class edges on Integrity efficiency / combat implants.</li>\n<li><strong>Wrench / Medic</strong> — installers/menders (hardware vs flesh).</li>\n<li><strong>Hacker</strong> — attack others' chrome across the Wired more than wear it.</li>\n<li><strong>Commander / Face</strong> — light Soft social chrome; wary of visible metal vs Persona.</li>\n<li><strong>Casters (Elementalist / Street-Priest / …)</strong> — magic erosion discourages; Soft sliver only late and expensive.</li>\n<li><strong>Cyborg</strong> — <strong>excluded</strong> from this chapter entirely.</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "PvJYGiDkgkuuJcnj",
+      "_key": "!journal.pages!OtC0jRxx9pr0SzEx.PvJYGiDkgkuuJcnj",
+      "name": "Cyborg Frame Modules",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Cyborgs do **not** spend Body Integrity or buy living Chrome implants. “More machine” uses **Frame Modules**:\n\n| Rule | Detail |\n|---|---|\n| Currency | **¥** (+ Availability); downtime install (Wrench / machine-doc) |\n| Capacity | **Hardpoints** by location (Head / Torso / Arms / Legs / Core OS) — rhyme with chrome slots, **not** Integrity |\n| Effect | Modules upgrade the frame (plating, actuators, weapon mounts, battery, Firewall, drone-link, redundant cortex) |\n| Magic | Still **Arcane Severance** — modules never restore Magic casting |\n| Fail state | Module damage / **System Crisis** (not implant Suppress/Destroy from this chapter) |\n\n**Sample modules:** Reinforced Plating · Actuator Overdrive · Integrated Weapon Mount · Expanded Battery · Cortical Firewall+ · Drone Hard-Link.\n\nThe full module list, hardpoint caps, and ¥ prices are not yet published. Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.",
+        "content": "<p>Cyborgs do <strong>not</strong> spend Body Integrity or buy living Chrome implants. “More machine” uses <strong>Frame Modules</strong>:</p>\n<table>\n<thead>\n<tr>\n<th id=\"rule\">Rule</th>\n<th id=\"detail\">Detail</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Currency</td>\n<td><strong>¥</strong> (+ Availability); downtime install (Wrench / machine-doc)</td>\n</tr>\n<tr>\n<td>Capacity</td>\n<td><strong>Hardpoints</strong> by location (Head / Torso / Arms / Legs / Core OS) — rhyme with chrome slots, <strong>not</strong> Integrity</td>\n</tr>\n<tr>\n<td>Effect</td>\n<td>Modules upgrade the frame (plating, actuators, weapon mounts, battery, Firewall, drone-link, redundant cortex)</td>\n</tr>\n<tr>\n<td>Magic</td>\n<td>Still <strong>Arcane Severance</strong> — modules never restore Magic casting</td>\n</tr>\n<tr>\n<td>Fail state</td>\n<td>Module damage / <strong>System Crisis</strong> (not implant Suppress/Destroy from this chapter)</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Sample modules:</strong> Reinforced Plating · Actuator Overdrive · Integrated Weapon Mount · Expanded Battery · Cortical Firewall+ · Drone Hard-Link.</p>\n<p>The full module list, hardpoint caps, and ¥ prices are not yet published. Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/09-chrome-body-integrity.md"
+    }
+  }
+}

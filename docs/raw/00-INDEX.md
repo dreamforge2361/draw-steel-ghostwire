@@ -56,5 +56,5 @@ Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17
 
 ## Next deliveries
 1. **B42** — assemble `docs/raw/` from existing clarified chapters (spike).  
-2. **B42b** — Foundry Journal pack `rulebook` (or `journals`) mirroring `docs/raw/` page-for-page.  
+2. **B42b** — Foundry Journal pack `rulebook` mirroring `docs/raw/` page-for-page — built by `tools/raw-to-journals.mjs` (pending Foundry-verify).  
 3. **B42c** — PDF build from `docs/raw/` (later).
