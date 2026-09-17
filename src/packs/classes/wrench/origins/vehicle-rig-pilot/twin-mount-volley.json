@@ -1,0 +1,107 @@
+{
+  "_id": "XcziCVHjl7FxMzD3",
+  "_key": "!items!XcziCVHjl7FxMzD3",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.TwinMountVolley.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-triple-strike-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "twin-mount-volley",
+    "story": "",
+    "keywords": [
+      "ranged",
+      "strike",
+      "weapon"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 2,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "y3anUU6SXBpbCoWb": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "y3anUU6SXBpbCoWb",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.TwinMountVolley.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.TwinMountVolley.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.TwinMountVolley.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.TwinMountVolley.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "vehicle-rig-pilot"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

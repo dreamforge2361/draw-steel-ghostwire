@@ -1,0 +1,32 @@
+{
+  "_id": "1w3YrSdG3Dh1WRlr",
+  "_key": "!items!1w3YrSdG3Dh1WRlr",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.LineBreaker.Name",
+  "type": "feature",
+  "img": "icons/skills/targeting/crosshair-triple-strike-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.LineBreaker.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "line-breaker",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

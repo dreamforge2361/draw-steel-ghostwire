@@ -1,0 +1,401 @@
+{
+  "_id": "mF5pdaFGJqb5aa1d",
+  "_key": "!items!mF5pdaFGJqb5aa1d",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.DroneJockey.Name",
+  "type": "subclass",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.DroneJockey.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "drone-jockey",
+    "advancements": {
+      "n0EpQkIJ0enOL0B2": {
+        "name": "GHOSTWIRE.Skills.List.Electronics",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "n0EpQkIJ0enOL0B2",
+        "skills": {
+          "choices": [
+            "electronics"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your subclass grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "DaisABGe2nENwmqA": {
+        "name": "Wide Band",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "DaisABGe2nENwmqA",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZP5c2bnQRqaXNGF1"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "hVtBrzeD7GNKPSmB": {
+        "name": "Swarm Launch",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "hVtBrzeD7GNKPSmB",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dSG8qUhIXFyDAiDA"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "08PT8aJImud7U6hn": {
+        "name": "Salvage Sense",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "08PT8aJImud7U6hn",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZwQ3XHIDv8HDzkte"
+          }
+        ],
+        "description": "<p>Your subclass grants you a triggered action.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "scLi7AQGtReguwZ9": {
+        "name": "Drone Jockey: Base Tier (1–5 Uptime) Ability",
+        "img": "icons/commodities/tech/cog-bronze.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "scLi7AQGtReguwZ9",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HcFBu5NCRQcBLA2f"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.biLkJtEw0vBmxSsg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6tZpUxJkqGO4iQSS"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7pek9oMbWbJDsEuJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5vjvHbmBTYM9HSLC"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pmO6dO6ZEvBxwDjs"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s Base Tier (1–5 Uptime).</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "0QEOwHST2B5ttpaz": {
+        "name": "Suppressing Volume",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "0QEOwHST2B5ttpaz",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bwwIY7MDLuXZDR7J"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "bBfSCBDjAjnuRMR3": {
+        "name": "Cheap and Many",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "bBfSCBDjAjnuRMR3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XmingQkrzTQKtXDD"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "e2WpfNv6OCVuywWI": {
+        "name": "Drone Jockey: 7-Cost Band Ability",
+        "img": "icons/commodities/tech/cog-bronze.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "e2WpfNv6OCVuywWI",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XBVrfXHL6kW9Xkma"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.OMuPMcCZZbqi0DF1"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.q8PWkB5ggar20XjR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2pMwCyK4WTnANVRj"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NrrnrDGBSYMgJ2mo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5iWJx7F6aHE7zF1F"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Db3Utx1ABL7WilHT"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 7-cost band, or Focus Fire.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "wRxyoVIIXZMv2Fiq": {
+        "name": "Swarm Sense",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "wRxyoVIIXZMv2Fiq",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.j2FYPdSqtzPkwc7S"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dtf9vT4tI1N1p5x5": {
+        "name": "Drone Jockey: 9-Cost Band Ability",
+        "img": "icons/commodities/tech/cog-bronze.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "dtf9vT4tI1N1p5x5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CdxgAsnwj8dJsATo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sPno2XtvrzRFzHpQ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ETzO1xlEJ5nbsKeJ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.s5ber6vU5KmxwxsX"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 9-Cost Band.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "AWMHmCCfsll95lRZ": {
+        "name": "Overwhelm",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "AWMHmCCfsll95lRZ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mv3lPdheOas5bqrr"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "v8mouEJ99PzXN2oK": {
+        "name": "Endless Swarm",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "v8mouEJ99PzXN2oK",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YZLisEJ8XaesHiU7"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "QyBxoASbEHUJapds": {
+        "name": "Wide Band, Redoubled",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "QyBxoASbEHUJapds",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.n6htVzDW4grjxzZW"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "QB5LR7i0JhgAyP24": {
+        "name": "Drone Jockey: 11-Cost Band Ability",
+        "img": "icons/commodities/tech/cog-bronze.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "QB5LR7i0JhgAyP24",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xaYcUrqsSqZv2UKY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.8KHK4Ilvkshkhb8a"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 11-Cost Band.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "p1BELMZw87c0Zvej": {
+        "name": "Total Coverage",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "p1BELMZw87c0Zvej",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bTaaFSlqdbWQQWfL"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "wrench"
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

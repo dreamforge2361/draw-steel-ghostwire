@@ -1,0 +1,32 @@
+{
+  "_id": "DG1qMG0vo9bGS8xS",
+  "_key": "!items!DG1qMG0vo9bGS8xS",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.PilotAndGunner.Name",
+  "type": "feature",
+  "img": "icons/weapons/guns/gun-pistol-flintlock-metal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.PilotAndGunner.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pilot-and-gunner",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

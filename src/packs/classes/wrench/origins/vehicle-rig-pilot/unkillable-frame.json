@@ -1,0 +1,32 @@
+{
+  "_id": "BHe61rYX9WgpRqU6",
+  "_key": "!items!BHe61rYX9WgpRqU6",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.UnkillableFrame.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.UnkillableFrame.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "unkillable-frame",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

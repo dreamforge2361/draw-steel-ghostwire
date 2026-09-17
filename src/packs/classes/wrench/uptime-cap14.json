@@ -1,0 +1,32 @@
+{
+  "_id": "f7Fk1pvJGlrpR6Tk",
+  "_key": "!items!f7Fk1pvJGlrpR6Tk",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.UptimeCap14.Name",
+  "type": "feature",
+  "img": "icons/magic/time/clock-stopwatch-white-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.UptimeCap14.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "uptime-cap-14",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "HPjiVesVIy4bBo1V",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

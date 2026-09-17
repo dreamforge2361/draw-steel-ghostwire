@@ -1,0 +1,32 @@
+{
+  "_id": "kVy09mMB1rFesUvK",
+  "_key": "!items!kVy09mMB1rFesUvK",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.KillboxInstinct.Name",
+  "type": "feature",
+  "img": "icons/environment/settlement/watchtower-cliff.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.KillboxInstinct.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "killbox-instinct",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "uHTsnPUMtudX3b0y",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

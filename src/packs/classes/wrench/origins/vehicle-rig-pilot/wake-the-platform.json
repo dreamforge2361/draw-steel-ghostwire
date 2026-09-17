@@ -1,0 +1,32 @@
+{
+  "_id": "vapOtNAhXhkJh8x7",
+  "_key": "!items!vapOtNAhXhkJh8x7",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.WakeThePlatform.Name",
+  "type": "feature",
+  "img": "icons/environment/settlement/wagon-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.WakeThePlatform.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wake-the-platform",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

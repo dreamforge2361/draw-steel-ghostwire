@@ -1,0 +1,105 @@
+{
+  "_id": "ghAHfQkAopeP6oOq",
+  "_key": "!items!ghAHfQkAopeP6oOq",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.BoardingRepel.Name",
+  "type": "ability",
+  "img": "icons/tools/hand/saw-steel.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "boarding-repel",
+    "story": "",
+    "keywords": [
+      "melee"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 3,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 creature attempting to board your platform"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "agility"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "PqGbwQz6poBnXsEw": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "PqGbwQz6poBnXsEw",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.BoardingRepel.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.BoardingRepel.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.BoardingRepel.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.BoardingRepel.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "vehicle-rig-pilot"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "lobpGycr2f5J6V3o",
+  "_key": "!items!lobpGycr2f5J6V3o",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.FleetSizeDoctrine.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.FleetSizeDoctrine.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fleet-size-doctrine",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "HPjiVesVIy4bBo1V",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

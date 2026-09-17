@@ -1,0 +1,32 @@
+{
+  "_id": "K7Hj7NyB2k0QXHrx",
+  "_key": "!items!K7Hj7NyB2k0QXHrx",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.HomeGround.Name",
+  "type": "feature",
+  "img": "icons/environment/settlement/watchtower-cliff.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.HomeGround.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "home-ground",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "uHTsnPUMtudX3b0y",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

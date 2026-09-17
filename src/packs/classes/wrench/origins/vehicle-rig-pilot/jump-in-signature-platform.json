@@ -1,0 +1,70 @@
+{
+  "_id": "ifpx5dIyOZdZtAdW",
+  "_key": "!items!ifpx5dIyOZdZtAdW",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.JumpInSignaturePlatform.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "jump-in-signature-platform",
+    "story": "",
+    "keywords": [],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 1,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Your registered signature platform"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.JumpInSignaturePlatform.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "vehicle-rig-pilot"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,574 @@
+{
+  "_id": "qDDcCyoMtTXzvzvZ",
+  "_key": "!items!qDDcCyoMtTXzvzvZ",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.Class.Name",
+  "type": "class",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wrench",
+    "advancements": {
+      "rVfpWu0GDCJuR0eN": {
+        "_id": "rVfpWu0GDCJuR0eN",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Rigging",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Rigging skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "rigging"
+          ]
+        },
+        "chooseN": null,
+        "sort": 1000
+      },
+      "RkWNjqzohcKblFk7": {
+        "_id": "RkWNjqzohcKblFk7",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Gunnery",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Gunnery skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "gunnery"
+          ]
+        },
+        "chooseN": null,
+        "sort": 2000
+      },
+      "qA8SfTTMPC7y19ac": {
+        "_id": "qA8SfTTMPC7y19ac",
+        "img": null,
+        "repick": {},
+        "name": "Skills",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose any two skills from the Technical skill group or Streetwise — the rigger’s bench of Engineering, Repair, Electronics, and street know-how. Skip your subclass skill (Drone Jockey: Electronics, Vehicle Rig-Pilot: Piloting, Facility Rigger: Security Systems); it’s granted separately. (<em>Quick Build:</em> Engineering, Repair.)</p>",
+        "skills": {
+          "groups": [
+            "technical"
+          ],
+          "choices": [
+            "streetwise"
+          ]
+        },
+        "chooseN": 2,
+        "sort": 3000
+      },
+      "8Ft8zl92bwiD7V6z": {
+        "_id": "8Ft8zl92bwiD7V6z",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.W36HrzG4jIM1777Y"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.flVoPYj5X9MXU7JN"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 4000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "TNj4GEVXkuvyrgcj": {
+        "_id": "TNj4GEVXkuvyrgcj",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "repick": {},
+        "name": "Kit",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.bMaYHPVIjpDwj3aX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.UXuWGAKRGAkZ6Z6r"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.fuSNyUlJYPVBXltk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9vto5jHclwJlmZUD"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.P9QejdFeowoVpGZd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.wkSKI1OkyVUIbg0P"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.yFjhbFJU76MB8rUi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.FQ71pyWDEPw3iLgf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.0D8oboOrBY7BSy9w"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.DqdYHRagtNp8BkCq"
+          }
+        ],
+        "description": "<p>You can use and gain the benefits of a light Kit (no armor or light armor, and no heavy weapon), or the moderate Streetsweeper Kit. A Wrench carries their weight through the fleet, not the body. (<em>Quick Build:</em> Gunslinger — the closest current Kit to the chapter’s Fabricator’s Bench, Rigger’s Harness, and Field Chassis, which aren’t in the Kits pack yet.)</p>",
+        "chooseN": 1,
+        "sort": 5000,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        }
+      },
+      "m3P8Ey46dbyMQLiB": {
+        "_id": "m3P8Ey46dbyMQLiB",
+        "img": "icons/commodities/tech/cog-bronze.webp",
+        "repick": {},
+        "name": "Wrench Subclass",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mF5pdaFGJqb5aa1d"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1RewjdIMcgxNDSQt"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.D2HBSDRdQEbv6iWI"
+          }
+        ],
+        "description": "<p>Choose the role you grew into — all three are street-taught, with no corp academy: <strong>Drone Jockey</strong> (a swarm of small deployables), <strong>Vehicle Rig-Pilot</strong> (one big platform you Jump into), or <strong>Facility Rigger</strong> (a building turned into a weapon). Each grants a skill and its own ability ladder. (<em>Quick Build:</em> Drone Jockey.)</p><p>Your subclass determines your heroic abilities: you choose from its Base Tier at 1st level, its 7-cost band (or Focus Fire) at 3rd, its 9-cost band at 5th, and its 11-cost band at 8th.</p>",
+        "chooseN": 1,
+        "sort": 6000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "XGfnVf3lAXfbL2CX": {
+        "_id": "XGfnVf3lAXfbL2CX",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Signature Abilities",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.9ak5OVKlBxDB4Y0j"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZGqXAbasJ6sHA9zB"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.e9uAPqnfq2uByd6w"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Cy2D9KzpfSoyDgH9"
+          }
+        ],
+        "description": "<p>You gain all four Wrench signature abilities: Deploy &amp; Command, Rigged Fire, Field Repair, and Override Ping. None of them costs Uptime.</p>",
+        "chooseN": null,
+        "sort": 7000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "UPqIIVT7UMTzHbq3": {
+        "_id": "UPqIIVT7UMTzHbq3",
+        "img": null,
+        "repick": {},
+        "name": "Fleet Size Doctrine",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.lobpGycr2f5J6V3o"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 8000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "G5URzvQs0FdLUoP6": {
+        "_id": "G5URzvQs0FdLUoP6",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 9000,
+        "pool": []
+      },
+      "vyRk96LHi5GEXQdC": {
+        "_id": "vyRk96LHi5GEXQdC",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Logic and Reflex scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 0,
+          "presence": 0
+        },
+        "max": 3,
+        "sort": 10000
+      },
+      "kES5tOnFOowlJDf2": {
+        "_id": "kES5tOnFOowlJDf2",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 11000,
+        "pool": []
+      },
+      "Px48NkGG0ASRupFo": {
+        "_id": "Px48NkGG0ASRupFo",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 12000
+      },
+      "qyVIz5BAu3R2zuYT": {
+        "_id": "qyVIz5BAu3R2zuYT",
+        "img": null,
+        "repick": {},
+        "name": "Fleet Cap +1 (4)",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EwYeXpJ9DpK6OGvw"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 13000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "RqD6N51L2XXtY7CY": {
+        "_id": "RqD6N51L2XXtY7CY",
+        "img": null,
+        "repick": {},
+        "name": "Uptime Cap Increase (12)",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.17xRQANBYwWs4jFD"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 14000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "UCRsxOfJQ5tDHzFc": {
+        "_id": "UCRsxOfJQ5tDHzFc",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 15000,
+        "pool": []
+      },
+      "HovmJsHevkEuZeKZ": {
+        "_id": "HovmJsHevkEuZeKZ",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 16000
+      },
+      "IjDs2KO39gBnGG0U": {
+        "_id": "IjDs2KO39gBnGG0U",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 17000
+      },
+      "j7GLOjsfZEXqU0RE": {
+        "_id": "j7GLOjsfZEXqU0RE",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZB0OY1qlzF0srE54"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.LF9nmbamm0ux0Mlb"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 18000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "cdXwvsGE2wCHjjuw": {
+        "_id": "cdXwvsGE2wCHjjuw",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 19000,
+        "pool": []
+      },
+      "1Sc7O67FUjc49DFZ": {
+        "_id": "1Sc7O67FUjc49DFZ",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Logic and Reflex scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 0,
+          "presence": 0
+        },
+        "max": 5,
+        "sort": 20000
+      },
+      "8uGwAU7V0ZKe2zAQ": {
+        "_id": "8uGwAU7V0ZKe2zAQ",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one crafting, exploration, or intrigue perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "crafting",
+            "exploration",
+            "intrigue"
+          ]
+        },
+        "sort": 21000,
+        "pool": []
+      },
+      "orY8kYTT3vSfNIIG": {
+        "_id": "orY8kYTT3vSfNIIG",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 22000
+      },
+      "7sNYKJPIwyOvkBpE": {
+        "_id": "7sNYKJPIwyOvkBpE",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JDWFMb0wSDDNvfkd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ZXF61zlDOPOhpK1I"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.f7Fk1pvJGlrpR6Tk"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 23000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "level": 0,
+    "primary": "Uptime",
+    "epic": "Overclock",
+    "turnGain": "1",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "reason",
+        "agility"
+      ]
+    },
+    "stamina": {
+      "starting": 18,
+      "level": 6
+    },
+    "recoveries": 8
+  },
+  "effects": [],
+  "folder": "HPjiVesVIy4bBo1V",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

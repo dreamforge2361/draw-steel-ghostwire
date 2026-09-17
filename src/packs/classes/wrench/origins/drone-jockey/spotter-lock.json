@@ -1,0 +1,72 @@
+{
+  "_id": "6tZpUxJkqGO4iQSS",
+  "_key": "!items!6tZpUxJkqGO4iQSS",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.SpotterLock.Name",
+  "type": "ability",
+  "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "spotter-lock",
+    "story": "",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 1,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.SpotterLock.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "drone-jockey"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

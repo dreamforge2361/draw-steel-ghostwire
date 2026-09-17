@@ -1,0 +1,72 @@
+{
+  "_id": "Cy2D9KzpfSoyDgH9",
+  "_key": "!items!Cy2D9KzpfSoyDgH9",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.OverridePing.Name",
+  "type": "ability",
+  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "override-ping",
+    "story": "GHOSTWIRE.Classes.Wrench.Items.OverridePing.Story",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "signature",
+    "resource": null,
+    "trigger": "GHOSTWIRE.Classes.Wrench.Items.OverridePing.Trigger",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 machine you control"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.OverridePing.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "wrench"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "iHyuhtgBkaCiAfup",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

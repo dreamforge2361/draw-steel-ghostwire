@@ -1,0 +1,32 @@
+{
+  "_id": "ZP5c2bnQRqaXNGF1",
+  "_key": "!items!ZP5c2bnQRqaXNGF1",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.WideBand.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.WideBand.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "wide-band",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "nf9ivQbXdIAjLZRG",
+  "_key": "!items!nf9ivQbXdIAjLZRG",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.BuiltToBeServiced.Name",
+  "type": "feature",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.BuiltToBeServiced.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "built-to-be-serviced",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "uHTsnPUMtudX3b0y",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

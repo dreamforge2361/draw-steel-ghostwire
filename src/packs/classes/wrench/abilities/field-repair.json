@@ -1,0 +1,105 @@
+{
+  "_id": "e9uAPqnfq2uByd6w",
+  "_key": "!items!e9uAPqnfq2uByd6w",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.FieldRepair.Name",
+  "type": "ability",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "field-repair",
+    "story": "GHOSTWIRE.Classes.Wrench.Items.FieldRepair.Story",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 machine or vehicle you control, or 1 ally’s chrome or weapon"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "augOSLUSfnEnG0xq": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "augOSLUSfnEnG0xq",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.FieldRepair.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.FieldRepair.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.FieldRepair.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.FieldRepair.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "wrench"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "iHyuhtgBkaCiAfup",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

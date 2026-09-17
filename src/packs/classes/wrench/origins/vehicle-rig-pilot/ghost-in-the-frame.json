@@ -1,0 +1,32 @@
+{
+  "_id": "mMwPDOBoo1j2G2EA",
+  "_key": "!items!mMwPDOBoo1j2G2EA",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.GhostInTheFrame.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.GhostInTheFrame.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-in-the-frame",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

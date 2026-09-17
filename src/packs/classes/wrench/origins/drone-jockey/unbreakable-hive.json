@@ -1,0 +1,32 @@
+{
+  "_id": "8KHK4Ilvkshkhb8a",
+  "_key": "!items!8KHK4Ilvkshkhb8a",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.UnbreakableHive.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.UnbreakableHive.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "unbreakable-hive",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

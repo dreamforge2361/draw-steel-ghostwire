@@ -1,0 +1,32 @@
+{
+  "_id": "7vKUgONO9pQxp0ZW",
+  "_key": "!items!7vKUgONO9pQxp0ZW",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.FortressDoctrine.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.FortressDoctrine.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "fortress-doctrine",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "uHTsnPUMtudX3b0y",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

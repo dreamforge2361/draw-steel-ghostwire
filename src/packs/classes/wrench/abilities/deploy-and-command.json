@@ -1,0 +1,105 @@
+{
+  "_id": "9ak5OVKlBxDB4Y0j",
+  "_key": "!items!9ak5OVKlBxDB4Y0j",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.DeployAndCommand.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deploy-and-command",
+    "story": "GHOSTWIRE.Classes.Wrench.Items.DeployAndCommand.Story",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 carried machine (Deploy) or each machine you control within distance (Command)"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "ZEySPSbAvfugBy6l": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "ZEySPSbAvfugBy6l",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.DeployAndCommand.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.DeployAndCommand.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Wrench.Items.DeployAndCommand.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.DeployAndCommand.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "wrench"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "iHyuhtgBkaCiAfup",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

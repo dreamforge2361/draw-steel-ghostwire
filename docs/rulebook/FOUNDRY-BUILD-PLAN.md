@@ -87,6 +87,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B24 | Commander class pack | **Done** (`d336ea7`, Foundry-verified 2026-09-16) | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
 | B25 | Languages CONFIG remap | **Done** (Foundry-verified 2026-09-16) | All 42 DS language keys relabeled with locked Ghostwire names (`scripts/languages.mjs`, `GHOSTWIRE.Languages.*`); keys unchanged; module v0.1.30 |
 | B26 | Medic class pack | **Done** (Foundry-verified 2026-09-16) | Medic (Reagents, **persist across encounters — turnGain "0", no reset at combat start**) + Street-Doc / Corp-Medtech / Ripperdoc in Ghostwire Classes; DS Troubadour spine; module v0.1.31 |
+| B27 | Wrench class pack | **Done** (Foundry-verified 2026-09-16) | Wrench (Uptime, turnGain "1" v1 baseline) + Drone Jockey / Vehicle Rig-Pilot / Facility Rigger in Ghostwire Classes; DS Talent spine, psionics scrubbed; machines inventory still backlog; module v0.1.32 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -202,4 +203,14 @@ After each spike:
   - [x] Kit: light Kits + Streetsweeper / Breacher
   - [x] Specialization picker: Street-Doc / Corp-Medtech / Ripperdoc, with L1 features + triggered action and ladders at 2/3/5/6/8/9 (Ripperdoc L8 Nano-Adrenal Auto-Injector)
   - [x] L1: First Aid, Administer Dose, Diagnose + 1/3/5-Reagent picks; Field Synthesis + Advanced Chem-Prep at L2; 7 at L3, 9 at L5, 11 at L8
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B27 Wrench (2026-09-16)
+**Uptime v1:** class `turnGain` is a flat `"1"`; the full earn/drain loop (1 per active machine, Deploy momentum, maintenance/salvage ticks, drains from hits, jamming, and wrecks), the 10/12/14 Uptime cap, and fleet size 3/4/5/6 live in feature text (Uptime, Fleet Size Doctrine, Fleet Cap +1, Uptime Cap Increase). No fleet counter UI. **Machines inventory Foundry sync (`15-drones.md`, `16-vehicles.md`) is still backlog** — class items only reference machines; a Fleet & Jump-In feature summarizes THE MACHINES.
+- [x] **B27** Wrench class pack from `05-wrench.md` (module v0.1.32) — **Foundry-verified 2026-09-16**. Done when:
+  - [x] Class picker shows Wrench; Stamina 18 (+6), Recoveries 8
+  - [x] Uptime is the heroic resource (+1 per turn); core Logic / Reflex
+  - [x] Skills: Rigging + Gunnery fixed, choose 2 from Technical or Streetwise; subclass skill (Electronics / Piloting / Security Systems)
+  - [x] Subclass picker: Drone Jockey / Vehicle Rig-Pilot / Facility Rigger, each with its feature ladder (1–9) and ability picks at 1 (Base Tier), 3 (7-cost + Focus Fire), 5 (9-cost), 8 (11-cost)
+  - [x] Four signatures at L1: Deploy & Command, Rigged Fire, Field Repair, Override Ping
   - [x] `node tools/build-packs.mjs` succeeds

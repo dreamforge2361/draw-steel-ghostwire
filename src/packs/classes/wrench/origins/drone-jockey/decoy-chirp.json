@@ -1,0 +1,72 @@
+{
+  "_id": "pmO6dO6ZEvBxwDjs",
+  "_key": "!items!pmO6dO6ZEvBxwDjs",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.DecoyChirp.Name",
+  "type": "ability",
+  "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "decoy-chirp",
+    "story": "",
+    "keywords": [
+      "ranged"
+    ],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 1,
+    "trigger": "GHOSTWIRE.Classes.Wrench.Items.DecoyChirp.Trigger",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 drone you control"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.DecoyChirp.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "drone-jockey"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

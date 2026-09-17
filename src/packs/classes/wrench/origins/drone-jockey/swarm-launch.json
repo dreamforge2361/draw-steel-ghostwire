@@ -1,0 +1,32 @@
+{
+  "_id": "dSG8qUhIXFyDAiDA",
+  "_key": "!items!dSG8qUhIXFyDAiDA",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.SwarmLaunch.Name",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-bronze.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.SwarmLaunch.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "swarm-launch",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

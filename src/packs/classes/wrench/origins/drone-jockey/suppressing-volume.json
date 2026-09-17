@@ -1,0 +1,32 @@
+{
+  "_id": "bwwIY7MDLuXZDR7J",
+  "_key": "!items!bwwIY7MDLuXZDR7J",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.SuppressingVolume.Name",
+  "type": "feature",
+  "img": "icons/skills/targeting/crosshair-triple-strike-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.SuppressingVolume.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "suppressing-volume",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "CZWHE36BIXdwErX5",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

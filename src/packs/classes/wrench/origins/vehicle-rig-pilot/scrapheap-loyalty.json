@@ -1,0 +1,32 @@
+{
+  "_id": "5CvWkCbMAAL1uT3N",
+  "_key": "!items!5CvWkCbMAAL1uT3N",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.ScrapheapLoyalty.Name",
+  "type": "feature",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.ScrapheapLoyalty.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "scrapheap-loyalty",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,70 @@
+{
+  "_id": "zwCoshYS5RMDAinf",
+  "_key": "!items!zwCoshYS5RMDAinf",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.SystemsPurge.Name",
+  "type": "ability",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "systems-purge",
+    "story": "",
+    "keywords": [],
+    "type": "freeTriggered",
+    "category": "heroic",
+    "resource": 2,
+    "trigger": "GHOSTWIRE.Classes.Wrench.Items.SystemsPurge.Trigger",
+    "distance": {
+      "type": "self",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Your platform"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Wrench.Items.SystemsPurge.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "vehicle-rig-pilot"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

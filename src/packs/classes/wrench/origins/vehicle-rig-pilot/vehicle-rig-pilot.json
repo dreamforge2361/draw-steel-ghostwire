@@ -1,0 +1,398 @@
+{
+  "_id": "1RewjdIMcgxNDSQt",
+  "_key": "!items!1RewjdIMcgxNDSQt",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.VehicleRigPilot.Name",
+  "type": "subclass",
+  "img": "icons/environment/settlement/wagon-black.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.VehicleRigPilot.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vehicle-rig-pilot",
+    "advancements": {
+      "niuoWn4z4Dn7OKBc": {
+        "name": "GHOSTWIRE.Skills.List.Piloting",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "niuoWn4z4Dn7OKBc",
+        "skills": {
+          "choices": [
+            "piloting"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your subclass grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "CdBCtXbFzmJrfQAa": {
+        "name": "One With the Machine",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "CdBCtXbFzmJrfQAa",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XD9CHHuigDiA2pjC"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "z1MSyvckox0o65IS": {
+        "name": "Pilot and Gunner",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "z1MSyvckox0o65IS",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DG1qMG0vo9bGS8xS"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "r3GPP0fkG5J5r4iD": {
+        "name": "Wake the Platform",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "r3GPP0fkG5J5r4iD",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.vapOtNAhXhkJh8x7"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "lGcbW8gGJ3eBUzV4": {
+        "name": "Vehicle Rig-Pilot: Base Tier (1–5 Uptime) Ability",
+        "img": "icons/environment/settlement/wagon-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "lGcbW8gGJ3eBUzV4",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ifpx5dIyOZdZtAdW"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pWJ7EpXAIyLQkDmU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XcziCVHjl7FxMzD3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.UmNmYEKkFkHq7skQ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zwCoshYS5RMDAinf"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ghAHfQkAopeP6oOq"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s Base Tier (1–5 Uptime).</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "a0CkowB5PURLYRaQ": {
+        "name": "Line Breaker",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "a0CkowB5PURLYRaQ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1w3YrSdG3Dh1WRlr"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "feFiHvBQk3WcYCAy": {
+        "name": "Hardened Rig",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "feFiHvBQk3WcYCAy",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2NrS7vpMmKAGyelV"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "NbCCC2jygFDxvMtO": {
+        "name": "Vehicle Rig-Pilot: 7-Cost Band Ability",
+        "img": "icons/environment/settlement/wagon-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "NbCCC2jygFDxvMtO",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XBVrfXHL6kW9Xkma"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.h6qsvrlwdsHIcsli"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XpWYyEJ3EW2s3O8c"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.X1Iom05s40W9Cy6R"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.8glrnxL09E61IxnZ"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zwo8sRia4d4NznzL"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 7-cost band, or Focus Fire.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "tW3XCwS9VpAekjBR": {
+        "name": "Redline Reflexes",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "tW3XCwS9VpAekjBR",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2HWu8O8fGYpJiGgp"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "f2vtYz4qVC8kA6yM": {
+        "name": "Vehicle Rig-Pilot: 9-Cost Band Ability",
+        "img": "icons/environment/settlement/wagon-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "f2vtYz4qVC8kA6yM",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.O9GjvDcct5SLIDv9"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.EMY5e8UQluAXm0mI"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.A94nVY2HQQldyTh0"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PuJvx9y3g6m4enHv"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 9-Cost Band.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WknYHSDZdpDdOJhz": {
+        "name": "Scrapheap Loyalty",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "WknYHSDZdpDdOJhz",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5CvWkCbMAAL1uT3N"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "G0Pb0iEtqgcHeVYE": {
+        "name": "Ghost in the Frame",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "G0Pb0iEtqgcHeVYE",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mMwPDOBoo1j2G2EA"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Lzw23jypEsUthpqY": {
+        "name": "Redline Mastery",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "Lzw23jypEsUthpqY",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0iL17fTt0HNE47B3"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Iv5V4UbpfXyOATfm": {
+        "name": "Vehicle Rig-Pilot: 11-Cost Band Ability",
+        "img": "icons/environment/settlement/wagon-black.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "Iv5V4UbpfXyOATfm",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YBhL4MG61Uv9xGzg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.BHe61rYX9WgpRqU6"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 11-Cost Band.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "uBnARJNPsoklYc7F": {
+        "name": "One Frame, Perfect Timing",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "uBnARJNPsoklYc7F",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.CQCSXdL7YTwznhhu"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "wrench"
+  },
+  "effects": [],
+  "folder": "Kx4S4cvHug4CD72G",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

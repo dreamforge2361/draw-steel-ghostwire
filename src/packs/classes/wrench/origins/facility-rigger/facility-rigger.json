@@ -1,0 +1,398 @@
+{
+  "_id": "D2HBSDRdQEbv6iWI",
+  "_key": "!items!D2HBSDRdQEbv6iWI",
+  "name": "GHOSTWIRE.Classes.Wrench.Items.FacilityRigger.Name",
+  "type": "subclass",
+  "img": "icons/environment/settlement/watchtower-cliff.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.Wrench.Items.FacilityRigger.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "05-wrench",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "facility-rigger",
+    "advancements": {
+      "O7IDYPw2mo7ILvWF": {
+        "name": "GHOSTWIRE.Skills.List.SecuritySystems",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "O7IDYPw2mo7ILvWF",
+        "skills": {
+          "choices": [
+            "securitySystems"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your subclass grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "sxF0jo5aliksTgmc": {
+        "name": "Home Ground",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "sxF0jo5aliksTgmc",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.K7Hj7NyB2k0QXHrx"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Ph3KvpLzglbFmhb5": {
+        "name": "Pre-Wired",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Ph3KvpLzglbFmhb5",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.I4Yh8fgwyo7Ze7iB"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "r0mTepEYWNFxHVG3": {
+        "name": "Built to Be Serviced",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "r0mTepEYWNFxHVG3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nf9ivQbXdIAjLZRG"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "pnzVMb4TDEQBvCkx": {
+        "name": "Facility Rigger: Base Tier (1–5 Uptime) Ability",
+        "img": "icons/environment/settlement/watchtower-cliff.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "pnzVMb4TDEQBvCkx",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.859ikGeZPUWMoLgg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.2w4r9qXLUOp0FV7I"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.06FJyLHv5wj0WHiz"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5ZBgkhxHOLt4opuG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.R91pNZ4nnk6JP1NB"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tnMxH4i1jFqpY9XO"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s Base Tier (1–5 Uptime).</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "iDyu2rSVLH1z7hpZ": {
+        "name": "Killbox Instinct",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "iDyu2rSVLH1z7hpZ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.kVy09mMB1rFesUvK"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "4gUBDu3CYsFDtwea": {
+        "name": "Mesh-Web Doctrine",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "4gUBDu3CYsFDtwea",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.37zxfOTdC4xHSzfu"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "nWqvupmBy1zbHlvM": {
+        "name": "Facility Rigger: 7-Cost Band Ability",
+        "img": "icons/environment/settlement/watchtower-cliff.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "_id": "nWqvupmBy1zbHlvM",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.XBVrfXHL6kW9Xkma"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1y9SebsYPvwtPxrw"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zGlLbB5BrYcGRfuU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Rnw9Jd06xbkd8Na9"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mJCxePoBTsSArlmR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.MiuSWC0mxVLTFWNB"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 7-cost band, or Focus Fire.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "7VbCvY3A3C8gwN8l": {
+        "name": "Fortified Node",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "7VbCvY3A3C8gwN8l",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Sot97MZfcYVGVTFT"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "WXTVC50Dqjkazg8x": {
+        "name": "Facility Rigger: 9-Cost Band Ability",
+        "img": "icons/environment/settlement/watchtower-cliff.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "WXTVC50Dqjkazg8x",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.f2jYBIzOaU5dkXES"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.w7izH80XHHfek6dK"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zEge1RyZcilVPURd"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.H2uijFzMWUzGATro"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 9-Cost Band.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "oG2ip0r7Z1fuqvG8": {
+        "name": "Turn the Building",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "oG2ip0r7Z1fuqvG8",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.KFSC0SmTFfYVpWvH"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "osD9ur7STpJaDYNb": {
+        "name": "The Building Remembers",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "osD9ur7STpJaDYNb",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6YjoMD1ChbdnEv42"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "LjppW2ig0qkJvcKA": {
+        "name": "Fortress Doctrine",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "LjppW2ig0qkJvcKA",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7vKUgONO9pQxp0ZW"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "y5OxvfyH4dFCGDNA": {
+        "name": "Facility Rigger: 11-Cost Band Ability",
+        "img": "icons/environment/settlement/watchtower-cliff.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "y5OxvfyH4dFCGDNA",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qUnJGYI2NpN3zUJW"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.wCS9pHBOJmgVTgYT"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from your subclass’s 11-Cost Band.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "tseSwCY5GBhEfhSN": {
+        "name": "The Warlord’s Reach",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "tseSwCY5GBhEfhSN",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.L09EFdn7ZAJaby90"
+          }
+        ],
+        "description": "<p>Your subclass grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "wrench"
+  },
+  "effects": [],
+  "folder": "uHTsnPUMtudX3b0y",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

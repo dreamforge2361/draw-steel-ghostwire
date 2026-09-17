@@ -2075,6 +2075,491 @@
             "Description": "<p>Once per session, during a respite, you give an ally a full chrome tune-up: they gain an edge on their first chrome-reliant power roll or test in the next encounter.</p>"
           }
         }
+      },
+      "Wrench": {
+        "Folders": {
+          "Wrench": "Wrench",
+          "Abilities": "Abilities",
+          "Origins": "Origins",
+          "DroneJockey": "Drone Jockey",
+          "VehicleRigPilot": "Vehicle Rig-Pilot",
+          "FacilityRigger": "Facility Rigger"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Wrench",
+            "Description": "<p>You are a Wrench — on the street the mechanic, or, if your fleet has a reputation, the warlord. You are the crew’s war machine: not a soldier and not a spellcaster, but an engineer who fights through a fielded force of drones, vehicles, and wired sites. You roll up to the run with a truck full of hardware, deploy it, and command a small mechanized army. Your body is often the least dangerous thing on the map, by design.</p><p>You are a <strong>street class</strong>. Nobody hands you a diploma for this: you learned in a salvage yard, off pirated firmware forums, hauling freight and modding the truck between runs, or fortifying a half-collapsed sub-level. A corp history, if you have one, is backstory only. No Wrench subclass is an academy.</p><p>Your heroic resource is <strong>Uptime</strong>: the runtime of your fielded fleet, earned while your machines are out and working, drained when they (or you) get hit, jammed, or wrecked, and spent to deploy, command, override, and burst-fire. Nuyen buys the hardware; Uptime runs it.</p><p>Your subclass is the role you grew into: <strong>Drone Jockey</strong> (the swarm), <strong>Vehicle Rig-Pilot</strong> (the driver), or <strong>Facility Rigger</strong> (the warlord).</p><p><strong>Core characteristics:</strong> Logic, Reflex · <strong>Heroic resource:</strong> Uptime · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> yes (light-to-moderate). <em>Quick Build:</em> Drone Jockey, Gunslinger.</p>"
+          },
+          "Uptime": {
+            "Name": "Uptime",
+            "Description": "<p>Uptime is machine runtime: the bandwidth, focus, and signal integrity you have for commanding your fielded machines.</p><h4>Earning Uptime</h4><ul><li><p><strong>Roll-out:</strong> at the start of a combat encounter, you gain Uptime equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>Fielded fleet:</strong> at the start of each of your turns, you gain <strong>1 Uptime for each machine active and under your control</strong>. Foundry adds [[/gain 1 hr]]{1} automatically; add the rest for each additional active machine.</p></li><li><p><strong>Deploy momentum:</strong> the first time each machine comes online in an encounter, [[/gain 2 hr]]{gain 2 Uptime}.</p></li><li><p><strong>Maintenance tick:</strong> a successful Field Repair, or a successful save or test to keep a machine working under pressure, [[/gain 1 hr]]{gains 1 Uptime}.</p></li><li><p><strong>Salvage tick:</strong> destroying an enemy machine, or stripping a wreck for parts as a maneuver, [[/gain 1 hr]]{gains 1 Uptime}.</p></li><li><p><strong>First blood:</strong> the first damage a machine you control deals each encounter gains 1 Uptime.</p></li><li><p><strong>Exposed target:</strong> whenever a machine you control damages a target another crew member has already marked, suppressed, or otherwise debuffed, gain 1 Uptime.</p></li><li><p><strong>Reposition:</strong> whenever a machine you control repositions and then damages a target it ended adjacent to (or in its firing arc) this round, gain 1 Uptime.</p></li></ul><h4>Draining Uptime</h4><ul><li><p><strong>Your body is hit</strong> while Jumped-In or otherwise engaged with the fleet: the feedback spike bleeds Uptime (Director’s call).</p></li><li><p><strong>A machine you control takes a hit:</strong> lose 1 Uptime.</p></li><li><p><strong>Signal jamming:</strong> an enemy electronic warfare pulse that jams or spoofs your link drains 2–4 Uptime.</p></li><li><p><strong>A machine is wrecked</strong> (0 Integrity): lose 3 Uptime.</p></li></ul><h4>Spending and Limits</h4><p>Deploy, Command, Override, and burst abilities cost Uptime. An Uptime ability that has an edge or double edge costs 1 fewer Uptime.</p><p><strong>Uptime cap:</strong> 10 at 1st level, 12 at 5th level, 14 at 10th level. You can’t bank Uptime above your cap.</p><p>You lose any remaining Uptime at the end of the encounter. Outside combat you can’t gain Uptime, but you can use an Uptime ability without spending it; you can’t use that same ability outside combat again until you earn 1 or more Victories or finish a respite.</p><p><strong>Firewall:</strong> nuyen buys machines, Uptime runs them. Chrome can make Uptime abilities more efficient, but never generates Uptime.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p><p><em>In Foundry, Uptime is your heroic resource: the automatic gain is a flat 1 per turn, and the cap isn’t enforced. Use the buttons above for the rest of the loop.</em></p>"
+          },
+          "TheMachines": {
+            "Name": "Fleet & Jump-In",
+            "Description": "<p>A table summary of THE MACHINES. Full drone, vehicle, and building catalogs live in the Drones and Vehicles chapters.</p><h4>Machines</h4><p>Every drone, vehicle, turret, and wired site asset has <strong>Integrity</strong> (0 = wrecked), <strong>Handling</strong> (an edge or bane on the controlling roll), <strong>Speed</strong>, <strong>Armor</strong> (flat damage reduction), a <strong>Control Mode</strong> (Autonomous, Commanded, or Jumped-In), and weapon or payload. Drones are Personal or Light scale; vehicles run Light to Capital.</p><p><strong>Upgrade Slots</strong> (mods bought with nuyen): Micro drone 1, Small 2, Standard 3; Light vehicle 2, Vehicle 4, Heavy 6, Capital 8+. Bigger-scale attacks against smaller targets gain an edge and more damage; smaller against bigger take a bane and deal chip damage unless they use a called shot or a scale-appropriate weapon.</p><p><strong>Machine conditions:</strong> Crippled (Handling/Speed penalty), Systems Down (a station offline), On Fire/Leaking (ongoing damage), Stalled/Dead-stick (immobilized).</p><h4>Jump-In</h4><p>As a maneuver, make a Logic or Reflex test (moderate difficulty, modified by Handling) to jack into a Jump-In-capable machine. On a success, your body is <strong>inert and exposed</strong> (biofeedback from machine damage can reach your Stamina), and you gain the machine’s Speed, a weapon-lock edge, and a temporary <strong>Integrity buffer of +4</strong> (+6 from 7th level). Damage to the machine drains your Uptime as usual. On a failure you can retry next turn; on a roll of 5 or lower you take 1 biofeedback damage. Leaving Jump-In is free at the start of your turn, or automatic if the machine is wrecked.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "FleetSizeDoctrine": {
+            "Name": "Fleet Size Doctrine",
+            "Description": "<p>You can have up to <strong>3 machines</strong> active at once. This rises to 4 at 4th level, 5 at 7th level, and 6 at 10th level (Drone Jockeys raise it further). You can’t exceed the cap: to bring another machine online, stand one down first.</p><p>Fleet size is separate from your Uptime cap and from a machine’s Upgrade Slots.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "FleetCap4": {
+            "Name": "Fleet Cap +1 (4)",
+            "Description": "<p>Your fleet size cap increases to 4 machines.</p>"
+          },
+          "UptimeCap12": {
+            "Name": "Uptime Cap Increase (12)",
+            "Description": "<p>Your Uptime cap increases from 10 to 12.</p>"
+          },
+          "FleetCap5": {
+            "Name": "Fleet Cap +1 (5)",
+            "Description": "<p>Your fleet size cap increases to 5 machines.</p>"
+          },
+          "JumpInBuffer": {
+            "Name": "Jump-In Buffer Increase",
+            "Description": "<p>The temporary Integrity buffer you gain on a successful Jump-In increases from +4 to +6.</p>"
+          },
+          "FleetCap6": {
+            "Name": "Fleet Cap +1 (6)",
+            "Description": "<p>Your fleet size cap increases to 6 machines.</p>"
+          },
+          "UptimeCap14": {
+            "Name": "Uptime Cap Increase (14)",
+            "Description": "<p>Your Uptime cap increases from 12 to 14.</p>"
+          },
+          "Overclock": {
+            "Name": "Overclock",
+            "Description": "<p>You have an epic resource called Overclock. Each time you finish a respite, you gain Overclock equal to the XP you gain. You can spend Overclock on your abilities as if it were Uptime, and Overclock ignores your Uptime cap.</p><p>Overclock remains until you spend it.</p><p><em>Provisional: the chapter names Overclock as the 10th-level epic capstone but leaves its mechanics open. This follows the standard Draw Steel epic-resource pattern until it’s designed.</em></p>"
+          },
+          "DeployAndCommand": {
+            "Name": "Deploy & Command",
+            "Story": "Bring the hardware online, then tell it what to do.",
+            "Effect_before0000000000": "<p><strong>Deploy (main action):</strong> bring a carried drone, turret, or vehicle online in an unoccupied space within distance; it’s now under your control. No roll.</p><p><strong>Command (maneuver):</strong> each machine you control within distance acts on your turn, per its programmed behavior or your direct call. Roll only if enemy electronic warfare contests the command.</p><p>Uptime cost 0.</p>",
+            "Tier1": "Deploy: the machine is sluggish this round (acts last, no maneuver). Command: your machines act, but one machine you choose can only reposition.",
+            "Tier2": "Deploy: the machine acts normally this round. Command: every commanded machine acts as directed.",
+            "Tier3": "Deploy: the machine also banks a free maneuver for later this round. Command: every commanded machine acts, and you gain 1 Uptime."
+          },
+          "RiggedFire": {
+            "Name": "Rigged Fire",
+            "Story": "Drones ARE your damage.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The firing machine’s weapon range.</p><p>A machine you control makes a mounted attack. Roll with Logic, or Reflex if you are Jumped-In to the firing machine, and add Gunnery.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "The shot goes wide: no damage, and enemies gain +1 on attacks against the firing machine until your next turn.",
+            "Tier2": "3 + Logic damage.",
+            "Tier3": "5 + Logic damage, and choose one: the target is knocked prone, the target is suppressed until the end of its next turn, or the firing machine can reposition up to its Speed."
+          },
+          "FieldRepair": {
+            "Name": "Field Repair",
+            "Story": "Keep it running.",
+            "Effect_before0000000000": "<p><strong>Full repair (main action)</strong> uses the results below. <strong>Quick patch (maneuver):</strong> restore the low-result Integrity only, with no condition cleared. On an ally’s chrome or jammed weapon, the same roll restores function instead of Integrity.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "Restore 2 + Logic Integrity; the repair holds only until the target is next hit.",
+            "Tier2": "Restore 4 + Logic Integrity and clear one machine condition (Crippled, Systems Down, On Fire/Leaking).",
+            "Tier3": "Restore 6 + Logic Integrity, clear one machine condition, and gain 1 Uptime (a maintenance tick)."
+          },
+          "OverridePing": {
+            "Name": "Override Ping",
+            "Story": "The rig’s answer to “what happens when they try to jam you.”",
+            "Trigger": "A machine you control would be jammed, spoofed, or forced into a fault state by an enemy electronic warfare effect.",
+            "Effect_before0000000000": "<p>You push a priority override packet through the link: the machine ignores the triggering effect this round. You spend 1 Uptime to do this (a spend, not a drain). You can’t use this ability with 0 Uptime.</p>"
+          },
+          "FocusFire": {
+            "Name": "Focus Fire",
+            "Story": "More machines online, bigger burst.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Each firing machine’s weapon range.</p><p>Every machine you currently control makes a Rigged Fire attack against one target, or splits its fire between two. Roll once for each participating machine; each roll uses the results below for that machine only.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "That machine’s shot goes wide: no damage.",
+            "Tier2": "3 + Logic damage from that machine.",
+            "Tier3": "5 + Logic damage from that machine, plus the Rigged Fire rider (prone, suppressed, or free reposition)."
+          },
+          "DroneJockey": {
+            "Name": "Drone Jockey",
+            "Description": "<p><em>“The swarm.”</em> Street-taught: you learned in a salvage yard and off pirated firmware forums, bricking three cheap quadrotors before the fourth one flew straight. Now you run a swarm — recon quadrotors, kamikaze microdrones, taser-bees, spotter-drones, autoguns — that individually mean nothing and collectively mean the enemy can’t find a square that isn’t watched, tased, or shot. Street name: the swarm, the jockey, or the wall of bees.</p><p>At 1st level you gain the <strong>Electronics</strong> skill, a drone-parts or grey-market salvage contact, and the Wide Band and Swarm Launch features and the Salvage Sense triggered action. You need no chrome: your power lives in cheap, replaceable hardware.</p>"
+          },
+          "WideBand": {
+            "Name": "Wide Band",
+            "Description": "<p>Your fleet size cap is 2 higher than the class baseline. A single Command (Deploy &amp; Command as a maneuver) commands your entire swarm at once, however many machines it has.</p>"
+          },
+          "SwarmLaunch": {
+            "Name": "Swarm Launch",
+            "Description": "<p>Your signatures, in your hands:</p><ul><li><p><strong>Deploy &amp; Command:</strong> a single Deploy can bring up to 2 microdrones online at once, each individually fragile.</p></li><li><p><strong>Rigged Fire:</strong> when 3 or more of your drones fire in the same Focus Fire, the target is suppressed regardless of the rolls.</p></li><li><p><strong>Field Repair:</strong> on a drone, the repair restores its full Integrity: you either fix it completely or write it off.</p></li></ul>"
+          },
+          "SuppressingVolume": {
+            "Name": "Suppressing Volume",
+            "Description": "<p>A Focus Fire made by 3 or more of your drones suppresses the target regardless of the individual rolls.</p>"
+          },
+          "CheapAndMany": {
+            "Name": "Cheap and Many",
+            "Description": "<p>Once per encounter, you can redeploy a wrecked Micro drone from spare parts as a maneuver instead of a main action.</p>"
+          },
+          "SwarmSense": {
+            "Name": "Swarm Sense",
+            "Description": "<p>While 3 or more of your drones are active, you have an edge on Instinct tests to notice ambushes or hidden threats.</p>"
+          },
+          "Overwhelm": {
+            "Name": "Overwhelm",
+            "Description": "<p>When 4 or more of your drones target the same creature in one Focus Fire, that creature’s Armor counts as 1 lower for that action.</p>"
+          },
+          "EndlessSwarm": {
+            "Name": "Endless Swarm",
+            "Description": "<p>Your fleet size cap increases by a further 2 (4 above the class baseline in total), and your Deploy momentum income is doubled.</p>"
+          },
+          "WideBandRedoubled": {
+            "Name": "Wide Band, Redoubled",
+            "Description": "<p>Wide Band’s whole-swarm Command no longer requires your drones to be within distance: it reaches every drone you control.</p>"
+          },
+          "TotalCoverage": {
+            "Name": "Total Coverage",
+            "Description": "<p>While 3 or more of your drones are active, each ally also gains Swarm Sense’s edge to notice ambushes and hidden threats.</p>"
+          },
+          "SalvageSense": {
+            "Name": "Salvage Sense",
+            "Story": "Nothing goes to waste.",
+            "Trigger": "A drone you control is wrecked.",
+            "Effect_before0000000000": "<p>You immediately strip the wreck for parts and [[/gain 1 hr]]{gain 1 Uptime} (a salvage tick).</p>"
+          },
+          "BeeStorm": {
+            "Name": "Bee Storm",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 3 burst around your swarm.</p><p>Every taser-bee you control converges on an area: up to 3 creatures in a 3 burst.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Each target is slowed (save ends).",
+            "Tier3": "Each target is slowed and bleeding (save ends)."
+          },
+          "AutogunLockdown": {
+            "Name": "Autogun Lockdown",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 3 burst within the autogun’s mount range.</p><p>An autogun turret-drone establishes an area of control. Until the start of your next turn, any enemy that enters or acts in the zone triggers a free Rigged Fire from the autogun.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "SensorGhost": {
+            "Name": "Sensor Ghost",
+            "Effect_before0000000000": "<p>A recon drone projects a false sensor return: until the start of your next turn, the target has concealment against Wired-assisted targeting (smartlinks, drone gunners, sensor fusion).</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "SwarmReposition": {
+            "Name": "Swarm Reposition",
+            "Effect_before0000000000": "<p>Every drone you control can reposition up to its Speed. No attack.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "FocusSting": {
+            "Name": "Focus Sting",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Any active taser-bee’s range.</p><p>Every active taser-bee converges its charge into a single overload strike.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier3": "The target is weakened (save ends)."
+          },
+          "WideEyes": {
+            "Name": "Wide Eyes",
+            "Trigger": "An ally within 10 squares of one of your active drones is about to be flanked or ambushed.",
+            "Effect_before0000000000": "<p>Your recon net calls the warning a half-second early: the ally can reposition 2 squares before the triggering effect resolves.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "SaturationFire": {
+            "Name": "Saturation Fire",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 4 burst within your drones’ weapon range.</p><p>Every autogun and armed drone opens up at once on up to 4 creatures in a 4 burst. Roll once for all targets.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Each target is slowed (save ends).",
+            "Tier3": "Each target is suppressed until the end of its next turn."
+          },
+          "GhostSwarm": {
+            "Name": "Ghost Swarm",
+            "Effect_before0000000000": "<p>For one round, every drone you control is hidden, even if observed, as long as it doesn’t attack.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "KamikazeVolley": {
+            "Name": "Kamikaze Volley",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Your microdrones’ flight.</p><p>Up to three microdrones detonate against up to three separate targets. The expended drones are destroyed.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier3": "Each target is knocked prone."
+          },
+          "AdaptiveNet": {
+            "Name": "Adaptive Net",
+            "Trigger": "A drone you control would be destroyed.",
+            "Effect_before0000000000": "<p>The drone survives at 1 Integrity, and you can immediately reposition it up to its Speed away from danger.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "TotalSwarmProtocol": {
+            "Name": "Total Swarm Protocol",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 5 squares of any active drone.</p><p>Once per encounter. Every drone you control, however many, makes a Rigged Fire attack, splitting freely among all valid targets in range. Roll once per participating drone. This is Focus Fire with no target cap.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "UnbreakableHive": {
+            "Name": "Unbreakable Hive",
+            "Description": "<p>Whenever a drone you control would be destroyed, roll [[/r 1d6]]. On a 4 or higher, it instead drops to 1 Integrity and is Systems Down (inactive, not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "TaserSwarm": {
+            "Name": "Taser Swarm",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Any active drone’s weapon range.</p><p>A taser-bee drone (or three) closes and delivers a shock payload.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "No effect.",
+            "Tier2": "2 + Logic damage; the target is slowed (save ends).",
+            "Tier3": "3 + Logic damage; the target is stunned until the end of its next turn."
+          },
+          "KamikazeRun": {
+            "Name": "Kamikaze Run",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> A microdrone’s flight.</p><p>One microdrone flies into the target and detonates. The drone is always destroyed.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier3": "The target is knocked prone."
+          },
+          "SpotterLock": {
+            "Name": "Spotter Lock",
+            "Effect_before0000000000": "<p>A spotter-drone marks the target: the next Rigged Fire or Focus Fire against it this round gains an edge. No damage.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "ReconLoop": {
+            "Name": "Recon Loop",
+            "Effect_before0000000000": "<p>A recon quadrotor sweeps a 10-square radius: until the start of your next turn, you know the position of every creature in the area, even through light cover.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "BuzzsawPass": {
+            "Name": "Buzzsaw Pass",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Melee 1 from an adjacent drone.</p><p>A close-quarters microdrone with a monofilament edge makes a strafing pass.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "The drone can reposition up to its Speed afterward.",
+            "Tier3": "The target is bleeding (save ends)."
+          },
+          "DecoyChirp": {
+            "Name": "Decoy Chirp",
+            "Trigger": "An enemy targets you or an ally with a ranged attack.",
+            "Effect_before0000000000": "<p>A drone broadcasts a false heat and comm signature: the attack must target the drone instead, if the drone is a valid target in range.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "VehicleRigPilot": {
+            "Name": "Vehicle Rig-Pilot",
+            "Description": "<p><em>“The driver.”</em> Street-taught: maybe it’s the truck you hauled freight in for six years before the corp cut your route, a spider-tank frame you rebuilt system by system out of a scrapyard, or a platform stolen outright with its VIN burned off. When you Jump in, the line between driver and machine gets thin enough that nobody can say which one they’re shooting at. Street name: the driver, the rig, or whatever you named the machine.</p><p>At 1st level you gain the <strong>Piloting</strong> skill, a chop-shop or transport contact, and the One With the Machine, Pilot and Gunner, and Wake the Platform features. Your defining chrome is the <strong>control rig</strong>, a deep-Jump interface implant.</p>"
+          },
+          "OneWithTheMachine": {
+            "Name": "One With the Machine",
+            "Description": "<p>Jumping in to your registered signature platform costs 1 fewer Uptime, and your Jump-In Integrity buffer on it is 2 higher than the class baseline.</p>"
+          },
+          "PilotAndGunner": {
+            "Name": "Pilot and Gunner",
+            "Description": "<p>While Jumped-In, you occupy both the Pilot and a Gunner station at once, and you gain an edge on Rigged Fire made this way.</p>"
+          },
+          "WakeThePlatform": {
+            "Name": "Wake the Platform",
+            "Description": "<p>Your signatures, in your hands:</p><ul><li><p><strong>Deploy &amp; Command:</strong> deploying your signature platform “wakes it up” — it arrives ready for you to Jump in, with no separate maneuver needed to jack in.</p></li><li><p><strong>Rigged Fire:</strong> from a Jumped-In vehicle, it can strike two targets in a line along a mount’s firing arc.</p></li><li><p><strong>Field Repair:</strong> on your own platform, it restores more Integrity than the class baseline.</p></li></ul>"
+          },
+          "LineBreaker": {
+            "Name": "Line Breaker",
+            "Description": "<p>Rigged Fire from a Jumped-In vehicle can target 2 creatures in a line within the weapon’s arc, with one roll.</p>"
+          },
+          "HardenedRig": {
+            "Name": "Hardened Rig",
+            "Description": "<p>While Jumped-In, biofeedback damage to your body is reduced by 2.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "RedlineReflexes": {
+            "Name": "Redline Reflexes",
+            "Description": "<p>While Jumped-In, your platform’s full Speed counts as your own Speed for any ability that cares about your Speed.</p>"
+          },
+          "ScrapheapLoyalty": {
+            "Name": "Scrapheap Loyalty",
+            "Description": "<p>Once per respite, you can field-repair your signature platform to full Integrity outside of downtime, as long as you have access to a workshop (a Physical Upgrade Slot).</p>"
+          },
+          "GhostInTheFrame": {
+            "Name": "Ghost in the Frame",
+            "Description": "<p>While Jumped-In, if your platform would be wrecked, you can spend all your remaining Uptime to eject safely, taking no biofeedback damage.</p>"
+          },
+          "RedlineMastery": {
+            "Name": "Redline Mastery",
+            "Description": "<p>While Jumped-In, Redline Reflexes also gives your platform +1 Handling.</p>"
+          },
+          "OneFramePerfectTiming": {
+            "Name": "One Frame, Perfect Timing",
+            "Description": "<p>Once per encounter, when you would fail a Jump-In test, you succeed instead.</p>"
+          },
+          "OverdriveCharge": {
+            "Name": "Overdrive Charge",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s path.</p><p>A full-speed ramming charge, riskier and harder-hitting than Ram Speed.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "The platform takes 3 damage.",
+            "Tier2": "The platform takes 2 damage; push 3.",
+            "Tier3": "The platform takes 1 damage; push 5, and the target is knocked prone."
+          },
+          "SensorFusionLock": {
+            "Name": "Sensor Fusion Lock",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Sensor range.</p><p>The next Rigged Fire or Twin Mount Volley against the target gains an edge, and the target gets no benefit from cover for one round.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "FullBroadside": {
+            "Name": "Full Broadside",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s firing arc.</p><p>Add Gunnery to the roll; roll once for all targets.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier3": "Each target is suppressed."
+          },
+          "EmergencyPatchPlatform": {
+            "Name": "Emergency Patch",
+            "Effect_before0000000000": "<p>While Jumped-In, restore 6 + Logic Integrity to your platform without leaving Jump-In.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "TerrainBreaker": {
+            "Name": "Terrain Breaker",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s path.</p><p>Your platform smashes through an obstacle, clearing a path and possibly damaging anything sheltering behind it (Director’s call on secondary targets).</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "RedlineBarrage": {
+            "Name": "Redline Barrage",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s weapon range.</p><p>Add Gunnery to the roll.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Each target is slowed.",
+            "Tier3": "Each target is slowed and suppressed."
+          },
+          "KillRam": {
+            "Name": "Kill Ram",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s path.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "The platform takes 3 damage.",
+            "Tier2": "The platform takes 2 damage; push 5.",
+            "Tier3": "The platform takes no damage; push 8, and the target is knocked prone."
+          },
+          "FullStabilization": {
+            "Name": "Full Stabilization",
+            "Effect_before0000000000": "<p>Once per encounter. Clear all machine conditions from your platform and restore 10 + Logic Integrity.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "GhostSignature": {
+            "Name": "Ghost Signature",
+            "Trigger": "Your platform would be targeted by an enemy lock or mark effect.",
+            "Effect_before0000000000": "<p>The lock fails: your platform’s sensor ghosting sells a false position.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "OneMachineOneWill": {
+            "Name": "One Machine, One Will",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s full firing arc.</p><p>The platform and pilot act as one perfect system for one exchange. Add Gunnery; the roll has a double edge, and you take no biofeedback from this action whatever the outcome.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "UnkillableFrame": {
+            "Name": "Unkillable Frame",
+            "Description": "<p>Once per encounter, when your platform would drop to 0 Integrity, it drops to 1 instead, and you can immediately spend a maneuver to use Full Stabilization on it at no Uptime cost.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "JumpInSignaturePlatform": {
+            "Name": "Jump-In (Signature Platform)",
+            "Effect_before0000000000": "<p>You jack directly into your platform’s control systems, resolving the Jump-In test as described in Fleet &amp; Jump-In. One With the Machine’s discount applies automatically.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "RamSpeed": {
+            "Name": "Ram Speed",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The platform’s path.</p><p>You ram with the platform. Scale and Speed set the damage basis; the heavier and faster party takes less.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "The platform takes 2 damage.",
+            "Tier2": "The platform takes 2 damage; push 3.",
+            "Tier3": "The platform takes 1 damage; push 5, and the target is knocked prone."
+          },
+          "TwinMountVolley": {
+            "Name": "Twin Mount Volley",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> A mount’s firing arc.</p><p>Two creatures in a line within a mount’s arc. Add Gunnery to the roll.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "No damage.",
+            "Tier2": "4 + Logic damage to each target.",
+            "Tier3": "6 + Logic damage to each target; both are suppressed."
+          },
+          "EvasiveBurn": {
+            "Name": "Evasive Burn",
+            "Effect_before0000000000": "<p>A hard evasive maneuver: your platform gains a defensive edge against the next attack made against it this round.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "SystemsPurge": {
+            "Name": "Systems Purge",
+            "Trigger": "Your platform would gain a machine condition (Crippled, Systems Down, On Fire/Leaking).",
+            "Effect_before0000000000": "<p>Roll [[/r 2d10 + @R]]{2d10 + Logic}; on 12 or higher, the condition is prevented.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "BoardingRepel": {
+            "Name": "Boarding Repel",
+            "Effect_before0000000000": "<p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "No effect.",
+            "Tier2": "The target is pushed off and knocked prone.",
+            "Tier3": "The target is pushed off, takes 4 damage, and is knocked prone."
+          },
+          "FacilityRigger": {
+            "Name": "Facility Rigger",
+            "Description": "<p><em>“The warlord.”</em> Street-taught: what started as a squat in a collapsed sub-level became a fortress one wired sentry at a time — a turret in the stairwell nobody uses, a mesh-web across the service corridor, a breaching charge under the floor where a strike team would stack up. When the fight comes to you, nothing needs deploying; it’s been deployed for months. Street name: the warlord, the landlord, or the ghost in the walls.</p><p>At 1st level you gain the <strong>Security Systems</strong> skill, a parts-supplier or quartermaster contact, and the Home Ground, Pre-Wired, and Built to Be Serviced features. Your power lives in the building (see the Building stat card in THE MACHINES), not the body.</p>"
+          },
+          "HomeGround": {
+            "Name": "Home Ground",
+            "Description": "<p>While you fight inside or adjacent to your registered base of operations, Deploy actions for pre-placed assets cost 1 fewer Uptime.</p>"
+          },
+          "PreWired": {
+            "Name": "Pre-Wired",
+            "Description": "<p>During downtime, you can designate up to 2 Physical Upgrade Slot assets as primed. The first time combat starts at that site, primed assets activate as a free triggered action.</p>"
+          },
+          "BuiltToBeServiced": {
+            "Name": "Built to Be Serviced",
+            "Description": "<p>Your signatures, in your hands:</p><ul><li><p><strong>Deploy &amp; Command:</strong> instead of deploying a carried machine, you <strong>activate</strong> a pre-placed asset already wired into your base, at reduced Uptime cost.</p></li><li><p><strong>Rigged Fire:</strong> fire from a pre-placed turret counts as having prepared cover unless the enemy specifically flanks it.</p></li><li><p><strong>Field Repair:</strong> repairing a Physical Upgrade Slot asset (a turret, a mesh-web generator) is faster and cheaper than repairing a mobile drone.</p></li></ul>"
+          },
+          "KillboxInstinct": {
+            "Name": "Killbox Instinct",
+            "Description": "<p>If your base of operations is designated a Killbox, it gains +1 Physical Upgrade Slot (on top of the Killbox baseline).</p>"
+          },
+          "MeshWebDoctrine": {
+            "Name": "Mesh-Web Doctrine",
+            "Description": "<p>An enemy that triggers one of your mesh-web tripwires also takes a bane on its next attack roll.</p>"
+          },
+          "FortifiedNode": {
+            "Name": "Fortified Node",
+            "Description": "<p>Your base’s Node gains +1 Wired Upgrade Slot, and while you are present, a hostile Hacker takes a bane on attempts to breach it.</p>"
+          },
+          "TurnTheBuildingFeature": {
+            "Name": "Turn the Building",
+            "Description": "<p>Once per encounter, as a single main action, you can activate every Physical Upgrade Slot asset in your base at once (a building-scale Focus Fire).</p>"
+          },
+          "TheBuildingRemembers": {
+            "Name": "The Building Remembers",
+            "Description": "<p>Your base never loses Downtime Fabrication progress, even if it’s abandoned and later reclaimed. Additionally, its Physical Upgrade Slot assets repair 1 Integrity per downtime cycle on their own.</p>"
+          },
+          "FortressDoctrine": {
+            "Name": "Fortress Doctrine",
+            "Description": "<p>Pre-Wired lets you prime up to 4 assets instead of 2.</p>"
+          },
+          "TheWarlordsReach": {
+            "Name": "The Warlord’s Reach",
+            "Description": "<p>Home Ground’s Uptime discount also applies at any secondary site you’ve spent at least one Downtime Fabrication cycle upgrading.</p>"
+          },
+          "CrossfireGrid": {
+            "Name": "Crossfire Grid",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The combined arcs of 2 or more sentries.</p><p>Add Gunnery; roll once for all targets.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Each target is slowed.",
+            "Tier3": "Each target is restrained (save ends)."
+          },
+          "WebTheCorridor": {
+            "Name": "Web the Corridor",
+            "Effect_before0000000000": "<p>Deploy a fresh mesh-web tripwire mid-encounter instead of a pre-placed one. It costs more than triggering an existing web, but lets you adapt.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "OverpressureVent": {
+            "Name": "Overpressure Vent",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 3 burst at a pre-wired vent point.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Push 3.",
+            "Tier3": "Push 5, and each target is knocked prone."
+          },
+          "EmergencyReinforcement": {
+            "Name": "Emergency Reinforcement",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Within your base.</p><p>Restore 6 + Logic Integrity to a turret, sentry, or mesh-web generator without leaving your position.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "FeedbackLoop": {
+            "Name": "Feedback Loop",
+            "Trigger": "A hostile Hacker attempts to breach your base’s Node.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Your base’s Node.</p><p>Roll [[/r 2d10 + @R]]{2d10 + Logic} contested against their attempt. On a success, the breach is denied and the attacker takes Wired-side biofeedback damage.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "TotalLockdown": {
+            "Name": "Total Lockdown",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Your entire base of operations.</p><p>Every door and access point seals at once, and every sentry and turret gains a free Rigged Fire against the first enemy to force entry at each point.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "BuildingScaleVolley": {
+            "Name": "Building-Scale Volley",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The combined range of your Physical Upgrade Slot assets.</p><p>Add Gunnery; roll once for each participating asset.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Each target is suppressed.",
+            "Tier3": "Each target is suppressed and restrained (save ends)."
+          },
+          "FortifyNode": {
+            "Name": "Fortify Node",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Your base’s Node.</p><p>A rapid firewall reconfiguration: until the end of the encounter, your base’s Node gains hardening worth +2 Wired Upgrade Slots.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "CollapseTheCorridor": {
+            "Name": "Collapse the Corridor",
+            "Trigger": "An enemy attempts to flee through a corridor inside your base.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> A corridor inside your base.</p><p>A pre-wired structural charge seals the route (Director’s call on collateral). The enemy is restrained until it forces its way through.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "TurnTheBuildingAbility": {
+            "Name": "Turn the Building",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Your base of operations.</p><p>Once per encounter. Every turret, sentry, mesh-web, and breaching charge in your base activates at once. Add Gunnery and roll once for each active Physical Upgrade Slot asset. This is Focus Fire at building scale.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "TheBuildingRemembersApex": {
+            "Name": "The Building Remembers (Apex)",
+            "Description": "<p>Your base of operations never fully falls. Even at 0 Structural Integrity, one Physical Upgrade Slot asset survives (Director’s choice) and can seed its rebuilding in downtime.</p>"
+          },
+          "WakeTheWalls": {
+            "Name": "Wake the Walls",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Within your base.</p><p>Activate a single pre-placed turret, sentry, or mesh-web generator. It comes online and acts immediately this round. (Home Ground reduces the cost.)</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "SentryFire": {
+            "Name": "Sentry Fire",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> A sentry’s mount range.</p><p>Add Gunnery to the roll.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier1": "No damage.",
+            "Tier2": "4 + Logic damage.",
+            "Tier3": "6 + Logic damage; the target is suppressed."
+          },
+          "TripTheWeb": {
+            "Name": "Trip the Web",
+            "Trigger": "An enemy enters a square containing your mesh-web.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The mesh-web’s placement.</p><p>The enemy is [[/apply restrained save]]{restrained} (save ends). With Mesh-Web Doctrine, it also takes a bane on its next attack roll.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "BreachCharge": {
+            "Name": "Breach Charge",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> 2 burst at a pre-wired breach point.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
+            "Tier2": "Each target is knocked prone.",
+            "Tier3": "Each target is knocked prone and deafened (save ends)."
+          },
+          "LockdownProtocol": {
+            "Name": "Lockdown Protocol",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Within your base.</p><p>Seal a door or corridor: enemies must spend an action to force it, or find another way around.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          },
+          "GhostInTheWalls": {
+            "Name": "Ghost in the Walls",
+            "Effect_before0000000000": "<p>While you are inside or adjacent to your base, you know the location and status of every pre-placed asset and every enemy your base’s sensors detect, without line of sight.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+          }
+        }
       }
     },
     "Backgrounds": {
