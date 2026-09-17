@@ -1,0 +1,483 @@
+# The Spillway
+
+*The Flats // Ossian Reach // The Drain Quarter*
+
+## The Main Drain
+
+*Central culvert; smuggler highway*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+The street doesn't so much end as pour — asphalt giving way to a curved concrete throat forty meters wide, sloping down into permanent gloom. This is the Main Drain, the old storm-channel the whole district grew up around like scar tissue around a wound, and it runs straight through the Flats for two kilometers before anyone in the Grid above even remembers it exists. There is no sky here, only the ribbed underbelly of the level above, dripping its warm chemical rain in long silver threads that the wind off the channel bends sideways. Neon bleeds down the curve of the concrete in cyan smears — old data-tags, route markers, gang glyphs layered a hundred deep.
+
+Above the channel's lip, courier-drones run the drain like a wind-tunnel, using the airflow to save charge; a hovercab dips low and fast, running dark, its underlights killed. Down on the channel floor itself, past the ankle-deep sheet of runoff, cargo-crawlers grind along tracks bolted into the old drainage rail, hauling shipping-modules stamped with a dozen conflicting manifests. The air smells of ozone, wet concrete, and machine oil, and under the wall of sound — grinding treads, drone-whine, the endless hiss of rain finding metal — there's a deeper thrum: the tidal system counting down to the next scheduled flood, a heartbeat under the heartbeat.
+
+A checkpoint of stacked shipping crates blocks the true center of the channel, strung with cyan chem-lights. Figures move around it without hurry. Nobody here is surprised to see you. Everybody here is watching to see what you're carrying.
+
+### Director's Section
+
+#### Key NPCs
+
+**Ondrez "Tideline" Kalb** — Undertow lieutenant who runs the checkpoint; keeps a hand-scrawled ledger of who owes the drain-gang passage and what a job is worth in flood-hours. Fair by his own math, brutal about debts.
+
+**Six-Minute Sana** — a Nyx-contracted logistics broker who works the channel remotely through a proxy runner; never appears in person, communicates by burst-transmission timed to avoid Meridian relay sniffers.
+
+**Grovel** — an ex-Ironclad rigger who lost his contract and now drives salvage-crawlers through the drain for anyone who pays; knows every flood-schedule variance by feel, not by data-feed, because the official schedule lies as often as it tells the truth.
+
+#### Security
+
+Zone: Flats — Undertow-controlled corridor; Nyx has an unofficial standing arrangement for smuggling rights, paid in cut and silence.
+
+The checkpoint isn't armed to look armed — crates, chem-lights, a handful of loiterers — but everyone in earshot is wired to call in reinforcements in under a minute. Trouble here brings Undertow enforcers up from the culvert mouths on either side, boxing intruders in the channel itself, which is exactly the kill-zone it was designed to be.
+
+Nyx enforcers appear only if smuggled cargo is threatened — quiet, professional, and gone the moment the problem is solved, one way or another.
+
+#### The Overlay (What the Wired Shows Here)
+
+Officially, the Main Drain reads as a Ferrum-maintained flood-control easement — empty, unremarkable, no reason for a SIN-reader to log anyone at all. That emptiness is the tell.
+
+A hacker who digs past the surface finds a private mesh network strung along the old drainage rail, hopping repeaters disguised as maintenance junctions — the actual logistics backbone of the smuggler highway, carrying manifests, flood-schedule leaks, and payment confirmations that never touch the public Wired.
+
+Three dead-drops are cached in false conduit panels along the channel wall, rotated weekly; Undertow kids called "spotters" watch them from the gantries above and will burn a drop the moment it's compromised.
+
+#### Plot Hooks
+
+1. The Manifest That Doesn't Exist. A Nyx broker needs a shipment moved through the Drain before the next scheduled flood, but the cargo isn't listed on any ledger the Undertow will honor — meaning someone forged passage rights, and someone else is about to find out the hard way.
+
+2. Flood Math. The official flood-schedule has been quietly altered by a Sanctum actuarial team running a "risk model" that conveniently strands a rival gang's cargo mid-channel. The crew is hired to figure out who benefits — and to get clear before the water proves the model right.
+
+3. The War Comes Downstream. Rumors travel the drain faster than they travel the Grid: something is moving up from the Sinks through the Main Drain's lower reaches, and it isn't cargo. Ironclad wants confirmation before it reaches the surface streets; the Undertow wants it kept quiet at any cost.
+
+## Bridge Market
+
+*Stall-bridges over the channels*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+You smell the market before you see it — frying oil, river-mud, and the sweet rot of drain-water — and then the bridge opens up in front of you, a rickety span of grated steel and scavenged decking thrown across the channel a generation ago and rebuilt so many times it's more patchwork than bridge. Stalls crowd both rails three deep, awnings strung between girders to catch the rain that never stops falling from the underside of the level above, gold light spilling out from a hundred hanging lumen-strings and cook-fires in oil drums.
+
+Overhead, in the gap between this level's ceiling and the bridge's own tangle of wiring, a hovercab threads past a string of courier-drones queued nose-to-tail for a cheap recharge perch on the bridge's outer strut — the vendors rent the space by the hour. Below, through the gaps in the decking, the channel runs black and fast, and a ground-rig eases along the service road beside it, horn blaring at pedestrians who don't move for anyone. The noise is the good kind of overwhelming: barter in six tongues, a busker's cracked amp, the sizzle of grills, all of it stitched together under the steady hiss of rain on tin roofing.
+
+Somewhere in the crush, a vendor is already calling out to you by a name you didn't give anyone this trip.
+
+### Director's Section
+
+#### Key NPCs
+
+**Auntie Reska** — matriarch of the market's oldest stall-line, a Corran guild-clan elder who extends credit to anyone she's decided is "good for it," and remembers every debt for thirty years.
+
+**Petrik Yun** — a Meridian-licensed street-vendor who sells grey-market signal boosters out of a food cart, technically legal, deeply suspicious to anyone who looks closely at his inventory.
+
+**The Weighmaster** — an unnamed, masked figure who arbitrates trade disputes on the bridge under an old, informally binding custom; nobody knows which faction they answer to, if any.
+
+#### Security
+
+Zone: Flats — nominally open/lawless, but the market polices its own through the Weighmaster's arbitration and swift mob justice for thieves.
+
+No standing security presence; disputes are settled loud, fast, and publicly. Drawing a weapon here triggers immediate collective response — vendors, haulers, and customers alike will swarm a shooter, because a stray round through the decking risks dropping someone into the channel.
+
+Undertow "toll-walkers" pass through twice a day collecting a nominal cut for "bridge maintenance" that maintains nothing; everyone pays without complaint because the alternative is worse.
+
+#### The Overlay (What the Wired Shows Here)
+
+A riot of unregulated AR — every stall broadcasts its own ad-tag, prices, and reviews, layering into visual static so dense that dedicated market-goers run filters just to see the actual goods underneath.
+
+A hacker digging past the surface finds the bridge's true economy: barter ledgers kept in a decentralized local mesh, invisible to corp tax-scrapers, tracking favors and debts that never convert to nuyen at all.
+
+Dead-drop tags cluster near the bridge's midpoint strut, disguised as spoiled-goods warnings — a old Nyx courier trick that still works because nobody wants to look too closely at rotting fish.
+
+#### Plot Hooks
+
+1. The Weighmaster's Judgment. A trade dispute on the bridge has escalated into a blood-debt between two Corran guild-clans, and the Weighmaster wants outside arbiters — the crew — to verify a claim before it turns into a market-wide brawl.
+
+2. Grey Signal. Petrik Yun's boosters are pulling data he shouldn't have access to, and Meridian wants to know if he's a rogue asset or a plant. The truth points toward a listening-post buried under the bridge itself.
+
+3. Auntie's Ledger. Someone stole Auntie Reska's thirty-year debt ledger — a goldmine of leverage over half the district. She wants it back quietly, before whoever has it starts calling in favors that aren't theirs to call.
+
+## The Overflow
+
+*Flood-shelter & refugee faith-camp*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+The old overflow basin was built to catch what the Main Drain couldn't hold, a vast concrete bowl three stories deep that hasn't seen a real flood in months — so people moved in. Tents and lean-tos climb the sloped walls in tiers, strung with green lumen-lanterns that turn the whole basin the color of algae-light, and washing lines crisscross overhead between makeshift rain-catches, because up here the chemical rain that sheets endlessly off the level above is the only water anyone can be sure of. There is no sky, only the dripping underside of the Grid pressing down, but the basin's open shape lets courier-drones and the occasional low-flying aid-hovercraft descend almost to ground level, dropping supply pallets to waiting hands.
+
+The sound changes as you descend the switchback ramps — market noise fading into something quieter: murmured prayers, a crying child, the low drone of a street-priest's sermon relayed through a cracked speaker, all of it under the same relentless hiss of rain on tarp and tin. Ground-traffic can't reach the basin floor at all; everything comes down by hand-cart or drone-line, and that scarcity shapes everyone's manners.
+
+A queue three hundred deep waits at the soup-line, patient in a way that has nothing to do with hope and everything to do with practice. They've done this before. They'll do it again the moment the siren sounds and the water comes back.
+
+### Director's Section
+
+#### Key NPCs
+
+**Brother Calem** — a street-priest of the Lamp on Ninth tradition who runs the Overflow's soup-line and clinic tent; Corran-rooted, unshakeable, quietly furious at everyone who could help and doesn't.
+
+**Iyana Voss** — a Caduceus-trained nurse working off the books, treating flood-lung and chemical rain-burns with grey-tech medical stock she can't fully explain the source of.
+
+**Deacon Rasp** — self-appointed "flood warden," an ex-Undertow runner who lost his crew to a scheduled flood and now dedicates himself to getting the camp's residents out before the sirens; distrusts everyone official on principle.
+
+#### Security
+
+Zone: Flats — no faction claims it outright; an unofficial truce holds because attacking a flood-shelter is bad business for everyone who might need one someday.
+
+The camp's "security" is entirely social — elders, the priest, and Deacon Rasp's flood-warden network keep order through reputation and mutual need. Violence here draws immediate, camp-wide hostility; word travels the whole district within hours.
+
+The real danger isn't people — it's the flood-siren. When it sounds, the basin empties in a controlled panic up the switchback ramps, and anyone slow, hurt, or fighting gets left to the water.
+
+#### The Overlay (What the Wired Shows Here)
+
+The Wired barely acknowledges the Overflow exists — no SIN-readers, no corp ad-feed, a rare genuine dead zone born of nobody finding it profitable to wire up. Aid organizations broadcast a thin charity-tag that most residents ignore.
+
+A hacker who looks closer finds Deacon Rasp's private flood-warning relay, a patched-together system tapping Ferrum's real drainage sensors — better and faster than the official public alert, and entirely illegal to access.
+
+Dead-drops here aren't digital at all; they're physical, hidden in the rain-catch barrels, a tradition older than the camp's current residents and trusted for exactly that reason.
+
+#### Plot Hooks
+
+1. The False Siren. Someone triggered a flood-alarm that wasn't real, emptying the basin during a supply drop that was promptly looted. Deacon Rasp wants to know who, and why — and the trail leads to a Sanctum "efficiency study" that treats the camp as an acceptable loss.
+
+2. Iyana's Stock. The grey-tech medical supplies Iyana relies on are about to run out, and her supplier has gone dark — last seen heading into the Main Drain. The crew can find a new source, or find out what happened to the old one.
+
+3. The Descent's Doorstep. Refugees from a level below have started arriving at the Overflow with stories of the war climbing the foundations — collapsed levels, black water, something that isn't Nyx moving cargo through the deep drains. Brother Calem wants someone to verify the stories before panic does the descent's work for it.
+
+## Sluice Gate
+
+*Nyx-controlled flow valve & toll*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+The channel narrows here, forced through a chokepoint by a rust-scabbed steel gate three stories tall, its hydraulics groaning even at rest. This is a Sluice Gate — one of a dozen that control where the district's floodwater goes and when — and Nyx owns this one outright, in every sense that matters down here. Cyan work-lights ring the gate's control housing, throwing hard shadows up into the gap where the level above presses close and cold, its underside slick with the endless chemical rain that sheets down the gate's face in curtains.
+
+Above the chokepoint, the vertical space is a controlled bottleneck of its own: a single sanctioned hovercraft lane threads through, monitored, taxed, and slow; drones queue at a relay perch bolted to the gate housing, paying their own small toll in data before they're allowed through. On the channel floor, a line of cargo-crawlers and ground-rigs idles, engines grumbling, waiting their turn at the toll window — a reinforced kiosk where a bored-looking clerk with a heavy sidearm processes payment with the weary efficiency of someone who has done this ten thousand times.
+
+The gate itself groans again, a vast metal exhale, and somewhere down the line someone mutters a prayer against the day it doesn't hold.
+
+### Director's Section
+
+#### Key NPCs
+
+**Toll-Boss Yefim Drask** — Nyx's appointed manager of the Sluice Gate, a former Ironclad quartermaster who runs the toll with military precision and skims a careful, deniable margin off the top.
+
+**Little Anka** — the toll-window clerk, sharper than she looks, keeps a mental ledger of every face that's tried to talk their way past without paying.
+
+**Foreman Bertrand Oyelaran** — a Ferrum hydraulics engineer on permanent loan, the only person who actually understands the gate's aging mechanism; Nyx pays him triple to keep quiet about how close to failure it always is.
+
+#### Security
+
+Zone: Flats — Nyx-controlled chokepoint, tightly held; this is one of the district's few genuinely fortified positions.
+
+Armed toll-guards work in visible pairs, backed by a rooftop overwatch team Nyx doesn't bother to hide. Nonpayment or attempted sabotage triggers immediate armed response — Nyx treats the gate as critical infrastructure, because it is.
+
+Alert escalates fast and hard here: gate security carries direct comms to nearby Undertow allies and can call a full response team within minutes, understanding that anyone attacking a sluice gate might be trying to weaponize the flood itself.
+
+#### The Overlay (What the Wired Shows Here)
+
+Dense and official-looking — Nyx runs a legitimate-seeming toll-transaction overlay, complete with fake Sanctum risk-certification tags, to launder the tolls as insurance fees for tax purposes.
+
+A hacker who pushes past the surface finds the gate's actual control architecture: a jury-rigged interface between ancient Ferrum hydraulic systems and Nyx's modern override, fragile and dangerous to tamper with blind.
+
+A hidden diagnostic feed reveals Foreman Oyelaran's real damage reports — the gate is closer to catastrophic failure than anyone downstream has been told, a fact worth a great deal to the right buyer.
+
+#### Plot Hooks
+
+1. Open the Gate. Someone wants the Sluice Gate opened off-schedule — flooding a section of channel to destroy something (or someone) hiding there. Nyx will pay well for deniable muscle to make it happen, or pay even better to stop it.
+
+2. The Real Damage Report. Foreman Oyelaran's hidden failure data has leaked, and half the district's factions want it: to extort Nyx, to warn the Overflow's refugees, or to bury it before Sanctum uses it as an excuse to seize the gate "for public safety."
+
+3. Skimming the Skimmer. Toll-Boss Drask's careful margin has gotten less careful, and Nyx's Churn accountants have noticed. He needs the crew to make a shortfall disappear before his own employer decides he's the problem.
+
+## Culvert Kings
+
+*Drain-gang throne; the Undertow*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+Three culvert mouths meet here in a wide, dry junction chamber the Undertow claimed years ago and never let go — their throne room, if a drain-gang can be said to have one. Old shipping containers stacked two-high form makeshift walls, tagged floor to ceiling in the gang's gold sigil, and salvaged industrial lighting throws warm, uneven light across a floor that's still damp from the last flood and will be wet again on schedule. There's no sky above the junction, only the raw concrete underbelly of the level overhead, and the chemical rain finds its way down through a hundred hairline cracks, dripping in a slow, arrhythmic percussion that the gang has learned to talk over.
+
+The vertical space here is tighter than the open channels, but still shared: a lone Undertow scout-drone patrols a slow figure-eight near the ceiling, and a battered cargo-rig sits parked just inside the junction mouth, engine idling, ready to run. Voices carry strangely in the concrete acoustics — laughter, an argument over dice, someone singing badly — layered under the omnipresent hiss of rain finding its way through the cracks above.
+
+On a raised platform welded from culvert grating, a broad-shouldered figure in a rain-slicked leather coat watches you enter with the patient, assessing calm of someone who has already decided what you're worth.
+
+### Director's Section
+
+#### Key NPCs
+
+**King Osric Vane** — self-styled monarch of the Undertow, holds the Culvert Kings' throne through equal parts brutality and genuine care for his people; a canon-adjacent Undertow boss whose name is known clear across the district.
+
+**Marrow** — Osric's second, a quiet, unnervingly calm enforcer who handles the gang's disappearances personally and never explains himself.
+
+**Pip Corrado** — the gang's "flood-reader," a Corran-descended kid with an uncanny, half-mystical sense for when the water's really coming, regardless of what the official schedule claims.
+
+#### Security
+
+Zone: Flats — Undertow home ground, absolute; this is the safest and most dangerous place in the district depending entirely on your standing with the gang.
+
+Dozens of Undertow runners move through the junction at all times, armed and unbothered about showing it. Disrespect or threat to King Osric brings the full weight of the gang down fast — but a legitimate job offer, brought correctly, gets a fair and surprisingly civil hearing.
+
+Outside factions do not raid the Culvert Kings. The one time Ironclad tried, three culverts flooded simultaneously on a schedule nobody could explain, and the contractors were never found.
+
+#### The Overlay (What the Wired Shows Here)
+
+The junction is a deliberate dead zone — the Undertow scrambles local signal as a matter of doctrine, trusting concrete and word-of-mouth over anything that can be traced or hacked.
+
+A hacker skilled enough to punch through the scramble finds a startlingly sophisticated internal comms mesh, built by gang techs who've clearly had Meridian training at some point and never mentioned it.
+
+No dead-drops here in the usual sense — the whole junction functions as one, everything passing hand to hand under Osric's watchful eye.
+
+#### Plot Hooks
+
+1. The King's Favor. King Osric has a problem too delicate for his own people — something involving a rival deep in Nyx's Churn — and he's willing to pay in something better than nuyen: safe passage through every culvert in the district, indefinitely.
+
+2. Pip's Warning. Pip Corrado insists the next flood won't follow the schedule at all, and something in the deep drains is causing it. Osric doesn't believe in omens, but he believes in Pip, and he wants outside eyes to confirm it before he moves his people.
+
+3. Marrow's Ledger. Marrow has been quietly disappearing people who aren't gang enemies — they're witnesses to something happening in the lower culverts, something that smells like the war finally reaching up from the Sinks. The crew has to decide whether to dig, and what to do with what they find.
+
+## Wet Dreams
+
+*Flooded-basement simsense den*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+The entrance is unmarked except for a single pink lumen-strip half-submerged in standing water, throwing a warped reflection up the stairwell that leads down into what used to be a sub-level parking structure and is now Wet Dreams — Obsidian-adjacent, technically deniable, thoroughly known to everyone who matters. There's no sky down here, only three levels of hive pressing overhead, and the chemical rain that can't reach this deep instead seeps in through old seams, a constant slow flood that the management has simply decided to live with, ankle-deep and warm and lit from below by submerged pink neon.
+
+You don't come here by drone or rig — the stairwell's too narrow, the water too deep for anything but boots — but the traffic above the entrance never stops: courier-drones swap cargo at a rooftop relay, a hovercab idles at the curb waiting on a client who's lost track of time entirely, and a ground-rig full of "product" backs down a ramp nobody's supposed to know about. Sound down the stairwell muffles fast, the wall-of-noise city hiss fading into a wet, close hush, pierced by soft moans and murmurs leaking from curtained booths where bodies float in shallow tanks, wired into feeds that show them lives they'll never have.
+
+Somewhere in the dark water, someone laughs a laugh that doesn't sound entirely present.
+
+### Director's Section
+
+#### Key NPCs
+
+**Madam Silt** — proprietor, an Obsidian-licensed operator running just outside the corp's formal oversight; sells comfort, sells oblivion, keeps her books meticulously clean on the surface.
+
+**Dr. Farro Quist** — the den's on-site "physician," a disgraced Caduceus researcher who monitors clients for the fatal overdoses everyone pretends don't happen here.
+
+**Kessa Vail** — a BTL runner who supplies Madam Silt with bootleg simsense reels too raw or too illegal for Obsidian's official catalog; walks a knife-edge between valuable and expendable.
+
+#### Security
+
+Zone: Flats — Obsidian's informal jurisdiction, loosely enforced; the den survives on discretion rather than muscle.
+
+Two quiet "attendants" (more chrome than they look) handle disturbances by simply removing the disturbed party — usually by dragging them, gently, back up the flooded stairs. Real trouble draws Obsidian-contracted security from outside, fast and clinical.
+
+The standing water itself is a hazard the management uses to their advantage: anyone who causes a scene risks a submerged live cable Madam Silt insists, unconvincingly, is "totally grounded."
+
+#### The Overlay (What the Wired Shows Here)
+
+Publicly invisible — no listing, no ad-tag, findable only by word of mouth or an old client's referral chip. Obsidian's official overlay shows nothing but a defunct parking structure.
+
+A hacker who finds the den's private feed discovers Kessa Vail's BTL catalog cached in an encrypted local server, along with client logs Madam Silt would pay handsomely to keep buried.
+
+The submerged wiring throughout the den is a surveillance nightmare waiting to happen — Dr. Quist's monitoring gear taps every tank, and nobody has ever asked what happens to that data afterward.
+
+#### Plot Hooks
+
+1. The Reel That Doesn't End. A client went into one of Kessa's bootleg reels three days ago and hasn't come out — not dead, not really there either. Madam Silt wants it handled quietly before Caduceus or the family comes looking.
+
+2. Quist's Data. Dr. Quist's monitoring logs have found their way to a Meridian data-broker, and Madam Silt suspects one of her own staff sold them. The buyer's identity points toward something much bigger than blackmail.
+
+3. Bad Batch. A shipment of Kessa's reels has started causing seizures instead of euphoria — sabotage, bad manufacturing, or a rival BTL supplier making a point. Whoever's behind it isn't finished.
+
+## Gutter Clinic
+
+*Half-price street medicine*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+The Gutter Clinic occupies what used to be a maintenance substation bolted to the channel wall, half its equipment scavenged, all of it working, somehow, under a sagging gold-lit awning that keeps the worst of the chemical rain off the waiting benches outside. There is no sky above the channel, only the dripping dark underside of the level above, and the rain drums a steady rhythm on the awning's tin that the clinic's regulars have long since stopped hearing.
+
+Above the channel, a medevac drone from some corp contract or other passes overhead without stopping — nobody here can afford that kind of care — while a rattling ground-rig ambulance, more duct tape than vehicle, pulls up to unload a patient straight from a Culvert Kings dust-up. The waiting benches are packed shoulder to shoulder: a dockhand with a chemical burn, a kid with a fever, a drain-diver with the bends from working the flood tunnels too long. Voices are low here, tired, mixing with the rain-hiss and the low electronic beep of an ancient diagnostic scanner that's been repaired more times than it's been new.
+
+A nurse in a stained apron looks up as you approach, already triaging you by the way you're standing before you've said a word.
+
+### Director's Section
+
+#### Key NPCs
+
+**Dr. Imelda Okafor** — the clinic's founder and only licensed physician, once Caduceus-trained, now operating well outside corp sanction because she couldn't stomach turning away the SIN-less.
+
+**Nurse Tomas Rurik** — Corran guild-clan, runs triage and supply logistics, quietly diverts medical grey-tech from a Ferrum warehouse contact he's not supposed to have.
+
+**Whistle** — a teenage runner who fetches supplies and carries messages, knows every shortcut in the Spillway, and dreams of becoming a ripperdoc herself someday.
+
+#### Security
+
+Zone: Flats — neutral ground by unspoken district-wide agreement; even the Undertow leaves the clinic alone.
+
+No dedicated security; the clinic survives on the reputation that harming it invites collective retaliation, since everyone eventually needs it. Dr. Okafor herself carries an old sidearm she's never had to draw.
+
+The real threat isn't violence but scarcity — supply shortages, corp crackdowns on grey-tech medical stock, and the constant risk that Caduceus will finally decide to shut down the "unlicensed competition."
+
+#### The Overlay (What the Wired Shows Here)
+
+Deliberately minimal — the clinic keeps almost no digital record of patients, trading privacy for the trust of people who can't afford to be logged anywhere.
+
+A hacker looking closer finds Nurse Rurik's supply-diversion trail, a breadcrumb path leading back to a Ferrum warehouse quartermaster skimming inventory for a cause he half-believes in.
+
+A single dead-drop, an old donation box repurposed, sits by the entrance — anonymous requests for aid, or anonymous tips, depending on who's watching.
+
+#### Plot Hooks
+
+1. The Diverted Shipment. Nurse Rurik's Ferrum contact has gone quiet mid-diversion, leaving a critical shipment of anti-rejection meds stranded somewhere in the district. Dr. Okafor needs it found before her chronic patients run out.
+
+2. Caduceus Comes Calling. A Caduceus compliance team has started asking pointed questions about the clinic's grey-tech supply chain — the first step toward a shutdown. The crew can help bury the evidence, or help the clinic go fully underground before the axe falls.
+
+3. The Bends. A cluster of drain-divers have come in with the same strange, non-standard symptoms — not decompression sickness, something else, something that traces back to whatever the war is stirring up in the deep drains below the Spillway.
+
+## Echo Station
+
+*Dead-air fringe; signal drops out*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+The moment you cross into Echo Station, something changes you can't name until you place it — silence. Not real silence, never that, but the constant background chatter of a hundred thousand broadcasting signals just stops, leaving only the rain, the wind through the channel, and your own footsteps. This is the dead-air fringe, a stretch of the Spillway where the drain's ancient concrete geometry and decades of scavenged shielding conspire to swallow the Wired whole. Overhead, the underside of the level above still presses close and dripping, chemical rain still sheeting down in familiar sheets of cyan-tinted runoff, but the neon here is dimmer, older, and unnaturally slow to flicker, as if even the light doesn't quite trust the signal to hold.
+
+Traffic still moves — a cargo-crawler grinds along the channel-side road, a hovercab driver curses as their nav feed stutters and dies, forcing them onto manual controls they clearly haven't used in years — but there's a visible hesitation to it, drones especially, several of them drifting in confused, silent circles before their onboard failsafes force a slow descent. The wall of sound the rest of the district lives inside has a hole in it here, and that hole is worth more to some people than gold.
+
+A woman in a signal-dampening cloak watches you from a doorway, gauging whether you came here on purpose.
+
+### Director's Section
+
+#### Key NPCs
+
+**The Cartographer** — an unlicensed technomancer who mapped the dead-air zone's exact boundaries and sells that map, piece by piece, to whoever can pay in something she needs.
+
+**Ruslan Hoke** — a Meridian signal engineer sent, unofficially, to figure out why this stretch keeps resisting every relay upgrade thrown at it; increasingly convinced it isn't a technical problem at all.
+
+**Dovka** — an Undertow smuggler who uses the dead zone as a staging point for cargo she doesn't want Nyx's own listening-posts to notice moving.
+
+#### Security
+
+Zone: Flats — unclaimed by any single faction, valued precisely because no one can watch it closely; treated as neutral, contested ground.
+
+No conventional security responds here — that's the point. Anyone in trouble in Echo Station is genuinely alone until they walk out of the dead zone and back into signal range.
+
+The real danger is disorientation: SIN-readers, comms, and nav systems fail unpredictably, and more than one Edgerunner has wandered into the channel proper mid-flood-cycle because their warning apps simply didn't fire.
+
+#### The Overlay (What the Wired Shows Here)
+
+Nothing. That's the entire point — Echo Station is one of the only genuine dead-air zones in the district, a true hole in the Wired where SIN, ads, and surveillance alike simply fail to propagate.
+
+A technomancer or a very good hacker can sometimes feel the edges of the dead zone shifting day to day, as if something is deliberately maintaining and adjusting the dampening field rather than it being pure architectural accident.
+
+No dead-drops function digitally here; everything is physical, chalk-marks and scratched symbols on the concrete, an analog code the Undertow and the Cartographer both quietly maintain.
+
+#### Plot Hooks
+
+1. Who's Holding the Dampener. Ruslan Hoke has found evidence the dead zone isn't natural at all — something is actively projecting the dampening field from deeper in the drains, and Meridian wants to know what, quietly, before anyone else notices it's artificial.
+
+2. Dovka's Cargo. Dovka needs the crew to escort a shipment through Echo Station's blind spot without drawing attention from either Nyx proper or a rival smuggler who's started using the same dead zone.
+
+3. The Cartographer's Price. The Cartographer's map of the dead zone's boundaries has become suddenly, urgently valuable — someone in the Spires wants to weaponize a "quiet zone" for reasons that smell like the war's opening moves, and she's disappeared before naming a price.
+
+## The Grate Market
+
+*Salvage sieved from the drains*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+Long steel grates span a side-channel here, angled to catch whatever the last flood dragged down from the levels above, and the Grate Market has grown up around the sieving of it like a tideline village. Diggers in waders work the grates with long hooked poles, sorting scrap, lost chrome, drowned drones, and things nobody asks too many questions about into sorted heaps under strings of warm gold work-lights. There is no sky, only the underside of the level above pressing low and close, its chemical rain feeding the very channel these people make their living from — a cruel, practical irony nobody here finds funny anymore.
+
+The vertical space above the side-channel stays busy even at this unglamorous scale: a courier-drone dips low to inspect a salvaged parts-lot before its buyer even arrives, and a battered ground-rig idles at the market's edge, engine running, ready to haul off whatever the day's take is worth. The sound is a constant clatter — poles scraping grate-metal, haggling in six tongues, the perpetual hiss of rain — punctuated by the occasional triumphant shout when someone hooks something valuable out of the muck.
+
+A one-armed woman straightens from her grate as you approach, sizing you up the way she sizes up everything else the water brings her.
+
+### Director's Section
+
+#### Key NPCs
+
+**One-Arm Yulia** — the market's unofficial chief, lost her arm to a grate mishap years ago and now runs the biggest sorting crew through sheer accumulated authority.
+
+**Bosk** — a Ferrum-contracted "recovery agent," technically here to reclaim corp property lost in the drains, mostly ignored and quietly resented.
+
+**Little Finch** — a wiry kid technomancer-in-training who can sometimes coax a half-drowned drone or chip back to life, selling resurrected salvage at a premium.
+
+#### Security
+
+Zone: Flats — informally governed by Yulia's crew; disputes are settled by grate-rights custom, not violence, when possible.
+
+No armed presence beyond personal weapons; the diggers' hooked poles double as effective improvised weapons if trouble starts, and trouble rarely lasts long before the whole market crew swarms it.
+
+The Undertow takes a light cut here in exchange for keeping rival gangs from muscling in on the salvage rights — a rare case of the drain-gang acting as protection rather than predator.
+
+#### The Overlay (What the Wired Shows Here)
+
+Sparse and functional — salvage-buyers run simple authentication scans over goods for sale, checking for corp tracking tags before purchase; nothing else bothers to broadcast here.
+
+A hacker digging deeper finds that a surprising amount of "lost" corp data still lives on drowned chips and drives sold through this market — fragments of records someone upstream would very much like recovered or destroyed.
+
+No formal dead-drops, but Little Finch's resurrected devices sometimes still hold their last cached location data — an accidental, priceless intelligence resource for anyone who thinks to ask.
+
+#### Plot Hooks
+
+1. What the Water Gave Up. A recovered drive contains fragments of a Sanctum internal audit that shouldn't exist outside the Spires — someone upstream desperately wants it back, and doesn't care what the Grate Market has to say about salvage rights.
+
+2. Bosk's Real Assignment. Ferrum's "recovery agent" isn't looking for lost property at all — he's mapping the market's sorting patterns to find something specific that got flushed down from far above, and he's running out of patience with the slow approach.
+
+3. Finch's Ghost. One of the drones Little Finch resurrected didn't just come back online — it came back with a fragment of its last operator's consciousness still tangled in its systems, babbling about the war and the deep levels. Someone with resources wants that drone, badly.
+
+## Baptism Steps
+
+*Spillway street-faith washing rite*
+
+### Player Description
+
+*(read aloud as the crew arrives)*
+
+Wide concrete steps descend into the channel here, worn smooth by generations of bare feet, and this is where the Spillway's street-faith gathers for the washing rite — a ritual as old as the drains themselves, timed with grim precision to the hour just before a scheduled flood. Green lumen-lanterns line the steps, casting the whole scene in a soft algae glow that turns the falling chemical rain — endless, warm, sheeting down from the underside of the level above because there is no sky here, there never is — into something that almost looks sacred instead of merely unavoidable.
+
+Even here, the traffic doesn't stop: a hovercab swings wide around the channel's bend to avoid the gathered crowd, drone couriers reroute automatically around the steps' airspace, long since flagged as a no-fly courtesy zone by local convention rather than any law. A cargo-crawler idles respectfully at the top of the steps, its driver bowing his head as the ceremony reaches its peak. The sound here is different from anywhere else in the district — call and response chanting, low and steady, rising just enough to be heard over the rain-hiss, over the ever-present sub-bass thrum of the tower's ancient pumps.
+
+A street-priest at the water's edge lifts both hands as the first celebrants wade in, and somewhere behind you, a siren begins its distant countdown wail.
+
+### Director's Section
+
+#### Key NPCs
+
+**Sister Wren** — the Lamp on Ninth street-priest who leads the Baptism Steps rite, a fierce, weathered woman who has personally pulled dozens of people from the channel during floods that came early.
+
+**Halvard Iss** — a former Undertow enforcer turned devout convert, now serves as the rite's unofficial security, having seen too many "accidents" to trust the crowd's safety to faith alone.
+
+**The Drowned Choir** — a loose collective of survivors of past scheduled floods who sing the response verses; membership is informal, earned only by having nearly died in the channel and chosen to come back to it anyway.
+
+#### Security
+
+Zone: Flats — treated as sacred, neutral ground by nearly universal district custom; even hardened gang runners pause here.
+
+No formal armed security; Halvard Iss and a handful of devout volunteers manage crowd safety, mainly focused on timing — getting everyone out of the channel and up the steps well before the actual flood arrives, no matter how the ritual's momentum wants to linger.
+
+The one true threat is the schedule itself: the rite is deliberately, dangerously timed close to the flood window as an act of faith, and Sister Wren has buried celebrants who trusted the timing more than they trusted her warnings.
+
+#### The Overlay (What the Wired Shows Here)
+
+A soft, quiet AR presence — a single scrolling tag listing the rite's schedule and the district's official (and unofficial, more trusted) flood-timing data, maintained by faith-camp volunteers rather than any corp.
+
+A hacker looking closer finds that Sister Wren's flood-timing data is more accurate than Ferrum's own public feed, sourced from decades of oral tradition and careful cross-referencing with the Undertow's flood-readers like Pip Corrado.
+
+No dead-drops in the usual sense, but personal effects are sometimes left at the water's edge as offerings — and sometimes, quietly, as messages for people the sender can no longer reach any other way.
+
+#### Plot Hooks
+
+1. The Early Flood. The scheduled flood arrives markedly early during a packed rite, and only Sister Wren's paranoid margin of safety keeps it from being a massacre. She wants to know who altered the schedule — and why the timing precisely wiped out a group of witnesses to something in the lower drains.
+
+2. Halvard's Old Crew. Halvard's former Undertow allies want him back for a job that would violate everything he's rebuilt himself around. Refusing might mean the rite loses its only real protection right when it's needed most.
+
+3. A Voice in the Water. Celebrants during the last rite swear they heard something answer the call-and-response from beneath the water — not an echo. Sister Wren is trying to decide whether it's a sign, a threat, or the first proof that whatever's rising through the war-torn lower levels has reached the Spillway's drains.

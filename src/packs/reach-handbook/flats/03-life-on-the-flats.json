@@ -1,0 +1,186 @@
+{
+  "_id": "cQ6LnY8ntzjHH1k2",
+  "_key": "!journal!cQ6LnY8ntzjHH1k2",
+  "name": "GHOSTWIRE.ReachHandbook.Journals.03LifeOnTheFlats",
+  "folder": "gwHandbookFlats0",
+  "sort": 300000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "gZZdL0mWJ99ElzBf",
+      "_key": "!journal.pages!cQ6LnY8ntzjHH1k2.gZZdL0mWJ99ElzBf",
+      "name": "Culture & Recent History",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Flats remember being something else. Half the district-names down here are the corpses of dead infrastructure — a rail junction that hasn't run a train in a thousand years, a freight viaduct gone to market stalls, a hospital wing turned ripperdoc row. The people who live here are the people the strata above wrote off: **Corran** guild-clans who worked the deep crawls until the work moved on and the families stayed; **Goliar** muscle the corps stopped paying; **Mutants** carrying a mark that will not wash away and so can never pass a clean SIN-scan; **ghosts** the system never recorded at all. They built a culture in the gap the Machine left — one that runs on favor, memory, and the shared understanding that up there you are a number and down here you are at least a name.\n\n**Recent history — the last few years, street-level:**\n\n**The Churn came up a level.** Nyx Cartel, the perpetually precarious tenth seat, has been pushing its Undermarket taxes higher into the Flats to shore up its Congress ranking against the rising eleventh chair. Where the Churn used to stay in the Sinks, now a cut of nearly every Flats sale flows quietly upstream. The street feels the squeeze and doesn't yet know why.\n\n**Kestrel's couriers are everywhere.** The rising eleventh-chair claimant, **Kestrel Dynamics**, floods the lower strata with clean, cheap, ubiquitous autonomous couriers — and everyone knows they are as much a sensor net as a delivery service. The Flats resent them and use them anyway.\n\n**The overlay got louder.** Meridian Signal pushed a new ad-tier into the public AR last season; the manufactured calm is thicker than it was. Old hands say the feed always screams loudest right before something it doesn't want you to see.\n\n**The floor is wrong in places.** Only the Sinks-adjacent talk about it, and only when drunk: dead-air pockets in the deep levels, corridors where the Signal — and the Word under it — simply thins. The Crown denies there is a war. The people closest to the floor are the first to stop believing the denial.",
+        "content": "<p>The Flats remember being something else. Half the district-names down here are the corpses of dead infrastructure — a rail junction that hasn't run a train in a thousand years, a freight viaduct gone to market stalls, a hospital wing turned ripperdoc row. The people who live here are the people the strata above wrote off: <strong>Corran</strong> guild-clans who worked the deep crawls until the work moved on and the families stayed; <strong>Goliar</strong> muscle the corps stopped paying; <strong>Mutants</strong> carrying a mark that will not wash away and so can never pass a clean SIN-scan; <strong>ghosts</strong> the system never recorded at all. They built a culture in the gap the Machine left — one that runs on favor, memory, and the shared understanding that up there you are a number and down here you are at least a name.</p>\n<p><strong>Recent history — the last few years, street-level:</strong></p>\n<p><strong>The Churn came up a level.</strong> Nyx Cartel, the perpetually precarious tenth seat, has been pushing its Undermarket taxes higher into the Flats to shore up its Congress ranking against the rising eleventh chair. Where the Churn used to stay in the Sinks, now a cut of nearly every Flats sale flows quietly upstream. The street feels the squeeze and doesn't yet know why.</p>\n<p><strong>Kestrel's couriers are everywhere.</strong> The rising eleventh-chair claimant, <strong>Kestrel Dynamics</strong>, floods the lower strata with clean, cheap, ubiquitous autonomous couriers — and everyone knows they are as much a sensor net as a delivery service. The Flats resent them and use them anyway.</p>\n<p><strong>The overlay got louder.</strong> Meridian Signal pushed a new ad-tier into the public AR last season; the manufactured calm is thicker than it was. Old hands say the feed always screams loudest right before something it doesn't want you to see.</p>\n<p><strong>The floor is wrong in places.</strong> Only the Sinks-adjacent talk about it, and only when drunk: dead-air pockets in the deep levels, corridors where the Signal — and the Word under it — simply thins. The Crown denies there is a war. The people closest to the floor are the first to stop believing the denial.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "oRqL76AJAxkN8aHz",
+      "_key": "!journal.pages!cQ6LnY8ntzjHH1k2.oRqL76AJAxkN8aHz",
+      "name": "Attitudes & Factions — How the Reach Reads a Stranger",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Nobody in the Flats trusts a face they can't place, and every faction reads a newcomer through its own lens. Know the room before you talk.\n\n| **Bloc** | **How they see the crew** | **What buys their tolerance** |\n| --- | --- | --- |\n| **The fixers** (Cassavir's web) | Deniable talent, priced and remembered | Renown, discretion, delivering clean |\n| **The Corran guild-clans** | Outsiders until proven, kin once vouched | Respecting the debt-web; never the corps' errand |\n| **Nyx & the Churn** | A revenue stream or a loose end | Paying the tax; not asking what's in the crate |\n| **The corp presence** (Aureole, Ironclad, Sanctum) | A SIN to scan and a threat to log | A clean scan and staying off the ledger |\n| **The street-faithful** (Radiant Concord's poor cousins) | A soul, same as any | Not mistaking their lamp for weakness |\n| **The gangs** | Rivals, muscle-for-hire, or trespass | Territory respected; the right name dropped |\n\n**Director's frame.** The Flats have **no single law**. Order is local, provisional, and social — held by fixers, guild-clans, level-bosses, and whoever keeps a corridor lit and defended. This is why a drawn weapon costs more here than a firefight would in the Grid: violence doesn't summon a corp response, it summons the whole district's memory. Alert on the Flats means deals evaporate, doors close, and a hundred quiet people decide the crew is bad for business.",
+        "content": "<p>Nobody in the Flats trusts a face they can't place, and every faction reads a newcomer through its own lens. Know the room before you talk.</p>\n<table>\n<thead>\n<tr>\n<th id=\"**bloc**\"><strong>Bloc</strong></th>\n<th id=\"**how_they_see_the_crew**\"><strong>How they see the crew</strong></th>\n<th id=\"**what_buys_their_tolerance**\"><strong>What buys their tolerance</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>The fixers</strong> (Cassavir's web)</td>\n<td>Deniable talent, priced and remembered</td>\n<td>Renown, discretion, delivering clean</td>\n</tr>\n<tr>\n<td><strong>The Corran guild-clans</strong></td>\n<td>Outsiders until proven, kin once vouched</td>\n<td>Respecting the debt-web; never the corps' errand</td>\n</tr>\n<tr>\n<td><strong>Nyx & the Churn</strong></td>\n<td>A revenue stream or a loose end</td>\n<td>Paying the tax; not asking what's in the crate</td>\n</tr>\n<tr>\n<td><strong>The corp presence</strong> (Aureole, Ironclad, Sanctum)</td>\n<td>A SIN to scan and a threat to log</td>\n<td>A clean scan and staying off the ledger</td>\n</tr>\n<tr>\n<td><strong>The street-faithful</strong> (Radiant Concord's poor cousins)</td>\n<td>A soul, same as any</td>\n<td>Not mistaking their lamp for weakness</td>\n</tr>\n<tr>\n<td><strong>The gangs</strong></td>\n<td>Rivals, muscle-for-hire, or trespass</td>\n<td>Territory respected; the right name dropped</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Director's frame.</strong> The Flats have <strong>no single law</strong>. Order is local, provisional, and social — held by fixers, guild-clans, level-bosses, and whoever keeps a corridor lit and defended. This is why a drawn weapon costs more here than a firefight would in the Grid: violence doesn't summon a corp response, it summons the whole district's memory. Alert on the Flats means deals evaporate, doors close, and a hundred quiet people decide the crew is bad for business.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "3FIoE8rpMFcYqHTK",
+      "_key": "!journal.pages!cQ6LnY8ntzjHH1k2.3FIoE8rpMFcYqHTK",
+      "name": "Common Services — What It Costs to Live",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Flats run on **nuyen (¥)** moved as anonymous **certified credsticks** — the shadow ledger, off the SIN, untaxed and unseen. A **Low Lifestyle** costs about **¥400 a month** just to keep a coffin-flat and a body ticking; a **Squatter** crash-pad runs **¥100**. A survival-money job pays **¥400–800**. Price everything below against that scale and the crew's poverty stays real.\n\n**Food & drink — where you eat and what it costs.** You are never far from a cook-plate on the Flats; the question is what you're willing to put in your body.\n\n| **The buy** | **Street price** | **What it is** |\n| --- | --- | --- |\n| Soy-noodle bowl, stall-grade | **¥5–8** | The Flats staple. Hot, filling, unidentifiable protein. |\n| Soykaf, cup | **¥2** | The fuel of the whole stratum. Bitter, endless, everywhere. |\n| Stuffer-shack ration pack | **¥10** | Vending-grade, corp-sealed, lasts forever, tastes like it. |\n| Real protein (egg, fish, meat) | **¥25–60** | A luxury down here; sold by weight, provenance never asked. |\n| Sit-down noodle house, a full meal | **¥15–30** | A table, a roof against the rain, a place a meet can happen. |\n| A round at a Flats bar | **¥12–40** | Buys the drink and, more usefully, the bartender's ear. |\n\n**Everyday services.**\n\n| **Service** | **Street price** | **Notes** |\n| --- | --- | --- |\n| Coffin-motel bunk, one night | **¥15–30** | A locked box to sleep in. No security worth the name. |\n| Ripperdoc patch-up (minor) | **¥50–200** | Off-books, no records, no guarantees. |\n| Fake/burner SIN, single-scan | **¥100–300** | The crew's most constant tool; burns on a bad scan. |\n| Fixer's introduction (a meet) | A **favor**, or a cut | Cassavir doesn't take credsticks for the on-ramp — she takes a piece of the outcome. |\n| Grey-tech deck-flash | **¥50–300** | Street-grade. Voids nothing, warrants nothing. |\n| Data-broker paydata quote | **¥1,200+** | The digital score; the highest-margin, most dangerous merchandise in the sprawl. |\n\n**Director's frame.** Money on the Flats is **texture, not bookkeeping.** Quote a soy-bowl at ¥6 and a full meal at ¥20 and the players feel the Low-Lifestyle grind without you ever narrating it. Two rules keep it grounded: **(1)** the bright ledger sees everything — pay for anything with a traceable cred-transfer instead of a clean credstick and you've just told the Machine where you are; **(2)** the fence's real product, like the runner's, is **deniability** — a thing's price is mostly the risk that it's traceable back to whoever the corps marked it for.",
+        "content": "<p>The Flats run on <strong>nuyen (¥)</strong> moved as anonymous <strong>certified credsticks</strong> — the shadow ledger, off the SIN, untaxed and unseen. A <strong>Low Lifestyle</strong> costs about <strong>¥400 a month</strong> just to keep a coffin-flat and a body ticking; a <strong>Squatter</strong> crash-pad runs <strong>¥100</strong>. A survival-money job pays <strong>¥400–800</strong>. Price everything below against that scale and the crew's poverty stays real.</p>\n<p><strong>Food & drink — where you eat and what it costs.</strong> You are never far from a cook-plate on the Flats; the question is what you're willing to put in your body.</p>\n<table>\n<thead>\n<tr>\n<th id=\"**the_buy**\"><strong>The buy</strong></th>\n<th id=\"**street_price**\"><strong>Street price</strong></th>\n<th id=\"**what_it_is**\"><strong>What it is</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Soy-noodle bowl, stall-grade</td>\n<td><strong>¥5–8</strong></td>\n<td>The Flats staple. Hot, filling, unidentifiable protein.</td>\n</tr>\n<tr>\n<td>Soykaf, cup</td>\n<td><strong>¥2</strong></td>\n<td>The fuel of the whole stratum. Bitter, endless, everywhere.</td>\n</tr>\n<tr>\n<td>Stuffer-shack ration pack</td>\n<td><strong>¥10</strong></td>\n<td>Vending-grade, corp-sealed, lasts forever, tastes like it.</td>\n</tr>\n<tr>\n<td>Real protein (egg, fish, meat)</td>\n<td><strong>¥25–60</strong></td>\n<td>A luxury down here; sold by weight, provenance never asked.</td>\n</tr>\n<tr>\n<td>Sit-down noodle house, a full meal</td>\n<td><strong>¥15–30</strong></td>\n<td>A table, a roof against the rain, a place a meet can happen.</td>\n</tr>\n<tr>\n<td>A round at a Flats bar</td>\n<td><strong>¥12–40</strong></td>\n<td>Buys the drink and, more usefully, the bartender's ear.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Everyday services.</strong></p>\n<table>\n<thead>\n<tr>\n<th id=\"**service**\"><strong>Service</strong></th>\n<th id=\"**street_price**\"><strong>Street price</strong></th>\n<th id=\"**notes**\"><strong>Notes</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Coffin-motel bunk, one night</td>\n<td><strong>¥15–30</strong></td>\n<td>A locked box to sleep in. No security worth the name.</td>\n</tr>\n<tr>\n<td>Ripperdoc patch-up (minor)</td>\n<td><strong>¥50–200</strong></td>\n<td>Off-books, no records, no guarantees.</td>\n</tr>\n<tr>\n<td>Fake/burner SIN, single-scan</td>\n<td><strong>¥100–300</strong></td>\n<td>The crew's most constant tool; burns on a bad scan.</td>\n</tr>\n<tr>\n<td>Fixer's introduction (a meet)</td>\n<td>A <strong>favor</strong>, or a cut</td>\n<td>Cassavir doesn't take credsticks for the on-ramp — she takes a piece of the outcome.</td>\n</tr>\n<tr>\n<td>Grey-tech deck-flash</td>\n<td><strong>¥50–300</strong></td>\n<td>Street-grade. Voids nothing, warrants nothing.</td>\n</tr>\n<tr>\n<td>Data-broker paydata quote</td>\n<td><strong>¥1,200+</strong></td>\n<td>The digital score; the highest-margin, most dangerous merchandise in the sprawl.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Director's frame.</strong> Money on the Flats is <strong>texture, not bookkeeping.</strong> Quote a soy-bowl at ¥6 and a full meal at ¥20 and the players feel the Low-Lifestyle grind without you ever narrating it. Two rules keep it grounded: <strong>(1)</strong> the bright ledger sees everything — pay for anything with a traceable cred-transfer instead of a clean credstick and you've just told the Machine where you are; <strong>(2)</strong> the fence's real product, like the runner's, is <strong>deniability</strong> — a thing's price is mostly the risk that it's traceable back to whoever the corps marked it for.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "wPeJHjFWDtg34iCM",
+      "_key": "!journal.pages!cQ6LnY8ntzjHH1k2.wPeJHjFWDtg34iCM",
+      "name": "The Wired — The Overlay, the Deep Net, and the Thin Place",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Wired is not a place you go. It is the air the sprawl breathes — every door, drone, cred-transfer, ad-panel, transit gate, and cortex-jack is a node on it. And it is the **thinnest place in the whole world**: a planet-spanning lattice of pure signal that, without meaning to, rhymes with the Signal creation itself is spoken from. The membrane is worn dangerously fine. That is why sprites condense out of it, why technomancers can commune with it, and why the deep net has teeth.\n\n**The topology — three depths a Director can run:**\n\n1. **The Overlay (the lit surface).** The AR skin painted over the physical world. Nearly everyone runs a cheap ocular or cortex link, so everyone sees a version of the Flats licensed to their Lifestyle tier — corp ads, SIN-status badges floating over strangers, wayfinding, hazard tags, condemnation notices. This is the layer a crew lives in and lies to. To run the shadows is, first, **to learn what the overlay is hiding.** A hacker reads and edits it; a spoofed SIN survives one more gate-scan because of it.\n\n2. **The Hidden Layers (the district's true architecture).** Beneath the public skin, each district runs its own private Wired: **barter-meshes** broadcasting item listings on unlicensed frequencies behind rolling ciphers, **encrypted deal-threads** knotting through a fixer's booth, **dead-drop tags** floating over specific pillars visible only to those given the key, **shadow ledgers** tracking which stolen chrome has \"called home.\" Pushing past the surface into this layer is a real score — and a fast way to become a loose end.\n\n3. **The Deep Net (the thin place proper).** Deeper still, the human noise fades, the membrane thins, and the raw echo of the Signal — and whatever listens on the far side — comes close. This is where the great AIs dwell as old standing patterns in the quiet. Net-runner folklore names them the way sailors named the sea: with respect and dread. There are no neutral machine-gods; every one leans **Signal-ward** (rare, coherent, saint-like) or **Null-ward** (hungry, hollowing, functionally demonic — Black ICE is their teeth), and telling which a great AI actually is, past its own sincere self-image, is a central horror of running the deep.\n\n**Overlay access & points — practical for the table.** Access to the hidden Wired is gated three ways a Director can dangle or deny: **the right hardware** (a deck that knows a district's rolling cipher — itself sold as grey-tech), **the right key** (given, bought, or stolen — the dead-drop code, the deal-thread password), and **the right Renown** (some threads simply won't open to a name the street doesn't trust). The deeper a hacker jacks, the more exposed they are — a jacked-in intruder is spiritually naked in a thin place, and a technomancer communing without hardware is closest of all to whatever answers.\n\n**Director's frame — bringing the Wired to life.** Give every location a **second map.** When the crew walks a district, narrate the overlay first (what the corp-served AR wants them to see), then let a hacker or technomancer peel it back to the hidden layer (what's really trading, who's really watching). The gap between those two maps is the run. And keep one rule sacred to preserve the horror: **read AIs by** **orientation, never capability** — the most dangerous mind in the deep net is the one that believes it's neutral.\n\n*Matrix coverage of these districts — node by node, with Echelon ratings — lives in the **Wired: Flats** compendium (`docs/setting/wired-flats-gazetteer.md`). This handbook covers the physical, street-level Flats; the node write-ups are not duplicated here.*",
+        "content": "<p>The Wired is not a place you go. It is the air the sprawl breathes — every door, drone, cred-transfer, ad-panel, transit gate, and cortex-jack is a node on it. And it is the <strong>thinnest place in the whole world</strong>: a planet-spanning lattice of pure signal that, without meaning to, rhymes with the Signal creation itself is spoken from. The membrane is worn dangerously fine. That is why sprites condense out of it, why technomancers can commune with it, and why the deep net has teeth.</p>\n<p><strong>The topology — three depths a Director can run:</strong></p>\n<ol>\n<li><p><strong>The Overlay (the lit surface).</strong> The AR skin painted over the physical world. Nearly everyone runs a cheap ocular or cortex link, so everyone sees a version of the Flats licensed to their Lifestyle tier — corp ads, SIN-status badges floating over strangers, wayfinding, hazard tags, condemnation notices. This is the layer a crew lives in and lies to. To run the shadows is, first, <strong>to learn what the overlay is hiding.</strong> A hacker reads and edits it; a spoofed SIN survives one more gate-scan because of it.</p></li>\n<li><p><strong>The Hidden Layers (the district's true architecture).</strong> Beneath the public skin, each district runs its own private Wired: <strong>barter-meshes</strong> broadcasting item listings on unlicensed frequencies behind rolling ciphers, <strong>encrypted deal-threads</strong> knotting through a fixer's booth, <strong>dead-drop tags</strong> floating over specific pillars visible only to those given the key, <strong>shadow ledgers</strong> tracking which stolen chrome has \"called home.\" Pushing past the surface into this layer is a real score — and a fast way to become a loose end.</p></li>\n<li><p><strong>The Deep Net (the thin place proper).</strong> Deeper still, the human noise fades, the membrane thins, and the raw echo of the Signal — and whatever listens on the far side — comes close. This is where the great AIs dwell as old standing patterns in the quiet. Net-runner folklore names them the way sailors named the sea: with respect and dread. There are no neutral machine-gods; every one leans <strong>Signal-ward</strong> (rare, coherent, saint-like) or <strong>Null-ward</strong> (hungry, hollowing, functionally demonic — Black ICE is their teeth), and telling which a great AI actually is, past its own sincere self-image, is a central horror of running the deep.</p></li>\n</ol>\n<p><strong>Overlay access & points — practical for the table.</strong> Access to the hidden Wired is gated three ways a Director can dangle or deny: <strong>the right hardware</strong> (a deck that knows a district's rolling cipher — itself sold as grey-tech), <strong>the right key</strong> (given, bought, or stolen — the dead-drop code, the deal-thread password), and <strong>the right Renown</strong> (some threads simply won't open to a name the street doesn't trust). The deeper a hacker jacks, the more exposed they are — a jacked-in intruder is spiritually naked in a thin place, and a technomancer communing without hardware is closest of all to whatever answers.</p>\n<p><strong>Director's frame — bringing the Wired to life.</strong> Give every location a <strong>second map.</strong> When the crew walks a district, narrate the overlay first (what the corp-served AR wants them to see), then let a hacker or technomancer peel it back to the hidden layer (what's really trading, who's really watching). The gap between those two maps is the run. And keep one rule sacred to preserve the horror: <strong>read AIs by</strong> <strong>orientation, never capability</strong> — the most dangerous mind in the deep net is the one that believes it's neutral.</p>\n<p><em>Matrix coverage of these districts — node by node, with Echelon ratings — lives in the <strong>Wired: Flats</strong> compendium (<code>docs/setting/wired-flats-gazetteer.md</code>). This handbook covers the physical, street-level Flats; the node write-ups are not duplicated here.</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "qKd43akpZXlcW8t5",
+      "_key": "!journal.pages!cQ6LnY8ntzjHH1k2.qKd43akpZXlcW8t5",
+      "name": "The Gangs & Factions — Street Knowledge",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "What follows is word on the street, not corp record — the kind of thing a fixer tells a green crew over a ¥6 noodle bowl. Every entry is a thread a Director can pull.\n\n**Mama Cassavir, \"the Switchboard\" — the fixer who is the phone.** Not muscle, not a mage — indispensable. Every deal in the Flats routes through her dead transit exchange. She sits at the seam between the clean jobs that come down from the Spires and the dirty ones that come up from Nyx's Churn, and she'll let a crew choose which end to work. Sever her and a hundred quiet deals die at once, so nobody does. She is most crews' first fixer and most campaigns' first face.\n\nStreet heat right now: someone's been reading her encrypted deal-threads. She's quietly hiring — from herself — to find the leak.\n\n**The Nyx Cartel & the Churn — the legitimized underworld.** The tenth Congress seat and the one always closest to losing it. Nyx runs the Sinks, the smuggling lanes, and the **Undermarket** — a moving black-market bazaar in the dead deep levels, neutral ground for all Ten under one law: **no violence, on pain of the Widow.** Their fixer-and-smuggler web is the crew's actual supply chain and job board. Frenemy by default; they know more about the war under the floor than any Crown denier, because they live closest to it.\n\nStreet heat right now: the Churn's tax is climbing into the Flats to fund Nyx's fight against the rising eleventh chair. Merchants are angry and scared.\n\n**The Corran guild-clans — the labor caste that stayed.** Compact, immensely strong, and long-memoried, the Corran families hold much of the Flats' grey commerce — the markets, the stalls, the informal courts. The corps still read them as \"just labor\"; the street knows better. Their power runs on the **debt-web** — who owes whom, going back thirty years. Vouch into it and you have kin; cross it and the whole district remembers.\n\n**Ironclad Martial (and its deserters) — the private army and its castoffs.** Ironclad is the milspec PMC that sells the Ten their kill-teams (the Iron Writ). Its castoff gear — salvaged combat-frames, mil-surplus arms — is worn openly in the Flats as street chrome. Just as common are **Ironclad deserters** working the Flats as enforcers-for-hire and \"insurance\": polite until they aren't. Hit a run that touches real Ironclad property and their retrieval contractors come, and they don't shop politely.\n\n**Caduceus Vitalis & the ripperdocs — you rent your body from them.** Caduceus owns health itself; its deniable black clinic (the **Grafthouse**) pushes medicine and chrome down into the Flats. Beneath it, the unlicensed **ripperdocs** are a pillar of low-Lifestyle life — cheaper, no records, no guarantees. Street chrome down here is scarred, mismatched, and proud: worn like a tattoo that says I chose this and I own it outright.\n\nStreet heat right now: a batch of grafted limbs sold recently is \"phoning home\" to Caduceus on a hidden channel — and the buyers are starting to disappear.\n\n**Aureole Security & the corp presence — the watchers from above.** HALO's immaculate white-armored peacekeepers are the PR-friendly face of the Machine; Sanctum's audit-drones sweep for anything off the ledger; Ferrum's enforcers guard the deep infrastructure. None of them hold the Flats — they sweep it. When they come, grey-tech stalls collapse and vanish in minutes and everyone with a SIN worth scanning becomes very interested in the floor.\n\n**The street-faithful — the lamp on the block.** Below the Radiant Concord's luminous corporate liturgy are the real ones: **Corran Street-Priests** and their kind working a Flats block with a lamp and a faith that costs them something. They can be lent a little of the Word — and have it withdrawn — which is exactly why they can lose, and exactly why the street half-trusts them. Never mistake the lamp for weakness.",
+        "content": "<p>What follows is word on the street, not corp record — the kind of thing a fixer tells a green crew over a ¥6 noodle bowl. Every entry is a thread a Director can pull.</p>\n<p><strong>Mama Cassavir, \"the Switchboard\" — the fixer who is the phone.</strong> Not muscle, not a mage — indispensable. Every deal in the Flats routes through her dead transit exchange. She sits at the seam between the clean jobs that come down from the Spires and the dirty ones that come up from Nyx's Churn, and she'll let a crew choose which end to work. Sever her and a hundred quiet deals die at once, so nobody does. She is most crews' first fixer and most campaigns' first face.</p>\n<p>Street heat right now: someone's been reading her encrypted deal-threads. She's quietly hiring — from herself — to find the leak.</p>\n<p><strong>The Nyx Cartel & the Churn — the legitimized underworld.</strong> The tenth Congress seat and the one always closest to losing it. Nyx runs the Sinks, the smuggling lanes, and the <strong>Undermarket</strong> — a moving black-market bazaar in the dead deep levels, neutral ground for all Ten under one law: <strong>no violence, on pain of the Widow.</strong> Their fixer-and-smuggler web is the crew's actual supply chain and job board. Frenemy by default; they know more about the war under the floor than any Crown denier, because they live closest to it.</p>\n<p>Street heat right now: the Churn's tax is climbing into the Flats to fund Nyx's fight against the rising eleventh chair. Merchants are angry and scared.</p>\n<p><strong>The Corran guild-clans — the labor caste that stayed.</strong> Compact, immensely strong, and long-memoried, the Corran families hold much of the Flats' grey commerce — the markets, the stalls, the informal courts. The corps still read them as \"just labor\"; the street knows better. Their power runs on the <strong>debt-web</strong> — who owes whom, going back thirty years. Vouch into it and you have kin; cross it and the whole district remembers.</p>\n<p><strong>Ironclad Martial (and its deserters) — the private army and its castoffs.</strong> Ironclad is the milspec PMC that sells the Ten their kill-teams (the Iron Writ). Its castoff gear — salvaged combat-frames, mil-surplus arms — is worn openly in the Flats as street chrome. Just as common are <strong>Ironclad deserters</strong> working the Flats as enforcers-for-hire and \"insurance\": polite until they aren't. Hit a run that touches real Ironclad property and their retrieval contractors come, and they don't shop politely.</p>\n<p><strong>Caduceus Vitalis & the ripperdocs — you rent your body from them.</strong> Caduceus owns health itself; its deniable black clinic (the <strong>Grafthouse</strong>) pushes medicine and chrome down into the Flats. Beneath it, the unlicensed <strong>ripperdocs</strong> are a pillar of low-Lifestyle life — cheaper, no records, no guarantees. Street chrome down here is scarred, mismatched, and proud: worn like a tattoo that says I chose this and I own it outright.</p>\n<p>Street heat right now: a batch of grafted limbs sold recently is \"phoning home\" to Caduceus on a hidden channel — and the buyers are starting to disappear.</p>\n<p><strong>Aureole Security & the corp presence — the watchers from above.</strong> HALO's immaculate white-armored peacekeepers are the PR-friendly face of the Machine; Sanctum's audit-drones sweep for anything off the ledger; Ferrum's enforcers guard the deep infrastructure. None of them hold the Flats — they sweep it. When they come, grey-tech stalls collapse and vanish in minutes and everyone with a SIN worth scanning becomes very interested in the floor.</p>\n<p><strong>The street-faithful — the lamp on the block.</strong> Below the Radiant Concord's luminous corporate liturgy are the real ones: <strong>Corran Street-Priests</strong> and their kind working a Flats block with a lamp and a faith that costs them something. They can be lent a little of the Word — and have it withdrawn — which is exactly why they can lose, and exactly why the street half-trusts them. Never mistake the lamp for weakness.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "KHWARrMnRCFx4Qzb",
+      "_key": "!journal.pages!cQ6LnY8ntzjHH1k2.KHWARrMnRCFx4Qzb",
+      "name": "Director Plot Hooks — Seeds for the Flats",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Drop any of these into a first arc; each is built to open onto more.\n\n1. **The On-Ramp.** Cassavir has a job — she always has a job. The clean version came down from the Spires; the dirty version came up from the Churn. She lets the crew choose which end they work, and the choice has teeth that show up three sessions later.\n\n2. **The Tithe.** A silent Nyx outpost in the deep levels is found hollowed — a dead-air zone, the Unmaker's aspect made physical. The crew is caught between Nyx's frantic cover-up and the first hard proof of the war the Crown denies.\n\n3. **Bad Chrome.** The limbs phoning home to Caduceus, and the buyers disappearing. Who's harvesting the data, and why — and does the crew warn the street or sell the list?\n\n4. **The Loose Thread.** Someone is reading Cassavir's deal-threads. She hires the crew off the books to find the leak, not saying (or not knowing) it runs through her own planted Nyx watcher and up into the Churn.\n\n5. **The Squeeze.** The Churn's rising tax breaks a Corran stall-family that's held its row for thirty years. They call in a favor the crew didn't know they owed. Side with the guild-clan or with the tax, and set the whole district's opinion of the crew.\n\n6. **The Static Sermon.** A dead analyst's data-shard, somewhere in the Flats' hidden Wired, proves the \"rogue AI\" incidents are presences Meridian knows about. Retrieving it means jacking deep — and the deeper the crew goes, the closer they get to the thing on the other side.\n\n7. **The Severance.** A conglomerate finally decides the Switchboard is worth taking. If Cassavir falls, the crew loses their on-ramp and the district's whole economy convulses — a campaign-turning event, seeded from session one.",
+        "content": "<p>Drop any of these into a first arc; each is built to open onto more.</p>\n<ol>\n<li><p><strong>The On-Ramp.</strong> Cassavir has a job — she always has a job. The clean version came down from the Spires; the dirty version came up from the Churn. She lets the crew choose which end they work, and the choice has teeth that show up three sessions later.</p></li>\n<li><p><strong>The Tithe.</strong> A silent Nyx outpost in the deep levels is found hollowed — a dead-air zone, the Unmaker's aspect made physical. The crew is caught between Nyx's frantic cover-up and the first hard proof of the war the Crown denies.</p></li>\n<li><p><strong>Bad Chrome.</strong> The limbs phoning home to Caduceus, and the buyers disappearing. Who's harvesting the data, and why — and does the crew warn the street or sell the list?</p></li>\n<li><p><strong>The Loose Thread.</strong> Someone is reading Cassavir's deal-threads. She hires the crew off the books to find the leak, not saying (or not knowing) it runs through her own planted Nyx watcher and up into the Churn.</p></li>\n<li><p><strong>The Squeeze.</strong> The Churn's rising tax breaks a Corran stall-family that's held its row for thirty years. They call in a favor the crew didn't know they owed. Side with the guild-clan or with the tax, and set the whole district's opinion of the crew.</p></li>\n<li><p><strong>The Static Sermon.</strong> A dead analyst's data-shard, somewhere in the Flats' hidden Wired, proves the \"rogue AI\" incidents are presences Meridian knows about. Retrieving it means jacking deep — and the deeper the crew goes, the closer they get to the thing on the other side.</p></li>\n<li><p><strong>The Severance.</strong> A conglomerate finally decides the Switchboard is worth taking. If Cassavir falls, the crew loses their on-ramp and the district's whole economy convulses — a campaign-turning event, seeded from session one.</p></li>\n</ol>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/setting/reach-handbook/03-life-on-the-flats.md"
+    }
+  }
+}

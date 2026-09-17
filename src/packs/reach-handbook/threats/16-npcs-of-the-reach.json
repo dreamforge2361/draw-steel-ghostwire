@@ -1,0 +1,130 @@
+{
+  "_id": "ZzJhDENg3BEyKQtL",
+  "_key": "!journal!ZzJhDENg3BEyKQtL",
+  "name": "GHOSTWIRE.ReachHandbook.Journals.16NpcsOfTheReach",
+  "folder": "gwHandbookThreat",
+  "sort": 1600000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "g8cZcGE92j3rzblZ",
+      "_key": "!journal.pages!ZzJhDENg3BEyKQtL.g8cZcGE92j3rzblZ",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*The Humanoid Adversaries & Civilians of the Flats*\n\nThe named and the nameless who stand between the crew and the job. This roster collects the humanoid adversaries and civilians of the Flats — the gangers a fresh crew actually fights, the corp security who answer the alarm, the specialists and fixers a crew hires or fears, and the ordinary people who make the Flats a place and not a battlefield.",
+        "content": "<p><em>The Humanoid Adversaries & Civilians of the Flats</em></p>\n<p>The named and the nameless who stand between the crew and the job. This roster collects the humanoid adversaries and civilians of the Flats — the gangers a fresh crew actually fights, the corp security who answer the alarm, the specialists and fixers a crew hires or fears, and the ordinary people who make the Flats a place and not a battlefield.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ktJ0g28dOrAJWySb",
+      "_key": "!journal.pages!ZzJhDENg3BEyKQtL.ktJ0g28dOrAJWySb",
+      "name": "Recruits, Mooks & Street Fixtures",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The bottom rung of the Reach: entry-tier threats and the ordinary people of the Flats.\n\n### Gangers\n\n#### Churn Runner\n\n*Nyx foot-soldier, the district's disposable many*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Nyx buys them by the dozen from the Churn.\n\n#### Rig-Kid\n\n*teenage wheelman, all nerve and no armor*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Not a fighter — a driver. Runs the crew's escape. Take him alive and you own their exit.\n\n#### Steel Cutter\n\n*the gang's enforcer, first real fight of the night*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The muscle who walks up front, wearing the gang's colors and somebody else's chrome. Drop him and the Churn Runners scatter.\n\n### Corporate Security\n\n#### Gate Contractor\n\n*Ironclad-trained rent-a-cop on the door*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Off the books, on a rotating retainer. Not paid enough to die — offer him a reason to look away.\n\n#### Drone Picket\n\n*a Wrench's cheap eyes, not a person at all*\n\n*Stats: see the Ghostwire Bestiary.*\n\n### Shopkeepers & Civilians\n\n#### Stall-Keeper\n\n*the vendor behind the counter (non-combatant)*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Not a fight — a relationship. Ilsa \"Solder-Ma,\" Old Madam Ferrin, and Dassa Wynn are all this block with a name and a favor to trade.\n\n#### Flats Worker\n\n*the ordinary many who keep the tower alive*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The pump-techs, the cargo-crawler crews, the tarp-stall families. The reason the Flats is a place and not a battlefield.\n\n#### Wired Chore-Sprite\n\n*a Technomancer's low sprite doing scut-work*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Half the \"people\" in Wireside are these. Whit's flashed decks are crawling with them.",
+        "content": "<p>The bottom rung of the Reach: entry-tier threats and the ordinary people of the Flats.</p>\n<h3>Gangers</h3>\n<h4>Churn Runner</h4>\n<p><em>Nyx foot-soldier, the district's disposable many</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Nyx buys them by the dozen from the Churn.</p>\n<h4>Rig-Kid</h4>\n<p><em>teenage wheelman, all nerve and no armor</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Not a fighter — a driver. Runs the crew's escape. Take him alive and you own their exit.</p>\n<h4>Steel Cutter</h4>\n<p><em>the gang's enforcer, first real fight of the night</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The muscle who walks up front, wearing the gang's colors and somebody else's chrome. Drop him and the Churn Runners scatter.</p>\n<h3>Corporate Security</h3>\n<h4>Gate Contractor</h4>\n<p><em>Ironclad-trained rent-a-cop on the door</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Off the books, on a rotating retainer. Not paid enough to die — offer him a reason to look away.</p>\n<h4>Drone Picket</h4>\n<p><em>a Wrench's cheap eyes, not a person at all</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<h3>Shopkeepers &amp; Civilians</h3>\n<h4>Stall-Keeper</h4>\n<p><em>the vendor behind the counter (non-combatant)</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Not a fight — a relationship. Ilsa \"Solder-Ma,\" Old Madam Ferrin, and Dassa Wynn are all this block with a name and a favor to trade.</p>\n<h4>Flats Worker</h4>\n<p><em>the ordinary many who keep the tower alive</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The pump-techs, the cargo-crawler crews, the tarp-stall families. The reason the Flats is a place and not a battlefield.</p>\n<h4>Wired Chore-Sprite</h4>\n<p><em>a Technomancer's low sprite doing scut-work</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Half the \"people\" in Wireside are these. Whit's flashed decks are crawling with them.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "AYaAfTELJ6GwiGVF",
+      "_key": "!journal.pages!ZzJhDENg3BEyKQtL.AYaAfTELJ6GwiGVF",
+      "name": "Trained Field Assets",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Reach's competent professionals — journeyman threats.\n\n### Gangers\n\n#### Colors Boss\n\n*the crew leader who actually gives orders*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The gangs of the Flats are named for her colors, not the other way around.\n\n#### Chrome Bruiser\n\n*the gang's cybered heavy*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** More chrome than credit rating. His Body Integrity is shot — hit him with the right EMP payload and the plating drops.\n\n### Corporate Security\n\n#### Response Lieutenant\n\n*the corp team's field commander*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Ironclad or a conglomerate's on-site lead. She calls the escalation the gazetteer warns about — \"Alert response is corporate.\"\n\n#### Corp Netrunner\n\n*the ICE-jockey on overwatch*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The reason a Hacker crewmember earns their pay. She never leaves the host — kill her in meat-space and the whole node goes soft.\n\n### Specialists & Fixers\n\n#### Street Doc\n\n*the Medic-for-hire who patches anyone with nuyen*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Dassa Wynn's cleaner cousin. A neutral party in most fights — until someone shoots the patient on her table.\n\n#### Wrench Rigger\n\n*the drone-handler who owns the Drone Pickets*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Take the Rigger, take the eyes.\n\n#### Nyx Fixer\n\n*the Corran guild-clan fixer who brokers the run*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Cassavir's rival current, the dirty version of the on-ramp job. You almost never fight the Fixer — you fight everyone she sends, then owe her anyway.",
+        "content": "<p>The Reach's competent professionals — journeyman threats.</p>\n<h3>Gangers</h3>\n<h4>Colors Boss</h4>\n<p><em>the crew leader who actually gives orders</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The gangs of the Flats are named for her colors, not the other way around.</p>\n<h4>Chrome Bruiser</h4>\n<p><em>the gang's cybered heavy</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> More chrome than credit rating. His Body Integrity is shot — hit him with the right EMP payload and the plating drops.</p>\n<h3>Corporate Security</h3>\n<h4>Response Lieutenant</h4>\n<p><em>the corp team's field commander</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Ironclad or a conglomerate's on-site lead. She calls the escalation the gazetteer warns about — \"Alert response is corporate.\"</p>\n<h4>Corp Netrunner</h4>\n<p><em>the ICE-jockey on overwatch</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The reason a Hacker crewmember earns their pay. She never leaves the host — kill her in meat-space and the whole node goes soft.</p>\n<h3>Specialists &amp; Fixers</h3>\n<h4>Street Doc</h4>\n<p><em>the Medic-for-hire who patches anyone with nuyen</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Dassa Wynn's cleaner cousin. A neutral party in most fights — until someone shoots the patient on her table.</p>\n<h4>Wrench Rigger</h4>\n<p><em>the drone-handler who owns the Drone Pickets</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Take the Rigger, take the eyes.</p>\n<h4>Nyx Fixer</h4>\n<p><em>the Corran guild-clan fixer who brokers the run</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Cassavir's rival current, the dirty version of the on-ramp job. You almost never fight the Fixer — you fight everyone she sends, then owe her anyway.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "lyM118SONLpDqzEl",
+      "_key": "!journal.pages!ZzJhDENg3BEyKQtL.lyM118SONLpDqzEl",
+      "name": "Mid-Boss Threats",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The named danger at the top of a Flats run — the bosses a crew plans around.\n\n### Gangers\n\n#### The Warlord\n\n*the boss who owns the district*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** Not the strongest fighter in the Flats — the most entrenched. Kill him in the open and the district fractures into a turf war by nightfall.\n\n#### Razorline Prime\n\n*the augmented duelist*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The Warlord's personal enforcer and the reason challengers stop coming. Pure damage-and-tempo — no minions to manage, just a knife you can't reliably touch. Pair with the Warlord for the district's climax fight.\n\n### Corporate Security\n\n#### Corp Enforcer\n\n*the specialist sent to close the file*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** When a corp decides the crew is a liability worth a name, this is the name. He is not defending a building — he is executing a contract, and he brought the whole escalation ladder with him. Killing him flags the crew for the conglomerate's next tier of response.\n\n#### Ironclad Warden\n\n*the black-site chief of security*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The Ironclad trainer, promoted to run a site the corp does not admit exists. A defensive anchor: he turns a room into a fortress and buys time for the Villain-tier escalation. Flank him or the fight never ends.\n\n### Specialists & Fixers\n\n#### The Ripper\n\n*the black-clinic butcher-surgeon*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** He keeps the Warlord's soldiers on their feet and installs the district's illegal chrome. A support boss: leave him alive and the enemy side never runs out of fighters. The clinics whisper his street name; nobody uses his real one.\n\n#### Null-Prophet\n\n*the rogue technomancer running the node*\n\n*Stats: see the Ghostwire Bestiary.*\n\n**Hook.** The mind the crew is really fighting when they jack into a node it has claimed. A boss-tier escalation of the Corp Netrunner.",
+        "content": "<p>The named danger at the top of a Flats run — the bosses a crew plans around.</p>\n<h3>Gangers</h3>\n<h4>The Warlord</h4>\n<p><em>the boss who owns the district</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> Not the strongest fighter in the Flats — the most entrenched. Kill him in the open and the district fractures into a turf war by nightfall.</p>\n<h4>Razorline Prime</h4>\n<p><em>the augmented duelist</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The Warlord's personal enforcer and the reason challengers stop coming. Pure damage-and-tempo — no minions to manage, just a knife you can't reliably touch. Pair with the Warlord for the district's climax fight.</p>\n<h3>Corporate Security</h3>\n<h4>Corp Enforcer</h4>\n<p><em>the specialist sent to close the file</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> When a corp decides the crew is a liability worth a name, this is the name. He is not defending a building — he is executing a contract, and he brought the whole escalation ladder with him. Killing him flags the crew for the conglomerate's next tier of response.</p>\n<h4>Ironclad Warden</h4>\n<p><em>the black-site chief of security</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The Ironclad trainer, promoted to run a site the corp does not admit exists. A defensive anchor: he turns a room into a fortress and buys time for the Villain-tier escalation. Flank him or the fight never ends.</p>\n<h3>Specialists &amp; Fixers</h3>\n<h4>The Ripper</h4>\n<p><em>the black-clinic butcher-surgeon</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> He keeps the Warlord's soldiers on their feet and installs the district's illegal chrome. A support boss: leave him alive and the enemy side never runs out of fighters. The clinics whisper his street name; nobody uses his real one.</p>\n<h4>Null-Prophet</h4>\n<p><em>the rogue technomancer running the node</em></p>\n<p><em>Stats: see the Ghostwire Bestiary.</em></p>\n<p><strong>Hook.</strong> The mind the crew is really fighting when they jack into a node it has claimed. A boss-tier escalation of the Corp Netrunner.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/setting/reach-handbook/16-npcs-of-the-reach.md"
+    }
+  }
+}

@@ -1,0 +1,410 @@
+{
+  "_id": "GczNVngBeo1YyFZz",
+  "_key": "!journal!GczNVngBeo1YyFZz",
+  "name": "GHOSTWIRE.ReachHandbook.Journals.Maps",
+  "folder": "gwHandbookMaps00",
+  "sort": 1800000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "ypVIwmNsbciOHPWU",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.ypVIwmNsbciOHPWU",
+      "name": "Plate Index",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Every map and plate carried over from the Handbook. Each page below is one image; the district maps\nhave their numbered key baked into the artwork, and those numbers match the location headings in that\ndistrict's gazetteer chapter. Full provenance is in `docs/setting/reach-handbook/ART-INDEX.md`.\n\n| Plate | Book page | Goes with |\n|---|---|---|\n| Book cover | 1 | Front matter / journal cover image |\n| Master district map of The Flats | 2 | The Flats — A Street-Level Primer for Directors (p. 3–11); top-level Maps journal entry |\n| Switchboard district map | 12 | Gazetteer — Switchboard, \"Upper Underlevels\" (chapter opens p. 13) |\n| The Neon Shambles district map | 24 | Gazetteer — The Neon Shambles, \"Night-Market Core\" (chapter opens p. 25) |\n| The Stacks district map | 36 | Gazetteer — The Stacks, \"Worker Housing Blocks\" (chapter opens p. 37) |\n| Slackwater district map | 48 | Gazetteer — Slackwater, \"The Flooded Docks\" (chapter opens p. 49) |\n| The Interchange district map | 60 | Gazetteer — The Interchange, \"The Highway Sprawl\" (chapter opens p. 61) |\n| Cinder Market district map | 72 | Gazetteer — Cinder Market, \"The Grey-Tech Forge\" (chapter opens p. 73) |\n| The Spillway district map | 84 | Gazetteer — The Spillway, \"The Drain Quarter\" (chapter opens p. 85) |\n| Glasshook district map | 96 | Gazetteer — Glasshook, \"The Fallen Arcade\" (chapter opens p. 97) |\n| Wireside district map | 108 | Gazetteer — Wireside, \"The Data Slums\" (chapter opens p. 109) |\n| Gallows End district map | 120 | Gazetteer — Gallows End, \"The Edge of the Warrens\" (chapter opens p. 121) |\n| Cinderhold & the Outer Gate map | 132 | Gazetteer — Cinderhold & The Outer Gate, \"The Edge of the World\" (chapter opens p. 133) |",
+        "content": "<p>Every map and plate carried over from the Handbook. Each page below is one image; the district maps\nhave their numbered key baked into the artwork, and those numbers match the location headings in that\ndistrict's gazetteer chapter. Full provenance is in <code>docs/setting/reach-handbook/ART-INDEX.md</code>.</p>\n<table>\n<thead>\n<tr>\n<th id=\"plate\">Plate</th>\n<th id=\"book_page\">Book page</th>\n<th id=\"goes_with\">Goes with</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Book cover</td>\n<td>1</td>\n<td>Front matter / journal cover image</td>\n</tr>\n<tr>\n<td>Master district map of The Flats</td>\n<td>2</td>\n<td>The Flats — A Street-Level Primer for Directors (p. 3–11); top-level Maps journal entry</td>\n</tr>\n<tr>\n<td>Switchboard district map</td>\n<td>12</td>\n<td>Gazetteer — Switchboard, \"Upper Underlevels\" (chapter opens p. 13)</td>\n</tr>\n<tr>\n<td>The Neon Shambles district map</td>\n<td>24</td>\n<td>Gazetteer — The Neon Shambles, \"Night-Market Core\" (chapter opens p. 25)</td>\n</tr>\n<tr>\n<td>The Stacks district map</td>\n<td>36</td>\n<td>Gazetteer — The Stacks, \"Worker Housing Blocks\" (chapter opens p. 37)</td>\n</tr>\n<tr>\n<td>Slackwater district map</td>\n<td>48</td>\n<td>Gazetteer — Slackwater, \"The Flooded Docks\" (chapter opens p. 49)</td>\n</tr>\n<tr>\n<td>The Interchange district map</td>\n<td>60</td>\n<td>Gazetteer — The Interchange, \"The Highway Sprawl\" (chapter opens p. 61)</td>\n</tr>\n<tr>\n<td>Cinder Market district map</td>\n<td>72</td>\n<td>Gazetteer — Cinder Market, \"The Grey-Tech Forge\" (chapter opens p. 73)</td>\n</tr>\n<tr>\n<td>The Spillway district map</td>\n<td>84</td>\n<td>Gazetteer — The Spillway, \"The Drain Quarter\" (chapter opens p. 85)</td>\n</tr>\n<tr>\n<td>Glasshook district map</td>\n<td>96</td>\n<td>Gazetteer — Glasshook, \"The Fallen Arcade\" (chapter opens p. 97)</td>\n</tr>\n<tr>\n<td>Wireside district map</td>\n<td>108</td>\n<td>Gazetteer — Wireside, \"The Data Slums\" (chapter opens p. 109)</td>\n</tr>\n<tr>\n<td>Gallows End district map</td>\n<td>120</td>\n<td>Gazetteer — Gallows End, \"The Edge of the Warrens\" (chapter opens p. 121)</td>\n</tr>\n<tr>\n<td>Cinderhold &amp; the Outer Gate map</td>\n<td>132</td>\n<td>Gazetteer — Cinderhold &amp; The Outer Gate, \"The Edge of the World\" (chapter opens p. 133)</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "PXv2ccPLrTc4Lgu4",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.PXv2ccPLrTc4Lgu4",
+      "name": "Book cover",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Book cover](modules/draw-steel-ghostwire/assets/reach-handbook/01-cover-ossian-reach-handbook.webp)\n\n*Book cover — aerial night view of the Reach interchange with title lockup \"The Ossian Reach Handbook / Volume One — The Flats\"*\n\n**Goes with:** Front matter / journal cover image",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/01-cover-ossian-reach-handbook.webp\" alt=\"Book cover\" /></p>\n<p><em>Book cover — aerial night view of the Reach interchange with title lockup \"The Ossian Reach Handbook / Volume One — The Flats\"</em></p>\n<p><strong>Goes with:</strong> Front matter / journal cover image</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "0twXYXA3tXveahgH",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.0twXYXA3tXveahgH",
+      "name": "Master district map of The Flats",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Master district map of The Flats](modules/draw-steel-ghostwire/assets/reach-handbook/02-the-flats-master-district-map.webp)\n\n*Master district map of The Flats — all eleven districts with a numbered 1–11 district key*\n\n**Goes with:** The Flats — A Street-Level Primer for Directors (p. 3–11); top-level Maps journal entry",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/02-the-flats-master-district-map.webp\" alt=\"Master district map of The Flats\" /></p>\n<p><em>Master district map of The Flats — all eleven districts with a numbered 1–11 district key</em></p>\n<p><strong>Goes with:</strong> The Flats — A Street-Level Primer for Directors (p. 3–11); top-level Maps journal entry</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "1CLs5esuYBl0bVC3",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.1CLs5esuYBl0bVC3",
+      "name": "Switchboard district map",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Switchboard district map](modules/draw-steel-ghostwire/assets/reach-handbook/03-switchboard-district-map.webp)\n\n*Switchboard district map, 10 numbered key locations (The Switchboard, Melt Market, Grafthouse Walk, Green Room, Hollow Rail Stn., Lamp on Ninth, Fixer's Row, Dry Dock, Ash Tenements, Signal Spike)*\n\n**Goes with:** Gazetteer — Switchboard, \"Upper Underlevels\" (chapter opens p. 13)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/03-switchboard-district-map.webp\" alt=\"Switchboard district map\" /></p>\n<p><em>Switchboard district map, 10 numbered key locations (The Switchboard, Melt Market, Grafthouse Walk, Green Room, Hollow Rail Stn., Lamp on Ninth, Fixer's Row, Dry Dock, Ash Tenements, Signal Spike)</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Switchboard, \"Upper Underlevels\" (chapter opens p. 13)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "XRxbkdgttr9AiZF0",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.XRxbkdgttr9AiZF0",
+      "name": "The Neon Shambles district map",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Neon Shambles district map](modules/draw-steel-ghostwire/assets/reach-handbook/04-neon-shambles-district-map.webp)\n\n*The Neon Shambles district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — The Neon Shambles, \"Night-Market Core\" (chapter opens p. 25)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/04-neon-shambles-district-map.webp\" alt=\"The Neon Shambles district map\" /></p>\n<p><em>The Neon Shambles district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — The Neon Shambles, \"Night-Market Core\" (chapter opens p. 25)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "mxN0kiZpRHPQ9IMt",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.mxN0kiZpRHPQ9IMt",
+      "name": "The Stacks district map",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Stacks district map](modules/draw-steel-ghostwire/assets/reach-handbook/05-the-stacks-district-map.webp)\n\n*The Stacks district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — The Stacks, \"Worker Housing Blocks\" (chapter opens p. 37)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/05-the-stacks-district-map.webp\" alt=\"The Stacks district map\" /></p>\n<p><em>The Stacks district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — The Stacks, \"Worker Housing Blocks\" (chapter opens p. 37)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "NlSIR7YDmKEmBgIm",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.NlSIR7YDmKEmBgIm",
+      "name": "Slackwater district map",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Slackwater district map](modules/draw-steel-ghostwire/assets/reach-handbook/06-slackwater-district-map.webp)\n\n*Slackwater district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — Slackwater, \"The Flooded Docks\" (chapter opens p. 49)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/06-slackwater-district-map.webp\" alt=\"Slackwater district map\" /></p>\n<p><em>Slackwater district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Slackwater, \"The Flooded Docks\" (chapter opens p. 49)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "71zFBsHGCpPGEM5G",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.71zFBsHGCpPGEM5G",
+      "name": "The Interchange district map",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Interchange district map](modules/draw-steel-ghostwire/assets/reach-handbook/07-the-interchange-district-map.webp)\n\n*The Interchange district map, 10 numbered key locations (Cloverleaf, Pump Row, Toll Ghost, Underpass, Chop Circle, Roadside Shrine, Meridian Gantry, Weigh Station, Neon Mile, Dead Ramp)*\n\n**Goes with:** Gazetteer — The Interchange, \"The Highway Sprawl\" (chapter opens p. 61)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/07-the-interchange-district-map.webp\" alt=\"The Interchange district map\" /></p>\n<p><em>The Interchange district map, 10 numbered key locations (Cloverleaf, Pump Row, Toll Ghost, Underpass, Chop Circle, Roadside Shrine, Meridian Gantry, Weigh Station, Neon Mile, Dead Ramp)</em></p>\n<p><strong>Goes with:</strong> Gazetteer — The Interchange, \"The Highway Sprawl\" (chapter opens p. 61)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "HKzFWugIXleUvAZI",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.HKzFWugIXleUvAZI",
+      "name": "Cinder Market district map",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Cinder Market district map](modules/draw-steel-ghostwire/assets/reach-handbook/08-cinder-market-district-map.webp)\n\n*Cinder Market district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — Cinder Market, \"The Grey-Tech Forge\" (chapter opens p. 73)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/08-cinder-market-district-map.webp\" alt=\"Cinder Market district map\" /></p>\n<p><em>Cinder Market district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Cinder Market, \"The Grey-Tech Forge\" (chapter opens p. 73)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "xCeUfomWbcMfxzcp",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.xCeUfomWbcMfxzcp",
+      "name": "The Spillway district map",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Spillway district map](modules/draw-steel-ghostwire/assets/reach-handbook/09-the-spillway-district-map.webp)\n\n*The Spillway district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — The Spillway, \"The Drain Quarter\" (chapter opens p. 85)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/09-the-spillway-district-map.webp\" alt=\"The Spillway district map\" /></p>\n<p><em>The Spillway district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — The Spillway, \"The Drain Quarter\" (chapter opens p. 85)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "mzXqT0QWYIZjtHSs",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.mzXqT0QWYIZjtHSs",
+      "name": "Glasshook district map",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Glasshook district map](modules/draw-steel-ghostwire/assets/reach-handbook/10-glasshook-district-map.webp)\n\n*Glasshook district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — Glasshook, \"The Fallen Arcade\" (chapter opens p. 97)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/10-glasshook-district-map.webp\" alt=\"Glasshook district map\" /></p>\n<p><em>Glasshook district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Glasshook, \"The Fallen Arcade\" (chapter opens p. 97)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "RxcnFhpdabpb73eD",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.RxcnFhpdabpb73eD",
+      "name": "Wireside district map",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Wireside district map](modules/draw-steel-ghostwire/assets/reach-handbook/11-wireside-district-map.webp)\n\n*Wireside district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — Wireside, \"The Data Slums\" (chapter opens p. 109)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/11-wireside-district-map.webp\" alt=\"Wireside district map\" /></p>\n<p><em>Wireside district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Wireside, \"The Data Slums\" (chapter opens p. 109)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "KfsAw9X0dHcfoFiE",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.KfsAw9X0dHcfoFiE",
+      "name": "Gallows End district map",
+      "type": "text",
+      "sort": 1300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Gallows End district map](modules/draw-steel-ghostwire/assets/reach-handbook/12-gallows-end-district-map.webp)\n\n*Gallows End district map, 10 numbered key locations*\n\n**Goes with:** Gazetteer — Gallows End, \"The Edge of the Warrens\" (chapter opens p. 121)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/12-gallows-end-district-map.webp\" alt=\"Gallows End district map\" /></p>\n<p><em>Gallows End district map, 10 numbered key locations</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Gallows End, \"The Edge of the Warrens\" (chapter opens p. 121)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "OHu7XYaawAFluQ7l",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.OHu7XYaawAFluQ7l",
+      "name": "Cinderhold & the Outer Gate map",
+      "type": "text",
+      "sort": 1400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Cinderhold & the Outer Gate map](modules/draw-steel-ghostwire/assets/reach-handbook/13-cinderhold-outer-gate-district-map.webp)\n\n*Cinderhold & the Outer Gate map — wall, caravan yard and near-wilds jungle, 10 numbered key locations (Marrow Gate, Cindermarket, Marrow's Lantern, Greenline Post, Caravan Yard, Outer Wall, Burn-Yard, Chapel of Ash, Rustworks, Wasteland Overlook)*\n\n**Goes with:** Gazetteer — Cinderhold & The Outer Gate, \"The Edge of the World\" (chapter opens p. 133)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/reach-handbook/13-cinderhold-outer-gate-district-map.webp\" alt=\"Cinderhold & the Outer Gate map\" /></p>\n<p><em>Cinderhold & the Outer Gate map — wall, caravan yard and near-wilds jungle, 10 numbered key locations (Marrow Gate, Cindermarket, Marrow's Lantern, Greenline Post, Caravan Yard, Outer Wall, Burn-Yard, Chapel of Ash, Rustworks, Wasteland Overlook)</em></p>\n<p><strong>Goes with:</strong> Gazetteer — Cinderhold &amp; The Outer Gate, \"The Edge of the World\" (chapter opens p. 133)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/setting/reach-handbook/ART-INDEX.md"
+    }
+  }
+}

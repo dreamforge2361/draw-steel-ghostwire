@@ -28,7 +28,8 @@
       "wiredFlats": "Ghostwire — The Wired: Flats",
       "pregens": "Ghostwire Pregens",
       "pregenFiction": "Ghostwire Pregen Fiction",
-      "encounters": "Ghostwire Reach Events"
+      "encounters": "Ghostwire Reach Events",
+      "reachHandbook": "Ghostwire — Ossian Reach Handbook"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -6942,6 +6943,36 @@
         "Flats": "Reach Events — Flats / Hive",
         "City": "Reach Events — City / Grid-adjacent",
         "Wilds": "Reach Events — Wilds / Outer Wall"
+      }
+    },
+    "ReachHandbook": {
+      "Folders": {
+        "Front": "Front",
+        "Strata": "The Reach — Vertical Hive",
+        "Flats": "The Flats — Streets & Districts",
+        "Cinderhold": "Cinderhold & the Wastes Gate",
+        "Threats": "Threats & Critters (lore)",
+        "Maps": "Maps & Plates"
+      },
+      "Journals": {
+        "01WhatTheFlatsAre": "What the Flats Are",
+        "02TheVerticalAndTheBlackWater": "The Vertical & the Black Water",
+        "03LifeOnTheFlats": "Life on the Flats",
+        "04Switchboard": "Switchboard",
+        "05TheNeonShambles": "The Neon Shambles",
+        "06TheStacks": "The Stacks",
+        "07Slackwater": "Slackwater",
+        "08TheInterchange": "The Interchange",
+        "09CinderMarket": "Cinder Market",
+        "10TheSpillway": "The Spillway",
+        "11Glasshook": "Glasshook",
+        "12Wireside": "Wireside",
+        "13GallowsEnd": "Gallows End",
+        "14CinderholdAndTheOuterGate": "Cinderhold & the Outer Gate",
+        "15TheNightRoster": "The Night Roster",
+        "16NpcsOfTheReach": "NPCs of the Reach",
+        "17CrittersOfTheReach": "Critters of the Reach",
+        "Maps": "Maps & Plates"
       }
     }
   },

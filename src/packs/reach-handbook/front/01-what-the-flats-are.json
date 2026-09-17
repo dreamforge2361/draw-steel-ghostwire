@@ -1,0 +1,74 @@
+{
+  "_id": "pC0spfqd3ERlW6QJ",
+  "_key": "!journal!pC0spfqd3ERlW6QJ",
+  "name": "GHOSTWIRE.ReachHandbook.Journals.01WhatTheFlatsAre",
+  "folder": "gwHandbookFront0",
+  "sort": 100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "2Y79EeipjqY9UAI4",
+      "_key": "!journal.pages!pC0spfqd3ERlW6QJ.2Y79EeipjqY9UAI4",
+      "name": "About This Compendium",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "This compendium is the **Ossian Reach Handbook**: Book One world material — the hive, its strata, the\nstreets of the Flats, the Grid above, Cinderhold at the wastes gate, and the things that live in the gaps.\nIt is **lore, not rules**.\n\n- **Rules** live in the **Ghostwire Rulebook** compendium (`docs/raw/` is their source of record).\n- **The Wired** side of the Flats — matrix nodes, ICE postures, district master nodes — lives in the\n  **Ghostwire — The Wired: Flats** compendium. This pack owns the **physical** street lore; that one owns the network.\n- **Stat blocks** live in the **Ghostwire Bestiary**. The Threats chapters here are ecology and rumour;\n  where a creature has an Actor, it is named so you can find it.\n- **Random events** for these zones are in the **Ghostwire Reach Events** tables.\n\n*Old edition mechanics — tier ladders, superseded chrome grades, pasted combat math — were scrubbed on import;\n`docs/setting/reach-handbook/EXTRACT-NOTES.md` records exactly what changed.*",
+        "content": "<p>This compendium is the <strong>Ossian Reach Handbook</strong>: Book One world material — the hive, its strata, the\nstreets of the Flats, the Grid above, Cinderhold at the wastes gate, and the things that live in the gaps.\nIt is <strong>lore, not rules</strong>.</p>\n<ul>\n<li><strong>Rules</strong> live in the <strong>Ghostwire Rulebook</strong> compendium (<code>docs/raw/</code> is their source of record).</li>\n<li><strong>The Wired</strong> side of the Flats — matrix nodes, ICE postures, district master nodes — lives in the\n<strong>Ghostwire — The Wired: Flats</strong> compendium. This pack owns the <strong>physical</strong> street lore; that one owns the network.</li>\n<li><strong>Stat blocks</strong> live in the <strong>Ghostwire Bestiary</strong>. The Threats chapters here are ecology and rumour;\nwhere a creature has an Actor, it is named so you can find it.</li>\n<li><strong>Random events</strong> for these zones are in the <strong>Ghostwire Reach Events</strong> tables.</li>\n</ul>\n<p><em>Old edition mechanics — tier ladders, superseded chrome grades, pasted combat math — were scrubbed on import;\n<code>docs/setting/reach-handbook/EXTRACT-NOTES.md</code> records exactly what changed.</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "VcpEG4uQmqgUAUHT",
+      "_key": "!journal.pages!pC0spfqd3ERlW6QJ.VcpEG4uQmqgUAUHT",
+      "name": "Overview",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*A Street-Level Primer for Directors*\n\nFront matter for the Ossian Reach Handbook — the stage before the streets. Read the fiction aloud; mine the Director's notes for prices, factions, and hooks.\n\nCome up out of the transit tube and the first thing that hits you is the weight of the light. It does not fall from a sky — there is no sky, this low — it comes from everywhere at once: a hundred thousand signs stacked forty stories deep, noodle-stall holos and blessing-tier ads and simsense come-ons in six tongues, all of it bleeding pink and cyan and sodium-gold into the standing rain. The rain never really stops on the Flats. It falls from the condensation of a million air-scrubbers on the levels above, warm and faintly chemical, and it drags the neon down the girders in long smeared ribbons until the whole street looks like it is melting.\n\nThis is the fourth stratum down — **Lifestyle 4, Low** — the semi-lawless underlevel where the Machine's grip loosens just enough for a person to disappear into it. Above you, the **Grid** hums with wage-bodies who still have something to lose. Above them, the **Spires**; above them, the **Crown**, and the Halo burning at the top of the hive like a second sun so far away it reads as a rumor of morning that never actually arrives. Below you, the **Warrens** thin out into the written-off dark, and below that the **Sinks**, sunless and Signal-dead, where Nyx runs the Churn and worse things settle in the deep floors.\n\nThe Flats are the seam. Watched enough to be dangerous, dark enough to work in. This is the edgerunner's natural country — the place most runs begin, and the only place in the Reach where nobody chose the shape they were born to but everybody, at last, gets to choose.\n\n**Director's frame.** The Flats are your default stage. Everything a starting crew touches — the fixer, the fence, the ripperdoc, the meal, the meet — lives here. Two doors lead out of it: **inward and up** into the Grid and Spires (the extraction, the data-heist, the vertical climb) and **outward and down** into the Warrens, Sinks, and the wastes beyond the gate (the salvage run, the dead-zone recovery, the war in the open). Keep the entry tier dense and lived-in; let the wilds be the escalation the crew earns.",
+        "content": "<p><em>A Street-Level Primer for Directors</em></p>\n<p>Front matter for the Ossian Reach Handbook — the stage before the streets. Read the fiction aloud; mine the Director's notes for prices, factions, and hooks.</p>\n<p>Come up out of the transit tube and the first thing that hits you is the weight of the light. It does not fall from a sky — there is no sky, this low — it comes from everywhere at once: a hundred thousand signs stacked forty stories deep, noodle-stall holos and blessing-tier ads and simsense come-ons in six tongues, all of it bleeding pink and cyan and sodium-gold into the standing rain. The rain never really stops on the Flats. It falls from the condensation of a million air-scrubbers on the levels above, warm and faintly chemical, and it drags the neon down the girders in long smeared ribbons until the whole street looks like it is melting.</p>\n<p>This is the fourth stratum down — <strong>Lifestyle 4, Low</strong> — the semi-lawless underlevel where the Machine's grip loosens just enough for a person to disappear into it. Above you, the <strong>Grid</strong> hums with wage-bodies who still have something to lose. Above them, the <strong>Spires</strong>; above them, the <strong>Crown</strong>, and the Halo burning at the top of the hive like a second sun so far away it reads as a rumor of morning that never actually arrives. Below you, the <strong>Warrens</strong> thin out into the written-off dark, and below that the <strong>Sinks</strong>, sunless and Signal-dead, where Nyx runs the Churn and worse things settle in the deep floors.</p>\n<p>The Flats are the seam. Watched enough to be dangerous, dark enough to work in. This is the edgerunner's natural country — the place most runs begin, and the only place in the Reach where nobody chose the shape they were born to but everybody, at last, gets to choose.</p>\n<p><strong>Director's frame.</strong> The Flats are your default stage. Everything a starting crew touches — the fixer, the fence, the ripperdoc, the meal, the meet — lives here. Two doors lead out of it: <strong>inward and up</strong> into the Grid and Spires (the extraction, the data-heist, the vertical climb) and <strong>outward and down</strong> into the Warrens, Sinks, and the wastes beyond the gate (the salvage run, the dead-zone recovery, the war in the open). Keep the entry tier dense and lived-in; let the wilds be the escalation the crew earns.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/setting/reach-handbook/01-what-the-flats-are.md"
+    }
+  }
+}

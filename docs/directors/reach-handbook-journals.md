@@ -1,6 +1,6 @@
 # B45 — Ossian Reach Handbook → lore Journals + art (backlog)
 
-**Status:** Backlog locked 2026-09-17 — not started.  
+**Status:** **Built 0.1.65 (B45), pending Michael Foundry-verify** — compendium **Ghostwire — Ossian Reach Handbook** (`reach-handbook`, JournalEntry; players Observer): 18 journals, 159 pages, 6 folders (Front · Vertical Hive · Flats districts · Cinderhold · Threats lore · Maps), plus 13 district maps in `assets/reach-handbook/` (6.5 MB). Text SoR: `docs/setting/reach-handbook/` (17 chapters, ~91k words, `EXTRACT-NOTES.md` logs the scrub). PDF stays local and gitignored. Spike: `docs/spikes/B45-REACH-HANDBOOK-JOURNALS.md`. Rebuild with `tools/reach-handbook-to-journals.mjs` then `tools/build-packs.mjs` (Foundry closed); edit the prose in `docs/setting/reach-handbook/`.  
 **Source (local SoR — no re-upload):**  
 `C:\Users\mfran\Dropbox\ai-brain\projects\draw steel\GHOSTWIRE — The Ossian Reach Handbook.pdf`  
 (~175 pp; gazetteer, maps, Flats sites, Cinderhold, Critters/threats end matter).

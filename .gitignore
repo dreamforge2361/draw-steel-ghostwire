@@ -15,3 +15,7 @@ packs/**/LOG.old
 packs/**/*.log
 # B44 pregen source PDF stays local (~13 MB binary; see docs/masters/pregens/README.md)
 docs/masters/pregens/*.pdf
+
+# B45 Handbook source PDF stays local (~64 MB)
+docs/setting/reach-handbook/*.pdf
+docs/masters/reach-handbook/*.pdf
