@@ -34,7 +34,33 @@ Hooks.once("init", () => {
   registerGhostwireSkills();
   patchPreviousLifeFilter();
   patchAddOrigin();
+  enforceHeroicResourceCost();
 });
+
+// Heroic abilities: Draw Steel's use dialog lets a hero spend Adrenaline (or any heroic resource) they don't have.
+// In combat, refuse to use an ability whose cost is more than the hero's current heroic resource.
+// Outside combat, heroic abilities stay usable without spending (chapter rule), so nothing is checked.
+function enforceHeroicResourceCost() {
+  const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
+  if (!AbilityModel?.prototype.use) {
+    console.warn(`${MODULE_ID} | AbilityModel#use not found; heroic resource costs aren't enforced`);
+    return;
+  }
+  const use = AbilityModel.prototype.use;
+  AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
+    const actor = this.actor;
+    const cost = Number(this.resource) || 0;
+    if ((cost > 0) && (actor?.type === "hero") && actor.inCombat) {
+      const resource = actor.system.coreResource;
+      const current = Number(foundry.utils.getProperty(resource.target, resource.path)) || 0;
+      if (current < cost) {
+        ui.notifications.warn(game.i18n.format("GHOSTWIRE.Abilities.NotEnoughResource", { name: this.parent.name, cost, resource: resource.name, current }));
+        return null;
+      }
+    }
+    return use.call(this, config, dialogOptions, messageOptions);
+  };
+}
 
 // Hero sheet "+ Add Ancestry / Background / Profession" opens the Ghostwire compendiums instead of draw-steel.origins.
 const ORIGIN_PACKS = { ancestry: `${MODULE_ID}.origins`, culture: `${MODULE_ID}.backgrounds`, career: `${MODULE_ID}.professions` };

@@ -19,6 +19,7 @@
       "professions": "Ghostwire Professions"
     },
     "Abilities": {
+      "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
       "Keywords": {
         "Tech": "Tech"
       },
