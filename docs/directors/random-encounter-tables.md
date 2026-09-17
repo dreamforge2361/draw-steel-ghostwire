@@ -1,0 +1,51 @@
+# B48 — Reach Random Encounter / Event Tables (backlog)
+
+**Status:** Backlog locked 2026-09-17 — not started.  
+**Depends on:** Bestiary pack (opposition picks), B46 Flats gazetteer / district roster, Run Generator strata (optional cross-link), Foundry `RollTable` documents.  
+**Do NOT implement until Michael prioritizes.**
+
+## Goal
+Bring Ossian Reach **zones** alive with a **robust** series of random events using Foundry’s **RollTable** system: the Director (or a scene hook) rolls and gets something interesting for the current stratum — Hive, City/Flats, or Wilds — without prepping every beat by hand.
+
+## Event mix (target feel)
+Not a pure combat table. Weight toward living city / hive texture:
+
+| Weight band (v1 draft) | Kind | Examples |
+|---|---|---|
+| Common | **Flavor / atmosphere** | Neon short, rain-shift, market call, distant Trace siren, shrine procession |
+| Common–uncommon | **RP / social hook** | Fixer ping, gang stare-down that can talk down, corp leaflet drop, missing person rumor |
+| Uncommon | **Complication / travel** | Checkpoint sweep, blackout block, flooded stair, false address, deck glitch |
+| Rare | **Action / chase** | Pursuit, ICE ping on Overlay, drone patrol, collapse |
+| Rare | **Combat encounter** | Opposition drawn from Ghostwire bestiary (street/corp/critter/Wire) appropriate to zone + heat |
+
+Exact weights locked at spike time; Director should be able to bias “quiet night” vs “hot night.”
+
+## Zone / stratum coverage (minimum)
+1. **Hive / Flats streets** (underlevels, neon, gangs, street faith)  
+2. **City / Grid-adjacent** (licensed corridors, corp-adjacent, Midlevel friction)  
+3. **Wilds / Outer Wall / jungle edge** (Pandora-like dark edge — thin until wilds lore pass; seed table OK)  
+Optional later: Warrens, Sinks, Wired Overlay-only events, Cinderhold gate.
+
+## Foundry shape
+- One or more `RollTable` documents in a **`encounters`** (or `reach-events`) pack, `type` supporting Results that are text and/or Document links (Actor / Journal / Item).
+- Prefer **nested / multi-table** design: Zone table → Event-type table → Specific result (or one fat table per zone with typed results).
+- Optional module setting or Director app button: “Roll Reach Event” (zone + heat) — **v2**; v1 can be draw-from-compendium only.
+- Cross-link Run Generator strata names where they match; combat rows reference **existing** bestiary Actors by name/`@UUID` when practical.
+
+## Content rules
+- Ghostwire voice; no generic fantasy dungeon filler.
+- Combat rows: firearms/chrome doctrine for humanoids; keep DS math via linked Actors.
+- Flavor/RP rows: 1–3 sentences + optional Director nudge (“if they dig…”, “if they ignore…”).
+- Do not invent new RAW; point at Wire / Veil / economy only by reference.
+
+## Deliverables (when spiked)
+- `docs/directors/random-encounter-tables.md` (this stub → design lock)  
+- `docs/masters/GHOSTWIRE_ENCOUNTER_TABLES.md` (authoring SoR: rows, weights, zone tags)  
+- Foundry pack of RollTables (+ optional thin UI)  
+- STATUS / build-plan update  
+
+## Out of scope (v1)
+Full wilds lore bible; replacing B39 Run Generator; auto-spawning combat on the canvas; weather simulation engine.
+
+## Done when (future spike)
+At least three zone tables with a healthy row count (dozens per zone, not a dozen total); mix of flavor / RP / action / combat; Foundry draw works; Michael can re-weight without code; Foundry-verify; no commit until Michael says.

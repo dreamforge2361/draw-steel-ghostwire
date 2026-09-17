@@ -498,11 +498,13 @@ Spec: `docs/spikes/B39-RUN-GENERATOR.md`; design + as-built: `docs/directors/run
 - **B42** RAW master rulebook `docs/raw/` (no lore/art) — **first full assemble done, pending Michael review** (docs-only; no module bump). Flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`.
 - **B42b** Foundry Journal pack **Ghostwire Rulebook** (`packs/rulebook`) mirroring `docs/raw/` — **built 0.1.55, pending Foundry-verify**. One JournalEntry per RAW chapter (Front Matter / Shared Core / Hero Building / Classes / Ghostwire Systems folders + a Rulebook Index), one markdown page per `##` section, chapter refs as `@UUID` links. Source of truth stays `docs/raw/`: `node tools/raw-to-journals.mjs` then `node tools/build-packs.mjs` (Foundry closed). Spike: `docs/spikes/B42b-RULEBOOK-JOURNALS.md`.
 - **B42c/B42d/B42e** RAW Passes A–C — locks applied, license + language scrub, class number holes closed from masters/packs (0.1.58, pending review). **B42e1** applied all twelve Michael locks — `docs/raw/` now carries **zero** `[PASS-C NEEDS MICHAEL]` markers. - **B47** Foundry-sync — **done at 0.1.60, pending Michael Foundry-verify**: `lang/en.json` (the prose behind every pack) now matches Pass A/B/C RAW; packs rebuilt; no JSON structure, `_id`, cost or damage value changed. Residual pack-vs-RAW differences are listed in `docs/spikes/B42-RAW-REVIEW-FLAGS.md` and are all cases where the pack already agrees with RAW.
+- **B48** Reach random encounter / event RollTables - `docs/directors/random-encounter-tables.md` (**backlog**).
 - **B43** Veil Rituals as DS Projects (explore) — `docs/directors/veil-rituals-exploration.md`.
 - **B44** Pregens from Dossiers PDF — `docs/directors/pregens-dossiers.md`.
 - **B45** Reach Handbook → lore Journals + art — `docs/directors/reach-handbook-journals.md`.
 - **B46** Wired Flats Matrix Gazetteer Journals — `docs/directors/wired-flats-gazetteer.md`. Spike: `docs/spikes/B46-WIRED-FLATS-JOURNALS.md` — **built at 0.1.61, pending Foundry-verify**: pack `wired-flats`, one journal of 15 pages generated from `docs/setting/wired-flats-gazetteer.md` by `tools/wired-flats-to-journals.mjs`.
 - **B47** Foundry-sync packs/lang to Pass A/B/C - `docs/spikes/B47-FOUNDRY-SYNC-PASS-ABC.md` (**spike live**).
+- **B48** Reach random encounter / event RollTables - `docs/directors/random-encounter-tables.md` (**backlog**).
 
 
 | **Wired Flats Gazetteer Journals (B46)** | *The Wired — The Flats* Matrix Gazetteer & Node Key → Foundry Journals (Grid/Barrier, district master nodes, corp fortresses, POI swarm, GM notes). Scrub old rules; keep lore + E1–E4 ICE posture. Stub: `docs/directors/wired-flats-gazetteer.md`. Local SoR: Dropbox `GHOSTWIRE - The Wired  The Flats (Matrix Gazetteer).docx`. | **Built 0.1.61, pending Foundry-verify** |
