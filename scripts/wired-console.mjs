@@ -1,21 +1,15 @@
 // Wired Console (B23b): a Scene-tied view of the Wired — connection roster, nodes, Integrity, and Trace Alert.
 // Board data lives on the viewed Scene: flags.draw-steel-ghostwire.wiredBoard = { nodes: [...], stratum, updated }.
-// Random nodes (B23c) roll from scripts/wired-node-table.mjs.
+// Random nodes (B23c) roll from scripts/wired-node-table.mjs; Director templates and the System Stat Card (RATING) come from
+// scripts/wired-node-templates.mjs (B32 Phase 5).
 // Rules: docs/rulebook/08-hacker.md (System Stat Card, Trace Alert). Foundry notes: docs/rulebook/18-wired-foundry.md.
 
 import { rollNode, STRATA } from "./wired-node-table.mjs";
+import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
-// System Stat Card, indexed by Node Rating 1–5.
-const RATING = {
-  1: { integrity: 12, breachDC: 10, biofeedback: 3, ice: "1 passive layer" },
-  2: { integrity: 18, breachDC: 12, biofeedback: 5, ice: "2 passive layers" },
-  3: { integrity: 26, breachDC: 15, biofeedback: 8, ice: "Passive + 1 active ICE" },
-  4: { integrity: 36, breachDC: 17, biofeedback: 13, ice: "Passive + 2 active ICE; biofeedback on a failed breach" },
-  5: { integrity: 50, breachDC: 19, biofeedback: 22, ice: "Full active ICE suite; automatic counter-trace on any high (17+) roll against it" },
-};
 const ALERT_MAX = 12;
 const ALERT_RESET = 6;
 const CLUSTER_MAX = 12;
@@ -63,6 +57,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       selectNode: WiredConsole.#onSelectNode,
       addNode: WiredConsole.#onAddNode,
       randomNode: WiredConsole.#onRandomNode,
+      addTemplate: WiredConsole.#onAddTemplate,
       generateCluster: WiredConsole.#onGenerateCluster,
       deleteNode: WiredConsole.#onDeleteNode,
       alertUp: WiredConsole.#onAlertUp,
@@ -236,6 +231,37 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   // One click: roll a themed node from the scene's stratum (set in the cluster dialog).
   static async #onRandomNode() {
     const node = WiredConsole.#makeNode(rollNode(getBoard(this.scene).stratum));
+    this.selectedId = node.id;
+    await this.#updateBoard(nodes => { nodes.push(node); });
+  }
+
+  // Director preset: one of the ten Track 1 / Track 2 × Rating 1–5 templates, stats filled from the System Stat Card.
+  static async #onAddTemplate() {
+    if (!this.scene) return;
+    const localize = key => game.i18n.localize(`GHOSTWIRE.WiredConsole.${key}`);
+    const esc = foundry.utils.escapeHTML;
+    // Track 2 lists Integrity and biofeedback; Track 1 has neither, so it lists the breach DC.
+    const stats = t => (t.track === 2)
+      ? game.i18n.format("GHOSTWIRE.WiredConsole.TemplateStats", { integrity: t.integrityMax, biofeedback: t.biofeedback })
+      : game.i18n.format("GHOSTWIRE.WiredConsole.TemplateBreach", { dc: t.breachDC });
+    const options = [1, 2].map(track => {
+      const entries = NODE_TEMPLATES.filter(t => t.track === track)
+        .map(t => `<option value="${t.id}">${esc(t.name)} — ${esc(stats(t))}</option>`).join("");
+      return `<optgroup label="${esc(localize(`Track${track}`))}">${entries}</optgroup>`;
+    }).join("");
+    const data = await foundry.applications.api.DialogV2.input({
+      window: { title: "GHOSTWIRE.WiredConsole.AddTemplate", icon: "fa-solid fa-layer-group" },
+      content: `
+        <p>${localize("AddTemplateHint")}</p>
+        <div class="form-group">
+          <label>${localize("Template")}</label>
+          <select name="template">${options}</select>
+        </div>`,
+      ok: { label: "GHOSTWIRE.WiredConsole.AddTemplateConfirm", icon: "fa-solid fa-plus" },
+    });
+    const template = NODE_TEMPLATES.find(t => t.id === data?.template);
+    if (!template) return;
+    const node = WiredConsole.#makeNode(template);
     this.selectedId = node.id;
     await this.#updateBoard(nodes => { nodes.push(node); });
   }
@@ -444,6 +470,6 @@ export function registerWiredConsole({ getWiredState }) {
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, rollNode };
+    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, rollNode, NODE_TEMPLATES };
   });
 }

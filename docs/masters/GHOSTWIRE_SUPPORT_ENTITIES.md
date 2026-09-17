@@ -122,6 +122,8 @@ From `08-hacker.md` Node Rating card:
 
 **5× Track 1** (breach-only, no Integrity) + **5× Track 2** (Integrity + ICE) = **10** templates. Wire to Wired Console node tools where possible.
 
+**Shipped (Phase 5, Foundry-verified 2026-09-17):** the 10 templates live in `scripts/wired-node-templates.mjs` (`NODE_TEMPLATES`) next to the System Stat Card `RATING` table, which the Wired Console now imports (single source). Directors add them from the Console's **Add template…** button; reference in `docs/directors/wired-node-templates.md`. Placeable node Actors under `summons/nodes` remain deferred.
+
 ### 3.6 No summon line
 
 Operator, Scout, Commander, Medic — narrative contacts/followers only (Commander later); no Actor pack in this program.

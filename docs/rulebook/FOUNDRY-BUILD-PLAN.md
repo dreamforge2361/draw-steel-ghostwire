@@ -317,7 +317,7 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 - **B34 Phase 2 (B32 Phase 2 spike):** Elementalist companions + elemental scaffolds (7 Actors) — **Foundry-verified 2026-09-17** (module v0.1.41). See checklist below.
 - **B35 Phase 3 (B32 Phase 3 spike):** Street Priest pact spirits (3 Actors + Light/Dark tint) — **Foundry-verified 2026-09-17** (module v0.1.42). See checklist below.
 - **B36 Phase 4 (B32 Phase 4 spike):** scale-band Actor templates under `summons/machines` + Deploy / Recall pipeline (dual Item+Actor lock 2026-09-17) — **Foundry-verified 2026-09-17** (module v0.1.43). See checklist below. Item catalog sync to the chapters' full chassis lists (drones 36, vehicles 32) is still open.
-- **B37 Phase 5:** Hacker Node/ICE Director templates (10).
+- **B37 Phase 5 (B32 Phase 5 spike):** Hacker Node/ICE Director templates (10) in the Wired Console — **Foundry-verified 2026-09-17** (module v0.1.45). See checklist below.
 - **B23c (after Phase 5):** Overlay / Jacked In **vision tints** — see checklist below.
 
 - **Summons pack scaffold (2026-09-17):** Actor pack `summons` registered; folders sprites/elementals/spirits/machines/nodes ready for Phase 1+.
@@ -361,4 +361,12 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Recall removes the token and Actor; the Item stays on the hero and shows Deploy again
   - [x] A vehicle Item (e.g. Getaway) deploys as a 2-square token
   - [x] `node tools/build-packs.mjs` succeeds
+
+### B32 Phase 5 — Hacker node / ICE Director templates (2026-09-17)
+Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node-templates.mjs` exports **`RATING`** (System Stat Card, moved out of `wired-console.mjs` — the Console now imports it, single source of truth) and **`NODE_TEMPLATES`**: `node-t1-r1…r5` and `node-t2-r1…r5` with `id, name, track, rating, integrityMax, biofeedback, ice, breachDC, description, notes`. **Track 1** templates follow 08-hacker.md: no Integrity pool, ICE, or biofeedback (`null`; the Console hides them). **Track 2** carry Integrity 12/18/26/36/50, biofeedback 3/5/8/13/22, and the ICE sketch. **Wired Console:** GM **Add template…** button (layers icon) in the Nodes header → pick one of the 10 → a hidden node is pushed onto `wiredBoard.nodes` through the same `#makeNode` / `#updateBoard` path as Add Node, with Description and Notes pre-filled. Add Node / Random Node / Generate Cluster unchanged; `module.api.NODE_TEMPLATES` exposed. **Director reference:** `docs/directors/wired-node-templates.md` (no journals pack exists, so no Journal pages). **Deferred:** node Actor scaffolds under `summons/nodes/` (optional D, skipped).
+- [x] **B32 Phase 5** node templates (module v0.1.45) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] GM Add template adds each of the 10 with correct track / rating / Integrity / ICE text
+  - [x] Track 1 templates show no Integrity bar; Track 2 show the table's Integrity max
+  - [x] Add Node and Random Node still work
+  - [x] Board nodes persist on Scene flags after a reload
 

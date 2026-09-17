@@ -6021,7 +6021,13 @@
       "DeleteNode": "Delete Node",
       "DeleteNodeConfirm": "Delete the node <strong>{name}</strong>?",
       "ResetBoard": "Reset Board",
-      "ResetBoardConfirm": "Remove every node from <strong>{scene}</strong>’s Wired board?"
+      "ResetBoardConfirm": "Remove every node from <strong>{scene}</strong>’s Wired board?",
+      "AddTemplate": "Add template…",
+      "AddTemplateHint": "Add a Director preset node. Rating sets every stat from the System Stat Card; Track 1 objects have no Integrity pool, ICE, or biofeedback. Rename and edit it after adding.",
+      "Template": "Template",
+      "AddTemplateConfirm": "Add node",
+      "TemplateStats": "Integrity {integrity}, biofeedback {biofeedback}",
+      "TemplateBreach": "breach DC {dc}, no Integrity"
     },
     "Summons": {
       "Sprites": {
