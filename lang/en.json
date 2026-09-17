@@ -22,7 +22,8 @@
       "vehicles": "Ghostwire Vehicles & Drones",
       "foci": "Ghostwire Foci",
       "perks": "Ghostwire Perks",
-      "summons": "Ghostwire Summons & Machines"
+      "summons": "Ghostwire Summons & Machines",
+      "bestiary": "Ghostwire Bestiary"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -6464,6 +6465,158 @@
         "Track2": {
           "Name": "Wired Node (Track 2)",
           "Description": "<p>A <strong>Track 2</strong> Wired node token: a defended host, ICE, or hostile Persona. Its <strong>Stamina is the node’s Integrity</strong>; damage applied to the token writes back to the Wired Console, and Console damage updates the bar.</p><h4>Placing nodes</h4><p>Don’t drag this template in. In the <strong>Wired Console</strong>, select a node and press <strong>Place on canvas</strong>: it creates a linked Actor named after the node (in the <strong>Wired Nodes</strong> folder) and a token on the Scene you’re viewing, hidden until the node is revealed. <strong>Remove from canvas</strong>, deleting the node, or resetting the board cleans it up. The Console board stays the source of truth for name, Rating, Integrity, Trace Alert, Description, and Notes.</p><p>Rules: docs/rulebook/08-hacker.md (System Stat Card).</p>"
+        }
+      }
+    },
+    "Bestiary": {
+      "Folders": {
+        "ReachStreets": "Reach Streets",
+        "CorpSecurity": "Corp & Security",
+        "WireMachine": "Wire & Machine",
+        "VeilUndead": "Veil & Undead",
+        "WildsJungles": "Wilds & Jungles",
+        "Rivals": "Rivals"
+      },
+      "Actors": {
+        "CorpSecurityOfficer": {
+          "Name": "Corp Security Officer",
+          "Description": "<p>Contract security on a Grid checkpoint or a corp lobby: body armor, a stunstick, a sidearm, and orders to hold the door until backup arrives.</p><p><em>Reskinned from the Draw Steel level 1 Human Guard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "CorpEnforcer": {
+          "Name": "Corp Enforcer",
+          "Description": "<p>The corp’s enforcement lead — the one who decides when a detention becomes a disappearance. Leads a squad from the front with an autoshotgun, a ballistic shield, Veil-filter cyber-eyes, and a sonic repulsor wired into their armor.</p><p><em>Reskinned from the Draw Steel level 1 Human Blackguard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "StreetBrawler": {
+          "Name": "Street Brawler",
+          "Description": "<p>Pit-fighter muscle a Flats boss keeps on retainer. A secondhand hydraulic cyberarm, cheap dermal plating, no patience — and a habit of holding someone between themself and the guns.</p><p><em>Reskinned from the Draw Steel level 1 Human Brawler (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "GangBoss": {
+          "Name": "Gang Boss",
+          "Description": "<p>Runs a Flats crew — protection, jacked shipments, and the occasional hit. Carries a hand cannon loaded with Veil-hexed rounds and an SMG, and burns rot stims when the fight turns. Keeps the crew alive by keeping them afraid.</p><p><em>Reskinned from the Draw Steel level 3 Human Bandit Chief (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "GangRaider": {
+          "Name": "Gang Raider",
+          "Description": "<p>Gang runner with a sawed-off and a holdout pistol: fast, expendable, and always part of a pack.</p><p><em>Reskinned from the Draw Steel level 1 Human Raider (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "StreetCutter": {
+          "Name": "Street Cutter",
+          "Description": "<p>Ambusher who waits in the rain-dark between streetlights with a holdout pistol and a mono-knife for when it gets close.</p><p><em>Reskinned from the Draw Steel level 1 Human Rogue (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "Hustler": {
+          "Name": "Hustler",
+          "Description": "<p>Hustler and con artist who would rather talk than fight, and fights dirty with twin holdout pistols when talking fails.</p><p><em>Reskinned from the Draw Steel level 1 Human Scoundrel (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "StreetPunk": {
+          "Name": "Street Punk",
+          "Description": "<p>Street punk with a riot shield, a sawed-off, and a grudge; holds the alley mouth while the crew works.</p><p><em>Reskinned from the Draw Steel level 2 Human Knave (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RooftopShooter": {
+          "Name": "Rooftop Shooter",
+          "Description": "<p>Rooftop shooter with a scoped rifle, covering an approach.</p><p><em>Reskinned from the Draw Steel level 1 Human Archer (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "TrickShooter": {
+          "Name": "Trick Shooter",
+          "Description": "<p>Showboat gunslinger whose smartlinked rounds ricochet off neon signage for the crowd.</p><p><em>Reskinned from the Draw Steel level 1 Human Trickshot (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "VeilCultist": {
+          "Name": "Veil Cultist",
+          "Description": "<p>Dark-pact cell leader who trades street kids’ futures for Veil favors. Their Veil-etched revolver drinks from every wound it makes.</p><p><em>Reskinned from the Draw Steel level 2 Human Death Cultist (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalStreetPriestEchelon1": {
+          "Name": "Rival Street Priest (Echelon 1)",
+          "Description": "<p>A rival Street Priest bound to an opposing patron — a mirror of the crew’s own believer. Draw Steel Conduit chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Conduit (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalElementalistEchelon1": {
+          "Name": "Rival Elementalist (Echelon 1)",
+          "Description": "<p>A rival Elementalist working for a competing crew or corp. Draw Steel Elementalist chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Elementalist (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalOperatorEchelon1": {
+          "Name": "Rival Operator (Echelon 1)",
+          "Description": "<p>A rival Operator: adrenaline-soaked close-quarters killer with a breacher shotgun and a cyberarm built for clinches. Draw Steel Fury chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Fury (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalHackerEchelon1": {
+          "Name": "Rival Hacker (Echelon 1)",
+          "Description": "<p>A rival Hacker who shuts down what the crew brings to the fight: a combat deck running threat-prediction scripts, a smartlinked machine pistol, and feedback spikes pushed through enemy cyberware. Draw Steel Null chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Null (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalScoutEchelon1": {
+          "Name": "Rival Scout (Echelon 1)",
+          "Description": "<p>A rival Scout: infiltrator and assassin one step ahead of the crew, with a suppressed SMG, toxin rounds, and active camo. Draw Steel Shadow chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Shadow (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalCommanderEchelon1": {
+          "Name": "Rival Commander (Echelon 1)",
+          "Description": "<p>A rival Commander who turns a hired crew into a unit, calling targets over a squad net from behind a carbine. Draw Steel Tactician chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Tactician (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "RivalTechnomancerEchelon1": {
+          "Name": "Rival Technomancer (Echelon 1)",
+          "Description": "<p>A rival Technomancer whose sprites answer a different congregation; runs a jury-rigged deck as a focus for Wire-born powers. Draw Steel Talent chassis.</p><p><em>Reskinned from the Draw Steel level 2 Rival Talent (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "IroncladConscript": {
+          "Name": "Ironclad Conscript",
+          "Description": "<p>Indentured Ironclad Legion trooper with a bayonet carbine, paying off a debt contract with a body full of company augments and a loyalty collar that explodes if they fall.</p><p><em>Reskinned from the Draw Steel level 1 War Dog Conscript (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "IroncladCommando": {
+          "Name": "Ironclad Commando",
+          "Description": "<p>Ironclad infiltration trooper with suppressed machine pistols, sent in ahead of the line.</p><p><em>Reskinned from the Draw Steel level 1 War Dog Commando (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "IroncladSharpshooter": {
+          "Name": "Ironclad Sharpshooter",
+          "Description": "<p>Ironclad marksman with a spliced targeting eye and a smartgun whose rounds steer around cover.</p><p><em>Reskinned from the Draw Steel level 1 War Dog Sharpshooter (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "IroncladSubcommander": {
+          "Name": "Ironclad Subcommander",
+          "Description": "<p>Ironclad squad sergeant with a command sidearm and the kill codes for every collar in the squad.</p><p><em>Reskinned from the Draw Steel level 2 War Dog Subcommander (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "IroncladGroundCommander": {
+          "Name": "Ironclad Ground Commander",
+          "Description": "<p>Ironclad field commander: a company officer who has never lost a contract and doesn’t count the conscripts. Carries a neural tether gun, calls mortar strikes, and holds the master kill code.</p><p><em>Reskinned from the Draw Steel level 3 War Dog Ground Commander (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "Zombie": {
+          "Name": "Zombie",
+          "Description": "<p>A corpse the Veil pushed back up — slow, hungry, and common in the Sinks after a bad night.</p><p><em>Reskinned from the Draw Steel level 1 Zombie (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "Skeleton": {
+          "Name": "Skeleton",
+          "Description": "<p>Veil-risen bones from a flooded Warrens ossuary, still wearing scraps of old uniforms.</p><p><em>Reskinned from the Draw Steel level 1 Skeleton (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "Ghoul": {
+          "Name": "Ghoul",
+          "Description": "<p>Corpse-eater that hunts the Sinks’ body trade.</p><p><em>Reskinned from the Draw Steel level 1 Ghoul (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "Ghost": {
+          "Name": "Ghost",
+          "Description": "<p>A Veil ghost anchored to the place it died, often a room the Wired still remembers.</p><p><em>Reskinned from the Draw Steel level 1 Ghost (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "ChromeRaiderArmiger": {
+          "Name": "Chrome Raider Armiger",
+          "Description": "<p>Full-conversion Chrome Raider line-holder: more machine than meat, and proud of it. Flechette carbine, predictive targeting, and a raider beacon that keeps the pack fighting.</p><p><em>Reskinned from the Draw Steel level 3 Time Raider Armiger (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "ChromeRaiderHijack": {
+          "Name": "Chrome Raider Hijack",
+          "Description": "<p>Chrome Raider ambusher who strips salvage — and chrome — from anything that moves, using forearm monowire lashes and a magnetic grapple harpoon.</p><p><em>Reskinned from the Draw Steel level 3 Time Raider Hijack (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+        },
+        "SignalMindkillerWhelp": {
+          "Name": "Signal Mindkiller Whelp",
+          "Description": "<p>A young Signal horror that feeds on minds through a jacked-in connection.</p><p><em>Reskinned from the Draw Steel level 6 Mindkiller Whelp (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "SignalTalkerInvader": {
+          "Name": "Signal Talker Invader",
+          "Description": "<p>A Signal Talker that speaks through the Wired and walks through the meat it has hollowed out.</p><p><em>Reskinned from the Draw Steel level 6 Voiceless Talker Invader (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "FeralBeast": {
+          "Name": "Feral Beast",
+          "Description": "<p>Feral beast template — a guard dog, a jungle boar, a spire-rat the size of a hound.</p><p><em>Reskinned from the Draw Steel level 1 Animal (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "VerminSwarm": {
+          "Name": "Vermin Swarm",
+          "Description": "<p>A swarm of rats, roaches, or jungle insects boiling out of the walls.</p><p><em>Reskinned from the Draw Steel level 1 Animal Swarm (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "JungleBeast": {
+          "Name": "Jungle Beast",
+          "Description": "<p>Large beast template for the jungles past the Reach walls, or a corp’s pet.</p><p><em>Reskinned from the Draw Steel level 1 Big Animal A (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "JunglePredator": {
+          "Name": "Jungle Predator",
+          "Description": "<p>Predator template: something big in the jungle that has learned people are easy prey.</p><p><em>Reskinned from the Draw Steel level 1 Predator A (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
         }
       }
     }

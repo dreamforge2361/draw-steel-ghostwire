@@ -1,0 +1,819 @@
+{
+  "folder": "gwBestiaryStreet",
+  "name": "GHOSTWIRE.Bestiary.Actors.StreetBrawler.Name",
+  "type": "npc",
+  "_id": "0bGZHyvyH39mIURD",
+  "img": "systems/draw-steel/assets/roles/brute.webp",
+  "system": {
+    "stamina": {
+      "value": 40,
+      "max": 40,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 1
+      },
+      "reason": {
+        "value": 0
+      },
+      "intuition": {
+        "value": 0
+      },
+      "presence": {
+        "value": 0
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.StreetBrawler.Description",
+      "languages": [],
+      "director": ""
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 1,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 1,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "181",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 4,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 1,
+      "role": "brute",
+      "organization": "platoon"
+    },
+    "ev": 6,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.StreetBrawler.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/brute.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 0,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Cyberarm Haymaker",
+      "type": "ability",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Monsters",
+          "page": "181",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "haymaker",
+        "story": "",
+        "keywords": [
+          "melee",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "Ie17tQRpGgNplROT": {
+              "type": "damage",
+              "_id": "Ie17tQRpGgNplROT",
+              "damage": {
+                "tier1": {
+                  "value": "6",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "9",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "12",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "name": "",
+              "img": null,
+              "sort": 0
+            },
+            "wMsRzNzm2i5xigUA": {
+              "type": "applied",
+              "_id": "wMsRzNzm2i5xigUA",
+              "name": "Hydraulic Grip",
+              "applied": {
+                "tier3": {
+                  "display": "{{potency}} grabbed and the target takes a bane on the Escape Grab maneuver",
+                  "potency": {
+                    "characteristic": "might",
+                    "value": "@potency.strong"
+                  },
+                  "effects": {
+                    "grabbed": {
+                      "condition": "failure",
+                      "end": "",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier1": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "effects": {}
+                },
+                "tier2": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "effects": {}
+                }
+              },
+              "img": null,
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>A target who is already grabbed takes an extra 2 damage.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "daL7FIljzSpRRHSu",
+      "img": "icons/weapons/fist/claw-tech-spike-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.daL7FIljzSpRRHSu"
+    },
+    {
+      "name": "Hydraulic Throw (1 Malice)",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "181",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "throw-1-malice",
+        "story": "",
+        "keywords": [
+          "melee"
+        ],
+        "category": "heroic",
+        "resource": 1,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creature",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p><strong>Note:</strong> One creature grabbed by the brawler</p><p>The brawler’s hydraulic cyberarm hurls the target, pushing them up to 5 squares.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "F66XwHHFuTzPM9TM",
+      "img": "icons/commodities/tech/metal-pistons.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.F66XwHHFuTzPM9TM"
+    },
+    {
+      "name": "Shoot the Hostage!",
+      "type": "ability",
+      "system": {
+        "type": "none",
+        "source": {
+          "book": "Monsters",
+          "page": "181",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "shoot-the-hostage",
+        "story": "",
+        "keywords": [],
+        "category": "",
+        "resource": null,
+        "trigger": "The brawler is targeted with a strike",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The brawler halves the damage from any strike if they have a creature or object grabbed of size 1S or larger. The grabbed creature or object takes the remaining damage.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "gtOLdsMVkl7yYDKh",
+      "img": "icons/skills/movement/arrow-upward-blue.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.gtOLdsMVkl7yYDKh"
+    },
+    {
+      "name": "Veil-Filter Optics",
+      "type": "feature",
+      "_id": "W54VgR1A3eMCWbFb",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "<p>The brawler’s cyber-eyes filter out Veil glamours: they ignore concealment if it’s granted by a supernatural effect.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "page": "181",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "supernatural-insight",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "ZJ4Z3nifR8NNIWxP": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0bGZHyvyH39mIURD.W54VgR1A3eMCWbFb"
+    },
+    {
+      "name": "Exploit Opening",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "exploit-opening",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "A human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each human acting this turn gains an edge on abilities until the end of their turn, or has a double edge on any ability that targets an enemy affected by a condition.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "LYYyN9iD2PjepIFo",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 200000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.LYYyN9iD2PjepIFo"
+    },
+    {
+      "name": "Staying Power",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "staying-power",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "a human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each non-minion human in the encounter slams a trauma stim and regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "vxocmPyA9uKwrgEq",
+      "img": "icons/tools/medical/medkit-heavy.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 300000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!0bGZHyvyH39mIURD.vxocmPyA9uKwrgEq"
+    },
+    {
+      "name": "Blight Grenade",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "alchemical-device",
+        "story": "A street-chem canister of Sinks rot and tangle-foam.",
+        "keywords": [
+          "area",
+          "ranged"
+        ],
+        "category": "maliceAncestry",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "3",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy and object in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "2",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {
+            "MhQwsOqVGfNaQFua": {
+              "name": "Damage",
+              "img": null,
+              "type": "damage",
+              "_id": "MhQwsOqVGfNaQFua",
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "WoQ1Q8BcxmPBSXXN": {
+              "name": "Slowed and Restrained",
+              "img": null,
+              "type": "applied",
+              "_id": "WoQ1Q8BcxmPBSXXN",
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}}, slowed (save ends)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "0",
+                    "characteristic": "agility"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "{{potency}}, restrained (save ends)",
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "2",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p><strong>Special:</strong> This ability can’t be used by a minion.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "lVlwo9eIp8HBjfth",
+      "img": "icons/weapons/thrown/grenade-chemical-gas.webp",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "9Ppluh0c55nL15rB": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!0bGZHyvyH39mIURD.lVlwo9eIp8HBjfth"
+    }
+  ],
+  "effects": [],
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "DSEkUDEnQeS4LsWr",
+        "dsSourceName": "Human Brawler",
+        "decision": "Keep",
+        "region": "streets"
+      }
+    }
+  },
+  "_key": "!actors!0bGZHyvyH39mIURD"
+}

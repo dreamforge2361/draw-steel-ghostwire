@@ -431,9 +431,37 @@ Director-facing monster/NPC pipeline. **Doctrine: reskin first.**
 6. **Ship** Foundry Bestiary/NPC Actor pack with only reviewed entries.
 7. **Docs:** `docs/masters/GHOSTWIRE_BESTIARY.md`.
 
-- [ ] DS monster/NPC review pass (Keep / Adapt / Skip)
-- [ ] Reskin wave (mechanics + description + stats; placeholder art)
+- [ ] DS monster/NPC review pass (Keep / Adapt / Skip) — **B38 proposal done, pending Michael review** (187 Keep / 224 Adapt / 56 Skip / 16 Defer-hazard; `GHOSTWIRE_BESTIARY_DS_INVENTORY.md`)
+- [ ] Reskin wave (mechanics + description + stats; placeholder art) — **B38 wave 1: 35 Actors in `bestiary` pack, pending Foundry verification**
 - [ ] Reach + jungle + setting original creature wave
 - [ ] Artwork / token pass
-- [ ] Foundry Ghostwire Bestiary/NPC pack (reviewed only)
-- [ ] GHOSTWIRE_BESTIARY.md master
+- [ ] Foundry Ghostwire Bestiary/NPC pack (reviewed only) — **B38 scaffold + wave 1 built (module v0.1.50), pending Foundry verification**
+- [ ] GHOSTWIRE_BESTIARY.md master — **counts + wave 1 list added (B38)**
+
+#### B38 Bestiary review + reskin wave 1 (2026-09-17)
+Spec: `docs/spikes/B38-BESTIARY-REVIEW-RESKIN-WAVE1.md`. **Part A:** all 483 rows of `GHOSTWIRE_BESTIARY_DS_INVENTORY.md` have a Decision, Ghostwire name (Keep/Adapt), and region + notes; rules and counts in `GHOSTWIRE_BESTIARY.md`. **Part B:** new Actor pack `bestiary` registered in `module.json` (label “Ghostwire Bestiary”, PLAYER NONE / ASSISTANT OWNER), six region folders with 16-character ids. **Part C:** 35 Actors cloned from the Draw Steel monsters pack — 11 street / corp / Veil-cult Humans, the 7 first-echelon Rivals as Ghostwire classes, 5 Ironclad (War Dog) troops, 4 Undead, 2 Chrome Raiders, 2 Signal Talkers, 4 jungle / feral animals. System stats, embedded abilities, and effects are byte-identical to Draw Steel except for faction names in ability prose; names, token names, and biographies are Ghostwire lang keys; flags `bestiary = { dsSourceId, dsSourceName, decision, region }`. Placeholder art; ability names / rules text pass later.
+- [ ] **B38** wave 1 (module v0.1.50) — **implemented, pending Foundry verification**. Done when:
+  - [ ] Ghostwire Bestiary shows the six folders and 35 Actors
+  - [ ] Spot-checked Actors show Ghostwire fiction with Draw Steel math intact
+  - [ ] A Rival and street muscle drag onto a Scene
+  - [ ] No unreviewed stock names on pack Actors
+  - [ ] Michael reviews / corrects the Decision column
+
+#### B38c Bestiary firearms / chrome ability pass (2026-09-17)
+Spec: `docs/spikes/B38c-BESTIARY-FIREARMS-CHROME-PASS.md`. 25 humanoid / Chrome Raider Actors in `src/packs/bestiary/` get Ghostwire ability names, rules text, icons, and biographies (firearms, grenades, stims, chrome, decks); Draw Steel damage tiers, potencies, targets, and Malice costs unchanged. Melee-only gun signatures become Melee X or Ranged 5/10 (`meleeRanged`); `magic` keyword dropped where fiction became tech. Undead, wilds, and Signal Talker natural attacks untouched. Per-Actor table + conventions (standing rule) in `GHOSTWIRE_BESTIARY.md`.
+- [ ] **B38c** (module v0.1.51) — **implemented, pending Foundry verification**. Done when:
+  - [ ] Gang Boss, Corp Enforcer, Corp Security Officer, Ironclad Conscript, Rooftop Shooter, Trick Shooter show firearms / chrome ability names
+  - [ ] Street Cutter shows holdout + mono-knife; Gang Raider has no handaxes
+  - [ ] Feral Beast / Zombie still have natural attacks
+  - [ ] Corp Enforcer + Gang Boss dragged to a Scene; abilities roll
+  - [ ] Master notes the firearms doctrine
+
+## Backlog add (2026-09-17)
+
+- **B38** Bestiary review + reskin Wave 1 — **built, pending Foundry verification** (module v0.1.50; 35 Actors).
+- **B38c** Bestiary firearms / chrome ability pass — **built, pending Foundry verification** (module v0.1.51).
+- **B38b** Handbook originals Wave 2 (after B38 verify).
+- **B39** Director Run Generator — `docs/directors/run-generator.md` (after bestiary recommendations exist).
+- Wilds Pandora-like lore pass — later; ship only Canopy-Stalker + Reach Behemoth seeds until then.
+- **B40** Ability/weapon/gear SFX — `docs/directors/ability-sfx.md` (settings + FilePicker; Michael supplies assets).
+- **B41** Wired node topology minimap — `docs/directors/wired-node-minimap.md` (Overlay dual-view; Jacked In node-primary).

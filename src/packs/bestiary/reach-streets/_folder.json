@@ -1,0 +1,12 @@
+{
+  "_id": "gwBestiaryStreet",
+  "_key": "!folders!gwBestiaryStreet",
+  "name": "GHOSTWIRE.Bestiary.Folders.ReachStreets",
+  "type": "Actor",
+  "folder": null,
+  "sort": 100000,
+  "flags": {},
+  "color": null,
+  "description": "",
+  "sorting": "a"
+}

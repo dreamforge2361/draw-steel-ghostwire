@@ -1,0 +1,1112 @@
+{
+  "folder": "gwBestiaryStreet",
+  "name": "GHOSTWIRE.Bestiary.Actors.GangBoss.Name",
+  "type": "npc",
+  "img": "systems/draw-steel/assets/roles/leader.webp",
+  "system": {
+    "stamina": {
+      "value": 120,
+      "max": 120,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 3
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 3
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.GangBoss.Description",
+      "director": "",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 4,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 4,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "184",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 5,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 3,
+      "role": "",
+      "organization": "leader"
+    },
+    "ev": 20,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.GangBoss.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/leader.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Veil-Filter Optics",
+      "type": "feature",
+      "_id": "fw1RNfMAcPUklAxZ",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "<p>The gang boss’s cyber-eyes filter out Veil glamours: they ignore concealment if it’s granted by a supernatural effect.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "supernatural-insight",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.fw1RNfMAcPUklAxZ"
+    },
+    {
+      "name": "End Effect",
+      "type": "feature",
+      "_id": "O52S6ySgUTmV9LyY",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>At the end of each of their turns, the gang boss can dump a trauma stim and take [[/damage 5]] damage to end one effect on them that can be ended by a saving throw. This damage can’t be reduced in any way.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "end-effect",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": -100000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.O52S6ySgUTmV9LyY"
+    },
+    {
+      "name": "Hand Cannon & SMG",
+      "type": "ability",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "whip-and-magic-longsword",
+        "story": "",
+        "keywords": [
+          "melee",
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "meleeRanged",
+          "primary": "2",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 2,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "3YfCJEZjmvlPUly5": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "3YfCJEZjmvlPUly5",
+              "damage": {
+                "tier1": {
+                  "value": "8",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "12",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "15",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "xBm6TF2HWLIP15Gh": {
+              "name": "pull",
+              "img": null,
+              "type": "forced",
+              "_id": "xBm6TF2HWLIP15Gh",
+              "forced": {
+                "tier1": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "1",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "2",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "3",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 2,
+              "multiple": false
+            },
+            "description": "<p>This ability targets one additional target.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The gang boss’s hand cannon is loaded with Veil-hexed rounds. Any target who is adjacent to the gang boss after the power roll is resolved takes [[/damage 3 corruption]]{3 corruption damage}.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "i7hAMySPmf4WSwls",
+      "img": "icons/weapons/guns/pistol-handgun-large.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.i7hAMySPmf4WSwls"
+    },
+    {
+      "name": "On Your Knees!",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "kneel-peasant",
+        "story": "A pistol-whip and a boot to the back of the legs.",
+        "keywords": [
+          "melee"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": 1,
+          "custom": "One enemy"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "WVRfyc2hoPNEGS8T": {
+              "name": "Push",
+              "img": null,
+              "type": "forced",
+              "_id": "WVRfyc2hoPNEGS8T",
+              "forced": {
+                "tier2": {
+                  "distance": "2",
+                  "display": "{{forced}}",
+                  "movement": [
+                    "push"
+                  ],
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "distance": "4",
+                  "display": "{{forced}}",
+                  "movement": [
+                    "push"
+                  ],
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                },
+                "tier1": {
+                  "display": "{{forced}}",
+                  "movement": [
+                    "push"
+                  ],
+                  "distance": "1",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "fLCpuzqBdRLuekcq": {
+              "name": "Prone",
+              "img": null,
+              "type": "applied",
+              "_id": "fLCpuzqBdRLuekcq",
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}} prone",
+                  "effects": {
+                    "prone": {
+                      "condition": "failure",
+                      "end": "",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "1",
+                    "characteristic": "might"
+                  }
+                },
+                "tier2": {
+                  "effects": {
+                    "prone": {
+                      "condition": "failure",
+                      "end": "",
+                      "properties": []
+                    }
+                  },
+                  "display": "",
+                  "potency": {
+                    "value": "2",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "effects": {
+                    "prone": {
+                      "condition": "failure",
+                      "end": "",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "characteristic": "might",
+                    "value": "3"
+                  },
+                  "display": ""
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 2,
+              "multiple": false
+            },
+            "description": "<p>The ability takes the Area keyword, loses the Melee key word, and is a 1 burst that targets each enemy in the area.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "bGxXqKH4lbvCtWIU",
+      "img": "icons/weapons/guns/pistol-battered-steel.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.bGxXqKH4lbvCtWIU"
+    },
+    {
+      "name": "Rot Stim",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "bloodstones",
+        "story": "",
+        "keywords": [],
+        "category": "",
+        "resource": null,
+        "trigger": "The gang boss makes a power roll.",
+        "distance": {
+          "type": "self",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "self",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The gang boss jams a Veil-cut combat stim into their neck, takes [[/damage 5 corruption]]{5 corruption damage}, and increases the outcome of the power roll by one tier. This damage can’t be reduced in any way.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "g6nqiLi2Pd9FMcOv",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.g6nqiLi2Pd9FMcOv"
+    },
+    {
+      "name": "Shoot!",
+      "type": "ability",
+      "system": {
+        "type": "villain",
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "shoot",
+        "story": "",
+        "keywords": [
+          "area"
+        ],
+        "category": "villain",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "value": null,
+          "custom": "Each artillery ally in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target makes a ranged free strike.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "96GkzifQXhzvXLHW",
+      "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.96GkzifQXhzvXLHW"
+    },
+    {
+      "name": "Form Up!",
+      "type": "ability",
+      "system": {
+        "type": "villain",
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "form-up",
+        "story": "",
+        "keywords": [
+          "area"
+        ],
+        "category": "villain",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target shifts up to their speed. Additionally, until the end of the encounter, while the gang boss or any ally is adjacent to a target, they have damage immunity 2.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "kn7n0r5tWYEFo8vX",
+      "img": "icons/equipment/shield/heater-steel-gray.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.kn7n0r5tWYEFo8vX"
+    },
+    {
+      "name": "Lead From the Front",
+      "type": "ability",
+      "system": {
+        "type": "villain",
+        "source": {
+          "book": "Monsters",
+          "page": "184",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "lead-from-the-front",
+        "story": "",
+        "keywords": [],
+        "category": "villain",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "self",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "self",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The gang boss shifts up to 10 squares regardless of their speed. During or after this movement, they can use their Hand Cannon & SMG against up to four targets. Additionally, one ally adjacent to each target can make a free strike against that target.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "90votFIJKdfQvMBq",
+      "img": "icons/weapons/guns/pistol-handgun-large.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.90votFIJKdfQvMBq"
+    },
+    {
+      "name": "Exploit Opening",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "exploit-opening",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "A human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each human acting this turn gains an edge on abilities until the end of their turn, or has a double edge on any ability that targets an enemy affected by a condition.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "LYYyN9iD2PjepIFo",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 200000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.LYYyN9iD2PjepIFo"
+    },
+    {
+      "name": "Blight Grenade",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "alchemical-device",
+        "story": "A street-chem canister of Sinks rot and tangle-foam.",
+        "keywords": [
+          "area",
+          "ranged"
+        ],
+        "category": "maliceAncestry",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "3",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy and object in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "2",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {
+            "MhQwsOqVGfNaQFua": {
+              "name": "Damage",
+              "img": null,
+              "type": "damage",
+              "_id": "MhQwsOqVGfNaQFua",
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "WoQ1Q8BcxmPBSXXN": {
+              "name": "Slowed and Restrained",
+              "img": null,
+              "type": "applied",
+              "_id": "WoQ1Q8BcxmPBSXXN",
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}}, slowed (save ends)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "0",
+                    "characteristic": "agility"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "{{potency}}, restrained (save ends)",
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "2",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p><strong>Special:</strong> This ability can’t be used by a minion.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "img": "icons/weapons/thrown/grenade-chemical-gas.webp",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "9Ppluh0c55nL15rB": 3
+      },
+      "_id": "r71PP2brMbPzaJvC",
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.r71PP2brMbPzaJvC"
+    }
+  ],
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "uuMc9pmKbvUdWMOz",
+        "dsSourceName": "Human Bandit Chief",
+        "decision": "Keep",
+        "region": "streets"
+      }
+    }
+  },
+  "_id": "0ZGKRFSw3t8qQXNq",
+  "sort": 3000,
+  "_key": "!actors!0ZGKRFSw3t8qQXNq"
+}

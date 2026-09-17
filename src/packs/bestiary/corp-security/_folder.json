@@ -1,0 +1,12 @@
+{
+  "_id": "gwBestiaryCorp00",
+  "_key": "!folders!gwBestiaryCorp00",
+  "name": "GHOSTWIRE.Bestiary.Folders.CorpSecurity",
+  "type": "Actor",
+  "folder": null,
+  "sort": 200000,
+  "flags": {},
+  "color": null,
+  "description": "",
+  "sorting": "a"
+}

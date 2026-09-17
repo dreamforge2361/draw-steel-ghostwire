@@ -1,0 +1,1086 @@
+{
+  "name": "GHOSTWIRE.Bestiary.Actors.IroncladGroundCommander.Name",
+  "type": "npc",
+  "img": "systems/draw-steel/assets/roles/leader.webp",
+  "system": {
+    "stamina": {
+      "value": 120,
+      "max": 120,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 3
+      },
+      "agility": {
+        "value": 2
+      },
+      "reason": {
+        "value": 3
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.IroncladGroundCommander.Description",
+      "director": "",
+      "languages": []
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "303",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 5,
+      "keywords": [
+        "humanoid",
+        "warDog"
+      ],
+      "level": 3,
+      "role": "",
+      "organization": "leader"
+    },
+    "ev": 20,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "items": [
+    {
+      "name": "End Effect",
+      "type": "feature",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>At the end of each of their turns, the ground commander can dump a trauma stim and take [[/damage 5]] damage to end one effect on them that can be ended by a saving throw. This damage can't be reduced in any way.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "end-effect",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "EvAKl88sLSaI7rQB",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.EvAKl88sLSaI7rQB"
+    },
+    {
+      "name": "Loyalty Collar",
+      "type": "feature",
+      "img": "icons/commodities/tech/detonator-radio.webp",
+      "system": {
+        "description": {
+          "value": "<p>When the ground commander is reduced to 0 Stamina, the cortex charge in their loyalty collar detonates, dealing [[/damage 2d6]] damage to each adjacent enemy and object.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "loyalty-collar",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "ZJkci0nLwJnJfxrC",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.ZJkci0nLwJnJfxrC"
+    },
+    {
+      "name": "Neural Tether Gun",
+      "type": "ability",
+      "img": "icons/weapons/guns/gun-heavy-energy-blue.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "melee",
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "distance": {
+          "type": "meleeRanged",
+          "primary": "1",
+          "secondary": "5",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 2,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "QU3zmsVraEE4f80Z": {
+              "_id": "QU3zmsVraEE4f80Z",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "damage": {
+                "tier1": {
+                  "value": "8",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "12",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "15",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "maWX773n85HMwXP6": {
+              "_id": "maWX773n85HMwXP6",
+              "type": "forced",
+              "name": "pull",
+              "img": null,
+              "forced": {
+                "tier1": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "1",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "might"
+                  }
+                },
+                "tier2": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "2",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": "might"
+                  }
+                },
+                "tier3": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "distance": "3",
+                  "display": "{{forced}}",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "might"
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "conditioning-spear",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 1,
+              "multiple": false
+            },
+            "description": "<p>The tether barbs lock the target’s muscles. A target who has i&lt;2 and who is adjacent to the ground commander after this ability is resolved is grabbed (save ends). This grab can’t be escaped using the Escape Grab maneuver. The ground commander can grab up to two creatures at a time.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>One ally within 10 squares of the ground commander can make a free strike.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "sXHcSjz6nolMVS0Z",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.sXHcSjz6nolMVS0Z"
+    },
+    {
+      "name": "Highest Posthumous Promotion",
+      "type": "ability",
+      "img": "icons/commodities/tech/detonator-radio.webp",
+      "system": {
+        "type": "maneuver",
+        "category": "",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "special",
+          "value": null,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "highest-posthumous-promotion",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The ground commander broadcasts the kill code on every collar frequency. Any target who has a loyalty collar is reduced to 0 Stamina.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "SJU0n6i1UkWCjRTn",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.SJU0n6i1UkWCjRTn"
+    },
+    {
+      "name": "Final Orders",
+      "type": "ability",
+      "img": "icons/commodities/tech/electronics-chip-data.webp",
+      "system": {
+        "type": "triggered",
+        "category": "",
+        "keywords": [
+          "ranged"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "ally",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "final-orders",
+        "story": "",
+        "resource": null,
+        "trigger": "The target takes damage, is force moved, or is reduced to 0 Stamina.",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The ground commander pushes an override script and a combat stim through the target’s collar. Even if reduced to 0 Stamina, the target moves up to their speed and can make a free strike after the triggering effect is resolved. The target then immediately dies.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "4wUMDgvZBuN1WWJE",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.4wUMDgvZBuN1WWJE"
+    },
+    {
+      "name": "Combined Arms",
+      "type": "ability",
+      "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+      "system": {
+        "type": "villain",
+        "category": "villain",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "combined-arms",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Each target can make a ranged free strike, then immediately use the Charge main action.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "N0n260exNNasntmU",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.N0n260exNNasntmU"
+    },
+    {
+      "name": "Make an Example of Them",
+      "type": "ability",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "system": {
+        "type": "villain",
+        "category": "villain",
+        "keywords": [
+          "ranged"
+        ],
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "enemy",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "make-an-example-of-them",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each ally within 5 squares of the target moves up to their speed and can make a free strike against the target. If the target has [[potency I 2]], they are [[/apply frightened save]] of the ground commander (save ends).</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "HyT7oNpMbxhkEB2K",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.HyT7oNpMbxhkEB2K"
+    },
+    {
+      "name": "Claim Them for the Body Banks",
+      "type": "ability",
+      "img": "icons/magic/control/debuff-chains-ropes-net-red-orange.webp",
+      "system": {
+        "type": "villain",
+        "category": "villain",
+        "keywords": [
+          "area"
+        ],
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creature",
+          "value": null,
+          "custom": "Each creature in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "303"
+        },
+        "_dsid": "claim-them-for-the-body-banks",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Each target ally shifts up to 2 squares and can use the Grab maneuver. Until the end of the encounter, each target enemy takes a bane on the Escape Grab maneuver.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "rKnIroP49jqcZYcV",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.rKnIroP49jqcZYcV"
+    },
+    {
+      "folder": "zKtLcYoIeEal58CU",
+      "name": "Fodder Run",
+      "type": "ability",
+      "_id": "I47ueLHjVHGTY83Y",
+      "img": "icons/commodities/tech/detonator-radio.webp",
+      "system": {
+        "source": {
+          "book": "Monsters",
+          "page": "299",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "fodder-run",
+        "story": "",
+        "keywords": [],
+        "type": "none",
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each Ironclad minion in the encounter shifts up to their speed and can make a free strike. A minion who does so is then reduced to 0 Stamina.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "sort": 150000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.I47ueLHjVHGTY83Y"
+    },
+    {
+      "folder": "zKtLcYoIeEal58CU",
+      "name": "Field Salvage",
+      "type": "ability",
+      "_id": "ihKkMlptBoQemUBc",
+      "img": "icons/commodities/tech/cable-armored-reticulated.webp",
+      "system": {
+        "source": {
+          "book": "Monsters",
+          "page": "299",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "reconstitute",
+        "story": "",
+        "keywords": [],
+        "type": "none",
+        "category": "maliceAncestry",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>One Ironclad acting this turn rips the chrome and grafts out of a nearby humanoid corpse and jacks them into their own body. The Ironclad regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.ihKkMlptBoQemUBc"
+    },
+    {
+      "name": "Fire for Effect",
+      "type": "ability",
+      "_id": "qcpbsqefhcNsWcZd",
+      "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+      "system": {
+        "source": {
+          "book": "Monsters",
+          "page": "299",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "fire-for-effect",
+        "story": "",
+        "keywords": [
+          "area",
+          "ranged"
+        ],
+        "type": "maneuver",
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "4",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creature",
+          "value": null,
+          "custom": "Each creature in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": true
+          },
+          "effects": {
+            "zVlqCF3u0UEd5WfX": {
+              "sort": 100000,
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "zVlqCF3u0UEd5WfX",
+              "damage": {
+                "tier1": {
+                  "value": "5",
+                  "types": [
+                    "fire"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "5",
+                  "types": [
+                    "fire"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "5",
+                  "types": [
+                    "fire"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            },
+            "toqhef4jiBXdUgp8": {
+              "sort": 200000,
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "toqhef4jiBXdUgp8",
+              "applied": {
+                "tier1": {
+                  "display": "slowed or weakened (save ends)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "save",
+                      "properties": []
+                    },
+                    "weakened": {
+                      "condition": "always",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "slowed or weakened (EoT)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    },
+                    "weakened": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            }
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>An Ironclad acting this turn calls a mortar strike onto the area. Each target makes an <strong>Agility test</strong>. The same condition is imposed on each affected target.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!F1Z7uFhjZtnimMCC.qcpbsqefhcNsWcZd"
+    }
+  ],
+  "folder": "gwBestiaryCorp00",
+  "_id": "F1Z7uFhjZtnimMCC",
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.IroncladGroundCommander.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/leader.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "effects": [],
+  "sort": 22000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "Y2m150vDEZJprWgF",
+        "dsSourceName": "War Dog Ground Commander",
+        "decision": "Keep",
+        "region": "corp"
+      }
+    }
+  },
+  "_key": "!actors!F1Z7uFhjZtnimMCC"
+}
