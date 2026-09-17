@@ -6,6 +6,7 @@ import { registerMachines } from "./machines.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
+import { registerEquipmentUse } from "./equipment-use.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -83,6 +84,7 @@ Hooks.once("init", () => {
   registerMachines();
   registerMods();
   registerAbilitySfx();
+  registerEquipmentUse();
 });
 
 // ---------- Wired connection states ----------

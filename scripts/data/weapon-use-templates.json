@@ -1,0 +1,36 @@
+{
+  "_comment": "B49 — turns a Ghostwire weapon treasure into a usable attack ability. Draw Steel has no per-weapon attack document: heroes get Melee/Ranged Free Strike (system abilities, category 'freeStrike') and kits supply the damage and distance bonuses. So a spawned ability is a free strike WITH THIS WEAPON: same shape as the system's free strike, distance from the weapon's range band, damage from the weapon's own RAW band, keywords that let kit bonuses apply normally.",
+
+  "_damageNote": "The gear flag 'damage' is the weapon's RAW printed number, which Pass A lock A10 defines as the MIDDLE result. Low and high are derived with the same spread the system's own free strikes use (ranged 2/4/6 -> -2/+2 around the middle; melee 2/5/7 -> -3/+2). No characteristic is added: RAW prints weapon damage as the number itself, and kit bonus lines add on top by result.",
+
+  "range": {
+    "Adjacent": { "type": "melee", "primary": "1" },
+    "Short": { "type": "ranged", "primary": "5" },
+    "Medium": { "type": "ranged", "primary": "10" },
+    "Long": { "type": "ranged", "primary": "20" },
+    "Extreme": { "type": "ranged", "primary": "20", "_note": "RAW does not define band distances in squares; Extreme collapses onto Long (the longest distance shipped in Ghostwire content) until it does." }
+  },
+
+  "spread": {
+    "melee": { "low": -3, "high": 2 },
+    "ranged": { "low": -2, "high": 2 }
+  },
+
+  "damageTypes": {
+    "_comment": "Pass A lock A9. Kinetic and AP are untyped; AP keeps its armor note on the gear itself.",
+    "kinetic": [],
+    "AP": [],
+    "electrical": ["lightning"],
+    "toxin": ["poison"],
+    "fire": ["fire"]
+  },
+
+  "keywords": {
+    "melee": ["melee", "strike", "weapon"],
+    "ranged": ["ranged", "strike", "weapon"]
+  },
+
+  "characteristics": ["might", "agility"],
+
+  "_sfxNote": "No sfx flag is stamped: the B40 keyword map already matches the generated name ('Fire Chatterbox' -> firearm rule, 'Strike with Monoblade' -> impact rule). A Director can still set a per-ability override on the sheet."
+}

@@ -6997,6 +6997,12 @@
         "Clear": "Clear the override and fall back to the keyword map",
         "Hint": "Leave empty to use the keyword map (currently matching: {rule}). Foundry core sounds are fine; custom files belong in assets/sfx/."
       }
+    },
+    "EquipmentUse": {
+      "VerbMelee": "Strike with",
+      "VerbRanged": "Fire",
+      "AbilityName": "{verb} {weapon}",
+      "AbilityDescription": "<p>A free strike with your {weapon} ({band} range, {damage} {type} damage on a middle result). Kit bonuses for strikes apply as normal.</p><p><em>This ability is generated from the weapon in your inventory. Remove the weapon and it goes away.</em></p>"
     }
   },
   "DRAW_STEEL": {
