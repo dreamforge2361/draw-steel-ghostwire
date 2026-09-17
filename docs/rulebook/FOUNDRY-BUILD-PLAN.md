@@ -84,7 +84,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B22 | Ghostwire Perks pack | **Pending Michael test** | 47 reskinned perks by type; perk grants list Ghostwire perks only; `17-perks.md`; module v0.1.26 |
 | B23a | Matrix Verbs + Overlay / Jacked In on the sheet | **Done** (`53a4b59`) | 9 verbs on every hero; token statuses; `18-wired-foundry.md`; module v0.1.27 |
 | B23b | Wired Console | **Done, pending Michael test** | ApplicationV2 console: connection roster, Scene nodes (`wiredBoard` flag), Integrity, Trace Alert, reveal to players; module v0.1.28 |
-| B23c | Wired vision tints (Overlay / Jacked In) | **Backlog** (after Phase 5) | Status-driven vision: Overlay = world-readable color wash; Jacked In = dark/shadowed meatspace, Wire-forward |
+| B23c | Wired vision tints (Overlay / Jacked In) | **Done** (Foundry-verified 2026-09-17) | Status-driven vision: Overlay = world-readable color wash; Jacked In = dark/shadowed meatspace, Wire-forward |
 | B24 | Commander class pack | **Done** (`d336ea7`, Foundry-verified 2026-09-16) | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
 | B25 | Languages CONFIG remap | **Done** (Foundry-verified 2026-09-16) | All 42 DS language keys relabeled with locked Ghostwire names (`scripts/languages.mjs`, `GHOSTWIRE.Languages.*`); keys unchanged; module v0.1.30 |
 | B26 | Medic class pack | **Done** (Foundry-verified 2026-09-16) | Medic (Reagents, **persist across encounters — turnGain "0", no reset at combat start**) + Street-Doc / Corp-Medtech / Ripperdoc in Ghostwire Classes; DS Troubadour spine; module v0.1.31 |
@@ -200,9 +200,12 @@ Status-driven (reuse existing Overlay / Jacked In Active Effects from B23a; any 
 
 **Foundry approach (v1):** custom Detection/Vision mode or token sight override applied when the matching status AE is active; cleared on Jack Out / Toggle off. Optional soft light radius so Jacked-In runners can still navigate Wired Console nodes.
 
-- [ ] **B23c** Overlay vision tint (world-readable color wash)
-- [ ] **B23c** Jacked In vision (dark/shadowed meatspace)
-- [ ] Clears correctly when status ends; works for Hacker and any Overlay/Jacked In user
+**Implemented (module v0.1.47, spec `docs/spikes/B23c-WIRED-VISION-TINTS.md`) — Foundry-verified 2026-09-17.** New `scripts/wired-vision.mjs` registers two vision modes in `CONFIG.Canvas.visionModes` — `ghostwireOverlay` (canvas +contrast/+saturation; lit areas cyan-tinted, light colour magenta-tinted; not darkness-adaptive, so it reads in daylight) and `ghostwireJackedIn` (canvas saturation −0.85, exposure −0.55, contrast +0.35; lit areas cold and dim; coloured light boosted toward magenta) — both `tokenConfig: false`. `Token#_getVisionSourceData` is wrapped client-side: while the token's actor has `ghostwire-jacked-in` (wins) or `ghostwire-overlay`, the vision source uses the Wired mode; the Token document's `sight.visionMode` is never written, so clearing the status restores its own vision. Creating, deleting, or toggling a Wired status re-initializes that actor's token vision on every client. **Scope (Foundry's vision rules):** the tint shows on the client looking through the token — its owners, or a GM controlling it — and needs **Token Vision** on the Scene and vision on the token (Draw Steel heroes default to vision on). A GM with no token controlled, and users who don't own the token, see normally. The optional soft light radius was not added.
+
+- [x] **B23c** Overlay vision tint (world-readable color wash)
+- [x] **B23c** Jacked In vision (dark/shadowed meatspace); Overlay wash replaced, not stacked
+- [x] Clears correctly when status ends (Jack Out, Toggle, token HUD); works for Hacker and any Overlay/Jacked In user
+- [x] A second user / GM without the status sees normally
 
 ### B24 Commander (2026-09-16)
 **Naming lock:** the class label is **Commander** everywhere in Foundry (item names, folders, advancements, descriptions). “Face” is retired as a class name. Scout’s **Face-in-crowd** subclass is unrelated and keeps its name.
@@ -319,7 +322,7 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 - **B36 Phase 4 (B32 Phase 4 spike):** scale-band Actor templates under `summons/machines` + Deploy / Recall pipeline (dual Item+Actor lock 2026-09-17) — **Foundry-verified 2026-09-17** (module v0.1.43). See checklist below. Item catalog sync to the chapters' full chassis lists (drones 36, vehicles 32) is still open.
 - **B37 Phase 5 (B32 Phase 5 spike):** Hacker Node/ICE Director templates (10) in the Wired Console — **Foundry-verified 2026-09-17** (module v0.1.45). See checklist below.
 - **B32 Phase 5b:** node tokens on the canvas + linked Wired map — **Foundry-verified 2026-09-17** (module v0.1.46). See checklist below.
-- **B23c (after Phase 5):** Overlay / Jacked In **vision tints** — see checklist below.
+- **B23c:** Overlay / Jacked In **vision tints** — **Foundry-verified 2026-09-17** (module v0.1.47); see checklist below.
 
 - **Summons pack scaffold (2026-09-17):** Actor pack `summons` registered; folders sprites/elementals/spirits/machines/nodes ready for Phase 1+.
 

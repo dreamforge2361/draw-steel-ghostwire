@@ -3,6 +3,7 @@ import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerMachines } from "./machines.mjs";
 import { registerMods, modSlotsLabel } from "./mods.mjs";
+import { registerWiredVision } from "./wired-vision.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -75,6 +76,7 @@ Hooks.once("init", () => {
   patchPersistentReagents();
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
+  registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
   registerMachines();
   registerMods();
 });

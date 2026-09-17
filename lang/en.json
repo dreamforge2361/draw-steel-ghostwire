@@ -5951,7 +5951,11 @@
         "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle to Overlay or Jack Out first."
       },
       "Changed": "{actor}: {state}.",
-      "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es)."
+      "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es).",
+      "Vision": {
+        "overlay": "Wired Overlay",
+        "jackedIn": "Jacked In"
+      }
     },
     "WiredConsole": {
       "Title": "Wired Console",

@@ -67,4 +67,4 @@
 | **Support entities program (Phase 0 done 2026-09-17)** | Master: `docs/masters/GHOSTWIRE_SUPPORT_ENTITIES.md`. Phase 1 Technomancer sprites (12) → 2 Elementalist → 3 Street Priest spirits → 4 drones/vehicles → 5 Hacker ICE/nodes. |
 
 
-| **Wired vision tints (Overlay / Jacked In)** | B23c | **Backlog** (after Support Entities Phase 5) - Overlay = color wash, world readable; Jacked In = dark/shadowed meatspace; status-driven from B23a AEs |
+| **Wired vision tints (Overlay / Jacked In)** | B23c · `scripts/wired-vision.mjs` | **Foundry-verified** (2026-09-17) — two vision modes (Overlay cyan/pink wash, world readable; Jacked In dark/desaturated with neon light) applied client-side while the token's actor has the status; needs Token Vision on the Scene |
