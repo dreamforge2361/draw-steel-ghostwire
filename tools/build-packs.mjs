@@ -3,6 +3,7 @@
 // so lang/en.json stays the source of truth for names and descriptions.
 // A subfolder's _folder.json is a compendium Folder; every item in that subfolder
 // must set "folder" to that Folder's _id (the build fails otherwise).
+// Actor packs work the same way: embedded items carry their own "!actors.items!" _key.
 // Run with Foundry closed:  node tools/build-packs.mjs
 import { createRequire } from "node:module";
 import { readFileSync, readdirSync, rmSync, existsSync } from "node:fs";
@@ -36,6 +37,9 @@ for (const pack of readdirSync("src/packs")) {
   const files = readdirSync(src, { recursive: true }).filter(f => f.endsWith(".json")).sort();
   for (const file of files) {
     const { _key, ...doc } = readJson(join(src, file));
+    // Foundry rejects the whole compendium (and the world renders black) on a malformed id.
+    const badId = [doc, ...(doc.effects ?? []), ...(doc.items ?? [])].find(d => !/^[A-Za-z0-9]{16}$/.test(d._id ?? ""));
+    if (badId) throw new Error(`${file}: _id "${badId._id}" must be 16 alphanumeric characters`);
     if (_key.startsWith("!folders!")) {
       await db.put(_key, { ...doc, _stats: stats });
       console.log(`${pack}: Folder "${doc.name}"`);
@@ -49,6 +53,18 @@ for (const pack of readdirSync("src/packs")) {
       await db.put(effectKey, { ...effect, _stats: stats });
     }
     doc.effects = doc.effects.map(e => e._id);
+    // Actor packs: embedded Items ("!actors.items!<actor>.<item>") and their effects
+    // ("!actors.items.effects!<actor>.<item>.<effect>") get their own keys the same way.
+    if (Array.isArray(doc.items)) {
+      for (const { _key: itemKey, ...item } of doc.items) {
+        for (const { _key: effectKey, ...effect } of item.effects) {
+          await db.put(effectKey, { ...effect, _stats: stats });
+        }
+        item.effects = item.effects.map(e => e._id);
+        await db.put(itemKey, { ...item, _stats: stats });
+      }
+      doc.items = doc.items.map(i => i._id);
+    }
     doc._stats = stats;
     await db.put(_key, doc);
     console.log(`${pack}: ${doc.type} "${doc.name}"`);

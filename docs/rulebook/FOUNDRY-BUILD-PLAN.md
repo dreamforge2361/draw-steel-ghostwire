@@ -287,10 +287,20 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 ## Support Entities (B32+)
 
 - **B32 Phase 0 (done):** `GHOSTWIRE_SUPPORT_ENTITIES.md` inventory + schema.
-- **B33 Phase 1:** Technomancer sprite Actors (12 SKUs).
+- **B33 Phase 1 (B32 Phase 1 spike):** Technomancer sprite Actors (12 SKUs) — **Foundry-verified 2026-09-17** (module v0.1.40). See checklist below.
 - **B34 Phase 2:** Elementalist companions + elemental scaffolds.
 - **B35 Phase 3:** Street Priest pact spirits (3 + Light/Dark tint).
 - **B36 Phase 4:** Wrench drones (36) + vehicles (32) Item sync **and** Actor templates under `summons/machines` + Deploy-spawns-token (dual Item+Actor lock 2026-09-17).
 - **B37 Phase 5:** Hacker Node/ICE Director templates (10).
 
 - **Summons pack scaffold (2026-09-17):** Actor pack `summons` registered; folders sprites/elementals/spirits/machines/nodes ready for Phase 1+.
+
+### B32 Phase 1 — Technomancer sprites (2026-09-17)
+**Actors:** 12 Draw Steel `npc` Actors in `src/packs/summons/sprites/` (Data / Attack / Machine / Ward × Minor / Intermediate / Advanced), modelled on the Draw Steel Familiar: size 1T, `minion` organization, friendly token, speed 5 fly + hover (placeholder), `construct` keyword, EV 0. **Stamina:** Known Bugs #13 placeholders from `GHOSTWIRE_SUPPORT_ENTITIES.md` §3.1, baked at each hybrid tier's entry level with that level's Logic — Minor L1 / Logic 2, Intermediate L4 / Logic 3, Advanced L8 / Logic 4 (e.g. Attack Minor 14, Intermediate 30, Advanced 58); the description gives the live formula for Compile Sprite to stamp later. **Defenses:** Draw Steel npcs have no defense fields, so Reflex / Physique 10 and Wired = owner Persona are description text. **Items:** Attack sprites embed a **Code Strike** ability (Logic power roll; low no damage, middle/high the band's damage enricher); Data / Ward / Machine embed one description feature (Data Uplink / Ward Screen / Mend). No Active Effects. **Flags:** `flags.draw-steel-ghostwire = { kind: "sprite", archetype, hybridTier, ownerUuid: null, dsid }` (`dsid` added because the npc model has no `_dsid`). **Folder ids:** the scaffold's summons folder ids were 17–18 characters, which blacked out world load once the pack was built; renamed to 16-character ids (`gwSummonsSprites`, `gwSummonsSpirits`, `gwSummonsElement`, `gwSummonsMachine`, `gwSummonsNodes00`), and `build-packs.mjs` now fails on any non-16-character `_id`. **Tooling:** `tools/build-packs.mjs` now writes embedded Actor items under `!actors.items!<actor>.<item>` (and their effects) like it already did for embedded effects.
+- [x] **B32 Phase 1** sprite Actors (module v0.1.40) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Ghostwire Summons & Machines › Sprites lists 12 entries
+  - [x] Dragging a sprite to a Scene makes a 1T friendly token that moves
+  - [x] Attack Sprite sheets show Code Strike and the baked Stamina; the damage button rolls the band
+  - [x] Data / Machine / Ward sprite sheets show their feature and description
+  - [x] `node tools/build-packs.mjs` succeeds
+
