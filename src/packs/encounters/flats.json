@@ -1,0 +1,1302 @@
+{
+  "_id": "VGjyFEjWWbgFDsRF",
+  "_key": "!tables!VGjyFEjWWbgFDsRF",
+  "name": "GHOSTWIRE.Encounters.Tables.Flats",
+  "img": "icons/environment/city/city-night.webp",
+  "description": "<p>67 events: 26 flavor · 20 rp · 10 complication · 7 action · 4 combat. Draw for atmosphere between scenes; combat rows name a bestiary Actor for the Director to place.</p>",
+  "results": [
+    {
+      "_id": "L6veQMlOeXBUWfY2",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.L6veQMlOeXBUWfY2",
+      "type": "text",
+      "name": "Ash-Light Sermon",
+      "description": "<p>A street-priest has set a real wick burning in a storefront window and is reading aloud to four people and a dog. No overlay, no amplification, no collection plate — just fire and a voice, and the drizzle hissing on the tin above the door.<br />\n<em>Director:</em> Anyone who stops to listen gets their name remembered on this block.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "Udzu5VDXqkcsvrho",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.Udzu5VDXqkcsvrho",
+      "type": "text",
+      "name": "Forty Stories of Signage",
+      "description": "<p>The Neon Shambles hangs its advertising straight up: stacked sign-boards climbing out of sight until the topmost ones are just colored weather. Somewhere up there a dead noodle chain is still promising a free bowl to anyone who can reach it.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "lBd7QlF5JyL2IDq4",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.lBd7QlF5JyL2IDq4",
+      "type": "text",
+      "name": "Steam Verdict",
+      "description": "<p>The line outside Slump's runs twenty deep and nobody complains, because Slump's steam is the only warm thing on the street. Two rival crews stand in the same queue, elbow to elbow, holding a truce that lasts exactly as long as the broth.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "tnMfSX1FaGHHxTJm",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.tnMfSX1FaGHHxTJm",
+      "type": "text",
+      "name": "Sparrow Route",
+      "description": "<p>A string of kids goes over the Stacks' walkways at a dead sprint, each one carrying a sealed packet and none of them carrying a SIN. They move like water finding a crack. They are gone before anyone decides whether to stop them.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "CWIsuEzTdaKQeUZG",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.CWIsuEzTdaKQeUZG",
+      "type": "text",
+      "name": "The Wet Cough Queue",
+      "description": "<p>Housca Clinic's door is propped with a brick and the queue reaches the corner, all of it coughing the same wet cough. A volunteer works the line with a thermos and a clipboard, triaging by who looks worse rather than who can pay.<br />\n<em>Director:</em> The same cough turns up three more times tonight, in three different districts.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "5VdbCfYcy2s837v6",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.5VdbCfYcy2s837v6",
+      "type": "text",
+      "name": "Names on the Sluice Wall",
+      "description": "<p>Somebody has been chalking names on the concrete above the Spillway's high-water mark, one per body the drains gave back. The list is long, the handwriting changes every twenty names or so, and the rain is eating the oldest ones first.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "VkeR0EJgNzDthfF6",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.VkeR0EJgNzDthfF6",
+      "type": "text",
+      "name": "Meridian Overhead",
+      "description": "<p>A traffic-net drone drops out of the ceiling-murk, paints the street with a slow scanning bar, and climbs away without a word. Every conversation on the block pauses for the length of the pass and resumes exactly where it stopped.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "Ih8cQsXrLw0C75XD",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.Ih8cQsXrLw0C75XD",
+      "type": "text",
+      "name": "Ghost Ad",
+      "description": "<p>A dead ad-panel wakes up and cheerfully offers a filtration-cartridge discount at a store that has not existed for eleven years. It runs the loop four times, gets the district name wrong on the last one, and goes dark again.<br />\n<em>Director:</em> If someone dives the panel, the loop is being served from an address that has no owner.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "n17xN6AJ6FhUh1Dr",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.n17xN6AJ6FhUh1Dr",
+      "type": "text",
+      "name": "Chrome-Rat Parliament",
+      "description": "<p>Forty rats are sitting motionless on a heat-exhaust grate, all facing the same direction, all with the same cheap optic-glint in one eye. When the exhaust cycles they scatter as one body, like a flock turning.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "8iH8CLomwkWzjKBc",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.8iH8CLomwkWzjKBc",
+      "type": "text",
+      "name": "The Renovation Notice",
+      "description": "<p>Ferrum's Rent Office has papered a whole Stacks stairwell with eviction paper, printed on stock nice enough that people are peeling it off to use as insulation. Someone has drawn a King's crown on every third sheet.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "mVwEMjLTOMeWf3vx",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.mVwEMjLTOMeWf3vx",
+      "type": "text",
+      "name": "Manufactured Calm",
+      "description": "<p>Every screen on the block cuts to the same Omniwave anchor saying the same reassuring sentence about the same incident nobody here heard about. The color grade is warmer than the street. It always is.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "QBNdR1VjGVYLEmuX",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.QBNdR1VjGVYLEmuX",
+      "type": "text",
+      "name": "Ninth Goes Dark",
+      "description": "<p>The block's power drops in a rolling wave, shopfront by shopfront, and for nine seconds the Flats are genuinely black. Then the backup lamps come up amber, everyone counts their own people, and the noise starts again.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "EGrpYwMyusMFBQae",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.EGrpYwMyusMFBQae",
+      "type": "text",
+      "name": "The Flood Bell",
+      "description": "<p>The Spillway's warning tone rolls up through the storm-drains, two long and one short, and the Culvert Kings start hauling their stalls above the line without being told twice. Water in the Flats keeps a better schedule than the transit does.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "X35mxlqKiYTyKFym",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.X35mxlqKiYTyKFym",
+      "type": "text",
+      "name": "Odds on the Cage",
+      "description": "<p>An Ironclad talent scout is working a sidewalk crowd with a live odds board floating over his shoulder, taking bets on a fight three levels down. The favorite is a nineteen-year-old with brand-new arms and a very old debt.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "70gn2z5yV6I8h4tS",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.70gn2z5yV6I8h4tS",
+      "type": "text",
+      "name": "Grafthouse Window",
+      "description": "<p>Dr. Jitter's front window is a display case of arms — polished, priced, arranged smallest to largest, each with a little card listing the previous owner's warranty status. The pink surgical light behind them never turns off.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "MTmsbYqmOBs3LiMG",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.MTmsbYqmOBs3LiMG",
+      "type": "text",
+      "name": "Idle at the Interchange",
+      "description": "<p>A wheelman sits on the hood of a rig at the top of an on-ramp, engine running, not going anywhere. He is listening to the freeway the way a sailor listens to weather, waiting for the gap that means the checkpoint has gone slack.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "PM88khDE7ZRRsDGT",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.PM88khDE7ZRRsDGT",
+      "type": "text",
+      "name": "Booth Nine",
+      "description": "<p>At the Sleep.Run Café, one hot-desk booth is curtained off and has been for three days. The meter on the outside is still ticking, paid ahead. Nobody who works there will look directly at it.<br />\n<em>Director:</em> Whoever is in there is still logged in. That is not the same as still there.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "8nbOVIxBeq1eR3J4",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.8nbOVIxBeq1eR3J4",
+      "type": "text",
+      "name": "A Prayer in Protocol",
+      "description": "<p>Wirekeepers have gathered under a server-shanty on Wireside, chanting a handshake sequence in unison, breath fogging in the cooling mist. The rack above them answers each verse with a bank of green lights coming up in order.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "BmhNyn6y9Cx7jy4M",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.BmhNyn6y9Cx7jy4M",
+      "type": "text",
+      "name": "Three Points of Interest",
+      "description": "<p>A collector in a good coat walks the block with a ledger tablet, saying nothing, photographing doorways. Everyone he photographs knows exactly what the picture means and what day it comes due.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "dUsJY7MjktcQRKHp",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.dUsJY7MjktcQRKHp",
+      "type": "text",
+      "name": "Solvent Rain",
+      "description": "<p>The drizzle turns sharp and chemical for about ten minutes, stinging the eyes and leaving pale streaks on the ad-glass. Locals pull hoods and keep walking; the vendors who bother covering their stock are the ones who are new here.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "0C8SuTrem4xqDotg",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.0C8SuTrem4xqDotg",
+      "type": "text",
+      "name": "Deadletter Post",
+      "description": "<p>The job board at the Shambles is a physical wall of pinned chips and handwritten cards, layered a dozen deep. Two people are quietly arguing over whether a card that has been buried since last month is still a job or now a missing-persons notice.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "ARi1gB1JpVZmreEZ",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.ARi1gB1JpVZmreEZ",
+      "type": "text",
+      "name": "Vipers Filming",
+      "description": "<p>A Glass Vipers crew has a drone rig up and a ring-light on, restaging a fight that already happened here yesterday for better angles. The actual blood is still on the wall behind them, off-frame, uncredited.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "YZjRlMmFAxTugDPQ",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.YZjRlMmFAxTugDPQ",
+      "type": "text",
+      "name": "Cooling Mist",
+      "description": "<p>Wireside vents its heat as a white fog that pools at ankle height for six blocks and never quite lifts. Kids run through it swinging at nothing; the technomancers who live in it have stopped being able to smell anything else.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "BKRq8DOPahf7JGYO",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.BKRq8DOPahf7JGYO",
+      "type": "text",
+      "name": "Sieve Day",
+      "description": "<p>Undertow salvagers are working a drain grate with hooks and buckets, sorting the night's catch into three piles: sell, burn, report. The report pile is very small and nobody touches it.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "KNtSHeZQiqjpGz8j",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.KNtSHeZQiqjpGz8j",
+      "type": "text",
+      "name": "Kiln Shift Change",
+      "description": "<p>Cinder Market's furnace quarter swaps crews and the whole street briefly fills with people who all smell of hot metal. Hands get shaken, tools get handed over still warm, and a Wrench-guild kid gets told the same joke she got told yesterday.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "M6ryqbpqg1Qss1JW",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.M6ryqbpqg1Qss1JW",
+      "type": "text",
+      "name": "Draft from the Down-Shaft",
+      "description": "<p>At the Gallows End edge, cold air comes up out of the dark below the last lit block, steady as breathing. The overlay reads no signal down there at all — not weak signal, none — and people on this corner talk a little quieter than they do four streets back.<br />\n<em>Director:</em> Anyone with a deck feels the dead-air pull like a held note.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "7COJGzlCBHpGKOQx",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.7COJGzlCBHpGKOQx",
+      "type": "text",
+      "name": "The Switchboard Calls",
+      "description": "<p>A dead rail-signal box on the corner rings — an actual bell, an actual handset — and it is for the crew. Mama Cassavir has work, or has a warning, and she never says which until you agree to come in.<br />\n<em>Director:</em> Refusing costs nothing tonight and something later.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "HbsqMppQUaGTZ0PZ",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.HbsqMppQUaGTZ0PZ",
+      "type": "text",
+      "name": "Unverified at the Door",
+      "description": "<p>A kid catches the crew's sleeve outside a clinic: his mother's SIN blinked to unverified and the reader will not let her past the door. He has no card money. He is not asking for money, exactly; he is asking for someone who will not move.<br />\n<em>Director:</em> A credstick solves it in an hour. Standing in the doorway solves it too, and cheaper, and louder.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "wbfWClIa4Gnf5KeW",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.wbfWClIa4Gnf5KeW",
+      "type": "text",
+      "name": "The Ferryman's Toll",
+      "description": "<p>A long, patient figure is waiting where the street gives out toward the Undernet, and he knows one of the crew's names without being told. He is not offering passage. He is establishing what passage would cost, so it is understood in advance.<br />\n<em>Director:</em> He never asks for nuyen. He asks for something the crew will miss later.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "GhhAPRfGeY6RPohl",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.GhhAPRfGeY6RPohl",
+      "type": "text",
+      "name": "Your Name in the File",
+      "description": "<p>Kowwak wants a word, off the books, cheap. His newest dossier has a crew member's face in it, filed under a client he will not name, and he would rather sell it to them than to the buyer.<br />\n<em>Director:</em> His price is a favor, not credit — he is buying insurance.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "ylYfFL3WAr5Y3seF",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.ylYfFL3WAr5Y3seF",
+      "type": "text",
+      "name": "The Kings' Cut",
+      "description": "<p>A Ninth Ward Kings collector, young and scrupulously polite, explains that the crew has been operating on taxed ground and he is required to note it. He has a tablet, a receipt system, and absolutely no intention of fighting anyone tonight.<br />\n<em>Director:</em> Paying buys a name to drop later. Refusing buys a conversation with someone less polite.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "xo95h2m1QaiXhYHm",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.xo95h2m1QaiXhYHm",
+      "type": "text",
+      "name": "Fen Remembers It Differently",
+      "description": "<p>Old Fen sets down two bowls nobody ordered and asks, mildly, about a run the crew was told never happened. He was fixing jobs in this district before their fixer was born and he has never once been wrong about a date.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "8WmsWdtEITPycM4h",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.8WmsWdtEITPycM4h",
+      "type": "text",
+      "name": "The Choirmother Wants Listeners",
+      "description": "<p>Something wearing a woman's shape is singing in a stairwell and the people gathered below her are not frightened, which is the frightening part. She stops when the crew arrives, and greets them like a congregation that is late.<br />\n<em>Director:</em> She asks for attention, not obedience. Giving it is the trap.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "tbSpR3GHgO3yvqSs",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.tbSpR3GHgO3yvqSs",
+      "type": "text",
+      "name": "Nord's Awkward Client",
+      "description": "<p>Nord pulls the crew aside in his garage, grease to the elbow, and admits the man paying him in clean certified credit is wearing street clothes over corp posture. He does not want trouble. He wants someone else to notice it with him.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "ZvrFTAFIWMjReqek",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.ZvrFTAFIWMjReqek",
+      "type": "text",
+      "name": "Dirthawk's Cheap Tip",
+      "description": "<p>A low-rent muckraker sells the crew a rumor for pocket change and throws in a second one free because he is drunk and likes their coat. The free one is the true one.<br />\n<em>Director:</em> If they dig, Dirthawk's source is someone who should not have known.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "xl1cHDzCgCBD0cMp",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.xl1cHDzCgCBD0cMp",
+      "type": "text",
+      "name": "A Wrench Wants Out",
+      "description": "<p>A Cinder Market apprentice corners the crew with a schematic she should not have and a very simple problem: the guild will own the work, the Kiln will own her, and she wants a third option. She will trade the schematic for a way out of the district.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "bnXEiEHcT4D0t70M",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.bnXEiEHcT4D0t70M",
+      "type": "text",
+      "name": "Paper on the Stacks",
+      "description": "<p>A Ferrum liaison in a clean coat is trying to serve renovation notices in the Stacks and has realized, about eight minutes too late, that she came alone. She will pay for an escort out. She will pay more for someone to tell her what she just walked into.<br />\n<em>Director:</em> Both sides of the Rent War will hear who walked her out.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "lJDCVQIqx7I6wbKT",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.lJDCVQIqx7I6wbKT",
+      "type": "text",
+      "name": "Redemption at Deadhand",
+      "description": "<p>A widow is at the Deadhand counter trying to redeem a pledged item with money she clearly does not have, and the broker is being cold about it because cold is the house style. The item is her husband's. He retired to Gallows End; he did not come back.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "7BzNYna7bGXGAuSV",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.7BzNYna7bGXGAuSV",
+      "type": "text",
+      "name": "Clout for Hire",
+      "description": "<p>A Glass Viper offers the crew a cut of feed revenue to let her film their next job. She is charming, genuinely good at the work, and completely incapable of understanding why anyone would decline free publicity.<br />\n<em>Director:</em> Saying yes is real money and permanent heat.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "OY1WUjWUzEyCXXuR",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.OY1WUjWUzEyCXXuR",
+      "type": "text",
+      "name": "Marrow Needs Deniable Eyes",
+      "description": "<p>A Cragmarkt stall runner passes along a message from the Ranger-captain at the wasteland gate: the clean route Kestrel wants surveyed runs through ground that is going quiet, and he needs people who are not his. Payment is in supply, favors, and a standing welcome at Cinderhold.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "YkJ8nfss5PlJRsdu",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.YkJ8nfss5PlJRsdu",
+      "type": "text",
+      "name": "Housca Is Overwhelmed",
+      "description": "<p>A clinic volunteer asks the crew for two hours and no questions: a patient needs moving across three districts without touching a reader. She will not say what is wrong with him. She says it is not a wound.<br />\n<em>Director:</em> It is not a wound.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        41,
+        41
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "DUED0tkJIVrqjVjS",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.DUED0tkJIVrqjVjS",
+      "type": "text",
+      "name": "The Chair Is Still Warm",
+      "description": "<p>At Hot Wire Ramen, a regular Johnson's table is set, his drink is poured, and he has not shown. The waitress who knows the crew asks them, quietly, to go look — before the syndicate that owns the place decides to look first.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        42,
+        42
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "tGMC17osVnufZSqS",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.tGMC17osVnufZSqS",
+      "type": "text",
+      "name": "Sanctuary Claimed",
+      "description": "<p>The keeper of the Obsidian Shrine meets the crew at the candles and admits someone is sheltering inside who does not deserve it. Shrine law is shrine law. She is asking them to sit with the problem, not solve it with a gun.<br />\n<em>Director:</em> Whoever is hunting the sheltered man arrives within the hour.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        43,
+        43
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "7v4AHvWdfdmnEGCH",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.7v4AHvWdfdmnEGCH",
+      "type": "text",
+      "name": "Deeptrace Is Hiring",
+      "description": "<p>A deep-net diver collective wants a body-side escort while three of their people go under near the dead-air line. They pulled something up last week. They are careful not to say what, and very specific about the abort signal.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        44,
+        44
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "jUtYbkrtD2j8LEDM",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.jUtYbkrtD2j8LEDM",
+      "type": "text",
+      "name": "A Saint's Pledge",
+      "description": "<p>A Rust Saint stops the crew in the street and formally, awkwardly, asks them to witness a redemption at the Hock tomorrow. Saints' pledges are honor-bound, public, and frequently the opening move of a block war.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        45,
+        45
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "ax5XROA5rVUrJ1lN",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.ax5XROA5rVUrJ1lN",
+      "type": "text",
+      "name": "Sold Three Times",
+      "description": "<p>An Infohawk runner catches up with the crew out of breath: the intel she sold them this week went to two other buyers, and she is telling them because she would rather be honest than found. She wants an hour's head start and nothing else.<br />\n<em>Director:</em> The other two buyers are already moving.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "KVTa8fUbVhTHK4Rb",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.KVTa8fUbVhTHK4Rb",
+      "type": "text",
+      "name": "The Weigh Station",
+      "description": "<p>Ironclad has the Interchange checkpoint running hot tonight — scales, SIN readers, and a bored officer who has been told to make his numbers. The fast route is now the slow route, and the slow route goes through the Shambles at market close.<br />\n<em>Director:</em> Talking through costs time. Going around costs more.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "HPHB5iLhj766KKzZ",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.HPHB5iLhj766KKzZ",
+      "type": "text",
+      "name": "Sluice Moved Up",
+      "description": "<p>The Spillway flood schedule has been shifted four hours without notice and the low route is already ankle-deep and rising. Whatever the crew was going to do down there is now a thing they do wet, fast, or not at all.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        48,
+        48
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "7vzhktqpPdqh3xMq",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.7vzhktqpPdqh3xMq",
+      "type": "text",
+      "name": "Blackout Block",
+      "description": "<p>Six square blocks have lost grid power and the backups did not come up. No overlay, no readers, no door locks — which cuts both ways, and everyone on the street has already worked that out.<br />\n<em>Director:</em> Heat +1 for anything done here, because the Kings are watching the dark themselves.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        49,
+        49
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "qU2Qnrmfkw90LJh7",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.qU2Qnrmfkw90LJh7",
+      "type": "text",
+      "name": "Overlay Snow",
+      "description": "<p>The augmented layer fills with grey static and refuses to resolve street names, faces or waypoints. Navigation drops to landmarks and asking strangers, and every SIN-read in the district is returning maybe.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "x1DPY48QOYOVPyTR",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.x1DPY48QOYOVPyTR",
+      "type": "text",
+      "name": "Chrome Brownout",
+      "description": "<p>Cheap Veldt-grade chrome across the district starts stuttering — a hand that lags, an optic that greys out, a leg that locks for a beat. It passes in an hour. It does not pass for everyone.<br />\n<em>Director:</em> Anyone relying on budget chrome should feel it at the worst possible moment.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        51,
+        51
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "M9MiZC51yIXPJmmt",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.M9MiZC51yIXPJmmt",
+      "type": "text",
+      "name": "Rent Office Lockdown",
+      "description": "<p>Ferrum has sealed the Stacks' ground-level accessways \"pending inspection,\" which means paid security on every stair the crew meant to use. The Sparrows know three ways over the top and will sell one.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        52,
+        52
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "YPauu9xVbUCjJBW4",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.YPauu9xVbUCjJBW4",
+      "type": "text",
+      "name": "Trace on the Public Node",
+      "description": "<p>Something is riding the district master node tonight: routine dives come back with a follow-tag attached, patient and quiet. Legwork is still possible, but everything learned here is also learned about.<br />\n<em>Director:</em> If they keep diving, the tag resolves into a visitor by morning.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        53,
+        53
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "g92p2Y10vTuVeKeG",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.g92p2Y10vTuVeKeG",
+      "type": "text",
+      "name": "The Stair Is Gone",
+      "description": "<p>A stretch of Glasshook walkway has finally let go and taken the only direct route with it. The detour is through a rotating gang court that charges by mood, or around by the Spillway, which is longer and wetter.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        54,
+        54
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "N3GzdqsGbfpEECL4",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.N3GzdqsGbfpEECL4",
+      "type": "text",
+      "name": "Reader Hiccup",
+      "description": "<p>A crew member's SIN comes back unverified at a transit gate — not flagged, not wanted, just blank. The gate does not care about the difference and neither does the guard behind it.<br />\n<em>Director:</em> It clears on its own in a day. Tonight it is a wall.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        55,
+        55
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "CEoBccvhjQ9rKutr",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.CEoBccvhjQ9rKutr",
+      "type": "text",
+      "name": "Tag Mismatch",
+      "description": "<p>At Slackwater, the cargo the crew is moving has a manifest tag that does not match the crane log, and the licensed Ferrum crews have started pointing at it. Nyx's people will fix it quietly for a price, or the crew can move it by hand before the shift supervisor walks the pier.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        56,
+        56
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "KfEZCoGlZQriQKsF",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.KfEZCoGlZQriQKsF",
+      "type": "text",
+      "name": "Locked and Following",
+      "description": "<p>A Meridian traffic drone stops mid-pass, reverses, and settles into a patient follow at rooftop height with its light on the crew. It is not shooting. It is broadcasting, and something is coming to meet the broadcast.<br />\n<em>Director:</em> They have until the end of the block to break line of sight or kill the tag.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        57,
+        57
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "EomFEBFpTAqcsR0v",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.EomFEBFpTAqcsR0v",
+      "type": "text",
+      "name": "Coming Up the Culvert",
+      "description": "<p>The drain the crew is standing in makes a sound like a swallowed breath and the water starts climbing fast. The nearest grate is eighty meters back the way they came, and it is bolted.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        58,
+        58
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "KLIb91ix6FQLarTj",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.KLIb91ix6FQLarTj",
+      "type": "text",
+      "name": "Snatch Run",
+      "description": "<p>A Sparrow kid lifts something that matters off the crew's belt and is over a railing and into the stack-walks before anyone's hand closes. She is faster than they are and knows every gap on the block.<br />\n<em>Director:</em> She is running to somebody, not away. Following her is the real prize.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        59,
+        59
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "8zzJ32MPeZEjJXmr",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.8zzJ32MPeZEjJXmr",
+      "type": "text",
+      "name": "The Line Is Cut",
+      "description": "<p>Halfway across a roof-to-roof cable run, somebody starts working on the far anchor with a cutter. There is no going back — the crew crossed a gap to get here — and the cable has maybe a minute in it.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        60,
+        60
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "GVOCAi3uheDLJjbM",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.GVOCAi3uheDLJjbM",
+      "type": "text",
+      "name": "Three Minutes to the Convoy",
+      "description": "<p>The rig the crew needs to be on is rolling out of the Interchange staging lot on a schedule that does not care about them. Two levels of ramp, a fence, and a weigh-station queue stand between here and the tailgate.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        61,
+        61
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "L3R7dxE1UOJafy2G",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.L3R7dxE1UOJafy2G",
+      "type": "text",
+      "name": "The Trace Is Climbing",
+      "description": "<p>The deck goes hot mid-dive: a trace has locked and is walking up the route hop by hop toward the physical address the crew is sitting at. Jack out clean, burn the route, or move the body — pick one, and the diver does not get to pick two.<br />\n<em>Director:</em> Whatever arrives at the address arrives whether or not they are still in the chair.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        62,
+        62
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "YYsCyzZP6U0nHBwD",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.YYsCyzZP6U0nHBwD",
+      "type": "text",
+      "name": "Fire in the Stacks",
+      "description": "<p>A block of company housing goes up fast and cheap, and the stairwell fills with people going down while smoke goes up. Ferrum's response unit is nine minutes out and will secure the perimeter before it does anything about the fire.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        63,
+        63
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "YMDni7th8g7myqvj",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.YMDni7th8g7myqvj",
+      "type": "text",
+      "name": "Razor Debt Collected",
+      "description": "<p>A collection crew has been waiting in the rain outside the crew's next door, and they have the right faces and the wrong attitude. The big one does the talking until talking stops being useful.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.VkBcDNcIgbrl4Trb]{Chrome Bruiser} ×1 with @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.2LCPcUpIpDioFaFn]{Street Punk} ×3<br />\n<em>Director:</em> Paying the debt ends it cleanly. Winning the fight moves the debt up to whoever fronted it.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        64,
+        64
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    },
+    {
+      "_id": "yBrMGR5DdSdK9HBu",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.yBrMGR5DdSdK9HBu",
+      "type": "text",
+      "name": "Colors on the Corner",
+      "description": "<p>The crew crosses a turf line that was redrawn this week and nobody bothered to tell them. A boss in full colors steps out of a doorway with her people already spread wide, and she opens with a question she does not want answered.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.IWyNcFqSvBivyTGP]{Colors Boss} ×1, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.3rIQkdmxl0kUvznF]{Gang Raider} ×2, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.0bGZHyvyH39mIURD]{Street Brawler} ×2<br />\n<em>Director:</em> Dropping a Kings or Vipers name first can turn this into an RP scene instead.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        65,
+        65
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    },
+    {
+      "_id": "pEXsngk0UyCMvitq",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.pEXsngk0UyCMvitq",
+      "type": "text",
+      "name": "Shooters on the Stack",
+      "description": "<p>Muzzle-flash from two levels up, then a second angle, then a third — an ambush built on height and sightlines rather than numbers. The street offers exactly two pieces of cover and both are already sighted in.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.Ag7KCE88370eXXNR]{Rooftop Shooter} ×2 and @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.k2Tsz3ZpC9HT9uoK]{Trick Shooter} ×1<br />\n<em>Director:</em> Getting vertical ends this fast. Staying in the street does not.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        66,
+        66
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    },
+    {
+      "_id": "c54uT4wD1JI5t8Wl",
+      "_key": "!tables.results!VGjyFEjWWbgFDsRF.c54uT4wD1JI5t8Wl",
+      "type": "text",
+      "name": "What Came Up the Drain",
+      "description": "<p>Something long and wet is already in the stairwell, and the rats went quiet a full minute before anyone noticed why. It came up from the Sinks on the flood and it is not going back down hungry.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.ASwisj5GrB8EW49a]{Sink-Crawler} ×1 with @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.ai19NjAu9u3Qki6a]{Gutter-Serpent} ×2<br />\n<em>Director:</em> Undertow salvagers will pay for the carcass and ask where exactly it surfaced.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        67,
+        67
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    }
+  ],
+  "formula": "1d67",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "zone": "flats",
+      "counts": {
+        "Flavor": 26,
+        "RP": 20,
+        "Complication": 10,
+        "Action": 7,
+        "Combat": 4
+      }
+    }
+  }
+}

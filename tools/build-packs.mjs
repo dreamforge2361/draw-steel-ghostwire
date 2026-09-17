@@ -6,6 +6,8 @@
 // Actor packs work the same way: embedded items carry their own "!actors.items!" _key.
 // Journal packs: embedded pages carry their own "!journal.pages!" _key (src/packs/rulebook is generated
 // from docs/raw by tools/raw-to-journals.mjs).
+// RollTable packs: embedded results carry their own "!tables.results!" _key (src/packs/encounters is
+// generated from docs/masters/encounters/*.md by tools/encounters-to-tables.mjs).
 // Run with Foundry closed:  node tools/build-packs.mjs
 import { createRequire } from "node:module";
 import { readFileSync, readdirSync, rmSync, existsSync } from "node:fs";
@@ -40,7 +42,7 @@ for (const pack of readdirSync("src/packs")) {
   for (const file of files) {
     const { _key, ...doc } = readJson(join(src, file));
     // Foundry rejects the whole compendium (and the world renders black) on a malformed id.
-    const badId = [doc, ...(doc.effects ?? []), ...(doc.items ?? []), ...(doc.pages ?? [])].find(d => !/^[A-Za-z0-9]{16}$/.test(d._id ?? ""));
+    const badId = [doc, ...(doc.effects ?? []), ...(doc.items ?? []), ...(doc.pages ?? []), ...(doc.results ?? [])].find(d => !/^[A-Za-z0-9]{16}$/.test(d._id ?? ""));
     if (badId) throw new Error(`${file}: _id "${badId._id}" must be 16 alphanumeric characters`);
     if (_key.startsWith("!folders!")) {
       await db.put(_key, { ...doc, _stats: stats });
@@ -64,6 +66,13 @@ for (const pack of readdirSync("src/packs")) {
       }
       doc.pages = doc.pages.map(p => p._id);
     }
+    // RollTable packs: results ("!tables.results!<table>.<result>") get their own keys the same way.
+    if (Array.isArray(doc.results)) {
+      for (const { _key: resultKey, ...result } of doc.results) {
+        await db.put(resultKey, { ...result, _stats: stats });
+      }
+      doc.results = doc.results.map(r => r._id);
+    }
     // Actor packs: embedded Items ("!actors.items!<actor>.<item>") and their effects
     // ("!actors.items.effects!<actor>.<item>.<effect>") get their own keys the same way.
     if (Array.isArray(doc.items)) {
@@ -78,7 +87,7 @@ for (const pack of readdirSync("src/packs")) {
     }
     doc._stats = stats;
     await db.put(_key, doc);
-    console.log(`${pack}: ${doc.type ?? (doc.pages ? "journal" : "document")} "${doc.name}"`);
+    console.log(`${pack}: ${doc.type ?? (doc.pages ? "journal" : doc.results ? "table" : "document")} "${doc.name}"`);
   }
   await db.compactRange("\x00", "\uffff");
   await db.close();

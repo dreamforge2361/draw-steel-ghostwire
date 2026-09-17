@@ -1,0 +1,1055 @@
+{
+  "_id": "iVkQnXwoIIBuIzkR",
+  "_key": "!tables!iVkQnXwoIIBuIzkR",
+  "name": "GHOSTWIRE.Encounters.Tables.City",
+  "img": "icons/environment/city/skyline.webp",
+  "description": "<p>54 events: 22 flavor · 16 rp · 8 complication · 5 action · 3 combat. Draw for atmosphere between scenes; combat rows name a bestiary Actor for the Director to place.</p>",
+  "results": [
+    {
+      "_id": "FH3klAgHhXnu7viZ",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.FH3klAgHhXnu7viZ",
+      "type": "text",
+      "name": "Certified Rain",
+      "description": "<p>The rain up here falls on a schedule and stops when the plaza lights come up, because somebody pays for the sky. It smells faintly of citrus scrubber. Nothing it touches rusts.<br />\n<em>Director:</em> A crew still wet from the Flats leaves footprints the custodial drones follow.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "Yg93ETpT7Ao6SUrS",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.Yg93ETpT7Ao6SUrS",
+      "type": "text",
+      "name": "Ad-Space Handshake",
+      "description": "<p>The tower facades read the street and sell to it. As the crew crosses the concourse the ad-space shifts from wealth management to bail bonds, then to a clinic that erases scar tissue.<br />\n<em>Director:</em> It has already guessed something about one of them.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "hsRcN6g4kiUEvZ14",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.hsRcN6g4kiUEvZ14",
+      "type": "text",
+      "name": "The Traffic-Net Parts",
+      "description": "<p>Four lanes of autonomous transit open a corridor around an unmarked black sedan, close behind it, and resume. No horn, no brake light, no explanation. Someone's routing priority costs more per second than a Flats block earns in a year.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "19IABRDKjXDj5dGk",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.19IABRDKjXDj5dGk",
+      "type": "text",
+      "name": "Plaza of Certified Air",
+      "description": "<p>Filtration towers ring the arcology forecourt and the air inside the ring is measurably cleaner, posted on a brass plate to three decimal places. People stand in it on their breaks like it's a beach.<br />\n<em>Director:</em> Loitering past nine minutes pings the concierge system.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "4J7LtJjrRqOBMdAr",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.4J7LtJjrRqOBMdAr",
+      "type": "text",
+      "name": "Sixty Seconds of Weather",
+      "description": "<p>The weather-control board runs a scheduled cloudburst over the financial terrace for exactly one minute, to settle particulates before the closing bell. Every umbrella on the terrace opens in unison and closes in unison.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "2Niqdb9JMKKMaFd2",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.2Niqdb9JMKKMaFd2",
+      "type": "text",
+      "name": "Escalator Etiquette",
+      "description": "<p>Nobody stands on the left. Nobody speaks above a certain volume. A tourist breaks both rules and four strangers turn their heads at the same angle, at the same moment, and say nothing.<br />\n<em>Director:</em> The crew will break the rules without knowing them.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "FGsbYpwKyerxYHBn",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.FGsbYpwKyerxYHBn",
+      "type": "text",
+      "name": "The Smiling Cordon",
+      "description": "<p>Private security don't block the sidewalk — they stand along it, hands folded, nodding good evening to everyone who walks the route they want walked. The route is longer. Nobody complains.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "jO0ubYZcj8rQtwUQ",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.jO0ubYZcj8rQtwUQ",
+      "type": "text",
+      "name": "Licensed Flame",
+      "description": "<p>A permit-holder works a flamecraft display outside a restaurant, license number scrolling in the fire itself. Two compliance drones hover at the regulation distance, filming for the insurer.<br />\n<em>Director:</em> Unlicensed casting in view of that permit is an automatic report.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "dEaewCVmKwArye2M",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.dEaewCVmKwArye2M",
+      "type": "text",
+      "name": "Arcology Morning",
+      "description": "<p>Sunrise is projected onto the atrium ceiling eleven minutes before it actually happens, so the residents' schedules stay ahead of the city's. Forty floors of people wake to a sky that is a service.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "wT7HFMXJfo1DRUeQ",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.wT7HFMXJfo1DRUeQ",
+      "type": "text",
+      "name": "Sponsored Quiet",
+      "description": "<p>A park sublevel is branded QUIET COMMONS — CONVERSATION VOLUME MONITORED and the hush is real, enforced by a fine schedule on a tasteful placard. Rich people sleep on the grass in daylight, unafraid.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "Atgtm6QdzQ1Nt4Bt",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.Atgtm6QdzQ1Nt4Bt",
+      "type": "text",
+      "name": "Drone Lane Overhead",
+      "description": "<p>A freight corridor runs six meters above the pedestrian deck, cargo drones nose-to-tail in a line that never breaks. The wind off them moves everyone's hair at the same interval, all day.<br />\n<em>Director:</em> Anything falling from that lane is somebody's liability event, not an accident.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "xVyzoHhev4djqVLr",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.xVyzoHhev4djqVLr",
+      "type": "text",
+      "name": "Floors That Log",
+      "description": "<p>The lobby stone is polished to a mirror and instrumented underneath — gait, weight, cadence, all of it timestamped against a SIN. The building recognizes a walk faster than a face.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "86SfiafCk8RdmfSJ",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.86SfiafCk8RdmfSJ",
+      "type": "text",
+      "name": "Glass and Liability",
+      "description": "<p>The tower is all glass and no handholds by design; the architect's brief said \"unclimbable\" before it said \"beautiful.\" A brass plaque credits the firm. A smaller one disclaims responsibility.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "f4XUkgLWEJ6DPabc",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.f4XUkgLWEJ6DPabc",
+      "type": "text",
+      "name": "Shadows on the Timetable",
+      "description": "<p>The tower shadows sweep the plaza on a published schedule, printed on the café menus so patrons can choose sun or shade at reservation time. A Flats runner reads it like a patrol pattern, because it is one.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "v2ug5DSLNiVl2bIs",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.v2ug5DSLNiVl2bIs",
+      "type": "text",
+      "name": "Courtesy Chimes",
+      "description": "<p>Every door, lift and turnstile answers with the same three-note chime, licensed from a composer whose estate collects per activation. After an hour the crew starts hearing it in silence.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "kzQfBx2R5TN3f8O2",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.kzQfBx2R5TN3f8O2",
+      "type": "text",
+      "name": "Shift Change at Seven",
+      "description": "<p>Service workers come up from the freight levels in a gray tide, badges out, and vanish into kitchens and mop closets before the residents' evening starts. At eleven the tide runs the other way. The two populations never see each other awake.<br />\n<em>Director:</em> Every one of them knows a door.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "ft4GKDY4LSuArOcW",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.ft4GKDY4LSuArOcW",
+      "type": "text",
+      "name": "The Sanctioned Busker",
+      "description": "<p>A cellist plays under a permit decal on her case, set list pre-approved, tip account routed through the property manager who takes a cut. She's extraordinary. She looks at nobody.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "bU4JhYB0mFGt0PEB",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.bU4JhYB0mFGt0PEB",
+      "type": "text",
+      "name": "Corporate Green",
+      "description": "<p>Planters the length of the boulevard, every leaf the same green, every tree the same height, root-collars stamped with a nursery lot number. One of them is dead and wrapped in branded sheeting until its replacement clears procurement.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "qK9ukbK9zguHVep0",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.qK9ukbK9zguHVep0",
+      "type": "text",
+      "name": "The Barrier from Below",
+      "description": "<p>On a clear night you can see where the Grid's light stops — a hard ceiling edge above the towers with nothing soft about it. Jack in anywhere up here and the Black ICE Barrier is right there in the architecture, a wall with one narrow lit door.<br />\n<em>Director:</em> Any Wired action in the City is performed in the Barrier's line of sight.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "sFc1U4XOOHywJCCl",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.sFc1U4XOOHywJCCl",
+      "type": "text",
+      "name": "Menu of Cleared Faces",
+      "description": "<p>The restaurant's window display isn't food — it's a rotating list of the evening's reservations, names and affiliations, publicly legible. Being seen dining here is the product. The food is incidental.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "BpxGv9qFi9TvPy5H",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.BpxGv9qFi9TvPy5H",
+      "type": "text",
+      "name": "Diagnostics Aloud",
+      "description": "<p>A vending unit runs its self-test in a pleasant voice at three in the morning to an empty transit platform, listing every sensor it has and confirming each one operational. Seventeen sensors. It's a vending machine.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "z1YlcU7aUz29s7MG",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.z1YlcU7aUz29s7MG",
+      "type": "text",
+      "name": "No Bleed Up Here",
+      "description": "<p>Wired bleed doesn't creep in the City — the districts are shielded, grounded, and swept nightly by a subcontractor. A technomancer notices the absence immediately, like a missing tooth. It is the quietest signal any of them have ever stood in.<br />\n<em>Director:</em> Anyone who works the deep net finds the silence worse than the noise.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "1tIa0FaEacGdMiR7",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.1tIa0FaEacGdMiR7",
+      "type": "text",
+      "name": "The Intern With a Folder",
+      "description": "<p>A junior associate in an immaculate suit is standing in the wrong place holding a physical folder, which means it's off-system on purpose. He'd like to hand it to somebody who isn't from here and then never see them again.<br />\n<em>Director:</em> He is being generous with details because he is terrified.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "fR4ItVmoomZVi1AY",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.fR4ItVmoomZVi1AY",
+      "type": "text",
+      "name": "Junior Partner's Favor",
+      "description": "<p>A rising executive wants a competitor's mistress, debt or clinic visit documented before the promotion cycle closes. She is polite, specific, and will pay through three cut-outs so her name never touches the work.<br />\n<em>Director:</em> Her offer improves twice if the crew simply waits.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "eI3uO6XgScfGhqxL",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.eI3uO6XgScfGhqxL",
+      "type": "text",
+      "name": "Gala Shortfall",
+      "description": "<p>A charity gala for Flats flood relief needs bodies with authentic street credibility for the photo package, catered, badged, and gone by eleven. The fee is real. The relief is not.<br />\n<em>Director:</em> Someone at the gala actually cares, and is the most dangerous person there.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "5WYCXAMBnV88xwus",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.5WYCXAMBnV88xwus",
+      "type": "text",
+      "name": "The Brand Liaison",
+      "description": "<p>A media handler has watched the crew's last job circulate on the feeds and wants exclusivity on the next one. Cameras, release forms, a stipend, and editorial approval on how they look.<br />\n<em>Director:</em> Signing makes them famous, which up here means findable.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "PxpoVceDUIGVDIQP",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.PxpoVceDUIGVDIQP",
+      "type": "text",
+      "name": "Concierge's Discretion",
+      "description": "<p>The arcology concierge can get anyone past a residential lift bank, and has done it before. He wants a resident's habit documented so he can stop being blackmailed with his own discretion.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "69ETJNasaygoZHc1",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.69ETJNasaygoZHc1",
+      "type": "text",
+      "name": "Caster on a Leash",
+      "description": "<p>A licensed caster working a corporate liability contract is tired of signing off on what she's told to sign off on. Her permit is her livelihood and her collar, and she wants one unrecorded hour.<br />\n<em>Director:</em> Helping her renew that permit buys a licensed hand inside a corp building.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "M4sknN72zGF8bvv6",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.M4sknN72zGF8bvv6",
+      "type": "text",
+      "name": "The Deposition Clerk",
+      "description": "<p>A courts clerk is preparing a corporate arbitration and knows the record is being trimmed before filing. She doesn't want money. She wants a copy of the untrimmed version to exist somewhere she isn't.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "MwCvOmSbeEXT0eo5",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.MwCvOmSbeEXT0eo5",
+      "type": "text",
+      "name": "Intake Question",
+      "description": "<p>A corporate clinic's triage nurse notices Flats-grade chrome and asks, kindly, whether the crew would like it serviced free under a pilot program. The consent form assigns a data license in perpetuity.<br />\n<em>Director:</em> The pilot program is real. So is the license.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "9hV09LDGWvzxqC2j",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.9hV09LDGWvzxqC2j",
+      "type": "text",
+      "name": "The Anchor Wants a Face",
+      "description": "<p>A news anchor needs an on-camera face for a segment about Flats crime, paid, disguised, voice-altered. What she actually wants is a source who'll still answer her calls in six months.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "oXkYKVAfrYDD1953",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.oXkYKVAfrYDD1953",
+      "type": "text",
+      "name": "Union Rep, Freight Levels",
+      "description": "<p>The custodial union rep on the service floors is organizing against a scheduling algorithm that has eliminated forty jobs by never quite firing anyone. He needs the algorithm's logic, and he knows he can't get it legally.<br />\n<em>Director:</em> His people have keys to every door the residents don't know exists.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "YgIGzoGBCSkTgrzz",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.YgIGzoGBCSkTgrzz",
+      "type": "text",
+      "name": "The Ward's Handler",
+      "description": "<p>An executive's teenage ward keeps slipping the traffic-net escort to go down to the Flats. The handler will pay well to have the kid followed rather than reported — a report ends his career and the kid's freedom.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "bzXXbnZhWvGDiogY",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.bzXXbnZhWvGDiogY",
+      "type": "text",
+      "name": "The Compliance Auditor",
+      "description": "<p>A corporate compliance officer is auditing her own employer and has found the answer. She would like to be very far away and provably elsewhere when it lands.<br />\n<em>Director:</em> She has already picked which of the crew she trusts. She is wrong.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "An7sBZxWY4pYrvCz",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.An7sBZxWY4pYrvCz",
+      "type": "text",
+      "name": "The Sommelier's Side Trade",
+      "description": "<p>A restaurant's wine director moves more than wine — cleared invitations, table assignments, who sat with whom. He trades in seating charts and wants a rival's reservation list.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "QEj9RqOQQ1rEzGqw",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.QEj9RqOQQ1rEzGqw",
+      "type": "text",
+      "name": "The Landlord's Broker",
+      "description": "<p>A soft-spoken man buys the crew a drink and says he represents a party who sells uplink windows through the Barrier. He mentions no name and does not need to. The price he quotes isn't in nuyen.<br />\n<em>Director:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.06EFfB4bWFccOe9L]{Warden Krael \"the Landlord\"} never appears in person. Let the offer sit for sessions.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "qDT8fumopFrs4Yzz",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.qDT8fumopFrs4Yzz",
+      "type": "text",
+      "name": "Traffic Adjudicator",
+      "description": "<p>A municipal adjudicator rules on right-of-way disputes between corporate motorcades and is being leaned on to rule one way. He wants leverage back, and he can grant a routing priority nobody could buy.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "6hneTA3ZN30Y4tN5",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.6hneTA3ZN30Y4tN5",
+      "type": "text",
+      "name": "Sanctum Recruiter",
+      "description": "<p>A corp Sanctum recruiter has read a crew hacker's traffic and is impressed. The offer is a clean SIN, licensed access, a salary — and every previous associate becomes a liability to be disclosed.<br />\n<em>Director:</em> The offer stays open. Renew it whenever the crew is broke.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        38,
+        38
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "q616cDMfSQFz1FLJ",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.q616cDMfSQFz1FLJ",
+      "type": "text",
+      "name": "The SIN Reads Amber",
+      "description": "<p>A routine turnstile scan returns amber rather than green — not refused, just held, while a subroutine decides. The queue behind them keeps moving. A uniformed officer starts walking over, unhurried.<br />\n<em>Director:</em> Thirty seconds of plausible small talk, or they run before anything has happened.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        39,
+        39
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "7TBmCJLyaD3ALSyU",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.7TBmCJLyaD3ALSyU",
+      "type": "text",
+      "name": "Waiver at the Door",
+      "description": "<p>Entry to the campus requires signing a liability waiver that grants search rights, biometric retention and immediate ejection at discretion. Refusing isn't denied — it's just escalated to a person.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        40,
+        40
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "z389jccYitBagUl5",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.z389jccYitBagUl5",
+      "type": "text",
+      "name": "Executive Motorcade",
+      "description": "<p>The traffic-net locks six blocks for a board member's transit and every pedestrian deck feeds into two screened chokepoints. The crew's window closes while they stand in line behind eleven hundred commuters.<br />\n<em>Director:</em> Whatever they were timing is now four minutes late.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        41,
+        41
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "gEGmYOkLK0JYLFWX",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.gEGmYOkLK0JYLFWX",
+      "type": "text",
+      "name": "Trace Warm",
+      "description": "<p>The moment the crew's hacker touches a City node, a corporate watchdog picks up the intrusion and starts walking back along the line. Nothing has triggered yet. The trace is simply warm, and getting warmer.<br />\n<em>Director:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.dNEBSb47qSV9lRRH]{Watchdog ICE} is logging, not attacking — yet. Every further action shortens the leash.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        42,
+        42
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "S6nm6ABIuXlAsAY3",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.S6nm6ABIuXlAsAY3",
+      "type": "text",
+      "name": "Dress Code, Enforced Politely",
+      "description": "<p>The venue's door staff explain the dress standard with genuine warmth and offer to hold the crew's coats and weapons in a monitored cloakroom with itemized receipts. Everything checked is photographed and cross-referenced.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        43,
+        43
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "wM6t6gAs9WDBPmyM",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.wM6t6gAs9WDBPmyM",
+      "type": "text",
+      "name": "Lift Bank Audit",
+      "description": "<p>Building security is running a scheduled credential audit on the express lifts tonight — badge, SIN, sponsor-of-record, all three. The service lifts are unaudited and go to the wrong floors.<br />\n<em>Director:</em> The freight route works, but it means being seen by people who remember faces.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        44,
+        44
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "xLHLeBC9D7N76CG6",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.xLHLeBC9D7N76CG6",
+      "type": "text",
+      "name": "The Insurer Photographs You",
+      "description": "<p>An incident on the plaza brings out an insurance assessor's drone swarm, which documents every person within the cordon for the claim file. Leaving now is noted. Staying means being in the file.<br />\n<em>Director:</em> That file gets sold. It will surface in three sessions.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        45,
+        45
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "CzWRS23JbQHFfuPS",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.CzWRS23JbQHFfuPS",
+      "type": "text",
+      "name": "Boundary Scan",
+      "description": "<p>A scheduled sweep of the Barrier's approach runs tonight, and every uplink in the district authenticates or drops. Anything half-connected is flagged, logged and visited.<br />\n<em>Director:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.OKUNagoWoaFtiO76]{Black ICE} is the sweep's teeth — the threat is that it finishes, not that it fights.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        46,
+        46
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "guEEHiW8io38Ea8B",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.guEEHiW8io38Ea8B",
+      "type": "text",
+      "name": "The Skyway Window",
+      "description": "<p>A pedestrian skyway between towers seals at the top of the hour for its cleaning cycle, and the next opening is ninety minutes out. The doors are already amber. The crew is four hundred meters short.<br />\n<em>Director:</em> Whoever makes it is separated from whoever doesn't.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        47,
+        47
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "lbbBPF334cTlEKRA",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.lbbBPF334cTlEKRA",
+      "type": "text",
+      "name": "Drone on the Lane",
+      "description": "<p>A compliance drone has attached to the crew's group and is maintaining a polite six meters, filming, waiting for a supervisor to review. Losing it means breaking the traffic-net's line of sight in a district built without shadows.<br />\n<em>Director:</em> If it uploads before they break it, their faces are in a corporate case file.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        48,
+        48
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "mVO6aU7IxP5DSRXW",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.mVO6aU7IxP5DSRXW",
+      "type": "text",
+      "name": "Escorted Out",
+      "description": "<p>Private security decides the crew is leaving — no arrest, no violence, just four people walking them firmly toward the service lifts and a van. The polite version expires at the loading dock.<br />\n<em>Director:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.DVEibxfpEWA5RoCn]{Corp Security Officer} ×3. If they comply all the way down, it becomes a fight without witnesses.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        49,
+        49
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "PRWDgLKH4ekzpOOV",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.PRWDgLKH4ekzpOOV",
+      "type": "text",
+      "name": "Squeezed by the Motorcade",
+      "description": "<p>The traffic-net reroutes around an executive convoy and the crew's vehicle is quietly squeezed into a dead-end service spur with the lanes closing behind it. The net isn't attacking. It's tidying.<br />\n<em>Director:</em> Manual override, a hacked routing token, or abandon the vehicle and walk.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        50,
+        50
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "AOGnlbYEQhBLPEcU",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.AOGnlbYEQhBLPEcU",
+      "type": "text",
+      "name": "Scrub Before the Sync",
+      "description": "<p>A crew hacker's presence is queued for the district's nightly log consolidation. Once it syncs, it's permanent, subpoenable and sold. They have until the sync to reach a node and unwrite themselves.<br />\n<em>Director:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.3agmncc5O8q7YwPN]{Scrambler ICE} guards the consolidation node. Beating it is the win; killing it is not required.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        51,
+        51
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "8luvhR0MzZysnDHK",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.8luvhR0MzZysnDHK",
+      "type": "text",
+      "name": "Lobby Is a Kill Box",
+      "description": "<p>The doors seal, the atrium lights go hard white, and the response team comes out of two stairwells at once with the shot lines already surveyed. Up here the building fights before the people do.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.g7LC1G0K20UnYzkr]{Response Lieutenant} ×1, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.DVEibxfpEWA5RoCn]{Corp Security Officer} ×3, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.h3LR6HHADCpyFMsN]{Corp Enforcer} ×2<br />\n<em>Director:</em> Every round spent here is a round the next tier spends arriving. Reinforcement is the clock.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        52,
+        52
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    },
+    {
+      "_id": "dwvuFYwFVqGj4BsK",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.dwvuFYwFVqGj4BsK",
+      "type": "text",
+      "name": "Contract Cleanup, Loading Dock",
+      "description": "<p>Ironclad's contracted perimeter team meets the crew at the freight dock, badges off, insignia taped over — a deniable cleanup with a clean invoice waiting at the end of it. They open with suppression, not warning.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.5DAEbNthQiPH7dCN]{Ironclad Commando} ×1, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.B0YvX7iMUU3yL3m0]{Ironclad Conscript} ×4, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.3cspD2WHzAjoOrJj]{Ironclad Sharpshooter} ×1<br />\n<em>Director:</em> The sharpshooter holds the catwalk. Taking the high ground changes the whole fight.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        53,
+        53
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    },
+    {
+      "_id": "6svb4jyoWNeytEF2",
+      "_key": "!tables.results!iVkQnXwoIIBuIzkR.6svb4jyoWNeytEF2",
+      "type": "text",
+      "name": "Two Crews, One Sanctum",
+      "description": "<p>Another team is already inside the corp Sanctum node working the same score, and neither crew can afford to be the one still logged in when the house notices. It goes loud in meat and in the Wired at the same time.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.LhN5ujHMuC4Oq0vB]{Rival Operator} ×2, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.VYH5TyNfTeRAe4j0]{Rival Hacker} ×1, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.yrjKsb1PxjKnBkqQ]{Corp Netrunner} ×1<br />\n<em>Director:</em> The corp netrunner is the house's answer to both crews. A truce is on the table right up until the payload is in someone's hand.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        54,
+        54
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    }
+  ],
+  "formula": "1d54",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "zone": "city",
+      "counts": {
+        "Flavor": 22,
+        "RP": 16,
+        "Complication": 8,
+        "Action": 5,
+        "Combat": 3
+      }
+    }
+  }
+}

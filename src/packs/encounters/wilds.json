@@ -1,0 +1,523 @@
+{
+  "_id": "EIyhhM6Ygg3N0FYa",
+  "_key": "!tables!EIyhhM6Ygg3N0FYa",
+  "name": "GHOSTWIRE.Encounters.Tables.Wilds",
+  "img": "icons/environment/wilderness/tree-oak.webp",
+  "description": "<p>26 events: 10 flavor · 7 rp · 4 complication · 3 action · 2 combat. Draw for atmosphere between scenes; combat rows name a bestiary Actor for the Director to place.</p>",
+  "results": [
+    {
+      "_id": "h7Sn1nWK4cgpCVaT",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.h7Sn1nWK4cgpCVaT",
+      "type": "text",
+      "name": "Last Bar Of Signal",
+      "description": "<p>Someone's deck drops from three bars to one and stays there, the way a pulse stays there. Nobody says anything, but everyone checks their own.<br />\n<em>Director:</em> From here on, calls out take minutes, not seconds.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "CnWgLHCxE8zCEnkx",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.CnWgLHCxE8zCEnkx",
+      "type": "text",
+      "name": "The Wall Is Growing",
+      "description": "<p>A quarter-mile of outer wall has gone green — vines in the rebar, roots in the seams, a slow soft chewing sound under the plate. Work crews stopped patching this stretch two seasons ago.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "RGaUL7prD0txnmg1",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.RGaUL7prD0txnmg1",
+      "type": "text",
+      "name": "Rain Off The Canopy",
+      "description": "<p>It isn't raining. The canopy is just finishing yesterday's rain, one heavy warm drop at a time, straight down the back of the neck. Every drop tastes faintly of metal.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "1m2fgZED4jeVUHmi",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.1m2fgZED4jeVUHmi",
+      "type": "text",
+      "name": "Insects In The Ports",
+      "description": "<p>Something small and iridescent is trying to get into a data port, patient as water. The Flats never taught anybody to close their ports.<br />\n<em>Director:</em> Anyone who ignores it has a very bad morning.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "RSM6oTGnuea5bCsB",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.RSM6oTGnuea5bCsB",
+      "type": "text",
+      "name": "Bones Of A Convoy",
+      "description": "<p>Six hauler chassis in a rough circle, stripped to frame, canopy grown through the cabs. The circle faced outward. Nothing inside it was ever buried.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "l58iuXj5FCB3tH3e",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.l58iuXj5FCB3tH3e",
+      "type": "text",
+      "name": "Charms On The Gate Post",
+      "description": "<p>Wire-and-bone charms hang thick on the last post before the trees — bearings, teeth, a cracked optic. Gate-folk touch one on the way out and don't discuss it.<br />\n<em>Director:</em> Refusing to touch one is noticed.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "sGBsCmSlKMsGOEfr",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.sGBsCmSlKMsGOEfr",
+      "type": "text",
+      "name": "Heat Like A Held Breath",
+      "description": "<p>The air past the wall doesn't move. Cooling fans spin up and stay up, and chrome sits hot against skin all day. The Flats were never this quiet or this warm.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "f7FWMNFn2glEWDZ8",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.f7FWMNFn2glEWDZ8",
+      "type": "text",
+      "name": "Rust Weather",
+      "description": "<p>A brown haze off the wastes leaves grit on everything and a taste like old blood. By evening every unsealed joint and exposed contact wears a film of orange.<br />\n<em>Director:</em> Anything left uncovered overnight is corroded by morning.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "2FawHbD4PqPDY7ai",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.2FawHbD4PqPDY7ai",
+      "type": "text",
+      "name": "Wrong Birds",
+      "description": "<p>The calls in the high branches are clean square-wave tones — a security handshake, repeated, imitated, slightly off pitch. Something up there learned it from a fence that hasn't been powered in years.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "JAuUTonAAxY68STv",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.JAuUTonAAxY68STv",
+      "type": "text",
+      "name": "A Light That Isn't The Reach",
+      "description": "<p>Far out across the wastes, low on the ground, a steady white light burns where no map shows anything. It has not moved in the hours anyone has watched it.<br />\n<em>Director:</em> It's a little closer next time they look.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "flavor"
+        }
+      }
+    },
+    {
+      "_id": "JIq2WmeOSuiRiQIO",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.JIq2WmeOSuiRiQIO",
+      "type": "text",
+      "name": "Marrow At The Gate",
+      "description": "<p>The Ranger-captain wants a word — not a hire, not yet. Cael Marrow asks what the crew saw out there, in the order they saw it, and writes none of it down.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.47SCHzz6vNoDwiQf]{Ranger-Captain Cael Marrow \"the Gate\"}<br />\n<em>Director:</em> He's mapping how fast the quiet ground is spreading. Honest answers buy a favor at Cinderhold.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "xBd5AbZfvx0W4Yko",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.xBd5AbZfvx0W4Yko",
+      "type": "text",
+      "name": "Convoy Short A Gun",
+      "description": "<p>A Cinderhold supply train is one escort down and two days from the wall. The convoy boss offers water, a seat, and half a share — worth more out here than nuyen.<br />\n<em>Director:</em> Refusing means watching them roll out anyway, and hearing about it later.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "8Vqd3pyjFVfLBXit",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.8Vqd3pyjFVfLBXit",
+      "type": "text",
+      "name": "The Salvager's Serial",
+      "description": "<p>A salvager has a corp-tagged module she can't sell in Cinderhold and won't carry back to the Flats herself. She wants a courier who won't read the serial.<br />\n<em>Director:</em> The serial is readable. Reading it makes the crew part of whatever it came off.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "k1iV5WfBfeuiv2Cy",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.k1iV5WfBfeuiv2Cy",
+      "type": "text",
+      "name": "Hermit On The Relay Mast",
+      "description": "<p>A woman has lived four years at the top of a dead relay mast, listening to nothing on purpose. She'll trade what she's heard for batteries and news of the hive.<br />\n<em>Director:</em> Her nothing has a pattern in it. She'll show them if they stay the night.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "ZsH19RMAtSeSEgUo",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.ZsH19RMAtSeSEgUo",
+      "type": "text",
+      "name": "Ranger Patrol, Two Days Overdue",
+      "description": "<p>Gate rangers stop the crew on the trail, polite and exhausted, asking after a patrol that should have come back Tuesday. They can't turn around to look themselves.<br />\n<em>Director:</em> The patrol's beacon still pings. It has not moved in two days.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "zVzp1WN4tDYV6QeV",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.zVzp1WN4tDYV6QeV",
+      "type": "text",
+      "name": "Gate-Folk Funeral",
+      "description": "<p>Cinderhold buries its dead outside the wall, with the chrome cut out and kept. A widow asks a stranger to carry the arm, because kin can't.<br />\n<em>Director:</em> Refusing is allowed and remembered.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "FmUTd1yJfJDfhDj1",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.FmUTd1yJfJDfhDj1",
+      "type": "text",
+      "name": "Kestrel's Surveyor",
+      "description": "<p>A neatly dressed surveyor with Flats boots is pricing the corridor for a clean route, and needs local escorts who won't repeat the route to Marrow.<br />\n<em>Director:</em> Both sides will pay. Only one of them will still be out here next season.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "rp"
+        }
+      }
+    },
+    {
+      "_id": "7JqG0YjskOeExHPh",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.7JqG0YjskOeExHPh",
+      "type": "text",
+      "name": "The Wire Drops Out",
+      "description": "<p>Maps go stale, comms go to static, and the last cached waypoint is eleven hours old. Nobody's chrome is broken — the air just stopped carrying.<br />\n<em>Director:</em> No remote help, no live routing, until they're back inside the wall's shadow.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "yRLS7LNgdCefLxFF",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.yRLS7LNgdCefLxFF",
+      "type": "text",
+      "name": "Green Water",
+      "description": "<p>The last clean water was at the gate, and the canopy cisterns are sheened with something that eats seals. Filters clog by the hour.<br />\n<em>Director:</em> Rationing, backtracking, or trusting what the gate-folk drink.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "lMj77PbrB2Xp6wIQ",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.lMj77PbrB2Xp6wIQ",
+      "type": "text",
+      "name": "Rot In The Joint",
+      "description": "<p>Wet heat and rust get into a prosthetic or a weapon action overnight — grinding, then binding, then not at all. Out here there is no ripperdoc and no armorer.<br />\n<em>Director:</em> Field-fixable with scavenged parts and time they may not have.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "PRMC1PupZAINeJNn",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.PRMC1PupZAINeJNn",
+      "type": "text",
+      "name": "The Trail Closed Behind Them",
+      "description": "<p>A rain-fat slope let go and took the cut with it. The way back is a mudslick and a forty-foot drop, and the only other route runs out through the quiet ground.<br />\n<em>Director:</em> Longer, thinner signal, and past that steady white light.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "complication"
+        }
+      }
+    },
+    {
+      "_id": "edE9boZeusJ7hiyJ",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.edE9boZeusJ7hiyJ",
+      "type": "text",
+      "name": "The Span At Culvert Nine",
+      "description": "<p>An old drainage span across a flooded cut is rusted to lace and sagging under its own weight. It'll hold one crossing, maybe, and not everyone's gear.<br />\n<em>Director:</em> Whatever they leave behind stays out here.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "E5ct7v3DeQJCWT0l",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.E5ct7v3DeQJCWT0l",
+      "type": "text",
+      "name": "Something Pacing The Column",
+      "description": "<p>Motion in the undergrowth keeps the convoy's exact speed, twenty meters off the flank, for an hour. Slow down and it slows. Stop and it doesn't.<br />\n<em>Director:</em> Break contact, deter it, or lose the convoy's nerve — no fight tonight either way.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "7KLEsrqPD2JCZG0L",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.7KLEsrqPD2JCZG0L",
+      "type": "text",
+      "name": "Behemoth Crossing",
+      "description": "<p>The ground starts keeping time. Trees go over in a line half a kilometer wide, and the smart move is to be very small and very still until the line has passed.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.CWybI5S01IFi3dYZ]{Reach Behemoth} ×1 — passing through, not hunting<br />\n<em>Director:</em> This is weather, not a fight. Anyone who shoots at it changes the campaign.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "action"
+        }
+      }
+    },
+    {
+      "_id": "ufNeb4nsIyc8WJYh",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.ufNeb4nsIyc8WJYh",
+      "type": "text",
+      "name": "Hijack At The Wasteland Gate",
+      "description": "<p>Chrome Raiders have been shadowing the road since the last water stop, and they take the convoy at the narrowest point — armiger first, through the lead hauler.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.3vPrvIj1T1qDIpJ2]{Chrome Raider Hijack} ×4, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.AzxZDtV1audKfRVv]{Chrome Raider Armiger} ×1<br />\n<em>Director:</em> They want cargo, not bodies. Give up the haul and they break off — and Cinderhold hears about it.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    },
+    {
+      "_id": "jZWCktXDKzqC1G8F",
+      "_key": "!tables.results!EIyhhM6Ygg3N0FYa.jZWCktXDKzqC1G8F",
+      "type": "text",
+      "name": "It Comes Down The Trunk",
+      "description": "<p>The wrong-birds stop all at once. Something long and patient lets go of the canopy directly above the fire, and the scavengers that follow it are already in the brush.<br />\n<em>Opposition:</em> @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.eipB2WBMWjhroSLw]{Canopy-Stalker} ×1, @UUID[Compendium.draw-steel-ghostwire.bestiary.Actor.vYTYqsw50ofY0ELB]{Scrap-Hound} ×3<br />\n<em>Director:</em> Firelight is the draw. A crew running dark instead gets one round of warning.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "combat"
+        }
+      }
+    }
+  ],
+  "formula": "1d26",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "zone": "wilds",
+      "counts": {
+        "Flavor": 10,
+        "RP": 7,
+        "Complication": 4,
+        "Action": 3,
+        "Combat": 2
+      }
+    }
+  }
+}
