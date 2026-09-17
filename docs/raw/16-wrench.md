@@ -91,7 +91,7 @@ Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st 
 >
 > | Roll | Effect |
 > |---|---|
-> | ≤11 | The shot goes wide — no damage, and the firing machine is exposed (enemies gain +1 to hit it until your next turn). |
+> | ≤11 | The shot goes wide — no damage, and the firing machine is exposed (enemies have an **edge** on strikes against it until your next turn). |
 > | 12-16 | 3 + Logic damage. |
 > | 17+ | 5 + Logic damage, and choose one: target is prone, target is suppressed until end of their next turn, or the firing machine may immediately reposition up to its Speed for free. |
 >
@@ -128,15 +128,15 @@ Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st 
 
 ## Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are the Wrench's subclass-flavored spell-equivalent — chosen by cost band as you level, layered on top of the always-on Signature kit above. Every subclass (Drone Jockey, Vehicle Rig-Pilot, Facility Rigger) has its own full ability ladder across all four tiers; see the subclass sections below for the actual ability text. The tier structure itself is shared across all three subclasses:
+Heroic Abilities are the Wrench's subclass-flavored spell-equivalent — chosen by cost band as you level, layered on top of the always-on Signature kit above. Every subclass (Drone Jockey, Vehicle Rig-Pilot, Facility Rigger) has its own full ability ladder across all four cost bands; see the subclass sections below for the actual ability text. The cost-band structure itself is shared across all three subclasses:
 
 ### Base Band (1-5 Uptime, chosen at 1st level)
 
-Low-cost, always-useful openers — the first abilities a Wrench of any subclass picks up. Drawn from each subclass's own Base Tier list (see Drone Jockey / Vehicle Rig-Pilot / Facility Rigger, below).
+Low-cost, always-useful openers — the first abilities a Wrench of any subclass picks up. Drawn from each subclass's own Base Band list (see Drone Jockey / Vehicle Rig-Pilot / Facility Rigger, below).
 
 ### 7-Cost Band (chosen at 3rd level)
 
-Mid-power abilities that come online once a Wrench's fleet doctrine has had a chance to mature. Also the tier that unlocks **Focus Fire** (see below) as a purchasable pick.
+Mid-power abilities that come online once a Wrench's fleet doctrine has had a chance to mature. Also the cost band that unlocks **Focus Fire** (see below) as a purchasable pick.
 
 ### 9-Cost Band (chosen at 5th level)
 
@@ -144,7 +144,7 @@ High-power abilities — the point where a subclass's core fantasy (the swarm, t
 
 ### 11-Cost Band (chosen at 8th level)
 
-Apex abilities — the capstone-adjacent tier just below the 10th-level epic capstone, each one a full-encounter-defining play.
+Apex abilities — the capstone-adjacent cost band just below the 10th-level epic capstone, each one a full-encounter-defining play.
 
 ## Focus Fire — The Wrench's Burst Mechanic
 
@@ -186,7 +186,7 @@ Every drone is a **device** with a compact stat block. Drones sit at **Scale: Pe
 
 **Drone Upgrade Slots — doctrine.** Every drone chassis has a fixed number of **Upgrade Slots**, gated by its size/cost band, not by level:
 
-| Chassis tier | Upgrade Slots | Representative examples |
+| Chassis band | Upgrade Slots | Representative examples |
 |---|---|---|
 | **Micro** | 1 slot | Taser-bee, kamikaze microdrone |
 | **Small** | 2 slots | Recon quadrotor, spotter-drone |
@@ -220,7 +220,7 @@ The Vehicle Rig-Pilot's platform — and any vehicle a Wrench of any subclass bu
 | **Scale** | Light / Vehicle / Heavy / Capital (see above) |
 | **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). |
 | **Handling** | Edge/bane or die-step on the pilot's Rigging/Reflex roll to drive or maneuver it. |
-| **Speed** | Movement in Speed bands (positional mode) or tier on the abstract chase track (see Chase Modes, below). |
+| **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |
 | **Armor** | Flat damage reduction; stacks with Scale defensively. |
 | **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |
 | **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |
@@ -270,7 +270,7 @@ The Facility Rigger's signature system — but any Wrench who sets up a safehous
 | **Physical Upgrade Slots** | See below — turrets, workshops, drone bays, med-bays, breaching-charge caches |
 | **Node** | The building's presence on the Mesh — see Node Reference, below |
 | **Wired Upgrade Slots** | Node-side upgrades — see below |
-| **Nuyen Tier** | Buy / Lease / Squat / Build — see Nuyen Cost Bands, below |
+| **Nuyen Cost Band** | Buy / Lease / Squat / Build — see Nuyen Cost Bands, below |
 | **Upkeep** | Recurring ¥ cost per downtime cycle — see below |
 | **Lifestyle Hook** | See below |
 
@@ -280,7 +280,7 @@ The Facility Rigger's signature system — but any Wrench who sets up a safehous
 - **Workshop** — a Fabricator/crafting-forward site; extra Physical Upgrade Slots dedicated to bench/crafting infrastructure, at the cost of defensive slots.
 - **Killbox** — the Facility Rigger's specialty; a site built to fight from, maximizing turret/sentry/breaching-charge Physical Upgrade Slots at the cost of comfort and Lifestyle quality.
 
-**Physical Upgrade Slots — doctrine.** Physical slots hold turrets, workshops, drone bays, med-bays, reinforced doors, breaching-charge caches, and similar hardware. Slot count scales with designation and Nuyen Tier:
+**Physical Upgrade Slots — doctrine.** Physical slots hold turrets, workshops, drone bays, med-bays, reinforced doors, breaching-charge caches, and similar hardware. Slot count scales with designation and Nuyen cost band:
 
 | Designation | Physical Upgrade Slots |
 |---|---|
@@ -312,7 +312,7 @@ Wired Upgrade Slots hold Node-side upgrades — firewall hardening, intrusion co
 
 **Upkeep.** Every base-of-operations designation carries a recurring **Upkeep** cost per downtime cycle, scaling with Physical + Wired Upgrade Slot count filled (more hardware, more power/bandwidth/maintenance draw). *(Base Upkeep = 1¥-band per 2 filled slots, rounded up.)* Failing to pay Upkeep risks a slot going offline (Director's call) until payment resumes.
 
-**Lifestyle Hook.** Building tier will feed into the Lifestyle system when authored. This is the plug point; final Lifestyle numbers pending.
+**Lifestyle Hook.** Building cost band will feed into the Lifestyle system when authored. This is the plug point; final Lifestyle numbers pending.
 
 **Downtime Fabrication.** The Facility Rigger's signature use of downtime: spend downtime cycles and ¥ to add Physical or Wired Upgrade Slots to a building, upgrade an existing slot's mod, or pre-place defenses (turrets armed and ready before a session starts, breaching charges wired into doorframes, a mesh-web strung across a corridor). **One Downtime Fabrication project per downtime cycle per Wrench**, costing ¥ per the Nuyen Cost Bands above, taking 1 cycle per slot added (2 cycles for a Wired slot, reflecting the harder Node-hardening work), with the Facility Rigger subclass reducing both cost and time (see below).
 
@@ -337,7 +337,7 @@ Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact
 | 1 | **Wide Band** (passive) | Fleet size cap raised by +2 over the class baseline; a single Deploy & Command maneuver can Command the entire swarm at once regardless of count |
 | 1 | **Salvage Sense** (passive, triggered) | When a drone you control is wrecked, you may immediately strip it for parts as a free triggered action (grants the standard Salvage Tick Uptime, see Heroic Resource: Uptime, above) |
 | 2 | **Suppressing Volume** (passive) | Focus Fire with 3+ drones auto-suppresses the target regardless of individual roll results |
-| 3 | **Cheap and Many** (passive) | A wrecked Micro-tier drone can be redeployed from spare parts as a maneuver instead of a main action, once per encounter |
+| 3 | **Cheap and Many** (passive) | A wrecked Micro-chassis drone can be redeployed from spare parts as a maneuver instead of a main action, once per encounter |
 | 5 | **Swarm Sense** (passive) | While 3+ drones are active, you gain an edge on Instinct tests to notice ambushes or hidden threats (distributed sensor coverage) |
 | 6 | **Overwhelm** (passive) | When 4 or more drones you control target the same creature in one Focus Fire, that target's Armor is treated as 1 lower for that action |
 | 7 | **Endless Swarm** (passive) | Fleet size cap raised by a further +2 (total +4 over baseline); Deploy Momentum income doubles |
@@ -346,7 +346,7 @@ Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact
 
 **Full ability ladder (Drone Jockey):**
 
-*Base Tier (1-5 Uptime, chosen at 1st level; 6 abilities total in the tier):*
+*Base Band (1-5 Uptime, chosen at 1st level; 6 abilities total in the band):*
 
 > **Taser Swarm**
 > *Command · Main Action · Uptime cost 1*
@@ -531,7 +531,7 @@ Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit
 
 **Full ability ladder (Vehicle Rig-Pilot):**
 
-*Base Tier (1-5 Uptime, chosen at 1st level; 5-6 abilities):*
+*Base Band (1-5 Uptime, chosen at 1st level; 5-6 abilities):*
 
 > **Jump-In (Signature Platform)**
 > *Command · Maneuver · Uptime cost 1*
@@ -700,7 +700,7 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 
 **Full ability ladder (Facility Rigger):**
 
-*Base Tier (1-5 Uptime, chosen at 1st level; 5-6 abilities):*
+*Base Band (1-5 Uptime, chosen at 1st level; 5-6 abilities):*
 
 > **Wake the Walls**
 > *Command · Main Action · Uptime cost 1 (reduced by Home Ground)*
@@ -838,7 +838,7 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 
 | Level | Class Features | Perks/Skills | Subclass Features |
 |---|---|---|---|
-| **1** | Uptime resource (heroic resource) - Deploy & Command / Rigged Fire / Field Repair / Override Ping (signatures) - Kit - Choose subclass - Choose a Base Tier (1-5 Uptime) ability | -- | Subclass passive + subclass triggered action |
+| **1** | Uptime resource (heroic resource) - Deploy & Command / Rigged Fire / Field Repair / Override Ping (signatures) - Kit - Choose subclass - Choose a Base Band (1-5 Uptime) ability | -- | Subclass passive + subclass triggered action |
 | **2** | Fleet Size Doctrine online (base 3) | Perk (choice) | Subclass 2nd-level feature |
 | **3** | Focus Fire (7-Cost band, unlocked) - Choose a 7-Cost ability | -- | Subclass 3rd-level feature |
 | **4** | Fleet Cap +1 (fleet size 4) | Characteristic Increase - Perk (choice) - Skill | -- |

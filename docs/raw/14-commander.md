@@ -138,16 +138,16 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Command Persona / Fearful Awe** *(3 Influence, main action)*
 > Choose one mode:
-> - **Command Presence:** 3-cube in Ranged 10; **you make one Power Roll + Persona**. The tier of success determines how many enemies in the area are affected and the effect applied to each. On **≤11 (low)**: only the enemy nearest to the cube's center is affected, and takes a **bane** on its next Power Roll. On **12–16 (middle)**: up to **2** enemies of your choice in the area are **taunted by you** until the end of their next turn. On **17+ (high)**: up to **3** enemies of your choice in the area are **taunted by you** until the end of their next turn AND take a **bane** on their next Power Roll.
-> - **Fearful Awe:** one target within Ranged 10; Power Roll + Persona. high (17+): the target is **frightened of you, save ends**. middle (12–16): **taunted** by you until end of its next turn. low (≤11): the target is **Weakened** for 1 round.
+> - **Command Presence:** 3-cube in Ranged 10; **you make one Power Roll + Persona**. The Power Roll result determines how many enemies in the area are affected and the effect applied to each. On **≤11 (low)**: only the enemy nearest to the cube's center is affected, and takes a **bane** on its next Power Roll. On **12–16 (middle)**: up to **2** enemies of your choice in the area are **taunted by you** until the end of their next turn. On **17+ (high)**: up to **3** enemies of your choice in the area are **taunted by you** until the end of their next turn AND take a **bane** on their next Power Roll.
+> - **Fearful Awe:** one target within Ranged 10; Power Roll + Persona. low (≤11): the target is **Weakened** for 1 round. middle (12–16): **taunted** by you until end of its next turn. high (17+): the target is **frightened of you, save ends**.
 
 > **Battle Cry** *(3 Influence)*
 > *Ranged 10 · Target: three allies*
-> Power Roll + Persona. high (17+): each target gains **3 surges**. middle (12–16): **2 surges** each. low (≤11): **1 surge** each.
+> Power Roll + Persona. low (≤11): **1 surge** each. middle (12–16): **2 surges** each. high (17+): each target gains **3 surges**.
 
 > **Concussive Command** *(3 Influence)*
 > *Ranged 10 · Target: one enemy*
-> Designate the target: one ally within Ranged 10 makes a free signature strike against it. Power Roll + Persona. high (17+): the strike gains an **edge**, and the target is **dazed, save ends**. middle (12–16): the strike gains an edge, and the target is **dazed until end of its next turn**. low (≤11): the strike gains no edge, and the target has a **bane** on its next Power Roll.
+> Designate the target: one ally within Ranged 10 makes a free signature strike against it. Power Roll + Persona. low (≤11): the strike gains no edge, and the target has a **bane** on its next Power Roll. middle (12–16): the strike gains an edge, and the target is **dazed until end of its next turn**. high (17+): the strike gains an **edge**, and the target is **dazed, save ends**.
 
 ### 5-Cost Band (chosen at 1st level)
 
@@ -158,7 +158,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Coordinated Strike** *(5 Influence)*
 > *Ranged 10*
-> Command directs one ally within Ranged 10 to make a free strike against your designated target. Power Roll + Persona. high (17+): **2 allies** each make a free strike that gains an edge. middle (12–16): **1 ally** makes a free strike that gains an edge. low (≤11): **1 ally** makes a free strike (no edge).
+> Command directs one ally within Ranged 10 to make a free strike against your designated target. Power Roll + Persona. low (≤11): **1 ally** makes a free strike (no edge). middle (12–16): **1 ally** makes a free strike that gains an edge. high (17+): **2 allies** each make a free strike that gains an edge.
 
 > **Now!** *(5 Influence, maneuver)*
 > *Ranged 10 · Target: three allies*
@@ -200,7 +200,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Break Their Nerve** *(9 Influence, main action)*
 > *3-burst in Ranged 10*
-> Each enemy in the area makes a Power Roll + Persona. high (17+): **frightened of you, save ends,** AND **Weakened, save ends**. middle (12–16): **frightened of you, save ends**. low (≤11): **frightened until end of its next turn**.
+> Each enemy in the area makes a Power Roll + Persona. low (≤11): **frightened until end of its next turn**. middle (12–16): **frightened of you, save ends**. high (17+): **frightened of you, save ends,** AND **Weakened, save ends**.
 
 ### 11-Cost Band (chosen at 8th level)
 
@@ -219,7 +219,7 @@ Heroic Abilities are the Commander/Face's Influence-fueled command plays, chosen
 
 > **Speak With One Voice** *(11 Influence, main action)*
 > *In a social scene, with a crowd/faction/room*
-> Impose your framing on an entire crowd, faction, or room. Every present NPC who can see or hear you makes a Power Roll + Persona vs. their Instinct-scaled resistance. high (17+): **all** present NPCs shift Attitude one step toward Cooperative. middle (12–16): **half** shift. low (≤11): only the **leader** shifts.
+> Impose your framing on an entire crowd, faction, or room. Every present NPC who can see or hear you makes a Power Roll + Persona vs. their Instinct-scaled resistance. low (≤11): only the **leader** shifts. middle (12–16): **half** shift. high (17+): **all** present NPCs shift Attitude one step toward Cooperative.
 
 ---
 
@@ -276,14 +276,14 @@ The whole undercity on speed-dial: deals, favors, and the fixer's web.
 
 **Street-Fixer Ability Table**
 
-| Tier | Ability | Effect |
+| Level | Ability | Effect |
 |---|---|---|
-| 2 | **Fog of War** *(5-focus)* | create a zone of confusion (smoke, jammed feeds, crowd noise) that grants you and allies concealment and imposes a bane on enemy Perception-based tests within it. |
-| 2 | **Try Me Instead** *(5-focus)* | as a free triggered action, redirect an attack targeting an ally within 10 sq to yourself instead. |
-| 6 | **Coordinated Execution** *(9-focus)* | you and up to 2 allies within 10 sq of a Marked target may each make a free strike against it, once per encounter. |
-| 6 | **Panic in Their Lines** *(9-focus)* | enemies within 10 sq of your Marked target that witness it take heavy damage become frightened, save ends. |
-| 9 | **Squad! Hit and Run!** *(11-focus)* | you and all allies within 10 sq may immediately shift up to their speed after resolving a strike against a Marked target, no action required. |
-| 9 | **Their Lack of Focus Is Their Undoing** *(11-focus)* | enemies that fail to damage you or an ally within 10 sq on their turn grant you and that ally an edge on your next Power Rolls against them. |
+| 2 | **Fog of War** *(5 Influence)* | create a zone of confusion (smoke, jammed feeds, crowd noise) that grants you and allies concealment and imposes a bane on enemy Perception-based tests within it. |
+| 2 | **Try Me Instead** *(5 Influence)* | as a free triggered action, redirect an attack targeting an ally within 10 sq to yourself instead. |
+| 6 | **Coordinated Execution** *(9 Influence)* | you and up to 2 allies within 10 sq of a Marked target may each make a free strike against it, once per encounter. |
+| 6 | **Panic in Their Lines** *(9 Influence)* | enemies within 10 sq of your Marked target that witness it take heavy damage become frightened, save ends. |
+| 9 | **Squad! Hit and Run!** *(11 Influence)* | you and all allies within 10 sq may immediately shift up to their speed after resolving a strike against a Marked target, no action required. |
+| 9 | **Their Lack of Focus Is Their Undoing** *(11 Influence)* | enemies that fail to damage you or an ally within 10 sq on their turn grant you and that ally an edge on your next Power Rolls against them. |
 
 ---
 
@@ -300,7 +300,7 @@ Credentials, protocol, and the weight of institutional power: the one who walks 
 | — | Starting contact | A **corp insider** or **handler** |
 | **2** | **Goaded** | Whenever a creature Marked by you uses a strike targeting you or an ally in your line of effect, use a free triggered action to change one target of that strike to you or another ally in line of effect within distance. |
 | **2** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (2nd-band options). |
-| **3** | **Access Protocol** | Start each session with one Renown-tier bump toward a corp faction you name, representing pre-run legwork. |
+| **3** | **Access Protocol** | Start each session with one Renown bump toward a corp faction you name, representing pre-run legwork. |
 | **5** | **Anticipation** + **I Predicted That** | *Anticipation:* your Mark ability may target **two** creatures at once. *I Predicted That:* you and any ally within 10 sq gain an edge on **Logic** tests. |
 | **6** | Doctrine ability (choose 1) | See Corp-Exec Ability Table, below (6th-band options). |
 | **7** | **The Big Picture** | During a montage or negotiation, automatic success on one lore-group skill test; may make a project roll for a research project in addition to another respite activity. |
@@ -309,14 +309,14 @@ Credentials, protocol, and the weight of institutional power: the one who walks 
 
 **Corp-Exec Ability Table**
 
-| Tier | Ability | Effect |
+| Level | Ability | Effect |
 |---|---|---|
-| 2 | **I've Got Your Back** *(5-focus)* | as a free triggered action when an ally within 10 sq is hit, grant them resistance to the triggering damage equal to your Persona score. |
-| 2 | **Targets of Opportunity** *(5-focus)* | when an enemy becomes Marked, one ally within 10 sq who hasn't acted this round may immediately make a free strike against it. |
-| 6 | **Battle Plan** *(9-focus)* | at the start of an encounter, designate a plan; the first time each ally acts on that plan's designated action, they gain a bonus edge. |
-| 6 | **Hustle!** *(9-focus)* | grant up to 3 allies within 10 sq a free shift up to their speed, no action required. |
-| 9 | **Blot Out the Sun!** *(11-focus)* | all enemies within a 5-burst of your Marked target take a bane on Power Rolls against you and your allies until the end of the encounter. |
-| 9 | **Counterstrategy** *(11-focus)* | once per encounter, when an enemy's ability would affect 3 or more allies, you may negate its effect on all but one target. |
+| 2 | **I've Got Your Back** *(5 Influence)* | as a free triggered action when an ally within 10 sq is hit, grant them resistance to the triggering damage equal to your Persona score. |
+| 2 | **Targets of Opportunity** *(5 Influence)* | when an enemy becomes Marked, one ally within 10 sq who hasn't acted this round may immediately make a free strike against it. |
+| 6 | **Battle Plan** *(9 Influence)* | at the start of an encounter, designate a plan; the first time each ally acts on that plan's designated action, they gain a bonus edge. |
+| 6 | **Hustle!** *(9 Influence)* | grant up to 3 allies within 10 sq a free shift up to their speed, no action required. |
+| 9 | **Blot Out the Sun!** *(11 Influence)* | all enemies within a 5-burst of your Marked target take a bane on Power Rolls against you and your allies until the end of the encounter. |
+| 9 | **Counterstrategy** *(11 Influence)* | once per encounter, when an enemy's ability would affect 3 or more allies, you may negate its effect on all but one target. |
 
 ---
 
@@ -342,14 +342,14 @@ The Bard is **fully mundane** — a techno-musician, media-face, streaming prese
 
 **Bard Ability Table**
 
-| Tier | Ability | Effect |
+| Level | Ability | Effect |
 |---|---|---|
-| 2 | **No Dying on My Watch** *(5-focus)* | as a free triggered action when an ally within 10 sq would drop to 0 Stamina, grant them temporary Stamina equal to your Persona score before the damage resolves. |
-| 2 | **Squad! On Me!** *(5-focus)* | pull up to 3 allies within 10 sq to a square adjacent to you, no action required. |
-| 6 | **Instant Retaliation** *(9-focus)* | when a Marked creature damages you, make a free melee strike against it as a free triggered action. |
-| 6 | **To Me Squad!** *(9-focus)* | as a maneuver, teleport up to 3 allies within 10 sq to squares adjacent to you. |
-| 9 | **No Escape** *(11-focus)* | Marked creatures cannot willingly move away from you or your allies without provoking a free strike from the nearest ally. |
-| 9 | **That One Is Mine!** *(11-focus)* | once per encounter, declare a Marked target as yours alone — you gain double edge against it, and it gains a bane on all Power Rolls against anyone but you. |
+| 2 | **No Dying on My Watch** *(5 Influence)* | as a free triggered action when an ally within 10 sq would drop to 0 Stamina, grant them temporary Stamina equal to your Persona score before the damage resolves. |
+| 2 | **Squad! On Me!** *(5 Influence)* | pull up to 3 allies within 10 sq to a square adjacent to you, no action required. |
+| 6 | **Instant Retaliation** *(9 Influence)* | when a Marked creature damages you, make a free melee strike against it as a free triggered action. |
+| 6 | **To Me Squad!** *(9 Influence)* | as a maneuver, teleport up to 3 allies within 10 sq to squares adjacent to you. |
+| 9 | **No Escape** *(11 Influence)* | Marked creatures cannot willingly move away from you or your allies without provoking a free strike from the nearest ally. |
+| 9 | **That One Is Mine!** *(11 Influence)* | once per encounter, declare a Marked target as yours alone — you gain double edge against it, and it gains a bane on all Power Rolls against anyone but you. |
 
 ---
 
@@ -365,7 +365,7 @@ The Bard is **fully mundane** — a techno-musician, media-face, streaming prese
 | **6** | **Master of Words** (negate a bane on Kit signature Power Rolls), Perk | (same) | +L6 doctrine ability |
 | **7** | Characteristic Increase (+1 all, max 4), **Heightened Influence** (gain 3 Influence/turn instead of 2), **Seize the Initiative** (as feature — your side goes first if not surprised), Skill, Doctrine Feature | (same) | (same) |
 | **8** | Perk, Doctrine Feature, 11-cost band unlocked | +11-cost | +L8 doctrine feature |
-| **9** | **Grandmaster of Words** (auto-Tier-1 on Kit signatures), Doctrine ability | (same) | +L9 doctrine ability |
+| **9** | **Grandmaster of Words** (automatic high result on Kit signatures), Doctrine ability | (same) | +L9 doctrine ability |
 | **10** | Characteristic Increase (Persona & Instinct to 5), **Command** (epic resource), **True Influence** (gain 4 Influence/turn), **Master of Voice** (allies rolling against Marked/Read targets roll 3 dice keep 2; heroic abilities targeting Marked targets cost 2 less Influence, minimum 1), Perk, Skill | (same) | (same) |
 
 ---

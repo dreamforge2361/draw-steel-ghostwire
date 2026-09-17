@@ -46,7 +46,7 @@ Veil workings referenced here are summarized in `22-the-veil.md`.
 
 The prayer gamble is **resource-only** — its worst result simply yields the ordinary flat drip and nothing more. It never inflicts backlash, Stamina damage, or corruption.
 
-**Cap & loss.** Conviction is capped at **8 at 1st level, rising +4 per tier** (mirrors the Veil-caster spine exactly: E4=8, E3=12, E2=16, E1=20, continuing the same +4 step at the top of the DS-level range). **All unspent Conviction is lost at the end of the encounter** — the patron's active favor fades when the crisis passes.
+**Cap & loss.** Conviction is capped at **8 at 1st level, rising +4 per echelon** (mirrors the Veil-caster spine exactly: E1=8, E2=12, E3=16, E4=20, continuing the same +4 step at the top of the DS-level range). **All unspent Conviction is lost at the end of the encounter** — the patron's active favor fades when the crisis passes.
 
 **Outside combat.** You cannot *gain* Conviction outside combat, but you may spend Conviction-costed effects **as if you had Victories worth of Conviction** — this is how ministry, healing, warding, and pact-renewal happen during downtime scenes without breaking the encounter-scoped resource model.
 
@@ -68,7 +68,7 @@ Both pacts use **the same mechanical numbers** across every ability in this chap
 | **Corruption weight** | Light | Heavy |
 | **Conduct requirement** | Strict — the patron demands mercy and protection tasks (The Price) | Looser in the moment, but the debt comes due — the patron demands darker service or offerings |
 | **Creed echo trigger** (first qualifying act each round) | First act of **mercy, protection, or aid** | First act of **dominion, punishment, or harvest** |
-| **Invoke the Pact — failed bind** | Entity vanishes without effect; you take a **bane on your next power rolls (save ends)** | Entity **strikes you once, at the entity's tier's damage,** before departing |
+| **Invoke the Pact — failed bind** | Entity vanishes without effect; you take a **bane on your next power rolls (save ends)** | Entity **strikes you once, for damage at the entity's rank,** before departing |
 
 **Both pacts always exact the Price.** A pact is the game's clearest case of "nothing for nothing": your patron requires a **minor quest, service, or observance aligned to its moral code**, handled before or after the aid is granted — mercy and protection for a Light patron, a darker service or offering for an infernal one. Refusing or shirking the task is a real story beat, Director-adjudicated: the patron withdraws aid, calls the debt, or turns hostile. A priest who tries to **coerce** aid rather than earn it pays the dark-path corruption cost regardless of alignment.
 
@@ -122,7 +122,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 > *Main Action · Ranged strike (dist 10) · Target: 1 creature*
 > **Power Roll:** 2d10 + Persona.
 >
-> | Tier | Effect |
+> | Result | Effect |
 > |---|---|
 > | low (≤11) | No damage. |
 > | middle (12–16) | 2 + Persona holy or corruption damage (by pact). |
@@ -151,7 +151,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 > **Violence Will Not Aid Thee**
 > *Main Action · Ranged strike (dist 10) · Target: 1 creature*
-> **Power Roll:** 2d10 + Persona. Lightning-flavored (or holy/corruption, Director's call per pact) damage, and the next time the target deals damage this encounter, it takes **retributive damage equal to the original hit's tier value** — the patron turns the enemy's own violence back on them.
+> **Power Roll:** 2d10 + Persona. Lightning-flavored (or holy/corruption, Director's call per pact) damage, and the next time the target deals damage this encounter, it takes **retributive damage equal to the original hit's Power Roll result value** — the patron turns the enemy's own violence back on them.
 
 ### 5-Cost Band (chosen at 1st level)
 
@@ -176,7 +176,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 > **Faith Is Our Armor**
 > *Main Action · Ranged, dist 10 · Target: up to 4 allies*
-> No Power Roll. Each target gains **temporary Stamina** (5/10/15 scaling by your tier — light/medium/heavy band).
+> No Power Roll. Each target gains **temporary Stamina** (5/10/15 scaling by your echelon — light/medium/heavy band).
 
 > **Sermon of Grace**
 > *Main Action · Area burst 4 · Target: allies in burst*
@@ -184,7 +184,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 ### 7-Cost Band (chosen at 3rd level) — includes Invoke the Pact
 
-*This band is headlined by **Invoke the Pact**, the class's defining high-Conviction working. Full mechanics are broken out in their own section immediately below this tier list — see "Invoke the Pact — Deep Dive."*
+*This band is headlined by **Invoke the Pact**, the class's defining high-Conviction working. Full mechanics are broken out in their own section immediately below this cost-band list — see "Invoke the Pact — Deep Dive."*
 
 > **Invoke the Pact** — *see the full Deep Dive section below.*
 
@@ -261,7 +261,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 **Failed-Bind Consequence (asymmetric per pact):**
 
 - **Light pact:** the summoned entity **vanishes without effect** — your patron simply declines to answer, or the summons slips back across the Veil before it can manifest. You take a **bane on your next power rolls (save ends)** — the disquiet of a prayer that went unanswered.
-- **Dark pact:** the summoned entity **manifests just long enough to strike you once, at the entity's tier's damage,** before departing back across the Veil. Your patron's aid always costs something, even — especially — when it goes wrong.
+- **Dark pact:** the summoned entity **manifests just long enough to strike you once, for damage at the entity's rank,** before departing back across the Veil. Your patron's aid always costs something, even — especially — when it goes wrong.
 
 **Sustaining the independent form** costs **Persistent 2** (−4 Conviction/turn while sustained). The extension form has no ongoing sustain cost beyond the initial 7-Conviction spend; it simply expires at the end of the encounter or when you choose to release it.
 
@@ -302,17 +302,17 @@ The crew's lifeline. Bonus to **healing and warding** — stronger Recovery-gran
 | Level | Feature | Effect |
 |---|---|---|
 | **1** | **Warden's Grace** | Whenever you use Lay On Hands / Word of Comfort, the target's Recovery restores **bonus Stamina** on top of the normal value (Director's table reference). |
-| **1** | Subclass ability (choose 1) | See Shepherd Ability Table, below (1st-tier options). |
-| **2** | Subclass ability slot | Choose a 2nd-tier Shepherd ability. |
+| **1** | Subclass ability (choose 1) | See Shepherd Ability Table, below (1st-level options). |
+| **2** | Subclass ability slot | Choose a 2nd-level Shepherd ability. |
 | **4** | **Ward Anchor** | Sanctuary Ward, and every persistent ally-buffing zone you sustain, costs **1 less Conviction/turn to sustain** (minimum 1). |
 | **5** | Subclass power bump | Your healing and warding heroic abilities (My Life For Yours, Sanctuary Ward, Faith Is Our Armor, Sermon of Grace) increase in magnitude by one band (Director's table). |
-| **6** | Subclass ability slot | Choose a 6th-tier Shepherd ability. |
+| **6** | Subclass ability slot | Choose a 6th-level Shepherd ability. |
 | **7** | **Guardian's Voice** | Sermon of Grace (or any Sermon-of-Grace-style buff) either costs **1 less Conviction** or gains **+2 range/area**, your choice each time you cast it. |
 | **8** | Subclass power bump | Warden's Grace's bonus Stamina increases again; Ward Anchor's discount extends to Invoke the Pact's Persistent-2 sustain cost as well. |
-| **9** | Subclass ability slot | Choose a 9th-tier Shepherd ability (apex). |
+| **9** | Subclass ability slot | Choose a 9th-level Shepherd ability (apex). |
 
 **Shepherd Ability Table**
-| Tier | Ability | Effect |
+| Level | Ability | Effect |
 |---|---|---|
 | 1 | **Steady Hand** | Lay On Hands can target 2 allies instead of 1 for +1 Conviction. |
 | 1 | **Ward-Sense** | Sense the Veil / Discern Spirits also detects the nearest hostile ward or trap within Reach. |
@@ -331,17 +331,17 @@ The holy warrior. Bonus to **smiting damage and frontline durability** — highe
 | Level | Feature | Effect |
 |---|---|---|
 | **1** | **Judgment** | Mark one enemy as under Judgment (see the Judgment section, above, for the full mechanic). |
-| **1** | Subclass ability (choose 1) | See Templar Ability Table, below (1st-tier options). |
-| **2** | Subclass ability slot | Choose a 2nd-tier Templar ability. |
+| **1** | Subclass ability (choose 1) | See Templar Ability Table, below (1st-level options). |
+| **2** | Subclass ability slot | Choose a 2nd-level Templar ability. |
 | **4** | **Righteous Momentum** | Judgment's damage-triggered Conviction bank increases by **+1** (stacking with the base Judgment bonus). |
 | **5** | Subclass power bump | Your smiting heroic abilities (Judgment's Hammer, Curse of Terror, Corruption's Curse, Vessel of Retribution) increase in magnitude by one band (Director's table). |
-| **6** | Subclass ability slot | Choose a 6th-tier Templar ability. |
+| **6** | Subclass ability slot | Choose a 6th-level Templar ability. |
 | **7** | **Blade of the Chosen** | The Consecrated/Damned Weapon class feature (normally granted at 9th level, see Core Class Features) triggers **two levels early**, at 7th instead of 9th. |
 | **8** | Subclass power bump | Judgment can be applied to a second target simultaneously (splitting its Conviction-bank benefit between the two marks). |
-| **9** | Subclass ability slot | Choose a 9th-tier Templar ability (apex). |
+| **9** | Subclass ability slot | Choose a 9th-level Templar ability (apex). |
 
 **Templar Ability Table**
-| Tier | Ability | Effect |
+| Level | Ability | Effect |
 |---|---|---|
 | 1 | **Zealous Strike** | Smite/Rebuke deals +1 damage per Power Roll result band when the target is under Judgment. |
 | 1 | **Iron Faith** | +1 to Stamina per level while you have at least 1 Conviction banked. |
@@ -360,17 +360,17 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 | Level | Feature | Effect |
 |---|---|---|
 | **1** | **Discerning Eye** | Sense the Veil / Discern Spirits is enhanced: on high (17+), you also learn a hostile spirit's **true name** (setting up an edge on a later Banish), and your reads always distinguish willingly-bound from coerced/hostile entities. |
-| **1** | Subclass ability (choose 1) | See Exorcist Ability Table, below (1st-tier options). |
-| **2** | Subclass ability slot | Choose a 2nd-tier Exorcist ability. |
+| **1** | Subclass ability (choose 1) | See Exorcist Ability Table, below (1st-level options). |
+| **2** | Subclass ability slot | Choose a 2nd-level Exorcist ability. |
 | **4** | **Bound to Silence** | Your Banish verb (and any heroic ability that banishes or dispels) may add a **save-ends** rider to a hostile spirit-type or corrupted target — silenced, restrained, or unable to manifest, Director's choice matching fiction. |
 | **5** | Subclass power bump | Your anti-spirit heroic abilities gain an **edge** when targeting spirit-type, undead, or corrupted creatures specifically (Director's table). |
-| **6** | Subclass ability slot | Choose a 6th-tier Exorcist ability. |
+| **6** | Subclass ability slot | Choose a 6th-level Exorcist ability. |
 | **7** | **Chain of Names** | Invoke the Pact's Bind Check costs **2 less Conviction (minimum 5)** when the target of the working is a hostile spirit you are attempting to bind/banish rather than summon as an ally. |
 | **8** | Subclass power bump | Bound to Silence's save-ends rider can now also suppress a hostile working (a curse, a possession, an active summon) for its duration, not just silence the entity itself. |
-| **9** | Subclass ability slot | Choose a 9th-tier Exorcist ability (apex). |
+| **9** | Subclass ability slot | Choose a 9th-level Exorcist ability (apex). |
 
 **Exorcist Ability Table**
-| Tier | Ability | Effect |
+| Level | Ability | Effect |
 |---|---|---|
 | 1 | **Ward Against Incursion** | Sanctuary Ward gains a bonus effect: hostile spirits attempting to manifest or cross into the ward take corruption damage equal to your Persona. |
 | 1 | **Marked for Banishment** | Once per round, when you hit a spirit-type or corrupted creature with Smite/Rebuke, mark it — your next hit against the mark gains an edge. |
@@ -378,7 +378,7 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 | 2 | **Hunter's Bind** | Your hunting/binding spirit (Invoke the Pact, extension form) gains an edge on any roll made specifically to track or restrain a spirit-type target. |
 | 6 | **Severing Word** | Fear of the Gods, cast against a spirit-type or corrupted target, also ends one of that target's ongoing summon/bind effects. |
 | 6 | **Unbroken Circle** | Sanctuary Ward's Persistent-1 sustain cost drops to 0 for the first round each encounter that you sustain it against an active spirit incursion. |
-| 9 | **The Last Rite** | Once per encounter, spend any amount of Conviction (minimum 5) to attempt an immediate Banish against any spirit-type or corrupted creature within range, regardless of its tier, as a free action. |
+| 9 | **The Last Rite** | Once per encounter, spend any amount of Conviction (minimum 5) to attempt an immediate Banish against any spirit-type or corrupted creature within range, regardless of its rank, as a free action. |
 
 ---
 
@@ -409,9 +409,9 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 - **Prayer Gamble** (1st) — The d6 mechanic layered on top of the Conviction drip. See Conviction, above.
 - **Priest's Ward** (1st) — Passive. A small, always-on persistent temporary-Stamina hedge on yourself: at the start of each of your turns, if you have no other persistent working active, you gain a trivial amount of temporary Stamina (Director's table — a "you always have a little cushion" feature, not a big number). This is your baseline safety net, distinct from Sanctuary Ward, which is a spendable heroic ability.
 - **The Roster of the Saved / The Ledger of the Damned** (2nd, renamed by pact — Light priests use "Roster," Dark priests use "Ledger") — Passive situational-awareness power. Once per encounter, as a free action, you may ask the Director one factual question about a creature's alignment relative to your pact's morality (is this person innocent? complicit? marked by the patron already?) — a narrative intel tool that also sets up Judgment (Templar) and Discerning Eye (Exorcist) picks.
-- **Minor Miracle** (3rd) — Once per encounter, spend a Recovery to bend a single outcome: reroll one Power Roll (yours or an ally's within range), or downgrade one Power Roll result by one step (low becomes middle, middle becomes high) on a roll that just happened.
+- **Minor Miracle** (3rd) — Once per encounter, spend a Recovery to bend a single outcome: reroll one Power Roll (yours or an ally's within range), or upgrade one Power Roll result by one step (low becomes middle, middle becomes high) on a roll that just happened.
 - **Deepened Subclass** (4th) — Passive mechanical bump to your subclass's existing features — the exact numeric increase is defined per-subclass in each ministry's own table, above (Ward Anchor, Righteous Momentum, Bound to Silence all key off this level).
-- **Burgeoning Saint / Rising Adept** (6th, renamed by pact) — Passive. Your Conviction cap increases by an additional +2 on top of the normal tier progression, and the Prayer Gamble's "5-6" result additionally grants you 1 surge.
+- **Burgeoning Saint / Rising Adept** (6th, renamed by pact) — Passive. Your Conviction cap increases by an additional +2 on top of the normal echelon progression, and the Prayer Gamble's "5-6" result additionally grants you 1 surge.
 - **Pact's Favor** (7th) — Once per session (not per encounter), your patron intervenes directly for a small favor outside of combat — a piece of information, a door that's unlocked when you arrive, a witness who suddenly remembers something useful. Director-adjudicated, narrative in scope, never a combat-turn effect.
 - **Consecrated Weapon / Damned Weapon** (9th, renamed by pact) — Passive. Your weapon attacks (via Kit or otherwise) carry a permanent bonus-damage rider of holy (Light) or corruption (Dark) damage, equal to your Persona bonus. *Templars gain this two levels early (7th) via Blade of the Chosen — see the Templar subclass table.*
 - **Ordained / Sworn** (9th, renamed by pact) — A permanent title with narrative weight (Ordained for Light, Sworn for Dark) and one mechanical perk of your choice from the standard Perk list, gained specifically for reaching this milestone in your patron's eyes.
@@ -427,16 +427,16 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 
 **Foci over chrome.** Like the Elementalist, the Street Priest's gear footprint is **foci** — reliquaries, blessed symbols, consecrated censers, warding seals — bought with **nuyen (¥)** and improved through the Economy's modification subsystem, *not* chrome. The **6B — Street-Priest foci** table (Conviction/Persona):
 
-| Item (slang / corp / sci) | Tier | Avail | Cost ¥ | Benefit | Mod Slots · Tags |
+| Item (slang / corp / sci) | Availability | Echelon | Cost ¥ | Benefit | Mod Slots · Tags |
 |---|---|---|---|---|---|
-| **Prayer-bead / Rosarium / devotional focus string** | Avail. street | 5 | ¥200 | An edge on the prayer gamble (the pre-roll faith die); the acolyte's first focus, worn openly. | 1 · Veil, Faith |
-| **Creed-brand / Fidei Sigil / conviction-anchor seal** | Avail. street | 5 | ¥300 | Steadies the Conviction drip against a bad prayer result (softens backlash on the gamble's worst outcome). | 1 · Veil, Faith |
-| **Censer / Thuribulum / sanctified aerosol focus** | Avail. professional | 4 | ¥750 | An edge on warding/blessing workings and helps sustain a warded zone (the Shepherd's ground). | 2 · Veil, Ward |
-| **Judgment-mark / Iudex Brand / anathema focus-iron** | Avail. professional | 4 | ¥1,000 | An edge on the Templar's Judgment mark and its Conviction feedback; **Templar-flavored.** | 2 · Veil, Judgment |
-| **Reliquary / Sanctum Vessel / consecrated relic-housing** | Avail. specialist | 3 | ¥3,000 | An edge on healing/support invocations (the Shepherd) *or* anti-spirit rites (the Exorcist); houses a splinter of the pact's power. | 3 · Veil, Faith |
-| **Pact-seal / Foedus Sigil / covenant-manifestation seal** | Avail. milspec | 2 | ¥10,000 | An edge on Invoke the Pact and helps sustain the manifested aid at lower ongoing Conviction. | 4 · Veil, Summon |
-| **Exorcist's chain / Malleus Vinculum / abjuration binding-focus** | Avail. milspec | 2 | ¥11,000 | An edge on banishing and anti-corruption rites; the **Exorcist's signature tool** against hostile spirits. | 4 · Veil, Ward |
-| **Saint's relic / Numen Cor / apex covenant reliquary** | Avail. prototype | 1 | ¥22,000 | The Street Priest's masterwork: a broad edge across invocation, warding, and the pact, and the readiest signature-focus bond candidate (the bond deepens it). The Price still applies. | 5 · Veil, Signature-capable |
+| **Prayer-bead / Rosarium / devotional focus string** | Street | 1 | ¥200 | An edge on the prayer gamble (the pre-roll faith die); the acolyte's first focus, worn openly. | 1 · Veil, Faith |
+| **Creed-brand / Fidei Sigil / conviction-anchor seal** | Street | 1 | ¥300 | Steadies the Conviction drip against a bad prayer result (softens backlash on the gamble's worst outcome). | 1 · Veil, Faith |
+| **Censer / Thuribulum / sanctified aerosol focus** | Professional | 1 | ¥750 | An edge on warding/blessing workings and helps sustain a warded zone (the Shepherd's ground). | 2 · Veil, Ward |
+| **Judgment-mark / Iudex Brand / anathema focus-iron** | Professional | 1 | ¥1,000 | An edge on the Templar's Judgment mark and its Conviction feedback; **Templar-flavored.** | 2 · Veil, Judgment |
+| **Reliquary / Sanctum Vessel / consecrated relic-housing** | Specialist | 2 | ¥3,000 | An edge on healing/support invocations (the Shepherd) *or* anti-spirit rites (the Exorcist); houses a splinter of the pact's power. | 3 · Veil, Faith |
+| **Pact-seal / Foedus Sigil / covenant-manifestation seal** | Milspec | 3 | ¥10,000 | An edge on Invoke the Pact and helps sustain the manifested aid at lower ongoing Conviction. | 4 · Veil, Summon |
+| **Exorcist's chain / Malleus Vinculum / abjuration binding-focus** | Milspec | 3 | ¥11,000 | An edge on banishing and anti-corruption rites; the **Exorcist's signature tool** against hostile spirits. | 4 · Veil, Ward |
+| **Saint's relic / Numen Cor / apex covenant reliquary** | Prototype | 4 | ¥22,000 | The Street Priest's masterwork: a broad edge across invocation, warding, and the pact, and the readiest signature-focus bond candidate (the bond deepens it). The Price still applies. | 5 · Veil, Signature-capable |
 
 **Chrome erosion rule.** Chrome reduces your **Conviction cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). It represents the pact itself growing thinner as your body fills with machine parts. A Street Priest who chromes up heavily can erode their Conviction cap to nothing, at which point the class stops functioning as a caster (Director's call on whether the pact is broken). Cyborgs cannot invoke pacts.
 

@@ -14,8 +14,8 @@
 
 ## A. Book-wide decisions
 
-1. **Copyright check — ancestry trait text.** Many purchased-trait and signature descriptions in `05-ancestries.md` follow Draw Steel Heroes wording closely (for example Detect the Supernatural and Staying Power). Several class abilities also carry Heroes-adapted text (Operator 7/9/11-cost bands). Confirm the Creator License covers this, or rewrite in original wording.
-2. **License attribution statement** is a placeholder in `00-front-matter.md`. Insert MCDM’s required Draw Steel Creator License wording.
+1. **DEFERRED — Pass B (A1): DS-compatible trait wording may stand for now; optional original-voice pass later.** **Copyright check — ancestry trait text.** Many purchased-trait and signature descriptions in `05-ancestries.md` follow Draw Steel Heroes wording closely (for example Detect the Supernatural and Staying Power). Several class abilities also carry Heroes-adapted text (Operator 7/9/11-cost bands). Confirm the Creator License covers this, or rewrite in original wording.
+2. **DONE — Pass B (B42d).** **License attribution statement** is a placeholder in `00-front-matter.md`. Insert MCDM’s required Draw Steel Creator License wording.
 3. **DONE — Pass A (B42c).** **Body Integrity contradiction.** `09-chrome-body-integrity.md` says every living hero starts at **20**. The Operator, Elementalist, and Hacker chrome sections — and the old Wire text — used **`6 + Physique + Echelon`** (removed from `21`, still implied in class chrome notes). Pick one.
 4. **DONE — Pass A (B42c).** **Chrome grades.** Chrome uses Salvage / Standard / Soft. The Hacker chrome section uses “E1 Salvage / E2 Standard / E3 Milspec / E4 Bioware.” Pick one scheme.
 5. **DONE — Pass A (B42c).** **Magic erosion model.** Chrome chapter: −1 cap per 2 / 3 / 1 Integrity by grade. Technomancer: “beyond a free allowance of 2.” Street Priest: “chrome-load essence above a sliver” (unit undefined). Decide whether casters share one model.
@@ -25,9 +25,9 @@
 9. **DONE — Pass A (B42c).** **Gear damage tags vs Draw Steel damage types.** Gear tags damage kinetic / AP / electrical / fire / toxin; Draw Steel types are acid, cold, corruption, fire, holy, lightning, poison, psychic, sonic. Confirm the mapping (electrical → lightning? toxin → poison? kinetic and AP → untyped?).
 10. **DONE — Pass A (B42c).** **Weapon damage bands.** The Gear master says weapon base damage is “the Tier-2 standard hit” and is scaled by old Outcome-Tier riders (inverted language). `08` prints only the base bands. Decide how result bands scale weapon base damage in Draw Steel order.
 11. **DONE — Pass A (B42c).** **Armor-as-Stamina has two Echelon 1 columns** (Street and Professional). Decide which one a 1st–3rd level hero uses.
-12. **Remaining tier language** (means echelon, cost band, or result) — see chapter lists below. Also the Technomancer’s “Hybrid Tier” sprite grammar and “Cost Tiers” headings.
-13. **Inverted echelon or result order** appears in several abilities (flagged below).
-14. **DC-based saves and to-hit language** (Technomancer sprites and biofeedback, Wrench “+1 to hit”) don’t match Draw Steel. Convert to potency / saving throw / edge-bane.
+12. **DONE — Pass B (B42d).** **Remaining tier language** (means echelon, cost band, or result) — see chapter lists below. Also the Technomancer’s “Hybrid Tier” sprite grammar and “Cost Tiers” headings.
+13. **DONE — Pass B (B42d).** **Inverted echelon or result order** appears in several abilities (flagged below).
+14. **DONE — Pass B (B42d).** **DC-based saves and to-hit language** (Technomancer sprites and biofeedback, Wrench “+1 to hit”) don’t match Draw Steel. Convert to potency / saving throw / edge-bane.
 15. **Missing shared chapters** that class text points to: Followers & Contacts, Lifestyle, Downtime Projects (beyond §Craft), a full Veil chapter (spirit ranks, “Veil §C3”), vehicle-combat ramming detail, hostile-environment rules.
 
 ---
@@ -223,3 +223,42 @@
 - Species master: retired BP pool costs relabelled **Minor / Standard / Signature** (legacy 2 / 4 / 6); `09-species` now says ancestry points are the only species budget. Confirm the relabel.
 - Class development masters still carry BP firewall wording and non-weapon Outcome-Tier ability text (dev history; A12 backlog).
 - `Corp-Milspec` (Operator subclass name) and “Avail. milspec” item labels kept — Availability, not chrome grade.
+
+---
+
+## Pass B — LOCKED 2026-09-17 (Michael)
+
+| # | Decision |
+|---|---|
+| A2 | Insert required Creator License attribution in `docs/raw/00-front-matter.md` (and keep for PDF/storefront later): **“Draw Steel - Ghostwire Build is an independent product published under the DRAW STEEL Creator License and is not affiliated with MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.”** Link reference: https://mcdm.gg/ds-license / https://www.mcdmproductions.com/draw-steel-creator-license |
+| A1 | **No full ancestry rewrite this pass.** Under Creator License, DS-compatible trait wording may remain for now; flag A1 as **deferred** (optional original-voice pass later). Do not paste new long Heroes excerpts. |
+| A12 | Scrub remaining **tier** language: say **echelon**, **cost band** (1–5 / 7 / 9 / 11), **Power Roll result** (low/middle/high), or **Node Rating** — never bare “tier.” Technomancer “Hybrid Tier” → **hybrid band** (or “sprite rank”); “Cost Tiers” → **cost bands**. |
+| A13 | Fix **inverted** echelon or result order wherever still present (print low→high / E1→E4). |
+| A14 | Convert **DC saves** and **“+1 to hit”** / attack-vs-defense language to Draw Steel **potency / saving throws / edge–bane**. Especially Technomancer sprites + biofeedback, Wrench Rigged Fire. |
+
+**Out of Pass B:** A15 missing chapters (Followers, Lifestyle, full Veil, etc.) → later content pass. Class holes with missing numbers (Priest damage, Wrench estimates) → Pass C.
+
+### Pass B — applied 2026-09-17 (B42d, pending Michael review)
+
+| # | Status | What changed |
+|---|---|---|
+| A2 | **Done** | `00-front-matter` carries the exact Creator License statement, plus a note that the compatibility logo is allowed but not required (no logo asset this pass). |
+| A1 | **Deferred** | No ancestry rewrite. `05-ancestries` untouched. |
+| A12 | **Done** | Bare “tier” gone from `13`–`21`. Now: **echelon** (hero progression), **cost band** (ability costs), **Power Roll result** (outcomes), **Node Rating** (Wired), **Level** (subclass table columns), **sprite rank** / **hybrid band** (Technomancer), **Crash step** (Medic), **chassis band** / **Nuyen cost band** (Wrench), **rank** (Veil entities). |
+| A13 | **Done** | Commander’s six high→low ability tables now print low / middle / high. Descending echelon ladders relabelled E1→E4 (Scout Range Discipline, Street Priest Conviction cap, Elementalist Burn On / Kinetic Enlargement / Rolling Thunder / Riptide Grab / Stone Shield; “Echelon 5” dropped). Medic Minor Miracle “downgrade” → “upgrade”. **No values changed, only their labels.** |
+| A14 | **Done** | Technomancer biofeedback DCs → Draw Steel tests (5-cost easy · 7-cost medium · 9-cost hard · 11-cost hard with a bane; discipline DC∓2 → edge / bane). Enemy DC saves → potency (`Persona < STRONG`). Sprite attack-vs-defense and “flat 10 defense” → strikes with no defense numbers. Wrench Rigged Fire “+1 to hit” → edge. Wire “Breach DC” → **Breach difficulty** (R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane). Commander “5-focus/9-focus/11-focus” → Influence. |
+
+**Locked label conversions (legacy item tier → echelon, per `10-mods` 5→1, 4→1, 3→2, 2→3, 1→4):** Street Priest foci table (8 rows) and Medic consumables table (5 rows); both tables also had their swapped **Availability** / **Echelon** columns fixed. Prices and benefits unchanged.
+
+**Allowed leftovers:** the legacy-conversion notes themselves (`24-advancement`, `10-mods`, `25-opposition`, `00-INDEX`, `08`, `00-front-matter` / `01` “no tier ladder”), `08`’s “no to-hit-versus-defense roll” statement, and one in-fiction place name (“the chop-shop on Fourth Tier”, `16-wrench`).
+
+**Journals:** `tools/raw-to-journals.mjs` + `build-packs.mjs` re-run; module 0.1.57.
+
+### Pass C backlog (found during Pass B, not fixed — missing numbers and rules holes)
+- **Street Priest:** no damage values on Smite/Rebuke, Call the Thunder Down, Penance, Beacon of Grace, Drag the Unworthy; Faith Is Our Armor prints 3 values for 4 echelons; Invoke the Pact defers to a Veil §C3 that doesn’t exist; Judgment / Warden’s Grace / Priest’s Ward amounts undefined.
+- **Medic:** Toxic Cloud, Chemical Warfare, Nerve Agent, Full Kit Purge, Chemical Interrogation magnitudes; restock cost; Field Synthesis “½ step”; Nano-Adrenal “burn 30 Reagents” over the 8th-level cap.
+- **Technomancer:** Sprite HP “rank” is an undefined unit; Ward-sprite “+1/+2 defense” and Harmonic Adjustment “+2 defense” need a Draw Steel equivalent; attack-sprite has one damage line and no result spread; Decompile benchmark contradicts the sprite table; Winded-instead-of-Dying; sprites rolling their own initiative; Compile Sprite free vs 3 Resonance.
+- **Elementalist:** five 9th-level specialization abilities cost 11 while the 11-cost band unlocks at 8th; World-Fissure duplicated; Essence cap possible double count.
+- **Wrench:** “four cost tracks” vs five table rows; Jump-In “moderate difficulty”; d6 and flat-threshold rolls (Unbreakable Hive, Systems Purge); Turn the Building / The Building Remembers each defined twice.
+- **Commander:** missing action types; “Skill Points”; Master of Voice 3d10-keep-2; worked example misapplies The Right Word.
+- **Book-wide:** flat “+1 / +2 to a roll” bonuses that Draw Steel would express as edge / bane (Medic, Wrench, Commander Kit and feature lines) — not covered by A14 as written.

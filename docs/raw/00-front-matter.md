@@ -19,7 +19,11 @@ Ghostwire is a cyberpunk game that runs on the **Draw Steel** engine. Where Draw
 - **Ghostwire systems** (Peoples, Kits and gear, chrome, mods, perks, classes, the Wire, the Veil, machines) are written out in full.
 - When this book and Draw Steel Heroes disagree, **this book wins** for Ghostwire play.
 
-**License and attribution:** Ghostwire uses Draw Steel under the Draw Steel Creator License. The required attribution statement must appear here before publication.
+**License and attribution:**
+
+> Draw Steel - Ghostwire Build is an independent product published under the DRAW STEEL Creator License and is not affiliated with MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.
+
+This statement appears in every published form of this book. The Draw Steel compatibility logo is permitted and encouraged, but not required, and no logo art ships with this draft.
 
 ## How to use this book
 

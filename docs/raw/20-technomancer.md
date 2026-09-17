@@ -68,13 +68,13 @@ Sprites are your summoned companions. A sprite is **compiled from Resonance on t
 A quick, thin thread of code that slips ahead of the congregation to read the field before anyone else does.
 - Grants an **edge** on Search, Scan, Breach, or Command rolls made by the Technomancer or any ally directing it.
 - Can act as a spotter: allies gain an **edge on Power Rolls** against a target the Data-sprite has scanned this round.
-- Lowest Sprite HP tier of the four archetypes — built for information, not endurance.
+- Lowest Sprite HP rank of the four archetypes — built for information, not endurance.
 
 **Attack-sprite** — the congregation's damage
 The bite in the swarm. Jacked into a device or striking directly across the Wired, it hits both digital and (through a device or a jacked target) physical foes.
-- Standard weapon-equivalent damage die: **Power Roll + Logic** vs. the target's Wired defense (a wired target) or Reflex defense (a target reached through a device or jack).
+- Strikes as a standard weapon-equivalent attack: **Power Roll + Logic** against one target (a wired target directly, or a flesh target reached through a device or jack).
 - Baseline damage: **2d10 + Logic**, following the shared GHOSTWIRE strike-damage convention.
-- Highest Sprite HP tier among the four when directed by a Resonance-Warrior.
+- Highest Sprite HP rank among the four when directed by a Resonance-Warrior.
 
 **Machine-sprite** — the mender
 The congregation's healer.
@@ -84,13 +84,13 @@ The congregation's healer.
 
 **Ward-sprite** — the shield
 A standing harmonic wrapped around the Technomancer's own exposed body.
-- Grants the Technomancer (and, at higher tiers, nearby allies) a **defense bonus against Wired and EW attacks** while adjacent or in Wired range.
+- Grants the Technomancer (and, at higher sprite ranks, nearby allies) a **defense bonus against Wired and EW attacks** while adjacent or in Wired range.
 - Resists ICE and electronic-warfare effects on the Technomancer's behalf.
 - The screen that keeps a fragile, communion-focused caster alive — the Technomancer's answer to the Wrench's fielded-fleet cover.
 
-### Sprite Stat Block Reference (by Hybrid Tier)
+### Sprite Stat Block Reference (by Hybrid Band)
 
-Each archetype scales along the same hybrid-by-tier ladder described below, but its numbers move independently by archetype. The table gives the benchmark Sprite HP, attack/effect bonus, and defense for each archetype at each tier band.
+Each archetype scales along the same hybrid band ladder described below, but its numbers move independently by archetype. The table gives the benchmark Sprite HP, attack/effect bonus, and defense for each archetype at each sprite rank.
 
 | Archetype | Minor (L1-3) Sprite HP | Minor Bonus | Intermediate (L4-7) Sprite HP | Intermediate Bonus | Advanced (L8-10) Sprite HP | Advanced Bonus |
 |---|---|---|---|---|---|---|
@@ -101,17 +101,17 @@ Each archetype scales along the same hybrid-by-tier ladder described below, but 
 
 *Reading the table:* a 4th-level Technomancer's Attack-sprite (now intermediate) has 18 + (Logic × 4) Sprite HP and deals 2d10 + Logic + 1d6 on a hit — a meaningful jump from the 1st-3rd level minor version, reflecting that intermediate sprites have crossed into acting on their own initiative and are correspondingly more durable and more dangerous.
 
-**Sprite defenses (all archetypes, all tiers):** unless an archetype's bonus column says otherwise, every sprite uses the Technomancer's own Persona (Presence) score as its baseline Wired defense, and a flat 10 as its baseline Reflex/Physique defense (sprites are code, not flesh — physical attacks that can even target them at all do so at a standing disadvantage). A Ward-sprite's own defense bonus stacks on top of this baseline for whoever it's shielding, not for itself.
+**Sprite defenses (all archetypes, all ranks):** sprites are code, not flesh. Wired and EW attacks reach a sprite normally; a physical strike that can target a sprite at all is made with a **bane**. A Ward-sprite's own defense bonus applies to whoever it's shielding, not to itself.
 
-### Hybrid-by-Tier Grammar
+### Hybrid Band Grammar
 
-The Technomancer's sprites follow the same "extension vs. independent" ladder the Veil chapter uses for summons:
+The Technomancer's sprites follow the same "extension vs. independent" ladder the Veil chapter uses for summons. Each step on that ladder is a **sprite rank**:
 
-| Tier | Levels | Behavior |
+| Rank | Levels | Behavior |
 |---|---|---|
 | **Minor (extension)** | 1-3 | Sprites act **as extensions of the Technomancer** — on the Technomancer's own turn, sharing the Technomancer's intent. No separate initiative. This is the Compile Sprite signature's default mode. |
 | **Intermediate (commanded)** | 4-7 | Sprites act **on their own turn**, but only within standing command orders — a Compile Sprite maneuver-command must be issued each round to keep an intermediate sprite acting autonomously that round. |
-| **Advanced (independent)** | 8-10 | Sprites are **genuinely independent** — they roll their own initiative. This is the payoff tier: by the time a Technomancer reaches 8th level, their congregation is no longer just an extension of them, but a small crew of ghosts fighting alongside them. |
+| **Advanced (independent)** | 8-10 | Sprites are **genuinely independent** — they roll their own initiative. This is the payoff rank: by the time a Technomancer reaches 8th level, their congregation is no longer just an extension of them, but a small crew of ghosts fighting alongside them. |
 
 **Sprites acting on the Technomancer's own turn never trigger biofeedback for the Technomancer** — they are the buffer between the caster and the wire, precisely because they haven't yet become independent enough to feed anything back.
 
@@ -128,21 +128,21 @@ A sprite decompiles when:
 
 Overreach into the Wired's spirit world bites back — but not as hard as it bites a full Veil caster, and it can never actually kill you on its own.
 
-- **Only Resonance abilities of cost 5 or higher trigger a biofeedback risk.** Anything cheaper — signatures, the 1-cost and 3-cost tiers — is safe.
-- When you spend 5+ Resonance on a single ability, make a **Physique (Might) save**. The DC scales with the ability's cost:
+- **Only Resonance abilities of cost 5 or higher trigger a biofeedback risk.** Anything cheaper — signatures, the 1-cost and 3-cost bands — is safe.
+- When you spend 5+ Resonance on a single ability, make a **Physique (Might) test**. A biofeedback test is an ordinary Draw Steel test and uses Draw Steel's own test difficulties by reference (easy / medium / hard); the ability's cost band sets the difficulty:
 
-| Ability Cost | Biofeedback Save DC |
+| Ability Cost | Biofeedback Test |
 |---|---|
-| 5-cost | DC 12 |
-| 7-cost | DC 15 |
-| 9-cost | DC 18 |
-| 11-cost | DC 20 |
+| 5-cost | Easy Physique test |
+| 7-cost | Medium Physique test |
+| 9-cost | Hard Physique test |
+| 11-cost | Hard Physique test, with a bane |
 
-- **On a successful save:** no effect. The ability resolves normally either way.
-- **On a failed save:** you take **Persona-score damage** (this damage bypasses shields and temporary Stamina — it's your own current biting back, not an external attack), and the ability still resolves fully.
+- **On a success:** no effect. The ability resolves normally either way.
+- **On a failure:** you take **Persona-score damage** (this damage bypasses shields and temporary Stamina — it's your own current biting back, not an external attack), and the ability still resolves fully.
 - **0-Stamina consequence:** if biofeedback damage drops you to 0 Stamina, you become **Winded** instead of Dying. While Winded this way, you regain 1 Stamina per turn until stabilized, and you are not at risk of death from your own overreach — only external damage can kill a Technomancer outright.
-- **Discipline modifiers:** Sprite-Weaver saves at **DC−2** across the whole ladder. Resonance-Warrior saves at **DC+2** across the ladder.
-- **Sprites acting on the Technomancer's own turn (the minor/extension tier) never trigger biofeedback for the Technomancer** — the buffer holds until a sprite goes independent.
+- **Discipline modifiers:** a Sprite-Weaver rolls every biofeedback test with an **edge**. A Resonance-Warrior rolls every biofeedback test with a **bane** — on an 11-cost ability that stacks with the band's own bane, so the Resonance-Warrior tests with a **double bane**.
+- **Sprites acting on the Technomancer's own turn (the minor/extension rank) never trigger biofeedback for the Technomancer** — the buffer holds until a sprite goes independent.
 
 ---
 
@@ -174,21 +174,21 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 
 ---
 
-## Heroic Abilities — Cost Tiers 1 Through 11
+## Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier as you level, layered on top of the always-on Signature kit above. Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
+Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
 
-### 1-Cost Tier (chosen at 1st level)
+### 1-Cost Band (chosen at 1st level)
 
 > **Recompile** *(1 Resonance, maneuver)*
 > Instant congregation flexibility. **Reshape a compiled sprite** (Data → Attack, Attack → Ward, etc.) to meet the moment, **or** instantly **recompile a just-destroyed sprite** at reduced power.
 > *The low-cost adaptability tool — the shaman who always has the right ghost to hand.*
 
 > **Harmonic Adjustment** *(1 Resonance, maneuver)*
-> Grant a compiled sprite **one** of: **+1 to its attack roll this turn**, **+2 to its defense until the end of your next turn**, or a **free shift** up to its full movement.
+> Grant a compiled sprite **one** of: an **edge on its Power Roll this turn**, **+2 to its defense until the end of your next turn**, or a **free shift** up to its full movement.
 > *A cheap nudge — the shaman correcting a ghost's aim or footing mid-fight.*
 
-### 3-Cost Tier (chosen at 1st level)
+### 3-Cost Band (chosen at 1st level)
 
 > **Swarm the Signal** *(3 Resonance, main action)*
 > **Every sprite you command** takes an action at once against a single target or objective — all attack one foe, all mend one machine, or all pile onto one node.
@@ -202,80 +202,80 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 > *A thin lash of hostile code that fans out the harder you focus it.*
 
 > **Sprite Redirect** *(3 Resonance, free triggered)*
-> **Trigger:** an ally within Wired range or Ranged 10 is hit by a Wired attack. **Effect:** redirect the attack to one of your compiled sprites — the sprite absorbs the hit, losing one Sprite HP tier in the target's place.
+> **Trigger:** an ally within Wired range or Ranged 10 is hit by a Wired attack. **Effect:** redirect the attack to one of your compiled sprites — the sprite absorbs the hit, losing one Sprite HP rank in the target's place.
 > *Throwing a code-spirit into the path of a bullet meant for a friend.*
 
-### 5-Cost Tier (chosen at 1st level — biofeedback risk begins)
+### 5-Cost Band (chosen at 1st level — biofeedback risk begins)
 
 > **Resonance Ward** *(5 Resonance, main action, sets a stance until your next turn)*
 > Weave a **zone of resonant protection** — deploy Ward-sprites and a standing harmonic. Allies within it gain defenses vs. Wired/EW attacks, chrome and devices are screened from hijack, and you may counter hostile intrusion in the area.
-> ***Biofeedback: DC 12 Physique save.***
+> ***Biofeedback: easy Physique test.***
 
 > **Overclock** *(5 Resonance, main action)*
 > All compiled sprites gain **double actions** this turn (each acts twice). You pour your current into the congregation, forcing them into a temporary frenzy state.
-> ***Biofeedback: DC 12 Physique save.***
+> ***Biofeedback: easy Physique test.***
 
 > **Trance Compile** *(5 Resonance, main action)*
 > Compile **two** new sprites in a single action (any archetype combination from your available list). Both act normally after compiling.
-> ***Biofeedback: DC 12 Physique save.***
+> ***Biofeedback: easy Physique test.***
 
 > **Signal Weave** *(5 Resonance, main action, Ranged 10)*
-> All allies gain **+1 to Wired-based rolls** for the rest of the round, and one enemy of your choice is **glitched** (bane on their next Power Roll). Tuning-forks laid across the battlefield's own signal.
-> ***Biofeedback: DC 12 Physique save.***
+> All allies gain an **edge on Wired-based Power Rolls** for the rest of the round, and one enemy of your choice is **glitched** (bane on their next Power Roll). Tuning-forks laid across the battlefield's own signal.
+> ***Biofeedback: easy Physique test.***
 
-### 7-Cost Tier (chosen at 3rd level) — includes Total Resonance
+### 7-Cost Band (chosen at 3rd level) — includes Total Resonance
 
-*This tier is headlined by **Total Resonance**. Full mechanics are broken out in their own section below — see "Total Resonance — Deep Dive."*
+*This band is headlined by **Total Resonance**. Full mechanics are broken out in their own section below — see "Total Resonance — Deep Dive."*
 
 > **Total Resonance** — *see the full Deep Dive section below.*
 
 > **Cascade Failure** *(7 Resonance, main action, Ranged 10)*
 > All enemies in a 5-cube within Ranged 10 are potential targets: **you make one Power Roll + Logic.** **low (≤11):** only the nearest enemy is affected — takes **Logic × 2 biofeedback damage** and is **stunned, save ends**. **middle (12–16):** up to 2 enemies of your choice — each takes Logic × 2 damage AND is **stunned until end of their next turn**. **high (17+):** up to 4 enemies of your choice in the area — each takes Logic × 2 damage, is **stunned, save ends**, and their next Wired ability **fizzles**.
-> ***Biofeedback: DC 15 Physique save.***
+> ***Biofeedback: medium Physique test.***
 
 > **Sprite Storm** *(7 Resonance, main action)*
 > Compile **3 sprites** in a single action (Sprite-Weaver may compile 4). All compiled sprites strike different targets within Ranged 10 as part of the same action.
-> *A storm of ghost-code, called all at once. **Biofeedback: DC 15 Physique save.***
+> *A storm of ghost-code, called all at once. **Biofeedback: medium Physique test.***
 
 > **Resonance Slam** *(7 Resonance, main action, Melee 1 or Ranged 5)*
 > Choose one mode: **Slam** — one target takes **Logic × 3 damage**, is pushed 3 squares, and is **Winded, save ends**. **Slam Group** — 3-cube within Ranged 5; each enemy in the area takes Logic-score damage and is knocked **prone**.
-> ***Biofeedback: DC 15 Physique save.***
+> ***Biofeedback: medium Physique test.***
 
-### 9-Cost Tier (chosen at 5th level)
+### 9-Cost Band (chosen at 5th level)
 
 > **The Choir Sings Together** *(9 Resonance, main action, Ranged 10, self and up to 2 allies)*
 > Each target gains **temporary Stamina equal to Persona × 2**, and one of your Machine-sprites channels a mending pulse: each target regains a Recovery.
-> *You harmonize the crew's biofeedback into a resonant chord that steels them. **Biofeedback: DC 18 Physique save.***
+> *You harmonize the crew's biofeedback into a resonant chord that steels them. **Biofeedback: hard Physique test.***
 
 > **Rewire Reality** *(9 Resonance, main action, Ranged 5, one enemy or one machine/drone)*
-> Force target to make a **Persona save vs. DC 18**. **On fail:** for the rest of the encounter, treat the target as one of your compiled sprites — it still acts on its own initiative, but you may Command it as a maneuver as if it were a sprite. **On save:** the target takes **Logic × 2 damage** instead.
-> *You briefly hijack a mind or machine into your congregation. **Biofeedback: DC 18 Physique save.***
+> If the target has **Persona < STRONG**, then for the rest of the encounter you treat it as one of your compiled sprites — it still acts on its own initiative, but you may Command it as a maneuver as if it were a sprite. Otherwise, the target takes **Logic × 2 damage** instead.
+> *You briefly hijack a mind or machine into your congregation. **Biofeedback: hard Physique test.***
 
 > **Wired Silence** *(9 Resonance, main action, 5-cube within Ranged 10, Ranged only)*
-> Any Wired-based attack (Hacker, Wrench, Technomancer, or any device or drone) in the area cannot function for the next round. All compiled **hostile** sprites in the area decompile. All **friendly** sprites in the area lose one action tier for the round.
-> ***Biofeedback: DC 18 Physique save.***
+> Any Wired-based attack (Hacker, Wrench, Technomancer, or any device or drone) in the area cannot function for the next round. All compiled **hostile** sprites in the area decompile. All **friendly** sprites in the area drop one sprite rank for the round.
+> ***Biofeedback: hard Physique test.***
 
 > **Bone Deep Communion** *(9 Resonance, main action, self-affecting)*
-> For the rest of the encounter, all of your compiled sprites are treated as **one tier higher** on the hybrid-by-tier ladder (extensions become intermediate, intermediate become advanced, advanced gain +1 Sprite HP tier). Your Resonance drip gains **+1 per turn**.
-> *You abandon the fence and go deep into the current — every sprite becomes more real, and you become more the current's servant. **Biofeedback: DC 18 Physique save on cast AND at the start of each subsequent round.***
+> For the rest of the encounter, all of your compiled sprites are treated as **one sprite rank higher** on the hybrid band ladder (extensions become intermediate, intermediate become advanced, advanced gain +1 Sprite HP rank). Your Resonance drip gains **+1 per turn**.
+> *You abandon the fence and go deep into the current — every sprite becomes more real, and you become more the current's servant. **Biofeedback: hard Physique test on cast AND at the start of each subsequent round.***
 
-### 11-Cost Tier (chosen at 8th level)
+### 11-Cost Band (chosen at 8th level)
 
 > **Sunlight in the Wire** *(11 Resonance, main action, Ranged 10, self, allies, and sprites)*
-> All enemy-controlled sprites within Ranged 10 **decompile**. All allied sprites in the area act at the **highest possible tier** of the hybrid ladder for the rest of the encounter. All allies in the area gain a **Recovery** and **temporary Stamina equal to a Sprite HP tier**.
-> *You become the current itself — the net answers with full illumination. **Biofeedback: DC 20 Physique save; on fail, take Persona × 3 damage.***
+> All enemy-controlled sprites within Ranged 10 **decompile**. All allied sprites in the area act at the **highest possible sprite rank** of the hybrid ladder for the rest of the encounter. All allies in the area gain a **Recovery** and **temporary Stamina equal to a Sprite HP rank**.
+> *You become the current itself — the net answers with full illumination. **Biofeedback: hard Physique test with a bane; on a failure, take Persona × 3 damage.***
 
 > **Machine God's Rite** *(11 Resonance, main action, in-scene ritual, 5 minutes minimum)*
 > Restore **full Stamina** to one Cyborg, one machine, one drone, or up to **3 pieces of chrome** in the party. Cannot be used again on the same target for 24 in-game hours.
-> *The shaman-priest lays resonant hands on the crew's tech-flesh and restores it whole. **Biofeedback: DC 20 Physique save.***
+> *The shaman-priest lays resonant hands on the crew's tech-flesh and restores it whole. **Biofeedback: hard Physique test with a bane.***
 
 > **Recompile Reality** *(11 Resonance, main action, in-scene ritual, 10 minutes minimum)*
 > Undo one significant Wired event from the past scene (a system got locked down; a drone was destroyed; a Cyborg's chrome got hit). Force a re-roll of that event, OR treat the outcome as though it never happened. **Once per session per Technomancer.**
-> *You rewrite the current's memory of what just happened. **Biofeedback: DC 20 Physique save; on fail, take Persona × 3 damage AND lose one Recovery.***
+> *You rewrite the current's memory of what just happened. **Biofeedback: hard Physique test with a bane; on a failure, take Persona × 3 damage AND lose one Recovery.***
 
 > **The Weaver's Web** *(11 Resonance, main action, calls the whole congregation)*
-> Compile **5 sprites** in a single action. All 5 strike different targets within Ranged 10. Each hit target must save vs. **DC 18 Physique** or take **Logic × 3 damage** and become **Winded**.
-> *The summoner's apex — the entire net answers with a coordinated strike. **Biofeedback: DC 20 Physique save.***
+> Compile **5 sprites** in a single action. All 5 strike different targets within Ranged 10. Each target struck that has **Physique < STRONG** takes **Logic × 3 damage** and becomes **Winded**.
+> *The summoner's apex — the entire net answers with a coordinated strike. **Biofeedback: hard Physique test with a bane.***
 
 ---
 
@@ -283,14 +283,14 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 
 > **Total Resonance** *(7 Resonance, main action)*
 > *Keywords: Wired, Resonance, Summon · Type: Main action · Distance: Wired range · Target: your entire congregation*
-> **Effect:** For the rest of the encounter, **every sprite you currently command rises one tier on the hybrid-by-tier ladder** (minor sprites act as intermediate; intermediate act as advanced) — and you may **immediately compile one additional sprite for free**, ignoring your sprite cap for the rest of the encounter. Your Resonance drip from the congregation trigger doubles for the rest of the fight.
+> **Effect:** For the rest of the encounter, **every sprite you currently command rises one sprite rank on the hybrid band ladder** (minor sprites act as intermediate; intermediate act as advanced) — and you may **immediately compile one additional sprite for free**, ignoring your sprite cap for the rest of the encounter. Your Resonance drip from the congregation trigger doubles for the rest of the fight.
 >
-> **Power Roll results apply to the free compile's manifestation, not the tier-boost (which is unconditional):**
+> **Power Roll results apply to the free compile's manifestation, not the rank boost (which is unconditional):**
 > - **high (17+):** the free sprite compiles at full strength and acts immediately this turn.
 > - **middle (12–16):** the free sprite compiles at full strength but acts next turn.
-> - **low (≤11):** the free sprite compiles unstable — half Sprite HP — but the ladder-tier boost still applies to the whole congregation regardless.
+> - **low (≤11):** the free sprite compiles unstable — half Sprite HP — but the sprite-rank boost still applies to the whole congregation regardless.
 >
-> ***Biofeedback: DC 15 Physique save*** (this is a 7-cost ability and always triggers the check).
+> ***Biofeedback: medium Physique test*** (this is a 7-cost ability and always triggers the check).
 >
 > **Interaction with discipline features.** Sprite-Weaver's higher sprite cap means the free compile from Total Resonance can push a Sprite-Weaver's congregation size well past what any other discipline can field in a single round. Machine-Whisperer can spend the free compile on a Machine-sprite and immediately follow with Resonance Mending at no extra biofeedback risk, since Resonance Mending's base effect is always free. Resonance-Warrior typically spends the free compile on an Attack-sprite to stack with their own discipline's damage amplifiers.
 
@@ -314,7 +314,7 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 > - **middle (12–16):** the mend lands at full effect as purchased.
 > - **low (≤11):** the mend is unstable — it holds for one round, then the target loses half the Stamina/Integrity restored unless stabilized by a second mend or a full rest.
 >
-> **Does not trigger biofeedback at its base effect** (0 Resonance spent) or at low enhancement spends — a Technomancer can mend freely and often without any overreach risk at all. Only pushing total Resonance spent on a single Resonance Mending use to 5 or more (e.g., reaching 3 additional targets plus clearing 2 conditions in one action) triggers the standard biofeedback save at the appropriate DC.
+> **Does not trigger biofeedback at its base effect** (0 Resonance spent) or at low enhancement spends — a Technomancer can mend freely and often without any overreach risk at all. Only pushing total Resonance spent on a single Resonance Mending use to 5 or more (e.g., reaching 3 additional targets plus clearing 2 conditions in one action) triggers the standard biofeedback test at the appropriate difficulty.
 >
 > **Machine-Whisperer amplification (preview — full detail in that discipline's table below):** Machine-Whisperer reduces Resonance Mending's per-point enhancement cost, extends its base range, and eventually grants a free use once per encounter. Every Technomancer can mend a Cyborg; only a Machine-Whisperer does it as their whole reason for being.
 
@@ -341,7 +341,7 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 
 | Level | Feature | Effect |
 |---|---|---|
-| **1st** | **Deep Interface** | Deep Communion's cost drops to **2 Resonance** (instead of 3) and grants a larger biofeedback buffer (your Physique save, if any is triggered while in communion, gains an edge). Resonance Mending's range extends to **Wired range** even for the base (free) effect, instead of touch-only. |
+| **1st** | **Deep Interface** | Deep Communion's cost drops to **2 Resonance** (instead of 3) and grants a larger biofeedback buffer (your Physique test, if any is triggered while in communion, gains an edge). Resonance Mending's range extends to **Wired range** even for the base (free) effect, instead of touch-only. |
 | **2nd** | **Machine Empathy** | Resonance Mending's per-point enhancement cost drops by 1 (minimum 1) when the target is a machine, drone, vehicle, chrome, or Cyborg (i.e., always, for this ability) — enhancements that would cost 2 Resonance cost 1, and the "restore a dead machine" enhancement drops from 2 to 1. |
 | **3rd** | **Whispered Diagnostics** | As a free action once per round, you may inspect one machine, drone, vehicle, or Cyborg within Wired range and learn its exact current Stamina/Integrity, all active conditions, and one exploitable weakness. |
 | **5th** | **Bonded Repair** | Once per encounter, you may use Resonance Mending's full enhanced effect (as if you'd spent 3 Resonance) at **no Resonance cost**, and this specific use never triggers biofeedback regardless of total spend. |
@@ -355,11 +355,11 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 | Level | Feature | Effect |
 |---|---|---|
 | **1st** | **Overcharged Strike** | Resonance Strike's damage die increases to **3d10 + Logic** (instead of 2d10 + Logic). Attack-sprites you command deal an additional **+1d6** damage on a hit. |
-| **2nd** | **Aggressive Compile** | When you Compile Sprite and choose an Attack-sprite, it may act **immediately** even at the minor/extension tier (normally minor sprites only act on your own turn — this doesn't change the tier, but it removes any "acts next turn" language from unstable/low-result compiles specifically for Attack-sprites). |
+| **2nd** | **Aggressive Compile** | When you Compile Sprite and choose an Attack-sprite, it may act **immediately** even at the minor/extension rank (normally minor sprites only act on your own turn — this doesn't change the rank, but it removes any "acts next turn" language from unstable/low-result compiles specifically for Attack-sprites). |
 | **3rd** | **Feedback Weapon** | Once per round, when you take biofeedback damage from your own ability, you may immediately deal that same amount of damage to one enemy within Ranged 5 as psychic backlash. |
-| **5th** | **Burning the Current** | You may voluntarily take an **additional** 5-cost-equivalent biofeedback save (even on an ability that wouldn't normally trigger one) to add **+Logic score** damage to that ability's effect. Usable once per turn. |
-| **7th** | **No Such Thing As Too Much** | Cascade Failure and Resonance Slam (7-cost) both gain **+1 to their Power Roll** when used by a Resonance-Warrior, and their damage dice increase by one step (e.g., Logic × 2 becomes Logic × 2 plus 1d6). |
-| **8th** | **Apex Current** *(capstone)* | Once per encounter, you may treat a failed biofeedback save as a **success** — the current still bites, but not this time. This does not refund the Resonance spent. |
+| **5th** | **Burning the Current** | You may voluntarily take an **additional** 5-cost-equivalent biofeedback test (an easy Physique test, even on an ability that wouldn't normally trigger one) to add **+Logic score** damage to that ability's effect. Usable once per turn. |
+| **7th** | **No Such Thing As Too Much** | Cascade Failure and Resonance Slam (7-cost) are both made with an **edge** when used by a Resonance-Warrior, and their damage dice increase by one step (e.g., Logic × 2 becomes Logic × 2 plus 1d6). |
+| **8th** | **Apex Current** *(capstone)* | Once per encounter, you may treat a failed biofeedback test as a **success** — the current still bites, but not this time. This does not refund the Resonance spent. |
 
 ---
 
@@ -373,29 +373,29 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost tier a
 
 **Round 2.** At the start of her turn, the congregation trigger fires: she has 1 sprite compiled, so she gains +1 Resonance (now 4 banked). She spends 2 Resonance (Wide Compile discount) to compile an Attack-sprite — compile momentum (doubled by Wide Compile) grants +2 Resonance immediately, netting her to 4 Resonance after the spend. Her Attack-sprite strikes the drone and hits, triggering Harmonic Echo again: +1 Resonance (5 banked). She still has 2 Resonance left after paying for the compile, plus the momentum and echo gains — a full accounting: 4 (start) − 2 (compile cost) + 2 (momentum) + 1 (echo) = 5 Resonance banked at end of round.
 
-**Round 3.** Start-of-turn congregation trigger: 2 sprites compiled, +2 Resonance (7 banked). Priya now has enough for **Resonance Ward** (5-cost) — she deploys it, and because this is a cost-5+ ability, she makes her biofeedback save (DC 12, Sprite-Weaver's −2 discipline modifier applies, so effectively DC 10). She succeeds, the Ward deploys clean, and she's down to 2 Resonance banked, with a Data-sprite and an Attack-sprite still active plus a fresh defensive zone protecting the party.
+**Round 3.** Start-of-turn congregation trigger: 2 sprites compiled, +2 Resonance (7 banked). Priya now has enough for **Resonance Ward** (5-cost) — she deploys it, and because this is a cost-5+ ability, she makes her biofeedback test (an easy Physique test, rolled with an edge because Sprite-Weaver's discipline modifier applies). She succeeds, the Ward deploys clean, and she's down to 2 Resonance banked, with a Data-sprite and an Attack-sprite still active plus a fresh defensive zone protecting the party.
 
-**Why this matters as a reference:** note how the loop naturally accelerates the longer a fight runs and the more sprites stay alive — this is the intended shape (a slow-building summoner engine, not a burst-nova class), and it's also why Total Resonance (7th-level tier, doubling the congregation-trigger gain) is such a dramatic power spike when it lands mid-fight rather than at the very start.
+**Why this matters as a reference:** note how the loop naturally accelerates the longer a fight runs and the more sprites stay alive — this is the intended shape (a slow-building summoner engine, not a burst-nova class), and it's also why Total Resonance (a 7-cost ability, doubling the congregation-trigger gain) is such a dramatic power spike when it lands mid-fight rather than at the very start.
 
 ## Level 1-10 Progression Table
 
-*DS levels 1-10 are the primary progression axis. Echelon bands (E1-E4) are noted only where they matter for cross-class gear-tier context, never as a gating mechanism.*
+*DS levels 1-10 are the primary progression axis. Echelon bands (E1-E4) are noted only where they matter for cross-class gear context, never as a gating mechanism.*
 
-| Level | Echelon (gear-tier ref only) | Class Features | Abilities Gained | Discipline Feature |
+| Level | Echelon (gear reference only) | Class Features | Abilities Gained | Discipline Feature |
 |---|---|---|---|---|
-| **1st** | E1 | Class Chassis, Resonance resource, Sprite Congregation (2-sprite cap), Biofeedback, all 3 Signatures, choice of discipline | Signatures (Compile Sprite, Resonance Strike, Resonance Mending); 1-cost, 3-cost, and 5-cost tiers unlocked (choose starting selections) | Discipline 1st-level feature |
+| **1st** | E1 | Class Chassis, Resonance resource, Sprite Congregation (2-sprite cap), Biofeedback, all 3 Signatures, choice of discipline | Signatures (Compile Sprite, Resonance Strike, Resonance Mending); 1-cost, 3-cost, and 5-cost bands unlocked (choose starting selections) | Discipline 1st-level feature |
 | **2nd** | E1 | — | — | Discipline 2nd-level feature |
-| **3rd** | E1 | 7-cost tier unlocked (includes Total Resonance) | Choose a 7-cost ability | Discipline 3rd-level feature |
+| **3rd** | E1 | 7-cost band unlocked (includes Total Resonance) | Choose a 7-cost ability | Discipline 3rd-level feature |
 | **4th** | E2 | Characteristic Increase: Logic (Reason) and Persona (Presence) rise to 3 | — | — |
-| **5th** | E2 | Sprite cap rises to 3 (baseline, all disciplines); 9-cost tier unlocked | Choose a 9-cost ability | Discipline 5th-level feature |
+| **5th** | E2 | Sprite cap rises to 3 (baseline, all disciplines); 9-cost band unlocked | Choose a 9-cost ability | Discipline 5th-level feature |
 | **6th** | E2 | — | — | — |
 | **7th** | E3 | Characteristic Increase: all five characteristics +1 (max 4) | — | Discipline 7th-level feature |
-| **8th** | E3 | Sprite cap rises to 4 (baseline, all disciplines); 11-cost tier unlocked | Choose an 11-cost ability | Discipline 8th-level capstone feature |
+| **8th** | E3 | Sprite cap rises to 4 (baseline, all disciplines); 11-cost band unlocked | Choose an 11-cost ability | Discipline 8th-level capstone feature |
 | **9th** | E4 | — | — | — |
 | **10th** | E4 | Characteristic Increase: Logic (Reason) and Persona (Presence) rise to 5; **Master of the Current** (capstone) | — | — |
 
 **Master of the Current** *(10th-level capstone)*
-> Once per encounter, you may use **any one** heroic ability you know **without spending Resonance**, and that use never triggers a biofeedback save regardless of its cost tier. In addition, your sprite cap becomes unlimited for the rest of the encounter the first time you use this capstone each session (compile costs still apply Resonance normally for anything beyond the free use).
+> Once per encounter, you may use **any one** heroic ability you know **without spending Resonance**, and that use never triggers a biofeedback test regardless of its cost band. In addition, your sprite cap becomes unlimited for the rest of the encounter the first time you use this capstone each session (compile costs still apply Resonance normally for anything beyond the free use).
 
 ---
 
@@ -405,7 +405,7 @@ These are granted to **every** Technomancer regardless of discipline, layered on
 
 **Wired Native.** You are a full citizen of the Wired chapter — you use nodes, Trace Alert, and the standard Wired interface rules exactly as the Hacker and Wrench do, without needing a deck or a rig. Your body itself is the interface.
 
-**Congregation Sense.** You always know the current Sprite HP, position, and hybrid-tier status of every sprite you command, even at range, even through walls, as long as they remain within Wired range of you.
+**Congregation Sense.** You always know the current Sprite HP, position, and sprite rank of every sprite you command, even at range, even through walls, as long as they remain within Wired range of you.
 
 **Cyborg Mending (base).** Resonance Mending's Cyborg-target branch is available to you from 1st level regardless of discipline — see the full Deep Dive section above. This is the class's headline setting niche and is never discipline-gated.
 
@@ -429,7 +429,7 @@ The Technomancer is a Wired class that still casts — so, unlike the Wired's ot
 
 **Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). No caster is exempt.
 
-**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate) can grant a **+1 to Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.
+**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate) can grant an **edge on Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.
 
 ---
 

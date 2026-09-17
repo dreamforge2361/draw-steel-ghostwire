@@ -135,7 +135,7 @@ Grants the **Survival/Tracking** skill. Starter Kit: **Longshot** (long-range ri
 - **Ranged Reflex** (1st) — Your ranged strikes gain an **edge** against any target that is at least Ranged 5 from you AND Marked by you.
 - **Steady the Scope** (1st, triggered) — **Trigger:** you would take a bane on a ranged strike from being observed, dazed, harried, or knocked off a firing position. **Effect:** ignore the bane on this strike, and gain **1 surge** usable only on this strike.
 - **Cold Read** (2nd) — The first Marked target you damage at Ranged 5+ each round becomes visible to all your allies through walls and cover until the start of your next turn.
-- **Range Discipline** (5th) — Any Scout ability that lists Ranged 5 in its Type extends to Ranged 10 for you. Your Quarry first-strike-per-round damage bump doubles (E4: +2, E3: +4, E2: +6, E1: +8).
+- **Range Discipline** (5th) — Any Scout ability that lists Ranged 5 in its Type extends to Ranged 10 for you. Your Quarry first-strike-per-round damage bump doubles (Echelon 1: +2, Echelon 2: +4, Echelon 3: +6, Echelon 4: +8).
 - **Sensor-Fusion Smartlink** (8th) — Marked targets grant you no cover benefit. You can make Ranged strikes with your Longshot Kit at Ranged 20 (up from Ranged 5, per the Longshot Kit's own range extension).
 
 **College Abilities (choose 1 of 2 at 2nd, 6th, 9th):**
