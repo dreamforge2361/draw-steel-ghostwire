@@ -2644,7 +2644,7 @@
           },
           "Essence": {
             "Name": "Essence",
-            "Description": "<p>Essence is the shaped substance of creation, banked by attunement and spent on workings.</p><h4>Attunement</h4><p>You are always attuned to one element: fire, air, water, earth, or void. Choosing or switching your attunement is free (no action) on your turn. Your attunement sets which element your drip and your Channel produce.</p><h4>Essence in Combat</h4><ul><li><p><strong>Start of combat:</strong> gain Essence equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>The drip:</strong> at the start of each of your turns, gain [[/gain 1 hr]]{1 Essence} (Foundry adds this automatically).</p></li><li><p><strong>Channel (maneuver):</strong> bank extra Essence of your attuned element. Channeling the same element on consecutive turns ramps: [[/gain 2 hr]]{+2} on the first turn, [[/gain 3 hr]]{+3} on the second, [[/gain 4 hr]]{+4} on the third and later. Switching your attunement resets the ramp to +2.</p></li><li><p><strong>Elemental Resonance:</strong> the first time each combat round typed elemental damage from your own workings lands, [[/gain 1 hr]]{gain 1 Essence}.</p></li></ul><p>A committed caster at full ramp banks +5 per turn, or +6 when resonance lands. One who skips Channel banks only the +1 drip.</p><h4>Cap and Loss</h4><p>Your Essence cap is <strong>8</strong> at Echelon 1, <strong>12</strong> at Echelon 2, <strong>16</strong> at Echelon 3, and <strong>20</strong> at Echelon 4 (up to 24 at 10th level). You lose all unspent Essence at the end of the encounter.</p><h4>Sustaining Workings</h4><p>Sustaining a persistent working (a wall, a zone, a bound elemental) reduces the Essence you bank at the start of each turn: <strong>Persistent 1 = −2 per turn</strong>, <strong>Persistent 2 = −4 per turn</strong> (individual workings state their own drain). A heavy hit can break your concentration and end sustained workings (a Persona save against the attack’s potency).</p><h4>Essence Outside of Combat</h4><p>You can’t gain Essence outside of combat, but you can use Essence abilities without spending it. Whenever you do, you can’t use that same ability outside combat again until you earn 1 or more Victories or finish a respite. You can sustain a persistent working outside combat for a number of rounds equal to your Victories.</p><p><strong>Firewall:</strong> Essence never touches nuyen or Body Integrity, and chrome never generates it.</p><p><em>In Foundry, the drip is automatic; Channel, Resonance, sustain drains, and the cap are tracked with the buttons above.</em></p>"
+            "Description": "<p>Essence is the shaped substance of creation, banked by attunement and spent on workings.</p><h4>Attunement</h4><p>You are always attuned to one element: fire, air, water, earth, or void. Choosing or switching your attunement is free (no action) on your turn. Your attunement sets which element your drip and your Channel produce.</p><h4>Essence in Combat</h4><ul><li><p><strong>Start of combat:</strong> gain Essence equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>The drip:</strong> at the start of each of your turns, gain [[/gain 1 hr]]{1 Essence} (Foundry adds this automatically).</p></li><li><p><strong>Channel (maneuver):</strong> bank extra Essence of your attuned element. Channeling the same element on consecutive turns ramps: [[/gain 2 hr]]{+2} on the first turn, [[/gain 3 hr]]{+3} on the second, [[/gain 4 hr]]{+4} on the third and later. Switching your attunement resets the ramp to +2.</p></li><li><p><strong>Elemental Resonance:</strong> the first time each combat round typed elemental damage from your own workings lands, [[/gain 1 hr]]{gain 1 Essence}.</p></li></ul><p>A committed caster at full ramp banks +5 per turn, or +6 when resonance lands. One who skips Channel banks only the +1 drip.</p><h4>Cap and Loss</h4><p>Your Essence cap is <strong>8</strong> at Echelon 1, <strong>12</strong> at Echelon 2, <strong>16</strong> at Echelon 3, and <strong>20</strong> at Echelon 4 (up to 24 at 10th level). You lose all unspent Essence at the end of the encounter.</p><h4>Sustaining Workings</h4><p>Sustaining a persistent working (a wall, a zone, a bound elemental) reduces the Essence you bank at the start of each turn: <strong>−2 Essence per turn for each point of the working’s Persistent rating</strong> (Persistent 1 = −2, Persistent 2 = −4, Persistent 4 = −8, Persistent 6 = −12). A heavy hit can break your concentration and end sustained workings (a Persona save against the attack’s potency).</p><h4>Essence Outside of Combat</h4><p>You can’t gain Essence outside of combat, but you can use Essence abilities without spending it. Whenever you do, you can’t use that same ability outside combat again until you earn 1 or more Victories or finish a respite. You can sustain a persistent working outside combat for a number of rounds equal to your Victories.</p><p><strong>Firewall:</strong> Essence never touches nuyen or Body Integrity, and chrome never generates it.</p><p><em>In Foundry, the drip is automatic; Channel, Resonance, sustain drains, and the cap are tracked with the buttons above.</em></p>"
           },
           "WeaveSensitivity": {
             "Name": "Weave Sensitivity",
@@ -2751,7 +2751,7 @@
             "Name": "Void Vortex",
             "Story": "The vortex that destroys the winded.",
             "Effect_before0000000000": "<p>Void or corruption damage to each enemy in the aura each round. At the start of each enemy’s turn while sustained, pull it 2 squares toward you; an enemy at 0 Stamina or winded when its turn starts inside the vortex is destroyed (Rank 1 elementals, minions, and lower absolutely; Rank 2 and higher take maximum damage instead).</p><p><em>First-draft working (playtest tuning pending).</em></p>",
-            "Effect_persistent000000": "<p>Sustain the vortex (−4 Essence banked per turn).</p>"
+            "Effect_persistent000000": "<p>Sustain the vortex (−8 Essence banked per turn).</p>"
           },
           "WorldFissure": {
             "Name": "World-Fissure",
@@ -2763,8 +2763,8 @@
           "TwinElementalSummon": {
             "Name": "Twin Elemental Summon",
             "Story": "Double your action economy, at a huge Essence bite.",
-            "Effect_before0000000000": "<p>Bind two elementals with one action and one bind roll (as Summon Elemental). Both can be extensions, or (echelon 3 or higher) one can be an independent figure. Sustain Persistent 3 for two extensions, or Persistent 5 for an independent plus an extension. A broken bind on either turns both hostile.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
-            "Effect_persistent000000": "<p>Sustain the pair (Persistent 3 for two extensions, Persistent 5 with an independent figure).</p>",
+            "Effect_before0000000000": "<p>Bind two elementals with one action and one bind roll (as Summon Elemental). Both can be extensions, or (echelon 3 or higher) one can be an independent figure. Sustain Persistent 3 (−6 per turn) for two extensions, or Persistent 5 (−10 per turn) for an independent plus an extension. A broken bind on either turns both hostile.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Sustain the pair: Persistent 3 for two extensions (−6 Essence banked per turn), Persistent 5 with an independent figure (−10 per turn).</p>",
             "Tier1": "The bind fails: both elementals are hostile and free for one round.",
             "Tier2": "Both are bound, but each resists one Command per encounter.",
             "Tier3": "Both are bound cleanly, with an edge on Command rolls."
@@ -2773,7 +2773,7 @@
             "Name": "Greater Elemental Summon",
             "Story": "The full summoner fantasy realized.",
             "Effect_before0000000000": "<p>Bind a Rank 4 elemental (Rank 5 at echelon 4) as an independent figure with its own Stamina, maneuvers, and signature (an Ancient Flame, a Roaring Storm, a Living Mountain, a Devouring Void). A willing elemental demands a greater task; coercing one costs 3 corruption and 3 spirit attention.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
-            "Effect_persistent000000": "<p>Sustain the greater elemental (−6 Essence banked per turn).</p>"
+            "Effect_persistent000000": "<p>Sustain the greater elemental (−12 Essence banked per turn).</p>"
           },
           "WorldSundering": {
             "Name": "World-Sundering",
@@ -2788,8 +2788,8 @@
           "BreakTheVeil": {
             "Name": "Break the Veil",
             "Story": "The team-wide caster apex.",
-            "Effect_before0000000000": "<p>The Veil thins around you. Until the end of the encounter, each ally in the aura sustains persistent workings at reduced cost (Persistent 2 becomes 1; 4 becomes 2), you sustain one persistent working at no Essence cost, and your signature and heroic ability rolls gain an edge.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
-            "Effect_persistent000000": "<p>Break the Veil itself is Persistent 4 on cast.</p>"
+            "Effect_before0000000000": "<p>The Veil thins around you. Until the end of the encounter, each ally in the aura sustains persistent workings at reduced cost (Persistent 2 becomes 1, draining −2 per turn; Persistent 4 becomes 2, draining −4 per turn), you sustain one persistent working at no Essence cost, and your signature and heroic ability rolls gain an edge.</p><p><em>First-draft working (playtest tuning pending).</em></p>",
+            "Effect_persistent000000": "<p>Break the Veil itself is Persistent 4 on cast (−8 Essence banked per turn).</p>"
           },
           "BoltBarrage": {
             "Name": "Bolt Barrage",
@@ -2817,8 +2817,8 @@
           "SummonElemental": {
             "Name": "Summon Elemental",
             "Story": "The class’s defining working: the real cost is the upkeep.",
-            "Effect_before0000000000": "<p>You tear an elemental loose from the Veil and bind it. Make the bind roll: a power roll with Logic, with an edge if your Persona is equal to or higher than your Logic (Bind Discipline adds +1).</p><ul><li><p><strong>Extension (1st–5th level):</strong> a Rank 1 elemental that acts on your turn, dealing 4/7/10 + Logic damage by result. Sustain: Persistent 2 (−4 Essence banked per turn).</p></li><li><p><strong>Independent figure (7th level and later, or a properly bound mid-level caster):</strong> its own figure on the map with its own Stamina and turn (Rank 2 from 5th level). Sustain: Persistent 4 (−4 Essence banked per turn).</p></li></ul><p><strong>The Price:</strong> a willing elemental demands a task aligned to its nature; coercing an unwilling one costs 1 corruption and 1 spirit-attention tick per Rank. A heavy hit while you sustain it can break the bind (Persona save against the potency).</p>",
-            "Effect_persistent000000": "<p>Sustain the bound elemental: extension Persistent 2 (−4 Essence banked per turn); independent figure Persistent 4.</p>",
+            "Effect_before0000000000": "<p>You tear an elemental loose from the Veil and bind it. Make the bind roll: a power roll with Logic, with an edge if your Persona is equal to or higher than your Logic (Bind Discipline adds +1).</p><ul><li><p><strong>Extension (1st–5th level):</strong> a Rank 1 elemental that acts on your turn, dealing 4/7/10 + Logic damage by result. Sustain: Persistent 2 (−4 Essence banked per turn).</p></li><li><p><strong>Independent figure (7th level and later, or a properly bound mid-level caster):</strong> its own figure on the map with its own Stamina and turn (Rank 2 from 5th level). Sustain: Persistent 4 (−8 Essence banked per turn).</p></li></ul><p><strong>The Price:</strong> a willing elemental demands a task aligned to its nature; coercing an unwilling one costs 1 corruption and 1 spirit-attention tick per Rank. A heavy hit while you sustain it can break the bind (Persona save against the potency).</p>",
+            "Effect_persistent000000": "<p>Sustain the bound elemental: extension Persistent 2 (−4 Essence banked per turn); independent figure Persistent 4 (−8 Essence banked per turn).</p>",
             "Tier1": "The bind fails: the elemental is hostile and free for one round, then the Veil pulls it back.",
             "Tier2": "The elemental is bound, but resists one Command per encounter.",
             "Tier3": "The elemental is bound cleanly, and you gain an edge on Command rolls for it."
@@ -2878,7 +2878,7 @@
             "Name": "Living Sun",
             "Story": "The walking sun.",
             "Effect_before0000000000": "<p>Bright light fills the aura. While it lasts, each enemy in the aura takes the damage at the start of each of its turns, and each ally in the aura can spend a Recovery as a free maneuver once per turn.</p>",
-            "Effect_persistent000000": "<p>Sustain the sun (−4 Essence banked per turn).</p>"
+            "Effect_persistent000000": "<p>Sustain the sun (−8 Essence banked per turn).</p>"
           },
           "AshenWake": {
             "Name": "Ashen Wake",
@@ -2949,7 +2949,7 @@
             "Name": "The Deluge",
             "Story": "Flood the room.",
             "Effect_before0000000000": "<p>Cold or sonic damage. The area fills with water: difficult terrain at half speed, with a chance to drown under the environment rules, and creatures inside take 2 lightning damage per turn from a stormfront overhead.</p>",
-            "Effect_persistent000000": "<p>Sustain the flood (−4 Essence banked per turn).</p>"
+            "Effect_persistent000000": "<p>Sustain the flood (−8 Essence banked per turn).</p>"
           },
           "Geomancer": {
             "Name": "Geomancer",
@@ -3002,7 +3002,7 @@
             "Name": "Anchoring Field",
             "Story": "Nobody teleports out of this.",
             "Effect_before0000000000": "<p>Enemies in the aura can’t teleport or be teleported, and their speed is reduced by 2 (save ends).</p>",
-            "Effect_persistent000000": "<p>Sustain the field (Persistent 3).</p>"
+            "Effect_persistent000000": "<p>Sustain the field (−6 Essence banked per turn).</p>"
           },
           "VoidGrasp": {
             "Name": "Void-Grasp",
