@@ -84,7 +84,8 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B22 | Ghostwire Perks pack | **Pending Michael test** | 47 reskinned perks by type; perk grants list Ghostwire perks only; `17-perks.md`; module v0.1.26 |
 | B23a | Matrix Verbs + Overlay / Jacked In on the sheet | **Done** (`53a4b59`) | 9 verbs on every hero; token statuses; `18-wired-foundry.md`; module v0.1.27 |
 | B23b | Wired Console | **Done, pending Michael test** | ApplicationV2 console: connection roster, Scene nodes (`wiredBoard` flag), Integrity, Trace Alert, reveal to players; module v0.1.28 |
-| B24 | Commander class pack | **Done, pending Michael test** | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
+| B24 | Commander class pack | **Done** (`d336ea7`, Foundry-verified 2026-09-16) | Commander (Influence) + Street-Fixer / Corp-Exec / Bard in Ghostwire Classes; DS Tactician spine; class label **Commander only** (no “Face”); module v0.1.29 |
+| B25 | Languages CONFIG remap | **Done** (Foundry-verified 2026-09-16) | All 42 DS language keys relabeled with locked Ghostwire names (`scripts/languages.mjs`, `GHOSTWIRE.Languages.*`); keys unchanged; module v0.1.30 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -173,13 +174,20 @@ After each spike:
 
 ### B24 Commander (2026-09-16)
 **Naming lock:** the class label is **Commander** everywhere in Foundry (item names, folders, advancements, descriptions). “Face” is retired as a class name. Scout’s **Face-in-crowd** subclass is unrelated and keeps its name.
-- [ ] **B24** Commander class pack from `03-commander-face.md` (module v0.1.29) — **pending Michael Foundry test**. Done when:
-  - [ ] New hero can pick Class → Commander
-  - [ ] Influence shows as the heroic resource (2 per turn); core characteristics Persona / Instinct; Stamina 21 (+9), Recoveries 10; light Kit
-  - [ ] Skills: Command + Negotiation fixed, choose 2 from Social / Knowledge; doctrine skill (Streetwise / Corporate / Performance)
-  - [ ] Command Doctrine picker: Street-Fixer / Corp-Exec / Bard, each with L1 feature + two triggered actions, and ladders at 2/3/5/6/7/8/9
-  - [ ] L1: four signatures (Direct Ally, Mark, Read the Room, The Right Word) + 1/3/5-Influence picks; 7 at L3, 9 at L5, 11 at L8
-  - [ ] Mark applies the Marked effect (edge on power rolls against the target, ends at combat end)
-  - [ ] Influence costs enforced in combat; new **Command** ability keyword shows its label
-  - [ ] No UI string calls the class “Face”
+- [x] **B24** Commander class pack from `03-commander-face.md` (module v0.1.29) — **Foundry-verified 2026-09-16** (`d336ea7`). Done when:
+  - [x] New hero can pick Class → Commander
+  - [x] Influence shows as the heroic resource (2 per turn); core characteristics Persona / Instinct; Stamina 21 (+9), Recoveries 10; light Kit
+  - [x] Skills: Command + Negotiation fixed, choose 2 from Social / Knowledge; doctrine skill (Streetwise / Corporate / Performance)
+  - [x] Command Doctrine picker: Street-Fixer / Corp-Exec / Bard, each with L1 feature + two triggered actions, and ladders at 2/3/5/6/7/8/9
+  - [x] L1: four signatures (Direct Ally, Mark, Read the Room, The Right Word) + 1/3/5-Influence picks; 7 at L3, 9 at L5, 11 at L8
+  - [x] Mark applies the Marked effect (edge on power rolls against the target, ends at combat end)
+  - [x] Influence costs enforced in combat; new **Command** ability keyword shows its label
+  - [x] No UI string calls the class “Face”
   - [x] `node tools/build-packs.mjs` succeeds
+
+### B25 Languages (2026-09-16)
+- [ ] **B25** Languages CONFIG remap from `docs/masters/GHOSTWIRE_LANGUAGES.md` (module v0.1.30) — **Foundry-verified 2026-09-16**. Done when:
+  - [x] Hero language picker shows Ghostwire names only (Trade Cant, Corp Cant, Wire Speak, …) — no Caelian / Anjali / Vaslorian
+  - [x] Existing heroes’ languages still show (same keys, new labels); no console warning about missing or unmapped language keys
+  - [x] All 42 Draw Steel keys mapped 1:1 (`scripts/languages.mjs`)
+  - [ ] Follow-up (not B25): language lore + Journal entries; Background/Peoples language grants

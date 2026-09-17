@@ -1,4 +1,5 @@
 import { registerGhostwireSkills } from "./skills.mjs";
+import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -61,6 +62,7 @@ Hooks.once("init", () => {
   ds.CONFIG.abilities.keywords.command ??= { label: "GHOSTWIRE.Abilities.Keywords.Command" };
 
   registerGhostwireSkills();
+  registerGhostwireLanguages();
   registerPerkTypes();
   patchPerkGrants();
   patchPreviousLifeFilter();

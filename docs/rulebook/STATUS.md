@@ -16,6 +16,7 @@
 | Chrome master | `docs/masters/GHOSTWIRE_CHROME_MASTER.md` | **Ingested** 2026-09-16 |
 | **Gear master** | `docs/masters/GHOSTWIRE_GEAR_MASTER.md` | **Ingested** + DS ALIGNMENT OVERRIDE (2026-09-16) |
 | Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
+| **Languages** | `docs/rulebook/19-languages.md` + `docs/masters/GHOSTWIRE_LANGUAGES.md` | **Names locked** 2026-09-16 (B25) — stub chapter; lore backlog |
 | Species↔DS map | `docs/rulebook/SPECIES-DS-MAP.md` | Chassis locked |
 | DS alignment brief | `docs/rulebook/DS-ALIGNMENT.md` | Locked doctrine (+ gear echelon note) |
 | **Foundry build plan** | `docs/rulebook/FOUNDRY-BUILD-PLAN.md` | **Living done/todo log** |
@@ -47,4 +48,5 @@
 | B20 Mods expansion | Armor/gadget mods + §Craft skill text (Hacking/Electronics/Repair) in Foundry |
 | Kit chargen street-band auto-grants | After gear SKUs stable |
 | Journal rulebook pack + PDF pipeline | Dual delivery already locked |
+| **Language lore & journals** | Write a lore-based definition (history + purpose) for each Ghostwire language (`docs/masters/GHOSTWIRE_LANGUAGES.md`) into the rulebook chapter `19-languages.md` (Tongue gazetteer) + Foundry Journal entries. Then add Background/Profession/Peoples language grants (knowledge-only picks locked in the master). |
 
