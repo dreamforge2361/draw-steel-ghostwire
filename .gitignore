@@ -22,3 +22,10 @@ docs/masters/reach-handbook/*.pdf
 # B44c art staging + Claude helper scratch files (never committed)
 _incoming-art/
 _claude-*
+_sfx-raw-backup/
+_sfx-*.zip
+_sfx-*.tar.gz
+_ability-*
+_extract-*
+_write-*
+assets/sfx/_manifest.json

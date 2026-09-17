@@ -121,3 +121,8 @@ overriding. Cleared overrides fall straight back to the map.
 **v1 ships no audio binaries** — every path above is a Foundry core sound, and all seven were verified to
 exist in the installed Foundry. Core has no gunshot, so firearms sit on a futuristic-door placeholder until
 real gunshots land.
+
+## As-built — custom OGG pack (0.1.70)
+
+Shipped 40 mono OGG Vorbis (q2) files under ssets/sfx/ (~1.3 MB). scripts/data/sfx-map.json points family rules at modules/draw-steel-ghostwire/assets/sfx/*.ogg (wired, veil, firearms, chrome, tech, medic, toxin, impact, command). Foundry-verified by Michael 2026-09-17. Raw WAV/MP3 kept only in local _sfx-raw-backup/ (gitignored).
+

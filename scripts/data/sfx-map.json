@@ -1,69 +1,148 @@
 {
-  "_comment": "B40 ability/weapon/gear SFX map. Every src is a FOUNDRY CORE path — no audio ships with this module. Swap these for modules/draw-steel-ghostwire/assets/sfx/... when custom files land. Rules are tried in order and the first match wins; 'keywords' matches an ability's system.keywords, 'match' is a case-insensitive regex tested against the item name.",
-  "default": "sounds/notify.wav",
+  "_comment": "B40 SFX map. Custom module OGG under assets/sfx (mono vorbis q2). Rules tried in order; first match wins.",
+  "default": "modules/draw-steel-ghostwire/assets/sfx/punch.ogg",
   "rules": [
     {
       "id": "wired",
-      "label": "Wired, ICE and matrix work (checked before Veil so magic+wired sprite work sounds Wired)",
+      "label": "Wired / matrix / ICE / sprites",
       "keywords": [
         "wired"
       ],
-      "match": "hack|intrusion|matrix|sprite|resonance|deck|program|ice|breach|node|signal|scan|ping|jack",
-      "src": "sounds/doors/futuristic/open-forcefield.ogg"
+      "match": "hack|intrusion|matrix|sprite|resonance|deck|program|ice|breach|node|signal|scan|ping|jack|compile|weav",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-connect.ogg"
     },
     {
-      "id": "veil",
-      "label": "Veil / magic workings",
+      "id": "wired-scan",
+      "label": "Scan / ping",
+      "match": "scan|ping|probe|trace",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-scan.ogg"
+    },
+    {
+      "id": "medic",
+      "label": "Stim / inject / medical",
+      "match": "stim|inject|patch|transfusion|stabiliz|anesthet|field adrenal|nano-adrenal|reagent",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/medic-inject.ogg"
+    },
+    {
+      "id": "toxin",
+      "label": "Toxin / chemical",
+      "match": "toxin|chemical|nerve agent|toxic|poison|hiss",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/toxin-hiss.ogg"
+    },
+    {
+      "id": "veil-heal",
+      "label": "Holy / bless / heal",
       "keywords": [
         "magic",
         "psionic"
       ],
-      "match": "smite|rebuke|bless|pact|invoke|prayer|ward|conjur|summon|spell|ritual|essence|channel",
-      "src": "sounds/doors/magic/door-open.ogg"
+      "match": "heal|bless|lay on|grace|ward|light|sanctif|prayer",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-holy-heal.ogg"
+    },
+    {
+      "id": "veil-dark",
+      "label": "Dark / pact / drain / smite",
+      "match": "dark|pact|drain|rebuke|smite|penance|judg|invoke",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-blast.ogg"
+    },
+    {
+      "id": "veil-element",
+      "label": "Elemental / lightning / storm / fire",
+      "match": "lightning|storm|hurl|element|fireball|fire blast|essence|channel",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-lightning.ogg"
+    },
+    {
+      "id": "veil-summon",
+      "label": "Summon / spirit",
+      "match": "summon|spirit|conjur",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-summon.ogg"
+    },
+    {
+      "id": "veil",
+      "label": "General Veil fallback",
+      "keywords": [
+        "magic",
+        "psionic"
+      ],
+      "match": "spell|ritual|veil|ward|essence",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-light.ogg"
+    },
+    {
+      "id": "laser",
+      "label": "Energy / laser",
+      "match": "laser|zapper|beam|plasma|pulse",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/laser-gun-4.ogg"
+    },
+    {
+      "id": "firearm-heavy",
+      "label": "MG / autogun / suppression",
+      "match": "machine.?gun|autogun|suppress|chatterbox|volley|heavy",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-machinegun.ogg"
+    },
+    {
+      "id": "firearm-smg",
+      "label": "SMG / burst",
+      "match": "smg|burst|double.?tap|submachine",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-smg.ogg"
+    },
+    {
+      "id": "firearm-rifle",
+      "label": "Rifle / sniper / longarm",
+      "match": "rifle|sniper|longshot|carbine|one shot|called shot",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-sniper.ogg"
     },
     {
       "id": "firearm",
-      "label": "Guns — core has no gunshot, so tech placeholder until custom SFX arrive",
-      "match": "pistol|revolver|smg|rifle|carbine|shotgun|gun|shot|burst|volley|fire|sniper|zapper|chatterbox|hand-cannon|sleeve|popper|suppress",
-      "src": "sounds/doors/futuristic/open-fast.ogg"
+      "label": "General firearms / Fire weapon abilities",
+      "match": "pistol|revolver|shotgun|gun|shot|fire |hand-cannon|sleeve|popper|workhorse|burner|hexshot",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-single.ogg"
     },
     {
       "id": "chrome",
-      "label": "Chrome, implants and mechanical activation",
+      "label": "Chrome / cyber / servo",
       "keywords": [
         "chrome",
         "optics"
       ],
-      "match": "chrome|implant|cyber|datajack|limb|servo|plating|rig|harness|lock|override",
-      "src": "sounds/lock.wav"
+      "match": "chrome|implant|cyber|datajack|limb|servo|plating|rig|harness|override",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/chrome-servo-a.ogg"
     },
     {
-      "id": "tech",
-      "label": "Drones, machines and other tech",
+      "id": "tech-drone",
+      "label": "Drones / deploy",
       "keywords": [
         "tech"
       ],
-      "match": "drone|machine|deploy|turret|repair|fabricat|vehicle|engine|uptime",
-      "src": "sounds/doors/industrial/open.ogg"
+      "match": "drone|deploy|turret",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/drone-fly.ogg"
+    },
+    {
+      "id": "tech",
+      "label": "Machines / tech fallback",
+      "keywords": [
+        "tech"
+      ],
+      "match": "machine|repair|fabricat|vehicle|engine|uptime|wrench|overclock",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/drone-effect.ogg"
     },
     {
       "id": "impact",
-      "label": "Melee and heavy impact",
+      "label": "Melee / blade / strike",
       "keywords": [
         "melee",
         "weapon"
       ],
-      "match": "strike|slam|smash|brawl|blade|knuckle|charge|breach|crush|hammer|kick|grapple",
-      "src": "sounds/drums.wav"
+      "match": "strike|slam|smash|brawl|blade|knuckle|charge|crush|hammer|kick|grapple|sword|punch",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/sword-crit.ogg"
     },
     {
       "id": "command",
-      "label": "Orders, rallies and social pressure",
+      "label": "Orders / rally / command",
       "keywords": [
         "command"
       ],
-      "match": "word|command|rally|cry|order|taunt|presence|negotiat|persua",
-      "src": "sounds/notify.wav"
+      "match": "word|command|rally|cry|order|taunt|presence|persona|negotiat|persua|speak",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/command-sting-a.ogg"
     }
   ]
 }
