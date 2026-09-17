@@ -6974,6 +6974,29 @@
         "17CrittersOfTheReach": "Critters of the Reach",
         "Maps": "Maps & Plates"
       }
+    },
+    "Sfx": {
+      "Settings": {
+        "Enabled": {
+          "Name": "Ability sound effects",
+          "Hint": "Play a sound when a hero or NPC uses an ability, fires a weapon, or activates gear."
+        },
+        "Volume": {
+          "Name": "Ability SFX volume",
+          "Hint": "Volume for Ghostwire ability sounds, on top of Foundry’s own interface volume."
+        },
+        "GmOnly": {
+          "Name": "Ability SFX: Director only",
+          "Hint": "Only Director (GM) clients hear ability sounds."
+        }
+      },
+      "Sheet": {
+        "Label": "Ghostwire SFX",
+        "Pick": "Choose a sound file",
+        "Preview": "Preview",
+        "Clear": "Clear the override and fall back to the keyword map",
+        "Hint": "Leave empty to use the keyword map (currently matching: {rule}). Foundry core sounds are fine; custom files belong in assets/sfx/."
+      }
     }
   },
   "DRAW_STEEL": {

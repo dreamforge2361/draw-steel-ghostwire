@@ -1,0 +1,69 @@
+{
+  "_comment": "B40 ability/weapon/gear SFX map. Every src is a FOUNDRY CORE path — no audio ships with this module. Swap these for modules/draw-steel-ghostwire/assets/sfx/... when custom files land. Rules are tried in order and the first match wins; 'keywords' matches an ability's system.keywords, 'match' is a case-insensitive regex tested against the item name.",
+  "default": "sounds/notify.wav",
+  "rules": [
+    {
+      "id": "wired",
+      "label": "Wired, ICE and matrix work (checked before Veil so magic+wired sprite work sounds Wired)",
+      "keywords": [
+        "wired"
+      ],
+      "match": "hack|intrusion|matrix|sprite|resonance|deck|program|ice|breach|node|signal|scan|ping|jack",
+      "src": "sounds/doors/futuristic/open-forcefield.ogg"
+    },
+    {
+      "id": "veil",
+      "label": "Veil / magic workings",
+      "keywords": [
+        "magic",
+        "psionic"
+      ],
+      "match": "smite|rebuke|bless|pact|invoke|prayer|ward|conjur|summon|spell|ritual|essence|channel",
+      "src": "sounds/doors/magic/door-open.ogg"
+    },
+    {
+      "id": "firearm",
+      "label": "Guns — core has no gunshot, so tech placeholder until custom SFX arrive",
+      "match": "pistol|revolver|smg|rifle|carbine|shotgun|gun|shot|burst|volley|fire|sniper|zapper|chatterbox|hand-cannon|sleeve|popper|suppress",
+      "src": "sounds/doors/futuristic/open-fast.ogg"
+    },
+    {
+      "id": "chrome",
+      "label": "Chrome, implants and mechanical activation",
+      "keywords": [
+        "chrome",
+        "optics"
+      ],
+      "match": "chrome|implant|cyber|datajack|limb|servo|plating|rig|harness|lock|override",
+      "src": "sounds/lock.wav"
+    },
+    {
+      "id": "tech",
+      "label": "Drones, machines and other tech",
+      "keywords": [
+        "tech"
+      ],
+      "match": "drone|machine|deploy|turret|repair|fabricat|vehicle|engine|uptime",
+      "src": "sounds/doors/industrial/open.ogg"
+    },
+    {
+      "id": "impact",
+      "label": "Melee and heavy impact",
+      "keywords": [
+        "melee",
+        "weapon"
+      ],
+      "match": "strike|slam|smash|brawl|blade|knuckle|charge|breach|crush|hammer|kick|grapple",
+      "src": "sounds/drums.wav"
+    },
+    {
+      "id": "command",
+      "label": "Orders, rallies and social pressure",
+      "keywords": [
+        "command"
+      ],
+      "match": "word|command|rally|cry|order|taunt|presence|negotiat|persua",
+      "src": "sounds/notify.wav"
+    }
+  ]
+}
