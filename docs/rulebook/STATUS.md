@@ -35,3 +35,16 @@
 2. **B20** — mods expansion + Invent a Mod data aligned to `14-mods.md` — Claude.
 3. Class packs / remaining Peoples / C0 test world as capacity allows.
 4. Delivery: PDF + Journal from `docs/rulebook/` (echelon + Availability; no GW item-tier ladder in player text).
+
+## Backlog (locked 2026-09-16)
+
+| Item | Notes |
+|---|---|
+| **Stage 4 — The Wire (Matrix)** standalone chapter | Extract Wired System from `08-hacker.md` into its own chapter (e.g. `17-wired.md`): Nodes, Overlay/Jacked In, Track 1/2, Node Rating card, Trace Alert, Matrix Verbs for everyone. Keep Hacker Programs/Bandwidth in class chapter. Align deck ladder with Gear Cat 4; clarify anyone-vs-Hacker gap (verbs only vs Programs + Bandwidth). Reconcile Body Integrity pointer to Chrome max 20. |
+| Wire Foundry pack (thin) | After Wire chapter draft: Matrix Verbs + node templates as Journal/Items — defer until rule text approved |
+| Vehicles Foundry sync | `16-vehicles.md` → expand `vehicles` pack to full per-echelon inventory |
+| Drones Foundry sync | `15-drones.md` (36 chassis) → expand drones in vehicles or dedicated pack |
+| B20 Mods expansion | Armor/gadget mods + §Craft skill text (Hacking/Electronics/Repair) in Foundry |
+| Kit chargen street-band auto-grants | After gear SKUs stable |
+| Journal rulebook pack + PDF pipeline | Dual delivery already locked |
+

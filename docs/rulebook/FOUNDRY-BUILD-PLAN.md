@@ -143,3 +143,8 @@ After each spike:
 - Masters under `docs/masters/` are SoR (including `GHOSTWIRE_GEAR_MASTER.md`).
 - Final product ships as: (1) PDF rulebook built from `docs/rulebook/` + masters, (2) Foundry **Journal** compendium pack with the same chapters as in-world rulebook.
 - Gear/mods/economy numbers come from the Gear master; player-facing text uses **Echelon 1–4 + Availability** (Street→Prototype). Legacy Item Tier columns = gear grade only (price / Avail / mod slots) — see Gear master OVERRIDE + `14-mods.md`. **§Craft ≠ skill.**
+
+### Backlog — Stage 4 Wire (2026-09-16)
+- [ ] Extract **The Wire (Matrix)** from Hacker into standalone rulebook chapter (`17-wired.md`)
+- [ ] Anyone-vs-Hacker gap + Gear Cat 4 deck alignment + Chrome BI pointer fix
+- [ ] Foundry Wire pack only after chapter approval
