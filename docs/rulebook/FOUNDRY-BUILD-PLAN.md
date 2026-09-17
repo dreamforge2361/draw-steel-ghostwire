@@ -495,3 +495,5 @@ Spec: `docs/spikes/B39-RUN-GENERATOR.md`; design + as-built: `docs/directors/run
 - Wilds Pandora-like lore pass — later; ship only Canopy-Stalker + Reach Behemoth seeds until then.
 - **B40** Ability/weapon/gear SFX — `docs/directors/ability-sfx.md` (settings + FilePicker; Michael supplies assets).
 - **B41** Wired node topology minimap — `docs/directors/wired-node-minimap.md` (Overlay dual-view; Jacked In node-primary).
+- **B42** RAW master rulebook `docs/raw/` (no lore/art) — **first full assemble done, pending Michael review** (docs-only; no module bump). Flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. Then **B42b** Foundry Journal pack from RAW after RAW lock.
+- **B43** Veil Rituals as DS Projects (explore) — `docs/directors/veil-rituals-exploration.md`.

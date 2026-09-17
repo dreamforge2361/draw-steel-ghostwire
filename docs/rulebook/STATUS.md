@@ -78,3 +78,7 @@
 
 
 | **Wired vision tints (Overlay / Jacked In)** | B23c · `scripts/wired-vision.mjs` | **Foundry-verified** (2026-09-17) — two vision modes (Overlay cyan/pink wash, world readable; Jacked In dark/desaturated with neon light) applied client-side while the token's actor has the status; needs Token Vision on the Scene |
+
+| **RAW rulebook (B42)** | Master no-lore/no-art rules in `docs/raw/` (DS-shaped, GW-skinned; DS Heroes by reference). Then Journal pack (B42b). Spike: `docs/spikes/B42-RAW-RULEBOOK.md`. | **First full assemble done (2026-09-17), pending Michael review** — all 26 files present (`00`–`25` + index); engine chapters are Draw Steel-by-reference + remap tables; class chapters scrubbed of lore / dev / Foundry notes with numbers diff-checked; review flags in `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. Journal pack = **B42b** after RAW lock |
+
+| **Veil Rituals as Projects (B43)** | Exploratory: SR-style long-form magic via DS Projects (lore → components → sanctum → seal → payoff). Stub: `docs/directors/veil-rituals-exploration.md`. After Veil RAW. | **Backlog / explore** |
