@@ -17,6 +17,25 @@ const DEFAULT_ITEM_SWAPS = {
   "Compendium.draw-steel.abilities.Item.Xb3S5N1fZyICD58D": `Compendium.${MODULE_ID}.abilities.Item.Lc7LhoqWg9ydP5Jm`,
 };
 
+// Matrix Verbs (08-hacker.md): universal Wired abilities every hero gets, in Ghostwire Abilities › Matrix Verbs.
+const MATRIX_VERBS = [
+  "GY0GEe2obsavHD4a", // Connect
+  "wRvsbMqkVkwKMwj0", // Jack Out
+  "ZGGlbzIQqzGIBdG6", // Toggle Connection State
+  "srf3OJxnEYVPlcbM", // Scan
+  "6sOxYCw5Ff6Es8LF", // Navigate
+  "H1xUDnDNhWmAw0Ko", // Ping
+  "4gr00JaQt5OrEpDE", // Broadcast
+  "n1fEJIA3QoDXxUZS", // Search
+  "RM694XnuAyo25XNV", // Read/Write
+].map(id => `Compendium.${MODULE_ID}.abilities.Item.${id}`);
+
+// Wired connection states: the token/sheet statuses are the source of truth, mirrored to flags.<module>.wired for the Wired Console.
+const WIRED_STATUSES = {
+  overlay: { id: "ghostwire-overlay", _id: "gwOverlayStatus0", name: "GHOSTWIRE.Wired.States.overlay", img: "icons/svg/eye.svg" },
+  jackedIn: { id: "ghostwire-jacked-in", _id: "gwJackedInStatus", name: "GHOSTWIRE.Wired.States.jackedIn", img: "icons/svg/lightning.svg" },
+};
+
 Hooks.once("init", () => {
   console.log(`${MODULE_ID} | Draw Steel - Ghostwire Build initialized`);
   document.body.classList.add("ghostwire", "ghostwire-theme");
@@ -26,6 +45,8 @@ Hooks.once("init", () => {
     if (defaultItems.delete(stock)) defaultItems.add(ghostwire);
     else console.warn(`${MODULE_ID} | ${stock} not found in hero default items; ${ghostwire} not added`);
   }
+  for (const uuid of MATRIX_VERBS) defaultItems.add(uuid);
+  for (const status of Object.values(WIRED_STATUSES)) CONFIG.statusEffects[status.id] = { ...status };
 
   // Tech: non-Magic, non-Psionic ability keyword for machine abilities (Cyborg Installed Suite).
   // Draw Steel localizes keyword labels at i18nInit, after this hook.
@@ -33,6 +54,8 @@ Hooks.once("init", () => {
   // Chrome / Optics: Scout gear keywords (implant-driven and emitter/holo-driven abilities).
   ds.CONFIG.abilities.keywords.chrome ??= { label: "GHOSTWIRE.Abilities.Keywords.Chrome" };
   ds.CONFIG.abilities.keywords.optics ??= { label: "GHOSTWIRE.Abilities.Keywords.Optics" };
+  // Wired: Matrix Verbs, Programs, and other abilities that act in the Wired.
+  ds.CONFIG.abilities.keywords.wired ??= { label: "GHOSTWIRE.Abilities.Keywords.Wired" };
 
   registerGhostwireSkills();
   registerPerkTypes();
@@ -40,6 +63,119 @@ Hooks.once("init", () => {
   patchPreviousLifeFilter();
   patchAddOrigin();
   enforceHeroicResourceCost();
+  patchWiredAbilities();
+});
+
+// ---------- Wired connection states ----------
+
+/** @returns {"disconnected"|"overlay"|"jackedIn"} */
+function getWiredState(actor) {
+  if (actor.statuses.has(WIRED_STATUSES.jackedIn.id)) return "jackedIn";
+  if (actor.statuses.has(WIRED_STATUSES.overlay.id)) return "overlay";
+  return "disconnected";
+}
+
+async function syncWiredFlag(actor) {
+  const state = getWiredState(actor);
+  const flag = actor.getFlag(MODULE_ID, "wired");
+  if ((flag?.state === state) && (flag?.connected === (state !== "disconnected"))) return;
+  await actor.update({ [`flags.${MODULE_ID}.wired`]: { connected: state !== "disconnected", state } });
+}
+
+async function setWiredState(actor, state) {
+  for (const [key, status] of Object.entries(WIRED_STATUSES)) {
+    if (key !== state) await actor.toggleStatusEffect(status.id, { active: false });
+  }
+  if (WIRED_STATUSES[state]) await actor.toggleStatusEffect(WIRED_STATUSES[state].id, { active: true });
+  await syncWiredFlag(actor);
+  ui.notifications.info(game.i18n.format("GHOSTWIRE.Wired.Changed", { actor: actor.name, state: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`) }));
+}
+
+// Statuses toggled from the token HUD: Overlay and Jacked In are exclusive, and the flag follows.
+const wiredStatusKey = effect => Object.keys(WIRED_STATUSES).find(key => effect.statuses?.has(WIRED_STATUSES[key].id));
+Hooks.on("createActiveEffect", async (effect, options, userId) => {
+  const actor = effect.parent;
+  const key = wiredStatusKey(effect);
+  if ((userId !== game.user.id) || !key || !(actor instanceof Actor)) return;
+  const other = (key === "overlay") ? WIRED_STATUSES.jackedIn : WIRED_STATUSES.overlay;
+  if (actor.statuses.has(other.id)) await actor.toggleStatusEffect(other.id, { active: false });
+  await syncWiredFlag(actor);
+});
+Hooks.on("deleteActiveEffect", async (effect, options, userId) => {
+  const actor = effect.parent;
+  if ((userId !== game.user.id) || !wiredStatusKey(effect) || !(actor instanceof Actor)) return;
+  await syncWiredFlag(actor);
+});
+
+// Matrix Verbs drive the connection state, and connection states modify power rolls:
+// - Connect needs you disconnected and enters Overlay; every other verb needs you connected.
+// - Toggle Connection State flips Overlay and Jacked In; Jack Out disconnects.
+// - Wired abilities gain an edge with the Hacking skill and an edge while Jacked In.
+// - Real-world abilities take a bane while Overlaid and can't make power rolls at all while Jacked In.
+function patchWiredAbilities() {
+  const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
+  if (!AbilityModel?.prototype.use) {
+    console.warn(`${MODULE_ID} | AbilityModel#use not found; Matrix Verbs don't change connection state`);
+    return;
+  }
+  const use = AbilityModel.prototype.use;
+  AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
+    const actor = this.actor;
+    if (!actor) return use.call(this, config, dialogOptions, messageOptions);
+    const state = getWiredState(actor);
+    const dsid = this.parent.system._dsid ?? "";
+    const verb = dsid.startsWith("matrix-") ? dsid.slice("matrix-".length) : null;
+    const wired = this.keywords.has("wired");
+    const warn = key => {
+      ui.notifications.warn(game.i18n.format(`GHOSTWIRE.Wired.Warnings.${key}`, {
+        actor: actor.name, name: this.parent.name, state: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`),
+      }));
+      return null;
+    };
+
+    if ((verb === "connect") && (state !== "disconnected")) return warn("AlreadyConnected");
+    if (verb && (verb !== "connect") && (state === "disconnected")) return warn("NotConnected");
+    if ((state === "jackedIn") && !wired && this.power.roll.enabled) return warn("JackedInPhysical");
+
+    if (this.power.roll.enabled) {
+      let edges = 0;
+      let banes = 0;
+      if (wired && actor.system.skills?.value?.has?.("hacking")) edges += 1;
+      if (wired && (state === "jackedIn")) edges += 1;
+      if (!wired && (state === "overlay")) banes += 1;
+      if (edges || banes) {
+        const modifiers = config.modifiers ?? {};
+        config = { ...config, modifiers: { ...modifiers, edges: (modifiers.edges ?? 0) + edges, banes: (modifiers.banes ?? 0) + banes } };
+      }
+    }
+
+    const message = await use.call(this, config, dialogOptions, messageOptions);
+    if (message && verb) {
+      if (verb === "connect") await setWiredState(actor, "overlay");
+      else if (verb === "jack-out") await setWiredState(actor, "disconnected");
+      else if (verb === "toggle-connection-state") await setWiredState(actor, (state === "jackedIn") ? "overlay" : "jackedIn");
+    }
+    return message;
+  };
+}
+
+// Existing heroes: add any missing Matrix Verbs once (GM client), then flag the hero so it isn't re-granted.
+Hooks.once("ready", async () => {
+  if (!game.user.isGM) return;
+  const verbs = (await Promise.all(MATRIX_VERBS.map(uuid => fromUuid(uuid)))).filter(Boolean);
+  if (verbs.length !== MATRIX_VERBS.length) console.warn(`${MODULE_ID} | Some Matrix Verbs are missing from the abilities pack`);
+  let count = 0;
+  for (const actor of game.actors) {
+    if ((actor.type !== "hero") || actor.getFlag(MODULE_ID, "matrixVerbs")) continue;
+    const owned = new Set(actor.items.map(i => i.system._dsid));
+    const missing = verbs.filter(v => !owned.has(v.system._dsid)).map(v => game.items.fromCompendium(v, { clearFolder: true }));
+    if (missing.length) {
+      await actor.createEmbeddedDocuments("Item", missing);
+      count += 1;
+    }
+    await actor.setFlag(MODULE_ID, "matrixVerbs", true);
+  }
+  if (count) ui.notifications.info(game.i18n.format("GHOSTWIRE.Wired.Migrated", { count }));
 });
 
 // Heroic abilities: Draw Steel's use dialog lets a hero spend Adrenaline (or any heroic resource) they don't have.
@@ -214,7 +350,12 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
   if ((userId !== game.user.id) || (actor.type !== "hero")) return;
   const stats = data._stats ?? {};
   if (stats.duplicateSource || stats.compendiumSource || stats.exportSource) return;
-  const updates = { [`flags.${MODULE_ID}.integrity`]: { value: INTEGRITY_START, max: INTEGRITY_START } };
+  const updates = {
+    [`flags.${MODULE_ID}.integrity`]: { value: INTEGRITY_START, max: INTEGRITY_START },
+    // New heroes get the Matrix Verbs from defaultItems, so they skip the migration.
+    [`flags.${MODULE_ID}.matrixVerbs`]: true,
+    [`flags.${MODULE_ID}.wired`]: { connected: false, state: "disconnected" },
+  };
   if (foundry.utils.getProperty(data, "system.hero.wealth") === undefined) updates["system.hero.wealth"] = STARTING_NUYEN;
   actor.updateSource(updates);
 });
@@ -354,5 +495,27 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
 
   const resources = stats.querySelector("fieldset.resources");
   if (resources) resources.after(fieldset);
+  else stats.prepend(fieldset);
+});
+
+// Hero sheet: a read-only Wired fieldset under Body Integrity showing the connection state.
+Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
+  const stats = element.querySelector("section.tab[data-tab='stats']");
+  if (!stats || stats.querySelector(".ghostwire-wired")) return;
+  const state = getWiredState(app.document);
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = `ghostwire-wired state-${state}`;
+  const legend = document.createElement("legend");
+  legend.textContent = game.i18n.localize("GHOSTWIRE.Wired.Label");
+  legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Wired.Hint");
+  const value = document.createElement("span");
+  value.className = "ghostwire-wired-state";
+  value.textContent = game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`);
+  const hint = document.createElement("span");
+  hint.className = "hint";
+  hint.textContent = game.i18n.localize(`GHOSTWIRE.Wired.StateHints.${state}`);
+  fieldset.append(legend, value, hint);
+  const anchor = stats.querySelector(".ghostwire-integrity") ?? stats.querySelector("fieldset.resources");
+  if (anchor) anchor.after(fieldset);
   else stats.prepend(fieldset);
 });

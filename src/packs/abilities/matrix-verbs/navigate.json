@@ -1,0 +1,99 @@
+{
+  "_id": "6sOxYCw5Ff6Es8LF",
+  "_key": "!items!6sOxYCw5Ff6Es8LF",
+  "name": "GHOSTWIRE.Abilities.MatrixVerbs.Navigate.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/conduit-transmission-red.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "matrix-navigate",
+    "story": "GHOSTWIRE.Abilities.MatrixVerbs.Navigate.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "intuition"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "verbNavigate0000": {
+          "_id": "verbNavigate0000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "other",
+          "other": {
+            "tier1": {
+              "display": "You move. It works, but something goes wrong — usually the Trace Alert rises.",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "You move cleanly.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "You move cleanly. You can use another maneuver this turn (the maneuver is refunded).",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.MatrixVerbs.Navigate.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JrEnEt0dCB734Fh1",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

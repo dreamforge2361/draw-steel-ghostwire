@@ -1,0 +1,66 @@
+{
+  "_id": "4gr00JaQt5OrEpDE",
+  "_key": "!items!4gr00JaQt5OrEpDE",
+  "name": "GHOSTWIRE.Abilities.MatrixVerbs.Broadcast.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/communications-dish-tan.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "matrix-broadcast",
+    "story": "GHOSTWIRE.Abilities.MatrixVerbs.Broadcast.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.MatrixVerbs.Broadcast.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JrEnEt0dCB734Fh1",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

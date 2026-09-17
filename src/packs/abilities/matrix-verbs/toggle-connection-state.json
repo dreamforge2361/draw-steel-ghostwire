@@ -1,0 +1,66 @@
+{
+  "_id": "ZGGlbzIQqzGIBdG6",
+  "_key": "!items!ZGGlbzIQqzGIBdG6",
+  "name": "GHOSTWIRE.Abilities.MatrixVerbs.ToggleConnectionState.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/electronics-tech-interface-teal.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "matrix-toggle-connection-state",
+    "story": "GHOSTWIRE.Abilities.MatrixVerbs.ToggleConnectionState.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "freeManeuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.MatrixVerbs.ToggleConnectionState.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JrEnEt0dCB734Fh1",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

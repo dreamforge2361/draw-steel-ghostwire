@@ -1,0 +1,99 @@
+{
+  "_id": "GY0GEe2obsavHD4a",
+  "_key": "!items!GY0GEe2obsavHD4a",
+  "name": "GHOSTWIRE.Abilities.MatrixVerbs.Connect.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/cable-end.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "matrix-connect",
+    "story": "GHOSTWIRE.Abilities.MatrixVerbs.Connect.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "intuition"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "verbConnect00000": {
+          "_id": "verbConnect00000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "other",
+          "other": {
+            "tier1": {
+              "display": "You Connect and enter Overlay. It works, but something goes wrong — usually the Trace Alert rises.",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "You Connect cleanly and enter Overlay.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "You Connect cleanly and enter Overlay. You can use another maneuver this turn (the maneuver is refunded).",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.MatrixVerbs.Connect.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JrEnEt0dCB734Fh1",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

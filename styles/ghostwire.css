@@ -74,3 +74,24 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   color: var(--ghostwire-accent, inherit);
   letter-spacing: 0.02em;
 }
+
+/* Wired connection state on the hero Stats tab */
+.ghostwire-wired {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.ghostwire-wired .ghostwire-wired-state {
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ghostwire-wired.state-overlay .ghostwire-wired-state {
+  color: var(--ghostwire-accent, #3fc1c9);
+}
+
+.ghostwire-wired.state-jackedIn .ghostwire-wired-state {
+  color: #e0457b;
+}

@@ -1,0 +1,99 @@
+{
+  "_id": "n1fEJIA3QoDXxUZS",
+  "_key": "!items!n1fEJIA3QoDXxUZS",
+  "name": "GHOSTWIRE.Abilities.MatrixVerbs.Search.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "matrix-search",
+    "story": "GHOSTWIRE.Abilities.MatrixVerbs.Search.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "verbSearch000000": {
+          "_id": "verbSearch000000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "other",
+          "other": {
+            "tier1": {
+              "display": "You find it. It works, but something goes wrong — usually the Trace Alert rises.",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "You find it cleanly.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "You find it cleanly, plus extra intel of the Director’s choice. You can use another maneuver this turn (the maneuver is refunded).",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.MatrixVerbs.Search.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JrEnEt0dCB734Fh1",
+  "sort": 8000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -28,7 +28,8 @@
       "Keywords": {
         "Tech": "Tech",
         "Chrome": "Chrome",
-        "Optics": "Optics"
+        "Optics": "Optics",
+        "Wired": "Wired"
       },
       "Rush": {
         "Name": "Rush",
@@ -51,6 +52,54 @@
       "Drive": {
         "Name": "Drive",
         "Description": "<p>A creature can take the Drive move action only while piloting a vehicle. When a creature takes the Drive move action, they cause their vehicle to move up to the vehicle’s speed, taking the driver and any passengers with it. Alternatively, a creature can use the Drive move action to have their vehicle use the Disengage move action as a free triggered action. A creature can use the Drive move action only once per round. A vehicle can only have this move action applied to it once per round. This movement can be broken up with the driver’s maneuver and main action however they wish.</p>"
+      },
+      "MatrixVerbs": {
+        "Folder": "Matrix Verbs",
+        "Connect": {
+          "Name": "Connect",
+          "Story": "You plug your Persona into the Wired where you stand.",
+          "Effect": "<p>You establish a Persona in the Wired at your current location and enter the <strong>Overlay</strong> connection state. Until you Connect, you can’t use the other Matrix Verbs, Programs, or Wired abilities that require you to be Overlaid or Jacked In.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        },
+        "JackOut": {
+          "Name": "Jack Out",
+          "Story": "Eject. Your full attention slams back into your body.",
+          "Effect": "<p>You disconnect from the Wired, leaving Overlay or Jacked In, and return your full attention to the physical world. This is your emergency eject when biofeedback spikes or hostile ICE locks on.</p><p><strong>Emergency:</strong> in a genuine emergency, you can use Jack Out as a free triggered action instead of a maneuver.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        },
+        "ToggleConnectionState": {
+          "Name": "Toggle Connection State",
+          "Story": "Half in, or all the way under. Your call, always.",
+          "Effect": "<p>While you are connected to the Wired, you switch between <strong>Overlay</strong> and <strong>Jacked In</strong> without disconnecting. No roll and no contest.</p><ul><li><p><strong>Overlay:</strong> the Wired rides over your physical senses. You can still see, move, speak, and act physically, but your real-world power rolls take a bane.</p></li><li><p><strong>Jacked In:</strong> full immersion. Your Wired power rolls gain an edge, but your body is inert: you can’t perceive, move, or act in the physical world, and you can’t make real-world power rolls.</p></li></ul><p>You can’t use this ability while disconnected.</p>"
+        },
+        "Scan": {
+          "Name": "Scan",
+          "Story": "What’s here? Doors, cameras, locks, drones — everything with a signal.",
+          "Effect": "<p>You get a read on the nodes within your Reach: doors, cameras, locks, drones, and any other Wired-connected system in range. Passive observation doesn’t raise the Trace Alert on its own.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        },
+        "Navigate": {
+          "Name": "Navigate",
+          "Story": "Movement, Wired-side: you slide node to node.",
+          "Effect": "<p>You move through the Wired up to your Reach in nodes, repositioning your Persona to reach a node, ally, or target you couldn’t otherwise touch.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        },
+        "Ping": {
+          "Name": "Ping",
+          "Story": "A light tap on a simple system — flick a light, test a lock.",
+          "Effect": "<p>You give a simple, low-stakes nudge to one simple Track 1 object within your Reach — flick a light, tap a lock, test a system — without needing a cyberdeck or a full Program.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        },
+        "Broadcast": {
+          "Name": "Broadcast",
+          "Story": "A private channel nobody outside the link can hear.",
+          "Effect": "<p>You send a message to allies you’re already connected to, within your Reach or Ghost Distance, over a private Wired-only channel no one outside the link can intercept. No roll and no contest; it just works.</p>"
+        },
+        "Search": {
+          "Name": "Search",
+          "Story": "Scan tells you what’s around. Search tells you what’s buried.",
+          "Effect": "<p>You dig into a node you’re already at to find something specific hiding inside it — the follow-up to Scan.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        },
+        "ReadWrite": {
+          "Name": "Read/Write",
+          "Story": "Read the file. Change the record. Plant the evidence. Forge the badge.",
+          "Effect": "<p>You read a file’s contents, alter a record, plant or delete evidence, or forge a credential in a node you’re at. This is the verb that actually changes information in the Wired.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+        }
       }
     },
     "Skills": {
@@ -2999,6 +3048,27 @@
       "Warnings": {
         "StockPerk": "{name} is a Draw Steel perk. Ghostwire uses the Ghostwire Perks compendium — pick a perk from there."
       }
+    },
+    "Wired": {
+      "Label": "Wired",
+      "Hint": "Your connection to the Wired. Connect enters Overlay; Toggle Connection State switches Overlay and Jacked In; Jack Out disconnects.",
+      "States": {
+        "disconnected": "Disconnected",
+        "overlay": "Overlay",
+        "jackedIn": "Jacked In"
+      },
+      "StateHints": {
+        "disconnected": "Not connected to the Wired.",
+        "overlay": "Overlay: bane on real-world ability power rolls.",
+        "jackedIn": "Jacked In: edge on Wired power rolls; body inert, no real-world power rolls."
+      },
+      "Warnings": {
+        "NotConnected": "{actor} isn’t connected to the Wired. Use Connect first.",
+        "AlreadyConnected": "{actor} is already connected to the Wired ({state}). Use Toggle Connection State or Jack Out.",
+        "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle to Overlay or Jack Out first."
+      },
+      "Changed": "{actor}: {state}.",
+      "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es)."
     }
   },
   "DRAW_STEEL": {

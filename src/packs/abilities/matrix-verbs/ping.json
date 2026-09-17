@@ -1,0 +1,99 @@
+{
+  "_id": "H1xUDnDNhWmAw0Ko",
+  "_key": "!items!H1xUDnDNhWmAw0Ko",
+  "name": "GHOSTWIRE.Abilities.MatrixVerbs.Ping.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/antenna-powered-purple.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "08-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "matrix-ping",
+    "story": "GHOSTWIRE.Abilities.MatrixVerbs.Ping.Story",
+    "keywords": [
+      "wired"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "custom": "",
+      "value": null
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "verbPing00000000": {
+          "_id": "verbPing00000000",
+          "name": "",
+          "img": null,
+          "sort": 0,
+          "type": "other",
+          "other": {
+            "tier1": {
+              "display": "The nudge lands. It works, but something goes wrong — usually the Trace Alert rises.",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "The nudge lands cleanly.",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "The nudge lands cleanly. You can use another maneuver this turn (the maneuver is refunded).",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.MatrixVerbs.Ping.Effect",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "JrEnEt0dCB734Fh1",
+  "sort": 6000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

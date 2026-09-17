@@ -82,6 +82,8 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B8 | Chrome / Body Integrity data | **Done** (pack shipped) | Chrome pack with Integrity costs + provisional ¥ |
 | B21 | Scout class pack | **Pending Michael test** | Scout (Advantage) + Hunter / Ghost / Face-in-crowd in Ghostwire Classes; mirrors Operator; module v0.1.25 |
 | B22 | Ghostwire Perks pack | **Pending Michael test** | 47 reskinned perks by type; perk grants list Ghostwire perks only; `17-perks.md`; module v0.1.26 |
+| B23a | Matrix Verbs + Overlay / Jacked In on the sheet | **Done, pending Michael test** | 9 verbs on every hero; token statuses; `18-wired-foundry.md`; module v0.1.27 |
+| B23b | Wired Console | **Next** | Console UI, scene nodes, Trace Alert tracker; reads `flags.draw-steel-ghostwire.wired` |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -163,3 +165,7 @@ After each spike:
 
 ### B22 Perks (2026-09-16)
 - [ ] **B22** Ghostwire Perks pack: all 47 Draw Steel perks reskinned, folders by perk type, 3 perk abilities cloned; level-up perk grants list only Ghostwire perks filtered by `perkType`; Draw Steel perks refused on drop and removed from the registry; `docs/rulebook/17-perks.md` (module v0.1.26) — **pending Michael Foundry test**
+
+### B23a Wired on the sheet (2026-09-16)
+- [x] **B23a** Matrix Verbs (9, Wired keyword) granted to every hero + one-time grant for existing heroes; Overlay / Jacked In token statuses set by Connect / Toggle Connection State / Jack Out; roll modifiers; `flags.draw-steel-ghostwire.wired`; `docs/rulebook/18-wired-foundry.md` (module v0.1.27) — **done, pending Michael Foundry test**
+- [ ] **B23b** Wired Console (next): console UI, scene nodes, Trace Alert tracker
