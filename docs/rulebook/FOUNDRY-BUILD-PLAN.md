@@ -501,8 +501,8 @@ Spec: `docs/spikes/B39-RUN-GENERATOR.md`; design + as-built: `docs/directors/run
 - **B43** Veil Rituals as DS Projects (explore) — `docs/directors/veil-rituals-exploration.md`.
 - **B44** Pregens from Dossiers PDF — `docs/directors/pregens-dossiers.md`.
 - **B45** Reach Handbook → lore Journals + art — `docs/directors/reach-handbook-journals.md`.
-- **B46** Wired Flats Matrix Gazetteer Journals - `docs/directors/wired-flats-gazetteer.md`.
+- **B46** Wired Flats Matrix Gazetteer Journals — `docs/directors/wired-flats-gazetteer.md`. Spike: `docs/spikes/B46-WIRED-FLATS-JOURNALS.md` — **built at 0.1.61, pending Foundry-verify**: pack `wired-flats`, one journal of 15 pages generated from `docs/setting/wired-flats-gazetteer.md` by `tools/wired-flats-to-journals.mjs`.
 - **B47** Foundry-sync packs/lang to Pass A/B/C - `docs/spikes/B47-FOUNDRY-SYNC-PASS-ABC.md` (**spike live**).
 
 
-| **Wired Flats Gazetteer Journals (B46)** | *The Wired � The Flats* Matrix Gazetteer & Node Key ? Foundry Journals (Grid/Barrier, district master nodes, corp fortresses, POI swarm, GM notes). Scrub old rules; keep lore + E1�E4 ICE posture. Stub: `docs/directors/wired-flats-gazetteer.md`. Local SoR: Dropbox `GHOSTWIRE - The Wired  The Flats (Matrix Gazetteer).docx`. | **Backlog** |
+| **Wired Flats Gazetteer Journals (B46)** | *The Wired — The Flats* Matrix Gazetteer & Node Key → Foundry Journals (Grid/Barrier, district master nodes, corp fortresses, POI swarm, GM notes). Scrub old rules; keep lore + E1–E4 ICE posture. Stub: `docs/directors/wired-flats-gazetteer.md`. Local SoR: Dropbox `GHOSTWIRE - The Wired  The Flats (Matrix Gazetteer).docx`. | **Built 0.1.61, pending Foundry-verify** |

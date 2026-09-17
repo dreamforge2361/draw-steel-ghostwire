@@ -24,7 +24,8 @@
       "perks": "Ghostwire Perks",
       "summons": "Ghostwire Summons & Machines",
       "bestiary": "Ghostwire Bestiary",
-      "rulebook": "Ghostwire Rulebook"
+      "rulebook": "Ghostwire Rulebook",
+      "wiredFlats": "Ghostwire — The Wired: Flats"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -6887,6 +6888,11 @@
         "TheVeil": "The Veil",
         "Machines": "Machines: Drones, Vehicles & Buildings",
         "Opposition": "Opposition (Director)"
+      }
+    },
+    "WiredFlats": {
+      "Journals": {
+        "Gazetteer": "The Wired — The Flats: Matrix Gazetteer"
       }
     }
   },

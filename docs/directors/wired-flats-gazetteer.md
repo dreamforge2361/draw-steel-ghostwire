@@ -1,6 +1,6 @@
 # B46 — The Wired — The Flats Matrix Gazetteer Journals (backlog)
 
-**Status:** Backlog locked 2026-09-17 — not started.  
+**Status:** **Built 2026-09-17 (B46), pending Michael Foundry-verify** — compendium **Ghostwire — The Wired: Flats** (`wired-flats`, JournalEntry; players Observer): one journal, 15 pages (How to Read · Grid & Barrier · District Master Nodes · Corporate Fortress-Nodes · POI Swarm intro + 9 category tables · Director notes), generated from `docs/setting/wired-flats-gazetteer.md` by `tools/wired-flats-to-journals.mjs`. Lore kept; light rules scrub only. Module 0.1.61. Spike: `docs/spikes/B46-WIRED-FLATS-JOURNALS.md`. SoR md: `docs/setting/wired-flats-gazetteer.md` — re-run the generator and `tools/build-packs.mjs` (Foundry closed) after any edit to it.  
 **Source (local SoR — no re-upload):**  
 `C:\Users\mfran\Dropbox\ai-brain\projects\draw steel\GHOSTWIRE - The Wired  The Flats (Matrix Gazetteer).docx`  
 (Also attached in chat as Word; ~19k chars extracted text.)  

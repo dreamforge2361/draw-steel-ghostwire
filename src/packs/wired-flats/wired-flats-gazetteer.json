@@ -1,0 +1,438 @@
+{
+  "_id": "lAdDMHDtHigpsS7t",
+  "_key": "!journal!lAdDMHDtHigpsS7t",
+  "name": "GHOSTWIRE.WiredFlats.Journals.Gazetteer",
+  "folder": null,
+  "sort": 100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "bPPOLTEyBz11MviP",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.bPPOLTEyBz11MviP",
+      "name": "How to Read This Gazetteer",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*Companion to the canon map \"The Wired — The Flats.\" A hacker's field guide to the public matrix-scape of the Ossian Reach underlevels: every district master node, corporate fortress, and street-level joint you can jack into during downtime projects or pre-run legwork.*\n\nEvery node carries an Echelon (E1–E4) security rating. This is the intrusion grade of the node's ICE, not the level or echelon of the people who run it.\n\n| Echelon | Security posture | What a runner faces |\n|---|---|---|\n| **E1** | Open / civic | Public master nodes, street joints. Minimal ICE, mostly logging. Anyone can knock. |\n| **E2** | Guarded | Standard commercial ICE, watchdog programs, alert-on-tamper. The working grade of the Flats. |\n| **E3** | Hardened | Layered ICE, active trace, gray/black hybrids. Corp-adjacent, gang-treasury, deep-net fringes. |\n| **E4** | Lethal | Black ICE. Kills or lobotomizes intruders. Corp fortresses and the Grid uplink. Do not knock without a plan. |\n\n**The vertical rule (canon):** The Flats are the low-security floor of the Wired. The Grid sits above, behind the Black ICE Barrier — a single guarded uplink chokepoint, all E4. Everything on this map is Flats-native (E1–E3) except the corporate fortress-nodes and the Grid gate, which are E4.\n**Canon note (districts):** The Ossian Reach Handbook fixes ten canon districts. The matrix map renders those ten plus two matrix-only extensions — Cinderhold (the wasteland-gate settlement's uplink, canon as a place, here given a Flats-facing public node) and The Undernet (the deep-net boundary shading toward the Sinks). Both are flagged below.\n\n**Echelon here is a node's ICE grade, not a hero's progression.** Hero levels and echelons are in the rulebook (`24-advancement`); a node's own defence grade is its **Node Rating** (1–5, `21-the-wire`). The E1–E4 posture below describes the ICE a runner meets at the door.\n\n**Director's notes.** Names here that have stats or tools elsewhere: **Mama Cassavir**, **Warden Krael** and the ICE constructs are in the Ghostwire Bestiary; district strata feed the Director Run Generator; node stat cards come from the System Stat Card in The Wire (`21-the-wire`).",
+        "content": "<p><em>Companion to the canon map \"The Wired — The Flats.\" A hacker's field guide to the public matrix-scape of the Ossian Reach underlevels: every district master node, corporate fortress, and street-level joint you can jack into during downtime projects or pre-run legwork.</em></p>\n<p>Every node carries an Echelon (E1–E4) security rating. This is the intrusion grade of the node's ICE, not the level or echelon of the people who run it.</p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"security_posture\">Security posture</th>\n<th id=\"what_a_runner_faces\">What a runner faces</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>E1</strong></td>\n<td>Open / civic</td>\n<td>Public master nodes, street joints. Minimal ICE, mostly logging. Anyone can knock.</td>\n</tr>\n<tr>\n<td><strong>E2</strong></td>\n<td>Guarded</td>\n<td>Standard commercial ICE, watchdog programs, alert-on-tamper. The working grade of the Flats.</td>\n</tr>\n<tr>\n<td><strong>E3</strong></td>\n<td>Hardened</td>\n<td>Layered ICE, active trace, gray/black hybrids. Corp-adjacent, gang-treasury, deep-net fringes.</td>\n</tr>\n<tr>\n<td><strong>E4</strong></td>\n<td>Lethal</td>\n<td>Black ICE. Kills or lobotomizes intruders. Corp fortresses and the Grid uplink. Do not knock without a plan.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>The vertical rule (canon):</strong> The Flats are the low-security floor of the Wired. The Grid sits above, behind the Black ICE Barrier — a single guarded uplink chokepoint, all E4. Everything on this map is Flats-native (E1–E3) except the corporate fortress-nodes and the Grid gate, which are E4.\n<strong>Canon note (districts):</strong> The Ossian Reach Handbook fixes ten canon districts. The matrix map renders those ten plus two matrix-only extensions — Cinderhold (the wasteland-gate settlement's uplink, canon as a place, here given a Flats-facing public node) and The Undernet (the deep-net boundary shading toward the Sinks). Both are flagged below.</p>\n<p><strong>Echelon here is a node's ICE grade, not a hero's progression.</strong> Hero levels and echelons are in the rulebook (<code>24-advancement</code>); a node's own defence grade is its <strong>Node Rating</strong> (1–5, <code>21-the-wire</code>). The E1–E4 posture below describes the ICE a runner meets at the door.</p>\n<p><strong>Director's notes.</strong> Names here that have stats or tools elsewhere: <strong>Mama Cassavir</strong>, <strong>Warden Krael</strong> and the ICE constructs are in the Ghostwire Bestiary; district strata feed the Director Run Generator; node stat cards come from the System Stat Card in The Wire (<code>21-the-wire</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "iaXyuQYgZEntGICm",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.iaXyuQYgZEntGICm",
+      "name": "The Grid & The Barrier",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### THE GRID — Upper System\n\n**Echelon:** E4 (Black ICE)\n**Owner:** The Conglomerates, jointly; policed by Meridian traffic-net and corp Sanctums.\n**Vibe:** A cathedral ceiling of cold, ordered light above the reef. Clean geometry, no clutter, everything watched. The architecture itself is a threat display.\n**What to score:** Licensed paydata, corp memos, clean SIN-flags, Grid-warden favors — none of it cheap, all of it lethal to reach.\n**Plot hook:** The Climb. A Flats crew has to get a payload up past the Barrier and back down without tripping the boundary scan. Warden Krael \"the Landlord\" will sell an uplink window — for a price that's never just nuyen.\n\n### BLACK ICE BARRIER & Guarded Uplink Chokepoint\n\n**Echelon:** E4 (Black ICE)\n**Owner:** Automated corp defense grid; no single hand on it.\n**Vibe:** A wall of adaptive lethal light with one narrow, watched door punched through it. Everything funnels to the chokepoint; everything at the chokepoint is seen.\n**What to score:** The window itself — a timed gap in the trace. That's the whole heist.\n**Plot hook:** One Way Up, Many Watching. The uplink only opens for authenticated traffic. Someone has to be the authenticated traffic. Who's the crew willing to burn to be the key?",
+        "content": "<h3>THE GRID — Upper System</h3>\n<p><strong>Echelon:</strong> E4 (Black ICE)\n<strong>Owner:</strong> The Conglomerates, jointly; policed by Meridian traffic-net and corp Sanctums.\n<strong>Vibe:</strong> A cathedral ceiling of cold, ordered light above the reef. Clean geometry, no clutter, everything watched. The architecture itself is a threat display.\n<strong>What to score:</strong> Licensed paydata, corp memos, clean SIN-flags, Grid-warden favors — none of it cheap, all of it lethal to reach.\n<strong>Plot hook:</strong> The Climb. A Flats crew has to get a payload up past the Barrier and back down without tripping the boundary scan. Warden Krael \"the Landlord\" will sell an uplink window — for a price that's never just nuyen.</p>\n<h3>BLACK ICE BARRIER &amp; Guarded Uplink Chokepoint</h3>\n<p><strong>Echelon:</strong> E4 (Black ICE)\n<strong>Owner:</strong> Automated corp defense grid; no single hand on it.\n<strong>Vibe:</strong> A wall of adaptive lethal light with one narrow, watched door punched through it. Everything funnels to the chokepoint; everything at the chokepoint is seen.\n<strong>What to score:</strong> The window itself — a timed gap in the trace. That's the whole heist.\n<strong>Plot hook:</strong> One Way Up, Many Watching. The uplink only opens for authenticated traffic. Someone has to be the authenticated traffic. Who's the crew willing to burn to be the key?</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "iHeFeMOIE76MwPTb",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.iHeFeMOIE76MwPTb",
+      "name": "District Master Nodes",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The public civic node for each district — the on-ramp every resident and runner uses. Master nodes are deliberately open (E1) so the district functions; the real security lives in what they connect to.\n\n### THE SWITCHBOARD — Master Node (canon 01)\n\n**Echelon:** E1 (the on-ramp) — but Cassavir's private layer runs E3.\n**Owner:** Nominally civic; functionally Mama Cassavir, \"the Switchboard.\"\n**Vibe:** A dead rail switching-station wired back to life, humming with a hundred routed deals. The seam between up and down.\n**What to score:** Work. Every hook in the Reach can plausibly route through here.\n**Plot hook:** The On-Ramp. The default first job. Cassavir hands the crew a contract — and a relationship to spend and endanger.\n\n### THE STACKS — Master Node (canon 03)\n\n**Echelon:** E1\n**Owner:** Contested — the Ninth Ward Kings hold the plaza; Ferrum's Rent Office holds the paper.\n**Vibe:** Regimented company housing gone to seed. A rigid grid the Grid forgot.\n**What to score:** Residency records, gang-parliament schedules, the Sparrows' child-courier routes.\n**Plot hook:** The Rent War. Ferrum wants to \"renovate\" (evict) eight blocks. The Kings say no. The crew is hired by one side and courted by the other.\n\n### NEON SHAMBLES — Master Node (canon 02)\n\n**Echelon:** E2 (dense commercial traffic = more watchdogs)\n**Owner:** The market itself; the Kings tax it, Cassavir brokers its peace.\n**Vibe:** Forty stories of stacked signage over a medieval tangle of stall-choked lanes. The Flats' beating night-market heart.\n**What to score:** Anything for sale, the Deadletter job board, simsense chip-schematics.\n**Plot hook:** The Long Bazaar Steal. A one-of-a-kind chip surfaces at a stall for one night. Every faction wants it. So does the crew's Johnson.\n\n### GLASSHOOK — Master Node (canon 08)\n\n**Echelon:** E2\n**Owner:** No one holds the Fallen Atrium cleanly; it's a rotating gang court.\n**Vibe:** A collapsed retail arcology gone feral — a vertical mall turned sideways, shopfronts turned squats.\n**What to score:** Missing-persons intel (Lost & Found), fenced luxury goods, pirate-media broadcast access.\n**Plot hook:** Lost & Found. The body-trade broker has a client's face on file. The client wants it erased. The face belongs to someone the crew knows.\n\n### SLACKWATER — Master Node (canon 04)\n\n**Echelon:** E2\n**Owner:** Nyx smuggling interests; Ferrum runs the licensed cranes.\n**Vibe:** Where the Flats meet the cistern-sea. Finger-piers, sunken warehouses, smuggler channels down to the Sinks.\n**What to score:** Smuggling manifests, Sinkmouth access codes, contraband cargo tags.\n**Plot hook:** The Sinkmouth Opens. Something is coming up the sealed channel from the Sinks. Nyx wants it moved quietly. It should not be moved at all.\n\n### THE INTERCHANGE — Master Node (canon 05)\n\n**Echelon:** E2\n**Owner:** Wheelman collectives; Ironclad runs the Weigh Station checkpoint.\n**Vibe:** A cathedral of on-ramps — stacked freeways, sunken lots, the fastest way through the Flats.\n**What to score:** Convoy schedules, Ironclad checkpoint blind-spots, rig-runner staging intel.\n**Plot hook:** The Clean Route Survey. Kestrel Dynamics is mapping the Interchange for autonomous transit. The wheelmen see the end of their world in it.\n\n### WIRESIDE — Master Node (canon 09)\n\n**Echelon:** E3 (data slum — everything here is wired deep)\n**Owner:** Technomancer collectives; Meridian sub-corp watches the fringe.\n**Vibe:** Where the Wired comes down to the street. Server-shanties, cooling-mist alleys, deep-net divers.\n**What to score:** Deep-net access, net-runners for hire, stolen bandwidth, the Ghost Node's secrets.\n**Plot hook:** The Ghost Node. A haunted deep-net address answers when it shouldn't. The technomancers are afraid of it. It knows the crew's names.\n\n### CINDER MARKET — Master Node (canon 06)\n\n**Echelon:** E2\n**Owner:** The Wrench guild and the Kiln gang share uneasy ground.\n**Vibe:** The Flats' foundry-quarter. Furnace-lit workshops, drone-forges, the best off-books tech south of the Grid.\n**What to score:** Chrome, drone frames, combat-frame refits, fabrication schematics.\n**Plot hook:** The Piston Yard Prototype. A combat-frame refit is too good — someone leaked Ironclad milspec into the Flats. Ironclad wants it back, quietly.\n\n### THE SPILLWAY — Master Node (canon 07)\n\n**Echelon:** E2\n**Owner:** The Undertow drain-gang (Culvert Kings); Nyx controls the Sluice Gate.\n**Vibe:** Built in and over the hive's storm-drains. Floods on schedule, hides what the water takes.\n**What to score:** Smuggler-highway timing, salvage sieved from the drains, flood-schedule data.\n**Plot hook:** What the Water Takes. The next scheduled flood will bury evidence — or a witness. The crew has until the sluice opens.\n\n### GALLOWS END — Master Node (canon 10)\n\n**Echelon:** E3 (edge district — dead-air creep raises the grade)\n**Owner:** The Last Light boss; the Lamp on Ninth kin keep the Vigil Shrine.\n**Vibe:** The bottom of the Flats, where the floor gives out. The last lit blocks before the Warrens swallow the light.\n**What to score:** Warrens-salvage, descent gear, SIN-vanishing services (the Deadline), Warrens intel.\n**Plot hook:** The Deadline. A SIN the crew needs erased is at the Deadline broker — but so is a runner who paid to disappear and shouldn't have been let to.\n\n### CINDERHOLD — Master Node (matrix extension; canon place, Ch. 6)\n\n**Echelon:** E3 (wasteland gate — thin signal, hardened by necessity)\n**Owner:** Marrow, the Ranger-captain; Cassavir's colder twin switchboard.\n**Vibe:** The free settlement at the wasteland gate, uplinked to the Flats by a single hardened line. The seam where the hive hands off to the wastes.\n**What to score:** Wasteland caravan routes, off-books Verdant supply intel, early-warning on the dead-air spread.\n**Plot hook:** The Clean Route Clock. Kestrel wants to civilize the gate. Marrow knows the corridor runs through ground that's going quiet. He needs deniable eyes — the crew's.\n\n### THE UNDERNET — Master Node (matrix extension; the deep-net boundary)\n\n**Echelon:** E4 (dead-air fringe — the Wired thins toward the Quiet Floor)\n**Owner:** No one living. The Ferryman tollkeeps the approach; something below may answer to him.\n**Vibe:** Where the Wired stops reaching. Signal thins, then thought thins. The matrix-shadow of Deadfall Nine.\n**What to score:** Nothing safely. Lost paydata, dead runners' last uploads, and truths the hive walled off.\n**Plot hook:** The Quiet Floor Leaks. Nodes just above the Undernet are going dark one by one. The pattern is climbing toward the Flats. Someone has to go look.",
+        "content": "<p>The public civic node for each district — the on-ramp every resident and runner uses. Master nodes are deliberately open (E1) so the district functions; the real security lives in what they connect to.</p>\n<h3>THE SWITCHBOARD — Master Node (canon 01)</h3>\n<p><strong>Echelon:</strong> E1 (the on-ramp) — but Cassavir's private layer runs E3.\n<strong>Owner:</strong> Nominally civic; functionally Mama Cassavir, \"the Switchboard.\"\n<strong>Vibe:</strong> A dead rail switching-station wired back to life, humming with a hundred routed deals. The seam between up and down.\n<strong>What to score:</strong> Work. Every hook in the Reach can plausibly route through here.\n<strong>Plot hook:</strong> The On-Ramp. The default first job. Cassavir hands the crew a contract — and a relationship to spend and endanger.</p>\n<h3>THE STACKS — Master Node (canon 03)</h3>\n<p><strong>Echelon:</strong> E1\n<strong>Owner:</strong> Contested — the Ninth Ward Kings hold the plaza; Ferrum's Rent Office holds the paper.\n<strong>Vibe:</strong> Regimented company housing gone to seed. A rigid grid the Grid forgot.\n<strong>What to score:</strong> Residency records, gang-parliament schedules, the Sparrows' child-courier routes.\n<strong>Plot hook:</strong> The Rent War. Ferrum wants to \"renovate\" (evict) eight blocks. The Kings say no. The crew is hired by one side and courted by the other.</p>\n<h3>NEON SHAMBLES — Master Node (canon 02)</h3>\n<p><strong>Echelon:</strong> E2 (dense commercial traffic = more watchdogs)\n<strong>Owner:</strong> The market itself; the Kings tax it, Cassavir brokers its peace.\n<strong>Vibe:</strong> Forty stories of stacked signage over a medieval tangle of stall-choked lanes. The Flats' beating night-market heart.\n<strong>What to score:</strong> Anything for sale, the Deadletter job board, simsense chip-schematics.\n<strong>Plot hook:</strong> The Long Bazaar Steal. A one-of-a-kind chip surfaces at a stall for one night. Every faction wants it. So does the crew's Johnson.</p>\n<h3>GLASSHOOK — Master Node (canon 08)</h3>\n<p><strong>Echelon:</strong> E2\n<strong>Owner:</strong> No one holds the Fallen Atrium cleanly; it's a rotating gang court.\n<strong>Vibe:</strong> A collapsed retail arcology gone feral — a vertical mall turned sideways, shopfronts turned squats.\n<strong>What to score:</strong> Missing-persons intel (Lost &amp; Found), fenced luxury goods, pirate-media broadcast access.\n<strong>Plot hook:</strong> Lost &amp; Found. The body-trade broker has a client's face on file. The client wants it erased. The face belongs to someone the crew knows.</p>\n<h3>SLACKWATER — Master Node (canon 04)</h3>\n<p><strong>Echelon:</strong> E2\n<strong>Owner:</strong> Nyx smuggling interests; Ferrum runs the licensed cranes.\n<strong>Vibe:</strong> Where the Flats meet the cistern-sea. Finger-piers, sunken warehouses, smuggler channels down to the Sinks.\n<strong>What to score:</strong> Smuggling manifests, Sinkmouth access codes, contraband cargo tags.\n<strong>Plot hook:</strong> The Sinkmouth Opens. Something is coming up the sealed channel from the Sinks. Nyx wants it moved quietly. It should not be moved at all.</p>\n<h3>THE INTERCHANGE — Master Node (canon 05)</h3>\n<p><strong>Echelon:</strong> E2\n<strong>Owner:</strong> Wheelman collectives; Ironclad runs the Weigh Station checkpoint.\n<strong>Vibe:</strong> A cathedral of on-ramps — stacked freeways, sunken lots, the fastest way through the Flats.\n<strong>What to score:</strong> Convoy schedules, Ironclad checkpoint blind-spots, rig-runner staging intel.\n<strong>Plot hook:</strong> The Clean Route Survey. Kestrel Dynamics is mapping the Interchange for autonomous transit. The wheelmen see the end of their world in it.</p>\n<h3>WIRESIDE — Master Node (canon 09)</h3>\n<p><strong>Echelon:</strong> E3 (data slum — everything here is wired deep)\n<strong>Owner:</strong> Technomancer collectives; Meridian sub-corp watches the fringe.\n<strong>Vibe:</strong> Where the Wired comes down to the street. Server-shanties, cooling-mist alleys, deep-net divers.\n<strong>What to score:</strong> Deep-net access, net-runners for hire, stolen bandwidth, the Ghost Node's secrets.\n<strong>Plot hook:</strong> The Ghost Node. A haunted deep-net address answers when it shouldn't. The technomancers are afraid of it. It knows the crew's names.</p>\n<h3>CINDER MARKET — Master Node (canon 06)</h3>\n<p><strong>Echelon:</strong> E2\n<strong>Owner:</strong> The Wrench guild and the Kiln gang share uneasy ground.\n<strong>Vibe:</strong> The Flats' foundry-quarter. Furnace-lit workshops, drone-forges, the best off-books tech south of the Grid.\n<strong>What to score:</strong> Chrome, drone frames, combat-frame refits, fabrication schematics.\n<strong>Plot hook:</strong> The Piston Yard Prototype. A combat-frame refit is too good — someone leaked Ironclad milspec into the Flats. Ironclad wants it back, quietly.</p>\n<h3>THE SPILLWAY — Master Node (canon 07)</h3>\n<p><strong>Echelon:</strong> E2\n<strong>Owner:</strong> The Undertow drain-gang (Culvert Kings); Nyx controls the Sluice Gate.\n<strong>Vibe:</strong> Built in and over the hive's storm-drains. Floods on schedule, hides what the water takes.\n<strong>What to score:</strong> Smuggler-highway timing, salvage sieved from the drains, flood-schedule data.\n<strong>Plot hook:</strong> What the Water Takes. The next scheduled flood will bury evidence — or a witness. The crew has until the sluice opens.</p>\n<h3>GALLOWS END — Master Node (canon 10)</h3>\n<p><strong>Echelon:</strong> E3 (edge district — dead-air creep raises the grade)\n<strong>Owner:</strong> The Last Light boss; the Lamp on Ninth kin keep the Vigil Shrine.\n<strong>Vibe:</strong> The bottom of the Flats, where the floor gives out. The last lit blocks before the Warrens swallow the light.\n<strong>What to score:</strong> Warrens-salvage, descent gear, SIN-vanishing services (the Deadline), Warrens intel.\n<strong>Plot hook:</strong> The Deadline. A SIN the crew needs erased is at the Deadline broker — but so is a runner who paid to disappear and shouldn't have been let to.</p>\n<h3>CINDERHOLD — Master Node (matrix extension; canon place, Ch. 6)</h3>\n<p><strong>Echelon:</strong> E3 (wasteland gate — thin signal, hardened by necessity)\n<strong>Owner:</strong> Marrow, the Ranger-captain; Cassavir's colder twin switchboard.\n<strong>Vibe:</strong> The free settlement at the wasteland gate, uplinked to the Flats by a single hardened line. The seam where the hive hands off to the wastes.\n<strong>What to score:</strong> Wasteland caravan routes, off-books Verdant supply intel, early-warning on the dead-air spread.\n<strong>Plot hook:</strong> The Clean Route Clock. Kestrel wants to civilize the gate. Marrow knows the corridor runs through ground that's going quiet. He needs deniable eyes — the crew's.</p>\n<h3>THE UNDERNET — Master Node (matrix extension; the deep-net boundary)</h3>\n<p><strong>Echelon:</strong> E4 (dead-air fringe — the Wired thins toward the Quiet Floor)\n<strong>Owner:</strong> No one living. The Ferryman tollkeeps the approach; something below may answer to him.\n<strong>Vibe:</strong> Where the Wired stops reaching. Signal thins, then thought thins. The matrix-shadow of Deadfall Nine.\n<strong>What to score:</strong> Nothing safely. Lost paydata, dead runners' last uploads, and truths the hive walled off.\n<strong>Plot hook:</strong> The Quiet Floor Leaks. Nodes just above the Undernet are going dark one by one. The pattern is climbing toward the Flats. Someone has to go look.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "eWF5nCJm75vQ0Qr9",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.eWF5nCJm75vQ0Qr9",
+      "name": "Corporate Fortress-Nodes",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Corp presence pushed down into the Flats' reef. All E4 — Black ICE, no exceptions. These are not joints you walk into; they are walls you plan against.\n\n### CADUCEUS — Med-Corp Fortress\n\n**Echelon:** E4\n**Owner:** Caduceus (the med-corp); runs the Flats' deniable clinics through cut-outs.\n**Vibe:** A sterile pink-lit vault-node bleeding into the Grafthouse ripperdoc trade below it. Healing as a leash.\n**What to score:** Patient records, cyber-limb serials, the deniable link between Caduceus and the back-alley docs.\n**Plot hook:** Deniable Care. A Grafthouse ripperdoc is installing Caduceus-tagged chrome with a backdoor. Someone's harvesting the patients' senses. Prove it and you own the med-corp.\n\n### ZIGGURAT TRUST — Bank Vault-Node\n\n**Echelon:** E4\n**Owner:** Ziggurat Trust (finance conglomerate).\n**Vibe:** A gold-cold monolith of certified credit, the one place in the Flats where nuyen is real and watched.\n**What to score:** Account trails, laundered-credstick provenance, the ledger of who really owns the Flats.\n**Plot hook:** Following the Nuyen. A run's payout traces back through Ziggurat to a name that shouldn't be funding street work. The bank would kill to keep that quiet.\n\n### OMNIWAVE — Media Spire\n\n**Echelon:** E4\n**Owner:** Omniwave / the Media Conglomerate.\n**Vibe:** A blazing orange broadcast tower flooding the reef with the manufactured calm. Reality, as edited.\n**What to score:** Un-aired footage, the edit-room truth, blackmail cuts, pirate-broadcast override keys.\n**Plot hook:** The Cut They Buried. Omniwave has footage that ends a corp war — or starts one. Both sides hire the crew to get it. Only one payload exists.\n\n### IRONCLAD — Arms Grid\n\n**Echelon:** E4\n**Owner:** Ironclad (arms conglomerate); runs cage-fight talent scouting and convoy security in the Flats.\n**Vibe:** A red katana-marked fortress-node, all edges. The hand that arms every side and profits from all of them.\n**What to score:** Weapon serials, convoy routes, milspec schematics, the buyer list.\n**Plot hook:** The Leaked Milspec. Ironclad hardware surfaced in the Cinder Market (see Piston Yard). Ironclad wants the leak plugged. The leaker wants to live.\n\n### NIGHTMARKET — Data-Haven\n\n**Echelon:** E4 (fortress-grade, but criminal black ICE — trapped, not corporate)\n**Owner:** The Blacknet syndicate (canon \"Blacknet Market\" node).\n**Vibe:** A poison-green data-haven where anything can be bought if you survive the buying. The anti-Ziggurat.\n**What to score:** Stolen paydata, zero-day exploits, the auction block, identities.\n**Plot hook:** The Blacknet Auction. The crew's own stolen data is on the block — or their SIN is. The auction closes at dawn.",
+        "content": "<p>Corp presence pushed down into the Flats' reef. All E4 — Black ICE, no exceptions. These are not joints you walk into; they are walls you plan against.</p>\n<h3>CADUCEUS — Med-Corp Fortress</h3>\n<p><strong>Echelon:</strong> E4\n<strong>Owner:</strong> Caduceus (the med-corp); runs the Flats' deniable clinics through cut-outs.\n<strong>Vibe:</strong> A sterile pink-lit vault-node bleeding into the Grafthouse ripperdoc trade below it. Healing as a leash.\n<strong>What to score:</strong> Patient records, cyber-limb serials, the deniable link between Caduceus and the back-alley docs.\n<strong>Plot hook:</strong> Deniable Care. A Grafthouse ripperdoc is installing Caduceus-tagged chrome with a backdoor. Someone's harvesting the patients' senses. Prove it and you own the med-corp.</p>\n<h3>ZIGGURAT TRUST — Bank Vault-Node</h3>\n<p><strong>Echelon:</strong> E4\n<strong>Owner:</strong> Ziggurat Trust (finance conglomerate).\n<strong>Vibe:</strong> A gold-cold monolith of certified credit, the one place in the Flats where nuyen is real and watched.\n<strong>What to score:</strong> Account trails, laundered-credstick provenance, the ledger of who really owns the Flats.\n<strong>Plot hook:</strong> Following the Nuyen. A run's payout traces back through Ziggurat to a name that shouldn't be funding street work. The bank would kill to keep that quiet.</p>\n<h3>OMNIWAVE — Media Spire</h3>\n<p><strong>Echelon:</strong> E4\n<strong>Owner:</strong> Omniwave / the Media Conglomerate.\n<strong>Vibe:</strong> A blazing orange broadcast tower flooding the reef with the manufactured calm. Reality, as edited.\n<strong>What to score:</strong> Un-aired footage, the edit-room truth, blackmail cuts, pirate-broadcast override keys.\n<strong>Plot hook:</strong> The Cut They Buried. Omniwave has footage that ends a corp war — or starts one. Both sides hire the crew to get it. Only one payload exists.</p>\n<h3>IRONCLAD — Arms Grid</h3>\n<p><strong>Echelon:</strong> E4\n<strong>Owner:</strong> Ironclad (arms conglomerate); runs cage-fight talent scouting and convoy security in the Flats.\n<strong>Vibe:</strong> A red katana-marked fortress-node, all edges. The hand that arms every side and profits from all of them.\n<strong>What to score:</strong> Weapon serials, convoy routes, milspec schematics, the buyer list.\n<strong>Plot hook:</strong> The Leaked Milspec. Ironclad hardware surfaced in the Cinder Market (see Piston Yard). Ironclad wants the leak plugged. The leaker wants to live.</p>\n<h3>NIGHTMARKET — Data-Haven</h3>\n<p><strong>Echelon:</strong> E4 (fortress-grade, but criminal black ICE — trapped, not corporate)\n<strong>Owner:</strong> The Blacknet syndicate (canon \"Blacknet Market\" node).\n<strong>Vibe:</strong> A poison-green data-haven where anything can be bought if you survive the buying. The anti-Ziggurat.\n<strong>What to score:</strong> Stolen paydata, zero-day exploits, the auction block, identities.\n<strong>Plot hook:</strong> The Blacknet Auction. The crew's own stolen data is on the block — or their SIN is. The auction closes at dawn.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dUS8nIyBH9QQOPto",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.dUS8nIyBH9QQOPto",
+      "name": "The POI Swarm — Street-Level Nodes",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The small joints of the Flats: where a crew fences loot, gets chromed, buys intel, prays, or lies low. These are the working nodes — mostly E1–E2, a few E3 where the money or the danger runs deep.",
+        "content": "<p>The small joints of the Flats: where a crew fences loot, gets chromed, buys intel, prays, or lies low. These are the working nodes — mostly E1–E2, a few E3 where the money or the danger runs deep.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "Ts5YCmf7iyDCr3qb",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.Ts5YCmf7iyDCr3qb",
+      "name": "Noodle Shops",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Noodle Shops (neutral ground, information, cover)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Slump's Noodles | E1 | Old Slump, ex-runner | Steam, low light, no questions | Neutral-ground meets, street gossip | A rival crew books the back booth for the same meet |\n| Hot Wire Ramen | E1 | The Chen syndicate front | Loud, bright, always packed | Overheard corp chatter, a Johnson's regular table | The regular Johnson doesn't show — his chair's still warm |\n| Old Fen's Bowl | E1 | Fen, a retired fixer | Quiet, elders only, deep memory | Old debts, older secrets, who owes whom | Fen remembers a run the crew was told never happened |\n| Drip Kitchen | E2 | The Glass Vipers (feed-famous) | Filmed, trendy, wired | Simsense clout, Viper contacts, viral heat | The crew's last run got filmed here — and posted |",
+        "content": "<h3>Noodle Shops (neutral ground, information, cover)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Slump's Noodles</td>\n<td>E1</td>\n<td>Old Slump, ex-runner</td>\n<td>Steam, low light, no questions</td>\n<td>Neutral-ground meets, street gossip</td>\n<td>A rival crew books the back booth for the same meet</td>\n</tr>\n<tr>\n<td>Hot Wire Ramen</td>\n<td>E1</td>\n<td>The Chen syndicate front</td>\n<td>Loud, bright, always packed</td>\n<td>Overheard corp chatter, a Johnson's regular table</td>\n<td>The regular Johnson doesn't show — his chair's still warm</td>\n</tr>\n<tr>\n<td>Old Fen's Bowl</td>\n<td>E1</td>\n<td>Fen, a retired fixer</td>\n<td>Quiet, elders only, deep memory</td>\n<td>Old debts, older secrets, who owes whom</td>\n<td>Fen remembers a run the crew was told never happened</td>\n</tr>\n<tr>\n<td>Drip Kitchen</td>\n<td>E2</td>\n<td>The Glass Vipers (feed-famous)</td>\n<td>Filmed, trendy, wired</td>\n<td>Simsense clout, Viper contacts, viral heat</td>\n<td>The crew's last run got filmed here — and posted</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ZBzo4PGjT9UQZCQl",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.ZBzo4PGjT9UQZCQl",
+      "name": "Pawn Shops",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Pawn Shops (fencing, gear, leverage)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Iron Teeth Pawn | E2 | The Kings' treasury front | Barred, armed, fair-if-feared | Fence anything, gang-blessed prices | The item you're fencing is Kings' property already |\n| Last Call Pawn | E1 | Desperate independent | Everything's a fire sale | Cheap gear, desperate sellers' stories | A dying man just pawned a datachip he wanted found |\n| Copper Ghost | E2 | A ghost — owner never seen | Automated, eerie, precise | Rare tech, no-face transactions | The Ghost pays too much for one specific thing |\n| The Hock | E2 | The Rust Saints | Heavy goods, salvage, honor-bound | Industrial gear, breach tools | A Saint's pledged item is up for redemption — with a war attached |\n| Deadhand Pawn | E3 | A Deadline-linked broker | Cold, final, near the edge | Dead runners' effects, SIN-scrubbed goods | An item here belonged to a runner who \"retired\" to Gallows End |",
+        "content": "<h3>Pawn Shops (fencing, gear, leverage)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Iron Teeth Pawn</td>\n<td>E2</td>\n<td>The Kings' treasury front</td>\n<td>Barred, armed, fair-if-feared</td>\n<td>Fence anything, gang-blessed prices</td>\n<td>The item you're fencing is Kings' property already</td>\n</tr>\n<tr>\n<td>Last Call Pawn</td>\n<td>E1</td>\n<td>Desperate independent</td>\n<td>Everything's a fire sale</td>\n<td>Cheap gear, desperate sellers' stories</td>\n<td>A dying man just pawned a datachip he wanted found</td>\n</tr>\n<tr>\n<td>Copper Ghost</td>\n<td>E2</td>\n<td>A ghost — owner never seen</td>\n<td>Automated, eerie, precise</td>\n<td>Rare tech, no-face transactions</td>\n<td>The Ghost pays too much for one specific thing</td>\n</tr>\n<tr>\n<td>The Hock</td>\n<td>E2</td>\n<td>The Rust Saints</td>\n<td>Heavy goods, salvage, honor-bound</td>\n<td>Industrial gear, breach tools</td>\n<td>A Saint's pledged item is up for redemption — with a war attached</td>\n</tr>\n<tr>\n<td>Deadhand Pawn</td>\n<td>E3</td>\n<td>A Deadline-linked broker</td>\n<td>Cold, final, near the edge</td>\n<td>Dead runners' effects, SIN-scrubbed goods</td>\n<td>An item here belonged to a runner who \"retired\" to Gallows End</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "F1AJMgot84cbUzEH",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.F1AJMgot84cbUzEH",
+      "name": "Chop Shops",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Chop Shops (vehicles, drones, boosted rigs)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Rustwire Chop | E1 | Independent grease-crew | Sparks, oil, fast turnaround | Boosted rides, drone parts | The rig on the lift is still tracking its corp owner |\n| Scattertooth | E2 | Glass Vipers' garage | Wired, reckless, drone-heavy | Stolen drones, speed mods | A Viper drone here filmed something it shouldn't have |\n| Ghosthand Chop | E2 | A Nyx cut-out | Silent, no serials, no memory | Untraceable vehicles | The last \"clean\" car came back with a body in the trunk |\n| Nord's Cuts | E1 | Nord, honest-ish | Old-school, cash-only | Reliable repairs, wheelman intel | Nord's newest client is a corp in disguise |\n| Voidwrench | E2 | Rust Saints demolition arm | Heavy, loud, structural | Breach-rigs, demo gear | The Saints are prepping to bring down a specific block |",
+        "content": "<h3>Chop Shops (vehicles, drones, boosted rigs)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Rustwire Chop</td>\n<td>E1</td>\n<td>Independent grease-crew</td>\n<td>Sparks, oil, fast turnaround</td>\n<td>Boosted rides, drone parts</td>\n<td>The rig on the lift is still tracking its corp owner</td>\n</tr>\n<tr>\n<td>Scattertooth</td>\n<td>E2</td>\n<td>Glass Vipers' garage</td>\n<td>Wired, reckless, drone-heavy</td>\n<td>Stolen drones, speed mods</td>\n<td>A Viper drone here filmed something it shouldn't have</td>\n</tr>\n<tr>\n<td>Ghosthand Chop</td>\n<td>E2</td>\n<td>A Nyx cut-out</td>\n<td>Silent, no serials, no memory</td>\n<td>Untraceable vehicles</td>\n<td>The last \"clean\" car came back with a body in the trunk</td>\n</tr>\n<tr>\n<td>Nord's Cuts</td>\n<td>E1</td>\n<td>Nord, honest-ish</td>\n<td>Old-school, cash-only</td>\n<td>Reliable repairs, wheelman intel</td>\n<td>Nord's newest client is a corp in disguise</td>\n</tr>\n<tr>\n<td>Voidwrench</td>\n<td>E2</td>\n<td>Rust Saints demolition arm</td>\n<td>Heavy, loud, structural</td>\n<td>Breach-rigs, demo gear</td>\n<td>The Saints are prepping to bring down a specific block</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "CDoVxop4oemkw7W6",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.CDoVxop4oemkw7W6",
+      "name": "Ripperdocs",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Ripperdocs (chrome, biotech, deniable surgery)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Dr. Jitter | E2 | Jitter, twitchy genius | Cramped, brilliant, caffeinated | Cutting-edge chrome, fast installs | Jitter's hands are shaking — and he knows why |\n| Spinalmesh | E3 | Caduceus deniable (Grafthouse) | Clean-looking, corporate rot | Premium implants — with backdoors | Every Spinalmesh patient reports the same nightmare |\n| Dr. Kline | E2 | Kline, ex-corp surgeon | Precise, expensive, discreet | Milspec-grade work, no records | Kline recognizes chrome he installed on a corpse in the news |\n| Veldt's Graft | E1 | Veldt, back-alley cheap | Grim, cheap, effective | Budget chrome, no questions, real risk | Veldt's discount chrome is failing across the Flats |",
+        "content": "<h3>Ripperdocs (chrome, biotech, deniable surgery)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Dr. Jitter</td>\n<td>E2</td>\n<td>Jitter, twitchy genius</td>\n<td>Cramped, brilliant, caffeinated</td>\n<td>Cutting-edge chrome, fast installs</td>\n<td>Jitter's hands are shaking — and he knows why</td>\n</tr>\n<tr>\n<td>Spinalmesh</td>\n<td>E3</td>\n<td>Caduceus deniable (Grafthouse)</td>\n<td>Clean-looking, corporate rot</td>\n<td>Premium implants — with backdoors</td>\n<td>Every Spinalmesh patient reports the same nightmare</td>\n</tr>\n<tr>\n<td>Dr. Kline</td>\n<td>E2</td>\n<td>Kline, ex-corp surgeon</td>\n<td>Precise, expensive, discreet</td>\n<td>Milspec-grade work, no records</td>\n<td>Kline recognizes chrome he installed on a corpse in the news</td>\n</tr>\n<tr>\n<td>Veldt's Graft</td>\n<td>E1</td>\n<td>Veldt, back-alley cheap</td>\n<td>Grim, cheap, effective</td>\n<td>Budget chrome, no questions, real risk</td>\n<td>Veldt's discount chrome is failing across the Flats</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "TB1F88NS9apWxj0K",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.TB1F88NS9apWxj0K",
+      "name": "Clinics",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Clinics (healing, black medicine)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Fastplex Clinic | E2 | A corp franchise front | Bright, fast, transactional | Quick patch-ups, patient data leaks | Fastplex flags every gunshot wound to someone |\n| Housca Clinic | E1 | Street-faith charity | Warm, poor, overwhelmed | Free care, the Green Room's trust | The clinic is quietly treating something that isn't a wound |",
+        "content": "<h3>Clinics (healing, black medicine)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Fastplex Clinic</td>\n<td>E2</td>\n<td>A corp franchise front</td>\n<td>Bright, fast, transactional</td>\n<td>Quick patch-ups, patient data leaks</td>\n<td>Fastplex flags every gunshot wound to someone</td>\n</tr>\n<tr>\n<td>Housca Clinic</td>\n<td>E1</td>\n<td>Street-faith charity</td>\n<td>Warm, poor, overwhelmed</td>\n<td>Free care, the Green Room's trust</td>\n<td>The clinic is quietly treating something that isn't a wound</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "NA5SGufXkscdJDPs",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.NA5SGufXkscdJDPs",
+      "name": "Bars",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Bars (fixers, hire, gossip)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Black Ice Bar | E1 | Runner-owned, neutral | Dark, safe, storied | Net-runners for hire, war stories, meets | A stranger's buying rounds and asking careful questions |\n| Slowcode Bar | E2 | Technomancer haunt (near Gallows) | Signal-dead, calm, deep | Deep-net contacts, quiet from the noise | The jukebox is playing a signal, not a song |",
+        "content": "<h3>Bars (fixers, hire, gossip)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Black Ice Bar</td>\n<td>E1</td>\n<td>Runner-owned, neutral</td>\n<td>Dark, safe, storied</td>\n<td>Net-runners for hire, war stories, meets</td>\n<td>A stranger's buying rounds and asking careful questions</td>\n</tr>\n<tr>\n<td>Slowcode Bar</td>\n<td>E2</td>\n<td>Technomancer haunt (near Gallows)</td>\n<td>Signal-dead, calm, deep</td>\n<td>Deep-net contacts, quiet from the noise</td>\n<td>The jukebox is playing a signal, not a song</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "SEfFuiDgniPN8dQK",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.SEfFuiDgniPN8dQK",
+      "name": "Shrines",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Shrines (sanctuary, street-faith, truce ground)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Obsidian Shrine | E1 | Corran street-faith | Candle-lit, neutral, protected | Sanctuary, absolution, truce-brokering | Someone claimed sanctuary here who shouldn't be forgiven |\n| Wirekeeper Shrine | E2 | Technomancer faith (the Wired's dead) | Humming, reverent, strange | Blessings for a run, deep-net rites | The Wirekeepers say the network is praying back |",
+        "content": "<h3>Shrines (sanctuary, street-faith, truce ground)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Obsidian Shrine</td>\n<td>E1</td>\n<td>Corran street-faith</td>\n<td>Candle-lit, neutral, protected</td>\n<td>Sanctuary, absolution, truce-brokering</td>\n<td>Someone claimed sanctuary here who shouldn't be forgiven</td>\n</tr>\n<tr>\n<td>Wirekeeper Shrine</td>\n<td>E2</td>\n<td>Technomancer faith (the Wired's dead)</td>\n<td>Humming, reverent, strange</td>\n<td>Blessings for a run, deep-net rites</td>\n<td>The Wirekeepers say the network is praying back</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "bfWoWJuZBKeA1Oft",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.bfWoWJuZBKeA1Oft",
+      "name": "Data Brokers",
+      "type": "text",
+      "sort": 1300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Data Brokers (intel, paydata, secrets)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Kowwak Data | E2 | Kowwak, veteran broker | Cluttered, sharp, expensive | District intel, corp movement, dossiers | Kowwak's newest file has the crew's own name in it |\n| Infohawk | E2 | A Nyx-aligned info-crew | Fast, aggressive, current | Breaking intel, live corp feeds | Infohawk is selling the same secret to three buyers |\n| Prophet Data | E3 | \"The Prophet,\" reclusive | Cryptic, prescient, unsettling | Predictive intel, pattern-reads | The Prophet's last prediction was the crew's next job |\n| Dirthawk | E1 | Low-rent muckraker | Grimy, cheap, unreliable-ish | Dirt, blackmail scraps, rumor | Dirthawk's cheap tip is somehow exactly right |\n| Deeptrace | E3 | A deep-net diver collective (Gallows-adjacent) | Cold, deep, near the dead-air | Buried data, Sinks-adjacent intel | Deeptrace pulled something up that's pulling back |",
+        "content": "<h3>Data Brokers (intel, paydata, secrets)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Kowwak Data</td>\n<td>E2</td>\n<td>Kowwak, veteran broker</td>\n<td>Cluttered, sharp, expensive</td>\n<td>District intel, corp movement, dossiers</td>\n<td>Kowwak's newest file has the crew's own name in it</td>\n</tr>\n<tr>\n<td>Infohawk</td>\n<td>E2</td>\n<td>A Nyx-aligned info-crew</td>\n<td>Fast, aggressive, current</td>\n<td>Breaking intel, live corp feeds</td>\n<td>Infohawk is selling the same secret to three buyers</td>\n</tr>\n<tr>\n<td>Prophet Data</td>\n<td>E3</td>\n<td>\"The Prophet,\" reclusive</td>\n<td>Cryptic, prescient, unsettling</td>\n<td>Predictive intel, pattern-reads</td>\n<td>The Prophet's last prediction was the crew's next job</td>\n</tr>\n<tr>\n<td>Dirthawk</td>\n<td>E1</td>\n<td>Low-rent muckraker</td>\n<td>Grimy, cheap, unreliable-ish</td>\n<td>Dirt, blackmail scraps, rumor</td>\n<td>Dirthawk's cheap tip is somehow exactly right</td>\n</tr>\n<tr>\n<td>Deeptrace</td>\n<td>E3</td>\n<td>A deep-net diver collective (Gallows-adjacent)</td>\n<td>Cold, deep, near the dead-air</td>\n<td>Buried data, Sinks-adjacent intel</td>\n<td>Deeptrace pulled something up that's pulling back</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "AXrGAWL5xNfCNUvW",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.AXrGAWL5xNfCNUvW",
+      "name": "Net Cafés & Market Stalls",
+      "type": "text",
+      "sort": 1400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Net Cafés & Market Stalls (access, low-cost work, everything else)\n\n| Node | Echelon | Owner | Vibe | Score | Hook |\n|---|---|---|---|---|---|\n| Sleep.Run Café | E1 | Independent, 24-hour | Buzzing, cheap, anonymous | Public matrix access, hot-desk hacking | A regular jacked in three days ago and hasn't jacked out |\n| Byte Bazaar | E2 | The Long Bazaar overflow | Chaotic, everything, haggle-only | Grey-market tech, chips, oddities | A stall's selling a chip that shouldn't exist yet |\n| Cragmarkt Stall | E1 | Cinderhold supply runners | Rough, wasteland-goods, honest | Wasteland gear, Cinderhold intel | The stall's supply line from the gate just went silent |",
+        "content": "<h3>Net Cafés &amp; Market Stalls (access, low-cost work, everything else)</h3>\n<table>\n<thead>\n<tr>\n<th id=\"node\">Node</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"owner\">Owner</th>\n<th id=\"vibe\">Vibe</th>\n<th id=\"score\">Score</th>\n<th id=\"hook\">Hook</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Sleep.Run Café</td>\n<td>E1</td>\n<td>Independent, 24-hour</td>\n<td>Buzzing, cheap, anonymous</td>\n<td>Public matrix access, hot-desk hacking</td>\n<td>A regular jacked in three days ago and hasn't jacked out</td>\n</tr>\n<tr>\n<td>Byte Bazaar</td>\n<td>E2</td>\n<td>The Long Bazaar overflow</td>\n<td>Chaotic, everything, haggle-only</td>\n<td>Grey-market tech, chips, oddities</td>\n<td>A stall's selling a chip that shouldn't exist yet</td>\n</tr>\n<tr>\n<td>Cragmarkt Stall</td>\n<td>E1</td>\n<td>Cinderhold supply runners</td>\n<td>Rough, wasteland-goods, honest</td>\n<td>Wasteland gear, Cinderhold intel</td>\n<td>The stall's supply line from the gate just went silent</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "7mqUNOZSg616VHDT",
+      "_key": "!journal.pages!lAdDMHDtHigpsS7t.7mqUNOZSg616VHDT",
+      "name": "Running the Matrix-Scape (Director notes)",
+      "type": "text",
+      "sort": 1500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Downtime dives.** Between runs, a hacker can jack into any E1–E2 node for legwork: buy intel, scout a target's district, line up a fence, or fish the job boards (Deadletter Post, the master nodes). Treat as a downtime project — an easy test at E1, harder at E2.\n\n**Pre-run legwork.** Before hitting a district physically, dive its master node to map POIs, spot ICE, and find a back door. The map is the recon.\n\n**Echelon = the wall.** E3 nodes want a real plan; E4 nodes want a heist. The corp fortresses and the Grid uplink should never be a casual dive — they're campaign obstacles, not errands.\n\n**The vertical is the obstacle (canon).** Getting from a Flats E1 node up through the E4 Barrier into the Grid is the shape of a great run. Cassavir knows the grey ways; the Barrier knows everyone else.\n\n**The dead-air climbs.** The Undernet and Deeptrace sit at the seam where the street tier touches the cosmic one (Deadfall Nine). A crew that keeps diving deep stops doing street runs and starts touching the war.\n\n**Canon sources:** The Ossian Reach Handbook (district roster & POIs), the GHOSTWIRE World Lore Bible (Mama Cassavir, the factions, the vertical/security gradient, Deadfall Nine). Node names in the POI swarm are canon as of the \"The Wired — The Flats\" map lock, 2026-07-25.",
+        "content": "<p><strong>Downtime dives.</strong> Between runs, a hacker can jack into any E1–E2 node for legwork: buy intel, scout a target's district, line up a fence, or fish the job boards (Deadletter Post, the master nodes). Treat as a downtime project — an easy test at E1, harder at E2.</p>\n<p><strong>Pre-run legwork.</strong> Before hitting a district physically, dive its master node to map POIs, spot ICE, and find a back door. The map is the recon.</p>\n<p><strong>Echelon = the wall.</strong> E3 nodes want a real plan; E4 nodes want a heist. The corp fortresses and the Grid uplink should never be a casual dive — they're campaign obstacles, not errands.</p>\n<p><strong>The vertical is the obstacle (canon).</strong> Getting from a Flats E1 node up through the E4 Barrier into the Grid is the shape of a great run. Cassavir knows the grey ways; the Barrier knows everyone else.</p>\n<p><strong>The dead-air climbs.</strong> The Undernet and Deeptrace sit at the seam where the street tier touches the cosmic one (Deadfall Nine). A crew that keeps diving deep stops doing street runs and starts touching the war.</p>\n<p><strong>Canon sources:</strong> The Ossian Reach Handbook (district roster &amp; POIs), the GHOSTWIRE World Lore Bible (Mama Cassavir, the factions, the vertical/security gradient, Deadfall Nine). Node names in the POI swarm are canon as of the \"The Wired — The Flats\" map lock, 2026-07-25.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/setting/wired-flats-gazetteer.md"
+    }
+  }
+}
