@@ -289,7 +289,7 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
 - **B32 Phase 0 (done):** `GHOSTWIRE_SUPPORT_ENTITIES.md` inventory + schema.
 - **B33 Phase 1 (B32 Phase 1 spike):** Technomancer sprite Actors (12 SKUs) — **Foundry-verified 2026-09-17** (module v0.1.40). See checklist below.
 - **B34 Phase 2 (B32 Phase 2 spike):** Elementalist companions + elemental scaffolds (7 Actors) — **Foundry-verified 2026-09-17** (module v0.1.41). See checklist below.
-- **B35 Phase 3:** Street Priest pact spirits (3 + Light/Dark tint).
+- **B35 Phase 3 (B32 Phase 3 spike):** Street Priest pact spirits (3 Actors + Light/Dark tint) — **Foundry-verified 2026-09-17** (module v0.1.42). See checklist below.
 - **B36 Phase 4:** Wrench drones (36) + vehicles (32) Item sync **and** Actor templates under `summons/machines` + Deploy-spawns-token (dual Item+Actor lock 2026-09-17).
 - **B37 Phase 5:** Hacker Node/ICE Director templates (10).
 
@@ -311,5 +311,15 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Each drags to a Scene as a friendly token at its size (1S / 1M / 1L / 2) and moves
   - [x] Companion sheets show their strike; Striking Wind and Stone Fist show the slide / push rider on middle and high
   - [x] Scaffold descriptions show the provisional Stamina, defense note, and Persistent drain reminder; Rank 1 shows the Twin note
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B32 Phase 3 — Street Priest pact spirits (2026-09-17)
+**Actors (3, not 6):** Guardian Spirit (Shepherd, Warding Aegis feature; Sentinel Spirit size-2 flare noted in its description, no extra Actor), Warrior Spirit (Templar, Pact Blade strike), Hunter Spirit (Exorcist, Binding Chain strike; restrained on middle/high vs spirit-type targets, description rider). Same npc schema as Phases 1–2: 1M friendly minion tokens, speed 5 fly + hover, level 3, Persona 2 / Instinct 2 (a 3rd-level Street Priest). Strikes are light band 4 / 7 / 10 + Persona, typeless until tinted. **Stamina:** flat provisional 20 (independent form only) until Veil §C3. Each description carries the Invoke the Pact grammar (7 Conviction; Bind Check 2d10 + Instinct; low = asymmetric failed bind; middle = extension; high = independent, Persistent 2 = −4 Conviction/turn). **Flags:** `{ kind: "spirit", ministry, pact: null, hybridTier: "extension", ownerUuid: null, dsid }`.
+**Light / Dark tint:** each Actor embeds two disabled `abilityModifier` effects, **Pact: Light** and **Pact: Dark** (`flags.draw-steel-ghostwire.pactTint`), filtered to `strike` abilities, adding `holy` or `corruption` to `damage.tierN.types`. `scripts/module.mjs` keeps them exclusive, sets `flags.pact`, and tints the token (Light `#fff1b8`, Dark `#c9a0ff`); setting `flags.pact` directly enables the matching effect. Turning the active pact off clears the flag and tint.
+- [x] **B32 Phase 3** pact spirit Actors (module v0.1.42) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Ghostwire Summons & Machines › Pact Spirits lists 3 entries
+  - [x] Guardian drags to a Scene and moves
+  - [x] Enabling Pact: Light on a placed Warrior makes Pact Blade deal holy damage and tints the token; switching to Pact: Dark turns Light off, deals corruption, and re-tints
+  - [x] Each sheet shows the Invoke the Pact text; Hunter shows its spirit restrain rider; Guardian shows Warding Aegis and the Sentinel note
   - [x] `node tools/build-packs.mjs` succeeds
 

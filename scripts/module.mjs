@@ -388,6 +388,38 @@ Hooks.on("updateActiveEffect", (effect, changes, options, userId) => {
   if (others.length) effect.parent.updateEmbeddedDocuments("ActiveEffect", others.map(e => ({ _id: e.id, disabled: true })));
 });
 
+// Pact spirits (Ghostwire Summons & Machines › Pact Spirits): one Actor serves both pacts. Enabling its Pact: Light or
+// Pact: Dark effect disables the other, records flags.pact, and tints the token; setting flags.pact enables the matching effect.
+const PACT_TINTS = { light: "#fff1b8", dark: "#c9a0ff" };
+
+async function syncPactTint(actor, pact) {
+  const updates = actor.effects.filter(e => e.getFlag(MODULE_ID, "pactTint"))
+    .filter(e => e.disabled === (e.getFlag(MODULE_ID, "pactTint") === pact))
+    .map(e => ({ _id: e.id, disabled: !e.disabled }));
+  if (updates.length) await actor.updateEmbeddedDocuments("ActiveEffect", updates);
+  if ((actor.getFlag(MODULE_ID, "pact") ?? null) !== pact) await actor.update({ [`flags.${MODULE_ID}.pact`]: pact });
+  const tint = PACT_TINTS[pact] ?? "#ffffff";
+  const tokens = actor.isToken ? [actor.token] : actor.getActiveTokens(false, true);
+  for (const token of tokens) {
+    if (token?.texture.tint?.css !== tint) await token.update({ "texture.tint": tint });
+  }
+}
+
+Hooks.on("updateActiveEffect", (effect, changes, options, userId) => {
+  const actor = effect.parent;
+  const pact = effect.getFlag(MODULE_ID, "pactTint");
+  if ((userId !== game.user.id) || !pact || !("disabled" in changes) || !(actor instanceof Actor)) return;
+  if (!effect.disabled) syncPactTint(actor, pact);
+  // Turning a pact off clears it, unless this is the other pact being switched off by syncPactTint itself.
+  else if (!actor.effects.some(e => !e.disabled && e.getFlag(MODULE_ID, "pactTint"))) syncPactTint(actor, null);
+});
+
+Hooks.on("updateActor", (actor, changes, options, userId) => {
+  if ((userId !== game.user.id) || (actor.getFlag(MODULE_ID, "kind") !== "spirit")) return;
+  if (!foundry.utils.hasProperty(changes, `flags.${MODULE_ID}.pact`)) return;
+  syncPactTint(actor, actor.getFlag(MODULE_ID, "pact") ?? null);
+});
+
 // Changer lineage: Draw Steel lets chargen be confirmed with a choice left unpicked, so warn when it happens.
 Hooks.on("createItem", (item, options, userId) => {
   if ((userId !== game.user.id) || (item.type !== "ancestry") || (item.system._dsid !== "changer")) return;

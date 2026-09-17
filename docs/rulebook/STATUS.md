@@ -22,6 +22,7 @@
 | **Hacker (Foundry)** | `src/packs/classes/hacker/` | **B30 Foundry-verified** (2026-09-17) — three street cyberdeck Kits; Matrix Verbs stay universal |
 | **Technomancer** | `docs/rulebook/20-technomancer.md` (from `docs/masters/GHOSTWIRE_TECHNOMANCER_DEVELOPMENT_MASTER.md` Part 1) | **Stage 2 draft** (2026-09-17) — Power Roll results in DS print order; pending Michael review |
 | **Technomancer (Foundry)** | `src/packs/classes/technomancer/` | **B31 Foundry-verified** (2026-09-17) — nine classes in Ghostwire Classes; Cyborg-blocked |
+| **Summons — Street Priest pact spirits (Foundry)** | `src/packs/summons/spirits/` | **B32 Phase 3 Foundry-verified** (2026-09-17) — Guardian / Warrior / Hunter; one Actor per ministry with Pact: Light / Pact: Dark tint effects (holy vs corruption strikes, token tint, flags.pact); provisional Stamina 20 |
 | **Summons — Elementalist companions + elementals (Foundry)** | `src/packs/summons/elementals/` | **B32 Phase 2 Foundry-verified** (2026-09-17) — Ember / Zephyr / Boulder Companions with strikes; Rank 1–3 + Greater elemental scaffolds; provisional Stamina 15 × Rank until Veil §C3 |
 | **Summons — Technomancer sprites (Foundry)** | `src/packs/summons/sprites/` | **B32 Phase 1 Foundry-verified** (2026-09-17) — 12 sprite npc Actors (4 archetypes × 3 hybrid tiers), Known Bugs #13 HP placeholders; Compile Sprite token stamping is backlog |
 | Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
