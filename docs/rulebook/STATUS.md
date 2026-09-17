@@ -57,3 +57,5 @@
 | Journal rulebook pack + PDF pipeline | Dual delivery already locked |
 | **Language lore & journals** | Write a lore-based definition (history + purpose) for each Ghostwire language (`docs/masters/GHOSTWIRE_LANGUAGES.md`) into the rulebook chapter `19-languages.md` (Tongue gazetteer) + Foundry Journal entries. Then add Background/Profession/Peoples language grants (knowledge-only picks locked in the master). |
 
+| **Support entities program (Phase 0 done 2026-09-17)** | Master: `docs/masters/GHOSTWIRE_SUPPORT_ENTITIES.md`. Phase 1 Technomancer sprites (12) → 2 Elementalist → 3 Street Priest spirits → 4 drones/vehicles → 5 Hacker ICE/nodes. |
+

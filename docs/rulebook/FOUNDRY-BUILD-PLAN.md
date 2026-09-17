@@ -162,13 +162,13 @@ After each spike:
 - [ ] Foundry Wire pack only after chapter approval
 
 ### B19 / B20 (Foundry-verified 2026-09-16)
-- [x] **B19** Full Gear master Categories 1–6 into packs: gear, mods, matrix, vehicles, foci (module v0.1.24)
-- [x] **B20** Mods expansion (armor/gadgets/weapons/vehicles) + §Craft skill text — Michael verified working
+- [x] **B19** Full Gear master Categories 1ï¿½6 into packs: gear, mods, matrix, vehicles, foci (module v0.1.24)
+- [x] **B20** Mods expansion (armor/gadgets/weapons/vehicles) + ï¿½Craft skill text ï¿½ Michael verified working
 
 ### B21 Scout (2026-09-16)
 - [ ] **B21** Scout class pack from `02-scout.md`: class, Hunter / Ghost / Face-in-crowd, signatures, 3/5/7/9/11 bands, level 1â€“10 features; Chrome/Optics keywords; Advantage costs enforced in combat (module v0.1.25) â€” **pending Michael Foundry test**
 
-- [x] **B21** Scout class pack — Foundry-verified 2026-09-16 (Advantage; Hunter/Ghost/Face-in-crowd)
+- [x] **B21** Scout class pack ï¿½ Foundry-verified 2026-09-16 (Advantage; Hunter/Ghost/Face-in-crowd)
 
 
 ### B22 Perks (2026-09-16)
@@ -282,3 +282,13 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Sprite Cap 3 (L5), Sprite Cap 4 (L8), Master of the Current (L10)
   - [x] A Cyborg can't take Technomancer, and a Technomancer can't become a Cyborg
   - [x] `node tools/build-packs.mjs` succeeds
+
+
+## Support Entities (B32+)
+
+- **B32 Phase 0 (done):** `GHOSTWIRE_SUPPORT_ENTITIES.md` inventory + schema.
+- **B33 Phase 1:** Technomancer sprite Actors (12 SKUs).
+- **B34 Phase 2:** Elementalist companions + elemental scaffolds.
+- **B35 Phase 3:** Street Priest pact spirits (3 + Light/Dark tint).
+- **B36 Phase 4:** Wrench drones (36) + vehicles (32) Foundry sync.
+- **B37 Phase 5:** Hacker Node/ICE Director templates (10).
