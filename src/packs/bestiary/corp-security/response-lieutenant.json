@@ -1,0 +1,1429 @@
+{
+  "folder": "gwBestiaryCorp00",
+  "name": "GHOSTWIRE.Bestiary.Actors.ResponseLieutenant.Name",
+  "type": "npc",
+  "_id": "g7LC1G0K20UnYzkr",
+  "img": "systems/draw-steel/assets/roles/leader.webp",
+  "system": {
+    "stamina": {
+      "value": 80,
+      "max": 80,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 3
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 0
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.ResponseLieutenant.Description",
+      "director": "GHOSTWIRE.Bestiary.Actors.ResponseLieutenant.Director",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "194",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 2,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 1,
+      "role": "",
+      "organization": "leader"
+    },
+    "ev": 12,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.ResponseLieutenant.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/leader.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Riot Formation",
+      "type": "feature",
+      "_id": "3fdmNUhuqakwyz18",
+      "img": "icons/equipment/shield/heater-steel-gray.webp",
+      "system": {
+        "description": {
+          "value": "<p>While adjacent to an ally who also has this trait, the lieutenant has stability 3, has cover, and grants cover to allies.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "shield-shield",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [
+        {
+          "name": "Riot Formation",
+          "img": "icons/creatures/unholy/demon-hairy-winged-pink.webp",
+          "type": "base",
+          "disabled": true,
+          "_id": "Pln75B5jY27eUKbU",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.combat.stability",
+                "value": 3,
+                "priority": null,
+                "type": "upgrade",
+                "phase": "initial"
+              }
+            ],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>The trooper has stability 3, has cover, and grants cover to allies.</p>",
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "origin": "Actor.g7LC1G0K20UnYzkr.Item.3fdmNUhuqakwyz18",
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_key": "!actors.items.effects!g7LC1G0K20UnYzkr.3fdmNUhuqakwyz18.Pln75B5jY27eUKbU"
+        }
+      ],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.3fdmNUhuqakwyz18"
+    },
+    {
+      "name": "End Effect",
+      "type": "feature",
+      "_id": "0jyoySm6WITYiwds",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>At the end of each of their turns, the lieutenant can dump a trauma stim and take [[/damage 5]] damage to end one effect on them that can be ended by a saving throw. This damage can’t be reduced in any way.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "end-effect",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": -100000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.0jyoySm6WITYiwds"
+    },
+    {
+      "name": "Grenade Volley!",
+      "type": "ability",
+      "system": {
+        "type": "villain",
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "boom-pilum",
+        "story": "",
+        "keywords": [
+          "area",
+          "ranged",
+          "weapon"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "5",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The lieutenant’s squad lobs grenades into the area. The lieutenant uses Smartlinked Carbine against each target and has a double edge. Each target is then pushed up to 3 squares.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "guDxjkufyzq4hZBU",
+      "img": "icons/weapons/thrown/grenade-frag-green.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.guDxjkufyzq4hZBU"
+    },
+    {
+      "name": "Breach and Clear",
+      "type": "ability",
+      "system": {
+        "type": "villain",
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "firetail-pilum",
+        "story": "",
+        "keywords": [],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "PYzKSnbLXLxxzZqu": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "PYzKSnbLXLxxzZqu",
+              "damage": {
+                "tier1": {
+                  "value": "7+5",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "10+5",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "13+5",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "SxQ67eqUxWyJ0Hs5": {
+              "name": "Incendiary Weakened",
+              "img": null,
+              "type": "applied",
+              "_id": "SxQ67eqUxWyJ0Hs5",
+              "applied": {
+                "tier1": {
+                  "potency": {
+                    "characteristic": "might",
+                    "value": "1"
+                  },
+                  "display": "{{potency}} weakened (save ends)",
+                  "effects": {
+                    "7j7mrAssAYhW4Cpc": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier2": {
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  },
+                  "effects": {
+                    "7j7mrAssAYhW4Cpc": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "display": ""
+                },
+                "tier3": {
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  },
+                  "effects": {
+                    "7j7mrAssAYhW4Cpc": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "display": ""
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The lieutenant moves up to their speed, ignoring difficult terrain, and fires Smartlinked Carbine point-blank at each creature whose space they move through. They make one power roll against all targets, and the ability deals an extra [[/damage 5]] damage. The rounds are incendiary: while weakened by that ability, each target takes [[/damage 2 fire]] damage at the start of each of their turns.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "FDvPM7SAZNSNdlj8",
+      "img": "icons/weapons/guns/rifle-assault-heavy.webp",
+      "effects": [
+        {
+          "name": "Incendiary Weakened",
+          "img": "icons/magic/fire/projectile-smoke-swirl-red.webp",
+          "origin": "Actor.g7LC1G0K20UnYzkr.Item.FDvPM7SAZNSNdlj8",
+          "transfer": false,
+          "_id": "7j7mrAssAYhW4Cpc",
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "disabled": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "<p>While weakened by that ability, each target takes [[/damage 2 fire]] damage at the start of each of their turns.</p>",
+          "tint": "#ffffff",
+          "statuses": [],
+          "sort": 0,
+          "flags": {},
+          "start": null,
+          "showIcon": 1,
+          "folder": null,
+          "_key": "!actors.items.effects!g7LC1G0K20UnYzkr.FDvPM7SAZNSNdlj8.7j7mrAssAYhW4Cpc"
+        }
+      ],
+      "folder": null,
+      "sort": -100000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.FDvPM7SAZNSNdlj8"
+    },
+    {
+      "name": "Escalate to Lethal",
+      "type": "ability",
+      "system": {
+        "type": "villain",
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "are-you-not-entertained",
+        "story": "",
+        "keywords": [
+          "area"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "burst",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The lieutenant calls the escalation. A target who has [[potency P 2]] is taunted (save ends). Each ally within distance can make a [[/damage @monster.freeStrike]]{Free Strike}. Additionally, until the end of the encounter, the lieutenant has damage immunity 2.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "8NmeXdjxtjOB9n1T",
+      "img": "icons/commodities/tech/communications-dish-tan.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.8NmeXdjxtjOB9n1T"
+    },
+    {
+      "name": "Take Cover!",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "testudo",
+        "story": "",
+        "keywords": [
+          "area"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "A creature uses an ability that targets the lieutenant or an ally  of the lieutenant within distance.",
+        "distance": {
+          "type": "burst",
+          "primary": "5",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "ally",
+          "value": null,
+          "custom": "Each ally in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each target shifts up to 2 squares before the damage is resolved. Each ally with the Riot Formation trait gains damage immunity 2 against the triggering ability.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "iWtqKL7pKCMCYsE5",
+      "img": "icons/equipment/shield/heater-steel-gray.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.iWtqKL7pKCMCYsE5"
+    },
+    {
+      "name": "Concentrate All Fire on That Hero!",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "concentrate-all-fire-on-that-hero",
+        "story": "",
+        "keywords": [
+          "ranged"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": 1,
+          "custom": "One enemy"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 1,
+              "multiple": true
+            },
+            "description": "<p>This ability targets one additional target for each 3 Malice spent.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Until the start of the lieutenant’s next turn, the lieutenant and their allies gain an edge on power rolls against the target.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "v9hQDYUxHb7lw69t",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.v9hQDYUxHb7lw69t"
+    },
+    {
+      "name": "Smartlinked Carbine",
+      "type": "ability",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Monsters",
+          "page": "194",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "pilum",
+        "story": "",
+        "keywords": [
+          "melee",
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "meleeRanged",
+          "primary": "1",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 2,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "ZQnM7lGGZB3n3w0r": {
+              "name": "Damage",
+              "img": null,
+              "type": "damage",
+              "_id": "ZQnM7lGGZB3n3w0r",
+              "damage": {
+                "tier1": {
+                  "value": "7",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "10",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "13",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "0hwqoy9hPVSwCdVa": {
+              "name": "Weakened",
+              "img": null,
+              "type": "applied",
+              "_id": "0hwqoy9hPVSwCdVa",
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}} weakened (save ends)",
+                  "potency": {
+                    "characteristic": "might",
+                    "value": "1"
+                  },
+                  "effects": {
+                    "weakened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier2": {
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  },
+                  "effects": {
+                    "weakened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "display": ""
+                },
+                "tier3": {
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  },
+                  "effects": {
+                    "weakened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "display": ""
+                }
+              },
+              "sort": 0
+            },
+            "bjRwxYHZ0fG26hfw": {
+              "name": "Weakened + Restrained",
+              "img": null,
+              "type": "applied",
+              "_id": "bjRwxYHZ0fG26hfw",
+              "applied": {
+                "tier1": {
+                  "effects": {
+                    "vXLk5HAJ3tyspyll": {
+                      "condition": "failure",
+                      "end": "",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "1",
+                    "characteristic": "none"
+                  },
+                  "display": ""
+                },
+                "tier2": {
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  },
+                  "effects": {
+                    "vXLk5HAJ3tyspyll": {
+                      "condition": "failure",
+                      "end": "",
+                      "properties": []
+                    }
+                  },
+                  "display": ""
+                },
+                "tier3": {
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  },
+                  "effects": {
+                    "vXLk5HAJ3tyspyll": {
+                      "condition": "failure",
+                      "properties": []
+                    }
+                  },
+                  "display": ""
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 3,
+              "multiple": false
+            },
+            "description": "<p>Tangle-foam rounds: while weakened this way, a target is also restrained.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Each ally adjacent to a target can make a free strike against that target.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "IR7YlWCnkBJ30U5w",
+      "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+      "effects": [
+        {
+          "name": "Weakened + Restrained",
+          "img": "icons/magic/control/debuff-chains-orb-movement-blue.webp",
+          "origin": "Actor.g7LC1G0K20UnYzkr.Item.IR7YlWCnkBJ30U5w",
+          "transfer": false,
+          "_id": "vXLk5HAJ3tyspyll",
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [],
+            "project": {
+              "prerequisites": "",
+              "source": "",
+              "rollCharacteristic": [],
+              "yield": {
+                "kind": "weapon",
+                "amount": "1",
+                "display": ""
+              }
+            }
+          },
+          "disabled": false,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "description": "",
+          "tint": "#ffffff",
+          "statuses": [
+            "restrained",
+            "weakened"
+          ],
+          "sort": 0,
+          "flags": {},
+          "showIcon": 2,
+          "start": null,
+          "folder": null,
+          "_key": "!actors.items.effects!g7LC1G0K20UnYzkr.IR7YlWCnkBJ30U5w.vXLk5HAJ3tyspyll"
+        }
+      ],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.IR7YlWCnkBJ30U5w"
+    },
+    {
+      "name": "Exploit Opening",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "exploit-opening",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "A human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each human acting this turn gains an edge on abilities until the end of their turn, or has a double edge on any ability that targets an enemy affected by a condition.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "LYYyN9iD2PjepIFo",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 200000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.LYYyN9iD2PjepIFo"
+    },
+    {
+      "name": "Staying Power",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "staying-power",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "a human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each non-minion human in the encounter slams a trauma stim and regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "vxocmPyA9uKwrgEq",
+      "img": "icons/tools/medical/medkit-heavy.webp",
+      "effects": [],
+      "folder": "J4FsuL53D5JLS9q1",
+      "sort": 300000,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.vxocmPyA9uKwrgEq"
+    },
+    {
+      "name": "Blight Grenade",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Monsters",
+          "page": "180",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "alchemical-device",
+        "story": "A street-chem canister of Sinks rot and tangle-foam.",
+        "keywords": [
+          "area",
+          "ranged"
+        ],
+        "category": "maliceAncestry",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "3",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy and object in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "2",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {
+            "MhQwsOqVGfNaQFua": {
+              "name": "Damage",
+              "img": null,
+              "type": "damage",
+              "_id": "MhQwsOqVGfNaQFua",
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [
+                    "corruption"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "WoQ1Q8BcxmPBSXXN": {
+              "name": "Slowed and Restrained",
+              "img": null,
+              "type": "applied",
+              "_id": "WoQ1Q8BcxmPBSXXN",
+              "applied": {
+                "tier1": {
+                  "display": "{{potency}}, slowed (save ends)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "0",
+                    "characteristic": "agility"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "1",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "{{potency}}, restrained (save ends)",
+                  "effects": {
+                    "restrained": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "2",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p><strong>Special:</strong> This ability can’t be used by a minion.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "lVlwo9eIp8HBjfth",
+      "img": "icons/weapons/thrown/grenade-chemical-gas.webp",
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "9Ppluh0c55nL15rB": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!g7LC1G0K20UnYzkr.lVlwo9eIp8HBjfth"
+    }
+  ],
+  "effects": [
+    {
+      "name": "Escalate to Lethal Effect",
+      "img": "icons/magic/death/skull-horned-worn-fire-blue.webp",
+      "type": "base",
+      "origin": "Actor.g7LC1G0K20UnYzkr",
+      "disabled": true,
+      "_id": "fRbdaVrQ2hiGY2sa",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.damage.immunities.all",
+            "value": 2,
+            "priority": null,
+            "type": "upgrade",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": {
+        "combat": null,
+        "round": null,
+        "time": 0,
+        "turn": null,
+        "combatant": null,
+        "initiative": null
+      },
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!actors.effects!g7LC1G0K20UnYzkr.fRbdaVrQ2hiGY2sa"
+    }
+  ],
+  "sort": 43000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "sQnPdTwdehktLvxo",
+        "dsSourceName": "Kobold Centurion",
+        "decision": "Adapt",
+        "region": "corp",
+        "handbookName": "Response Lieutenant",
+        "echelon": 1
+      }
+    }
+  },
+  "_key": "!actors!g7LC1G0K20UnYzkr"
+}

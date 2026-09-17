@@ -6475,7 +6475,8 @@
         "WireMachine": "Wire & Machine",
         "VeilUndead": "Veil & Undead",
         "WildsJungles": "Wilds & Jungles",
-        "Rivals": "Rivals"
+        "Rivals": "Rivals",
+        "ReachCritters": "Reach Critters"
       },
       "Actors": {
         "CorpSecurityOfficer": {
@@ -6617,6 +6618,106 @@
         "JunglePredator": {
           "Name": "Jungle Predator",
           "Description": "<p>Predator template: something big in the jungle that has learned people are easy prey.</p><p><em>Reskinned from the Draw Steel level 1 Predator A (Keep). Stats and abilities are Draw Steel’s; ability text only has faction names updated so far. Placeholder art.</em></p>"
+        },
+        "ColorsBoss": {
+          "Name": "Colors Boss",
+          "Description": "<p>The crew leader who actually gives orders. The gangs of the Flats are named for her colors, not the other way around.</p><p><strong>Hook:</strong> Drop her and the whole crew’s nerve breaks.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Goblin Monarch (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Leader (ganger) → Draw Steel level 1 leader, echelon 1.</p><p>Colors Up! calls in two Gang Raiders; Focus Fire matches the Handbook Malice move. Run with Gang Raiders or Street Punks. A lower-level alternative to the Gang Boss (level 3).</p>"
+        },
+        "ChromeBruiser": {
+          "Name": "Chrome Bruiser",
+          "Description": "<p>The gang’s cybered heavy: more chrome than credit rating, an auto-shotgun in one hand and a servo-arm for everything else.</p><p><strong>Hook:</strong> His body integrity is shot — the right EMP payload drops the plating.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 2 Ogre Goon (elite brute). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Elite (cyborg brute) → Draw Steel level 2 elite brute, echelon 1.</p><p>Handbook traits kept: immune to weakened (Cannot Be Weakened); Warframe Plating is the winded damage immunity. Pair with a Colors Boss.</p>"
+        },
+        "ResponseLieutenant": {
+          "Name": "Response Lieutenant",
+          "Description": "<p>The corp team’s field commander: a smartlinked carbine, a riot-formation squad, and the authority to escalate.</p><p><strong>Hook:</strong> She calls the escalation the gazetteer warns about — “Alert response is corporate.”</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Kobold Centurion (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Leader (corp security) → Draw Steel level 1 leader, echelon 1.</p><p>Riot Formation only works with allies who share the trait; treat Corp Security Officers fielded with her as having it, or ignore it. Escalate to Lethal is the Handbook villain action; add a drone picket from the vehicles pack for flavor.</p>"
+        },
+        "CorpNetrunner": {
+          "Name": "Corp Netrunner",
+          "Description": "<p>The ICE jockey on overwatch — never leaves the host, rides black ICE down any live connection.</p><p><strong>Hook:</strong> The reason a Hacker earns their pay. Kill her in meatspace and the whole node goes soft.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 3 Human Storm Mage (platoon controller). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Elite (corp hacker) → Draw Steel level 3 platoon controller, echelon 1.</p><p>Black ICE Jolt can hit meatspace targets through cyberware and comms, or be run against a jacked-in persona in the Wired. Handbook Trace Master / Lock the Node: advance the Wired Console alert while she is active.</p>"
+        },
+        "StreetDoc": {
+          "Name": "Street Doc",
+          "Description": "<p>The medic-for-hire who patches anyone with nuyen — no papers, no questions, gunshot wounds treated and never filed.</p><p><strong>Hook:</strong> A neutral party in most fights, until someone shoots the patient on her table.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Orc Godcaller (platoon support). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Standard (medic specialist) → Draw Steel level 1 platoon support, echelon 1.</p><p>Support piece: Adrenal Dart gives allies extra actions and Trauma Patch heals. Often better as a contact than a combatant.</p>"
+        },
+        "WrenchRigger": {
+          "Name": "Wrench Rigger",
+          "Description": "<p>The drone handler who owns the pickets over Cassavir’s ground. Fights through drones, not in person.</p><p><strong>Hook:</strong> The brain behind the flight. Take the Rigger, take the eyes.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Dwarf Launcher (platoon hexer). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Elite (wrench specialist) → Draw Steel level 1 platoon hexer, echelon 1.</p><p>Every attack is delivered by a drone. Place 1–3 drone tokens from the vehicles pack as flavor; the rigger’s own body is soft. Handbook Jumped In (rigger slowed while controlling drones) is optional fiction.</p>"
+        },
+        "TheWarlord": {
+          "Name": "The Warlord",
+          "Description": "<p>The boss who owns the district. Not the strongest fighter in the Flats — the most entrenched. Trophy shotgun, cyber-fists, and a whole block that answers when he calls.</p><p><strong>Hook:</strong> Kill him in the open and the district fractures into a turf war by nightfall. Out-plan him; don’t out-punch him.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 3 Orc Warleader (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Solo (ganger boss) → Draw Steel level 3 leader, echelon 1.</p><p>Built on a Draw Steel leader spine, not a solo: run him with Gang Raider squads (The Whole Block Answers summons four) and Razorline Prime for the climax fight. No One Leaves is the Handbook villain action.</p>"
+        },
+        "RazorlinePrime": {
+          "Name": "Razorline Prime",
+          "Description": "<p>The augmented duelist — reflex-boosted, a monowire garrote in one hand and a smartgun in the other.</p><p><strong>Hook:</strong> The Warlord’s personal enforcer and the reason challengers stop coming.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 2 Bugbear Sneak (elite ambusher). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Elite (cyborg duelist) → Draw Steel level 2 elite ambusher, echelon 1.</p><p>Pure damage and tempo. Ghost-Step stands in for the Handbook reaction. Pair with The Warlord.</p>"
+        },
+        "ContractEnforcer": {
+          "Name": "Contract Enforcer",
+          "Description": "<p>The specialist a corp sends to close the file: full combat chrome, a smartlinked AP carbine, jump-jets, and the whole escalation ladder behind him.</p><p><strong>Hook:</strong> Killing him flags the crew for the conglomerate’s next tier of response.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 6 War Dog Tetrarch (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Leader (cyborg corp security) → Draw Steel level 6 leader, echelon 2.</p><p>The Handbook calls this block Corp Enforcer; renamed so it is not confused with the Wave 1 Corp Enforcer (level 1 squad lead). Bring a Response Lieutenant and Corp Security Officers for Corporate Escalation.</p>"
+        },
+        "IroncladWarden": {
+          "Name": "Ironclad Warden",
+          "Description": "<p>The black-site chief of security — an Ironclad trainer promoted to run a site the corp does not admit exists. Shock-shield, riot cannon, bulwark plating.</p><p><strong>Hook:</strong> He turns a room into a fortress and buys time for the escalation. Flank him or the fight never ends.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 6 Hobgoblin Grandguard (platoon defender). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Elite (Ironclad defender) → Draw Steel level 6 platoon defender, echelon 2.</p><p>Uses the Ironclad Malice features (Fodder Run, Field Salvage, Fire for Effect) — field with Ironclad Conscripts and Commandos.</p>"
+        },
+        "ChromeRat": {
+          "Name": "Chrome-Rat",
+          "Description": "<p>Corp-lab rodents bred true and hungry in the Warrens: matte-metal teeth and a nose that homes on live wiring.</p><p><strong>Hook:</strong> The cheapest way to start a session in the dark. If the mission depends on a device, the rats found it first.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Crawling Claw (minion harrier). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 5 Minion / Swarm (beast) → Draw Steel level 1 minion harrier, echelon 1.</p><p>Chew the Line is a scene tool: cut lights, doors, or Wired access in a zone.</p>"
+        },
+        "TunnelBat": {
+          "Name": "Tunnel-Bat",
+          "Description": "<p>Echolocating cave flyers that roost in the Reach’s vertical dead-spaces. Their screaming fritzes cheap AR rigs.</p><p><strong>Hook:</strong> An alarm with teeth. Wake the roost and every hostile in earshot knows where the crew is.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Soot Crow (minion harrier). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 5 Standard / Swarm (beast) → Draw Steel level 1 minion harrier, echelon 1.</p><p>Whiteout Roost punishes ranged fire and deckers near the swarm.</p>"
+        },
+        "ScrapHound": {
+          "Name": "Scrap-Hound",
+          "Description": "<p>Feral augmented guard dogs gone to ground — jaw-plated, wired for pack coordination, territorial to the death.</p><p><strong>Hook:</strong> Someone has been feeding them. Find out who, and why they wanted this level guarded.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Worg (horde mount). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 5 Standard (beast brute) → Draw Steel level 1 horde mount, echelon 1.</p><p>Run in packs of 3–5; Pack Hunter turns corridors into killboxes.</p>"
+        },
+        "SinkCrawler": {
+          "Name": "Sink-Crawler",
+          "Description": "<p>What a blind cave scavenger becomes after generations of drinking the Dark in the Sinks: pallid, wrong-jointed, silent, and far too large.</p><p><strong>Hook:</strong> The deeper the crew goes, the older and bigger these get. The one that took the last crew is still down there.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Shieldscale Drangolin (Size 2) (elite brute). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Elite (Veil-touched beast) → Draw Steel level 1 elite brute, echelon 1.</p><p>Claws deal corruption damage. Handbook Drag Under: at the Director’s option, a grabbed victim is pulled underground when it burrows. Raise its level for deep Sinks runs.</p>"
+        },
+        "GutterSerpent": {
+          "Name": "Gutter-Serpent",
+          "Description": "<p>Long, oil-slick ambush hunters of Slackwater’s overflow channels — part eel, part reptile, a sensor frill breaking the filthy surface.</p><p><strong>Hook:</strong> The body in the channel wasn’t murdered. Probably.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Lizardfolk Scaletooth (platoon brute). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Standard (beast) → Draw Steel level 1 platoon brute, echelon 1.</p><p>Place in water; Ambush from the Murk gives it a strong opener.</p>"
+        },
+        "CanopyStalker": {
+          "Name": "Canopy-Stalker",
+          "Description": "<p>A jungle apex the size of a hovercab beyond Cinderhold’s Outer Wall: fast, feathered, hooked-clawed, hunting in packs from the canopy.</p><p><strong>Hook:</strong> Longtooth’s caravan didn’t come back. The Rangers found the wagon, and only the wagon.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 3 Lightbender Pouncer (elite harrier). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Elite (apex beast) → Draw Steel level 3 elite harrier, echelon 1.</p><p>Wilds seed only — raptor stand-in until the wilds lore pass. Open from concealment above with Drop from the Green.</p>"
+        },
+        "ReachBehemoth": {
+          "Name": "Reach Behemoth",
+          "Description": "<p>Vehicle-scale primeval megafauna from the deep jungle — the thing the wall was built for. A crushing maw, feeding tendrils, and ground that shakes when it moves.</p><p><strong>Hook:</strong> Not an encounter to win. Bar the gate, break line of sight, and pray it loses interest before dawn.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 7 Kingfissure Worm (solo solo). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 2 Solo (apex megafauna) → Draw Steel level 7 solo solo, echelon 3.</p><p>Wilds seed only. Draw Steel solo spine; feeding tendrils are 5 × 1 lines with 35 Stamina each (see Feeding Tendrils) — track them as simple markers.</p>"
+        },
+        "WatchdogIce": {
+          "Name": "Watchdog ICE",
+          "Description": "<p>Standard corporate intrusion countermeasure: patrol routines that pace the datascape, sniff for intruders, and raise the alert.</p><p><strong>Hook:</strong> It already saw the decker. The clock is running.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 War Dog Neuronite (horde defender). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Standard (construct ICE) → Draw Steel level 1 horde defender, echelon 1.</p><p>Wired encounter token. Pairs with the Wired Console node templates (docs/directors/wired-node-templates.md): advance the node alert while it is active.</p>"
+        },
+        "ScramblerIce": {
+          "Name": "Scrambler ICE",
+          "Description": "<p>Mid-tier disruptive ICE of jagged, strobing geometry that attacks the runner’s own kit rather than tracing them.</p><p><strong>Hook:</strong> It’s trying to strand the decker in the node long enough for something worse to arrive.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 3 Time Raider Mind Punk (platoon hexer). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Elite (construct ICE) → Draw Steel level 3 platoon hexer, echelon 1.</p><p>Wired encounter token. Handbook Glitch the Kit: at the Director’s option, a target hit by it has one installed program switched off until they spend a main action to reboot it.</p>"
+        },
+        "BlackIce": {
+          "Name": "Black ICE",
+          "Description": "<p>Lethal countermeasure that reaches back down the connection to stop a heart or fry a brain. The Wired’s apex predator.</p><p><strong>Hook:</strong> Nobody guards nothing with Black ICE. Whatever’s behind this wall is worth a life — is it worth the decker’s?</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 6 Mindkiller (elite hexer). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 2 Elite (lethal construct ICE) → Draw Steel level 6 elite hexer, echelon 2.</p><p>Wired encounter token. Biofeedback Kill: damage it deals to a jacked-in persona carries to the runner’s body.</p>"
         }
       }
     }

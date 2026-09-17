@@ -1,6 +1,6 @@
 # Ghostwire Bestiary (master)
 
-**Status:** Wave 1 (B38) built 2026-09-17 — DS review proposal + 35-Actor reskin pack; firearms / chrome ability pass (B38c, module v0.1.51) applied — both pending Michael review / Foundry verification; originals Wave 2 (B38b) queued.  
+**Status:** Wave 1 (B38) built 2026-09-17 — DS review proposal + 35-Actor reskin pack; firearms / chrome ability pass (B38c, v0.1.51) verified; originals Wave 2a (B38b, v0.1.52) built — **20 Handbook Actors** pending Foundry verification; lore level-bosses (Wave 2a.1) and Wave 2b queued.  
 **Doctrine:** **Reskin first.** Where a Draw Steel monster/NPC can serve The Reach, keep mechanics/stats as the spine and rewrite name + description (+ light number tweaks only if fiction requires). **Artwork / token pass later.** Greenfield originals when stock does not fit.
 
 ## Firearms / chrome ability doctrine (LOCKED 2026-09-17 — standing rule for every bestiary entry)
@@ -52,7 +52,7 @@ Filled in `docs/masters/GHOSTWIRE_BESTIARY_DS_INVENTORY.md` (483 rows; Claude pr
 
 Foundry Actor pack **`bestiary`** (“Ghostwire Bestiary”, Director-only by default), folders Reach Streets · Corp & Security · Wire & Machine · Veil & Undead · Wilds & Jungles · Rivals. **35 Actors** cloned from `systems/draw-steel/packs/monsters`: Draw Steel system stats, embedded abilities, and effects unchanged; Actor name, token name, and biography are Ghostwire lang keys (`GHOSTWIRE.Bestiary.Actors.*`); faction names inside ability prose (war dog, time raider, voiceless talker) read Ironclad / Chrome Raider / Signal Talker. Flags: `flags.draw-steel-ghostwire.bestiary = { dsSourceId, dsSourceName, decision, region }`. Placeholder Draw Steel art. Gang color-flavor labels (§A below) can ride these spines.
 
-**B38c firearms / chrome pass (module v0.1.51, pending Foundry verification):** the 25 humanoid / Chrome Raider Actors have Ghostwire ability names, rules text, icons, and biographies (undead, wilds, and Signal Talker anatomy untouched). Hustler's duplicate stock *Exploit Opening* removed.
+**B38c firearms / chrome pass (module v0.1.51, Foundry-verified):** the 25 humanoid / Chrome Raider Actors have Ghostwire ability names, rules text, icons, and biographies (undead, wilds, and Signal Talker anatomy untouched). Hustler's duplicate stock *Exploit Opening* removed.
 
 | Actor | Stock → Ghostwire abilities |
 |---|---|
@@ -125,52 +125,58 @@ Sources: `GHOSTWIRE-Lore-Source-V2-edit.md`, Core Sourcebook, **Ossian Reach Han
 Street muscle, corp security, War Dogs → Ironclad, Human/Rival/Undead/Devil Keep-Adapt rows already in the inventory. Gang color-flavor (Metermen / Skinjobs / Nightshift / Ninth Ward Kings / Rust Saints / Glass Vipers / Hollow Men) = **reskin labels + hooks** on Gang Boss / Street Punk / Goliar / Hulk spines, not separate math until Wave 2 polish.
 
 ### B. Reach Handbook — statted threats (must port / greenfield)
-Handbook names below are **SoR for Wave 2 Actors** (provisional STA/ATK from Handbook; remapped to DS echelon).
+Handbook names below are **SoR for Wave 2 Actors**; Handbook inverted Tier is mapped to Draw Steel level + echelon in each Actor’s **Director** biography (never player-facing). Status: **Wave 2a (B38b, v0.1.52)** = built, pending Foundry verify; **2b** = Wave 2b backlog.
 
-| Working name | Handbook band | Role | Region | DS spine hint | Notes |
+| Working name | Handbook band | Role | Region | Draw Steel spine (as built) | Status |
 |---|---|---|---|---|---|
-| Stall-Keeper | T5 Standard civilian | Shopkeeper | Flats | Human / noncombat | Social; Alert if attacked |
-| Flats Worker | T5 Minion crowd | Civilian terrain | Flats | Human Raider minion | Crowd = cover + Malice spike |
-| Wired Chore-Sprite | T5 Rabble | Wired scut sprite | Wire | Sprite / construct | Trace Feeder; already have summon sprites — **hostile/scut variant** |
-| Colors Boss | T4 Leader | Gang leader | Flats gangs | Human Bandit Chief | Focus Fire / Show of Force |
-| Chrome Bruiser | T4 Elite | Cyborg gang heavy | Flats gangs | Ogre / Cyborg Adapt | Warframe Plating |
-| Response Lieutenant | T4 Leader | Corp field lead | Corp | Human Blackguard | Escalates drones + Alert |
-| Corp Netrunner | T4 Elite | ICE overwatch | Corp / Wire | Rival Hacker lean | Trace Master + Black ICE |
-| Street Doc | T4 Standard | Medic specialist | Flats | Human / Rival Medic | Field Medicine |
-| Wrench Rigger | T4 Elite | Drone handler | Flats / Corp | Rival / Wrench lean | Sic 'Em drones |
-| Nyx Fixer | T4 Solo social | Corran fixer | Flats | Face / social Solo | Negotiation as combat |
-| The Warlord | T3 Solo | District boss | Flats | Mutant Solo / Commander | Named stand-in for Kings-scale boss |
-| Razorline Prime | T3 Elite | Augmented duelist | Flats | Operator lean Cyborg | Pair with Warlord |
-| Corp Enforcer | T3 Leader | Contract closer | Corp | Cyborg Operator | Corporate Escalation |
-| Ironclad Warden | T3 Elite | Black-site chief | Corp / Ironclad | War Dog / brute Leader | Bulwark Plating |
-| The Ripper | T3 Elite | Black-clinic surgeon | Flats / Sinks | Medic dark Mutant | Keeps enemy side standing |
-| Null-Prophet | T3 Solo | Rogue Technomancer | Wire | Technomancer Solo | Node master; sprites + ICE |
+| Stall-Keeper | T5 Standard civilian | Shopkeeper | Flats | Human / noncombat | 2b — social, not a combat Actor |
+| Flats Worker | T5 Minion crowd | Civilian terrain | Flats | Human Raider minion | 2b — crowd terrain rules |
+| Wired Chore-Sprite | T5 Rabble | Wired scut sprite | Wire | Sprite / construct | 2b — hostile variant of summon sprites |
+| Colors Boss | T4 Leader | Gang leader | Reach Streets | Goblin Monarch → L1 leader | **Wave 2a (B38b, v0.1.52)** |
+| Chrome Bruiser | T4 Elite | Cyborg gang heavy | Reach Streets | Ogre Goon → L2 elite brute (size 1L, immune weakened) | **Wave 2a (B38b, v0.1.52)** |
+| Response Lieutenant | T4 Leader | Corp field lead | Corp & Security | Kobold Centurion → L1 leader | **Wave 2a (B38b, v0.1.52)** |
+| Corp Netrunner | T4 Elite | ICE overwatch | Corp & Security | Human Storm Mage → L3 platoon controller | **Wave 2a (B38b, v0.1.52)** |
+| Street Doc | T4 Standard | Medic specialist | Reach Streets | Orc Godcaller → L1 platoon support | **Wave 2a (B38b, v0.1.52)** |
+| Wrench Rigger | T4 Elite | Drone handler | Reach Streets | Dwarf Launcher → L1 platoon hexer | **Wave 2a (B38b, v0.1.52)** |
+| Nyx Fixer | T4 Solo social | Corran fixer | Flats | Face / social Solo | 2b — social Solo polish |
+| The Warlord | T3 Solo | District boss | Reach Streets | Orc Warleader → L3 leader (Handbook Solo; run with Gang Raider squads) | **Wave 2a (B38b, v0.1.52)** |
+| Razorline Prime | T3 Elite | Augmented duelist | Reach Streets | Bugbear Sneak → L2 elite ambusher (size 1M) | **Wave 2a (B38b, v0.1.52)** |
+| Corp Enforcer → **Contract Enforcer** | T3 Leader | Contract closer | Corp & Security | War Dog Tetrarch → L6 leader (renamed vs Wave 1 Corp Enforcer) | **Wave 2a (B38b, v0.1.52)** |
+| Ironclad Warden | T3 Elite | Black-site chief | Corp & Security | Hobgoblin Grandguard → L6 platoon defender (size 1L, Ironclad Malice) | **Wave 2a (B38b, v0.1.52)** |
+| The Ripper | T3 Elite | Black-clinic surgeon | Flats / Sinks | Medic dark Mutant | 2b |
+| Null-Prophet | T3 Solo | Rogue Technomancer | Wire | Technomancer Solo | 2b |
 
 ### C. Critters of the Reach (Handbook — must create)
-| Working name | Band | Type | Region | DS spine hint | Notes |
+Folder scheme: Warrens / Sinks / Slackwater critters live in a new **Reach Critters** folder; wilds seeds stay in **Wilds & Jungles**; ICE goes in **Wire & Machine**. Beasts and ICE keep natural / Wire attacks and carry no ancestry Malice (the Behemoth keeps its solo Malice). Handbook signatures that the spine lacked were added as short features (Chew the Line, Whiteout Roost, Pack Hunter, Ambush from the Murk).
+
+| Working name | Band | Type | Folder | Draw Steel spine (as built) | Status |
 |---|---|---|---|---|---|
-| Chrome-Rat | T5 Minion/Swarm | Beast vermin | Flats / Warrens | Animal Swarm | Chew the Line |
-| Tunnel-Bat | T5 Swarm | Beast flyer | Warrens shafts | Animal Swarm / Giant Hawk lite | Whiteout Roost alarm |
-| Scrap-Hound | T5 Standard | Beast brute | Warrens / Sprawl Cur | Predator A / Animal | Pack Hunter |
-| Sink-Crawler | T3 Elite | Mutant beast | Sinks | Big Animal / burrower | Drag Under |
-| Gutter-Serpent | T4 Standard | Drainage predator | Spillway / Slackwater | Predator B | Ambush from Murk |
-| **Canopy-Stalker** | T3 Elite | Jungle apex pack | Wilds beyond gate | Predator A/B + climb | Feathered hooked-claw; **raptor stand-in** until wilds pass |
-| **Reach Behemoth** | T2 Solo | Dinosaur-scale megafauna | Deep jungle / Outer Wall | Big Animal B / Solo apex | Vehicle-scale; **T-Rex-class slot**; survive not win |
-| Data-Sprite | T5 Swarm | Wire spirit | Overlay | Spirit swarm | Weather-read for Technomancer |
-| Wisp | T4 Standard | Data-ghost | Wire | Undead/spirit Adapt | Latch On |
-| Watchdog ICE | T4 Standard | Construct ICE | Corp nodes | Construct | Raise the Alert |
-| Scrambler ICE | T3 Elite | Disrupt ICE | Corp nodes | Construct | Glitch the Kit |
-| Black ICE | T2 Elite | Lethal ICE | High-value nodes | Construct lethal | Biofeedback Kill |
-| Ghost-in-the-Wire | T2 Solo | Emergent Veil AI | Deep Wire | Spirit/construct Solo | Bargain > fight |
+| Chrome-Rat | T5 Minion/Swarm | Beast vermin | Reach Critters | Crawling Claw → L1 minion harrier (+ Chew the Line) | **Wave 2a (B38b, v0.1.52)** |
+| Tunnel-Bat | T5 Swarm | Beast flyer | Reach Critters | Soot Crow → L1 minion harrier (+ Whiteout Roost) | **Wave 2a (B38b, v0.1.52)** |
+| Scrap-Hound | T5 Standard | Beast brute | Reach Critters | Worg → L1 horde (size 1M, + Pack Hunter) | **Wave 2a (B38b, v0.1.52)** |
+| Sink-Crawler | T3 Elite | Mutant beast | Reach Critters | Shieldscale Drangolin (size 2) → L1 elite brute, claws deal corruption | **Wave 2a (B38b, v0.1.52)** |
+| Gutter-Serpent | T4 Standard | Drainage predator | Reach Critters | Lizardfolk Scaletooth → L1 platoon brute (+ Ambush from the Murk) | **Wave 2a (B38b, v0.1.52)** |
+| **Canopy-Stalker** | T3 Elite | Jungle apex pack | Wilds & Jungles | Lightbender Pouncer → L3 elite harrier (walk + climb) | **Wave 2a (B38b, v0.1.52)** |
+| **Reach Behemoth** | T2 Solo | Dinosaur-scale megafauna | Wilds & Jungles | Kingfissure Worm → L7 solo (walks, feeding tendrils) | **Wave 2a (B38b, v0.1.52)** |
+| Data-Sprite | T5 Swarm | Wire spirit | Wire & Machine | Spirit swarm | 2b |
+| Wisp | T4 Standard | Data-ghost | Wire & Machine | Undead/spirit Adapt | 2b |
+| Watchdog ICE | T4 Standard | Construct ICE | Wire & Machine | War Dog Neuronite → L1 horde defender | **Wave 2a (B38b, v0.1.52)** |
+| Scrambler ICE | T3 Elite | Disrupt ICE | Wire & Machine | Time Raider Mind Punk → L3 platoon hexer | **Wave 2a (B38b, v0.1.52)** |
+| Black ICE | T2 Elite | Lethal ICE | Wire & Machine | Mindkiller → L6 elite hexer | **Wave 2a (B38b, v0.1.52)** |
+| Ghost-in-the-Wire | T2 Solo | Emergent Veil AI | Wire & Machine | Spirit/construct Solo | 2b |
+
+ICE Actors are **Scene-drag tokens** for Wired encounters; Wired Console node templates (`docs/directors/wired-node-templates.md`) remain the node/alert tool.
 
 ### D. Lore named NPCs (level-bosses — greenfield or Solo Adapt)
-| Working name | Role | Region | Notes |
-|---|---|---|---|
-| Mama Cassavir, "the Switchboard" | Fixer patron | Flats | Social Solo; job-giver — not a street fight first |
-| Warden Krael, "the Landlord" | Corrupt Grid warden | Grid | Corp badge + Metermen leash |
-| The Ferryman | Tollkeeper of descent | Flats/Sinks boundary | Chokepoint boss |
-| The Choirmother | Cult-mother (tragic Light→hollow) | Flats | Director dial Early/Mid/Fallen |
-| Ranger-Captain Cael Marrow, "the Gate" | Cinderhold protector | Cinderhold / wastes gate | Ally or hard wall; Greenline deserter |
+Status: **Wave 2a.1** — next B38b follow-up (spike § E, optional in Wave 2a); needs `GHOSTWIRE-Lore-Source-V2-edit.md`.
+
+| Working name | Role | Region | Notes | Status |
+|---|---|---|---|---|
+| Mama Cassavir, "the Switchboard" | Fixer patron | Flats | Social Solo; job-giver — not a street fight first | 2a.1 |
+| Warden Krael, "the Landlord" | Corrupt Grid warden | Grid | Corp badge + Metermen leash | 2a.1 |
+| The Ferryman | Tollkeeper of descent | Flats/Sinks boundary | Chokepoint boss | 2a.1 |
+| The Choirmother | Cult-mother (tragic Light→hollow) | Flats | Director dial Early/Mid/Fallen | 2a.1 |
+| Ranger-Captain Cael Marrow, "the Gate" | Cinderhold protector | Cinderhold / wastes gate | Ally or hard wall; Greenline deserter | 2a.1 |
 
 ### E. Lore opposition flavors (reskin hooks, not separate blocks yet)
 Metermen, Skinjobs, Nightshift, Ninth Ward Kings, Rust Saints, Glass Vipers, Hollow Men; Aureole Security; Greenline Rangers; Ironclad Martial; Deadfall Nine Quiet Floor cults; lesser/greater Incursion demons (Adapt DS Demons).

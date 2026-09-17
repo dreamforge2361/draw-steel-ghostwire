@@ -1,0 +1,12 @@
+{
+  "_id": "gwBestiaryCritrs",
+  "_key": "!folders!gwBestiaryCritrs",
+  "name": "GHOSTWIRE.Bestiary.Folders.ReachCritters",
+  "type": "Actor",
+  "folder": null,
+  "sort": 150000,
+  "flags": {},
+  "color": null,
+  "description": "",
+  "sorting": "a"
+}

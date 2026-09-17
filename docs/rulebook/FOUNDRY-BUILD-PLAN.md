@@ -449,18 +449,29 @@ Spec: `docs/spikes/B38-BESTIARY-REVIEW-RESKIN-WAVE1.md`. **Part A:** all 483 row
 
 #### B38c Bestiary firearms / chrome ability pass (2026-09-17)
 Spec: `docs/spikes/B38c-BESTIARY-FIREARMS-CHROME-PASS.md`. 25 humanoid / Chrome Raider Actors in `src/packs/bestiary/` get Ghostwire ability names, rules text, icons, and biographies (firearms, grenades, stims, chrome, decks); Draw Steel damage tiers, potencies, targets, and Malice costs unchanged. Melee-only gun signatures become Melee X or Ranged 5/10 (`meleeRanged`); `magic` keyword dropped where fiction became tech. Undead, wilds, and Signal Talker natural attacks untouched. Per-Actor table + conventions (standing rule) in `GHOSTWIRE_BESTIARY.md`.
-- [ ] **B38c** (module v0.1.51) — **implemented, pending Foundry verification**. Done when:
-  - [ ] Gang Boss, Corp Enforcer, Corp Security Officer, Ironclad Conscript, Rooftop Shooter, Trick Shooter show firearms / chrome ability names
-  - [ ] Street Cutter shows holdout + mono-knife; Gang Raider has no handaxes
-  - [ ] Feral Beast / Zombie still have natural attacks
-  - [ ] Corp Enforcer + Gang Boss dragged to a Scene; abilities roll
-  - [ ] Master notes the firearms doctrine
+- [x] **B38c** (module v0.1.51) — **Foundry-verified, committed `08e63bf`**. Done when:
+  - [x] Gang Boss, Corp Enforcer, Corp Security Officer, Ironclad Conscript, Rooftop Shooter, Trick Shooter show firearms / chrome ability names
+  - [x] Street Cutter shows holdout + mono-knife; Gang Raider has no handaxes
+  - [x] Feral Beast / Zombie still have natural attacks
+  - [x] Corp Enforcer + Gang Boss dragged to a Scene; abilities roll
+  - [x] Master notes the firearms doctrine
+
+#### B38b Bestiary originals Wave 2a — Ossian Reach Handbook (2026-09-17)
+Spec: `docs/spikes/B38b-BESTIARY-ORIGINALS-WAVE2.md`. **20 new Actors** adapted from Draw Steel spines onto Handbook threats (DS math intact; names, rules text, icons, biographies rethemed; firearms / chrome doctrine applied). Reach Streets: Colors Boss, Chrome Bruiser, Street Doc, Wrench Rigger, The Warlord, Razorline Prime. Corp & Security: Response Lieutenant, Corp Netrunner, Contract Enforcer (Handbook “Corp Enforcer”, renamed vs Wave 1), Ironclad Warden. New **Reach Critters** folder: Chrome-Rat, Tunnel-Bat, Scrap-Hound, Sink-Crawler, Gutter-Serpent. Wilds & Jungles seeds: Canopy-Stalker, Reach Behemoth. Wire & Machine: Watchdog ICE, Scrambler ICE, Black ICE. Humanoids get the Human (or Ironclad) Malice set; beasts / ICE carry no ancestry Malice. Each biography has a Director note mapping Handbook Tier → DS level / echelon. Flags add `handbookName` + `echelon`, `decision: "Adapt"`. Spines + status in `GHOSTWIRE_BESTIARY.md` § Originals.
+- [ ] **B38b** Wave 2a (module v0.1.52) — **implemented, pending Foundry verification**. Done when:
+  - [ ] Ghostwire Bestiary shows Reach Critters folder + Wave 2a Actors (Colors Boss, Chrome Bruiser, Canopy-Stalker, Reach Behemoth, Scrap-Hound at minimum)
+  - [ ] Three humanoids show gun / chrome ability names and roll
+  - [ ] A critter + Canopy-Stalker have natural attacks
+  - [ ] Contract Enforcer biography explains the split from Wave 1 Corp Enforcer
+  - [ ] The Warlord or Colors Boss + Ironclad Warden dragged to a Scene
+- [ ] **B38b Wave 2a.1** — lore level-bosses (Mama Cassavir, Warden Krael, The Ferryman, The Choirmother, Cael Marrow).
+- [ ] **B38b Wave 2b** — Nyx Fixer, The Ripper, Null-Prophet, Stall-Keeper / Flats Worker / Chore-Sprite, Data-Sprite / Wisp / Ghost-in-the-Wire.
 
 ## Backlog add (2026-09-17)
 
-- **B38** Bestiary review + reskin Wave 1 — **built, pending Foundry verification** (module v0.1.50; 35 Actors).
-- **B38c** Bestiary firearms / chrome ability pass — **built, pending Foundry verification** (module v0.1.51).
-- **B38b** Handbook originals Wave 2 (after B38 verify).
+- **B38** Bestiary review + reskin Wave 1 — **Foundry-verified** (module v0.1.50; 35 Actors).
+- **B38c** Bestiary firearms / chrome ability pass — **Foundry-verified** (module v0.1.51).
+- **B38b** Handbook originals Wave 2a — **built, pending Foundry verification** (module v0.1.52; 20 Actors). Wave 2a.1 lore bosses + Wave 2b next.
 - **B39** Director Run Generator — `docs/directors/run-generator.md` (after bestiary recommendations exist).
 - Wilds Pandora-like lore pass — later; ship only Canopy-Stalker + Reach Behemoth seeds until then.
 - **B40** Ability/weapon/gear SFX — `docs/directors/ability-sfx.md` (settings + FilePicker; Michael supplies assets).

@@ -1,0 +1,840 @@
+{
+  "name": "GHOSTWIRE.Bestiary.Actors.IroncladWarden.Name",
+  "type": "npc",
+  "img": "systems/draw-steel/assets/roles/defender.webp",
+  "system": {
+    "stamina": {
+      "value": 111,
+      "max": 111,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 3
+      },
+      "agility": {
+        "value": 2
+      },
+      "reason": {
+        "value": 3
+      },
+      "intuition": {
+        "value": 0
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "L"
+      },
+      "stability": 4,
+      "turns": 1
+    },
+    "movement": {
+      "value": 4,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.IroncladWarden.Description",
+      "director": "GHOSTWIRE.Bestiary.Actors.IroncladWarden.Director",
+      "languages": []
+    },
+    "source": {
+      "book": "Monsters",
+      "page": "174",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 6,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 6,
+      "role": "defender",
+      "organization": "platoon"
+    },
+    "ev": 16,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "items": [
+    {
+      "name": "Hold the Line",
+      "type": "feature",
+      "img": "icons/equipment/shield/heater-steel-gray.webp",
+      "system": {
+        "description": {
+          "value": "<p>Any strike made against an ally within 2 squares of the warden takes a bane.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "174"
+        },
+        "_dsid": "wide-guard",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "dbzxFyo9VQEb9uOt",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.dbzxFyo9VQEb9uOt"
+    },
+    {
+      "name": "Capacitor Blowout",
+      "type": "feature",
+      "img": "icons/commodities/tech/battery-coil-tesla.webp",
+      "system": {
+        "description": {
+          "value": "<p>When the warden is reduced to 0 Stamina, their shock-shield capacitor blows. Each creature adjacent to the warden takes [[/damage 3 fire]] damage.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "174"
+        },
+        "_dsid": "infernal-ichor",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "k7cyJ1IRJikKy1pW",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.k7cyJ1IRJikKy1pW"
+    },
+    {
+      "name": "Shock-Shield & Riot Cannon",
+      "type": "ability",
+      "img": "icons/weapons/guns/gun-double-barrel.webp",
+      "system": {
+        "type": "main",
+        "category": "signature",
+        "keywords": [
+          "melee",
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "distance": {
+          "type": "meleeRanged",
+          "primary": "2",
+          "secondary": "5",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "IQiTzfknUGiQ82oF": {
+              "_id": "IQiTzfknUGiQ82oF",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "damage": {
+                "tier1": {
+                  "value": "9",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "14",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "17",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "LxdmxENbaP8YsMfF": {
+              "_id": "LxdmxENbaP8YsMfF",
+              "type": "applied",
+              "name": "Prone",
+              "img": null,
+              "applied": {
+                "tier3": {
+                  "display": "prone",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "might"
+                  },
+                  "effects": {
+                    "prone": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier1": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "174"
+        },
+        "_dsid": "tower-shield-smash",
+        "story": "",
+        "resource": null,
+        "trigger": "",
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 3,
+              "multiple": false
+            },
+            "description": "<p>Each ally adjacent to a prone target can make a free strike against that target.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "MCI64bVjwRwm9Rg8",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.MCI64bVjwRwm9Rg8"
+    },
+    {
+      "name": "Riot Sweep",
+      "type": "ability",
+      "img": "icons/equipment/shield/heater-steel-gray.webp",
+      "system": {
+        "type": "main",
+        "category": "heroic",
+        "keywords": [
+          "area",
+          "charge",
+          "weapon"
+        ],
+        "distance": {
+          "type": "line",
+          "primary": "1",
+          "secondary": "2",
+          "tertiary": "1"
+        },
+        "target": {
+          "type": "object",
+          "value": null,
+          "custom": "Each enemy or object in the area"
+        },
+        "damageDisplay": "melee",
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "DhsZg94n79cu8kt8": {
+              "_id": "DhsZg94n79cu8kt8",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "damage": {
+                "tier1": {
+                  "value": "6",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "11",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "14",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "source": {
+          "book": "Monsters",
+          "license": "Draw Steel Creator License",
+          "page": "174"
+        },
+        "_dsid": "thunder-rush",
+        "story": "",
+        "resource": 3,
+        "trigger": "",
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Each target is pushed up to 10 squares in the same direction, and the warden shifts into the area left behind by the targets.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_id": "NTc9EDMQcB0Efh2E",
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.NTc9EDMQcB0Efh2E"
+    },
+    {
+      "folder": "zKtLcYoIeEal58CU",
+      "name": "Fodder Run",
+      "type": "ability",
+      "_id": "I47ueLHjVHGTY83Y",
+      "img": "icons/commodities/tech/detonator-radio.webp",
+      "system": {
+        "source": {
+          "book": "Monsters",
+          "page": "299",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "fodder-run",
+        "story": "",
+        "keywords": [],
+        "type": "none",
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each Ironclad minion in the encounter shifts up to their speed and can make a free strike. A minion who does so is then reduced to 0 Stamina.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "sort": 150000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.I47ueLHjVHGTY83Y"
+    },
+    {
+      "folder": "zKtLcYoIeEal58CU",
+      "name": "Field Salvage",
+      "type": "ability",
+      "_id": "ihKkMlptBoQemUBc",
+      "img": "icons/commodities/tech/cable-armored-reticulated.webp",
+      "system": {
+        "source": {
+          "book": "Monsters",
+          "page": "299",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "reconstitute",
+        "story": "",
+        "keywords": [],
+        "type": "none",
+        "category": "maliceAncestry",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>One Ironclad acting this turn rips the chrome and grafts out of a nearby humanoid corpse and jacks them into their own body. The Ironclad regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "sort": 100000,
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "flags": {},
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.ihKkMlptBoQemUBc"
+    },
+    {
+      "name": "Fire for Effect",
+      "type": "ability",
+      "_id": "qcpbsqefhcNsWcZd",
+      "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+      "system": {
+        "source": {
+          "book": "Monsters",
+          "page": "299",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "fire-for-effect",
+        "story": "",
+        "keywords": [
+          "area",
+          "ranged"
+        ],
+        "type": "maneuver",
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "4",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creature",
+          "value": null,
+          "custom": "Each creature in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": true
+          },
+          "effects": {
+            "zVlqCF3u0UEd5WfX": {
+              "sort": 100000,
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "zVlqCF3u0UEd5WfX",
+              "damage": {
+                "tier1": {
+                  "value": "5",
+                  "types": [
+                    "fire"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "5",
+                  "types": [
+                    "fire"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "5",
+                  "types": [
+                    "fire"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            },
+            "toqhef4jiBXdUgp8": {
+              "sort": 200000,
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "toqhef4jiBXdUgp8",
+              "applied": {
+                "tier1": {
+                  "display": "slowed or weakened (save ends)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "save",
+                      "properties": []
+                    },
+                    "weakened": {
+                      "condition": "always",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "slowed or weakened (EoT)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    },
+                    "weakened": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            }
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>An Ironclad acting this turn calls a mortar strike onto the area. Each target makes an <strong>Agility test</strong>. The same condition is imposed on each affected target.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        }
+      },
+      "effects": [],
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "folder": null,
+      "sort": 0,
+      "_key": "!actors.items!ohFe1k0RY6obrCu9.qcpbsqefhcNsWcZd"
+    }
+  ],
+  "folder": "gwBestiaryCorp00",
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.IroncladWarden.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "systems/draw-steel/assets/roles/defender.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 2
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "afhctJsdlB1PjU4m",
+        "dsSourceName": "Hobgoblin Grandguard",
+        "decision": "Adapt",
+        "region": "corp",
+        "handbookName": "Ironclad Warden",
+        "echelon": 2
+      }
+    }
+  },
+  "_id": "ohFe1k0RY6obrCu9",
+  "sort": 50000,
+  "_key": "!actors!ohFe1k0RY6obrCu9"
+}
