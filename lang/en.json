@@ -6909,10 +6909,6 @@
           "Name": "Kaïs Vahn-Estal — “the Static Saint”",
           "Description": "An Elvani Stormcaller who came down off the Glass Tier and stayed down. He runs no chrome — the current he channels will not share a body with metal."
         },
-        "Krow": {
-          "Name": "KRV-9 “Krow”, the Decommissioned Wall",
-          "Description": "A corp-built Warframe chassis that outlived its contract and its serial number's owner. Arcane Severance cut it off from magic for good; it holds a doorway instead."
-        },
         "Barak": {
           "Name": "Barak Voss-Hallor — “the Foreman”",
           "Description": "Nine feet of grey demolition plate and a voice that gets crews paid. The Foreman brokers work in the sprawl and expects the word he gives to be kept."
@@ -6935,7 +6931,7 @@
         }
       },
       "Journals": {
-        "Fiction": "Dossiers & Fiction — The Eight"
+        "Fiction": "Dossiers & Fiction — The Seven"
       }
     },
     "Encounters": {

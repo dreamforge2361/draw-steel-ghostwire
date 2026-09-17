@@ -42,15 +42,6 @@ const ROSTER = [
     abilities: ["bolt-barrage", "hurl-element", "elemental-shaping"],
   },
   {
-    key: "Krow", slug: "krv-9-krow", name: "KRV-9 “Krow”", handle: "the Decommissioned Wall",
-    cls: "operator", subclass: "street-vet", ancestry: "cyborg",
-    traits: ["arcane-severance-trait", "installed-suite-trait", "predictive-sensors-trait"],
-    kit: "heavy/warframe", background: "industrial-deep", profession: "security-guard",
-    skills: ["firearms", "athletics", "intimidation", "perception"],
-    bio: "A corp-built Warframe chassis that outlived its contract and its serial number's owner. Arcane Severance cut it off from magic for good; it holds a doorway instead.",
-    abilities: ["adrenaline-dump", "armor-breaker", "breach-and-clear"],
-  },
-  {
     key: "Barak", slug: "barak-voss-hallor", name: "Barak Voss-Hallor", handle: "the Foreman",
     cls: "commander", subclass: "street-fixer", ancestry: "goliar",
     traits: ["relentless-trait", "nonstop-trait"],
@@ -67,6 +58,7 @@ const ROSTER = [
     traits: ["changer-forms-trait", "raven-lineage-trait", "beast-movement-trait"],
     kit: "ranged/longshot", background: "transit-hub", profession: "courier",
     skills: ["stealth", "perception", "survival", "acrobatics"],
+    beastArt: "wren-sable-corvin-beast.png",
     bio: "A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it.",
     abilities: ["quarry", "steady-the-scope", "careful-observation"],
   },
@@ -294,7 +286,14 @@ for (const [i, hero] of ROSTER.entries()) {
       sight: { enabled: true }, disposition: 1,
     },
     items, effects: [],
-    flags: { [MODULE_ID]: { pregen: hero.slug, biSpent, biRemaining: 20 - biSpent } },
+    flags: {
+      [MODULE_ID]: {
+        pregen: hero.slug, biSpent, biRemaining: 20 - biSpent,
+        // Changer form art: the sheet and default token use the human portrait; Beast form art
+        // lives here so a form-change pass (or a Director) can swap the token texture to it.
+        ...(hero.beastArt ? { changer: { humanArt: img, beastArt: `modules/${MODULE_ID}/assets/pregens/${hero.beastArt}` } } : {}),
+      },
+    },
   };
   writeFileSync(join(OUT, `${hero.slug}.json`), JSON.stringify(actor, null, 2) + "\n");
   report.push({ hero: hero.name, stamina, items: items.length, skills: granted.skills.length, languages: languages.length, biSpent, warn, log });

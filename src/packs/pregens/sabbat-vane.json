@@ -5,7 +5,7 @@
   "type": "hero",
   "img": "modules/draw-steel-ghostwire/assets/pregens/sabbat-vane.png",
   "folder": null,
-  "sort": 600000,
+  "sort": 500000,
   "system": {
     "stamina": {
       "value": 18,

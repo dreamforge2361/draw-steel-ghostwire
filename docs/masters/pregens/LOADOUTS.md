@@ -27,7 +27,6 @@ granted abilities/features + gear). "BI" is Body Integrity spent of 20.
 |---|---|---|---|---|---|---|---|
 | **Vessa** | 32 | 5 | Hardshell | Workhorse, Street-Blade | Burner, Trauma Patch, Field Surgery Kit, Standard Rounds | none (0) | FlatsCant, CorranWorkCant, SaintCant, RiteSpeech |
 | **Kaïs** | 25 | 7 | none (kit says none) | Zapper, Sleeve-Gun | Pocket Sec, Fake SIN, Trauma Patch, Standard Rounds | none (0) | ElvaniHighCant, ElvaniSoftspeech, CorpCant, ReachMetro |
-| **Krow** | 32 | 6 | Security Rig | Chopper, Hand-Cannon | Riot Shield, Pocket Sec, Standard Rounds, AP Rounds | none (0) | CyborgFrameCant, OpsDialects, CorpCant, HiveTechnical |
 | **Barak** | 33 | 5 | Hardshell | Chatterbox, Knuckles | Pocket Sec, Certified Credstick, Fake SIN, Stim Patch | Cyberlimb (Arm) 5 + Dermal Plating 4 (**9**) | GoliarBattleCant, SprawlArgot, TradeCant, CorpCant |
 | **Wren** | 30 | 7 | Armored Jacket | Longshot rifle, Popper | Burner, Cheap Shades, Standard Rounds, Trauma Patch | none (0) | ChangerPackTongue, ReachMetro, TradeCant, SprawlArgot |
 | **Sabbat** | 30 | 9 | Secure Threads | Popper | Pocket Sec, Fake SIN, Standard Rounds, Faraday Bag | none (0) | RevenantMemorySpeech, ResonanceNotation, WireSpeak, SprawlArgot |
@@ -45,8 +44,6 @@ Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
   ending up with two kit items. The Switchblade is the decker kit, which is what his fiction wants anyway.
 - **Ancestry trait picks** now come from each People's own purchased-trait pool, with the roster's named traits
   preferred — so Wren keeps **Raven lineage** and Vira keeps **Rat lineage**.
-- **Krow carries no chrome by rule, not by choice.** Cyborgs are excluded from the chrome chapter entirely; they use
-  Frame Modules and Hardpoints, not Body Integrity (`docs/raw/09-chrome-body-integrity.md`).
 - **Barak can't have both plating and lacing.** Dermal Plating and Muscle/Bone Lacing both occupy Torso/Core, and the
   install rule is one implant per slot. He takes Dermal Plating, which is the plate the prose leans on.
 - **Wren is deliberately unchromed.** Implanted metal versus Changer shapeshifting is the same fiction problem as
@@ -67,5 +64,4 @@ Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
    plate look. Apply either the kit's Stamina bonus or the armor's, not both (`08-kits-gear-wealth.md`).
 5. **Kaïs wears no armor at all**, strictly following Hexshot's `armor: "none"`. Wren, whose Longshot kit also says
    none, was given a light Armored Jacket per the spike's "Light / none" direction — flag if you want her bare too.
-6. Above-Professional picks are limited to Wren's Longshot rifle, Krow's AP Rounds and Barak's credstick and
-   Chatterbox. Everything else is Street or Professional.
+6. Above-Professional picks are limited to Wren's Longshot rifle and Barak's credstick and Chatterbox. Everything else is Street or Professional.

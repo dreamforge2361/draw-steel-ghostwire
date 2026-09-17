@@ -5,7 +5,7 @@
   "type": "hero",
   "img": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin.png",
   "folder": null,
-  "sort": 500000,
+  "sort": 400000,
   "system": {
     "stamina": {
       "value": 18,
@@ -3658,7 +3658,11 @@
     "draw-steel-ghostwire": {
       "pregen": "wren-sable-corvin",
       "biSpent": 0,
-      "biRemaining": 20
+      "biRemaining": 20,
+      "changer": {
+        "humanArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin.png",
+        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-beast.png"
+      }
     }
   }
 }

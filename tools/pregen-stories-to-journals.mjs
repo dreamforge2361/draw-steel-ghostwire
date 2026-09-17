@@ -19,13 +19,14 @@ const stableId = seed => [...createHash("sha256").update("gw-pregen-fiction:" + 
 
 // Story file stem → the pregen whose portrait heads the page.
 const PORTRAITS = {
-  "01": "vessa-corran-dov", "02": "kaes-vahn-estal", "03": "krv-9-krow", "04": "barak-voss-hallor",
+  "01": "vessa-corran-dov", "02": "kaes-vahn-estal", "04": "barak-voss-hallor",
   "05": "wren-sable-corvin", "06": "sabbat-vane", "07": "vira-kellis-nade", "08": "kessic-draye",
 };
 
 if (!existsSync(STORIES)) throw new Error(`${STORIES} not found — run the story extraction first`);
 const files = readdirSync(STORIES).filter(f => f.endsWith(".md")).sort();
-if (files.length !== 8) throw new Error(`expected 8 stories, found ${files.length}`);
+// Seven pregens since B44c retired Krow; his origin story went with him.
+if (files.length !== 7) throw new Error(`expected 7 stories, found ${files.length}`);
 
 const pages = files.map(file => {
   const md = readFileSync(join(STORIES, file), "utf8").replace(/\r\n/g, "\n");
@@ -39,15 +40,14 @@ const pages = files.map(file => {
 });
 
 const index = {
-  name: "The Eight",
+  name: "The Seven",
   markdown: [
-    "Eight origin stories, one per Ghostwire pregen. The heroes themselves are in the **Ghostwire Pregens** actor compendium, built at Level 1 — these pages are where they came from.",
+    "Seven origin stories, one per Ghostwire pregen. The heroes themselves are in the **Ghostwire Pregens** actor compendium, built at Level 1 — these pages are where they came from.",
     "",
     "| Story | Hero | Class · People |",
     "|---|---|---|",
     "| The Lamp on Ninth | Vessa Corran-Dov, “the Preacher of Ninth” | Street Priest (Shepherd) · Corran |",
     "| Rain on the Glass Tier | Kaïs Vahn-Estal, “the Static Saint” | Elementalist (Stormcaller) · Elvani |",
-    "| Serial Number | KRV-9 “Krow” | Operator (Street-vet, Warframe) · Cyborg |",
     "| The Weight of the Word | Barak Voss-Hallor, “the Foreman” | Commander (Street-Fixer) · Goliar |",
     "| The Long Sight | Wren Sable-Corvin, “the Kite” | Scout (Hunter) · Changer, Raven lineage |",
     "| The Dead Frequency | Sabbat Vane | Technomancer (Sprite-Weaver) · Revenant |",
@@ -82,7 +82,7 @@ writeFileSync(join(OUT, "pregen-fiction.json"), JSON.stringify(entry, null, 2) +
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 lang.GHOSTWIRE.COMPENDIUM.pregenFiction = "Ghostwire Pregen Fiction";
-lang.GHOSTWIRE.Pregens = { ...(lang.GHOSTWIRE.Pregens ?? {}), Journals: { Fiction: "Dossiers & Fiction — The Eight" } };
+lang.GHOSTWIRE.Pregens = { ...(lang.GHOSTWIRE.Pregens ?? {}), Journals: { Fiction: "Dossiers & Fiction — The Seven" } };
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 console.log(`pregen-fiction: 1 journal, ${all.length} pages`);
 console.log(all.map((p, i) => `  ${i + 1}. ${p.name}`).join("\n"));

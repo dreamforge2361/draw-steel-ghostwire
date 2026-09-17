@@ -5,7 +5,7 @@
   "type": "hero",
   "img": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.png",
   "folder": null,
-  "sort": 800000,
+  "sort": 700000,
   "system": {
     "stamina": {
       "value": 19,

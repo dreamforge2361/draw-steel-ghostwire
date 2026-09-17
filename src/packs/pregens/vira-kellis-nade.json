@@ -5,7 +5,7 @@
   "type": "hero",
   "img": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade.png",
   "folder": null,
-  "sort": 700000,
+  "sort": 600000,
   "system": {
     "stamina": {
       "value": 21,

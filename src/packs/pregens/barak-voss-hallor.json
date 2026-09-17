@@ -5,7 +5,7 @@
   "type": "hero",
   "img": "modules/draw-steel-ghostwire/assets/pregens/barak-voss-hallor.png",
   "folder": null,
-  "sort": 400000,
+  "sort": 300000,
   "system": {
     "stamina": {
       "value": 24,

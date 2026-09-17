@@ -19,3 +19,6 @@ docs/masters/pregens/*.pdf
 # B45 Handbook source PDF stays local (~64 MB)
 docs/setting/reach-handbook/*.pdf
 docs/masters/reach-handbook/*.pdf
+# B44c art staging + Claude helper scratch files (never committed)
+_incoming-art/
+_claude-*

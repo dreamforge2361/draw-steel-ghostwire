@@ -114,6 +114,23 @@ Longshot ranged 20, 5/7/9 · Knuckles melee 1, 1/3/5.
 The `ready` pass is the migration for existing pregens, so Vessa's Workhorse and Krow's Chopper arm themselves
 on first load. It is idempotent and only runs for actors you own.
 
+### Generic Free Strikes are suppressed (B44c, 0.1.69)
+
+Draw Steel hands every hero **Melee Free Strike** and **Ranged Free Strike** through
+`ds.CONFIG.hero.defaultItems`. Ghostwire does not want them: a weapon on the sheet already grants its own
+attack, so the generics are duplicate clutter. `scripts/free-strikes.mjs` removes them three ways —
+it deletes both uuids from `hero.defaultItems` at init (so new heroes never receive them), deletes them on
+`createItem` for any other path including NPCs, and strips them from existing actors on `ready`.
+
+**Matching is narrow on purpose.** `system.category === "freeStrike"` is *not* a safe test: the system files
+**Mind Spike** (Talent) and **Hurl Element** (Elementalist) under that same category, and Ghostwire gives Hurl
+Element to Kaïs. The strip matches only the two generics, by `_dsid` (`melee-free-strike`,
+`ranged-free-strike`), by their system compendium ids, and by name as a fallback. Class signatures, kit
+signatures and B49's own weapon abilities are never touched.
+
+No pack scrub was needed: no shipped Actor in this module embeds a Free Strike — they only ever arrive at
+runtime from the system's defaults.
+
 ### Notes for gear authors
 
 A new weapon SKU opts in automatically: give it `system.kind: "weapon"` and the usual

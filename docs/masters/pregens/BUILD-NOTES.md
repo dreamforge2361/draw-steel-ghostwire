@@ -69,3 +69,21 @@ used as both actor `img` and `prototypeToken.texture.src`. No placeholder was ne
 - **Three ranged kits still carry the legacy `weapon: ["bow"]` tag** (Hexshot, Longshot, Saturation) while their heroes
   carry firearms, per the spike.
 - Starting **¥** is still not itemised; `08-kits-gear-wealth.md` gives the ¥5,000 starting budget.
+
+## B44c — art swap, Krow retired, Free Strikes suppressed (module 0.1.69)
+
+- **New portraits** for all seven remaining pregens, supplied by Michael and copied in byte-for-byte from
+  `_incoming-art/` (that staging folder is gitignored and was deleted after the copy). Barak's plate is the
+  cyborg-looking art — it is **Barak**, not Krow.
+- **Wren has two forms.** The sheet and default token use the human portrait; the Beast-form art ships as
+  `assets/pregens/wren-sable-corvin-beast.png` and its path is stored on the Actor at
+  `flags.draw-steel-ghostwire.changer.beastArt` (with `humanArt` beside it). Nothing swaps the token
+  automatically yet — a Changer form-change pass can read those flags, and a Director can swap by hand today.
+- **KRV-9 "Krow" is gone**: Actor, portrait, story ("Serial Number"), fiction index row, roster and loadout
+  rows, `loadouts.json` entry, lang keys and the generator roster. The Operator class and Cyborg ancestry are
+  untouched — only the pregen. Krow still appears by name inside two other heroes' origin stories ("Nine Ways
+  Out", "Turn Their Own Guns Around"); that prose is verbatim fiction and was left alone.
+- **Generic Free Strikes are suppressed module-wide** (`scripts/free-strikes.mjs`) — see the as-built notes in
+  `docs/directors/equipment-use-abilities.md`. Weapon attacks come from B49's per-weapon abilities.
+- Art now totals ~36 MB in `assets/pregens/` (the new PNGs are ~5 MB each, against ~1.4 MB for the old
+  medallions). Worth a compression pass before any public release.
