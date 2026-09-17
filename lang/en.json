@@ -245,8 +245,8 @@
       },
       "CyberlimbArm": {
         "Name": "Cyberlimb (Arm)",
-        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Arms / Hands · <strong>Body Integrity:</strong> 5 · <strong>Price:</strong> ¥7,500 · <strong>Availability:</strong> Restricted</p><p>A full replacement arm with reinforced servos and a mounting point for integral tools or weapons. Your melee weapon abilities, including your melee free strike and unarmed Brawler or Mantis kit strikes, deal +1 damage on every tier (automated). A cyberlimb counts as the fists, blades, or grips that unarmed kits require. It is a large slot draw and a called-shot target.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 5 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Arms / Hands slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
-        "EffectDescription": "<p>+1 damage on melee weapon abilities (all tiers).</p>"
+        "Description": "<p><strong>Grade:</strong> Standard · <strong>Location:</strong> Arms / Hands · <strong>Body Integrity:</strong> 5 · <strong>Price:</strong> ¥7,500 · <strong>Availability:</strong> Restricted</p><p>A full replacement arm with reinforced servos and a mounting point for integral tools or weapons. Your melee weapon abilities, including your melee free strike and unarmed Brawler or Mantis kit strikes, deal +1 damage on every power roll result (automated). A cyberlimb counts as the fists, blades, or grips that unarmed kits require. It is a large slot draw and a called-shot target.</p><p><em>Install:</em> drag onto a living (non-Cyborg) hero. Ghostwire spends 5 Body Integrity automatically and blocks the install if the hero doesn’t have enough Integrity or a free Arms / Hands slot. Deleting the implant returns 75% of its Integrity (round down). Cyborgs can’t install chrome.</p>",
+        "EffectDescription": "<p>+1 damage on melee weapon abilities (all power roll results).</p>"
       },
       "VocalModulator": {
         "Name": "Vocal Modulator",
@@ -435,7 +435,7 @@
         "Signature": {
           "Name": "Mantis Feint",
           "Story": "You feint, and suddenly they’re standing where you were.",
-          "Effect": "<p>If you obtain a tier 2 or tier 3 outcome and can’t swap places with the target because one or both of you is too big to fit into the swapped space, you both remain in your original spaces and the target takes 1 extra damage.</p>"
+          "Effect": "<p>If you obtain a middle or high outcome and can’t swap places with the target because one or both of you is too big to fit into the swapped space, you both remain in your original spaces and the target takes 1 extra damage.</p>"
         }
       },
       "Chromeblade": {
@@ -508,11 +508,11 @@
       },
       "FabricatorsBench": {
         "Name": "Fabricator’s Bench",
-        "Description": "<p>A mobile tool rig slung across the back, a sidearm on the hip, and every pocket full of spare servos. The Drone Jockey’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a mobile tool rig; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +1 · Disengage +1 · Melee damage +1/1/1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> <strong>+1</strong> on Field Repair power rolls that target <strong>your own drones</strong>.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.IYZfD6QGPHPpFknO]{Bench-Rigged Shot}</p>",
+        "Description": "<p>A mobile tool rig slung across the back, a sidearm on the hip, and every pocket full of spare servos. The Drone Jockey’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a mobile tool rig; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +1 · Disengage +1 · Melee damage +1/1/1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> an <strong>edge</strong> on Field Repair power rolls that target <strong>your own drones</strong>.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.IYZfD6QGPHPpFknO]{Bench-Rigged Shot}</p>",
         "Signature": {
           "Name": "Bench-Rigged Shot",
           "Story": "One hand on the trigger, the other already reaching for a drone that needs a patch.",
-          "KitBonus": "<p><strong>Kit bonus (Fabricator’s Bench):</strong> <strong>+1</strong> on Field Repair power rolls that target <strong>your own drones</strong>.</p>",
+          "KitBonus": "<p><strong>Kit bonus (Fabricator’s Bench):</strong> an <strong>edge</strong> on Field Repair power rolls that target <strong>your own drones</strong>.</p>",
           "Rider1": "one machine you control within 5 squares regains 1 Integrity",
           "Rider2": "one machine you control within 5 squares regains 2 Integrity",
           "Rider3": "one machine you control within 5 squares regains 3 Integrity"
@@ -520,11 +520,11 @@
       },
       "RiggersHarness": {
         "Name": "Rigger’s Harness",
-        "Description": "<p>A direct-neural control mount strapped over light armor: the jack sits ready at the base of your skull. The Vehicle Rig-Pilot’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a neural control-interface mount; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +2 · Disengage +1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> <strong>+1</strong> on <strong>Jump-In</strong> tests.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.XCukPRyW9GrAdnP8]{Neural Snap Shot}</p>",
+        "Description": "<p>A direct-neural control mount strapped over light armor: the jack sits ready at the base of your skull. The Vehicle Rig-Pilot’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a neural control-interface mount; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +2 · Disengage +1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> an <strong>edge</strong> on <strong>Jump-In</strong> tests.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.XCukPRyW9GrAdnP8]{Neural Snap Shot}</p>",
         "Signature": {
           "Name": "Neural Snap Shot",
           "Story": "The harness fires the shot a half-beat before your hand finishes deciding to.",
-          "KitBonus": "<p><strong>Kit bonus (Rigger’s Harness):</strong> <strong>+1</strong> on <strong>Jump-In</strong> tests.</p>",
+          "KitBonus": "<p><strong>Kit bonus (Rigger’s Harness):</strong> an <strong>edge</strong> on <strong>Jump-In</strong> tests.</p>",
           "Rider1": "you can shift 1 square",
           "Rider2": "you can shift up to 2 squares",
           "Rider3": "you can shift up to 2 squares, and the target has a bane on its next strike against you"
@@ -532,11 +532,11 @@
       },
       "FieldChassis": {
         "Name": "Field Chassis",
-        "Description": "<p>A ruggedized turret-control tablet on a chest mount and a sidearm for when the walls aren’t enough. The Facility Rigger’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a portable turret-control tablet; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +1 · Stability +1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> <strong>+1</strong> on <strong>Deploy</strong> checks for <strong>pre-placed</strong> assets.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.A3PduPaBJLrjt0HE]{Tablet Crossfire}</p>",
+        "Description": "<p>A ruggedized turret-control tablet on a chest mount and a sidearm for when the walls aren’t enough. The Facility Rigger’s starter Kit.</p><p><strong>Gear category:</strong> A light sidearm and a portable turret-control tablet; light armor</p><p><strong>Ownership rule:</strong> this Kit is inert without its gear. You must own a qualifying item — bought with ¥ and Availability-gated — to use its bonuses. No qualifying weapon in hand means no weapon bonuses and no Kit signature ability (you’re using an improvised weapon). No qualifying armor worn means no Stamina or stability bonus. Kit doctrine is training and never costs ¥.</p><p><strong>Doctrine bonuses (provisional, light-Kit benchmark):</strong> Stamina +3 per echelon · Speed +1 · Stability +1 · Ranged damage +1/1/1 · Ranged distance +5. Damage is listed low / middle / high result.</p><p><strong>Rigging bonus:</strong> an <strong>edge</strong> on <strong>Deploy</strong> tests for <strong>pre-placed</strong> assets.</p><p><strong>Signature ability:</strong> @UUID[Compendium.draw-steel-ghostwire.kits.Item.A3PduPaBJLrjt0HE]{Tablet Crossfire}</p>",
         "Signature": {
           "Name": "Tablet Crossfire",
           "Story": "You shoot, and a turret you wired months ago swings to follow your aim.",
-          "KitBonus": "<p><strong>Kit bonus (Field Chassis):</strong> <strong>+1</strong> on <strong>Deploy</strong> checks for <strong>pre-placed</strong> assets.</p>",
+          "KitBonus": "<p><strong>Kit bonus (Field Chassis):</strong> an <strong>edge</strong> on <strong>Deploy</strong> tests for <strong>pre-placed</strong> assets.</p>",
           "Rider2": "one machine or pre-placed asset you control within 10 squares gains an edge on its next strike against the target",
           "Rider3": "one machine or pre-placed asset you control within 10 squares gains an edge on its next strike against the target, and the target is slowed until the end of its next turn"
         }
@@ -605,7 +605,7 @@
           },
           "TriggerCadence": {
             "Name": "Trigger Cadence",
-            "Effect_before0000000000": "<p>You gain 1 surge, and the next ability power roll you make this turn automatically obtains a tier 3 outcome.</p>",
+            "Effect_before0000000000": "<p>You gain 1 surge, and the next ability power roll you make this turn automatically obtains a high (17+) outcome.</p>",
             "Story": "Breathe. Squeeze. Your nervous system does the rest."
           },
           "HoldTheLine": {
@@ -1431,7 +1431,7 @@
           "TheRightWord": {
             "Name": "The Right Word",
             "Story": "The same charged line heals a friend’s nerve or breaks an enemy’s.",
-            "Effect_before0000000000": "<p>You can use this ability as a main action or a maneuver. The target must be able to see or hear you. Choose one mode:</p><ul><li><p><strong>Rally (ally):</strong> no power roll. End one fear or morale condition on the target (such as frightened or taunted), let them make a saving throw against one effect, or steel them: +2 to their next saving throw against fear, corruption, or dread.</p></li><li><p><strong>Rattle (enemy):</strong> make the power roll below.</p></li></ul>",
+            "Effect_before0000000000": "<p>You can use this ability as a main action or a maneuver. The target must be able to see or hear you. Choose one mode:</p><ul><li><p><strong>Rally (ally):</strong> no power roll. End one fear or morale condition on the target (such as frightened or taunted), let them make a saving throw against one effect, or steel them: an edge on their next saving throw against fear, corruption, or dread.</p></li><li><p><strong>Rattle (enemy):</strong> make the power roll below.</p></li></ul>",
             "Effect_spend00000000000": "<p>You target up to 3 creatures within distance instead of one, <strong>or</strong> you upgrade the effect: a rally ends all fear and morale conditions on the target, or a rattle’s condition lasts until the target ends it with a saving throw (save ends) instead.</p>",
             "Tier1": "Rattle: no effect.",
             "Tier2": "Rattle: the target has a bane on their next power roll.",
@@ -1445,7 +1445,7 @@
           "AWord": {
             "Name": "A Word",
             "Story": "A quiet aside at exactly the right moment.",
-            "Effect_before0000000000": "<p>Choose one: the target gains +1 on their next power roll this round, or the target ends one frightened or taunted condition on themselves.</p>"
+            "Effect_before0000000000": "<p>Choose one: the target gains an edge on their next power roll this round, or the target ends one frightened or taunted condition on themselves.</p>"
           },
           "CoordinatedAssault": {
             "Name": "Coordinated Assault",
@@ -1455,10 +1455,10 @@
           "CommandPresence": {
             "Name": "Command Persona / Fearful Awe",
             "Story": "The anti-morale teeth: area denial, aimed at will rather than bodies.",
-            "Effect_before0000000000": "<p>Choose one mode before you roll:</p><ul><li><p><strong>Command Presence:</strong> a 3 cube within 10 squares. The power roll decides how many enemies in the area are affected.</p></li><li><p><strong>Fearful Awe:</strong> one enemy within 10 squares.</p></li></ul>",
-            "Tier1": "Command Presence: the enemy nearest the cube’s center has a bane on its next power roll. Fearful Awe: the target is weakened until the end of its next turn.",
-            "Tier2": "Command Presence: up to 2 enemies of your choice in the area are taunted by you until the end of their next turn. Fearful Awe: the target is taunted by you until the end of its next turn.",
-            "Tier3": "Command Presence: up to 3 enemies of your choice in the area are taunted by you until the end of their next turn and have a bane on their next power roll. Fearful Awe: the target is frightened of you (save ends)."
+            "Effect_before0000000000": "<p>Choose one mode before you roll:</p><ul><li><p><strong>Command Persona:</strong> a 3 cube within 10 squares. The power roll decides how many enemies in the area are affected.</p></li><li><p><strong>Fearful Awe:</strong> one enemy within 10 squares.</p></li></ul>",
+            "Tier1": "Command Persona: the enemy nearest the cube’s center has a bane on its next power roll. Fearful Awe: the target is weakened until the end of its next turn.",
+            "Tier2": "Command Persona: up to 2 enemies of your choice in the area are taunted by you until the end of their next turn. Fearful Awe: the target is taunted by you until the end of its next turn.",
+            "Tier3": "Command Persona: up to 3 enemies of your choice in the area are taunted by you until the end of their next turn and have a bane on their next power roll. Fearful Awe: the target is frightened of you (save ends)."
           },
           "BattleCry": {
             "Name": "Battle Cry",
@@ -1730,7 +1730,7 @@
           },
           "TheSignatureBeat": {
             "Name": "The Signature Beat",
-            "Description": "<p>You have a signature performance: a song, a slogan, a catchphrase, a media hook. When you perform it, each ally within 10 squares of you gains +1 on Instinct-based tests to read people and situations for the rest of the scene.</p>"
+            "Description": "<p>You have a signature performance: a song, a slogan, a catchphrase, a media hook. When you perform it, each ally within 10 squares of you gains an edge on Instinct-based tests to read people and situations for the rest of the scene.</p>"
           },
           "ShakeItOff": {
             "Name": "Shake It Off",
@@ -1815,7 +1815,7 @@
           },
           "FieldPartner": {
             "Name": "Field Partner",
-            "Description": "<p>At the start of each encounter, bond with one ally. Until the end of the encounter, that ally gains +1 on saving throws and +1 to any healing you apply to them, and whenever one of your abilities heals that ally, you [[/gain 1 hr]]{regain 1 Reagent}.</p>"
+            "Description": "<p>At the start of each encounter, bond with one ally. Until the end of the encounter, that ally gains an edge on saving throws and +1 to any healing you apply to them, and whenever one of your abilities heals that ally, you [[/gain 1 hr]]{regain 1 Reagent}.</p>"
           },
           "EstablishedProtocols": {
             "Name": "Established Protocols",
@@ -1874,7 +1874,7 @@
           "AdministerDose": {
             "Name": "Administer Dose",
             "Story": "The same injector saves your friend’s life or ends your enemy’s.",
-            "Effect_before0000000000": "<p>What’s loaded in the injector depends on the target.</p><ul><li><p><strong>Ally (Stimulant, no roll):</strong> the target gains an edge on power rolls, or ignores one condition, for 1 round.</p></li><li><p><strong>Enemy (Toxin, power roll):</strong> the target takes [[lookup 2+@I evaluate]]{2 + Instinct} damage over 2 rounds (half each round, rounding up on the first tick) and is weakened until the end of its next turn after the last tick.</p></li></ul><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their next power roll (−2 if the dose was enhanced). No save, no opt-out.</p>",
+            "Effect_before0000000000": "<p>What’s loaded in the injector depends on the target.</p><ul><li><p><strong>Ally (Stimulant, no roll):</strong> the target gains an edge on power rolls, or ignores one condition, for 1 round.</p></li><li><p><strong>Enemy (Toxin, power roll):</strong> the target takes [[lookup 2+@I evaluate]]{2 + Instinct} damage over 2 rounds (half each round, rounding up on the first tick) and is weakened until the end of its next turn after the last tick.</p></li></ul><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their power rolls for 1 round (−2 for 2 rounds if the dose was enhanced). No save, no opt-out.</p>",
             "Effect_spend00000000000": "<p>A stronger dose: for each 2 Reagents spent, the Stimulant lasts 1 more round, the Toxin becomes [[lookup 4+@I evaluate]]{4 + Instinct} damage over 2 rounds and also slows the target, or you dose one additional target.</p>"
           },
           "Diagnose": {
@@ -1894,12 +1894,12 @@
           "SlapInjector": {
             "Name": "Slap-Injector",
             "Story": "Quick, cheap, and gentle enough that it doesn’t tax the recipient.",
-            "Effect_before0000000000": "<p>Choose one: the target can make a saving throw against one active effect that a save can end, or the target gains +1 on their next power roll. This is a mild stim: no crash rider.</p>"
+            "Effect_before0000000000": "<p>Choose one: the target can make a saving throw against one active effect that a save can end, or the target gains an edge on their next power roll. This is a mild stim: no crash rider.</p>"
           },
           "CombatStims": {
             "Name": "Combat Stims",
             "Story": "Hard combat drugs that turn a fight around, at an honest cost.",
-            "Effect_before0000000000": "<p>For 1 round, each target gains an extra maneuver this turn, an edge on their next power roll, and [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their next power roll (−2 if the dose was enhanced). No save, no opt-out.</p>"
+            "Effect_before0000000000": "<p>For 1 round, each target gains an extra maneuver this turn, an edge on their next power roll, and [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p><p><strong>Crash rider (automatic):</strong> when the buff ends, each recipient takes −1 on their power rolls for 1 round (−2 for 2 rounds if the dose was enhanced). No save, no opt-out.</p>"
           },
           "ToxicCloud": {
             "Name": "Toxic Cloud",
@@ -1929,7 +1929,7 @@
           "FocusSerum": {
             "Name": "Focus Serum",
             "Story": "Accuracy over raw output.",
-            "Effect_before0000000000": "<p>Each target gains +2 on power rolls for 1 round.</p><p><strong>Crash rider (automatic):</strong> when the buff ends, each target takes −1 on their next power roll. No save, no opt-out.</p>"
+            "Effect_before0000000000": "<p>Each target gains an edge on power rolls for 1 round.</p><p><strong>Crash rider (automatic):</strong> when the buff ends, each target takes −1 on their power rolls for 1 round. No save, no opt-out.</p>"
           },
           "Anesthetize": {
             "Name": "Anesthetize",
@@ -1956,7 +1956,7 @@
           "FieldAdrenal": {
             "Name": "Field Adrenal",
             "Story": "A full extra turn, paid for with the harshest standard crash in the class.",
-            "Effect_before0000000000": "<p>You and up to 2 adjacent allies each gain an extra main action, maneuver, and move action this turn.</p><p><strong>Crash rider (automatic, enhanced):</strong> each recipient takes −2 on their next power roll after the buff ends.</p>"
+            "Effect_before0000000000": "<p>You and up to 2 adjacent allies each gain an extra main action, maneuver, and move action this turn.</p><p><strong>Crash rider (automatic, enhanced):</strong> each recipient takes −2 on their power rolls for 2 rounds after the buff ends.</p>"
           },
           "ChemicalWarfare": {
             "Name": "Chemical Warfare",
@@ -1981,7 +1981,7 @@
           "WonderDrug": {
             "Name": "Wonder Drug",
             "Story": "An encounter-spanning cocktail with a cost that follows everyone into what comes next.",
-            "Effect_before0000000000": "<p>Until the end of the encounter, you and each ally within distance gain +1 on power rolls and an extra maneuver on each of your turns, and each gains [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p><p><strong>Crash rider (automatic, enhanced):</strong> at the end of the encounter, each recipient takes −2 on the first power roll of the next scene.</p>"
+            "Effect_before0000000000": "<p>Until the end of the encounter, you and each ally within distance gain an edge on power rolls and an extra maneuver on each of your turns, and each gains [[/heal @recoveries.recoveryValue temp]]{temporary Stamina equal to your Recovery value}.</p><p><strong>Crash rider (automatic, enhanced):</strong> at the end of the encounter, each recipient takes −2 on the first power roll of the next scene.</p>"
           },
           "NerveAgent": {
             "Name": "Nerve Agent",
@@ -1991,8 +1991,8 @@
           "FullKitPurge": {
             "Name": "Full Kit Purge",
             "Story": "Everything, everywhere, all at once — and nothing left for the rest of the run.",
-            "Effect_before0000000000": "<p>You spend <strong>all</strong> remaining Reagents in your kit (minimum 11). The Director scales the effect to the amount spent: mass revive, mass heal, and mass condition-clearing for you and allies within distance. Your kit is empty afterward.</p>",
-            "Effect_spend00000000000": "<p>Every Reagent beyond 11 increases the scale of the effect.</p>"
+            "Effect_before0000000000": "<p>You spend <strong>all</strong> remaining Reagents in your kit (minimum 11). At the minimum 11-Reagent spend, each target gets what The Doctor Is In delivers: heals Recovery value × 2, has all conditions cleared, and revives if dying or dead (within the Director’s freshly-killed line). Your kit is empty afterward.</p>",
+            "Effect_spend00000000000": "<p>Every Reagent beyond 11 adds +1 Recovery value of healing to each target.</p>"
           },
           "TheDoctorIsIn": {
             "Name": "The Doctor Is In",
@@ -2064,7 +2064,7 @@
           },
           "PharmaceuticalGrade": {
             "Name": "Pharmaceutical Grade",
-            "Description": "<p>When you produce a compound, choose one bonus: +50% base magnitude (round up), +1 round of buff duration, or +1 additional target.</p><p>The crash rider from any Stimulant you produce lasts 1 round less: it still happens, at the same −1/−2, but the recipient recovers sooner.</p>"
+            "Description": "<p>When you produce a compound, choose one bonus: +50% base magnitude (round up), +1 round of buff duration, or +1 additional target.</p><p>The crash rider from any Stimulant you produce lasts 1 round less — an enhanced crash lasts 1 round instead of 2, and a base crash expires before it applies to a roll. It still happens, at the same −1/−2.</p>"
           },
           "LicensedProtocol": {
             "Name": "Licensed Protocol",
@@ -2245,7 +2245,7 @@
             "Name": "Rigged Fire",
             "Story": "Drones ARE your damage.",
             "Effect_before0000000000": "<p><strong>Distance:</strong> The firing machine’s weapon range.</p><p>A machine you control makes a mounted attack. Roll with Logic, or Reflex if you are Jumped-In to the firing machine, and add Gunnery.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>",
-            "Tier1": "The shot goes wide: no damage, and enemies gain +1 on attacks against the firing machine until your next turn.",
+            "Tier1": "The shot goes wide: no damage, and enemies have an edge on power rolls against the firing machine until your next turn.",
             "Tier2": "3 + Logic damage.",
             "Tier3": "5 + Logic damage, and choose one: the target is knocked prone, the target is suppressed until the end of its next turn, or the firing machine can reposition up to its Speed."
           },
@@ -2371,7 +2371,7 @@
           },
           "UnbreakableHive": {
             "Name": "Unbreakable Hive",
-            "Description": "<p>Whenever a drone you control would be destroyed, roll [[/r 1d6]]. On a 4 or higher, it instead drops to 1 Integrity and is Systems Down (inactive, not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+            "Description": "<p>Whenever a drone you control would be destroyed, make a saving throw for it (Draw Steel saving throws succeed on 6 or higher). On a success, it instead drops to 1 Integrity and is Systems Down (inactive, not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
           },
           "TaserSwarm": {
             "Name": "Taser Swarm",
@@ -2558,7 +2558,7 @@
           },
           "MeshWebDoctrine": {
             "Name": "Mesh-Web Doctrine",
-            "Description": "<p>An enemy that triggers one of your mesh-web tripwires also takes a bane on its next attack roll.</p>"
+            "Description": "<p>An enemy that triggers one of your mesh-web tripwires also takes a bane on its next power roll.</p>"
           },
           "FortifiedNode": {
             "Name": "Fortified Node",
@@ -2566,7 +2566,7 @@
           },
           "TurnTheBuildingFeature": {
             "Name": "Turn the Building",
-            "Description": "<p>Once per encounter, as a single main action, you can activate every Physical Upgrade Slot asset in your base at once (a building-scale Focus Fire).</p>"
+            "Description": "<p>You unlock the Turn the Building ability, defined once in the 11-cost band — this is how a Facility Rigger gets it at 6th level instead of spending an 11-cost band pick.</p>"
           },
           "TheBuildingRemembers": {
             "Name": "The Building Remembers",
@@ -2646,7 +2646,7 @@
           "TripTheWeb": {
             "Name": "Trip the Web",
             "Trigger": "An enemy enters a square containing your mesh-web.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> The mesh-web’s placement.</p><p>The enemy is [[/apply restrained save]]{restrained} (save ends). With Mesh-Web Doctrine, it also takes a bane on its next attack roll.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The mesh-web’s placement.</p><p>The enemy is [[/apply restrained save]]{restrained} (save ends). With Mesh-Web Doctrine, it also takes a bane on its next power roll.</p><p><em>Uptime costs and numbers are v1 estimates pending calibration.</em></p>"
           },
           "BreachCharge": {
             "Name": "Breach Charge",
@@ -3077,11 +3077,11 @@
           },
           "DarkPact": {
             "Name": "Dark Pact",
-            "Description": "<p>Your patron is a demon or other infernal power. This choice is permanent.</p><ul><li><p><strong>Default damage type:</strong> corruption.</p></li><li><p><strong>Corruption weight:</strong> heavy.</p></li><li><p><strong>Conduct:</strong> looser in the moment, but the debt comes due — your patron demands darker service or offerings as the Price.</p></li><li><p><strong>Creed echo:</strong> your first act of dominion, punishment, or harvest each round.</p></li><li><p><strong>Invoke the Pact, failed bind:</strong> the entity manifests just long enough to strike you once, at its tier’s damage, before departing.</p></li></ul><p>Your pact-named features are the Dark versions: The Ledger of the Damned, Rising Adept, Damned Weapon, Sworn.</p>"
+            "Description": "<p>Your patron is a demon or other infernal power. This choice is permanent.</p><ul><li><p><strong>Default damage type:</strong> corruption.</p></li><li><p><strong>Corruption weight:</strong> heavy.</p></li><li><p><strong>Conduct:</strong> looser in the moment, but the debt comes due — your patron demands darker service or offerings as the Price.</p></li><li><p><strong>Creed echo:</strong> your first act of dominion, punishment, or harvest each round.</p></li><li><p><strong>Invoke the Pact, failed bind:</strong> the entity manifests just long enough to strike you once, for 4 + Persona damage, before departing.</p></li></ul><p>Your pact-named features are the Dark versions: The Ledger of the Damned, Rising Adept, Damned Weapon, Sworn.</p>"
           },
           "PriestsWard": {
             "Name": "Priest’s Ward",
-            "Description": "<p>At the start of each of your turns, if you aren’t sustaining another persistent working, you gain [[/heal 2 temp]]{2 temporary Stamina} — a small cushion that’s always there. This is separate from Sanctuary Ward.</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+            "Description": "<p>At the start of each of your turns, if you aren’t sustaining another persistent working, you gain [[/heal 2 temp]]{2 temporary Stamina} — a small cushion that’s always there. This is separate from Sanctuary Ward.</p>"
           },
           "RosterOfTheSaved": {
             "Name": "The Roster of the Saved",
@@ -3148,7 +3148,7 @@
           "SmiteRebuke": {
             "Name": "Smite / Rebuke",
             "Story": "A bolt of the patron’s power.",
-            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p><p><em>Provisional magnitude (numeric pass pending).</em></p>",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p>",
             "Effect_spend00000000000": "<p>For each Conviction spent, the damage increases by 1. Instead of 1 extra damage, you can push the target 1 square, or (for 2 Conviction) the target has a bane on its next power roll.</p>"
           },
           "SenseTheVeil": {
@@ -3293,7 +3293,7 @@
             "Story": "Someone across the Veil answers.",
             "Effect_before0000000000": "<p>You call your patron’s aid across the Veil. The <strong>bind check</strong> rolls <strong>Instinct</strong>, not Persona. The entity’s shape follows your ministry: an angelic or infernal warrior (Templar), a guardian or warding spirit (Shepherd), or a hunting or binding spirit (Exorcist).</p><p><strong>The Price</strong> applies hardest here: a Light entity demands a task of mercy or protection; a Dark entity loads corruption and spirit attention on top of the working. Breaking the pact’s terms after invoking is a serious story beat.</p>",
             "Effect_persistent000000": "<p>Sustain the independent form (−4 Conviction per turn). The extension form has no sustain cost.</p>",
-            "Tier1": "Failed bind. Light pact: the entity vanishes without effect, and you take a bane on your next power rolls (save ends). Dark pact: the entity strikes you once at its tier’s damage before departing.",
+            "Tier1": "Failed bind. Light pact: the entity vanishes without effect, and you take a bane on your next power rolls (save ends). Dark pact: the entity strikes you once for 4 + Persona damage before departing.",
             "Tier2": "Extension form: the entity acts on your turn as part of your own action economy (a smiting hand, a warding aegis, a spectral guardian), with no Stamina of its own. Its strike deals 4/7/10 + Persona by result, or it gives an equivalent support effect. No sustain cost; it lasts until the end of the encounter or until you release it.",
             "Tier3": "Independent form: the entity becomes its own figure on the map with its own Stamina and turn, scaled as a high-grade entity (Veil rules), for the rest of the encounter or until it drops or the bind breaks. Sustain: Persistent 2 (−4 Conviction per turn)."
           },
@@ -3371,7 +3371,7 @@
           },
           "WardensGrace": {
             "Name": "Warden’s Grace",
-            "Description": "<p>Whenever you use Lay On Hands / Word of Comfort, a target who spends a Recovery regains extra Stamina equal to [[lookup @P]]{your Persona score}.</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+            "Description": "<p>Whenever you use Lay On Hands / Word of Comfort, a target who spends a Recovery regains extra Stamina equal to [[lookup @P]]{your Persona score}.</p>"
           },
           "WardAnchor": {
             "Name": "Ward Anchor",
@@ -3379,7 +3379,7 @@
           },
           "ShepherdsBounty": {
             "Name": "Shepherd’s Bounty",
-            "Description": "<p>Your healing and warding workings (My Life for Yours, Sanctuary Ward, Faith Is Our Armor, Sermon of Grace) increase in magnitude by one step: +1 Recovery spent, +5 temporary Stamina, or +1 square of area (Director’s call per ability).</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+            "Description": "<p>Your healing and warding workings (My Life for Yours, Sanctuary Ward, Faith Is Our Armor, Sermon of Grace) increase in magnitude by one step: +1 Recovery spent, +5 temporary Stamina, or +1 square of area (Director’s call per ability).</p>"
           },
           "GuardiansVoice": {
             "Name": "Guardian’s Voice",
@@ -3387,7 +3387,7 @@
           },
           "ShepherdsDevotion": {
             "Name": "Shepherd’s Devotion",
-            "Description": "<p>Warden’s Grace’s extra Stamina doubles, and Ward Anchor’s discount also applies to sustaining Invoke the Pact’s independent form.</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+            "Description": "<p>Warden’s Grace’s extra Stamina doubles, and Ward Anchor’s discount also applies to sustaining Invoke the Pact’s independent form.</p>"
           },
           "SteadyHand": {
             "Name": "Steady Hand",
@@ -3424,7 +3424,7 @@
           "Judgment": {
             "Name": "Judgment",
             "Story": "One enemy stands judged.",
-            "Effect_before0000000000": "<p>The target is [[/apply SPR0000000judged]]{under Judgment} until the end of the encounter, until you are dying, or until you use this ability on another target (only one target at a time; Twin Judgment at 8th level allows two). While the mark holds:</p><ul><li><p>The target takes a bane on power rolls it makes while within your line of effect — or, at the Director’s option, takes a small amount of extra damage (damage is holy (light pact) or corruption (dark pact).) when you or an ally damages it.</p></li><li><p>The first time each round you damage the target, or it damages you, you [[/gain 1 hr]]{gain 1 Conviction} (+1 more with Righteous Momentum).</p></li></ul><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+            "Effect_before0000000000": "<p>The target is [[/apply SPR0000000judged]]{under Judgment} until the end of the encounter, until you are dying, or until you use this ability on another target (only one target at a time; Twin Judgment at 8th level allows two). While the mark holds:</p><ul><li><p>The target takes a bane on power rolls it makes while within your line of effect. Judgment grants no bonus damage of its own.</p></li><li><p>The first time each round you damage the target, or it damages you, you [[/gain 1 hr]]{gain 1 Conviction} (+1 more with Righteous Momentum).</p></li></ul>"
           },
           "RighteousMomentum": {
             "Name": "Righteous Momentum",
@@ -3432,7 +3432,7 @@
           },
           "SmitersZeal": {
             "Name": "Smiter’s Zeal",
-            "Description": "<p>Your smiting workings (Judgment’s Hammer, Curse of Terror, Corruption’s Curse, Vessel of Retribution) increase in magnitude by one step: +2 damage on each result, or +1 to any forced movement (Director’s call per ability).</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+            "Description": "<p>Your smiting workings (Judgment’s Hammer, Curse of Terror, Corruption’s Curse, Vessel of Retribution) increase in magnitude by one step: +2 damage on each result, or +1 to any forced movement (Director’s call per ability).</p>"
           },
           "BladeOfTheChosen": {
             "Name": "Blade of the Chosen",
@@ -3520,7 +3520,7 @@
           },
           "TheLastRite": {
             "Name": "The Last Rite",
-            "Description": "<p>Once per encounter, as a free action, spend any amount of Conviction (minimum 5) to attempt an immediate banishment of a spirit or corrupted creature within range, whatever its tier.</p>"
+            "Description": "<p>Once per encounter, as a free action, spend any amount of Conviction (minimum 5) to attempt an immediate banishment of a spirit or corrupted creature within range, whatever its rank.</p>"
           }
         }
       },
@@ -3809,11 +3809,11 @@
           },
           "SpriteCongregation": {
             "Name": "Sprite Congregation",
-            "Description": "<p>Sprites are conjured code-spirits: compiled from Resonance, acting under your command, and decompiling when dismissed (a free maneuver), destroyed (0 Sprite HP), or at the end of the encounter.</p><p><strong>Sprite cap:</strong> 2 at 1st level (Sprite-Weaver 3). The baseline rises to 3 at 5th level and 4 at 8th level. <strong>Compile cost:</strong> 3 Resonance for an extra sprite beyond Compile Sprite’s free one (Sprite-Weaver 2).</p><h4>Archetypes</h4><ul><li><p><strong>Data-sprite</strong> (scout and screen): an edge on Search, Scan, breach, or command rolls made by you or an ally directing it; allies gain an edge on power rolls against a target it scanned this round.</p></li><li><p><strong>Attack-sprite</strong> (damage): strikes Wired targets directly, or flesh through a device or jack, for [[/damage 2d10+@R]]{2d10 + Logic} damage.</p></li><li><p><strong>Machine-sprite</strong> (mender): repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</p></li><li><p><strong>Ward-sprite</strong> (shield): a defense bonus against Wired and EW attacks for you (and nearby allies at higher tiers); resists ICE and EW on your behalf.</p></li></ul><h4>Sprite Stats (placeholder benchmarks)</h4><table><thead><tr><th>Archetype</th><th>Minor (L1–3)</th><th>Intermediate (L4–7)</th><th>Advanced (L8–10)</th></tr></thead><tbody><tr><td>Data</td><td>HP 8 + Logic × level; edge on 1 roll type</td><td>HP 14 + Logic × level; 2 roll types</td><td>HP 20 + Logic × level; all Wired rolls it can see</td></tr><tr><td>Attack</td><td>HP 12 + Logic × level; 2d10 + Logic</td><td>HP 18 + Logic × level; 2d10 + Logic + 1d6</td><td>HP 26 + Logic × level; 3d10 + Logic</td></tr><tr><td>Machine</td><td>HP 10 + Logic × level; mends 1 Recovery-worth</td><td>HP 16 + Logic × level; +1 target</td><td>HP 22 + Logic × level; a full Resonance Mending</td></tr><tr><td>Ward</td><td>HP 10 + Logic × level; +1 defense, self</td><td>HP 16 + Logic × level; +1, self + 1 adjacent ally</td><td>HP 22 + Logic × level; +2, self + all adjacent allies</td></tr></tbody></table><p>Every sprite’s Wired defense is your Persona score; its Reflex/Physique defense is a flat 10.</p><h4>Hybrid-by-Tier</h4><ul><li><p><strong>Minor (1st–3rd level) — extension:</strong> sprites act on your turn as extensions of you. No separate initiative.</p></li><li><p><strong>Intermediate (4th–7th) — commanded:</strong> sprites act on their own turn, but only if you issue a command (Compile Sprite as a maneuver) each round.</p></li><li><p><strong>Advanced (8th–10th) — independent:</strong> sprites roll their own initiative and act like a proper summon.</p></li></ul><p>Sprites acting on your own turn never trigger biofeedback for you.</p><p><em>Sprite actors are in Ghostwire Summons &amp; Machines › Sprites (one per archetype and hybrid tier); set Stamina to the live formula when you place one.</em></p>"
+            "Description": "<p>Sprites are conjured code-spirits: compiled from Resonance, acting under your command, and decompiling when dismissed (a free maneuver), destroyed (0 Stamina), or at the end of the encounter.</p><p><strong>Sprite cap:</strong> 2 at 1st level (Sprite-Weaver 3). The baseline rises to 3 at 5th level and 4 at 8th level. Caps never stack — use the highest single number you qualify for. <strong>Compile cost:</strong> 3 Resonance for an extra sprite beyond Compile Sprite’s free one (Sprite-Weaver 2).</p><h4>Archetypes</h4><ul><li><p><strong>Data-sprite</strong> (scout and screen): an edge on Search, Scan, breach, or command rolls made by you or an ally directing it; allies gain an edge on power rolls against a target it scanned this round.</p></li><li><p><strong>Attack-sprite</strong> (damage): strikes Wired targets directly, or flesh through a device or jack, for [[/damage 2d10+@R]]{2d10 + Logic} damage.</p></li><li><p><strong>Machine-sprite</strong> (mender): repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</p></li><li><p><strong>Ward-sprite</strong> (shield): a bane on Wired and EW attacks against you (and nearby allies at higher ranks); resists ICE and EW on your behalf.</p></li></ul><h4>Sprite Stats</h4><table><thead><tr><th>Archetype</th><th>Minor (L1–3)</th><th>Intermediate (L4–7)</th><th>Advanced (L8–10)</th></tr></thead><tbody><tr><td>Data</td><td>Stamina 8 + Logic × level; edge on 1 roll type</td><td>Stamina 14 + Logic × level; 2 roll types</td><td>Stamina 20 + Logic × level; all Wired rolls it can see</td></tr><tr><td>Attack</td><td>Stamina 12 + Logic × level; 2d10 + Logic</td><td>Stamina 18 + Logic × level; 2d10 + Logic + 1d6</td><td>Stamina 26 + Logic × level; 3d10 + Logic</td></tr><tr><td>Machine</td><td>Stamina 10 + Logic × level; mends 1 Recovery-worth</td><td>Stamina 16 + Logic × level; +1 target</td><td>Stamina 22 + Logic × level; a full Resonance Mending</td></tr><tr><td>Ward</td><td>Stamina 10 + Logic × level; bane on attacks against it</td><td>Stamina 16 + Logic × level; bane, self + 1 adjacent ally</td><td>Stamina 22 + Logic × level; double bane, self + all adjacent allies</td></tr></tbody></table><p>Draw Steel has no defense scores: attacks against a sprite are ordinary power rolls.</p><h4>Hybrid bands</h4><ul><li><p><strong>Minor (1st–3rd level) — extension:</strong> sprites act on your turn as extensions of you. No separate initiative.</p></li><li><p><strong>Intermediate (4th–7th) — commanded:</strong> sprites act on their own turn, but only if you issue a command (Compile Sprite as a maneuver) each round.</p></li><li><p><strong>Advanced (8th–10th) — independent:</strong> sprites take their own turn in the round and act like a proper summon.</p></li></ul><p>Sprites acting on your own turn never trigger biofeedback for you.</p><p><em>Sprite actors are in Ghostwire Summons &amp; Machines › Sprites (one per archetype and hybrid band); set Stamina to the live formula when you place one.</em></p>"
           },
           "Biofeedback": {
             "Name": "Biofeedback",
-            "Description": "<p>Overreach bites back, but gently. <strong>Only abilities where you spend 5 or more Resonance</strong> trigger a biofeedback risk: make a Physique save against the ability’s DC.</p><table><thead><tr><th>Resonance spent</th><th>Save DC</th></tr></thead><tbody><tr><td>5</td><td>12</td></tr><tr><td>7</td><td>15</td></tr><tr><td>9</td><td>18</td></tr><tr><td>11</td><td>20</td></tr></tbody></table><p>Sprite-Weavers save at DC −2; Resonance-Warriors at DC +2. On a success, nothing happens. On a failure, you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina, and the ability still resolves.</p><p><strong>Never lethal:</strong> if biofeedback would drop you to 0 Stamina, you are <strong>Winded</strong> instead of dying, and you regain 1 Stamina per turn until stabilized. Only external damage can kill you.</p>"
+            "Description": "<p>Overreach bites back, but gently. <strong>Only abilities where you spend 5 or more Resonance</strong> trigger a biofeedback risk: make a Physique test at the difficulty its cost sets (test difficulties as Draw Steel Heroes prints them).</p><table><thead><tr><th>Resonance spent</th><th>Biofeedback test</th></tr></thead><tbody><tr><td>5</td><td>easy</td></tr><tr><td>7</td><td>medium</td></tr><tr><td>9</td><td>hard</td></tr><tr><td>11</td><td>hard, with a bane</td></tr></tbody></table><p>Sprite-Weavers roll every biofeedback test with an edge; Resonance-Warriors with a bane. On a success, nothing happens. On a failure, you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina, and the ability still resolves.</p><p><strong>Never lethal:</strong> if biofeedback would drop you to 0 Stamina, you are <strong>Winded</strong> instead of dying, and you regain 1 Stamina per turn until stabilized. Only external damage can kill you.</p>"
           },
           "WiredNative": {
             "Name": "Wired Native",
@@ -3821,15 +3821,15 @@
           },
           "CongregationSense": {
             "Name": "Congregation Sense",
-            "Description": "<p>You always know the current Sprite HP, position, and hybrid tier of every sprite you command within Wired range, even through walls.</p>"
+            "Description": "<p>You always know the current Stamina, position, and sprite rank of every sprite you command within Wired range, even through walls.</p>"
           },
           "CyborgMending": {
             "Name": "Cyborg Mending",
             "Description": "<p>Resonance Mending’s Cyborg branch is yours from 1st level, whatever your discipline: a Cyborg you mend spends one of their own Recoveries at no Resonance cost, and you can bring a Cyborg at 0 Stamina back to minimal function. This is the class’s headline niche and is never discipline-gated.</p>"
           },
           "LightChromeTolerance": {
-            "Name": "Light Chrome Tolerance",
-            "Description": "<p>Chrome gently erodes your Resonance. Each point of Body Integrity spent on chrome beyond your free allowance of 2 gives a cumulative −1 to Resonance-based power rolls, to a maximum of −3. A resonance-tuned focus item (a totem, jury-rigged antenna, or string of compiled charms) can grant +1 to Resonance-based power rolls without counting against the allowance.</p><p><strong>Arcane Severance:</strong> Cyborgs can never take Technomancer levels. A Technomancer who becomes a Cyborg loses all access to Resonance, sprites, and this class’s abilities unless the conversion is reversed.</p>"
+            "Name": "Chrome Erosion",
+            "Description": "<p>Chrome erodes your Resonance cap by the shared chrome magic-erosion formula: −1 per 2 Integrity spent on Standard chrome (round down), per 3 on Soft, per 1 on Salvage. No caster is exempt. A resonance-tuned focus item (a totem, jury-rigged antenna, or string of compiled charms) grants an edge on Resonance-based power rolls and is not chrome, so it causes no erosion.</p><p><strong>Arcane Severance:</strong> Cyborgs can never take Technomancer levels. A Technomancer who becomes a Cyborg loses all access to Resonance, sprites, and this class’s abilities unless the conversion is reversed.</p>"
           },
           "SpriteCap3": {
             "Name": "Sprite Cap 3",
@@ -3878,7 +3878,7 @@
           "HarmonicAdjustment": {
             "Name": "Harmonic Adjustment",
             "Story": "Correcting a ghost’s aim mid-fight.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Choose one: the sprite gains +1 on its attack roll this turn, +2 to its defense until the end of your next turn, or a free shift up to its full movement.</p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Choose one: the sprite gains an edge on its power roll this turn, a double bane on attacks against it until the end of your next turn, or a free shift up to its full movement.</p>"
           },
           "SwarmTheSignal": {
             "Name": "Swarm the Signal",
@@ -3906,35 +3906,35 @@
           "ResonanceWard": {
             "Name": "Resonance Ward",
             "Story": "Sanctuary Ward, in code.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> A zone around you.</p><p>Until your next turn, you weave a zone of resonant protection with Ward-sprites and a standing harmonic: allies in it gain defenses against Wired and EW attacks, chrome and devices in it are screened from hijack, and you can counter hostile intrusion in the area.</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> A zone around you.</p><p>Until your next turn, you weave a zone of resonant protection with Ward-sprites and a standing harmonic: Wired and EW attacks against allies in it take a bane, chrome and devices in it are screened from hijack, and you can counter hostile intrusion in the area.</p><p><strong>Biofeedback:</strong> easy Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "Overclock": {
             "Name": "Overclock",
             "Story": "A temporary frenzy.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Each compiled sprite acts twice this turn.</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Each compiled sprite acts twice this turn.</p><p><strong>Biofeedback:</strong> easy Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "TranceCompile": {
             "Name": "Trance Compile",
             "Story": "Two ghosts at once.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Compile two new sprites (any archetypes) in a single action, within your sprite cap. Both act normally after compiling.</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>Compile two new sprites (any archetypes) in a single action, within your sprite cap. Both act normally after compiling.</p><p><strong>Biofeedback:</strong> easy Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "SignalWeave": {
             "Name": "Signal Weave",
             "Story": "Tuning forks laid across the battlefield’s signal.",
-            "Effect_before0000000000": "<p>All allies gain +1 on Wired-based rolls for the rest of the round, and one enemy of your choice within distance is glitched (a bane on its next power roll).</p><p><strong>Biofeedback:</strong> DC 12 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>All allies gain an edge on Wired-based power rolls for the rest of the round, and one enemy of your choice within distance is glitched (a bane on its next power roll).</p><p><strong>Biofeedback:</strong> easy Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "TotalResonance": {
             "Name": "Total Resonance",
             "Story": "Let the current run wild.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>For the rest of the encounter, every sprite you command rises one tier on the hybrid ladder (minor acts as intermediate; intermediate as advanced), your congregation drip doubles, and you immediately compile one additional sprite for free, ignoring your sprite cap for the rest of the encounter. The tier boost is unconditional; the roll only decides the free sprite.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>",
-            "Tier1": "The free sprite compiles unstable (half Sprite HP); the tier boost still applies.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range.</p><p>For the rest of the encounter, every sprite you command rises one rank on the hybrid ladder (minor acts as intermediate; intermediate as advanced), your congregation drip doubles, and you immediately compile one additional sprite for free, ignoring your sprite cap for the rest of the encounter. The rank boost is unconditional; the roll only decides the free sprite.</p><p><strong>Biofeedback:</strong> medium Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>",
+            "Tier1": "The free sprite compiles unstable (half Stamina); the rank boost still applies.",
             "Tier2": "The free sprite compiles at full strength but acts next turn.",
             "Tier3": "The free sprite compiles at full strength and acts immediately."
           },
           "CascadeFailureTechno": {
             "Name": "Cascade Failure",
             "Story": "One roll, and the whole cube shorts out.",
-            "Effect_before0000000000": "<p>Each affected enemy takes [[/damage 2*@R]]{damage equal to twice your Logic score}.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>",
+            "Effect_before0000000000": "<p>Each affected enemy takes [[/damage 2*@R]]{damage equal to twice your Logic score}.</p><p><strong>Biofeedback:</strong> medium Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>",
             "Tier1": "Only the nearest enemy is affected: it takes the damage and is stunned (save ends).",
             "Tier2": "Up to 2 enemies of your choice take the damage and are stunned until the end of their next turn.",
             "Tier3": "Up to 4 enemies of your choice take the damage, are stunned (save ends), and their next Wired ability fizzles."
@@ -3942,52 +3942,52 @@
           "SpriteStorm": {
             "Name": "Sprite Storm",
             "Story": "A storm of ghost-code.",
-            "Effect_before0000000000": "<p>Compile 3 sprites in a single action (Sprite-Weaver: 4). All your compiled sprites strike different targets within 10 squares as part of the same action.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>Compile 3 sprites in a single action (Sprite-Weaver: 4). All your compiled sprites strike different targets within 10 squares as part of the same action.</p><p><strong>Biofeedback:</strong> medium Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "ResonanceSlam": {
             "Name": "Resonance Slam",
             "Story": "The current hits like a wall.",
-            "Effect_before0000000000": "<p>Choose one mode. <strong>Slam:</strong> one target takes [[/damage 3*@R]]{damage equal to three times your Logic score}, is pushed 3 squares, and is Winded (save ends). <strong>Slam Group:</strong> each enemy in a 3 cube within 5 squares takes damage equal to your Logic score and is knocked prone.</p><p><strong>Biofeedback:</strong> DC 15 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>Choose one mode. <strong>Slam:</strong> one target takes [[/damage 3*@R]]{damage equal to three times your Logic score}, is pushed 3 squares, and is weakened (save ends). <strong>Slam Group:</strong> each enemy in a 3 cube within 5 squares takes damage equal to your Logic score and is knocked prone.</p><p><strong>Biofeedback:</strong> medium Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "TheChoirSingsTogether": {
             "Name": "The Choir Sings Together",
             "Story": "A resonant chord that steels the crew.",
-            "Effect_before0000000000": "<p>Each target gains [[/heal 2*@P temp]]{temporary Stamina equal to twice your Persona score}, and a Machine-sprite channels a mending pulse: each target can spend a Recovery.</p><p><strong>Biofeedback:</strong> DC 18 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>Each target gains [[/heal 2*@P temp]]{temporary Stamina equal to twice your Persona score}, and a Machine-sprite channels a mending pulse: each target can spend a Recovery.</p><p><strong>Biofeedback:</strong> hard Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "RewireReality": {
             "Name": "Rewire Reality",
             "Story": "Hijack a mind or machine into your congregation.",
-            "Effect_before0000000000": "<p>The target makes a Persona save against DC 18. On a failure, for the rest of the encounter it counts as one of your compiled sprites: it still acts on its own initiative, but you can Command it as a maneuver. On a success, it takes [[/damage 2*@R]]{damage equal to twice your Logic score} instead.</p><p><strong>Biofeedback:</strong> DC 18 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>If the target has <strong>Persona &lt; STRONG</strong>, then for the rest of the encounter it counts as one of your compiled sprites: it still acts on its own initiative, but you can Command it as a maneuver. Otherwise it takes [[/damage 2*@R]]{damage equal to twice your Logic score} instead.</p><p><strong>Biofeedback:</strong> hard Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "WiredSilence": {
             "Name": "Wired Silence",
             "Story": "The net goes dark.",
-            "Effect_before0000000000": "<p>For the next round, no Wired-based attack (Hacker, Wrench, Technomancer, device, or drone) functions in the area. Hostile sprites in the area decompile; friendly sprites lose one action tier for the round.</p><p><strong>Biofeedback:</strong> DC 18 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>For the next round, no Wired-based attack (Hacker, Wrench, Technomancer, device, or drone) functions in the area. Hostile sprites in the area decompile; friendly sprites lose one rank for the round.</p><p><strong>Biofeedback:</strong> hard Physique test (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "BoneDeepCommunion": {
             "Name": "Bone Deep Communion",
             "Story": "Go deep into the current.",
-            "Effect_before0000000000": "<p>For the rest of the encounter, your sprites count as one tier higher (advanced sprites gain +1 Sprite HP tier) and your Resonance drip gains +1 per turn.</p><p><strong>Biofeedback:</strong> DC 18 Physique save on cast <em>and</em> at the start of each later round (Sprite-Weaver −2, Resonance-Warrior +2). On a failure, take [[/damage @P]]{damage equal to your Persona score}; you can’t drop below Winded.</p>"
+            "Effect_before0000000000": "<p>For the rest of the encounter, your sprites count as one rank higher (an advanced sprite is already at the top of the ladder, so it instead gains +6 Stamina, or +8 for an Attack-sprite) and your Resonance drip gains +1 per turn.</p><p><strong>Biofeedback:</strong> hard Physique test on cast <em>and</em> at the start of each later round (Sprite-Weaver rolls with an edge; Resonance-Warrior with a bane). On a failure, take [[/damage @P]]{damage equal to your Persona score}; you can’t drop below Winded.</p>"
           },
           "SunlightInTheWire": {
             "Name": "Sunlight in the Wire",
             "Story": "The net answers with full illumination.",
-            "Effect_before0000000000": "<p>Enemy sprites within distance decompile. Allied sprites in the area act at the highest tier for the rest of the encounter. Each ally in the area can spend a Recovery and gains temporary Stamina equal to a minor sprite’s HP.</p><p><strong>Biofeedback:</strong> DC 20 Physique save; on a failure, take [[/damage 3*@P]]{damage equal to three times your Persona score} (can’t drop you below Winded).</p>"
+            "Effect_before0000000000": "<p>Enemy sprites within distance decompile. Allied sprites in the area act at the highest rank for the rest of the encounter. Each ally in the area can spend a Recovery and gains temporary Stamina equal to a minor sprite’s Stamina (10 + Logic × level).</p><p><strong>Biofeedback:</strong> hard Physique test with a bane; on a failure, take [[/damage 3*@P]]{damage equal to three times your Persona score} (can’t drop you below Winded).</p>"
           },
           "MachineGodsRite": {
             "Name": "Machine God’s Rite",
             "Story": "Restore the crew’s tech-flesh whole.",
-            "Effect_before0000000000": "<p>An in-scene ritual of at least 5 minutes. Restore the target to full Stamina or Integrity. You can’t use this on the same target again for 24 in-game hours.</p><p><strong>Biofeedback:</strong> DC 20 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>An in-scene ritual of at least 5 minutes. Restore the target to full Stamina or Integrity. You can’t use this on the same target again for 24 in-game hours.</p><p><strong>Biofeedback:</strong> hard Physique test with a bane (Sprite-Weaver rolls with an edge; Resonance-Warrior with a double bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "RecompileReality": {
             "Name": "Recompile Reality",
             "Story": "Rewrite the current’s memory.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> The past scene.</p><p>An in-scene ritual of at least 10 minutes, once per session. Undo one significant Wired event from the past scene (a lockdown, a destroyed drone, a hit to a Cyborg’s chrome): force a reroll, or treat it as though it never happened.</p><p><strong>Biofeedback:</strong> DC 20 Physique save; on a failure, take [[/damage 3*@P]]{damage equal to three times your Persona score} and lose one Recovery (can’t drop you below Winded).</p>"
+            "Effect_before0000000000": "<p><strong>Distance:</strong> The past scene.</p><p>An in-scene ritual of at least 10 minutes, once per session. Undo one significant Wired event from the past scene (a lockdown, a destroyed drone, a hit to a Cyborg’s chrome): force a reroll, or treat it as though it never happened.</p><p><strong>Biofeedback:</strong> hard Physique test with a bane; on a failure, take [[/damage 3*@P]]{damage equal to three times your Persona score} and lose one Recovery (can’t drop you below Winded).</p>"
           },
           "TheWeaversWeb": {
             "Name": "The Weaver’s Web",
             "Story": "The entire net answers.",
-            "Effect_before0000000000": "<p>Compile 5 sprites in a single action; all 5 strike different targets within distance. Each target hit makes a DC 18 Physique save; on a failure it takes [[/damage 3*@R]]{damage equal to three times your Logic score} and is Winded.</p><p><strong>Biofeedback:</strong> DC 20 Physique save (Sprite-Weaver −2, Resonance-Warrior +2). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
+            "Effect_before0000000000": "<p>Compile 5 sprites in a single action; all 5 strike different targets within distance. Each target struck that has <strong>Physique &lt; STRONG</strong> takes [[/damage 3*@R]]{damage equal to three times your Logic score} and is weakened (save ends).</p><p><strong>Biofeedback:</strong> hard Physique test with a bane (Sprite-Weaver rolls with an edge; Resonance-Warrior with a double bane). On a failure you take [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina; the ability still resolves. Biofeedback can’t drop you below Winded.</p>"
           },
           "SpriteWeaver": {
             "Name": "Sprite-Weaver",
@@ -4063,11 +4063,11 @@
           },
           "BurningTheCurrent": {
             "Name": "Burning the Current",
-            "Description": "<p>Once per turn, you can voluntarily make a 5-cost biofeedback save (DC 12, +2 for your discipline) on an ability that wouldn’t normally trigger one, to add your Logic score to that ability’s damage.</p>"
+            "Description": "<p>Once per turn, you can voluntarily make a 5-cost biofeedback test (an easy Physique test, with your discipline’s edge or bane) on an ability that wouldn’t normally trigger one, to add your Logic score to that ability’s damage.</p>"
           },
           "NoSuchThingAsTooMuch": {
             "Name": "No Such Thing As Too Much",
-            "Description": "<p>Cascade Failure and Resonance Slam gain +1 on their power rolls, and their damage increases by [[/damage 1d6]]{1d6}.</p>"
+            "Description": "<p>Cascade Failure and Resonance Slam are made with an edge, and their damage increases by [[/damage 1d6]]{1d6}.</p>"
           },
           "ApexCurrent": {
             "Name": "Apex Current",
@@ -5312,7 +5312,7 @@
         },
         "ElderCrucible": {
           "Name": "Elder crucible",
-          "Description": "<p><em>Elder crucible · Magnum Elementum · apex convergence crucible</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥24,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Veil, Signature-capable</p><p><strong>Benefit:</strong> Edge across all five elements at once; readiest signature-focus bond candidate.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus by paying BP/SP for a deeper, persistent benefit — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
+          "Description": "<p><em>Elder crucible · Magnum Elementum · apex convergence crucible</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥24,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Veil, Signature-capable</p><p><strong>Benefit:</strong> Edge across all five elements at once; readiest signature-focus bond candidate.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus through a class feature for a deeper, persistent benefit (never a ¥ or character-power purchase) — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
         },
         "PrayerBead": {
           "Name": "Prayer-bead",
@@ -5344,7 +5344,7 @@
         },
         "SaintsRelic": {
           "Name": "Saint's relic",
-          "Description": "<p><em>Saint's relic · Numen Cor · apex covenant reliquary</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥22,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Veil, Signature-capable</p><p><strong>Benefit:</strong> Broad edge across invocation, warding, and the pact; readiest signature-focus bond candidate.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus by paying BP/SP for a deeper, persistent benefit — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
+          "Description": "<p><em>Saint's relic · Numen Cor · apex covenant reliquary</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥22,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Veil, Signature-capable</p><p><strong>Benefit:</strong> Broad edge across invocation, warding, and the pact; readiest signature-focus bond candidate.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus through a class feature for a deeper, persistent benefit (never a ¥ or character-power purchase) — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
         },
         "CircuitCharm": {
           "Name": "Circuit-charm",
@@ -5376,7 +5376,7 @@
         },
         "ResonanceHeart": {
           "Name": "Resonance heart",
-          "Description": "<p><em>Resonance heart · Cor Machinae · apex sprite-forge core</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥23,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Veil, Wired, Signature-capable</p><p><strong>Benefit:</strong> Broad edge across sprite compiling, sustaining, and communion; readiest signature-focus bond candidate.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus by paying BP/SP for a deeper, persistent benefit — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
+          "Description": "<p><em>Resonance heart · Cor Machinae · apex sprite-forge core</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥23,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Veil, Wired, Signature-capable</p><p><strong>Benefit:</strong> Broad edge across sprite compiling, sustaining, and communion; readiest signature-focus bond candidate.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus through a class feature for a deeper, persistent benefit (never a ¥ or character-power purchase) — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
         },
         "ChalkKit": {
           "Name": "Chalk-kit",
@@ -5400,7 +5400,7 @@
         },
         "MastersAthame": {
           "Name": "Master's athame",
-          "Description": "<p><em>Master's athame · Magnum Instrumentum · apex ritual implement</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥20,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Ritual, Signature-capable</p><p><strong>Benefit:</strong> Broad edge across the shared ritual backbone; signature-focus bond candidate for a generalist ritualist.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus by paying BP/SP for a deeper, persistent benefit — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
+          "Description": "<p><em>Master's athame · Magnum Instrumentum · apex ritual implement</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥20,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Ritual, Signature-capable</p><p><strong>Benefit:</strong> Broad edge across the shared ritual backbone; signature-focus bond candidate for a generalist ritualist.</p><p><strong>Signature focus:</strong> a caster may bond exactly one signature focus through a class feature for a deeper, persistent benefit (never a ¥ or character-power purchase) — the one sanctioned firewall crossing. Every other focus benefit is pure ¥.</p><p><strong>Mod slots:</strong> none yet — the Master Gear List lists 5, but no mods fit this item, so it has 0 slots until a mod family exists.</p>"
         },
         "CommonReagents": {
           "Name": "Common reagents (Echelon 1)",
@@ -6319,7 +6319,7 @@
       "Sprites": {
         "SpriteDataMinor": {
           "Name": "Data Sprite (Minor)",
-          "Description": "<p><em>A scout-and-screen sprite that feeds the congregation information.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 8 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 10, baked for a 1st-level Technomancer with Logic 2 (8 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A scout-and-screen sprite that feeds the congregation information.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 8 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 10, baked for a 1st-level Technomancer with Logic 2 (8 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Data Uplink",
             "Description": "<p>Once per round, grant an edge on one roll type (Search, Scan, breach, or command) made by the Technomancer or an ally directing the sprite.</p>"
@@ -6327,7 +6327,7 @@
         },
         "SpriteDataIntermediate": {
           "Name": "Data Sprite (Intermediate)",
-          "Description": "<p><em>A scout-and-screen sprite that feeds the congregation information.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 14 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 26, baked for a 4th-level Technomancer with Logic 3 (14 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A scout-and-screen sprite that feeds the congregation information.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 14 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 26, baked for a 4th-level Technomancer with Logic 3 (14 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Data Uplink",
             "Description": "<p>Once per round, grant an edge on two roll types (Search, Scan, breach, or command) made by the Technomancer or an ally directing the sprite.</p>"
@@ -6335,7 +6335,7 @@
         },
         "SpriteDataAdvanced": {
           "Name": "Data Sprite (Advanced)",
-          "Description": "<p><em>A scout-and-screen sprite that feeds the congregation information.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 20 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 52, baked for a 8th-level Technomancer with Logic 4 (20 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite rolls its own initiative and acts independently.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A scout-and-screen sprite that feeds the congregation information.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 20 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 52, baked for a 8th-level Technomancer with Logic 4 (20 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Data Uplink",
             "Description": "<p>The Technomancer and allies gain an edge on every Wired roll against a target this sprite can see.</p>"
@@ -6343,7 +6343,7 @@
         },
         "SpriteAttackMinor": {
           "Name": "Attack Sprite (Minor)",
-          "Description": "<p><em>A damage sprite that strikes Wired targets directly, or flesh through a device or jack.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 12 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 14, baked for a 1st-level Technomancer with Logic 2 (12 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A damage sprite that strikes Wired targets directly, or flesh through a device or jack.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 12 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 14, baked for a 1st-level Technomancer with Logic 2 (12 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Strike": {
             "Name": "Code Strike",
             "Effect": "<p><strong>Distance:</strong> a Wired target within the Technomancer’s Wired range, or an adjacent flesh target through a device it carries or a jack. Sprites acting on the Technomancer’s turn never trigger biofeedback.</p>",
@@ -6354,7 +6354,7 @@
         },
         "SpriteAttackIntermediate": {
           "Name": "Attack Sprite (Intermediate)",
-          "Description": "<p><em>A damage sprite that strikes Wired targets directly, or flesh through a device or jack.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 18 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 30, baked for a 4th-level Technomancer with Logic 3 (18 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A damage sprite that strikes Wired targets directly, or flesh through a device or jack.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 18 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 30, baked for a 4th-level Technomancer with Logic 3 (18 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Strike": {
             "Name": "Code Strike",
             "Effect": "<p><strong>Distance:</strong> a Wired target within the Technomancer’s Wired range, or an adjacent flesh target through a device it carries or a jack. Sprites acting on the Technomancer’s turn never trigger biofeedback.</p>",
@@ -6365,7 +6365,7 @@
         },
         "SpriteAttackAdvanced": {
           "Name": "Attack Sprite (Advanced)",
-          "Description": "<p><em>A damage sprite that strikes Wired targets directly, or flesh through a device or jack.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 26 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 58, baked for a 8th-level Technomancer with Logic 4 (26 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite rolls its own initiative and acts independently.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A damage sprite that strikes Wired targets directly, or flesh through a device or jack.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 26 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 58, baked for a 8th-level Technomancer with Logic 4 (26 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Strike": {
             "Name": "Code Strike",
             "Effect": "<p><strong>Distance:</strong> a Wired target within the Technomancer’s Wired range, or an adjacent flesh target through a device it carries or a jack. Sprites acting on the Technomancer’s turn never trigger biofeedback.</p>",
@@ -6376,7 +6376,7 @@
         },
         "SpriteMachineMinor": {
           "Name": "Machine Sprite (Minor)",
-          "Description": "<p><em>A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 10 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 10 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Mend",
             "Description": "<p>The sprite mends one machine, drone, vehicle, piece of chrome, or Cyborg: the target regains Stamina or Integrity equal to one Recovery’s worth.</p>"
@@ -6384,7 +6384,7 @@
         },
         "SpriteMachineIntermediate": {
           "Name": "Machine Sprite (Intermediate)",
-          "Description": "<p><em>A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 16 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 28, baked for a 4th-level Technomancer with Logic 3 (16 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 16 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 28, baked for a 4th-level Technomancer with Logic 3 (16 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Mend",
             "Description": "<p>The sprite mends one machine, drone, vehicle, piece of chrome, or Cyborg for one Recovery’s worth of Stamina or Integrity, and can optionally mend one additional target the same way.</p>"
@@ -6392,7 +6392,7 @@
         },
         "SpriteMachineAdvanced": {
           "Name": "Machine Sprite (Advanced)",
-          "Description": "<p><em>A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 22 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 54, baked for a 8th-level Technomancer with Logic 4 (22 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite rolls its own initiative and acts independently.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A mender sprite that repairs machines, drones, vehicles, and chrome, and channels Resonance Mending onto Cyborgs.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 22 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 54, baked for a 8th-level Technomancer with Logic 4 (22 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Mend",
             "Description": "<p>The sprite mends as a full Resonance Mending: the base effect, applied as if the Technomancer used the signature through the sprite.</p>"
@@ -6400,33 +6400,33 @@
         },
         "SpriteWardMinor": {
           "Name": "Ward Sprite (Minor)",
-          "Description": "<p><em>A shield sprite that resists ICE and electronic warfare on the congregation’s behalf.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 10 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A shield sprite that resists ICE and electronic warfare on the congregation’s behalf.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 10 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 12, baked for a 1st-level Technomancer with Logic 2 (10 + 2 × 1). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 2; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the sprite is an extension of the Technomancer. It acts on the Technomancer’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Ward Screen",
-            "Description": "<p>The sprite gains +1 defense against Wired and electronic warfare attacks.</p>"
+            "Description": "<p>Wired and electronic warfare attacks against the sprite take a bane.</p>"
           }
         },
         "SpriteWardIntermediate": {
           "Name": "Ward Sprite (Intermediate)",
-          "Description": "<p><em>A shield sprite that resists ICE and electronic warfare on the congregation’s behalf.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 16 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 28, baked for a 4th-level Technomancer with Logic 3 (16 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A shield sprite that resists ICE and electronic warfare on the congregation’s behalf.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 16 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 28, baked for a 4th-level Technomancer with Logic 3 (16 + 3 × 4). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 3; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the sprite acts on its own turn, but only within the Technomancer’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Ward Screen",
-            "Description": "<p>The sprite and one adjacent ally gain +1 defense against Wired and electronic warfare attacks.</p>"
+            "Description": "<p>Wired and electronic warfare attacks against the sprite or one adjacent ally take a bane.</p>"
           }
         },
         "SpriteWardAdvanced": {
           "Name": "Ward Sprite (Advanced)",
-          "Description": "<p><em>A shield sprite that resists ICE and electronic warfare on the congregation’s behalf.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 22 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 54, baked for a 8th-level Technomancer with Logic 4 (22 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p><strong>Wired defense:</strong> equal to the Technomancer’s Persona score (not linked automatically). <strong>Reflex / Physique:</strong> 10 (code, not flesh).</p><h4>Hybrid Tier: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite rolls its own initiative and acts independently.</p><p><em>Playtest placeholders (Technomancer Known Bugs #13). Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Description": "<p><em>A shield sprite that resists ICE and electronic warfare on the congregation’s behalf.</em> A conjured code-spirit compiled by a Technomancer (Compile Sprite). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Sprite Stamina</h4><p><strong>Live formula:</strong> 22 + (Technomancer’s Logic × Technomancer’s level). <strong>This template:</strong> 54, baked for a 8th-level Technomancer with Logic 4 (22 + 4 × 8). Until Compile Sprite stamps the owner’s Logic × level automatically, set Stamina by hand when you place the token. Its Reason score is the baseline Logic 4; set it to the Technomancer’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores: attacks against this sprite are ordinary power rolls. A Ward-sprite instead imposes a <strong>bane</strong> (a double bane at advanced rank) on Wired and electronic-warfare attacks against whoever it screens.</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the sprite takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
           "Feature": {
             "Name": "Ward Screen",
-            "Description": "<p>The sprite and every adjacent ally gain +2 defense against Wired and electronic warfare attacks.</p>"
+            "Description": "<p>Wired and electronic warfare attacks against the sprite or any adjacent ally take a double bane.</p>"
           }
         }
       },
       "Elementals": {
         "CompanionEmber": {
           "Name": "Ember Companion",
-          "Description": "<p><em>The Pyromancer’s signature summon: a Rank 1 fire elemental, a lash of living flame bound for a moment.</em></p><h4>Signature Summon</h4><p>Granted by <strong>Ember Companion</strong> (Pyromancer, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). It doesn’t replace Summon Elemental.</p><h4>Hybrid Tier</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
+          "Description": "<p><em>The Pyromancer’s signature summon: a Rank 1 fire elemental, a lash of living flame bound for a moment.</em></p><h4>Signature Summon</h4><p>Granted by <strong>Ember Companion</strong> (Pyromancer, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). It doesn’t replace Summon Elemental.</p><h4>Hybrid band</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
           "Strike": {
             "Name": "Lash of Flame",
             "Effect": "<p>Fire damage, light band (4 / 7 / 10 + Logic).</p>"
@@ -6434,7 +6434,7 @@
         },
         "CompanionZephyr": {
           "Name": "Zephyr Companion",
-          "Description": "<p><em>The Stormcaller’s signature summon: a Rank 1 air or water elemental, a striking wind bound for a moment.</em></p><h4>Signature Summon</h4><p>Granted by <strong>Zephyr Companion</strong> (Stormcaller, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). Choose cold, lightning, or sonic damage when you summon it.</p><h4>Hybrid Tier</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5 (fly, hover). The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
+          "Description": "<p><em>The Stormcaller’s signature summon: a Rank 1 air or water elemental, a striking wind bound for a moment.</em></p><h4>Signature Summon</h4><p>Granted by <strong>Zephyr Companion</strong> (Stormcaller, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). Choose cold, lightning, or sonic damage when you summon it.</p><h4>Hybrid band</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5 (fly, hover). The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
           "Strike": {
             "Name": "Striking Wind",
             "Effect": "<p>Cold, lightning, or sonic damage (chosen on summon), light band (3 / 5 / 8 + Logic). On a middle or high result, the strike slides the target 1 square.</p>"
@@ -6442,7 +6442,7 @@
         },
         "CompanionBoulder": {
           "Name": "Boulder Companion",
-          "Description": "<p><em>The Geomancer’s signature summon: a Rank 1 earth or void elemental, a stone fist bound for a moment.</em></p><h4>Signature Summon</h4><p>Granted by <strong>Boulder Companion</strong> (Geomancer, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). Choose acid or corruption damage when you summon it.</p><h4>Hybrid Tier</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
+          "Description": "<p><em>The Geomancer’s signature summon: a Rank 1 earth or void elemental, a stone fist bound for a moment.</em></p><h4>Signature Summon</h4><p>Granted by <strong>Boulder Companion</strong> (Geomancer, 1st level). Costs 0 Essence; usable once per encounter. It lasts 3 rounds and needs no sustain (no Persistent drain). Choose acid or corruption damage when you summon it.</p><h4>Hybrid band</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
           "Strike": {
             "Name": "Stone Fist",
             "Effect": "<p>Acid or corruption damage (chosen on summon), light band (4 / 7 / 10 + Logic). On a middle or high result, the strike can also shove the target 1 square.</p>"
@@ -6450,7 +6450,7 @@
         },
         "ElementalRank1": {
           "Name": "Bound Elemental (Rank 1)",
-          "Description": "<p><em>A Rank 1 elemental torn loose from the Veil and bound. Its form follows the Elementalist’s attuned element (flame, storm, stone, void).</em></p><h4>Summon Elemental</h4><p>Bound with <strong>Summon Elemental</strong> (5 Essence, main action). <strong>Sustain: Persistent 2 = −4 Essence banked per turn</strong> as an extension (Persistent 4 = −8 per turn as an independent figure). A heavy hit on the Elementalist can break the bind (Persona save against the potency).</p><h4>Hybrid Tier</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own. (1st–5th level.)</p><p>From 5th level (Rank 2) and later in a career, a properly bound elemental is instead an independent figure: use the Rank 2 or Rank 3 Actor. This is the same extension-to-independent ladder as Technomancer sprites.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
+          "Description": "<p><em>A Rank 1 elemental torn loose from the Veil and bound. Its form follows the Elementalist’s attuned element (flame, storm, stone, void).</em></p><h4>Summon Elemental</h4><p>Bound with <strong>Summon Elemental</strong> (5 Essence, main action). <strong>Sustain: Persistent 2 = −4 Essence banked per turn</strong> as an extension (Persistent 4 = −8 per turn as an independent figure). A heavy hit on the Elementalist can break the bind (Persona save against the potency).</p><h4>Hybrid band</h4><p><strong>Extension:</strong> the elemental acts on the Elementalist’s turn, using the Elementalist’s action economy. It has no initiative of its own. (1st–5th level.)</p><p>From 5th level (Rank 2) and later in a career, a properly bound elemental is instead an independent figure: use the Rank 2 or Rank 3 Actor. This is the same extension-to-independent ladder as Technomancer sprites.</p><h4>Stamina (provisional)</h4><p><strong>15</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 2, the Elementalist’s Logic at 1st level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1S, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>",
           "Strike": {
             "Name": "Elemental Lash",
             "Effect": "<p>Damage of the attuned element, light band (4 / 7 / 10 + Logic).</p>"
@@ -6462,15 +6462,15 @@
         },
         "ElementalRank2": {
           "Name": "Bound Elemental (Rank 2)",
-          "Description": "<p><em><strong>Scaffold.</strong> A Rank 2 bound elemental, unlocked as an independent figure at 5th level.</em></p><h4>Summon Elemental</h4><p>Bound with <strong>Summon Elemental</strong> (5 Essence). <strong>Sustain: Persistent 4 = −8 Essence banked per turn</strong> as an independent figure. Its strikes and maneuvers land with the Veil entity table; until then, the Director adapts the Rank 1 light-band strike.</p><h4>Hybrid Tier</h4><p><strong>Independent figure:</strong> the elemental is its own figure on the map with its own Stamina and its own turn on the shared round.</p><h4>Stamina (provisional)</h4><p><strong>30</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 3, the Elementalist’s Logic at 5th level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1M, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>"
+          "Description": "<p><em><strong>Scaffold.</strong> A Rank 2 bound elemental, unlocked as an independent figure at 5th level.</em></p><h4>Summon Elemental</h4><p>Bound with <strong>Summon Elemental</strong> (5 Essence). <strong>Sustain: Persistent 4 = −8 Essence banked per turn</strong> as an independent figure. Its strikes and maneuvers land with the Veil entity table; until then, the Director adapts the Rank 1 light-band strike.</p><h4>Hybrid band</h4><p><strong>Independent figure:</strong> the elemental is its own figure on the map with its own Stamina and its own turn on the shared round.</p><h4>Stamina (provisional)</h4><p><strong>30</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 3, the Elementalist’s Logic at 5th level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1M, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>"
         },
         "ElementalRank3": {
           "Name": "Bound Elemental (Rank 3)",
-          "Description": "<p><em><strong>Scaffold.</strong> A Rank 3 bound elemental for a later-career bind.</em></p><h4>Summon Elemental</h4><p>Bound with <strong>Summon Elemental</strong> (5 Essence). <strong>Sustain: Persistent 4 = −8 Essence banked per turn</strong> as an independent figure. Its strikes and maneuvers land with the Veil entity table.</p><h4>Hybrid Tier</h4><p><strong>Independent figure:</strong> the elemental is its own figure on the map with its own Stamina and its own turn on the shared round.</p><h4>Stamina (provisional)</h4><p><strong>45</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 4, the Elementalist’s Logic at 7th level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1L, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>"
+          "Description": "<p><em><strong>Scaffold.</strong> A Rank 3 bound elemental for a later-career bind.</em></p><h4>Summon Elemental</h4><p>Bound with <strong>Summon Elemental</strong> (5 Essence). <strong>Sustain: Persistent 4 = −8 Essence banked per turn</strong> as an independent figure. Its strikes and maneuvers land with the Veil entity table.</p><h4>Hybrid band</h4><p><strong>Independent figure:</strong> the elemental is its own figure on the map with its own Stamina and its own turn on the shared round.</p><h4>Stamina (provisional)</h4><p><strong>45</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 4, the Elementalist’s Logic at 7th level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 1L, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>"
         },
         "ElementalGreater": {
           "Name": "Greater Elemental",
-          "Description": "<p><em><strong>Scaffold.</strong> A Rank 4 greater elemental: an Ancient Flame, a Roaring Storm, a Living Mountain, or a Devouring Void.</em></p><h4>Greater Elemental Summon</h4><p>Bound with <strong>Greater Elemental Summon</strong> (11 Essence) as an independent figure. <strong>Sustain: Persistent 6 = −12 Essence banked per turn.</strong> At echelon 4 (late career) the bind is a <strong>Rank 5</strong> elemental: use this Actor with Stamina 75 (15 × 5). A willing elemental demands a greater task; coercing one costs 3 corruption and 3 spirit attention. Its signature strike and maneuvers land with the Veil entity table.</p><h4>Hybrid Tier</h4><p><strong>Independent figure:</strong> the elemental is its own figure on the map with its own Stamina and its own turn on the shared round.</p><h4>Stamina (provisional)</h4><p><strong>60</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 4, the Elementalist’s Logic at 8th level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 2M, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>"
+          "Description": "<p><em><strong>Scaffold.</strong> A Rank 4 greater elemental: an Ancient Flame, a Roaring Storm, a Living Mountain, or a Devouring Void.</em></p><h4>Greater Elemental Summon</h4><p>Bound with <strong>Greater Elemental Summon</strong> (11 Essence) as an independent figure. <strong>Sustain: Persistent 6 = −12 Essence banked per turn.</strong> At echelon 4 (late career) the bind is a <strong>Rank 5</strong> elemental: use this Actor with Stamina 75 (15 × 5). A willing elemental demands a greater task; coercing one costs 3 corruption and 3 spirit attention. Its signature strike and maneuvers land with the Veil entity table.</p><h4>Hybrid band</h4><p><strong>Independent figure:</strong> the elemental is its own figure on the map with its own Stamina and its own turn on the shared round.</p><h4>Stamina (provisional)</h4><p><strong>60</strong> — the placeholder Rank table is 15 × Rank until the Veil entity table (§C3) locks final numbers. Its Reason is Logic 4, the Elementalist’s Logic at 8th level; set it to the caster’s Logic for rolls that add Logic.</p><h4>Defenses</h4><p>Draw Steel has no defense scores for creatures; Ghostwire’s Veil entity defenses land with the Veil chapter (§C3). Until then, use the Director’s call for any Reflex / Physique / Persona defense a rule asks for.</p><p><em>Placeholders: size 2M, speed 5. The elemental ends when the working ends, it’s reduced to 0 Stamina, or the encounter ends.</em></p><p><em>The Cyborg bar (Arcane Severance) is on the Elementalist class, not this Actor.</em></p>"
         }
       },
       "Spirits": {

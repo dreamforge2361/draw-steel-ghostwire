@@ -288,7 +288,23 @@ Source-of-truth order used everywhere: **Development Master → shipped Foundry 
 
 **Also contradicting the spike brief:** `18-street-priest` **Faith Is Our Armor** — the spike asked for four echelon values, but the shipped pack makes 5 / 10 / 15 Power Roll result bands (weak/average/strong potency) and no source offers a fourth. RAW prints the result-band reading and carries a marker.
 
-### Foundry-sync backlog (packs NOT edited — needs its own spike)
+### Foundry-sync backlog — **CLEARED 2026-09-17 (B47), pending Michael Foundry-verify**
+
+`lang/en.json` (the prose behind `src/packs/**`) now matches post-Pass-A/B/C RAW; packs rebuilt at module 0.1.60. No pack JSON, `_id`, cost or damage value was changed — the drift was all display text.
+
+| Sync | Now reads |
+|---|---|
+| Commander | Mode string is **Command Persona** (B42e1 lock 1); A Word and The Right Word grant an **edge**, not “+1 / +2 to a roll”; The Signature Beat likewise. |
+| Technomancer | Biofeedback DC ladder → **easy / medium / hard / hard with a bane** tests, discipline modifiers → **edge / bane**; Rewire Reality and The Weaver's Web → **potency** (`Persona < STRONG`, `Physique < STRONG`); Resonance Slam and The Weaver's Web inflict **weakened (save ends)**; “Light Chrome Tolerance” → **Chrome Erosion** with the shared erosion formula. |
+| Sprites | “Sprite HP” → **Stamina**; “Hybrid Tier” → **hybrid band** / **sprite rank**; the Wired-defense and flat-10 block → “Draw Steel has no defense scores”, with Ward-sprites imposing a **bane / double bane**; advanced sprites **take their own turn** instead of rolling initiative; “Playtest placeholders” note dropped now that RAW prints the formulas. |
+| Medic | Slap-Injector / Focus Serum / Wonder Drug / Field Partner → **edge**; crash rider carries the locked **1 round / 2 rounds** window; Full Kit Purge prints the **Doctor Is In baseline at 11** and **+1 Recovery value per extra Reagent**. |
+| Wrench | Rigged Fire → **edge**; Unbreakable Hive d6 → **saving throw** (same odds); “attack roll” → **power roll**; the duplicated Turn the Building feature is now an unlock note; Kit rigging bonuses → **edge**. |
+| Street Priest | Signature-focus bond no longer says **BP/SP** (4 foci); 7 “Provisional magnitude” notes dropped where RAW now prints numbers; Dark-pact failed bind = **4 + Persona**; Judgment = **bane + Conviction only**; Last Rite “tier” → **rank**. |
+| Book-wide | “tier 2 / tier 3 outcome” → **middle / high**; cyberlimb “every tier” → **every power roll result**. |
+
+**Deliberately left alone** (pack agrees with RAW, so RAW would have to change first): the Hacker's Wired Guard **+1/+2/+3 defense bonus** against Track 2 attacks; Elementalist **+1 on Logic-based power rolls** (Furnace Within, Eye of the Storm, Immutable) and Bind Discipline's +1; Kit doctrine bonuses still marked **provisional benchmarks**; **Winded** as the Technomancer biofeedback floor; flat non-roll bonuses (Stamina, damage, distance, Handling); bestiary biographies (out of scope). The feature file `light-chrome-tolerance.json` and its `LightChromeTolerance` lang key keep their names — only the displayed name and text changed, since `_id`s and keys must stay stable.
+
+### Original backlog (packs NOT edited at the time)
 The shipped packs still carry pre-Pass-A/B text in several places: Technomancer `light-chrome-tolerance.json` (old name and old erosion model), Technomancer and sprite strings using DC saves / “tier” / “+N defense”, Street Priest foci Availability labels and a `saints-relic` description that still says “BP/SP”, several `Provisional magnitude` notes whose numbers are now printed, Medic and Commander “+1 / +2 to a roll” strings that RAW now calls edge, Wrench `UnbreakableHive` d6 and “attack roll” strings, and Street Priest action types that differ from the master. Where RAW and a pack disagreed, RAW followed the master and the pack was left alone.
 
 
