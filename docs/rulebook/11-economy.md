@@ -1,7 +1,7 @@
 # Ghostwire Core Rulebook — Chapter: Economy (Nuyen)
 
 **Status:** Stage 3 draft — for Michael review (2026-09-16)  
-**Pairs with:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, `docs/rulebook/10-kits.md`, `docs/rulebook/14-mods.md`  
+**Pairs with:** `docs/rulebook/12-chrome.md`, `docs/rulebook/14-mods.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/rulebook/10-kits.md`  
 **Foundry:** stock Draw Steel `wealth` field is remapped to **Nuyen (¥)** in module lang — do not invent a parallel currency field for v1.
 
 **Design locks (do not reopen in this draft):**
@@ -26,7 +26,7 @@ Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, k
 | Spend | Notes |
 |---|---|
 | **Gear** | Weapons, armor, tools that satisfy Kit categories or standalone use |
-| **Mods** | Smartlink, suppressor, armor liners, gadget firmware, programs, autosofts (stack with Kit doctrine). Slots, §Craft Projects, and Invent a Mod: `14-mods.md` |
+| **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) — full rules: **Mods chapter** `14-mods.md` |
 | **Chrome** | Implants and chrome packages — **also** spends Body Integrity (Chrome chapter) |
 | **Lifestyle** | Thin burn: pay upkeep or take a street complication (placeholder) |
 | **Bribes / favors** | Access, silence, fixers, corp doors |
@@ -49,6 +49,12 @@ Every new hero starts with:
 
 1. **¥5,000** liquid nuyen
 2. **One free starting Kit** (doctrine) **including street-band qualifying gear** for that Kit’s category (so the Kit is live on day one)
+
+### Kits chargen gear (locked)
+
+- Street-band qualifying gear auto-grants **at chargen only** with the free Kit (Economy object side of the doctrine).
+- **Merc** (Operator dual-Kit): street-band qualifying gear for **both** Kits.
+- **Mods** and **chrome** are opt-in — never auto-grant. Buy with ¥ (chrome also spends Body Integrity). See `14-mods.md` and `12-chrome.md`.
 
 **No free starting chrome.** Buy chrome with ¥ + Body Integrity if allowed.
 
@@ -100,13 +106,28 @@ Directors may pay partly in gear, chrome credits, or favors. Payouts should fund
 
 Chrome purchases spend **¥ + Body Integrity**. Grades trade cheap Salvage (Integrity ×1.5) vs Soft-Bioware (Integrity ×0.4 round up). Cyborgs do **not** use Chrome/Body Integrity. Full rules: `12-chrome.md` and the Chrome master.
 
+## §Craft (downtime Projects)
+
+**§Craft is a procedure, not a skill.** Installing, swapping, removing, inventing, or configuring gear/mods is a Draw Steel **Project** during downtime (with the field-toggle exception for already-installed features — see Mods chapter).
+
+Power Rolls on those Projects use ordinary Ghostwire skills by job:
+
+| Skill | Job |
+|---|---|
+| **Hacking** | Programs / deck software / software installs |
+| **Electronics** | Deck hardware, sensors, gadgets, Wired devices |
+| **Repair** | Weapons, armor, vehicles/drones — physical mods |
+| **Cybertech** | Chrome-adjacent only |
+
+Legacy labels **Gunsmithing** and **Cyber/electronics** in older Gear-master rows mean **Repair** and **Electronics**. Full Invent a Mod + slot rules: `docs/rulebook/14-mods.md` (**locked**).
+
 ## Lifestyle burn (thin placeholder)
 
 Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). Full lifestyle table deferred — one short pressure valve for now so ¥ has a sink besides chrome.
 
 ## Foundry note
 
-Module lang remaps Draw Steel's **wealth** label to **Nuyen**. Track ¥ on the hero sheet wealth field for v1. Body Integrity is a separate resource (Foundry spike deferred — see FOUNDRY-BUILD-PLAN B8).
+Module lang remaps Draw Steel's **wealth** label to **Nuyen**. Track ¥ on the hero sheet wealth field for v1. **Body Integrity** already ships in the Ghostwire Chrome pack (Integrity costs on implants); keep using that path — do not invent a parallel currency or Integrity field.
 
 ## Open questions (Michael)
 
@@ -115,3 +136,5 @@ Module lang remaps Draw Steel's **wealth** label to **Nuyen**. Track ¥ on the h
 3. Run payout bands — keep provisional numbers or retune after first table.
 4. Bribes / Wired access sample price points for the gear pass.
 5. How additional Kits are unlocked after chargen (class list / mentor / downtime training length) — still not ¥.
+
+**Closed 2026-09-16/17:** Invent a Mod + §Craft skill-by-host + echelon/Availability gear-grade remap — see `14-mods.md` (locked). Do not reopen as an Economy open question.

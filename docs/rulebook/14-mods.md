@@ -1,69 +1,108 @@
 # Ghostwire Core Rulebook — Chapter: Mods
 
-**Status:** v1 draft (2026-09-16) — for Michael review
-**Pairs with:** `docs/rulebook/11-economy.md`, `docs/rulebook/10-kits.md`, `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md`
-**Foundry:** **Ghostwire Mods** (weapon, vehicle & drone, armor & shield, gadget mods) and **Ghostwire Matrix** (programs, payloads, RCC autosofts). Mods are inventory items; slot tracking isn’t automated yet.
+**Status:** Stage 3 draft locked 2026-09-16/17  
+**Pairs with:** `docs/rulebook/11-economy.md`, `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, skills master (`docs/masters/GHOSTWIRE_SKILLS_MASTER.md`)  
+**Foundry:** Mods pack + Invent a Mod rules (B20 expansion); Gear master remains source of record for published families.
+
+**Design locks (do not reopen in this draft):**
+- Mods cost **¥**; stack with Kit doctrine (different numbers); never rewrite Kit damage/Stamina lines
+- **§Craft** = downtime **Project procedure** (Draw Steel Projects), **not** a skill
+- Field toggle OK for already-installed mods; install/swap/remove = downtime Project
+- Slot integrity rule (below)
+- Firewall: mods buy tags, edges, convenience, small typed immunities — never characteristics, skills, class features, or Kit doctrine
+- **Invent a Mod (v1)** procedure locked (this chapter)
+- Chargen: starting Kit includes street-band qualifying gear only; **mods never auto-grant**
 
 ---
 
-## Mod doctrine
+## Purpose
 
-- **Slots.** Every host item lists its **mod slots** (set by its grade in the Gear master). Each mod lists a **slot cost** (1 unless noted). A host can’t hold more slot cost than it has slots.
-- **¥, never power.** Mods are bought with ¥ like any gear. A mod adds tags, edges/banes, and conveniences — never Stamina, damage bands, characteristics, skills, or class features (the BP firewall).
-- **Mods stack with Kits.** A Kit supplies doctrine numbers (damage by Power Roll result, distance, Stamina, speed, stability); mods touch different things (tags, situational edges, conveniences), so they never overwrite each other.
-- **No same-effect double-dip.** Two sources of the same edge on the same test don’t stack — take one.
-- **Grade.** Mods use the same **echelon + Availability band** as all gear (Street / Professional / Restricted / Military / Prototype).
-- **Consumables** carry no mod slots.
+Mods are the **object-side** upgrade layer. Kits train technique; Economy buys hosts; Mods fill **mod slots** on those hosts with situational tags and edges. A smartlinked Ghost-Kit pistol gets both the Kit’s doctrine *and* the mod’s effects — they never overwrite each other.
 
-### §Craft is a procedure, not a skill
+## Doctrine
 
-**§Craft** is the downtime **Project** procedure for building, installing, swapping, or removing mods. Every §Craft Project is keyed to a real Ghostwire skill:
-
-| Work | Skill |
+| Rule | Detail |
 |---|---|
-| Weapon, armor, shield, and vehicle/drone **physical** mods (mounts, plates, liners, suspension, grips, magazines) | **Repair** |
-| Deck and hardware **gadget** work (electronics, sensors, comms firmware, smart systems, active shields) | **Electronics** |
-| **Programs** and deck software; payloads | **Hacking** |
-| **RCC autosofts** | **Hacking** or **Rigging** |
-| **Chrome-adjacent** work (anything touching implants or the body) | **Cybertech** |
+| **¥ cost** | Every published mod has a nuyen price. Invented mods spend materials ¥ up front (see Invent a Mod). |
+| **Stack with Kits** | Mods and Kit doctrine touch **different numbers**. Never rewrite Kit damage / Stamina / signature lines. |
+| **§Craft = procedure** | Installing, swapping, removing, or inventing a mod is a Draw Steel **Project** (downtime). §Craft is **not** a skill name. |
+| **Field toggle** | An already-installed mod may be toggled on/off in the field (normal action / free as printed). Install, swap, or remove always requires a downtime Project. |
+| **Firewall** | Mods may grant tags, edges, convenience, and small typed immunities. Mods **never** grant characteristics, skills, class features, heroic resources, or Kit doctrine. |
 
-- **Install, swap, or remove** a mod: always a downtime Project (§Craft) keyed to the skill above.
-- **Toggle** an already-installed mod on or off (a smartlink, a suppressor, a loaded program): a field action.
-- **Programs:** install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime.
+### Skills by job (Power Roll on §Craft Projects)
 
-## Host families
+| Skill | Used for |
+|---|---|
+| **Hacking** | Programs / deck software / software installs (deck & RCC slots) |
+| **Electronics** | Deck hardware, sensors, gadgets, Wired devices |
+| **Repair** | Weapons, armor, vehicles/drones — physical mods |
+| **Cybertech** | Chrome-adjacent only (implanted weapon/mount interfaces that are chrome-side; living chrome still spends Body Integrity per Chrome chapter) |
 
-Every item with mod slots belongs to at least one family that has purchasable mods:
+### Slot integrity
 
-| Host family | Hosts | Mods (Foundry) |
+If an item publishes **modSlots > 0**, a **published mod family** must exist for that host family. If no family exists yet, set slots to **0** until the family ships. Do not leave orphan slot counts.
+
+**Consumables** never have mod slots.
+
+### Host families
+
+| Host family | Notes |
+|---|---|
+| **Weapons** | Published core set in Gear master **§3G**; Foundry Mods pack |
+| **Armor / shields** | Families expanding (B20) |
+| **Gadgets** | Comms, sensors, B&E, survival — families expanding (B20) |
+| **Vehicles / drones** | Published set in Gear master **§5F** |
+| **Decks / RCCs** | Slots filled by **programs / autosofts** from the Matrix catalog (Gear master Category 4); install skill = **Hacking** |
+
+## Echelon + Availability (gear grade)
+
+**No Item Tier / T5–T1 in player-facing text.** The Gear master’s Item Tier column is a **legacy label** for gear grade only. Map:
+
+| Legacy Item Tier | Draw Steel Echelon | Availability feel |
 |---|---|---|
-| **Weapons** | Firearms, longarms, heavy weapons, melee, bows & exotic (not thrown consumables) | Ghostwire Mods › Weapon Mods |
-| **Vehicles & drones** | Every vehicle and drone | Ghostwire Mods › Vehicle & Drone Mods |
-| **Armor & shields** | Light, medium, heavy, sealed & hardened armor; shields | Ghostwire Mods › Armor & Shield Mods |
-| **Gadgets** | Comms; sensors & optics; mechanical and electronic break-in tools; survival kits; Wired interfaces and matrix-support gear | Ghostwire Mods › Gadget Mods |
-| **Cyberdecks** | Decks | Ghostwire Matrix › Programs & Utilities, Intrusion & Attack Payloads |
-| **RCCs** | Rigger command consoles | Ghostwire Matrix › RCC Autosofts |
+| T5 | Echelon 1 | Street |
+| T4 | Echelon 1 | Professional |
+| T3 | Echelon 2 | Restricted |
+| T2 | Echelon 3 | Military |
+| T1 | Echelon 4 | Prototype |
 
-Items with no mod family yet — foci, the Field Surgery Kit, Designer Threads, and the Faraday Bag — have **0 mod slots** until one exists.
+Higher-grade gear costs more and has more mod slots. Hero-side benefits (Kit Stamina per echelon; Armor-as-Stamina by wearer **Echelon**) scale with the hero’s Draw Steel Echelon — not with a Ghostwire item-tier ladder.
 
-## Invent a Mod (v1)
+**Do not confuse** Power Roll **outcome bands** (low / middle / high) with Item Tier / gear grade.
 
-A hero can design a mod that isn’t in the catalog. Follow these steps in order:
+## Published mod families
 
-1. **Pitch.** Describe the mod: its host family, its one effect, and its slot cost (normally 1).
-2. **Firewall.** The Director checks the effect against the firewall: tags, situational edges or banes, and once-per-scene conveniences only — no Stamina, damage bands, characteristics, skills, or class features, and no stacking an edge the hero already has.
-3. **Echelon gate.** The Director sets the mod’s echelon and Availability band by comparing it to catalog mods. A hero can’t invent a mod above their own echelon.
-4. **Materials ¥.** Pay about **half** the price of the most comparable catalog mod.
-5. **Project roll.** Make the downtime Project (§Craft) keyed to the host’s skill (see the table above).
-6. **Result.**
-   - **Low result:** the design fails — no mod.
-   - **Middle result:** a **personal** mod — it works, but only the inventor can build and maintain it.
-   - **High result:** a **crew-catalog** mod — the design joins the crew’s catalog; any crew member can buy materials and build it again.
-7. **Install.** Installing the finished mod into a host is a **separate** downtime Project (§Craft).
+Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md` + Foundry **Mods** pack.
 
-## Open
+- **Weapon mods** — Gear master **§3G** (Smartlink, Suppressor, Recoil Comp, Extended Mag, Smart-Scope, Gas-Seal, Underbarrel Mount, Personalized Grip, …).
+- **Vehicle / drone mods** — Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
+- **Armor + gadget families** — expanding under Foundry spike **B20**.
+- **Programs** — occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
 
-- Slot tracking and mod attachment in Foundry (mods are inventory items for now).
-- Whether materials are spent on a low result (Director’s call until locked).
-- Weapon mods (Gear master 3G) list no grade; they show no echelon until the gear pass sets one.
-- Mod families for foci, medical kits, and lifestyle goods.
+## Invent a Mod (v1) — LOCKED
+
+Between runs, a hero may invent a new mod as a **Project**:
+
+1. **Pitch** — name, host family, slot cost (usually **1**), one-sentence effect, Availability feel (Street → Prototype).
+2. **Firewall check (Director)** — reject anything that grants characteristics, skills, class features, heroic resources, or Kit doctrine lines.
+3. **Echelon gate** — effect power ≤ inventor’s **Echelon** (Street/Professional at E1, Restricted at E2, Military at E3, Prototype at E4).
+4. **Materials ¥** — ≈ half a comparable published mod (**floor ¥100**); spend up front.
+5. **Project Power Roll** with the skill by host (table above):
+   - **Low:** materials burned; no mod (or a flawed one-use prototype at Director whim).
+   - **Middle:** personal unique mod (works for the inventor).
+   - **High:** personal + the crew may treat it as a campaign catalog entry.
+6. **Install** is a **separate** §Craft Project onto a host with free slots.
+
+Invent a Mod does **not** bypass Availability heat, Director veto, or the firewall.
+
+## Chargen note
+
+Starting Kit grant includes **street-band qualifying gear** only (see Kits + Economy). **Mods never auto-grant** at chargen — buy, craft, or invent them later. Merc (dual Kit) receives street-band qualifying gear for **both** Kits; still no free mods.
+
+## Related chapters
+
+- Economy — `docs/rulebook/11-economy.md` (§Craft Projects; ¥ loop)
+- Kits — `docs/rulebook/10-kits.md` (doctrine vs object; chargen gear)
+- Chrome — `docs/rulebook/12-chrome.md` (Cybertech-adjacent; Body Integrity)
+- Gear master — `docs/masters/GHOSTWIRE_GEAR_MASTER.md`
+- Skills master — `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`

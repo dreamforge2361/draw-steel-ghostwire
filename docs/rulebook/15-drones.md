@@ -239,19 +239,6 @@ Drones use a short **Integrity** track (Machines numeric pass will publish numbe
 
 ---
 
-## Next: Vehicles (stub — do not draft yet)
+## Next: Vehicles
 
-**File (when approved):** `docs/rulebook/16-vehicles.md`
-
-Should cover, once drones are signed off:
-- Reach vehicle ecology (ground gridlock, stacked air lanes, wet docks, grey transit)
-- Crewed Scale bands (Light / Vehicle / Heavy / Capital) vs drone Scale
-- Stat card fields already sketched in `05-wrench.md` (Handling, Integrity, Armor, Crew stations, Jump-In Capable)
-- Customize & §Craft modding (pointer to §5F + Invent a Mod)
-- Chase modes (positional vs abstract range-state) and crash / wreck rules
-- Anyone-can-drive vs Vehicle Rig-Pilot / Jump-In excellence
-- Inventory tables for Ground / Air / Water / Space (Cat 5A–5D spine → expanded)
-- **Same echelon-coverage rule as drones:** each of Echelons 1–4 offers ≥5 chassis across ≥3 roles; E1 includes **clunker beater cars** (and scrap bikes / taped skiffs) through Prototype craft at E4
-- Cross-links to Facility Rigger buildings (not full Building chapter)
-
-**Hold:** no full vehicles chapter until Michael approves this drones draft.
+**File:** `docs/rulebook/16-vehicles.md` — **Stage 3 draft** (2026-09-16). Crewed platforms, echelon coverage (≥5 / ≥3 roles; E1 Clunkers), anyone-vs-Wrench vehicle rules, lean abstract chase. Buildings / Facility Rigger expansion still deferred.

@@ -1,8 +1,40 @@
 # GHOSTWIRE — Master Gear List
 
+
+---
+
+## DS ALIGNMENT OVERRIDE (2026-09-16) — BINDING
+
+**This block overrides conflicting legacy wording in the tables and prose below for Foundry, PDF, and player-facing rulebook text.** Do not invent a Ghostwire item-tier ladder.
+
+1. **Item Tier column = LEGACY gear-grade label only.** Read every **T5–T1** / Item Tier cell as **Echelon + Availability**:
+   - **T5** → Echelon **1**, Availability **Street**
+   - **T4** → Echelon **1**, Availability **Professional**
+   - **T3** → Echelon **2**, Availability **Restricted**
+   - **T2** → Echelon **3**, Availability **Military**
+   - **T1** → Echelon **4**, Availability **Prototype**
+   Higher-grade gear costs more and has more mod slots. Do **not** print “Item Tier / T5–T1” in player-facing chapters.
+
+2. **§Craft is a procedure, not a skill.** Install / swap / remove / invent / configure = Draw Steel **Project** (downtime), with field-toggle for already-installed features. Power Rolls use:
+   - **Hacking** — programs / deck software / software installs
+   - **Electronics** — deck hardware, sensors, gadgets, Wired devices
+   - **Repair** — weapons, armor, vehicles/drones physical mods (**replaces** legacy “Gunsmithing”)
+   - **Cybertech** — chrome-adjacent only (**replaces** loose “Cyber/electronics” for chrome-side work; hardware/gadget rows use **Electronics**)
+
+3. **Program installs (Category 4B+):** §Craft Project skill = **Hacking**.
+
+4. **Armor-as-Stamina** scales with the wearer’s hero **Echelon** (map old T5/T4 columns to E1 street vs professional as appropriate; T3→E2, T2→E3, T1→E4). Kit Stamina per echelon follows Draw Steel. Do not scale armor Stamina by a Ghostwire item-tier ladder.
+
+5. **Outcome Tier / Power Roll bands ≠ Item Tier.** Attack results use DS low / middle / high. Legacy “Outcome Tier” / “Hero Tier” prose in this file means Power Roll bands or hero **Echelon** respectively.
+
+6. **Slot integrity:** if an item has **modSlots > 0**, a published mod family must exist for that host family; otherwise set slots to **0**. Consumables never have mod slots. Full mod doctrine + Invent a Mod: `docs/rulebook/14-mods.md`.
+
+Table rows are **not** rewritten in this pass (catalog too large). Treat this OVERRIDE as the binding remap for all Foundry imports and PDF/Journal rendering.
+
+
 *The complete equipment catalog: General & Lifestyle, Armor, Weapons, Matrix Gear, Vehicles & Drones, and Magical Foci & Ritual Components. Compiled from `master_rules_baseline.md`, THE GEAR CATALOG (Categories 1–6, completed 2026-07-15) and Appendix §F (Economy/Gear Numbers).*
 
-*All modification, configuration, installation, or crafting of any item below follows the canonical **§Craft rule** (Economy chapter, Track 4): skilled downtime project work only, with a field-toggle exception for already-owned/installed features (flipping a smartlink active, folding a stock, drawing a bonded focus). Every price, Availability, and mod-slot count is drawn from Appendix §F — nothing is invented off-frame.*
+*All modification, configuration, installation, or crafting of any item below follows the canonical **§Craft procedure** (Economy + Mods chapters): Draw Steel **Project** downtime work only — **§Craft is not a skill** — with a field-toggle exception for already-owned/installed features (flipping a smartlink active, folding a stock, drawing a bonded focus). Project skills by host: **Repair** (weapons/armor/vehicles), **Electronics** (deck hardware/sensors/gadgets/Wired), **Hacking** (programs/software), **Cybertech** (chrome-adjacent). Every price, Availability, and mod-slot count is drawn from Appendix §F — nothing is invented off-frame. Legacy Item Tier labels: see **DS ALIGNMENT OVERRIDE** above.*
 
 ---
 
@@ -38,7 +70,7 @@ Weapons carry an explicit **flat damage value** anchored to the Outcome-Tier dam
 
 ### The Armor-as-Stamina Rule (governs Armor, Category 2)
 
-There is no armor class or to-hit-vs-defense roll. Worn armor **raises maximum Stamina** instead of reducing damage — the bonus scales with **Hero Tier** so it never becomes trivial at high tiers.
+There is no armor class or to-hit-vs-defense roll. Worn armor **raises maximum Stamina** instead of reducing damage — the bonus scales with the wearer’s hero **Echelon** (legacy T5–T1 columns in the table below map per DS ALIGNMENT OVERRIDE) so it never becomes trivial at high echelons.
 
 | Armor Class | T5 | T4 | T3 | T2 | T1 | Encumbrance |
 |---|---|---|---|---|---|---|
@@ -290,18 +322,18 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/toxin
 
 ### 3G — Weapon Mods (core set)
 
-*Bench work under §Craft (skilled downtime project). Slot cost = how many of the weapon's slots the mod consumes. Field exception: an already-installed mod can be toggled on/off as a normal action; installing/swapping/removing is always downtime.*
+*Bench work under the §Craft **procedure** (downtime Project; skill = **Repair** for physical weapon mods, **Electronics** for Wired/smart interfaces). Slot cost = how many of the weapon's slots the mod consumes. Field exception: an already-installed mod can be toggled on/off as a normal action; installing/swapping/removing is always a downtime Project.*
 
 | Mod *(slang / corp / sci)* | Slot Cost | Cost ¥ | Effect | §Craft Skill | Tags |
 |---|---|---|---|---|---|
-| Smartlink / Ares SmartSystem / targeting interface | 1 | 500 | Edge on ranged strikes while wielder has a datajack/smartgun link or smart-scope. Togglable. | Cyber/electronics | Wired Smart |
-| Suppressor / SternMeyer Hush / sound suppressor | 1 | 300 | Adds Quiet tag; slight range penalty at Extreme. Field-mountable if pre-threaded. | Gunsmithing | Quiet |
-| Recoil Comp / Ares Steady / gas-vented compensator | 1 | 250 | Removes the auto-fire/burst bane on the second target or sustained fire. | Gunsmithing | — |
-| Extended Mag / Ares Deepwell / high-capacity magazine | 1 | 150 | Doubles shots between reloads; halves reload frequency in play. | Gunsmithing | — |
-| Smart-Scope / Zeiss Hawkeye / optical smart-sight | 1 | 600 | Improves optimal range band by one step; enables Smart on non-datajack users. | Cyber/electronics | Smart |
-| Gas-Seal Kit / Shiawase Deepdive / hostile-environment seal | 1 | 400 | Weapon fires reliably underwater/vacuum/toxic atmosphere; no environmental jam. | Gunsmithing | Sealed |
-| Underbarrel Mount / Ares Adapt / accessory rail | 1 | 200 | Adds a mount for a second small weapon/tool or a bayonet. | Gunsmithing | — |
-| Personalized Grip / Fichetti Lockhand / biometric grip | 1 | 350 | Weapon fires only for its keyed owner (anti-theft/anti-disarm-use). | Cyber/electronics | Wired |
+| Smartlink / Ares SmartSystem / targeting interface | 1 | 500 | Edge on ranged strikes while wielder has a datajack/smartgun link or smart-scope. Togglable. | Electronics | Wired Smart |
+| Suppressor / SternMeyer Hush / sound suppressor | 1 | 300 | Adds Quiet tag; slight range penalty at Extreme. Field-mountable if pre-threaded. | Repair | Quiet |
+| Recoil Comp / Ares Steady / gas-vented compensator | 1 | 250 | Removes the auto-fire/burst bane on the second target or sustained fire. | Repair | — |
+| Extended Mag / Ares Deepwell / high-capacity magazine | 1 | 150 | Doubles shots between reloads; halves reload frequency in play. | Repair | — |
+| Smart-Scope / Zeiss Hawkeye / optical smart-sight | 1 | 600 | Improves optimal range band by one step; enables Smart on non-datajack users. | Electronics | Smart |
+| Gas-Seal Kit / Shiawase Deepdive / hostile-environment seal | 1 | 400 | Weapon fires reliably underwater/vacuum/toxic atmosphere; no environmental jam. | Repair | Sealed |
+| Underbarrel Mount / Ares Adapt / accessory rail | 1 | 200 | Adds a mount for a second small weapon/tool or a bayonet. | Repair | — |
+| Personalized Grip / Fichetti Lockhand / biometric grip | 1 | 350 | Weapon fires only for its keyed owner (anti-theft/anti-disarm-use). | Electronics | Wired |
 
 ---
 
@@ -321,7 +353,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/toxin
 
 ### 4B — Programs & Utilities (persistent)
 
-*A program-mod installed into a deck slot via §Craft; stays loaded until swapped out. Not Consumable.*
+*A program-mod installed into a deck slot via the §Craft **procedure** (downtime Project; skill = **Hacking**); stays loaded until swapped out. Not Consumable.*
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect (occupies 1 deck slot) | Tags |
 |---|---|---|---|---|---|
@@ -454,7 +486,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/toxin
 
 ### 5F — Vehicle & Drone Mods
 
-*Every entry is a §Craft-gated mod occupying the machine's §F6 mod slots. Mounted weapons themselves come from Category 3.*
+*Every entry is a §Craft-gated mod (downtime Project; skill = **Repair** / **Electronics** as appropriate) occupying the machine's §F6 mod slots. Mounted weapons themselves come from Category 3.*
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
 |---|---|---|---|---|---|
