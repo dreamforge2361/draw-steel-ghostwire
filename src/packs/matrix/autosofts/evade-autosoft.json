@@ -31,7 +31,41 @@
       "goal": null
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "Mlee0B044C8YkNH4",
+      "_key": "!items.effects!7VS9Rzvn1vEmCYk0.Mlee0B044C8YkNH4",
+      "name": "GHOSTWIRE.Matrix.Items.EvadeAutosoft.Name",
+      "img": "icons/commodities/tech/electronics-chip-data.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.7VS9Rzvn1vEmCYk0",
+      "description": "GHOSTWIRE.Matrix.Items.EvadeAutosoft.SoftwareEffect",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "software": true
+        }
+      }
+    }
+  ],
   "folder": "3ushV9l5YOZEAI1E",
   "sort": 0,
   "ownership": {
@@ -56,6 +90,18 @@
           "hacking",
           "rigging"
         ]
+      },
+      "mod": {
+        "slotCost": 1,
+        "hosts": [
+          "rcc"
+        ],
+        "host": "rcc",
+        "craftSkill": [
+          "hacking",
+          "rigging"
+        ],
+        "edgeAbilities": []
       }
     }
   }

@@ -4778,7 +4778,9 @@
       "Install": {
         "Menu": {
           "Install": "Install onto…",
-          "Uninstall": "Uninstall mod"
+          "Uninstall": "Uninstall mod",
+          "Activate": "Activate",
+          "Deactivate": "Deactivate"
         },
         "Title": "Install {mod}",
         "Prompt": "Install <strong>{mod}</strong> (slot cost {cost}; fits {families}) onto a host this hero owns. Installing is a downtime §Craft Project at the table; this records the result.",
@@ -4804,8 +4806,13 @@
           "WrongFamily": "{mod} fits {families}; {host} takes {hostFamilies}.",
           "NoSlots": "{mod} needs {cost} free slot(s); {host} has {free}.",
           "NoHosts": "This hero owns no gear, vehicle, or matrix Item with mod slots.",
-          "NoFamilyHost": "{mod} fits {families}; no host this hero owns takes that family."
-        }
+          "NoFamilyHost": "{mod} fits {families}; no host this hero owns takes that family.",
+          "NotInstalled": "{mod} isn’t installed, so there is nothing to switch on or off."
+        },
+        "On": "on",
+        "Off": "off",
+        "Activated": "{mod} switched on ({host}).",
+        "Deactivated": "{mod} switched off; it keeps its slot on {host}."
       }
     },
     "Matrix": {
@@ -4841,31 +4848,38 @@
         },
         "Sneak": {
           "Name": "Sneak",
-          "Description": "<p><em>Sneak · Stealth Suite · signature-masking daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥800 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Standing edge on staying undetected while intruding; softens the Alert tick on a middle-result Wired roll.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Sneak · Stealth Suite · signature-masking daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥800 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Standing edge on staying undetected while intruding; softens the Alert tick on a middle-result Wired roll.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Standing edge on staying undetected while intruding; softens the Alert tick on a middle-result Wired roll.</p><p><em>Staying undetected and the softened Alert tick are adjudicated by the Director (no roll hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Reader": {
           "Name": "Reader",
-          "Description": "<p><em>Reader · Analyze Utility · node-diagnostic daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on Scan/Sniff; reads a node's Rating, ICE, and paydata at a glance.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Reader · Analyze Utility · node-diagnostic daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on Scan/Sniff; reads a node's Rating, ICE, and paydata at a glance.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on Scan/Sniff; reads a node's Rating, ICE, and paydata at a glance.</p><p><em>Edge on Scan, Search, and Deep Scan while installed and on. Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Skeleton": {
           "Name": "Skeleton",
-          "Description": "<p><em>Skeleton · Exploit Kit · adaptive-breach daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on Breach/Intrude against any node one Rating-band below your best clean breach.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Skeleton · Exploit Kit · adaptive-breach daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on Breach/Intrude against any node one Rating-band below your best clean breach.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on Breach/Intrude against any node one Rating-band below your best clean breach.</p><p><em>Edge on breach rolls (Seize Control, Seize) while installed and on. v1 simplification: always, not only against nodes a Rating band below your best clean breach. Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Mirror": {
           "Name": "Mirror",
-          "Description": "<p><em>Mirror · Spoof Utility · identity-forgery daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,500 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on Spoof/impersonate a device or user credential on the network.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Mirror · Spoof Utility · identity-forgery daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,500 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on Spoof/impersonate a device or user credential on the network.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on Spoof/impersonate a device or user credential on the network.</p><p><em>The edge on spoofing is adjudicated by the Director (no spoof ability to hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Scrubber": {
           "Name": "Scrubber",
-          "Description": "<p><em>Scrubber · Log-Cleaner · trace-erasure daemon</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥7,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Amplifies Ghost-the-Log/Alert-scrub actions.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Scrubber · Log-Cleaner · trace-erasure daemon</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥7,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Amplifies Ghost-the-Log/Alert-scrub actions.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Amplifies Ghost-the-Log/Alert-scrub actions.</p><p><em>Amplified log and Alert scrubbing is adjudicated by the Director (no roll hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Guardian": {
           "Name": "Guardian",
-          "Description": "<p><em>Guardian · Watchdog Suite · counter-intrusion daemon</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥8,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on resisting hostile ICE and enemy-decker attacks; warns the crew when Alert spikes.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Guardian · Watchdog Suite · counter-intrusion daemon</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥8,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Edge on resisting hostile ICE and enemy-decker attacks; warns the crew when Alert spikes.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on resisting hostile ICE and enemy-decker attacks; warns the crew when Alert spikes.</p><p><em>The edge against hostile ICE and enemy deckers and the Alert warning are adjudicated by the Director (no roll hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Overlord": {
           "Name": "Overlord",
-          "Description": "<p><em>Overlord · Command Suite · multi-node orchestration daemon</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥22,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Hold one extra compromised node beyond your normal cap; issue a held-node command as a maneuver.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>"
+          "Description": "<p><em>Overlord · Command Suite · multi-node orchestration daemon</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥22,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Wired</p><p><strong>Effect:</strong> Hold one extra compromised node beyond your normal cap; issue a held-node command as a maneuver.</p><p><strong>Program:</strong> install or swap as a downtime Project (§Craft) keyed to Hacking. Toggle already-loaded programs in the field; loading into a free deck slot is downtime. Uses one deck mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Hold one extra compromised node beyond your normal cap; issue a held-node command as a maneuver.</p><p><em>The extra held node and maneuver command are tracked by the table (no roll hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "Zap": {
           "Name": "Zap",
@@ -4953,19 +4967,23 @@
         },
         "TargetingAutosoft": {
           "Name": "Targeting Autosoft",
-          "Description": "<p><em>Targeting Autosoft · Fire-Control Routine · drone gunnery daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥800 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Edge on Gunnery through a linked drone.</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>"
+          "Description": "<p><em>Targeting Autosoft · Fire-Control Routine · drone gunnery daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥800 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Edge on Gunnery through a linked drone.</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on Gunnery through a linked drone.</p><p><em>Edge on drone gunnery (Rigged Fire, Focus Fire, Sentry Fire, Crossfire Grid, Saturation Fire, Bench-Rigged Shot, Tablet Crossfire) while installed and on. Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "EvadeAutosoft": {
           "Name": "Evade Autosoft",
-          "Description": "<p><em>Evade Autosoft · Evasion Routine · drone maneuver daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥800 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Edge on Piloting or Rigging tests to evade.</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>"
+          "Description": "<p><em>Evade Autosoft · Evasion Routine · drone maneuver daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥800 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Edge on Piloting or Rigging tests to evade.</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on Piloting or Rigging tests to evade.</p><p><em>The edge on evasion Piloting or Rigging tests is adjudicated by the Director (no roll hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "ClearsightAutosoft": {
           "Name": "Clearsight Autosoft",
-          "Description": "<p><em>Clearsight Autosoft · Sensor Routine · drone perception daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Edge on a linked drone’s Perception tests and sensor locks.</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>"
+          "Description": "<p><em>Clearsight Autosoft · Sensor Routine · drone perception daemon</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Edge on a linked drone’s Perception tests and sensor locks.</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Edge on a linked drone’s Perception tests and sensor locks.</p><p><em>The edge on a linked drone’s Perception tests and sensor locks is adjudicated by the Director (no roll hook in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         },
         "RepairTickAutosoft": {
           "Name": "Repair Tick Autosoft",
-          "Description": "<p><em>Repair Tick Autosoft · Self-Maintenance Routine · drone repair daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥1,200 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Between scenes, one linked drone slowly regains a little Integrity (Integrity numbers come in the damage/status pass).</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>"
+          "Description": "<p><em>Repair Tick Autosoft · Self-Maintenance Routine · drone repair daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥1,200 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Between scenes, one linked drone slowly regains a little Integrity (Integrity numbers come in the damage/status pass).</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>",
+          "SoftwareEffect": "<p><strong>Effect:</strong> Between scenes, one linked drone slowly regains a little Integrity (Integrity numbers come in the damage/status pass).</p><p><em>Between-scene Integrity recovery is applied by the table (no automation in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
         }
       }
     },

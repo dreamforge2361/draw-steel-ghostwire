@@ -95,6 +95,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B31 | Technomancer class pack | **Done** (Foundry-verified 2026-09-17) | `20-technomancer.md` Stage 2 extract of master Part 1; three disciplines; sprites text-only; Cyborgs barred (Arcane Severance gate) |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
+| B20d | Deck / RCC software slots + effects | **Done** (Foundry-verified 2026-09-17) | Programs → decks, autosofts → RCCs via the B20c installer; Activate / Deactivate; software AEs; Reader / Skeleton / Targeting roll edges |
 | B20c | Mod install tracker (mods ↔ hosts, used / max slots) | **Done** (Foundry-verified 2026-09-17) | `scripts/mods.mjs`; spec `docs/spikes/B20c-MOD-INSTALL-TRACKER.md` |
 
 **Rule:** do not invent Foundry schemas that fight `draw-steel`. Read stock DS packs first; reskin/override/add module packs.
@@ -174,6 +175,15 @@ Spec: `docs/spikes/B20c-MOD-INSTALL-TRACKER.md`. New `scripts/mods.mjs` (registe
   - [x] Over-capacity and wrong-family installs are blocked
   - [x] Uninstall clears both flags and restores `0 / max`
   - [x] Matrix Items with `modSlots` work as hosts
+
+### B20d Deck / RCC software slots + effects (2026-09-17)
+Spec: `docs/spikes/B20d-DECK-RCC-PROGRAM-SLOTS.md`. **Data (option A):** the 7 Matrix catalog programs (`src/packs/matrix/programs/`) and 4 RCC autosofts (`autosofts/`) now also carry `flags.draw-steel-ghostwire.mod = { slotCost: 1, hosts: ["deck"] | ["rcc"], host, craftSkill, edgeAbilities }`, so the B20c installer works unchanged (programs → decks, autosofts → RCCs; wrong family blocked). `flags.matrix` keeps ¥ / echelon / role / tags (plus `slotCost` and `host` for the sheet line); the sheet reads `matrix` before `mod`. Payloads stay inventory consumables (not installable in v1). **Field toggle:** `mod.active` (set true on install; missing = on) with **Activate / Deactivate** on the hero sheet row menu for any installed mod; an inactive mod keeps its slot. Host sheet lists `Installed: Sneak (on), Reader (off)`; mod sheet `Installed on: Street Deck (on)`. **Effects:** each program/autosoft has one transferred Active Effect (`flags.software`) carrying its catalog Effect line; `scripts/mods.mjs` wraps `ActiveEffect#isSuppressed` so it applies only while the software is installed and on. **Roll edges** (`scripts/module.mjs` ability-use hook, `softwareEdges`): **Reader** → Scan, Search, Deep Scan; **Skeleton** → Seize Control, Seize (v1: always, not only one Rating band below); **Targeting Autosoft** → Rigged Fire, Focus Fire, Sentry Fire, Crossfire Grid, Saturation Fire, Bench-Rigged Shot, Tablet Crossfire. **Deferred (effect text only, Director-adjudicated):** Sneak, Guardian, Mirror, Overlord, Scrubber, Clearsight, Evade, Repair Tick — no clean roll to hook yet.
+- [x] **B20d** deck / RCC software (module v0.1.49) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Street Deck + Sneak + Reader install → `2 / 2`; a third program is blocked
+  - [x] A program onto an RCC and an autosoft onto a deck are blocked (wrong family)
+  - [x] Reader running → Scan rolls with an edge; Deactivate → no edge, slot still used; Activate restores it
+  - [x] Targeting Autosoft on an RCC → Rigged Fire rolls with an edge
+  - [x] Uninstall frees the slot and clears both flags
 
 ### B21 Scout (2026-09-16)
 - [ ] **B21** Scout class pack from `02-scout.md`: class, Hunter / Ghost / Face-in-crowd, signatures, 3/5/7/9/11 bands, level 1–10 features; Chrome/Optics keywords; Advantage costs enforced in combat (module v0.1.25) — **pending Michael Foundry test**

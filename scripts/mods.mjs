@@ -5,6 +5,8 @@
 // Used slots are computed on the fly from the Actor's mods whose mod.installedOn is the host. Capacity and families come from the
 // host's catalog flag (matrix, vehicle, or gear — whichever publishes modSlots > 0); the mod's hosts must overlap modFamily.
 // Install / uninstall write each Item once, in one embedded update, so the hero sheet re-renders once.
+// B20d: installed mods have a field toggle (mod.active, default on). Deck programs and RCC autosofts are mods too; their transferred
+// software Active Effect is suppressed unless installed and on, and mod.edgeAbilities lists ability _dsids that roll with an edge.
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.Mods.Install";
@@ -51,6 +53,18 @@ export function installedHost(mod) {
 export const usedSlots = host => installedMods(host).reduce((total, mod) => total + slotCost(mod), 0);
 export const freeSlots = host => (getHostCatalog(host)?.modSlots ?? 0) - usedSlots(host);
 
+/** An installed mod is on unless switched off in the field (mod.active === false). */
+export const isActive = mod => getModData(mod)?.active !== false;
+
+/** Installed on a host and switched on. */
+export const isRunning = mod => !!installedHost(mod) && isActive(mod);
+
+/** Edges software grants a roll: running mods on the Actor whose edgeAbilities list the ability's _dsid. */
+export function softwareEdges(actor, abilityDsid) {
+  if (!abilityDsid || !actor?.items) return 0;
+  return actor.items.filter(item => (getModData(item)?.edgeAbilities ?? []).includes(abilityDsid) && isRunning(item)).length;
+}
+
 /** @returns {{ ok: boolean, reason?: string }} reason is a GHOSTWIRE.Mods.Install.Blocked.* key. */
 export function canInstall(mod, host) {
   if (!getModData(mod)) return { ok: false, reason: "NotMod" };
@@ -75,7 +89,7 @@ export async function installMod(mod, host) {
   const ids = installedMods(host).map(m => m.id);
   await mod.parent.updateEmbeddedDocuments("Item", [
     { _id: host.id, [`flags.${MODULE_ID}.installedMods`]: [...ids, mod.id] },
-    { _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: host.id },
+    { _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: host.id, [`flags.${MODULE_ID}.mod.active`]: true },
   ]);
   ui.notifications.info(game.i18n.format(`${L}.Installed`, { mod: mod.name, host: host.name, used: usedSlots(host), slots: getHostCatalog(host).modSlots }));
 }
@@ -91,6 +105,14 @@ export async function uninstallMod(mod) {
   updates.push({ _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: null });
   await actor.updateEmbeddedDocuments("Item", updates);
   ui.notifications.info(game.i18n.format(`${L}.Uninstalled`, { mod: mod.name, host: host?.name ?? "—" }));
+}
+
+/** Field toggle: switch an installed mod on or off. It keeps its slot either way. */
+export async function setModActive(mod, active) {
+  const host = installedHost(mod);
+  if (!host) return blocked("NotInstalled", mod);
+  await mod.update({ [`flags.${MODULE_ID}.mod.active`]: !!active });
+  ui.notifications.info(game.i18n.format(`${L}.${active ? "Activated" : "Deactivated"}`, { mod: mod.name, host: host.name }));
 }
 
 // Pick a host on the mod's Actor. Hosts that pass every check are listed first; the rest are listed disabled with the reason.
@@ -127,7 +149,30 @@ export function modSlotsLabel(item) {
   return game.i18n.format("GHOSTWIRE.Gear.SheetLine.ModSlotsUsed", { used: usedSlots(item), slots: catalog.modSlots });
 }
 
+const stateLabel = mod => game.i18n.localize(`${L}.${isActive(mod) ? "On" : "Off"}`);
+
+// Software Active Effects (flags.software) apply only while their Item is installed and on; otherwise they read as suppressed.
+function patchSoftwareSuppression() {
+  const EffectClass = CONFIG.ActiveEffect.documentClass;
+  let proto = EffectClass.prototype;
+  let descriptor = null;
+  while (proto && !(descriptor = Object.getOwnPropertyDescriptor(proto, "isSuppressed"))) proto = Object.getPrototypeOf(proto);
+  if (!descriptor?.get) {
+    console.warn(`${MODULE_ID} | ActiveEffect#isSuppressed not found; software effects always apply`);
+    return;
+  }
+  Object.defineProperty(EffectClass.prototype, "isSuppressed", {
+    configurable: true,
+    get() {
+      if (this.getFlag?.(MODULE_ID, "software") && (this.parent instanceof Item) && !isRunning(this.parent)) return true;
+      return descriptor.get.call(this);
+    },
+  });
+}
+
 export function registerMods() {
+  patchSoftwareSuppression();
+
   // Hero sheet: right-click a mod row (or its ⋮) → Install onto… / Uninstall mod.
   Hooks.on("getDocumentListContextOptions", (app, menuItems) => {
     if (typeof app._getEmbeddedDocument !== "function") return;
@@ -146,6 +191,16 @@ export function registerMods() {
         visible: target => { const mod = modItem(target); return !!mod && !!installedHost(mod); },
         onClick: (event, target) => uninstallMod(modItem(target)),
       },
+      {
+        label: `${L}.Menu.Activate`, icon: "fa-solid fa-toggle-on",
+        visible: target => { const mod = modItem(target); return !!mod && !!installedHost(mod) && !isActive(mod); },
+        onClick: (event, target) => setModActive(modItem(target), true),
+      },
+      {
+        label: `${L}.Menu.Deactivate`, icon: "fa-solid fa-toggle-off",
+        visible: target => { const mod = modItem(target); return !!mod && !!installedHost(mod) && isActive(mod); },
+        onClick: (event, target) => setModActive(modItem(target), false),
+      },
     );
   });
 
@@ -157,10 +212,10 @@ export function registerMods() {
     let text = "";
     if (getHostCatalog(item)) {
       const mods = installedMods(item);
-      if (mods.length) text = game.i18n.format(`${L}.SheetInstalled`, { mods: mods.map(mod => mod.name).join(", ") });
+      if (mods.length) text = game.i18n.format(`${L}.SheetInstalled`, { mods: mods.map(mod => `${mod.name} (${stateLabel(mod)})`).join(", ") });
     } else if (getModData(item)) {
       const host = installedHost(item);
-      if (host) text = game.i18n.format(`${L}.SheetInstalledOn`, { host: host.name });
+      if (host) text = game.i18n.format(`${L}.SheetInstalledOn`, { host: `${host.name} (${stateLabel(item)})` });
     }
     if (!text) return;
     const anchor = element.querySelector(".ghostwire-chrome-line") ?? element.querySelector(".sheet-header .document-name");
@@ -189,6 +244,6 @@ export function registerMods() {
 
   const module = game.modules.get(MODULE_ID);
   if (module) {
-    module.api = { ...(module.api ?? {}), normalizeHosts, getHostCatalog, getModData, usedSlots, freeSlots, canInstall, installMod, uninstallMod, installedMods, installedHost };
+    module.api = { ...(module.api ?? {}), normalizeHosts, getHostCatalog, getModData, usedSlots, freeSlots, canInstall, installMod, uninstallMod, installedMods, installedHost, isActive, isRunning, setModActive, softwareEdges };
   }
 }

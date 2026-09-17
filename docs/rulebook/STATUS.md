@@ -10,6 +10,7 @@
 | **Chrome** | `docs/rulebook/12-chrome.md` | **Stage 3 draft** (2026-09-16) — distilled from master |
 | **Backgrounds & Professions** | `docs/rulebook/13-backgrounds-professions.md` | **v1 draft** (2026-09-16) — Foundry packs shipped |
 | **Mods** | `docs/rulebook/14-mods.md` | **Stage 3 draft locked** 2026-09-16/17 — Invent a Mod; echelon gear remap |
+| **Mods — deck / RCC software (Foundry)** | `scripts/mods.mjs` + `src/packs/matrix/programs`, `autosofts` | **B20d Foundry-verified** (2026-09-17) — programs install on decks and autosofts on RCCs; Activate / Deactivate keeps the slot; Reader, Skeleton, and Targeting Autosoft give real roll edges while on; other software is effect text |
 | **Mods — install tracker (Foundry)** | `scripts/mods.mjs` | **B20c Foundry-verified** (2026-09-17) — Install onto… / Uninstall mod on the hero sheet; host sheets show mod slots used / max and installed mods; gear, vehicle, and matrix hosts |
 | **Drones** | `docs/rulebook/15-drones.md` | **Stage 3 draft** 2026-09-16 — inventory (25) + anyone-vs-Wrench; lore extract in masters |
 | **Vehicles** | `docs/rulebook/16-vehicles.md` | **Stage 3 draft** 2026-09-16 — per-echelon Reach inventory (32) + anyone-vs-Wrench; chase lean |

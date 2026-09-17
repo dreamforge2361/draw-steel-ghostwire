@@ -31,7 +31,41 @@
       "goal": null
     }
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "tlZDRDaB4Y1ffo1V",
+      "_key": "!items.effects!1NvjDKxm7AuK6hN3.tlZDRDaB4Y1ffo1V",
+      "name": "GHOSTWIRE.Matrix.Items.Guardian.Name",
+      "img": "icons/commodities/tech/electronics-chip-data.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.matrix.Item.1NvjDKxm7AuK6hN3",
+      "description": "GHOSTWIRE.Matrix.Items.Guardian.SoftwareEffect",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": []
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "transfer": true,
+      "statuses": [],
+      "sort": 0,
+      "start": null,
+      "showIcon": 1,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "software": true
+        }
+      }
+    }
+  ],
   "folder": "PTNQJZBUr1ZFR36p",
   "sort": 0,
   "ownership": {
@@ -48,7 +82,20 @@
           "Program",
           "Wired"
         ],
-        "role": "program"
+        "role": "program",
+        "slotCost": 1,
+        "host": "deck"
+      },
+      "mod": {
+        "slotCost": 1,
+        "hosts": [
+          "deck"
+        ],
+        "host": "deck",
+        "craftSkill": [
+          "hacking"
+        ],
+        "edgeAbilities": []
       }
     }
   }

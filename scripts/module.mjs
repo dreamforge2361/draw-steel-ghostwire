@@ -2,7 +2,7 @@ import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerMachines } from "./machines.mjs";
-import { registerMods, modSlotsLabel } from "./mods.mjs";
+import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -153,7 +153,8 @@ function patchWiredAbilities() {
     if ((state === "jackedIn") && !wired && this.power.roll.enabled) return warn("JackedInPhysical");
 
     if (this.power.roll.enabled) {
-      let edges = 0;
+      // Installed, running deck programs and RCC autosofts that name this ability (B20d, scripts/mods.mjs).
+      let edges = softwareEdges(actor, dsid);
       let banes = 0;
       if (wired && actor.system.skills?.value?.has?.("hacking")) edges += 1;
       if (wired && (state === "jackedIn")) edges += 1;
@@ -573,7 +574,8 @@ Hooks.on("deleteItem", (item, options, userId) => {
 // Item sheet: chrome and catalog items (gear, mods, matrix, vehicles, foci) show their grade and ¥ under the name.
 // Draw Steel treasure has no price field, so price lives in flags.draw-steel-ghostwire.<type>.price.
 const formatYen = price => `¥${Number(price ?? 0).toLocaleString(game.i18n.lang)}`;
-const CATALOG_FLAGS = ["gear", "mod", "matrix", "vehicle", "focus"];
+// Matrix before mod: deck programs and RCC autosofts carry both, and the matrix flag has their ¥ and echelon (B20d).
+const CATALOG_FLAGS = ["gear", "matrix", "mod", "vehicle", "focus"];
 
 function catalogLine(entry, item) {
   const parts = [
