@@ -1,6 +1,7 @@
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
+import { registerMachines } from "./machines.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -73,6 +74,7 @@ Hooks.once("init", () => {
   patchPersistentReagents();
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
+  registerMachines();
 });
 
 // ---------- Wired connection states ----------
