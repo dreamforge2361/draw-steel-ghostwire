@@ -1,0 +1,32 @@
+{
+  "_id": "B5hJaryemhN8aR6t",
+  "_key": "!items!B5hJaryemhN8aR6t",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.DoubleJudgment.Name",
+  "type": "feature",
+  "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.DoubleJudgment.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "double-judgment",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

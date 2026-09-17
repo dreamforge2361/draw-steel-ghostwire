@@ -1,0 +1,139 @@
+{
+  "_id": "75cOal6Bov8zCIYi",
+  "_key": "!items!75cOal6Bov8zCIYi",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Name",
+  "type": "ability",
+  "img": "icons/magic/light/beam-rays-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "blessed-light",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Story",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creatureObject",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "zyaubkkvgucTX7bs": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "zyaubkkvgucTX7bs",
+          "damage": {
+            "tier1": {
+              "value": "3 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "8 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "j8l8i6GIUD2H9TBi": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "j8l8i6GIUD2H9TBi",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.BlessedLight.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

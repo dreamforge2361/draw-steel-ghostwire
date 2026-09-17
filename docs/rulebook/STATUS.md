@@ -18,6 +18,7 @@
 | **Medic (Foundry)** | `src/packs/classes/medic/` | **B26 Foundry-verified** (2026-09-16) — Reagents persist across encounters. **B26b gap locks** (toxin numbers, 2× L9 picks, Anesthetize power roll, Reagents spend outside combat) Foundry-verified. **B26c** Nerve Toxin/Agent 6 + Instinct + master sync Foundry-verified |
 | **Wrench (Foundry)** | `src/packs/classes/wrench/` | **B27 Foundry-verified** (2026-09-16) — Uptime v1; machines inventory backlog. **B27b polish** (Overclock / L6 / L9 rules, three rigger Kits: Fabricator's Bench, Rigger's Harness, Field Chassis) Foundry-verified |
 | **Elementalist (Foundry)** | `src/packs/classes/elementalist/` | **B28 Foundry-verified** (2026-09-16) — Essence drip; Cyborg exclusion enforced (Arcane Severance gate); Veil chapter still backlog |
+| **Street Priest (Foundry)** | `src/packs/classes/street-priest/` | **B29 Foundry-verified** (2026-09-17) — Light/Dark pact overlay; Cyborg-blocked; Veil chapter still backlog |
 | Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
 | **Languages** | `docs/rulebook/19-languages.md` + `docs/masters/GHOSTWIRE_LANGUAGES.md` | **Names locked** 2026-09-16 (B25) — stub chapter; lore backlog |
 | Species↔DS map | `docs/rulebook/SPECIES-DS-MAP.md` | Chassis locked |

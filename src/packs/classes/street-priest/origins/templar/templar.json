@@ -1,0 +1,255 @@
+{
+  "_id": "oBwuneN3UlK8qm0u",
+  "_key": "!items!oBwuneN3UlK8qm0u",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Templar.Name",
+  "type": "subclass",
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.Templar.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "templar",
+    "advancements": {
+      "VZFfjbFzOxrJqZ6z": {
+        "name": "GHOSTWIRE.Skills.List.Melee",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "VZFfjbFzOxrJqZ6z",
+        "skills": {
+          "choices": [
+            "melee"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your ministry grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "RAEwZ7oZhDs59LBB": {
+        "name": "Judgment",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "RAEwZ7oZhDs59LBB",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RDaCVNVH2mDiZR9a"
+          }
+        ],
+        "description": "<p>Your ministry grants you the Judgment mark.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "w9f5ikmX9Crbppec": {
+        "name": "1st-Level Templar Ability",
+        "img": "icons/weapons/swords/sword-gold-holy.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "w9f5ikmX9Crbppec",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tBHrfvQ6hMrFVfy6"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5ILNtmrKxz14gB5p"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "jy6e3SndSzkmah9e": {
+        "name": "2nd-Level Templar Ability",
+        "img": "icons/weapons/swords/sword-gold-holy.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "jy6e3SndSzkmah9e",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zzIWecZ0z0LcfHeR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.mh9XJBKhNkSi47rr"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "akqVZNqbQwauE589": {
+        "name": "Righteous Momentum",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "akqVZNqbQwauE589",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.shwDK2zc6U6LxkDo"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "PkXGupv7OFDFNyqW": {
+        "name": "Smiter’s Zeal",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "PkXGupv7OFDFNyqW",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.KZfqgvEOjp43nzVL"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "dGt5Z0yQQVXftpDT": {
+        "name": "6th-Level Templar Ability",
+        "img": "icons/weapons/swords/sword-gold-holy.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "dGt5Z0yQQVXftpDT",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PKfokWyQwhRPQG2H"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dBeQQPvDFJCMcP3e"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "3l8pAv4i6mXiqEi6": {
+        "name": "Blade of the Chosen",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "3l8pAv4i6mXiqEi6",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.a9sDPd4f7G0oXma7"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "9hswk15YXx4rRzky": {
+        "name": "Twin Judgment",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "9hswk15YXx4rRzky",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.B5hJaryemhN8aR6t"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "1Lgmfo7ucLlU4l4B": {
+        "name": "Wrath of the Chosen",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "1Lgmfo7ucLlU4l4B",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.hamoBJqDec4eTrwl"
+          }
+        ],
+        "description": "<p>Your ministry grants you its apex ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "street-priest"
+  },
+  "effects": [],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

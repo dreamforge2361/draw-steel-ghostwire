@@ -1,0 +1,36 @@
+{
+  "_id": "3Gca6AfozStSnE5u",
+  "_key": "!items!3Gca6AfozStSnE5u",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.LedgerOfTheDamned.Name",
+  "type": "feature",
+  "img": "icons/sundries/books/book-worn-brown-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.LedgerOfTheDamned.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ledger-of-the-damned",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "dark"
+    }
+  }
+}

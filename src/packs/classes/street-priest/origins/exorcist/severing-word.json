@@ -1,0 +1,32 @@
+{
+  "_id": "95HVm6glkylIZTXn",
+  "_key": "!items!95HVm6glkylIZTXn",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.SeveringWord.Name",
+  "type": "feature",
+  "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.SeveringWord.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "severing-word",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

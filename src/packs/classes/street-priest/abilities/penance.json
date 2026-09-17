@@ -1,0 +1,139 @@
+{
+  "_id": "QRTk0deJeYyWTGbF",
+  "_key": "!items!QRTk0deJeYyWTGbF",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Penance.Name",
+  "type": "ability",
+  "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "penance",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.Penance.Story",
+    "keywords": [
+      "area",
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 9,
+    "trigger": "",
+    "distance": {
+      "type": "cube",
+      "primary": "4",
+      "secondary": "10",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "gFWGmpSRpQinIKPT": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "gFWGmpSRpQinIKPT",
+          "damage": {
+            "tier1": {
+              "value": "4",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "7",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "11",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "Gaps52cC7swXaXkW": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "Gaps52cC7swXaXkW",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.Penance.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.Penance.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.Penance.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

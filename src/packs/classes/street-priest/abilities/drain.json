@@ -1,0 +1,139 @@
+{
+  "_id": "QugJ5UZHgyW5UM4i",
+  "_key": "!items!QugJ5UZHgyW5UM4i",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Drain.Name",
+  "type": "ability",
+  "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "priest-drain",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.Drain.Story",
+    "keywords": [
+      "magic",
+      "melee",
+      "strike"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "melee",
+      "primary": "1",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "Ymb3ddBuZtSN5jTM": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "Ymb3ddBuZtSN5jTM",
+          "damage": {
+            "tier1": {
+              "value": "2 + @chr",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5 + @chr",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7 + @chr",
+              "types": [
+                "corruption"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "UqrQMkg2A4p4irln": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "UqrQMkg2A4p4irln",
+          "other": {
+            "tier1": {
+              "display": "",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.Drain.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.Drain.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

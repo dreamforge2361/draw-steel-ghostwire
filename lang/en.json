@@ -3012,6 +3012,481 @@
             "Tier3": "The target is removed from play until the end of your next turn; it returns in the same square and takes [[/damage 2d6]]{2d6} damage."
           }
         }
+      },
+      "StreetPriest": {
+        "Folders": {
+          "StreetPriest": "Street Priest",
+          "Abilities": "Abilities",
+          "Origins": "Ministries",
+          "Shepherd": "Shepherd",
+          "Templar": "Templar",
+          "Exorcist": "Exorcist"
+        },
+        "Items": {
+          "Class": {
+            "Name": "Street Priest",
+            "Description": "<p>You are a Street Priest — padre, collar, saint, or simply the priest. Corp paperwork lists you as a “pastoral-services contractor.” What you actually are is a <strong>vessel for a power on the other side of the Veil</strong>: an angel or a demon aligned to a cause has agreed to lend you its power, and you channel that aid through sheer conviction. Your patron always wants something back — the <strong>Price</strong> — and what it wants tells everyone who you are.</p><p>You are the crew’s divine switch-hitter: you keep the crew alive (Recovery-fueled healing, wards, status removal) and punish the enemy (holy or corruption smiting, forced movement, fear, banishment). At 1st level you choose a <strong>pact alignment, Light or Dark</strong> — a permanent overlay on top of your ministry — and a ministry: <strong>Shepherd</strong>, <strong>Templar</strong>, or <strong>Exorcist</strong>.</p><p><strong>⚠ Cyborgs can never be Street Priests.</strong> Arcane Severance bars a Cyborg from every Veil-casting class; a Full-Conversion chassis can’t hold a pact. The hero sheet refuses the combination.</p><p><strong>Chrome ceiling:</strong> you can tolerate at most a sliver of soft bioware — a single low-grade implant. Every point of chrome load beyond that permanently lowers your maximum Conviction by 1.</p><p><strong>Core characteristics:</strong> Persona, Instinct · <strong>Heroic resource:</strong> Conviction · <strong>Starting Stamina:</strong> 18 (+6 per level) · <strong>Recoveries:</strong> 8 · <strong>Kit:</strong> light (Sanctified, or No Kit). <em>Quick Build:</em> Light pact, Shepherd, Sanctified.</p>"
+          },
+          "Conviction": {
+            "Name": "Conviction",
+            "Description": "<p>Conviction is your faith made manifest: your standing with your patron, spent to call aid across the Veil.</p><h4>Earning Conviction</h4><ul><li><p><strong>Opening faith:</strong> at the start of combat, gain Conviction equal to [[lookup @hero.victories]]{your Victories}.</p></li><li><p><strong>The drip:</strong> at the start of each of your turns, gain [[/gain 2 hr]]{2 Conviction} (Foundry adds this automatically). You can pray instead — see Prayer Gamble.</p></li><li><p><strong>Creed echo:</strong> the first act in your pact’s creed each round [[/gain 1 hr]]{gains 1 Conviction}: an act of mercy, protection, or aid (Light), or of dominion, punishment, or harvest (Dark).</p></li></ul><h4>Sustaining Workings</h4><p>Sustaining a persistent working drains <strong>−2 Conviction per turn for each point of its Persistent rating</strong> (Persistent 1 = −2, Persistent 2 = −4).</p><h4>Cap and Loss</h4><p>Your Conviction cap is <strong>8</strong> at echelon 1, <strong>12</strong> at echelon 2, <strong>16</strong> at echelon 3, and <strong>20</strong> at echelon 4 (raised further by Burgeoning Saint / Rising Adept and Most Faithful, and lowered by chrome erosion). You lose all unspent Conviction at the end of the encounter.</p><h4>Outside of Combat</h4><p>You can’t gain Conviction outside combat, but you can use Conviction-costed effects <strong>as if you had Conviction equal to your Victories</strong> — ministry, healing, warding, and pact renewal in downtime scenes.</p><p><strong>Firewall:</strong> Conviction never touches nuyen or Body Integrity, and chrome never generates it.</p><p><em>In Foundry, the +2 drip is automatic; the prayer gamble, creed echo, sustain drains, and cap use the buttons above.</em></p>"
+          },
+          "PrayerGamble": {
+            "Name": "Prayer Gamble",
+            "Description": "<p>At the start of your turn, instead of taking the flat +2 drip, you can pray: roll [[/r 1d6]].</p><ul><li><p><strong>1–2:</strong> the flat drip only ([[/gain 2 hr]]{+2 Conviction}).</p></li><li><p><strong>3–4:</strong> [[/gain 4 hr]]{+4 Conviction}.</p></li><li><p><strong>5–6:</strong> [[/gain 4 hr]]{+4 Conviction}, and you immediately use Smite / Rebuke or Lay On Hands / Word of Comfort for free.</p></li></ul><p>The gamble is resource-only: it never causes backlash, damage, or corruption. <em>In Foundry, the automatic +2 drip still posts; if you pray, add only the difference (+2 more on a 3–6).</em></p>"
+          },
+          "LightPact": {
+            "Name": "Light Pact",
+            "Description": "<p>Your patron is an angel or other Light power. This choice is permanent.</p><ul><li><p><strong>Default damage type:</strong> holy.</p></li><li><p><strong>Corruption weight:</strong> light.</p></li><li><p><strong>Conduct:</strong> strict — your patron demands mercy and protection tasks as the Price.</p></li><li><p><strong>Creed echo:</strong> your first act of mercy, protection, or aid each round.</p></li><li><p><strong>Invoke the Pact, failed bind:</strong> the entity vanishes without effect, and you take a bane on your next power rolls (save ends).</p></li></ul><p>Your pact-named features are the Light versions: The Roster of the Saved, Burgeoning Saint, Consecrated Weapon, Ordained.</p>"
+          },
+          "DarkPact": {
+            "Name": "Dark Pact",
+            "Description": "<p>Your patron is a demon or other infernal power. This choice is permanent.</p><ul><li><p><strong>Default damage type:</strong> corruption.</p></li><li><p><strong>Corruption weight:</strong> heavy.</p></li><li><p><strong>Conduct:</strong> looser in the moment, but the debt comes due — your patron demands darker service or offerings as the Price.</p></li><li><p><strong>Creed echo:</strong> your first act of dominion, punishment, or harvest each round.</p></li><li><p><strong>Invoke the Pact, failed bind:</strong> the entity manifests just long enough to strike you once, at its tier’s damage, before departing.</p></li></ul><p>Your pact-named features are the Dark versions: The Ledger of the Damned, Rising Adept, Damned Weapon, Sworn.</p>"
+          },
+          "PriestsWard": {
+            "Name": "Priest’s Ward",
+            "Description": "<p>At the start of each of your turns, if you aren’t sustaining another persistent working, you gain [[/heal 2 temp]]{2 temporary Stamina} — a small cushion that’s always there. This is separate from Sanctuary Ward.</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+          },
+          "RosterOfTheSaved": {
+            "Name": "The Roster of the Saved",
+            "Description": "<p>Once per encounter, as a free action, you can ask the Director one factual question about a creature’s standing under your patron’s morality: is this person innocent? complicit? already marked by the patron? A narrative intel tool that also sets up Judgment and Discerning Eye.</p>"
+          },
+          "LedgerOfTheDamned": {
+            "Name": "The Ledger of the Damned",
+            "Description": "<p>Once per encounter, as a free action, you can ask the Director one factual question about a creature’s standing under your patron’s morality: is this person guilty? indebted? already marked by the patron? A narrative intel tool that also sets up Judgment and Discerning Eye.</p>"
+          },
+          "MinorMiracle": {
+            "Name": "Minor Miracle",
+            "Description": "<p>Once per encounter, you can spend a Recovery to bend a single outcome: reroll one power roll (yours or an ally’s within 10 squares), or improve a power roll that just happened by one result (low becomes middle, middle becomes high).</p>"
+          },
+          "DeepenedSubclass": {
+            "Name": "Deepened Subclass",
+            "Description": "<p>Your ministry deepens: at 4th level you gain its 4th-level feature (Ward Anchor, Righteous Momentum, or Bound to Silence).</p>"
+          },
+          "BurgeoningSaint": {
+            "Name": "Burgeoning Saint",
+            "Description": "<p>Your Conviction cap increases by 2, and a 5–6 on your Prayer Gamble also grants you [[/surge 1]].</p>"
+          },
+          "RisingAdept": {
+            "Name": "Rising Adept",
+            "Description": "<p>Your Conviction cap increases by 2, and a 5–6 on your Prayer Gamble also grants you [[/surge 1]].</p>"
+          },
+          "PactsFavor": {
+            "Name": "Pact’s Favor",
+            "Description": "<p>Once per session, your patron intervenes directly with a small favor outside combat: a piece of information, a door that’s unlocked when you arrive, a witness who suddenly remembers something. Director-adjudicated and never a combat-turn effect.</p>"
+          },
+          "ConsecratedWeapon": {
+            "Name": "Consecrated Weapon",
+            "Description": "<p>Your weapon strikes (through a Kit or otherwise) deal extra holy damage equal to [[lookup @P]]{your Persona score}. Templars gain this at 7th level through Blade of the Chosen.</p>"
+          },
+          "DamnedWeapon": {
+            "Name": "Damned Weapon",
+            "Description": "<p>Your weapon strikes (through a Kit or otherwise) deal extra corruption damage equal to [[lookup @P]]{your Persona score}. Templars gain this at 7th level through Blade of the Chosen.</p>"
+          },
+          "Ordained": {
+            "Name": "Ordained",
+            "Description": "<p>You bear the permanent title <strong>Ordained</strong> in your patron’s eyes, and you gain one perk of your choice (from this level’s perk grant).</p>"
+          },
+          "Sworn": {
+            "Name": "Sworn",
+            "Description": "<p>You bear the permanent title <strong>Sworn</strong> in your patron’s eyes, and you gain one perk of your choice (from this level’s perk grant).</p>"
+          },
+          "AvatarOfThePact": {
+            "Name": "Avatar of the Pact",
+            "Description": "<p>Your epic capstone. Once per encounter, you briefly manifest your patron through you: for one round, your holy or corruption damage rolls gain an edge, and your Persona-based power rolls can’t result lower than middle (12–16).</p>"
+          },
+          "ManifestWill": {
+            "Name": "Manifest Will",
+            "Description": "<p>Once per encounter, you can spend 5 Conviction to succeed automatically on one power roll: it counts as a high (17+) result.</p>"
+          },
+          "MostFaithful": {
+            "Name": "Most Faithful",
+            "Description": "<p>Your Conviction cap increases by a final 4. When you roll a 1 or 2 on the Prayer Gamble, you automatically reroll it once.</p>"
+          },
+          "LayOnHands": {
+            "Name": "Lay On Hands / Word of Comfort",
+            "Story": "The switch-hitter’s every-turn lifeline.",
+            "Effect_before0000000000": "<p>No roll. The target can spend a Recovery.</p>",
+            "Effect_spend00000000000": "<p>For each Conviction spent, choose one: target one additional ally within distance; end one effect on a target that a saving throw ends or that ends at the end of their turn; let a prone target stand; or give a target [[/heal @P temp]]{temporary Stamina equal to your Persona score}.</p>"
+          },
+          "SmiteRebuke": {
+            "Name": "Smite / Rebuke",
+            "Story": "A bolt of the patron’s power.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p><p><em>Provisional magnitude (numeric pass pending).</em></p>",
+            "Effect_spend00000000000": "<p>For each Conviction spent, the damage increases by 1. Instead of 1 extra damage, you can push the target 1 square, or (for 2 Conviction) the target has a bane on its next power roll.</p>"
+          },
+          "SenseTheVeil": {
+            "Name": "Sense the Veil / Discern Spirits",
+            "Story": "Reading spirits, souls, and corruption.",
+            "Effect_before0000000000": "<p>Read the Veil around you: the thinness of the Veil, corruption or possession, or one entity’s rank and nature. A simple read needs no roll; roll Instinct for a contested or deeper read.</p>",
+            "Tier1": "You sense how thin the Veil is, or detect corruption or possession nearby.",
+            "Tier2": "You read an entity’s rank or nature, or identify a spirit, working, or possession.",
+            "Tier3": "As a middle result, and you learn a spirit’s true name."
+          },
+          "BlessedLight": {
+            "Name": "Blessed Light",
+            "Story": "Light-flavored: always holy.",
+            "Tier1": "One ally within distance [[/surge 1]].",
+            "Tier2": "One ally within distance [[/surge 2]].",
+            "Tier3": "One ally within distance [[/surge 3]]."
+          },
+          "Drain": {
+            "Name": "Drain",
+            "Story": "Dark-flavored: always corruption.",
+            "Tier2": "You or one ally within 10 squares can spend a Recovery.",
+            "Tier3": "You or one ally within 10 squares can spend a Recovery."
+          },
+          "Rebuke": {
+            "Name": "Rebuke",
+            "Story": "Follows your pact.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). The pull can be vertical.</p>",
+            "Tier1": "Pull 2.",
+            "Tier2": "Pull 3.",
+            "Tier3": "Pull 4."
+          },
+          "Lightfall": {
+            "Name": "Lightfall",
+            "Story": "Light-flavored: always holy.",
+            "Effect_before0000000000": "<p>You can teleport yourself and up to 2 allies in the area to unoccupied spaces in the area.</p>"
+          },
+          "SacrificialOffer": {
+            "Name": "Sacrificial Offer",
+            "Story": "Dark-flavored: always corruption.",
+            "Effect_before0000000000": "<p>Choose yourself or one ally within distance: they can impose a bane on the next power roll made against them before the end of their next turn.</p>"
+          },
+          "WordOfRebuke": {
+            "Name": "Word of Rebuke",
+            "Story": "Follows your pact.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p>",
+            "Tier1": "Slide 1.",
+            "Tier2": "Slide 2.",
+            "Tier3": "Slide 3."
+          },
+          "WarriorsPrayer": {
+            "Name": "Warrior’s Prayer",
+            "Story": "Holy by default; a Dark priest may reskin it as corruption.",
+            "Effect_before0000000000": "<p>You or one ally within distance gains [[/heal @P temp]]{temporary Stamina equal to your Persona score}.</p>"
+          },
+          "Wither": {
+            "Name": "Wither",
+            "Story": "Dark-flavored: always corruption.",
+            "Tier1": "If the target’s Persona is below your weak potency, it has a bane on its next power roll.",
+            "Tier2": "If the target’s Persona is below your average potency, it has a bane on its next power roll.",
+            "Tier3": "If the target’s Persona is below your strong potency, it has a bane on its next power roll."
+          },
+          "MinorRebuke": {
+            "Name": "Minor Rebuke",
+            "Story": "Put a dent in something.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p>",
+            "Tier1": "No damage.",
+            "Tier2": "2 + Persona damage.",
+            "Tier3": "4 + Persona damage."
+          },
+          "WhisperOfComfort": {
+            "Name": "Whisper of Comfort",
+            "Story": "Cheap enough to use every turn.",
+            "Effect_before0000000000": "<p>No roll. Choose one: the target gains [[/heal 2+@P temp]]{temporary Stamina equal to 2 + your Persona score}, or ends one minor ongoing effect (Director’s call on what’s minor — not a save-ends major condition).</p>"
+          },
+          "CallTheThunderDown": {
+            "Name": "Call the Thunder Down",
+            "Story": "A controlled shockwave.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). (sonic-flavored). You can push each willing ally in the area the same distance, in a direction you choose.</p>",
+            "Tier1": "Push 1.",
+            "Tier2": "Push 2.",
+            "Tier3": "Push 3."
+          },
+          "SentinelSpirit": {
+            "Name": "Sentinel Spirit",
+            "Story": "A flare of your patron’s presence given brief shape.",
+            "Effect_before0000000000": "<p>You summon a size 2 guardian spirit that can’t be harmed, in an unoccupied space within distance, until the end of your next turn. You and your allies can move through its space; enemies can’t. Any enemy that moves within 2 squares of it for the first time in a round, or starts its turn there, takes damage equal to [[lookup @I]]{your Instinct score}. Damage is holy (Light pact) or corruption (Dark pact).</p><p>A taste of the summoner fantasy, without Invoke the Pact’s bind roll.</p>"
+          },
+          "JudgmentsHammer": {
+            "Name": "Judgment’s Hammer",
+            "Story": "The smiter’s opening blow.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact).</p>",
+            "Tier2": "The target is knocked prone.",
+            "Tier3": "The target is knocked prone."
+          },
+          "ViolenceWillNotAidThee": {
+            "Name": "Violence Will Not Aid Thee",
+            "Story": "The patron turns the enemy’s violence back on them.",
+            "Effect_before0000000000": "<p>Lightning damage (or holy / corruption by pact, Director’s call). The next time the target deals damage this encounter, it takes retributive damage equal to this ability’s damage result.</p>"
+          },
+          "MyLifeForYours": {
+            "Name": "My Life for Yours",
+            "Story": "Always costs you a piece of yourself.",
+            "Trigger": "The target starts their turn or takes damage.",
+            "Effect_before0000000000": "<p>You spend a Recovery, and the target regains Stamina equal to your Recovery value ([[/heal @recoveries.recoveryValue]]).</p>",
+            "Effect_spend00000000000": "<p>For each additional Conviction spent, the target also ends one save-ends effect, or stands up if prone.</p>"
+          },
+          "SanctuaryWard": {
+            "Name": "Sanctuary Ward",
+            "Story": "The Veil’s Ward verb as a working.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Aura 3 centered on a point within 5 squares, or one ally.</p><p>You raise a consecrated ward. Enemies take a bane on attacks against targets or squares inside the ward, and the ward resists corruption and possession effects trying to take hold inside it.</p>",
+            "Effect_persistent000000": "<p>Sustain the ward (−2 Conviction per turn).</p>"
+          },
+          "CorruptionsCurse": {
+            "Name": "Corruption’s Curse",
+            "Story": "Dark by default; a Light priest may call it Sin-Weight.",
+            "Tier1": "If the target’s Might is below your weak potency, it has damage weakness 5 (save ends).",
+            "Tier2": "If the target’s Might is below your average potency, it has damage weakness 5 (save ends).",
+            "Tier3": "If the target’s Might is below your strong potency, it has damage weakness 5 (save ends)."
+          },
+          "CurseOfTerror": {
+            "Name": "Curse of Terror",
+            "Story": "Fear takes hold.",
+            "Tier1": "If the target’s Instinct is below your weak potency, it is frightened (save ends).",
+            "Tier2": "If the target’s Instinct is below your average potency, it is frightened (save ends).",
+            "Tier3": "If the target’s Instinct is below your strong potency, it is frightened (save ends)."
+          },
+          "FaithIsOurArmor": {
+            "Name": "Faith Is Our Armor",
+            "Story": "Faith hardens into armor.",
+            "Effect_before0000000000": "<p>You can target yourself instead of one ally.</p>",
+            "Tier1": "Each target gains [[/heal 5 temp]]{5 temporary Stamina}.",
+            "Tier2": "Each target gains [[/heal 10 temp]]{10 temporary Stamina}.",
+            "Tier3": "Each target gains [[/heal 15 temp]]{15 temporary Stamina}."
+          },
+          "SermonOfGrace": {
+            "Name": "Sermon of Grace",
+            "Story": "The whole congregation rises.",
+            "Effect_before0000000000": "<p>No roll. Each target can spend a Recovery and end one effect on them that a saving throw ends or that ends at the end of their turn (or stand up if prone).</p>"
+          },
+          "InvokeThePact": {
+            "Name": "Invoke the Pact",
+            "Story": "Someone across the Veil answers.",
+            "Effect_before0000000000": "<p>You call your patron’s aid across the Veil. The <strong>bind check</strong> rolls <strong>Instinct</strong>, not Persona. The entity’s shape follows your ministry: an angelic or infernal warrior (Templar), a guardian or warding spirit (Shepherd), or a hunting or binding spirit (Exorcist).</p><p><strong>The Price</strong> applies hardest here: a Light entity demands a task of mercy or protection; a Dark entity loads corruption and spirit attention on top of the working. Breaking the pact’s terms after invoking is a serious story beat.</p>",
+            "Effect_persistent000000": "<p>Sustain the independent form (−4 Conviction per turn). The extension form has no sustain cost.</p>",
+            "Tier1": "Failed bind. Light pact: the entity vanishes without effect, and you take a bane on your next power rolls (save ends). Dark pact: the entity strikes you once at its tier’s damage before departing.",
+            "Tier2": "Extension form: the entity acts on your turn as part of your own action economy (a smiting hand, a warding aegis, a spectral guardian), with no Stamina of its own. Its strike deals 4/7/10 + Persona by result, or it gives an equivalent support effect. No sustain cost; it lasts until the end of the encounter or until you release it.",
+            "Tier3": "Independent form: the entity becomes its own figure on the map with its own Stamina and turn, scaled as a high-grade entity (Veil rules), for the rest of the encounter or until it drops or the bind breaks. Sustain: Persistent 2 (−4 Conviction per turn)."
+          },
+          "FearOfTheGods": {
+            "Name": "Fear of the Gods",
+            "Story": "The patron’s dread made manifest.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). Each frightened target is frightened of you or a creature you choose within distance.</p>",
+            "Tier1": "If the target’s Instinct is below your weak potency, it is frightened (save ends).",
+            "Tier2": "If the target’s Instinct is below your average potency, it is frightened (save ends).",
+            "Tier3": "If the target’s Instinct is below your strong potency, it is frightened (save ends)."
+          },
+          "SaintsRaiment": {
+            "Name": "Saint’s Raiment",
+            "Story": "Make one ally nearly unkillable this fight.",
+            "Effect_before0000000000": "<p>No roll. The target gains [[/heal 20 temp]]{20 temporary Stamina} and [[/surge 3]].</p>"
+          },
+          "SoulSiphon": {
+            "Name": "Soul Siphon",
+            "Story": "Your suffering, their salvation.",
+            "Effect_before0000000000": "<p>One ally within distance can spend any number of Recoveries.</p>"
+          },
+          "WordsOfWrathAndGrace": {
+            "Name": "Words of Wrath and Grace",
+            "Story": "Wrath for them, grace for us.",
+            "Effect_before0000000000": "<p>The damage hits each enemy in the area (damage is holy (light pact) or corruption (dark pact).). Each ally in the area can spend a Recovery.</p>"
+          },
+          "BeaconOfGrace": {
+            "Name": "Beacon of Grace",
+            "Story": "A rolling heal engine.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). Until the end of the encounter, whenever an ally deals damage to the target, that ally or another ally can spend a Recovery.</p>"
+          },
+          "Penance": {
+            "Name": "Penance",
+            "Story": "Kneel.",
+            "Tier1": "If the target’s Instinct is below your weak potency, it is prone and can’t stand (save ends).",
+            "Tier2": "If the target’s Instinct is below your average potency, it is prone and can’t stand (save ends).",
+            "Tier3": "If the target’s Instinct is below your strong potency, it is prone and can’t stand (save ends)."
+          },
+          "Sanctuary": {
+            "Name": "Sanctuary",
+            "Story": "Somewhere safe across the Veil.",
+            "Effect_before0000000000": "<p>No roll. The target is removed from the map until the start of their next turn, safe across the Veil, and can spend any number of Recoveries. At the start of their turn they reappear in the space they left or the nearest unoccupied space of your choice.</p>"
+          },
+          "VesselOfRetribution": {
+            "Name": "Vessel of Retribution",
+            "Story": "The patron’s fury at the moment an ally falls.",
+            "Effect_before0000000000": "<p>No roll. The first time the target is winded or dying before the end of the encounter, each enemy within 5 squares of them takes 15 damage. Damage is holy (Light pact) or corruption (Dark pact).</p>"
+          },
+          "Arise": {
+            "Name": "Arise!",
+            "Story": "The closest thing to a battlefield resurrection.",
+            "Effect_before0000000000": "<p>No roll. The target — even one at 0 Stamina or below — can spend any number of Recoveries, ends effects on them that a saving throw ends or that end at the end of their turn, and stands up. At the start of each of their turns until the end of the encounter or until they are dying, the target [[/surge 3]].</p>"
+          },
+          "BlessingOfSteel": {
+            "Name": "Blessing of Steel",
+            "Story": "Faith like plate.",
+            "Effect_before0000000000": "<p>No roll. Until the end of the encounter, ability rolls against allies in the aura take a bane, and allies in the aura have damage immunity 5.</p>"
+          },
+          "BlessingOfTheBlade": {
+            "Name": "Blessing of the Blade",
+            "Story": "Every blade sings.",
+            "Effect_before0000000000": "<p>No roll. At the end of each of your turns until the end of the encounter or until you are dying, each target in the aura [[/surge 3]].</p>"
+          },
+          "DragTheUnworthy": {
+            "Name": "Drag the Unworthy",
+            "Story": "Dragged past the faithful.",
+            "Effect_before0000000000": "<p>Damage is holy (Light pact) or corruption (Dark pact). Each ally the target comes adjacent to during the slide can spend a Recovery.</p>",
+            "Tier1": "Slide 3.",
+            "Tier2": "Slide 4.",
+            "Tier3": "Slide 6."
+          },
+          "Shepherd": {
+            "Name": "Shepherd",
+            "Description": "<p><em>“Pastoral-care specialist.”</em> The crew’s lifeline: stronger healing, more temporary Stamina, better status removal. The most support-tilted ministry. Your Invoke the Pact entity is a guardian or warding spirit that sticks close to allies.</p><p>At 1st level you gain the <strong>Medicine</strong> skill, the Warden’s Grace feature, and a Shepherd ability of your choice.</p>"
+          },
+          "WardensGrace": {
+            "Name": "Warden’s Grace",
+            "Description": "<p>Whenever you use Lay On Hands / Word of Comfort, a target who spends a Recovery regains extra Stamina equal to [[lookup @P]]{your Persona score}.</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+          },
+          "WardAnchor": {
+            "Name": "Ward Anchor",
+            "Description": "<p>Sanctuary Ward, and every persistent ally-buffing zone you sustain, drains 1 less Conviction per turn (minimum 1).</p>"
+          },
+          "ShepherdsBounty": {
+            "Name": "Shepherd’s Bounty",
+            "Description": "<p>Your healing and warding workings (My Life for Yours, Sanctuary Ward, Faith Is Our Armor, Sermon of Grace) increase in magnitude by one step: +1 Recovery spent, +5 temporary Stamina, or +1 square of area (Director’s call per ability).</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+          },
+          "GuardiansVoice": {
+            "Name": "Guardian’s Voice",
+            "Description": "<p>Whenever you use Sermon of Grace (or a similar buff), choose: it costs 1 less Conviction, or its range or area increases by 2.</p>"
+          },
+          "ShepherdsDevotion": {
+            "Name": "Shepherd’s Devotion",
+            "Description": "<p>Warden’s Grace’s extra Stamina doubles, and Ward Anchor’s discount also applies to sustaining Invoke the Pact’s independent form.</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+          },
+          "SteadyHand": {
+            "Name": "Steady Hand",
+            "Description": "<p>Lay On Hands / Word of Comfort can target 2 allies instead of 1 for 1 extra Conviction.</p>"
+          },
+          "WardSense": {
+            "Name": "Ward-Sense",
+            "Description": "<p>Sense the Veil / Discern Spirits also detects the nearest hostile ward or trap within 10 squares.</p>"
+          },
+          "CircleOfMercy": {
+            "Name": "Circle of Mercy",
+            "Description": "<p>Sanctuary Ward’s bane also applies to enemies attacking into the ward from outside it.</p>"
+          },
+          "RecoveringGrace": {
+            "Name": "Recovering Grace",
+            "Description": "<p>You can use My Life for Yours proactively at the start of the target’s turn, without the target having taken damage this round.</p>"
+          },
+          "UnbrokenWatch": {
+            "Name": "Unbroken Watch",
+            "Description": "<p>Faith Is Our Armor’s temporary Stamina lasts until the end of the encounter.</p>"
+          },
+          "AegisBound": {
+            "Name": "Aegis Bound",
+            "Description": "<p>While your guardian spirit (Invoke the Pact, extension form) exists, attacks against allies adjacent to it take a bane.</p>"
+          },
+          "TheShepherdsHour": {
+            "Name": "The Shepherd’s Hour",
+            "Description": "<p>Once per encounter, as a free action when an ally would drop to 0 Stamina, you grant them a full Recovery instead, at no Conviction cost.</p>"
+          },
+          "Templar": {
+            "Name": "Templar",
+            "Description": "<p><em>“Militant-order asset.”</em> The holy warrior: more smiting damage, sturdier on the front line, and the only ministry with <strong>Judgment</strong>. Your Invoke the Pact entity is an angelic or infernal warrior. A Templar often takes the Sanctified Kit or a martial Kit to hold the line.</p><p>At 1st level you gain the <strong>Melee</strong> skill, the Judgment ability, and a Templar ability of your choice.</p>"
+          },
+          "Judgment": {
+            "Name": "Judgment",
+            "Story": "One enemy stands judged.",
+            "Effect_before0000000000": "<p>The target is [[/apply SPR0000000judged]]{under Judgment} until the end of the encounter, until you are dying, or until you use this ability on another target (only one target at a time; Twin Judgment at 8th level allows two). While the mark holds:</p><ul><li><p>The target takes a bane on power rolls it makes while within your line of effect — or, at the Director’s option, takes a small amount of extra damage (damage is holy (light pact) or corruption (dark pact).) when you or an ally damages it.</p></li><li><p>The first time each round you damage the target, or it damages you, you [[/gain 1 hr]]{gain 1 Conviction} (+1 more with Righteous Momentum).</p></li></ul><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+          },
+          "RighteousMomentum": {
+            "Name": "Righteous Momentum",
+            "Description": "<p>Judgment’s Conviction gain increases by 1: [[/gain 2 hr]]{2 Conviction} the first time each round.</p>"
+          },
+          "SmitersZeal": {
+            "Name": "Smiter’s Zeal",
+            "Description": "<p>Your smiting workings (Judgment’s Hammer, Curse of Terror, Corruption’s Curse, Vessel of Retribution) increase in magnitude by one step: +2 damage on each result, or +1 to any forced movement (Director’s call per ability).</p><p><em>Provisional magnitude (numeric pass pending).</em></p>"
+          },
+          "BladeOfTheChosen": {
+            "Name": "Blade of the Chosen",
+            "Description": "<p>You gain the benefit of Consecrated Weapon / Damned Weapon now instead of at 9th level: your weapon strikes deal extra holy (Light) or corruption (Dark) damage equal to [[lookup @P]]{your Persona score}. At 9th level you gain no additional benefit from that feature.</p>"
+          },
+          "DoubleJudgment": {
+            "Name": "Twin Judgment",
+            "Description": "<p>Judgment can hold a second target at the same time. The Conviction gain triggers only once per round across both marks.</p>"
+          },
+          "ZealousStrike": {
+            "Name": "Zealous Strike",
+            "Description": "<p>Smite / Rebuke deals 1 extra damage per result step (+1 low, +2 middle, +3 high) against a target under Judgment.</p>"
+          },
+          "IronFaith": {
+            "Name": "Iron Faith",
+            "Description": "<p>While you have at least 1 Conviction, your Stamina maximum increases by your level.</p>"
+          },
+          "WrathfulMomentum": {
+            "Name": "Wrathful Momentum",
+            "Description": "<p>Judgment’s Hammer knocks the target prone on any result, including low.</p>"
+          },
+          "AnathemasWeight": {
+            "Name": "Anathema’s Weight",
+            "Description": "<p>A target under your Judgment has a bane on saving throws against your ongoing effects.</p>"
+          },
+          "VengeanceUnbound": {
+            "Name": "Vengeance Unbound",
+            "Description": "<p>When the target under your Judgment damages you, your next Smite / Rebuke against it gains an edge.</p>"
+          },
+          "ConsecratedGround": {
+            "Name": "Consecrated Ground",
+            "Description": "<p>When you cast Sanctuary Ward, allies inside it also deal +1 damage with melee strikes.</p>"
+          },
+          "WrathOfTheChosen": {
+            "Name": "Wrath of the Chosen",
+            "Description": "<p>Once per encounter, when you reduce the target under your Judgment to 0 Stamina, you immediately regain Conviction as if an encounter had just started ([[lookup @hero.victories]]{your Victories}), and you can place Judgment on a new target for free.</p>"
+          },
+          "Exorcist": {
+            "Name": "Exorcist",
+            "Description": "<p><em>“Containment / counter-thaumic specialist.”</em> The Veil specialist: banishment, warding against incursion, and sensing and dispelling corruption and possession, with the edge against spirits, the corrupted, and dark entities. Your Invoke the Pact entity is a hunting or binding spirit.</p><p>At 1st level you gain the <strong>Occult</strong> skill, the Discerning Eye feature, and an Exorcist ability of your choice.</p>"
+          },
+          "DiscerningEye": {
+            "Name": "Discerning Eye",
+            "Description": "<p>Your Sense the Veil / Discern Spirits is enhanced: on a high (17+) result you also learn a hostile spirit’s true name (setting up an edge on a later banishment), and your reads always tell willingly bound entities from coerced or hostile ones.</p>"
+          },
+          "BoundToSilence": {
+            "Name": "Bound to Silence",
+            "Description": "<p>When you banish or dispel a hostile spirit or corrupted target, you can add a save-ends rider: the target is silenced, restrained, or unable to manifest (Director’s choice matching the fiction).</p>"
+          },
+          "HuntersFocus": {
+            "Name": "Hunter’s Focus",
+            "Description": "<p>Your anti-spirit workings gain an edge against spirits, undead, and corrupted creatures.</p>"
+          },
+          "ChainOfNames": {
+            "Name": "Chain of Names",
+            "Description": "<p>Invoke the Pact costs 2 less Conviction (minimum 5) when you use it to bind or banish a hostile spirit rather than summon an ally.</p>"
+          },
+          "SilencingSeal": {
+            "Name": "Silencing Seal",
+            "Description": "<p>Bound to Silence’s rider can also suppress a hostile working (a curse, a possession, an active summon) for its duration, not just the entity itself.</p>"
+          },
+          "WardAgainstIncursion": {
+            "Name": "Ward Against Incursion",
+            "Description": "<p>A hostile spirit that tries to manifest in or cross into your Sanctuary Ward takes corruption damage equal to [[lookup @P]]{your Persona score}.</p>"
+          },
+          "MarkedForBanishment": {
+            "Name": "Marked for Banishment",
+            "Description": "<p>Once per round, when you hit a spirit or corrupted creature with Smite / Rebuke, you mark it: your next hit against it gains an edge.</p>"
+          },
+          "PurgingRite": {
+            "Name": "Purging Rite",
+            "Description": "<p>Corruption’s Curse cast on a corrupted or possessed creature also removes 1 stack of corruption or possession from it (a cleanse rather than a curse, at the Director’s fiction call).</p>"
+          },
+          "HuntersBind": {
+            "Name": "Hunter’s Bind",
+            "Description": "<p>Your hunting spirit (Invoke the Pact, extension form) gains an edge on rolls made to track or restrain a spirit.</p>"
+          },
+          "SeveringWord": {
+            "Name": "Severing Word",
+            "Description": "<p>Fear of the Gods cast against a spirit or corrupted target also ends one of its ongoing summon or bind effects.</p>"
+          },
+          "UnbrokenCircle": {
+            "Name": "Unbroken Circle",
+            "Description": "<p>The first round each encounter that you sustain Sanctuary Ward against an active spirit incursion, it drains no Conviction.</p>"
+          },
+          "TheLastRite": {
+            "Name": "The Last Rite",
+            "Description": "<p>Once per encounter, as a free action, spend any amount of Conviction (minimum 5) to attempt an immediate banishment of a spirit or corrupted creature within range, whatever its tier.</p>"
+          }
+        }
       }
     },
     "Backgrounds": {

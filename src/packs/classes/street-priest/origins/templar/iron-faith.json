@@ -1,0 +1,32 @@
+{
+  "_id": "5ILNtmrKxz14gB5p",
+  "_key": "!items!5ILNtmrKxz14gB5p",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.IronFaith.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.IronFaith.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "iron-faith",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

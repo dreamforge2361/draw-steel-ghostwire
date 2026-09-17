@@ -1,0 +1,36 @@
+{
+  "_id": "pDdjf8A2QFjJz7hL",
+  "_key": "!items!pDdjf8A2QFjJz7hL",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.BurgeoningSaint.Name",
+  "type": "feature",
+  "img": "icons/magic/holy/angel-wings-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.BurgeoningSaint.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "burgeoning-saint",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "light"
+    }
+  }
+}

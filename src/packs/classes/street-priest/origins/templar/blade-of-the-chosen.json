@@ -1,0 +1,32 @@
+{
+  "_id": "a9sDPd4f7G0oXma7",
+  "_key": "!items!a9sDPd4f7G0oXma7",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.BladeOfTheChosen.Name",
+  "type": "feature",
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.BladeOfTheChosen.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "blade-of-the-chosen",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

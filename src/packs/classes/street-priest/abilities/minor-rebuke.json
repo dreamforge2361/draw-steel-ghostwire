@@ -1,0 +1,107 @@
+{
+  "_id": "6mCpAd4O9YwfxZQI",
+  "_key": "!items!6mCpAd4O9YwfxZQI",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Name",
+  "type": "ability",
+  "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "minor-rebuke",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Story",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 1,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "OZAlm0XoMPLlvlfC": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "OZAlm0XoMPLlvlfC",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.MinorRebuke.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

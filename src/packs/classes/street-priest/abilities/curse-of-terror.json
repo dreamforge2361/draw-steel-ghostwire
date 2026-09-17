@@ -1,0 +1,139 @@
+{
+  "_id": "qm6xIpUS9FePT0Hz",
+  "_key": "!items!qm6xIpUS9FePT0Hz",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.CurseOfTerror.Name",
+  "type": "ability",
+  "img": "icons/magic/unholy/silhouette-evil-horned-giant.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "curse-of-terror",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.CurseOfTerror.Story",
+    "keywords": [
+      "magic",
+      "ranged",
+      "strike"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "creature",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "TfVd9NAGUyNYnxgH": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "TfVd9NAGUyNYnxgH",
+          "damage": {
+            "tier1": {
+              "value": "6 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "9 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "13 + @chr",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
+        "ctt0u3lbBAZFMSvy": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "ctt0u3lbBAZFMSvy",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.CurseOfTerror.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.CurseOfTerror.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.CurseOfTerror.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

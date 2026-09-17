@@ -1,0 +1,32 @@
+{
+  "_id": "shwDK2zc6U6LxkDo",
+  "_key": "!items!shwDK2zc6U6LxkDo",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.RighteousMomentum.Name",
+  "type": "feature",
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.RighteousMomentum.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "righteous-momentum",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

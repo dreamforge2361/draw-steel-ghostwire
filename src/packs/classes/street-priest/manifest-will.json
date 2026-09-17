@@ -1,0 +1,32 @@
+{
+  "_id": "WCIO1WdPmPos4apg",
+  "_key": "!items!WCIO1WdPmPos4apg",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.ManifestWill.Name",
+  "type": "feature",
+  "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.ManifestWill.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "manifest-will",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "zOBCRI2mO3IFHpyr",
+  "_key": "!items!zOBCRI2mO3IFHpyr",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.ShepherdsBounty.Name",
+  "type": "feature",
+  "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.ShepherdsBounty.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shepherds-bounty",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "zBLbUAVSZbk5e9C7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

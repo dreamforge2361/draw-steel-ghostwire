@@ -1,0 +1,32 @@
+{
+  "_id": "Xxh5cFkutkhJpPl0",
+  "_key": "!items!Xxh5cFkutkhJpPl0",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.TheLastRite.Name",
+  "type": "feature",
+  "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.TheLastRite.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "the-last-rite",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

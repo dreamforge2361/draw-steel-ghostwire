@@ -1,0 +1,83 @@
+{
+  "_id": "RayGBvxC8Q7OHeCL",
+  "_key": "!items!RayGBvxC8Q7OHeCL",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.SanctuaryWard.Name",
+  "type": "ability",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sanctuary-ward",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.SanctuaryWard.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "maneuver",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "special",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "The warded zone or ally"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.SanctuaryWard.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "persistent000000": {
+        "_id": "persistent000000",
+        "type": "persistent",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.SanctuaryWard.Effect_persistent000000",
+        "essence": 1,
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 200000
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

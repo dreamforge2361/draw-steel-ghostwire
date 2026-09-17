@@ -1,0 +1,32 @@
+{
+  "_id": "TseRcQ8UFdkM6SBv",
+  "_key": "!items!TseRcQ8UFdkM6SBv",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.HuntersFocus.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.HuntersFocus.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hunters-focus",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

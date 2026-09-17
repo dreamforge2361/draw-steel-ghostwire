@@ -1,0 +1,32 @@
+{
+  "_id": "49EEEBRb3JbcMAFc",
+  "_key": "!items!49EEEBRb3JbcMAFc",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.RecoveringGrace.Name",
+  "type": "feature",
+  "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.RecoveringGrace.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "recovering-grace",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "zBLbUAVSZbk5e9C7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

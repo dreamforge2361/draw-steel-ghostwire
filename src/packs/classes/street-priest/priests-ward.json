@@ -1,0 +1,32 @@
+{
+  "_id": "zHHS1B7mF35z5zRH",
+  "_key": "!items!zHHS1B7mF35z5zRH",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.PriestsWard.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.PriestsWard.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "priests-ward",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

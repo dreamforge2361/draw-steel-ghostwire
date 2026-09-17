@@ -1,0 +1,32 @@
+{
+  "_id": "FXISR9yqHsgoKFMW",
+  "_key": "!items!FXISR9yqHsgoKFMW",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.ShepherdsDevotion.Name",
+  "type": "feature",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.ShepherdsDevotion.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shepherds-devotion",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "zBLbUAVSZbk5e9C7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

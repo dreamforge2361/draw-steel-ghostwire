@@ -1,0 +1,86 @@
+{
+  "_id": "gGGUKc8k1MdZ5B6r",
+  "_key": "!items!gGGUKc8k1MdZ5B6r",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.MyLifeForYours.Name",
+  "type": "ability",
+  "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "my-life-for-yours",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.MyLifeForYours.Story",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "triggered",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "GHOSTWIRE.Classes.StreetPriest.Items.MyLifeForYours.Trigger",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "selfOrAlly",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.MyLifeForYours.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 1,
+          "multiple": true
+        },
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.MyLifeForYours.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

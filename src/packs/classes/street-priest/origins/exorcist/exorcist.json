@@ -1,0 +1,255 @@
+{
+  "_id": "MuOuyX96pkEj1556",
+  "_key": "!items!MuOuyX96pkEj1556",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Exorcist.Name",
+  "type": "subclass",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.Exorcist.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "exorcist",
+    "advancements": {
+      "2brcFaixuunRE19y": {
+        "name": "GHOSTWIRE.Skills.List.Occult",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "2brcFaixuunRE19y",
+        "skills": {
+          "choices": [
+            "occult"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your ministry grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "BMigHmBwpOe7H0o3": {
+        "name": "Discerning Eye",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "BMigHmBwpOe7H0o3",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GjqHvIWxqz2xafco"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Epwea4iH2rDDmmHZ": {
+        "name": "1st-Level Exorcist Ability",
+        "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "Epwea4iH2rDDmmHZ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4SqbWy3NJkRy41OG"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RjhGPh1UdCJ9AGqJ"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "DvY18PlpQLmrVexR": {
+        "name": "2nd-Level Exorcist Ability",
+        "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "DvY18PlpQLmrVexR",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6yD50Wp0RwBxuflX"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.L5jMWgMVIsjbjMzL"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "F9zllFb4gNZrq8wF": {
+        "name": "Bound to Silence",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "F9zllFb4gNZrq8wF",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Ke27BNHCkf64gQR4"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Trf4sHxMjLZA3JuK": {
+        "name": "Hunter’s Focus",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "Trf4sHxMjLZA3JuK",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.TseRcQ8UFdkM6SBv"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "KHT6sY9WtZeM7rF2": {
+        "name": "6th-Level Exorcist Ability",
+        "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "KHT6sY9WtZeM7rF2",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.95HVm6glkylIZTXn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.7g6Hpbu23uyCYB54"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "q3snAWH5rxuxkOg9": {
+        "name": "Chain of Names",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "q3snAWH5rxuxkOg9",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.biww5ziSt5gjSGGQ"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "xHzPoUMhpsA0WbFO": {
+        "name": "Silencing Seal",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "xHzPoUMhpsA0WbFO",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.x4hu2JTc1bbdXBwy"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "CRY8MCkW8UFbjZkQ": {
+        "name": "The Last Rite",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "CRY8MCkW8UFbjZkQ",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Xxh5cFkutkhJpPl0"
+          }
+        ],
+        "description": "<p>Your ministry grants you its apex ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "street-priest"
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

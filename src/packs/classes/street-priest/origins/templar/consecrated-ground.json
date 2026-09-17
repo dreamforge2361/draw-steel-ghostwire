@@ -1,0 +1,32 @@
+{
+  "_id": "dBeQQPvDFJCMcP3e",
+  "_key": "!items!dBeQQPvDFJCMcP3e",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.ConsecratedGround.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.ConsecratedGround.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "consecrated-ground",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

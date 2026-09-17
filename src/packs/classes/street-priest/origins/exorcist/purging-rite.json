@@ -1,0 +1,32 @@
+{
+  "_id": "6yD50Wp0RwBxuflX",
+  "_key": "!items!6yD50Wp0RwBxuflX",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.PurgingRite.Name",
+  "type": "feature",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.PurgingRite.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "purging-rite",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

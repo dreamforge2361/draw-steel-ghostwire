@@ -1,0 +1,36 @@
+{
+  "_id": "zLQvgy2EsynBTE44",
+  "_key": "!items!zLQvgy2EsynBTE44",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.LightPact.Name",
+  "type": "feature",
+  "img": "icons/magic/holy/angel-wings-gray.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.LightPact.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "light-pact",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pactAlignment": "light"
+    }
+  }
+}

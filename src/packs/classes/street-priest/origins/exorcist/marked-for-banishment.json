@@ -1,0 +1,32 @@
+{
+  "_id": "RjhGPh1UdCJ9AGqJ",
+  "_key": "!items!RjhGPh1UdCJ9AGqJ",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.MarkedForBanishment.Name",
+  "type": "feature",
+  "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.MarkedForBanishment.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "marked-for-banishment",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

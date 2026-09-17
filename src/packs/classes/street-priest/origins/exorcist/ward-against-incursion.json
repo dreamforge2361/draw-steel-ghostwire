@@ -1,0 +1,32 @@
+{
+  "_id": "4SqbWy3NJkRy41OG",
+  "_key": "!items!4SqbWy3NJkRy41OG",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.WardAgainstIncursion.Name",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.WardAgainstIncursion.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ward-against-incursion",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

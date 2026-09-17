@@ -89,6 +89,7 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B26 | Medic class pack | **Done** (Foundry-verified 2026-09-16) | Medic (Reagents, **persist across encounters — turnGain "0", no reset at combat start**) + Street-Doc / Corp-Medtech / Ripperdoc in Ghostwire Classes; DS Troubadour spine; module v0.1.31 |
 | B27 | Wrench class pack | **Done** (Foundry-verified 2026-09-16) | Wrench (Uptime, turnGain "1" v1 baseline) + Drone Jockey / Vehicle Rig-Pilot / Facility Rigger in Ghostwire Classes; DS Talent spine, psionics scrubbed; machines inventory still backlog; module v0.1.32 |
 | B28 | Elementalist class pack | **Done** (Foundry-verified 2026-09-16) | Elementalist (Essence, turnGain "1" drip; Channel/Resonance in feature text) + Pyromancer / Stormcaller / Geomancer; signature summons + Elementalist foci grants; module v0.1.35 |
+| B29 | Street Priest class pack | **Done** (Foundry-verified 2026-09-17) | Street Priest (Conviction, turnGain "2"; Prayer Gamble in feature text) + Light/Dark pact overlay + Shepherd / Templar / Exorcist; Cyborg-blocked; module v0.1.37 |
 | B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
 | B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
@@ -246,4 +247,14 @@ Four Michael locks applied to `04-medic.md` and the Medic pack (module v0.1.33):
   - [x] Kit grant offers No Kit (Pure Caster) / Hexshot / Spellblade / Sanctified
   - [x] A Cyborg can't take Elementalist, and an Elementalist can't take the Cyborg ancestry
   - [x] + Add Class opens Ghostwire Classes
+  - [x] `node tools/build-packs.mjs` succeeds
+
+### B29 Street Priest (2026-09-16)
+**Pact overlay:** a level-1 **Pact Alignment** grant (choose Light Pact or Dark Pact feature, flagged `pactAlignment`). Pact-renamed features ship as Light and Dark variants flagged `pact` (Roster/Ledger L2, Burgeoning Saint/Rising Adept L6, Consecrated/Damned Weapon L9, Ordained/Sworn L9); `patchPactFilter` in `scripts/module.mjs` enables only the variant matching the chosen pact. **Judgment** (Templar L1) is an ability that applies an "Under Judgment" marker effect; its bane and Conviction gain are text + gain buttons. **Conviction:** +2 drip automatic; Prayer Gamble, creed echo, sustain (−2 × Persistent), and cap are feature text. Cyborg block and + Add Class reuse the B28 Arcane Severance gate (`street-priest` already listed). Numbers for Conduit-reskinned abilities come from the Draw Steel Conduit. Veil chapter still backlog; class text is enough to play.
+- [x] **B29** Street Priest class pack from `07-street-priest.md` (module v0.1.37) — **Foundry-verified 2026-09-17**. Done when:
+  - [x] Class picker shows Street Priest; Conviction (+2 per turn); core Persona / Instinct; Stamina 18 (+6), Recoveries 8
+  - [x] L1 Pact Alignment (Light / Dark) works; later Light/Dark grants offer only the matching version
+  - [x] Ministry picker: Shepherd / Templar / Exorcist with skill (Medicine / Melee / Occult), ladders, and ability picks at 1/2/6 (+ apex at 9)
+  - [x] L1: three class signatures + choose 2 of 8 signatures + 1/3/5 picks; 7 at L3 (incl. Invoke the Pact), 9 at L5, 11 at L8
+  - [x] Kit grant: No Kit / Sanctified / Raider / Duelist; Cyborg can't take Street Priest
   - [x] `node tools/build-packs.mjs` succeeds

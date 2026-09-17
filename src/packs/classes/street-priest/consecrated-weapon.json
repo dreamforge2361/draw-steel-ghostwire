@@ -1,0 +1,36 @@
+{
+  "_id": "0HGxETVn4a0CKQj4",
+  "_key": "!items!0HGxETVn4a0CKQj4",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.ConsecratedWeapon.Name",
+  "type": "feature",
+  "img": "icons/weapons/swords/sword-gold-holy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.ConsecratedWeapon.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "consecrated-weapon",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "light"
+    }
+  }
+}

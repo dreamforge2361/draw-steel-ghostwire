@@ -1,0 +1,255 @@
+{
+  "_id": "rzEMAxXPFg6PEFEb",
+  "_key": "!items!rzEMAxXPFg6PEFEb",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Shepherd.Name",
+  "type": "subclass",
+  "img": "icons/magic/life/cross-worn-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.Shepherd.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "shepherd",
+    "advancements": {
+      "hK8BByCHfI0IB94e": {
+        "name": "GHOSTWIRE.Skills.List.Medicine",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "hK8BByCHfI0IB94e",
+        "skills": {
+          "choices": [
+            "medicine"
+          ],
+          "groups": []
+        },
+        "description": "<p>Your ministry grants you the following skill.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null
+      },
+      "wevhCorXPTc7QhlU": {
+        "name": "Warden’s Grace",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "wevhCorXPTc7QhlU",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Izb0RYo974eqOZDz"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "kEbCc5u0CN2ap839": {
+        "name": "1st-Level Shepherd Ability",
+        "img": "icons/magic/life/cross-worn-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "_id": "kEbCc5u0CN2ap839",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.alO5H2Yui2zrqzVA"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nk9MdipTaEKh1wRf"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "6CBsdaH1FqzFXfEW": {
+        "name": "2nd-Level Shepherd Ability",
+        "img": "icons/magic/life/cross-worn-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "_id": "6CBsdaH1FqzFXfEW",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Rwe60WvZLWdcrBbo"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.49EEEBRb3JbcMAFc"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "GXPDTLv4FtvtikkG": {
+        "name": "Ward Anchor",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "_id": "GXPDTLv4FtvtikkG",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.1bIYVd1SaiJAnJVA"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ERBFSCkXwZHIbMVT": {
+        "name": "Shepherd’s Bounty",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "_id": "ERBFSCkXwZHIbMVT",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zOBCRI2mO3IFHpyr"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "y6IqbMnoI0EDSs7w": {
+        "name": "6th-Level Shepherd Ability",
+        "img": "icons/magic/life/cross-worn-green.webp",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "_id": "y6IqbMnoI0EDSs7w",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ttr3OMROzA5R7HLU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.YvT4W6pKCrROhUgE"
+          }
+        ],
+        "description": "<p>Choose one of the following ministry abilities.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": 1,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "J6G5I52RYLEi7cRl": {
+        "name": "Guardian’s Voice",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "_id": "J6G5I52RYLEi7cRl",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.yNhaCaF3jyn0oapz"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "v9KiHvO8Ds1kRa5h": {
+        "name": "Shepherd’s Devotion",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "_id": "v9KiHvO8Ds1kRa5h",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.FXISR9yqHsgoKFMW"
+          }
+        ],
+        "description": "<p>Your ministry grants you the following feature.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ths6uSnFgNfuUX08": {
+        "name": "The Shepherd’s Hour",
+        "img": null,
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "_id": "ths6uSnFgNfuUX08",
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ERDiF8wGCG9KVnQA"
+          }
+        ],
+        "description": "<p>Your ministry grants you its apex ability.</p>",
+        "sort": 0,
+        "repick": {},
+        "chooseN": null,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      }
+    },
+    "classLink": "street-priest"
+  },
+  "effects": [],
+  "folder": "zBLbUAVSZbk5e9C7",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

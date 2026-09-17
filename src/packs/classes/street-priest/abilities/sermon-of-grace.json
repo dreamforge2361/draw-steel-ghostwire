@@ -1,0 +1,73 @@
+{
+  "_id": "hKHU3bPqoAwKREtJ",
+  "_key": "!items!hKHU3bPqoAwKREtJ",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.SermonOfGrace.Name",
+  "type": "ability",
+  "img": "icons/magic/life/cross-area-circle-green-white.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sermon-of-grace",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.SermonOfGrace.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 5,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "4",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "ally",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.SermonOfGrace.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

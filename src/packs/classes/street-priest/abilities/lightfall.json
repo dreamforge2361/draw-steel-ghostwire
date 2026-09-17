@@ -1,0 +1,118 @@
+{
+  "_id": "t5QxYEpwOt6QsFli",
+  "_key": "!items!t5QxYEpwOt6QsFli",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Lightfall.Name",
+  "type": "ability",
+  "img": "icons/magic/light/explosion-star-large-orange.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "priest-lightfall",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.Lightfall.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "2",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": null,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "HLnyBz4SoxcAYzYC": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "HLnyBz4SoxcAYzYC",
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "3",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "5",
+              "types": [
+                "holy"
+              ],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.Lightfall.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

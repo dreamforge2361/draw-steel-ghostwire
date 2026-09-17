@@ -1,0 +1,112 @@
+{
+  "_id": "5j3bf4jIWrjHmlKw",
+  "_key": "!items!5j3bf4jIWrjHmlKw",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.WordsOfWrathAndGrace.Name",
+  "type": "ability",
+  "img": "icons/magic/life/cross-area-circle-green-white.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "words-of-wrath-and-grace",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.WordsOfWrathAndGrace.Story",
+    "keywords": [
+      "area",
+      "magic"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "burst",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "Each enemy and ally in the area"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "presence"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "iIOZAY4dKo0sYB5E": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "iIOZAY4dKo0sYB5E",
+          "damage": {
+            "tier1": {
+              "value": "2",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "5",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "7",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.WordsOfWrathAndGrace.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

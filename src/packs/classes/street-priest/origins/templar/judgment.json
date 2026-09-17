@@ -1,0 +1,113 @@
+{
+  "_id": "RDaCVNVH2mDiZR9a",
+  "_key": "!items!RDaCVNVH2mDiZR9a",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Judgment.Name",
+  "type": "ability",
+  "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "judgment",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.Judgment.Story",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "enemy",
+      "value": 1,
+      "custom": ""
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.Judgment.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "templar"
+      ],
+      "level": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "SPR0000000judged",
+      "_key": "!items.effects!RDaCVNVH2mDiZR9a.SPR0000000judged",
+      "name": "Under Judgment",
+      "img": "icons/magic/holy/projectiles-blades-salvo-yellow.webp",
+      "type": "base",
+      "origin": "Compendium.draw-steel-ghostwire.classes.Item.RDaCVNVH2mDiZR9a",
+      "transfer": false,
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "disabled": false,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": "combatEnd",
+        "expired": false
+      },
+      "description": "<p>Under a Templar’s Judgment: a bane on power rolls made within the Templar’s line of effect, and the Templar gains Conviction the first time each round they trade damage.</p>",
+      "tint": "#ffffff",
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": null,
+      "showIcon": 1
+    }
+  ],
+  "folder": "MISID7NNOkJfO3Yd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

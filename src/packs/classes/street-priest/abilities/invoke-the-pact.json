@@ -1,0 +1,116 @@
+{
+  "_id": "debPhrog0Lwjp57H",
+  "_key": "!items!debPhrog0Lwjp57H",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Name",
+  "type": "ability",
+  "img": "icons/magic/holy/angel-wings-gray.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "invoke-the-pact",
+    "story": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Story",
+    "keywords": [
+      "magic",
+      "ranged"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": 7,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 unoccupied space for the entity"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "intuition"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "xAQopHQrR7zdyRCA": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "xAQopHQrR7zdyRCA",
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 100
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "persistent000000": {
+        "_id": "persistent000000",
+        "type": "persistent",
+        "description": "GHOSTWIRE.Classes.StreetPriest.Items.InvokeThePact.Effect_persistent000000",
+        "essence": 2,
+        "before": false,
+        "name": "",
+        "img": null,
+        "sort": 200000
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "street-priest"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "I2xQFBoN6KxuZH5u",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "GjqHvIWxqz2xafco",
+  "_key": "!items!GjqHvIWxqz2xafco",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.DiscerningEye.Name",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.DiscerningEye.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "discerning-eye",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

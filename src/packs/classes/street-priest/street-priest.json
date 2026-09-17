@@ -1,0 +1,920 @@
+{
+  "_id": "sbDDAQTHVatzuUqo",
+  "_key": "!items!sbDDAQTHVatzuUqo",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.Class.Name",
+  "type": "class",
+  "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.Class.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-priest",
+    "advancements": {
+      "h9WQvu0edjK1C8qp": {
+        "_id": "h9WQvu0edjK1C8qp",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Religion",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Religion skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "religion"
+          ]
+        },
+        "chooseN": null,
+        "sort": 1000
+      },
+      "RVhdgqWdXjkfow80": {
+        "_id": "RVhdgqWdXjkfow80",
+        "img": null,
+        "repick": {},
+        "name": "GHOSTWIRE.Skills.List.Rituals",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>You gain the Rituals skill.</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "rituals"
+          ]
+        },
+        "chooseN": null,
+        "sort": 2000
+      },
+      "akaxrmqE3jOPuLx5": {
+        "_id": "akaxrmqE3jOPuLx5",
+        "img": null,
+        "repick": {},
+        "name": "Interpersonal Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose Insight (discernment) or Persuasion (ministry).</p>",
+        "skills": {
+          "groups": [],
+          "choices": [
+            "insight",
+            "persuasion"
+          ]
+        },
+        "chooseN": 1,
+        "sort": 3000
+      },
+      "6DAhSaeGOWrFqGqw": {
+        "_id": "6DAhSaeGOWrFqGqw",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 1
+        },
+        "description": "<p>Choose one skill from the Social, Knowledge, or Magic skill groups. Skip your ministry skill (Shepherd: Medicine, Templar: Melee, Exorcist: Occult); it’s granted separately. (<em>Quick Build:</em> Occult for a Shepherd or Templar, Spellcraft for an Exorcist.)</p>",
+        "skills": {
+          "groups": [
+            "social",
+            "knowledge",
+            "magic"
+          ],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 4000
+      },
+      "Asw7GvEgtAjM8T3C": {
+        "_id": "Asw7GvEgtAjM8T3C",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.UooVmKkcRB9elztR"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.VPxRqPh9saKoXh6z"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zHHS1B7mF35z5zRH"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 5000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "fEHjUqlz6QpFcAQ1": {
+        "_id": "fEHjUqlz6QpFcAQ1",
+        "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+        "repick": {},
+        "name": "Pact Alignment",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zLQvgy2EsynBTE44"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.p2itd7wSbc6QJ4Zh"
+          }
+        ],
+        "description": "<p>Choose your pact alignment: <strong>Light</strong> (holy damage, strict conduct, light corruption) or <strong>Dark</strong> (corruption damage, the debt comes due, heavy corruption). This choice is permanent and overlays your ministry. (<em>Quick Build:</em> Light.)</p>",
+        "chooseN": 1,
+        "sort": 6000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "IX5kaRX6mF5x8rWy": {
+        "_id": "IX5kaRX6mF5x8rWy",
+        "img": "icons/containers/bags/pack-leather-black-brown.webp",
+        "repick": {},
+        "name": "Kit",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.Fr3eCasterNoKit1"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.SAcWR4RstQocW4Ii"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.m0Xsm28kSSVDYVPk"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.kits.Item.9P2atUoP2dnT22Zn"
+          }
+        ],
+        "description": "<p>Choose a light Kit: the <strong>Sanctified</strong> Kit (its magic rider reskins as holy or corruption power by pact), a martial light Kit (Raider or Duelist, for a Templar holding the line), or <strong>No Kit (Pure Caster)</strong> to work entirely through invocation. (<em>Quick Build:</em> Sanctified.)</p>",
+        "chooseN": 1,
+        "sort": 7000,
+        "additional": {
+          "type": "kit",
+          "perkType": []
+        }
+      },
+      "TXlCmQpSYNGymCVE": {
+        "_id": "TXlCmQpSYNGymCVE",
+        "img": "icons/magic/holy/angel-wings-gray.webp",
+        "repick": {},
+        "name": "Ministry",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.rzEMAxXPFg6PEFEb"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.oBwuneN3UlK8qm0u"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.MuOuyX96pkEj1556"
+          }
+        ],
+        "description": "<p>Choose your ministry: <strong>Shepherd</strong> (healing and warding), <strong>Templar</strong> (smiting and the Judgment mark), or <strong>Exorcist</strong> (banishment and counter-spirit work). Each grants a skill. (<em>Quick Build:</em> Shepherd.)</p><p><strong>Cyborgs can’t be Street Priests</strong> (Arcane Severance).</p>",
+        "chooseN": 1,
+        "sort": 8000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "1vx1t2gzWDyhHm5M": {
+        "_id": "1vx1t2gzWDyhHm5M",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Class Signatures",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GcJ8b0kw4DLqfUnN"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zuGo5iTGool1tN4u"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Z0RGg4tujQiE1wO9"
+          }
+        ],
+        "description": "<p>Every Street Priest has these three signatures: Lay On Hands / Word of Comfort, Smite / Rebuke, and Sense the Veil / Discern Spirits.</p>",
+        "chooseN": null,
+        "sort": 9000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "kVaLVNSOePN0wfgh": {
+        "_id": "kVaLVNSOePN0wfgh",
+        "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
+        "repick": {},
+        "name": "Signature Abilities",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.75cOal6Bov8zCIYi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QugJ5UZHgyW5UM4i"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JXCLBRELJP9ryI3s"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.t5QxYEpwOt6QsFli"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.Cm9nHvx8QfHMGE1g"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.iPKw8vOyQCET4mvv"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ug7F7bHjRFR32lAU"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.NJh7nN6m00ZDwC01"
+          }
+        ],
+        "description": "<p>Choose two more signature abilities. Some are always holy (Light-flavored) or always corruption (Dark-flavored); Rebuke and Word of Rebuke follow your pact. (<em>Quick Build:</em> Blessed Light, Warrior’s Prayer.)</p>",
+        "chooseN": 2,
+        "sort": 10000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "lXnIYqm2cl0bgHpT": {
+        "_id": "lXnIYqm2cl0bgHpT",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "1 Conviction Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.6mCpAd4O9YwfxZQI"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HeFJUsCHdByqjJPW"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 1 Conviction to use. (<em>Quick Build:</em> Whisper of Comfort.)</p>",
+        "chooseN": 1,
+        "sort": 11000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "akrvhot9KMR6JGvA": {
+        "_id": "akrvhot9KMR6JGvA",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "3 Conviction Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.VLZwjjeVcRFw3hDp"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PGOqq8xMSaHjjpAa"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DZkOoNk2TFuKQjEh"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.dEsWzKtVvkX0TeK2"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 3 Conviction to use. (<em>Quick Build:</em> Judgment’s Hammer.)</p>",
+        "chooseN": 1,
+        "sort": 12000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "70B8CAssAEgZHE19": {
+        "_id": "70B8CAssAEgZHE19",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "5 Conviction Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gGGUKc8k1MdZ5B6r"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.RayGBvxC8Q7OHeCL"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.4Ue1UZBkFQMz729a"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.qm6xIpUS9FePT0Hz"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ndD0z4rHO9IDLKB2"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.hKHU3bPqoAwKREtJ"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Conviction to use. (<em>Quick Build:</em> Sermon of Grace.)</p>",
+        "chooseN": 1,
+        "sort": 13000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Esgzu7VwBTKsu97y": {
+        "_id": "Esgzu7VwBTKsu97y",
+        "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+        "repick": {},
+        "name": "The Roster of the Saved / The Ledger of the Damned",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3CXbaI2Zph1m97D4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.3Gca6AfozStSnE5u"
+          }
+        ],
+        "description": "<p>Take the version that matches your pact alignment (only your pact’s version can be chosen).</p>",
+        "chooseN": 1,
+        "sort": 14000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "ezF8l6mWx1kuhmOI": {
+        "_id": "ezF8l6mWx1kuhmOI",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 2
+        },
+        "description": "<p>You gain one interpersonal, lore, or supernatural perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "interpersonal",
+            "lore",
+            "supernatural"
+          ]
+        },
+        "sort": 15000,
+        "pool": []
+      },
+      "HZSD4kjDDmmQpGtT": {
+        "_id": "HZSD4kjDDmmQpGtT",
+        "img": null,
+        "repick": {},
+        "name": "Minor Miracle",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.tcxKMiWThBgtFgdL"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 16000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "IiSSUg6bgsJsZO8S": {
+        "_id": "IiSSUg6bgsJsZO8S",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "7 Conviction Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 3
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.debPhrog0Lwjp57H"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.gc4myGg2wmESNagi"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.zasyEuWdviCCYeHn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.TtDRDPgZBMIoGjqT"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.5j3bf4jIWrjHmlKw"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 7 Conviction to use.</p>",
+        "chooseN": 1,
+        "sort": 17000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "F0kWhseQeSlDX2FA": {
+        "_id": "F0kWhseQeSlDX2FA",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>Your Persona and Instinct scores each increase to 3.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 0,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 3,
+        "sort": 18000
+      },
+      "U9DCiRcbuJYMZhUw": {
+        "_id": "U9DCiRcbuJYMZhUw",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 19000,
+        "pool": []
+      },
+      "DFlYVDywNCJSsCk3": {
+        "_id": "DFlYVDywNCJSsCk3",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 4
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 20000
+      },
+      "TXfBuJfAIFDA9ZIr": {
+        "_id": "TXfBuJfAIFDA9ZIr",
+        "img": null,
+        "repick": {},
+        "name": "Deepened Subclass",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 4
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.GctpFZC0Acb3M84R"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 21000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "8hGaEisG1bqCgeoy": {
+        "_id": "8hGaEisG1bqCgeoy",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "9 Conviction Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 5
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.nlA8OnTdODomNrm5"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.QRTk0deJeYyWTGbF"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ClCWEIEG6XH5SY8O"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.HKZwascEyMRtuI1l"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 9 Conviction to use.</p>",
+        "chooseN": 1,
+        "sort": 22000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "c6LEqHUfrjdh6vED": {
+        "_id": "c6LEqHUfrjdh6vED",
+        "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+        "repick": {},
+        "name": "Burgeoning Saint / Rising Adept",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.pDdjf8A2QFjJz7hL"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.aYiMNnFgpNBAVYqF"
+          }
+        ],
+        "description": "<p>Take the version that matches your pact alignment (only your pact’s version can be chosen).</p>",
+        "chooseN": 1,
+        "sort": 23000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "vDefi4b4ZFA1EHvc": {
+        "_id": "vDefi4b4ZFA1EHvc",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 6
+        },
+        "description": "<p>You gain one interpersonal, lore, or supernatural perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "interpersonal",
+            "lore",
+            "supernatural"
+          ]
+        },
+        "sort": 24000,
+        "pool": []
+      },
+      "xCV4rav7w4RgVC1p": {
+        "_id": "xCV4rav7w4RgVC1p",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>Each of your characteristic scores increases by 1, to a maximum of 4.</p>",
+        "characteristics": {
+          "might": 1,
+          "agility": 1,
+          "reason": 1,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 4,
+        "sort": 25000
+      },
+      "hwB1Y9tyPEAJSFXJ": {
+        "_id": "hwB1Y9tyPEAJSFXJ",
+        "img": null,
+        "repick": {},
+        "name": "Pact’s Favor",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 7
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.JEUus8M7PcCZYPOm"
+          }
+        ],
+        "description": "<p>You gain the following feature.</p>",
+        "chooseN": null,
+        "sort": 26000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "v77mmG3P2DdQfw1W": {
+        "_id": "v77mmG3P2DdQfw1W",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 7
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 27000
+      },
+      "qXVasasI6cFdtJSl": {
+        "_id": "qXVasasI6cFdtJSl",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 28000,
+        "pool": []
+      },
+      "d1VaLjMBc5ocGHoc": {
+        "_id": "d1VaLjMBc5ocGHoc",
+        "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+        "repick": {},
+        "name": "11 Conviction Ability",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 8
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.xYHj2DH3vzxKlQU3"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.KBWWbHBJBAdPdHJW"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.17G1G1nAiSDZEQNL"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.N5vUHzGyKnF3Pk84"
+          }
+        ],
+        "description": "<p>Choose one heroic ability from the following options, each of which costs 11 Conviction to use.</p>",
+        "chooseN": 1,
+        "sort": 29000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "pYpFyHThcTgAEuom": {
+        "_id": "pYpFyHThcTgAEuom",
+        "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+        "repick": {},
+        "name": "Consecrated Weapon / Damned Weapon",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.0HGxETVn4a0CKQj4"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.sKrl2Yd6v17N0SXg"
+          }
+        ],
+        "description": "<p>Take the version that matches your pact alignment (only your pact’s version can be chosen).</p>",
+        "chooseN": 1,
+        "sort": 30000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "Fm288nGRFOgOi1TR": {
+        "_id": "Fm288nGRFOgOi1TR",
+        "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+        "repick": {},
+        "name": "Ordained / Sworn",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.ME9D0LfssYyXPNwY"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DTS7VLjHCi1RSJ28"
+          }
+        ],
+        "description": "<p>Take the version that matches your pact alignment (only your pact’s version can be chosen).</p>",
+        "chooseN": 1,
+        "sort": 31000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "9uXkSpfMJwYStz5g": {
+        "_id": "9uXkSpfMJwYStz5g",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 9
+        },
+        "description": "<p>You gain one perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": []
+        },
+        "sort": 32000,
+        "pool": []
+      },
+      "EfVzDYpF324rC5vC": {
+        "_id": "EfVzDYpF324rC5vC",
+        "img": null,
+        "repick": {},
+        "name": "",
+        "type": "characteristic",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>Your Persona and Instinct scores each increase to 5.</p>",
+        "characteristics": {
+          "might": 0,
+          "agility": 0,
+          "reason": 0,
+          "intuition": 1,
+          "presence": 1
+        },
+        "max": 5,
+        "sort": 33000
+      },
+      "sMxSVdAgtjg67pA0": {
+        "_id": "sMxSVdAgtjg67pA0",
+        "img": "icons/magic/symbols/runes-star-magenta.webp",
+        "repick": {},
+        "name": "Features",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.DUaZF4T5QBRphQkn"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.WCIO1WdPmPos4apg"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.vy6WjKEfL5eUayLu"
+          }
+        ],
+        "description": "<p>You gain the following features.</p>",
+        "chooseN": null,
+        "sort": 34000,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
+      "HWFYNHocS0Q9qEsu": {
+        "_id": "HWFYNHocS0Q9qEsu",
+        "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+        "repick": {},
+        "name": "Perk",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one interpersonal, lore, or supernatural perk of your choice.</p>",
+        "chooseN": 1,
+        "additional": {
+          "type": "perk",
+          "perkType": [
+            "interpersonal",
+            "lore",
+            "supernatural"
+          ]
+        },
+        "sort": 35000,
+        "pool": []
+      },
+      "wP1oDDprG6EEEXOI": {
+        "_id": "wP1oDDprG6EEEXOI",
+        "img": null,
+        "repick": {},
+        "name": "Skill",
+        "type": "skill",
+        "requirements": {
+          "level": 10
+        },
+        "description": "<p>You gain one Ghostwire skill of your choice.</p>",
+        "skills": {
+          "groups": [],
+          "choices": []
+        },
+        "chooseN": 1,
+        "sort": 36000
+      }
+    },
+    "level": 0,
+    "primary": "Conviction",
+    "epic": "Manifest Will",
+    "turnGain": "2",
+    "minimum": "0",
+    "characteristics": {
+      "core": [
+        "presence",
+        "intuition"
+      ]
+    },
+    "stamina": {
+      "starting": 18,
+      "level": 6
+    },
+    "recoveries": 8
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

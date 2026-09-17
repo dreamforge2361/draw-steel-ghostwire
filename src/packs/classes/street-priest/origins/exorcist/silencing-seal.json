@@ -1,0 +1,32 @@
+{
+  "_id": "x4hu2JTc1bbdXBwy",
+  "_key": "!items!x4hu2JTc1bbdXBwy",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.SilencingSeal.Name",
+  "type": "feature",
+  "img": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.SilencingSeal.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "silencing-seal",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

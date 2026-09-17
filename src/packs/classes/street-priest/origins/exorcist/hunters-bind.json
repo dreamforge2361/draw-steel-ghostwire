@@ -1,0 +1,32 @@
+{
+  "_id": "L5jMWgMVIsjbjMzL",
+  "_key": "!items!L5jMWgMVIsjbjMzL",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.HuntersBind.Name",
+  "type": "feature",
+  "img": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.HuntersBind.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hunters-bind",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "biww5ziSt5gjSGGQ",
+  "_key": "!items!biww5ziSt5gjSGGQ",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.ChainOfNames.Name",
+  "type": "feature",
+  "img": "icons/magic/control/debuff-energy-hold-levitate-blue-yellow.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.ChainOfNames.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chain-of-names",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "RmZcE71LdwIhFPwd",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -66,6 +66,7 @@ Hooks.once("init", () => {
   registerPerkTypes();
   patchPerkGrants();
   patchPreviousLifeFilter();
+  patchPactFilter();
   patchAddOrigin();
   patchArcaneSeverance();
   enforceHeroicResourceCost();
@@ -335,6 +336,36 @@ function patchPreviousLifeFilter() {
     const formerLife = findFormerLife(this.node.chain);
     return !!formerLife?.folder && ((item._source?.folder ?? item.folder?.id) === formerLife.folder);
   };
+}
+
+// Street Priest pact (07-street-priest.md): pact-named features come in Light and Dark versions, flagged
+// flags.draw-steel-ghostwire.pact. A grant only enables the version matching the Light Pact / Dark Pact feature
+// chosen earlier in the chain or already on the actor (both stay enabled until a pact is known).
+function patchPactFilter() {
+  const dialog = ds.applications.apps.advancement?.ItemGrantConfigurationDialog;
+  if (!dialog?.prototype.fulfillsRequirements) {
+    console.warn(`${MODULE_ID} | ItemGrantConfigurationDialog not found; Light/Dark pact features are unfiltered`);
+    return;
+  }
+  const original = dialog.prototype.fulfillsRequirements;
+  dialog.prototype.fulfillsRequirements = function(item) {
+    if (!original.call(this, item)) return false;
+    const pact = item.getFlag?.(MODULE_ID, "pact") ?? item.flags?.[MODULE_ID]?.pact;
+    if (!pact) return true;
+    const alignment = findPactAlignment(this.node.chain);
+    return !alignment || (alignment === pact);
+  };
+}
+
+function findPactAlignment(chain) {
+  for (const node of chain.activeNodes()) {
+    if (node.advancement.type !== "itemGrant") continue;
+    for (const uuid of node.chosenSelection ?? []) {
+      const alignment = node.choices[uuid]?.item?.getFlag(MODULE_ID, "pactAlignment");
+      if (alignment) return alignment;
+    }
+  }
+  return chain.actor.items.find(i => i.getFlag(MODULE_ID, "pactAlignment"))?.getFlag(MODULE_ID, "pactAlignment") ?? null;
 }
 
 // The Former Life chosen earlier in this advancement chain, or already on the actor.

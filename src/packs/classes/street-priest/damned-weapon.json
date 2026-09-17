@@ -1,0 +1,36 @@
+{
+  "_id": "sKrl2Yd6v17N0SXg",
+  "_key": "!items!sKrl2Yd6v17N0SXg",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.DamnedWeapon.Name",
+  "type": "feature",
+  "img": "icons/weapons/swords/sword-runed-glowing.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.DamnedWeapon.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "damned-weapon",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "dark"
+    }
+  }
+}

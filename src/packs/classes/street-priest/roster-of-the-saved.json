@@ -1,0 +1,36 @@
+{
+  "_id": "3CXbaI2Zph1m97D4",
+  "_key": "!items!3CXbaI2Zph1m97D4",
+  "name": "GHOSTWIRE.Classes.StreetPriest.Items.RosterOfTheSaved.Name",
+  "type": "feature",
+  "img": "icons/sundries/books/book-open-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Classes.StreetPriest.Items.RosterOfTheSaved.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "07-street-priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "roster-of-the-saved",
+    "advancements": {},
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "c52Qq1HDuJYI4DjE",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "pact": "light"
+    }
+  }
+}
