@@ -39,6 +39,14 @@
 - `docs/rulebook/09-species.md`
 - `docs/rulebook/10-kits.md`
 - `docs/rulebook/01-operator.md` … `08-hacker.md` (terminology pass 2026-09-16)
+- `docs/rulebook/11-economy.md`, `14-mods.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (gear echelon + §Craft)
+
+
+## Gear grade (2026-09-16/17)
+
+Ghostwire gear uses **Echelon 1–4 + Availability** (Street → Prototype). There is **no** Ghostwire item-tier ladder in player-facing text. Legacy **Item Tier / T5–T1** columns in the Gear master are gear-grade labels only — map T5→E1 Street, T4→E1 Professional, T3→E2 Restricted, T2→E3 Military, T1→E4 Prototype (see `14-mods.md`).
+
+**§Craft ≠ skill.** §Craft is the downtime **Project procedure**; Power Rolls use Hacking / Electronics / Repair / Cybertech by host. Outcome Tier / Power Roll bands are not Item Tier.
 
 ## Still owed
 

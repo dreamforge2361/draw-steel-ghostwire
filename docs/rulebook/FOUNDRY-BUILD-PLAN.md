@@ -28,6 +28,10 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 - [x] SPECIES-DS-MAP + DS-ALIGNMENT doctrine locked
 - [x] Economy v1 + Chrome v1 rulebook drafts (2026-09-16) — Michael review pending
 - [x] Chrome master ingested to `docs/masters/GHOSTWIRE_CHROME_MASTER.md`
+- [x] Gear master ingested + DS ALIGNMENT OVERRIDE
+- [x] Mods chapter locked (`14-mods.md`) — Invent a Mod; echelon remap
+- [x] ART-STYLE brief locked
+- [x] Backgrounds & Professions v1 (`13-backgrounds-professions.md`)
 
 ### Module / tooling bootstrap
 - [x] Module repo exists; package id `draw-steel-ghostwire` v0.1.1
@@ -54,6 +58,9 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 | Cyborg System Crisis Director table | Optional | Pointer exists in Species |
 | Veil entity-grade tables (old T-labels) | Later | Stage 4 cleanup |
 | Lore/art harvest | Later | Stage 5 |
+| Mods chapter (`14-mods.md`) | **Locked** 2026-09-16/17 | Invent a Mod; echelon gear remap; §Craft skills |
+| ART-STYLE (`ART-STYLE.md`) | **Locked** 2026-09-16 | Visual brief for PDF/Journal art |
+| Gear master ingest | **Done** | `GHOSTWIRE_GEAR_MASTER.md` + DS ALIGNMENT OVERRIDE |
 
 ---
 
@@ -72,7 +79,9 @@ Ship data **incrementally**. Each row should leave the module loadable.
 | B5 | Class content pack (start Operator) | Todo | Mirror Development Masters / rulebook 01 |
 | B6 | Classes 02–08 | Todo | Same pattern as Operator |
 | B7 | Wire / Veil / Machines lean packs | Todo | After Stage 4 rule text exists (or thin stubs) |
-| B8 | Chrome / Body Integrity data | **Next after review** | Rule text drafted; Foundry Integrity resource + sample implants after Michael approves |
+| B8 | Chrome / Body Integrity data | **Done** (pack shipped) | Chrome pack with Integrity costs + provisional ¥ |
+| B19 | Full gear import | **In progress / pending verify** | Gear master → Foundry gear pack; Kit-qualifying subset already shipped; Claude owns `src/packs` JSON |
+| B20 | Mods expansion + Invent a Mod | **Pending** | Align Mods pack to `14-mods.md`; armor/gadget families; Claude owns packs |
 
 **Rule:** do not invent Foundry schemas that fight `draw-steel`. Read stock DS packs first; reskin/override/add module packs.
 
@@ -110,9 +119,9 @@ This is **separate** from “data exists in a pack.” Data first, then wire cre
 
 ## Suggested next 3 moves (narrow)
 
-1. **Michael review** — Economy v1 + Chrome v1 (+ Chrome master). Resolve open questions (Kit ¥ vs doctrine firewall; starter gear vs ¥5,000).
-2. **B8** — Foundry Body Integrity resource + sample implants (after review). Class packs after.
-3. **B2b / B3 / C0** — lang remaps, remaining Peoples (eight Peoples rulebook done), or dedicated test world — pick one Foundry focus after B8 or in parallel.
+1. **B19** — verify / finish full gear import from Gear master (Claude; do not thrash pack JSON from docs agents).
+2. **B20** — Mods pack expansion + Invent a Mod alignment to `14-mods.md` (echelon not tier).
+3. **Delivery** — PDF + Foundry Journal from `docs/rulebook/`; ART-STYLE locked. Parallel: remaining Peoples / class packs / C0 test world.
 
 ---
 
@@ -128,7 +137,9 @@ After each spike:
 - **2026-09-16** — B1+B2 done locally: `f88a8f0` signature, `b5fcd69` 3-point menu. Sheet labels locked Background/Profession/Class. Next: push, B2b lang remaps, then Corran (B3).
 - **2026-09-16** — Economy v1 + Chrome v1 drafts + Chrome master ingest. Eight Peoples Foundry/rulebook ancestry packages already done. Next: Michael review → B8 Integrity + sample implants → class packs.
 
+- **2026-09-16/17** — Mods chapter locked (`14-mods.md`); Invent a Mod; §Craft skill cleanup; Gear master DS ALIGNMENT OVERRIDE (echelon + Availability; no player-facing Item Tier). ART-STYLE locked. B19 gear import / B20 mods = next Foundry (Claude). Delivery = PDF + Journal.
+
 ### Rulebook delivery (locked 2026-09-16)
 - Masters under `docs/masters/` are SoR (including `GHOSTWIRE_GEAR_MASTER.md`).
 - Final product ships as: (1) PDF rulebook built from `docs/rulebook/` + masters, (2) Foundry **Journal** compendium pack with the same chapters as in-world rulebook.
-- Gear/mods/economy numbers come from the Gear master; player-facing text uses Availability bands (Item Tier = gear grade only: price / Avail / mod slots).
+- Gear/mods/economy numbers come from the Gear master; player-facing text uses **Echelon 1–4 + Availability** (Street→Prototype). Legacy Item Tier columns = gear grade only (price / Avail / mod slots) — see Gear master OVERRIDE + `14-mods.md`. **§Craft ≠ skill.**

@@ -113,9 +113,10 @@ Weapon/armor "category" is what the Economy item must satisfy; bonus lines are i
 ## Economy + Chrome bridge (locked 2026-09-16)
 
 - **Doctrine never costs ¥.** Starting: one free Kit **including street-band qualifying gear**. Later Kits: class / mentor / downtime training — not a nuyen purchase.
+- **Chargen street-band gear grant (locked):** the free Kit auto-grants street-band qualifying gear for its category **at chargen only**. **Merc** (dual Kit) receives street-band qualifying gear for **both** Kits. **Mods never auto-grant** — buy, craft, or invent later (`docs/rulebook/14-mods.md`).
 - **¥ buys objects:** weapons, armor, mods, chrome, Cyborg frame modules.
 - **Ownership rule** keeps Economy meaningful: no qualifying gear → no Kit bonuses.
-- See `docs/rulebook/11-economy.md` and `docs/rulebook/12-chrome.md`.
+- See `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`, and `docs/rulebook/14-mods.md`.
 
 ## How Kits connect to the rest of the game
 
@@ -132,6 +133,7 @@ Deferred to the numeric/gear pass: every Kit's exact bonus values, signature-abi
 ## Related chapters
 
 - Economy (nuyen, Availability-gated gear, mod-slot crafting)
+- Mods (`14-mods.md` — §Craft Projects, Invent a Mod, echelon gear grade)
 - Chrome (cyber-implants — Body Integrity cost, unarmed/light-weapon Kit interlock)
 - Combat (Power Roll result bands, action economy — where Kit bonuses plug in)
 - Downtime (Kit swaps; gear acquisition and mod crafting)
