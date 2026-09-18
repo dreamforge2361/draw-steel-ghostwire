@@ -238,6 +238,13 @@
         "Description": "<p>More than 5 Body Integrity is spent on installed chrome. Every Magic, Veil, or Resonance power roll takes a bane until surgical removal brings spent Integrity back to 5 or less. Ghostwire adds and removes this effect automatically; disable it to waive the bane.</p>"
       }
     },
+    "MagicErosion": {
+      "Resource": "Casting",
+      "SheetLine": "{resource} cap {cap} (base {base} − erosion {erosion})",
+      "SheetLineEroded": "{resource} cap {cap} (base {base} − erosion {erosion}) — chrome is eroding your magic",
+      "Breakdown": "Magic erosion: Soft {soft} Integrity → −{softLoss} · Standard {standard} → −{standardLoss} · Salvage {salvage} → −{salvageLoss}. Base cap is 8 / 12 / 16 / 20 by echelon (Street Priest: +2 Burgeoning Saint / Rising Adept, +4 Most Faithful). Gains past the cap are lost.",
+      "Clamped": "{actor}'s casting resource is capped at {cap} by level and magic erosion; the excess is lost."
+    },
     "Chrome": {
       "Datajack": {
         "Name": "Datajack",

@@ -79,6 +79,15 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   font-weight: bold;
 }
 
+.ghostwire-integrity .ghostwire-magic-erosion {
+  flex: 1 0 100%;
+  margin: 0;
+}
+
+.ghostwire-integrity .ghostwire-magic-erosion.eroded {
+  color: var(--color-level-error, #d33);
+}
+
 /* Chrome implant summary line under the item name */
 .ghostwire-chrome-line {
   font-size: var(--font-size-12, 12px);

@@ -6,7 +6,7 @@
 //   The bane itself is added in AbilityModel#use, like the Wired edges and banes: Draw Steel's ability-modifier effects
 //   filter on ALL listed keywords, and one Active Effect per keyword would stack banes on multi-keyword abilities.
 //   A GM can waive the bane by disabling the effect; sync never re-enables it.
-// - Magic erosion (the cast-resource cap) is separate and unchanged.
+// - Magic erosion (the cast-resource cap) is separate: magic-erosion.mjs, which reuses isCasterClass from here.
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.CasterChrome";
@@ -111,4 +111,5 @@ export function registerCasterChrome({ isCyborg, casterClasses }) {
 
   const module = game.modules.get(MODULE_ID);
   if (module) module.api = { ...(module.api ?? {}), chromeIntegritySpent, isCasterClass, casterSoftCap: CASTER_SOFT_CAP };
+  return { isCasterClass };
 }
