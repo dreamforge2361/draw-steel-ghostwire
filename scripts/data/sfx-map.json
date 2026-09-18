@@ -1,21 +1,63 @@
 {
-  "_comment": "B40 SFX map. Custom module OGG under assets/sfx (mono vorbis q2). Rules tried in order; first match wins.",
+  "_comment": "B40/B54 SFX map. Custom module OGG under assets/sfx (mono vorbis q2). Rules tried in order; first match wins. wired-scan before wired so Scan is not stolen by the wired keyword.",
   "default": "modules/draw-steel-ghostwire/assets/sfx/punch.ogg",
   "rules": [
+    {
+      "id": "wired-scan",
+      "label": "Scan / ping",
+      "match": "scan|ping|probe|trace",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-scan.ogg"
+    },
     {
       "id": "wired",
       "label": "Wired / matrix / ICE / sprites",
       "keywords": [
         "wired"
       ],
-      "match": "hack|intrusion|matrix|sprite|resonance|deck|program|ice|breach|node|signal|scan|ping|jack|compile|weav",
+      "match": "hack|intrusion|matrix|sprite|resonance|deck|program|ice|breach|node|signal|jack|compile|weav",
       "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-connect.ogg"
     },
     {
-      "id": "wired-scan",
-      "label": "Scan / ping",
-      "match": "scan|ping|probe|trace",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-scan.ogg"
+      "id": "creature-cockatrice",
+      "label": "Cockatrice",
+      "match": "cockatrice",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-cockatrice-roar.ogg"
+    },
+    {
+      "id": "creature-griffon",
+      "label": "Griffon",
+      "match": "griffon|griffin",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-griffon-call.ogg"
+    },
+    {
+      "id": "creature-werewolf",
+      "label": "Werewolf",
+      "match": "werewolf|lycan",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-werewolf-growl.ogg"
+    },
+    {
+      "id": "command-battlecry",
+      "label": "Battle cry / war cry",
+      "match": "battle.?cry|war.?cry|battlecry",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/command-battlecry.ogg"
+    },
+    {
+      "id": "creature-ork",
+      "label": "Ork",
+      "match": "\\\\bork\\\\b|\\\\borc\\\\b",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-ork-battlecry.ogg"
+    },
+    {
+      "id": "creature-demon",
+      "label": "Demon growl",
+      "match": "demon|devil|infernal",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-demon-growl.ogg"
+    },
+    {
+      "id": "creature-scream",
+      "label": "Harsh scream",
+      "match": "scream|shriek|howl",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/creature-harsh-scream.ogg"
     },
     {
       "id": "medic",
@@ -28,6 +70,12 @@
       "label": "Toxin / chemical",
       "match": "toxin|chemical|nerve agent|toxic|poison|hiss",
       "src": "modules/draw-steel-ghostwire/assets/sfx/toxin-hiss.ogg"
+    },
+    {
+      "id": "veil-reveal",
+      "label": "Reveal / detect / true sight",
+      "match": "reveal|detect|true.?sight|unveil|clarit",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-revealing.ogg"
     },
     {
       "id": "veil-heal",
@@ -134,6 +182,12 @@
       ],
       "match": "strike|slam|smash|brawl|blade|knuckle|charge|crush|hammer|kick|grapple|sword|punch",
       "src": "modules/draw-steel-ghostwire/assets/sfx/sword-crit.ogg"
+    },
+    {
+      "id": "command-rally",
+      "label": "Rally / tome",
+      "match": "rally|tome|inspire",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/command-rallytome.ogg"
     },
     {
       "id": "command",

@@ -1,6 +1,6 @@
 # Spike B54 — Creature SFX OGG pass + map
 
-**Status:** backlog (Michael dropped WAVs 2026-09-17 after B52 verify).  
+**Status:** implemented locally 2026-09-17 — Foundry-verify then commit as 0.1.72.  
 **Do NOT commit WAVs raw** — compress to mono OGG like B40/0.1.70, then wire scripts/data/sfx-map.json.
 
 ## Incoming (untracked under ssets/sfx/)
@@ -19,3 +19,10 @@
 
 ## Out of scope
 - New ability cards; B52 Technomancer work; B50 Changer art.
+
+
+## As-built
+- Converted 6 creature WAVs + 3 leftover MP3s to mono OGG q2 @ 44.1 kHz.
+- Raw moved to _sfx-raw-backup/ (gitignored).
+- Extended sfx-map.json with creature / command-battlecry / command-rally / veil-reveal rules; wired-scan before wired.
+- Module **0.1.72**. No commit until Michael Foundry-verifies.
