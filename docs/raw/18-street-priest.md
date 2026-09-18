@@ -275,6 +275,8 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 **Sustaining the independent form** costs **Persistent 2** (−4 Conviction/turn while sustained). The extension form has no ongoing sustain cost beyond the initial 7-Conviction spend; it simply expires at the end of the encounter or when you choose to release it.
 
+**Provisional Stamina (until Veil §C3):** the independent form has **30 + (Persona × level)** Stamina. The extension form has no Stamina track of its own; at the table its token carries **20 + (Persona × level)** for convenience.
+
 **Summon flavor by subclass:**
 
 - **Templar:** the entity manifests as an **angelic or infernal warrior** — a combat aid, built to trade blows.
