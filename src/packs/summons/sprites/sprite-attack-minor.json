@@ -232,12 +232,48 @@
             "reactive": false
           },
           "effects": {
+            "gwSprAtkMinDmg00": {
+              "_id": "gwSprAtkMinDmg00",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "0",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "2d10 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "2d10 + @chr",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            },
             "09zpOcx1cmpfQ8IZ": {
               "_id": "09zpOcx1cmpfQ8IZ",
               "type": "other",
               "name": "",
               "img": null,
-              "sort": 0,
+              "sort": 100,
               "other": {
                 "tier1": {
                   "display": "GHOSTWIRE.Summons.Sprites.SpriteAttackMinor.Strike.Tier1",

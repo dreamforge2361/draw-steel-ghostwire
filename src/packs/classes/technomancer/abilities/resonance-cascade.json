@@ -41,6 +41,42 @@
         "reactive": false
       },
       "effects": {
+        "gwTechResCasDmg0": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "gwTechResCasDmg0",
+          "damage": {
+            "tier1": {
+              "value": "@chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "@chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "@chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
         "kuWGuiTKO3dROfCX": {
           "name": "",
           "img": null,
@@ -77,7 +113,17 @@
       "text": "",
       "value": null
     },
-    "effects": {},
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceCascade.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
     "prerequisites": {
       "value": "",
       "dsid": [

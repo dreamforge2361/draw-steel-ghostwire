@@ -232,12 +232,48 @@
             "reactive": false
           },
           "effects": {
+            "gwSprAtkIntDmg00": {
+              "_id": "gwSprAtkIntDmg00",
+              "type": "damage",
+              "name": "",
+              "img": null,
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "0",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "2d10 + @chr + 1d6",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "2d10 + @chr + 1d6",
+                  "types": [],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              }
+            },
             "GW89QBgCnZLxmyje": {
               "_id": "GW89QBgCnZLxmyje",
               "type": "other",
               "name": "",
               "img": null,
-              "sort": 0,
+              "sort": 100,
               "other": {
                 "tier1": {
                   "display": "GHOSTWIRE.Summons.Sprites.SpriteAttackIntermediate.Strike.Tier1",

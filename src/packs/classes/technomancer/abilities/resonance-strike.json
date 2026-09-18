@@ -42,6 +42,42 @@
         "reactive": false
       },
       "effects": {
+        "gwTechResStrDmg0": {
+          "name": "",
+          "img": null,
+          "type": "damage",
+          "_id": "gwTechResStrDmg0",
+          "damage": {
+            "tier1": {
+              "value": "0",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "value": "2d10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "value": "2d10 + @chr",
+              "types": [],
+              "ignoredImmunities": [],
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          },
+          "sort": 0
+        },
         "N83y3AotTEDMiQXE": {
           "name": "",
           "img": null,
@@ -56,7 +92,7 @@
               }
             },
             "tier2": {
-              "display": "GHOSTWIRE.Classes.Technomancer.Items.ResonanceStrike.Tier2",
+              "display": "",
               "potency": {
                 "value": "@potency.average",
                 "characteristic": ""
