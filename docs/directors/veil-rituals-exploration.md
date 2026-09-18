@@ -1,6 +1,6 @@
 # Backlog exploration — Veil Rituals as Draw Steel Projects (B43)
 
-**Status:** Exploratory backlog locked 2026-09-17 — **not** for implementation until RAW/Veil chapter and Michael sign-off.  
+**Status:** LOCKED 2026-09-18 by Michael — locks accepted; Ritual Working + 6 sample rites drafted into docs/raw/22-the-veil.md. Foundry automation later. Exploration notes below remain design history.
 **Question:** Can Shadowrun-style ritual magic become Ghostwire **long-form big magic** using Draw Steel **Projects** (the same §Craft downtime spine as Invent a Mod)?
 
 ## Short answer
@@ -152,7 +152,7 @@ Detection without countermagic makes rituals unfair to the hunted. Countermagic 
 5. Ship in **Veil RAW chapter** (`docs/raw/22-the-veil.md`) before any Foundry?
 
 ## Recommendation
-Park as **B43**. After RAW Veil thin chapter exists, draft a one-page **Ritual Working** procedure + 6 sample rites (ward room, enchant sidearm, remote sense, watcher, thin-path, site bind). Playtest as downtime between runs before building Foundry widgets.
+**Done for docs:** Ritual Working + 6 sample rites are in docs/raw/22-the-veil.md (B43). Playtest as downtime between runs; Foundry widgets later.
 
 ## Out of scope for now
 Full Street Grimoire port; alchemy preparations as a second subsystem; replacing encounter casting.
