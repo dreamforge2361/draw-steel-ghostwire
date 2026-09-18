@@ -42,7 +42,7 @@ Every Scout chooses **one** signature ability at 1st level — your baseline, no
 
 | Signature | Advantage Cost | Type | Target | Damage (low / middle / high) |
 |---|---|---|---|---|
-| **Gasping in Pain** | 0 | Melee 1, Strike, Weapon, Main | 1 creature | 3+chr / 5+chr / 8+chr; on high, I<STRONG → prone. **Effect:** One ally within 5 of target gains 1 surge. |
+| **Breathless Hit** | 0 | Melee 1, Strike, Weapon, Main | 1 creature | 3+chr / 5+chr / 8+chr; on high, I<STRONG → prone. **Effect:** One ally within 5 of target gains 1 surge. |
 | **I Work Better Alone** | 0 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 3+chr / 6+chr / 9+chr. **Effect:** If the target has none of your allies adjacent to them, you gain 1 surge **before** making the power roll. |
 | **Teamwork Has Its Place** | 0 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature or object | 3+chr / 6+chr / 9+chr. **Effect:** If any ally is adjacent to the target, you gain 1 surge **before** making the power roll. |
 | **You Were Watching the Wrong One** | 0 | Melee 1, Strike, Weapon, Main | 1 creature | 3+chr / 5+chr / 8+chr. **Effect:** If you have one or more allies within 5 of the target, you gain 1 surge. If you are flanking the target when you use this ability, choose one flanking ally — that ally also gains 1 surge. |
@@ -59,7 +59,7 @@ Heroic Abilities are the Scout's paid workings — chosen by cost band as you le
 
 | Ability | Advantage Cost | Type | Target | Damage/Effect (low / middle / high) |
 |---|---|---|---|---|
-| **Disorienting Strike** | 3 | Melee 1, Strike, Weapon, Main | 1 creature | 4+chr; slide 2 / 6+chr; slide 3 / 10+chr; slide 5. **Effect:** You can shift into any square the target leaves when you slide them. |
+| **Vertigo Burst** | 3 | Melee 1, Strike, Weapon, Main | 1 creature | 4+chr; slide 2 / 6+chr; slide 3 / 10+chr; slide 5. **Effect:** You can shift into any square the target leaves when you slide them. |
 | **Eviscerate** | 3 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 4+chr; A<WEAK, bleeding (save ends) / 6+chr; A<AVG, bleeding (save ends) / 10+chr; A<STRONG, bleeding (save ends) |
 | **Get In Get Out** | 3 | Melee 1, Strike, Weapon, Main | 1 creature | 5+chr / 8+chr / 11+chr. **Effect:** You can shift up to your speed, dividing that movement before or after your strike as desired. |
 | **Two Throats at Once** | 3 | Melee 1 or Ranged 5, Strike, Weapon, Main | 2 creatures or objects | 4 damage / 6 damage / 10 damage |
@@ -70,12 +70,12 @@ Heroic Abilities are the Scout's paid workings — chosen by cost band as you le
 
 | Ability | Advantage Cost | Type | Target | Damage/Effect (low / middle / high) |
 |---|---|---|---|---|
-| **Coup de Grâce** | 5 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 2d6+7+chr / 2d6+11+chr / 2d6+16+chr |
+| **Kill Confirm** | 5 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 2d6+7+chr / 2d6+11+chr / 2d6+16+chr |
 | **One Hundred Throats** | 5 | Melee, Weapon, Main | Self; see below | Shift up to your speed; make one power roll targeting up to three enemies who came adjacent during the move. 3 damage / 6 damage / 9 damage |
 | **Setup** | 5 | Ranged 5, Strike, Weapon, Main | 1 creature | 6+chr; R<WEAK, damage weakness 5 (save ends) / 9+chr; R<AVG, damage weakness 5 (save ends) / 13+chr; R<STRONG, damage weakness 5 (save ends) |
 | **Neurospike** | 5 | Chrome, Melee, Ranged, Main | Self; see below | You use a strike signature ability **twice.** |
 
-*(Quick Build: **Coup de Grâce.**)*
+*(Quick Build: **Kill Confirm.**)*
 
 ### 7-Advantage Band (chosen at 3rd level)
 
@@ -118,24 +118,24 @@ Grants the **Survival/Tracking** skill. Starter Kit: **Longshot** (long-range ri
 
 | Level | Feature/Ability | Type |
 |---|---|---|
-| 1 | Quarry (mark-as-track: always know a Marked target's direction/distance and gain a first-strike-per-round damage bump) | 1st-level college feature |
+| 1 | Hard Tag (mark-as-track: always know a Marked target's direction/distance and gain a first-strike-per-round damage bump) | 1st-level college feature |
 | 1 | Ranged Reflex (edge on ranged strikes vs. Marked targets while you are at Ranged 5+ from them) | 1st-level college feature (2nd feature) |
 | 1 | Survival/Tracking (skill) | Skill grant |
 | 1 | Steady the Scope (triggered: on being detected/interrupted at ranged distance, hold the shot and gain 1 surge) | College triggered action |
 | 2 | Cold Read (each round, first Marked target hit at Ranged 5+ becomes visible to your allies through walls/cover until end of round) | Passive feature |
 | 2 | 2nd-Level Longshot Ability (choice of 2: **Called Shot (Vitals)** / **Called Shot (Comm-link)**) | Ability grant |
-| 5 | Range Discipline (your Ranged 5 abilities extend to Ranged 10; the first-strike-per-round Quarry bump doubles) | Passive feature |
+| 5 | Range Discipline (your Ranged 5 abilities extend to Ranged 10; the first-strike-per-round Hard Tag bump doubles) | Passive feature |
 | 6 | 6th-Level Longshot Ability (choice of 2: **Overwatch Lane** / **Ghost Round**) | Ability grant |
 | 8 | Sensor-Fusion Smartlink (Marked targets have no cover from you; you can strike at Ranged 20 with the Longshot Kit) | Passive feature |
 | 9 | 9th-Level Longshot Ability (choice of 2: **One Shot One Kill** / **Vantage Trap**) | Ability grant |
 
 **Passive Features:**
 
-- **Quarry** (1st) — **Maneuver, Self.** Choose one enemy within Ranged 20 that you can see. That enemy is Marked by you until end of encounter, until it dies, or until you Quarry another target. You always know a Marked target's direction and (in general terms) distance from you as long as it is within the same hive stratum, even through walls or cover. The **first** strike you make against a Marked target each round gains **+1 damage** at Echelon 1, scaling to **+2 / +3 / +4 damage** at Echelons 2 / 3 / 4. **Spend 1+ Advantage:** gain 1 surge per Advantage spent, usable only on your first strike against the Marked target this round.
+- **Hard Tag** (1st) — **Maneuver, Self.** Choose one enemy within Ranged 20 that you can see. That enemy is Marked by you until end of encounter, until it dies, or until you Hard Tag another target. You always know a Marked target's direction and (in general terms) distance from you as long as it is within the same hive stratum, even through walls or cover. The **first** strike you make against a Marked target each round gains **+1 damage** at Echelon 1, scaling to **+2 / +3 / +4 damage** at Echelons 2 / 3 / 4. **Spend 1+ Advantage:** gain 1 surge per Advantage spent, usable only on your first strike against the Marked target this round.
 - **Ranged Reflex** (1st) — Your ranged strikes gain an **edge** against any target that is at least Ranged 5 from you AND Marked by you.
 - **Steady the Scope** (1st, triggered) — **Trigger:** you would take a bane on a ranged strike from being observed, dazed, harried, or knocked off a firing position. **Effect:** ignore the bane on this strike, and gain **1 surge** usable only on this strike.
 - **Cold Read** (2nd) — The first Marked target you damage at Ranged 5+ each round becomes visible to all your allies through walls and cover until the start of your next turn.
-- **Range Discipline** (5th) — Any Scout ability that lists Ranged 5 in its Type extends to Ranged 10 for you. Your Quarry first-strike-per-round damage bump doubles (Echelon 1: +2, Echelon 2: +4, Echelon 3: +6, Echelon 4: +8).
+- **Range Discipline** (5th) — Any Scout ability that lists Ranged 5 in its Type extends to Ranged 10 for you. Your Hard Tag first-strike-per-round damage bump doubles (Echelon 1: +2, Echelon 2: +4, Echelon 3: +6, Echelon 4: +8).
 - **Sensor-Fusion Smartlink** (8th) — Marked targets grant you no cover benefit. You can make Ranged strikes with your Longshot Kit at Ranged 20 (up from Ranged 5, per the Longshot Kit's own range extension).
 
 **College Abilities (choose 1 of 2 at 2nd, 6th, 9th):**
@@ -229,21 +229,21 @@ Grants the **Lie** skill. Starter Kit: **Cloak & Dagger** or **Rapid-Fire**.
 
 | Level | Class Features (all Scouts) | College Features | Abilities Known |
 |---|---|---|---|
-| 1 | Shadow College (subclass), Advantage, College Features, College Triggered Action, **Hesitation Is Weakness**, Kit, Scout Abilities | 1st-level college feature | Signature; 3-Adv; 5-Adv |
+| 1 | Shadow College (subclass), Advantage, College Features, College Triggered Action, **Beat the Draw**, Kit, Scout Abilities | 1st-level college feature | Signature; 3-Adv; 5-Adv |
 | 2 | College Feature, Perk | 2nd-level college feature | Signature; 3-Adv; 5-Adv + 5-Adv College Ability |
-| 3 | Careful Observation, 7-Adv Ability | — | Signature; 3-Adv; 5-Adv; 7-Adv + 5-Adv College |
+| 3 | Glass the Block, 7-Adv Ability | — | Signature; 3-Adv; 5-Adv; 7-Adv + 5-Adv College |
 | 4 | Characteristic Increase, Keep It Down, Night Watch, Perk, Skill, **Surge of Advantage** | — | Signature; 3-Adv; 5-Adv; 7-Adv + 5-Adv College |
 | 5 | College Feature, 9-Adv Ability | 5th-level college feature | Signature; 3/5/7/9-Adv + 5-Adv College |
 | 6 | Perk, **Ghost Suite** (optical-camo array) | 6th-level college feature | Signature; 3/5/7/9-Adv + 5/9-Adv College |
-| 7 | Characteristic Increase, **Sharper Eye**, Skill, Careful Observation Improvement, Ventriloquist | — | Signature; 3/5/7/9-Adv + 5/9-Adv College |
+| 7 | Characteristic Increase, **Sharper Eye**, Skill, Glass the Block Improvement, Ventriloquist | — | Signature; 3/5/7/9-Adv + 5/9-Adv College |
 | 8 | College Feature, Perk, 11-Adv Ability | 8th-level college feature | Signature; 3/5/7/9/11-Adv + 5/9-Adv College |
 | 9 | **Ghost Squad** (chromatic decoys), College Ability | — | Signature; 3/5/7/9/11-Adv + 5/9/11-Adv College |
-| 10 | Characteristic Increase, **Death Pool**, Perk, Skill, Careful Observation Improvement, **Ghost Suite Improved**, **Subterfuge** (epic resource) | — | All cost bands unlocked |
+| 10 | Characteristic Increase, **Death Pool**, Perk, Skill, Glass the Block Improvement, **Ghost Suite Improved**, **Subterfuge** (epic resource) | — | All cost bands unlocked |
 
 ## Core Class Features (Non-Subclass)
 
-- **Hesitation Is Weakness** (1st, 1 Advantage, free triggered) — **Trigger:** another hero ends their turn. **Effect:** you take your turn after the triggering hero. *(Constraint: that hero cannot have used this ability to start their turn.)*
-- **Careful Observation** (3rd, maneuver, Ranged 20) — **Effect:** as long as you remain within distance, maintain line of effect, and strike no other creature first, you gain an **edge** on the next strike you make against the assessed creature, and gain **1 surge** you can use only on that strike. **7th-level improvement:** target 2 creatures; striking one does not end observation of the other. **10th-level improvement:** target 3 creatures.
+- **Beat the Draw** (1st, 1 Advantage, free triggered) — **Trigger:** another hero ends their turn. **Effect:** you take your turn after the triggering hero. *(Constraint: that hero cannot have used this ability to start their turn.)*
+- **Glass the Block** (3rd, maneuver, Ranged 20) — **Effect:** as long as you remain within distance, maintain line of effect, and strike no other creature first, you gain an **edge** on the next strike you make against the assessed creature, and gain **1 surge** you can use only on that strike. **7th-level improvement:** target 2 creatures; striking one does not end observation of the other. **10th-level improvement:** target 3 creatures.
 - **Keep It Down** (4th) — While conversing with any creature you share a language with, you can decide whether anyone else can perceive what you are conveying, **even while yelling**.
 - **Night Watch** (4th, passive + triggered) — **Passive:** while you are hidden, enemies take a bane on tests made to search for you or other hidden creatures within 10 squares of you. **Triggered ability (Ranged 5, weapon, 1 ally):** target takes damage from another creature's ability while you are hidden → target takes **half** the damage; you remain hidden.
 - **Surge of Advantage** (4th) — The first time each combat round that you deal damage incorporating 1 or more surges, you gain **2 Advantage** instead of 1 *(replaces the base 1-Advantage-per-surge rider)*.
@@ -257,7 +257,7 @@ Grants the **Lie** skill. Starter Kit: **Cloak & Dagger** or **Rapid-Fire**.
   - **10th-level improvement (Ghost Suite Improved):** you gain **full control** over the suite; end at will (no action). The suite runs cold — you are always wreathed in optical distortion granting concealment, and creatures no longer gain an edge on strikes against you. Additionally, once per day, a 1-minute concentration on a location you have previously placed a Ghost Suite navigation beacon at → you and each willing creature within 10 squares can teleport to unoccupied spaces of your choice within that beaconed location; each such creature is **invisible for 1 hour** or until they use an ability.
 - **Sharper Eye** (7th) — At the start of each of your turns during combat, you gain **1d3+1 Advantage** instead of 1d3.
 - **Ventriloquist** (7th) — Whenever you communicate, you can throw your voice so that it seems to originate from a creature or object within **10 squares**. If you are hidden, talking this way does not cause you to be revealed.
-- **Ghost Squad** (9th) — At the start of each of your turns, you can **forgo gaining Advantage** to create **1d6 chromatic decoys** (projection-figures) of yourself in unoccupied adjacent spaces. A decoy acts on your turn and uses your statistics, except they have 1 Stamina. They are affected by any conditions and effects on you, and last until the start of your next turn. A decoy does not have Advantage and cannot use Careful Observation, Ghost Suite, or any triggered actions. On their turn, a decoy has a move action, a maneuver, and a main action that they can use only to make a **free strike**. A decoy must choose free-strike targets not shared by you or another decoy. **Outside of combat:** one decoy active per 2 Victories; if destroyed, 1-hour cooldown.
+- **Ghost Squad** (9th) — At the start of each of your turns, you can **forgo gaining Advantage** to create **1d6 chromatic decoys** (projection-figures) of yourself in unoccupied adjacent spaces. A decoy acts on your turn and uses your statistics, except they have 1 Stamina. They are affected by any conditions and effects on you, and last until the start of your next turn. A decoy does not have Advantage and cannot use Glass the Block, Ghost Suite, or any triggered actions. On their turn, a decoy has a move action, a maneuver, and a main action that they can use only to make a **free strike**. A decoy must choose free-strike targets not shared by you or another decoy. **Outside of combat:** one decoy active per 2 Victories; if destroyed, 1-hour cooldown.
 - **Death Pool** (10th) — The first time each combat round that you deal damage incorporating 1 or more surges, you gain **3 Advantage** instead of 2.
 - **Subterfuge** (10th, epic resource) — Each time you finish a respite, you gain Subterfuge equal to the XP you gain. You can spend Subterfuge on your abilities as if it were Advantage. Additionally, you can spend Subterfuge to take **additional maneuvers** on your turn (1 maneuver per Subterfuge spent). Subterfuge remains until you spend it.
 

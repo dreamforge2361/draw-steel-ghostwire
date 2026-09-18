@@ -4,8 +4,8 @@
   "rules": [
     {
       "id": "scout-mark",
-      "label": "Scout mark / quarry / observation",
-      "match": "quarry|careful.?observ|hesitation|steady the scope|scout.?mark|\\\\bmark\\\\b",
+      "label": "Scout mark / hard tag / glass the block",
+      "match": "quarry|hard.?tag|careful.?observ|glass the block|hesitation|beat the draw|steady the scope|scout.?mark|\\bmark\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/scout-mark.ogg"
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "id": "creature-scream",
-      "match": "scream|shriek|howl|gasping",
+      "match": "scream|shriek|howl|gasping|breathless",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-harsh-scream.ogg"
     },
     {
@@ -141,7 +141,7 @@
     },
     {
       "id": "veil-heal",
-      "match": "\\\\bheal\\\\b|bless|grace|\\\\bward\\\\b|sanctif|prayer|faith is|blessed light",
+      "match": "\\\\bheal\\\\b|bless|(?<!coup de )grace|\\\\bward\\\\b|sanctif|prayer|faith is|blessed light",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-holy-heal.ogg"
     },
     {
@@ -185,14 +185,14 @@
       "src": "modules/draw-steel-ghostwire/assets/sfx/gun-machinegun.ogg"
     },
     {
+      "id": "firearm-rifle",
+      "match": "rifle|sniper|longshot|carbine|one shot|called shot|coup de grace|kill confirm|disorienting|vertigo",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-sniper.ogg"
+    },
+    {
       "id": "firearm-smg",
       "match": "\\\\bsmg\\\\b|burst|submachine|streetsweeper",
       "src": "modules/draw-steel-ghostwire/assets/sfx/gun-smg.ogg"
-    },
-    {
-      "id": "firearm-rifle",
-      "match": "rifle|sniper|longshot|carbine|one shot|called shot|coup de grace|disorienting",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/gun-sniper.ogg"
     },
     {
       "id": "firearm",

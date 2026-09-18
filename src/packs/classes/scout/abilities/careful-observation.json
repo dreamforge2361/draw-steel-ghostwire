@@ -64,7 +64,7 @@
   },
   "effects": [
     {
-      "name": "Careful Observation - Edge on Next Strike",
+      "name": "Glass the Block - Edge on Next Strike",
       "img": "icons/magic/perception/eye-ringed-green.webp",
       "type": "abilityModifier",
       "origin": "Compendium.draw-steel-ghostwire.classes.Item.dVaK5dlFvzPVKOAl",

@@ -1035,7 +1035,7 @@
         },
         "Items": {
           "GaspingInPain": {
-            "Name": "Gasping in Pain",
+            "Name": "Breathless Hit",
             "Story": "Your precise strikes let your crew take advantage of a target’s agony.",
             "Effect_after00000000000": "<p>One ally within 5 squares of the target [[/surge 1]].</p>"
           },
@@ -1055,7 +1055,7 @@
             "Effect_after00000000000": "<p>As long as you have one or more allies within 5 squares of the target, you [[/surge 1]]. If you are flanking the target when you use this ability, choose one ally who is flanking with you. That ally also [[/surge 1]].</p>"
           },
           "DisorientingStrike": {
-            "Name": "Disorienting Strike",
+            "Name": "Vertigo Burst",
             "Story": "Your hit leaves them reeling, and you follow them into the gap.",
             "Effect_after00000000000": "<p>You can shift into any square the target leaves when you slide them.</p>"
           },
@@ -1073,7 +1073,7 @@
             "Story": "A bargain."
           },
           "CoupDeGrace": {
-            "Name": "Coup de Grâce",
+            "Name": "Kill Confirm",
             "Story": "Your blade — or your round — might be the last thing they see."
           },
           "OneHundredThroats": {
@@ -1148,13 +1148,13 @@
             "Story": "One round, fast enough to pass through a line of enemies and hamstring every one of them."
           },
           "HesitationIsWeakness": {
-            "Name": "Hesitation Is Weakness",
+            "Name": "Beat the Draw",
             "Story": "You read a crewmate’s cue and step into the seam.",
             "Trigger": "Another hero ends their turn. That hero can’t have used this ability to start their turn.",
             "Effect_before0000000000": "<p>You take your turn after the triggering hero.</p>"
           },
           "CarefulObservation": {
-            "Name": "Careful Observation",
+            "Name": "Glass the Block",
             "Story": "A moment of focus leaves a foe firmly in your sights.",
             "Effect_before0000000000": "<p>As long as you remain within distance of the target, maintain line of effect to them, and strike no other creature first, you gain an edge on the next strike you make against the assessed creature, and [[/surge 1]] you can use only on that strike.</p>"
           },
@@ -1189,8 +1189,8 @@
             "Description": "<p>At the start of each of your turns during combat, you [[/gain 1d3+1 hr]]{gain 1d3 + 1 Advantage} instead of 1d3.</p>"
           },
           "CarefulObservationImprovementI": {
-            "Name": "Careful Observation Improvement I",
-            "Description": "<p>You can target two creatures simultaneously with your Careful Observation ability, observing both. Making a strike against one target doesn’t end your observation of the other target.</p>"
+            "Name": "Glass the Block Improvement I",
+            "Description": "<p>You can target two creatures simultaneously with your Glass the Block ability, observing both. Making a strike against one target doesn’t end your observation of the other target.</p>"
           },
           "Ventriloquist": {
             "Name": "Ventriloquist",
@@ -1205,8 +1205,8 @@
             "Description": "<p>The first time each combat round that you deal damage incorporating 1 or more surges, you gain 3 Advantage instead of 2.</p>"
           },
           "CarefulObservationImprovementII": {
-            "Name": "Careful Observation Improvement II",
-            "Description": "<p>You can target three creatures simultaneously with your Careful Observation ability.</p>"
+            "Name": "Glass the Block Improvement II",
+            "Description": "<p>You can target three creatures simultaneously with your Glass the Block ability.</p>"
           },
           "GhostSuiteImproved": {
             "Name": "Ghost Suite Improved",
@@ -1217,7 +1217,7 @@
             "Description": "<p>You have an epic resource called Subterfuge. Each time you finish a respite, you gain Subterfuge equal to the XP you gain. You can spend Subterfuge on your abilities as if it were Advantage.</p><p>Additionally, you can spend Subterfuge to take additional maneuvers on your turn. You can use one maneuver for each Subterfuge you spend.</p><p>Subterfuge remains until you spend it.</p>"
           },
           "Quarry": {
-            "Name": "Quarry",
+            "Name": "Hard Tag",
             "Story": "You mark the target the way an old-line hunter marks a deer, and the mark stays.",
             "Effect_spend00000000000": "<p>You [[/surge 1]] for each Advantage spent. You can use these surges only on your first strike against the Marked target this round.</p>",
             "Effect_before0000000000": "<p>The target is Marked by you until the end of the encounter, until it dies, or until you use this ability on another target. [[/apply QR00000000marked]] You always know a Marked target’s direction and general distance from you while it is within the same hive stratum, even through walls or cover.</p><p>The first strike you make against a Marked target each round deals +1 damage at Echelon 1, +2 at Echelon 2, +3 at Echelon 3, and +4 at Echelon 4.</p>"

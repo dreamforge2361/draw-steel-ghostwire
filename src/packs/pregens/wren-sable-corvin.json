@@ -902,7 +902,7 @@
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PcDOAkx5P9m0a0mc"
               }
             ],
-            "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Advantage to use. (<em>Quick Build:</em> Coup de Grâce.)</p>",
+            "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Advantage to use. (<em>Quick Build:</em> Kill Confirm.)</p>",
             "chooseN": 1,
             "sort": 25000,
             "additional": {
@@ -936,7 +936,7 @@
             "_id": "kXgsvoXsheWVxZ25",
             "img": null,
             "repick": {},
-            "name": "Careful Observation",
+            "name": "Glass the Block",
             "type": "itemGrant",
             "requirements": {
               "level": 3
@@ -1425,7 +1425,7 @@
             "chooseN": null
           },
           "D17R1ZQ02Fp3J2XW": {
-            "name": "Quarry",
+            "name": "Hard Tag",
             "img": null,
             "type": "itemGrant",
             "requirements": {
@@ -1948,7 +1948,7 @@
       "effects": [
         {
           "_id": "QR00000000marked",
-          "name": "Marked (Quarry)",
+          "name": "Marked (Hard Tag)",
           "img": "icons/skills/targeting/crosshair-mark-rough-pink.webp",
           "type": "base",
           "origin": "Compendium.draw-steel-ghostwire.classes.Item.DarrEtCdLdGBy8xB",
@@ -1976,7 +1976,7 @@
             "expiry": "combatEnd",
             "expired": false
           },
-          "description": "<p>Marked by a Hunter’s Quarry. The Hunter knows this creature’s direction and distance, and their first strike against it each round deals extra damage.</p>",
+          "description": "<p>Marked by a Hunter’s Hard Tag. The Hunter knows this creature’s direction and distance, and their first strike against it each round deals extra damage.</p>",
           "tint": "#ffffff",
           "statuses": [],
           "sort": 0,

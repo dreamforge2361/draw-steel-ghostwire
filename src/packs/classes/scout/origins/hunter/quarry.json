@@ -79,7 +79,7 @@
     {
       "_id": "QR00000000marked",
       "_key": "!items.effects!DarrEtCdLdGBy8xB.QR00000000marked",
-      "name": "Marked (Quarry)",
+      "name": "Marked (Hard Tag)",
       "img": "icons/skills/targeting/crosshair-mark-rough-pink.webp",
       "type": "base",
       "origin": "Compendium.draw-steel-ghostwire.classes.Item.DarrEtCdLdGBy8xB",
@@ -107,7 +107,7 @@
         "expiry": "combatEnd",
         "expired": false
       },
-      "description": "<p>Marked by a Hunter’s Quarry. The Hunter knows this creature’s direction and distance, and their first strike against it each round deals extra damage.</p>",
+      "description": "<p>Marked by a Hunter’s Hard Tag. The Hunter knows this creature’s direction and distance, and their first strike against it each round deals extra damage.</p>",
       "tint": "#ffffff",
       "statuses": [],
       "sort": 0,

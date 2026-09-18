@@ -76,7 +76,7 @@ Every Scout chooses **one** signature ability at 1st level — your baseline, no
 
 | Signature | Advantage Cost | Type | Target | Damage (T3/T2/T1) |
 |---|---|---|---|---|
-| **Gasping in Pain** | 0 | Melee 1, Strike, Weapon, Main | 1 creature | 3+chr / 5+chr / 8+chr; on T1, I<STRONG → prone. **Effect:** One ally within 5 of target gains 1 surge. |
+| **Breathless Hit** | 0 | Melee 1, Strike, Weapon, Main | 1 creature | 3+chr / 5+chr / 8+chr; on T1, I<STRONG → prone. **Effect:** One ally within 5 of target gains 1 surge. |
 | **I Work Better Alone** | 0 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 3+chr / 6+chr / 9+chr. **Effect:** If the target has none of your allies adjacent to them, you gain 1 surge **before** making the power roll. |
 | **Teamwork Has Its Place** | 0 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature or object | 3+chr / 6+chr / 9+chr. **Effect:** If any ally is adjacent to the target, you gain 1 surge **before** making the power roll. |
 | **You Were Watching the Wrong One** | 0 | Melee 1, Strike, Weapon, Main | 1 creature | 3+chr / 5+chr / 8+chr. **Effect:** If you have one or more allies within 5 of the target, you gain 1 surge. If you are flanking the target when you use this ability, choose one flanking ally — that ally also gains 1 surge. |
@@ -97,7 +97,7 @@ Heroic Abilities are the Scout's paid workings — chosen by cost tier as you le
 
 | Ability | Advantage Cost | Type | Target | Damage/Effect (T3/T2/T1) | Reskin Notes |
 |---|---|---|---|---|---|
-| **Disorienting Strike** | 3 | Melee 1, Strike, Weapon, Main | 1 creature | 4+chr; slide 2 / 6+chr; slide 3 / 10+chr; slide 5. **Effect:** You can shift into any square the target leaves when you slide them. | Name kept. |
+| **Vertigo Burst** | 3 | Melee 1, Strike, Weapon, Main | 1 creature | 4+chr; slide 2 / 6+chr; slide 3 / 10+chr; slide 5. **Effect:** You can shift into any square the target leaves when you slide them. | Name kept. |
 | **Eviscerate** | 3 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 4+chr; A<WEAK, bleeding (save ends) / 6+chr; A<AVG, bleeding (save ends) / 10+chr; A<STRONG, bleeding (save ends) | Name kept. |
 | **Get In Get Out** | 3 | Melee 1, Strike, Weapon, Main | 1 creature | 5+chr / 8+chr / 11+chr. **Effect:** You can shift up to your speed, dividing that movement before or after your strike as desired. | Name kept — reads perfectly street. |
 | **Two Throats at Once** | 3 | Melee 1 or Ranged 5, Strike, Weapon, Main | 2 creatures or objects | 4 damage / 6 damage / 10 damage | Name kept. |
@@ -108,12 +108,12 @@ Heroic Abilities are the Scout's paid workings — chosen by cost tier as you le
 
 | Ability | Advantage Cost | Type | Target | Damage/Effect (T3/T2/T1) | Reskin Notes |
 |---|---|---|---|---|---|
-| **Coup de Grâce** | 5 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 2d6+7+chr / 2d6+11+chr / 2d6+16+chr | Name kept (street and corp both use it). |
+| **Kill Confirm** | 5 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 2d6+7+chr / 2d6+11+chr / 2d6+16+chr | Name kept (street and corp both use it). |
 | **One Hundred Throats** | 5 | Melee, Weapon, Main | Self; see below | Shift up to your speed; make one power roll targeting up to three enemies who came adjacent during the move. 3 damage / 6 damage / 9 damage | Name kept. |
 | **Setup** | 5 | Ranged 5, Strike, Weapon, Main | 1 creature | 6+chr; R<WEAK, damage weakness 5 (save ends) / 9+chr; R<AVG, damage weakness 5 (save ends) / 13+chr; R<STRONG, damage weakness 5 (save ends) | Name kept — reads shadowrunner. |
 | **Neurospike** | 5 | Chrome, Melee, Ranged, Main | Self; see below | You use a strike signature ability **twice.** | **Renamed from DS "Shadowstrike."** Magic keyword removed. Narratively: a cyber-adrenaline dump from a wired-reflex implant (Body Integrity chrome) firing two strikes inside a quarter-second window. Available to any Scout with any chrome loadout — no awakened restriction. |
 
-*(Quick Build: **Coup de Grâce.**)*
+*(Quick Build: **Kill Confirm.**)*
 
 #### 7-Advantage Tier (chosen at 3rd level; source: DS Shadow SRD 7-Insight ability)
 
@@ -164,24 +164,24 @@ Officially "long-range assessment and precision-intervention specialist." Street
 
 | Level | Feature/Ability | Type |
 |---|---|---|
-| 1 | Quarry (mark-as-track: always know a Marked target's direction/distance and gain a first-strike-per-round damage bump) | 1st-level college feature |
+| 1 | Hard Tag (mark-as-track: always know a Marked target's direction/distance and gain a first-strike-per-round damage bump) | 1st-level college feature |
 | 1 | Ranged Reflex (edge on ranged strikes vs. Marked targets while you are at Ranged 5+ from them) | 1st-level college feature (2nd feature) |
 | 1 | Survival/Tracking (skill) | Skill grant |
 | 1 | Steady the Scope (triggered: on being detected/interrupted at ranged distance, hold the shot and gain 1 surge) | College triggered action |
 | 2 | Cold Read (each round, first Marked target hit at Ranged 5+ becomes visible to your allies through walls/cover until end of round) | Passive feature |
 | 2 | 2nd-Level Longshot Ability (choice of 2: **Called Shot (Vitals)** / **Called Shot (Comm-link)**) | Ability grant |
-| 5 | Range Discipline (your Ranged 5 abilities extend to Ranged 10; the first-strike-per-round Quarry bump doubles) | Passive feature |
+| 5 | Range Discipline (your Ranged 5 abilities extend to Ranged 10; the first-strike-per-round Hard Tag bump doubles) | Passive feature |
 | 6 | 6th-Level Longshot Ability (choice of 2: **Overwatch Lane** / **Ghost Round**) | Ability grant |
 | 8 | Sensor-Fusion Smartlink (Marked targets have no cover from you; you can strike at Ranged 20 with the Longshot Kit) | Passive feature |
 | 9 | 9th-Level Longshot Ability (choice of 2: **One Shot One Kill** / **Vantage Trap**) | Ability grant |
 
 **Passive Features (fully mundane; no magic keywords):**
 
-- **Quarry** (1st) — *You mark the target the way an old-line hunter marks a deer, and the mark stays.* **Maneuver, Self.** Choose one enemy within Ranged 20 that you can see. That enemy is Marked by you until end of encounter, until it dies, or until you Quarry another target. You always know a Marked target's direction and (in general terms) distance from you as long as it is within the same hive stratum, even through walls or cover. The **first** strike you make against a Marked target each round gains **+1 damage** at Echelon 4, scaling to **+2 / +3 / +4 damage** at Echelons 3 / 2 / 1. **Spend 1+ Advantage:** gain 1 surge per Advantage spent, usable only on your first strike against the Marked target this round.
+- **Hard Tag** (1st) — *You mark the target the way an old-line hunter marks a deer, and the mark stays.* **Maneuver, Self.** Choose one enemy within Ranged 20 that you can see. That enemy is Marked by you until end of encounter, until it dies, or until you Hard Tag another target. You always know a Marked target's direction and (in general terms) distance from you as long as it is within the same hive stratum, even through walls or cover. The **first** strike you make against a Marked target each round gains **+1 damage** at Echelon 4, scaling to **+2 / +3 / +4 damage** at Echelons 3 / 2 / 1. **Spend 1+ Advantage:** gain 1 surge per Advantage spent, usable only on your first strike against the Marked target this round.
 - **Ranged Reflex** (1st) — Your ranged strikes gain an **edge** against any target that is at least Ranged 5 from you AND Marked by you. (Reads: the shooter finds the calm in the perch.)
 - **Steady the Scope** (1st, triggered) — *You feel the wind, hold the breath, wait the beat.* **Trigger:** you would take a bane on a ranged strike from being observed, dazed, harried, or knocked off a firing position. **Effect:** ignore the bane on this strike, and gain **1 surge** usable only on this strike.
 - **Cold Read** (2nd) — The first Marked target you damage at Ranged 5+ each round becomes visible to all your allies through walls and cover (thermal-signature call-out via your smartlink to their HUDs) until the start of your next turn.
-- **Range Discipline** (5th) — Any Scout ability that lists Ranged 5 in its Type extends to Ranged 10 for you. Your Quarry first-strike-per-round damage bump doubles (E4: +2, E3: +4, E2: +6, E1: +8).
+- **Range Discipline** (5th) — Any Scout ability that lists Ranged 5 in its Type extends to Ranged 10 for you. Your Hard Tag first-strike-per-round damage bump doubles (E4: +2, E3: +4, E2: +6, E1: +8).
 - **Sensor-Fusion Smartlink** (8th) — Marked targets grant you no cover benefit (your smartlink stack backs out the geometry). You can make Ranged strikes with your Longshot Kit at Ranged 20 (up from Ranged 5, per the Longshot Kit's own range extension).
 
 **College Abilities (choose 1 of 2 at 2nd, 6th, 9th):**
@@ -293,23 +293,23 @@ Officially "unaffiliated criminal — Nyx Cartel front-office fabrication divisi
 
 | Level | Class Features (all Scouts) | College Features | Abilities Known |
 |---|---|---|---|
-| 1 | Shadow College (subclass), Advantage, College Features, College Triggered Action, **Hesitation Is Weakness**, Kit, Scout Abilities | 1st-level college feature | Signature; 3-Adv; 5-Adv |
+| 1 | Shadow College (subclass), Advantage, College Features, College Triggered Action, **Beat the Draw**, Kit, Scout Abilities | 1st-level college feature | Signature; 3-Adv; 5-Adv |
 | 2 | College Feature, Perk | 2nd-level college feature | Signature; 3-Adv; 5-Adv + 5-Adv College Ability |
-| 3 | Careful Observation, 7-Adv Ability | — | Signature; 3-Adv; 5-Adv; 7-Adv + 5-Adv College |
+| 3 | Glass the Block, 7-Adv Ability | — | Signature; 3-Adv; 5-Adv; 7-Adv + 5-Adv College |
 | 4 | Characteristic Increase, Keep It Down, Night Watch, Perk, Skill, **Surge of Advantage** | — | Signature; 3-Adv; 5-Adv; 7-Adv + 5-Adv College |
 | 5 | College Feature, 9-Adv Ability | 5th-level college feature | Signature; 3/5/7/9-Adv + 5-Adv College |
 | 6 | Perk, **Ghost Suite** (optical-camo array) | 6th-level college feature | Signature; 3/5/7/9-Adv + 5/9-Adv College |
-| 7 | Characteristic Increase, **Sharper Eye**, Skill, Careful Observation Improvement, Ventriloquist | — | Signature; 3/5/7/9-Adv + 5/9-Adv College |
+| 7 | Characteristic Increase, **Sharper Eye**, Skill, Glass the Block Improvement, Ventriloquist | — | Signature; 3/5/7/9-Adv + 5/9-Adv College |
 | 8 | College Feature, Perk, 11-Adv Ability | 8th-level college feature | Signature; 3/5/7/9/11-Adv + 5/9-Adv College |
 | 9 | **Ghost Squad** (chromatic decoys), College Ability | — | Signature; 3/5/7/9/11-Adv + 5/9/11-Adv College |
-| 10 | Characteristic Increase, **Death Pool**, Perk, Skill, Careful Observation Improvement, **Ghost Suite Improved**, **Subterfuge** (epic resource) | — | All tiers unlocked |
+| 10 | Characteristic Increase, **Death Pool**, Perk, Skill, Glass the Block Improvement, **Ghost Suite Improved**, **Subterfuge** (epic resource) | — | All tiers unlocked |
 
 ### Core Class Features (Non-Subclass)
 
 *All fully mundane. No Magic keywords appear anywhere in this list.*
 
-- **Hesitation Is Weakness** (1st, 1 Advantage, free triggered) — *A trained runner reads a teammate's cue and steps into the seam.* **Trigger:** another hero ends their turn. **Effect:** you take your turn after the triggering hero. *(Constraint: that hero cannot have used this ability to start their turn.)*
-- **Careful Observation** (3rd, maneuver, Ranged 20) — *A moment of focus leaves a foe firmly in your sights.* **Effect:** as long as you remain within distance, maintain line of effect, and strike no other creature first, you gain an **edge** on the next strike you make against the assessed creature, and gain **1 surge** you can use only on that strike. **7th-level improvement:** target 2 creatures; striking one does not end observation of the other. **10th-level improvement:** target 3 creatures.
+- **Beat the Draw** (1st, 1 Advantage, free triggered) — *A trained runner reads a teammate's cue and steps into the seam.* **Trigger:** another hero ends their turn. **Effect:** you take your turn after the triggering hero. *(Constraint: that hero cannot have used this ability to start their turn.)*
+- **Glass the Block** (3rd, maneuver, Ranged 20) — *A moment of focus leaves a foe firmly in your sights.* **Effect:** as long as you remain within distance, maintain line of effect, and strike no other creature first, you gain an **edge** on the next strike you make against the assessed creature, and gain **1 surge** you can use only on that strike. **7th-level improvement:** target 2 creatures; striking one does not end observation of the other. **10th-level improvement:** target 3 creatures.
 - **Keep It Down** (4th) — While conversing with any creature you share a language with, you can decide whether anyone else can perceive what you are conveying, **even while yelling** (throat-modulator + laryngeal-focus chrome — see the Mask Rig for the same technology fielded larger).
 - **Night Watch** (4th, passive + triggered) — **Passive:** while you are hidden, enemies take a bane on tests made to search for you or other hidden creatures within 10 squares of you. **Triggered ability (Ranged 5, weapon, 1 ally):** target takes damage from another creature's ability while you are hidden → target takes **half** the damage; you remain hidden.
 - **Surge of Advantage** (4th) — The first time each combat round that you deal damage incorporating 1 or more surges, you gain **2 Advantage** instead of 1 *(replaces the base 1-Advantage-per-surge rider)*.
@@ -323,7 +323,7 @@ Officially "unaffiliated criminal — Nyx Cartel front-office fabrication divisi
   - **10th-level improvement (Ghost Suite Improved):** you gain **full control** over the suite; end at will (no action). The suite runs cold — you are always wreathed in optical distortion granting concealment, and creatures no longer gain an edge on strikes against you. Additionally, once per day, a 1-minute concentration on a location you have previously placed a Ghost Suite navigation beacon at → you and each willing creature within 10 squares can teleport to unoccupied spaces of your choice within that beaconed location; each such creature is **invisible for 1 hour** or until they use an ability. *(Reskin note: DS 10th-level teleport is re-cast as a Rare-Tier micro-drone beacon-relay system — the crew's mole pre-positions a nav beacon at a known location, and the Ghost Suite's improved emitter package does a rapid grapnel/mag-cable extraction of the wearers to that beacon via a pre-scouted vertical shaft or ductwork route. Mechanically DS-native — the 1-minute concentration and 1-hour invisibility are unchanged.)*
 - **Sharper Eye** (7th) — *DS Keen Insight reskin.* At the start of each of your turns during combat, you gain **1d3+1 Advantage** instead of 1d3.
 - **Ventriloquist** (7th) — Whenever you communicate, you can throw your voice so that it seems to originate from a creature or object within **10 squares** (via the same laryngeal-modulator chrome the Mask Rig fields at higher fidelity). If you are hidden, talking this way does not cause you to be revealed.
-- **Ghost Squad** (9th) — *DS Gloom Squad reskin — Ghost Suite fabricates optical-camo decoys.* At the start of each of your turns, you can **forgo gaining Advantage** to create **1d6 chromatic decoys** (projection-figures) of yourself in unoccupied adjacent spaces. A decoy acts on your turn and uses your statistics, except they have 1 Stamina. They are affected by any conditions and effects on you, and last until the start of your next turn. A decoy does not have Advantage and cannot use Careful Observation, Ghost Suite, or any triggered actions. On their turn, a decoy has a move action, a maneuver, and a main action that they can use only to make a **free strike**. A decoy must choose free-strike targets not shared by you or another decoy. **Outside of combat:** one decoy active per 2 Victories; if destroyed, 1-hour cooldown. *(Reskin note: DS clones become GHOSTWIRE optical-camo decoys — the Ghost Suite's emitter array painting persistent, moving distortion-figures in nearby space, backed by the crew's shared HUD-decoy feed. Same rules; pure-tech flavor.)*
+- **Ghost Squad** (9th) — *DS Gloom Squad reskin — Ghost Suite fabricates optical-camo decoys.* At the start of each of your turns, you can **forgo gaining Advantage** to create **1d6 chromatic decoys** (projection-figures) of yourself in unoccupied adjacent spaces. A decoy acts on your turn and uses your statistics, except they have 1 Stamina. They are affected by any conditions and effects on you, and last until the start of your next turn. A decoy does not have Advantage and cannot use Glass the Block, Ghost Suite, or any triggered actions. On their turn, a decoy has a move action, a maneuver, and a main action that they can use only to make a **free strike**. A decoy must choose free-strike targets not shared by you or another decoy. **Outside of combat:** one decoy active per 2 Victories; if destroyed, 1-hour cooldown. *(Reskin note: DS clones become GHOSTWIRE optical-camo decoys — the Ghost Suite's emitter array painting persistent, moving distortion-figures in nearby space, backed by the crew's shared HUD-decoy feed. Same rules; pure-tech flavor.)*
 - **Death Pool** (10th) — The first time each combat round that you deal damage incorporating 1 or more surges, you gain **3 Advantage** instead of 2.
 - **Subterfuge** (10th, epic resource) — Each time you finish a respite, you gain Subterfuge equal to the XP you gain. You can spend Subterfuge on your abilities as if it were Advantage. Additionally, you can spend Subterfuge to take **additional maneuvers** on your turn (1 maneuver per Subterfuge spent). Subterfuge remains until you spend it.
 
@@ -364,7 +364,7 @@ The Scout ships to the same **`ghostwire`** Foundry module that houses the Opera
 - **`ghostwire-classes`** — The Scout class item itself and any subclass-level toggle/feature items.
 - **`ghostwire-abilities`** — All Scout signature, tier-cost, subclass-specific, and free-triggered abilities.
 
-Doctrine feature items (Hesitation Is Weakness, Careful Observation, Night Watch, Keep It Down, Sharper Eye, Ventriloquist, Ghost Suite, Ghost Squad, Death Pool, Subterfuge, and per-subclass passive features) go in `ghostwire-classes`; the ability items themselves (all the ones in the tier tables above and the subclass ability tables) go in `ghostwire-abilities`. This is the same split used for the Operator and Hacker.
+Doctrine feature items (Beat the Draw, Glass the Block, Night Watch, Keep It Down, Sharper Eye, Ventriloquist, Ghost Suite, Ghost Squad, Death Pool, Subterfuge, and per-subclass passive features) go in `ghostwire-classes`; the ability items themselves (all the ones in the tier tables above and the subclass ability tables) go in `ghostwire-abilities`. This is the same split used for the Operator and Hacker.
 
 ### Data Provenance — How This Document Was Built (v2 Refactor)
 
@@ -407,8 +407,8 @@ Subclass role-mapping (v2, per Michael's directive):
 - `GWScout00001` — The Scout (class-type item, holds chassis stats, Advantage resource definition, level advancement, feature grants at each level).
 
 **Core doctrine features** (`ghostwire-classes`, type `feature`):
-- `GWScoutFeat00001` — Hesitation Is Weakness (1st, class-wide, 1 Advantage free-triggered)
-- `GWScoutFeat00002` — Careful Observation (3rd, class-wide, maneuver + edge/surge rider)
+- `GWScoutFeat00001` — Beat the Draw (1st, class-wide, 1 Advantage free-triggered)
+- `GWScoutFeat00002` — Glass the Block (3rd, class-wide, maneuver + edge/surge rider)
 - `GWScoutFeat00003` — Keep It Down (4th, class-wide, communication passive)
 - `GWScoutFeat00004` — Night Watch passive + Night Watch triggered ability (4th, class-wide) → 2 sub-items OR one bundled
 - `GWScoutFeat00005` — Surge of Advantage (4th, class-wide, resource-generation passive)
@@ -420,19 +420,19 @@ Subclass role-mapping (v2, per Michael's directive):
 - `GWScoutFeat00011` — Subterfuge (10th, class-wide, epic resource + extra-maneuver passive)
 
 **Subclass grant items** (`ghostwire-classes`, type `feature`, one per subclass, 3 total):
-- `GWScoutSub00001` — Hunter / Ironclad Longshot Division (1st-level grant: Survival/Tracking skill, Quarry + Ranged Reflex features, Steady the Scope triggered)
+- `GWScoutSub00001` — Hunter / Ironclad Longshot Division (1st-level grant: Survival/Tracking skill, Hard Tag + Ranged Reflex features, Steady the Scope triggered)
 - `GWScoutSub00002` — Ghost / Ferrum Dynastic Deep-Dark Program (1st-level grant: Sabotage skill, Grapnel-Blink ability, Rig Recovery triggered)
 - `GWScoutSub00003` — Face-in-Crowd / Nyx Cartel Mask-Line (1st-level grant: Lie skill, Mask Rig ability, Diversion triggered)
 
 **Signature abilities** (`ghostwire-abilities`, type `ability`, 4 total):
-- `GWScoutSig00001` — Gasping in Pain
+- `GWScoutSig00001` — Breathless Hit
 - `GWScoutSig00002` — I Work Better Alone
 - `GWScoutSig00003` — Teamwork Has Its Place
 - `GWScoutSig00004` — You Were Watching the Wrong One
 
 **Tier-cost heroic abilities** (`ghostwire-abilities`, type `ability`, 20 total):
-- 3-Advantage (4): Disorienting Strike, Eviscerate, Get In Get Out, Two Throats at Once
-- 5-Advantage (4): Coup de Grâce, One Hundred Throats, Setup, **Neurospike** *(v2 rename from Shadowstrike; Magic keyword removed)*
+- 3-Advantage (4): Vertigo Burst, Eviscerate, Get In Get Out, Two Throats at Once
+- 5-Advantage (4): Kill Confirm, One Hundred Throats, Setup, **Neurospike** *(v2 rename from Shadowstrike; Magic keyword removed)*
 - 7-Advantage (4): Dancer, Misdirecting Strike, Pinning Shot, Staggering Blow
 - 9-Advantage (4): **Flash-Screen** *(v2 rename from Blackout; Optics keyword)*, **Blindside Shift** *(v2 rename from Into the Shadows; Chrome keyword)*, **Rooftop Rush** *(v2 rename from Shadowfall; no keyword)*, You Talk Too Much
 - 11-Advantage (4): Assassinate, **Kill-Zone Mesh** *(v2 rename from Shadowgrasp; Optics keyword)*, **Overclock Cascade** *(v2 rename from Speed of Shadows; Chrome keyword)*, They Always Line Up
@@ -448,8 +448,8 @@ Subclass role-mapping (v2, per Michael's directive):
 
 The Operator master documents a "features grant abilities" pattern: a `feature` item that carries the class doctrine, and an `ability` item that carries the actual roll/effect. For the Scout, this pattern applies cleanly:
 
-- **1st-level college grant** (feature item, e.g. `GWScoutSub00001` Hunter / Ironclad Longshot) → grants the subclass skill (Survival-Tracking / Sabotage / Lie) + carries the ID/link to the 1st-level ability items (Quarry+Ranged Reflex / Grapnel-Blink / Mask Rig) + the college-triggered ability item (Steady the Scope / Rig Recovery / Diversion). Player selects a subclass at 1st level → their character sheet lights up with all subclass-granted feature and ability items.
-- **Hesitation Is Weakness** (feature item, class-wide) → the feature item is the doctrine wrapper; the associated ability item carries the actual "1 Advantage, free triggered, insert self after another hero's turn" effect. Both live in `ghostwire-classes` for the feature, `ghostwire-abilities` for the ability.
+- **1st-level college grant** (feature item, e.g. `GWScoutSub00001` Hunter / Ironclad Longshot) → grants the subclass skill (Survival-Tracking / Sabotage / Lie) + carries the ID/link to the 1st-level ability items (Hard Tag+Ranged Reflex / Grapnel-Blink / Mask Rig) + the college-triggered ability item (Steady the Scope / Rig Recovery / Diversion). Player selects a subclass at 1st level → their character sheet lights up with all subclass-granted feature and ability items.
+- **Beat the Draw** (feature item, class-wide) → the feature item is the doctrine wrapper; the associated ability item carries the actual "1 Advantage, free triggered, insert self after another hero's turn" effect. Both live in `ghostwire-classes` for the feature, `ghostwire-abilities` for the ability.
 - **Ghost Suite** (feature item, class-wide) → the feature item is the maneuver-activated toggle; on activation, a set of sub-effect items (thermal-optic emitter aura, difficult-terrain-passthrough, hide-on-cover, surge-per-turn, thermal-optic-immunity) activate as active effects on the actor.
 - **Ghost Squad** (feature item, class-wide) → the feature is the "at start of turn, forgo Advantage to create 1d6 decoys" trigger; the decoys themselves are token-summonable actor items (`ghostwire-actors/GWScoutDecoy00001`) that inherit the Scout's stat block with the 1-Stamina + no-triggered-actions overrides.
 
@@ -476,8 +476,8 @@ The Operator master documents a "features grant abilities" pattern: a `feature` 
 *All ability items follow the shared GHOSTWIRE schema. Below is the schema shape for one signature and one tier heroic as reference.*
 
 ```yaml
-# Example: GWScoutSig00001 -- Gasping in Pain
-name: "Gasping in Pain"
+# Example: GWScoutSig00001 -- Breathless Hit
+name: "Breathless Hit"
 type: "ability"
 system:
   description.value: |
@@ -613,7 +613,7 @@ Each `.ps1` will be authored with a documented run-block, per the Preflight Doct
 
 4. **OPEN SCHEMA QUESTION — Ghost Squad decoy actor template.** Ghost Squad creates 1d6 chromatic decoys with the Scout's stat block minus specific overrides (1 Stamina, no Advantage, no Ghost Suite, no triggered actions). The simplest Foundry pattern is a copy-on-summon actor template that inherits the parent's stat block and applies a deltas layer. **Alternatively:** treat decoys as pure token-copies with the deltas as active effects, no separate actor item. Both work; the actor-item path is cleaner for the sheet but heavier at scale (1d6 = up to 6 actor items per turn).
 
-5. **OPEN NAMING QUESTION — Hesitation Is Weakness.** The DS ability name is neutral enough to keep, but the flavor text ("Keep up the attack. Never give them a moment's grace.") reads corporate-sterile in a shadowrunner idiom. Michael to review and either (a) keep verbatim, (b) tweak flavor text (mechanics unchanged), or (c) rename entirely (e.g. "First to the Punch," "Read the Room"). Provisional: keep verbatim.
+5. **OPEN NAMING QUESTION — Beat the Draw.** The DS ability name is neutral enough to keep, but the flavor text ("Keep up the attack. Never give them a moment's grace.") reads corporate-sterile in a shadowrunner idiom. Michael to review and either (a) keep verbatim, (b) tweak flavor text (mechanics unchanged), or (c) rename entirely (e.g. "First to the Punch," "Read the Room"). Provisional: keep verbatim.
 
 6. **OPEN NUMERIC QUESTION — Advantage income vs. Elementalist Essence.** DS Shadow's Insight was tuned around DS's own action economy. The Elementalist master notes GHOSTWIRE's own income retunes (2026-07-16 free-drip + optional-Channel; 2026-07-17 income retune). The Scout's Advantage inherits DS's 1d3-per-turn + 1-per-surge income unchanged — this is a **first-draft assumption**. The master baseline §E2 has already normalized Advantage's income streams (steady read +1, Exploit-the-Mark +1, Reposition +1 — see the Corporate Rename Map's link) and this document's Part 1 text still uses the DS-native 1d3 language. Reconcile: either the master baseline §E2 wins (steady read = +1 flat) and Part 1's 1d3 text needs correction, OR Part 1's 1d3 language is the intended playtest state and §E2 needs update. Flagged for Michael's ruling. Provisional: keep Part 1's 1d3 language and update §E2 in the numeric pass.
 
@@ -625,7 +625,7 @@ Each `.ps1` will be authored with a documented run-block, per the Preflight Doct
 
 10. **OPEN CONTENT-COMPLETENESS ITEM — No Scout-specific Chrome/cyberware recommendations drafted.** Part 1's "Chrome a Scout Runs" section gives per-subclass narrative recommendations but does NOT name specific implants from `GHOSTWIRE-Chrome-Catalog-v1.md`. This is the same open item as Operator's #7 and Elementalist's #11, and should be addressed in a shared "class-specific chrome recommendations" pass across all shipped classes.
 
-11. **OPEN CONTENT ITEM — Scout-specific art direction (Foundry icons/tokens/backgrounds).** Once the class ships to Foundry, per the Preflight Doctrine and the ghostwire-v2 world's art-direction standard, each ability and feature needs an icon (48x48). Class-wide items: Ghost Suite icon (optical-camo shimmer), Ghost Squad icon (silhouette-echo), Hesitation Is Weakness icon (knife-arrow). Subclass icons: rifle-scope for Ironclad Longshot, grapnel-hook for Ferrum Deep-Dark, dermal-holo/mask silhouette for Nyx Mask-Line. Placeholder until art-direction pass.
+11. **OPEN CONTENT ITEM — Scout-specific art direction (Foundry icons/tokens/backgrounds).** Once the class ships to Foundry, per the Preflight Doctrine and the ghostwire-v2 world's art-direction standard, each ability and feature needs an icon (48x48). Class-wide items: Ghost Suite icon (optical-camo shimmer), Ghost Squad icon (silhouette-echo), Beat the Draw icon (knife-arrow). Subclass icons: rifle-scope for Ironclad Longshot, grapnel-hook for Ferrum Deep-Dark, dermal-holo/mask silhouette for Nyx Mask-Line. Placeholder until art-direction pass.
 
 12. **OPEN LORE-CANON RECONCILIATION — Ironclad, Meridian, Verdant, Sanctum descriptions.** The core rulebook's Chapter 2 (The Overlords) canonically names the Ten Conglomerates but only fully describes HALO Ascendant, Ferrum Dynastic, Caduceus, Argent Exchange, Obsidian Holdings, Nyx Cartel, and the Radiant Concord. Ironclad's specific function (mercenary/enforcement/military-contractor per this document's read) is inferred from context ("and around them turn the rest — Meridian, Ironclad, Verdant, Sanctum") and should be confirmed when the core rulebook's world-lore-bible expands the four unnamed conglomerates. If Ironclad turns out to have a different specialization in canon, revise the Longshot Division's parent-corp attribution to Meridian, Verdant, or Sanctum (whichever the enforcement/military bracket lands on).
 
