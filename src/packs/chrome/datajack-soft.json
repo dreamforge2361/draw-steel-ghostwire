@@ -1,0 +1,80 @@
+{
+  "_id": "0ZS6M0RyHh10vlCT",
+  "_key": "!items!0ZS6M0RyHh10vlCT",
+  "name": "GHOSTWIRE.Chrome.DatajackSoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plug.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.DatajackSoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "datajack-soft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "kkP2gAGGoN0ZoMou",
+      "_key": "!items.effects!0ZS6M0RyHh10vlCT.kkP2gAGGoN0ZoMou",
+      "name": "GHOSTWIRE.Chrome.DatajackSoft.Name",
+      "img": "icons/commodities/tech/plug.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.0ZS6M0RyHh10vlCT",
+      "description": "GHOSTWIRE.Chrome.DatajackSoft.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": []
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "soft",
+        "location": "head",
+        "integrity": 1,
+        "price": 2000,
+        "availability": "professional"
+      }
+    }
+  }
+}

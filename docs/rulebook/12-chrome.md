@@ -168,3 +168,8 @@ Itemized balance notes, package non-stacking detail, and deferred number lists l
 - Class packs after Integrity spike
 - Species/Background Integrity nudges — keep or flat 20?
 - Magic-erosion formula locked 2026-09-17 (shared by every caster; no class-specific variants)
+
+
+### Caster chrome soft-cap (LOCKED 2026-09-18)
+
+**Elementalist, Street Priest, and Technomancer** may spend at most **5 Body Integrity** on chrome (Soft counts). While spent chrome is **greater than 5**, every Magic / Veil / Resonance power roll takes a **bane** until spent Integrity is **5 or less**. Magic erosion still applies at or under the soft-cap.

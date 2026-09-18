@@ -2938,14 +2938,102 @@
       },
       "effects": [],
       "_key": "!actors.items!KPCLV5MeIfUCbBXw.UUBHCHs9XytCOJ46"
+    },
+    {
+      "_id": "lAnJaKK2l1ONSEbA",
+      "name": "GHOSTWIRE.Chrome.CyberEarsSoft.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/communications-dish-tan.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Chrome.CyberEarsSoft.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "12-chrome",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cyber-ears-soft",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 1,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "chrome": {
+            "grade": "soft",
+            "location": "ears",
+            "integrity": 1,
+            "price": 7200,
+            "availability": "restricted"
+          }
+        }
+      },
+      "effects": [
+        {
+          "_id": "agNizRgTe1q9b2IC",
+          "name": "GHOSTWIRE.Chrome.CyberEarsSoft.Name",
+          "img": "icons/commodities/tech/communications-dish-tan.webp",
+          "origin": "Compendium.draw-steel-ghostwire.chrome.Item.lAnJaKK2l1ONSEbA",
+          "description": "GHOSTWIRE.Chrome.CyberEarsSoft.EffectDescription",
+          "disabled": false,
+          "transfer": true,
+          "statuses": [],
+          "tint": "#ffffff",
+          "flags": {},
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "start": null,
+          "showIcon": 1,
+          "type": "base",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "changes": [
+              {
+                "key": "system.skills.modifiers.perception.edges",
+                "type": "upgrade",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "_key": "!actors.items.effects!KPCLV5MeIfUCbBXw.lAnJaKK2l1ONSEbA.agNizRgTe1q9b2IC"
+        }
+      ],
+      "_key": "!actors.items!KPCLV5MeIfUCbBXw.lAnJaKK2l1ONSEbA"
     }
   ],
   "effects": [],
   "flags": {
     "draw-steel-ghostwire": {
       "pregen": "sabbat-vane",
-      "biSpent": 0,
-      "biRemaining": 20
+      "biSpent": 1,
+      "biRemaining": 19
     }
   }
 }

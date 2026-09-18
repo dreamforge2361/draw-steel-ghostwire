@@ -64,10 +64,12 @@ used as both actor `img` and `prototypeToken.texture.src`. No placeholder was ne
 
 ## Known gaps for a later pass
 
-- **No Soft-grade chrome SKUs exist** in `src/packs/chrome/` (all are Standard), so the Veil casters take none.
-- **No Street or Professional heavy firearm exists**; Barak's Chatterbox is Restricted.
-- **Three ranged kits still carry the legacy `weapon: ["bow"]` tag** (Hexshot, Longshot, Saturation) while their heroes
-  carry firearms, per the spike.
+- ~~No Soft-grade chrome SKUs exist~~ — **closed by B55 (0.1.80):** six Soft/Bioware SKUs in the chrome pack; Sabbat
+  carries Cyber-Ears (Soft). Vessa and Kaïs stay unchromed per their dossiers' identity lines.
+- **No Street or Professional heavy firearm exists**; Barak's Chatterbox is Restricted. (Still open: the gear master
+  has no such SKU to build from — see B55.)
+- ~~Three ranged kits still carry the legacy `weapon: ["bow"]` tag~~ — **closed by B55 (0.1.80):** Hexshot, Longshot,
+  Saturation and Streetsweeper now use firearm bands (light / medium).
 - Starting **¥** is still not itemised; `08-kits-gear-wealth.md` gives the ¥5,000 starting budget.
 
 ## B44c — art swap, Krow retired, Free Strikes suppressed (module 0.1.69)

@@ -1,0 +1,88 @@
+{
+  "_id": "fkoU9eNhq59nQ1hC",
+  "_key": "!items!fkoU9eNhq59nQ1hC",
+  "name": "GHOSTWIRE.Chrome.VocalModulatorSoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.VocalModulatorSoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vocal-modulator-soft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "PLFKgPVnN91SHFVG",
+      "_key": "!items.effects!fkoU9eNhq59nQ1hC.PLFKgPVnN91SHFVG",
+      "name": "GHOSTWIRE.Chrome.VocalModulatorSoft.Name",
+      "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.fkoU9eNhq59nQ1hC",
+      "description": "GHOSTWIRE.Chrome.VocalModulatorSoft.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.deception.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "soft",
+        "location": "head",
+        "integrity": 1,
+        "price": 3200,
+        "availability": "restricted"
+      }
+    }
+  }
+}

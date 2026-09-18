@@ -42,7 +42,8 @@
     "equipment": {
       "armor": "light",
       "weapon": [
-        "bow"
+        "light",
+        "medium"
       ],
       "shield": false
     },

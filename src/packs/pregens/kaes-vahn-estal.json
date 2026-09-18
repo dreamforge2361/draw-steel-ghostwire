@@ -1284,7 +1284,8 @@
         "equipment": {
           "armor": "none",
           "weapon": [
-            "bow"
+            "light",
+            "medium"
           ],
           "shield": false
         },

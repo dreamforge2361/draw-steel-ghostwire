@@ -1,0 +1,88 @@
+{
+  "_id": "DsTUCY71vDjCbi20",
+  "_key": "!items!DsTUCY71vDjCbi20",
+  "name": "GHOSTWIRE.Chrome.CyberEyesSoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.CyberEyesSoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cyber-eyes-soft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "4Y8qgdfW8BbP4lwH",
+      "_key": "!items.effects!DsTUCY71vDjCbi20.4Y8qgdfW8BbP4lwH",
+      "name": "GHOSTWIRE.Chrome.CyberEyesSoft.Name",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.DsTUCY71vDjCbi20",
+      "description": "GHOSTWIRE.Chrome.CyberEyesSoft.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.perception.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "soft",
+        "location": "eyes",
+        "integrity": 1,
+        "price": 8000,
+        "availability": "restricted"
+      }
+    }
+  }
+}

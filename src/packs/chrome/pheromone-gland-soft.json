@@ -1,0 +1,88 @@
+{
+  "_id": "VGnml60vsceHdRO1",
+  "_key": "!items!VGnml60vsceHdRO1",
+  "name": "GHOSTWIRE.Chrome.PheromoneGlandSoft.Name",
+  "type": "treasure",
+  "img": "icons/commodities/biological/organ-heart-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Chrome.PheromoneGlandSoft.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "12-chrome",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "pheromone-gland-soft",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "okB6PNRDG8bdnZ1Y",
+      "_key": "!items.effects!VGnml60vsceHdRO1.okB6PNRDG8bdnZ1Y",
+      "name": "GHOSTWIRE.Chrome.PheromoneGlandSoft.Name",
+      "img": "icons/commodities/biological/organ-heart-red.webp",
+      "origin": "Compendium.draw-steel-ghostwire.chrome.Item.VGnml60vsceHdRO1",
+      "description": "GHOSTWIRE.Chrome.PheromoneGlandSoft.EffectDescription",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.persuasion.edges",
+            "type": "upgrade",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chrome": {
+        "grade": "soft",
+        "location": "torso",
+        "integrity": 1,
+        "price": 5000,
+        "availability": "restricted"
+      }
+    }
+  }
+}

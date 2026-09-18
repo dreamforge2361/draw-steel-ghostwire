@@ -59,6 +59,15 @@ Every living caster — Elementalist, Street Priest, Technomancer — uses this 
 
 Soft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.
 
+### Caster chrome soft-cap (LOCKED 2026-09-18)
+
+**Elementalist, Street Priest, and Technomancer** may spend at most **5 Body Integrity** on chrome (Soft, Standard, and Salvage all count toward this total). Soft grade remains the intended path under that ceiling.
+
+While Integrity spent on chrome is **greater than 5**, every **Magic / Veil / Resonance** power roll (signatures and heroic casting abilities) takes a **bane**. The bane lasts until surgical removal brings spent Integrity back to **5 or less**.
+
+**Magic erosion** (the grade table above) still applies for spent Integrity **at or under** the soft-cap. The soft-cap is a hard cliff on top of erosion, not a replacement for it.
+
+
 ## Suppress / Damage / Destroy (summary)
 
 Reuses conditions + Wired biofeedback (not a bespoke ladder):

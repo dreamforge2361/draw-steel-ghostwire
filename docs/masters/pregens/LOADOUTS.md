@@ -29,7 +29,7 @@ granted abilities/features + gear). "BI" is Body Integrity spent of 20.
 | **Kaïs** | 25 | 7 | none (kit says none) | Zapper, Sleeve-Gun | Pocket Sec, Fake SIN, Trauma Patch, Standard Rounds | none (0) | ElvaniHighCant, ElvaniSoftspeech, CorpCant, ReachMetro |
 | **Barak** | 33 | 5 | Hardshell | Chatterbox, Knuckles | Pocket Sec, Certified Credstick, Fake SIN, Stim Patch | Cyberlimb (Arm) 5 + Dermal Plating 4 (**9**) | GoliarBattleCant, SprawlArgot, TradeCant, CorpCant |
 | **Wren** | 30 | 7 | Armored Jacket | Longshot rifle, Popper | Burner, Cheap Shades, Standard Rounds, Trauma Patch | none (0) | ChangerPackTongue, ReachMetro, TradeCant, SprawlArgot |
-| **Sabbat** | 30 | 9 | Secure Threads | Popper | Pocket Sec, Fake SIN, Standard Rounds, Faraday Bag | none (0) | RevenantMemorySpeech, ResonanceNotation, WireSpeak, SprawlArgot |
+| **Sabbat** | 31 | 9 | Secure Threads | Popper | Pocket Sec, Fake SIN, Standard Rounds, Faraday Bag | Cyber-Ears (Soft) 1 (**1**) | RevenantMemorySpeech, ResonanceNotation, WireSpeak, SprawlArgot |
 | **Vira** | 32 | 6 | Secure Threads | Popper | Fleet Deck (RCC), Targeting Autosoft, Burner, Lockpick Set | Datajack 1 (**1**) | ChangerPackTongue, WireSpeak, MachineMarkup, SprawlArgot |
 | **Kessic** | 28 | 6 | Secure Threads | Sleeve-Gun | Street Deck, Sneak program, Crash payload, Pocket Sec, Trauma Patch | Datajack 1 + Cyber-Eyes 2 (**3**) | MutantEnclaveCant, WireSpeak, OldCode, SprawlArgot |
 
@@ -51,15 +51,20 @@ Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
 
 ## Where the packs had no clean fit (worth a later spike)
 
-1. **No Soft-grade chrome exists.** Every file in `src/packs/chrome/` is Standard grade. RAW steers casters to Soft
-   only, so Vessa, Kaïs and Sabbat necessarily get **no chrome** rather than "one Soft implant" — there is nothing to
-   pick. A Soft/bioware SKU set would fix this.
+1. ~~No Soft-grade chrome exists.~~ **Closed by B55 (0.1.80).** The chrome pack now has six Soft/Bioware SKUs, each
+   1 BI, so one of them costs a caster no casting cap (Soft erodes 1 per 3). Picks:
+   - **Sabbat** takes **Cyber-Ears (Soft)**. His dossier says he "runs almost no chrome", and a grown cochlear lattice
+     for hearing the dead frequency is the one implant that fits.
+   - **Vessa** and **Kaïs** stay **unchromed**. Both dossiers lock it as an identity line ("Chrome: NONE … full flesh";
+     "foci-not-chrome is his whole toolkit"). Director options if a table wants one: Vessa → **Empathy Processor
+     (Soft)** (Insight, a preacher reading the soup line); Kaïs → **Cyber-Ears (Soft)** (grown, not metal, so it doesn't
+     break his "will not share a body with metal" line). RAW still tier-gates Soft as late and expensive.
 2. **Heavy street firearms are a dead zone.** `weapons/heavy/` has exactly one non-Military entry (Chatterbox,
    Restricted, Echelon 2). Barak carries it despite Restricted availability because nothing Street or Professional
    exists in that class of weapon.
-3. **Hexshot, Longshot and Saturation kits still declare `weapon: ["bow"]`** — a legacy Draw Steel category. Per the
-   spike these heroes carry firearms, so kit tag and carried weapon disagree on paper. Those three kits want retagging
-   to a Ghostwire ranged category.
+3. ~~Hexshot, Longshot and Saturation kits still declare `weapon: ["bow"]`.~~ **Closed by B55 (0.1.80):** Hexshot
+   light/medium, Longshot medium, Saturation light/medium, Streetsweeper medium. Kit bonuses key off ability keywords,
+   so nothing changes mechanically.
 4. **Barak's armor is heavier than his kit.** Saturation declares light armor; he wears Hardshell for the demolition
    plate look. Apply either the kit's Stamina bonus or the armor's, not both (`08-kits-gear-wealth.md`).
 5. **Kaïs wears no armor at all**, strictly following Hexshot's `armor: "none"`. Wren, whose Longshot kit also says
