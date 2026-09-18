@@ -1,8 +1,8 @@
 # Spike B61 — Rulebook TOC proposal (inventory → lock)
 
-**Status:** Proposal written 2026-09-18 — awaiting Michael **TOC LOCK**  
+**Status:** **TOC LOCKED 2026-09-18** (recommended package; Michael skipped picker — working lock)  
 **Deliverable:** `docs/rulebook/TOC-PROPOSAL.md`  
-**Bump:** module **0.1.96** (docs-only)
+**Bump:** module **0.1.96** (proposal) → **0.1.97** (lock + How to Play Stage 3 fill)
 
 ## Goal
 Inventory `docs/raw/` gaps and propose a lockable print TOC before any chapter-body drafting or PDF.
@@ -13,11 +13,14 @@ Inventory `docs/raw/` gaps and propose a lockable print TOC before any chapter-b
 - Part-structured TOC mapped to existing raw files + NEW Lifestyle / Reach pointer
 - First-5 draft order after lock
 - v1 PDF non-goals (Wilds lore, Rank 2+ strikes, bestiary reprint, …)
+- **TOC locked** as recommended package (5 parts; NEW Lifestyle; NEW Reach pointer OK)
+- `01-how-to-play.md` Stage 3 fill started (0.1.97)
 
 ## Not done (by design)
-- No chapter body drafts
-- No TOC lock until Michael accepts
-- No PDF pipeline work
+- Power Rolls / Combat Stage 3 fills (next)
+- Lifestyle chapter body (do not invent yet)
+- PDF pipeline work
+- **Regenerate journals after Michael reviews HTP** — do not regen on 0.1.97
 
 ## Next
-Michael locks TOC (optionally fold Lifestyle into `08`, drop Reach pointer chapter) → draft order #1–5.
+Draft order #2–5: `03` Power Rolls → `04` Combat → Wire polish → Lifestyle (NEW or `08` §).

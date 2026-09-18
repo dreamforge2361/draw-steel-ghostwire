@@ -1,6 +1,6 @@
 # Ghostwire RAW Rulebook (master)
 
-**Status:** First full assemble 2026-09-17 — every chapter below exists as **draft**, pending Michael review. No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`.  
+**Status:** First full assemble 2026-09-17 — every chapter below exists as **draft**, pending Michael review. No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
 **Path:** `docs/raw/` — this folder is the **master RAW** player/Director rules text for the repo.  
 **Delivery order (LOCKED):** (1) finish RAW markdown here → (2) Foundry Journal pack from these files → (3) PDF pipeline later.
 
@@ -27,7 +27,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | File | Title | Type | Source to assemble from |
 |---|---|---|---|
 | `00-front-matter.md` | Front matter, how to use this book, glossary seeds | GW | New + DS-ALIGNMENT |
-| `01-how-to-play.md` | How to Play / The Director | DS-by-ref + GW terms | Skeleton Ch1; term remap |
+| `01-how-to-play.md` | How to Play / The Director | DS-by-ref + GW terms | Stage 3 fill 2026-09-18; term remap |
 | `02-heroes-characteristics.md` | Heroes & Characteristics | DS-by-ref + GW labels | Physique/Reflex/Logic/Instinct/Persona |
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | DS-by-ref | Outcome order ≤11 / 12–16 / 17+ |
 | `04-combat.md` | Combat basics | DS-by-ref | Stamina, recoveries, surges, conditions |
@@ -55,7 +55,7 @@ Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17
 5. Mark each file header: `**RAW status:** draft | locked` and `**Sources:** …`.
 
 ## Next deliveries
-1. **B61** — lock print TOC (`docs/rulebook/TOC-PROPOSAL.md`) before further RAW body drafts.  
-2. Draft order after TOC lock: shared core (`01`/`03`/`04`) → Wire polish → Lifestyle → then PDF.  
-3. **B42b** — Foundry Journal pack regenerates from `docs/raw/` after locks (`tools/raw-to-journals.mjs`).  
-4. **PDF** — only after TOC lock + spine chapters filled.
+1. **B61** — print TOC **LOCKED 2026-09-18** (recommended package).  
+2. Draft order: shared core (`01` done Stage 3 fill → `03`/`04`) → Wire polish → Lifestyle → then PDF.  
+3. **B42b** — Foundry Journal pack regenerates from `docs/raw/` after locks (`tools/raw-to-journals.mjs`). **Regenerate journals after Michael reviews HTP** (not on 0.1.97).  
+4. **PDF** — only after spine + Wire + Lifestyle filled.

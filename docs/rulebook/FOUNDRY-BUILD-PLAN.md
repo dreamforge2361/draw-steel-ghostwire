@@ -48,11 +48,11 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 
 ## Track A — Rulebook (still open)
 
-**2026-09-18 (B61):** Print TOC proposal at `docs/rulebook/TOC-PROPOSAL.md`. Stage 3 shared-core drafts exist in `docs/raw/01`–`04` but remain thin (Partial). Stage 4 Wire/Veil/Machines drafts exist (`21`–`23`); Veil Rituals + §C3 locked. TOC lock → fill → PDF.
+**2026-09-18 (B61):** Print TOC **LOCKED** (recommended package) at `docs/rulebook/TOC-PROPOSAL.md`. `01-how-to-play` Stage 3 fill landed 0.1.97; `03`/`04` still thin. Stage 4 Wire/Veil/Machines drafts exist (`21`–`23`); Veil Rituals + §C3 locked. Regenerate journals after Michael reviews HTP.
 
 | Item | Status | Notes |
 |---|---|---|
-| Stage 3 shared core (How to Play, characteristics, Power Rolls, combat basics) | **Todo** | DS reskin chapters |
+| Stage 3 shared core (How to Play, characteristics, Power Rolls, combat basics) | **In progress** | HTP Stage 3 fill 0.1.97; `03`/`04` next |
 | Economy chapter (`11-economy.md`) | **Drafted** 2026-09-16 | ¥5,000 + one free Kit; Availability bands; BP firewall; Michael review |
 | Chrome chapter (`12-chrome.md`) + master ingest | **Drafted** 2026-09-16 | Body Integrity 20; grades; packages; Cyborg excluded; Michael review |
 | Stage 4 Wire / Veil (minimal) / Machines | **Todo** | Forced by Hacker / casters / Wrench |

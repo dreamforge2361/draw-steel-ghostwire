@@ -1,6 +1,6 @@
 # Ghostwire Rulebook — TOC Proposal (v1 PDF lock candidate)
 
-**Status:** Proposal — lock TOC before drafting chapter bodies  
+**Status:** LOCKED 2026-09-18 (recommended package; Michael skipped picker — working lock)  
 **Date:** 2026-09-18  
 **Spike:** `docs/spikes/B61-RULEBOOK-TOC.md`  
 **Authority today:** `docs/raw/` is SoR for rules text; Journals regenerate from it; PDF is later  
@@ -26,7 +26,7 @@ Completeness key:
 |---|---|---|---|
 | `00-INDEX.md` | RAW master index / volume map | Complete (meta) | Not a printed chapter; delivery order locked: RAW → Journals → PDF |
 | `00-front-matter.md` | Front matter, how to use, glossary | Partial | Creator License present; glossary strong; all chapters still **draft** status |
-| `01-how-to-play.md` | How to Play / The Director | Partial | ~56 lines; DS-by-ref + remaps. Track A **Stage 3 shared core = Todo** |
+| `01-how-to-play.md` | How to Play / The Director | Partial → Stage 3 fill | Expanded Stage 3 spine 2026-09-18; pending Michael review before RAW-lock / journals regen |
 | `02-heroes-characteristics.md` | Heroes & Characteristics | Partial | Chargen steps, characteristic remap, skill list, class glance. Needs Lifestyle / Contacts pointers when those exist |
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | Partial | Correct DS print order; short. Wired / connection modifiers present |
 | `04-combat.md` | Combat basics | Partial | Resource table + GW keywords; engine by reference. Thin for PDF |
@@ -162,7 +162,7 @@ Print structure. File map = existing `docs/raw/` unless marked **NEW**.
 
 ## 4. Suggested draft order after TOC lock (first 5)
 
-Write/fill these next — **bodies only after Michael locks this TOC**:
+Write/fill these next — **TOC locked; bodies in this order**:
 
 | # | Target | Why first |
 |---|---|---|
@@ -198,11 +198,13 @@ Write/fill these next — **bodies only after Michael locks this TOC**:
 
 ## 6. Lock checklist (Michael)
 
-When this TOC is accepted:
+**TOC LOCKED 2026-09-18** — recommended package (5 parts; NEW Lifestyle chapter; NEW Reach pointer). Michael skipped the picker; this is the working lock.
 
-1. Reply **TOC LOCKED** (note any fold: Lifestyle into `08`? drop print Ch 27?).
-2. Flip Track A rows in `FOUNDRY-BUILD-PLAN.md` / `STATUS.md` to match reality (Wire/Veil drafts exist; Stage 3 still open).
-3. Start draft order #1–5; mark chapters `RAW status: locked` only after fill + Michael skim.
-4. Journals regen after each lock; PDF pipeline only after spine + Wire + Lifestyle exist.
+Remaining after lock:
 
-**Out of scope for this proposal:** drafting chapter bodies, PDF CSS, art, Foundry pack edits.
+1. Flip Track A rows in `FOUNDRY-BUILD-PLAN.md` / `STATUS.md` as Stage 3 fills land.
+2. Draft order #1–5; mark chapters `RAW status: locked` only after fill + Michael skim.
+3. **Regenerate journals after Michael reviews HTP** (do not auto-regen on this bump).
+4. PDF pipeline only after spine + Wire + Lifestyle exist.
+
+**Out of scope for this proposal doc:** PDF CSS, art, Foundry pack edits.
