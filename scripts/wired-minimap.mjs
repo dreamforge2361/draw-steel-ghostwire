@@ -5,7 +5,9 @@
 //   Overlay: compact floating map, canvas stays readable. Jacked In: larger, centred map, and this client's canvas is dimmed
 //   on top of the B23c Jacked In vision mode (body class, CSS only — nothing is written to documents).
 // - Layout: nodes placed as tokens on the viewed Scene keep their relative canvas positions; unplaced nodes sit on a ring
-//   (or along the bottom when some are placed). v1 has no links: the board stores no node–node edges yet.
+//   (or along the bottom when some are placed).
+// - Wires (B41b): the board's undirected node.links draw as SVG lines between visible endpoints only. Players see a wire when
+//   both ends are revealed; the GM Director view also draws wires touching hidden nodes, dashed like the hidden node itself.
 
 import { getBoard } from "./wired-console.mjs";
 import { boardScene, placedNodeActor } from "./wired-node-tokens.mjs";
@@ -95,6 +97,26 @@ function layout(nodes, tokens) {
   return positions;
 }
 
+/** Unique undirected wires between the given (visible) nodes, in percent coordinates. */
+function edges(nodes, positions) {
+  const visible = new Map(nodes.map(node => [node.id, node]));
+  const wires = [];
+  for (const node of nodes) {
+    for (const id of node.links) {
+      const other = visible.get(id);
+      // Each pair once: the endpoint with the smaller id draws it.
+      if (!other || (node.id > id)) continue;
+      const a = positions.get(node.id);
+      const b = positions.get(id);
+      wires.push({
+        x1: a.x.toFixed(2), y1: a.y.toFixed(2), x2: b.x.toFixed(2), y2: b.y.toFixed(2),
+        hidden: !node.revealed || !other.revealed,
+      });
+    }
+  }
+  return wires;
+}
+
 /* ---------- application ---------- */
 
 export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
@@ -132,6 +154,7 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
       modeLabel: (this.mode === "director") ? localize("Director") : game.i18n.localize(`GHOSTWIRE.Wired.States.${this.mode}`),
       sceneName: scene?.name ?? game.i18n.localize("GHOSTWIRE.WiredConsole.NoScene"),
       showRatings,
+      edges: edges(nodes, positions),
       nodes: nodes.map(node => {
         const band = alertBand(node.alert);
         const { x, y } = positions.get(node.id);

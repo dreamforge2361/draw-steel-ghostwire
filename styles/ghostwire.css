@@ -418,6 +418,12 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-amount { width: 4.5em; text-align: center; }
 .ghostwire-wired-console .wc-notes { width: 100%; resize: vertical; margin-top: 0.3rem; font-family: inherit; }
 .ghostwire-wired-console .wc-description { margin: 0.3rem 0 0; white-space: pre-wrap; }
+.ghostwire-wired-console .wc-links { list-style: none; margin: 0.3rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.2rem 0.6rem; }
+.ghostwire-wired-console .wc-link { display: flex; align-items: center; gap: 0.35rem; cursor: pointer; }
+.ghostwire-wired-console .wc-link input { margin: 0; flex: none; }
+.ghostwire-wired-console .wc-link-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ghostwire-wired-console .wc-link.is-hidden .wc-link-name { color: var(--wc-muted); font-style: italic; }
+.ghostwire-wired-console .wc-links-hint { margin: 0.3rem 0 0; font-size: 0.8rem; }
 .ghostwire-wired-console .wc-btn {
   flex: 0 0 auto;
   width: auto;
@@ -516,6 +522,35 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   color: var(--wc-muted);
   font-style: italic;
   text-align: center;
+}
+
+/* Wires (B41b): board links drawn behind the node buttons, in the same % space as their left/top. */
+.ghostwire-wired-minimap .wm-wires {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.ghostwire-wired-minimap .wm-wire {
+  stroke: var(--wc-cyan);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.55;
+  filter: drop-shadow(0 0 3px var(--wc-cyan));
+}
+.ghostwire-wired-minimap.mode-jackedIn .wm-wire {
+  stroke: var(--wc-hot);
+  stroke-width: 2;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 4px var(--wc-hot));
+}
+.ghostwire-wired-minimap .wm-wire.is-hidden {
+  stroke: var(--wc-muted);
+  stroke-dasharray: 4 4;
+  opacity: 0.45;
+  filter: none;
 }
 
 /* Node: a ring (Integrity for Track 2, solid for Track 1) glowing in its Trace Alert band colour. */

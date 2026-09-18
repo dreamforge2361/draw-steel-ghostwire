@@ -69,7 +69,7 @@ Overlay: canvas + floating node map. Jacked In: dark scene + node map primary. V
 | `wiredMinimapRatings` | client | on | `R#` labels on node glyphs |
 | `wiredMinimapDim` | client | on | Extra canvas dim while Jacked In |
 
-**Edges — deferred to v1.1.** The board stores no node–node links, so v1 draws nodes only. v1.1 sketch: optional `links: [nodeId, …]` on each board node, edited in the Console detail panel; the minimap draws SVG lines between visible endpoints only (a link to an unrevealed node stays hidden).
+**Edges — built in B41b (0.1.83).** Board nodes carry undirected `links: [nodeId, …]`, normalized and mirrored in `getBoard`. The Director edits them with the **Links** checkboxes in the Console detail panel (`setLink` keeps both ends in sync; deleting a node strips its back-links). The minimap draws SVG wires behind the nodes between visible endpoints only. Players see a wire only when both ends are revealed. The GM Director view also draws wires to hidden nodes, dashed grey. Wires are cyan in Overlay and hot pink when Jacked In. Spike + checklist: `docs/spikes/B41b-WIRED-MINIMAP-EDGES.md`.
 
 **Performance.** One DOM button per visible node; no canvas drawing. Re-render only on board / token / node-actor changes on the viewed Scene; `controlToken` re-evaluates state but only re-renders on a mode change.
 

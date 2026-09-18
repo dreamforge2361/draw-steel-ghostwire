@@ -5,6 +5,13 @@
     <span class="wc-state-chip state-{{mode}}">{{modeLabel}}</span>
   </header>
   <div class="wm-field">
+    {{#if edges.length}}
+    <svg class="wm-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      {{#each edges}}
+      <line class="wm-wire{{#if hidden}} is-hidden{{/if}}" x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}" vector-effect="non-scaling-stroke"></line>
+      {{/each}}
+    </svg>
+    {{/if}}
     {{#each nodes}}
     <button type="button" class="wm-node track-{{track}} band-{{band}}{{#if down}} down{{/if}}{{#if hidden}} is-hidden{{/if}}{{#if placed}} placed{{/if}}"
             style="{{style}} --wm-integrity: {{integrityPct}}%;" data-action="focusNode" data-node-id="{{id}}"

@@ -6275,7 +6275,10 @@
       "NodeFolder": "Wired Nodes",
       "NoCanvasScene": "View a Scene before placing a node on the canvas.",
       "AlreadyPlaced": "{name} is already on the canvas.",
-      "NoNodeTemplate": "No Wired node token template found in Ghostwire Summons & Machines. Rebuild the summons pack."
+      "NoNodeTemplate": "No Wired node token template found in Ghostwire Summons & Machines. Rebuild the summons pack.",
+      "Links": "Links",
+      "LinksHint": "Check a node to wire it to this one (both ends link). Runners see a wire on the Wired Node Map only when both nodes are revealed.",
+      "LinksNone": "Add another node to link it to this one."
     },
     "WiredMinimap": {
       "Title": "Wired Node Map",

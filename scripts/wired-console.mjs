@@ -36,11 +36,30 @@ export function getBoard(scene) {
       revealed: !!node.revealed,
       description: node.description ?? "",
       notes: node.notes ?? "",
+      links: Array.isArray(node.links) ? node.links.filter(id => typeof id === "string") : [],
     };
   });
+  // Links are undirected (B41b): drop self-links and ids not on this board, and mirror one-sided links so both ends list each other.
+  const byId = new Map(nodes.map(node => [node.id, node]));
+  for (const node of nodes) node.links = [...new Set(node.links)].filter(id => (id !== node.id) && byId.has(id));
+  for (const node of nodes) for (const id of node.links) {
+    const other = byId.get(id);
+    if (!other.links.includes(node.id)) other.links.push(node.id);
+  }
   // Stratum is the scene's default for random nodes; "random" rolls a stratum per node.
   const stratum = STRATA[board.stratum] ? board.stratum : "random";
   return { nodes, stratum, updated: board.updated ?? 0 };
+}
+
+/** Link or unlink two board nodes, keeping the graph symmetric (each end lists the other). Mutates `nodes`. */
+export function setLink(nodes, a, b, linked) {
+  const nodeA = nodes.find(n => n.id === a);
+  const nodeB = nodes.find(n => n.id === b);
+  if (!nodeA || !nodeB || (a === b)) return;
+  for (const [node, other] of [[nodeA, b], [nodeB, a]]) {
+    node.links = (node.links ?? []).filter(id => id !== other);
+    if (linked) node.links.push(other);
+  }
 }
 
 export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
@@ -125,6 +144,9 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         // Core Handlebars has no "selected" helper, so options carry their own selected state.
         trackOptions: [1, 2].map(track => ({ value: track, label: localize(`Track${track}`), isSelected: node.track === track })),
         ratingOptions: [1, 2, 3, 4, 5].map(rating => ({ value: rating, label: `R${rating}`, isSelected: node.rating === rating })),
+        // Links (B41b): every other node on the board as a checkbox; the Director sees them all, hidden ones marked.
+        linkOptions: board.nodes.filter(other => other.id !== node.id)
+          .map(other => ({ id: other.id, name: other.name, rating: other.rating, hidden: !other.revealed, linked: node.links.includes(other.id) })),
       };
     };
 
@@ -173,6 +195,9 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     // Inline edits in the detail panel save on change.
     for (const input of this.element.querySelectorAll("[data-field]")) {
       input.addEventListener("change", event => this.#onFieldChange(event));
+    }
+    for (const input of this.element.querySelectorAll("[data-link-to]")) {
+      input.addEventListener("change", event => this.#onLinkChange(event));
     }
   }
 
@@ -237,6 +262,15 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     });
   }
 
+  // Links checkbox: toggles the undirected edge between the selected node and the checked one.
+  async #onLinkChange(event) {
+    const input = event.currentTarget;
+    const nodeId = input.closest("[data-node-id]")?.dataset.nodeId;
+    const otherId = input.dataset.linkTo;
+    if (!nodeId || !otherId) return;
+    await this.#updateBoard(nodes => setLink(nodes, nodeId, otherId, input.checked));
+  }
+
   static #nodeId(target) {
     return target.closest("[data-node-id]")?.dataset.nodeId;
   }
@@ -250,7 +284,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static #makeNode({ name, track = 2, rating = 3, description = "", notes = "" }) {
     return {
       id: foundry.utils.randomID(), name, track, rating,
-      integrity: RATING[rating].integrity, integrityMax: RATING[rating].integrity, alert: 0, revealed: false, description, notes,
+      integrity: RATING[rating].integrity, integrityMax: RATING[rating].integrity, alert: 0, revealed: false, description, notes, links: [],
     };
   }
 
@@ -349,7 +383,12 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       window: { title: "GHOSTWIRE.WiredConsole.DeleteNode" },
       content: `<p>${game.i18n.format("GHOSTWIRE.WiredConsole.DeleteNodeConfirm", { name: foundry.utils.escapeHTML(node.name) })}</p>`,
     });
-    if (confirmed) await this.#updateBoard(nodes => nodes.splice(nodes.findIndex(n => n.id === nodeId), 1));
+    if (!confirmed) return;
+    await this.#updateBoard(nodes => {
+      // Strip back-links so no node keeps a wire to the deleted one.
+      for (const other of nodes) other.links = other.links.filter(id => id !== nodeId);
+      nodes.splice(nodes.findIndex(n => n.id === nodeId), 1);
+    });
   }
 
   static async #onAlertUp(event, target) {
@@ -519,6 +558,6 @@ export function registerWiredConsole({ getWiredState }) {
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, rollNode, NODE_TEMPLATES };
+    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES };
   });
 }
