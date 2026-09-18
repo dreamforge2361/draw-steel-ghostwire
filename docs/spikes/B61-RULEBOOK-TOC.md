@@ -25,3 +25,4 @@ Inventory `docs/raw/` gaps and propose a lockable print TOC before any chapter-b
 ## Next
 Draft order #3–5: `04` Combat → Wire polish → Lifestyle (NEW or `08` §).  
 **0.1.98:** `03` Power Rolls Stage 3 fill done — see `docs/spikes/B62-POWER-ROLLS-STAGE3.md`.
+**0.1.99:** `04` Combat Stage 3 fill done — see `docs/spikes/B63-COMBAT-STAGE3.md`.

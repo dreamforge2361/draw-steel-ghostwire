@@ -16,9 +16,11 @@ Print-ready Stage 3 prose for Tests & Power Rolls after TOC lock (B61 / 0.1.97) 
 - **Combat (`04`) not expanded** this bump — prefer Power Rolls solid first
 
 ## Not done (by design)
-- `04-combat.md` Stage 3 fill (next draft order)
 - Journal regenerate (do not regen until Michael reviews)
 - Lifestyle chapter body
 
 ## Next
-Draft order continues: `04` Combat → Wire polish → Lifestyle (NEW or `08` §).
+~~`04` Combat~~ done in **0.1.99** (B63). Draft order continues: Wire polish → Lifestyle (NEW or `08` §).
+
+## Follow-on
+**0.1.99:** `04` Combat Stage 3 fill done — see `docs/spikes/B63-COMBAT-STAGE3.md`.

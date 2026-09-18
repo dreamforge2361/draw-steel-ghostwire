@@ -29,7 +29,7 @@ Completeness key:
 | `01-how-to-play.md` | How to Play / The Director | Partial → Stage 3 fill | Expanded Stage 3 spine 2026-09-18; pending Michael review before RAW-lock / journals regen |
 | `02-heroes-characteristics.md` | Heroes & Characteristics | Partial | Chargen steps, characteristic remap, skill list, class glance. Needs Lifestyle / Contacts pointers when those exist |
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | Partial | Correct DS print order; short. Wired / connection modifiers present |
-| `04-combat.md` | Combat basics | Partial | Resource table + GW keywords; engine by reference. Thin for PDF |
+| `04-combat.md` | Combat basics | Stage 3 draft (0.1.99) | Standalone GW combat procedures; B49/B44c free-strike note; Crisis/inert pointers |
 | `05-ancestries.md` | Ancestries (Peoples) | Complete | Eight Peoples as DS ancestry packages. A1 copyright rewrite **deferred**. Cyborg System Crisis still thin |
 | `06-backgrounds-professions.md` | Backgrounds & Professions | Complete | 8 Backgrounds + 15 Professions; Culture→Background / Career→Profession locked |
 | `07-languages.md` | Languages (rules only) | Complete (thin) | Names + knowledge-only rules locked. Lore gazetteer = **non-goal** for RAW/PDF v1 |
