@@ -296,7 +296,10 @@ export async function loadMagazine(payload) {
 
 /* -------------------------------------------- consumption */
 
-/** Wrap AbilityModel#use: refuse an unloaded or spent magazine, and spend one fire after a successful Run. */
+/** @type {((actor: Actor) => "disconnected"|"overlay"|"jackedIn") | null} */
+let getWiredStateFn = null;
+
+/** Wrap AbilityModel#use: refuse an unloaded or spent magazine or a Disconnected hero, and spend one fire after a successful Run. */
 function patchPayloadConsumption() {
   const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
   if (!AbilityModel?.prototype.use) {
@@ -318,6 +321,12 @@ function patchPayloadConsumption() {
       ui.notifications.warn(game.i18n.format(`${L}.NotLoaded`, { payload: payload.name }));
       return null;
     }
+    // B51c: a payload only runs on the Wire. The Run stays on the sheet while Disconnected; the use is refused.
+    const state = getWiredStateFn?.(this.actor);
+    if ((state !== "overlay") && (state !== "jackedIn")) {
+      ui.notifications.warn(game.i18n.format(`${L}.NotConnected`, { actor: this.actor?.name ?? "", payload: payload.name }));
+      return null;
+    }
 
     const message = await use.call(this, config, dialogOptions, messageOptions);
     if (!message) return message;
@@ -336,7 +345,11 @@ function patchPayloadConsumption() {
 
 /* -------------------------------------------- registration */
 
-export function registerPayloadUse() {
+/**
+ * @param {{ getWiredState?: (actor: Actor) => "disconnected"|"overlay"|"jackedIn" }} [options]
+ */
+export function registerPayloadUse({ getWiredState } = {}) {
+  getWiredStateFn = getWiredState ?? null;
   patchPayloadConsumption();
 
   Hooks.once("ready", async () => {

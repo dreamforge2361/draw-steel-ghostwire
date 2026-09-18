@@ -164,7 +164,7 @@ A payload chip in your gear does nothing by itself. To use it, you compile it in
 | Middle (12–16) | 3 |
 | High (17+) | 5 |
 
-**Running a payload.** Each payload is a Wired, ranged ability with a power roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
+**Running a payload.** You must be Connected (Overlay or Jacked In) to run a payload. Each payload is a Wired, ranged ability with a power roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
 
 The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
 

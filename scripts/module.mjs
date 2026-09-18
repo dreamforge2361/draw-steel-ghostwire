@@ -95,7 +95,7 @@ Hooks.once("init", () => {
   registerMods();
   registerAbilitySfx();
   registerEquipmentUse();
-  registerPayloadUse();
+  registerPayloadUse({ getWiredState });
   registerFreeStrikeStrip();
   const { isCasterClass } = registerCasterChrome({ isCyborg, casterClasses: VEIL_CASTER_CLASSES });
   registerMagicErosion({ isCasterClass });

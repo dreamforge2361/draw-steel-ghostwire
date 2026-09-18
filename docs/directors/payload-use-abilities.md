@@ -1,6 +1,6 @@
 # B51 / B51b — Matrix payloads → Craft magazines + "Run" ability
 
-**Status:** **B51 built 0.1.76; B51b (Craft magazines) built 0.1.77, pending Michael Foundry-verify.** Twin of B49 (`equipment-use-abilities.md`).
+**Status:** **B51 built 0.1.76; B51b (Craft magazines) built 0.1.77; B51c (Connected gate) built 0.1.86, pending Michael Foundry-verify.** Twin of B49 (`equipment-use-abilities.md`).
 Code `scripts/payload-use.mjs` (+ `scripts/mods.mjs`) · templates `scripts/data/payload-use-templates.json` · spike `docs/spikes/B51-PROGRAM-PAYLOAD-EXECUTE.md` · rule `docs/raw/21-the-wire.md` (Deck software: suites vs payloads) · doctrine `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
 
 ## The rule in one breath
@@ -10,6 +10,7 @@ A payload chip (Zap, Crash, Ghostload, Static, Blackout, Wraith) does nothing lo
 - **Loose chip:** no Run ability. Right-click it on the hero sheet → **Load magazine (Craft)…**. Its quantity is the number of chips.
 - **Load:** pick a deck with a free slot (skipped if only one fits) → Reason power roll in the system dialog (Hacking skill = 1 edge) → the chip installs on the deck with quantity = fires, and **Run {Payload}** appears (Ranged + Wired, Reason, deck Reach; plays the Wired sound). A stack of chips loads one; the rest stay loose. Cancel the roll and nothing changes.
 - **Recompile magazine (Craft)…** on a loaded one: re-roll; the new tier replaces its fires.
+- **Connected only (B51c):** Run works only while the hero is **Overlay** or **Jacked In**. Disconnected, the Run stays on the sheet but refuses with a "not Connected" warning (no roll, no fire spent, magazine stays loaded).
 - **Run:** spends 1 fire. At 0 the magazine unloads at once (slot frees). The Run stays on the sheet until the next world load, so the chat card still works, but it refuses to fire. The chip sits at 0; delete it.
 - **Uninstall mod** on a magazine with fires left asks first: unloading **dumps** the remaining fires (chip goes to 0). Deleting the deck does the same without asking.
 - Payloads skip **Install onto…** and **Activate/Deactivate**; the Craft load is the only way in.

@@ -7243,6 +7243,7 @@
         }
       },
       "NotLoaded": "{payload} isn’t loaded in a deck. Use Load magazine (Craft) on the chip first.",
+      "NotConnected": "{actor} isn’t Connected. Go Overlay or Jacked In before you run {payload}.",
       "Menu": {
         "Load": "Load magazine (Craft)…",
         "Recompile": "Recompile magazine (Craft)…"

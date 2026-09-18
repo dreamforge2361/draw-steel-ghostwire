@@ -1,6 +1,6 @@
 # Spike B51 — Program / payload execute
 
-**Status:** **B51 built 0.1.76 + B51b (Craft magazines) built 0.1.77 — pending Michael Foundry-verify.** Not committed. B51b supersedes the 0.1.76 inventory-fire behaviour below (see "As built — B51b" at the end).
+**Status:** **B51 built 0.1.76 + B51b (Craft magazines) built 0.1.77 + B51c (Connected gate) built 0.1.86 — pending Michael Foundry-verify.** Not committed. B51b supersedes the 0.1.76 inventory-fire behaviour below (see "As built — B51b" at the end).
 Code: `scripts/payload-use.mjs` · templates: `scripts/data/payload-use-templates.json` · strings: `GHOSTWIRE.PayloadUse.*` in `lang/en.json`.
 Director note: `docs/directors/payload-use-abilities.md` (twin of B49's `equipment-use-abilities.md`).
 
@@ -220,3 +220,24 @@ refuses a Run whose payload is unloaded ("isn't loaded") or at 0 ("spent").
 15. Drag **Kessic Draye** in from Pregens → Crash is loose (no Run) until loaded.
 16. A world chip from 0.1.76 (no mod flag) → its old inventory Run is removed on `ready`; Load backfills the flag and installs.
 17. Rulebook → The Wire → **Deck software: suites vs payloads** page renders (tables OK); the Mods chapter shows the payload bullet.
+
+## As built — B51c (0.1.86): Connected gate
+
+**Lock (Michael 2026-09-18).** Run {Payload} needs the hero **Connected**: Overlay or Jacked In, the same statuses the Wired Console and minimap read. Zap stays as is (Stamina biofeedback 2/5/7 + Reason): no Integrity retarget, no deck Integrity Damage Bonus scaling, no auto-delete of spent chips.
+
+### Code
+- `scripts/payload-use.mjs` — `registerPayloadUse({ getWiredState })` keeps the function, like `registerWiredConsole` / `registerWiredMinimap`. The `AbilityModel#use` wrapper checks spent, then loaded, then Connected, before the system roll. Not Connected → warning `GHOSTWIRE.PayloadUse.NotConnected`, returns null. Nothing is spent and the magazine stays loaded.
+- `scripts/module.mjs` — passes `getWiredState` into `registerPayloadUse`.
+- `lang/en.json` — `GHOSTWIRE.PayloadUse.NotConnected`.
+- `module.json` 0.1.86.
+
+### Notes
+- The Run ability is **not** removed on Disconnect. It stays on the sheet (the Director can still see it) and only the use is refused, so going Connected / Disconnected does not add and remove items.
+- The gate sits only on payload Runs (abilities with the payload source flag). Other abilities are untouched.
+
+### Foundry test checklist — B51c (Michael)
+1. Hero with a loaded Zap, status **Disconnected** → Run Zap → warning "… isn't Connected …", no roll dialog, no chat card, quantity unchanged.
+2. Set **Overlay** → Run Zap → works as in B51b (roll, 2/5/7 + R card, Wired SFX, 1 fire spent). Repeat with **Jacked In**.
+3. Mid-fight, go **Disconnected** → next Run refuses; magazine still loaded (deck slot used, quantity unchanged). Connect again → Run works.
+4. A spent Run (0 fires) still warns "spent" (spent check runs first); an unloaded chip still has no Run.
+5. Weapons (B49 Fire) and other abilities run while Disconnected, as before.
