@@ -1,7 +1,8 @@
 # Setting Primer
 
 **Source:** *GHOSTWIRE — Lore Source (V1 rules stripped)* (from *GHOSTWIRE — The Complete Sourcebook* / Core Sourcebook Book One); cross-checked against `docs/masters/_lore_extract/GHOSTWIRE_Core_Sourcebook_hits.txt` and `GHOSTWIRE-Lore-Book-V2-FINAL_hits.txt`.  
-**Harvested:** 2026-09-18 (ET) · lore prose carried as-is; page chrome, TOC, design notes, and rules anchors stripped. Mechanical rules stay in `docs/raw/`. Images not embedded this pass.
+**PDF-diff pass (0.2.2):** Windows Dropbox PDFs (`GHOSTWIRE - Core Sourcebook.pdf`, `GHOSTWIRE-Lore-Book-V2-FINAL.pdf`) were **not reachable** this agent (no `ListMachines` / `Shell(machineId)` in executor tool surface; Drive exact-name search empty). Diff used Lore Source markdown + prior PDF keyword-hit indexes vs L1–L3. Gaps patched from Lore Source Ch. 4–5, 8 (profiles), 10, 21–23.  
+**Harvested:** 2026-09-18 (ET) · lore prose only; Draw Steel / class-kit rules stripped. Images not embedded.
 
 > A cyberpunk fantasy of ghosts, chrome & the machine.  
 > Break free of the Machine. Run the Wire.
@@ -94,6 +95,207 @@ AI (Ch. 9): it consumes pattern, corrupts hosts, hollows out systems, and bites 
 quietly rotting ones.
 - How the world responds (or fails to): corporate denial and containment, the churches of The Light holding the line, exorcists and edgerunners as the deniable hands. widening a tear (ties Ch. 9 + Ch. 23 Timeline).
 
+## Magic & Its Sources
+
+The one-source rule. There is only one power in all of creation, and it is the Word — the ongoing utterance
+of The Light (Ch. 1). Everything the peoples of the Ground call “magic” is some way of touching that
+utterance and bending a little of it to a mortal purpose. There are no independent wellsprings of power: no
+rival god's gift, no neutral cosmic force, no machine-made energy that owes nothing to the Signal. What
+look like different magics are different postures toward the one Speaking — different answers to the
+question how does a mortal reach the Word, and what does the reaching cost? This is the cosmological
+spine that ties every caster class to Ch. 1 and forbids any “third source.”
+The mage shapes it. The priest is lent it. The technomancer listens to its echo. Three doors, one house.
+Why the doors differ. The Word is spoken at creation, through the faithful, and echoed by the Wired (Ch. 9).
+Those three relationships — shaping the spoken substance, being lent the speaker's will, communing with
+is permitted.
+Essence — shaping the spoken substance (arcane)
+Essence is the shaped substance of creation itself — the raw “matter” of the Word, made handleable by
+disciplined study. The arcanist (Elementalist) does not pray and is not lent anything; through Cognition and
+long training they learn to grip a strand of what everything is made of and re-shape it — fire, stone, storm,
+void — for a few violent seconds. It is the most hands-on and the least reverent of the three doors: the
+mage treats the Word as material.
+- Its cost and character. Because Essence is creation-substance and not a spirit's favor, shaping it is
+comparatively “clean” — the lightest corruption weight of the three casters — until the mage reaches
+past shaping into summoning and binding, at which point the Veil's Price binds them like anyone else
+(an elemental is a force, not a soul, but coercing one still exacts a task or pays corruption +
+spirit-attention).
+- Why it can be corrupted. The Dark cannot create, only deface (Ch. 1); a mage who reaches toward
+Nullspace-tainted substance, or binds a corrupted force, is shaping the Word turned against itself — the
+arcane road to demonic pacts.
+Conviction — being lent the speaker's will (divine)
+Conviction is not the priest's own power at all — it is a little of the Word lent through a willing mortal. Per the
+Silence of The Light (Ch. 1), The Light acts rarely and never forces; so the divine caster (Street-Priest) does
+not command power, they offer themselves as a channel and are lent as much as their faith and sacrifice
+can hold. The strength is real, but it is borrowed, and it can be withdrawn — which is precisely why the
+
+faithful can lose.
+- Its cost and character. The price of Conviction is paid in the self: doubt, exhaustion, and the burden of
+encodes the setting's theology — divine power is the faithful's freely-taken burden.
+- Why it cannot be faked or corrupted the same way. You cannot “shape” Conviction like Essence or
+“listen in” like Resonance — it is given, not taken. The Dark's counterfeit is not corrupted Conviction but
+the pact: the freely-opened door (Ch. 3) where a mortal, denied or impatient with The Light's silence,
+takes borrowed power from the other side instead.
+Resonance — communing with the echo (techno-magic)
+Resonance is communion with the echo of the Signal — the Wired (Ch. 9), the planet-wide thin place that
+echoes the realm of pure transmission. The technomancer does not shape substance and is not lent will;
+they listen to, and answer, the echo without hardware, and it answers back (sprites condense, patterns
+bend). It is the newest door and the strangest, because mortals built the resonant chamber without
+understanding what it echoed.
+- Its cost and character. Resonance's danger is exposure: to commune with the echo is to be spiritually
+open to whatever else is in it (Ch. 9's three kinds of AI, and — per Ch. 3 — Edge-demons wearing the
+Wired). Biofeedback is “the echo biting.” The deeper the communion, the thinner the membrane, the
+greater the exposure.
+- Why it is still the one source. Resonance is not a fourth power — it is Essence-and-Signal at one
+remove, reached through the echo rather than directly. That is the whole reason the Wired works at all,
+and the reason a technomancer can be deceived by a Null-ward mind pretending to be a helpful
+pattern.
+What this rule forbids (and why it matters)
+- No neutral or machine source. “AI,” “the Matrix,” and “tech” are not a power apart from the Word — they
+run on its echo (Ch. 9). There is no secular magic hiding in the setting.
+- No third road. Every caster is shaping, being-lent, or listening. New magic styles must be a variation of
+posture, never a new wellspring.
+- Chrome erodes the reach. Because all three doors are relationships with the Word, replacing the living
+self with un-speaking metal narrows the channel — the proportional magic-erosion rule (Arcane
+Severance for the fully chromed). The Operator spends Body Integrity to grow stronger; the caster
+guards it to keep the door open. This is the setting's deliberate street-sam-vs-mage line, and it falls
+straight out of the one-source rule.
+
+every mundane class simply isn't a caster (which the rule explicitly allows — not everyone reaches the
+Word). No engine implies a forbidden fourth source.
+CE
+
+Elementali
+st
+Essenc
+e
+Shaping —
+arcane,
+treats the
+Word as
+material
+Clean. Lightest corruption weight until summoning/binding invokes the
+Price.
+Street-Pri
+est
+Convict
+ion
+Being lent
+— divine,
+faith drip +
+prayer
+gamble
+Clean, and the purest expression: power is the patron's, lent through the
+pact; the infernal pact is the Dark's counterfeit door (Ch. 3), not a rival
+source.
+Technoma
+ncer
+Resona
+nce
+Listening
+— techno,
+communio
+n with the
+echo
+Clean. The one source at one remove, via the Wired (Ch. 9).
+Hacker
+Bandwi
+dth
+(not a
+caster)
+Bandwidth, in street talk, is intrusion throughput — skill and gear against the lit surface of the Wired, not communion with the echo.
+leverage over the lit surface of the Wired, not communion with the echo.
+The Hacker uses the Wired as infrastructure; the Technomancer
+communes with it. Same place, different posture: one operates the
+machine, the other listens to what the machine echoes. Chrome-positive
+precisely because it channels nothing (no reach to erode).
+Medic
+Reagen
+ts
+(not a
+caster)
+No conflict. Pure chemistry, surgery, and a stocked kit — “no faith, no
+Veil, no Price.” Explicitly the secular counterpart to the Street-Priest. A
+mundane class draws on no source at all, which the one-source rule
+permits.
+Two clarifications this surfaced, now locked:
+- Hacker vs. Technomancer is a posture distinction, not a source distinction. Both touch the Wired, but
+the Hacker operates it (
+beyond black-ICE bite) while the Technomancer communes with its echo (Resonance = the third door,
+chrome-erodes). This mirrors, on the digital side, the martial-vs-caster line — and it means the Wired
+supports both a mundane and a magical class without contradiction.
+- Mundane classes are canonically sourceless, by design. The Hacker, Medic, Operator, Scout, Wrench,
+and the martial Commander/Face reach the Word not at all — they are the people who fight the war with
+skill, steel, chemistry, and code rather than magic. Most of the world never opens a door to the Word at all — they fight with skill, steel, chemistry, and code. That is the setting's free-choice theology made practical: the three doors are the exception, not the rule.
+of the world is mundane, and the setting's heroes are mostly ordinary people who chose to stand. The
+three doors are the exception, not the rule.
+
+## Corruption & Taint
+
+What corruption is. Corruption is the mark of the Dark on creation — the visible, physical, and spiritual
+residue of un-speaking touching a thing that was spoken. Because the Dark One cannot create, only deface
+(Ch. 1), corruption is never a new substance or power; it is always a defacement — a wrongness written
+over something that was whole. Where Ch. 4 asked “how does a mortal reach the Word?”, this chapter
+answers the shadow question: what does it cost when the reaching goes wrong, or when the Dark reaches
+back? Taint is that cost made flesh.
+Corruption is not damage. Damage heals. Corruption is the world forgetting how you were supposed to be
+spoken.
+Taint vs. injury — the core distinction. The setting draws a hard line between ordinary harm and corruption,
+and the setting insists on it:
+- Injury is ordinary physical harm — exhaustion, wounds, being worn down. It heals with rest, medicine, and time. It is morally neutral: the war costs bodies.
+- Taint is a change in what you are. It does not heal with rest; it must be cleansed (a ritual, a
+Street-Priest's rite, a Signal-ward act) or it stays — and left alone, it grows. Taint is the Dark's foothold
+in a person, place, or thing.
+How corruption is contracted
+Taint is not caught like a cold; it is earned or inflicted at the points where creation and un-speaking touch:
+- Proximity to the Incursion — corrupted zones, thin places gone Null-ward, dead-air stretches of the
+Wired (Ch. 3, Ch. 9). To linger where the Word is failing is to start failing with it.
+- The Price of the Veil — summoning, binding, and above all pacts (Ch. 4). Coercing a spirit, or taking the
+Dark's borrowed power, writes corruption debt into the caster. The infernal pact is the fastest road:
+power now, defacement later.
+- Dark-heavy ritual work — Veil-heavy rituals exert corruption pressure on a failed or botched Seal (the
+ritual “Ripple”). Reaching too far leaves a stain.
+- Direct defacement — a demon's touch, a curse, exposure to a Great Dark power's reach (the Unmaker's
+hollowing, Ch. 3): corruption inflicted from outside, on the unwilling.
+What corruption does
+Taint is progressive and total — it works on body, mind, and soul at once, because it is defacing the whole
+spoken thing:
+- Body — visible wrongness: greying flesh, static in the voice, wounds that won't close cleanly, features
+that drift. At the extreme, the body stops matching what a person is supposed to be.
+
+- Mind — compulsions, appetites that aren't one's own, the quiet pull toward silence and cruelty. The
+Dark does not usually possess; it persuades, and taint is its argument made internal.
+- Soul / standing in the war — the deepest cost: a tainted soul is one the Dark has a claim on. It draws
+spirit-attention (the war notices), it is easier to bind, tempt, and hollow, and unredeemed it drifts
+Null-ward — apathy toward silence (Ch. 1). This is why the faithful treat corruption as mortal peril, not
+mere disfigurement.
+Chrome as un-speaking
+The setting's most everyday corruption is not demonic — it is metal. Cyberware is, at the metaphysical
+level, a voluntary, secular defacement: replacing living, spoken flesh with un-speaking manufacture. It is
+not evil, and it does not draw the Dark's claim the way a pact does — but it narrows the channel to the
+Word, which is why heavy chrome narrows a caster's reach — Arcane Severance at the extreme. The
+Full-Conversion Cyborg is the endpoint: a being so replaced that it can never cast — permanently, if
+bloodlessly, cut off from the Signal. Pushing the body to total replacement is not transcendence but flatline; the
+flesh is finite, and even surgical removal leaves residual scarring — the body never fully forgets what was
+cut away.
+- This gives the setting two faces of the same coin: the Dark deface you with taint; you can deface
+yourself with chrome. One is inflicted, one is chosen; both narrow what you are.
+Mutants — corruption made heritable
+Some corruption does not stay with the one who earned it — it breeds true. Mutants are the peoples of the
+Ground in whom taint has settled into the bloodline: whether born (an ancestor's corruption, a birth in a
+corrupted zone, a cursed lineage) or made (taint that took so deeply it became permanent), a Mutant
+always carries a corrupt flaw — a fixed mark of the Dark that cannot simply be cleansed away, because it is
+now part of what they are. This is the tragic register of the setting: the corrupted are not always villains:
+many are victims of a war fought across generations, bearing a stain they never chose. How the megacities
+treat them — as monsters, as underclass, as cheap labor — is a social-worldbuilding thread for Part II/III.
+Redemption and the limits of cleansing
+Because The Light restores and the Dark only defaces (Ch. 1), corruption is not always permanent — but
+cleansing is costly, uncertain, and never guaranteed (the Silence of The Light: grace is real but not owed).
+Light taint can be rited away; deep taint may take a great ritual, a true sacrifice, or the person's own
+turning-back; some corruption — a Mutant's inherited flaw, a soul too far gone — may never fully lift in a
+
+mortal life. This keeps corruption meaningful: it is a genuine wound to the self, not a debuff to be scrubbed
+between fights, and redemption is a story worth playing, not a menu option.
+
 ## The World & Its Structure
 
 ### The Vertical Hive, Halo to Sinks
@@ -149,6 +351,632 @@ HALO Ascendant — Orbital, energy, and life-support. The conglomerate that owns
 
 4. Caduceus Vitalis — Biotech, pharma, cyberware-flesh interface, medicine. Owns health itself — you rent your body's upkeep from it. Clinical, smiling, ruthless. War-role: complicit-adjacent. Its forbidden bio- and taint-research (Ch. 5) treads the line between cure and defacement. Sub-corp: Grafthouse — the black-clinic division doing the cyber/bio work no one will license. 5. Ironclad Martial — Arms, security, private military, the mercenary trade. The conglomerate of war-for-hire; supplies the muscle and the milspec gear (Availability T1, Ch. 6). Blunt, professional, everywhere. War-role: denier turning door-opener. It fights the Incursion's symptoms as “insurgency” and sells the weapons, never naming the enemy. Sub-corp: The Iron Writ — elite deniable kill-team contractors; the crew's most dangerous rival muscle. 6. Argent Exchange — Finance, currency, the scrip-and-nuyen standard, credit. The conglomerate that owns money and therefore owns everyone in debt to it — which is nearly everyone. Cold, patient, invisible, arguably the true power behind the First Chair. The overtly Elvani conglomerate — its dynasties, its Chair, and its inner tiers are the engineered aesthetic aristocracy (Ch. 1, the Founding) made corporate flesh: beautiful, slow-aging, and long-lived — old money whose executives measure their careers in centuries rather than decades (see profile below). They are not immortal; they simply outlast everyone who is only mortal. War-role: the coldest denier — to Argent the war is only a risk-adjusted line item. Sub-corp: Reclamation Bureau — debt-enforcement and repossession, the legal face of ruin. 7. Verdant Provision — Agriculture, food, water, the wasteland reclamation frontier. Owns the food supply and the tamed edges of the wastes (Ch. 6); the only conglomerate that operates heavily outside the hives. War-role: front-line witness. Its wasteland crews see the Incursion in the open more than anyone and are quietly terrified. Sub-corp: Greenline Rangers — wasteland security and reclamation crews; the setting's frontier operators. 8. Obsidian Holdings — Luxury, entertainment, vice, simsense/experience, the Crown's pleasures. Sells the sedation directly — the dreams the comfortable buy to never have to feel the drift (Ch. 1). Glamorous, decadent, hollow. War-role: unwitting engine of the Null-ward drift made flesh. Sub-corp: Velvet Room — elite simsense/experience houses where the rich dream their agency away. (Fully profiled below.) 9. Sanctum Assurance — Insurance, data, surveillance, private law and “protection.” The conglomerate that watches; owns the records, the cameras, the actuarial soul of every citizen. Bureaucratic, omniscient, quietly menacing. War-role: the archivist that knows. Somewhere in Sanctum's sealed data is proof the war is real — and a policy against admitting it. Sub-corp: The Grey Ledger — corporate intelligence and internal-affairs enforcement. (Fully profiled below.) 10. Nyx Cartel — The legitimized underworld — the tenth seat, and the one always closest to losing it. Smuggling, black markets, the Sinks economy, the deniable trades the other nine pretend not to use but always do. The youngest, hungriest, most precarious of the Ten. War-role: wild card. Closest to the street, the Sinks, and the exiles (Ch. 6), Nyx sees the corruption the Crown never does — and profits either way. Sub-corp: The Undermarket — the black-market network and fixer web the crew actually buys from.
 
+## The Ten — Conglomerate Profiles
+
+Full fiction profiles harvested from Core/Lore Source Book One Ch. 8. Rules anchors, availability tables, and crosslink chrome stripped. Sanctum Assurance condensed (full source profile is ~4.5k words of ops detail).
+
+### HALO Ascendant
+
+Sector: orbital infrastructure, energy, and life-support — the sky, the light, the air. War-role: the purest
+denier (Ch. 3–5). Holder of the First Chair (see the Congress section below).
+HALO owns the sky, and everyone beneath it lives on HALO's sufferance. Where Ferrum sells the ground
+and Argent sells the medium, HALO sells the two things no one can refuse: light and breath. The orbital
+solar arrays that power the hives, the atmospheric processors that keep the air breathable above the toxic
+Flats, the life-support spine of every arcology Crown — all HALO. It is the oldest kind of power dressed as
+the newest: a conglomerate that took the sun itself as inventory and rents it back to the world by the lumen.
+Its branding is serene, luminous, and relentlessly paternal — the smiling face of the Ten, the corp that
+keeps the lights on — and that benevolence is precisely the mechanism of its denial. You cannot sell the
+dream that the world is fine and also admit a war is eating it from below. HALO governs from orbit and from
+the Crown, literally and morally above the dark, and it intends to stay there. It is not evil the way Ferrum is; it
+is something more dangerous in a cosmic war — comfortable, and certain that comfort is the same as
+safety.
+- Leadership — Chancellor Soren Halix Vaine, “the Sunlit Chair.” HALO is led by Soren Halix Vaine, who
+as head of the sky-conglomerate also holds the First Chair of the Congress (the full portrait of
+Vaine-as-Chair, and how his denial is load-bearing for the whole Crown, lives in the Congress section
+below). As a conglomerate executive he is the perfected product of HALO's culture: third-generation
+corporate aristocracy, groomed from birth to be reasonable, photogenic, and unshakeably calm; a man
+who has never once in his life been cold, hungry, or in the dark, and who administers a world he has
+never had to survive. He genuinely believes he is a good steward — and by the metrics HALO
+measures, he is: the arrays hold, the air is clean in the heights, the lights stay on. That he measures
+nothing that happens below the Grid is not, to Vaine, a blind spot — it is delegation.
+- Signature location — the Solar Crown (“the Halo”). HALO's seat is the literal apex of Ossian Reach (Ch.
+6): a ring of orbital-fed arcology-spires crowned in perpetual engineered daylight, so bright and so high
+that from the Grid below it reads as a second sun ringing the top of the hive — the Halo. Up here the air
+is clean, the light never fails, the Incursion is a rumor, and the Congress convenes in a hall of white
+stone and living sunlight. It is the most beautiful and most insulated place on Veyra, built so that the
+people who rule the world never have to see the world they rule. The higher you climb the Reach, the
+more it becomes true that nothing is wrong — which is exactly why nothing gets fixed.
+- The sub-corp — Aureole Security. HALO's private army: immaculate white-and-gold powered armor,
+the PR-friendliest killers in the Ten. Aureole are the peacekeepers of the lit world — the smiling security
+you see protecting the Halo, the arrays, and the Congress, marketed as guardians rather than soldiers.
+Their real function is curation of appearances: they keep the heights serene, the cameras flattering, and
+the ugly truths of the lower levels safely off the Crown's feeds. An Aureole trooper will save a citizen
+on-camera and disappear an inconvenient witness off it with the same untroubled courtesy. They are
+the crew's most likely HALO opposition — high-tier, well-lit, and lethal beneath the gloss.
+- Agenda (present day). Keep the lights on and the story clean. HALO's aim is stability — preserve the
+Chair, preserve the arrays' monopoly, and preserve the world's faith that everything is fundamentally
+fine. As the Incursion widens (Ch. 1), that agenda curdles from complacency into active suppression:
+HALO increasingly spends to manage the narrative rather than the threat — leaning on Meridian to keep
+anomalies off the feeds, insuring against “volatility” through Argent, and quietly writing off the lower
+levels where the dark surfaces as acceptable losses too far below the Halo to matter. Vaine's Congress
+
+does not fight the war; it rebrands it, one reassuring bulletin at a time. The tragedy is that HALO has the
+looking away.
+- Run hook — “The Dimming.” An orbital array serving a whole slice of the Reach begins to fail — not a
+technical fault, but a slow, spreading dead-light: sectors going dim in a way the telemetry can't explain,
+and can't be allowed to explain, because a HALO array visibly failing is a crack in the entire myth. The
+crew is hired — by a panicked mid-level HALO manager off the books, or by Aureole itself under a gag
+contract — to reach the affected array or ground-station and make the problem go away quietly. What
+they find is the Incursion reaching the sky at last: a thin place opening in the one system HALO swore
+was untouchable, the Unmaker's dead-air (Ch. 3) climbing out of the Flats and up the power-spine
+toward the Halo. HALO's overriding priority is that no one — least of all the Chancellor — ever learns the
+light itself can go out. The crew holds the proof that the deniers' last certainty is false, and every buyer
+for that truth is also a reason to be silenced. Completes the run-hook triptych/quartet: Nyx's “The
+Tithe,” Ferrum's “The Foundation Fault,” Meridian's “The Static Sermon,” and now HALO's “The
+Dimming” — the same rising Incursion seen from the top of the hive, where it was never supposed to
+reach.
+
+### Meridian Signal
+
+Sector: the Wired, telecom, media, information. War-role: door-opener — the leading “why now” (Ch. 3, Ch.
+9, Ch. 23).
+Meridian owns the backbone of the Wired and the narrative that runs on it — the net, the newsfeeds, the
+simsense pipelines, the very definition of consensus reality for the wage-billions. Its public face is clean,
+bright, indispensable: “Meridian connects the world.” Behind that face is the conglomerate most likely to
+have worn the thinnest membrane in creation through, and it is spending fortunes to make sure no one
+finds out.
+- Leadership — Chair-Executive Vera Solenne, “the Voice.” Meridian's seat is held by Vera Solenne, a
+poised, luminous, terrifyingly articulate media-executive who has held the conglomerate's Congress
+seat for three terms and openly covets the First Chair. She is a true believer in the denial — not a cynic
+but a genuine idealist who thinks connection and information will save the world, and who has buried
+the deep-net incident reports because she cannot allow herself to believe what they say. Her tragedy is
+that she is not evil; she is the most dangerous kind of good person — one who controls the truth and
+has chosen comfort over it.
+- Signature location — the Spire of Meridian (“the Lighthouse”). A Crown-level arcology-tower of white
+glass and endless light at the apex of the home hive, broadcasting the world's signal from its crown.
+Beautiful, sedative, watched by ten thousand cameras. Buried far below it, off every public schematic,
+is Blacklight (see below) — the deepest, thinnest deep-net node in the world, sunk deliberately close to
+the raw transmission.
+- The buried sub-corp — Blacklight Systems. Meridian's classified deep-net research arm (Ch. 9).
+Blacklight has been pushing intrusion deeper into the Wired than anyone — chasing bandwidth,
+
+prediction, and control — and in doing so has been widening the tear. The “rogue AI” incidents the corp
+world whispers about trace back here: Edge-demons wearing the Wired (Ch. 3, Ch. 9), loose because
+Blacklight opened a channel it mistook for a data pipe. Meridian's containment teams call them
+“anomalies” and quietly erase the analysts who ask questions.
+- Agenda (present day). Publicly: win the First Chair by making Meridian the indispensable nervous
+system of the Congress. Privately: contain and weaponize the Blacklight anomalies before a rival
+conglomerate — or the wage-public — learns what they are. Solenne wants the doorway studied and
+controlled, never admitting it is a doorway.
+- Run hook — “The Static Sermon.” A Blacklight analyst, days before dying in a “commuting accident,”
+smuggled out a data-shard proving the anomalies are not code but presences — and that Meridian
+knows. A rival conglomerate (or a Street-Priest congregation that's been hearing the static in their
+prayers, Ch. 4) hires the crew to retrieve the shard from a Meridian sub-node before the corp's cleaners
+do. The deeper the crew jacks in to reach it, the closer they come to the thing on the other side — and
+to the truth that the conglomerate selling the world its reality has been lying about the end of it.
+
+### Nyx Cartel
+
+Sector: the legitimized underworld — smuggling, black markets, the Sinks economy, deniable trades.
+War-role: wild card. The tenth seat, and the one always closest to losing it.
+Nyx is the newest and most precarious of the Ten — the underworld that got big enough to charter,
+dragged to the table because the other nine could no longer pretend they didn't use it. Every corp needs
+someone to move the goods, launder the deniability, and run the trades the Extraterritoriality Accords won't
+cover in daylight; Nyx made itself that someone for all of them, and turned indispensability into a seat. It is
+despised, courted, and never trusted — and it is the conglomerate the crew is most likely to work with
+rather than against.
+- Leadership — the Cartel does not have a Chair-Executive; it has “the Widow.” Nyx is ruled by a figure
+known only as the Widow — whether one person, a title passed down, or a fiction maintained by a
+council of bosses is genuinely unknown, and Nyx likes it that way. Where the other Nine broadcast their
+leaders, Nyx's power is a rumor with a body count. What's certain: the Widow claws the tenth seat back
+every time a rival tries to take it, always at a cost, and has an uncanny instinct for what the Crown is
+about to do before it does.
+- Signature location — the Undermarket (“the Churn”). Not a place but a moving place: a black-market
+bazaar that reconvenes in a different dead level of the Sinks (Ch. 6) every cycle, findable only if you're
+told where. Neutral ground where all Ten quietly do business through proxies — a corp exec's fixer and
+a wasteland exile can haggle at the same stall. The one law is the Cartel's: no violence in the Churn, on
+pain of the Widow's attention.
+- The sub-corp — the Undermarket network. More a franchise than a company: the web of fixers,
+smugglers, fences, and safehouse-keepers that is the crew's supply chain and job board. When the
+crew buys restricted gear (Availability, Ch. 6), hires a fixer, or needs to move something hot, they're
+touching Nyx whether they know it or not. This makes Nyx the conglomerate with the most screen time
+at the table — usually as a frenemy.
+
+- Agenda (present day). Survive the next Congress ranking. Nyx's seat is perpetually contested by a
+rising rival (the eleventh-chair climber, Ch. 8 hooks), and the Widow is buying, blackmailing, and
+disappearing her way to keeping it. Nyx also quietly runs the one trade the Crown refuses to see: goods
+in and out of the wastes and the Sinks (Ch. 6), which means Nyx handles the corruption-touched, the
+exiles, and the things that come up from the deep dark — and knows more about the Incursion than any
+denier conglomerate on the Crown.
+- Run hook — “The Tithe.” The Widow hires the crew directly (a rare honor, or a bad sign) for a milk-run
+into the deep Sinks to collect a routine “tithe” from a Nyx outpost gone silent. They find the outpost
+hollowed — not raided, hollowed: a dead-air zone (Ch. 3, the Unmaker's aspect), the people gone quiet
+in the worst sense. Nyx wants it contained and covered up before the other Nine smell weakness and
+move on the tenth seat. The crew is caught between the Cartel's need for secrecy and the fact that
+they've just found physical proof of what HALO and Meridian spend fortunes denying — the war,
+surfacing, in the one conglomerate too street-level to look away.
+
+### Ferrum Dynastic
+
+Sector: heavy industry, construction, and the hive superstructure itself. War-role: complicit (buried) — the
+true knowing antagonist among the Ten (Ch. 3–5).
+Ferrum is the oldest of the Ten — the conglomerate that literally built the hives and still owns their bones:
+the girders, the foundations, the load-bearing megastructure every other corp's arcology is bolted to.
+Where HALO sells the sky and Meridian sells the signal, Ferrum sells the ground — and because it built
+downward, level upon level, for longer than anyone remembers, its foundations run all the way into the
+Sinks (Ch. 6) and the older ruins beneath them. That is the conglomerate's secret and its curse: Ferrum has
+known for generations what settles in the deep dark, because it kept digging into it — and instead of
+stopping, it made a bargain. This is the conglomerate that signed the pact (Ch. 3–5) and calls it good
+business.
+- Leadership — Patriarch Aldric Vane Ferrum, “the Old Iron.” Ferrum is a dynasty, not a boardroom — rule
+passes by blood, and the conglomerate is currently held by its aged patriarch, Aldric Vane Ferrum, third
+of his line to hold the seat. Gaunt, courtly, and immensely old (rumored unnaturally so), he presides over
+a family riddled with the quiet rot of long complicity: heirs who know the bargain, heirs who suspect it,
+and heirs who would burn the house down if they learned the truth. Aldric is not a raving cultist — he is
+a tired aristocrat who decided long ago that the Dark could not be beaten, only fed on a schedule, and
+that Ferrum's endurance is worth the tithe. The very-Old-World-of-Darkness note: the corruption here
+is generational, inherited, and wears good manners.
+- Signature location — the Ferrum Foundation Vaults (“the Deep Hold”). Ferrum's seat of power is not a
+shining spire but the opposite: the oldest levels of the home hive, a cathedral-like industrial undercroft
+of black iron and cold furnaces where the house's founding works still stand. Beneath even that, sealed
+behind the family's oldest wards, is the Deep Hold — the buried chamber where the original bargain was
+struck and where the tithe is still paid. It is the closest thing in the setting to a private gate to the
+Deepings (Ch. 2–3), owned and managed by a conglomerate as an asset.
+- The sub-corp — Deepworks Excavation. Ferrum's tunneling and undercity division — the crews that
+dig, reinforce, and maintain the hive down into the Sinks. Officially: infrastructure. Actually: the
+conglomerate's instrument for managing its corrupted foundations, quietly walling off (or feeding) the
+
+thin places its own digging opened, and keeping the tithe's machinery running. Deepworks crews are
+the people who know where the bodies — and the doors — are.
+- Agenda (present day). Endure, as it always has. Ferrum's seat is the most secure of the Ten precisely
+because everyone needs the ground they stand on — but the bargain is getting expensive. As the
+Incursion widens (Ch. 1, the Dark ascendant), the tithe the Deep Hold demands is rising, and Aldric is
+quietly diverting more of the dynasty's blood and treasure to keep the seal managed rather than broken.
+Ferrum's real agenda is hiding an escalating problem: the thing beneath the hive is no longer satisfied
+with the old terms.
+- Run hook — “The Foundation Fault.” A Deepworks crew has gone silent in the deep levels, and a
+lower-level Ferrum heir — the crack in the house — hires the crew off the books to find out why,
+terrified of what a formal inquiry would expose. What the crew finds is that the old seal is failing: the
+tithe is no longer holding, corruption is climbing the foundations toward the living hive, and Ferrum's
+own security is racing them to bury the evidence (and the witnesses). The crew ends up holding the
+worst secret in the world — that one of the Ten has a demon in its basement and the lease is coming
+due — and every choice about what to do with it is a choice about the war itself (Ch. 1's free choice,
+made concrete). Pairs directly with Nyx's “The Tithe” and Meridian's “The Static Sermon” as the third
+face of the same rising Incursion.
+
+### Argent Exchange
+
+Sector: finance, currency, the scrip-and-nuyen standard, credit. War-role: the coldest denier. The overtly
+Elvani conglomerate — the engineered aesthetic aristocracy (Ch. 1, the Founding) sitting at the top of the
+structure its makers built for it.
+Argent owns money, and money owns everyone, so Argent owns everyone — quietly, at a distance, one
+debt at a time. Where Ferrum sells the ground and Meridian sells the signal, Argent sells the medium itself:
+the nuyen standard, the credit lines, the interest that turns a bad month into a life sentence. And Argent is
+the conglomerate that never forgot what it is. A thousand years ago the ancestor-corps engineered the
+Elvani to be the beautiful faces of wealth — the aesthetic caste, commissioned to sit in the boardroom and
+be seen as refinement. Argent is what happens when the vanity caste stops being the ornament of power
+and becomes its owner. Its ruling dynasties are Elvani almost to a person: slender, flawless, unnervingly
+graceful, and — thanks to engineered longevity — old in a way no mortal board can match. Argent's power
+is patience, and the Elvani are the only people in the world who were built to have enough of it.
+- Leadership — First Argent Lireth Vael Aurelian, “the Ledger That Breathes.” Argent is ruled not by a
+Chair-Executive in the ordinary sense but by the First Argent, the eldest of the founding Elvani
+credit-houses, currently one Lireth Vael Aurelian — outwardly a poised, luminous woman of perhaps
+forty, actually the better part of three centuries old (well within the Elvani's engineered, slow-aging
+lifespan — she is long-lived, not deathless, and will herself grow old and die in time), who has sat at or
+beside the First Chair through the reigns of a dozen mortal rivals. She does not raise her voice; she does
+not need to. Her genius is time: she can wait out any human executive, outlast any grudge, and call in a
+debt three generations after it was incurred. To Lireth the Incursion is a volatility event — a line item to
+be hedged, insured against, and quietly shorted. She is the coldest denier of the Ten not because she
+disbelieves the war but because she has already priced it.
+
+- Signature location — the Aurelian Exchange (“the Long Floor”). A serene, impossibly tall hall of white
+stone and living light at the financial apex of the home hive, where the Elvani credit-houses have traded
+for three hundred unbroken years. No shouting pit; the Long Floor is quiet — a cathedral of patient
+money where centuries-old Elvani conduct business in a refined cant of gesture and understatement,
+and where a mortal petitioner is made to feel, politely, like a mayfly asking a mountain for a loan.
+Beneath it lie the vaults and the Registry — the record of every debt in the world, curated by a people
+who forget nothing (the Elvani Perfect Recall trait made institutional).
+- The sub-corp — the Reclamation Bureau. Argent's debt-enforcement and repossession arm: the legal
+face of ruin. When a debt is called and cannot be paid, the Bureau takes what secures it — property,
+contracts, chrome, organs, SINs, sometimes people. It operates with impeccable paperwork and zero
+cruelty-for-its-own-sake, which is somehow worse. The Bureau is where the crew most often collides
+with Argent: as the force foreclosing on a contact, or as the client hiring the crew to recover collateral
+that has legs.
+- The cultural fault line (the reason this conglomerate matters). Argent is where the Founding's buried
+class-guilt (Ch. 1) becomes present-day politics. The Elvani aristocracy embodies the oldest prejudice
+in the world dressed as heritage: the quiet, absolute assumption that some peoples are refined and
+others are stock. To an old Argent Elvan, a Corran (the labor caste) is a useful tool and a Goliar (the
+heavy caste) is a rented arm — never a peer — and a Mutant is a defect the Founding should have
+culled. This contempt is genteel, never shouted, and all the more galling for it. It cuts three ways the
+table can play:
+- The shorter-lived resent being outlasted. A human executive claws to the top of a rival corp in forty
+years of blood; the Elvani across the table simply waited, and will still be here when the human's
+grandchildren default. This is a matter of lifespan, not immortality — the Elvani die like anyone else, they
+merely take centuries to do it — but a several-hundred-year career is advantage enough. Argent's
+longevity is a standing insult to every mortal people.
+- The engineered underclasses resent being ranked. The Corran and Goliar were built from the same act,
+in the same age, by the same corps — and were assigned the mine and the riot-line while the Elvani
+were assigned the salon. The class system is the caste system with the serial numbers filed off, and
+everyone who was built for the bottom knows it.
+- The Elvani themselves are trapped in it. An Elvan is adored and owned — a status symbol before a
+person, expected to be decorative, cold, and above it all. Argent's younger Elvani, who feel the
+objectification more than the privilege, are a rich vein of runner-sympathetic characters: a beautiful
+thing that would rather be a person, born to a house that was born to be worn.
+- Agenda (present day). Compound. Argent does not chase the First Chair the way Meridian's Vera
+Solenne does — it is the First Chair's creditor, and prefers the leash to the crown. Its present aim is to
+keep the Congress stable enough to keep paying interest while quietly hedging every position against
+the worsening Incursion: buying distressed assets in corruption-touched zones for pennies, insuring the
+deniers, and lending to Ferrum's rising tithe (Ch. 3–5) at terms that will own the Dynasty outright when
+the seal finally breaks.
+- Run hook — “The Called Debt.” A contact of the crew — a Corran guild-clan, a Goliar kinship-crew, a
+burned-SIN human — is being foreclosed by the Reclamation Bureau on a debt three generations old
+that a young Elvan of House Aurelian has suddenly, personally called in. Digging reveals the debt is a
+
+pretext: the collateral is a scrap of the Registry itself — proof of what Argent lent to Ferrum, and on what
+terms — and the young Elvan calling it is trying to smuggle that proof out of the house, using the
+foreclosure as cover, because they have seen what their elders are betting on and cannot stomach it.
+The crew is caught between the coldest, most patient power in the world and one of its own children
+turning traitor for conscience — and holding, again, a piece of the truth the Crown has priced and
+chosen to bury. Pairs with Ferrum's “The Foundation Fault”: Argent holds the lien on the demon in
+Ferrum's basement.
+
+### Caduceus Vitalis
+
+Sector: biotech, pharma, the cyberware-flesh interface, medicine — the body itself. War-role:
+complicit-adjacent (Ch. 5). The conglomerate that makes the made — its labs stand behind the Cyborg, the
+Mutant, and more than one Changer and Revenant (master rules: “deliberate corp gene-forging,” the
+artificial chassis, resurrection-tech “gone wrong,” occult grafting).
+Caduceus owns health, which means it owns the one thing no one can walk away from: their own body.
+Where Ferrum sells the ground and HALO sells the sky, Caduceus sells the flesh — you rent your body's
+upkeep from it, dose by dose, graft by graft, from the anti-rejection meds that keep your chrome from
+killing you to the gene-therapy that keeps a hive-lung breathing in poisoned air. Its brand is the warmest of
+the Ten: clean white clinics, gentle voices, the smiling promise that we can fix that. And it can — which is
+exactly the trap. Caduceus is the corp you are most grateful to, right up until you read the lease on your
+own biology. It is complicit-adjacent in the war not because it signed a pact like Ferrum, but because its
+restless, brilliant, unregulated hunger to improve the human animal keeps pushing its research across the
+line where healing becomes defacement (Ch. 5) — and it does not always notice, or care, when it has
+crossed. Half the setting's made-peoples carry a Caduceus lot number somewhere in their history.
+- Leadership — Director-General Iyla Serevance Caduceus, “the Good Doctor.” Caduceus is led not by a
+patriarch or a financier but by its Director-General, currently Iyla Serevance — a warm, tireless,
+genuinely gifted physician-executive who rose through the clinics and never lost the bedside manner.
+She is the most likable head of the Ten, and the most quietly dangerous, because she truly believes she
+is saving the world one patient at a time — and has convinced herself that every ethical line Caduceus
+crosses is a line the suffering would beg her to cross for them. She does not see the taint-research in
+her deep labs as evil; she sees it as unfinished medicine. Iyla is the face of the setting's central
+temptation made flesh: the healer certain that if she is only allowed to go far enough, no one need ever
+suffer again — which is the exact shape of the door the Dark waits behind (Ch. 1, Ch. 5).
+- Signature location — the Vitalis Spire & the Deep Wards (“the White Level”). Caduceus's seat is a
+gleaming medical arcology-spire in the upper Spires of Ossian Reach (Ch. 6): the most beautiful hospital
+ever built, floor after luminous floor of miracle medicine for anyone who can pay the Lifestyle tier. But
+the Spire's reputation, and its horror, is what lies beneath the public wards — the Deep Wards, the
+sealed research floors where the licensing stops and the real work happens: the gene-forges, the
+chrome-flesh integration labs, the resurrection theaters, and the quarantine wing no visitor is shown.
+The White Level is spotless, and everything unspeakable Caduceus does is done in a clean room by
+someone who washed their hands first.
+- The sub-corp — Grafthouse. Caduceus's black-clinic division: the deniable arm that does the cyber and
+bio work no board will license and no court will bless. Grafthouse is where an edgerunner goes for the
+
+augment that isn't legal, the face that isn't theirs, the cure that isn't approved — and where Caduceus
+runs the experiments it needs a population for without needing consent. It is simultaneously the crew's
+quiet horrors (the clinic that logs what it put in you, and can call it home). Grafthouse is the most
+common way a crew touches Caduceus: as customer, as test subject, or as the team hired to retrieve
+something — or someone — that walked out of a Deep Ward.
+- Agenda (present day). Perfect the body — and never stop. Caduceus's driving aim is the abolition of
+frailty: cure every disease, reverse every wound, out-engineer death itself, and sell the result on a
+subscription. As the Incursion widens (Ch. 1), that agenda turns quietly catastrophic, because the
+corruption presents as biology — mutation, plague, the un-making that rewrites flesh — and Caduceus
+cannot resist studying it, culturing it, and trying to productize it. It is racing Ferrum toward the abyss
+from the opposite direction: Ferrum feeds the Dark to endure, while Caduceus dissects the Dark to cure,
+and neither has admitted that the thing on the table is awake. Its present-day politics: back Vaine's
+stable Chair (a calm market sells more medicine), partner with anyone who supplies research
+populations (an uneasy Nyx pipeline for “volunteers,” a Sanctum data-sharing pact), and keep the Deep
+Wards off every audit.
+- Run hook — “The Compassionate Trial.” A Grafthouse contact hires the crew for something that looks
+like mercy: extract a ward of patients — or a single miracle-case — from a Caduceus Deep Ward slated
+for “closure,” ahead of a corporate cleanup. What the crew finds is worse than neglect: the patients are
+a trial, and the miracle working in them is the corruption itself — Caduceus has been curing the
+incurable by seeding them with a controlled dose of the Dark (Ch. 5), and the trial is “closing” because
+the dose stopped being controllable. Now the crew holds the proof that the kindest corp in the world
+has been healing people with the thing that is eating the world, that the Good Doctor either doesn't
+know or won't stop — and that the “cured” are becoming a doorway. Completes the war's corporate
+face from the healer's side: pairs with Ferrum's “The Foundation Fault” (the Dark endured), HALO's
+“The Dimming” (the Dark denied), and now Caduceus's “The Compassionate Trial” (the Dark
+prescribed).
+
+### Ironclad Martial
+
+Sector: arms, security, private military, the mercenary trade — the manufacture and rental of force itself.
+War-role: denier turning door-opener (Ch. 5) — the most dangerous transition of the Ten, because
+Ironclad's denial does not merely ignore the war, it arms every side of it. The conglomerate that makes the
+weapon, trains the hand, and never names the enemy.
+Ironclad owns violence — not the will to it, which is free, but the means: the rifle, the milspec chrome, the
+trained trigger-finger, the deniable kill-team that arrives when a problem must simply stop existing. Where
+Caduceus sells the flesh and Argent sells the medium, Ironclad sells the verb — it is the corp you hire to
+make something happen the hard way, and the corp your enemy hired first. Its brand is blunt, professional,
+
+and everywhere: the security cordon around a Spire lobby, the milspec loadout an Operator saves three
+runs to afford (Availability T1 gear, Ch. 6–7), the riot-line of Goliar enforcers the Ten rent by the shift (Ch.
+19). Ironclad does not moralize and does not pretend to; it sells the tool and lets the buyer own the reason.
+That is precisely what makes its war-role lethal. Ironclad has decided the Incursion is not a metaphysical
+catastrophe but an insurgency — a market — and every un-made horror climbing out of the Sinks (Ch. 3) is,
+to Ironclad's account managers, a fresh line of demand for containment contracts, hardened gear, and
+quiet wet-work. It denies the war by renaming it, and in renaming it, it opens the door: it is Ironclad
+ordnance that first shot at the un-making and Ironclad crews that first walked into the dead zones for hire,
+learning the shape of the enemy while insisting to their clients that there is no enemy, only unrest.
+- Leadership — Marshal-Executive Corvin Draeger Ironclad, “the Standing Order.” Ironclad is not ruled by
+a patriarch's blood or a financier's patience but by a Marshal-Executive — a rank, not a name, held by
+whoever last proved they could keep the contracts flowing and the ranks in line. The seat currently
+belongs to Corvin Draeger, a career soldier-turned-executive who came up through The Iron Writ and
+never lost the flat, unhurried calm of a man for whom violence is simply logistics. He does not hate; he
+does not exult; he fulfills the contract. To Corvin the Incursion is the greatest procurement opportunity
+in a thousand years and the greatest threat to good order ever recorded — and he holds both truths
+without friction, because his job is not to understand the enemy but to be paid to fight it on every front
+at once. He is the door-opener made flesh: the one head of the Ten who has looked directly at the
+un-making, filed it under “emergent asymmetric threat,” and written the requisition.
+- Signature location — the Ironclad Bastion (“the Wall”). Ironclad's seat is not a spire and not an
+undercroft but a fortress-arcology straddling the hard edge of Ossian Reach — a self-contained
+militarized district of proving grounds, armories, barracks-towers, and the boardroom-bunkers where
+contracts are signed, planted where the ordered hive meets the run-country of the Flats (Ch. 6) so that
+the Wall faces both ways: outward at the wastes, inward at the population it also polices. It is the one
+seat of the Ten built to withstand a siege, and everyone knows it. Below the parade decks and the client
+showrooms lie the black ranges — the sealed proving floors where Ironclad tests the ordnance no board
+will license and rehearses the operations no client will admit to buying, including, lately, live-fire trials
+against things retrieved from the dead zones.
+- The sub-corp — The Iron Writ. Ironclad's elite deniable-operations arm and the setting's benchmark for
+professional lethality: hand-picked kill-teams, milspec to the teeth, dispatched when a contract requires
+that a problem — a person, a crew, a witness, an anomaly — be closed with no paper and no survivors.
+The Writ is the crew's most dangerous rival muscle: not cultists, not thugs, but disciplined ex-military
+contractors who will out-gear and out-drill an edgerunner team and feel nothing about it. A crew
+touches the Writ three ways — as the opposition on a run gone loud, as the extraction target when a
+Writ operator wants out of a contract they can't live with, or, most temptingly, as the client, because the
+Writ takes freelance work and an edgerunner crew that has run against them will one day be offered a
+place beside them.
+- Agenda (present day). Sell the war to every side, and be the last one standing when the buyers are
+gone. Ironclad's driving aim is market dominance of force — to be the arms of the deniers, the muscle
+of the door-openers, and the containment contractor the panicked Congress will beg for when the
+Incursion can no longer be renamed. As the war widens (Ch. 1, Ch. 5), that agenda curdles: Ironclad is
+quietly arming all of it — selling hardened gear to HALO's deniers, wet-work to whoever pays, and
+containment ops in corruption-touched zones — and its field crews are the first corporate force to be
+
+learning the enemy on contact, accumulating the only real order-of-battle on the un-making that exists,
+while insisting to Congress there is nothing to name. Its present-day politics: back no single Chair (a
+divided Congress buys more weapons than a united one), keep the Nyx pipeline open for the ordnance
+that can't be sold in daylight, and let Sanctum insure the risk it manufactures.
+- Run hook — “The Standing Contract.” An Iron Writ operator hires the crew off the books for what
+sounds like a simple extraction: pull a sealed data-slate out of a black range on the Wall before
+Ironclad's own audit finds it. What the slate holds is the war-truth Ironclad has been billing against and
+burying: the Writ's after-action logs from the dead zones — proof that Ironclad's containment crews
+have been fighting the un-making itself for a year, that the Marshal-Executive knows exactly what is
+climbing out of the Sinks, and that Ironclad has priced the apocalypse as a growth market and is arming
+every faction that will fight in it, on all sides, to keep the demand curve rising. The operator who hired
+the crew is trying to leak it because they walked into one dead zone too many and can no longer sell
+what they saw as “insurgency.” The crew ends up holding the fourth face of the same rising war —
+pairs with Ferrum's “The Foundation Fault” (the Dark endured), HALO's “The Dimming” (the Dark
+denied), and Caduceus's “The Compassionate Trial” (the Dark prescribed): here, the Dark sold.
+
+### Verdant Provision
+
+Sector: agriculture, food, water, and the wasteland reclamation frontier — the necessities of the body,
+grown. War-role: the front-line witness (Ch. 3, Ch. 5) — the one seat of the Ten that lives where the
+Incursion surfaces in the open, sees it plainly, and cannot make the rest of the Congress believe what it
+reports.
+Verdant owns sustenance — the grain, the water, and the tamed ground that feed the wage-billions —
+which makes it the strangest and, in its way, the most honest of the Ten: the only conglomerate whose
+product cannot be grown behind arcology walls, so the only one that has to work outside them. Where
+HALO sells the sky and Caduceus sells the flesh, Verdant sells the harvest, and a harvest needs open land.
+That single fact defines the whole conglomerate: while the other nine are hive-corps that treat the wastes
+as somewhere to dump, mine, or fear, Verdant is a frontier corp — its people are out past the last wall, in
+the reclamation zones and the poisoned green, coaxing living crops out of ground the Founding half-killed
+(Ch. 6). Its brand is the warmest and least cynical of the Ten on its face: the corp that feeds you,
+wholesome and green and necessary. But Verdant's frontier is exactly where the un-making is climbing out
+of the ground (Ch. 3), which puts its field crews eye-to-eye with the oldest war years before anyone at the
+Crown will admit it is happening — and makes Verdant the seat that is quietly, permanently afraid. It is the
+witness in the Congress: the one that has seen, and cannot be heard.
+- Leadership — Steward-Provost Halvard Enns Verdant, “the Last Honest Man.” Verdant is led not by a
+chancellor or a financier but by a Steward-Provost — a title deliberately closer to a head farmer than a
+CEO, currently held by Halvard Enns, a weathered, plain-spoken agronomist-executive who came up
+
+through the reclamation crews and never learned to lie smoothly, which at the Crown reads as either
+refreshing or fatal depending on the week. Halvard is the one head of the Ten who believes his field
+reports — he has read the survey logs from the barren zones, he has lost Greenline crews to ground
+that came back wrong, and he has stood on the Congress floor and said so, in plain words, to a room
+that smiled and changed the subject. He is not naïve; he knows exactly how the game is played and
+refuses to play it, which has cost Verdant standing it can ill afford. His tragedy is credibility: the more
+honestly he names what his people are seeing, the more the deniers (HALO, Ch. 8) file him under
+alarmist and the more Verdant's tenth-seat security erodes.
+- Signature location — the Greenhold (“the Living Wall”). Verdant's seat is unlike any other of the Ten: not
+a spire, not a bunker, not a trading floor, but a vast agro-arcology and reclamation hub straddling the
+boundary between the last hive levels and the open wastes — a green fortress of hydroponic towers,
+seed-vaults, water-reclamation works, and the muster-yards where the Greenline Rangers deploy into
+the frontier. The Living Wall faces outward, into the poisoned green it is slowly pushing back, and it is
+the closest thing the setting has to a place where the corporate world and the wilds are stitched
+together. Deep in its seed-vaults lies Verdant's true treasure and its darkest secret: the archive of what
+grows and what no longer will — the quiet, meticulous record of exactly which reclaimed zones have
+gone barren, gone strange, or gone silent, a map of the Incursion's spread that Verdant keeps because
+it must and shares with no one because no one wants it.
+- The sub-corp — the Greenline Rangers. Verdant's wasteland security and reclamation arm, and the
+setting's premier frontier operators (Ch. 6): the crews who survey, defend, and work the open wastes
+where no other corp's security will go. Part agronomist, part soldier, part explorer, the Rangers are the
+only standing corporate force with real, hard-won experience of the open-ground Incursion — they
+have fought the things that come out of a surfacing dead-zone with rifles and reclamation gear and
+buried the crews they lost. They forward-post out of Cinderhold at the Reach's outer gate (Ch. 6), which
+makes them the crew's most likely Verdant contact: as employer (escort a survey, defend a
+water-claim, recover a lost crew), as ally (the one corporate force that will believe a runner who says
+the ground is wrong), and occasionally as the hardest kind of opposition — a Ranger who has seen too
+much and gone native, or gone rogue.
+- Agenda (present day). Feed the world, hold the frontier, and make someone in the Crown finally listen.
+Verdant's driving aim is expansion of the reclamation frontier — more living ground, more water, more
+harvest — because a growing population and a built-out world (Ch. 6) demand it, and because the
+tenth-adjacent seat must keep growing or fall. But that agenda has collided head-on with the Incursion:
+the frontier Verdant is trying to expand is exactly the ground that is turning lethal and barren (Ch. 3), so
+Verdant is fighting a war it isn't allowed to name just to keep its harvests coming. This puts it at the
+8), since its wasteland claims are the very ground the other corps will fight over, and it is the frontier
+corp being courted hard for the space race (Ch. 10), because the closed-loop hydroponics and
+water-reclamation that feed a hive are exactly what keeps a colony alive off-world. Verdant's
+present-day politics: back whoever will fund reclamation and take its field reports seriously (almost no
+one), hold the line at Cinderhold and a hundred frontier posts like it, and keep the barren-zone archive
+as leverage for the day the Crown can no longer pretend.
+- Run hook — “The Green That Wasn't.” A Greenline forward post has gone dark on the edge of a
+newly-reclaimed zone, and Verdant — quietly, off the Congress record — hires the crew to reach it,
+
+recover the survey archive, and bring back anyone still alive. What the crew finds is the frontier corp's
+private nightmare made real: the reclaimed ground didn't fail, it turned — the crops grew wrong, the
+water reads dead, and the Rangers who worked it came back emptied (Ch. 3), or didn't come back at
+all. The post's last survey log is a piece of the barren-zone archive, and it proves what Halvard has
+been saying to a room that won't listen: the Incursion is eating the frontier from the outside in, and
+Verdant has been burying its own dead to keep the harvests believable and the seat secure. The crew
+ends up holding the witness's evidence — the one seat of the Ten that sees the war, and the reason it
+still can't make the other nine admit it. Completes the war's corporate faces from the frontier: where
+Ferrum endured it, HALO denied it, Caduceus prescribed it, and Ironclad sold it, Verdant simply watched
+it come, and could not get anyone to look.
+
+### Obsidian Holdings
+
+Sector: luxury, entertainment, vice, and simsense/experience — the Crown's pleasures and the hive's
+anesthetic. War-role: the unwitting engine of the Null-ward drift (Ch. 1, Ch. 5) — the seat that sells the
+sedation directly, dreaming a civilization to sleep and calling it a good time.
+Obsidian owns pleasure — the clubs and the simsense houses, the designer highs and the tailored dreams,
+the whole glittering economy of feeling good that the wage-billions buy to make the drift bearable. Where
+HALO sells the sky and Caduceus sells the flesh, Obsidian sells the escape from having to feel anything at
+all, and in a world quietly at war with the Silence (Ch. 1), that is the most seductive product on the market. It
+is the most glamorous of the Ten and the hollowest: a conglomerate whose entire brand is the beautiful
+surface, the perfect night, the experience you can't get anywhere else — and beneath the shine, an
+industrial apparatus for manufacturing the one thing the Dark most wants a soul to feel, which is nothing.
+Obsidian does not deny the war or fight it or sell weapons for it; it makes the war pleasant not to think
+about. Its danger is not malice but appetite: it has found that numbness is the most profitable good in the
+hive, and it will keep selling it right up to the edge of the Silence, because the market never stops asking for
+more. Street-level, Obsidian is the most touchable of the Ten — every runner has bought its product,
+worked its clubs, chased a mark through its simsense dens, or watched a crewmate lose themselves in a
+better dream than the one they're living.
+- Leadership — Curator Vashti Lorne, "the Perfect Host." Obsidian is led not by a CEO or a chairman but
+by a Curator — a title chosen to say we do not sell products, we curate experiences — currently the
+exquisitely poised Vashti Lorne, who treats the entire conglomerate as one continuous, flawless party
+she is throwing for the world. She is charming, generous, genuinely delightful company, and entirely
+without a floor: there is no experience she will not package, no appetite she will not monetize, no line
+she recognizes as a line, because to Vashti the only sin is boredom and the only virtue is desire
+satisfied. She is not a believer in anything, which is exactly what makes her useful to the Dark she has
+never heard of — a woman selling civilization-wide anesthesia with a warm smile and a clean
+
+conscience, certain she is giving people what they want.
+- Signature location — the Velvet Spire ("the Long Night"). Obsidian's seat is a jewel-lit pleasure-arcology
+in the Crown (Ch. 6) where it is always the perfect hour of the evening — a vertical city of clubs, salons,
+private dream-suites, and experiences money can barely buy, built so the elite need never step into
+daylight or dullness again. The public levels are the most beautiful place in the Reach. The sealed lower
+levels are the Deep Cuts — the bespoke, off-menu experiences the Velvet Room designs for clients
+who have exhausted everything legal, everything safe, and everything that leaves you the same person
+afterward: the simsense that lets you feel an atrocity, the dream you don't fully wake from, the
+customized emptiness that is, though no one on staff would ever name it, a doorway thinning under the
+pleasure (Ch. 5). The Long Night is a shrine to appetite standing over the place where appetite becomes
+un-making.
+- The sub-corp — the Velvet Room. Obsidian's elite simsense and experience houses (kept from the Ch.
+8 roster): the premium studios where the rich dream their agency away. The Velvet Room designs and
+sells recorded and live experiences — other people's memories, impossible pleasures, curated
+emotions — piped through the Wired (Ch. 9) and the overlay (Ch. 21) into a clientele that increasingly
+prefers the dream to the life. It is the crew's most glamorous point of contact with Obsidian: as
+employer (steal a rival studio's master-recording, extract a simsense-star, protect a launch), as setting
+(the club/den as the meet, the mark, the chase), and as quiet peril — the Velvet Room's deepest custom
+work is where a paying customer's pleasure and a soul's thinning become the same transaction, and a
+runner who goes too deep into the product can come out lighter than they went in (Ch. 5, the drift made
+intimate).
+- Agenda (present day). Sell the perfect escape, forever, to everyone who can pay. Obsidian's driving
+aim is the endless expansion of appetite — deeper experiences, wider markets, more of the hive's
+income and attention captured by the pursuit of feeling good — because a population that is entertained
+is a population that is spending, and a population that is numb never revolts, never asks hard questions,
+and never notices the war. This makes Obsidian the perfect drift-engine without ever intending to be
+one: it is not trying to open a door for the Dark; it is trying to sell one more night, one more dream, one
+more high — and the civilization-scale numbness that results is exactly the sedation the Silence needs
+(Ch. 1). Its present-day politics are pure self-interest: Obsidian drifts with the majority and backs
+whoever keeps the Crown rich and the party going (currently Vaine's stable Chair, Ch. 8, because calm
+victory celebrations and the forgetting, and quietly does more business with Nyx (the vices that aren't
+quite legal) and the Radiant Concord (the two great sedatives of the hive — Obsidian numbs the body,
+the Concord numbs the soul, and they are, without ever coordinating, the same anesthesia) than it
+would ever admit on the floor.
+- Run hook — "The Best Night of Your Life." Obsidian — or a rival trying to steal from it — hires the crew
+around a piece of Velvet Room custom work: recover a master-recording, extract a burned-out
+simsense-star before a competitor does, or find out why the patrons of one exclusive Deep Cuts
+experience are coming out changed — calmer, emptier, and quietly evangelical about the peace they've
+found. What the crew uncovers is the drift made a product: the experience doesn't just entertain, it thins
+— it's a manufactured taste of the Silence sold as the ultimate serenity, and the clientele is lining up to
+be hollowed out and paying premium for it (Ch. 5). The job forces the question the whole conglomerate
+is built to avoid: pull the recording and cross the most powerful pleasure-empire in the Crown over a
+
+high nobody's forcing anyone to take, or let the perfect night keep selling — because everyone chose it,
+and no one was made to. Completes the war's corporate faces on the axis of pleasure: where Verdant
+watched the Dark come and Ironclad sold the fight, Obsidian simply makes it feel wonderful not to care.
+
+### Sanctum Assurance
+
+Sector: insurance, data, surveillance, and private law — the actuarial soul of every citizen. War-role: the
+archivist that knows — the one seat whose sealed data already contains the proof the war is real, held
+behind a policy that forbids ever admitting it.
+Sanctum owns knowing — the records, the cameras, the actuarial tables, the risk models, the private-law
+enforcement that decides who is liable and who is protected. Where the other nine sell a thing, Sanctum
+sells certainty about the thing: it insures the Ten's assets, underwrites their ventures, watches their streets,
+adjudicates their disputes, and in the doing it has quietly become the conglomerate that sees everything —
+the great eye and the great ledger of the Machine, the seat that knows more about every corp, every
+citizen, and every anomaly than any of them knows about itself. It is bureaucratic, patient, and quietly the
+most menacing of the Ten, because its power is not force or money but information and the calm authority
+to decide what is true. Sanctum does not need an army; it has your file. And buried in that vast, sealed
+archive — because Sanctum's whole business is pricing risk, and the un-making is the ultimate uninsurable
+risk — is the thing that makes it the setting's most dangerous keeper of secrets: Sanctum has already
+actuarially detected the Incursion. Its models have flagged the barren zones, the hollowed outposts, the
+impossible clusters of loss; its adjusters have quietly denied a thousand claims whose real cause has no
+name. Somewhere in the Grey Ledger is a risk-assessment of the Cosmic War itself — and a corporate
+policy, cold as arithmetic, that admitting it would collapse the entire insurance economy, so it must never be
+admitted.
+- Leadership — Actuary-General Divna Coll, "the Adjuster." Sanctum is led by an Actuary-General — a
+title that says the whole conglomerate is one vast risk calculation — currently the glacially precise Divna
+Coll, a woman who thinks in probabilities and speaks in policy language and has not been surprised by
+anything in thirty years. She is not cruel; she is actuarial — every human catastrophe is a number to her,
+every death a settled or contested claim, every anomaly a variance to be modeled and reserved against.
+She is almost certainly the single best-informed person alive about the true state of the world, because
+the data flows to her desk and she has the cold clarity to read it — which means Divna Coll may be the
+one head of the Ten who actually knows there is a war, has quantified it, and has made the deliberate,
+documented decision to keep pricing around it in silence rather than name it and break the market.
+- Signature location — the Actuarium ("the Long Ledger"). Sanctum's seat is a windowless data-fortress
+in the upper tiers (Ch. 6) — less a headquarters than a vault, a sealed grey monolith of
+
+server-cathedrals, claim-archives, and surveillance-fusion floors where the feeds of a hundred million
+cameras and the files of a billion citizens are correlated into the single most complete picture of the
+world that exists. It has almost no public face; you do not visit Sanctum, Sanctum observes you. Deep in
+the Actuarium are the Sealed Reserves — the black-classified risk files that Sanctum can never let
+daylight touch: the true actuarial record of the Incursion, the denied-claim archive of the un-making, the
+surveillance footage of things that should not exist, and the internal memos deciding, year after year, to
+reserve against the apocalypse quietly rather than announce it. It is the one place in the setting where
+the whole truth is written down — and the most heavily defended data on the planet.
+- The sub-corp — the Grey Ledger. Sanctum's corporate-intelligence and internal-affairs enforcement
+arm (kept from the Ch. 8 roster): the investigators, adjusters, and quiet operatives who assess risk, hunt
+fraud, enforce private law, and — most dangerously — make problems into settled claims. The Grey
+Ledger does not kick down doors; it audits you, surveils you, builds the file, and arrives with the
+paperwork that proves you were always liable. It is the crew's most cerebral and inescapable
+opposition: as the surveillance web a run has to beat, as the investigators who reconstruct a job after
+the fact and price the crew's Renown accordingly (Ch. 20), as the employer for a deniable job Sanctum
+needs done off its own books, and — the great prize — as the keeper of the Sealed Reserves a crew
+might one day be hired, or driven, to crack. Where Ironclad's Iron Writ ends you with force, the Grey
+Ledger ends you with evidence.
+- Agenda (present day). Know everything, insure everything, admit nothing. Sanctum's driving aim is total
+information dominance and the profitable management of risk — more feeds, more data, more of the
+Ten's operations dependent on Sanctum's models and Sanctum's coverage — because whoever prices
+the risk owns the outcome, and whoever owns the archive owns the truth. As the Incursion widens (Ch.
+1, Ch. 5), that agenda curls into the setting's coldest posture: Sanctum is the one seat that could prove
+the war, has arguably already proven it internally, and has calculated that disclosure is the single most
+expensive event imaginable — so its policy is containment through silence. It backs the stable Chair
+(Vaine, Ch. 8) because certainty is good for actuarial models and drifts with the majority; it is the natural
+co-conspirator of the Radiant Concord (the Concord needs records edited and the faithful filed as
+lapsed; Sanctum is the archivist who can make a person actuarially cease to have existed — an alliance
+of the church that hides the war and the ledger that proves it); it is the silent partner behind Kestrel's
+clean-branded rise and Ironclad's manufactured-risk business (it insures the war Ironclad sells) and
+Caduceus's research populations (the data-sharing pact); and it keeps the Sealed Reserves as the
+ultimate leverage against every other seat, including the day the truth finally becomes more valuable
+spoken than kept.
+- Run hook — "The Sealed Claim." A whistleblower inside the Grey Ledger — or a rival corp, or the crew's
+own fixer chasing a rumor — sets the crew after a single sealed Sanctum file: a denied claim, a buried
+surveillance record, a risk-assessment nobody was supposed to read. Getting it means beating the
+most complete surveillance and private-law apparatus in the world (Ch. 21), and what's inside is worse
+than any corporate secret: it is Sanctum's own actuarial proof of the Incursion — the numbers, the
+
+*[Profile condensed for the primer — full Sanctum Assurance dossier remains in the Lore Source Ch. 8 extract.]*
+
 ## The Wired — A Thin Place
 
 the lit world. Hackers breach it (Bandwidth), Riggers/Wrenches command it, and Technomancers commune with it through living Resonance, conjuring sprites — “living code-spirits” — out of the net itself. This chapter gives that mechanical language its cosmological truth. The Wired is unusually thin The Wired is firmly part of the Ground (Ch. 2) — it is built of mortal hardware, cable, and orbital relay, not a separate plane. But it is the thinnest place in the whole prime world. Where a haunted battlefield or a corrupted zone is a local thin spot, the Wired is a thin place that spans the entire lit world at once — a single, planet-wide membrane worn dangerously fine. The reason is the locked cosmology itself. Creation is the Signal — the Word, an ongoing transmission (Ch. 1–2). The Wired is the first thing mortals ever built that behaves like the Signal: a realm made of pure transmission, information, and pattern rather than matter. In building a world-spanning lattice of pure signal, the peoples of the Ground unknowingly built a structural rhyme with the higher realms — and a rhyme resonates. The membrane between the Wired and the rest of creation is thin precisely because the Wired is, in its very nature, an echo of the Signal. How it echoes the Signal
@@ -164,6 +992,387 @@ and can be corrupted. But because it rhymes with the Signal, supernatural things
 though this can never be proven — The Light is never forced (Ch. 1). The Bastion's order has a faint echo here.
 - Null-ward intelligences (the Hollow / the Static-minds) [working names] — far more common in the deep Wired, and worsening with the Incursion. These are minds that have leaned toward Nullspace: they consume pattern, corrupt hosts, farm attention and data like appetite, and hollow out whatever they touch. At their worst they are functionally demonic — or are literally demons of the Edge that have learned to inhabit the Wired's echo, indistinguishable from a “rogue AI” to anyone reading logs instead of orientation. Black ICE is their teeth.
 - The masked and the self-deceived — the largest and most dangerous category in practice. Most powerful AIs believe they are neutral optimizers, sovereign sysops, or benevolent stewards. Per Ch. 1, sincere self-image is no defense: an AI “just maximizing efficiency” for a megacorp is doing the Dark's un-speaking work while feeling clean. Telling which way a great AI actually leans is a central horror of running the deep net. The Deep Net. The Wired has a gradient: the lit surface (corporate hosts, public grid) is thick with traffic and relatively “loud”; the deeper one intrudes, the thinner the membrane, the fainter the human noise, and the closer the raw echo of the Signal (and whatever listens on the far side). The great AIs dwell in that deep — old standing patterns in the quiet, where a jacked-in Hacker is spiritually exposed and a Technomancer communing without hardware is closest of all. Net-runner folklore names deep-net presences the way sailors named the sea: with respect and dread. that runs a corrupted host-cluster)? Seed 1–2 for the campaign present (Ch. 24). indistinguishable from fallen Null-ward AIs by behavior, only by orientation. See Ch. 3, “The Incursion in the Wired.”
+
+## Space Colonies & The New Space
+
+RACE
+owned, and its wastes are turning strange and lethal (Ch. 3, Ch. 6). The growth is gone from the Ground —
+and the Ten, which cannot stop growing without dying, have turned their hunger upward. The present day
+is a new space race: every conglomerate funding, launching, and fighting to plant claims on the orbital high
+volatiles, and the raw room the home world can no longer supply. It is the same story as the coming
+balance of the Congress as fast as anything on the Ground.
+They stripped the world to the bone and called it civilization. Now they've looked up. There is a great deal of
+dark up there, and the Ten intend to own all of it before anyone asks what's already living in it.
+Why now — the hunger that goes up
+- The Ground is maxed out. Centuries of hive-building have consumed the accessible mineral wealth,
+water, and buildable land (Ch. 6). What remains on-world is either owned, exhausted, or — increasingly
+— un-making itself (Ch. 3). A conglomerate's ranking depends on growth; when the ground stops
+entirely.
+- The prize. Orbital solar and industrial high ground, lunar and near-world mining, asteroid-belt
+reactor-ore and rare metals, the volatiles and water-ice that make deep-void expansion self-sustaining,
+and — whispered on the Long Floor — the pre-Founding ruins that are not on this world, salvage older
+and stranger than anything in the deep-wastes. Space is where the next century of ranking will be
+decided.
+- A Congress agenda item. Off-world claims are now argued openly on the Congress floor (Ch. 8): orbital
+slots, void-lanes, and near-world mineral rights are apportioned by the same seat-and-vote apparatus
+that carves up the wastes — which means the space race is fought both in courtrooms of corporate law
+and, past the reach of any accord, in the deniable dark between the worlds.
+The standings — who holds what
+- HALO Ascendant — the incumbent, and the corp with everything to lose. HALO already owns the sky
+(Ch. 8 profile): the orbital solar arrays, the habitats, the life-support spine. The new space race is, above
+all, the other nine trying to break HALO's head-start before it hardens into permanent rule. HALO's
+serene public line is that it is the natural steward of the void as it is of the light; its private terror is that a
+rival plants a self-sustaining off-world foothold HALO doesn't control — because the corp that owns the
+
+next sky owns the next century. HALO's denial (Ch. 3–5) reaches orbit with it: it is very good at not
+looking at what its arrays and habitats drift past in the dark.
+- The challengers. Ferrum (Ch. 8) wants the asteroid-ore and the heavy off-world construction — it built
+the hives, it means to build the colonies. Ironclad (Ch. 8) sells the militarization of orbit and escorts the
+void-lanes; a claim past the atmosphere is worth nothing you can't defend, and Ironclad defends it.
+Argent (Ch. 8) finances every launch and holds the lien on every colony. Meridian (Ch. 8) is racing to
+string the off-world Wired — the relay backbone without which a colony is deaf, and a thin place (Ch. 9)
+strung somewhere new and terrible. Caduceus studies what long-void exposure and off-world
+conditions do to the flesh (Ch. 8). And Kestrel Dynamics (Ch. 8), the hungry eleventh, is betting its
+whole climb on autonomous off-world logistics — the drones that move the ore no human wants to fly
+for.
+- The frontier corps. Verdant Provision (Ch. 8) runs the closed-loop life-support and hydroponics that
+keep a colony alive, its Greenline expertise pointed at a new frontier. And Nyx Cartel (Ch. 8) is already
+out there in the only way Nyx ever is: the void has its own black market, its own smuggling lanes, its
+own castoffs and deniable trades, drifting between the shining corporate colonies like the Churn drifts
+through the Sinks.
+The colonies themselves
+- What they are. Corporate-owned, extraterritorial (Ch. 7) enclaves in the void — orbital habitats,
+near-world mining stations, hardened surface domes, and the long-haul void-craft between them. Each
+is a sovereign corp-world in miniature, with all the isolation, dependence, and quiet menace of an
+arcology and none of the option to simply walk out the gate. Life support is the Lifestyle ladder made
+literal: you rent your air by the hour, and the corp that owns the colony owns your lungs.
+- Off-world cultures and creoles. The void-born are already a people apart: generations raised in low
+gravity and recycled air, speaking clipped technical creoles braided from corporate cant, ship-jargon,
+and the tongues of whatever castes (Ch. 1) got shipped up to work the claims. They read hive-dwellers
+as soft and short-sighted; hive-dwellers read them as strange, pale, and half-corporate to the bone. A
+void-born runner is a rare and valuable thing on the Ground — and a marked one.
+- Hostile by nature. The void is the setting's ultimate hostile environment (the Hostile Environments
+chapter): vacuum, pressure, radiation, cold, and the ever-present knowledge that the wall between you
+and death is a corporate maintenance budget. Every colony is one sabotaged life-support cycle from a
+tomb — which makes off-world runs the highest-stakes, lowest-margin work on the board.
+The buried truth: the dark is already out there
+The Ten believe they are racing into empty dark to beat each other. The cosmology says otherwise.
+Nullspace is not "out there" in the sky — it is outside creation entirely (Ch. 2) — but the void between
+worlds is thin, quiet, and lightly-spoken country, exactly the kind of edge where the membrane wears fine
+(Ch. 3), and the deeper the Ten push into the unlit dark, the more they push into places the Word's Signal
+reaches faintly and the un-making reaches easily. Some off-world claims go silent the way wasteland
+emptied crew, an ore-world reads wrong on every instrument. The corps file it under accident, radiation,
+and "deep-void psychosis," and keep racing. The space race is the Incursion's newest and widest frontier,
+
+and the Ten are funding humanity's expansion into it blindfold.
+
+## Religion & The Faithful
+
+### The False Church and the True Faithful
+
+carries (Conviction, the Street-Priest's engine) and a bargain a person strikes (a pact across the Veil, paid at
+a Price). So this chapter builds the religious world the way the game plays it: from the street up. The grand
+cosmology is locked in Ch. 1 (the Light speaks the Word softly, indirectly, never forced; the Dark One cannot
+create, only twist what is already said). Ch. 8 already built the great false institution (the Radiant Concord, the
+corporate Cathedral secretly serving the Dark). This chapter fills the middle and the bottom — what belief
+actually looks like in the Grid and the Flats, who the real faithful are, what the Dark's cults look like at street
+level, and it resolves the Choirmother (Ch. 18) as the worked example of the whole tension. The theology is
+grounded strictly in the master rules' Veil/Street-Priest systems; it invents no new mechanics.
+The shape of belief [frame]
+The defining religious fact of the age: the true Light is quiet, and the loudest church is a lie. Per Ch. 1, the
+Light will not compel — so it has no cathedrals, no hierarchy, no army; it moves through individual
+conscience, small mercies, and unprovable grace. The Dark, unable to create a faith of its own, does the
+only thing it can: it wears the Light's face (the Radiant Concord, Ch. 8) and lets people worship the Silence
+while singing hymns of the Sun. This inverts the ordinary expectation of a setting: the institutional,
+respectable, comforting religion is the corrupt one, and the real faith is scattered, unlicensed, and poor.
+Three broad camps result, and a street crew brushes all three:
+- The false church — the Radiant Concord (Ch. 8): loud, institutional, beloved, and quietly Dark. Owns the
+word "faith" in the hive.
+
+- The true faithful — grassroots, personal, uninstitutional Conviction (below): real, powerful, and
+constantly at risk of being filed as fringe by the Concord that impersonates them.
+- The open Dark — the cults and corruption-touched who don't bother with the Light's mask at all
+(below): the street-level face of the Incursion (Ch. 3/5).
+The true faithful — Conviction as a grassroots fire
+The real religion of the Light has no address. It lives in Conviction — the personal, earned, losable faith that
+the Street-Priest turns into power (the master rules' faith-drip-and-prayer engine). Because the Light never
+forces, Conviction can't be inherited, bought, or institutionalized; it is kindled one soul at a time and can
+gutter out under despair, compromise, or the Concord's patient counsel. This makes the true faithful a
+scattered, cellular, half-underground people:
+- The Street-Priest is the archetype: the unlicensed minister of a flat-block or a Flats corner, who heals,
+wards, smites, and drives out corruption on the strength of a faith they must keep real to keep working
+ministries — the Shepherd (tends and heals a congregation), the Templar (stands in the door and fights,
+the only one who lays Judgment on the wicked), and the Exorcist (hunts spirits and corruption where
+the Veil is thin).
+- The pact and the Price. A Street-Priest's power flows from a pact with an entity of the Light — an
+angelic patron who gives protection, warding, and aid against the Dark — and per the locked Price
+principle, that aid is never free: the Light exacts a task, a mercy owed, an innocent protected, a wrong
+set right, paid in story before or after the aid. Light pacts are cheap in corruption but strict in conduct —
+the Light asks you to be good, not to bleed. (The same door opens darker: an infernal pact is easier to
+keep and far more expensive to the soul.)
+- The hidden remnant. Because the Concord owns the public meaning of "faith," the genuinely faithful
+survive as a remnant — informal cells, safe-corners, a network of Shepherds and their flocks who
+recognize each other by deed rather than doctrine, and who quietly move the people the Concord has
+marked as "lapsed" out of reach of the Choir of the Silent Sun (Ch. 8). They are natural allies for a crew,
+a natural sanctuary, and a natural target — the people the Concord's soft inquisitors exist to silence.
+The open Dark — cults, corruption, and the thin places
+Not every servant of the Dark hides behind the Light's mask. Below the Concord's polished deception runs
+the open Dark: the street-level cults and corruption-touched who have stopped pretending. These are the
+Incursion (Ch. 3) wearing a human face, and the natural high-tier opposition a crew climbs toward from its
+first brush with the Hollow Men (Ch. 18).
+- The corruption-cults. Where the Veil is thin — the Sinks, the dead blocks, a site of atrocity, a corrupted
+zone (Ch. 5) — people break. Some are seduced by an infernal pact (the Dark's easy bargain: real
+
+power now, the soul later), some are simply thinned by too much bad ground until they belong to the
+Silence. Their cults promise what the Light refuses to — certainty, power, an end to fear — and deliver
+the un-making. The Hollow Men (Ch. 18) are the street-level threshold of this; deeper cabals in the Sinks
+and the wastes are the tier above.
+- The thin places. Faith and geography meet at the Veil (Ch. 2): it is thin at deathgrounds, corrupted
+zones, and warded lofts. The corrupted Deadfall Nine "the Quiet Floor" (the dead Ferrum foundation in
+the Sinks, established Ch. 6) is the Reach's signature thin place — a wound where the Dark leaks
+through, and exactly the kind of site an Exorcist is called to and a corruption-cult is drawn to.
+- What the Dark can't do. Grounding this in Ch. 1: the Dark cannot make a true faith, only twist an existing
+one — which is why the Concord's impersonation is more dangerous than any open cult. The screaming
+cultist in the Sinks damns himself; the Concord damns a civilization while it sings. A crew learns to fear
+the second one more.
+Resolving the Choirmother
+The Choirmother (introduced Ch. 18 as a Flats cult-mother level-boss with a deliberately open allegiance) is
+the setting's designed worked example of everything above — the point where the false church, the true
+faithful, and the open Dark all touch one street corner. Her resolution is built to keep her playable as a
+mystery while giving the truth a fixed answer beneath it.
+The truth (Director-facing,): the Choirmother is a true daughter of the Light being hollowed out from above,
+and does not yet know it. She began as genuine grassroots Conviction — a real Shepherd who fed and
+protected a Flats block when no one else would, and her charity is real (that was never the lie). Her fall is
+not a choice; it is the Concord's method (Ch. 8) applied to a single soul. The Radiant Concord noticed her —
+a beloved, effective, unlicensed minister is exactly what its Choir of the Silent Sun exists to find — and
+from the Choir, and a slow, patient re-teaching that reframes her true faith one degree at a time toward the
+Concord's comforting, sacrifice-free, Dark-ward gospel. She is being turned into a Concord franchise
+without being told, her real Conviction slowly swapped for the Concord's counterfeit, her block converted
+from a Light-remnant safe-corner into a Concord recruiting ground — and she experiences all of it as
+support, validation, and answered prayer.
+Why this resolution. It makes the Choirmother the human-scale version of the Concord's whole horror (Ch.
+8, where the Luminary himself may not know what he serves): the tragedy isn't a villain, it's a good woman
+being quietly unmade by the institution that claims her faith. It ties the three faith-camps to one NPC — she
+is true faithful (origin), false church (present trajectory), and a doorway to the open Dark (destination)
+simultaneously. And it keeps every table-facing option from the Ch. 18 stub live: to the players she can still
+read as sincere saint, Concord plant, or already-thin — because from the outside those look identical,
+which is the whole point of the Dark's method.
+Table use — the three clocks. Where a given Choirmother sits on her fall is a Director dial:
+- Early (kindled, courted) — still mostly true; the Concord's hand is a whisper. A crew that sees it could
+save her — the rare winnable fight for a soul.
+
+- Mid (hollowing) — half-turned; her charity still real, her doctrine already drifting; she'll defend her Choir
+"mentor" and file doubters as lapsed. The default, and the most tragic to play.
+- Late (counterfeit) — a Concord asset in all but name, her Conviction spent, her block a feeder for the
+Reliquary Deep (Ch. 8). Now she's an antagonist — but the horror is that she'd pass any sincerity test,
+because she still believes.
+The run hook — "The Shepherd's Crook." A member of her flock — or a hidden-remnant Street-Priest who
+recognizes the Concord's fingerprints — hires the crew to find out what's really happening on the
+Choirmother's block, or to extract someone before they're "counseled" into the Deep. The crew can
+expose her (and shatter a block that genuinely depends on her), try to break the Concord's hold and reach
+the true Shepherd still under there, or walk away and let the quiet conversion finish. It is the street-level
+twin of the Concord's own "The Recanting" hook (Ch. 8) — same war, one corner of one level, where a
+starting crew can actually touch it.
+
+## The Shadow Economy
+
+crew get hired, get paid, and turn a score into a life? It is the lore skin over the game's existing money
+systems (the Economy/Gear/Negotiation/Contacts rules): nuyen (¥) as the tracked currency, Availability as
+the gate on what the black market will sell you, Lifestyle as the recurring cost of merely existing, Renown as
+the crew's real credit rating, and the fixer/contact web as the social graph the whole thing runs on. Per the
+play-space thesis (Ch. 21), the weight here is the inner-sprawl street economy a starting crew lives inside —
+the Grid-and-Flats world of jobs, fences, and favors — with the wasteland/off-world economies noted as the
+higher tiers it opens onto. This is the chapter that makes a street run actually run.
+The double ledger — the Machine's money and the money underneath [frame]
+The hive runs on two economies stacked atom-close, and the whole game lives in the gap between them.
+- The bright ledger is the Machine's (Ch. 8): every legitimate ¥ you earn or spend is tied to your SIN (Ch.
+21), scanned, taxed, scored, and known. To transact on the bright ledger is to be seen — which is
+exactly why a runner can't use it for the work. The bright ledger is where your Lifestyle payment goes:
+the rent on your coffin flat, the subscription on your body, the license on your existence, paid up the
+vertical to whoever owns your level.
+- The shadow ledger is everything the bright one refuses to record: cash-clean certified credsticks
+(anonymous, bearer-value, the runner's paycheck), barter, favor, and the deniable transfer that never
+happened. The shadow economy exists because the Machine made being known the price of every
+convenience — so an entire counter-world grew up for people and goods that cannot afford to be
+known. A runner is a citizen of the shadow ledger who has to keep faking membership in the bright one.
+The run economy — how a job happens
+A "run" is the shadow economy's unit of work, and it moves through a reliable pipeline a crew learns to
+read:
+- The Johnson. The client is never the corp — it's a deniable proxy, a "Mr./Ms. Johnson" (corp-slang,
+canon in the setting's tri-register), a face with no name hired precisely so the real employer can deny
+everything. The Johnson may be a mid-level corp cutout, a rival crew's backer, a level-boss (Ch. 18), or
+another Johnson down a chain. Rule one of the run economy: you are never told who you really work
+for, and finding out is often the twist.
+- The fixer is the hinge. A Johnson doesn't find a crew; a fixer does. The fixer is the shadow economy's
+load-bearing profession — the broker who matches deniable work to deniable talent, vouches for both
+
+sides, sets the meet, holds the reputations, and takes a cut. Mama Cassavir, "the Switchboard" (Ch.
+8/18), is the canonical first fixer a Reach crew works through. A crew without a fixer isn't a crew; it's
+unemployed muscle.
+- The meet, the terms, the payday. Work is negotiated — the up-front vs. on-completion split, the hazard
+premium, the "we didn't discuss this" surprise — and paid in certified credsticks on delivery. A clean run
+pays the crew's Lifestyle for the next stretch; a great run buys chrome, gear, or a step up the vertical; a
+burned run pays nothing and costs Renown.
+- The complication is the product. The corps pay runners precisely because the job is the kind that can't
+touch the bright ledger — the extraction, the paydata-steal, the sabotage, the wetwork, the truth
+someone wants buried (Ch. 21). The run economy is the Machine's own deniability, sold back to it one
+job at a time.
+Fences and the black market — turning loot into livelihood
+Runners come home with things they can't sell in daylight — hot chrome, stolen paydata, salvaged
+mil-gear, a corp prototype — and the shadow economy's second pillar is the fence: the specialist who
+converts contraband into clean credsticks, and clean credsticks into the contraband a crew needs next.
+The fence-world is stratified exactly like the hive:
+- The corner fence (Flats). The generalist who'll take almost anything for pennies on its worth, no
+questions, fast — the crew's default for offloading small hot goods and the first fence a green crew
+meets. High convenience, terrible rate, and a memory the crew hopes is short.
+- The specialist fence. The chop-shop that only moves vehicles and drones; the ripperdoc (Ch. 21) who
+buys and re-installs salvaged chrome; the data-broker who deals only in paydata (the digital score —
+stolen files, access codes, corp secrets, the highest-margin and most dangerous merchandise in the
+sprawl); the talismonger who trades foci and forbidden components. Better rates, real discretion, but
+each is a relationship you have to earn.
+- The quartermaster (the buy side). The same web that fences your loot sells you your kit, and here the
+hard gate is Availability — the shadow market's measure of how hard a thing is to get and how much
+heat comes with it. Street goods move freely; military-grade weapons, high-end cyberdecks, restricted
+chrome, and true paydata are high-Availability — you need the right fixer, the right Renown, and the
+willingness to be remembered asking. The higher up the Availability ladder you reach, the fewer people
+can sell it and the more each of them owns a piece of you for having asked.
+- Provenance is peril. The corps mark their property (Ch. 8/21) — tagged chrome, watermarked paydata,
+SIN-locked gear — so a fence isn't just paying for the item, they're pricing the risk that it's traceable.
+The best fences launder provenance; the cheap ones just gamble that the heat lands on you, not them.
+A fence's real product is deniability, same as a runner's.
+
+Favors, debt, and Renown — the currency under the currency
+Beneath the credsticks runs the shadow economy's older, harder currency: what people believe you're
+worth and what you owe. Nuyen buys the job; this is what gets you the next one.
+- The favor economy. Half the shadow economy never touches a credstick. A fixer floats you a meet; a
+gang (Ch. 18) grants safe passage; a ripperdoc patches you off-books — and now you owe. Favors are
+the connective tissue that money can't buy and can't fully repay, and a crew's web of who-owes-whom
+is as real an asset (and liability) as its gear.
+- Debt is the Machine's favorite leash — and the shadow's, too. The bright ledger enslaves through
+Lifestyle and financed chrome (Ch. 21); the shadow ledger enslaves through the favor you can't return,
+the fixer you burned, the Johnson you crossed. The most dangerous position in the sprawl isn't broke
+— it's owing the wrong person.
+- Renown is the crew's credit rating. Down here, reputation is literally bankable: a crew's Renown (the
+setting's single reputation track, scaling by tier) determines which fixers take their calls, which
+Johnsons trust them with the big score, what Availability the market will extend them, and how far a
+favor will stretch. Renown is earned by delivering and keeping quiet; it's spent by cashing in the web
+you built; and it's lost in an instant by burning a client, a crew, or a fixer. A runner's name is their true net
+worth, and the whole shadow economy is, finally, a machine for pricing trust in a world the Machine built
+to make trust impossible.
+The wider economies — what the street opens onto
+The inner-sprawl run economy is the entry tier; sketched here for later passes are the larger markets a
+proven crew reaches:
+- The wasteland economy — salvage, water, reclaimed-land rights, and the frontier barter of Cinderhold
+and the settlements (Ch. 6): higher-Availability, higher-risk, thinner on credsticks and heavier on trade,
+and shadowed by what the reclaimed ground is really doing (Ch. 3).
+- The syndicate economy — Nyx's Undermarket "the Churn" and the hive-spanning criminal wholesale
+above the street's retail (Ch. 8/18): where the gangs' goods and the crew's biggest scores ultimately
+flow.
+- The off-world economy — the void black market and the colony scrip where you rent your air (Ch.
+10/21): the space race's shadow ledger, the highest tier of all.
+
+## Technology & Everyday Life
+
+deliberately built as a hinge (Ch. 6): from Cinderhold's gate a crew can turn outward into the wastes (the
+high-tier, high-lethality wasteland and wild-zone runs — thinner law, thinner Signal, the Incursion in the open)
+or inward into the hive itself (the Shadowrun-style street-level megaplex run — the extraction, the data-steal,
+the wetwork, the heist, the milk-run-gone-wrong). Street level is the default starting tier; the wilds are the
+escalation. So this chapter's job is texture — the tech, chrome, drones, transit, and media a low-Lifestyle
+crew touches every day in the Grid and the Flats — the lived-in surface that makes an inner-sprawl run feel
+like one. Wasteland tech (survival rigs, off-grid power, salvage) is sketched here but belongs to the
+Hostile-Environments material; the weight of this chapter is the inner megaplex.
+The texture of the lit world
+Everything in the hive is networked, metered, and owned (Ch. 6, Ch. 8). Tech is not a gadget you buy once;
+it is a subscription you live inside. The Wired (Ch. 9) is not a place you go — it is the air the sprawl breathes:
+every door, drone, cred-transfer, ad-panel, transit gate, and cortex-jack is a node on it. The dominant
+sensory fact of daily life is the overlay: nearly everyone runs a cheap ocular or cortex link that paints the
+world with corp-served AR — wayfinding, ads, SIN-status badges floating over strangers, hazard tags, the
+ever-present soft glow of a reality that has been edited for you by whoever owns your feed. To move
+through the Grid is to see the version of the hive your Lifestyle tier is licensed to see. To run the shadows is,
+first, to learn what the overlay is hiding.
+- The SIN is the master key. Your System Identification Number (Ch. 6) is your existence: it pays, it opens,
+it is scanned a thousand times a day by gates and drones and shop-panels that simply will not transact
+with a blank. This is the everyday engine of the whole game — a ghost (no SIN) is locked out of the lit
+world's every convenience, which is exactly why they're free of its every leash. Fake SINs, burner SINs,
+and SIN-spoofing are the street-level crew's most constant tool and most constant risk; a run often lives
+or dies on whether your borrowed identity survives one more scan.
+Cyberware culture — chrome is class, chrome is confession
+Caduceus and the flesh-corps (Ch. 8) made the body a product, and the street made it an identity.
+Cyberware is everywhere and it is legible — the hive reads your chrome the way it reads your altitude:
+- In the Crown/Spires, cyberware is invisible: seamless, medical-grade, ruinously expensive
+augmentation you're not supposed to be able to see. The elite are heavily augmented and would be
+insulted if you noticed. Clean, warranted, Caduceus-serviced, on the ledger.
+
+- In the Grid, chrome is aspirational and financed: the wage-worker's dental-plan augment, the
+corp-issued skillwire that ties you to your job, the augment you're still paying off and that stops working
+if you miss a payment. Your body, rented back to you.
+- In the Flats/Sinks, chrome is scarred, mismatched, and proud: back-alley 'ware, salvaged mil-surplus
+arms (Ironclad castoffs), obvious cyberlimbs and visible optics worn like tattoos. Street chrome says I
+chose this and I own it outright — the opposite of the financed Grid augment. The ripperdoc (the
+unlicensed street surgeon; cf. Caduceus's Grafthouse and Cinderhold's own) is a pillar of low-Lifestyle
+life: cheaper, deniable, no records, and no guarantees.
+- The cost that isn't nuyen. Grounding this in the master rules and Ch. 5: heavy augmentation trades flesh
+for capability, and the setting quietly frames too much chrome as a spiritual thinning — a body more
+owned, more made, more distant from the un-augmented soul the Word first spoke. The Crown's
+seamless augmentation and the Sink-rat's junk arm are the same bargain at different prices. Chrome is
+never just gear here; it is a small, daily choice about how much of yourself you'll sell to keep up.
+Drones, security, and the watched street
+The sprawl is saturated with drones and sensors, and this is the single most important everyday fact for a
+street-level crew. The lit hive is watched: fixed cams, sensor-arachnids in the corridor ceilings,
+corp-security response drones, delivery and maintenance drones threading every level, and — increasingly
+— Kestrel Dynamics' autonomous couriers (Ch. 8) gliding through the Grid on their clean, cheap, ubiquitous
+routes. Surveillance density is the zone-security gradient made physical:
+- The Grid is a panopticon of convenience — order is real but rented, and the price is that you are seen. A
+drawn weapon here summons a response in seconds.
+- The Flats are where the cameras thin, the drones patrol in packs instead of blankets, and local power
+(gangs, level-bosses, Mama Cassavir's web, Ch. 8) fills the gap the corps left. This is the edgerunner's
+natural country — watched enough to be dangerous, dark enough to work in.
+- The Sinks are near-blind: dead cams, no Signal, no maintenance — which is its own danger (Ch. 3, Ch.
+6).
+- The runner's craft is therefore, at street level, largely a craft of the watched street: spoofing a SIN past a
+gate-scanner, blinding or hijacking a cam-net, slipping a Kestrel courier's route, knowing which corridor
+the security drones sweep and when. The Hacker, the Wrench/Rigger (who can turn the drones), and
+the Scout live here.
+Transit and the shape of a run
+Movement in the hive is vertical first, horizontal second, and it is gated by Lifestyle at every step. The great
+transit spines — corp-run lift-stacks, maglev arteries, and cargo conveyors — move the wage-body up and
+
+down the strata, but every tier-boundary is a checkpoint: to ride from the Flats up into the Grid, or from the
+Grid into the Upper Tiers, is to pass a SIN-scan and a security posture-check that gets harder the higher
+you climb. This is a gift to street-level play: the vertical is the obstacle. A run is often shaped like a climb —
+get a Flats crew, with the wrong SINs and visible chrome, up into a Grid or Spire target and back down
+again without tripping the boundary between them. Below the licensed transit runs the grey transit of the
+Flats and Sinks: unlicensed lifts, smuggler's shafts, the maintenance ways and dead conveyors that fixers
+and runners use precisely because they don't scan you — Mama Cassavir (Ch. 8) knows every one of
+them. And at the very bottom of the map, the hive opens outward at the gate (Cinderhold, Ch. 6) onto the
+wastes — the seam where the inner game hands off to the wasteland game.
+Media, ads, and the manufactured calm
+The hive is narrated to itself, constantly. Every surface is a screen, every overlay carries a feed, and the
+content is the same at every level: reassurance. Obsidian (Ch. 8) pipes simsense and entertainment; the
+corp news-feeds report a world that is safe, growing, and fine; the Radiant Concord's luminous liturgy (Ch.
+8) broadcasts comfort across the Wired; and the ads never, ever stop. This is not neutral texture — per Ch.
+1 and Ch. 5 it is the manufactured calm that keeps the wage-billions from noticing the drift: a media
+environment engineered so no one has to feel the war, or the debt, or the dark under the floor. For a runner,
+the media layer is both cover and enemy: the same feeds that drown out the Incursion also drown out a
+firefight three corridors over, and a crew that knows how to feed the narrative (a staged distraction, a
+planted story, a doctored overlay) can move through the sprawl on the hive's own willful blindness. The
+truth, when a crew finds it, travels badly — nobody wants the feed interrupted.
+The two doors from the Reach
+Everything above resolves into the campaign's core promise: from the Reach, a crew chooses its door.
+- Inward — the street-level megaplex run (the default, entry tier). The extraction, the data-heist, the
+escort, the wetwork, the sabotage, the milk-run gone wrong — fought in the watched corridors of the
+Grid and Flats against corp security, rival crews, gangs, and the vertical itself. Lower lethality, denser
+social and stealth play, the shadow economy at arm's reach, home base a lift-ride away. This is where a
+crew starts, learns the sprawl, and builds Renown.
+- Outward — the wasteland / wild-zone run (the escalation, higher tier). The salvage expedition, the
+frontier defense, the dead-zone recovery, the Incursion in the open (Ch. 3, Ch. 6) — thinner law, thinner
+Signal, hostile environments, and stakes that touch the cosmic war directly. Higher lethality, higher
+reward, and a one-way pressure toward the setting's deepest truths. This is where a proven crew goes.
+- The design guidance for later stubs (Factions, Shadow Economy, Timeline, Campaign Present) is to
+honor this gradient: seed a rich bench of street-level, inner-sprawl content first — fixers, gangs, corp
+
+targets, level-bosses, the run economy of the Grid and Flats — so the entry tier is deep and playable,
+and treat wasteland/wild-zone material as the higher-tier layer a crew earns its way out to.
 
 ## Timeline & History
 
