@@ -23,4 +23,5 @@ Inventory `docs/raw/` gaps and propose a lockable print TOC before any chapter-b
 - **Regenerate journals after Michael reviews HTP** — do not regen on 0.1.97
 
 ## Next
-Draft order #2–5: `03` Power Rolls → `04` Combat → Wire polish → Lifestyle (NEW or `08` §).
+Draft order #3–5: `04` Combat → Wire polish → Lifestyle (NEW or `08` §).  
+**0.1.98:** `03` Power Rolls Stage 3 fill done — see `docs/spikes/B62-POWER-ROLLS-STAGE3.md`.
