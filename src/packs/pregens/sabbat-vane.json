@@ -3033,7 +3033,11 @@
     "draw-steel-ghostwire": {
       "pregen": "sabbat-vane",
       "biSpent": 1,
-      "biRemaining": 19
+      "biRemaining": 19,
+      "integrity": {
+        "value": 19,
+        "max": 20
+      }
     }
   }
 }

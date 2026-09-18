@@ -2978,7 +2978,11 @@
     "draw-steel-ghostwire": {
       "pregen": "kessic-draye",
       "biSpent": 3,
-      "biRemaining": 17
+      "biRemaining": 17,
+      "integrity": {
+        "value": 17,
+        "max": 20
+      }
     }
   }
 }

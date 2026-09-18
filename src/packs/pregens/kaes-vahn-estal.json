@@ -2727,7 +2727,11 @@
     "draw-steel-ghostwire": {
       "pregen": "kaes-vahn-estal",
       "biSpent": 0,
-      "biRemaining": 20
+      "biRemaining": 20,
+      "integrity": {
+        "value": 20,
+        "max": 20
+      }
     }
   }
 }

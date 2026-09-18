@@ -288,7 +288,11 @@ for (const [i, hero] of ROSTER.entries()) {
     items, effects: [],
     flags: {
       [MODULE_ID]: {
-        pregen: hero.slug, biSpent, biRemaining: 20 - biSpent,
+        pregen: hero.slug,
+          biSpent,
+          biRemaining: 20 - biSpent,
+          // Sheet reads integrity.value/max (not biRemaining alone) — keep both in sync.
+          integrity: { value: 20 - biSpent, max: 20 },
         // Changer form art: the sheet and default token use the human portrait; Beast form art
         // lives here so a form-change pass (or a Director) can swap the token texture to it.
         ...(hero.beastArt ? { changer: { humanArt: img, beastArt: `modules/${MODULE_ID}/assets/pregens/${hero.beastArt}` } } : {}),

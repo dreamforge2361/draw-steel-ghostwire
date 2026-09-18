@@ -3609,7 +3609,11 @@
     "draw-steel-ghostwire": {
       "pregen": "barak-voss-hallor",
       "biSpent": 9,
-      "biRemaining": 11
+      "biRemaining": 11,
+      "integrity": {
+        "value": 11,
+        "max": 20
+      }
     }
   }
 }

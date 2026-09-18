@@ -513,6 +513,24 @@ function getIntegrity(actor) {
 const setIntegrity = (actor, value) => actor.update({ [`flags.${MODULE_ID}.integrity.value`]: value });
 
 // New heroes: Integrity 20/20 and ¥5,000 starting funds. Duplicates, imports, and compendium heroes keep their data.
+
+// Pregens used to store only biSpent/biRemaining. The sheet reads integrity.value/max — migrate once.
+Hooks.once("ready", async () => {
+  let fixed = 0;
+  for (const actor of game.actors) {
+    if (actor.type !== "hero") continue;
+    const flag = actor.getFlag(MODULE_ID, "integrity");
+    if (flag?.value !== undefined) continue;
+    const remaining = actor.getFlag(MODULE_ID, "biRemaining");
+    if (remaining === undefined || remaining === null) continue;
+    await actor.update({
+      [`flags.${MODULE_ID}.integrity`]: { value: Number(remaining), max: INTEGRITY_START },
+    });
+    fixed += 1;
+  }
+  if (fixed) console.log(`${MODULE_ID} | migrated Body Integrity onto ${fixed} hero(es) from biRemaining`);
+});
+
 Hooks.on("preCreateActor", (actor, data, options, userId) => {
   if ((userId !== game.user.id) || (actor.type !== "hero")) return;
   const stats = data._stats ?? {};
