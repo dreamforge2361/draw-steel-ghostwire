@@ -1,6 +1,6 @@
 # The Veil
 
-**RAW status:** draft (B43 Ritual Working locked 2026-09-18)  
+**RAW status:** draft (B43 Ritual Working locked 2026-09-18; §C3 Summon Entities locked 2026-09-18)  
 **Sources:** `docs/rulebook/06-elementalist.md`, `docs/rulebook/07-street-priest.md`, `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/rulebook/17-perks.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (Category 6), `docs/directors/veil-rituals-exploration.md` (B43)
 
 ---
@@ -187,6 +187,48 @@ Numbers are starting points for playtest. Director may scale yen and Goal points
 
 ---
 
+---
+
+## §C3 Summon Entities (LOCKED 2026-09-18)
+
+Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.
+
+### Elemental Stamina
+
+**Formula:** rank base + (**Logic × Level**). Companions use Rank 1.
+
+| Rank | Base | Notes |
+|---|---|---|
+| 1 | **15** | Companions (Ember / Zephyr / Boulder) and Summon Elemental R1 (extension) |
+| 2 | **25** | Summon Elemental from 5th level (independent) |
+| 3 | **35** | Summon Elemental from 7th level |
+| 4 | **50** | Greater Elemental Summon |
+| 5 | **65** | Greater Elemental Summon at echelon 4 (level 10) |
+
+**Bind unlocks (Summon Elemental max rank):** Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th.
+
+**Bound count:** at most **2** non-companion bound elementals at once. A new bind **releases the oldest**.
+
+### Spirit Stamina
+
+**Formula:** form base + (**Persona × Level**).
+
+| Form | Base | Notes |
+|---|---|---|
+| Extension | **20** | RAW: no Stamina track of its own. Token pool is table convenience; Director may treat extension as untargetable |
+| Independent | **30** | Own figure and turn |
+
+Spirit strike (extension and independent): **4 / 7 / 10 + Persona** (holy or corruption by pact) — final.
+
+### Deferred (explicitly out of this lock)
+
+Leave unset until a later Veil pass:
+
+- Rank 2+ / Greater / Rank 5 **strike damage ladders**
+- **Defense stamps** on Veil Actors (Wired / Reflex / Physique, etc.)
+
+Until those land, use Rank 1 / companion / spirit strike bands already printed in the class chapters, and Director judgment for higher-rank strike damage and defenses. Template Actors bake **base-only** Stamina; live summon stamps apply Logic×Level / Persona×Level.
+
 ## Not yet written
 
-Shared spirit rank tables, thin-place gazetteer mechanics, full corruption ladder, and Veil entity stat cards remain open. Until then, use class chapters, B53 summon scaling, and Director judgment. Ritual Workings above are the B43 lock; Foundry automation is a later build.
+Thin-place gazetteer mechanics, full corruption ladder, and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. Ritual Workings above are the B43 lock; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build.

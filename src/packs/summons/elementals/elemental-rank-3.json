@@ -6,8 +6,8 @@
   "img": "icons/magic/earth/projectile-stone-landslide.webp",
   "system": {
     "stamina": {
-      "value": 45,
-      "max": 45,
+      "value": 35,
+      "max": 35,
       "temporary": 0
     },
     "characteristics": {

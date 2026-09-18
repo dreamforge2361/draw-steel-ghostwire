@@ -6,8 +6,8 @@
   "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
   "system": {
     "stamina": {
-      "value": 60,
-      "max": 60,
+      "value": 50,
+      "max": 50,
       "temporary": 0
     },
     "characteristics": {

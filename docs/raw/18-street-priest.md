@@ -275,7 +275,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 **Sustaining the independent form** costs **Persistent 2** (−4 Conviction/turn while sustained). The extension form has no ongoing sustain cost beyond the initial 7-Conviction spend; it simply expires at the end of the encounter or when you choose to release it.
 
-**Provisional Stamina (until Veil §C3):** the independent form has **30 + (Persona × level)** Stamina. The extension form has no Stamina track of its own; at the table its token carries **20 + (Persona × level)** for convenience.
+**Spirit Stamina (Veil §C3 locked 2026-09-18):** independent form **30 + (Persona × level)**; extension form has no Stamina track of its own in RAW — at the table its token may carry **20 + (Persona × level)** as a convenience pool, and the Director may treat the extension as untargetable. Companion + R1 spirit strike bands (**4 / 7 / 10 + Persona**) are final. Rank 2+ / Greater strike ladders and defense stamps remain deferred (see `22-the-veil.md` §C3).
 
 **Summon flavor by subclass:**
 

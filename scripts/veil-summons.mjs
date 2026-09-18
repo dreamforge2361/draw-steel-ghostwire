@@ -12,7 +12,7 @@
 // - Street Priest: Invoke the Pact. Bind Check low = failed bind (nothing to place), middle = extension, high =
 //   independent. The ministry picks the spirit; the priest's pact picks its Light / Dark tint. Sentinel Spirit is
 //   not a summon (unharmable, until the end of the next turn), so it stays a token-less ability.
-// Stamina is provisional until the Veil entity table (§C3) lands: see ELEMENTAL_BASE and SPIRIT_BASE.
+// Stamina locked Veil §C3 (2026-09-18): ELEMENTAL_BASE / SPIRIT_BASE / BIND_CAP — see docs/spikes/B53 and B60.
 //
 // Links, as with sprites: pet flags.<module> = { kind, subtype, rank, hybridTier, summoner: <actorUuid>, ownerUuid,
 // dsid, sourceAbility, summonedAtLevel, formula, bind, scaleRank, expires, pact }; caster
@@ -22,10 +22,10 @@ const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
 const UI = "GHOSTWIRE.Summons.Veil.UI";
 
-// Provisional Stamina until Veil §C3: rank base + (Logic × level), the sprite shape. Companions are Rank 1.
+// §C3 locked: rank base + (Logic × level). Companions are Rank 1.
 const ELEMENTAL_BASE = { 1: 15, 2: 25, 3: 35, 4: 50, 5: 65 };
-// Provisional Stamina until Veil §C3: form base + (Persona × level). RAW gives the extension no Stamina track of its
-// own; its token carries the extension pool only so its strike can be rolled and the Director can track it.
+// §C3 locked: form base + (Persona × level). Extension has no Stamina track of its own in RAW; the token pool is a
+// convenience so its strike can be rolled — the Director may treat extension as untargetable.
 const SPIRIT_BASE = { extension: 20, independent: 30 };
 
 // Bound elementals a caster may sustain at once. Twin Elemental Summon is the RAW apex at two; a new bind over

@@ -1,7 +1,7 @@
 # Spike B53 — Summon scaling for spirits & elementals
 
-**Status:** implemented 2026-09-17, module **0.1.78**, **awaiting Michael's Foundry verify (not committed).**
-**Design lock (Michael, 2026-09-17):** pets get stronger as the caster levels, the same *fantasy* as Technomancer sprites, but **follow each class RAW**. No sprite 4×3 Actor matrix clone.
+**Status:** **LOCKED §C3** 2026-09-18 (module **0.1.95**). Implemented 2026-09-17 (0.1.78+); Stamina bases / spirit bases / bind-cap count accepted as final.
+**Design lock (Michael, 2026-09-17; §C3 package accepted 2026-09-18):** pets get stronger as the caster levels, the same *fantasy* as Technomancer sprites, but **follow each class RAW**. No sprite 4×3 Actor matrix clone. See also `B60-VEIL-C3-SUMMON-LOCK.md`.
 
 ## Sprites (reference, B52, untouched)
 Hybrid bands L1–3 / L4–7 / L8–10, Stamina = archetype base + (Logic × Level), encounter-end decompile. `scripts/sprites.mjs` is not modified by B53. Drones (`scripts/machines.mjs`) aren't modified either.
@@ -27,13 +27,13 @@ Hybrid bands L1–3 / L4–7 / L8–10, Stamina = archetype base + (Logic × Lev
 - **World setting** `veilSummonOnUse` (default on): turn it off to summon only from the sheet button.
 - **Ability Item sheet** (those 7 abilities, on the right class): a status line with the current scaling, a roster (Stamina value / max, form), a **Summon** button (manual path, treated as a clean bind; Invoke the Pact asks extension vs independent), **Dismiss All**, and ✕ per summon.
 - **API:** `game.modules.get("draw-steel-ghostwire").api` gains `summonVeil, summonFromAbility, dismissVeil, dismissAllVeil, refreshVeilSummons, veilSummons, veilSummoner, bindCapRank, greaterRank, elementalStamina, spiritStamina`.
-- **No pack JSON changed**, so **no pack rebuild is needed**. Templates keep their baked Stamina; the script stamps over it. Template descriptions (lang) now state the live formula.
+- **Templates:** bake **§C3 base-only** Stamina; `veil-summons.mjs` stamps live `base + (char × level)` over them. Pack rebuild required when `src/packs/summons` changes (0.1.95 aligned R2/R3/Greater bases).
 
 ### Flags
 - Pet: `flags.draw-steel-ghostwire = { kind, subtype|ministry, element, rank, hybridTier, dsid, summoner, ownerUuid, sourceAbility, summonedAtLevel, formula, bind, scaleRank, expires, pact }`. `summoner` and `ownerUuid` are the caster Actor uuid. `formula` is `elemental-rank-N` or `spirit-extension|independent`. `bind` is `clean|resists|broken|null`. `expires` is `{ combat, round }` or null.
 - Caster: `flags.draw-steel-ghostwire.veilSummons = { uuids }`, a mirror. The world scan by `summoner` is the truth, so a hand-deleted pet self-heals. Plus `companionCombat` (the combat id of the last companion call).
 
-## Provisional formulas (until Veil §C3)
+## Formulas (§C3 locked 2026-09-18)
 
 ### Elementalist: rank base + (Logic × Level)
 | Rank | Base | Source |
@@ -57,7 +57,7 @@ The Twin's single roll applies to both, so a broken Twin flips both.
 
 **Twin Elemental Summon:** two Rank 1 extensions; at **echelon 3+** a dialog offers "cap-rank independent + Rank 1 extension" instead.
 
-**Bind cap on count (provisional, table rule):** at most **2** bound (non-companion, non-broken) elementals at once, the Twin apex. A new bind over the cap **releases the oldest**, rather than blocking, so Essence already spent never fizzles.
+**Bind cap on count (§C3 locked):** at most **2** bound (non-companion, non-broken) elementals at once, the Twin apex. A new bind over the cap **releases the oldest**, rather than blocking, so Essence already spent never fizzles.
 
 **Companions:** Rank 1 extension, no bind roll, `expires` = 3 rounds when summoned in a started combat. One live companion per caster (a re-call replaces it). Once per encounter is **warned, not blocked**: RAW has a "1/encounter refresh", and the table owns refreshes.
 
@@ -87,11 +87,15 @@ Examples: L3 Persona 2 → 26 / 36. L10 Persona 5 → 70 / 80.
 Re-stamps keep damage taken: the pool grows by exactly as much as the maximum did.
 
 ## Out of scope / follow-ons
-- **Veil §C3** entity tables (Stamina, strikes for Rank 2+, defenses): replace `ELEMENTAL_BASE` / `SPIRIT_BASE` when locked.
+- **§C3 Stamina / bind-cap:** locked 2026-09-18 — `ELEMENTAL_BASE` / `SPIRIT_BASE` / `BIND_CAP` are final. See B60.
+- **Deferred from §C3 (leave unset):** Rank 2+ / Greater / R5 **strike damage ladders**; **defense stamps** on Veil Actors.
 - **Persistent Essence / Conviction drain** for sustained binds isn't automated. The Summoned notification and template text carry the Persistent value.
 - **Heavy-hit bind break** (Persona save) and **Command roll** edge/resist: flags only (`bind`), no automation.
 - Weave Mastery / Ascendant Weave standing binds: bound elementals already persist across encounters; there's no special handling.
 - Ability JSON text is unchanged.
+
+### Template baked Stamina (0.1.95)
+Compendium templates store **base-only** Stamina (R1/companions 15, R2 25, R3 35, Greater 50, spirits 20 extension base). Live summon **stamps** `base + (Logic|Persona × Level)` over the baked value — do not treat the template max as the live pool.
 
 ## Foundry verify checklist (Michael)
 1. Module 0.1.78 loads; console shows `Veil summons: elementals and pact spirits registered`. Settings list **Veil summons: place on ability use**.

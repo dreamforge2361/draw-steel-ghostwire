@@ -88,10 +88,10 @@ HP formulas below are **playtest placeholders** (Technomancer Known Bugs #13) �
 | `companion-ember` | Pyromancer signature summon (Rank 1 fire, extension, sustain-free short duration) |
 | `companion-zephyr` | Stormcaller air/water companion |
 | `companion-boulder` | Geomancer earth companion (name per chapter) |
-| `elemental-rank-1` … scaffolds | **Summon Elemental** (5 Essence, Persistent 2 = −4/turn) — Rank by Echelon / bind cap (Veil §C3 still backlog for full Stamina tables) |
+| `elemental-rank-1` … Rank 3 / greater | **Summon Elemental** (5 Essence, Persistent 2 = −4/turn) — Rank by bind unlock (R1 L1 / R2 L5 / R3 L7); Stamina + bind-cap **§C3 locked 2026-09-18** (bases 15/25/35/50/65 + Logic×Level; max 2 bound) |
 | `elemental-greater` / Twin / etc. | Greater Elemental Summon (11, Persistent 6 = −12/turn) and other named greater forms from 9/11 bands |
 
-Ship **3 companions** first; Rank ladder + greaters as scaffolds until Veil chapter locks entity Stamina.
+Companions + Rank ladder + greater ship with **§C3-locked Stamina** (2026-09-18). Deferred: Rank 2+ strike ladders and defense stamps on Veil Actors.
 
 ### 3.3 Street Priest — Pact spirits (Phase 3) — **recommend 3 + pact tint**
 
@@ -162,7 +162,7 @@ Class abilities link by Compendium UUID (drag/grant) the same way Kits/Programs 
 1. **Sprite compile cost:** Signature **Compile Sprite** stays **0 Resonance** at base. Congregation cost **3 Resonance** (**2** Sprite-Weaver) applies to **extra compiles / enhance-for-second-sprite / swarm spends** — not a tax on the free signature compile.
 2. **Sprite HP table:** **Ship Known Bugs #13 placeholders** into Phase 1 Foundry Actors; adjust after playtest.
 3. **Street Priest:** **3 spirits + Light/Dark pact tint** (not 6 duplicate Actors).
-4. **Summon Elemental:** **Both** forms — early extension, later independent (hybrid ladder parity with Technomancer sprites). Rank Stamina tables wait on Veil §C3 scaffolds.
+4. **Summon Elemental:** **Both** forms — early extension, later independent (hybrid ladder parity with Technomancer sprites). **§C3 locked 2026-09-18:** Stamina bases 15/25/35/50/65 + Logic×Level; bind count max 2 (release oldest). Deferred: R2+ strikes, defense stamps.
 5. **Hacker nodes (v1):** **Journal + Wired Console** data first; placable Actor tokens deferred to a later pass.
 ## 7. Source index
 
