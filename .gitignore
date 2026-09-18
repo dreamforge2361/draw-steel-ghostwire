@@ -33,3 +33,6 @@ assets/sfx/_manifest.json
 # Local pregen compress backups (do not ship)
 assets/pregens/_pre-compress-backup/
 
+
+# Generated print manuscript (assemble from MANIFEST.yml)
+docs/manuscript/build/Ghostwire-Manuscript.md

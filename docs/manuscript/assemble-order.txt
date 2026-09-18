@@ -1,0 +1,41 @@
+# Ordered paths relative to docs/manuscript/ (comments and blank lines ignored).
+# Prefer MANIFEST.yml — this file is a human-readable mirror for quick greps.
+# --- Front ---
+00-front/title-page.md
+# --- Lore ---
+01-lore/L1-setting-primer.md
+01-lore/L2-peoples-and-world.md
+01-lore/L3-ossian-reach-color.md
+# --- Part I ---
+../raw/00-front-matter.md
+../raw/01-how-to-play.md
+../raw/02-heroes-characteristics.md
+../raw/03-tests-power-rolls.md
+../raw/04-combat.md
+../raw/24-advancement.md
+# --- Part II ---
+../raw/05-ancestries.md
+../raw/06-backgrounds-professions.md
+../raw/07-languages.md
+../raw/08-kits-gear-wealth.md
+02-rules/10-lifestyle-downtime.STUB.md
+../raw/09-chrome-body-integrity.md
+../raw/10-mods.md
+../raw/11-perks.md
+# --- Part III ---
+../raw/12-operator.md
+../raw/13-scout.md
+../raw/14-commander.md
+../raw/15-medic.md
+../raw/16-wrench.md
+../raw/17-elementalist.md
+../raw/18-street-priest.md
+../raw/19-hacker.md
+../raw/20-technomancer.md
+# --- Part IV ---
+../raw/21-the-wire.md
+../raw/22-the-veil.md
+../raw/23-machines.md
+# --- Part V ---
+../raw/25-opposition.md
+03-directors/27-running-ossian-reach.STUB.md

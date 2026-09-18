@@ -1,0 +1,109 @@
+# Ghostwire Print Manuscript (Markdown SoR)
+
+**Status:** Scaffold 2026-09-18 (B64) — manuscript track start; module **0.2.0**  
+**Path:** `docs/manuscript/`  
+**Spike:** `docs/spikes/B64-MANUSCRIPT-SOR.md`  
+**Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
+
+This folder is the **single Markdown source of record** for the eventual print PDF: lore harvested from the original Ghostwire master PDFs, plus rules pointed at `docs/raw/` (no dual-edit copies).
+
+---
+
+## Purpose
+
+| Role | What lives here |
+|---|---|
+| **Print SoR** | Ordered Markdown that Pandoc (later) turns into the core book PDF |
+| **Lore stubs** | Placeholders under `01-lore/` until artwork/lore is carried as-is from master PDFs |
+| **Rules pointers** | Manifest entries → `docs/raw/*.md` (Stage 3 filled chapters stay in raw; manuscript does not fork them) |
+| **NEW print-only** | Thin stubs for Lifestyle & Downtime + Running Ossian Reach (body deferred) |
+
+**Not** a second rules edit surface. **Not** the Foundry Journal pipeline.
+
+---
+
+## vs `docs/raw/`
+
+| | `docs/raw/` | `docs/manuscript/` |
+|---|---|---|
+| Concern | **Rules-only** player/Director procedures | Full **print book** (lore + rules assemble) |
+| Journals | SoR — `tools/raw-to-journals.mjs` regenerates from raw | Journals **held** until end of rules pass |
+| Edit policy | Edit rules here; mark `RAW status` | Lore stubs + NEW stubs + **pointers** to raw |
+| Dual-edit | N/A | **Forbidden** — do not copy entire raw tree into manuscript |
+
+Keep `docs/raw/` rules-only so Journal regen stays clean. Manuscript concatenates raw by path at assemble time.
+
+---
+
+## vs Journals
+
+- Journals = Foundry pack from `docs/raw/` (B42b).
+- **Do not regenerate journals** for this scaffold / 0.2.0 bump.
+- Hold Journals until the rules pass finishes; then art + PDF.
+- Manuscript is for PDF assembly, not for Foundry sync.
+
+---
+
+## vs PDF
+
+| Stage | Owner |
+|---|---|
+| 1. Finish RAW spine + Wire + Lifestyle (rules) | `docs/raw/` (+ NEW Lifestyle stub → later raw or manuscript) |
+| 2. Harvest lore/art from master PDFs into `01-lore/` | manuscript lore stubs |
+| 3. `node tools/assemble-manuscript.mjs` → `docs/manuscript/build/Ghostwire-Manuscript.md` | assemble script |
+| 4. Pandoc / print CSS / art plates | later (not this spike) |
+
+Word-as-master is **rejected**. Prefer Markdown + assemble script; Pandoc later.
+
+---
+
+## How to assemble
+
+```bash
+# from repo root
+node tools/assemble-manuscript.mjs
+```
+
+Reads `docs/manuscript/MANIFEST.yml` (ordered file list), concatenates into:
+
+`docs/manuscript/build/Ghostwire-Manuscript.md`
+
+- **Rules entries** resolve to `docs/raw/*.md` (or other `path:` targets).
+- **Missing lore stubs** are skipped with a visible HTML/MD comment placeholder in the build output.
+- Part separators are inserted from manifest `part:` markers.
+
+See `TOC.md` for print titles ↔ sources. See `02-rules/README.md` for the pointer policy.
+
+---
+
+## Lore import policy
+
+1. **Artwork / lore prose** — carry **as-is** from the master Ghostwire PDFs (Core Sourcebook, Lore Book V2, related plates). Do not rewrite voice for “DS alignment” in lore chapters.
+2. **Rules** — **Ghostwire-original** wording from `docs/raw/` only. No substantial MCDM / *Draw Steel: Heroes* paste. Engine = DS by reference + GW remap tables already in raw.
+3. **Do not** paste lore into `docs/raw/`. Lore harvest lands under `01-lore/` (or front matter stubs), then joins the book via the manifest.
+4. **Scaffold only today** — stub files say `CONTENT TBD — harvest from …`. No PDF text pasted in this milestone.
+
+---
+
+## Folder layout
+
+```
+docs/manuscript/
+  README.md              # this file
+  TOC.md                 # print TOC ↔ sources
+  MANIFEST.yml           # assemble order
+  00-front/              # title / how-to-use print stubs (optional)
+  01-lore/               # Core Sourcebook / Lore Book harvest stubs
+  02-rules/              # pointer notes only (no full raw copies)
+  03-directors/          # NEW Reach pointer stub; Opposition → raw
+  build/                 # generated Ghostwire-Manuscript.md
+```
+
+---
+
+## Authority stack (print)
+
+1. Locked print TOC — `docs/rulebook/TOC-PROPOSAL.md`
+2. Rules bodies — `docs/raw/` (once RAW-locked)
+3. Lore bodies — harvested manuscript stubs from master PDFs
+4. Assemble order — `docs/manuscript/MANIFEST.yml`

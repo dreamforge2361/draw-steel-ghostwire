@@ -1,0 +1,260 @@
+# Ghostwire print manuscript assemble order
+# SoR for concatenation → docs/manuscript/build/Ghostwire-Manuscript.md
+# Paths are relative to this file's directory (docs/manuscript/).
+# type: part | file
+# For rules: path points at ../raw/*.md (no copies).
+# Missing files → visible placeholder comment in build output (skip body).
+
+version: 1
+title: Ghostwire Manuscript
+locked_toc: docs/rulebook/TOC-PROPOSAL.md
+generated_by: tools/assemble-manuscript.mjs
+
+entries:
+  - type: part
+    id: front
+    title: Front
+
+  - type: file
+    id: title-page
+    title: Title Page
+    path: 00-front/title-page.md
+    kind: front
+
+  - type: part
+    id: lore
+    title: Lore Harvest (stubs)
+
+  - type: file
+    id: L1
+    title: Setting Primer
+    path: 01-lore/L1-setting-primer.md
+    kind: lore
+
+  - type: file
+    id: L2
+    title: Peoples & World
+    path: 01-lore/L2-peoples-and-world.md
+    kind: lore
+
+  - type: file
+    id: L3
+    title: Ossian Reach — Street Color
+    path: 01-lore/L3-ossian-reach-color.md
+    kind: lore
+
+  - type: part
+    id: I
+    title: Part I — Core Rules
+
+  - type: file
+    id: ch0
+    title: Front Matter, License, Glossary
+    path: ../raw/00-front-matter.md
+    kind: raw
+    print_ch: 0
+
+  - type: file
+    id: ch1
+    title: How to Play
+    path: ../raw/01-how-to-play.md
+    kind: raw
+    print_ch: 1
+
+  - type: file
+    id: ch2
+    title: Heroes & Characteristics
+    path: ../raw/02-heroes-characteristics.md
+    kind: raw
+    print_ch: 2
+
+  - type: file
+    id: ch3
+    title: Tests & Power Rolls
+    path: ../raw/03-tests-power-rolls.md
+    kind: raw
+    print_ch: 3
+
+  - type: file
+    id: ch4
+    title: Combat
+    path: ../raw/04-combat.md
+    kind: raw
+    print_ch: 4
+
+  - type: file
+    id: ch5
+    title: Advancement & Echelons
+    path: ../raw/24-advancement.md
+    kind: raw
+    print_ch: 5
+
+  - type: part
+    id: II
+    title: Part II — Peoples & Making a Hero
+
+  - type: file
+    id: ch6
+    title: Ancestries (The Peoples)
+    path: ../raw/05-ancestries.md
+    kind: raw
+    print_ch: 6
+
+  - type: file
+    id: ch7
+    title: Backgrounds & Professions
+    path: ../raw/06-backgrounds-professions.md
+    kind: raw
+    print_ch: 7
+
+  - type: file
+    id: ch8
+    title: Languages
+    path: ../raw/07-languages.md
+    kind: raw
+    print_ch: 8
+
+  - type: file
+    id: ch9
+    title: Kits, Gear & Wealth (¥)
+    path: ../raw/08-kits-gear-wealth.md
+    kind: raw
+    print_ch: 9
+
+  - type: file
+    id: ch10
+    title: Lifestyle & Downtime
+    path: 02-rules/10-lifestyle-downtime.STUB.md
+    kind: new
+    print_ch: 10
+
+  - type: file
+    id: ch11
+    title: Chrome & Body Integrity
+    path: ../raw/09-chrome-body-integrity.md
+    kind: raw
+    print_ch: 11
+
+  - type: file
+    id: ch12
+    title: Mods
+    path: ../raw/10-mods.md
+    kind: raw
+    print_ch: 12
+
+  - type: file
+    id: ch13
+    title: Perks
+    path: ../raw/11-perks.md
+    kind: raw
+    print_ch: 13
+
+  - type: part
+    id: III
+    title: Part III — Classes
+
+  - type: file
+    id: ch14
+    title: Operator
+    path: ../raw/12-operator.md
+    kind: raw
+    print_ch: 14
+
+  - type: file
+    id: ch15
+    title: Scout
+    path: ../raw/13-scout.md
+    kind: raw
+    print_ch: 15
+
+  - type: file
+    id: ch16
+    title: Commander
+    path: ../raw/14-commander.md
+    kind: raw
+    print_ch: 16
+
+  - type: file
+    id: ch17
+    title: Medic
+    path: ../raw/15-medic.md
+    kind: raw
+    print_ch: 17
+
+  - type: file
+    id: ch18
+    title: Wrench
+    path: ../raw/16-wrench.md
+    kind: raw
+    print_ch: 18
+
+  - type: file
+    id: ch19
+    title: Elementalist
+    path: ../raw/17-elementalist.md
+    kind: raw
+    print_ch: 19
+
+  - type: file
+    id: ch20
+    title: Street Priest
+    path: ../raw/18-street-priest.md
+    kind: raw
+    print_ch: 20
+
+  - type: file
+    id: ch21
+    title: Hacker
+    path: ../raw/19-hacker.md
+    kind: raw
+    print_ch: 21
+
+  - type: file
+    id: ch22
+    title: Technomancer
+    path: ../raw/20-technomancer.md
+    kind: raw
+    print_ch: 22
+
+  - type: part
+    id: IV
+    title: Part IV — Systems
+
+  - type: file
+    id: ch23
+    title: The Wire
+    path: ../raw/21-the-wire.md
+    kind: raw
+    print_ch: 23
+
+  - type: file
+    id: ch24
+    title: The Veil
+    path: ../raw/22-the-veil.md
+    kind: raw
+    print_ch: 24
+
+  - type: file
+    id: ch25
+    title: Machines (Drones & Vehicles)
+    path: ../raw/23-machines.md
+    kind: raw
+    print_ch: 25
+
+  - type: part
+    id: V
+    title: Part V — Directors
+
+  - type: file
+    id: ch26
+    title: Opposition
+    path: ../raw/25-opposition.md
+    kind: raw
+    print_ch: 26
+
+  - type: file
+    id: ch27
+    title: Running Ossian Reach (pointer)
+    path: 03-directors/27-running-ossian-reach.STUB.md
+    kind: new
+    print_ch: 27
