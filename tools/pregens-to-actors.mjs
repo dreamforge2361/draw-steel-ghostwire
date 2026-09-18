@@ -6,10 +6,18 @@
 // Foundry's advancement dialog), and concrete gear / chrome / languages come from
 // docs/masters/pregens/loadouts.json (see LOADOUTS.md for why each pick).
 //
+// B59: advancement recursion and roster ability seeds are level-gated (see tools/lib/pregen-level-gate.mjs).
+// Smoke: node tools/pregen-level-gate-smoke.mjs
+//
 // Run:  node tools/pregens-to-actors.mjs   then   node tools/build-packs.mjs   (Foundry closed)
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
+import {
+  advancementMeetsLevel,
+  abilityAllowedAtLevel,
+  buildGrantLevelByDsid,
+} from "./lib/pregen-level-gate.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const OUT = "src/packs/pregens";
@@ -60,7 +68,7 @@ const ROSTER = [
     skills: ["stealth", "perception", "survival", "acrobatics"],
     beastArt: "wren-sable-corvin-beast.webp",
     bio: "A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it.",
-    abilities: ["quarry", "steady-the-scope", "careful-observation"],
+    abilities: ["quarry", "steady-the-scope"], // careful-observation is L3 (B59 level-gate)
   },
   {
     key: "Sabbat", slug: "sabbat-vane", name: "Sabbat Vane", handle: "the Dead Frequency",
@@ -88,7 +96,8 @@ const ROSTER = [
     kit: "tech/nyx-switchblade", background: "sprawl-district", profession: "deck-jockey",
     skills: ["hacking", "electronics", "matrixTheory", "securitySystems"],
     bio: "An Aberrant-strain Mutant deckhead who turns a site's own defences against the people who paid for them. The taint that marks him is also how he reads a system.",
-    abilities: ["deep-scan", "dual-boot", "backdoor-override"], extras: ["src/packs/matrix/decks/street-deck.json"],
+    abilities: ["deep-scan"], // dual-boot L6 / backdoor-override L8 gated out at L1 (B59)
+    extras: ["src/packs/matrix/decks/street-deck.json"],
   },
 ];
 
@@ -117,25 +126,34 @@ function findInClass(cls, dsid) {
   return null;
 }
 
-const atLevel1 = adv => adv.requirements?.level == null || adv.requirements.level === 1;
 const idFromUuid = uuid => uuid?.split(".").pop();
 
+/** dsid → minimum advancement level that grants it (class/subclass/etc. pools). */
+const GRANT_LEVEL_BY_DSID = buildGrantLevelByDsid(INDEX, idFromUuid);
+
+/** Default fill level; class item `system.level` overrides when present on the seed. */
+const DEFAULT_TARGET_LEVEL = 1;
+
 /**
- * Walk the Level 1 advancements of every item the hero holds and collect what they grant:
+ * Walk advancements of every item the hero holds (≤ targetLevel) and collect what they grant:
  * items (recursively), skills and languages. Choices (`chooseN`) are taken in pool order and
  * every one is reported so LOADOUTS.md can record it.
+ *
+ * B59: every grant path is gated by {@link advancementMeetsLevel} so L1 fills never embed
+ * Dual Boot (L6), Backdoor Override (L8), Careful Observation (L3), etc.
  */
-function resolveGrants(seed, hero, log) {
+function resolveGrants(seed, hero, log, targetLevel = DEFAULT_TARGET_LEVEL) {
   const items = new Map(seed.map(i => [i._id, i]));
   const skills = new Set(hero.skills);
   const languages = new Set();
   const queue = [...seed];
+  log.levelWarnings ??= [];
 
   while (queue.length) {
     const item = queue.shift();
     for (const adv of Object.values(item.system?.advancements ?? {})) {
-      if (!atLevel1(adv)) continue;
       const label = `${String(item.name).split(".").pop()}/${adv.name || adv.type}`;
+      if (!advancementMeetsLevel(adv, targetLevel, { warnings: log.levelWarnings, label })) continue;
 
       if (adv.type === "itemGrant") {
         const pool = (adv.pool ?? []).map(p => idFromUuid(p.uuid));
@@ -200,6 +218,10 @@ for (const [i, hero] of ROSTER.entries()) {
   const actorId = stableId(hero.slug);
   const kit = read(`src/packs/kits/${hero.kit}.json`);
   const cls = read(`src/packs/classes/${hero.cls}/${hero.cls}.json`);
+  // Level source of truth: class item system.level, else generator config / default 1.
+  const targetLevel = Number(cls.system?.level) > 0
+    ? Number(cls.system.level)
+    : Number(hero.level) > 0 ? Number(hero.level) : DEFAULT_TARGET_LEVEL;
 
   const seed = [
     read(`src/packs/origins/${hero.ancestry}/${hero.ancestry}.json`),
@@ -215,16 +237,22 @@ for (const [i, hero] of ROSTER.entries()) {
     read(`src/packs/professions/${hero.profession}.json`),
     ...hero.abilities.map(a => {
       const found = findInClass(hero.cls, a);
-      if (!found) warn.push(`ability ${a} not found`);
+      if (!found) { warn.push(`ability ${a} not found`); return null; }
+      // B59: roster seeds must not bypass the level gate (old bug: Dual Boot / Careful Observation).
+      if (!abilityAllowedAtLevel(a, targetLevel, GRANT_LEVEL_BY_DSID)) {
+        const need = GRANT_LEVEL_BY_DSID.get(a);
+        warn.push(`skipped ability ${a}: granted at L${need} > target L${targetLevel}`);
+        return null;
+      }
       return found;
     }),
     ...(hero.extras ?? []).map(p => (existsSync(p) ? read(p) : (warn.push(`extra ${p} missing`), null))),
   ].filter(Boolean);
 
-  // B44b: pull in everything Level 1 actually grants, steering every choice pool toward the
+  // B44b: pull in everything the target level actually grants, steering every choice pool toward the
   // roster's own picks (this hero's kit, subclass, lineage, traits and signature abilities).
   hero.prefer = new Set([...seed.map(s => s.system?._dsid), ...(hero.prefers ?? [])].filter(Boolean));
-  const granted = resolveGrants(seed, hero, log);
+  const granted = resolveGrants(seed, hero, log, targetLevel);
 
   // B44b: concrete gear and chrome from the committed loadout file.
   const loadout = loadouts[hero.slug] ?? {};
@@ -317,6 +345,13 @@ for (const r of report) {
   for (const c of r.log.choices) console.log(`    choice: ${c}`);
   for (const o of r.log.open) console.log(`    open:   ${o}`);
   if (r.warn.length) console.log(`    ! ${r.warn.join("; ")}`);
+}
+const levelWarns = report.flatMap(r => r.log.levelWarnings ?? []);
+if (levelWarns.length) {
+  const uniq = [...new Set(levelWarns)];
+  console.log(`\nB59 level-metadata notes (${uniq.length} unique, ${levelWarns.length} hits):`);
+  for (const w of uniq.slice(0, 20)) console.log(`    ~ ${w}`);
+  if (uniq.length > 20) console.log(`    … ${uniq.length - 20} more`);
 }
 const skipped = new Set(report.flatMap(r => r.log.skipped));
 if (skipped.size) console.log(`\nleft to Foundry at runtime:\n  ` + [...skipped].join("\n  "));
