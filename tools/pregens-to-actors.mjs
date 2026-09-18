@@ -300,6 +300,11 @@ for (const [i, hero] of ROSTER.entries()) {
     },
   };
   writeFileSync(join(OUT, `${hero.slug}.json`), JSON.stringify(actor, null, 2) + "\n");
+  // Ensure Draw Steel class level is 1 (DS stores level on the class item, not the actor).
+  for (const it of items) {
+    if (it.type === "class") it.system = { ...(it.system ?? {}), level: 1 };
+  }
+
   report.push({ hero: hero.name, stamina, items: items.length, skills: granted.skills.length, languages: languages.length, biSpent, warn, log });
 }
 

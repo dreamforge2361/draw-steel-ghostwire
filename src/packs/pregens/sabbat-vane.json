@@ -1138,7 +1138,7 @@
             "sort": 27000
           }
         },
-        "level": 0,
+        "level": 1,
         "primary": "Resonance",
         "epic": "Master of the Current",
         "turnGain": "1",
@@ -2678,8 +2678,7 @@
         "category": "",
         "echelon": 1,
         "keywords": [
-          "light",
-          "bow"
+          "light"
         ],
         "quantity": 1,
         "project": {

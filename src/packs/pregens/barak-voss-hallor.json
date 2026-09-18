@@ -1065,7 +1065,7 @@
             }
           }
         },
-        "level": 0,
+        "level": 1,
         "primary": "Influence",
         "epic": "Command",
         "turnGain": "2",
@@ -3095,8 +3095,7 @@
         "category": "",
         "echelon": 2,
         "keywords": [
-          "heavy",
-          "bow"
+          "heavy"
         ],
         "quantity": 1,
         "project": {

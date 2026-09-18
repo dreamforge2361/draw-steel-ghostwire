@@ -1362,7 +1362,7 @@
             }
           }
         },
-        "level": 0,
+        "level": 1,
         "primary": "Advantage",
         "epic": "Subterfuge",
         "turnGain": "1d3",
@@ -3370,8 +3370,7 @@
         "category": "",
         "echelon": 2,
         "keywords": [
-          "medium",
-          "bow"
+          "medium"
         ],
         "quantity": 1,
         "project": {
@@ -3433,8 +3432,7 @@
         "category": "",
         "echelon": 1,
         "keywords": [
-          "light",
-          "bow"
+          "light"
         ],
         "quantity": 1,
         "project": {
