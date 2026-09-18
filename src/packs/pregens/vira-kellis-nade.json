@@ -371,6 +371,52 @@
           "_key": "!actors.items.effects!8jyyJ1eq3XQnJ95X.qhrDc59fcOPiaNMh.yNysARX9fk1SQeW0"
         },
         {
+          "_id": "XplTOEdk4jwjqAOU",
+          "name": "GHOSTWIRE.Peoples.Changer.Forms.Hybrid.DamageBonus.Name",
+          "origin": "Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh",
+          "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+          "type": "abilityModifier",
+          "description": "GHOSTWIRE.Peoples.Changer.Forms.Hybrid.DamageBonus.Description",
+          "system": {
+            "end": {
+              "roll": "1d10 + @combat.save.bonus"
+            },
+            "filters": {
+              "keywords": [
+                "melee",
+                "weapon"
+              ]
+            },
+            "changes": [
+              {
+                "key": "damage.bonuses.value",
+                "type": "add",
+                "value": 1,
+                "phase": "initial",
+                "priority": null
+              }
+            ]
+          },
+          "disabled": true,
+          "duration": {
+            "value": null,
+            "units": "seconds",
+            "expiry": null,
+            "expired": false
+          },
+          "tint": "#ffffff",
+          "transfer": true,
+          "statuses": [],
+          "flags": {
+            "draw-steel-ghostwire": {
+              "changerForm": "hybrid"
+            }
+          },
+          "start": null,
+          "showIcon": 1,
+          "_key": "!actors.items.effects!8jyyJ1eq3XQnJ95X.qhrDc59fcOPiaNMh.XplTOEdk4jwjqAOU"
+        },
+        {
           "_id": "a28N1ISd6VpRwyMk",
           "name": "GHOSTWIRE.Peoples.Changer.Forms.Beast.Name",
           "origin": "Compendium.draw-steel-ghostwire.origins.Item.qhrDc59fcOPiaNMh",

@@ -5719,7 +5719,11 @@
           "Hybrid": {
             "Name": "Form: Hybrid",
             "Label": "Hybrid",
-            "Description": "<p>You gain an edge on Intimidation tests (automated). Your melee free strikes deal +1 damage (not automated — add it to the roll). You are visibly a war-beast and can’t pass as human.</p>"
+            "Description": "<p>You gain an edge on Intimidation tests (automated). Your melee free strikes deal +1 damage (automated on melee weapon abilities). You are visibly a war-beast and can’t pass as human.</p>",
+            "DamageBonus": {
+              "Name": "Form: Hybrid (melee damage)",
+              "Description": "<p>Hybrid (War) Form: your melee free strikes deal +1 damage. Applies to every ability with both the Melee and Weapon keywords (weapon attacks and melee weapon Strikes); Draw Steel can't narrow a modifier to free strikes only. Turns on and off with Hybrid Form.</p>"
+            }
           },
           "Beast": {
             "Name": "Form: Beast",

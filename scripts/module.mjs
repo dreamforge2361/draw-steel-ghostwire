@@ -407,15 +407,31 @@ function findFormerLife(chain) {
   return chain.actor.items.find(i => i.getFlag(MODULE_ID, "formerLife"))?.getFlag(MODULE_ID, "formerLife") ?? null;
 }
 
-// Changer forms: enabling one form effect disables the others, so exactly one form is active.
+// Changer forms: enabling one form effect switches the whole form, so exactly one form is active. A form can have
+// several effects (Hybrid: Intimidation edge + melee damage modifier): every effect of that form turns on and every
+// other form's effect turns off.
 Hooks.on("updateActiveEffect", (effect, changes, options, userId) => {
-  if ((userId !== game.user.id) || (changes.disabled !== false)) return;
-  if (!effect.getFlag(MODULE_ID, "changerForm")) return;
-  const others = effect.parent.effects.filter(e => (e !== effect) && !e.disabled && e.getFlag(MODULE_ID, "changerForm"));
-  if (others.length) effect.parent.updateEmbeddedDocuments("ActiveEffect", others.map(e => ({ _id: e.id, disabled: true })));
+  if ((userId !== game.user.id) || (changes.disabled !== false) || options.ghostwireChangerForm) return;
+  const form = effect.getFlag(MODULE_ID, "changerForm");
+  if (!form) return;
   const actor = (effect.parent instanceof Actor) ? effect.parent : effect.parent?.actor;
-  if (actor) syncChangerFormArt(actor, effect.getFlag(MODULE_ID, "changerForm"));
+  setChangerForm(actor ? [...actor.allApplicableEffects()] : [...effect.parent.effects], form, actor);
 });
+
+// Enable every changerForm effect of `form` and disable the rest, one update per parent document, then swap the art.
+async function setChangerForm(effects, form, actor) {
+  const updates = new Map();
+  for (const e of effects) {
+    const f = e.getFlag(MODULE_ID, "changerForm");
+    if (!f || (e.disabled === (f !== form))) continue;
+    if (!updates.has(e.parent)) updates.set(e.parent, []);
+    updates.get(e.parent).push({ _id: e.id, disabled: f !== form });
+  }
+  for (const [parent, changes] of updates) {
+    await parent.updateEmbeddedDocuments("ActiveEffect", changes, { ghostwireChangerForm: true });
+  }
+  if (actor) await syncChangerFormArt(actor, form);
+}
 
 // Changer form art: swap the portrait and token art to the form's image from flags.changer (beastArt / humanArt /
 // hybridArt). Changers without beastArt or humanArt keep their art; the forms still work mechanically.
@@ -717,21 +733,19 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   else stats.prepend(fieldset);
 });
 
-// Hero sheet: Changer form control (B50b) under the Wired fieldset. Clicking a form enables its Forms-trait effect;
-// the updateActiveEffect hook above turns the other forms off and swaps the art.
+// Hero sheet: Changer form control (B50b) under the Wired fieldset. Clicking a form runs setChangerForm: all of that
+// form's Forms-trait effects on, the other forms' off, then the art swap.
 const CHANGER_FORMS = ["human", "hybrid", "beast"];
 
 Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   const stats = element.querySelector("section.tab[data-tab='stats']");
   if (!stats || stats.querySelector(".ghostwire-changer-forms")) return;
   const actor = app.document;
-  const effects = {};
-  for (const effect of actor.allApplicableEffects()) {
-    const form = effect.getFlag(MODULE_ID, "changerForm");
-    if (CHANGER_FORMS.includes(form) && !(form in effects)) effects[form] = effect;
-  }
+  const formEffects = [...actor.allApplicableEffects()].filter(e => CHANGER_FORMS.includes(e.getFlag(MODULE_ID, "changerForm")));
+  const effects = Object.groupBy(formEffects, e => e.getFlag(MODULE_ID, "changerForm"));
   if (foundry.utils.isEmpty(effects)) return;
-  const active = CHANGER_FORMS.find(form => effects[form] && !effects[form].disabled);
+  const isActive = form => effects[form]?.some(e => !e.disabled);
+  const active = CHANGER_FORMS.find(isActive);
   const art = actor.getFlag(MODULE_ID, "changer") ?? {};
 
   const fieldset = document.createElement("fieldset");
@@ -744,8 +758,7 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   const buttons = document.createElement("div");
   buttons.className = "ghostwire-changer-form-buttons";
   for (const form of CHANGER_FORMS) {
-    const effect = effects[form];
-    if (!effect) continue;
+    if (!effects[form]) continue;
     const key = `GHOSTWIRE.Peoples.Changer.Forms.${form.capitalize()}`;
     const button = document.createElement("button");
     Object.assign(button, { type: "button", textContent: game.i18n.localize(`${key}.Label`), disabled: !actor.isOwner });
@@ -755,7 +768,7 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
     button.addEventListener("click", event => {
       event.preventDefault();
       event.stopPropagation();
-      if (effect.disabled) effect.update({ disabled: false });
+      setChangerForm(formEffects, form, actor);
     });
     buttons.append(button);
   }
@@ -790,7 +803,7 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
         current: path || actor.img,
         callback: async src => {
           await actor.setFlag(MODULE_ID, `changer.${flagKey}`, src);
-          const activeNow = CHANGER_FORMS.find(f => effects[f] && !effects[f].disabled);
+          const activeNow = CHANGER_FORMS.find(isActive);
           if (activeNow === form) await syncChangerFormArt(actor, form);
           else if (app.rendered) app.render();
         },
