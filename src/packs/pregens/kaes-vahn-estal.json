@@ -3,7 +3,7 @@
   "_key": "!actors!QCFUb5jVFgHVJx6R",
   "name": "GHOSTWIRE.Pregens.Actors.Kaes.Name",
   "type": "hero",
-  "img": "modules/draw-steel-ghostwire/assets/pregens/kaes-vahn-estal.png",
+  "img": "modules/draw-steel-ghostwire/assets/pregens/kaes-vahn-estal.webp",
   "folder": null,
   "sort": 200000,
   "system": {
@@ -121,7 +121,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/kaes-vahn-estal.png",
+      "src": "modules/draw-steel-ghostwire/assets/pregens/kaes-vahn-estal.webp",
       "scaleX": 1,
       "scaleY": 1
     },

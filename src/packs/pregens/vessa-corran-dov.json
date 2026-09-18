@@ -3,7 +3,7 @@
   "_key": "!actors!vC7J1m09xg3kbWkP",
   "name": "GHOSTWIRE.Pregens.Actors.Vessa.Name",
   "type": "hero",
-  "img": "modules/draw-steel-ghostwire/assets/pregens/vessa-corran-dov.png",
+  "img": "modules/draw-steel-ghostwire/assets/pregens/vessa-corran-dov.webp",
   "folder": null,
   "sort": 100000,
   "system": {
@@ -119,7 +119,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/vessa-corran-dov.png",
+      "src": "modules/draw-steel-ghostwire/assets/pregens/vessa-corran-dov.webp",
       "scaleX": 1,
       "scaleY": 1
     },

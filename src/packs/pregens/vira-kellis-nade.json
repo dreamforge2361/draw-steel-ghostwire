@@ -3,7 +3,7 @@
   "_key": "!actors!8jyyJ1eq3XQnJ95X",
   "name": "GHOSTWIRE.Pregens.Actors.Vira.Name",
   "type": "hero",
-  "img": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.png",
+  "img": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.webp",
   "folder": null,
   "sort": 600000,
   "system": {
@@ -120,7 +120,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.png",
+      "src": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.webp",
       "scaleX": 1,
       "scaleY": 1
     },
@@ -3757,9 +3757,9 @@
       "biSpent": 1,
       "biRemaining": 19,
       "changer": {
-        "humanArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.png",
-        "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-hybrid.png",
-        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-beast.png"
+        "humanArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.webp",
+        "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-hybrid.webp",
+        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-beast.webp"
       }
     }
   }

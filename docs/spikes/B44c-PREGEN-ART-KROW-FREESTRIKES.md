@@ -13,19 +13,19 @@ Incoming art (already on disk — copy over assets; do not re-download):
 
 | File | Destination |
 |---|---|
-| vessa-corran-dov.png | assets/pregens/vessa-corran-dov.png |
-| vira-kellis-nade.png | assets/pregens/vira-kellis-nade.png |
-| barak-voss-hallor.png | assets/pregens/barak-voss-hallor.png (**cyborg plate — Barak**, Michael swap; NOT Krow) |
-| kaes-vahn-estal.png | assets/pregens/kaes-vahn-estal.png (Kaïs; filename stays kaes-*) |
-| kessic-draye.png | assets/pregens/kessic-draye.png |
-| sabbat-vane.png | assets/pregens/sabbat-vane.png |
-| wren-sable-corvin.png | assets/pregens/wren-sable-corvin.png (**human / Hybrid sheet art**) |
-| wren-sable-corvin-beast.png | assets/pregens/wren-sable-corvin-beast.png (**Beast form**; NEW file) |
+| vessa-corran-dov.webp | assets/pregens/vessa-corran-dov.webp |
+| vira-kellis-nade.webp | assets/pregens/vira-kellis-nade.webp |
+| barak-voss-hallor.webp | assets/pregens/barak-voss-hallor.webp (**cyborg plate — Barak**, Michael swap; NOT Krow) |
+| kaes-vahn-estal.webp | assets/pregens/kaes-vahn-estal.webp (Kaïs; filename stays kaes-*) |
+| kessic-draye.webp | assets/pregens/kessic-draye.webp |
+| sabbat-vane.webp | assets/pregens/sabbat-vane.webp |
+| wren-sable-corvin.webp | assets/pregens/wren-sable-corvin.webp (**human / Hybrid sheet art**) |
+| wren-sable-corvin-beast.webp | assets/pregens/wren-sable-corvin-beast.webp (**Beast form**; NEW file) |
 
 ## A — Art
 
 1. Overwrite the seven existing PNGs from `_incoming-art/` (byte replace).  
-2. Add `wren-sable-corvin-beast.png`.  
+2. Add `wren-sable-corvin-beast.webp`.  
 3. Wren Actor: `img` + default `prototypeToken.texture.src` = **human** portrait. Store beast path in a durable place:
    - Prefer `flags.draw-steel-ghostwire.changer.beastArt` (and optionally `humanArt`) on the Wren Actor JSON in `src/packs/pregens/wren-sable-corvin.json`.
    - If Changer form-change code already swaps token art, wire beast form to that path; otherwise set the flags + note in BUILD-NOTES that token swap on Beast form is a follow-on (art files must still land).

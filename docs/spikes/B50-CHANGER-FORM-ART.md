@@ -11,8 +11,8 @@ Foundry may be open for Michael's playtest — **do not rebuild packs / touch Le
 - Forms trait: `src/packs/origins/changer/changer-forms-trait.json` — three transfer ActiveEffects with those flags.
 - Wren pregen flags:
   ```
-  flags.draw-steel-ghostwire.changer.humanArt = modules/.../wren-sable-corvin.png
-  flags.draw-steel-ghostwire.changer.beastArt = modules/.../wren-sable-corvin-beast.png
+  flags.draw-steel-ghostwire.changer.humanArt = modules/.../wren-sable-corvin.webp
+  flags.draw-steel-ghostwire.changer.beastArt = modules/.../wren-sable-corvin-beast.webp
   ```
   Sheet + default token currently use human art.
 

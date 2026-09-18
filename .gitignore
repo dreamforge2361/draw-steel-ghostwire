@@ -29,3 +29,7 @@ _ability-*
 _extract-*
 _write-*
 assets/sfx/_manifest.json
+
+# Local pregen compress backups (do not ship)
+assets/pregens/_pre-compress-backup/
+

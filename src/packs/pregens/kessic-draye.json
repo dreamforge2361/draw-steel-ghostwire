@@ -3,7 +3,7 @@
   "_key": "!actors!EpoiL9RG5vvty6mT",
   "name": "GHOSTWIRE.Pregens.Actors.Kessic.Name",
   "type": "hero",
-  "img": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.png",
+  "img": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.webp",
   "folder": null,
   "sort": 700000,
   "system": {
@@ -120,7 +120,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.png",
+      "src": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.webp",
       "scaleX": 1,
       "scaleY": 1
     },

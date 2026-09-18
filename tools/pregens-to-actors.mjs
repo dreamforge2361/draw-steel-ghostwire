@@ -58,7 +58,7 @@ const ROSTER = [
     traits: ["changer-forms-trait", "raven-lineage-trait", "beast-movement-trait"],
     kit: "ranged/longshot", background: "transit-hub", profession: "courier",
     skills: ["stealth", "perception", "survival", "acrobatics"],
-    beastArt: "wren-sable-corvin-beast.png",
+    beastArt: "wren-sable-corvin-beast.webp",
     bio: "A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it.",
     abilities: ["quarry", "steady-the-scope", "careful-observation"],
   },

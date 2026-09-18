@@ -78,7 +78,7 @@ used as both actor `img` and `prototypeToken.texture.src`. No placeholder was ne
   `_incoming-art/` (that staging folder is gitignored and was deleted after the copy). Barak's plate is the
   cyborg-looking art — it is **Barak**, not Krow.
 - **Wren has two forms.** The sheet and default token use the human portrait; the Beast-form art ships as
-  `assets/pregens/wren-sable-corvin-beast.png` and its path is stored on the Actor at
+  `assets/pregens/wren-sable-corvin-beast.webp` and its path is stored on the Actor at
   `flags.draw-steel-ghostwire.changer.beastArt` (with `humanArt` beside it). **B50 (0.1.73):** enabling a
   Changer form effect swaps the sheet portrait, prototype token and every active token to that form's art
   (`beastArt` / `humanArt` / `hybridArt`, Hybrid falls back to `humanArt`) — `syncChangerFormArt` in
