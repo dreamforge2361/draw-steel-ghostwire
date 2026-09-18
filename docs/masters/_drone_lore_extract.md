@@ -18,7 +18,7 @@
 ## Paraphrased canon (Reach / Wired / Machines)
 
 ### The Reach as drone ecology
-- Ossian Reach is the default vertical hive: Halo → Spires → Grid → Flats → Warrens → Sinks. Locals just say “the Reach.”
+- Ossian Reach is the default vertical hive: Halo → Spires → Grid → Flats → Warrens → Sinks. Locals just say “the Reach.”\n- **Ashenreach** is the inland sister-hive (~300 mi NW). See docs/setting/ashenreach.md.
 - Traffic is “second weather” in three stacked layers: choked ground, stacked air lanes, and a **constant drone swarm** filling every gap (delivery quads, surveillance eyes, ad-drones, repair-skitters, dark couriers).
 - Street-level air is never empty and never quiet — drones are ambient texture, not exotic gear.
 
@@ -79,5 +79,8 @@ Ghostwire maps those ideas onto locked **Personal / Light / Vehicle (drone)** Sc
 | Kestrel drone logistics | Lore Source Conglomerates — Kestrel Dynamics |
 | Uptime / Jump-In / fleet / Machines | `05-wrench.md` — Heroic Resource + THE MACHINES |
 | Cat 5E / 5F / RCC | `GHOSTWIRE_GEAR_MASTER.md` Categories 4D, 5E, 5F |
-| Core Sourcebook PDF | **Pending remount** — ART-STYLE already harvested art from it (2026-09-16) |
+| Core Sourcebook PDF | **Pending remount** — ART-STYLE already harvested art from it (2026-09-16) |\n
+## Twin Hives (geography lock — 2026-09-17)
 
+- **Ossian Reach** — default home hive (coastal SE on the regional map). Locals just say "the Reach."
+- **Ashenreach** — inland NW sister-hive, ~300 miles center-to-center. Overview, rivalry, and hooks: docs/setting/ashenreach.md.
