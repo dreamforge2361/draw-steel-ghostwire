@@ -1,163 +1,220 @@
 {
-  "_comment": "B40/B54 SFX map. Custom module OGG under assets/sfx (mono vorbis q2). Rules tried in order; first match wins. wired-scan before wired so Scan is not stolen by the wired keyword.",
-  "default": "modules/draw-steel-ghostwire/assets/sfx/punch.ogg",
+  "_comment": "B40/B54/B58 SFX map (2026-09-18 rematch). Rules in order; first match wins. If a rule has match, NAME must match; keywords only filter. Keyword-only rules (no match) fire on keyword alone. Optional srcs[] rotates by name hash. New P1/P2 ElevenLabs packs wired.",
+  "default": "modules/draw-steel-ghostwire/assets/sfx/scan-electronic.ogg",
   "rules": [
     {
+      "id": "scout-mark",
+      "label": "Scout mark / quarry / observation",
+      "match": "quarry|careful.?observ|hesitation|steady the scope|scout.?mark|\\\\bmark\\\\b",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/scout-mark.ogg"
+    },
+    {
+      "id": "taser-arc",
+      "label": "Taser / arc",
+      "match": "taser",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/taser-arc.ogg"
+    },
+    {
+      "id": "elemental-shaping",
+      "label": "Elemental shaping",
+      "match": "elemental.?shap|\\\\bshaping\\\\b",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/elemental-shaping.ogg"
+    },
+    {
+      "id": "thunder-crash",
+      "label": "Thunder",
+      "match": "thunder",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/thunder-crash.ogg"
+    },
+    {
+      "id": "medical-diagnose",
+      "label": "Diagnose / triage / doctor",
+      "match": "diagnos|triage|doctor is",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/medical-diagnose.ogg"
+    },
+    {
+      "id": "feral-roar",
+      "label": "Feral / savage",
+      "match": "feral.?cry|savage.?burst",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/feral-roar.ogg"
+    },
+    {
+      "id": "resonance-heal",
+      "label": "Resonance mending",
+      "match": "resonance.?mend",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/resonance-heal.ogg"
+    },
+    {
+      "id": "hex-round",
+      "label": "Hex round / hexshot",
+      "match": "hex.?round|hexshot",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/hex-round.ogg"
+    },
+    {
+      "id": "veil-brand",
+      "label": "Smite / rebuke / brand",
+      "match": "smite|rebuke|veil.?brand|\\\\bbrand\\\\b",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/veil-brand.ogg"
+    },
+    {
+      "id": "salvage-clank",
+      "label": "Salvage / scrap repair",
+      "match": "salvage|scrap",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/salvage-clank.ogg"
+    },
+    {
       "id": "wired-scan",
-      "label": "Scan / ping",
-      "match": "scan|ping|probe|trace",
+      "label": "Scan / probe / trace",
+      "match": "\\\\b(scan|probe|trace)\\\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-scan.ogg"
     },
     {
+      "id": "wired-compile",
+      "label": "Compile / sprite summon",
+      "match": "compile|sprite|recompile|zephyr|summon elemental|summon spirit|invoke the pact",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-summon.ogg"
+    },
+    {
       "id": "wired",
-      "label": "Wired / matrix / ICE / sprites",
+      "label": "Wired / matrix / ICE",
       "keywords": [
         "wired"
       ],
-      "match": "hack|intrusion|matrix|sprite|resonance|deck|program|ice|breach|node|signal|jack|compile|weav",
+      "match": "hack|intrusion|matrix|resonance|deck|program|\\\\bice\\\\b|breach|node|signal|jack|weav|seize|ghost.?signal|cascade|backdoor|dual.?boot|deep.?scan|override.?ping|\\\\bzap\\\\b|crash|ghostload|static|blackout|wraith",
       "src": "modules/draw-steel-ghostwire/assets/sfx/matrix-connect.ogg"
     },
     {
       "id": "creature-cockatrice",
-      "label": "Cockatrice",
       "match": "cockatrice",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-cockatrice-roar.ogg"
     },
     {
       "id": "creature-griffon",
-      "label": "Griffon",
       "match": "griffon|griffin",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-griffon-call.ogg"
     },
     {
       "id": "creature-werewolf",
-      "label": "Werewolf",
       "match": "werewolf|lycan",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-werewolf-growl.ogg"
     },
     {
       "id": "command-battlecry",
-      "label": "Battle cry / war cry",
       "match": "battle.?cry|war.?cry|battlecry",
       "src": "modules/draw-steel-ghostwire/assets/sfx/command-battlecry.ogg"
     },
     {
       "id": "creature-ork",
-      "label": "Ork",
       "match": "\\\\bork\\\\b|\\\\borc\\\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-ork-battlecry.ogg"
     },
     {
       "id": "creature-demon",
-      "label": "Demon growl",
       "match": "demon|devil|infernal",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-demon-growl.ogg"
     },
     {
       "id": "creature-scream",
-      "label": "Harsh scream",
-      "match": "scream|shriek|howl",
+      "match": "scream|shriek|howl|gasping",
       "src": "modules/draw-steel-ghostwire/assets/sfx/creature-harsh-scream.ogg"
     },
     {
       "id": "medic",
       "label": "Stim / inject / medical",
-      "match": "stim|inject|patch|transfusion|stabiliz|anesthet|field adrenal|nano-adrenal|reagent",
+      "match": "stim|inject|patch|transfusion|stabiliz|anesthet|field adrenal|nano-adrenal|reagent|\\\\bmedic\\\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/medic-inject.ogg"
     },
     {
       "id": "toxin",
-      "label": "Toxin / chemical",
       "match": "toxin|chemical|nerve agent|toxic|poison|hiss",
       "src": "modules/draw-steel-ghostwire/assets/sfx/toxin-hiss.ogg"
     },
     {
       "id": "veil-reveal",
-      "label": "Reveal / detect / true sight",
-      "match": "reveal|detect|true.?sight|unveil|clarit",
+      "match": "reveal|detect|true.?sight|unveil|clarit|sense the veil|read the weave|discern",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-revealing.ogg"
     },
     {
+      "id": "veil-heal-strong",
+      "match": "lay on hands|holy.?heal.?strong|greater heal|full heal",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-holy-heal-strong.ogg"
+    },
+    {
       "id": "veil-heal",
-      "label": "Holy / bless / heal",
-      "keywords": [
-        "magic",
-        "psionic"
-      ],
-      "match": "heal|bless|lay on|grace|ward|light|sanctif|prayer",
+      "match": "\\\\bheal\\\\b|bless|grace|\\\\bward\\\\b|sanctif|prayer|faith is|blessed light",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-holy-heal.ogg"
     },
     {
       "id": "veil-dark",
-      "label": "Dark / pact / drain / smite",
-      "match": "dark|pact|drain|rebuke|smite|penance|judg|invoke",
+      "match": "dark|pact|drain|penance|judg|curse|corruption",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-blast.ogg"
     },
     {
+      "id": "veil-fire",
+      "match": "fireball|fire.?blast|ember|pyro|flame|\\\\bburn\\\\b",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/spell-fireball.ogg"
+    },
+    {
       "id": "veil-element",
-      "label": "Elemental / lightning / storm / fire",
-      "match": "lightning|storm|hurl|element|fireball|fire blast|essence|channel",
+      "match": "lightning|storm|hurl.?element|bolt|elemental|channel|\\\\bessence\\\\b|kinetic",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-lightning.ogg"
     },
     {
       "id": "veil-summon",
-      "label": "Summon / spirit",
-      "match": "summon|spirit|conjur",
+      "match": "summon|spirit|conjur|companion",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-summon.ogg"
     },
     {
       "id": "veil",
-      "label": "General Veil fallback",
-      "keywords": [
-        "magic",
-        "psionic"
-      ],
-      "match": "spell|ritual|veil|ward|essence",
+      "match": "spell|ritual|\\\\bveil\\\\b",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-dark-light.ogg"
     },
     {
       "id": "laser",
-      "label": "Energy / laser",
       "match": "laser|zapper|beam|plasma|pulse",
       "src": "modules/draw-steel-ghostwire/assets/sfx/laser-gun-4.ogg"
     },
     {
+      "id": "firearm-double",
+      "match": "double.?tap",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-double-tap.ogg"
+    },
+    {
       "id": "firearm-heavy",
-      "label": "MG / autogun / suppression",
-      "match": "machine.?gun|autogun|suppress|chatterbox|volley|heavy",
+      "match": "machine.?gun|autogun|suppress|chatterbox|volley",
       "src": "modules/draw-steel-ghostwire/assets/sfx/gun-machinegun.ogg"
     },
     {
       "id": "firearm-smg",
-      "label": "SMG / burst",
-      "match": "smg|burst|double.?tap|submachine",
+      "match": "\\\\bsmg\\\\b|burst|submachine|streetsweeper",
       "src": "modules/draw-steel-ghostwire/assets/sfx/gun-smg.ogg"
     },
     {
       "id": "firearm-rifle",
-      "label": "Rifle / sniper / longarm",
-      "match": "rifle|sniper|longshot|carbine|one shot|called shot",
+      "match": "rifle|sniper|longshot|carbine|one shot|called shot|coup de grace|disorienting",
       "src": "modules/draw-steel-ghostwire/assets/sfx/gun-sniper.ogg"
     },
     {
       "id": "firearm",
-      "label": "General firearms / Fire weapon abilities",
-      "match": "pistol|revolver|shotgun|gun|shot|fire |hand-cannon|sleeve|popper|workhorse|burner|hexshot",
+      "match": "pistol|revolver|shotgun|\\\\bgun\\\\b|\\\\bshot\\\\b|fire |hand-cannon|sleeve|popper|workhorse|burner",
       "src": "modules/draw-steel-ghostwire/assets/sfx/pistol-single.ogg"
     },
     {
+      "id": "arrow",
+      "match": "\\\\bbow\\\\b|arrow|crossbow",
+      "src": "modules/draw-steel-ghostwire/assets/sfx/arrow-shot.ogg"
+    },
+    {
       "id": "chrome",
-      "label": "Chrome / cyber / servo",
       "keywords": [
         "chrome",
         "optics"
       ],
-      "match": "chrome|implant|cyber|datajack|limb|servo|plating|rig|harness|override",
+      "match": "chrome|implant|cyber|datajack|\\\\blimb\\\\b|servo|plating|\\\\brig\\\\b|harness|override",
       "src": "modules/draw-steel-ghostwire/assets/sfx/chrome-servo-a.ogg"
     },
     {
       "id": "tech-drone",
-      "label": "Drones / deploy",
       "keywords": [
         "tech"
       ],
@@ -166,16 +223,14 @@
     },
     {
       "id": "tech",
-      "label": "Machines / tech fallback",
       "keywords": [
         "tech"
       ],
-      "match": "machine|repair|fabricat|vehicle|engine|uptime|wrench|overclock",
+      "match": "machine|repair|fabricat|vehicle|engine|uptime|wrench|overclock|field repair",
       "src": "modules/draw-steel-ghostwire/assets/sfx/drone-effect.ogg"
     },
     {
       "id": "impact",
-      "label": "Melee / blade / strike",
       "keywords": [
         "melee",
         "weapon"
@@ -184,19 +239,31 @@
       "src": "modules/draw-steel-ghostwire/assets/sfx/sword-crit.ogg"
     },
     {
+      "id": "command-social",
+      "label": "Social / word / room read",
+      "match": "\\\\bright word\\\\b|read the room|\\\\ba word\\\\b|the right word",
+      "srcs": [
+        "modules/draw-steel-ghostwire/assets/sfx/command-sting-a.ogg",
+        "modules/draw-steel-ghostwire/assets/sfx/command-sting-b.ogg",
+        "modules/draw-steel-ghostwire/assets/sfx/command-sting-c.ogg"
+      ]
+    },
+    {
       "id": "command-rally",
-      "label": "Rally / tome",
       "match": "rally|tome|inspire",
       "src": "modules/draw-steel-ghostwire/assets/sfx/command-rallytome.ogg"
     },
     {
       "id": "command",
-      "label": "Orders / rally / command",
       "keywords": [
         "command"
       ],
-      "match": "word|command|rally|cry|order|taunt|presence|persona|negotiat|persua|speak",
-      "src": "modules/draw-steel-ghostwire/assets/sfx/command-sting-a.ogg"
+      "match": "\\\\bword\\\\b|command|\\\\bcry\\\\b|order|taunt|presence|persona|negotiat|persua|speak|direct|advanced tactics|undercity",
+      "srcs": [
+        "modules/draw-steel-ghostwire/assets/sfx/command-sting-a.ogg",
+        "modules/draw-steel-ghostwire/assets/sfx/command-sting-b.ogg",
+        "modules/draw-steel-ghostwire/assets/sfx/command-sting-c.ogg"
+      ]
     }
   ]
 }

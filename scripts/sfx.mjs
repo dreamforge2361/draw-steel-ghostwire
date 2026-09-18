@@ -55,9 +55,21 @@ export function resolveSfx(item) {
   const keywords = new Set(item?.system?.keywords ?? []);
   const name = String(item?.name ?? "");
   for (const rule of SFX_MAP.rules ?? []) {
-    const byKeyword = (rule.keywords ?? []).some(k => keywords.has(k));
-    const byName = rule.match && new RegExp(rule.match, "i").test(name);
-    if (byKeyword || byName) return { src: rule.src, rule: rule.id };
+    const needKw = rule.keywords ?? [];
+    const byKeyword = needKw.length ? needKw.some(k => keywords.has(k)) : false;
+    const byName = rule.match ? new RegExp(rule.match, "i").test(name) : false;
+    // If the rule has a name pattern, the name MUST match; keywords then only filter.
+    // Keyword-only rules (no match) still fire on keyword alone.
+    const hit = rule.match ? (byName && (!needKw.length || byKeyword)) : byKeyword;
+    if (!hit) continue;
+    const srcs = Array.isArray(rule.srcs) && rule.srcs.length
+      ? rule.srcs
+      : (rule.src ? [rule.src] : []);
+    if (!srcs.length) continue;
+    const src = srcs.length === 1
+      ? srcs[0]
+      : srcs[Math.abs([...name].reduce((h, c) => ((h << 5) - h) + c.charCodeAt(0), 0)) % srcs.length];
+    return { src, rule: rule.id };
   }
   return { src: SFX_MAP.default, rule: "default" };
 }
