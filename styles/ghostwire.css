@@ -96,6 +96,67 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   color: #e0457b;
 }
 
+/* Changer form control on the hero Stats tab (B50b) */
+.ghostwire-changer-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ghostwire-changer-form-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ghostwire-changer-form-buttons button {
+  flex: 1;
+}
+
+.ghostwire-changer-form-buttons button.active {
+  font-weight: bold;
+  border-color: var(--ghostwire-accent, #3fc1c9);
+  box-shadow: 0 0 4px var(--ghostwire-accent, #3fc1c9);
+}
+
+.ghostwire-changer-form-art {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.ghostwire-changer-form-art-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: stretch;
+}
+
+.ghostwire-changer-form-art-slot label {
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+.ghostwire-changer-form-art-slot img {
+  width: 100%;
+  max-width: 4.5rem;
+  height: 4.5rem;
+  margin-inline: auto;
+  object-fit: cover;
+  border: 1px solid var(--color-border-light-primary, #555);
+  border-radius: 4px;
+  background: #111;
+}
+
+.ghostwire-changer-form-art-slot img.empty {
+  opacity: 0.35;
+}
+
+.ghostwire-changer-form-art-slot button {
+  font-size: 0.75em;
+  padding: 0.15rem 0.35rem;
+  line-height: 1.2;
+}
+
 /* ============================================================
  * Wired Console (B23b) — net-deck look
  * ============================================================ */

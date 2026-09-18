@@ -3661,7 +3661,8 @@
       "biRemaining": 20,
       "changer": {
         "humanArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin.png",
-        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-beast.png"
+        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-beast.png",
+        "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-hybrid.png"
       }
     }
   }

@@ -1,5 +1,7 @@
 ﻿# Spike B50 — Changer form token-art swap
 
+**Status:** implemented locally 2026-09-17 as 0.1.73 (`syncChangerFormArt` in `scripts/module.mjs`) — Foundry-verify, then commit.
+
 **Repo:** draw-steel-ghostwire  
 **Do NOT commit.** Leave uncommitted with the local SFX 0.1.70 work (or bump once to 0.1.71 only if you must separate versions — prefer **one** local version for SFX+B50).  
 Foundry may be open for Michael's playtest — **do not rebuild packs / touch LevelDB** unless absolutely required. This is scripts + optional Actor JSON flags only.
@@ -50,3 +52,36 @@ Extend the existing Changer `updateActiveEffect` hook (same file) or extract a s
 4. Enable **Hybrid** — human (or hybridArt if set); still only one form active.
 5. Vira / a Changer without beastArt — form switch still works mechanically; art unchanged.
 6. No pack rebuild required; no commit.
+
+
+## B50b — Sheet form control (Michael 2026-09-17)
+
+Art sync on effect enable is already implemented locally (0.1.73). **Extend the same local bump** — do not bump again.
+
+### Goal
+Changer heroes get a **built-in sheet control** (Human / Hybrid / Beast) that:
+1. Enables the matching Forms-trait ActiveEffect (maneuver fiction; exactly one active — existing mutual exclusion stays).
+2. That enable path already applies **stat ActiveEffect changes** (Hybrid: Intimidation edge; Beast: Stealth + Perception edges) and **B50 art sync**.
+3. Highlight the active form on the control.
+
+### UI
+- Hook 
+enderDrawSteelHeroSheet (same pattern as Body Integrity / Wired fieldsets in scripts/module.mjs).
+- Only if the actor has ancestry _dsid === "changer" (or a Forms trait with changerForm effects).
+- Three buttons or a segmented control near Stats / under portrait — label with lang keys already used for Forms.
+- Owner-only clickable; GMs can click too.
+- Click → find the Forms ancestryTrait (item _dsid changer-forms or effects with changerForm flag) → updateEmbeddedDocuments to set chosen effect disabled: false (siblings disable via existing hook). Prefer updating the **trait item's** effects if that's where they live after transfer, or the actor's transferred effects — match whatever the current mutual-exclusion hook already watches (effect.parent).
+
+### Stats gap (only if cheap)
+RAW also wants Hybrid **melee free strikes +1 damage** and Human **edge on pass-as-human**. Hybrid Intimidation + Beast Stealth/Perception are already on the effects. If a Draw Steel ActiveEffect key for free-strike damage is obvious from DS 1.1.2 / existing Ghostwire effects, add it; otherwise note as follow-on and do not invent a wrong key. Human blend-in edge may stay prose if no clean key.
+
+### Success checklist (add to prior)
+9. On Wren's hero sheet, form control visible; click **Beast** → effect enables, token+portrait swap, Stealth/Perception edges apply.
+10. Click **Human** → back; Hybrid → Intimidation edge; only one form active.
+11. Non-Changer sheets show no control.
+
+### As-built (0.1.73, same local bump)
+- `scripts/module.mjs`: new `renderDrawSteelHeroSheet` hook adds a **Changer Forms** fieldset (Human / Hybrid / Beast buttons) on the Stats tab, after the Wired fieldset. Shown only when `actor.allApplicableEffects()` includes `changerForm` effects (the Forms trait's transferred effects, which live on the trait item) — non-Changers and Former Life: Changer revenants get nothing.
+- Click → `effect.update({ disabled: false })` on that form's effect; the existing `updateActiveEffect` hook disables the siblings on the same parent and runs `syncChangerFormArt`. Stat changes come from the effects themselves. Active form is highlighted (`.active`, `aria-pressed`). Buttons are disabled for non-owners; GMs own everything.
+- `lang/en.json`: `Forms.Hint`, `Forms.{Human,Hybrid,Beast}.Label`; Forms description's "In Foundry" line points at the sheet box. `styles/ghostwire.css`: `.ghostwire-changer-forms`.
+- **Hybrid free strike +1: follow-on, not automated.** DS 1.1.2 has no hero free-strike damage key; `abilityModifier` effects only filter by keyword, and hero free strikes share melee/weapon/strike with signature abilities, so any key would also hit non-free strikes. The Hybrid description already says "add it to the roll". Human blend-in edge stays prose. No pack rebuild.

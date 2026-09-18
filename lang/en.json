@@ -5657,18 +5657,27 @@
         },
         "Forms": {
           "Name": "Changer Forms",
-          "Description": "<p>You have three forms. Changing form is a <strong>maneuver</strong>. Exactly one form is active at a time, and you start in Human Form.</p><p><strong>Human Form:</strong> You gain an edge on tests to pass as or blend in among baseline humans. You show no obvious beast tells.</p><p><strong>Hybrid (War) Form:</strong> You gain an edge on Intimidation tests, and your melee free strikes deal +1 damage. You are visibly a war-beast and can’t pass as human.</p><p><strong>Beast Form:</strong> You gain an edge on Stealth and Perception tests. You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p><p><em>In Foundry:</em> enable the matching form effect on the Effects tab when you change form; enabling one form turns the others off.</p>",
+          "Hint": "Changing form is a maneuver. Click a form to switch; the other forms turn off.",
+          "Description": "<p>You have three forms. Changing form is a <strong>maneuver</strong>. Exactly one form is active at a time, and you start in Human Form.</p><p><strong>Human Form:</strong> You gain an edge on tests to pass as or blend in among baseline humans. You show no obvious beast tells.</p><p><strong>Hybrid (War) Form:</strong> You gain an edge on Intimidation tests, and your melee free strikes deal +1 damage. You are visibly a war-beast and can’t pass as human.</p><p><strong>Beast Form:</strong> You gain an edge on Stealth and Perception tests. You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p><p><em>In Foundry:</em> click Human, Hybrid, or Beast in the Changer Forms box on the Stats tab (or enable the matching form effect on the Effects tab); enabling one form turns the others off.</p>",
           "Human": {
             "Name": "Form: Human",
+            "Label": "Human",
             "Description": "<p>You gain an edge on tests to pass as or blend in among baseline humans (not automated — apply the edge when the test calls for it). You show no obvious beast tells.</p>"
           },
           "Hybrid": {
             "Name": "Form: Hybrid",
+            "Label": "Hybrid",
             "Description": "<p>You gain an edge on Intimidation tests (automated). Your melee free strikes deal +1 damage (not automated — add it to the roll). You are visibly a war-beast and can’t pass as human.</p>"
           },
           "Beast": {
             "Name": "Form: Beast",
+            "Label": "Beast",
             "Description": "<p>You gain an edge on Stealth and Perception tests (automated). You can’t use manufactured weapons, and you can’t speak clear language (growls and body language only).</p>"
+          },
+          "Art": {
+            "Pick": "Choose Art",
+            "Clear": "Clear",
+            "Hint": "Portrait and token art used when this form is active."
           }
         },
         "Warnings": {

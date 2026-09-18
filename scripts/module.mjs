@@ -403,7 +403,31 @@ Hooks.on("updateActiveEffect", (effect, changes, options, userId) => {
   if (!effect.getFlag(MODULE_ID, "changerForm")) return;
   const others = effect.parent.effects.filter(e => (e !== effect) && !e.disabled && e.getFlag(MODULE_ID, "changerForm"));
   if (others.length) effect.parent.updateEmbeddedDocuments("ActiveEffect", others.map(e => ({ _id: e.id, disabled: true })));
+  const actor = (effect.parent instanceof Actor) ? effect.parent : effect.parent?.actor;
+  if (actor) syncChangerFormArt(actor, effect.getFlag(MODULE_ID, "changerForm"));
 });
+
+// Changer form art: swap the portrait and token art to the form's image from flags.changer (beastArt / humanArt /
+// hybridArt). Changers without beastArt or humanArt keep their art; the forms still work mechanically.
+async function syncChangerFormArt(actor, form) {
+  const art = actor.getFlag(MODULE_ID, "changer") ?? {};
+  if (!art.beastArt && !art.humanArt) return;
+  // Snapshot the current portrait as the human form before the first Beast swap, so Human can swap back.
+  if ((form === "beast") && art.beastArt && !art.humanArt && (actor.img !== art.beastArt)) {
+    await actor.setFlag(MODULE_ID, "changer.humanArt", actor.img);
+    art.humanArt = actor.img;
+  }
+  const src = { beast: art.beastArt, human: art.humanArt, hybrid: art.hybridArt ?? art.humanArt }[form] ?? null;
+  if (!src) return;
+  const update = {};
+  if (actor.img !== src) update.img = src;
+  if (!actor.isToken && (actor.prototypeToken.texture.src !== src)) update["prototypeToken.texture.src"] = src;
+  if (!foundry.utils.isEmpty(update)) await actor.update(update);
+  const tokens = actor.isToken ? [actor.token] : actor.getActiveTokens(false, true);
+  for (const token of tokens) {
+    if (token && (token.texture.src !== src)) await token.update({ "texture.src": src });
+  }
+}
 
 // Pact spirits (Ghostwire Summons & Machines › Pact Spirits): one Actor serves both pacts. Enabling its Pact: Light or
 // Pact: Dark effect disables the other, records flags.pact, and tints the token; setting flags.pact enables the matching effect.
@@ -679,6 +703,109 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   hint.textContent = game.i18n.localize(`GHOSTWIRE.Wired.StateHints.${state}`);
   fieldset.append(legend, value, hint);
   const anchor = stats.querySelector(".ghostwire-integrity") ?? stats.querySelector("fieldset.resources");
+  if (anchor) anchor.after(fieldset);
+  else stats.prepend(fieldset);
+});
+
+// Hero sheet: Changer form control (B50b) under the Wired fieldset. Clicking a form enables its Forms-trait effect;
+// the updateActiveEffect hook above turns the other forms off and swaps the art.
+const CHANGER_FORMS = ["human", "hybrid", "beast"];
+
+Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
+  const stats = element.querySelector("section.tab[data-tab='stats']");
+  if (!stats || stats.querySelector(".ghostwire-changer-forms")) return;
+  const actor = app.document;
+  const effects = {};
+  for (const effect of actor.allApplicableEffects()) {
+    const form = effect.getFlag(MODULE_ID, "changerForm");
+    if (CHANGER_FORMS.includes(form) && !(form in effects)) effects[form] = effect;
+  }
+  if (foundry.utils.isEmpty(effects)) return;
+  const active = CHANGER_FORMS.find(form => effects[form] && !effects[form].disabled);
+  const art = actor.getFlag(MODULE_ID, "changer") ?? {};
+
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = "ghostwire-changer-forms";
+  const legend = document.createElement("legend");
+  legend.textContent = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Name");
+  legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Hint");
+  fieldset.append(legend);
+
+  const buttons = document.createElement("div");
+  buttons.className = "ghostwire-changer-form-buttons";
+  for (const form of CHANGER_FORMS) {
+    const effect = effects[form];
+    if (!effect) continue;
+    const key = `GHOSTWIRE.Peoples.Changer.Forms.${form.capitalize()}`;
+    const button = document.createElement("button");
+    Object.assign(button, { type: "button", textContent: game.i18n.localize(`${key}.Label`), disabled: !actor.isOwner });
+    button.classList.toggle("active", form === active);
+    button.setAttribute("aria-pressed", String(form === active));
+    button.dataset.tooltip = game.i18n.localize(`${key}.Description`);
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (effect.disabled) effect.update({ disabled: false });
+    });
+    buttons.append(button);
+  }
+  fieldset.append(buttons);
+
+  const artRow = document.createElement("div");
+  artRow.className = "ghostwire-changer-form-art";
+  const artKeys = { human: "humanArt", hybrid: "hybridArt", beast: "beastArt" };
+  for (const form of CHANGER_FORMS) {
+    const flagKey = artKeys[form];
+    const path = art[flagKey] ?? "";
+    const cell = document.createElement("div");
+    cell.className = "ghostwire-changer-form-art-slot";
+    const label = document.createElement("label");
+    label.textContent = game.i18n.localize(`GHOSTWIRE.Peoples.Changer.Forms.${form.capitalize()}.Label`);
+    const thumb = document.createElement("img");
+    thumb.alt = "";
+    if (path) thumb.src = path;
+    else thumb.classList.add("empty");
+    const pick = document.createElement("button");
+    Object.assign(pick, {
+      type: "button",
+      textContent: game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Pick"),
+      disabled: !actor.isOwner,
+    });
+    pick.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Hint");
+    pick.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      const fp = new FilePicker({
+        type: "image",
+        current: path || actor.img,
+        callback: async src => {
+          await actor.setFlag(MODULE_ID, `changer.${flagKey}`, src);
+          const activeNow = CHANGER_FORMS.find(f => effects[f] && !effects[f].disabled);
+          if (activeNow === form) await syncChangerFormArt(actor, form);
+          else if (app.rendered) app.render();
+        },
+      });
+      fp.browse();
+    });
+    const clear = document.createElement("button");
+    Object.assign(clear, {
+      type: "button",
+      textContent: game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Clear"),
+      disabled: !actor.isOwner || !path,
+    });
+    clear.addEventListener("click", async event => {
+      event.preventDefault();
+      event.stopPropagation();
+      await actor.unsetFlag(MODULE_ID, `changer.${flagKey}`);
+      if (app.rendered) app.render();
+    });
+    cell.append(label, thumb, pick, clear);
+    artRow.append(cell);
+  }
+  fieldset.append(artRow);
+
+  const anchor = stats.querySelector(".ghostwire-wired") ?? stats.querySelector(".ghostwire-integrity")
+    ?? stats.querySelector("fieldset.resources");
   if (anchor) anchor.after(fieldset);
   else stats.prepend(fieldset);
 });
