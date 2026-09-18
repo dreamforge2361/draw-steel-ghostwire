@@ -2,7 +2,7 @@
 
 **Status:** Stage 3 draft locked 2026-09-16/17  
 **Pairs with:** `docs/rulebook/11-economy.md`, `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, skills master (`docs/masters/GHOSTWIRE_SKILLS_MASTER.md`)  
-**Foundry:** Mods pack + Invent a Mod rules (B20 expansion); Gear master remains source of record for published families. **B20c install tracker (v0.1.44, Foundry-verified):** record a finished install with **Install onto…** on the hero sheet; hosts show mod slots used / max. **B20d deck / RCC software (v0.1.49, Foundry-verified):** Matrix programs install onto decks and autosofts onto RCCs the same way; **Activate / Deactivate** is the field toggle (the software keeps its slot), and Reader, Skeleton, and Targeting Autosoft add their edge to the matching rolls while on.
+**Foundry:** Mods pack + Invent a Mod rules (B20 expansion); Gear master remains source of record for published families. **B20c install tracker (v0.1.44, Foundry-verified):** record a finished install with **Install onto…** on the hero sheet; hosts show mod slots used / max. **B20d deck / RCC software (v0.1.49, Foundry-verified):** Matrix programs install onto decks and autosofts onto RCCs the same way; **Activate / Deactivate** is the field toggle (the software keeps its slot), and Reader, Skeleton, and Targeting Autosoft add their edge to the matching rolls while on. **B51b payload magazines (v0.1.77):** payload chips load onto a deck only through **Load magazine (Craft)…** (Reason roll, Hacking edge; tier sets fires 1 / 3 / 5); each **Run {Payload}** spends one fire.
 
 **Design locks (do not reopen in this draft):**
 - Mods cost **¥**; stack with Kit doctrine (different numbers); never rewrite Kit damage/Stamina lines
@@ -52,7 +52,7 @@ If an item publishes **modSlots > 0**, a **published mod family** must exist for
 | **Armor / shields** | Families expanding (B20) |
 | **Gadgets** | Comms, sensors, B&E, survival — families expanding (B20) |
 | **Vehicles / drones** | Published set in Gear master **§5F** |
-| **Decks / RCCs** | Slots filled by **programs / autosofts** from the Matrix catalog (Gear master Category 4); install skill = **Hacking** |
+| **Decks / RCCs** | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking** |
 
 ## Echelon + Availability (gear grade)
 
@@ -78,6 +78,7 @@ Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md` + Foundry **Mods** pack
 - **Vehicle / drone mods** — Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
 - **Armor + gadget families** — expanding under Foundry spike **B20**.
 - **Programs** — occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
+- **Matrix payloads** — consumable mods (Gear master **§4C**; locked 2026-09-17). A payload fills one deck slot as a **magazine**, sharing the deck's slots with suites. Loading = Craft (Hacking) Project; the result sets its fires (**low 1 / middle 3 / high 5**, provisional). Each Run spends one; at 0 the slot frees. A payload fills a slot, it never has one, so the Consumables rule above still holds. Full player rule: `docs/raw/21-the-wire.md` (Deck software: suites vs payloads); doctrine: `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
 
 ## Invent a Mod (v1) — LOCKED
 
@@ -105,4 +106,5 @@ Starting Kit grant includes **street-band qualifying gear** only (see Kits + Eco
 - Kits — `docs/rulebook/10-kits.md` (doctrine vs object; chargen gear)
 - Chrome — `docs/rulebook/12-chrome.md` (Cybertech-adjacent; Body Integrity)
 - Gear master — `docs/masters/GHOSTWIRE_GEAR_MASTER.md`
+- The Wire (deck software: suites vs payloads) — `docs/raw/21-the-wire.md`
 - Skills master — `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`

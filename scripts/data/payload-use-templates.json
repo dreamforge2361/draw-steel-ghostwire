@@ -1,0 +1,24 @@
+{
+  "_comment": "B51 — turns a Ghostwire matrix payload (treasure, flags.draw-steel-ghostwire.matrix.role 'payload') into a 'Run {Payload}' ability. Shape follows the Hacker's Wired abilities: keywords ranged + wired, power roll @chr over reason (the Wire rules roll Programs with Logic, which is Draw Steel's Reason), distance special (the deck's Reach). Keyed by the payload's system._dsid; an unknown payload falls back to 'generic'. Tier text lives in lang/en.json under GHOSTWIRE.PayloadUse.Payloads.<lang>.",
+
+  "keywords": ["ranged", "wired"],
+  "characteristics": ["reason"],
+  "type": "main",
+
+  "_zapNote": "Zap is the only payload that deals damage directly. Numbers are the Draw Steel echelon-1 signature ladder (2/5/7 + characteristic), untyped: biofeedback hits Stamina with no damage type.",
+
+  "payloads": {
+    "zap": {
+      "lang": "Zap",
+      "target": { "type": "creature", "value": 1 },
+      "before": true,
+      "damage": { "tier1": "2 + @chr", "tier2": "5 + @chr", "tier3": "7 + @chr", "types": [] }
+    },
+    "crash": { "lang": "Crash", "target": { "type": "special" } },
+    "ghostload": { "lang": "Ghostload", "target": { "type": "special" }, "before": true },
+    "static": { "lang": "Static", "target": { "type": "special" }, "before": true },
+    "blackout": { "lang": "Blackout", "target": { "type": "special" } },
+    "wraith": { "lang": "Wraith", "target": { "type": "self" }, "before": true },
+    "generic": { "lang": "Generic", "target": { "type": "special" }, "roll": false }
+  }
+}

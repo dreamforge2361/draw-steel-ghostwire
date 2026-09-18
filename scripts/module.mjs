@@ -8,6 +8,7 @@ import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
+import { registerPayloadUse } from "./payload-use.mjs";
 import { registerFreeStrikeStrip } from "./free-strikes.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -88,6 +89,7 @@ Hooks.once("init", () => {
   registerMods();
   registerAbilitySfx();
   registerEquipmentUse();
+  registerPayloadUse();
   registerFreeStrikeStrip();
 });
 

@@ -4819,7 +4819,11 @@
         "On": "on",
         "Off": "off",
         "Activated": "{mod} switched on ({host}).",
-        "Deactivated": "{mod} switched off; it keeps its slot on {host}."
+        "Deactivated": "{mod} switched off; it keeps its slot on {host}.",
+        "UnloadMagazine": {
+          "Title": "Unload {mod}",
+          "Content": "Unloading <strong>{mod}</strong> frees its deck slot but dumps its <strong>{fires}</strong> remaining fire(s); the chip is spent. Unload anyway?"
+        }
       }
     },
     "Matrix": {
@@ -4890,27 +4894,27 @@
         },
         "Zap": {
           "Name": "Zap",
-          "Description": "<p><em>Zap · Feedback Payload · biofeedback surge-packet</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥600 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Fires a biofeedback spike at a wired target — works only on jacked-in/wired foes.</p><p><strong>Payload:</strong> load into a free deck slot as a downtime Project (§Craft) keyed to Hacking. It stays loaded until fired, then it’s used up.</p>"
+          "Description": "<p><em>Zap · Feedback Payload · biofeedback surge-packet</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥600 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Fires a biofeedback spike at a wired target — works only on jacked-in/wired foes.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
         "Crash": {
           "Name": "Crash",
-          "Description": "<p><em>Crash · ICE-Breaker · countermeasure-dissolution routine</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Disables one piece of ICE (or grants a decisive edge to breach past it).</p><p><strong>Payload:</strong> load into a free deck slot as a downtime Project (§Craft) keyed to Hacking. It stays loaded until fired, then it’s used up.</p>"
+          "Description": "<p><em>Crash · ICE-Breaker · countermeasure-dissolution routine</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Disables one piece of ICE (or grants a decisive edge to breach past it).</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
         "Static": {
           "Name": "Static",
-          "Description": "<p><em>Static · Jam Burst · local-mesh disruption packet</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Suppresses one enemy device (smartgun link, camera, comm, hostile drone control) for a round.</p><p><strong>Payload:</strong> load into a free deck slot as a downtime Project (§Craft) keyed to Hacking. It stays loaded until fired, then it’s used up.</p>"
+          "Description": "<p><em>Static · Jam Burst · local-mesh disruption packet</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Suppresses one enemy device (smartgun link, camera, comm, hostile drone control) for a round; a strong run hits several.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
         "Ghostload": {
           "Name": "Ghostload",
-          "Description": "<p><em>Ghostload · Data-Bomb · delayed logic-charge</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,500 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Plants a trap on a node: next intruder takes a biofeedback hit and spikes their Alert.</p><p><strong>Payload:</strong> load into a free deck slot as a downtime Project (§Craft) keyed to Hacking. It stays loaded until fired, then it’s used up.</p>"
+          "Description": "<p><em>Ghostload · Data-Bomb · delayed logic-charge</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,500 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Plants a trap on a node: next intruder takes a biofeedback hit and spikes their Alert.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
         "Blackout": {
           "Name": "Blackout",
-          "Description": "<p><em>Blackout · Cascade Payload · systemic-collapse routine</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥9,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Crashes an entire small network / hard-locks a host briefly.</p><p><strong>Payload:</strong> load into a free deck slot as a downtime Project (§Craft) keyed to Hacking. It stays loaded until fired, then it’s used up.</p>"
+          "Description": "<p><em>Blackout · Cascade Payload · systemic-collapse routine</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥9,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Crashes an entire small network / hard-locks a host briefly.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
         "Wraith": {
           "Name": "Wraith",
-          "Description": "<p><em>Wraith · Total-Intrusion Key · host-seizure exploit</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥24,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Pre-built master exploit; one-shot decisive edge on a host-seizure attempt.</p><p><strong>Payload:</strong> load into a free deck slot as a downtime Project (§Craft) keyed to Hacking. It stays loaded until fired, then it’s used up.</p>"
+          "Description": "<p><em>Wraith · Total-Intrusion Key · host-seizure exploit</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥24,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Pre-built master exploit; one-shot decisive edge on a host-seizure attempt.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
         "RemoteBox": {
           "Name": "Remote Box",
@@ -7047,6 +7051,73 @@
       "VerbRanged": "Fire",
       "AbilityName": "{verb} {weapon}",
       "AbilityDescription": "<p>A free strike with your {weapon} ({band} range, {damage} {type} damage on a middle result). Kit bonuses for strikes apply as normal.</p><p><em>This ability is generated from the weapon in your inventory. Remove the weapon and it goes away.</em></p>"
+    },
+    "PayloadUse": {
+      "AbilityName": "Run {payload}",
+      "AbilityDescription": "<p>Fire the {payload} magazine loaded in your deck.</p>{effect}<p><em>This ability exists while the payload is loaded in a deck as a magazine (Load magazine (Craft) on the chip). Each successful run spends one fire; at 0 the magazine is spent and its deck slot frees. A loose chip in your gear cannot be run.</em></p>",
+      "Spent": "The {payload} magazine is spent (0 fires). Load a new chip with a Craft (Hacking) Project before you run it.",
+      "Consumed": "{actor} runs {payload} — {left} fire(s) left.",
+      "Payloads": {
+        "Zap": {
+          "Target": "1 Wired creature within Reach",
+          "Before": "Works only on a creature that is Wired (in Overlay or Jacked In). The biofeedback spike hits Stamina directly."
+        },
+        "Crash": {
+          "Target": "1 piece of ICE within Reach",
+          "Tier1": "The ICE holds, but you gain an edge on your next roll to breach past it.",
+          "Tier2": "The ICE is disabled until the end of your next turn, or you gain a double edge on your next roll to breach past it.",
+          "Tier3": "The ICE is disabled for the rest of the encounter."
+        },
+        "Ghostload": {
+          "Target": "The node you are in",
+          "Before": "You plant a trap on this node. It triggers on the next intruder who enters it.",
+          "Tier1": "The intruder takes biofeedback damage equal to the node's Biofeedback Value.",
+          "Tier2": "The intruder takes biofeedback damage equal to the node's Biofeedback Value, and their Trace Alert rises by 1.",
+          "Tier3": "The intruder takes biofeedback damage equal to the node's Biofeedback Value, their Trace Alert rises by 2, and the trap cannot be detected before it fires."
+        },
+        "Static": {
+          "Target": "1 or more enemy devices within Reach",
+          "Before": "A device is a smartgun link, camera, comm, or hostile drone control. A suppressed device does nothing: no edge, no feed, no signal, no orders.",
+          "Tier1": "One device is suppressed until the start of your next turn.",
+          "Tier2": "One device is suppressed until the end of your next turn, and a second device within Reach is suppressed until the start of your next turn.",
+          "Tier3": "Up to three devices within Reach are suppressed until the end of your next turn."
+        },
+        "Blackout": {
+          "Target": "1 host or small network within Reach",
+          "Tier1": "One host is hard-locked until the end of your next turn.",
+          "Tier2": "A small network crashes until the end of your next turn; its hosts are hard-locked.",
+          "Tier3": "A small network crashes for the rest of the encounter; its hosts are hard-locked."
+        },
+        "Wraith": {
+          "Target": "Self",
+          "Before": "A pre-built master exploit. It is spent on your next host-seizure attempt this encounter (such as Seize Control).",
+          "Tier1": "Your next host-seizure attempt gains an edge.",
+          "Tier2": "Your next host-seizure attempt gains a double edge.",
+          "Tier3": "Your next host-seizure attempt gains a double edge, and the Trace Alert does not rise from it."
+        },
+        "Generic": {
+          "Target": "Special"
+        }
+      },
+      "NotLoaded": "{payload} isn’t loaded in a deck. Use Load magazine (Craft) on the chip first.",
+      "Menu": {
+        "Load": "Load magazine (Craft)…",
+        "Recompile": "Recompile magazine (Craft)…"
+      },
+      "Load": {
+        "Title": "Load {payload} magazine",
+        "PickDeck": "Compile <strong>{payload}</strong> into a free slot on which deck? This is a downtime Craft (Hacking) Project: the power roll sets the magazine’s fires (tier 1: 1, tier 2: 3, tier 3: 5).",
+        "Deck": "Deck",
+        "Confirm": "Roll Craft",
+        "RollTitle": "Craft (Hacking): {payload} magazine → {deck}",
+        "NoDeck": "{payload} needs a deck to load into; this hero owns none.",
+        "NoSlots": "{payload} needs a free deck slot; every deck this hero owns is full. Uninstall a suite or a spent magazine first.",
+        "NotLoaded": "{payload} is no longer loaded in a deck; nothing to recompile.",
+        "Loaded": "{actor} compiles {payload} into {deck} ({tier}): {fires} fire(s) loaded.",
+        "Recompiled": "{actor} recompiles the {payload} magazine in {deck} ({tier}): now {fires} fire(s).",
+        "NoChip": "{payload} is spent (quantity 0): there is no chip left to compile. Get a new chip first."
+      },
+      "Dumped": "{payload} unloaded: its {fires} remaining fire(s) are dumped. The chip is spent."
     }
   },
   "DRAW_STEEL": {

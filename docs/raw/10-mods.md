@@ -42,7 +42,7 @@ If an item publishes **modSlots > 0**, a **published mod family** must exist for
 | **Armor / shields** | Families not yet published |
 | **Gadgets** | Comms, sensors, B&E, survival — families not yet published |
 | **Vehicles / drones** | Published set in Gear master **§5F** |
-| **Decks / RCCs** | Slots filled by **programs / autosofts** from the Matrix catalog (Gear master Category 4); install skill = **Hacking** |
+| **Decks / RCCs** | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking** |
 
 ## Echelon + Availability (gear grade)
 
@@ -68,6 +68,7 @@ Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md`.
 - **Vehicle / drone mods** — Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
 - **Armor + gadget families** — not yet published.
 - **Programs** — occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
+- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one deck slot as a **magazine**, sharing the deck's slots with suites. Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
 
 ## Invent a Mod (v1) — LOCKED
 

@@ -2733,6 +2733,17 @@
             ],
             "consumable": true,
             "role": "payload"
+          },
+          "mod": {
+            "slotCost": 1,
+            "hosts": [
+              "deck"
+            ],
+            "host": "deck",
+            "craftSkill": [
+              "hacking"
+            ],
+            "magazine": true
           }
         }
       },

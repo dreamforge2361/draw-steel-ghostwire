@@ -1,7 +1,7 @@
 # The Wire
 
 **RAW status:** draft  
-**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating)
+**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating)
 
 ---
 
@@ -131,6 +131,42 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 - **Jack Out** (connected only) returns you to Disconnected.
 - Every other Matrix Verb requires a connection.
 - Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.
+
+## Deck software: suites vs payloads
+
+A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.
+
+| | Suites | Payloads |
+|---|---|---|
+| **Role** | Utility and defense | Offense and disruption |
+| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Static, Ghostload, Blackout, Wraith |
+| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |
+| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |
+| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |
+| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |
+
+### Suites
+
+A suite is installed into a free slot as a downtime **Craft (Hacking)** Project and stays there until you swap it out. An installed suite can be switched on or off in the field (the field toggle); it keeps its slot either way. Suites give edges to Matrix Verbs and standing benefits. They have no attack of their own.
+
+### Payloads (magazines)
+
+A payload chip in your gear does nothing by itself. To use it, you compile it into a free deck slot as a magazine:
+
+- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.
+- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.
+- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.
+- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.
+
+| Project result | Fires loaded |
+|---|---|
+| Low (≤11) | 1 |
+| Middle (12–16) | 3 |
+| High (17+) | 5 |
+
+**Running a payload.** Each payload is a Wired, ranged ability with a power roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
+
+The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
 
 ## Director tools
 

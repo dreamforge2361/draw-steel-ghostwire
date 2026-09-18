@@ -341,7 +341,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 ## Category 4 — Matrix Gear (the jacked-in hardware)
 
-*Governing rulings: (1) Decks are force-multipliers, not weapons — combat always rolls Cognition + the relevant Wired skill; a better deck buys Bandwidth capacity and situational edges, never raw power. (2) Programs are deck mods occupying mod slots — persistent programs (4B) stay resident; attack payloads (4C) are Consumable "ammo." (3) This is the shared home for both the Hacker's gear and the Wrench's rigger-command hardware (RCCs, 4D) — the drones/vehicles they command live in Category 5.*
+*Governing rulings: (1) Decks are force-multipliers, not weapons — combat always rolls Cognition + the relevant Wired skill; a better deck buys Bandwidth capacity and situational edges, never raw power. (2) Programs are deck mods occupying mod slots — persistent programs (4B) stay resident; attack payloads (4C) are Consumable "ammo" — Craft-loaded magazines sharing the same slots. (3) This is the shared home for both the Hacker's gear and the Wrench's rigger-command hardware (RCCs, 4D) — the drones/vehicles they command live in Category 5.*
 
 ### 4A — Cyberdecks
 
@@ -353,9 +353,11 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Blackdeck / Milspec Cyberdeck / hardened cyberwarfare platform | T2 | 2 | 15,000 | Edge on all EW/Disruptor verbs; larger Bandwidth reservoir; bane on enemy ICE trying to raise your Alert. | 4 | Wired |
 | Fairlight Ghost / Apex Cyberdeck / prototype quantum-intrusion mainframe-in-hand | T1 | 1 | 55,000 | Maximum Bandwidth cap; one free program-slot verb per turn; no extra biofeedback penalty jacked in. | 5 | Wired |
 
-### 4B — Programs & Utilities (persistent)
+### 4B — Programs & Utilities (persistent — utility / defense suites)
 
 *A program-mod installed into a deck slot via the §Craft **procedure** (downtime Project; skill = **Hacking**); stays loaded until swapped out. Not Consumable.*
+
+**Doctrine (locked 2026-09-17):** Suites are **utility / support** (Reader, Sneak, Mirror, Scrubber, Overlord), plus Skeleton (soft Breach edge) and Guardian (**defense**). They are not the decker's primary attack buttons — see §4C payloads and `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect (occupies 1 deck slot) | Tags |
 |---|---|---|---|---|---|
@@ -367,15 +369,22 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Guardian / Watchdog Suite / counter-intrusion daemon | T2 | 2 | 8,000 | Edge on resisting hostile ICE and enemy-decker attacks; warns the crew when Alert spikes. | Program, Wired |
 | Overlord / Command Suite / multi-node orchestration daemon | T1 | 1 | 22,000 | Hold one extra compromised node beyond your normal cap; issue a held-node command as a maneuver. | Program, Wired |
 
-### 4C — Intrusion & Attack Payloads (Consumable)
+### 4C — Intrusion & Attack Payloads (Consumable — offensive magazines)
 
-*One-shot aggressive software — the decker's ammunition. Loaded into a deck slot, expended when triggered.*
+*Offensive toolkit — the decker's expendable ammunition. **Doctrine (locked 2026-09-17):** payloads are the attack/disrupt side of deck software; suites (§4B) stay utility/defense. See `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` and `docs/raw/21-the-wire.md` (Deck software).*
 
-| Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect (one use, occupies 1 deck slot until fired) | Tags |
-|---|---|---|---|---|---|
+**Magazine rule (B51b, locked 2026-09-17):**
+- **Shared slots.** A payload occupies **one deck mod slot** — the same slots §4B suites use (a Street Deck's 2 slots hold any mix of suites and magazines). No separate payload bay.
+- **One kind per slot.** A slot holds a **magazine** of a single payload kind. Two kinds loaded = two slots.
+- **Loading is a Craft Project.** Compiling the chip into a free slot is a downtime **Craft (Hacking)** Project with the payload as its target — not a free inventory action. A loose chip in the bag does nothing.
+- **Tier sets fires.** The Project's power-roll tier sets the magazine's quantity: **tier 1 → 1 fire, tier 2 → 3 fires, tier 3 → 5 fires** (provisional). A better Craft means more fires in the *same* slot.
+- **Recompile.** A loaded magazine can be re-rolled as a new downtime Craft Project; the new tier **replaces** its fires.
+- **Run.** Each Run spends 1 fire. At 0 the magazine is spent and its slot frees.
+- **Run tiers.** Tier 1 = partial; **tier 2 = the Effect below** (the catalog promise); tier 3 = the strong version.
+
 | Zap / Feedback Payload / biofeedback surge-packet | T4 | 4 | 600 | Fires a biofeedback spike at a wired target — works only on jacked-in/wired foes. | Program, Consumable, Wired |
 | Crash / ICE-Breaker / countermeasure-dissolution routine | T4 | 4 | 700 | Disables one piece of ICE (or grants a decisive edge to breach past it). | Program, Consumable, Wired |
-| Static / Jam Burst / local-mesh disruption packet | T3 | 3 | 2,000 | Suppresses one enemy device (smartgun link, camera, comm, hostile drone control) for a round. | Program, Consumable, Wired |
+| Static / Jam Burst / local-mesh disruption packet | T3 | 3 | 2,000 | Suppresses one enemy device (smartgun link, camera, comm, hostile drone control) for a round; a strong run hits several. | Program, Consumable, Wired |
 | Ghostload / Data-Bomb / delayed logic-charge | T3 | 3 | 2,500 | Plants a trap on a node: next intruder takes a biofeedback hit and spikes their Alert. | Program, Consumable, Wired |
 | Blackout / Cascade Payload / systemic-collapse routine | T2 | 2 | 9,000 | Crashes an entire small network / hard-locks a host briefly. | Program, Consumable, Wired |
 | Wraith / Total-Intrusion Key / host-seizure exploit | T1 | 1 | 24,000 | Pre-built master exploit; one-shot decisive edge on a host-seizure attempt. | Program, Consumable, Wired |

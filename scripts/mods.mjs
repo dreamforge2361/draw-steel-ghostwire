@@ -7,6 +7,9 @@
 // Install / uninstall write each Item once, in one embedded update, so the hero sheet re-renders once.
 // B20d: installed mods have a field toggle (mod.active, default on). Deck programs and RCC autosofts are mods too; their transferred
 // software Active Effect is suppressed unless installed and on, and mod.edgeAbilities lists ability _dsids that roll with an edge.
+// B51b: matrix payloads are mods with mod.magazine. They install only through Load magazine (Craft) in scripts/payload-use.mjs,
+// which sets their fires, so the generic Install onto… and the field toggle are hidden for them. Uninstall still works, after a
+// confirm when fires are left: unloading dumps them (payload-use.mjs).
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.Mods.Install";
@@ -56,6 +59,9 @@ export const freeSlots = host => (getHostCatalog(host)?.modSlots ?? 0) - usedSlo
 /** An installed mod is on unless switched off in the field (mod.active === false). */
 export const isActive = mod => getModData(mod)?.active !== false;
 
+/** A payload magazine: installed by a Craft roll (scripts/payload-use.mjs), never by the generic Install or the field toggle. */
+export const isMagazine = mod => !!getModData(mod)?.magazine;
+
 /** Installed on a host and switched on. */
 export const isRunning = mod => !!installedHost(mod) && isActive(mod);
 
@@ -82,20 +88,31 @@ const blocked = (reason, mod, host) => ui.notifications.warn(game.i18n.format(`$
   families: normalizeHosts(mod).join(", "), hostFamilies: (getHostCatalog(host)?.modFamily ?? []).join(", "),
 }));
 
-/** Install a mod onto a host on the same Actor. */
-export async function installMod(mod, host) {
+/**
+ * Install a mod onto a host on the same Actor.
+ * @param {object} [changes]  Extra changes written to the mod in the same update (a magazine's system.quantity).
+ * @returns {Promise<boolean>}  Whether it was installed.
+ */
+export async function installMod(mod, host, changes = {}) {
   const check = canInstall(mod, host);
-  if (!check.ok) return blocked(check.reason, mod, host);
+  if (!check.ok) {
+    blocked(check.reason, mod, host);
+    return false;
+  }
   const ids = installedMods(host).map(m => m.id);
   await mod.parent.updateEmbeddedDocuments("Item", [
     { _id: host.id, [`flags.${MODULE_ID}.installedMods`]: [...ids, mod.id] },
-    { _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: host.id, [`flags.${MODULE_ID}.mod.active`]: true },
+    { ...changes, _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: host.id, [`flags.${MODULE_ID}.mod.active`]: true },
   ]);
   ui.notifications.info(game.i18n.format(`${L}.Installed`, { mod: mod.name, host: host.name, used: usedSlots(host), slots: getHostCatalog(host).modSlots }));
+  return true;
 }
 
-/** Uninstall a mod: clear mod.installedOn and remove it from the host's installedMods. */
-export async function uninstallMod(mod) {
+/**
+ * Uninstall a mod: clear mod.installedOn and remove it from the host's installedMods.
+ * @param {object} [operation]  Update operation options, passed on to the updateItem hooks.
+ */
+export async function uninstallMod(mod, operation = {}) {
   const actor = mod?.parent;
   if (!(actor instanceof Actor)) return;
   const hostId = getModData(mod)?.installedOn;
@@ -103,7 +120,7 @@ export async function uninstallMod(mod) {
   const updates = [];
   if (host) updates.push({ _id: host.id, [`flags.${MODULE_ID}.installedMods`]: installedMods(host).map(m => m.id).filter(id => id !== mod.id) });
   updates.push({ _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: null });
-  await actor.updateEmbeddedDocuments("Item", updates);
+  await actor.updateEmbeddedDocuments("Item", updates, operation);
   ui.notifications.info(game.i18n.format(`${L}.Uninstalled`, { mod: mod.name, host: host?.name ?? "—" }));
 }
 
@@ -183,22 +200,35 @@ export function registerMods() {
     menuItems.push(
       {
         label: `${L}.Menu.Install`, icon: "fa-solid fa-screwdriver-wrench",
-        visible: target => { const mod = modItem(target); return !!mod && !installedHost(mod); },
+        visible: target => { const mod = modItem(target); return !!mod && !isMagazine(mod) && !installedHost(mod); },
         onClick: (event, target) => promptInstall(modItem(target)),
       },
       {
         label: `${L}.Menu.Uninstall`, icon: "fa-solid fa-link-slash",
         visible: target => { const mod = modItem(target); return !!mod && !!installedHost(mod); },
-        onClick: (event, target) => uninstallMod(modItem(target)),
+        onClick: async (event, target) => {
+          const mod = modItem(target);
+          const fires = Number(mod.system.quantity ?? 0);
+          if (isMagazine(mod) && (fires > 0)) {
+            const escape = foundry.utils.escapeHTML;
+            const ok = await foundry.applications.api.DialogV2.confirm({
+              window: { title: game.i18n.format(`${L}.UnloadMagazine.Title`, { mod: mod.name }) },
+              content: `<p>${game.i18n.format(`${L}.UnloadMagazine.Content`, { mod: escape(mod.name), fires })}</p>`,
+              rejectClose: false,
+            });
+            if (!ok) return;
+          }
+          return uninstallMod(mod);
+        },
       },
       {
         label: `${L}.Menu.Activate`, icon: "fa-solid fa-toggle-on",
-        visible: target => { const mod = modItem(target); return !!mod && !!installedHost(mod) && !isActive(mod); },
+        visible: target => { const mod = modItem(target); return !!mod && !isMagazine(mod) && !!installedHost(mod) && !isActive(mod); },
         onClick: (event, target) => setModActive(modItem(target), true),
       },
       {
         label: `${L}.Menu.Deactivate`, icon: "fa-solid fa-toggle-off",
-        visible: target => { const mod = modItem(target); return !!mod && !!installedHost(mod) && isActive(mod); },
+        visible: target => { const mod = modItem(target); return !!mod && !isMagazine(mod) && !!installedHost(mod) && isActive(mod); },
         onClick: (event, target) => setModActive(modItem(target), false),
       },
     );
@@ -244,6 +274,6 @@ export function registerMods() {
 
   const module = game.modules.get(MODULE_ID);
   if (module) {
-    module.api = { ...(module.api ?? {}), normalizeHosts, getHostCatalog, getModData, usedSlots, freeSlots, canInstall, installMod, uninstallMod, installedMods, installedHost, isActive, isRunning, setModActive, softwareEdges };
+    module.api = { ...(module.api ?? {}), normalizeHosts, getHostCatalog, getModData, usedSlots, freeSlots, canInstall, installMod, uninstallMod, installedMods, installedHost, isActive, isMagazine, isRunning, setModActive, softwareEdges };
   }
 }
