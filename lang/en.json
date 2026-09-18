@@ -227,6 +227,17 @@
       "ClassBlocked": "{actor} is a Cyborg: Arcane Severance bars all magic, so they can’t take the {name} class.",
       "AncestryBlocked": "{actor} is a {name}: Arcane Severance bars all magic, so they can’t become a Cyborg."
     },
+    "CasterChrome": {
+      "SheetLine": "Chrome spent {spent} / {cap} soft-cap",
+      "SheetLineOver": "Chrome spent {spent} / {cap} soft-cap — Weave Strain: bane on Magic / Veil / Resonance power rolls",
+      "Hint": "Caster chrome soft-cap: Elementalists, Street Priests, and Technomancers take a bane on every Magic, Veil, or Resonance power roll while more than 5 Body Integrity is spent on installed chrome. Removing implants to get back to 5 or less clears it. Magic erosion applies separately.",
+      "Over": "{actor} has {spent} Body Integrity spent on chrome, over the caster soft-cap of {cap}: Weave Strain — Magic / Veil / Resonance power rolls take a bane until chrome is removed.",
+      "Cleared": "{actor} is back to {spent} / {cap} Body Integrity spent on chrome: Weave Strain clears.",
+      "Effect": {
+        "Name": "Chrome Soft-Cap — Weave Strain",
+        "Description": "<p>More than 5 Body Integrity is spent on installed chrome. Every Magic, Veil, or Resonance power roll takes a bane until surgical removal brings spent Integrity back to 5 or less. Ghostwire adds and removes this effect automatically; disable it to waive the bane.</p>"
+      }
+    },
     "Chrome": {
       "Datajack": {
         "Name": "Datajack",

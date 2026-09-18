@@ -12,6 +12,7 @@ import { registerAbilitySfx } from "./sfx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
 import { registerPayloadUse } from "./payload-use.mjs";
 import { registerFreeStrikeStrip } from "./free-strikes.mjs";
+import { registerCasterChrome } from "./caster-chrome.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -95,6 +96,7 @@ Hooks.once("init", () => {
   registerEquipmentUse();
   registerPayloadUse();
   registerFreeStrikeStrip();
+  registerCasterChrome({ isCyborg, casterClasses: VEIL_CASTER_CLASSES });
 });
 
 // ---------- Wired connection states ----------

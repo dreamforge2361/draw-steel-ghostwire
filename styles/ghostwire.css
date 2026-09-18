@@ -68,6 +68,17 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   text-align: center;
 }
 
+/* Caster chrome soft-cap line (B55b) inside the Body Integrity fieldset */
+.ghostwire-integrity .ghostwire-caster-softcap {
+  flex: 1 0 100%;
+  margin: 0;
+}
+
+.ghostwire-integrity .ghostwire-caster-softcap.over {
+  color: var(--color-level-error, #d33);
+  font-weight: bold;
+}
+
 /* Chrome implant summary line under the item name */
 .ghostwire-chrome-line {
   font-size: var(--font-size-12, 12px);
