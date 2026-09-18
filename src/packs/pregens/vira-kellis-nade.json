@@ -1638,13 +1638,14 @@
       "_key": "!actors.items!8jyyJ1eq3XQnJ95X.mF5pdaFGJqb5aa1d"
     },
     {
-      "_id": "xu0YPMxCDaUwC3kX",
-      "name": "GHOSTWIRE.Kits.RiggersHarness.Name",
+      "_id": "odaoLD5Zsk55krGJ",
+      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.odaoLD5Zsk55krGJ",
+      "name": "GHOSTWIRE.Kits.FabricatorsBench.Name",
       "type": "kit",
-      "img": "icons/commodities/tech/cog-bronze.webp",
+      "img": "icons/tools/hand/wrench-steel-grey.webp",
       "system": {
         "description": {
-          "value": "GHOSTWIRE.Kits.RiggersHarness.Description",
+          "value": "GHOSTWIRE.Kits.FabricatorsBench.Description",
           "director": ""
         },
         "source": {
@@ -1652,20 +1653,20 @@
           "page": "10-kits",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "riggers-harness",
+        "_dsid": "fabricators-bench",
         "advancements": {
-          "umVIra8QOXDXacrh": {
-            "name": "GHOSTWIRE.Kits.RiggersHarness.Signature.Name",
+          "lllSrmCP00rAHr9I": {
+            "name": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Name",
             "img": null,
             "type": "itemGrant",
             "requirements": {
               "level": null
             },
-            "_id": "umVIra8QOXDXacrh",
+            "_id": "lllSrmCP00rAHr9I",
             "description": "",
             "pool": [
               {
-                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.XCukPRyW9GrAdnP8"
+                "uuid": "Compendium.draw-steel-ghostwire.kits.Item.IYZfD6QGPHPpFknO"
               }
             ],
             "chooseN": null,
@@ -1687,9 +1688,9 @@
         "bonuses": {
           "melee": {
             "damage": {
-              "tier1": 0,
-              "tier2": 0,
-              "tier3": 0
+              "tier1": 1,
+              "tier2": 1,
+              "tier3": 1
             },
             "distance": null
           },
@@ -1702,19 +1703,18 @@
             "distance": 5
           },
           "stamina": 3,
-          "speed": 2,
+          "speed": 1,
           "stability": 0,
           "disengage": 1
         }
       },
+      "effects": [],
       "folder": "lTAM6n9BAFj6DzOA",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "flags": {},
-      "effects": [],
-      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.xu0YPMxCDaUwC3kX"
+      "flags": {}
     },
     {
       "_id": "38GL2Yy4oPm8tSZw",
@@ -2696,18 +2696,19 @@
       "_key": "!actors.items!8jyyJ1eq3XQnJ95X.HcFBu5NCRQcBLA2f"
     },
     {
-      "_id": "XCukPRyW9GrAdnP8",
-      "name": "GHOSTWIRE.Kits.RiggersHarness.Signature.Name",
+      "_id": "IYZfD6QGPHPpFknO",
+      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.IYZfD6QGPHPpFknO",
+      "name": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Name",
       "type": "ability",
-      "img": "icons/skills/targeting/crosshair-pointed-orange.webp",
+      "img": "icons/weapons/guns/gun-pistol-flintlock-metal.webp",
       "system": {
         "source": {
           "book": "Ghostwire Core Rulebook",
           "page": "10-kits",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "neural-snap-shot",
-        "story": "GHOSTWIRE.Kits.RiggersHarness.Signature.Story",
+        "_dsid": "bench-rigged-shot",
+        "story": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Story",
         "keywords": [
           "ranged",
           "strike",
@@ -2739,11 +2740,11 @@
             "reactive": false
           },
           "effects": {
-            "NgVfr2BuBp5Wrzqw": {
+            "dWHc61ZnhcenGMVD": {
               "name": "",
               "img": null,
               "type": "damage",
-              "_id": "NgVfr2BuBp5Wrzqw",
+              "_id": "dWHc61ZnhcenGMVD",
               "damage": {
                 "tier1": {
                   "value": "2 + @chr",
@@ -2775,28 +2776,28 @@
               },
               "sort": 0
             },
-            "WcFpmqaByv4Wyr9k": {
-              "name": "Shift",
+            "f58EkLCHbNfvVkht": {
+              "name": "Patch",
               "img": null,
               "type": "other",
-              "_id": "WcFpmqaByv4Wyr9k",
+              "_id": "f58EkLCHbNfvVkht",
               "other": {
                 "tier1": {
-                  "display": "GHOSTWIRE.Kits.RiggersHarness.Signature.Rider1",
+                  "display": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Rider1",
                   "potency": {
                     "value": "@potency.weak",
                     "characteristic": "none"
                   }
                 },
                 "tier2": {
-                  "display": "GHOSTWIRE.Kits.RiggersHarness.Signature.Rider2",
+                  "display": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Rider2",
                   "potency": {
                     "value": "@potency.average",
                     "characteristic": ""
                   }
                 },
                 "tier3": {
-                  "display": "GHOSTWIRE.Kits.RiggersHarness.Signature.Rider3",
+                  "display": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Rider3",
                   "potency": {
                     "value": "@potency.strong",
                     "characteristic": ""
@@ -2816,7 +2817,7 @@
           "after00000000000": {
             "_id": "after00000000000",
             "type": "base",
-            "description": "GHOSTWIRE.Kits.RiggersHarness.Signature.KitBonus",
+            "description": "GHOSTWIRE.Kits.FabricatorsBench.Signature.KitBonus",
             "before": false,
             "name": "",
             "img": null,
@@ -2824,14 +2825,13 @@
           }
         }
       },
+      "effects": [],
       "folder": "lTAM6n9BAFj6DzOA",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "flags": {},
-      "effects": [],
-      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.XCukPRyW9GrAdnP8"
+      "flags": {}
     },
     {
       "_id": "uPwkJ2WIJaWhNvLH",

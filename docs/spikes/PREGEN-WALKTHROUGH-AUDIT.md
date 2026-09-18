@@ -228,3 +228,7 @@ Runtime automation confirmed present: caster soft-cap (`>5` BI → Weave Strain)
 
 ## Fixes applied
 - **0.1.91** — Kessic P0 stripped Dual Boot + Backdoor Override.
+- **0.1.92** — P1 pregen data fixes:
+  - **Wren**: removed embedded L3 ability Careful Observation; kept Hesitation Is Weakness and other L1 Scout/Hunter grants; changer art flags untouched.
+  - **Barak**: kept **Battle Cry** (3); removed Command Persona/Fearful Awe (3). LOADOUTS.md does not require Command Persona; Battle Cry is the more iconic Street-Fixer/Commander table presence. Integrity 11/20 intact.
+  - **Vira**: swapped kit Rigger’s Harness → Fabricator’s Bench (plus signature Bench-Rigged Shot); Drone Jockey subclass unchanged; datajack/integrity 19/20 intact. Kit bonuses now match Fabricator’s Bench (stam+3, speed+1, melee+1, ranged+1).
