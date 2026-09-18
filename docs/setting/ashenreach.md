@@ -45,4 +45,4 @@ Cinderhold and the Outer Gate sit on Ossian Reach's wasteland seam, not inside A
 
 - Place a short **Geography** callout (this overview + rivalry) near Ossian Reach introduction / world map plate.
 - Keep RAW docs/raw/ free of lore; this file and Reach Handbook / masters are SoR for fiction.
-- Map labels: **Ossian Reach Hive** (SE) · **Ashenreach** (NW) · scale bar with ~300 mi city-to-city gap.
+- Map art is **unlabeled** (Foundry Notes / drawings for names + scale). Asset: ssets/maps/ossian-reach-regional-map.png (5120×2880) + optional ossian-reach-regional-map-2k.png.
