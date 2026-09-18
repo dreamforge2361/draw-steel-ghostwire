@@ -55,6 +55,7 @@ Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17
 5. Mark each file header: `**RAW status:** draft | locked` and `**Sources:** …`.
 
 ## Next deliveries
-1. **B42** — assemble `docs/raw/` from existing clarified chapters (spike).  
-2. **B42b** — Foundry Journal pack `rulebook` mirroring `docs/raw/` page-for-page — built by `tools/raw-to-journals.mjs` (pending Foundry-verify).  
-3. **B42c** — PDF build from `docs/raw/` (later).
+1. **B61** — lock print TOC (`docs/rulebook/TOC-PROPOSAL.md`) before further RAW body drafts.  
+2. Draft order after TOC lock: shared core (`01`/`03`/`04`) → Wire polish → Lifestyle → then PDF.  
+3. **B42b** — Foundry Journal pack regenerates from `docs/raw/` after locks (`tools/raw-to-journals.mjs`).  
+4. **PDF** — only after TOC lock + spine chapters filled.

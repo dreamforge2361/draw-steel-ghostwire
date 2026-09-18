@@ -48,6 +48,8 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 
 ## Track A — Rulebook (still open)
 
+**2026-09-18 (B61):** Print TOC proposal at `docs/rulebook/TOC-PROPOSAL.md`. Stage 3 shared-core drafts exist in `docs/raw/01`–`04` but remain thin (Partial). Stage 4 Wire/Veil/Machines drafts exist (`21`–`23`); Veil Rituals + §C3 locked. TOC lock → fill → PDF.
+
 | Item | Status | Notes |
 |---|---|---|
 | Stage 3 shared core (How to Play, characteristics, Power Rolls, combat basics) | **Todo** | DS reskin chapters |
