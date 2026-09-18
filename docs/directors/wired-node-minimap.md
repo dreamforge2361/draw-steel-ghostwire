@@ -1,8 +1,7 @@
-# B41 — Wired node topology minimap (backlog)
+# B41 — Wired node topology minimap
 
-**Status:** Backlog locked 2026-09-17 — design stub only.  
-**Tied to:** Wired Console (`scripts/wired-console.mjs`), node Actors / Scene nodes, Overlay vs Jacked In vision (B23c).  
-**Do NOT implement until Michael prioritizes** (natural after Console + vision tints feel solid).
+**Status:** Built 2026-09-17 (module 0.1.79) — **pending Michael Foundry-verify**. UX intent below is still the lock; as-built notes and the checklist are at the end.  
+**Tied to:** Wired Console (`scripts/wired-console.mjs`), node Actors / Scene nodes, Overlay vs Jacked In vision (B23c).
 
 ## Goal
 Players who are **on the Wired** (Overlay or Jacked In) get a **hovering topology view** of the Matrix nodes they can currently see on the Scene — so they can read node layout while still (in Overlay) seeing the meatspace canvas underneath.
@@ -35,3 +34,52 @@ Full 3D Matrix; replacing the meatspace Scene with a second Scene; GM-only topol
 
 ## Done when (future spike)
 Overlay: canvas + floating node map. Jacked In: dark scene + node map primary. Visibility respects reveal rules. Foundry-verify; no commit until Michael says.
+
+---
+
+## As-built (0.1.79)
+**Files:** `scripts/wired-minimap.mjs` (ApplicationV2 + Handlebars, registered from `module.mjs` next to the Console), `templates/wired-minimap.hbs`, CSS block *Wired node minimap (B41)* in `styles/ghostwire.css` (reuses the Console's `--wc-*` net-deck variables — same cyan / violet / hot-pink palette), i18n `GHOSTWIRE.WiredMinimap.*`.
+
+**Data — no parallel model.** Board = `getBoard(boardScene(game.scenes.viewed))`, exactly the Console's resolution (a matrix map Scene with `wiredMapFor` shows its board Scene's nodes). Players see `node.revealed` nodes only (the Console's player rule; placed tokens mirror it as `hidden: !revealed`). A GM opening it by hand sees every node; unrevealed ones are dashed and tagged *Hidden from runners* in the tooltip.
+
+**Who is "on the Wired".** Status ids from `module.mjs` `WIRED_STATUSES` (`ghostwire-overlay`, `ghostwire-jacked-in`) via the same `getWiredState` the Console and B23c use. The viewer's state is the strongest over: controlled tokens' actors (owned), the user's assigned character, and owned tokens on the viewed Scene. Jacked In beats Overlay.
+
+**Open / close.**
+- Players: auto-opens when that state becomes Overlay or Jacked In; resizes when it flips; auto-closes on Disconnected. Closing it by hand while connected keeps it closed until the state changes again (or the player reopens it).
+- Manual: Token controls button *Wired Node Map* (`fa-diagram-project`), an unbound keybinding (*Toggle the Wired Node Map*), and `game.modules.get("draw-steel-ghostwire").api.openWiredMinimap()`.
+- GMs never auto-open (the Console is theirs).
+
+**Modes.**
+| | Window | Canvas |
+|---|---|---|
+| Overlay | Compact (320×300 × scale), bottom-right above the hotbar, cyan frame | Untouched — B23c Overlay wash only |
+| Jacked In | Large (640×560 × scale), centred, hot-pink frame, bigger nodes / names | B23c Jacked In vision **plus** client-only `body.ghostwire-minimap-jacked-in #board { filter: brightness(.3) saturate(.25) }` while the map is open (setting can turn the extra dim off) |
+
+**Layout.** Nodes placed as tokens on the viewed Scene keep their relative canvas positions (aspect preserved). Unplaced nodes sit on a ring in board order when nothing is placed, or along the bottom edge when some are. Node glyph: ring = Integrity % for Track 2 (conic gradient), solid rounded square for Track 1; glow colour = Trace Alert band (quiet cyan → stir violet → malice amber → hunting pink → lockout red pulse); downed nodes dim. Label = `R#` (setting) + name.
+
+**Hover / click.** Tooltip (`data-tooltip-html`): name, Track · Rating, Integrity, Trace Alert + band. Click a placed node → pan to its token (GM also controls it); unplaced nodes do nothing.
+
+**Live refresh.** `updateScene` with module flags on the viewed / board Scene (Console add, reveal, edit, delete, reset, re-link), `create/update/deleteToken` on the viewed Scene (place, move, reveal, remove), node Actor create / update / delete, `canvasReady`. Connection: `create/update/deleteActiveEffect` on owned actors, `updateActor` with `flags.<module>.wired`, `controlToken`, `updateUser` (character), `canvasReady`, `ready`.
+
+**Settings.**
+| Key | Scope | Default | |
+|---|---|---|---|
+| `wiredMinimapEnabled` | world | on | Player auto-open + button for players |
+| `wiredMinimapScale` | client | 1 (0.6–1.6) | Window size in both modes |
+| `wiredMinimapRatings` | client | on | `R#` labels on node glyphs |
+| `wiredMinimapDim` | client | on | Extra canvas dim while Jacked In |
+
+**Edges — deferred to v1.1.** The board stores no node–node links, so v1 draws nodes only. v1.1 sketch: optional `links: [nodeId, …]` on each board node, edited in the Console detail panel; the minimap draws SVG lines between visible endpoints only (a link to an unrevealed node stays hidden).
+
+**Performance.** One DOM button per visible node; no canvas drawing. Re-render only on board / token / node-actor changes on the viewed Scene; `controlToken` re-evaluates state but only re-renders on a mode change.
+
+## Foundry-verify checklist
+1. **Overlay:** Director reveals 2–3 nodes in the Console. Player's hero uses *Connect* → map opens bottom-right; canvas still readable with the Overlay wash; only revealed nodes show.
+2. **Reveal live:** Director reveals another node → it appears on the player's map without reopening. Hiding it again removes it.
+3. **Place live:** Director *Place on canvas* → node moves from the ring / bottom row to a position matching its token; dragging the token re-lays the map. Click it → player's view pans to the token.
+4. **Tooltip:** hover shows name, Track · R#, Integrity (or *No ICE* for Track 1), Trace Alert + band. Director raising Alert changes the glow colour; 12 pulses red.
+5. **Jacked In:** *Toggle Connection State* → map grows and centres, frame goes pink, meatspace goes very dark (Token Vision on). Toggle back → compact again, dim lifts.
+6. **Jack Out** → map closes. Close it by hand while connected → it stays closed until the state changes; the Token-controls button reopens it.
+7. **Linked matrix map:** on a Scene with *Wired map for* set, the player map shows the board Scene's nodes.
+8. **Settings:** turn *Wired Node Map for players* off → map closes and doesn't reopen; size slider resizes; *Show node Ratings* off hides `R#`; *Dim the canvas* off → Jacked In keeps only the B23c vision.
+9. **GM:** no auto-open for the Director; the button opens a Director view with hidden nodes dashed.

@@ -6229,6 +6229,32 @@
       "AlreadyPlaced": "{name} is already on the canvas.",
       "NoNodeTemplate": "No Wired node token template found in Ghostwire Summons & Machines. Rebuild the summons pack."
     },
+    "WiredMinimap": {
+      "Title": "Wired Node Map",
+      "Keybinding": "Toggle the Wired Node Map",
+      "Director": "Director",
+      "NoNodes": "No nodes revealed on this grid yet.",
+      "Hidden": "Hidden from runners",
+      "FocusHint": "Click to pan to its token.",
+      "Settings": {
+        "Enabled": {
+          "Name": "Wired Node Map for players",
+          "Hint": "Open a floating node map for players whose hero is Overlay or Jacked In. It shows the revealed nodes on the viewed Scene's Wired Console board."
+        },
+        "Scale": {
+          "Name": "Wired Node Map size",
+          "Hint": "Scale the node map window (Overlay and Jacked In sizes)."
+        },
+        "Ratings": {
+          "Name": "Show node Ratings",
+          "Hint": "Label each node on the map with its Rating (R1–R5)."
+        },
+        "Dim": {
+          "Name": "Dim the canvas when Jacked In",
+          "Hint": "While Jacked In with the node map open, darken the meatspace canvas on this client so the map reads as primary."
+        }
+      }
+    },
     "RunGenerator": {
       "Title": "Run Generator",
       "Keybinding": "Toggle Run Generator",
