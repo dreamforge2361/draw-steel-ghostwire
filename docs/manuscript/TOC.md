@@ -2,13 +2,23 @@
 
 **Status:** Matches LOCKED recommended TOC in `docs/rulebook/TOC-PROPOSAL.md` (2026-09-18)  
 **Assemble:** `docs/manuscript/MANIFEST.yml` → `tools/assemble-manuscript.mjs`  
-**Source key:** `raw:` → `docs/raw/<file>` · `lore:` → stub under `01-lore/` · `NEW` → stub under manuscript · `front:` → `00-front/`
+**Source key:** `raw:` → `docs/raw/<file>` · `lore:` → `01-lore/` · `NEW` → manuscript · `front:` → `00-front/`
 
-Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules Parts I–V match the lock exactly. Lifestyle & Downtime body lives in `docs/raw/26-lifestyle-downtime.md` (B67).
+Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts I–V match the lock exactly. Lifestyle & Downtime body lives in `docs/raw/26-lifestyle-downtime.md` (B67). Print title / credits / how-to-use assemble before lore (B74).
 
 ---
 
-## Lore harvest (pre-rules; stubs only)
+## Front (print-only; before lore)
+
+| # | Print title | Source |
+|---|---|---|
+| — | Title plate | `front:` `00-front/title-page.md` — draft B74; cover art hole reserved (artist TBD) |
+| — | Copyright & Credits | `front:` `00-front/credits.md` — Michael Frantz / dreamforge2361; DS + Foundry attribution; no invented artists |
+| — | How to Use This Book | `front:` `00-front/how-to-use-this-book.md` — rules SoR vs lore; safety → HTP; In Foundry pattern |
+
+---
+
+## Lore harvest (pre-rules)
 
 | # | Print title | Source |
 |---|---|---|
@@ -92,3 +102,4 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 - Chrome (`09-chrome-body-integrity.md`) **implant ¥ + Availability catalog** 2026-09-18 (B71); journals **not** regenerated.
 - Advancement (`24-advancement.md`) + Backgrounds (`06-backgrounds-professions.md`) **Stage 3 fill** 2026-09-19 (B73); journals **not** regenerated.
 - Running Ossian Reach (`03-directors/27-running-ossian-reach.md`) **Stage 3 pointer fill** 2026-09-19 (B73); no lore reprint; journals **not** regenerated.
+- Print front (`00-front/title-page.md`, `credits.md`, `how-to-use-this-book.md`) **draft** 2026-09-19 (B74); cover artist credits **TBD**; journals **not** regenerated.

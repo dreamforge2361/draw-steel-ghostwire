@@ -186,7 +186,7 @@ Use Draw Steel Heroes for the left column. Ghostwire changes only what the right
 - **The Wired is a second battlefield.** Every runner can connect; Hackers and Technomancers live there (`21`).
 - **Magic is rare and costly.** Veil casters fight chrome erosion; Cyborgs are severed from the Veil (`22`).
 - **Machines are allies.** Anyone can run one drone; Wrenches run fleets and vehicles (`23`).
-- **Lifestyle will matter.** Burn, Medic restock quotes, and downtime projects get a dedicated chapter (TOC Ch 10 NEW) — until then, use pointers in `08` / class text.
+- **Lifestyle matters.** Burn, Medic restock quotes, and downtime projects live in print Ch 10 (`26`).
 
 ---
 

@@ -21,9 +21,21 @@ entries:
     path: 00-front/title-page.md
     kind: front
 
+  - type: file
+    id: credits
+    title: Copyright & Credits
+    path: 00-front/credits.md
+    kind: front
+
+  - type: file
+    id: how-to-use-print
+    title: How to Use This Book
+    path: 00-front/how-to-use-this-book.md
+    kind: front
+
   - type: part
     id: lore
-    title: Lore Harvest (stubs)
+    title: Lore Harvest
 
   - type: file
     id: L1

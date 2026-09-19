@@ -1,8 +1,8 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Assemble + gap fill 2026-09-19 (B73) — module **0.3.2**; Ch 27 pointer filled; journals still held  
+**Status:** Title plate + print front (B74, 2026-09-19) — module **0.3.3**; journals still held  
 **Path:** `docs/manuscript/`  
-**Spike:** `docs/spikes/B64-MANUSCRIPT-SOR.md`  
+**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73 assemble gaps · **B74** title/front  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
 
 This folder is the **single Markdown source of record** for the eventual print PDF: lore harvested from the original Ghostwire master PDFs, plus rules pointed at `docs/raw/` (no dual-edit copies).
@@ -16,7 +16,7 @@ This folder is the **single Markdown source of record** for the eventual print P
 | **Print SoR** | Ordered Markdown that Pandoc (later) turns into the core book PDF |
 | **Lore stubs** | Placeholders under `01-lore/` until artwork/lore is carried as-is from master PDFs |
 | **Rules pointers** | Manifest entries → `docs/raw/*.md` (Stage 3 filled chapters stay in raw; manuscript does not fork them) |
-| **NEW print-only** | Lifestyle → `../raw/26-lifestyle-downtime.md` (B67 draft); Running Ossian Reach → `03-directors/27-running-ossian-reach.md` (B73 pointer fill) |
+| **NEW print-only** | Title / credits / how-to-use → `00-front/` (B74); Lifestyle → `../raw/26-lifestyle-downtime.md` (B67); Running Ossian Reach → `03-directors/27-running-ossian-reach.md` (B73) |
 
 **Not** a second rules edit surface. **Not** the Foundry Journal pipeline.
 
@@ -81,7 +81,7 @@ See `TOC.md` for print titles ↔ sources. See `02-rules/README.md` for the poin
 1. **Artwork / lore prose** — carry **as-is** from the master Ghostwire PDFs (Core Sourcebook, Lore Book V2, related plates). Do not rewrite voice for “DS alignment” in lore chapters.
 2. **Rules** — **Ghostwire-original** wording from `docs/raw/` only. No substantial MCDM / *Draw Steel: Heroes* paste. Engine = DS by reference + GW remap tables already in raw.
 3. **Do not** paste lore into `docs/raw/`. Lore harvest lands under `01-lore/` (or front matter stubs), then joins the book via the manifest.
-4. Lore harvest landed in B65 (L1–L3). Remaining print stub: title/credits plate (`00-front/title-page.md`). Ch 27 is a pointer fill (B73), not a harvest.
+4. Lore harvest landed in B65 (L1–L3). Title plate + credits + print how-to drafted in B74; **cover artist names still TBD (Michael)**. Ch 27 is a pointer fill (B73), not a harvest.
 
 ---
 
@@ -92,7 +92,7 @@ docs/manuscript/
   README.md              # this file
   TOC.md                 # print TOC ↔ sources
   MANIFEST.yml           # assemble order
-  00-front/              # title / how-to-use print stubs (optional)
+  00-front/              # title plate, credits, print how-to-use (B74)
   01-lore/               # Core Sourcebook / Lore Book harvest stubs
   02-rules/              # pointer notes only (no full raw copies)
   03-directors/          # NEW Reach pointer stub; Opposition → raw

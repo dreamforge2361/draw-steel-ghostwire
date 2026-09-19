@@ -1,15 +1,18 @@
 # Front Matter
 
-**RAW status:** draft  
-**Sources:** `docs/raw/00-INDEX.md`, `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/00-STAGE1-skeleton.md`
+**RAW status:** draft (print-front expand B74, 2026-09-19)  
+**Sources:** `docs/raw/00-INDEX.md`, `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/00-STAGE1-skeleton.md`  
+**Print:** Chapter 0 — license, conventions, abbreviations, glossary. Title plate / credits / print how-to live in `docs/manuscript/00-front/` and assemble **before** lore.
 
 ---
 
 ## What this book is
 
-This is the **Ghostwire rules-as-written (RAW) rulebook**: the rules a Director and players need at the table, and nothing else. There is no setting lore, no fiction, and no art direction here — those live in the Ghostwire lore books.
+This is the **Ghostwire rules-as-written (RAW)** layer: the rules a Director and players need at the table. There is no setting lore, no fiction, and no art direction **in this chapter**. In the print manuscript, harvested lore (L1–L3) and the title plate precede this chapter; they do not change a single procedure here.
 
-Ghostwire is a cyberpunk game that runs on the **Draw Steel** engine. Where Draw Steel already has a rule, Ghostwire uses it and changes only names and flavor. Where the setting needs something Draw Steel doesn’t have — chrome and Body Integrity, the Wired, tracked money, drones and vehicles — this book adds it.
+Ghostwire is a cyberpunk-fantasy game that runs on the **Draw Steel** engine. Where Draw Steel already has a rule, Ghostwire uses it and changes only names and flavor. Where the setting needs something Draw Steel doesn’t have — chrome and Body Integrity, the Wired, tracked money, drones and vehicles — this book adds it.
+
+**Session zero:** agree hard lines and soft lines before chargen. Full tone-and-safety procedure is **How to Play** (print Ch 1). This chapter does not invent a second safety tool.
 
 ## How this book relates to Draw Steel Heroes
 
@@ -74,6 +77,29 @@ Each chapter’s header shows **RAW status: draft** or **RAW status: locked**, a
 - **Progression** is **Level 1–10**, grouped into **Echelon 1–4**. Ghostwire has no separate tier ladder for heroes, gear, or foes.
 - **Currency** is nuyen, written **¥**.
 - A **provisional** number is playable but not yet tuned.
+- **In Foundry** callouts (B68) name shipped *Draw Steel — Ghostwire Build* UI only. They are click-notes, not a second rule. Ignore any control that is not in the module.
+
+## Abbreviations
+
+Short forms used in headers, tables, and sidebars. The glossary below still wins if a line is ambiguous.
+
+| Abbr. | Means | Notes |
+|---|---|---|
+| **DS** | Draw Steel | Engine by reference — *Heroes* is a separate product |
+| **GW** | Ghostwire | This setting and this module |
+| **HTP** | How to Play | Print Ch 1 / `01-how-to-play.md` |
+| **RAW** | Rules as written | `docs/raw/` is SoR for procedures |
+| **¥** | Nuyen | Tracked money; never character power |
+| **BI** | Body Integrity | Living chrome capacity; starts at 20 |
+| **PR** | Power Roll | Results **low / middle / high** |
+| **ICE** | Intrusion countermeasures | Wired defenses on a node |
+| **RCC** | Rigger command console | Drone command hardware |
+| **EV** | Encounter value / budget | Use Draw Steel’s; Ghostwire does not invent a second one |
+| **SoR** | Source of record | Rules = raw; print assemble = manuscript + raw pointers |
+
+**E1–E4** on a **hero** means echelon. **E1–E4** on a **Wired Flats host** means ICE posture / Node Rating — not the runner’s level (`21`, print Ch 27).
+
+**T5–T1** in old drafts is a legacy ladder. Convert with the tables in Advancement (`24`). Do not say “tier” to players.
 
 ## Glossary
 

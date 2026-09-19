@@ -2,6 +2,8 @@
 # Prefer MANIFEST.yml — this file is a human-readable mirror for quick greps.
 # --- Front ---
 00-front/title-page.md
+00-front/credits.md
+00-front/how-to-use-this-book.md
 # --- Lore ---
 01-lore/L1-setting-primer.md
 01-lore/L2-peoples-and-world.md

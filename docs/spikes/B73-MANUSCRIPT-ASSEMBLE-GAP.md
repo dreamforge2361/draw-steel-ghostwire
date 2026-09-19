@@ -126,8 +126,8 @@ Ghostwire-original procedure. No DS Heroes copy-paste. No new chrome ¥ ladders.
 |---|---|---|
 | 1 | **Ch 12 Mods** still 882 words | Complete lock; unpublished armor/gadget families — do not invent |
 | 2 | **Ch 8 Languages** 364 | Gazetteer explicitly non-goal |
-| 3 | **Title / credits plate** | Art direction from master PDF |
-| 4 | **Ch 0 Front matter** ~1.3k | Glossary strong; optional how-to-this-book expand |
+| 3 | **Title / credits plate** | **Done B74** — plate + credits + print how-to; artist *names* still Michael TBD |
+| 4 | **Ch 0 Front matter** ~1.3k | **Expanded B74** (abbreviations, print-vs-RAW note, safety pointer) |
 | 5 | **L2 vs L1 depth** | Harvest-complete; more prose only if Michael wants booklet weight |
 | 6 | Followers & Contacts | v1 non-goal; still a stub paragraph in `26` |
 | 7 | Buildings shared inventory / ramming one-pager | TOC-PROPOSAL follow-ons |
