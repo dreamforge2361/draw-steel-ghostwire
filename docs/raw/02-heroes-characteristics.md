@@ -1,31 +1,58 @@
 # Heroes and Characteristics
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/SPECIES-DS-MAP.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, class chapters (chassis tables), `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`  
-**Engine:** Draw Steel Heroes — use the official rules for making a hero and for characteristics; Ghostwire remaps below.
+**RAW status:** draft (Stage 3 fill 2026-09-18)  
+**Sources:** `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/SPECIES-DS-MAP.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, class chapters (chassis tables), `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`, `docs/raw/26-lifestyle-downtime.md`  
+**Engine:** Draw Steel Heroes — use the official rules for making a hero and for characteristic scores, ranges, and uses; Ghostwire remaps and table procedures below are original wording.
 
 ---
 
 ## Making a runner
 
-Follow Draw Steel’s hero creation, with these Ghostwire steps and swaps:
+A **runner** is Ghostwire’s hero: a professional who takes dangerous jobs for pay. Rules text may still say “hero”; at the table, say **runner**. Together you are a **crew**.
 
-1. **People** (ancestry) — `05-ancestries.md`.
-2. **Background** (culture) and **Profession** (career) — `06-backgrounds-professions.md`.
-3. **Class** — `12`–`20`.
-4. **Kit** — one free Kit, including Street-grade qualifying gear for it (`08-kits-gear-wealth.md`).
-5. **Skills** — from your People, Background, Profession, and class (skill list below).
+Making a runner means assembling four layers that never replace each other:
+
+| Layer | What it answers | Where it lives |
+|---|---|---|
+| **People** | What body and birthright you start with | `05-ancestries.md` |
+| **Background + Profession** | Where you grew up and what you did before the job | `06-backgrounds-professions.md` |
+| **Class** | How you fight, jack in, heal, lead, or call the Veil | `12`–`20` |
+| **Kit + gear + ¥** | Martial doctrine and starting kit on the street | `08-kits-gear-wealth.md` |
+
+Characteristics and skills sit under all of that. Characteristics are the five scores you add to Power Rolls (`03`). Skills are the named specialties that grant edges or allow tests the Director would otherwise refuse. Class features, heroic resources, Stamina, and Recoveries come from your class chassis — not from ¥, chrome, or Lifestyle.
+
+**Firewall (chargen and forever):** characteristics, skills, class features, and heroic resources come only from People, Background, Profession, class, perks, and advancement. **¥ never buys character power.** Chrome and gear never grant characteristics, skills, or class features (`08`, `09`, `10`). Lifestyle buys living standard between runs, not sheet power (`26`).
+
+A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score.
+
+---
+
+## Chargen step order
+
+Use Draw Steel’s hero-creation math for score assignment and anything this book does not remap. Ghostwire’s **step order** at the table is:
+
+1. **People** (ancestry) — pick a People package, take free signature traits, spend the ancestry-point budget (`05-ancestries.md`). Ghostwire calls ancestries **Peoples**.
+2. **Background** (culture) and **Profession** (career) — one of each; each grants fixed and chosen skills from the Ghostwire list below (`06-backgrounds-professions.md`).
+3. **Class** — pick one of the nine classes (`12`–`20`). Record subclass (if any), signature abilities, first heroic abilities, heroic resource, starting Stamina, Recoveries, and the class’s core characteristics.
+4. **Kit** — take **one free Kit**, including Street-grade qualifying gear for it (`08-kits-gear-wealth.md`). Pure casters and deck-bound Hackers may take a light Kit or none if the class chapter allows fighting through the Veil or the Wire instead.
+5. **Skills** — collect grants from People, Background, Profession, and class. No wasted duplicates; if a pick collides, choose another skill from the same group (then any group) per `06`. Full list below.
 6. **Languages** — `07-languages.md`.
-7. **Starting ¥** — **¥5,000** (`08`).
-8. **Body Integrity** — **20** for every People except Cyborg (`09`).
+7. **Starting ¥** — **¥5,000** liquid on the sheet (`08`). Do not pre-spend Lifestyle; Lifestyle is paid at the first respite between runs (`26`).
+8. **Body Integrity** — **20** for every People except Cyborg (`09`). Chrome is opt-in after (or during) play — never an auto-grant at chargen.
+9. **Optional early spends** — Street-band gear, a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`.
 
-A new runner starts with no chrome and no mods.
+When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, next Lifestyle band).
+
+> **In Foundry**
+> On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**) — Draw Steel’s Might / Agility / Reason / Intuition / Presence under the hood. The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign scores and skills as in Draw Steel; Ghostwire localization and module fields do not invent a second attribute set.
+
+---
 
 ## Characteristics
 
-Ghostwire renames Draw Steel’s five characteristics. The numbers, ranges, and uses are Draw Steel’s.
+Ghostwire renames Draw Steel’s five characteristics. The **numbers, ranges, and mechanical uses** are Draw Steel’s. Abilities that list a Draw Steel characteristic use its Ghostwire name. **Potency** uses these names too: a potency keyed to Physique uses the target’s Physique score.
 
-| Ghostwire | Draw Steel | Covers |
+| Ghostwire | Draw Steel alias | Short cover |
 |---|---|---|
 | **Physique** | Might | Strength, toughness, raw force |
 | **Reflex** | Agility | Speed, coordination, aim, stealth |
@@ -33,27 +60,35 @@ Ghostwire renames Draw Steel’s five characteristics. The numbers, ranges, and 
 | **Instinct** | Intuition | Awareness, reading people and situations, connecting to the Wired |
 | **Persona** | Presence | Force of personality, leadership, faith |
 
-Abilities that list a Draw Steel characteristic use its Ghostwire name. **Potency** uses these names too: for example, a potency keyed to Physique uses the target’s Physique score.
+Ghostwire names are **primary** in this book. Legacy Draw Steel names appear only as aliases for cross-reference.
 
-## Classes at a glance
+### Physique
 
-| Class | Core characteristics | Heroic resource | Starting Stamina | Stamina per level | Recoveries | Epic resource / capstone (10th) |
-|---|---|---|---|---|---|---|
-| Operator | Physique, Reflex | Adrenaline | 21 | +9 | 10 | Combat Legend (Overclock) |
-| Scout | Reflex, Logic | Advantage | 18 | +6 | 8 | Subterfuge |
-| Commander / Face | Persona, Instinct | Influence | 21 | +9 | 10 | Command |
-| Medic | Instinct, Logic | Reagents | 18 | +6 | 8 | Master Chemist |
-| Wrench | Logic, Reflex | Uptime | 18 | +6 | 8 | Overclock |
-| Elementalist | Logic, Persona | Essence | 18 | +6 | 8 | Primordial Reservoir |
-| Street Priest | Persona, Instinct | Conviction | 18 | +6 | 8 | Manifest Will |
-| Hacker | Logic, Instinct | Bandwidth | 19 | +7 | 9 | Ghost in the Machine |
-| Technomancer | Logic, Persona | Resonance | 18 | +8 | 8 | Master of the Current |
+**Physique** is meat and metal under pressure: shoving doors, grapples, hauling a downed runner, forcing a jammed hatch. It drives Athletics- and Brawl-heavy tests and any Power Roll for raw force or toughness. Operators lean on it; so do heavy Peoples and anyone who expects the job to go hands-on first. Chrome that reinforces bone or muscle does **not** raise Physique — scores still come from chargen and advancement (`09`, `24`).
 
-Class chapters have the full chassis.
+### Reflex
 
-## Skills
+**Reflex** is timing, aim, balance, and not being where the round goes. It covers Firearms, Stealth, Acrobatics under fire, and most “move clean / shoot clean” moments. Scouts and Kit-forward builds live here. Driving under pressure often pulls Reflex when the question is control, not route planning. Smartlinks and chrome never rewrite the Reflex score.
 
-Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in tests exactly as Draw Steel’s do (`03`). There are **44 skills in six groups**.
+### Logic
+
+**Logic** is analysis, procedure, and systems thinking. Engineering, Electronics, Medicine, Security Systems, Matrix Theory, and most **Hacking** rolls key off Logic when the question is “do I understand and defeat this system?” Wrench, Hacker, Medic, Elementalist, and Technomancer treat it as core. On the Wire, Logic is the usual partner for intrusion unless an ability says otherwise (`21`).
+
+### Instinct
+
+**Instinct** is awareness and gut read: Perception in a dark alley, Insight across a table, Survival when the map lies, sensing a node is wrong before ICE spikes. It often covers **feeling** the Wire or Veil without a full analytical pass — Trace heat, taint, a lie mid-handshake. Medic and Street Priest lean on it; Hackers pair it with Logic. **Insight** is a skill; **Instinct** is the characteristic — do not conflate them.
+
+### Persona
+
+**Persona** is presence that moves people: Negotiation, Persuasion, Intimidation, Command, Performance, and faith when the Street Priest calls Conviction. Commanders / Faces and Street Priests treat it as core; Elementalists and Technomancers often pair it with Logic. Persona does not buy Lifestyle doors — upkeep bands (`26`) open housing and access; Persona is how you work the people once you are in the room.
+
+---
+
+## Skills overview
+
+Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work on tests as Draw Steel’s do (`03`): the Director names a characteristic; a relevant skill applies when you have it; edges/banes stack per Power Roll rules. There are **44 skills in six groups**.
+
+Gain skills from **People**, **Background**, **Profession**, and **class** (later from advancement). Background and Profession use fixed + chosen picks with a no-duplicate rule (`06`). Perk skill groups: Crafting → **Technical**, Exploration → **Action**, Interpersonal → **Social**, Lore → **Knowledge** (`11-perks.md`). Skills never come from ¥, chrome, or Lifestyle.
 
 ### Action skills
 
@@ -82,6 +117,8 @@ Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in te
 | Demolitions | Breaching charges, bombs, traps, and controlled destruction |
 | Security Systems | Locks, alarms, bypass tools, surveillance nets, and physical security architecture |
 
+**Hacking** and Wire procedures live in `21-the-wire.md`. **Cybertech** is how you talk about chrome on the table; installing still costs ¥ + Body Integrity per `09`.
+
 ### Knowledge skills
 
 | Skill | Covers |
@@ -108,8 +145,6 @@ Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in te
 | Performance | Public speaking, stagecraft, music, distraction, and social spectacle |
 | Contacts | Calling in favors, finding specialists, and navigating social networks |
 
-**Insight** is a skill. **Instinct** is the characteristic.
-
 ### Vehicle and drone skills
 
 | Skill | Covers |
@@ -119,6 +154,8 @@ Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in te
 | Rigging | Direct neural or remote control of drones and vehicles |
 | Gunnery | Vehicle-mounted weapons, drone weapon systems, and turret control |
 | Navigation | Route planning, pursuit lines, safe corridors, and hazard reading |
+
+Machines rules: `23-machines.md`.
 
 ### Magic and supernatural skills
 
@@ -131,8 +168,44 @@ Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work in te
 | Corruption | Recognizing taint, surviving exposure, and handling warped forces or zones |
 | Summoning | Calling, binding, bargaining with, or directing supernatural entities |
 
-**Perk types and skill groups:** Crafting perks lean on Technical skills, Exploration on Action skills, Interpersonal on Social skills, and Lore on Knowledge skills (`11-perks.md`).
+Veil-facing detail is thin by design (`22`). Ritual downtime points at Lifestyle project slots when you need a roof and a quiet room (`26`).
 
-## Build firewall
+---
 
-Character power — characteristics, skills, class features, heroic resources — comes only from your People, Background, Profession, class, perks, and advancement. **¥ never buys character power**, and chrome and gear never grant characteristics, skills, or class features (`08`, `09`, `10`).
+## Heroic resources at a glance
+
+Each class fuels abilities with its own **heroic resource**. Timing follows Draw Steel unless a class chapter says otherwise. This table is a **pointer** — full chassis live in `12`–`20`.
+
+| Class | Core characteristics | Heroic resource | Starting Stamina | Stamina / level | Recoveries | Epic resource / capstone (10th) |
+|---|---|---|---|---|---|---|
+| Operator | Physique, Reflex | Adrenaline | 21 | +9 | 10 | Combat Legend (Overclock) |
+| Scout | Reflex, Logic | Advantage | 18 | +6 | 8 | Subterfuge |
+| Commander / Face | Persona, Instinct | Influence | 21 | +9 | 10 | Command |
+| Medic | Instinct, Logic | Reagents | 18 | +6 | 8 | Master Chemist |
+| Wrench | Logic, Reflex | Uptime | 18 | +6 | 8 | Overclock |
+| Elementalist | Logic, Persona | Essence | 18 | +6 | 8 | Primordial Reservoir |
+| Street Priest | Persona, Instinct | Conviction | 18 | +6 | 8 | Manifest Will |
+| Hacker | Logic, Instinct | Bandwidth | 19 | +7 | 9 | Ghost in the Machine |
+| Technomancer | Logic, Persona | Resonance | 18 | +8 | 8 | Master of the Current |
+
+**Combat note:** Medic **Reagents do not reset** when a fight starts or ends (`04`, `15`). Hacker **Bandwidth** interacts with Overlay / Jacked In (`21`). Caster chrome soft-caps / Weave Strain live in `09`.
+
+---
+
+## Victories, level, and what comes later
+
+Runners advance **Level 1–10** by Draw Steel’s rules for experience and **Victories**. Ghostwire invents no second XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.
+
+What leveling does **not** grant: Body Integrity, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`).
+
+---
+
+## Build firewall (restated)
+
+- **Characteristics and skills** — People, Background, Profession, class, perks, advancement only.
+- **Heroic resources and class features** — class chapters only.
+- **¥** — objects and services: gear, chrome hardware, installs, bribes, Wire access, Lifestyle upkeep (`08`, `26`).
+- **Chrome** — ¥ + Body Integrity; never a characteristic or skill grant (`09`).
+- **Wire** — decks, programs, connection state, Node Rating (`21`); Hacking skill + Logic/Instinct still sit on this chapter’s sheet.
+
+If a shop, chrome catalog, or downtime offer would raise a characteristic, add a skill, or unlock a class feature for cash, refuse it. That purchase is off-doctrine.

@@ -28,7 +28,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 |---|---|---|---|
 | `00-front-matter.md` | Front matter, how to use this book, glossary seeds | GW | New + DS-ALIGNMENT |
 | `01-how-to-play.md` | How to Play / The Director | DS-by-ref + GW terms | Stage 3 fill 2026-09-18; term remap |
-| `02-heroes-characteristics.md` | Heroes & Characteristics | DS-by-ref + GW labels | Physique/Reflex/Logic/Instinct/Persona |
+| `02-heroes-characteristics.md` | Heroes & Characteristics | Stage 3 draft | Stage 3 fill 2026-09-18 (B69); Physique/Reflex/Logic/Instinct/Persona; skills; chargen order |
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | DS-by-ref | Outcome order ≤11 / 12–16 / 17+ |
 | `04-combat.md` | Combat basics | Stage 3 draft | Stamina, Recoveries, B49 weapon use, GW keywords, Crisis/inert |
 | `05-ancestries.md` | Ancestries (Peoples) | GW | `09-species.md` + SPECIES-DS-MAP |
