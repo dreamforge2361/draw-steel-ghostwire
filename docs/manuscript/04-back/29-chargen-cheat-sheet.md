@@ -93,9 +93,9 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 
 ---
 
-### 9 · Optional early spends · `08`, `09`, `10`, `21`, `26`
+### 9 · Optional early spends · `08`, `09`, `10`, `21`, `23`, `26`
 
-- [ ] Spend from the **¥5,000** if you need a deck, focus, or extra Street gear. Save the rest.
+- [ ] Spend from the **¥5,000** if you need a deck, focus, extra Street gear, or a Personal/Light air scout (Tape-Eye, Rotor, …) from **Ghostwire Vehicles & Drones** — that grants **Street Eye** on the sheet (`23`). Not a Wrench replacement. Save the rest.
 - [ ] Do **not** pre-spend Lifestyle. Do **not** auto-install chrome or mods.
 - [ ] Portrait / token optional. Changer form art is optional (`05`).
 

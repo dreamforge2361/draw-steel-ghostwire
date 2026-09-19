@@ -1,6 +1,6 @@
 # B94 — Street Eye / Companion Link (inventory-gated scout leash)
 
-**Status:** LOCKED 2026-09-18 by Michael. **Foundry automation built 2026-09-19 (0.3.17).**  
+**Status:** LOCKED 2026-09-18 by Michael. **Foundry automation built 2026-09-19 (0.3.20, rebased onto main 0.3.19).**  
 **Related:** `docs/raw/23-machines.md` (Companion link already existed — polish, do not invent a second system); `docs/raw/16-wrench.md` (Deploy & Command / Uptime / Jump-In / Fleet Deck+ unchanged).
 
 ## Intent
@@ -85,9 +85,9 @@ Mirror B49 `scripts/equipment-use.mjs` (inventory create/delete → grant/revoke
 2. Any class; does not replace Wrench — yes.
 3. v1 = flying Personal/Light Recon (or Mark/Decoy) — yes.
 4. Journals **not** regenerated — yes.
-5. module **0.3.17** (next free 0.3.x after main 0.3.16).
+5. module **0.3.20** (next free 0.3.x after main 0.3.19).
 
-## As-built (0.3.17, 2026-09-19)
+## As-built (0.3.20, 2026-09-19)
 
 **Code:** `scripts/street-eye.mjs`, registered from `scripts/module.mjs` init as `registerStreetEye()` (after `registerMachines`).
 
@@ -112,5 +112,5 @@ Mirror B49 `scripts/equipment-use.mjs` (inventory create/delete → grant/revoke
 3. [ ] Add **Stinger** or **Guard-Dog** only → Street Eye does **not** appear. Add Rotor as well → it appears; remove Rotor (keep Stinger) → gone.
 4. [ ] **Wrench** hero: confirm **Deploy & Command** is still on the sheet before and after adding Rotor. Street Eye may also appear; Deploy & Command must remain.
 5. [ ] Right-click Rotor → **Deploy** still places the band token. Street Eye does not replace that control.
-6. [ ] Reload world with a hero who already holds Rotor (pre-0.3.17 sheet) → ready sweep grants Street Eye silently.
+6. [ ] Reload world with a hero who already holds Rotor (pre-0.3.20 sheet) → ready sweep grants Street Eye silently.
 7. [ ] Rulebook journals are **stale** on purpose this bump — read `docs/raw/23-machines.md` for the polished text.
