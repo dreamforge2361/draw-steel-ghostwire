@@ -127,6 +127,24 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 
 ---
 
+
+## The Ten (megacorp tickers)
+
+Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`.
+
+| Ticker | Conglomerate |
+|---|---|
+| **HAL** | HALO Ascendant |
+| **FER** | Ferrum Dynastic |
+| **MER** | Meridian Signal |
+| **CAD** | Caduceus Vitalis |
+| **IRN** | Ironclad Martial |
+| **ARG** | Argent Exchange |
+| **VER** | Verdant Provision |
+| **OBS** | Obsidian Holdings |
+| **SAN** | Sanctum Assurance |
+| **NYX** | Nyx Cartel |
+
 ## See also
 
 - Rules glossary and abbreviations: print Ch 0 / `docs/raw/00-front-matter.md`
