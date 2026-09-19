@@ -102,3 +102,7 @@
 |---|---|---|
 | **Ossian Reach** | Default home hive (SE coast) | Reach Handbook / setting |
 | **Ashenreach** | Inland NW sister-hive, ~300 mi; rivalries + hooks | docs/setting/ashenreach.md |
+
+## Art backlog
+
+- **B79** Artistic cosmos plate (Light Realms / Hells / Prime / Wire / related) — not started.
