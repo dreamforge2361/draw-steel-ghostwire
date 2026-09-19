@@ -43,7 +43,7 @@ foreach ($n in @(
 node tools/assemble-manuscript.mjs
 node tools/inject-print-art.mjs
 node tools/build-pdf.mjs
-# docs\manuscript\build\Ghostwire-Rulebook-DRAFT.pdf
+# docs\manuscript\build\Ghostwire-Rulebook-0.4.0.pdf
 # docs\manuscript\build\ART-GAP-REPORT.md
 ```
 
@@ -78,7 +78,7 @@ node tools/inject-print-art.mjs
 node tools/build-pdf.mjs
 
 # 5) Open
-#    docs\manuscript\build\Ghostwire-Rulebook-DRAFT.pdf
+#    docs\manuscript\build\Ghostwire-Rulebook-0.4.0.pdf
 #    docs\manuscript\build\ART-GAP-REPORT.md
 ```
 
@@ -92,9 +92,10 @@ Linux / this VM: same Node commands. District maps place from `assets/maps/distr
 |---|---|---|
 | 1 | `node tools/assemble-manuscript.mjs` | `docs/manuscript/build/Ghostwire-Manuscript.md` (gitignored) |
 | 2 | `node tools/inject-print-art.mjs` | `Ghostwire-Manuscript.with-art.md` + `ART-GAP-REPORT.md` |
-| 3 | `node tools/build-pdf.mjs` | `Ghostwire-Rulebook-DRAFT.html` + `.pdf` (gitignored) |
+| 3 | `node tools/linkify-manuscript.mjs` | `Ghostwire-Manuscript.with-links.md` (B97; gitignored) |
+| 4 | `node tools/build-pdf.mjs` | `Ghostwire-Rulebook-0.4.0.html` + `.pdf` (gitignored; SAMPLE stays SAMPLE) |
 
-`build-pdf.mjs` runs steps 1–3 unless `--skip-assemble` / `--skip-inject`. `--sample` prints a short front + L1 + Ch 27 slice. `--html-only` stops before Chrome.
+`build-pdf.mjs` runs steps 1–4 unless `--skip-assemble` / `--skip-inject` / `--skip-linkify`. `--sample` prints a short front + L1 + Ch 27 slice. `--html-only` stops before Chrome. Hotlink details: `docs/spikes/B97-PDF-HOTLINKS.md`.
 
 ### Why Chrome, not Pandoc
 
@@ -172,7 +173,7 @@ Print CSS vendors Liberation Sans/Serif (SIL OFL) so Chrome embeds a real text f
 - Generated **full draft PDF** is gitignored (can be tens of MB once art is in).
 - Generated HTML + assembled Markdown + with-art Markdown are gitignored.
 - Local `print-art/**` rasters are gitignored except the twelve Michael-approved cover/filler plates. READMEs + `ART-PLACEMENT.yml` ship.
-- Output path to keep: `docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf` (local). Optional `--sample` writes `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored).
+- Output path to keep: `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (local official cut). Optional `--sample` writes `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored).
 
 ## Not this spike
 

@@ -33,13 +33,14 @@ powershell -File tools/copy-print-art.ps1 `
   -ExtractCore `
   -CorePdf "C:\Users\mfran\Dropbox\Public\RPG\Ghostwire\GHOSTWIRE — Core Sourcebook.pdf"
 
-# 2–4) Assemble manuscript, inject slots, print PDF
+# 2–4) Assemble manuscript, inject slots, linkify, print PDF
 node tools/assemble-manuscript.mjs
 node tools/inject-print-art.mjs
+node tools/linkify-manuscript.mjs
 node tools/build-pdf.mjs
 
 # 5) Open
-#    docs\manuscript\build\Ghostwire-Rulebook-DRAFT.pdf
+#    docs\manuscript\build\Ghostwire-Rulebook-0.4.0.pdf
 #    docs\manuscript\build\ART-GAP-REPORT.md
 ```
 

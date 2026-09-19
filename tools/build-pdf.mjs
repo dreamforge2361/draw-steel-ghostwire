@@ -4,6 +4,7 @@
  *
  *   node tools/assemble-manuscript.mjs
  *   node tools/inject-print-art.mjs
+ *   node tools/linkify-manuscript.mjs
  *   node tools/build-pdf.mjs
  *
  * Or one shot from repo root:
@@ -15,7 +16,7 @@
  *
  * Usage:
  *   node tools/build-pdf.mjs
- *   node tools/build-pdf.mjs --skip-assemble --skip-inject
+ *   node tools/build-pdf.mjs --skip-assemble --skip-inject --skip-linkify
  *   node tools/build-pdf.mjs --sample
  *   node tools/build-pdf.mjs --html-only
  */
@@ -30,8 +31,11 @@ const ROOT = resolve(__dirname, "..");
 const BUILD = join(ROOT, "docs/manuscript/build");
 const ASSEMBLED = join(BUILD, "Ghostwire-Manuscript.md");
 const WITH_ART = join(BUILD, "Ghostwire-Manuscript.with-art.md");
-const HTML_OUT = join(BUILD, "Ghostwire-Rulebook-DRAFT.html");
-const PDF_OUT = join(BUILD, "Ghostwire-Rulebook-DRAFT.pdf");
+const WITH_LINKS = join(BUILD, "Ghostwire-Manuscript.with-links.md");
+/** Official print book version (independent of Foundry module.json 0.3.22). */
+const RULEBOOK_VERSION = "0.4.0";
+const HTML_OUT = join(BUILD, `Ghostwire-Rulebook-${RULEBOOK_VERSION}.html`);
+const PDF_OUT = join(BUILD, `Ghostwire-Rulebook-${RULEBOOK_VERSION}.pdf`);
 const SAMPLE_PDF = join(BUILD, "Ghostwire-Rulebook-SAMPLE.pdf");
 const CSS = join(ROOT, "docs/manuscript/print/ghostwire-print.css");
 
@@ -138,14 +142,18 @@ function wrapHtml(bodyHtml, title) {
 <head>
 <meta charset="utf-8" />
 <title>${title}</title>
+<meta name="author" content="Ghostwire" />
 <link rel="stylesheet" href="${cssHref}" />
 </head>
 <body>
 <aside class="gw-print-banner">
-  <strong>Draft PDF</strong> — assembled from <code>docs/manuscript/</code> + ART-PLACEMENT.yml.
+  <strong>Ghostwire Rulebook ${RULEBOOK_VERSION}</strong> — official print PDF.
+  Assembled from <code>docs/manuscript/</code> + ART-PLACEMENT.yml.
   Artwork credit: Ghostwire AI (AI-generated). Journals not regenerated.
 </aside>
+<main class="gw-rulebook">
 ${bodyHtml}
+</main>
 </body>
 </html>
 `;
@@ -177,6 +185,8 @@ function chromePrint(chrome, htmlPath, pdfPath) {
     `--user-data-dir=${userData}`,
     "--hide-scrollbars",
     "--no-pdf-header-footer",
+    "--export-tagged-pdf",
+    "--generate-pdf-document-outline",
     "--virtual-time-budget=60000",
     `--print-to-pdf=${pdfPath}`,
     toFileUrl(htmlPath),
@@ -220,12 +230,19 @@ function main() {
     throw new Error(`Missing ${WITH_ART} — run inject or drop --skip-inject`);
   }
 
+  if (!hasFlag("--skip-linkify")) {
+    runNode("tools/linkify-manuscript.mjs");
+  } else if (!existsSync(WITH_LINKS) && !existsSync(WITH_ART)) {
+    throw new Error(`Missing ${WITH_LINKS} — run linkify or drop --skip-linkify`);
+  }
+
   if (!existsSync(CSS)) throw new Error(`Missing print CSS: ${CSS}`);
 
-  let md = readFileSync(WITH_ART, "utf8");
+  const sourceMd = !hasFlag("--skip-linkify") && existsSync(WITH_LINKS) ? WITH_LINKS : WITH_ART;
+  let md = readFileSync(sourceMd, "utf8");
   if (sample) md = sampleMarkdown(md);
   const body = rewriteImgSrc(markdownToHtml(md));
-  const html = wrapHtml(body, sample ? "Ghostwire Rulebook SAMPLE" : "Ghostwire Rulebook DRAFT");
+  const html = wrapHtml(body, sample ? "Ghostwire Rulebook SAMPLE" : `Ghostwire Rulebook ${RULEBOOK_VERSION}`);
   const htmlPath = sample ? join(BUILD, "Ghostwire-Rulebook-SAMPLE.html") : HTML_OUT;
   writeFileSync(htmlPath, html, "utf8");
   console.log(`Wrote ${htmlPath}`);

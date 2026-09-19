@@ -8,7 +8,8 @@ param(
   [switch]$Sample,
   [switch]$HtmlOnly,
   [switch]$SkipAssemble,
-  [switch]$SkipInject
+  [switch]$SkipInject,
+  [switch]$SkipLinkify
 )
 
 $ErrorActionPreference = "Stop"
@@ -20,6 +21,7 @@ if ($Sample) { $nodeArgs += "--sample" }
 if ($HtmlOnly) { $nodeArgs += "--html-only" }
 if ($SkipAssemble) { $nodeArgs += "--skip-assemble" }
 if ($SkipInject) { $nodeArgs += "--skip-inject" }
+if ($SkipLinkify) { $nodeArgs += "--skip-linkify" }
 
 node @nodeArgs
 exit $LASTEXITCODE

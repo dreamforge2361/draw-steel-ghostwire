@@ -1,6 +1,6 @@
 # Copyright & Credits
 
-**Status:** print-front draft (B74, 2026-09-19)  
+**Status:** **Version 0.4.0** — first official rulebook PDF / playtest edition  
 **Art:** All Ghostwire artwork in this project is **AI-generated** (Ghostwire AI). Named human artist lines stay optional if Michael later commissions or licenses a plate.
 
 ---
@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.21**).
+**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). **Version 0.4.0** is the first official rulebook PDF (playtest edition). Foundry module version is `module.json` (**0.3.22**) and is independent of the PDF.
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 
@@ -24,7 +24,7 @@ Ghostwire runs on the **Draw Steel** engine and is playable from **this book**. 
 
 > Draw Steel - Ghostwire Build is an independent product published under the DRAW STEEL Creator License and is not affiliated with MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.
 
-That statement appears in every published form of this book (print Ch 0 repeats it). Compatibility logo art is permitted by the Creator License and is **not** shipped in this draft.
+That statement appears in every published form of this book (print Ch 0 repeats it). Compatibility logo art is permitted by the Creator License and is **not** shipped in this PDF.
 
 **Do not** treat Ghostwire class text, chrome, Wire procedures, or Reach color as MCDM IP. **Do not** treat Draw Steel characteristics, Power Rolls, combat loop, or monster math as Ghostwire originals — those remain MCDM’s engine, used here under the DRAW STEEL Creator License and stated in this book.
 
