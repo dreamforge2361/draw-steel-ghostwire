@@ -2,7 +2,7 @@
 // No Foundry globals. Never include the API key in a loggable dump.
 
 const DEFAULT_BASE = "https://api.x.ai/v1";
-const DEFAULT_MODEL = "grok-3";
+const DEFAULT_MODEL = "grok-4.6";
 
 export function normalizeBaseUrl(url) {
   const trimmed = String(url ?? "").trim().replace(/\/+$/, "");
