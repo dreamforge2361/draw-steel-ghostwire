@@ -393,6 +393,8 @@ Pack sources live in `src/packs/<pack>/` (subfolders allowed). Names and descrip
 
 Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `assets/tokens/drones/` and `assets/tokens/vehicles/`. Re-apply after replacing files with `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 
+Armor + weapon item art (B102, art forthcoming): drop `_dsid`.webp files into `assets/tokens/armor/` (includes shields) and `assets/tokens/weapons/`, then `node tools/apply-gear-token-art.mjs` (stamps Gear pack + pregen embeds; rebuilds `packs/gear` + `packs/pregens`). Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
+
 ## Rulebook
 
 - [Stage 1 — Core Rulebook skeleton](docs/rulebook/00-STAGE1-skeleton.md) (awaiting review)
