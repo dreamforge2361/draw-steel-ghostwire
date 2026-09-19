@@ -39,3 +39,8 @@ docs/manuscript/build/Ghostwire-Manuscript.md
 
 # Live PDF text extracts (box or Windows module folder) — do not commit
 _pdf-extract/
+
+# B72 district map PNG backups / staging (full-res WebP ships; originals stay local)
+assets/maps/districts/_png-backup/
+assets/maps/districts/**/*.png
+_incoming-art/districts/
