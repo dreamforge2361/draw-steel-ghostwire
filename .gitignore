@@ -41,7 +41,7 @@ docs/manuscript/build/Ghostwire-Rulebook-DRAFT.html
 docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf
 docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.pdf
 docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.html
-docs/manuscript/build/ART-GAP-REPORT.md
+# ART-GAP-REPORT.md is generated but committed so CI/PRs show placed slots
 docs/manuscript/build/.chrome-profile/
 
 # Local print-art binaries (pipeline + ART-PLACEMENT.yml + READMEs stay)
@@ -52,6 +52,20 @@ docs/manuscript/print-art/**/*.jpeg
 docs/manuscript/print-art/**/*.gif
 docs/manuscript/print-art/**/*.tif
 docs/manuscript/print-art/**/*.tiff
+# Michael-approved PDF plates (0.3.21) — tracked so inject resolves without Dropbox
+!docs/manuscript/print-art/cover/cover.webp
+!docs/manuscript/print-art/cover/cover.png
+!docs/manuscript/print-art/filler/voidmark.webp
+!docs/manuscript/print-art/filler/hands-off.webp
+!docs/manuscript/print-art/filler/cosmology.webp
+!docs/manuscript/print-art/filler/planes.webp
+!docs/manuscript/print-art/filler/megacorps.webp
+!docs/manuscript/print-art/filler/wired.webp
+!docs/manuscript/print-art/filler/timeline.webp
+!docs/manuscript/print-art/filler/city-nocturne.webp
+!docs/manuscript/print-art/filler/peoples-opener.webp
+!docs/manuscript/print-art/filler/veil-opener.webp
+!docs/manuscript/print-art/filler/machines-opener.webp
 
 # Live PDF text extracts (box or Windows module folder) — do not commit
 _pdf-extract/
