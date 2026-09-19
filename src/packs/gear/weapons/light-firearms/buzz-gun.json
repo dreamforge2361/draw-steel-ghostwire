@@ -3,7 +3,7 @@
   "_key": "!items!nPJNoIoPJeVO66Xy",
   "name": "GHOSTWIRE.Gear.Items.BuzzGun.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/machine-gun-sub-large.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/buzz-gun.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.BuzzGun.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!PDrB0Cnbj7HDeP3u",
   "name": "GHOSTWIRE.Gear.Items.Workhorse.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/pistol-automatic.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/workhorse.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Workhorse.Description",

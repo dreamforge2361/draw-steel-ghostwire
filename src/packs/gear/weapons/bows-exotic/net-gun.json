@@ -3,7 +3,7 @@
   "_key": "!items!PCFCAqAdvEDawuod",
   "name": "GHOSTWIRE.Gear.Items.NetGun.Name",
   "type": "treasure",
-  "img": "icons/tools/fishing/net-simple-tan.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/net-gun.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.NetGun.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!Phtr1Yy1UtkTfwtS",
   "name": "GHOSTWIRE.Gear.Items.GhostPistol.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/pistol-automatic.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/ghost-pistol.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.GhostPistol.Description",

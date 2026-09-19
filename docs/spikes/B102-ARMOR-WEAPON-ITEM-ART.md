@@ -1,8 +1,8 @@
 # Spike B102 — Armor + weapon item art
 
 **Date:** 2026-09-19  
-**Module:** **0.3.31** (plumbing only — no bump)  
-**Status:** **PLUMBING** — apply script + empty `assets/tokens/{armor,weapons}/`. WebPs + one patch wait for the art-zip follow-up.  
+**Module:** **0.3.32**  
+**Status:** **SHIPPED** — 22 armor/shield + 49 weapon WebPs; Gear pack + pregen embed `img` + LevelDB rebuilt. *Pending Michael Foundry-verify (Equipment tab).*  
 **Pairs with:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/masters/pregens/loadouts.json`, `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`
 
 ## Goal
@@ -12,7 +12,7 @@ Portrait art for every published armor (including shields) and weapon Item, name
 1. Ghostwire Gear pack Item `img` fields under `src/packs/gear/armor/**` and `src/packs/gear/weapons/**`
 2. Matching **embedded** treasure Items on the seven pregen Heroes (`src/packs/pregens/**`)
 
-Then rebuild `packs/gear` + `packs/pregens`. Generate is **not** this ticket — another agent drops WebPs; this ticket is the path convention + apply tool.
+Then rebuild `packs/gear` + `packs/pregens`. Plumbing (apply script + empty dirs) landed first; this bump ships the `gw-gear-art` pack.
 
 ## Source of truth
 
@@ -40,6 +40,8 @@ assets/tokens/weapons/<dsid>.webp
 ```
 
 `<dsid>` = `system._dsid` = kebab-case filename stem. **Shields file under `armor/`.**
+
+**Shipped (0.3.32):** 22 files in `assets/tokens/armor/` + 49 files in `assets/tokens/weapons/` (Foundry item-icon WebP). Every armor/weapon Gear Item `img` and matching pregen treasure embed is the module token path (no leftover `icons/` placeholders on those SKUs).
 
 ## Pregen update rule
 
@@ -87,9 +89,11 @@ node tools/apply-gear-token-art.mjs --from _incoming-art
 node tools/apply-gear-token-art.mjs --list
 ```
 
-5. Confirm `art=yes` for **22** armor/shields + **49** weapons, and the seven pregen columns above. `module.json` stays **0.3.31** until this follow-up ships the binaries + one patch.
+5. Confirm `art=yes` for **22** armor/shields + **49** weapons, and the seven pregen columns above.
 
 Alternatively, copy WebPs straight into `assets/tokens/armor/` and `assets/tokens/weapons/`, then `node tools/apply-gear-token-art.mjs` with no `--from`.
+
+**Shipped from `gw-gear-art.zip`:** filenames were already canonical `_dsid`.webp under `armor/` + `weapons/` (no zip aliases required).
 
 ## Inventory — armor + shields (22)
 
@@ -235,9 +239,8 @@ Primary: kebab-case `_dsid`. Also: no-hyphen forms (`armoredjacket` → `armored
 
 ## Out of scope
 
-- Generating or committing WebP binaries
+- Generating art (another agent produced the zip)
 - General gear, chrome, foci, kit portraits
-- Bumping `module.json` (follow-up when art ships)
 - Changing equipment-use abilities or SFX
 - Vehicles / drones (B101)
 
@@ -245,5 +248,8 @@ Primary: kebab-case `_dsid`. Also: no-hyphen forms (`armoredjacket` → `armored
 
 - [x] Spike inventory + path convention + pregen update rule
 - [x] `tools/apply-gear-token-art.mjs` (slug → gear Item `img` → pregen embeds → `build-packs.mjs gear pregens`)
-- [x] Empty `assets/tokens/armor/` + `assets/tokens/weapons/` (`.gitkeep`)
-- [ ] WebPs attached → apply script → one patch bump → Foundry-verify Equipment tab on a pregen + Gear pack
+- [x] `assets/tokens/armor/` **22** WebP + `assets/tokens/weapons/` **49** WebP
+- [x] Every armor/weapon Item `img` (and matching pregen treasure embeds) is `modules/draw-steel-ghostwire/assets/tokens/{armor,weapons}/<dsid>.webp`
+- [x] `packs/gear` + `packs/pregens` rebuilt
+- [x] Module **0.3.32**
+- [ ] Foundry-verify Equipment tab (Wren Armored Jacket + Gear pack Ghost Pistol)

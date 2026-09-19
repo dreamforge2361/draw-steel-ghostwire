@@ -3,7 +3,7 @@
   "_key": "!items!BraqpIox9ByTNkDd",
   "name": "GHOSTWIRE.Gear.Items.ShapedCharge.Name",
   "type": "treasure",
-  "img": "icons/weapons/thrown/bomb-fuse-black.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/shaped-charge.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.ShapedCharge.Description",

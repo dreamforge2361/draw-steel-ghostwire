@@ -3,7 +3,7 @@
   "_key": "!items!g1QjWPjCMOmVqU8u",
   "name": "GHOSTWIRE.Gear.Items.HandOfGod.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/hand-of-god.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.HandOfGod.Description",

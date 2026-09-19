@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.32` — **Armor + weapon item art (B102):** 22 armor/shield + 49 weapon portraits under `assets/tokens/{armor,weapons}/`. Gear pack Item `img` fields and matching pregen embedded treasure Items point at `modules/draw-steel-ghostwire/assets/tokens/…/<dsid>.webp`. Apply: `node tools/apply-gear-token-art.mjs`. Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
 - `0.3.31` — **Vehicle + drone tokens (B101):** 36 drone + 32 vehicle chassis portraits (1024² WebP) under `assets/tokens/{drones,vehicles}/`. Ghostwire Vehicles & Drones Item `img` fields point at `modules/draw-steel-ghostwire/assets/tokens/…/<dsid>.webp`. Apply: `node tools/apply-machine-token-art.mjs`. Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 - `0.3.29` — **VOIDMARK knowledge index:** district / hive lore (Switchboard, the Flats, Ossian Reach) retrieves from shipped Reach Handbook + L3 (and other L-chips / Wired Flats gazetteer). Rebuild: `node tools/build-voidmark-index.mjs`. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
 - `0.3.28` — **VOIDMARK default model:** `voidmarkModel` / `DEFAULT_MODEL` is now `grok-4.6` (`grok-3` 404s on current xAI). Pick any id your key lists (`grok-4.6`, `grok-4.5`, etc.). Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
@@ -393,7 +394,7 @@ Pack sources live in `src/packs/<pack>/` (subfolders allowed). Names and descrip
 
 Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `assets/tokens/drones/` and `assets/tokens/vehicles/`. Re-apply after replacing files with `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 
-Armor + weapon item art (B102, art forthcoming): drop `_dsid`.webp files into `assets/tokens/armor/` (includes shields) and `assets/tokens/weapons/`, then `node tools/apply-gear-token-art.mjs` (stamps Gear pack + pregen embeds; rebuilds `packs/gear` + `packs/pregens`). Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
+Armor + weapon item art (B102, **0.3.32**): 22 armor/shield + 49 weapon WebPs in `assets/tokens/armor/` (includes shields) and `assets/tokens/weapons/`. Re-apply after replacing files with `node tools/apply-gear-token-art.mjs` (stamps Gear pack + pregen embeds; rebuilds `packs/gear` + `packs/pregens`). Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
 
 ## Rulebook
 

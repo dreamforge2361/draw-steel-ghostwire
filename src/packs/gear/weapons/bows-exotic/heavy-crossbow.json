@@ -3,7 +3,7 @@
   "_key": "!items!c4M83PD1a7mrzGvK",
   "name": "GHOSTWIRE.Gear.Items.HeavyCrossbow.Name",
   "type": "treasure",
-  "img": "icons/weapons/bows/longbow-recurve-brown.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/heavy-crossbow.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.HeavyCrossbow.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!XUkvHDqfpxD9GwwS",
   "name": "GHOSTWIRE.Gear.Items.Firestarter.Name",
   "type": "treasure",
-  "img": "icons/weapons/thrown/grenade-round.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/firestarter.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Firestarter.Description",

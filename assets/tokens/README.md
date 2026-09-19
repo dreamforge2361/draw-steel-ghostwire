@@ -6,8 +6,8 @@ Portraits stamped onto Foundry Item `img` fields. `<dsid>` is the pack Item’s 
 |---|---|---|---|
 | Crewed vehicles | `vehicles/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/vehicles/<dsid>.webp` | B101 shipped **0.3.31** (32) |
 | Drones | `drones/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/drones/<dsid>.webp` | B101 shipped **0.3.31** (36) |
-| Armor + shields | `armor/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/armor/<dsid>.webp` | B102 plumbing — art forthcoming (22) |
-| Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 plumbing — art forthcoming (49) |
+| Armor + shields | `armor/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/armor/<dsid>.webp` | B102 shipped **0.3.32** (22) |
+| Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
 
@@ -23,10 +23,10 @@ Spike + inventory: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 
 ## Armor + weapons (B102)
 
-Drop WebPs here (or into `_incoming-art/` with `armor/` + `weapons/` subfolders; shields go in `armor/`), then:
+Replace a file in place, then:
 
 ```text
-node tools/apply-gear-token-art.mjs --from _incoming-art
+node tools/apply-gear-token-art.mjs
 ```
 
 Stamps Gear pack Items **and** matching embedded treasure Items on pregens, then rebuilds `packs/gear` + `packs/pregens`. Spike + inventory: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.

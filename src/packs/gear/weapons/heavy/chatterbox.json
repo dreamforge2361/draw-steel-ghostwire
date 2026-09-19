@@ -3,7 +3,7 @@
   "_key": "!items!KHaiD72pw2v5ig8g",
   "name": "GHOSTWIRE.Gear.Items.Chatterbox.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/chatterbox.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Chatterbox.Description",

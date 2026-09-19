@@ -3,7 +3,7 @@
   "_key": "!items!mIpnc0adnZRDSEiP",
   "name": "GHOSTWIRE.Gear.Items.TankCracker.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/tank-cracker.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.TankCracker.Description",

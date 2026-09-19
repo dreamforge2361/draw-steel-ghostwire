@@ -3,7 +3,7 @@
   "_key": "!items!J1oECeWurQU298eI",
   "name": "GHOSTWIRE.Gear.Items.ShockStick.Name",
   "type": "treasure",
-  "img": "icons/weapons/daggers/dagger-straight-thin-black.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/shock-stick.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.ShockStick.Description",

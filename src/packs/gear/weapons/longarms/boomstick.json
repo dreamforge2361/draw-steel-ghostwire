@@ -3,7 +3,7 @@
   "_key": "!items!CpaYo3gSPvOrn1tm",
   "name": "GHOSTWIRE.Gear.Items.Boomstick.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/shotgun-pump.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/boomstick.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Boomstick.Description",

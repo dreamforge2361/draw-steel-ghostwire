@@ -3,7 +3,7 @@
   "_key": "!items!NNVI5BneOC0S2mGz",
   "name": "GHOSTWIRE.Gear.Items.HuntingBow.Name",
   "type": "treasure",
-  "img": "icons/weapons/bows/longbow-recurve-brown.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/hunting-bow.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.HuntingBow.Description",

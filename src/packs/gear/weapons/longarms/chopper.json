@@ -3,7 +3,7 @@
   "_key": "!items!p2bMxoYdhEi3X9tM",
   "name": "GHOSTWIRE.Gear.Items.Chopper.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/chopper.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Chopper.Description",

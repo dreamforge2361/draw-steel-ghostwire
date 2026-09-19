@@ -3,7 +3,7 @@
   "_key": "!items!lzlH2V6PVq37lK1h",
   "name": "GHOSTWIRE.Gear.Items.Warhammer.Name",
   "type": "treasure",
-  "img": "icons/weapons/hammers/hammer-double-steel-embossed.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/warhammer.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Warhammer.Description",
