@@ -1,7 +1,7 @@
 # Ghostwire Core Rulebook — Chapter: Languages
 
-**Status:** Stub (2026-09-16). Names and knowledge-only picks locked; lore deferred.
-**Source of record:** `docs/masters/GHOSTWIRE_LANGUAGES.md` (categories and the full Draw Steel key → Ghostwire name map).
+**Status:** Names and knowledge-only picks locked (2026-09-16). Play procedure lives in RAW `docs/raw/07-languages.md` (B75). Lore gazetteer deferred (backlog #67).
+**Source of record (names):** `docs/masters/GHOSTWIRE_LANGUAGES.md` (categories and the full Draw Steel key → Ghostwire name map).
 **Foundry:** the hero sheet’s language picker shows Ghostwire names (module v0.1.30).
 
 ## Rules baseline

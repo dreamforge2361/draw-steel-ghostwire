@@ -32,10 +32,10 @@ Completeness key:
 | `04-combat.md` | Combat basics | Stage 3 draft (0.1.99) | Standalone GW combat procedures; B49/B44c free-strike note; Crisis/inert pointers |
 | `05-ancestries.md` | Ancestries (Peoples) | Complete | Eight Peoples as DS ancestry packages. A1 copyright rewrite **deferred**. Cyborg System Crisis still thin |
 | `06-backgrounds-professions.md` | Backgrounds & Professions | Complete (B73 Stage 3 play procedure) | 8 Backgrounds + 15 Professions; Culture→Background / Career→Profession locked; community-edge + collision walkthrough |
-| `07-languages.md` | Languages (rules only) | Complete (thin) | Names + knowledge-only rules locked. Lore gazetteer = **non-goal** for RAW/PDF v1 |
+| `07-languages.md` | Languages (rules only) | Complete (B75 Stage 3 play procedure) | Names + knowledge-only locked; chargen + check procedure filled. Lore gazetteer = **non-goal** (#67) |
 | `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | Partial | Ownership/firewall solid. Kit bonus lines **provisional**. Lifestyle burn → pointer to `26`. Run payouts provisional. Merc dual-Kit undefined |
 | `09-chrome-body-integrity.md` | Chrome & Body Integrity | Partial (B71) | BI 20, grades, erosion locked (Pass A). **Implant ¥ + Availability catalog published** (13 Standard + 6 Soft/B55). Package totals / Salvage ¥ / Frame Module prices still **PROVISIONAL** |
-| `10-mods.md` | Mods | Complete | Invent a Mod **locked**; echelon + Availability |
+| `10-mods.md` | Mods | Complete (B75 Stage 3 procedure) | Invent a Mod **locked**; install/when-to-mod/chrome-kit conflict filled; armor/gadget families still unpublished |
 | `11-perks.md` | Perks | Complete | Full perk list assembled from pack |
 | `12-operator.md` | Operator | Partial | Full class draft; Pass A–C applied. Residual ability/flag debt in B42 flags |
 | `13-scout.md` | Scout | Partial | Full class draft; title reskins (0.1.93). Some B42 flags remain |
@@ -72,8 +72,8 @@ These are **print blockers**, not Foundry polish:
 
 | Missing piece | Who points at it | Blocker severity |
 |---|---|---|
-| **Lifestyle** table (burn / upkeep / Medic restock quotes) | `08`, Medic restock lock, Wrench lifestyle hook | **DONE B67** — `docs/raw/26-lifestyle-downtime.md` (draft Stage 3 fill; §F3 ¥ cited; restock quotes provisional) |
-| **Followers & Contacts** | Elementalist / class pointers | Medium — can ship v1 with “Director / DS by reference” stub |
+| **Lifestyle** table (burn / upkeep / Medic restock quotes) | `08`, Medic restock lock, Wrench lifestyle hook | **DONE B67** — `docs/raw/26-lifestyle-downtime.md` (draft Stage 3 fill; §F3 ¥ cited; restock quotes provisional). Contacts pointer polish **B75** |
+| **Followers & Contacts** | Elementalist / class pointers | Medium — v1 ships with Lifestyle pointer + Fixer Retainer 1G (B75); full chapter still non-goal |
 | **Downtime Projects** beyond §Craft / Rituals | Chargen & downtime loop | Medium — fold into Lifestyle or Kits chapter |
 | Chrome **implant ¥ + Availability** catalog | `09` | **DONE B71** — pack + B55 Soft; Salvage/packages/Frame Modules still provisional |
 | Vehicle **ramming / chase** print procedure | `23`, Wrench Ram | Medium |
@@ -120,7 +120,7 @@ Print structure. File map = existing `docs/raw/` unless marked **NEW**.
 | 7 | Backgrounds & Professions | `06-backgrounds-professions.md` |
 | 8 | Languages | `07-languages.md` |
 | 9 | Kits, Gear & Wealth (¥) | `08-kits-gear-wealth.md` *(absorb minimal Lifestyle § here OR Ch 10)* |
-| 10 | Lifestyle & Downtime | `26-lifestyle-downtime.md` — draft B67 (burn, Medic restock quotes, §Craft / Ritual / chrome pointers) |
+| 10 | Lifestyle & Downtime | `26-lifestyle-downtime.md` — draft B67; Contacts pointer polish B75 |
 | 11 | Chrome & Body Integrity | `09-chrome-body-integrity.md` |
 | 12 | Mods | `10-mods.md` |
 | 13 | Perks | `11-perks.md` |
@@ -212,4 +212,4 @@ Remaining after lock:
 
 ## In Foundry sidebars (B68 — 2026-09-18)
 
-RAW chapters may carry a short `> **In Foundry**` callout naming **shipped** Ghostwire module UI only (pattern locked in `docs/spikes/B68-FOUNDRY-SIDEBARS.md`). These are instructional click-notes beside rules — **not** Foundry UI manuals as print chapters (that non-goal in §5 still stands). First pass: HTP, Tests, Combat, Peoples/Changer, Chrome, Wire, Veil, Lifestyle. No journal regen on sidebar bumps.
+RAW chapters may carry a short `> **In Foundry**` callout naming **shipped** Ghostwire module UI only (pattern locked in `docs/spikes/B68-FOUNDRY-SIDEBARS.md`). These are instructional click-notes beside rules — **not** Foundry UI manuals as print chapters (that non-goal in §5 still stands). First pass: HTP, Tests, Combat, Peoples/Changer, Chrome, Wire, Veil, Lifestyle. B75 added Mods + Languages. No journal regen on sidebar bumps.

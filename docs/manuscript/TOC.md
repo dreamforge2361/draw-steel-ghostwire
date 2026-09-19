@@ -47,11 +47,11 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 |---|---|---|
 | 6 | Ancestries (The Peoples) | `raw:` `05-ancestries.md` |
 | 7 | Backgrounds & Professions | `raw:` `06-backgrounds-professions.md` — Stage 3 play procedure / B73 |
-| 8 | Languages | `raw:` `07-languages.md` |
+| 8 | Languages | `raw:` `07-languages.md` — Stage 3 chargen/play fill / B75; lore gazetteer still backlog #67 |
 | 9 | Kits, Gear & Wealth (¥) | `raw:` `08-kits-gear-wealth.md` |
 | 10 | Lifestyle & Downtime | `raw:` `26-lifestyle-downtime.md` — draft (Stage 3 fill / B67, 2026-09-18) |
 | 11 | Chrome & Body Integrity | `raw:` `09-chrome-body-integrity.md` — draft (implant ¥ catalog / B71, 2026-09-18) |
-| 12 | Mods | `raw:` `10-mods.md` |
+| 12 | Mods | `raw:` `10-mods.md` — Stage 3 procedure fill / B75; Invent a Mod still locked; no armor/gadget SKUs |
 | 13 | Perks | `raw:` `11-perks.md` |
 
 ---
@@ -103,3 +103,5 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Advancement (`24-advancement.md`) + Backgrounds (`06-backgrounds-professions.md`) **Stage 3 fill** 2026-09-19 (B73); journals **not** regenerated.
 - Running Ossian Reach (`03-directors/27-running-ossian-reach.md`) **Stage 3 pointer fill** 2026-09-19 (B73); no lore reprint; journals **not** regenerated.
 - Print front (`00-front/title-page.md`, `credits.md`, `how-to-use-this-book.md`) **draft** 2026-09-19 (B74); cover artist credits **TBD**; journals **not** regenerated.
+- Mods (`10-mods.md`) + Languages (`07-languages.md`) **Stage 3 procedure fill** 2026-09-19 (B75); armor/gadget families and language gazetteer **not** invented; journals **not** regenerated.
+- Lifestyle Contacts stub **pointer polish** 2026-09-19 (B75); full Followers chapter still v1 non-goal.

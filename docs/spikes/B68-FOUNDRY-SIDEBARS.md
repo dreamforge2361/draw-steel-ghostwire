@@ -37,6 +37,8 @@ Rules:
 | `26-lifestyle-downtime.md` | No Lifestyle automation — manual / Director tracks ¥ |
 | `05-ancestries.md` | Changer form picker + art swap (B50) |
 
+Later (B75): `10-mods.md` (Install onto… / Activate / Load magazine); `07-languages.md` (language picker; no translator UI).
+
 ## Out of scope
 
 - Journal regen (`tools/raw-to-journals.mjs`)

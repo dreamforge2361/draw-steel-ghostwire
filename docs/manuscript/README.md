@@ -1,8 +1,8 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Title plate + print front (B74, 2026-09-19) — module **0.3.3**; journals still held  
+**Status:** Thin-chapter fill (B75, 2026-09-19) — module **0.3.4**; journals still held  
 **Path:** `docs/manuscript/`  
-**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73 assemble gaps · **B74** title/front  
+**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73 assemble gaps · B74 title/front · **B75** thin chapters  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
 
 This folder is the **single Markdown source of record** for the eventual print PDF: lore harvested from the original Ghostwire master PDFs, plus rules pointed at `docs/raw/` (no dual-edit copies).
