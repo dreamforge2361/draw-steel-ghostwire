@@ -1,12 +1,16 @@
 # Ghostwire print-art tree
 
-Local artwork for the **print PDF pipeline** (B88). Binaries stay on the machine that builds the PDF — they are gitignored. This folder ships **empty stubs + a placement map**.
+Local artwork for the **print PDF pipeline** (B88). Most binaries stay on the machine that builds the PDF — they are gitignored. This folder ships **stubs + a placement map**, plus three **Michael-approved** tracked plates (0.3.19):
+
+- `cover/cover.webp` (optional `cover/cover.png`)
+- `filler/voidmark.webp`
+- `filler/hands-off.webp`
 
 **Credit:** all Ghostwire artwork is **Ghostwire AI (AI-generated)** unless a caption names another license (B76). **Do not** invent plates to fill a gap. **Do not** name-check external cyberpunk / 40K / WoD IP on captions (B78/B83).
 
 Style lock: `docs/rulebook/ART-STYLE.md` (dark grounds, cyan/gold hairlines, rain nocturne).
 
-Populated from Dropbox art SoR + Core Sourcebook large-image extract. PNG/JPG/WebP are gitignored — re-seed with `tools/copy-print-art.ps1` when building PDF.
+Other PNG/JPG/WebP stay gitignored — re-seed those with `tools/copy-print-art.ps1` when building PDF.
 
 ---
 

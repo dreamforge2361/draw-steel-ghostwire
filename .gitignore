@@ -52,6 +52,11 @@ docs/manuscript/print-art/**/*.jpeg
 docs/manuscript/print-art/**/*.gif
 docs/manuscript/print-art/**/*.tif
 docs/manuscript/print-art/**/*.tiff
+# Michael-approved PDF plates (0.3.19) — tracked so inject resolves without Dropbox
+!docs/manuscript/print-art/cover/cover.webp
+!docs/manuscript/print-art/cover/cover.png
+!docs/manuscript/print-art/filler/voidmark.webp
+!docs/manuscript/print-art/filler/hands-off.webp
 
 # Live PDF text extracts (box or Windows module folder) — do not commit
 _pdf-extract/

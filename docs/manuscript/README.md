@@ -1,6 +1,6 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Print PDF pipeline (B88, 2026-09-19) — module **0.3.15**; journals still held  
+**Status:** Print PDF pipeline (B88, 2026-09-19) — module **0.3.19**; cover / VOIDMARK / Hands Off plates approved; journals still held  
 **Path:** `docs/manuscript/`  
 **Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
