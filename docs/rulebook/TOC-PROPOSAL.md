@@ -34,7 +34,7 @@ Completeness key:
 | `06-backgrounds-professions.md` | Backgrounds & Professions | Complete | 8 Backgrounds + 15 Professions; Culture→Background / Career→Profession locked |
 | `07-languages.md` | Languages (rules only) | Complete (thin) | Names + knowledge-only rules locked. Lore gazetteer = **non-goal** for RAW/PDF v1 |
 | `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | Partial | Ownership/firewall solid. Kit bonus lines **provisional**. Lifestyle burn → pointer to `26`. Run payouts provisional. Merc dual-Kit undefined |
-| `09-chrome-body-integrity.md` | Chrome & Body Integrity | Partial | BI 20, grades, erosion locked (Pass A). Implant ¥ / package totals / Frame Module prices **not published** |
+| `09-chrome-body-integrity.md` | Chrome & Body Integrity | Partial (B71) | BI 20, grades, erosion locked (Pass A). **Implant ¥ + Availability catalog published** (13 Standard + 6 Soft/B55). Package totals / Salvage ¥ / Frame Module prices still **PROVISIONAL** |
 | `10-mods.md` | Mods | Complete | Invent a Mod **locked**; echelon + Availability |
 | `11-perks.md` | Perks | Complete | Full perk list assembled from pack |
 | `12-operator.md` | Operator | Partial | Full class draft; Pass A–C applied. Residual ability/flag debt in B42 flags |
@@ -75,7 +75,7 @@ These are **print blockers**, not Foundry polish:
 | **Lifestyle** table (burn / upkeep / Medic restock quotes) | `08`, Medic restock lock, Wrench lifestyle hook | **DONE B67** — `docs/raw/26-lifestyle-downtime.md` (draft Stage 3 fill; §F3 ¥ cited; restock quotes provisional) |
 | **Followers & Contacts** | Elementalist / class pointers | Medium — can ship v1 with “Director / DS by reference” stub |
 | **Downtime Projects** beyond §Craft / Rituals | Chargen & downtime loop | Medium — fold into Lifestyle or Kits chapter |
-| Chrome **implant ¥ + Availability** catalog | `09` | High for chrome-forward tables |
+| Chrome **implant ¥ + Availability** catalog | `09` | **DONE B71** — pack + B55 Soft; Salvage/packages/Frame Modules still provisional |
 | Vehicle **ramming / chase** print procedure | `23`, Wrench Ram | Medium |
 | **Buildings** shared inventory | `23` stub | Low for v1 (Wrench-only OK) |
 
@@ -172,7 +172,7 @@ Write/fill these next — **TOC locked; bodies in this order**:
 | 4 | `21-the-wire.md` polish → RAW-lock | **DONE B66** — Shared Matrix spine locked |
 | 5 | **Lifestyle & Downtime** `26` | **DONE B67** — Medic restock, economy burn, downtime loop drafted |
 
-**Immediate follow-ons (6–10):** `09` implant price pass → `08` Kit provisional lock pass → `25` opposition procedure **DONE B70** → `23` ramming one-pager → class flag sweeps (Operator → Wrench).
+**Immediate follow-ons (6–10):** `08` Kit provisional lock pass → `25` opposition procedure **DONE B70** → `23` ramming one-pager → class flag sweeps (Operator → Wrench).
 
 **Do not start:** Wilds lore, Rank 2+ strike ladders, language gazetteer, full buildings catalog.
 

@@ -40,7 +40,7 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 | 8 | Languages | `raw:` `07-languages.md` |
 | 9 | Kits, Gear & Wealth (¥) | `raw:` `08-kits-gear-wealth.md` |
 | 10 | Lifestyle & Downtime | `raw:` `26-lifestyle-downtime.md` — draft (Stage 3 fill / B67, 2026-09-18) |
-| 11 | Chrome & Body Integrity | `raw:` `09-chrome-body-integrity.md` |
+| 11 | Chrome & Body Integrity | `raw:` `09-chrome-body-integrity.md` — draft (implant ¥ catalog / B71, 2026-09-18) |
 | 12 | Mods | `raw:` `10-mods.md` |
 | 13 | Perks | `raw:` `11-perks.md` |
 
@@ -89,3 +89,4 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 - Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66).
 - Lifestyle (`26-lifestyle-downtime.md`) **draft Stage 3 fill** 2026-09-18 (B67); journals **not** regenerated.
 - Opposition (`25-opposition.md`) **draft Stage 3 fill** 2026-09-18 (B70); journals **not** regenerated.
+- Chrome (`09-chrome-body-integrity.md`) **implant ¥ + Availability catalog** 2026-09-18 (B71); journals **not** regenerated.

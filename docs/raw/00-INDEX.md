@@ -1,6 +1,6 @@
 # Ghostwire RAW Rulebook (master)
 
-**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). **`25-opposition.md` Stage 3 draft** (B70, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
+**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). **`25-opposition.md` Stage 3 draft** (B70, 2026-09-18). **`09-chrome-body-integrity.md` implant ¥ catalog** (B71, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
 **Path:** `docs/raw/` — this folder is the **master RAW** player/Director rules text for the repo.  
 **Delivery order (LOCKED):** (1) finish RAW markdown here → (2) Foundry Journal pack from these files → (3) PDF pipeline later.
 
@@ -35,7 +35,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `06-backgrounds-professions.md` | Backgrounds & Professions | GW | `13-backgrounds-professions.md` |
 | `07-languages.md` | Languages (rules only) | GW thin | `19-languages.md` — names + mechanical grants; no lore gazetteer |
 | `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | GW + DS kits pattern | `10-kits.md`, `11-economy.md`, gear master distill |
-| `09-chrome-body-integrity.md` | Chrome & Body Integrity | GW | `12-chrome.md` |
+| `09-chrome-body-integrity.md` | Chrome & Body Integrity | GW draft (B71 catalog) | Pass A locks + implant ¥/Avail from Chrome pack + B55 Soft; packages/Frame Modules provisional |
 | `10-mods.md` | Mods | GW | `14-mods.md` |
 | `11-perks.md` | Perks | GW | `17-perks.md` |
 | `12-operator.md` … `20-technomancer.md` | Class chapters | GW | `01`–`08`, `20` rulebook (rules only; strip lore) |

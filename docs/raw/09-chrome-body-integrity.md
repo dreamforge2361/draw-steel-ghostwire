@@ -1,9 +1,9 @@
 # Chrome & Body Integrity
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`
+**RAW status:** draft (implant ¥ + Availability catalog 2026-09-18, B71)  
+**Sources:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, Ghostwire Chrome pack (`src/packs/chrome/`), Soft SKUs per `docs/spikes/B55-SOFT-CHROME-KIT-RETAGS.md`, Availability bands per `docs/raw/08-kits-gear-wealth.md`
 
-Exact ¥ prices and package Integrity totals are set by the gear catalog (`08-kits-gear-wealth.md`). Cyborgs do not use this chapter.
+Cyborgs do not use this chapter. **Pass A locks** (Body Integrity **20**, three grades, magic erosion, removal scar 75%/25%) stay intact below. This pass publishes the living-hero **implant ¥ + Availability** catalog from the shipped Chrome pack and B55 Soft SKUs — not from invented numbers.
 
 ---
 
@@ -105,28 +105,78 @@ A **Chrome Package** is a pre-vetted suite: one product, one surgery, one ¥ pay
 | **"Warhound" Combat Rig** | Combat | Wired reflexes + implant weapon + targeting link |
 | **"Silvertongue" Social Suite** | Influence | Vocal modulator + empathy processor + tailored pheromone gland |
 
-Bundle prices and Integrity totals are not yet published. Heroes never start with a free chrome package.
+Bundle prices and package Integrity totals remain **PROVISIONAL** (not in the Chrome pack). Heroes never start with a free chrome package.
 
-## Early implant list (representative)
+## Implant catalog (¥ + Availability)
 
-| Implant | Location | Benefit (situational) |
-|---|---|---|
-| Datajack | Head/Neural | Direct-neural Wired/device interface |
-| Cyber-Eyes (optical suite) | Eyes/Optics | Low-light/thermal/mag/record; perception edge; destroyable |
-| Cyber-Ears (audio suite) | Ears/Aural | Amp, spatial, dampers, translation |
-| Wired Reflexes | Nervous system | Premium reaction / first-strike; hardest slot; heavy Integrity |
-| Muscle / Bone Lacing | Torso/Core | Physique/durability edge; heavy Integrity |
-| Dermal Plating | Torso/Core | Sub-dermal DR; visible chrome social cost |
-| Cyberlimb (arm) | Arms/Hands | Limb replace; tool/weapon mount; called-shot target |
-| Implant Weapon | Arms/Hands | Concealed, non-disarmable |
-| Running Gear | Legs/Locomotion | Speed / jump edge |
-| Skillwires / Encephalon | Head/Neural | Skill-soft or cognition edge; high magic erosion |
-| Reaction Enhancer | Nervous system | Budget Wired cousin |
-| Internal Air / Filtration | Torso/Core | Sealed breath; toxin/gas edge |
-| Vocal Modulator / Empathy Processor | Head/Neural | Face chrome; Soft preferred |
+Flesh has a price list. The tables below are the **living-hero chrome buy list**: name, grade, Body Integrity, ¥, Availability (Street → Prototype), and a one-line effect already published in RAW or on the Foundry Chrome Item. Buy with ¥, gate on Availability (`08-kits-gear-wealth.md`), install in downtime, spend Integrity — the loop in **Install / remove / repair** above.
 
-Implant ¥ prices and Availability are not yet published.
+**Sources for these rows (do not invent off-table):** Standard SKUs from the Ghostwire Chrome pack; Soft SKUs from spike **B55** (Soft = **4×** the matching Standard ¥ and **one Availability step up**, with Soft-only Silvertongue pieces priced beside Soft Vocal Modulator). Salvage grade still uses the Pass A Integrity multiplier (×**1.5** Standard) but has **no published ¥ / Availability SKUs** yet.
 
+**How to read a row**
+
+| Column | Meaning |
+|---|---|
+| **Grade** | Soft / Standard / Salvage — same Pass A trade (¥ vs Integrity vs erosion) |
+| **BI** | Body Integrity spent on install |
+| **¥** | Purchase price before surgery fees |
+| **Avail** | Street · Professional · Restricted · Military · Prototype |
+| **Effect** | Brief benefit already in RAW / pack text — not a new power grant |
+
+### Standard / Clinic
+
+Baseline street-clinic metal. Default grade for Operators, Scouts, and anyone who can afford the scar.
+
+| Implant | Location | BI | ¥ | Avail | Effect |
+|---|---|---:|---:|---|---|
+| Datajack | Head / Neural | 1 | 500 | Street | Direct-neural Wired / device interface |
+| Vocal Modulator | Head / Neural | 1 | 800 | Professional | Edge on Deception tests |
+| Implant Weapon (Spur) | Arms / Hands | 1 | 1,000 | Restricted | Concealed, non-disarmable forearm spur (grants Spur Strike) |
+| Internal Air / Filtration | Torso / Core | 2 | 1,500 | Professional | Poison immunity 2; edge vs inhaled gases / toxins (manual) |
+| Cyber-Ears (audio suite) | Ears / Aural | 2 | 1,800 | Professional | Edge on Perception (does not stack with Cyber-Eyes) |
+| Cyber-Eyes (optical suite) | Eyes / Optics | 2 | 2,000 | Professional | Edge on Perception; ignore darkness / smoke banes on strikes (manual) |
+| Running Gear | Legs / Locomotion | 3 | 2,500 | Professional | +1 speed; edge on Athletics |
+| Reaction Enhancer | Nervous system | 3 | 3,500 | Restricted | +1 square when you shift with Disengage |
+| Dermal Plating | Torso / Core | 4 | 4,000 | Restricted | Damage immunity 2 (all); visible chrome social cost |
+| Skillwires / Encephalon | Head / Neural | 4 | 5,000 | Restricted | Loaded skillsoft edge (default Repair; swap per soft) |
+| Muscle / Bone Lacing | Torso / Core | 5 | 6,000 | Restricted | +1 stability; edge on Athletics |
+| Cyberlimb (Arm) | Arms / Hands | 5 | 7,500 | Restricted | Limb replace / mount; +1 damage on melee weapon abilities |
+| Wired Reflexes | Nervous system | 6 | 12,000 | Military | +1 speed; +2 squares on Disengage shifts; hardest slot |
+
+**13 Standard SKUs** priced from the Chrome pack.
+
+### Soft / Bioware (B55)
+
+Vat-cultured chrome for Faces and casters who refuse to carve their casting pool to ribbons. Soft Integrity = **0.4 × Standard, round up** (Pass A). Every Soft SKU below costs **1 BI**, so a single implant costs a caster **⌊1/3⌋ = 0** casting-cap erosion — still subject to the **5 BI caster soft-cap** (B55b). Soft stays high-Availability by design; never a free starting build.
+
+| Implant | Location | BI | ¥ | Avail | Effect |
+|---|---|---:|---:|---|---|
+| Datajack (Soft Neural Lace) | Head / Neural | 1 | 2,000 | Professional | Direct-neural Wired / device interface |
+| Vocal Modulator (Soft) | Head / Neural | 1 | 3,200 | Restricted | Edge on Deception tests |
+| Empathy Processor (Soft) | Head / Neural | 1 | 4,000 | Restricted | Edge on Insight tests (Silvertongue Soft-only) |
+| Tailored Pheromone Gland (Soft) | Torso / Core | 1 | 5,000 | Restricted | Edge on Persuasion; no effect behind filtration / sealed air (manual) |
+| Cyber-Ears (Soft) | Ears / Aural | 1 | 7,200 | Restricted | Edge on Perception (does not stack with Cyber-Eyes) |
+| Cyber-Eyes (Soft) | Eyes / Optics | 1 | 8,000 | Restricted | Edge on Perception; ignore darkness / smoke banes on strikes (manual) |
+
+**6 Soft SKUs** priced from B55. Soft ¥ for clones are a **provisional lock** (4× Standard + one Avail step) until a future Soft price appendix revisits them — the numbers above match the shipped pack.
+
+### Salvage / Used
+
+Black-clinic and ex-corpse grade: **cheaper ¥**, **×1.5** Standard BI (Pass A), worst magic erosion (−1 cap per 1 BI). There are **no Salvage SKU rows** in the Chrome pack yet — Directors who need a used Datajack or scavenged Wired Reflexes treat ¥ and Availability as **PROVISIONAL** (cheap / Street-leaning) and apply the Integrity multiplier strictly.
+
+### Provisional gaps (still unpublished)
+
+Mark these **PROVISIONAL** until a later chrome / economy pass cites a source:
+
+| Gap | Notes |
+|---|---|
+| **All Salvage ¥ + Availability** | Grade rule locked; no pack SKUs |
+| **Soft variants** of Wired Reflexes, Reaction Enhancer, Muscle/Bone Lacing, Dermal Plating, Cyberlimb, Implant Weapon, Running Gear, Skillwires, Internal Air | B55 only shipped the six Soft rows above |
+| **Chrome Package** bundle ¥ + total Integrity | Six signature lines named; totals open |
+| **Cyborg Frame Module** ¥ + hardpoint caps | Sample names only; Cyborgs never buy living chrome |
+| Soft ¥ multiplier as final Appendix lock | B55 provisional 4× + one Avail step; revisit when Soft prices are appendix-locked |
+
+## Class hooks (short)
 ## Class hooks (short)
 
 - **Operator / Scout** — natural heavy chrome; class edges on Integrity efficiency / combat implants.
@@ -150,4 +200,4 @@ Cyborgs do **not** spend Body Integrity or buy living Chrome implants. “More m
 
 **Sample modules:** Reinforced Plating · Actuator Overdrive · Integrated Weapon Mount · Expanded Battery · Cortical Firewall+ · Drone Hard-Link.
 
-The full module list, hardpoint caps, and ¥ prices are not yet published. Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.
+The full module list, hardpoint caps, and ¥ prices remain **PROVISIONAL** (not published). Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.

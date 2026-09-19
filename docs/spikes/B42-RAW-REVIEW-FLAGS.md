@@ -48,7 +48,9 @@
 - No lifestyle table; no bribe or Wired-access price points.
 
 ### 09 Chrome and Body Integrity
-- Implant ¥ prices, Availability, and package totals are not published.
+- **DONE B71 (partial):** Implant ¥ + Availability catalog published (13 Standard + 6 Soft/B55 from Chrome pack). Soft ¥ multiplier still B55 provisional lock.
+- Package totals still not published (**PROVISIONAL**).
+- Salvage ¥ + Availability SKUs not published (**PROVISIONAL**).
 - Frame Module list, hardpoint caps, and prices are not published.
 - Called-shot and anti-cyber numbers are not published.
 
