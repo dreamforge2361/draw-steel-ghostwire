@@ -1,6 +1,6 @@
 # Lifestyle & Downtime
 
-**RAW status:** draft (2026-09-18) / draft (Stage 3 fill; Contacts pointer polish B75)  
+**RAW status:** draft (2026-09-19) / Stage 3 fill + lore fuse B87  
 **Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Appendix §F3 (upkeep ¥) + 1G Fixer Retainer, `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
 **Print:** Chapter 10 (TOC lock) — file numbered `26` so Kits/Chrome/Mods (`08`–`11`) stay stable for Journals
 
@@ -40,6 +40,34 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 **Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.
 
 ---
+
+
+## Hive strata ↔ Lifestyle bands
+
+Lore maps **altitude to wealth** (L1 — vertical hive). The bands above are the rules names; the strata are what the street calls the same ladder. Use either at the table — the ¥ upkeep does not change.
+
+| Band | Rules name | Hive strata (lore) | Street read |
+|---|---|---|---|
+| 5 | **Squatter** | **Sinks / Undercity**; pockets of the **Warrens** | Sunless, half-flooded, little Signal. Squatter and worse. |
+| 4 | **Low** | **Flats / Underlevels**; better **Warrens** pockets | Runner habitat. Corp authority thin; local power fills the gap. |
+| 3 | **Middle** | **Midlevels / The Grid** | Wage-body of the hive. Order is rented; one missed payment from falling. |
+| 2 | **High** | **Upper Tiers** | Managerial / professional heights; daylight or a good fake of it. |
+| 1 | **Elite** | **Crown / Spires** | Arcology penthouses, executive enclaves, real sky. To live here is to be the corp. |
+
+**Warrens** sit between Flats and Sinks: Squatter-to-Low depending on the pocket (choke-point law, Signal flicker, salvage and holdouts). Directors should pick the band from how the crew actually sleeps, not from the district name on a map.
+
+**Security gradient (Director):** the same address that sets Lifestyle also sets how hot a drawn gun or open chrome is. Crown lobbies bring corp response in seconds; Flats and Sinks are no-security zones where nothing is illegal because nothing is enforced. Lifestyle upkeep buys the *roof*; zone heat is still the Director's call (`25`, L1).
+
+## Corp scrip, SIN, and housing strings
+
+Most wage-bodies do not live on liquid **¥** alone. Lore (L1): corp **scrip**, corp housing, corp medicine, corp entertainment — membership instead of citizenship. For v1 play:
+
+- **Lifestyle upkeep in this chapter is still paid in ¥** (or a Doss / Lifestyle Voucher that covers the band). That keeps chargen and run payouts on one currency.
+- **Fiction:** a Middle+ address may be **corp housing** or scrip-tied. The Director may say the band is *covered by a corp contract* this respite (no ¥ leave the sheet) **in exchange for** a string: curfew, badge checks, random search, a favor owed, or a SIN that lights up if the crew burns the block.
+- **Runners** often pay cash ¥ for Low/Squatter dens exactly to stay off those strings. That is why Flats crash-space is the default Ghost Run pad.
+- **Scrip ≠ character power.** Whether you pay ¥ or the corp "covers" the flat, you never buy characteristics, Kits, or class features with housing.
+
+Full megacorp tickers (HAL, FER, MER, …): `docs/rulebook/MEGACORP-TICKERS.md`.
 
 ## Pay Lifestyle or take the street
 
