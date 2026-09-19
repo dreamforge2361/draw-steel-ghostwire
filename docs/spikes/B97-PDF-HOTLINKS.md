@@ -3,7 +3,7 @@
 **Status:** Built 2026-09-19 · official rulebook PDF cut (Michael lock 2026-09-18: not a draft)  
 **Rulebook PDF:** **Version 0.4.0** (`Ghostwire-Rulebook-0.4.0.pdf` / `.html`) — official, not a draft  
 **Foundry module:** **0.3.22** (`module.json` — next free 0.3.x after main 0.3.21; **independent** of the PDF version)  
-**Journals:** **not** regenerated
+**Journals:** **not** regenerated — next task **after** 0.4.0 PDF ships (do not start in this PR)
 
 ## Version cut (official, not draft)
 
@@ -104,7 +104,7 @@ Heading structure is already `h1` (parts + chapter titles) / `h2` / `h3`. Collis
 
 ## Not this spike
 
-- Journal regen (held).
+- **Journal regen (held).** Michael lock: regenerate Ghostwire rulebook Foundry journals **after** Rulebook 0.4.0 PDF ships. Do not start `raw-to-journals` / pack rebuild in this PR.
 - Invented plates / `wire-opener`.
 - Hand-rewriting RAW to add markdown links.
 - Dumping editorial `docs/manuscript/TOC.md` notes into the PDF (Contents is generated from MANIFEST instead).
