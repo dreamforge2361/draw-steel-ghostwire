@@ -1,21 +1,30 @@
 #!/usr/bin/env node
 /**
- * Build data/voidmark-rules-index.json from Ghostwire RAW (+ L4/L5 lore chips).
- * Skips front matter / INDEX so player-facing retrieve stays Ghostwire-only (B92).
+ * Build data/voidmark-rules-index.json — Ghostwire knowledge index
+ * (RAW procedures + Reach / Flats setting lore + manuscript L-chips).
+ * Skips front matter / INDEX / handbook extract notes so player-facing
+ * retrieve stays Ghostwire-only (B92).
  *
  * Run: node tools/build-voidmark-index.mjs
  */
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
-import { basename, dirname, join } from "node:path";
+import { basename, dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const RAW_DIR = join(ROOT, "docs/raw");
+const LORE_DIR = join(ROOT, "docs/manuscript/01-lore");
+const HANDBOOK_DIR = join(ROOT, "docs/setting/reach-handbook");
 const OUT = join(ROOT, "data/voidmark-rules-index.json");
+
 const SKIP_RAW = new Set(["00-INDEX.md", "00-front-matter.md"]);
-const LORE = [
-  { file: "docs/manuscript/01-lore/L4-voidmark.md", kind: "lore" },
-  { file: "docs/manuscript/01-lore/L5-hands-off-accords.md", kind: "lore" },
+const SKIP_HANDBOOK = new Set(["EXTRACT-NOTES.md", "ART-INDEX.md"]);
+const SKIP_LORE = new Set(["README.md"]);
+
+/** Extra setting pages (gazetteer + Director Reach pointer). */
+const SETTING_PAGES = [
+  "docs/setting/wired-flats-gazetteer.md",
+  "docs/manuscript/03-directors/27-running-ossian-reach.md",
 ];
 
 const MAX_CHUNK = 1600;
@@ -27,6 +36,16 @@ const slug = text => String(text ?? "")
   .replace(/[^a-z0-9]+/g, "-")
   .replace(/^-|-$/g, "")
   .slice(0, 60);
+
+function listMarkdown(dir, skip = new Set()) {
+  return readdirSync(dir)
+    .filter(f => f.endsWith(".md") && !skip.has(f))
+    .sort();
+}
+
+function rel(abs) {
+  return relative(ROOT, abs).replaceAll("\\", "/");
+}
 
 function stripMeta(markdown) {
   let text = String(markdown ?? "").replace(/\r\n/g, "\n");
@@ -43,7 +62,7 @@ function stripMeta(markdown) {
       continue;
     }
     if (skippingHeader) {
-      if (/^\*\*(RAW status|Sources|Print|Engine|Terminology|Status|Theme|Related|Street names)\*\*/i.test(line)) continue;
+      if (/^\*\*(RAW status|Sources|Print|Engine|Terminology|Status|Theme|Related|Street names|Harvested|TOC|Points to)\*\*/i.test(line)) continue;
       if (/^---\s*$/.test(line)) {
         skippingHeader = false;
         continue;
@@ -98,8 +117,14 @@ function splitParagraphs(text, heading) {
   return out;
 }
 
-function chunkMarkdown(markdown, file, kind) {
+/** B92: drop chunks that still cite Draw Steel Heroes procedure. */
+function isHeroesCitationHeavy(text) {
+  return /draw steel heroes/i.test(text);
+}
+
+function chunkMarkdown(markdown, source, kind) {
   const body = stripMeta(markdown);
+  const file = basename(source);
   const titleMatch = body.match(/^#\s+(.+)$/m);
   const chapter = titleMatch?.[1]?.trim() || basename(file, ".md");
   const withoutTitle = body.replace(/^#\s+.+\n+/, "");
@@ -118,9 +143,11 @@ function chunkMarkdown(markdown, file, kind) {
       for (const part of sliced) {
         const text = part.text.trim();
         if (text.length < MIN_CHUNK) continue;
+        if (isHeroesCitationHeavy(text)) continue;
         chunks.push({
           id: `${basename(file, ".md")}#${slug(part.heading || heading)}#${chunks.length + 1}`,
-          file: basename(file),
+          file,
+          source,
           chapter,
           heading: part.heading || heading,
           kind,
@@ -132,23 +159,39 @@ function chunkMarkdown(markdown, file, kind) {
   return chunks;
 }
 
-const chunks = [];
-for (const name of readdirSync(RAW_DIR).filter(f => f.endsWith(".md")).sort()) {
-  if (SKIP_RAW.has(name)) continue;
-  chunks.push(...chunkMarkdown(readFileSync(join(RAW_DIR, name), "utf8"), name, "rules"));
+function ingestFile(abs, kind) {
+  return chunkMarkdown(readFileSync(abs, "utf8"), rel(abs), kind);
 }
-for (const row of LORE) {
-  chunks.push(...chunkMarkdown(readFileSync(join(ROOT, row.file), "utf8"), basename(row.file), row.kind));
+
+const rawFiles = listMarkdown(RAW_DIR, SKIP_RAW);
+const loreFiles = listMarkdown(LORE_DIR, SKIP_LORE).filter(f => /^L\d+-/i.test(f));
+const handbookFiles = listMarkdown(HANDBOOK_DIR, SKIP_HANDBOOK);
+
+const chunks = [];
+for (const name of rawFiles) {
+  chunks.push(...ingestFile(join(RAW_DIR, name), "rules"));
+}
+for (const name of loreFiles) {
+  chunks.push(...ingestFile(join(LORE_DIR, name), "lore"));
+}
+for (const name of handbookFiles) {
+  chunks.push(...ingestFile(join(HANDBOOK_DIR, name), "setting"));
+}
+for (const source of SETTING_PAGES) {
+  chunks.push(...ingestFile(join(ROOT, source), "setting"));
 }
 
 const index = {
   version: 1,
+  role: "knowledge",
   built: new Date().toISOString().slice(0, 10),
   generator: "tools/build-voidmark-index.mjs",
   sources: {
-    raw: readdirSync(RAW_DIR).filter(f => f.endsWith(".md") && !SKIP_RAW.has(f)).sort(),
-    lore: LORE.map(r => r.file),
-    skipped: [...SKIP_RAW],
+    raw: rawFiles,
+    lore: loreFiles.map(f => `docs/manuscript/01-lore/${f}`),
+    handbook: handbookFiles.map(f => `docs/setting/reach-handbook/${f}`),
+    setting: [...SETTING_PAGES],
+    skipped: [...SKIP_RAW, ...SKIP_HANDBOOK, ...SKIP_LORE],
   },
   chunkCount: chunks.length,
   chunks,

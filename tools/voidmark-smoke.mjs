@@ -26,13 +26,26 @@ console.log("B82 VOIDMARK RAG / prompt smoke\n");
 
 console.log("1) Index shape");
 ok(index.version === 1, `version ${index.version}`);
-ok(index.chunkCount === index.chunks.length && index.chunks.length >= 80, `${index.chunks.length} chunks`);
+ok(index.role === "knowledge" || index.role == null, `role ${index.role ?? "unset"}`);
+ok(index.chunkCount === index.chunks.length && index.chunks.length >= 200, `${index.chunks.length} chunks`);
 ok(files.has("21-the-wire.md"), "includes The Wire");
 ok(files.has("04-combat.md"), "includes Combat");
+ok(files.has("L1-setting-primer.md"), "includes L1 setting primer");
+ok(files.has("L2-peoples-and-world.md"), "includes L2 peoples");
+ok(files.has("L3-ossian-reach-color.md"), "includes L3 Reach color");
 ok(files.has("L4-voidmark.md"), "includes VOIDMARK lore chip");
 ok(files.has("L5-hands-off-accords.md"), "includes Hands Off lore chip");
+ok(files.has("04-switchboard.md"), "includes Reach Handbook Switchboard");
+ok(files.has("01-what-the-flats-are.md"), "includes What the Flats Are");
+ok(files.has("05-the-neon-shambles.md"), "includes Neon Shambles");
+ok(files.has("wired-flats-gazetteer.md"), "includes Wired Flats gazetteer");
+ok(files.has("27-running-ossian-reach.md"), "includes Running Ossian Reach pointer");
 ok(!files.has("00-front-matter.md"), "skips front matter");
 ok(!files.has("00-INDEX.md"), "skips RAW index notes");
+ok(!files.has("EXTRACT-NOTES.md"), "skips handbook extract notes");
+ok(!files.has("ART-INDEX.md"), "skips handbook art index");
+ok(!files.has("README.md"), "skips lore README");
+ok(index.sources?.handbook?.some(f => f.includes("04-switchboard")), "handbook source lists 04-switchboard");
 
 const heroesHits = index.chunks.filter(c => /draw steel heroes/i.test(c.text));
 ok(!heroesHits.length, "no Draw Steel Heroes in indexed rule/lore chunks");
@@ -49,6 +62,27 @@ ok(combat.some(h => /main action|maneuver|round/i.test(h.text)), "combat hits me
 
 const mark = retrieve(index, "Who is VOIDMARK and what are the Hands Off Accords?");
 ok(mark.some(h => /L4-voidmark|L5-hands/.test(h.file)), `identity files: ${mark.map(h => h.file).join(", ")}`);
+
+const switchboard = retrieve(index, "What is the Switchboard?");
+const switchboardSrc = hit => `${hit.file} ${hit.source ?? ""}`;
+ok(switchboard.length >= 1, `switchboard query returned ${switchboard.length} hits`);
+ok(
+  switchboard.some(h => /04-switchboard|L3-ossian-reach|reach-handbook/.test(switchboardSrc(h))),
+  `switchboard sources: ${switchboard.map(h => h.source || h.file).join(", ")}`,
+);
+ok(switchboard.some(h => /switchboard|cassavir/i.test(h.text)), "switchboard hits mention Switchboard / Cassavir");
+
+const flats = retrieve(index, "Switchboard district lore");
+ok(
+  flats.some(h => /04-switchboard|L3-ossian-reach|reach-handbook/.test(switchboardSrc(h))),
+  `district-lore sources: ${flats.map(h => h.source || h.file).join(", ")}`,
+);
+
+const shambles = retrieve(index, "Neon Shambles");
+ok(
+  shambles.some(h => /05-the-neon-shambles|L3-ossian-reach/.test(switchboardSrc(h))),
+  `shambles sources: ${shambles.map(h => h.source || h.file).join(", ")}`,
+);
 
 console.log("\n3) Prompt assembly");
 ok(/VOIDMARK/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "default prompt names VOIDMARK");

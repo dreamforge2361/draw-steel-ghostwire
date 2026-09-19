@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.29` — **VOIDMARK knowledge index:** district / hive lore (Switchboard, the Flats, Ossian Reach) retrieves from shipped Reach Handbook + L3 (and other L-chips / Wired Flats gazetteer). Rebuild: `node tools/build-voidmark-index.mjs`. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
 - `0.3.28` — **VOIDMARK default model:** `voidmarkModel` / `DEFAULT_MODEL` is now `grok-4.6` (`grok-3` 404s on current xAI). Pick any id your key lists (`grok-4.6`, `grok-4.5`, etc.). Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
 - `0.3.27` — **VOIDMARK chat (B82):** ApplicationV2 in-module AI applet (Token controls › ghost, or a keybinding). Module Configuration holds an OpenAI-compatible base URL (default xAI `https://api.x.ai/v1`), secret API key, model (default `grok-4.6` as of 0.3.28), temperature, player vs GM-only access, and editable VOIDMARK system instructions. Rules questions retrieve from a shipped lexical index of Ghostwire RAW (`data/voidmark-rules-index.json`; rebuild with `node tools/build-voidmark-index.mjs`). Not a live Cursor/Grok Bot bridge. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`. *Pending Foundry verification.*
 - `0.1.0` — skeleton
