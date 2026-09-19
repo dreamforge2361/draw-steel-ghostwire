@@ -115,11 +115,11 @@ Windows: set `CHROME_PATH` or `EDGE_PATH` if the browser is not on PATH.
 
 Missing file → `<!-- ART GAP: id — expected path -->` plus a visible placeholder figure. Inject never paints a fake plate.
 
-Michael’s Windows folder names (copy-script map): `GHOSTWIRE_Class_Art`, `GHOSTWIRE_Species_Art`, `GHOSTWIRE_Art_Bundle`, `GHOSTWIRE_Pregen_Art_Bundle`, Core extracts → `from-core-pdf/`. Details: `docs/manuscript/print-art/README.md`.
+Michael’s Windows folder names (copy-script map): `GHOSTWIRE_Class_Art`, `GHOSTWIRE_Species_Art`, `GHOSTWIRE_Art_Bundle`, `GHOSTWIRE_Pregen_Art_Bundle`, `GHOSTWIRE_Gang_Art`, Core extracts → `from-core-pdf/`. Details: `docs/manuscript/print-art/README.md`.
 
 ## Placement map (starter)
 
-`docs/manuscript/print-art/ART-PLACEMENT.yml` — **33 slots**:
+`docs/manuscript/print-art/ART-PLACEMENT.yml` — **49 slots** (Peoples L2 + Ch 6 twins; eight B91 gang signs):
 
 | Group | Count | Slots |
 |---|---:|---|
@@ -127,8 +127,9 @@ Michael’s Windows folder names (copy-script map): `GHOSTWIRE_Class_Art`, `GHOS
 | L1 fillers | 6 | cosmology, planes, megacorps, wired, timeline, city-nocturne |
 | L2 opener | 1 | peoples-opener |
 | L3 map | 1 | Flats labeled overview (in-module) |
+| L3 gang signs | 8 | Metermen → Undertow (B91, 0.3.23) |
 | L4 / L5 | 2 | VOIDMARK, Hands Off Accords (main 0.3.13–0.3.14) |
-| Peoples (Ch 6) | 8 | Pure Human → Cyborg |
+| Peoples (L2 + Ch 6) | 16 | Pure Human → Cyborg (lore + rules twins) |
 | Classes | 9 | Operator → Technomancer |
 | Systems openers | 3 | Wire, Veil, Machines |
 | Ch 27 maps | 2 | Flats overview + Cinderhold (in-module) |
@@ -145,6 +146,7 @@ District maps **place** because they already ship in the module. Everything that
 - `l4-voidmark` / `l5-hands-off` → `filler/voidmark.webp` / `filler/hands-off.webp`
 - `veil-opener` / `machines-opener` → matching `filler/` slugs
 - `l3-flats-overview` / `ch27-flats-overview` / `ch27-cinderhold` → in-module district maps
+- L3 gang signs (B91, 0.3.23) → `print-art/gangs/{metermen,skinjobs,nightshift,ninth-ward-kings,rust-saints,glass-vipers,hollow-men,undertow}.webp`
 
 **ART GAP (copy from SoR, then re-inject):**
 
@@ -172,7 +174,7 @@ Print CSS vendors Liberation Sans/Serif (SIL OFL) so Chrome embeds a real text f
 
 - Generated **full draft PDF** is gitignored (can be tens of MB once art is in).
 - Generated HTML + assembled Markdown + with-art Markdown are gitignored.
-- Local `print-art/**` rasters are gitignored except the twelve Michael-approved cover/filler plates. READMEs + `ART-PLACEMENT.yml` ship.
+- Local `print-art/**` rasters are gitignored except the twelve Michael-approved cover/filler plates and the eight B91 gang signs. READMEs + `ART-PLACEMENT.yml` ship.
 - Output path to keep: `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (local official cut). Optional `--sample` writes `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored).
 
 ## Not this spike

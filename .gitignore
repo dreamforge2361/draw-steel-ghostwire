@@ -69,6 +69,15 @@ docs/manuscript/print-art/**/*.tiff
 !docs/manuscript/print-art/filler/peoples-opener.webp
 !docs/manuscript/print-art/filler/veil-opener.webp
 !docs/manuscript/print-art/filler/machines-opener.webp
+# Michael-approved L3 gang signs (B91, 0.3.23)
+!docs/manuscript/print-art/gangs/metermen.webp
+!docs/manuscript/print-art/gangs/skinjobs.webp
+!docs/manuscript/print-art/gangs/nightshift.webp
+!docs/manuscript/print-art/gangs/ninth-ward-kings.webp
+!docs/manuscript/print-art/gangs/rust-saints.webp
+!docs/manuscript/print-art/gangs/glass-vipers.webp
+!docs/manuscript/print-art/gangs/hollow-men.webp
+!docs/manuscript/print-art/gangs/undertow.webp
 
 # Live PDF text extracts (box or Windows module folder) — do not commit
 _pdf-extract/

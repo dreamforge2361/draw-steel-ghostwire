@@ -1,10 +1,11 @@
 # Ghostwire print-art tree
 
-Local artwork for the **print PDF pipeline** (B88). Most binaries stay on the machine that builds the PDF — they are gitignored. This folder ships **stubs + a placement map**, plus twelve **Michael-approved** tracked plates (0.3.21):
+Local artwork for the **print PDF pipeline** (B88). Most binaries stay on the machine that builds the PDF — they are gitignored. This folder ships **stubs + a placement map**, plus twelve **Michael-approved** tracked plates (0.3.21) and eight **L3 gang signs** (B91, 0.3.23):
 
 - `cover/cover.webp` (optional `cover/cover.png`)
 - `filler/voidmark.webp` · `hands-off.webp` · `cosmology.webp` · `planes.webp` · `megacorps.webp` · `wired.webp`
 - `filler/timeline.webp` (v3) · `city-nocturne.webp` · `peoples-opener.webp` · `veil-opener.webp` · `machines-opener.webp`
+- `gangs/` — `metermen` · `skinjobs` · `nightshift` · `ninth-ward-kings` · `rust-saints` · `glass-vipers` · `hollow-men` · `undertow`
 
 Still missing from the approved drop: `filler/wire-opener.webp`. Peoples / class rasters stay local.
 
@@ -62,6 +63,7 @@ Env overrides: `GHOSTWIRE_ART_ROOT`, `GHOSTWIRE_CORE_PDF`, `CHROME_PATH` / `EDGE
 | `GHOSTWIRE_Species_Art` | `species/` | Peoples / Ancestries plates (one per People) |
 | `GHOSTWIRE_Art_Bundle` | `filler/` | L1 lore fillers, Wire/Veil/Machines openers, L4/L5 plates |
 | `GHOSTWIRE_Pregen_Art_Bundle` | `pregens/` | Pregen 2048 portraits — not in the v1 placement map (held) |
+| Gang signs (B91 approved drop) | `gangs/` | L3 Reach gang emblems (eight tracked webps) |
 | Core PDF extracts | `from-core-pdf/` | Fallbacks when a named class/filler file is missing |
 | Cover plate (any `*cover*`) | `cover/` | Title / cover hole |
 
@@ -78,6 +80,10 @@ Env overrides: `GHOSTWIRE_ART_ROOT`, `GHOSTWIRE_CORE_PDF`, `CHROME_PATH` / `EDGE
 `pure-human` · `corran` · `elvani` · `goliar` · `changer` · `revenant` · `mutant` · `cyborg`
 
 **`cover/`:** `cover`
+
+**`gangs/`** (B91, Michael-approved, tracked):
+
+`metermen` · `skinjobs` · `nightshift` · `ninth-ward-kings` · `rust-saints` · `glass-vipers` · `hollow-men` · `undertow`
 
 **`filler/`** (optional, only if the file exists):
 

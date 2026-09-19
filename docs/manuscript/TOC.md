@@ -24,7 +24,7 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 |---|---|---|
 | L1 | Setting Primer (Core Sourcebook harvest) | `lore:` `01-lore/L1-setting-primer.md` — harvested B65 (~33k words); not a stub |
 | L2 | Peoples & World (Lore Book harvest) | `lore:` `01-lore/L2-peoples-and-world.md` — harvested B65 (~3.8k); thinner than L1, PDF-depth OK |
-| L3 | Ossian Reach / Street Color (optional harvest) | `lore:` `01-lore/L3-ossian-reach-color.md` — harvested B65 (~6.4k); optional street color, not a gazetteer reprint |
+| L3 | Ossian Reach / Street Color (optional harvest) | `lore:` `01-lore/L3-ossian-reach-color.md` — harvested B65 (~6.4k); B91 gang signs after L3 headings; optional street color, not a gazetteer reprint |
 | L4 | VOIDMARK | `lore:` `01-lore/L4-voidmark.md` — draft B90; leash-slipped MER-origin Wired super-AI |
 | L5 | The Hands Off Accords | `lore:` `01-lore/L5-hands-off-accords.md` — draft B91; AI legal / actuators restricted |
 
@@ -120,4 +120,5 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Lore **Hands Off Accords** (`01-lore/L5-hands-off-accords.md`) **draft** 2026-09-19 (B91); AI legal / actuators restricted; Dark bot war = escalation fuel; journals **not** regenerated.
 - Print PDF pipeline **B88** 2026-09-19 (`tools/build-pdf.mjs`, `print-art/ART-PLACEMENT.yml`); journals **not** regenerated.
 - Print PDF hotlinks **B97** 2026-09-19 (`tools/linkify-manuscript.mjs`); official rulebook PDF **0.4.0**; Foundry module **0.3.22**; journals **not** regenerated.
+- Print **L3 gang signs** **B91** 2026-09-19 (`print-art/gangs/` + `ART-PLACEMENT.yml`); eight Michael-approved emblems; `### The Undertow` one-liner; Foundry module **0.3.23**; journals **not** regenerated.
 - Appendix B chargen cheat sheet (`04-back/29-chargen-cheat-sheet.md`) **draft** 2026-09-19 (B93); Foundry punch-list; journals **not** regenerated.

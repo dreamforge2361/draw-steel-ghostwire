@@ -1,6 +1,6 @@
 # Ghostwire print-art gap report
 
-**Generated:** 2026-09-19T02:50:10.577Z
+**Generated:** 2026-09-19T03:23:49.293Z
 **Tool:** `tools/inject-print-art.mjs`
 **Placement map:** `docs/manuscript/print-art/ART-PLACEMENT.yml`
 **Credit:** Ghostwire AI (AI-generated) (B76). No external IP name-checks (B78/B83).
@@ -8,8 +8,8 @@
 
 | | Count |
 |---|---:|
-| Slots in map | 41 |
-| Placed | 15 |
+| Slots in map | 49 |
+| Placed | 23 |
 | ART GAP (file missing) | 26 |
 | Chapter anchor missing | 0 |
 
@@ -26,6 +26,14 @@
 | `l1-themes` | filler | `docs/manuscript/print-art/filler/city-nocturne.webp` |
 | `l2-peoples-opener` | filler | `docs/manuscript/print-art/filler/peoples-opener.webp` |
 | `l3-flats-overview` | map | `assets/maps/districts/labeled/00_flats_overview_L.webp` |
+| `gang-metermen` | gang | `docs/manuscript/print-art/gangs/metermen.webp` |
+| `gang-skinjobs` | gang | `docs/manuscript/print-art/gangs/skinjobs.webp` |
+| `gang-nightshift` | gang | `docs/manuscript/print-art/gangs/nightshift.webp` |
+| `gang-ninth-ward-kings` | gang | `docs/manuscript/print-art/gangs/ninth-ward-kings.webp` |
+| `gang-rust-saints` | gang | `docs/manuscript/print-art/gangs/rust-saints.webp` |
+| `gang-glass-vipers` | gang | `docs/manuscript/print-art/gangs/glass-vipers.webp` |
+| `gang-hollow-men` | gang | `docs/manuscript/print-art/gangs/hollow-men.webp` |
+| `gang-undertow` | gang | `docs/manuscript/print-art/gangs/undertow.webp` |
 | `l4-voidmark` | filler | `docs/manuscript/print-art/filler/voidmark.webp` |
 | `l5-hands-off` | filler | `docs/manuscript/print-art/filler/hands-off.webp` |
 | `veil-opener` | filler | `docs/manuscript/print-art/filler/veil-opener.webp` |
@@ -72,4 +80,5 @@ Fill gaps by copying Michael’s Dropbox art tree (see `docs/manuscript/print-ar
 - District / battle maps use in-module `assets/maps/districts/` at **native resolution** (no downscale of source files).
 - Class plates prefer `print-art/classes/` names matching `GHOSTWIRE_Class_Art`.
 - Species plates prefer `print-art/species/` names matching `GHOSTWIRE_Species_Art`.
+- Gang signs prefer `print-art/gangs/` slugs (B91: metermen → undertow).
 - Core Sourcebook extracts land in `print-art/from-core-pdf/` as fallbacks only.

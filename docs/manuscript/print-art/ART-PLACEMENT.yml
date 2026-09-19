@@ -148,6 +148,111 @@ slots:
     css_class: plate-map
     downscale: false
 
+  # --- L3 / Reach gang signs (B91, Michael-approved 2026-09-18) ---
+  - id: gang-metermen
+    title: The Metermen sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Metermen"
+    files:
+      - docs/manuscript/print-art/gangs/metermen.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: metermen
+    caption: The Metermen - Grid utility co-op
+    css_class: plate-gang
+
+  - id: gang-skinjobs
+    title: The Skinjobs sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Skinjobs"
+    files:
+      - docs/manuscript/print-art/gangs/skinjobs.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: skinjobs
+    caption: The Skinjobs - mismatched optics
+    css_class: plate-gang
+
+  - id: gang-nightshift
+    title: The Nightshift sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Nightshift"
+    files:
+      - docs/manuscript/print-art/gangs/nightshift.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: nightshift
+    caption: The Nightshift - after-hours info crew
+    css_class: plate-gang
+
+  - id: gang-ninth-ward-kings
+    title: The Ninth Ward Kings sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Ninth Ward Kings"
+    files:
+      - docs/manuscript/print-art/gangs/ninth-ward-kings.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: ninth-ward-kings
+    caption: The Ninth Ward Kings - nine-pointed crown
+    css_class: plate-gang
+
+  - id: gang-rust-saints
+    title: The Rust Saints sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Rust Saints"
+    files:
+      - docs/manuscript/print-art/gangs/rust-saints.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: rust-saints
+    caption: The Rust Saints - rusted iron nail
+    css_class: plate-gang
+
+  - id: gang-glass-vipers
+    title: The Glass Vipers sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Glass Vipers"
+    files:
+      - docs/manuscript/print-art/gangs/glass-vipers.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: glass-vipers
+    caption: The Glass Vipers - green-glass shard
+    css_class: plate-gang
+
+  - id: gang-hollow-men
+    title: The Hollow Men sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Hollow Men"
+    files:
+      - docs/manuscript/print-art/gangs/hollow-men.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: hollow-men
+    caption: The Hollow Men - gone thin
+    css_class: plate-gang
+
+  - id: gang-undertow
+    title: The Undertow sign
+    kind: gang
+    chapter_id: L3
+    after_heading: "### The Undertow"
+    files:
+      - docs/manuscript/print-art/gangs/undertow.webp
+    search_dirs:
+      - docs/manuscript/print-art/gangs
+    match: undertow
+    caption: The Undertow - flood-readers
+    css_class: plate-gang
+
   # --- L4 / L5 (main 0.3.13–0.3.14 lore) ---
   - id: l4-voidmark
     title: VOIDMARK plate

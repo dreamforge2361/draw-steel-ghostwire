@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). **Version 0.4.0** is the first official rulebook PDF (playtest edition). Foundry module version is `module.json` (**0.3.22**) and is independent of the PDF.
+**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). **Version 0.4.0** is the first official rulebook PDF (playtest edition). Foundry module version is `module.json` (**0.3.23**) and is independent of the PDF.
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 
@@ -38,7 +38,7 @@ Foundry Virtual Tabletop is a trademark of Foundry Gaming, LLC. This module is a
 
 ## Artwork
 
-**All artwork in Ghostwire was created by Ghostwire AI (AI-generated).** That includes cover and title plates, interior illustrations, Peoples/class plates, district battle maps, handbook book plates, and other visual assets shipped with this manuscript or the Foundry module, unless a caption explicitly names a different license.
+**All artwork in Ghostwire was created by Ghostwire AI (AI-generated).** That includes cover and title plates, interior illustrations, Peoples/class plates, Reach gang signs, district battle maps, handbook book plates, and other visual assets shipped with this manuscript or the Foundry module, unless a caption explicitly names a different license.
 
 Human names are not required on AI plates. If Michael later commissions or licenses a non-AI plate, that plate gets its own credit line.
 
@@ -48,6 +48,7 @@ Human names are not required on AI plates. If Michael later commissions or licen
 |---|---|---|
 | Cover / title wrap | Ghostwire AI (AI-generated) | Ghostwire project |
 | Part openers / class plates | Ghostwire AI (AI-generated) | Ghostwire project |
+| Reach gang signs (B91) | Ghostwire AI (AI-generated) | `docs/manuscript/print-art/gangs/` |
 | District battle maps (B72) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/` |
 | Handbook book plates | Ghostwire AI (AI-generated) | `assets/reach-handbook/` |
 

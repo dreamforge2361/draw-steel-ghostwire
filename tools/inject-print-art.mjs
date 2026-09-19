@@ -267,6 +267,7 @@ function writeGapReport(path, results, credit) {
   lines.push("- District / battle maps use in-module `assets/maps/districts/` at **native resolution** (no downscale of source files).");
   lines.push("- Class plates prefer `print-art/classes/` names matching `GHOSTWIRE_Class_Art`.");
   lines.push("- Species plates prefer `print-art/species/` names matching `GHOSTWIRE_Species_Art`.");
+  lines.push("- Gang signs prefer `print-art/gangs/` slugs (B91: metermen → undertow).");
   lines.push("- Core Sourcebook extracts land in `print-art/from-core-pdf/` as fallbacks only.");
   lines.push("");
   mkdirSync(dirname(path), { recursive: true });
