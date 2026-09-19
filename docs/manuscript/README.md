@@ -1,8 +1,8 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Thin-chapter fill (B75, 2026-09-19) — module **0.3.4**; journals still held  
+**Status:** Print PDF pipeline (B88, 2026-09-19) — module **0.3.15**; journals still held  
 **Path:** `docs/manuscript/`  
-**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73 assemble gaps · B74 title/front · **B75** thin chapters  
+**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
 
 This folder is the **single Markdown source of record** for the eventual print PDF: lore harvested from the original Ghostwire master PDFs, plus rules pointed at `docs/raw/` (no dual-edit copies).
@@ -51,9 +51,9 @@ Keep `docs/raw/` rules-only so Journal regen stays clean. Manuscript concatenate
 | 1. Finish RAW spine + Wire + Lifestyle (rules) | Wire **RAW-locked** B66; Lifestyle **draft** B67 (`26-lifestyle-downtime.md`); spine polish remains |
 | 2. Harvest lore/art from master PDFs into `01-lore/` | manuscript lore stubs |
 | 3. `node tools/assemble-manuscript.mjs` → `docs/manuscript/build/Ghostwire-Manuscript.md` | assemble script |
-| 4. Pandoc / print CSS / art plates | later (not this spike) |
+| 4. Inject plates + Chrome HTML→PDF | **B88** — `tools/inject-print-art.mjs` + `tools/build-pdf.mjs` |
 
-Word-as-master is **rejected**. Prefer Markdown + assemble script; Pandoc later.
+Word-as-master is **rejected**. Markdown assemble → art inject → print CSS. Spike: `docs/spikes/B88-PDF-PIPELINE.md`.
 
 ---
 
@@ -73,6 +73,17 @@ Reads `docs/manuscript/MANIFEST.yml` (ordered file list), concatenates into:
 - Part separators are inserted from manifest `part:` markers.
 
 See `TOC.md` for print titles ↔ sources. See `02-rules/README.md` for the pointer policy.
+
+### Print PDF (B88)
+
+```bash
+# after copying local art (see docs/manuscript/print-art/README.md)
+node tools/assemble-manuscript.mjs
+node tools/inject-print-art.mjs
+node tools/build-pdf.mjs
+```
+
+Or `node tools/build-pdf.mjs` alone (runs all three). Output: `docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf` (gitignored) and `ART-GAP-REPORT.md`. Journals stay held.
 
 ---
 
@@ -95,8 +106,11 @@ docs/manuscript/
   00-front/              # title plate, credits, print how-to-use (B74)
   01-lore/               # Core Sourcebook / Lore Book harvest stubs
   02-rules/              # pointer notes only (no full raw copies)
-  03-directors/          # NEW Reach pointer stub; Opposition → raw
-  build/                 # generated Ghostwire-Manuscript.md
+  03-directors/          # NEW Reach pointer; Opposition → raw
+  04-back/               # Appendix A slang
+  print/                 # print CSS (ART-STYLE lock)
+  print-art/             # ART-PLACEMENT.yml + empty tree (binaries local)
+  build/                 # generated manuscript / with-art / draft PDF
 ```
 
 ---

@@ -1,0 +1,280 @@
+/* Ghostwire print CSS — locked to docs/rulebook/ART-STYLE.md
+ * Dark page grounds; cyan / gold hairlines; white condensed titles.
+ * Do not invent a second palette. Screen-proof draft (heavy toner if printed).
+ *
+ * Liberation (SIL OFL) is vendored so Chrome PDF embedding keeps word spaces.
+ * Do not use letter-spacing on body/headings — Chrome print-to-pdf drops spaces.
+ */
+
+@font-face {
+  font-family: "GW Liberation Sans";
+  src: url("fonts/LiberationSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GW Liberation Sans";
+  src: url("fonts/LiberationSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GW Liberation Serif";
+  src: url("fonts/LiberationSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GW Liberation Serif";
+  src: url("fonts/LiberationSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --gw-bg: #0b0f14;
+  --gw-surface: #121821;
+  --gw-surface-2: #1a2330;
+  --gw-border: #2a3a4d;
+  --gw-text: #e8eef5;
+  --gw-text-muted: #9aabbd;
+  --gw-text-dim: #6d7f93;
+  --gw-cyan: #6ee7ff;
+  --gw-gold: #e8c36a;
+  --gw-pink: #ff4d9a;
+  --gw-font-ui: "GW Liberation Sans", "Segoe UI", "Helvetica Neue", sans-serif;
+  --gw-font-body: "GW Liberation Serif", "Georgia", "Times New Roman", serif;
+}
+
+@page {
+  size: letter;
+  margin: 0.7in 0.7in 0.8in 0.7in;
+  background: var(--gw-bg);
+  @bottom-center {
+    content: "GHOSTWIRE  ·  draft  ·  " counter(page);
+    font-family: var(--gw-font-ui);
+    font-size: 9px;
+    color: var(--gw-text-dim);
+  }
+}
+
+html,
+body {
+  background: var(--gw-bg);
+  color: var(--gw-text);
+  font-family: var(--gw-font-body);
+  font-size: 10.5pt;
+  line-height: 1.45;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.gw-print-banner {
+  border: 1px solid color-mix(in srgb, var(--gw-cyan) 45%, var(--gw-border));
+  background: var(--gw-surface);
+  color: var(--gw-text-muted);
+  padding: 0.6rem 0.85rem;
+  margin: 0 0 1.4rem;
+  font-family: var(--gw-font-ui);
+  font-size: 0.85rem;
+}
+
+.gw-print-banner strong {
+  color: var(--gw-cyan);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--gw-font-ui);
+  font-weight: 800;
+  color: #fff;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gw-gold);
+  padding-bottom: 0.25rem;
+  margin: 1.6rem 0 0.7rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid color-mix(in srgb, var(--gw-cyan) 70%, transparent);
+  padding-bottom: 0.18rem;
+  margin: 1.3rem 0 0.55rem;
+}
+
+h3 {
+  font-size: 1.02rem;
+  color: var(--gw-gold);
+  margin: 1.1rem 0 0.4rem;
+}
+
+h4 {
+  font-size: 0.95rem;
+  color: var(--gw-cyan);
+  margin: 0.9rem 0 0.35rem;
+}
+
+p {
+  margin: 0.45rem 0 0.7rem;
+}
+
+a {
+  color: var(--gw-cyan);
+}
+
+strong {
+  color: #fff;
+}
+
+code,
+pre {
+  font-family: "Cascadia Code", "Consolas", ui-monospace, monospace;
+  font-size: 0.86em;
+  background: var(--gw-surface-2);
+  color: var(--gw-cyan);
+}
+
+code {
+  padding: 0.05em 0.28em;
+}
+
+pre {
+  padding: 0.7rem 0.85rem;
+  border-left: 2px solid var(--gw-gold);
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+blockquote {
+  margin: 0.8rem 0;
+  padding: 0.35rem 0.85rem;
+  border-left: 3px solid var(--gw-cyan);
+  background: var(--gw-surface);
+  color: var(--gw-text-muted);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--gw-border);
+  margin: 1.2rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88em;
+  margin: 0.7rem 0 1rem;
+  page-break-inside: avoid;
+}
+
+th,
+td {
+  border: 1px solid var(--gw-border);
+  padding: 0.28rem 0.45rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--gw-surface-2);
+  color: var(--gw-gold);
+  font-family: var(--gw-font-ui);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--gw-surface) 70%, transparent);
+}
+
+ul,
+ol {
+  margin: 0.4rem 0 0.8rem 1.2rem;
+}
+
+li {
+  margin: 0.18rem 0;
+}
+
+figure.gw-plate {
+  margin: 1rem 0 1.3rem;
+  page-break-inside: avoid;
+  background: var(--gw-surface);
+  border: 1px solid color-mix(in srgb, var(--gw-cyan) 35%, var(--gw-border));
+  padding: 0.45rem;
+}
+
+figure.gw-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 8.4in;
+  object-fit: contain;
+  background: #05070a;
+}
+
+figure.gw-plate.gw-no-downscale img {
+  /* Display-fit only. Source files stay native; do not write smaller copies. */
+  image-rendering: auto;
+}
+
+figcaption {
+  font-family: var(--gw-font-ui);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--gw-text-muted);
+  margin-top: 0.4rem;
+  padding: 0.15rem 0.2rem 0.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--gw-gold) 40%, transparent);
+}
+
+.gw-art-gap-box {
+  min-height: 3.2in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  border: 1px dashed color-mix(in srgb, var(--gw-gold) 55%, var(--gw-border));
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--gw-surface),
+    var(--gw-surface) 12px,
+    #0e141c 12px,
+    #0e141c 24px
+  );
+  padding: 1.2rem;
+}
+
+.gw-art-gap-label {
+  font-family: var(--gw-font-ui);
+  font-weight: 800;
+  color: var(--gw-gold);
+  margin: 0;
+}
+
+.gw-art-gap-path {
+  color: var(--gw-cyan);
+  margin: 0;
+}
+
+.gw-art-gap-credit {
+  color: var(--gw-text-dim);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* In Foundry callouts stay instructional, cyan rule */
+blockquote p:first-child strong {
+  color: var(--gw-cyan);
+}
