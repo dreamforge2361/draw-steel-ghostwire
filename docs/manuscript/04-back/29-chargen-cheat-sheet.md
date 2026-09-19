@@ -14,7 +14,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 </div>
 
 > **In Foundry**  
-> Venue: **Foundry VTT** + **Draw Steel** system + **Draw Steel - Ghostwire Build** (`draw-steel-ghostwire`). Create a **Hero** actor, open the sheet, work the **+ Add** buttons and Ghostwire packs. A world named *Ghostwire - the Reach* / `ghostwire-v2` is one table’s box — any Draw Steel world with this module enabled works.
+> Enable **Draw Steel - Ghostwire Build** (`draw-steel-ghostwire`) on a compatible Foundry world (system package `draw-steel`). Create a **Hero** actor, open the sheet, work the **+ Add** buttons and Ghostwire packs. *Ghostwire - the Reach* / `ghostwire-v2` is one table’s box — any world with this module enabled works.
 
 <div class="gw-firewall">
 <strong>Firewall</strong> ¥ never buys characteristics, skills, or class power. Chrome is later, and it costs ¥ <em>and</em> Body Integrity. New runners start with <strong>no chrome</strong>.
@@ -24,15 +24,15 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 
 ### 0 · Boot the sheet
 
-- [ ] Enable **Draw Steel - Ghostwire Build**. Create Actor → **Hero**. Name the runner.
+- [ ] Enable the Ghostwire module. Create Actor → **Hero**. Name the runner.
 - [ ] Confirm **Stats** already shows **¥5,000** and **Body Integrity 20/20** (Cyborg: Integrity **N/A** after People). Matrix Verbs are already on the sheet.
 
 ---
 
 ### 1 · People · `05`
 
-- [ ] Sheet **+ Add** on the People / Ancestry slot → **Ghostwire Ancestries**. Drop **one**.
-- [ ] Spend the ancestry-point budget in the advancement prompt. Take free signature traits.
+- [ ] Sheet **+ Add** on the People slot → **Ghostwire Ancestries**. Drop **one**.
+- [ ] Spend the People-point budget in the advancement prompt. Take free signature traits.
 - [ ] **Changer:** pick Raven / Rat / Wolf. **Stats → Forms** (Human / Hybrid / Beast) after chargen.
 - [ ] **Cyborg:** machine-first — no Integrity, no chrome; **Arcane Severance** blocks Elementalist, Street Priest, Technomancer.
 - [ ] Roster: Pure Human · Corran · Elvani · Goliar · Changer · Revenant · Mutant · Cyborg.
@@ -44,8 +44,8 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 
 ### 2 · Background + Profession · `06`
 
-- [ ] **+ Add** Background → **Ghostwire Backgrounds** (stock *Culture*). One row: fixed skill + **choose 1**.
-- [ ] **+ Add** Profession → **Ghostwire Professions** (stock *Career*). One row: fixed skill + **choose 2**.
+- [ ] **+ Add** Background → **Ghostwire Backgrounds**. One row: fixed skill + **choose 1**.
+- [ ] **+ Add** Profession → **Ghostwire Professions**. One row: fixed skill + **choose 2**.
 - [ ] Community edge is fiction + a test edge inside that community — not a second skill.
 
 ---
@@ -70,7 +70,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 
 ### 5 · Skills · `02`, `06`
 
-- [ ] Collect grants from People, Background, Profession, and class on the stock skill list (Ghostwire names).
+- [ ] Collect grants from People, Background, Profession, and class on the hero-sheet skill list (`02`).
 - [ ] **No wasted duplicates.** If a pick collides, take another skill from the **same group**, then any group (`06`).
 - [ ] ¥, chrome, and Lifestyle never add a skill.
 

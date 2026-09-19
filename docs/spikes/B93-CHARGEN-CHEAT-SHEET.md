@@ -19,13 +19,13 @@ Word count of `29-chargen-cheat-sheet.md` should stay in the ~700–950 band so 
 
 ## Locks
 
-- Venue: Foundry VTT + Draw Steel system + **Draw Steel - Ghostwire Build** (`draw-steel-ghostwire`). World *Ghostwire - the Reach* / `ghostwire-v2` optional only.
-- Sheet remaps: Culture→**Background**, Career→**Profession**, Ancestry→**People**, Class stays Class.
-- Characteristics: **Physique / Reflex / Logic / Instinct / Persona**.
+- Venue: Foundry VTT + **Draw Steel - Ghostwire Build** (`draw-steel-ghostwire`). System package `draw-steel` OK as software only. World *Ghostwire - the Reach* / `ghostwire-v2` optional only.
+- Sheet remaps (Foundry labels, not a rules cite): Culture→**Background**, Career→**Profession**, Ancestry→**People**, Class stays Class.
+- Characteristics: **Physique / Reflex / Logic / Instinct / Persona**. Array **2, 2, 1, 1, 0** from `02`.
 - Step order from `docs/raw/02-heroes-characteristics.md`, adapted to Foundry clicks (6–7 = characteristics + remaining sheet fields).
 - Firewall: ¥ never buys characteristics / skills / class power. Chrome = ¥ + Integrity later. No auto chrome. Start ¥5,000. Integrity 20 except Cyborg.
 - Caster Soft-cap (5 Integrity on chrome): one checkbox only.
-- Do **not** tell readers they need *Draw Steel Heroes* to play or chargen. Point at this book + Foundry.
+- **B92 stand-alone print:** no Draw Steel / Heroes / §F* procedure cites. Steps point only at Ghostwire chapters + Hero-sheet actions. Module name once in the In Foundry venue line.
 - B78 / B83: no external IP name-checks.
 - Journals **not** regenerated.
 
@@ -35,11 +35,10 @@ Word count of `29-chargen-cheat-sheet.md` should stay in the ~700–950 band so 
 - Wired: `TOC.md` Part VI, `MANIFEST.yml`, `assemble-order.txt` (after Glossary / Ch 28)
 - Cross-links: print how-to-use + RAW `02` In Foundry sidebar
 - Print CSS: remap chips, firewall, Done-when, GFM checkboxes (`tools/lib/md-to-html.mjs`)
-- `module.json` **0.3.18** (0.3.17 reserved for in-flight Heroes scrub)
+- `module.json` **0.3.18**
 
 ## Out of scope
 
 - Journal regen
-- Full Heroes-book scrub (B92)
 - Inventing sheet menus
 - Chrome catalog / Kit reprint / skill tables
