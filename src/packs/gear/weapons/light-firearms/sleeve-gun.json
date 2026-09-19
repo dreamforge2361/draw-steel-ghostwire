@@ -3,7 +3,7 @@
   "_key": "!items!VnsJ8MBZGHalleed",
   "name": "GHOSTWIRE.Gear.Items.SleeveGun.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/pistol-automatic.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/sleeve-gun.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.SleeveGun.Description",

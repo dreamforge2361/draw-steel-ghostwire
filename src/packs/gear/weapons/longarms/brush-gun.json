@@ -3,7 +3,7 @@
   "_key": "!items!77mbMe9FuYKB5v1v",
   "name": "GHOSTWIRE.Gear.Items.BrushGun.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/rifle-assault-carbine.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/brush-gun.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.BrushGun.Description",

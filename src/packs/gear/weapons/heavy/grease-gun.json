@@ -3,7 +3,7 @@
   "_key": "!items!8A3zTNWREVuMevmB",
   "name": "GHOSTWIRE.Gear.Items.GreaseGun.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/grease-gun.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.GreaseGun.Description",

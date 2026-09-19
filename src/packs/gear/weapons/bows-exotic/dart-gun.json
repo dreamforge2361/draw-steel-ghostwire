@@ -3,7 +3,7 @@
   "_key": "!items!GhN1CQMPbhahuge0",
   "name": "GHOSTWIRE.Gear.Items.DartGun.Name",
   "type": "treasure",
-  "img": "icons/weapons/crossbows/crossbow-heavy-black.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/dart-gun.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.DartGun.Description",

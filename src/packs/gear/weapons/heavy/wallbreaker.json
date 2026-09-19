@@ -3,7 +3,7 @@
   "_key": "!items!BL4phG8u0qjWwSBN",
   "name": "GHOSTWIRE.Gear.Items.Wallbreaker.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/wallbreaker.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Wallbreaker.Description",

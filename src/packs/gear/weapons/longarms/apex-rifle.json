@@ -3,7 +3,7 @@
   "_key": "!items!aKB89GKh2unzFXpY",
   "name": "GHOSTWIRE.Gear.Items.ApexRifle.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/rifle-sniper-long.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/apex-rifle.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.ApexRifle.Description",

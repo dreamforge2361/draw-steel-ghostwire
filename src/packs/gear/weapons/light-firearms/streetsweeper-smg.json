@@ -3,7 +3,7 @@
   "_key": "!items!7M0FT3lXGuOvtqNt",
   "name": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/machine-gun-sub-large.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/streetsweeper-smg.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.StreetsweeperSmg.Description",

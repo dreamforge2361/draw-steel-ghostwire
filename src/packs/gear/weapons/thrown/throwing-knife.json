@@ -3,7 +3,7 @@
   "_key": "!items!vb8oP2jBwwL45nzJ",
   "name": "GHOSTWIRE.Gear.Items.ThrowingKnife.Name",
   "type": "treasure",
-  "img": "icons/weapons/thrown/bomb-fuse-black.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/throwing-knife.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.ThrowingKnife.Description",

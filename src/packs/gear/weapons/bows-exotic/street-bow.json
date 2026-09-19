@@ -3,7 +3,7 @@
   "_key": "!items!4s5ODYx8OpvfRC3j",
   "name": "GHOSTWIRE.Gear.Items.StreetBow.Name",
   "type": "treasure",
-  "img": "icons/weapons/bows/longbow-recurve-brown.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/street-bow.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.StreetBow.Description",

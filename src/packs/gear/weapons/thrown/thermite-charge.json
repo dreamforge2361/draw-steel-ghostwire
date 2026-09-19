@@ -3,7 +3,7 @@
   "_key": "!items!virxBj5UqSHiuUNI",
   "name": "GHOSTWIRE.Gear.Items.ThermiteCharge.Name",
   "type": "treasure",
-  "img": "icons/weapons/thrown/bomb-fuse-black.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/thermite-charge.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.ThermiteCharge.Description",

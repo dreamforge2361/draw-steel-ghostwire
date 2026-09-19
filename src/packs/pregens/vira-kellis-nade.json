@@ -3113,7 +3113,7 @@
       "_id": "0pTvKvLajN9fmi5k",
       "name": "GHOSTWIRE.Gear.Items.SecureThreads.Name",
       "type": "treasure",
-      "img": "icons/equipment/chest/coat-leather-blue.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/secure-threads.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.SecureThreads.Description",
@@ -3175,7 +3175,7 @@
         {
           "_id": "ykVMO4HKNbEwHc0g",
           "name": "No Kit — Echelon 1 (+3 Stamina)",
-          "img": "icons/equipment/chest/coat-leather-blue.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/secure-threads.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.0pTvKvLajN9fmi5k",
           "description": "<p>Worn with no Kit at Echelon 1: +3 Stamina.</p>",
           "disabled": true,
@@ -3211,7 +3211,7 @@
         {
           "_id": "QoHmyMVJ20QH7RU3",
           "name": "No Kit — Echelon 2 (+6 Stamina)",
-          "img": "icons/equipment/chest/coat-leather-blue.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/secure-threads.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.0pTvKvLajN9fmi5k",
           "description": "<p>Worn with no Kit at Echelon 2: +6 Stamina.</p>",
           "disabled": true,
@@ -3247,7 +3247,7 @@
         {
           "_id": "zcXYVL1R7cpKceTN",
           "name": "No Kit — Echelon 3 (+8 Stamina)",
-          "img": "icons/equipment/chest/coat-leather-blue.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/secure-threads.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.0pTvKvLajN9fmi5k",
           "description": "<p>Worn with no Kit at Echelon 3: +8 Stamina.</p>",
           "disabled": true,
@@ -3283,7 +3283,7 @@
         {
           "_id": "AQvUkZPFJEFAbXbT",
           "name": "No Kit — Echelon 4 (+10 Stamina)",
-          "img": "icons/equipment/chest/coat-leather-blue.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/secure-threads.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.0pTvKvLajN9fmi5k",
           "description": "<p>Worn with no Kit at Echelon 4: +10 Stamina.</p>",
           "disabled": true,
@@ -3323,7 +3323,7 @@
       "_id": "LqGCnbLkSrpCOmoj",
       "name": "GHOSTWIRE.Gear.Items.Popper.Name",
       "type": "treasure",
-      "img": "icons/weapons/guns/pistol-automatic.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/popper.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.Popper.Description",

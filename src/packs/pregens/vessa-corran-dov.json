@@ -3119,7 +3119,7 @@
       "_id": "7haM9UjwqFSnTyhj",
       "name": "GHOSTWIRE.Gear.Items.Hardshell.Name",
       "type": "treasure",
-      "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/armor/hardshell.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.Hardshell.Description",
@@ -3179,7 +3179,7 @@
         {
           "_id": "PsLNqZs6xsH9tWeM",
           "name": "No Kit — Echelon 1 (+9 Stamina)",
-          "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/hardshell.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.7haM9UjwqFSnTyhj",
           "description": "<p>Worn with no Kit at Echelon 1: +9 Stamina.</p>",
           "disabled": true,
@@ -3215,7 +3215,7 @@
         {
           "_id": "kR19Uq08uIS70tCj",
           "name": "No Kit — Echelon 2 (+16 Stamina)",
-          "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/hardshell.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.7haM9UjwqFSnTyhj",
           "description": "<p>Worn with no Kit at Echelon 2: +16 Stamina.</p>",
           "disabled": true,
@@ -3251,7 +3251,7 @@
         {
           "_id": "gX5ECDbYQ7nQoXcI",
           "name": "No Kit — Echelon 3 (+21 Stamina)",
-          "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/hardshell.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.7haM9UjwqFSnTyhj",
           "description": "<p>Worn with no Kit at Echelon 3: +21 Stamina.</p>",
           "disabled": true,
@@ -3287,7 +3287,7 @@
         {
           "_id": "UaXbTlZRMJXaU8Ja",
           "name": "No Kit — Echelon 4 (+27 Stamina)",
-          "img": "icons/equipment/chest/breastplate-layered-steel.webp",
+          "img": "modules/draw-steel-ghostwire/assets/tokens/armor/hardshell.webp",
           "origin": "Compendium.draw-steel-ghostwire.gear.Item.7haM9UjwqFSnTyhj",
           "description": "<p>Worn with no Kit at Echelon 4: +27 Stamina.</p>",
           "disabled": true,
@@ -3327,7 +3327,7 @@
       "_id": "PDrB0Cnbj7HDeP3u",
       "name": "GHOSTWIRE.Gear.Items.Workhorse.Name",
       "type": "treasure",
-      "img": "icons/weapons/guns/pistol-automatic.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/workhorse.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.Workhorse.Description",
@@ -3387,7 +3387,7 @@
       "_id": "9I8qU8QMtWjRxYbj",
       "name": "GHOSTWIRE.Gear.Items.StreetBlade.Name",
       "type": "treasure",
-      "img": "icons/weapons/swords/swords-short.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/street-blade.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.StreetBlade.Description",

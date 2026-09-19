@@ -2381,7 +2381,7 @@
       "_id": "Cv6a1qgGI4SlYWuW",
       "name": "GHOSTWIRE.Gear.Items.Zapper.Name",
       "type": "treasure",
-      "img": "icons/weapons/guns/pistol-automatic.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/zapper.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.Zapper.Description",
@@ -2443,7 +2443,7 @@
       "_id": "VnsJ8MBZGHalleed",
       "name": "GHOSTWIRE.Gear.Items.SleeveGun.Name",
       "type": "treasure",
-      "img": "icons/weapons/guns/pistol-automatic.webp",
+      "img": "modules/draw-steel-ghostwire/assets/tokens/weapons/sleeve-gun.webp",
       "system": {
         "description": {
           "value": "GHOSTWIRE.Gear.Items.SleeveGun.Description",
