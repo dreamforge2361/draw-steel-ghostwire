@@ -1,4 +1,4 @@
-// VOIDMARK rules RAG — embedding-free lexical retrieve over the shipped rules index.
+// VOIDMARK knowledge RAG — embedding-free lexical retrieve over the shipped index.
 // No Foundry globals. Used by the chat applet and by tools/voidmark-smoke.mjs.
 
 const STOP = new Set([
@@ -31,6 +31,19 @@ const SYNONYMS = {
   trace: ["trace", "alert", "ice", "wired"],
   ice: ["ice", "wired", "node", "biofeedback"],
   biofeedback: ["biofeedback", "wired", "jacked", "overlay"],
+  switchboard: ["switchboard", "cassavir", "fixer"],
+  cassavir: ["cassavir", "switchboard", "mama"],
+  shambles: ["shambles", "neon"],
+  neon: ["neon", "shambles"],
+  flats: ["flats", "ossian", "reach", "hive"],
+  ossian: ["ossian", "reach", "flats"],
+  slackwater: ["slackwater", "docks", "blackwater"],
+  cinderhold: ["cinderhold", "gate", "marrow"],
+  glasshook: ["glasshook"],
+  wireside: ["wireside"],
+  gallows: ["gallows"],
+  spillway: ["spillway"],
+  interchange: ["interchange"],
 };
 
 const FILE_HINTS = [
@@ -46,7 +59,55 @@ const FILE_HINTS = [
   { re: /hands off|accord|actuator/, file: "L5-hands-off-accords" },
   { re: /lifestyle|downtime|respite|upkeep/, file: "26-lifestyle-downtime" },
   { re: /veil|essence|pact|sprite/, file: "22-the-veil" },
+  { re: /switchboard|cassavir/, file: "04-switchboard" },
+  { re: /neon shambles|\bshambles\b/, file: "05-the-neon-shambles" },
+  { re: /\bstacks\b/, file: "06-the-stacks" },
+  { re: /slackwater/, file: "07-slackwater" },
+  { re: /interchange/, file: "08-the-interchange" },
+  { re: /cinder market/, file: "09-cinder-market" },
+  { re: /spillway/, file: "10-the-spillway" },
+  { re: /glasshook/, file: "11-glasshook" },
+  { re: /wireside/, file: "12-wireside" },
+  { re: /gallows end|\bgallows\b/, file: "13-gallows-end" },
+  { re: /cinderhold|outer gate|cael marrow/, file: "14-cinderhold-and-the-outer-gate" },
+  { re: /night roster/, file: "15-the-night-roster" },
+  { re: /what the flats are|(?:^|\b)the flats\b|ossian reach/, file: "01-what-the-flats-are" },
+  { re: /ossian reach|reach color|street color|(?:^|\b)the flats\b/, file: "L3-ossian-reach-color" },
+  { re: /wired flats|matrix gazetteer|master node/, file: "wired-flats-gazetteer" },
+  { re: /running ossian|session loop|home hive/, file: "27-running-ossian-reach" },
+  { re: /peoples|elvani|corran|goliar|founding/, file: "L2-peoples-and-world" },
+  { re: /cosmology|the light|dark one|megacorp|the ten/, file: "L1-setting-primer" },
 ];
+
+/**
+ * Multi-word / proper-noun place names. Longer phrases first so
+ * "mama cassavir" wins over "cassavir".
+ */
+const PLACE_PHRASES = [
+  "mama cassavir",
+  "neon shambles",
+  "ossian reach",
+  "gallows end",
+  "cinder market",
+  "night roster",
+  "deadfall nine",
+  "quiet floor",
+  "the interchange",
+  "the spillway",
+  "the stacks",
+  "the flats",
+  "outer gate",
+  "black water",
+  "switchboard",
+  "slackwater",
+  "cinderhold",
+  "glasshook",
+  "wireside",
+  "cassavir",
+  "ashenreach",
+].sort((a, b) => b.length - a.length);
+
+const LOREISH = /lore|district|hive|gazetteer|who is|what is|where is|ossian|flats|reach handbook|street color/;
 
 export function tokenize(text) {
   return String(text ?? "")
@@ -80,9 +141,19 @@ function hintedFiles(query) {
   return FILE_HINTS.filter(h => h.re.test(q)).map(h => h.file);
 }
 
+/** Place / district phrases present in the query (lowercase). */
+export function placePhrases(query) {
+  const q = String(query ?? "").toLowerCase();
+  return PLACE_PHRASES.filter(p => q.includes(p));
+}
+
+function sourceHay(chunk) {
+  return `${chunk.file ?? ""} ${chunk.source ?? ""} ${chunk.chapter ?? ""} ${chunk.heading ?? ""}`.toLowerCase();
+}
+
 /**
  * Score one index chunk against a query.
- * @param {{ file?: string, chapter?: string, heading?: string, text?: string }} chunk
+ * @param {{ file?: string, source?: string, chapter?: string, heading?: string, text?: string, kind?: string }} chunk
  * @param {string} query
  */
 export function scoreChunk(chunk, query) {
@@ -98,6 +169,9 @@ export function scoreChunk(chunk, query) {
   const headingTokens = new Set(tokenize(`${chunk.heading ?? ""} ${chunk.chapter ?? ""}`));
   const fileTokens = new Set(tokenize(String(chunk.file ?? "").replace(/\.md$/i, "")));
   const hints = hintedFiles(query);
+  const places = placePhrases(query);
+  const titleHay = sourceHay(chunk);
+  const bodyHay = String(chunk.text ?? "").toLowerCase();
 
   let score = 0;
   let hits = 0;
@@ -116,7 +190,17 @@ export function scoreChunk(chunk, query) {
   }
   if (!hits) return 0;
   if (headingHits >= 2) score += 6;
-  if (hints.some(h => String(chunk.file ?? "").includes(h))) score += 4;
+  if (hints.some(h => String(chunk.file ?? "").includes(h) || String(chunk.source ?? "").includes(h))) score += 4;
+
+  for (const place of places) {
+    if (titleHay.includes(place)) score += 12;
+    else if (bodyHay.includes(place)) score += 5;
+  }
+
+  if (LOREISH.test(String(query ?? "").toLowerCase()) && (chunk.kind === "lore" || chunk.kind === "setting")) {
+    score += 2;
+  }
+
   score *= 1 + (hits / tokens.length);
   return score;
 }
@@ -145,6 +229,7 @@ export function retrieve(index, query, options = {}) {
     picked.push({
       id: row.chunk.id,
       file: row.chunk.file,
+      source: row.chunk.source,
       chapter: row.chunk.chapter,
       heading: row.chunk.heading,
       kind: row.chunk.kind ?? "rules",

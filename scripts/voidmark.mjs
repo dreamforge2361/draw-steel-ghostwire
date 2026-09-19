@@ -1,7 +1,7 @@
 // VOIDMARK (B82): in-module AI chat applet. Players/GM talk to an OpenAI-compatible
 // Chat Completions API from Foundry — not a live Cursor/Grok Bot bridge.
-// RAG: scripts/voidmark-rag.mjs over data/voidmark-rules-index.json.
-// Lore: L4 / L5. Design: docs/spikes/B82-VOIDMARK-AI-APPLET.md.
+// RAG: scripts/voidmark-rag.mjs over data/voidmark-rules-index.json
+// (RAW + Reach Handbook + L1–L5 + Flats gazetteer). Design: docs/spikes/B82-VOIDMARK-AI-APPLET.md.
 
 import { citationLabels, retrieve } from "./voidmark-rag.mjs";
 import { DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages, normalizeMode } from "./voidmark-prompt.mjs";
