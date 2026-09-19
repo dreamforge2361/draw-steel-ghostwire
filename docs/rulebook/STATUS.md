@@ -111,3 +111,4 @@
 
 - **B80** Corruption / Taint hero track (radiation-like; quest cleanse; +/-) — not started.
 - **B81** Prime overview (Main Realm, orbitals, near harvest worlds) + maps — not started.
+- **B82** Foundry Ghostwire AI applet (in-module LLM chat / optional agent bridge) — not started.
