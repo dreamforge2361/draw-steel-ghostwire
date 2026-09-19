@@ -186,7 +186,7 @@ Resolve the night from **this book**. The left column is the procedure; the righ
 - **Chrome costs flesh.** Living runners spend Body Integrity on implants (`09`). Cyborgs take Frame Modules and cannot cast Veil magic.
 - **The Wired is a second battlefield.** Every runner can connect; Hackers and Technomancers live there (`21`).
 - **Magic is rare and costly.** Veil casters fight chrome erosion; Cyborgs are severed from the Veil (`22`).
-- **Machines are allies.** Anyone can run one drone; Wrenches run fleets and vehicles (`23`).
+- **Machines are allies.** Anyone with a qualifying air scout drone gets **Street Eye** (Companion Link); Wrenches still run fleets, Jump-In, and Deploy & Command (`23`, `16`).
 - **Lifestyle matters.** Burn, Medic restock quotes, and downtime projects live in print Ch 10 (`26`).
 
 ---

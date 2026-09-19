@@ -3,7 +3,7 @@
 **RAW status:** draft  
 **Sources:** `docs/rulebook/15-drones.md`, `docs/rulebook/16-vehicles.md`, `docs/rulebook/05-wrench.md`
 
-Wrench-specific machine rules (Uptime, Jump-In, stat cards, fleet command) are in `16-wrench.md`. This chapter holds what every hero needs: control modes, the non-Wrench limits, scale bands, inventories, and vehicle combat.
+Wrench-specific machine rules (Uptime, Jump-In, stat cards, fleet command) are in `16-wrench.md`. This chapter holds what every hero needs: control modes, the non-Wrench limits, **Street Eye** (the Companion Link), scale bands, inventories, and vehicle combat.
 
 ---
 
@@ -17,7 +17,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 |---|---|---|---|
 | **Remote** | Anyone with a link; Wrenches via RCC | Handheld or deck-fed camera/stick control | Rigging (or Logic + Rigging) to Direct; Gunnery for mounts if allowed |
 | **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per `16-wrench.md`; Reflex or Logic; biofeedback risk; temporary Integrity buffer |
-| **Companion link** | Non-Wrench default | Soft “follow / watch / hold” leash | One soft program; no fleet orchestration; no Jump-In |
+| **Street Eye** (Companion Link) | Any class with a qualifying scout drone | Soft follow / watch / hold / scout leash | One soft program; max 1 active; no fleet orchestration; no Jump-In |
 
 **Autonomous vs Commanded (Wrench table language):** a fielded machine may act on a canned behavior loop (Autonomous) or take orders through Deploy & Command / Rigged Fire (Commanded). Jump-In overrides both for the frame you inhabit.
 
@@ -37,7 +37,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 | **Jump-In** | **Forbidden** |
 | **RCC fleet features** | **Cannot** use Fleet Deck / War Table / Command Rig / Hydra swarm features (even if purchased — they sit inert or Director may allow Remote-Box behavior only) |
 | **Rolls** | **Bane** on all **Rigging** and **Gunnery-through-drone** Power Rolls |
-| **Uptime / bandwidth** | No Uptime pool. Companion link lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |
+| **Uptime / bandwidth** | No Uptime pool. **Street Eye** (Companion Link) lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |
 | **Integrity buffer** | Soft buffer only: **+2 temporary Integrity** while the link is live (does not stack with Jump-In buffers; lost when the link drops) |
 | **Actions** | **Soft actions only** by default: Move, Observe/Mark (sensor), Carry/Drop (if cargo-capable), Stabilize assist (Medic-grade chassis only), simple Interact. **Weapon mounts:** may fire **Street / Professional** soft/nonlethal or light personal mounts only; **Restricted+ combat hardpoints** require a Wrench or stay locked |
 | **Autosofts** | May run **one** basic Pilot/Sensor autosoft if the chassis has a free slot — no swarm / Focus Fire / Override packages |
@@ -57,6 +57,26 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 | **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (`16-wrench.md`). “Overheat pressure” on high-end RCCs is narrative only. |
 
 **Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.
+
+### Street Eye (Companion Link)
+
+**Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in `16-wrench.md`. A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.
+
+**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag.
+
+The Companion Link **limits** in the Non-Wrench table still apply if you field a drone that is not on that v1 list (Director-ruled). Foundry only auto-grants the Street Eye ability for qualifying air scouts.
+
+> **Street Eye**
+> *Companion Link · Maneuver · Range 10*
+> Target: 1 qualifying scout drone you own (stowed or already fielded)
+> **Power Roll** — none to deploy or issue a soft order; **2d10 + Logic** (Rigging applies; non-Wrench: **bane**) only if the Director calls for a contested read, mark, or jammed link
+>
+> Soft orders (pick one when you use this maneuver): **follow**, **watch**, **hold**, **scout**, **surveillance**, or **minor support** (spot/mark, watch a corner, light carry if the chassis can).
+>
+> *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*
+
+> **In Foundry**
+> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system.
 
 ---
 
@@ -82,7 +102,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 
 #### Echelon shopping guidance
 
-Shop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky.” Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).
+Shop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky” (those air scouts grant **Street Eye**). Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).
 
 **Clunker / Unreliable (Director cue):** once per scene when it matters, impose an extra **bane** on a Rigging/Gunnery roll **or** stall the frame for a beat (misses a Move, drops a package, camera blacks out). Do not punish every action — make the junk feel lived-in.
 
@@ -192,7 +212,7 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 | **0 Integrity** | **Wrecked** — offline, not vaporized. Wrench lump **3 Uptime** drain. Salvage Sense / salvage maneuver still apply for Wrenches |
 | **Recovery** | Field Repair (Wrench signature / Repair skill) restores Integrity in the fight per class text. Between scenes: §Craft **Repair** Project or short bench time + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild; clunkers are cheap to patch and cheap to write off) |
 | **Total loss** | If the wreck is seized, burned, or dropped into the Sinks, the ¥ is gone — buy or craft another |
-| **Non-Wrench scene end** | Companion link drops; drone standbys. Wrecked drones still need Repair / ¥ |
+| **Non-Wrench scene end** | Street Eye / Companion Link drops; drone standbys. Wrecked drones still need Repair / ¥ |
 
 **Expendable tags (Needle, Buzz, Tape-Eye, etc.):** some Street micros are meant to die — Kamikaze / Decoy / Clunker runs destroy the chassis by design (see Drone Jockey abilities).
 

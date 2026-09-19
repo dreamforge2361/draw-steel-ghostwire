@@ -4,6 +4,7 @@ import { registerWiredConsole } from "./wired-console.mjs";
 import { registerWiredMinimap } from "./wired-minimap.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
+import { registerStreetEye } from "./street-eye.mjs";
 import { registerSprites } from "./sprites.mjs";
 import { registerVeilSummons } from "./veil-summons.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
@@ -90,6 +91,7 @@ Hooks.once("init", () => {
   registerRunGenerator();
   registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
   registerMachines();
+  registerStreetEye();
   registerSprites();
   registerVeilSummons();
   registerMods();
