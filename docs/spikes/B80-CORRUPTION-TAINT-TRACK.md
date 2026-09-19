@@ -20,8 +20,8 @@
 - **Cleansing can be a quest** (not only a rest / cheap rite).
 - **Negative and positive** effects (power with a price; gifts that mark you).
 - Inspiration look (design only; **do not name** third-party IP in published text — B78):
-  - **WFRP-style:** accumulating corruption → mutations / visible mark; thresholds; Chaos as temptation-with-power.
-  - **Cthulhu-style:** exposure costs mind/soul; knowledge and power as double-edged; temporary vs lasting breaks.
+  - **Accumulating-stain RPGs:** accumulating corruption → mutations / visible mark; thresholds; Chaos as temptation-with-power.
+  - **Exposure-cost horror RPGs:** exposure costs mind/soul; knowledge and power as double-edged; temporary vs lasting breaks.
   - Fit Ghostwire cosmology: Light / Dark / Prime / Wire / Veil — corruption as **defacement of the Word**, not a separate element.
 
 ## Deliverables when picked up

@@ -8,7 +8,7 @@
 
 *Design conversation, 2026-07-29 v2 (verbatim Michael directives applied):*
 - *Use only the core rulebook **lore** sections; the rules in the core PDF are defunct — do not reference them for mechanics.*
-- *Replace all placeholder corp names (Ares, Aztechnology) with corporations from the GHOSTWIRE lore section (the Ten Conglomerates).*
+- *Replace all placeholder corp names (legacy placeholder corps) with corporations from the GHOSTWIRE lore section (the Ten Conglomerates).*
 - *Define **surge** near the point it is used (glossary drift eliminated).*
 - *Remove all magic flavor. The Scout is not a magic class in GHOSTWIRE. Every "magic" ability is reflavored as a **technology edge** — nanotech, microdrone, drone-tech, chrome, dermal holo, tactical grapnel, chem-injector, etc. — explained as part of the Scout's technology training.*
 - *Remove the Harlequin subclass — wrong imagery — and replace with a different street-independent option.*
@@ -375,7 +375,7 @@ Doctrine feature items (Beat the Draw, Glass the Block, Night Watch, Keep It Dow
 - **GHOSTWIRE templates (structural):** `Ghostwire_Elementalist_Development_Master.md`, `Ghostwire_Operator_Development_Master.md`, `Ghostwire_Hacker_Development_Master.md`.
 - **Michael's 2026-07-29 v2 design directives (verbatim, applied):**
   - Use core rulebook **lore only**; core rulebook rules defunct.
-  - Replace placeholder corp names (Ares, Aztechnology) with corps from the GHOSTWIRE Ten Conglomerates.
+  - Replace placeholder corp names (legacy placeholder corps) with corps from the GHOSTWIRE Ten Conglomerates.
   - Define "surge" near the point of use.
   - Remove all magic flavor — every "magic" ability re-cast as a technology edge.
   - Remove Harlequin subclass, replace with a different street outfit.
@@ -387,8 +387,8 @@ Doctrine feature items (Beat the Draw, Glass the Block, Night Watch, Keep It Dow
 
 | v1 Placeholder | v2 Canonical (from GHOSTWIRE Lore) | Rationale |
 |---|---|---|
-| Ares Macrotechnology "Black-Ash Cell" | **Ironclad Longshot Division** | Ironclad is one of the "and around them turn the rest" conglomerates in the lore — the enforcement/mercenary contractor. Longshot Division is the marksman/precision-intervention arm. Corp black-program. |
-| Aztechnology "Caustic Program" | **Ferrum Dynastic Deep-Dark Program** | Ferrum built the hive's bones and knows the sealed deep-dark levels — its wetwork cadre is the close-quarters knife-worker. Corp black-program. |
+| legacy placeholder corp "Black-Ash Cell" | **Ironclad Longshot Division** | Ironclad is one of the "and around them turn the rest" conglomerates in the lore — the enforcement/mercenary contractor. Longshot Division is the marksman/precision-intervention arm. Corp black-program. |
+| legacy placeholder "Caustic Program" | **Ferrum Dynastic Deep-Dark Program** | Ferrum built the hive's bones and knows the sealed deep-dark levels — its wetwork cadre is the close-quarters knife-worker. Corp black-program. |
 | Harlequin Crew (street-independent guild) | **Nyx Cartel Mask-Line** | Nyx is the legitimized underworld of the Ten Conglomerates. The Mask-Line is Nyx's face-thief crew. Nominally corp (Nyx holds a seat), but operates as a deniable, street-facing crew — the closest lore analog to a street-independent guild. |
 
 Subclass role-mapping (v2, per Michael's directive):
@@ -607,7 +607,7 @@ Each `.ps1` will be authored with a documented run-block, per the Preflight Doct
 
 1. **RESOLVED IN v2 — Magic-flavor scrub complete.** Per Michael's 2026-07-29 v2 directive, all "Magic" keywords and fantasy flavor have been removed from the Scout class. DS Shadow's Shadowstrike, Speed of Shadows, Blackout, Into the Shadows, Shadowfall, Shadowgrasp, and the Black Ash / Harlequin Mask magic-family abilities have been renamed and reflavored as tech (Neurospike, Overclock Cascade, Flash-Screen, Blindside Shift, Rooftop Rush, Kill-Zone Mesh, and the Ghost/Ferrum Blink Rig and Face-in-Crowd/Nyx Mask Rig respectively). No awakened-only restrictions remain — every heroic ability is available to every Scout regardless of subclass. Cross-check the ability tables when shipping to ensure no residual "Magic" keyword slipped through.
 
-2. **RESOLVED IN v2 — Corp names replaced with canonical GHOSTWIRE lore.** Ares Macrotechnology → Ironclad Longshot Division. Aztechnology → Ferrum Dynastic Deep-Dark Program. Harlequin Crew → Nyx Cartel Mask-Line. See Corporate Rename Map (v2), above. Verify against `ghostwire_intro_chapter.md` and `ghostwire_volume_structure.md` when the core rulebook's Chapter 2 (The Overlords) is finalized — the Ten Conglomerates naming is canonical as of this document but the lore is still in draft.
+2. **RESOLVED IN v2 — Corp names replaced with canonical GHOSTWIRE lore.** legacy placeholder corp → Ironclad Longshot Division. legacy placeholder → Ferrum Dynastic Deep-Dark Program. Harlequin Crew → Nyx Cartel Mask-Line. See Corporate Rename Map (v2), above. Verify against `ghostwire_intro_chapter.md` and `ghostwire_volume_structure.md` when the core rulebook's Chapter 2 (The Overlords) is finalized — the Ten Conglomerates naming is canonical as of this document but the lore is still in draft.
 
 3. **OPEN SCHEMA QUESTION — Ghost Suite active-effect stack.** The Ghost Suite has SEVEN concurrent active effects when active (climb-speed, difficult-terrain-passthrough with thermal-optic damage rider, hide-on-cover, surge-per-turn, thermal-optic-immunity, enemies-edge, presence-bane), which then partially reverse at 10th level via Improved. The cleanest Foundry implementation is one feature item with a bundled active-effect array + a level-10 conditional override. **Verify against DS v1.1.1 system's `duration` model on active effects** — does an "until end of encounter" duration correctly persist across combat scenes, or does it need a manual toggle?
 

@@ -81,7 +81,7 @@ Avoid: flat white daylight; candy pastels; pure green Matrix rain as the whole l
 ## Do / Don’t for generators
 
 **Do:** rain, neon pink/cyan, gold halo/spire, vertical city, hooded runners from behind, wet reflections, drones, skybridges, subtle scanlines on plates.  
-**Don’t:** sunny daytime sprawl; cartoon chibi; Warhammer grimdark mud-brown only; pure Tolkien fantasy; stock “hacker hoodie green code”; licensed corp logos; readable real brand text.
+**Don’t:** sunny daytime sprawl; cartoon chibi; mud-brown grimdark-only palettes; generic high-fantasy pastoral; stock “hacker hoodie green code”; licensed corp logos; readable real brand text.
 
 ---
 

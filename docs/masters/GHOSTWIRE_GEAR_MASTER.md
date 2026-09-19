@@ -268,7 +268,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Chatterbox / Ingram Valiant / light machine gun | T3 | 3 | 4,800 | 9 kinetic | Medium | 3 | [Heavy] Two-handed Auto Loud |
 | Wallbreaker / Ares HMG / heavy machine gun | T2 | 2 | 11,000 | 9 AP | Long | 4 | [Heavy] Mounted Auto Loud |
 | Grease-Gun / Ares Thunderstruck / grenade launcher | T2 | 2 | 14,000 | 9 fire | Medium | 4 | [Heavy] Two-handed Blast |
-| Hand-of-God / Aztechnology Striker / anti-materiel rifle | T2 | 2 | 18,000 | 10 AP | Extreme | 4 | [Heavy] Two-handed |
+| Hand-of-God / Ironclad Striker / anti-materiel rifle | T2 | 2 | 18,000 | 10 AP | Extreme | 4 | [Heavy] Two-handed |
 | Dragon's Breath / Shiawase Salamander / man-portable flamer | T2 | 2 | 15,000 | 9 fire | Short | 4 | [Heavy] Two-handed Blast |
 | Tank-Cracker / Ares Antioch / disposable rocket launcher | T1 | 1 | 22,000 | 14 fire | Long | — | [Anti-veh] Two-handed Blast Consumable |
 | Siege Missile / Ares Guided / smart anti-vehicle launcher | T1 | 1 | 45,000 | 14 AP | Extreme | 5 | [Anti-veh] Mounted Smart-ready |
@@ -286,7 +286,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Shock-Stick / Defiance Prod / stun baton | T4 | 4 | 450 | 4 electrical | 2 | [Light] Non-lethal-capable |
 | Machete / Ares Bushmaster / survival blade | T4 | 4 | 300 | 5 kinetic | 2 | [Light] |
 | Monoblade / Renraku Edge / monofilament sword | T3 | 3 | 3,000 | 6 AP | 3 | [Medium] |
-| Warhammer / Aztechnology Crusher / powered maul | T2 | 2 | 6,500 | 9 kinetic | 4 | [Heavy] Two-handed |
+| Warhammer / Ferrum Crusher / powered maul | T2 | 2 | 6,500 | 9 kinetic | 4 | [Heavy] Two-handed |
 | Cyber-Spur / Renraku Talon / implant blade | T2 | 2 | 8,000 | 6 AP | 4 | [Medium] Concealable Implant |
 | Monowhip / Fichetti Razorline / retractable monofilament | T1 | 1 | 20,000 | 7 AP | 5 | [Medium] Concealable Dangerous |
 | Powered Greatsword / Ares Paladin / servo-blade | T1 | 1 | 26,000 | 10 AP | 5 | [Heavy] Two-handed |
@@ -302,7 +302,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Throwing Knife / Cavalier Fan / balanced blade | T5 | 5 | 60 | 3 kinetic | Short | [Light] Consumable-recoverable |
 | Frag / Ares Splinter / fragmentation grenade | T4 | 4 | 200 | 6 kinetic | Short | [Medium] Blast Consumable |
 | Firestarter / Shiawase Ember / incendiary grenade | T4 | 4 | 250 | 6 fire | Short | [Medium] Blast Consumable |
-| Gasser / Aztechnology Choke / gas grenade | T4 | 4 | 220 | 4 toxin | Short | [Light] Blast Consumable |
+| Gasser / Blackline Choke / gas grenade | T4 | 4 | 220 | 4 toxin | Short | [Light] Blast Consumable |
 | Flash-Bang / Lone Star Dazzle / stun grenade | T4 | 4 | 180 | 4 electrical | Short | [Light] Blast Consumable Non-lethal-capable |
 | Thermite Charge / Ares Meltdown / breaching charge | T3 | 3 | 900 | 9 fire | Adjacent | [Heavy] Blast Consumable |
 | Shaped Charge / Ares Demo / directional breaching charge | T2 | 2 | 3,500 | 9 AP | Adjacent | [Heavy] Blast Consumable |
@@ -317,7 +317,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Street-Bow / Cavalier Silent / recurve bow | T5 | 5 | 200 | 4 kinetic | Medium | 1 | [Light] Two-handed Quiet |
 | Hand-Crossbow / Fichetti Sting / pistol crossbow | T4 | 4 | 400 | 4 kinetic | Short | 2 | [Light] Concealable Quiet |
 | Hunting Bow / Ranger Arms Draw / compound bow | T3 | 3 | 1,500 | 6 kinetic | Long | 3 | [Medium] Two-handed Quiet |
-| Heavy Crossbow / Aztechnology Bolt / tactical crossbow | T3 | 3 | 2,200 | 6 AP | Medium | 3 | [Medium] Two-handed Quiet |
+| Heavy Crossbow / Nyx Bolt / tactical crossbow | T3 | 3 | 2,200 | 6 AP | Medium | 3 | [Medium] Two-handed Quiet |
 | Dart-Gun / Shiawase Whisper / injection dart pistol | T3 | 3 | 2,000 | 3 toxin | Short | 3 | [Light] Concealable Quiet |
 | Net-Gun / Lone Star Snare / capture launcher | T4 | 4 | 900 | — | Short | 2 | [Light] Restraining Non-lethal-capable |
 | Gauss Needler / Renraku Railspike / coilgun prototype | T1 | 1 | 28,000 | 6 AP | Long | 5 | [Medium] Quiet Smart-ready |
