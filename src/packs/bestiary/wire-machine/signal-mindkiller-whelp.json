@@ -1,7 +1,7 @@
 {
   "name": "GHOSTWIRE.Bestiary.Actors.SignalMindkillerWhelp.Name",
   "type": "npc",
-  "img": "systems/draw-steel/assets/roles/minion.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/signal-mindkiller-whelp.webp",
   "system": {
     "stamina": {
       "value": 9,
@@ -471,7 +471,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/minion.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/signal-mindkiller-whelp.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

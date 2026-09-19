@@ -1,7 +1,7 @@
 {
   "name": "GHOSTWIRE.Bestiary.Actors.ScramblerIce.Name",
   "type": "npc",
-  "img": "systems/draw-steel/assets/roles/hexer.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/scrambler-ice.webp",
   "system": {
     "stamina": {
       "value": 40,
@@ -544,7 +544,7 @@
     "width": 2,
     "height": 2,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/hexer.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/scrambler-ice.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.35` — **Bestiary + L≤4 summon portraits (B103):** 40 bestiary (humanoids + ICE) + 17 summon WebPs under `assets/tokens/{bestiary,summons}/`. Actor `img` and `prototypeToken.texture.src` point at `modules/draw-steel-ghostwire/assets/tokens/…/<slug>.webp`. Apply: `node tools/apply-bestiary-portrait-art.mjs`. Spike: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
 - `0.3.34` — **Whiteout payload (B105):** Restricted Echelon-1 Trace-scrub magazine (¥3,500 / chip; Craft Hacking steep/hard). Foundry Matrix pack SKU + Run Whiteout (B51). Kessic Draye starts with a 2-fire magazine compiled on Switchblade / Street Deck. Spike: `docs/spikes/B105-WHITEOUT-PAYLOAD.md`.
 - `0.3.33` — **Deadhead Director SoR + Runs pack scaffold (B104):** playtest journal SoR at `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`. New GM-only JournalEntry pack **Ghostwire Runs** (`packs/runs`) with empty folder **Deadhead**. Journals / items / scenes / art still to ship. Spike: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`.
 - `0.3.32` — **Armor + weapon item art (B102):** 22 armor/shield + 49 weapon portraits under `assets/tokens/{armor,weapons}/`. Gear pack Item `img` fields and matching pregen embedded treasure Items point at `modules/draw-steel-ghostwire/assets/tokens/…/<dsid>.webp`. Apply: `node tools/apply-gear-token-art.mjs`. Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
@@ -400,6 +401,8 @@ Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `
 Armor + weapon item art (B102, **0.3.32**): 22 armor/shield + 49 weapon WebPs in `assets/tokens/armor/` (includes shields) and `assets/tokens/weapons/`. Re-apply after replacing files with `node tools/apply-gear-token-art.mjs` (stamps Gear pack + pregen embeds; rebuilds `packs/gear` + `packs/pregens`). Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
 
 Deadhead playtest (B104, **0.3.33**): Director SoR `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`. Empty JournalEntry pack **Ghostwire Runs** (`src/packs/runs/` → `packs/runs`) with folder **Deadhead**. Rebuild with `node tools/build-packs.mjs runs`. Content pass (pages, wafers, scenes) is not in this bump. Spike: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`.
+
+Bestiary + L≤4 summon portraits (B103, **0.3.35**): 40 bestiary (humanoids + ICE) + 17 summon WebPs in `assets/tokens/bestiary/` and `assets/tokens/summons/`. Re-apply after replacing files with `node tools/apply-bestiary-portrait-art.mjs` (stamps Actor `img` + `prototypeToken.texture.src`; rebuilds the packs that changed). Spike: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
 
 ## Rulebook
 

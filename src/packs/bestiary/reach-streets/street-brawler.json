@@ -3,7 +3,7 @@
   "name": "GHOSTWIRE.Bestiary.Actors.StreetBrawler.Name",
   "type": "npc",
   "_id": "0bGZHyvyH39mIURD",
-  "img": "systems/draw-steel/assets/roles/brute.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/street-brawler.webp",
   "system": {
     "stamina": {
       "value": 40,
@@ -112,7 +112,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/brute.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/street-brawler.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

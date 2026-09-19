@@ -3,7 +3,7 @@
   "_key": "!actors!qfsFuyvL38UjPr3S",
   "name": "GHOSTWIRE.Summons.Elementals.CompanionBoulder.Name",
   "type": "npc",
-  "img": "icons/magic/earth/projectile-stone-landslide.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/companion-boulder.webp",
   "system": {
     "stamina": {
       "value": 15,
@@ -186,7 +186,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/earth/projectile-stone-landslide.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/companion-boulder.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

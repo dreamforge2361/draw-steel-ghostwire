@@ -3,7 +3,7 @@
   "name": "GHOSTWIRE.Bestiary.Actors.RivalStreetPriestEchelon1.Name",
   "type": "npc",
   "_id": "E7IFOGCtQeUfwahm",
-  "img": "systems/draw-steel/assets/roles/support.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/rival-street-priest-echelon1.webp",
   "system": {
     "stamina": {
       "value": 80,
@@ -112,7 +112,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/support.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/rival-street-priest-echelon1.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

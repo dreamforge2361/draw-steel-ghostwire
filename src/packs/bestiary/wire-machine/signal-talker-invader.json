@@ -1,7 +1,7 @@
 {
   "name": "GHOSTWIRE.Bestiary.Actors.SignalTalkerInvader.Name",
   "type": "npc",
-  "img": "systems/draw-steel/assets/roles/controller.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/signal-talker-invader.webp",
   "system": {
     "stamina": {
       "value": 140,
@@ -1086,7 +1086,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/controller.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/signal-talker-invader.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

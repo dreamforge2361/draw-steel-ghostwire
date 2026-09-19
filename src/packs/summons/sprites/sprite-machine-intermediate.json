@@ -3,7 +3,7 @@
   "_key": "!actors!ZeYDVDBHAWOKvsQw",
   "name": "GHOSTWIRE.Summons.Sprites.SpriteMachineIntermediate.Name",
   "type": "npc",
-  "img": "icons/magic/life/cross-worn-green.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-machine-intermediate.webp",
   "system": {
     "stamina": {
       "value": 28,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/life/cross-worn-green.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-machine-intermediate.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
