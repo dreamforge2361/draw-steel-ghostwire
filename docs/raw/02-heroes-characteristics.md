@@ -2,7 +2,7 @@
 
 **RAW status:** draft (Stage 3 fill 2026-09-18)  
 **Sources:** `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/SPECIES-DS-MAP.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, class chapters (chassis tables), `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`, `docs/raw/26-lifestyle-downtime.md`  
-**Engine:** Draw Steel Heroes — use the official rules for making a hero and for characteristic scores, ranges, and uses; Ghostwire remaps and table procedures below are original wording.
+**Engine:** Ghostwire chargen and characteristic procedures in this chapter. Playable without a separate rulebook.
 
 ---
 
@@ -29,7 +29,7 @@ A new runner starts with **no chrome** and **no mods**. Body Integrity begins at
 
 ## Chargen step order
 
-Use Draw Steel’s hero-creation math for score assignment and anything this book does not remap. Ghostwire’s **step order** at the table is:
+Assign scores with the array in **Characteristics** below. Ghostwire’s **step order** at the table is:
 
 1. **People** (ancestry) — pick a People package, take free signature traits, spend the ancestry-point budget (`05-ancestries.md`). Ghostwire calls ancestries **Peoples**.
 2. **Background** (culture) and **Profession** (career) — one of each; each grants fixed and chosen skills from the Ghostwire list below (`06-backgrounds-professions.md`).
@@ -44,15 +44,19 @@ Use Draw Steel’s hero-creation math for score assignment and anything this boo
 When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, next Lifestyle band).
 
 > **In Foundry**
-> On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**) — Draw Steel’s Might / Agility / Reason / Intuition / Presence under the hood. The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign scores and skills as in Draw Steel; Ghostwire localization and module fields do not invent a second attribute set.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields.
 
 ---
 
 ## Characteristics
 
-Ghostwire renames Draw Steel’s five characteristics. The **numbers, ranges, and mechanical uses** are Draw Steel’s. Abilities that list a Draw Steel characteristic use its Ghostwire name. **Potency** uses these names too: a potency keyed to Physique uses the target’s Physique score.
+Ghostwire’s five characteristics are the numbers you add to Power Rolls (`03`). If an older ability line still lists Might, Agility, Reason, Intuition, or Presence, use the Ghostwire name in the table below. **Potency** uses these names too: a potency keyed to Physique uses the target’s Physique score (`03`).
 
-| Ghostwire | Draw Steel alias | Short cover |
+**Starting scores.** Assign this array, in any order: **2, 2, 1, 1, 0**. Put the two **2**s in your class’s **core characteristics** unless a People trait or class feature prints a different raise. Starting scores do not go above **2** without a printed raise. After chargen, scores climb by the characteristic increases in `24` (cap **5** from those increases). A score can be **−1** if a trait prints a penalty.
+
+**What a score does.** Add it to every Power Roll that names that characteristic. It is also the number potency and some riders read. Chrome, ¥, and Lifestyle never change it (`08`, `09`, `26`).
+
+| Ghostwire | Foundry Hero sheet field | Short cover |
 |---|---|---|
 | **Physique** | Might | Strength, toughness, raw force |
 | **Reflex** | Agility | Speed, coordination, aim, stealth |
@@ -60,7 +64,7 @@ Ghostwire renames Draw Steel’s five characteristics. The **numbers, ranges, an
 | **Instinct** | Intuition | Awareness, reading people and situations, connecting to the Wired |
 | **Persona** | Presence | Force of personality, leadership, faith |
 
-Ghostwire names are **primary** in this book. Legacy Draw Steel names appear only as aliases for cross-reference.
+Ghostwire names are **primary** in this book. Foundry Hero sheet fields are software labels on the same five scores — not a second attribute set.
 
 ### Physique
 
@@ -86,7 +90,7 @@ Ghostwire names are **primary** in this book. Legacy Draw Steel names appear onl
 
 ## Skills overview
 
-Ghostwire replaces Draw Steel’s skill list and skill groups. Skills work on tests as Draw Steel’s do (`03`): the Director names a characteristic; a relevant skill applies when you have it; edges/banes stack per Power Roll rules. There are **44 skills in six groups**.
+Ghostwire’s skill list and skill groups are the ones in this chapter. Skills work on tests as `03` prints them: the Director names a characteristic; a relevant skill applies a **+2** skill benefit when you have it (Hacking on Wired rolls grants an **edge** instead); edges/banes stack per Power Roll rules. There are **44 skills in six groups**.
 
 Gain skills from **People**, **Background**, **Profession**, and **class** (later from advancement). Background and Profession use fixed + chosen picks with a no-duplicate rule (`06`). Perk skill groups: Crafting → **Technical**, Exploration → **Action**, Interpersonal → **Social**, Lore → **Knowledge** (`11-perks.md`). Skills never come from ¥, chrome, or Lifestyle.
 
@@ -174,7 +178,7 @@ Veil-facing detail is thin by design (`22`). Ritual downtime points at Lifestyle
 
 ## Heroic resources at a glance
 
-Each class fuels abilities with its own **heroic resource**. Timing follows Draw Steel unless a class chapter says otherwise. This table is a **pointer** — full chassis live in `12`–`20`.
+Each class fuels abilities with its own **heroic resource**. Timing follows the class chapter (gain at combat start / start of turn, spend on printed costs, leftover usually dumps when the fight ends) unless that chapter says otherwise. This table is a **pointer** — full chassis live in `12`–`20`.
 
 | Class | Core characteristics | Heroic resource | Starting Stamina | Stamina / level | Recoveries | Epic resource / capstone (10th) |
 |---|---|---|---|---|---|---|
@@ -194,7 +198,7 @@ Each class fuels abilities with its own **heroic resource**. Timing follows Draw
 
 ## Victories, level, and what comes later
 
-Runners advance **Level 1–10** by Draw Steel’s rules for experience and **Victories**. Ghostwire invents no second XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.
+Runners advance **Level 1–10** by the Victory and leveling procedure in `24`. Ghostwire invents no second hidden XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.
 
 What leveling does **not** grant: Body Integrity, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`).
 

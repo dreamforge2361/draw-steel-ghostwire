@@ -1,7 +1,7 @@
 # Mods
 
 **RAW status:** draft (Stage 3 procedure fill / B75, 2026-09-19)  
-**Sources:** `docs/rulebook/14-mods.md` (Complete lock), `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (§3G, §5F, §4B/§4C, §F6), `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`  
+**Sources:** `docs/rulebook/14-mods.md` (Complete lock), `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`  
 **Print:** Chapter 12 (TOC lock)  
 **Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Armor and gadget families remain **unpublished** — do not invent SKUs here.
 
@@ -36,7 +36,7 @@ Mods are tags, edges, convenience, and small typed immunities bolted onto an obj
 |---|---|
 | **¥ cost** | Every published mod has a nuyen price. Invented mods spend materials ¥ up front (see Invent a Mod). |
 | **Stack with Kits** | Mods and Kit doctrine touch **different numbers**. Never rewrite Kit damage / Stamina / signature lines. |
-| **§Craft = procedure** | Installing, swapping, removing, or inventing a mod is a Draw Steel **Project** (downtime). §Craft is **not** a skill name. |
+| **§Craft = procedure** | Installing, swapping, removing, or inventing a mod is a **Project** (`03`) during downtime. §Craft is **not** a skill name. |
 | **Field toggle** | An already-installed mod may be toggled on/off in the field (normal action / free as printed). Install, swap, or remove always requires a downtime Project. |
 | **Firewall** | Mods may grant tags, edges, convenience, and small typed immunities. Mods **never** grant characteristics, skills, class features, heroic resources, or Kit doctrine. |
 
@@ -77,7 +77,7 @@ A gadget you bought from Category 1 is still a **host** only if a published fami
 
 **No Item Tier / T5–T1 in player-facing text.** The Gear master’s Item Tier column is a **legacy label** for gear grade only. Map:
 
-| Legacy Item Tier | Draw Steel Echelon | Availability feel | Typical mod slots (`08` / §F6) |
+| Legacy Item Tier | Echelon | Availability feel | Typical mod slots (`08`) |
 |---|---|---|---|
 | T5 | Echelon 1 | Street | 1 |
 | T4 | Echelon 1 | Professional | 2 |
@@ -85,7 +85,7 @@ A gadget you bought from Category 1 is still a **host** only if a published fami
 | T2 | Echelon 3 | Military | 4 |
 | T1 | Echelon 4 | Prototype | 5 |
 
-Higher-grade gear costs more and has more mod slots. Hero-side benefits (Kit Stamina per echelon; Armor-as-Stamina by wearer **Echelon**) scale with the hero’s Draw Steel Echelon — not with a Ghostwire item-tier ladder.
+Higher-grade gear costs more and has more mod slots. Hero-side benefits (Kit Stamina per echelon; Armor-as-Stamina by wearer **Echelon**) scale with the hero’s echelon (`24`) — not with a leftover item-tier ladder.
 
 **Do not confuse** Power Roll **outcome bands** (low / middle / high) with Item Tier / gear grade.
 
@@ -140,11 +140,11 @@ Payload magazines share deck slots with suites (`21`). A Street Deck’s **2** s
 
 ### 3. §Craft Project (downtime)
 
-Installing, swapping, or removing is a Draw Steel **Project** during a respite. It consumes a Lifestyle **project slot** (`26`) unless the Director is running a montage that folds several small Street installs into one bench scene.
+Installing, swapping, or removing is a **Project** (`03`) during a respite. It consumes a Lifestyle **project slot** (`26`) unless the Director is running a montage that folds several small Street installs into one bench scene.
 
 **Power Roll** with the skill by job (table above). Characteristic is usually **Logic** (bench work, firmware, deck software) or **Physique** if the fiction is brute mechanical labor on a vehicle frame — Director’s call, then stick to it for that host.
 
-Read the Project the way Draw Steel Projects already work at your table. Ghostwire adds only this **install outcome** when you need a printed band for a routine published mod (not Invent):
+Read the Project as `03` prints it (progress 1 / 2 / 3 toward goal **3** for a routine published install). Ghostwire also uses this **install outcome** when you need a printed band for a routine published mod (not Invent):
 
 | Result | Install / swap / remove |
 |---|---|

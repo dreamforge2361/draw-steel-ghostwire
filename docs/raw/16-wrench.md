@@ -15,13 +15,13 @@ The Wrench has no corporate academy of origin. All three Wrench subclasses are *
 
 The Wrench's primary characteristic is **Logic** — the attribute that drives Rigging, Gunnery-through-a-sensor-feed, and the cold read of a targeting solution. Its natural secondary is **Reflex** — hands-on piloting, direct fire, and the reflexive save when the meat body has to move on its own.
 
-| GHOSTWIRE Display | DS Attribute | Abbrev | Governs (representative) |
-|---|---|---|---|
-| **Physique** | *(legacy: Might)* | PHY | Melee power, carrying capacity, physical resistance |
-| **Reflex** | *(legacy: Agility)* | REF | Piloting, direct fire, initiative, evasion |
-| **Logic** | *(legacy: Reason)* | LOG | Rigging, Gunnery-via-sensor, hacking-adjacent tech tests, tactical calculation |
-| **Instinct** | (Intuition) | INS | Perception, read-the-room, danger sense |
-| **Persona** | (Presence) | PER | Social tests, force of personality, command presence |
+| Ghostwire | Abbrev | Governs (representative) |
+|---|---|---|
+| **Physique** | PHY | Melee power, carrying capacity, physical resistance |
+| **Reflex** | REF | Piloting, direct fire, initiative, evasion |
+| **Logic** | LOG | Rigging, Gunnery-via-sensor, hacking-adjacent tech tests, tactical calculation |
+| **Instinct** | INS | Perception, read-the-room, danger sense |
+| **Persona** | PER | Social tests, force of personality, command presence |
 
 ## Class Chassis
 
@@ -246,7 +246,7 @@ A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utili
 - **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.
 - **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform.
 
-**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test at medium difficulty** (test difficulties as Draw Steel Heroes prints them), taking the **edge or bane the target frame's Handling gives**. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a failed test whose **total is 5 or lower** also triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
+**Jump-In Plumbing (pilot-check rules).** Jumping into a vehicle or drone is a **maneuver**: make a **Logic or Reflex test at medium difficulty** (easy / medium / hard: `03`), taking the **edge or bane the target frame's Handling gives**. On success, you are Jumped-In: your meat body becomes **inert and exposed** (per the Wired doctrine on Jumped-In bodies — biofeedback from machine damage can hit your own Stamina, and an inert body is easy to target if discovered), and you gain the machine's Speed, one weapon-lock edge, and (for Jump-In-capable frames) a **temporary Integrity buffer** *(+4 at 1st–5th level, +5 at 6th level, +6 at 7th level and above)* layered on top of the machine's own Integrity track. While Jumped-In, damage to the vehicle drains your Uptime per the standard "damage to fielded assets" rule (see Heroic Resource: Uptime, above) in addition to depleting Integrity. On a failed Jump-In check, you remain in your own body but may retry as a maneuver next turn; a failed test whose **total is 5 or lower** also triggers minor biofeedback (1 Stamina damage to you, no Uptime drain). Exiting Jump-In is a free action at the start of your turn or an automatic effect of the vehicle being wrecked.
 
 **Chase Modes (reference).** Vehicle combat runs in one of two modes, Director's call:
 - **Positional (default):** vehicles move on the same map/zone as foot combat, at vehicle Speed and Scale, sharing terrain and cover with anyone on foot.
@@ -503,7 +503,7 @@ Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact
 
 > **Unbreakable Hive** (apex passive)
 >
-> *Whenever a drone you control would be destroyed, make a **saving throw** for it (Draw Steel saving throws succeed on 6 or higher). On a success it instead drops to 1 Integrity and is Systems Down (inactive but not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.*
+> *Whenever a drone you control would be destroyed, make a **saving throw** for it (`03` — 1d10, succeed on 6+). On a success it instead drops to 1 Integrity and is Systems Down (inactive but not destroyed) until you spend a maneuver to reboot it. Once per drone per encounter.*
 
 **Skill grants:** Electronics (1st). **Contact grant:** a drone-parts/grey-market salvage contact. **Kit grant:** Fabricator's Bench (light Kit; an **edge** on Field Repair rolls made on your own drones). **Signature chrome:** none required.
 

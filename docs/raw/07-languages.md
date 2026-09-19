@@ -2,7 +2,8 @@
 
 **RAW status:** draft (Stage 3 chargen/play fill / B75, 2026-09-19)  
 **Sources:** `docs/rulebook/19-languages.md`, `docs/masters/GHOSTWIRE_LANGUAGES.md` (names + knowledge-only lock), `docs/raw/02-heroes-characteristics.md`, `docs/raw/03-tests-power-rolls.md`, `docs/raw/11-perks.md` (Polyglot)  
-**Engine:** Draw Steel Heroes — use the official language rules; Ghostwire **renames** every language below. Do not reprint Draw Steel tongue histories.  
+**Engine:** Ghostwire language procedures in this chapter. Playable without a separate rulebook. Ghostwire **renames** every language below; do not invent tongue histories here.  
+
 **Print:** Chapter 8 (TOC lock)  
 **Lore gazetteer:** **non-goal** for RAW / v1 PDF. Per-language history and purpose is backlog with Michael (issue #67). This chapter is procedure + the locked name lists.
 
@@ -35,7 +36,7 @@ It does **not** invent a history for Trade Cant, Saint-Cant, or Corran Work-Cant
 
 Languages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.
 
-Each Ghostwire language takes the place of one Draw Steel language; a Draw Steel rule or feature that grants a language grants a Ghostwire language instead. The locked key → name map lives in `docs/masters/GHOSTWIRE_LANGUAGES.md` (42 of 42 Draw Steel 1.1.2 keys). **Do not rename keys.** Foundry still stores the Draw Steel key and **shows** the Ghostwire name.
+Each Ghostwire language has a locked key → name map in `docs/masters/GHOSTWIRE_LANGUAGES.md` (42 of 42 keys). **Do not rename keys.** A printed grant that names a tongue grants the **Ghostwire name** for that key. Foundry still stores the system key and **shows** the Ghostwire name.
 
 ---
 
@@ -101,8 +102,8 @@ This is **guidance** for freeform doors. It does not replace a printed negotiati
 Chargen order in `02` puts **Languages** after skills and before starting ¥.
 
 1. **Write Trade Cant.** Every runner has it. (A table that is *not* set in the Reach may swap the starting common urban tongue to Reach Metro, Flats Cant, or Sprawl Argot if everyone agrees — that is a campaign-region call from the languages master, not a new language.)
-2. **Collect printed grants.** Take any language a People trait, class feature, education feature, or perk **prints**. A Draw Steel grant that names a tongue grants the **Ghostwire name** for that key instead.
-3. **Polyglot** (`11`): if you take this perk later (or at a level that grants a perk), you learn **two** languages you have regularly heard or seen written. Immersion (7+ days in a place that speaks one you don’t know) lets you hold a basic conversation; finishing **Learn New Language** (Draw Steel research project, by reference) at **half** the usual project goal then makes it a full known tongue.
+2. **Collect printed grants.** Take any language a People trait, class feature, education feature, or perk **prints**. A grant that names a tongue grants the **Ghostwire name** for that key.
+3. **Polyglot** (`11`): if you take this perk later (or at a level that grants a perk), you learn **two** languages you have regularly heard or seen written. Immersion (7+ days in a place that speaks one you don’t know) lets you hold a basic conversation; finishing **Learn New Language** (`03` Projects — default goal **6**, Polyglot **3** after immersion) then makes it a full known tongue.
 4. **Do not invent automatic Background or People grants.** The languages master *wants* Backgrounds and ancestral tongues to attach later; that follow-up is **not shipped**. A Corp Arcology Background does not automatically give Corp Cant. An Elvani does not automatically get Elvani High Cant. If a later pass adds those advancements, they land in `06` / `05` and this paragraph shrinks.
 5. **Director optional color (not a grant rule):** if the table wants language to matter *this* campaign and no printed grant has fired, the Director may offer **one** additional tongue from a category that already matches the runner’s fiction (common urban, ancestral row for their People, or a corporate/national tongue they were raised in). That is a session-zero agreement, not a hidden second skill budget. Refuse knowledge-only tongues as freebies.
 
@@ -167,7 +168,7 @@ Harvested from the languages master. These lines teach **when to ask for the ton
 
 **Translation implants and apps** are chrome or gear fiction (`08`, `09`). They do not become languages. They never satisfy knowledge-only.
 
-**Learn New Language** is a Draw Steel research **Project** (by reference). Ghostwire does not reprint the project-goal math. Polyglot halves that goal after immersion (`11`). Lifestyle project slots (`26`) are how you find the time; ¥ still does not buy the tongue.
+**Learn New Language** is a research **Project** (`03`): Logic Power Roll, progress 1 / 2 / 3 per low / middle / high, goal **6** (Polyglot halves that after immersion — `11`). Lifestyle project slots (`26`) are how you find the time; ¥ still does not buy the tongue.
 
 **Class hooks already in print (pointers, not new grants):**
 
@@ -183,7 +184,7 @@ Harvested from the languages master. These lines teach **when to ask for the ton
 ---
 
 > **In Foundry**
-> The hero sheet’s **language picker** already shows **Ghostwire names** (module localization; Draw Steel keys underneath). Add or remove tongues there the same way you would in stock Draw Steel — Ghostwire does not ship a second language app. There is **no** translator automation and **no** knowledge-only checkbox in the UI: track knowledge-only as a table rule when someone tries to app-translate Saint-Cant or Old Code. Polyglot and other grants are still recorded by hand (or by the perk Item) on the sheet.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. The hero sheet’s **language picker** already shows **Ghostwire names**. Ghostwire does not ship a second language app. There is **no** translator automation and **no** knowledge-only checkbox in the UI: track knowledge-only as a table rule when someone tries to app-translate Saint-Cant or Old Code. Polyglot and other grants are still recorded by hand (or by the perk Item) on the sheet.
 
 ---
 
@@ -207,4 +208,4 @@ Harvested from the languages master. These lines teach **when to ask for the ton
 | Polyglot; Wire Whisper | `11-perks.md` |
 | Wire forensics | `21-the-wire.md` |
 | Ritual / Veil research | `22-the-veil.md` |
-| Locked names + DS key map | `docs/masters/GHOSTWIRE_LANGUAGES.md` |
+| Locked names + key map | `docs/masters/GHOSTWIRE_LANGUAGES.md` |

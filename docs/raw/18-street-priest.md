@@ -32,7 +32,7 @@ Veil workings referenced here are summarized in `22-the-veil.md`.
 | Property | Value | Rationale |
 |---|---|---|
 | **Opening faith** (start of encounter) | +Victories | The believer arrives already in their patron's favor — the same on-ramp every GHOSTWIRE class gets. |
-| **The drip** (start of each of your turns) | **+2** | Matches the Operator's cadence weight — Conviction is Draw Steel's steady-drip benchmark per chapter text. |
+| **The drip** (start of each of your turns) | **+2** | Matches the Operator's cadence weight — a steady per-turn drip. |
 | **Creed echo** (first qualifying act per round, in your pact's creed) | **+1** | Small and steady, matches the Elementalist's resonance bonus. See Pact Alignment, below, for what qualifies per pact. |
 | **Sustain cost** (per Persistent 1 / Persistent 2 you're maintaining) | **−2 / −4** | Matches the Elementalist's throttle for consistency across Veil casters — the same "cannot hold three wards and a summon at once" tension. |
 
@@ -46,7 +46,7 @@ Veil workings referenced here are summarized in `22-the-veil.md`.
 
 The prayer gamble is **resource-only** — its worst result simply yields the ordinary flat drip and nothing more. It never inflicts backlash, Stamina damage, or corruption.
 
-**Cap & loss.** Conviction is capped at **8 at 1st level, rising +4 per echelon** (mirrors the Veil-caster spine exactly: E1=8, E2=12, E3=16, E4=20, continuing the same +4 step at the top of the DS-level range). **All unspent Conviction is lost at the end of the encounter** — the patron's active favor fades when the crisis passes.
+**Cap & loss.** Conviction is capped at **8 at 1st level, rising +4 per echelon** (mirrors the Veil-caster spine exactly: E1=8, E2=12, E3=16, E4=20, continuing the same +4 step through level 10). **All unspent Conviction is lost at the end of the encounter** — the patron's active favor fades when the crisis passes.
 
 **Outside combat.** You cannot *gain* Conviction outside combat, but you may spend Conviction-costed effects **as if you had Victories worth of Conviction** — this is how ministry, healing, warding, and pact-renewal happen during downtime scenes without breaking the encounter-scoped resource model.
 
@@ -80,7 +80,7 @@ Both pacts use **the same mechanical numbers** across every ability in this chap
 
 Every Street Priest chooses **two** of the following at 1st level — these are your baseline, always-available toolkit, enhanceable by spending Conviction but never costing any to use at their base effect. All roll **2d10 + Persona** unless noted. Damage type below defaults per your pact (holy for Light, corruption for Dark) unless the signature is explicitly flavor-locked.
 
-Damage and rider values below print in Draw Steel result order — **low** (≤11) **/ middle** (12–16) **/ high** (17+).
+Damage and rider values below print in this book’s result order — **low** (≤11) **/ middle** (12–16) **/ high** (17+).
 
 | Signature | Type | Target | Base Effect | Pact Flavor |
 |---|---|---|---|---|
@@ -123,7 +123,7 @@ Beyond the 2 chosen signatures above, **every Street Priest also has these two c
 
 ## Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
+Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use this book’s print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
 
 ### 1-Cost Band (chosen at 1st level)
 

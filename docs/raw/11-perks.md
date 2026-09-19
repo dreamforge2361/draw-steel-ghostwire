@@ -245,7 +245,7 @@ You can spend 1 uninterrupted minute to perform a Veil ritual of blessing — ch
 
 A small Veil-spirit has taken up residence in a specific small animal or scrap object — an alley rat, a rooftop pigeon, a broken toy drone — and chosen to be your familiar, or adopted you as theirs.
 
-The spirit uses Draw Steel’s **familiar** stat block.
+The spirit is a **small companion**: size **1T**, Speed **5**, Stamina **6**, no strikes, Stability **0**.
 
 The familiar can hold small objects in their mouth, claws, or grabber, but can’t perform activities that would typically require hands (opening a door, working a keypad, and so forth). They can’t harm other creatures or objects. They can flank in combat, but only with you.
 

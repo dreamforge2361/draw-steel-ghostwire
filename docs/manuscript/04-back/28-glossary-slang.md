@@ -122,7 +122,7 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | Term | Meaning |
 |---|---|
 | **Director** | The person running the game. |
-| **Malice** | Director resource (Draw Steel); Trace Alert can feed it. |
+| **Malice** | Director combat budget (`25`); Trace Alert can feed it. |
 | **In Foundry** | Sidebar notes for the Ghostwire Foundry module — click-help, not a second rule. |
 
 ---

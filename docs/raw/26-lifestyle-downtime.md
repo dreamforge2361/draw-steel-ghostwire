@@ -1,7 +1,7 @@
 # Lifestyle & Downtime
 
 **RAW status:** draft (2026-09-19) / Stage 3 fill + lore fuse B87  
-**Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Appendix §F3 (upkeep ¥) + 1G Fixer Retainer, `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
+**Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (upkeep ¥ table + 1G Fixer Retainer), `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
 **Print:** Chapter 10 (TOC lock) — file numbered `26` so Kits/Chrome/Mods (`08`–`11`) stay stable for Journals
 
 ---
@@ -23,7 +23,9 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 
 ## Lifestyle bands (upkeep)
 
-**Upkeep ¥ are cited from the gear master Appendix §F3** (Doss Upgrade / Lifestyle Voucher points at the same table). They are **not invented here**. Treat Recovery-quality notes as **Director guidance pending full DS Recoveries alignment** — use Draw Steel Recoveries as printed for your table; do not invent a second Recovery pool.
+**Upkeep ¥** are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in `04`. Do not invent a second Recovery pool.
+
+**Respite.** A **respite** is the downtime breath between runs — or whenever the Director says a downtime block ends. The crew is off the clock long enough to sleep, pay Lifestyle, spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round and not a five-minute alley patch.
 
 | Band | Name | Upkeep / respite | Housing & rest (feel) | Social doors | Medic restock eligibility |
 |---|---|---|---|---|---|
@@ -33,7 +35,17 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 | 2 | **High** | **¥3,500** | Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse). | Professional doors, quiet install bays, serious fixers. | Restock is **easy**. Prefer **standard or better** quotes; black-clinic / pharma contacts are in reach. |
 | 1 | **Elite** | **¥9,000** | Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply). | Boardrooms, private clinics, Restricted introductions on a call. | Restock is **trivial logistically**. Quote still applies (supply is not free), but access is not the bottleneck. |
 
-**Downtime capacity (from §F3, cited):** Squatter / Low — **1** project slot per respite (+1 Low with a hireling); Middle — **2**; High — **3**; Elite — **4**. A **project slot** is one Draw Steel–style downtime Project (or equivalent block) you can finish or meaningfully advance this respite. The Director may collapse or expand slots for montage pacing.
+**Downtime capacity (this book):**
+
+| Band | Project slots per respite |
+|---|---|
+| **Squatter** | **1** |
+| **Low** | **1** (+1 if you have a hireling this respite) |
+| **Middle** | **2** |
+| **High** | **3** |
+| **Elite** | **4** |
+
+A **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.
 
 **Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.
 
@@ -95,7 +107,7 @@ Medic Reagents **do not** refill between encounters. Restocking to capacity is a
 
 ### Director quote guidance (provisional)
 
-These bands are **provisional Director guidance** so tables have a starting number. They sit **beside** §F3 upkeep; they do not replace the Medic chapter's "Director quotes" lock. Scale with kit capacity / how empty the bag is / Availability of the stock.
+These bands are **provisional Director guidance** so tables have a starting number. They sit **beside** the upkeep table above; they do not replace the Medic chapter's "Director quotes" lock. Scale with kit capacity / how empty the bag is / Availability of the stock.
 
 | Lifestyle eligibility | Typical full-refill quote (provisional) | Notes |
 |---|---|---|
@@ -114,7 +126,7 @@ During a paid Lifestyle respite, spend project slots (and story time) on actions
 
 ### Recover
 
-Sleep, food, and medical attention at your band's housing quality. Use Draw Steel Recoveries / respite healing as your table already does. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band.
+Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band.
 
 ### Shop
 
@@ -122,7 +134,7 @@ Spend leftover ¥ on gear, ammo, consumables, bribes, and services (`08`, gear c
 
 ### §Craft Projects
 
-Installing, swapping, removing, inventing, or configuring gear/mods is a Draw Steel **Project** during downtime. **§Craft is a procedure, not a skill** — full Invent a Mod / slot rules: `10-mods.md` (and the §Craft bridge in `08`). Skills by job: Hacking, Electronics, Repair, Cybertech as printed there. Field-toggle of already-installed mods does **not** need a Project.
+Installing, swapping, removing, inventing, or configuring gear/mods is a **Project** (`03`) during downtime. **§Craft is a procedure, not a skill** — full Invent a Mod / slot rules: `10-mods.md` (and the §Craft bridge in `08`). Skills by job: Hacking, Electronics, Repair, Cybertech as printed there. Field-toggle of already-installed mods does **not** need a Project.
 
 ### Chrome surgery
 
@@ -143,8 +155,8 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 | Kind | What it is | How you get one | What you do **not** buy |
 |---|---|---|---|
 | **Contact** | A named NPC who will take a call (intro, rumor, one door) | Class features; Background / Profession fiction; Fixer Retainer service | Characteristics, skills, Kit doctrine |
-| **Hireling / retainer** | Extra hands for a scene or a downtime slot | Draw Steel hirelings / retainers **by reference**; Lifestyle Low’s printed +1 project slot with a hireling (§F3) | A second class feature |
-| **Follower** | Ongoing crew support (named, recurring) | Story + class text that already says so (e.g. Commander network favors) | A published follower stat-block chapter — use Opposition / DS retainers |
+| **Hireling / retainer** | Extra hands for a scene or a downtime slot | Story + ¥ for a named extra pair of hands; Lifestyle **Low**’s printed +1 project slot with a hireling | A second class feature |
+| **Follower** | Ongoing crew support (named, recurring) | Story + class text that already says so (e.g. Commander network favors) | A published follower stat-block chapter — use Opposition Actors (`25`) |
 
 **Chargen fiction** (`06`): ask **who still has your number?** Write one name and a lean (fixer, old badge, deck handle). That is contact **fiction**, not a mechanical roster until a printed feature or a service spends.
 
@@ -152,7 +164,7 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 
 **Class features that already call a contact** resolve as printed (Commander network favor, Elementalist contact hooks, Street-Fixer Covert Operations, etc.). Standing — how much they will risk — is **Director-adjudicated from fiction and the printed ability**, not from a missing Contacts chapter. Once per session per Contact where the ability says so.
 
-**Downtime:** spending a project slot to *cultivate* a named contact is legal table fiction. It does not grant skills or Renown. Low Lifestyle’s **+1 project slot with a hireling** is the only printed hireling-capacity number in this chapter (§F3).
+**Downtime:** spending a project slot to *cultivate* a named contact is legal table fiction. It does not grant skills or Renown. Low Lifestyle’s **+1 project slot with a hireling** is the only printed hireling-capacity number in this chapter.
 
 ¥ still never converts into character power. A bought introduction is access, not a characteristic.
 
@@ -161,8 +173,8 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 ## The ¥ loop: run payout → Lifestyle → leftover
 
 1. **Run** — complete the job; take heat and injuries.
-2. **Payout** — Director pays crew shares. Provisional guidance already in `08` / `docs/rulebook/11-economy.md` (street ¥500–2,000; mid ¥2,000–8,000; corp ¥5,000–20,000; black-ops ¥20,000+ or unique gear). Gear-master §F2 tier payouts are older parallel numbers — prefer the Economy chapter bands until unified.
-3. **Lifestyle** — pay upkeep for the band you want this respite (§F3 ¥ above).
+2. **Payout** — Director pays crew shares. Provisional guidance already in `08` / `docs/rulebook/11-economy.md` (street ¥500–2,000; mid ¥2,000–8,000; corp ¥5,000–20,000; black-ops ¥20,000+ or unique gear).
+3. **Lifestyle** — pay upkeep for the band you want this respite (¥ table above).
 4. **Quoted services** — Medic restock, chrome install fees, ritual components, bribes.
 5. **Projects** — spend slots on Craft, surgery, rituals, training.
 6. **Leftover ¥** — bank for the next buy. Chrome and Restricted gear should still feel expensive after Lifestyle; if Elite upkeep never hurts, raise complication pressure or cut payouts, don't erase Body Integrity / Availability gates.
@@ -192,4 +204,4 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 | Chrome install / BI | `09-chrome-body-integrity.md` |
 | Ritual Workings | `22-the-veil.md` |
 | Wrench Building Lifestyle Hook | `16-wrench.md` |
-| Upkeep ¥ source | Gear master Appendix **§F3** |
+| Upkeep ¥ | This chapter’s band table |

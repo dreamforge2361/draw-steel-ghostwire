@@ -24,13 +24,13 @@ Advantage is the Scout's fuel, and it explicitly represents **the read** — the
 
 **Advantage in Combat.** At the start of a combat encounter or other stressful situation tracked in rounds (Director's call), you gain Advantage equal to your Victories. At the start of each of your turns during combat, you gain **1d3 Advantage** (rising to **1d3+1** at 7th level via **Sharper Eye**).
 
-Additionally, the first time each combat round that you deal damage incorporating **1 or more surges** (surges work as in Draw Steel Heroes), you gain **1 Advantage** (rising to **2** at 4th level via **Surge of Advantage**, and **3** at 10th level via **Death Pool**).
+Additionally, the first time each combat round that you deal damage incorporating **1 or more surges** (surges: `04`), you gain **1 Advantage** (rising to **2** at 4th level via **Surge of Advantage**, and **3** at 10th level via **Death Pool**).
 
 Whenever you use a heroic ability that makes use of a **power roll**, that ability costs 1 fewer Advantage if you have an **edge** or **double edge** on it. If the ability has multiple targets, the cost is reduced even if the ability gains an edge or has a double edge against only one target.
 
 You lose any remaining Advantage at the end of the encounter.
 
-**Surges** use the Draw Steel Heroes rules unchanged; Ghostwire adds no surge variant.
+**Surges** use the combat chapter (`04`). Ghostwire adds no surge variant.
 
 **Advantage Outside of Combat.** You can't gain Advantage outside of combat, but you can still use your heroic abilities and effects that cost Advantage without spending it. Whenever you use an ability or effect outside of combat that costs Advantage, you can't use that same ability or effect outside of combat again until you earn 1 or more Victories or finish a respite. When you use an ability outside of combat that lets you spend **unlimited** Advantage on its effect (such as the Ghost subclass's **Grapnel-Blink**), you can use it as if you had spent an amount of Advantage equal to your Victories.
 

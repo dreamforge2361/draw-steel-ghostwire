@@ -10,17 +10,19 @@
 
 This is the **Ghostwire rules-as-written (RAW)** layer: the rules a Director and players need at the table. There is no setting lore, no fiction, and no art direction **in this chapter**. In the print manuscript, harvested lore (L1–L3) and the title plate precede this chapter; they do not change a single procedure here.
 
-Ghostwire is a cyberpunk-fantasy game that runs on the **Draw Steel** engine. Where Draw Steel already has a rule, Ghostwire uses it and changes only names and flavor. Where the setting needs something Draw Steel doesn’t have — chrome and Body Integrity, the Wired, tracked money, drones and vehicles — this book adds it.
+Ghostwire is a cyberpunk-fantasy game that sits on a **Draw Steel**–shaped engine. You play it from **this book**, dice, and (optionally) Foundry. Shared procedures — characteristics, Power Rolls, combat, Recoveries, advancement — are written here in Ghostwire words. Where the street needs something the chassis never had — chrome and Body Integrity, the Wired, tracked money, drones and vehicles — this book adds it.
 
 **Session zero:** agree hard lines and soft lines before chargen. Full tone-and-safety procedure is **How to Play** (print Ch 1). This chapter does not invent a second safety tool.
 
-## How this book relates to Draw Steel Heroes
+## How this book relates to Draw Steel
 
-**You need Draw Steel Heroes to play.** This book does not reprint it.
+Ghostwire is an independent **derived product**. It uses the **Draw Steel** engine under MCDM’s DRAW STEEL Creator License / open licensing terms. It is **not affiliated with** and is **not endorsed by** MCDM Productions, LLC.
 
-- **Shared engine** chapters (`01`–`04`, `24`) are short. They tell you which Draw Steel rules to use, give Ghostwire procedures in our own words where the table needs them, and list every Ghostwire rename or change in a remap table.
+Ghostwire is playable from **this manuscript** (or the print PDF assembled from it), dice, and optional Foundry. You do **not** need *Draw Steel Heroes* or any separate Draw Steel rulebook to run a session.
+
+- **Core procedure** chapters (`01`–`04`, `24`, and the tests/combat/advancement loops they point at) are written so a table can resolve the night without opening another book.
 - **Ghostwire systems** (Peoples, Kits and gear, chrome, mods, perks, classes, the Wire, the Veil, machines) are written out in full.
-- When this book and Draw Steel Heroes disagree, **this book wins** for Ghostwire play.
+- When two lines in this book disagree, the more specific chapter wins (Wire beats a generic test note; a class feature beats a generic combat note). This book is the play rules.
 
 **License and attribution:**
 
@@ -33,7 +35,7 @@ This statement appears in every published form of this book.
 ## How to use this book
 
 1. **Players** start with `02-heroes-characteristics.md`, then pick a People (`05`), Background and Profession (`06`), a class (`12`–`20`), and a Kit (`08`).
-2. **Everyone** reads the remap tables in `01`–`04` once, so Ghostwire’s names and changes are familiar.
+2. **Everyone** reads the procedure chapters in `01`–`04` once, so Ghostwire’s names and loops are familiar.
 3. **Directors** add `21-the-wire.md`, `23-machines.md`, `25-opposition.md`, and print Ch 27 (Running Ossian Reach — manuscript pointer, not a gazetteer).
 
 ## Chapter list
@@ -74,7 +76,7 @@ Each chapter’s header shows **RAW status: draft** or **RAW status: locked**, a
 
 ## Conventions
 
-- **Characteristics** are **Physique, Reflex, Logic, Instinct, Persona**. Some entries also show the Draw Steel name in parentheses, such as “Logic (Reason).”
+- **Characteristics** are **Physique, Reflex, Logic, Instinct, Persona**.
 - **Power Roll results** are always written low / middle / high: **≤11 / 12–16 / 17+**.
 - **Progression** is **Level 1–10**, grouped into **Echelon 1–4**. Ghostwire has no separate tier ladder for heroes, gear, or foes.
 - **Currency** is nuyen, written **¥**.
@@ -87,7 +89,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 
 | Abbr. | Means | Notes |
 |---|---|---|
-| **DS** | Draw Steel | Engine by reference — *Heroes* is a separate product |
+| **DS** | Draw Steel | Engine this book sits on (Creator License). Play from this book, not a second rulebook. |
 | **GW** | Ghostwire | This setting and this module |
 | **HTP** | How to Play | Print Ch 1 / `01-how-to-play.md` |
 | **RAW** | Rules as written | `docs/raw/` is SoR for procedures |
@@ -96,7 +98,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **PR** | Power Roll | Results **low / middle / high** |
 | **ICE** | Intrusion countermeasures | Wired defenses on a node |
 | **RCC** | Rigger command console | Drone command hardware |
-| **EV** | Encounter value / budget | Use Draw Steel’s; Ghostwire does not invent a second one |
+| **EV** | Encounter budget | Street-fight feel in `25` — Ghostwire does not invent a second XP ladder |
 | **SoR** | Source of record | Rules = raw; print assemble = manuscript + raw pointers |
 
 **E1–E4** on a **hero** means echelon. **E1–E4** on a **Wired Flats host** means ICE posture / Node Rating — not the runner’s level (`21`, print Ch 27).
@@ -109,10 +111,10 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 
 | Term | Meaning | Where |
 |---|---|---|
-| **Director** | The person running the game (Draw Steel’s Director). | `01` |
+| **Director** | The person running the game. | `01` |
 | **Runner / Ghost Runner** | A hero. **Runner** is short for **Ghost Runner**. **Ghost Run(s)** are the jobs. **Crew** is the party. (Older *edgerunner* = synonym.) | `01`, Appendix A |
 | **Run / Ghost Run** | A job: legwork, the operation itself, and the getaway. | `01`, Appendix A |
-| **¥ (nuyen)** | Money. Replaces Draw Steel’s wealth abstraction. Buys objects and services, never character power. | `08` |
+| **¥ (nuyen)** | Money. Buys objects and services, never character power. | `08` |
 | **Availability** | How hard gear is to get: Street, Professional, Restricted, Military, Prototype. | `08` |
 | **Echelon** | Level band 1–4. Also the grade of gear (Echelon + Availability). | `24` |
 | **Power Roll result** | Low (≤11), middle (12–16), or high (17+). | `03` |
@@ -120,7 +122,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **Heroic resource** | Each class’s combat fuel: Adrenaline, Advantage, Influence, Reagents, Uptime, Essence, Conviction, Bandwidth, Resonance. | `04` |
 | **Epic resource** | A class’s 10th-level resource or capstone. | `24` |
 | **People** | Ghostwire’s name for an ancestry. | `05` |
-| **Background / Profession** | Ghostwire’s names for Draw Steel’s culture and career. | `06` |
+| **Background / Profession** | Where you grew up / what you did before the job. | `06` |
 | **Character power** | Characteristics, skills, class features, and heroic resources — gained only from People, Background, Profession, class, perks, and advancement. ¥ never buys it. | `02`, `08` |
 | **Chrome** | Cyberware implants for living heroes. Costs ¥ and Body Integrity. | `09` |
 | **Body Integrity** | A living hero’s capacity for chrome. Starts at 20. Not used by Cyborgs. | `09` |
@@ -148,5 +150,5 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **The Veil** | The boundary Ghostwire’s magic reaches across. | `22` |
 | **Pact** | A Street Priest’s Light or Dark alignment. | `18`, `22` |
 | **Sprite** | A Technomancer’s conjured code-spirit. | `20` |
-| **Malice** | The Director’s resource (Draw Steel). Trace Alert can feed it. | `25` |
-| **Keywords added by Ghostwire** | **Tech**, **Chrome**, **Optics**, **Wired**, **Command** — used alongside Draw Steel’s keywords. | `04` |
+| **Malice** | The Director’s combat budget. Trace Alert can feed it. | `25` |
+| **Keywords added by Ghostwire** | **Tech**, **Chrome**, **Optics**, **Wired**, **Command** — used alongside other ability keywords. | `04` |

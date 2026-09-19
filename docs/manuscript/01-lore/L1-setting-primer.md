@@ -3,7 +3,7 @@
 **Source:** *GHOSTWIRE — Core Sourcebook* PDF (Book One) + *GHOSTWIRE — Lore Book V2 FINAL* PDF; prior harvest from Lore Source markdown / hit indexes.  
 **PDF-diff pass (0.2.2):** Lore Source + hit indexes → Magic, Corruption, Ten profiles, Space, Religion, Shadow Economy, Everyday Tech.  
 **PDF-diff pass (0.2.3):** Live extracts `/workspace/gw-pdf-extract/core-full.txt` (429 pp) + `lore-full.txt` (132 pp). Filled Ch. 8 tail missing from manuscript: What Lies Beneath the Ten; Who Holds the Chair; Kestrel Dynamics; Resource Wars; Reach for the Void (political note); Radiant Concord (was cross-referenced from Religion but never harvested).  
-**Harvested:** 2026-09-18 (ET) · lore prose only; Draw Steel / class-kit / crosslink tables stripped. Images not embedded.
+**Harvested:** 2026-09-18 (ET) · lore prose only; class-kit / crosslink tables stripped. Images not embedded.
 
 > A cyberpunk fantasy of ghosts, chrome & the machine.  
 > Break free of the Machine. Run the Wire.

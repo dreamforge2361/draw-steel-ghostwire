@@ -8,7 +8,7 @@
 
 ## What these picks are
 
-Every hero picks one **Background** (where you grew up — Draw Steel’s *culture*) and one **Profession** (what you did before the job — Draw Steel’s *career*). Both grant skills from the Ghostwire skill list (see `02-heroes-characteristics.md`). Neither grants Build Points, attributes, class features, heroic resources, Kits, chrome, or ¥ as character power.
+Every hero picks one **Background** (where you grew up) and one **Profession** (what you did before the job). Both grant skills from the Ghostwire skill list (see `02-heroes-characteristics.md`). Neither grants Build Points, attributes, class features, heroic resources, Kits, chrome, or ¥ as character power.
 
 **Background** is the water you were raised in: which rung of a hive, which kind of waste, which kind of prayer. It is still true after you take the job.
 
@@ -88,7 +88,7 @@ Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bo
 
 ### The old job at the table
 
-Ask one question at chargen: **who still has your number?** A Fixer profession implies a lean. A Security Guard implies a badge you no longer carry (or worse, one you still do). A Deck Jockey implies a handle someone on the Wire might recognize. That is contact **fiction**. A full Followers & Contacts chapter is a **v1 non-goal** (`26`); the Director uses Draw Steel hirelings / retainers by reference and the Fixer Retainer service (gear 1G) for a one-time introduction.
+Ask one question at chargen: **who still has your number?** A Fixer profession implies a lean. A Security Guard implies a badge you no longer carry (or worse, one you still do). A Deck Jockey implies a handle someone on the Wire might recognize. That is contact **fiction**. A full Followers & Contacts chapter is a **v1 non-goal** (`26`); the Director uses the hireling / retainer pointer in `26` and the Fixer Retainer service (gear 1G) for a one-time introduction.
 
 Profession is also a **legwork door**, not a free success. A Street Doc may get a gray-clinic conversation without a bribe; they still pay for the bag (`15`, `26`). A Wage-Slave may know which department to call; they still roll if the clerk can ruin them.
 
@@ -100,7 +100,7 @@ Do not let Profession replace class. The Medic class is the bag and the Reagents
 
 Take Background and Profession in the chargen sequence in `02` (after People, before class). Collect skill grants **after** People so the no-duplicate rule has something to collide with.
 
-Chargen does not force a Lifestyle band. Assume **Low** or fiction-appropriate until the first paid respite unless the Director sets otherwise from Background (`26`): Barrens and Outland Wastes often start Squatter or Low; Corp Arcology and Academic Spire can justify Middle if the story is “I still have a keycard and one month of rent.” That is a **starting address**, not free Elite upkeep. Pay the printed §F3 number when the first respite lands.
+Chargen does not force a Lifestyle band. Assume **Low** or fiction-appropriate until the first paid respite unless the Director sets otherwise from Background (`26`): Barrens and Outland Wastes often start Squatter or Low; Corp Arcology and Academic Spire can justify Middle if the story is “I still have a keycard and one month of rent.” That is a **starting address**, not free Elite upkeep. Pay the printed upkeep in `26` when the first respite lands.
 
 Starting funds remain **¥5,000** liquid + one free starting Kit (`08`). The optional Profession ¥500 is extra liquid, not a second Kit and not a perk.
 
@@ -114,7 +114,7 @@ Starting funds remain **¥5,000** liquid + one free starting Kit (`08`). The opt
 - Not the Reach Handbook. A Sprawl District runner is not automatically a Ninth Ward King.
 
 > **In Foundry**
-> Background and Profession are Draw Steel **culture** and **career** items under Ghostwire names. Put the matching Items on the hero (module localization + this chapter’s skill lists). Skills land on the stock sheet; Ghostwire does not add a second skill grid. Pregens in **Ghostwire Pregens** already have their Background / Profession grants applied at level 1 (B59). There is no Lifestyle automation — if you set a starting band from Background, adjust Nuyen by hand at the first respite (`26`).
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Put the matching Background and Profession Items on the hero (module localization + this chapter’s skill lists). Skills land on the hero sheet; Ghostwire does not add a second skill grid. Pregens in **Ghostwire Pregens** already have their Background / Profession grants applied at level 1 (B59). There is no Lifestyle automation — if you set a starting band from Background, adjust Nuyen by hand at the first respite (`26`).
 
 ---
 

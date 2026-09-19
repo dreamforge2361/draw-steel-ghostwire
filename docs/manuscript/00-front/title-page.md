@@ -14,7 +14,7 @@ Break free of the Machine. Run the Wire.
 | **Subtitle** | Street runs, chrome, and a quiet war — a setting for the **Draw Steel** engine |
 | **World** | **Ossian Reach** and the hive-cities of Veyra |
 | **Product line** | *Draw Steel — Ghostwire Build* (Foundry module `draw-steel-ghostwire`) |
-| **This file** | Print manuscript draft **v0.3.15** — Markdown SoR + PDF pipeline (B88) |
+| **This file** | Print manuscript draft **v0.3.17** — Markdown SoR + PDF pipeline (B88) |
 
 The chassis is Draw Steel. The street, the Signal, and the score are Ghostwire.
 
@@ -49,6 +49,6 @@ Interior chapter plates and district maps ship separately. This page leaves the 
 
 ---
 
-**Play requires** *Draw Steel Heroes* (MCDM) **and** this book. Ghostwire does not reprint Draw Steel.
+**Play requires** this book, dice, and a Director. Foundry is optional. Ghostwire is playable from this manuscript without a separate Draw Steel rulebook.
 
 **Status:** title plate draft (B74, 2026-09-19). Rules license, glossary, and abbreviations assemble from print Ch 0 (`docs/raw/00-front-matter.md`). Credits and how-to-use this print book follow immediately.

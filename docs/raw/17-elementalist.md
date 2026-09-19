@@ -64,7 +64,7 @@ Free intel that sets up binds and banishments.
 
 Heroic Abilities are the Elementalist's workings -- chosen by cost band as you level, each an Essence-fueled release of the ramp you've been building.
 
-*Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+).*
+*Power Roll results use this book’s print order: **low** (≤11) / **middle** (12–16) / **high** (17+).*
 
 ### Base Band (1-5 Essence, chosen at 1st level)
 
@@ -148,7 +148,7 @@ Fire, plasma, and destruction -- the archetypal blaster subclass. Grants the **A
 - **Burn On** (1st) -- Your fire and elemental damage carries a *lingering* rider. Whenever you deal fire, lightning, or acid damage to a creature via a Signature or Heroic ability, that creature also takes **1 additional fire damage at the start of its next turn (2 at Echelon 2, 3 at Echelon 3, 4 at Echelon 4)**. The Pyromancer's signature "keep them burning" identity.
 - **Firestorm Attunement** (2nd) -- Your **Channel** builds one step faster when your attuned element is fire, lightning, or acid: turn 1 = +3, turn 2 = +4 (cap). You reach maximum ramp one turn sooner in the fire lineage.
 - **Fire Immunity** (5th) -- Immunity to fire damage equal to your Logic score. You may walk through fire, sustain a Fire Wall from inside it, and no longer take ambient fire damage from a Cataclysm you sustain.
-- **Fury Rising** (6th) -- Whenever you spend 5 or more Essence in a single turn, gain **1 surge** (available until end of your next turn) and your next Signature ability this encounter deals +Logic extra damage. Surges work as in Draw Steel Heroes.
+- **Fury Rising** (6th) -- Whenever you spend 5 or more Essence in a single turn, gain **1 surge** (available until end of your next turn) and your next Signature ability this encounter deals +Logic extra damage. Surges: `04`.
 - **The Furnace Within** (8th) -- +1 bonus to Logic-based power rolls. Whenever you would spend Essence on a fire/lightning/acid working, you spend **1 less** (minimum 0), once per round.
 
 **Specialization Abilities:**

@@ -90,7 +90,7 @@ Or `node tools/build-pdf.mjs` alone (runs all three). Output: `docs/manuscript/b
 ## Lore import policy
 
 1. **Artwork / lore prose** — carry **as-is** from the master Ghostwire PDFs (Core Sourcebook, Lore Book V2, related plates). Do not rewrite voice for “DS alignment” in lore chapters.
-2. **Rules** — **Ghostwire-original** wording from `docs/raw/` only. No substantial MCDM / *Draw Steel: Heroes* paste. Engine = DS by reference + GW remap tables already in raw.
+2. **Rules** — **Ghostwire-original** wording from `docs/raw/` only. No substantial MCDM / *Draw Steel: Heroes* paste. Engine procedures stand alone in RAW (B92). Draw Steel / Creator License naming is **front matter only**.
 3. **Do not** paste lore into `docs/raw/`. Lore harvest lands under `01-lore/` (or front matter stubs), then joins the book via the manifest.
 4. Lore harvest landed in B65 (L1–L3). Title plate + credits + print how-to drafted in B74; **cover artist names still TBD (Michael)**. Ch 27 is a pointer fill (B73), not a harvest.
 

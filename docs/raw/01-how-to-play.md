@@ -4,7 +4,7 @@
 
 **RAW status:** draft (Stage 3 fill 2026-09-18)  
 **Sources:** `docs/rulebook/00-STAGE1-skeleton.md` (Chapter 1 scope), `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED)  
-**Engine:** Draw Steel Heroes — use the official rules for shared engine procedures; Ghostwire remaps and table procedures below are original wording.
+**Engine:** Ghostwire procedures in this book.
 
 ---
 
@@ -12,16 +12,15 @@
 
 To run Ghostwire you need:
 
-- **Draw Steel Heroes** (shared engine: characteristics, Power Rolls, combat loop, conditions, negotiation, advancement math).
-- **This book** (Ghostwire remaps, nine classes, ¥ economy, chrome, the Wire, the Veil, machines).
+- **This book** (how the night is shaped, characteristics, Power Rolls, combat, nine classes, ¥ economy, chrome, the Wire, the Veil, machines, opposition).
 - **Players** — one **Director**, everyone else a **runner**.
-- **Dice** — two ten-sided dice per player for Power Rolls (`03`), plus whatever Draw Steel Heroes calls for.
+- **Dice** — two ten-sided dice per player for Power Rolls (`03`), plus one ten-sided die for saving throws.
 - **Something to track** Stamina, Recoveries, heroic resources, ¥, Body Integrity, and (when relevant) Wire connection state. Foundry or paper both work.
 
-You do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition numbers live in Foundry / Draw Steel by reference (`25`). Setting color lives in Reach materials — not required for rules play.
+You do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition procedure lives in this book (`25`); Actor numbers live in Foundry packs if you use them. Setting color lives in Reach materials — not required for rules play.
 
 > **In Foundry**
-> Load a world on the **Draw Steel** system, then enable the **Draw Steel - Ghostwire Build** module (`draw-steel-ghostwire`). Open a hero sheet → **Stats**: Ghostwire adds **Body Integrity** (current/max), a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs — not a second system.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Open a hero sheet → **Stats**: Ghostwire adds **Body Integrity** (current/max), a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.
 
 
 ---
@@ -30,7 +29,7 @@ You do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposi
 
 One player is the **Director**. The Director describes the street, the corp floors, the Wire, and the people who live there; plays every face, fixer, corpsec squad, and ICE construct the crew meets; and decides when a roll is needed and what it risks.
 
-Everyone else plays a **runner** (also called an **edgerunner** or **hero**). Rules text still says “hero” where Draw Steel does; at the table, say **runner**. Together the runners are a **crew** — professionals who take dangerous jobs for pay.
+Everyone else plays a **runner** (also called an **edgerunner** or **hero**). Rules text may still say “hero”; at the table, say **runner**. Together the runners are a **crew** — professionals who take dangerous jobs for pay.
 
 The Director is not an adversary. The Director makes the world push back so the crew’s choices matter. Players own their runners’ decisions: where they go, who they trust, when they jack in, when they walk away.
 
@@ -47,13 +46,13 @@ A typical Ghostwire session moves through the same arc as a job:
 
 Sessions can start mid-legwork or mid-run. Some nights are pure downtime. The three **modes** below tell you which Ghostwire systems are in play; they are not a rigid clock.
 
-**One job can span several sessions.** Victories and experience follow Draw Steel Heroes (`24`). ¥ payouts and lifestyle burn are Ghostwire (`08`, `26`).
+**One job can span several sessions.** Victories, experience, and leveling live in `24`. ¥ payouts and lifestyle burn live in `08` and `26`.
 
 ---
 
 ## Three modes of play
 
-Ghostwire play moves between **legwork**, **the run**, and **downtime**. Each uses Draw Steel’s shared engine. Ghostwire adds the systems in the right-hand column.
+Ghostwire play moves between **legwork**, **the run**, and **downtime**. Each uses this book’s procedures (`03`, `04`). Ghostwire adds the systems in the right-hand column.
 
 | Mode | What happens | Ghostwire additions |
 |---|---|---|
@@ -67,7 +66,7 @@ Legwork is everything before the doors open. The crew finds the job, argues pric
 
 **Typical legwork moves:**
 
-- Meet a **fixer**, **patron**, or **level-boss** and negotiate terms (use Draw Steel negotiation; Ghostwire just reskins the faces).
+- Meet a **fixer**, **patron**, or **level-boss** and negotiate terms (`03` Negotiation).
 - Ask around: street contacts, Background/Profession ties, Wired searches (`21`).
 - Scout physical approaches, cameras, patrols, and escape routes.
 - Shop: gear needs **Availability** and ¥ (`08`). Kits are free doctrine — they still need **owned** qualifying gear.
@@ -97,7 +96,7 @@ Downtime is the breath between jobs. The crew spends ¥, recovers, upgrades, and
 **Typical downtime moves:**
 
 - Get paid (¥). Pay **lifestyle** burn when that table lands (`08`, `26`).
-- Rest and recover Stamina / Recoveries per Draw Steel Heroes.
+- Rest and recover Stamina / Recoveries (`04`, `26`).
 - Install or remove **chrome** (`09`); install **mods** or run a **§Craft Project** (`10`).
 - Train, take a Perk when advancement allows (`11`, `24`).
 - Veil casters may attempt **Ritual Workings** (`22`).
@@ -109,7 +108,7 @@ Downtime is not “nothing happens.” Corps retaliate, contacts call in favors,
 
 ## Dice
 
-Ghostwire uses Draw Steel’s dice. Most uncertain actions resolve as a **Power Roll**: two ten-sided dice plus a characteristic, read as **low / middle / high** (≤11 / 12–16 / 17+). Full procedure, edges, banes, skills, and Heroes’ Fortune live in `03`.
+Ghostwire uses two ten-sided dice for almost every uncertain action. Most tests resolve as a **Power Roll**: two ten-sided dice plus a characteristic, read as **low / middle / high** (≤11 / 12–16 / 17+). Full procedure, edges, banes, skills, and Heroes’ Fortune live in `03`.
 
 When a chapter says “Power Roll (Logic)” or “Power Roll vs Node Rating,” use that chapter’s modifiers on top of the shared engine — do not invent a third resolution system.
 
@@ -125,7 +124,7 @@ Do not roll for trivia. Do roll when the runner is lying to a corp handler, spri
 
 ### Characteristics in play
 
-Ghostwire’s five characteristics are **Physique, Reflex, Logic, Instinct, Persona** (`02`). They map to Draw Steel’s five traits; Ghostwire names are primary in this book.
+Ghostwire’s five characteristics are **Physique, Reflex, Logic, Instinct, Persona** (`02`). Those names are primary in this book.
 
 ### Resources you will see every session
 
@@ -157,27 +156,27 @@ The Director may pause any scene. Players may pause any scene. Pausing is not a 
 
 ---
 
-## Engine by reference (short)
+## Where the loops live (short)
 
-Use Draw Steel Heroes for the left column. Ghostwire changes only what the right column says.
+Resolve the night from **this book**. The left column is the procedure; the right column is the Ghostwire rename or add-on.
 
-| Topic | Draw Steel Heroes | Ghostwire |
+| Topic | This book | Ghostwire add or rename |
 |---|---|---|
-| Director’s role | As written | Same term: **Director** |
-| Heroes / party | As written | **Runners** / **crew** at the table; rules may still say “hero” |
-| Tests, Power Rolls, edges/banes | As written | Results always **low / middle / high** (`03`) |
-| Combat loop | As written | GW keywords + Wire connection states (`04`, `21`) |
-| Stamina, Recoveries, dying | As written | + Cyborg System Crisis; Revenant inert (`04`, `05`) |
+| Director’s role | This chapter | Same term: **Director** |
+| Heroes / party | This chapter | **Runners** / **crew** at the table; rules may still say “hero” |
+| Tests, Power Rolls, edges/banes | `03` | Results always **low / middle / high** |
+| Combat loop | `04` | GW keywords + Wire connection states (`21`) |
+| Stamina, Recoveries, dying | `04` | + Cyborg System Crisis; Revenant inert (`05`) |
 | Ancestries | Replaced | **Peoples** (`05`) |
 | Culture / career | Replaced | **Background** / **Profession** (`06`) |
-| Kits | Pattern kept | GW Kit list; needs owned gear (`08`) |
+| Kits | `08` | GW Kit list; needs owned gear |
 | Wealth | Replaced | Tracked **¥** + Availability (`08`) |
 | Treasure / magic items | Replaced | Gear, chrome, mods, foci (`08`–`10`) |
-| Perks / classes | Pattern / replaced | GW perks (`11`); nine classes (`12`–`20`) |
-| Projects / respite / downtime | As written | + §Craft, chrome surgery, lifestyle (`08`–`10`) |
-| Negotiation | As written | Fixers, patrons, level-bosses |
-| Advancement | As written | Levels + **Echelon** only — no tier ladder (`24`) |
-| Malice / monsters | As written | GW Bestiary + Trace Alert (`25`, `21`) |
+| Perks / classes | `11`, `12`–`20` | GW perks; nine classes |
+| Projects / respite / downtime | `03`, `26` | + §Craft, chrome surgery, lifestyle (`08`–`10`) |
+| Negotiation | `03` | Fixers, patrons, level-bosses |
+| Advancement | `24` | Levels + **Echelon** only — no tier ladder |
+| Malice / monsters | `25` | GW Bestiary + Trace Alert (`21`) |
 
 ---
 
@@ -196,15 +195,15 @@ Use Draw Steel Heroes for the left column. Ghostwire changes only what the right
 
 Keep these renames straight; they appear everywhere.
 
-| Draw Steel term | Ghostwire term |
+| Older / sheet alias | Ghostwire term |
 |---|---|
 | Ancestry | **People** |
 | Culture | **Background** |
 | Career | **Profession** |
 | Wealth abstraction | **¥** (nuyen) + Availability |
-| (no DS equivalent) | **Wire** (Matrix): Overlay / Jacked In / Trace Alert |
-| (no DS equivalent) | **Veil** (magic layer; Rituals + summons) |
-| (no DS equivalent) | **Chrome** / **Body Integrity** |
+| (Ghostwire-original) | **Wire**: Overlay / Jacked In / Trace Alert |
+| (Ghostwire-original) | **Veil** (magic layer; Rituals + summons) |
+| (Ghostwire-original) | **Chrome** / **Body Integrity** |
 
 ---
 
@@ -220,4 +219,4 @@ Keep these renames straight; they appear everywhere.
 | Running drones/vehicles | `23` Machines |
 | Directing opposition | `25` Opposition |
 
-This chapter tells you **how the night is shaped**. Later chapters tell you **how each system resolves**. When this book and Draw Steel Heroes disagree for Ghostwire play, **this book wins**.
+This chapter tells you **how the night is shaped**. Later chapters tell you **how each system resolves**. This book is the play rules.

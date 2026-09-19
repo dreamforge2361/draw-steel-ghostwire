@@ -2,14 +2,15 @@
 
 **RAW status:** draft (Stage 3 fill 2026-09-19 / B73)  
 **Sources:** `docs/rulebook/DS-ALIGNMENT.md`, class progression tables (`docs/rulebook/01`–`08`, `20`), `docs/rulebook/17-perks.md`, `docs/rulebook/14-mods.md`, `docs/rulebook/10-kits.md`, `docs/raw/02-heroes-characteristics.md`, `docs/raw/08-kits-gear-wealth.md`  
-**Engine:** Draw Steel Heroes — use the official rules for experience, Victories, leveling, and echelons; Ghostwire remaps and table procedures below are original wording.  
+**Engine:** Ghostwire Victory, leveling, and echelon procedures in this chapter. Playable without a separate rulebook.  
+
 **Print:** Chapter 5 (TOC lock) — file numbered `24` so Journals keep a stable filename.
 
 ---
 
 ## What this chapter is for
 
-Runners get better the same way Draw Steel heroes do: they take **Victories**, they earn experience, they **level**. Ghostwire does not invent a second XP track, a street-rep meter that replaces leveling, or a hidden tier ladder.
+Runners get better by taking **Victories**, earning experience, and **leveling**. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.
 
 This chapter tells the table **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.
 
@@ -17,7 +18,7 @@ This chapter tells the table **when** to apply a level in a Ghostwire campaign, 
 
 ## Levels and echelons
 
-Runners advance from **Level 1 to Level 10** by Draw Steel’s rules. Levels group into four **echelons**:
+Runners advance from **Level 1 to Level 10** by the Victory procedure below. Levels group into four **echelons**:
 
 | Echelon | Levels |
 |---|---|
@@ -32,18 +33,22 @@ Ghostwire has **no separate tier ladder** for heroes. Level and echelon are the 
 
 ## When the table levels
 
-Use Draw Steel’s rules for what a Victory is, how experience accumulates, and when a hero actually gains a level. Ghostwire only sets **table timing** so a level-up does not land in the middle of a breach.
+**Victory (this book).** When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains **1 Victory**. Class features that “gain resource equal to your Victories” read the number you currently have.
 
-**Default:** apply a new level at a **respite between runs** — the same breath where the crew takes payout (`08`) and pays Lifestyle (`26`). The runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current.
+**When you level (default).** After a **completed job** (legwork + run + getaway) that earned at least one Victory, each runner **gains one level** at the respite between runs — the same breath where the crew takes payout (`08`) and pays Lifestyle (`26`). Short no-risk jobs do not level. A job that spans many sessions with more than one climax may grant a level at a mid-job respite instead of waiting.
+
+**Optional XP box.** If the table wants a numeric track (or you are on Foundry, where the stock hero sheet already has XP and Victory fields), after each respite add your Victories to **XP** (**1 Victory = 1 XP**) and reset Victories to **0**. The Director still calls the level using the default above — Ghostwire does not add a second XP ladder on top of the sheet. Do not invent a third track.
+
+The runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current.
 
 **Allowed exceptions (Director call):**
 
-- A **mid-job** level if Draw Steel’s math says they crossed the line and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit.
+- A **mid-job** level if the XP (or milestone) already crossed the line and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit.
 - A **held** level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean respite.
 
 **Victories are not nuyen.** A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payout band (`08`), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.
 
-**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting, the way your Draw Steel table already does. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty.
+**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty.
 
 ---
 
@@ -68,14 +73,14 @@ Heroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resou
 
 ### Applying a level at the table
 
-1. **Confirm the level** with Draw Steel’s advancement math. Ghostwire does not substitute street rumor for that math.
+1. **Confirm the level** with the Victory / completed-job rule above. Ghostwire does not substitute street rumor for that math.
 2. **Open the class chapter** (`12`–`20`). Take only what that level prints — no “I would have had this if I had picked the other subclass.”
 3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.
 4. **Spend the shared picks** this level grants: perk (`11`), skill (Ghostwire list in `02`), characteristic increase (the five Ghostwire names in `02`).
 5. **Re-check Kit and gear.** Kit doctrine is free and already owned; qualifying gear must still be **owned** (`08`). A new echelon can raise Kit Stamina and armor-as-Stamina **without** a shopping trip. It does **not** auto-install mods or chrome.
 6. **Do not touch** Body Integrity, liquid ¥, Node Rating, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.
 
-**Characteristic increases** use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). The raise follows Draw Steel’s characteristic-increase rules; this book does not reprint that procedure. ¥, chrome, and Lifestyle never buy the point (`02` firewall).
+**Characteristic increases** use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). When a level grants a characteristic increase, raise **one** characteristic by **1**. No characteristic may go above **5** from these increases. People traits and class features that print a raise still apply if they say so. ¥, chrome, and Lifestyle never buy the point (`02` firewall).
 
 **Skills** granted by level follow the same no-duplicate rule as Background / Profession (`06`): if you already have the skill, choose another from the same Ghostwire group, then any group.
 
@@ -102,7 +107,7 @@ This table does **not** replace Ch 26’s encounter budget. It tells the Directo
 
 | System | How echelon applies |
 |---|---|
-| **Kit Stamina** | Scales by echelon, as Draw Steel’s Kits do (`08`) |
+| **Kit Stamina** | Scales by echelon (`08`) |
 | **Armor Stamina** | Uses the wearer’s echelon (`08`) |
 | **Gear grade** | Echelon 1–4 plus Availability sets price and mod slots (`08`) |
 | **Invent a Mod** | A new mod’s power can’t exceed the inventor’s echelon (`10`) |
@@ -173,13 +178,13 @@ Older material that numbered Power Roll results “Tier 1 / 2 / 3” from best t
 Handbook and Flats gazetteer lines that still say “E1–E4” on a **host** mean ICE posture / Node Rating, **not** the runner’s echelon (`wired-flats` How to Read). Keep that distinction at the table.
 
 > **In Foundry**
-> Hero **level** is the stock Draw Steel sheet field — Ghostwire does not add a second XP tracker. Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** is the stock hero-sheet field — Ghostwire does not add a second XP tracker. Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation.
 
 ---
 
 ## What this chapter is not
 
-- Not a reprint of Draw Steel’s experience or echelon essays.
+- Not a street-rep meter that replaces levels.
 - Not a second class chapter — open `12`–`20` for the actual features.
 - Not permission to grow Body Integrity, Node Rating, or ¥ by leveling.
 - Not a Rank 2+ summon-math pass.

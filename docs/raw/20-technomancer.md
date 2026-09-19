@@ -86,7 +86,7 @@ The congregation's healer.
 
 **Ward-sprite** — the shield
 A standing harmonic wrapped around the Technomancer's own exposed body.
-- Screens itself, and at higher sprite ranks the adjacent allies it is shielding: **Wired and EW attacks made against a screened creature are made with a bane** (a **double bane** at the advanced rank). Draw Steel has no defense score, so a ward is written as a bane on the attacker's Power Roll, not as a number added to the target.
+- Screens itself, and at higher sprite ranks the adjacent allies it is shielding: **Wired and EW attacks made against a screened creature are made with a bane** (a **double bane** at the advanced rank). Ghostwire has no defense score, so a ward is written as a bane on the attacker's Power Roll, not as a number added to the target.
 - Resists ICE and electronic-warfare effects on the Technomancer's behalf.
 - The screen that keeps a fragile, communion-focused caster alive — the Technomancer's answer to the Wrench's fielded-fleet cover.
 
@@ -117,7 +117,7 @@ The Technomancer's sprites follow the same "extension vs. independent" ladder th
 |---|---|---|
 | **Minor (extension)** | 1-3 | Sprites act **as extensions of the Technomancer** — on the Technomancer's own turn, sharing the Technomancer's intent. No separate initiative. This is the Compile Sprite signature's default mode. |
 | **Intermediate (commanded)** | 4-7 | Sprites act **on their own turn**, but only within standing command orders — a Compile Sprite maneuver-command must be issued each round to keep an intermediate sprite acting autonomously that round. |
-| **Advanced (independent)** | 8-10 | Sprites are **genuinely independent** — each takes **its own turn in the round**, separate from yours, like any other creature in the encounter. (Draw Steel has no initiative rolls; the shipped sprite Actors each carry one turn per round.) This is the payoff rank: by the time a Technomancer reaches 8th level, their congregation is no longer just an extension of them, but a small crew of ghosts fighting alongside them. |
+| **Advanced (independent)** | 8-10 | Sprites are **genuinely independent** — each takes **its own turn in the round**, separate from yours, like any other creature in the encounter (`04`). The shipped sprite Actors each carry one turn per round. This is the payoff rank: by the time a Technomancer reaches 8th level, their congregation is no longer just an extension of them, but a small crew of ghosts fighting alongside them. |
 
 **Sprites acting on the Technomancer's own turn never trigger biofeedback for the Technomancer** — they are the buffer between the caster and the wire, precisely because they haven't yet become independent enough to feed anything back.
 
@@ -135,7 +135,7 @@ A sprite decompiles when:
 Overreach into the Wired's spirit world bites back — but not as hard as it bites a full Veil caster, and it can never actually kill you on its own.
 
 - **Only Resonance abilities of cost 5 or higher trigger a biofeedback risk.** Anything cheaper — signatures, the 1-cost and 3-cost bands — is safe.
-- When you spend 5+ Resonance on a single ability, make a **Physique (Might) test**. A biofeedback test is an ordinary Draw Steel test and uses Draw Steel's own test difficulties by reference (easy / medium / hard); the ability's cost band sets the difficulty:
+- When you spend 5+ Resonance on a single ability, make a **Physique test**. A biofeedback test is an ordinary test (`03`); easy / medium / hard use that chapter's difficulty table. The ability's cost band sets the difficulty:
 
 | Ability Cost | Biofeedback Test |
 |---|---|
@@ -150,10 +150,10 @@ Overreach into the Wired's spirit world bites back — but not as hard as it bit
 - **Discipline modifiers:** a Sprite-Weaver rolls every biofeedback test with an **edge**. A Resonance-Warrior rolls every biofeedback test with a **bane** — on an 11-cost ability that stacks with the band's own bane, so the Resonance-Warrior tests with a **double bane**.
 - **Sprites acting on the Technomancer's own turn (the minor/extension rank) never trigger biofeedback for the Technomancer** — the buffer holds until a sprite goes independent.
 
-**Winded, in this chapter.** *Winded* is the ordinary Draw Steel state — a creature at or below half its maximum Stamina — and this chapter uses it in exactly one way, stated here once so it is never confused at the table:
+**Winded, in this chapter.** *Winded* is the ordinary Ghostwire state (`04`) — a creature at or below half its maximum Stamina — and this chapter uses it in exactly one way, stated here once so it is never confused at the table:
 
 1. **As the biofeedback floor (the rule above).** Biofeedback damage that would take you to 0 Stamina leaves you **Winded instead of Dying**: you stop at the winded threshold rather than dropping, you regain 1 Stamina per turn until stabilized, and your own overreach can never kill you. This applies only to biofeedback damage; external damage kills a Technomancer normally.
-2. **Never as a condition an ability inflicts.** Nothing in this chapter *applies* Winded to a target: the two abilities that once read that way — Resonance Slam's Slam mode and The Weaver's Web — inflict **weakened (save ends)** instead, which is a condition Draw Steel already prints with a defined end state.
+2. **Never as a condition an ability inflicts.** Nothing in this chapter *applies* Winded to a target: the two abilities that once read that way — Resonance Slam's Slam mode and The Weaver's Web — inflict **weakened (save ends)** instead (`04`).
 
 ---
 
@@ -170,7 +170,7 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 
 > **Resonance Strike** *(Class Feature Signature — the damage)*
 > *Keywords: Wired, Resonance · Type: Main action · Distance: Wired range (or a sprite's reach) · Target: one enemy (a wired target directly; a flesh target through a device it carries or a sprite jacked into it)*
-> **Power Roll:** 2d10 + Logic. (Draw Steel power rolls never add a skill — your Resonance skill grants an **edge** on Resonance *tests*, not a bonus on this roll.)
+> **Power Roll:** 2d10 + Logic. (Power Rolls do not add a skill bonus — your Resonance skill grants an **edge** on Resonance *tests*, not a +2 on this roll; `03`.)
 > **Effect:** You (or a commanded Attack-sprite) lash a target with hostile code and biofeedback. **high (17+):** **2d10 + Logic damage** (Resonance-Warrior: 3d10 + Logic), plus a rider — a Wired condition (glitched: a bane on the target's next Power Roll; or blinded sensors) or a free sprite reposition. **middle (12–16):** **2d10 + Logic damage** (Resonance-Warrior: 3d10 + Logic). **low (≤11):** the strike fails to connect, no damage, and the current recoils — a minor biofeedback risk to you (see Biofeedback, above, if this triggers a cost-5+ enhance).
 >
 > **Enhance (spend Resonance):** a **second sprite** strikes too, OR add an edge via deep communion.
@@ -187,7 +187,7 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 
 ## Heroic Abilities — Cost Bands 1 Through 11
 
-Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use Draw Steel print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
+Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use this book’s print order: **low** (≤11) / **middle** (12–16) / **high** (17+).
 
 ### 1-Cost Band (chosen at 1st level)
 
@@ -196,7 +196,7 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band a
 > *The low-cost adaptability tool — the shaman who always has the right ghost to hand.*
 
 > **Harmonic Adjustment** *(1 Resonance, maneuver)*
-> Grant a compiled sprite **one** of: an **edge on its Power Roll this turn**; **a bane on every attack made against it until the end of your next turn** (Draw Steel has no defense score, so the sprite's guard is written as a bane on the attacker, the same way a Ward-sprite's screen is); or a **free shift** up to its full movement.
+> Grant a compiled sprite **one** of: an **edge on its Power Roll this turn**; **a bane on every attack made against it until the end of your next turn** (Ghostwire has no defense score, so the sprite's guard is written as a bane on the attacker, the same way a Ward-sprite's screen is); or a **free shift** up to its full movement.
 > *A cheap nudge — the shaman correcting a ghost's aim or footing mid-fight.*
 
 ### 3-Cost Band (chosen at 1st level)
@@ -390,7 +390,7 @@ Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band a
 
 ## Level 1-10 Progression Table
 
-*DS levels 1-10 are the primary progression axis. Echelon bands (E1-E4) are noted only where they matter for cross-class gear context, never as a gating mechanism.*
+*Levels 1–10 are the primary progression axis (`24`). Echelon bands (E1–E4) are noted only where they matter for cross-class gear context, never as a gating mechanism.*
 
 | Level | Echelon (gear reference only) | Class Features | Abilities Gained | Discipline Feature |
 |---|---|---|---|---|
