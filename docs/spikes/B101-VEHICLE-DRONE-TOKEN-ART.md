@@ -161,6 +161,7 @@ Primary: kebab-case slang = `_dsid`. Also: no-hyphen forms (`irongiant` → `iro
 - [x] Spike inventory + path convention
 - [x] `tools/apply-machine-token-art.mjs` (slug → Item `img` → `build-packs.mjs vehicles`)
 - [x] `assets/tokens/vehicles/.gitkeep` + `assets/tokens/drones/.gitkeep`
+- [x] Dummy-slug apply (Tape-Eye, ironmantis, drones/`rustbucket` → `rustbucket-drone`, Grey Cab, buzz, getaway) writes Item `img`; unknown `nope.webp` fails unless `--ignore-unknown`; JSON + dummy WebPs restored
 - [ ] WebP uploads in a follow-up
 - [ ] One module patch when art ships
 - [ ] Foundry-verify Deploy tokens after art lands

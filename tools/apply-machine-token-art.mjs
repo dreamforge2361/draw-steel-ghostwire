@@ -55,6 +55,12 @@ function slugify(name) {
     .toLowerCase();
 }
 
+function displayPath(p) {
+  const rel = relative(ROOT, p);
+  if (rel.startsWith("..")) return p;
+  return rel.replaceAll("\\", "/");
+}
+
 function pascal(dsid) {
   return dsid.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join("");
 }
@@ -243,7 +249,7 @@ function dedupeJobs(jobs) {
     }
     const preferNew = job.ext === PREFERRED_EXT && prev.ext !== PREFERRED_EXT;
     if (preferNew) byKey.set(key, job);
-    else console.warn(`warn: extra file for ${job.entry.dsid} ignored: ${relative(ROOT, job.file)}`);
+    else console.warn(`warn: extra file for ${job.entry.dsid} ignored: ${displayPath(job.file)}`);
   }
   return [...byKey.values()];
 }
@@ -256,7 +262,7 @@ function applyArt(jobs, { dryRun }) {
     const dest = destPath(entry.kind, entry.dsid, ext);
     const img = moduleImg(entry.kind, entry.dsid, ext);
     if (!job.staged && resolve(job.file) !== resolve(dest)) {
-      console.log(`${dryRun ? "would copy" : "copy"} ${relative(ROOT, job.file)} → ${relative(ROOT, dest)}`);
+      console.log(`${dryRun ? "would copy" : "copy"} ${displayPath(job.file)} → ${displayPath(dest)}`);
       if (!dryRun) {
         mkdirSync(dirname(dest), { recursive: true });
         copyFileSync(job.file, dest);
