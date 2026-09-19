@@ -28,7 +28,7 @@ Draw Steel abstracts gear behind Wealth. Ghostwire tracks cash because chrome, k
 | **Gear** | Weapons, armor, tools that satisfy Kit categories or standalone use |
 | **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) — full rules: **Mods chapter** `14-mods.md` |
 | **Chrome** | Implants and chrome packages — **also** spends Body Integrity (Chrome chapter) |
-| **Lifestyle** | Thin burn: pay upkeep or take a street complication (placeholder) |
+| **Lifestyle** | Pay upkeep band or street complication — RAW: `docs/raw/26-lifestyle-downtime.md` |
 | **Bribes / favors** | Access, silence, fixers, corp doors |
 | **Wired access** | Decks, hosts, illegal node time, black-clinic install facilities |
 
@@ -121,9 +121,9 @@ Power Rolls on those Projects use ordinary Ghostwire skills by job:
 
 Legacy labels **Gunsmithing** and **Cyber/electronics** in older Gear-master rows mean **Repair** and **Electronics**. Full Invent a Mod + slot rules: `docs/rulebook/14-mods.md` (**locked**).
 
-## Lifestyle burn (thin placeholder)
+## Lifestyle burn
 
-Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). Full lifestyle table deferred — one short pressure valve for now so ¥ has a sink besides chrome.
+Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication**. **Full table:** `docs/raw/26-lifestyle-downtime.md` (B67; upkeep ¥ from gear master §F3).
 
 ## Foundry note
 
@@ -132,7 +132,7 @@ Module lang remaps Draw Steel's **wealth** label to **Nuyen**. Track ¥ on the h
 ## Open questions (Michael)
 
 1. Background/Profession ¥ bonus — amount and whether it is always liquid.
-2. Lifestyle rates — when to expand beyond the pay-or-complication placeholder.
+2. Lifestyle rates — **drafted** in `26-lifestyle-downtime.md` (tune after playtest; Recovery-quality column pending DS alignment).
 3. Run payout bands — keep provisional numbers or retune after first table.
 4. Bribes / Wired access sample price points for the gear pass.
 5. How additional Kits are unlocked after chargen (class list / mentor / downtime training length) — still not ¥.

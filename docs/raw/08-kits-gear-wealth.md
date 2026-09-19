@@ -114,7 +114,7 @@ Three light Kits built for the Wrench's subclasses (any class with light-Kit acc
 | **Gear** | Weapons, armor, tools that satisfy Kit categories or standalone use |
 | **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) — full rules: `10-mods.md` |
 | **Chrome** | Implants and chrome packages — **also** spends Body Integrity (Chrome chapter) |
-| **Lifestyle** | Thin burn: pay upkeep or take a street complication (placeholder) |
+| **Lifestyle** | Pay upkeep band or take a street complication — full table: `26-lifestyle-downtime.md` |
 | **Bribes / favors** | Access, silence, fixers, corp doors |
 | **Wired access** | Decks, hosts, illegal node time, black-clinic install facilities |
 
@@ -209,7 +209,7 @@ Full Invent a Mod and slot rules: `10-mods.md`.
 
 ### Lifestyle burn
 
-Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). A full lifestyle table is not yet published.
+Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md` (upkeep ¥ from gear master §F3).
 
 ## Part 3 — Gear
 

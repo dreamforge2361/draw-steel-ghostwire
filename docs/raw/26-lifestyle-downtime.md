@@ -1,0 +1,144 @@
+# Lifestyle & Downtime
+
+**RAW status:** draft (2026-09-18) / draft (Stage 3 fill)  
+**Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Appendix §F3 (upkeep ¥), `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
+**Print:** Chapter 10 (TOC lock) — file numbered `26` so Kits/Chrome/Mods (`08`–`11`) stay stable for Journals
+
+---
+
+## What Lifestyle is
+
+**Lifestyle** is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys **living standard**: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.
+
+Pay Lifestyle at each **respite between runs** (or when the Director says a downtime block ends). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.
+
+If you **cannot or will not pay**, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.
+
+**Firewall reminder** (`08`): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.
+
+---
+
+## Lifestyle bands (upkeep)
+
+**Upkeep ¥ are cited from the gear master Appendix §F3** (Doss Upgrade / Lifestyle Voucher points at the same table). They are **not invented here**. Treat Recovery-quality notes as **Director guidance pending full DS Recoveries alignment** — use Draw Steel Recoveries as printed for your table; do not invent a second Recovery pool.
+
+| Band | Name | Upkeep / respite | Housing & rest (feel) | Social doors | Medic restock eligibility |
+|---|---|---|---|---|---|
+| 5 | **Squatter** | **¥100** | Crash space, tent, condemned flat, alley nest. Exposed. Rest is poor — Director may limit how cleanly Recoveries land unless someone treats you elsewhere. | Street only; corp lobbies bounce you. | Full kit refill is a **scramble**. Director may quote a steep black-market cost, allow only a **partial** refill, or require a downtime Project just to find stock. |
+| 4 | **Low** | **¥400** | Capsule, shared doss, cheap motel, fixer-loaned couch. Token security. Full Recoveries, no bonus. | Neighborhood shops, low fixers, gray clinics. | Full restock **available**. Director quotes a **street** refill cost. |
+| 3 | **Middle** | **¥1,200** | Private flat, crew safehouse wing, decent heat scrub. Basic security. Reliable rest (Director may grant an edge on one Recovery roll this respite). | Licensed shops, competent fixers, corp surplus windows. | Full restock is **routine**. Quote at **standard** rate; suppliers show up. |
+| 2 | **High** | **¥3,500** | Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse). | Professional doors, quiet install bays, serious fixers. | Restock is **easy**. Prefer **standard or better** quotes; black-clinic / pharma contacts are in reach. |
+| 1 | **Elite** | **¥9,000** | Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply). | Boardrooms, private clinics, Restricted introductions on a call. | Restock is **trivial logistically**. Quote still applies (supply is not free), but access is not the bottleneck. |
+
+**Downtime capacity (from §F3, cited):** Squatter / Low — **1** project slot per respite (+1 Low with a hireling); Middle — **2**; High — **3**; Elite — **4**. A **project slot** is one Draw Steel–style downtime Project (or equivalent block) you can finish or meaningfully advance this respite. The Director may collapse or expand slots for montage pacing.
+
+**Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.
+
+**Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.
+
+---
+
+## Pay Lifestyle or take the street
+
+**Procedure (between runs):**
+
+1. Choose the band you want for this respite (you may step up or down from last time if you can pay).
+2. Pay the upkeep ¥ from liquid nuyen (or a Doss Upgrade / Lifestyle Voucher service that covers that band — gear catalog 1G).
+3. Gain that band's housing, social-door, restock-eligibility, project-slot, and lodge-cap benefits for the downtime.
+4. Spend remaining project slots on downtime actions (below).
+5. Bank leftover ¥. Charge Medic restock and other quoted services **after** or **alongside** upkeep — they are separate spends unless the Director folds a tiny refill into Middle+ flavor.
+
+**Crew safehouses:** the crew may share one address. Each hero still pays their own band if they claim personal lifestyle benefits; a shared Middle safehouse can be paid once from the pool if everyone accepts Middle benefits — Director call.
+
+---
+
+## Medic restock lock (how Lifestyle pays for the bag)
+
+Medic Reagents **do not** refill between encounters. Restocking to capacity is a **lifestyle / downtime-project activity** at respite (`15-medic.md`). Locked rules this chapter must not contradict:
+
+- There is **no per-Reagent price list**.
+- The **Director quotes** the cost of a refill for the job at hand, in ¥ **or** in downtime (synthesize from scratch).
+- Restocking is **never a roll you fail on its own**; a shortfall is a supply problem (not enough ¥, supplier no-show), not a botched test.
+- Class discounts (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, Doc Who Never Left rescue) apply to **that quoted cost**.
+- ¥ buys **supply**, never **capability** — more money does not unlock new compound families.
+
+### Director quote guidance (provisional)
+
+These bands are **provisional Director guidance** so tables have a starting number. They sit **beside** §F3 upkeep; they do not replace the Medic chapter's "Director quotes" lock. Scale with kit capacity / how empty the bag is / Availability of the stock.
+
+| Lifestyle eligibility | Typical full-refill quote (provisional) | Notes |
+|---|---|---|
+| Squatter (scramble) | ¥800–2,500 **or** refuse full refill | Partial refill common; may burn the only project slot hunting stock. |
+| Low (street) | ¥500–1,500 | Gray clinic / alley pharma. |
+| Middle (standard) | ¥400–1,200 | Routine supplier. |
+| High / Elite (easy access) | ¥300–1,000 | Access is easy; chemicals still cost. |
+
+Empty-bag refills skew high; topping off a nearly full kit skews low. Street-Doc / Corp-Medtech contact discounts apply after the quote. **Make Do** makes restocking faster/cheaper in fiction; use the subclass features for the math.
+
+---
+
+## Downtime actions (overview)
+
+During a paid Lifestyle respite, spend project slots (and story time) on actions like these. This is an **overview** — detailed procedures live in the pointed chapters.
+
+### Recover
+
+Sleep, food, and medical attention at your band's housing quality. Use Draw Steel Recoveries / respite healing as your table already does. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band.
+
+### Shop
+
+Spend leftover ¥ on gear, ammo, consumables, bribes, and services (`08`, gear catalog). Availability still gates Restricted+ buys. Shopping small items usually does **not** consume a full project slot; hunting a Restricted SKU or black-clinic appointment might.
+
+### §Craft Projects
+
+Installing, swapping, removing, inventing, or configuring gear/mods is a Draw Steel **Project** during downtime. **§Craft is a procedure, not a skill** — full Invent a Mod / slot rules: `10-mods.md` (and the §Craft bridge in `08`). Skills by job: Hacking, Electronics, Repair, Cybertech as printed there. Field-toggle of already-installed mods does **not** need a Project.
+
+### Chrome surgery
+
+Buy chrome with **¥ + Body Integrity**; install, remove, and repair are downtime surgery loops (`09-chrome-body-integrity.md`). Natural installers: Medic (flesh), Wrench (hardware), Technomancer-adjacent features. Ripperdoc subclass edges apply. Botches and scar Integrity on removal stay as printed in Chrome — Lifestyle does not waive Body Integrity.
+
+### Ritual Workings
+
+Long-form Veil magic is a **Ritual Working**: a Project chain on the same Craft downtime spine (`22-the-veil.md`, B43). Spend ¥, lore, reagents, and Veil Price / spirit-attention. Permanent sanctums require upfront yen **and** ongoing Lifestyle/upkeep; sanctum rating must meet Magnitude. Do not resolve full ritual math here — pointer only.
+
+### Training / Contacts (stub)
+
+- **Training:** learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, not a cash menu (`08` Kits ↔ Economy bridge). Lifestyle Middle+ makes finding a mentor easier; ¥ still does not buy the doctrine.
+- **Contacts:** class features and Background/Profession fiction may grant contacts. A Fixer Retainer service (gear 1G) can buy a one-time introduction. **Full Followers & Contacts chapter = non-goal for v1** — Director / Draw Steel by reference for hirelings and retainers until a later pass.
+
+---
+
+## The ¥ loop: run payout → Lifestyle → leftover
+
+1. **Run** — complete the job; take heat and injuries.
+2. **Payout** — Director pays crew shares. Provisional guidance already in `08` / `docs/rulebook/11-economy.md` (street ¥500–2,000; mid ¥2,000–8,000; corp ¥5,000–20,000; black-ops ¥20,000+ or unique gear). Gear-master §F2 tier payouts are older parallel numbers — prefer the Economy chapter bands until unified.
+3. **Lifestyle** — pay upkeep for the band you want this respite (§F3 ¥ above).
+4. **Quoted services** — Medic restock, chrome install fees, ritual components, bribes.
+5. **Projects** — spend slots on Craft, surgery, rituals, training.
+6. **Leftover ¥** — bank for the next buy. Chrome and Restricted gear should still feel expensive after Lifestyle; if Elite upkeep never hurts, raise complication pressure or cut payouts, don't erase Body Integrity / Availability gates.
+
+**Starting funds** remain **¥5,000** liquid + one free starting Kit (`08`). Chargen does not force a Lifestyle band; assume **Low** or fiction-appropriate until the first paid respite unless the Director sets otherwise from Background.
+
+---
+
+## What this chapter is not
+
+- Not a second Economy rewrite — payouts and firewall stay in `08` / `docs/rulebook/11-economy.md`.
+- Not full Followers / Contacts.
+- Not Building catalog numbers (Wrench stub + Lifestyle Hook only).
+- Not journal / Foundry UI text.
+- Not permission to convert ¥ into characteristics, skills, or class power.
+
+---
+
+## Cross-references
+
+| Topic | Where |
+|---|---|
+| Wealth firewall, payouts, §Craft skills | `08-kits-gear-wealth.md` |
+| Medic Reagents restock lock | `15-medic.md` |
+| Invent a Mod / mod slots | `10-mods.md` |
+| Chrome install / BI | `09-chrome-body-integrity.md` |
+| Ritual Workings | `22-the-veil.md` |
+| Wrench Building Lifestyle Hook | `16-wrench.md` |
+| Upkeep ¥ source | Gear master Appendix **§F3** |

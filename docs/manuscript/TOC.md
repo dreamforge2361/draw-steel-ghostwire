@@ -4,7 +4,7 @@
 **Assemble:** `docs/manuscript/MANIFEST.yml` → `tools/assemble-manuscript.mjs`  
 **Source key:** `raw:` → `docs/raw/<file>` · `lore:` → stub under `01-lore/` · `NEW` → stub under manuscript · `front:` → `00-front/`
 
-Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules Parts I–V match the lock exactly. Do not draft Lifestyle body in this scaffold.
+Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules Parts I–V match the lock exactly. Lifestyle & Downtime body lives in `docs/raw/26-lifestyle-downtime.md` (B67).
 
 ---
 
@@ -39,7 +39,7 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 | 7 | Backgrounds & Professions | `raw:` `06-backgrounds-professions.md` |
 | 8 | Languages | `raw:` `07-languages.md` |
 | 9 | Kits, Gear & Wealth (¥) | `raw:` `08-kits-gear-wealth.md` |
-| 10 | Lifestyle & Downtime | **NEW** `02-rules/10-lifestyle-downtime.STUB.md` (body deferred) |
+| 10 | Lifestyle & Downtime | `raw:` `26-lifestyle-downtime.md` — draft (Stage 3 fill / B67, 2026-09-18) |
 | 11 | Chrome & Body Integrity | `raw:` `09-chrome-body-integrity.md` |
 | 12 | Mods | `raw:` `10-mods.md` |
 | 13 | Perks | `raw:` `11-perks.md` |
@@ -84,6 +84,7 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 ## Notes
 
 - Print numbering may differ from `docs/raw/` filenames (Advancement = print Ch 5 / file `24-advancement.md`). Journals keep raw filenames.
-- Optional fold (TOC-PROPOSAL): skip print Ch 10 and Ch 27 — **not** applied; stubs exist so the locked recommended package can assemble.
+- Optional fold (TOC-PROPOSAL): skip print Ch 10 and Ch 27 — **not** applied; Ch 10 now points at raw `26`; Ch 27 Reach stub remains.
 - `00-INDEX.md` is meta only — **not** a print chapter.
-- Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66); reassembled manuscript build pending next assemble run (no journal regen).
+- Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66).
+- Lifestyle (`26-lifestyle-downtime.md`) **draft Stage 3 fill** 2026-09-18 (B67); journals **not** regenerated.

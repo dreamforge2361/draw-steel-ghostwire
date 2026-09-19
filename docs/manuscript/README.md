@@ -16,7 +16,7 @@ This folder is the **single Markdown source of record** for the eventual print P
 | **Print SoR** | Ordered Markdown that Pandoc (later) turns into the core book PDF |
 | **Lore stubs** | Placeholders under `01-lore/` until artwork/lore is carried as-is from master PDFs |
 | **Rules pointers** | Manifest entries → `docs/raw/*.md` (Stage 3 filled chapters stay in raw; manuscript does not fork them) |
-| **NEW print-only** | Thin stubs for Lifestyle & Downtime + Running Ossian Reach (body deferred) |
+| **NEW print-only** | Lifestyle → `../raw/26-lifestyle-downtime.md` (B67 draft); Running Ossian Reach stub remains |
 
 **Not** a second rules edit surface. **Not** the Foundry Journal pipeline.
 
@@ -48,7 +48,7 @@ Keep `docs/raw/` rules-only so Journal regen stays clean. Manuscript concatenate
 
 | Stage | Owner |
 |---|---|
-| 1. Finish RAW spine + Wire + Lifestyle (rules) | Wire **RAW-locked** B66; spine + Lifestyle still open in `docs/raw/` (+ NEW Lifestyle stub) |
+| 1. Finish RAW spine + Wire + Lifestyle (rules) | Wire **RAW-locked** B66; Lifestyle **draft** B67 (`26-lifestyle-downtime.md`); spine polish remains |
 | 2. Harvest lore/art from master PDFs into `01-lore/` | manuscript lore stubs |
 | 3. `node tools/assemble-manuscript.mjs` → `docs/manuscript/build/Ghostwire-Manuscript.md` | assemble script |
 | 4. Pandoc / print CSS / art plates | later (not this spike) |

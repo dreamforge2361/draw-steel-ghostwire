@@ -124,8 +124,8 @@ entries:
   - type: file
     id: ch10
     title: Lifestyle & Downtime
-    path: 02-rules/10-lifestyle-downtime.STUB.md
-    kind: new
+    path: ../raw/26-lifestyle-downtime.md
+    kind: raw
     print_ch: 10
 
   - type: file

@@ -1,6 +1,6 @@
 # Ghostwire RAW Rulebook (master)
 
-**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
+**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
 **Path:** `docs/raw/` — this folder is the **master RAW** player/Director rules text for the repo.  
 **Delivery order (LOCKED):** (1) finish RAW markdown here → (2) Foundry Journal pack from these files → (3) PDF pipeline later.
 
@@ -44,6 +44,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `23-machines.md` | Drones, Vehicles (Buildings stub OK) | GW | `15-drones.md`, `16-vehicles.md` |
 | `24-advancement.md` | Advancement & echelons | DS-by-ref + GW | Levels 1–10, echelon bands |
 | `25-opposition.md` | Opposition (Director, thin) | GW | Bestiary doctrine + Malice pointer; no lore bestiary prose |
+| `26-lifestyle-downtime.md` | Lifestyle & Downtime | GW Stage 3 draft (B67) | Print Ch 10; §F3 upkeep ¥; Medic restock quotes; §Craft / chrome / Ritual pointers |
 
 Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17 Elementalist, 18 Street Priest, 19 Hacker, 20 Technomancer.
 
@@ -56,6 +57,6 @@ Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17
 
 ## Next deliveries
 1. **B61** — print TOC **LOCKED 2026-09-18** (recommended package).  
-2. Draft order: shared core (`01` done Stage 3 fill → `03`/`04`) → Wire polish → Lifestyle → then PDF.  
-3. **B42b** — Foundry Journal pack regenerates from `docs/raw/` after locks (`tools/raw-to-journals.mjs`). **Regenerate journals after Michael reviews HTP** (not on 0.1.97).  
-4. **PDF** — only after spine + Wire + Lifestyle filled.
+2. Draft order: shared core (`01` Stage 3 fill → `03`/`04`) → Wire **RAW-locked** (B66) → Lifestyle **draft** (B67) → then PDF.  
+3. **B42b** — Foundry Journal pack regenerates from `docs/raw/` after locks (`tools/raw-to-journals.mjs`). **Do not regen journals on 0.2.5.**  
+4. **PDF** — after spine polish + Michael Lifestyle skim.

@@ -18,7 +18,7 @@
 ../raw/06-backgrounds-professions.md
 ../raw/07-languages.md
 ../raw/08-kits-gear-wealth.md
-02-rules/10-lifestyle-downtime.STUB.md
+../raw/26-lifestyle-downtime.md
 ../raw/09-chrome-body-integrity.md
 ../raw/10-mods.md
 ../raw/11-perks.md

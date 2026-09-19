@@ -27,20 +27,20 @@ Completeness key:
 | `00-INDEX.md` | RAW master index / volume map | Complete (meta) | Not a printed chapter; delivery order locked: RAW → Journals → PDF |
 | `00-front-matter.md` | Front matter, how to use, glossary | Partial | Creator License present; glossary strong; all chapters still **draft** status |
 | `01-how-to-play.md` | How to Play / The Director | Partial → Stage 3 fill | Expanded Stage 3 spine 2026-09-18; pending Michael review before RAW-lock / journals regen |
-| `02-heroes-characteristics.md` | Heroes & Characteristics | Partial | Chargen steps, characteristic remap, skill list, class glance. Needs Lifestyle / Contacts pointers when those exist |
+| `02-heroes-characteristics.md` | Heroes & Characteristics | Partial | Chargen steps, characteristic remap, skill list, class glance. Lifestyle pointer → `26`; Contacts still stub |
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | Partial | Correct DS print order; short. Wired / connection modifiers present |
 | `04-combat.md` | Combat basics | Stage 3 draft (0.1.99) | Standalone GW combat procedures; B49/B44c free-strike note; Crisis/inert pointers |
 | `05-ancestries.md` | Ancestries (Peoples) | Complete | Eight Peoples as DS ancestry packages. A1 copyright rewrite **deferred**. Cyborg System Crisis still thin |
 | `06-backgrounds-professions.md` | Backgrounds & Professions | Complete | 8 Backgrounds + 15 Professions; Culture→Background / Career→Profession locked |
 | `07-languages.md` | Languages (rules only) | Complete (thin) | Names + knowledge-only rules locked. Lore gazetteer = **non-goal** for RAW/PDF v1 |
-| `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | Partial | Ownership/firewall solid. Kit bonus lines **provisional**. Lifestyle burn = placeholder. Run payouts provisional. Merc dual-Kit undefined |
+| `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | Partial | Ownership/firewall solid. Kit bonus lines **provisional**. Lifestyle burn → pointer to `26`. Run payouts provisional. Merc dual-Kit undefined |
 | `09-chrome-body-integrity.md` | Chrome & Body Integrity | Partial | BI 20, grades, erosion locked (Pass A). Implant ¥ / package totals / Frame Module prices **not published** |
 | `10-mods.md` | Mods | Complete | Invent a Mod **locked**; echelon + Availability |
 | `11-perks.md` | Perks | Complete | Full perk list assembled from pack |
 | `12-operator.md` | Operator | Partial | Full class draft; Pass A–C applied. Residual ability/flag debt in B42 flags |
 | `13-scout.md` | Scout | Partial | Full class draft; title reskins (0.1.93). Some B42 flags remain |
 | `14-commander.md` | Commander | Partial | Full class draft; Command Persona lock applied. Residual flags |
-| `15-medic.md` | Medic | Partial | Full class draft; restock = lifestyle abstraction until Lifestyle lands |
+| `15-medic.md` | Medic | Partial | Full class draft; restock quotes land in `26-lifestyle-downtime.md` (B67) |
 | `16-wrench.md` | Wrench | Partial | Longest class; many numbers originated as estimates. Buildings live here; shared inventory stub in `23` |
 | `17-elementalist.md` | Elementalist | Partial | 7/9/11 bands still marked provisional in places. Summon Stamina now follows locked §C3 |
 | `18-street-priest.md` | Street Priest | Partial | Damage values filled (Pass C). §C3 / spirit stamps aligned. Rank 2+ strikes **deferred** |
@@ -72,7 +72,7 @@ These are **print blockers**, not Foundry polish:
 
 | Missing piece | Who points at it | Blocker severity |
 |---|---|---|
-| **Lifestyle** table (burn / upkeep / Medic restock quotes) | `08`, Medic restock lock, Wrench lifestyle hook | **High** — needs a short NEW section or chapter |
+| **Lifestyle** table (burn / upkeep / Medic restock quotes) | `08`, Medic restock lock, Wrench lifestyle hook | **DONE B67** — `docs/raw/26-lifestyle-downtime.md` (draft Stage 3 fill; §F3 ¥ cited; restock quotes provisional) |
 | **Followers & Contacts** | Elementalist / class pointers | Medium — can ship v1 with “Director / DS by reference” stub |
 | **Downtime Projects** beyond §Craft / Rituals | Chargen & downtime loop | Medium — fold into Lifestyle or Kits chapter |
 | Chrome **implant ¥ + Availability** catalog | `09` | High for chrome-forward tables |
@@ -120,7 +120,7 @@ Print structure. File map = existing `docs/raw/` unless marked **NEW**.
 | 7 | Backgrounds & Professions | `06-backgrounds-professions.md` |
 | 8 | Languages | `07-languages.md` |
 | 9 | Kits, Gear & Wealth (¥) | `08-kits-gear-wealth.md` *(absorb minimal Lifestyle § here OR Ch 10)* |
-| 10 | Lifestyle & Downtime | **NEW** (short) — burn, Medic restock quotes, §Craft pointer, Ritual pointer |
+| 10 | Lifestyle & Downtime | `26-lifestyle-downtime.md` — draft B67 (burn, Medic restock quotes, §Craft / Ritual / chrome pointers) |
 | 11 | Chrome & Body Integrity | `09-chrome-body-integrity.md` |
 | 12 | Mods | `10-mods.md` |
 | 13 | Perks | `11-perks.md` |
@@ -170,7 +170,7 @@ Write/fill these next — **TOC locked; bodies in this order**:
 | 2 | `03-tests-power-rolls.md` | Power Roll terminology must be print-iron for every later chapter |
 | 3 | `04-combat.md` | Shared combat + GW keywords/resources before class polish |
 | 4 | `21-the-wire.md` polish → RAW-lock | **DONE B66** — Shared Matrix spine locked |
-| 5 | **NEW Lifestyle & Downtime** (or `08` Lifestyle §) | Unblocks Medic restock, economy burn, downtime loop |
+| 5 | **Lifestyle & Downtime** `26` | **DONE B67** — Medic restock, economy burn, downtime loop drafted |
 
 **Immediate follow-ons (6–10):** `09` implant price pass → `08` Kit provisional lock pass → `25` opposition procedure expand → `23` ramming one-pager → class flag sweeps (Operator → Wrench).
 
@@ -205,6 +205,6 @@ Remaining after lock:
 1. Flip Track A rows in `FOUNDRY-BUILD-PLAN.md` / `STATUS.md` as Stage 3 fills land.
 2. Draft order #1–5; mark chapters `RAW status: locked` only after fill + Michael skim.
 3. **Regenerate journals after Michael reviews HTP** (do not auto-regen on this bump).
-4. PDF pipeline only after spine + Wire + Lifestyle exist.
+4. PDF pipeline after spine polish + Michael Lifestyle skim (Wire locked; Lifestyle drafted B67).
 
 **Out of scope for this proposal doc:** PDF CSS, art, Foundry pack edits.
