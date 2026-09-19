@@ -14,7 +14,7 @@ Break free of the Machine. Run the Wire.
 | **Subtitle** | Street runs, chrome, and a quiet war — a setting for the **Draw Steel** engine |
 | **World** | **Ossian Reach** and the hive-cities of Veyra |
 | **Product line** | *Draw Steel — Ghostwire Build* (Foundry module `draw-steel-ghostwire`) |
-| **This file** | **Version 0.4.0** — official rulebook PDF (Foundry module **0.3.22** · B88/B97) |
+| **This file** | **Version 0.4.0** — first official rulebook PDF (playtest edition · B88/B97) |
 
 The chassis is Draw Steel. The street, the Signal, and the score are Ghostwire.
 

@@ -1,6 +1,6 @@
 # How to Use This Book
 
-**Status:** **Version 0.4.0** official rulebook PDF  
+**Status:** **Version 0.4.0** — first official rulebook PDF / playtest edition  
 **This page is print-only.** Rules procedures stay in `docs/raw/`. Do not copy this chapter into the Foundry rulebook pack.
 
 ---

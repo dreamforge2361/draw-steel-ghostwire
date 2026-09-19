@@ -1,6 +1,6 @@
 # Copyright & Credits
 
-**Status:** **Version 0.4.0** official rulebook PDF  
+**Status:** **Version 0.4.0** — first official rulebook PDF / playtest edition  
 **Art:** All Ghostwire artwork in this project is **AI-generated** (Ghostwire AI). Named human artist lines stay optional if Michael later commissions or licenses a plate.
 
 ---
@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). **Version 0.4.0** is the official rulebook PDF. The Foundry module version is `module.json` (**0.3.22**) and is independent.
+**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). **Version 0.4.0** is the first official rulebook PDF (playtest edition). The Foundry module (`module.json`) is also **0.4.0**.
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 

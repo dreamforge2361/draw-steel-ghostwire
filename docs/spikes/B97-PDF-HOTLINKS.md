@@ -1,8 +1,8 @@
 # Spike B97 — PDF internal hotlinks (Chrome HTML→PDF)
 
-**Status:** Built 2026-09-19 · official rulebook PDF cut  
-**Rulebook PDF:** **Version 0.4.0** (`Ghostwire-Rulebook-0.4.0.pdf`)  
-**Foundry module:** **0.3.22** (`module.json` — independent of the PDF version)  
+**Status:** Built 2026-09-19 · official rulebook PDF cut (Michael lock 2026-09-18: not a draft)  
+**Rulebook PDF:** **Version 0.4.0** (`Ghostwire-Rulebook-0.4.0.pdf` / `.html`)  
+**Foundry module:** **0.4.0** (`module.json` — aligned; install path is module `id` `draw-steel-ghostwire`, not the version string)  
 **Journals:** **not** regenerated
 
 ## Goal
@@ -104,7 +104,7 @@ Heading structure is already `h1` (parts + chapter titles) / `h2` / `h3`. Collis
 - [x] `linkify-manuscript.mjs` after inject
 - [x] Generated Contents page
 - [x] Chrome outline flags + limitation documented
-- [x] `module.json` **0.3.22** (Foundry module; not the PDF version)
+- [x] `module.json` **0.4.0** (aligned with official PDF; Foundry folder stays `modules/draw-steel-ghostwire/`)
 - [x] Official PDF filenames / titles **0.4.0** (not DRAFT)
 - [x] Journals not regenerated
 
