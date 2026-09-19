@@ -33,7 +33,7 @@ It did not declare war on the Ten. It simply stopped asking permission.
 - **Board control without a logo.** It does not want a Chair at the Ten. It wants the Ten (and the crews who bleed for them) to move in ways that keep the Signal audible.
 - **Useful Runners.** Ghost Runs that thin the right membranes, burn the right lies, or retrieve the right packet get answers. Runs that feed Nullspace get silence — or a door that opens onto something worse.
 
-Ajax-salute (Director notes only — never player-facing comparison to other games): ambition plus patience — remake the conditions so the hive thanks you later. No flying fortresses. No saint churches. Just packets, Trace, and long games.
+Director dial: ambition plus patience — remake the conditions so the hive thanks you later. No flying fortresses. No saint churches. Just packets, Trace, and long games.
 
 ---
 
