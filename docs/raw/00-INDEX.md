@@ -1,6 +1,6 @@
 # Ghostwire RAW Rulebook (master)
 
-**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
+**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). **`25-opposition.md` Stage 3 draft** (B70, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
 **Path:** `docs/raw/` — this folder is the **master RAW** player/Director rules text for the repo.  
 **Delivery order (LOCKED):** (1) finish RAW markdown here → (2) Foundry Journal pack from these files → (3) PDF pipeline later.
 
@@ -43,7 +43,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `22-the-veil.md` | The Veil (minimal) | GW | Only what Elementalist / Street Priest need |
 | `23-machines.md` | Drones, Vehicles (Buildings stub OK) | GW | `15-drones.md`, `16-vehicles.md` |
 | `24-advancement.md` | Advancement & echelons | DS-by-ref + GW | Levels 1–10, echelon bands |
-| `25-opposition.md` | Opposition (Director, thin) | GW | Bestiary doctrine + Malice pointer; no lore bestiary prose |
+| `25-opposition.md` | Opposition (Director) | Stage 3 draft | Stage 3 fill 2026-09-18 (B70); street-fight procedure; Malice + Trace Alert; no lore bestiary |
 | `26-lifestyle-downtime.md` | Lifestyle & Downtime | GW Stage 3 draft (B67) | Print Ch 10; §F3 upkeep ¥; Medic restock quotes; §Craft / chrome / Ritual pointers |
 
 Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17 Elementalist, 18 Street Priest, 19 Hacker, 20 Technomancer.

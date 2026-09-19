@@ -1,41 +1,54 @@
 # Opposition (Director)
 
-**RAW status:** draft (thin)  
-**Sources:** `docs/masters/GHOSTWIRE_BESTIARY.md` (doctrine sections only), `docs/rulebook/08-hacker.md` (System Stat Card, Trace Alert), `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/11-economy.md`  
-**Engine:** Draw Steel Heroes and Draw Steel’s monster rules — use the official rules for monsters, encounter building, and Malice; Ghostwire remaps below.
+**RAW status:** draft (Stage 3 fill 2026-09-18)  
+**Sources:** `docs/masters/GHOSTWIRE_BESTIARY.md` (doctrine sections only), `docs/raw/21-the-wire.md` (System Stat Card, Trace Alert), `docs/raw/04-combat.md`, `docs/raw/24-advancement.md`, `docs/raw/08-kits-gear-wealth.md` (run payouts), `docs/rulebook/DS-ALIGNMENT.md`, `docs/directors/random-encounter-tables.md` (B48), `docs/directors/run-generator.md` (B39)  
+**Engine:** Draw Steel Heroes and Draw Steel’s monster rules — use the official rules for monsters, encounter building, and Malice; Ghostwire remaps and street-fight procedures below are original wording.
+
+**Non-goal:** This chapter is **not** a printable bestiary. Do not paste monster lore, full stat blocks, or setting vignettes here. Actors live in the Foundry **Ghostwire Bestiary** pack; random street texture lives in **Ghostwire Reach Events** RollTables (B48).
+
+---
+
+## What this chapter is for
+
+When the quiet part of a run ends, the Director needs a **street-fight procedure**: how hard the fight should feel, what shape the threats take, how Malice and Trace Alert feed each other, and when the table should cut to escape or aftermath.
+
+Ghostwire opposition uses Draw Steel’s monster engine unchanged. Ghostwire adds:
+
+- **Reskin doctrine** — Reach names, guns, chrome, and Wire fiction on Draw Steel spines.
+- **Trace Alert → Malice** — Wired heat that pays into the same Malice pool meatspace fights use (`21`).
+- **Two-board fights** — meatspace grid and Wired topology cutting between each other (`04`, `21`).
+- **Foundry pointers** — bestiary Actors and Reach event tables, not a lore dump in print.
 
 ---
 
 ## Foes are Draw Steel monsters
 
-Ghostwire opposition uses Draw Steel’s monster rules unchanged: levels, organizations (minion, horde, platoon, elite, leader, solo), roles, Stamina, free strikes, Malice features, villain actions, and encounter budgets.
+Ghostwire opposition uses Draw Steel’s monster rules: levels, organizations (minion, horde, platoon, elite, leader, solo), roles, Stamina, free strikes, Malice features, villain actions, and encounter budgets.
 
 Ghostwire foes are **reskins**: a Draw Steel monster’s numbers with Ghostwire names, abilities, and fiction. A reskin keeps:
 
 - level, organization, role, characteristics, Stamina, speed, size, and stability;
 - every ability’s power roll, damage, distance, targets, and effects.
 
-A reskin changes names, descriptions, and fiction. Light number changes are allowed only when the fiction needs them (for example, a foe that can’t be weakened), and should be noted on the stat block.
+A reskin changes names, descriptions, and fiction. Light number changes are allowed only when the fiction needs them (for example, a foe that can’t be weakened), and should be noted on the Actor.
 
-## Reskin rules for Ghostwire foes
+Stock creature nouns in rules text (bandit, blackguard, war dog, and so on) read as the Ghostwire foe’s name when you are running a reskin.
 
-- **People fight with guns.** Street, corporate, and military humanoids use pistols, SMGs, carbines, rifles, and shotguns, plus grenades, stims, chrome, and cyberdecks. Melee is rare: stun batons, monowire, mono-knives, and cyberarms.
-- **A melee-only weapon ability reskinned as a gun** becomes **Melee X or Ranged 5** with the same damage and effects.
-- **Tech isn’t magic.** Drop the Magic keyword when an ability becomes a grenade, implant, or device; keep it for Veil powers.
-- **Beasts, undead, and horrors** keep their natural attacks.
-- **Stock creature names** in rules text read as the Ghostwire foe’s name.
+---
 
-## Malice
+## Building a street fight
 
-Use Draw Steel’s Malice rules. Ghostwire adds one source:
+Treat every fight as a **budget** and a **threat shape**, then dress it in Reach fiction.
 
-- **Trace Alert:** each step a node’s Trace Alert crosses from **5 to 8** gives the Director **1 Malice** (`21`).
+### 1. Pick the budget
 
-## Wired opposition
+Use Draw Steel’s encounter-building guidance for the crew’s level and desired difficulty. Ghostwire does not invent a second XP or EV system. Ask:
 
-ICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). A foe on the physical map can also be represented as a monster (for example, a construct stat block for ICE fought on a Wired map).
+- Is this a **speed bump** (one beat, leave Stamina on the table)?
+- A **setpiece** (full Malice features, villain actions, named leader)?
+- A **panic** (crew is already winded, Trace Alert is climbing, or the extraction clock is short)?
 
-## Scaling
+Match opposition **level** to the crew’s echelon band (`24`):
 
 | Crew | Opposition |
 |---|---|
@@ -46,6 +59,150 @@ ICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **
 
 Convert older Ghostwire foe tiers with the table in `24-advancement.md` (T5 = Level 1 … T1 = Level 9).
 
-## Paying the crew
+### 2. Pick the threat shape
 
-Use the provisional run payouts in `08-kits-gear-wealth.md`. A patron may pay partly in gear, chrome credit, or favors.
+Before you name gangs or corps, choose **organization mix**:
+
+| Shape | Feel on the street | Typical mix |
+|---|---|---|
+| **Swarm** | Alleys, clubs, Flats stairwells | Minions / hordes, maybe one elite |
+| **Squad** | Checkpoints, warehouse breach | Platoons + one leader or elite |
+| **Duel+support** | Named rival, street priest, or ICE duel | One elite/leader + thin support |
+| **Boss room** | Extraction climax, black-site vault | Solo or leader + villain actions |
+| **Wire-forward** | Data steal, host lockdown | System Stat Card + optional construct Actors |
+
+Do not over-stack leaders and solos in the same beat unless the fiction is a true climax.
+
+### 3. Dress the spine
+
+Open the Ghostwire Bestiary (or a Draw Steel monster you are about to reskin) and apply the firearms / chrome doctrine below. Prefer existing Actors over inventing math at the table. If the Run Generator (B39) already named opposition, use those Actors and escalate from there.
+
+### 4. Place boards and clocks
+
+Decide which board is primary: meatspace, Wire, or both. If both are live, note who is Overlay / Jacked In and which node’s Trace Alert matters (`21`). Optional: a short escape or extraction clock so the fight has an ending condition besides “everyone drops.”
+
+---
+
+## Reskin rules for Ghostwire foes
+
+Standing doctrine (also in `docs/masters/GHOSTWIRE_BESTIARY.md`):
+
+- **People fight with guns.** Street, corporate, and military humanoids use pistols, SMGs, carbines, rifles, and shotguns, plus grenades, stims, chrome, and cyberdecks. Melee is rare: stun batons, monowire, mono-knives, and cyberarms.
+- **A melee-only weapon ability reskinned as a gun** becomes **Melee X or Ranged 5** with the same damage and effects (Draw Steel’s hybrid-weapon shape).
+- **Tech isn’t magic.** Drop the Magic keyword when an ability becomes a grenade, implant, or device; keep it for Veil powers. Psionic stays on Chrome Raiders and Signal Talkers.
+- **Beasts, undead, and horrors** keep their natural attacks.
+- **Humanoids** may carry ancestry Malice sets when the Actor says so; beasts and most ICE do not (solos may keep solo Malice).
+
+### Reskinning at the table (no lore dump)
+
+When you need a foe that is not yet in the pack:
+
+1. Pick a Draw Steel monster of the right **level + organization + role**.
+2. Rename it for the Reach (Colors lieutenant, corp response team, Sink crawler, Watchdog ICE).
+3. Rewrite the **fiction line** and ability names only — guns, chrome, decks, Veil hexes.
+4. Keep the numbers. If you must tweak (no Weaken, no grab, different damage type fiction), note it once and move on.
+5. Do **not** invent a second bestiary paragraph for print. If the foe will recur, queue it for a Foundry Actor later.
+
+Skip stock fantasy that does not fit (dragons, classical giants, named DS villains). Prefer Keep / Adapt rows from the bestiary inventory over Skip rows.
+
+---
+
+## Malice
+
+Use Draw Steel’s Malice rules for when the Director gains Malice, how features spend it, and how villain actions pace a fight. Ghostwire does not reprint those procedures.
+
+Ghostwire adds **one** extra Malice source:
+
+- **Trace Alert:** each step a node’s Trace Alert crosses from **5 to 8** gives the Director **1 Malice** (`21`).
+
+That Malice is the same pool you spend on meatspace Malice features. A Jacked In runner who keeps rolling lows is funding the street fight even if they never look up from the Wire.
+
+Other GW remaps that touch opposition pressure (not separate Malice engines):
+
+- Class abilities that **strip Malice** on high (for example some Elementalist apex text) still strip from this shared pool.
+- Heat, extraction clocks, and lifestyle fallout are **not** Malice — track them separately (`01`, `26`).
+
+Spend Malice to make the fiction hurt: reinforcements, ICE surge, a leader’s signature, a grenade that reshapes cover. Do not spend Malice just to pad damage if the crew is already winning cleanly — save it for the beat that changes the run.
+
+---
+
+## Trace Alert as Wire opposition pressure
+
+Trace Alert is the Wired half of opposition. Full track rules live in `21`; this chapter only tells the Director how to **use** it as pressure.
+
+| Steps | What the table feels |
+|---|---|
+| **0–4** | Atmosphere — flicker, camera pause, ICE twitch. Flavor, not yet Malice. |
+| **5–8** | **+1 Malice per step crossed.** The whole crew feels the heat, not just the runner. |
+| **9–11** | Banes on the runner’s Wired rolls. The host is hunting. |
+| **12** | Containment breaks — meatspace response, lockdown, or the fight spills off the Wire. |
+
+Defaults when someone rolls a Matrix Verb or Program against a hostile host:
+
+| Result | Trace Alert |
+|---|---|
+| **Low (≤11)** | **+1** (still usually works, but something goes wrong) |
+| **Middle (12–16)** | **No** increase |
+| **High (17+)** | Never raises Alert by default |
+
+**Director use:** announce when Alert crosses into the Malice band so the table hears the shared budget tick. When Alert hits 12, decide the spill — corp security kicks the door, the node dumps the runner, or the extraction clock jumps. Do not leave step 12 as a soft number with no fiction.
+
+ICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **Node Rating 1–5** (`21`). You may also drop a construct / ICE Actor from the bestiary onto a Wired map when you want a monster turn on that board.
+
+---
+
+## Mixing meatspace and Wired opposition
+
+Many Ghostwire fights are **two-board**:
+
+1. **Declare both boards** when the fight starts (`04`). Who is Overlay, who is Jacked In, which node is hostile.
+2. **Budget once.** Count meatspace monsters and Wired pressure toward the same difficulty feel. A Rating 4 host plus a full street squad is a climax, not a warm-up.
+3. **Cut turns.** Use Draw Steel turn order. Cut to the Jacked In runner between meatspace turns when both boards matter.
+4. **Let Malice cross boards.** Trace Alert Malice may fuel a street Malice feature (reinforcements, suppression) or a Wire feature (ICE surge, lockdown). Say which board pays the fiction.
+5. **End conditions can be asymmetric.** The crew might jack out and run while the host is still up — or clear the room while Trace Alert sits at 11. Victory is the run’s goal, not clearing every Actor.
+
+**Overlay** fighters still stand on the meatspace map with Wire tools at half biofeedback risk; **Jacked In** fighters are primarily on the Wire until they Jack Out (`21`). Do not forget the body on the floor when the runner is deep in a host.
+
+---
+
+## When to end or escape
+
+A street fight should end when the **fiction’s job** is done, not when the last minion’s Stamina hits 0.
+
+End or offer escape when:
+
+- The **objective** is complete (drive secured, node dumped, VIP extracted, ritual broken).
+- **Trace Alert** hits 12 and the spill makes staying suicidal.
+- The crew is **winded and out of Recoveries**, and continuing only pads time.
+- A **named threat** offers a deal, retreats to escalate later, or triggers a villain escape.
+- Reinforcements would blow past the encounter budget into a TPK the table did not sign up for — escalate heat and pay later instead (`08` payouts, lifestyle burn in `26`).
+
+**Escape** is a legitimate beat. Call for a short chase, a Drive test, a Matrix Verb to freeze cameras, or a Commander / Scout ability that buys the door. Defeated opposition is usually out — fled, bound, unconscious, or dead — Director’s call (`04`). Named threats may use full dying rules; mooks often just drop.
+
+After the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`). Bookkeeping for Victories and Malice follows the shared engine and this chapter.
+
+---
+
+## Scaling, payouts, and tools
+
+**Paying the crew.** Use the provisional run payouts in `08-kits-gear-wealth.md`. A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down.
+
+**Prep tools (optional):**
+
+- **Run Generator (B39)** — dials level, stratum, heat, and Wired intensity; opposition resolves to bestiary Actors.
+- **Reach Events (B48)** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.
+
+> **In Foundry**
+> Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security, Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the stock Draw Steel combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables from B48) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** (B39) to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter.
+
+---
+
+## What not to do
+
+- Do not print a full monster manual in RAW or the manuscript.
+- Do not paste or reconstruct substantial Draw Steel bestiary fiction.
+- Do not invent a second Malice track for the Wire — Trace Alert feeds the existing pool.
+- Do not treat every random Reach Event as a combat encounter.
+- Do not ignore escape and objective clocks in favor of total wipe fights every time.
+
+Cross-links: combat loop `04`, Wire `21`, advancement / old tiers `24`, lifestyle aftercare `26`, bestiary doctrine master (non-print) `docs/masters/GHOSTWIRE_BESTIARY.md`.

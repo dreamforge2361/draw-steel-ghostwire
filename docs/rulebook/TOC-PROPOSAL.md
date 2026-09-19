@@ -50,7 +50,7 @@ Completeness key:
 | `22-the-veil.md` | The Veil | Partial (strong) | **B43 Ritual Workings locked**; **§C3 Summon Entities locked** (0.1.95). Open: thin-place gazetteer, full corruption ladder, Rank 2+ strike ladders, defense stamps |
 | `23-machines.md` | Drones, Vehicles & Buildings | Partial | Inventories present; Integrity/Speed often qualitative. Buildings = stub pointer to Wrench. Ramming cites §6.2 without full print procedure |
 | `24-advancement.md` | Advancement & Echelons | Complete (thin) | Levels 1–10, Echelon 1–4, cadence table, legacy tier conversion. Doctrine locked |
-| `25-opposition.md` | Opposition (Director) | Stub | Reskin + Malice + Trace Alert doctrine only. No printable bestiary |
+| `25-opposition.md` | Opposition (Director) | Stage 3 draft (B70) | Street-fight procedure + reskin/Malice/Trace Alert; Foundry bestiary + B48 pointer. No printable bestiary |
 
 **Existing TOC elsewhere?** No locked TOC. `00-INDEX.md` volume map + `00-front-matter` chapter list are the only outlines. `docs/rulebook/` has chapter drafts (parallel source), not a book TOC. Track A in `FOUNDRY-BUILD-PLAN.md` still lists Stage 3 shared core and Stage 4 Wire/Veil/Machines as open (out of date vs `docs/raw/` drafts).
 
@@ -85,7 +85,7 @@ Pass A–C + §C3 removed the structural contradictions. Remaining: provisional 
 
 ### E. Director thinness
 
-`25-opposition` is doctrine-only. Core book needs either (1) keep thin + point to Foundry bestiary / DS monsters, or (2) add a short “building a street fight” procedure. Full bestiary prose = **non-goal**.
+`25-opposition` **Stage 3 fill (B70, 2026-09-18)** — street-fight procedure + Foundry bestiary / B48 pointers. Full bestiary prose remains a **non-goal**.
 
 ### F. Explicitly not blocking TOC
 
@@ -151,7 +151,7 @@ Print structure. File map = existing `docs/raw/` unless marked **NEW**.
 
 | Ch | Title | Source |
 |---|---|---|
-| 26 | Opposition | `25-opposition.md` (expand procedure, not lore bestiary) |
+| 26 | Opposition | `25-opposition.md` (Stage 3 procedure B70; not lore bestiary) |
 | 27 | Running Ossian Reach (pointer) | **NEW** thin — points to Reach Handbook / Wired Flats Journals; **no lore reprint** |
 
 **Optional fold (if Michael wants fewer NEW files):** skip print Ch 10 and Ch 27; put a **Lifestyle** subsection into `08` and a one-page Reach pointer into `00-front-matter` or `25`. TOC still locks the same content.
@@ -172,7 +172,7 @@ Write/fill these next — **TOC locked; bodies in this order**:
 | 4 | `21-the-wire.md` polish → RAW-lock | **DONE B66** — Shared Matrix spine locked |
 | 5 | **Lifestyle & Downtime** `26` | **DONE B67** — Medic restock, economy burn, downtime loop drafted |
 
-**Immediate follow-ons (6–10):** `09` implant price pass → `08` Kit provisional lock pass → `25` opposition procedure expand → `23` ramming one-pager → class flag sweeps (Operator → Wrench).
+**Immediate follow-ons (6–10):** `09` implant price pass → `08` Kit provisional lock pass → `25` opposition procedure **DONE B70** → `23` ramming one-pager → class flag sweeps (Operator → Wrench).
 
 **Do not start:** Wilds lore, Rank 2+ strike ladders, language gazetteer, full buildings catalog.
 

@@ -76,7 +76,7 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 
 | Ch | Print title | Source |
 |---|---|---|
-| 26 | Opposition | `raw:` `25-opposition.md` (expand procedure later; not lore bestiary) |
+| 26 | Opposition | `raw:` `25-opposition.md` — draft (Stage 3 fill / B70, 2026-09-18); not lore bestiary |
 | 27 | Running Ossian Reach (pointer) | **NEW** `03-directors/27-running-ossian-reach.STUB.md` — thin pointer to Reach Handbook / Wired Flats Journals; **no lore reprint** |
 
 ---
@@ -88,3 +88,4 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 - `00-INDEX.md` is meta only — **not** a print chapter.
 - Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66).
 - Lifestyle (`26-lifestyle-downtime.md`) **draft Stage 3 fill** 2026-09-18 (B67); journals **not** regenerated.
+- Opposition (`25-opposition.md`) **draft Stage 3 fill** 2026-09-18 (B70); journals **not** regenerated.
