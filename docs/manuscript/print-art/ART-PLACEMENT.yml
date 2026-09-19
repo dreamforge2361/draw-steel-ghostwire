@@ -183,107 +183,214 @@ slots:
   - id: people-pure-human
     title: Pure Human plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Pure Human"
+    chapter_id: L2
+    after_heading: "### Pure Humans — The Base Stock"
     files:
+      - docs/manuscript/print-art/species/pure-human.png
       - docs/manuscript/print-art/species/pure-human.webp
-      - docs/manuscript/print-art/species/human.webp
     search_dirs:
       - docs/manuscript/print-art/species
     match: human
-    caption: Pure Human — the base stock
+    caption: Pure Humans - the base stock
     css_class: plate-species
 
   - id: people-corran
     title: Corran plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Corran"
+    chapter_id: L2
+    after_heading: "### Corran — The Labor Caste"
     files:
-      - docs/manuscript/print-art/species/corran.webp
+      - docs/manuscript/print-art/species/corran.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: corran
-    caption: Corran — labor caste
+    caption: Corran - the labor caste
     css_class: plate-species
 
   - id: people-elvani
     title: Elvani plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Elvani"
+    chapter_id: L2
+    after_heading: "### Elvani — The Aesthetic Caste"
     files:
-      - docs/manuscript/print-art/species/elvani.webp
+      - docs/manuscript/print-art/species/elvani.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: elvani
-    caption: Elvani — aesthetic caste
+    caption: Elvani - the aesthetic caste
     css_class: plate-species
 
   - id: people-goliar
     title: Goliar plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Goliar"
+    chapter_id: L2
+    after_heading: "### Goliar — The Heavy Caste"
     files:
-      - docs/manuscript/print-art/species/goliar.webp
+      - docs/manuscript/print-art/species/goliar.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: goliar
-    caption: Goliar — heavy caste
+    caption: Goliar - the heavy caste
     css_class: plate-species
 
   - id: people-changer
     title: Changer plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Changer"
+    chapter_id: L2
+    after_heading: "### Changers — The Skin-Turners"
     files:
-      - docs/manuscript/print-art/species/changer.webp
+      - docs/manuscript/print-art/species/changer.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: changer
-    caption: Changer — skin-turner
+    caption: Changers - the skin-turners
     css_class: plate-species
 
   - id: people-revenant
     title: Revenant plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Revenant"
+    chapter_id: L2
+    after_heading: "### Revenants — The Undying"
     files:
-      - docs/manuscript/print-art/species/revenant.webp
+      - docs/manuscript/print-art/species/revenant.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: revenant
-    caption: Revenant — the undying
+    caption: Revenants - the undying
     css_class: plate-species
 
   - id: people-mutant
     title: Mutant Human plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Mutant Human"
+    chapter_id: L2
+    after_heading: "### Mutants — The Marked"
     files:
-      - docs/manuscript/print-art/species/mutant.webp
-      - docs/manuscript/print-art/species/mutant-human.webp
+      - docs/manuscript/print-art/species/mutant.png
+      - docs/manuscript/print-art/species/mutant-human.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: mutant
-    caption: Mutant Human — the marked
+    caption: Mutants - the marked
     css_class: plate-species
 
   - id: people-cyborg
     title: Cyborg plate
     kind: species
-    chapter_id: ch6
-    after_heading: "## Cyborg"
+    chapter_id: L2
+    after_heading: "### Cyborgs — The Machine-First"
     files:
-      - docs/manuscript/print-art/species/cyborg.webp
+      - docs/manuscript/print-art/species/cyborg.png
     search_dirs:
       - docs/manuscript/print-art/species
     match: cyborg
-    caption: Cyborg — machine-first
+    caption: Cyborgs - the machine-first
+    css_class: plate-species
+
+
+  # --- Peoples plates also on RAW Ch 6 (rules) ---
+  - id: people-pure-human-rules
+    title: Pure Human plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Pure Human"
+    files:
+      - docs/manuscript/print-art/species/pure-human.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: human
+    caption: Pure Human - the base stock
+    css_class: plate-species
+
+  - id: people-corran-rules
+    title: Corran plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Corran"
+    files:
+      - docs/manuscript/print-art/species/corran.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: corran
+    caption: Corran - labor caste
+    css_class: plate-species
+
+  - id: people-elvani-rules
+    title: Elvani plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Elvani"
+    files:
+      - docs/manuscript/print-art/species/elvani.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: elvani
+    caption: Elvani - aesthetic caste
+    css_class: plate-species
+
+  - id: people-goliar-rules
+    title: Goliar plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Goliar"
+    files:
+      - docs/manuscript/print-art/species/goliar.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: goliar
+    caption: Goliar - heavy caste
+    css_class: plate-species
+
+  - id: people-changer-rules
+    title: Changer plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Changer"
+    files:
+      - docs/manuscript/print-art/species/changer.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: changer
+    caption: Changer - skin-turner
+    css_class: plate-species
+
+  - id: people-revenant-rules
+    title: Revenant plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Revenant"
+    files:
+      - docs/manuscript/print-art/species/revenant.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: revenant
+    caption: Revenant - the undying
+    css_class: plate-species
+
+  - id: people-mutant-rules
+    title: Mutant Human plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Mutant Human"
+    files:
+      - docs/manuscript/print-art/species/mutant.png
+      - docs/manuscript/print-art/species/mutant-human.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: mutant
+    caption: Mutant Human - the marked
+    css_class: plate-species
+
+  - id: people-cyborg-rules
+    title: Cyborg plate (rules)
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Cyborg"
+    files:
+      - docs/manuscript/print-art/species/cyborg.png
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: cyborg
+    caption: Cyborg - machine-first
     css_class: plate-species
 
   # --- Classes (print Ch 14–22) — match GHOSTWIRE_Class_Art names when present ---
