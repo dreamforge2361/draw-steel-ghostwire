@@ -5,7 +5,7 @@
  * Run: node tools/street-eye-smoke.mjs
  * Does not write pack JSON or rebuild packs.
  */
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { isQualifyingScoutDrone, isStreetEyeAbility, STREET_EYE_DSID } from "../scripts/street-eye.mjs";
 
@@ -99,6 +99,34 @@ ok(isStreetEyeAbility(fakeEye), "Street Eye copies are recognized by _dsid");
 ok(!isStreetEyeAbility(rotor.item), "a drone treasure is not Street Eye");
 ok(isQualifyingScoutDrone(rotor.item) === true, "Rotor in inventory ⇒ grant");
 ok(isQualifyingScoutDrone(stinger.item) === false, "Stinger-only inventory ⇒ no grant");
+
+const byDsid = Object.fromEntries(drones.map(d => [d.dsid, d.item]));
+const shouldGrant = items => items.some(isQualifyingScoutDrone);
+const path = (label, dsids, expect) => {
+  const items = dsids.map(id => byDsid[id]);
+  ok(items.every(Boolean), `${label}: inventory dsids exist`);
+  ok(shouldGrant(items) === expect, `${label}: Street Eye ${expect ? "ON" : "OFF"}`);
+};
+
+console.log("\n5) Michael verify matrix (inventory → Street Eye)");
+path("empty sheet", [], false);
+path("add Rotor", ["rotor"], true);
+path("remove Rotor", [], false);
+path("add Tape-Eye", ["tape-eye"], true);
+path("Rotor + Tape-Eye (still one grant)", ["rotor", "tape-eye"], true);
+path("Stinger only", ["stinger"], false);
+path("Guard-Dog only", ["guard-dog"], false);
+path("Stinger + Rotor", ["stinger", "rotor"], true);
+path("remove Rotor, keep Stinger", ["stinger"], false);
+const wrenchDac = "src/packs/classes/wrench/abilities/deploy-and-command.json";
+ok(existsSync(wrenchDac), "Wrench Deploy & Command source JSON is unchanged on disk");
+if (existsSync(wrenchDac)) {
+  const dac = JSON.parse(readFileSync(wrenchDac, "utf8"));
+  ok(dac.system?._dsid === "deploy-and-command", "Wrench signature _dsid is still deploy-and-command");
+  ok(dac._id === "9ak5OVKlBxDB4Y0j", "Wrench Deploy & Command item id is unchanged");
+}
+const hook = readFileSync("scripts/street-eye.mjs", "utf8");
+ok(!hook.includes("deploy-and-command"), "Street Eye hook does not mention or touch Deploy & Command");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);
