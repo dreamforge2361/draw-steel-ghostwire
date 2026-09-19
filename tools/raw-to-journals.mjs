@@ -1,16 +1,16 @@
-// Generates the Ghostwire Rulebook journal pack source (src/packs/rulebook/) from docs/raw/*.md (B42b).
+// Generates the Ghostwire Rulebook journal pack source (src/packs/rulebook/) from docs/raw/*.md (B42b / B98).
 // docs/raw/ stays the single source of truth: one JournalEntry per chapter file, one page per "## " section,
 // markdown pages (format 2) with HTML rendered by Foundry's own showdown + SHOWDOWN_OPTIONS.
 // Chapter file references (`12-operator.md`) become @UUID links; journal and folder names are lang keys
 // under GHOSTWIRE.Rulebook.*, written to lang/en.json by this script.
-// Run:  node tools/raw-to-journals.mjs   then   node tools/build-packs.mjs   (Foundry closed)
-import { createRequire } from "node:module";
+// Rules journals are text-only: artwork plates are stripped. In Foundry sidebars stay in the RAW text.
+// Run:  node tools/raw-to-journals.mjs   then   node tools/build-packs.mjs rulebook   (Foundry closed)
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
+import { foundryRequire } from "./lib/foundry-require.mjs";
 
-const FOUNDRY_APP = process.env.FOUNDRY_APP ?? "C:/Program Files/Foundry Virtual Tabletop/resources/app";
-const showdown = createRequire(join(FOUNDRY_APP, "package.json"))("showdown");
+const showdown = foundryRequire("showdown");
 const SHOWDOWN_OPTIONS = { disableForced4SpacesIndentedSublists: true, noHeaderId: true, parseImgDimensions: true, strikethrough: true, tables: true, tablesHeaderId: true };
 const converter = new showdown.Converter(SHOWDOWN_OPTIONS);
 
@@ -23,7 +23,7 @@ const FOLDERS = [
   { id: "gwRulebookCore00", dir: "shared-core", key: "SharedCore", label: "Shared Core", files: ["01-how-to-play", "02-heroes-characteristics", "03-tests-power-rolls", "04-combat", "24-advancement"] },
   { id: "gwRulebookHeroes", dir: "hero-building", key: "HeroBuilding", label: "Hero Building", files: ["05-ancestries", "06-backgrounds-professions", "07-languages", "08-kits-gear-wealth", "09-chrome-body-integrity", "10-mods", "11-perks"] },
   { id: "gwRulebookClass0", dir: "classes", key: "Classes", label: "Classes", files: ["12-operator", "13-scout", "14-commander", "15-medic", "16-wrench", "17-elementalist", "18-street-priest", "19-hacker", "20-technomancer"] },
-  { id: "gwRulebookSystem", dir: "ghostwire-systems", key: "GhostwireSystems", label: "Ghostwire Systems", files: ["21-the-wire", "22-the-veil", "23-machines", "25-opposition"] },
+  { id: "gwRulebookSystem", dir: "ghostwire-systems", key: "GhostwireSystems", label: "Ghostwire Systems", files: ["21-the-wire", "22-the-veil", "23-machines", "25-opposition", "26-lifestyle-downtime"] },
 ];
 
 const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -47,6 +47,10 @@ function parseChapter(file) {
   // "**RAW status:** draft  \n**Sources:** …" → one italic transparency line.
   md = md.replace(/^\*\*RAW status:\*\* ([^\n]*?)\s*\n\*\*Sources:\*\* ([^\n]*?)\s*\n/, (m, status, sources) => `*RAW ${status.trim()} · Sources: ${sources.trim()}*\n\n`);
   md = md.replace(/^---\n/m, "");
+  // B98 lock: rules journals stay text-only. Do not ship print plates into the rulebook pack.
+  md = md.replace(/!\[[^\]]*]\([^)]+\)/g, "");
+  md = md.replace(/<figure\b[\s\S]*?<\/figure>/gi, "");
+  md = md.replace(/<img\b[^>]*>/gi, "");
   // Chapter references → links to the matching journal (skip anything inside the Sources line).
   md = md.split("\n").map(line => (line.startsWith("*RAW ") ? line : line.replace(/`(\d{2}-[a-z0-9-]+)\.md`/g, (m, ref) => (titles[ref] ? `@UUID[${uuid(ref)}]{${titles[ref]}}` : m)))).join("\n");
 
@@ -109,7 +113,7 @@ FOLDERS.forEach((folder, fi) => {
   // Front Matter opens with a short Rulebook Index linking every chapter.
   if (folder.key === "FrontMatter") {
     const rows = FOLDERS.map(f => `| ${f.label} | ${f.files.map(x => `@UUID[${uuid(x)}]{${titles[x]}}`).join(" · ")} |`).join("\n");
-    const markdown = `The Ghostwire rules-as-written: one journal per chapter. Rules only — no lore, no art. Every chapter is marked **draft** until it is locked.\n\nYou need **Draw Steel Heroes** to play; start with @UUID[${uuid("00-front-matter")}]{${titles["00-front-matter"]}}.\n\n| Section | Chapters |\n|---|---|\n${rows}`;
+    const markdown = `The Ghostwire rules-as-written: one journal per chapter. Rules only — no lore, no art. Every chapter is marked **draft** until it is locked.\n\nPlay from this book plus dice (Foundry optional). You do **not** need a separate rulebook. Start with @UUID[${uuid("00-front-matter")}]{${titles["00-front-matter"]}}.\n\n| Section | Chapters |\n|---|---|\n${rows}`;
     rulebookLang.Journals.RulebookIndex = "Rulebook Index";
     const entry = journal("rulebook-index", folder, 0, [{ name: "Rulebook Index", markdown }], "RulebookIndex");
     writeFileSync(join(dir, "rulebook-index.json"), JSON.stringify(entry, null, 2) + "\n");

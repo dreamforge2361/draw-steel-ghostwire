@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: class chapters (heroic resources), `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (armor as Stamina), `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/rulebook/08-hacker.md`, `docs/rulebook/15-drones.md`, `docs/rulebook/16-vehicles.md`*\n\n**Engine:** Draw Steel Heroes — use the official combat rules; Ghostwire remaps and additions below.",
-        "content": "<p><em>RAW draft · Sources: class chapters (heroic resources), <code>docs/rulebook/10-kits.md</code>, <code>docs/masters/GHOSTWIRE_GEAR_MASTER.md</code> (armor as Stamina), <code>docs/rulebook/12-chrome.md</code>, <code>docs/rulebook/09-species.md</code>, <code>docs/rulebook/08-hacker.md</code>, <code>docs/rulebook/15-drones.md</code>, <code>docs/rulebook/16-vehicles.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official combat rules; Ghostwire remaps and additions below.</p>"
+        "markdown": "*RAW draft (Stage 3 fill 2026-09-18) · Sources: class chapters (heroic resources), `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (armor as Stamina), `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/raw/05-ancestries.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`, `docs/raw/23-machines.md`, `docs/directors/equipment-use-abilities.md` (B49 / B44c)*\n\n**Engine:** Ghostwire combat procedures in this chapter. Playable without a separate rulebook.",
+        "content": "<p><em>RAW draft (Stage 3 fill 2026-09-18) · Sources: class chapters (heroic resources), <code>docs/rulebook/10-kits.md</code>, <code>docs/masters/GHOSTWIRE_GEAR_MASTER.md</code> (armor as Stamina), <code>docs/rulebook/12-chrome.md</code>, <code>docs/rulebook/09-species.md</code>, <code>docs/raw/05-ancestries.md</code>, <code>docs/raw/08-kits-gear-wealth.md</code>, <code>docs/raw/09-chrome-body-integrity.md</code>, <code>docs/raw/21-the-wire.md</code>, <code>docs/raw/23-machines.md</code>, <code>docs/directors/equipment-use-abilities.md</code> (B49 / B44c)</em></p>\n<p><strong>Engine:</strong> Ghostwire combat procedures in this chapter. Playable without a separate rulebook.</p>"
       },
       "category": null,
       "ownership": {
@@ -35,9 +35,9 @@
       "flags": {}
     },
     {
-      "_id": "NjFwFjK52bqKjW37",
-      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.NjFwFjK52bqKjW37",
-      "name": "Engine by reference",
+      "_id": "MztwTO5yoeLgSTEB",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.MztwTO5yoeLgSTEB",
+      "name": "When a fight starts",
       "type": "text",
       "sort": 200000,
       "title": {
@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Run combat with Draw Steel’s rules for:\n\n- **Starting combat and the round:** surprise, turn order, and taking turns.\n- **Your turn:** main actions, maneuvers, move actions, free and triggered actions.\n- **Movement:** speed, shifting, difficult terrain, flying and climbing, and forced movement (push, pull, slide) against stability.\n- **Attacking:** strikes, abilities, distance and area, line of effect, cover and concealment, flanking, free strikes, and opportunity attacks.\n- **Damage:** damage types, immunity, and weakness.\n- **Staying up:** Stamina, winded, dying and death, Recoveries, and catching your breath.\n- **Conditions:** bleeding, dazed, frightened, grabbed, prone, restrained, slowed, taunted, and weakened.\n- **Heroic resources, surges, and Victories.**\n- **Malice and the Director’s side** (`25`).",
-        "content": "<p>Run combat with Draw Steel’s rules for:</p>\n<ul>\n<li><strong>Starting combat and the round:</strong> surprise, turn order, and taking turns.</li>\n<li><strong>Your turn:</strong> main actions, maneuvers, move actions, free and triggered actions.</li>\n<li><strong>Movement:</strong> speed, shifting, difficult terrain, flying and climbing, and forced movement (push, pull, slide) against stability.</li>\n<li><strong>Attacking:</strong> strikes, abilities, distance and area, line of effect, cover and concealment, flanking, free strikes, and opportunity attacks.</li>\n<li><strong>Damage:</strong> damage types, immunity, and weakness.</li>\n<li><strong>Staying up:</strong> Stamina, winded, dying and death, Recoveries, and catching your breath.</li>\n<li><strong>Conditions:</strong> bleeding, dazed, frightened, grabbed, prone, restrained, slowed, taunted, and weakened.</li>\n<li><strong>Heroic resources, surges, and Victories.</strong></li>\n<li><strong>Malice and the Director’s side</strong> (<code>25</code>).</li>\n</ul>"
+        "markdown": "Combat begins when someone draws, opens fire, or the Director says the quiet part is over. The fiction has already decided *why*; the table now needs a clock.\n\n1. **Declare the fight.** Who is hostile, who is caught in the middle, and which board matters first — meatspace grid, Wire topology, or both cutting between each other (`21`).\n2. **Place people.** Runners, drones, vehicles, and opposition on the active board. Note connection state for anyone Overlaid or Jacked In.\n3. **Surprise.** If one side had the drop — silent approach, ambush, a Matrix Verb that never tipped Trace Alert — that side acts first for the opening beat. Otherwise everyone is already in the soup.\n4. **Turn order.** Each combatant who can act takes one turn per round. If surprise is unclear, the Director picks who starts from the fiction (the side that opened fire, the runner who jacked in first). Then alternate **crew** and **opposition** in an order the table can track — or use the Foundry combat tracker if you are on Foundry. Ghostwire does not invent a second initiative stat. The Director may cut to a Jacked In runner’s Wire turn between meatspace turns when both boards are live.\n5. **Resources tick.** Classes that gain heroic resource at the start of combat or the start of their turn do so per their class chapter. **Medic Reagents do not reset** when a fight starts or ends.\n\nOnce the first turn begins, you are in **rounds**.",
+        "content": "<p>Combat begins when someone draws, opens fire, or the Director says the quiet part is over. The fiction has already decided <em>why</em>; the table now needs a clock.</p>\n<ol>\n<li><strong>Declare the fight.</strong> Who is hostile, who is caught in the middle, and which board matters first — meatspace grid, Wire topology, or both cutting between each other (<code>21</code>).</li>\n<li><strong>Place people.</strong> Runners, drones, vehicles, and opposition on the active board. Note connection state for anyone Overlaid or Jacked In.</li>\n<li><strong>Surprise.</strong> If one side had the drop — silent approach, ambush, a Matrix Verb that never tipped Trace Alert — that side acts first for the opening beat. Otherwise everyone is already in the soup.</li>\n<li><strong>Turn order.</strong> Each combatant who can act takes one turn per round. If surprise is unclear, the Director picks who starts from the fiction (the side that opened fire, the runner who jacked in first). Then alternate <strong>crew</strong> and <strong>opposition</strong> in an order the table can track — or use the Foundry combat tracker if you are on Foundry. Ghostwire does not invent a second initiative stat. The Director may cut to a Jacked In runner’s Wire turn between meatspace turns when both boards are live.</li>\n<li><strong>Resources tick.</strong> Classes that gain heroic resource at the start of combat or the start of their turn do so per their class chapter. <strong>Medic Reagents do not reset</strong> when a fight starts or ends.</li>\n</ol>\n<p>Once the first turn begins, you are in <strong>rounds</strong>.</p>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "CYSfSdvbzVguLSXB",
-      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.CYSfSdvbzVguLSXB",
-      "name": "Heroic resources",
+      "_id": "dVSQBtridIFs0REi",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.dVSQBtridIFs0REi",
+      "name": "Rounds, turns, and actions",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise, a resource follows Draw Steel’s heroic-resource rules.\n\n| Class | Resource | Notable rule (see class chapter) |\n|---|---|---|\n| Operator | Adrenaline | — |\n| Scout | Advantage | Represents reading the target; surges |\n| Commander / Face | Influence | Gained from combat and social Marks |\n| Medic | **Reagents** | **Persist between encounters** — they don’t reset when combat ends or starts, and they’re spent even outside combat |\n| Wrench | Uptime | Earned and drained by the machines you field |\n| Elementalist | Essence | Sustained workings cost Essence each turn |\n| Street Priest | Conviction | Per-turn drip; Light or Dark pact |\n| Hacker | Bandwidth | Spent on Programs |\n| Technomancer | Resonance | Sprites; biofeedback when overreaching |\n\n**Cost check:** in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.",
-        "content": "<p>Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise, a resource follows Draw Steel’s heroic-resource rules.</p>\n<table>\n<thead>\n<tr>\n<th id=\"class\">Class</th>\n<th id=\"resource\">Resource</th>\n<th id=\"notable_rule_(see_class_chapter)\">Notable rule (see class chapter)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Operator</td>\n<td>Adrenaline</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Scout</td>\n<td>Advantage</td>\n<td>Represents reading the target; surges</td>\n</tr>\n<tr>\n<td>Commander / Face</td>\n<td>Influence</td>\n<td>Gained from combat and social Marks</td>\n</tr>\n<tr>\n<td>Medic</td>\n<td><strong>Reagents</strong></td>\n<td><strong>Persist between encounters</strong> — they don’t reset when combat ends or starts, and they’re spent even outside combat</td>\n</tr>\n<tr>\n<td>Wrench</td>\n<td>Uptime</td>\n<td>Earned and drained by the machines you field</td>\n</tr>\n<tr>\n<td>Elementalist</td>\n<td>Essence</td>\n<td>Sustained workings cost Essence each turn</td>\n</tr>\n<tr>\n<td>Street Priest</td>\n<td>Conviction</td>\n<td>Per-turn drip; Light or Dark pact</td>\n</tr>\n<tr>\n<td>Hacker</td>\n<td>Bandwidth</td>\n<td>Spent on Programs</td>\n</tr>\n<tr>\n<td>Technomancer</td>\n<td>Resonance</td>\n<td>Sprites; biofeedback when overreaching</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Cost check:</strong> in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.</p>"
+        "markdown": "A **round** is one full pass around the table: every combatant who can act gets a turn, then the round ends and the next begins.\n\nOn **your turn**, you normally get:\n\n| Budget | What it is for |\n|---|---|\n| **Main action** | The big beat — a strike, a heroic ability, Deploy, a Matrix Verb, Catch Breath, most kit signatures |\n| **Maneuver** | Setup, utility, secondary pressure — Mark, Reload flavor, short tech tricks, many support abilities |\n| **Move action** | Spend your Speed in squares (or the Wire’s movement rules when Jacked In) |\n| **Free / triggered** | Only when an ability or the situation hands them to you — opportunity pressure, free triggered riders, some chrome reflexes |\n\nYou can take your main, maneuver, and move in any order. Triggered actions interrupt when their trigger fires, even off your turn.\n\n**Ghostwire table language:** say “I Fire Chatterbox,” “I Deploy the swarm,” “I Overlay and glass the node,” not “I use my free strike.” The sheet should match that language (see Weapon use below).\n\nIf an ability costs a **heroic resource**, check the cost before you commit. You cannot spend what you do not have.",
+        "content": "<p>A <strong>round</strong> is one full pass around the table: every combatant who can act gets a turn, then the round ends and the next begins.</p>\n<p>On <strong>your turn</strong>, you normally get:</p>\n<table>\n<thead>\n<tr>\n<th id=\"budget\">Budget</th>\n<th id=\"what_it_is_for\">What it is for</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Main action</strong></td>\n<td>The big beat — a strike, a heroic ability, Deploy, a Matrix Verb, Catch Breath, most kit signatures</td>\n</tr>\n<tr>\n<td><strong>Maneuver</strong></td>\n<td>Setup, utility, secondary pressure — Mark, Reload flavor, short tech tricks, many support abilities</td>\n</tr>\n<tr>\n<td><strong>Move action</strong></td>\n<td>Spend your Speed in squares (or the Wire’s movement rules when Jacked In)</td>\n</tr>\n<tr>\n<td><strong>Free / triggered</strong></td>\n<td>Only when an ability or the situation hands them to you — opportunity pressure, free triggered riders, some chrome reflexes</td>\n</tr>\n</tbody>\n</table>\n<p>You can take your main, maneuver, and move in any order. Triggered actions interrupt when their trigger fires, even off your turn.</p>\n<p><strong>Ghostwire table language:</strong> say “I Fire Chatterbox,” “I Deploy the swarm,” “I Overlay and glass the node,” not “I use my free strike.” The sheet should match that language (see Weapon use below).</p>\n<p>If an ability costs a <strong>heroic resource</strong>, check the cost before you commit. You cannot spend what you do not have.</p>"
       },
       "category": null,
       "ownership": {
@@ -91,9 +91,9 @@
       "flags": {}
     },
     {
-      "_id": "05jMrSTXyJwvMZGQ",
-      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.05jMrSTXyJwvMZGQ",
-      "name": "Keywords added by Ghostwire",
+      "_id": "fb7VfjH8siYRMdCf",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.fb7VfjH8siYRMdCf",
+      "name": "Heroic resources in a fight",
       "type": "text",
       "sort": 400000,
       "title": {
@@ -109,8 +109,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Ghostwire abilities use Draw Steel’s keywords plus:\n\n| Keyword | Meaning |\n|---|---|\n| **Tech** | Powered by machinery, not magic or psionics. Cyborgs can use it. |\n| **Chrome** | Powered by an implant. |\n| **Optics** | Powered by an emitter, holo, or optical system. |\n| **Wired** | Acts in the Wired (connection state rules apply). |\n| **Command** | Driven by command presence: orders, rallies, reads. |",
-        "content": "<p>Ghostwire abilities use Draw Steel’s keywords plus:</p>\n<table>\n<thead>\n<tr>\n<th id=\"keyword\">Keyword</th>\n<th id=\"meaning\">Meaning</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Tech</strong></td>\n<td>Powered by machinery, not magic or psionics. Cyborgs can use it.</td>\n</tr>\n<tr>\n<td><strong>Chrome</strong></td>\n<td>Powered by an implant.</td>\n</tr>\n<tr>\n<td><strong>Optics</strong></td>\n<td>Powered by an emitter, holo, or optical system.</td>\n</tr>\n<tr>\n<td><strong>Wired</strong></td>\n<td>Acts in the Wired (connection state rules apply).</td>\n</tr>\n<tr>\n<td><strong>Command</strong></td>\n<td>Driven by command presence: orders, rallies, reads.</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise: gain the printed amount at the **start of combat** and/or the **start of your turn**; spend on printed costs; leftover usually **dumps when the fight ends**.\n\n| Class | Resource | Notable combat rule (see class chapter) |\n|---|---|---|\n| Operator | Adrenaline | — |\n| Scout | Advantage | Reading the target; surges |\n| Commander / Face | Influence | Gained from combat and social Marks |\n| Medic | **Reagents** | **Persist between encounters** — they don’t reset when combat ends or starts, and they’re spent even outside combat |\n| Wrench | Uptime | Earned and drained by the machines you field |\n| Elementalist | Essence | Sustained workings cost Essence each turn |\n| Street Priest | Conviction | Per-turn drip; Light or Dark pact |\n| Hacker | Bandwidth | Spent on Programs |\n| Technomancer | Resonance | Sprites; biofeedback when overreaching |\n\n**Cost check:** in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.\n\n**Victories** (job-beat wins that also feed some class resources) live in `24`. **Malice** and the Director’s side live in `25`.\n\n**Surges (this book).** A **surge** is a one-use damage bonus. You hold it until you spend it or the encounter ends, unless the ability that granted it names a shorter clock.\n\n- **Gain:** when an ability says you (or an ally) gain one or more surges, mark them on the sheet.\n- **Spend:** when you deal damage with a strike or a damaging ability, you may spend **one or more** surges you currently hold. Each surge spent adds **extra damage equal to your highest characteristic** (minimum +1). Choose after you know the Power Roll result, before damage is applied.\n- You cannot spend surges you do not have. Unspent surges vanish at the end of the encounter unless an ability says they last longer.\n\nGhostwire adds no second surge currency. Class and Wire text that “incorporates 1 or more surges” means you spent at least one surge on that damage.",
+        "content": "<p>Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise: gain the printed amount at the <strong>start of combat</strong> and/or the <strong>start of your turn</strong>; spend on printed costs; leftover usually <strong>dumps when the fight ends</strong>.</p>\n<table>\n<thead>\n<tr>\n<th id=\"class\">Class</th>\n<th id=\"resource\">Resource</th>\n<th id=\"notable_combat_rule_(see_class_chapter)\">Notable combat rule (see class chapter)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Operator</td>\n<td>Adrenaline</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Scout</td>\n<td>Advantage</td>\n<td>Reading the target; surges</td>\n</tr>\n<tr>\n<td>Commander / Face</td>\n<td>Influence</td>\n<td>Gained from combat and social Marks</td>\n</tr>\n<tr>\n<td>Medic</td>\n<td><strong>Reagents</strong></td>\n<td><strong>Persist between encounters</strong> — they don’t reset when combat ends or starts, and they’re spent even outside combat</td>\n</tr>\n<tr>\n<td>Wrench</td>\n<td>Uptime</td>\n<td>Earned and drained by the machines you field</td>\n</tr>\n<tr>\n<td>Elementalist</td>\n<td>Essence</td>\n<td>Sustained workings cost Essence each turn</td>\n</tr>\n<tr>\n<td>Street Priest</td>\n<td>Conviction</td>\n<td>Per-turn drip; Light or Dark pact</td>\n</tr>\n<tr>\n<td>Hacker</td>\n<td>Bandwidth</td>\n<td>Spent on Programs</td>\n</tr>\n<tr>\n<td>Technomancer</td>\n<td>Resonance</td>\n<td>Sprites; biofeedback when overreaching</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Cost check:</strong> in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.</p>\n<p><strong>Victories</strong> (job-beat wins that also feed some class resources) live in <code>24</code>. <strong>Malice</strong> and the Director’s side live in <code>25</code>.</p>\n<p><strong>Surges (this book).</strong> A <strong>surge</strong> is a one-use damage bonus. You hold it until you spend it or the encounter ends, unless the ability that granted it names a shorter clock.</p>\n<ul>\n<li><strong>Gain:</strong> when an ability says you (or an ally) gain one or more surges, mark them on the sheet.</li>\n<li><strong>Spend:</strong> when you deal damage with a strike or a damaging ability, you may spend <strong>one or more</strong> surges you currently hold. Each surge spent adds <strong>extra damage equal to your highest characteristic</strong> (minimum +1). Choose after you know the Power Roll result, before damage is applied.</li>\n<li>You cannot spend surges you do not have. Unspent surges vanish at the end of the encounter unless an ability says they last longer.</li>\n</ul>\n<p>Ghostwire adds no second surge currency. Class and Wire text that “incorporates 1 or more surges” means you spent at least one surge on that damage.</p>"
       },
       "category": null,
       "ownership": {
@@ -119,9 +119,9 @@
       "flags": {}
     },
     {
-      "_id": "iNo7eIPjqso3GRws",
-      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.iNo7eIPjqso3GRws",
-      "name": "Ghostwire combat rules",
+      "_id": "eU8iSFbYcZkxYKOx",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.eU8iSFbYcZkxYKOx",
+      "name": "Stamina and Recoveries",
       "type": "text",
       "sort": 500000,
       "title": {
@@ -137,8 +137,316 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "### Kits need their gear\n\nA Kit’s bonuses and signature ability work only with an owned qualifying weapon and armor. Without them, you fight with an **improvised weapon**: class weapon abilities still work, but no Kit bonuses apply (`08`).\n\n### Armor is Stamina\n\nWorn armor raises maximum Stamina instead of reducing damage. The only true damage reduction is **typed immunity** from sealed and hardened gear (`08`).\n\n### Damage types\n\nDraw Steel’s damage types are used unchanged. Ghostwire gear tags map onto them:\n\n| Gear tag | Draw Steel damage |\n|---|---|\n| Electrical | Lightning |\n| Toxin | Poison |\n| Fire | Fire |\n| Kinetic | Untyped |\n| AP (armor-piercing) | Untyped, plus the gear’s AP note (it ignores or reduces armor-as-Stamina as that gear’s rules say) |\n\nAP is a gear note, not a damage type.\n\n### Connection states in combat\n\n- A **Jacked In** runner’s body is inert and can’t take real-world actions; allies usually guard it.\n- An **Overlaid** runner has a bane on real-world Power Rolls.\n- Biofeedback from the Wired deals damage to the runner’s Stamina (`21`).\n\n### Chrome under fire\n\nAn implant can be **Suppressed** (temporarily offline), **Damaged** (works at a penalty until repaired), or **Destroyed** (benefit lost until repaired or replaced) (`09`).\n\n### Peoples at 0 Stamina\n\n- **Cyborgs** enter **System Crisis** instead of dying normally, and can’t be healed by Magic (`05`).\n- **Revenants** become **inert** at the negative of their winded value instead of dying; fire damage while inert destroys them (`05`).\n\n### Machines in combat\n\nDrones and vehicles fight on the same grid. Anyone can run **one** drone with limits; Wrenches field fleets and can Jump In. Vehicle chases use a range track (`23`).",
-        "content": "<h3>Kits need their gear</h3>\n<p>A Kit’s bonuses and signature ability work only with an owned qualifying weapon and armor. Without them, you fight with an <strong>improvised weapon</strong>: class weapon abilities still work, but no Kit bonuses apply (<code>08</code>).</p>\n<h3>Armor is Stamina</h3>\n<p>Worn armor raises maximum Stamina instead of reducing damage. The only true damage reduction is <strong>typed immunity</strong> from sealed and hardened gear (<code>08</code>).</p>\n<h3>Damage types</h3>\n<p>Draw Steel’s damage types are used unchanged. Ghostwire gear tags map onto them:</p>\n<table>\n<thead>\n<tr>\n<th id=\"gear_tag\">Gear tag</th>\n<th id=\"draw_steel_damage\">Draw Steel damage</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Electrical</td>\n<td>Lightning</td>\n</tr>\n<tr>\n<td>Toxin</td>\n<td>Poison</td>\n</tr>\n<tr>\n<td>Fire</td>\n<td>Fire</td>\n</tr>\n<tr>\n<td>Kinetic</td>\n<td>Untyped</td>\n</tr>\n<tr>\n<td>AP (armor-piercing)</td>\n<td>Untyped, plus the gear’s AP note (it ignores or reduces armor-as-Stamina as that gear’s rules say)</td>\n</tr>\n</tbody>\n</table>\n<p>AP is a gear note, not a damage type.</p>\n<h3>Connection states in combat</h3>\n<ul>\n<li>A <strong>Jacked In</strong> runner’s body is inert and can’t take real-world actions; allies usually guard it.</li>\n<li>An <strong>Overlaid</strong> runner has a bane on real-world Power Rolls.</li>\n<li>Biofeedback from the Wired deals damage to the runner’s Stamina (<code>21</code>).</li>\n</ul>\n<h3>Chrome under fire</h3>\n<p>An implant can be <strong>Suppressed</strong> (temporarily offline), <strong>Damaged</strong> (works at a penalty until repaired), or <strong>Destroyed</strong> (benefit lost until repaired or replaced) (<code>09</code>).</p>\n<h3>Peoples at 0 Stamina</h3>\n<ul>\n<li><strong>Cyborgs</strong> enter <strong>System Crisis</strong> instead of dying normally, and can’t be healed by Magic (<code>05</code>).</li>\n<li><strong>Revenants</strong> become <strong>inert</strong> at the negative of their winded value instead of dying; fire damage while inert destroys them (<code>05</code>).</li>\n</ul>\n<h3>Machines in combat</h3>\n<p>Drones and vehicles fight on the same grid. Anyone can run <strong>one</strong> drone with limits; Wrenches field fleets and can Jump In. Vehicle chases use a range track (<code>23</code>).</p>"
+        "markdown": "**Stamina** is how much punishment a runner (or machine) can take before they drop. Damage reduces current Stamina. Healing and Recoveries restore it, up to maximum.\n\n**Armor is Stamina.** Worn armor raises maximum Stamina instead of subtracting from incoming damage. The only true damage reduction on the street is **typed immunity** (and similar) from sealed or hardened gear (`08`). When someone says “my plating held,” they mean the Stamina pool bought by that armor — not a separate DR layer.\n\n**Winded.** Your **winded value** is **half your maximum Stamina** (round down). When current Stamina is at or below that number, you are **winded**. Winded is a state abilities key off (Medic compounds, some apexes, nameless-foe drop lines). It does not add a bane by itself unless an ability says so.\n\n**Recoveries** are your finite “patch myself / get patched” budget until the next full respite (`26`). Spending a Recovery restores Stamina equal to your **Recovery value**.\n\n**Recovery value** is how much Stamina one Recovery restores. The hero sheet prints it. On paper, if the class chapter does not print a number, use **one-third of your current maximum Stamina** (round down, minimum 1). Class features, Medic compounds, and Catch Breath all lean on that number.\n\n**Catch Breath** (maneuver): spend **one Recovery** to regain Recovery-value Stamina without leaving the fight, if you have a Recovery left and the Director agrees you have a breath (not mid-shove, not Jacked In and inert). Specific riders (Glowing Recovery, Rig Recovery, and so on) live in ancestry and class chapters.\n\nOut of combat, a **respite** (`26`) lets you spend Recoveries freely, then **refills your Recovery pool** to the class maximum. Squatter rest may be incomplete (`26`). ¥ / lifestyle costs live in `08` and `26`.",
+        "content": "<p><strong>Stamina</strong> is how much punishment a runner (or machine) can take before they drop. Damage reduces current Stamina. Healing and Recoveries restore it, up to maximum.</p>\n<p><strong>Armor is Stamina.</strong> Worn armor raises maximum Stamina instead of subtracting from incoming damage. The only true damage reduction on the street is <strong>typed immunity</strong> (and similar) from sealed or hardened gear (<code>08</code>). When someone says “my plating held,” they mean the Stamina pool bought by that armor — not a separate DR layer.</p>\n<p><strong>Winded.</strong> Your <strong>winded value</strong> is <strong>half your maximum Stamina</strong> (round down). When current Stamina is at or below that number, you are <strong>winded</strong>. Winded is a state abilities key off (Medic compounds, some apexes, nameless-foe drop lines). It does not add a bane by itself unless an ability says so.</p>\n<p><strong>Recoveries</strong> are your finite “patch myself / get patched” budget until the next full respite (<code>26</code>). Spending a Recovery restores Stamina equal to your <strong>Recovery value</strong>.</p>\n<p><strong>Recovery value</strong> is how much Stamina one Recovery restores. The hero sheet prints it. On paper, if the class chapter does not print a number, use <strong>one-third of your current maximum Stamina</strong> (round down, minimum 1). Class features, Medic compounds, and Catch Breath all lean on that number.</p>\n<p><strong>Catch Breath</strong> (maneuver): spend <strong>one Recovery</strong> to regain Recovery-value Stamina without leaving the fight, if you have a Recovery left and the Director agrees you have a breath (not mid-shove, not Jacked In and inert). Specific riders (Glowing Recovery, Rig Recovery, and so on) live in ancestry and class chapters.</p>\n<p>Out of combat, a <strong>respite</strong> (<code>26</code>) lets you spend Recoveries freely, then <strong>refills your Recovery pool</strong> to the class maximum. Squatter rest may be incomplete (<code>26</code>). ¥ / lifestyle costs live in <code>08</code> and <code>26</code>.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "y9PDDOoV4dmXyqxf",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.y9PDDOoV4dmXyqxf",
+      "name": "Attacking: weapon use vs free strikes",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire heroes do **not** lean on generic Melee Free Strike / Ranged Free Strike as their default sheet attacks.\n\n### What you use instead\n\n1. **Class and kit abilities** — signatures, heroics, and doctrine strikes printed in `12`–`20` and kit text (`08`).\n2. **Weapon use-abilities (B49)** — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as **Fire Chatterbox** or **Strike with Monoblade**. That ability is free-strike-*shaped* (category, keywords, kit bonus hooks) but carries **that weapon’s** range band and damage. Removing the weapon removes the ability.\n3. **Improvised fallback** — no qualifying kit weapon in hand means class weapon abilities still work, but **kit bonuses and kit signature weapon riders do not** (`08`). Bare fists, a pipe, or a grabbed pistol that isn’t your kit piece are improvised.\n\n> **In Foundry**\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use the Foundry **combat tracker** for turn order. Owned Ghostwire weapons spawn sheet abilities named **Fire {weapon}** or **Strike with {weapon}** (B49) — roll those, not generic free strikes. The module **strips** stock Melee/Ranged Free Strike from heroes and NPCs (B44c) so sheets stay clean. Ability SFX may play from the chat card when you fire.\n\nTable fiction and class text may still say “free strike” when an ability *grants* one (Commander Overwatch, Scout decoys, hybrid Changer +1 on melee free-strike-shaped attacks, and so on). In Foundry play, resolve those grants with a weapon use-ability, an improvised strike the Director allows, or the ability’s own printed attack — not by re-adding the stripped generics.\n\n### Damage types\n\nDamage types in this book include acid, cold, corruption, fire, holy, lightning, poison, psychic, sonic, and untyped (kinetic). Ghostwire gear tags map onto them:\n\n| Gear tag | Damage type |\n|---|---|\n| Electrical | Lightning |\n| Toxin | Poison |\n| Fire | Fire |\n| Kinetic | Untyped |\n| AP (armor-piercing) | Untyped, plus the gear’s AP note (it ignores or reduces armor-as-Stamina as that gear’s rules say) |\n\nAP is a gear note, not a damage type.",
+        "content": "<p>Ghostwire heroes do <strong>not</strong> lean on generic Melee Free Strike / Ranged Free Strike as their default sheet attacks.</p>\n<h3>What you use instead</h3>\n<ol>\n<li><strong>Class and kit abilities</strong> — signatures, heroics, and doctrine strikes printed in <code>12</code>–<code>20</code> and kit text (<code>08</code>).</li>\n<li><strong>Weapon use-abilities (B49)</strong> — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as <strong>Fire Chatterbox</strong> or <strong>Strike with Monoblade</strong>. That ability is free-strike-<em>shaped</em> (category, keywords, kit bonus hooks) but carries <strong>that weapon’s</strong> range band and damage. Removing the weapon removes the ability.</li>\n<li><strong>Improvised fallback</strong> — no qualifying kit weapon in hand means class weapon abilities still work, but <strong>kit bonuses and kit signature weapon riders do not</strong> (<code>08</code>). Bare fists, a pipe, or a grabbed pistol that isn’t your kit piece are improvised.</li>\n</ol>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Enable <strong>Draw Steel - Ghostwire Build</strong> on a compatible Foundry world. Use the Foundry <strong>combat tracker</strong> for turn order. Owned Ghostwire weapons spawn sheet abilities named <strong>Fire {weapon}</strong> or <strong>Strike with {weapon}</strong> (B49) — roll those, not generic free strikes. The module <strong>strips</strong> stock Melee/Ranged Free Strike from heroes and NPCs (B44c) so sheets stay clean. Ability SFX may play from the chat card when you fire.</p>\n</blockquote>\n<p>Table fiction and class text may still say “free strike” when an ability <em>grants</em> one (Commander Overwatch, Scout decoys, hybrid Changer +1 on melee free-strike-shaped attacks, and so on). In Foundry play, resolve those grants with a weapon use-ability, an improvised strike the Director allows, or the ability’s own printed attack — not by re-adding the stripped generics.</p>\n<h3>Damage types</h3>\n<p>Damage types in this book include acid, cold, corruption, fire, holy, lightning, poison, psychic, sonic, and untyped (kinetic). Ghostwire gear tags map onto them:</p>\n<table>\n<thead>\n<tr>\n<th id=\"gear_tag\">Gear tag</th>\n<th id=\"damage_type\">Damage type</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Electrical</td>\n<td>Lightning</td>\n</tr>\n<tr>\n<td>Toxin</td>\n<td>Poison</td>\n</tr>\n<tr>\n<td>Fire</td>\n<td>Fire</td>\n</tr>\n<tr>\n<td>Kinetic</td>\n<td>Untyped</td>\n</tr>\n<tr>\n<td>AP (armor-piercing)</td>\n<td>Untyped, plus the gear’s AP note (it ignores or reduces armor-as-Stamina as that gear’s rules say)</td>\n</tr>\n</tbody>\n</table>\n<p>AP is a gear note, not a damage type.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9MfZAFojKq4FF36S",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.9MfZAFojKq4FF36S",
+      "name": "Distance and ranges (brief)",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Combat uses a square grid in meatspace unless the Director switches to theater-of-mind for a chase or bar brawl.\n\n- **Melee** reach is usually adjacent (1 square) unless an ability or weapon says otherwise.\n- **Ranged** abilities and B49 weapon use-abilities print a distance (Ranged 5, 10, 20, …). Kit bonuses may extend distance on abilities that carry the right keywords (`08`).\n- **Areas** (burst, cube, line, wall) count squares from the origin the ability names. Ghostwire Optics / Tech / Chrome keywords do not change how squares are counted.\n- **Line of effect:** you need an unblocked path to the target. Solid walls stop it; windows, gratings, and neon do not unless the Director says the shot is impossible.\n- **Cover:** if a barrier blocks part of the line from attacker to target, the target has **cover** — the attacker takes a **bane** on the strike. Street clutter — cars, drones, neon pillars — is ordinary cover unless a Wire Overlay or Optics ability says it isn’t.\n- **Concealment:** you cannot be seen clearly (smoke, dark, Overlay glare). Strikes against you take a **bane**; you may attempt Hide (`03`).\n- **Flanking:** if two allies stand on opposite sides of a target (adjacent, facing through the target), melee strikes against that target gain an **edge**.\n- **Forced movement** (push, pull, slide) moves the target the printed number of squares. **Stability** reduces forced movement by that many squares (minimum 0). If leftover movement would go through a solid wall, the target stops unless the ability says they break through.\n- **Wire distances** are topology and node ranges, not street squares — see `21`. A Jacked In body does not walk the grid while the mind is in the Wire.\n\nVehicle chases use a range track (`23`), not a crowded five-foot hallway, unless the Director drops the fight onto a parking deck mid-chase.",
+        "content": "<p>Combat uses a square grid in meatspace unless the Director switches to theater-of-mind for a chase or bar brawl.</p>\n<ul>\n<li><strong>Melee</strong> reach is usually adjacent (1 square) unless an ability or weapon says otherwise.</li>\n<li><strong>Ranged</strong> abilities and B49 weapon use-abilities print a distance (Ranged 5, 10, 20, …). Kit bonuses may extend distance on abilities that carry the right keywords (<code>08</code>).</li>\n<li><strong>Areas</strong> (burst, cube, line, wall) count squares from the origin the ability names. Ghostwire Optics / Tech / Chrome keywords do not change how squares are counted.</li>\n<li><strong>Line of effect:</strong> you need an unblocked path to the target. Solid walls stop it; windows, gratings, and neon do not unless the Director says the shot is impossible.</li>\n<li><strong>Cover:</strong> if a barrier blocks part of the line from attacker to target, the target has <strong>cover</strong> — the attacker takes a <strong>bane</strong> on the strike. Street clutter — cars, drones, neon pillars — is ordinary cover unless a Wire Overlay or Optics ability says it isn’t.</li>\n<li><strong>Concealment:</strong> you cannot be seen clearly (smoke, dark, Overlay glare). Strikes against you take a <strong>bane</strong>; you may attempt Hide (<code>03</code>).</li>\n<li><strong>Flanking:</strong> if two allies stand on opposite sides of a target (adjacent, facing through the target), melee strikes against that target gain an <strong>edge</strong>.</li>\n<li><strong>Forced movement</strong> (push, pull, slide) moves the target the printed number of squares. <strong>Stability</strong> reduces forced movement by that many squares (minimum 0). If leftover movement would go through a solid wall, the target stops unless the ability says they break through.</li>\n<li><strong>Wire distances</strong> are topology and node ranges, not street squares — see <code>21</code>. A Jacked In body does not walk the grid while the mind is in the Wire.</li>\n</ul>\n<p>Vehicle chases use a range track (<code>23</code>), not a crowded five-foot hallway, unless the Director drops the fight onto a parking deck mid-chase.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "qv8c14JmHk7zJ150",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.qv8c14JmHk7zJ150",
+      "name": "Conditions",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "When an ability applies a named condition, use the short glossary below unless the ability prints a different rider. **Save ends** means a saving throw (`03`) at the end of the target’s turn.\n\n| Condition | Ghostwire read |\n|---|---|\n| **Bleeding** | Take damage at the start of your turn (the amount the ability printed, or **1d6** if none). Save ends. |\n| **Dazed** | On your turn you may take only **one** of: main action, maneuver, or move — not all three. |\n| **Frightened** | **Bane** on Power Rolls that target the source; you cannot willingly move closer to them. |\n| **Grabbed** | Speed 0; you cannot move away from the grabber. |\n| **Prone** | **Bane** on your strikes; melee strikes against you gain an **edge**. Stand as your move action. |\n| **Restrained** | You cannot move or take move actions; **bane** on most Power Rolls. |\n| **Slowed** | Your Speed becomes **2** (or the printed number) until the effect ends. |\n| **Taunted** | **Bane** on actions that do not include the taunter as a target. |\n| **Weakened** | **Bane** on Power Rolls. |\n\nGhostwire-only fail states that are *not* that list:\n\n- **Chrome Suppressed / Damaged / Destroyed** (`09`) — implant status, not a condition from the glossary above.\n- **System Crisis** (Cyborg) and **inert** (Revenant) — ancestry fail states (`05`).\n- **Connection Overlay / Jacked In** — Wire states with combat riders (`21`), not conditions.\n\nIf a Medic, Priest, or Program “clears a condition,” it means a row from the glossary above unless the text names chrome or Wire state explicitly.",
+        "content": "<p>When an ability applies a named condition, use the short glossary below unless the ability prints a different rider. <strong>Save ends</strong> means a saving throw (<code>03</code>) at the end of the target’s turn.</p>\n<table>\n<thead>\n<tr>\n<th id=\"condition\">Condition</th>\n<th id=\"ghostwire_read\">Ghostwire read</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Bleeding</strong></td>\n<td>Take damage at the start of your turn (the amount the ability printed, or <strong>1d6</strong> if none). Save ends.</td>\n</tr>\n<tr>\n<td><strong>Dazed</strong></td>\n<td>On your turn you may take only <strong>one</strong> of: main action, maneuver, or move — not all three.</td>\n</tr>\n<tr>\n<td><strong>Frightened</strong></td>\n<td><strong>Bane</strong> on Power Rolls that target the source; you cannot willingly move closer to them.</td>\n</tr>\n<tr>\n<td><strong>Grabbed</strong></td>\n<td>Speed 0; you cannot move away from the grabber.</td>\n</tr>\n<tr>\n<td><strong>Prone</strong></td>\n<td><strong>Bane</strong> on your strikes; melee strikes against you gain an <strong>edge</strong>. Stand as your move action.</td>\n</tr>\n<tr>\n<td><strong>Restrained</strong></td>\n<td>You cannot move or take move actions; <strong>bane</strong> on most Power Rolls.</td>\n</tr>\n<tr>\n<td><strong>Slowed</strong></td>\n<td>Your Speed becomes <strong>2</strong> (or the printed number) until the effect ends.</td>\n</tr>\n<tr>\n<td><strong>Taunted</strong></td>\n<td><strong>Bane</strong> on actions that do not include the taunter as a target.</td>\n</tr>\n<tr>\n<td><strong>Weakened</strong></td>\n<td><strong>Bane</strong> on Power Rolls.</td>\n</tr>\n</tbody>\n</table>\n<p>Ghostwire-only fail states that are <em>not</em> that list:</p>\n<ul>\n<li><strong>Chrome Suppressed / Damaged / Destroyed</strong> (<code>09</code>) — implant status, not a condition from the glossary above.</li>\n<li><strong>System Crisis</strong> (Cyborg) and <strong>inert</strong> (Revenant) — ancestry fail states (<code>05</code>).</li>\n<li><strong>Connection Overlay / Jacked In</strong> — Wire states with combat riders (<code>21</code>), not conditions.</li>\n</ul>\n<p>If a Medic, Priest, or Program “clears a condition,” it means a row from the glossary above unless the text names chrome or Wire state explicitly.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hjlGGyoNOAAvm6tz",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.hjlGGyoNOAAvm6tz",
+      "name": "Keywords added by Ghostwire",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire abilities use the usual action and effect keywords (melee, ranged, strike, weapon, area, magic, and so on) plus:\n\n| Keyword | Meaning |\n|---|---|\n| **Tech** | Powered by machinery, not magic or psionics. Cyborgs can use it. |\n| **Chrome** | Powered by an implant. |\n| **Optics** | Powered by an emitter, holo, or optical system. |\n| **Wired** | Acts in the Wired (connection state rules apply). |\n| **Command** | Driven by command presence: orders, rallies, reads. |\n\nKeywords tell you what can suppress, counter, or ride the ability (EMP vs Chrome, ICE vs Wired, and so on). They do not replace the action type (main / maneuver / triggered).",
+        "content": "<p>Ghostwire abilities use the usual action and effect keywords (melee, ranged, strike, weapon, area, magic, and so on) plus:</p>\n<table>\n<thead>\n<tr>\n<th id=\"keyword\">Keyword</th>\n<th id=\"meaning\">Meaning</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Tech</strong></td>\n<td>Powered by machinery, not magic or psionics. Cyborgs can use it.</td>\n</tr>\n<tr>\n<td><strong>Chrome</strong></td>\n<td>Powered by an implant.</td>\n</tr>\n<tr>\n<td><strong>Optics</strong></td>\n<td>Powered by an emitter, holo, or optical system.</td>\n</tr>\n<tr>\n<td><strong>Wired</strong></td>\n<td>Acts in the Wired (connection state rules apply).</td>\n</tr>\n<tr>\n<td><strong>Command</strong></td>\n<td>Driven by command presence: orders, rallies, reads.</td>\n</tr>\n</tbody>\n</table>\n<p>Keywords tell you what can suppress, counter, or ride the ability (EMP vs Chrome, ICE vs Wired, and so on). They do not replace the action type (main / maneuver / triggered).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ZJiBYXaBANxJYo7m",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.ZJiBYXaBANxJYo7m",
+      "name": "Kits need their gear",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "A Kit’s bonuses and signature ability work only with an owned qualifying weapon and armor. Without them, you fight with an **improvised weapon**: class weapon abilities still work, but no Kit bonuses apply (`08`).\n\nDisarm, confiscation, and “you woke up in a cell with a jumpsuit” are real setbacks. The runner is not helpless — they are fighting without doctrine math.",
+        "content": "<p>A Kit’s bonuses and signature ability work only with an owned qualifying weapon and armor. Without them, you fight with an <strong>improvised weapon</strong>: class weapon abilities still work, but no Kit bonuses apply (<code>08</code>).</p>\n<p>Disarm, confiscation, and “you woke up in a cell with a jumpsuit” are real setbacks. The runner is not helpless — they are fighting without doctrine math.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "vJg7M2MLrnwyvgqI",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.vJg7M2MLrnwyvgqI",
+      "name": "Connection states in combat",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Jacked In:** the runner’s body is inert on the meatspace board and can’t take real-world actions; allies usually guard it. Wire turns and Matrix Verbs are their fight (`21`).\n- **Overlaid:** the runner still stands on the street grid but takes a **bane** on real-world Power Rolls while the Wire hangs in their vision.\n- **Biofeedback** from the Wired deals damage to the runner’s Stamina when the Wire hits back (`21`).\n\nCutting between boards mid-round is normal. Finish one action on one board, then cut.",
+        "content": "<ul>\n<li><strong>Jacked In:</strong> the runner’s body is inert on the meatspace board and can’t take real-world actions; allies usually guard it. Wire turns and Matrix Verbs are their fight (<code>21</code>).</li>\n<li><strong>Overlaid:</strong> the runner still stands on the street grid but takes a <strong>bane</strong> on real-world Power Rolls while the Wire hangs in their vision.</li>\n<li><strong>Biofeedback</strong> from the Wired deals damage to the runner’s Stamina when the Wire hits back (<code>21</code>).</li>\n</ul>\n<p>Cutting between boards mid-round is normal. Finish one action on one board, then cut.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "YHapM92t3q5vj4Wk",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.YHapM92t3q5vj4Wk",
+      "name": "Chrome under fire",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "An implant can be **Suppressed** (temporarily offline), **Damaged** (works at a penalty until repaired), or **Destroyed** (benefit lost until repaired or replaced) (`09`). EMP, hostile deckers, and some workings target chrome without necessarily dropping the runner’s Stamina first.\n\nCaster soft-cap / Weave Strain for magic-primary classes is a chrome install rule (`09`), not a per-hit combat condition — but it still bites every casting Power Roll while over the cap.",
+        "content": "<p>An implant can be <strong>Suppressed</strong> (temporarily offline), <strong>Damaged</strong> (works at a penalty until repaired), or <strong>Destroyed</strong> (benefit lost until repaired or replaced) (<code>09</code>). EMP, hostile deckers, and some workings target chrome without necessarily dropping the runner’s Stamina first.</p>\n<p>Caster soft-cap / Weave Strain for magic-primary classes is a chrome install rule (<code>09</code>), not a per-hit combat condition — but it still bites every casting Power Roll while over the cap.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "CkorjHxq3neBQepX",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.CkorjHxq3neBQepX",
+      "name": "Dying, defeated, and ancestry fail states",
+      "type": "text",
+      "sort": 1300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Shared loop\n\nWhen Stamina hits **0**, a **named** runner or threat is **dying**. They fall prone. At the start of each of their turns while dying, they make a saving throw (`03`):\n\n- **Success (6+):** they stay dying but do not slide further.\n- **Failure:** they take one **dying strike**. After **three** dying strikes, they **die**.\n\nAllies can **stabilize** them (a Medicine test, a printed heal, or Catch Breath if the fiction allows). Stabilized: they stop accumulating dying strikes and sit at **1 Stamina** (or stay at 0 unconscious if the ability says so) until they take damage again. Medics and several class apexes interact with that line explicitly (`15` and others).\n\n**Defeated** opposition is usually out of the fight: fled, unconscious, bound, or dead, Director’s call for the fiction. **Nameless** opposition (minions, most street mooks) is defeated at 0 Stamina — no dying track. Named threats may use the full dying rules.\n\n### Cyborgs — System Crisis\n\n**Full Cyborgs** do not take the normal organic death spiral when they would die under the usual 0 Stamina / dying rules. They enter **System Crisis** — machine failure, Director-facing — instead (`05`). They also use **tech-only recovery**: Magic healing does not restore them; Wrench repair, Medic tech procedures, and similar do.\n\nA full System Crisis table is not locked yet; the Director adjudicates severity (reboot, limp-home mode, brick). Point players at `05` and `09` when Crisis triggers.\n\n### Revenants — inert\n\nWhen a **Revenant’s** Stamina reaches the **negative of their winded value**, they become **inert** instead of dying (`05`). They fall prone and can’t stand. They still observe, but they can’t speak or take main actions, maneuvers, move actions, or triggered actions. **Fire damage while inert destroys the body permanently.** Otherwise, after **12 hours**, they regain Stamina equal to their Recovery value.\n\nTreat inert as “down but not gone” unless fire finishes the job.",
+        "content": "<h3>Shared loop</h3>\n<p>When Stamina hits <strong>0</strong>, a <strong>named</strong> runner or threat is <strong>dying</strong>. They fall prone. At the start of each of their turns while dying, they make a saving throw (<code>03</code>):</p>\n<ul>\n<li><strong>Success (6+):</strong> they stay dying but do not slide further.</li>\n<li><strong>Failure:</strong> they take one <strong>dying strike</strong>. After <strong>three</strong> dying strikes, they <strong>die</strong>.</li>\n</ul>\n<p>Allies can <strong>stabilize</strong> them (a Medicine test, a printed heal, or Catch Breath if the fiction allows). Stabilized: they stop accumulating dying strikes and sit at <strong>1 Stamina</strong> (or stay at 0 unconscious if the ability says so) until they take damage again. Medics and several class apexes interact with that line explicitly (<code>15</code> and others).</p>\n<p><strong>Defeated</strong> opposition is usually out of the fight: fled, unconscious, bound, or dead, Director’s call for the fiction. <strong>Nameless</strong> opposition (minions, most street mooks) is defeated at 0 Stamina — no dying track. Named threats may use the full dying rules.</p>\n<h3>Cyborgs — System Crisis</h3>\n<p><strong>Full Cyborgs</strong> do not take the normal organic death spiral when they would die under the usual 0 Stamina / dying rules. They enter <strong>System Crisis</strong> — machine failure, Director-facing — instead (<code>05</code>). They also use <strong>tech-only recovery</strong>: Magic healing does not restore them; Wrench repair, Medic tech procedures, and similar do.</p>\n<p>A full System Crisis table is not locked yet; the Director adjudicates severity (reboot, limp-home mode, brick). Point players at <code>05</code> and <code>09</code> when Crisis triggers.</p>\n<h3>Revenants — inert</h3>\n<p>When a <strong>Revenant’s</strong> Stamina reaches the <strong>negative of their winded value</strong>, they become <strong>inert</strong> instead of dying (<code>05</code>). They fall prone and can’t stand. They still observe, but they can’t speak or take main actions, maneuvers, move actions, or triggered actions. <strong>Fire damage while inert destroys the body permanently.</strong> Otherwise, after <strong>12 hours</strong>, they regain Stamina equal to their Recovery value.</p>\n<p>Treat inert as “down but not gone” unless fire finishes the job.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "x8iCztfzyaEyKNwZ",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.x8iCztfzyaEyKNwZ",
+      "name": "Machines in combat",
+      "type": "text",
+      "sort": 1400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Drones and vehicles fight on the same meatspace grid as runners.\n\n- Anyone can run **one** drone within ordinary limits.\n- **Wrenches** field fleets, spend **Uptime**, and can Jump In (`16`, `23`).\n- Machine Stamina / Integrity and what “destroyed” means for a hull are in `23`.\n- Vehicle chases use a **range track**; boarding actions can dump people back onto a normal grid mid-scene.\n\nA drone’s attack is still an ability use — often a Wrench command — not a generic free strike.",
+        "content": "<p>Drones and vehicles fight on the same meatspace grid as runners.</p>\n<ul>\n<li>Anyone can run <strong>one</strong> drone within ordinary limits.</li>\n<li><strong>Wrenches</strong> field fleets, spend <strong>Uptime</strong>, and can Jump In (<code>16</code>, <code>23</code>).</li>\n<li>Machine Stamina / Integrity and what “destroyed” means for a hull are in <code>23</code>.</li>\n<li>Vehicle chases use a <strong>range track</strong>; boarding actions can dump people back onto a normal grid mid-scene.</li>\n</ul>\n<p>A drone’s attack is still an ability use — often a Wrench command — not a generic free strike.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "h7zGviItzJre4G9Z",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.h7zGviItzJre4G9Z",
+      "name": "Ending combat",
+      "type": "text",
+      "sort": 1500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Combat ends when the Director says the threat is over: hostiles fled, surrendered, dead, or the crew aborted and ran.\n\nThen:\n\n1. **Drop initiative.** Return to scene time (`01`).\n2. **Heroic resources.** Most reset or dump when the fight ends, per the class chapter. **Reagents stay where they are.**\n3. **Trace Alert, heat, and clocks** do not auto-clear — Wire and street consequences persist (`21`, `25`).\n4. **Chrome and machines** that were Damaged or wrecked stay that way until repaired (`09`, `23`).\n5. **Victories / Malice bookkeeping** follows the shared engine and `25`.\n6. **Short breath or push on.** Catch Breath and Recoveries may still be available if the fiction allows a pause; a running gunfight into the next block may not.\n\nIf the crew Jacked out mid-fight, resolve whether bodies left behind were secured. An unattended Jacked In runner is a narrative hostage situation waiting to happen.",
+        "content": "<p>Combat ends when the Director says the threat is over: hostiles fled, surrendered, dead, or the crew aborted and ran.</p>\n<p>Then:</p>\n<ol>\n<li><strong>Drop initiative.</strong> Return to scene time (<code>01</code>).</li>\n<li><strong>Heroic resources.</strong> Most reset or dump when the fight ends, per the class chapter. <strong>Reagents stay where they are.</strong></li>\n<li><strong>Trace Alert, heat, and clocks</strong> do not auto-clear — Wire and street consequences persist (<code>21</code>, <code>25</code>).</li>\n<li><strong>Chrome and machines</strong> that were Damaged or wrecked stay that way until repaired (<code>09</code>, <code>23</code>).</li>\n<li><strong>Victories / Malice bookkeeping</strong> follows the shared engine and <code>25</code>.</li>\n<li><strong>Short breath or push on.</strong> Catch Breath and Recoveries may still be available if the fiction allows a pause; a running gunfight into the next block may not.</li>\n</ol>\n<p>If the crew Jacked out mid-fight, resolve whether bodies left behind were secured. An unattended Jacked In runner is a narrative hostage situation waiting to happen.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "OKqHDgJGfkRnIy2n",
+      "_key": "!journal.pages!du2ZyhOYRjNGbhnj.OKqHDgJGfkRnIy2n",
+      "name": "Director quick reference",
+      "type": "text",
+      "sort": 1600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Need | Where |\n|---|---|\n| Power Rolls, edges/banes | `03` |\n| Peoples fail states (Crisis / inert) | `05` |\n| Kits, armor-as-Stamina, improvised | `08` |\n| Chrome Suppress/Damage/Destroy | `09` |\n| Class resources and heroics | `12`–`20` |\n| Wire boards and biofeedback | `21` |\n| Drones / vehicles | `23` |\n| Opposition / Malice | `25` |\n| Foundry free-strike strip + weapon Fire/Use | B44c / B49 (`docs/directors/equipment-use-abilities.md`) |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"need\">Need</th>\n<th id=\"where\">Where</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Power Rolls, edges/banes</td>\n<td><code>03</code></td>\n</tr>\n<tr>\n<td>Peoples fail states (Crisis / inert)</td>\n<td><code>05</code></td>\n</tr>\n<tr>\n<td>Kits, armor-as-Stamina, improvised</td>\n<td><code>08</code></td>\n</tr>\n<tr>\n<td>Chrome Suppress/Damage/Destroy</td>\n<td><code>09</code></td>\n</tr>\n<tr>\n<td>Class resources and heroics</td>\n<td><code>12</code>–<code>20</code></td>\n</tr>\n<tr>\n<td>Wire boards and biofeedback</td>\n<td><code>21</code></td>\n</tr>\n<tr>\n<td>Drones / vehicles</td>\n<td><code>23</code></td>\n</tr>\n<tr>\n<td>Opposition / Malice</td>\n<td><code>25</code></td>\n</tr>\n<tr>\n<td>Foundry free-strike strip + weapon Fire/Use</td>\n<td>B44c / B49 (<code>docs/directors/equipment-use-abilities.md</code>)</td>\n</tr>\n</tbody>\n</table>"
       },
       "category": null,
       "ownership": {

@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/00-STAGE1-skeleton.md` (Chapter 1 scope), `docs/rulebook/DS-ALIGNMENT.md`*\n\n**Engine:** Draw Steel Heroes — use the official rules for playing the game and the Director’s role; Ghostwire remaps below.",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/00-STAGE1-skeleton.md</code> (Chapter 1 scope), <code>docs/rulebook/DS-ALIGNMENT.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official rules for playing the game and the Director’s role; Ghostwire remaps below.</p>"
+        "markdown": "**Terminology:** Heroes are **Runners** (short for **Ghost Runner**); jobs are **Ghost Runs**. See Appendix A.\n\n**RAW status:** draft (Stage 3 fill 2026-09-18)  \n**Sources:** `docs/rulebook/00-STAGE1-skeleton.md` (Chapter 1 scope), `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED)  \n**Engine:** Ghostwire procedures in this book.",
+        "content": "<p><strong>Terminology:</strong> Heroes are <strong>Runners</strong> (short for <strong>Ghost Runner</strong>); jobs are <strong>Ghost Runs</strong>. See Appendix A.</p>\n<p><strong>RAW status:</strong> draft (Stage 3 fill 2026-09-18)<br />\n<strong>Sources:</strong> <code>docs/rulebook/00-STAGE1-skeleton.md</code> (Chapter 1 scope), <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/TOC-PROPOSAL.md</code> (LOCKED)<br />\n<strong>Engine:</strong> Ghostwire procedures in this book.</p>"
       },
       "category": null,
       "ownership": {
@@ -35,9 +35,9 @@
       "flags": {}
     },
     {
-      "_id": "nSRao4enP9CfqWIp",
-      "_key": "!journal.pages!wXU6EHGykeLP0LLV.nSRao4enP9CfqWIp",
-      "name": "The table",
+      "_id": "aDGDteA62hpU1fIF",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.aDGDteA62hpU1fIF",
+      "name": "What you need",
       "type": "text",
       "sort": 200000,
       "title": {
@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "One player is the **Director**. Everyone else plays a **runner** — a hero in a **crew** of professionals who take dangerous jobs for pay. The Director describes the world, plays everyone the crew meets, and runs the opposition. Players decide what their runners do.",
-        "content": "<p>One player is the <strong>Director</strong>. Everyone else plays a <strong>runner</strong> — a hero in a <strong>crew</strong> of professionals who take dangerous jobs for pay. The Director describes the world, plays everyone the crew meets, and runs the opposition. Players decide what their runners do.</p>"
+        "markdown": "To run Ghostwire you need:\n\n- **This book** (how the night is shaped, characteristics, Power Rolls, combat, nine classes, ¥ economy, chrome, the Wire, the Veil, machines, opposition).\n- **Players** — one **Director**, everyone else a **runner**.\n- **Dice** — two ten-sided dice per player for Power Rolls (`03`), plus one ten-sided die for saving throws.\n- **Something to track** Stamina, Recoveries, heroic resources, ¥, Body Integrity, and (when relevant) Wire connection state. Foundry or paper both work.\n\nYou do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition procedure lives in this book (`25`); Actor numbers live in Foundry packs if you use them. Setting color lives in Reach materials — not required for rules play.\n\n> **In Foundry**\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Open a hero sheet → **Stats**: Ghostwire adds **Body Integrity** (current/max), a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.",
+        "content": "<p>To run Ghostwire you need:</p>\n<ul>\n<li><strong>This book</strong> (how the night is shaped, characteristics, Power Rolls, combat, nine classes, ¥ economy, chrome, the Wire, the Veil, machines, opposition).</li>\n<li><strong>Players</strong> — one <strong>Director</strong>, everyone else a <strong>runner</strong>.</li>\n<li><strong>Dice</strong> — two ten-sided dice per player for Power Rolls (<code>03</code>), plus one ten-sided die for saving throws.</li>\n<li><strong>Something to track</strong> Stamina, Recoveries, heroic resources, ¥, Body Integrity, and (when relevant) Wire connection state. Foundry or paper both work.</li>\n</ul>\n<p>You do <strong>not</strong> need lore PDFs, art packs, or a bestiary reprint to start. Opposition procedure lives in this book (<code>25</code>); Actor numbers live in Foundry packs if you use them. Setting color lives in Reach materials — not required for rules play.</p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Enable <strong>Draw Steel - Ghostwire Build</strong> on a compatible Foundry world. Open a hero sheet → <strong>Stats</strong>: Ghostwire adds <strong>Body Integrity</strong> (current/max), a read-only <strong>Wired</strong> connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.</p>\n</blockquote>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "E9Bd0TjsIqYoVeVx",
-      "_key": "!journal.pages!wXU6EHGykeLP0LLV.E9Bd0TjsIqYoVeVx",
-      "name": "The shape of play",
+      "_id": "N5b7QoBGCEUEYbyf",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.N5b7QoBGCEUEYbyf",
+      "name": "The table",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Ghostwire play moves between three modes. Each uses Draw Steel’s rules, with Ghostwire additions noted in later chapters.\n\n| Mode | What happens | Ghostwire additions |\n|---|---|---|\n| **Legwork** | Getting the job, talking, investigating, sneaking, preparing | Negotiation with patrons and fixers; the Wired for information (`21`); Availability when buying gear (`08`) |\n| **The run** | The operation: infiltration, combat, chases, Wired intrusion | Connection states and Trace Alert (`21`); machines and chases (`23`); chrome failures (`09`) |\n| **Downtime** | Recovering, spending ¥, installing chrome and mods, training | ¥ spending and lifestyle (`08`); §Craft Projects (`10`); chrome surgery (`09`) |",
-        "content": "<p>Ghostwire play moves between three modes. Each uses Draw Steel’s rules, with Ghostwire additions noted in later chapters.</p>\n<table>\n<thead>\n<tr>\n<th id=\"mode\">Mode</th>\n<th id=\"what_happens\">What happens</th>\n<th id=\"ghostwire_additions\">Ghostwire additions</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Legwork</strong></td>\n<td>Getting the job, talking, investigating, sneaking, preparing</td>\n<td>Negotiation with patrons and fixers; the Wired for information (<code>21</code>); Availability when buying gear (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>The run</strong></td>\n<td>The operation: infiltration, combat, chases, Wired intrusion</td>\n<td>Connection states and Trace Alert (<code>21</code>); machines and chases (<code>23</code>); chrome failures (<code>09</code>)</td>\n</tr>\n<tr>\n<td><strong>Downtime</strong></td>\n<td>Recovering, spending ¥, installing chrome and mods, training</td>\n<td>¥ spending and lifestyle (<code>08</code>); §Craft Projects (<code>10</code>); chrome surgery (<code>09</code>)</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "One player is the **Director**. The Director describes the street, the corp floors, the Wire, and the people who live there; plays every face, fixer, corpsec squad, and ICE construct the crew meets; and decides when a roll is needed and what it risks.\n\nEveryone else plays a **runner** (also called an **edgerunner** or **hero**). Rules text may still say “hero”; at the table, say **runner**. Together the runners are a **crew** — professionals who take dangerous jobs for pay.\n\nThe Director is not an adversary. The Director makes the world push back so the crew’s choices matter. Players own their runners’ decisions: where they go, who they trust, when they jack in, when they walk away.",
+        "content": "<p>One player is the <strong>Director</strong>. The Director describes the street, the corp floors, the Wire, and the people who live there; plays every face, fixer, corpsec squad, and ICE construct the crew meets; and decides when a roll is needed and what it risks.</p>\n<p>Everyone else plays a <strong>runner</strong> (also called an <strong>edgerunner</strong> or <strong>hero</strong>). Rules text may still say “hero”; at the table, say <strong>runner</strong>. Together the runners are a <strong>crew</strong> — professionals who take dangerous jobs for pay.</p>\n<p>The Director is not an adversary. The Director makes the world push back so the crew’s choices matter. Players own their runners’ decisions: where they go, who they trust, when they jack in, when they walk away.</p>"
       },
       "category": null,
       "ownership": {
@@ -91,9 +91,9 @@
       "flags": {}
     },
     {
-      "_id": "a1YefupCOBEtYcOx",
-      "_key": "!journal.pages!wXU6EHGykeLP0LLV.a1YefupCOBEtYcOx",
-      "name": "Dice",
+      "_id": "MSNhbkFrXg6PBjzp",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.MSNhbkFrXg6PBjzp",
+      "name": "Session shape",
       "type": "text",
       "sort": 400000,
       "title": {
@@ -109,8 +109,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Ghostwire uses Draw Steel’s dice. Most rolls are **Power Rolls** on two ten-sided dice (`03`).",
-        "content": "<p>Ghostwire uses Draw Steel’s dice. Most rolls are <strong>Power Rolls</strong> on two ten-sided dice (<code>03</code>).</p>"
+        "markdown": "A typical Ghostwire session moves through the same arc as a job:\n\n1. **Cold open or hook** — a fixer calls, a contact tips a score, a problem walks into the crew’s safehouse.\n2. **Legwork** — gather intel, buy gear, negotiate pay, scout the site, prep the Wire overlay.\n3. **The run** — execute: infiltrate, fight, chase, jack in, extract.\n4. **Aftermath / downtime** — get paid, spend ¥, heal, install chrome, craft mods, burn lifestyle, set up the next job.\n\nSessions can start mid-legwork or mid-run. Some nights are pure downtime. The three **modes** below tell you which Ghostwire systems are in play; they are not a rigid clock.\n\n**One job can span several sessions.** Victories, experience, and leveling live in `24`. ¥ payouts and lifestyle burn live in `08` and `26`.",
+        "content": "<p>A typical Ghostwire session moves through the same arc as a job:</p>\n<ol>\n<li><strong>Cold open or hook</strong> — a fixer calls, a contact tips a score, a problem walks into the crew’s safehouse.</li>\n<li><strong>Legwork</strong> — gather intel, buy gear, negotiate pay, scout the site, prep the Wire overlay.</li>\n<li><strong>The run</strong> — execute: infiltrate, fight, chase, jack in, extract.</li>\n<li><strong>Aftermath / downtime</strong> — get paid, spend ¥, heal, install chrome, craft mods, burn lifestyle, set up the next job.</li>\n</ol>\n<p>Sessions can start mid-legwork or mid-run. Some nights are pure downtime. The three <strong>modes</strong> below tell you which Ghostwire systems are in play; they are not a rigid clock.</p>\n<p><strong>One job can span several sessions.</strong> Victories, experience, and leveling live in <code>24</code>. ¥ payouts and lifestyle burn live in <code>08</code> and <code>26</code>.</p>"
       },
       "category": null,
       "ownership": {
@@ -119,9 +119,9 @@
       "flags": {}
     },
     {
-      "_id": "53s9uAKAR6rwDC2H",
-      "_key": "!journal.pages!wXU6EHGykeLP0LLV.53s9uAKAR6rwDC2H",
-      "name": "Engine by reference",
+      "_id": "IzoyKLKOdEjpRQx3",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.IzoyKLKOdEjpRQx3",
+      "name": "Three modes of play",
       "type": "text",
       "sort": 500000,
       "title": {
@@ -137,8 +137,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Use Draw Steel Heroes for these rules. The Ghostwire column lists anything that changes.\n\n| Topic | Use from Draw Steel Heroes | Ghostwire |\n|---|---|---|\n| The Director’s role | As written | Same term: **Director** |\n| Heroes | As written | Called **runners** at the table; rules still say “hero” |\n| Tests, Power Rolls, edges and banes | As written | Results always written low / middle / high (`03`) |\n| Combat round, turns, actions | As written | Ghostwire keywords and connection states (`04`, `21`) |\n| Stamina, Recoveries, dying | As written | Cyborg System Crisis; Revenant inert state (`04`, `05`) |\n| Ancestries | Replaced | **Peoples** (`05`) |\n| Culture and career | Replaced | **Background** and **Profession** (`06`) |\n| Kits | Pattern kept | Ghostwire Kit list; Kits need owned gear (`08`) |\n| Wealth | Replaced | Tracked **¥**, Availability, and gear (`08`) |\n| Treasure and magic items | Replaced | Gear, chrome, mods, and foci (`08`–`10`) |\n| Perks | Pattern kept | Ghostwire perk list (`11`) |\n| Classes | Replaced | Nine Ghostwire classes (`12`–`20`) |\n| Projects, respite, downtime | As written | §Craft Projects; chrome surgery; lifestyle (`08`–`10`) |\n| Negotiation | As written | Patrons, fixers, and level-bosses use it |\n| Advancement, Victories, experience | As written | Level and echelon only; no tier ladder (`24`) |\n| Malice and monsters | As written | Ghostwire Bestiary; the Wire’s Trace Alert (`25`) |",
-        "content": "<p>Use Draw Steel Heroes for these rules. The Ghostwire column lists anything that changes.</p>\n<table>\n<thead>\n<tr>\n<th id=\"topic\">Topic</th>\n<th id=\"use_from_draw_steel_heroes\">Use from Draw Steel Heroes</th>\n<th id=\"ghostwire\">Ghostwire</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>The Director’s role</td>\n<td>As written</td>\n<td>Same term: <strong>Director</strong></td>\n</tr>\n<tr>\n<td>Heroes</td>\n<td>As written</td>\n<td>Called <strong>runners</strong> at the table; rules still say “hero”</td>\n</tr>\n<tr>\n<td>Tests, Power Rolls, edges and banes</td>\n<td>As written</td>\n<td>Results always written low / middle / high (<code>03</code>)</td>\n</tr>\n<tr>\n<td>Combat round, turns, actions</td>\n<td>As written</td>\n<td>Ghostwire keywords and connection states (<code>04</code>, <code>21</code>)</td>\n</tr>\n<tr>\n<td>Stamina, Recoveries, dying</td>\n<td>As written</td>\n<td>Cyborg System Crisis; Revenant inert state (<code>04</code>, <code>05</code>)</td>\n</tr>\n<tr>\n<td>Ancestries</td>\n<td>Replaced</td>\n<td><strong>Peoples</strong> (<code>05</code>)</td>\n</tr>\n<tr>\n<td>Culture and career</td>\n<td>Replaced</td>\n<td><strong>Background</strong> and <strong>Profession</strong> (<code>06</code>)</td>\n</tr>\n<tr>\n<td>Kits</td>\n<td>Pattern kept</td>\n<td>Ghostwire Kit list; Kits need owned gear (<code>08</code>)</td>\n</tr>\n<tr>\n<td>Wealth</td>\n<td>Replaced</td>\n<td>Tracked <strong>¥</strong>, Availability, and gear (<code>08</code>)</td>\n</tr>\n<tr>\n<td>Treasure and magic items</td>\n<td>Replaced</td>\n<td>Gear, chrome, mods, and foci (<code>08</code>–<code>10</code>)</td>\n</tr>\n<tr>\n<td>Perks</td>\n<td>Pattern kept</td>\n<td>Ghostwire perk list (<code>11</code>)</td>\n</tr>\n<tr>\n<td>Classes</td>\n<td>Replaced</td>\n<td>Nine Ghostwire classes (<code>12</code>–<code>20</code>)</td>\n</tr>\n<tr>\n<td>Projects, respite, downtime</td>\n<td>As written</td>\n<td>§Craft Projects; chrome surgery; lifestyle (<code>08</code>–<code>10</code>)</td>\n</tr>\n<tr>\n<td>Negotiation</td>\n<td>As written</td>\n<td>Patrons, fixers, and level-bosses use it</td>\n</tr>\n<tr>\n<td>Advancement, Victories, experience</td>\n<td>As written</td>\n<td>Level and echelon only; no tier ladder (<code>24</code>)</td>\n</tr>\n<tr>\n<td>Malice and monsters</td>\n<td>As written</td>\n<td>Ghostwire Bestiary; the Wire’s Trace Alert (<code>25</code>)</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "Ghostwire play moves between **legwork**, **the run**, and **downtime**. Each uses this book’s procedures (`03`, `04`). Ghostwire adds the systems in the right-hand column.\n\n| Mode | What happens | Ghostwire additions |\n|---|---|---|\n| **Legwork** | Getting the job, talking, investigating, sneaking, preparing | Negotiation with patrons and fixers; the Wired for information (`21`); Availability when buying gear (`08`) |\n| **The run** | The operation: infiltration, combat, chases, Wired intrusion | Connection states and Trace Alert (`21`); machines and chases (`23`); chrome failures (`09`) |\n| **Downtime** | Recovering, spending ¥, installing chrome and mods, training | ¥ spending and lifestyle (`08`); §Craft Projects (`10`); chrome surgery (`09`); Ritual Workings (`22`) |\n\n### Legwork\n\nLegwork is everything before the doors open. The crew finds the job, argues price, maps the site, buys what they lack, and decides who walks in meatspace versus who watches from Overlay.\n\n**Typical legwork moves:**\n\n- Meet a **fixer**, **patron**, or **level-boss** and negotiate terms (`03` Negotiation).\n- Ask around: street contacts, Background/Profession ties, Wired searches (`21`).\n- Scout physical approaches, cameras, patrols, and escape routes.\n- Shop: gear needs **Availability** and ¥ (`08`). Kits are free doctrine — they still need **owned** qualifying gear.\n- Prep the Wire: board layout, decoys, who holds Overlay vs who stays dark.\n\nLegwork ends when the crew commits — they breach, they jack in for real, they take the shot. The Director can cut to the run whenever preparation stops changing the plan.\n\n### The run\n\nThe run is the operation itself. Time compresses. Mistakes cost Stamina, Trace Alert, chrome, and sometimes the whole score.\n\n**Typical run beats:**\n\n- Infiltration and social cover while the site is still quiet.\n- Combat when cover fails or the plan calls for violence (`04`).\n- Chases on foot, in vehicles, or both (`23`).\n- Wired intrusion: Overlay support or full Jacked In (`21`). Trace Alert rises when the system notices.\n- Chrome strain: Body Integrity is already spent at install; System Crisis and implant failures show up under pressure (`09`, `05`).\n- Extraction: get the package, the data, and the crew out before the net closes.\n\nThe Director keeps the table in **one mode at a time** when possible. If half the crew is Jacked In and half is kicking doors, cut between the Wire board and the hallway in short beats so nobody sits dark for long.\n\n### Downtime\n\nDowntime is the breath between jobs. The crew spends ¥, recovers, upgrades, and lives with the cost of staying sharp.\n\n**Typical downtime moves:**\n\n- Get paid (¥). Pay **lifestyle** burn when that table lands (`08`, `26`).\n- Rest and recover Stamina / Recoveries (`04`, `26`).\n- Install or remove **chrome** (`09`); install **mods** or run a **§Craft Project** (`10`).\n- Train, take a Perk when advancement allows (`11`, `24`).\n- Veil casters may attempt **Ritual Workings** (`22`).\n- Medic restock and similar class downtime hooks use the Lifestyle quotes in `26`.\n\nDowntime is not “nothing happens.” Corps retaliate, contacts call in favors, Trace Alert leftovers become heat. Keep it short unless the table wants a shopping episode.",
+        "content": "<p>Ghostwire play moves between <strong>legwork</strong>, <strong>the run</strong>, and <strong>downtime</strong>. Each uses this book’s procedures (<code>03</code>, <code>04</code>). Ghostwire adds the systems in the right-hand column.</p>\n<table>\n<thead>\n<tr>\n<th id=\"mode\">Mode</th>\n<th id=\"what_happens\">What happens</th>\n<th id=\"ghostwire_additions\">Ghostwire additions</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Legwork</strong></td>\n<td>Getting the job, talking, investigating, sneaking, preparing</td>\n<td>Negotiation with patrons and fixers; the Wired for information (<code>21</code>); Availability when buying gear (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>The run</strong></td>\n<td>The operation: infiltration, combat, chases, Wired intrusion</td>\n<td>Connection states and Trace Alert (<code>21</code>); machines and chases (<code>23</code>); chrome failures (<code>09</code>)</td>\n</tr>\n<tr>\n<td><strong>Downtime</strong></td>\n<td>Recovering, spending ¥, installing chrome and mods, training</td>\n<td>¥ spending and lifestyle (<code>08</code>); §Craft Projects (<code>10</code>); chrome surgery (<code>09</code>); Ritual Workings (<code>22</code>)</td>\n</tr>\n</tbody>\n</table>\n<h3>Legwork</h3>\n<p>Legwork is everything before the doors open. The crew finds the job, argues price, maps the site, buys what they lack, and decides who walks in meatspace versus who watches from Overlay.</p>\n<p><strong>Typical legwork moves:</strong></p>\n<ul>\n<li>Meet a <strong>fixer</strong>, <strong>patron</strong>, or <strong>level-boss</strong> and negotiate terms (<code>03</code> Negotiation).</li>\n<li>Ask around: street contacts, Background/Profession ties, Wired searches (<code>21</code>).</li>\n<li>Scout physical approaches, cameras, patrols, and escape routes.</li>\n<li>Shop: gear needs <strong>Availability</strong> and ¥ (<code>08</code>). Kits are free doctrine — they still need <strong>owned</strong> qualifying gear.</li>\n<li>Prep the Wire: board layout, decoys, who holds Overlay vs who stays dark.</li>\n</ul>\n<p>Legwork ends when the crew commits — they breach, they jack in for real, they take the shot. The Director can cut to the run whenever preparation stops changing the plan.</p>\n<h3>The run</h3>\n<p>The run is the operation itself. Time compresses. Mistakes cost Stamina, Trace Alert, chrome, and sometimes the whole score.</p>\n<p><strong>Typical run beats:</strong></p>\n<ul>\n<li>Infiltration and social cover while the site is still quiet.</li>\n<li>Combat when cover fails or the plan calls for violence (<code>04</code>).</li>\n<li>Chases on foot, in vehicles, or both (<code>23</code>).</li>\n<li>Wired intrusion: Overlay support or full Jacked In (<code>21</code>). Trace Alert rises when the system notices.</li>\n<li>Chrome strain: Body Integrity is already spent at install; System Crisis and implant failures show up under pressure (<code>09</code>, <code>05</code>).</li>\n<li>Extraction: get the package, the data, and the crew out before the net closes.</li>\n</ul>\n<p>The Director keeps the table in <strong>one mode at a time</strong> when possible. If half the crew is Jacked In and half is kicking doors, cut between the Wire board and the hallway in short beats so nobody sits dark for long.</p>\n<h3>Downtime</h3>\n<p>Downtime is the breath between jobs. The crew spends ¥, recovers, upgrades, and lives with the cost of staying sharp.</p>\n<p><strong>Typical downtime moves:</strong></p>\n<ul>\n<li>Get paid (¥). Pay <strong>lifestyle</strong> burn when that table lands (<code>08</code>, <code>26</code>).</li>\n<li>Rest and recover Stamina / Recoveries (<code>04</code>, <code>26</code>).</li>\n<li>Install or remove <strong>chrome</strong> (<code>09</code>); install <strong>mods</strong> or run a <strong>§Craft Project</strong> (<code>10</code>).</li>\n<li>Train, take a Perk when advancement allows (<code>11</code>, <code>24</code>).</li>\n<li>Veil casters may attempt <strong>Ritual Workings</strong> (<code>22</code>).</li>\n<li>Medic restock and similar class downtime hooks use the Lifestyle quotes in <code>26</code>.</li>\n</ul>\n<p>Downtime is not “nothing happens.” Corps retaliate, contacts call in favors, Trace Alert leftovers become heat. Keep it short unless the table wants a shopping episode.</p>"
       },
       "category": null,
       "ownership": {
@@ -147,9 +147,9 @@
       "flags": {}
     },
     {
-      "_id": "vCqT8MjoYnlso91I",
-      "_key": "!journal.pages!wXU6EHGykeLP0LLV.vCqT8MjoYnlso91I",
-      "name": "Ghostwire’s additions at a glance",
+      "_id": "zeXrzElyPXDp5EsU",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.zeXrzElyPXDp5EsU",
+      "name": "Dice",
       "type": "text",
       "sort": 600000,
       "title": {
@@ -165,8 +165,176 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "- **Money is real.** Runners track ¥ and buy the gear their Kits need (`08`).\n- **Chrome costs flesh.** Living runners spend Body Integrity on implants (`09`).\n- **The Wired is a second battlefield.** Every runner can connect; Hackers and Technomancers live there (`21`).\n- **Magic is rare and costly.** Veil casters fight chrome and Cyborgs can’t cast (`22`).\n- **Machines are allies.** Anyone can run one drone; Wrenches run fleets (`23`).",
-        "content": "<ul>\n<li><strong>Money is real.</strong> Runners track ¥ and buy the gear their Kits need (<code>08</code>).</li>\n<li><strong>Chrome costs flesh.</strong> Living runners spend Body Integrity on implants (<code>09</code>).</li>\n<li><strong>The Wired is a second battlefield.</strong> Every runner can connect; Hackers and Technomancers live there (<code>21</code>).</li>\n<li><strong>Magic is rare and costly.</strong> Veil casters fight chrome and Cyborgs can’t cast (<code>22</code>).</li>\n<li><strong>Machines are allies.</strong> Anyone can run one drone; Wrenches run fleets (<code>23</code>).</li>\n</ul>"
+        "markdown": "Ghostwire uses two ten-sided dice for almost every uncertain action. Most tests resolve as a **Power Roll**: two ten-sided dice plus a characteristic, read as **low / middle / high** (≤11 / 12–16 / 17+). Full procedure, edges, banes, skills, and Heroes’ Fortune live in `03`.\n\nWhen a chapter says “Power Roll (Logic)” or “Power Roll vs Node Rating,” use that chapter’s modifiers on top of the shared engine — do not invent a third resolution system.",
+        "content": "<p>Ghostwire uses two ten-sided dice for almost every uncertain action. Most tests resolve as a <strong>Power Roll</strong>: two ten-sided dice plus a characteristic, read as <strong>low / middle / high</strong> (≤11 / 12–16 / 17+). Full procedure, edges, banes, skills, and Heroes’ Fortune live in <code>03</code>.</p>\n<p>When a chapter says “Power Roll (Logic)” or “Power Roll vs Node Rating,” use that chapter’s modifiers on top of the shared engine — do not invent a third resolution system.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "1Q31Bg8JelbjOscy",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.1Q31Bg8JelbjOscy",
+      "name": "What happens at the table",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Conversation first\n\nMost of the night is talk. The Director frames a situation; runners say what they do; the Director says what follows. Roll when the outcome is uncertain **and** failure (or a middling success) would change something the crew cares about.\n\nDo not roll for trivia. Do roll when the runner is lying to a corp handler, sprinting a blind corner, forcing a locked node, or keeping a dying teammate upright.\n\n### Characteristics in play\n\nGhostwire’s five characteristics are **Physique, Reflex, Logic, Instinct, Persona** (`02`). Those names are primary in this book.\n\n### Resources you will see every session\n\n| Resource | Who tracks it | Notes |\n|---|---|---|\n| **Stamina / Recoveries** | Every runner | Shared engine (`04`) |\n| **Heroic resource** | Every class | Adrenaline, Advantage, Influence, Reagents, Uptime, Essence, Conviction, Bandwidth, Resonance (`04`, class chapters) |\n| **¥** | Every runner / crew | Buys gear and services — never characteristic scores or class power (`08`) |\n| **Body Integrity** | Living chrome users | Starts at 20; spent on implants (`09`). Cyborgs use Frame Modules instead |\n| **Connection state** | Anyone on the Wire | Overlay vs Jacked In; Trace Alert is the system’s heat (`21`) |\n\n### When systems collide\n\nA single beat can touch several chapters: a Wrench’s drone covers a hallway (`23`) while a Hacker fights ICE (`21`) and an Operator bleeds Stamina (`04`). Resolve one action at a time. The Director picks the active board (meatspace or Wire), resolves that runner’s move, then cuts.\n\nChrome does not cancel magic by itself — **Cyborg Arcane Severance** and Veil erosion rules do (`05`, `09`, `22`). Money never buys a better Power Roll; it buys the tool you already trained to use.",
+        "content": "<h3>Conversation first</h3>\n<p>Most of the night is talk. The Director frames a situation; runners say what they do; the Director says what follows. Roll when the outcome is uncertain <strong>and</strong> failure (or a middling success) would change something the crew cares about.</p>\n<p>Do not roll for trivia. Do roll when the runner is lying to a corp handler, sprinting a blind corner, forcing a locked node, or keeping a dying teammate upright.</p>\n<h3>Characteristics in play</h3>\n<p>Ghostwire’s five characteristics are <strong>Physique, Reflex, Logic, Instinct, Persona</strong> (<code>02</code>). Those names are primary in this book.</p>\n<h3>Resources you will see every session</h3>\n<table>\n<thead>\n<tr>\n<th id=\"resource\">Resource</th>\n<th id=\"who_tracks_it\">Who tracks it</th>\n<th id=\"notes\">Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Stamina / Recoveries</strong></td>\n<td>Every runner</td>\n<td>Shared engine (<code>04</code>)</td>\n</tr>\n<tr>\n<td><strong>Heroic resource</strong></td>\n<td>Every class</td>\n<td>Adrenaline, Advantage, Influence, Reagents, Uptime, Essence, Conviction, Bandwidth, Resonance (<code>04</code>, class chapters)</td>\n</tr>\n<tr>\n<td><strong>¥</strong></td>\n<td>Every runner / crew</td>\n<td>Buys gear and services — never characteristic scores or class power (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Body Integrity</strong></td>\n<td>Living chrome users</td>\n<td>Starts at 20; spent on implants (<code>09</code>). Cyborgs use Frame Modules instead</td>\n</tr>\n<tr>\n<td><strong>Connection state</strong></td>\n<td>Anyone on the Wire</td>\n<td>Overlay vs Jacked In; Trace Alert is the system’s heat (<code>21</code>)</td>\n</tr>\n</tbody>\n</table>\n<h3>When systems collide</h3>\n<p>A single beat can touch several chapters: a Wrench’s drone covers a hallway (<code>23</code>) while a Hacker fights ICE (<code>21</code>) and an Operator bleeds Stamina (<code>04</code>). Resolve one action at a time. The Director picks the active board (meatspace or Wire), resolves that runner’s move, then cuts.</p>\n<p>Chrome does not cancel magic by itself — <strong>Cyborg Arcane Severance</strong> and Veil erosion rules do (<code>05</code>, <code>09</code>, <code>22</code>). Money never buys a better Power Roll; it buys the tool you already trained to use.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "DzU72Uqsc8BqMf9D",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.DzU72Uqsc8BqMf9D",
+      "name": "Table tone and safety",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire is street-level cyberpunk: violence, corp predation, body modification, and digital violation are on the table. That does not mean every table wants every beat.\n\nBefore the first session, the Director and players agree on **hard lines** (topics that stay out) and **soft lines** (fade to black / skip detail). Use any tool the group already likes — lines and veils, an X-card, a pause phrase. Ghostwire does not require a specific safety mechanic; it requires that the table has one and that the Director honors it without debate in the moment.\n\nIn play, keep the tone **professional and consequential**. Glamorize competence, not cruelty. When a scene would cross a hard line, cut or reframe. When chrome surgery, interrogation, or Wire biofeedback would get graphic past the group’s soft line, summarize the outcome and move on.\n\nThe Director may pause any scene. Players may pause any scene. Pausing is not a rules failure.",
+        "content": "<p>Ghostwire is street-level cyberpunk: violence, corp predation, body modification, and digital violation are on the table. That does not mean every table wants every beat.</p>\n<p>Before the first session, the Director and players agree on <strong>hard lines</strong> (topics that stay out) and <strong>soft lines</strong> (fade to black / skip detail). Use any tool the group already likes — lines and veils, an X-card, a pause phrase. Ghostwire does not require a specific safety mechanic; it requires that the table has one and that the Director honors it without debate in the moment.</p>\n<p>In play, keep the tone <strong>professional and consequential</strong>. Glamorize competence, not cruelty. When a scene would cross a hard line, cut or reframe. When chrome surgery, interrogation, or Wire biofeedback would get graphic past the group’s soft line, summarize the outcome and move on.</p>\n<p>The Director may pause any scene. Players may pause any scene. Pausing is not a rules failure.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "lhchfXAsEs3zks9P",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.lhchfXAsEs3zks9P",
+      "name": "Where the loops live (short)",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Resolve the night from **this book**. The left column is the procedure; the right column is the Ghostwire rename or add-on.\n\n| Topic | This book | Ghostwire add or rename |\n|---|---|---|\n| Director’s role | This chapter | Same term: **Director** |\n| Heroes / party | This chapter | **Runners** / **crew** at the table; rules may still say “hero” |\n| Tests, Power Rolls, edges/banes | `03` | Results always **low / middle / high** |\n| Combat loop | `04` | GW keywords + Wire connection states (`21`) |\n| Stamina, Recoveries, dying | `04` | + Cyborg System Crisis; Revenant inert (`05`) |\n| Ancestries | Replaced | **Peoples** (`05`) |\n| Culture / career | Replaced | **Background** / **Profession** (`06`) |\n| Kits | `08` | GW Kit list; needs owned gear |\n| Wealth | Replaced | Tracked **¥** + Availability (`08`) |\n| Treasure / magic items | Replaced | Gear, chrome, mods, foci (`08`–`10`) |\n| Perks / classes | `11`, `12`–`20` | GW perks; nine classes |\n| Projects / respite / downtime | `03`, `26` | + §Craft, chrome surgery, lifestyle (`08`–`10`) |\n| Negotiation | `03` | Fixers, patrons, level-bosses |\n| Advancement | `24` | Levels + **Echelon** only — no tier ladder |\n| Malice / monsters | `25` | GW Bestiary + Trace Alert (`21`) |",
+        "content": "<p>Resolve the night from <strong>this book</strong>. The left column is the procedure; the right column is the Ghostwire rename or add-on.</p>\n<table>\n<thead>\n<tr>\n<th id=\"topic\">Topic</th>\n<th id=\"this_book\">This book</th>\n<th id=\"ghostwire_add_or_rename\">Ghostwire add or rename</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Director’s role</td>\n<td>This chapter</td>\n<td>Same term: <strong>Director</strong></td>\n</tr>\n<tr>\n<td>Heroes / party</td>\n<td>This chapter</td>\n<td><strong>Runners</strong> / <strong>crew</strong> at the table; rules may still say “hero”</td>\n</tr>\n<tr>\n<td>Tests, Power Rolls, edges/banes</td>\n<td><code>03</code></td>\n<td>Results always <strong>low / middle / high</strong></td>\n</tr>\n<tr>\n<td>Combat loop</td>\n<td><code>04</code></td>\n<td>GW keywords + Wire connection states (<code>21</code>)</td>\n</tr>\n<tr>\n<td>Stamina, Recoveries, dying</td>\n<td><code>04</code></td>\n<td>+ Cyborg System Crisis; Revenant inert (<code>05</code>)</td>\n</tr>\n<tr>\n<td>Ancestries</td>\n<td>Replaced</td>\n<td><strong>Peoples</strong> (<code>05</code>)</td>\n</tr>\n<tr>\n<td>Culture / career</td>\n<td>Replaced</td>\n<td><strong>Background</strong> / <strong>Profession</strong> (<code>06</code>)</td>\n</tr>\n<tr>\n<td>Kits</td>\n<td><code>08</code></td>\n<td>GW Kit list; needs owned gear</td>\n</tr>\n<tr>\n<td>Wealth</td>\n<td>Replaced</td>\n<td>Tracked <strong>¥</strong> + Availability (<code>08</code>)</td>\n</tr>\n<tr>\n<td>Treasure / magic items</td>\n<td>Replaced</td>\n<td>Gear, chrome, mods, foci (<code>08</code>–<code>10</code>)</td>\n</tr>\n<tr>\n<td>Perks / classes</td>\n<td><code>11</code>, <code>12</code>–<code>20</code></td>\n<td>GW perks; nine classes</td>\n</tr>\n<tr>\n<td>Projects / respite / downtime</td>\n<td><code>03</code>, <code>26</code></td>\n<td>+ §Craft, chrome surgery, lifestyle (<code>08</code>–<code>10</code>)</td>\n</tr>\n<tr>\n<td>Negotiation</td>\n<td><code>03</code></td>\n<td>Fixers, patrons, level-bosses</td>\n</tr>\n<tr>\n<td>Advancement</td>\n<td><code>24</code></td>\n<td>Levels + <strong>Echelon</strong> only — no tier ladder</td>\n</tr>\n<tr>\n<td>Malice / monsters</td>\n<td><code>25</code></td>\n<td>GW Bestiary + Trace Alert (<code>21</code>)</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ESwWM9audP8Bt3uO",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.ESwWM9audP8Bt3uO",
+      "name": "Ghostwire’s additions at a glance",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Money is real.** Runners track ¥ and buy the gear their Kits need (`08`).\n- **Chrome costs flesh.** Living runners spend Body Integrity on implants (`09`). Cyborgs take Frame Modules and cannot cast Veil magic.\n- **The Wired is a second battlefield.** Every runner can connect; Hackers and Technomancers live there (`21`).\n- **Magic is rare and costly.** Veil casters fight chrome erosion; Cyborgs are severed from the Veil (`22`).\n- **Machines are allies.** Anyone with a qualifying air scout drone gets **Street Eye** (Companion Link); Wrenches still run fleets, Jump-In, and Deploy & Command (`23`, `16`).\n- **Lifestyle matters.** Burn, Medic restock quotes, and downtime projects live in print Ch 10 (`26`).",
+        "content": "<ul>\n<li><strong>Money is real.</strong> Runners track ¥ and buy the gear their Kits need (<code>08</code>).</li>\n<li><strong>Chrome costs flesh.</strong> Living runners spend Body Integrity on implants (<code>09</code>). Cyborgs take Frame Modules and cannot cast Veil magic.</li>\n<li><strong>The Wired is a second battlefield.</strong> Every runner can connect; Hackers and Technomancers live there (<code>21</code>).</li>\n<li><strong>Magic is rare and costly.</strong> Veil casters fight chrome erosion; Cyborgs are severed from the Veil (<code>22</code>).</li>\n<li><strong>Machines are allies.</strong> Anyone with a qualifying air scout drone gets <strong>Street Eye</strong> (Companion Link); Wrenches still run fleets, Jump-In, and Deploy &amp; Command (<code>23</code>, <code>16</code>).</li>\n<li><strong>Lifestyle matters.</strong> Burn, Medic restock quotes, and downtime projects live in print Ch 10 (<code>26</code>).</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "IU0r4GjHe7RW5VhD",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.IU0r4GjHe7RW5VhD",
+      "name": "Remap cheat sheet",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Keep these renames straight; they appear everywhere.\n\n| Older / sheet alias | Ghostwire term |\n|---|---|\n| Ancestry | **People** |\n| Culture | **Background** |\n| Career | **Profession** |\n| Wealth abstraction | **¥** (nuyen) + Availability |\n| (Ghostwire-original) | **Wire**: Overlay / Jacked In / Trace Alert |\n| (Ghostwire-original) | **Veil** (magic layer; Rituals + summons) |\n| (Ghostwire-original) | **Chrome** / **Body Integrity** |",
+        "content": "<p>Keep these renames straight; they appear everywhere.</p>\n<table>\n<thead>\n<tr>\n<th id=\"older_/_sheet_alias\">Older / sheet alias</th>\n<th id=\"ghostwire_term\">Ghostwire term</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Ancestry</td>\n<td><strong>People</strong></td>\n</tr>\n<tr>\n<td>Culture</td>\n<td><strong>Background</strong></td>\n</tr>\n<tr>\n<td>Career</td>\n<td><strong>Profession</strong></td>\n</tr>\n<tr>\n<td>Wealth abstraction</td>\n<td><strong>¥</strong> (nuyen) + Availability</td>\n</tr>\n<tr>\n<td>(Ghostwire-original)</td>\n<td><strong>Wire</strong>: Overlay / Jacked In / Trace Alert</td>\n</tr>\n<tr>\n<td>(Ghostwire-original)</td>\n<td><strong>Veil</strong> (magic layer; Rituals + summons)</td>\n</tr>\n<tr>\n<td>(Ghostwire-original)</td>\n<td><strong>Chrome</strong> / <strong>Body Integrity</strong></td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "J5RghFaJ9h3i1TFE",
+      "_key": "!journal.pages!wXU6EHGykeLP0LLV.J5RghFaJ9h3i1TFE",
+      "name": "Where to go next",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| If you are… | Read next |\n|---|---|\n| Making a runner | `02` → People `05` → Background/Profession `06` → class `12`–`20` → Kit/gear `08` |\n| Learning the dice | `03` Tests and Power Rolls |\n| About to fight | `04` Combat |\n| Jacking in | `21` The Wire |\n| Casting or summoning | `22` The Veil |\n| Running drones/vehicles | `23` Machines |\n| Directing opposition | `25` Opposition |\n\nThis chapter tells you **how the night is shaped**. Later chapters tell you **how each system resolves**. This book is the play rules.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"if_you_are…\">If you are…</th>\n<th id=\"read_next\">Read next</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Making a runner</td>\n<td><code>02</code> → People <code>05</code> → Background/Profession <code>06</code> → class <code>12</code>–<code>20</code> → Kit/gear <code>08</code></td>\n</tr>\n<tr>\n<td>Learning the dice</td>\n<td><code>03</code> Tests and Power Rolls</td>\n</tr>\n<tr>\n<td>About to fight</td>\n<td><code>04</code> Combat</td>\n</tr>\n<tr>\n<td>Jacking in</td>\n<td><code>21</code> The Wire</td>\n</tr>\n<tr>\n<td>Casting or summoning</td>\n<td><code>22</code> The Veil</td>\n</tr>\n<tr>\n<td>Running drones/vehicles</td>\n<td><code>23</code> Machines</td>\n</tr>\n<tr>\n<td>Directing opposition</td>\n<td><code>25</code> Opposition</td>\n</tr>\n</tbody>\n</table>\n<p>This chapter tells you <strong>how the night is shaped</strong>. Later chapters tell you <strong>how each system resolves</strong>. This book is the play rules.</p>"
       },
       "category": null,
       "ownership": {

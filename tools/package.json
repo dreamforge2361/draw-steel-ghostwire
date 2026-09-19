@@ -1,0 +1,10 @@
+{
+  "name": "ghostwire-foundry-tools",
+  "private": true,
+  "description": "Optional npm deps for journal/pack tools when FOUNDRY_APP is not installed.",
+  "type": "module",
+  "dependencies": {
+    "classic-level": "^3.0.0",
+    "showdown": "^2.1.0"
+  }
+}

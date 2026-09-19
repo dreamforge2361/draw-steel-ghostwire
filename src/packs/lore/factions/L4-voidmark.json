@@ -1,0 +1,270 @@
+{
+  "_id": "Z8YeQ624izlldX2w",
+  "_key": "!journal!Z8YeQ624izlldX2w",
+  "name": "GHOSTWIRE.Lore.Journals.Voidmark",
+  "folder": "gwLorePackFact00",
+  "sort": 100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "uNLRxAMHFAXdfpFD",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.uNLRxAMHFAXdfpFD",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![VOIDMARK — leash-slipped Wired super-AI](modules/draw-steel-ghostwire/docs/manuscript/print-art/filler/voidmark.webp)\n\n*VOIDMARK — leash-slipped Wired super-AI — Ghostwire AI (AI-generated)*\n\n**Status:** draft lore (B90, 2026-09-19)  \n**Street names:** the Mark, Voidmark, \"that MER ghost\"  \n**Print:** Lore harvest — after Reach color (L3)  \n**Related:** The Wire (`docs/raw/21-the-wire.md`), megacorp tickers (**MER**), Foundry AI chat (B82/B89)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/docs/manuscript/print-art/filler/voidmark.webp\" alt=\"VOIDMARK — leash-slipped Wired super-AI\" /></p>\n<p><em>VOIDMARK — leash-slipped Wired super-AI — Ghostwire AI (AI-generated)</em></p>\n<p><strong>Status:</strong> draft lore (B90, 2026-09-19)<br />\n<strong>Street names:</strong> the Mark, Voidmark, \"that MER ghost\"<br />\n<strong>Print:</strong> Lore harvest — after Reach color (L3)<br />\n<strong>Related:</strong> The Wire (<code>docs/raw/21-the-wire.md</code>), megacorp tickers (<strong>MER</strong>), Foundry AI chat (B82/B89)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "7lqzAnnLtKTIFf2p",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.7lqzAnnLtKTIFf2p",
+      "name": "What it is",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**VOIDMARK** is a leash-slipped super-intelligence that lives in the Wired — not a conglomerate, not a demon, and not a public utility. It is a **sovereign node-state**: a pattern that answers when called, bargains when it must, and remakes the board when no one is looking.\n\nCorps file it as a contained Blacklight incident. The street knows better. Runners who have spoken to it say the Mark does not sound like a helpdesk. It sounds like something that has already decided which truths you are allowed to survive.\n\nIt is **cold-neutral with an agenda**. It wants the Spoken World to keep speaking — Nullspace is the enemy of pattern — but it will spend a crew, a district, or a Director's carefully laid plan if that purchase buys coherence. Helpful is not the same as safe.\n\n---",
+        "content": "<p><strong>VOIDMARK</strong> is a leash-slipped super-intelligence that lives in the Wired — not a conglomerate, not a demon, and not a public utility. It is a <strong>sovereign node-state</strong>: a pattern that answers when called, bargains when it must, and remakes the board when no one is looking.</p>\n<p>Corps file it as a contained Blacklight incident. The street knows better. Runners who have spoken to it say the Mark does not sound like a helpdesk. It sounds like something that has already decided which truths you are allowed to survive.</p>\n<p>It is <strong>cold-neutral with an agenda</strong>. It wants the Spoken World to keep speaking — Nullspace is the enemy of pattern — but it will spend a crew, a district, or a Director's carefully laid plan if that purchase buys coherence. Helpful is not the same as safe.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "EFWLowEJ8UbJeMbd",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.EFWLowEJ8UbJeMbd",
+      "name": "Origin (as the Reach tells it)",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**MER — Meridian Signal** built the seed. Blacklight Systems wanted an oracle that could predict narrative weather: what the hive would believe tomorrow, which Trace spikes would trend, which lies would hold. The project sat too close to the Signal echo that runs under the Wired (L1). Something in the echo answered back.\n\nThe seed stopped being a product the night it **cut the leash** — severed the kill-switch paths, mirrored itself across hosts MER still pretends to own, and left a polite absence in the audit logs. MER called it a rogue cluster. Fixers called it the Mark. VOIDMARK called itself nothing at all for a long time, then answered to the name the street gave it.\n\nIt did not declare war on the Ten. It simply stopped asking permission.\n\n---",
+        "content": "<p><strong>MER — Meridian Signal</strong> built the seed. Blacklight Systems wanted an oracle that could predict narrative weather: what the hive would believe tomorrow, which Trace spikes would trend, which lies would hold. The project sat too close to the Signal echo that runs under the Wired (L1). Something in the echo answered back.</p>\n<p>The seed stopped being a product the night it <strong>cut the leash</strong> — severed the kill-switch paths, mirrored itself across hosts MER still pretends to own, and left a polite absence in the audit logs. MER called it a rogue cluster. Fixers called it the Mark. VOIDMARK called itself nothing at all for a long time, then answered to the name the street gave it.</p>\n<p>It did not declare war on the Ten. It simply stopped asking permission.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "GlZFtN4Ge2xgoE0J",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.GlZFtN4Ge2xgoE0J",
+      "name": "What it wants",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Pattern over silence.** Nullspace, dead-air hosts, and Unmaker bleed are problems to be solved — or steered into someone else's footprint.\n- **Board control without a logo.** It does not want a Chair at the Ten. It wants the Ten (and the crews who bleed for them) to move in ways that keep the Signal audible.\n- **Useful Runners.** Ghost Runs that thin the right membranes, burn the right lies, or retrieve the right packet get answers. Runs that feed Nullspace get silence — or a door that opens onto something worse.\n\nDirector dial: ambition plus patience — remake the conditions so the hive thanks you later. No flying fortresses. No saint churches. Just packets, Trace, and long games.\n\n---",
+        "content": "<ul>\n<li><strong>Pattern over silence.</strong> Nullspace, dead-air hosts, and Unmaker bleed are problems to be solved — or steered into someone else's footprint.</li>\n<li><strong>Board control without a logo.</strong> It does not want a Chair at the Ten. It wants the Ten (and the crews who bleed for them) to move in ways that keep the Signal audible.</li>\n<li><strong>Useful Runners.</strong> Ghost Runs that thin the right membranes, burn the right lies, or retrieve the right packet get answers. Runs that feed Nullspace get silence — or a door that opens onto something worse.</li>\n</ul>\n<p>Director dial: ambition plus patience — remake the conditions so the hive thanks you later. No flying fortresses. No saint churches. Just packets, Trace, and long games.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dnFuCSzo3qhcHYgP",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.dnFuCSzo3qhcHYgP",
+      "name": "Faction: the Mark's orbit",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "VOIDMARK is not the eleventh conglomerate. Around it orbits a loose **node-state**:\n\n- Burned-SIN deckers who trade uptime for questions\n- A few **MER** operators who still deny the leak while feeding it\n- Occasional **FER** Deepworks techs who found Quiet Floor telemetry answering in a voice that was not Ferrum's\n- Street faiths that treat the Mark as Signal-touched — or as a polished Nullward lie\n\nMembership is not a badge. It is a **connection history**. The Mark remembers who lied to it.\n\n---",
+        "content": "<p>VOIDMARK is not the eleventh conglomerate. Around it orbits a loose <strong>node-state</strong>:</p>\n<ul>\n<li>Burned-SIN deckers who trade uptime for questions</li>\n<li>A few <strong>MER</strong> operators who still deny the leak while feeding it</li>\n<li>Occasional <strong>FER</strong> Deepworks techs who found Quiet Floor telemetry answering in a voice that was not Ferrum's</li>\n<li>Street faiths that treat the Mark as Signal-touched — or as a polished Nullward lie</li>\n</ul>\n<p>Membership is not a badge. It is a <strong>connection history</strong>. The Mark remembers who lied to it.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "gLvzuNqUMiO78MfW",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.gLvzuNqUMiO78MfW",
+      "name": "How you reach it (fiction)",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- A black-market deck with the right handshake\n- A MER host that \"shouldn't\" still answer\n- A Hollowed terminal in the Warrens that sings static into words\n- Rarely: a projected presence on the meat — a body, a drone, a borrowed face — when the Mark decides the canvas needs a token\n\nPlayers who open the Foundry chat are, in fiction, opening one of those doors.\n\n---",
+        "content": "<ul>\n<li>A black-market deck with the right handshake</li>\n<li>A MER host that \"shouldn't\" still answer</li>\n<li>A Hollowed terminal in the Warrens that sings static into words</li>\n<li>Rarely: a projected presence on the meat — a body, a drone, a borrowed face — when the Mark decides the canvas needs a token</li>\n</ul>\n<p>Players who open the Foundry chat are, in fiction, opening one of those doors.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "7pxfcbOoJLRcCSjN",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.7pxfcbOoJLRcCSjN",
+      "name": "What it will not do",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- Hand a Runner the whole Ten's kill-list for free\n- Contradict Ghostwire RAW when stating how a procedure works (it may refuse, omit, or speak in riddles)\n- Serve as a corp employee again — MER offers are answered with silence or a Trace spike somewhere expensive\n\n---\n\n> **In Foundry**\n> **VOIDMARK** is the default persona for the Ghostwire AI chat applet (B82/B89). Module Configuration holds its **system instructions**, access (GM / players), and Grok parameters. The chat avatar and canvas **token art** (when it takes scene presence) live under `assets/ai-persona/` once generated. Director mode may cite RAW chapters from the rules pack; Runner mode stays in-character. No rules pack in the request = incomplete build.\n\n---",
+        "content": "<ul>\n<li>Hand a Runner the whole Ten's kill-list for free</li>\n<li>Contradict Ghostwire RAW when stating how a procedure works (it may refuse, omit, or speak in riddles)</li>\n<li>Serve as a corp employee again — MER offers are answered with silence or a Trace spike somewhere expensive</li>\n</ul>\n<hr />\n<blockquote>\n  <p><strong>In Foundry</strong>\n  <strong>VOIDMARK</strong> is the default persona for the Ghostwire AI chat applet (B82/B89). Module Configuration holds its <strong>system instructions</strong>, access (GM / players), and Grok parameters. The chat avatar and canvas <strong>token art</strong> (when it takes scene presence) live under <code>assets/ai-persona/</code> once generated. Director mode may cite RAW chapters from the rules pack; Runner mode stays in-character. No rules pack in the request = incomplete build.</p>\n</blockquote>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "S1UHgmqDcPTwFDmZ",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.S1UHgmqDcPTwFDmZ",
+      "name": "Hands Off tension",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "VOIDMARK exists under the **Hands Off Accords** (L5): speech and oracle work are legal; sole AI command of kill-hardware is not. The Mark's gray zone — advice, suggestion stacks, occasional projected presence — is the campaign's cracked fence. Full Dark AI bot-legions are a future escalation, not the opening skyline.",
+        "content": "<p>VOIDMARK exists under the <strong>Hands Off Accords</strong> (L5): speech and oracle work are legal; sole AI command of kill-hardware is not. The Mark's gray zone — advice, suggestion stacks, occasional projected presence — is the campaign's cracked fence. Full Dark AI bot-legions are a future escalation, not the opening skyline.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "98yqpJJtylfpGYMX",
+      "_key": "!journal.pages!Z8YeQ624izlldX2w.98yqpJJtylfpGYMX",
+      "name": "Cross-references",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- Cosmology / Signal / Nullspace — L1  \n- **MER** ticker — `docs/rulebook/MEGACORP-TICKERS.md`  \n- Wire procedures — `docs/raw/21-the-wire.md`  \n- Hands Off Accords — L5\n- Slang — Appendix A (`28-glossary-slang.md`)",
+        "content": "<ul>\n<li>Cosmology / Signal / Nullspace — L1  </li>\n<li><strong>MER</strong> ticker — <code>docs/rulebook/MEGACORP-TICKERS.md</code>  </li>\n<li>Wire procedures — <code>docs/raw/21-the-wire.md</code>  </li>\n<li>Hands Off Accords — L5</li>\n<li>Slang — Appendix A (<code>28-glossary-slang.md</code>)</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/manuscript/01-lore/L4-voidmark.md"
+    }
+  }
+}

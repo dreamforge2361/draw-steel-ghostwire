@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/DS-ALIGNMENT.md`, class progression tables (`docs/rulebook/01`–`08`, `20`), `docs/rulebook/17-perks.md`, `docs/rulebook/14-mods.md`, `docs/rulebook/10-kits.md`*\n\n**Engine:** Draw Steel Heroes — use the official rules for experience, Victories, leveling, and echelons; Ghostwire remaps below.",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, class progression tables (<code>docs/rulebook/01</code>–<code>08</code>, <code>20</code>), <code>docs/rulebook/17-perks.md</code>, <code>docs/rulebook/14-mods.md</code>, <code>docs/rulebook/10-kits.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official rules for experience, Victories, leveling, and echelons; Ghostwire remaps below.</p>"
+        "markdown": "*RAW draft (Stage 3 fill 2026-09-19 / B73) · Sources: `docs/rulebook/DS-ALIGNMENT.md`, class progression tables (`docs/rulebook/01`–`08`, `20`), `docs/rulebook/17-perks.md`, `docs/rulebook/14-mods.md`, `docs/rulebook/10-kits.md`, `docs/raw/02-heroes-characteristics.md`, `docs/raw/08-kits-gear-wealth.md`*\n\n**Engine:** Ghostwire Victory, leveling, and echelon procedures in this chapter. Playable without a separate rulebook.  \n\n**Print:** Chapter 5 (TOC lock) — file numbered `24` so Journals keep a stable filename.",
+        "content": "<p><em>RAW draft (Stage 3 fill 2026-09-19 / B73) · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, class progression tables (<code>docs/rulebook/01</code>–<code>08</code>, <code>20</code>), <code>docs/rulebook/17-perks.md</code>, <code>docs/rulebook/14-mods.md</code>, <code>docs/rulebook/10-kits.md</code>, <code>docs/raw/02-heroes-characteristics.md</code>, <code>docs/raw/08-kits-gear-wealth.md</code></em></p>\n<p><strong>Engine:</strong> Ghostwire Victory, leveling, and echelon procedures in this chapter. Playable without a separate rulebook.  </p>\n<p><strong>Print:</strong> Chapter 5 (TOC lock) — file numbered <code>24</code> so Journals keep a stable filename.</p>"
       },
       "category": null,
       "ownership": {
@@ -35,9 +35,9 @@
       "flags": {}
     },
     {
-      "_id": "bGBaJWUokhTUFoH3",
-      "_key": "!journal.pages!Cn3cpBSS1061JGQB.bGBaJWUokhTUFoH3",
-      "name": "Levels and echelons",
+      "_id": "YeF1HEWqYGUahq0K",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.YeF1HEWqYGUahq0K",
+      "name": "What this chapter is for",
       "type": "text",
       "sort": 200000,
       "title": {
@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Runners advance from **Level 1 to Level 10** by Draw Steel’s rules. Levels group into four **echelons**:\n\n| Echelon | Levels |\n|---|---|\n| **1** | 1–3 |\n| **2** | 4–6 |\n| **3** | 7–9 |\n| **4** | 10 |\n\nGhostwire has **no separate tier ladder** for heroes. Level and echelon are the only progression scales.",
-        "content": "<p>Runners advance from <strong>Level 1 to Level 10</strong> by Draw Steel’s rules. Levels group into four <strong>echelons</strong>:</p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"levels\">Levels</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>1–3</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>4–6</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>7–9</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>10</td>\n</tr>\n</tbody>\n</table>\n<p>Ghostwire has <strong>no separate tier ladder</strong> for heroes. Level and echelon are the only progression scales.</p>"
+        "markdown": "Runners get better by taking **Victories**, earning experience, and **leveling**. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.\n\nThis chapter tells the table **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.",
+        "content": "<p>Runners get better by taking <strong>Victories</strong>, earning experience, and <strong>leveling</strong>. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.</p>\n<p>This chapter tells the table <strong>when</strong> to apply a level in a Ghostwire campaign, <strong>what</strong> the shared cadence actually hands you, <strong>which Ghostwire numbers refuse to grow</strong>, and how to read leftover <strong>T5–T1</strong> material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.</p>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "QiS5zHru9lYLixwM",
-      "_key": "!journal.pages!Cn3cpBSS1061JGQB.QiS5zHru9lYLixwM",
-      "name": "What the classes gain",
+      "_id": "ZbkIjE5I5FyuCfAg",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.ZbkIjE5I5FyuCfAg",
+      "name": "Levels and echelons",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.\n\n| Level | Common gains |\n|---|---|\n| **1** | Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent) |\n| **2** | Perk; subclass feature |\n| **3** | A **7-cost** heroic ability |\n| **4** | Characteristic increase; skill; perk |\n| **5** | A **9-cost** heroic ability |\n| **6** | Perk; subclass feature |\n| **7** | Characteristic increase; skill |\n| **8** | An **11-cost** heroic ability; perk |\n| **9** | Subclass feature or capstone ability |\n| **10** | Characteristic increase; skill; perk; **epic resource** or capstone |\n\nHeroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier.",
-        "content": "<p>Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.</p>\n<table>\n<thead>\n<tr>\n<th id=\"level\">Level</th>\n<th id=\"common_gains\">Common gains</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent)</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>Perk; subclass feature</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>A <strong>7-cost</strong> heroic ability</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>Characteristic increase; skill; perk</td>\n</tr>\n<tr>\n<td><strong>5</strong></td>\n<td>A <strong>9-cost</strong> heroic ability</td>\n</tr>\n<tr>\n<td><strong>6</strong></td>\n<td>Perk; subclass feature</td>\n</tr>\n<tr>\n<td><strong>7</strong></td>\n<td>Characteristic increase; skill</td>\n</tr>\n<tr>\n<td><strong>8</strong></td>\n<td>An <strong>11-cost</strong> heroic ability; perk</td>\n</tr>\n<tr>\n<td><strong>9</strong></td>\n<td>Subclass feature or capstone ability</td>\n</tr>\n<tr>\n<td><strong>10</strong></td>\n<td>Characteristic increase; skill; perk; <strong>epic resource</strong> or capstone</td>\n</tr>\n</tbody>\n</table>\n<p>Heroic ability costs come in <strong>bands</strong> (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier.</p>"
+        "markdown": "Runners advance from **Level 1 to Level 10** by the Victory procedure below. Levels group into four **echelons**:\n\n| Echelon | Levels |\n|---|---|\n| **1** | 1–3 |\n| **2** | 4–6 |\n| **3** | 7–9 |\n| **4** | 10 |\n\nGhostwire has **no separate tier ladder** for heroes. Level and echelon are the only progression scales. Say **level** when a feature unlocks. Say **echelon** when Kit Stamina, armor-as-Stamina, gear grade, or Invent a Mod’s power cap is in play. Do not say “tier” to players.",
+        "content": "<p>Runners advance from <strong>Level 1 to Level 10</strong> by the Victory procedure below. Levels group into four <strong>echelons</strong>:</p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"levels\">Levels</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>1–3</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>4–6</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>7–9</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>10</td>\n</tr>\n</tbody>\n</table>\n<p>Ghostwire has <strong>no separate tier ladder</strong> for heroes. Level and echelon are the only progression scales. Say <strong>level</strong> when a feature unlocks. Say <strong>echelon</strong> when Kit Stamina, armor-as-Stamina, gear grade, or Invent a Mod’s power cap is in play. Do not say “tier” to players.</p>"
       },
       "category": null,
       "ownership": {
@@ -91,9 +91,9 @@
       "flags": {}
     },
     {
-      "_id": "Xwq0cnQnlKB8D9vf",
-      "_key": "!journal.pages!Cn3cpBSS1061JGQB.Xwq0cnQnlKB8D9vf",
-      "name": "What scales with echelon",
+      "_id": "sxGn4AW613bMd70R",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.sxGn4AW613bMd70R",
+      "name": "When the table levels",
       "type": "text",
       "sort": 400000,
       "title": {
@@ -109,8 +109,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "| System | How echelon applies |\n|---|---|\n| **Kit Stamina** | Scales by echelon, as Draw Steel’s Kits do (`08`) |\n| **Armor Stamina** | Uses the wearer’s echelon (`08`) |\n| **Gear grade** | Echelon 1–4 plus Availability sets price and mod slots (`08`) |\n| **Invent a Mod** | A new mod’s power can’t exceed the inventor’s echelon (`10`) |\n| **Class resources** | Some caps and bonuses scale by echelon; see each class |",
-        "content": "<table>\n<thead>\n<tr>\n<th id=\"system\">System</th>\n<th id=\"how_echelon_applies\">How echelon applies</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Kit Stamina</strong></td>\n<td>Scales by echelon, as Draw Steel’s Kits do (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Armor Stamina</strong></td>\n<td>Uses the wearer’s echelon (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Gear grade</strong></td>\n<td>Echelon 1–4 plus Availability sets price and mod slots (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Invent a Mod</strong></td>\n<td>A new mod’s power can’t exceed the inventor’s echelon (<code>10</code>)</td>\n</tr>\n<tr>\n<td><strong>Class resources</strong></td>\n<td>Some caps and bonuses scale by echelon; see each class</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "**Victory (this book).** When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains **1 Victory**. Class features that “gain resource equal to your Victories” read the number you currently have.\n\n**When you level (default).** After a **completed job** (legwork + run + getaway) that earned at least one Victory, each runner **gains one level** at the respite between runs — the same breath where the crew takes payout (`08`) and pays Lifestyle (`26`). Short no-risk jobs do not level. A job that spans many sessions with more than one climax may grant a level at a mid-job respite instead of waiting.\n\n**Optional XP box.** If the table wants a numeric track (or you are on Foundry, where the stock hero sheet already has XP and Victory fields), after each respite add your Victories to **XP** (**1 Victory = 1 XP**) and reset Victories to **0**. The Director still calls the level using the default above — Ghostwire does not add a second XP ladder on top of the sheet. Do not invent a third track.\n\nThe runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current.\n\n**Allowed exceptions (Director call):**\n\n- A **mid-job** level if the XP (or milestone) already crossed the line and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit.\n- A **held** level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean respite.\n\n**Victories are not nuyen.** A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payout band (`08`), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.\n\n**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty.",
+        "content": "<p><strong>Victory (this book).</strong> When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains <strong>1 Victory</strong>. Class features that “gain resource equal to your Victories” read the number you currently have.</p>\n<p><strong>When you level (default).</strong> After a <strong>completed job</strong> (legwork + run + getaway) that earned at least one Victory, each runner <strong>gains one level</strong> at the respite between runs — the same breath where the crew takes payout (<code>08</code>) and pays Lifestyle (<code>26</code>). Short no-risk jobs do not level. A job that spans many sessions with more than one climax may grant a level at a mid-job respite instead of waiting.</p>\n<p><strong>Optional XP box.</strong> If the table wants a numeric track (or you are on Foundry, where the stock hero sheet already has XP and Victory fields), after each respite add your Victories to <strong>XP</strong> (<strong>1 Victory = 1 XP</strong>) and reset Victories to <strong>0</strong>. The Director still calls the level using the default above — Ghostwire does not add a second XP ladder on top of the sheet. Do not invent a third track.</p>\n<p>The runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts <strong>after</strong> the sheet is current.</p>\n<p><strong>Allowed exceptions (Director call):</strong></p>\n<ul>\n<li>A <strong>mid-job</strong> level if the XP (or milestone) already crossed the line and the table wants the new 7-cost or characteristic <strong>before</strong> the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit.</li>\n<li>A <strong>held</strong> level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean respite.</li>\n</ul>\n<p><strong>Victories are not nuyen.</strong> A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payout band (<code>08</code>), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.</p>\n<p><strong>One job, several sessions.</strong> Count Victories when the <strong>job’s fiction</strong> says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty.</p>"
       },
       "category": null,
       "ownership": {
@@ -119,9 +119,9 @@
       "flags": {}
     },
     {
-      "_id": "8kX5PK1Rpujxcxdo",
-      "_key": "!journal.pages!Cn3cpBSS1061JGQB.8kX5PK1Rpujxcxdo",
-      "name": "What doesn’t scale with level",
+      "_id": "XLnYmsLxBOfzWDsL",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.XLnYmsLxBOfzWDsL",
+      "name": "What the classes gain",
       "type": "text",
       "sort": 500000,
       "title": {
@@ -137,8 +137,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "- **Body Integrity** starts at 20 and never grows by leveling (`09`).\n- **¥** comes from runs, not levels (`08`).\n- **Ancestry traits** are bought once at creation (`05`).\n- **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).",
-        "content": "<ul>\n<li><strong>Body Integrity</strong> starts at 20 and never grows by leveling (<code>09</code>).</li>\n<li><strong>¥</strong> comes from runs, not levels (<code>08</code>).</li>\n<li><strong>Ancestry traits</strong> are bought once at creation (<code>05</code>).</li>\n<li><strong>Node Rating</strong> (1–5) is a Wired defense grade, not a level or echelon (<code>21</code>).</li>\n</ul>"
+        "markdown": "Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.\n\n| Level | Common gains |\n|---|---|\n| **1** | Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent) |\n| **2** | Perk; subclass feature |\n| **3** | A **7-cost** heroic ability |\n| **4** | Characteristic increase; skill; perk |\n| **5** | A **9-cost** heroic ability |\n| **6** | Perk; subclass feature |\n| **7** | Characteristic increase; skill |\n| **8** | An **11-cost** heroic ability; perk |\n| **9** | Subclass feature or capstone ability |\n| **10** | Characteristic increase; skill; perk; **epic resource** or capstone |\n\nHeroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier. A 7-cost ability is a **level-3** unlock, not an “Echelon 2 power.”\n\n### Applying a level at the table\n\n1. **Confirm the level** with the Victory / completed-job rule above. Ghostwire does not substitute street rumor for that math.\n2. **Open the class chapter** (`12`–`20`). Take only what that level prints — no “I would have had this if I had picked the other subclass.”\n3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.\n4. **Spend the shared picks** this level grants: perk (`11`), skill (Ghostwire list in `02`), characteristic increase (the five Ghostwire names in `02`).\n5. **Re-check Kit and gear.** Kit doctrine is free and already owned; qualifying gear must still be **owned** (`08`). A new echelon can raise Kit Stamina and armor-as-Stamina **without** a shopping trip. It does **not** auto-install mods or chrome.\n6. **Do not touch** Body Integrity, liquid ¥, Node Rating, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.\n\n**Characteristic increases** use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). When a level grants a characteristic increase, raise **one** characteristic by **1**. No characteristic may go above **5** from these increases. People traits and class features that print a raise still apply if they say so. ¥, chrome, and Lifestyle never buy the point (`02` firewall).\n\n**Skills** granted by level follow the same no-duplicate rule as Background / Profession (`06`): if you already have the skill, choose another from the same Ghostwire group, then any group.\n\n**Perks** are tricks of the trade (`11`). A level that says “perk” is a perk pick, not a free mod and not a Kit.",
+        "content": "<p>Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.</p>\n<table>\n<thead>\n<tr>\n<th id=\"level\">Level</th>\n<th id=\"common_gains\">Common gains</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent)</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>Perk; subclass feature</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>A <strong>7-cost</strong> heroic ability</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>Characteristic increase; skill; perk</td>\n</tr>\n<tr>\n<td><strong>5</strong></td>\n<td>A <strong>9-cost</strong> heroic ability</td>\n</tr>\n<tr>\n<td><strong>6</strong></td>\n<td>Perk; subclass feature</td>\n</tr>\n<tr>\n<td><strong>7</strong></td>\n<td>Characteristic increase; skill</td>\n</tr>\n<tr>\n<td><strong>8</strong></td>\n<td>An <strong>11-cost</strong> heroic ability; perk</td>\n</tr>\n<tr>\n<td><strong>9</strong></td>\n<td>Subclass feature or capstone ability</td>\n</tr>\n<tr>\n<td><strong>10</strong></td>\n<td>Characteristic increase; skill; perk; <strong>epic resource</strong> or capstone</td>\n</tr>\n</tbody>\n</table>\n<p>Heroic ability costs come in <strong>bands</strong> (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier. A 7-cost ability is a <strong>level-3</strong> unlock, not an “Echelon 2 power.”</p>\n<h3>Applying a level at the table</h3>\n<ol>\n<li><strong>Confirm the level</strong> with the Victory / completed-job rule above. Ghostwire does not substitute street rumor for that math.</li>\n<li><strong>Open the class chapter</strong> (<code>12</code>–<code>20</code>). Take only what that level prints — no “I would have had this if I had picked the other subclass.”</li>\n<li><strong>Record sheet numbers</strong> the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.</li>\n<li><strong>Spend the shared picks</strong> this level grants: perk (<code>11</code>), skill (Ghostwire list in <code>02</code>), characteristic increase (the five Ghostwire names in <code>02</code>).</li>\n<li><strong>Re-check Kit and gear.</strong> Kit doctrine is free and already owned; qualifying gear must still be <strong>owned</strong> (<code>08</code>). A new echelon can raise Kit Stamina and armor-as-Stamina <strong>without</strong> a shopping trip. It does <strong>not</strong> auto-install mods or chrome.</li>\n<li><strong>Do not touch</strong> Body Integrity, liquid ¥, Node Rating, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.</li>\n</ol>\n<p><strong>Characteristic increases</strong> use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). When a level grants a characteristic increase, raise <strong>one</strong> characteristic by <strong>1</strong>. No characteristic may go above <strong>5</strong> from these increases. People traits and class features that print a raise still apply if they say so. ¥, chrome, and Lifestyle never buy the point (<code>02</code> firewall).</p>\n<p><strong>Skills</strong> granted by level follow the same no-duplicate rule as Background / Profession (<code>06</code>): if you already have the skill, choose another from the same Ghostwire group, then any group.</p>\n<p><strong>Perks</strong> are tricks of the trade (<code>11</code>). A level that says “perk” is a perk pick, not a free mod and not a Kit.</p>"
       },
       "category": null,
       "ownership": {
@@ -147,9 +147,9 @@
       "flags": {}
     },
     {
-      "_id": "n4G3mk6Okw13Y1N6",
-      "_key": "!journal.pages!Cn3cpBSS1061JGQB.n4G3mk6Okw13Y1N6",
-      "name": "Converting older Ghostwire material",
+      "_id": "V0fileyZJ2Dk3Z3O",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.V0fileyZJ2Dk3Z3O",
+      "name": "Echelon as street weather",
       "type": "text",
       "sort": 600000,
       "title": {
@@ -165,8 +165,148 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:\n\n| Old tier (hero or foe) | Level |\n|---|---|\n| T5 | 1 |\n| T4 | 3 |\n| T3 | 5 |\n| T2 | 7 |\n| T1 | 9 |\n\n| Old gear tier | Echelon | Availability |\n|---|---|---|\n| T5 | 1 | Street |\n| T4 | 1 | Professional |\n| T3 | 2 | Restricted |\n| T2 | 3 | Military |\n| T1 | 4 | Prototype |\n\n| Old node tier | Node Rating |\n|---|---|\n| T5 | 1 |\n| T4 | 2 |\n| T3 | 3 |\n| T2 | 4 |\n| T1 | 5 |\n\nOlder material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (`03`).",
-        "content": "<p>Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:</p>\n<table>\n<thead>\n<tr>\n<th id=\"old_tier_(hero_or_foe)\">Old tier (hero or foe)</th>\n<th id=\"level\">Level</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>3</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>5</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>7</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>9</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th id=\"old_gear_tier\">Old gear tier</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"availability\">Availability</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n<td>Street</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>1</td>\n<td>Professional</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>2</td>\n<td>Restricted</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>3</td>\n<td>Military</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>4</td>\n<td>Prototype</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th id=\"old_node_tier\">Old node tier</th>\n<th id=\"node_rating\">Node Rating</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>2</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>3</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>4</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>5</td>\n</tr>\n</tbody>\n</table>\n<p>Older material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (<code>03</code>).</p>"
+        "markdown": "Echelon is how hard the **world’s tools** are allowed to be, not a second character level. Use it when you are dressing opposition (`25`), quoting Restricted+ gear (`08`), or gating Invent a Mod (`10`).\n\n| Echelon | What the Reach feels like | Opposition / Wire (guidance) |\n|---|---|---|\n| **1** (Lv 1–3) | Flats and Grid. Street crews, cheap chrome, Rating 1–2 hosts | Speed bumps and first setpieces. Cassavir’s board |\n| **2** (Lv 4–6) | Spires start answering. Veteran rivals, Restricted windows | Corporate response, Rating 2–4 nodes |\n| **3** (Lv 7–9) | Black-ops weather. Military Availability is on the table | Apex crews, Rating 3–5 nodes |\n| **4** (Lv 10) | Named solos, Halo doors, Prototype heat | Level-boss fights, Rating 5 cores |\n\nThis table does **not** replace Ch 26’s encounter budget. It tells the Director which **dress** to reach for so a level-2 Flats war and a level-8 Crown extraction do not use the same Actors.",
+        "content": "<p>Echelon is how hard the <strong>world’s tools</strong> are allowed to be, not a second character level. Use it when you are dressing opposition (<code>25</code>), quoting Restricted+ gear (<code>08</code>), or gating Invent a Mod (<code>10</code>).</p>\n<table>\n<thead>\n<tr>\n<th id=\"echelon\">Echelon</th>\n<th id=\"what_the_reach_feels_like\">What the Reach feels like</th>\n<th id=\"opposition_/_wire_(guidance)\">Opposition / Wire (guidance)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong> (Lv 1–3)</td>\n<td>Flats and Grid. Street crews, cheap chrome, Rating 1–2 hosts</td>\n<td>Speed bumps and first setpieces. Cassavir’s board</td>\n</tr>\n<tr>\n<td><strong>2</strong> (Lv 4–6)</td>\n<td>Spires start answering. Veteran rivals, Restricted windows</td>\n<td>Corporate response, Rating 2–4 nodes</td>\n</tr>\n<tr>\n<td><strong>3</strong> (Lv 7–9)</td>\n<td>Black-ops weather. Military Availability is on the table</td>\n<td>Apex crews, Rating 3–5 nodes</td>\n</tr>\n<tr>\n<td><strong>4</strong> (Lv 10)</td>\n<td>Named solos, Halo doors, Prototype heat</td>\n<td>Level-boss fights, Rating 5 cores</td>\n</tr>\n</tbody>\n</table>\n<p>This table does <strong>not</strong> replace Ch 26’s encounter budget. It tells the Director which <strong>dress</strong> to reach for so a level-2 Flats war and a level-8 Crown extraction do not use the same Actors.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "hOn50fsxyQkBp0OQ",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.hOn50fsxyQkBp0OQ",
+      "name": "What scales with echelon",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| System | How echelon applies |\n|---|---|\n| **Kit Stamina** | Scales by echelon (`08`) |\n| **Armor Stamina** | Uses the wearer’s echelon (`08`) |\n| **Gear grade** | Echelon 1–4 plus Availability sets price and mod slots (`08`) |\n| **Invent a Mod** | A new mod’s power can’t exceed the inventor’s echelon (`10`) |\n| **Class resources** | Some caps and bonuses scale by echelon; see each class |\n\nWhen a runner **enters a new echelon** (levels 4, 7, and 10), glance at Kit Stamina, armor-as-Stamina, and whether last month’s Street-band host still matches the jobs you are throwing. Upgrade gear with **¥ and Availability**, not with the level-up itself.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"system\">System</th>\n<th id=\"how_echelon_applies\">How echelon applies</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Kit Stamina</strong></td>\n<td>Scales by echelon (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Armor Stamina</strong></td>\n<td>Uses the wearer’s echelon (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Gear grade</strong></td>\n<td>Echelon 1–4 plus Availability sets price and mod slots (<code>08</code>)</td>\n</tr>\n<tr>\n<td><strong>Invent a Mod</strong></td>\n<td>A new mod’s power can’t exceed the inventor’s echelon (<code>10</code>)</td>\n</tr>\n<tr>\n<td><strong>Class resources</strong></td>\n<td>Some caps and bonuses scale by echelon; see each class</td>\n</tr>\n</tbody>\n</table>\n<p>When a runner <strong>enters a new echelon</strong> (levels 4, 7, and 10), glance at Kit Stamina, armor-as-Stamina, and whether last month’s Street-band host still matches the jobs you are throwing. Upgrade gear with <strong>¥ and Availability</strong>, not with the level-up itself.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "G2h9OIgrLKLsJUCg",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.G2h9OIgrLKLsJUCg",
+      "name": "What doesn’t scale with level",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Body Integrity** starts at 20 and never grows by leveling (`09`).\n- **¥** comes from runs, not levels (`08`).\n- **Ancestry traits** are bought once at creation (`05`).\n- **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).\n- **Lifestyle band** is paid each respite (`26`). A 10th-level runner who lives Squatter still lives Squatter.\n- **Connection state** (Disconnected / Overlay / Jacked In) is a choice per scene, not a reward (`21`).\n- **Summon Rank 2+ strike ladders** stay deferred where Veil §C3 says they are deferred (`22`). Leveling a caster does not invent those numbers.\n\nIf a downtime offer, chrome catalog, or fixer would sell a characteristic, a skill, a class feature, or a heroic resource, refuse it. That purchase is off-doctrine (`02`).",
+        "content": "<ul>\n<li><strong>Body Integrity</strong> starts at 20 and never grows by leveling (<code>09</code>).</li>\n<li><strong>¥</strong> comes from runs, not levels (<code>08</code>).</li>\n<li><strong>Ancestry traits</strong> are bought once at creation (<code>05</code>).</li>\n<li><strong>Node Rating</strong> (1–5) is a Wired defense grade, not a level or echelon (<code>21</code>).</li>\n<li><strong>Lifestyle band</strong> is paid each respite (<code>26</code>). A 10th-level runner who lives Squatter still lives Squatter.</li>\n<li><strong>Connection state</strong> (Disconnected / Overlay / Jacked In) is a choice per scene, not a reward (<code>21</code>).</li>\n<li><strong>Summon Rank 2+ strike ladders</strong> stay deferred where Veil §C3 says they are deferred (<code>22</code>). Leveling a caster does not invent those numbers.</li>\n</ul>\n<p>If a downtime offer, chrome catalog, or fixer would sell a characteristic, a skill, a class feature, or a heroic resource, refuse it. That purchase is off-doctrine (<code>02</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "RTUVHz9LCholmR16",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.RTUVHz9LCholmR16",
+      "name": "Paying and living after a level",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Leveling does not skip the ¥ loop:\n\n1. Finish the run; take heat and injuries.  \n2. Take payout (`08`).  \n3. Apply the level (this chapter).  \n4. Pay Lifestyle for the band you claim (`26`).  \n5. Shop, §Craft, chrome surgery, rituals — leftover ¥ only.\n\nA new 9-cost ability does not make Elite upkeep free. If the table’s payouts never threaten Lifestyle, raise heat or cut the band — do not grow Body Integrity or hand out Prototype as a party favor.",
+        "content": "<p>Leveling does not skip the ¥ loop:</p>\n<ol>\n<li>Finish the run; take heat and injuries.  </li>\n<li>Take payout (<code>08</code>).  </li>\n<li>Apply the level (this chapter).  </li>\n<li>Pay Lifestyle for the band you claim (<code>26</code>).  </li>\n<li>Shop, §Craft, chrome surgery, rituals — leftover ¥ only.</li>\n</ol>\n<p>A new 9-cost ability does not make Elite upkeep free. If the table’s payouts never threaten Lifestyle, raise heat or cut the band — do not grow Body Integrity or hand out Prototype as a party favor.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "3tV63bqILIf61omD",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.3tV63bqILIf61omD",
+      "name": "Converting older Ghostwire material",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:\n\n| Old tier (hero or foe) | Level |\n|---|---|\n| T5 | 1 |\n| T4 | 3 |\n| T3 | 5 |\n| T2 | 7 |\n| T1 | 9 |\n\n| Old gear tier | Echelon | Availability |\n|---|---|---|\n| T5 | 1 | Street |\n| T4 | 1 | Professional |\n| T3 | 2 | Restricted |\n| T2 | 3 | Military |\n| T1 | 4 | Prototype |\n\n| Old node tier | Node Rating |\n|---|---|\n| T5 | 1 |\n| T4 | 2 |\n| T3 | 3 |\n| T2 | 4 |\n| T1 | 5 |\n\nOlder material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (`03`).\n\nHandbook and Flats gazetteer lines that still say “E1–E4” on a **host** mean ICE posture / Node Rating, **not** the runner’s echelon (`wired-flats` How to Read). Keep that distinction at the table.\n\n> **In Foundry**\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** is the stock hero-sheet field — Ghostwire does not add a second XP tracker. Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation.",
+        "content": "<p>Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:</p>\n<table>\n<thead>\n<tr>\n<th id=\"old_tier_(hero_or_foe)\">Old tier (hero or foe)</th>\n<th id=\"level\">Level</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>3</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>5</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>7</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>9</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th id=\"old_gear_tier\">Old gear tier</th>\n<th id=\"echelon\">Echelon</th>\n<th id=\"availability\">Availability</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n<td>Street</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>1</td>\n<td>Professional</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>2</td>\n<td>Restricted</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>3</td>\n<td>Military</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>4</td>\n<td>Prototype</td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th id=\"old_node_tier\">Old node tier</th>\n<th id=\"node_rating\">Node Rating</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>T5</td>\n<td>1</td>\n</tr>\n<tr>\n<td>T4</td>\n<td>2</td>\n</tr>\n<tr>\n<td>T3</td>\n<td>3</td>\n</tr>\n<tr>\n<td>T2</td>\n<td>4</td>\n</tr>\n<tr>\n<td>T1</td>\n<td>5</td>\n</tr>\n</tbody>\n</table>\n<p>Older material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (<code>03</code>).</p>\n<p>Handbook and Flats gazetteer lines that still say “E1–E4” on a <strong>host</strong> mean ICE posture / Node Rating, <strong>not</strong> the runner’s echelon (<code>wired-flats</code> How to Read). Keep that distinction at the table.</p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Enable <strong>Draw Steel - Ghostwire Build</strong> on a compatible Foundry world. Hero <strong>level</strong> is the stock hero-sheet field — Ghostwire does not add a second XP tracker. Class items and robust-fill honor a <strong>level gate</strong> (B59): 1st-level pregens in <strong>Ghostwire Pregens</strong> (<code>pregens</code>) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from <strong>Ghostwire Bestiary</strong> or seed a job with <strong>Run Generator</strong> (hero level + echelon dials). There is no Lifestyle or Victory automation.</p>\n</blockquote>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "qm8ln8LaECFCLhhm",
+      "_key": "!journal.pages!Cn3cpBSS1061JGQB.qm8ln8LaECFCLhhm",
+      "name": "What this chapter is not",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- Not a street-rep meter that replaces levels.\n- Not a second class chapter — open `12`–`20` for the actual features.\n- Not permission to grow Body Integrity, Node Rating, or ¥ by leveling.\n- Not a Rank 2+ summon-math pass.\n\n**Cross-links:** Heroes `02` · Tests `03` · Combat `04` · Kits/¥ `08` · Chrome `09` · Mods `10` · Perks `11` · Wire `21` · Veil `22` · Opposition `25` · Lifestyle `26` · print Ch 27 (Reach pointer).",
+        "content": "<ul>\n<li>Not a street-rep meter that replaces levels.</li>\n<li>Not a second class chapter — open <code>12</code>–<code>20</code> for the actual features.</li>\n<li>Not permission to grow Body Integrity, Node Rating, or ¥ by leveling.</li>\n<li>Not a Rank 2+ summon-math pass.</li>\n</ul>\n<p><strong>Cross-links:</strong> Heroes <code>02</code> · Tests <code>03</code> · Combat <code>04</code> · Kits/¥ <code>08</code> · Chrome <code>09</code> · Mods <code>10</code> · Perks <code>11</code> · Wire <code>21</code> · Veil <code>22</code> · Opposition <code>25</code> · Lifestyle <code>26</code> · print Ch 27 (Reach pointer).</p>"
       },
       "category": null,
       "ownership": {

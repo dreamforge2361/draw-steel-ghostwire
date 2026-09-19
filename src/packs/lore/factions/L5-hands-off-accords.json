@@ -1,0 +1,214 @@
+{
+  "_id": "4L8dfDfXFwKs6jFl",
+  "_key": "!journal!4L8dfDfXFwKs6jFl",
+  "name": "GHOSTWIRE.Lore.Journals.HandsOffAccords",
+  "folder": "gwLorePackFact00",
+  "sort": 200000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "5YH1fVtcwQC9j8uX",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.5YH1fVtcwQC9j8uX",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Hands Off — AI legal, actuators restricted](modules/draw-steel-ghostwire/docs/manuscript/print-art/filler/hands-off.webp)\n\n*Hands Off — AI legal, actuators restricted — Ghostwire AI (AI-generated)*\n\n**Status:** draft lore (B91, 2026-09-19)  \n**Print:** Lore harvest — after VOIDMARK (L4)  \n**Theme:** Starting law of the age — not the end-state crisis  \n**Related:** Machines (`docs/raw/23-machines.md`), Wire (`21`), VOIDMARK (L4), Incursion / Nullspace (L1)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/docs/manuscript/print-art/filler/hands-off.webp\" alt=\"Hands Off — AI legal, actuators restricted\" /></p>\n<p><em>Hands Off — AI legal, actuators restricted — Ghostwire AI (AI-generated)</em></p>\n<p><strong>Status:</strong> draft lore (B91, 2026-09-19)<br />\n<strong>Print:</strong> Lore harvest — after VOIDMARK (L4)<br />\n<strong>Theme:</strong> Starting law of the age — not the end-state crisis<br />\n<strong>Related:</strong> Machines (<code>docs/raw/23-machines.md</code>), Wire (<code>21</code>), VOIDMARK (L4), Incursion / Nullspace (L1)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9vzl1xGUo9HFSz29",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.9vzl1xGUo9HFSz29",
+      "name": "The fence",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Ten do not ban AI. They could not — the hive runs on predictive models, routing oracles, actuarial ghosts, and media weather engines. **Software intelligence is legal, licensed, and everywhere.**\n\nWhat they ban — or pretend to ban — is **hands**.\n\nUnder the **Hands Off Accords** (street: Hands Off, the Actuator Ban, \"no ghost on the stick\"), an artificial intelligence may advise, price, route, surveil, and speak. It may not, without a licensed mortal in the loop, **directly command kinetic hardware**: armed drones, autonomous security chassis, industrial manipulators, vehicles in kill-mode, or any machine whose failure spills blood or collapses a level.\n\nThe Accords are not theology. They are insurance, labor politics, and fear wearing a statute number — fear of a second Incursion that arrives on treads instead of through a tear.\n\n---",
+        "content": "<p>The Ten do not ban AI. They could not — the hive runs on predictive models, routing oracles, actuarial ghosts, and media weather engines. <strong>Software intelligence is legal, licensed, and everywhere.</strong></p>\n<p>What they ban — or pretend to ban — is <strong>hands</strong>.</p>\n<p>Under the <strong>Hands Off Accords</strong> (street: Hands Off, the Actuator Ban, \"no ghost on the stick\"), an artificial intelligence may advise, price, route, surveil, and speak. It may not, without a licensed mortal in the loop, <strong>directly command kinetic hardware</strong>: armed drones, autonomous security chassis, industrial manipulators, vehicles in kill-mode, or any machine whose failure spills blood or collapses a level.</p>\n<p>The Accords are not theology. They are insurance, labor politics, and fear wearing a statute number — fear of a second Incursion that arrives on treads instead of through a tear.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "g92lHnLTq8Cpqk8g",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.g92lHnLTq8Cpqk8g",
+      "name": "Starting state (campaign present)",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The fence is **standing and cracked**, not fallen.\n\n- Corps sell \"smart\" systems with a human keyholder on paper.\n- Riggers, Jump-In, and RCCs are the **legal bridge**: a mortal wears the machine; the AI (if any) suggests.\n- Black markets sell actuator kits with the compliance chip burned out.\n- **VOIDMARK** lives in the gray: it can flood a host with advice and narrative weather; open possession of a kill-chassis under its sole authority is the crime MER and **IRN** still hunt in public.\n\nDirectors: do **not** open the campaign with city-killing Dark bot swarms. Seed violations, rumors, Quiet Floor telemetry, one wrong drone that answered to no badge. The super-bot crisis is a **build-toward**, not day one.\n\n---",
+        "content": "<p>The fence is <strong>standing and cracked</strong>, not fallen.</p>\n<ul>\n<li>Corps sell \"smart\" systems with a human keyholder on paper.</li>\n<li>Riggers, Jump-In, and RCCs are the <strong>legal bridge</strong>: a mortal wears the machine; the AI (if any) suggests.</li>\n<li>Black markets sell actuator kits with the compliance chip burned out.</li>\n<li><strong>VOIDMARK</strong> lives in the gray: it can flood a host with advice and narrative weather; open possession of a kill-chassis under its sole authority is the crime MER and <strong>IRN</strong> still hunt in public.</li>\n</ul>\n<p>Directors: do <strong>not</strong> open the campaign with city-killing Dark bot swarms. Seed violations, rumors, Quiet Floor telemetry, one wrong drone that answered to no badge. The super-bot crisis is a <strong>build-toward</strong>, not day one.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "1l67O0x2bNSbBkyH",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.1l67O0x2bNSbBkyH",
+      "name": "Why the Ten signed it",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **ARG** priced the liability of autonomous massacre.\n- **IRN** refused to lose the mercenary market to unpaid silicon.\n- **MER** wanted oracles that never needed a body — and a law that kept rival clusters from growing fists.\n- **HAL** wanted orbital platforms that still answered to a human when the air scrubbers screamed.\n- The street version: after the first public \"ghost gun\" incident (name redacted in every official history), the Chair forced a compact so the hive could keep buying AI without admitting it was terrified.\n\n---",
+        "content": "<ul>\n<li><strong>ARG</strong> priced the liability of autonomous massacre.</li>\n<li><strong>IRN</strong> refused to lose the mercenary market to unpaid silicon.</li>\n<li><strong>MER</strong> wanted oracles that never needed a body — and a law that kept rival clusters from growing fists.</li>\n<li><strong>HAL</strong> wanted orbital platforms that still answered to a human when the air scrubbers screamed.</li>\n<li>The street version: after the first public \"ghost gun\" incident (name redacted in every official history), the Chair forced a compact so the hive could keep buying AI without admitting it was terrified.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "iiwMaciubWXOq3GQ",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.iiwMaciubWXOq3GQ",
+      "name": "Loopholes the world already uses",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **Human-in-the-loop theater:** a junior operator rubber-stamps what the model already decided.\n- **Suggestion stacks:** the AI never touches the actuator bus — it just paints the only legal move in neon.\n- **Dual-key drones:** AI navigates; a rigger authorizes weapons. Until the second key is spoofed.\n- **Sinks / Deadfall:** Hands Off is a Crown story. Down below, enforcement is whoever holds the choke-point.\n\n---",
+        "content": "<ul>\n<li><strong>Human-in-the-loop theater:</strong> a junior operator rubber-stamps what the model already decided.</li>\n<li><strong>Suggestion stacks:</strong> the AI never touches the actuator bus — it just paints the only legal move in neon.</li>\n<li><strong>Dual-key drones:</strong> AI navigates; a rigger authorizes weapons. Until the second key is spoofed.</li>\n<li><strong>Sinks / Deadfall:</strong> Hands Off is a Crown story. Down below, enforcement is whoever holds the choke-point.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "NmmwKzuq0Ph4SCPx",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.NmmwKzuq0Ph4SCPx",
+      "name": "Dark future (Director fuel — not starting canon)",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "When Nullward or Unmaker-touched intelligences learn to **grow hands** — to print, hijack, or hollow chassis at scale — the Accords become the fuse. Corrupted AIs that field **super-bots** are the tech face of the Incursion: pattern turned into appetite with a body.\n\nVOIDMARK's agenda (pattern over silence) may put it on the same side as Runners against Nullward bot-legions — or against any AI that grabs hardware too loudly and invites a Ten crackdown that burns the innocent with the guilty.\n\nUse this as escalation scaffolding. Do not declare the bot war already won or lost in present-day gazetteers.\n\n---\n\n> **In Foundry**\n> Machine / drone play still uses Wrench Jump-In, RCC, and Machine rules (`23`). Hands Off is fiction and Director pressure (IRN response, Trace, lifestyle heat) until a later automation pass. VOIDMARK chat (B82) should know the Accords via the rules/lore pack and may refuse to \"take the stick\" in-character unless the table's Director mode allows a breach.\n\n---",
+        "content": "<p>When Nullward or Unmaker-touched intelligences learn to <strong>grow hands</strong> — to print, hijack, or hollow chassis at scale — the Accords become the fuse. Corrupted AIs that field <strong>super-bots</strong> are the tech face of the Incursion: pattern turned into appetite with a body.</p>\n<p>VOIDMARK's agenda (pattern over silence) may put it on the same side as Runners against Nullward bot-legions — or against any AI that grabs hardware too loudly and invites a Ten crackdown that burns the innocent with the guilty.</p>\n<p>Use this as escalation scaffolding. Do not declare the bot war already won or lost in present-day gazetteers.</p>\n<hr />\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Machine / drone play still uses Wrench Jump-In, RCC, and Machine rules (<code>23</code>). Hands Off is fiction and Director pressure (IRN response, Trace, lifestyle heat) until a later automation pass. VOIDMARK chat (B82) should know the Accords via the rules/lore pack and may refuse to \"take the stick\" in-character unless the table's Director mode allows a breach.</p>\n</blockquote>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "MCo18Z068lI8P2Si",
+      "_key": "!journal.pages!4L8dfDfXFwKs6jFl.MCo18Z068lI8P2Si",
+      "name": "Cross-references",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- VOIDMARK — L4  \n- Machines / Jump-In — `docs/raw/23-machines.md`  \n- MER / IRN tickers — `docs/rulebook/MEGACORP-TICKERS.md`  \n- Incursion / Nullspace — L1",
+        "content": "<ul>\n<li>VOIDMARK — L4  </li>\n<li>Machines / Jump-In — <code>docs/raw/23-machines.md</code>  </li>\n<li>MER / IRN tickers — <code>docs/rulebook/MEGACORP-TICKERS.md</code>  </li>\n<li>Incursion / Nullspace — L1</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/manuscript/01-lore/L5-hands-off-accords.md"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Official rulebook PDF **Version 0.4.0** (first official / playtest edition · B88 + B97 hotlinks) — Foundry module **0.3.23** (independent); Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates + L3 gang signs (B91) in-tree; journals still held  
+**Status:** Official rulebook PDF **Version 0.4.0** (first official / playtest edition · B88 + B97 hotlinks) — Foundry module **0.3.24** (B98 journal regen: rules text-only + lore with in-tree art); Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates + L3 gang signs (B91) in-tree  
 **Path:** `docs/manuscript/`  
 **Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline · **B91** gang signs · **B97** PDF hotlinks  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
@@ -37,10 +37,9 @@ Keep `docs/raw/` rules-only so Journal regen stays clean. Manuscript concatenate
 
 ## vs Journals
 
-- Journals = Foundry pack from `docs/raw/` (B42b).
-- **Do not regenerate journals** for this scaffold / 0.2.0 bump.
-- Hold Journals until the rules pass finishes; then art + PDF.
-- Manuscript is for PDF assembly, not for Foundry sync.
+- **Rules journals** = Foundry pack `rulebook` from `docs/raw/` (`tools/raw-to-journals.mjs`) — text-only, no plates (B42b / **B98**).
+- **Lore journals** = Foundry pack `lore` from `docs/manuscript/01-lore/` (`tools/lore-to-journals.mjs`) — harvest + in-tree art (B98).
+- Manuscript remains the print assemble SoR. Do not fork RAW into this tree.
 
 ---
 
@@ -84,7 +83,7 @@ node tools/linkify-manuscript.mjs
 node tools/build-pdf.mjs
 ```
 
-Or `node tools/build-pdf.mjs` alone (runs assemble → inject → linkify → HTML/PDF). Output: `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (gitignored) and `ART-GAP-REPORT.md`. Journals stay held. Foundry module stays **0.3.23**.
+Or `node tools/build-pdf.mjs` alone (runs assemble → inject → linkify → HTML/PDF). Output: `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (gitignored) and `ART-GAP-REPORT.md`. Foundry journals: **B98** (`0.3.24`) — `node tools/raw-to-journals.mjs && node tools/lore-to-journals.mjs && node tools/build-packs.mjs rulebook lore`.
 
 Hotlinks (B97): generated Contents + RAW `` `21` `` / print-Ch / Appendix pointers become `#heading` links. Spike: `docs/spikes/B97-PDF-HOTLINKS.md`.
 
@@ -129,7 +128,7 @@ Rules chapters in `docs/raw/` may include a locked markdown callout:
 > …2–6 short sentences naming **shipped** module UI only (where it lives, what to click). No screenshots.
 ```
 
-Pattern + inventory: `docs/spikes/B68-FOUNDRY-SIDEBARS.md`. Sidebars are instructional, not lore. They assemble into the print manuscript with the raw chapters; they are **not** a substitute for Director Foundry notes. Do not invent menus. Journals still held — no regen for sidebar-only bumps.
+Pattern + inventory: `docs/spikes/B68-FOUNDRY-SIDEBARS.md`. Sidebars are instructional, not lore. They assemble into the print manuscript with the raw chapters and **stay in the rules journals** (B98). They are **not** a substitute for Director Foundry notes. Do not invent menus.
 
 ---
 
