@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/13-backgrounds-professions.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`*\n\nEvery hero picks one **Background** (where you grew up — Draw Steel’s *culture*) and one **Profession** (what you did before the job — Draw Steel’s *career*). Both grant skills from the Ghostwire skill list (see @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}). Neither grants Build Points, attributes, or class features.",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/13-backgrounds-professions.md</code>, <code>docs/masters/GHOSTWIRE_SKILLS_MASTER.md</code></em></p>\n<p>Every hero picks one <strong>Background</strong> (where you grew up — Draw Steel’s <em>culture</em>) and one <strong>Profession</strong> (what you did before the job — Draw Steel’s <em>career</em>). Both grant skills from the Ghostwire skill list (see @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}). Neither grants Build Points, attributes, or class features.</p>"
+        "markdown": "*RAW draft (Stage 3 fill 2026-09-19 / B73) · Sources: `docs/rulebook/13-backgrounds-professions.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, `docs/raw/02-heroes-characteristics.md`*\n\n**Print:** Chapter 7 (TOC lock)",
+        "content": "<p><em>RAW draft (Stage 3 fill 2026-09-19 / B73) · Sources: <code>docs/rulebook/13-backgrounds-professions.md</code>, <code>docs/masters/GHOSTWIRE_SKILLS_MASTER.md</code>, <code>docs/raw/02-heroes-characteristics.md</code></em></p>\n<p><strong>Print:</strong> Chapter 7 (TOC lock)</p>"
       },
       "category": null,
       "ownership": {
@@ -35,9 +35,9 @@
       "flags": {}
     },
     {
-      "_id": "aJMTbTG1i1SwiBor",
-      "_key": "!journal.pages!jDbQHMGFFuAA663q.aJMTbTG1i1SwiBor",
-      "name": "Skill grants",
+      "_id": "mR6JuVT2lO6yNlej",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.mR6JuVT2lO6yNlej",
+      "name": "What these picks are",
       "type": "text",
       "sort": 200000,
       "title": {
@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "- **Background:** one **fixed** skill plus **choose 1** from a list of four.\n- **Profession:** one **fixed** skill plus **choose 2** from a list of four.\n- **No wasted duplicates:** You can’t choose a skill you already have — from your ancestry, class, the other of Background/Profession, or an earlier pick. If that leaves too few options, choose any skill you don’t have from the same skill group (then from any group).\n- Fixed skills never overlap by design: no Background fixed skill is a Profession fixed skill, and none of them is a skill an Operator Origin grants (Command, Demolitions, Intimidation). If some other source already gave you a fixed skill, choose another skill from the same Ghostwire group instead.",
-        "content": "<ul>\n<li><strong>Background:</strong> one <strong>fixed</strong> skill plus <strong>choose 1</strong> from a list of four.</li>\n<li><strong>Profession:</strong> one <strong>fixed</strong> skill plus <strong>choose 2</strong> from a list of four.</li>\n<li><strong>No wasted duplicates:</strong> You can’t choose a skill you already have — from your ancestry, class, the other of Background/Profession, or an earlier pick. If that leaves too few options, choose any skill you don’t have from the same skill group (then from any group).</li>\n<li>Fixed skills never overlap by design: no Background fixed skill is a Profession fixed skill, and none of them is a skill an Operator Origin grants (Command, Demolitions, Intimidation). If some other source already gave you a fixed skill, choose another skill from the same Ghostwire group instead.</li>\n</ul>"
+        "markdown": "Every hero picks one **Background** (where you grew up) and one **Profession** (what you did before the job). Both grant skills from the Ghostwire skill list (see @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}). Neither grants Build Points, attributes, class features, heroic resources, Kits, chrome, or ¥ as character power.\n\n**Background** is the water you were raised in: which rung of a hive, which kind of waste, which kind of prayer. It is still true after you take the job.\n\n**Profession** is the work you already know how to do. You may have walked away from it last week or ten years ago. It is not your class. A Street Doc profession can become a Hacker; a Wage-Slave can become a Commander. The old job leaves skills and a smell, not a second subclass.\n\nPick **fiction first**, then take the printed skills. If two rows both fit, choose the one whose **community** or **old workplace** you want the Director to be able to call.",
+        "content": "<p>Every hero picks one <strong>Background</strong> (where you grew up) and one <strong>Profession</strong> (what you did before the job). Both grant skills from the Ghostwire skill list (see @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}). Neither grants Build Points, attributes, class features, heroic resources, Kits, chrome, or ¥ as character power.</p>\n<p><strong>Background</strong> is the water you were raised in: which rung of a hive, which kind of waste, which kind of prayer. It is still true after you take the job.</p>\n<p><strong>Profession</strong> is the work you already know how to do. You may have walked away from it last week or ten years ago. It is not your class. A Street Doc profession can become a Hacker; a Wage-Slave can become a Commander. The old job leaves skills and a smell, not a second subclass.</p>\n<p>Pick <strong>fiction first</strong>, then take the printed skills. If two rows both fit, choose the one whose <strong>community</strong> or <strong>old workplace</strong> you want the Director to be able to call.</p>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "bBVAJNDtrkUWD72m",
-      "_key": "!journal.pages!jDbQHMGFFuAA663q.bBVAJNDtrkUWD72m",
-      "name": "Backgrounds",
+      "_id": "KpdkxyPB90NN5NJo",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.KpdkxyPB90NN5NJo",
+      "name": "Skill grants",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Each Background also ties you to a community: you have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).\n\n| Background | Fixed skill | Choose 1 | Community |\n|---|---|---|---|\n| **Undercity Barrens** | Stealth | Streetwise, Survival, Perception, Athletics | The Undercity’s squatter blocks, tunnel gangs, and scavenger crews |\n| **Corp Arcology** | Corporate | Persuasion, Negotiation, Insight, Security Systems | Your arcology’s departments, company families, and internal security |\n| **Sprawl District** | Streetwise | Negotiation, Contacts, Perception, Brawl | Your district’s street vendors, fixers, block associations, and local gangs |\n| **Transit Hub / Freeport** | Navigation | Contacts, Driving, Piloting, Negotiation | Dockworkers, freight crews, customs brokers, and travelers passing through your hub |\n| **Outland Wastes** | Survival | Athletics, Driving, Perception, Firearms | Outland nomad clans, convoy runners, and wasteland settlements |\n| **Academic Spire** | History | Occult, Matrix Theory, Medicine Lore, Xenology | Your spire’s faculty, archivists, research departments, and rival scholars |\n| **Faith District** | Religion | Insight, Occult, Warding, Medicine | The district’s churches, shelters, orders of the Light, and the faithful who depend on them |\n| **Industrial Deep** | Engineering | Repair, Athletics, Demolitions, Electronics | Foundry crews, labor unions, and Industrial Deep shift towns |\n\n**Industrial Deep** is Corran-flavored but open to any People.",
-        "content": "<p>Each Background also ties you to a community: you have an edge on tests to recall lore about that community or to find and influence people within it (Director’s call on when it applies).</p>\n<table>\n<thead>\n<tr>\n<th id=\"background\">Background</th>\n<th id=\"fixed_skill\">Fixed skill</th>\n<th id=\"choose_1\">Choose 1</th>\n<th id=\"community\">Community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Undercity Barrens</strong></td>\n<td>Stealth</td>\n<td>Streetwise, Survival, Perception, Athletics</td>\n<td>The Undercity’s squatter blocks, tunnel gangs, and scavenger crews</td>\n</tr>\n<tr>\n<td><strong>Corp Arcology</strong></td>\n<td>Corporate</td>\n<td>Persuasion, Negotiation, Insight, Security Systems</td>\n<td>Your arcology’s departments, company families, and internal security</td>\n</tr>\n<tr>\n<td><strong>Sprawl District</strong></td>\n<td>Streetwise</td>\n<td>Negotiation, Contacts, Perception, Brawl</td>\n<td>Your district’s street vendors, fixers, block associations, and local gangs</td>\n</tr>\n<tr>\n<td><strong>Transit Hub / Freeport</strong></td>\n<td>Navigation</td>\n<td>Contacts, Driving, Piloting, Negotiation</td>\n<td>Dockworkers, freight crews, customs brokers, and travelers passing through your hub</td>\n</tr>\n<tr>\n<td><strong>Outland Wastes</strong></td>\n<td>Survival</td>\n<td>Athletics, Driving, Perception, Firearms</td>\n<td>Outland nomad clans, convoy runners, and wasteland settlements</td>\n</tr>\n<tr>\n<td><strong>Academic Spire</strong></td>\n<td>History</td>\n<td>Occult, Matrix Theory, Medicine Lore, Xenology</td>\n<td>Your spire’s faculty, archivists, research departments, and rival scholars</td>\n</tr>\n<tr>\n<td><strong>Faith District</strong></td>\n<td>Religion</td>\n<td>Insight, Occult, Warding, Medicine</td>\n<td>The district’s churches, shelters, orders of the Light, and the faithful who depend on them</td>\n</tr>\n<tr>\n<td><strong>Industrial Deep</strong></td>\n<td>Engineering</td>\n<td>Repair, Athletics, Demolitions, Electronics</td>\n<td>Foundry crews, labor unions, and Industrial Deep shift towns</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Industrial Deep</strong> is Corran-flavored but open to any People.</p>"
+        "markdown": "- **Background:** one **fixed** skill plus **choose 1** from a list of four.\n- **Profession:** one **fixed** skill plus **choose 2** from a list of four.\n- **No wasted duplicates:** You can’t choose a skill you already have — from your ancestry, class, the other of Background/Profession, or an earlier pick. If that leaves too few options, choose any skill you don’t have from the same skill group (then from any group).\n- Fixed skills never overlap by design: no Background fixed skill is a Profession fixed skill, and none of them is a skill an Operator Origin grants (Command, Demolitions, Intimidation). If some other source already gave you a fixed skill, choose another skill from the same Ghostwire group instead.\n\n**Group reminder** (`02`): Action · Technical · Knowledge · Social · Vehicle and drone · Magic and supernatural. “Same group” means that list, not “sounds similar.”\n\n### Worked collision\n\nA Corran from **Industrial Deep** (fixed **Engineering**) who takes **Hauler / Labor** (choose 2 from Driving, Repair, Brawl, Engineering) already has Engineering. They cannot pick Engineering again. They take two of the remaining three, or — if a later class grant ate another of those — they drop to any unowned Technical skill, then any unowned skill. Do not take a duplicate and call it flavor.",
+        "content": "<ul>\n<li><strong>Background:</strong> one <strong>fixed</strong> skill plus <strong>choose 1</strong> from a list of four.</li>\n<li><strong>Profession:</strong> one <strong>fixed</strong> skill plus <strong>choose 2</strong> from a list of four.</li>\n<li><strong>No wasted duplicates:</strong> You can’t choose a skill you already have — from your ancestry, class, the other of Background/Profession, or an earlier pick. If that leaves too few options, choose any skill you don’t have from the same skill group (then from any group).</li>\n<li>Fixed skills never overlap by design: no Background fixed skill is a Profession fixed skill, and none of them is a skill an Operator Origin grants (Command, Demolitions, Intimidation). If some other source already gave you a fixed skill, choose another skill from the same Ghostwire group instead.</li>\n</ul>\n<p><strong>Group reminder</strong> (<code>02</code>): Action · Technical · Knowledge · Social · Vehicle and drone · Magic and supernatural. “Same group” means that list, not “sounds similar.”</p>\n<h3>Worked collision</h3>\n<p>A Corran from <strong>Industrial Deep</strong> (fixed <strong>Engineering</strong>) who takes <strong>Hauler / Labor</strong> (choose 2 from Driving, Repair, Brawl, Engineering) already has Engineering. They cannot pick Engineering again. They take two of the remaining three, or — if a later class grant ate another of those — they drop to any unowned Technical skill, then any unowned skill. Do not take a duplicate and call it flavor.</p>"
       },
       "category": null,
       "ownership": {
@@ -91,9 +91,9 @@
       "flags": {}
     },
     {
-      "_id": "MbXRbtl1lXZCdod6",
-      "_key": "!journal.pages!jDbQHMGFFuAA663q.MbXRbtl1lXZCdod6",
-      "name": "Professions",
+      "_id": "M6Z1LrxBdReNBNM7",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.M6Z1LrxBdReNBNM7",
+      "name": "Backgrounds",
       "type": "text",
       "sort": 400000,
       "title": {
@@ -109,8 +109,120 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.\n\n| Profession | Fixed skill | Choose 2 |\n|---|---|---|\n| **Wage-Slave** | Negotiation | Corporate, Persuasion, Insight, Electronics |\n| **Street Doc** | Medicine | Cybertech, Insight, Streetwise, Medicine Lore |\n| **Fixer** | Contacts | Negotiation, Streetwise, Insight, Deception |\n| **Courier** | Driving | Stealth, Navigation, Athletics, Streetwise |\n| **Gang Soldier** | Firearms | Intimidation, Streetwise, Brawl, Melee |\n| **Security Guard** | Perception | Firearms, Intimidation, Security Systems, Brawl |\n| **Smuggler** | Security Systems | Deception, Contacts, Driving, Stealth |\n| **Rig-Tech** | Rigging | Electronics, Repair, Driving, Piloting |\n| **Deck Jockey** | Hacking | Matrix Theory, Electronics, Security Systems, Streetwise |\n| **Entertainer** | Performance | Persuasion, Deception, Insight, Contacts |\n| **Beat Reporter** | Perception | Corporate, Contacts, Insight, Electronics |\n| **Hauler / Labor** | Athletics | Driving, Repair, Brawl, Engineering |\n| **Merc Recruit** | Firearms | Athletics, Survival, Melee, Heavy Weapons |\n| **Acolyte** | Occult | Religion, Insight, Warding, Rituals |\n| **Chop-Doc Assistant** | Cybertech | Medicine, Streetwise, Demolitions, Electronics |",
-        "content": "<p>Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>\n<table>\n<thead>\n<tr>\n<th id=\"profession\">Profession</th>\n<th id=\"fixed_skill\">Fixed skill</th>\n<th id=\"choose_2\">Choose 2</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Wage-Slave</strong></td>\n<td>Negotiation</td>\n<td>Corporate, Persuasion, Insight, Electronics</td>\n</tr>\n<tr>\n<td><strong>Street Doc</strong></td>\n<td>Medicine</td>\n<td>Cybertech, Insight, Streetwise, Medicine Lore</td>\n</tr>\n<tr>\n<td><strong>Fixer</strong></td>\n<td>Contacts</td>\n<td>Negotiation, Streetwise, Insight, Deception</td>\n</tr>\n<tr>\n<td><strong>Courier</strong></td>\n<td>Driving</td>\n<td>Stealth, Navigation, Athletics, Streetwise</td>\n</tr>\n<tr>\n<td><strong>Gang Soldier</strong></td>\n<td>Firearms</td>\n<td>Intimidation, Streetwise, Brawl, Melee</td>\n</tr>\n<tr>\n<td><strong>Security Guard</strong></td>\n<td>Perception</td>\n<td>Firearms, Intimidation, Security Systems, Brawl</td>\n</tr>\n<tr>\n<td><strong>Smuggler</strong></td>\n<td>Security Systems</td>\n<td>Deception, Contacts, Driving, Stealth</td>\n</tr>\n<tr>\n<td><strong>Rig-Tech</strong></td>\n<td>Rigging</td>\n<td>Electronics, Repair, Driving, Piloting</td>\n</tr>\n<tr>\n<td><strong>Deck Jockey</strong></td>\n<td>Hacking</td>\n<td>Matrix Theory, Electronics, Security Systems, Streetwise</td>\n</tr>\n<tr>\n<td><strong>Entertainer</strong></td>\n<td>Performance</td>\n<td>Persuasion, Deception, Insight, Contacts</td>\n</tr>\n<tr>\n<td><strong>Beat Reporter</strong></td>\n<td>Perception</td>\n<td>Corporate, Contacts, Insight, Electronics</td>\n</tr>\n<tr>\n<td><strong>Hauler / Labor</strong></td>\n<td>Athletics</td>\n<td>Driving, Repair, Brawl, Engineering</td>\n</tr>\n<tr>\n<td><strong>Merc Recruit</strong></td>\n<td>Firearms</td>\n<td>Athletics, Survival, Melee, Heavy Weapons</td>\n</tr>\n<tr>\n<td><strong>Acolyte</strong></td>\n<td>Occult</td>\n<td>Religion, Insight, Warding, Rituals</td>\n</tr>\n<tr>\n<td><strong>Chop-Doc Assistant</strong></td>\n<td>Cybertech</td>\n<td>Medicine, Streetwise, Demolitions, Electronics</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "Each Background also ties you to a community: you have an **edge** on tests to recall lore about that community or to find and influence people **within it** (Director’s call on when it applies).\n\n| Background | Fixed skill | Choose 1 | Community |\n|---|---|---|---|\n| **Undercity Barrens** | Stealth | Streetwise, Survival, Perception, Athletics | The Undercity’s squatter blocks, tunnel gangs, and scavenger crews |\n| **Corp Arcology** | Corporate | Persuasion, Negotiation, Insight, Security Systems | Your arcology’s departments, company families, and internal security |\n| **Sprawl District** | Streetwise | Negotiation, Contacts, Perception, Brawl | Your district’s street vendors, fixers, block associations, and local gangs |\n| **Transit Hub / Freeport** | Navigation | Contacts, Driving, Piloting, Negotiation | Dockworkers, freight crews, customs brokers, and travelers passing through your hub |\n| **Outland Wastes** | Survival | Athletics, Driving, Perception, Firearms | Outland nomad clans, convoy runners, and wasteland settlements |\n| **Academic Spire** | History | Occult, Matrix Theory, Medicine Lore, Xenology | Your spire’s faculty, archivists, research departments, and rival scholars |\n| **Faith District** | Religion | Insight, Occult, Warding, Medicine | The district’s churches, shelters, orders of the Light, and the faithful who depend on them |\n| **Industrial Deep** | Engineering | Repair, Athletics, Demolitions, Electronics | Foundry crews, labor unions, and Industrial Deep shift towns |\n\n**Industrial Deep** is Corran-flavored but open to any People.\n\n### Using the community edge\n\nGrant the edge when the test is actually **about that community**:\n\n- Recalling who runs a block, which shrine still feeds people, which shift boss still answers a page.\n- Finding a door, a couch, a name, or a warning **inside** that community.\n- Influencing someone who still treats you as one of theirs.\n\nDo **not** grant it for generic Streetwise in a city you never named, for corp law in a different conglomerate’s tower, or for “I grew up poor, so I sneak everywhere.” Stealth is already the Undercity Barrens fixed skill; the edge is the **people**, not a second characteristic.\n\nIf the crew is in Ossian Reach, map the row to a **rung** without rewriting the table: Barrens and industrial crews read Flats / Warrens / Sinks; Sprawl District is Grid-and-Flats street; Corp Arcology and Academic Spire are Grid-to-Spires; Faith District can sit anywhere a choir holds a block; Transit Hub is Interchange / docks / Cinderhold traffic; Outland Wastes is Cinderhold and the gate. That mapping is **Director dress** for print Ch 27 — it does not add skills.",
+        "content": "<p>Each Background also ties you to a community: you have an <strong>edge</strong> on tests to recall lore about that community or to find and influence people <strong>within it</strong> (Director’s call on when it applies).</p>\n<table>\n<thead>\n<tr>\n<th id=\"background\">Background</th>\n<th id=\"fixed_skill\">Fixed skill</th>\n<th id=\"choose_1\">Choose 1</th>\n<th id=\"community\">Community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Undercity Barrens</strong></td>\n<td>Stealth</td>\n<td>Streetwise, Survival, Perception, Athletics</td>\n<td>The Undercity’s squatter blocks, tunnel gangs, and scavenger crews</td>\n</tr>\n<tr>\n<td><strong>Corp Arcology</strong></td>\n<td>Corporate</td>\n<td>Persuasion, Negotiation, Insight, Security Systems</td>\n<td>Your arcology’s departments, company families, and internal security</td>\n</tr>\n<tr>\n<td><strong>Sprawl District</strong></td>\n<td>Streetwise</td>\n<td>Negotiation, Contacts, Perception, Brawl</td>\n<td>Your district’s street vendors, fixers, block associations, and local gangs</td>\n</tr>\n<tr>\n<td><strong>Transit Hub / Freeport</strong></td>\n<td>Navigation</td>\n<td>Contacts, Driving, Piloting, Negotiation</td>\n<td>Dockworkers, freight crews, customs brokers, and travelers passing through your hub</td>\n</tr>\n<tr>\n<td><strong>Outland Wastes</strong></td>\n<td>Survival</td>\n<td>Athletics, Driving, Perception, Firearms</td>\n<td>Outland nomad clans, convoy runners, and wasteland settlements</td>\n</tr>\n<tr>\n<td><strong>Academic Spire</strong></td>\n<td>History</td>\n<td>Occult, Matrix Theory, Medicine Lore, Xenology</td>\n<td>Your spire’s faculty, archivists, research departments, and rival scholars</td>\n</tr>\n<tr>\n<td><strong>Faith District</strong></td>\n<td>Religion</td>\n<td>Insight, Occult, Warding, Medicine</td>\n<td>The district’s churches, shelters, orders of the Light, and the faithful who depend on them</td>\n</tr>\n<tr>\n<td><strong>Industrial Deep</strong></td>\n<td>Engineering</td>\n<td>Repair, Athletics, Demolitions, Electronics</td>\n<td>Foundry crews, labor unions, and Industrial Deep shift towns</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Industrial Deep</strong> is Corran-flavored but open to any People.</p>\n<h3>Using the community edge</h3>\n<p>Grant the edge when the test is actually <strong>about that community</strong>:</p>\n<ul>\n<li>Recalling who runs a block, which shrine still feeds people, which shift boss still answers a page.</li>\n<li>Finding a door, a couch, a name, or a warning <strong>inside</strong> that community.</li>\n<li>Influencing someone who still treats you as one of theirs.</li>\n</ul>\n<p>Do <strong>not</strong> grant it for generic Streetwise in a city you never named, for corp law in a different conglomerate’s tower, or for “I grew up poor, so I sneak everywhere.” Stealth is already the Undercity Barrens fixed skill; the edge is the <strong>people</strong>, not a second characteristic.</p>\n<p>If the crew is in Ossian Reach, map the row to a <strong>rung</strong> without rewriting the table: Barrens and industrial crews read Flats / Warrens / Sinks; Sprawl District is Grid-and-Flats street; Corp Arcology and Academic Spire are Grid-to-Spires; Faith District can sit anywhere a choir holds a block; Transit Hub is Interchange / docks / Cinderhold traffic; Outland Wastes is Cinderhold and the gate. That mapping is <strong>Director dress</strong> for print Ch 27 — it does not add skills.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "RAUkEOtRRPtTs9kb",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.RAUkEOtRRPtTs9kb",
+      "name": "Professions",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.\n\n| Profession | Fixed skill | Choose 2 |\n|---|---|---|\n| **Wage-Slave** | Negotiation | Corporate, Persuasion, Insight, Electronics |\n| **Street Doc** | Medicine | Cybertech, Insight, Streetwise, Medicine Lore |\n| **Fixer** | Contacts | Negotiation, Streetwise, Insight, Deception |\n| **Courier** | Driving | Stealth, Navigation, Athletics, Streetwise |\n| **Gang Soldier** | Firearms | Intimidation, Streetwise, Brawl, Melee |\n| **Security Guard** | Perception | Firearms, Intimidation, Security Systems, Brawl |\n| **Smuggler** | Security Systems | Deception, Contacts, Driving, Stealth |\n| **Rig-Tech** | Rigging | Electronics, Repair, Driving, Piloting |\n| **Deck Jockey** | Hacking | Matrix Theory, Electronics, Security Systems, Streetwise |\n| **Entertainer** | Performance | Persuasion, Deception, Insight, Contacts |\n| **Beat Reporter** | Perception | Corporate, Contacts, Insight, Electronics |\n| **Hauler / Labor** | Athletics | Driving, Repair, Brawl, Engineering |\n| **Merc Recruit** | Firearms | Athletics, Survival, Melee, Heavy Weapons |\n| **Acolyte** | Occult | Religion, Insight, Warding, Rituals |\n| **Chop-Doc Assistant** | Cybertech | Medicine, Streetwise, Demolitions, Electronics |\n\n### The old job at the table\n\nAsk one question at chargen: **who still has your number?** A Fixer profession implies a lean. A Security Guard implies a badge you no longer carry (or worse, one you still do). A Deck Jockey implies a handle someone on the Wire might recognize. That is contact **fiction**. A full Followers & Contacts chapter is a **v1 non-goal** (`26`); the Director uses the hireling / retainer pointer in `26` and the Fixer Retainer service (gear 1G) for a one-time introduction.\n\nProfession is also a **legwork door**, not a free success. A Street Doc may get a gray-clinic conversation without a bribe; they still pay for the bag (`15`, `26`). A Wage-Slave may know which department to call; they still roll if the clerk can ruin them.\n\nDo not let Profession replace class. The Medic class is the bag and the Reagents. Street Doc is how you knew a vein before you were a runner.",
+        "content": "<p>Professions grant no Renown or ¥ on their own; a Director may add a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>\n<table>\n<thead>\n<tr>\n<th id=\"profession\">Profession</th>\n<th id=\"fixed_skill\">Fixed skill</th>\n<th id=\"choose_2\">Choose 2</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Wage-Slave</strong></td>\n<td>Negotiation</td>\n<td>Corporate, Persuasion, Insight, Electronics</td>\n</tr>\n<tr>\n<td><strong>Street Doc</strong></td>\n<td>Medicine</td>\n<td>Cybertech, Insight, Streetwise, Medicine Lore</td>\n</tr>\n<tr>\n<td><strong>Fixer</strong></td>\n<td>Contacts</td>\n<td>Negotiation, Streetwise, Insight, Deception</td>\n</tr>\n<tr>\n<td><strong>Courier</strong></td>\n<td>Driving</td>\n<td>Stealth, Navigation, Athletics, Streetwise</td>\n</tr>\n<tr>\n<td><strong>Gang Soldier</strong></td>\n<td>Firearms</td>\n<td>Intimidation, Streetwise, Brawl, Melee</td>\n</tr>\n<tr>\n<td><strong>Security Guard</strong></td>\n<td>Perception</td>\n<td>Firearms, Intimidation, Security Systems, Brawl</td>\n</tr>\n<tr>\n<td><strong>Smuggler</strong></td>\n<td>Security Systems</td>\n<td>Deception, Contacts, Driving, Stealth</td>\n</tr>\n<tr>\n<td><strong>Rig-Tech</strong></td>\n<td>Rigging</td>\n<td>Electronics, Repair, Driving, Piloting</td>\n</tr>\n<tr>\n<td><strong>Deck Jockey</strong></td>\n<td>Hacking</td>\n<td>Matrix Theory, Electronics, Security Systems, Streetwise</td>\n</tr>\n<tr>\n<td><strong>Entertainer</strong></td>\n<td>Performance</td>\n<td>Persuasion, Deception, Insight, Contacts</td>\n</tr>\n<tr>\n<td><strong>Beat Reporter</strong></td>\n<td>Perception</td>\n<td>Corporate, Contacts, Insight, Electronics</td>\n</tr>\n<tr>\n<td><strong>Hauler / Labor</strong></td>\n<td>Athletics</td>\n<td>Driving, Repair, Brawl, Engineering</td>\n</tr>\n<tr>\n<td><strong>Merc Recruit</strong></td>\n<td>Firearms</td>\n<td>Athletics, Survival, Melee, Heavy Weapons</td>\n</tr>\n<tr>\n<td><strong>Acolyte</strong></td>\n<td>Occult</td>\n<td>Religion, Insight, Warding, Rituals</td>\n</tr>\n<tr>\n<td><strong>Chop-Doc Assistant</strong></td>\n<td>Cybertech</td>\n<td>Medicine, Streetwise, Demolitions, Electronics</td>\n</tr>\n</tbody>\n</table>\n<h3>The old job at the table</h3>\n<p>Ask one question at chargen: <strong>who still has your number?</strong> A Fixer profession implies a lean. A Security Guard implies a badge you no longer carry (or worse, one you still do). A Deck Jockey implies a handle someone on the Wire might recognize. That is contact <strong>fiction</strong>. A full Followers &amp; Contacts chapter is a <strong>v1 non-goal</strong> (<code>26</code>); the Director uses the hireling / retainer pointer in <code>26</code> and the Fixer Retainer service (gear 1G) for a one-time introduction.</p>\n<p>Profession is also a <strong>legwork door</strong>, not a free success. A Street Doc may get a gray-clinic conversation without a bribe; they still pay for the bag (<code>15</code>, <code>26</code>). A Wage-Slave may know which department to call; they still roll if the clerk can ruin them.</p>\n<p>Do not let Profession replace class. The Medic class is the bag and the Reagents. Street Doc is how you knew a vein before you were a runner.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "E3DBz6BqYxhxnJeL",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.E3DBz6BqYxhxnJeL",
+      "name": "Chargen order and Lifestyle",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Take Background and Profession in the chargen sequence in `02` (after People, before class). Collect skill grants **after** People so the no-duplicate rule has something to collide with.\n\nChargen does not force a Lifestyle band. Assume **Low** or fiction-appropriate until the first paid respite unless the Director sets otherwise from Background (`26`): Barrens and Outland Wastes often start Squatter or Low; Corp Arcology and Academic Spire can justify Middle if the story is “I still have a keycard and one month of rent.” That is a **starting address**, not free Elite upkeep. Pay the printed upkeep in `26` when the first respite lands.\n\nStarting funds remain **¥5,000** liquid + one free starting Kit (`08`). The optional Profession ¥500 is extra liquid, not a second Kit and not a perk.",
+        "content": "<p>Take Background and Profession in the chargen sequence in <code>02</code> (after People, before class). Collect skill grants <strong>after</strong> People so the no-duplicate rule has something to collide with.</p>\n<p>Chargen does not force a Lifestyle band. Assume <strong>Low</strong> or fiction-appropriate until the first paid respite unless the Director sets otherwise from Background (<code>26</code>): Barrens and Outland Wastes often start Squatter or Low; Corp Arcology and Academic Spire can justify Middle if the story is “I still have a keycard and one month of rent.” That is a <strong>starting address</strong>, not free Elite upkeep. Pay the printed upkeep in <code>26</code> when the first respite lands.</p>\n<p>Starting funds remain <strong>¥5,000</strong> liquid + one free starting Kit (<code>08</code>). The optional Profession ¥500 is extra liquid, not a second Kit and not a perk.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "tAU0ohOWT76pvjxp",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.tAU0ohOWT76pvjxp",
+      "name": "What these picks are not",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- Not Cultures or Careers under the old names in player-facing text — say Background and Profession.\n- Not a license to buy skills with ¥ or chrome.\n- Not Languages. Language grants come from People, education, class, and perks (`07`).\n- Not the Reach Handbook. A Sprawl District runner is not automatically a Ninth Ward King.\n\n> **In Foundry**\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Put the matching Background and Profession Items on the hero (module localization + this chapter’s skill lists). Skills land on the hero sheet; Ghostwire does not add a second skill grid. Pregens in **Ghostwire Pregens** already have their Background / Profession grants applied at level 1 (B59). There is no Lifestyle automation — if you set a starting band from Background, adjust Nuyen by hand at the first respite (`26`).",
+        "content": "<ul>\n<li>Not Cultures or Careers under the old names in player-facing text — say Background and Profession.</li>\n<li>Not a license to buy skills with ¥ or chrome.</li>\n<li>Not Languages. Language grants come from People, education, class, and perks (<code>07</code>).</li>\n<li>Not the Reach Handbook. A Sprawl District runner is not automatically a Ninth Ward King.</li>\n</ul>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Enable <strong>Draw Steel - Ghostwire Build</strong> on a compatible Foundry world. Put the matching Background and Profession Items on the hero (module localization + this chapter’s skill lists). Skills land on the hero sheet; Ghostwire does not add a second skill grid. Pregens in <strong>Ghostwire Pregens</strong> already have their Background / Profession grants applied at level 1 (B59). There is no Lifestyle automation — if you set a starting band from Background, adjust Nuyen by hand at the first respite (<code>26</code>).</p>\n</blockquote>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "mTkLzFFSDENAhW7u",
+      "_key": "!journal.pages!jDbQHMGFFuAA663q.mTkLzFFSDENAhW7u",
+      "name": "Cross-references",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Topic | Where |\n|---|---|\n| Chargen order, skill groups, firewall | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics} |\n| People packages | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)} |\n| Languages | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Bc4nTBlJX4nMRdS1]{Languages} |\n| ¥, Kit, optional Profession cash | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear & Wealth (¥)} |\n| Perks (later skill-adjacent picks) | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.rtGumxlpMCvrB7K4]{Perks} |\n| Lifestyle starting band | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.pGj7uMaf9JBsX1Rx]{Lifestyle & Downtime} |\n| Reach dress for communities | print Ch 27 / `docs/manuscript/03-directors/27-running-ossian-reach.md` |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"topic\">Topic</th>\n<th id=\"where\">Where</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Chargen order, skill groups, firewall</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}</td>\n</tr>\n<tr>\n<td>People packages</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)}</td>\n</tr>\n<tr>\n<td>Languages</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Bc4nTBlJX4nMRdS1]{Languages}</td>\n</tr>\n<tr>\n<td>¥, Kit, optional Profession cash</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.2vJKb0lqXAByfqhG]{Kits, Gear &amp; Wealth (¥)}</td>\n</tr>\n<tr>\n<td>Perks (later skill-adjacent picks)</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.rtGumxlpMCvrB7K4]{Perks}</td>\n</tr>\n<tr>\n<td>Lifestyle starting band</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.pGj7uMaf9JBsX1Rx]{Lifestyle &amp; Downtime}</td>\n</tr>\n<tr>\n<td>Reach dress for communities</td>\n<td>print Ch 27 / <code>docs/manuscript/03-directors/27-running-ossian-reach.md</code></td>\n</tr>\n</tbody>\n</table>"
       },
       "category": null,
       "ownership": {

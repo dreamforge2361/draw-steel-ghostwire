@@ -9,12 +9,12 @@
 // RollTable packs: embedded results carry their own "!tables.results!" _key (src/packs/encounters is
 // generated from docs/masters/encounters/*.md by tools/encounters-to-tables.mjs).
 // Run with Foundry closed:  node tools/build-packs.mjs
-import { createRequire } from "node:module";
+// Optional pack filter:     node tools/build-packs.mjs rulebook lore
 import { readFileSync, readdirSync, rmSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
+import { foundryRequire } from "./lib/foundry-require.mjs";
 
-const FOUNDRY_APP = process.env.FOUNDRY_APP ?? "C:/Program Files/Foundry Virtual Tabletop/resources/app";
-const { ClassicLevel } = createRequire(join(FOUNDRY_APP, "package.json"))("classic-level");
+const { ClassicLevel } = foundryRequire("classic-level");
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const localize = key => key.split(".").reduce((o, k) => o?.[k], lang);
@@ -32,7 +32,10 @@ function resolve(value) {
 
 const readJson = path => resolve(JSON.parse(readFileSync(path, "utf8")));
 
+const wanted = new Set(process.argv.slice(2).filter(a => !a.startsWith("-")));
+
 for (const pack of readdirSync("src/packs")) {
+  if (wanted.size && !wanted.has(pack)) continue;
   const src = join("src/packs", pack);
   const out = join("packs", pack);
   rmSync(out, { recursive: true, force: true });

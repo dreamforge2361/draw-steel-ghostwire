@@ -2,7 +2,7 @@
   "id": "draw-steel-ghostwire",
   "title": "Draw Steel - Ghostwire Build",
   "description": "Ghostwire content and presentation module for Foundry VTT, running on the stock Draw Steel system. Reskin, localization, and compendium packs — does not replace draw-steel.",
-  "version": "0.3.23",
+  "version": "0.3.24",
   "compatibility": {
     "minimum": "14.367",
     "verified": "14.367",
@@ -216,6 +216,17 @@
       }
     },
     {
+      "name": "lore",
+      "label": "GHOSTWIRE.COMPENDIUM.lore",
+      "path": "packs/lore",
+      "type": "JournalEntry",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
       "name": "wired-flats",
       "label": "GHOSTWIRE.COMPENDIUM.wiredFlats",
       "path": "packs/wired-flats",
@@ -297,6 +308,7 @@
         "summons",
         "bestiary",
         "rulebook",
+        "lore",
         "wired-flats",
         "pregens",
         "pregen-fiction",

@@ -29,7 +29,8 @@
       "pregens": "Ghostwire Pregens",
       "pregenFiction": "Ghostwire Pregen Fiction",
       "encounters": "Ghostwire Reach Events",
-      "reachHandbook": "Ghostwire — Ossian Reach Handbook"
+      "reachHandbook": "Ghostwire — Ossian Reach Handbook",
+      "lore": "Ghostwire Lore"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -7095,7 +7096,8 @@
         "TheWire": "The Wire",
         "TheVeil": "The Veil",
         "Machines": "Machines: Drones, Vehicles & Buildings",
-        "Opposition": "Opposition (Director)"
+        "Opposition": "Opposition (Director)",
+        "LifestyleDowntime": "Lifestyle & Downtime"
       }
     },
     "WiredFlats": {
@@ -7271,6 +7273,22 @@
         "NoChip": "{payload} is spent (quantity 0): there is no chip left to compile. Get a new chip first."
       },
       "Dumped": "{payload} unloaded: its {fires} remaining fire(s) are dumped. The chip is spent."
+    },
+    "Lore": {
+      "Folders": {
+        "Setting": "Setting Primer",
+        "Peoples": "Peoples & World",
+        "Reach": "Ossian Reach",
+        "Factions": "VOIDMARK & Accords"
+      },
+      "Journals": {
+        "LoreIndex": "Lore Index",
+        "SettingPrimer": "Setting Primer",
+        "PeoplesAndWorld": "Peoples & World",
+        "OssianReachColor": "Ossian Reach — Street Color",
+        "Voidmark": "VOIDMARK",
+        "HandsOffAccords": "The Hands Off Accords"
+      }
     }
   },
   "DRAW_STEEL": {

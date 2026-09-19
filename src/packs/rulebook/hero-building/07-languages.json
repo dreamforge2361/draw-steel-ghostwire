@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/19-languages.md`, `docs/masters/GHOSTWIRE_LANGUAGES.md`*\n\n**Engine:** Draw Steel Heroes — use the official language rules; Ghostwire renames every language below.",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/19-languages.md</code>, <code>docs/masters/GHOSTWIRE_LANGUAGES.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official language rules; Ghostwire renames every language below.</p>"
+        "markdown": "*RAW draft (Stage 3 chargen/play fill / B75, 2026-09-19) · Sources: `docs/rulebook/19-languages.md`, `docs/masters/GHOSTWIRE_LANGUAGES.md` (names + knowledge-only lock), `docs/raw/02-heroes-characteristics.md`, `docs/raw/03-tests-power-rolls.md`, `docs/raw/11-perks.md` (Polyglot)*\n\n**Engine:** Ghostwire language procedures in this chapter. Playable without a separate rulebook. Ghostwire **renames** every language below; do not invent tongue histories here.  \n\n**Print:** Chapter 8 (TOC lock)  \n**Lore gazetteer:** **non-goal** for RAW / v1 PDF. Per-language history and purpose is backlog with Michael (issue #67). This chapter is procedure + the locked name lists.",
+        "content": "<p><em>RAW draft (Stage 3 chargen/play fill / B75, 2026-09-19) · Sources: <code>docs/rulebook/19-languages.md</code>, <code>docs/masters/GHOSTWIRE_LANGUAGES.md</code> (names + knowledge-only lock), <code>docs/raw/02-heroes-characteristics.md</code>, <code>docs/raw/03-tests-power-rolls.md</code>, <code>docs/raw/11-perks.md</code> (Polyglot)</em></p>\n<p><strong>Engine:</strong> Ghostwire language procedures in this chapter. Playable without a separate rulebook. Ghostwire <strong>renames</strong> every language below; do not invent tongue histories here.  </p>\n<p><strong>Print:</strong> Chapter 8 (TOC lock)<br />\n<strong>Lore gazetteer:</strong> <strong>non-goal</strong> for RAW / v1 PDF. Per-language history and purpose is backlog with Michael (issue #67). This chapter is procedure + the locked name lists.</p>"
       },
       "category": null,
       "ownership": {
@@ -35,9 +35,9 @@
       "flags": {}
     },
     {
-      "_id": "mBJIDvC5m6nGNfVi",
-      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.mBJIDvC5m6nGNfVi",
-      "name": "Rules",
+      "_id": "o6mnDWCYmOGYFrDh",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.o6mnDWCYmOGYFrDh",
+      "name": "What this chapter is for",
       "type": "text",
       "sort": 200000,
       "title": {
@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "- **Trade Cant** is every runner’s starting language. Other languages come from your People, Background, class, education, and perks.\n- **Machine translation** carries simple communication, but it isn’t knowing the language: nuance, code phrases, ritual language, and deception slip through. The Director decides whether a negotiation, a read, or a deception works through a translator.\n- **Knowledge-only languages** need real knowledge; translation gives a surface gloss at best. They are:\n  - every **Arcane & sacred** language,\n  - **Black-Site Code**,\n  - every **Machine & matrix** language except **Wire Speak**,\n  - **Void Cant**, **Infernal Speech**, **Old Liturgical**, **Dead Ops Tongue**, and **Extradimensional Technical**.\n\nLanguages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.",
-        "content": "<ul>\n<li><strong>Trade Cant</strong> is every runner’s starting language. Other languages come from your People, Background, class, education, and perks.</li>\n<li><strong>Machine translation</strong> carries simple communication, but it isn’t knowing the language: nuance, code phrases, ritual language, and deception slip through. The Director decides whether a negotiation, a read, or a deception works through a translator.</li>\n<li><strong>Knowledge-only languages</strong> need real knowledge; translation gives a surface gloss at best. They are:<ul>\n<li>every <strong>Arcane & sacred</strong> language,</li>\n<li><strong>Black-Site Code</strong>,</li>\n<li>every <strong>Machine & matrix</strong> language except <strong>Wire Speak</strong>,</li>\n<li><strong>Void Cant</strong>, <strong>Infernal Speech</strong>, <strong>Old Liturgical</strong>, <strong>Dead Ops Tongue</strong>, and <strong>Extradimensional Technical</strong>.</li></ul></li>\n</ul>\n<p>Languages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.</p>"
+        "markdown": "Ghostwire languages are **access keys**. They open archives, rites, black sites, enclaves, and deep Wire forensics. They do not block every street scene. Everyday talk runs in shared tongues. You roll when nuance, code, ritual, or a locked door of words is the actual obstacle.\n\nThis chapter tells the table:\n\n- How language **works on a test** (and when not to roll).\n- Which **lists** exist (seven categories; 42 remapped names).\n- What every runner **starts with**, and which **printed grants** add more.\n- How a Director should **gate** translation, knowledge-only tongues, and faction doors.\n\nIt does **not** invent a history for Trade Cant, Saint-Cant, or Corran Work-Cant. Names and the knowledge-only split are locked. Flavor sentences that teach a **rule** are allowed. Lore essays are not.",
+        "content": "<p>Ghostwire languages are <strong>access keys</strong>. They open archives, rites, black sites, enclaves, and deep Wire forensics. They do not block every street scene. Everyday talk runs in shared tongues. You roll when nuance, code, ritual, or a locked door of words is the actual obstacle.</p>\n<p>This chapter tells the table:</p>\n<ul>\n<li>How language <strong>works on a test</strong> (and when not to roll).</li>\n<li>Which <strong>lists</strong> exist (seven categories; 42 remapped names).</li>\n<li>What every runner <strong>starts with</strong>, and which <strong>printed grants</strong> add more.</li>\n<li>How a Director should <strong>gate</strong> translation, knowledge-only tongues, and faction doors.</li>\n</ul>\n<p>It does <strong>not</strong> invent a history for Trade Cant, Saint-Cant, or Corran Work-Cant. Names and the knowledge-only split are locked. Flavor sentences that teach a <strong>rule</strong> are allowed. Lore essays are not.</p>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "8Eq3m0C5X8QhK5DG",
-      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.8Eq3m0C5X8QhK5DG",
-      "name": "Language list",
+      "_id": "AGzmNEJYZCyf1b2u",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.AGzmNEJYZCyf1b2u",
+      "name": "Rules baseline",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,176 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "| Category | Languages |\n|---|---|\n| **Common urban** | Trade Cant · Reach Metro · Flats Cant · Sprawl Argot |\n| **National / cultural** | Meridian Standard · Sanctum Formal · Colony Creole · Offworld Trade · Hive Technical · Old Reach |\n| **Corporate** | Corp Cant · Legal Shorthand · Ops Dialects · Black-Site Code |\n| **Arcane & sacred** | Signal Liturgy · True Signal · Saint-Cant · Rite Speech · Demon Names · Ward Formulae |\n| **Machine & matrix** | Wire Speak · Old Code · Machine Markup · AI Symbolic · Resonance Notation |\n| **Ancestral (Peoples)** | Corran Guild-Tongue · Corran Work-Cant · Elvani High Cant · Elvani Softspeech · Goliar Battle-Cant · Changer Pack-Tongue · Revenant Memory-Speech · Mutant Enclave Cant · Cyborg Frame-Cant · Pure-Line Homily |\n| **Extradimensional / dead / deep lore** | Void Cant · Drift Creole · Infernal Speech · Old Liturgical · Dead Ops Tongue · Alien Colony Trade · Extradimensional Technical |\n\nEach Ghostwire language takes the place of one Draw Steel language; a Draw Steel rule or feature that grants a language grants a Ghostwire language instead. **Machine & matrix** languages matter for Wired forensics and deep intrusion.",
-        "content": "<table>\n<thead>\n<tr>\n<th id=\"category\">Category</th>\n<th id=\"languages\">Languages</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Common urban</strong></td>\n<td>Trade Cant · Reach Metro · Flats Cant · Sprawl Argot</td>\n</tr>\n<tr>\n<td><strong>National / cultural</strong></td>\n<td>Meridian Standard · Sanctum Formal · Colony Creole · Offworld Trade · Hive Technical · Old Reach</td>\n</tr>\n<tr>\n<td><strong>Corporate</strong></td>\n<td>Corp Cant · Legal Shorthand · Ops Dialects · Black-Site Code</td>\n</tr>\n<tr>\n<td><strong>Arcane & sacred</strong></td>\n<td>Signal Liturgy · True Signal · Saint-Cant · Rite Speech · Demon Names · Ward Formulae</td>\n</tr>\n<tr>\n<td><strong>Machine & matrix</strong></td>\n<td>Wire Speak · Old Code · Machine Markup · AI Symbolic · Resonance Notation</td>\n</tr>\n<tr>\n<td><strong>Ancestral (Peoples)</strong></td>\n<td>Corran Guild-Tongue · Corran Work-Cant · Elvani High Cant · Elvani Softspeech · Goliar Battle-Cant · Changer Pack-Tongue · Revenant Memory-Speech · Mutant Enclave Cant · Cyborg Frame-Cant · Pure-Line Homily</td>\n</tr>\n<tr>\n<td><strong>Extradimensional / dead / deep lore</strong></td>\n<td>Void Cant · Drift Creole · Infernal Speech · Old Liturgical · Dead Ops Tongue · Alien Colony Trade · Extradimensional Technical</td>\n</tr>\n</tbody>\n</table>\n<p>Each Ghostwire language takes the place of one Draw Steel language; a Draw Steel rule or feature that grants a language grants a Ghostwire language instead. <strong>Machine & matrix</strong> languages matter for Wired forensics and deep intrusion.</p>"
+        "markdown": "- **Trade Cant** is every runner’s starting language (the working speech of the Reach). Other languages come from your People, Background, class, education, and perks — **when those sources print a grant**.\n- **Machine translation** carries simple communication, but it isn’t knowing the language: nuance, code phrases, ritual language, and deception slip through. The Director decides whether a negotiation, a read, or a deception works through a translator.\n- **Knowledge-only languages** need real knowledge; translation gives a surface gloss at best. They are:\n  - every **Arcane & sacred** language,\n  - **Black-Site Code**,\n  - every **Machine & matrix** language except **Wire Speak**,\n  - **Void Cant**, **Infernal Speech**, **Old Liturgical**, **Dead Ops Tongue**, and **Extradimensional Technical**.\n\nLanguages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.\n\nEach Ghostwire language has a locked key → name map in `docs/masters/GHOSTWIRE_LANGUAGES.md` (42 of 42 keys). **Do not rename keys.** A printed grant that names a tongue grants the **Ghostwire name** for that key. Foundry still stores the system key and **shows** the Ghostwire name.",
+        "content": "<ul>\n<li><strong>Trade Cant</strong> is every runner’s starting language (the working speech of the Reach). Other languages come from your People, Background, class, education, and perks — <strong>when those sources print a grant</strong>.</li>\n<li><strong>Machine translation</strong> carries simple communication, but it isn’t knowing the language: nuance, code phrases, ritual language, and deception slip through. The Director decides whether a negotiation, a read, or a deception works through a translator.</li>\n<li><strong>Knowledge-only languages</strong> need real knowledge; translation gives a surface gloss at best. They are:<ul>\n<li>every <strong>Arcane & sacred</strong> language,</li>\n<li><strong>Black-Site Code</strong>,</li>\n<li>every <strong>Machine & matrix</strong> language except <strong>Wire Speak</strong>,</li>\n<li><strong>Void Cant</strong>, <strong>Infernal Speech</strong>, <strong>Old Liturgical</strong>, <strong>Dead Ops Tongue</strong>, and <strong>Extradimensional Technical</strong>.</li></ul></li>\n</ul>\n<p>Languages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.</p>\n<p>Each Ghostwire language has a locked key → name map in <code>docs/masters/GHOSTWIRE_LANGUAGES.md</code> (42 of 42 keys). <strong>Do not rename keys.</strong> A printed grant that names a tongue grants the <strong>Ghostwire name</strong> for that key. Foundry still stores the system key and <strong>shows</strong> the Ghostwire name.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "0nIuEeyoTWYnHbZa",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.0nIuEeyoTWYnHbZa",
+      "name": "How language checks work",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "A language is **not a skill**. You do not buy tongues with skill points (`02`, skills master). You either **know** a language or you do not.\n\n### When not to roll\n\nIf two speakers share a language and the scene is ordinary — buying noodles, asking which stair, threatening someone in Trade Cant — **do not roll** “do I speak.” You speak.\n\nIf nobody present shares a language and the only need is “which way is the Interchange,” **machine translation** is enough. No roll. The meaning gets through; the poetry does not.\n\n### When the Director calls a test\n\nCall a **test** (`03`) when **both** are true:\n\n1. The words themselves are the uncertainty (a lie in Corp Cant, a rite in Saint-Cant, a black-site passphrase, a Wire dump in Old Code).\n2. Failure or a middle result would change heat, access, a contact’s trust, or the score.\n\nThe roll is an ordinary Power Roll. **Characteristic** follows the job:\n\n| The question is… | Typical characteristic | Typical skill (if you have it) |\n|---|---|---|\n| Do they buy the cover / the threat? | **Persona** | Deception, Persuasion, Intimidation, Negotiation |\n| Do I catch the tell / the coded aside? | **Instinct** | Insight, Perception, Streetwise |\n| Do I parse the archive / the dump / the formula? | **Logic** | Corporate, Occult, Matrix Theory, Hacking, Electronics |\n| Do I remember which enclave uses this cant? | **Logic** or **Instinct** | History, Religion, Streetwise, Xenology |\n\n**Knowing the language is the door.** The skill is how well you *use* the door. If you do not know the language and translation does not apply, you do not make this test as “I speak it.” You make a different test (find a speaker, steal a file, jack a node) or you fail the access.\n\n**Shared language + relevant skill:** use the normal skill benefit on the Power Roll (`03`).\n\n**Shared language, no skill:** still roll if the Director called a test; you just lack the skill benefit.\n\n**No shared language:**\n\n| Situation | What happens |\n|---|---|\n| Everyday meaning, translator or implant on | Meaning lands. No nuance. Director may refuse deception, ritual, or code. |\n| Negotiation, read, or deception through a translator | **Director’s call** — allow with a **bane**, allow as “surface only” (no hidden terms), or refuse. |\n| Knowledge-only tongue | Translation is a **gloss**. Rites, black-site code, and deep code stay opaque. No usable knowledge from the app. |\n| Wire Speak (spoken Machine exception) | Treat as a normal spoken language; translation *may* help, Director’s call on nuance. |\n\nDo not invent a numeric “translator rating.” The lock is Director judgment, not a second ladder.\n\n### Outcomes (guidance)\n\nUse the printed ability or the freeform test. If you need a Ghostwire-shaped read for a language-gated door:\n\n| Result | Access |\n|---|---|\n| **Low** (≤11) | You miss the code, botch the honorific, or the translator lies to you. The door stays shut or the room knows you are faking. |\n| **Middle** (12–16) | You get the surface: enough to pass, buy, or file. Hidden clauses, true names, and trap phrases stay hidden. |\n| **High** (17+) | You catch the second meaning — the saint’s real name, the ops dialect’s kill-switch word, the dump’s deleted stanza. |\n\nThis is **guidance** for freeform doors. It does not replace a printed negotiation or Matrix Verb.",
+        "content": "<p>A language is <strong>not a skill</strong>. You do not buy tongues with skill points (<code>02</code>, skills master). You either <strong>know</strong> a language or you do not.</p>\n<h3>When not to roll</h3>\n<p>If two speakers share a language and the scene is ordinary — buying noodles, asking which stair, threatening someone in Trade Cant — <strong>do not roll</strong> “do I speak.” You speak.</p>\n<p>If nobody present shares a language and the only need is “which way is the Interchange,” <strong>machine translation</strong> is enough. No roll. The meaning gets through; the poetry does not.</p>\n<h3>When the Director calls a test</h3>\n<p>Call a <strong>test</strong> (<code>03</code>) when <strong>both</strong> are true:</p>\n<ol>\n<li>The words themselves are the uncertainty (a lie in Corp Cant, a rite in Saint-Cant, a black-site passphrase, a Wire dump in Old Code).</li>\n<li>Failure or a middle result would change heat, access, a contact’s trust, or the score.</li>\n</ol>\n<p>The roll is an ordinary Power Roll. <strong>Characteristic</strong> follows the job:</p>\n<table>\n<thead>\n<tr>\n<th id=\"the_question_is…\">The question is…</th>\n<th id=\"typical_characteristic\">Typical characteristic</th>\n<th id=\"typical_skill_(if_you_have_it)\">Typical skill (if you have it)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Do they buy the cover / the threat?</td>\n<td><strong>Persona</strong></td>\n<td>Deception, Persuasion, Intimidation, Negotiation</td>\n</tr>\n<tr>\n<td>Do I catch the tell / the coded aside?</td>\n<td><strong>Instinct</strong></td>\n<td>Insight, Perception, Streetwise</td>\n</tr>\n<tr>\n<td>Do I parse the archive / the dump / the formula?</td>\n<td><strong>Logic</strong></td>\n<td>Corporate, Occult, Matrix Theory, Hacking, Electronics</td>\n</tr>\n<tr>\n<td>Do I remember which enclave uses this cant?</td>\n<td><strong>Logic</strong> or <strong>Instinct</strong></td>\n<td>History, Religion, Streetwise, Xenology</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Knowing the language is the door.</strong> The skill is how well you <em>use</em> the door. If you do not know the language and translation does not apply, you do not make this test as “I speak it.” You make a different test (find a speaker, steal a file, jack a node) or you fail the access.</p>\n<p><strong>Shared language + relevant skill:</strong> use the normal skill benefit on the Power Roll (<code>03</code>).</p>\n<p><strong>Shared language, no skill:</strong> still roll if the Director called a test; you just lack the skill benefit.</p>\n<p><strong>No shared language:</strong></p>\n<table>\n<thead>\n<tr>\n<th id=\"situation\">Situation</th>\n<th id=\"what_happens\">What happens</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Everyday meaning, translator or implant on</td>\n<td>Meaning lands. No nuance. Director may refuse deception, ritual, or code.</td>\n</tr>\n<tr>\n<td>Negotiation, read, or deception through a translator</td>\n<td><strong>Director’s call</strong> — allow with a <strong>bane</strong>, allow as “surface only” (no hidden terms), or refuse.</td>\n</tr>\n<tr>\n<td>Knowledge-only tongue</td>\n<td>Translation is a <strong>gloss</strong>. Rites, black-site code, and deep code stay opaque. No usable knowledge from the app.</td>\n</tr>\n<tr>\n<td>Wire Speak (spoken Machine exception)</td>\n<td>Treat as a normal spoken language; translation <em>may</em> help, Director’s call on nuance.</td>\n</tr>\n</tbody>\n</table>\n<p>Do not invent a numeric “translator rating.” The lock is Director judgment, not a second ladder.</p>\n<h3>Outcomes (guidance)</h3>\n<p>Use the printed ability or the freeform test. If you need a Ghostwire-shaped read for a language-gated door:</p>\n<table>\n<thead>\n<tr>\n<th id=\"result\">Result</th>\n<th id=\"access\">Access</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Low</strong> (≤11)</td>\n<td>You miss the code, botch the honorific, or the translator lies to you. The door stays shut or the room knows you are faking.</td>\n</tr>\n<tr>\n<td><strong>Middle</strong> (12–16)</td>\n<td>You get the surface: enough to pass, buy, or file. Hidden clauses, true names, and trap phrases stay hidden.</td>\n</tr>\n<tr>\n<td><strong>High</strong> (17+)</td>\n<td>You catch the second meaning — the saint’s real name, the ops dialect’s kill-switch word, the dump’s deleted stanza.</td>\n</tr>\n</tbody>\n</table>\n<p>This is <strong>guidance</strong> for freeform doors. It does not replace a printed negotiation or Matrix Verb.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "s9YGBJ94rAEEivvF",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.s9YGBJ94rAEEivvF",
+      "name": "Chargen (step 6)",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Chargen order in `02` puts **Languages** after skills and before starting ¥.\n\n1. **Write Trade Cant.** Every runner has it. (A table that is *not* set in the Reach may swap the starting common urban tongue to Reach Metro, Flats Cant, or Sprawl Argot if everyone agrees — that is a campaign-region call from the languages master, not a new language.)\n2. **Collect printed grants.** Take any language a People trait, class feature, education feature, or perk **prints**. A grant that names a tongue grants the **Ghostwire name** for that key.\n3. **Polyglot** (`11`): if you take this perk later (or at a level that grants a perk), you learn **two** languages you have regularly heard or seen written. Immersion (7+ days in a place that speaks one you don’t know) lets you hold a basic conversation; finishing **Learn New Language** (`03` Projects — default goal **6**, Polyglot **3** after immersion) then makes it a full known tongue.\n4. **Do not invent automatic Background or People grants.** The languages master *wants* Backgrounds and ancestral tongues to attach later; that follow-up is **not shipped**. A Corp Arcology Background does not automatically give Corp Cant. An Elvani does not automatically get Elvani High Cant. If a later pass adds those advancements, they land in `06` / `05` and this paragraph shrinks.\n5. **Director optional color (not a grant rule):** if the table wants language to matter *this* campaign and no printed grant has fired, the Director may offer **one** additional tongue from a category that already matches the runner’s fiction (common urban, ancestral row for their People, or a corporate/national tongue they were raised in). That is a session-zero agreement, not a hidden second skill budget. Refuse knowledge-only tongues as freebies.\n\n**Merc / dual Kit** does not grant languages. **¥ does not buy a language.** Lifestyle does not buy a language (`26`). Chrome vocal modulators do not teach Corp Cant.\n\nRecord known languages on the sheet. In Foundry, use the hero language picker — it already shows Ghostwire names.",
+        "content": "<p>Chargen order in <code>02</code> puts <strong>Languages</strong> after skills and before starting ¥.</p>\n<ol>\n<li><strong>Write Trade Cant.</strong> Every runner has it. (A table that is <em>not</em> set in the Reach may swap the starting common urban tongue to Reach Metro, Flats Cant, or Sprawl Argot if everyone agrees — that is a campaign-region call from the languages master, not a new language.)</li>\n<li><strong>Collect printed grants.</strong> Take any language a People trait, class feature, education feature, or perk <strong>prints</strong>. A grant that names a tongue grants the <strong>Ghostwire name</strong> for that key.</li>\n<li><strong>Polyglot</strong> (<code>11</code>): if you take this perk later (or at a level that grants a perk), you learn <strong>two</strong> languages you have regularly heard or seen written. Immersion (7+ days in a place that speaks one you don’t know) lets you hold a basic conversation; finishing <strong>Learn New Language</strong> (<code>03</code> Projects — default goal <strong>6</strong>, Polyglot <strong>3</strong> after immersion) then makes it a full known tongue.</li>\n<li><strong>Do not invent automatic Background or People grants.</strong> The languages master <em>wants</em> Backgrounds and ancestral tongues to attach later; that follow-up is <strong>not shipped</strong>. A Corp Arcology Background does not automatically give Corp Cant. An Elvani does not automatically get Elvani High Cant. If a later pass adds those advancements, they land in <code>06</code> / <code>05</code> and this paragraph shrinks.</li>\n<li><strong>Director optional color (not a grant rule):</strong> if the table wants language to matter <em>this</em> campaign and no printed grant has fired, the Director may offer <strong>one</strong> additional tongue from a category that already matches the runner’s fiction (common urban, ancestral row for their People, or a corporate/national tongue they were raised in). That is a session-zero agreement, not a hidden second skill budget. Refuse knowledge-only tongues as freebies.</li>\n</ol>\n<p><strong>Merc / dual Kit</strong> does not grant languages. <strong>¥ does not buy a language.</strong> Lifestyle does not buy a language (<code>26</code>). Chrome vocal modulators do not teach Corp Cant.</p>\n<p>Record known languages on the sheet. In Foundry, use the hero language picker — it already shows Ghostwire names.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "GyejP37H3X66MGEr",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.GyejP37H3X66MGEr",
+      "name": "Language list",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Point of record for names: `docs/masters/GHOSTWIRE_LANGUAGES.md`. The table below is the play list.\n\n| Category | Languages |\n|---|---|\n| **Common urban** | Trade Cant · Reach Metro · Flats Cant · Sprawl Argot |\n| **National / cultural** | Meridian Standard · Sanctum Formal · Colony Creole · Offworld Trade · Hive Technical · Old Reach |\n| **Corporate** | Corp Cant · Legal Shorthand · Ops Dialects · Black-Site Code |\n| **Arcane & sacred** | Signal Liturgy · True Signal · Saint-Cant · Rite Speech · Demon Names · Ward Formulae |\n| **Machine & matrix** | Wire Speak · Old Code · Machine Markup · AI Symbolic · Resonance Notation |\n| **Ancestral (Peoples)** | Corran Guild-Tongue · Corran Work-Cant · Elvani High Cant · Elvani Softspeech · Goliar Battle-Cant · Changer Pack-Tongue · Revenant Memory-Speech · Mutant Enclave Cant · Cyborg Frame-Cant · Pure-Line Homily |\n| **Extradimensional / dead / deep lore** | Void Cant · Drift Creole · Infernal Speech · Old Liturgical · Dead Ops Tongue · Alien Colony Trade · Extradimensional Technical |\n\n### What each category is *for* (function, not history)\n\nHarvested from the languages master. These lines teach **when to ask for the tongue**, not where it was born.\n\n| Category | Function at the table |\n|---|---|\n| **Common urban** | Trade and street speech. Default for markets, crews, and Flats chatter. |\n| **National / cultural** | Region, colony, and legacy human speech. Use when the job leaves the Reach’s default mix. |\n| **Corporate** | Internal corp speech, legal shorthand, ops floors. **Black-Site Code** is knowledge-only. |\n| **Arcane & sacred** | Ritual speech, saint-cant, true names, ward formulae. **All knowledge-only.** Gates Veil research (`22`) when the working is written or spoken in that tongue. |\n| **Machine & matrix** | Code dialects and symbolic exchange. **All knowledge-only except Wire Speak.** Matters for Wired forensics and deep intrusion (`21`). |\n| **Ancestral (Peoples)** | Enclave and People speech. Map the row to the eight Peoples when a grant or a door names “their tongue.” |\n| **Extradimensional / dead / deep lore** | Infernal, void, dead-ops, alien technical. Knowledge-only except **Drift Creole** and **Alien Colony Trade**. |\n\n**Ancestral map (names only — no lore pass):** Corran → Guild-Tongue / Work-Cant; Elvani → High Cant / Softspeech; Goliar → Battle-Cant; Changer → Pack-Tongue; Revenant → Memory-Speech; Mutant → Enclave Cant; Cyborg → Frame-Cant; Pure Human → Pure-Line Homily. Knowing the name of the tongue is not the same as a chargen auto-grant.\n\n### Knowledge-only lock\n\n| Knowledge only — translation grants no usable knowledge | Spoken / learnable as normal — translation may help, Director’s call on nuance |\n|---|---|\n| **All Arcane & sacred:** Signal Liturgy, True Signal, Saint-Cant, Rite Speech, Demon Names, Ward Formulae | **Wire Speak** (the spoken exception in Machine & matrix) |\n| **Black-Site Code** | **Drift Creole** |\n| **Machine & matrix except Wire Speak:** Old Code, Machine Markup, AI Symbolic, Resonance Notation | **Alien Colony Trade** |\n| **Deep lore:** Void Cant, Infernal Speech, Old Liturgical, Dead Ops Tongue, Extradimensional Technical | **Everything else** not listed as knowledge only |",
+        "content": "<p>Point of record for names: <code>docs/masters/GHOSTWIRE_LANGUAGES.md</code>. The table below is the play list.</p>\n<table>\n<thead>\n<tr>\n<th id=\"category\">Category</th>\n<th id=\"languages\">Languages</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Common urban</strong></td>\n<td>Trade Cant · Reach Metro · Flats Cant · Sprawl Argot</td>\n</tr>\n<tr>\n<td><strong>National / cultural</strong></td>\n<td>Meridian Standard · Sanctum Formal · Colony Creole · Offworld Trade · Hive Technical · Old Reach</td>\n</tr>\n<tr>\n<td><strong>Corporate</strong></td>\n<td>Corp Cant · Legal Shorthand · Ops Dialects · Black-Site Code</td>\n</tr>\n<tr>\n<td><strong>Arcane & sacred</strong></td>\n<td>Signal Liturgy · True Signal · Saint-Cant · Rite Speech · Demon Names · Ward Formulae</td>\n</tr>\n<tr>\n<td><strong>Machine & matrix</strong></td>\n<td>Wire Speak · Old Code · Machine Markup · AI Symbolic · Resonance Notation</td>\n</tr>\n<tr>\n<td><strong>Ancestral (Peoples)</strong></td>\n<td>Corran Guild-Tongue · Corran Work-Cant · Elvani High Cant · Elvani Softspeech · Goliar Battle-Cant · Changer Pack-Tongue · Revenant Memory-Speech · Mutant Enclave Cant · Cyborg Frame-Cant · Pure-Line Homily</td>\n</tr>\n<tr>\n<td><strong>Extradimensional / dead / deep lore</strong></td>\n<td>Void Cant · Drift Creole · Infernal Speech · Old Liturgical · Dead Ops Tongue · Alien Colony Trade · Extradimensional Technical</td>\n</tr>\n</tbody>\n</table>\n<h3>What each category is <em>for</em> (function, not history)</h3>\n<p>Harvested from the languages master. These lines teach <strong>when to ask for the tongue</strong>, not where it was born.</p>\n<table>\n<thead>\n<tr>\n<th id=\"category\">Category</th>\n<th id=\"function_at_the_table\">Function at the table</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Common urban</strong></td>\n<td>Trade and street speech. Default for markets, crews, and Flats chatter.</td>\n</tr>\n<tr>\n<td><strong>National / cultural</strong></td>\n<td>Region, colony, and legacy human speech. Use when the job leaves the Reach’s default mix.</td>\n</tr>\n<tr>\n<td><strong>Corporate</strong></td>\n<td>Internal corp speech, legal shorthand, ops floors. <strong>Black-Site Code</strong> is knowledge-only.</td>\n</tr>\n<tr>\n<td><strong>Arcane & sacred</strong></td>\n<td>Ritual speech, saint-cant, true names, ward formulae. <strong>All knowledge-only.</strong> Gates Veil research (<code>22</code>) when the working is written or spoken in that tongue.</td>\n</tr>\n<tr>\n<td><strong>Machine & matrix</strong></td>\n<td>Code dialects and symbolic exchange. <strong>All knowledge-only except Wire Speak.</strong> Matters for Wired forensics and deep intrusion (<code>21</code>).</td>\n</tr>\n<tr>\n<td><strong>Ancestral (Peoples)</strong></td>\n<td>Enclave and People speech. Map the row to the eight Peoples when a grant or a door names “their tongue.”</td>\n</tr>\n<tr>\n<td><strong>Extradimensional / dead / deep lore</strong></td>\n<td>Infernal, void, dead-ops, alien technical. Knowledge-only except <strong>Drift Creole</strong> and <strong>Alien Colony Trade</strong>.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Ancestral map (names only — no lore pass):</strong> Corran → Guild-Tongue / Work-Cant; Elvani → High Cant / Softspeech; Goliar → Battle-Cant; Changer → Pack-Tongue; Revenant → Memory-Speech; Mutant → Enclave Cant; Cyborg → Frame-Cant; Pure Human → Pure-Line Homily. Knowing the name of the tongue is not the same as a chargen auto-grant.</p>\n<h3>Knowledge-only lock</h3>\n<table>\n<thead>\n<tr>\n<th id=\"knowledge_only_—_translation_grants_no_usable_knowledge\">Knowledge only — translation grants no usable knowledge</th>\n<th id=\"spoken_/_learnable_as_normal_—_translation_may_help,_director’s_call_on_nuance\">Spoken / learnable as normal — translation may help, Director’s call on nuance</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>All Arcane & sacred:</strong> Signal Liturgy, True Signal, Saint-Cant, Rite Speech, Demon Names, Ward Formulae</td>\n<td><strong>Wire Speak</strong> (the spoken exception in Machine &amp; matrix)</td>\n</tr>\n<tr>\n<td><strong>Black-Site Code</strong></td>\n<td><strong>Drift Creole</strong></td>\n</tr>\n<tr>\n<td><strong>Machine & matrix except Wire Speak:</strong> Old Code, Machine Markup, AI Symbolic, Resonance Notation</td>\n<td><strong>Alien Colony Trade</strong></td>\n</tr>\n<tr>\n<td><strong>Deep lore:</strong> Void Cant, Infernal Speech, Old Liturgical, Dead Ops Tongue, Extradimensional Technical</td>\n<td><strong>Everything else</strong> not listed as knowledge only</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "NXACAFumzMARdFDE",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.NXACAFumzMARdFDE",
+      "name": "Director guidance",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Open doors, don’t padlock the street.** Shared Trade Cant (or another common urban tongue) is enough for a job briefing, a street fight taunt, and a noodle stall. Spend language pressure on:\n\n- A **corp archive** or contract written in Legal Shorthand / Corp Cant.\n- A **black site** whose passphrases are Black-Site Code (knowledge-only).\n- A **rite or working** that names Demon Names, Ward Formulae, or Saint-Cant.\n- A **Wire dump** in Old Code or Machine Markup (Hacking / Matrix Theory still roll — without the tongue you get structure without meaning).\n- An **enclave** that will not brief outsiders in Trade Cant.\n\n**One door per scene is enough.** Do not demand a unique tongue for every NPC.\n\n**Translation implants and apps** are chrome or gear fiction (`08`, `09`). They do not become languages. They never satisfy knowledge-only.\n\n**Learn New Language** is a research **Project** (`03`): Logic Power Roll, progress 1 / 2 / 3 per low / middle / high, goal **6** (Polyglot halves that after immersion — `11`). Lifestyle project slots (`26`) are how you find the time; ¥ still does not buy the tongue.\n\n**Class hooks already in print (pointers, not new grants):**\n\n- Scout **Keep It Down** — while you share a language, you choose who perceives the words (`13`).\n- Mutant **Voice** — telepathy still requires a language you both know (`05`).\n- Changer **Beast Form** — cannot speak a clear language (`05`).\n- Perk **Wire Whisper** — the target must understand one or more languages (`11`).\n- Casters / Veil — Arcane & sacred tongues gate ritual research and formulae when the working is written that way (`22`).\n- Hacker / Wire — Machine & matrix tongues matter for forensics and deep intrusion (`21`). They are not a substitute for Hacking or Bandwidth.\n\n**Renown, ¥, and Body Integrity never grant a language.**\n\n> **In Foundry**\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. The hero sheet’s **language picker** already shows **Ghostwire names**. Ghostwire does not ship a second language app. There is **no** translator automation and **no** knowledge-only checkbox in the UI: track knowledge-only as a table rule when someone tries to app-translate Saint-Cant or Old Code. Polyglot and other grants are still recorded by hand (or by the perk Item) on the sheet.",
+        "content": "<p><strong>Open doors, don’t padlock the street.</strong> Shared Trade Cant (or another common urban tongue) is enough for a job briefing, a street fight taunt, and a noodle stall. Spend language pressure on:</p>\n<ul>\n<li>A <strong>corp archive</strong> or contract written in Legal Shorthand / Corp Cant.</li>\n<li>A <strong>black site</strong> whose passphrases are Black-Site Code (knowledge-only).</li>\n<li>A <strong>rite or working</strong> that names Demon Names, Ward Formulae, or Saint-Cant.</li>\n<li>A <strong>Wire dump</strong> in Old Code or Machine Markup (Hacking / Matrix Theory still roll — without the tongue you get structure without meaning).</li>\n<li>An <strong>enclave</strong> that will not brief outsiders in Trade Cant.</li>\n</ul>\n<p><strong>One door per scene is enough.</strong> Do not demand a unique tongue for every NPC.</p>\n<p><strong>Translation implants and apps</strong> are chrome or gear fiction (<code>08</code>, <code>09</code>). They do not become languages. They never satisfy knowledge-only.</p>\n<p><strong>Learn New Language</strong> is a research <strong>Project</strong> (<code>03</code>): Logic Power Roll, progress 1 / 2 / 3 per low / middle / high, goal <strong>6</strong> (Polyglot halves that after immersion — <code>11</code>). Lifestyle project slots (<code>26</code>) are how you find the time; ¥ still does not buy the tongue.</p>\n<p><strong>Class hooks already in print (pointers, not new grants):</strong></p>\n<ul>\n<li>Scout <strong>Keep It Down</strong> — while you share a language, you choose who perceives the words (<code>13</code>).</li>\n<li>Mutant <strong>Voice</strong> — telepathy still requires a language you both know (<code>05</code>).</li>\n<li>Changer <strong>Beast Form</strong> — cannot speak a clear language (<code>05</code>).</li>\n<li>Perk <strong>Wire Whisper</strong> — the target must understand one or more languages (<code>11</code>).</li>\n<li>Casters / Veil — Arcane &amp; sacred tongues gate ritual research and formulae when the working is written that way (<code>22</code>).</li>\n<li>Hacker / Wire — Machine &amp; matrix tongues matter for forensics and deep intrusion (<code>21</code>). They are not a substitute for Hacking or Bandwidth.</li>\n</ul>\n<p><strong>Renown, ¥, and Body Integrity never grant a language.</strong></p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Enable <strong>Draw Steel - Ghostwire Build</strong> on a compatible Foundry world. The hero sheet’s <strong>language picker</strong> already shows <strong>Ghostwire names</strong>. Ghostwire does not ship a second language app. There is <strong>no</strong> translator automation and <strong>no</strong> knowledge-only checkbox in the UI: track knowledge-only as a table rule when someone tries to app-translate Saint-Cant or Old Code. Polyglot and other grants are still recorded by hand (or by the perk Item) on the sheet.</p>\n</blockquote>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "Idbe6jsq0rTnro2t",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.Idbe6jsq0rTnro2t",
+      "name": "What this chapter is not",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- Not a lore gazetteer. History and purpose per tongue = **backlog #67** (Michael). Do not draft those essays into RAW.\n- Not a second skills chapter. Languages are not bought with skill points.\n- Not Auto-grants for Backgrounds or Peoples (follow-up; not this fill).\n- Not a Foundry UI manual beyond the picker note above.",
+        "content": "<ul>\n<li>Not a lore gazetteer. History and purpose per tongue = <strong>backlog #67</strong> (Michael). Do not draft those essays into RAW.</li>\n<li>Not a second skills chapter. Languages are not bought with skill points.</li>\n<li>Not Auto-grants for Backgrounds or Peoples (follow-up; not this fill).</li>\n<li>Not a Foundry UI manual beyond the picker note above.</li>\n</ul>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "oXkctGT67K2YyDis",
+      "_key": "!journal.pages!Bc4nTBlJX4nMRdS1.oXkctGT67K2YyDis",
+      "name": "Cross-references",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Topic | Where |\n|---|---|\n| Chargen step order | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics} |\n| Tests, edges, skills on rolls | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Yg38hFIb7bG8QyZG]{Tests and Power Rolls} |\n| Background / Profession (no language rows yet) | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.jDbQHMGFFuAA663q]{Backgrounds & Professions} |\n| Peoples (Voice, Beast Form) | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)} |\n| Polyglot; Wire Whisper | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.rtGumxlpMCvrB7K4]{Perks} |\n| Wire forensics | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire} |\n| Ritual / Veil research | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.lbVxCseGwPRNJsZL]{The Veil} |\n| Locked names + key map | `docs/masters/GHOSTWIRE_LANGUAGES.md` |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"topic\">Topic</th>\n<th id=\"where\">Where</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Chargen step order</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}</td>\n</tr>\n<tr>\n<td>Tests, edges, skills on rolls</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.Yg38hFIb7bG8QyZG]{Tests and Power Rolls}</td>\n</tr>\n<tr>\n<td>Background / Profession (no language rows yet)</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.jDbQHMGFFuAA663q]{Backgrounds &amp; Professions}</td>\n</tr>\n<tr>\n<td>Peoples (Voice, Beast Form)</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)}</td>\n</tr>\n<tr>\n<td>Polyglot; Wire Whisper</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.rtGumxlpMCvrB7K4]{Perks}</td>\n</tr>\n<tr>\n<td>Wire forensics</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}</td>\n</tr>\n<tr>\n<td>Ritual / Veil research</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.lbVxCseGwPRNJsZL]{The Veil}</td>\n</tr>\n<tr>\n<td>Locked names + key map</td>\n<td><code>docs/masters/GHOSTWIRE_LANGUAGES.md</code></td>\n</tr>\n</tbody>\n</table>"
       },
       "category": null,
       "ownership": {

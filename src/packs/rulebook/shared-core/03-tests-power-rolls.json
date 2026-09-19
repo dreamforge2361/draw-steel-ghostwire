@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/08-hacker.md`, `docs/rulebook/18-wired-foundry.md`, `docs/rulebook/17-perks.md`*\n\n**Engine:** Draw Steel Heroes — use the official rules for tests, power rolls, edges and banes, skills, and saving throws; Ghostwire remaps below.",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/08-hacker.md</code>, <code>docs/rulebook/18-wired-foundry.md</code>, <code>docs/rulebook/17-perks.md</code></em></p>\n<p><strong>Engine:</strong> Draw Steel Heroes — use the official rules for tests, power rolls, edges and banes, skills, and saving throws; Ghostwire remaps below.</p>"
+        "markdown": "*RAW draft (Stage 3 fill 2026-09-18) · Sources: `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED), `docs/rulebook/08-hacker.md`, `docs/rulebook/18-wired-foundry.md`, `docs/rulebook/17-perks.md`, `docs/raw/21-the-wire.md`*\n\n**Engine:** Ghostwire test and Power Roll procedures in this chapter. Playable without a separate rulebook.",
+        "content": "<p><em>RAW draft (Stage 3 fill 2026-09-18) · Sources: <code>docs/rulebook/DS-ALIGNMENT.md</code>, <code>docs/rulebook/TOC-PROPOSAL.md</code> (LOCKED), <code>docs/rulebook/08-hacker.md</code>, <code>docs/rulebook/18-wired-foundry.md</code>, <code>docs/rulebook/17-perks.md</code>, <code>docs/raw/21-the-wire.md</code></em></p>\n<p><strong>Engine:</strong> Ghostwire test and Power Roll procedures in this chapter. Playable without a separate rulebook.</p>"
       },
       "category": null,
       "ownership": {
@@ -35,9 +35,9 @@
       "flags": {}
     },
     {
-      "_id": "6QRcN9PKKVAitmtL",
-      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.6QRcN9PKKVAitmtL",
-      "name": "The Power Roll",
+      "_id": "WuMjPN15NT124cMq",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.WuMjPN15NT124cMq",
+      "name": "What a test is",
       "type": "text",
       "sort": 200000,
       "title": {
@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "When a runner acts under pressure, they make a **Power Roll**: roll two ten-sided dice and add a characteristic (and any bonuses). The total lands in one of three **results**:\n\n| Result | Total |\n|---|---|\n| **Low** | 11 or less |\n| **Middle** | 12–16 |\n| **High** | 17 or more |\n\nGhostwire always prints results in this order — low, middle, high — with the weakest effect first.\n\n**“Improve the outcome by one result”** means low becomes middle, or middle becomes high.",
-        "content": "<p>When a runner acts under pressure, they make a <strong>Power Roll</strong>: roll two ten-sided dice and add a characteristic (and any bonuses). The total lands in one of three <strong>results</strong>:</p>\n<table>\n<thead>\n<tr>\n<th id=\"result\">Result</th>\n<th id=\"total\">Total</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Low</strong></td>\n<td>11 or less</td>\n</tr>\n<tr>\n<td><strong>Middle</strong></td>\n<td>12–16</td>\n</tr>\n<tr>\n<td><strong>High</strong></td>\n<td>17 or more</td>\n</tr>\n</tbody>\n</table>\n<p>Ghostwire always prints results in this order — low, middle, high — with the weakest effect first.</p>\n<p><strong>“Improve the outcome by one result”</strong> means low becomes middle, or middle becomes high.</p>"
+        "markdown": "A **test** is any moment when a runner tries something uncertain and the outcome matters. Lying to a corp handler, sprinting a blind corner, forcing a locked node, keeping a dying teammate upright — those are tests. Asking what the street smells like, or checking whether the door is unlocked when nobody is watching, is not.\n\nThe Director calls for a test when **both** are true:\n\n1. Success is not guaranteed from the fiction and the runner’s tools.\n2. Failure — or a middling success — would change something the crew cares about (time, heat, Stamina, Trace Alert, a contact’s trust, the score).\n\nDo not roll for trivia. Do roll when the run is on the line.\n\nMost tests resolve as a **Power Roll**. Some abilities skip the roll entirely (“no Power Roll”); those still count as actions, just not as dice.",
+        "content": "<p>A <strong>test</strong> is any moment when a runner tries something uncertain and the outcome matters. Lying to a corp handler, sprinting a blind corner, forcing a locked node, keeping a dying teammate upright — those are tests. Asking what the street smells like, or checking whether the door is unlocked when nobody is watching, is not.</p>\n<p>The Director calls for a test when <strong>both</strong> are true:</p>\n<ol>\n<li>Success is not guaranteed from the fiction and the runner’s tools.</li>\n<li>Failure — or a middling success — would change something the crew cares about (time, heat, Stamina, Trace Alert, a contact’s trust, the score).</li>\n</ol>\n<p>Do not roll for trivia. Do roll when the run is on the line.</p>\n<p>Most tests resolve as a <strong>Power Roll</strong>. Some abilities skip the roll entirely (“no Power Roll”); those still count as actions, just not as dice.</p>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "CMJIQcsJ8dFfWWUC",
-      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.CMJIQcsJ8dFfWWUC",
-      "name": "Engine by reference",
+      "_id": "UC4mceds8nXRRjCg",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.UC4mceds8nXRRjCg",
+      "name": "The Power Roll",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "| Rule | Use from Draw Steel Heroes | Ghostwire |\n|---|---|---|\n| Making a test | As written | Characteristic names per `02` |\n| Test difficulty | As written | — |\n| Edges and banes | As written | Connection states add edges and banes (below) |\n| Skills in tests | As written | Ghostwire skill list (`02`); the Hacking exception (below) |\n| Critical results | As written | — |\n| Opposed and group tests; montage tests | As written | — |\n| Potency and resisting effects | As written | Ghostwire characteristic names |\n| Saving throws | As written | — |\n| Hero tokens | As written | Some perks spend them (`11`) |\n| Negotiation | As written | Patrons and fixers; Draw Steel motivations and pitfalls |\n| Projects | As written | §Craft Projects use Hacking, Electronics, Repair, or Cybertech (`08`, `10`) |",
-        "content": "<table>\n<thead>\n<tr>\n<th id=\"rule\">Rule</th>\n<th id=\"use_from_draw_steel_heroes\">Use from Draw Steel Heroes</th>\n<th id=\"ghostwire\">Ghostwire</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Making a test</td>\n<td>As written</td>\n<td>Characteristic names per <code>02</code></td>\n</tr>\n<tr>\n<td>Test difficulty</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Edges and banes</td>\n<td>As written</td>\n<td>Connection states add edges and banes (below)</td>\n</tr>\n<tr>\n<td>Skills in tests</td>\n<td>As written</td>\n<td>Ghostwire skill list (<code>02</code>); the Hacking exception (below)</td>\n</tr>\n<tr>\n<td>Critical results</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Opposed and group tests; montage tests</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Potency and resisting effects</td>\n<td>As written</td>\n<td>Ghostwire characteristic names</td>\n</tr>\n<tr>\n<td>Saving throws</td>\n<td>As written</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Hero tokens</td>\n<td>As written</td>\n<td>Some perks spend them (<code>11</code>)</td>\n</tr>\n<tr>\n<td>Negotiation</td>\n<td>As written</td>\n<td>Patrons and fixers; Draw Steel motivations and pitfalls</td>\n</tr>\n<tr>\n<td>Projects</td>\n<td>As written</td>\n<td>§Craft Projects use Hacking, Electronics, Repair, or Cybertech (<code>08</code>, <code>10</code>)</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "When a runner acts under pressure, they make a **Power Roll**:\n\n1. Name what you are trying to do and which **characteristic** drives it (**Physique**, **Reflex**, **Logic**, **Instinct**, or **Persona** — see `02`).\n2. Roll **two ten-sided dice**.\n3. Add the characteristic’s score (and any flat bonuses the ability or gear names).\n4. Apply **edges** and **banes** (below) before you total.\n5. Read the total against the three **results**. Ghostwire always prints them weakest first:\n\n| Result | Total |\n|---|---|\n| **Low** | 11 or less |\n| **Middle** | 12–16 |\n| **High** | 17 or more |\n\nAbilities, weapons, Matrix Verbs, and gear print what each result does. Where text says **“improve the outcome by one result,”** low becomes middle, or middle becomes high. High does not climb further unless an ability says so.\n\n**Doctrine lock:** print order is always **low → middle → high** (≤11 / 12–16 / 17+). Never invert the ladder. Never invent a fourth band.\n\n> **In Foundry**\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use abilities from the hero sheet (or hotbar). The system posts an **abilityUse** chat card with the Power Roll; Ghostwire SFX (B40) may play when the card lands. The module adds edges/banes automatically where it can: **Hacking** and **Jacked In** on Wired rolls, **Overlay** bane on real-world rolls, suite software edges, and **Weave Strain** bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.\n\n### Which characteristic?\n\nUse the characteristic the ability names. If the Director calls a freeform test:\n\n| Characteristic | Typical tests |\n|---|---|\n| **Physique** | Force a door, hold a line, endure pain, lift, break |\n| **Reflex** | Aim, vault, sneak past a camera, catch a fall, drive under fire |\n| **Logic** | Hack, diagnose hardware, crack a puzzle, plan a breach route |\n| **Instinct** | Spot the tell, sense the ambush, read the room, feel the Wire |\n| **Persona** | Negotiate, intimidate, rally the crew, sell the cover story |\n\nWired work almost always keys **Logic** (analysis, intrusion) or **Instinct** (presence in the Wire). Class chapters override when they name a different characteristic.",
+        "content": "<p>When a runner acts under pressure, they make a <strong>Power Roll</strong>:</p>\n<ol>\n<li>Name what you are trying to do and which <strong>characteristic</strong> drives it (<strong>Physique</strong>, <strong>Reflex</strong>, <strong>Logic</strong>, <strong>Instinct</strong>, or <strong>Persona</strong> — see <code>02</code>).</li>\n<li>Roll <strong>two ten-sided dice</strong>.</li>\n<li>Add the characteristic’s score (and any flat bonuses the ability or gear names).</li>\n<li>Apply <strong>edges</strong> and <strong>banes</strong> (below) before you total.</li>\n<li>Read the total against the three <strong>results</strong>. Ghostwire always prints them weakest first:</li>\n</ol>\n<table>\n<thead>\n<tr>\n<th id=\"result\">Result</th>\n<th id=\"total\">Total</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Low</strong></td>\n<td>11 or less</td>\n</tr>\n<tr>\n<td><strong>Middle</strong></td>\n<td>12–16</td>\n</tr>\n<tr>\n<td><strong>High</strong></td>\n<td>17 or more</td>\n</tr>\n</tbody>\n</table>\n<p>Abilities, weapons, Matrix Verbs, and gear print what each result does. Where text says <strong>“improve the outcome by one result,”</strong> low becomes middle, or middle becomes high. High does not climb further unless an ability says so.</p>\n<p><strong>Doctrine lock:</strong> print order is always <strong>low → middle → high</strong> (≤11 / 12–16 / 17+). Never invert the ladder. Never invent a fourth band.</p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Enable <strong>Draw Steel - Ghostwire Build</strong> on a compatible Foundry world. Use abilities from the hero sheet (or hotbar). The system posts an <strong>abilityUse</strong> chat card with the Power Roll; Ghostwire SFX (B40) may play when the card lands. The module adds edges/banes automatically where it can: <strong>Hacking</strong> and <strong>Jacked In</strong> on Wired rolls, <strong>Overlay</strong> bane on real-world rolls, suite software edges, and <strong>Weave Strain</strong> bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.</p>\n</blockquote>\n<h3>Which characteristic?</h3>\n<p>Use the characteristic the ability names. If the Director calls a freeform test:</p>\n<table>\n<thead>\n<tr>\n<th id=\"characteristic\">Characteristic</th>\n<th id=\"typical_tests\">Typical tests</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Physique</strong></td>\n<td>Force a door, hold a line, endure pain, lift, break</td>\n</tr>\n<tr>\n<td><strong>Reflex</strong></td>\n<td>Aim, vault, sneak past a camera, catch a fall, drive under fire</td>\n</tr>\n<tr>\n<td><strong>Logic</strong></td>\n<td>Hack, diagnose hardware, crack a puzzle, plan a breach route</td>\n</tr>\n<tr>\n<td><strong>Instinct</strong></td>\n<td>Spot the tell, sense the ambush, read the room, feel the Wire</td>\n</tr>\n<tr>\n<td><strong>Persona</strong></td>\n<td>Negotiate, intimidate, rally the crew, sell the cover story</td>\n</tr>\n</tbody>\n</table>\n<p>Wired work almost always keys <strong>Logic</strong> (analysis, intrusion) or <strong>Instinct</strong> (presence in the Wire). Class chapters override when they name a different characteristic.</p>"
       },
       "category": null,
       "ownership": {
@@ -91,9 +91,9 @@
       "flags": {}
     },
     {
-      "_id": "rxB9IJ6hTmAZXBS1",
-      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.rxB9IJ6hTmAZXBS1",
-      "name": "Ghostwire modifiers",
+      "_id": "7HXHe2caFUjmF3wD",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.7HXHe2caFUjmF3wD",
+      "name": "Skills on tests",
       "type": "text",
       "sort": 400000,
       "title": {
@@ -109,8 +109,372 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "### Connection states\n\nYour connection to the Wired changes your rolls (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}):\n\n| State | Wired Power Rolls | Real-world Power Rolls |\n|---|---|---|\n| Disconnected | — | — |\n| **Overlay** | — | **Bane** |\n| **Jacked In** | **Edge** | Not allowed — your body is inert |\n\nA Wired roll is any Power Roll for a Matrix Verb, Program, or other ability with the **Wired** keyword.\n\n### The Hacking skill\n\nHaving the **Hacking** skill gives an **edge** on every rolling Matrix Verb and other Wired Power Roll. For those rolls it replaces the usual skill benefit.\n\n### Gear and armor\n\n- **Encumbrance:** medium and heavy armor impose banes on some tests (`08`).\n- **Mods** can add edges in specific situations; installed Wired software can add edges to named rolls (`10`, `19`).\n- **Chrome** grants situational edges; a **Damaged** implant works at a penalty (`09`).\n\n### Result wording in Ghostwire text\n\nAbilities, perks, and gear print their effects by result. Where a Wired ability says **low** “works, but something goes wrong,” that usually means Trace Alert rises (`21`).",
-        "content": "<h3>Connection states</h3>\n<p>Your connection to the Wired changes your rolls (@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}):</p>\n<table>\n<thead>\n<tr>\n<th id=\"state\">State</th>\n<th id=\"wired_power_rolls\">Wired Power Rolls</th>\n<th id=\"real-world_power_rolls\">Real-world Power Rolls</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Disconnected</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td><strong>Overlay</strong></td>\n<td>—</td>\n<td><strong>Bane</strong></td>\n</tr>\n<tr>\n<td><strong>Jacked In</strong></td>\n<td><strong>Edge</strong></td>\n<td>Not allowed — your body is inert</td>\n</tr>\n</tbody>\n</table>\n<p>A Wired roll is any Power Roll for a Matrix Verb, Program, or other ability with the <strong>Wired</strong> keyword.</p>\n<h3>The Hacking skill</h3>\n<p>Having the <strong>Hacking</strong> skill gives an <strong>edge</strong> on every rolling Matrix Verb and other Wired Power Roll. For those rolls it replaces the usual skill benefit.</p>\n<h3>Gear and armor</h3>\n<ul>\n<li><strong>Encumbrance:</strong> medium and heavy armor impose banes on some tests (<code>08</code>).</li>\n<li><strong>Mods</strong> can add edges in specific situations; installed Wired software can add edges to named rolls (<code>10</code>, <code>19</code>).</li>\n<li><strong>Chrome</strong> grants situational edges; a <strong>Damaged</strong> implant works at a penalty (<code>09</code>).</li>\n</ul>\n<h3>Result wording in Ghostwire text</h3>\n<p>Abilities, perks, and gear print their effects by result. Where a Wired ability says <strong>low</strong> “works, but something goes wrong,” that usually means Trace Alert rises (<code>21</code>).</p>"
+        "markdown": "Ghostwire’s skill list lives in `02`. If you have a relevant skill, you gain that skill’s benefit on the Power Roll: add **+2** to the total.\n\n**Ghostwire exception — Hacking:** having the **Hacking** skill gives an **edge** on every rolling Matrix Verb and other **Wired** Power Roll. For those rolls it replaces the usual skill benefit. Details and Verb list live in `21`.\n\nOther Technical skills (Electronics, Repair, Cybertech, Security Systems, …) still use the normal skill benefit on meatspace and downtime tests — including §Craft Projects (`08`, `10`).",
+        "content": "<p>Ghostwire’s skill list lives in <code>02</code>. If you have a relevant skill, you gain that skill’s benefit on the Power Roll: add <strong>+2</strong> to the total.</p>\n<p><strong>Ghostwire exception — Hacking:</strong> having the <strong>Hacking</strong> skill gives an <strong>edge</strong> on every rolling Matrix Verb and other <strong>Wired</strong> Power Roll. For those rolls it replaces the usual skill benefit. Details and Verb list live in <code>21</code>.</p>\n<p>Other Technical skills (Electronics, Repair, Cybertech, Security Systems, …) still use the normal skill benefit on meatspace and downtime tests — including §Craft Projects (<code>08</code>, <code>10</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "tTtDMthOoeZSD2eN",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.tTtDMthOoeZSD2eN",
+      "name": "Edges and banes",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "An **edge** means the situation favors you. A **bane** means it fights you. Edges and banes come from kits, chrome, mods, connection state, cover, conditions, Director calls, and ability text.\n\n### How they stack\n\n- One edge and one bane **cancel**. Count what is left.\n- Two edges (after canceling) is a **double edge**.\n- Two banes (after canceling) is a **double bane**.\n- More than two of the same side still resolve as a double edge or double bane — you do not keep stacking forever.\n\n**How the extra dice work (this book):**\n\n1. Net edges against banes first. What remains is none, one edge, one bane, a double edge, or a double bane.\n2. Roll **two** ten-sided dice as usual, plus **one extra** d10 per remaining edge or bane (two extra for a double).\n3. **Edge / double edge:** drop the lowest die (or two lowest dice), then add the two you keep to the characteristic.\n4. **Bane / double bane:** drop the highest die (or two highest dice), then add the two you keep to the characteristic.\n5. Read **low / middle / high** from that final total.\n\nA **natural double** is two matching faces on the first two dice you rolled, before drops. Extra edge/bane dice do not create or cancel that double.\n\n### Common Ghostwire sources\n\n| Source | Typical modifier |\n|---|---|\n| Relevant skill (non-Hacking Wired exception above) | **+2** to the Power Roll |\n| **Hacking** on Wired Power Rolls | **Edge** (`21`) |\n| Connection **Overlay** on real-world rolls | **Bane** (`21`) |\n| Connection **Jacked In** on Wired rolls | **Edge** (`21`) |\n| Medium / heavy armor encumbrance | Banes on named tests (`08`) |\n| Mods, suite software, chrome | Situational edges (`09`, `10`, `19`) |\n| **Damaged** implant | Penalty or bane as chrome text says (`09`) |\n| Flanking, cover, conditions | Combat chapter (`04`) |\n| Ally assist (below) | Usually an edge for the primary roller |\n\nIf two rules both want to give “an edge on this roll,” they stack until cancel math applies — they do not silently overwrite each other unless an ability says it replaces another benefit (as Hacking does for Wired rolls).",
+        "content": "<p>An <strong>edge</strong> means the situation favors you. A <strong>bane</strong> means it fights you. Edges and banes come from kits, chrome, mods, connection state, cover, conditions, Director calls, and ability text.</p>\n<h3>How they stack</h3>\n<ul>\n<li>One edge and one bane <strong>cancel</strong>. Count what is left.</li>\n<li>Two edges (after canceling) is a <strong>double edge</strong>.</li>\n<li>Two banes (after canceling) is a <strong>double bane</strong>.</li>\n<li>More than two of the same side still resolve as a double edge or double bane — you do not keep stacking forever.</li>\n</ul>\n<p><strong>How the extra dice work (this book):</strong></p>\n<ol>\n<li>Net edges against banes first. What remains is none, one edge, one bane, a double edge, or a double bane.</li>\n<li>Roll <strong>two</strong> ten-sided dice as usual, plus <strong>one extra</strong> d10 per remaining edge or bane (two extra for a double).</li>\n<li><strong>Edge / double edge:</strong> drop the lowest die (or two lowest dice), then add the two you keep to the characteristic.</li>\n<li><strong>Bane / double bane:</strong> drop the highest die (or two highest dice), then add the two you keep to the characteristic.</li>\n<li>Read <strong>low / middle / high</strong> from that final total.</li>\n</ol>\n<p>A <strong>natural double</strong> is two matching faces on the first two dice you rolled, before drops. Extra edge/bane dice do not create or cancel that double.</p>\n<h3>Common Ghostwire sources</h3>\n<table>\n<thead>\n<tr>\n<th id=\"source\">Source</th>\n<th id=\"typical_modifier\">Typical modifier</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Relevant skill (non-Hacking Wired exception above)</td>\n<td><strong>+2</strong> to the Power Roll</td>\n</tr>\n<tr>\n<td><strong>Hacking</strong> on Wired Power Rolls</td>\n<td><strong>Edge</strong> (<code>21</code>)</td>\n</tr>\n<tr>\n<td>Connection <strong>Overlay</strong> on real-world rolls</td>\n<td><strong>Bane</strong> (<code>21</code>)</td>\n</tr>\n<tr>\n<td>Connection <strong>Jacked In</strong> on Wired rolls</td>\n<td><strong>Edge</strong> (<code>21</code>)</td>\n</tr>\n<tr>\n<td>Medium / heavy armor encumbrance</td>\n<td>Banes on named tests (<code>08</code>)</td>\n</tr>\n<tr>\n<td>Mods, suite software, chrome</td>\n<td>Situational edges (<code>09</code>, <code>10</code>, <code>19</code>)</td>\n</tr>\n<tr>\n<td><strong>Damaged</strong> implant</td>\n<td>Penalty or bane as chrome text says (<code>09</code>)</td>\n</tr>\n<tr>\n<td>Flanking, cover, conditions</td>\n<td>Combat chapter (<code>04</code>)</td>\n</tr>\n<tr>\n<td>Ally assist (below)</td>\n<td>Usually an edge for the primary roller</td>\n</tr>\n</tbody>\n</table>\n<p>If two rules both want to give “an edge on this roll,” they stack until cancel math applies — they do not silently overwrite each other unless an ability says it replaces another benefit (as Hacking does for Wired rolls).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "nst4Bavlg3AbEXuU",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.nst4Bavlg3AbEXuU",
+      "name": "Natural doubles and criticals",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "When both ten-sided dice show the **same face** before modifiers, that is a **natural double**.\n\nA natural double is Ghostwire’s cue for a **critical** on that Power Roll. In practice:\n\n- Treat the roll as the ability’s **high** result if the total would not already be high.\n- If the ability already lists a special line for criticals, use that line instead (or in addition, if it says so).\n- On a damaging roll with no other critical rider, add **extra damage equal to your highest characteristic** (minimum +1).\n- On Wired rolls, a critical often means a **clean** intrusion: the Verb or Program lands at its best printed effect, and Trace Alert usually does **not** tick from that roll unless the ability’s high or critical clause says otherwise (`21`).\n\nA natural double is about the **dice faces**, not the final total. Adding a characteristic cannot create a double; canceling edges and banes cannot remove one that already showed.\n\nDirector fiat can still narrate a stylish high without a double. The double is the mechanical guarantee.",
+        "content": "<p>When both ten-sided dice show the <strong>same face</strong> before modifiers, that is a <strong>natural double</strong>.</p>\n<p>A natural double is Ghostwire’s cue for a <strong>critical</strong> on that Power Roll. In practice:</p>\n<ul>\n<li>Treat the roll as the ability’s <strong>high</strong> result if the total would not already be high.</li>\n<li>If the ability already lists a special line for criticals, use that line instead (or in addition, if it says so).</li>\n<li>On a damaging roll with no other critical rider, add <strong>extra damage equal to your highest characteristic</strong> (minimum +1).</li>\n<li>On Wired rolls, a critical often means a <strong>clean</strong> intrusion: the Verb or Program lands at its best printed effect, and Trace Alert usually does <strong>not</strong> tick from that roll unless the ability’s high or critical clause says otherwise (<code>21</code>).</li>\n</ul>\n<p>A natural double is about the <strong>dice faces</strong>, not the final total. Adding a characteristic cannot create a double; canceling edges and banes cannot remove one that already showed.</p>\n<p>Director fiat can still narrate a stylish high without a double. The double is the mechanical guarantee.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "YUzBV4cXGDtv1iuz",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.YUzBV4cXGDtv1iuz",
+      "name": "When you roll vs when you don’t",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Roll** when uncertainty and stakes both exist (see What a test is).\n\n**Do not roll** when:\n\n- The runner has all the time, tools, and access the fiction grants, and nothing opposes them.\n- An ability says **“No Power Roll”** — the effect just happens (cost and targeting still apply).\n- The runner is **Jacked In** and trying a real-world physical action — there is no roll because the body cannot act (`21`). Pick another runner, jack out, or Toggle to Overlay.\n- Success is automatic from a prior high result, a spent resource, or a feature that skips the dice.\n\n**Auto-fail or auto-succeed** only when the Director and the fiction agree the attempt is impossible or trivial. Do not hide a “you just fail” behind a fake roll.",
+        "content": "<p><strong>Roll</strong> when uncertainty and stakes both exist (see What a test is).</p>\n<p><strong>Do not roll</strong> when:</p>\n<ul>\n<li>The runner has all the time, tools, and access the fiction grants, and nothing opposes them.</li>\n<li>An ability says <strong>“No Power Roll”</strong> — the effect just happens (cost and targeting still apply).</li>\n<li>The runner is <strong>Jacked In</strong> and trying a real-world physical action — there is no roll because the body cannot act (<code>21</code>). Pick another runner, jack out, or Toggle to Overlay.</li>\n<li>Success is automatic from a prior high result, a spent resource, or a feature that skips the dice.</li>\n</ul>\n<p><strong>Auto-fail or auto-succeed</strong> only when the Director and the fiction agree the attempt is impossible or trivial. Do not hide a “you just fail” behind a fake roll.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "0yfdu5RiJ6160ywH",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.0yfdu5RiJ6160ywH",
+      "name": "Contested rolls",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Sometimes two sides pull against each other: a Scout shadows a corpsec lieutenant; a Hacker Breaches while ICE pushes back; a Commander’s Persona argument meets a fixer who will not blink.\n\n**Contested Power Roll (Ghostwire table procedure):**\n\n1. Each side makes a Power Roll with the characteristic the Director names (or the ability names).\n2. Apply edges, banes, skills, and connection modifiers to each side separately.\n3. Compare totals. The higher total wins. On a tie, the Director breaks it from the fiction (usually the defender holds, or the status quo remains) unless an ability says otherwise.\n4. If the contest uses printed low/middle/high effects (common on Matrix Verbs and social Marks), read **each** roller’s result band for their own side effects (Trace Alert, Marks, conditions), then use the comparison to see who achieved their goal.\n\n**Group test:** everyone who can contribute makes a Power Roll. Count **high as 2 successes**, **middle as 1**, **low as 0**. The Director sets how many successes the beat needs (usually about the crew’s size).\n\n**Montage:** several group tests in a row (infiltrate, then vault, then extract). Failures add heat or burn time; they do not auto-fail the job unless the last beat is a disaster.\n\nPerk text that mentions group or montage tests (`11`) spends **hero tokens** as written there.",
+        "content": "<p>Sometimes two sides pull against each other: a Scout shadows a corpsec lieutenant; a Hacker Breaches while ICE pushes back; a Commander’s Persona argument meets a fixer who will not blink.</p>\n<p><strong>Contested Power Roll (Ghostwire table procedure):</strong></p>\n<ol>\n<li>Each side makes a Power Roll with the characteristic the Director names (or the ability names).</li>\n<li>Apply edges, banes, skills, and connection modifiers to each side separately.</li>\n<li>Compare totals. The higher total wins. On a tie, the Director breaks it from the fiction (usually the defender holds, or the status quo remains) unless an ability says otherwise.</li>\n<li>If the contest uses printed low/middle/high effects (common on Matrix Verbs and social Marks), read <strong>each</strong> roller’s result band for their own side effects (Trace Alert, Marks, conditions), then use the comparison to see who achieved their goal.</li>\n</ol>\n<p><strong>Group test:</strong> everyone who can contribute makes a Power Roll. Count <strong>high as 2 successes</strong>, <strong>middle as 1</strong>, <strong>low as 0</strong>. The Director sets how many successes the beat needs (usually about the crew’s size).</p>\n<p><strong>Montage:</strong> several group tests in a row (infiltrate, then vault, then extract). Failures add heat or burn time; they do not auto-fail the job unless the last beat is a disaster.</p>\n<p>Perk text that mentions group or montage tests (<code>11</code>) spends <strong>hero tokens</strong> as written there.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "l4N8nFJZyaGqH5YE",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.l4N8nFJZyaGqH5YE",
+      "name": "Helping and assisting",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Crews survive by covering each other.\n\n**Assist (simple):** when fiction allows (same scene, able to contribute, not Jacked In and inert while the ally acts in meatspace), an ally spends their **maneuver** (or their main action if the help needs both hands) to grant the primary runner an **edge** on one Power Roll. If the ally is already in position when the roll happens, the Director may let this fire as a triggered action instead. The helper narrates how: covering fire, a spoofed badge ping, a whispered tell, a brace under the vault door.\n\n**Limits that keep assists honest:**\n\n- You cannot assist a roll you could not meaningfully affect (wrong board, no tools, unconscious).\n- A **Jacked In** runner can assist **Wired** rolls from the Wire board; they cannot assist hallway gunfights until they Toggle or jack out.\n- One primary roll normally takes **one** assist edge unless an ability explicitly stacks more help.\n- Assist does not replace a contested roll’s opposing side — it only sweetens your crew’s roll.\n\nSome perks and class features change assist math (ignore a low-assist bane, share a skill into a montage, and so on). Those override this baseline when they apply (`11`, class chapters).",
+        "content": "<p>Crews survive by covering each other.</p>\n<p><strong>Assist (simple):</strong> when fiction allows (same scene, able to contribute, not Jacked In and inert while the ally acts in meatspace), an ally spends their <strong>maneuver</strong> (or their main action if the help needs both hands) to grant the primary runner an <strong>edge</strong> on one Power Roll. If the ally is already in position when the roll happens, the Director may let this fire as a triggered action instead. The helper narrates how: covering fire, a spoofed badge ping, a whispered tell, a brace under the vault door.</p>\n<p><strong>Limits that keep assists honest:</strong></p>\n<ul>\n<li>You cannot assist a roll you could not meaningfully affect (wrong board, no tools, unconscious).</li>\n<li>A <strong>Jacked In</strong> runner can assist <strong>Wired</strong> rolls from the Wire board; they cannot assist hallway gunfights until they Toggle or jack out.</li>\n<li>One primary roll normally takes <strong>one</strong> assist edge unless an ability explicitly stacks more help.</li>\n<li>Assist does not replace a contested roll’s opposing side — it only sweetens your crew’s roll.</li>\n</ul>\n<p>Some perks and class features change assist math (ignore a low-assist bane, share a skill into a montage, and so on). Those override this baseline when they apply (<code>11</code>, class chapters).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "aZgZAp3F1FgPaVbC",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.aZgZAp3F1FgPaVbC",
+      "name": "Heroes’ Fortune (hero tokens)",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Ghostwire’s table-luck currency is **Heroes’ Fortune**. The spendable chips are **hero tokens**.\n\n**Pool (this book):** at the start of each session, the crew shares a **Heroes’ Fortune** pool of **one hero token per player** (not counting the Director). After a respite between runs (`26`), refill the pool up to that starting count if it is below. Do not exceed the starting count unless a perk says so.\n\n**Default spends** (one token each, player’s choice):\n\n- Reroll one Power Roll you just made; keep the new total.\n- Turn a saving throw you just failed into a success.\n- Gain an **edge** on a Power Roll before you roll.\n\nGhostwire also adds:\n\n- **Perks** that spend hero tokens for specific street tricks (`11`) — project double-downs, montage skill sharing, lie detection, and similar.\n- Flavor at the table: tokens are the crew’s shared grit and luck, not ¥ and not a class heroic resource. Adrenaline, Bandwidth, Conviction, and the rest never convert into hero tokens or the other way around.\n- Director guidance: spend tokens to keep a run cinematic when the dice go cold; do not require a token to attempt something the rules already allow.\n\nIf a perk and a default Heroes’ Fortune spend both want the same moment, the player chooses one spend — you do not double-dip the same token.",
+        "content": "<p>Ghostwire’s table-luck currency is <strong>Heroes’ Fortune</strong>. The spendable chips are <strong>hero tokens</strong>.</p>\n<p><strong>Pool (this book):</strong> at the start of each session, the crew shares a <strong>Heroes’ Fortune</strong> pool of <strong>one hero token per player</strong> (not counting the Director). After a respite between runs (<code>26</code>), refill the pool up to that starting count if it is below. Do not exceed the starting count unless a perk says so.</p>\n<p><strong>Default spends</strong> (one token each, player’s choice):</p>\n<ul>\n<li>Reroll one Power Roll you just made; keep the new total.</li>\n<li>Turn a saving throw you just failed into a success.</li>\n<li>Gain an <strong>edge</strong> on a Power Roll before you roll.</li>\n</ul>\n<p>Ghostwire also adds:</p>\n<ul>\n<li><strong>Perks</strong> that spend hero tokens for specific street tricks (<code>11</code>) — project double-downs, montage skill sharing, lie detection, and similar.</li>\n<li>Flavor at the table: tokens are the crew’s shared grit and luck, not ¥ and not a class heroic resource. Adrenaline, Bandwidth, Conviction, and the rest never convert into hero tokens or the other way around.</li>\n<li>Director guidance: spend tokens to keep a run cinematic when the dice go cold; do not require a token to attempt something the rules already allow.</li>\n</ul>\n<p>If a perk and a default Heroes’ Fortune spend both want the same moment, the player chooses one spend — you do not double-dip the same token.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "1FePTyPuKetB3joN",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.1FePTyPuKetB3joN",
+      "name": "Potency, resistance, and saving throws",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Some effects ask a target to resist with a characteristic — often written as **potency** keyed to Physique, Reflex, Logic, Instinct, or Persona. Use Ghostwire names everywhere.\n\n**Potency (this book).** When an ability prints a rider like **Reflex < strong → prone** (or `R<STRONG`, `A<WEAK`, and similar), compare the target’s named characteristic to this table:\n\n| Potency word | Rider applies if the target’s characteristic is… |\n|---|---|\n| **Weak** | **1** or less |\n| **Average** | **2** or less |\n| **Strong** | **3** or less |\n\nIf the ability prints a number instead of a word (Reflex < 2), use the number. A feature that **increases potency by 1** steps weak → average → strong, or adds +1 to a printed number (strong becomes 4 or less). The rider does **not** apply if the target’s score is higher than the threshold.\n\n**Saving throws.** When an effect says **save ends**, or when you are dying (`04`), roll **1d10** at the end of your turn (or when the ability says). On a **6 or higher**, the effect ends (or the dying strike does not land). Some abilities raise or lower the number you need; write that next to the condition. Ghostwire conditions and keywords (`04`) ride on this ladder — they do not invent a second one.\n\nBiofeedback, Trace Alert, and Wire Integrity are **not** saving throws — they are Wired systems (`21`).",
+        "content": "<p>Some effects ask a target to resist with a characteristic — often written as <strong>potency</strong> keyed to Physique, Reflex, Logic, Instinct, or Persona. Use Ghostwire names everywhere.</p>\n<p><strong>Potency (this book).</strong> When an ability prints a rider like <strong>Reflex < strong → prone</strong> (or <code>R&lt;STRONG</code>, <code>A&lt;WEAK</code>, and similar), compare the target’s named characteristic to this table:</p>\n<table>\n<thead>\n<tr>\n<th id=\"potency_word\">Potency word</th>\n<th id=\"rider_applies_if_the_target’s_characteristic_is…\">Rider applies if the target’s characteristic is…</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Weak</strong></td>\n<td><strong>1</strong> or less</td>\n</tr>\n<tr>\n<td><strong>Average</strong></td>\n<td><strong>2</strong> or less</td>\n</tr>\n<tr>\n<td><strong>Strong</strong></td>\n<td><strong>3</strong> or less</td>\n</tr>\n</tbody>\n</table>\n<p>If the ability prints a number instead of a word (Reflex &lt; 2), use the number. A feature that <strong>increases potency by 1</strong> steps weak → average → strong, or adds +1 to a printed number (strong becomes 4 or less). The rider does <strong>not</strong> apply if the target’s score is higher than the threshold.</p>\n<p><strong>Saving throws.</strong> When an effect says <strong>save ends</strong>, or when you are dying (<code>04</code>), roll <strong>1d10</strong> at the end of your turn (or when the ability says). On a <strong>6 or higher</strong>, the effect ends (or the dying strike does not land). Some abilities raise or lower the number you need; write that next to the condition. Ghostwire conditions and keywords (<code>04</code>) ride on this ladder — they do not invent a second one.</p>\n<p>Biofeedback, Trace Alert, and Wire Integrity are <strong>not</strong> saving throws — they are Wired systems (<code>21</code>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "uA2y39TMjZi7zG48",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.uA2y39TMjZi7zG48",
+      "name": "Test difficulties",
+      "type": "text",
+      "sort": 1200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "When this book or an ability names **easy / medium / hard** (Wrench Jump-In, Technomancer biofeedback, and similar), read the Power Roll this way:\n\n| Difficulty | Success | Partial | Fail |\n|---|---|---|---|\n| **Easy** | Middle or high (12+) | — | Low (≤11) |\n| **Medium** | High (17+) | Middle (12–16): costly success or incomplete | Low |\n| **Hard** | High (17+), and apply a **bane** unless the fiction already gave one | Middle: costly / incomplete | Low |\n\nFreeform tests with no printed difficulty use the usual **low / middle / high** bands and the Director names what each band does.",
+        "content": "<p>When this book or an ability names <strong>easy / medium / hard</strong> (Wrench Jump-In, Technomancer biofeedback, and similar), read the Power Roll this way:</p>\n<table>\n<thead>\n<tr>\n<th id=\"difficulty\">Difficulty</th>\n<th id=\"success\">Success</th>\n<th id=\"partial\">Partial</th>\n<th id=\"fail\">Fail</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Easy</strong></td>\n<td>Middle or high (12+)</td>\n<td>—</td>\n<td>Low (≤11)</td>\n</tr>\n<tr>\n<td><strong>Medium</strong></td>\n<td>High (17+)</td>\n<td>Middle (12–16): costly success or incomplete</td>\n<td>Low</td>\n</tr>\n<tr>\n<td><strong>Hard</strong></td>\n<td>High (17+), and apply a <strong>bane</strong> unless the fiction already gave one</td>\n<td>Middle: costly / incomplete</td>\n<td>Low</td>\n</tr>\n</tbody>\n</table>\n<p>Freeform tests with no printed difficulty use the usual <strong>low / middle / high</strong> bands and the Director names what each band does.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "BhfzkaiDjlnknetw",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.BhfzkaiDjlnknetw",
+      "name": "Negotiation and projects",
+      "type": "text",
+      "sort": 1300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Negotiation** with fixers, patrons, and level-bosses (this book):\n\n1. The Director names the NPC’s **drive** (Greed, Higher Authority, Freedom, Vengeance, Fear, or a one-line want) and one **pitfall** (the line that tanks the deal).\n2. The talking runner makes an opening **Persona** Power Roll (Negotiation if they have it). Low / middle / high move the terms: pay band, access, heat (`08`).\n3. Each additional argument is another test, a spent heroic resource, or a hero token. After **two** failures, or if someone hits the pitfall, the deal sours — walk or fight.\n4. Class text that names a motivation (Freedom / Greed / Vengeance, and so on) grants an **edge** when the fiction matches that drive.\n\n**Projects** (including Ghostwire **§Craft** and language / lore research) are downtime jobs. Each one consumes a Lifestyle **project slot** (`26`) unless the text says otherwise. Make a Power Roll with the named characteristic and skill. If the project has a **goal** (a number), add **progress**: low = **1**, middle = **2**, high = **3**. You finish when progress meets the goal.\n\n**Default goals:** routine published install / swap (`10`) = **3** · **Discover Lore** (one useful fact about a foe, site, or faction) = **4** · **Learn New Language** = **6** (Polyglot halves that after immersion — `07`, `11`) · Invent a Mod as printed in `10`.\n\nTechnical hosts typically roll **Logic** with Hacking, Electronics, Repair, or Cybertech (`08`, `10`). Hero-token perk spends on projects are listed in `11`.",
+        "content": "<p><strong>Negotiation</strong> with fixers, patrons, and level-bosses (this book):</p>\n<ol>\n<li>The Director names the NPC’s <strong>drive</strong> (Greed, Higher Authority, Freedom, Vengeance, Fear, or a one-line want) and one <strong>pitfall</strong> (the line that tanks the deal).</li>\n<li>The talking runner makes an opening <strong>Persona</strong> Power Roll (Negotiation if they have it). Low / middle / high move the terms: pay band, access, heat (<code>08</code>).</li>\n<li>Each additional argument is another test, a spent heroic resource, or a hero token. After <strong>two</strong> failures, or if someone hits the pitfall, the deal sours — walk or fight.</li>\n<li>Class text that names a motivation (Freedom / Greed / Vengeance, and so on) grants an <strong>edge</strong> when the fiction matches that drive.</li>\n</ol>\n<p><strong>Projects</strong> (including Ghostwire <strong>§Craft</strong> and language / lore research) are downtime jobs. Each one consumes a Lifestyle <strong>project slot</strong> (<code>26</code>) unless the text says otherwise. Make a Power Roll with the named characteristic and skill. If the project has a <strong>goal</strong> (a number), add <strong>progress</strong>: low = <strong>1</strong>, middle = <strong>2</strong>, high = <strong>3</strong>. You finish when progress meets the goal.</p>\n<p><strong>Default goals:</strong> routine published install / swap (<code>10</code>) = <strong>3</strong> · <strong>Discover Lore</strong> (one useful fact about a foe, site, or faction) = <strong>4</strong> · <strong>Learn New Language</strong> = <strong>6</strong> (Polyglot halves that after immersion — <code>07</code>, <code>11</code>) · Invent a Mod as printed in <code>10</code>.</p>\n<p>Technical hosts typically roll <strong>Logic</strong> with Hacking, Electronics, Repair, or Cybertech (<code>08</code>, <code>10</code>). Hero-token perk spends on projects are listed in <code>11</code>.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ZhJBWVXOJKpqiQUG",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.ZhJBWVXOJKpqiQUG",
+      "name": "Ghostwire modifiers (summary)",
+      "type": "text",
+      "sort": 1400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "### Connection states\n\nYour connection to the Wired changes your rolls. Full rules: @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}.\n\n| State | Wired Power Rolls | Real-world Power Rolls |\n|---|---|---|\n| Disconnected | — | — |\n| **Overlay** | — | **Bane** |\n| **Jacked In** | **Edge** | Not allowed — your body is inert |\n\nA **Wired** roll is any Power Roll for a Matrix Verb, Program, or other ability with the **Wired** keyword.\n\n### The Hacking skill\n\nHaving **Hacking** gives an **edge** on every rolling Matrix Verb and other Wired Power Roll, replacing the usual skill benefit for those rolls (`21`).\n\n### Gear, chrome, and armor\n\n- **Encumbrance:** medium and heavy armor impose banes on some tests (`08`).\n- **Mods** and installed Wired software can add edges to named rolls (`10`, `19`).\n- **Chrome** grants situational edges; a **Damaged** implant works at a penalty (`09`).\n- **¥ never buys a better Power Roll.** Money buys the tool you already trained to use (`08`).\n\n### Result wording in Ghostwire text\n\nAbilities, perks, and gear print effects by **low / middle / high**. Where a Wired ability says low “works, but something goes wrong,” that usually means **Trace Alert** rises (`21`). Meatspace lows usually mean complication, heat, or partial success — the Director names the cost from the fiction.",
+        "content": "<h3>Connection states</h3>\n<p>Your connection to the Wired changes your rolls. Full rules: @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}.</p>\n<table>\n<thead>\n<tr>\n<th id=\"state\">State</th>\n<th id=\"wired_power_rolls\">Wired Power Rolls</th>\n<th id=\"real-world_power_rolls\">Real-world Power Rolls</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Disconnected</td>\n<td>—</td>\n<td>—</td>\n</tr>\n<tr>\n<td><strong>Overlay</strong></td>\n<td>—</td>\n<td><strong>Bane</strong></td>\n</tr>\n<tr>\n<td><strong>Jacked In</strong></td>\n<td><strong>Edge</strong></td>\n<td>Not allowed — your body is inert</td>\n</tr>\n</tbody>\n</table>\n<p>A <strong>Wired</strong> roll is any Power Roll for a Matrix Verb, Program, or other ability with the <strong>Wired</strong> keyword.</p>\n<h3>The Hacking skill</h3>\n<p>Having <strong>Hacking</strong> gives an <strong>edge</strong> on every rolling Matrix Verb and other Wired Power Roll, replacing the usual skill benefit for those rolls (<code>21</code>).</p>\n<h3>Gear, chrome, and armor</h3>\n<ul>\n<li><strong>Encumbrance:</strong> medium and heavy armor impose banes on some tests (<code>08</code>).</li>\n<li><strong>Mods</strong> and installed Wired software can add edges to named rolls (<code>10</code>, <code>19</code>).</li>\n<li><strong>Chrome</strong> grants situational edges; a <strong>Damaged</strong> implant works at a penalty (<code>09</code>).</li>\n<li><strong>¥ never buys a better Power Roll.</strong> Money buys the tool you already trained to use (<code>08</code>).</li>\n</ul>\n<h3>Result wording in Ghostwire text</h3>\n<p>Abilities, perks, and gear print effects by <strong>low / middle / high</strong>. Where a Wired ability says low “works, but something goes wrong,” that usually means <strong>Trace Alert</strong> rises (<code>21</code>). Meatspace lows usually mean complication, heat, or partial success — the Director names the cost from the fiction.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "58FUVtRW7t5FVjtr",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.58FUVtRW7t5FVjtr",
+      "name": "Procedure map",
+      "type": "text",
+      "sort": 1500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Rule | This book |\n|---|---|\n| Making a test | This chapter; characteristic names per `02` |\n| Test difficulty / when to call a roll | Stakes guidance + easy / medium / hard table above |\n| Power Roll dice and result bands | Always print **low / middle / high** (≤11 / 12–16 / 17+) |\n| Edges and banes (including doubles) | Extra-dice procedure above; connection states; Hacking edge; GW gear/chrome |\n| Skills in tests | **+2** skill benefit; Ghostwire skill list (`02`); Hacking exception (`21`) |\n| Natural doubles / criticals | High result + optional characteristic damage; Wired clean-crit note above |\n| Opposed, group, and montage tests | Contested / group / montage procedures above; perk spends (`11`) |\n| Potency and resisting effects | Weak / average / strong table above |\n| Saving throws | 1d10, succeed on 6+ |\n| Heroes’ Fortune / hero tokens | Pool and default spends above; perk spends (`11`); not convertible to ¥ or class resources |\n| Negotiation | Drive / pitfall procedure above |\n| Projects | Goal + progress (1 / 2 / 3); §Craft uses Hacking, Electronics, Repair, or Cybertech (`08`, `10`) |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"rule\">Rule</th>\n<th id=\"this_book\">This book</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Making a test</td>\n<td>This chapter; characteristic names per <code>02</code></td>\n</tr>\n<tr>\n<td>Test difficulty / when to call a roll</td>\n<td>Stakes guidance + easy / medium / hard table above</td>\n</tr>\n<tr>\n<td>Power Roll dice and result bands</td>\n<td>Always print <strong>low / middle / high</strong> (≤11 / 12–16 / 17+)</td>\n</tr>\n<tr>\n<td>Edges and banes (including doubles)</td>\n<td>Extra-dice procedure above; connection states; Hacking edge; GW gear/chrome</td>\n</tr>\n<tr>\n<td>Skills in tests</td>\n<td><strong>+2</strong> skill benefit; Ghostwire skill list (<code>02</code>); Hacking exception (<code>21</code>)</td>\n</tr>\n<tr>\n<td>Natural doubles / criticals</td>\n<td>High result + optional characteristic damage; Wired clean-crit note above</td>\n</tr>\n<tr>\n<td>Opposed, group, and montage tests</td>\n<td>Contested / group / montage procedures above; perk spends (<code>11</code>)</td>\n</tr>\n<tr>\n<td>Potency and resisting effects</td>\n<td>Weak / average / strong table above</td>\n</tr>\n<tr>\n<td>Saving throws</td>\n<td>1d10, succeed on 6+</td>\n</tr>\n<tr>\n<td>Heroes’ Fortune / hero tokens</td>\n<td>Pool and default spends above; perk spends (<code>11</code>); not convertible to ¥ or class resources</td>\n</tr>\n<tr>\n<td>Negotiation</td>\n<td>Drive / pitfall procedure above</td>\n</tr>\n<tr>\n<td>Projects</td>\n<td>Goal + progress (1 / 2 / 3); §Craft uses Hacking, Electronics, Repair, or Cybertech (<code>08</code>, <code>10</code>)</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "UQ4TXEChfsgw63NE",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.UQ4TXEChfsgw63NE",
+      "name": "Quick examples",
+      "type": "text",
+      "sort": 1600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Meatspace lie.** Runner greases a lobby guard with a cover story. Director calls **Persona** + Deception. Overlay is on → bane on the real-world roll. Net: skill benefit vs overlay bane, then read low/middle/high for how hard the guard buys it.\n\n**Wire breach.** Hacker is **Jacked In**, has **Hacking**, runs Breach. Wired roll gets the Jacked In edge **and** the Hacking edge (net double edge unless something else bans). Low still risks Trace Alert per `21`.\n\n**Contest.** Scout (Reflex + Stealth) vs patrol lead (Instinct + Perception). Compare totals; Scout’s low might mean “seen but not IDed” if the ability or Director frames partial outcomes.\n\n**Assist.** Medic is not in the fight line but can shout a dosage cue — spends the assist timing to give the Operator an edge on the next Physique check to stay standing.",
+        "content": "<p><strong>Meatspace lie.</strong> Runner greases a lobby guard with a cover story. Director calls <strong>Persona</strong> + Deception. Overlay is on → bane on the real-world roll. Net: skill benefit vs overlay bane, then read low/middle/high for how hard the guard buys it.</p>\n<p><strong>Wire breach.</strong> Hacker is <strong>Jacked In</strong>, has <strong>Hacking</strong>, runs Breach. Wired roll gets the Jacked In edge <strong>and</strong> the Hacking edge (net double edge unless something else bans). Low still risks Trace Alert per <code>21</code>.</p>\n<p><strong>Contest.</strong> Scout (Reflex + Stealth) vs patrol lead (Instinct + Perception). Compare totals; Scout’s low might mean “seen but not IDed” if the ability or Director frames partial outcomes.</p>\n<p><strong>Assist.</strong> Medic is not in the fight line but can shout a dosage cue — spends the assist timing to give the Operator an edge on the next Physique check to stay standing.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "9rb7OjGsRvmbko5F",
+      "_key": "!journal.pages!Yg38hFIb7bG8QyZG.9rb7OjGsRvmbko5F",
+      "name": "Where to go next",
+      "type": "text",
+      "sort": 1700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Topic | Chapter |\n|---|---|\n| Characteristics and skills | `02` |\n| Combat loop, Stamina, heroic resources | `04` |\n| Kits, armor encumbrance, ¥ | `08` |\n| Chrome penalties and edges | `09` |\n| Mods and §Craft | `10` |\n| Perks that spend hero tokens | `11` |\n| Connection states, Trace Alert, Matrix Verbs | `21` |\n\nThis chapter tells you **how uncertain actions resolve**. Combat timing lives in `04`. The Wire’s second battlefield lives in `21`. This book is the play rules.",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"topic\">Topic</th>\n<th id=\"chapter\">Chapter</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Characteristics and skills</td>\n<td><code>02</code></td>\n</tr>\n<tr>\n<td>Combat loop, Stamina, heroic resources</td>\n<td><code>04</code></td>\n</tr>\n<tr>\n<td>Kits, armor encumbrance, ¥</td>\n<td><code>08</code></td>\n</tr>\n<tr>\n<td>Chrome penalties and edges</td>\n<td><code>09</code></td>\n</tr>\n<tr>\n<td>Mods and §Craft</td>\n<td><code>10</code></td>\n</tr>\n<tr>\n<td>Perks that spend hero tokens</td>\n<td><code>11</code></td>\n</tr>\n<tr>\n<td>Connection states, Trace Alert, Matrix Verbs</td>\n<td><code>21</code></td>\n</tr>\n</tbody>\n</table>\n<p>This chapter tells you <strong>how uncertain actions resolve</strong>. Combat timing lives in <code>04</code>. The Wire’s second battlefield lives in <code>21</code>. This book is the play rules.</p>"
       },
       "category": null,
       "ownership": {
