@@ -92,9 +92,10 @@ Linux / this VM: same Node commands. District maps place from `assets/maps/distr
 |---|---|---|
 | 1 | `node tools/assemble-manuscript.mjs` | `docs/manuscript/build/Ghostwire-Manuscript.md` (gitignored) |
 | 2 | `node tools/inject-print-art.mjs` | `Ghostwire-Manuscript.with-art.md` + `ART-GAP-REPORT.md` |
-| 3 | `node tools/build-pdf.mjs` | `Ghostwire-Rulebook-DRAFT.html` + `.pdf` (gitignored) |
+| 3 | `node tools/linkify-manuscript.mjs` | `Ghostwire-Manuscript.with-links.md` (B97; gitignored) |
+| 4 | `node tools/build-pdf.mjs` | `Ghostwire-Rulebook-DRAFT.html` + `.pdf` (gitignored) |
 
-`build-pdf.mjs` runs steps 1–3 unless `--skip-assemble` / `--skip-inject`. `--sample` prints a short front + L1 + Ch 27 slice. `--html-only` stops before Chrome.
+`build-pdf.mjs` runs steps 1–4 unless `--skip-assemble` / `--skip-inject` / `--skip-linkify`. `--sample` prints a short front + L1 + Ch 27 slice. `--html-only` stops before Chrome. Hotlink details: `docs/spikes/B97-PDF-HOTLINKS.md`.
 
 ### Why Chrome, not Pandoc
 

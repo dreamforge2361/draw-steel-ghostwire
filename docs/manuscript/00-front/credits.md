@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.21**).
+**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.22**).
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 

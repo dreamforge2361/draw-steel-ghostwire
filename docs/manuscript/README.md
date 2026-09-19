@@ -1,8 +1,8 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Print PDF pipeline (B88, 2026-09-19) — module **0.3.21**; Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates in-tree; journals still held  
+**Status:** Print PDF pipeline (B88) + in-document hotlinks (B97, 2026-09-19) — module **0.3.22**; Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates in-tree; journals still held  
 **Path:** `docs/manuscript/`  
-**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline  
+**Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline · **B97** PDF hotlinks  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
 
 This folder is the **single Markdown source of record** for the eventual print PDF: lore harvested from the original Ghostwire master PDFs, plus rules pointed at `docs/raw/` (no dual-edit copies).
@@ -80,10 +80,13 @@ See `TOC.md` for print titles ↔ sources. See `02-rules/README.md` for the poin
 # after copying local art (see docs/manuscript/print-art/README.md)
 node tools/assemble-manuscript.mjs
 node tools/inject-print-art.mjs
+node tools/linkify-manuscript.mjs
 node tools/build-pdf.mjs
 ```
 
-Or `node tools/build-pdf.mjs` alone (runs all three). Output: `docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf` (gitignored) and `ART-GAP-REPORT.md`. Journals stay held.
+Or `node tools/build-pdf.mjs` alone (runs assemble → inject → linkify → HTML/PDF). Output: `docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf` (gitignored) and `ART-GAP-REPORT.md`. Journals stay held.
+
+Hotlinks (B97): generated Contents + RAW `` `21` `` / print-Ch / Appendix pointers become `#heading` links. Spike: `docs/spikes/B97-PDF-HOTLINKS.md`.
 
 ---
 

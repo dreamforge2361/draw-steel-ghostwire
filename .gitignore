@@ -37,6 +37,7 @@ assets/pregens/_pre-compress-backup/
 # Generated print manuscript (assemble from MANIFEST.yml)
 docs/manuscript/build/Ghostwire-Manuscript.md
 docs/manuscript/build/Ghostwire-Manuscript.with-art.md
+docs/manuscript/build/Ghostwire-Manuscript.with-links.md
 docs/manuscript/build/Ghostwire-Rulebook-DRAFT.html
 docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf
 docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.pdf

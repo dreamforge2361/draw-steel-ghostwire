@@ -2,7 +2,11 @@
  * Small Markdown → HTML for the Ghostwire print draft.
  * Handles ATX headings, GFM tables, lists, blockquotes, fences, images,
  * raw HTML (figures), and emphasis. Not a full CommonMark parser.
+ *
+ * Heading ids come from tools/lib/heading-anchor.mjs (stable slugs; -2, -3
+ * on collision). Pass a shared allocator so blockquote headings don't reuse ids.
  */
+import { createIdAllocator } from "./heading-anchor.mjs";
 
 function escapeHtml(s) {
   return String(s)
@@ -85,7 +89,8 @@ function splitRow(line) {
   return t.split("|").map((c) => c.trim());
 }
 
-export function markdownToHtml(md) {
+export function markdownToHtml(md, options = {}) {
+  const allocId = options.allocId || createIdAllocator();
   const lines = String(md).replace(/^\uFEFF/, "").split(/\r?\n/);
   const out = [];
   let i = 0;
@@ -152,11 +157,7 @@ export function markdownToHtml(md) {
       flushPara();
       const level = heading[1].length;
       const text = heading[2].trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "")
-        .slice(0, 80);
+      const id = allocId(text);
       out.push(`<h${level} id="${id}">${inline(text)}</h${level}>`);
       i++;
       continue;
@@ -192,7 +193,7 @@ export function markdownToHtml(md) {
         : first.startsWith("in foundry")
           ? ' class="gw-foundry"'
           : "";
-      out.push(`<blockquote${cls}>${markdownToHtml(q.join("\n"))}</blockquote>`);
+      out.push(`<blockquote${cls}>${markdownToHtml(q.join("\n"), { allocId })}</blockquote>`);
       continue;
     }
 
