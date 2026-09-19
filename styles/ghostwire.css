@@ -95,6 +95,27 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   letter-spacing: 0.02em;
 }
 
+/* Taint 0–12 fieldset on the hero Stats tab (B80) */
+.ghostwire-taint {
+  gap: 0.5rem;
+  align-items: end;
+}
+
+.ghostwire-taint .form-group.stacked input {
+  width: 4em;
+  text-align: center;
+}
+
+.ghostwire-taint .ghostwire-taint-band {
+  flex: 1 0 100%;
+  margin: 0;
+}
+
+.ghostwire-taint.band-marked .ghostwire-taint-band { color: var(--color-level-warning, #c90); }
+.ghostwire-taint.band-stained .ghostwire-taint-band { color: var(--color-level-warning, #c90); font-weight: 600; }
+.ghostwire-taint.band-claimed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 600; }
+.ghostwire-taint.band-hollowed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 700; }
+
 /* Wired connection state on the hero Stats tab */
 .ghostwire-wired {
   display: flex;

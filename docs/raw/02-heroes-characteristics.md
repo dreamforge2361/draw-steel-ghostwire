@@ -23,7 +23,7 @@ Characteristics and skills sit under all of that. Characteristics are the five s
 
 **Firewall (chargen and forever):** characteristics, skills, class features, and heroic resources come only from People, Background, Profession, class, perks, and advancement. **¥ never buys character power.** Chrome and gear never grant characteristics, skills, or class features (`08`, `09`, `10`). Lifestyle buys living standard between runs, not sheet power (`26`).
 
-A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score.
+A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). **Taint** begins at **0** for every People, Cyborgs included (`27-corruption-taint.md`). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score. Rest does not cleanse Taint.
 
 ---
 
@@ -39,12 +39,13 @@ Assign scores with the array in **Characteristics** below. Ghostwire’s **step 
 6. **Languages** — `07-languages.md`.
 7. **Starting ¥** — **¥5,000** liquid on the sheet (`08`). Do not pre-spend Lifestyle; Lifestyle is paid at the first respite between runs (`26`).
 8. **Body Integrity** — **20** for every People except Cyborg (`09`). Chrome is opt-in after (or during) play — never an auto-grant at chargen.
-9. **Optional early spends** — Street-band gear (a Personal/Light air scout like Tape-Eye or Rotor grants **Street Eye** — `23`), a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`.
+9. **Taint** — **0** (Clean) for every People, Cyborgs included (`27-corruption-taint.md`). Chrome does not raise it. Rest does not cleanse it.
+10. **Optional early spends** — Street-band gear (a Personal/Light air scout like Tape-Eye or Rotor grants **Street Eye** — `23`), a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`.
 
-When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, next Lifestyle band).
+When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, Taint, next Lifestyle band).
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29 / `docs/manuscript/04-back/29-chargen-cheat-sheet.md`).
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), **Taint** (0–12 and band name), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20, Taint 0, and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29 / `docs/manuscript/04-back/29-chargen-cheat-sheet.md`).
 
 ---
 
@@ -200,7 +201,7 @@ Each class fuels abilities with its own **heroic resource**. Timing follows the 
 
 Runners advance **Level 1–10** by the Victory and leveling procedure in `24`. Ghostwire invents no second hidden XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.
 
-What leveling does **not** grant: Body Integrity, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`).
+What leveling does **not** grant: Body Integrity, **Taint** change, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`). Rest does not cleanse Taint (`27`).
 
 ---
 

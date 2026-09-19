@@ -222,6 +222,19 @@
       "AlienColonyTrade": "Alien Colony Trade",
       "ExtradimensionalTechnical": "Extradimensional Technical"
     },
+    "Taint": {
+      "Label": "Taint",
+      "Current": "Taint",
+      "Hint": "Spiritual stain, 0–12. Rest never cleanses it. Chrome does not raise it. The Director and players change this number when the table awards or rites Taint.",
+      "BandLine": "{band} ({value} / {max})",
+      "Bands": {
+        "clean": "Clean",
+        "marked": "Marked",
+        "stained": "Stained",
+        "claimed": "Claimed",
+        "hollowed": "Hollowed"
+      }
+    },
     "Integrity": {
       "Label": "Body Integrity",
       "Current": "Current",
@@ -7101,6 +7114,7 @@
         "Technomancer": "The Technomancer",
         "TheWire": "The Wire",
         "TheVeil": "The Veil",
+        "CorruptionTaint": "Corruption & Taint",
         "Machines": "Machines: Drones, Vehicles & Buildings",
         "Opposition": "Opposition (Director)",
         "LifestyleDowntime": "Lifestyle & Downtime"

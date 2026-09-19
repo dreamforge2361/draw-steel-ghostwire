@@ -49,7 +49,7 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
 - **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).
-- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation.
+- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in `27-corruption-taint.md`.
 - **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
 ---
@@ -265,7 +265,7 @@ Your taint twists how your words and presence are read, giving you a better read
 
 Visible taint and social “reads as wrong” are Director color layered on this package, not a second economy.
 
-**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only.
+**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is **not** Taint. Every People — Mutants included — uses the shared **Taint 0–12** track (`27-corruption-taint.md`). Reducing Taint does not erase a Flaw.
 
 ---
 

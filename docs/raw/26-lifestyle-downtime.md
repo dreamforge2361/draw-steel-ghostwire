@@ -126,7 +126,7 @@ During a paid Lifestyle respite, spend project slots (and story time) on actions
 
 ### Recover
 
-Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band.
+Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band. **Rest never cleanses Taint** — Recoveries, Lifestyle, and respite leave the 0–12 track untouched (`27-corruption-taint.md`).
 
 ### Shop
 
