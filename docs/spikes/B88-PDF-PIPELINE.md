@@ -117,7 +117,7 @@ Live machine report: `docs/manuscript/build/ART-GAP-REPORT.md` (regenerated ever
 | Size | ~16 MB (gitignored) |
 | Engine | Chrome headless HTML→PDF |
 | Placed art | 3 in-module district maps |
-| Visible gaps | 28 ART GAP figures |
+| Visible gaps | 30 ART GAP figures (28 + L4/L5 after rebase) |
 
 `--sample` writes an 8–16 page slice (title + L1 open + Ch 27 maps) to `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored). Chrome on this VM writes the PDF then hangs; `build-pdf.mjs` treats a valid `%%EOF` as success and times out the process.
 
