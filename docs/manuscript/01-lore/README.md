@@ -7,17 +7,17 @@ Lore prose harvested for the Ghostwire print booklet. Artwork/lore from master P
 | PDF / extract | Role |
 |---|---|
 | *GHOSTWIRE — Lore Source (V1 rules stripped)* (`/workspace/ghostwire-materials/GHOSTWIRE-Lore-Source-V2-edit.md`) | Primary full Book One lore text (rules stripped). Derived from *GHOSTWIRE — The Complete Sourcebook*. |
-| *GHOSTWIRE — Core Sourcebook* | Cited in `docs/rulebook/ART-STYLE.md`; keyword hits in `docs/masters/_lore_extract/`. **Original PDF not on box / Drive this pass; Windows LocalShell unavailable to executor.** |
-| *GHOSTWIRE-Lore-Book-V2-FINAL* | Same — keyword hits only this pass. |
+| *GHOSTWIRE — Core Sourcebook* PDF | Live extract `/workspace/gw-pdf-extract/core-full.txt` (429 pp). Book One lore used for 0.2.3 Ch. 8 tail patch. |
+| *GHOSTWIRE-Lore-Book-V2-FINAL* PDF | Live extract `/workspace/gw-pdf-extract/lore-full.txt` (132 pp). Cross-check vs Core Book One (same prose family). |
 | *GHOSTWIRE — The Ossian Reach Handbook* | Flats primer color via `docs/setting/reach-handbook/` (not a full gazetteer dump into L3). |
 
-**Harvest:** 2026-09-18 (America/New_York) · **0.2.1** initial · **0.2.2** PDF-diff gap patch (Magic, Corruption, Ten profiles, Space, Religion, Shadow Economy, Everyday Tech → L1).
+**Harvest:** 2026-09-18 (America/New_York) · **0.2.1** initial · **0.2.2** Lore Source gap patch · **0.2.3** live PDF-diff (Ch. 8 tail → L1: Chair politics, Kestrel, Resource Wars, Radiant Concord).
 
 ## Files
 
 | File | Contents |
 |---|---|
-| `L1-setting-primer.md` | Cosmology, planes, Incursion, **Magic**, **Corruption**, hive structure, megacorps, Ten seats + **profiles**, Wired, **Space**, **Religion**, **Shadow Economy**, **Everyday Tech**, timeline, campaign present, themes |
+| `L1-setting-primer.md` | Cosmology, planes, Incursion, Magic, Corruption, hive, megacorps, Ten seats + profiles, **beneath/Chair/Kestrel/Resource Wars/Radiant Concord**, Wired, Space, Religion, Shadow Economy, Everyday Tech, timeline, present, themes |
 | `L2-peoples-and-world.md` | Founding + eight peoples (fiction only; mechanics in `docs/raw/05-ancestries.md`) |
 | `L3-ossian-reach-color.md` | Reach fixtures, Flats/black-water color, street gangs, Ashenreach sister-hive |
 

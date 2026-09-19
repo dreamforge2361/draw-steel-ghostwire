@@ -2,76 +2,89 @@
 
 **Date:** 2026-09-18 (America/New_York)  
 **Goal:** Fill `docs/manuscript/01-lore/` with Ghostwire lore prose from master PDFs / extracts.  
-**Module:** **0.2.1** (initial harvest) → **0.2.2** (PDF-diff / gap patch).
+**Module:** **0.2.1** (initial harvest) → **0.2.2** (Lore Source gap patch) → **0.2.3** (live PDF-diff).
 
 ## Sources searched
 
 | Location | Result |
 |---|---|
-| Windows Dropbox `C:\Users\mfran\Dropbox\ai-brain\projects\draw steel` (`machineId` a56fac98-…) | **Still unreachable** this pass — executor tool surface has no `ListMachines` / `Shell(machineId)` / `CopyToBox`. Permission is `always` in settings, but tools are not exposed to this agent. |
-| Google Drive (xai) | Exact-name + broad “Ghostwire” PDF search — **no hits**. |
-| Box `/workspace/ghostwire-materials/GHOSTWIRE-Lore-Source-V2-edit.md` | **Primary continuous prose** — Book One lore, rules stripped (~42k words). |
-| `docs/masters/_lore_extract/GHOSTWIRE_Core_Sourcebook_hits.txt` | Keyword hit index from prior PDF extract (not continuous prose). |
-| `docs/masters/_lore_extract/GHOSTWIRE-Lore-Book-V2-FINAL_hits.txt` | Keyword hit index for Lore Book V2 FINAL. |
-| `docs/setting/reach-handbook/01–02` | Flats primer + vertical/black-water color (Ossian Reach Handbook extract already in repo). |
-| `docs/setting/ashenreach.md` | Sister-hive canon lock. |
-| `docs/rulebook/ART-STYLE.md` | Confirms PDF titles. |
+| Windows Dropbox `C:\Users\mfran\Dropbox\ai-brain\projects\draw steel` | Unreachable to early passes (no LocalShell). **Live PDF text later landed on box** as `/workspace/gw-pdf-extract/`. |
+| Google Drive (xai) | Exact-name + broad “Ghostwire” PDF search — no hits (0.2.1–0.2.2). |
+| Box `/workspace/ghostwire-materials/GHOSTWIRE-Lore-Source-V2-edit.md` | Primary continuous prose for 0.2.1–0.2.2 (~42k words). |
+| Box `/workspace/gw-pdf-extract/core-full.txt` | **Live** GHOSTWIRE Core Sourcebook extract — **429 pages** (0.2.3). |
+| Box `/workspace/gw-pdf-extract/lore-full.txt` | **Live** Lore Book V2 FINAL extract — **132 pages** (0.2.3). |
+| `docs/masters/_lore_extract/*_hits.txt` | Keyword hit indexes (0.2.1–0.2.2 stand-in). |
+| `docs/setting/reach-handbook/01–02`, `docs/setting/ashenreach.md` | Reach / sister-hive color for L3. |
 
-## PDF-diff method (0.2.2)
+## Live PDF-diff (0.2.3)
 
-1. Mapped Lore Source TOC (Ch. 1–25) against L1/L2/L3 H2/H3 headings.
-2. Cross-checked Core + Lore Book V2 **hit indexes** for heading-like / unique lore phrases not present in manuscript.
-3. Treated Lore Source as the Complete/Core Book One text stand-in (same prose family as hit indexes).
-4. **Did not** paste Draw Steel Heroes / class-kit / combat rules; stripped rules anchors from harvested chapters.
+### Method
 
-### Coverage after 0.2.1 vs gaps found
+1. Skimmed Core + Lore Book V2 extracts for Book One section titles (Parts I–V); **skipped** pure rules (classes, combat, kits, chargen math, advancement, class-resource reconciliation tables, CROSSLINK/RULES lines).
+2. Mapped TOC against L1/L2/L3 H2/H3 after 0.2.2.
+3. Patched **setting/fiction gaps only** into L1 from Core Sourcebook PDF pp. **56–61** (Lore Book V2 same chapters). Original PDF prose retained; rules/crosslink residue stripped.
 
-| Lore topic (Book One) | 0.2.1 | 0.2.2 action |
+### Pages used (live extracts)
+
+| Source | Pages / chapters | Use |
 |---|---|---|
-| Cosmology, planes, Incursion | In L1 | — |
-| **Magic & Its Sources (Ch. 4)** | **Missing** as section | **Added to L1** (~1.3k words) |
-| **Corruption & Taint (Ch. 5)** | **Missing** as section | **Added to L1** (~0.9k words) — chrome-as-un-speaking, Mutants-as-heritable-taint |
-| Hive / megacorps / Ten **seat list** | In L1 | — |
-| **Ten conglomerate profiles (Ch. 8)** | Seat blurbs only | **Added to L1** (~9k words; Sanctum Assurance condensed from ~4.5k) |
-| Wired | In L1 | — |
-| **Space Colonies & New Space (Ch. 10)** | Mention only | **Added to L1** (~1.0k words) |
-| Peoples (Ch. 12–19) | In L2 (at/above source depth) | No material gap |
-| Reach gangs / fixtures | In L3 | No material gap (handbook districts still intentionally out) |
-| **Religion & the Faithful (Ch. 21)** | Missing | **Added to L1** (~1.6k words) |
-| **Shadow Economy (Ch. 22)** | Missing | **Added to L1** (~1.4k words) |
-| **Technology & Everyday Life (Ch. 23)** | Missing | **Added to L1** (~1.5k words) |
-| Timeline / present / themes | In L1 | — |
+| Core Sourcebook PDF | Book One ~pp. 8–123 (world); gap fill **pp. 56–61** | Canonical continuous prose for Ch. 8 tail |
+| Lore Book V2 FINAL PDF | Book One Parts I–V (~pp. 7–123); class plates pp. 124–132 skipped | Cross-check; same lore family as Core Book One |
+| Both | Peoples Part III pp. 68–84 | Depth check vs L2 — **no material gap** |
+| Both | Reach fixtures / gangs Part II+IV | Depth check vs L3 — **no material gap** |
 
-### What PDFs would still add (if Windows extract lands)
+### Gaps found → filled (fiction only)
 
-- Page-faithful wording deltas between Lore Source markdown (2026-07-29) and **Core Sourcebook.pdf** / **Lore-Book-V2-FINAL.pdf**.
-- Any V2-only sidebars / peoples plates captions (art not in scope).
-- Hit-index unique stubs already mirrored in Lore Source (Chrome as un-speaking, Mutants heritable, Revenants) — now in L1/L2.
+| Gap | Dest | Notes |
+|---|---|---|
+| What Lies Beneath the Ten | L1 (after Sanctum) | Sub-corps, seatless powers, remnant government |
+| Who Holds the Chair (Sunlit Chair slipping / Vera Solenne) | L1 | Crown political engine — only seat blurbs existed before |
+| Kestrel Dynamics + Adrienne Kestrel “the Falcon” | L1 | Rising eleventh; was mention-only |
+| Resource Wars | L1 | Entirely missing in 0.2.2 |
+| Reach for the Void (Congress political note) | L1 | Short bridge to Space Colonies ch. |
+| Radiant Concord + Luminary Aurent Solwhit + Radiant See + Choir | L1 | **Critical:** Religion Ch. cross-referenced “Ch. 8 already built” but Concord profile was never harvested |
 
-## What went where (0.2.2)
+### Still missing / intentionally out
 
-| Manuscript file | Words (approx) | Δ vs 0.2.1 | Content |
-|---|---:|---:|---|
-| `L1-setting-primer.md` | ~29,600 | **+~17,300** | Prior primer + Magic, Corruption, Ten profiles, Space, Religion, Shadow Economy, Everyday Tech |
-| `L2-peoples-and-world.md` | ~3,800 | 0 | Founding + eight peoples (already ≥ Part III source) |
-| `L3-ossian-reach-color.md` | ~6,400 | 0 | Reach fixtures / Flats color / gangs / Ashenreach |
-| `01-lore/README.md` | — | updated | Source list + 0.2.2 note |
+| Item | Status |
+|---|---|
+| Sanctum Assurance full ~4.5k dossier | Still **condensed** in L1 (~1.1k); live PDF ~1.3k before “beneath” — not a material delta vs condensation note |
+| Language & Communication (Ch. 24) | Source stub (~1 line) — nothing to harvest |
+| Class identity plates (Lore Book pp. 124–132) | Rules/class adjacent — **not** dumped into lore manuscript |
+| Reach Handbook district gazetteer | Intentionally out of L3 |
+| Core Book Two / rules chapters | Out of scope |
+| Extracts on box | Stay in `/workspace/gw-pdf-extract` — **not committed**; `_pdf-extract/` added to module `.gitignore` for Windows landings |
+
+### Coverage matrix (Book One)
+
+| Lore topic | 0.2.2 | 0.2.3 |
+|---|---|---|
+| Cosmology, planes, Incursion | L1 | — |
+| Magic / Corruption | L1 | — |
+| Hive / megacorps / Ten seats + profiles | L1 | — |
+| **Ch. 8 tail (beneath / Chair / Kestrel / Resource Wars / Concord)** | **Missing** | **Added to L1** (~3.3k words) |
+| Wired / Space | L1 | — |
+| Peoples | L2 (≈ PDF depth) | Confirmed no gap |
+| Reach gangs / fixtures | L3 | Confirmed no gap |
+| Religion / Shadow Economy / Everyday Tech | L1 | Concord profile now backs Religion crosslinks |
+| Timeline / present / themes | L1 | — |
+
+## What went where (word deltas)
+
+| File | 0.2.2 (HEAD) | 0.2.3 | Δ |
+|---|---:|---:|---:|
+| `L1-setting-primer.md` | ~29,644 | ~33,027 | **+~3,383** |
+| `L2-peoples-and-world.md` | ~3,781 | ~3,781 | 0 |
+| `L3-ossian-reach-color.md` | ~6,364 | ~6,364 | 0 |
 
 ## Policy applied
 
 - Lore prose carried; **no images** in Markdown.
-- Stripped design notes, rules anchors, TOC chrome, class-resource reconciliation tables where separable.
-- Did **not** paste Draw Steel Heroes rules; did **not** touch `docs/raw/`.
-- L3 remains optional street color — Reach Handbook districts (chs 04–17) not dumped.
-
-## Remaining gaps
-
-1. **Live PDF text extract** still blocked without Windows LocalShell / CopyToBox on this agent.
-2. Sanctum Assurance profile **condensed** in L1 (full ~4.5k-word dossier in Lore Source Ch. 8).
-3. Reach Handbook full district gazetteer intentionally not in L3.
-4. Language chapter (Ch. 24) is a stub in source (~50 words) — nothing material to harvest.
+- Stripped design notes, rules anchors, TOC chrome, CROSSLINK/RULES lines.
+- Did **not** paste Draw Steel / class-kit / combat rules; did **not** touch `docs/raw/`.
+- L3 remains optional street color.
 
 ## Verify
 
-- `node tools/assemble-manuscript.mjs` (if present) as part of 0.2.2.
-- Module bump → **0.2.2**.
+- `node tools/assemble-manuscript.mjs`
+- Module bump → **0.2.3**

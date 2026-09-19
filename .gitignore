@@ -36,3 +36,6 @@ assets/pregens/_pre-compress-backup/
 
 # Generated print manuscript (assemble from MANIFEST.yml)
 docs/manuscript/build/Ghostwire-Manuscript.md
+
+# Live PDF text extracts (box or Windows module folder) — do not commit
+_pdf-extract/
