@@ -2,7 +2,7 @@
   "id": "draw-steel-ghostwire",
   "title": "Draw Steel - Ghostwire Build",
   "description": "Ghostwire content and presentation module for Foundry VTT, running on the stock Draw Steel system. Reskin, localization, and compendium packs — does not replace draw-steel.",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "compatibility": {
     "minimum": "14.367",
     "verified": "14.367",
@@ -275,5 +275,34 @@
   "bugs": "https://github.com/dreamforge2361/draw-steel-ghostwire/issues",
   "manifest": "https://github.com/dreamforge2361/draw-steel-ghostwire/releases/latest/download/module.json",
   "download": "https://github.com/dreamforge2361/draw-steel-ghostwire/releases/latest/download/module.zip",
-  "readme": "README.md"
+  "readme": "README.md",
+  "packFolders": [
+    {
+      "name": "Ghostwire",
+      "color": "#00E5FF",
+      "packs": [
+        "origins",
+        "abilities",
+        "chrome",
+        "kits",
+        "gear",
+        "classes",
+        "backgrounds",
+        "professions",
+        "mods",
+        "matrix",
+        "vehicles",
+        "foci",
+        "perks",
+        "summons",
+        "bestiary",
+        "rulebook",
+        "wired-flats",
+        "pregens",
+        "pregen-fiction",
+        "encounters",
+        "reach-handbook"
+      ]
+    }
+  ]
 }
