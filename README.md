@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.33` — **Deadhead Director SoR + Runs pack scaffold (B104):** playtest journal SoR at `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`. New GM-only JournalEntry pack **Ghostwire Runs** (`packs/runs`) with empty folder **Deadhead**. Journals / items / scenes / art still to ship. Spike: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`.
 - `0.3.32` — **Armor + weapon item art (B102):** 22 armor/shield + 49 weapon portraits under `assets/tokens/{armor,weapons}/`. Gear pack Item `img` fields and matching pregen embedded treasure Items point at `modules/draw-steel-ghostwire/assets/tokens/…/<dsid>.webp`. Apply: `node tools/apply-gear-token-art.mjs`. Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
 - `0.3.31` — **Vehicle + drone tokens (B101):** 36 drone + 32 vehicle chassis portraits (1024² WebP) under `assets/tokens/{drones,vehicles}/`. Ghostwire Vehicles & Drones Item `img` fields point at `modules/draw-steel-ghostwire/assets/tokens/…/<dsid>.webp`. Apply: `node tools/apply-machine-token-art.mjs`. Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 - `0.3.29` — **VOIDMARK knowledge index:** district / hive lore (Switchboard, the Flats, Ossian Reach) retrieves from shipped Reach Handbook + L3 (and other L-chips / Wired Flats gazetteer). Rebuild: `node tools/build-voidmark-index.mjs`. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
@@ -395,6 +396,8 @@ Pack sources live in `src/packs/<pack>/` (subfolders allowed). Names and descrip
 Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `assets/tokens/drones/` and `assets/tokens/vehicles/`. Re-apply after replacing files with `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 
 Armor + weapon item art (B102, **0.3.32**): 22 armor/shield + 49 weapon WebPs in `assets/tokens/armor/` (includes shields) and `assets/tokens/weapons/`. Re-apply after replacing files with `node tools/apply-gear-token-art.mjs` (stamps Gear pack + pregen embeds; rebuilds `packs/gear` + `packs/pregens`). Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
+
+Deadhead playtest (B104, **0.3.33**): Director SoR `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`. Empty JournalEntry pack **Ghostwire Runs** (`src/packs/runs/` → `packs/runs`) with folder **Deadhead**. Rebuild with `node tools/build-packs.mjs runs`. Content pass (pages, wafers, scenes) is not in this bump. Spike: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`.
 
 ## Rulebook
 

@@ -117,3 +117,4 @@
 - **B85** Historical timeline graphic — not started.
 - **B86** Deadfall dark-zone **separate module** (depends on Ghostwire; mega-dungeon sector) — not started.
 - **B89** Foundry AI chat **in-setting super-AI persona** + lore + **chat/token art** — not started (with B82).
+- **B104** Deadhead Gold Line playtest — **SoR LOCKED 0.3.33** (`docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`). Empty GM-only JournalEntry pack **Ghostwire Runs** (`runs`) + folder **Deadhead** scaffolded. Journals / items / scenes / art still to ship. Spike: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`.
