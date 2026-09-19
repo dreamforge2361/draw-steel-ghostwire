@@ -36,14 +36,15 @@ Replace title-page `CONTENT TBD` with a PDF-ready Ghostwire title plate; draft p
 
 | Source | Before (B73 / 0.3.2) | After (B74) | Δ |
 |---|---:|---:|---:|
-| `00-front/title-page.md` | 28 | *(see after-assemble table)* | — |
-| `00-front/credits.md` | — | new | — |
-| `00-front/how-to-use-this-book.md` | — | new | — |
-| **00-front/ total** | **28** | *(filled in verify)* | — |
-| RAW Ch 0 `00-front-matter.md` | 1,316 | *(filled in verify)* | — |
-| Assembled manuscript | 151,605 | *(filled in verify)* | — |
+| `00-front/title-page.md` | 28 | **279** | +251 |
+| `00-front/credits.md` | 0 | **521** | +521 |
+| `00-front/how-to-use-this-book.md` | 0 | **743** | +743 |
+| **00-front/ total** | **28** | **1,543** | **+1,515** |
+| RAW Ch 0 `00-front-matter.md` | 1,316 | **1,640** | +324 |
+| Assembled manuscript | 151,605 | **153,448** | +1,843 |
+| Assemble files included | 32 | **34** | +2 |
 
-*(Verify block below is the lock — this section is the intent; numbers stamped after assemble.)*
+Assemble: **7** parts · **34** files · **0** missing · **0** `CONTENT TBD`.
 
 ## Remaining TBD (Michael)
 
