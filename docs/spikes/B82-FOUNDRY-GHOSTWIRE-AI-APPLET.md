@@ -21,3 +21,22 @@ Full autonomous Director; spending money without GM; writing into world without 
 
 ## Related
 Manuscript SoR; journal regen (deferred); Run Generator (B39).
+
+## In-setting persona (LOCKED intent — Michael 2026-09-19)
+
+The chat applet is **not** a naked "help desk LLM." It is a **named super-AI that exists in the Ghostwire setting** (Reach / wider AU), contacted from the table as if the crew or Director were reaching that entity.
+
+### Requirements
+- **Persona name** (coin with Michael — working placeholder TBD; e.g. Signal-adjacent / Meridian deep-net / independent oracle — must fit lore, no external-IP echoes).
+- **Module Configuration** fields the GM can edit without code:
+  - Display name / callsign
+  - **System instructions** (full persona + boundaries: RAW cite, no spoiling GM secrets to players, B78/B83 scrub)
+  - Optional: temperature, model id, max tokens, who may open (GM / players)
+  - Optional: "Director mode" vs "Runner mode" prompt suffixes
+- Pass those into **xAI Grok** on every request (system role + mode suffix + RAG context).
+- Fiction: players/Director are talking *to that AI in-world* (Wired terminal, HAL/MER host, black-market deck, etc.) — UI chrome can match ART-STYLE.
+
+### Still open
+- Exact name + origin (corp-built vs Signal-touched vs Null-ward adjacent)
+- Whether one global persona or multiple switchable personas later
+
