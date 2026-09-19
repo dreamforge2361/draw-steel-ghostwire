@@ -1,7 +1,7 @@
 # Lifestyle & Downtime
 
-**RAW status:** draft (2026-09-18) / draft (Stage 3 fill)  
-**Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Appendix §F3 (upkeep ¥), `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
+**RAW status:** draft (2026-09-18) / draft (Stage 3 fill; Contacts pointer polish B75)  
+**Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Appendix §F3 (upkeep ¥) + 1G Fixer Retainer, `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
 **Print:** Chapter 10 (TOC lock) — file numbered `26` so Kits/Chrome/Mods (`08`–`11`) stay stable for Journals
 
 ---
@@ -104,10 +104,29 @@ Buy chrome with **¥ + Body Integrity**; install, remove, and repair are downtim
 
 Long-form Veil magic is a **Ritual Working**: a Project chain on the same Craft downtime spine (`22-the-veil.md`, B43). Spend ¥, lore, reagents, and Veil Price / spirit-attention. Permanent sanctums require upfront yen **and** ongoing Lifestyle/upkeep; sanctum rating must meet Magnitude. Do not resolve full ritual math here — pointer only.
 
-### Training / Contacts (stub)
+### Training
 
-- **Training:** learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, not a cash menu (`08` Kits ↔ Economy bridge). Lifestyle Middle+ makes finding a mentor easier; ¥ still does not buy the doctrine.
-- **Contacts:** class features and Background/Profession fiction may grant contacts. A Fixer Retainer service (gear 1G) can buy a one-time introduction. **Full Followers & Contacts chapter = non-goal for v1** — Director / Draw Steel by reference for hirelings and retainers until a later pass.
+Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, not a cash menu (`08` Kits ↔ Economy bridge). Lifestyle Middle+ makes finding a mentor easier; ¥ still does not buy the doctrine.
+
+### Contacts & hirelings (v1 pointer)
+
+**Full Followers & Contacts chapter = non-goal for v1.** This is the playable stub so class text and Background fiction have a place to land. Do not invent standing ladders, Renown-to-follower math, or a contact-tier catalog.
+
+| Kind | What it is | How you get one | What you do **not** buy |
+|---|---|---|---|
+| **Contact** | A named NPC who will take a call (intro, rumor, one door) | Class features; Background / Profession fiction; Fixer Retainer service | Characteristics, skills, Kit doctrine |
+| **Hireling / retainer** | Extra hands for a scene or a downtime slot | Draw Steel hirelings / retainers **by reference**; Lifestyle Low’s printed +1 project slot with a hireling (§F3) | A second class feature |
+| **Follower** | Ongoing crew support (named, recurring) | Story + class text that already says so (e.g. Commander network favors) | A published follower stat-block chapter — use Opposition / DS retainers |
+
+**Chargen fiction** (`06`): ask **who still has your number?** Write one name and a lean (fixer, old badge, deck handle). That is contact **fiction**, not a mechanical roster until a printed feature or a service spends.
+
+**Fixer Retainer** (gear catalog **1G**, harvested): **¥6,000**, Military-feel Availability (legacy T2), tag **Service**. Buys **one** of: a one-time introduction to a **new** Contact, **or** an Availability re-roll on a restricted acquisition. It does not buy a permanent web, a hireling combatant, or a language.
+
+**Class features that already call a contact** resolve as printed (Commander network favor, Elementalist contact hooks, Street-Fixer Covert Operations, etc.). Standing — how much they will risk — is **Director-adjudicated from fiction and the printed ability**, not from a missing Contacts chapter. Once per session per Contact where the ability says so.
+
+**Downtime:** spending a project slot to *cultivate* a named contact is legal table fiction. It does not grant skills or Renown. Low Lifestyle’s **+1 project slot with a hireling** is the only printed hireling-capacity number in this chapter (§F3).
+
+¥ still never converts into character power. A bought introduction is access, not a characteristic.
 
 ---
 
@@ -141,6 +160,7 @@ Long-form Veil magic is a **Ritual Working**: a Project chain on the same Craft 
 | Wealth firewall, payouts, §Craft skills | `08-kits-gear-wealth.md` |
 | Medic Reagents restock lock | `15-medic.md` |
 | Invent a Mod / mod slots | `10-mods.md` |
+| Contacts / Fixer Retainer | This chapter (pointer); gear **1G**; class text |
 | Chrome install / BI | `09-chrome-body-integrity.md` |
 | Ritual Workings | `22-the-veil.md` |
 | Wrench Building Lifestyle Hook | `16-wrench.md` |

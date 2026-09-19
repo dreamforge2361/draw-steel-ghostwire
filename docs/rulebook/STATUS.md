@@ -31,7 +31,7 @@
 | **Summons — Elementalist companions + elementals (Foundry)** | `src/packs/summons/elementals/` | **B32 Phase 2 Foundry-verified** (2026-09-17) — Ember / Zephyr / Boulder Companions with strikes; Rank 1–3 + Greater elemental scaffolds; provisional Stamina 15 × Rank until Veil §C3 |
 | **Summons — Technomancer sprites (Foundry)** | `src/packs/summons/sprites/` | **B32 Phase 1 Foundry-verified** (2026-09-17) — 12 sprite npc Actors (4 archetypes × 3 hybrid tiers), Known Bugs #13 HP placeholders; Compile Sprite token stamping is backlog |
 | Skills master | `docs/masters/GHOSTWIRE_SKILLS_MASTER.md` | Ingested 2026-09-16 (Insight skill; five attrs) |
-| **Languages** | `docs/rulebook/19-languages.md` + `docs/masters/GHOSTWIRE_LANGUAGES.md` | **Names locked** 2026-09-16 (B25) — stub chapter; lore backlog |
+| **Languages** | `docs/rulebook/19-languages.md` + `docs/masters/GHOSTWIRE_LANGUAGES.md` | **Names locked** 2026-09-16 (B25). Play procedure in RAW `07` (B75). Lore gazetteer backlog #67 |
 | Species↔DS map | `docs/rulebook/SPECIES-DS-MAP.md` | Chassis locked |
 | DS alignment brief | `docs/rulebook/DS-ALIGNMENT.md` | Locked doctrine (+ gear echelon note) |
 | **Foundry build plan** | `docs/rulebook/FOUNDRY-BUILD-PLAN.md` | **Living done/todo log** |
