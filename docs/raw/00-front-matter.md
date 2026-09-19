@@ -108,8 +108,8 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | Term | Meaning | Where |
 |---|---|---|
 | **Director** | The person running the game (Draw Steel’s Director). | `01` |
-| **Runner / edgerunner** | A hero. **Crew** is the party. | `01` |
-| **Run** | A job: legwork, the operation itself, and the getaway. | `01` |
+| **Runner / Ghost Runner** | A hero. **Runner** is short for **Ghost Runner**. **Ghost Run(s)** are the jobs. **Crew** is the party. (Older *edgerunner* = synonym.) | `01`, Appendix A |
+| **Run / Ghost Run** | A job: legwork, the operation itself, and the getaway. | `01`, Appendix A |
 | **¥ (nuyen)** | Money. Replaces Draw Steel’s wealth abstraction. Buys objects and services, never character power. | `08` |
 | **Availability** | How hard gear is to get: Street, Professional, Restricted, Military, Prototype. | `08` |
 | **Echelon** | Level band 1–4. Also the grade of gear (Echelon + Availability). | `24` |

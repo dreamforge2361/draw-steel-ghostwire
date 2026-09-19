@@ -270,3 +270,15 @@ entries:
     path: 03-directors/27-running-ossian-reach.md
     kind: new
     print_ch: 27
+
+  - type: part
+    id: VI
+    title: Part VI — Appendix
+
+  - type: file
+    id: ch28
+    title: Glossary of Slang & Setting Jargon
+    path: 04-back/28-glossary-slang.md
+    kind: new
+    print_ch: 28
+

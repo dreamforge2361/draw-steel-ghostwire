@@ -41,3 +41,4 @@
 # --- Part V ---
 ../raw/25-opposition.md
 03-directors/27-running-ossian-reach.md
+28  Appendix A — Glossary of Slang (04-back/28-glossary-slang.md)

@@ -1,5 +1,7 @@
 # How to Play
 
+**Terminology:** Heroes are **Runners** (short for **Ghost Runner**); jobs are **Ghost Runs**. See Appendix A.
+
 **RAW status:** draft (Stage 3 fill 2026-09-18)  
 **Sources:** `docs/rulebook/00-STAGE1-skeleton.md` (Chapter 1 scope), `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED)  
 **Engine:** Draw Steel Heroes — use the official rules for shared engine procedures; Ghostwire remaps and table procedures below are original wording.

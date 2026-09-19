@@ -1,0 +1,136 @@
+# Glossary of Slang & Setting Jargon
+
+**RAW status:** draft (B77, 2026-09-19)  
+**Print:** Appendix A — back-of-book  
+**Audience:** players and Directors who need street talk without hunting the lore chapters.
+
+This appendix is **setting slang and jargon**, not the rules glossary. Rules terms (Power Roll, echelon, Body Integrity, Trace Alert, and so on) stay in print Ch 0 (`docs/raw/00-front-matter.md`). If a word is both slang and a rules keyword, the rules chapter wins for procedure; this page wins for flavor.
+
+---
+
+## Coin: Runner
+
+**Runner** is the short form of **Ghost Runner**.
+
+| Form | Means |
+|---|---|
+| **Ghost Runner** | A hero — someone who takes Ghost Runs for pay, principle, or survival. |
+| **Runner** | Everyday short form of Ghost Runner. Prefer this at the table. |
+| **Ghost Run** / **Ghost Runs** | The jobs themselves: legwork, the operation, the getaway. |
+| **Crew** | The party of Runners. |
+
+Older drafts sometimes said *edgerunner*. That word still appears in harvested lore; treat it as a synonym. New Ghostwire prose should prefer **Runner** / **Ghost Runner**.
+
+---
+
+## Street & money
+
+| Term | Meaning |
+|---|---|
+| **¥ / nuyen** | Cash. Buys gear and services — never character power. |
+| **Cred / credstick** | How most people carry or beam ¥. |
+| **Street** | The economy and Availability band outside corp procurement. |
+| **Wage-slave / wages** | Conglomerate employees who never touch a Ghost Run. |
+| **Shadow Economy** | Off-books markets, fences, and Fixers that feed Runners. |
+| **Fixer** | Broker who sells jobs, contacts, and quiet introductions. |
+| **Johnson / Mr. Johnson** | The client face who hires the crew (Director NPC). |
+
+---
+
+## Meat, chrome, and the body
+
+| Term | Meaning |
+|---|---|
+| **Meat / meatspace** | Physical reality — the opposite of the Wired. |
+| **Chrome** | Cyberware in living flesh. Costs ¥ and Body Integrity. |
+| **Soft / bioware** | Flesh-friendly chrome grade; still counts toward Integrity. |
+| **Salvage** | Cheap, ugly chrome. |
+| **Jack / datajack** | Port that lets you Overlay or Jack In. |
+| **Jacked In** | Full immersion in the Wired. |
+| **Overlay** | Partial immersion — AR on top of meatspace. |
+| **Decked / decking** | Working the Wired through a cyberdeck (Hacker talk). |
+| **Ware** | Informal for chrome or bioware of any grade. |
+
+---
+
+## The Wired
+
+| Term | Meaning |
+|---|---|
+| **The Wired** | The network layer. Chapter title in rules: **The Wire**. |
+| **Avatar** | Your presence inside the Wired (not the Persona characteristic). |
+| **Node** | Anything addressable online. |
+| **ICE** | Intrusion countermeasures — the node fighting back. |
+| **Biofeedback** | When Wired pain hits the body. |
+| **Trace / Trace Alert** | The node’s detection track climbing toward trouble. |
+| **Sprite** | Technomancer code-spirit. |
+| **Host / Flats host** | A big Wired site; Wired Flats is the Reach’s famous one. |
+
+---
+
+## The Veil & the street occult
+
+| Term | Meaning |
+|---|---|
+| **The Veil** | The boundary magic reaches across. |
+| **Signal** | Gold / sacred light motif in Ghostwire art and some faith talk — not a rules resource. |
+| **Pact** | Street Priest Light or Dark alignment. |
+| **Radiant Concord** | Setting faith / political current (see lore). |
+| **Corruption** | Setting danger around misuse of power and the Veil (see lore) — not a second Stamina track. |
+
+---
+
+## The Reach & the hive
+
+| Term | Meaning |
+|---|---|
+| **Ossian Reach / the Reach** | The campaign region. |
+| **The Flats** | Low strata sprawl — street level for many Ghost Runs. |
+| **Hive / spire** | Extreme vertical city living. |
+| **District** | Named Flats neighborhoods (Switchboard, Neon Shambles, Stacks, …). |
+| **Conglomerate / corp** | Mega-employer; Ghostwire corps are original names. |
+| **Kestrel** | Setting power player (see lore) — not a class. |
+
+---
+
+## Job talk
+
+| Term | Meaning |
+|---|---|
+| **Legwork** | Prep before the hit: recon, bribes, decking the perimeter. |
+| **The op / the run** | The operation itself. |
+| **Extract / exfil** | Getting people or data out. |
+| **Burn** | Heat, blown cover, or spending lifestyle/upkeep you cannot afford. |
+| **Silent** | Low Trace, low Malice, no sirens — the preferred grade of success. |
+
+---
+
+## People labels (slang, not Peoples)
+
+| Term | Meaning |
+|---|---|
+| **Samurai / street samurai** | Muscle-heavy Runner talk — not a class name. |
+| **Decker** | Informal for someone who lives on a cyberdeck (often a Hacker). |
+| **Rigger** | Someone who Jump-Ins and runs machines. |
+| **Caster / mage** | Informal for Veil-touched Runners (Elementalist, Street Priest, Technomancer). |
+| **Changer** | Someone who wears animal lineage forms — also a People. |
+
+---
+
+## Director-facing (table jargon)
+
+| Term | Meaning |
+|---|---|
+| **Director** | The person running the game. |
+| **Malice** | Director resource (Draw Steel); Trace Alert can feed it. |
+| **In Foundry** | Sidebar notes for the Ghostwire Foundry module — click-help, not a second rule. |
+
+---
+
+## See also
+
+- Rules glossary and abbreviations: print Ch 0 / `docs/raw/00-front-matter.md`
+- How to Play for session shape and safety: `01-how-to-play.md`
+- Art credit: all Ghostwire artwork is AI-generated (Ghostwire AI) — print credits
+
+> **In Foundry:** This appendix is manuscript-only for now. Journal regen (deferred) can mirror it later as a Handbook page.

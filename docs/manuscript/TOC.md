@@ -91,6 +91,13 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 
 ---
 
+## Part VI — Appendix
+
+| Ch | Print title | Source |
+|---|---|---|
+| 28 | Glossary of Slang & Setting Jargon | **NEW** `04-back/28-glossary-slang.md` — B77; Runner = Ghost Runner coin; street/Wired/Veil slang |
+
+
 ## Notes
 
 - Print numbering may differ from `docs/raw/` filenames (Advancement = print Ch 5 / file `24-advancement.md`). Journals keep raw filenames.
@@ -102,6 +109,6 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Chrome (`09-chrome-body-integrity.md`) **implant ¥ + Availability catalog** 2026-09-18 (B71); journals **not** regenerated.
 - Advancement (`24-advancement.md`) + Backgrounds (`06-backgrounds-professions.md`) **Stage 3 fill** 2026-09-19 (B73); journals **not** regenerated.
 - Running Ossian Reach (`03-directors/27-running-ossian-reach.md`) **Stage 3 pointer fill** 2026-09-19 (B73); no lore reprint; journals **not** regenerated.
-- Print front (`00-front/title-page.md`, `credits.md`, `how-to-use-this-book.md`) **draft** 2026-09-19 (B74); cover artist credits **TBD**; journals **not** regenerated.
+- Print front (`00-front/title-page.md`, `credits.md`, `how-to-use-this-book.md`) **draft** 2026-09-19 (B74); art credit = Ghostwire AI (B76 follow-on / 0.3.6); journals **not** regenerated.
 - Mods (`10-mods.md`) + Languages (`07-languages.md`) **Stage 3 procedure fill** 2026-09-19 (B75); armor/gadget families and language gazetteer **not** invented; journals **not** regenerated.
 - Lifestyle Contacts stub **pointer polish** 2026-09-19 (B75); full Followers chapter still v1 non-goal.
