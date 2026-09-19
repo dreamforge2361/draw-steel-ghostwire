@@ -741,3 +741,198 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   .ghostwire-run-generator .rg-dials { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ghostwire-run-generator .rg-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* VOIDMARK AI chat (B82) */
+.ghostwire-voidmark-chat,
+.ghostwire-voidmark-settings {
+  --vm-bg: var(--ghostwire-bg, #0b0f14);
+  --vm-surface: var(--ghostwire-surface, #121821);
+  --vm-border: var(--ghostwire-border, #2a3a4d);
+  --vm-text: var(--ghostwire-text, #e8eef5);
+  --vm-muted: var(--ghostwire-text-muted, #9aabbd);
+  --vm-cyan: var(--ghostwire-accent, #6ee7ff);
+  --vm-violet: var(--ghostwire-accent-2, #a78bfa);
+  --vm-hot: var(--ghostwire-accent-hot, #ff4d9a);
+  --vm-danger: var(--ghostwire-danger, #f87171);
+  border: 1px solid color-mix(in srgb, var(--vm-violet) 45%, var(--vm-border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--vm-violet) 28%, transparent), 0 0 28px color-mix(in srgb, var(--vm-hot) 16%, transparent);
+}
+.ghostwire-voidmark-chat .window-header,
+.ghostwire-voidmark-settings .window-header {
+  color: var(--vm-violet);
+  border-bottom: 1px solid color-mix(in srgb, var(--vm-violet) 45%, transparent);
+}
+.ghostwire-voidmark-chat .window-content,
+.ghostwire-voidmark-settings .window-content {
+  background:
+    radial-gradient(ellipse at top, #1a1028 0%, var(--vm-bg) 70%);
+  color: var(--vm-text);
+  padding: 0;
+}
+.ghostwire-voidmark-chat .vm-deck {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+.ghostwire-voidmark-chat .vm-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--vm-border);
+  background: color-mix(in srgb, var(--vm-surface) 88%, transparent);
+}
+.ghostwire-voidmark-chat .vm-avatar {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--vm-violet) 55%, var(--vm-border));
+  box-shadow: 0 0 16px color-mix(in srgb, var(--vm-violet) 35%, transparent);
+  flex: 0 0 auto;
+}
+.ghostwire-voidmark-chat .vm-identity { flex: 1; min-width: 0; }
+.ghostwire-voidmark-chat .vm-callsign {
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vm-violet);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--vm-violet) 45%, transparent);
+}
+.ghostwire-voidmark-chat .vm-kicker { color: var(--vm-muted); font-size: 0.78rem; }
+.ghostwire-voidmark-chat .vm-modes { display: flex; gap: 0.3rem; }
+.ghostwire-voidmark-chat .vm-mode {
+  background: transparent;
+  color: var(--vm-muted);
+  border: 1px solid var(--vm-border);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.45rem;
+}
+.ghostwire-voidmark-chat .vm-mode.active {
+  color: var(--vm-cyan);
+  border-color: color-mix(in srgb, var(--vm-cyan) 55%, var(--vm-border));
+  box-shadow: 0 0 8px color-mix(in srgb, var(--vm-cyan) 30%, transparent);
+}
+.ghostwire-voidmark-chat .vm-banner {
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--vm-hot);
+  border-bottom: 1px solid var(--vm-border);
+}
+.ghostwire-voidmark-chat .vm-banner-dim { color: var(--vm-muted); }
+.ghostwire-voidmark-chat .vm-transcript {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.ghostwire-voidmark-chat .vm-empty {
+  color: var(--vm-muted);
+  font-style: italic;
+  text-align: center;
+  margin: 2.5rem 1rem 0;
+}
+.ghostwire-voidmark-chat .vm-msg { display: flex; flex-direction: column; gap: 0.25rem; max-width: 92%; }
+.ghostwire-voidmark-chat .vm-msg-user { align-self: flex-end; align-items: flex-end; }
+.ghostwire-voidmark-chat .vm-msg-assistant { align-self: flex-start; }
+.ghostwire-voidmark-chat .vm-msg-assistant { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+.ghostwire-voidmark-chat .vm-msg-avatar {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--vm-violet) 40%, var(--vm-border));
+  flex: 0 0 auto;
+}
+.ghostwire-voidmark-chat .vm-bubble {
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  line-height: 1.45;
+  background: color-mix(in srgb, var(--vm-surface) 92%, transparent);
+  border: 1px solid var(--vm-border);
+}
+.ghostwire-voidmark-chat .vm-msg-user .vm-bubble {
+  background: color-mix(in srgb, var(--vm-cyan) 12%, var(--vm-surface));
+  border-color: color-mix(in srgb, var(--vm-cyan) 35%, var(--vm-border));
+}
+.ghostwire-voidmark-chat .vm-msg-assistant .vm-bubble {
+  flex: 1;
+  background: color-mix(in srgb, var(--vm-violet) 10%, var(--vm-surface));
+  border-color: color-mix(in srgb, var(--vm-violet) 35%, var(--vm-border));
+}
+.ghostwire-voidmark-chat .vm-pending .vm-bubble { color: var(--vm-muted); font-style: italic; }
+.ghostwire-voidmark-chat .vm-cites {
+  list-style: none;
+  margin: 0 0 0 2.1rem;
+  padding: 0;
+  width: 100%;
+  color: var(--vm-cyan);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ghostwire-voidmark-chat .vm-cites li { padding: 0.05rem 0; }
+.ghostwire-voidmark-chat .vm-error {
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  color: var(--vm-danger);
+  font-size: 0.8rem;
+}
+.ghostwire-voidmark-chat .vm-composer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem 0.75rem;
+  border-top: 1px solid var(--vm-border);
+  background: color-mix(in srgb, var(--vm-surface) 80%, transparent);
+}
+.ghostwire-voidmark-chat .vm-composer textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 4.2rem;
+  background: #0a1018;
+  color: var(--vm-text);
+  border: 1px solid var(--vm-border);
+  border-radius: 6px;
+  padding: 0.45rem 0.55rem;
+}
+.ghostwire-voidmark-chat .vm-actions { display: flex; justify-content: flex-end; gap: 0.4rem; }
+.ghostwire-voidmark-chat .vm-btn,
+.ghostwire-voidmark-settings button[type="submit"] {
+  background: transparent;
+  color: var(--vm-cyan);
+  border: 1px solid color-mix(in srgb, var(--vm-cyan) 55%, var(--vm-border));
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.ghostwire-voidmark-chat .vm-btn-hot { color: var(--vm-hot); border-color: color-mix(in srgb, var(--vm-hot) 60%, var(--vm-border)); }
+.ghostwire-voidmark-chat .vm-btn:disabled { opacity: 0.45; }
+.ghostwire-voidmark-chat .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.ghostwire-voidmark-settings .vm-settings-body { padding: 0.75rem 0.9rem 1rem; }
+.ghostwire-voidmark-settings textarea {
+  width: 100%;
+  min-height: 16rem;
+  font-family: var(--ghostwire-font-ui, inherit);
+  line-height: 1.4;
+}

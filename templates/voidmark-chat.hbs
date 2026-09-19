@@ -1,0 +1,56 @@
+<div class="vm-deck">
+  <header class="vm-header">
+    <img class="vm-avatar" src="{{avatar}}" alt="{{callsign}}" data-tooltip="GHOSTWIRE.Voidmark.AvatarHint">
+    <div class="vm-identity">
+      <div class="vm-callsign">{{callsign}}</div>
+      <div class="vm-kicker">{{kicker}}</div>
+    </div>
+    <div class="vm-modes" role="group" aria-label="{{localize "GHOSTWIRE.Voidmark.ModeLabel"}}">
+      <button type="button" class="vm-mode{{#if runnerMode}} active{{/if}}" data-action="setMode" data-mode="runner" aria-pressed="{{runnerMode}}">{{localize "GHOSTWIRE.Voidmark.Modes.runner"}}</button>
+      <button type="button" class="vm-mode{{#if directorMode}} active{{/if}}" data-action="setMode" data-mode="director" aria-pressed="{{directorMode}}">{{localize "GHOSTWIRE.Voidmark.Modes.director"}}</button>
+    </div>
+  </header>
+
+  {{#unless configured}}
+  <p class="vm-banner">{{localize "GHOSTWIRE.Voidmark.Unconfigured"}}</p>
+  {{/unless}}
+  {{#if playerHint}}
+  <p class="vm-banner vm-banner-dim">{{playerHint}}</p>
+  {{/if}}
+
+  <div class="vm-transcript" aria-live="polite">
+    {{#if empty}}
+    <p class="vm-empty">{{localize "GHOSTWIRE.Voidmark.Empty"}}</p>
+    {{/if}}
+    {{#each messages}}
+    <article class="vm-msg vm-msg-{{role}}">
+      {{#if isMark}}<img class="vm-msg-avatar" src="{{../avatar}}" alt="">{{/if}}
+      <div class="vm-bubble">{{{html}}}</div>
+      {{#if citations.length}}
+      <ul class="vm-cites">
+        {{#each citations}}<li>{{this}}</li>{{/each}}
+      </ul>
+      {{/if}}
+    </article>
+    {{/each}}
+    {{#if pending}}
+    <article class="vm-msg vm-msg-assistant vm-pending">
+      <img class="vm-msg-avatar" src="{{avatar}}" alt="">
+      <div class="vm-bubble">{{localize "GHOSTWIRE.Voidmark.Pending"}}</div>
+    </article>
+    {{/if}}
+  </div>
+
+  {{#if error}}
+  <p class="vm-error" role="alert">{{error}}</p>
+  {{/if}}
+
+  <form class="vm-composer">
+    <label class="sr-only" for="vm-prompt">{{localize "GHOSTWIRE.Voidmark.Prompt"}}</label>
+    <textarea id="vm-prompt" name="prompt" rows="3" placeholder="{{localize "GHOSTWIRE.Voidmark.PromptPlaceholder"}}">{{draft}}</textarea>
+    <div class="vm-actions">
+      <button type="button" class="vm-btn" data-action="clear" {{#unless canClear}}disabled{{/unless}}>{{localize "GHOSTWIRE.Voidmark.Clear"}}</button>
+      <button type="button" class="vm-btn vm-btn-hot" data-action="send" {{#if pending}}disabled{{/if}}><i class="fa-solid fa-bolt"></i> {{localize "GHOSTWIRE.Voidmark.Send"}}</button>
+    </div>
+  </form>
+</div>

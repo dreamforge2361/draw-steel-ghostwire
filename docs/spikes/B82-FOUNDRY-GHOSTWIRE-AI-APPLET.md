@@ -1,7 +1,7 @@
-# B82 — Foundry Ghostwire AI applet (BACKLOG)
+# B82 — Foundry Ghostwire AI applet (superseded design note)
 
 **Date:** 2026-09-19  
-**Status:** BACKLOG — design later  
+**Status:** SUPERSEDED by the v1 implementation spike `docs/spikes/B82-VOIDMARK-AI-APPLET.md` (module 0.3.27). Keep this file for the original locks (persona, RAG, no live agent bridge).  
 **Ask:** Module-configurable chat applet so GM/players can do rule lookups, guidance, scenario help, and optional NPC roleplay from inside Foundry.
 
 ## Feasibility lock (working)
