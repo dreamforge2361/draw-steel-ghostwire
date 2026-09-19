@@ -7,6 +7,31 @@
   "categories": [],
   "pages": [
     {
+      "_id": "x7yq4FESIbIpRNnF",
+      "name": "District Map",
+      "type": "text",
+      "sort": 50000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 district battle map -->\n\n![District battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/09_wireside_L.webp)\n\n*Full-res labeled district map (B72). Separate from handbook book-plate maps.*",
+        "content": "<p><!-- B72 district battle map --></p>\n<p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/09_wireside_L.webp\" alt=\"District battle map\" /></p>\n<p><em>Full-res labeled district map (B72). Separate from handbook book-plate maps.</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!of69DhUTvuSTO2wV.x7yq4FESIbIpRNnF"
+    },
+    {
       "_id": "QrvGqwEPW0qvTKaD",
       "_key": "!journal.pages!of69DhUTvuSTO2wV.QrvGqwEPW0qvTKaD",
       "name": "Overview",

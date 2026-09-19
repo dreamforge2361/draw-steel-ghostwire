@@ -397,6 +397,406 @@
         "default": -1
       },
       "flags": {}
+    },
+    {
+      "_id": "0rmKQ1c1VGaYWyjZ",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.0rmKQ1c1VGaYWyjZ",
+      "name": "Battle maps (B72)",
+      "type": "text",
+      "sort": 1500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n# District battle maps (full-res)\n\nPlay surfaces under `assets/maps/districts/` (B72 / module 0.3.0). **Native resolution** — not the handbook book-plate set in `assets/reach-handbook/`.\n\nPrefer **labeled/** for journal display; **clean/** for unlabeled Scenes.\n\n| District | Labeled path |\n|---|---|\n| Flats overview | `labeled/00_flats_overview_L.webp` |\n| Switchboard | `labeled/01_switchboard_L.webp` |\n| Neon Shambles | `labeled/02_neon_shambles_L.webp` |\n| The Stacks | `labeled/03_the_stacks_L.webp` |\n| Slackwater | `labeled/04_slackwater_L.webp` |\n| The Interchange | `labeled/05_the_interchange_L.webp` |\n| Cinder Market | `labeled/06_cinder_market_L.webp` |\n| The Spillway | `labeled/07_the_spillway_L.webp` |\n| Glasshook | `labeled/08_glasshook_L.webp` |\n| Wireside | `labeled/09_wireside_L.webp` |\n| Gallows End | `labeled/10_gallows_end_L.webp` |\n| Cinderhold | `labeled/11_cinderhold_L.webp` |\n| Cover | `labeled/_cover.webp` |\n| Flats master JPG set | `THE_FLATS_Master_District_Map_2000x1250.webp` |\n| Switchboard master JPG set | `SWITCHBOARD_District_Map_2000x1250.webp` |\n",
+        "content": "<p><!-- B72 --></p><h1>District battle maps (full-res)</h1><p>Play surfaces under <code>assets/maps/districts/</code> (B72). Native resolution — separate from handbook book plates.</p><p>Prefer <strong>labeled/</strong> for journals; <strong>clean/</strong> for unlabeled Scenes. See spike <code>docs/spikes/B72-DISTRICT-MAPS-IMPORT.md</code>.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "iFoVRqbMT1H04Al2",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.iFoVRqbMT1H04Al2",
+      "name": "Flats master (battle)",
+      "type": "text",
+      "sort": 1600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Flats master (battle)](modules/draw-steel-ghostwire/assets/maps/districts/THE_FLATS_Master_District_Map_2000x1250.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/THE_FLATS_Master_District_Map_2000x1250.webp\" alt=\"Flats master (battle)\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "f3iyCrPJKNKwlZq1",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.f3iyCrPJKNKwlZq1",
+      "name": "Switchboard master (battle)",
+      "type": "text",
+      "sort": 1700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Switchboard master (battle)](modules/draw-steel-ghostwire/assets/maps/districts/SWITCHBOARD_District_Map_2000x1250.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/SWITCHBOARD_District_Map_2000x1250.webp\" alt=\"Switchboard master (battle)\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "t41ZdrW4F2rzbrN8",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.t41ZdrW4F2rzbrN8",
+      "name": "District set cover",
+      "type": "text",
+      "sort": 1800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![District set cover](modules/draw-steel-ghostwire/assets/maps/districts/labeled/_cover.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/_cover.webp\" alt=\"District set cover\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dHuDf1ewLnox2V0G",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.dHuDf1ewLnox2V0G",
+      "name": "Flats overview (labeled)",
+      "type": "text",
+      "sort": 1900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Flats overview (labeled)](modules/draw-steel-ghostwire/assets/maps/districts/labeled/00_flats_overview_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/00_flats_overview_L.webp\" alt=\"Flats overview (labeled)\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "eZh6w1xBxSyGtHp4",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.eZh6w1xBxSyGtHp4",
+      "name": "Switchboard battle map",
+      "type": "text",
+      "sort": 2000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Switchboard battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/01_switchboard_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/01_switchboard_L.webp\" alt=\"Switchboard battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "Kvk8GUgoNZK03OZ6",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.Kvk8GUgoNZK03OZ6",
+      "name": "Neon Shambles battle map",
+      "type": "text",
+      "sort": 2100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Neon Shambles battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/02_neon_shambles_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/02_neon_shambles_L.webp\" alt=\"Neon Shambles battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "KjMwOsIyGGPriUe2",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.KjMwOsIyGGPriUe2",
+      "name": "The Stacks battle map",
+      "type": "text",
+      "sort": 2200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![The Stacks battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/03_the_stacks_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/03_the_stacks_L.webp\" alt=\"The Stacks battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "lBI8e9Biz5t4Z5UV",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.lBI8e9Biz5t4Z5UV",
+      "name": "Slackwater battle map",
+      "type": "text",
+      "sort": 2300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Slackwater battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/04_slackwater_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/04_slackwater_L.webp\" alt=\"Slackwater battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "5qNtwbEUhMWNKWFe",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.5qNtwbEUhMWNKWFe",
+      "name": "The Interchange battle map",
+      "type": "text",
+      "sort": 2400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![The Interchange battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/05_the_interchange_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/05_the_interchange_L.webp\" alt=\"The Interchange battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "kG156agUmUeGtvwY",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.kG156agUmUeGtvwY",
+      "name": "Cinder Market battle map",
+      "type": "text",
+      "sort": 2500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Cinder Market battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/06_cinder_market_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/06_cinder_market_L.webp\" alt=\"Cinder Market battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "nrLQg6JO43KvNUXZ",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.nrLQg6JO43KvNUXZ",
+      "name": "The Spillway battle map",
+      "type": "text",
+      "sort": 2600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![The Spillway battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/07_the_spillway_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/07_the_spillway_L.webp\" alt=\"The Spillway battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "XCFCL0YNZh2YaSki",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.XCFCL0YNZh2YaSki",
+      "name": "Glasshook battle map",
+      "type": "text",
+      "sort": 2700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Glasshook battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/08_glasshook_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/08_glasshook_L.webp\" alt=\"Glasshook battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "HyWBVnsrKyx0KPCX",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.HyWBVnsrKyx0KPCX",
+      "name": "Wireside battle map",
+      "type": "text",
+      "sort": 2800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Wireside battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/09_wireside_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/09_wireside_L.webp\" alt=\"Wireside battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "5XxhcUSMmGLpjVh8",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.5XxhcUSMmGLpjVh8",
+      "name": "Gallows End battle map",
+      "type": "text",
+      "sort": 2900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Gallows End battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/10_gallows_end_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/10_gallows_end_L.webp\" alt=\"Gallows End battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "YAKKctx1yM0jkAPl",
+      "_key": "!journal.pages!GczNVngBeo1YyFZz.YAKKctx1yM0jkAPl",
+      "name": "Cinderhold battle map",
+      "type": "text",
+      "sort": 3000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 -->\n\n![Cinderhold battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/11_cinderhold_L.webp)\n\n*Full-res battle map*",
+        "content": "<p><!-- B72 --></p><p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/11_cinderhold_L.webp\" alt=\"Cinderhold battle map\" /></p><p><em>Full-res battle map</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
     }
   ],
   "ownership": {

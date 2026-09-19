@@ -7,6 +7,31 @@
   "categories": [],
   "pages": [
     {
+      "_id": "uV2c5uHUFY6WKRd2",
+      "name": "District Map",
+      "type": "text",
+      "sort": 50000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {},
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "<!-- B72 district battle map -->\n\n![District battle map](modules/draw-steel-ghostwire/assets/maps/districts/labeled/08_glasshook_L.webp)\n\n*Full-res labeled district map (B72). Separate from handbook book-plate maps.*",
+        "content": "<p><!-- B72 district battle map --></p>\n<p><img src=\"modules/draw-steel-ghostwire/assets/maps/districts/labeled/08_glasshook_L.webp\" alt=\"District battle map\" /></p>\n<p><em>Full-res labeled district map (B72). Separate from handbook book-plate maps.</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!0OaGWwYehtgaNtrl.uV2c5uHUFY6WKRd2"
+    },
+    {
       "_id": "8BOZstcSDtDBHhxm",
       "_key": "!journal.pages!0OaGWwYehtgaNtrl.8BOZstcSDtDBHhxm",
       "name": "Overview",
