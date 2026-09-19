@@ -390,6 +390,8 @@ Chrome **packages** (Roadrunner, Argus, Bulwark, …) are not in the compendium 
 
 Pack sources live in `src/packs/<pack>/` (subfolders allowed). Names and descriptions are `GHOSTWIRE.*` lang keys, filled in from `lang/en.json` at build time. With Foundry closed, run `node tools/build-packs.mjs` to rebuild `packs/`. It uses the `classic-level` package bundled with Foundry; set `FOUNDRY_APP` if Foundry isn't installed in the default location.
 
+Vehicle and drone token art (B101, art forthcoming): drop slang-slug WebPs into `assets/tokens/drones/` and `assets/tokens/vehicles/`, then `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
+
 ## Rulebook
 
 - [Stage 1 — Core Rulebook skeleton](docs/rulebook/00-STAGE1-skeleton.md) (awaiting review)

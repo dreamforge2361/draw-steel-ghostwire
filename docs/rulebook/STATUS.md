@@ -106,6 +106,7 @@
 ## Art backlog
 
 - **B79** Artistic cosmos plate (Light Realms / Hells / Prime / Wire / related) — not started.
+- **B101** Vehicle + drone chassis token art — **plumbing landed** (`docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`, `tools/apply-machine-token-art.mjs`, empty `assets/tokens/{drones,vehicles}/`). WebPs + one module patch in the upload follow-up. No bump while folders are empty.
 
 ## Systems / lore backlog
 
