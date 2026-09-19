@@ -1,10 +1,14 @@
 # Ghostwire print-art tree
 
-Local artwork for the **print PDF pipeline** (B88). Most binaries stay on the machine that builds the PDF — they are gitignored. This folder ships **stubs + a placement map**, plus three **Michael-approved** tracked plates (0.3.19):
+Local artwork for the **print PDF pipeline** (B88). Most binaries stay on the machine that builds the PDF — they are gitignored. This folder ships **stubs + a placement map**, plus twelve **Michael-approved** tracked plates (0.3.21):
 
 - `cover/cover.webp` (optional `cover/cover.png`)
-- `filler/voidmark.webp`
-- `filler/hands-off.webp`
+- `filler/voidmark.webp` · `hands-off.webp` · `cosmology.webp` · `planes.webp` · `megacorps.webp` · `wired.webp`
+- `filler/timeline.webp` (v3) · `city-nocturne.webp` · `peoples-opener.webp` · `veil-opener.webp` · `machines-opener.webp`
+
+Still missing from the approved drop: `filler/wire-opener.webp`. Peoples / class rasters stay local.
+
+Reusable stash: `C:\Users\mfran\Dropbox\Public\RPG\Ghostwire\art\ghostwire-art-plates.zip`
 
 **Credit:** all Ghostwire artwork is **Ghostwire AI (AI-generated)** unless a caption names another license (B76). **Do not** invent plates to fill a gap. **Do not** name-check external cyberpunk / 40K / WoD IP on captions (B78/B83).
 

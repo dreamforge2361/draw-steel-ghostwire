@@ -1,40 +1,53 @@
 # Spike B88 — Ghostwire print PDF pipeline (first art-placement build)
 
-**Status:** Built 2026-09-19 · **three Michael-approved plates in-tree 2026-09-19**  
-**Bump:** module **0.3.19** (main was 0.3.18; first pipeline ship was 0.3.15)  
+**Status:** Built 2026-09-19 · **twelve Michael-approved plates in-tree 2026-09-19**  
+**Bump:** module **0.3.21** (main is 0.3.20; first pipeline ship was 0.3.15)  
 **Journals:** **not** regenerated (Michael: journals last before final PDF)
 
-## Approved plates (0.3.19) — cover / VOIDMARK / Hands Off
+## Approved plates (0.3.21) — full remaining filler/cover set
 
-Michael-approved art (do **not** regenerate). Slots already pointed here; files are now in-tree:
+Michael-approved art (do **not** regenerate). `ART-PLACEMENT.yml` already pointed here; files are in-tree:
 
-| Slot | File (first hit in `ART-PLACEMENT.yml`) |
+| Slot | File |
 |---|---|
 | `cover` | `docs/manuscript/print-art/cover/cover.webp` (optional `cover.png`) |
+| `l1-cosmology` | `docs/manuscript/print-art/filler/cosmology.webp` |
+| `l1-planes` | `docs/manuscript/print-art/filler/planes.webp` |
+| `l1-megacorps` | `docs/manuscript/print-art/filler/megacorps.webp` |
+| `l1-wired` | `docs/manuscript/print-art/filler/wired.webp` |
+| `l1-timeline` | `docs/manuscript/print-art/filler/timeline.webp` (**v3** — left titles + white summary blurbs) |
+| `l1-themes` | `docs/manuscript/print-art/filler/city-nocturne.webp` |
+| `l2-peoples-opener` | `docs/manuscript/print-art/filler/peoples-opener.webp` |
 | `l4-voidmark` | `docs/manuscript/print-art/filler/voidmark.webp` |
 | `l5-hands-off` | `docs/manuscript/print-art/filler/hands-off.webp` |
+| `veil-opener` | `docs/manuscript/print-art/filler/veil-opener.webp` |
+| `machines-opener` | `docs/manuscript/print-art/filler/machines-opener.webp` |
 
-These three gaps are **filled pending rebuild**. Remaining Dropbox SoR plates stay ART GAP. Peoples binaries were never tracked; these three are narrow gitignore exceptions so inject can resolve them without a local seed.
+These twelve gaps are **filled pending rebuild**. Still ART GAP: `wire-opener`, Peoples plates (`species/`), class plates (`classes/`). Peoples binaries were never tracked; these twelve are gitignore exceptions.
+
+Reusable stash (optional): `C:\Users\mfran\Dropbox\Public\RPG\Ghostwire\art\ghostwire-art-plates.zip`
 
 ### Windows rebuild (after pull)
 
 ```powershell
-# If the three files are already in the clone (this PR), skip copy.
-# If a checkout is missing them, drop the approved files at the exact paths:
-Copy-Item -Path ".\cover.webp"      -Destination "docs\manuscript\print-art\cover\cover.webp"
-Copy-Item -Path ".\cover.png"       -Destination "docs\manuscript\print-art\cover\cover.png"   # optional
-Copy-Item -Path ".\voidmark.webp"   -Destination "docs\manuscript\print-art\filler\voidmark.webp"
-Copy-Item -Path ".\hands-off.webp"  -Destination "docs\manuscript\print-art\filler\hands-off.webp"
+# If the twelve files are already in the clone (this PR), skip copy.
+# Missing checkout — drop approved files at the exact paths:
+$dst = "docs\manuscript\print-art"
+Copy-Item .\cover.webp            "$dst\cover\cover.webp"
+Copy-Item .\cover.png             "$dst\cover\cover.png"   # optional
+foreach ($n in @(
+  "voidmark","hands-off","cosmology","planes","megacorps","wired",
+  "timeline","city-nocturne","veil-opener","machines-opener","peoples-opener"
+)) { Copy-Item ".\$n.webp" "$dst\filler\$n.webp" }
 
-# Then assemble → inject → PDF (no Pandoc; Chrome/Edge)
 node tools/assemble-manuscript.mjs
 node tools/inject-print-art.mjs
 node tools/build-pdf.mjs
-# Open docs\manuscript\build\Ghostwire-Rulebook-DRAFT.pdf
-#      docs\manuscript\build\ART-GAP-REPORT.md
+# docs\manuscript\build\Ghostwire-Rulebook-DRAFT.pdf
+# docs\manuscript\build\ART-GAP-REPORT.md
 ```
 
-`ART-GAP-REPORT.md` is gitignored (regenerated every inject). After this drop, the report must list `cover`, `l4-voidmark`, and `l5-hands-off` under **Placed**.
+Live report: `docs/manuscript/build/ART-GAP-REPORT.md` (regenerated every inject; committed). The twelve slots above must appear under **Placed**.
 
 ## Goal
 
@@ -42,7 +55,7 @@ A **repeatable PDF pipeline** from `docs/manuscript/` assemble output, with **ar
 
 ## How to run (Windows)
 
-Most art binaries are **not** in git (Peoples / class / L1 fillers stay local). Cover / VOIDMARK / Hands Off are tracked exceptions. Copy the rest from Dropbox, then build.
+Most art binaries are **not** in git (Peoples / class plates stay local). The twelve approved cover/filler plates are tracked exceptions. Copy remaining SoR from Dropbox, then build.
 
 ```powershell
 # 1) Copy Dropbox SoR folders into docs/manuscript/print-art/
@@ -71,7 +84,7 @@ node tools/build-pdf.mjs
 
 One-shot after copy: `powershell -File tools/build-pdf.ps1`
 
-Linux / this VM: same Node commands. District maps place from `assets/maps/districts/`. Cover / VOIDMARK / Hands Off now place from the tracked print-art files above.
+Linux / this VM: same Node commands. District maps place from `assets/maps/districts/`. The twelve approved cover/filler plates place from the tracked print-art files above.
 
 ## Architecture
 
@@ -123,22 +136,20 @@ Michael’s Windows folder names (copy-script map): `GHOSTWIRE_Class_Art`, `GHOS
 
 District maps **place** because they already ship in the module. Everything that lives only in Dropbox / Core PDF is a gap until Michael runs the copy script.
 
-**Placed (in-module maps + Michael-approved 0.3.19 plates):**
+**Placed (in-module maps + Michael-approved 0.3.21 plates):**
 
 - `cover` → `docs/manuscript/print-art/cover/cover.webp`
-- `l4-voidmark` → `docs/manuscript/print-art/filler/voidmark.webp`
-- `l5-hands-off` → `docs/manuscript/print-art/filler/hands-off.webp`
-- `l3-flats-overview` → `assets/maps/districts/labeled/00_flats_overview_L.webp`
-- `ch27-flats-overview` → same overview
-- `ch27-cinderhold` → `assets/maps/districts/labeled/11_cinderhold_L.webp`
+- `l1-cosmology` `l1-planes` `l1-megacorps` `l1-wired` `l1-timeline` `l1-themes` → `filler/{cosmology,planes,megacorps,wired,timeline,city-nocturne}.webp`
+- `l2-peoples-opener` → `filler/peoples-opener.webp`
+- `l4-voidmark` / `l5-hands-off` → `filler/voidmark.webp` / `filler/hands-off.webp`
+- `veil-opener` / `machines-opener` → matching `filler/` slugs
+- `l3-flats-overview` / `ch27-flats-overview` / `ch27-cinderhold` → in-module district maps
 
 **ART GAP (copy from SoR, then re-inject):**
 
-- L1: `l1-cosmology` `l1-planes` `l1-megacorps` `l1-wired` `l1-timeline` `l1-themes`
-- L2: `l2-peoples-opener`
-- Peoples: `people-pure-human` `people-corran` `people-elvani` `people-goliar` `people-changer` `people-revenant` `people-mutant` `people-cyborg`
+- Openers: `wire-opener` (not in the approved drop)
+- Peoples: `people-pure-human` `people-corran` `people-elvani` `people-goliar` `people-changer` `people-revenant` `people-mutant` `people-cyborg` (+ rules-chapter twins)
 - Classes: `class-operator` `class-scout` `class-commander` `class-medic` `class-wrench` `class-elementalist` `class-street-priest` `class-hacker` `class-technomancer`
-- Openers: `wire-opener` `veil-opener` `machines-opener`
 
 Live machine report: `docs/manuscript/build/ART-GAP-REPORT.md` (regenerated every inject).
 
@@ -149,8 +160,8 @@ Live machine report: `docs/manuscript/build/ART-GAP-REPORT.md` (regenerated ever
 | Pages | **221** |
 | Size | ~16 MB (gitignored) |
 | Engine | Chrome headless HTML→PDF |
-| Placed art | 3 in-module district maps + cover / VOIDMARK / Hands Off (0.3.19) |
-| Visible gaps | remaining SoR class / People / L1 filler plates |
+| Placed art | **15** — 3 in-module maps + 12 approved cover/filler plates (`wire-opener` does not steal `wired.webp`) |
+| Visible gaps | **26** remaining (`wire-opener` + Peoples + classes; 41 slots) |
 
 `--sample` writes an 8–16 page slice (title + L1 open + Ch 27 maps) to `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored). Chrome on this VM writes the PDF then hangs; `build-pdf.mjs` treats a valid `%%EOF` as success and times out the process.
 
@@ -160,7 +171,7 @@ Print CSS vendors Liberation Sans/Serif (SIL OFL) so Chrome embeds a real text f
 
 - Generated **full draft PDF** is gitignored (can be tens of MB once art is in).
 - Generated HTML + assembled Markdown + with-art Markdown are gitignored.
-- Local `print-art/**` rasters are gitignored except the three Michael-approved plates (`cover.webp` / optional `cover.png`, `voidmark.webp`, `hands-off.webp`). READMEs + `ART-PLACEMENT.yml` ship.
+- Local `print-art/**` rasters are gitignored except the twelve Michael-approved cover/filler plates. READMEs + `ART-PLACEMENT.yml` ship.
 - Output path to keep: `docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf` (local). Optional `--sample` writes `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored).
 
 ## Not this spike
@@ -177,6 +188,6 @@ Print CSS vendors Liberation Sans/Serif (SIL OFL) so Chrome embeds a real text f
 - [x] `copy-print-art` (Node + Windows ps1) + optional Core PDF extract
 - [x] `build-pdf.mjs` + ART-STYLE print CSS
 - [x] Gap report path + this spike
-- [x] `module.json` **0.3.15** (pipeline) · **0.3.19** (approved cover / VOIDMARK / Hands Off)
+- [x] `module.json` **0.3.15** (pipeline) · **0.3.21** (twelve approved cover/filler plates)
 - [x] Journals not regenerated
-- [x] Approved plates in `print-art/cover/` and `print-art/filler/` — rebuild to close those three gaps
+- [x] Approved plates in `print-art/cover/` and `print-art/filler/` — rebuild to close those twelve gaps

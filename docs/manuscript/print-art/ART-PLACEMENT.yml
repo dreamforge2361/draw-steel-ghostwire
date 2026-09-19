@@ -532,7 +532,7 @@ slots:
     search_dirs:
       - docs/manuscript/print-art/filler
       - docs/manuscript/print-art/from-core-pdf
-    match: wire
+    match: wire-opener
     caption: The Wire — Overlay and Jacked In
     css_class: plate-opener
 
