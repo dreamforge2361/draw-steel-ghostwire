@@ -106,3 +106,8 @@
 ## Art backlog
 
 - **B79** Artistic cosmos plate (Light Realms / Hells / Prime / Wire / related) — not started.
+
+## Systems / lore backlog
+
+- **B80** Corruption / Taint hero track (radiation-like; quest cleanse; +/-) — not started.
+- **B81** Prime overview (Main Realm, orbitals, near harvest worlds) + maps — not started.
