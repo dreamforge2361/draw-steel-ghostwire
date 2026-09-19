@@ -41,3 +41,19 @@ Before or with the Foundry applet, ship **print lore** so the table knows who th
 ### Non-goals yet
 Full novel; implementing the applet UI (B82); live bridge to Cursor agent.
 
+## Artwork (LOCKED intent — Michael 2026-09-19)
+
+Need **cool Ghostwire-AI art** of the persona for two Foundry surfaces:
+
+1. **Chat box presence** — avatar / header plate in the AI chat ApplicationV2 (square or wide banner; readable at ~128–256px and at retina).
+2. **Canvas token** — portrait suitable for an Actor token when the AI "takes presence" on a scene (circular token-friendly crop + optional full bust for the sheet).
+
+### Deliverables when picked up
+- Master plate(s) in art SoR + module path e.g. ssets/ai-persona/ (chat avatar, token ring crop, optional sheet portrait)
+- ART-STYLE.md nocturne / Signal / Wired lattice cues; credit Ghostwire AI
+- Wire into B82 UI defaults + a sample Actor/compendium entry (optional) for dropping on the canvas
+- Name lock first (or generate against a working callsign and rename files later)
+
+### Non-goals yet
+Full animated portrait; multiple outfit variants; generating before name/persona lock unless Michael asks for concepts.
+
