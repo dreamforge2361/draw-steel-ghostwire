@@ -61,6 +61,12 @@ entries:
     path: 01-lore/L4-voidmark.md
     kind: lore
 
+  - type: file
+    id: L5
+    title: The Hands Off Accords
+    path: 01-lore/L5-hands-off-accords.md
+    kind: lore
+
   - type: part
     id: I
     title: Part I — Core Rules

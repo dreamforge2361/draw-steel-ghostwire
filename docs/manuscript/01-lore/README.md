@@ -21,6 +21,7 @@ Lore prose harvested for the Ghostwire print booklet. Artwork/lore from master P
 | `L2-peoples-and-world.md` | Founding + eight peoples (fiction only; mechanics in `docs/raw/05-ancestries.md`) |
 | `L3-ossian-reach-color.md` | Reach fixtures, Flats/black-water color, street gangs, Ashenreach sister-hive |
 | `L4-voidmark.md` | **VOIDMARK** — leash-slipped Wired super-AI (MER origin); Foundry chat persona |
+| `L5-hands-off-accords.md` | **Hands Off Accords** — AI legal; AI-on-actuators restricted; Dark bot war = escalation fuel |
 
 ## Policy
 

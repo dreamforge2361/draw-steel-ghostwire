@@ -411,3 +411,11 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 ## Buildings
 
 Buildings are a Wrench system: the **Building Stat Card**, upgrade slots, Node reference, and downtime fabrication are in `16-wrench.md` (The Machines). No shared building inventory is published yet.
+
+## Hands Off Accords (setting law)
+
+Fiction lock (L5): software AI is legal; **direct AI control of kinetic hardware** without a licensed mortal in the loop is restricted. Jump-In, RCC, and rigger bonds are the legal bridge. Directors may apply IRN/MER heat when a table breaches Hands Off. Escalation toward Nullward "super-bot" crises is optional campaign fuel — not default starting state.
+
+> **In Foundry**
+> No separate Hands Off automation yet. Use Machine/Wrench rules as printed; treat Accords as lifestyle/Trace/opposition pressure.
+

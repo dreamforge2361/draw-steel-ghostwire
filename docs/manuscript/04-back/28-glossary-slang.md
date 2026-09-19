@@ -150,6 +150,7 @@ Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`.
 
 | Term | Meaning |
 |---|---|
+| **Hands Off** / **Actuator Ban** | Ten compact: AI software legal; AI sole control of kinetic hardware restricted. Starting cracked fence — not the bot apocalypse yet. Lore: L5. |
 | **VOIDMARK** / **the Mark** | Leash-slipped Wired super-AI (MER Blacklight origin). Sovereign node-state — not a Chair of the Ten. Cold-neutral; anti-Nullspace; never safe. Lore: L4. Foundry chat persona (B82/B89). |
 
 ## See also

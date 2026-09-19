@@ -114,3 +114,4 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Lifestyle Contacts stub **pointer polish** 2026-09-19 (B75); full Followers chapter still v1 non-goal.
 - Lifestyle (`26-lifestyle-downtime.md`) **lore fuse** 2026-09-19 (B87): hive strata ↔ bands + scrip/housing note; journals **not** regenerated.
 - Lore **VOIDMARK** (`01-lore/L4-voidmark.md`) **draft** 2026-09-19 (B90); leash-slipped MER-origin super-AI; journals **not** regenerated.
+- Lore **Hands Off Accords** (`01-lore/L5-hands-off-accords.md`) **draft** 2026-09-19 (B91); AI legal / actuators restricted; Dark bot war = escalation fuel; journals **not** regenerated.

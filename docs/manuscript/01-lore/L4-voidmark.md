@@ -74,9 +74,14 @@ Players who open the Foundry chat are, in fiction, opening one of those doors.
 
 ---
 
+## Hands Off tension
+
+VOIDMARK exists under the **Hands Off Accords** (L5): speech and oracle work are legal; sole AI command of kill-hardware is not. The Mark's gray zone — advice, suggestion stacks, occasional projected presence — is the campaign's cracked fence. Full Dark AI bot-legions are a future escalation, not the opening skyline.
+
 ## Cross-references
 
 - Cosmology / Signal / Nullspace — L1  
 - **MER** ticker — `docs/rulebook/MEGACORP-TICKERS.md`  
 - Wire procedures — `docs/raw/21-the-wire.md`  
+- Hands Off Accords — L5
 - Slang — Appendix A (`28-glossary-slang.md`)
