@@ -3,7 +3,7 @@
   "_key": "!items!o1fFIXVmhJitJnb0",
   "name": "GHOSTWIRE.Vehicles.Items.IronGiant.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/iron-giant.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.IronGiant.Description",

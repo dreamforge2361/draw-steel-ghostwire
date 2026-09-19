@@ -3,7 +3,7 @@
   "_key": "!items!NesxgBoB9ZcR5utY",
   "name": "GHOSTWIRE.Vehicles.Items.Razorwing.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/razorwing.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Razorwing.Description",

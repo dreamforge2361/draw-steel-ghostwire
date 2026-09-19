@@ -3,7 +3,7 @@
   "_key": "!items!pFTl8QHz7961gWA0",
   "name": "GHOSTWIRE.Vehicles.Items.DropSled.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/drop-sled.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.DropSled.Description",

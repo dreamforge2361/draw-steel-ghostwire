@@ -3,7 +3,7 @@
   "_key": "!items!ftU5yH4oTZ7uwvZB",
   "name": "GHOSTWIRE.Vehicles.Items.Wetsub.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/wetsub.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Wetsub.Description",

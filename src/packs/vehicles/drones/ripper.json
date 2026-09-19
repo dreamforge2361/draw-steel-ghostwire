@@ -3,7 +3,7 @@
   "_key": "!items!0EB2ZpklF2ItG7BN",
   "name": "GHOSTWIRE.Vehicles.Items.Ripper.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/ripper.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Ripper.Description",

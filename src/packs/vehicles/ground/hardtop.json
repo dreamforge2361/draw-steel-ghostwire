@@ -3,7 +3,7 @@
   "_key": "!items!tGhCwdzbdbniOy7I",
   "name": "GHOSTWIRE.Vehicles.Items.Hardtop.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/hardtop.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Hardtop.Description",

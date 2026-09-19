@@ -1,6 +1,6 @@
 # Machine token art (B101)
 
-Chassis portraits for **Ghostwire Vehicles & Drones**. Art is forthcoming — these folders are empty on purpose.
+Chassis portraits for **Ghostwire Vehicles & Drones**. Shipped **0.3.31**: **36** drone + **32** vehicle WebPs (1024²).
 
 | Kind | Files | Foundry `img` |
 |---|---|---|
@@ -9,10 +9,10 @@ Chassis portraits for **Ghostwire Vehicles & Drones**. Art is forthcoming — th
 
 `<dsid>` is the pack Item’s `system._dsid` (kebab-case of the chapter slang name). The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`.
 
-Drop WebPs here (or into `_incoming-art/` with `drones/` + `vehicles/` subfolders), then:
+Replace a file in place, then:
 
 ```text
-node tools/apply-machine-token-art.mjs --from _incoming-art
+node tools/apply-machine-token-art.mjs
 ```
 
 Spike + inventory: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.

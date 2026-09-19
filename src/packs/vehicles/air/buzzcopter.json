@@ -3,7 +3,7 @@
   "_key": "!items!VnG5PsaLY1BUbnIh",
   "name": "GHOSTWIRE.Vehicles.Items.Buzzcopter.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/buzzcopter.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Buzzcopter.Description",

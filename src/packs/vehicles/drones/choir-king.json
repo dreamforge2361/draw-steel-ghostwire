@@ -3,7 +3,7 @@
   "_key": "!items!6J0VIx7jmErmI3zs",
   "name": "GHOSTWIRE.Vehicles.Items.ChoirKing.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/choir-king.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.ChoirKing.Description",

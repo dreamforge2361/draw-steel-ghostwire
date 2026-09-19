@@ -3,7 +3,7 @@
   "_key": "!items!TpQRPcNyoJV7CyaM",
   "name": "GHOSTWIRE.Vehicles.Items.Workhorse.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/workhorse.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Workhorse.Description",

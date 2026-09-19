@@ -1,13 +1,13 @@
-# Spike B101 — Vehicle + drone token-art plumbing
+# Spike B101 — Vehicle + drone token art
 
 **Date:** 2026-09-19  
-**Module:** **0.3.29** (no bump — art is forthcoming)  
-**Status:** plumbing landed; **token WebPs not shipped**  
+**Module:** **0.3.31**  
+**Status:** **SHIPPED** — 36 drone + 32 vehicle WebPs; vehicles-pack `img` + LevelDB rebuilt. *Pending Michael Foundry-verify (Deploy).*  
 **Pairs with:** `docs/rulebook/15-drones.md`, `16-vehicles.md`, `docs/spikes/B36b-VEHICLES-PACK-FULL-SYNC.md`, `docs/masters/GHOSTWIRE_MACHINE_BANDS.md`
 
 ## Goal
 
-Accept chassis token art for every published drone and crewed vehicle, named by slang slug, and stamp it onto the matching Foundry pack documents. **This pass does not wait for art** — it documents the inventory, the pack source of truth, the `img` path convention, and a apply+rebuild tool so a follow-up with uploads is mechanical.
+Chassis token art for every published drone and crewed vehicle, named by slang slug, stamped onto Ghostwire Vehicles & Drones Item `img` fields. Plumbing (apply script + empty dirs) landed first; this bump ships the `gw-tokens` art pack.
 
 ## Source of truth
 
@@ -35,7 +35,7 @@ assets/tokens/drones/<dsid>.webp
 
 `<dsid>` = `system._dsid` = kebab-case of the chapter **slang** name (first name in `slang / corp / sci`). **Collision:** chapter drone “Rustbucket / Rusted Quad” is pack `rustbucket-drone` so it does not overwrite crewed `rustbucket`.
 
-Until WebPs land, every chassis still uses Foundry core placeholders (`icons/commodities/tech/robotics-frame-steel-blue.webp` for drones; wagon / jet / fan icons by vehicle domain).
+**Shipped (0.3.31):** 36 files in `assets/tokens/drones/` + 32 files in `assets/tokens/vehicles/` (Foundry top-down 1024² WebP). Every vehicles-pack Item `img` is the matching module path (no leftover `icons/` placeholders).
 
 ## Tool
 
@@ -48,17 +48,18 @@ node tools/apply-machine-token-art.mjs --from _incoming-art --dry-run
 
 `--from` copies into `assets/tokens/{drones,vehicles}/`, sets Item `img`, then runs `tools/build-packs.mjs vehicles` (skip with `--no-build`). Unmatched filenames fail unless `--ignore-unknown`. `_incoming-art/` is gitignored (B44c).
 
-Does **not** bump `module.json`. Bump one patch in the art follow-up when WebPs actually ship.
+Replace a WebP in place, then `node tools/apply-machine-token-art.mjs` (Foundry closed) to restamp `img` and rebuild `packs/vehicles`.
 
-## Follow-up when WebPs are attached
+## Zip filename aliases (gw-tokens pack)
 
-1. Name files by slang slug + `.webp` (tables below). Nested `drones/` + `vehicles/` folders are preferred; a flat dump works if every slug is unique (`rustbucket-drone.webp` required for the aerial clunker).
-2. Stage under `_incoming-art/` (or drop straight into `assets/tokens/…`).
-3. Close Foundry.
-4. `node tools/apply-machine-token-art.mjs --from _incoming-art`
-5. Confirm `--list` shows `art=yes` and pack JSON `img` paths match the convention.
-6. Bump **one** module patch; Foundry-verify: open Fly + Getaway, Deploy each, token uses the new art; Recall still cleans up.
-7. Delete `_incoming-art/` (do not commit the staging folder).
+Canonical on-disk names are pack `_dsid`s. The incoming zip used a few slang/corp variants; the apply tool maps them:
+
+| Incoming | Kind | Dest `_dsid` |
+|---|---|---|
+| `drones/rustbucket.webp` | drone | `rustbucket-drone` |
+| `drones/fly-micro-drone.webp` | drone | `fly` |
+| `vehicles/rustbucket-runabout.webp` | vehicle | `rustbucket` |
+| `vehicles/getaway-sedan.webp` | vehicle | `getaway` |
 
 ## Inventory — drones (36)
 
@@ -146,22 +147,21 @@ Chapter: `docs/rulebook/16-vehicles.md` §7.1. Pack folders: `src/packs/vehicles
 
 ## Filename aliases the tool accepts
 
-Primary: kebab-case slang = `_dsid`. Also: no-hyphen forms (`irongiant` → `iron-giant`), and `rusted-quad` → `rustbucket-drone`. A file named `rustbucket.webp` in a **drones** folder maps to `rustbucket-drone`; anywhere else it is the crewed van.
+Primary: kebab-case slang = `_dsid`. Also: no-hyphen forms (`irongiant` → `iron-giant`), `rusted-quad` → `rustbucket-drone`, `fly-micro-drone` → `fly`, `getaway-sedan` → `getaway`, `rustbucket-runabout` → `rustbucket`. A file named `rustbucket.webp` in a **drones** folder maps to `rustbucket-drone`; anywhere else it is the crewed van.
 
-## Out of scope (this PR)
+## Out of scope
 
-- Shipping token binaries
-- Module version bump
 - Rewriting band-template Actor art
 - Gear / chrome / bestiary tokens
 - Changing Deploy / Recall mechanics
+- Mama / Switchboard map walls
 
 ## Checklist
 
 - [x] Spike inventory + path convention
 - [x] `tools/apply-machine-token-art.mjs` (slug → Item `img` → `build-packs.mjs vehicles`)
-- [x] `assets/tokens/vehicles/.gitkeep` + `assets/tokens/drones/.gitkeep`
-- [x] Dummy-slug apply (Tape-Eye, ironmantis, drones/`rustbucket` → `rustbucket-drone`, Grey Cab, buzz, getaway) writes Item `img`; unknown `nope.webp` fails unless `--ignore-unknown`; JSON + dummy WebPs restored
-- [ ] WebP uploads in a follow-up
-- [ ] One module patch when art ships
-- [ ] Foundry-verify Deploy tokens after art lands
+- [x] `assets/tokens/vehicles/` **32** WebP + `assets/tokens/drones/` **36** WebP
+- [x] Every chassis Item `img` is `modules/draw-steel-ghostwire/assets/tokens/{drones,vehicles}/<dsid>.webp`
+- [x] `packs/vehicles` rebuilt
+- [x] Module **0.3.31**
+- [ ] Foundry-verify Deploy tokens (Fly + Getaway)

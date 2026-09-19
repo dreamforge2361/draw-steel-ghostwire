@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.31` — **Vehicle + drone tokens (B101):** 36 drone + 32 vehicle chassis portraits (1024² WebP) under `assets/tokens/{drones,vehicles}/`. Ghostwire Vehicles & Drones Item `img` fields point at `modules/draw-steel-ghostwire/assets/tokens/…/<dsid>.webp`. Apply: `node tools/apply-machine-token-art.mjs`. Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 - `0.3.29` — **VOIDMARK knowledge index:** district / hive lore (Switchboard, the Flats, Ossian Reach) retrieves from shipped Reach Handbook + L3 (and other L-chips / Wired Flats gazetteer). Rebuild: `node tools/build-voidmark-index.mjs`. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
 - `0.3.28` — **VOIDMARK default model:** `voidmarkModel` / `DEFAULT_MODEL` is now `grok-4.6` (`grok-3` 404s on current xAI). Pick any id your key lists (`grok-4.6`, `grok-4.5`, etc.). Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`.
 - `0.3.27` — **VOIDMARK chat (B82):** ApplicationV2 in-module AI applet (Token controls › ghost, or a keybinding). Module Configuration holds an OpenAI-compatible base URL (default xAI `https://api.x.ai/v1`), secret API key, model (default `grok-4.6` as of 0.3.28), temperature, player vs GM-only access, and editable VOIDMARK system instructions. Rules questions retrieve from a shipped lexical index of Ghostwire RAW (`data/voidmark-rules-index.json`; rebuild with `node tools/build-voidmark-index.mjs`). Not a live Cursor/Grok Bot bridge. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`. *Pending Foundry verification.*
@@ -390,7 +391,7 @@ Chrome **packages** (Roadrunner, Argus, Bulwark, …) are not in the compendium 
 
 Pack sources live in `src/packs/<pack>/` (subfolders allowed). Names and descriptions are `GHOSTWIRE.*` lang keys, filled in from `lang/en.json` at build time. With Foundry closed, run `node tools/build-packs.mjs` to rebuild `packs/`. It uses the `classic-level` package bundled with Foundry; set `FOUNDRY_APP` if Foundry isn't installed in the default location.
 
-Vehicle and drone token art (B101, art forthcoming): drop slang-slug WebPs into `assets/tokens/drones/` and `assets/tokens/vehicles/`, then `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
+Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `assets/tokens/drones/` and `assets/tokens/vehicles/`. Re-apply after replacing files with `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 
 ## Rulebook
 

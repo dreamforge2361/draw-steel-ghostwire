@@ -3,7 +3,7 @@
   "_key": "!items!rR5JmxUSfzlEDxwE",
   "name": "GHOSTWIRE.Vehicles.Items.Flatbed.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/flatbed.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Flatbed.Description",

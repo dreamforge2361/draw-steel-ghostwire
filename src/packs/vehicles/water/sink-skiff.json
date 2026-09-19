@@ -3,7 +3,7 @@
   "_key": "!items!7XGwQZHzcA8IPclL",
   "name": "GHOSTWIRE.Vehicles.Items.SinkSkiff.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/sink-skiff.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.SinkSkiff.Description",

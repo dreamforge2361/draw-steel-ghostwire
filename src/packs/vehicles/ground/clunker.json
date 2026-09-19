@@ -3,7 +3,7 @@
   "_key": "!items!RmB1CkhREahcTVKt",
   "name": "GHOSTWIRE.Vehicles.Items.Clunker.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/clunker.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Clunker.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!g8tuTVxvZYDtSlys",
   "name": "GHOSTWIRE.Vehicles.Items.SpiderFrame.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/spider-frame.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.SpiderFrame.Description",

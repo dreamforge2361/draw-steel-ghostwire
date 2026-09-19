@@ -3,7 +3,7 @@
   "_key": "!items!d1TDCLHSZWbYxCAs",
   "name": "GHOSTWIRE.Vehicles.Items.IronMantis.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/iron-mantis.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.IronMantis.Description",

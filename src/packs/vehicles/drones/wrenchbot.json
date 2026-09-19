@@ -3,7 +3,7 @@
   "_key": "!items!OxmKfGBwUKZIQPkl",
   "name": "GHOSTWIRE.Vehicles.Items.Wrenchbot.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/wrenchbot.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Wrenchbot.Description",

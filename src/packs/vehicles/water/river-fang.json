@@ -3,7 +3,7 @@
   "_key": "!items!MFyNOhIIv6zBeL9j",
   "name": "GHOSTWIRE.Vehicles.Items.RiverFang.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/river-fang.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.RiverFang.Description",

@@ -139,6 +139,13 @@ function aliasMap(catalog) {
   aliases.set("junkrotor", "junk-rotor");
   aliases.set("iron-mantis", "iron-mantis");
   aliases.set("ironmantis", "iron-mantis");
+  // Art-pack filename variants (B101 zip): Fly / Micro-Drone, Getaway / Sedan, Rustbucket / City Runabout.
+  aliases.set("fly-micro-drone", "fly");
+  aliases.set("flymicrodrone", "fly");
+  aliases.set("getaway-sedan", "getaway");
+  aliases.set("getawaysedan", "getaway");
+  aliases.set("rustbucket-runabout", "rustbucket");
+  aliases.set("rustbucketrunabout", "rustbucket");
   return aliases;
 }
 

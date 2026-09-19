@@ -3,7 +3,7 @@
   "_key": "!items!Iigu2eSLanPBcamO",
   "name": "GHOSTWIRE.Vehicles.Items.Tiltjet.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/tiltjet.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Tiltjet.Description",

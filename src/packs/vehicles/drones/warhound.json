@@ -3,7 +3,7 @@
   "_key": "!items!sXsW7dgjLNsyrEPN",
   "name": "GHOSTWIRE.Vehicles.Items.Warhound.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/warhound.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Warhound.Description",
