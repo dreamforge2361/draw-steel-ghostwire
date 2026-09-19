@@ -1,6 +1,6 @@
 # Token art
 
-Portraits stamped onto Foundry Item `img` fields. `<dsid>` is the pack Item’s `system._dsid` (kebab-case filename stem).
+Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img` + `prototypeToken.texture.src` for bestiary). `<dsid>` / `<slug>` is the pack filename stem (`system._dsid` on Items; JSON stem on Actors).
 
 | Kind | Files | Foundry `img` | Status |
 |---|---|---|---|
@@ -8,6 +8,7 @@ Portraits stamped onto Foundry Item `img` fields. `<dsid>` is the pack Item’s 
 | Drones | `drones/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/drones/<dsid>.webp` | B101 shipped **0.3.31** (36) |
 | Armor + shields | `armor/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/armor/<dsid>.webp` | B102 shipped **0.3.32** (22) |
 | Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
+| Bestiary humanoids | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 plumbing — art forthcoming (33) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
 
@@ -30,3 +31,13 @@ node tools/apply-gear-token-art.mjs
 ```
 
 Stamps Gear pack Items **and** matching embedded treasure Items on pregens, then rebuilds `packs/gear` + `packs/pregens`. Spike + inventory: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
+
+## Bestiary humanoids (B103)
+
+Drop WebPs here (or into `_incoming-art/` flat / `bestiary/`), then:
+
+```text
+node tools/apply-bestiary-portrait-art.mjs --from _incoming-art
+```
+
+Stamps Actor `img` **and** `prototypeToken.texture.src` (33 L1–4 corp / gang / E1 rival humanoids + veil-cultist), then rebuilds `packs/bestiary`. Spike + inventory: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
