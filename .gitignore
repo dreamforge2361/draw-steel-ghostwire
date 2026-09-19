@@ -87,6 +87,10 @@ assets/maps/districts/_png-backup/
 assets/maps/districts/**/*.png
 _incoming-art/districts/
 
+# B99 location battlemap PNG backups (full-res WebP ships; originals stay local)
+assets/maps/battlemaps/_png-backup/
+assets/maps/battlemaps/**/*.png
+
 # Catch-all for local draft PDFs (named variants)
 docs/manuscript/build/*.pdf
 
