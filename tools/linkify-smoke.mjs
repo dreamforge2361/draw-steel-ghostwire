@@ -3,7 +3,7 @@
  * B97 smoke: heading IDs + linkify patterns + (optional) assembled HTML grep.
  *
  *   node tools/linkify-smoke.mjs
- *   node tools/linkify-smoke.mjs --html   # also require built DRAFT.html
+ *   node tools/linkify-smoke.mjs --html   # also require built 0.4.0.html
  */
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -14,7 +14,7 @@ import { markdownToHtml } from "./lib/md-to-html.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
-const HTML_OUT = join(ROOT, "docs/manuscript/build/Ghostwire-Rulebook-DRAFT.html");
+const HTML_OUT = join(ROOT, "docs/manuscript/build/Ghostwire-Rulebook-0.4.0.html");
 
 const failures = [];
 const ok = (cond, msg) => {

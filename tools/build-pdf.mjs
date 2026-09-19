@@ -32,8 +32,10 @@ const BUILD = join(ROOT, "docs/manuscript/build");
 const ASSEMBLED = join(BUILD, "Ghostwire-Manuscript.md");
 const WITH_ART = join(BUILD, "Ghostwire-Manuscript.with-art.md");
 const WITH_LINKS = join(BUILD, "Ghostwire-Manuscript.with-links.md");
-const HTML_OUT = join(BUILD, "Ghostwire-Rulebook-DRAFT.html");
-const PDF_OUT = join(BUILD, "Ghostwire-Rulebook-DRAFT.pdf");
+/** Official print book version (independent of Foundry module.json). */
+const RULEBOOK_VERSION = "0.4.0";
+const HTML_OUT = join(BUILD, `Ghostwire-Rulebook-${RULEBOOK_VERSION}.html`);
+const PDF_OUT = join(BUILD, `Ghostwire-Rulebook-${RULEBOOK_VERSION}.pdf`);
 const SAMPLE_PDF = join(BUILD, "Ghostwire-Rulebook-SAMPLE.pdf");
 const CSS = join(ROOT, "docs/manuscript/print/ghostwire-print.css");
 
@@ -145,7 +147,8 @@ function wrapHtml(bodyHtml, title) {
 </head>
 <body>
 <aside class="gw-print-banner">
-  <strong>Draft PDF</strong> — assembled from <code>docs/manuscript/</code> + ART-PLACEMENT.yml.
+  <strong>Ghostwire Rulebook ${RULEBOOK_VERSION}</strong> — official print PDF.
+  Assembled from <code>docs/manuscript/</code> + ART-PLACEMENT.yml.
   Artwork credit: Ghostwire AI (AI-generated). Journals not regenerated.
 </aside>
 <main class="gw-rulebook">
@@ -239,7 +242,7 @@ function main() {
   let md = readFileSync(sourceMd, "utf8");
   if (sample) md = sampleMarkdown(md);
   const body = rewriteImgSrc(markdownToHtml(md));
-  const html = wrapHtml(body, sample ? "Ghostwire Rulebook SAMPLE" : "Ghostwire Rulebook DRAFT");
+  const html = wrapHtml(body, sample ? "Ghostwire Rulebook SAMPLE" : `Ghostwire Rulebook ${RULEBOOK_VERSION}`);
   const htmlPath = sample ? join(BUILD, "Ghostwire-Rulebook-SAMPLE.html") : HTML_OUT;
   writeFileSync(htmlPath, html, "utf8");
   console.log(`Wrote ${htmlPath}`);

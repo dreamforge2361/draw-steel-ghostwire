@@ -1,6 +1,6 @@
 # How to Use This Book
 
-**Status:** print-front draft (B74, 2026-09-19)  
+**Status:** **Version 0.4.0** official rulebook PDF  
 **This page is print-only.** Rules procedures stay in `docs/raw/`. Do not copy this chapter into the Foundry rulebook pack.
 
 ---
@@ -59,7 +59,7 @@ Those notes are **instructional**, not a Foundry manual and not lore. Pattern lo
 
 To make a runner on the Hero sheet, use **Appendix B — Character Generation Cheat Sheet** (print Ch 29).
 
-This print book is **not** the journal pipeline. Rulebook journals regenerate from `docs/raw/` later (held until pre-PDF). Do not treat a Journal page as newer than RAW.
+This print book is **not** the journal pipeline. Rulebook journals stay held (not regenerated for 0.4.0). Do not treat a Journal page as newer than RAW.
 
 ---
 

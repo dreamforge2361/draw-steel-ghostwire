@@ -51,7 +51,7 @@
   margin: 0.7in 0.7in 0.8in 0.7in;
   background: var(--gw-bg);
   @bottom-center {
-    content: "GHOSTWIRE  ·  draft  ·  " counter(page);
+    content: "GHOSTWIRE  ·  0.4.0  ·  " counter(page);
     font-family: var(--gw-font-ui);
     font-size: 9px;
     color: var(--gw-text-dim);

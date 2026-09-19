@@ -1,7 +1,8 @@
 # Spike B97 — PDF internal hotlinks (Chrome HTML→PDF)
 
-**Status:** Built 2026-09-19 · Michael confirmed draft PDF solid 2026-09-18  
-**Bump:** module **0.3.22** (main is 0.3.21)  
+**Status:** Built 2026-09-19 · official rulebook PDF cut  
+**Rulebook PDF:** **Version 0.4.0** (`Ghostwire-Rulebook-0.4.0.pdf`)  
+**Foundry module:** **0.3.22** (`module.json` — independent of the PDF version)  
 **Journals:** **not** regenerated
 
 ## Goal
@@ -21,8 +22,8 @@ node tools/assemble-manuscript.mjs
 node tools/inject-print-art.mjs
 node tools/linkify-manuscript.mjs
 node tools/build-pdf.mjs
-# docs\manuscript\build\Ghostwire-Rulebook-DRAFT.pdf
-# docs\manuscript\build\Ghostwire-Rulebook-DRAFT.html
+# docs\manuscript\build\Ghostwire-Rulebook-0.4.0.pdf
+# docs\manuscript\build\Ghostwire-Rulebook-0.4.0.html
 
 # One-shot (assemble → inject → linkify → HTML/PDF):
 #   powershell -ExecutionPolicy Bypass -File tools/build-pdf.ps1
@@ -103,7 +104,8 @@ Heading structure is already `h1` (parts + chapter titles) / `h2` / `h3`. Collis
 - [x] `linkify-manuscript.mjs` after inject
 - [x] Generated Contents page
 - [x] Chrome outline flags + limitation documented
-- [x] `module.json` **0.3.22**
+- [x] `module.json` **0.3.22** (Foundry module; not the PDF version)
+- [x] Official PDF filenames / titles **0.4.0** (not DRAFT)
 - [x] Journals not regenerated
 
 ## Smoke counts (this VM, after assemble + inject + linkify + `--html-only`)
