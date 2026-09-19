@@ -1,13 +1,13 @@
 # The Wire
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating)
+**RAW status:** locked (2026-09-18, B66)  
+**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), shipped Foundry B23/B32/B51 (Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
 
 ---
 
 ## The Wired System
 
-The Wired is the network layer every hero can touch. This chapter defines what a node is, the two connection states, the System Stat Card that stats any node, ICE, or hostile avatar, Trace Alert, and the nine Matrix Verbs every hero has. The Hacker (`19-hacker.md`) and Technomancer (`20-technomancer.md`) build on these rules.
+The Wired is the network layer every hero can touch. This chapter defines what a node is, the two connection states (**Overlay** and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth and Programs; the Technomancer (`20-technomancer.md`) builds on the same Wire spine.
 
 ### What a Node Is
 
@@ -22,7 +22,7 @@ You reach a node by first using the **Connect** Matrix Verb (see Matrix Verbs, b
 
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |
 |---|---|---|---|---|
-| **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is treated as **wireless/wired-direct exposure**: half the node's listed Biofeedback value (round down, minimum 1). |
+| **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |
 | **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |
 
 Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Access, Failsafe Cascade, Wired Guard, and others) explicitly require you or an ally to be "Jacked In or Overlaid" -- meaning either connection state satisfies the requirement, as opposed to being fully disconnected. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone, since they're addressing the higher-risk state directly.
@@ -57,10 +57,10 @@ Every node, system, ICE construct, hostile AI, or rival decker in the Wired is b
 |---|---|---|---|
 | **Node Rating** | Both Tracks | The target's overall Wired defense grade (Rating **1–5**) -- the single input that sets every other stat on this card. | A Director-assigned Rating reflecting how well-defended/valuable the system is (street-grade lock = **Rating 1**; alpha-corp core = **Rating 5**). Not a character level or echelon. Everything below reads off this one number. |
 | **Node Description** | Both Tracks | The node's aesthetic -- often artistic and stylized to brand the System, and represented in the Wired by a holographic icon or similar visual signature (a corp's sigil rendered as a floating glyph, a black-market host skinned like a snarling dog, a government node as a flat gray monolith). Pure flavor, no mechanical effect -- but it's how a Hacker (and the table) actually *sees* a node before touching it. | Director/Session-defined per node, not Rating-derived like the other rows -- describe it to match the node's owner, purpose, and reputation. No formula; this is narrative color layered on top of the mechanical stats above. |
-| **Breach difficulty** *(optional shortcut)* | Both Tracks | How hard the node is to force entry into, for tables that want a quick Draw Steel test instead of reading the full Power Roll result. | Fixed by Node Rating: **R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane.** The primary resolution is still the Power Roll result (low / middle / high) -- this test is a shortcut for trivial nodes only. |
+| **Breach difficulty** *(optional shortcut)* | Both Tracks | How hard the node is to force entry into, for tables that want a quick difficulty call instead of reading the full Power Roll result. | Fixed by Node Rating: **R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane.** The primary resolution is still the Power Roll result (low / middle / high) — this shortcut is for trivial nodes only. |
 | **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. |
 | **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |
-| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **x0.5 round down, min 1** if Overlaid · **x1** if wired-direct · **x1.5 round up** if Jacked In. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |
+| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (only two states — see Connection States table, above): **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no third connection mode and no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |
 | **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |
 
 **Track 1 note:** Track 1 objects and systems (doors, cameras, locks, a person's smartlink) use only **Node Rating**, **Node Description**, **Breach difficulty**, and **Alert Contribution** from this card -- they resolve as a single Power Roll with no ongoing Integrity pool and no ICE layers of their own (per the Wired System's "What a Node Is" section, above). A Track 1 target is breached and acted on in the same activation; there's nothing left to "reduce to 0."
@@ -71,34 +71,45 @@ Every node, system, ICE construct, hostile AI, or rival decker in the Wired is b
 
 ### Trace Alert: Definition and Escalation
 
-**Trace Alert** (referred to on some abilities simply as "the Alert Track") is the Wired system's rising detection meter -- the mechanical spine of "the longer you're in, the worse it gets." It is tracked per hostile node/host, on a **12-step track**:
+**Trace Alert** (called "the Alert Track" on some abilities) is the Wired system's rising detection meter — the longer you stay in a hostile host, the worse it gets. Track it **per hostile node/host** on a **12-step track**:
 
 | Alert Steps | Effect |
 |---|---|
-| **1-4** | No mechanical effect yet -- flavor only. Passive ICE stirs, but nothing bites. |
-| **5-8** | **+1 Malice to the Director per step crossed** (cumulative) -- rising Alert directly feeds the Director's Malice pool, the same "heat" engine used in physical combat. |
-| **9-11** | As above, plus a **bane on your next Wired Power Roll** -- active ICE is actively hunting you now. |
-| **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a hostile decker's own crew is now inbound on your real-world position) -- then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |
+| **1–4** | No mechanical effect yet — flavor only. Passive ICE stirs, but nothing bites. |
+| **5–8** | **+1 Malice to the Director per step crossed** (cumulative) — rising Alert feeds the Director's Malice pool, the same heat engine used in physical combat. |
+| **9–11** | As above, plus a **bane on your next Wired Power Roll** — active ICE is hunting you. |
+| **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a rival decker's crew inbound on your real-world position) — then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |
 
-**When does Trace Alert increase?** Using the Power Roll result bands (**low** ≤11 = something goes wrong; **high** 17+ = clean success — see Matrix Verbs), Trace Alert typically increases on:
+#### Default Alert by Power Roll result (locked)
 
-- **A low (≤11) result** on a Wired Power Roll (Matrix Verb, Program, or signature ability) -- this is the standard trigger referenced throughout Wired ability text (e.g., Ghost Signal low, Kill Switch low, Network Purge low, Backdoor Override's normal-use low).
-- **Certain middle (12–16) results** on specific Programs where the ability text says so explicitly (most Hacker Programs do NOT raise Alert on middle -- check each ability; low is the default trigger unless stated otherwise).
-- **Direct triggers named on an ability**, independent of Power Roll result -- for example, Ghost Signal's Alert Track increase is a low-result-specific clause, while some Trigger conditions (like Ghost Step's own trigger condition) fire *off of* an Alert increase happening, rather than causing one.
-- **Noisy or hostile action against a Track 2 target** in general.
+Unless an ability's printed text says otherwise, every Wired Power Roll (Matrix Verb, Program, payload Run, or Wired signature ability) uses these Alert defaults:
 
-**What does NOT increase Trace Alert:**
+| Result | Trace Alert (default) |
+|---|---|
+| **Low (≤11)** | **+1** to that host's Trace Alert. The verb or Program still usually works, but something goes wrong — logs notice you, ICE twitches, the host marks the intrusion. |
+| **Middle (12–16)** | **No Alert increase.** Clean success. Middle never raises Trace Alert by default. |
+| **High (17+)** | **No Alert increase.** Always clean on Alert. Some abilities also erase Alert that would have risen, or leave zero forensic trace, as their high payoff. |
 
-- **High (17+) results** are always clean on Alert -- no increase, and several abilities (Ghost the Log-equivalent effects, Backdoor Override's Track 2 application) explicitly zero out Alert gain entirely as their signature payoff.
-- **Backdoor Override** (11 Bandwidth) is explicitly written so its Track 2 application "does not increase from this use at all -- the intrusion leaves no trace," making it the cleanest high-cost Program in the kit.
-- Passive observation (Scan, Deep Scan) does not raise Alert on its own -- only active intrusion, contested, or hostile verbs do.
+**Ability text can override the middle default** — only when it explicitly says the middle result raises Alert (or raises it by more than one). Most Hacker Programs do **not**; check each card. Low remains the default trigger unless stated otherwise.
 
-**Managing Trace Alert.** The Hacker has dedicated tools to actively lower or freeze the track rather than just avoid raising it (see `19-hacker.md`):
+**Other Alert movers (not a second tax):**
 
-- **Ghost Step** (3rd level) -- as a Free Triggered Action, when the Alert Track increases from your own action, you may cancel that specific increase entirely (once per encounter).
+- **Direct triggers** named on an ability, independent of the Power Roll band (rare; follow the card).
+- Triggered features that fire *when* Alert rises (e.g. Ghost Step) — they react to an increase; they do not cause one by themselves.
+- There is **no separate “noisy Track 2” Alert tax** beyond the roll result. Hostile or contested rolls still use the table above; Track 2 just means you may roll more times against Integrity/ICE, so low results (and Alert) come up more often in practice.
+
+**What never raises Alert by itself:**
+
+- **High (17+) results** — always clean on Alert.
+- Ability clauses that zero Alert gain entirely (example: **Backdoor Override**'s Track 2 application leaves no trace).
+- Pure observation verbs that only look (**Scan**; class Deep Scan) — they do not raise Alert on their own. Active intrusion, contested, or hostile verbs use the defaults above.
+
+**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see `19-hacker.md`):
+
+- **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).
 - Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.
 
-**What happens as Trace Alert climbs, narratively:** early steps (1-4) are pure atmosphere -- the Director may narrate a light flicker, a camera pausing a beat too long. Mid steps (5-8) start actively feeding the encounter's Malice budget, meaning the enemy side of the table gets more resources to spend against the whole party, not just the Hacker. Late steps (9-11) mean the Wired system itself is now actively working against the Hacker specifically (banes on their own rolls). Step 12 breaks containment entirely -- the fight stops being confined to the Wired and becomes a physical-world problem (security teams, a corp strike, a hostile decker's crew arriving at your real location), which is exactly why the rest of the crew has a stake in watching the clock too.
+**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 put banes on the runner's Wired rolls. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too.
 
 ## Matrix Verbs (Universal)
 
@@ -116,9 +127,11 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 | **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |
 | **Read/Write** | The core data-manipulation verb -- read a file's contents, alter a record, plant or delete evidence, forge a credential. This is the verb that actually changes information in the Wired, rather than just observing or moving through it. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |
 
-**Low (≤11)** on any rolling verb generally means "it works, but something goes wrong" — usually an Alert Track increase. **Middle (12–16)** is a clean success. **High (17+)** is a clean success plus the bonus listed above.
+**Low (≤11)** on any rolling verb generally means “it works, but something goes wrong” — by default **+1 Trace Alert** (see Trace Alert defaults above). **Middle (12–16)** is a clean success with **no Alert increase**. **High (17+)** is a clean success plus the bonus listed above, and never raises Alert.
 
 ## Connection-state modifiers (summary)
+
+**Connected** means you are in **Overlay** or **Jacked In**. **Disconnected** means neither. Payload Runs and many Wired features require Connected; Matrix Verbs other than Connect require Connected.
 
 | State | Wired abilities (Wired keyword) | Real-world abilities and tests |
 |---|---|---|
@@ -127,10 +140,12 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 | Jacked In | **Edge** | Can’t be used (body inert) |
 
 - **Connect** works only while Disconnected and puts you in **Overlay** on any result.
-- **Toggle Connection State** (connected only) switches Overlay ↔ Jacked In.
-- **Jack Out** (connected only) returns you to Disconnected.
-- Every other Matrix Verb requires a connection.
+- **Toggle Connection State** (Connected only) switches Overlay ↔ Jacked In.
+- **Jack Out** (Connected only) returns you to Disconnected.
+- Every other Matrix Verb requires Connected.
 - Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.
+
+**Anyone vs Hacker.** Any hero with a commlink or cyberdeck can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs.
 
 ## Deck software: suites vs payloads
 
@@ -164,10 +179,12 @@ A payload chip in your gear does nothing by itself. To use it, you compile it in
 | Middle (12–16) | 3 |
 | High (17+) | 5 |
 
-**Running a payload.** You must be Connected (Overlay or Jacked In) to run a payload. Each payload is a Wired, ranged ability with a power roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
+**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected refuses the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
 
 The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
 
 ## Director tools
 
-Tables running Ghostwire in Foundry VTT can track nodes, Node Rating stat cards, Integrity, reveal state, and Trace Alert in the Wired Console. Its rules are the ones in this chapter; its operation is described in the module’s Foundry notes, not here.
+At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card; you do not invent extra Matrix subsystems beyond this chapter.
+
+Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster, Overlay / Jacked In, node templates Rating 1–5, Integrity, Trace Alert, reveal). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.

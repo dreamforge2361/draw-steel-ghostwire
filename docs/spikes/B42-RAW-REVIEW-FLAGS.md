@@ -171,9 +171,9 @@
 - Progression table “Echelon (gear-tier ref only)” column.
 - Sprite cap: Sprite-Weaver 6 at 8th vs baseline 4 at 8th — stacking unclear.
 
-### 21 The Wire
-- Trace Alert increase on middle results is ability-specific; confirm no default.
-- Old reconciliation note (Overlay ≈ baseline wireless / wired-direct; “×1 if wired-direct”) removed; the Biofeedback row still lists a ×1 wired-direct multiplier that has no connection state.
+### 21 The Wire — **resolved B66 (2026-09-18)**
+- Trace Alert: middle (12–16) does **not** raise Alert by default; ability text may override. Low +1; high never.
+- Orphan ×1 wired-direct biofeedback multiplier **scrubbed**; only Overlay ×0.5 and Jacked In ×1.5. Chapter **RAW-locked**.
 
 ### 22 The Veil
 - Chapter is intentionally thin; a shared Veil chapter is not yet written.

@@ -66,7 +66,7 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 
 | Ch | Print title | Source |
 |---|---|---|
-| 23 | The Wire | `raw:` `21-the-wire.md` |
+| 23 | The Wire | `raw:` `21-the-wire.md` — **RAW-locked** B66 (2026-09-18) |
 | 24 | The Veil | `raw:` `22-the-veil.md` |
 | 25 | Machines (Drones & Vehicles) | `raw:` `23-machines.md` — Buildings remain Wrench stub for v1 |
 
@@ -86,3 +86,4 @@ Lore harvest stubs are **pre-rules** (not in the locked 5-part rules TOC). Rules
 - Print numbering may differ from `docs/raw/` filenames (Advancement = print Ch 5 / file `24-advancement.md`). Journals keep raw filenames.
 - Optional fold (TOC-PROPOSAL): skip print Ch 10 and Ch 27 — **not** applied; stubs exist so the locked recommended package can assemble.
 - `00-INDEX.md` is meta only — **not** a print chapter.
+- Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66); reassembled manuscript build pending next assemble run (no journal regen).

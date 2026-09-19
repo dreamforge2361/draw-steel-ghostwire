@@ -1,6 +1,6 @@
 # Ghostwire RAW Rulebook (master)
 
-**Status:** First full assemble 2026-09-17 — every chapter below exists as **draft**, pending Michael review. No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
+**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
 **Path:** `docs/raw/` — this folder is the **master RAW** player/Director rules text for the repo.  
 **Delivery order (LOCKED):** (1) finish RAW markdown here → (2) Foundry Journal pack from these files → (3) PDF pipeline later.
 
@@ -39,7 +39,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `10-mods.md` | Mods | GW | `14-mods.md` |
 | `11-perks.md` | Perks | GW | `17-perks.md` |
 | `12-operator.md` … `20-technomancer.md` | Class chapters | GW | `01`–`08`, `20` rulebook (rules only; strip lore) |
-| `21-the-wire.md` | The Wire (Matrix) | GW | Extract from `08-hacker.md` + `18-wired-foundry.md` rules; Stage 4 standalone |
+| `21-the-wire.md` | The Wire (Matrix) | GW | **RAW-locked** B66 (2026-09-18); Overlay/Jacked In, Rating 1–5, Trace Alert defaults, suites/payloads |
 | `22-the-veil.md` | The Veil (minimal) | GW | Only what Elementalist / Street Priest need |
 | `23-machines.md` | Drones, Vehicles (Buildings stub OK) | GW | `15-drones.md`, `16-vehicles.md` |
 | `24-advancement.md` | Advancement & echelons | DS-by-ref + GW | Levels 1–10, echelon bands |

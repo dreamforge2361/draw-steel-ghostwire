@@ -48,14 +48,14 @@ Related rulebook status: `docs/rulebook/STATUS.md`
 
 ## Track A — Rulebook (still open)
 
-**2026-09-18 (B61):** Print TOC **LOCKED** (recommended package) at `docs/rulebook/TOC-PROPOSAL.md`. `01-how-to-play` Stage 3 fill landed 0.1.97; `03`/`04` still thin. Stage 4 Wire/Veil/Machines drafts exist (`21`–`23`); Veil Rituals + §C3 locked. Regenerate journals after Michael reviews HTP.
+**2026-09-18 (B61):** Print TOC **LOCKED** (recommended package) at `docs/rulebook/TOC-PROPOSAL.md`. `01-how-to-play` Stage 3 fill landed 0.1.97; `03`/`04` still thin. Stage 4 **Wire RAW-locked** (B66, `21`); Veil/Machines drafts (`22`–`23`); Veil Rituals + §C3 locked. Regenerate journals after Michael reviews HTP + Wire lock (held for manuscript pass).
 
 | Item | Status | Notes |
 |---|---|---|
 | Stage 3 shared core (How to Play, characteristics, Power Rolls, combat basics) | **In progress** | HTP Stage 3 fill 0.1.97; `03`/`04` next |
 | Economy chapter (`11-economy.md`) | **Drafted** 2026-09-16 | ¥5,000 + one free Kit; Availability bands; BP firewall; Michael review |
 | Chrome chapter (`12-chrome.md`) + master ingest | **Drafted** 2026-09-16 | Body Integrity 20; grades; packages; Cyborg excluded; Michael review |
-| Stage 4 Wire / Veil (minimal) / Machines | **Todo** | Forced by Hacker / casters / Wrench |
+| Stage 4 Wire / Veil (minimal) / Machines | **Wire RAW-locked** (B66, 2026-09-18); Veil/Machines still draft | Wire: `docs/raw/21-the-wire.md`. Veil Rituals+§C3 locked; Machines thin |
 | Kits chapter full polish | Interim | After shared core if needed; reconcile Kit ¥ vs doctrine firewall |
 | Cyborg System Crisis Director table | Optional | Pointer exists in Species |
 | Veil entity-grade tables (old T-labels) | Later | Stage 4 cleanup |
@@ -161,10 +161,10 @@ After each spike:
 - Final product ships as: (1) PDF rulebook built from `docs/rulebook/` + masters, (2) Foundry **Journal** compendium pack with the same chapters as in-world rulebook.
 - Gear/mods/economy numbers come from the Gear master; player-facing text uses **Echelon 1–4 + Availability** (Street→Prototype). Legacy Item Tier columns = gear grade only (price / Avail / mod slots) — see Gear master OVERRIDE + `14-mods.md`. **§Craft ≠ skill.**
 
-### Backlog — Stage 4 Wire (2026-09-16)
-- [ ] Extract **The Wire (Matrix)** from Hacker into standalone rulebook chapter (`17-wired.md`)
-- [ ] Anyone-vs-Hacker gap + Gear Cat 4 deck alignment + Chrome BI pointer fix
-- [ ] Foundry Wire pack only after chapter approval
+### Backlog — Stage 4 Wire (2026-09-16 → done 2026-09-18 B66)
+- [x] Extract **The Wire (Matrix)** into standalone RAW chapter (`docs/raw/21-the-wire.md`) — **RAW-locked**
+- [x] Anyone-vs-Hacker gap + suites/payloads + Connected gate + Chrome BI pointer (Integrity ≠ Body Integrity)
+- [x] Foundry Wire surface already shipped (B23 Matrix Verbs / Console, B32 node templates Rating 1–5, B51 payloads); journal regen deferred
 
 ### B19 / B20 (Foundry-verified 2026-09-16)
 - [x] **B19** Full Gear master Categories 1�6 into packs: gear, mods, matrix, vehicles, foci (module v0.1.24)

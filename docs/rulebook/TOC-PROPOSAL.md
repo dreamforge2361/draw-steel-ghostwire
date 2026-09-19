@@ -46,7 +46,7 @@ Completeness key:
 | `18-street-priest.md` | Street Priest | Partial | Damage values filled (Pass C). §C3 / spirit stamps aligned. Rank 2+ strikes **deferred** |
 | `19-hacker.md` | Hacker | Partial | Class-only after Wire extract; shorter than peers. Some flag leftovers (`@chr`, tier phrasing scrub debt) |
 | `20-technomancer.md` | Technomancer | Partial | Stage 2 extract; sprites/biofeedback largely filled post–Pass C |
-| `21-the-wire.md` | The Wire (Matrix) | Partial → near-Complete | Nodes, Overlay/Jacked In, System Stat Card, Trace Alert, Matrix Verbs, suites/payloads present. Orphan **×1 wired-direct** biofeedback multiplier still listed. Track A Stage 4 still marked Todo in build plan despite draft existing |
+| `21-the-wire.md` | The Wire (Matrix) | **RAW-locked** (B66, 2026-09-18) | Orphan ×1 wired-direct scrubbed. Trace Alert middle = no Alert by default (locked). Overlay/Jacked In, Rating 1–5, suites/payloads + Connected gate aligned to Foundry. |
 | `22-the-veil.md` | The Veil | Partial (strong) | **B43 Ritual Workings locked**; **§C3 Summon Entities locked** (0.1.95). Open: thin-place gazetteer, full corruption ladder, Rank 2+ strike ladders, defense stamps |
 | `23-machines.md` | Drones, Vehicles & Buildings | Partial | Inventories present; Integrity/Speed often qualitative. Buildings = stub pointer to Wrench. Ramming cites §6.2 without full print procedure |
 | `24-advancement.md` | Advancement & Echelons | Complete (thin) | Levels 1–10, Echelon 1–4, cadence table, legacy tier conversion. Doctrine locked |
@@ -64,9 +64,9 @@ These are **print blockers**, not Foundry polish:
 
 `01` / `03` / `04` are correct but **too thin to stand alone** next to class chapters. PDF readers who don’t open DS Heroes mid-session need Ghostwire procedures in original words (remap tables stay; no MCDM paste).
 
-### B. Wire chapter lock
+### B. Wire chapter lock — **DONE** (B66, 2026-09-18)
 
-`21` is the shared Matrix spine Hackers / Technomancers / any Overlay hero depend on. Must scrub orphan **wired-direct ×1**, confirm Trace Alert middle-result defaults, and mark chapter **RAW-locked** before PDF. Build-plan Stage 4 status should flip when TOC + Wire polish land.
+`21` is **RAW-locked**. Orphan **wired-direct ×1** scrubbed (only Overlay ×0.5 / Jacked In ×1.5). Trace Alert defaults locked: **low +1 / middle no raise / high never**. Build-plan Stage 4 Wire flipped. Journals not regenerated this bump.
 
 ### C. Economy / downtime holes class text already assumes
 
@@ -169,7 +169,7 @@ Write/fill these next — **TOC locked; bodies in this order**:
 | 1 | `01-how-to-play.md` | Stage 3 spine; sets table modes (legwork / run / downtime) |
 | 2 | `03-tests-power-rolls.md` | Power Roll terminology must be print-iron for every later chapter |
 | 3 | `04-combat.md` | Shared combat + GW keywords/resources before class polish |
-| 4 | `21-the-wire.md` polish → RAW-lock | Shared Matrix spine; unblock Hacker/Technomancer PDF confidence |
+| 4 | `21-the-wire.md` polish → RAW-lock | **DONE B66** — Shared Matrix spine locked |
 | 5 | **NEW Lifestyle & Downtime** (or `08` Lifestyle §) | Unblocks Medic restock, economy burn, downtime loop |
 
 **Immediate follow-ons (6–10):** `09` implant price pass → `08` Kit provisional lock pass → `25` opposition procedure expand → `23` ramming one-pager → class flag sweeps (Operator → Wrench).

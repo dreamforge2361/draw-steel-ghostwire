@@ -56,8 +56,8 @@
 
 | Item | Notes |
 |---|---|
-| **Stage 4 — The Wire (Matrix)** standalone chapter | Extract Wired System from `08-hacker.md` into its own chapter (e.g. `17-wired.md`): Nodes, Overlay/Jacked In, Track 1/2, Node Rating card, Trace Alert, Matrix Verbs for everyone. Keep Hacker Programs/Bandwidth in class chapter. Align deck ladder with Gear Cat 4; clarify anyone-vs-Hacker gap (verbs only vs Programs + Bandwidth). Reconcile Body Integrity pointer to Chrome max 20. |
-| Wire Foundry pack (thin) | After Wire chapter draft: Matrix Verbs + node templates as Journal/Items — defer until rule text approved |
+| **Stage 4 — The Wire (Matrix)** standalone chapter | **RAW-locked 2026-09-18 (B66)** — `docs/raw/21-the-wire.md`. Nodes, Overlay/Jacked In, Track 1/2, Node Rating 1–5 System Stat Card, Trace Alert (middle = no Alert by default), Matrix Verbs for everyone, suites vs payloads + Connected gate. Orphan ×1 wired-direct scrubbed. Hacker Programs/Bandwidth stay in `19-hacker.md`. Journals **not** regenerated this bump. |
+| Wire Foundry pack (thin) | Matrix Verbs + node templates already shipped (B23/B32). RAW chapter locked B66; journal regen deferred per manuscript hold. |
 | Vehicles Foundry sync | `16-vehicles.md` → expand `vehicles` pack to full per-echelon inventory |
 | Drones Foundry sync | `15-drones.md` (36 chassis) → expand drones in vehicles or dedicated pack |
 | B20 Mods expansion | Armor/gadget mods + §Craft skill text (Hacking/Electronics/Repair) in Foundry |

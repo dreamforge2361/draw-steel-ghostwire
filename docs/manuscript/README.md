@@ -48,7 +48,7 @@ Keep `docs/raw/` rules-only so Journal regen stays clean. Manuscript concatenate
 
 | Stage | Owner |
 |---|---|
-| 1. Finish RAW spine + Wire + Lifestyle (rules) | `docs/raw/` (+ NEW Lifestyle stub → later raw or manuscript) |
+| 1. Finish RAW spine + Wire + Lifestyle (rules) | Wire **RAW-locked** B66; spine + Lifestyle still open in `docs/raw/` (+ NEW Lifestyle stub) |
 | 2. Harvest lore/art from master PDFs into `01-lore/` | manuscript lore stubs |
 | 3. `node tools/assemble-manuscript.mjs` → `docs/manuscript/build/Ghostwire-Manuscript.md` | assemble script |
 | 4. Pandoc / print CSS / art plates | later (not this spike) |
