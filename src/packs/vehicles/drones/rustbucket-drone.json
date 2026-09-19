@@ -3,7 +3,7 @@
   "_key": "!items!mH2NVRhTWhff6NSa",
   "name": "GHOSTWIRE.Vehicles.Items.RustbucketDrone.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/rustbucket-drone.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.RustbucketDrone.Description",

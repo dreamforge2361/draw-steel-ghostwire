@@ -3,7 +3,7 @@
   "_key": "!items!AqmNbUylbvj2biFd",
   "name": "GHOSTWIRE.Vehicles.Items.GuardDog.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/guard-dog.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.GuardDog.Description",

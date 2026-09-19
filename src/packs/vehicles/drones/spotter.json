@@ -3,7 +3,7 @@
   "_key": "!items!rF3l3rRK0WH6IA3K",
   "name": "GHOSTWIRE.Vehicles.Items.Spotter.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/spotter.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Spotter.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!e5lPuTFbSG07Yjni",
   "name": "GHOSTWIRE.Vehicles.Items.Netcaster.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/netcaster.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Netcaster.Description",

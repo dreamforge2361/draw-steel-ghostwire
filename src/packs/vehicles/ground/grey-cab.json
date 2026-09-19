@@ -3,7 +3,7 @@
   "_key": "!items!XoTe1S8QPXFrnSMC",
   "name": "GHOSTWIRE.Vehicles.Items.GreyCab.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/grey-cab.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.GreyCab.Description",

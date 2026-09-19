@@ -3,7 +3,7 @@
   "_key": "!items!580kKrMJHgD4r3Dj",
   "name": "GHOSTWIRE.Vehicles.Items.HarborCutter.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/fan-ventilator-copper.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/harbor-cutter.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.HarborCutter.Description",

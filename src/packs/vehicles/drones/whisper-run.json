@@ -3,7 +3,7 @@
   "_key": "!items!minEqO1Fpm1pcK3r",
   "name": "GHOSTWIRE.Vehicles.Items.WhisperRun.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/whisper-run.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.WhisperRun.Description",

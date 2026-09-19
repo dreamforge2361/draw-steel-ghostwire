@@ -3,7 +3,7 @@
   "_key": "!items!Jly3id45kchaAAT6",
   "name": "GHOSTWIRE.Vehicles.Items.JunkRotor.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/junk-rotor.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.JunkRotor.Description",

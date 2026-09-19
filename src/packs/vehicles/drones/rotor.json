@@ -3,7 +3,7 @@
   "_key": "!items!Fb5NWIFbaZcEdFeY",
   "name": "GHOSTWIRE.Vehicles.Items.Rotor.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/rotor.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Rotor.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!IY30T5hkmX33fPu0",
   "name": "GHOSTWIRE.Vehicles.Items.Mule.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/mule.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Mule.Description",

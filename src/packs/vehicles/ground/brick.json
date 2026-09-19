@@ -3,7 +3,7 @@
   "_key": "!items!N1ScogdI1RprQ3bs",
   "name": "GHOSTWIRE.Vehicles.Items.Brick.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/brick.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Brick.Description",

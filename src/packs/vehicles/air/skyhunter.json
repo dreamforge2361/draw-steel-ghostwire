@@ -3,7 +3,7 @@
   "_key": "!items!Du2IWbDl2WoU8U55",
   "name": "GHOSTWIRE.Vehicles.Items.Skyhunter.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/skyhunter.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Skyhunter.Description",

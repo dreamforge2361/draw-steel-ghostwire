@@ -3,7 +3,7 @@
   "_key": "!items!Xxw1QLECiTAPy9kx",
   "name": "GHOSTWIRE.Vehicles.Items.Lifeline.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/lifeline.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Lifeline.Description",

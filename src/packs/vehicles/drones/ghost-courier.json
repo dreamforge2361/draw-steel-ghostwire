@@ -3,7 +3,7 @@
   "_key": "!items!at7ATaQXagrODXuy",
   "name": "GHOSTWIRE.Vehicles.Items.GhostCourier.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/ghost-courier.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.GhostCourier.Description",

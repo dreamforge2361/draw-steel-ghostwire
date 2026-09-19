@@ -3,7 +3,7 @@
   "_key": "!items!fHxzMAu5YqI74l4D",
   "name": "GHOSTWIRE.Vehicles.Items.ScrapBike.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/scrap-bike.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.ScrapBike.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!Kn2EefknGCgoUGJP",
   "name": "GHOSTWIRE.Vehicles.Items.Reaver.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/reaver.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Reaver.Description",

@@ -106,6 +106,7 @@
 ## Art backlog
 
 - **B79** Artistic cosmos plate (Light Realms / Hells / Prime / Wire / related) — not started.
+- **B101** Vehicle + drone chassis token art — **SHIPPED 0.3.31** (`docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`). **36** drone + **32** vehicle WebPs in `assets/tokens/{drones,vehicles}/`; vehicles-pack Item `img` fields point at module token paths. *Pending Michael Foundry-verify (Deploy Fly + Getaway).*
 
 ## Systems / lore backlog
 

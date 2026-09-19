@@ -3,7 +3,7 @@
   "_key": "!items!asgABWjsGlDi7thi",
   "name": "GHOSTWIRE.Vehicles.Items.Rattlebox.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/rattlebox.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Rattlebox.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!3iDV2yTQP48UMieH",
   "name": "GHOSTWIRE.Vehicles.Items.CrotchRocket.Name",
   "type": "treasure",
-  "img": "icons/weapons/guns/launcher-rocket-bazooka.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/crotch-rocket.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.CrotchRocket.Description",
