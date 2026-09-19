@@ -31,7 +31,7 @@ Completeness key:
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | Partial | Correct DS print order; short. Wired / connection modifiers present |
 | `04-combat.md` | Combat basics | Stage 3 draft (0.1.99) | Standalone GW combat procedures; B49/B44c free-strike note; Crisis/inert pointers |
 | `05-ancestries.md` | Ancestries (Peoples) | Complete | Eight Peoples as DS ancestry packages. A1 copyright rewrite **deferred**. Cyborg System Crisis still thin |
-| `06-backgrounds-professions.md` | Backgrounds & Professions | Complete | 8 Backgrounds + 15 Professions; Culture→Background / Career→Profession locked |
+| `06-backgrounds-professions.md` | Backgrounds & Professions | Complete (B73 Stage 3 play procedure) | 8 Backgrounds + 15 Professions; Culture→Background / Career→Profession locked; community-edge + collision walkthrough |
 | `07-languages.md` | Languages (rules only) | Complete (thin) | Names + knowledge-only rules locked. Lore gazetteer = **non-goal** for RAW/PDF v1 |
 | `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | Partial | Ownership/firewall solid. Kit bonus lines **provisional**. Lifestyle burn → pointer to `26`. Run payouts provisional. Merc dual-Kit undefined |
 | `09-chrome-body-integrity.md` | Chrome & Body Integrity | Partial (B71) | BI 20, grades, erosion locked (Pass A). **Implant ¥ + Availability catalog published** (13 Standard + 6 Soft/B55). Package totals / Salvage ¥ / Frame Module prices still **PROVISIONAL** |
@@ -49,7 +49,7 @@ Completeness key:
 | `21-the-wire.md` | The Wire (Matrix) | **RAW-locked** (B66, 2026-09-18) | Orphan ×1 wired-direct scrubbed. Trace Alert middle = no Alert by default (locked). Overlay/Jacked In, Rating 1–5, suites/payloads + Connected gate aligned to Foundry. |
 | `22-the-veil.md` | The Veil | Partial (strong) | **B43 Ritual Workings locked**; **§C3 Summon Entities locked** (0.1.95). Open: thin-place gazetteer, full corruption ladder, Rank 2+ strike ladders, defense stamps |
 | `23-machines.md` | Drones, Vehicles & Buildings | Partial | Inventories present; Integrity/Speed often qualitative. Buildings = stub pointer to Wrench. Ramming cites §6.2 without full print procedure |
-| `24-advancement.md` | Advancement & Echelons | Complete (thin) | Levels 1–10, Echelon 1–4, cadence table, legacy tier conversion. Doctrine locked |
+| `24-advancement.md` | Advancement & Echelons | Complete (B73 Stage 3 fill) | Levels 1–10, Echelon 1–4, cadence table, table timing, legacy tier conversion. Doctrine locked |
 | `25-opposition.md` | Opposition (Director) | Stage 3 draft (B70) | Street-fight procedure + reskin/Malice/Trace Alert; Foundry bestiary + B48 pointer. No printable bestiary |
 
 **Existing TOC elsewhere?** No locked TOC. `00-INDEX.md` volume map + `00-front-matter` chapter list are the only outlines. `docs/rulebook/` has chapter drafts (parallel source), not a book TOC. Track A in `FOUNDRY-BUILD-PLAN.md` still lists Stage 3 shared core and Stage 4 Wire/Veil/Machines as open (out of date vs `docs/raw/` drafts).
@@ -152,7 +152,7 @@ Print structure. File map = existing `docs/raw/` unless marked **NEW**.
 | Ch | Title | Source |
 |---|---|---|
 | 26 | Opposition | `25-opposition.md` (Stage 3 procedure B70; not lore bestiary) |
-| 27 | Running Ossian Reach (pointer) | **NEW** thin — points to Reach Handbook / Wired Flats Journals; **no lore reprint** |
+| 27 | Running Ossian Reach (pointer) | **NEW** Stage 3 pointer fill (B73) — `docs/manuscript/03-directors/27-running-ossian-reach.md`; Handbook / Wired Flats / L3 by reference; **no lore reprint** |
 
 **Optional fold (if Michael wants fewer NEW files):** skip print Ch 10 and Ch 27; put a **Lifestyle** subsection into `08` and a one-page Reach pointer into `00-front-matter` or `25`. TOC still locks the same content.
 

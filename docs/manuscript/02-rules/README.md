@@ -8,8 +8,7 @@ Rules chapters for the print book are listed in `../MANIFEST.yml` with `path: ..
 
 | Allowed | Example |
 |---|---|
-| Pointer / policy notes | this README |
-| **NEW** print stubs not yet in raw | `10-lifestyle-downtime.STUB.md` (body deferred — do not invent Lifestyle tables here yet) |
+| Pointer / policy notes | this README — Lifestyle body is `docs/raw/26-lifestyle-downtime.md` (B67); do not re-stub it here |
 
 ### What must not live here
 
@@ -17,4 +16,4 @@ Rules chapters for the print book are listed in `../MANIFEST.yml` with `path: ..
 - Lore harvested from PDFs (that goes in `../01-lore/`)
 - Dual-edit forks of RAW-locked chapters
 
-When Lifestyle is ready to draft, prefer adding `docs/raw/` (if Journals should carry it) **or** replacing the stub path in the manifest once — still one SoR body, not two.
+Lifestyle is drafted in `docs/raw/26-lifestyle-downtime.md` and assembled as print Ch 10. Do not copy it into this folder.

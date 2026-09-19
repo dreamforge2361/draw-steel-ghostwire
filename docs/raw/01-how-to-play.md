@@ -45,7 +45,7 @@ A typical Ghostwire session moves through the same arc as a job:
 
 Sessions can start mid-legwork or mid-run. Some nights are pure downtime. The three **modes** below tell you which Ghostwire systems are in play; they are not a rigid clock.
 
-**One job can span several sessions.** Victories and experience follow Draw Steel Heroes (`24`). ¥ payouts and lifestyle burn are Ghostwire (`08`, and the forthcoming Lifestyle chapter).
+**One job can span several sessions.** Victories and experience follow Draw Steel Heroes (`24`). ¥ payouts and lifestyle burn are Ghostwire (`08`, `26`).
 
 ---
 
@@ -94,12 +94,12 @@ Downtime is the breath between jobs. The crew spends ¥, recovers, upgrades, and
 
 **Typical downtime moves:**
 
-- Get paid (¥). Pay **lifestyle** burn when that table lands (`08` / Lifestyle chapter).
+- Get paid (¥). Pay **lifestyle** burn when that table lands (`08`, `26`).
 - Rest and recover Stamina / Recoveries per Draw Steel Heroes.
 - Install or remove **chrome** (`09`); install **mods** or run a **§Craft Project** (`10`).
 - Train, take a Perk when advancement allows (`11`, `24`).
 - Veil casters may attempt **Ritual Workings** (`22`).
-- Medic restock and similar class downtime hooks point at lifestyle quotes until the Lifestyle chapter exists.
+- Medic restock and similar class downtime hooks use the Lifestyle quotes in `26`.
 
 Downtime is not “nothing happens.” Corps retaliate, contacts call in favors, Trace Alert leftovers become heat. Keep it short unless the table wants a shopping episode.
 
@@ -186,7 +186,7 @@ Use Draw Steel Heroes for the left column. Ghostwire changes only what the right
 - **The Wired is a second battlefield.** Every runner can connect; Hackers and Technomancers live there (`21`).
 - **Magic is rare and costly.** Veil casters fight chrome erosion; Cyborgs are severed from the Veil (`22`).
 - **Machines are allies.** Anyone can run one drone; Wrenches run fleets and vehicles (`23`).
-- **Lifestyle will matter.** Burn, Medic restock quotes, and downtime projects get a dedicated chapter (TOC Ch 10 NEW) — until then, use pointers in `08` / class text.
+- **Lifestyle matters.** Burn, Medic restock quotes, and downtime projects live in print Ch 10 (`26`).
 
 ---
 
