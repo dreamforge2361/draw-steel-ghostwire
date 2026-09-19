@@ -57,3 +57,15 @@ Need **cool Ghostwire-AI art** of the persona for two Foundry surfaces:
 ### Non-goals yet
 Full animated portrait; multiple outfit variants; generating before name/persona lock unless Michael asks for concepts.
 
+## Rules pack / RAG (HARD REQUIREMENT — Michael 2026-09-19)
+
+The persona must answer from a **Ghostwire rules pack**, not from generic model memory:
+
+- Sources: assembled manuscript and/or docs/raw/ (+ journals when regenerated)
+- Per-request **retrieval** of relevant chunks into the Grok context (with persona system instructions)
+- **Director lookup** mode: cite chapter / flag missing
+- **Runner** mode: in-character; may be incomplete; never contradict RAW when stating a procedure
+- Re-index when RAW/manuscript updates
+
+Without the rules pack wired, the applet is incomplete.
+

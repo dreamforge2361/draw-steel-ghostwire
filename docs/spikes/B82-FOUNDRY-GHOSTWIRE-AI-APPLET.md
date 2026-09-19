@@ -40,3 +40,15 @@ The chat applet is **not** a naked "help desk LLM." It is a **named super-AI tha
 - Exact name + origin (corp-built vs Signal-touched vs Null-ward adjacent)
 - Whether one global persona or multiple switchable personas later
 
+## Rules pack / RAG (HARD REQUIREMENT — Michael 2026-09-19)
+
+The persona must answer from a **Ghostwire rules pack**, not from generic model memory:
+
+- Sources: assembled manuscript and/or docs/raw/ (+ journals when regenerated)
+- Per-request **retrieval** of relevant chunks into the Grok context (with persona system instructions)
+- **Director lookup** mode: cite chapter / flag missing
+- **Runner** mode: in-character; may be incomplete; never contradict RAW when stating a procedure
+- Re-index when RAW/manuscript updates
+
+Without the rules pack wired, the applet is incomplete.
+
