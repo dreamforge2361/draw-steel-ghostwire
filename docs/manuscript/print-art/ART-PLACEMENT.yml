@@ -1,0 +1,483 @@
+# Ghostwire print-art placement map (B88)
+# Consumed by tools/inject-print-art.mjs after assemble-manuscript.mjs.
+# Paths are repo-root relative. First existing file wins; then search_dirs + match.
+# Missing files → visible ART GAP placeholder (do not invent artwork).
+# Credit lock: Ghostwire AI (B76). No external IP name-checks (B78/B83).
+
+version: 1
+credit: Ghostwire AI (AI-generated)
+print_art_root: docs/manuscript/print-art
+
+slots:
+  # --- Cover / title ---
+  - id: cover
+    title: Cover / title plate
+    kind: cover
+    chapter_id: title-page
+    after_heading: "# GHOSTWIRE"
+    replace_start: "### Cover art — reserved"
+    replace_end: "This page leaves the hole; it does not fake a signature."
+    files:
+      - docs/manuscript/print-art/cover/cover.webp
+      - docs/manuscript/print-art/cover/cover.png
+      - docs/manuscript/print-art/from-core-pdf/cover.webp
+    search_dirs:
+      - docs/manuscript/print-art/cover
+      - docs/manuscript/print-art/from-core-pdf
+    match: cover
+    caption: GHOSTWIRE — title plate
+    css_class: plate-cover
+
+  # --- L1 lore fillers ---
+  - id: l1-cosmology
+    title: L1 cosmology plate
+    kind: filler
+    chapter_id: L1
+    after_heading: "## Cosmology & the Great Conflict"
+    files:
+      - docs/manuscript/print-art/filler/cosmology.webp
+      - docs/manuscript/print-art/from-core-pdf/cosmology.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: cosmolog
+    caption: Cosmology — Light, the Dark One, and the proving ground
+    css_class: plate-filler
+
+  - id: l1-planes
+    title: L1 planes / cosmos plate
+    kind: filler
+    chapter_id: L1
+    after_heading: "## The Planes & Dimensions"
+    files:
+      - docs/manuscript/print-art/filler/planes.webp
+      - docs/manuscript/print-art/from-core-pdf/planes.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: plane
+    caption: The spoken house — Signal, Ground, Edge
+    css_class: plate-filler
+
+  - id: l1-megacorps
+    title: L1 megacorp / Ten plate
+    kind: filler
+    chapter_id: L1
+    after_heading: "## The Megacorps"
+    files:
+      - docs/manuscript/print-art/filler/megacorps.webp
+      - docs/manuscript/print-art/from-core-pdf/megacorps.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: megacorp
+    caption: The Ten — hive chrome, no real-world logos
+    css_class: plate-filler
+
+  - id: l1-wired
+    title: L1 Wired lattice plate
+    kind: filler
+    chapter_id: L1
+    after_heading: "## The Wired — A Thin Place"
+    files:
+      - docs/manuscript/print-art/filler/wired.webp
+      - docs/manuscript/print-art/from-core-pdf/wired.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: wired
+    caption: The Wired — neural lattice on the Ground
+    css_class: plate-filler
+
+  - id: l1-timeline
+    title: L1 timeline plate
+    kind: filler
+    chapter_id: L1
+    after_heading: "## Timeline & History"
+    files:
+      - docs/manuscript/print-art/filler/timeline.webp
+      - docs/manuscript/print-art/from-core-pdf/timeline.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: timeline
+    caption: Timeline — history as a plate, not a second lore pass
+    css_class: plate-filler
+
+  - id: l1-themes
+    title: L1 city nocturne plate
+    kind: filler
+    chapter_id: L1
+    after_heading: "## Themes & Tone"
+    files:
+      - docs/manuscript/print-art/filler/city-nocturne.webp
+      - docs/manuscript/print-art/from-core-pdf/city-nocturne.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: nocturne
+    caption: Hive nocturne — rain, neon, gold Signal
+    css_class: plate-filler
+
+  # --- L2 peoples opener ---
+  - id: l2-peoples-opener
+    title: L2 Peoples opener
+    kind: filler
+    chapter_id: L2
+    after_heading: "# Peoples & World"
+    files:
+      - docs/manuscript/print-art/filler/peoples-opener.webp
+      - docs/manuscript/print-art/from-core-pdf/peoples-opener.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/species
+    match: peoples
+    caption: The eight kindreds — Founding and the made
+    css_class: plate-filler
+
+  # --- L3 / Reach maps (in-module, full-res; do not downscale source files) ---
+  - id: l3-flats-overview
+    title: L3 Flats overview map
+    kind: map
+    chapter_id: L3
+    after_heading: "## What the Flats Are"
+    files:
+      - assets/maps/districts/labeled/00_flats_overview_L.webp
+      - assets/maps/districts/THE_FLATS_Master_District_Map_2000x1250.webp
+    caption: The Flats — labeled district overview (module battle map, native resolution)
+    css_class: plate-map
+    downscale: false
+
+  # --- L4 / L5 (main 0.3.13–0.3.14 lore) ---
+  - id: l4-voidmark
+    title: VOIDMARK plate
+    kind: filler
+    chapter_id: L4
+    after_heading: "# VOIDMARK"
+    files:
+      - docs/manuscript/print-art/filler/voidmark.webp
+      - docs/manuscript/print-art/from-core-pdf/voidmark.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: voidmark
+    caption: VOIDMARK — leash-slipped Wired super-AI
+    css_class: plate-filler
+
+  - id: l5-hands-off
+    title: Hands Off Accords plate
+    kind: filler
+    chapter_id: L5
+    after_heading: "# The Hands Off Accords"
+    files:
+      - docs/manuscript/print-art/filler/hands-off.webp
+      - docs/manuscript/print-art/from-core-pdf/hands-off.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: hands
+    caption: Hands Off — AI legal, actuators restricted
+    css_class: plate-filler
+
+  # --- Peoples / Ancestries (print Ch 6) ---
+  - id: people-pure-human
+    title: Pure Human plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Pure Human"
+    files:
+      - docs/manuscript/print-art/species/pure-human.webp
+      - docs/manuscript/print-art/species/human.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: human
+    caption: Pure Human — the base stock
+    css_class: plate-species
+
+  - id: people-corran
+    title: Corran plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Corran"
+    files:
+      - docs/manuscript/print-art/species/corran.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: corran
+    caption: Corran — labor caste
+    css_class: plate-species
+
+  - id: people-elvani
+    title: Elvani plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Elvani"
+    files:
+      - docs/manuscript/print-art/species/elvani.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: elvani
+    caption: Elvani — aesthetic caste
+    css_class: plate-species
+
+  - id: people-goliar
+    title: Goliar plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Goliar"
+    files:
+      - docs/manuscript/print-art/species/goliar.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: goliar
+    caption: Goliar — heavy caste
+    css_class: plate-species
+
+  - id: people-changer
+    title: Changer plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Changer"
+    files:
+      - docs/manuscript/print-art/species/changer.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: changer
+    caption: Changer — skin-turner
+    css_class: plate-species
+
+  - id: people-revenant
+    title: Revenant plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Revenant"
+    files:
+      - docs/manuscript/print-art/species/revenant.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: revenant
+    caption: Revenant — the undying
+    css_class: plate-species
+
+  - id: people-mutant
+    title: Mutant Human plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Mutant Human"
+    files:
+      - docs/manuscript/print-art/species/mutant.webp
+      - docs/manuscript/print-art/species/mutant-human.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: mutant
+    caption: Mutant Human — the marked
+    css_class: plate-species
+
+  - id: people-cyborg
+    title: Cyborg plate
+    kind: species
+    chapter_id: ch6
+    after_heading: "## Cyborg"
+    files:
+      - docs/manuscript/print-art/species/cyborg.webp
+    search_dirs:
+      - docs/manuscript/print-art/species
+    match: cyborg
+    caption: Cyborg — machine-first
+    css_class: plate-species
+
+  # --- Classes (print Ch 14–22) — match GHOSTWIRE_Class_Art names when present ---
+  - id: class-operator
+    title: Operator class plate
+    kind: class
+    chapter_id: ch14
+    after_heading: "# The Operator"
+    files:
+      - docs/manuscript/print-art/classes/operator.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: operator
+    caption: The Operator
+    css_class: plate-class
+
+  - id: class-scout
+    title: Scout class plate
+    kind: class
+    chapter_id: ch15
+    after_heading: "# The Scout"
+    files:
+      - docs/manuscript/print-art/classes/scout.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: scout
+    caption: The Scout
+    css_class: plate-class
+
+  - id: class-commander
+    title: Commander class plate
+    kind: class
+    chapter_id: ch16
+    after_heading: "# The Commander"
+    files:
+      - docs/manuscript/print-art/classes/commander.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: commander
+    caption: The Commander / Face
+    css_class: plate-class
+
+  - id: class-medic
+    title: Medic class plate
+    kind: class
+    chapter_id: ch17
+    after_heading: "# The Medic"
+    files:
+      - docs/manuscript/print-art/classes/medic.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: medic
+    caption: The Medic
+    css_class: plate-class
+
+  - id: class-wrench
+    title: Wrench class plate
+    kind: class
+    chapter_id: ch18
+    after_heading: "# The Wrench"
+    files:
+      - docs/manuscript/print-art/classes/wrench.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: wrench
+    caption: The Wrench
+    css_class: plate-class
+
+  - id: class-elementalist
+    title: Elementalist class plate
+    kind: class
+    chapter_id: ch19
+    after_heading: "# The Elementalist"
+    files:
+      - docs/manuscript/print-art/classes/elementalist.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: elementalist
+    caption: The Elementalist
+    css_class: plate-class
+
+  - id: class-street-priest
+    title: Street Priest class plate
+    kind: class
+    chapter_id: ch20
+    after_heading: "# The Street Priest"
+    files:
+      - docs/manuscript/print-art/classes/street-priest.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: priest
+    caption: The Street Priest
+    css_class: plate-class
+
+  - id: class-hacker
+    title: Hacker class plate
+    kind: class
+    chapter_id: ch21
+    after_heading: "# The Hacker"
+    files:
+      - docs/manuscript/print-art/classes/hacker.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: hacker
+    caption: The Hacker
+    css_class: plate-class
+
+  - id: class-technomancer
+    title: Technomancer class plate
+    kind: class
+    chapter_id: ch22
+    after_heading: "# The Technomancer"
+    files:
+      - docs/manuscript/print-art/classes/technomancer.webp
+    search_dirs:
+      - docs/manuscript/print-art/classes
+      - docs/manuscript/print-art/from-core-pdf
+    match: technomancer
+    caption: The Technomancer
+    css_class: plate-class
+
+  # --- Wire / Veil openers ---
+  - id: wire-opener
+    title: Wire chapter opener
+    kind: filler
+    chapter_id: ch23
+    after_heading: "# The Wire"
+    files:
+      - docs/manuscript/print-art/filler/wire-opener.webp
+      - docs/manuscript/print-art/from-core-pdf/wire-opener.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: wire
+    caption: The Wire — Overlay and Jacked In
+    css_class: plate-opener
+
+  - id: veil-opener
+    title: Veil chapter opener
+    kind: filler
+    chapter_id: ch24
+    after_heading: "# The Veil"
+    files:
+      - docs/manuscript/print-art/filler/veil-opener.webp
+      - docs/manuscript/print-art/from-core-pdf/veil-opener.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: veil
+    caption: The Veil — the thin place that bites back
+    css_class: plate-opener
+
+  - id: machines-opener
+    title: Machines chapter opener
+    kind: filler
+    chapter_id: ch25
+    after_heading: "# Machines"
+    files:
+      - docs/manuscript/print-art/filler/machines-opener.webp
+    search_dirs:
+      - docs/manuscript/print-art/filler
+      - docs/manuscript/print-art/from-core-pdf
+    match: machine
+    caption: Machines — drones and vehicles
+    css_class: plate-opener
+
+  # --- Directors / Reach ---
+  - id: ch27-flats-overview
+    title: Ch 27 Flats overview map
+    kind: map
+    chapter_id: ch27
+    after_heading: "## Where the text lives"
+    files:
+      - assets/maps/districts/labeled/00_flats_overview_L.webp
+      - assets/maps/districts/THE_FLATS_Master_District_Map_2000x1250.webp
+    caption: Ossian Reach — Flats district overview (native resolution; do not downscale source)
+    css_class: plate-map
+    downscale: false
+
+  - id: ch27-cinderhold
+    title: Ch 27 Cinderhold map
+    kind: map
+    chapter_id: ch27
+    after_heading: "## Pick the stratum, then the district"
+    files:
+      - assets/maps/districts/labeled/11_cinderhold_L.webp
+    caption: Cinderhold & the Outer Gate — wastes seam (native resolution)
+    css_class: plate-map
+    downscale: false

@@ -64,7 +64,7 @@ This print book is **not** the journal pipeline. Rulebook journals regenerate fr
 
 ## Voice and art (for later plates)
 
-When Pandoc or a print CSS pass adds plates, follow `docs/rulebook/ART-STYLE.md`: cinematic cyberpunk-fantasy nocturne — rain, pink and cyan neon, gold Signal above the cloud deck. Do not drift into daylight sprawl or generic green-code Matrix. **Do not** put real-world brand logos on the page.
+Print plates follow `docs/rulebook/ART-STYLE.md`: cinematic cyberpunk-fantasy nocturne — rain, pink and cyan neon, gold Signal above the cloud deck. Pipeline: `docs/spikes/B88-PDF-PIPELINE.md`. Do not drift into daylight sprawl or generic green-code Matrix. **Do not** put real-world brand logos on the page.
 
 ---
 

@@ -36,6 +36,21 @@ assets/pregens/_pre-compress-backup/
 
 # Generated print manuscript (assemble from MANIFEST.yml)
 docs/manuscript/build/Ghostwire-Manuscript.md
+docs/manuscript/build/Ghostwire-Manuscript.with-art.md
+docs/manuscript/build/Ghostwire-Rulebook-DRAFT.html
+docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf
+docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.pdf
+docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.html
+docs/manuscript/build/ART-GAP-REPORT.md
+
+# Local print-art binaries (pipeline + ART-PLACEMENT.yml + READMEs stay)
+docs/manuscript/print-art/**/*.webp
+docs/manuscript/print-art/**/*.png
+docs/manuscript/print-art/**/*.jpg
+docs/manuscript/print-art/**/*.jpeg
+docs/manuscript/print-art/**/*.gif
+docs/manuscript/print-art/**/*.tif
+docs/manuscript/print-art/**/*.tiff
 
 # Live PDF text extracts (box or Windows module folder) — do not commit
 _pdf-extract/
@@ -45,9 +60,6 @@ assets/maps/districts/_png-backup/
 assets/maps/districts/**/*.png
 _incoming-art/districts/
 
-# Print PDF art binaries (local / Dropbox seed; pipeline copies in)
-docs/manuscript/print-art/**/*.png
-docs/manuscript/print-art/**/*.jpg
-docs/manuscript/print-art/**/*.webp
+# Catch-all for local draft PDFs (named variants)
 docs/manuscript/build/*.pdf
 
