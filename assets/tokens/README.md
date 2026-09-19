@@ -8,7 +8,8 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Drones | `drones/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/drones/<dsid>.webp` | B101 shipped **0.3.31** (36) |
 | Armor + shields | `armor/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/armor/<dsid>.webp` | B102 shipped **0.3.32** (22) |
 | Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
-| Bestiary humanoids | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 plumbing — art forthcoming (33) |
+| Bestiary humanoids + ICE | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 plumbing — art forthcoming (40) |
+| Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 plumbing — art forthcoming (17) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
 
@@ -32,12 +33,12 @@ node tools/apply-gear-token-art.mjs
 
 Stamps Gear pack Items **and** matching embedded treasure Items on pregens, then rebuilds `packs/gear` + `packs/pregens`. Spike + inventory: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
 
-## Bestiary humanoids (B103)
+## Bestiary + summons (B103)
 
-Drop WebPs here (or into `_incoming-art/` flat / `bestiary/`), then:
+Drop WebPs into `bestiary/` (humanoids + ICE) and `summons/` (L≤4 companions / spirits / sprites / nodes), or into `_incoming-art/` (flat or those subfolders), then:
 
 ```text
 node tools/apply-bestiary-portrait-art.mjs --from _incoming-art
 ```
 
-Stamps Actor `img` **and** `prototypeToken.texture.src` (33 L1–4 corp / gang / E1 rival humanoids + veil-cultist), then rebuilds `packs/bestiary`. Spike + inventory: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
+Stamps Actor `img` **and** `prototypeToken.texture.src` (40 bestiary + 17 summons = 57), then rebuilds the pack(s) that changed. Spike + inventory: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.

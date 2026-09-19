@@ -1,51 +1,60 @@
-# Spike B103 — Bestiary humanoid portrait art
+# Spike B103 — Bestiary + L≤4 summon portrait art
 
 **Date:** 2026-09-19  
 **Module:** **0.3.32** (plumbing only — no bump)  
-**Status:** **PLUMBING** — apply script + empty `assets/tokens/bestiary/`. WebPs + one patch wait for the art-zip follow-up.  
+**Status:** **PLUMBING** — apply script + empty `assets/tokens/{bestiary,summons}/`. WebPs + one patch wait for the art-zip follow-up.  
 **Pairs with:** `docs/masters/GHOSTWIRE_BESTIARY.md`, `docs/spikes/B38-BESTIARY-REVIEW-RESKIN-WAVE1.md`, `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`, `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`
 
 ## Goal
 
-Portrait art for the **33** published L1–4 corp / gang / E1 rival humanoids (plus the Veil Cultist), named by pack slug, stamped onto **both**:
+Portrait art for **57** published Actors, named by pack slug, stamped onto **both**:
 
-1. Ghostwire Bestiary Actor `img` (sheet portrait)
+1. Actor `img` (sheet portrait)
 2. The same Actor’s `prototypeToken.texture.src` (canvas token)
 
-Then rebuild `packs/bestiary`. Generate is **not** this ticket — another agent drops WebPs; this ticket is the path convention + apply tool.
+Then rebuild the pack(s) that changed (`bestiary` and/or `summons`). Generate is **not** this ticket — another agent drops WebPs; this ticket is the path convention + apply tool.
 
 Art arrives in a follow-up zip. This PR only builds the apply path.
+
+**Counts:** 33 L1–4 humanoids + 1 veil-cultist + 7 wire ICE/constructs + 17 L≤4 summons = **57**.
 
 ## Source of truth
 
 | Layer | Path | Role |
 |---|---|---|
-| JSON sources | `src/packs/bestiary/**/<slug>.json` | **Edit here.** NPC Actors (`type: npc`). Slug = filename stem (Actors have no top-level `system._dsid`). |
-| LevelDB | `packs/bestiary` | Compiled by `node tools/build-packs.mjs bestiary`. Do not hand-edit. Close Foundry first. |
-| Lang | `lang/en.json` → `GHOSTWIRE.Bestiary.Actors.<Id>.Name` | Display names. The apply tool slugifies these as filename aliases. |
-| Vehicles / drones / gear | `assets/tokens/{drones,vehicles,armor,weapons}/` | B101 / B102. Bestiary slugs do not collide with those folders. |
+| Bestiary JSON | `src/packs/bestiary/**/<slug>.json` | **Edit here.** NPC Actors (`type: npc`). Slug = filename stem (no top-level `system._dsid`). |
+| Summons JSON | `src/packs/summons/**/<slug>.json` | Same Actor shape. Elementals / spirits / sprites / nodes in scope; **not** `machines/*` band templates. |
+| LevelDB | `packs/bestiary`, `packs/summons` | Compiled by `node tools/build-packs.mjs bestiary summons`. Do not hand-edit. Close Foundry first. |
+| Lang | `lang/en.json` | Display names. The apply tool slugifies these as filename aliases (`Ember Companion` → `companion-ember`). |
+| Vehicles / drones / gear | `assets/tokens/{drones,vehicles,armor,weapons}/` | B101 / B102. Bestiary / summons slugs live in their own folders. |
 
-Foundry path convention (module-relative, same family as B101 / B102):
+## Path convention (split by pack)
+
+Bestiary pack Actors (humanoids + ICE) stay under `bestiary/`. Summons pack Actors go under `summons/` so a later machine-band or advanced-sprite pass does not collide with chassis tokens (B101) or this ICE set.
 
 ```text
 modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp
+modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp
 ```
 
 On-disk staging:
 
 ```text
 assets/tokens/bestiary/<slug>.webp
+assets/tokens/summons/<slug>.webp
 ```
 
 `<slug>` = kebab-case pack JSON filename stem (`corp-enforcer.json` → `corp-enforcer.webp`).
 
+A flat incoming zip is fine: the tool resolves by basename. Subfolders `bestiary/` / `summons/` (or pack folders like `wire-machine/`, `elementals/`) set kind when names would otherwise be ambiguous.
+
 ## Actor update rule
 
-Walk every in-scope Actor in `src/packs/bestiary/**`. For each matching WebP:
+Walk every in-scope Actor. For each matching WebP:
 
-1. Set top-level `img` to the module token path.
+1. Set top-level `img` to the module token path for that pack.
 2. Set `prototypeToken.texture.src` to the **same** path (create `texture` if missing).
-3. Leave embedded Items / abilities / Active Effect icons untouched — those stay gear / DS role icons until a later pass.
+3. Leave embedded Items / abilities / Active Effect icons untouched.
 
 Sheet portrait and dropped-token art must stay identical. A WebP replace + re-run restamps both.
 
@@ -58,14 +67,14 @@ node tools/apply-bestiary-portrait-art.mjs --from _incoming-art
 node tools/apply-bestiary-portrait-art.mjs --from _incoming-art --dry-run
 ```
 
-`--from` copies into `assets/tokens/bestiary/`, sets Actor `img` + `prototypeToken.texture.src`, then runs `tools/build-packs.mjs bestiary` (skip with `--no-build`). Unmatched filenames fail unless `--ignore-unknown`. `_incoming-art/` is gitignored (B44c).
+`--from` copies into `assets/tokens/{bestiary,summons}/`, sets Actor `img` + `prototypeToken.texture.src`, then runs `tools/build-packs.mjs` for the packs that changed (skip with `--no-build`). Unmatched filenames fail unless `--ignore-unknown`. `_incoming-art/` is gitignored (B44c).
 
-Replace a WebP in place, then `node tools/apply-bestiary-portrait-art.mjs` (Foundry closed) to restamp both fields and rebuild `packs/bestiary`.
+Replace a WebP in place, then `node tools/apply-bestiary-portrait-art.mjs` (Foundry closed) to restamp both fields and rebuild.
 
 ## Coordinator — drop the art zip
 
 1. Close Foundry (LevelDB lock).
-2. Unzip into `_incoming-art/` (flat, or a `bestiary/` subfolder). Filename = `<slug>.webp` (see inventory).
+2. Unzip into `_incoming-art/` (flat, or `bestiary/` + `summons/` subfolders). Filename = `<slug>.webp` (see inventory).
 3. Run:
 
 ```text
@@ -73,14 +82,14 @@ node tools/apply-bestiary-portrait-art.mjs --from _incoming-art
 node tools/apply-bestiary-portrait-art.mjs --list
 ```
 
-4. Confirm `art=yes` **and** `img-set=yes` **and** `token-set=yes` for all **33** slugs.
+4. Confirm `art=yes` **and** `img-set=yes` **and** `token-set=yes` for all **57** slugs.
 5. Bump `module.json` one patch only in that follow-up (not this PR).
 
-Alternatively, copy WebPs straight into `assets/tokens/bestiary/`, then `node tools/apply-bestiary-portrait-art.mjs` with no `--from`.
+Alternatively, copy WebPs straight into `assets/tokens/bestiary/` and `assets/tokens/summons/`, then `node tools/apply-bestiary-portrait-art.mjs` with no `--from`.
 
 ## Inventory — corp security L1–4 (9)
 
-Pack root: `src/packs/bestiary/corp-security/`. Module img: `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp`.
+Pack root: `src/packs/bestiary/corp-security/`. Dest: `assets/tokens/bestiary/`.
 
 | L | Name | slug / filename | Org | Role |
 |---|---|---|---|---|
@@ -96,7 +105,7 @@ Pack root: `src/packs/bestiary/corp-security/`. Module img: `modules/draw-steel-
 
 ## Inventory — Reach streets L1–4 (16)
 
-Pack root: `src/packs/bestiary/reach-streets/`.
+Pack root: `src/packs/bestiary/reach-streets/`. Dest: `assets/tokens/bestiary/`.
 
 | L | Name | slug / filename | Org | Role |
 |---|---|---|---|---|
@@ -119,7 +128,7 @@ Pack root: `src/packs/bestiary/reach-streets/`.
 
 ## Inventory — rivals E1 (7)
 
-Pack root: `src/packs/bestiary/rivals/`.
+Pack root: `src/packs/bestiary/rivals/`. Dest: `assets/tokens/bestiary/`.
 
 | L | Name | slug / filename | Org | Role |
 |---|---|---|---|---|
@@ -133,46 +142,107 @@ Pack root: `src/packs/bestiary/rivals/`.
 
 ## Inventory — Veil (1)
 
-Pack root: `src/packs/bestiary/veil-undead/`. Only the humanoid cultist; undead monsters stay placeholder.
+Pack root: `src/packs/bestiary/veil-undead/`. Dest: `assets/tokens/bestiary/`. Only the humanoid cultist; undead monsters stay placeholder.
 
 | L | Name | slug / filename | Org | Role |
 |---|---|---|---|---|
 | 2 | Veil Cultist | `veil-cultist` | platoon | support |
 
-**Counts: 9 corp + 16 streets + 7 rivals + 1 cultist = 33 Actors.** Live check: `node tools/apply-bestiary-portrait-art.mjs --list`.
+## Inventory — wire / ICE constructs (7)
 
-Today every in-scope Actor still uses a Draw Steel role placeholder (`systems/draw-steel/assets/roles/*.webp`) on both `img` and `prototypeToken.texture.src`.
+Pack root: `src/packs/bestiary/wire-machine/`. Dest: `assets/tokens/bestiary/`.
+
+| L | Name | slug / filename | Org | Role |
+|---|---|---|---|---|
+| 1 | Watchdog ICE | `watchdog-ice` | horde | defender |
+| 3 | Scrambler ICE | `scrambler-ice` | platoon | hexer |
+| 3 | Chrome Raider Armiger | `chrome-raider-armiger` | platoon | defender |
+| 3 | Chrome Raider Hijack | `chrome-raider-hijack` | platoon | ambusher |
+| 6 | Black ICE | `black-ice` | elite | hexer |
+| 6 | Signal Mindkiller Whelp | `signal-mindkiller-whelp` | minion | hexer |
+| 6 | Signal Talker Invader | `signal-talker-invader` | elite | controller |
+
+Black ICE / Signal horrors are L6 on the DS chassis; they are **in scope** because they are the published wire-machine folder (B103 expansion), not L6 corp meatspace bosses.
+
+## Inventory — summons L≤4 (17)
+
+Pack root: `src/packs/summons/`. Dest: `assets/tokens/summons/`.
+
+### Elementals (4)
+
+| L | Name | slug / filename | Org | Role |
+|---|---|---|---|---|
+| 1 | Ember Companion | `companion-ember` | minion | brute |
+| 1 | Zephyr Companion | `companion-zephyr` | minion | harrier |
+| 1 | Boulder Companion | `companion-boulder` | minion | defender |
+| 1 | Bound Elemental (Rank 1) | `elemental-rank-1` | minion | brute |
+
+### Spirits (3)
+
+| L | Name | slug / filename | Org | Role |
+|---|---|---|---|---|
+| 3 | Guardian Spirit | `spirit-guardian` | minion | defender |
+| 3 | Hunter Spirit | `spirit-hunter` | minion | controller |
+| 3 | Warrior Spirit | `spirit-warrior` | minion | brute |
+
+### Sprites — minor + intermediate only (8)
+
+| L | Name | slug / filename | Org | Role |
+|---|---|---|---|---|
+| 1 | Attack Sprite (Minor) | `sprite-attack-minor` | minion | harrier |
+| 1 | Data Sprite (Minor) | `sprite-data-minor` | minion | hexer |
+| 1 | Machine Sprite (Minor) | `sprite-machine-minor` | minion | support |
+| 1 | Ward Sprite (Minor) | `sprite-ward-minor` | minion | defender |
+| 4 | Attack Sprite (Intermediate) | `sprite-attack-intermediate` | minion | harrier |
+| 4 | Data Sprite (Intermediate) | `sprite-data-intermediate` | minion | hexer |
+| 4 | Machine Sprite (Intermediate) | `sprite-machine-intermediate` | minion | support |
+| 4 | Ward Sprite (Intermediate) | `sprite-ward-intermediate` | minion | defender |
+
+### Wired nodes (2)
+
+| L | Name | slug / filename | Org | Role |
+|---|---|---|---|---|
+| 3 | Wired Node (Track 1) | `node-token-track-1` | — | — |
+| 3 | Wired Node (Track 2) | `node-token-track-2` | — | — |
+
+**Counts: 9 corp + 16 streets + 7 rivals + 1 cultist + 7 wire + 17 summons = 57 Actors.** Live check: `node tools/apply-bestiary-portrait-art.mjs --list`.
+
+Today in-scope Actors still use Draw Steel role placeholders or generic icons on both `img` and `prototypeToken.texture.src`.
 
 ## Filename aliases the tool accepts
 
 Primary: kebab-case pack slug. Also:
 
 - no-hyphen forms (`corpenforcer` → `corp-enforcer`)
-- localized-name slugs (`rival-commander-echelon-1` from “Rival Commander (Echelon 1)”)
+- localized-name slugs (`rival-commander-echelon-1`, `ember-companion`, `attack-sprite-minor`, `wired-node-track-1`)
 - dropped `the-` (`choirmother` → `the-choirmother`)
-- rival short forms (`rival-hacker`, `rival-hacker-e1`, `rival-hacker-echelon-1` → `rival-hacker-echelon1`)
+- rival short forms (`rival-hacker`, `rival-hacker-e1` → `rival-hacker-echelon1`)
+- ICE short forms (`watchdog` → `watchdog-ice`)
 - `choir-mother` → `the-choirmother`
+- `node-track-1` / `node-track-2` → the node token slugs
 
-A file in a `bestiary/` (or nested pack-folder) subfolder still maps by basename.
+A file in a `bestiary/` or `summons/` (or nested pack-folder) subfolder still maps by basename; the folder selects the pack when needed.
 
 ## Out of scope
 
 - Generating art (follow-up zip)
 - Critters (`reach-critters/*`)
 - Wilds beasts (`wilds-jungles/*`)
-- Wire ICE / chrome raiders (`wire-machine/*`)
 - Undead monsters (`ghost`, `ghoul`, `skeleton`, `zombie`) — **except** `veil-cultist`
 - Mama Cassavir (L5)
 - L6 corp bosses (`contract-enforcer`, `ironclad-warden`, `warden-krael`)
+- Machine band templates (`src/packs/summons/machines/*`) — Deploy already stamps chassis Item art (B101)
+- Elemental Rank 2 / Rank 3 / Greater
+- Sprite `*-advanced`
 - Changing stats, abilities, or SFX
 - Vehicles / drones (B101) and armor / weapons (B102)
 
-Dropped skip-list filenames fail the apply (unless `--ignore-unknown`) so a mixed zip cannot silently stamp Mama or a critter.
+Dropped skip-list filenames fail the apply (unless `--ignore-unknown`) so a mixed zip cannot silently stamp Mama, a critter, or an advanced sprite.
 
 ## Checklist
 
 - [x] Spike inventory + path convention + Actor `img` / token update rule
-- [x] `tools/apply-bestiary-portrait-art.mjs` (slug → Actor `img` + `prototypeToken.texture.src` → `build-packs.mjs bestiary`)
-- [x] Empty `assets/tokens/bestiary/`
+- [x] `tools/apply-bestiary-portrait-art.mjs` (slug → Actor `img` + `prototypeToken.texture.src` → `build-packs.mjs` bestiary and/or summons)
+- [x] Empty `assets/tokens/bestiary/` + `assets/tokens/summons/`
 - [ ] WebPs attached → apply script → one patch bump
-- [ ] Foundry-verify sheet portrait + Scene token (Corp Enforcer + Rival Hacker + Street Doc)
+- [ ] Foundry-verify sheet portrait + Scene token (Corp Enforcer, Watchdog ICE, Ember Companion)

@@ -108,7 +108,7 @@
 - **B79** Artistic cosmos plate (Light Realms / Hells / Prime / Wire / related) — not started.
 - **B101** Vehicle + drone chassis token art — **SHIPPED 0.3.31** (`docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`). **36** drone + **32** vehicle WebPs in `assets/tokens/{drones,vehicles}/`; vehicles-pack Item `img` fields point at module token paths. *Pending Michael Foundry-verify (Deploy Fly + Getaway).*
 - **B102** Armor + weapon item art — **SHIPPED 0.3.32** (`docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`). **22** armor/shield + **49** weapon WebPs in `assets/tokens/{armor,weapons}/`; Gear pack + pregen embed `img` fields point at module token paths. *Pending Michael Foundry-verify (Equipment tab).*
-- **B103** Bestiary humanoid portrait art — **plumbing landed** (`docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`, `tools/apply-bestiary-portrait-art.mjs`, empty `assets/tokens/bestiary/`). **33** L1–4 corp / gang / E1 rival humanoids + veil-cultist; stamps Actor `img` + `prototypeToken.texture.src`. WebPs + one module patch in the upload follow-up. No bump while the folder is empty.
+- **B103** Bestiary + L≤4 summon portrait art — **plumbing landed** (`docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`, `tools/apply-bestiary-portrait-art.mjs`, empty `assets/tokens/{bestiary,summons}/`). **57** Actors (40 bestiary humanoids/ICE + 17 summons); stamps Actor `img` + `prototypeToken.texture.src`. WebPs + one module patch in the upload follow-up. No bump while the folders are empty.
 
 ## Systems / lore backlog
 

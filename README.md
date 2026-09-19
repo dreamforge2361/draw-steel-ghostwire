@@ -401,7 +401,7 @@ Armor + weapon item art (B102, **0.3.32**): 22 armor/shield + 49 weapon WebPs in
 
 Deadhead playtest (B104, **0.3.33**): Director SoR `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`. Empty JournalEntry pack **Ghostwire Runs** (`src/packs/runs/` → `packs/runs`) with folder **Deadhead**. Rebuild with `node tools/build-packs.mjs runs`. Content pass (pages, wafers, scenes) is not in this bump. Spike: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`.
 
-Bestiary humanoid portraits (B103, art forthcoming): drop `<slug>.webp` files into `assets/tokens/bestiary/`, then `node tools/apply-bestiary-portrait-art.mjs` (stamps Actor `img` + `prototypeToken.texture.src`; rebuilds `packs/bestiary`). Spike: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
+Bestiary + L≤4 summon portraits (B103, art forthcoming): drop `<slug>.webp` files into `assets/tokens/bestiary/` (humanoids + ICE) and `assets/tokens/summons/`, then `node tools/apply-bestiary-portrait-art.mjs` (stamps Actor `img` + `prototypeToken.texture.src`; rebuilds the packs that changed). Spike: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
 
 ## Rulebook
 
