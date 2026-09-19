@@ -1,0 +1,71 @@
+{
+  "_id": "GwStreetEyeB9401",
+  "_key": "!items!GwStreetEyeB9401",
+  "name": "GHOSTWIRE.Abilities.StreetEye.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "23-machines",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "street-eye",
+    "story": "GHOSTWIRE.Abilities.StreetEye.Story",
+    "keywords": [
+      "ranged",
+      "tech"
+    ],
+    "type": "maneuver",
+    "category": "",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "10",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 qualifying scout drone you own"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Abilities.StreetEye.Description",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "streetEye": true
+    }
+  }
+}

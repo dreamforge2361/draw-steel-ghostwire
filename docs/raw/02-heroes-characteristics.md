@@ -39,7 +39,7 @@ Assign scores with the array in **Characteristics** below. Ghostwire’s **step 
 6. **Languages** — `07-languages.md`.
 7. **Starting ¥** — **¥5,000** liquid on the sheet (`08`). Do not pre-spend Lifestyle; Lifestyle is paid at the first respite between runs (`26`).
 8. **Body Integrity** — **20** for every People except Cyborg (`09`). Chrome is opt-in after (or during) play — never an auto-grant at chargen.
-9. **Optional early spends** — Street-band gear, a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`.
+9. **Optional early spends** — Street-band gear (a Personal/Light air scout like Tape-Eye or Rotor grants **Street Eye** — `23`), a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`.
 
 When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, next Lifestyle band).
 
@@ -159,7 +159,7 @@ Gain skills from **People**, **Background**, **Profession**, and **class** (late
 | Gunnery | Vehicle-mounted weapons, drone weapon systems, and turret control |
 | Navigation | Route planning, pursuit lines, safe corridors, and hazard reading |
 
-Machines rules: `23-machines.md`.
+Machines rules: `23-machines.md`. A qualifying air scout in inventory grants **Street Eye** (Companion Link); Wrenches still use Deploy & Command (`16`).
 
 ### Magic and supernatural skills
 

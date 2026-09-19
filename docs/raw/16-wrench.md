@@ -3,7 +3,7 @@
 **RAW status:** draft  
 **Sources:** `docs/rulebook/05-wrench.md`
 
-Machine stat cards (drone, vehicle, building) appear in this chapter as Wrench rules; the shared drone and vehicle inventories are in `23-machines.md`.
+Machine stat cards (drone, vehicle, building) appear in this chapter as Wrench rules; the shared drone and vehicle inventories are in `23-machines.md`. Non-Wrench (and optional redundant Wrench) scout leashes use **Street Eye** (Companion Link) in that chapter — they do **not** replace Deploy & Command, Uptime, Jump-In, or Fleet Deck+.
 
 ---
 
@@ -83,6 +83,8 @@ Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st 
 > | 17+ | Deploy: the machine comes online with a free maneuver banked for later this round. Command: all commanded machines act, and you gain 1 Uptime. |
 >
 > *As a main action, bring a carried drone, turret, or vehicle online — it appears in an unoccupied space within Range and is now under your control. As a maneuver instead, issue orders to every machine you already control within Range; each acts on your turn per its programmed behavior or your direct call. Uptime cost 0.*
+>
+> **Firewall:** Street Eye in `23-machines.md` is the any-class soft leash. You still use this signature (and Rigged Fire / Jump-In / fleet features) even if Street Eye also appears on the sheet because you own a scout drone.
 
 > **Rigged Fire** (Signature)
 > *Command · Main Action · Range = the firing machine's weapon range*

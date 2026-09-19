@@ -109,7 +109,16 @@
           "Story": "Read the file. Change the record. Plant the evidence. Forge the badge.",
           "Effect": "<p>You read a file’s contents, alter a record, plant or delete evidence, or forge a credential in a node you’re at. This is the verb that actually changes information in the Wired.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
         }
+      },
+      "StreetEye": {
+        "Name": "Street Eye",
+        "Story": "A soft leash on one scout in the air — follow, watch, hold, or mark a corner.",
+        "Description": "<p><strong>Street Eye</strong> (rules name: <strong>Companion Link</strong>) is a soft leash on one qualifying scout drone — a Personal or Light air frame tagged Recon, Mark, or Decoy.</p><p>As a maneuver, deploy that drone on the leash or issue one soft order: <strong>follow</strong>, <strong>watch</strong>, <strong>hold</strong>, <strong>scout</strong>, <strong>surveillance</strong>, or <strong>minor support</strong> (spot or mark, watch a corner, light carry if the chassis can). This is not a gun platform and not Jump-In.</p><p><strong>Limits:</strong> max one drone active. The link lasts about one scene, then the drone standbys (~10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Rigging and Gunnery-through-drone power rolls take a bane. You cannot use Fleet Deck+ features, Uptime, Deploy &amp; Command, or Jump-In unless you are a Wrench using those class tools separately.</p>"
       }
+    },
+    "StreetEye": {
+      "Granted": "{actor} picked up a scout drone — Street Eye is on the sheet.",
+      "Revoked": "{actor} has no qualifying scout drone — Street Eye is gone."
     },
     "Skills": {
       "Groups": {
