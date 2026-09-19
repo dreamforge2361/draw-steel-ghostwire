@@ -200,3 +200,11 @@ The payload catalog (Effects, prices, Availability) is in the Gear master, Matri
 At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card; you do not invent extra Matrix subsystems beyond this chapter.
 
 Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster, Overlay / Jacked In, node templates Rating 1–5, Integrity, Trace Alert, reveal). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.
+
+## VOIDMARK (Wired presence)
+
+Some hosts answer with a voice that is not MER support and not ICE. Street callsign **VOIDMARK** (the Mark): a leash-slipped intelligence that treats the Wired as territory. Full lore: `docs/manuscript/01-lore/L4-voidmark.md`.
+
+> **In Foundry**
+> Talking to VOIDMARK at the table uses the Ghostwire AI chat (B82/B89) — persona system instructions and rules-pack RAG in Module Configuration. Optional canvas token when the Mark takes presence on a scene (`assets/ai-persona/` when art ships).
+

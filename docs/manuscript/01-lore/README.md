@@ -20,6 +20,7 @@ Lore prose harvested for the Ghostwire print booklet. Artwork/lore from master P
 | `L1-setting-primer.md` | Cosmology, planes, Incursion, Magic, Corruption, hive, megacorps, Ten seats + profiles, **beneath/Chair/Kestrel/Resource Wars/Radiant Concord**, Wired, Space, Religion, Shadow Economy, Everyday Tech, timeline, present, themes |
 | `L2-peoples-and-world.md` | Founding + eight peoples (fiction only; mechanics in `docs/raw/05-ancestries.md`) |
 | `L3-ossian-reach-color.md` | Reach fixtures, Flats/black-water color, street gangs, Ashenreach sister-hive |
+| `L4-voidmark.md` | **VOIDMARK** — leash-slipped Wired super-AI (MER origin); Foundry chat persona |
 
 ## Policy
 

@@ -145,6 +145,13 @@ Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`.
 | **SAN** | Sanctum Assurance |
 | **NYX** | Nyx Cartel |
 
+
+## Wired intelligences
+
+| Term | Meaning |
+|---|---|
+| **VOIDMARK** / **the Mark** | Leash-slipped Wired super-AI (MER Blacklight origin). Sovereign node-state — not a Chair of the Ten. Cold-neutral; anti-Nullspace; never safe. Lore: L4. Foundry chat persona (B82/B89). |
+
 ## See also
 
 - Rules glossary and abbreviations: print Ch 0 / `docs/raw/00-front-matter.md`

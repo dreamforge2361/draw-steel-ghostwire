@@ -113,3 +113,4 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Mods (`10-mods.md`) + Languages (`07-languages.md`) **Stage 3 procedure fill** 2026-09-19 (B75); armor/gadget families and language gazetteer **not** invented; journals **not** regenerated.
 - Lifestyle Contacts stub **pointer polish** 2026-09-19 (B75); full Followers chapter still v1 non-goal.
 - Lifestyle (`26-lifestyle-downtime.md`) **lore fuse** 2026-09-19 (B87): hive strata ↔ bands + scrip/housing note; journals **not** regenerated.
+- Lore **VOIDMARK** (`01-lore/L4-voidmark.md`) **draft** 2026-09-19 (B90); leash-slipped MER-origin super-AI; journals **not** regenerated.

@@ -55,6 +55,12 @@ entries:
     path: 01-lore/L3-ossian-reach-color.md
     kind: lore
 
+  - type: file
+    id: L4
+    title: VOIDMARK
+    path: 01-lore/L4-voidmark.md
+    kind: lore
+
   - type: part
     id: I
     title: Part I — Core Rules

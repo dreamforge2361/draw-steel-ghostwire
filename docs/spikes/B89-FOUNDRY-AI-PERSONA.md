@@ -1,3 +1,5 @@
+**Persona name LOCKED 2026-09-19: VOIDMARK** (street: the Mark).
+
 # B89 — Foundry AI chat: in-setting super-AI persona (BACKLOG)
 
 **Date:** 2026-09-19  
