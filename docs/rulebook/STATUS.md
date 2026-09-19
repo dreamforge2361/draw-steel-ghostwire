@@ -113,4 +113,4 @@
 - **B81** Prime overview (Main Realm, orbitals, near harvest worlds) + maps — not started.
 - **B82** Foundry Ghostwire AI applet (in-module LLM chat / optional agent bridge) — not started.
 - **B85** Historical timeline graphic — not started.
-- **B86** Deadfall / dark-zone sector map (mega-dungeon play surface) — not started.
+- **B86** Deadfall dark-zone **separate module** (depends on Ghostwire; mega-dungeon sector) — not started.
