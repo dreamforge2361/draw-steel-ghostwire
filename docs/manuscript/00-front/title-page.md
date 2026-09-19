@@ -14,7 +14,7 @@ Break free of the Machine. Run the Wire.
 | **Subtitle** | Street runs, chrome, and a quiet war — a setting for the **Draw Steel** engine |
 | **World** | **Ossian Reach** and the hive-cities of Veyra |
 | **Product line** | *Draw Steel — Ghostwire Build* (Foundry module `draw-steel-ghostwire`) |
-| **This file** | Print manuscript draft **v0.3.4** — Markdown SoR for later PDF |
+| **This file** | Print manuscript draft **v0.3.6** — Markdown SoR for later PDF |
 
 The chassis is Draw Steel. The street, the Signal, and the score are Ghostwire.
 
@@ -39,7 +39,7 @@ You are a runner. The hive is a climb. The Wire is a second night.
 │   asphalt, pink/cyan neon, gold Signal / halo above         │
 │   the storm (see docs/rulebook/ART-STYLE.md).               │
 │                                                             │
-│   Artist name, plate credit, and rights line:               │
+│   Credit: Ghostwire AI (AI-generated).               │
 │   **TO BE FILLED by Michael** — do not invent.              │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘

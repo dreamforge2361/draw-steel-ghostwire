@@ -1,7 +1,7 @@
 # Copyright & Credits
 
 **Status:** print-front draft (B74, 2026-09-19)  
-**Fill later:** cover / interior artist names, photographer credits, and any licensed stock lines — **Michael only**. Do not invent artists.
+**Art:** All Ghostwire artwork in this project is **AI-generated** (Ghostwire AI). Named human artist lines stay optional if Michael later commissions or licenses a plate.
 
 ---
 
@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.3**).
+**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.6**).
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 
@@ -36,21 +36,25 @@ Foundry Virtual Tabletop is a trademark of Foundry Gaming, LLC. This module is a
 
 ---
 
-## What this page does not claim
+## Artwork
 
-- **No cover artist** is named here. The title plate reserves the hole (`00-front/title-page.md`).
-- **No interior illustrator, cartographer, or photographer** is named until Michael fills the lines below.
-- **No third-party corporate logos** (real-world brands) appear as setting corps. Conglomerates in Ghostwire are original.
-- Harvested lore chapters (L1–L3) carry Ghostwire master-PDF prose already in-repo; they are not a license to paste *Draw Steel: Heroes*.
+**All artwork in Ghostwire was created by Ghostwire AI (AI-generated).** That includes cover and title plates, interior illustrations, Peoples/class plates, district battle maps, handbook book plates, and other visual assets shipped with this manuscript or the Foundry module, unless a caption explicitly names a different license.
 
-### Artist / plate credit (Michael fills)
+Human names are not required on AI plates. If Michael later commissions or licenses a non-AI plate, that plate gets its own credit line.
+
+### Plate index (AI unless noted)
 
 | Plate | Credit | Rights |
 |---|---|---|
-| Cover / title wrap | *TBD — artist name* | *TBD* |
-| Part openers / class plates | *TBD* | *TBD* |
-| District battle maps (B72) | *TBD — cartography / paint* | In-module: `assets/maps/districts/` |
-| Handbook book plates | *TBD* | `assets/reach-handbook/` |
+| Cover / title wrap | Ghostwire AI (AI-generated) | Ghostwire project |
+| Part openers / class plates | Ghostwire AI (AI-generated) | Ghostwire project |
+| District battle maps (B72) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/` |
+| Handbook book plates | Ghostwire AI (AI-generated) | `assets/reach-handbook/` |
+
+## What this page does not claim
+
+- **No third-party corporate logos** (real-world brands) appear as setting corps. Conglomerates in Ghostwire are original.
+- Harvested lore chapters (L1–L3) carry Ghostwire master-PDF prose already in-repo; they are not a license to paste *Draw Steel: Heroes*.
 
 ---
 
