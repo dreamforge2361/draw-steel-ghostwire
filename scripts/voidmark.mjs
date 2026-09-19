@@ -157,7 +157,8 @@ export class VoidmarkChat extends HandlebarsApplicationMixin(ApplicationV2) {
   /** @override */
   async _prepareContext() {
     const thread = readThread();
-    const configured = !!String(setting("apiKey") ?? "").trim() || (!game.user.isGM && !!activeHandlerGm());
+    const hasKey = !!String(setting("apiKey") ?? "").trim();
+    const configured = game.user.isGM ? hasKey : !!activeHandlerGm();
     const messages = thread.messages.map((m, i) => ({
       id: `m${i}`,
       role: m.role,
@@ -348,7 +349,7 @@ export class VoidmarkSettingsMenu extends HandlebarsApplicationMixin(Application
   }
 
   static async #onSubmit(_event, _form, formData) {
-    const data = formData.object;
+    const data = formData?.object ?? Object.fromEntries(formData ?? []);
     await game.settings.set(MODULE_ID, SETTINGS.apiBaseUrl, String(data.apiBaseUrl ?? "").trim());
     await game.settings.set(MODULE_ID, SETTINGS.model, String(data.model ?? "").trim());
     await game.settings.set(MODULE_ID, SETTINGS.temperature, Number(data.temperature));
@@ -359,9 +360,6 @@ export class VoidmarkSettingsMenu extends HandlebarsApplicationMixin(Application
 }
 
 function registerSettings() {
-  const StringField = foundry.data?.fields?.StringField;
-  const secretType = StringField ? new StringField({ required: false, blank: true }) : String;
-
   game.settings.register(MODULE_ID, SETTINGS.enabled, {
     name: `${L}.Settings.Enabled.Name`, hint: `${L}.Settings.Enabled.Hint`,
     scope: "world", config: true, type: Boolean, default: true,
@@ -376,7 +374,7 @@ function registerSettings() {
   });
   game.settings.register(MODULE_ID, SETTINGS.apiKey, {
     name: `${L}.Settings.ApiKey.Name`, hint: `${L}.Settings.ApiKey.Hint`,
-    scope: "world", config: true, type: secretType, default: "", secret: true,
+    scope: "world", config: true, type: String, default: "", secret: true,
   });
   game.settings.register(MODULE_ID, SETTINGS.model, {
     name: `${L}.Settings.Model.Name`, hint: `${L}.Settings.Model.Hint`,
