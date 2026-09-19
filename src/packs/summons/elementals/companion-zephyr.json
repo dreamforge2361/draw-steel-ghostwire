@@ -3,7 +3,7 @@
   "_key": "!actors!gW0CGxPdjw9x6OYq",
   "name": "GHOSTWIRE.Summons.Elementals.CompanionZephyr.Name",
   "type": "npc",
-  "img": "icons/magic/air/wind-tornado-wall-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/companion-zephyr.webp",
   "system": {
     "stamina": {
       "value": 15,
@@ -186,7 +186,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/air/wind-tornado-wall-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/companion-zephyr.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

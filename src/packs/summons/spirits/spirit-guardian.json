@@ -3,7 +3,7 @@
   "_key": "!actors!TehG5h5EWmGfMNN6",
   "name": "GHOSTWIRE.Summons.Spirits.SpiritGuardian.Name",
   "type": "npc",
-  "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/spirit-guardian.webp",
   "system": {
     "stamina": {
       "value": 20,
@@ -184,7 +184,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/holy/barrier-shield-winged-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/spirit-guardian.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

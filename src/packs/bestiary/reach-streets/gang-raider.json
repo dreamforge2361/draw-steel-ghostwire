@@ -3,7 +3,7 @@
   "name": "GHOSTWIRE.Bestiary.Actors.GangRaider.Name",
   "type": "npc",
   "_id": "3rIQkdmxl0kUvznF",
-  "img": "systems/draw-steel/assets/roles/minion.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/gang-raider.webp",
   "system": {
     "stamina": {
       "value": 4,
@@ -112,7 +112,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/minion.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/gang-raider.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

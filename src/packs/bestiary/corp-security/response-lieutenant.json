@@ -3,7 +3,7 @@
   "name": "GHOSTWIRE.Bestiary.Actors.ResponseLieutenant.Name",
   "type": "npc",
   "_id": "g7LC1G0K20UnYzkr",
-  "img": "systems/draw-steel/assets/roles/leader.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/response-lieutenant.webp",
   "system": {
     "stamina": {
       "value": 80,
@@ -112,7 +112,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/leader.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/response-lieutenant.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

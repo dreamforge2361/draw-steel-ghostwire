@@ -3,7 +3,7 @@
   "_key": "!actors!5PQzuveIVj7ZuS1T",
   "name": "GHOSTWIRE.Summons.Spirits.SpiritWarrior.Name",
   "type": "npc",
-  "img": "icons/magic/holy/angel-winged-humanoid-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/spirit-warrior.webp",
   "system": {
     "stamina": {
       "value": 20,
@@ -184,7 +184,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/holy/angel-winged-humanoid-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/spirit-warrior.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

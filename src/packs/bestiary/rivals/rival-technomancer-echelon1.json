@@ -1,7 +1,7 @@
 {
   "name": "GHOSTWIRE.Bestiary.Actors.RivalTechnomancerEchelon1.Name",
   "type": "npc",
-  "img": "systems/draw-steel/assets/roles/hexer.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/rival-technomancer-echelon1.webp",
   "system": {
     "stamina": {
       "value": 60,
@@ -1007,7 +1007,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/hexer.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/rival-technomancer-echelon1.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

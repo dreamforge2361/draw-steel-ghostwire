@@ -3,7 +3,7 @@
   "_key": "!actors!WIEOzyTRQbrenLTJ",
   "name": "GHOSTWIRE.Summons.Elementals.CompanionEmber.Name",
   "type": "npc",
-  "img": "icons/magic/fire/elemental-creature-horse.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/companion-ember.webp",
   "system": {
     "stamina": {
       "value": 15,
@@ -186,7 +186,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/fire/elemental-creature-horse.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/companion-ember.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

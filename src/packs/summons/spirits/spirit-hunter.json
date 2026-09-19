@@ -3,7 +3,7 @@
   "_key": "!actors!HiCGKz9XF1e8jjOE",
   "name": "GHOSTWIRE.Summons.Spirits.SpiritHunter.Name",
   "type": "npc",
-  "img": "icons/magic/control/control-influence-puppet.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/spirit-hunter.webp",
   "system": {
     "stamina": {
       "value": 20,
@@ -184,7 +184,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/control/control-influence-puppet.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/spirit-hunter.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

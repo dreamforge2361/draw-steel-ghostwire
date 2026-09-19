@@ -3,7 +3,7 @@
   "_key": "!actors!xh1OA6E8Ly8CRB4g",
   "name": "GHOSTWIRE.Summons.Nodes.Track2.Name",
   "type": "npc",
-  "img": "icons/magic/lightning/orb-ball-purple.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/node-token-track-2.webp",
   "system": {
     "stamina": {
       "value": 26,
@@ -186,7 +186,7 @@
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": "icons/magic/lightning/orb-ball-purple.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/node-token-track-2.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

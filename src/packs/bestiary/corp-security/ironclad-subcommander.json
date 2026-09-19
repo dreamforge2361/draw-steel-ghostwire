@@ -1,7 +1,7 @@
 {
   "name": "GHOSTWIRE.Bestiary.Actors.IroncladSubcommander.Name",
   "type": "npc",
-  "img": "systems/draw-steel/assets/roles/support.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/ironclad-subcommander.webp",
   "system": {
     "stamina": {
       "value": 20,
@@ -653,7 +653,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/support.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/ironclad-subcommander.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

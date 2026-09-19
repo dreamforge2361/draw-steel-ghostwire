@@ -1,8 +1,8 @@
 # Spike B103 — Bestiary + L≤4 summon portrait art
 
 **Date:** 2026-09-19  
-**Module:** **0.3.32** (plumbing only — no bump)  
-**Status:** **PLUMBING** — apply script + empty `assets/tokens/{bestiary,summons}/`. WebPs + one patch wait for the art-zip follow-up.  
+**Module:** **0.3.35**  
+**Status:** **SHIPPED** — 40 bestiary (humanoids + ICE) + 17 L≤4 summon WebPs; Actor `img` + `prototypeToken.texture.src` + LevelDB rebuilt. Michael approved shipping (no further art review). *Pending Foundry-verify (sheet + Scene token).*  
 **Pairs with:** `docs/masters/GHOSTWIRE_BESTIARY.md`, `docs/spikes/B38-BESTIARY-REVIEW-RESKIN-WAVE1.md`, `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`, `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`
 
 ## Goal
@@ -12,9 +12,7 @@ Portrait art for **57** published Actors, named by pack slug, stamped onto **bot
 1. Actor `img` (sheet portrait)
 2. The same Actor’s `prototypeToken.texture.src` (canvas token)
 
-Then rebuild the pack(s) that changed (`bestiary` and/or `summons`). Generate is **not** this ticket — another agent drops WebPs; this ticket is the path convention + apply tool.
-
-Art arrives in a follow-up zip. This PR only builds the apply path.
+Then rebuild the pack(s) that changed (`bestiary` and/or `summons`). Plumbing (apply script + empty dirs) landed first; this bump ships the `gw-bestiary-portraits` pack.
 
 **Counts:** 33 L1–4 humanoids + 1 veil-cultist + 7 wire ICE/constructs + 17 L≤4 summons = **57**.
 
@@ -83,9 +81,11 @@ node tools/apply-bestiary-portrait-art.mjs --list
 ```
 
 4. Confirm `art=yes` **and** `img-set=yes` **and** `token-set=yes` for all **57** slugs.
-5. Bump `module.json` one patch only in that follow-up (not this PR).
+5. Bump `module.json` one patch only when shipping new binaries.
 
 Alternatively, copy WebPs straight into `assets/tokens/bestiary/` and `assets/tokens/summons/`, then `node tools/apply-bestiary-portrait-art.mjs` with no `--from`.
+
+**Shipped from `gw-bestiary-portraits.zip`:** 57 canonical `<slug>.webp` + `MANIFEST.json` in a flat folder (no zip aliases required).
 
 ## Inventory — corp security L1–4 (9)
 
@@ -244,5 +244,5 @@ Dropped skip-list filenames fail the apply (unless `--ignore-unknown`) so a mixe
 - [x] Spike inventory + path convention + Actor `img` / token update rule
 - [x] `tools/apply-bestiary-portrait-art.mjs` (slug → Actor `img` + `prototypeToken.texture.src` → `build-packs.mjs` bestiary and/or summons)
 - [x] Empty `assets/tokens/bestiary/` + `assets/tokens/summons/`
-- [ ] WebPs attached → apply script → one patch bump
+- [x] WebPs attached → apply script → **0.3.35**
 - [ ] Foundry-verify sheet portrait + Scene token (Corp Enforcer, Watchdog ICE, Ember Companion)

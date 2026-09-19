@@ -3,7 +3,7 @@
   "name": "GHOSTWIRE.Bestiary.Actors.CorpSecurityOfficer.Name",
   "type": "npc",
   "_id": "DVEibxfpEWA5RoCn",
-  "img": "systems/draw-steel/assets/roles/minion.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/corp-security-officer.webp",
   "system": {
     "stamina": {
       "value": 5,
@@ -113,7 +113,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/minion.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/corp-security-officer.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

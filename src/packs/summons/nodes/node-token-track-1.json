@@ -3,7 +3,7 @@
   "_key": "!actors!BopALxX0JALF9mZr",
   "name": "GHOSTWIRE.Summons.Nodes.Track1.Name",
   "type": "npc",
-  "img": "icons/commodities/tech/cog-steel.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/node-token-track-1.webp",
   "system": {
     "stamina": {
       "value": 1,
@@ -186,7 +186,7 @@
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": "icons/commodities/tech/cog-steel.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/node-token-track-1.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

@@ -1,7 +1,7 @@
 {
   "name": "GHOSTWIRE.Bestiary.Actors.IroncladConscript.Name",
   "type": "npc",
-  "img": "systems/draw-steel/assets/roles/minion.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/ironclad-conscript.webp",
   "system": {
     "stamina": {
       "value": 4,
@@ -555,7 +555,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "systems/draw-steel/assets/roles/minion.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/ironclad-conscript.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

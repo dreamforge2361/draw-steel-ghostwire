@@ -3,7 +3,7 @@
   "_key": "!actors!plCMG24qo4BXjnwl",
   "name": "GHOSTWIRE.Summons.Sprites.SpriteAttackMinor.Name",
   "type": "npc",
-  "img": "icons/magic/lightning/bolt-strike-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack-minor.webp",
   "system": {
     "stamina": {
       "value": 14,
@@ -186,7 +186,7 @@
     "prependAdjective": false,
     "depth": 1,
     "texture": {
-      "src": "icons/magic/lightning/bolt-strike-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/summons/sprite-attack-minor.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
