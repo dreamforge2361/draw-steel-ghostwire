@@ -275,6 +275,80 @@ figcaption {
 }
 
 /* In Foundry callouts stay instructional, cyan rule */
-blockquote p:first-child strong {
+blockquote p:first-child strong,
+blockquote.gw-foundry p:first-child strong {
   color: var(--gw-cyan);
 }
+
+blockquote.gw-street {
+  border-left-color: var(--gw-pink);
+  background: color-mix(in srgb, var(--gw-pink) 8%, var(--gw-surface));
+}
+blockquote.gw-street p:first-child strong {
+  color: var(--gw-pink);
+}
+
+/* Appendix B — remap chips, firewall, Done-when, checkboxes */
+.gw-remap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.45rem 0 0.75rem;
+  font-family: var(--gw-font-ui);
+  font-size: 0.78rem;
+}
+.gw-remap span {
+  border: 1px solid color-mix(in srgb, var(--gw-cyan) 40%, var(--gw-border));
+  background: var(--gw-surface-2);
+  color: var(--gw-text);
+  padding: 0.18rem 0.5rem;
+}
+.gw-remap em {
+  color: var(--gw-text-muted);
+  font-style: normal;
+  text-decoration: line-through;
+  text-decoration-color: var(--gw-pink);
+}
+.gw-remap strong {
+  color: var(--gw-cyan);
+}
+.gw-firewall {
+  margin: 0.7rem 0;
+  padding: 0.45rem 0.8rem;
+  border-left: 3px solid var(--gw-pink);
+  background: color-mix(in srgb, var(--gw-pink) 10%, var(--gw-surface));
+  font-family: var(--gw-font-ui);
+  font-size: 0.88rem;
+}
+.gw-firewall strong {
+  color: var(--gw-pink);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+.gw-done {
+  margin: 0.9rem 0;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--gw-gold) 55%, var(--gw-border));
+  background: color-mix(in srgb, var(--gw-gold) 10%, var(--gw-surface));
+  page-break-inside: avoid;
+}
+.gw-done strong {
+  color: var(--gw-gold);
+  font-family: var(--gw-font-ui);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+.gw-done ul {
+  margin: 0.35rem 0 0.15rem 1.1rem;
+}
+li.gw-check {
+  list-style: none;
+  margin-left: -0.35rem;
+}
+li.gw-check input[type="checkbox"] {
+  accent-color: var(--gw-cyan);
+  margin-right: 0.4rem;
+  vertical-align: -0.1em;
+}
+

@@ -294,3 +294,10 @@ entries:
     kind: new
     print_ch: 28
 
+  - type: file
+    id: ch29
+    title: Character Generation Cheat Sheet (Foundry)
+    path: 04-back/29-chargen-cheat-sheet.md
+    kind: new
+    print_ch: 29
+
