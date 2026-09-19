@@ -114,4 +114,4 @@
 - **B82** Foundry Ghostwire AI applet (in-module LLM chat / optional agent bridge) — not started.
 - **B85** Historical timeline graphic — not started.
 - **B86** Deadfall dark-zone **separate module** (depends on Ghostwire; mega-dungeon sector) — not started.
-- **B89** Foundry AI chat **in-setting super-AI persona** (name + configurable system instructions for Grok) — not started (with B82).
+- **B89** Foundry AI chat **in-setting super-AI persona** + **manuscript lore** (name/background/history + In Foundry sidebar) — not started (with B82).

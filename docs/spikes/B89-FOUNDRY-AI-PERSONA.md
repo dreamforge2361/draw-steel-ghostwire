@@ -22,3 +22,22 @@ Players and the Director reach out from Foundry and talk to an in-world oracle /
 
 ## Non-goals yet
 Live bridge to Cursor/Grok Bot agent session; multiple personas UI; spending ¥ / rolling without GM confirm.
+
+## Manuscript / rulebook lore (LOCKED intent — Michael 2026-09-19)
+
+Before or with the Foundry applet, ship **print lore** so the table knows who they are talking to:
+
+1. **Name** (coin with Michael — not locked yet)
+2. **Background & history** — origin (corp / Signal / deep Wired / independent), relationship to the Reach and the Ten (esp. **MER** if net-native), what it wants, what it will not do
+3. **Where it lives in fiction** — how crews "reach" it (deck ritual, MER host, black-market terminal, etc.)
+4. Placement: new short section in lore (L1 expand or L4 Wire-adjacent) **and/or** a Systems sidebar chapter pointer from The Wire (21)
+5. **In Foundry sidebar** (B68 pattern): how to open the Ghostwire AI chat, that Module Configuration holds system instructions, GM vs player access — click-notes only, not a second rule
+
+### Deliverables
+- docs/manuscript/ or docs/raw/ lore page (TBD path after name lock)
+- MANIFEST/TOC entry when drafted
+- Cross-link from Wire chapter + slang glossary if the street has a nickname
+
+### Non-goals yet
+Full novel; implementing the applet UI (B82); live bridge to Cursor agent.
+
