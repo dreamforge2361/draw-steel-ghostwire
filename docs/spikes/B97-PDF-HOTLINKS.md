@@ -1,9 +1,21 @@
 # Spike B97 — PDF internal hotlinks (Chrome HTML→PDF)
 
 **Status:** Built 2026-09-19 · official rulebook PDF cut (Michael lock 2026-09-18: not a draft)  
-**Rulebook PDF:** **Version 0.4.0** (`Ghostwire-Rulebook-0.4.0.pdf` / `.html`)  
-**Foundry module:** **0.4.0** (`module.json` — aligned; install path is module `id` `draw-steel-ghostwire`, not the version string)  
+**Rulebook PDF:** **Version 0.4.0** (`Ghostwire-Rulebook-0.4.0.pdf` / `.html`) — official, not a draft  
+**Foundry module:** **0.3.22** (`module.json` — next free 0.3.x after main 0.3.21; **independent** of the PDF version)  
 **Journals:** **not** regenerated
+
+## Version cut (official, not draft)
+
+Michael lock 2026-09-18: when the hotlink PDF is done, this is an **official version**.
+
+| | |
+|---|---|
+| PDF / HTML | `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (and `.html`) — **not** `…-DRAFT` |
+| Front matter | **Version 0.4.0** — first official rulebook PDF / playtest edition |
+| Module | **0.3.22** — hotlink ship only. PDF version is independent; do not force-align `module.json` to 0.4.0. |
+
+`--sample` still writes `Ghostwire-Rulebook-SAMPLE.*`. Old `…-DRAFT.*` names are gitignored leftovers only; the pipeline no longer writes them.
 
 ## Goal
 
@@ -104,7 +116,7 @@ Heading structure is already `h1` (parts + chapter titles) / `h2` / `h3`. Collis
 - [x] `linkify-manuscript.mjs` after inject
 - [x] Generated Contents page
 - [x] Chrome outline flags + limitation documented
-- [x] `module.json` **0.4.0** (aligned with official PDF; Foundry folder stays `modules/draw-steel-ghostwire/`)
+- [x] `module.json` **0.3.22** (hotlink ship; PDF version is independent)
 - [x] Official PDF filenames / titles **0.4.0** (not DRAFT)
 - [x] Journals not regenerated
 

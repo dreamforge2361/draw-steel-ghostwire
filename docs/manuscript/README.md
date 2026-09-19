@@ -1,6 +1,6 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Official rulebook PDF **Version 0.4.0** (first official / playtest edition · B88 + B97 hotlinks) — Foundry module **0.4.0** (aligned); Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates in-tree; journals still held  
+**Status:** Official rulebook PDF **Version 0.4.0** (first official / playtest edition · B88 + B97 hotlinks) — Foundry module **0.3.22** (independent); Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates in-tree; journals still held  
 **Path:** `docs/manuscript/`  
 **Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline · **B97** PDF hotlinks  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
@@ -84,7 +84,7 @@ node tools/linkify-manuscript.mjs
 node tools/build-pdf.mjs
 ```
 
-Or `node tools/build-pdf.mjs` alone (runs assemble → inject → linkify → HTML/PDF). Output: `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (gitignored) and `ART-GAP-REPORT.md`. Journals stay held. Foundry module is also **0.4.0**.
+Or `node tools/build-pdf.mjs` alone (runs assemble → inject → linkify → HTML/PDF). Output: `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` (gitignored) and `ART-GAP-REPORT.md`. Journals stay held. Foundry module stays **0.3.22**.
 
 Hotlinks (B97): generated Contents + RAW `` `21` `` / print-Ch / Appendix pointers become `#heading` links. Spike: `docs/spikes/B97-PDF-HOTLINKS.md`.
 

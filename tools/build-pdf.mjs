@@ -32,7 +32,7 @@ const BUILD = join(ROOT, "docs/manuscript/build");
 const ASSEMBLED = join(BUILD, "Ghostwire-Manuscript.md");
 const WITH_ART = join(BUILD, "Ghostwire-Manuscript.with-art.md");
 const WITH_LINKS = join(BUILD, "Ghostwire-Manuscript.with-links.md");
-/** Official print book version (aligned with module.json 0.4.0). */
+/** Official print book version (independent of Foundry module.json 0.3.22). */
 const RULEBOOK_VERSION = "0.4.0";
 const HTML_OUT = join(BUILD, `Ghostwire-Rulebook-${RULEBOOK_VERSION}.html`);
 const PDF_OUT = join(BUILD, `Ghostwire-Rulebook-${RULEBOOK_VERSION}.pdf`);
