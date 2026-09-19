@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.15**).
+**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). Version on this draft matches `module.json` (**0.3.17**).
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 
@@ -20,13 +20,13 @@
 
 ## Draw Steel (separate product)
 
-Ghostwire runs on the **Draw Steel** engine. You need *Draw Steel Heroes* to play. This book does **not** reprint, reconstruct, or stand in for that product.
+Ghostwire runs on the **Draw Steel** engine and is playable from **this book**. You do **not** need *Draw Steel Heroes* or another Draw Steel rulebook at the table. This book does **not** reprint or reconstruct MCDM prose.
 
 > Draw Steel - Ghostwire Build is an independent product published under the DRAW STEEL Creator License and is not affiliated with MCDM Productions, LLC. DRAW STEEL © 2024 MCDM Productions, LLC.
 
 That statement appears in every published form of this book (print Ch 0 repeats it). Compatibility logo art is permitted by the Creator License and is **not** shipped in this draft.
 
-**Do not** treat Ghostwire class text, chrome, Wire procedures, or Reach color as MCDM IP. **Do not** treat Draw Steel characteristics, Power Rolls, combat loop, or monster math as Ghostwire originals — those remain MCDM’s engine, used here by reference and remap.
+**Do not** treat Ghostwire class text, chrome, Wire procedures, or Reach color as MCDM IP. **Do not** treat Draw Steel characteristics, Power Rolls, combat loop, or monster math as Ghostwire originals — those remain MCDM’s engine, used here under the DRAW STEEL Creator License and stated in this book.
 
 ---
 

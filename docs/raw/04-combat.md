@@ -2,7 +2,7 @@
 
 **RAW status:** draft (Stage 3 fill 2026-09-18)  
 **Sources:** class chapters (heroic resources), `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (armor as Stamina), `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/raw/05-ancestries.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`, `docs/raw/23-machines.md`, `docs/directors/equipment-use-abilities.md` (B49 / B44c)  
-**Engine:** Draw Steel Heroes — shared combat loop (initiative shape, action economy math, forced movement vs stability, cover, conditions list, Malice). Ghostwire procedures below are original wording; remaps and module behavior are authoritative for this book.
+**Engine:** Ghostwire combat procedures in this chapter. Playable without a separate rulebook.
 
 ---
 
@@ -13,7 +13,7 @@ Combat begins when someone draws, opens fire, or the Director says the quiet par
 1. **Declare the fight.** Who is hostile, who is caught in the middle, and which board matters first — meatspace grid, Wire topology, or both cutting between each other (`21`).
 2. **Place people.** Runners, drones, vehicles, and opposition on the active board. Note connection state for anyone Overlaid or Jacked In.
 3. **Surprise.** If one side had the drop — silent approach, ambush, a Matrix Verb that never tipped Trace Alert — that side acts first for the opening beat. Otherwise everyone is already in the soup.
-4. **Turn order.** Use Draw Steel’s combat turn order. Ghostwire does not invent a second initiative system. The Director may cut to a Jacked In runner’s Wire turn between meatspace turns when both boards are live.
+4. **Turn order.** Each combatant who can act takes one turn per round. If surprise is unclear, the Director picks who starts from the fiction (the side that opened fire, the runner who jacked in first). Then alternate **crew** and **opposition** in an order the table can track — or use the Foundry combat tracker if you are on Foundry. Ghostwire does not invent a second initiative stat. The Director may cut to a Jacked In runner’s Wire turn between meatspace turns when both boards are live.
 5. **Resources tick.** Classes that gain heroic resource at the start of combat or the start of their turn do so per their class chapter. **Medic Reagents do not reset** when a fight starts or ends.
 
 Once the first turn begins, you are in **rounds**.
@@ -43,7 +43,7 @@ If an ability costs a **heroic resource**, check the cost before you commit. You
 
 ## Heroic resources in a fight
 
-Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise, a resource follows Draw Steel’s heroic-resource timing (gain, spend, encounter boundaries).
+Each class fuels its abilities with its own heroic resource. Unless its class chapter says otherwise: gain the printed amount at the **start of combat** and/or the **start of your turn**; spend on printed costs; leftover usually **dumps when the fight ends**.
 
 | Class | Resource | Notable combat rule (see class chapter) |
 |---|---|---|
@@ -59,7 +59,15 @@ Each class fuels its abilities with its own heroic resource. Unless its class ch
 
 **Cost check:** in combat, a runner can’t use a heroic ability that costs more of their resource than they currently have.
 
-**Surges and Victories** work as in Draw Steel Heroes unless a class or Wire rule says otherwise. Malice and the Director’s side live in `25`.
+**Victories** (job-beat wins that also feed some class resources) live in `24`. **Malice** and the Director’s side live in `25`.
+
+**Surges (this book).** A **surge** is a one-use damage bonus. You hold it until you spend it or the encounter ends, unless the ability that granted it names a shorter clock.
+
+- **Gain:** when an ability says you (or an ally) gain one or more surges, mark them on the sheet.
+- **Spend:** when you deal damage with a strike or a damaging ability, you may spend **one or more** surges you currently hold. Each surge spent adds **extra damage equal to your highest characteristic** (minimum +1). Choose after you know the Power Roll result, before damage is applied.
+- You cannot spend surges you do not have. Unspent surges vanish at the end of the encounter unless an ability says they last longer.
+
+Ghostwire adds no second surge currency. Class and Wire text that “incorporates 1 or more surges” means you spent at least one surge on that damage.
 
 ---
 
@@ -69,13 +77,15 @@ Each class fuels its abilities with its own heroic resource. Unless its class ch
 
 **Armor is Stamina.** Worn armor raises maximum Stamina instead of subtracting from incoming damage. The only true damage reduction on the street is **typed immunity** (and similar) from sealed or hardened gear (`08`). When someone says “my plating held,” they mean the Stamina pool bought by that armor — not a separate DR layer.
 
-**Winded.** When current Stamina falls to or below your winded value (half maximum, per Draw Steel), you are winded. The condition’s mechanical bite is the shared engine’s; Ghostwire only remaps *how you got that pool* (armor-as-Stamina, chrome, class).
+**Winded.** Your **winded value** is **half your maximum Stamina** (round down). When current Stamina is at or below that number, you are **winded**. Winded is a state abilities key off (Medic compounds, some apexes, nameless-foe drop lines). It does not add a bane by itself unless an ability says so.
 
-**Recoveries** are your finite “patch myself / get patched” budget for the day (or until a full rest, per Draw Steel Heroes). Spending a Recovery usually restores Stamina equal to your **Recovery value**. Class features, Medic compounds, and Catch Breath all lean on that number.
+**Recoveries** are your finite “patch myself / get patched” budget until the next full respite (`26`). Spending a Recovery restores Stamina equal to your **Recovery value**.
 
-**Catch Breath** (maneuver, when the shared engine allows it): spend Recoveries to climb back toward fighting shape without leaving the fight. Specific riders (Glowing Recovery, Rig Recovery, and so on) live in ancestry and class chapters — this chapter only names the shared loop.
+**Recovery value** is how much Stamina one Recovery restores. The hero sheet prints it. On paper, if the class chapter does not print a number, use **one-third of your current maximum Stamina** (round down, minimum 1). Class features, Medic compounds, and Catch Breath all lean on that number.
 
-Out of combat, rest and Recoveries follow Draw Steel Heroes, with Ghostwire downtime color in `01` and ¥ / lifestyle costs in `08`.
+**Catch Breath** (maneuver): spend **one Recovery** to regain Recovery-value Stamina without leaving the fight, if you have a Recovery left and the Director agrees you have a breath (not mid-shove, not Jacked In and inert). Specific riders (Glowing Recovery, Rig Recovery, and so on) live in ancestry and class chapters.
+
+Out of combat, a **respite** (`26`) lets you spend Recoveries freely, then **refills your Recovery pool** to the class maximum. Squatter rest may be incomplete (`26`). ¥ / lifestyle costs live in `08` and `26`.
 
 ---
 
@@ -90,15 +100,15 @@ Ghostwire heroes do **not** lean on generic Melee Free Strike / Ranged Free Stri
 3. **Improvised fallback** — no qualifying kit weapon in hand means class weapon abilities still work, but **kit bonuses and kit signature weapon riders do not** (`08`). Bare fists, a pipe, or a grabbed pistol that isn’t your kit piece are improvised.
 
 > **In Foundry**
-> Use the stock Draw Steel **combat tracker** for turn order. Owned Ghostwire weapons spawn sheet abilities named **Fire {weapon}** or **Strike with {weapon}** (B49) — roll those, not generic free strikes. The module **strips** stock Melee/Ranged Free Strike from heroes and NPCs (B44c) so sheets stay clean. Ability SFX may play from the chat card when you fire.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use the Foundry **combat tracker** for turn order. Owned Ghostwire weapons spawn sheet abilities named **Fire {weapon}** or **Strike with {weapon}** (B49) — roll those, not generic free strikes. The module **strips** stock Melee/Ranged Free Strike from heroes and NPCs (B44c) so sheets stay clean. Ability SFX may play from the chat card when you fire.
 
 Table fiction and class text may still say “free strike” when an ability *grants* one (Commander Overwatch, Scout decoys, hybrid Changer +1 on melee free-strike-shaped attacks, and so on). In Foundry play, resolve those grants with a weapon use-ability, an improvised strike the Director allows, or the ability’s own printed attack — not by re-adding the stripped generics.
 
 ### Damage types
 
-Draw Steel’s damage types are used unchanged. Ghostwire gear tags map onto them:
+Damage types in this book include acid, cold, corruption, fire, holy, lightning, poison, psychic, sonic, and untyped (kinetic). Ghostwire gear tags map onto them:
 
-| Gear tag | Draw Steel damage |
+| Gear tag | Damage type |
 |---|---|
 | Electrical | Lightning |
 | Toxin | Poison |
@@ -116,9 +126,12 @@ Combat uses a square grid in meatspace unless the Director switches to theater-o
 
 - **Melee** reach is usually adjacent (1 square) unless an ability or weapon says otherwise.
 - **Ranged** abilities and B49 weapon use-abilities print a distance (Ranged 5, 10, 20, …). Kit bonuses may extend distance on abilities that carry the right keywords (`08`).
-- **Areas** (burst, cube, line, wall) use Draw Steel’s area language; Ghostwire Optics / Tech / Chrome keywords do not change how squares are counted.
-- **Line of effect, cover, concealment, flanking** follow Draw Steel Heroes. Street clutter — cars, drones, neon pillars — is ordinary cover unless a Wire Overlay or Optics ability says it isn’t.
-- **Forced movement** (push, pull, slide) contests **stability** as in the shared engine.
+- **Areas** (burst, cube, line, wall) count squares from the origin the ability names. Ghostwire Optics / Tech / Chrome keywords do not change how squares are counted.
+- **Line of effect:** you need an unblocked path to the target. Solid walls stop it; windows, gratings, and neon do not unless the Director says the shot is impossible.
+- **Cover:** if a barrier blocks part of the line from attacker to target, the target has **cover** — the attacker takes a **bane** on the strike. Street clutter — cars, drones, neon pillars — is ordinary cover unless a Wire Overlay or Optics ability says it isn’t.
+- **Concealment:** you cannot be seen clearly (smoke, dark, Overlay glare). Strikes against you take a **bane**; you may attempt Hide (`03`).
+- **Flanking:** if two allies stand on opposite sides of a target (adjacent, facing through the target), melee strikes against that target gain an **edge**.
+- **Forced movement** (push, pull, slide) moves the target the printed number of squares. **Stability** reduces forced movement by that many squares (minimum 0). If leftover movement would go through a solid wall, the target stops unless the ability says they break through.
 - **Wire distances** are topology and node ranges, not street squares — see `21`. A Jacked In body does not walk the grid while the mind is in the Wire.
 
 Vehicle chases use a range track (`23`), not a crowded five-foot hallway, unless the Director drops the fight onto a parking deck mid-chase.
@@ -127,21 +140,33 @@ Vehicle chases use a range track (`23`), not a crowded five-foot hallway, unless
 
 ## Conditions
 
-Ghostwire uses Draw Steel’s condition list: bleeding, dazed, frightened, grabbed, prone, restrained, slowed, taunted, weakened, and the rest the engine defines.
+When an ability applies a named condition, use the short glossary below unless the ability prints a different rider. **Save ends** means a saving throw (`03`) at the end of the target’s turn.
 
-This chapter does not reprint those definitions. When an ability applies a condition, use the shared engine’s entry. Ghostwire-only fail states that are *not* that list:
+| Condition | Ghostwire read |
+|---|---|
+| **Bleeding** | Take damage at the start of your turn (the amount the ability printed, or **1d6** if none). Save ends. |
+| **Dazed** | On your turn you may take only **one** of: main action, maneuver, or move — not all three. |
+| **Frightened** | **Bane** on Power Rolls that target the source; you cannot willingly move closer to them. |
+| **Grabbed** | Speed 0; you cannot move away from the grabber. |
+| **Prone** | **Bane** on your strikes; melee strikes against you gain an **edge**. Stand as your move action. |
+| **Restrained** | You cannot move or take move actions; **bane** on most Power Rolls. |
+| **Slowed** | Your Speed becomes **2** (or the printed number) until the effect ends. |
+| **Taunted** | **Bane** on actions that do not include the taunter as a target. |
+| **Weakened** | **Bane** on Power Rolls. |
 
-- **Chrome Suppressed / Damaged / Destroyed** (`09`) — implant status, not a DS condition.
+Ghostwire-only fail states that are *not* that list:
+
+- **Chrome Suppressed / Damaged / Destroyed** (`09`) — implant status, not a condition from the glossary above.
 - **System Crisis** (Cyborg) and **inert** (Revenant) — ancestry fail states (`05`).
 - **Connection Overlay / Jacked In** — Wire states with combat riders (`21`), not conditions.
 
-If a Medic, Priest, or Program “clears a condition,” it means a Draw Steel condition unless the text names chrome or Wire state explicitly.
+If a Medic, Priest, or Program “clears a condition,” it means a row from the glossary above unless the text names chrome or Wire state explicitly.
 
 ---
 
 ## Keywords added by Ghostwire
 
-Ghostwire abilities use Draw Steel’s keywords plus:
+Ghostwire abilities use the usual action and effect keywords (melee, ranged, strike, weapon, area, magic, and so on) plus:
 
 | Keyword | Meaning |
 |---|---|
@@ -185,9 +210,14 @@ Caster soft-cap / Weave Strain for magic-primary classes is a chrome install rul
 
 ### Shared loop
 
-When Stamina hits **0**, the runner is **dying** (or otherwise defeated per Draw Steel Heroes — winded thresholds, death saves / dying track, and what “defeated” means for nameless opposition). Allies can stabilize, heal, or drag them clear. Medics and several class apexes interact with that line explicitly (`15` and others).
+When Stamina hits **0**, a **named** runner or threat is **dying**. They fall prone. At the start of each of their turns while dying, they make a saving throw (`03`):
 
-**Defeated** opposition is usually out of the fight: fled, unconscious, bound, or dead, Director’s call for the fiction. Named threats may use the full dying rules; mooks often just drop.
+- **Success (6+):** they stay dying but do not slide further.
+- **Failure:** they take one **dying strike**. After **three** dying strikes, they **die**.
+
+Allies can **stabilize** them (a Medicine test, a printed heal, or Catch Breath if the fiction allows). Stabilized: they stop accumulating dying strikes and sit at **1 Stamina** (or stay at 0 unconscious if the ability says so) until they take damage again. Medics and several class apexes interact with that line explicitly (`15` and others).
+
+**Defeated** opposition is usually out of the fight: fled, unconscious, bound, or dead, Director’s call for the fiction. **Nameless** opposition (minions, most street mooks) is defeated at 0 Stamina — no dying track. Named threats may use the full dying rules.
 
 ### Cyborgs — System Crisis
 
@@ -223,7 +253,7 @@ Combat ends when the Director says the threat is over: hostiles fled, surrendere
 Then:
 
 1. **Drop initiative.** Return to scene time (`01`).
-2. **Heroic resources.** Most reset or settle per class / Draw Steel encounter boundaries. **Reagents stay where they are.**
+2. **Heroic resources.** Most reset or dump when the fight ends, per the class chapter. **Reagents stay where they are.**
 3. **Trace Alert, heat, and clocks** do not auto-clear — Wire and street consequences persist (`21`, `25`).
 4. **Chrome and machines** that were Damaged or wrecked stay that way until repaired (`09`, `23`).
 5. **Victories / Malice bookkeeping** follows the shared engine and `25`.

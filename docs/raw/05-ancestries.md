@@ -5,7 +5,7 @@
 
 ---
 
-## Structural rule (Draw Steel aligned)
+## Structural rule
 
 Ghostwire Peoples are **creation-time ancestry packages**:
 
@@ -15,18 +15,18 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 
 ---
 
-## Mapping (Ghostwire ↔ Draw Steel)
+## Peoples and ancestry points
 
-| Ghostwire People | Draw Steel spine | Ancestry points |
-|---|---|---|
-| Pure Human | Human | 3 |
-| Corran (“Squat”) | Dwarf | 3 |
-| Elvani (“Elf”) | High Elf | 3 |
-| Goliar (“Ogre”) | Orc | 3 |
-| Changer | Dragon Knight *(field-for-field reskin)* | 3 |
-| Revenant | Revenant | 2 (or 3 if size 1S) |
-| Mutant Human | Devil | 3 |
-| Cyborg | Time Raider | 3 |
+| Ghostwire People | Ancestry points |
+|---|---|
+| Pure Human | 3 |
+| Corran (“Squat”) | 3 |
+| Elvani (“Elf”) | 3 |
+| Goliar (“Ogre”) | 3 |
+| Changer | 3 |
+| Revenant | 2 (or 3 if size 1S) |
+| Mutant Human | 3 |
+| Cyborg | 3 |
 
 ---
 
@@ -48,7 +48,7 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 ## Key species constraints
 
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
-- **Revenants** are embodied undead. They use Draw Steel **Former Life** + **Tough But Withered** (inert instead of dying; fire while inert = permanent destruction).
+- **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).
 - **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation.
 - **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
@@ -56,7 +56,8 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 
 ## Pure Human
 
-**Draw Steel spine:** Human · **3 ancestry points**  
+**Ancestry points:** 3  
+
 **Quick Build:** Perseverance, Staying Power
 
 ### Signature Trait — Detect the Supernatural (free)
@@ -75,7 +76,8 @@ As a maneuver, you can open your awareness to detect supernatural creatures and 
 
 ## Corran (“Squat”)
 
-**Draw Steel spine:** Dwarf · **3 ancestry points**  
+**Ancestry points:** 3  
+
 **Quick Build:** Grounded, Hardened Hide
 
 ### Signature Trait — Labor Brand (free)
@@ -102,7 +104,8 @@ You can have **one** brand active at a time, and can change or remove a brand wi
 
 ## Elvani (“Elf”)
 
-**Draw Steel spine:** High Elf · **3 ancestry points**  
+**Ancestry points:** 3  
+
 **Quick Build:** High Senses, Otherworldly Grace
 
 ### Signature Trait — Corp Glamor (free)
@@ -124,7 +127,8 @@ A carefully cultivated presence makes others perceive you as interesting and eng
 
 ## Goliar (“Ogre”)
 
-**Draw Steel spine:** Orc · **3 ancestry points**  
+**Ancestry points:** 3  
+
 **Quick Build:** Glowing Recovery, Grounded
 
 ### Signature Trait — Relentless (free)
@@ -143,7 +147,8 @@ Whenever a creature deals damage to you that leaves you dying, you can make a **
 
 ## Changer
 
-**Draw Steel spine:** Dragon Knight · **3 ancestry points** *(field-for-field reskin)*  
+**Ancestry points:** 3  
+
 **Quick Build:** Savage Burst + Layered Hide  
 
 Lineage and form each have a small mechanical effect (below). They cost no ancestry points and do not change Beast-Hide or the purchased traits.
@@ -189,7 +194,8 @@ Your hardened hide, fur, or feathers grant you **damage immunity equal to your l
 
 ## Revenant
 
-**Draw Steel spine:** Revenant · **2 ancestry points** (or **3** if your size is **1S**)  
+**Ancestry points:** 2 (or **3** if your size is **1S**)  
+
 **Quick Build:** Bloodless (plus Undead Influence if size 1S)
 
 ### Signature Trait — Former Life (free)
@@ -235,7 +241,8 @@ Additionally, when your Stamina reaches the **negative of your winded value**, y
 
 ## Mutant Human
 
-**Draw Steel spine:** Devil · **3 ancestry points**  
+**Ancestry points:** 3  
+
 **Quick Build:** Warped Legs, Ossified Crown
 
 ### Signature Trait — Aberrant Rapport (free)
@@ -264,7 +271,7 @@ Visible taint and social “reads as wrong” are Director color layered on this
 
 ## Cyborg
 
-**Draw Steel spine:** Time Raider · **3 ancestry points**  
+**Ancestry points:** 3  
 **Quick Build:** Penetration Optics, Installed Suite with Particle Lance
 
 ### Signature Trait — Cortical Firewall (free)

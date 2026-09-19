@@ -18,7 +18,7 @@ This manuscript is the **print core book**: lore first, then the rules you need 
 
 **Lore is harvest, not a second rules pass.** L1 is the setting primer. L2 is peoples as fiction (packages stay in print Ch 6). L3 is optional street color — **not** a reprint of the Ossian Reach Handbook or the Wired Flats gazetteer. Those stay in Foundry journals and `docs/setting/`.
 
-You **need *Draw Steel Heroes*** to play. Shared-engine chapters tell you which official rules to open, then give Ghostwire procedures in our own words. This book does not steal or reconstruct MCDM prose.
+You play Ghostwire from **this book**. Procedure chapters give characteristics, Power Rolls, combat, Recoveries, and advancement in Ghostwire words. This book does not send you to another rulebook to resolve a turn. License and engine credit live on the title and credits pages.
 
 ---
 
@@ -40,12 +40,11 @@ Print chapter numbers do not always match `docs/raw/` filenames (Advancement is 
 
 ## What you need at the table
 
-- *Draw Steel Heroes* (engine).
-- This book (Ghostwire remaps + original systems).
-- Dice for Power Rolls (two ten-sided dice, plus whatever Draw Steel already calls for).
+- **This book** (Ghostwire procedures, remaps, and original systems).
+- **Dice** — two ten-sided dice per player for Power Rolls (print Ch 3), plus one ten-sided die for saving throws.
 - A way to track Stamina, Recoveries, heroic resources, **¥**, **Body Integrity**, and Wire connection state.
 
-Paper works. Foundry works. You do not need the lore PDFs, the Handbook journal, or a printed bestiary to start a Flats job.
+Paper works. Foundry works (enable **Draw Steel - Ghostwire Build** on a compatible Foundry world). You do not need lore PDFs, the Handbook journal, or a printed bestiary to start a Flats job.
 
 ---
 
@@ -72,7 +71,6 @@ Print plates follow `docs/rulebook/ART-STYLE.md`: cinematic cyberpunk-fantasy no
 
 - Invent chrome ¥ ladders or package prices beyond what Chrome already locked.
 - Invent Rank 2+ / Greater summon **strike** numbers (Veil §C3 still defers those).
-- Reprint *Draw Steel: Heroes*.
 - Reprint the Reach Handbook or Wired Flats gazetteer into the core PDF.
 - Name cover artists who have not been hired or credited by Michael.
 

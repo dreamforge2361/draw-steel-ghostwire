@@ -13,7 +13,7 @@ The **Technomancer** (`20`) is not a Veil caster — their power works through t
 
 ## Magic keyword
 
-An ability with the **Magic** keyword draws on the Veil. Magic abilities follow Draw Steel's rules for the keyword.
+An ability with the **Magic** keyword draws on the Veil. Magic abilities use the same action types, Power Rolls, and targeting as other abilities in this book (`03`, `04`). Cyborg Arcane Severance and chrome erosion apply (`05`, `09`).
 
 ## Who can't use magic
 
@@ -58,7 +58,7 @@ Any runner can take a **supernatural perk** (`11`): small Veil and Signal gifts,
 
 ## Ritual Workings (LOCKED 2026-09-18 — B43)
 
-Encounter abilities (Essence / Conviction / Resonance) are the fight toolkit. A **Ritual Working** is long-form big magic: a Draw Steel **Project** chain on the same section-Craft downtime spine as Invent a Mod (`08`, `10`). It spends yen, lore, reagents, and **Veil Price / spirit-attention**, and pays out effects encounter casting should not cheaply do.
+Encounter abilities (Essence / Conviction / Resonance) are the fight toolkit. A **Ritual Working** is long-form big magic: a **Project** chain (`03`) on the same §Craft downtime spine as Invent a Mod (`08`, `10`). It spends yen, lore, reagents, and **Veil Price / spirit-attention**, and pays out effects encounter casting should not cheaply do.
 
 Rituals are **between runs** (or a dedicated session beat). They never replace combat resource economy.
 

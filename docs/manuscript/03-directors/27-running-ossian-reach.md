@@ -134,7 +134,7 @@ Named fixtures that punish lingering (Deadfall Nine / the Quiet Floor, a climbin
 
 ## Downtime has an address
 
-Lifestyle bands are the same vertical you just ran (`26` + gear master §F3). A Flats crash is **Low** unless the fiction is a condemned nest (Squatter) or a hardened loft the crew is overpaying for. Paying Middle while living in the Flats is a **safehouse story**, not a math exploit — the Director can charge heat or a lean for a flat that looks too clean.
+Lifestyle bands are the same vertical you just ran (`26`). A Flats crash is **Low** unless the fiction is a condemned nest (Squatter) or a hardened loft the crew is overpaying for. Paying Middle while living in the Flats is a **safehouse story**, not a math exploit — the Director can charge heat or a lean for a flat that looks too clean.
 
 Medic restock, §Craft, chrome surgery, and Ritual Workings resolve in their own chapters. This chapter only asks: **where** did they sleep, and who can find that door?
 

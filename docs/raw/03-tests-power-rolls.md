@@ -2,7 +2,7 @@
 
 **RAW status:** draft (Stage 3 fill 2026-09-18)  
 **Sources:** `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED), `docs/rulebook/08-hacker.md`, `docs/rulebook/18-wired-foundry.md`, `docs/rulebook/17-perks.md`, `docs/raw/21-the-wire.md`  
-**Engine:** Draw Steel Heroes — use the official rules for shared engine procedures (tests, edges/banes math, skills on tests, saving throws, hero-token economy, negotiation and projects). Ghostwire remaps and table procedures below are original wording.
+**Engine:** Ghostwire test and Power Roll procedures in this chapter. Playable without a separate rulebook.
 
 ---
 
@@ -42,7 +42,7 @@ Abilities, weapons, Matrix Verbs, and gear print what each result does. Where te
 **Doctrine lock:** print order is always **low → middle → high** (≤11 / 12–16 / 17+). Never invert the ladder. Never invent a fourth band.
 
 > **In Foundry**
-> Use abilities from the hero sheet (or hotbar). Draw Steel posts an **abilityUse** chat card with the Power Roll; Ghostwire SFX (B40) may play when the card lands. The module adds edges/banes automatically where it can: **Hacking** and **Jacked In** on Wired rolls, **Overlay** bane on real-world rolls, suite software edges, and **Weave Strain** bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use abilities from the hero sheet (or hotbar). The system posts an **abilityUse** chat card with the Power Roll; Ghostwire SFX (B40) may play when the card lands. The module adds edges/banes automatically where it can: **Hacking** and **Jacked In** on Wired rolls, **Overlay** bane on real-world rolls, suite software edges, and **Weave Strain** bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.
 
 
 ### Which characteristic?
@@ -63,7 +63,7 @@ Wired work almost always keys **Logic** (analysis, intrusion) or **Instinct** (p
 
 ## Skills on tests
 
-Ghostwire’s skill list replaces Draw Steel’s list (`02`). Skills work on tests the same way Draw Steel’s skills do: if you have a relevant skill, you get that engine’s skill benefit on the Power Roll.
+Ghostwire’s skill list lives in `02`. If you have a relevant skill, you gain that skill’s benefit on the Power Roll: add **+2** to the total.
 
 **Ghostwire exception — Hacking:** having the **Hacking** skill gives an **edge** on every rolling Matrix Verb and other **Wired** Power Roll. For those rolls it replaces the usual skill benefit. Details and Verb list live in `21`.
 
@@ -82,20 +82,28 @@ An **edge** means the situation favors you. A **bane** means it fights you. Edge
 - Two banes (after canceling) is a **double bane**.
 - More than two of the same side still resolve as a double edge or double bane — you do not keep stacking forever.
 
-Exactly how extra dice are kept or dropped follows Draw Steel Heroes. Ghostwire only cares that you **net** edges against banes before you roll, then read **low / middle / high** from the final total.
+**How the extra dice work (this book):**
+
+1. Net edges against banes first. What remains is none, one edge, one bane, a double edge, or a double bane.
+2. Roll **two** ten-sided dice as usual, plus **one extra** d10 per remaining edge or bane (two extra for a double).
+3. **Edge / double edge:** drop the lowest die (or two lowest dice), then add the two you keep to the characteristic.
+4. **Bane / double bane:** drop the highest die (or two highest dice), then add the two you keep to the characteristic.
+5. Read **low / middle / high** from that final total.
+
+A **natural double** is two matching faces on the first two dice you rolled, before drops. Extra edge/bane dice do not create or cancel that double.
 
 ### Common Ghostwire sources
 
 | Source | Typical modifier |
 |---|---|
-| Relevant skill (non-Hacking Wired exception above) | Skill benefit per Draw Steel |
+| Relevant skill (non-Hacking Wired exception above) | **+2** to the Power Roll |
 | **Hacking** on Wired Power Rolls | **Edge** (`21`) |
 | Connection **Overlay** on real-world rolls | **Bane** (`21`) |
 | Connection **Jacked In** on Wired rolls | **Edge** (`21`) |
 | Medium / heavy armor encumbrance | Banes on named tests (`08`) |
 | Mods, suite software, chrome | Situational edges (`09`, `10`, `19`) |
 | **Damaged** implant | Penalty or bane as chrome text says (`09`) |
-| Flanking, cover, conditions | As Draw Steel combat; GW keywords in `04` |
+| Flanking, cover, conditions | Combat chapter (`04`) |
 | Ally assist (below) | Usually an edge for the primary roller |
 
 If two rules both want to give “an edge on this roll,” they stack until cancel math applies — they do not silently overwrite each other unless an ability says it replaces another benefit (as Hacking does for Wired rolls).
@@ -108,8 +116,9 @@ When both ten-sided dice show the **same face** before modifiers, that is a **na
 
 A natural double is Ghostwire’s cue for a **critical** on that Power Roll. In practice:
 
-- Treat the roll as the ability’s **high** result if the total would not already be high — or apply the critical rider Draw Steel Heroes defines for power-roll crits, whichever the table is using for shared-engine consistency.
-- If the ability already lists a special line for criticals, use that line.
+- Treat the roll as the ability’s **high** result if the total would not already be high.
+- If the ability already lists a special line for criticals, use that line instead (or in addition, if it says so).
+- On a damaging roll with no other critical rider, add **extra damage equal to your highest characteristic** (minimum +1).
 - On Wired rolls, a critical often means a **clean** intrusion: the Verb or Program lands at its best printed effect, and Trace Alert usually does **not** tick from that roll unless the ability’s high or critical clause says otherwise (`21`).
 
 A natural double is about the **dice faces**, not the final total. Adding a characteristic cannot create a double; canceling edges and banes cannot remove one that already showed.
@@ -144,7 +153,11 @@ Sometimes two sides pull against each other: a Scout shadows a corpsec lieutenan
 3. Compare totals. The higher total wins. On a tie, the Director breaks it from the fiction (usually the defender holds, or the status quo remains) unless an ability says otherwise.
 4. If the contest uses printed low/middle/high effects (common on Matrix Verbs and social Marks), read **each** roller’s result band for their own side effects (Trace Alert, Marks, conditions), then use the comparison to see who achieved their goal.
 
-Opposed tests, group tests, and montage tests follow Draw Steel’s structures; Ghostwire only remaps characteristic names, skill lists, and Wired modifiers. Perk text that mentions group or montage tests (`11`) spends **hero tokens** as written there.
+**Group test:** everyone who can contribute makes a Power Roll. Count **high as 2 successes**, **middle as 1**, **low as 0**. The Director sets how many successes the beat needs (usually about the crew’s size).
+
+**Montage:** several group tests in a row (infiltrate, then vault, then extract). Failures add heat or burn time; they do not auto-fail the job unless the last beat is a disaster.
+
+Perk text that mentions group or montage tests (`11`) spends **hero tokens** as written there.
 
 ---
 
@@ -152,7 +165,7 @@ Opposed tests, group tests, and montage tests follow Draw Steel’s structures; 
 
 Crews survive by covering each other.
 
-**Assist (simple):** when fiction allows (same scene, able to contribute, not Jacked In and inert while the ally acts in meatspace), an ally can spend their relevant action or maneuver — as Draw Steel’s help/assist timing requires — to grant the primary runner an **edge** on one Power Roll. The helper narrates how: covering fire, a spoofed badge ping, a whispered tell, a brace under the vault door.
+**Assist (simple):** when fiction allows (same scene, able to contribute, not Jacked In and inert while the ally acts in meatspace), an ally spends their **maneuver** (or their main action if the help needs both hands) to grant the primary runner an **edge** on one Power Roll. If the ally is already in position when the roll happens, the Director may let this fire as a triggered action instead. The helper narrates how: covering fire, a spoofed badge ping, a whispered tell, a brace under the vault door.
 
 **Limits that keep assists honest:**
 
@@ -167,9 +180,17 @@ Some perks and class features change assist math (ignore a low-assist bane, shar
 
 ## Heroes’ Fortune (hero tokens)
 
-Ghostwire keeps Draw Steel’s table-luck currency under the name **Heroes’ Fortune**. The spendable chips are **hero tokens**.
+Ghostwire’s table-luck currency is **Heroes’ Fortune**. The spendable chips are **hero tokens**.
 
-Use Draw Steel Heroes for how many tokens the table starts with, when the pool refreshes, and the default spends (rerolls, dramatic saves, and other shared-engine options). Ghostwire adds:
+**Pool (this book):** at the start of each session, the crew shares a **Heroes’ Fortune** pool of **one hero token per player** (not counting the Director). After a respite between runs (`26`), refill the pool up to that starting count if it is below. Do not exceed the starting count unless a perk says so.
+
+**Default spends** (one token each, player’s choice):
+
+- Reroll one Power Roll you just made; keep the new total.
+- Turn a saving throw you just failed into a success.
+- Gain an **edge** on a Power Roll before you roll.
+
+Ghostwire also adds:
 
 - **Perks** that spend hero tokens for specific street tricks (`11`) — project double-downs, montage skill sharing, lie detection, and similar.
 - Flavor at the table: tokens are the crew’s shared grit and luck, not ¥ and not a class heroic resource. Adrenaline, Bandwidth, Conviction, and the rest never convert into hero tokens or the other way around.
@@ -181,19 +202,50 @@ If a perk and a default Heroes’ Fortune spend both want the same moment, the p
 
 ## Potency, resistance, and saving throws
 
-Some effects ask a target to resist with a characteristic — often written as **potency** keyed to Physique, Reflex, Logic, Instinct, or Persona. Use Ghostwire names everywhere; the numbers and resist procedure are Draw Steel’s.
+Some effects ask a target to resist with a characteristic — often written as **potency** keyed to Physique, Reflex, Logic, Instinct, or Persona. Use Ghostwire names everywhere.
 
-**Saving throws** (end-of-turn shakes against lasting conditions, and similar) also use the shared engine as written. Ghostwire conditions and keywords (`04`) ride on top; they do not invent a second save ladder.
+**Potency (this book).** When an ability prints a rider like **Reflex < strong → prone** (or `R<STRONG`, `A<WEAK`, and similar), compare the target’s named characteristic to this table:
+
+| Potency word | Rider applies if the target’s characteristic is… |
+|---|---|
+| **Weak** | **1** or less |
+| **Average** | **2** or less |
+| **Strong** | **3** or less |
+
+If the ability prints a number instead of a word (Reflex < 2), use the number. A feature that **increases potency by 1** steps weak → average → strong, or adds +1 to a printed number (strong becomes 4 or less). The rider does **not** apply if the target’s score is higher than the threshold.
+
+**Saving throws.** When an effect says **save ends**, or when you are dying (`04`), roll **1d10** at the end of your turn (or when the ability says). On a **6 or higher**, the effect ends (or the dying strike does not land). Some abilities raise or lower the number you need; write that next to the condition. Ghostwire conditions and keywords (`04`) ride on this ladder — they do not invent a second one.
 
 Biofeedback, Trace Alert, and Wire Integrity are **not** saving throws — they are Wired systems (`21`).
 
 ---
 
-## Negotiation and projects (pointer)
+## Test difficulties
 
-**Negotiation** with fixers, patrons, and level-bosses uses Draw Steel’s negotiation engine. Ghostwire only reskins the faces and the stakes (¥, access, heat). Motivations and pitfalls still apply.
+When this book or an ability names **easy / medium / hard** (Wrench Jump-In, Technomancer biofeedback, and similar), read the Power Roll this way:
 
-**Projects** (including Ghostwire **§Craft**) use project Power Rolls in downtime. Technical hosts typically roll **Logic** with Hacking, Electronics, Repair, or Cybertech (`08`, `10`). Hero-token perk spends on projects are listed in `11`.
+| Difficulty | Success | Partial | Fail |
+|---|---|---|---|
+| **Easy** | Middle or high (12+) | — | Low (≤11) |
+| **Medium** | High (17+) | Middle (12–16): costly success or incomplete | Low |
+| **Hard** | High (17+), and apply a **bane** unless the fiction already gave one | Middle: costly / incomplete | Low |
+
+Freeform tests with no printed difficulty use the usual **low / middle / high** bands and the Director names what each band does.
+
+## Negotiation and projects
+
+**Negotiation** with fixers, patrons, and level-bosses (this book):
+
+1. The Director names the NPC’s **drive** (Greed, Higher Authority, Freedom, Vengeance, Fear, or a one-line want) and one **pitfall** (the line that tanks the deal).
+2. The talking runner makes an opening **Persona** Power Roll (Negotiation if they have it). Low / middle / high move the terms: pay band, access, heat (`08`).
+3. Each additional argument is another test, a spent heroic resource, or a hero token. After **two** failures, or if someone hits the pitfall, the deal sours — walk or fight.
+4. Class text that names a motivation (Freedom / Greed / Vengeance, and so on) grants an **edge** when the fiction matches that drive.
+
+**Projects** (including Ghostwire **§Craft** and language / lore research) are downtime jobs. Each one consumes a Lifestyle **project slot** (`26`) unless the text says otherwise. Make a Power Roll with the named characteristic and skill. If the project has a **goal** (a number), add **progress**: low = **1**, middle = **2**, high = **3**. You finish when progress meets the goal.
+
+**Default goals:** routine published install / swap (`10`) = **3** · **Discover Lore** (one useful fact about a foe, site, or faction) = **4** · **Learn New Language** = **6** (Polyglot halves that after immersion — `07`, `11`) · Invent a Mod as printed in `10`.
+
+Technical hosts typically roll **Logic** with Hacking, Electronics, Repair, or Cybertech (`08`, `10`). Hero-token perk spends on projects are listed in `11`.
 
 ---
 
@@ -228,22 +280,22 @@ Abilities, perks, and gear print effects by **low / middle / high**. Where a Wir
 
 ---
 
-## Engine by reference
+## Procedure map
 
-| Rule | Use from Draw Steel Heroes | Ghostwire |
-|---|---|---|
-| Making a test | As written | Characteristic names per `02` |
-| Test difficulty / when to call a roll | As written | Stakes guidance in this chapter |
-| Power Roll dice and result bands | As written | Always print **low / middle / high** (≤11 / 12–16 / 17+) |
-| Edges and banes (including doubles) | As written | Connection states; Hacking edge; GW gear/chrome |
-| Skills in tests | As written | Ghostwire skill list (`02`); Hacking exception (`21`) |
-| Natural doubles / criticals | As written | GW voice + Wired clean-crit note above |
-| Opposed, group, and montage tests | As written | Assist baseline above; perk spends (`11`) |
-| Potency and resisting effects | As written | Ghostwire characteristic names |
-| Saving throws | As written | — |
-| Heroes’ Fortune / hero tokens | As written | Perk spends (`11`); not convertible to ¥ or class resources |
-| Negotiation | As written | Patrons and fixers |
-| Projects | As written | §Craft uses Hacking, Electronics, Repair, or Cybertech (`08`, `10`) |
+| Rule | This book |
+|---|---|
+| Making a test | This chapter; characteristic names per `02` |
+| Test difficulty / when to call a roll | Stakes guidance + easy / medium / hard table above |
+| Power Roll dice and result bands | Always print **low / middle / high** (≤11 / 12–16 / 17+) |
+| Edges and banes (including doubles) | Extra-dice procedure above; connection states; Hacking edge; GW gear/chrome |
+| Skills in tests | **+2** skill benefit; Ghostwire skill list (`02`); Hacking exception (`21`) |
+| Natural doubles / criticals | High result + optional characteristic damage; Wired clean-crit note above |
+| Opposed, group, and montage tests | Contested / group / montage procedures above; perk spends (`11`) |
+| Potency and resisting effects | Weak / average / strong table above |
+| Saving throws | 1d10, succeed on 6+ |
+| Heroes’ Fortune / hero tokens | Pool and default spends above; perk spends (`11`); not convertible to ¥ or class resources |
+| Negotiation | Drive / pitfall procedure above |
+| Projects | Goal + progress (1 / 2 / 3); §Craft uses Hacking, Electronics, Repair, or Cybertech (`08`, `10`) |
 
 ---
 
@@ -271,4 +323,4 @@ Abilities, perks, and gear print effects by **low / middle / high**. Where a Wir
 | Perks that spend hero tokens | `11` |
 | Connection states, Trace Alert, Matrix Verbs | `21` |
 
-This chapter tells you **how uncertain actions resolve**. Combat timing lives in `04`. The Wire’s second battlefield lives in `21`. When this book and Draw Steel Heroes disagree for Ghostwire play, **this book wins**.
+This chapter tells you **how uncertain actions resolve**. Combat timing lives in `04`. The Wire’s second battlefield lives in `21`. This book is the play rules.

@@ -12,13 +12,13 @@
 A **Kit** is a **loadout doctrine** — a package of trained fighting technique that turns a category of gear into a personal combat style. It represents *how you were trained to fight*, not *what you happen to be carrying*.
 
 - A Kit grants a bundle of combat bonuses (Stamina, damage, speed, stability, distance, disengage) and one **signature ability** — a repeatable weapon attack keyed to the Kit.
-- A Kit is **flexible and never locked**: a hero may swap Kits during a respite (a respite activity), exactly as Draw Steel allows. Training can be re-focused between runs; it is not a permanent build choice.
+- A Kit is **flexible and never locked**: a hero may swap Kits during a respite (a respite activity). Training can be re-focused between runs; it is not a permanent build choice.
 - **A Kit is training, so it lives on the character-power side of the firewall — it is never bought with nuyen.** This is the key distinction from gear. A Kit is character capability (like a class feature or skill); the item the Kit uses is Economy gear. Nuyen never buys the doctrine; it buys the tool the doctrine needs.
 - **Not every hero leans on a Kit equally.** Kits are the martial identity layer — the **Operator, Scout, Commander**, and any gun/blade/fist-forward build live here. A pure caster (Elementalist, Street-Priest) or a deck-bound Hacker may take a light Kit or none, fighting instead through the Veil or the Wired resource systems.
 
 ### The bridge to the Economy — the ownership rule
 
-This is the rule that keeps Kits and the Economy/gadgets system intact and interlocked. Draw Steel's "if you don't wield your kit's gear you lose its bonuses" clause becomes the load-bearing bridge here:
+This is the rule that keeps Kits and the Economy/gadgets system intact and interlocked. If you don't wield your Kit's gear, you lose its bonuses — that ownership clause is the load-bearing bridge here:
 
 1. **A Kit names a category, not a specific item.** A Kit calls for, e.g., "a light firearm + light armor," "a heavy weapon + heavy armor," "a precision rifle, no armor," or "unarmed / cyber-limb strikes." Categories are broad; the specifics are yours.
 2. **You must OWN a qualifying item — bought through the Economy — to get the Kit's bonuses.** The gun, blade, bow-equivalent, or armor that satisfies the Kit's category is nuyen-purchased, Availability-gated (echelon-appropriate) gear like everything else. No qualifying weapon in hand means no weapon bonuses from the Kit (you're using an improvised weapon, below). No qualifying armor worn means no Stamina/stability bonus from the Kit. **The Kit is inert without the gear the Economy supplies.**
@@ -30,21 +30,21 @@ This is the rule that keeps Kits and the Economy/gadgets system intact and inter
 
 ### What a Kit grants
 
-Each Kit provides some subset of the following, drawn from the Draw Steel benchmark and re-expressed for this system:
+Each Kit provides some subset of the following:
 
-- **Stamina bonus** — added to Stamina maximum; scales by **echelon** (Draw Steel). Requires the Kit's armor to be worn.
+- **Stamina bonus** — added to Stamina maximum; scales by **echelon** (`24`). Requires the Kit's armor to be worn.
 - **Speed bonus** — added to movement.
 - **Stability bonus** — added to stability (resisting forced movement). Requires the Kit's armor.
-- **Melee / Ranged damage bonus** — added to the rolled damage of the matching weapon attacks, expressed as **+X / +Y / +Z across the three Draw Steel Power Roll result bands** (low / middle / high, matching DS print order). Requires the qualifying weapon.
+- **Melee / Ranged damage bonus** — added to the rolled damage of the matching weapon attacks, expressed as **+X / +Y / +Z across the three Power Roll result bands** (low / middle / high). Requires the qualifying weapon.
 - **Melee / Ranged distance bonus** — extends the reach/range of the matching weapon attacks (does not enlarge area-of-effect abilities).
 - **Disengage bonus** — extra squares of shift when you Disengage.
 - **Signature ability** — one repeatable weapon Strike unique to the Kit, whose printed distance and damage already include the Kit's bonuses.
 
-**Power Roll note (binding — Draw Steel aligned):** bonus lines use **Draw Steel’s print order**: low result / middle result / high result. A “finesse” Kit reads roughly +2/+2/+2 (flat, reliable). A “heavy hitter” Kit puts the large number on the **high** result (e.g. +0/+0/+4), matching DS — not the old Ghostwire inverted ladder.
+**Power Roll note (binding):** bonus lines use this book’s print order: low result / middle result / high result (`03`). A “finesse” Kit reads roughly +2/+2/+2 (flat, reliable). A “heavy hitter” Kit puts the large number on the **high** result (e.g. +0/+0/+4) — not an inverted ladder.
 
 ### Improvised weapons (the no-gear fallback)
 
-Straight from Draw Steel, reskinned: anything that isn't your Kit's weapon — a pipe, a bottle, a chair, a dropped pistol you grabbed, or your bare fists if your Kit isn't an unarmed Kit — is an **improvised weapon**. You may use improvised weapons with **class** weapon abilities, but not with your **Kit's** weapon abilities, and you add no Kit bonuses to an improvised attack. This is the mechanical teeth of the ownership rule: disarmed or under-equipped, a Kit hero still fights, but without their doctrine bonuses — a real, recoverable setback rather than helplessness.
+Anything that isn't your Kit's weapon — a pipe, a bottle, a chair, a dropped pistol you grabbed, or your bare fists if your Kit isn't an unarmed Kit — is an **improvised weapon**. You may use improvised weapons with **class** weapon abilities, but not with your **Kit's** weapon abilities, and you add no Kit bonuses to an improvised attack. This is the mechanical teeth of the ownership rule: disarmed or under-equipped, a Kit hero still fights, but without their doctrine bonuses — a real, recoverable setback rather than helplessness.
 
 ### Kits are flexible
 
@@ -56,29 +56,29 @@ One Kit at a time; swap it during a respite (a respite activity) — never a loc
 
 Weapon/armor “category” is what the purchased item must satisfy; bonus lines are provisional benchmarks, printed in Power Roll order (low / middle / high). Fantasy melee Kits are fully supported — this is a cyber-fantasy world where a chromed samurai, a monowhip duelist, and a mage-blade coexist with gunfighters.
 
-| Kit (our name) | Draw Steel source | Gear category (Economy-supplied) | Doctrine sketch |
-|---|---|---|---|
-| **Longshot** | Sniper | Precision rifle; no armor | Extreme range, huge high-result payoff (+0/+0/+4), reward for holding still |
-| **Saturation** | Rapid-Fire | SMG / carbine; light armor | Volume fire, two-target signature, steady ranged bonus |
-| **Ghost** | Cloak and Dagger | One or two silenced light weapons; light armor | Mixed melee/ranged, shift-on-hit, infiltration doctrine |
-| **Gunslinger** | Swashbuckler | Medium sidearm/blade; light armor | High speed, push-and-shift finesse |
-| **Streetsweeper** | Ranger | Shotgun/carbine + medium weapon; medium armor | Flexible mid-range hybrid, slow-on-hit signature |
-| **Juggernaut** | Mountain | Heavy weapon; heavy armor | Tank doctrine, massive high-result hit, punishes attackers |
-| **Breacher** | Sword and Board | Medium weapon + ballistic shield; medium armor | Push/prone control, high Stamina, front-line |
-| **Warframe** | Shining Armor | Medium weapon + shield; heavy armor | Highest Stamina, taunt/hold-the-line signature |
-| **Bulldozer** | Panther | Heavy weapon; no armor | Mobile heavy hitter, charge-for-damage |
-| **Brawler** | Pugilist | Unarmed / cyber-limb strikes; no armor | Durable striker, slide-and-follow |
-| **Mantis** | Martial Artist | Unarmed / cyber-limb strikes; no armor | Fast martial artist, swap-places signature |
-| **Chromeblade** | Dual Wielder | A light + a medium melee weapon; medium armor | Twin-blade doctrine, act-between-strikes signature |
-| **Reach** | Guisarmier | Polearm / long cyber-weapon; medium armor | Extended melee reach, two-target sweep |
-| **Monowhip** | Whirlwind | Whip / monofilament / chain; no armor | Very fast, reach + vertical-pull signature |
-| **Snarehunter** | Retiarius | Net/ensnaring gear + polearm; light armor | Control specialist, restrain-on-hit |
-| **Staff Adept** | Stick and Robe | Staff / polearm; light armor | Mobile reach, slide control |
-| **Duelist** | Battlemind | Medium melee weapon; light armor | Balanced melee, forced-movement amplifier |
-| **Raider** | Raider | Light weapon + shield; light armor | Melee/thrown hybrid, impose-bane signature |
-| **Hexshot** | Arcane Archer | Bow/crossbow/dartgun; no armor | Ranged + rider magic/tech effect (splash) |
-| **Spellblade** | Spellsword | Medium melee + shield; light armor | Melee weapon carrying an elemental/tech strike |
-| **Sanctified** | Warrior Priest | Light weapon; heavy armor | Armored faith-warrior, weaken-on-hit (Veil-flavored) |
+| Kit | Gear category (Economy-supplied) | Doctrine sketch |
+|---|---|---|
+| **Longshot** | Precision rifle; no armor | Extreme range, huge high-result payoff (+0/+0/+4), reward for holding still |
+| **Saturation** | SMG / carbine; light armor | Volume fire, two-target signature, steady ranged bonus |
+| **Ghost** | One or two silenced light weapons; light armor | Mixed melee/ranged, shift-on-hit, infiltration doctrine |
+| **Gunslinger** | Medium sidearm/blade; light armor | High speed, push-and-shift finesse |
+| **Streetsweeper** | Shotgun/carbine + medium weapon; medium armor | Flexible mid-range hybrid, slow-on-hit signature |
+| **Juggernaut** | Heavy weapon; heavy armor | Tank doctrine, massive high-result hit, punishes attackers |
+| **Breacher** | Medium weapon + ballistic shield; medium armor | Push/prone control, high Stamina, front-line |
+| **Warframe** | Medium weapon + shield; heavy armor | Highest Stamina, taunt/hold-the-line signature |
+| **Bulldozer** | Heavy weapon; no armor | Mobile heavy hitter, charge-for-damage |
+| **Brawler** | Unarmed / cyber-limb strikes; no armor | Durable striker, slide-and-follow |
+| **Mantis** | Unarmed / cyber-limb strikes; no armor | Fast martial artist, swap-places signature |
+| **Chromeblade** | A light + a medium melee weapon; medium armor | Twin-blade doctrine, act-between-strikes signature |
+| **Reach** | Polearm / long cyber-weapon; medium armor | Extended melee reach, two-target sweep |
+| **Monowhip** | Whip / monofilament / chain; no armor | Very fast, reach + vertical-pull signature |
+| **Snarehunter** | Net/ensnaring gear + polearm; light armor | Control specialist, restrain-on-hit |
+| **Staff Adept** | Staff / polearm; light armor | Mobile reach, slide control |
+| **Duelist** | Medium melee weapon; light armor | Balanced melee, forced-movement amplifier |
+| **Raider** | Light weapon + shield; light armor | Melee/thrown hybrid, impose-bane signature |
+| **Hexshot** | Bow/crossbow/dartgun; no armor | Ranged + rider magic/tech effect (splash) |
+| **Spellblade** | Medium melee + shield; light armor | Melee weapon carrying an elemental/tech strike |
+| **Sanctified** | Light weapon; heavy armor | Armored faith-warrior, weaken-on-hit (Veil-flavored) |
 
 *Magic/tech-flavored Kits — Hexshot, Spellblade, Sanctified — are the natural attachment points for the Veil and for cyber-augmented casters; their "magic" damage rider can be reskinned as elemental essence, holy/infernal power, or a weapon-mounted tech effect per the wielder's class.*
 
@@ -194,7 +194,7 @@ Chrome purchases spend **¥ + Body Integrity**. Grades trade cheap Salvage (Inte
 
 ### §Craft (downtime Projects)
 
-**§Craft is a procedure, not a skill.** Installing, swapping, removing, inventing, or configuring gear/mods is a Draw Steel **Project** during downtime (with the field-toggle exception for already-installed features — see Mods chapter).
+**§Craft is a procedure, not a skill.** Installing, swapping, removing, inventing, or configuring gear/mods is a **Project** (`03`) during downtime (with the field-toggle exception for already-installed features — see Mods chapter).
 
 Power Rolls on those Projects use ordinary Ghostwire skills by job:
 
@@ -209,7 +209,7 @@ Full Invent a Mod and slot rules: `10-mods.md`.
 
 ### Lifestyle burn
 
-Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md` (upkeep ¥ from gear master §F3).
+Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`.
 
 ## Part 3 — Gear
 
@@ -235,8 +235,8 @@ Gear is everything ¥ buys that isn’t chrome: general and lifestyle gear, armo
 
 ### Weapons
 
-- Every weapon names a **damage band** in its tags: **Light ≈ 4**, **Medium ≈ 6**, **Heavy ≈ 9**, **Anti-vehicle ≈ 14** (each varies by ±1–2 within its band). Weapon Power Roll results print in Draw Steel order — **low / middle / high**. When a weapon line gives a single number, that number is its **middle** result; a line that prints all three results uses those.
-- Damage carries a **type tag** that maps to Draw Steel damage: **electrical → lightning**, **toxin → poison**, **fire → fire**, **kinetic → untyped**, **AP → untyped** plus the AP gear note (ignores or reduces armor-as-Stamina per that gear’s rules; AP is not a damage type). Untagged damage is kinetic (untyped).
+- Every weapon names a **damage band** in its tags: **Light ≈ 4**, **Medium ≈ 6**, **Heavy ≈ 9**, **Anti-vehicle ≈ 14** (each varies by ±1–2 within its band). Weapon Power Roll results print **low / middle / high** (`03`). When a weapon line gives a single number, that number is its **middle** result; a line that prints all three results uses those.
+- Damage carries a **type tag** that maps to this book’s damage types: **electrical → lightning**, **toxin → poison**, **fire → fire**, **kinetic → untyped**, **AP → untyped** plus the AP gear note (ignores or reduces armor-as-Stamina per that gear’s rules; AP is not a damage type). Untagged damage is kinetic (untyped).
 - A Kit’s damage bonus lines add on top by Power Roll result (see What a Kit grants).
 
 ### Armor as Stamina
