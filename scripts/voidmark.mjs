@@ -378,7 +378,7 @@ function registerSettings() {
   });
   game.settings.register(MODULE_ID, SETTINGS.model, {
     name: `${L}.Settings.Model.Name`, hint: `${L}.Settings.Model.Hint`,
-    scope: "world", config: true, type: String, default: "grok-3",
+    scope: "world", config: true, type: String, default: "grok-4.6",
   });
   game.settings.register(MODULE_ID, SETTINGS.temperature, {
     name: `${L}.Settings.Temperature.Name`, hint: `${L}.Settings.Temperature.Hint`,

@@ -71,13 +71,15 @@ console.log("\n4) API request builder (no network)");
 const request = buildChatRequest({
   baseUrl: "https://api.x.ai/v1/",
   apiKey: "xai-TESTKEY-do-not-log",
-  model: "grok-3",
+  model: "grok-4.6",
   temperature: 0.4,
   maxTokens: 800,
   messages,
 });
 ok(request.url === "https://api.x.ai/v1/chat/completions", request.url);
-ok(request.body.model === "grok-3", "model");
+ok(request.body.model === "grok-4.6", "model");
+const defaulted = buildChatRequest({ apiKey: "xai-TESTKEY-do-not-log", messages });
+ok(defaulted.body.model === "grok-4.6", "DEFAULT_MODEL grok-4.6");
 ok(request.body.max_tokens === 800, "max_tokens");
 ok(request.options.headers.Authorization === "Bearer xai-TESTKEY-do-not-log", "auth header set");
 

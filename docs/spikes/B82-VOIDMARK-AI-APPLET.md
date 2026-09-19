@@ -1,7 +1,7 @@
 # B82 — VOIDMARK in-module AI chat (v1 playtest)
 
 **Date:** 2026-09-19  
-**Module:** **0.3.27**  
+**Module:** **0.3.28** (default model `grok-4.6`; applet shipped in 0.3.27)  
 **Status:** IMPLEMENTED — first playtestable cut  
 **Persona LOCKED:** VOIDMARK (street: the Mark). Lore: `docs/manuscript/01-lore/L4-voidmark.md` (B90). Accords: L5 (B91).  
 **Pairs with:** B89 (token art / canvas presence — **not** this PR), backlog note `B82-FOUNDRY-GHOSTWIRE-AI-APPLET.md`
@@ -32,7 +32,7 @@ All **world** scope. The API key is registered `secret: true` so Foundry should 
 | `voidmarkPlayerAccess` | Boolean | yes | `false` | Off = GM-only |
 | `voidmarkApiBaseUrl` | String | yes | `https://api.x.ai/v1` | No trailing slash required |
 | `voidmarkApiKey` | String | yes, **secret** | `""` | xAI or compatible |
-| `voidmarkModel` | String | yes | `grok-3` | Any chat-completions model id |
+| `voidmarkModel` | String | yes | `grok-4.6` | Any chat-completions model id your key lists (`grok-4.6`, `grok-4.5`, etc.) |
 | `voidmarkTemperature` | Number | yes | `0.7` | 0–2 |
 | `voidmarkMaxTokens` | Number | yes | `1200` | Optional cap |
 | `voidmarkSystemInstructions` | String | menu textarea | seeded VOIDMARK prompt | Editable without code |
@@ -44,7 +44,7 @@ All **world** scope. The API key is registered `secret: true` so Foundry should 
 1. Configure Settings → **Draw Steel - Ghostwire Build**.
 2. **API base URL:** `https://api.x.ai/v1`
 3. **API key:** xAI key (password field). Do not paste it into chat or the console.
-4. **Model:** `grok-3` (or current Grok chat id).
+4. **Model:** `grok-4.6` (or any id your key lists — `grok-4.5`, etc.).
 5. Open VOIDMARK (Token controls → ghost, or Configure Controls keybinding).
 6. Ask a Wire or Combat question.
 
@@ -130,7 +130,7 @@ Live agent bridge · canvas token possession · embeddings · shipping Switchboa
 
 ## Files / bump
 
-- Module **0.3.27**
+- Module **0.3.28** (default model `grok-4.6`; applet shipped in 0.3.27)
 - i18n `GHOSTWIRE.Voidmark.*`
 - CSS `.ghostwire-voidmark-chat` / `.ghostwire-voidmark-settings`
 - API: `game.modules.get("draw-steel-ghostwire").api.openVoidmark` and `.voidmark.retrieve`

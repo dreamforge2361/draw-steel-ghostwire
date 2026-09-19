@@ -7345,7 +7345,7 @@
         },
         "Model": {
           "Name": "VOIDMARK model",
-          "Hint": "Chat Completions model id. Default grok-3; change if your host uses another name."
+          "Hint": "Chat Completions model id. Default grok-4.6; pick any id your key lists (grok-4.6, grok-4.5, etc.)."
         },
         "Temperature": {
           "Name": "VOIDMARK temperature",
