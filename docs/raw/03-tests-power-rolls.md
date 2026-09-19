@@ -41,6 +41,10 @@ Abilities, weapons, Matrix Verbs, and gear print what each result does. Where te
 
 **Doctrine lock:** print order is always **low → middle → high** (≤11 / 12–16 / 17+). Never invert the ladder. Never invent a fourth band.
 
+> **In Foundry**
+> Use abilities from the hero sheet (or hotbar). Draw Steel posts an **abilityUse** chat card with the Power Roll; Ghostwire SFX (B40) may play when the card lands. The module adds edges/banes automatically where it can: **Hacking** and **Jacked In** on Wired rolls, **Overlay** bane on real-world rolls, suite software edges, and **Weave Strain** bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.
+
+
 ### Which characteristic?
 
 Use the characteristic the ability names. If the Director calls a freeform test:

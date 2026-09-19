@@ -208,3 +208,8 @@ Remaining after lock:
 4. PDF pipeline after spine polish + Michael Lifestyle skim (Wire locked; Lifestyle drafted B67).
 
 **Out of scope for this proposal doc:** PDF CSS, art, Foundry pack edits.
+---
+
+## In Foundry sidebars (B68 — 2026-09-18)
+
+RAW chapters may carry a short `> **In Foundry**` callout naming **shipped** Ghostwire module UI only (pattern locked in `docs/spikes/B68-FOUNDRY-SIDEBARS.md`). These are instructional click-notes beside rules — **not** Foundry UI manuals as print chapters (that non-goal in §5 still stands). First pass: HTP, Tests, Combat, Peoples/Changer, Chrome, Wire, Veil, Lifestyle. No journal regen on sidebar bumps.

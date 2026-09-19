@@ -67,6 +67,10 @@ While Integrity spent on chrome is **greater than 5**, every **Magic / Veil / Re
 
 **Magic erosion** (the grade table above) still applies for spent Integrity **at or under** the soft-cap. The soft-cap is a hard cliff on top of erosion, not a replacement for it.
 
+> **In Foundry**
+> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs see N/A). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap.
+
+
 
 ## Suppress / Damage / Destroy (summary)
 

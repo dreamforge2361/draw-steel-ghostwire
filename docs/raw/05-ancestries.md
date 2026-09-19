@@ -160,6 +160,10 @@ Lineage and form each have a small mechanical effect (below). They cost no ances
 
 Changing form is a **maneuver**. Exactly **one** form is active at a time; a new Changer starts in **Human Form**. All traits and Beast-Hide work in every form unless a form’s rules or fiction obviously forbid it (Director’s call).
 
+> **In Foundry**
+> Changer heroes get a **Forms** control on the sheet **Stats** tab (under Wired). Click **Human**, **Hybrid**, or **Beast** to enable that form’s Active Effects (exactly one form at a time) and swap portrait/token art when `beastArt` / `humanArt` / `hybridArt` are set on the actor (B50). Changing form in fiction is still a maneuver — the buttons apply the mechanical form switch.
+
+
 | Form | Mechanics | Limits / fiction |
 |---|---|---|
 | **Human Form** | Edge on tests to pass as or blend in among baseline humans | No obvious beast tells |

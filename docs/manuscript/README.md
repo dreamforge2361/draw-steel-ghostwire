@@ -1,6 +1,6 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Scaffold 2026-09-18 (B64) — manuscript track start; module **0.2.0**  
+**Status:** Scaffold 2026-09-18 (B64) — manuscript track; module **0.2.6** (B68 In Foundry sidebars in raw)  
 **Path:** `docs/manuscript/`  
 **Spike:** `docs/spikes/B64-MANUSCRIPT-SOR.md`  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
@@ -98,6 +98,21 @@ docs/manuscript/
   03-directors/          # NEW Reach pointer stub; Opposition → raw
   build/                 # generated Ghostwire-Manuscript.md
 ```
+
+---
+
+---
+
+## In Foundry sidebars (B68)
+
+Rules chapters in `docs/raw/` may include a locked markdown callout:
+
+```markdown
+> **In Foundry**
+> …2–6 short sentences naming **shipped** module UI only (where it lives, what to click). No screenshots.
+```
+
+Pattern + inventory: `docs/spikes/B68-FOUNDRY-SIDEBARS.md`. Sidebars are instructional, not lore. They assemble into the print manuscript with the raw chapters; they are **not** a substitute for Director Foundry notes. Do not invent menus. Journals still held — no regen for sidebar-only bumps.
 
 ---
 

@@ -89,10 +89,8 @@ Ghostwire heroes do **not** lean on generic Melee Free Strike / Ranged Free Stri
 2. **Weapon use-abilities (B49)** — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as **Fire Chatterbox** or **Strike with Monoblade**. That ability is free-strike-*shaped* (category, keywords, kit bonus hooks) but carries **that weapon’s** range band and damage. Removing the weapon removes the ability.
 3. **Improvised fallback** — no qualifying kit weapon in hand means class weapon abilities still work, but **kit bonuses and kit signature weapon riders do not** (`08`). Bare fists, a pipe, or a grabbed pistol that isn’t your kit piece are improvised.
 
-### Module behavior (Foundry)
-
-- **B44c:** the module **suppresses** stock Draw Steel generic free strikes on heroes and NPCs so they do not clutter new sheets.
-- **B49:** equipment use-abilities replace that generic slot for owned weapons.
+> **In Foundry**
+> Use the stock Draw Steel **combat tracker** for turn order. Owned Ghostwire weapons spawn sheet abilities named **Fire {weapon}** or **Strike with {weapon}** (B49) — roll those, not generic free strikes. The module **strips** stock Melee/Ranged Free Strike from heroes and NPCs (B44c) so sheets stay clean. Ability SFX may play from the chat card when you fire.
 
 Table fiction and class text may still say “free strike” when an ability *grants* one (Commander Overwatch, Scout decoys, hybrid Changer +1 on melee free-strike-shaped attacks, and so on). In Foundry play, resolve those grants with a weapon use-ability, an improvised strike the Director allows, or the ability’s own printed attack — not by re-adding the stripped generics.
 

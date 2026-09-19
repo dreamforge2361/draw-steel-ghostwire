@@ -18,6 +18,9 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 
 ---
 
+> **In Foundry**
+> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting.
+
 ## Lifestyle bands (upkeep)
 
 **Upkeep ¥ are cited from the gear master Appendix §F3** (Doss Upgrade / Lifestyle Voucher points at the same table). They are **not invented here**. Treat Recovery-quality notes as **Director guidance pending full DS Recoveries alignment** — use Draw Steel Recoveries as printed for your table; do not invent a second Recovery pool.
@@ -126,7 +129,7 @@ Long-form Veil magic is a **Ritual Working**: a Project chain on the same Craft 
 - Not a second Economy rewrite — payouts and firewall stay in `08` / `docs/rulebook/11-economy.md`.
 - Not full Followers / Contacts.
 - Not Building catalog numbers (Wrench stub + Lifestyle Hook only).
-- Not journal / Foundry UI text.
+- Not a second Foundry manual — only the light **In Foundry** note above (no Lifestyle automation).
 - Not permission to convert ¥ into characteristics, skills, or class power.
 
 ---

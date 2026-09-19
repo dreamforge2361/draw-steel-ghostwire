@@ -31,6 +31,10 @@ Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Acc
 
 You leave either connection state with the **Jack Out** Matrix Verb -- a clean disconnect that also serves as your emergency eject if a Program or Trace Alert spike goes bad.
 
+> **In Foundry**
+> **Overlay** and **Jacked In** are token/sheet status effects (`ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** Matrix Verbs from the sheet — they set the status. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The module applies Jacked In Wired edges, Overlay real-world banes, and refuses physical Power Rolls while Jacked In.
+
+
 ### Wired-System Stats: Integrity (Not Body Integrity)
 
 Every Track 2 target -- and the "system" side of any Wired encounter -- tracks its own **Integrity**: a Stamina-equivalent health pool that Programs and abilities damage directly (via your cyberdeck's Integrity Damage Bonus) rather than dealing physical damage. Reducing a Track 2 target to 0 Integrity takes it down, exactly as reducing a creature to 0 Stamina does.
@@ -46,6 +50,10 @@ Every Track 2 target -- and the "system" side of any Wired encounter -- tracks i
 | Rating 5 (alpha/AAA-corp core) | 50 |
 
 The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating.
+
+> **In Foundry**
+> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); GMs can open the full Director view. Click a revealed node to focus its canvas token when one is placed.
+
 
 **Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above).
 
@@ -180,6 +188,10 @@ A payload chip in your gear does nothing by itself. To use it, you compile it in
 | High (17+) | 5 |
 
 **Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected refuses the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
+
+> **In Foundry**
+> Load a payload chip onto a deck (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected refuses the use and spends no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.
+
 
 The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
 

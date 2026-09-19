@@ -18,6 +18,10 @@ To run Ghostwire you need:
 
 You do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition numbers live in Foundry / Draw Steel by reference (`25`). Setting color lives in Reach materials — not required for rules play.
 
+> **In Foundry**
+> Load a world on the **Draw Steel** system, then enable the **Draw Steel - Ghostwire Build** module (`draw-steel-ghostwire`). Open a hero sheet → **Stats**: Ghostwire adds **Body Integrity** (current/max), a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs — not a second system.
+
+
 ---
 
 ## The table

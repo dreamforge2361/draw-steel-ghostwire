@@ -31,6 +31,10 @@ Every point of Body Integrity a living caster spends on chrome shrinks their cas
 
 Every caster uses this one formula, the Technomancer included — there are no class-specific erosion models (`09`, `17`, `18`, `20`). Soft-cap Weave Strain (`09`) is a separate cliff on top of erosion.
 
+> **In Foundry**
+> Living casters see soft-cap and erosion hints on the hero sheet **Body Integrity** fieldset (`09`): **Chrome spent X / 5**, the **Weave Strain** Active Effect when over, and the casting-resource cap line after erosion. Resource gains clamp to the eroded cap automatically. Cyborgs remain Arcane Severance-blocked at the sheet.
+
+
 ## Shared Veil-caster rules
 
 | Rule | Elementalist | Street Priest |
@@ -192,6 +196,10 @@ Numbers are starting points for playtest. Director may scale yen and Goal points
 ## §C3 Summon Entities (LOCKED 2026-09-18)
 
 Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.
+
+> **In Foundry**
+> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. (Technomancer sprites use the same pack pattern on **Compile Sprite** — see `20`.)
+
 
 ### Elemental Stamina
 
