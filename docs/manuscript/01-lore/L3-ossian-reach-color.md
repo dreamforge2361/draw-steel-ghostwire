@@ -1,7 +1,7 @@
 # Ossian Reach — Street Color
 
 **Source:** *GHOSTWIRE — Lore Source (V1 rules stripped)* → Ossian Reach fixtures (Part II Ch. 6) + street factions (Part IV Ch. 20); Flats primer color from in-repo *Ossian Reach Handbook* extracts (`docs/setting/reach-handbook/01–02`); Ashenreach from `docs/setting/ashenreach.md`. Hit-index: `docs/masters/_lore_extract/`.  
-**Harvested:** 2026-09-18 (ET) · optional print color only — **not** a gazetteer reprint of Reach Handbook journals. Print Ch. 27 stays a thin pointer. Images not embedded this pass.
+**Harvested:** 2026-09-18 (ET) · optional print color only — **not** a gazetteer reprint of Reach Handbook journals. Print Ch. 27 stays a thin pointer. Gang signs (B91) inject after the L3 headings below.
 
 > Street color and hive fixtures for the booklet. District dossiers, NPC stat blocks, and critter sheets stay in setting / Foundry packs.
 
@@ -153,6 +153,10 @@ Fast, wired up-and-comers who film their runs and start wars they can't finish.
 ### The Hollow Men
 
 The Flats' dread — gone thin. The seam where the street touches the war.
+
+### The Undertow
+
+Flood-readers who keep their own timetable when the official sluice schedule lies.
 
 ### The Level-Bosses
 

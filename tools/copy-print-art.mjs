@@ -11,6 +11,7 @@
  *   GHOSTWIRE_Species_Art        → print-art/species/
  *   GHOSTWIRE_Art_Bundle         → print-art/filler/
  *   GHOSTWIRE_Pregen_Art_Bundle  → print-art/pregens/
+ *   GHOSTWIRE_Gang_Art           → print-art/gangs/
  *   from-core-pdf / Core extracts → print-art/from-core-pdf/
  *
  * Does not invent art. Does not downscale. Does not commit binaries.
@@ -33,6 +34,7 @@ const FOLDER_MAP = [
   { names: ["GHOSTWIRE_Species_Art", "GHOSTWIRE Species Art", "Species_Art"], dest: "species" },
   { names: ["GHOSTWIRE_Art_Bundle", "GHOSTWIRE Art Bundle", "Art_Bundle"], dest: "filler" },
   { names: ["GHOSTWIRE_Pregen_Art_Bundle", "GHOSTWIRE Pregen Art Bundle", "Pregen_Art_Bundle"], dest: "pregens" },
+  { names: ["GHOSTWIRE_Gang_Art", "GHOSTWIRE Gang Art", "Gang_Art", "gangs"], dest: "gangs" },
   { names: ["from-core-pdf", "Core_PDF_Extracts", "Core Sourcebook Extracts"], dest: "from-core-pdf" },
   { names: ["cover", "GHOSTWIRE_Cover"], dest: "cover" },
 ];
@@ -57,6 +59,16 @@ const SPECIES_SLUGS = [
   "revenant",
   "mutant",
   "cyborg",
+];
+const GANG_SLUGS = [
+  "metermen",
+  "skinjobs",
+  "nightshift",
+  "ninth-ward-kings",
+  "rust-saints",
+  "glass-vipers",
+  "hollow-men",
+  "undertow",
 ];
 
 function argValue(flag) {
@@ -156,7 +168,8 @@ function main() {
 
   const classAliases = aliasKnown(join(DEST_ROOT, "classes"), CLASS_SLUGS);
   const speciesAliases = aliasKnown(join(DEST_ROOT, "species"), SPECIES_SLUGS);
-  console.log(`aliases\tclasses=${classAliases} species=${speciesAliases}`);
+  const gangAliases = aliasKnown(join(DEST_ROOT, "gangs"), GANG_SLUGS);
+  console.log(`aliases\tclasses=${classAliases} species=${speciesAliases} gangs=${gangAliases}`);
 
   if (extractCore) {
     if (!corePdf || !existsSync(corePdf)) {
