@@ -14,7 +14,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 </div>
 
 > **In Foundry**  
-> Enable **Draw Steel - Ghostwire Build** (`draw-steel-ghostwire`) on a compatible Foundry world (system package `draw-steel`). Create a **Hero** actor, open the sheet, work the **+ Add** buttons and Ghostwire packs. *Ghostwire - the Reach* / `ghostwire-v2` is one table’s box — any world with this module enabled works.
+> Use a compatible Foundry world with **Ghostwire Build** enabled. Create a **Hero** actor, open the sheet, work the **+ Add** buttons and Ghostwire packs. *Ghostwire - the Reach* / `ghostwire-v2` is one table’s box — any world with this module enabled works.
 
 <div class="gw-firewall">
 <strong>Firewall</strong> ¥ never buys characteristics, skills, or class power. Chrome is later, and it costs ¥ <em>and</em> Body Integrity. New runners start with <strong>no chrome</strong>.
