@@ -50,6 +50,7 @@ Human names are not required on AI plates. If Michael later commissions or licen
 | Part openers / class plates | Ghostwire AI (AI-generated) | Ghostwire project |
 | Reach gang signs (B91) | Ghostwire AI (AI-generated) | `docs/manuscript/print-art/gangs/` |
 | District battle maps (B72) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/` |
+| Switchboard district loop (B100 v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/switchboard-district-loop.webm` |
 | Mama Cassavir club (B99 still + loop v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/battlemaps/` |
 | Handbook book plates | Ghostwire AI (AI-generated) | `assets/reach-handbook/` |
 
