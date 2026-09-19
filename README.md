@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.27` — **VOIDMARK chat (B82):** ApplicationV2 in-module AI applet (Token controls › ghost, or a keybinding). Module Configuration holds an OpenAI-compatible base URL (default xAI `https://api.x.ai/v1`), secret API key, model, temperature, player vs GM-only access, and editable VOIDMARK system instructions. Rules questions retrieve from a shipped lexical index of Ghostwire RAW (`data/voidmark-rules-index.json`; rebuild with `node tools/build-voidmark-index.mjs`). Not a live Cursor/Grok Bot bridge. Notes: `docs/spikes/B82-VOIDMARK-AI-APPLET.md`. *Pending Foundry verification.*
 - `0.1.0` — skeleton
 - `0.1.1` — lang pass (characteristics + nuyen + sheet labels) and CSS style tokens
 - `0.1.2` — Foundry spike: **Ghostwire Origins** compendium with Pure Human (ancestry) and its signature trait Detect the Supernatural (trait + maneuver), cloned from DS Human. Purchased traits not yet implemented.

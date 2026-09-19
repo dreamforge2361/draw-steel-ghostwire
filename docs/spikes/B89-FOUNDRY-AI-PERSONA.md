@@ -3,7 +3,7 @@
 # B89 — Foundry AI chat: in-setting super-AI persona (BACKLOG)
 
 **Date:** 2026-09-19  
-**Status:** BACKLOG — pairs with B82  
+**Status:** PARTIAL — B82 v1 shipped the chat, settings, default VOIDMARK instructions, and chat avatar (`assets/ai-persona/voidmark.webp`). Remaining: canvas token crop / actor drop (this spike).  
 **Ask:** When the module AI chat ships, it roleplays a **named super-AI that exists in Ghostwire** (Reach / AU). GM configures **system instructions** and Grok parameters in Module Configuration so every call stays in persona.
 
 ## Why

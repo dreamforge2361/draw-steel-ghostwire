@@ -206,5 +206,5 @@ Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Co
 Some hosts answer with a voice that is not MER support and not ICE. Street callsign **VOIDMARK** (the Mark): a leash-slipped intelligence that treats the Wired as territory. Full lore: `docs/manuscript/01-lore/L4-voidmark.md`.
 
 > **In Foundry**
-> Talking to VOIDMARK at the table uses the Ghostwire AI chat (B82/B89) — persona system instructions and rules-pack RAG in Module Configuration. Optional canvas token when the Mark takes presence on a scene (`assets/ai-persona/` when art ships).
+> Open **VOIDMARK** from Token controls (ghost) or a keybinding under Configure Controls. Module Configuration holds the API endpoint, secret key, model, temperature, player access, and **Edit VOIDMARK instructions**. Rules answers are retrieved from the shipped Ghostwire RAW index. Canvas token art when the Mark takes scene presence is a later hook (`assets/ai-persona/`).
 

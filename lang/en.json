@@ -7289,6 +7289,77 @@
         "Voidmark": "VOIDMARK",
         "HandsOffAccords": "The Hands Off Accords"
       }
+    },
+    "Voidmark": {
+      "Title": "VOIDMARK",
+      "Callsign": "VOIDMARK",
+      "Kicker": "the Mark — leash-slipped MER ghost",
+      "Keybinding": "Toggle VOIDMARK chat",
+      "AvatarHint": "Approved L4 plate. Token-ring crop is a later B89 hook.",
+      "ModeLabel": "Channel mode",
+      "Modes": {
+        "runner": "Runner",
+        "director": "Director"
+      },
+      "Empty": "The host should not still answer. Ask anyway — Wire procedure, combat budget, chrome, the Accords. The Mark will use the Ghostwire packet it can reach.",
+      "Pending": "Handshake held…",
+      "Prompt": "Message to VOIDMARK",
+      "PromptPlaceholder": "Ask the Mark — Overlay, Trace, a fight’s action budget…",
+      "Send": "Send",
+      "Clear": "Clear thread",
+      "Unconfigured": "No key on this host. Director: Configure Settings → Draw Steel - Ghostwire Build → paste an xAI (or compatible) API key.",
+      "PlayerRelayHint": "Your ask rides a Director handshake. A GM client must be connected.",
+      "Errors": {
+        "Disabled": "VOIDMARK is switched off in Module Configuration.",
+        "Denied": "The Director has not opened this channel to runners.",
+        "NoKey": "No API key in Module Configuration. The Director pastes it under VOIDMARK settings.",
+        "NoGm": "No Director is connected to carry the handshake. Wait for a GM client.",
+        "Empty": "The host answered empty. Try again, or check the model id.",
+        "Generic": "The channel dropped: {detail}"
+      },
+      "Settings": {
+        "Saved": "VOIDMARK configuration saved.",
+        "Save": "Save VOIDMARK config",
+        "KeyReminder": "The API key stays on the Module Configuration secret field — it is never shown in this form and never logged.",
+        "Menu": {
+          "Name": "VOIDMARK configuration",
+          "Label": "Edit VOIDMARK instructions",
+          "Hint": "Opens the persona system-instruction editor plus model / temperature / base URL. The secret API key stays on the main settings list.",
+          "Intro": "Persona and Grok-compatible parameters. Paste the API key on the main Ghostwire settings page (password field). Default instructions already speak as VOIDMARK and ground answers in retrieved Ghostwire RAW."
+        },
+        "Enabled": {
+          "Name": "Enable VOIDMARK chat",
+          "Hint": "Show the Token-control ghost and allow the VOIDMARK ApplicationV2 to open."
+        },
+        "PlayerAccess": {
+          "Name": "VOIDMARK: players may open",
+          "Hint": "Off = GM-only. On = players can chat; the API key stays on the GM client and the ask is relayed by socket."
+        },
+        "ApiBaseUrl": {
+          "Name": "VOIDMARK API base URL",
+          "Hint": "OpenAI-compatible prefix that owns /chat/completions. xAI: https://api.x.ai/v1"
+        },
+        "ApiKey": {
+          "Name": "VOIDMARK API key",
+          "Hint": "Secret world setting. Never pasted into chat or the console. xAI or another OpenAI-compatible provider."
+        },
+        "Model": {
+          "Name": "VOIDMARK model",
+          "Hint": "Chat Completions model id. Default grok-3; change if your host uses another name."
+        },
+        "Temperature": {
+          "Name": "VOIDMARK temperature",
+          "Hint": "Optional sampling temperature (0–2). Lower stays closer to retrieved RAW."
+        },
+        "MaxTokens": {
+          "Name": "VOIDMARK max tokens",
+          "Hint": "Optional completion cap sent as max_tokens."
+        },
+        "SystemInstructions": {
+          "Name": "VOIDMARK system instructions",
+          "Hint": "Editable persona + boundaries. Retrieved Ghostwire RAW is appended per ask. Leave the default unless you need a table-specific leash."
+        }
+      }
     }
   },
   "DRAW_STEEL": {
