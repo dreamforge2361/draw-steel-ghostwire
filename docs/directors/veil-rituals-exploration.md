@@ -1,7 +1,7 @@
 # Backlog exploration — Veil Rituals as Draw Steel Projects (B43)
 
 **Status:** LOCKED 2026-09-18 by Michael — locks accepted; Ritual Working + 6 sample rites drafted into docs/raw/22-the-veil.md. Foundry automation later. Exploration notes below remain design history.
-**Question:** Can Shadowrun-style ritual magic become Ghostwire **long-form big magic** using Draw Steel **Projects** (the same §Craft downtime spine as Invent a Mod)?
+**Question:** Can street ritual magic become Ghostwire **long-form big magic** using Draw Steel **Projects** (the same §Craft downtime spine as Invent a Mod)?
 
 ## Short answer
 **Yes — it fits cleanly.** Encounter magic (Essence / Conviction / Resonance abilities) stays the fight toolkit. Rituals become **multi-stage downtime Projects** that spend ¥, lore, reagents, and **Veil Price / spirit-attention**, and pay out effects encounter casting should never cheaply do: permanent items, runes, remote workings, wards, gateways.
@@ -10,10 +10,10 @@ Do **not** invent a parallel “ritual skill.” Use Projects + existing skills 
 
 ---
 
-## What Shadowrun rituals are doing (pattern, not a port)
+## What long-form ritual magic is doing (pattern, not a port)
 From SR5-style ritual spellcasting (public summaries):
 
-| Beat | Shadowrun | Ghostwire candidate |
+| Beat | Ritual pattern | Ghostwire candidate |
 |---|---|---|
 | Scope | Bigger / farther / longer than instant spells | Effects above class ability ceilings |
 | Place | **Lodge** ≥ ritual Force (days + ¥ materials, or temp reagents) | **Sanctum / Circle / Thin-place claim** |

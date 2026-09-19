@@ -308,7 +308,7 @@ GHOSTWIRE // deniable-contractor field dossiers                                 
       (rated by quality) is standard runner kit.
     » Edgerunner / runner — the unregistered, deniable operative who works the shadow economy: extraction,
       sabotage, retrieval, muscle. The setting's protagonist archetype — an exception to the corp-engineered
-      world where no one has to choose. In GHOSTWIRE canon the classic "shadowrunner" is the Edgerunner /
+      world where no one has to choose. In GHOSTWIRE canon the hero is the Runner / Ghost Runner /
       Deniable Contractor.
     » Deniable contractor — the legal-fiction job title a runner hides behind; each pregen carries a straight-faced
       cover (Vessa: "pastoral-services contractor"; Krow: "privately-held industrial-security chassis"). The corps'

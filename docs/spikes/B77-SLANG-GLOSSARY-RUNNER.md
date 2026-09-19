@@ -15,4 +15,4 @@
 - Optional HTP terminology note
 
 ## Out of scope
-Full language lore gazetteer (#67); journal regen; inventing Shadowrun trademark slang as ours.
+Full language lore gazetteer (#67); journal regen; importing third-party trademark slang.

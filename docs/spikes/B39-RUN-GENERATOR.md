@@ -7,7 +7,7 @@
 **Bump** module.json one patch from current (read disk; expect 0.1.53 → 0.1.54).
 
 ## Goal
-Director-facing **ApplicationV2 popup** (same UX family as Wired Console) that generates a Reach-themed Shadowrun-style run: dials → Generate → result card + **mission Journal Entry** with pay, beats, and recommended bestiary Actors.
+Director-facing **ApplicationV2 popup** (same UX family as Wired Console) that generates a Reach-themed Ghost Run: dials → Generate → result card + **mission Journal Entry** with pay, beats, and recommended bestiary Actors.
 
 ## UX
 - Scene control / menu entry next to Wired Console (GM/Director only).

@@ -3,7 +3,7 @@
 > **Status banner (ingest):** Working master ingested **2026-09-16**. Economy chapter (`docs/rulebook/11-economy.md`) pairs with this. Foundry Integrity resource + sample implants **deferred**.
 
 
-*Compiled for review, 2026-09-16. Canon source: "The Chrome chapter — cyber implants, Body Integrity, and the cost of flesh" in `master_rules_baseline.md` (added 2026-07-15, unchanged through the 2026-07-29 baseline). This is the augmentation path for any living, non-Cyborg hero: trade flesh for capability — a simplified, slightly streamlined take on Shadowrun's cyberware system. On any conflict with the quick-reference chrome page, this baseline text wins.*
+*Compiled for review, 2026-09-16. Canon source: "The Chrome chapter — cyber implants, Body Integrity, and the cost of flesh" in `master_rules_baseline.md` (added 2026-07-15, unchanged through the 2026-07-29 baseline). This is the augmentation path for any living, non-Cyborg hero: trade flesh for capability — Ghostwire's own chrome economy: trade flesh for capability. On any conflict with the quick-reference chrome page, this baseline text wins.*
 
 **Connects to:** the Cyborg species (the extreme end of this same spectrum), the body-location combat model, the corruption/soul themes and the Veil (why magic hates chrome), the Economy chapter (nuyen buys and installs it; the character-power firewall holds), the Downtime chapter (installation/repair/removal are downtime work), and the conditions + Wired biofeedback systems (how chrome gets suppressed, damaged, and destroyed).
 
@@ -36,7 +36,7 @@ This is the load-bearing line of the whole chapter.
 
 ## Track 2 — Grades: used, standard, and soft (the Integrity/nuyen trade)
 
-Every implant comes in **grades** that trade nuyen against Body Integrity — the central economic choice of chrome, simplified from Shadowrun's four grades to three clean tiers.
+Every implant comes in **grades** that trade nuyen against Body Integrity — the central economic choice of chrome, simplified to three clean grades.
 
 | Grade | Nuyen cost | Body Integrity cost | Flavor |
 |---|---|---|---|

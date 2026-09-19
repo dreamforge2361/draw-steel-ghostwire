@@ -13,7 +13,7 @@ Replace title-page `CONTENT TBD` with a PDF-ready Ghostwire title plate; draft p
 
 ### `docs/manuscript/00-front/title-page.md`
 - Title **GHOSTWIRE**; harvested tagline (*ghosts, chrome, and the Machine* / *Break free… Run the Wire*).
-- Subtitle: cyberpunk-fantasy setting **for the Draw Steel engine** (Ghostwire street; no Shadowrun name on the plate).
+- Subtitle: cyberpunk-fantasy setting **for the Draw Steel engine** (Ghostwire street; the setting stands alone — no external IP name-checks).
 - World line: Ossian Reach / Veyra; product line *Draw Steel — Ghostwire Build*; version **v0.3.3**.
 - Reserved cover-art hole; ART-STYLE nocturne note; **artist TBD — Michael**.
 

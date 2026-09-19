@@ -228,7 +228,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 > *Main action · Distance: touch or short range · Target: up to 2 allies*
 > No Power Roll. Each target gains an extra maneuver this turn, an **edge** on their next Power Roll, and temporary Stamina equal to your Recovery value, all for 1 round.
 > **Crash Rider (automatic, Q3=A):** each recipient takes −1 to their next Power Roll after the buff ends (−2 if enhanced).
-> *The force-multiplier play — Shadowrun-style hard combat drugs that genuinely turn a fight around, at an honest cost the recipient signs up for knowingly.*
+> *The force-multiplier play — Ghostwire street hard combat drugs that genuinely turn a fight around, at an honest cost the recipient signs up for knowingly.*
 
 > **Toxic Cloud** *(canon, 3 Reagents)*
 > *Main action · Ranged area, cube 3 (dist 10) · Target: enemies in the cube*
@@ -419,7 +419,7 @@ Heroic Abilities are the Medic's Reagent-fueled compounds — chosen by cost tie
 
 **Corp-Medtech's partial mitigation.** The Corp-Medtech subclass's Pharmaceutical Grade feature reduces crash **duration** by 1 round — the crash still happens, at the same −1/−2 magnitude, but the affected character recovers from it one round sooner than they otherwise would. This does **not** eliminate the crash, reduce its magnitude, or grant immunity; it only shortens how long the penalty window lasts. See Subclasses, below, for the full Pharmaceutical Grade writeup.
 
-**Design intent.** This rider represents genuine Shadowrun-style hard combat drugs — substances that grant real, battlefield-swinging power at a real physiological cost. An ally who takes a combat stim from you *knows* they're signing up for the comedown; that knowledge is part of the fiction (nobody takes military-grade stims and expects zero consequences) and part of the tactical calculus (a smart player times their stim dose so the crash lands somewhere survivable, not mid-firefight against the boss). Making the crash automatic and universal — rather than save-avoidable or opt-in — keeps every Stimulant compound honest: the power is real, and so is the price.
+**Design intent.** This rider represents genuine Ghostwire street hard combat drugs — substances that grant real, battlefield-swinging power at a real physiological cost. An ally who takes a combat stim from you *knows* they're signing up for the comedown; that knowledge is part of the fiction (nobody takes military-grade stims and expects zero consequences) and part of the tactical calculus (a smart player times their stim dose so the crash lands somewhere survivable, not mid-firefight against the boss). Making the crash automatic and universal — rather than save-avoidable or opt-in — keeps every Stimulant compound honest: the power is real, and so is the price.
 
 ---
 

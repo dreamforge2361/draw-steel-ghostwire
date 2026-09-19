@@ -57,7 +57,7 @@
 
 ---
 
-## Shadowrun inspiration only (roles / sizes — no product names)
+## External role/size inspiration only (no product names)
 
 Used as design vocabulary, not copied text:
 - Size bands roughly: insect/micro → palm/mini → dog-small → large-dog/motorcycle → small-car (combat heavies).

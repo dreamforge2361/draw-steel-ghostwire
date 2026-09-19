@@ -58,7 +58,7 @@ You lose any remaining Advantage at the end of the encounter.
 
 **Firewall note:** Advantage is a class resource on the character-power side of the firewall. It never touches **nuyen** or **Body Integrity**, and chrome never generates it directly. The Ghost Suite optical-camo array (6th-level class feature) and other Scout chrome may **support** Advantage-fueled workings but never bank Advantage.
 
-*Design note (Advantage vs. DS Insight — Michael's 2026-07-29 rename decision): The name captures the shadowrunner reading their mark, and it does not collide with the DS system term "Edge" (a distinct DS mechanic representing a bonus/penalty band on rolls). The gameplay economy is unchanged from DS Insight — Advantage is the same 1d3-drip-plus-surge-bumps resource paying the same tiered ability costs. Only the label changed.*
+*Design note (Advantage vs. DS Insight — Michael's 2026-07-29 rename decision): The name captures the Runner reading their mark, and it does not collide with the DS system term "Edge" (a distinct DS mechanic representing a bonus/penalty band on rolls). The gameplay economy is unchanged from DS Insight — Advantage is the same 1d3-drip-plus-surge-bumps resource paying the same tiered ability costs. Only the label changed.*
 
 ### Signature Abilities
 
@@ -73,7 +73,7 @@ Every Scout chooses **one** signature ability at 1st level — your baseline, no
 
 *`chr` above always means your Reflex score.*
 
-*Design note: the four signatures come **direct from the DS Shadow SRD** with names and mechanics preserved — the names are already flavor-neutral (they read cleanly at a shadowrunner's back-alley knife-work). Only the resource label — Advantage — differs. Mechanics carry over 1:1.*
+*Design note: the four signatures come **direct from the DS Shadow SRD** with names and mechanics preserved — the names are already flavor-neutral (they read cleanly at a Runner's back-alley knife-work). Only the resource label — Advantage — differs. Mechanics carry over 1:1.*
 
 ### Heroic Abilities — Cost Bands 3 Through 11
 
@@ -100,7 +100,7 @@ Heroic Abilities are the Scout's paid workings — chosen by cost band as you le
 |---|---|---|---|---|---|
 | **Coup de Grâce** | 5 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 2d6+7+chr / 2d6+11+chr / 2d6+16+chr | Name kept (street and corp both use it). |
 | **One Hundred Throats** | 5 | Melee, Weapon, Main | Self; see below | Shift up to your speed; make one power roll targeting up to three enemies who came adjacent during the move. 3 damage / 6 damage / 9 damage | Name kept. |
-| **Setup** | 5 | Ranged 5, Strike, Weapon, Main | 1 creature | 6+chr; R<WEAK, damage weakness 5 (save ends) / 9+chr; R<AVG, damage weakness 5 (save ends) / 13+chr; R<STRONG, damage weakness 5 (save ends) | Name kept — reads shadowrunner. |
+| **Setup** | 5 | Ranged 5, Strike, Weapon, Main | 1 creature | 6+chr; R<WEAK, damage weakness 5 (save ends) / 9+chr; R<AVG, damage weakness 5 (save ends) / 13+chr; R<STRONG, damage weakness 5 (save ends) | Name kept — reads Runner. |
 | **Neurospike** | 5 | Chrome, Melee, Ranged, Main | Self; see below | You use a strike signature ability **twice.** | **Renamed from DS "Shadowstrike."** Magic keyword removed. Narratively: a cyber-adrenaline dump from a wired-reflex implant (Body Integrity chrome) firing two strikes inside a quarter-second window. Available to any Scout with any chrome loadout — no awakened restriction. |
 
 *(Quick Build: **Coup de Grâce.**)*

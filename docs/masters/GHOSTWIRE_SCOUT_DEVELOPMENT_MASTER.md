@@ -68,7 +68,7 @@ You lose any remaining Advantage at the end of the encounter.
 
 **Firewall note:** Advantage is a class resource on the BP/class side of the firewall. It never touches **nuyen** or **Body Integrity**, and chrome never generates it directly. The Ghost Suite optical-camo array (6th-level class feature) and other Scout chrome may **support** Advantage-fueled workings but never bank Advantage.
 
-*Design note (Advantage vs. DS Insight — Michael's 2026-07-29 rename decision): The name captures the shadowrunner reading their mark, and it does not collide with the DS system term "Edge" (a distinct DS mechanic representing a bonus/penalty tier on rolls). The gameplay economy is unchanged from DS Insight — Advantage is the same 1d3-drip-plus-surge-bumps resource paying the same tiered ability costs. Only the label changed.*
+*Design note (Advantage vs. DS Insight — Michael's 2026-07-29 rename decision): The name captures the Runner reading their mark, and it does not collide with the DS system term "Edge" (a distinct DS mechanic representing a bonus/penalty tier on rolls). The gameplay economy is unchanged from DS Insight — Advantage is the same 1d3-drip-plus-surge-bumps resource paying the same tiered ability costs. Only the label changed.*
 
 ### Signature Abilities
 
@@ -83,7 +83,7 @@ Every Scout chooses **one** signature ability at 1st level — your baseline, no
 
 *`chr` above always means your Reflex (Agility) score.*
 
-*Design note: the four signatures come **direct from the DS Shadow SRD** with names and mechanics preserved — the names are already flavor-neutral (they read cleanly at a shadowrunner's back-alley knife-work). Only the resource label — Advantage — differs. Mechanics carry over 1:1.*
+*Design note: the four signatures come **direct from the DS Shadow SRD** with names and mechanics preserved — the names are already flavor-neutral (they read cleanly at a Runner's back-alley knife-work). Only the resource label — Advantage — differs. Mechanics carry over 1:1.*
 
 ### Heroic Abilities — Cost Tiers 3 Through 11
 
@@ -110,7 +110,7 @@ Heroic Abilities are the Scout's paid workings — chosen by cost tier as you le
 |---|---|---|---|---|---|
 | **Kill Confirm** | 5 | Melee 1 or Ranged 5, Strike, Weapon, Main | 1 creature | 2d6+7+chr / 2d6+11+chr / 2d6+16+chr | Name kept (street and corp both use it). |
 | **One Hundred Throats** | 5 | Melee, Weapon, Main | Self; see below | Shift up to your speed; make one power roll targeting up to three enemies who came adjacent during the move. 3 damage / 6 damage / 9 damage | Name kept. |
-| **Setup** | 5 | Ranged 5, Strike, Weapon, Main | 1 creature | 6+chr; R<WEAK, damage weakness 5 (save ends) / 9+chr; R<AVG, damage weakness 5 (save ends) / 13+chr; R<STRONG, damage weakness 5 (save ends) | Name kept — reads shadowrunner. |
+| **Setup** | 5 | Ranged 5, Strike, Weapon, Main | 1 creature | 6+chr; R<WEAK, damage weakness 5 (save ends) / 9+chr; R<AVG, damage weakness 5 (save ends) / 13+chr; R<STRONG, damage weakness 5 (save ends) | Name kept — reads Runner. |
 | **Neurospike** | 5 | Chrome, Melee, Ranged, Main | Self; see below | You use a strike signature ability **twice.** | **Renamed from DS "Shadowstrike."** Magic keyword removed. Narratively: a cyber-adrenaline dump from a wired-reflex implant (Body Integrity chrome) firing two strikes inside a quarter-second window. Available to any Scout with any chrome loadout — no awakened restriction. |
 
 *(Quick Build: **Kill Confirm.**)*
@@ -613,7 +613,7 @@ Each `.ps1` will be authored with a documented run-block, per the Preflight Doct
 
 4. **OPEN SCHEMA QUESTION — Ghost Squad decoy actor template.** Ghost Squad creates 1d6 chromatic decoys with the Scout's stat block minus specific overrides (1 Stamina, no Advantage, no Ghost Suite, no triggered actions). The simplest Foundry pattern is a copy-on-summon actor template that inherits the parent's stat block and applies a deltas layer. **Alternatively:** treat decoys as pure token-copies with the deltas as active effects, no separate actor item. Both work; the actor-item path is cleaner for the sheet but heavier at scale (1d6 = up to 6 actor items per turn).
 
-5. **OPEN NAMING QUESTION — Beat the Draw.** The DS ability name is neutral enough to keep, but the flavor text ("Keep up the attack. Never give them a moment's grace.") reads corporate-sterile in a shadowrunner idiom. Michael to review and either (a) keep verbatim, (b) tweak flavor text (mechanics unchanged), or (c) rename entirely (e.g. "First to the Punch," "Read the Room"). Provisional: keep verbatim.
+5. **OPEN NAMING QUESTION — Beat the Draw.** The DS ability name is neutral enough to keep, but the flavor text ("Keep up the attack. Never give them a moment's grace.") reads corporate-sterile in Runner street idiom. Michael to review and either (a) keep verbatim, (b) tweak flavor text (mechanics unchanged), or (c) rename entirely (e.g. "First to the Punch," "Read the Room"). Provisional: keep verbatim.
 
 6. **OPEN NUMERIC QUESTION — Advantage income vs. Elementalist Essence.** DS Shadow's Insight was tuned around DS's own action economy. The Elementalist master notes GHOSTWIRE's own income retunes (2026-07-16 free-drip + optional-Channel; 2026-07-17 income retune). The Scout's Advantage inherits DS's 1d3-per-turn + 1-per-surge income unchanged — this is a **first-draft assumption**. The master baseline §E2 has already normalized Advantage's income streams (steady read +1, Exploit-the-Mark +1, Reposition +1 — see the Corporate Rename Map's link) and this document's Part 1 text still uses the DS-native 1d3 language. Reconcile: either the master baseline §E2 wins (steady read = +1 flat) and Part 1's 1d3 text needs correction, OR Part 1's 1d3 language is the intended playtest state and §E2 needs update. Flagged for Michael's ruling. Provisional: keep Part 1's 1d3 language and update §E2 in the numeric pass.
 

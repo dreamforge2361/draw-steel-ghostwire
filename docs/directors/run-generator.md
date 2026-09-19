@@ -4,7 +4,7 @@
 **UX model:** ApplicationV2 popup like **Wired Console** (`scripts/wired-console.mjs`) — Director-facing, not on the hero sheet.
 
 ## Goal
-In a pinch, open **Run Generator**, dial parameters, hit Generate, get a themed Shadowrun-style run for The Reach with pay/rewards, challenges, recommended NPCs/adversaries/threats, and a **mission Journal** you can attach Scenes/Items/Actors to.
+In a pinch, open **Run Generator**, dial parameters, hit Generate, get a themed Ghost Run for The Reach with pay/rewards, challenges, recommended NPCs/adversaries/threats, and a **mission Journal** you can attach Scenes/Items/Actors to.
 
 ## Controls (adjustable)
 | Control | Notes |

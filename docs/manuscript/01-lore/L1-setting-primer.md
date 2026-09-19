@@ -14,7 +14,7 @@ Ossian Reach, the Ten who own it, the Wired that watches it, and the war breakin
 
 ### The Word Spoken into the Dark
 
-The setting's underlying cosmology is a real, active conflict between The Light and The Dark One, with demonic invasion as a major setting pressure. The myth below is deliberately Judeo-Christian in shape — a cosmos spoken into being, a permitted adversary, and a fallen creation set as a proving ground — while remaining its own world, neither Earth nor the Shadowrun canon, only a rhyme with both.
+The setting's underlying cosmology is a real, active conflict between The Light and The Dark One, with demonic invasion as a major setting pressure. The myth below is deliberately Judeo-Christian in shape — a cosmos spoken into being, a permitted adversary, and a fallen creation set as a proving ground — while remaining its own world — neither Earth nor any other published setting, only itself.
 
 ### The Word and the Speaking
 
@@ -303,7 +303,7 @@ between fights, and redemption is a story worth playing, not a menu option.
 
 Where the war is fought. Part I established that creation is a Word still being spoken and the Dark is loose in it (Ch. 1–5). The megacity is where that cosmic struggle touches the ground — not on a battlefield but in stacked millions of ordinary lives, most of whom have never seen a demon and would call the Incursion a rumor. The sprawl is the setting's stage: a vast, vertical, corporate-owned habitat where the Word is thinnest (the Wired runs densest here, Ch. 9), corruption pools in the forgotten places, and the crew makes its living in the gaps between powers who are all, knowingly or not, on one side of the war or the other. The Light is spoken loudest where people still choose. The sprawl is thirty million choices a minute, and the Dark loves a crowd — it only takes the ones who stop choosing. The Hive-Sprawl — the three-genre synthesis The megacities of the Ground are a deliberate fusion of three genres, and the fusion is the setting's look and feel:
 - 40K-style hive verticality — the megacity is a titanic vertical hive: a single continent-anchored megastructure of stacked levels rising kilometers into the sky and sinking kilometers into the earth, built on the ruins of the level below it, layer upon layer, for so long that no one alive remembers the ground floor. It is not a skyline of towers but one enormous stratified organism.
-- Shadowrun corporate sprawl — the hive is owned, run, and policed by megacorps (Ch. 7): corp scrip, corp security, corp housing, the Wired woven through every level. The economy, the runs, the deniable-contractor life all live here.
+- Corporate sprawl — the hive is owned, run, and policed by megacorps (Ch. 7): corp scrip, corp security, corp housing, the Wired woven through every level. The economy, the runs, the deniable-contractor life all live here.
 
 - Old World of Darkness gothic dread — the tone is gothic, not neon-optimist: a decaying, oppressive, beautiful-and-rotten world where ancient things move in the dark, faith and damnation are literal, and the grandeur is always half a ruin. The hive is haunted — by demons, by the corrupted, by its own buried history. The vertical axis — altitude is wealth The hive's single organizing law: the higher you live, the richer you are. Altitude is the class system made architecture — you can read a person's entire station from the level they sleep on. Roughly top to bottom:
 - The Crown / The Spires — the sunlit apex: corp arcology-penthouses, executive enclaves, real sky and clean air. Extraterritorial, endlessly surveilled, obscenely comfortable. Elite Lifestyle. To live here is to be the corp.
@@ -1337,7 +1337,7 @@ flow.
 
 deliberately built as a hinge (Ch. 6): from Cinderhold's gate a crew can turn outward into the wastes (the
 high-tier, high-lethality wasteland and wild-zone runs — thinner law, thinner Signal, the Incursion in the open)
-or inward into the hive itself (the Shadowrun-style street-level megaplex run — the extraction, the data-steal,
+or inward into the hive itself (the street-level megaplex run — the extraction, the data-steal,
 the wetwork, the heist, the milk-run-gone-wrong). Street level is the default starting tier; the wilds are the
 escalation. So this chapter's job is texture — the tech, chrome, drones, transit, and media a low-Lifestyle
 crew touches every day in the Grid and the Flats — the lived-in surface that makes an inner-sprawl run feel
