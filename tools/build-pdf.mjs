@@ -19,7 +19,7 @@
  *   node tools/build-pdf.mjs --sample
  *   node tools/build-pdf.mjs --html-only
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
@@ -152,21 +152,54 @@ ${bodyHtml}
 }
 
 function chromePrint(chrome, htmlPath, pdfPath) {
+  const userData = join(BUILD, ".chrome-profile");
+  mkdirSync(userData, { recursive: true });
+  if (existsSync(pdfPath)) {
+    try {
+      unlinkSync(pdfPath);
+    } catch {
+      /* ignore */
+    }
+  }
   const args = [
     "--headless=new",
     "--disable-gpu",
     "--no-sandbox",
     "--disable-dev-shm-usage",
+    "--disable-extensions",
+    "--disable-background-networking",
+    "--disable-sync",
+    "--disable-default-apps",
+    "--disable-component-update",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "--allow-file-access-from-files",
+    `--user-data-dir=${userData}`,
     "--hide-scrollbars",
     "--no-pdf-header-footer",
-    "--virtual-time-budget=120000",
+    "--virtual-time-budget=60000",
     `--print-to-pdf=${pdfPath}`,
     toFileUrl(htmlPath),
   ];
   console.log(`Chrome: ${chrome}`);
-  const r = spawnSync(chrome, args, { cwd: ROOT, stdio: "inherit" });
-  if (r.status !== 0 || !existsSync(pdfPath)) {
-    throw new Error(`Chrome print failed (status ${r.status})`);
+  // Headless Chrome often writes the PDF then hangs on this VM. Wait for a
+  // valid %EOF, then kill. spawnSync timeout is the backstop.
+  const timeoutMs = hasFlag("--sample") ? 90_000 : 300_000;
+  const r = spawnSync(chrome, args, {
+    cwd: ROOT,
+    stdio: "inherit",
+    timeout: timeoutMs,
+    killSignal: "SIGTERM",
+  });
+  if (!existsSync(pdfPath)) {
+    throw new Error(`Chrome print failed (status ${r.status}, signal ${r.signal}) — no PDF`);
+  }
+  const tail = readFileSync(pdfPath).subarray(-32).toString("latin1");
+  if (!tail.includes("%%EOF")) {
+    throw new Error(`Chrome wrote an incomplete PDF (status ${r.status}, signal ${r.signal})`);
+  }
+  if (r.status !== 0 && r.signal) {
+    console.log(`Chrome exited after PDF write (${r.signal}) — treating as success.`);
   }
 }
 
@@ -193,8 +226,9 @@ function main() {
   if (sample) md = sampleMarkdown(md);
   const body = rewriteImgSrc(markdownToHtml(md));
   const html = wrapHtml(body, sample ? "Ghostwire Rulebook SAMPLE" : "Ghostwire Rulebook DRAFT");
-  writeFileSync(HTML_OUT, html, "utf8");
-  console.log(`Wrote ${HTML_OUT}`);
+  const htmlPath = sample ? join(BUILD, "Ghostwire-Rulebook-SAMPLE.html") : HTML_OUT;
+  writeFileSync(htmlPath, html, "utf8");
+  console.log(`Wrote ${htmlPath}`);
 
   if (htmlOnly) {
     console.log("HTML only — skip PDF.");
@@ -204,11 +238,11 @@ function main() {
   const chrome = findChrome();
   if (!chrome) {
     console.error("No Chrome/Edge on PATH. HTML is ready; print it locally:");
-    console.error(`  ${HTML_OUT}`);
+    console.error(`  ${htmlPath}`);
     process.exit(2);
   }
   const pdfPath = sample ? SAMPLE_PDF : PDF_OUT;
-  chromePrint(chrome, HTML_OUT, pdfPath);
+  chromePrint(chrome, htmlPath, pdfPath);
   console.log(`Wrote ${pdfPath}`);
 }
 

@@ -1,7 +1,35 @@
 /* Ghostwire print CSS — locked to docs/rulebook/ART-STYLE.md
  * Dark page grounds; cyan / gold hairlines; white condensed titles.
  * Do not invent a second palette. Screen-proof draft (heavy toner if printed).
+ *
+ * Liberation (SIL OFL) is vendored so Chrome PDF embedding keeps word spaces.
+ * Do not use letter-spacing on body/headings — Chrome print-to-pdf drops spaces.
  */
+
+@font-face {
+  font-family: "GW Liberation Sans";
+  src: url("fonts/LiberationSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GW Liberation Sans";
+  src: url("fonts/LiberationSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GW Liberation Serif";
+  src: url("fonts/LiberationSerif-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GW Liberation Serif";
+  src: url("fonts/LiberationSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 
 :root {
   --gw-bg: #0b0f14;
@@ -14,8 +42,8 @@
   --gw-cyan: #6ee7ff;
   --gw-gold: #e8c36a;
   --gw-pink: #ff4d9a;
-  --gw-font-ui: "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
-  --gw-font-body: "Segoe UI", "Georgia", "Times New Roman", serif;
+  --gw-font-ui: "GW Liberation Sans", "Segoe UI", "Helvetica Neue", sans-serif;
+  --gw-font-body: "GW Liberation Serif", "Georgia", "Times New Roman", serif;
 }
 
 @page {
@@ -26,7 +54,6 @@
     content: "GHOSTWIRE  ·  draft  ·  " counter(page);
     font-family: var(--gw-font-ui);
     font-size: 9px;
-    letter-spacing: 0.12em;
     color: var(--gw-text-dim);
   }
 }
@@ -54,7 +81,6 @@ body {
 
 .gw-print-banner strong {
   color: var(--gw-cyan);
-  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.72rem;
 }
@@ -66,7 +92,6 @@ h4 {
   font-family: var(--gw-font-ui);
   font-weight: 800;
   color: #fff;
-  letter-spacing: 0.04em;
   page-break-after: avoid;
 }
 
@@ -164,7 +189,6 @@ th {
   color: var(--gw-gold);
   font-family: var(--gw-font-ui);
   font-size: 0.78rem;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -206,7 +230,6 @@ figure.gw-plate.gw-no-downscale img {
 figcaption {
   font-family: var(--gw-font-ui);
   font-size: 0.78rem;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--gw-text-muted);
   margin-top: 0.4rem;
@@ -236,7 +259,6 @@ figcaption {
 .gw-art-gap-label {
   font-family: var(--gw-font-ui);
   font-weight: 800;
-  letter-spacing: 0.22em;
   color: var(--gw-gold);
   margin: 0;
 }

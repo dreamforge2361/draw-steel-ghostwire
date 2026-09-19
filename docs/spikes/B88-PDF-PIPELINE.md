@@ -109,6 +109,20 @@ District maps **place** because they already ship in the module. Everything that
 
 Live machine report: `docs/manuscript/build/ART-GAP-REPORT.md` (regenerated every inject).
 
+### First-run draft PDF (this VM)
+
+| | |
+|---|---|
+| Pages | **221** |
+| Size | ~16 MB (gitignored) |
+| Engine | Chrome headless HTML→PDF |
+| Placed art | 3 in-module district maps |
+| Visible gaps | 28 ART GAP figures |
+
+`--sample` writes an 8–16 page slice (title + L1 open + Ch 27 maps) to `Ghostwire-Rulebook-SAMPLE.pdf` (also gitignored). Chrome on this VM writes the PDF then hangs; `build-pdf.mjs` treats a valid `%%EOF` as success and times out the process.
+
+Print CSS vendors Liberation Sans/Serif (SIL OFL) so Chrome embeds a real text font. Do not add `letter-spacing` on body copy — Chrome print-to-pdf has eaten spaces in the past.
+
 ## Git / size
 
 - Generated **full draft PDF** is gitignored (can be tens of MB once art is in).

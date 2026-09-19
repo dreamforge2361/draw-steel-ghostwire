@@ -42,6 +42,7 @@ docs/manuscript/build/Ghostwire-Rulebook-DRAFT.pdf
 docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.pdf
 docs/manuscript/build/Ghostwire-Rulebook-SAMPLE.html
 docs/manuscript/build/ART-GAP-REPORT.md
+docs/manuscript/build/.chrome-profile/
 
 # Local print-art binaries (pipeline + ART-PLACEMENT.yml + READMEs stay)
 docs/manuscript/print-art/**/*.webp
