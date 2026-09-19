@@ -30,7 +30,8 @@
       "pregenFiction": "Ghostwire Pregen Fiction",
       "encounters": "Ghostwire Reach Events",
       "reachHandbook": "Ghostwire — Ossian Reach Handbook",
-      "lore": "Ghostwire Lore"
+      "lore": "Ghostwire Lore",
+      "runs": "Ghostwire Runs"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -7273,6 +7274,11 @@
         "NoChip": "{payload} is spent (quantity 0): there is no chip left to compile. Get a new chip first."
       },
       "Dumped": "{payload} unloaded: its {fires} remaining fire(s) are dumped. The chip is spent."
+    },
+    "Runs": {
+      "Folders": {
+        "Deadhead": "Deadhead"
+      }
     },
     "Lore": {
       "Folders": {
