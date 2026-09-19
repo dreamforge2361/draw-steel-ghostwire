@@ -384,10 +384,13 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Zap / Feedback Payload / biofeedback surge-packet | T4 | 4 | 600 | Fires a biofeedback spike at a wired target — works only on jacked-in/wired foes. | Program, Consumable, Wired |
 | Crash / ICE-Breaker / countermeasure-dissolution routine | T4 | 4 | 700 | Disables one piece of ICE (or grants a decisive edge to breach past it). | Program, Consumable, Wired |
+| Whiteout / Trace-Scrub / alert-wash packet | E1† | 3 | 3,500 | Scrubs a host’s Trace Alert (within Reach). **Craft (Hacking) is steep/hard.** | Program, Consumable, Wired |
 | Static / Jam Burst / local-mesh disruption packet | T3 | 3 | 2,000 | Suppresses one enemy device (smartgun link, camera, comm, hostile drone control) for a round; a strong run hits several. | Program, Consumable, Wired |
 | Ghostload / Data-Bomb / delayed logic-charge | T3 | 3 | 2,500 | Plants a trap on a node: next intruder takes a biofeedback hit and spikes their Alert. | Program, Consumable, Wired |
 | Blackout / Cascade Payload / systemic-collapse routine | T2 | 2 | 9,000 | Crashes an entire small network / hard-locks a host briefly. | Program, Consumable, Wired |
 | Wraith / Total-Intrusion Key / host-seizure exploit | T1 | 1 | 24,000 | Pre-built master exploit; one-shot decisive edge on a host-seizure attempt. | Program, Consumable, Wired |
+
+**† Whiteout lock (2026-09-19):** Kind = **payload magazine**, not a Bandwidth Program and not a suite. **Echelon 1 · Availability Restricted · ¥3,500 per chip** — do not remap through the T3→E2 ladder. Compile / recompile is a §Craft **Project**, skill **Hacking**, difficulty **steep / hard** (Director: hard Project goal, or a bane on the B51 Craft stand-in roll). **Run** requires Connected (Overlay or Jacked In), spends 1 fire, Power Roll **Logic / Reason**, target = the host whose Trace Alert you scrub (within Reach). Results: **Low (≤11)** fire spent, Trace unchanged (overrides the default low +1); **Middle (12–16)** Trace −1 (min 0); **High (17+)** Trace −1 and cancel the next Trace increase on that host before the end of your next turn (once). Respect global Trace rules (`docs/raw/21-the-wire.md`). Foundry v1: Director adjusts Trace on the **Wired Console** (no auto hook). Technomancer does **not** get this by default (no deck).
 
 ### 4D — RCCs & Rigger Command
 

@@ -241,7 +241,7 @@ Availability feel follows the Gear master’s legacy tier on each row (T4 Profes
 ### Programs and payloads (pointer)
 
 - **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
-- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one deck slot as a **magazine**, sharing the deck's slots with suites. Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
+- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one deck slot as a **magazine**, sharing the deck's slots with suites. Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
 
 ### Armor + gadget families
 

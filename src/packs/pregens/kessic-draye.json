@@ -2605,6 +2605,77 @@
       "_key": "!actors.items!EpoiL9RG5vvty6mT.9Go5ptkqJc6g0IhO"
     },
     {
+      "_id": "wHt0uT7mAgK3s1cQ",
+      "name": "GHOSTWIRE.Matrix.Items.Whiteout.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/usb-thumb-drive.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.Whiteout.Description",
+          "director": "GHOSTWIRE.Matrix.Items.Whiteout.Director"
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "whiteout",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "rPSzM2YqrQBEstrv",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "matrix": {
+            "echelon": 1,
+            "availability": "restricted",
+            "price": 3500,
+            "modSlots": 0,
+            "tags": [
+              "Program",
+              "Consumable",
+              "Wired"
+            ],
+            "consumable": true,
+            "role": "payload",
+            "craftDifficulty": "hard"
+          },
+          "mod": {
+            "slotCost": 1,
+            "hosts": [
+              "deck"
+            ],
+            "host": "deck",
+            "craftSkill": [
+              "hacking"
+            ],
+            "magazine": true,
+            "installedOn": "6XVXN8DuHNp3HkDH",
+            "active": true
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!EpoiL9RG5vvty6mT.wHt0uT7mAgK3s1cQ"
+    },
+    {
       "_id": "uebQccDY3FsAjIRk",
       "name": "GHOSTWIRE.Gear.Items.TraumaPatch.Name",
       "type": "treasure",

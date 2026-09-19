@@ -4,7 +4,7 @@
 Code `scripts/payload-use.mjs` (+ `scripts/mods.mjs`) · templates `scripts/data/payload-use-templates.json` · spike `docs/spikes/B51-PROGRAM-PAYLOAD-EXECUTE.md` · rule `docs/raw/21-the-wire.md` (Deck software: suites vs payloads) · doctrine `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
 
 ## The rule in one breath
-A payload chip (Zap, Crash, Ghostload, Static, Blackout, Wraith) does nothing loose. A downtime **Craft (Hacking)** Project compiles it into **one free deck slot** (shared with suites) as a **magazine**; the power roll sets its fires: **tier 1 → 1, tier 2 → 3, tier 3 → 5**. Each Run spends 1; at 0 the slot frees.
+A payload chip (Zap, Crash, Whiteout, Ghostload, Static, Blackout, Wraith) does nothing loose. A downtime **Craft (Hacking)** Project compiles it into **one free deck slot** (shared with suites) as a **magazine**; the power roll sets its fires: **tier 1 → 1, tier 2 → 3, tier 3 → 5**. Each Run spends 1; at 0 the slot frees. **Whiteout** compile is **steep / hard** (one bane on the Craft stand-in). Its Run does not auto-move Trace — Director clicks the Wired Console.
 
 ## What a Director sees
 - **Loose chip:** no Run ability. Right-click it on the hero sheet → **Load magazine (Craft)…**. Its quantity is the number of chips.

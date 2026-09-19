@@ -1,6 +1,6 @@
 // B51 / B51b — a matrix payload loaded into a deck as a magazine gets a "Run {Payload}" ability.
 //
-// Same gap B49 closed for weapons (scripts/equipment-use.mjs): payloads (Zap, Crash, Ghostload, Static,
+// Same gap B49 closed for weapons (scripts/equipment-use.mjs): payloads (Zap, Crash, Whiteout, Ghostload, Static,
 // Blackout, Wraith) are `treasure` with `flags.<module>.matrix.role: "payload"` — inventory only, nothing to
 // use, so B40 never hears them. This spawns a linked ability shaped like the Hacker's Wired abilities
 // (keywords ranged + wired, Reason power roll, distance special / Reach), which runs the normal ability
@@ -238,8 +238,10 @@ async function pickDeck(payload) {
  */
 async function rollCraft(actor, payload, deck) {
   const hacking = !!actor.system.skills?.value?.has?.("hacking");
+  // Whiteout (and any payload flagged craftDifficulty: "hard") is a steep/hard Craft Project: one bane.
+  const hard = payload.flags?.[MODULE_ID]?.matrix?.craftDifficulty === "hard";
   const title = game.i18n.format(`${L}.Load.RollTitle`, { payload: payload.name, deck: deck.name });
-  const message = await actor.system.rollCharacteristic?.("reason", { edges: hacking ? 1 : 0 },
+  const message = await actor.system.rollCharacteristic?.("reason", { edges: hacking ? 1 : 0, banes: hard ? 1 : 0 },
     { context: { skills: null }, window: { title } },
     { data: { title } });
   return message?.rolls?.[0]?.product ?? null;

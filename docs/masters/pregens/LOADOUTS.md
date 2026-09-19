@@ -31,7 +31,7 @@ granted abilities/features + gear). "BI" is Body Integrity spent of 20.
 | **Wren** | 30 | 7 | Armored Jacket | Longshot rifle, Popper | Burner, Cheap Shades, Standard Rounds, Trauma Patch | none (0) | ChangerPackTongue, ReachMetro, TradeCant, SprawlArgot |
 | **Sabbat** | 31 | 9 | Secure Threads | Popper | Pocket Sec, Fake SIN, Standard Rounds, Faraday Bag | Cyber-Ears (Soft) 1 (**1**) | RevenantMemorySpeech, ResonanceNotation, WireSpeak, SprawlArgot |
 | **Vira** | 32 | 6 | Secure Threads | Popper | Fleet Deck (RCC), Targeting Autosoft, Burner, Lockpick Set | Datajack 1 (**1**) | ChangerPackTongue, WireSpeak, MachineMarkup, SprawlArgot |
-| **Kessic** | 28 | 6 | Secure Threads | Sleeve-Gun | Street Deck, Sneak program, Crash payload, Pocket Sec, Trauma Patch | Datajack 1 + Cyber-Eyes 2 (**3**) | MutantEnclaveCant, WireSpeak, OldCode, SprawlArgot |
+| **Kessic** | 29 | 6 | Secure Threads | Sleeve-Gun | Street Deck, Sneak program, Crash payload, Whiteout magazine (2 fires, compiled), Pocket Sec, Trauma Patch | Datajack 1 + Cyber-Eyes 2 (**3**) | MutantEnclaveCant, WireSpeak, OldCode, SprawlArgot |
 
 Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
 
@@ -70,3 +70,4 @@ Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
 5. **Kaïs wears no armor at all**, strictly following Hexshot's `armor: "none"`. Wren, whose Longshot kit also says
    none, was given a light Armored Jacket per the spike's "Light / none" direction — flag if you want her bare too.
 6. Above-Professional picks are limited to Wren's Longshot rifle and Barak's credstick and Chatterbox. Everything else is Street or Professional.
+7. **Kessic’s Whiteout magazine is hand-compiled.** `loadouts.json` lists the SKU; `kessic-draye.json` then sets quantity **2**, `mod.installedOn` the Street Deck, and `mod.active` (B105). A full `pregens-to-actors.mjs` run would drop that compile unless re-applied.

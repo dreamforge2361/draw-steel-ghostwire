@@ -78,7 +78,7 @@ Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md` + Foundry **Mods** pack
 - **Vehicle / drone mods** — Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
 - **Armor + gadget families** — expanding under Foundry spike **B20**.
 - **Programs** — occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
-- **Matrix payloads** — consumable mods (Gear master **§4C**; locked 2026-09-17). A payload fills one deck slot as a **magazine**, sharing the deck's slots with suites. Loading = Craft (Hacking) Project; the result sets its fires (**low 1 / middle 3 / high 5**, provisional). Each Run spends one; at 0 the slot frees. A payload fills a slot, it never has one, so the Consumables rule above still holds. Full player rule: `docs/raw/21-the-wire.md` (Deck software: suites vs payloads); doctrine: `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
+- **Matrix payloads** — consumable mods (Gear master **§4C**; locked 2026-09-17). A payload fills one deck slot as a **magazine**, sharing the deck's slots with suites. Loading = Craft (Hacking) Project; the result sets its fires (**low 1 / middle 3 / high 5**, provisional). Each Run spends one; at 0 the slot frees. **Whiteout** compile is **steep / hard**. A payload fills a slot, it never has one, so the Consumables rule above still holds. Full player rule: `docs/raw/21-the-wire.md` (Deck software: suites vs payloads); doctrine: `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
 
 ## Invent a Mod (v1) — LOCKED
 

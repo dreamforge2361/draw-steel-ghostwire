@@ -1,5 +1,5 @@
 {
-  "_comment": "B51 — turns a Ghostwire matrix payload (treasure, flags.draw-steel-ghostwire.matrix.role 'payload') into a 'Run {Payload}' ability. Shape follows the Hacker's Wired abilities: keywords ranged + wired, power roll @chr over reason (the Wire rules roll Programs with Logic, which is Draw Steel's Reason), distance special (the deck's Reach). Keyed by the payload's system._dsid; an unknown payload falls back to 'generic'. Tier text lives in lang/en.json under GHOSTWIRE.PayloadUse.Payloads.<lang>.",
+  "_comment": "B51 — turns a Ghostwire matrix payload (treasure, flags.draw-steel-ghostwire.matrix.role 'payload') into a 'Run {Payload}' ability. Shape follows the Hacker's Wired abilities: keywords ranged + wired, power roll @chr over reason (the Wire rules roll Programs with Logic, which is Draw Steel's Reason), distance special (the deck's Reach). Keyed by the payload's system._dsid; an unknown payload falls back to 'generic'. Tier text lives in lang/en.json under GHOSTWIRE.PayloadUse.Payloads.<lang>. Whiteout (B105) is the E1 Restricted Trace-scrub magazine.",
 
   "keywords": ["ranged", "wired"],
   "characteristics": ["reason"],
@@ -15,6 +15,7 @@
       "damage": { "tier1": "2 + @chr", "tier2": "5 + @chr", "tier3": "7 + @chr", "types": [] }
     },
     "crash": { "lang": "Crash", "target": { "type": "special" } },
+    "whiteout": { "lang": "Whiteout", "target": { "type": "special" }, "before": true },
     "ghostload": { "lang": "Ghostload", "target": { "type": "special" }, "before": true },
     "static": { "lang": "Static", "target": { "type": "special" }, "before": true },
     "blackout": { "lang": "Blackout", "target": { "type": "special" } },

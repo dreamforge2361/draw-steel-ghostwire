@@ -161,6 +161,7 @@
       "src/packs/gear/general/comms/pocket-sec.json",
       "src/packs/matrix/programs/sneak.json",
       "src/packs/matrix/payloads/crash.json",
+      "src/packs/matrix/payloads/whiteout.json",
       "src/packs/gear/general/medical/trauma-patch.json"
     ],
     "chrome": [
@@ -182,6 +183,6 @@
       "OldCode",
       "SprawlArgot"
     ],
-    "why": "Null keeps the Street Deck he already carries and adds the two programs a Disruptor runs on the way in — Sneak to stay quiet and Crash to dissolve cheap ICE — plus a holdout in the sleeve for the meat that's left behind; the port behind his ear from the story is the Datajack (1 BI) and the optics that read a lattice of light are Cyber-Eyes (2 BI), 3 of 20."
+    "why": "Null keeps the Street Deck he already carries and adds the two programs a Disruptor runs on the way in — Sneak to stay quiet and Crash to dissolve cheap ICE — plus a compiled Whiteout magazine (2 fires, 1 of 2 Street Deck slots) to scrub Trace; a holdout in the sleeve for the meat that's left behind; the port behind his ear from the story is the Datajack (1 BI) and the optics that read a lattice of light are Cyber-Eyes (2 BI), 3 of 20."
   }
 }
