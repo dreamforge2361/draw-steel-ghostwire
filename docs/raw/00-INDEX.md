@@ -1,6 +1,6 @@
 # Ghostwire RAW Rulebook (master)
 
-**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). **`25-opposition.md` Stage 3 draft** (B70, 2026-09-18). **`09-chrome-body-integrity.md` implant ¥ catalog** (B71, 2026-09-18). No lore, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
+**Status:** First full assemble 2026-09-17 — chapters mostly **draft**, pending Michael review. **`21-the-wire.md` RAW-locked** (B66, 2026-09-18). **`26-lifestyle-downtime.md` Stage 3 draft** (B67, 2026-09-18). **`25-opposition.md` Stage 3 draft** (B70, 2026-09-18). **`09-chrome-body-integrity.md` implant ¥ catalog** (B71, 2026-09-18). **`24-advancement.md` + `06-backgrounds-professions.md` Stage 3 fill** (B73, 2026-09-19). Print Ch 27 Reach pointer filled in manuscript (B73). No lore in RAW, no artwork. Review flags: `docs/spikes/B42-RAW-REVIEW-FLAGS.md`. **Print TOC:** LOCKED 2026-09-18 (recommended package; see `docs/rulebook/TOC-PROPOSAL.md`).  
 **Path:** `docs/raw/` — this folder is the **master RAW** player/Director rules text for the repo.  
 **Delivery order (LOCKED):** (1) finish RAW markdown here → (2) Foundry Journal pack from these files → (3) PDF pipeline later.
 
@@ -32,7 +32,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `03-tests-power-rolls.md` | Tests, Power Rolls, Heroes’ Fortune | DS-by-ref | Outcome order ≤11 / 12–16 / 17+ |
 | `04-combat.md` | Combat basics | Stage 3 draft | Stamina, Recoveries, B49 weapon use, GW keywords, Crisis/inert |
 | `05-ancestries.md` | Ancestries (Peoples) | GW | `09-species.md` + SPECIES-DS-MAP |
-| `06-backgrounds-professions.md` | Backgrounds & Professions | GW | `13-backgrounds-professions.md` |
+| `06-backgrounds-professions.md` | Backgrounds & Professions | Stage 3 draft (B73) | 8 Backgrounds + 15 Professions; community-edge + collision procedure |
 | `07-languages.md` | Languages (rules only) | GW thin | `19-languages.md` — names + mechanical grants; no lore gazetteer |
 | `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | GW + DS kits pattern | `10-kits.md`, `11-economy.md`, gear master distill |
 | `09-chrome-body-integrity.md` | Chrome & Body Integrity | GW draft (B71 catalog) | Pass A locks + implant ¥/Avail from Chrome pack + B55 Soft; packages/Frame Modules provisional |
@@ -42,7 +42,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `21-the-wire.md` | The Wire (Matrix) | GW | **RAW-locked** B66 (2026-09-18); Overlay/Jacked In, Rating 1–5, Trace Alert defaults, suites/payloads |
 | `22-the-veil.md` | The Veil (minimal) | GW | Only what Elementalist / Street Priest need |
 | `23-machines.md` | Drones, Vehicles (Buildings stub OK) | GW | `15-drones.md`, `16-vehicles.md` |
-| `24-advancement.md` | Advancement & echelons | DS-by-ref + GW | Levels 1–10, echelon bands |
+| `24-advancement.md` | Advancement & echelons | Stage 3 draft (B73) | Levels 1–10, echelon bands, table timing; doctrine locked |
 | `25-opposition.md` | Opposition (Director) | Stage 3 draft | Stage 3 fill 2026-09-18 (B70); street-fight procedure; Malice + Trace Alert; no lore bestiary |
 | `26-lifestyle-downtime.md` | Lifestyle & Downtime | GW Stage 3 draft (B67) | Print Ch 10; §F3 upkeep ¥; Medic restock quotes; §Craft / chrome / Ritual pointers |
 

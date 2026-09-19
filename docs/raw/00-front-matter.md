@@ -29,7 +29,7 @@ This statement appears in every published form of this book. The Draw Steel comp
 
 1. **Players** start with `02-heroes-characteristics.md`, then pick a People (`05`), Background and Profession (`06`), a class (`12`–`20`), and a Kit (`08`).
 2. **Everyone** reads the remap tables in `01`–`04` once, so Ghostwire’s names and changes are familiar.
-3. **Directors** add `21-the-wire.md`, `23-machines.md`, and `25-opposition.md`.
+3. **Directors** add `21-the-wire.md`, `23-machines.md`, `25-opposition.md`, and print Ch 27 (Running Ossian Reach — manuscript pointer, not a gazetteer).
 
 ## Chapter list
 
@@ -61,6 +61,7 @@ This statement appears in every published form of this book. The Draw Steel comp
 | `23-machines.md` | Machines: Drones, Vehicles, and Buildings |
 | `24-advancement.md` | Advancement and Echelons |
 | `25-opposition.md` | Opposition (Director) |
+| `26-lifestyle-downtime.md` | Lifestyle and Downtime (print Ch 10) |
 
 ## Chapter status
 

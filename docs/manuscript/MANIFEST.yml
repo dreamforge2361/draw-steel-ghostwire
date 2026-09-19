@@ -255,6 +255,6 @@ entries:
   - type: file
     id: ch27
     title: Running Ossian Reach (pointer)
-    path: 03-directors/27-running-ossian-reach.STUB.md
+    path: 03-directors/27-running-ossian-reach.md
     kind: new
     print_ch: 27

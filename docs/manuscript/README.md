@@ -1,6 +1,6 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Scaffold 2026-09-18 (B64) — manuscript track; module **0.2.6** (B68 In Foundry sidebars in raw)  
+**Status:** Assemble + gap fill 2026-09-19 (B73) — module **0.3.2**; Ch 27 pointer filled; journals still held  
 **Path:** `docs/manuscript/`  
 **Spike:** `docs/spikes/B64-MANUSCRIPT-SOR.md`  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
@@ -16,7 +16,7 @@ This folder is the **single Markdown source of record** for the eventual print P
 | **Print SoR** | Ordered Markdown that Pandoc (later) turns into the core book PDF |
 | **Lore stubs** | Placeholders under `01-lore/` until artwork/lore is carried as-is from master PDFs |
 | **Rules pointers** | Manifest entries → `docs/raw/*.md` (Stage 3 filled chapters stay in raw; manuscript does not fork them) |
-| **NEW print-only** | Lifestyle → `../raw/26-lifestyle-downtime.md` (B67 draft); Running Ossian Reach stub remains |
+| **NEW print-only** | Lifestyle → `../raw/26-lifestyle-downtime.md` (B67 draft); Running Ossian Reach → `03-directors/27-running-ossian-reach.md` (B73 pointer fill) |
 
 **Not** a second rules edit surface. **Not** the Foundry Journal pipeline.
 
@@ -81,7 +81,7 @@ See `TOC.md` for print titles ↔ sources. See `02-rules/README.md` for the poin
 1. **Artwork / lore prose** — carry **as-is** from the master Ghostwire PDFs (Core Sourcebook, Lore Book V2, related plates). Do not rewrite voice for “DS alignment” in lore chapters.
 2. **Rules** — **Ghostwire-original** wording from `docs/raw/` only. No substantial MCDM / *Draw Steel: Heroes* paste. Engine = DS by reference + GW remap tables already in raw.
 3. **Do not** paste lore into `docs/raw/`. Lore harvest lands under `01-lore/` (or front matter stubs), then joins the book via the manifest.
-4. **Scaffold only today** — stub files say `CONTENT TBD — harvest from …`. No PDF text pasted in this milestone.
+4. Lore harvest landed in B65 (L1–L3). Remaining print stub: title/credits plate (`00-front/title-page.md`). Ch 27 is a pointer fill (B73), not a harvest.
 
 ---
 

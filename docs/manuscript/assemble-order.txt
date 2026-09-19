@@ -38,4 +38,4 @@
 ../raw/23-machines.md
 # --- Part V ---
 ../raw/25-opposition.md
-03-directors/27-running-ossian-reach.STUB.md
+03-directors/27-running-ossian-reach.md
