@@ -6,7 +6,7 @@
  * Heading ids come from tools/lib/heading-anchor.mjs (stable slugs; -2, -3
  * on collision). Pass a shared allocator so blockquote headings don't reuse ids.
  */
-import { createIdAllocator } from "./heading-anchor.mjs";
+import { createIdAllocator, headingIdSource } from "./heading-anchor.mjs";
 
 function escapeHtml(s) {
   return String(s)
@@ -157,7 +157,7 @@ export function markdownToHtml(md, options = {}) {
       flushPara();
       const level = heading[1].length;
       const text = heading[2].trim();
-      const id = allocId(text);
+      const id = allocId(headingIdSource(text));
       out.push(`<h${level} id="${id}">${inline(text)}</h${level}>`);
       i++;
       continue;

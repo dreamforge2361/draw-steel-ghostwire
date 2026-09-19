@@ -20,7 +20,10 @@ function protectRegions(md) {
   };
   let text = String(md);
   text = text.replace(/^```[\s\S]*?^```/gm, hold);
-  text = text.replace(/<!--[\s\S]*?-->/g, hold);
+  // Keep chapter/part banners — linkify uses kind= to skip lore-book "Ch. N".
+  text = text.replace(/<!--[\s\S]*?-->/g, (m) =>
+    /<!--\s*(?:chapter:|PART:)/.test(m) ? m : hold(m),
+  );
   text = text.replace(/<figure\b[\s\S]*?<\/figure>/gi, hold);
   text = text.replace(/<div\b[\s\S]*?<\/div>/gi, hold);
   text = text.replace(/!\[[^\]]*\]\([^)]+\)/g, hold);
@@ -33,9 +36,32 @@ function protectRegions(md) {
   };
 }
 
-function mapUnprotected(text, fn) {
-  const parts = String(text).split(/(!?\[[^\]]*\]\([^)]+\))/);
-  return parts.map((part, i) => (i % 2 === 1 ? part : fn(part))).join("");
+function isAtxHeadingLine(line) {
+  return /^\s{0,3}#{1,6}\s/.test(String(line).replace(/^(\s*>\s?)+/, ""));
+}
+
+function eachSourceLine(text, fn) {
+  let kind = null;
+  return String(text)
+    .split(/\n/)
+    .map((line) => {
+      if (/<!--\s*chapter:/.test(line)) {
+        const km = line.match(/kind=([a-z]+)/);
+        kind = km ? km[1] : null;
+      }
+      if (/<!--\s*PART:/.test(line)) kind = "part";
+      return fn(line, kind);
+    })
+    .join("\n");
+}
+
+function mapUnprotected(text, fn, opts = {}) {
+  const skipKinds = opts.skipKinds || null;
+  return eachSourceLine(text, (line, kind) => {
+    if (skipKinds && skipKinds.has(kind)) return line;
+    const parts = line.split(/(!?\[[^\]]*\]\([^)]+\))/);
+    return parts.map((part, i) => (i % 2 === 1 ? part : fn(part, kind))).join("");
+  });
 }
 
 function mdLink(label, href) {
@@ -122,15 +148,19 @@ function linkifyPrintCh(text, registry, stats) {
 }
 
 function linkifyBareChapter(text, registry, stats) {
-  return text.replace(/\b(?:Ch\.|Chapter|chapter)\s+(\d+)(?!\s*[–-]\s*\d+)/g, (all, n) => {
-    const ch = lookupPrintCh(registry, n);
-    if (!ch?.href) {
-      stats.skipped += 1;
-      return all;
-    }
-    stats.printCh += 1;
-    return mdLink(all, ch.href);
-  });
+  // Skip "Part II Ch. 6" (other-book part labels). Require print Ch or a lone Ch./chapter N.
+  return text.replace(
+    /(?<!Part\s+[IVXL]+\s+)\b(?:Ch\.|Chapter|chapter)\s+(\d+)(?!\s*[–-]\s*\d+)/g,
+    (all, n) => {
+      const ch = lookupPrintCh(registry, n);
+      if (!ch?.href) {
+        stats.skipped += 1;
+        return all;
+      }
+      stats.printCh += 1;
+      return mdLink(all, ch.href);
+    },
+  );
 }
 
 function linkifySeeTitles(text, registry, stats) {
@@ -150,15 +180,15 @@ function linkifySeeTitles(text, registry, stats) {
 
 function linkifyArrowTargets(text, registry, stats) {
   return text.replace(
-    /([A-Z][A-Za-z0-9 &'/().,-]+?)\s*→\s*([A-Z][A-Za-z0-9 &'/().,-]+?)(?=\s*(?:\(|$|[,.;]))/g,
-    (all, left, right) => {
+    /(\*{0,2})([A-Z][A-Za-z0-9 &'/().,-]+?)\s*→\s*([A-Z][A-Za-z0-9 &'/().,-]+?)(\*{0,2})(?=\s*(?:\(|$|[,.;]))/g,
+    (all, lmark, left, right, rmark) => {
       const leftCh = lookupTitle(registry, left.trim());
       const rightHref = lookupUniqueHeading(registry, right.trim());
       if (!leftCh?.href && !rightHref) return all;
       const leftBit = leftCh?.href ? mdLink(left.trim(), leftCh.href) : left;
       const rightBit = rightHref ? mdLink(right.trim(), rightHref) : right;
       stats.arrows += 1;
-      return `${leftBit} → ${rightBit}`;
+      return `${lmark}${leftBit} → ${rightBit}${rmark}`;
     },
   );
 }
@@ -217,12 +247,14 @@ function generateContents(registry) {
     lines.push(`## ${group.title}`, "");
     for (const c of rows) {
       let label = c.headingText || c.title;
+      label = label.replace(/^Chapter\s+\d+\s+[—–-]\s+/i, "");
+      label = label.replace(/^Appendix\s+[A-Z]\s+[—–-]\s+/i, "");
       if (c.kind === "lore" && c.id) label = `${c.id} — ${label}`;
       if (c.printCh != null) {
         let extra = "";
         if (c.printCh === 28) extra = " / Appendix A";
         if (c.printCh === 29) extra = " / Appendix B";
-        label = `Ch ${c.printCh}${extra} — ${c.headingText || c.title}`;
+        label = `Ch ${c.printCh}${extra} — ${label}`;
       }
       lines.push(`- ${mdLink(label, c.href)}`);
     }
@@ -240,16 +272,23 @@ function generateContents(registry) {
   return lines.join("\n");
 }
 
+function insertBeforePartBanner(md, partNeedle, from = 0) {
+  const idx = md.indexOf(partNeedle, from);
+  if (idx < 0) return -1;
+  const before = md.slice(0, idx);
+  const deco = before.match(/(?:\n<!-- =+[^-]*-->\s*)+$/);
+  return deco ? idx - deco[0].length : idx;
+}
+
 function insertContents(md, contentsMd) {
   if (/<!--\s*chapter:\s*Contents\s*-->/.test(md)) return { md, inserted: false };
-  const lorePart = md.indexOf("<!-- PART: Lore Harvest");
-  if (lorePart >= 0) {
-    return { md: `${md.slice(0, lorePart)}${contentsMd.trimEnd()}\n\n${md.slice(lorePart)}`, inserted: true };
+  const loreAt = insertBeforePartBanner(md, "<!-- PART: Lore Harvest");
+  if (loreAt >= 0) {
+    return { md: `${md.slice(0, loreAt)}${contentsMd.trimEnd()}\n\n${md.slice(loreAt)}`, inserted: true };
   }
   const howTo = md.indexOf("<!-- chapter: How to Use This Book");
   if (howTo >= 0) {
-    const next = md.indexOf("<!-- PART:", howTo + 10);
-    const at = next >= 0 ? next : md.indexOf("<!-- chapter:", howTo + 10);
+    const at = insertBeforePartBanner(md, "<!-- PART:", howTo + 10);
     if (at > howTo) {
       return { md: `${md.slice(0, at)}${contentsMd.trimEnd()}\n\n${md.slice(at)}`, inserted: true };
     }
@@ -290,13 +329,18 @@ export function linkifyManuscript(md, manifestEntries) {
   text = mapUnprotected(text, (c) => linkifyRawIds(c, registry, stats));
   text = mapUnprotected(text, (c) => linkifyAppendix(c, registry, stats));
   text = mapUnprotected(text, (c) => linkifyPrintCh(c, registry, stats));
-  text = mapUnprotected(text, (c) => linkifyBareChapter(c, registry, stats));
+  // Lore harvest cites source-PDF "Ch. N" — not print TOC. Only link those in rules/front.
+  text = mapUnprotected(text, (c) => linkifyBareChapter(c, registry, stats), {
+    skipKinds: new Set(["lore"]),
+  });
   text = mapUnprotected(text, (c) => linkifySeeTitles(c, registry, stats));
   text = mapUnprotected(text, (c) => linkifyArrowTargets(c, registry, stats));
 
   text = text
     .split(/\r?\n/)
-    .map((line) => (line.includes("|") ? linkifyExactTableCells(line, registry, stats) : line))
+    .map((line) =>
+      line.includes("|") && !isAtxHeadingLine(line) ? linkifyExactTableCells(line, registry, stats) : line,
+    )
     .join("\n");
 
   const markdown = protectedMd.restore(text);

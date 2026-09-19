@@ -8,7 +8,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { assignHeadingIds, createIdAllocator, scanAtxHeadings, slugifyHeading } from "./lib/heading-anchor.mjs";
+import { assignHeadingIds, createIdAllocator, headingIdSource, scanAtxHeadings, slugifyHeading } from "./lib/heading-anchor.mjs";
 import { linkifyManuscript } from "./lib/linkify-manuscript.mjs";
 import { markdownToHtml } from "./lib/md-to-html.mjs";
 
@@ -26,6 +26,7 @@ console.log("heading-anchor");
 ok(slugifyHeading("The Wire") === "the-wire", "slug The Wire");
 ok(slugifyHeading("Kits, Gear & Wealth (¥)") === "kits-gear-wealth", "slug kits/gear");
 ok(slugifyHeading("Appendix B — Character Generation Cheat Sheet").startsWith("appendix-b-"), "slug appendix B");
+ok(headingIdSource("[Chapter 27](#x) — Running Ossian Reach") === "Chapter 27 — Running Ossian Reach", "headingIdSource strips links");
 const alloc = createIdAllocator();
 ok(alloc("Class Chassis") === "class-chassis", "first collision keeps slug");
 ok(alloc("Class Chassis") === "class-chassis-2", "second collision suffixes -2");
@@ -43,16 +44,24 @@ ok(htmlHead.includes('id="hello"') && htmlHead.includes('id="hello-2"') && htmlH
 console.log("linkify fixtures");
 const manifest = [
   { type: "part", id: "I", title: "Part I — Core Rules" },
+  { type: "file", id: "L1", title: "Setting Primer", path: "01-lore/L1-setting-primer.md", kind: "lore" },
   { type: "file", id: "how-to", title: "How to Use This Book", path: "00-front/how-to-use-this-book.md", kind: "front" },
   { type: "file", id: "ch4", title: "Combat", path: "../raw/04-combat.md", kind: "raw", print_ch: 4 },
   { type: "file", id: "ch9", title: "Kits, Gear & Wealth (¥)", path: "../raw/08-kits-gear-wealth.md", kind: "raw", print_ch: 9 },
   { type: "file", id: "ch23", title: "The Wire", path: "../raw/21-the-wire.md", kind: "raw", print_ch: 23 },
   { type: "file", id: "ch28", title: "Glossary of Slang & Setting Jargon", path: "04-back/28-glossary-slang.md", kind: "new", print_ch: 28 },
   { type: "file", id: "ch29", title: "Character Generation Cheat Sheet (Foundry)", path: "04-back/29-chargen-cheat-sheet.md", kind: "new", print_ch: 29 },
+  { type: "file", id: "ch21", title: "Hacker", path: "../raw/19-hacker.md", kind: "raw", print_ch: 21 },
 ];
 
 const fixture = [
   "<!-- PART: Lore Harvest -->",
+  "<!-- chapter: Setting Primer · kind=lore -->",
+  "# Setting Primer",
+  "",
+  "Piped through the overlay (Ch. 21) — lore-book chapter, not print Hacker.",
+  "Directors still use print Ch 23 for the Wire.",
+  "",
   "<!-- chapter: How to Use This Book -->",
   "# How to Use This Book",
   "",
@@ -88,6 +97,13 @@ const fixture = [
   "<!-- chapter: Character Generation Cheat Sheet (Foundry) (print Ch 29) · kind=new -->",
   "# Appendix B — Character Generation Cheat Sheet",
   "",
+  "See also **How to Play → Table tone and safety** (print Ch 1).",
+  "",
+  "<!-- chapter: Hacker (print Ch 21) · kind=raw -->",
+  "# The Hacker",
+  "",
+  "See also Ch. 21 in rules (print number).",
+  "",
 ].join("\n");
 
 const { markdown, stats } = linkifyManuscript(fixture, manifest);
@@ -105,6 +121,13 @@ ok(/`docs\/rulebook\/08-hacker\.md`/.test(markdown) && !/\[`docs\/rulebook\/08-h
 ok(/src="assets\/maps\/districts\/04-combat\.png"/.test(markdown), "figure src untouched");
 ok(/\[`04-combat\.md`\]\(#combat\)/.test(markdown), "TOC table filename cell links");
 ok(!/see Combat again/.test(markdown) || /see \[Combat\]\(#combat\) again/.test(markdown), "see Combat links chapter title");
+ok(/^# Combat$/m.test(markdown), "plain Combat h1 unchanged");
+ok(/# (?:\[)?Appendix B/.test(markdown), "Appendix B h1 still present");
+ok(markdownToHtml(markdown).includes('id="appendix-b-character-generation-cheat-sheet"'), "Appendix B id stable if heading is linkified");
+ok(/\*\*How to Play → \[Table tone and safety\]\(#table-tone-and-safety\)\*\*/.test(markdown), "bold How to Play → subsection arrow");
+ok(/overlay \(Ch\. 21\)/.test(markdown) && !/overlay \(\[Ch\. 21\]/.test(markdown), "lore-book Ch. 21 not mapped to print Hacker");
+ok(/\[print Ch 23\]\(#the-wire\)/.test(markdown), "print Ch 23 still links Wire inside lore");
+ok(/See also \[Ch\. 21\]\(#the-hacker\)/.test(markdown), "rules Ch. 21 → print Hacker");
 ok(stats.skipped >= 1, "records skipped/unambiguous misses");
 
 const linkedHtml = markdownToHtml(markdown);

@@ -67,7 +67,7 @@ Shared libs:
 | `How to Play → Table tone and safety` | Chapter title + unique heading | both sides if unambiguous |
 | TOC / chapter-list table cells | Exact title or `NN-*.md` filename | Front-matter chapter list |
 
-Ranges (`print Ch 1–5`, `Print Ch 6–13`) are **left alone** (multi-target). Unknown ids (`99`) stay plain. `docs/rulebook/` and `docs/masters/` paths are **not** treated as print chapters.
+Ranges (`print Ch 1–5`, `Print Ch 6–13`) are **left alone** (multi-target). Unknown ids (`99`) stay plain. `docs/rulebook/` and `docs/masters/` paths are **not** treated as print chapters. Lore-harvest `Ch. N` cites the **source PDF**, not print TOC — those stay unlinked.
 
 ## What is not linked
 
@@ -85,7 +85,7 @@ Chrome 126+ can embed an outline from HTML headings when both flags are set:
 --export-tagged-pdf
 ```
 
-`build-pdf.mjs` passes both. Some Chrome/Edge builds still emit **no** `/Outlines` from `--print-to-pdf` (outline is derived from the tagged structure tree; older or “new headless” gaps exist). **Limitation:** if the written PDF has no outline dictionary, use the in-document Contents + cyan `#` links. Do not require Pandoc for this pass.
+`build-pdf.mjs` passes both. This VM’s Chrome **does** emit `/Outlines` from those flags (verified on a heading fixture). Some Windows Chrome/Edge builds still write **no** outline (tagged-tree gaps). **Limitation:** if the written PDF has no `/Outlines`, use the in-document Contents + cyan `#` links. Do not require Pandoc for this pass.
 
 Heading structure is already `h1` (parts + chapter titles) / `h2` / `h3`. Collision suffixes keep `id` unique so outline targets and in-page links match.
 
@@ -105,3 +105,14 @@ Heading structure is already `h1` (parts + chapter titles) / `h2` / `h3`. Collis
 - [x] Chrome outline flags + limitation documented
 - [x] `module.json` **0.3.22**
 - [x] Journals not regenerated
+
+## Smoke counts (this VM, after assemble + inject + linkify + `--html-only`)
+
+| | |
+|---|---|
+| Markdown hotlinks | **899** (contents/toc 96 · raw-ids 567 · filenames 161 · print-ch 61 · appendix 10 · see-title 3 · arrows 1 · skipped 2) |
+| HTML `href="#…"` | **878** (47 unique targets; all ids exist) |
+| Art | 15 placed / 26 gaps (unchanged; `wire-opener` still a gap) |
+| Chrome outline fixture | `/Outlines` present with `--generate-pdf-document-outline` + `--export-tagged-pdf` |
+
+Remaining unlinked (by design): print-Ch **ranges**, lore-book `Ch. N`, `docs/rulebook/` / `docs/masters/` paths, unknown ids, ambiguous subsection titles (`Class Chassis`).

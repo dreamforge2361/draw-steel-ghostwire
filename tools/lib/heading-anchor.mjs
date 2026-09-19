@@ -3,6 +3,11 @@
  * md-to-html and linkify MUST use the same slug + collision rules.
  */
 
+/** Strip markdown links so slugs stay stable if a heading is later linkified. */
+export function headingIdSource(text) {
+  return String(text).replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+}
+
 /** Same algorithm md-to-html used before B97 (plus empty fallback). */
 export function slugifyHeading(text) {
   const id = String(text)
@@ -74,5 +79,5 @@ export function scanAtxHeadings(md) {
 /** Assign collision-aware IDs to a heading list (document order). */
 export function assignHeadingIds(headings) {
   const alloc = createIdAllocator();
-  return headings.map((h) => ({ ...h, id: alloc(h.text) }));
+  return headings.map((h) => ({ ...h, id: alloc(headingIdSource(h.text)) }));
 }
