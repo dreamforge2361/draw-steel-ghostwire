@@ -95,26 +95,49 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   letter-spacing: 0.02em;
 }
 
-/* Taint 0–12 fieldset on the hero Stats tab (B80) */
+/* Taint 0–12: Stats fieldset (under Body Integrity) + always-visible header row (B80) */
 .ghostwire-taint {
   gap: 0.5rem;
   align-items: end;
 }
 
-.ghostwire-taint .form-group.stacked input {
+.ghostwire-taint .form-group.stacked input,
+.ghostwire-taint-header input {
   width: 4em;
   text-align: center;
 }
 
-.ghostwire-taint .ghostwire-taint-band {
-  flex: 1 0 100%;
+.ghostwire-taint .ghostwire-taint-band,
+.ghostwire-taint-header .ghostwire-taint-band {
   margin: 0;
+  align-self: center;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-.ghostwire-taint.band-marked .ghostwire-taint-band { color: var(--color-level-warning, #c90); }
-.ghostwire-taint.band-stained .ghostwire-taint-band { color: var(--color-level-warning, #c90); font-weight: 600; }
-.ghostwire-taint.band-claimed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 600; }
-.ghostwire-taint.band-hollowed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 700; }
+.ghostwire-taint-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.25rem 0 0;
+  color: var(--ghostwire-text, inherit);
+}
+
+.ghostwire-taint-header label {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: var(--font-size-12, 12px);
+}
+
+.ghostwire-taint.band-marked .ghostwire-taint-band,
+.ghostwire-taint-header.band-marked .ghostwire-taint-band { color: var(--color-level-warning, #c90); }
+.ghostwire-taint.band-stained .ghostwire-taint-band,
+.ghostwire-taint-header.band-stained .ghostwire-taint-band { color: var(--color-level-warning, #c90); }
+.ghostwire-taint.band-claimed .ghostwire-taint-band,
+.ghostwire-taint-header.band-claimed .ghostwire-taint-band { color: var(--color-level-error, #d33); }
+.ghostwire-taint.band-hollowed .ghostwire-taint-band,
+.ghostwire-taint-header.band-hollowed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 700; }
 
 /* Wired connection state on the hero Stats tab */
 .ghostwire-wired {

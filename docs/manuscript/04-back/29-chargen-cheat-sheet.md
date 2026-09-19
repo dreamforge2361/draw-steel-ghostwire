@@ -25,7 +25,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 ### 0 · Boot the sheet
 
 - [ ] Enable the Ghostwire module. Create Actor → **Hero**. Name the runner.
-- [ ] Confirm **Stats** already shows **¥5,000**, **Body Integrity 20/20** (Cyborg: Integrity **N/A** after People), and **Taint 0** (Clean). Matrix Verbs are already on the sheet.
+- [ ] Confirm the sheet **header** shows **Taint 0** (Clean), and **Stats** shows **¥5,000**, **Body Integrity 20/20** (Cyborg: Integrity **N/A** after People), and the same **Taint** fieldset under Integrity. Matrix Verbs are already on the sheet.
 
 ---
 

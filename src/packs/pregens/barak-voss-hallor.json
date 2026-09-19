@@ -3505,7 +3505,8 @@
       "integrity": {
         "value": 11,
         "max": 20
-      }
+      },
+      "taint": 0
     }
   }
 }

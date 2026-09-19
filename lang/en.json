@@ -225,7 +225,8 @@
     "Taint": {
       "Label": "Taint",
       "Current": "Taint",
-      "Hint": "Spiritual stain, 0–12. Rest never cleanses it. Chrome does not raise it. The Director and players change this number when the table awards or rites Taint.",
+      "Hint": "Spiritual stain, 0–12. Rest never cleanses it. Chrome does not raise it. Owner and GM edit this number when the table awards or rites Taint.",
+      "BandHint": "Band from Taint: Clean 0 · Marked 1–3 · Stained 4–6 · Claimed 7–9 · Hollowed 10–12.",
       "BandLine": "{band} ({value} / {max})",
       "Bands": {
         "clean": "Clean",

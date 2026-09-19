@@ -12,7 +12,7 @@
 Every runner uses this track, **Cyborgs included**. Chrome, rest, and the retired Mutant **Corruption Load** do not replace it.
 
 > **In Foundry**
-> On the hero sheet **Stats** tab, Ghostwire adds a **Taint** fieldset (0–12) under Body Integrity. The band name (**Clean / Marked / Stained / Claimed / Hollowed**) updates from the number. New heroes start at **0**. The field writes `flags.draw-steel-ghostwire.taint`. Rest and chrome install do not move it — the Director and players change the number when the table awards or cleanses Taint.
+> Open a **hero** (or pregen) sheet. **Taint** is a number input **0–12** in two places: a compact row in the **sheet header** (visible on every tab), and a **Taint** fieldset on the **Stats** tab directly under **Body Integrity** (same overlay family as Integrity / Wired). The band chip (**Clean / Marked / Stained / Claimed / Hollowed**) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes `flags.draw-steel-ghostwire.taint`. New heroes and pregens start at **0**. Rest and chrome install do not move it.
 
 ## The track
 

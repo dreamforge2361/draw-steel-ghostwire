@@ -62,7 +62,7 @@ At **Taint 12**, pause. Redemption quest, retirement-as-NPC, or a last-run clock
 
 ## Foundry
 
-Hero sheet **Stats → Taint** is the live number (`flags.draw-steel-ghostwire.taint`). You and the player edit it when the table awards or cleanses. Ghostwire does **not** auto-tick on rest, chrome, or zone entry this pass. Band gifts and costs are table rules — no Active Effects.
+Open a hero or pregen sheet. **Taint** is a visible **0–12** number input in the **sheet header** and again on **Stats** under **Body Integrity**. The band chip updates live. Owner and GM edit; the flag is `flags.draw-steel-ghostwire.taint`. Ghostwire does **not** auto-tick on rest, chrome, or zone entry this pass. Band gifts and costs are table rules — no Active Effects.
 
 If the field and the fiction disagree, the table's last award wins; then set the field to match.
 

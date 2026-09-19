@@ -1,6 +1,7 @@
 // B80 Taint track (docs/spikes/B80-CORRUPTION-TAINT-TRACK.md, docs/raw/27-corruption-taint.md):
-// Shared hero stain 0–12 on flags.<module>.taint. Bands Clean / Marked / Stained / Claimed / Hollowed.
-// Sheet field only this pass — no rest hook, no chrome hook, no band Active Effects.
+// Visible hero-sheet control: Stats tab under Body Integrity + compact header row.
+// Flag: flags.<module>.taint (0–12). Bands Clean / Marked / Stained / Claimed / Hollowed.
+// Owner + GM edit; observers read. No rest hook, no chrome hook, no band Active Effects.
 
 export const MODULE_ID = "draw-steel-ghostwire";
 export const TAINT_MIN = 0;
@@ -33,6 +34,144 @@ export function getTaint(actor) {
   return clampTaint(flag);
 }
 
+function sheetRoot(app, element) {
+  if (element?.querySelector) return element;
+  if (element?.[0]?.querySelector) return element[0];
+  if (app?.element?.querySelector) return app.element;
+  return null;
+}
+
+function isHeroActor(actor) {
+  return actor?.type === "hero";
+}
+
+function canEditTaint(app, actor) {
+  if (app?.isEditable) return true;
+  if (game.user?.isGM) return true;
+  return Boolean(actor?.isOwner);
+}
+
+function bandLabel(bandId) {
+  return game.i18n.localize(`GHOSTWIRE.Taint.Bands.${bandId}`);
+}
+
+function paintBand(host, value) {
+  const band = taintBandId(value);
+  host.classList.remove("band-clean", "band-marked", "band-stained", "band-claimed", "band-hollowed");
+  host.classList.add(`band-${band}`);
+  const chip = host.querySelector(".ghostwire-taint-band");
+  if (chip) chip.textContent = bandLabel(band);
+  return band;
+}
+
+function bindInput(input, host, actor, editable) {
+  input.addEventListener("input", event => {
+    event.stopPropagation();
+    paintBand(host, clampTaint(input.value));
+  });
+  input.addEventListener("change", event => {
+    event.stopPropagation();
+    const next = clampTaint(input.value);
+    input.value = String(next);
+    paintBand(host, next);
+    if (!editable) return;
+    actor.update({ [`flags.${MODULE_ID}.taint`]: next });
+  });
+}
+
+function numberInput(value, editable) {
+  const input = document.createElement("input");
+  Object.assign(input, {
+    type: "number",
+    min: String(TAINT_MIN),
+    max: String(TAINT_MAX),
+    step: 1,
+    value: String(value),
+    disabled: !editable,
+  });
+  input.setAttribute("aria-label", game.i18n.localize("GHOSTWIRE.Taint.Label"));
+  return input;
+}
+
+function injectStatsFieldset(root, actor, editable) {
+  if (root.querySelector(".ghostwire-taint")) return;
+  const stats = root.querySelector("section.tab[data-tab='stats']")
+    ?? root.querySelector("[data-tab='stats']")
+    ?? root.querySelector("[data-application-part='stats']");
+  if (!stats) return false;
+
+  const value = getTaint(actor);
+  const band = taintBandId(value);
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = `ghostwire-taint flexrow band-${band}`;
+
+  const legend = document.createElement("legend");
+  legend.textContent = game.i18n.localize("GHOSTWIRE.Taint.Label");
+  legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Taint.Hint");
+  fieldset.append(legend);
+
+  const group = document.createElement("div");
+  group.className = "form-group stacked";
+  const label = document.createElement("label");
+  label.textContent = game.i18n.localize("GHOSTWIRE.Taint.Current");
+  const input = numberInput(value, editable);
+  group.append(label, input);
+  fieldset.append(group);
+
+  const chip = document.createElement("span");
+  chip.className = "ghostwire-taint-band";
+  chip.textContent = bandLabel(band);
+  chip.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Taint.BandHint");
+  fieldset.append(chip);
+
+  bindInput(input, fieldset, actor, editable);
+
+  const anchor = stats.querySelector(".ghostwire-integrity")
+    ?? stats.querySelector("fieldset.resources")
+    ?? stats.querySelector("fieldset");
+  if (anchor) anchor.after(fieldset);
+  else stats.prepend(fieldset);
+  return true;
+}
+
+function injectHeaderControl(root, actor, editable) {
+  if (root.querySelector(".ghostwire-taint-header")) return;
+  const header = root.querySelector("[data-application-part='header']")
+    ?? root.querySelector(".sheet-header")
+    ?? root.querySelector(".window-content .profile");
+  if (!header) return false;
+
+  const value = getTaint(actor);
+  const band = taintBandId(value);
+  const row = document.createElement("div");
+  row.className = `ghostwire-taint-header band-${band}`;
+  row.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Taint.Hint");
+
+  const label = document.createElement("label");
+  label.textContent = game.i18n.localize("GHOSTWIRE.Taint.Label");
+  const input = numberInput(value, editable);
+  const chip = document.createElement("span");
+  chip.className = "ghostwire-taint-band";
+  chip.textContent = bandLabel(band);
+  row.append(label, input, chip);
+  bindInput(input, row, actor, editable);
+
+  const name = header.querySelector(".document-name") ?? header.querySelector("h1");
+  if (name) name.after(row);
+  else header.append(row);
+  return true;
+}
+
+function injectTaintControls(app, element) {
+  const actor = app?.document ?? app?.actor;
+  if (!isHeroActor(actor)) return;
+  const root = sheetRoot(app, element);
+  if (!root) return;
+  const editable = canEditTaint(app, actor);
+  injectStatsFieldset(root, actor, editable);
+  injectHeaderControl(root, actor, editable);
+}
+
 export function registerTaint() {
   Hooks.on("preCreateActor", (actor, data, options, userId) => {
     if ((userId !== game.user.id) || (actor.type !== "hero")) return;
@@ -42,55 +181,26 @@ export function registerTaint() {
     actor.updateSource({ [`flags.${MODULE_ID}.taint`]: TAINT_MIN });
   });
 
-  // Hero sheet: Taint 0–12 + band label under Body Integrity. Chrome / rest never write this flag.
-  Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
-    const stats = element.querySelector("section.tab[data-tab='stats']");
-    if (!stats || stats.querySelector(".ghostwire-taint")) return;
-    const actor = app.document;
-    const value = getTaint(actor);
-    const band = taintBandId(value);
+  // World heroes imported before B80: stamp 0 once so the sheet reads a real flag.
+  Hooks.once("ready", async () => {
+    const pending = [];
+    for (const actor of game.actors) {
+      if (actor.type !== "hero") continue;
+      if (actor.getFlag(MODULE_ID, "taint") !== undefined) continue;
+      pending.push(actor.update({ [`flags.${MODULE_ID}.taint`]: TAINT_MIN }));
+    }
+    if (pending.length) {
+      await Promise.all(pending);
+      console.log(`${MODULE_ID} | stamped Taint 0 onto ${pending.length} hero(es)`);
+    }
+  });
 
-    const fieldset = document.createElement("fieldset");
-    fieldset.className = `ghostwire-taint flexrow band-${band}`;
-    const legend = document.createElement("legend");
-    legend.textContent = game.i18n.localize("GHOSTWIRE.Taint.Label");
-    legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Taint.Hint");
-    fieldset.append(legend);
-
-    const group = document.createElement("div");
-    group.className = "form-group stacked";
-    const label = document.createElement("label");
-    label.textContent = game.i18n.localize("GHOSTWIRE.Taint.Current");
-    const input = document.createElement("input");
-    Object.assign(input, {
-      type: "number",
-      min: String(TAINT_MIN),
-      max: String(TAINT_MAX),
-      step: 1,
-      value,
-      disabled: !app.isEditable,
-    });
-    input.addEventListener("change", event => {
-      event.stopPropagation();
-      const next = clampTaint(input.value);
-      input.value = String(next);
-      actor.update({ [`flags.${MODULE_ID}.taint`]: next });
-    });
-    group.append(label, input);
-    fieldset.append(group);
-
-    const bandLine = document.createElement("p");
-    bandLine.className = "ghostwire-taint-band hint";
-    bandLine.textContent = game.i18n.format("GHOSTWIRE.Taint.BandLine", {
-      band: game.i18n.localize(`GHOSTWIRE.Taint.Bands.${band}`),
-      value,
-      max: TAINT_MAX,
-    });
-    fieldset.append(bandLine);
-
-    const anchor = stats.querySelector(".ghostwire-integrity") ?? stats.querySelector("fieldset.resources");
-    if (anchor) anchor.after(fieldset);
-    else stats.prepend(fieldset);
+  // Same overlay family as Body Integrity / Wired (Draw Steel hero sheet, AppV2).
+  Hooks.on("renderDrawSteelHeroSheet", injectTaintControls);
+  // Fallback if a world still fires the generic actor-sheet hook for heroes.
+  Hooks.on("renderActorSheet", (app, element) => {
+    if (!isHeroActor(app?.document ?? app?.actor)) return;
+    injectTaintControls(app, element);
   });
 
   console.log(`${MODULE_ID} | Taint: hero sheet 0–${TAINT_MAX} registered (flags.${MODULE_ID}.taint)`);

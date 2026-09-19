@@ -34,7 +34,13 @@ note(veil.includes("27-corruption-taint.md"), "Veil points at 27");
 note(ancestry.includes("27-corruption-taint.md"), "Ancestries point at 27");
 note(director.includes("corrupted zone"), "Director notes cover corrupted zones");
 note(mapping.includes("27-corruption-taint"), "journal mapping includes 27");
-note(sheet.includes("flags.${MODULE_ID}.taint") || sheet.includes("flags.${MODULE_ID}.taint"), "sheet writes flags.draw-steel-ghostwire.taint");
+note(sheet.includes("flags.${MODULE_ID}.taint"), "sheet writes flags.draw-steel-ghostwire.taint");
+note(sheet.includes("renderDrawSteelHeroSheet"), "sheet hooks renderDrawSteelHeroSheet");
+note(sheet.includes("renderActorSheet"), "sheet hooks renderActorSheet fallback");
+note(sheet.includes("ghostwire-taint-header"), "sheet injects header Taint control");
+note(sheet.includes('type: "number"') && sheet.includes("TAINT_MAX"), "sheet uses a 0–12 number input");
+note(sheet.includes("isOwner") && sheet.includes("isGM"), "owner + GM can edit");
+note(sheet.includes("addEventListener(\"input\""), "band updates live on input");
 note(boot.includes("registerTaint()"), "module registers Taint");
 note(!/taint/.test(chrome.split("createItem")[2] ?? "") || chrome.includes("Do not write flags.<module>.taint"), "chrome install comments the Taint firewall");
 note(lang.GHOSTWIRE.Taint.Bands.clean === "Clean", "lang Clean");
@@ -83,6 +89,12 @@ try {
 
 const rulebook = readdirSync("src/packs/rulebook/ghostwire-systems").filter(f => f.endsWith(".json"));
 note(rulebook.includes("27-corruption-taint.json"), "rulebook systems folder lists 27");
+
+const pregens = readdirSync("src/packs/pregens").filter(f => f.endsWith(".json") && !f.endsWith("_folder.json"));
+for (const file of pregens) {
+  const actor = JSON.parse(readFileSync(join("src/packs/pregens", file), "utf8"));
+  note(actor.flags?.["draw-steel-ghostwire"]?.taint === 0, `pregen ${file} has taint 0`);
+}
 
 console.log(ok.map(m => `ok  ${m}`).join("\n"));
 if (fail.length) {

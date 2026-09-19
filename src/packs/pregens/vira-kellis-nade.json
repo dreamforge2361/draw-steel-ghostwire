@@ -3763,7 +3763,8 @@
       "integrity": {
         "value": 19,
         "max": 20
-      }
+      },
+      "taint": 0
     }
   }
 }
