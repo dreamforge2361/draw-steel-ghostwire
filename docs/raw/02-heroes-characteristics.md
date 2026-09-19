@@ -44,7 +44,7 @@ Assign scores with the array in **Characteristics** below. Ghostwire’s **step 
 When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, next Lifestyle band).
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29 / `docs/manuscript/04-back/29-chargen-cheat-sheet.md`).
 
 ---
 

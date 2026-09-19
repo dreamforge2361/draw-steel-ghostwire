@@ -29,7 +29,7 @@ You play Ghostwire from **this book**. Procedure chapters give characteristics, 
 3. **Lore (optional at the table, required for the PDF)** — Directors skim L1 before a Reach campaign; players can wait until they have a runner. Do not treat L3 as the whole hive.
 4. **Print Ch 0** — glossary, abbreviations, conventions, Creator License.
 5. **Print Ch 1–5** — how the night is shaped, heroes, dice, combat, advancement.
-6. **Print Ch 6–13** — make a runner (People, Background, Profession, languages, Kit/¥, Lifestyle, chrome, mods, perks).
+6. **Print Ch 6–13** — make a runner (People, Background, Profession, languages, Kit/¥, Lifestyle, chrome, mods, perks). **Foundry punch-list:** Appendix B (print Ch 29).
 7. **Print Ch 14–22** — the nine classes.
 8. **Print Ch 23–25** — Wire, Veil, machines.
 9. **Print Ch 26–27** — opposition procedure; **Running Ossian Reach** is a pointer, not a district dump.
@@ -56,6 +56,8 @@ Rules chapters may carry a short boxed note:
 > Two to six sentences naming **shipped** *Draw Steel — Ghostwire Build* UI only: where it lives, what to click. No screenshots. No invented menus. No “coming soon.”
 
 Those notes are **instructional**, not a Foundry manual and not lore. Pattern lock: `docs/spikes/B68-FOUNDRY-SIDEBARS.md`. If a sidebar and the chapter body disagree, the chapter body wins; if a sidebar names a control that is not in the module, ignore the sidebar and file a bug.
+
+To make a runner on the Hero sheet, use **Appendix B — Character Generation Cheat Sheet** (print Ch 29).
 
 This print book is **not** the journal pipeline. Rulebook journals regenerate from `docs/raw/` later (held until pre-PDF). Do not treat a Journal page as newer than RAW.
 

@@ -186,7 +186,13 @@ export function markdownToHtml(md) {
         q.push(lines[i].replace(/^\s*>\s?/, ""));
         i++;
       }
-      out.push(`<blockquote>${markdownToHtml(q.join("\n"))}</blockquote>`);
+      const first = (q[0] || "").replace(/[*_]/g, "").trim().toLowerCase();
+      const cls = first.startsWith("street tip")
+        ? ' class="gw-street"'
+        : first.startsWith("in foundry")
+          ? ' class="gw-foundry"'
+          : "";
+      out.push(`<blockquote${cls}>${markdownToHtml(q.join("\n"))}</blockquote>`);
       continue;
     }
 
@@ -197,7 +203,15 @@ export function markdownToHtml(md) {
       while (i < lines.length) {
         const m = lines[i].match(/^\s*[-*+]\s+(.+)$/);
         if (!m) break;
-        out.push(`<li>${inline(m[1])}</li>`);
+        const check = m[1].match(/^\[([ xX])\]\s+(.*)$/);
+        if (check) {
+          const checked = check[1] !== " ";
+          out.push(
+            `<li class="gw-check"><input type="checkbox" disabled${checked ? " checked" : ""} /> ${inline(check[2])}</li>`,
+          );
+        } else {
+          out.push(`<li>${inline(m[1])}</li>`);
+        }
         i++;
       }
       out.push("</ul>");

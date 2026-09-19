@@ -107,7 +107,7 @@ docs/manuscript/
   01-lore/               # Core Sourcebook / Lore Book harvest stubs
   02-rules/              # pointer notes only (no full raw copies)
   03-directors/          # NEW Reach pointer; Opposition → raw
-  04-back/               # Appendix A slang
+  04-back/               # Appendix A slang + Appendix B chargen cheat sheet
   print/                 # print CSS (ART-STYLE lock)
   print-art/             # ART-PLACEMENT.yml + empty tree (binaries local)
   build/                 # generated manuscript / with-art / draft PDF

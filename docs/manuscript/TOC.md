@@ -98,6 +98,7 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 | Ch | Print title | Source |
 |---|---|---|
 | 28 | Glossary of Slang & Setting Jargon | **NEW** `04-back/28-glossary-slang.md` — B77; Runner = Ghost Runner coin; street/Wired/Veil slang |
+| 29 | Character Generation Cheat Sheet (Foundry) | **NEW** `04-back/29-chargen-cheat-sheet.md` — B93; Foundry Hero-sheet punch-list |
 
 
 ## Notes
@@ -118,3 +119,4 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Lore **VOIDMARK** (`01-lore/L4-voidmark.md`) **draft** 2026-09-19 (B90); leash-slipped MER-origin super-AI; journals **not** regenerated.
 - Lore **Hands Off Accords** (`01-lore/L5-hands-off-accords.md`) **draft** 2026-09-19 (B91); AI legal / actuators restricted; Dark bot war = escalation fuel; journals **not** regenerated.
 - Print PDF pipeline **B88** 2026-09-19 (`tools/build-pdf.mjs`, `print-art/ART-PLACEMENT.yml`); journals **not** regenerated.
+- Appendix B chargen cheat sheet (`04-back/29-chargen-cheat-sheet.md`) **draft** 2026-09-19 (B93); Foundry punch-list; journals **not** regenerated.

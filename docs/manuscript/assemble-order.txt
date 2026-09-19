@@ -8,6 +8,8 @@
 01-lore/L1-setting-primer.md
 01-lore/L2-peoples-and-world.md
 01-lore/L3-ossian-reach-color.md
+01-lore/L4-voidmark.md
+01-lore/L5-hands-off-accords.md
 # --- Part I ---
 ../raw/00-front-matter.md
 ../raw/01-how-to-play.md
@@ -42,3 +44,4 @@
 ../raw/25-opposition.md
 03-directors/27-running-ossian-reach.md
 28  Appendix A — Glossary of Slang (04-back/28-glossary-slang.md)
+29  Appendix B — Character Generation Cheat Sheet (04-back/29-chargen-cheat-sheet.md)
