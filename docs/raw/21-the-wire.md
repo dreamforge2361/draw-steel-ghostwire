@@ -162,7 +162,7 @@ A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kind
 | | Suites | Payloads |
 |---|---|---|
 | **Role** | Utility and defense | Offense and disruption |
-| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Static, Ghostload, Blackout, Wraith |
+| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |
 | **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |
 | **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |
 | **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |
@@ -194,6 +194,8 @@ A payload chip in your gear does nothing by itself. To use it, you compile it in
 
 
 The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
+
+**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand.
 
 ## Director tools
 

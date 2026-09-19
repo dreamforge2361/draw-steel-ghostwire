@@ -180,4 +180,4 @@ Art locks: flat top-down maps; no people on maps; no baked grid; ARG uniform sty
 
 ## L1 Trace tools note (playtest)
 
-See companion note in Director chat / below in ship notes: L1 Hacker/Technomancer do **not** ship a “Trace −1” button; Deadhead’s call-home block is the scenario Trace−1. Ghost Step (cancel an increase) is later-level.
+**Kessic brings Whiteout×2** (compiled magazine, 2 fires on Switchblade / Street Deck) — that is the L1 Trace −1 payload. Technomancer does not get Whiteout by default (no deck). Deadhead’s ICE call-home block is the scenario Trace −1 if nobody runs Whiteout. Ghost Step (cancel an increase) is later-level.

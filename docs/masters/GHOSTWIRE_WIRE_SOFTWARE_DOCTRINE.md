@@ -20,7 +20,7 @@ Suites: Craft-install, Activate/Deactivate, edge Matrix Verbs / standing benefit
 
 ## Payloads (offensive magazines)
 
-Zap, Crash, Static, Ghostload, Blackout, Wraith.
+Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith.
 
 - Share deck `modSlots` with suites (Street Deck typically 2).
 - Craft (Hacking) downtime Project loads **one kind into one slot** as a **magazine**.

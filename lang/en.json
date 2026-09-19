@@ -4959,6 +4959,11 @@
           "Name": "Crash",
           "Description": "<p><em>Crash · ICE-Breaker · countermeasure-dissolution routine</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥700 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Disables one piece of ICE (or grants a decisive edge to breach past it).</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
         },
+        "Whiteout": {
+          "Name": "Whiteout",
+          "Description": "<p><em>Whiteout · Trace-Scrub · alert-wash packet</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,500 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Scrubs a host’s Trace Alert (within Reach). Low: fire spent, Trace unchanged. Middle: Trace −1 (min 0). High: Trace −1 and cancel the next Trace increase before the end of your next turn (once).</p><p><strong>Craft:</strong> compiling this chip is a downtime §Craft Project, skill Hacking, difficulty <strong>steep / hard</strong> (a bane on the Craft roll vs. a typical payload).</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired. You must be Connected (Overlay or Jacked In) to Run it.</p>",
+          "Director": "<p><strong>Foundry (v1):</strong> Run Whiteout does not write Trace on the Wired Console. After the Power Roll, the Director clicks <strong>Trace down</strong> (middle/high: −1, min 0). On a high result, note a one-shot <em>Whiteout hold</em> on that host (node notes): skip the next Trace increase that would land before the end of the runner’s next turn, then clear the hold. Low spends the fire and leaves Trace unchanged — do <em>not</em> apply the default low +1. Global Trace rules still apply (per-round caps, lockout at 12, reset to 6).</p>"
+        },
         "Static": {
           "Name": "Static",
           "Description": "<p><em>Static · Jam Burst · local-mesh disruption packet</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥2,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired</p><p><strong>Effect:</strong> Suppresses one enemy device (smartgun link, camera, comm, hostile drone control) for a round; a strong run hits several.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire; at 0 the magazine is spent and the slot frees. A loose chip can’t be fired.</p>"
@@ -7222,6 +7227,13 @@
           "Tier1": "The ICE holds, but you gain an edge on your next roll to breach past it.",
           "Tier2": "The ICE is disabled until the end of your next turn, or you gain a double edge on your next roll to breach past it.",
           "Tier3": "The ICE is disabled for the rest of the encounter."
+        },
+        "Whiteout": {
+          "Target": "1 host within Reach whose Trace Alert you scrub",
+          "Before": "You must be Connected (Overlay or Jacked In). Spend 1 fire. Target the host whose Trace Alert you are washing, within your deck’s Reach. Foundry v1: the Director adjusts Trace on the Wired Console by hand — this Run does not move the track automatically.",
+          "Tier1": "The fire is spent. That host’s Trace Alert is unchanged (this overrides the default low +1 Trace).",
+          "Tier2": "That host’s Trace Alert drops by 1 (minimum 0). Director: click Trace down once on the Wired Console.",
+          "Tier3": "That host’s Trace Alert drops by 1 (minimum 0), and you cancel the next Trace increase on that host before the end of your next turn (once). Director: click Trace down once, then mark a Whiteout hold on the node notes and skip the next +1 that would land before that deadline."
         },
         "Ghostload": {
           "Target": "The node you are in",
