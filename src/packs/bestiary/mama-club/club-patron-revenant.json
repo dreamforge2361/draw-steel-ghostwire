@@ -6,8 +6,8 @@
   "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/club-patron-revenant.webp",
   "system": {
     "stamina": {
-      "value": 15,
-      "max": 15,
+      "value": 4,
+      "max": 4,
       "temporary": 0
     },
     "characteristics": {
@@ -41,7 +41,7 @@
     },
     "biography": {
       "value": "<p>Pale velvet and gold liquor. He does not blink often. Madame Quill nods to him once a night and that is the whole conversation.</p>",
-      "director": "<p><strong>Plot hook:</strong> Filler seat with undead texture. Soft contact for Quill or a Reach Revenant crew if the table goes that way.</p>",
+      "director": "<p><strong>Plot hook:</strong> Filler seat with undead texture. A soft contact for Madame Quill, or for a Reach Revenant crew if the table goes that way.</p>",
       "languages": []
     },
     "movement": {
@@ -57,11 +57,11 @@
         "all": 0,
         "acid": 0,
         "cold": 0,
-        "corruption": 0,
+        "corruption": 1,
         "fire": 0,
         "holy": 0,
         "lightning": 0,
-        "poison": 0,
+        "poison": 1,
         "psychic": 0,
         "sonic": 0
       },
@@ -84,8 +84,8 @@
       "license": "Draw Steel Creator License"
     },
     "negotiation": {
-      "interest": 7,
-      "patience": 3,
+      "interest": 5,
+      "patience": 5,
       "motivations": [],
       "pitfalls": [],
       "impression": 1
@@ -97,10 +97,9 @@
         "undead"
       ],
       "level": 1,
-      "role": "hexer",
+      "role": "harrier",
       "organization": "minion",
-      "withCaptainEffect": "GwMamaPatRCaptn0",
-      "freestrike": 2
+      "withCaptainEffect": "GwMamaPatReCaptn"
     },
     "ev": 3,
     "statuses": {
@@ -201,13 +200,13 @@
   },
   "items": [
     {
-      "name": "Keg Haul",
+      "name": "Cold Regular",
       "type": "feature",
-      "_id": "GwMamaPatRIt0100",
-      "img": "icons/commodities/materials/barrel-wood.webp",
+      "_id": "GwMamaPatRevIt01",
+      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
       "system": {
         "description": {
-          "value": "<p>Dren knows every service corridor, cold room, and delivery hatch behind the club, and he has a key to most of them. He can move a body's worth of weight through the back of the building without being seen.</p>",
+          "value": "<p>The drink is for the look of the thing. This patron does not breathe and does not warm his glass, and he has been coming here longer than the staff have noticed.</p>",
           "director": ""
         },
         "source": {
@@ -215,7 +214,7 @@
           "page": "25-opposition",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "keg-haul",
+        "_dsid": "cold-regular",
         "advancements": {},
         "prerequisites": {
           "value": "",
@@ -230,12 +229,12 @@
         "default": 0
       },
       "flags": {},
-      "_key": "!actors.items!GwMamaPatRev0000.GwMamaPatRIt0100"
+      "_key": "!actors.items!GwMamaPatRev0000.GwMamaPatRevIt01"
     },
     {
-      "name": "Empty Bottle",
+      "name": "Improvised Swing",
       "type": "ability",
-      "_id": "GwMamaPatRIt0200",
+      "_id": "GwMamaPatRevIt02",
       "img": "icons/consumables/drinks/alcohol-bottle-glass-fancy-blue.webp",
       "system": {
         "type": "main",
@@ -244,12 +243,11 @@
           "page": "25-opposition",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "empty-bottle",
-        "story": "Grabbed off the rail, swung once.",
+        "_dsid": "improvised-swing",
+        "story": "Whatever is on the table, swung once.",
         "keywords": [
           "melee",
-          "strike",
-          "weapon"
+          "strike"
         ],
         "category": "signature",
         "resource": null,
@@ -275,11 +273,11 @@
             "reactive": false
           },
           "effects": {
-            "GwMamaDren00Dmg0": {
+            "GwMamaPatRevDmg0": {
               "name": "",
               "img": null,
               "type": "damage",
-              "_id": "GwMamaDren00Dmg0",
+              "_id": "GwMamaPatRevDmg0",
               "damage": {
                 "tier1": {
                   "value": "1",
@@ -327,7 +325,7 @@
         "default": 0
       },
       "flags": {},
-      "_key": "!actors.items!GwMamaPatRev0000.GwMamaPatRIt0200"
+      "_key": "!actors.items!GwMamaPatRev0000.GwMamaPatRevIt02"
     }
   ],
   "effects": [
@@ -337,7 +335,7 @@
       "type": "abilityModifier",
       "origin": "Actor.GwMamaPatRev0000",
       "disabled": true,
-      "_id": "GwMamaPatRCaptn0",
+      "_id": "GwMamaPatReCaptn",
       "system": {
         "end": {
           "roll": "1d10 + @combat.save.bonus"
@@ -389,18 +387,18 @@
       },
       "showIcon": 1,
       "folder": null,
-      "_key": "!actors.effects!GwMamaPatRev0000.GwMamaPatRCaptn0"
+      "_key": "!actors.effects!GwMamaPatRev0000.GwMamaPatReCaptn"
     }
   ],
-  "sort": 510,
+  "sort": 620,
   "ownership": {
     "default": 0
   },
   "flags": {
     "draw-steel-ghostwire": {
       "bestiary": {
-        "dsSourceId": "hgK8SgOIzJ0bcAtf",
-        "dsSourceName": "Human Knave → Street Punk",
+        "dsSourceId": "3rIQkdmxl0kUvznF",
+        "dsSourceName": "Human Raider → Gang Raider",
         "decision": "Adapt",
         "region": "streets",
         "venue": "mama-cassavir-club",
