@@ -3,7 +3,7 @@
   "name": "GHOSTWIRE.Bestiary.Actors.CorpSecurityOfficer.Name",
   "type": "npc",
   "_id": "DVEibxfpEWA5RoCn",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/corp-security-officer.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-security-officer.webp",
   "system": {
     "stamina": {
       "value": 5,
@@ -113,7 +113,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/corp-security-officer.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-security-officer.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -537,11 +537,14 @@
   },
   "flags": {
     "draw-steel-ghostwire": {
+      "faction": "arg",
       "bestiary": {
         "dsSourceId": "3sZIJ1aJRhMF6iK5",
         "dsSourceName": "Human Guard",
         "decision": "Keep",
-        "region": "corp"
+        "region": "corp",
+        "faction": "arg",
+        "corp": "Argent Exchange"
       }
     }
   },

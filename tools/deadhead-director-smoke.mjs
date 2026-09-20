@@ -44,7 +44,7 @@ const PAGE_KEYS = [
 console.log("Deadhead Director journal smoke");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.43", `module.json is 0.3.43 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.47", `module.json is 0.3.47 (got ${moduleJson.version})`);
 
 const journal = readBomFreeJson(JOURNAL);
 ok(journal._id === "gwDeadheadDirJrn", "director journal id is gwDeadheadDirJrn");
@@ -86,7 +86,7 @@ ok(!/Draw Steel Heroes|MCDM/i.test(text), "Ghostwire-only (no Draw Steel Heroes 
 ok(!/\bdecker\b/i.test(text) && !/\bMatrix\b/.test(text) && !/\bShadowrun\b/i.test(text), "Ghostwire-only player wording");
 ok(/Mama’s Deadhead Brief|Mama's Deadhead Brief/.test(text), "Mama brief notes");
 ok(/live transaction wafer|ghost ledger/.test(text), "capsule / live wafer notes");
-ok(/Corp Enforcer/.test(text) && /Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
+ok(/ARG Corporate Enforcer/.test(text) && /ARG Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
 ok(/Crew hangout/.test(text) && /Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist lists hangout / Mama / canyon");
 ok(/Gold Line/.test(text) && /sacred|do \*\*not\*\* inject|Do \*\*not\*\* inject/i.test(text), "Gold Line checklist is manual / do not inject");
 

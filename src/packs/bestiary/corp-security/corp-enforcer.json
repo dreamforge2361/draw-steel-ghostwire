@@ -2,7 +2,7 @@
   "folder": "gwBestiaryCorp00",
   "name": "GHOSTWIRE.Bestiary.Actors.CorpEnforcer.Name",
   "type": "npc",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/corp-enforcer.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-corporate-enforcer.webp",
   "system": {
     "stamina": {
       "value": 80,
@@ -111,7 +111,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/corp-enforcer.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-corporate-enforcer.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",
@@ -1109,11 +1109,14 @@
   },
   "flags": {
     "draw-steel-ghostwire": {
+      "faction": "arg",
       "bestiary": {
         "dsSourceId": "h0iw7LTM1djcBzn9",
         "dsSourceName": "Human Blackguard",
         "decision": "Keep",
-        "region": "corp"
+        "region": "corp",
+        "faction": "arg",
+        "corp": "Argent Exchange"
       }
     }
   },

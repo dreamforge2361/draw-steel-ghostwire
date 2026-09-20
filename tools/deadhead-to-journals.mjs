@@ -20,9 +20,9 @@ const REMAP = "docs/directors/runs/deadhead/GOLD-LINE-CARGO-REMAP.md";
 
 const UUID = {
   mapNotes: `@UUID[Compendium.${MODULE_ID}.runs.JournalEntry.gwDeadheadGoldLn]{Gold Line — Map Notes}`,
-  enforcer: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.h3LR6HHADCpyFMsN]{Corp Enforcer}`,
-  security: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.DVEibxfpEWA5RoCn]{Corp Security Officer}`,
-  lieutenant: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.g7LC1G0K20UnYzkr]{Response Lieutenant}`,
+  enforcer: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.h3LR6HHADCpyFMsN]{ARG Corporate Enforcer}`,
+  security: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.DVEibxfpEWA5RoCn]{ARG Security Officer}`,
+  lieutenant: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.g7LC1G0K20UnYzkr]{ARG Response Lieutenant}`,
   watchdog: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.dNEBSb47qSV9lRRH]{Watchdog ICE}`,
 };
 
@@ -205,7 +205,7 @@ const pages = [
     "3. Sling onto the **roof**, then drop **aft into L1** (left aft cargo / AFT FREIGHT). That is the board chamber. Work **upstream** (right) from here.",
     "4. Once the crew is **inside**, **hide the Roofs (overhead) tile**. Do not wait on Surface occlusion as the play instruction.",
     "",
-    "L1 is freight, not a coach. **2** Corp Enforcers + cams cover **L1–L2**. Do not emergency-stop while the wafer is still nested.",
+    "L1 is freight, not a coach. **2** ARG Corporate Enforcers + cams cover **L1–L2**. Do not emergency-stop while the wafer is still nested.",
     "",
     "### Say to the table (Ghostwire)",
     "",
@@ -225,7 +225,7 @@ const pages = [
     "|---|---|---|",
     "| **L1** AFT FREIGHT | Board chamber; crate stacks | Freight Enforcers + cams |",
     "| **L2** FREIGHT | Connector clutter; keep moving upstream | Freight Enforcers + cams |",
-    "| **L3** SECURITY | Mid cab = sealed ARG booth / Lt nest; play the cargo bay | **4** Corp Security + **1** Response Lieutenant |",
+    "| **L3** SECURITY | Mid cab = sealed ARG booth / Lt nest; play the cargo bay | **4** ARG Security Officers + **1** ARG Response Lieutenant |",
     "| *(coupler)* | Synthetic join | Non-walkable or Maglock gangway (Director call) |",
     "",
     "This is **not** a passenger crawl. No civilian clutter beat. If they lack ★ intel, they **search** upstream toward **R1** (capsule is not in L3).",

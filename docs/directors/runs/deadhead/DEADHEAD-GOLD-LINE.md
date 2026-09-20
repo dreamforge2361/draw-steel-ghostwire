@@ -103,7 +103,7 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 - **Patron:** Mama Cassavir (Mama’s Club brief / return)
 - **Owning corp / uniforms:** **ARG Argent Exchange** (reusable ARG Security + Lieutenant look)
 - **Drone contact:** **Nox** (Flats wrangler) — crew **borrows** garbage-truck-sized trash freighter; scratch it = buy it; lose it = explain to Mama
-- **Opposition:** Freight Enforcers **L1–L2** (cams + 2 Corp Enforcers); Security **L3** — 4 Corp Security + 1 Response Lieutenant; Courier **R1** sealed until Alert
+- **Opposition:** Freight Enforcers **L1–L2** (cams + 2 ARG Corporate Enforcers); Security **L3** — 4 ARG Security Officers + 1 ARG Response Lieutenant; Courier **R1** sealed until Alert
 - **Wire:** Track 1 cams/doors **R2**; Track 2 capsule lock **R1** + Watchdog ICE; Trace host **R3** cab
 - **Twist:** none for v1 (clean heist)
 
@@ -121,7 +121,7 @@ Left → right = aft → forward (nose right). Crew boards **aft** and works **u
 |---|---|---|
 | **L1** | Left aft cargo | **AFT FREIGHT** — board here (drone sling); freight Enforcers |
 | **L2** | Left connector | **FREIGHT** — crate clutter / freight Enforcers |
-| **L3** | Left forward + cab | **SECURITY** — 4 Corp Security + Response Lieutenant nest |
+| **L3** | Left forward + cab | **SECURITY** — 4 ARG Security Officers + ARG Response Lieutenant nest |
 | *(coupler)* | Synthetic join | Non-walkable or Maglock gangway (Director call) |
 | **R1** | Right aft cargo | **COURIER** — sealed capsule + Watchdog ICE |
 | **R2** | Right connector | Transfer / Wire closet (cams/doors node) |
@@ -211,7 +211,7 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 - [ ] Scene: canyon approach / drone sling strip
 - [x] Scene: Gold Line dual-Hammerhead (world inject; interior loop + roofs overhead)
 - [ ] Splash art: garbage-truck freighter + 4 runners over moving train
-- [ ] Tokens: ARG Corp Security, Response Lieutenant (+ Enforcers); freight drone token
+- [ ] Tokens on Gold Line Scene: ARG Security Officer, ARG Response Lieutenant (+ ARG Corporate Enforcers); freight drone token. **Bestiary Actor art shipped 0.3.47** (`assets/tokens/bestiary/arg/`). Do not force-rewrite the live Gold Line Scene.
 - [ ] Wired Console board preset on train Scene (nodes + Trace)
 - [x] Console **Wire ping/spoof** for call-home telegraph (**0.3.45**)
 

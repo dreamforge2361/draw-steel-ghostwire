@@ -6830,12 +6830,12 @@
       },
       "Actors": {
         "CorpSecurityOfficer": {
-          "Name": "Corp Security Officer",
-          "Description": "<p>Contract security on a Grid checkpoint or a corp lobby: body armor, a stunstick, a sidearm, and orders to hold the door until backup arrives.</p><p><em>Reskinned from the Draw Steel level 1 Human Guard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+          "Name": "ARG Security Officer",
+          "Description": "<p>Argent Exchange contract security on a Grid checkpoint, a corp lobby, or an ARG freight consist: body armor, a stunstick, a sidearm, and orders to hold the door until backup arrives. <strong>ARG Argent Exchange</strong>–aligned.</p><p><em>Reskinned from the Draw Steel level 1 Human Guard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Token art: Michael ARG Security Officer (B111).</em></p>"
         },
         "CorpEnforcer": {
-          "Name": "Corp Enforcer",
-          "Description": "<p>The corp’s enforcement lead — the one who decides when a detention becomes a disappearance. Leads a squad from the front with an autoshotgun, a ballistic shield, Veil-filter cyber-eyes, and a sonic repulsor wired into their armor.</p><p><em>Reskinned from the Draw Steel level 1 Human Blackguard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Placeholder art.</em></p>"
+          "Name": "ARG Corporate Enforcer",
+          "Description": "<p>Argent Exchange’s enforcement lead — the one who decides when a detention becomes a disappearance. <strong>ARG Argent Exchange</strong>–aligned security. Leads a squad from the front with an autoshotgun, a ballistic shield, Veil-filter cyber-eyes, and a sonic repulsor wired into their armor.</p><p><em>Reskinned from the Draw Steel level 1 Human Blackguard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Token art: Michael ARG Corporate Enforcer (B111).</em></p>"
         },
         "StreetBrawler": {
           "Name": "Street Brawler",
@@ -6980,9 +6980,9 @@
           "Director": "<p><strong>Handbook:</strong> Tier 4 Elite (cyborg brute) → Draw Steel level 2 elite brute, echelon 1.</p><p>Handbook traits kept: immune to weakened (Cannot Be Weakened); Warframe Plating is the winded damage immunity. Pair with a Colors Boss.</p>"
         },
         "ResponseLieutenant": {
-          "Name": "Response Lieutenant",
-          "Description": "<p>The corp team’s field commander: a smartlinked carbine, a riot-formation squad, and the authority to escalate.</p><p><strong>Hook:</strong> She calls the escalation the gazetteer warns about — “Alert response is corporate.”</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Kobold Centurion (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
-          "Director": "<p><strong>Handbook:</strong> Tier 4 Leader (corp security) → Draw Steel level 1 leader, echelon 1.</p><p>Riot Formation only works with allies who share the trait; treat Corp Security Officers fielded with her as having it, or ignore it. Escalate to Lethal is the Handbook villain action; add a drone picket from the vehicles pack for flavor.</p>"
+          "Name": "ARG Response Lieutenant",
+          "Description": "<p>Argent Exchange’s field commander: a <strong>Goliar</strong> in ARG hardweave, a smartlinked carbine, a riot-formation squad, and the authority to escalate. <strong>ARG Argent Exchange</strong>–aligned security.</p><p><strong>Hook:</strong> He calls the escalation the gazetteer warns about — “Alert response is corporate.”</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 1 Kobold Centurion (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Token art: Michael ARG Response Lieutenant / Goliar (B111).</em></p>",
+          "Director": "<p><strong>Handbook:</strong> Tier 4 Leader (corp security) → Draw Steel level 1 leader, echelon 1.</p><p><strong>People:</strong> Goliar (portrait). Riot Formation only works with allies who share the trait; treat ARG Security Officers fielded with him as having it, or ignore it. Escalate to Lethal is the Handbook villain action; add a drone picket from the vehicles pack for flavor.</p>"
         },
         "CorpNetrunner": {
           "Name": "Corp Netrunner",
@@ -7012,7 +7012,7 @@
         "ContractEnforcer": {
           "Name": "Contract Enforcer",
           "Description": "<p>The specialist a corp sends to close the file: full combat chrome, a smartlinked AP carbine, jump-jets, and the whole escalation ladder behind him.</p><p><strong>Hook:</strong> Killing him flags the crew for the conglomerate’s next tier of response.</p><p><em>Ghostwire original from The Ossian Reach Handbook, adapted onto the Draw Steel level 6 War Dog Tetrarch (leader). Draw Steel math; ability names and rules text rethemed to Ghostwire. Placeholder art.</em></p>",
-          "Director": "<p><strong>Handbook:</strong> Tier 3 Leader (cyborg corp security) → Draw Steel level 6 leader, echelon 2.</p><p>The Handbook calls this block Corp Enforcer; renamed so it is not confused with the Wave 1 Corp Enforcer (level 1 squad lead). Bring a Response Lieutenant and Corp Security Officers for Corporate Escalation.</p>"
+          "Director": "<p><strong>Handbook:</strong> Tier 3 Leader (cyborg corp security) → Draw Steel level 6 leader, echelon 2.</p><p>The Handbook calls this block Corp Enforcer; renamed so it is not confused with the Wave 1 ARG Corporate Enforcer (level 1 squad lead). Bring an ARG Response Lieutenant and ARG Security Officers for Corporate Escalation.</p>"
         },
         "IroncladWarden": {
           "Name": "Ironclad Warden",
@@ -7077,7 +7077,7 @@
         "WardenKrael": {
           "Name": "Warden Krael, “the Landlord”",
           "Description": "<p>A corrupt corp Grid-warden who runs his levels as a private fief. He is the licensed authority, and he sells it: which flats get maintenance, which SIN flags get overlooked, which Metermen corridor operates. The face of the Grid’s rented, corruptible order — a petty tyrant with a corp badge.</p><p><strong>Stratum:</strong> The Grid — his assigned residential levels.</p><p><strong>Hook:</strong> Hire him, blackmail him, or replace him. His ledger is the weapon: whoever holds proof of what he has sold owns the Landlord.</p><p><strong>Holds:</strong> Licensed Grid levels, on paper — residential corridors, lift-stacks, and the Metermen racket that keeps them calm.</p><p><strong>Answers to / leans on:</strong> A corp facilities-management chain that doesn’t look too hard. Leans on the Metermen, his off-board muscle.</p><p><strong>Table use:</strong> Both: the crew’s cleanest Grid patron and a ready-made obstacle when a job crosses his fief.</p><p><em>Named Ghostwire level-boss from the Lore Source. Draw Steel level 6 Devil High Judge (leader leader) math; abilities rethemed to Ghostwire. Placeholder art.</em></p>",
-          "Director": "<p><strong>Named boss — echelon 2.</strong></p><p>Draw Steel level 6 leader spine (Devil High Judge): charm effects become badge authority, SIN flags, and pacification emitters; True Name becomes Paper Trail — presenting proof of his corruption strips his defenses. Negotiation: Interest 3, Patience 2; motivations Greed and Power; pitfall Justice. Field Corp Security Officers as his on-duty help; Metermen stay off the board as leverage.</p>"
+          "Director": "<p><strong>Named boss — echelon 2.</strong></p><p>Draw Steel level 6 leader spine (Devil High Judge): charm effects become badge authority, SIN flags, and pacification emitters; True Name becomes Paper Trail — presenting proof of his corruption strips his defenses. Negotiation: Interest 3, Patience 2; motivations Greed and Power; pitfall Justice. Field ARG Security Officers as his on-duty help; Metermen stay off the board as leverage.</p>"
         },
         "TheFerryman": {
           "Name": "The Ferryman",
