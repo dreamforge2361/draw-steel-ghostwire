@@ -649,7 +649,7 @@
       "_key": "!actors.items!GwLazMedic000001.GwLazMedChrome01"
     },
     {
-      "name": "GHOSTWIRE.Matrix.Items.WireKit.Name",
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
       "type": "feature",
       "img": "icons/commodities/tech/cable-end.webp",
       "system": {

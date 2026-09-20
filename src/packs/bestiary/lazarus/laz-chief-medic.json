@@ -681,7 +681,7 @@
       "_key": "!actors.items!GwLazChiefMed001.GwLazChfSuite001"
     },
     {
-      "name": "GHOSTWIRE.Matrix.Items.WireKit.Name",
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
       "type": "feature",
       "img": "icons/commodities/tech/cable-end.webp",
       "system": {

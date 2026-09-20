@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 0.3.81 — AEQ Mandate + LAZ Extract conglomerate NPC smoke.
+ * 0.3.82 — AEQ Mandate + LAZ Extract conglomerate NPC smoke.
  * Foundry-free: pack JSON + art + lang + Wire Kit flags.
  *
  * Run: node tools/aeq-laz-npc-smoke.mjs
@@ -20,10 +20,10 @@ const read = p => JSON.parse(readFileSync(p, "utf8"));
 const lang = read("lang/en.json");
 const loc = key => key.split(".").reduce((o, k) => o?.[k], lang);
 
-console.log("AEQ / LAZ conglomerate NPC smoke (0.3.81)\n");
+console.log("AEQ / LAZ conglomerate NPC smoke (0.3.82)\n");
 
 const moduleJson = read("module.json");
-ok(moduleJson.version === "0.3.81", `module.json is 0.3.81 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.82", `module.json is 0.3.82 (got ${moduleJson.version})`);
 
 const ACTORS = [
   {
