@@ -388,7 +388,7 @@ Spec: `docs/spikes/B36b-VEHICLES-PACK-FULL-SYNC.md`. Ghostwire Vehicles & Drones
   - [x] `node tools/build-packs.mjs` succeeds
 
 ### B101 Vehicle + drone token-art plumbing (2026-09-19)
-Spec: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`. JSON sources `src/packs/vehicles/**` remain SoR (LevelDB is compiled). Chassis `img` convention: `modules/draw-steel-ghostwire/assets/tokens/{vehicles,drones}/<dsid>.webp`. Apply tool `tools/apply-machine-token-art.mjs` maps slang-slug files onto Item `img` and rebuilds `packs/vehicles`. **SHIPPED 0.3.31:** 36 drone + 32 vehicle WebPs. Deploy already stamps Item `img` onto the band Actor (`scripts/machines.mjs`) — band templates in `summons/machines` stay generic.
+Spec: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`. JSON sources `src/packs/vehicles/**` remain SoR (LevelDB is compiled). Chassis `img` convention: `modules/draw-steel-ghostwire/assets/tokens/{vehicles,drones}/<dsid>.webp`. Apply tool `tools/apply-machine-token-art.mjs` maps slang-slug files onto Item `img` and rebuilds `packs/vehicles`. **SHIPPED 0.3.31:** 36 drone + 32 vehicle WebPs. Deploy already stamps Item `img` onto the band Actor (`scripts/machines.mjs`). **0.3.68:** generic `machine-drone-medium` uses the Mule-Bot cargo plate; other band templates stay generic.
 - [x] **B101** vehicle + drone tokens (module **0.3.31**) — **pending Michael Foundry-verify**. Done when:
   - [x] Spike lists 36 drone + 32 vehicle slang slugs vs chapter inventories
   - [x] `assets/tokens/drones/` (36 WebP) + `assets/tokens/vehicles/` (32 WebP)
@@ -560,8 +560,9 @@ Michael smoke: drone on scene had **Wire Kit — Matrix Verbs** on Features, but
   - [x] Pack drone templates + Deploy + world migration stamp the kit (not Overlay)
   - [x] RCC SKUs + Rigger’s Harness count as Connect interfaces (Harness ≡ deck)
   - [x] B115 / B117 notes + Foundry Director notes
+  - [x] Mule-Bot / generic Drone (Medium) cargo plate (`mule-bot.{png,webp}`)
   - [x] `node tools/b117-console-verbs-smoke.mjs` + B112–B115 smoke
-  - [ ] Foundry-verify: pack drone Connects → Linked; Wrench with Rigger’s Harness Connects without a commlink; Scan after Toggle to Overlay; nine verbs still not on the sheet
+  - [ ] Foundry-verify: pack drone Connects → Linked; Wrench with Rigger’s Harness Connects without a commlink; Scan after Toggle to Overlay; nine verbs still not on the sheet; Drone (Medium) / Mule-Bot show the yellow cargo plate
 
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.

@@ -3,7 +3,7 @@
   "_key": "!actors!zrESvaOxNgEPffhF",
   "name": "GHOSTWIRE.Summons.Machines.DroneMedium.Name",
   "type": "npc",
-  "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp",
   "system": {
     "stamina": {
       "value": 24,
@@ -186,7 +186,7 @@
     "height": 1,
     "depth": 1,
     "texture": {
-      "src": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

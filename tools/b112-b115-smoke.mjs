@@ -276,6 +276,31 @@ for (const band of ["micro", "small", "medium"]) {
 ok(!isDroneActor(readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json")), "vehicle templates are not drones");
 ok(!readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json").items.some(isWireKit), "vehicle templates do not get Wire Kit");
 
+console.log("\n4c) Mule-Bot / Drone (Medium) cargo plate");
+const muleToken = "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp";
+const mulePng = "assets/tokens/drones/mule-bot.png";
+const muleWebp = "assets/tokens/drones/mule-bot.webp";
+ok(existsSync(mulePng) && existsSync(muleWebp), "mule-bot png + webp ship");
+const mulePngBuf = readFileSync(mulePng);
+const muleWebpBuf = readFileSync(muleWebp);
+ok(mulePngBuf[0] === 0x89 && mulePngBuf.slice(1, 4).toString() === "PNG", "mule-bot.png is a PNG source");
+ok(mulePngBuf.readUInt32BE(16) === 1254 && mulePngBuf.readUInt32BE(20) === 1254, "mule-bot.png is Michael 1254² source");
+ok(muleWebpBuf.slice(0, 4).toString() === "RIFF" && muleWebpBuf.slice(8, 12).toString() === "WEBP", "mule-bot.webp is WebP");
+ok(muleWebpBuf.slice(12, 16).toString() === "VP8X", "mule-bot.webp is VP8X");
+{
+  const w = 1 + muleWebpBuf.readUIntLE(24, 3);
+  const h = 1 + muleWebpBuf.readUIntLE(27, 3);
+  ok(w === 1024 && h === 1024, "mule-bot.webp is 1024² Foundry token");
+}
+ok(readBomFreeJson("src/packs/vehicles/drones/mule-bot.json").img === muleToken, "Mule-Bot Item img is the cargo plate");
+const medium = readBomFreeJson("src/packs/summons/machines/machine-drone-medium.json");
+ok(medium.img === muleToken, "Drone (Medium) Actor img is the cargo plate");
+ok(medium.prototypeToken?.texture?.src === muleToken, "Drone (Medium) prototypeToken uses the cargo plate");
+ok(medium.items.some(isWireKit), "Drone (Medium) still embeds Wire Kit");
+ok(!medium.img.includes("robotics-frame-steel-blue"), "Drone (Medium) is not the steel-blue placeholder");
+ok(/mule-bot/.test(readFileSync("docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md", "utf8")), "B101 documents Mule-Bot cargo plate");
+ok(/mule-bot/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 documents Mule-Bot / Drone (Medium) art");
+
 console.log("\n5) Console / minimap / docs");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("autoNodes") && consoleSrc.includes("applyAutoNodesFromScene"), "Console wires Auto-nodes");

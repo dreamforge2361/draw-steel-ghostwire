@@ -331,6 +331,7 @@ ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names 
 ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name Connect interface");
 ok(/0\.3\.68/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name 0.3.68 Wire Kit interface");
 ok(/Rigger/.test(foundry) && /pack drone/.test(foundry), "Foundry notes name Rigger interface + pack drones");
+ok(/Mule-Bot|cargo-hauler|cargo plate/.test(foundry), "Foundry notes name Mule-Bot cargo plate");
 ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry), "Foundry notes: node Actors always Connected");
 ok(/revealed first/.test(foundry) && /A–Z|A-Z/.test(foundry), "Foundry notes: revealed-first then A–Z lists");
 ok(/hideInSheet/.test(foundry) && /data-document-uuid/.test(foundry), "Foundry notes: 0.3.64 sheet hide path");
