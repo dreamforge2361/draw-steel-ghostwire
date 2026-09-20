@@ -88,6 +88,8 @@ ok(/Mama’s Deadhead Brief|Mama's Deadhead Brief/.test(text), "Mama brief notes
 ok(/live transaction wafer|ghost ledger/.test(text), "capsule / live wafer notes");
 ok(/B104 Gear SKUs shipped/.test(text), "Items page notes B104 Gear SKUs shipped");
 ok(/gwMamaBriefWafer/.test(text) && /gwArgCourierCap0/.test(text), "Items page UUID-hooks both Gear SKUs");
+ok(/gwDhAerialRecon0/.test(text) && /gwGoldLineRecon0/.test(text), "Director journal UUID-hooks aerial recon Journal + Plot Item");
+ok(/Handouts \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks aerial recon handout shipped");
 ok(/Gear SKUs \(shipped 0\.3\.52\)/.test(text), "Foundry checklist marks Gear SKUs shipped");
 ok(/gwNoxTrashFrgt00/.test(text) && /nox-trash-freighter/.test(text), "Director journal UUID-hooks Nox trash freighter");
 ok(/Vehicles \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks Nox freighter shipped");
@@ -113,10 +115,13 @@ const gearFiles = [
   "src/packs/gear/general/plot/_folder.json",
   "src/packs/gear/general/plot/mama-deadhead-brief.json",
   "src/packs/gear/general/plot/arg-courier-capsule.json",
+  "src/packs/gear/general/plot/gold-line-aerial-recon.json",
   "assets/items/deadhead/item-mama-brief-wafer.png",
   "assets/items/deadhead/item-mama-brief-wafer.webp",
   "assets/items/deadhead/item-arg-courier-capsule.png",
   "assets/items/deadhead/item-arg-courier-capsule.webp",
+  "assets/items/deadhead/gold-line-aerial-recon.png",
+  "assets/items/deadhead/gold-line-aerial-recon.webp",
 ];
 for (const file of gearFiles) {
   ok(existsSync(file), `${file} exists`);
@@ -135,6 +140,30 @@ ok(freighter.flags?.["draw-steel-ghostwire"]?.vehicle?.drone === false, "Nox fre
 ok(freighter.flags?.["draw-steel-ghostwire"]?.vehicle?.tags?.includes("Deadhead") && freighter.flags["draw-steel-ghostwire"].vehicle.tags.includes("Plot"), "Nox freighter has Deadhead + Plot tags");
 ok(freighter.img.endsWith("nox-trash-freighter.webp"), "Nox freighter img is the shipped webp");
 ok(existsSync("assets/tokens/vehicles/nox-trash-freighter.png") && existsSync("assets/tokens/vehicles/nox-trash-freighter.webp"), "Nox freighter png+webp on disk");
+
+const recon = readBomFreeJson("src/packs/runs/deadhead/gold-line-aerial-recon.json");
+ok(recon._id === "gwDhAerialRecon0", "aerial recon journal id");
+ok(recon.folder === "gwRunsDeadhead00" && recon.sort === 150000, "aerial recon journal sits after map notes");
+ok(recon.pages?.length === 2, "aerial recon journal has image + text pages");
+const photo = recon.pages.find(p => p.type === "image");
+const intel = recon.pages.find(p => p.type === "text");
+ok(photo?._id === "gwDhAerialImg000" && photo.src?.endsWith("gold-line-aerial-recon.webp"), "image page points at webp");
+ok(intel?._id === "gwDhAerialNote00" && /Discovery intel only/.test(intel.text?.markdown ?? ""), "intel page has discovery copy");
+ok(lang.GHOSTWIRE.Runs.Journals.GoldLineAerialRecon === "Gold Line — Aerial Recon", "lang aerial recon journal name");
+ok(lang.GHOSTWIRE.Runs.Pages.GoldLineAerialPhoto === "Photo" && lang.GHOSTWIRE.Runs.Pages.GoldLineAerialIntel === "Intel", "lang aerial recon page names");
+ok(lang.GHOSTWIRE.Gear.Items.GoldLineAerialRecon?.Name === "Gold Line Aerial Recon", "lang aerial recon item name");
+
+const reconItem = readBomFreeJson("src/packs/gear/general/plot/gold-line-aerial-recon.json");
+ok(reconItem._id === "gwGoldLineRecon0" && reconItem.system?._dsid === "gold-line-aerial-recon", "aerial recon Plot Item id + dsid");
+ok(reconItem.flags?.["draw-steel-ghostwire"]?.gear?.tags?.includes("Plot"), "aerial recon Item is Plot gear");
+ok(reconItem.img.endsWith("gold-line-aerial-recon.webp"), "aerial recon Item img is the shipped webp");
+
+ok(/aerial recon photo/i.test(sor) && /Ghostwire Runs → Deadhead/.test(sor), "SoR Discovery notes aerial recon handout");
+ok(/Handout: Gold Line aerial recon photo/.test(sor) && /0\.3\.54/.test(sor), "SoR checklist marks aerial recon handout shipped");
+
+const sceneTemplate = readFileSync("data/scenes/gold-line.json", "utf8");
+const sceneScript = readFileSync("scripts/gold-line-scene.mjs", "utf8");
+ok(!/gold-line-aerial-recon/.test(sceneTemplate) && !/gold-line-aerial-recon/.test(sceneScript), "aerial recon is not baked into Gold Line scene/inject");
 
 if (failures.length) {
   console.error("\nFAILED:");

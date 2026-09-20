@@ -6,7 +6,8 @@
  * Run:  node tools/deadhead-to-journals.mjs
  * Then: node tools/build-packs.mjs runs   (Foundry closed)
  *
- * Does not write Scene JSON, gold-line-scene.mjs, or gold-line-map.json.
+ * Does not write Scene JSON, gold-line-scene.mjs, gold-line-map.json,
+ * or gold-line-aerial-recon.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { markdownToHtml } from "./lib/md-to-html.mjs";
@@ -20,6 +21,8 @@ const REMAP = "docs/directors/runs/deadhead/GOLD-LINE-CARGO-REMAP.md";
 
 const UUID = {
   mapNotes: `@UUID[Compendium.${MODULE_ID}.runs.JournalEntry.gwDeadheadGoldLn]{Gold Line — Map Notes}`,
+  aerialRecon: `@UUID[Compendium.${MODULE_ID}.runs.JournalEntry.gwDhAerialRecon0]{Gold Line — Aerial Recon}`,
+  aerialReconItem: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwGoldLineRecon0]{Gold Line Aerial Recon}`,
   enforcer: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.h3LR6HHADCpyFMsN]{ARG Corporate Enforcer}`,
   security: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.DVEibxfpEWA5RoCn]{ARG Security Officer}`,
   lieutenant: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.g7LC1G0K20UnYzkr]{ARG Response Lieutenant}`,
@@ -194,6 +197,8 @@ const pages = [
     "> Mama’s wafer is warm in someone’s pocket. Gold Line cargo run, Spire depot to Switchboard terminus. Live ARG transaction wafer in a sealed courier capsule. Lift it on the Wire, get off the consist before ARG answers the stop — then decide who eats.",
     "",
     "Do **not** name the capsule chamber unless they earned **★**. Do **not** put Watchdog / R2 cam numbers, the wafer-out tick, or the corp/Signal doors on the wafer until the matching intel lands.",
+    "",
+    "If canyon watch / Wire schedule recon / bribe succeeds, show " + UUID.aerialRecon + " (Photo page). Optional sheet copy: " + UUID.aerialReconItem + ". Intel only — no cash. Do not bake the photo into the Gold Line battlemap.",
   ].join("\n")),
 
   page(ENTRY_ID, 4, "Beat1", [
@@ -309,7 +314,7 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 9, "Items", [
-    "Director notes for the two plot wafers. **B104 Gear SKUs shipped 0.3.52.** Drag from **Ghostwire Gear → Plot & Run Hooks** (Deadhead gallery art; do not regenerate). Hand " + UUID.mamaBrief + " at Beat 0. The prize is " + UUID.argCapsule + " (Faraday; wipe if the train stops while the live wafer is nested).",
+    "Director notes for the two plot wafers. **B104 Gear SKUs shipped 0.3.52.** Drag from **Ghostwire Gear → Plot & Run Hooks** (Deadhead gallery art; do not regenerate). Hand " + UUID.mamaBrief + " at Beat 0. The prize is " + UUID.argCapsule + " (Faraday; wipe if the train stops while the live wafer is nested). Findable recon photo: " + UUID.aerialReconItem + " (sheet copy) + " + UUID.aerialRecon + " (Director handout).",
     "",
     "### Mama’s Deadhead Brief (Gold Line)",
     "",
@@ -351,7 +356,7 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 11, "FoundryChecklist", [
-    "Compendium home: **Ghostwire Runs → Deadhead**. This journal + " + UUID.mapNotes + ".",
+    "Compendium home: **Ghostwire Runs → Deadhead**. This journal + " + UUID.mapNotes + " + " + UUID.aerialRecon + ".",
     "",
     "### Scenes Michael needs",
     "",
@@ -372,6 +377,11 @@ const pages = [
     "### Vehicles (shipped 0.3.54)",
     "",
     "- " + UUID.noxFreighter + " — **Ghostwire Vehicles → Air** · `assets/tokens/vehicles/nox-trash-freighter.webp`. Drag onto Gold Line / hangout. Tags: Deadhead / Plot / Cargo.",
+    "",
+    "### Handouts (shipped 0.3.54)",
+    "",
+    "- " + UUID.aerialRecon + " — Journal in **Ghostwire Runs → Deadhead**. Image page is the aerial recon photo (`assets/items/deadhead/gold-line-aerial-recon.webp`). Show it when canyon watch / Wire schedule recon / bribe succeeds before Beat 1. Discovery intel only (no cash). Do **not** bake into the Gold Line battlemap.",
+    "- " + UUID.aerialReconItem + " — optional Plot gear Item (`Ghostwire Gear → Plot & Run Hooks`) so the photo can sit on a character sheet as found evidence.",
     "",
     "### Still open (do not invent in play)",
     "",

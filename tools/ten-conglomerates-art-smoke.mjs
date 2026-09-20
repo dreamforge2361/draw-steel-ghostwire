@@ -98,6 +98,9 @@ ok(/assets\/brands\/megacorps/.test(tickersDoc) && /raster concept/.test(tickers
 
 const sor = readFileSync("docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md", "utf8");
 ok(/Nox trash freighter token/.test(sor) && /0\.3\.54/.test(sor), "SoR marks freighter token shipped");
+ok(/Handout: Gold Line aerial recon photo/.test(sor), "SoR marks aerial recon handout shipped");
+ok(existsSync("assets/items/deadhead/gold-line-aerial-recon.webp"), "aerial recon webp on disk");
+ok(lang.GHOSTWIRE.Runs.Journals.GoldLineAerialRecon === "Gold Line — Aerial Recon", "lang aerial recon journal");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

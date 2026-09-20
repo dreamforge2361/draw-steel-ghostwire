@@ -4439,6 +4439,10 @@
           "Name": "ARG Courier Capsule (Gold Line)",
           "Description": "<p><em>ARG Courier Capsule (Gold Line) · Sealed courier case · Faraday capsule for a live ARG transaction wafer</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> plot prize · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Plot</p><p><strong>Profile:</strong> Sealed Faraday capsule for a live ARG transaction wafer (ghost ledger mirror).</p><p><strong>Wipe:</strong> If the train <strong>stops while the live wafer is still inside its carry capsule</strong>, the wafer is <strong>wiped and fragged</strong> (prize destroyed). After the wafer is removed from the capsule, the train <strong>will</strong> stop. That post-extract stop is expected. Bail before ARG response.</p><p><strong>Buyers:</strong> Mama Cassavir wants the contract (¥8,000). Corp reclaim or rival flip (¥14,000). Signal / Hands Off pays ¥2,000 + weird.</p>"
         },
+        "GoldLineAerialRecon": {
+          "Name": "Gold Line Aerial Recon",
+          "Description": "<p><em>Gold Line Aerial Recon · Aerial photograph · findable Deadhead evidence</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> discovery intel (no cash) · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Plot</p><p><strong>Profile:</strong> Top-down roof photo of the ARG cargo maglev — dark metal, orange markings, padlock hatch icons, motion-blur terrain. Discovery intel only (no cash).</p><p><strong>How they get it:</strong> canyon watch, Wire schedule recon, or a bribe before Beat 1. Director handout is the Journal in <strong>Ghostwire Runs → Deadhead</strong>; this Item can sit on a character sheet as found evidence. Not a battlemap — do not bake into the Gold Line Scene.</p>"
+        },
         "SecureThreads": {
           "Name": "Secure Threads",
           "Description": "<p><em>Secure Threads · Executive Line · ballistic-weave streetwear</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥250 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Concealable</p><p><strong>Effect:</strong> Reads as ordinary clothing; edge to conceal that you're armored.</p><p><strong>Armor as Stamina (light armor):</strong> worn, it raises maximum Stamina by hero echelon — Echelon 1 +3, Echelon 2 +6, Echelon 3 +8, Echelon 4 +10. Encumbrance: None — full mobility. With a Kit, the Kit’s Stamina bonus <em>is</em> this armor’s Stamina — don’t add both; the disabled effects are for heroes with no Kit (enable the one for your echelon).</p><p><em>Kit doctrine (if any) still supplies Draw Steel damage/Stamina bands; this item’s Weapon Base / armor profile is the object. Gear costs ¥; Kit doctrine never does.</em></p><p><strong>Mod slots (1):</strong> Fill them with armor mods from <strong>Ghostwire Mods › Armor & Shield Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.tAOt7J6u9AYddhVe]{Trauma Plates}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gJrGQ3RAps0Rx0ob]{Stealth Weave}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.lOWys6gfv8n1Tz90]{Climate Seal Liner}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.GOuT9lopkBcbrjFV]{Mag-Harness}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.jrGKp9PRiyZRKEz8]{Reactive Flash Comp}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.5ePHUPwCSPZvHN0z]{Soft Armor Insert}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Repair or Electronics); toggling an installed mod is a field action.</p>"
@@ -7395,11 +7399,14 @@
       },
       "Journals": {
         "GoldLineMap": "Gold Line — Map Notes",
+        "GoldLineAerialRecon": "Gold Line — Aerial Recon",
         "DeadheadDirector": "Deadhead — Director"
       },
       "Pages": {
         "GoldLinePlate": "Plate",
         "GoldLineBeats": "Beat remap",
+        "GoldLineAerialPhoto": "Photo",
+        "GoldLineAerialIntel": "Intel",
         "Overview": "Overview",
         "TraceAlert": "Trace Alert",
         "CastKit": "Cast & Consist",
