@@ -517,6 +517,15 @@ Michael: Nodes/Connections lists need **revealed first, then A–Z by name**, pl
   - [x] B117 smoke + Foundry notes
   - [ ] Foundry-verify: long node names tooltip; revealed nodes on top; Ping does not appear on the hero sheet after use; Search chat still prints tier text
 
+### Console ready leftover strip Flag scope "0" (2026-09-20)
+Michael console 0.3.65: `Uncaught (in promise) Error: Flag scope "0" is not valid or not currently active` at `DrawSteelItem.getFlag` ← `isTemporaryConsoleVerb` ← `Array.filter` during `Game.setupGame`. `filter` passes `(element, index)`; index `0` was treated as `moduleId`. **SHIPPED 0.3.66.** Wrap callbacks; ignore a non-string second arg. No Gold Line `{ force: true }`. No PDF.
+- [x] **Flag scope harden** (module **0.3.66**) — **pending Foundry-verify**. Done when:
+  - [x] Ready leftover strip wraps `item => isTemporaryConsoleVerb(item)`
+  - [x] Sheet hide wraps `item => isOffSheetMatrixVerb(item)`
+  - [x] `getFlag` helpers ignore a second arg that is not a non-empty string
+  - [x] B117 smoke: bare `filter(isTemporaryConsoleVerb)` does not throw
+  - [ ] Foundry-verify: world `Game.setupGame` no longer throws Flag scope "0"
+
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B118** scene kiosk merchant (module **0.3.59**) — **pending Foundry-verify**. Done when:

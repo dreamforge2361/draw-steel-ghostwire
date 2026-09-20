@@ -167,6 +167,8 @@ ok(consoleSrc.includes("splitReusableTemporaryVerbs"), "reuses leftover temps of
 ok(consoleSrc.includes("verbUseMessageOptions"), "use() gets DS 1.1.2 messageOptions.data flags");
 ok(consoleSrc.includes("render: false"), "temp embed does not force a sheet redraw");
 ok(consoleSrc.includes("hideTemporaryConsoleVerbs"), "hides in-flight temps on the hero/NPC sheet");
+ok(/filter\(\s*item\s*=>\s*isOffSheetMatrixVerb\(\s*item\s*\)\s*\)/.test(consoleSrc), "sheet hide wraps item => isOffSheetMatrixVerb(item)");
+ok(!/\.filter\(\s*isOffSheetMatrixVerb\s*\)/.test(consoleSrc), "sheet hide does not pass isOffSheetMatrixVerb bare to filter");
 ok(consoleSrc.includes("data-document-uuid"), "sheet hide matches DS data-document-uuid");
 ok(consoleSrc.includes("filterOffSheetAbilitiesContext") && consoleSrc.includes("patchSheetHideMatrixVerbs"), "wraps DS _prepareAbilitiesContext");
 ok(consoleSrc.includes("renderActorSheetV2") && consoleSrc.includes("renderDrawSteelRetainerSheet"), "sheet hide hooks AppV2 + retainer fallback");
@@ -191,6 +193,8 @@ ok(!/defaultItems\.add\(uuid\)/.test(moduleSrc) && !/for \(const uuid of SHEET_V
 ok(moduleSrc.includes("NeedInterface") && moduleSrc.includes("actorHasConnectInterface"), "AbilityModel#use also gates Connect on interface");
 ok(moduleSrc.includes("abilityPowerRollModifiers"), "Wired use patch uses shared modifier helper");
 ok(moduleSrc.includes("isTemporaryConsoleVerb"), "ready hook strips leftover temporary verbs");
+ok(/filter\(\s*item\s*=>\s*isTemporaryConsoleVerb\(\s*item\s*\)\s*\)/.test(moduleSrc), "ready leftover strip wraps item => isTemporaryConsoleVerb(item)");
+ok(!/\.filter\(\s*isTemporaryConsoleVerb\s*\)/.test(moduleSrc), "ready hook does not pass isTemporaryConsoleVerb bare to filter");
 ok(moduleSrc.includes("orphanTemporaryVerbs") && moduleSrc.includes("abilityUuidsFromMessages"), "ready keeps temps backing chat abilityUuid");
 ok(moduleSrc.includes("hideInSheet"), "ready stamps hideInSheet on chat-backed temps");
 
@@ -279,6 +283,7 @@ ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry)
 ok(/revealed first/.test(foundry) && /A–Z|A-Z/.test(foundry), "Foundry notes: revealed-first then A–Z lists");
 ok(/hideInSheet/.test(foundry) && /data-document-uuid/.test(foundry), "Foundry notes: 0.3.64 sheet hide path");
 ok(/0\.3\.64/.test(foundry), "Foundry notes name 0.3.64");
+ok(/0\.3\.66/.test(foundry) && /Flag scope/.test(foundry), "Foundry notes name 0.3.66 Flag scope harden");
 ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the sheet");
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
@@ -384,6 +389,36 @@ ok(/class="wc-roster-name"[^>]*title="\{\{name\}\}"/.test(consoleTpl), "Connecti
 ok(/0\.3\.64/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.64");
 ok(/hideInSheet/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names hideInSheet");
 ok(!/gold-line-scene/.test(readFileSync("scripts/wired-console.mjs", "utf8")), "0.3.64 still does not import gold-line-scene");
+
+console.log("\n7) 0.3.66 Flag scope harden (filter index is not moduleId)");
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 66;
+})(), `module.json is 0.3.66+ (got ${moduleJson.version})`);
+ok(/0\.3\.66/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.66");
+ok(/Flag scope/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names Flag scope 0");
+
+function mockGetFlagItem(flags) {
+  return {
+    flags,
+    getFlag(scope, key) {
+      if (typeof scope !== "string" || !scope) {
+        throw new Error(`Flag scope "${scope}" is not valid or not currently active`);
+      }
+      return flags?.[scope]?.[key];
+    },
+  };
+}
+const liveTemp = mockGetFlagItem({ "draw-steel-ghostwire": { [TEMP_CONSOLE_VERB_FLAG]: true } });
+const blank = mockGetFlagItem({});
+ok(isTemporaryConsoleVerb(liveTemp), "isTemporaryConsoleVerb reads getFlag with MODULE_ID");
+ok(isTemporaryConsoleVerb(liveTemp, 0), "numeric second arg is ignored (filter index 0)");
+ok(isTemporaryConsoleVerb(liveTemp, ""), "empty second arg falls back to MODULE_ID");
+ok(isTemporaryConsoleVerb(liveTemp, "draw-steel-ghostwire"), "explicit MODULE_ID still works");
+ok(!isTemporaryConsoleVerb(blank, 0), "unflagged getFlag item is not temporary even with index 0");
+ok([liveTemp, blank].filter(isTemporaryConsoleVerb).length === 1, "bare filter(isTemporaryConsoleVerb) does not throw Flag scope 0");
+ok([liveTemp].filter(isOffSheetMatrixVerb).length === 1, "bare filter(isOffSheetMatrixVerb) does not throw Flag scope 0");
+ok(hasHideInSheetFlag(mockGetFlagItem({ [DS_SYSTEM_ID]: { [DS_HIDE_IN_SHEET]: true } }), 0), "hasHideInSheetFlag ignores numeric systemId");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

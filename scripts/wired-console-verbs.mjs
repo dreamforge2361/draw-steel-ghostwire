@@ -27,13 +27,23 @@ export const TEMP_CONSOLE_VERB_FLAG = "temporaryConsoleVerb";
 export const DS_SYSTEM_ID = "draw-steel";
 export const DS_HIDE_IN_SHEET = "hideInSheet";
 
-export function isTemporaryConsoleVerb(item, moduleId = MODULE_ID) {
-  if (typeof item?.getFlag === "function") return !!item.getFlag(moduleId, TEMP_CONSOLE_VERB_FLAG);
-  return !!item?.flags?.[moduleId]?.[TEMP_CONSOLE_VERB_FLAG];
+/**
+ * Foundry `getFlag` requires a non-empty string scope.
+ * Array.filter/map pass `(element, index)` so a default param never runs — index `0`
+ * became Flag scope "0". Ignore anything that is not a non-empty string.
+ */
+function flagScope(scope, fallback) {
+  return typeof scope === "string" && scope ? scope : fallback;
+}
+
+export function isTemporaryConsoleVerb(item, moduleId) {
+  const scope = flagScope(moduleId, MODULE_ID);
+  if (typeof item?.getFlag === "function") return !!item.getFlag(scope, TEMP_CONSOLE_VERB_FLAG);
+  return !!item?.flags?.[scope]?.[TEMP_CONSOLE_VERB_FLAG];
 }
 
 /** B117: all nine Matrix Verbs stay off hero/NPC sheets (permanent leftover or temp embed). */
-export function isOffSheetMatrixVerb(item, moduleId = MODULE_ID) {
+export function isOffSheetMatrixVerb(item, moduleId) {
   const dsid = item?.system?._dsid ?? item?.item?.system?._dsid;
   return MATRIX_VERB_DSIDS.includes(dsid) || isTemporaryConsoleVerb(item, moduleId);
 }
@@ -42,16 +52,18 @@ export function isOffSheetMatrixVerb(item, moduleId = MODULE_ID) {
  * Stamp DS `hideInSheet` so `_prepareAbilitiesContext` never lists the temp.
  * Chat still `fromUuidSync(abilityUuid)` against the embed.
  */
-export function applyHideInSheetFlag(data, systemId = DS_SYSTEM_ID) {
+export function applyHideInSheetFlag(data, systemId) {
+  const scope = flagScope(systemId, DS_SYSTEM_ID);
   const next = data && typeof data === "object" ? data : {};
   next.flags = { ...(next.flags ?? {}) };
-  next.flags[systemId] = { ...(next.flags[systemId] ?? {}), [DS_HIDE_IN_SHEET]: true };
+  next.flags[scope] = { ...(next.flags[scope] ?? {}), [DS_HIDE_IN_SHEET]: true };
   return next;
 }
 
-export function hasHideInSheetFlag(item, systemId = DS_SYSTEM_ID) {
-  if (typeof item?.getFlag === "function") return !!item.getFlag(systemId, DS_HIDE_IN_SHEET);
-  return !!item?.flags?.[systemId]?.[DS_HIDE_IN_SHEET];
+export function hasHideInSheetFlag(item, systemId) {
+  const scope = flagScope(systemId, DS_SYSTEM_ID);
+  if (typeof item?.getFlag === "function") return !!item.getFlag(scope, DS_HIDE_IN_SHEET);
+  return !!item?.flags?.[scope]?.[DS_HIDE_IN_SHEET];
 }
 
 function iterableItems(items) {
@@ -90,12 +102,13 @@ export function shouldReleaseTemporaryVerb({ created = false, hasChatCard = fals
  * Stamp compendium source data as a temporary embedded verb.
  * Drops `_id` so Foundry assigns a new id (no collision with a leftover temp).
  */
-export function markTemporaryConsoleVerbData(data, moduleId = MODULE_ID) {
+export function markTemporaryConsoleVerbData(data, moduleId) {
+  const scope = flagScope(moduleId, MODULE_ID);
   const next = JSON.parse(JSON.stringify(data ?? {}));
   delete next._id;
   delete next.folder;
   next.flags = { ...(next.flags ?? {}) };
-  next.flags[moduleId] = { ...(next.flags[moduleId] ?? {}), [TEMP_CONSOLE_VERB_FLAG]: true };
+  next.flags[scope] = { ...(next.flags[scope] ?? {}), [TEMP_CONSOLE_VERB_FLAG]: true };
   return applyHideInSheetFlag(next);
 }
 

@@ -824,7 +824,7 @@ function hideTemporaryConsoleVerbs(app, element) {
   const root = element instanceof HTMLElement ? element : element?.[0];
   const actor = app?.document ?? app?.actor;
   if (!root?.querySelectorAll || !actor?.items) return;
-  const offSheet = [...actor.items].filter(isOffSheetMatrixVerb);
+  const offSheet = [...actor.items].filter(item => isOffSheetMatrixVerb(item));
   if (!offSheet.length) return;
   const ids = new Set(offSheet.map(item => item.id).filter(Boolean));
   const uuids = new Set(offSheet.map(item => item.uuid).filter(Boolean));
