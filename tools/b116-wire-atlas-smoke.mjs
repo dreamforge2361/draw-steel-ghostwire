@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B116 Wire Atlas smoke (module 0.3.54; atlas art 0.3.51; megacorp Hosts 0.3.54).
+ * B116 Wire Atlas smoke (module 0.3.55; atlas art 0.3.51; megacorp Hosts 0.3.54).
  * Catalog + Michael Relay / Host / Segment art. Does not generate art or touch Gold Line.
  *
  * Run: node tools/b116-wire-atlas-smoke.mjs
@@ -20,10 +20,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("B116 Wire Atlas smoke (0.3.54)");
+console.log("B116 Wire Atlas smoke (0.3.55)");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
 
 const spike = readFileSync("docs/spikes/B116-WIRE-ATLAS.md", "utf8");
 ok(/Relay/.test(spike) && /Host/.test(spike) && /Segment/.test(spike), "spike names Relay / Host / Segment");

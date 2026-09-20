@@ -147,6 +147,8 @@ ok(finiteDuration(roofsMp4.duration) && finiteDuration(roofsMp4.formatDuration),
 
 const moduleSrc = readFileSync("scripts/module.mjs", "utf8");
 ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line inject");
+ok(!moduleSrc.includes("registerDeadheadHangoutScene"), "module.mjs does not register hangout inject");
+ok(!existsSync("scripts/deadhead-hangout-scene.mjs"), "hangout inject script is gone");
 
 const script = readFileSync(SCRIPT, "utf8");
 ok(script.includes("ensureGoldLineScene"), "inject exports ensureGoldLineScene");

@@ -44,7 +44,13 @@ const PAGE_KEYS = [
 console.log("Deadhead Director journal smoke");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
+ok(!existsSync("scripts/deadhead-hangout-scene.mjs"), "hangout inject script is gone");
+ok(!existsSync("data/scenes/deadhead-hangout.json"), "hangout scene template is gone");
+ok(!existsSync("assets/maps/battlemaps/map-deadhead-hangout.webp"), "hangout plate is gone");
+ok(!existsSync("tools/deadhead-hangout-smoke.mjs"), "hangout smoke is gone");
+const entry = readFileSync("scripts/module.mjs", "utf8");
+ok(!/registerDeadheadHangoutScene|deadhead-hangout-scene/.test(entry), "module.mjs has no hangout register/import");
 
 const journal = readBomFreeJson(JOURNAL);
 ok(journal._id === "gwDeadheadDirJrn", "director journal id is gwDeadheadDirJrn");
@@ -55,6 +61,7 @@ ok(journal.pages?.length === 12, `journal has 12 pages (got ${journal.pages?.len
 
 const lang = readBomFreeJson(LANG);
 ok(lang.GHOSTWIRE.Runs.Journals.DeadheadDirector === "Deadhead — Director", "lang journal name");
+ok(!lang.GHOSTWIRE?.Scenes?.DeadheadHangout, "lang has no DeadheadHangout keys");
 for (const key of PAGE_KEYS) {
   ok(typeof lang.GHOSTWIRE.Runs.Pages[key] === "string", `lang page ${key}`);
 }
@@ -95,7 +102,13 @@ ok(/gwNoxTrashFrgt00/.test(text) && /nox-trash-freighter/.test(text), "Director 
 ok(/gwNoxTrashActor0/.test(text) && /Deadhead Actors/.test(text), "Director journal UUID-hooks Nox freighter Actor pack");
 ok(/Vehicles \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks Nox freighter shipped");
 ok(/ARG Corporate Enforcer/.test(text) && /ARG Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
-ok(/Crew hangout/.test(text) && /Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist lists hangout / Mama / canyon");
+ok(/Crew hangout/.test(text) && /REMOVED permanently 0\.3\.55/.test(text), "scene checklist marks hangout REMOVED permanently");
+ok(/Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist still lists Mama / canyon");
+ok(/no hangout Scene/i.test(text) && /table procedure/.test(text), "Beat 0 is table procedure without a hangout Scene");
+ok(!/Shady Workshop/.test(text), "Director journal does not name Shady Workshop");
+ok(!/map-deadhead-hangout/.test(text), "Director journal has no hangout plate path");
+ok(!/deadheadHangoutScene/.test(text), "Director journal has no hangout scene flag");
+ok(!/registerDeadheadHangoutScene|ensureDeadheadHangoutScene/.test(text), "Director journal has no hangout inject API");
 ok(/Gold Line/.test(text) && /sacred|do \*\*not\*\* inject|Do \*\*not\*\* inject/i.test(text), "Gold Line checklist is manual / do not inject");
 
 const sor = readFileSync(SOR, "utf8");

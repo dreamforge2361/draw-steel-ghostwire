@@ -4,7 +4,6 @@ Interior / venue play surfaces (not district overviews). **Native resolution pre
 
 | File | Scene | Dims | Notes |
 |---|---|---|---|
-| `map-deadhead-hangout.webp` | Deadhead Beat 0 hangout (Shady Workshop) | 1920×1080 | CyberMaps *Shady Workshop HD — Gridless* still. World inject: **Scenes → Deadhead → Deadhead Hangout — Shady Workshop** (grid 80 / 5 ft). No loop. |
 | `mama-cassavir-club.webp` | Mama Cassavir's club (Switchboard) | 1280×720 | Michael-approved still **B3**. Foundry 5 ft–friendly furniture scale. |
 | `mama-cassavir-club-loop.webm` | same (animated) | 1280×720, VP9, 24 fps, ~4.2 s | **Preferred Foundry** loop v1 (Michael thumbs-up). Neon brightness/saturation ping-pong; no layout drift. |
 | `mama-cassavir-club-loop.mp4` | same (animated) | 1280×720, H.264, 24 fps, ~4.2 s | Fallback / preview of the same loop. |
@@ -17,6 +16,6 @@ Interior / venue play surfaces (not district overviews). **Native resolution pre
 
 Foundry path: `modules/draw-steel-ghostwire/assets/maps/battlemaps/<file>`
 
-Deadhead hangout: first GM load injects the Scene on **new** worlds only from `data/scenes/deadhead-hangout.json` (grid 80 / 5 ft, still background). Existing `deadheadHangoutScene` worlds are never rewritten. Spike: `docs/spikes/B107-DEADHEAD-HANGOUT.md`. Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene on **new** worlds only from `data/scenes/gold-line.json` (grid 208 / 5 ft). Existing `goldLineScene` worlds are never rewritten. `{ force: true }` is GM-opt-in only and overwrites the live scene. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
+Deadhead hangout Scene: **REMOVED permanently 0.3.55** — no plate, no inject, do not reintroduce (B107 killed). Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene on **new** worlds only from `data/scenes/gold-line.json` (grid 208 / 5 ft). Existing `goldLineScene` worlds are never rewritten. `{ force: true }` is GM-opt-in only and overwrites the live scene. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
 
 PNG originals stay local under `_png-backup/` (gitignored), same policy as `assets/maps/districts/`.

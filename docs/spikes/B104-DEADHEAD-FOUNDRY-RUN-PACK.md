@@ -1,8 +1,8 @@
 # Spike B104 — Deadhead Foundry run pack
 
 **Date:** 2026-09-19  
-**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded) · **0.3.41** (live-scene lock) · **0.3.42** (Director journal) · **0.3.43** (Beat 0 hangout Scene — B107) · **0.3.52** (Gear SKUs)  
-**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). **Director journal shipped 0.3.42. Beat 0 hangout Scene shipped 0.3.43 (B107); canyon SKIPPED — narrated. Gear SKUs shipped 0.3.52** (Mama’s Deadhead Brief + ARG Courier Capsule).  
+**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded) · **0.3.41** (live-scene lock) · **0.3.42** (Director journal) · **0.3.43** (Beat 0 hangout Scene — B107) · **0.3.52** (Gear SKUs) · **0.3.54** (Nox freighter + aerial recon) · **0.3.55** (hangout Scene **REMOVED permanently**)  
+**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). **Director journal shipped 0.3.42. Beat 0 hangout Scene REMOVED permanently 0.3.55 (B107 killed); canyon SKIPPED — narrated. Gear SKUs shipped 0.3.52** (Mama’s Deadhead Brief + ARG Courier Capsule). **Nox trash freighter + aerial recon shipped 0.3.54.**  
 **Cargo lock (2026-09-20):** Gold Line is a **cargo maglev**, not a passenger train. Ignore leftover passenger-car / passenger-PA wording below. Live SoR + sidecar: `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, `GOLD-LINE-CARGO-REMAP.md` (LOCKED / folded).  
 **Journals (rulebook / lore / handbook / flats / pregen-fiction):** **not** regenerated.  
 **Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B39 Run Generator world folder, B99 Mama’s Club map, **B106 Gold Line map pack**.
@@ -105,7 +105,7 @@ There is **no** Scene pack in this module (B72 / B99 / B100 drop files onto worl
 
 | Scene | Notes |
 |---|---|
-| Crew hangout | Rundown flat, wrecked bad neighborhood — **shipped 0.3.43** as `map-deadhead-hangout.webp` (B107) |
+| Crew hangout | Rundown flat, wrecked bad neighborhood — **REMOVED permanently 0.3.55** (B107 killed). Table procedure only; no Scene / plate / inject. Do not reintroduce. |
 | Mama’s Club | **Reuse** B99 (`assets/maps/battlemaps/mama-cassavir-club.webp` / `-loop.webm`) |
 | Canyon approach / drone sling strip | Board beat; garbage-truck-sized trash freighter — **SKIPPED**, narrate it |
 | Gold Line (dual Hammerhead) | **SHIPPED 0.3.36 (B106) / lock 0.3.39.** World inject **Scenes → Deadhead → Gold Line**. Level background = interior MP4. One roof tile `goldLineRoofs` at 0,0 elev 1 (prefer `*-loop.mp4`). Occlusion NONE — Director hides roofs when the crew goes inside. No interior tile. Grid 208 / 5 ft. Beat remap L1 tail → R3 cab in the SoR + **Gold Line — Map Notes** journal. CyberMaps stitch only — do not drop a generated train. |
@@ -138,12 +138,14 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 
 ## Done when (content pass)
 
-- Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist. **Shipped 0.3.42.** Beat 0 hangout Scene **shipped 0.3.43**; canyon **SKIPPED**.
+- Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist. **Shipped 0.3.42.** Beat 0 hangout Scene **REMOVED permanently 0.3.55**; canyon **SKIPPED**.
+- Both wafers exist as Gear items and are linked from the Items page. **Shipped 0.3.52** (`src/packs/gear/general/plot/`, gallery art at `assets/items/deadhead/`).
+- Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist. **Shipped 0.3.42.** Beat 0 hangout Scene **REMOVED permanently 0.3.55**; canyon **SKIPPED**.
 - Both wafers exist as Gear items and are linked from the Items page. **Shipped 0.3.52** (`src/packs/gear/general/plot/`, gallery art at `assets/items/deadhead/`).
 - Nox trash freighter token ships in Vehicles. **Shipped 0.3.54.**
 - Nox trash freighter **Actor** ships in **Ghostwire Runs — Deadhead Actors**. **Shipped 0.3.54.**
 - Gold Line aerial recon photo ships as a Runs Journal handout (+ optional Plot gear Item). **Shipped 0.3.54.**
-- Scenes listed above exist in the world (Mama reused; **Gold Line = Michael’s live Scene**; hangout injected 0.3.43); pack journal points at them. Canyon is **SKIPPED** — narrated, no plate.
+- Scenes listed above exist in the world (Mama reused; **Gold Line = Michael’s live Scene**; hangout **gone** — table procedure only). Canyon is **SKIPPED** — narrated, no plate.
 - Design locks above match the SoR verbatim (¥ / wipe / Trace cap / ARG / Nox / L1–R3 cargo / 20 ft / no twist / 4h / ping-spoof mention).
 - No new class abilities. No unrelated journal regen. One module patch.
 

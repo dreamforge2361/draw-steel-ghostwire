@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B112 auto-nodes + B114 node-map layout + B115 Wire Kit smoke (module 0.3.54; device catalog 0.3.49).
+ * B112 auto-nodes + B114 node-map layout + B115 Wire Kit smoke (module 0.3.55; device catalog 0.3.49).
  *
  * Run: node tools/b112-b115-smoke.mjs
  * Does not write Scene JSON. Asserts gold-line-scene.mjs is untouched.
@@ -24,10 +24,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("B112 / B114 / B115 Wired Gold Line smoke (0.3.54)\n");
+console.log("B112 / B114 / B115 Wired Gold Line smoke (0.3.55)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");

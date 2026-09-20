@@ -7438,12 +7438,6 @@
         "RoofsTile": "Roofs",
         "Injected": "Gold Line is ready under Scenes → Deadhead. Hide the Roofs tile when the crew goes inside.",
         "Refreshed": "Gold Line was force-restamped (overwrites walls, lights, tiles, and background). Re-activate the Scene if it is already open."
-      },
-      "DeadheadHangout": {
-        "Name": "Deadhead Hangout — Shady Workshop",
-        "Folder": "Deadhead",
-        "Injected": "Deadhead hangout is ready under Scenes → Deadhead. Beat 0 starts here; walls and lights are yours to draw.",
-        "Refreshed": "Deadhead hangout was force-restamped (overwrites background, dimensions, and grid). Re-activate the Scene if it is already open."
       }
     },
     "Lore": {
