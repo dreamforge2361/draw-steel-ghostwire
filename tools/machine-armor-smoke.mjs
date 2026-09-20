@@ -24,7 +24,7 @@ const ok = (cond, msg) => {
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const moduleJson = JSON.parse(readFileSync("module.json", "utf8"));
-ok(moduleJson.version === "0.3.71", `module version is 0.3.71 (got ${moduleJson.version})`);
+ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.71", `module.json is ≥ 0.3.71 (got ${moduleJson.version})`);
 
 const DIR = "src/packs/mods/vehicles";
 const files = readdirSync(DIR).filter(f => f.endsWith(".json") && f !== "_folder.json");

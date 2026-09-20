@@ -583,8 +583,8 @@ Spec: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picke
   - [ ] Foundry-verify: place Food / Armor / Weapons kiosks; buy; Use Kickwire on a hero; token shows the street-kiosk plate
 
 ### B120 Hacker Agents — sprite parity (2026-09-20)
-Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **Compile Agent** (3 Bandwidth, Overlay/Jacked In; Linked refuses) + **Decompile Agent** (free maneuver). 12 Actors in `src/packs/summons/agents/` (Probe/Spike/Daemon/Watchdog × minor/int/adv). `scripts/agents.mjs`. Cap 2→3@5→4@8. Distinct from sprites. **SHIPPED 0.3.70.** No Gold Line `{ force: true }`. No PDF.
-- [x] **B120** Hacker Agents (module **0.3.70**) — **pending Foundry-verify**. Done when:
+Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **Compile Agent** (3 Bandwidth, Overlay/Jacked In; Linked refuses) + **Decompile Agent** (free maneuver). 12 Actors in `src/packs/summons/agents/` (Probe/Spike/Daemon/Watchdog × minor/int/adv). `scripts/agents.mjs`. Cap 2→3@5→4@8. Distinct from sprites. **SHIPPED 0.3.72.** No Gold Line `{ force: true }`. No PDF.
+- [x] **B120** Hacker Agents (module **0.3.72**) — **pending Foundry-verify**. Done when:
   - [x] 12 Agent Actors + Compile/Decompile abilities + L1 class grant
   - [x] `scripts/agents.mjs` registered; Overlay/Jacked In gate; cap; dismiss
   - [x] RAW 19 + Wire + glossary, rulebook 08/20/18, manuscript L1/slang/chargen, journals + VOIDMARK index

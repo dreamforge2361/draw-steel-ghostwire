@@ -81,7 +81,7 @@ HP formulas below are **playtest placeholders** (Technomancer Known Bugs #13) �
 
 **Defenses (all):** Wired defense = Technomancer Persona; Reflex/Physique baseline **10** (code, not flesh).
 
-### 3.1b Hacker — Agents (B120 / 0.3.70) — **12 SKUs**
+### 3.1b Hacker — Agents (B120 / 0.3.72) — **12 SKUs**
 
 Deck software, not Resonance. Compile Agent **3 Bandwidth**, Overlay or Jacked In (Linked refuses). Cap **2 → 3@5 → 4@8**. Stamina = archetype base + (Logic × Level). Distinct Actors from sprites (`kind: "agent"`).
 

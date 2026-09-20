@@ -203,7 +203,7 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 
 ### Agents -- Deck Daemons (not Sprites)
 
-**Lock 2026-09-20 (B120 / 0.3.70).** Agents are software constructs a Hacker compiles from the deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are **not** Resonance sprites. Different Actors (`src/packs/summons/agents/`), different art, different language. They never share a sprite SKU.
+**Lock 2026-09-20 (B120 / 0.3.72).** Agents are software constructs a Hacker compiles from the deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are **not** Resonance sprites. Different Actors (`src/packs/summons/agents/`), different art, different language. They never share a sprite SKU.
 
 **Immersion.** Compile requires **Overlay or Jacked In**. **Linked refuses.** Decompile does not require immersion.
 
