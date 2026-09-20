@@ -749,6 +749,46 @@
       "folder": null,
       "sort": 0,
       "_key": "!actors.items!3FW9As2fW7ekq4mv.lVlwo9eIp8HBjfth"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwWk3FW9As2fW7ek",
+      "_key": "!actors.items!3FW9As2fW7ekq4mv.GwWk3FW9As2fW7ek"
     }
   ],
   "effects": [],
@@ -762,7 +802,8 @@
         "dsSourceId": "CkZ2TBOk3gFe9Klt",
         "dsSourceName": "Human Death Cultist",
         "decision": "Keep",
-        "region": "veil"
+        "region": "veil",
+        "wired": true
       }
     }
   },

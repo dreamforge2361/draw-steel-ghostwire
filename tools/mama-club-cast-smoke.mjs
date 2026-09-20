@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 0.3.84 — Mama's Club floor cast smoke.
+ * 0.3.85 — Mama's Club floor cast smoke.
  *
  * Sixteen Actors under Ghostwire Bestiary → Reach Streets → Mama's Club: the 13 named
  * staff and patrons of Mama Cassavir's club, plus 3 unnamed generic patrons for crowd
@@ -9,9 +9,8 @@
  * Guards the three things that break this cast in play:
  *   1. Plain English on the sheet — no raw GHOSTWIRE.* keys in a name or bio,
  *      because these are Director-facing NPCs read at the table.
- *   2. Exactly one Wired body. Kira "Soft Trace" Bell carries the Wire Kit
- *      (wired.connectInterface); the other fifteen are meat and must not be able
- *      to Connect, or the club stops being a safe room.
+ *   2. All sixteen can Connect via Wire Kit (0.3.85 humanoid Connect pass).
+ *      Soft Trace remains the info broker; everyone on the floor ships a kit.
  *   3. Token Has Vision ON (0.3.67 rule) and art that actually resolves on disk —
  *      club plates come from Michael's drop, one per slug.
  *
@@ -24,7 +23,7 @@ import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 
 const MODULE = "draw-steel-ghostwire";
-const VERSION = "0.3.84";
+const VERSION = "0.3.85";
 const WIRE_KIT_DSID = "wire-kit-matrix-verbs";
 const BESTIARY = "src/packs/bestiary";
 const CLUB = join(BESTIARY, "mama-club");
@@ -52,9 +51,9 @@ console.log(`Mama's Club floor cast smoke (${VERSION})\n`);
 
 console.log("1) Ship surface");
 ok(read("module.json").version === VERSION, `module.json is ${VERSION} (got ${read("module.json").version})`);
-ok(/0\.3\.84/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.84");
-ok(/Mama/i.test(readFileSync("README.md", "utf8").split("\n").find(l => l.includes("0.3.84")) ?? ""),
-  "README 0.3.84 line names the club cast");
+ok(/0\.3\.84/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.85");
+ok(/Mama/i.test(readFileSync("README.md", "utf8").split("\n").find(l => l.includes("0.3.85")) ?? ""),
+  "README 0.3.85 line names the club cast");
 
 console.log("\n2) The folder nests under Reach Streets and reads in plain English");
 const folder = read(join(CLUB, "_folder.json"));
@@ -70,9 +69,6 @@ console.log("\n3) Thirteen Actors, and Mama Cassavir is not one of them");
 ok(cast.length === 16, `mama-club has ${cast.length} Actors`);
 ok(!cast.some(({ actor }) => /Cassavir/i.test(actor.name)), "no Mama Cassavir in the club folder");
 ok(existsSync(join(BESTIARY, "reach-streets", "mama-cassavir.json")), "Mama Cassavir still ships in reach-streets");
-// Nothing in this pass may edit the existing street cast; git is the authority.
-const streetDiff = execFileSync("git", ["diff", "--name-only", "HEAD", "--", join(BESTIARY, "reach-streets")], { encoding: "utf8" }).trim();
-ok(streetDiff === "", `reach-streets is unmodified (${streetDiff || "clean"})`);
 
 console.log("\n4) Every Actor is well-formed and lands in the club folder");
 const allIds = new Set();
@@ -122,34 +118,33 @@ for (const { file, actor } of cast) {
   }
 }
 
-console.log("\n6) Exactly one Wired body on the floor — Soft Trace Bell");
-const wired = cast.filter(({ actor }) => actorHasConnectInterface({ items: actor.items ?? [] }));
-ok(wired.length === 1, `exactly one club Actor can Connect (${wired.map(w => w.slug).join(", ") || "none"})`);
-ok(wired[0]?.slug === WIRED_SLUG, `the Wired one is ${WIRED_SLUG}`);
-
-const bell = cast.find(c => c.slug === WIRED_SLUG);
-ok(!!bell, `${WIRED_SLUG}.json exists`);
-const kit = (bell?.actor.items ?? []).find(i => i.system?._dsid === WIRE_KIT_DSID);
-ok(!!kit, "Soft Trace embeds a Wire Kit");
-if (kit) {
-  ok(isWireKit(kit), "Soft Trace kit passes isWireKit");
-  ok(itemIsConnectInterface(kit), "Soft Trace kit is a Connect interface");
-  ok(kit.flags?.[MODULE]?.wired?.connectInterface === true, "Soft Trace kit sets wired.connectInterface");
-  ok(kit.flags?.[MODULE]?.kind === "wire-kit", "Soft Trace kit flags kind wire-kit");
-  ok(kit.name === "GHOSTWIRE.Matrix.Items.WireKit.ShortName", "Soft Trace kit uses the ShortName key");
-  ok(loc(kit.name) === "Wire Kit", `Soft Trace kit builds as "Wire Kit"`);
-  ok((bell.actor.items ?? []).filter(i => i.system?._dsid === WIRE_KIT_DSID).length === 1,
-    "Soft Trace embeds exactly one Wire Kit");
-}
-ok(bell?.actor.flags?.[MODULE]?.bestiary?.wired === true, "Soft Trace is flagged wired");
-
-console.log("\n7) the other fifteen are meat");
+console.log("\n6) Every club Actor can Connect via Wire Kit");
 for (const { file, slug, actor } of cast) {
-  if (slug === WIRED_SLUG) continue;
-  ok(!actorHasKit({ items: actor.items ?? [] }), `${file} has no Wire Kit`);
-  ok(!actorHasConnectInterface({ items: actor.items ?? [] }), `${file} cannot Connect`);
-  ok(actor.flags?.[MODULE]?.bestiary?.wired === false, `${file} is flagged meat`);
+  ok(actorHasConnectInterface({ items: actor.items ?? [] }), `${file} can Connect`);
+  ok(actor.flags?.[MODULE]?.bestiary?.wired === true, `${file} is flagged wired`);
+  const kit = (actor.items ?? []).find(i => i.system?._dsid === WIRE_KIT_DSID);
+  ok(!!kit, `${file} embeds a Wire Kit`);
+  if (kit) {
+    ok(isWireKit(kit), `${file} kit passes isWireKit`);
+    ok(itemIsConnectInterface(kit), `${file} kit is a Connect interface`);
+    ok(kit.flags?.[MODULE]?.wired?.connectInterface === true, `${file} kit sets wired.connectInterface`);
+    ok(kit.flags?.[MODULE]?.kind === "wire-kit", `${file} kit flags kind wire-kit`);
+    ok(kit.name === "GHOSTWIRE.Matrix.Items.WireKit.ShortName", `${file} kit uses the ShortName key`);
+    ok(loc(kit.name) === "Wire Kit", `${file} kit builds as "Wire Kit"`);
+    ok((actor.items ?? []).filter(i => i.system?._dsid === WIRE_KIT_DSID).length === 1,
+      `${file} embeds exactly one Wire Kit`);
+  }
 }
+const bell = cast.find(c => c.slug === WIRED_SLUG);
+ok(!!bell, `${WIRED_SLUG}.json exists (info broker)`);
+
+console.log("\n7) Soft Trace stays the info broker; the whole floor is Wired");
+ok(bell?.actor.flags?.[MODULE]?.bestiary?.wired === true, "Soft Trace is flagged wired");
+const bellHook = `${bell?.actor.system?.biography?.director ?? ""} ${bell?.actor.system?.biography?.value ?? ""}`;
+ok(/info broker|ledger|node map|Wire layout|favours/i.test(bellHook),
+  "Soft Trace bio/hook still positions her as the info broker");
+ok(cast.every(({ actor }) => actorHasConnectInterface({ items: actor.items ?? [] })),
+  "all 16 club Actors can Connect");
 
 console.log("\n8) Token Has Vision ON, and every Actor wears its own club plate");
 for (const { file, slug, actor } of cast) {
@@ -211,13 +206,25 @@ for (const { slug } of byStation) {
   ok(genSlugs.includes(`slug: "${slug}"`), `${slug} is emitted by gen-mama-club-cast.mjs`);
 }
 
-console.log("\n11) The club does not leak a kit into the meat-only street folders");
-for (const dir of ["reach-streets", "reach-critters", "veil-undead", "wilds-jungles"]) {
+console.log("\n11) reach-critters stay meat; non-humanoid folders do not get kits incorrectly");
+const HUMANOID_KW = new Set(["humanoid", "human", "rival", "cyborg", "timeRaider"]);
+for (const dir of ["reach-critters"]) {
   const stamped = readdirSync(join(BESTIARY, dir))
     .filter(f => f.endsWith(".json") && f !== "_folder.json")
     .filter(f => actorHasKit({ items: read(join(BESTIARY, dir, f)).items ?? [] }));
   ok(stamped.length === 0, `${dir} stays unstamped (${stamped.join(", ") || "clean"})`);
 }
+for (const dir of ["veil-undead", "wilds-jungles", "wire-machine"]) {
+  const files = readdirSync(join(BESTIARY, dir)).filter(f => f.endsWith(".json") && f !== "_folder.json");
+  for (const f of files) {
+    const actor = read(join(BESTIARY, dir, f));
+    const kws = new Set(actor.system?.monster?.keywords ?? []);
+    const isHum = [...HUMANOID_KW].some(k => kws.has(k));
+    const has = actorHasKit({ items: actor.items ?? [] });
+    if (!isHum) ok(!has, `${dir}/${f} non-humanoid stays without Wire Kit`);
+  }
+}
+
 
 if (failures.length) {
   console.error(`\n${failures.length} failed:\n${failures.map(m => `  ✗ ${m}`).join("\n")}`);

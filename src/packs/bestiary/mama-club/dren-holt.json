@@ -327,6 +327,46 @@
       },
       "flags": {},
       "_key": "!actors.items!GwMamaDren000000.GwMamaDren00It02"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwMamaDren00It03",
+      "_key": "!actors.items!GwMamaDren000000.GwMamaDren00It03"
     }
   ],
   "effects": [
@@ -408,7 +448,7 @@
         "station": "Barback",
         "people": "Pure Human",
         "sex": "M",
-        "wired": false
+        "wired": true
       }
     }
   },

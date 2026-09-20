@@ -1090,6 +1090,46 @@
       "folder": null,
       "sort": 0,
       "_key": "!actors.items!0ZGKRFSw3t8qQXNq.r71PP2brMbPzaJvC"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwWk0ZGKRFSw3t8q",
+      "_key": "!actors.items!0ZGKRFSw3t8qQXNq.GwWk0ZGKRFSw3t8q"
     }
   ],
   "effects": [],
@@ -1102,7 +1142,8 @@
         "dsSourceId": "uuMc9pmKbvUdWMOz",
         "dsSourceName": "Human Bandit Chief",
         "decision": "Keep",
-        "region": "streets"
+        "region": "streets",
+        "wired": true
       }
     }
   },

@@ -41,7 +41,7 @@
     },
     "biography": {
       "value": "<p>Industrial chrome, not the pretty kind — exposed hydraulics, a forearm that is mostly clamp, and a permanent smell of coolant. Torque is a retired wrench who now drinks at the same two-top every night with a case of drone scrap open on the table.</p>",
-      "director": "<p><strong>Plot hook:</strong> Torque sells drone parts and Soft Trace's leftovers at cost, and he hates Ironclad with his whole chest — they fitted him with a compliance collar that nearly took his spine out. Say the word “Ironclad” and he will talk for an hour, most of it useful.</p><p><strong>Running him:</strong> Meat. He has no Wire Kit — his rigging days ended with the collar, and he will tell you so at length.</p>",
+      "director": "<p><strong>Plot hook:</strong> Torque sells drone parts and Soft Trace's leftovers at cost, and he hates Ironclad with his whole chest — they fitted him with a compliance collar that nearly took his spine out. Say the word “Ironclad” and he will talk for an hour, most of it useful.</p><p><strong>Running him:</strong> He still carries a Wire Kit (0.3.85) even though his rigger days ended with the collar — he will tell you the collar story at length, kit or not.</p>",
       "languages": []
     },
     "movement": {
@@ -419,6 +419,46 @@
       },
       "flags": {},
       "_key": "!actors.items!GwMamaTorque0000.GwMamaTorqueIt03"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwMamaTorqueIt04",
+      "_key": "!actors.items!GwMamaTorque0000.GwMamaTorqueIt04"
     }
   ],
   "effects": [],
@@ -439,7 +479,7 @@
         "station": "Regular — Scrap Table",
         "people": "Cyborg",
         "sex": "M",
-        "wired": false
+        "wired": true
       }
     }
   },
