@@ -59,6 +59,7 @@ A popout window that makes the net a shared place for the scene everyone is view
 - **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Disconnected). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
 - **Nodes** — the scene’s nodes: Track, Rating, an Integrity bar (Track 2), and a mini Trace Alert track. The eye icon (Director only) shows whether players can see the node.
 - **Selected node** — the System Stat Card read off the Node Rating (08-hacker.md): Breach DC, ICE layers, Biofeedback Value with the Overlay (×0.5, min 1) and Jacked In (×1.5) figures, Integrity, and the 12-step Trace Alert with what the current band does. Track 1 nodes have no Integrity or ICE.
+- **Wire (B106 ping/spoof)** — a log of the last ~20 Director pings, visible to anyone with the Console open. The Director types a short line and **Send**. Chat is **public** or a **whisper** to users whose controlled token is Overlay or Jacked In. Stored on `flags.draw-steel-ghostwire.wiredPings` (also reads `wiredBoard.pings`). Does not move Trace. Players cannot send.
 
 ### Director vs. players
 
@@ -93,11 +94,16 @@ flags.draw-steel-ghostwire.wiredBoard = {
   stratum: "random" | "spires" | "grid" | "flats" | "warrens" | "sinks",
   updated: <timestamp>
 }
+
+flags.draw-steel-ghostwire.wiredPings = {
+  entries: [{ id, text, whisper, at, user }],  // last ~20; Console log
+  updated: <timestamp>
+}
 ```
 
-Only a GM can change it. Connection state is read from actor statuses (and mirrored to `flags.draw-steel-ghostwire.wired`), not stored on the board.
+Only a GM can change it. Connection state is read from actor statuses (and mirrored to `flags.draw-steel-ghostwire.wired`), not stored on the board. Wire pings persist separately from **Reset Board**.
 
-**Not in v1:** Matrix Verb or Program rolls don’t change node Integrity or Alert automatically; no ICE automation; no Bandwidth display. (Cross-scene Wired maps and node tokens shipped in B32 Phase 5b, above.)
+**Not in v1:** Matrix Verb or Program rolls don’t change node Integrity or Alert automatically; no ICE automation; no Bandwidth display. (Cross-scene Wired maps and node tokens shipped in B32 Phase 5b, above. Wire ping/spoof shipped in 0.3.45 — still no auto Trace.)
 
 ## Wired vision (B23c)
 

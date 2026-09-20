@@ -152,7 +152,7 @@ const pages = [
     "",
     whiteout,
     "",
-    "Do **not** invent a class Trace −1 button. Call-home **Block** (and Kessic’s Whiteout magazine) are the L1 Trace −1 on this run.",
+    "Do **not** invent a class Trace −1 button. Call-home **Block** (and Kessic / Sabbat Whiteout magazines) are the L1 Trace −1 on this run.",
   ].join("\n")),
 
   page(ENTRY_ID, 2, "CastKit", [
@@ -254,7 +254,7 @@ const pages = [
     "",
     "Opening the case (wafer **out**) starts the post-extract clock. After extract the train **will** stop — that stop is expected. If the train stops **while the live wafer is still inside its carry capsule**, the wafer is **wiped and fragged**.",
     "",
-    "Until Wired Console **Wire ping/spoof** ships: narrate or chat the call-home telegraph at Trace 6–7. Hacker or Technomancer monitoring: **Detect**, then **Block**. Block success: packet dies; **Trace −1**. Fail / nobody monitoring: off-train scream / early ARG attention (optional meat Alert +1) — **not** an auto +1 Trace.",
+    "Use Wired Console **Wire ping/spoof** (GM short text + Send) at Trace 6–7 for the call-home telegraph. Chat: public, or whisper to Overlay / Jacked In. Does **not** auto-move Trace. Hacker or Technomancer monitoring: **Detect**, then **Block**. Block success: packet dies; **Trace −1**. Fail / nobody monitoring: off-train scream / early ARG attention (optional meat Alert +1) — **not** an auto +1 Trace.",
     "",
     "### Say to the table (Ghostwire)",
     "",
@@ -367,7 +367,6 @@ const pages = [
     "- Splash art (freighter + four runners over a moving consist).",
     "- Tokens on the Gold Line Scene; Nox freight-drone token.",
     "- Wired Console board preset (Track 1 **R2**, Track 2 **R1** + Watchdog, Trace host **R3**).",
-    "- Console **Wire ping/spoof** for the call-home telegraph (narrate at Trace 6–7 until it ships).",
     "",
     "Art locks when anything new ships: flat top-down; no people on maps; no baked grid; ARG uniform stylization reusable. **Do not** drop a generated train on Gold Line.",
   ].join("\n")),

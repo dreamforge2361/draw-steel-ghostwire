@@ -216,4 +216,35 @@
       {{/with}}
     </section>
   </div>
+
+  {{!-- Wire ping / spoof (B106): log is Scene-flagged; anyone with Console open sees it. Compose is GM-only. --}}
+  <section class="wc-panel wc-pings">
+    <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Pings"}}</h3>
+    <ul class="wc-ping-log">
+      {{#each pings}}
+      <li class="wc-ping{{#if whisper}} is-whisper{{/if}}">
+        <span class="wc-ping-meta">
+          {{#if timeLabel}}<time>{{timeLabel}}</time>{{/if}}
+          <span class="wc-tag">{{modeLabel}}</span>
+          {{#if user}}<span class="wc-dim">{{user}}</span>{{/if}}
+        </span>
+        <span class="wc-ping-text">{{text}}</span>
+      </li>
+      {{else}}
+      <li class="wc-empty">{{localize "GHOSTWIRE.WiredConsole.PingEmptyLog"}}</li>
+      {{/each}}
+    </ul>
+    {{#if isGM}}
+    <div class="wc-ping-compose">
+      <input type="text" class="wc-input wc-ping-input" data-ping-text maxlength="{{pingMax}}" value="{{pingDraft}}" placeholder="{{localize "GHOSTWIRE.WiredConsole.PingPlaceholder"}}" {{disabled (not hasScene)}}>
+      <select class="wc-input wc-ping-chat" data-ping-chat {{disabled (not hasScene)}}>
+        <option value="public" {{#unless pingWhisper}}selected{{/unless}}>{{localize "GHOSTWIRE.WiredConsole.PingPublic"}}</option>
+        <option value="whisper" {{#if pingWhisper}}selected{{/if}}>{{localize "GHOSTWIRE.WiredConsole.PingWhisper"}}</option>
+      </select>
+      <button type="button" class="wc-btn" data-action="sendPing" {{disabled (not hasScene)}}>
+        <i class="fa-solid fa-satellite-dish"></i> {{localize "GHOSTWIRE.WiredConsole.PingSend"}}
+      </button>
+    </div>
+    {{/if}}
+  </section>
 </div>

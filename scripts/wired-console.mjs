@@ -1,6 +1,7 @@
 // Wired Console (B23b): a Scene-tied view of the Wired — connection roster, nodes, Integrity, and Trace Alert.
 // Board data lives on a Scene: flags.draw-steel-ghostwire.wiredBoard = { nodes: [...], stratum, updated }. A matrix map can show another
 // Scene's board (flags.draw-steel-ghostwire.wiredMapFor); nodes can be placed on the canvas as tokens (scripts/wired-node-tokens.mjs).
+// Wire pings (B106) live on flags.draw-steel-ghostwire.wiredPings = { entries, updated } (last ~20); wiredBoard.pings is also read.
 // Random nodes (B23c) roll from scripts/wired-node-table.mjs; Director templates and the System Stat Card (RATING) come from
 // scripts/wired-node-templates.mjs (B32 Phase 5).
 // Rules: docs/rulebook/08-hacker.md (System Stat Card, Trace Alert). Foundry notes: docs/rulebook/18-wired-foundry.md.
@@ -8,6 +9,7 @@
 import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
+import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -73,7 +75,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     id: "ghostwire-wired-console",
     classes: ["ghostwire-wired-console"],
     window: { title: "GHOSTWIRE.WiredConsole.Title", icon: "fa-solid fa-network-wired", resizable: true },
-    position: { width: 860, height: 640 },
+    position: { width: 860, height: 720 },
     actions: {
       selectNode: WiredConsole.#onSelectNode,
       addNode: WiredConsole.#onAddNode,
@@ -91,18 +93,23 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       restoreIntegrity: WiredConsole.#onRestoreIntegrity,
       toggleReveal: WiredConsole.#onToggleReveal,
       resetBoard: WiredConsole.#onResetBoard,
+      sendPing: WiredConsole.#onSendPing,
     },
   };
 
   static PARTS = {
     console: {
       template: `modules/${MODULE_ID}/templates/wired-console.hbs`,
-      scrollable: [".wc-roster-list", ".wc-node-list", ".wc-detail"],
+      scrollable: [".wc-roster-list", ".wc-node-list", ".wc-detail", ".wc-ping-log"],
     },
   };
 
   /** The node selected in the detail panel. */
   selectedId = null;
+
+  /** GM Wire ping composer (kept across live re-renders). */
+  pingDraft = "";
+  pingWhisper = false;
 
   /** The Scene whose board is shown: the viewed Scene, or the board Scene it is the Wired map for. */
   get scene() {
@@ -164,6 +171,11 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     roster.sort((a, b) => (order[a.state] - order[b.state]) || a.name.localeCompare(b.name, game.i18n.lang));
 
     const decorated = nodes.map(decorate);
+    const pings = readPings(scene).map(ping => ({
+      ...ping,
+      timeLabel: ping.at ? new Date(ping.at).toLocaleTimeString(game.i18n.lang, { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "",
+      modeLabel: localize(ping.whisper ? "PingWhisper" : "PingPublic"),
+    }));
     return {
       isGM,
       sceneName: scene?.name ?? localize("NoScene"),
@@ -173,6 +185,10 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       roster,
       nodes: decorated,
       selected: decorated.find(node => node.selected) ?? null,
+      pings,
+      pingDraft: this.pingDraft ?? "",
+      pingWhisper: !!this.pingWhisper,
+      pingMax: PING_MAX_LENGTH,
     };
   }
 
@@ -190,6 +206,18 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   /** @override */
   _onRender(context, options) {
     super._onRender(context, options);
+    const pingLog = this.element.querySelector(".wc-ping-log");
+    if (pingLog) pingLog.scrollTop = pingLog.scrollHeight;
+    const pingText = this.element.querySelector("[data-ping-text]");
+    pingText?.addEventListener("input", event => { this.pingDraft = event.currentTarget.value; });
+    pingText?.addEventListener("keydown", event => {
+      if (event.key !== "Enter" || event.isComposing) return;
+      event.preventDefault();
+      WiredConsole.#onSendPing.call(this, event, event.currentTarget);
+    });
+    this.element.querySelector("[data-ping-chat]")?.addEventListener("change", event => {
+      this.pingWhisper = event.currentTarget.value === "whisper";
+    });
     if (!game.user.isGM) return;
     this.element.querySelector("[data-wired-map]")?.addEventListener("change", event => this.#onWiredMapChange(event));
     // Inline edits in the detail panel save on change.
@@ -481,6 +509,63 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     });
     if (confirmed) await this.#updateBoard(nodes => nodes.splice(0, nodes.length));
   }
+
+  /* ---------- Wire ping / spoof (B106) ---------- */
+
+  static async #onSendPing() {
+    const scene = this.scene;
+    if (!game.user.isGM || !scene) return;
+    const text = (this.pingDraft ?? "").trim();
+    if (!text) {
+      ui.notifications.warn(game.i18n.localize("GHOSTWIRE.WiredConsole.PingEmpty"));
+      return;
+    }
+    const whisper = !!this.pingWhisper;
+    const ping = {
+      id: foundry.utils.randomID(),
+      text,
+      whisper,
+      at: Date.now(),
+      user: game.user.name,
+    };
+    const entries = appendPing(readPings(scene), ping, () => foundry.utils.randomID());
+    await scene.setFlag(MODULE_ID, "wiredPings", { entries, updated: Date.now() });
+    this.pingDraft = "";
+    await WiredConsole.#announcePing(ping, scene, this.getWiredState);
+  }
+
+  /** Chat card for a ping: public, or whisper to Overlay / Jacked In token owners (plus GMs). */
+  static async #announcePing(ping, scene, getWiredState) {
+    const localize = key => game.i18n.localize(`GHOSTWIRE.WiredConsole.${key}`);
+    const esc = foundry.utils.escapeHTML;
+    const mode = localize(ping.whisper ? "PingWhisper" : "PingPublic");
+    const content = `
+      <div class="ghostwire-wire-ping${ping.whisper ? " is-whisper" : ""}">
+        <header>
+          <i class="fa-solid fa-satellite-dish"></i>
+          <span class="gw-ping-kicker">${esc(localize("PingChatTitle"))}</span>
+          <span class="gw-ping-mode">${esc(mode)}</span>
+        </header>
+        <p class="gw-ping-text">${esc(ping.text)}</p>
+      </div>`;
+    const data = {
+      speaker: { alias: scene?.name ? game.i18n.format("GHOSTWIRE.WiredConsole.PingChatSpeaker", { scene: scene.name }) : localize("Title") },
+      content,
+    };
+    if (ping.whisper) {
+      const viewed = game.scenes.viewed;
+      data.whisper = whisperRecipientIds({
+        users: game.users,
+        tokens: viewed?.tokens ?? [],
+        getWiredState,
+        canOwn: (actor, user) => actor.testUserPermission(user, "OWNER"),
+      });
+      if (!data.whisper.some(id => !game.users.get(id)?.isGM)) {
+        ui.notifications.info(localize("PingNoConnected"));
+      }
+    }
+    await ChatMessage.implementation.create(data);
+  }
 }
 
 /* ---------- registration ---------- */
@@ -558,6 +643,6 @@ export function registerWiredConsole({ getWiredState }) {
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES };
+    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings };
   });
 }

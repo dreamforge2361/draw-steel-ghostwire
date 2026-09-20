@@ -94,7 +94,7 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 - If a **Hacker or Technomancer** is monitoring: **Detect**, then **Block**.
 - **Block success:** packet dies; **Trace −1**.
 - **Fail / nobody monitoring:** message leaves → early ARG attention on the post-stop clock (optional meat Alert +1).
-- Until Wired Console **Wire ping/spoof** ships: narrate or chat the telegraph at Trace 6–7.
+- Use Wired Console **Wire ping/spoof** (GM short text + Send) at Trace 6–7 for the call-home telegraph. Chat: public, or whisper to Overlay / Jacked In. Does **not** auto-move Trace.
 
 ---
 
@@ -213,7 +213,7 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 - [ ] Splash art: garbage-truck freighter + 4 runners over moving train
 - [ ] Tokens: ARG Corp Security, Response Lieutenant (+ Enforcers); freight drone token
 - [ ] Wired Console board preset on train Scene (nodes + Trace)
-- [ ] Backlog: Console **Wire ping/spoof** for call-home telegraph
+- [x] Console **Wire ping/spoof** for call-home telegraph (**0.3.45**)
 
 Art locks: flat top-down maps; no people on maps; no baked grid; ARG uniform stylization reusable.
 
@@ -221,4 +221,4 @@ Art locks: flat top-down maps; no people on maps; no baked grid; ARG uniform sty
 
 ## L1 Trace tools note (playtest)
 
-**Kessic brings Whiteout×2** (compiled magazine, 2 fires on Switchblade / Street Deck) — that is the L1 Trace −1 payload. Technomancer does not get Whiteout by default (no deck). Deadhead’s ICE call-home block is the scenario Trace −1 if nobody runs Whiteout. Ghost Step (cancel an increase) is later-level.
+**Kessic brings Whiteout×2** (compiled magazine, 2 fires on Switchblade / Street Deck) — that is the L1 Trace −1 payload. **Sabbat Vane** also starts with Whiteout×2 compiled on **Wired Native** (no deck). Other Technomancers do not auto-gain Whiteout. Deadhead’s ICE call-home block is the scenario Trace −1 if nobody runs Whiteout. Ghost Step (cancel an increase) is later-level.

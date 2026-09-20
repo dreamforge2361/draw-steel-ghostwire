@@ -13,13 +13,17 @@
 // edge) and installs the chip onto a deck with a free slot; the tier sets its quantity (fires): 1 / 3 / 5.
 // Recompile magazine re-rolls an installed one and replaces its quantity.
 //
+// B109: Technomancers compile the same magazines onto Wired Native (Resonance / body-as-interface) without a
+// cyberdeck. Host families include deck, resonance, and body. installedOn is the Wired Native feature (or
+// "self" / the actor id). Do not auto-grant Whiteout — compile path + Sabbat pregen only.
+//
 // Quantity means chips while a payload is loose and fires while it is loaded. Loading takes one chip off a stack
 // (the spares stay loose as a new stack), and a chip at 0 is spent and cannot be loaded. Unloading a magazine that
 // still has fires (Uninstall, or its deck deleted) dumps them: quantity goes to 0, so a pulled magazine never turns
 // back into a stack of raw chips.
 //
 // Link: the payload stores `useAbilityId`, the ability stores `fromPayloadId`. Run exists only while the payload
-// is installed on a deck. Each successful Run spends one fire. At 0 the magazine unloads at once (its slot frees,
+// is installed on a deck or Wired Native. Each successful Run spends one fire. At 0 the magazine unloads at once (its slot frees,
 // the chip stays at quantity 0), but its Run ability is only flagged `spentMagazine` and refuses to fire: the
 // chat card just posted still points at it. Spent abilities are cleared on the next `ready`, or reused if the
 // chip is loaded again first.
@@ -33,7 +37,11 @@ const L = "GHOSTWIRE.PayloadUse";
 const MAGAZINE_FIRES = [1, 3, 5];
 
 /** The mod flag every payload carries (src/packs/matrix/payloads); backfilled on chips that predate B51b. */
-const MAGAZINE_MOD = { slotCost: 1, hosts: ["deck"], host: "deck", craftSkill: ["hacking"], magazine: true };
+const MAGAZINE_MOD = { slotCost: 1, hosts: ["deck", "resonance", "body"], host: "deck", craftSkill: ["hacking"], magazine: true };
+
+/** Wired Native / body-as-interface catalog stamped onto the Technomancer feature so it can host magazines. */
+const WIRED_NATIVE_HOST = { modSlots: 2, modFamily: ["resonance", "body"] };
+const BODY_HOST_FAMILIES = ["resonance", "body"];
 
 let TEMPLATES = null;
 
@@ -44,8 +52,17 @@ export function isPayload(item) {
   return item?.type === "treasure" && item?.flags?.[MODULE_ID]?.matrix?.role === "payload";
 }
 
-/** Is this payload installed on a deck as a magazine? */
-export const isLoaded = payload => !!installedHost(payload);
+/** Is this payload installed on a deck or Wired Native / body host as a magazine? */
+export const isLoaded = payload => !!installedHost(payload) || isBodyCompile(payload);
+
+/** Compiled onto the Technomancer (Wired Native feature, actor id, or the "self" sentinel). */
+function isBodyCompile(payload) {
+  const on = getModData(payload)?.installedOn;
+  const actor = payload?.parent;
+  if (!on || !actor) return false;
+  if (on === "self" || on === actor.id) return actor.items.some(i => i.system?._dsid === "wired-native");
+  return actor.items.get(on)?.system?._dsid === "wired-native";
+}
 
 const linkedAbilityId = item => item?.getFlag?.(MODULE_ID, "useAbilityId") ?? null;
 const sourcePayloadId = ability => ability?.getFlag?.(MODULE_ID, "fromPayloadId") ?? null;
@@ -170,6 +187,7 @@ async function disarmPayload(payload, { keepSpent = false } = {}) {
  */
 export async function syncActor(actor) {
   if (!isHero(actor) || !actor.isOwner) return { added: 0, removed: 0 };
+  await ensureWiredNativeHost(actor);
 
   const orphans = actor.items.filter(i => {
     const payloadId = sourcePayloadId(i);
@@ -198,37 +216,57 @@ function isSyncUser(actor) {
 
 /* -------------------------------------------- Load magazine (Craft) */
 
-const decksOf = actor => actor.items.filter(item => getHostCatalog(item)?.modFamily.includes("deck"));
+const isWiredNative = item => item?.system?._dsid === "wired-native";
 
-/** Give a chip that predates B51b its mod flag, so it can install onto a deck. */
+const payloadHostsOf = actor => actor.items.filter(item => {
+  const catalog = getHostCatalog(item);
+  return !!catalog && catalog.modFamily.some(family => MAGAZINE_MOD.hosts.includes(family));
+});
+
+/** Stamp Wired Native with a resonance/body catalog so magazines can install onto it. */
+async function ensureWiredNativeHost(actor) {
+  const native = actor?.items.find(isWiredNative);
+  if (!native) return null;
+  const catalog = getHostCatalog(native);
+  if (catalog?.modSlots > 0 && catalog.modFamily.some(family => BODY_HOST_FAMILIES.includes(family))) return native;
+  const matrix = native.getFlag?.(MODULE_ID, "matrix") ?? {};
+  const modFamily = [...new Set([...(matrix.modFamily ?? []), ...BODY_HOST_FAMILIES])];
+  const modSlots = Math.max(WIRED_NATIVE_HOST.modSlots, Number(matrix.modSlots) || 0);
+  await native.update({ [`flags.${MODULE_ID}.matrix`]: { ...matrix, modSlots, modFamily } });
+  return native;
+}
+
+/** Give a chip that predates B51b its mod flag, so it can install onto a deck or Wired Native. */
 async function ensureMagazineFlag(payload) {
   if (getModData(payload)?.magazine) return;
   await payload.update({ [`flags.${MODULE_ID}.mod`]: { ...MAGAZINE_MOD, ...(getModData(payload) ?? {}), magazine: true } });
 }
 
-/** The deck to load into: the only one with room, or the Director/player's pick. Null if none or cancelled. */
-async function pickDeck(payload) {
-  const decks = decksOf(payload.parent).filter(deck => canInstall(payload, deck).ok);
-  if (!decks.length) {
-    const key = decksOf(payload.parent).length ? "NoSlots" : "NoDeck";
+/** The host to compile into: the only one with room, or the Director/player's pick. Null if none or cancelled. */
+async function pickHost(payload) {
+  await ensureWiredNativeHost(payload.parent);
+  const hosts = payloadHostsOf(payload.parent).filter(host => canInstall(payload, host).ok);
+  if (!hosts.length) {
+    const owned = payloadHostsOf(payload.parent).length;
+    const key = owned ? "NoSlots" : "NoDeck";
     ui.notifications.warn(game.i18n.format(`${L}.Load.${key}`, { payload: payload.name }));
     return null;
   }
-  if (decks.length === 1) return decks[0];
+  if (hosts.length === 1) return hosts[0];
 
   const escape = foundry.utils.escapeHTML;
-  const options = decks.map((deck, index) => {
-    const { modSlots } = getHostCatalog(deck);
-    return `<option value="${deck.id}"${index === 0 ? " selected" : ""}>${escape(deck.name)} (${usedSlots(deck)} / ${modSlots})</option>`;
+  const options = hosts.map((host, index) => {
+    const { modSlots } = getHostCatalog(host);
+    return `<option value="${host.id}"${index === 0 ? " selected" : ""}>${escape(host.name)} (${usedSlots(host)} / ${modSlots})</option>`;
   });
-  const deckId = await foundry.applications.api.DialogV2.prompt({
+  const hostId = await foundry.applications.api.DialogV2.prompt({
     window: { title: game.i18n.format(`${L}.Load.Title`, { payload: payload.name }) },
     content: `<p>${game.i18n.format(`${L}.Load.PickDeck`, { payload: escape(payload.name) })}</p>`
       + `<div class="form-group"><label>${game.i18n.localize(`${L}.Load.Deck`)}</label><select name="deck">${options.join("")}</select></div>`,
     ok: { label: game.i18n.localize(`${L}.Load.Confirm`), callback: (event, button) => button.form.elements.deck.value },
     rejectClose: false,
   });
-  return deckId ? payload.parent.items.get(deckId) : null;
+  return hostId ? payload.parent.items.get(hostId) : null;
 }
 
 /**
@@ -236,11 +274,11 @@ async function pickDeck(payload) {
  * the skill bonus, so the dialog's skill picker is off). Posts the system's normal test card.
  * @returns {Promise<1|2|3|null>}  The tier, or null if the dialog was cancelled.
  */
-async function rollCraft(actor, payload, deck) {
+async function rollCraft(actor, payload, host) {
   const hacking = !!actor.system.skills?.value?.has?.("hacking");
   // Whiteout (and any payload flagged craftDifficulty: "hard") is a steep/hard Craft Project: one bane.
   const hard = payload.flags?.[MODULE_ID]?.matrix?.craftDifficulty === "hard";
-  const title = game.i18n.format(`${L}.Load.RollTitle`, { payload: payload.name, deck: deck.name });
+  const title = game.i18n.format(`${L}.Load.RollTitle`, { payload: payload.name, deck: host.name });
   const message = await actor.system.rollCharacteristic?.("reason", { edges: hacking ? 1 : 0, banes: hard ? 1 : 0 },
     { context: { skills: null }, window: { title } },
     { data: { title } });
@@ -248,7 +286,7 @@ async function rollCraft(actor, payload, deck) {
 }
 
 /**
- * Load a payload chip into a deck as a magazine (or recompile one already loaded) with a Craft roll.
+ * Load a payload chip into a deck or Wired Native host as a magazine (or recompile one already loaded) with a Craft roll.
  * The tier sets its quantity: 1 / 3 / 5. Nothing about the chip changes unless the install succeeds.
  */
 export async function loadMagazine(payload) {
@@ -256,15 +294,15 @@ export async function loadMagazine(payload) {
   if (!isHero(actor) || !isPayload(payload)) return;
   const recompile = isLoaded(payload);
 
-  let deck = installedHost(payload);
+  let host = installedHost(payload) ?? (isBodyCompile(payload) ? actor.items.find(isWiredNative) : null);
   if (!recompile) {
     if (Number(payload.system.quantity ?? 0) < 1) return ui.notifications.warn(game.i18n.format(`${L}.Load.NoChip`, { payload: payload.name }));
     await ensureMagazineFlag(payload);
-    deck = await pickDeck(payload);
-    if (!deck) return;
+    host = await pickHost(payload);
+    if (!host) return;
   }
 
-  const tier = await rollCraft(actor, payload, deck);
+  const tier = await rollCraft(actor, payload, host);
   if (!tier) return;
   const fires = MAGAZINE_FIRES[tier - 1];
 
@@ -275,7 +313,7 @@ export async function loadMagazine(payload) {
     // This chip becomes the magazine; any other chips in its stack stay loose as a new stack.
     const spares = Number(payload.system.quantity ?? 0) - 1;
     const spareData = spares > 0 ? payload.toObject() : null;
-    if (!(await installMod(payload, deck, { "system.quantity": fires }))) return;
+    if (!(await installMod(payload, host, { "system.quantity": fires }))) return;
     if (spareData) {
       delete spareData._id;
       spareData.system.quantity = spares;
@@ -286,7 +324,7 @@ export async function loadMagazine(payload) {
   }
 
   const tierLabel = game.i18n.localize(ds.rolls.PowerRoll.RESULT_TIERS[`tier${tier}`]?.label ?? "");
-  const data = { actor: actor.name, payload: payload.name, deck: deck.name, tier: tierLabel, fires };
+  const data = { actor: actor.name, payload: payload.name, deck: host.name, tier: tierLabel, fires };
   const escaped = Object.fromEntries(Object.entries(data).map(([k, v]) => [k, foundry.utils.escapeHTML(String(v))]));
   const key = recompile ? "Recompiled" : "Loaded";
   ui.notifications.info(game.i18n.format(`${L}.Load.${key}`, data));
