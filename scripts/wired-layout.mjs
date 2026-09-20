@@ -18,18 +18,18 @@ const DENSE_AT = 12;
 
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 
-/** Room cluster key from a node name: `{Room} Light Control` / `{Room} Maglock Door N` / leading phrase. */
+/** Room cluster key from a node name: `{Room} - Light Control` / `{Room} - Maglock Door N`. */
 export function roomPrefix(name) {
   const raw = String(name ?? "").trim();
   if (!raw) return "";
-  const dash = raw.split(/\s+-\s+/)[0].trim();
-  const base = dash && dash !== raw ? dash : raw;
-  const stripped = base
-    .replace(/\s+Light Control$/i, "")
-    .replace(/\s+Maglock Door(?:\s+\d+)?$/i, "")
+  const idx = raw.indexOf(" - ");
+  if (idx > 0) return raw.slice(0, idx).trim();
+  const stripped = raw
+    .replace(/\s+-?\s*Light Control$/i, "")
+    .replace(/\s+-?\s*Maglock Door(?:\s+\d+)?$/i, "")
     .replace(/\s+Door(?:\s+\d+)?$/i, "")
     .trim();
-  const words = (stripped || base).split(/\s+/).filter(Boolean);
+  const words = (stripped || raw).split(/\s+/).filter(Boolean);
   if (!words.length) return "";
   if (words.length === 1) return titleCase(words[0]);
   if (ROOM_TYPE_KEYWORDS.has(words[1].toLowerCase())) return titleCase(words[0]);
@@ -47,9 +47,9 @@ export function shortNodeName(name, { dense = false, max = 18 } = {}) {
   const raw = String(name ?? "").trim();
   if (!raw) return "";
   let short = raw
-    .replace(/\s+Light Control$/i, " LC")
-    .replace(/\s+Maglock Door\s+/i, " D")
-    .replace(/\s+Maglock Door$/i, " D");
+    .replace(/\s+-?\s*Light Control$/i, " LC")
+    .replace(/\s+-?\s*Maglock Door\s+/i, " D")
+    .replace(/\s+-?\s*Maglock Door$/i, " D");
   const limit = dense ? Math.min(max, 14) : max;
   if (short.length <= limit) return short;
   return `${short.slice(0, Math.max(1, limit - 1)).trimEnd()}…`;

@@ -27,7 +27,7 @@ export const ROOM_SPLIT = " - ";
  * ` - ` (space-hyphen-space). No first-word fallback — missing splitter → "".
  *
  * Example: "Rear Car Substation - Light Control" → "Rear Car Substation"
- * → node "Rear Car Substation Light Control".
+ * → Light Control node "Rear Car Substation - Light Control".
  */
 export function parseRoomName(name) {
   const raw = String(name ?? "").trim();
@@ -36,6 +36,11 @@ export function parseRoomName(name) {
   if (idx <= 0) return "";
   return raw.slice(0, idx).trim();
 }
+
+/** `{Room} - Light Control` — matches the light name pattern. */
+export const lightControlName = room => `${room}${ROOM_SPLIT}Light Control`;
+/** `{Room} - Maglock Door N` — same ` - ` after the room (never `{Room} Maglock Door N`). */
+export const maglockName = (room, n) => `${room}${ROOM_SPLIT}Maglock Door ${n}`;
 
 export function isDoorWall(wall, noneValue = 0) {
   const door = wall?.door;
@@ -128,7 +133,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
     }
     const node = makeNode({
       id: idFactory(),
-      name: `${room.name} Light Control`,
+      name: lightControlName(room.name),
       track: 1,
       rating: 1,
       autoFrom: { kind: AUTO_KIND.light, room: room.name, lightIds: room.lightIds },
@@ -154,7 +159,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
     }
     const node = makeNode({
       id: idFactory(),
-      name: `${room} Maglock Door ${n}`,
+      name: maglockName(room, n),
       track: 1,
       rating: 2,
       autoFrom: { kind: AUTO_KIND.maglock, room, doorId: door.id },

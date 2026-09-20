@@ -7,7 +7,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
-import { parseRoomName, planAutoNodes, isDoorWall, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND } from "../scripts/wired-auto-nodes.mjs";
+import { parseRoomName, planAutoNodes, isDoorWall, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, ROOM_SPLIT } from "../scripts/wired-auto-nodes.mjs";
 import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../scripts/wired-layout.mjs";
 import { MATRIX_VERBS, MATRIX_VERB_IDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
 
@@ -34,6 +34,11 @@ ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
 ok(AUTO_NODE_TOKEN_ART["light-control"] === null && AUTO_NODE_TOKEN_ART.maglock === null, "B113 token art hooks are null placeholders");
 
 console.log("\n1) Room naming (B112)");
+ok(ROOM_SPLIT === " - ", "ROOM_SPLIT is space-hyphen-space");
+ok(lightControlName("Rear Car Substation") === "Rear Car Substation - Light Control", "Light Control is {Room} - Light Control");
+ok(maglockName("Rear Car Substation", 1) === "Rear Car Substation - Maglock Door 1", "Maglock Door 1 uses dash after room");
+ok(maglockName("Rear Car Substation", 2) === "Rear Car Substation - Maglock Door 2", "Maglock Door 2 uses dash after room");
+ok(maglockName("Rear Car Substation", 1) !== "Rear Car Substation Maglock Door 1", "Maglock names are not undashed");
 ok(parseRoomName("Rear Car Substation - Light Control") === "Rear Car Substation", "Rear Car Substation - Light Control → Rear Car Substation");
 ok(parseRoomName("Aft Freight - Work Light") === "Aft Freight", "Aft Freight - Work Light → Aft Freight");
 ok(parseRoomName("Cab - Light Control") === "Cab", "Cab - Light Control → Cab");
@@ -72,14 +77,17 @@ ok(plan.skippedLights.length === 1 && plan.skippedLights[0].id === "skip", "ligh
 const lightNodes = plan.created.filter(n => n.autoFrom.kind === AUTO_KIND.light);
 ok(lightNodes.length === 4, `one Light Control per room (got ${lightNodes.length})`);
 ok(lightNodes.every(n => n.track === 1 && n.rating === 1), "Light Control is T1 R1");
-ok(lightNodes.some(n => n.name === "Aft Freight Light Control"), "Aft Freight Light Control name");
-ok(lightNodes.some(n => n.name === "Rear Car Substation Light Control"), "Rear Car Substation Light Control name");
+ok(lightNodes.some(n => n.name === "Aft Freight - Light Control"), "Aft Freight - Light Control name");
+ok(lightNodes.some(n => n.name === "Rear Car Substation - Light Control"), "Rear Car Substation - Light Control name");
+ok(lightNodes.every(n => n.name.includes(ROOM_SPLIT)), "every Light Control name uses “ - ”");
 const maglocks = plan.created.filter(n => n.autoFrom.kind === AUTO_KIND.maglock);
 ok(maglocks.length === 4, `one maglock per door (got ${maglocks.length})`);
 ok(maglocks.every(n => n.track === 1 && n.rating === 2), "Maglocks are T1 R2");
-ok(plan.nodes.some(n => n.name === "Aft Freight Maglock Door 1") && plan.nodes.some(n => n.name === "Aft Freight Maglock Door 2"), "per-room door numbering");
-ok(plan.nodes.some(n => n.name === "Security Nest Maglock Door 1"), "unnamed door uses nearest dashed light, not first-word door name");
-const aftLight = plan.nodes.find(n => n.name === "Aft Freight Light Control");
+ok(plan.nodes.some(n => n.name === "Aft Freight - Maglock Door 1") && plan.nodes.some(n => n.name === "Aft Freight - Maglock Door 2"), "per-room door numbering with dash");
+ok(plan.nodes.some(n => n.name === "Security Nest - Maglock Door 1"), "unnamed door uses nearest dashed light, not first-word door name");
+ok(!plan.nodes.some(n => n.name === "Aft Freight Maglock Door 1" || n.name === "Rear Car Substation Maglock Door 1"), "no undashed Maglock names");
+ok(maglocks.every(n => n.name.includes(ROOM_SPLIT) && / - Maglock Door \d+$/.test(n.name)), "every Maglock name is {Room} - Maglock Door N");
+const aftLight = plan.nodes.find(n => n.name === "Aft Freight - Light Control");
 const aftDoors = plan.nodes.filter(n => n.autoFrom?.room === "Aft Freight" && n.autoFrom.kind === AUTO_KIND.maglock);
 ok(aftDoors.every(d => aftLight.links.includes(d.id) && d.links.includes(aftLight.id)), "Light Control linked to same-room maglocks");
 
@@ -101,9 +109,9 @@ const gold = [];
 const rooms = ["Aft Freight", "Freight", "Security Nest", "Courier", "Wire Closet", "Cab", "Rear Bay", "Gangway"];
 let nid = 0;
 for (const room of rooms) {
-  const light = { id: `g${++nid}`, name: `${room} Light Control`, links: [], track: 1, rating: 1 };
-  const d1 = { id: `g${++nid}`, name: `${room} Maglock Door 1`, links: [], track: 1, rating: 2 };
-  const d2 = { id: `g${++nid}`, name: `${room} Maglock Door 2`, links: [], track: 1, rating: 2 };
+  const light = { id: `g${++nid}`, name: `${room} - Light Control`, links: [], track: 1, rating: 1 };
+  const d1 = { id: `g${++nid}`, name: `${room} - Maglock Door 1`, links: [], track: 1, rating: 2 };
+  const d2 = { id: `g${++nid}`, name: `${room} - Maglock Door 2`, links: [], track: 1, rating: 2 };
   light.links.push(d1.id, d2.id);
   d1.links.push(light.id);
   d2.links.push(light.id);
@@ -116,9 +124,11 @@ ok(laid.mode === "cluster" || laid.mode === "force", `cluster or force mode (got
 ok(laid.positions.size === 24, "every node has a position");
 const sep = minSeparation(laid.positions);
 ok(sep >= 7, `min centre separation ≥ 7 (got ${sep.toFixed(2)})`);
-ok(shortNodeName("Rear Bay Light Control", { dense: true }).includes("LC"), "Light Control compresses to LC");
-ok(shortNodeName("Cab Maglock Door 2", { dense: true }).length <= 14, "dense labels truncate");
-ok(roomPrefix("Rear Bay Maglock Door 1") === "Rear Bay", "roomPrefix matches Maglock names");
+ok(shortNodeName("Rear Bay - Light Control", { dense: true }).includes("LC"), "Light Control compresses to LC");
+ok(shortNodeName("Cab - Maglock Door 2", { dense: true }).length <= 14, "dense labels truncate");
+ok(roomPrefix("Rear Bay - Maglock Door 1") === "Rear Bay", "roomPrefix splits Maglock names on “ - ”");
+ok(roomPrefix("Rear Car Substation - Maglock Door 2") === "Rear Car Substation", "roomPrefix keeps full room left of first “ - ”");
+ok(laid.mode === "cluster", "dashed Gold Line names cluster by room");
 
 const stacked = layoutNodes(
   gold.slice(0, 6),
@@ -163,15 +173,22 @@ ok(readFileSync("scripts/wired-node-tokens.mjs", "utf8").includes("textureSrc"),
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodes === "Auto-nodes from Scene", "lang AutoNodes");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation - Light Control"), "lang documents locked room rule");
+ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation - Maglock Door 1"), "lang Maglock names use dash after room");
+ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("{Room} - Light Control"), "lang Light Control stays {Room} - Light Control");
+ok(!lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation Maglock Door"), "lang does not document undashed Maglock names");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodesUnsplit.includes("{Room} - Light Control"), "lang warns on missing splitter");
 ok(lang.GHOSTWIRE.WiredMinimap.PanHint.toLowerCase().includes("zoom"), "lang pan/zoom hint");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Name.includes("Matrix Verbs"), "lang Wire Kit name");
 ok(lang.GHOSTWIRE.WiredKit.NoSelection.includes("NPC"), "lang kit needs NPC selection");
 
-ok(readFileSync("docs/spikes/B112-SCENE-WIRE-AUTO-NODES.md", "utf8").includes("0.3.48"), "B112 spike");
+const b112 = readFileSync("docs/spikes/B112-SCENE-WIRE-AUTO-NODES.md", "utf8");
+ok(b112.includes("0.3.48"), "B112 spike");
+ok(b112.includes("Rear Car Substation - Maglock Door 1"), "B112 spike Maglock dash lock");
+ok(b112.includes("{Room} - Light Control"), "B112 spike Light Control dash");
+ok(b112.includes("Wrong: `Rear Car Substation Maglock Door 1`"), "B112 spike marks undashed Maglock as wrong");
 ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.3.48"), "B114 spike");
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.48"), "B115 spike");
-ok(readFileSync("docs/spikes/B112-SCENE-WIRE-AUTO-NODES.md", "utf8").includes("B113"), "B112 notes B113 art later");
+ok(b112.includes("B113"), "B112 notes B113 art later");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

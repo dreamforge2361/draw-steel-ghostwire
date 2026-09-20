@@ -14,7 +14,7 @@ Dense boards stay readable. Gold Line with 20+ nodes must not stack pills on top
 Used by `scripts/wired-minimap.mjs`. Pure functions (smoke-tested).
 
 1. **Spatial** — if node tokens exist, keep relative canvas positions (meatspace shape).
-2. **Cluster-by-room** — if names share room prefixes (`{Room} Light Control` / `{Room} Maglock Door N`), column tree: Light Control above maglocks.
+2. **Cluster-by-room** — if names share room prefixes (`{Room} - Light Control` / `{Room} - Maglock Door N`), column tree: Light Control above maglocks.
 3. **Force-directed** — unplaced, unclustered boards: repulsion + link attraction, then clamp to padding.
 4. **Collision avoidance** — `separateLabels` pushes overlapping pill boxes apart (min centre distance ~8–11% of the field).
 
