@@ -4,11 +4,12 @@
  *
  * Run: node tools/kiosk-smoke.mjs
  */
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import {
   DEFAULT_KIOSK_RANGE,
   KIOSK_ACTOR_ID,
+  KIOSK_TOKEN_ART,
   KIOSK_UUID,
   WEALTH_PATH,
   applyPurchase,
@@ -36,6 +37,7 @@ const note = (pass, msg) => (pass ? ok : fail).push(pass ? `  ✓ ${msg}` : msg)
 const module = JSON.parse(readFileSync("module.json", "utf8"));
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const spike = readFileSync("docs/spikes/B118-SCENE-KIOSK-MERCHANT.md", "utf8");
+const director = readFileSync("docs/directors/scene-kiosk-merchant.md", "utf8");
 const boot = readFileSync("scripts/module.mjs", "utf8");
 const gold = readFileSync("scripts/gold-line-scene.mjs", "utf8");
 const actor = JSON.parse(readFileSync("src/packs/summons/kiosks/kiosk-merchant.json", "utf8"));
@@ -57,6 +59,13 @@ note(actor.flags["draw-steel-ghostwire"].range === DEFAULT_KIOSK_RANGE, "pack de
 note(folder._id === actor.folder, "kiosk folder id matches");
 note(KIOSK_UUID.endsWith(KIOSK_ACTOR_ID), "UUID suffix");
 note(WEALTH_PATH === "system.hero.wealth", "wealth path is system.hero.wealth");
+note(KIOSK_TOKEN_ART === "modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp", "token art module path");
+note(actor.img === KIOSK_TOKEN_ART, "pack stub img is kiosk plate");
+note(actor.prototypeToken?.texture?.src === KIOSK_TOKEN_ART, "pack stub token texture is kiosk plate");
+note(existsSync("assets/tokens/kiosks/kiosk-merchant.png") && existsSync("assets/tokens/kiosks/kiosk-merchant.webp"), "png + webp on disk");
+note(readFileSync("scripts/kiosk.mjs", "utf8").includes("KIOSK_TOKEN_ART"), "placeKiosk stamps KIOSK_TOKEN_ART");
+note(director.includes("kiosks/kiosk-merchant.webp"), "Director note documents art path");
+note(spike.includes("kiosks/kiosk-merchant.webp"), "B118 spike documents art path");
 
 console.log("\n2) Catalog ¥ + listing override");
 const burner = { flags: { "draw-steel-ghostwire": { gear: { price: 60 } } } };
@@ -154,8 +163,8 @@ note(inv[0].price === 120 && inv[1].price === null, "override vs catalog null");
 
 console.log("\n6) B119 preset inventory (src/packs catalog)");
 const b119 = readFileSync("docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md", "utf8");
-const director = readFileSync("docs/directors/scene-kiosk-merchant.md", "utf8");
 note(b119.includes("0.3.65") && b119.includes("SHIPPED"), "B119 spike shipped 0.3.65");
+note(b119.includes("kiosks/kiosk-merchant.webp"), "B119 spike documents art path");
 note(director.includes("Street Food Kiosk") && director.includes("Armor Locker"), "Director note names type defaults");
 note(boot.includes("registerConsumableUse()"), "module registers registerConsumableUse");
 note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones", "six preset ids");

@@ -10,6 +10,10 @@ import { getPreset, listPresets, listingsFromItems, matchPresetItem } from "./ki
 export const MODULE_ID = "draw-steel-ghostwire";
 export const KIOSK_ACTOR_ID = "GwKioskMerchant1";
 export const KIOSK_UUID = `Compendium.${MODULE_ID}.summons.Actor.${KIOSK_ACTOR_ID}`;
+export const KIOSK_TOKEN_ART = `modules/${MODULE_ID}/assets/tokens/kiosks/kiosk-merchant.webp`;
+export const LEGACY_KIOSK_ART = Object.freeze([
+  "icons/skills/trades/academics-merchant-scribe.webp",
+]);
 export const DEFAULT_KIOSK_RANGE = 2;
 export const CATALOG_PRICE_FLAGS = Object.freeze(["gear", "chrome", "matrix", "mod", "vehicle", "focus"]);
 export const WEALTH_PATH = "system.hero.wealth";
@@ -383,17 +387,23 @@ export async function placeKiosk({ name, preset } = {}) {
   const inventory = def ? normalizeInventory(await resolvePresetListings(def.id)) : [];
   foundry.utils.mergeObject(data, {
     name: merchant,
+    img: KIOSK_TOKEN_ART,
     folder: (await kioskFolder())?.id ?? null,
     ownership: { default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER },
     "prototypeToken.name": merchant,
     "prototypeToken.actorLink": true,
     "prototypeToken.displayName": CONST.TOKEN_DISPLAY_MODES.ALWAYS,
+    "prototypeToken.texture.src": KIOSK_TOKEN_ART,
     [`flags.${MODULE_ID}`]: { kind: "kiosk", range: DEFAULT_KIOSK_RANGE, tagline, inventory, preset: def?.id ?? "" },
   });
   const actor = await Actor.create(data);
   if (!actor) return null;
   const { x, y, elevation, level } = placementOnView();
-  const tokenData = { x, y, elevation, actorLink: true, name: merchant, displayName: CONST.TOKEN_DISPLAY_MODES.ALWAYS };
+  const tokenData = {
+    x, y, elevation, actorLink: true, name: merchant,
+    displayName: CONST.TOKEN_DISPLAY_MODES.ALWAYS,
+    texture: { src: KIOSK_TOKEN_ART },
+  };
   if (level) tokenData.level = level;
   const tokenDocument = await actor.getTokenDocument(tokenData, { parent: viewed });
   await viewed.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
@@ -751,7 +761,18 @@ async function normalizeWorldKiosk(actor) {
   if (actor.getFlag(MODULE_ID, "tagline") === undefined) updates[`flags.${MODULE_ID}.tagline`] = "";
   const observer = CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER;
   if ((actor.ownership?.default ?? 0) < observer) updates["ownership.default"] = observer;
+  if (LEGACY_KIOSK_ART.includes(actor.img)) {
+    updates.img = KIOSK_TOKEN_ART;
+    updates["prototypeToken.texture.src"] = KIOSK_TOKEN_ART;
+  }
   if (!foundry.utils.isEmpty(updates)) await actor.update(updates);
+  for (const scene of game.scenes ?? []) {
+    for (const token of tokensForActor(actor, scene)) {
+      if (LEGACY_KIOSK_ART.includes(token.texture?.src)) {
+        await token.update({ "texture.src": KIOSK_TOKEN_ART });
+      }
+    }
+  }
 }
 
 export function registerKiosk() {
@@ -774,7 +795,11 @@ export function registerKiosk() {
         listingPrice,
         catalogPrice,
         KIOSK_UUID,
+        KIOSK_TOKEN_ART,
       };
+    }
+    if (game.user.isGM) {
+      for (const actor of game.actors) if (isKioskActor(actor)) normalizeWorldKiosk(actor);
     }
     console.log(`${MODULE_ID} | Kiosk: scene merchant registered (Actor stub kind=kiosk)`);
   });

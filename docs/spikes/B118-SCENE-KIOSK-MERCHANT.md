@@ -76,13 +76,26 @@ Token HUD cash-register icon (players + GM). Double-click is patched the same wa
 - `src/packs/summons/kiosks/`
 - Director note: `docs/directors/scene-kiosk-merchant.md`
 
+## Default token art (0.3.65)
+
+Michael street-kiosk plate (circular, multi-bay). PNG original **1254²** + Foundry WebP **1024²**:
+
+- `assets/tokens/kiosks/kiosk-merchant.png`
+- `assets/tokens/kiosks/kiosk-merchant.webp`
+
+Foundry path: `modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp`
+
+Stamped on pack stub `img` + `prototypeToken.texture.src`. `placeKiosk` (including type presets) writes the same path onto the world Actor and placed Token. One stub for all types — no extra preset Actors.
+
+World copies that still use the old Foundry merchant icon (`icons/skills/trades/academics-merchant-scribe.webp`) are upgraded on ready. Custom art is left alone. Does **not** rewrite the Gold Line Scene. After pull, Michael’s already-placed kiosk should pick up the plate (or set Actor `img` + Token texture by hand if it was customized).
+
 ## B119 follow-on (0.3.65)
 
 Type presets + street consumable SKUs: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picker; Restock from preset on the shop. Catalog filters in `scripts/kiosk-presets.mjs`. New Gear folder `src/packs/gear/consumables/`.
 
 ## Out of scope
 
-Full economy simulation, fencing, stock counts, Gold Line inject, new token art (uses Foundry merchant icon).
+Full economy simulation, fencing, stock counts, Gold Line inject.
 
 ## Verify
 

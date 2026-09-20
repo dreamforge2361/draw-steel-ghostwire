@@ -526,12 +526,13 @@ Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (
   - [ ] Foundry-verify: Mama’s Bar + ARG Lobby on a scratch Scene; player in range buys; out of range refused; Gold Line untouched
 
 ### B119 Kiosk type presets + street consumables (2026-09-20)
-Spec: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picker auto-stocks Food / Medical / Tools / Armor / Weapons / Drones from catalog UUIDs (`scripts/kiosk-presets.mjs`). Restock from preset on the shop. New Gear folder `src/packs/gear/consumables/` (6 food + 4 chems). Chems spawn Use maneuvers and apply AE / temp Stamina / Taint. **SHIPPED 0.3.65.** No Gold Line `{ force: true }`. No PDF.
+Spec: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picker auto-stocks Food / Medical / Tools / Armor / Weapons / Drones from catalog UUIDs (`scripts/kiosk-presets.mjs`). Restock from preset on the shop. New Gear folder `src/packs/gear/consumables/` (6 food + 4 chems). Chems spawn Use maneuvers and apply AE / temp Stamina / Taint. Default kiosk plate: `assets/tokens/kiosks/kiosk-merchant.{png,webp}`. **SHIPPED 0.3.65.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B119** kiosk presets + consumables (module **0.3.65**) — **pending Foundry-verify**. Done when:
   - [x] Preset filters + place/restock + lang/CSS
   - [x] Ten street SKUs with catalog ¥; four chem doses
+  - [x] Default kiosk plate on stub + placeKiosk (`assets/tokens/kiosks/kiosk-merchant.webp`)
   - [x] Smoke: `node tools/kiosk-smoke.mjs`
-  - [ ] Foundry-verify: place Food / Armor / Weapons kiosks; buy; Use Kickwire on a hero
+  - [ ] Foundry-verify: place Food / Armor / Weapons kiosks; buy; Use Kickwire on a hero; token shows the street-kiosk plate
 
 ### B32 Phase 5 — Hacker node / ICE Director templates (2026-09-17)
 Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node-templates.mjs` exports **`RATING`** (System Stat Card, moved out of `wired-console.mjs` — the Console now imports it, single source of truth) and **`NODE_TEMPLATES`**: `node-t1-r1…r5` and `node-t2-r1…r5` with `id, name, track, rating, integrityMax, biofeedback, ice, breachDC, description, notes`. **Track 1** templates follow 08-hacker.md: no Integrity pool, ICE, or biofeedback (`null`; the Console hides them). **Track 2** carry Integrity 12/18/26/36/50, biofeedback 3/5/8/13/22, and the ICE sketch. **Wired Console:** GM **Add template…** button (layers icon) in the Nodes header → pick one of the 10 → a hidden node is pushed onto `wiredBoard.nodes` through the same `#makeNode` / `#updateBoard` path as Add Node, with Description and Notes pre-filled. Add Node / Random Node / Generate Cluster unchanged; `module.api.NODE_TEMPLATES` exposed. **Director reference:** `docs/directors/wired-node-templates.md` (no journals pack exists, so no Journal pages). **Deferred:** node Actor scaffolds under `summons/nodes/` (optional D, skipped).

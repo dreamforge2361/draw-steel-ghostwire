@@ -3,7 +3,7 @@
   "_key": "!actors!GwKioskMerchant1",
   "name": "GHOSTWIRE.Kiosk.Template.Name",
   "type": "npc",
-  "img": "icons/skills/trades/academics-merchant-scribe.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp",
   "system": {
     "stamina": {
       "value": 1,
@@ -186,7 +186,7 @@
     "appendNumber": false,
     "prependAdjective": false,
     "texture": {
-      "src": "icons/skills/trades/academics-merchant-scribe.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp",
       "anchorX": 0.5,
       "anchorY": 0.5,
       "fit": "contain",

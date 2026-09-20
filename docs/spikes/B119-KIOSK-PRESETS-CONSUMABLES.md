@@ -57,11 +57,21 @@ Price on every preset row is `null` (catalog ¥). Stock stays infinite (B118).
 
 **UX:** Token controls › cash register opens a type picker (`DialogV2`). Blank name uses the type default (editable after). Director shop has **Restock from preset** (replaces the current shelf).
 
+## Default token art
+
+Same plate for every type (one stub, not per-preset Actors):
+
+`modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp`
+
+Source: `assets/tokens/kiosks/kiosk-merchant.{png,webp}` (Michael 1254² PNG + 1024² WebP). `placeKiosk` stamps Actor `img` + Token texture. Does not rewrite Gold Line. Existing world kiosks still on the Foundry merchant icon upgrade on ready.
+
 ## Files
 
 - `scripts/kiosk-presets.mjs`, `scripts/consumable-use.mjs`
 - `scripts/kiosk.mjs` / `templates/kiosk.hbs` / `styles/ghostwire.css`
 - `src/packs/gear/consumables/**`
+- `src/packs/summons/kiosks/kiosk-merchant.json` (default art)
+- `assets/tokens/kiosks/kiosk-merchant.{png,webp}`
 - `lang/en.json` → `GHOSTWIRE.Kiosk.Presets.*`, `GHOSTWIRE.Gear.Items.*`, `GHOSTWIRE.ConsumableUse.*`
 - Director note: `docs/directors/scene-kiosk-merchant.md`
 
