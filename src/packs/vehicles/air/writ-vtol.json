@@ -1,0 +1,64 @@
+{
+  "_id": "gwWritVtolItem00",
+  "_key": "!items!gwWritVtolItem00",
+  "name": "GHOSTWIRE.Vehicles.Items.WritVtol.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/writ-vtol.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.WritVtol.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "writ-vtol",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "a7XeWmGqPhQSlDcK",
+  "sort": 20000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 2000,
+        "modSlots": 2,
+        "tags": [
+          "Patrol",
+          "Insertion",
+          "VTOL",
+          "AEQ"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "fast",
+        "faction": "AEQ"
+      }
+    }
+  }
+}

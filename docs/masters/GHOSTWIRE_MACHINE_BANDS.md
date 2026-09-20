@@ -46,7 +46,7 @@ The Machines numeric pass hasn't published Integrity / Speed numbers yet. Until 
 
 No drone needs a large band yet (the heaviest drones are Vehicle scale). One air / water / space band each covers every scale in v1; split them when the numeric pass lands.
 
-## 3. Item → band map (vehicles-pack Items — 36 drones, 33 crewed platforms + plot SKUs)
+## 3. Item → band map (vehicles-pack Items — 36 drones, 39 crewed platforms + plot SKUs)
 
 *Generated from the resolver in `scripts/machines.mjs`, so it matches what Deploy does. B36b (2026-09-17) synced the pack to `15-drones.md` §5.1 and `16-vehicles.md` §7.1; crewed vehicles carry `flags.vehicle.speedBand` from the chapter's Speed column.*
 
@@ -89,6 +89,8 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 | Drone | `whisper-run` | Whisper-Run | Air (drone) | Light | 4 | `machine-drone-small` | — | 30 | 6 fly |
 | Drone | `wrenchbot` | Wrenchbot | Ground (drone) | Light | 2 | `machine-drone-small` | — | 18 | 6 walk |
 | Vehicle | `buzzcopter` | Buzzcopter | Air | Light | 1 | `machine-vehicle-air` | fast | 40 | 14 fly |
+| Vehicle | `crash-angel` | Crash Angel | Air | Vehicle | 1 | `machine-vehicle-air` | fast | 40 | 14 fly |
+| Vehicle | `writ-vtol` | Writ VTOL | Air | Vehicle | 1 | `machine-vehicle-air` | fast | 40 | 14 fly |
 | Vehicle | `drop-sled` | Drop-Sled | Air | Light | 3 | `machine-vehicle-air` | extreme | 80 | 16 fly |
 | Vehicle | `ghost-wing` | Ghost-Wing | Air | Heavy | 4 | `machine-vehicle-air` | fast | 100 | 14 fly |
 | Vehicle | `hoverpad` | Hoverpad | Air | Vehicle | 2 | `machine-vehicle-air` | fast | 60 | 14 fly |
@@ -103,6 +105,8 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 | Vehicle | `clunker` | Clunker | Ground | Vehicle | 1 | `machine-vehicle-car` | slow | 40 | 8 walk |
 | Vehicle | `getaway` | Getaway | Ground | Vehicle | 1 | `machine-vehicle-car` | standard | 40 | 10 walk |
 | Vehicle | `lane-hopper` | Lane-Hopper | Ground | Vehicle | 1 | `machine-vehicle-car` | standard | 40 | 10 walk (hover) |
+| Vehicle | `seal-cruiser` | Seal Cruiser | Ground | Vehicle | 1 | `machine-vehicle-car` | fast | 40 | 12 walk (hover) |
+| Vehicle | `white-door` | White Door | Ground | Vehicle | 1 | `machine-vehicle-car` | standard | 40 | 10 walk (hover) |
 | Vehicle | `bulldog` | Bulldog | Ground | Vehicle | 1 | `machine-vehicle-car` | slow | 40 | 8 walk |
 | Vehicle | `grey-cab` | Grey Cab | Ground | Vehicle | 2 | `machine-vehicle-car` | standard | 60 | 10 walk |
 | Vehicle | `hardtop` | Hardtop | Ground | Vehicle | 2 | `machine-vehicle-car` | standard | 60 | 10 walk |

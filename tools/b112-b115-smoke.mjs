@@ -305,6 +305,10 @@ for (const [file, label] of [
   ["src/packs/summons/machines/lane-hopper.json", "Lane-Hopper"],
   ["src/packs/summons/machines/star-chopper.json", "Star-Chopper"],
   ["src/packs/summons/machines/bulldog.json", "Bulldog"],
+  ["src/packs/summons/machines/seal-cruiser.json", "Seal Cruiser"],
+  ["src/packs/summons/machines/writ-vtol.json", "Writ VTOL"],
+  ["src/packs/summons/machines/white-door.json", "White Door"],
+  ["src/packs/summons/machines/crash-angel.json", "Crash Angel"],
 ]) {
   const actor = readBomFreeJson(file);
   ok(actor.flags["draw-steel-ghostwire"].kind === "vehicle", `${label} kind is vehicle`);

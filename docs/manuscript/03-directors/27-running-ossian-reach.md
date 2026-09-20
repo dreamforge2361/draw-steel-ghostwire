@@ -38,6 +38,7 @@ Open **one** of these when you need a fact. Do not copy the page into your notes
 | Street color already harvested for print (Flats rain, vertical, gangs as sketches) | Manuscript **L3** | Treat L3 as the full Handbook |
 | Cosmology, Ten seats, Founding, Chair politics | Manuscript **L1** | Dump Book One into a session brief |
 | Street vehicles (hover / hauler / VTOL) | Manuscript **L1** › Vehicles & Transit · Handbook **Life on the Flats** · Item/Actor **Lane-Hopper**, **Star-Chopper**, **Bulldog** | Invent tire sedans as everyday POVs. Do not implement Rideable yet (top-down seats are a future pass). |
+| Conglomerate service chassis (AEQ / LAZ) | Vehicles pack + Summons Actors **Seal Cruiser**, **Writ VTOL**, **White Door**, **Crash Angel** · RAW `23` / `16-vehicles` inventory | Invent a second police/ambulance catalog. Twelve Conglomerates lore (AEQ Council-only, LAZ Lifestyle extract) is a separate pass — names here are the cross-link. |
 | Peoples as fiction | Manuscript **L2** — mechanics stay in `05` | |
 | Fight math, Malice, two-board cuts | Print Ch 26 / `25` | Paste Actor biographies |
 | Living-city texture (mostly non-combat) | **Ghostwire Reach Events** (`encounters` pack, B48) | Treat every row as a fight |

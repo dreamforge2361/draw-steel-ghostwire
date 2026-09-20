@@ -447,6 +447,8 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | T4 | 4 | 1,000 | Fast, nimble; weaves through traffic and foot combat. Exposed rider. | 2 |
 | Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | T4 | 4 | 1,200 | The classic crew car — seats a full team, decent Handling, self-drive option. | 2 |
 | Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | T4 | 4 | 900 | Cargo + cover + mobile safehouse/rig-nest; the rigger's rolling workshop. | 2 |
+| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | T4 | 4 | 1,400 | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark. Street tag: Mandate cruiser. 2–4 seats. Light-armor Stamina kits fit. | 2 |
+| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | T4 | 4 | 1,300 | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | 2 |
 | Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | T3 | 3 | 4,500 | Up-armored, run-flats, tinted; the corp-extraction and bodyguard vehicle. | 3 |
 | Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | T2 | 2 | 12,000 | A bike with a forward mount and light armor — milspec scout/skirmisher. | 4 |
 | Brick / APC / armored personnel carrier | Ground | Heavy | T2 | 2 | 18,000 | Heavy-scale crew mover + weapon platform; carries a squad, mounts a turret. | 4 |
@@ -459,6 +461,8 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Name (slang / corp / sci) | Domain | Scale | Tier | Avail | Cost ¥ | Profile | Slots |
 |---|---|---|---|---|---|---|---|
 | Buzzcopter / Light Rotor / civil autogyro | Air | Light | T4 | 4 | 1,200 | Cheap two-seat rotor — recon, insertion, a fast overhead eye. Fragile, unarmed. | 2 |
+| Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | T4 | 4 | 2,000 | AEQ Writ Inquest ducted-fan patrol/insertion VTOL. Street tag: Council badge air. Smaller crew than a Tiltjet. | 2 |
+| Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | T4 | 4 | 2,200 | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | 2 |
 | Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | T3 | 3 | 5,000 | Workhorse insertion/exfil bird — carries a team, hovers, mounts a door-gun. | 3 |
 | Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | T3 | 3 | 4,000 | Urban low-altitude flyer; beats a ground chase by ignoring streets. | 3 |
 | Skyhunter / Gunship / attack rotorcraft | Air | Heavy | T2 | 2 | 20,000 | Heavy-scale strafe-and-fire-support platform — multiple hardpoints, armor, sensor suite. | 4 |

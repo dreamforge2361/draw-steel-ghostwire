@@ -44,7 +44,7 @@ A rusted commuter **hover** with a bent skirt is still a getaway. A junk rotor t
 | Scale | Plain meaning | Examples |
 |---|---|---|
 | **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Star-Chopper, junk rotor, harbor skiff |
-| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
+| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Seal Cruiser, White Door, Getaway hover, panel hauler, Writ VTOL, tiltjet, wetsub, orbital pod |
 | **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |
 | **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |
 
@@ -173,7 +173,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 **Spine:** Gear master Cat **5A–5D** (20 frames) + expansions to hit coverage locks.
 
-### 7.1 Inventory (35 crewed platforms)
+### 7.1 Inventory (39 crewed platforms)
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -189,6 +189,10 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |
 | Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |
 | Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |
+| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Stamina kits fit. | Patrol, Pursuit, Hover, AEQ |
+| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |
+| Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |
+| Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |
 | Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |
 | Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |
 | Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |
@@ -213,13 +217,13 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |
 
-**Count:** **35** published crewed platforms (20 Cat 5A–5D spine + 15 expansions).
+**Count:** **39** published crewed platforms (20 Cat 5A–5D spine + 19 expansions).
 
 ### 7.2 Echelon coverage check (LOCKED)
 
 | Echelon | Count | Roles (≥3) | Notes |
 |---|---|---|---|
-| **1** | **14** | Beater/Clunker, Courier/bike, Crew-car, Cargo/workshop, Air recon, Water transit/pursuit | Includes **Lane-Hopper** POV hovercar, **Star-Chopper** hover-bike, **Bulldog** street hauler, + **Clunker** tags on Junk Hauler, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
+| **1** | **18** | Beater/Clunker, Courier/bike, Crew-car, Cargo/workshop, Patrol/pursuit, Medical/extract, Air recon, Water transit/pursuit | Includes **Lane-Hopper** POV hovercar, **Star-Chopper** hover-bike, **Bulldog** street hauler, **Seal Cruiser** / **Writ VTOL** (AEQ), **White Door** / **Crash Angel** (LAZ), + **Clunker** tags on Junk Hauler, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | **2** | **8** | Armor/extraction, Covert transit, Heavy cargo, VTOL insertion, Air-car, Patrol boat, Wet infiltrate, Orbital hop | Cleaner Restricted band |
 | **3** | **7** | Assault bike, APC troop, Secure wagon, Attack boat, Gunship, Assault glider, Orbital mule | Harder mounts, Jump-In common |
 | **4** | **6** | Walker, Siege crawler, Stealth VTOL, Attack sub, Deep-orbit runner, Corvette | Apex / Prototype |
@@ -231,9 +235,11 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | Courier / bike | Scrap-Bike, Star-Chopper, Crotch-Rocket, Warbike |
 | Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
+| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette |
 | Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed |
+| Medical / extract | White Door, Crash Angel |
 | Armor / extraction / troop | Hardtop, Brick, Cage |
-| Air recon / insertion | Buzzcopter, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |
+| Air recon / insertion | Buzzcopter, Writ VTOL, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |
 | Gunship / combat air | Skyhunter |
 | Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter |
 | Water pursuit / attack | Cigarette, River-Fang, Leviathan |

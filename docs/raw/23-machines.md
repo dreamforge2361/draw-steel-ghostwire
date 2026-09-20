@@ -25,7 +25,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 - **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see `21-the-wire.md`).
 - **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not.
 
-**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**) plus named **Mule-Bot** ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Every drone/vehicle in **Ghostwire Vehicles & Drones** is a Draw Steel **treasure** Item on purpose: that SKU is ownership / ¥ / mods. **Deploy** stamps a linked Actor from the matching band (`mule-bot` → `machine-drone-medium`) and places the token; **Recall** deletes the Actor and the Item stays. Full interface list: `21-the-wire.md`.
+**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**, **Seal Cruiser**, **Writ VTOL**, **White Door**, **Crash Angel**) plus named **Mule-Bot** ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Every drone/vehicle in **Ghostwire Vehicles & Drones** is a Draw Steel **treasure** Item on purpose: that SKU is ownership / ¥ / mods. **Deploy** stamps a linked Actor from the matching band (`mule-bot` → `machine-drone-medium`) and places the token; **Recall** deletes the Actor and the Item stays. Full interface list: `21-the-wire.md`.
 
 ---
 
@@ -249,15 +249,17 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 
 **Bulldog** is the street cargo van (E1 Street, Domain Ground, **Ground-hauler**, tires — not a hover POV). Token art is a placeholder until Michael’s plate.
 
+**Conglomerate service chassis (0.3.80).** Four published SKUs with Michael top-down plates. **Aequitas Mandate (AEQ):** **Seal Cruiser** (Mandate cruiser — E1 Professional ground hover pursuit, 2–4 seats) and **Writ VTOL** (Council badge air — E1 Professional patrol/insertion helo). **Lazarus Extract (LAZ):** **White Door** (Laz ambulance — E1 Professional hover trauma van, patient bay, not a gun truck) and **Crash Angel** (Laz chopper — E1 Professional medevac VTOL with hoist). Cross-link the AEQ / LAZ names; Twelve Conglomerates lore is a separate pass.
+
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**, Item **Star-Chopper**, Item **Bulldog**). Placeable tokens: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**), Star-Chopper (**1×3**), and Bulldog (**2×4**, placeholder art). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
+> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**, Item **Star-Chopper**, Item **Bulldog**, Item **Seal Cruiser**, Item **Writ VTOL**, Item **White Door**, Item **Crash Angel**). Placeable tokens: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**), Star-Chopper (**1×3**), Bulldog (**2×4**, placeholder art), Seal Cruiser (**2×3**), Writ VTOL (**2×4**), White Door (**2×4**), Crash Angel (**3×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
 
 ### Scale bands (crewed vehicles)
 
 | Scale | Plain meaning | Examples |
 |---|---|---|
 | **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Star-Chopper, junk rotor, harbor skiff |
-| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
+| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Seal Cruiser, White Door, Getaway hover, panel hauler, Writ VTOL, tiltjet, wetsub, orbital pod |
 | **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |
 | **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |
 
@@ -382,7 +384,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 **Reading the table:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add Stamina; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).
 
-#### Inventory (35 crewed platforms)
+#### Inventory (39 crewed platforms)
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -398,6 +400,10 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |
 | Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |
 | Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |
+| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Stamina kits fit. | Patrol, Pursuit, Hover, AEQ |
+| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |
+| Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |
+| Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |
 | Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |
 | Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |
 | Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |
@@ -422,7 +428,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |
 
-**Count:** **35** published crewed platforms.
+**Count:** **39** published crewed platforms.
 
 #### Role quick-index
 
@@ -431,9 +437,11 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | Courier / bike | Scrap-Bike, Star-Chopper, Crotch-Rocket, Warbike |
 | Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
+| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette |
 | Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed |
+| Medical / extract | White Door, Crash Angel |
 | Armor / extraction / troop | Hardtop, Brick, Cage |
-| Air recon / insertion | Buzzcopter, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |
+| Air recon / insertion | Buzzcopter, Writ VTOL, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |
 | Gunship / combat air | Skyhunter |
 | Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter |
 | Water pursuit / attack | Cigarette, River-Fang, Leviathan |
