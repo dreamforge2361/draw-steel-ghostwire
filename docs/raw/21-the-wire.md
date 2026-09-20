@@ -226,7 +226,7 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 **Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.
 
 > **In Foundry**
-> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX shipped; **AEQ** / **LAZ** rows ship until plates land — `placeholder: true`, expected `node-host-aeq` / `node-host-laz`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`.
+> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX plus **AEQ** / **LAZ** — `node-host-aeq` / `node-host-laz`, `placeholder: false`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`.
 
 ## Connection-state modifiers (summary)
 

@@ -2,7 +2,7 @@
 /**
  * Twelve Conglomerates art smoke.
  * Host skins, brand journals, Nox trash freighter. Does not generate art.
- * AEQ / LAZ plates may be pending (placeholder: true).
+ * AEQ / LAZ plates ship with the Twelve.
  *
  * Run: node tools/ten-conglomerates-art-smoke.mjs
  */

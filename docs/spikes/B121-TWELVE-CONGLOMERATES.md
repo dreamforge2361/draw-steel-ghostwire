@@ -17,7 +17,7 @@ Charter Age seated **the Ten**. Current play seats **the Twelve**. Tickers: `doc
 - **AEQ Council-only.** Client = Congress / Chair / pooled authority of the Conglomerates. Forbidden: private parties, runners, gangs, a single mega acting alone. Not Ironclad (open-market PMC), not Aureole (HALO army), not Sanctum / Grey Ledger (surveillance and private law).
 - **LAZ Lifestyle bundle.** Upkeep ¥ for a band includes that band’s Lazarus tier. No separate ¥ unless a premium rider. Not Caduceus (clinics / chrome-flesh).
 - **Kestrel** stays seatless — the thirteenth-chair climber. Do not give it a ticker seat.
-- **Art:** do not generate. Expected plates: `brand-aeq` / `brand-laz` and `node-host-aeq` / `node-host-laz`. Host catalog rows ship `placeholder: true`.
+- **Art:** Michael plates shipped **0.3.76**. `brand-aeq` / `brand-laz` and `node-host-aeq` / `node-host-laz` (PNG 1254² + 1024² WebP). Host catalog rows `placeholder: false`.
 
 ## Sub-corps (house style)
 
@@ -40,4 +40,4 @@ Council-only and Lifestyle→LAZ tiers must retrieve from L1, MEGACORP-TICKERS, 
 ## Smoke
 
 `node tools/twelve-conglomerates-smoke.mjs`  
-`node tools/ten-conglomerates-art-smoke.mjs` (Twelve roster; AEQ/LAZ art may be pending)
+`node tools/ten-conglomerates-art-smoke.mjs` (Twelve roster; AEQ/LAZ plates ship)

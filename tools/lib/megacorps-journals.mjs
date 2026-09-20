@@ -1,6 +1,6 @@
 // Twelve Conglomerates brand journals (ticker cards). Domain text is MEGACORP-TICKERS.md only —
 // do not invent deep lore. Brand rasters live at assets/brands/megacorps/brand-{ticker}.{png,webp}.
-// AEQ / LAZ plates are pending (artPending); journals still emit the expected path.
+// Brand rasters: assets/brands/megacorps/brand-{ticker}.{png,webp}. Host skins: node-host-{ticker}.
 import { createHash } from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -22,8 +22,8 @@ export const MEGACORPS = [
   { ticker: "OBS", name: "Obsidian Holdings", domain: "Luxury, entertainment, vice, simsense/experience", langKey: "ObsidianHoldings" },
   { ticker: "SAN", name: "Sanctum Assurance", domain: "Insurance, data, surveillance, private law", langKey: "SanctumAssurance" },
   { ticker: "NYX", name: "Nyx Cartel", domain: "Legitimized underworld — tenth seat", langKey: "NyxCartel" },
-  { ticker: "AEQ", name: "Aequitas Mandate", domain: "Council justice, investigation, and security — sells only to the Council", langKey: "AequitasMandate", artPending: true },
-  { ticker: "LAZ", name: "Lazarus Extract", domain: "Trauma rescue, hot extraction, body recovery", langKey: "LazarusExtract", artPending: true },
+  { ticker: "AEQ", name: "Aequitas Mandate", domain: "Council justice, investigation, and security — sells only to the Council", langKey: "AequitasMandate" },
+  { ticker: "LAZ", name: "Lazarus Extract", domain: "Trauma rescue, hot extraction, body recovery", langKey: "LazarusExtract" },
 ];
 
 export const MEGACORP_FOLDER = {

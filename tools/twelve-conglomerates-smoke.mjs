@@ -28,7 +28,7 @@ ok(/\*\*AEQ\*\*/.test(tickersDoc) && /Aequitas Mandate/.test(tickersDoc), "AEQ l
 ok(/\*\*LAZ\*\*/.test(tickersDoc) && /Lazarus Extract/.test(tickersDoc), "LAZ locked");
 ok(/only to the Council/.test(tickersDoc) && /single mega acting alone/.test(tickersDoc), "AEQ Council-only sales rule");
 ok(/Lifestyle band/.test(tickersDoc) && /includes/.test(tickersDoc), "LAZ Lifestyle bundle in ticker lock");
-ok(/brand-aeq/.test(tickersDoc) && /node-host-laz/.test(tickersDoc), "pending plate filenames documented");
+ok(/brand-aeq/.test(tickersDoc) && /node-host-laz/.test(tickersDoc), "AEQ/LAZ plate filenames documented");
 
 const l1 = readFileSync("docs/manuscript/01-lore/L1-setting-primer.md", "utf8");
 ok(/## The Corporate Congress & the Twelve/.test(l1), "L1 Congress heading is Twelve");

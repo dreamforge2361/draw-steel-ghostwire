@@ -358,7 +358,7 @@ Street shorthand: “an **IRN** contract,” “**MER** hosts,” “**CAD** cli
 
 ## The Twelve — Conglomerate Profiles
 
-Full fiction profiles harvested from Core/Lore Source Book One Ch. 8. Rules anchors, availability tables, and crosslink chrome stripped. Sanctum Assurance condensed (full source profile is ~4.5k words of ops detail).
+Full fiction profiles harvested from Core/Lore Source Book One Ch. 8. Rules anchors, availability tables, and crosslink chrome stripped. Sanctum Assurance condensed (full source profile is ~4.5k words of ops detail). Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`. Wired Host skins: `assets/tokens/wired/node-host-{ticker}.{png,webp}` (AEQ / LAZ included). Foundry cards: Ghostwire Lore → Twelve Conglomerates.
 
 ### HALO Ascendant
 

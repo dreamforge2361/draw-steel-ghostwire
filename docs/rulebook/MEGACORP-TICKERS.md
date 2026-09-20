@@ -40,13 +40,11 @@ No third-party megacorp names (B78/B83). Ghostwire Twelve only.
 
 ## Brand art (SoR, 0.3.54 / 0.3.76)
 
-Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Twelve Conglomerates) use the WebP as cover/image when the plate exists.
+Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Twelve Conglomerates) use the WebP as cover/image.
 
-**Pending plates (Michael — do not generate):**
-
-| Kind | Expected files |
+| Kind | Files |
 |---|---|
-| Brand | `assets/brands/megacorps/brand-aeq.{png,webp}` · `brand-laz.{png,webp}` |
-| Wired Host skin | `assets/tokens/wired/node-host-aeq.{png,webp}` · `node-host-laz.{png,webp}` |
+| Brand | `brand-hal` … `brand-nyx` plus **`brand-aeq`** / **`brand-laz`** |
+| Wired Host skin | `node-host-hal` … `node-host-nyx` plus **`node-host-aeq`** / **`node-host-laz`** under `assets/tokens/wired/` |
 
-Catalog rows for AEQ/LAZ Hosts ship with `placeholder: true` until those files land. Generic `node-host` stays the default Host. Do not invent brand art in-repo.
+AEQ/LAZ plates shipped **0.3.76** (Michael). Catalog rows are `placeholder: false`. Generic `node-host` stays the default Host. Do not regenerate brand art in-repo.

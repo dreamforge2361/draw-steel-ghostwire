@@ -5491,7 +5491,7 @@
       "chapter": "The Wire",
       "heading": "Worked example — Switchboard to the maintenance room",
       "kind": "rules",
-      "text": "**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.\n\n**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.\n\n**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.\n\n> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX shipped; **AEQ** / **LAZ** rows ship until plates land — `placeholder: true`, expected `node-host-aeq` / `node-host-laz`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`."
+      "text": "**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.\n\n**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.\n\n**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.\n\n> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX plus **AEQ** / **LAZ** — `node-host-aeq` / `node-host-laz`, `placeholder: false`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`."
     },
     {
       "id": "21-the-wire#connection-state-modifiers-summary#35",
@@ -7138,7 +7138,7 @@
       "chapter": "Setting Primer",
       "heading": "The Twelve — Conglomerate Profiles",
       "kind": "lore",
-      "text": "Full fiction profiles harvested from Core/Lore Source Book One Ch. 8. Rules anchors, availability tables, and crosslink chrome stripped. Sanctum Assurance condensed (full source profile is ~4.5k words of ops detail)."
+      "text": "Full fiction profiles harvested from Core/Lore Source Book One Ch. 8. Rules anchors, availability tables, and crosslink chrome stripped. Sanctum Assurance condensed (full source profile is ~4.5k words of ops detail). Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`. Wired Host skins: `assets/tokens/wired/node-host-{ticker}.{png,webp}` (AEQ / LAZ included). Foundry cards: Ghostwire Lore → Twelve Conglomerates."
     },
     {
       "id": "L1-setting-primer#halo-ascendant#33",
@@ -12727,7 +12727,7 @@
       "chapter": "Megacorp tickers (LOCKED)",
       "heading": "Brand art (SoR, 0.3.54 / 0.3.76)",
       "kind": "setting",
-      "text": "Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Twelve Conglomerates) use the WebP as cover/image when the plate exists.\n\n**Pending plates (Michael — do not generate):**\n\n| Kind | Expected files |\n|---|---|\n| Brand | `assets/brands/megacorps/brand-aeq.{png,webp}` · `brand-laz.{png,webp}` |\n| Wired Host skin | `assets/tokens/wired/node-host-aeq.{png,webp}` · `node-host-laz.{png,webp}` |\n\nCatalog rows for AEQ/LAZ Hosts ship with `placeholder: true` until those files land. Generic `node-host` stays the default Host. Do not invent brand art in-repo."
+      "text": "Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Twelve Conglomerates) use the WebP as cover/image.\n\n| Kind | Files |\n|---|---|\n| Brand | `brand-hal` … `brand-nyx` plus **`brand-aeq`** / **`brand-laz`** |\n| Wired Host skin | `node-host-hal` … `node-host-nyx` plus **`node-host-aeq`** / **`node-host-laz`** under `assets/tokens/wired/` |\n\nAEQ/LAZ plates shipped **0.3.76** (Michael). Catalog rows are `placeholder: false`. Generic `node-host` stays the default Host. Do not regenerate brand art in-repo."
     }
   ]
 }

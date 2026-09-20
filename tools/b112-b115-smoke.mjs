@@ -63,8 +63,8 @@ ok(atlasStyles.every(s => s.placeholder === false), "atlas rows are not placehol
 ok(atlasStyles.every(s => s.family === "atlas"), "atlas rows keep family=atlas");
 ok(hostStyles.map(s => s.hostTicker).join(",") === hostTickers.join(","), "megacorp Host tickers are the locked Twelve");
 ok(hostStyles.every(s => s.family === "atlas" && s.altitude === "region" && s.id === `node-host-${s.hostTicker.toLowerCase()}`), "megacorp Hosts are atlas region skins");
-ok(hostStyles.filter(s => s.placeholder).map(s => s.hostTicker).join(",") === "AEQ,LAZ", "AEQ/LAZ Hosts are placeholders until plates land");
-ok(hostStyles.filter(s => !s.placeholder).every(s => s.placeholder === false), "Charter Ten Hosts still ship art");
+ok(hostStyles.every(s => s.placeholder === false), "Twelve Host skins ship art (placeholder false)");
+ok(hostStyles.map(s => s.hostTicker).join(",") === "HAL,FER,MER,CAD,IRN,ARG,VER,OBS,SAN,NYX,AEQ,LAZ", "Host ticker order is the locked Twelve");
 ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.png === s.png && row.name === s.name && row.autoKind === s.autoKind && Boolean(row.placeholder) === Boolean(s.placeholder) && row.family === s.family && row.altitude === s.altitude && row.hostTicker === s.hostTicker)), "mjs catalog matches library.json rows");
 ok(library.styles.filter(s => s.autoKind).map(s => s.id).join(",") === "light-control,maglock,cam-controls", "autoKinds are Light / Maglock / Cam only");
 for (const style of deviceStyles) {

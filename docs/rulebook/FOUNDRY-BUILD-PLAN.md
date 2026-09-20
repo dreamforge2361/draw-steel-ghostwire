@@ -460,7 +460,7 @@ Spec: `docs/spikes/B115-NPC-WIRE-KIT.md`. Droppable Matrix Support feature **Wir
   - [ ] Foundry-verify: stamp ARG Response Lieutenant or a drone; Connect enabled without a commlink; Enforcer left meat-only
 
 ### B116 Node token library (2026-09-20)
-Spec: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`. Eight Michael YES styles under `assets/tokens/wired/` (`library.json` + `NODE_TOKEN_LIBRARY`). Wired Console GM **Token art** select writes board `tokenStyle`. Auto-nodes: Light → `light-control`, Maglock → `maglock`, Cam lights / named cams → `cam-controls`. Manual place: Director picks. Generic Track 1/2 when `tokenStyle` is empty. **SHIPPED 0.3.49.** Twelve Conglomerates Host skins (`node-host-{ticker}`) **0.3.54** (Charter Ten plates) + **0.3.76** AEQ/LAZ catalog rows (`placeholder: true`); generic `node-host` stays default.
+Spec: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`. Eight Michael YES styles under `assets/tokens/wired/` (`library.json` + `NODE_TOKEN_LIBRARY`). Wired Console GM **Token art** select writes board `tokenStyle`. Auto-nodes: Light → `light-control`, Maglock → `maglock`, Cam lights / named cams → `cam-controls`. Manual place: Director picks. Generic Track 1/2 when `tokenStyle` is empty. **SHIPPED 0.3.49.** Twelve Conglomerates Host skins (`node-host-{ticker}`) **0.3.54** (Charter Ten plates) + **0.3.76** AEQ/LAZ plates (`placeholder: false`); generic `node-host` stays default.
 - [x] Catalog 8 styles png+webp under `assets/tokens/wired/` (module **0.3.49**)
 - [x] Console `<select>` on the selected node; Place / sync stamps the WebP
 - [ ] Foundry-verify extra styles + picker on Gold Line
