@@ -168,6 +168,9 @@ You have **three** signatures — all free, at-will, from 1st level, all enhance
 > **Enhance (3 Resonance; Sprite-Weaver 2):** compile a **second sprite** in the same action, OR command the **whole congregation** at once (the swarm of ghosts moves as one).
 > *Your baseline, every-turn presence — the class's answer to "what does the Technomancer do when nothing bigger is queued up."*
 
+> **In Foundry**
+> Open **Compile Sprite** on the Technomancer sheet (or the ability’s Item sheet). Press **Compile Sprite**, pick Data / Attack / Machine / Ward, and the matching Summons › Sprites Actor drops a token beside you. The Wired Console **Constructs** section lists compiled sprites (separate from Connections/Nodes; Lock A: the scene token is a roster anchor only). Command on the Console opens this sheet handle — it does not compile a second sprite. Decompile, 0 Stamina, or end of encounter still removes the token and the world Actor.
+
 > **Resonance Strike** *(Class Feature Signature — the damage)*
 > *Keywords: Wired, Resonance · Type: Main action · Distance: Wired range (or a sprite's reach) · Target: one enemy (a wired target directly; a flesh target through a device it carries or a sprite jacked into it)*
 > **Power Roll:** 2d10 + Logic. (Power Rolls do not add a skill bonus — your Resonance skill grants an **edge** on Resonance *tests*, not a +2 on this roll; `03`.)

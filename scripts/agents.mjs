@@ -321,6 +321,28 @@ export async function decompileAgent(agent, { silent = false } = {}) {
   if (!silent) ui.notifications.info(game.i18n.format(`${UI}.Decompiled`, { agent: name }));
 }
 
+/**
+ * Command is the Compile Agent maneuver at the table (not a second spawn).
+ * Opens the existing Compile Agent sheet handle; does not call compileAgent.
+ * @returns {Promise<Item|null>}
+ */
+export async function commandAgent(agent, { notify = true } = {}) {
+  const caster = agentCompiler(agent);
+  const ability = compileAbility(caster);
+  if (!ability) {
+    if (notify) ui.notifications.warn(game.i18n.localize(`${UI}.CommandMissing`));
+    return null;
+  }
+  await ability.sheet?.render({ force: true });
+  if (notify) {
+    ui.notifications.info(game.i18n.format(`${UI}.CommandHint`, {
+      agent: agent?.name ?? "",
+      name: caster?.name ?? "",
+    }));
+  }
+  return ability;
+}
+
 /** Decompile the whole roster — the free maneuver, and what end of encounter does on its own. */
 export async function decompileAllAgents(caster, { silent = false } = {}) {
   const agents = compiledAgents(caster);
@@ -581,7 +603,7 @@ export function registerAgents() {
   if (module) {
     module.api = {
       ...(module.api ?? {}),
-      compileAgent, decompileAgent, decompileAllAgents, refreshAgents,
+      compileAgent, decompileAgent, decompileAllAgents, refreshAgents, commandAgent,
       compiledAgents, agentCompiler, agentCap, agentBand, agentStamina, compileAbility,
       compileAllowedAtState, actorWiredState, compileAgentGate, sheetUseCompilePlan, COMPILE_BANDWIDTH,
     };

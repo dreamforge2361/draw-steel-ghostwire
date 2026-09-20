@@ -72,7 +72,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1391,
+  "chunkCount": 1393,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -4635,7 +4635,7 @@
       "chapter": "The Hacker",
       "heading": "Agents -- Deck Daemons (not Sprites)",
       "kind": "rules",
-      "text": "**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.\n\n> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*\n>\n> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).\n\n> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.\n\n> Open **Compile Agent** on the Hacker sheet (or the ability’s Item sheet). Press **Compile Agent**, pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. **Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. Agents are not sprites: do not drag a sprite SKU."
+      "text": "**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.\n\n> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*\n>\n> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).\n\n> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.\n\n> Open **Compile Agent** on the Hacker sheet (or the ability’s Item sheet). Press **Compile Agent**, pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. **Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a roster anchor only). Agents are not sprites: do not drag a sprite SKU."
     },
     {
       "id": "19-hacker#level-1-10-progression-table#11",
@@ -4896,7 +4896,7 @@
       "chapter": "The Technomancer",
       "heading": "Signature Abilities (No Resonance Cost)",
       "kind": "rules",
-      "text": "> **Resonance Strike** *(Class Feature Signature — the damage)*\n> *Keywords: Wired, Resonance · Type: Main action · Distance: Wired range (or a sprite's reach) · Target: one enemy (a wired target directly; a flesh target through a device it carries or a sprite jacked into it)*\n> **Power Roll:** 2d10 + Logic. (Power Rolls do not add a skill bonus — your Resonance skill grants an **edge** on Resonance *tests*, not a +2 on this roll; `03`.)\n> **Effect:** You (or a commanded Attack-sprite) lash a target with hostile code and biofeedback. **high (17+):** **2d10 + Logic damage** (Resonance-Warrior: 3d10 + Logic), plus a rider — a Wired condition (glitched: a bane on the target's next Power Roll; or blinded sensors) or a free sprite reposition. **middle (12–16):** **2d10 + Logic damage** (Resonance-Warrior: 3d10 + Logic). **low (≤11):** the strike fails to connect, no damage, and the current recoils — a minor biofeedback risk to you (see Biofeedback, above, if this triggers a cost-5+ enhance).\n>\n> **Enhance (spend Resonance):** a **second sprite** strikes too, OR add an edge via deep communion.\n> *Like the Hacker's Flatline Jab, direct personal damage leans on wired/deviced targets — but the sprite congregation is your true offense, exactly as drones are the Wrench's.*"
+      "text": "> Open **Compile Sprite** on the Technomancer sheet (or the ability’s Item sheet). Press **Compile Sprite**, pick Data / Attack / Machine / Ward, and the matching Summons › Sprites Actor drops a token beside you. The Wired Console **Constructs** section lists compiled sprites (separate from Connections/Nodes; Lock A: the scene token is a roster anchor only). Command on the Console opens this sheet handle — it does not compile a second sprite. Decompile, 0 Stamina, or end of encounter still removes the token and the world Actor."
     },
     {
       "id": "20-technomancer#signature-abilities-no-resonance-cost#19",
@@ -4905,10 +4905,19 @@
       "chapter": "The Technomancer",
       "heading": "Signature Abilities (No Resonance Cost)",
       "kind": "rules",
+      "text": "> **Resonance Strike** *(Class Feature Signature — the damage)*\n> *Keywords: Wired, Resonance · Type: Main action · Distance: Wired range (or a sprite's reach) · Target: one enemy (a wired target directly; a flesh target through a device it carries or a sprite jacked into it)*\n> **Power Roll:** 2d10 + Logic. (Power Rolls do not add a skill bonus — your Resonance skill grants an **edge** on Resonance *tests*, not a +2 on this roll; `03`.)\n> **Effect:** You (or a commanded Attack-sprite) lash a target with hostile code and biofeedback. **high (17+):** **2d10 + Logic damage** (Resonance-Warrior: 3d10 + Logic), plus a rider — a Wired condition (glitched: a bane on the target's next Power Roll; or blinded sensors) or a free sprite reposition. **middle (12–16):** **2d10 + Logic damage** (Resonance-Warrior: 3d10 + Logic). **low (≤11):** the strike fails to connect, no damage, and the current recoils — a minor biofeedback risk to you (see Biofeedback, above, if this triggers a cost-5+ enhance).\n>\n> **Enhance (spend Resonance):** a **second sprite** strikes too, OR add an edge via deep communion.\n> *Like the Hacker's Flatline Jab, direct personal damage leans on wired/deviced targets — but the sprite congregation is your true offense, exactly as drones are the Wrench's.*"
+    },
+    {
+      "id": "20-technomancer#signature-abilities-no-resonance-cost#20",
+      "file": "20-technomancer.md",
+      "source": "docs/raw/20-technomancer.md",
+      "chapter": "The Technomancer",
+      "heading": "Signature Abilities (No Resonance Cost)",
+      "kind": "rules",
       "text": "> **Resonance Mending** *(Class Feature Signature — the unique niche; see its own Deep Dive section below)*\n> *Keywords: Wired, Resonance, Healing · Type: **maneuver** at its base effect; a **main action** only when you enhance it and mend against resistance · Distance: touch, or Wired range for a jacked/networked target · Target: **self**, or one machine, drone, vehicle, piece of chrome, or a Cyborg*\n> **Effect:** Channel Resonance to **restore Stamina/Integrity** to a machine, drone, vehicle, **or a Cyborg** (base at 1st level), mend damaged chrome, or clear a mechanical/Wired condition (glitch, jam, suppression). This is the class's signature niche — the only healing in the game that works on Cyborgs and tech. **Base effect (free): the target regains Stamina/Integrity equal to one Recovery's worth** — a Cyborg target instead spends one of their own Recoveries at no Resonance cost. **No Power Roll is made at all unless you mend against resistance** (a hostile EW field or contested Wired space); when you do, **high (17+):** the mend lands in full and the target clears one minor condition as well. **middle (12–16):** the mend lands in full. **low (≤11):** the patch is unstable — after one round the target loses half of what was restored unless it is stabilized.\n>\n> **Enhance (spend Resonance):** mend at greater range or a second target, OR restore a wrecked machine/crashing Cyborg to minimal function.\n> *The tech-side counterpart to the Street-Priest's Lay On Hands — flesh-and-soul there, steel-and-code here. Full mechanics and comparison in its own Deep Dive, below.*\n\n---"
     },
     {
-      "id": "20-technomancer#heroic-abilities-cost-bands-1-through-11#20",
+      "id": "20-technomancer#heroic-abilities-cost-bands-1-through-11#21",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4917,7 +4926,7 @@
       "text": "Heroic Abilities are your Resonance-fueled summoner plays, chosen by cost band as you level, layered on top of the always-on Signature kit above. Power Roll results use this book’s print order: **low** (≤11) / **middle** (12–16) / **high** (17+)."
     },
     {
-      "id": "20-technomancer#1-cost-band-chosen-at-1st-level#21",
+      "id": "20-technomancer#1-cost-band-chosen-at-1st-level#22",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4926,7 +4935,7 @@
       "text": "> **Recompile** *(1 Resonance, maneuver)*\n> Instant congregation flexibility. **Reshape a compiled sprite** (Data → Attack, Attack → Ward, etc.) to meet the moment, **or** instantly **recompile a just-destroyed sprite** at reduced power.\n> *The low-cost adaptability tool — the shaman who always has the right ghost to hand.*\n\n> **Harmonic Adjustment** *(1 Resonance, maneuver)*\n> Grant a compiled sprite **one** of: an **edge on its Power Roll this turn**; **a bane on every attack made against it until the end of your next turn** (Ghostwire has no defense score, so the sprite's guard is written as a bane on the attacker, the same way a Ward-sprite's screen is); or a **free shift** up to its full movement.\n> *A cheap nudge — the shaman correcting a ghost's aim or footing mid-fight.*"
     },
     {
-      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#22",
+      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#23",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4935,7 +4944,7 @@
       "text": "> **Swarm the Signal** *(3 Resonance, main action)*\n> **Every sprite you command** takes an action at once against a single target or objective — all attack one foe, all mend one machine, or all pile onto one node.\n> *The summoner's burst — the force-multiplier payoff.*\n\n> **Deep Communion** *(3 Resonance, main action to enter — the Jump-In)*\n> Project fully into the Wired (or into a machine/drone/Cyborg you're attuned to) with edges to Wired verbs and sprite command, using the system's own reach and senses. Your body goes inert/exposed and biofeedback applies if this is enhanced past cost 5. No control rig needed — the communion **is** the interface. *(Machine-Whisperer reduces this cost to 2 and grants a larger buffer — see its table, below.)*\n\n> **Resonance Cascade** *(3 Resonance, main action, Ranged 10)*\n> **Power Roll + Logic.** **low (≤11):** target one enemy; on hit, they take **Logic-score biofeedback damage** and are **dazed** until end of their next turn (EoNT). **middle (12–16):** target up to 2 enemies within 3 squares of each other; each takes Logic-score damage. **high (17+):** target up to 3 enemies within Ranged 10; each takes Logic-score damage and is dazed EoNT.\n> *A thin lash of hostile code that fans out the harder you focus it.*"
     },
     {
-      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#23",
+      "id": "20-technomancer#3-cost-band-chosen-at-1st-level#24",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4944,7 +4953,7 @@
       "text": "> **Sprite Redirect** *(3 Resonance, free triggered)*\n> **Trigger:** an ally within Wired range or Ranged 10 is hit by a Wired attack. **Effect:** redirect the attack to one of your compiled sprites — the sprite absorbs the hit in the ally's place, taking the attack's damage and effects against its own Stamina. A sprite reduced to 0 Stamina this way decompiles.\n> *Throwing a code-spirit into the path of a bullet meant for a friend.*"
     },
     {
-      "id": "20-technomancer#5-cost-band-chosen-at-1st-level-biofeedback-risk-begins#24",
+      "id": "20-technomancer#5-cost-band-chosen-at-1st-level-biofeedback-risk-begins#25",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4953,7 +4962,7 @@
       "text": "> **Resonance Ward** *(5 Resonance, main action, sets a stance until your next turn)*\n> Weave a **zone of resonant protection** — deploy Ward-sprites and a standing harmonic. **Wired and EW attacks against allies inside the zone are made with a bane**, chrome and devices inside it are screened from hijack, and you may counter hostile intrusion in the area.\n> ***Biofeedback: easy Physique test.***\n\n> **Overclock** *(5 Resonance, main action)*\n> All compiled sprites gain **double actions** this turn (each acts twice). You pour your current into the congregation, forcing them into a temporary frenzy state.\n> ***Biofeedback: easy Physique test.***\n\n> **Trance Compile** *(5 Resonance, main action)*\n> Compile **two** new sprites in a single action (any archetype combination from your available list). Both act normally after compiling.\n> ***Biofeedback: easy Physique test.***\n\n> **Signal Weave** *(5 Resonance, main action, Ranged 10)*\n> All allies gain an **edge on Wired-based Power Rolls** for the rest of the round, and one enemy of your choice is **glitched** (bane on their next Power Roll). Tuning-forks laid across the battlefield's own signal.\n> ***Biofeedback: easy Physique test.***"
     },
     {
-      "id": "20-technomancer#7-cost-band-chosen-at-3rd-level-includes-total-resonance#25",
+      "id": "20-technomancer#7-cost-band-chosen-at-3rd-level-includes-total-resonance#26",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4962,7 +4971,7 @@
       "text": "*This band is headlined by **Total Resonance**. Full mechanics are broken out in their own section below — see \"Total Resonance — Deep Dive.\"*\n\n> **Total Resonance** — *see the full Deep Dive section below.*\n\n> **Cascade Failure** *(7 Resonance, main action, Ranged 10)*\n> All enemies in a 5-cube within Ranged 10 are potential targets: **you make one Power Roll + Logic.** **low (≤11):** only the nearest enemy is affected — takes **Logic × 2 biofeedback damage** and is **stunned, save ends**. **middle (12–16):** up to 2 enemies of your choice — each takes Logic × 2 damage AND is **stunned until end of their next turn**. **high (17+):** up to 4 enemies of your choice in the area — each takes Logic × 2 damage, is **stunned, save ends**, and their next Wired ability **fizzles**.\n> ***Biofeedback: medium Physique test.***\n\n> **Sprite Storm** *(7 Resonance, main action)*\n> Compile **3 sprites** in a single action (Sprite-Weaver may compile 4). All compiled sprites strike different targets within Ranged 10 as part of the same action.\n> *A storm of ghost-code, called all at once. **Biofeedback: medium Physique test.***\n\n> **Resonance Slam** *(7 Resonance, main action, Melee 1 or Ranged 5)*\n> Choose one mode: **Slam** — one target takes **Logic × 3 damage**, is pushed 3 squares, and is **weakened (save ends)**. **Slam Group** — 3-cube within Ranged 5; each enemy in the area takes Logic-score damage and is knocked **prone**.\n> ***Biofeedback: medium Physique test.***"
     },
     {
-      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#26",
+      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#27",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4971,7 +4980,7 @@
       "text": "> **The Choir Sings Together** *(9 Resonance, main action, Ranged 10, self and up to 2 allies)*\n> Each target gains **temporary Stamina equal to Persona × 2**, and one of your Machine-sprites channels a mending pulse: each target regains a Recovery.\n> *You harmonize the crew's biofeedback into a resonant chord that steels them. **Biofeedback: hard Physique test.***\n\n> **Rewire Reality** *(9 Resonance, main action, Ranged 5, one enemy or one machine/drone)*\n> If the target has **Persona < STRONG**, then for the rest of the encounter you treat it as one of your compiled sprites — it still takes its own turn in the round, but you may Command it as a maneuver as if it were a sprite. Otherwise, the target takes **Logic × 2 damage** instead.\n> *You briefly hijack a mind or machine into your congregation. **Biofeedback: hard Physique test.***\n\n> **Wired Silence** *(9 Resonance, main action, 5-cube within Ranged 10, Ranged only)*\n> Any Wired-based attack (Hacker, Wrench, Technomancer, or any device or drone) in the area cannot function for the next round. All compiled **hostile** sprites in the area decompile. All **friendly** sprites in the area drop one sprite rank for the round.\n> ***Biofeedback: hard Physique test.***"
     },
     {
-      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#27",
+      "id": "20-technomancer#9-cost-band-chosen-at-5th-level#28",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4980,7 +4989,7 @@
       "text": "> **Bone Deep Communion** *(9 Resonance, main action, self-affecting)*\n> For the rest of the encounter, all of your compiled sprites are treated as **one sprite rank higher** on the hybrid band ladder (extensions become intermediate, intermediate become advanced). An **advanced** sprite is already at the top of the ladder, so instead it gains bonus **Stamina** equal to the step its own archetype takes from intermediate to advanced in the Sprite Stat Block Reference: **+6** for a Data-, Machine-, or Ward-sprite, **+8** for an Attack-sprite. Your Resonance drip gains **+1 per turn**.\n> *You abandon the fence and go deep into the current — every sprite becomes more real, and you become more the current's servant. **Biofeedback: hard Physique test on cast AND at the start of each subsequent round.***"
     },
     {
-      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#28",
+      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#29",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4989,7 +4998,7 @@
       "text": "> **Sunlight in the Wire** *(11 Resonance, main action, Ranged 10, self, allies, and sprites)*\n> All enemy-controlled sprites within Ranged 10 **decompile**. All allied sprites in the area act at the **highest possible sprite rank** of the hybrid ladder for the rest of the encounter. All allies in the area gain a **Recovery** and **temporary Stamina equal to a minor sprite's Stamina — 10 + (your Logic × your level)**.\n> *You become the current itself — the net answers with full illumination. **Biofeedback: hard Physique test with a bane; on a failure, take Persona × 3 damage.***\n\n> **Machine God's Rite** *(11 Resonance, main action, in-scene ritual, 5 minutes minimum)*\n> Restore **full Stamina** to one Cyborg, one machine, one drone, or up to **3 pieces of chrome** in the party. Cannot be used again on the same target for 24 in-game hours.\n> *The shaman-priest lays resonant hands on the crew's tech-flesh and restores it whole. **Biofeedback: hard Physique test with a bane.***\n\n> **Recompile Reality** *(11 Resonance, main action, in-scene ritual, 10 minutes minimum)*\n> Undo one significant Wired event from the past scene (a system got locked down; a drone was destroyed; a Cyborg's chrome got hit). Force a re-roll of that event, OR treat the outcome as though it never happened. **Once per session per Technomancer.**\n> *You rewrite the current's memory of what just happened. **Biofeedback: hard Physique test with a bane; on a failure, take Persona × 3 damage AND lose one Recovery.***"
     },
     {
-      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#29",
+      "id": "20-technomancer#11-cost-band-chosen-at-8th-level#30",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -4998,7 +5007,7 @@
       "text": "> **The Weaver's Web** *(11 Resonance, main action, calls the whole congregation)*\n> Compile **5 sprites** in a single action. All 5 strike different targets within Ranged 10. Each target struck that has **Physique < STRONG** takes **Logic × 3 damage** and is **weakened (save ends)**.\n> *The summoner's apex — the entire net answers with a coordinated strike. **Biofeedback: hard Physique test with a bane.***\n\n---"
     },
     {
-      "id": "20-technomancer#total-resonance-deep-dive#30",
+      "id": "20-technomancer#total-resonance-deep-dive#31",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5007,7 +5016,7 @@
       "text": "> **Total Resonance** *(7 Resonance, main action)*\n> *Keywords: Wired, Resonance, Summon · Type: Main action · Distance: Wired range · Target: your entire congregation*\n> **Effect:** For the rest of the encounter, **every sprite you currently command rises one sprite rank on the hybrid band ladder** (minor sprites act as intermediate; intermediate act as advanced) — and you may **immediately compile one additional sprite for free**, ignoring your sprite cap for the rest of the encounter. Your Resonance drip from the congregation trigger doubles for the rest of the fight.\n>\n> **Power Roll results apply to the free compile's manifestation, not the rank boost (which is unconditional):**\n> - **high (17+):** the free sprite compiles at full strength and acts immediately this turn.\n> - **middle (12–16):** the free sprite compiles at full strength but acts next turn.\n> - **low (≤11):** the free sprite compiles unstable — half its normal Stamina — but the sprite-rank boost still applies to the whole congregation regardless.\n>\n> ***Biofeedback: medium Physique test*** (this is a 7-cost ability and always triggers the check).\n>\n> **Interaction with discipline features.** Sprite-Weaver's higher sprite cap means the free compile from Total Resonance can push a Sprite-Weaver's congregation size well past what any other discipline can field in a single round. Machine-Whisperer can spend the free compile on a Machine-sprite and immediately follow with Resonance Mending at no extra biofeedback risk, since Resonance Mending's base effect is always free. Resonance-Warrior typically spends the free compile on an Attack-sprite to stack with their own discipline's damage amplifiers.\n\n---"
     },
     {
-      "id": "20-technomancer#resonance-mending-deep-dive-cyborg-heal-niche#31",
+      "id": "20-technomancer#resonance-mending-deep-dive-cyborg-heal-niche#32",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5016,7 +5025,7 @@
       "text": "> **Resonance Mending** *(Class Feature Signature — full grammar)*\n> *Keywords: Wired, Resonance, Healing · Type: Maneuver (base effect) or Main action (enhanced) · Distance: touch, or Wired range for a jacked/networked target · Target: self, one machine, one drone, one vehicle, one piece of chrome, or **one Cyborg** (base at 1st level)*\n>\n> **Base effect (always free, 0 Resonance):** the target regains Stamina/Integrity equal to **one Recovery's worth** (or, for a Cyborg specifically, the target may spend one of their own Recoveries at no Resonance cost). This works identically whether the target is a drone, a vehicle, a piece of standalone chrome, or a Cyborg's chrome-integrated Stamina pool.\n>\n> **Spend 1+ Resonance:** for each point of Resonance spent, choose **one** of the following enhancements (may pick the same enhancement more than once by spending multiple points, except where noted):\n> - **Reach one additional target** — extend the mending to a second machine/drone/Cyborg within range, applying the base effect to them as well.\n> - **Clear one save-ends mechanical condition** — a jam, a glitch, a suppression effect, a Cyborg-chrome malfunction.\n> - **Restore function to a \"dead\" machine** — a drone at 0 Integrity, a piece of chrome that has fully failed, or a Cyborg at 0 Stamina — bringing it back online at minimal function (1 Stamina/Integrity) instead of leaving it destroyed/dying. This costs a **minimum of 2 Resonance**, not 1, reflecting the higher stakes of the effect.\n> - **Grant the target an additional Recovery spend** beyond the base effect's single Recovery (stacks with itself — 2 Resonance spent this way grants 2 additional Recoveries, and so on).\n>\n> **Power Roll results (apply only when Resonance Mending is used as an enhanced main action against resistance — e.g., mending a target inside a hostile EW field or contested Wired space):**\n> - **high (17+):** the mend lands at full effect and the target also clears one minor condition for free, on top of any purchased enhancements.\n> - **middle (12–16):** the mend lands at full effect as purchased.\n> - **low (≤11):** the mend is unstable — it holds for one round, then the target loses half the Stamina/Integrity restored unless stabilized by a second mend or a full rest.\n>\n> **Does not trigger biofeedback at its base effect** (0 Resonance spent) or at low enhancement spends — a Technomancer can mend freely and often without any overreach risk at all. Only pushing total Resonance spent on a single Resonance Mending use to 5 or more (e.g., reaching 3 additional targets plus clearing 2 conditions in one action) triggers the standard biofeedback test at the appropriate difficulty.\n>\n> **Machine-Whisperer amplification (preview — full detail in that discipline's table below):** Machine-Whisperer reduces Resonance Mending's per-point enhancement cost, extends its base range, and eventually grants a free use once per encounter. Every Technomancer can mend a Cyborg; only a Machine-Whisperer does it as their whole reason for being.\n\n---"
     },
     {
-      "id": "20-technomancer#sprite-weaver#32",
+      "id": "20-technomancer#sprite-weaver#33",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5025,7 +5034,7 @@
       "text": "*The \"wide congregation\" tradition — more sprites, cheaper sprites, a bigger board presence than any other discipline.*\n\n| Level | Feature | Effect |\n|---|---|---|\n| **1st** | **Wide Compile** | Sprite cap rises to **3** (instead of 2). Compile Sprite's Enhance — a second sprite in the same action — costs **2 Resonance** (instead of 3); the base compile is free for everyone. Compile momentum Resonance gain doubles to **+2** per newly compiled sprite (instead of +1). |\n| **2nd** | **Overlapping Signals** | When you Compile Sprite and roll high (17+), you may compile a **second** sprite for free as part of the same action (does not stack with the signature's own Enhance-for-a-second-sprite option — choose one). |\n| **3rd** | **Congregation's Chorus** | Once per round, when **two or more** of your sprites act on the same turn (yours or their own), each of those sprites' rolls gain an **edge**. |\n| **5th** | **The Widening Gyre** | Sprite cap rises to **4**. Swarm the Signal (3-cost) no longer requires all sprites to target the same foe — you may split the swarm across up to 3 targets. |\n| **7th** | **Legion of the Current** | Sprite cap rises to **5**. Once per encounter, you may Compile Sprite as a **free action** instead of a main action. |\n| **8th** | **Unbroken Congregation** *(capstone)* | Your sprites no longer decompile automatically at end of encounter — once per session, you may keep **one** sprite compiled into the next scene (still subject to normal destruction rules). Sprite cap rises to **6**, the highest of any discipline. |"
     },
     {
-      "id": "20-technomancer#machine-whisperer#33",
+      "id": "20-technomancer#machine-whisperer#34",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5034,7 +5043,7 @@
       "text": "*The \"interface and healer\" tradition — the discipline that makes the class's Cyborg-mending niche its whole identity.*"
     },
     {
-      "id": "20-technomancer#machine-whisperer#34",
+      "id": "20-technomancer#machine-whisperer#35",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5043,7 +5052,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| **1st** | **Deep Interface** | Deep Communion's cost drops to **2 Resonance** (instead of 3) and grants a larger biofeedback buffer (your Physique test, if any is triggered while in communion, gains an edge). Resonance Mending's range extends to **Wired range** even for the base (free) effect, instead of touch-only. |\n| **2nd** | **Machine Empathy** | Resonance Mending's per-point enhancement cost drops by 1 (minimum 1) when the target is a machine, drone, vehicle, chrome, or Cyborg (i.e., always, for this ability) — enhancements that would cost 2 Resonance cost 1, and the \"restore a dead machine\" enhancement drops from 2 to 1. |\n| **3rd** | **Whispered Diagnostics** | As a free action once per round, you may inspect one machine, drone, vehicle, or Cyborg within Wired range and learn its exact current Stamina/Integrity, all active conditions, and one exploitable weakness. |\n| **5th** | **Bonded Repair** | Once per encounter, you may use Resonance Mending's full enhanced effect (as if you'd spent 3 Resonance) at **no Resonance cost**, and this specific use never triggers biofeedback regardless of total spend. |\n| **7th** | **The Machine Remembers** | When you restore a \"dead\" machine, drone, piece of chrome, or Cyborg to minimal function via Resonance Mending, the target instead returns at **half** Stamina/Integrity (instead of just 1 point), and clears one additional condition for free. |"
     },
     {
-      "id": "20-technomancer#machine-whisperer#35",
+      "id": "20-technomancer#machine-whisperer#36",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5052,7 +5061,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| **8th** | **Whisperer's Communion** *(capstone)* | You may target **any number** of machines/drones/Cyborgs within Wired range with a single Resonance Mending action (previously capped by purchased \"additional target\" enhancements) — the base effect applies to all of them at once, and enhancements still apply individually as normal. |"
     },
     {
-      "id": "20-technomancer#resonance-warrior#36",
+      "id": "20-technomancer#resonance-warrior#37",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5061,7 +5070,7 @@
       "text": "*The \"offensive mystic\" tradition — the discipline that turns the congregation into a weapon and accepts the highest biofeedback risk for the highest damage ceiling.*"
     },
     {
-      "id": "20-technomancer#resonance-warrior#37",
+      "id": "20-technomancer#resonance-warrior#38",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5070,7 +5079,7 @@
       "text": "| Level | Feature | Effect |\n|---|---|---|\n| **1st** | **Overcharged Strike** | Resonance Strike's damage die increases to **3d10 + Logic** (instead of 2d10 + Logic). Attack-sprites you command deal an additional **+1d6** damage on a hit. |\n| **2nd** | **Aggressive Compile** | When you Compile Sprite and choose an Attack-sprite, it may act **immediately** even at the minor/extension rank (normally minor sprites only act on your own turn — this doesn't change the rank, but it removes any \"acts next turn\" language from unstable/low-result compiles specifically for Attack-sprites). |\n| **3rd** | **Feedback Weapon** | Once per round, when you take biofeedback damage from your own ability, you may immediately deal that same amount of damage to one enemy within Ranged 5 as psychic backlash. |\n| **5th** | **Burning the Current** | You may voluntarily take an **additional** 5-cost-equivalent biofeedback test (an easy Physique test, even on an ability that wouldn't normally trigger one) to add **+Logic score** damage to that ability's effect. Usable once per turn. |\n| **7th** | **No Such Thing As Too Much** | Cascade Failure and Resonance Slam (7-cost) are both made with an **edge** when used by a Resonance-Warrior, and their damage dice increase by one step (e.g., Logic × 2 becomes Logic × 2 plus 1d6). |\n| **8th** | **Apex Current** *(capstone)* | Once per encounter, you may treat a failed biofeedback test as a **success** — the current still bites, but not this time. This does not refund the Resonance spent. |\n\n---"
     },
     {
-      "id": "20-technomancer#worked-play-example-table-reference#38",
+      "id": "20-technomancer#worked-play-example-table-reference#39",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5079,7 +5088,7 @@
       "text": "*A short worked example, showing the full Resonance loop and sprite economy in play across three rounds of a representative encounter. This section is illustrative only — it introduces no new rules, and any numbers shown are examples, not fixed outcomes.*\n\n**Setup:** Priya, a 5th-level Sprite-Weaver Technomancer (Logic 4, Persona 3), enters combat against a corp security team backed by a single combat drone. She rolled 2 Victories before combat, so she attunes for **2 Resonance** the moment she compiles her first sprite (Attunement, first communion).\n\n**Round 1.** Priya opens with **Compile Sprite**, calling a Data-sprite to scan the room. She spends nothing: Compile Sprite's base effect is a free signature, and the 3 Resonance (2 for her, via Wide Compile) only ever buys the signature's Enhance — a *second* sprite in the same action. Compiling a new sprite fires **Compile Momentum**, doubled by Wide Compile: +2 Resonance. Her Data-sprite then lands its scan (an effect), triggering **Harmonic Echo**: +1 Resonance. Full accounting: 2 (Attunement) + 2 (momentum) + 1 (echo) = **5 Resonance banked**. At the start of her turn she'd also gain Resonance equal to compiled-sprite-count, but that trigger fires at the *start* of a turn, so it won't apply until Round 2."
     },
     {
-      "id": "20-technomancer#worked-play-example-table-reference#39",
+      "id": "20-technomancer#worked-play-example-table-reference#40",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5088,7 +5097,7 @@
       "text": "**Round 2.** At the start of her turn the congregation trigger fires: she has 1 sprite compiled, so +1 Resonance (6 banked). She uses **Compile Sprite** again — a fresh use of the free base signature, not the Enhance, so it costs nothing — and calls an Attack-sprite, well inside her 5th-level Sprite-Weaver cap of 4. Compile Momentum fires again: +2 Resonance (8 banked). Her Attack-sprite strikes the drone and hits, triggering Harmonic Echo: +1 Resonance. Full accounting: 5 (carried) + 1 (congregation) + 2 (momentum) + 1 (echo) = **9 Resonance banked at end of round**.\n\n**Round 3.** Start-of-turn congregation trigger: 2 sprites compiled, +2 Resonance (11 banked). Priya deploys **Resonance Ward** (5-cost), and because this is a cost-5+ ability she makes her biofeedback test (an easy Physique test, rolled with an edge because Sprite-Weaver's discipline modifier applies). She succeeds, the Ward deploys clean, and she is down to **6 Resonance banked** — 11 − 5 — with a Data-sprite and an Attack-sprite still active plus a fresh warded zone protecting the party. With 6 banked and the congregation trigger now worth +2 a turn, she is one round away from affording **Total Resonance** (7-cost) — which is exactly the point in a fight where this engine starts paying out."
     },
     {
-      "id": "20-technomancer#worked-play-example-table-reference#40",
+      "id": "20-technomancer#worked-play-example-table-reference#41",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5097,7 +5106,7 @@
       "text": "**Why this matters as a reference:** note how the loop naturally accelerates the longer a fight runs and the more sprites stay alive — this is the intended shape (a slow-building summoner engine, not a burst-nova class), and it's also why Total Resonance (a 7-cost ability, doubling the congregation-trigger gain) is such a dramatic power spike when it lands mid-fight rather than at the very start."
     },
     {
-      "id": "20-technomancer#level-1-10-progression-table#41",
+      "id": "20-technomancer#level-1-10-progression-table#42",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5106,7 +5115,7 @@
       "text": "*Levels 1–10 are the primary progression axis (`24`). Echelon bands (E1–E4) are noted only where they matter for cross-class gear context, never as a gating mechanism.*\n\n| Level | Echelon (gear reference only) | Class Features | Abilities Gained | Discipline Feature |\n|---|---|---|---|---|\n| **1st** | E1 | Class Chassis, Resonance resource, Sprite Congregation (2-sprite cap), Biofeedback, all 3 Signatures, choice of discipline | Signatures (Compile Sprite, Resonance Strike, Resonance Mending); 1-cost, 3-cost, and 5-cost bands unlocked (choose starting selections) | Discipline 1st-level feature |\n| **2nd** | E1 | — | — | Discipline 2nd-level feature |\n| **3rd** | E1 | 7-cost band unlocked (includes Total Resonance) | Choose a 7-cost ability | Discipline 3rd-level feature |\n| **4th** | E2 | Characteristic Increase: Logic (Reason) and Persona (Presence) rise to 3 | — | — |\n| **5th** | E2 | Sprite cap rises to 3 (baseline, all disciplines); 9-cost band unlocked | Choose a 9-cost ability | Discipline 5th-level feature |\n| **6th** | E2 | — | — | — |\n| **7th** | E3 | Characteristic Increase: all five characteristics +1 (max 4) | — | Discipline 7th-level feature |\n| **8th** | E3 | Sprite cap rises to 4 (baseline, all disciplines); 11-cost band unlocked | Choose an 11-cost ability | Discipline 8th-level capstone feature |\n| **9th** | E4 | — | — | — |\n| **10th** | E4 | Characteristic Increase: Logic (Reason) and Persona (Presence) rise to 5; **Master of the Current** (capstone) | — | — |"
     },
     {
-      "id": "20-technomancer#level-1-10-progression-table#42",
+      "id": "20-technomancer#level-1-10-progression-table#43",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5115,7 +5124,7 @@
       "text": "**Master of the Current** *(10th-level capstone)*\n> Once per encounter, you may use **any one** heroic ability you know **without spending Resonance**, and that use never triggers a biofeedback test regardless of its cost band. In addition, the first time you use this capstone each session, your **sprite cap is removed entirely** for the rest of that encounter — Compile Sprite's cap check simply does not apply, and its normal action economy (one compile per main action, or two by paying the Enhance) is the only thing still limiting how fast the congregation grows. Every other Resonance cost in the chapter is paid as usual for anything beyond the one free ability use.\n\n---"
     },
     {
-      "id": "20-technomancer#core-class-features-non-subclass#43",
+      "id": "20-technomancer#core-class-features-non-subclass#44",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5124,7 +5133,7 @@
       "text": "These are granted to **every** Technomancer regardless of discipline, layered on top of the Class Chassis stats and the Signature abilities above.\n\n**Wired Native.** You are a full citizen of the Wired chapter — you use nodes, Trace Alert, and the standard Wired interface rules exactly as the Hacker and Wrench do, without needing a deck or a rig. Your body itself is the interface.\n\n**Congregation Sense.** You always know the current Stamina, position, and sprite rank of every sprite you command, even at range, even through walls, as long as they remain within Wired range of you.\n\n**Cyborg Mending (base).** Resonance Mending's Cyborg-target branch is available to you from 1st level regardless of discipline — see the full Deep Dive section above. This is the class's headline setting niche and is never discipline-gated.\n\n**Chrome Erosion.** You wield genuine magic (Resonance), so chrome erodes your Resonance cap by the same shared formula as every caster. See the Kit & Chrome section immediately below.\n\n**Arcane Severance Bar.** Cyborgs cannot take levels in the Technomancer class, under any circumstance, with no buy-back or exception. A character who becomes a Cyborg after already taking Technomancer levels immediately loses all access to Resonance, sprites, and every ability on this list until (and unless) the Cyborg conversion is reversed — treat this identically to how Arcane Severance already blocks Veil-caster classes."
     },
     {
-      "id": "20-technomancer#core-class-features-non-subclass#44",
+      "id": "20-technomancer#core-class-features-non-subclass#45",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5133,7 +5142,7 @@
       "text": "**Discipline Choice.** Chosen at 1st level from Sprite-Weaver, Machine-Whisperer, or Resonance-Warrior. Discipline choice is permanent absent an explicit respec ruling from the table.\n\n---"
     },
     {
-      "id": "20-technomancer#kit-chrome-interaction#45",
+      "id": "20-technomancer#kit-chrome-interaction#46",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5142,7 +5151,7 @@
       "text": "The Technomancer is a Wired class that still casts — so, unlike the Wired's other two classes, chrome costs it magic:\n\n| Class | Chrome Relationship |\n|---|---|\n| **Hacker / Wrench** | Chrome-positive — chrome enhances their tech-native abilities directly, no erosion at all. |\n| **Technomancer** | **Erodes** — chrome shrinks the Resonance cap by the shared magic-erosion formula, the same as any caster. |\n| **Elementalist / Street-Priest** | Chrome-averse — chrome shrinks their Essence / Conviction cap by the same shared formula. |\n\n**Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). No caster is exempt.\n\n**Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate) can grant an **edge on Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.\n\n---"
     },
     {
-      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#46",
+      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#47",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5151,7 +5160,7 @@
       "text": "*A short FAQ addendum addressing the questions most likely to come up at an actual table before the Director has memorized every ruling above.*\n\n**Can I compile a sprite outside of combat?** Yes — Compile Sprite works identically outside combat, though outside combat you don't have a per-encounter Resonance pool actively refilling, so you're limited to the once-per-rest-or-Victory exception noted under Resonance's \"Outside combat\" rule.\n\n**Do sprites need line of sight to their target, same as a normal ranged attack?** Yes, unless a specific ability says otherwise. \"Wired range\" for a sprite means the sprite itself needs a valid Wired connection to the target (a device, a jack, a networked system) — it is not the same as a normal ranged weapon's line-of-sight rule, but it is not unlimited either. A Data-sprite scanning a room it can't technically \"see\" through a wall would need that room to have a networked device in it for the sprite's senses to reach.\n\n**What happens if I hit my sprite cap and try to compile again?** You cannot compile past your cap — Compile Sprite simply fails (or, at the table's discretion, you may choose to dismiss an existing sprite as part of the same action to make room, but this is a house-rule convenience, not a written rule).\n\n**Can an enemy target my sprites directly?** Yes. Sprites have their own Stamina, and their own defensive profile (see the Sprite Stat Block Reference table) and can be attacked, suppressed, or hacked like any other actor on the board — this is precisely why Ward-sprites and the Sprite Redirect ability exist."
     },
     {
-      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#47",
+      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#48",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5160,7 +5169,7 @@
       "text": "**Does Resonance Mending work on my own chrome, or only on allies'/drones'?** Both. \"Self\" is always a valid target for Resonance Mending's base effect.\n\n**If I'm a Machine-Whisperer, can I mend a Cyborg who isn't in my party — say, an NPC or an enemy who surrenders?** Mechanically, yes — Resonance Mending doesn't restrict targeting to allies only, it restricts by target *type* (machine, drone, vehicle, chrome, or Cyborg). Whether the fiction allows it (would a corp Cyborg trust a runner shaman's hands on their chrome?) is a roleplay question for the table, not a rules restriction.\n\n**Can a sprite \"die\" permanently, or does it always come back next encounter?** A sprite destroyed in combat (reduced to 0 Stamina) is gone for that encounter. At the start of your next encounter, you begin fresh with zero sprites compiled and must re-compile from scratch — sprites are not persistent assets like a Wrench's drones, they're temporary conjurations remade each fight."
     },
     {
-      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#48",
+      "id": "20-technomancer#frequently-asked-table-questions-player-facing-faq#49",
       "file": "20-technomancer.md",
       "source": "docs/raw/20-technomancer.md",
       "chapter": "The Technomancer",
@@ -5175,7 +5184,7 @@
       "chapter": "The Wire",
       "heading": "The Wire",
       "kind": "rules",
-      "text": "**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62)  \n**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)\n\n---"
+      "text": "**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62; Constructs roster Lock A 2026-09-20 / 0.3.77)  \n**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)\n\n---"
     },
     {
       "id": "21-the-wire#the-wired-system#2",
@@ -5274,7 +5283,7 @@
       "chapter": "The Wire",
       "heading": "Wired-System Stats: Integrity (Not Body Integrity)",
       "kind": "rules",
-      "text": "> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.\n\n**Biofeedback bleed-through:** some hits carry an \"Integrity-to-Stamina biofeedback bleed-through\" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above)."
+      "text": "> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). **Constructs** lists compiled sprites and Agents (Lock A: scene token = roster anchor; meat actions off unless an ability bridges). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.\n\n**Biofeedback bleed-through:** some hits carry an \"Integrity-to-Stamina biofeedback bleed-through\" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above)."
     },
     {
       "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#13",
@@ -5484,7 +5493,16 @@
       "text": "**Anyone vs Hacker.** Any hero with a **Wire interface** (commlink, cyberdeck, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer Resonance) can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs** and **Compile Agent**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs. Agents (Probe / Spike / Daemon / Watchdog) are Hacker-only deck daemons, not Technomancer sprites."
     },
     {
-      "id": "21-the-wire#deck-software-suites-vs-payloads#36",
+      "id": "21-the-wire#constructs-sprites-and-agents#36",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Constructs (Sprites and Agents)",
+      "kind": "rules",
+      "text": "Compiled **sprites** (Technomancer, `20`) and **Agents** (Hacker, `19`) are Wire constructs, not extra nodes on the host graph.\n\n**Lock A (2026-09-20).** A construct’s **scene token is a roster anchor only**. Wire play lives in the **Wired Console**. Meat-space attacks and other meat actions against that token stay **off** unless an ability explicitly bridges (Resonance Strike through a device, a Daemon holding a Track 1 object, and similar printed bridges). Do not treat the token as a second copy of the runner on the Connections list.\n\n**Constructs section.** The Console lists compiled sprites and Agents in a **Constructs** roster, separate from **Connections** and **Nodes**. Owner and Director see the relevant rows (name, archetype, Stamina, hybrid band, compiler). An optional chip may name the Wire node the construct is **facing** — a label only. **Do not** add construct↔node edges to the board graph; node↔node wires stay infrastructure topology.\n\n**Construct vs construct.** Sprite/Agent fights resolve as **Wired / EW** attacks (a physical strike that can target them at all is made with a **bane**, per `20`). Action economy follows hybrid band: **minor** = extension on the compiler’s turn; **intermediate** = own turn under a Command maneuver that round; **advanced** = independent turn. The Console does not auto-run those turns or auto-initiative constructs."
+    },
+    {
+      "id": "21-the-wire#deck-software-suites-vs-payloads#37",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5493,7 +5511,7 @@
       "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
     },
     {
-      "id": "21-the-wire#suites#37",
+      "id": "21-the-wire#suites#38",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5502,7 +5520,7 @@
       "text": "A suite is installed into a free slot as a downtime **Craft (Hacking)** Project and stays there until you swap it out. An installed suite can be switched on or off in the field (the field toggle); it keeps its slot either way. Suites give edges to Matrix Verbs and standing benefits. They have no attack of their own."
     },
     {
-      "id": "21-the-wire#payloads-magazines#38",
+      "id": "21-the-wire#payloads-magazines#39",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5511,7 +5529,7 @@
       "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free **host slot** as a magazine:\n\n- **Cyberdeck.** One free deck slot, shared with suites.\n- **Technomancer (no deck).** Compile onto **Wired Native** — Resonance / body-as-interface. The class feature is a 2-slot `resonance` / `body` host. Do not auto-grant any payload; compiling is still a Craft Project (Sabbat Vane’s playtest Whiteout×2 is a pregen loadout, not a class grant).\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |"
     },
     {
-      "id": "21-the-wire#payloads-magazines#39",
+      "id": "21-the-wire#payloads-magazines#40",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5520,7 +5538,7 @@
       "text": "**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.\n\n> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`."
     },
     {
-      "id": "21-the-wire#payloads-magazines#40",
+      "id": "21-the-wire#payloads-magazines#41",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5529,16 +5547,16 @@
       "text": "**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant."
     },
     {
-      "id": "21-the-wire#director-tools#41",
+      "id": "21-the-wire#director-tools#42",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
       "heading": "Director tools",
       "kind": "rules",
-      "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
+      "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, **Constructs** roster for sprites and Agents, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). Constructs never add edges to the node graph. The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
     },
     {
-      "id": "21-the-wire#voidmark-wired-presence#42",
+      "id": "21-the-wire#voidmark-wired-presence#43",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",

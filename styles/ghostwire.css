@@ -346,7 +346,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: 210px 250px 1fr;
+  grid-template-columns: 190px 250px 220px 1fr;
   grid-template-rows: auto 1fr;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -444,6 +444,37 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-roster-row.state-jackedIn { border-left-color: var(--wc-hot); }
 .ghostwire-wired-console .wc-roster-row.state-connected { border-left-color: #7ad4c0; }
 .ghostwire-wired-console .wc-roster-row.is-node { opacity: 0.92; }
+.ghostwire-wired-console .wc-constructs { min-height: 0; }
+.ghostwire-wired-console .wc-construct-hint { margin: 0 0.6rem 0.15rem; font-size: 0.75rem; }
+.ghostwire-wired-console .wc-construct-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: flex-start;
+  padding: 0.4rem 0.45rem;
+  border-radius: 4px;
+  border-left: 3px solid color-mix(in srgb, var(--wc-violet) 70%, var(--wc-border));
+  cursor: pointer;
+}
+.ghostwire-wired-console .wc-construct-row:hover { background: color-mix(in srgb, var(--wc-violet) 10%, transparent); }
+.ghostwire-wired-console .wc-construct-row.kind-sprite { border-left-color: var(--wc-cyan); }
+.ghostwire-wired-console .wc-construct-row.kind-agent { border-left-color: var(--wc-hot); }
+.ghostwire-wired-console .wc-construct-row img { width: 26px; height: 26px; border: none; border-radius: 4px; object-fit: cover; flex: none; }
+.ghostwire-wired-console .wc-construct-body { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+.ghostwire-wired-console .wc-construct-head { display: flex; align-items: center; gap: 0.3rem; }
+.ghostwire-wired-console .wc-construct-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--wc-muted);
+}
+.ghostwire-wired-console .wc-construct-stamina { font-family: monospace; color: var(--wc-text); }
+.ghostwire-wired-console .wc-construct-row .wc-bar { margin: 0.1rem 0; }
+.ghostwire-wired-console .wc-face { color: var(--wc-cyan); border-color: color-mix(in srgb, var(--wc-cyan) 55%, var(--wc-border)); }
+.ghostwire-wired-console .wc-construct-actions { display: flex; gap: 0.2rem; }
+.ghostwire-wired-console .wc-tag.kind-sprite { color: var(--wc-cyan); border-color: color-mix(in srgb, var(--wc-cyan) 55%, var(--wc-border)); }
+.ghostwire-wired-console .wc-tag.kind-agent { color: var(--wc-hot); border-color: color-mix(in srgb, var(--wc-hot) 55%, var(--wc-border)); }
 .ghostwire-wired-console .wc-state-chip {
   font-size: 0.65rem;
   text-transform: uppercase;

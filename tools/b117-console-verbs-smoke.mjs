@@ -176,7 +176,7 @@ ok(consoleSrc.includes("renderActorSheetV2") && consoleSrc.includes("renderDrawS
 ok(consoleSrc.includes("sortConsoleNodes") && consoleSrc.includes("sortConsoleRoster"), "Console sorts nodes + Connections");
 ok(consoleSrc.includes("ensureTempHiddenOnSheet") && consoleSrc.includes("hideInSheet"), "temps stamp DS hideInSheet");
 ok(consoleSrc.includes("consoleRosterWireState") && consoleSrc.includes("isNodeActor"), "roster chips node Actors as Connected");
-ok(/if \(isNodeActor\(actor\)\)/.test(consoleSrc), "useConsoleVerb refuses a node actor");
+ok(/if \(isNodeActor\(actor\)(?:\s*\|\|\s*isConstructActor\(actor\))?\)/.test(consoleSrc), "useConsoleVerb refuses a node actor");
 ok(/dataset.isNode === "true"/.test(consoleSrc), "node roster click does not become the verb actor");
 
 const nodeSrc = readFileSync("scripts/wired-node-verbs.mjs", "utf8");

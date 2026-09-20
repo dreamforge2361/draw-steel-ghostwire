@@ -59,6 +59,52 @@
       </ul>
     </section>
 
+    {{!-- Constructs (B121): sprites + Agents. Separate from Connections/Nodes; no graph edges. --}}
+    <section class="wc-panel wc-constructs">
+      <h3 class="wc-panel-title" data-tooltip="GHOSTWIRE.WiredConsole.Constructs.Hint">{{localize "GHOSTWIRE.WiredConsole.Constructs.Title"}}</h3>
+      <p class="wc-dim wc-construct-hint">{{localize "GHOSTWIRE.WiredConsole.Constructs.LockA"}}</p>
+      <ul class="wc-construct-list">
+        {{#each constructs}}
+        <li class="wc-construct-row kind-{{kind}}{{#if anchored}} is-anchored{{/if}}" data-action="selectConstruct" data-actor-uuid="{{uuid}}" data-tooltip="{{panTooltip}}">
+          <img src="{{img}}" alt="">
+          <div class="wc-construct-body">
+            <div class="wc-construct-head">
+              <span class="wc-roster-name" title="{{name}}" data-tooltip="{{name}}">{{name}}</span>
+              <span class="wc-tag kind-{{kind}}">{{kindLabel}}</span>
+            </div>
+            <div class="wc-construct-meta">
+              {{#if archetypeLabel}}<span class="wc-tag" data-tooltip="{{archetypeLabel}}">{{archetypeLabel}}</span>{{/if}}
+              {{#if bandLabel}}<span class="wc-tag" data-tooltip="{{bandLabel}}">{{bandLabel}}</span>{{/if}}
+              <span class="wc-construct-stamina" data-tooltip="{{staminaLabel}}">{{staminaLabel}}</span>
+            </div>
+            {{#if stamina.label}}
+            <div class="wc-bar" data-tooltip="{{staminaLabel}}"><span style="width: {{stamina.pct}}%"></span></div>
+            {{/if}}
+            <div class="wc-construct-meta">
+              {{#if compilerLabel}}<span class="wc-dim" title="{{compilerName}}" data-tooltip="{{compilerLabel}}">{{compilerLabel}}</span>{{/if}}
+              {{#if faceLabel}}<span class="wc-tag wc-face" data-tooltip="{{faceLabel}}">{{faceLabel}}</span>{{/if}}
+            </div>
+            <div class="wc-construct-actions">
+              <button type="button" class="wc-btn wc-btn-small" data-action="selectConstruct" data-actor-uuid="{{uuid}}" {{disabled (not anchored)}} data-tooltip="{{panTooltip}}" aria-label="{{panTooltip}}">
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </button>
+              {{#if owned}}
+              <button type="button" class="wc-btn wc-btn-small" data-action="commandConstruct" data-actor-uuid="{{uuid}}" data-tooltip="{{commandTooltip}}" aria-label="{{localize "GHOSTWIRE.WiredConsole.Constructs.Command"}}">
+                <i class="fa-solid fa-terminal"></i>
+              </button>
+              <button type="button" class="wc-btn wc-btn-small wc-btn-danger" data-action="decompileConstruct" data-actor-uuid="{{uuid}}" data-tooltip="GHOSTWIRE.WiredConsole.Constructs.Decompile" aria-label="{{localize "GHOSTWIRE.WiredConsole.Constructs.Decompile"}}">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              {{/if}}
+            </div>
+          </div>
+        </li>
+        {{else}}
+        <li class="wc-empty">{{#if isGM}}{{localize "GHOSTWIRE.WiredConsole.Constructs.EmptyGM"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.Constructs.EmptyPlayer"}}{{/if}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
     {{!-- Nodes --}}
     <section class="wc-panel wc-nodes">
       <h3 class="wc-panel-title">
