@@ -162,6 +162,103 @@ function injectHeaderControl(root, actor, editable) {
   return true;
 }
 
+function getCorruptionHistory(actor) {
+  const flag = actor?.getFlag?.(MODULE_ID, "corruptionHistory") ?? actor?.flags?.[MODULE_ID]?.corruptionHistory;
+  return flag == null ? "" : String(flag);
+}
+
+function persistCorruptionHistory(actor, html) {
+  return actor.update({ [`flags.${MODULE_ID}.corruptionHistory`]: String(html ?? "") });
+}
+
+function biographyTab(root) {
+  return root.querySelector("section.tab[data-tab='biography']")
+    ?? root.querySelector("[data-application-part='biography']")
+    ?? root.querySelector("[data-tab='biography'].tab")
+    ?? [...root.querySelectorAll("[data-tab='biography']")].find(el => el.matches("section, .tab, [data-application-part]"));
+}
+
+function createHistoryEditor(html, editable, actor) {
+  const name = `flags.${MODULE_ID}.corruptionHistory`;
+  if (editable && customElements.get("prose-mirror")) {
+    const editor = document.createElement("prose-mirror");
+    editor.setAttribute("name", name);
+    editor.setAttribute("toggled", "");
+    editor.value = html;
+    const save = event => {
+      event.stopPropagation();
+      persistCorruptionHistory(actor, editor.value);
+    };
+    editor.addEventListener("change", save);
+    editor.addEventListener("save", save);
+    return editor;
+  }
+
+  const area = document.createElement("textarea");
+  area.name = name;
+  area.rows = 6;
+  area.value = html;
+  area.placeholder = game.i18n.localize("GHOSTWIRE.Taint.History.Placeholder");
+  area.disabled = !editable;
+  if (editable) {
+    area.addEventListener("change", event => {
+      event.stopPropagation();
+      persistCorruptionHistory(actor, area.value);
+    });
+  }
+  return area;
+}
+
+function injectCorruptionHistory(root, actor, editable) {
+  if (root.querySelector(".ghostwire-corruption-history")) return true;
+  const tab = biographyTab(root);
+  if (!tab) return false;
+
+  const html = getCorruptionHistory(actor);
+  const fieldset = document.createElement("fieldset");
+  fieldset.className = "ghostwire-corruption-history";
+  const legend = document.createElement("legend");
+  legend.textContent = game.i18n.localize("GHOSTWIRE.Taint.History.Label");
+  legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Taint.History.Hint");
+  const hint = document.createElement("p");
+  hint.className = "hint";
+  hint.textContent = game.i18n.localize("GHOSTWIRE.Taint.History.Hint");
+  fieldset.append(legend, hint);
+
+  if (!editable && html) {
+    const view = document.createElement("div");
+    view.className = "ghostwire-corruption-history-view";
+    const enrich = foundry.applications?.ux?.TextEditor?.implementation?.enrichHTML
+      ?? globalThis.TextEditor?.enrichHTML?.bind(globalThis.TextEditor);
+    if (enrich) {
+      Promise.resolve(enrich(html, { async: true, secrets: actor.isOwner, relativeTo: actor }))
+        .then(enriched => { view.innerHTML = enriched; });
+    } else {
+      view.textContent = html;
+    }
+    fieldset.append(view);
+  } else {
+    fieldset.append(createHistoryEditor(html, editable, actor));
+  }
+
+  const director = [...tab.querySelectorAll("prose-mirror, textarea, [name*='biography.director']")]
+    .find(el => /biography\.director/i.test(el.getAttribute("name") ?? ""));
+  const anchor = director?.closest("fieldset") ?? tab.querySelector("fieldset:last-of-type");
+  if (anchor) anchor.after(fieldset);
+  else tab.append(fieldset);
+  return true;
+}
+
+function watchBiographyTab(root, inject) {
+  if (root.dataset.ghostwireTaintBioWatch) return;
+  root.dataset.ghostwireTaintBioWatch = "1";
+  root.addEventListener("click", event => {
+    const tab = event.target?.closest?.("[data-tab='biography']");
+    if (!tab) return;
+    requestAnimationFrame(() => inject());
+  });
+}
+
 function injectTaintControls(app, element) {
   const actor = app?.document ?? app?.actor;
   if (!isHeroActor(actor)) return;
@@ -170,6 +267,8 @@ function injectTaintControls(app, element) {
   const editable = canEditTaint(app, actor);
   injectStatsFieldset(root, actor, editable);
   injectHeaderControl(root, actor, editable);
+  injectCorruptionHistory(root, actor, editable);
+  watchBiographyTab(root, () => injectCorruptionHistory(sheetRoot(app, app.element) ?? root, actor, editable));
 }
 
 export function registerTaint() {
@@ -177,8 +276,14 @@ export function registerTaint() {
     if ((userId !== game.user.id) || (actor.type !== "hero")) return;
     const stats = data._stats ?? {};
     if (stats.duplicateSource || stats.compendiumSource || stats.exportSource) return;
-    if (foundry.utils.getProperty(data, `flags.${MODULE_ID}.taint`) !== undefined) return;
-    actor.updateSource({ [`flags.${MODULE_ID}.taint`]: TAINT_MIN });
+    const updates = {};
+    if (foundry.utils.getProperty(data, `flags.${MODULE_ID}.taint`) === undefined) {
+      updates[`flags.${MODULE_ID}.taint`] = TAINT_MIN;
+    }
+    if (foundry.utils.getProperty(data, `flags.${MODULE_ID}.corruptionHistory`) === undefined) {
+      updates[`flags.${MODULE_ID}.corruptionHistory`] = "";
+    }
+    if (Object.keys(updates).length) actor.updateSource(updates);
   });
 
   // World heroes imported before B80: stamp 0 once so the sheet reads a real flag.

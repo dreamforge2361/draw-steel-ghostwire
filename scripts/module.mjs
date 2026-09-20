@@ -547,6 +547,7 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
     [`flags.${MODULE_ID}.integrity`]: { value: INTEGRITY_START, max: INTEGRITY_START },
     // Taint is a separate 0–12 stain track (B80). Chrome install never writes this flag.
     [`flags.${MODULE_ID}.taint`]: 0,
+    [`flags.${MODULE_ID}.corruptionHistory`]: "",
     // New heroes get the Matrix Verbs from defaultItems, so they skip the migration.
     [`flags.${MODULE_ID}.matrixVerbs`]: true,
     [`flags.${MODULE_ID}.wired`]: { connected: false, state: "disconnected" },

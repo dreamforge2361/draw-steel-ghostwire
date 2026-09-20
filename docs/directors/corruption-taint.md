@@ -62,7 +62,7 @@ At **Taint 12**, pause. Redemption quest, retirement-as-NPC, or a last-run clock
 
 ## Foundry
 
-Open a hero or pregen sheet. **Taint** is a visible **0–12** number input in the **sheet header** and again on **Stats** under **Body Integrity**. The band chip updates live. Owner and GM edit; the flag is `flags.draw-steel-ghostwire.taint`. Ghostwire does **not** auto-tick on rest, chrome, or zone entry this pass. Band gifts and costs are table rules — no Active Effects.
+Open a hero or pregen sheet. **Taint** is a visible **0–12** number input in the **sheet header** and again on **Stats** under **Body Integrity**. The band chip updates live. Owner and GM edit; the flag is `flags.draw-steel-ghostwire.taint`. **Corruption History** is a free-text field on the **Biography** tab (`flags.draw-steel-ghostwire.corruptionHistory`) — fiction notes, not a second meter. Ghostwire does **not** auto-tick on rest, chrome, or zone entry this pass. Band gifts and costs are table rules — no Active Effects.
 
 If the field and the fiction disagree, the table's last award wins; then set the field to match.
 

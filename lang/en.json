@@ -234,6 +234,11 @@
         "stained": "Stained",
         "claimed": "Claimed",
         "hollowed": "Hollowed"
+      },
+      "History": {
+        "Label": "Corruption History",
+        "Hint": "Fiction notes: how Taint was gained, visible tells, cleanses, pacts, and debts. Not a second meter.",
+        "Placeholder": "How the stain landed, what it looks like, what you still owe…"
       }
     },
     "Integrity": {

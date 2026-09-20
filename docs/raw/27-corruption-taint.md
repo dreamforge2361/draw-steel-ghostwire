@@ -13,6 +13,7 @@ Every runner uses this track, **Cyborgs included**. Chrome, rest, and the retire
 
 > **In Foundry**
 > Open a **hero** (or pregen) sheet. **Taint** is a number input **0–12** in two places: a compact row in the **sheet header** (visible on every tab), and a **Taint** fieldset on the **Stats** tab directly under **Body Integrity** (same overlay family as Integrity / Wired). The band chip (**Clean / Marked / Stained / Claimed / Hollowed**) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes `flags.draw-steel-ghostwire.taint`. New heroes and pregens start at **0**. Rest and chrome install do not move it.
+> On the **Biography** tab, **Corruption History** is a free-text notes field next to Biography / Director notes. Write how the stain landed, tells, cleanses, pacts, and debts. It stores `flags.draw-steel-ghostwire.corruptionHistory` (empty by default). It is not a second meter.
 
 ## The track
 

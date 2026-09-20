@@ -41,6 +41,8 @@ note(sheet.includes("ghostwire-taint-header"), "sheet injects header Taint contr
 note(sheet.includes('type: "number"') && sheet.includes("TAINT_MAX"), "sheet uses a 0–12 number input");
 note(sheet.includes("isOwner") && sheet.includes("isGM"), "owner + GM can edit");
 note(sheet.includes("addEventListener(\"input\""), "band updates live on input");
+note(sheet.includes("corruptionHistory") && sheet.includes("ghostwire-corruption-history"), "Biography tab Corruption History field");
+note(sheet.includes("data-tab='biography'"), "history injects on Biography tab");
 note(boot.includes("registerTaint()"), "module registers Taint");
 note(!/taint/.test(chrome.split("createItem")[2] ?? "") || chrome.includes("Do not write flags.<module>.taint"), "chrome install comments the Taint firewall");
 note(lang.GHOSTWIRE.Taint.Bands.clean === "Clean", "lang Clean");
@@ -82,6 +84,7 @@ try {
   note(journal.flags?.["draw-steel-ghostwire"]?.raw === "docs/raw/27-corruption-taint.md", "journal flags raw path");
   note(/Clean|Marked|Stained|Claimed|Hollowed/.test(blob), "journal carries band names");
   note(/flags\.draw-steel-ghostwire\.taint/.test(blob), "journal In Foundry names the flag");
+  note(/Corruption History/.test(blob) && /corruptionHistory/.test(blob), "journal In Foundry names Corruption History");
   note(!blob.includes("\uFEFF"), "journal JSON text has no BOM char");
 } catch (err) {
   note(false, `Taint journal readable (${err.message})`);
@@ -94,6 +97,7 @@ const pregens = readdirSync("src/packs/pregens").filter(f => f.endsWith(".json")
 for (const file of pregens) {
   const actor = JSON.parse(readFileSync(join("src/packs/pregens", file), "utf8"));
   note(actor.flags?.["draw-steel-ghostwire"]?.taint === 0, `pregen ${file} has taint 0`);
+  note(actor.flags?.["draw-steel-ghostwire"]?.corruptionHistory === "", `pregen ${file} has empty Corruption History`);
 }
 
 console.log(ok.map(m => `ok  ${m}`).join("\n"));

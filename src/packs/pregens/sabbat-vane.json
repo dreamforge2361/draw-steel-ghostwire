@@ -3037,7 +3037,8 @@
         "value": 19,
         "max": 20
       },
-      "taint": 0
+      "taint": 0,
+      "corruptionHistory": ""
     }
   }
 }

@@ -106,6 +106,6 @@ Full mutation catalog; Foundry automation of gain/cleanse/band Active Effects; r
 | Lock | this file |
 | RAW | `docs/raw/27-corruption-taint.md` |
 | Director | `docs/directors/corruption-taint.md` |
-| Sheet | `scripts/taint.mjs` — header row + Stats fieldset under Body Integrity; owner/GM edit |
+| Sheet | `scripts/taint.mjs` — header + Stats Taint 0–12; Biography tab **Corruption History** (`flags.draw-steel-ghostwire.corruptionHistory`) |
 | Journal | `src/packs/rulebook/ghostwire-systems/27-corruption-taint.json` |
 | Flag | `flags.draw-steel-ghostwire.taint` |

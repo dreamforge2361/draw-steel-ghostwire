@@ -139,6 +139,23 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-taint.band-hollowed .ghostwire-taint-band,
 .ghostwire-taint-header.band-hollowed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 700; }
 
+/* Corruption History on the Biography tab (B80) */
+.ghostwire-corruption-history {
+  margin-top: 0.75rem;
+}
+
+.ghostwire-corruption-history textarea,
+.ghostwire-corruption-history prose-mirror {
+  display: block;
+  width: 100%;
+  min-height: 8rem;
+}
+
+.ghostwire-corruption-history-view {
+  min-height: 4rem;
+  white-space: pre-wrap;
+}
+
 /* Wired connection state on the hero Stats tab */
 .ghostwire-wired {
   display: flex;
