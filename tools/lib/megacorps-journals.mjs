@@ -1,5 +1,6 @@
-// Ten Conglomerates brand journals (ticker cards). Domain text is MEGACORP-TICKERS.md only —
+// Twelve Conglomerates brand journals (ticker cards). Domain text is MEGACORP-TICKERS.md only —
 // do not invent deep lore. Brand rasters live at assets/brands/megacorps/brand-{ticker}.{png,webp}.
+// AEQ / LAZ plates are pending (artPending); journals still emit the expected path.
 import { createHash } from "node:crypto";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -21,13 +22,15 @@ export const MEGACORPS = [
   { ticker: "OBS", name: "Obsidian Holdings", domain: "Luxury, entertainment, vice, simsense/experience", langKey: "ObsidianHoldings" },
   { ticker: "SAN", name: "Sanctum Assurance", domain: "Insurance, data, surveillance, private law", langKey: "SanctumAssurance" },
   { ticker: "NYX", name: "Nyx Cartel", domain: "Legitimized underworld — tenth seat", langKey: "NyxCartel" },
+  { ticker: "AEQ", name: "Aequitas Mandate", domain: "Council justice, investigation, and security — sells only to the Council", langKey: "AequitasMandate", artPending: true },
+  { ticker: "LAZ", name: "Lazarus Extract", domain: "Trauma rescue, hot extraction, body recovery", langKey: "LazarusExtract", artPending: true },
 ];
 
 export const MEGACORP_FOLDER = {
   key: "Megacorps",
   id: FOLDER_ID,
   dir: "megacorps",
-  label: "Ten Conglomerates",
+  label: "Twelve Conglomerates",
 };
 
 export function megacorpEntryId(ticker) {
@@ -45,10 +48,17 @@ export function megacorpIndexLinks() {
 function overviewMarkdown(corp) {
   const src = megacorpBrandSrc(corp.ticker);
   const alt = `${corp.name} (${corp.ticker})`;
+  const art = corp.artPending
+    ? [
+      `*${alt} — brand plate pending.* Expected files: \`assets/brands/megacorps/brand-${corp.ticker.toLowerCase()}.{png,webp}\` (PNG 1254² + 1024² WebP). Wired Host skin: \`assets/tokens/wired/node-host-${corp.ticker.toLowerCase()}.{png,webp}\`. Michael drops plates; do not invent art in-repo.`,
+    ]
+    : [
+      `![${alt}](${src})`,
+      "",
+      `*${alt} — brand mark*`,
+    ];
   return [
-    `![${alt}](${src})`,
-    "",
-    `*${alt} — brand mark*`,
+    ...art,
     "",
     `**${corp.ticker}** — ${corp.name}`,
     "",

@@ -1,0 +1,49 @@
+{
+  "_id": "7XQMt0aWJev5xXin",
+  "_key": "!journal!7XQMt0aWJev5xXin",
+  "name": "GHOSTWIRE.Lore.Journals.AequitasMandate",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-aeq.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 1100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "02IM7h2J9AQCPlJc",
+      "_key": "!journal.pages!7XQMt0aWJev5xXin.02IM7h2J9AQCPlJc",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*Aequitas Mandate (AEQ) — brand plate pending.* Expected files: `assets/brands/megacorps/brand-aeq.{png,webp}` (PNG 1254² + 1024² WebP). Wired Host skin: `assets/tokens/wired/node-host-aeq.{png,webp}`. Michael drops plates; do not invent art in-repo.\n\n**AEQ** — Aequitas Mandate\n\n**Domain:** Council justice, investigation, and security — sells only to the Council\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><em>Aequitas Mandate (AEQ) — brand plate pending.</em> Expected files: <code>assets/brands/megacorps/brand-aeq.{png,webp}</code> (PNG 1254² + 1024² WebP). Wired Host skin: <code>assets/tokens/wired/node-host-aeq.{png,webp}</code>. Michael drops plates; do not invent art in-repo.</p>\n<p><strong>AEQ</strong> — Aequitas Mandate</p>\n<p><strong>Domain:</strong> Council justice, investigation, and security — sells only to the Council</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "AEQ",
+      "brand": "assets/brands/megacorps/brand-aeq.webp"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 // Random node tables for the Wired Console (B23c). Pure flavor on top of the System Stat Card:
 // the generator picks a stratum, a node type, and an owner; Rating (and so every stat) follows from docs/rulebook/08-hacker.md.
 // Description = what runners see on Scan (shared to chat on reveal). Notes = Director-only: what's buried inside, how it fights.
-// Setting: Ossian Reach strata (Halo → Spires → Grid → Flats → Warrens → Sinks) and the Ten Conglomerates.
+// Setting: Ossian Reach strata (Halo → Spires → Grid → Flats → Warrens → Sinks) and the Twelve Conglomerates.
 
 /** Strata the Director can generate for. `ratings` bounds every node rolled there. */
 export const STRATA = {

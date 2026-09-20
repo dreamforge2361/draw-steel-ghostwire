@@ -6,9 +6,9 @@ The Flats remember being something else. Half the district-names down here are t
 
 **Recent history — the last few years, street-level:**
 
-**The Churn came up a level.** Nyx Cartel, the perpetually precarious tenth seat, has been pushing its Undermarket taxes higher into the Flats to shore up its Congress ranking against the rising eleventh chair. Where the Churn used to stay in the Sinks, now a cut of nearly every Flats sale flows quietly upstream. The street feels the squeeze and doesn't yet know why.
+**The Churn came up a level.** Nyx Cartel, the perpetually precarious tenth seat, has been pushing its Undermarket taxes higher into the Flats to shore up its Congress ranking against the rising thirteenth chair. Where the Churn used to stay in the Sinks, now a cut of nearly every Flats sale flows quietly upstream. The street feels the squeeze and doesn't yet know why.
 
-**Kestrel's couriers are everywhere.** The rising eleventh-chair claimant, **Kestrel Dynamics**, floods the lower strata with clean, cheap, ubiquitous autonomous couriers — and everyone knows they are as much a sensor net as a delivery service. The Flats resent them and use them anyway.
+**Kestrel's couriers are everywhere.** The rising thirteenth-chair claimant, **Kestrel Dynamics**, floods the lower strata with clean, cheap, ubiquitous autonomous couriers — and everyone knows they are as much a sensor net as a delivery service. The Flats resent them and use them anyway.
 
 **The overlay got louder.** Meridian Signal pushed a new ad-tier into the public AR last season; the manufactured calm is thicker than it was. Old hands say the feed always screams loudest right before something it doesn't want you to see.
 
@@ -23,7 +23,7 @@ Nobody in the Flats trusts a face they can't place, and every faction reads a ne
 | **The fixers** (Cassavir's web) | Deniable talent, priced and remembered | Renown, discretion, delivering clean |
 | **The Corran guild-clans** | Outsiders until proven, kin once vouched | Respecting the debt-web; never the corps' errand |
 | **Nyx & the Churn** | A revenue stream or a loose end | Paying the tax; not asking what's in the crate |
-| **The corp presence** (Aureole, Ironclad, Sanctum) | A SIN to scan and a threat to log | A clean scan and staying off the ledger |
+| **The corp presence** (Aureole, Ironclad, Sanctum; AEQ seal is Council-only) | A SIN to scan and a threat to log | A clean scan and staying off the ledger |
 | **The street-faithful** (Radiant Concord's poor cousins) | A soul, same as any | Not mistaking their lamp for weakness |
 | **The gangs** | Rivals, muscle-for-hire, or trespass | Territory respected; the right name dropped |
 
@@ -99,13 +99,15 @@ What follows is word on the street, not corp record — the kind of thing a fixe
 
 Street heat right now: someone's been reading her encrypted deal-threads. She's quietly hiring — from herself — to find the leak.
 
-**The Nyx Cartel & the Churn — the legitimized underworld.** The tenth Congress seat and the one always closest to losing it. Nyx runs the Sinks, the smuggling lanes, and the **Undermarket** — a moving black-market bazaar in the dead deep levels, neutral ground for all Ten under one law: **no violence, on pain of the Widow.** Their fixer-and-smuggler web is the crew's actual supply chain and job board. Frenemy by default; they know more about the war under the floor than any Crown denier, because they live closest to it.
+**The Nyx Cartel & the Churn — the legitimized underworld.** The tenth Congress seat and the one always closest to losing it. Nyx runs the Sinks, the smuggling lanes, and the **Undermarket** — a moving black-market bazaar in the dead deep levels, neutral ground for all Twelve under one law: **no violence, on pain of the Widow.** Their fixer-and-smuggler web is the crew's actual supply chain and job board. Frenemy by default; they know more about the war under the floor than any Crown denier, because they live closest to it.
 
-Street heat right now: the Churn's tax is climbing into the Flats to fund Nyx's fight against the rising eleventh chair. Merchants are angry and scared.
+Street heat right now: the Churn's tax is climbing into the Flats to fund Nyx's fight against the rising thirteenth chair. Merchants are angry and scared.
 
 **The Corran guild-clans — the labor caste that stayed.** Compact, immensely strong, and long-memoried, the Corran families hold much of the Flats' grey commerce — the markets, the stalls, the informal courts. The corps still read them as "just labor"; the street knows better. Their power runs on the **debt-web** — who owes whom, going back thirty years. Vouch into it and you have kin; cross it and the whole district remembers.
 
-**Ironclad Martial (and its deserters) — the private army and its castoffs.** Ironclad is the milspec PMC that sells the Ten their kill-teams (the Iron Writ). Its castoff gear — salvaged combat-frames, mil-surplus arms — is worn openly in the Flats as street chrome. Just as common are **Ironclad deserters** working the Flats as enforcers-for-hire and "insurance": polite until they aren't. Hit a run that touches real Ironclad property and their retrieval contractors come, and they don't shop politely.
+**Ironclad Martial (and its deserters) — the private army and its castoffs.** Ironclad is the milspec PMC that sells the Twelve their kill-teams (the Iron Writ) — the open-market sword. **Aequitas Mandate** is the other one: Council-only, AEQ seal, Seal Wardens. You cannot buy the Mandate. You can buy Ironclad, or steal its castoffs. Salvaged combat-frames and mil-surplus arms are worn openly in the Flats as street chrome. Just as common are **Ironclad deserters** working the Flats as enforcers-for-hire and "insurance": polite until they aren't. Hit a run that touches real Ironclad property and their retrieval contractors come, and they don't shop politely.
+
+**Lazarus Extract — the ambulance your roof already paid.** Lifestyle upkeep includes a Lazarus contract (`26`). Low is a delayed soft bus; Elite is a white door. Caduceus is the clinic. Laz is the arrival. Squatter pays cash crisis rates or waits.
 
 **Caduceus Vitalis & the ripperdocs — you rent your body from them.** Caduceus owns health itself; its deniable black clinic (the **Grafthouse**) pushes medicine and chrome down into the Flats. Beneath it, the unlicensed **ripperdocs** are a pillar of low-Lifestyle life — cheaper, no records, no guarantees. Street chrome down here is scarred, mismatched, and proud: worn like a tattoo that says I chose this and I own it outright.
 

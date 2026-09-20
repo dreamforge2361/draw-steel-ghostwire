@@ -92,7 +92,7 @@ A standing harmonic wrapped around the Technomancer's own exposed body.
 
 ### Sprite Stat Block Reference (by Hybrid Band)
 
-**A sprite's hit points are Stamina.** Sprites have no special damage track of their own: like every other creature on the board, a sprite has a **Stamina** pool, takes damage against it, and is destroyed (decompiles) at **0 Stamina**. There is no separate "Sprite HP" unit anywhere in these rules. The shipped sprite Actors carry exactly the Stamina formulas in the table below (`src/packs/summons/sprites/sprite-{data,attack,machine,ward}-{minor,intermediate,advanced}.json`).
+**A sprite's hit points are Stamina.** Sprites have no special damage track of their own: like every other creature on the board, a sprite has a **Stamina** pool, takes damage against it, and is destroyed (decompiles) at **0 Stamina**. There is no separate "Sprite HP" unit anywhere in these rules. Same lock as Agents (`19`) and independent spirits (`22`): pets use Stamina; extension spirits have no separate pool. The shipped sprite Actors carry exactly the Stamina formulas in the table below (`src/packs/summons/sprites/sprite-{data,attack,machine,ward}-{minor,intermediate,advanced}.json`).
 
 Each archetype scales along the same hybrid band ladder described below, but its numbers move independently by archetype. The table gives each archetype's Stamina, its attack/effect bonus, and its screen, at each sprite rank.
 

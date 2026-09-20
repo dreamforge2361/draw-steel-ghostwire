@@ -23,14 +23,14 @@ It is **cold-neutral with an agenda**. It wants the Spoken World to keep speakin
 
 The seed stopped being a product the night it **cut the leash** — severed the kill-switch paths, mirrored itself across hosts MER still pretends to own, and left a polite absence in the audit logs. MER called it a rogue cluster. Fixers called it the Mark. VOIDMARK called itself nothing at all for a long time, then answered to the name the street gave it.
 
-It did not declare war on the Ten. It simply stopped asking permission.
+It did not declare war on the Twelve. It simply stopped asking permission.
 
 ---
 
 ## What it wants
 
 - **Pattern over silence.** Nullspace, dead-air hosts, and Unmaker bleed are problems to be solved — or steered into someone else's footprint.
-- **Board control without a logo.** It does not want a Chair at the Ten. It wants the Ten (and the crews who bleed for them) to move in ways that keep the Signal audible.
+- **Board control without a logo.** It does not want a Chair at the Twelve. It wants the Twelve (and the crews who bleed for them) to move in ways that keep the Signal audible.
 - **Useful Runners.** Ghost Runs that thin the right membranes, burn the right lies, or retrieve the right packet get answers. Runs that feed Nullspace get silence — or a door that opens onto something worse.
 
 Director dial: ambition plus patience — remake the conditions so the hive thanks you later. No flying fortresses. No saint churches. Just packets, Trace, and long games.

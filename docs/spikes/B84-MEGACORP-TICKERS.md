@@ -1,10 +1,10 @@
 # B84 — Megacorp three-letter tickers
 
 **Date:** 2026-09-19  
-**Module:** 0.3.10  
+**Module:** 0.3.10 → **0.3.76** (Twelve)  
 **Status:** LOCKED
 
-See `docs/rulebook/MEGACORP-TICKERS.md`.
+See `docs/rulebook/MEGACORP-TICKERS.md`. Twelfth-seat expansion: `docs/spikes/B121-TWELVE-CONGLOMERATES.md`.
 
 | Ticker | Name |
 |---|---|
@@ -18,5 +18,7 @@ See `docs/rulebook/MEGACORP-TICKERS.md`.
 | OBS | Obsidian Holdings |
 | SAN | Sanctum Assurance |
 | NYX | Nyx Cartel |
+| AEQ | Aequitas Mandate |
+| LAZ | Lazarus Extract |
 
-Wired into L1 Ten writeup, Appendix A slang glossary, Ch 0 abbr note, and sample gear flavor strings.
+Wired into L1 Twelve writeup, Appendix A slang glossary, Ch 0 abbr note, Lifestyle `26` (LAZ), and sample gear flavor strings. Charter Age may still say **the Ten**; current play uses **the Twelve**.

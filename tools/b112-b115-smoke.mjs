@@ -51,18 +51,20 @@ ok(!tokenArtForNode({ tokenStyle: "../secret" }), "tokenStyle rejects path junk"
 const library = readBomFreeJson("assets/tokens/wired/library.json");
 const catalogIds = ["light-control", "maglock", "black-ice", "normal-ice", "mechanical", "turret-controls", "cam-controls", "data-vault"];
 const atlasIds = ["node-relay", "node-host", "node-segment"];
-const hostTickers = ["HAL", "FER", "MER", "CAD", "IRN", "ARG", "VER", "OBS", "SAN", "NYX"];
+const hostTickers = ["HAL", "FER", "MER", "CAD", "IRN", "ARG", "VER", "OBS", "SAN", "NYX", "AEQ", "LAZ"];
 const deviceStyles = library.styles.filter(s => s.family !== "atlas");
 const atlasStyles = library.styles.filter(s => s.family === "atlas" && !s.hostTicker);
 const hostStyles = library.styles.filter(s => s.hostTicker);
-ok(NODE_TOKEN_LIBRARY.length === 21 && library.styles.length === 21, "catalog is 8 device + 3 atlas + 10 megacorp Hosts");
+ok(NODE_TOKEN_LIBRARY.length === 23 && library.styles.length === 23, "catalog is 8 device + 3 atlas + 12 megacorp Hosts");
 ok(deviceStyles.length === 8 && NODE_TOKEN_LIBRARY.filter(s => s.family !== "atlas").length === 8, "B116 device catalog is 8 styles");
 ok(NODE_TOKEN_LIBRARY.filter(s => s.family !== "atlas").map(s => s.id).join(",") === catalogIds.join(","), "device catalog id order is the locked full set");
 ok(atlasStyles.map(s => s.id).join(",") === atlasIds.join(","), "atlas styles are node-relay / node-host / node-segment");
 ok(atlasStyles.every(s => s.placeholder === false), "atlas rows are not placeholders");
 ok(atlasStyles.every(s => s.family === "atlas"), "atlas rows keep family=atlas");
-ok(hostStyles.map(s => s.hostTicker).join(",") === hostTickers.join(","), "megacorp Host tickers are the locked Ten");
-ok(hostStyles.every(s => s.family === "atlas" && s.altitude === "region" && s.placeholder === false && s.id === `node-host-${s.hostTicker.toLowerCase()}`), "megacorp Hosts are atlas region skins");
+ok(hostStyles.map(s => s.hostTicker).join(",") === hostTickers.join(","), "megacorp Host tickers are the locked Twelve");
+ok(hostStyles.every(s => s.family === "atlas" && s.altitude === "region" && s.id === `node-host-${s.hostTicker.toLowerCase()}`), "megacorp Hosts are atlas region skins");
+ok(hostStyles.filter(s => s.placeholder).map(s => s.hostTicker).join(",") === "AEQ,LAZ", "AEQ/LAZ Hosts are placeholders until plates land");
+ok(hostStyles.filter(s => !s.placeholder).every(s => s.placeholder === false), "Charter Ten Hosts still ship art");
 ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.png === s.png && row.name === s.name && row.autoKind === s.autoKind && Boolean(row.placeholder) === Boolean(s.placeholder) && row.family === s.family && row.altitude === s.altitude && row.hostTicker === s.hostTicker)), "mjs catalog matches library.json rows");
 ok(library.styles.filter(s => s.autoKind).map(s => s.id).join(",") === "light-control,maglock,cam-controls", "autoKinds are Light / Maglock / Cam only");
 for (const style of deviceStyles) {
@@ -75,7 +77,7 @@ ok(tokenSrcForStyle("node-relay")?.endsWith("/node-relay.webp") && tokenSrcForSt
 ok(tokenSrcForStyle("node-host-hal")?.endsWith("/node-host-hal.webp"), "megacorp Host HAL resolves");
 ok(tokenArtForNode({ tokenStyle: "node-host-nyx" })?.endsWith("/node-host-nyx.webp"), "tokenArtForNode megacorp Host NYX");
 ok(library.styles.find(s => s.id === "node-host")?.name === "Host" && !library.styles.find(s => s.id === "node-host")?.hostTicker, "generic node-host stays default Host");
-for (const style of [...deviceStyles, ...atlasStyles, ...hostStyles]) {
+for (const style of [...deviceStyles, ...atlasStyles, ...hostStyles.filter(s => !s.placeholder)]) {
   const stem = style.png.replace(/\.png$/i, "");
   const png = `assets/tokens/wired/${style.png}`;
   const webp = `assets/tokens/wired/${style.file}`;

@@ -80,6 +80,14 @@ Do not over-stack leaders and solos in the same beat unless the fiction is a tru
 
 Open the Ghostwire Bestiary (or any Actor card you are about to reskin) and apply the firearms / chrome doctrine below. Prefer existing Actors over inventing math at the table. If the Run Generator (B39) already named opposition, use those Actors and escalate from there.
 
+**Corp security flavors (do not invent Actors here):**
+
+- **IRN** Ironclad Martial / the Iron Writ — open-market PMC. The usual private-corp response and the crew’s most common hired rival muscle.
+- **HAL** Aureole Security — HALO’s private army. Lit-world peacekeepers; not for sale to other seats.
+- **SAN** Grey Ledger — surveillance, records, private law and intel. They audit you; they do not sell a Council badge.
+- **AEQ** Aequitas Mandate / Seal Wardens — **Council-only.** Congress, Chair, or pooled Conglomerate authority. Never a private party, runner, gang, or a single mega acting alone. If the warrant is real, Wardens are the opposition; if a corp wants deniable muscle, they hired Ironclad. Lore: L1; tickers: `docs/rulebook/MEGACORP-TICKERS.md`.
+- **LAZ** Lazarus Extract / White Door Flight — trauma extract, not security. They arrive for a contracted body (`26`). Do not run them as a PMC unless the extract is the fight.
+
 ### 4. Place boards and clocks
 
 Decide which board is primary: meatspace, Wire, or both. If both are live, note who is Linked / Overlay / Jacked In and which node’s Trace Alert matters (`21`). Optional: a short escape or extraction clock so the fight has an ending condition besides “everyone drops.”

@@ -89,7 +89,7 @@ Agents are software constructs you compile from your deck — **Probe** (recon /
 | **Intermediate (commanded)** | 4–7 | Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round. |
 | **Advanced (independent)** | 8–10 | Each Agent takes its own turn in the round. |
 
-**Stamina.** An Agent's Stamina is archetype base + (**Logic × Level**), stamped when it compiles:
+**Stamina.** An Agent's hit points are ordinary **Stamina** — same pet-HP lock as sprites (`20`) and independent spirits (`22`). There is no separate Agent HP unit. Stamina is archetype base + (**Logic × Level**), stamped when it compiles:
 
 | Archetype | Minor (L1–3) | Intermediate (L4–7) | Advanced (L8–10) | Job |
 |---|---|---|---|---|

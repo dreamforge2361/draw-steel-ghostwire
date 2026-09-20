@@ -35,7 +35,7 @@ modules/draw-steel-ghostwire/assets/tokens/wired/node-host.webp
 modules/draw-steel-ghostwire/assets/tokens/wired/node-segment.webp
 ```
 
-## Megacorp Host styles (Ten Conglomerates, 0.3.54)
+## Megacorp Host styles (Twelve Conglomerates, 0.3.54 / 0.3.76)
 
 Generic **Host** (`node-host`) stays the default. Each conglomerate also ships a Host skin. Auto-nodes stay Light / Maglock / Cam — these are Director-picked atlas Hosts, not device defaults.
 
@@ -51,8 +51,10 @@ Generic **Host** (`node-host`) stays the default. Each conglomerate also ships a
 | `node-host-obs` | Host — Obsidian Holdings (OBS) | `node-host-obs.png` + `node-host-obs.webp` |
 | `node-host-san` | Host — Sanctum Assurance (SAN) | `node-host-san.png` + `node-host-san.webp` |
 | `node-host-nyx` | Host — Nyx Cartel (NYX) | `node-host-nyx.png` + `node-host-nyx.webp` |
+| `node-host-aeq` | Host — Aequitas Mandate (AEQ) | **Pending** `node-host-aeq.png` + `node-host-aeq.webp` (`placeholder: true`) |
+| `node-host-laz` | Host — Lazarus Extract (LAZ) | **Pending** `node-host-laz.png` + `node-host-laz.webp` (`placeholder: true`) |
 
-Tickers locked: `docs/rulebook/MEGACORP-TICKERS.md`. Do **not** regenerate.
+Tickers locked: `docs/rulebook/MEGACORP-TICKERS.md`. AEQ/LAZ Host + brand plates are Michael drop-ins — do **not** generate. Brand marks: `assets/brands/megacorps/brand-aeq.{png,webp}` and `brand-laz.{png,webp}`. Do **not** regenerate existing Ten plates.
 
 **Endpoint** (`node-endpoint`) is optional v1.1 — a dig-down leaf that opens a meatspace room. Until then, reuse Host with a depth pip. Do not add a fourth v1 atlas altitude.
 

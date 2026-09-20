@@ -1,0 +1,49 @@
+{
+  "_id": "s0Zp8wimnJx3ZOPX",
+  "_key": "!journal!s0Zp8wimnJx3ZOPX",
+  "name": "GHOSTWIRE.Lore.Journals.LazarusExtract",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-laz.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 1200000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "n7GQK3BvssPxwi5Q",
+      "_key": "!journal.pages!s0Zp8wimnJx3ZOPX.n7GQK3BvssPxwi5Q",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*Lazarus Extract (LAZ) — brand plate pending.* Expected files: `assets/brands/megacorps/brand-laz.{png,webp}` (PNG 1254² + 1024² WebP). Wired Host skin: `assets/tokens/wired/node-host-laz.{png,webp}`. Michael drops plates; do not invent art in-repo.\n\n**LAZ** — Lazarus Extract\n\n**Domain:** Trauma rescue, hot extraction, body recovery\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><em>Lazarus Extract (LAZ) — brand plate pending.</em> Expected files: <code>assets/brands/megacorps/brand-laz.{png,webp}</code> (PNG 1254² + 1024² WebP). Wired Host skin: <code>assets/tokens/wired/node-host-laz.{png,webp}</code>. Michael drops plates; do not invent art in-repo.</p>\n<p><strong>LAZ</strong> — Lazarus Extract</p>\n<p><strong>Domain:</strong> Trauma rescue, hot extraction, body recovery</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "LAZ",
+      "brand": "assets/brands/megacorps/brand-laz.webp"
+    }
+  }
+}

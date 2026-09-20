@@ -8,7 +8,7 @@
 > A cyberpunk fantasy of ghosts, chrome & the machine.  
 > Break free of the Machine. Run the Wire.
 
-Ossian Reach, the Ten who own it, the Wired that watches it, and the war breaking up through the floor. Know the world before you run it.
+Ossian Reach, the Twelve who own it, the Wired that watches it, and the war breaking up through the floor. Know the world before you run it.
 
 ## Cosmology & the Great Conflict
 
@@ -344,19 +344,19 @@ The corporate axis of the war The corps are not cartoon villains, and most are n
 
 Rivalry — the shadow war between corps The corps are not a united front — they are locked in perpetual, deniable conflict for market, tech, and territory. Open war between sovereigns is too expensive, so they fight in the shadows: corporate espionage, sabotage, extraction, and assassination — carried out by deniable assets. That deniable asset is, canonically, the player crew. The entire runner economy exists because corps need hands they can disavow. This is the setting's engine of employment: one corp hires the crew to hit another, and every job is a move in a war the corps will never admit they're fighting — sitting, unknowingly, atop the far older war beneath.
 
-## The Corporate Congress & the Ten
+## The Corporate Congress & the Twelve
 
-The government is a boardroom. The old nations are dead; the Corporate Congress of the Ten sits where a state used to. The campaign's default hive hosts all Ten and the Sunlit Chair.
+The government is a boardroom. The old nations are dead; the Corporate Congress of the Twelve sits where a state used to. The campaign's default hive hosts all Twelve and the Sunlit Chair. The Charter Age seated **the Ten**; two later seats — **AEQ** and **LAZ** — made the present roster. Historical flashbacks may say Ten. Current play uses Twelve.
 
-**Megacorp tickers (LOCKED):** **HAL** = HALO Ascendant, **FER** = Ferrum Dynastic, **MER** = Meridian Signal, **CAD** = Caduceus Vitalis, **IRN** = Ironclad Martial, **ARG** = Argent Exchange, **VER** = Verdant Provision, **OBS** = Obsidian Holdings, **SAN** = Sanctum Assurance, **NYX** = Nyx Cartel.
-Street shorthand: “an **IRN** contract,” “**MER** hosts,” “**CAD** clinic.” Full table: `docs/rulebook/MEGACORP-TICKERS.md`.
+**Megacorp tickers (LOCKED):** **HAL** = HALO Ascendant, **FER** = Ferrum Dynastic, **MER** = Meridian Signal, **CAD** = Caduceus Vitalis, **IRN** = Ironclad Martial, **ARG** = Argent Exchange, **VER** = Verdant Provision, **OBS** = Obsidian Holdings, **SAN** = Sanctum Assurance, **NYX** = Nyx Cartel, **AEQ** = Aequitas Mandate, **LAZ** = Lazarus Extract.
+Street shorthand: “an **IRN** contract,” “**MER** hosts,” “**CAD** clinic,” “an **AEQ** seal,” “a **LAZ** extract.” Full table: `docs/rulebook/MEGACORP-TICKERS.md`.
 
 
-**HAL** — HALO Ascendant — Orbital, energy, and life-support. The conglomerate that owns the sky: solar arrays, orbital habitats, the power and air the hives breathe. Serene, luminous, paternalist branding — the “benevolent” face of the Ten. War-role: denier. It sells the dream that the world is fine; nothing threatens the light like admitting the dark. Sub-corp: Aureole Security — immaculate white-armored corporate peacekeepers, the PR-friendly private army. 2. **FER** — Ferrum Dynastic — Heavy industry, construction, the hive superstructure itself. Ancient old-money dynasty that literally built the hives and maintains their bones; decaying gothic grandeur behind the girders. War-role: complicit (buried). Its foundations run down into the Sinks, and it has known for generations what settles in the deep dark — and paid to keep it quiet. Sub-corp: Deepworks Excavation — the tunneling/undercity division that goes where corruption pools. 3. **MER** — Meridian Signal — The Wired, telecom, media, information. Owns the backbone of the net and the narrative that runs on it; the conglomerate that decides what the world believes. War-role: door-opener (leading “why now” candidate). Its deep-Wired R&D is the ambition most likely to have worn the thinnest membrane in creation through (Ch. 9, Ch. 23). Sub-corp: Blacklight Systems — the classified deep-net research arm, source of “rogue AI” incidents.
+**HAL** — HALO Ascendant — Orbital, energy, and life-support. The conglomerate that owns the sky: solar arrays, orbital habitats, the power and air the hives breathe. Serene, luminous, paternalist branding — the “benevolent” face of the Twelve. War-role: denier. It sells the dream that the world is fine; nothing threatens the light like admitting the dark. Sub-corp: Aureole Security — immaculate white-armored corporate peacekeepers, the PR-friendly private army. 2. **FER** — Ferrum Dynastic — Heavy industry, construction, the hive superstructure itself. Ancient old-money dynasty that literally built the hives and maintains their bones; decaying gothic grandeur behind the girders. War-role: complicit (buried). Its foundations run down into the Sinks, and it has known for generations what settles in the deep dark — and paid to keep it quiet. Sub-corp: Deepworks Excavation — the tunneling/undercity division that goes where corruption pools. 3. **MER** — Meridian Signal — The Wired, telecom, media, information. Owns the backbone of the net and the narrative that runs on it; the conglomerate that decides what the world believes. War-role: door-opener (leading “why now” candidate). Its deep-Wired R&D is the ambition most likely to have worn the thinnest membrane in creation through (Ch. 9, Ch. 23). Sub-corp: Blacklight Systems — the classified deep-net research arm, source of “rogue AI” incidents.
 
-4. **CAD** — Caduceus Vitalis — Biotech, pharma, cyberware-flesh interface, medicine. Owns health itself — you rent your body's upkeep from it. Clinical, smiling, ruthless. War-role: complicit-adjacent. Its forbidden bio- and taint-research (Ch. 5) treads the line between cure and defacement. Sub-corp: Grafthouse — the black-clinic division doing the cyber/bio work no one will license. 5. **IRN** — Ironclad Martial — Arms, security, private military, the mercenary trade. The conglomerate of war-for-hire; supplies the muscle and the milspec gear (Availability T1, Ch. 6). Blunt, professional, everywhere. War-role: denier turning door-opener. It fights the Incursion's symptoms as “insurgency” and sells the weapons, never naming the enemy. Sub-corp: The Iron Writ — elite deniable kill-team contractors; the crew's most dangerous rival muscle. 6. **ARG** — Argent Exchange — Finance, currency, the scrip-and-nuyen standard, credit. The conglomerate that owns money and therefore owns everyone in debt to it — which is nearly everyone. Cold, patient, invisible, arguably the true power behind the First Chair. The overtly Elvani conglomerate — its dynasties, its Chair, and its inner tiers are the engineered aesthetic aristocracy (Ch. 1, the Founding) made corporate flesh: beautiful, slow-aging, and long-lived — old money whose executives measure their careers in centuries rather than decades (see profile below). They are not immortal; they simply outlast everyone who is only mortal. War-role: the coldest denier — to Argent the war is only a risk-adjusted line item. Sub-corp: Reclamation Bureau — debt-enforcement and repossession, the legal face of ruin. 7. **VER** — Verdant Provision — Agriculture, food, water, the wasteland reclamation frontier. Owns the food supply and the tamed edges of the wastes (Ch. 6); the only conglomerate that operates heavily outside the hives. War-role: front-line witness. Its wasteland crews see the Incursion in the open more than anyone and are quietly terrified. Sub-corp: Greenline Rangers — wasteland security and reclamation crews; the setting's frontier operators. 8. **OBS** — Obsidian Holdings — Luxury, entertainment, vice, simsense/experience, the Crown's pleasures. Sells the sedation directly — the dreams the comfortable buy to never have to feel the drift (Ch. 1). Glamorous, decadent, hollow. War-role: unwitting engine of the Null-ward drift made flesh. Sub-corp: Velvet Room — elite simsense/experience houses where the rich dream their agency away. (Fully profiled below.) 9. **SAN** — Sanctum Assurance — Insurance, data, surveillance, private law and “protection.” The conglomerate that watches; owns the records, the cameras, the actuarial soul of every citizen. Bureaucratic, omniscient, quietly menacing. War-role: the archivist that knows. Somewhere in Sanctum's sealed data is proof the war is real — and a policy against admitting it. Sub-corp: The Grey Ledger — corporate intelligence and internal-affairs enforcement. (Fully profiled below.) 10. **NYX** — Nyx Cartel — The legitimized underworld — the tenth seat, and the one always closest to losing it. Smuggling, black markets, the Sinks economy, the deniable trades the other nine pretend not to use but always do. The youngest, hungriest, most precarious of the Ten. War-role: wild card. Closest to the street, the Sinks, and the exiles (Ch. 6), Nyx sees the corruption the Crown never does — and profits either way. Sub-corp: The Undermarket — the black-market network and fixer web the crew actually buys from.
+4. **CAD** — Caduceus Vitalis — Biotech, pharma, cyberware-flesh interface, medicine. Owns health itself — you rent your body's upkeep from it. Clinical, smiling, ruthless. War-role: complicit-adjacent. Its forbidden bio- and taint-research (Ch. 5) treads the line between cure and defacement. Sub-corp: Grafthouse — the black-clinic division doing the cyber/bio work no one will license. 5. **IRN** — Ironclad Martial — Arms, security, private military, the mercenary trade. The conglomerate of war-for-hire; supplies the muscle and the milspec gear (Availability T1, Ch. 6). Blunt, professional, everywhere. War-role: denier turning door-opener. It fights the Incursion's symptoms as “insurgency” and sells the weapons, never naming the enemy. Sub-corp: The Iron Writ — elite deniable kill-team contractors; the crew's most dangerous rival muscle. 6. **ARG** — Argent Exchange — Finance, currency, the scrip-and-nuyen standard, credit. The conglomerate that owns money and therefore owns everyone in debt to it — which is nearly everyone. Cold, patient, invisible, arguably the true power behind the First Chair. The overtly Elvani conglomerate — its dynasties, its Chair, and its inner tiers are the engineered aesthetic aristocracy (Ch. 1, the Founding) made corporate flesh: beautiful, slow-aging, and long-lived — old money whose executives measure their careers in centuries rather than decades (see profile below). They are not immortal; they simply outlast everyone who is only mortal. War-role: the coldest denier — to Argent the war is only a risk-adjusted line item. Sub-corp: Reclamation Bureau — debt-enforcement and repossession, the legal face of ruin. 7. **VER** — Verdant Provision — Agriculture, food, water, the wasteland reclamation frontier. Owns the food supply and the tamed edges of the wastes (Ch. 6); the only conglomerate that operates heavily outside the hives. War-role: front-line witness. Its wasteland crews see the Incursion in the open more than anyone and are quietly terrified. Sub-corp: Greenline Rangers — wasteland security and reclamation crews; the setting's frontier operators. 8. **OBS** — Obsidian Holdings — Luxury, entertainment, vice, simsense/experience, the Crown's pleasures. Sells the sedation directly — the dreams the comfortable buy to never have to feel the drift (Ch. 1). Glamorous, decadent, hollow. War-role: unwitting engine of the Null-ward drift made flesh. Sub-corp: Velvet Room — elite simsense/experience houses where the rich dream their agency away. (Fully profiled below.) 9. **SAN** — Sanctum Assurance — Insurance, data, surveillance, private law and “protection.” The conglomerate that watches; owns the records, the cameras, the actuarial soul of every citizen. Bureaucratic, omniscient, quietly menacing. War-role: the archivist that knows. Somewhere in Sanctum's sealed data is proof the war is real — and a policy against admitting it. Sub-corp: The Grey Ledger — corporate intelligence and internal-affairs enforcement. (Fully profiled below.) 10. **NYX** — Nyx Cartel — The legitimized underworld — the tenth seat, and the one always closest to losing it. Smuggling, black markets, the Sinks economy, the deniable trades the other eleven pretend not to use but always do. Once the youngest of the Charter Ten; two later seats have since been chartered, and Nyx remains the hungriest and most precarious. War-role: wild card. Closest to the street, the Sinks, and the exiles (Ch. 6), Nyx sees the corruption the Crown never does — and profits either way. Sub-corp: The Undermarket — the black-market network and fixer web the crew actually buys from. 11. **AEQ** — Aequitas Mandate — Conglomerate contracted for security, investigation, and justice. **Sells only to the Council** (Congress / Chair / pooled authority of the Conglomerates). Forbidden to sell to private parties, runners, gangs, or a single mega acting alone. Not Ironclad (open-market PMC), not Aureole (HALO's private army), not Sanctum / Grey Ledger (surveillance and private law). Street: “the Mandate,” “AEQ seal,” “Council badge.” War-role: denier that weaponizes procedure — the Incursion is “disorder,” not named. Sub-corps: Writ Inquest (investigation) / Seal Wardens (security response). 12. **LAZ** — Lazarus Extract — Trauma rescue, hot extraction, body recovery. Distinct from Caduceus (clinics, pharma, chrome-flesh). Paying a Lifestyle band’s upkeep **includes** that band’s Lazarus contract tier — no separate ¥ unless the Director adds a premium rider. Street: “Laz,” “white door,” “extract contract.” Sub-corp: White Door Flight — crash / VTOL trauma teams.
 
-## The Ten — Conglomerate Profiles
+## The Twelve — Conglomerate Profiles
 
 Full fiction profiles harvested from Core/Lore Source Book One Ch. 8. Rules anchors, availability tables, and crosslink chrome stripped. Sanctum Assurance condensed (full source profile is ~4.5k words of ops detail).
 
@@ -369,7 +369,7 @@ and Argent sells the medium, HALO sells the two things no one can refuse: light 
 solar arrays that power the hives, the atmospheric processors that keep the air breathable above the toxic
 Flats, the life-support spine of every arcology Crown — all HALO. It is the oldest kind of power dressed as
 the newest: a conglomerate that took the sun itself as inventory and rents it back to the world by the lumen.
-Its branding is serene, luminous, and relentlessly paternal — the smiling face of the Ten, the corp that
+Its branding is serene, luminous, and relentlessly paternal — the smiling face of the Twelve, the corp that
 keeps the lights on — and that benevolence is precisely the mechanism of its denial. You cannot sell the
 dream that the world is fine and also admit a war is eating it from below. HALO governs from orbit and from
 the Crown, literally and morally above the dark, and it intends to stay there. It is not evil the way Ferrum is; it
@@ -392,7 +392,7 @@ stone and living sunlight. It is the most beautiful and most insulated place on 
 people who rule the world never have to see the world they rule. The higher you climb the Reach, the
 more it becomes true that nothing is wrong — which is exactly why nothing gets fixed.
 - The sub-corp — Aureole Security. HALO's private army: immaculate white-and-gold powered armor,
-the PR-friendliest killers in the Ten. Aureole are the peacekeepers of the lit world — the smiling security
+the PR-friendliest killers in the Twelve. Aureole are the peacekeepers of the lit world — the smiling security
 you see protecting the Halo, the arrays, and the Congress, marketed as guardians rather than soldiers.
 Their real function is curation of appearances: they keep the heights serene, the cameras flattering, and
 the ugly truths of the lower levels safely off the Crown's feeds. An Aureole trooper will save a citizen
@@ -464,21 +464,21 @@ to the truth that the conglomerate selling the world its reality has been lying 
 
 Sector: the legitimized underworld — smuggling, black markets, the Sinks economy, deniable trades.
 War-role: wild card. The tenth seat, and the one always closest to losing it.
-Nyx is the newest and most precarious of the Ten — the underworld that got big enough to charter,
-dragged to the table because the other nine could no longer pretend they didn't use it. Every corp needs
+Nyx is the most precarious of the Twelve — once the newest of the Charter Ten, the underworld that got big enough to charter,
+dragged to the table because the other nine could no longer pretend they didn't use it. Two later seats have since been chartered; Nyx remains the one always closest to losing its place. Every corp needs
 someone to move the goods, launder the deniability, and run the trades the Extraterritoriality Accords won't
 cover in daylight; Nyx made itself that someone for all of them, and turned indispensability into a seat. It is
 despised, courted, and never trusted — and it is the conglomerate the crew is most likely to work with
 rather than against.
 - Leadership — the Cartel does not have a Chair-Executive; it has “the Widow.” Nyx is ruled by a figure
 known only as the Widow — whether one person, a title passed down, or a fiction maintained by a
-council of bosses is genuinely unknown, and Nyx likes it that way. Where the other Nine broadcast their
+council of bosses is genuinely unknown, and Nyx likes it that way. Where the other Eleven broadcast their
 leaders, Nyx's power is a rumor with a body count. What's certain: the Widow claws the tenth seat back
 every time a rival tries to take it, always at a cost, and has an uncanny instinct for what the Crown is
 about to do before it does.
 - Signature location — the Undermarket (“the Churn”). Not a place but a moving place: a black-market
 bazaar that reconvenes in a different dead level of the Sinks (Ch. 6) every cycle, findable only if you're
-told where. Neutral ground where all Ten quietly do business through proxies — a corp exec's fixer and
+told where. Neutral ground where all Twelve quietly do business through proxies — a corp exec's fixer and
 a wasteland exile can haggle at the same stall. The one law is the Cartel's: no violence in the Churn, on
 pain of the Widow's attention.
 - The sub-corp — the Undermarket network. More a franchise than a company: the web of fixers,
@@ -488,7 +488,7 @@ touching Nyx whether they know it or not. This makes Nyx the conglomerate with t
 at the table — usually as a frenemy.
 
 - Agenda (present day). Survive the next Congress ranking. Nyx's seat is perpetually contested by a
-rising rival (the eleventh-chair climber, Ch. 8 hooks), and the Widow is buying, blackmailing, and
+rising rival (the thirteenth-chair climber, Ch. 8 hooks), and the Widow is buying, blackmailing, and
 disappearing her way to keeping it. Nyx also quietly runs the one trade the Crown refuses to see: goods
 in and out of the wastes and the Sinks (Ch. 6), which means Nyx handles the corruption-touched, the
 exiles, and the things that come up from the deep dark — and knows more about the Incursion than any
@@ -496,7 +496,7 @@ denier conglomerate on the Crown.
 - Run hook — “The Tithe.” The Widow hires the crew directly (a rare honor, or a bad sign) for a milk-run
 into the deep Sinks to collect a routine “tithe” from a Nyx outpost gone silent. They find the outpost
 hollowed — not raided, hollowed: a dead-air zone (Ch. 3, the Unmaker's aspect), the people gone quiet
-in the worst sense. Nyx wants it contained and covered up before the other Nine smell weakness and
+in the worst sense. Nyx wants it contained and covered up before the other Eleven smell weakness and
 move on the tenth seat. The crew is caught between the Cartel's need for secrecy and the fact that
 they've just found physical proof of what HALO and Meridian spend fortunes denying — the war,
 surfacing, in the one conglomerate too street-level to look away.
@@ -504,8 +504,8 @@ surfacing, in the one conglomerate too street-level to look away.
 ### Ferrum Dynastic
 
 Sector: heavy industry, construction, and the hive superstructure itself. War-role: complicit (buried) — the
-true knowing antagonist among the Ten (Ch. 3–5).
-Ferrum is the oldest of the Ten — the conglomerate that literally built the hives and still owns their bones:
+true knowing antagonist among the Twelve (Ch. 3–5).
+Ferrum is the oldest of the Twelve — the conglomerate that literally built the hives and still owns their bones:
 the girders, the foundations, the load-bearing megastructure every other corp's arcology is bolted to.
 Where HALO sells the sky and Meridian sells the signal, Ferrum sells the ground — and because it built
 downward, level upon level, for longer than anyone remembers, its foundations run all the way into the
@@ -533,7 +533,7 @@ conglomerate's instrument for managing its corrupted foundations, quietly wallin
 
 thin places its own digging opened, and keeping the tithe's machinery running. Deepworks crews are
 the people who know where the bodies — and the doors — are.
-- Agenda (present day). Endure, as it always has. Ferrum's seat is the most secure of the Ten precisely
+- Agenda (present day). Endure, as it always has. Ferrum's seat is the most secure of the Twelve precisely
 because everyone needs the ground they stand on — but the bargain is getting expensive. As the
 Incursion widens (Ch. 1, the Dark ascendant), the tithe the Deep Hold demands is rising, and Aldric is
 quietly diverting more of the dynasty's blood and treasure to keep the seal managed rather than broken.
@@ -544,7 +544,7 @@ lower-level Ferrum heir — the crack in the house — hires the crew off the bo
 terrified of what a formal inquiry would expose. What the crew finds is that the old seal is failing: the
 tithe is no longer holding, corruption is climbing the foundations toward the living hive, and Ferrum's
 own security is racing them to bury the evidence (and the witnesses). The crew ends up holding the
-worst secret in the world — that one of the Ten has a demon in its basement and the lease is coming
+worst secret in the world — that one of the Twelve has a demon in its basement and the lease is coming
 due — and every choice about what to do with it is a choice about the war itself (Ch. 1's free choice,
 made concrete). Pairs directly with Nyx's “The Tithe” and Meridian's “The Static Sermon” as the third
 face of the same rising Incursion.
@@ -571,7 +571,7 @@ lifespan — she is long-lived, not deathless, and will herself grow old and die
 beside the First Chair through the reigns of a dozen mortal rivals. She does not raise her voice; she does
 not need to. Her genius is time: she can wait out any human executive, outlast any grudge, and call in a
 debt three generations after it was incurred. To Lireth the Incursion is a volatility event — a line item to
-be hedged, insured against, and quietly shorted. She is the coldest denier of the Ten not because she
+be hedged, insured against, and quietly shorted. She is the coldest denier of the Twelve not because she
 disbelieves the war but because she has already priced it.
 
 - Signature location — the Aurelian Exchange (“the Long Floor”). A serene, impossibly tall hall of white
@@ -635,7 +635,7 @@ Caduceus owns health, which means it owns the one thing no one can walk away fro
 Where Ferrum sells the ground and HALO sells the sky, Caduceus sells the flesh — you rent your body's
 upkeep from it, dose by dose, graft by graft, from the anti-rejection meds that keep your chrome from
 killing you to the gene-therapy that keeps a hive-lung breathing in poisoned air. Its brand is the warmest of
-the Ten: clean white clinics, gentle voices, the smiling promise that we can fix that. And it can — which is
+the Twelve: clean white clinics, gentle voices, the smiling promise that we can fix that. And it can — which is
 exactly the trap. Caduceus is the corp you are most grateful to, right up until you read the lease on your
 own biology. It is complicit-adjacent in the war not because it signed a pact like Ferrum, but because its
 restless, brilliant, unregulated hunger to improve the human animal keeps pushing its research across the
@@ -644,7 +644,7 @@ crossed. Half the setting's made-peoples carry a Caduceus lot number somewhere i
 - Leadership — Director-General Iyla Serevance Caduceus, “the Good Doctor.” Caduceus is led not by a
 patriarch or a financier but by its Director-General, currently Iyla Serevance — a warm, tireless,
 genuinely gifted physician-executive who rose through the clinics and never lost the bedside manner.
-She is the most likable head of the Ten, and the most quietly dangerous, because she truly believes she
+She is the most likable head of the Twelve, and the most quietly dangerous, because she truly believes she
 is saving the world one patient at a time — and has convinced herself that every ethical line Caduceus
 crosses is a line the suffering would beg her to cross for them. She does not see the taint-research in
 her deep labs as evil; she sees it as unfinished medicine. Iyla is the face of the setting's central
@@ -691,7 +691,7 @@ prescribed).
 ### Ironclad Martial
 
 Sector: arms, security, private military, the mercenary trade — the manufacture and rental of force itself.
-War-role: denier turning door-opener (Ch. 5) — the most dangerous transition of the Ten, because
+War-role: denier turning door-opener (Ch. 5) — the most dangerous transition of the Twelve, because
 Ironclad's denial does not merely ignore the war, it arms every side of it. The conglomerate that makes the
 weapon, trains the hand, and never names the enemy.
 Ironclad owns violence — not the will to it, which is free, but the means: the rifle, the milspec chrome, the
@@ -700,7 +700,7 @@ Caduceus sells the flesh and Argent sells the medium, Ironclad sells the verb �
 make something happen the hard way, and the corp your enemy hired first. Its brand is blunt, professional,
 
 and everywhere: the security cordon around a Spire lobby, the milspec loadout an Operator saves three
-runs to afford (Availability T1 gear, Ch. 6–7), the riot-line of Goliar enforcers the Ten rent by the shift (Ch.
+runs to afford (Availability T1 gear, Ch. 6–7), the riot-line of Goliar enforcers the Twelve rent by the shift (Ch.
 19). Ironclad does not moralize and does not pretend to; it sells the tool and lets the buyer own the reason.
 That is precisely what makes its war-role lethal. Ironclad has decided the Incursion is not a metaphysical
 catastrophe but an insurgency — a market — and every un-made horror climbing out of the Sinks (Ch. 3) is,
@@ -716,14 +716,14 @@ never lost the flat, unhurried calm of a man for whom violence is simply logisti
 does not exult; he fulfills the contract. To Corvin the Incursion is the greatest procurement opportunity
 in a thousand years and the greatest threat to good order ever recorded — and he holds both truths
 without friction, because his job is not to understand the enemy but to be paid to fight it on every front
-at once. He is the door-opener made flesh: the one head of the Ten who has looked directly at the
+at once. He is the door-opener made flesh: the one head of the Twelve who has looked directly at the
 un-making, filed it under “emergent asymmetric threat,” and written the requisition.
 - Signature location — the Ironclad Bastion (“the Wall”). Ironclad's seat is not a spire and not an
 undercroft but a fortress-arcology straddling the hard edge of Ossian Reach — a self-contained
 militarized district of proving grounds, armories, barracks-towers, and the boardroom-bunkers where
 contracts are signed, planted where the ordered hive meets the run-country of the Flats (Ch. 6) so that
 the Wall faces both ways: outward at the wastes, inward at the population it also polices. It is the one
-seat of the Ten built to withstand a siege, and everyone knows it. Below the parade decks and the client
+seat of the Twelve built to withstand a siege, and everyone knows it. Below the parade decks and the client
 showrooms lie the black ranges — the sealed proving floors where Ironclad tests the ordnance no board
 will license and rehearses the operations no client will admit to buying, including, lately, live-fire trials
 against things retrieved from the dead zones.
@@ -762,17 +762,17 @@ denied), and Caduceus's “The Compassionate Trial” (the Dark prescribed): her
 ### Verdant Provision
 
 Sector: agriculture, food, water, and the wasteland reclamation frontier — the necessities of the body,
-grown. War-role: the front-line witness (Ch. 3, Ch. 5) — the one seat of the Ten that lives where the
+grown. War-role: the front-line witness (Ch. 3, Ch. 5) — the one seat of the Twelve that lives where the
 Incursion surfaces in the open, sees it plainly, and cannot make the rest of the Congress believe what it
 reports.
 Verdant owns sustenance — the grain, the water, and the tamed ground that feed the wage-billions —
-which makes it the strangest and, in its way, the most honest of the Ten: the only conglomerate whose
+which makes it the strangest and, in its way, the most honest of the Twelve: the only conglomerate whose
 product cannot be grown behind arcology walls, so the only one that has to work outside them. Where
 HALO sells the sky and Caduceus sells the flesh, Verdant sells the harvest, and a harvest needs open land.
-That single fact defines the whole conglomerate: while the other nine are hive-corps that treat the wastes
+That single fact defines the whole conglomerate: while the other eleven are hive-corps that treat the wastes
 as somewhere to dump, mine, or fear, Verdant is a frontier corp — its people are out past the last wall, in
 the reclamation zones and the poisoned green, coaxing living crops out of ground the Founding half-killed
-(Ch. 6). Its brand is the warmest and least cynical of the Ten on its face: the corp that feeds you,
+(Ch. 6). Its brand is the warmest and least cynical of the Twelve on its face: the corp that feeds you,
 wholesome and green and necessary. But Verdant's frontier is exactly where the un-making is climbing out
 of the ground (Ch. 3), which puts its field crews eye-to-eye with the oldest war years before anyone at the
 Crown will admit it is happening — and makes Verdant the seat that is quietly, permanently afraid. It is the
@@ -782,14 +782,14 @@ chancellor or a financier but by a Steward-Provost — a title deliberately clos
 CEO, currently held by Halvard Enns, a weathered, plain-spoken agronomist-executive who came up
 
 through the reclamation crews and never learned to lie smoothly, which at the Crown reads as either
-refreshing or fatal depending on the week. Halvard is the one head of the Ten who believes his field
+refreshing or fatal depending on the week. Halvard is the one head of the Twelve who believes his field
 reports — he has read the survey logs from the barren zones, he has lost Greenline crews to ground
 that came back wrong, and he has stood on the Congress floor and said so, in plain words, to a room
 that smiled and changed the subject. He is not naïve; he knows exactly how the game is played and
 refuses to play it, which has cost Verdant standing it can ill afford. His tragedy is credibility: the more
 honestly he names what his people are seeing, the more the deniers (HALO, Ch. 8) file him under
 alarmist and the more Verdant's tenth-seat security erodes.
-- Signature location — the Greenhold (“the Living Wall”). Verdant's seat is unlike any other of the Ten: not
+- Signature location — the Greenhold (“the Living Wall”). Verdant's seat is unlike any other of the Twelve: not
 a spire, not a bunker, not a trading floor, but a vast agro-arcology and reclamation hub straddling the
 boundary between the last hive levels and the open wastes — a green fortress of hydroponic towers,
 seed-vaults, water-reclamation works, and the muster-yards where the Greenline Rangers deploy into
@@ -830,8 +830,8 @@ water reads dead, and the Rangers who worked it came back emptied (Ch. 3), or di
 all. The post's last survey log is a piece of the barren-zone archive, and it proves what Halvard has
 been saying to a room that won't listen: the Incursion is eating the frontier from the outside in, and
 Verdant has been burying its own dead to keep the harvests believable and the seat secure. The crew
-ends up holding the witness's evidence — the one seat of the Ten that sees the war, and the reason it
-still can't make the other nine admit it. Completes the war's corporate faces from the frontier: where
+ends up holding the witness's evidence — the one seat of the Twelve that sees the war, and the reason it
+still can't make the other eleven admit it. Completes the war's corporate faces from the frontier: where
 Ferrum endured it, HALO denied it, Caduceus prescribed it, and Ironclad sold it, Verdant simply watched
 it come, and could not get anyone to look.
 
@@ -844,13 +844,13 @@ Obsidian owns pleasure — the clubs and the simsense houses, the designer highs
 the whole glittering economy of feeling good that the wage-billions buy to make the drift bearable. Where
 HALO sells the sky and Caduceus sells the flesh, Obsidian sells the escape from having to feel anything at
 all, and in a world quietly at war with the Silence (Ch. 1), that is the most seductive product on the market. It
-is the most glamorous of the Ten and the hollowest: a conglomerate whose entire brand is the beautiful
+is the most glamorous of the Twelve and the hollowest: a conglomerate whose entire brand is the beautiful
 surface, the perfect night, the experience you can't get anywhere else — and beneath the shine, an
 industrial apparatus for manufacturing the one thing the Dark most wants a soul to feel, which is nothing.
 Obsidian does not deny the war or fight it or sell weapons for it; it makes the war pleasant not to think
 about. Its danger is not malice but appetite: it has found that numbness is the most profitable good in the
 hive, and it will keep selling it right up to the edge of the Silence, because the market never stops asking for
-more. Street-level, Obsidian is the most touchable of the Ten — every runner has bought its product,
+more. Street-level, Obsidian is the most touchable of the Twelve — every runner has bought its product,
 worked its clubs, chased a mark through its simsense dens, or watched a crewmate lose themselves in a
 better dream than the one they're living.
 - Leadership — Curator Vashti Lorne, "the Perfect Host." Obsidian is led not by a CEO or a chairman but
@@ -915,12 +915,12 @@ Sector: insurance, data, surveillance, and private law — the actuarial soul of
 archivist that knows — the one seat whose sealed data already contains the proof the war is real, held
 behind a policy that forbids ever admitting it.
 Sanctum owns knowing — the records, the cameras, the actuarial tables, the risk models, the private-law
-enforcement that decides who is liable and who is protected. Where the other nine sell a thing, Sanctum
-sells certainty about the thing: it insures the Ten's assets, underwrites their ventures, watches their streets,
+enforcement that decides who is liable and who is protected. Where the other eleven sell a thing, Sanctum
+sells certainty about the thing: it insures the Twelve's assets, underwrites their ventures, watches their streets,
 adjudicates their disputes, and in the doing it has quietly become the conglomerate that sees everything —
 the great eye and the great ledger of the Machine, the seat that knows more about every corp, every
 citizen, and every anomaly than any of them knows about itself. It is bureaucratic, patient, and quietly the
-most menacing of the Ten, because its power is not force or money but information and the calm authority
+most menacing of the Twelve, because its power is not force or money but information and the calm authority
 to decide what is true. Sanctum does not need an army; it has your file. And buried in that vast, sealed
 archive — because Sanctum's whole business is pricing risk, and the un-making is the ultimate uninsurable
 risk — is the thing that makes it the setting's most dangerous keeper of secrets: Sanctum has already
@@ -936,7 +936,7 @@ anything in thirty years. She is not cruel; she is actuarial — every human cat
 every death a settled or contested claim, every anomaly a variance to be modeled and reserved against.
 She is almost certainly the single best-informed person alive about the true state of the world, because
 the data flows to her desk and she has the cold clarity to read it — which means Divna Coll may be the
-one head of the Ten who actually knows there is a war, has quantified it, and has made the deliberate,
+one head of the Twelve who actually knows there is a war, has quantified it, and has made the deliberate,
 documented decision to keep pricing around it in silence rather than name it and break the market.
 - Signature location — the Actuarium ("the Long Ledger"). Sanctum's seat is a windowless data-fortress
 in the upper tiers (Ch. 6) — less a headquarters than a vault, a sealed grey monolith of
@@ -982,33 +982,171 @@ than any corporate secret: it is Sanctum's own actuarial proof of the Incursion 
 
 *[Profile condensed for the primer — full Sanctum Assurance dossier remains in the Lore Source Ch. 8 extract.]*
 
+### Aequitas Mandate
+
+Sector: security, investigation, and justice — the Council's exclusive sword. War-role: denier that
+weaponizes procedure (Ch. 3–5). The Incursion is not named here. It is **disorder**.
+Aequitas Mandate owns the one thing Ironclad will sell to anyone and HALO will only spend on itself: a
+badge that is supposed to mean the Congress, not a buyer. Where Ironclad Martial sells force on the open
+market, Aureole Security is HALO's private army, and Sanctum's Grey Ledger watches, files, and prices
+risk, Aequitas is contracted to **investigate, secure, and adjudicate** — and it may sell those services
+**only to the Council**. The client is the Corporate Congress, the Chair, or the pooled authority of the
+seated Conglomerates acting as a body. A private party, a runner crew, a gang, a fixer, or **a single mega
+acting alone** cannot buy an AEQ contract. That lock is the whole brand. Street names it “the Mandate,”
+“the AEQ seal,” “Council badge.” Show the seal and doors that would not open for Ironclad open — not
+because the street loves justice, but because the Congress has named the room a matter of order.
+Its branding is austere, civic, and older than it is: bronze-and-black seals, closed-file typography, the
+fiction that somewhere above the Flats a law still exists that is not a price list. That fiction is load-bearing.
+Aequitas cannot admit a cosmic war and still be the corp that files the war as a civil disturbance. So it
+doesn't. Dead-air is a containment failure. A hollowed block is a riot that forgot to end. A thing climbing
+out of the Sinks is an unlicensed gathering. The Mandate's genius is not ignorance. It is **procedure** —
+the ritual of naming that makes the unnamed illegal and the illegal closable.
+- **Council-only sales (LOCKED).** AEQ may not take private retainers. A Chair-signed warrant or a
+Congress resolution is a client. An IRN-style private contract is not. If a single conglomerate wants AEQ
+on a problem, it must put the problem on the Congress floor — or hire Ironclad like everyone else. Directors:
+a crew cannot buy Seal Wardens. A crew can be **the disorder** a warrant names, the deniable hands a
+Council member uses to manufacture the paper, or the team hired to steal the file before the seal is
+stamped.
+- Leadership — Justiciar-General Mireille Ordo, “the Closed File.” Aequitas is led by a Justiciar-General —
+a rank that says the conglomerate is one long case — currently Mireille Ordo, a spare, precise woman who
+speaks in holdings and writes in seals. She is not a soldier and not a priest. She is the person who decides
+when a thing has been sufficiently described to be closed. Ordo came up through Writ Inquest, not through
+anyone's private army, and she treats the Council-only rule as theology: the moment AEQ sells to a
+private buyer, it becomes Ironclad with better stationery, and the Congress loses the last instrument that
+is supposed to answer to all of them at once. She is a denier of a different temperature than Vaine. Vaine
+smoothes. Ordo **files**. The Incursion, to her, is a pattern of disorder that has not yet been given a
+statute. She will not give it one. Naming it would make it a war, and a war is not a case she is chartered
+to try.
+- Signature location — the Mandate Hall (“the Closed Court”). Aequitas sits where the Congress can see
+it and the street cannot casually enter: a windowless civic fortress in the upper Grid, all bronze seals and
+quiet corridors, built against the Congress hall so a warrant can walk from vote to service without crossing
+weather. The public face is a reception floor that will not take your name unless a Council instrument
+already has it. Below that are the Inquest stacks — the living files — and the Seal armory, where Wardens
+kit for a response that is always, officially, the enforcement of a document. The Closed Court does not
+look like a barracks. That is the point. It looks like a place where the law still happens, which is the most
+dangerous kind of theater in a hive that replaced law with extraterritoriality.
+- The sub-corps — Writ Inquest and Seal Wardens. **Writ Inquest** is investigation: the teams that build
+the file, serve the paper, and decide what the disorder will be called. They do not kick doors first. They
+arrive with a question and leave with a name the Congress can vote on. **Seal Wardens** are security
+response: the badge that arrives when the Council has already named the room. Wardens are not
+Aureole (they do not smile for feeds) and not the Iron Writ (they do not take freelance). They are
+professional, sealed, and legally present in places private muscle is not supposed to stand. A crew
+touches AEQ three ways — as the disorder in someone else's warrant, as the thieves of a file Writ Inquest
+cannot be seen to lose, or as the deniable hands a Chair faction uses to manufacture the paper the
+Wardens will then enforce.
+- Agenda (present day). Keep the Congress able to issue a client, and keep the client exclusive. Aequitas
+backs the Chair as an institution — currently Vaine's stable sun-lamp — because a functioning Congress
+is the only buyer it is allowed to have. A slipping Chair is an existential threat: no Chair, no warrant; no
+warrant, no Mandate. That is why Ordo will spend to keep the floor voting even when she despises what
+it votes. As the Incursion widens, the agenda curdles into the setting's most elegant denial: AEQ is the
+one corp that could put a Council seal on the war, and its policy is to keep stamping **disorder** until the
+word holds. It leans on Sanctum for the records that make a file look closed, on Meridian to keep
+“Mandate response” on the feeds instead of “war,” and on Ironclad to take the private contracts AEQ
+refuses — which is how the two security empires stay out of each other's throats. Nyx it treats as a
+permanent unlicensed gathering. Lazarus it calls when the disorder leaves bodies.
+- Run hook — “The Unnamed Disorder.” A Writ Inquest case officer — or a Chair staffer off the books —
+hires the crew to serve, steal, or bury a sealed warrant on a “civil disturbance” in a block that has gone
+wrong in the way Deadfall goes wrong. The paper cannot say what the crew can see. If the seal is
+stamped, Seal Wardens will arrive and close a war as a riot. If the seal is leaked, the Congress has to
+admit it sent its exclusive sword after something it will not name. The crew holds the procedure that
+makes the denial legal — and every buyer for that file is also a reason to be filed. Completes the war's
+corporate faces on the axis of law: where Ironclad sold the fight and Sanctum priced the silence,
+Aequitas **closed the case**.
+
+### Lazarus Extract
+
+Sector: trauma rescue, hot extraction, and body recovery — the ambulance that will come if you paid
+your roof. War-role: the witness who files it as trauma (Ch. 3, Ch. 5). Distinct from Caduceus Vitalis.
+Lazarus Extract owns the interval between the wound and the ward. Where Caduceus sells the clinic, the
+pharma, the chrome-flesh lease, and the smile that says we can fix that, Lazarus sells **the arrival** — the
+team that pulls you out of the fire, the wreck, the shootout, the dead-air stairwell, and delivers what is left
+to whoever paid for the meat. It does not own health. It owns **response**. That distinction is the whole
+conglomerate. Caduceus wants you on a subscription for the rest of your life. Lazarus wants you off the
+street in the window the contract bought, logged, billed, and — if the contract says so — returned to the
+address that paid the upkeep. Street names it “Laz,” “white door,” “extract contract.”
+Its branding is clinical urgency dressed as mercy: white-and-signal livery, strobes that cut rain, the
+promise that someone is coming. The promise is real. The fine print is Lifestyle. **Paying a Lifestyle
+band's upkeep includes that band's Lazarus contract tier.** There is no separate ¥ line for the extract
+unless the Director adds a premium rider (a named person, a hotter zone, a quieter recovery, a body
+that must not go to Caduceus). Richer roof, better extract. Squatter is not a customer. Squatter is a
+walk-in — if they can pay cash crisis rates, and if a team even stops.
+- **Lifestyle → contract (LOCKED).** Full table: `docs/raw/26-lifestyle-downtime.md`. Squatter: no
+contract / walk-in cash only. Low: **Basic Extract** — delayed soft ambulance, no hot zone. Middle:
+**Standard Extract** — armed EMT, response clock. High: **Priority Extract** — faster hardened
+ambulance and light escort. Elite: **Absolute / White Door** — VTOL trauma, firefight extraction. The
+band you paid this respite is the contract that answers when you drop. Directors may sell riders. They
+do not invent a second upkeep.
+- Leadership — Extract-Director Sera Voss, “the White Door.” Lazarus is led by an Extract-Director — a
+title that says the conglomerate is one long clock — currently Sera Voss, a compact, sleepless
+operations executive who came up on crash decks and still talks in arrival times. She is not Caduceus's
+Good Doctor. She does not want to perfect you. She wants you **out**. Voss believes, with the sincerity
+of someone who has pulled too many people from too many wrong rooms, that arrival is a moral act
+and diagnosis is someone else's sin. That is how she stays a denier without ever looking away: she has
+seen the hollowed, the dead-air casualties, the crews that came back emptied, and she has written
+**mass trauma / unknown toxin / structural casualty** on every chart because a war is not a billing
+code and Lazarus is not chartered to name one. She is the witness who keeps the Congress extractable
+by refusing to file what she extracted.
+- Signature location — the White Threshold (“the Receiving”). Lazarus's seat is not a hospital-spire and
+not a fortress. It is a mid-hive trauma hangar-complex — pads, crash bays, cold lockers, and the
+always-lit receiving floor where White Door Flight comes home loud. The public levels are the most
+honest place in the Reach: blood on tile, clocks on the wall, no one pretending this is wellness. Sealed
+above the pads is the Absolute wing — Elite contract only — where VTOL frames sit warm and the
+escorts kit for a firefight extract. Sealed below are the quiet lockers: bodies the contract said to recover,
+and a few the contract did not say to explain. The Receiving is where the hive's violence becomes a
+logistics problem, which is the kindest and coldest thing Lazarus does.
+- The sub-corp — White Door Flight. Lazarus's crash and VTOL trauma arm, and the setting's benchmark
+for an ambulance that will shoot back: armed EMTs, hardened frames, and — at Elite — the white-door
+birds that will enter a firefight to take a contracted body out. Flight is not Grafthouse (they do not
+experiment on you in the bay) and not the Iron Writ (they are not there to close a person). They are
+there to **extract**. A crew touches Lazarus three ways — as the client on the clock their Lifestyle paid,
+as the team hired to hit or defend a Receiving locker, or as the people who need a rider because the
+band they paid will not enter the room they are dying in.
+- Agenda (present day). Keep the clocks honest and the corridors open. Lazarus does not chase the
+Chair. It chases response: funded lanes, pad rights, and the Lifestyle bundle that makes every paid roof
+a subscriber. Voss backs whoever keeps extract routes from being turned into a Resource War
+checkpoint — currently Vaine, because a calm Congress is a Congress that does not shoot at ambulances.
+As the Incursion widens, Lazarus becomes the corp that has the most bodies and the least permission
+to say why: White Door Flight is already pulling hollowed people out of dead zones and writing trauma
+on the chart so Caduceus can try to cure it and Sanctum can deny the claim. Its present-day politics:
+stay out of Chair fights, partner with Caduceus at the ward door (never inside the Deep Wards), let
+Argent underwrite the Elite riders, and keep the Receiving's quiet lockers quieter than Sanctum's
+sealed reserves — because Lazarus's archive is not paper. It is people.
+- Run hook — “The White Door.” A Middle-or-better contract — or a premium rider a fixer sold too
+cheap — sends White Door Flight into a block that has gone dead-air. The crew is hired to escort the
+extract, steal the recovered, or stop the bird from leaving with the wrong body. What comes out of the
+room is not a casualty Caduceus can bill. It is the war wearing a trauma code, and Lazarus's own chart
+says so in every way except the words. The job is the Lifestyle rule made flesh: the roof you paid is the
+extract you get, and the extract you get may be the first honest witness the Crown will never read.
+Completes the war's corporate faces on the axis of the body: where Caduceus prescribed the Dark and
+Ironclad sold the fight, Lazarus **arrived**, and wrote it down as an emergency.
+
 <!-- Live PDF-diff 0.2.3: Core Sourcebook PDF pp. 56–61 (Book One Ch. 8 tail) — also in Lore Book V2 PDF same chapters. -->
 
-### What Lies Beneath the Ten
+### What Lies Beneath the Twelve
 
-- Sub-corps and vassal firms. Below the Ten sprawl thousands of lesser corporations — subsidiaries, contractors, vassal firms sworn to a conglomerate, and independents clinging to the gaps. This is the crew's normal employer and target.
+- Sub-corps and vassal firms. Below the Twelve sprawl thousands of lesser corporations — subsidiaries, contractors, vassal firms sworn to a conglomerate, and independents clinging to the gaps. This is the crew's normal employer and target.
 
-- The seatless powers. Corps large enough to matter but not to hold a seat — the ambitious eleventh-chair climbers, and old fallen conglomerates nursing grudges.
+- The seatless powers. Corps large enough to matter but not to hold a seat — the ambitious thirteenth-chair climbers (Kestrel Dynamics, below), and old fallen conglomerates nursing grudges.
 
-- What's left of government. Beneath corporate law, remnants of the old order survive as corporate-administered zones, hollow “public” authorities, and independent enclaves — hive districts, free zones, and wasteland settlements the Ten haven't bothered to absorb. Real self-rule exists only where it isn't yet worth taking.
+- What's left of government. Beneath corporate law, remnants of the old order survive as corporate-administered zones, hollow “public” authorities, and independent enclaves — hive districts, free zones, and wasteland settlements the Twelve haven't bothered to absorb. Real self-rule exists only where it isn't yet worth taking. Aequitas Mandate is **not** leftover government. It is a seated conglomerate that sells justice only to the Council.
 
 ### The Present-Day Congress: Who Holds the Chair
 
-The First Chair is held by HALO Ascendant — and it is starting to slip. Of the Ten, the seat has rested longest and most naturally with HALO Ascendant, the orbital, energy, and life-support conglomerate (roster #1). The logic is almost gravitational: HALO owns the sky — the orbital solar arrays, the power that lights the hives, the atmospheric and life-support systems the Crown itself breathes. When a conglomerate quite literally controls the light and air every other seat depends on, the votes tend to fall its way, and they have for a long generation. HALO governs from above in every sense, and it is the purest denier of the Ten: from orbit, the Incursion is a rumor from the dirty levels far below, and HALO intends to keep it that way. **The Chair-holder — Chancellor Soren Halix Vaine, "the Sunlit Chair."** HALO's seat, and thus the First Chair, is held by Soren Halix Vaine, a serene, sun-warm, immaculately reasonable man who has chaired the Congress for the better part of two decades and genuinely believes he is the adult in the room. He is not a monster and not a fool — he is a steward who has confused keeping the lights on with keeping the world safe, and who treats every report from below (Ferrum's rising tithe, Nyx's hollowed outposts, Meridian's buried anomalies) as a management problem to be smoothed over rather than a war to be fought. His power is the consent of exhaustion: no one else wants the fight of taking the Chair, and Vaine offers stability.
+The First Chair is held by HALO Ascendant — and it is starting to slip. Of the Twelve, the seat has rested longest and most naturally with HALO Ascendant, the orbital, energy, and life-support conglomerate (roster #1). The logic is almost gravitational: HALO owns the sky — the orbital solar arrays, the power that lights the hives, the atmospheric and life-support systems the Crown itself breathes. When a conglomerate quite literally controls the light and air every other seat depends on, the votes tend to fall its way, and they have for a long generation. HALO governs from above in every sense, and it is the purest denier of the Twelve: from orbit, the Incursion is a rumor from the dirty levels far below, and HALO intends to keep it that way. **The Chair-holder — Chancellor Soren Halix Vaine, "the Sunlit Chair."** HALO's seat, and thus the First Chair, is held by Soren Halix Vaine, a serene, sun-warm, immaculately reasonable man who has chaired the Congress for the better part of two decades and genuinely believes he is the adult in the room. He is not a monster and not a fool — he is a steward who has confused keeping the lights on with keeping the world safe, and who treats every report from below (Ferrum's rising tithe, Nyx's hollowed outposts, Meridian's buried anomalies) as a management problem to be smoothed over rather than a war to be fought. His power is the consent of exhaustion: no one else wants the fight of taking the Chair, and Vaine offers stability.
 
-**Why it holds.** The Chair is stable not because HALO is loved but because the alternative is a floor-fight no one has the votes to win cleanly. Argent (Ch. 8 profile) backs Vaine — not from loyalty but because a predictable Chair is good for the interest rate; Lireth is the quiet hand keeping the votes in line. Ferrum backs him because a distracted, above-it-all First Chair never looks down into the Deep Hold. Obsidian and Sanctum drift with the majority. That is four or five seats of inertia — enough, for now.
+**Why it holds.** The Chair is stable not because HALO is loved but because the alternative is a floor-fight no one has the votes to win cleanly. Argent (Ch. 8 profile) backs Vaine — not from loyalty but because a predictable Chair is good for the interest rate; Lireth is the quiet hand keeping the votes in line. Ferrum backs him because a distracted, above-it-all First Chair never looks down into the Deep Hold. Obsidian and Sanctum drift with the majority. Aequitas Mandate backs the Chair as an institution — no Chair, no Council client, no Mandate. Lazarus Extract drifts with whoever keeps extract lanes open (currently Vaine). That is six or seven seats of inertia — enough, for now.
 
 **Why it's slipping.** Meridian Signal's Vera Solenne openly covets the Chair (Ch. 8 profile) and is the declared challenger, assembling votes on the pitch that HALO's from-orbit complacency is why the lit world feels like it's fraying — that the Congress needs a nervous system, not a sun-lamp. She is not wrong, which is what makes her dangerous. The maneuvering between the Sunlit Chair and the Voice is the central Crown-level political engine of the present day: a contest between two deniers over which flavor of denial rules the world, while the thing they both refuse to name climbs the foundations. A crew's paydata, extractions, and sabotage jobs are very often — knowingly or not — ammunition in this fight.
 
-### The Rising Eleventh: Kestrel Dynamics
+### The Rising Thirteenth: Kestrel Dynamics
 
-The eleventh chair has a claimant, and its name is Kestrel Dynamics. The empty eleventh chair (structure, above) is not empty in ambition — there is a corp clawing for a seat right now, and the seat it means to take is the tenth: Nyx Cartel's (Ch. 8 profile), the perpetually precarious underworld seat.
+The thirteenth chair has a claimant, and its name is Kestrel Dynamics. The empty chair past the Twelve is not empty in ambition — there is a corp clawing for a seat right now, and the seat it means to take is still the most precarious of the Charter Ten: Nyx Cartel's (Ch. 8 profile), the underworld seat. Aequitas and Lazarus are newer and harder to unseat (Council sword; Lifestyle extract). Kestrel still hunts Nyx.
 
 **Who they are.** Kestrel Dynamics is a young, sleek, aggressively legitimate logistics-and-security conglomerate — drones, autonomous transport, private couriers, rapid-response contract security. It is everything Nyx is not: clean-branded, above-board, beloved of the wage-public for fast and reliable service, and utterly ruthless beneath the gloss. Where Nyx is the shadow economy, Kestrel is building a legal one that does the same jobs — moving goods, moving muscle, moving deniability — with a corporate logo and a Congress-friendly face. Its founder-CEO, Adrienne Kestrel "the Falcon," is a self-made outsider (not of any old caste-house, pointedly human and proud of it) who has made "we do it in the daylight" her entire brand — and who intends to make Nyx obsolete rather than fight it.
 
-**The play.** Kestrel's climb is a ranking attack, not a coup: every contract it wins from a member of the Ten is a transaction that used to run through Nyx. By making the underworld's services available legally, on-record, and extraterritorially insured (a Sanctum partnership, notably), Kestrel is quietly starving the tenth seat of the one thing that justifies it — indispensability. If Nyx is no longer the only one who can move the deniable trade, the other Nine have no reason to keep a despised cartel at the table when a clean-handed alternative is offering the same thing with better optics.
+**The play.** Kestrel's climb is a ranking attack, not a coup: every contract it wins from a member of the Twelve is a transaction that used to run through Nyx. By making the underworld's services available legally, on-record, and extraterritorially insured (a Sanctum partnership, notably), Kestrel is quietly starving the tenth seat of the one thing that justifies it — indispensability. If Nyx is no longer the only one who can move the deniable trade, the other Eleven have no reason to keep a despised cartel at the table when a clean-handed alternative is offering the same thing with better optics. Kestrel cannot easily replace AEQ (Council-only) or LAZ (Lifestyle-bundled); it still means to make Nyx obsolete.
 
-**Why it matters to the war.** Kestrel is the setting's dark-horse wild card on the Incursion. Officially it has no idea about the Cosmic War — it is a pure-business animal. But its drone-logistics network reaches into wastes, Sinks, and corruption-touched zones that the older Ten avoid, chasing routes Nyx used to own — which means Kestrel is blundering, fast and unwitting, straight into the places the war is surfacing (Ch. 1/3). It is either going to become the first of the Ten to accidentally prove the Incursion is real … or the first to be quietly, wholly hollowed out by it, logo and all.
+**Why it matters to the war.** Kestrel is the setting's dark-horse wild card on the Incursion. Officially it has no idea about the Cosmic War — it is a pure-business animal. But its drone-logistics network reaches into wastes, Sinks, and corruption-touched zones that the older Charter Ten avoid, chasing routes Nyx used to own — which means Kestrel is blundering, fast and unwitting, straight into the places the war is surfacing (Ch. 1/3). It is either going to become the first seatless climber to accidentally prove the Incursion is real … or the first to be quietly, wholly hollowed out by it, logo and all.
 
 **The table-level tension.** This gives every campaign a live clock: the tenth seat is contested now, Nyx (the crew's most common frenemy-employer) is fighting for its life, and a crew's jobs can tip the balance either way. Runs that hurt Nyx help Kestrel and vice versa — and both sides will hire the same crew, sometimes for the same run, from opposite ends.
 
@@ -1016,7 +1154,7 @@ The eleventh chair has a claimant, and its name is Kestrel Dynamics. The empty e
 
 ### When the Truce Breaks: the Resource Wars
 
-The shadow war is the rule; open war is the exception — and the exception has happened before. The Extraterritoriality Accords (structure, above) forbid the Ten from waging open war on one another, and for most of the Congress's history that ban has held, because open war between sovereigns is ruinously expensive and the deniable kind (the runner economy, Ch. 7) is so much cheaper. But the ban has a seam, and every corporate historian knows exactly where it is: the Accords govern conflict between seated corps over hive territory. They say far less about the open wastes — the unclaimed ground beyond the arcologies where the mineral rights, the water tables, the salvage fields, the rare-earth and reactor-grade ore, and the reclamation frontier all lie (Ch. 6). Out there, past the last hive wall, the truce thins to almost nothing.
+The shadow war is the rule; open war is the exception — and the exception has happened before. The Extraterritoriality Accords (structure, above) forbid the Twelve from waging open war on one another, and for most of the Congress's history that ban has held, because open war between sovereigns is ruinously expensive and the deniable kind (the runner economy, Ch. 7) is so much cheaper. But the ban has a seam, and every corporate historian knows exactly where it is: the Accords govern conflict between seated corps over hive territory. They say far less about the open wastes — the unclaimed ground beyond the arcologies where the mineral rights, the water tables, the salvage fields, the rare-earth and reactor-grade ore, and the reclamation frontier all lie (Ch. 6). Out there, past the last hive wall, the truce thins to almost nothing.
 
 **What they fight over.** The hives are built out; the easy resources are long since owned. The growth is all at the edges now — the deep-wastes mineral claims, the buried pre-Founding ruins full of salvageable tech, the aquifers, the reactor-ore veins, and the reclamation land Verdant is slowly making livable (Ch. 8 Verdant / Greenline Rangers). A wasteland claim is not covered by the hive-territory clauses, so when two conglomerates want the same ore vein, there is no clause that clearly forbids them shooting over it. The Accords were written by hive-builders who never imagined the edges would become the prize.
 
@@ -1030,11 +1168,11 @@ The shadow war is the rule; open war is the exception — and the exception has 
 
 ### The New Space Race: the Reach for the Void
 
-The same hunger that's heating the wastes is pushing the Ten off the world entirely. See Ch. 10 for the full treatment — but the political fact belongs here: off-world expansion is now a standing agenda item on the Congress floor, and the scramble for orbital claims, lunar and near-world mineral rights, and the resource-worlds beyond is reshaping the balance of the Ten as fast as anything happening on the Ground. HALO Ascendant holds the sky and means to keep it; the other nine are pouring capital into breaking that monopoly before HALO's head-start becomes permanent rule. The space race and the coming Resource Wars are the same story told at two altitudes: the hives are built out, the easy resources are owned, and the growth — and therefore the next war — is at the edges, whether those edges are past the wasteland wall or past the atmosphere.
+The same hunger that's heating the wastes is pushing the Twelve off the world entirely. See Ch. 10 for the full treatment — but the political fact belongs here: off-world expansion is now a standing agenda item on the Congress floor, and the scramble for orbital claims, lunar and near-world mineral rights, and the resource-worlds beyond is reshaping the balance of the Twelve as fast as anything happening on the Ground. HALO Ascendant holds the sky and means to keep it; the other eleven are pouring capital into breaking that monopoly before HALO's head-start becomes permanent rule. The space race and the coming Resource Wars are the same story told at two altitudes: the hives are built out, the easy resources are owned, and the growth — and therefore the next war — is at the edges, whether those edges are past the wasteland wall or past the atmosphere.
 
 ### The Corporate Church: the Radiant Concord
 
-The Machine sells the sky, the flesh, and the harvest — and one power sells salvation. Rising among and above the Ten is an institution that is not a conglomerate but wears the shape of one: the Radiant Concord (the Concord; colloquially "the Cathedral"), the self-proclaimed corporate church of The Light. Where the Ten own the necessities of the body, the Concord claims the necessity of the soul — it is the official, sanctioned, Congress-tolerated face of faith in a world that genuinely lives inside a Cosmic War (Ch. 1). It runs cathedral-arcologies in the upper Spires, broadcasts luminous liturgy across the Wired (Ch. 9), certifies "licensed clergy," sells indulgence-subscriptions and blessing-tiers, and offers the frightened wage-billions the one product the Ten cannot: the promise that the Word still speaks and that the Concord is its voice. It is the most trusted brand in the hive. It is also the single most dangerous lie in the setting — because the Radiant Concord is not the Light's church at all. It is the Dark One's deepest, quietest door, and almost no one alive knows it.
+The Machine sells the sky, the flesh, and the harvest — and one power sells salvation. Rising among and above the Twelve is an institution that is not a conglomerate but wears the shape of one: the Radiant Concord (the Concord; colloquially "the Cathedral"), the self-proclaimed corporate church of The Light. Where the Twelve own the necessities of the body, the Concord claims the necessity of the soul — it is the official, sanctioned, Congress-tolerated face of faith in a world that genuinely lives inside a Cosmic War (Ch. 1). It runs cathedral-arcologies in the upper Spires, broadcasts luminous liturgy across the Wired (Ch. 9), certifies "licensed clergy," sells indulgence-subscriptions and blessing-tiers, and offers the frightened wage-billions the one product the Twelve cannot: the promise that the Word still speaks and that the Concord is its voice. It is the most trusted brand in the hive. It is also the single most dangerous lie in the setting — because the Radiant Concord is not the Light's church at all. It is the Dark One's deepest, quietest door, and almost no one alive knows it.
 
 **The deception, and why it works.** The tell is theological, and it is hidden in plain sight (Ch. 1): The Light acts softly, indirectly, deniably — never as spectacle, never forced, always able to be doubted, because doubt is what keeps free choice free. The Radiant Concord does the opposite of everything the true Light does. It is loud where the Light is quiet, institutional where the Light is personal, certain where the Light asks faith, and comforting where the Light asks sacrifice. It promises exactly what the cosmology says the Light will never give in this age: rescue without cost, certainty without doubt, a salvation you can purchase and need not carry yourself. That inversion is not incompetence — it is the design. The Dark One cannot create, only twist what the Word has already said (Ch. 1, Ch. 5); the Concord is that principle made into an institution. It takes the true shape of faith and hollows it, selling a counterfeit Light that quietly trains a whole civilization to expect comfort instead of conviction, obedience instead of choice — turning worship itself into a wide, gentle current of the Null-ward drift (Ch. 5), a billion souls easing toward the Silence while singing hymns of the Sun. **Leadership — the Luminary Aurent Solwhit, "the Kind Voice."** The Concord is led by a Luminary — a radiant, beloved, grandfatherly figure whose broadcast sermons calm the hive better than any Obsidian simsense. Aurent Solwhit is the most sincerely loved human being in the Reach, and — the true horror — he may not know what he serves. The best version of him is not a cackling villain but a genuine believer whose Concord was subverted so long ago, so patiently, that its doctrine of soft comfort feels like mercy from the inside; he preaches the Dark's gospel in perfect good faith, which is exactly why it works. **Signature location — the Radiant See ("the Cathedral of the Sun").** The Concord's seat is a soaring cathedral-arcology in the high Spires (Ch. 6), all light-glass and choir-broadcast and warmth, built to feel like the closest thing to heaven the hive can offer — the one place a wage-citizen can go to feel held. Beneath its radiant public levels lie the sealed Reliquary Deep, where the Concord keeps what it must never show: the true relics and true testimony of the Light it has buried, the records of the faithful it has quietly disappeared, and — at the very bottom — the thing it actually kneels to. The Cathedral of the Sun is a thin place wearing the mask of a holy one: a manufactured shrine to the Light standing directly over a door to the Dark. **The sub-corp / order — the Choir of the Silent Sun.** The Concord's deniable inner order and the crew's most insidious opposition: not thugs but inquisitors, confessors, and "pastoral security" — soft-spoken clergy-agents who identify the truly faithful (the real threat), the doubters who ask the wrong questions, and the street-prophets whose Conviction actually works, and who make them recant, disappear, or convert. The Choir does not burn heretics in the street; it counsels them into silence, edits their records, and files them as lapsed. Where a Street-Priest's power is real and costly, the Choir's is theater backed by a hidden, borrowed dark — and a crew that crosses them learns that the gentlest hand in the hive has the coldest grip.
 
@@ -1064,12 +1202,12 @@ though this can never be proven — The Light is never forced (Ch. 1). The Basti
 
 RACE
 owned, and its wastes are turning strange and lethal (Ch. 3, Ch. 6). The growth is gone from the Ground —
-and the Ten, which cannot stop growing without dying, have turned their hunger upward. The present day
+and the Twelve, which cannot stop growing without dying, have turned their hunger upward. The present day
 is a new space race: every conglomerate funding, launching, and fighting to plant claims on the orbital high
 volatiles, and the raw room the home world can no longer supply. It is the same story as the coming
 balance of the Congress as fast as anything on the Ground.
 They stripped the world to the bone and called it civilization. Now they've looked up. There is a great deal of
-dark up there, and the Ten intend to own all of it before anyone asks what's already living in it.
+dark up there, and the Twelve intend to own all of it before anyone asks what's already living in it.
 Why now — the hunger that goes up
 - The Ground is maxed out. Centuries of hive-building have consumed the accessible mineral wealth,
 water, and buildable land (Ch. 6). What remains on-world is either owned, exhausted, or — increasingly
@@ -1087,7 +1225,7 @@ and, past the reach of any accord, in the deniable dark between the worlds.
 The standings — who holds what
 - HALO Ascendant — the incumbent, and the corp with everything to lose. HALO already owns the sky
 (Ch. 8 profile): the orbital solar arrays, the habitats, the life-support spine. The new space race is, above
-all, the other nine trying to break HALO's head-start before it hardens into permanent rule. HALO's
+all, the other eleven trying to break HALO's head-start before it hardens into permanent rule. HALO's
 serene public line is that it is the natural steward of the void as it is of the light; its private terror is that a
 rival plants a self-sustaining off-world foothold HALO doesn't control — because the corp that owns the
 
@@ -1099,7 +1237,7 @@ void-lanes; a claim past the atmosphere is worth nothing you can't defend, and I
 Argent (Ch. 8) finances every launch and holds the lien on every colony. Meridian (Ch. 8) is racing to
 string the off-world Wired — the relay backbone without which a colony is deaf, and a thin place (Ch. 9)
 strung somewhere new and terrible. Caduceus studies what long-void exposure and off-world
-conditions do to the flesh (Ch. 8). And Kestrel Dynamics (Ch. 8), the hungry eleventh, is betting its
+conditions do to the flesh (Ch. 8). And Kestrel Dynamics (Ch. 8), the hungry thirteenth, is betting its
 whole climb on autonomous off-world logistics — the drones that move the ore no human wants to fly
 for.
 - The frontier corps. Verdant Provision (Ch. 8) runs the closed-loop life-support and hydroponics that
@@ -1123,15 +1261,15 @@ chapter): vacuum, pressure, radiation, cold, and the ever-present knowledge that
 and death is a corporate maintenance budget. Every colony is one sabotaged life-support cycle from a
 tomb — which makes off-world runs the highest-stakes, lowest-margin work on the board.
 The buried truth: the dark is already out there
-The Ten believe they are racing into empty dark to beat each other. The cosmology says otherwise.
+The Twelve believe they are racing into empty dark to beat each other. The cosmology says otherwise.
 Nullspace is not "out there" in the sky — it is outside creation entirely (Ch. 2) — but the void between
 worlds is thin, quiet, and lightly-spoken country, exactly the kind of edge where the membrane wears fine
-(Ch. 3), and the deeper the Ten push into the unlit dark, the more they push into places the Word's Signal
+(Ch. 3), and the deeper the Twelve push into the unlit dark, the more they push into places the Word's Signal
 reaches faintly and the un-making reaches easily. Some off-world claims go silent the way wasteland
 emptied crew, an ore-world reads wrong on every instrument. The corps file it under accident, radiation,
 and "deep-void psychosis," and keep racing. The space race is the Incursion's newest and widest frontier,
 
-and the Ten are funding humanity's expansion into it blindfold.
+and the Twelve are funding humanity's expansion into it blindfold.
 
 ## Religion & The Faithful
 
@@ -1493,25 +1631,26 @@ A **Bulldog** is the cargo-van exception that still uses **tires**. It is not a 
 
 ### The Hive as a Vertical Timeline
 
-Deep time, one calendar, two silences. Veyra keeps a single continuous civil calendar, inherited unbroken from the dead nations across more than a thousand years; the campaign present is simply the year 2050. What the calendar does not say aloud are two things: the corps treat everything before the Charter (~120 years ago) as prehistory — a thousand years of history quietly uncounted, because to the Ten the world began with the boardroom — and no one at all is permitted to date the Incursion, because the corps do not admit it exists. History runs deep here on purpose: the Founding of the peoples (Ch. 1) sits a full thousand years behind the present, long enough that the how of it is forgotten, and the recent corporate age is only the thin bright skin on top.
+Deep time, one calendar, two silences. Veyra keeps a single continuous civil calendar, inherited unbroken from the dead nations across more than a thousand years; the campaign present is simply the year 2050. What the calendar does not say aloud are two things: the corps treat everything before the Charter (~120 years ago) as prehistory — a thousand years of history quietly uncounted, because to the Twelve the world began with the boardroom — and no one at all is permitted to date the Incursion, because the corps do not admit it exists. History runs deep here on purpose: the Founding of the peoples (Ch. 1) sits a full thousand years behind the present, long enough that the how of it is forgotten, and the recent corporate age is only the thin bright skin on top.
 
 Everyone agrees what year it is. What they don't agree on is how old the world is — the corps act like it began with them — and no one at all is allowed to say how long the war has been climbing. One calendar, two things you don't say out loud. A note on the dates. Deep-past dates are deliberately soft ("~1,000 years ago," "the mid-1000s") — the vagueness is canon, not laziness: a thousand years is long enough to forget. Only the recent Charter-era dates are meant to be firm. The Five Ages All dates on the one civil calendar; the present is 2050, the Founding a full millennium behind it. AGE
 
 ### The Word & the First
-People before counting Cosmology. Creation spoken; the base human stock seeded; the Dark loosed (Ch. 1). The Founding & the High-Corporate Age ~1050 to 1450 Mortals engineer the breeds; the ancestor-corporations rise; the castes bred true into peoples. The Old World & its Fall ~1450 to 1930 The age of nations; the poisoning of Veyra; the Collapse into arcologies. The Charter Age ~1930 to 2050 The Ten, the Congress, the hives, the Wired — the world the Machine advertises. The Quiet War ~1990 to now, denied The Incursion climbing under the Charter's comfort. Officially, it isn't happening. I. The Word and the First People — before counting Cosmology, not chronology (Ch. 1–3); the floor under everything. The Word is spoken — the Light speaks creation, and Veyra, the Spoken World, is set as the willed proving-ground of free choice, still being spoken. The Dark One turns — the Adversary, who cannot create but only deface, is in the present age loose and ascendant (Ch. 1, 3), the oldest fact behind every later one. The First People — the Light seeds a single willed stock, baseline humanity (Homo sapiens basalis); everything else that walks the Ground, mortals made later. II. The Founding & the High-Corporate Age — ~the year 1050 to ~1450 The setting's founding act of mortal hubris (Ch. 1, the Founding) — the deep spine the recent Charter sits a thousand years on top of.
-- ~1050 (a thousand years ago) — The Founding. The mortal powers of a lost high-corporate age — the ancestor-corporations, forerunners of today's Ten — learn to rewrite the seeded human stock and make of it a catalogue of castes: the Elvani (the aesthetic caste, an aristocracy the wealthy could commission), the Corran (the labor caste for the deep mines), the Goliar (the heavy caste for hazardous industry), and others. Engineering a people is not the Dark's work — it is artistry and pride (Ch. 1) — but
+People before counting Cosmology. Creation spoken; the base human stock seeded; the Dark loosed (Ch. 1). The Founding & the High-Corporate Age ~1050 to 1450 Mortals engineer the breeds; the ancestor-corporations rise; the castes bred true into peoples. The Old World & its Fall ~1450 to 1930 The age of nations; the poisoning of Veyra; the Collapse into arcologies. The Charter Age ~1930 to 2050 The Ten (later the Twelve), the Congress, the hives, the Wired — the world the Machine advertises. The Quiet War ~1990 to now, denied The Incursion climbing under the Charter's comfort. Officially, it isn't happening. I. The Word and the First People — before counting Cosmology, not chronology (Ch. 1–3); the floor under everything. The Word is spoken — the Light speaks creation, and Veyra, the Spoken World, is set as the willed proving-ground of free choice, still being spoken. The Dark One turns — the Adversary, who cannot create but only deface, is in the present age loose and ascendant (Ch. 1, 3), the oldest fact behind every later one. The First People — the Light seeds a single willed stock, baseline humanity (Homo sapiens basalis); everything else that walks the Ground, mortals made later. II. The Founding & the High-Corporate Age — ~the year 1050 to ~1450 The setting's founding act of mortal hubris (Ch. 1, the Founding) — the deep spine the recent Charter sits a thousand years on top of.
+- ~1050 (a thousand years ago) — The Founding. The mortal powers of a lost high-corporate age — the ancestor-corporations, forerunners of today's Twelve — learn to rewrite the seeded human stock and make of it a catalogue of castes: the Elvani (the aesthetic caste, an aristocracy the wealthy could commission), the Corran (the labor caste for the deep mines), the Goliar (the heavy caste for hazardous industry), and others. Engineering a people is not the Dark's work — it is artistry and pride (Ch. 1) — but
 
 the class system of the modern hive is the fossil of this genetic caste design: the strata were drawn in flesh a thousand years before they were built in steel.
 - ~1100–1350 — The castes breed true. Over centuries the engineered lines become genuine peoples — Elvani salons and patron-houses, Corran guild-clans and long memory, Goliar kinship-crews — each married within itself (cross-lines cannot interbreed), each grown into a culture with its own dialects, codes, and grievances. The mutual contempt (Elvani over Corran, and back again) is this old.
 - ~1250 — The discarded lines. Not every experiment bred true. Failed, abandoned, and broken branches of the Founding are cast out — the deep ancestry of some Mutant lines, the wreckage of the Founding no house wants to admit authorship of (Ch. 5). The first cast-out underclass predates the hives by centuries.
 - ~1350–1450 — The high-corporate age fades. The ancestor-corporations decline and are half-forgotten; their science passes into myth, their names into ruins. What survives them is the catalogue they made — the peoples, now walking free of their makers, and the idea, never quite lost, that some were built better than others.
-- The forgetting. A thousand years is long enough that the how is gone. Everyone knows the ancestries were made in the Founding, the way we know about fallen empires — settled, ancient, unremarkable. Almost no one can say how it was done, and no one alive can do it again. The knowledge of remaking a people is one of the great lost arts the deep past swallowed. They were commissioned like furniture, a thousand years ago, by companies whose names are weathered off the ruins. Then they went and became people anyway — which was never in the specification, and is the most stubbornly human thing about them. III. The Old World & its Fall — ~1450 to ~1930 The age of nations and its ruin (Ch. 6) — the corpse that became the wastes. The age of nations (~1450–1900) — long after the Founding, Veyra is ruled by states, governments, borders, armies, now more than a century past living memory; this is the world the civil calendar was built to count, and the churches never stopped counting it. The long poisoning — centuries of war, extraction, and hubris scar Veyra into the wastelands and wild zones (Ch. 6): the toxic frontier, the dead cities, the ground where the Veil first tore in the open; the wastes are not wilderness but a graveyard the size of a world. The Collapse (~1900–1930) — the nations do not survive their own poison; in the ruin, survivors do not rebuild states but build arcologies, sealed and vertical and corporate-owned. Ferrum Dynastic, oldest of the coming Ten, is already here pouring the first foundations. The old civil order dies; the corporate one is not yet born. The nations spent the world and called it growth. When the bill came due there was no country left to pay it — only companies, and a poisoned frontier full of the things the countries left behind. IV. The Charter Age — the world as it looks — ~1930 to 2050 The rise of the Machine (Ch. 6–9) — recent history, the only firmly dated stretch, the order the wage-billions believe is permanent and think is the whole story.
+- The forgetting. A thousand years is long enough that the how is gone. Everyone knows the ancestries were made in the Founding, the way we know about fallen empires — settled, ancient, unremarkable. Almost no one can say how it was done, and no one alive can do it again. The knowledge of remaking a people is one of the great lost arts the deep past swallowed. They were commissioned like furniture, a thousand years ago, by companies whose names are weathered off the ruins. Then they went and became people anyway — which was never in the specification, and is the most stubbornly human thing about them. III. The Old World & its Fall — ~1450 to ~1930 The age of nations and its ruin (Ch. 6) — the corpse that became the wastes. The age of nations (~1450–1900) — long after the Founding, Veyra is ruled by states, governments, borders, armies, now more than a century past living memory; this is the world the civil calendar was built to count, and the churches never stopped counting it. The long poisoning — centuries of war, extraction, and hubris scar Veyra into the wastelands and wild zones (Ch. 6): the toxic frontier, the dead cities, the ground where the Veil first tore in the open; the wastes are not wilderness but a graveyard the size of a world. The Collapse (~1900–1930) — the nations do not survive their own poison; in the ruin, survivors do not rebuild states but build arcologies, sealed and vertical and corporate-owned. Ferrum Dynastic, oldest of the coming Twelve, is already here pouring the first foundations. The old civil order dies; the corporate one is not yet born. The nations spent the world and called it growth. When the bill came due there was no country left to pay it — only companies, and a poisoned frontier full of the things the countries left behind. IV. The Charter Age — the world as it looks — ~1930 to 2050 The rise of the Machine (Ch. 6–9) — recent history, the only firmly dated stretch, the order the wage-billions believe is permanent and think is the whole story.
 
 - ~1930 (~120 years ago) — The Charter. The ten strongest arcology-corporations stop competing to mutual destruction and sign the founding accords of the Corporate Congress. A cartel wearing a parliament's robes becomes the planetary government; the Extraterritoriality Accords make each seated corp a sovereign country and forbid open war between the Ten while sanctioning the deniable kind — the clause that quietly births the entire runner economy. The corps will come to treat this year as the true beginning of the world.
-- ~1930–1970 — The raising of the hives. Under Ferrum's hand the arcologies grow into true hives — continent-anchored vertical megastructures built level on ruined level. Ossian Reach rises as the crown-jewel, the one hive where all Ten keep a tower and the Congress convenes. The vertical ladder — Halo, Spires, Grid, Flats, Warrens, Sinks — sets like concrete: altitude becomes wealth. The great foundation-pumps are sunk in this era; some have now been beating like cathedral-sized hearts for the better part of a century.
+- ~1930–1970 — The raising of the hives. Under Ferrum's hand the arcologies grow into true hives — continent-anchored vertical megastructures built level on ruined level. Ossian Reach rises as the crown-jewel, the one hive where all seated corps keep a tower and the Congress convenes (then the Ten; now the Twelve). The vertical ladder — Halo, Spires, Grid, Flats, Warrens, Sinks — sets like concrete: altitude becomes wealth. The great foundation-pumps are sunk in this era; some have now been beating like cathedral-sized hearts for the better part of a century.
 - ~1950–1980 — HALO takes the sky. HALO Ascendant's orbital solar arrays and life-support spine make the hives livable and everyone beneath them a tenant of light and air; HALO rises to the First Chair, the denier seated at the head of the table.
 - ~1960–2000 — The Wired is woven. Meridian Signal threads the Wired through every level — net, feeds, simsense, the manufactured consensus reality of the wage-billions. Meridian becomes not just the network but the narrative: the conglomerate that decides what the world is allowed to believe. Unknown to anyone, the Wired is a planet-wide thin place that echoes the Signal — the corps have wired the whole world close to the Veil (Ch. 3, 9).
 - ~1970–2010 — The Machine closes around the person. The SIN becomes the master key to every convenience (a person with none is a ghost); Argent makes nuyen and debt the universal medium; Caduceus makes the body a rented thing. Life becomes wholly mediated — a world engineered so no one need ever choose, which (Ch. 1) is a world drifting Null-ward. The Radiant Concord, the corporate false-church of the Light, rises in this comfort as its beloved, institutional, secretly-inverted mirror.
+- ~2035–2045 — The Ten become the Twelve. The Congress charters two late seats the hive can no longer pretend it does not need: **AEQ** Aequitas Mandate (eleventh) as the Council's exclusive justice-and-security contractor — a sword that will not sell to a private buyer — and **LAZ** Lazarus Extract (twelfth) as the hive-wide trauma-and-body-recovery monopoly, bundled into Lifestyle upkeep so every paid roof is a subscriber. Nyx remains the tenth seat and the most precarious. Kestrel Dynamics remains seatless — the thirteenth-chair climber. Official record: “Congress professionalization.” Street record: the Council bought itself a badge, and the ambulance became a conglomerate.
 - The megacity comes fully alive (~1990 → now). By the late Charter Age the Reach is what the crew steps out into today: thirty million lives stacked kilometers deep, the sky replaced by a hundred thousand signs, and traffic as a second weather — the street-layer hover lanes packed, the VTOL lanes stacked, the drones swarming every gap (see the texture panel below). A megacorp is a nation that fired its citizens and kept its customers. The Charter is only about a hundred and twenty years old — a baby, next to the breeds it rules — but it has convinced almost everyone it is the shape the world has always had. The Reach in Motion — the living megacity Woven into the Charter Age so the timeline reinforces the setting, not just the plot; all drawn from the lore bible's street-level canon.
 - A city with no sky and no floor. Come up out of a transit tube onto the Flats and the first thing that hits you is the weight of the light — no sky, just a hundred thousand signs stacked forty stories deep, noodle-stall holos and blessing-tier ads and simsense come-ons in six languages, all bleeding pink and cyan and sodium-gold into the standing rain. The rain never stops on the Flats; it falls from the
 
@@ -1526,18 +1665,18 @@ condensation of a million air-scrubbers on the levels above, warm and faintly ch
 - ~2025 — Deadfall Nine goes quiet. A decommissioned Ferrum foundation-stratum in the Reach's Sinks
 — Sublevel 9 — falls silent and is walled off rather than explained. Official cause: structural condemnation. Runners will come to call it the Quiet Floor — the Incursion's first surfaced wound in the home hive, dead-air climbing, and the closest thing the setting has to a ticking clock. Ferrum's Deepworks maintains the seal and the story both.
 - ~2025–2045 — The Warrens are written off. Over the same span the corps quietly stop mapping and maintaining the deep underlevels between Flats and Sinks — the Warrens — filed as "deprecated infrastructure." The map of the hive shrinks while the feeds insist it doesn't. It is easier to forget a level than to explain what's on it.
-- ~2040–2050 — The truth reaches the systems that were never supposed to fail, and is renamed on arrival. Dead-light climbs HALO's power-spine toward the Halo itself, filed as "array volatility" (HALO's The Dimming). Nyx outposts in the deep Sinks are found hollowed, filed as "loss of contact" (Nyx's The Tithe). The deep net starts answering back, filed as a "persistent intrusion signature" (Meridian's The Static Sermon). The seal on the Nine leaks and the levels above go quiet, filed as "foundation subsidence" (Ferrum's The Foundation Fault). Four corners of the Ten, four surfacing wounds of one war, four mundane cover stories — and four runs, because the only people who can be sent to a thing that officially isn't happening are people who officially don't exist.
-- ~2046–2050 — The truce goes brittle (the coming Resource War). No open war between the Ten in a generation, but many feel one coming: resource hunger (the hives built out, the new Space Race devouring capital), the slipping First Chair (Vaine of HALO vs. Solenne of Meridian), and a buried cause almost no one connects — the Incursion is quietly scrambling the resource map, turning wasteland claims barren and lethal. The corps prepare to fight over ground whose real problem is the un-making, and they will call that a market dispute too.
+- ~2040–2050 — The truth reaches the systems that were never supposed to fail, and is renamed on arrival. Dead-light climbs HALO's power-spine toward the Halo itself, filed as "array volatility" (HALO's The Dimming). Nyx outposts in the deep Sinks are found hollowed, filed as "loss of contact" (Nyx's The Tithe). The deep net starts answering back, filed as a "persistent intrusion signature" (Meridian's The Static Sermon). The seal on the Nine leaks and the levels above go quiet, filed as "foundation subsidence" (Ferrum's The Foundation Fault). Four corners of the Twelve, four surfacing wounds of one war, four mundane cover stories — and four runs, because the only people who can be sent to a thing that officially isn't happening are people who officially don't exist.
+- ~2046–2050 — The truce goes brittle (the coming Resource War). No open war between the Twelve in a generation, but many feel one coming: resource hunger (the hives built out, the new Space Race devouring capital), the slipping First Chair (Vaine of HALO vs. Solenne of Meridian), and a buried cause almost no one connects — the Incursion is quietly scrambling the resource map, turning wasteland claims barren and lethal. The corps prepare to fight over ground whose real problem is the un-making, and they will call that a market dispute too.
 - 2050 — the campaign present (Ch. 24).
 Nobody decided to hide the war. It's worse than that. The Machine has no word for it — so a demon in the wires is a rogue AI, a hollowed floor is a subsidence, a man unmade from the inside is early-onset dementia, and the apocalypse goes out on the evening feed as a run of bad luck in the industrial sector. You can't panic a city about a thing it isn't permitted to name. That's the corps' whole plan, and so far it's working.
 
 ## The Campaign Present
 
-The now the game assumes. It is 2050 in Ossian Reach, the political heart of Veyra, where all Ten are present and the Congress convenes. To the thirty million on the Grid this is an ordinary, comfortable, over-surveilled year: the arrays hold, the feeds are bright, the SIN opens every door, the traffic never stops, and the war is not even a rumor — because there is no permitted word for it. To a crew of ghosts working the Flats, it is the year the cover stories stopped adding up. The state of the war — the doom-clock The Dark One is loose and ascendant; the Incursion is actively worsening — the world is losing but not lost. The Unmaker — the Last Word — reaches through aspects, heralds, and hollowings: dead-air zones, hollowed outposts, stretches of the Wired collapsing into Nullspace-static. Its leading edge in the home hive is Deadfall Nine, and the Nine is climbing. None of this is on any feed. The crew's peril is double: the thing itself, and the far larger force of everyone who cannot afford to let it be named. Open threats, live on turn one
+The now the game assumes. It is 2050 in Ossian Reach, the political heart of Veyra, where all Twelve are present and the Congress convenes. To the thirty million on the Grid this is an ordinary, comfortable, over-surveilled year: the arrays hold, the feeds are bright, the SIN opens every door, the traffic never stops, and the war is not even a rumor — because there is no permitted word for it. To a crew of ghosts working the Flats, it is the year the cover stories stopped adding up. The state of the war — the doom-clock The Dark One is loose and ascendant; the Incursion is actively worsening — the world is losing but not lost. The Unmaker — the Last Word — reaches through aspects, heralds, and hollowings: dead-air zones, hollowed outposts, stretches of the Wired collapsing into Nullspace-static. Its leading edge in the home hive is Deadfall Nine, and the Nine is climbing. None of this is on any feed. The crew's peril is double: the thing itself, and the far larger force of everyone who cannot afford to let it be named. Open threats, live on turn one
 - The First-Chair fight. Vaine (HALO) vs. Solenne (Meridian) — a succession struggle at the top of the world, fought in votes, feeds, and deniable runs.
 - The brewing Resource War. The generation-long truce fraying over wasteland claims that are quietly going barren; the crew's early jobs are the sparks.
 - The Space Race. Each conglomerate pouring capital into nearby worlds for resource — starving the old frontier and raising the stakes of the Chair.
-- The surfacing Incursion. The Dimming, the Tithe, the Static Sermon, the Foundation Fault — one rising dark seen from four corners of the Ten, each a run that hands the crew proof the deniers have no word for and can't allow to exist.
+- The surfacing Incursion. The Dimming, the Tithe, the Static Sermon, the Foundation Fault — one rising dark seen from four corners of the Twelve, each a run that hands the crew proof the deniers have no word for and can't allow to exist. Aequitas files the fifth face as disorder; Lazarus arrives and writes trauma.
 - Cinderhold's clock. At the gate to the wastes, Kestrel's "Clean Route" creeps toward buying the last free settlement onto the ledger, while the dead-air spreads in the ground it wants to pave. The three fixtures, ready now The crew's on-ramp is Mama Cassavir, "the Switchboard," in the upper Flats — the seam between clean contracts above and dirty ones below. The place they should not go is Deadfall Nine, the Quiet Floor. The way out of the box is Cinderhold, at the gate to the poisoned wastes, held by Ranger-Captain Cael Marrow, "the Gate." Why the crew matters You are ghosts — unregistered, deniable, choosing — in a world engineered so no one need ever choose, and in an age that has forgotten how to name its own crisis. That makes you the two things the Machine cannot manufacture: people who act off the ledger, and people who can say the true word for what's happening. The faithful and the crew do not win this war; they hold it back — seal a tear, banish a herald,
 
 deny the Unmaker one more stretch of ground — and keep the Word being spoken one more day. It is 2050, and by the count no one is allowed to keep, it is very late. The lights are on, the traffic roars in three tiers, the feeds are bright, and everyone who matters says the world is fine. Down on the Flats, where the rain never stops and a cathedral-sized heart has been beating under the street for a thousand years, a crew that was never recorded is about to learn the true name of a thing the whole world has agreed not to say.

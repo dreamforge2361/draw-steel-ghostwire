@@ -33,6 +33,8 @@ Four states. **Connect** (from Disconnected, with a Wire interface) lands you in
 
 **Wire-discoverable.** Scan, Search, and Watchdog ICE can find any non-Disconnected presence. **Linked = soft presence** (comms / ID / packets, not a full avatar). Overlay and Jacked In are full presence. A Hacker’s **Watchdog Agent** (`19`) is a compiled screen, not Watchdog ICE.
 
+**Construct Wire visibility (LOCKED).** Sprites (`20`) and Agents (`19`) that share **the same scene Wire** auto-see each other when **both compilers** are **Overlay or Jacked In**. No Scan tax. Stealth, Hidden, or a construct on another board / scene stays hidden. **Meat tokens are not Wire eyes** — a body on the floor does not reveal constructs, and a construct does not automatically see meatspace tokens. Linked-only compilers do not grant this auto-see.
+
 **Toggle ladder (Foundry UX).** One verb, one direction: **Linked → Overlay → Jacked In → Linked**. Each Toggle steps deeper; after Jacked In it wraps back to Linked (comms-only), not Disconnected. **Jack Out** is the only off-ramp.
 
 **Ruling:** Overlay and Jacked In remain a genuine mechanical tradeoff. **Linked** is the street-default on-ramp — you are on the Wire for talk and packets without paying Overlay’s meat bane or gaining Jacked In’s Wired edge. **Overlaid**, you keep both worlds live but pay a **bane on real-world Power Rolls** for the split attention. **Jacked In**, you gain an **edge on all Wired Power Rolls**, but you lose the real world entirely. This is why the crew treats a Jacked-In Hacker's body as cargo to protect.
@@ -72,6 +74,8 @@ The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targe
 
 > **In Foundry**
 > Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). **Constructs** lists compiled sprites and Agents (Lock A: scene token = meat-side roster anchor; Overlay / Jacked In compilers on this scene see each other without Scan; meat actions off unless an ability bridges). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.
+>
+> **Constructs Console (Lock A).** Compiled constructs — sprites, Agents, and independent spirits — are a **separate Console section** from the node graph. Do not list them as nodes. The Console **Constructs** pane is the roster; at the table you can also track it on the summon ability sheet (`19` / `20` / `22`). Pet hit points are **Stamina** (sprites, Agents, independent spirits). Extension spirits have **no separate pool**.
 
 
 **Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above).
@@ -222,7 +226,7 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 **Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.
 
 > **In Foundry**
-> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Art is drop-in; placeholders ship until Michael tokens land. Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`.
+> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX shipped; **AEQ** / **LAZ** rows ship until plates land — `placeholder: true`, expected `node-host-aeq` / `node-host-laz`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`.
 
 ## Connection-state modifiers (summary)
 

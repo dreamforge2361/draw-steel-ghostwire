@@ -19,7 +19,7 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 ---
 
 > **In Foundry**
-> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting.
+> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. **Lazarus Extract (LAZ)** contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider.
 
 ## Lifestyle bands (upkeep)
 
@@ -79,7 +79,27 @@ Most wage-bodies do not live on liquid **¥** alone. Lore (L1): corp **scrip**, 
 - **Runners** often pay cash ¥ for Low/Squatter dens exactly to stay off those strings. That is why Flats crash-space is the default Ghost Run pad.
 - **Scrip ≠ character power.** Whether you pay ¥ or the corp "covers" the flat, you never buy characteristics, Kits, or class features with housing.
 
-Full megacorp tickers (HAL, FER, MER, …): `docs/rulebook/MEGACORP-TICKERS.md`.
+Full megacorp tickers (HAL, FER, MER, … **AEQ**, **LAZ**): `docs/rulebook/MEGACORP-TICKERS.md`. Paying this chapter’s upkeep **includes** that band’s **Lazarus Extract** contract (table below). Aequitas Mandate (**AEQ**) is Council-only justice — it is not a Lifestyle service and cannot be bought with ¥.
+
+## Lazarus Extract contract (included in upkeep)
+
+**LAZ** — Lazarus Extract is the hive’s trauma-rescue / hot-extract / body-recovery conglomerate. It is **not** Caduceus Vitalis (clinics, pharma, chrome-flesh). Street: “Laz,” “white door,” “extract contract.” Lore: L1 Aequitas / Lazarus profiles.
+
+**Lock:** the upkeep ¥ for a Lifestyle band **includes** that band’s Lazarus contract tier. Do **not** charge a second extract line unless the Director sells a **premium rider** (named person, hotter zone than the band allows, quieter recovery, a body that must not go to Caduceus). Richer roof, better extract.
+
+| Band | Lazarus tier | What arrives |
+|---|---|---|
+| **Squatter** | **None** | No contract. Walk-in only if you can pay **cash crisis rates** — and if a team even stops. |
+| **Low** | **Basic Extract** | Delayed soft ambulance. No hot zone. Will not enter a firefight, dead-air, or an active warrant. |
+| **Middle** | **Standard Extract** | Armed EMT, published **response clock**. Will pull you from a street fight that has already gone quiet enough to load. |
+| **High** | **Priority Extract** | Faster hardened ambulance + light escort. Will enter a contested block; will not run a full firefight extract. |
+| **Elite** | **Absolute / White Door** | VTOL trauma, firefight extraction. White Door Flight will kick the door for a contracted body. |
+
+The band you paid **this respite** is the contract that answers when you drop. A Squatter who suddenly needs White Door buys a rider or dies on cash rates. Skipping Lifestyle upkeep drops the contract with the band.
+
+**Sub-corp:** White Door Flight — crash / VTOL trauma teams (L1).
+
+Directors: Lazarus arriving is a clock and a witness, not a free heal. Extract gets the body off the board; Recoveries, chrome surgery, and Caduceus clinics stay in `04` / `09` / `15`.
 
 ## Pay Lifestyle or take the street
 
@@ -87,7 +107,7 @@ Full megacorp tickers (HAL, FER, MER, …): `docs/rulebook/MEGACORP-TICKERS.md`.
 
 1. Choose the band you want for this respite (you may step up or down from last time if you can pay).
 2. Pay the upkeep ¥ from liquid nuyen (or a Doss Upgrade / Lifestyle Voucher service that covers that band — gear catalog 1G).
-3. Gain that band's housing, social-door, restock-eligibility, project-slot, and lodge-cap benefits for the downtime.
+3. Gain that band's housing, social-door, restock-eligibility, project-slot, lodge-cap, and **Lazarus Extract** benefits for the downtime.
 4. Spend remaining project slots on downtime actions (below).
 5. Bank leftover ¥. Charge Medic restock and other quoted services **after** or **alongside** upkeep — they are separate spends unless the Director folds a tiny refill into Middle+ flavor.
 
@@ -205,3 +225,4 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 | Ritual Workings | `22-the-veil.md` |
 | Wrench Building Lifestyle Hook | `16-wrench.md` |
 | Upkeep ¥ | This chapter’s band table |
+| Lazarus Extract contract (included in upkeep) | This chapter; lore L1; tickers `docs/rulebook/MEGACORP-TICKERS.md` |
