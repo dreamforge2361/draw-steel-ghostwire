@@ -1,7 +1,7 @@
-// Wire Kit — Matrix Verbs (B115).
-// Heroes already get MATRIX_VERBS via ds.CONFIG.hero.defaultItems. NPCs do not.
-// Dropping this feature (Ghostwire Matrix › Support) onto an NPC stamps the nine verbs.
-// Meat-only opposition stays clean until the Director stamps the kit. No bestiary default.
+// Wire Kit — Matrix Verbs (B115, B117).
+// Dropping this feature (Ghostwire Matrix › Support) onto an NPC marks them Wire-capable.
+// It does not stamp Matrix Verb abilities — all nine fire from the node applet (B117).
+// Heroes use the same applet. Meat-only opposition stays clean. No bestiary default.
 
 import { MATRIX_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
 
@@ -18,31 +18,12 @@ export const isWireKitVerb = item =>
 
 const actorHasKit = actor => [...(actor?.items ?? [])].some(isWireKit);
 
-function ownedDsids(actor) {
-  return new Set([...(actor?.items ?? [])].map(i => i.system?._dsid).filter(Boolean));
-}
-
 /**
- * Copy missing Matrix Verbs onto an actor. Idempotent. Flags copies `wireKitGranted`.
- * @returns {Promise<number>} how many abilities were created
+ * B117: Matrix Verbs live on the node applet. Wire Kit does not stamp abilities.
+ * @returns {Promise<number>} always 0
  */
-export async function grantMatrixVerbs(actor, { notify = false } = {}) {
-  if (!actor) return 0;
-  const verbs = (await Promise.all(MATRIX_VERBS.map(uuid => fromUuid(uuid)))).filter(Boolean);
-  if (verbs.length !== MATRIX_VERBS.length) {
-    console.warn(`${MODULE_ID} | Some Matrix Verbs are missing from the abilities pack`);
-  }
-  const owned = ownedDsids(actor);
-  const missing = verbs.filter(v => !owned.has(v.system._dsid)).map(v => {
-    const data = game.items.fromCompendium(v, { clearFolder: true });
-    foundry.utils.setProperty(data, `flags.${MODULE_ID}.wireKitGranted`, true);
-    return data;
-  });
-  if (missing.length) await actor.createEmbeddedDocuments("Item", missing);
-  if (notify && missing.length) {
-    ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.Granted", { actor: actor.name, count: missing.length }));
-  }
-  return missing.length;
+export async function grantMatrixVerbs() {
+  return 0;
 }
 
 async function kitSource() {
@@ -57,12 +38,13 @@ async function kitSource() {
 }
 
 /**
- * Stamp Wire Kit + Matrix Verbs onto an NPC (or any non-hero). Heroes already have verbs.
- * Idempotent: a second click does not duplicate.
+ * Stamp Wire Kit onto an NPC (or any non-hero). Does not copy Matrix Verb abilities.
+ * Idempotent: a second click does not duplicate the kit feature.
  */
 export async function addWireKit(actor, { notify = true } = {}) {
   if (!actor) return { kit: false, verbs: 0 };
   if (!game.user.isGM && !actor.isOwner) return { kit: false, verbs: 0 };
+  if (actor.getFlag(MODULE_ID, "kind") === "node") return { kit: false, verbs: 0 };
 
   if (actor.type === "hero") {
     if (notify) ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.HeroSkip", { actor: actor.name }));
@@ -77,12 +59,11 @@ export async function addWireKit(actor, { notify = true } = {}) {
       kit = true;
     }
   }
-  const verbs = await grantMatrixVerbs(actor, { notify: false });
   if (notify) {
-    if (kit || verbs) ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.Granted", { actor: actor.name, count: verbs }));
+    if (kit) ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.Granted", { actor: actor.name }));
     else ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.Already", { actor: actor.name }));
   }
-  return { kit, verbs };
+  return { kit, verbs: 0 };
 }
 
 /** Remove kit-granted verbs when the kit item leaves the sheet. Manual verbs stay. */
@@ -98,7 +79,7 @@ export async function revokeWireKitVerbs(actor) {
 export function selectedKitTargets() {
   return [...(canvas?.tokens?.controlled ?? [])]
     .map(token => token.actor)
-    .filter(actor => actor && actor.type !== "hero");
+    .filter(actor => actor && actor.type !== "hero" && actor.getFlag(MODULE_ID, "kind") !== "node");
 }
 
 export async function addWireKitToSelected() {
@@ -124,7 +105,7 @@ export function registerWiredKit() {
     const actor = item.parent;
     if (!(actor instanceof Actor) || actor.type === "hero") return;
     if (!isWireKit(item)) return;
-    grantMatrixVerbs(actor, { notify: true });
+    // B117: kit marks Wire-capable NPCs. Verbs fire from the node applet — do not stamp abilities.
   });
 
   Hooks.on("deleteItem", (item, options, userId) => {
@@ -138,6 +119,7 @@ export function registerWiredKit() {
     if (!game.user.isGM) return;
     const actor = hud.object?.actor;
     if (!actor || actor.type === "hero") return;
+    if (actor.getFlag(MODULE_ID, "kind") === "node") return;
     const root = html?.rootElement ?? html?.[0] ?? html;
     if (!root?.querySelector) return;
     const col = root.querySelector(".col.right") ?? root.querySelector(".right");

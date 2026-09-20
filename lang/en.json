@@ -4287,6 +4287,10 @@
           "Name": "Burner",
           "Description": "<p><em>Burner · DataStick Comm · disposable transceiver</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥60 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Wired, Consumable-ish</p><p><strong>Profile:</strong> Basic encrypted call/text; no trace-hardening. Ditch after a run.</p><p><strong>Mod slots (1):</strong> Fill them with comms / Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.TnVSQXLfnExVYdp0]{Encryption Dongle}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.dfRgtkQz5MjqzA9G]{Burner Mode Chip}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
         },
+        "Commlink": {
+          "Name": "Commlink",
+          "Description": "<p><em>Commlink · Street Phone · everyday wireless</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥150 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Wired</p><p><strong>Profile:</strong> The default everyday phone. Voice, text, and a thin Matrix persona — enough to Connect. Not a deck; does not replace Pocket Sec or a Burner.</p><p><strong>Mod slots (1):</strong> Fill them with comms / Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.TnVSQXLfnExVYdp0]{Encryption Dongle}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.dfRgtkQz5MjqzA9G]{Burner Mode Chip}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
+        },
         "PocketSec": {
           "Name": "Pocket Sec",
           "Description": "<p><em>Pocket Sec · CommLink Mk II · personal network node</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥500 · <strong>Mod slots:</strong> 2 · <strong>Tags:</strong> Wired</p><p><strong>Profile:</strong> Standard runner's phone-computer-node; runs your Matrix persona; holds up to 2 program mods.</p><p><strong>Mod slots (2):</strong> Fill them with comms / Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.TnVSQXLfnExVYdp0]{Encryption Dongle}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.dfRgtkQz5MjqzA9G]{Burner Mode Chip}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
@@ -5050,7 +5054,7 @@
         },
         "WireKit": {
           "Name": "Wire Kit — Matrix Verbs",
-          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to grant the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write) — the same abilities every hero already has.</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes already receive the verbs at creation; this kit does not duplicate them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary.</p>"
+          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to mark them as Wire-capable (ARG security, rival deckers). It does <strong>not</strong> copy Matrix Verb abilities onto the sheet — <strong>Connect</strong>, <strong>Jack Out</strong>, <strong>Toggle Connection State</strong>, <strong>Scan</strong>, <strong>Navigate</strong>, <strong>Ping</strong>, <strong>Broadcast</strong>, <strong>Search</strong>, and <strong>Read/Write</strong> fire from the node a runner is facing (and from the Wired Console).</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes use the same node applet; this kit does not duplicate verbs onto them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary.</p>"
         },
         "Buzzer": {
           "Name": "Buzzer",
@@ -6234,10 +6238,12 @@
       "Warnings": {
         "NotConnected": "{actor} isn’t connected to the Wired. Use Connect first.",
         "AlreadyConnected": "{actor} is already connected to the Wired ({state}). Use Toggle Connection State or Jack Out.",
+        "NeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
         "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle to Overlay or Jack Out first."
       },
       "Changed": "{actor}: {state}.",
       "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es).",
+      "ConsoleMigrated": "Ghostwire: moved {count} Matrix Verb(s) off the sheet — all nine fire from the node you're facing.",
       "Vision": {
         "overlay": "Wired Overlay",
         "jackedIn": "Jacked In"
@@ -6355,15 +6361,39 @@
       "AutoNodesUnnamed": "(unnamed)",
       "AutoNodesUnsplit": "Skipped {count} light(s) with no “ - ” in the name: {names}. Rename them “{Room} - Light Control” and run again.",
       "AutoNodesDone": "Added {count} auto-node(s) across {rooms} room(s) ({skipped} already present).",
-      "AutoNodesSkipped": "All {skipped} auto-node(s) were already on this board. Choose Replace to rebuild them."
+      "AutoNodesSkipped": "All {skipped} auto-node(s) were already on this board. Choose Replace to rebuild them.",
+      "Verbs": "Matrix Verbs",
+      "VerbTooltip": "{name} · {chr} power roll (Hacking / Jacked In edges apply)",
+      "VerbTooltipAuto": "{name} · no roll",
+      "VerbReady": "{actor} → {node}",
+      "VerbNeedActor": "Select a runner in the roster.",
+      "VerbNeedNode": "Select a node, then fire a Matrix Verb.",
+      "VerbNeedOwner": "You don't control that runner.",
+      "VerbNeedDisconnected": "Disconnected — use Connect on this node first.",
+      "VerbNeedAlreadyConnected": "Already connected — Jack Out or Toggle, or pick another verb.",
+      "VerbNeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
+      "VerbNeedHidden": "That node is hidden from runners.",
+      "VerbPlayerPath": "Players: open the node token facing you. Connect lives there with the other eight verbs. This strip is the Director roster path.",
+      "VerbUnknown": "Unknown Matrix Verb.",
+      "VerbMissing": "Matrix Verb {name} is missing from Ghostwire Abilities.",
+      "VerbTrace": "{name}: Trace Alert +1 ({alert} / 12) — something went wrong."
     },
     "WiredKit": {
       "Button": "Add Wire Kit",
       "Hud": "Add Wire Kit — Matrix Verbs to the selected NPC",
-      "Granted": "{actor} stamped with Wire Kit ({count} Matrix Verbs).",
+      "Granted": "{actor} stamped with Wire Kit — Matrix Verbs fire from the node they're facing.",
       "Already": "{actor} already has the Wire Kit.",
-      "HeroSkip": "{actor} is a hero — Matrix Verbs are already on the sheet.",
+      "HeroSkip": "{actor} is a hero — Matrix Verbs fire from the node applet, not this kit.",
       "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."
+    },
+    "WiredNode": {
+      "Title": "Wired Node",
+      "NeedActor": "Select your runner, then Connect here.",
+      "Hidden": "That node is hidden from runners.",
+      "Missing": "No Wired node here.",
+      "Hud": "Open Matrix Verbs for this node",
+      "OpenSheet": "Open actor sheet",
+      "LaterHint": "Connect / Jack Out / Toggle live here with Scan / Navigate / Ping / Broadcast / Search / Read-Write."
     },
     "WiredMinimap": {
       "Title": "Wired Node Map",
@@ -6371,7 +6401,7 @@
       "Director": "Director",
       "NoNodes": "No nodes revealed on this grid yet.",
       "Hidden": "Hidden from runners",
-      "FocusHint": "Click to pan to its token.",
+      "FocusHint": "Click to open its Matrix Verbs.",
       "PanHint": "Scroll to zoom, drag to pan, double-click or this button to reset.",
       "Room": "Room",
       "Settings": {

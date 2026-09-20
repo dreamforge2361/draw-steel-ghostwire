@@ -13,6 +13,18 @@ import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./w
 import { NODE_TOKEN_LIBRARY } from "./wired-node-art.mjs";
 import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs";
 import { addWireKitToSelected } from "./wired-kit.mjs";
+import {
+  CONSOLE_SLICE,
+  abilityTierFromMessage,
+  actorHasConnectInterface,
+  consoleVerbGate,
+  consoleVerbMetaFromMessage,
+  hintVerbDsid,
+  nextAlert,
+  pickConsoleActor,
+  pickPlayerVerbActor,
+  softTraceDelta,
+} from "./wired-console-verbs.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -91,6 +103,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       generateCluster: WiredConsole.#onGenerateCluster,
       autoNodes: WiredConsole.#onAutoNodes,
       addWireKit: WiredConsole.#onAddWireKit,
+      selectActor: WiredConsole.#onSelectActor,
+      fireVerb: WiredConsole.#onFireVerb,
       deleteNode: WiredConsole.#onDeleteNode,
       alertUp: WiredConsole.#onAlertUp,
       alertDown: WiredConsole.#onAlertDown,
@@ -107,12 +121,15 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static PARTS = {
     console: {
       template: `modules/${MODULE_ID}/templates/wired-console.hbs`,
-      scrollable: [".wc-roster-list", ".wc-node-list", ".wc-detail", ".wc-ping-log"],
+      scrollable: [".wc-roster-list", ".wc-node-list", ".wc-detail", ".wc-ping-log", ".wc-verb-strip"],
     },
   };
 
   /** The node selected in the detail panel. */
   selectedId = null;
+
+  /** The actor selected in the connection roster (uuid). */
+  selectedActorUuid = null;
 
   /** GM Wire ping composer (kept across live re-renders). */
   pingDraft = "";
@@ -176,12 +193,40 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       if (!actor || seen.has(actor.uuid) || (!isGM && !actor.isOwner)) continue;
       seen.add(actor.uuid);
       const state = this.getWiredState?.(actor) ?? "disconnected";
-      roster.push({ name: token.name || actor.name, img: token.texture?.src || actor.img, state, stateLabel: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`) });
+      roster.push({
+        uuid: actor.uuid,
+        name: token.name || actor.name,
+        img: token.texture?.src || actor.img,
+        state,
+        stateLabel: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`),
+        connected: state !== "disconnected",
+        owned: isGM || actor.isOwner,
+        hasInterface: actorHasConnectInterface(actor),
+      });
     }
     const order = { jackedIn: 0, overlay: 1, disconnected: 2 };
     roster.sort((a, b) => (order[a.state] - order[b.state]) || a.name.localeCompare(b.name, game.i18n.lang));
+    this.selectedActorUuid = pickConsoleActor({
+      roster,
+      selectedUuid: this.selectedActorUuid,
+      combatantUuid: game.combat?.combatant?.actor?.uuid ?? null,
+    });
+    for (const row of roster) row.selected = row.uuid === this.selectedActorUuid;
 
     const decorated = nodes.map(decorate);
+    const selected = decorated.find(node => node.selected) ?? null;
+    const verbActor = roster.find(row => row.selected) ?? null;
+    const verbCtx = {
+      actorUuid: verbActor?.uuid,
+      connected: !!verbActor?.connected,
+      nodeId: selected?.id,
+      owned: !!verbActor?.owned,
+      revealed: selected ? !!selected.revealed : true,
+      isGM,
+      hasInterface: !!verbActor?.hasInterface,
+    };
+    const verbs = verbStripView(verbCtx);
+    const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
     const pings = readPings(scene).map(ping => ({
       ...ping,
       timeLabel: ping.at ? new Date(ping.at).toLocaleTimeString(game.i18n.lang, { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "",
@@ -195,7 +240,12 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       stratumLabel: localize(`Strata.${board.stratum}`),
       roster,
       nodes: decorated,
-      selected: decorated.find(node => node.selected) ?? null,
+      selected,
+      verbActor,
+      verbs,
+      verbHint: verbGate.reason
+        ? game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${verbGate.reason}`)
+        : game.i18n.format("GHOSTWIRE.WiredConsole.VerbReady", { actor: verbActor.name, node: selected?.name ?? "—" }),
       pings,
       pingDraft: this.pingDraft ?? "",
       pingWhisper: !!this.pingWhisper,
@@ -320,6 +370,19 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #onSelectNode(event, target) {
     this.selectedId = WiredConsole.#nodeId(target);
     this.render();
+  }
+
+  static async #onSelectActor(event, target) {
+    this.selectedActorUuid = target.closest("[data-actor-uuid]")?.dataset.actorUuid ?? null;
+    this.render();
+  }
+
+  static async #onFireVerb(event, target) {
+    const dsid = target.dataset.verb;
+    const actor = this.selectedActorUuid ? await fromUuid(this.selectedActorUuid) : null;
+    const scene = this.scene;
+    const node = getBoard(scene).nodes.find(n => n.id === this.selectedId) ?? null;
+    await useConsoleVerb(actor, dsid, { node, scene, getWiredState: this.getWiredState });
   }
 
   /** A complete, hidden node with a full Integrity pool for its Rating. */
@@ -622,6 +685,120 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 }
 
+/* ---------- Matrix Verbs from Console / node panel (B117) ---------- */
+
+/** Shared Matrix Verb button specs for the Console strip and the node panel (all nine). */
+export function verbStripView(ctx = {}) {
+  return CONSOLE_SLICE.map(verb => {
+    const gate = consoleVerbGate({ ...ctx, dsid: verb.dsid });
+    const name = game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${verb.lang}.Name`);
+    let tooltip;
+    if (!gate.ok) tooltip = game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`);
+    else if (verb.characteristicLabel) {
+      tooltip = game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltip", { name, chr: verb.characteristicLabel });
+    } else {
+      tooltip = game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltipAuto", { name });
+    }
+    return {
+      dsid: verb.dsid,
+      icon: verb.icon,
+      label: name,
+      enabled: gate.ok,
+      tooltip,
+    };
+  });
+}
+
+async function resolveVerbItem(actor, dsid) {
+  const owned = [...(actor?.items ?? [])].find(item => item.system?._dsid === dsid);
+  if (owned) return owned;
+  const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);
+  const source = spec ? await fromUuid(spec.uuid) : null;
+  if (!source) return null;
+  const data = game.items.fromCompendium(source, { clearFolder: true });
+  return new CONFIG.Item.documentClass(data, { parent: actor });
+}
+
+/**
+ * Fire a Matrix Verb through Draw Steel AbilityModel#use on the selected actor.
+ * Edges (Hacking, Jacked In, Reader) come from the existing AbilityModel#use patch.
+ */
+export async function useConsoleVerb(actor, dsid, { node = null, scene = null, getWiredState = getWiredStateFn } = {}) {
+  const state = getWiredState?.(actor) ?? "disconnected";
+  const gate = consoleVerbGate({
+    actorUuid: actor?.uuid,
+    connected: state !== "disconnected",
+    nodeId: node?.id,
+    owned: !!(actor && (game.user.isGM || actor.isOwner)),
+    revealed: node ? !!node.revealed : true,
+    isGM: !!game.user.isGM,
+    dsid,
+    hasInterface: actorHasConnectInterface(actor),
+  });
+  if (!gate.ok) {
+    const warn = game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`);
+    ui.notifications.warn(warn);
+    if (gate.reason === "Interface") {
+      await ChatMessage.implementation.create({
+        speaker: ChatMessage.implementation.getSpeaker({ actor }),
+        content: `<p>${warn}</p>`,
+      });
+    }
+    return null;
+  }
+  const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);
+  if (!spec) {
+    ui.notifications.warn(game.i18n.localize("GHOSTWIRE.WiredConsole.VerbUnknown"));
+    return null;
+  }
+  const item = await resolveVerbItem(actor, dsid);
+  if (!item?.system?.use) {
+    ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.VerbMissing", { name: spec.lang }));
+    return null;
+  }
+  const consoleVerb = { dsid, nodeId: node?.id ?? null, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
+  const message = await item.system.use({}, {}, { flags: { [MODULE_ID]: { consoleVerb } } });
+  if (message?.setFlag && !consoleVerbMetaFromMessage(message)) {
+    try { await message.setFlag(MODULE_ID, "consoleVerb", consoleVerb); }
+    catch (err) { console.warn(`${MODULE_ID} | could not flag Console verb chat`, err); }
+  }
+  await applyConsoleVerbTrace(message);
+  return message;
+}
+
+/** GM applies soft Trace once the power-roll tier is on the chat card. */
+export async function applyConsoleVerbTrace(message) {
+  if (!game.user.isGM) return false;
+  if (game.users?.activeGM && (game.users.activeGM !== game.user)) return false;
+  const meta = consoleVerbMetaFromMessage(message);
+  if (!meta?.nodeId || meta.applied) return false;
+  const tier = abilityTierFromMessage(message);
+  if (tier == null) return false;
+  const delta = softTraceDelta(meta.dsid, tier);
+  if (delta && meta.sceneId) {
+    const scene = game.scenes.get(meta.sceneId);
+    if (scene) {
+      const board = getBoard(scene);
+      const node = board.nodes.find(n => n.id === meta.nodeId);
+      if (node) {
+        const next = nextAlert(node.alert, delta);
+        node.alert = next.alert;
+        await scene.setFlag(MODULE_ID, "wiredBoard", { nodes: board.nodes, stratum: board.stratum, updated: Date.now() });
+        if (next.lockout) {
+          ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.LockoutWarning", { name: node.name }), { permanent: true });
+        } else {
+          ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredConsole.VerbTrace", { name: node.name, alert: next.alert }));
+        }
+      }
+    }
+  }
+  if (message?.setFlag) {
+    try { await message.setFlag(MODULE_ID, "consoleVerb", { ...meta, tier, applied: true }); }
+    catch (err) { console.warn(`${MODULE_ID} | could not mark Console verb applied`, err); }
+  }
+  return true;
+}
+
 /* ---------- registration ---------- */
 
 let getWiredStateFn = null;
@@ -695,8 +872,21 @@ export function registerWiredConsole({ getWiredState }) {
   Hooks.on("deleteToken", rerender);
   Hooks.on("canvasReady", rerender);
 
+  Hooks.on("createChatMessage", message => {
+    applyConsoleVerbTrace(message).catch(err => console.warn(`${MODULE_ID} | Console verb Trace`, err));
+  });
+  Hooks.on("updateChatMessage", message => {
+    applyConsoleVerbTrace(message).catch(err => console.warn(`${MODULE_ID} | Console verb Trace`, err));
+  });
+
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings, applyAutoNodesFromScene };
+    if (module) {
+      module.api = {
+        ...(module.api ?? {}),
+        openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings,
+        applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor, actorHasConnectInterface,
+      };
+    }
   });
 }

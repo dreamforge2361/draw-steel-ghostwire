@@ -32,7 +32,7 @@ Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Acc
 You leave either connection state with the **Jack Out** Matrix Verb -- a clean disconnect that also serves as your emergency eject if a Program or Trace Alert spike goes bad.
 
 > **In Foundry**
-> **Overlay** and **Jacked In** are token/sheet status effects (`ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** Matrix Verbs from the sheet — they set the status. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The module applies Jacked In Wired edges, Overlay real-world banes, and refuses physical Power Rolls while Jacked In.
+> **Overlay** and **Jacked In** are token/sheet status effects (`ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (they need a commlink, deck, datajack, trodes, or Technomancer Resonance) — they set the status. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The module applies Jacked In Wired edges, Overlay real-world banes, and refuses physical Power Rolls while Jacked In.
 
 
 ### Wired-System Stats: Integrity (Not Body Integrity)
@@ -52,7 +52,7 @@ Every Track 2 target -- and the "system" side of any Wired encounter -- tracks i
 The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating.
 
 > **In Foundry**
-> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); GMs can open the full Director view. Click a revealed node to focus its canvas token when one is placed.
+> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.
 
 
 **Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above).
