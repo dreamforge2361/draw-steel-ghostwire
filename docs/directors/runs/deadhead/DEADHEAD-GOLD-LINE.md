@@ -144,7 +144,7 @@ Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<f
 
 **Director — hide roofs:** when the crew boards / goes **inside**, hide **Roofs** (Tiles layer → eye / right-click Hide). Unhide for the roof Recall bail. Occlusion stays off.
 
-World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the roof drifts, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate.
+World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line** on **new** worlds only. If a scene already has flag `goldLineScene`, the module **returns immediately** and never rewrites background, tiles, levels, walls, lights, or dimensions. `{ force: true }` is **GM-opt-in only** and overwrites the live scene — do not run it on a dressed map. Ready never passes force.
 
 ---
 

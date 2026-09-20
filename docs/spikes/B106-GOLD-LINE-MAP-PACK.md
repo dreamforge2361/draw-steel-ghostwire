@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-20  
 **Module:** **0.3.36** (plates + inject) · **0.3.37** (loop/roof hotfix) · **0.3.39** (Level-interior MP4 + one roof tile; 0.3.38 is B80)  
-**Status:** **SHIPPED** — stills + VP9 webm + H.264 mp4 loops + world Scene inject + Deadhead journal notes. **0.3.39 LOCK (Michael 2026-09-20):** Level background = interior motion MP4. ONE roof Tile at 0,0 elev 1 (occlusion NONE). No interior motion tile. Director hides roofs when the crew goes inside.  
+**Status:** **SHIPPED** — stills + VP9 webm + H.264 mp4 loops + world Scene inject + Deadhead journal notes. **0.3.39 LOCK:** new worlds get Level interior MP4 + one roof tile at 0,0 elev 1. Existing `goldLineScene` worlds are **never rewritten**. `{ force: true }` is GM-opt-in only. Director hides roofs when the crew goes inside.  
 **Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B104, B99 Mama club battlemap.  
 **Lock:** Michael 2026-09-19 — “ship it!” CyberMaps Hammerhead stitch. **Do not regenerate** a train plate. Architecture locked 2026-09-20.
 
@@ -39,24 +39,27 @@ Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<f
 
 B72 / B99 / B100 drop files only. B104 said not to invent a Scene pack. Gold Line follows the B39 **world inject** pattern (`flags.draw-steel-ghostwire.*`):
 
-1. First GM `ready`: create Scene folder **Deadhead** (`deadheadScenes`) and Scene **Gold Line** (`goldLineScene`).
+1. First GM `ready` on a **new** world: create Scene folder **Deadhead** (`deadheadScenes`) and Scene **Gold Line** (`goldLineScene`).
 2. **Level background** = interior motion MP4 (`*-interior-loop.mp4`), video loop + autoplay.
 3. **ONE Tile** **Roofs** (`goldLineRoofs`): start **x=0, y=0, 6472×958, elev 1, sort 1, locked**, texture `*-roofs-loop.mp4`, video loop + autoplay, occlusion **NONE**. Michael may nudge x/y.
-4. No interior motion tile. Inject **deletes** leftover `goldLineInterior` tiles.
+4. No interior motion tile. Inject **deletes** leftover `goldLineInterior` tiles (**new worlds / force only**).
 5. Prefer **loop.mp4 → loop.webm → still.webp**. Probe with **FilePicker.browse** or a **ranged GET** (never HEAD). Skip `currentTime` when duration is non-finite.
-6. Grid **208** px = 5 ft; canvas **6472 × 958**. Template version **7** auto-refreshes older worlds onto this lock.
+6. Grid **208** px = 5 ft; canvas **6472 × 958**.
+7. **Live worlds are sacred.** If a scene already has flag `goldLineScene`, `ensureGoldLineScene` **returns immediately**. Ready never passes `{ force: true }`. Force is GM-opt-in only and overwrites walls, lights, tiles, and background.
 
 **Director — hide roofs:** when the crew goes inside, hide **Roofs** (Tiles layer → eye). Unhide for roof Recall bail. Occlusion stays off.
 
-### Console force snippet (0.3.37+)
+### Console force snippet (GM-opt-in only)
 
-Paste as GM after enabling the updated module (or to restamp without waiting for the version migrate):
+**Do not run this on a live Gold Line scene** (walls, lights, stills, roof tile already dressed). It overwrites background, tiles, levels, and dimensions.
+
+Ready never passes force. New worlds inject once; existing `goldLineScene` worlds are left alone.
 
 ```js
 await game.ghostwire.ensureGoldLineScene({ force: true });
 ```
 
-Then **re-activate** Gold Line (close / open, or view another Scene and come back). Confirm:
+On a **new** empty world (or after a deliberate force restamp), re-activate Gold Line and confirm:
 
 1. Scene Config → Level background is `map-gold-line-interior-loop.mp4` (loop + autoplay).
 2. Tiles → **one** tile, **Roofs**, `map-gold-line-roofs-loop.mp4` at **0, 0**, 6472×958, elev 1, occlusion NONE.
@@ -102,5 +105,5 @@ node tools/build-packs.mjs runs
 - [x] B104 pointed at shipped assets
 - [x] `module.json` **0.3.36** (UTF-8 no BOM)
 - [x] **0.3.37** loop hotfix: no HEAD probe; Level video flags; force restamps roof tile; console snippet above
-- [x] **0.3.39** lock: Level background = interior MP4; one roof tile at 0,0 elev 1; delete `goldLineInterior`; occlusion NONE; Director hide-roof; prefer mp4
+- [x] **0.3.39** lock: Level background = interior MP4; one roof tile at 0,0 elev 1; delete `goldLineInterior` on **new** worlds only; existing `goldLineScene` never rewritten; `{ force: true }` is GM-opt-in only; occlusion NONE; Director hide-roof; prefer mp4
 - [x] No generated train; no unrelated journal regen

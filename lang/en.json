@@ -7326,7 +7326,7 @@
         "LevelInterior": "Interior",
         "RoofsTile": "Roofs",
         "Injected": "Gold Line is ready under Scenes → Deadhead. Hide the Roofs tile when the crew goes inside.",
-        "Refreshed": "Gold Line restamped (interior MP4 background + one roof tile). Hide Roofs when the crew goes inside. Re-activate the Scene if it is already open."
+        "Refreshed": "Gold Line was force-restamped (overwrites walls, lights, tiles, and background). Re-activate the Scene if it is already open."
       }
     },
     "Lore": {

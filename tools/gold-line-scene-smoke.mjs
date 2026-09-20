@@ -150,6 +150,12 @@ ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line 
 
 const script = readFileSync(SCRIPT, "utf8");
 ok(script.includes("ensureGoldLineScene"), "inject exports ensureGoldLineScene");
+ok(script.includes("if (existing && !force) return existing"), "existing goldLineScene returns immediately unless force");
+ok(!/\bstale\b/.test(script), "inject does not auto-migrate stale template versions");
+const readyFn = script.slice(script.indexOf("export function registerGoldLineScene"));
+ok(!/ensureGoldLineScene\(\s*\{\s*force\s*:/.test(readyFn), "ready hook does not pass force");
+ok(/if \(existingGoldLineScene\(\)\) return/.test(readyFn), "ready returns if goldLineScene already exists");
+ok(/Ready never passes force/.test(readyFn), "ready documents that force is GM-opt-in only");
 ok(!/\bGOLD_LINE_INTERIOR\b/.test(script), "inject has no GOLD_LINE_INTERIOR tile apply");
 ok(!/interiorTile/.test(script), "inject has no interiorTile apply");
 ok(script.includes("removeStrayInteriorTiles") && script.includes("goldLineInterior"), "inject deletes leftover goldLineInterior tiles");
@@ -180,6 +186,8 @@ ok(/Level background/i.test(sor) && /interior/i.test(sor), "SoR says Level backg
 ok(/one tile|ONE Tile|one roof/i.test(sor), "SoR says there is one roof tile");
 ok(/deletes leftover `goldLineInterior`/.test(sor) && !/flag `goldLineInterior`/.test(sor), "SoR deletes leftover interior tiles, does not ship one");
 ok(!/3232/.test(sor) && !/\b475\b/.test(sor), "SoR does not bake roof 3232, 475");
+ok(/returns immediately|never rewrites/i.test(sor), "SoR says existing goldLineScene is never rewritten");
+ok(/GM-opt-in/i.test(sor), "SoR says force is GM-opt-in only");
 ok(/hide/i.test(sor) && /inside/i.test(sor), "SoR has Director hide-roof note when crew goes inside");
 ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
@@ -195,6 +203,8 @@ ok(/loop\.mp4/.test(plateMd), "journal prefers loop.mp4");
 ok(/Level/.test(plateMd) && /interior/i.test(plateMd), "journal says Level background is the interior");
 ok(!/3232/.test(plateMd) && !/\b475\b/.test(plateMd), "journal does not bake roof 3232, 475");
 ok(/x=0|x = 0|0, 0|0,0/.test(plateMd), "journal starts the roof at 0, 0");
+ok(/never rewrites/i.test(plateMd), "journal says existing worlds are never rewritten");
+ok(/GM-opt-in/i.test(plateMd), "journal says force is GM-opt-in only");
 ok(/hide/i.test(plateMd) && /inside/i.test(plateMd), "journal has Director hide-roof note");
 ok(/NONE|occlusion off|occlusion stays off/i.test(plateMd), "journal says roofs have occlusion off");
 for (const page of journal.pages ?? []) {

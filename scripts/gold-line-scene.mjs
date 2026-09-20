@@ -1,6 +1,8 @@
 // Deadhead Gold Line (B106 / 0.3.39): world-inject the dual-Hammerhead train Scene.
 // LOCK (Michael 2026-09-20): Level background = interior MP4. ONE roof Tile.
 // No interior motion tile. Occlusion off — Director hides the roof to go inside.
+// SACRED: if a world already has flag goldLineScene, never rewrite it on ready.
+// `{ force: true }` is GM-opt-in only and overwrites walls/lights/tiles/background.
 // Template: data/scenes/gold-line.json. Spike: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
 // Prefer loop.mp4. Skip currentTime when duration is non-finite. Never HEAD-probe.
 
@@ -227,18 +229,18 @@ async function applyRoofTile(scene, template, roofsSrc) {
 }
 
 /**
- * Create or refresh the Gold Line Scene (GM only).
- * Level background = interior MP4. One roof tile. Deletes any goldLineInterior tile.
+ * Create the Gold Line Scene (GM only) on *new* worlds.
+ * If a scene already has flag goldLineScene, return immediately — never rewrite
+ * background, tiles, levels, walls, lights, or dimensions.
+ * `{ force: true }` is GM-opt-in only (ready must never pass force).
  */
 export async function ensureGoldLineScene({ force = false } = {}) {
   if (!game.user.isGM) return existingGoldLineScene();
   installGoldLineSeekGuard();
-  const template = await loadGoldLineTemplate();
   const existing = existingGoldLineScene();
-  const installed = Number(existing?.getFlag(MODULE_ID, "goldLineVersion") ?? 0);
-  const stale = Boolean(existing && installed < Number(template.version ?? 0));
-  const rewrite = force || stale;
-  if (existing && !rewrite) return existing;
+  if (existing && !force) return existing;
+
+  const template = await loadGoldLineTemplate();
 
   const interiorSrc = await resolveSrc(preferSrc(template.assets, "interiorPrefer", [
     "interiorLoopMp4",
@@ -270,7 +272,7 @@ export async function ensureGoldLineScene({ force = false } = {}) {
 
   let scene = existing;
   if (!scene) scene = await Scene.implementation.create(sceneData);
-  else if (rewrite) {
+  else {
     await scene.update({
       width: GOLD_LINE_PLATE.width,
       height: GOLD_LINE_PLATE.height,
@@ -298,7 +300,7 @@ export async function ensureGoldLineScene({ force = false } = {}) {
 
   await removeStrayInteriorTiles(scene);
   await applyRoofTile(scene, template, roofsSrc);
-  if (stale && !force) ui.notifications.info(loc("Refreshed"));
+  if (force) ui.notifications.info(loc("Refreshed"));
   return scene;
 }
 
@@ -311,6 +313,8 @@ export function registerGoldLineScene() {
     game.ghostwire = { ...(game.ghostwire ?? {}), ensureGoldLineScene };
     if (!game.user.isGM) return;
     try {
+      // Ready never passes force. Existing goldLineScene worlds are sacred.
+      if (existingGoldLineScene()) return;
       const scene = await ensureGoldLineScene();
       if (scene && !scene.getFlag(MODULE_ID, "goldLineNotified")) {
         ui.notifications.info(loc("Injected"));
