@@ -16,15 +16,23 @@ import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs
 import { addWireKitToSelected } from "./wired-kit.mjs";
 import {
   CONSOLE_SLICE,
+  DS_HIDE_IN_SHEET,
+  DS_SYSTEM_ID,
   abilityTierFromMessage,
   actorHasConnectInterface,
   consoleVerbGate,
   consoleVerbMetaFromMessage,
+  filterOffSheetAbilitiesContext,
+  hasHideInSheetFlag,
   hintVerbDsid,
+  isOffSheetMatrixVerb,
   isTemporaryConsoleVerb,
   markTemporaryConsoleVerbData,
   nextAlert,
+  offSheetVerbDomSelectors,
   shouldReleaseTemporaryVerb,
+  sortConsoleNodes,
+  sortConsoleRoster,
   splitReusableTemporaryVerbs,
   consoleRosterWireState,
   pickConsoleActor,
@@ -157,8 +165,10 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const isGM = game.user.isGM;
     const scene = this.scene;
     const board = getBoard(scene);
-    const nodes = board.nodes.filter(node => isGM || node.revealed);
+    const lang = game.i18n.lang;
+    const nodes = sortConsoleNodes(board.nodes.filter(node => isGM || node.revealed), { lang });
     if (!nodes.some(node => node.id === this.selectedId)) this.selectedId = nodes[0]?.id ?? null;
+    const boardById = new Map(board.nodes.map(node => [node.id, node]));
 
     const localize = key => game.i18n.localize(`GHOSTWIRE.WiredConsole.${key}`);
     const decorate = node => {
@@ -204,6 +214,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         isNode,
         runnerState: this.getWiredState?.(actor) ?? "disconnected",
       });
+      const nodeId = isNode ? (actor.getFlag(MODULE_ID, "nodeId") ?? "") : "";
+      const boardNode = nodeId ? boardById.get(nodeId) : null;
       roster.push({
         uuid: actor.uuid,
         name: token.name || actor.name,
@@ -213,13 +225,13 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         connected: display.connected,
         verbSelectable: display.verbSelectable,
         isNode,
-        nodeId: isNode ? (actor.getFlag(MODULE_ID, "nodeId") ?? "") : "",
+        nodeId,
+        revealed: isNode ? !!boardNode?.revealed : false,
         owned: isGM || actor.isOwner,
         hasInterface: !isNode && actorHasConnectInterface(actor),
       });
     }
-    const order = { jackedIn: 0, overlay: 1, linked: 2, connected: 3, disconnected: 4 };
-    roster.sort((a, b) => (order[a.state] - order[b.state]) || a.name.localeCompare(b.name, game.i18n.lang));
+    sortConsoleRoster(roster, { lang });
     this.selectedActorUuid = pickConsoleActor({
       roster,
       selectedUuid: this.selectedActorUuid,
@@ -747,13 +759,17 @@ const TEMP_EMBED_OPTIONS = { render: false };
  * `fromUuidSync` it for `toEmbed` + `powerRollText` (tier display strings).
  * A parented-but-unembedded Item is not in the actor collection, so confirm
  * throws. Embed for the use, **keep** it while chat still points at it
- * (hide on the sheet; ready leftover strip + extra-duplicate cleanup).
+ * (`flags.draw-steel.hideInSheet` + sheet prepare filter + DOM/CSS hide;
+ * ready leftover strip deletes only orphans not backing a chat abilityUuid).
  *
  * @returns {Promise<{ item: Item|null, ephemeral: boolean, created: boolean }>}
  */
 async function resolveVerbItem(actor, dsid) {
   const owned = [...(actor?.items ?? [])].find(item => item.system?._dsid === dsid && !isTemporaryConsoleVerb(item));
-  if (owned) return { item: owned, ephemeral: false, created: false };
+  if (owned) {
+    await ensureTempHiddenOnSheet(owned);
+    return { item: owned, ephemeral: false, created: false };
+  }
 
   const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);
   const source = spec ? await fromUuid(spec.uuid) : null;
@@ -763,11 +779,24 @@ async function resolveVerbItem(actor, dsid) {
   if (extras.length) {
     await actor.deleteEmbeddedDocuments("Item", extras.map(item => item.id), TEMP_EMBED_OPTIONS);
   }
-  if (keep) return { item: keep, ephemeral: true, created: false };
+  if (keep) {
+    await ensureTempHiddenOnSheet(keep);
+    return { item: keep, ephemeral: true, created: false };
+  }
 
   const data = markTemporaryConsoleVerbData(game.items.fromCompendium(source, { clearFolder: true }));
   const [created] = await actor.createEmbeddedDocuments("Item", [data], TEMP_EMBED_OPTIONS);
+  if (created) await ensureTempHiddenOnSheet(created);
   return { item: created ?? null, ephemeral: true, created: true };
+}
+
+async function ensureTempHiddenOnSheet(item) {
+  if (!item || hasHideInSheetFlag(item)) return;
+  try {
+    if (typeof item.setFlag === "function") await item.setFlag(DS_SYSTEM_ID, DS_HIDE_IN_SHEET, true);
+  } catch (err) {
+    console.warn(`${MODULE_ID} | could not stamp hideInSheet on temporary Matrix Verb`, err);
+  }
 }
 
 async function releaseTemporaryVerbItem(actor, item) {
@@ -779,17 +808,49 @@ async function releaseTemporaryVerbItem(actor, item) {
   }
 }
 
-/** Hide the temp verb so it never appears as a sheet ability (B117). */
+function hideVerbRow(node) {
+  const row = node.closest("li, article, .item, .document, .ability, [data-document-uuid]") ?? node;
+  row.hidden = true;
+  row.classList.add("ghostwire-off-sheet-verb");
+  row.dataset.ghostwireOffSheetVerb = "true";
+  row.style?.setProperty?.("display", "none", "important");
+}
+
+/**
+ * Hide Matrix Verbs on Draw Steel hero/NPC sheets (B117).
+ * DS 1.1.2 rows use `data-document-uuid`; hideInSheet is the primary filter.
+ */
 function hideTemporaryConsoleVerbs(app, element) {
   const root = element instanceof HTMLElement ? element : element?.[0];
-  const actor = app?.document;
+  const actor = app?.document ?? app?.actor;
   if (!root?.querySelectorAll || !actor?.items) return;
-  for (const item of actor.items) {
-    if (!isTemporaryConsoleVerb(item)) continue;
-    for (const node of root.querySelectorAll(`[data-item-id="${item.id}"], [data-entry-id="${item.id}"]`)) {
-      const row = node.closest("li, article, .item, .document") ?? node;
-      row.hidden = true;
+  const offSheet = [...actor.items].filter(isOffSheetMatrixVerb);
+  if (!offSheet.length) return;
+  const ids = new Set(offSheet.map(item => item.id).filter(Boolean));
+  const uuids = new Set(offSheet.map(item => item.uuid).filter(Boolean));
+  for (const item of offSheet) {
+    for (const selector of offSheetVerbDomSelectors(item)) {
+      for (const node of root.querySelectorAll(selector)) hideVerbRow(node);
     }
+  }
+  for (const node of root.querySelectorAll("[data-document-uuid], [data-uuid], [data-item-id], [data-entry-id]")) {
+    const ref = node.dataset.documentUuid || node.dataset.uuid || node.dataset.itemId || node.dataset.entryId || "";
+    if (!ref) continue;
+    if (uuids.has(ref) || ids.has(ref) || [...ids].some(id => ref.endsWith(`.Item.${id}`))) hideVerbRow(node);
+  }
+}
+
+/** Wrap DS `_prepareAbilitiesContext` so Ping (and the other eight) never enter the sheet list. */
+function patchSheetHideMatrixVerbs() {
+  const sheets = Object.values(ds?.applications?.sheets ?? {});
+  for (const Sheet of sheets) {
+    const prep = Sheet?.prototype?._prepareAbilitiesContext;
+    if (typeof prep !== "function" || prep.__ghostwireOffSheet) continue;
+    async function patched() {
+      return filterOffSheetAbilitiesContext(await prep.call(this));
+    }
+    patched.__ghostwireOffSheet = true;
+    Sheet.prototype._prepareAbilitiesContext = patched;
   }
 }
 
@@ -927,6 +988,7 @@ const rerender = () => {
 export function registerWiredConsole({ getWiredState }) {
   getWiredStateFn = getWiredState;
   registerNodeTokens({ getBoard });
+  patchSheetHideMatrixVerbs();
 
   game.keybindings.register(MODULE_ID, "wiredConsole", {
     name: "GHOSTWIRE.WiredConsole.Keybinding",
@@ -979,6 +1041,9 @@ export function registerWiredConsole({ getWiredState }) {
 
   Hooks.on("renderDrawSteelHeroSheet", hideTemporaryConsoleVerbs);
   Hooks.on("renderDrawSteelNPCSheet", hideTemporaryConsoleVerbs);
+  Hooks.on("renderDrawSteelRetainerSheet", hideTemporaryConsoleVerbs);
+  Hooks.on("renderActorSheet", hideTemporaryConsoleVerbs);
+  Hooks.on("renderActorSheetV2", hideTemporaryConsoleVerbs);
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);

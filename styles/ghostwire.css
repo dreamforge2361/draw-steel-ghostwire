@@ -88,6 +88,13 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   color: var(--color-level-error, #d33);
 }
 
+/* B117: Matrix Verbs never appear on hero/NPC sheets (temp embed is for AbilityModel#use / chat only). */
+.application.draw-steel .ghostwire-off-sheet-verb,
+.sheet.draw-steel .ghostwire-off-sheet-verb,
+.application.draw-steel [data-ghostwire-off-sheet-verb="true"] {
+  display: none !important;
+}
+
 /* Chrome implant summary line under the item name */
 .ghostwire-chrome-line {
   font-size: var(--font-size-12, 12px);

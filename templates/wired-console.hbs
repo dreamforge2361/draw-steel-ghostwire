@@ -50,7 +50,7 @@
         {{#each roster}}
         <li class="wc-roster-row state-{{state}}{{#if selected}} selected{{/if}}{{#if isNode}} is-node{{/if}}" data-action="selectActor" data-actor-uuid="{{uuid}}" data-is-node="{{#if isNode}}true{{else}}false{{/if}}" data-node-id="{{nodeId}}" {{#if isNode}}data-tooltip="GHOSTWIRE.WiredConsole.RosterNodeHint"{{/if}}>
           <img src="{{img}}" alt="">
-          <span class="wc-roster-name">{{name}}</span>
+          <span class="wc-roster-name" title="{{name}}" data-tooltip="{{name}}">{{name}}</span>
           <span class="wc-state-chip state-{{state}}">{{stateLabel}}</span>
         </li>
         {{else}}
@@ -92,7 +92,7 @@
           <div class="wc-node-head">
             {{#if ../isGM}}<i class="wc-reveal fa-solid {{#if revealed}}fa-eye{{else}}fa-eye-slash{{/if}}"
               data-tooltip="{{#if revealed}}{{localize "GHOSTWIRE.WiredConsole.Revealed"}}{{else}}{{localize "GHOSTWIRE.WiredConsole.Hidden"}}{{/if}}"></i>{{/if}}
-            <span class="wc-node-name">{{name}}</span>
+            <span class="wc-node-name" title="{{name}}" data-tooltip="{{name}}">{{name}}</span>
             <span class="wc-tag">T{{track}}</span>
             <span class="wc-tag">R{{rating}}</span>
             {{#if placed}}{{#if ../isGM}}<i class="fa-solid fa-location-dot wc-dim" data-tooltip="GHOSTWIRE.WiredConsole.OnCanvas"></i>{{/if}}{{/if}}
