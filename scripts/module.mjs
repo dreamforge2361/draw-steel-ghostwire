@@ -1,7 +1,9 @@
+import { MATRIX_VERBS } from "./wired-verbs.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerWiredMinimap } from "./wired-minimap.mjs";
+import { registerWiredKit } from "./wired-kit.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
 import { registerStreetEye } from "./street-eye.mjs";
@@ -36,19 +38,6 @@ const DEFAULT_ITEM_SWAPS = {
   // Aid Attack -> Spot Target
   "Compendium.draw-steel.abilities.Item.Xb3S5N1fZyICD58D": `Compendium.${MODULE_ID}.abilities.Item.Lc7LhoqWg9ydP5Jm`,
 };
-
-// Matrix Verbs (08-hacker.md): universal Wired abilities every hero gets, in Ghostwire Abilities › Matrix Verbs.
-const MATRIX_VERBS = [
-  "GY0GEe2obsavHD4a", // Connect
-  "wRvsbMqkVkwKMwj0", // Jack Out
-  "ZGGlbzIQqzGIBdG6", // Toggle Connection State
-  "srf3OJxnEYVPlcbM", // Scan
-  "6sOxYCw5Ff6Es8LF", // Navigate
-  "H1xUDnDNhWmAw0Ko", // Ping
-  "4gr00JaQt5OrEpDE", // Broadcast
-  "n1fEJIA3QoDXxUZS", // Search
-  "RM694XnuAyo25XNV", // Read/Write
-].map(id => `Compendium.${MODULE_ID}.abilities.Item.${id}`);
 
 // Wired connection states: the token/sheet statuses are the source of truth, mirrored to flags.<module>.wired for the Wired Console.
 const WIRED_STATUSES = {
@@ -92,6 +81,7 @@ Hooks.once("init", () => {
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
   registerWiredMinimap({ getWiredState });
+  registerWiredKit();
   registerRunGenerator();
   registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
   registerMachines();

@@ -1,26 +1,31 @@
-<div class="wm-deck mode-{{mode}}">
+<div class="wm-deck mode-{{mode}}{{#if dense}} is-dense{{/if}}">
   <header class="wm-header">
     <i class="fa-solid fa-network-wired wc-sigil"></i>
     <span class="wm-scene">{{sceneName}}</span>
     <span class="wc-state-chip state-{{mode}}">{{modeLabel}}</span>
-  </header>
-  <div class="wm-field">
-    {{#if edges.length}}
-    <svg class="wm-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-      {{#each edges}}
-      <line class="wm-wire{{#if hidden}} is-hidden{{/if}}" x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}" vector-effect="non-scaling-stroke"></line>
-      {{/each}}
-    </svg>
-    {{/if}}
-    {{#each nodes}}
-    <button type="button" class="wm-node track-{{track}} band-{{band}}{{#if down}} down{{/if}}{{#if hidden}} is-hidden{{/if}}{{#if placed}} placed{{/if}}"
-            style="{{style}} --wm-integrity: {{integrityPct}}%;" data-action="focusNode" data-node-id="{{id}}"
-            data-tooltip-html="{{tooltip}}" data-tooltip-direction="UP" aria-label="{{name}}">
-      <span class="wm-dot">{{#if ../showRatings}}R{{rating}}{{/if}}</span>
-      <span class="wm-name">{{name}}</span>
+    <button type="button" class="wm-reset" data-action="resetView" data-tooltip="{{panHint}}" aria-label="{{panHint}}">
+      <i class="fa-solid fa-expand"></i>
     </button>
-    {{else}}
-    <p class="wm-empty">{{localize "GHOSTWIRE.WiredMinimap.NoNodes"}}</p>
-    {{/each}}
+  </header>
+  <div class="wm-field" title="{{panHint}}">
+    <div class="wm-viewport" style="transform: {{viewportTransform}};">
+      {{#if edges.length}}
+      <svg class="wm-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        {{#each edges}}
+        <line class="wm-wire{{#if hidden}} is-hidden{{/if}}" x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}" vector-effect="non-scaling-stroke"></line>
+        {{/each}}
+      </svg>
+      {{/if}}
+      {{#each nodes}}
+      <button type="button" class="wm-node track-{{track}} band-{{band}}{{#if down}} down{{/if}}{{#if hidden}} is-hidden{{/if}}{{#if placed}} placed{{/if}}"
+              style="{{style}} --wm-integrity: {{integrityPct}}%;" data-action="focusNode" data-node-id="{{id}}"
+              data-tooltip-html="{{tooltip}}" data-tooltip-direction="UP" aria-label="{{name}}">
+        <span class="wm-dot">{{#if ../showRatings}}R{{rating}}{{/if}}</span>
+        <span class="wm-name">{{shortName}}</span>
+      </button>
+      {{else}}
+      <p class="wm-empty">{{localize "GHOSTWIRE.WiredMinimap.NoNodes"}}</p>
+      {{/each}}
+    </div>
   </div>
 </div>

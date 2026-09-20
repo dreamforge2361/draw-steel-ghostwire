@@ -54,6 +54,12 @@
           <button type="button" class="wc-btn wc-btn-small" data-action="generateCluster" data-tooltip="GHOSTWIRE.WiredConsole.GenerateCluster" aria-label="{{localize "GHOSTWIRE.WiredConsole.GenerateCluster"}}" {{disabled (not hasScene)}}>
             <i class="fa-solid fa-diagram-project"></i>
           </button>
+          <button type="button" class="wc-btn wc-btn-small" data-action="autoNodes" data-tooltip="GHOSTWIRE.WiredConsole.AutoNodesHint" aria-label="{{localize "GHOSTWIRE.WiredConsole.AutoNodes"}}" {{disabled (not hasScene)}}>
+            <i class="fa-solid fa-lightbulb"></i>
+          </button>
+          <button type="button" class="wc-btn wc-btn-small" data-action="addWireKit" data-tooltip="GHOSTWIRE.WiredKit.Hud" aria-label="{{localize "GHOSTWIRE.WiredKit.Button"}}">
+            <i class="fa-solid fa-user-secret"></i>
+          </button>
         </span>
         {{/if}}
       </h3>

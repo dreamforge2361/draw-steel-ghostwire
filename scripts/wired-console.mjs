@@ -10,6 +10,8 @@ import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
+import { applyAutoNodesFromScene } from "./wired-auto-nodes.mjs";
+import { addWireKitToSelected } from "./wired-kit.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -39,6 +41,7 @@ export function getBoard(scene) {
       description: node.description ?? "",
       notes: node.notes ?? "",
       links: Array.isArray(node.links) ? node.links.filter(id => typeof id === "string") : [],
+      autoFrom: node.autoFrom && typeof node.autoFrom === "object" ? { ...node.autoFrom } : null,
     };
   });
   // Links are undirected (B41b): drop self-links and ids not on this board, and mirror one-sided links so both ends list each other.
@@ -84,6 +87,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       placeNode: WiredConsole.#onPlaceNode,
       removeNode: WiredConsole.#onRemoveNode,
       generateCluster: WiredConsole.#onGenerateCluster,
+      autoNodes: WiredConsole.#onAutoNodes,
+      addWireKit: WiredConsole.#onAddWireKit,
       deleteNode: WiredConsole.#onDeleteNode,
       alertUp: WiredConsole.#onAlertUp,
       alertDown: WiredConsole.#onAlertDown,
@@ -309,10 +314,12 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   /** A complete, hidden node with a full Integrity pool for its Rating. */
-  static #makeNode({ name, track = 2, rating = 3, description = "", notes = "" }) {
+  static #makeNode({ name, track = 2, rating = 3, description = "", notes = "", links = [], autoFrom = null }) {
     return {
       id: foundry.utils.randomID(), name, track, rating,
-      integrity: RATING[rating].integrity, integrityMax: RATING[rating].integrity, alert: 0, revealed: false, description, notes, links: [],
+      integrity: RATING[rating].integrity, integrityMax: RATING[rating].integrity, alert: 0, revealed: false, description, notes,
+      links: Array.isArray(links) ? [...links] : [],
+      autoFrom,
     };
   }
 
@@ -401,6 +408,36 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       nodes.push(...added);
       board.stratum = stratum;
     });
+  }
+
+  // B112: one Light Control per named-light room + one Maglock per wall door, hidden tokens on the canvas.
+  static async #onAutoNodes() {
+    if (!this.scene) return;
+    const localize = key => game.i18n.localize(`GHOSTWIRE.WiredConsole.${key}`);
+    const existing = getBoard(this.scene).nodes.filter(n => n.autoFrom).length;
+    const data = await foundry.applications.api.DialogV2.input({
+      window: { title: "GHOSTWIRE.WiredConsole.AutoNodes", icon: "fa-solid fa-lightbulb" },
+      content: `
+        <p>${localize("AutoNodesHint")}</p>
+        <p class="hint">${localize("AutoNodesRule")}</p>
+        ${existing ? `<p class="hint">${game.i18n.format("GHOSTWIRE.WiredConsole.AutoNodesExisting", { count: existing })}</p>` : ""}
+        <div class="form-group">
+          <label>${localize("AutoNodesMode")}</label>
+          <select name="mode">
+            <option value="skip" selected>${localize("AutoNodesSkip")}</option>
+            <option value="replace">${localize("AutoNodesReplace")}</option>
+          </select>
+        </div>`,
+      ok: { label: "GHOSTWIRE.WiredConsole.AutoNodesConfirm", icon: "fa-solid fa-lightbulb" },
+    });
+    if (!data) return;
+    const plan = await applyAutoNodesFromScene({ replace: data.mode === "replace" });
+    if (plan.created?.[0]) this.selectedId = plan.created[0].id;
+  }
+
+  // B115: stamp Wire Kit + Matrix Verbs onto selected NPC tokens. Heroes already have verbs.
+  static async #onAddWireKit() {
+    await addWireKitToSelected();
   }
 
   static async #onDeleteNode(event, target) {
@@ -643,6 +680,6 @@ export function registerWiredConsole({ getWiredState }) {
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings };
+    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings, applyAutoNodesFromScene };
   });
 }

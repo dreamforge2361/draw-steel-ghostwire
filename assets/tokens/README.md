@@ -62,3 +62,7 @@ Michael’s split-face portrait lives under `bestiary/` as `mama-cassavir` (PNG 
 ```text
 node tools/apply-bestiary-portrait-art.mjs
 ```
+
+## Wired node tokens (B110 / B113)
+
+Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp`. **B113** Light Control / Maglock art is not shipped — `AUTO_NODE_TOKEN_ART` in `scripts/wired-auto-nodes.mjs` stays `null` until Michael drops files (no AI art).
