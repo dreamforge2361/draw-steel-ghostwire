@@ -1,7 +1,10 @@
-// Deadhead Gold Line (B106): world-inject the dual-Hammerhead train Scene.
+// Deadhead Gold Line (B106 / 0.3.37 hotfix): world-inject the dual-Hammerhead train Scene.
 // Background prefers the interior WebM loop; roofs sit as an overhead tile with
 // Foundry v14 SURFACE occlusion (roofs on until a token is underneath).
 // Template: data/scenes/gold-line.json. Design: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
+//
+// Do not use HEAD / foundry.utils.srcExists to probe loops — Foundry's file server
+// often rejects HEAD on webm and the old inject fell back to stills.
 
 const MODULE_ID = "draw-steel-ghostwire";
 const TEMPLATE_PATH = `modules/${MODULE_ID}/data/scenes/gold-line.json`;
@@ -9,6 +12,8 @@ const SCENE_FLAG = "goldLineScene";
 const ROOF_FLAG = "goldLineRoofs";
 const FOLDER_FLAG = "deadheadScenes";
 const L = "GHOSTWIRE.Scenes.GoldLine";
+const VIDEO_EXT = /\.(webm|mp4|m4v|ogv)$/i;
+const VIDEO_PLAYBACK = Object.freeze({ loop: true, autoplay: true, volume: 0 });
 
 const loc = (key, data) => (data ? game.i18n.format(`${L}.${key}`, data) : game.i18n.localize(`${L}.${key}`));
 
@@ -23,11 +28,47 @@ export function loadGoldLineTemplate() {
   return templatePromise;
 }
 
-async function resolveSrc(preferred, fallback) {
+function isVideoSrc(src) {
+  return VIDEO_EXT.test(src ?? "");
+}
+
+function videoPlayback(src, extra = {}) {
+  return isVideoSrc(src) ? { ...VIDEO_PLAYBACK, ...extra } : extra;
+}
+
+function levelBackground(src, template) {
+  const background = { src };
+  if (isVideoSrc(src)) background.video = videoPlayback(src, template?.level?.video);
+  return background;
+}
+
+/** True when a module media path exists. Never uses HEAD (webm often 405s). */
+export async function mediaExists(path) {
+  const slash = path.lastIndexOf("/");
+  const dir = slash >= 0 ? path.slice(0, slash) : "";
+  const file = slash >= 0 ? path.slice(slash + 1) : path;
+  if (dir && globalThis.FilePicker?.browse) {
+    try {
+      const listing = await FilePicker.browse("data", dir);
+      if (listing.files?.some(entry => entry === path || entry.endsWith(`/${file}`) || entry === file)) return true;
+    } catch (_) { /* fall through to ranged GET */ }
+  }
   try {
-    const res = await fetch(preferred, { method: "HEAD" });
-    if (res.ok) return preferred;
-  } catch (_) { /* fall through */ }
+    const ranged = await fetch(path, { headers: { Range: "bytes=0-0" } });
+    if (ranged.ok || ranged.status === 206) return true;
+    if (ranged.status !== 405 && ranged.status !== 416 && ranged.status !== 501) return false;
+  } catch (_) { /* try a short GET */ }
+  try {
+    const res = await fetch(path, { headers: { Range: "bytes=0-1" } });
+    return res.ok || res.status === 206;
+  } catch (_) {
+    return false;
+  }
+}
+
+/** Prefer the loop path when it exists; stills only if the loop GET/browse fails. */
+export async function resolveSrc(preferred, fallback) {
+  if (await mediaExists(preferred)) return preferred;
   return fallback;
 }
 
@@ -46,16 +87,48 @@ function existingGoldLineScene() {
   return game.scenes.find(s => s.getFlag(MODULE_ID, SCENE_FLAG)) ?? null;
 }
 
+function roofPayload(template, roofsSrc) {
+  return {
+    name: loc("RoofsTile"),
+    x: template.roofTile.x,
+    y: template.roofTile.y,
+    width: template.roofTile.width,
+    height: template.roofTile.height,
+    elevation: template.roofTile.elevation,
+    sort: template.roofTile.sort,
+    locked: template.roofTile.locked,
+    hidden: false,
+    texture: { src: roofsSrc },
+    occlusion: { ...template.roofTile.occlusion },
+    video: videoPlayback(roofsSrc, template.roofTile.video),
+    flags: { [MODULE_ID]: { [ROOF_FLAG]: true } },
+  };
+}
+
+async function applyRoofTile(scene, template, roofsSrc, { force = false } = {}) {
+  const roof = scene.tiles.find(t => t.getFlag(MODULE_ID, ROOF_FLAG));
+  const data = roofPayload(template, roofsSrc);
+  if (!roof) {
+    await scene.createEmbeddedDocuments("Tile", [{ _id: template.roofTile._id, ...data }]);
+    return;
+  }
+  if (force) await roof.update(data);
+}
+
 /**
- * Create the Gold Line Scene once in this world (GM only).
- * @param {{ force?: boolean }} [options]  force=true recreates if missing tiles/levels, but never deletes a GM-edited scene.
+ * Create or refresh the Gold Line Scene (GM only).
+ * force=true (or a stale goldLineVersion) restamps Level background + roof tile
+ * onto the loop paths without deleting the Scene.
  */
 export async function ensureGoldLineScene({ force = false } = {}) {
   if (!game.user.isGM) return existingGoldLineScene();
-  const existing = existingGoldLineScene();
-  if (existing && !force) return existing;
-
   const template = await loadGoldLineTemplate();
+  const existing = existingGoldLineScene();
+  const installed = Number(existing?.getFlag(MODULE_ID, "goldLineVersion") ?? 0);
+  const stale = Boolean(existing && installed < Number(template.version ?? 0));
+  const rewrite = force || stale;
+  if (existing && !rewrite) return existing;
+
   const interiorSrc = await resolveSrc(template.assets.interiorLoop, template.assets.interiorStill);
   const roofsSrc = await resolveSrc(template.assets.roofsLoop, template.assets.roofsStill);
   const folder = await deadheadSceneFolder();
@@ -78,7 +151,7 @@ export async function ensureGoldLineScene({ force = false } = {}) {
 
   let scene = existing;
   if (!scene) scene = await Scene.implementation.create(sceneData);
-  else if (force) {
+  else if (rewrite) {
     await scene.update({
       width: template.width,
       height: template.height,
@@ -87,6 +160,7 @@ export async function ensureGoldLineScene({ force = false } = {}) {
       thumb: template.thumb,
       grid: { ...template.grid },
       initial: { ...template.initial },
+      [`flags.${MODULE_ID}.goldLineVersion`]: template.version,
     });
   }
 
@@ -94,7 +168,7 @@ export async function ensureGoldLineScene({ force = false } = {}) {
     name: loc("LevelInterior"),
     sort: template.level.sort,
     elevation: { ...template.level.elevation },
-    background: { src: interiorSrc },
+    background: levelBackground(interiorSrc, template),
   };
   const level = scene.levels?.contents?.[0];
   if (level) await level.update(levelPayload);
@@ -103,25 +177,8 @@ export async function ensureGoldLineScene({ force = false } = {}) {
     if (created && scene.initialLevel !== created.id) await scene.update({ initialLevel: created.id });
   }
 
-  const roofExists = scene.tiles.some(t => t.getFlag(MODULE_ID, ROOF_FLAG));
-  if (!roofExists) {
-    await scene.createEmbeddedDocuments("Tile", [{
-      _id: template.roofTile._id,
-      name: loc("RoofsTile"),
-      x: template.roofTile.x,
-      y: template.roofTile.y,
-      width: template.roofTile.width,
-      height: template.roofTile.height,
-      elevation: template.roofTile.elevation,
-      sort: template.roofTile.sort,
-      locked: template.roofTile.locked,
-      texture: { src: roofsSrc },
-      occlusion: { ...template.roofTile.occlusion },
-      video: { ...template.roofTile.video },
-      flags: { [MODULE_ID]: { [ROOF_FLAG]: true } },
-    }]);
-  }
-
+  await applyRoofTile(scene, template, roofsSrc, { force: rewrite || !scene.tiles.some(t => t.getFlag(MODULE_ID, ROOF_FLAG)) });
+  if (stale && !force) ui.notifications.info(loc("Refreshed"));
   return scene;
 }
 

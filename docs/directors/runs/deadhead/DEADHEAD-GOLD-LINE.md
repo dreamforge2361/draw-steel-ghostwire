@@ -134,7 +134,7 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 | Interior background | `map-gold-line-interior-loop.webm` | `map-gold-line-interior.webp` |
 | Roofs overhead | `map-gold-line-roofs-loop.webm` | `map-gold-line-roofs.webp` |
 
-Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile uses **Surface** occlusion (on until a token is inside). World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**.
+Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile (**Tiles** layer, name **Roofs (overhead)**, elevation 10) uses **Surface** occlusion (on until a token is inside). World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the background is still or roofs are missing, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate the Scene.
 
 ---
 

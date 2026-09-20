@@ -7304,8 +7304,9 @@
         "Name": "Gold Line",
         "Folder": "Deadhead",
         "LevelInterior": "Interior",
-        "RoofsTile": "Roofs",
-        "Injected": "Gold Line is ready under Scenes → Deadhead."
+        "RoofsTile": "Roofs (overhead)",
+        "Injected": "Gold Line is ready under Scenes → Deadhead. Roofs sit on the Tiles layer (elevation 10).",
+        "Refreshed": "Gold Line loops refreshed. Re-activate the Scene if the canvas is already open."
       }
     },
     "Lore": {
