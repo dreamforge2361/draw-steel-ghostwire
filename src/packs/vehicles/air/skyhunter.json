@@ -47,7 +47,8 @@
         "tags": [
           "Combat",
           "Mount",
-          "Heavy"
+          "Heavy",
+          "VTOL"
         ],
         "modFamily": [
           "vehicle"

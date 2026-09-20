@@ -47,7 +47,8 @@
         "tags": [
           "Armor",
           "Troop",
-          "Mount"
+          "Mount",
+          "Ground-hauler"
         ],
         "modFamily": [
           "vehicle"

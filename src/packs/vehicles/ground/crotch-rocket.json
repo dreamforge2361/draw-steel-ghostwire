@@ -46,7 +46,8 @@
         "modSlots": 2,
         "tags": [
           "Courier",
-          "Pursuit"
+          "Pursuit",
+          "Hover"
         ],
         "modFamily": [
           "vehicle"

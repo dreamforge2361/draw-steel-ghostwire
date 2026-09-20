@@ -101,6 +101,10 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | **District** | Named Flats neighborhoods (Switchboard, Neon Shambles, Stacks, …). |
 | **Conglomerate / corp** | Mega-employer; Ghostwire corps are original names. |
 | **Kestrel** | Setting power player (see lore) — not a class. |
+| **Hover / POV** | Everyday personally owned vehicle: light electric hovercraft with a **~25–50 ft** altitude limiter — not a sky car. Archetypes: **Lane-Hopper** (4-seat open street hover; closed cabins exist) and **Star-Chopper** (tandem 2-seat hover-bike / chopper — not the rifle). Lore: L1 Vehicles & Transit. |
+| **Ground-hauler** | Tires / treads / walker mass — heavy lifters and equipment, not street cars. Street cargo-van yes-example: **Bulldog** (not a hover POV). |
+| **VTOL** | Free-climb flying craft. More expensive; common for corp, transit, well-funded runners. |
+| **Limiter band** | The legal/hardware ceiling on street hover (~25–50 ft off the deck). |
 
 ---
 

@@ -37,6 +37,7 @@ Open **one** of these when you need a fact. Do not copy the page into your notes
 | Matrix nodes, Grid/Barrier, district master hosts, POI swarm | **Ghostwire — The Wired: Flats** (`wired-flats`) or `docs/setting/wired-flats-gazetteer.md` | Invent a second Node Rating ladder |
 | Street color already harvested for print (Flats rain, vertical, gangs as sketches) | Manuscript **L3** | Treat L3 as the full Handbook |
 | Cosmology, Ten seats, Founding, Chair politics | Manuscript **L1** | Dump Book One into a session brief |
+| Street vehicles (hover / hauler / VTOL) | Manuscript **L1** › Vehicles & Transit · Handbook **Life on the Flats** · Item/Actor **Lane-Hopper**, **Star-Chopper**, **Bulldog** | Invent tire sedans as everyday POVs. Do not implement Rideable yet (top-down seats are a future pass). |
 | Peoples as fiction | Manuscript **L2** — mechanics stay in `05` | |
 | Fight math, Malice, two-board cuts | Print Ch 26 / `25` | Paste Actor biographies |
 | Living-city texture (mostly non-combat) | **Ghostwire Reach Events** (`encounters` pack, B48) | Treat every row as a fight |

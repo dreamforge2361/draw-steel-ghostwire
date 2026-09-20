@@ -46,7 +46,8 @@
         "modSlots": 2,
         "tags": [
           "Crew-car",
-          "Transit"
+          "Transit",
+          "Hover"
         ],
         "modFamily": [
           "vehicle"

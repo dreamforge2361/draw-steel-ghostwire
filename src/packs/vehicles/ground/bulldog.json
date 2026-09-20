@@ -1,12 +1,12 @@
 {
-  "_id": "pNXR81sii6j2Yh8v",
-  "_key": "!items!pNXR81sii6j2Yh8v",
-  "name": "GHOSTWIRE.Vehicles.Items.Hoverpad.Name",
+  "_id": "gwBulldogItm0000",
+  "_key": "!items!gwBulldogItm0000",
+  "name": "GHOSTWIRE.Vehicles.Items.Bulldog.Name",
   "type": "treasure",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/hoverpad.webp",
+  "img": "icons/environment/settlement/wagon.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Vehicles.Items.Hoverpad.Description",
+      "value": "GHOSTWIRE.Vehicles.Items.Bulldog.Description",
       "director": ""
     },
     "source": {
@@ -14,10 +14,10 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "hoverpad",
+    "_dsid": "bulldog",
     "kind": "other",
     "category": "trinket",
-    "echelon": 2,
+    "echelon": 1,
     "keywords": [],
     "quantity": 1,
     "project": {
@@ -32,30 +32,29 @@
     }
   },
   "effects": [],
-  "folder": "a7XeWmGqPhQSlDcK",
-  "sort": 0,
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 60000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "draw-steel-ghostwire": {
       "vehicle": {
-        "echelon": 2,
-        "availability": "restricted",
-        "price": 4000,
-        "modSlots": 3,
+        "echelon": 1,
+        "availability": "street",
+        "price": 650,
+        "modSlots": 1,
         "tags": [
-          "Transit",
-          "Pursuit",
-          "Hover"
+          "Cargo",
+          "Ground-hauler"
         ],
         "modFamily": [
           "vehicle"
         ],
-        "domain": "Air",
+        "domain": "Ground",
         "scale": "Vehicle",
         "drone": false,
-        "speedBand": "fast"
+        "speedBand": "slow"
       }
     }
   }

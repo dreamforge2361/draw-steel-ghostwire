@@ -311,8 +311,8 @@ function main() {
 
   const catalog = loadCatalog();
   const aliases = aliasMap(catalog);
-  if (catalog.byKind.drone.size !== 36 || catalog.byKind.vehicle.size !== 32) {
-    console.warn(`warn: expected 36 drones + 32 vehicles; found ${catalog.byKind.drone.size} + ${catalog.byKind.vehicle.size}`);
+  if (catalog.byKind.drone.size !== 36 || catalog.byKind.vehicle.size !== 35) {
+    console.warn(`warn: expected 36 drones + 35 vehicles; found ${catalog.byKind.drone.size} + ${catalog.byKind.vehicle.size}`);
   }
 
   if (hasFlag("--list")) {

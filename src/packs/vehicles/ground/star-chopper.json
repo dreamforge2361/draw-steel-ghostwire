@@ -1,12 +1,12 @@
 {
-  "_id": "pNXR81sii6j2Yh8v",
-  "_key": "!items!pNXR81sii6j2Yh8v",
-  "name": "GHOSTWIRE.Vehicles.Items.Hoverpad.Name",
+  "_id": "gwStarChopItm000",
+  "_key": "!items!gwStarChopItm000",
+  "name": "GHOSTWIRE.Vehicles.Items.StarChopper.Name",
   "type": "treasure",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/hoverpad.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/star-chopper.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Vehicles.Items.Hoverpad.Description",
+      "value": "GHOSTWIRE.Vehicles.Items.StarChopper.Description",
       "director": ""
     },
     "source": {
@@ -14,10 +14,10 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "hoverpad",
+    "_dsid": "star-chopper",
     "kind": "other",
     "category": "trinket",
-    "echelon": 2,
+    "echelon": 1,
     "keywords": [],
     "quantity": 1,
     "project": {
@@ -32,28 +32,28 @@
     }
   },
   "effects": [],
-  "folder": "a7XeWmGqPhQSlDcK",
-  "sort": 0,
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 51000,
   "ownership": {
     "default": 0
   },
   "flags": {
     "draw-steel-ghostwire": {
       "vehicle": {
-        "echelon": 2,
-        "availability": "restricted",
-        "price": 4000,
-        "modSlots": 3,
+        "echelon": 1,
+        "availability": "street",
+        "price": 700,
+        "modSlots": 1,
         "tags": [
-          "Transit",
-          "Pursuit",
-          "Hover"
+          "Courier",
+          "Hover",
+          "POV"
         ],
         "modFamily": [
           "vehicle"
         ],
-        "domain": "Air",
-        "scale": "Vehicle",
+        "domain": "Ground",
+        "scale": "Light",
         "drone": false,
         "speedBand": "fast"
       }

@@ -1440,6 +1440,54 @@ honor this gradient: seed a rich bench of street-level, inner-sprawl content fir
 targets, level-bosses, the run economy of the Grid and Flats — so the entry tier is deep and playable,
 and treat wasteland/wild-zone material as the higher-tier layer a crew earns its way out to.
 
+Licensed lift-stacks and maglev spines still move wage-bodies between strata. How the **street layer** actually moves — electric hover, heavy ground, VTOL — is **Vehicles & Transit** below.
+
+## Vehicles & Transit
+
+**Status:** draft lore (Michael lock 2026-09-20)  
+**Print:** Setting Primer — after Technology & Everyday Life  
+**Related:** Machines (`docs/raw/23-machines.md`), Reach Handbook — Life on the Flats, Vehicles pack
+
+Ossian Reach does not drive like a twentieth-century grid. The hive's street layer is a **cushioned river** under the next level's belly, not a parking lot of tire cars.
+
+### Locked street picture
+
+- Most vehicles in this world are **electric**.
+- **Street / POV** (personally owned vehicles): mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground. They are **not** free-flight sky cars. A commuter skirt, a courier cycle on fans, a **Lane-Hopper**, a Hoverpad — they skim the deck, hop a flood, and stack in the low lane. The limiter is law and hardware. The street POV family is **open 4-seat hovercars** and **hover bikes / choppers** (tandem two-seat limiter craft). Open and closed cabins both exist.
+- **Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars. When you hear rubber or tracks, someone is moving mass: **Bulldogs**, flatbeds, workhorse vans, bricks, cage wagons, walkers.
+- **VTOL / flying craft** are **more expensive** but also in **common use** — corp insertion birds, licensed transit, well-funded runners. Tiltjets, buzzcopters, gunships, ghost-wings. They climb **past** the limiter band. You see them; a Low Lifestyle crew does not usually own one.
+
+### How to read the published chassis
+
+Domain still gates chase terrain and wreck language. It does not always match the slang name on the card.
+
+| Street class | What it is | How to spot it |
+|---|---|---|
+| **Hover** | Street-layer electric POV; limiter **~25–50 ft** | **Lane-Hopper** (4-seat table-token); **Star-Chopper** (tandem hover-bike); Hoverpad; many Light/Vehicle “sedan / cab / bike” Ground SKUs (Getaway, Grey Cab, Rustbucket, cycles) |
+| **Ground-hauler** | Tires, treads, or walker mass | **Bulldog** (street cargo van); Clunker, Workhorse, Flatbed, Hardtop, Brick, Cage, Iron Giant, Spider-Frame |
+| **VTOL** | Free-climb flying; costs more; common in corp/transit/runner air | Junk Rotor, Buzzcopter, Tiltjet, Skyhunter, Drop-Sled, Ghost-Wing |
+
+A **Ground** Domain hover still **hugs the street deck** for chase and wrecks — it is not a sky car. **Air** plus **VTOL** is the bird that leaves the limiter band. Water and space stay as printed (skiffs, wetsubs, pods). Inventory procedures, Integrity, and chase bands stay in Machines (`23`).
+
+### Table look — Lane-Hopper
+
+The everyday POV yes-example is the **Lane-Hopper** (Open Stripe / four-seat street hovercar). Michael’s top-down navy/white-stripe open cabin is the **table token** (`assets/tokens/vehicles/lane-hopper`). Open and closed variants exist; this plate is the open look. Four seats read from above.
+
+**Director note (Rideable — future):** those top-down seats make passenger token slots obvious. Do **not** implement Rideable yet.
+
+### Table look — Star-Chopper
+
+The street POV hover-bike yes-example is the **Star-Chopper** (Long-Fork / tandem limiter hover-bike). Michael’s top-down starfield-navy stretch-fork chopper is the **table token** (`assets/tokens/vehicles/star-chopper`). Two seats (rider + pillion); no wheels; altitude limiter **~25–50 ft**. Not a sky bike and **not** the rifle named Chopper.
+
+**Director note (Rideable — future):** tandem seats read from above. Do **not** implement Rideable yet.
+
+### Bulldog-class — street heavy hauler
+
+A **Bulldog** is the cargo-van exception that still uses **tires**. It is not a hover POV. Rubber on the Flats means mass: crates, wrecks, a crew’s stolen safe. Token art is a placeholder until Michael’s plate.
+
+> **In Foundry**
+> Enable **Draw Steel - Ghostwire Build**. Read this page in **Ghostwire Lore** (Setting Primer). Chassis SKUs live in **Ghostwire Vehicles & Drones**. Drag the **Lane-Hopper** Actor from **Ghostwire Summons & Machines** (token **2×3**), the **Star-Chopper** (token **1×3**), or **Deploy** the Item from a hero sheet. **Bulldog** is the tires cargo van (token **2×4**, placeholder art). Reach street texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats. VOIDMARK retrieves this lock from the knowledge index.
+
 ## Timeline & History
 
 ### The Hive as a Vertical Timeline
@@ -1463,11 +1511,11 @@ the class system of the modern hive is the fossil of this genetic caste design: 
 - ~1950–1980 — HALO takes the sky. HALO Ascendant's orbital solar arrays and life-support spine make the hives livable and everyone beneath them a tenant of light and air; HALO rises to the First Chair, the denier seated at the head of the table.
 - ~1960–2000 — The Wired is woven. Meridian Signal threads the Wired through every level — net, feeds, simsense, the manufactured consensus reality of the wage-billions. Meridian becomes not just the network but the narrative: the conglomerate that decides what the world is allowed to believe. Unknown to anyone, the Wired is a planet-wide thin place that echoes the Signal — the corps have wired the whole world close to the Veil (Ch. 3, 9).
 - ~1970–2010 — The Machine closes around the person. The SIN becomes the master key to every convenience (a person with none is a ghost); Argent makes nuyen and debt the universal medium; Caduceus makes the body a rented thing. Life becomes wholly mediated — a world engineered so no one need ever choose, which (Ch. 1) is a world drifting Null-ward. The Radiant Concord, the corporate false-church of the Light, rises in this comfort as its beloved, institutional, secretly-inverted mirror.
-- The megacity comes fully alive (~1990 → now). By the late Charter Age the Reach is what the crew steps out into today: thirty million lives stacked kilometers deep, the sky replaced by a hundred thousand signs, and traffic as a second weather — the ground gridlocked, the air lanes stacked, the drones swarming every gap (see the texture panel below). A megacorp is a nation that fired its citizens and kept its customers. The Charter is only about a hundred and twenty years old — a baby, next to the breeds it rules — but it has convinced almost everyone it is the shape the world has always had. The Reach in Motion — the living megacity Woven into the Charter Age so the timeline reinforces the setting, not just the plot; all drawn from the lore bible's street-level canon.
+- The megacity comes fully alive (~1990 → now). By the late Charter Age the Reach is what the crew steps out into today: thirty million lives stacked kilometers deep, the sky replaced by a hundred thousand signs, and traffic as a second weather — the street-layer hover lanes packed, the VTOL lanes stacked, the drones swarming every gap (see the texture panel below). A megacorp is a nation that fired its citizens and kept its customers. The Charter is only about a hundred and twenty years old — a baby, next to the breeds it rules — but it has convinced almost everyone it is the shape the world has always had. The Reach in Motion — the living megacity Woven into the Charter Age so the timeline reinforces the setting, not just the plot; all drawn from the lore bible's street-level canon.
 - A city with no sky and no floor. Come up out of a transit tube onto the Flats and the first thing that hits you is the weight of the light — no sky, just a hundred thousand signs stacked forty stories deep, noodle-stall holos and blessing-tier ads and simsense come-ons in six languages, all bleeding pink and cyan and sodium-gold into the standing rain. The rain never stops on the Flats; it falls from the
 
 condensation of a million air-scrubbers on the levels above, warm and faintly chemical, and drags the neon down the girders in smeared ribbons until the whole street looks like it's melting.
-- Traffic as a second weather — three tiers at once. The Reach moves on three stacked circulations that never stop. Ground: the Flats and Grid choke on foot-millions, cargo-crawlers, rickshaw-haulers, and armored corp transit nosing through crowds that part for nothing smaller than an Aureole convoy — gridlock is permanent; the street is a river you swim, not cross. Air: above the rooflines, stacked flight lanes run kilometers up the hive face — corp VTOLs and executive shuttles in the high clean lanes, cargo lifters and transit gondolas in the middle, everything sequenced by HALO traffic-control and Meridian's grid; to look up from the Flats is to see not stars but a ceiling of moving running-lights, layer over layer, all the way to where the Halo burns. Drone: the constant swarm in every gap the big traffic leaves — delivery quads, Sanctum surveillance eyes, ad-drones, repair-skitters on the girders, Nyx's black-market couriers running dark between the lanes; the air at street level is never empty and never quiet.
+- Traffic as a second weather — three tiers at once. The Reach moves on three stacked circulations that never stop. Street layer: the Flats and Grid choke on foot-millions, **light electric hovercraft** (limiter **~25–50 ft** — not sky cars), cargo-crawlers and other **heavy ground haulers**, rickshaw-skiffs, and armored corp transit nosing through crowds that part for nothing smaller than an Aureole convoy — the deck is a river you swim, not cross. Air: above the limiter band, stacked **VTOL** lanes run up the hive face — corp birds and executive shuttles in the high clean lanes, cargo lifters and transit gondolas in the middle, everything sequenced by HALO traffic-control and Meridian's grid; to look up from the Flats is to see not stars but a ceiling of moving running-lights, layer over layer, all the way to where the Halo burns. Drone: the constant swarm in every gap the big traffic leaves — delivery quads, Sanctum surveillance eyes, ad-drones, repair-skitters on the girders, Nyx's black-market couriers running dark between the lanes; the air at street level is never empty and never quiet. Full street picture: **Vehicles & Transit** above.
 - The heartbeat under everything. Somewhere below your feet a foundation-pump the size of a cathedral has been beating like a heart for a thousand years — the deep pulse of the hive, older than the Charter, older than anyone's grandparents, that you stop hearing until the night it skips.
 - The Halo you'll never reach. Past the Grid, past the Spires, past where anyone you know will ever stand, HALO's ring of orbital-fed daylight crowns the top of the hive like a second sun — so bright and so far that from the Flats it reads as a rumor of morning that will never actually arrive. The whole vertical is visible and none of it is reachable: the city is a mountain you live inside. V. The Quiet War — the hidden thread — ~the last 60 years, and no feed will run it The Incursion (Ch. 3), climbing under the Charter's comfort. This is the timeline's secret history. Every entry below is real — and every entry exists in the official record under a mundane name. Nowhere in corp media is the word "demon," "angel," or "the war" permitted; there is only structural, technical, criminal, and market language for it. Meridian owns the narrative, Sanctum owns the records, and both are certain the truth would break the world faster than the thing itself. The rule of the age: you cannot report what you are not allowed to name. The Incursion is not hidden by a single conspiracy — it is hidden by the whole architecture of the Charter, which has no category for it. A dead-air zone is a "decompression hazard." A hollowed outpost is a "loss of contact." A Wired-demon is a "rogue AI." A corrupted zone is a "structural condemnation." A person erased from the inside is a "cognitive-decline case." The cover stories are not even always lies — they are the only words the Machine has, and it prefers them.
 - ~1990 (~60 yrs ago) — The first quiet floors. As the hives dig deeper, the first dead-air zones surface in the oldest Sinks. Filed as structural condemnations and walled off. No one connects them; a thousand years of forgetting means no one has the frame to. (This is where "a generation ago" begins — really two generations of small, denied incidents.)

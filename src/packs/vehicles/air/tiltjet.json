@@ -46,7 +46,8 @@
         "modSlots": 3,
         "tags": [
           "Insertion",
-          "Mount"
+          "Mount",
+          "VTOL"
         ],
         "modFamily": [
           "vehicle"
