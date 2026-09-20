@@ -89,6 +89,12 @@ Changing a node’s Rating in the detail panel re-reads the System Stat Card, ex
 
 When the party goes fully Jacked In: view the matrix map, set **Wired map for** in the Console header to the meatspace Scene, then select nodes and **Place on canvas**. Tokens stay hidden until you reveal the node; Track 2 tokens carry an Integrity bar that stays in sync with the Console both ways. **Remove from canvas** when the run moves on. Details: `docs/rulebook/18-wired-foundry.md`.
 
+## Wire Atlas (B116)
+
+Track 1/2 templates above are the **System Stat Card** for a socket or a defended node. They are not the map. Atlas tokens — **Relay**, **Host**, **Segment** — mark **where** the crew is on the Wire. Devices (including these ten templates, Light Control, Maglock) belong on **room** scenes only.
+
+Dig-down: district graph (Relays + Hosts) → enter Host → facility graph (Segments) → enter Segment → room graph (Devices). Scan Reach is hops on the **current** Scene’s board. Naming: a Segment includes its parent (`Power Co — North Substation`). Full lock: `docs/spikes/B116-WIRE-ATLAS.md` and RAW `docs/raw/21-the-wire.md`.
+
 ## Not in this phase
 
 - A Foundry Journal pack for Director references (the module has no journals pack yet; this markdown is the reference).

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B112 auto-nodes + B114 node-map layout + B115 Wire Kit smoke (module 0.3.49).
+ * B112 auto-nodes + B114 node-map layout + B115 Wire Kit smoke (module 0.3.50; device catalog 0.3.49).
  *
  * Run: node tools/b112-b115-smoke.mjs
  * Does not write Scene JSON. Asserts gold-line-scene.mjs is untouched.
@@ -24,10 +24,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("B112 / B114 / B115 Wired Gold Line smoke (0.3.49)\n");
+console.log("B112 / B114 / B115 Wired Gold Line smoke (0.3.50)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.49", `module.json is 0.3.49 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.50", `module.json is 0.3.50 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -45,17 +45,24 @@ ok(tokenArtForNode({ tokenStyle: "camera-grid" })?.endsWith("/camera-grid.webp")
 ok(!tokenArtForNode({ tokenStyle: "../secret" }), "tokenStyle rejects path junk");
 const library = readBomFreeJson("assets/tokens/wired/library.json");
 const catalogIds = ["light-control", "maglock", "black-ice", "normal-ice", "mechanical", "turret-controls", "cam-controls", "data-vault"];
-ok(NODE_TOKEN_LIBRARY.length === 8 && library.styles.length === 8, "B116 catalog is 8 styles");
-ok(NODE_TOKEN_LIBRARY.map(s => s.id).join(",") === catalogIds.join(","), "catalog id order is the locked full set");
-ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.png === s.png && row.name === s.name && row.autoKind === s.autoKind)), "mjs catalog matches library.json rows");
+const atlasIds = ["node-relay", "node-host", "node-segment"];
+const deviceStyles = library.styles.filter(s => !s.placeholder);
+const atlasStyles = library.styles.filter(s => s.family === "atlas" || s.placeholder);
+ok(NODE_TOKEN_LIBRARY.length === 11 && library.styles.length === 11, "catalog is 8 device styles + 3 atlas stubs");
+ok(deviceStyles.length === 8 && NODE_TOKEN_LIBRARY.filter(s => !s.placeholder).length === 8, "B116 device catalog is 8 styles");
+ok(NODE_TOKEN_LIBRARY.filter(s => !s.placeholder).map(s => s.id).join(",") === catalogIds.join(","), "device catalog id order is the locked full set");
+ok(atlasStyles.map(s => s.id).join(",") === atlasIds.join(","), "atlas stubs are node-relay / node-host / node-segment");
+ok(atlasStyles.every(s => s.placeholder === true), "atlas rows are placeholders (no art this pass)");
+ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.png === s.png && row.name === s.name && row.autoKind === s.autoKind && Boolean(row.placeholder) === Boolean(s.placeholder))), "mjs catalog matches library.json rows");
 ok(library.styles.filter(s => s.autoKind).map(s => s.id).join(",") === "light-control,maglock,cam-controls", "autoKinds are Light / Maglock / Cam only");
-for (const style of library.styles) {
+for (const style of deviceStyles) {
   ok(existsSync(`assets/tokens/wired/${style.file}`) && existsSync(`assets/tokens/wired/${style.png}`), `library style ${style.id} has png+webp`);
   if (style.autoKind) ok(AUTO_NODE_TOKEN_ART[style.autoKind]?.endsWith(`/${style.file}`), `${style.id} autoKind matches AUTO_NODE_TOKEN_ART`);
 }
 ok(tokenSrcForStyle("maglock") === AUTO_NODE_TOKEN_ART.maglock, "tokenSrcForStyle maglock");
 ok(tokenSrcForStyle("data-vault")?.endsWith("/node-data-vault.webp"), "tokenSrcForStyle data-vault");
-for (const style of library.styles) {
+ok(tokenSrcForStyle("node-relay") === null && tokenSrcForStyle("node-host") === null && tokenSrcForStyle("node-segment") === null, "atlas placeholders resolve to no art path");
+for (const style of deviceStyles) {
   const stem = style.png.replace(/\.png$/i, "");
   const png = `assets/tokens/wired/${style.png}`;
   const webp = `assets/tokens/wired/${style.file}`;
@@ -70,6 +77,9 @@ for (const style of library.styles) {
     const h = 1 + webpBuf.readUIntLE(27, 3);
     ok(w === 1024 && h === 1024, `${stem}.webp is 1024² Foundry token`);
   }
+}
+for (const id of atlasIds) {
+  ok(!existsSync(`assets/tokens/wired/${id}.png`) && !existsSync(`assets/tokens/wired/${id}.webp`), `atlas ${id} has no generated art`);
 }
 
 console.log("\n1) Room naming (B112)");

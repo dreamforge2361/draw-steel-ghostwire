@@ -140,6 +140,13 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **Connection state** | Disconnected, **Overlay** (partial immersion), or **Jacked In** (full immersion). | `21` |
 | **Avatar** | Your presence in the Wired. (**Persona** always means the characteristic.) | `21` |
 | **Node** | Anything addressable in the Wired. **Track 1** = objects and systems; **Track 2** = things that fight back. | `21` |
+| **Wire Atlas** | How Wired scenes nest: district graph → facility graph → room graph. | `21` |
+| **Relay** | Atlas token: a Wired highway (a path, not a place). | `21` |
+| **Host** | Atlas token: a destination place (corp, civic, street). | `21` |
+| **Segment** | Atlas token: a nested child of a Host. Name includes the parent. | `21` |
+| **Endpoint** | Optional atlas leaf that opens a meatspace room (v1.1). | `21` |
+| **Device** | Room-only socket token (Light, Maglock, Cam, ICE, …). | `21` |
+| **Reach (Wired)** | Scan/Navigate range in **node-hops on the current scene’s graph**, not the whole district and not Ossian Reach. | `21` |
 | **Node Rating** | A node’s defense grade, 1 (street) to 5 (alpha). Not a level or echelon. | `21` |
 | **Integrity (Wired)** | A Track 2 node’s health pool. Not Body Integrity. | `21` |
 | **ICE** | Intrusion countermeasures: active defenses on a node. | `21` |

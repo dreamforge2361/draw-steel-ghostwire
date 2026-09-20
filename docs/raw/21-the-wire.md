@@ -1,13 +1,13 @@
 # The Wire
 
-**RAW status:** locked (2026-09-18, B66)  
-**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), shipped Foundry B23/B32/B51 (Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
+**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20)  
+**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51 (Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
 
 ---
 
 ## The Wired System
 
-The Wired is the network layer every hero can touch. This chapter defines what a node is, the two connection states (**Overlay** and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth and Programs; the Technomancer (`20-technomancer.md`) builds on the same Wire spine.
+The Wired is the network layer every hero can touch. This chapter defines what a node is, the two connection states (**Overlay** and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth and Programs; the Technomancer (`20-technomancer.md`) builds on the same Wire spine.
 
 ### What a Node Is
 
@@ -137,6 +137,52 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 
 **Low (≤11)** on any rolling verb generally means “it works, but something goes wrong” — by default **+1 Trace Alert** (see Trace Alert defaults above). **Middle (12–16)** is a clean success with **no Alert increase**. **High (17+)** is a clean success plus the bonus listed above, and never raises Alert.
 
+## Wire Atlas / topology
+
+Device tokens answer **what is this socket**. Atlas tokens answer **where am I on the Wire map**. Directors place atlas tokens by hand. Room-scale auto-nodes (lights, maglocks) never appear on a district or facility graph.
+
+### Three altitudes
+
+| Altitude | Scene example | Token family |
+|---|---|---|
+| **Region / district graph** | Switchboard district map | **Relay**, **Host** |
+| **Site / facility graph** | Power Company Wire scene | **Segment** (+ **Host** as the site root) |
+| **Room / device graph** | Office, Gold Line car, maintenance room | **Device** (existing library: Light, Maglock, Cam, ICE, …) |
+
+Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do not call a Host a “server farm” in player text.
+
+### Reach is hops on the current scene
+
+**Scan** and **Navigate** **Reach** is a number of **node-hops on the graph of the Scene you are on**, not the whole district and not Ossian Reach the campaign region. When the crew changes altitude (district → facility → room), Reach recounts from the new graph. A runner with Reach 2 on the Switchboard district map can hop two Relays/Hosts; they cannot see the Power Co substation or a maintenance-room maglock until that scene is loaded.
+
+### Relay vs Host vs Segment
+
+| Token | Role | Rules hook |
+|---|---|---|
+| **Relay** | Major Wired highway / backbone traffic — a **path**, not a place | Navigate along it. Trace can travel fast on a Relay. Usually **not** Seize-for-loot. Node Rating is optional (traffic density). Track 1 unless something is hunting the backbone. |
+| **Host** | Destination place (corp, civic, street). Faction is name and color, not a new token type. | May have Node Rating, ICE, Watchdog. Entering a Host **may change scene** (load the facility graph). |
+| **Segment** | Child of a Host (substation, wing, server hall) | Same mechanical class as Host, nested. **Name includes the parent** (`Power Co — North Substation`). |
+| **Endpoint** *(optional v1.1)* | Dig-down leaf that opens a meatspace room | Not a fourth mechanical class. Until its own art exists, reuse Host with a depth pip. |
+| **Device** | Room socket: Light, Maglock, Cam, ICE, … | **Room-only.** Never place device tokens on a region graph. |
+
+### Dig-down procedure
+
+1. **District scene:** place **Relays** and **Hosts** only.
+2. **Enter Host** (Navigate, Seize, or story) → load the **facility** scene; place **Segments**. The Host may remain as the site root.
+3. **Enter Segment** (or Endpoint) → load the **room** scene; place **Device** tokens. Auto-nodes from named lights and doors belong here.
+4. Auto-nodes stay **room-scale only**. Atlas tokens are Director-placed (a Console picker is later).
+
+### Worked example — Switchboard to the maintenance room
+
+**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.
+
+**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.
+
+**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.
+
+> **In Foundry**
+> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Art is drop-in; placeholders ship until Michael tokens land. Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`.
+
 ## Connection-state modifiers (summary)
 
 **Connected** means you are in **Overlay** or **Jacked In**. **Disconnected** means neither. Payload Runs and many Wired features require Connected; Matrix Verbs other than Connect require Connected.
@@ -202,7 +248,7 @@ The payload catalog (Effects, prices, Availability) is in the Gear master, Matri
 
 ## Director tools
 
-At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card; you do not invent extra Matrix subsystems beyond this chapter.
+At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.
 
 Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster, Overlay / Jacked In, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.
 

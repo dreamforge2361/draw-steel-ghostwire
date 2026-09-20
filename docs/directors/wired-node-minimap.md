@@ -14,6 +14,7 @@ Players who are **on the Wired** (Overlay or Jacked In) get a **hovering topolog
 
 - Minimap shows only nodes the viewer **can see** (revealed / not hidden / Console visibility rules — match existing Wired Console + node token reveal).
 - Topology = nodes + links (edges) if we store connections; otherwise node dots with Rating / Track badges until link data exists.
+- The minimap is the **current Scene’s graph**. Scan Reach is hops on that graph, not the whole district. Atlas tokens (**Relay** / **Host** / **Segment**) belong on district and facility Scenes; **Device** tokens belong on room Scenes. See `docs/spikes/B116-WIRE-ATLAS.md`.
 - Director keeps full Console; this is the **player-facing** companion view.
 - Pop-out ApplicationV2 (or pinned HUD) so it can sit over the canvas without owning the whole screen.
 
