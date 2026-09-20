@@ -1307,6 +1307,26 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   letter-spacing: 0.05em;
 }
 .ghostwire-kiosk .gw-kiosk-fields input[name="range"] { width: 4.5rem; text-align: center; }
+.ghostwire-kiosk .gw-kiosk-preset {
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+  margin-top: 0.55rem;
+}
+.ghostwire-kiosk .gw-kiosk-preset label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  color: var(--kiosk-muted);
+}
+.ghostwire-kiosk .gw-kiosk-preset select {
+  background: color-mix(in srgb, var(--kiosk-bg) 70%, black);
+  border: 1px solid var(--kiosk-border);
+  color: var(--kiosk-ink);
+  padding: 0.25rem 0.4rem;
+}
 .ghostwire-kiosk .gw-kiosk-drop-hint,
 .ghostwire-kiosk .gw-kiosk-dim,
 .ghostwire-kiosk .gw-kiosk-empty {

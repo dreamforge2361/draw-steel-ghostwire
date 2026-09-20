@@ -1,0 +1,139 @@
+{
+  "_id": "GwNumbTap0000001",
+  "_key": "!items!GwNumbTap0000001",
+  "name": "GHOSTWIRE.Gear.Items.NumbTap.Name",
+  "type": "treasure",
+  "img": "icons/consumables/potions/potion-bottle-corked-labeled-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.NumbTap.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "numb-tap",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "GwNumbTapBuff001",
+      "_key": "!items.effects!GwNumbTap0000001.GwNumbTapBuff001",
+      "name": "GHOSTWIRE.Gear.Items.NumbTap.BuffName",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwNumbTap0000001",
+      "description": "GHOSTWIRE.Gear.Items.NumbTap.BuffDescription",
+      "disabled": true,
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "draw-steel-ghostwire": {
+          "consumablePhase": "buff",
+          "consumableDsid": "numb-tap"
+        }
+      },
+      "duration": {
+        "value": 2,
+        "units": "rounds",
+        "expiry": "roundEnd",
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": []
+      }
+    },
+    {
+      "_id": "GwNumbTapCrash01",
+      "_key": "!items.effects!GwNumbTap0000001.GwNumbTapCrash01",
+      "name": "GHOSTWIRE.Gear.Items.NumbTap.CrashName",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwNumbTap0000001",
+      "description": "GHOSTWIRE.Gear.Items.NumbTap.CrashDescription",
+      "disabled": true,
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "draw-steel-ghostwire": {
+          "consumablePhase": "crash",
+          "consumableDsid": "numb-tap"
+        }
+      },
+      "duration": {
+        "value": 2,
+        "units": "rounds",
+        "expiry": "roundEnd",
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.characteristics.intuition.banes",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "GwChemFolder0000",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 250,
+        "modSlots": 0,
+        "tags": [
+          "Consumable",
+          "Chem"
+        ],
+        "consumable": true,
+        "kioskShelf": "chem",
+        "consumableUse": {
+          "action": "maneuver",
+          "tempStamina": 8,
+          "heal": 0,
+          "taint": 0,
+          "spend": true,
+          "crash": true
+        }
+      }
+    }
+  }
+}

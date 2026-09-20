@@ -14,6 +14,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Wired Atlas (Relay / Host / Segment) | `wired/node-relay\|host\|segment.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-<role>.webp` | B116 Michael art **0.3.51** (Relay / Host / Segment) |
 | Megacorp Hosts (Ten Conglomerates) | `wired/node-host-{ticker}.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-host-<ticker>.webp` | **0.3.54** — generic Host stays default |
 | Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 shipped **0.3.35** (17) |
+| Scene kiosk | `kiosks/kiosk-merchant.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp` | **0.3.65** — Michael circular street-kiosk plate (1254² PNG + 1024² WebP) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
 

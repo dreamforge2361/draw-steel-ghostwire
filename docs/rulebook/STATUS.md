@@ -114,6 +114,7 @@
 
 - **B80** Corruption / Taint hero track — **SHIPPED 0.3.38** (`docs/raw/27-corruption-taint.md`, `docs/directors/corruption-taint.md`). Taint 0–12; Clean/Marked/Stained/Claimed/Hollowed; +1/scene except pact; rest never cleanses; chrome does not raise Taint; Mutant Load stays retired. Sheet flag `flags.draw-steel-ghostwire.taint`. **Director Taint +1 shipped 0.3.58** (GM Token controls / HUD / Ghostwire Macros). Spike: `docs/spikes/B80-CORRUPTION-TAINT-TRACK.md`.
 - **B118** Scene kiosk merchant — **SHIPPED 0.3.59** (`docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`). Placeable NPC Actor stub (`kind: kiosk`) with proximity-gated shop; nuyen on `system.hero.wealth`; Director stocks Item UUIDs. Director notes: `docs/directors/scene-kiosk-merchant.md`.
+- **B119** Kiosk type presets + street consumables — **SHIPPED 0.3.65** (`docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`). Type picker / Restock auto-stocks Food, Medical, Tools, Armor, Weapons, Drones. New street food + chem SKUs; chem doses apply AE / temp Stamina / Taint.
 - **B81** Prime overview (Main Realm, orbitals, near harvest worlds) + maps — not started.
 - **B82** Foundry Ghostwire AI applet (in-module LLM chat / optional agent bridge) — not started.
 - **B85** Historical timeline graphic — not started.

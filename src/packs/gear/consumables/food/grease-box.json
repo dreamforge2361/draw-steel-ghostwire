@@ -1,0 +1,56 @@
+{
+  "_id": "GwGreaseBox00001",
+  "_key": "!items!GwGreaseBox00001",
+  "name": "GHOSTWIRE.Gear.Items.GreaseBox.Name",
+  "type": "treasure",
+  "img": "icons/consumables/food/bowl-rice-meat-peas.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.GreaseBox.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "grease-box",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "GwFoodFolder0000",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 60,
+        "modSlots": 0,
+        "tags": [
+          "Consumable",
+          "StreetFood"
+        ],
+        "consumable": true,
+        "kioskShelf": "food"
+      }
+    }
+  }
+}
