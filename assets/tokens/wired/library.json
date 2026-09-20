@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "base": "modules/draw-steel-ghostwire/assets/tokens/wired",
+  "dropIn": "Add <id>.png (source) + <id>.webp (1024² Foundry token) in this folder, then one styles[] row. Id is the tokenStyle slug. Locked autoKind rows are B113 defaults — do not rename files.",
+  "styles": [
+    {
+      "id": "light-control",
+      "name": "Light Control",
+      "file": "node-light-control.webp",
+      "png": "node-light-control.png",
+      "autoKind": "light-control",
+      "locked": true
+    },
+    {
+      "id": "maglock",
+      "name": "Maglock Door",
+      "file": "node-maglock.webp",
+      "png": "node-maglock.png",
+      "autoKind": "maglock",
+      "locked": true
+    }
+  ]
+}

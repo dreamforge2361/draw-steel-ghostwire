@@ -3,22 +3,23 @@
 
 import { RATING } from "./wired-node-templates.mjs";
 import { boardScene, placeNode, placedNodeActor, removePlacedNode } from "./wired-node-tokens.mjs";
+import { tokenSrcForStyle } from "./wired-node-art.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
-/** B113: Light Control / Maglock token art. Generic Track 1/2 templates stay for other nodes. */
-const ART_BASE = `modules/${MODULE_ID}/assets/tokens/wired`;
+/** B113: Light Control / Maglock defaults. Generic Track 1/2 templates stay for other nodes. */
 export const AUTO_NODE_TOKEN_ART = {
-  "light-control": `${ART_BASE}/node-light-control.webp`,
-  maglock: `${ART_BASE}/node-maglock.webp`,
+  "light-control": tokenSrcForStyle("light-control"),
+  maglock: tokenSrcForStyle("maglock"),
 };
 
 export function tokenArtFor(kind) {
   return AUTO_NODE_TOKEN_ART[kind] || null;
 }
 
+/** Director `tokenStyle` (B116) wins; else locked auto Light/Maglock art. */
 export function tokenArtForNode(node) {
-  return tokenArtFor(node?.autoFrom?.kind);
+  return tokenSrcForStyle(node?.tokenStyle) || tokenArtFor(node?.autoFrom?.kind);
 }
 
 export const AUTO_KIND = {
@@ -96,12 +97,13 @@ const matchLight = (node, room) =>
 const matchMaglock = (node, doorId) =>
   node?.autoFrom?.kind === AUTO_KIND.maglock && node.autoFrom.doorId === doorId;
 
-function makeNode({ id, name, track, rating, autoFrom, links = [], description = "", notes = "" }) {
+function makeNode({ id, name, track, rating, autoFrom, tokenStyle = null, links = [], description = "", notes = "" }) {
   const integrity = RATING[rating]?.integrity ?? 12;
   return {
     id, name, track, rating,
     integrity, integrityMax: integrity, alert: 0, revealed: false,
     description, notes, links: [...links], autoFrom,
+    tokenStyle: tokenStyle || autoFrom?.kind || null,
   };
 }
 

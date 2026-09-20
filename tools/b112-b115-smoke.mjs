@@ -9,6 +9,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { parseRoomName, planAutoNodes, isDoorWall, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, ROOM_SPLIT, tokenArtFor, tokenArtForNode } from "../scripts/wired-auto-nodes.mjs";
 import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../scripts/wired-layout.mjs";
+import { NODE_TOKEN_LIBRARY, tokenSrcForStyle } from "../scripts/wired-node-art.mjs";
 import { MATRIX_VERBS, MATRIX_VERB_IDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
 
 const failures = [];
@@ -36,6 +37,17 @@ ok(AUTO_NODE_TOKEN_ART.maglock?.endsWith("/node-maglock.webp"), "B113 Maglock ar
 ok(tokenArtFor("light-control") === AUTO_NODE_TOKEN_ART["light-control"], "tokenArtFor Light Control");
 ok(tokenArtForNode({ autoFrom: { kind: AUTO_KIND.maglock } })?.endsWith("node-maglock.webp"), "tokenArtForNode Maglock");
 ok(!tokenArtForNode({ autoFrom: null }), "manual nodes keep generic Track templates");
+ok(tokenArtForNode({ tokenStyle: "light-control" })?.endsWith("node-light-control.webp"), "tokenStyle light-control uses B113 filename");
+ok(tokenArtForNode({ tokenStyle: "camera-grid" })?.endsWith("/camera-grid.webp"), "unknown tokenStyle is drop-in <id>.webp");
+ok(!tokenArtForNode({ tokenStyle: "../secret" }), "tokenStyle rejects path junk");
+const library = readBomFreeJson("assets/tokens/wired/library.json");
+ok(Array.isArray(library.styles) && library.styles.length >= 2, "B116 library.json has styles");
+ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.locked)), "mjs catalog matches locked library.json rows");
+for (const style of library.styles) {
+  ok(existsSync(`assets/tokens/wired/${style.file}`) && existsSync(`assets/tokens/wired/${style.png}`), `library style ${style.id} has png+webp`);
+  if (style.autoKind) ok(AUTO_NODE_TOKEN_ART[style.autoKind]?.endsWith(`/${style.file}`), `${style.id} autoKind matches AUTO_NODE_TOKEN_ART`);
+}
+ok(tokenSrcForStyle("maglock") === AUTO_NODE_TOKEN_ART.maglock, "tokenSrcForStyle maglock");
 for (const stem of ["node-light-control", "node-maglock"]) {
   const png = `assets/tokens/wired/${stem}.png`;
   const webp = `assets/tokens/wired/${stem}.webp`;
@@ -101,6 +113,8 @@ ok(plan.nodes.some(n => n.name === "Aft Freight - Maglock Door 1") && plan.nodes
 ok(plan.nodes.some(n => n.name === "Security Nest - Maglock Door 1"), "unnamed door uses nearest dashed light, not first-word door name");
 ok(!plan.nodes.some(n => n.name === "Aft Freight Maglock Door 1" || n.name === "Rear Car Substation Maglock Door 1"), "no undashed Maglock names");
 ok(maglocks.every(n => n.name.includes(ROOM_SPLIT) && / - Maglock Door \d+$/.test(n.name)), "every Maglock name is {Room} - Maglock Door N");
+ok(lightNodes.every(n => n.tokenStyle === AUTO_KIND.light), "Light Control tokenStyle is light-control");
+ok(maglocks.every(n => n.tokenStyle === AUTO_KIND.maglock), "Maglock tokenStyle is maglock");
 ok(lightNodes.every(n => n.notes.includes("node-light-control.webp")), "Light Control notes cite B113 art");
 ok(maglocks.every(n => n.notes.includes("node-maglock.webp")), "Maglock notes cite B113 art");
 const aftLight = plan.nodes.find(n => n.name === "Aft Freight - Light Control");
@@ -178,6 +192,7 @@ ok(consoleSrc.includes("autoNodes") && consoleSrc.includes("applyAutoNodesFromSc
 ok(consoleSrc.includes("tokenArtForNode"), "Place on canvas stamps B113 art for auto-nodes");
 ok(consoleSrc.includes("addWireKit"), "Console wires Add Wire Kit");
 ok(consoleSrc.includes("autoFrom"), "getBoard preserves autoFrom");
+ok(consoleSrc.includes("tokenStyle"), "getBoard preserves tokenStyle");
 ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("ROOM_SPLIT") && !readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("first two words"), "parser is dash-split only");
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
 const template = readFileSync("templates/wired-console.hbs", "utf8");
@@ -209,6 +224,7 @@ ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.48"), "B115 spike");
 ok(b112.includes("B113"), "B112 notes B113 art");
 ok(readFileSync("docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md", "utf8").includes("node-light-control.webp"), "B113 spike");
+ok(readFileSync("docs/spikes/B116-NODE-TOKEN-LIBRARY.md", "utf8").includes("library.json"), "B116 spike");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

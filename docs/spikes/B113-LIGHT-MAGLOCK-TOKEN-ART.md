@@ -32,7 +32,7 @@ When B112 creates or re-places a Light Control / Maglock node, `placeNode` stamp
 
 from the matching WebP. Console **Place on canvas** uses the same map when the board node has `autoFrom.kind`. Other nodes keep the Track 1/2 summons templates.
 
-Does **not** rewrite Gold Line walls/lights/tiles. Does **not** change generic node-template art.
+Does **not** rewrite Gold Line walls/lights/tiles. Does **not** change generic node-template art. Further styles: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md` (catalog only in 0.3.48).
 
 ## Verify
 

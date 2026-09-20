@@ -74,4 +74,4 @@ Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and s
 | Light Control | `wired/node-light-control.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-light-control.webp` |
 | Maglock | `wired/node-maglock.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-maglock.webp` |
 
-`AUTO_NODE_TOKEN_ART` in `scripts/wired-auto-nodes.mjs` stamps those paths onto B112 auto-nodes. Replace a WebP in place to restamp future placements (already-placed tokens keep the old texture until removed and re-placed). Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`.
+`AUTO_NODE_TOKEN_ART` stamps those onto B112 auto-nodes. **B116** drop-in library: `assets/tokens/wired/library.json` + README — add `<id>.png`/`.webp` and a catalog row; Console picker is a follow-up. Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.

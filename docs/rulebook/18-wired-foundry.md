@@ -86,7 +86,7 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 
 - **Lights.** Name pattern **`{Room Name} - {rest…}`** (space-hyphen-space required). Room = everything left of the first ` - `. Light Control node stays **`{Room} - Light Control`** (or matches the light name). Example: `Rear Car Substation - Light Control` → **Rear Car Substation - Light Control** (Track 1 Rating 1). Lights with no ` - ` are **skipped** and the GM gets a warning. Hidden token next to the first light in that room.
 - **Doors.** Assigned to the nearest light’s room (or the wall’s own name). **Track 1 Rating 2** `{Room} - Maglock Door 1`, `{Room} - Maglock Door 2`, … per room (same ` - ` splitter; not `{Room} Maglock Door 1`); hidden token next to the door. Light Control ↔ maglocks in the same room are linked.
-- Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). Cameras are not auto-created. The Wire does not flip lights or doors in v1. Light Control / Maglock tokens use B113 art (`assets/tokens/wired/node-light-control.webp`, `node-maglock.webp`); generic Track 1/2 templates stay for other nodes. Does not rewrite Gold Line walls/lights/tiles.
+- Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). Cameras are not auto-created. The Wire does not flip lights or doors in v1. Light Control / Maglock tokens use B113 art (`assets/tokens/wired/node-light-control.webp`, `node-maglock.webp`); generic Track 1/2 templates stay for other nodes. Extra styles drop into `assets/tokens/wired/` + `library.json` (B116 picker later). Does not rewrite Gold Line walls/lights/tiles.
 
 **Wire Kit (B115).** NPCs do not receive Matrix Verbs by default. Drop **Wire Kit — Matrix Verbs** (Ghostwire Matrix › Support) onto an NPC, or use the Console / token HUD **Add Wire Kit** on selected NPC tokens. Stamp ARG security that should act on the Wire; leave meat-only thugs clean. Heroes already have the verbs.
 
@@ -98,7 +98,7 @@ The board is stored on the Scene, so it persists across reloads and belongs to t
 
 ```
 flags.draw-steel-ghostwire.wiredBoard = {
-  nodes: [{ id, name, track: 1|2, rating: 1–5, integrity, integrityMax, alert: 0–12, revealed, description, notes, links, autoFrom? }],
+  nodes: [{ id, name, track: 1|2, rating: 1–5, integrity, integrityMax, alert: 0–12, revealed, description, notes, links, autoFrom?, tokenStyle? }],
   stratum: "random" | "spires" | "grid" | "flats" | "warrens" | "sinks",
   updated: <timestamp>
 }

@@ -42,6 +42,7 @@ export function getBoard(scene) {
       notes: node.notes ?? "",
       links: Array.isArray(node.links) ? node.links.filter(id => typeof id === "string") : [],
       autoFrom: node.autoFrom && typeof node.autoFrom === "object" ? { ...node.autoFrom } : null,
+      tokenStyle: typeof node.tokenStyle === "string" && node.tokenStyle.trim() ? node.tokenStyle.trim() : null,
     };
   });
   // Links are undirected (B41b): drop self-links and ids not on this board, and mirror one-sided links so both ends list each other.
@@ -314,12 +315,13 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   /** A complete, hidden node with a full Integrity pool for its Rating. */
-  static #makeNode({ name, track = 2, rating = 3, description = "", notes = "", links = [], autoFrom = null }) {
+  static #makeNode({ name, track = 2, rating = 3, description = "", notes = "", links = [], autoFrom = null, tokenStyle = null }) {
     return {
       id: foundry.utils.randomID(), name, track, rating,
       integrity: RATING[rating].integrity, integrityMax: RATING[rating].integrity, alert: 0, revealed: false, description, notes,
       links: Array.isArray(links) ? [...links] : [],
       autoFrom,
+      tokenStyle,
     };
   }
 
@@ -373,7 +375,10 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const node = getBoard(scene).nodes.find(n => n.id === WiredConsole.#nodeId(target));
     const art = tokenArtForNode(node);
     await placeNode(scene, node, art ? {
-      extraFlags: { autoKind: node.autoFrom.kind, autoFrom: node.autoFrom, tokenArt: art },
+      extraFlags: {
+        ...(node.autoFrom ? { autoKind: node.autoFrom.kind, autoFrom: node.autoFrom } : {}),
+        tokenArt: art,
+      },
       textureSrc: art,
     } : {});
   }
