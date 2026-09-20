@@ -46,7 +46,7 @@ A hero is **Disconnected**, **Linked**, **Overlay**, or **Jacked In**. The state
 - **Toggle Connection State** (any on-net state) steps deeper, then wraps: **Linked → Overlay → Jacked In → Linked**. One button, one direction. Jack Out is the only path to Disconnected.
 - **Jack Out** (any on-net state: Linked, Overlay, or Jacked In) → Disconnected.
 - **Broadcast** works from Linked (and Overlay / Jacked In).
-- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs refuse while Linked-only or Disconnected — they need Overlay or Jacked In.
+- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent** refuse while Linked-only or Disconnected — they need Overlay or Jacked In.
 - The GM can also set or clear the three statuses from the token HUD; Linked, Overlay, and Jacked In replace each other.
 
 Automated modifiers on **ability** power rolls:
@@ -61,6 +61,8 @@ Automated modifiers on **ability** power rolls:
 Also automated: a hero with the **Hacking** skill gets an edge on the rolling Matrix Verbs (and any other Wired ability). A running **Reader** program still edges Scan / Search / Deep Scan. Linked is **Wire-discoverable** (soft presence) for Scan / Search / Watchdog.
 
 Not automated: the Overlay bane on tests (make it in the test dialog), biofeedback scaling. Node / Console verbs apply **soft Trace** on a tier-1 active rolled verb (not Scan), as above.
+
+**Compile Agent (B120).** Hacker L1 grant. Sheet-button spawn (`scripts/agents.mjs`) — same pattern as Compile Sprite, not `abilityUse`. Overlay or Jacked In; Linked warns and refuses. **3 Bandwidth** in combat. Dialog picks **Probe / Spike / Daemon / Watchdog** from Summons › Agents (not sprite SKUs). Cap 2 → 3@5 → 4@8. **Decompile Agent** is a free maneuver (no immersion gate). Roster ✕ / 0 Stamina / end of encounter also decompile. Watchdog Agent is the Hacker screen pet — not Watchdog ICE.
 
 For the Wired Console, the state is also stored on the actor as `flags.draw-steel-ghostwire.wired = { connected, immersed, state }`, with `state` being `"disconnected"`, `"linked"`, `"overlay"`, or `"jackedIn"`. `connected` is true for any on-net state (Linked included). `immersed` is true only for Overlay or Jacked In.
 

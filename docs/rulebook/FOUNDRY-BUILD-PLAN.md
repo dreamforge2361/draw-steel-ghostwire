@@ -587,7 +587,7 @@ Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **
 - [x] **B120** Hacker Agents (module **0.3.70**) — **pending Foundry-verify**. Done when:
   - [x] 12 Agent Actors + Compile/Decompile abilities + L1 class grant
   - [x] `scripts/agents.mjs` registered; Overlay/Jacked In gate; cap; dismiss
-  - [x] RAW 19 + rulebook 08 + Hacker master + B120 spike
+  - [x] RAW 19 + Wire + glossary, rulebook 08/20/18, manuscript L1/slang/chargen, journals + VOIDMARK index
   - [x] Smoke: `node tools/hacker-agents-smoke.mjs`
   - [ ] Foundry-verify: Overlay Compile Agent → Spike token; Linked refuses; cap 2; Decompile removes token+Actor
 

@@ -17,7 +17,7 @@
 
 ### Who You Are
 
-You are a **Hacker** -- a ghost in the machine who fights wars in the Wired before the first physical shot is ever fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. Whether you specialize as a **Disruptor**, **Controller**, or **Support**, you turn digital infrastructure into a battlefield only you can truly see.
+You are a **Hacker** -- a ghost in the machine who fights wars in the Wired before the first physical shot is ever fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. You also compile **Agents** — deck daemons (Probe, Spike, Daemon, Watchdog), software not Resonance sprites. Whether you specialize as a **Disruptor**, **Controller**, or **Support**, you turn digital infrastructure into a battlefield only you can truly see.
 
 Outside combat, you are the party's key into any door, camera, lock, drone, or vault that has a wire running to it. Inside combat, you are a second front the enemy has to defend -- one they usually can't even see coming.
 
@@ -67,11 +67,11 @@ You reach a node by first using the **Connect** Matrix Verb (see Matrix Verbs, b
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |
 |---|---|---|---|---|
 | **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | None |
-| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs. | None — you are not immersed |
+| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | None — you are not immersed |
 | **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |
 | **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |
 
-**On-net vs Connected.** **On-net** means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Access, Failsafe Cascade, Wired Guard, and others) explicitly require you or an ally to be "Jacked In or Overlaid" -- Linked does **not** satisfy them. A handful of higher-tier features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone. Scan, Search, and Watchdog can find any non-Disconnected presence (**Linked = soft presence**).
+**On-net vs Connected.** **On-net** means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Access, Failsafe Cascade, Wired Guard, **Compile Agent**, and others) explicitly require you or an ally to be "Jacked In or Overlaid" -- Linked does **not** satisfy them. A handful of higher-tier features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone. Scan, Search, and Watchdog ICE can find any non-Disconnected presence (**Linked = soft presence**). A Hacker’s **Watchdog Agent** is a compiled screen, not Watchdog ICE.
 
 **Ruling (Michael, 2026-07-28, Linked addendum 2026-09-20):** Overlay and Jacked In remain a genuine mechanical tradeoff. **Linked** is the street-default on-ramp — comms and packets without Overlay’s meat bane or Jacked In’s Wired edge. **Overlaid**, you keep both worlds live but pay a **bane on real-world Power Rolls**. **Jacked In**, you gain an **edge on all Wired Power Rolls**, but you lose the real world entirely. **Toggle Connection State** (free, no roll) steps Linked → Overlay → Jacked In → Linked. **Jack Out** is the only off-ramp.
 
@@ -222,7 +222,9 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 
 ### Agents -- Deck Daemons (not Sprites)
 
-Agents are software constructs you compile from your deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world; you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.
+Agents are software constructs you compile from your deck — **Probe** (recon / Deep Scan twin), **Spike** (intrusion / Integrity strike), **Daemon** (system control / Track 1 puppet), **Watchdog** (defend / Trace scrub / screen). They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world (`20`); you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.
+
+**Watchdog Agent is not Watchdog ICE.** Watchdog ICE is opposition on a Track 2 node. A Watchdog Agent is *your* compiled screen — Trace scrub and a bane on Wired/EW attacks — not the node's teeth.
 
 **Immersion.** Compiling an Agent requires **Overlay or Jacked In**. **Linked refuses** — Agents need immersion; a soft presence is not enough to keep a daemon running. Decompile does not require immersion: you can kill your own process while Linked or Disconnected.
 
@@ -256,6 +258,9 @@ Agents are software constructs you compile from your deck — recon probes, intr
 > **Decompile Agent** *(Class Feature Signature — free maneuver)*
 >
 > **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.
+
+> **In Foundry**
+> Open **Compile Agent** on the Hacker sheet (or the ability’s Item sheet). Press **Compile Agent**, pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. **Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. Agents are not sprites: do not drag a sprite SKU.
 
 ### Level 1-10 Progression Table
 

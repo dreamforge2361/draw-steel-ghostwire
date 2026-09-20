@@ -56,7 +56,7 @@ Resonance is **per-encounter and resets** at the end of every fight — you don'
 
 ## The Sprite Congregation
 
-Sprites are your summoned companions. A sprite is **compiled from Resonance on the spot**, acts under your command, and **decompiles** when dismissed, destroyed, or at encounter's end. No nuyen, no mod slots, no persistence between fights — pure Resonance made manifest.
+Sprites are your summoned companions. A sprite is **compiled from Resonance on the spot**, acts under your command, and **decompiles** when dismissed, destroyed, or at encounter's end. No nuyen, no mod slots, no persistence between fights — pure Resonance made manifest. Hackers compile **Agents** from Bandwidth (`19`) — Probe, Spike, Daemon, Watchdog. Agents are deck software, not sprites; they never share a sprite SKU.
 
 **Sprite cap.** At 1st level you may have up to **2 sprites** compiled and under your command at once. Sprite-Weaver's Wide Compile raises this to **3** starting at 1st level, and further scales upward through that discipline's higher-level features (see the Sprite-Weaver table, below). The general baseline cap rises to **3** at 5th level and **4** at 8th level for every Technomancer, regardless of discipline.
 

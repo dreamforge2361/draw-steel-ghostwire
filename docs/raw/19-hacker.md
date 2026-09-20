@@ -3,7 +3,7 @@
 **RAW status:** draft  
 **Sources:** `docs/rulebook/08-hacker.md`
 
-The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**.
+The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.
 
 ---
 
@@ -71,7 +71,9 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 
 ## Agents -- Deck Daemons (not Sprites)
 
-Agents are software constructs you compile from your deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world; you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.
+Agents are software constructs you compile from your deck — **Probe** (recon / Deep Scan twin), **Spike** (intrusion / Integrity strike), **Daemon** (system control / Track 1 puppet), **Watchdog** (defend / Trace scrub / screen). They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world (`20`); you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.
+
+**Watchdog Agent is not Watchdog ICE.** Watchdog ICE is opposition on a Track 2 node (`21`, `25`). A Watchdog Agent is *your* compiled screen — Trace scrub and a bane on Wired/EW attacks — not the node's teeth.
 
 **Immersion.** Compiling an Agent requires **Overlay or Jacked In**. **Linked refuses** — Agents need immersion; a soft presence is not enough to keep a daemon running. Decompile does not require immersion: you can kill your own process while Linked or Disconnected.
 
@@ -105,6 +107,9 @@ Agents are software constructs you compile from your deck — recon probes, intr
 > **Decompile Agent** *(Class Feature Signature — free maneuver)*
 >
 > **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.
+
+> **In Foundry**
+> Open **Compile Agent** on the Hacker sheet (or the ability’s Item sheet). Press **Compile Agent**, pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. **Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. Agents are not sprites: do not drag a sprite SKU.
 
 ## Level 1-10 Progression Table
 

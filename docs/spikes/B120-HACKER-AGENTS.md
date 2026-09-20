@@ -79,3 +79,4 @@ Script: `scripts/agents.mjs`, registered from `module.mjs`. API: `compileAgent`,
 4. Decompile Agent / roster ✕ removes token+Actor.
 5. End of encounter clears the roster.
 6. Module **0.3.70**. Smoke: `node tools/hacker-agents-smoke.mjs`.
+7. RAW 19 + Wire + glossary, manuscript L1/slang/chargen, Foundry rulebook **and** lore journals, VOIDMARK index — so the table and VOIDMARK can name Compile Agent / Probe / Spike / Daemon / Watchdog. No PDF.

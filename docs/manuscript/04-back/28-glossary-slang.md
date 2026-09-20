@@ -70,9 +70,11 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | **Device** | Room-only socket (Light, Maglock, Cam, ICE, …). |
 | **Reach (Wired)** | Scan/Navigate hops on the **current scene’s** graph — not Ossian Reach. |
 | **ICE** | Intrusion countermeasures — the node fighting back. |
+| **Watchdog ICE** | Opposition ICE on a Track 2 node — not a Hacker Agent. |
 | **Biofeedback** | When Wired pain hits the body. |
 | **Trace / Trace Alert** | The node’s detection track climbing toward trouble. |
-| **Sprite** | Technomancer code-spirit. |
+| **Sprite** | Technomancer code-spirit (Resonance). Not a Hacker Agent. |
+| **Agent** | Hacker deck daemon — Probe, Spike, Daemon, or Watchdog. Software, not a sprite. Compile Agent costs 3 Bandwidth in combat; Overlay or Jacked In (Linked refuses). |
 | **Host / Flats host** | A destination Host; Wired Flats is the Reach’s famous public layer. |
 
 ---

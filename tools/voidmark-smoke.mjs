@@ -109,6 +109,22 @@ ok(
   "compile-agent query retrieves Compile Agent + Overlay/Jacked In",
 );
 
+const probeQ = retrieve(index, "What is a Probe Agent?");
+ok(probeQ.some(h => h.file.includes("19-hacker") && /probe/i.test(h.text)), "Probe Agent retrieves RAW 19");
+const spikeQ = retrieve(index, "What does a Spike Agent do?");
+ok(spikeQ.some(h => h.file.includes("19-hacker") && /spike/i.test(h.text) && /integrity/i.test(h.text)), "Spike Agent retrieves Integrity strike");
+const daemonQ = retrieve(index, "What is a Daemon Agent?");
+ok(daemonQ.some(h => h.file.includes("19-hacker") && /daemon/i.test(h.text)), "Daemon Agent retrieves RAW 19");
+const watchdogQ = retrieve(index, "What is a Watchdog Agent vs Watchdog ICE?");
+ok(
+  watchdogQ.some(h => h.file.includes("19-hacker") && /watchdog agent/i.test(h.text) && /watchdog ice/i.test(h.text)),
+  "Watchdog Agent vs Watchdog ICE retrieves RAW 19 distinction",
+);
+ok(
+  retrieve(index, "Linked refuses Compile Agent").some(h => /linked refuses/i.test(h.text)),
+  "Linked refuses Compile Agent",
+);
+
 const rwQ = retrieve(index, "How do I unlock a maglock or kill a camera feed?");
 ok(
   rwQ.some(h => /read\/write/i.test(h.text) && /unlock|kill a cam|kill a camera|cam feed/i.test(h.text)),
