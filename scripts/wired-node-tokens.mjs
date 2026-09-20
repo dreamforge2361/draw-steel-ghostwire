@@ -49,6 +49,27 @@ async function nodeFolder() {
 const staminaFor = node => (node.track === 2) ? { value: node.integrity, max: node.integrityMax } : { value: 1, max: 1 };
 const barFor = node => ((node.track === 2) ? "stamina" : null);
 
+/** Elevation + Level for a new token on the viewed Scene (Foundry V14 Levels / theripper Levels). */
+export function placementElevationAndLevel() {
+  // theripper Levels: active layer bottom elevation
+  const levelsBottom = Number(CONFIG.Levels?.UI?.rangeBottom);
+  if (Number.isFinite(levelsBottom)) {
+    return { elevation: levelsBottom, level: canvas.level?.id ?? null };
+  }
+  // Foundry V14 native: currently displayed Level
+  const current = canvas.level ?? null;
+  if (current) {
+    const bottom = Number(current.elevation?.bottom);
+    return {
+      elevation: Number.isFinite(bottom) ? bottom : (Number(current.elevation) || 0),
+      level: current.id,
+    };
+  }
+  const controlled = Number(canvas.tokens?.controlled?.[0]?.document?.elevation);
+  if (Number.isFinite(controlled)) return { elevation: controlled, level: null };
+  return { elevation: 0, level: null };
+}
+
 /** Place a board node on the viewed Scene as a linked token. GM only. */
 export async function placeNode(board, node) {
   const viewed = canvas.scene;
@@ -77,7 +98,12 @@ export async function placeNode(board, node) {
   const snap = value => Math.round(value / grid) * grid;
   const x = snap(canvas.stage.pivot.x - (grid / 2)) + (placed * grid);
   const y = snap(canvas.stage.pivot.y - (grid / 2));
-  const tokenDocument = await actor.getTokenDocument({ x, y, actorLink: true, hidden: !node.revealed });
+  // Land on the Level the GM is viewing (Interior vs Roof). Scripted createEmbeddedDocuments
+  // does not inherit canvas.level the way drag-drop does (B108).
+  const { elevation, level } = placementElevationAndLevel();
+  const tokenData = { x, y, elevation, actorLink: true, hidden: !node.revealed };
+  if (level) tokenData.level = level;
+  const tokenDocument = await actor.getTokenDocument(tokenData, { parent: viewed });
   await viewed.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
 }
 
