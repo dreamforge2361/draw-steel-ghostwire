@@ -45,7 +45,7 @@ You leave any on-net state with the **Jack Out** Matrix Verb -- a clean disconne
 
 - **Comms / deck / chrome:** a commlink, cyberdeck, datajack, trodes, or other tagged comms / chrome interface
 - **Wrench drone control:** an **RCC** (Remote Box, Fleet Deck, War Table, Command Rig, Hydra Console) or **Rigger’s Harness** (neural control-interface mount). Harness ≡ deck. Fabricator’s Bench (tool rig) and Field Chassis (turret tablet) are **not** interfaces
-- **Wire Kit — Matrix Verbs** on an NPC or drone (Director stamp). **Pack drones** (micro / small / medium band templates) ship with the kit so imports/deploys are Wire-ready; they still start **Disconnected** until Connect
+- **Wire Kit — Matrix Verbs** on an NPC, drone, or vehicle (Director stamp). **Pack drones and vehicles** (all nine `machine-drone-*` / `machine-vehicle-*` band templates) ship with the kit so imports/deploys are Wire-ready; they still start **Disconnected** until Connect
 - **Technomancer** (class) — deckless Resonance; no gear required
 
 Spoof Kit is **not** an interface. Rigger Cocoon is a vehicle Jump-In mod, not an interface. Without an interface, Connect refuses: “Need a commlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.”
@@ -140,7 +140,7 @@ Unless an ability's printed text says otherwise, every Wired Power Roll (Matrix 
 
 ## Matrix Verbs (Universal)
 
-These 9 abilities aren't unique to the Hacker -- *any* hero with a **Wire interface** has them (commlink, cyberdeck, datajack / trodes, **Rigger’s Harness** / RCC, **Wire Kit** on an NPC or pack drone, or Technomancer Resonance). They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill grants an edge on all seven** (instead of the usual skill bonus on tests).
+These 9 abilities aren't unique to the Hacker -- *any* hero with a **Wire interface** has them (commlink, cyberdeck, datajack / trodes, **Rigger’s Harness** / RCC, **Wire Kit** on an NPC, pack drone, or pack vehicle, or Technomancer Resonance). They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill grants an edge on all seven** (instead of the usual skill bonus on tests).
 
 | Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |
 |---|---|---|---|---|

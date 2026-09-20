@@ -25,11 +25,11 @@ On create (NPC sheet drop or GM button), `scripts/wired-kit.mjs` stamps the kit 
 
 **Connect interface (0.3.68).** `itemIsConnectInterface` treats Wire Kit as a Wire interface: `kind === "wire-kit"` and/or `_dsid === "wire-kit-matrix-verbs"`, plus the pack `connectInterface` stamp. Existing world copies that only have `kind: "wire-kit"` (Michael’s drone on scene) can Connect → Linked without a separate commlink, deck, datajack, or RCC `matrix.role`. RCC-linked drones may still use role `rcc` if present; do **not** require it for the Director stamp path. **Wrench drone control (RCC or Rigger’s Harness) counts as a Connect interface.** RAW `docs/raw/21-the-wire.md` (Wire interface section), Foundry journals (`21-the-wire`), and the VOIDMARK index name the same allow-list.
 
-Heroes: the kit does **not** duplicate verbs (notify and skip). Bestiary pack Actors are **not** pre-stamped (except **pack drone** templates).
+Heroes: the kit does **not** duplicate verbs (notify and skip). Bestiary pack Actors are **not** pre-stamped (except **pack drone and vehicle** templates).
 
-## Pack drones (0.3.68)
+## Pack drones and vehicles (0.3.68)
 
-Ghostwire Summons › Machines drone band templates (`machine-drone-micro`, `machine-drone-small`, `machine-drone-medium`) embed Wire Kit so a Deploy / import is Wire-ready. **Not** auto-Overlay and **not** auto-Linked — Connect is still required. Vehicle band templates stay meat. `scripts/machines.mjs` `deployMachine` stamps the kit if a copy is missing it. World ready (`stampWireKitOnDrones`) stamps existing world Actors with `kind: "drone"` that lack the kit. **0.3.68 art:** generic **Drone (Medium)** (`machine-drone-medium`) and the **Mule-Bot** cargo SKU share Michael’s circular yellow forklift-tread plate (`assets/tokens/drones/mule-bot.{png,webp}`).
+Ghostwire Summons › Machines band templates — all three drones (`machine-drone-micro|small|medium`) **and** all six vehicles (`machine-vehicle-bike|car|heavy|air|water|space`) — embed Wire Kit so a Deploy / import is Wire-ready. Vehicles connect as Wire nodes too (same net-access stamp). **Not** auto-Overlay and **not** auto-Linked — Connect is still required. `scripts/machines.mjs` `deployMachine` stamps the kit on drones **and** vehicles if a copy is missing it. World ready (`stampWireKitOnMachines`) stamps existing world Actors with `kind: "drone"` or `kind: "vehicle"` that lack the kit. **0.3.68 art:** generic **Drone (Medium)** (`machine-drone-medium`) and the **Mule-Bot** cargo SKU share Michael’s circular yellow forklift-tread plate (`assets/tokens/drones/mule-bot.{png,webp}`).
 
 ## GM convenience
 

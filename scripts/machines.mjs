@@ -133,7 +133,7 @@ export async function deployMachine(item) {
   });
   const actor = await Actor.create(data);
   if (!actor) return;
-  if (vehicle.drone) await addWireKit(actor, { notify: false });
+  await addWireKit(actor, { notify: false });
 
   const size = actor.system.combat.size.value;
   const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });

@@ -330,7 +330,7 @@ const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
 ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name Connect interface");
 ok(/0\.3\.68/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name 0.3.68 Wire Kit interface");
-ok(/Rigger/.test(foundry) && /pack drone/.test(foundry), "Foundry notes name Rigger interface + pack drones");
+ok(/Rigger/.test(foundry) && /pack drone/.test(foundry) && /vehicle/.test(foundry), "Foundry notes name Rigger interface + pack drones and vehicles");
 ok(/Mule-Bot|cargo-hauler|cargo plate/.test(foundry), "Foundry notes name Mule-Bot cargo plate");
 ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry), "Foundry notes: node Actors always Connected");
 ok(/revealed first/.test(foundry) && /A–Z|A-Z/.test(foundry), "Foundry notes: revealed-first then A–Z lists");
@@ -341,7 +341,7 @@ ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the shee
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
 ok(!/stay on the sheet/.test(raw), "Wire RAW no longer parks Connect on the sheet");
-ok(/Wire Kit/.test(raw) && /Rigger.?s Harness/.test(raw) && /Pack drones/.test(raw), "Wire RAW names Wire Kit, Rigger's Harness, pack drones as Connect");
+ok(/Wire Kit/.test(raw) && /Rigger.?s Harness/.test(raw) && /Pack drones and vehicles/.test(raw), "Wire RAW names Wire Kit, Rigger's Harness, pack drones and vehicles as Connect");
 ok(/### Wire interface/.test(raw), "Wire RAW has a Wire interface (Connect) section");
 ok(/0\.3\.53/.test(readFileSync("README.md", "utf8")) && /all nine/i.test(readFileSync("README.md", "utf8")), "README changelog 0.3.53 all nine");
 
@@ -484,8 +484,8 @@ ok((() => {
 ok(/0\.3\.68/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.68");
 ok(kitSrc.includes("wired.connectInterface"), "Add Wire Kit stamps connectInterface");
 ok(!kitSrc.includes("SHEET_VERBS"), "0.3.68 still does not stamp sheet verbs");
-ok(kitSrc.includes("stampWireKitOnDrones"), "0.3.68 migrates world drones missing Wire Kit");
-ok(readFileSync("scripts/machines.mjs", "utf8").includes("addWireKit"), "Deploy stamps Wire Kit on drones");
+ok(kitSrc.includes("stampWireKitOnMachines"), "0.3.68 migrates world drones and vehicles missing Wire Kit");
+ok(readFileSync("scripts/machines.mjs", "utf8").includes("addWireKit") && !/if \(vehicle\.drone\) await addWireKit/.test(readFileSync("scripts/machines.mjs", "utf8")), "Deploy stamps Wire Kit on drones and vehicles");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

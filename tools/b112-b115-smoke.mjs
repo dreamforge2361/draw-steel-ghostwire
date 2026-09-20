@@ -12,7 +12,7 @@ import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../script
 import { NODE_TOKEN_LIBRARY, tokenSrcForStyle } from "../scripts/wired-node-art.mjs";
 import { MATRIX_VERBS, MATRIX_VERB_IDS, MATRIX_VERB_DSIDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
 import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
-import { actorHasKit, isDroneActor, isWireKit } from "../scripts/wired-kit.mjs";
+import { actorHasKit, isDroneActor, isMachineActor, isVehicleActor, isWireKit } from "../scripts/wired-kit.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -256,10 +256,10 @@ ok(actorHasConnectInterface({ items: [{ system: { _dsid: WIRE_KIT_DSID }, flags:
 const src = readFileSync("scripts/wired-kit.mjs", "utf8");
 ok(src.includes("grantMatrixVerbs") && src.includes("addWireKitToSelected"), "wired-kit grants + selected-token helper");
 ok(src.includes("wired.connectInterface"), "HUD grant stamps connectInterface");
-ok(src.includes("stampWireKitOnDrones"), "world ready migrates drone Actors missing the kit");
+ok(src.includes("stampWireKitOnMachines") && src.includes("stampWireKitOnDrones"), "world ready migrates drone and vehicle Actors missing the kit");
 ok(src.includes("actor.type === \"hero\""), "heroes are not auto-stamped");
 ok(!/for \(const actor of game\.actors\)/.test(src) || src.includes("stampWireKitOnDrones"), "drone migration is kit-stamp only, not a verb grant scan");
-ok(readFileSync("scripts/machines.mjs", "utf8").includes("addWireKit"), "Deploy stamps Wire Kit on drone Actors");
+ok(readFileSync("scripts/machines.mjs", "utf8").includes("addWireKit"), "Deploy stamps Wire Kit on drone and vehicle Actors");
 
 console.log("\n4b) Pack drone templates carry Wire Kit (not Overlay)");
 for (const band of ["micro", "small", "medium"]) {
@@ -273,8 +273,21 @@ for (const band of ["micro", "small", "medium"]) {
   const wired = drone.flags["draw-steel-ghostwire"].wired;
   ok(!wired?.state && wired?.connected !== true, `${band} template is not auto-Overlay / auto-Connected`);
 }
+ok(isVehicleActor(readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json")), "isVehicleActor sees car template");
 ok(!isDroneActor(readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json")), "vehicle templates are not drones");
-ok(!readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json").items.some(isWireKit), "vehicle templates do not get Wire Kit");
+
+console.log("\n4b2) Pack vehicle templates carry Wire Kit (not Overlay)");
+for (const band of ["bike", "car", "heavy", "air", "water", "space"]) {
+  const vehicle = readBomFreeJson(`src/packs/summons/machines/machine-vehicle-${band}.json`);
+  ok(vehicle.flags["draw-steel-ghostwire"].kind === "vehicle", `${band} template kind is vehicle`);
+  ok(isVehicleActor(vehicle) && isMachineActor(vehicle), `isVehicleActor/isMachineActor sees ${band} template`);
+  ok(vehicle.items.some(isWireKit), `${band} template embeds Wire Kit`);
+  ok(actorHasKit(vehicle), `actorHasKit sees ${band} Wire Kit`);
+  ok(itemIsConnectInterface(vehicle.items.find(isWireKit)), `${band} Wire Kit is a Connect interface`);
+  ok(!vehicle.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), `${band} template has none of the nine Matrix Verbs`);
+  const wired = vehicle.flags["draw-steel-ghostwire"].wired;
+  ok(!wired?.state && wired?.connected !== true, `${band} template is not auto-Overlay / auto-Connected`);
+}
 
 console.log("\n4c) Mule-Bot / Drone (Medium) cargo plate");
 const muleToken = "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp";
@@ -345,6 +358,7 @@ ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.49"), "B115 spike");
 ok(/Connect interface/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Connect interface");
 ok(/pack drone/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents pack drone Wire Kit stamp");
+ok(/machine-vehicle|pack drone and vehicle|vehicles/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents pack vehicle Wire Kit stamp");
 ok(/Wrench drone control/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Wrench drone control as Connect");
 ok(b112.includes("B113"), "B112 notes B113 art");
 ok(b112.includes("Cam Controls"), "B112 spike cameras-in-scope");

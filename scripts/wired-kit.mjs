@@ -19,14 +19,32 @@ export const isWireKitVerb = item =>
 
 export const actorHasKit = actor => [...(actor?.items ?? [])].some(isWireKit);
 
+function machineKind(actor) {
+  const gw = actor?.flags?.[MODULE_ID] ?? {};
+  return gw.kind ?? actor?.getFlag?.(MODULE_ID, "kind");
+}
+
+function machineDsid(actor) {
+  const gw = actor?.flags?.[MODULE_ID] ?? {};
+  return gw.dsid ?? actor?.getFlag?.(MODULE_ID, "dsid");
+}
+
 /** Deployed / pack drone Actors (`kind: "drone"` or `machine-drone-*` band templates). */
 export function isDroneActor(actor) {
-  const gw = actor?.flags?.[MODULE_ID] ?? {};
-  const kind = gw.kind ?? actor?.getFlag?.(MODULE_ID, "kind");
-  if (kind === "drone") return true;
-  const dsid = gw.dsid ?? actor?.getFlag?.(MODULE_ID, "dsid");
+  if (machineKind(actor) === "drone") return true;
+  const dsid = machineDsid(actor);
   return typeof dsid === "string" && dsid.startsWith("machine-drone-");
 }
+
+/** Deployed / pack vehicle Actors (`kind: "vehicle"` or `machine-vehicle-*` band templates). */
+export function isVehicleActor(actor) {
+  if (machineKind(actor) === "vehicle") return true;
+  const dsid = machineDsid(actor);
+  return typeof dsid === "string" && dsid.startsWith("machine-vehicle-");
+}
+
+/** Pack/world drones and vehicles that should ship with Wire Kit (Connect without a commlink). */
+export const isMachineActor = actor => isDroneActor(actor) || isVehicleActor(actor);
 
 /**
  * B117: Matrix Verbs live on the node applet. Wire Kit does not stamp abilities.
@@ -112,13 +130,14 @@ export async function addWireKitToSelected() {
 }
 
 /**
- * Stamp Wire Kit onto drone Actors that are missing it. Does not set Overlay / Linked.
- * Connect is still required. Idempotent. GM-only when `actors` is the world collection.
+ * Stamp Wire Kit onto drone and vehicle Actors that are missing it.
+ * Does not set Overlay / Linked. Connect is still required. Idempotent.
+ * GM-only when `actors` is the world collection.
  */
-export async function stampWireKitOnDrones(actors = [], { notify = true } = {}) {
+export async function stampWireKitOnMachines(actors = [], { notify = true } = {}) {
   let stamped = 0;
   for (const actor of actors) {
-    if (!isDroneActor(actor) || actorHasKit(actor)) continue;
+    if (!isMachineActor(actor) || actorHasKit(actor)) continue;
     const result = await addWireKit(actor, { notify: false });
     if (result.kit) stamped += 1;
   }
@@ -127,6 +146,9 @@ export async function stampWireKitOnDrones(actors = [], { notify = true } = {}) 
   }
   return stamped;
 }
+
+/** @deprecated Use stampWireKitOnMachines — drones and vehicles both get Wire Kit. */
+export const stampWireKitOnDrones = stampWireKitOnMachines;
 
 export function registerWiredKit() {
   Hooks.on("createItem", (item, options, userId) => {
@@ -171,13 +193,16 @@ export function registerWiredKit() {
         ...(module.api ?? {}),
         addWireKit,
         addWireKitToSelected,
+        stampWireKitOnMachines,
         stampWireKitOnDrones,
         isDroneActor,
+        isVehicleActor,
+        isMachineActor,
         grantMatrixVerbs,
         WIRE_KIT_UUID,
         MATRIX_VERBS,
       };
     }
-    if (game.user.isGM) await stampWireKitOnDrones(game.actors);
+    if (game.user.isGM) await stampWireKitOnMachines(game.actors);
   });
 }

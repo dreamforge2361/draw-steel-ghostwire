@@ -6559,7 +6559,7 @@
       "Hud": "Add Wire Kit — Matrix Verbs to the selected NPC",
       "Granted": "{actor} stamped with Wire Kit — they can Connect without a commlink. Matrix Verbs fire from the node they're facing.",
       "Already": "{actor} already has the Wire Kit.",
-      "DroneMigrated": "Ghostwire: stamped Wire Kit on {count} drone(s) — they can Connect (still start Disconnected).",
+      "DroneMigrated": "Ghostwire: stamped Wire Kit on {count} drone(s)/vehicle(s) — they can Connect (still start Disconnected).",
       "HeroSkip": "{actor} is a hero — Matrix Verbs fire from the node applet, not this kit.",
       "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."
     },

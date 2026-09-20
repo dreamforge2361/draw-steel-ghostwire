@@ -160,7 +160,7 @@ Bandwidth is the Hacker's fuel. It works like this:
 
 ### Matrix Verbs (Universal)
 
-These 9 abilities aren't unique to the Hacker -- *any* character with a **Wire interface** has them (commlink, cyberdeck, datajack / trodes, **Rigger’s Harness** / RCC, **Wire Kit** on an NPC or pack drone, or Technomancer Resonance). They fire from the node applet, **not** the sheet. Full interface list: `docs/raw/21-the-wire.md`. They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill (real key: Fabrication/`blacksmithing`) grants an edge on all seven** -- a deliberate GHOSTWIRE house-rule deviation from standard Draw Steel skill rules.
+These 9 abilities aren't unique to the Hacker -- *any* character with a **Wire interface** has them (commlink, cyberdeck, datajack / trodes, **Rigger’s Harness** / RCC, **Wire Kit** on an NPC, pack drone, or pack vehicle, or Technomancer Resonance). They fire from the node applet, **not** the sheet. Full interface list: `docs/raw/21-the-wire.md`. They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill (real key: Fabrication/`blacksmithing`) grants an edge on all seven** -- a deliberate GHOSTWIRE house-rule deviation from standard Draw Steel skill rules.
 
 | Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |
 |---|---|---|---|---|
