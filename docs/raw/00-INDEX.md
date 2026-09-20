@@ -41,7 +41,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `12-operator.md` … `20-technomancer.md` | Class chapters | GW | `01`–`08`, `20` rulebook (rules only; strip lore) |
 | `21-the-wire.md` | The Wire (Matrix) | GW | **RAW-locked** B66 (2026-09-18); Wire Atlas B116 (2026-09-20); Linked 2026-09-20; Disconnected/Linked/Overlay/Jacked In, Rating 1–5, Trace Alert defaults, suites/payloads, Relay/Host/Segment; **0.3.68** Wire Kit / Rigger’s Harness / pack drones and vehicles = Connect |
 | `22-the-veil.md` | The Veil (minimal) | GW | Only what Elementalist / Street Priest need |
-| `23-machines.md` | Drones, Vehicles (Buildings stub OK); **Vehicles & Transit street picture** 2026-09-20; **Lane-Hopper** POV SKU | GW | `15-drones.md`, `16-vehicles.md`, L1 Vehicles & Transit |
+| `23-machines.md` | Drones, Vehicles (Buildings stub OK); **Vehicles & Transit street picture** 2026-09-20; **Lane-Hopper** POV + **Star-Chopper** hover-bike SKUs | GW | `15-drones.md`, `16-vehicles.md`, L1 Vehicles & Transit |
 | `24-advancement.md` | Advancement & echelons | Stage 3 draft (B73) | Levels 1–10, echelon bands, table timing; doctrine locked |
 | `25-opposition.md` | Opposition (Director) | Stage 3 draft | Stage 3 fill 2026-09-18 (B70); street-fight procedure; Malice + Trace Alert; no lore bestiary |
 | `26-lifestyle-downtime.md` | Lifestyle & Downtime | GW Stage 3 draft (B67; Contacts pointer B75; B92 standalone) | Print Ch 10; upkeep ¥; Medic restock quotes; §Craft / chrome / Ritual; Contacts/hireling pointer |

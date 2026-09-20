@@ -26,16 +26,17 @@
 | Gear master sync | `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Cat 5 intro |
 | Foundry | Lore / Rulebook / Reach Handbook journals; VOIDMARK index |
 
-## Inventory + table token (Lane-Hopper, 2026-09-20 follow-on)
+## Inventory + table token (Lane-Hopper, Star-Chopper, 2026-09-20 follow-on)
 
-Michael delivered a 4-seat open street hovercar plate. **Lane-Hopper** (`lane-hopper`) is the published yes-example:
+Michael delivered a 4-seat open street hovercar plate and a stretch-fork hover-bike / chopper plate. **Lane-Hopper** (`lane-hopper`) is the published 4-seat yes-example; **Star-Chopper** (`star-chopper`) is the tandem hover-bike.
 
 - Item: `src/packs/vehicles/ground/lane-hopper.json` (E1 Street ¥500, Domain Ground, Scale Vehicle, tags Transit / Crew-car / Hover / POV, 1+3 seats)
 - Actor: `src/packs/summons/machines/lane-hopper.json` (placeable **2×3**, hover, linked token)
 - Art: `assets/tokens/vehicles/lane-hopper.{png,webp}` (1024×1536 top-down)
 - Open/closed cabins exist; this plate is the open table look
 - **Rideable:** future only — top-down seats make passenger slots obvious; do not implement now
-- Street POV family also includes hover bikes / choppers (SKU when plate lands)
+- Street POV family also includes hover bikes / choppers — **Star-Chopper** (`star-chopper`) is the published tandem SKU
+- **Star-Chopper** (`star-chopper`): stretch-fork hover-bike, Light, 1+pillion, E1 Street (custom) ¥700, tags Courier / Hover / POV. Item + Actor (token **1×3**, hover). Art: `assets/tokens/vehicles/star-chopper.{png,webp}` (1024×1536). Named to avoid the rifle **Chopper**.
 - **Bulldog** (`bulldog`): street cargo van, Ground-hauler, tires, E1 Street ¥650. Placeholder token art. Item + Actor (`2×4`)
 
 Domain still gates chase/wrecks. **Hover** tag = limiter-band POV (including many Ground-domain sedan/cab/bike SKUs). **Ground-hauler** = tires/treads/walker mass. **VTOL** = free-climb flying.

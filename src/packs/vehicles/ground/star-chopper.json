@@ -1,0 +1,62 @@
+{
+  "_id": "gwStarChopItm000",
+  "_key": "!items!gwStarChopItm000",
+  "name": "GHOSTWIRE.Vehicles.Items.StarChopper.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/star-chopper.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.StarChopper.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "star-chopper",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 51000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 700,
+        "modSlots": 1,
+        "tags": [
+          "Courier",
+          "Hover",
+          "POV"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Light",
+        "drone": false,
+        "speedBand": "fast"
+      }
+    }
+  }
+}

@@ -40,6 +40,8 @@ ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.69", `mo
 const l1 = read("docs/manuscript/01-lore/L1-setting-primer.md");
 ok(/## Vehicles & Transit/.test(l1), "L1 has Vehicles & Transit");
 ok(/Lane-Hopper/.test(l1), "L1 names Lane-Hopper as POV archetype");
+ok(/Star-Chopper/.test(l1), "L1 names Star-Chopper as hover-bike archetype");
+ok(/Table look — Star-Chopper/.test(l1), "L1 has Star-Chopper table look");
 ok(/Bulldog/.test(l1), "L1 names Bulldog as street hauler");
 ok(/Rideable/.test(l1), "L1 Director note defers Rideable");
 ok(/Most vehicles in this world are \*\*electric\*\*/.test(l1), "L1: most vehicles are electric");
@@ -57,10 +59,13 @@ ok(/almost always heavy lifters/.test(raw), "RAW 23 quotes ground-haulers");
 const vehCh = read("docs/rulebook/16-vehicles.md");
 ok(/Lock \(Michael 2026-09-20\)/.test(vehCh), "16-vehicles lore frame is the lock");
 ok(/light electric hovercraft/.test(vehCh), "16-vehicles quotes hover POV");
+ok(/Inventory \(35 crewed platforms\)/.test(raw) && /Star-Chopper/.test(raw), "RAW 23 inventory includes Star-Chopper and count 35");
+ok(/Inventory \(35 crewed platforms\)/.test(vehCh) && /Star-Chopper/.test(vehCh), "16-vehicles inventory includes Star-Chopper and count 35");
 
 const flats = read("docs/setting/reach-handbook/03-life-on-the-flats.md");
 ok(/## Vehicles & Transit — How the Flats Move/.test(flats), "Handbook Life on the Flats has Vehicles & Transit");
 ok(/altitude limiters ~25–50 feet/.test(flats), "Handbook quotes limiter");
+ok(/Star-Chopper/.test(flats), "Handbook names Star-Chopper");
 
 const afterFront = [
   "docs/raw/23-machines.md",
@@ -87,6 +92,22 @@ ok(laneActor.prototypeToken?.texture?.src?.endsWith("lane-hopper.webp"), "Lane-H
 ok(laneActor.prototypeToken?.width === 2 && laneActor.prototypeToken?.height === 3, "Lane-Hopper token 2×3");
 ok(laneActor.system.movement.hover === true, "Lane-Hopper Actor hover");
 ok(existsSync("assets/tokens/vehicles/lane-hopper.png") && existsSync("assets/tokens/vehicles/lane-hopper.webp"), "Lane-Hopper png+webp on disk");
+const starChopper = readJson("src/packs/vehicles/ground/star-chopper.json");
+ok(starChopper.system._dsid === "star-chopper", "Star-Chopper Item dsid");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Star-Chopper tagged Hover");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.tags.includes("POV"), "Star-Chopper tagged POV");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.tags.includes("Courier"), "Star-Chopper tagged Courier");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.availability === "street", "Star-Chopper Street availability");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.domain === "Ground", "Star-Chopper Domain Ground (street-layer chase)");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.scale === "Light", "Star-Chopper Scale Light");
+ok(starChopper.flags["draw-steel-ghostwire"].vehicle.price === 700, "Star-Chopper Street/custom price");
+ok(starChopper.img.endsWith("star-chopper.webp"), "Star-Chopper Item img is webp");
+const starActor = readJson("src/packs/summons/machines/star-chopper.json");
+ok(starActor.prototypeToken?.texture?.src?.endsWith("star-chopper.webp"), "Star-Chopper Actor token texture");
+ok(starActor.prototypeToken?.width === 1 && starActor.prototypeToken?.height === 3, "Star-Chopper token 1×3");
+ok(starActor.system.movement.hover === true, "Star-Chopper Actor hover");
+ok(existsSync("assets/tokens/vehicles/star-chopper.png") && existsSync("assets/tokens/vehicles/star-chopper.webp"), "Star-Chopper png+webp on disk");
+ok(starChopper.system._dsid !== "chopper", "Star-Chopper does not reuse rifle dsid chopper");
 const bulldog = readJson("src/packs/vehicles/ground/bulldog.json");
 ok(bulldog.system._dsid === "bulldog", "Bulldog Item dsid");
 ok(bulldog.flags["draw-steel-ghostwire"].vehicle.tags.includes("Ground-hauler"), "Bulldog tagged Ground-hauler");
@@ -105,17 +126,24 @@ ok(getaway.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Getawa
 const lang = readJson("lang/en.json");
 ok(/limiter ~25–50 ft/.test(lang.GHOSTWIRE.Vehicles.Items.Getaway.Description), "Getaway lang names limiter hover");
 ok(/four-seat street hovercar/.test(lang.GHOSTWIRE.Vehicles.Items.LaneHopper.Description), "Lane-Hopper lang is 4-seat hovercar");
+ok(/tandem limiter hover-bike/.test(lang.GHOSTWIRE.Vehicles.Items.StarChopper.Description), "Star-Chopper lang is tandem hover-bike");
+ok(/not the rifle named Chopper/.test(lang.GHOSTWIRE.Vehicles.Items.StarChopper.Description), "Star-Chopper lang disambiguates rifle Chopper");
 ok(/street cargo van/.test(lang.GHOSTWIRE.Vehicles.Items.Bulldog.Description), "Bulldog lang is cargo van");
 ok(/Rideable/.test(lang.GHOSTWIRE.Summons.Machines.LaneHopper.Description), "Lane-Hopper Actor notes future Rideable");
+ok(/Rideable/.test(lang.GHOSTWIRE.Summons.Machines.StarChopper.Description), "Star-Chopper Actor notes future Rideable");
+ok(lang.GHOSTWIRE.Gear.Items.Chopper.Name === "Chopper", "rifle Chopper lang key still exists");
 ok(/Ground-hauler/.test(lang.GHOSTWIRE.Vehicles.Items.Flatbed.Description), "Flatbed lang tagged Ground-hauler");
 ok(/VTOL/.test(lang.GHOSTWIRE.Vehicles.Items.Tiltjet.Description), "Tiltjet lang tagged VTOL");
 
 const lorePages = loadJournalPages("lore");
 ok(lorePages.some(p => /Vehicles & Transit/.test(p.text) && /light electric hovercraft/.test(p.text)), "Lore journal has Vehicles & Transit page");
+ok(lorePages.some(p => /Star-Chopper/.test(p.text)), "Lore journal names Star-Chopper");
 const rulePages = loadJournalPages("rulebook");
 ok(rulePages.some(p => /Street picture/.test(p.text) && /25–50 feet/.test(p.text)), "Rulebook Machines journal has street picture");
+ok(rulePages.some(p => /Star-Chopper/.test(p.text)), "Rulebook journal names Star-Chopper");
 const hbPages = loadJournalPages("reach-handbook");
 ok(hbPages.some(p => /Vehicles & Transit/.test(p.text) && /25–50 feet/.test(p.text)), "Reach Handbook journal has Vehicles & Transit");
+ok(hbPages.some(p => /Star-Chopper/.test(p.text)), "Reach Handbook journal names Star-Chopper");
 
 const index = readJson("data/voidmark-rules-index.json");
 const q = retrieve(index, "What vehicles do people drive? hovercraft altitude limiter VTOL ground hauler");

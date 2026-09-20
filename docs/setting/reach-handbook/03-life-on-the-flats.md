@@ -63,7 +63,7 @@ The Flats run on **nuyen (¥)** moved as anonymous **certified credsticks** — 
 
 Most vehicles in this world are **electric**.
 
-**Street / POV** on the Flats is mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground — **not** free-flight sky cars. The yes-example is the **Lane-Hopper**: open 4-seat street hovercar (closed cabins exist; the table token is the open navy/white-stripe plate). Hover bikes / choppers share the family. Hovercabs queue at pickup gantries; courier cycles skim the wet deck; a rusted commuter skirt is still a getaway. The limiter is law and hardware. When Handbook sites mention a hovercab riding a cushion along a railing, that is this band.
+**Street / POV** on the Flats is mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground — **not** free-flight sky cars. The yes-examples are the **Lane-Hopper** (open 4-seat street hovercar; closed cabins exist; the table token is the open navy/white-stripe plate) and the **Star-Chopper** (tandem 2-seat stretch-fork hover-bike, no wheels — not the rifle named Chopper). Hovercabs queue at pickup gantries; courier cycles skim the wet deck; a rusted commuter skirt is still a getaway. The limiter is law and hardware. When Handbook sites mention a hovercab riding a cushion along a railing, that is this band.
 
 **Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars. Cargo-crawlers, flatbeds, bricks, cage wagons, walkers. Interchange ground-rigs grinding at Pump Row are haulers. Rubber and tracks mean mass.
 
@@ -71,7 +71,7 @@ Most vehicles in this world are **electric**.
 
 Vertical travel between strata is still lift-stacks, maglev spines, and grey shafts (**The Vertical & the Black Water**). Hover lanes are how you cross a district without climbing a checkpoint. Water lanes stay barges, skiffs, and hover-launches as printed.
 
-**Director's frame.** Narrate three stacked weathers: street-layer hover + crowds; hauler mass on the deck; VTOL and drones in the gaps. A **Lane-Hopper** is the everyday 4-seat POV (open plate on the table; closed variants exist). A **Bulldog** is a tires cargo van — not a hover. A stolen Getaway is a limiter hover even if the card says Domain Ground. A Flatbed is tires. A Tiltjet is the expensive bird. **Rideable (future):** top-down seats make passenger token slots obvious — do not implement Rideable yet.
+**Director's frame.** Narrate three stacked weathers: street-layer hover + crowds; hauler mass on the deck; VTOL and drones in the gaps. A **Lane-Hopper** is the everyday 4-seat POV (open plate on the table; closed variants exist). A **Star-Chopper** is the street hover-bike (two seats, stretch forks, no wheels). A **Bulldog** is a tires cargo van — not a hover. A stolen Getaway is a limiter hover even if the card says Domain Ground. A Flatbed is tires. A Tiltjet is the expensive bird. **Rideable (future):** top-down seats make passenger token slots obvious — do not implement Rideable yet.
 
 ## The Wired — The Overlay, the Deep Net, and the Thin Place
 

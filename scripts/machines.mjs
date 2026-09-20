@@ -29,7 +29,7 @@ const BANDS = {
 const ECHELON_MULTIPLIER = { 1: 1, 2: 1.5, 3: 2, 4: 2.5 };
 const SPEED_BAND_BONUS = { slow: -2, standard: 0, fast: 2, extreme: 4 };
 const VEHICLE_SPEED_BANDS = {
-  "crotch-rocket": "fast", "warbike": "fast", "getaway": "standard", "lane-hopper": "standard", "hardtop": "standard", "rustbucket": "standard", "workhorse": "slow", "bulldog": "slow",
+  "crotch-rocket": "fast", "warbike": "fast", "star-chopper": "fast", "getaway": "standard", "lane-hopper": "standard", "hardtop": "standard", "rustbucket": "standard", "workhorse": "slow", "bulldog": "slow",
   "brick": "standard", "iron-giant": "standard", "buzzcopter": "fast", "hoverpad": "fast", "tiltjet": "fast", "skyhunter": "fast",
   "ghost-wing": "fast", "skiff": "standard", "cigarette": "fast", "wetsub": "slow", "leviathan": "standard", "pod": "extreme",
   "mule": "extreme", "reaver": "extreme",

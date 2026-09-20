@@ -94,6 +94,7 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 | Vehicle | `skyhunter` | Skyhunter | Air | Heavy | 3 | `machine-vehicle-air` | fast | 80 | 14 fly |
 | Vehicle | `tiltjet` | Tiltjet | Air | Vehicle | 2 | `machine-vehicle-air` | fast | 60 | 14 fly |
 | Vehicle | `crotch-rocket` | Crotch-Rocket | Ground | Light | 1 | `machine-vehicle-bike` | fast | 20 | 12 walk |
+| Vehicle | `star-chopper` | Star-Chopper | Ground | Light | 1 | `machine-vehicle-bike` | fast | 20 | 12 walk (hover) |
 | Vehicle | `scrap-bike` | Scrap-Bike | Ground | Light | 1 | `machine-vehicle-bike` | fast | 20 | 12 walk |
 | Vehicle | `warbike` | Warbike | Ground | Light | 3 | `machine-vehicle-bike` | fast | 40 | 12 walk |
 | Vehicle | `cage` | Cage | Ground | Vehicle | 3 | `machine-vehicle-car` | standard | 80 | 10 walk |

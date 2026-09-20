@@ -1463,7 +1463,7 @@ Domain still gates chase terrain and wreck language. It does not always match th
 
 | Street class | What it is | How to spot it |
 |---|---|---|
-| **Hover** | Street-layer electric POV; limiter **~25–50 ft** | **Lane-Hopper** (table-token archetype); Hoverpad; hover bikes / choppers; many Light/Vehicle “sedan / cab / bike” Ground SKUs (Getaway, Grey Cab, Rustbucket, cycles) |
+| **Hover** | Street-layer electric POV; limiter **~25–50 ft** | **Lane-Hopper** (4-seat table-token); **Star-Chopper** (tandem hover-bike); Hoverpad; many Light/Vehicle “sedan / cab / bike” Ground SKUs (Getaway, Grey Cab, Rustbucket, cycles) |
 | **Ground-hauler** | Tires, treads, or walker mass | **Bulldog** (street cargo van); Clunker, Workhorse, Flatbed, Hardtop, Brick, Cage, Iron Giant, Spider-Frame |
 | **VTOL** | Free-climb flying; costs more; common in corp/transit/runner air | Junk Rotor, Buzzcopter, Tiltjet, Skyhunter, Drop-Sled, Ghost-Wing |
 
@@ -1475,12 +1475,18 @@ The everyday POV yes-example is the **Lane-Hopper** (Open Stripe / four-seat str
 
 **Director note (Rideable — future):** those top-down seats make passenger token slots obvious. Do **not** implement Rideable yet.
 
+### Table look — Star-Chopper
+
+The street POV hover-bike yes-example is the **Star-Chopper** (Long-Fork / tandem limiter hover-bike). Michael’s top-down starfield-navy stretch-fork chopper is the **table token** (`assets/tokens/vehicles/star-chopper`). Two seats (rider + pillion); no wheels; altitude limiter **~25–50 ft**. Not a sky bike and **not** the rifle named Chopper.
+
+**Director note (Rideable — future):** tandem seats read from above. Do **not** implement Rideable yet.
+
 ### Bulldog-class — street heavy hauler
 
 A **Bulldog** is the cargo-van exception that still uses **tires**. It is not a hover POV. Rubber on the Flats means mass: crates, wrecks, a crew’s stolen safe. Token art is a placeholder until Michael’s plate.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build**. Read this page in **Ghostwire Lore** (Setting Primer). Chassis SKUs live in **Ghostwire Vehicles & Drones**. Drag the **Lane-Hopper** Actor from **Ghostwire Summons & Machines** (token **2×3**) or **Deploy** the Item from a hero sheet. **Bulldog** is the tires cargo van (token **2×4**, placeholder art). Reach street texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats. VOIDMARK retrieves this lock from the knowledge index.
+> Enable **Draw Steel - Ghostwire Build**. Read this page in **Ghostwire Lore** (Setting Primer). Chassis SKUs live in **Ghostwire Vehicles & Drones**. Drag the **Lane-Hopper** Actor from **Ghostwire Summons & Machines** (token **2×3**), the **Star-Chopper** (token **1×3**), or **Deploy** the Item from a hero sheet. **Bulldog** is the tires cargo van (token **2×4**, placeholder art). Reach street texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats. VOIDMARK retrieves this lock from the knowledge index.
 
 ## Timeline & History
 
