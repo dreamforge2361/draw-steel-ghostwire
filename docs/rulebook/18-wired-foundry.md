@@ -84,7 +84,7 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 
 **Auto-nodes from Scene (B112).** Director-only lightbulb on the Nodes header. On the **viewed** Scene it reads named lights and wall doors (`door != NONE`):
 
-- **Lights.** Room name = text before ` - ` if present, else leading words until a type keyword (Light, Control, Cam, Work, Maglock, Door, Host, Node). One **Track 1 Rating 1** node named `{Room} Light Control` per unique room; hidden token next to the first light.
+- **Lights.** Name pattern **`{Room Name} - {rest…}`** (space-hyphen-space required). Room = everything left of the first ` - `. Example: `Rear Car Substation - Light Control` → **Rear Car Substation Light Control** (Track 1 Rating 1). Lights with no ` - ` are **skipped** and the GM gets a warning. Hidden token next to the first light in that room.
 - **Doors.** Assigned to the nearest light’s room (or the wall’s own name). **Track 1 Rating 2** `{Room} Maglock Door 1`, `… Door 2`, … per room; hidden token next to the door. Light Control ↔ maglocks in the same room are linked.
 - Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). Cameras are not auto-created. The Wire does not flip lights or doors in v1. Token art for Light/Maglock is a B113 hook (generic Track 1 until Michael supplies files). Does not rewrite Gold Line walls/lights/tiles.
 

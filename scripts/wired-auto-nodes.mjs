@@ -2,7 +2,6 @@
 // Foundry glue (read Scene lights/doors, write wiredBoard, place tokens) is in applyAutoNodesFromScene.
 
 import { RATING } from "./wired-node-templates.mjs";
-import { ROOM_TYPE_KEYWORDS, roomPrefix } from "./wired-layout.mjs";
 import { boardScene, placeNode, placedNodeActor, removePlacedNode } from "./wired-node-tokens.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -18,36 +17,24 @@ export const AUTO_KIND = {
   maglock: "maglock",
 };
 
+/** Michael lock (2026-09-20): `{Room Name} - {rest…}` — space-hyphen-space, first occurrence. */
+export const ROOM_SPLIT = " - ";
+
 /**
- * Room name from a light (or named door).
+ * Room name from a light (or a door that uses the same pattern).
  *
- * Rule (Director-facing, also in the Console helpText):
- * 1. If the name contains ` - `, the room is the trimmed part before the first ` - `.
- * 2. Otherwise take leading words until a type keyword (Light, Lights, Control, Cam,
- *    Camera, Cameras, Work, Maglock, Door, Host, Node, ICE).
- * 3. Practical shortcut matching Michael's "first name is the room": if no keyword
- *    appears, use the first two words unless the second word is itself a keyword
- *    (then only the first word).
+ * Locked rule: `{Room Name} - {rest…}`. Room = everything left of the first
+ * ` - ` (space-hyphen-space). No first-word fallback — missing splitter → "".
  *
- * Examples: "Rear Bay Work Light" → Rear Bay; "Cab Light" → Cab;
- * "R2 - Wire Closet Light" → R2; "Track Light" → Track.
+ * Example: "Rear Car Substation - Light Control" → "Rear Car Substation"
+ * → node "Rear Car Substation Light Control".
  */
 export function parseRoomName(name) {
   const raw = String(name ?? "").trim();
   if (!raw) return "";
-  if (raw.includes(" - ")) return raw.split(/\s+-\s+/)[0].trim();
-
-  const words = raw.split(/\s+/).filter(Boolean);
-  if (!words.length) return "";
-  const taken = [];
-  for (const word of words) {
-    if (ROOM_TYPE_KEYWORDS.has(word.toLowerCase())) break;
-    taken.push(word);
-  }
-  if (!taken.length) return "";
-  if (taken.length === 1) return taken[0];
-  // First two words when the second isn't a type keyword (already filtered).
-  return taken.slice(0, 2).join(" ");
+  const idx = raw.indexOf(ROOM_SPLIT);
+  if (idx <= 0) return "";
+  return raw.slice(0, idx).trim();
 }
 
 export function isDoorWall(wall, noneValue = 0) {
@@ -108,16 +95,20 @@ function makeNode({ id, name, track, rating, autoFrom, links = [], description =
  * Plan Light Control + Maglock nodes for a Scene snapshot.
  *
  * @param {{ lights: {id,name,x,y}[], doors: {id,name,x,y}[], existing?: object[], replace?: boolean, idFactory?: () => string }} input
- * @returns {{ nodes: object[], skipped: object[], created: object[], rooms: string[] }}
+ * @returns {{ nodes: object[], skipped: object[], created: object[], skippedLights: {id:string,name:string,reason:string}[], rooms: string[], placements: object }}
  */
 export function planAutoNodes({ lights = [], doors = [], existing = [], replace = false, idFactory = () => `id${Math.random().toString(36).slice(2, 10)}` } = {}) {
   const keep = replace ? existing.filter(n => !n.autoFrom) : [...existing];
   const byId = new Map(keep.map(n => [n.id, { ...n, links: [...(n.links ?? [])] }]));
 
   const roomMap = new Map();
+  const skippedLights = [];
   for (const light of lights) {
     const room = parseRoomName(light.name);
-    if (!room) continue;
+    if (!room) {
+      skippedLights.push({ id: light.id, name: light.name ?? "", reason: "no-split" });
+      continue;
+    }
     if (!roomMap.has(room)) {
       roomMap.set(room, { name: room, lightIds: [], anchor: { x: light.x, y: light.y }, place: { x: light.x, y: light.y } });
     }
@@ -191,6 +182,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
     }),
     created,
     skipped,
+    skippedLights,
     rooms: rooms.map(r => r.name),
     placements: Object.fromEntries(created.filter(n => n._place).map(n => [n.id, n._place])),
   };
@@ -284,12 +276,19 @@ export async function applyAutoNodesFromScene({ replace = false } = {}) {
 
   const count = plan.created.length;
   const skipped = plan.skipped.length;
+  const unsplit = plan.skippedLights ?? [];
+  if (unsplit.length) {
+    const names = unsplit.map(l => l.name || game.i18n.localize("GHOSTWIRE.WiredConsole.AutoNodesUnnamed")).slice(0, 8).join(", ");
+    ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.AutoNodesUnsplit", { count: unsplit.length, names }));
+  }
   if (count) {
     ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredConsole.AutoNodesDone", {
       count, skipped, rooms: plan.rooms.length || 0,
     }));
   } else if (skipped) {
     ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredConsole.AutoNodesSkipped", { skipped }));
+  } else if (!unsplit.length) {
+    ui.notifications.warn(game.i18n.localize("GHOSTWIRE.WiredConsole.AutoNodesEmpty"));
   }
   return plan;
 }

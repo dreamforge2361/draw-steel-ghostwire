@@ -11,23 +11,23 @@ One GM click on the **Wired Console** builds a usable Gold Line board from the v
 
 **Hard lock:** do not touch `scripts/gold-line-scene.mjs` live-scene `{ force: true }` behaviour. Do not inject/overwrite Gold Line walls, lights, or tiles.
 
-## Room naming (lights)
+## Room naming (lights) — LOCKED 2026-09-20
 
-Lights always start with the room name (Michael). Practical parser (`parseRoomName` in `scripts/wired-auto-nodes.mjs`):
+`parseRoomName` in `scripts/wired-auto-nodes.mjs`. **Require** ` - ` (space-hyphen-space) as the splitter. **Do not** use first-word / keyword parsing.
 
-1. If the name contains ` - `, **room = trimmed part before the first ` - `**.
-2. Else take **leading words until a type keyword**: Light, Lights, Control, Cam, Camera, Cameras, Work, Maglock, Door, Host, Node, ICE.
-3. Shortcut: if no keyword fires, **first two words**, unless the second word is itself a keyword — then first word only.
+Pattern: `{Room Name} - {rest…}`
 
-| Light name | Room |
-|---|---|
-| Rear Bay Work Light | Rear Bay |
-| Cab Light | Cab |
-| Aft Freight Work Light | Aft Freight |
-| R2 - Wire Closet Light | R2 |
-| Track Light | Track |
+Room name = everything **left of the first** ` - `.
 
-Unnamed lights are skipped. Documented in Console helpText (`GHOSTWIRE.WiredConsole.AutoNodesRule`).
+| Light name | Room | Light Control node |
+|---|---|---|
+| `Rear Car Substation - Light Control` | Rear Car Substation | `Rear Car Substation Light Control` |
+| `Aft Freight - Work Light` | Aft Freight | `Aft Freight Light Control` |
+| `Cab - Light Control` | Cab | `Cab Light Control` |
+| `Cab Light` (no ` - `) | — | **skip + warn GM** |
+| *(unnamed)* | — | skip |
+
+Documented in Console helpText (`GHOSTWIRE.WiredConsole.AutoNodesRule`). Maglocks in that room: `{Room} Maglock Door 1`, `{Room} Maglock Door 2`, … (Track 1, R2).
 
 ## Nodes
 
@@ -36,7 +36,7 @@ Unnamed lights are skipped. Documented in Console helpText (`GHOSTWIRE.WiredCons
 | Unique `RoomName` from lights | `{RoomName} Light Control` | T1 / R1 | One hidden token **next to the first light** in that room |
 | Each wall with `door != NONE` | `{RoomName} Maglock Door 1`, `… Door 2`, … per room | T1 / R2 | Hidden token **next to the door** |
 
-Door room: parse the wall’s name if set, else **nearest light’s RoomName**, else `Unassigned`.
+Door room: wall name only if it also uses `{Room} - {rest…}`; otherwise **nearest light’s RoomName**, else `Unassigned`.
 
 Same-room **Light Control ↔ Maglocks** are linked (undirected). `getBoard` preserves `autoFrom`.
 
@@ -70,4 +70,4 @@ Cameras as an auto type; Wire → meatspace light/door toggles; rewriting Gold L
 node tools/b112-b115-smoke.mjs
 ```
 
-Foundry (Gold Line): name lights with the room rule → Auto-nodes → hidden tokens beside lights/doors on Interior → Console shows `{Room} Light Control` + Maglocks → re-run Skip adds nothing → Node Map stays readable (B114).
+Foundry (Gold Line): name lights `{Room Name} - Light Control` (e.g. `Rear Car Substation - Light Control`) → Auto-nodes → hidden tokens beside lights/doors on Interior → Console shows `Rear Car Substation Light Control` + Maglocks → lights with no ` - ` warn and skip → re-run Skip adds nothing → Node Map stays readable (B114).

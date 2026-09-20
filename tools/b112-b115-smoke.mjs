@@ -34,13 +34,14 @@ ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
 ok(AUTO_NODE_TOKEN_ART["light-control"] === null && AUTO_NODE_TOKEN_ART.maglock === null, "B113 token art hooks are null placeholders");
 
 console.log("\n1) Room naming (B112)");
-ok(parseRoomName("Rear Bay Work Light") === "Rear Bay", "Rear Bay Work Light → Rear Bay");
-ok(parseRoomName("Cab Light") === "Cab", "Cab Light → Cab");
-ok(parseRoomName("Aft Freight Work Light") === "Aft Freight", "Aft Freight Work Light → Aft Freight");
-ok(parseRoomName("R2 - Wire Closet Light") === "R2", "dash split → R2");
-ok(parseRoomName("Track Light") === "Track", "Track Light → Track");
+ok(parseRoomName("Rear Car Substation - Light Control") === "Rear Car Substation", "Rear Car Substation - Light Control → Rear Car Substation");
+ok(parseRoomName("Aft Freight - Work Light") === "Aft Freight", "Aft Freight - Work Light → Aft Freight");
+ok(parseRoomName("Cab - Light Control") === "Cab", "Cab - Light Control → Cab");
+ok(parseRoomName("R2 - Wire Closet Light") === "R2", "first splitter only → R2");
+ok(parseRoomName("Rear Bay Work Light") === "", "no splitter → skip (not first-word)");
+ok(parseRoomName("Cab Light") === "", "Cab Light without splitter → skip");
 ok(parseRoomName("  ") === "", "blank name is empty");
-ok(parseRoomName("Security Nest Control Panel") === "Security Nest", "stops before Control");
+ok(parseRoomName("Security Nest Control Panel") === "", "no splitter, no keyword fallback");
 ok(!isDoorWall({ door: 0 }), "door NONE is skipped");
 ok(isDoorWall({ door: 1 }), "door DOOR is kept");
 ok(isDoorWall({ door: 2 }), "secret door is kept");
@@ -51,11 +52,12 @@ console.log("\n2) Auto-node plan (B112)");
 let ids = 0;
 const idFactory = () => `n${String(++ids).padStart(3, "0")}`;
 const lights = [
-  { id: "L1", name: "Aft Freight Work Light", x: 100, y: 50 },
-  { id: "L1b", name: "Aft Freight Work Light 2", x: 120, y: 50 },
-  { id: "L2", name: "Security Nest Light", x: 400, y: 50 },
-  { id: "L3", name: "Cab Light", x: 800, y: 40 },
-  { id: "skip", name: "", x: 0, y: 0 },
+  { id: "L1", name: "Aft Freight - Work Light", x: 100, y: 50 },
+  { id: "L1b", name: "Aft Freight - Work Light 2", x: 120, y: 50 },
+  { id: "L2", name: "Security Nest - Light", x: 400, y: 50 },
+  { id: "L3", name: "Cab - Light Control", x: 800, y: 40 },
+  { id: "L4", name: "Rear Car Substation - Light Control", x: 900, y: 40 },
+  { id: "skip", name: "Cab Light", x: 0, y: 0 },
 ];
 const doors = [
   { id: "D1", name: "", x: 110, y: 80 },
@@ -64,16 +66,19 @@ const doors = [
   { id: "D4", name: "", x: 805, y: 70 },
 ];
 const plan = planAutoNodes({ lights, doors, existing: [], replace: false, idFactory });
-ok(plan.rooms.includes("Aft Freight") && plan.rooms.includes("Security Nest") && plan.rooms.includes("Cab"), "three rooms from lights");
-ok(plan.rooms.length === 3, `unique rooms (got ${plan.rooms.length})`);
+ok(plan.rooms.includes("Aft Freight") && plan.rooms.includes("Security Nest") && plan.rooms.includes("Cab") && plan.rooms.includes("Rear Car Substation"), "four rooms from dashed lights");
+ok(plan.rooms.length === 4, `unique rooms (got ${plan.rooms.length})`);
+ok(plan.skippedLights.length === 1 && plan.skippedLights[0].id === "skip", "light without “ - ” is skipped");
 const lightNodes = plan.created.filter(n => n.autoFrom.kind === AUTO_KIND.light);
-ok(lightNodes.length === 3, `one Light Control per room (got ${lightNodes.length})`);
+ok(lightNodes.length === 4, `one Light Control per room (got ${lightNodes.length})`);
 ok(lightNodes.every(n => n.track === 1 && n.rating === 1), "Light Control is T1 R1");
 ok(lightNodes.some(n => n.name === "Aft Freight Light Control"), "Aft Freight Light Control name");
+ok(lightNodes.some(n => n.name === "Rear Car Substation Light Control"), "Rear Car Substation Light Control name");
 const maglocks = plan.created.filter(n => n.autoFrom.kind === AUTO_KIND.maglock);
 ok(maglocks.length === 4, `one maglock per door (got ${maglocks.length})`);
 ok(maglocks.every(n => n.track === 1 && n.rating === 2), "Maglocks are T1 R2");
 ok(plan.nodes.some(n => n.name === "Aft Freight Maglock Door 1") && plan.nodes.some(n => n.name === "Aft Freight Maglock Door 2"), "per-room door numbering");
+ok(plan.nodes.some(n => n.name === "Security Nest Maglock Door 1"), "unnamed door uses nearest dashed light, not first-word door name");
 const aftLight = plan.nodes.find(n => n.name === "Aft Freight Light Control");
 const aftDoors = plan.nodes.filter(n => n.autoFrom?.room === "Aft Freight" && n.autoFrom.kind === AUTO_KIND.maglock);
 ok(aftDoors.every(d => aftLight.links.includes(d.id) && d.links.includes(aftLight.id)), "Light Control linked to same-room maglocks");
@@ -146,6 +151,7 @@ const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("autoNodes") && consoleSrc.includes("applyAutoNodesFromScene"), "Console wires Auto-nodes");
 ok(consoleSrc.includes("addWireKit"), "Console wires Add Wire Kit");
 ok(consoleSrc.includes("autoFrom"), "getBoard preserves autoFrom");
+ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("ROOM_SPLIT") && !readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("first two words"), "parser is dash-split only");
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
 const template = readFileSync("templates/wired-console.hbs", "utf8");
 ok(template.includes("data-action=\"autoNodes\"") && template.includes("data-action=\"addWireKit\""), "Console template has both GM buttons");
@@ -156,7 +162,8 @@ ok(readFileSync("scripts/wired-node-tokens.mjs", "utf8").includes("textureSrc"),
 
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodes === "Auto-nodes from Scene", "lang AutoNodes");
-ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Bay"), "lang documents room rule");
+ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation - Light Control"), "lang documents locked room rule");
+ok(lang.GHOSTWIRE.WiredConsole.AutoNodesUnsplit.includes("{Room} - Light Control"), "lang warns on missing splitter");
 ok(lang.GHOSTWIRE.WiredMinimap.PanHint.toLowerCase().includes("zoom"), "lang pan/zoom hint");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Name.includes("Matrix Verbs"), "lang Wire Kit name");
 ok(lang.GHOSTWIRE.WiredKit.NoSelection.includes("NPC"), "lang kit needs NPC selection");
