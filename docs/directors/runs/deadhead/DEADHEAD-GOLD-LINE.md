@@ -1,8 +1,10 @@
 # Deadhead on the Gold Line
 
 **Ghostwire playtest run · ~4 hours · Director journal SoR**  
-**Status:** Design-locked 2026-09-19 · Gold Line plates shipped **0.3.36** (CyberMaps Hammerhead stitch; no generated train)  
-**Foundry home:** Compendium **Ghostwire Runs** → folder **Deadhead**; world Scene inject **Scenes → Deadhead → Gold Line**
+**Status:** Design-locked 2026-09-19 · **cargo remap LOCKED 2026-09-20** (Michael: RUN WITH) · folded **0.3.40**  
+**Consist:** ARG **cargo maglev** — **not** a passenger train. Sidecar: [`GOLD-LINE-CARGO-REMAP.md`](./GOLD-LINE-CARGO-REMAP.md)  
+**Foundry home:** Compendium **Ghostwire Runs** → folder **Deadhead**; world Scene inject **Scenes → Deadhead → Gold Line**  
+**Plate lock:** Gold Line plates shipped **0.3.36** (CyberMaps Hammerhead stitch; no generated train). Walls/lights = Michael manual — do not touch.
 
 Keep all Deadhead pages, items, and scenes referenced from this pack folder when shipped.
 
@@ -10,7 +12,7 @@ Keep all Deadhead pages, items, and scenes referenced from this pack folder when
 
 ## Logline
 
-Mama Cassavir pays the crew to lift a **live ARG transaction wafer** (ghost ledger mirror) from a sealed courier capsule on the **Gold Line** maglev (Spire depot → Switchboard terminus). Board mid-canyon on a borrowed **garbage-truck-sized** trash freighter, crack the capsule on the Wire, bail by the same drone **before** ARG response hits the forced stop — then choose who gets the prize.
+Mama Cassavir pays the crew to lift a **live ARG transaction wafer** (ghost ledger mirror) from a sealed courier capsule on the **Gold Line cargo maglev** (Spire depot → Switchboard terminus). Board mid-canyon on a borrowed **garbage-truck-sized** trash freighter, crack the capsule on the Wire, bail by the same drone **before** ARG response hits the forced stop — then choose who gets the prize.
 
 ---
 
@@ -67,7 +69,7 @@ Half base only if the prize was wiped/lost — not for picking Signal.
 | **0** | Quiet | Fresh host. Cams idle. |
 | **1** | Stir | Flavor: a cam hesitates; HUD tick. No mechanical bite yet. |
 | **2** | Stir | Flavor: maglock LED flickers. |
-| **3** | Stir | Flavor: passenger PA glitches half a syllable. |
+| **3** | Stir | Flavor: freight intercom glitches half a syllable. |
 | **4** | Stir | Flavor: Watchdog stirs in the capsule stack — still sleeping. |
 | **5** | Malice | Heat feeds the table: + Malice (or free ARG “pressure” beat). Meat Alert may wake. |
 | **6** | Malice | Telegraph: ICE spooling tools. Good moment to say monitors should stay on the host. |
@@ -101,31 +103,31 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 - **Patron:** Mama Cassavir (Mama’s Club brief / return)
 - **Owning corp / uniforms:** **ARG Argent Exchange** (reusable ARG Security + Lieutenant look)
 - **Drone contact:** **Nox** (Flats wrangler) — crew **borrows** garbage-truck-sized trash freighter; scratch it = buy it; lose it = explain to Mama
-- **Opposition:** Passenger — cams + 2 Corp Enforcers; Security — 4 Corp Security + 1 Response Lieutenant; Courier sealed until Alert
-- **Wire:** Track 1 cams/doors **R2** (Wire transfer); Track 2 capsule lock **R1** + Watchdog ICE
+- **Opposition:** Freight Enforcers **L1–L2** (cams + 2 Corp Enforcers); Security **L3** — 4 Corp Security + 1 Response Lieutenant; Courier **R1** sealed until Alert
+- **Wire:** Track 1 cams/doors **R2**; Track 2 capsule lock **R1** + Watchdog ICE; Trace host **R3** cab
 - **Twist:** none for v1 (clean heist)
 
 ### Consist (Director truth)
 
-5 cars, **20 ft** wide, **5 ft** furniture: **cab · courier (capsule) · security · passenger · tail**. Capsule is behind cab — crew usually boards aft and works **upstream**. **Players learn the exact car only on a great success in discovery**; otherwise they **search**.
+**Cargo maglev** — not a passenger train. Hull **20 ft** wide, **5 ft** furniture. Play surface is **dual Hammerhead chambers L1–R3** (aft freight · freight connector · security · coupler · courier · Wire transfer · cab). Capsule is **R1** — crew usually boards **L1** and works **upstream**. **Players learn the exact chamber only on a great success in discovery**; otherwise they **search**.
 
-**Foundry plate (0.3.36):** dual CyberMaps Hammerhead stitch, nose-to-tail (nose right). Design truth stays 5 cars; the play surface is **2 × 3 chambers**. See beat remap below.
+**Foundry plate (0.3.36):** dual CyberMaps Hammerhead stitch, nose-to-tail (nose right). Cargo remap sidecar [`GOLD-LINE-CARGO-REMAP.md`](./GOLD-LINE-CARGO-REMAP.md) is LOCKED / folded here.
 
-### Beat remap — dual Hammerhead plate
+### Beat remap — dual Hammerhead plate (cargo)
 
 Left → right = aft → forward (nose right). Crew boards **aft** and works **upstream** (rightward).
 
 | Plate zone (L→R) | Hammerhead part | Deadhead beat |
 |---|---|---|
-| **L1** | Left aft cargo | **TAIL** — board here (drone sling) |
-| **L2** | Left connector | **PASSENGER** — civilian clutter / Enforcers |
-| **L3** | Left forward + cab | **SECURITY** — treat mid cab as sealed ARG booth / Lt nest; play the cargo bay |
+| **L1** | Left aft cargo | **AFT FREIGHT** — board here (drone sling); freight Enforcers |
+| **L2** | Left connector | **FREIGHT** — crate clutter / freight Enforcers |
+| **L3** | Left forward + cab | **SECURITY** — 4 Corp Security + Response Lieutenant nest |
 | *(coupler)* | Synthetic join | Non-walkable or Maglock gangway (Director call) |
-| **R1** | Right aft cargo | **COURIER** — sealed capsule stacks |
+| **R1** | Right aft cargo | **COURIER** — sealed capsule + Watchdog ICE |
 | **R2** | Right connector | Transfer / Wire closet (cams/doors node) |
-| **R3** | Right forward + cab | **CAB** — drive end; Trace host fiction |
+| **R3** | Right forward + cab | **CAB** — drive end; Trace host |
 
-If you need a clean sixth room, split R2 as its own Wire chase between courier and cab. Mid-consist double-cab (L3) is the Hammerhead artifact — narrate sealed engineering rather than a second drive cab.
+If you need a clean sixth room, split R2 as its own Wire chase between courier and cab. Mid-consist double-cab (L3) is the Hammerhead artifact — narrate sealed engineering / ARG booth rather than a second drive cab.
 
 **Shipped assets** (`assets/maps/battlemaps/gold-line/`):
 
@@ -134,7 +136,7 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 | Interior background | `map-gold-line-interior-loop.webm` | `map-gold-line-interior.webp` |
 | Roofs overhead | `map-gold-line-roofs-loop.webm` | `map-gold-line-roofs.webp` |
 
-Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile (**Tiles** layer, name **Roofs (overhead)**, elevation 10) uses **Surface** occlusion (on until a token is inside). World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the background is still or roofs are missing, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate the Scene.
+Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile (**Tiles** layer, name **Roofs (overhead)**). **Director: hide the roofs tile when playing inside.** Walls and lights are **Michael manual** — do not inject or overwrite them. World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the background is still or roofs are missing, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate the Scene.
 
 ---
 
@@ -144,9 +146,9 @@ Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<f
 **Type:** Data wafer / gear (portable)  
 **¥:** Negligible as loot (~¥50); worthless to fence (Mama-marked)
 
-**On the wafer (baseline):** job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, 5-car Gold Line without naming the capsule car, vague meat/Wire/clock, bail = same bird, return for choice.
+**On the wafer (baseline):** job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev without naming the capsule chamber, vague meat/Wire/clock, bail = same bird, return for choice.
 
-**Not on the wafer:** exact car; R1 Watchdog / R2 cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.
+**Not on the wafer:** exact chamber; R1 Watchdog / R2 cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.
 
 ---
 
@@ -160,7 +162,7 @@ Start from Mama’s wafer at the **crew hangout**, then chase:
 | B | Capsule Faraday + Track 2 **R1** Watchdog; Track 1 cams/doors **R2** |
 | C | Full Trace ladder + wafer-out tick + wipe/stop rules |
 | D | Faction doors (Mama / corp sell / Signal) as real choices |
-| ★ | **Great success:** exact **car** with the capsule |
+| ★ | **Great success:** exact **chamber** with the capsule |
 
 Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the live train yet), canyon watch, bribe/badge. Fail = go in blind, not blocked.
 
@@ -172,7 +174,7 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 |---|---|---|
 | 0 | 45–60m | Hangout + Mama wafer + discovery + call Nox |
 | 1 | 30–40m | Canyon drone sling board (garbage-truck freighter) |
-| 2 | 40–50m | Passenger → security crawl / search |
+| 2 | 40–50m | Freight crawl → L3 security / search |
 | 3 | 30–40m | Wire + capsule crack; call-home if Trace ~7–8 |
 | 4 | 25–35m | Wafer-out clock + roof Recall bail |
 | 5 | 20–30m | Return + moral choice |
@@ -180,7 +182,7 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 ### Beat rule callouts (short)
 
 **1 Board:** Deploy/Recall; Agility/Might board rolls; mixed = Alert +1; Jacked In can’t make physical board rolls.  
-**2 Crawl:** Stealth vs violence; cams; ARG firearms; don’t emergency-stop while nested. Search if no ★ car intel.  
+**2 Crawl:** Stealth vs violence through aft freight (L1–L2); cams; ARG firearms; don’t emergency-stop while nested. Search if no ★ chamber intel.  
 **3 Wire:** Overlay/Jacked In; Console nodes; Watchdog; open case starts post-extract clock; wipe if stop while nested.  
 **4 Bail:** +1 Trace / 2 rounds out of case (respect +1/round cap); Recall freighter; be gone before stop + response.  
 **5 Choice:** Mama / corp / Signal; Nox drone condition as fiction string.

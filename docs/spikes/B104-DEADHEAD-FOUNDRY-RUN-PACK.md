@@ -1,8 +1,9 @@
 # Spike B104 — Deadhead Foundry run pack
 
 **Date:** 2026-09-19  
-**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106)  
+**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded)  
 **Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). Remaining journals / items / other scenes still to build.  
+**Cargo lock (2026-09-20):** Gold Line is a **cargo maglev**, not a passenger train. Ignore leftover passenger-car / passenger-PA wording below. Live SoR + sidecar: `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, `GOLD-LINE-CARGO-REMAP.md` (LOCKED / folded).  
 **Journals (rulebook / lore / handbook / flats / pregen-fiction):** **not** regenerated.  
 **Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B39 Run Generator world folder, B99 Mama’s Club map, **B106 Gold Line map pack**.
 
