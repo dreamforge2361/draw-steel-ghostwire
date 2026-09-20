@@ -560,6 +560,7 @@ Michael smoke: drone on scene had **Wire Kit — Matrix Verbs** on Features, but
   - [x] Pack drone templates + Deploy + world migration stamp the kit (not Overlay)
   - [x] RCC SKUs + Rigger’s Harness count as Connect interfaces (Harness ≡ deck)
   - [x] B115 / B117 notes + Foundry Director notes
+  - [x] RAW `21-the-wire.md` Wire interface section + journals + VOIDMARK index
   - [x] Mule-Bot / generic Drone (Medium) cargo plate (`mule-bot.{png,webp}`)
   - [x] `node tools/b117-console-verbs-smoke.mjs` + B112–B115 smoke
   - [ ] Foundry-verify: pack drone Connects → Linked; Wrench with Rigger’s Harness Connects without a commlink; Scan after Toggle to Overlay; nine verbs still not on the sheet; Drone (Medium) / Mule-Bot show the yellow cargo plate

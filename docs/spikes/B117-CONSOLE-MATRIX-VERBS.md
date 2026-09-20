@@ -10,7 +10,7 @@
 
 Hacker Bandwidth Programs stay on the sheet. Decks, Bandwidth, Programs, Improved Cyberdeck, origins, Technomancer Resonance / sprites / deckless payloads are **unchanged**.
 
-**Who can fire:** the user’s owned actor (or the GM, from the Console roster). **Connect** works while Disconnected **and** requires a Wire interface (or Technomancer); it lands in **Linked**. **Wire Kit — Matrix Verbs** on an NPC/drone is that interface (no extra commlink). **Broadcast / Toggle / Jack Out** work from Linked. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In. Hidden nodes stay GM-only.
+**Who can fire:** the user’s owned actor (or the GM, from the Console roster). **Connect** works while Disconnected **and** requires a Wire interface (or Technomancer); it lands in **Linked**. **Wire Kit — Matrix Verbs** on an NPC/drone is that interface (no extra commlink). **Pack drones** embed the kit. **Rigger’s Harness** / RCC count as a deck. **Broadcast / Toggle / Jack Out** work from Linked. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In. Hidden nodes stay GM-only.
 
 ## Sheet cleanup — no dual homes
 Remove Matrix Verbs from:
@@ -61,6 +61,7 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 | Street Commlink | `src/packs/gear/general/comms/commlink.json` |
 | Foundry notes | `docs/rulebook/18-wired-foundry.md` |
 | Wire chapter In Foundry aside | `docs/raw/21-the-wire.md` + rulebook journal page |
+| VOIDMARK index | `data/voidmark-rules-index.json` (`node tools/build-voidmark-index.mjs`) — Wire Kit / Harness / pack drones live in RAW `21`, not only Foundry asides |
 
 **Player loop:** open the revealed node token (or minimap node) → Connect if you have an interface → Scan / Navigate / Ping / Broadcast / Search / Read-Write / Jack Out / Toggle. The panel picks that user’s actor (controlled token, else assigned character, else first Connected owned, else a disconnected owned actor so Connect can run).
 

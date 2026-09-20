@@ -341,12 +341,15 @@ ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the shee
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
 ok(!/stay on the sheet/.test(raw), "Wire RAW no longer parks Connect on the sheet");
+ok(/Wire Kit/.test(raw) && /Rigger.?s Harness/.test(raw) && /Pack drones/.test(raw), "Wire RAW names Wire Kit, Rigger's Harness, pack drones as Connect");
+ok(/### Wire interface/.test(raw), "Wire RAW has a Wire interface (Connect) section");
 ok(/0\.3\.53/.test(readFileSync("README.md", "utf8")) && /all nine/i.test(readFileSync("README.md", "utf8")), "README changelog 0.3.53 all nine");
 
 const journal = readBomFreeJson("src/packs/rulebook/ghostwire-systems/21-the-wire.json");
 const overview = journal.pages?.find(p => /Scan/.test(p.text?.markdown ?? "") && /Wired Console/.test(p.text?.markdown ?? ""));
 ok(!!overview, "Wire journal still has a Wired Console aside");
 ok(/all nine Matrix Verbs/.test(overview?.text?.markdown ?? ""), "Wire journal aside names all nine");
+ok(/Wire Kit/.test(journal.pages?.map(p => p.text?.markdown ?? "").join("\n") ?? "") && /Rigger/.test(journal.pages?.map(p => p.text?.markdown ?? "").join("\n") ?? ""), "Wire journal names Wire Kit + Rigger interface");
 
 console.log("\n5) resolveVerbItem + use path (0.3.60 / 0.3.61)");
 const stamped = markTemporaryConsoleVerbData({

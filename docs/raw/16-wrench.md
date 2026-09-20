@@ -513,7 +513,7 @@ Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact
 
 ### Vehicle Rig-Pilot — *"the Driver"* — Street-Taught (No Corp Academy)
 
-Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests).
+Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). The Harness is a **Connect** interface (≡ deck; see `21-the-wire.md`).
 
 **Signature reskin:** Deploy & Command, for a Rig-Pilot, is really "wake the platform up" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline.
 
@@ -682,7 +682,7 @@ Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit
 >
 > *Once per encounter, when your platform would drop to 0 Integrity, it instead drops to 1 and you may immediately spend a maneuver to Full Stabilization at no Uptime cost.*
 
-**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.
+**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests; **Connect** interface ≡ deck). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.
 
 ---
 

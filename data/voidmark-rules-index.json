@@ -71,7 +71,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1321,
+  "chunkCount": 1323,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -1466,7 +1466,7 @@
       "chapter": "Kits, Gear & Wealth (¥)",
       "heading": "The Kit list",
       "kind": "rules",
-      "text": "| Kit | Gear category | Doctrine bonuses | Signature ability | Rigging bonus | Starter Kit for |\n|---|---|---|---|---|---|\n| **Fabricator's Bench** | Light sidearm + mobile tool rig; light armor | Stamina +3 · Speed +1 · Disengage +1 · Melee +1/+1/+1 · Ranged +1/+1/+1 · Ranged distance +5 | **Bench-Rigged Shot** — a machine you control within 5 regains 1/2/3 Integrity | +1 on Field Repair Power Rolls targeting your own drones | Drone Jockey |\n| **Rigger's Harness** | Light sidearm + neural control-interface mount; light armor | Stamina +3 · Speed +2 · Disengage +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Neural Snap Shot** — shift 1/2/2 (high: the target has a bane on its next strike against you) | +1 on Jump-In checks | Vehicle Rig-Pilot |\n| **Field Chassis** | Light sidearm + portable turret-control tablet; light armor | Stamina +3 · Speed +1 · Stability +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Tablet Crossfire** — middle/high: a machine or pre-placed asset you control gains an edge on its next strike against the target (high: target slowed) | +1 on Deploy checks for pre-placed assets | Facility Rigger |\n\n---"
+      "text": "| Kit | Gear category | Doctrine bonuses | Signature ability | Rigging bonus | Starter Kit for |\n|---|---|---|---|---|---|\n| **Fabricator's Bench** | Light sidearm + mobile tool rig; light armor | Stamina +3 · Speed +1 · Disengage +1 · Melee +1/+1/+1 · Ranged +1/+1/+1 · Ranged distance +5 | **Bench-Rigged Shot** — a machine you control within 5 regains 1/2/3 Integrity | +1 on Field Repair Power Rolls targeting your own drones | Drone Jockey |\n| **Rigger's Harness** | Light sidearm + neural control-interface mount; light armor | Stamina +3 · Speed +2 · Disengage +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Neural Snap Shot** — shift 1/2/2 (high: the target has a bane on its next strike against you) | +1 on Jump-In checks | Vehicle Rig-Pilot |\n\n**Connect.** **Rigger’s Harness** is a Wire interface (≡ deck). Fabricator’s Bench and Field Chassis are not. Full list: `21-the-wire.md`.\n| **Field Chassis** | Light sidearm + portable turret-control tablet; light armor | Stamina +3 · Speed +1 · Stability +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Tablet Crossfire** — middle/high: a machine or pre-placed asset you control gains an edge on its next strike against the target (high: target slowed) | +1 on Deploy checks for pre-placed assets | Facility Rigger |\n\n---"
     },
     {
       "id": "08-kits-gear-wealth#what-buys#13",
@@ -3590,7 +3590,7 @@
       "chapter": "The Wrench",
       "heading": "Vehicle Rig-Pilot — *\"the Driver\"* — Street-Taught (No Corp Academy)",
       "kind": "rules",
-      "text": "Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests).\n\n**Signature reskin:** Deploy & Command, for a Rig-Pilot, is really \"wake the platform up\" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline.\n\n**Feature ladder:**"
+      "text": "Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). The Harness is a **Connect** interface (≡ deck; see `21-the-wire.md`).\n\n**Signature reskin:** Deploy & Command, for a Rig-Pilot, is really \"wake the platform up\" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline.\n\n**Feature ladder:**"
     },
     {
       "id": "16-wrench#vehicle-rig-pilot-the-driver-street-taught-no-corp-academy#36",
@@ -3635,7 +3635,7 @@
       "chapter": "The Wrench",
       "heading": "Vehicle Rig-Pilot — *\"the Driver\"* — Street-Taught (No Corp Academy)",
       "kind": "rules",
-      "text": "> **Ghost Signature**\n> *Command · Free Triggered · Uptime cost 4*\n>\n> *Trigger: your platform would be targeted by an enemy lock/mark effect. Effect: the lock fails; your platform's sensor ghosting sells a false position.*\n\n*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*\n\n> **One Machine, One Will** (apex)\n> *Command · Main Action · Uptime cost 11*\n> Target: up to 3 creatures within the platform's full firing arc\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once, at double edge\n>\n> *The platform and pilot act as a single perfect system for one exchange: maximum damage output, no biofeedback risk this action regardless of outcome.*\n\n> **Unkillable Frame** (apex passive)\n>\n> *Once per encounter, when your platform would drop to 0 Integrity, it instead drops to 1 and you may immediately spend a maneuver to Full Stabilization at no Uptime cost.*\n\n**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.\n\n---"
+      "text": "> **Ghost Signature**\n> *Command · Free Triggered · Uptime cost 4*\n>\n> *Trigger: your platform would be targeted by an enemy lock/mark effect. Effect: the lock fails; your platform's sensor ghosting sells a false position.*\n\n*11-Cost Band (chosen at 8th level; 2-3 apex abilities):*\n\n> **One Machine, One Will** (apex)\n> *Command · Main Action · Uptime cost 11*\n> Target: up to 3 creatures within the platform's full firing arc\n> **Power Roll** — 2d10 + Logic + Gunnery, rolled once, at double edge\n>\n> *The platform and pilot act as a single perfect system for one exchange: maximum damage output, no biofeedback risk this action regardless of outcome.*\n\n> **Unkillable Frame** (apex passive)\n>\n> *Once per encounter, when your platform would drop to 0 Integrity, it instead drops to 1 and you may immediately spend a maneuver to Full Stabilization at no Uptime cost.*\n\n**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests; **Connect** interface ≡ deck). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.\n\n---"
     },
     {
       "id": "16-wrench#facility-rigger-the-warlord-street-taught-no-corp-academy#41",
@@ -4364,7 +4364,7 @@
       "chapter": "The Hacker",
       "heading": "The Hacker",
       "kind": "rules",
-      "text": "**RAW status:** draft  \n**Sources:** `docs/rulebook/08-hacker.md`\n\nThe Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**.\n\n---"
+      "text": "**RAW status:** draft  \n**Sources:** `docs/rulebook/08-hacker.md`\n\nThe Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**.\n\n---"
     },
     {
       "id": "19-hacker#class-chassis#2",
@@ -4970,22 +4970,22 @@
       "text": "**On-net vs Connected.** **On-net** (the Connected-family) means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Features that say “Jacked In or Overlaid” still mean those two — Linked does not satisfy them. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone.\n\n**Wire-discoverable.** Scan, Search, and Watchdog can find any non-Disconnected presence. **Linked = soft presence** (comms / ID / packets, not a full avatar). Overlay and Jacked In are full presence.\n\n**Toggle ladder (Foundry UX).** One verb, one direction: **Linked → Overlay → Jacked In → Linked**. Each Toggle steps deeper; after Jacked In it wraps back to Linked (comms-only), not Disconnected. **Jack Out** is the only off-ramp.\n\n**Ruling:** Overlay and Jacked In remain a genuine mechanical tradeoff. **Linked** is the street-default on-ramp — you are on the Wire for talk and packets without paying Overlay’s meat bane or gaining Jacked In’s Wired edge. **Overlaid**, you keep both worlds live but pay a **bane on real-world Power Rolls** for the split attention. **Jacked In**, you gain an **edge on all Wired Power Rolls**, but you lose the real world entirely. This is why the crew treats a Jacked-In Hacker's body as cargo to protect.\n\nYou leave any on-net state with the **Jack Out** Matrix Verb -- a clean disconnect that also serves as your emergency eject if a Program or Trace Alert spike goes bad."
     },
     {
-      "id": "21-the-wire#connection-states-disconnected-linked-overlay-jacked-in#7",
+      "id": "21-the-wire#wire-interface-connect#7",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
-      "heading": "Connection States: Disconnected, Linked, Overlay, Jacked In",
+      "heading": "Wire interface (Connect)",
       "kind": "rules",
-      "text": "> **Linked**, **Overlay**, and **Jacked In** are exclusive token/sheet status effects (`ghostwire-linked` / `ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (Connect needs a commlink, deck, datajack, trodes, or Technomancer Resonance) — they set the status. **Connect** lands in Linked. **Toggle** steps Linked → Overlay → Jacked In → Linked. **Jack Out** from any on-net state → Disconnected. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The Console roster lists all four states (Jacked In, Overlay, Linked, Disconnected). Linked applies neither Overlay’s meat bane nor Jacked In’s Wired edge. Broadcast and Wire-ping whispers work from Linked; Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs refuse until Overlay or Jacked In. Minimap and Overlay vision stay Overlay / Jacked In only."
+      "text": "**Connect** requires a **Wire interface**. Any of these counts:\n\n- **Comms / deck / chrome:** a commlink, cyberdeck, datajack, trodes, or other tagged comms / chrome interface\n- **Wrench drone control:** an **RCC** (Remote Box, Fleet Deck, War Table, Command Rig, Hydra Console) or **Rigger’s Harness** (neural control-interface mount). Harness ≡ deck. Fabricator’s Bench (tool rig) and Field Chassis (turret tablet) are **not** interfaces\n- **Wire Kit — Matrix Verbs** on an NPC or drone (Director stamp). **Pack drones** (micro / small / medium band templates) ship with the kit so imports/deploys are Wire-ready; they still start **Disconnected** until Connect\n- **Technomancer** (class) — deckless Resonance; no gear required\n\nSpoof Kit is **not** an interface. Rigger Cocoon is a vehicle Jump-In mod, not an interface. Without an interface, Connect refuses: “Need a commlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.”"
     },
     {
-      "id": "21-the-wire#wired-system-stats-integrity-not-body-integrity#8",
+      "id": "21-the-wire#wire-interface-connect#8",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
-      "heading": "Wired-System Stats: Integrity (Not Body Integrity)",
+      "heading": "Wire interface (Connect)",
       "kind": "rules",
-      "text": "Every Track 2 target -- and the \"system\" side of any Wired encounter -- tracks its own **Integrity**: a Stamina-equivalent health pool that Programs and abilities damage directly (via your cyberdeck's Integrity Damage Bonus) rather than dealing physical damage. Reducing a Track 2 target to 0 Integrity takes it down, exactly as reducing a creature to 0 Stamina does.\n\n**Do not confuse this with Body Integrity** (`09-chrome-body-integrity.md`). They share a name but are different systems: Body Integrity is a permanent capacity for how much chrome a living hero can carry; Wired-system Integrity is an encounter-scoped health pool belonging to nodes, ICE, hostile Personas, and rival deckers.\n\n| Node Rating | Integrity |\n|---|---|\n| Rating 1 (street-grade) | 12 |\n| Rating 2 | 18 |\n| Rating 3 | 26 |\n| Rating 4 | 36 |\n| Rating 5 (alpha/AAA-corp core) | 50 |\n\nThe same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating."
+      "text": "> **Linked**, **Overlay**, and **Jacked In** are exclusive token/sheet status effects (`ghostwire-linked` / `ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer Resonance) — they set the status. **Connect** lands in Linked. **Toggle** steps Linked → Overlay → Jacked In → Linked. **Jack Out** from any on-net state → Disconnected. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The Console roster lists all four states (Jacked In, Overlay, Linked, Disconnected). Linked applies neither Overlay’s meat bane nor Jacked In’s Wired edge. Broadcast and Wire-ping whispers work from Linked; Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs refuse until Overlay or Jacked In. Minimap and Overlay vision stay Overlay / Jacked In only."
     },
     {
       "id": "21-the-wire#wired-system-stats-integrity-not-body-integrity#9",
@@ -4994,16 +4994,16 @@
       "chapter": "The Wire",
       "heading": "Wired-System Stats: Integrity (Not Body Integrity)",
       "kind": "rules",
-      "text": "> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.\n\n**Biofeedback bleed-through:** some hits carry an \"Integrity-to-Stamina biofeedback bleed-through\" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above)."
+      "text": "Every Track 2 target -- and the \"system\" side of any Wired encounter -- tracks its own **Integrity**: a Stamina-equivalent health pool that Programs and abilities damage directly (via your cyberdeck's Integrity Damage Bonus) rather than dealing physical damage. Reducing a Track 2 target to 0 Integrity takes it down, exactly as reducing a creature to 0 Stamina does.\n\n**Do not confuse this with Body Integrity** (`09-chrome-body-integrity.md`). They share a name but are different systems: Body Integrity is a permanent capacity for how much chrome a living hero can carry; Wired-system Integrity is an encounter-scoped health pool belonging to nodes, ICE, hostile Personas, and rival deckers.\n\n| Node Rating | Integrity |\n|---|---|\n| Rating 1 (street-grade) | 12 |\n| Rating 2 | 18 |\n| Rating 3 | 26 |\n| Rating 4 | 36 |\n| Rating 5 (alpha/AAA-corp core) | 50 |\n\nThe same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating."
     },
     {
-      "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#10",
+      "id": "21-the-wire#wired-system-stats-integrity-not-body-integrity#10",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
-      "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
+      "heading": "Wired-System Stats: Integrity (Not Body Integrity)",
       "kind": "rules",
-      "text": "Every node, system, ICE construct, hostile AI, or rival decker in the Wired is built from the same stats. The Director fills in this card for any Track 1 object or Track 2 target on the fly — every number is keyed off a single input, the target's **Node Rating** (**1** = street-grade / weakest → **5** = alpha-corp / strongest). Node Rating is a **system defense grade**, not a character level or echelon."
+      "text": "> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.\n\n**Biofeedback bleed-through:** some hits carry an \"Integrity-to-Stamina biofeedback bleed-through\" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above)."
     },
     {
       "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#11",
@@ -5012,7 +5012,7 @@
       "chapter": "The Wire",
       "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
       "kind": "rules",
-      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **Node Rating** | Both Tracks | The target's overall Wired defense grade (Rating **1–5**) -- the single input that sets every other stat on this card. | A Director-assigned Rating reflecting how well-defended/valuable the system is (street-grade lock = **Rating 1**; alpha-corp core = **Rating 5**). Not a character level or echelon. Everything below reads off this one number. |\n| **Node Description** | Both Tracks | The node's aesthetic -- often artistic and stylized to brand the System, and represented in the Wired by a holographic icon or similar visual signature (a corp's sigil rendered as a floating glyph, a black-market host skinned like a snarling dog, a government node as a flat gray monolith). Pure flavor, no mechanical effect -- but it's how a Hacker (and the table) actually *sees* a node before touching it. | Director/Session-defined per node, not Rating-derived like the other rows -- describe it to match the node's owner, purpose, and reputation. No formula; this is narrative color layered on top of the mechanical stats above. |\n| **Breach difficulty** *(optional shortcut)* | Both Tracks | How hard the node is to force entry into, for tables that want a quick difficulty call instead of reading the full Power Roll result. | Fixed by Node Rating: **R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane.** The primary resolution is still the Power Roll result (low / middle / high) — this shortcut is for trivial nodes only. |\n| **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. |\n| **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |\n| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |\n| **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |"
+      "text": "Every node, system, ICE construct, hostile AI, or rival decker in the Wired is built from the same stats. The Director fills in this card for any Track 1 object or Track 2 target on the fly — every number is keyed off a single input, the target's **Node Rating** (**1** = street-grade / weakest → **5** = alpha-corp / strongest). Node Rating is a **system defense grade**, not a character level or echelon."
     },
     {
       "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#12",
@@ -5021,16 +5021,16 @@
       "chapter": "The Wire",
       "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
       "kind": "rules",
-      "text": "**Track 1 note:** Track 1 objects and systems (doors, cameras, locks, a person's smartlink) use only **Node Rating**, **Node Description**, **Breach difficulty**, and **Alert Contribution** from this card -- they resolve as a single Power Roll with no ongoing Integrity pool and no ICE layers of their own (per the Wired System's \"What a Node Is\" section, above). A Track 1 target is breached and acted on in the same activation; there's nothing left to \"reduce to 0.\"\n\n**Track 2 note:** Track 2 targets (ICE, hostile AIs, rival deckers, and any actively-defended node) use the full card -- Node Rating, Node Description, Breach difficulty, ICE Layers, Integrity, Biofeedback Value, and Alert Contribution all apply. This is the template a Director uses to stat up any hostile Wired presence on the fly: pick a Node Rating (1–5), and all five downstream numbers are already fixed by the table.\n\n**Worked example -- statting a Rating 3 corp host (Track 2) on the fly:** Node Rating 3 -> Breach difficulty medium (optional) -> ICE Layers: passive + 1 active ICE -> Integrity 26 -> Biofeedback Value 8 (x1.5 = 12, round up, if a Hacker gets hit while Jacked In, before that Hacker's own Biofeedback Resistance reduces it further) -> Alert Contribution: governed by the standard Trace Alert rules on every roll against it, same as any other target."
+      "text": "| Stat | Applies To | What It Represents | How It's Calculated |\n|---|---|---|---|\n| **Node Rating** | Both Tracks | The target's overall Wired defense grade (Rating **1–5**) -- the single input that sets every other stat on this card. | A Director-assigned Rating reflecting how well-defended/valuable the system is (street-grade lock = **Rating 1**; alpha-corp core = **Rating 5**). Not a character level or echelon. Everything below reads off this one number. |\n| **Node Description** | Both Tracks | The node's aesthetic -- often artistic and stylized to brand the System, and represented in the Wired by a holographic icon or similar visual signature (a corp's sigil rendered as a floating glyph, a black-market host skinned like a snarling dog, a government node as a flat gray monolith). Pure flavor, no mechanical effect -- but it's how a Hacker (and the table) actually *sees* a node before touching it. | Director/Session-defined per node, not Rating-derived like the other rows -- describe it to match the node's owner, purpose, and reputation. No formula; this is narrative color layered on top of the mechanical stats above. |\n| **Breach difficulty** *(optional shortcut)* | Both Tracks | How hard the node is to force entry into, for tables that want a quick difficulty call instead of reading the full Power Roll result. | Fixed by Node Rating: **R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane.** The primary resolution is still the Power Roll result (low / middle / high) — this shortcut is for trivial nodes only. |\n| **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. |\n| **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |\n| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |\n| **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |"
     },
     {
-      "id": "21-the-wire#trace-alert-definition-and-escalation#13",
+      "id": "21-the-wire#system-stat-card-the-universal-template-for-nodes-ice-and-sy#13",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
-      "heading": "Trace Alert: Definition and Escalation",
+      "heading": "System Stat Card -- The Universal Template for Nodes, ICE, and Systems",
       "kind": "rules",
-      "text": "**Trace Alert** (called \"the Alert Track\" on some abilities) is the Wired system's rising detection meter — the longer you stay in a hostile host, the worse it gets. Track it **per hostile node/host** on a **12-step track**:\n\n| Alert Steps | Effect |\n|---|---|\n| **1–4** | No mechanical effect yet — flavor only. Passive ICE stirs, but nothing bites. |\n| **5–8** | **+1 Malice to the Director per step crossed** (cumulative) — rising Alert feeds the Director's Malice pool, the same heat engine used in physical combat. |\n| **9–11** | As above, plus a **bane on your next Wired Power Roll** — active ICE is hunting you. |\n| **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a rival decker's crew inbound on your real-world position) — then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |\n\n#### Default Alert by Power Roll result (locked)\n\nUnless an ability's printed text says otherwise, every Wired Power Roll (Matrix Verb, Program, payload Run, or Wired signature ability) uses these Alert defaults:"
+      "text": "**Track 1 note:** Track 1 objects and systems (doors, cameras, locks, a person's smartlink) use only **Node Rating**, **Node Description**, **Breach difficulty**, and **Alert Contribution** from this card -- they resolve as a single Power Roll with no ongoing Integrity pool and no ICE layers of their own (per the Wired System's \"What a Node Is\" section, above). A Track 1 target is breached and acted on in the same activation; there's nothing left to \"reduce to 0.\"\n\n**Track 2 note:** Track 2 targets (ICE, hostile AIs, rival deckers, and any actively-defended node) use the full card -- Node Rating, Node Description, Breach difficulty, ICE Layers, Integrity, Biofeedback Value, and Alert Contribution all apply. This is the template a Director uses to stat up any hostile Wired presence on the fly: pick a Node Rating (1–5), and all five downstream numbers are already fixed by the table.\n\n**Worked example -- statting a Rating 3 corp host (Track 2) on the fly:** Node Rating 3 -> Breach difficulty medium (optional) -> ICE Layers: passive + 1 active ICE -> Integrity 26 -> Biofeedback Value 8 (x1.5 = 12, round up, if a Hacker gets hit while Jacked In, before that Hacker's own Biofeedback Resistance reduces it further) -> Alert Contribution: governed by the standard Trace Alert rules on every roll against it, same as any other target."
     },
     {
       "id": "21-the-wire#trace-alert-definition-and-escalation#14",
@@ -5039,7 +5039,7 @@
       "chapter": "The Wire",
       "heading": "Trace Alert: Definition and Escalation",
       "kind": "rules",
-      "text": "| Result | Trace Alert (default) |\n|---|---|\n| **Low (≤11)** | **+1** to that host's Trace Alert. The verb or Program still usually works, but something goes wrong — logs notice you, ICE twitches, the host marks the intrusion. |\n| **Middle (12–16)** | **No Alert increase.** Clean success. Middle never raises Trace Alert by default. |\n| **High (17+)** | **No Alert increase.** Always clean on Alert. Some abilities also erase Alert that would have risen, or leave zero forensic trace, as their high payoff. |\n\n**Ability text can override the middle default** — only when it explicitly says the middle result raises Alert (or raises it by more than one). Most Hacker Programs do **not**; check each card. Low remains the default trigger unless stated otherwise.\n\n**Other Alert movers (not a second tax):**\n\n- **Direct triggers** named on an ability, independent of the Power Roll band (rare; follow the card).\n- Triggered features that fire *when* Alert rises (e.g. Ghost Step) — they react to an increase; they do not cause one by themselves.\n- There is **no separate “noisy Track 2” Alert tax** beyond the roll result. Hostile or contested rolls still use the table above; Track 2 just means you may roll more times against Integrity/ICE, so low results (and Alert) come up more often in practice.\n\n**What never raises Alert by itself:**"
+      "text": "**Trace Alert** (called \"the Alert Track\" on some abilities) is the Wired system's rising detection meter — the longer you stay in a hostile host, the worse it gets. Track it **per hostile node/host** on a **12-step track**:\n\n| Alert Steps | Effect |\n|---|---|\n| **1–4** | No mechanical effect yet — flavor only. Passive ICE stirs, but nothing bites. |\n| **5–8** | **+1 Malice to the Director per step crossed** (cumulative) — rising Alert feeds the Director's Malice pool, the same heat engine used in physical combat. |\n| **9–11** | As above, plus a **bane on your next Wired Power Roll** — active ICE is hunting you. |\n| **12 (max)** | **Full lockout** and a **hard counter-trace to your physical location** (security, corp response, or a rival decker's crew inbound on your real-world position) — then the track **resets to step 6**, not to 0. A maxed-out host never fully forgets you found it. |\n\n#### Default Alert by Power Roll result (locked)\n\nUnless an ability's printed text says otherwise, every Wired Power Roll (Matrix Verb, Program, payload Run, or Wired signature ability) uses these Alert defaults:"
     },
     {
       "id": "21-the-wire#trace-alert-definition-and-escalation#15",
@@ -5048,16 +5048,16 @@
       "chapter": "The Wire",
       "heading": "Trace Alert: Definition and Escalation",
       "kind": "rules",
-      "text": "- **High (17+) results** — always clean on Alert.\n- Ability clauses that zero Alert gain entirely (example: **Backdoor Override**'s Track 2 application leaves no trace).\n- Pure observation verbs that only look (**Scan**; class Deep Scan) — they do not raise Alert on their own. Active intrusion, contested, or hostile verbs use the defaults above.\n\n**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see `19-hacker.md`):\n\n- **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).\n- Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.\n\n**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 put banes on the runner's Wired rolls. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too."
+      "text": "| Result | Trace Alert (default) |\n|---|---|\n| **Low (≤11)** | **+1** to that host's Trace Alert. The verb or Program still usually works, but something goes wrong — logs notice you, ICE twitches, the host marks the intrusion. |\n| **Middle (12–16)** | **No Alert increase.** Clean success. Middle never raises Trace Alert by default. |\n| **High (17+)** | **No Alert increase.** Always clean on Alert. Some abilities also erase Alert that would have risen, or leave zero forensic trace, as their high payoff. |\n\n**Ability text can override the middle default** — only when it explicitly says the middle result raises Alert (or raises it by more than one). Most Hacker Programs do **not**; check each card. Low remains the default trigger unless stated otherwise.\n\n**Other Alert movers (not a second tax):**\n\n- **Direct triggers** named on an ability, independent of the Power Roll band (rare; follow the card).\n- Triggered features that fire *when* Alert rises (e.g. Ghost Step) — they react to an increase; they do not cause one by themselves.\n- There is **no separate “noisy Track 2” Alert tax** beyond the roll result. Hostile or contested rolls still use the table above; Track 2 just means you may roll more times against Integrity/ICE, so low results (and Alert) come up more often in practice.\n\n**What never raises Alert by itself:**"
     },
     {
-      "id": "21-the-wire#matrix-verbs-universal#16",
+      "id": "21-the-wire#trace-alert-definition-and-escalation#16",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
-      "heading": "Matrix Verbs (Universal)",
+      "heading": "Trace Alert: Definition and Escalation",
       "kind": "rules",
-      "text": "These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or cyberdeck has them. They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill grants an edge on all seven** (instead of the usual skill bonus on tests)."
+      "text": "- **High (17+) results** — always clean on Alert.\n- Ability clauses that zero Alert gain entirely (example: **Backdoor Override**'s Track 2 application leaves no trace).\n- Pure observation verbs that only look (**Scan**; class Deep Scan) — they do not raise Alert on their own. Active intrusion, contested, or hostile verbs use the defaults above.\n\n**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see `19-hacker.md`):\n\n- **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).\n- Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.\n\n**As the track climbs:** steps 1–4 are atmosphere (a light flicker, a camera pausing a beat too long). Steps 5–8 feed the encounter's Malice budget — the whole table feels the heat, not just the runner. Steps 9–11 put banes on the runner's Wired rolls. Step 12 breaks containment: the fight leaves the Wired and becomes a meatspace problem, which is why the rest of the crew watches the clock too."
     },
     {
       "id": "21-the-wire#matrix-verbs-universal#17",
@@ -5066,7 +5066,7 @@
       "chapter": "The Wire",
       "heading": "Matrix Verbs (Universal)",
       "kind": "rules",
-      "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Connect** | Plug your avatar into the Wired at your current location -- lands you in **Linked** (on-net for comms / ID / packets). Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs still need Overlay or Jacked In (Toggle). Requires a Wire interface. | Instinct | Yes | Refunds the Maneuver |\n| **Jack Out** | Disconnect cleanly from any on-net state (**Linked**, Overlay, or Jacked In) and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |\n| **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |\n| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |\n| **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |\n| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple **Track 1** thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Track 1 only (no ICE) -- ICE is **Track 2**. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is the wrong tool (Programs / payload Runs / real breach). Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Overlay or Jacked In. Not Console Wire ping/spoof (B106). | Logic | Yes | Refunds the Maneuver |\n| **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |\n| **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |\n| **Read/Write** | Change data, settings, or state -- read a file, alter a record, plant or delete evidence, forge a credential, **unlock a maglock for entry**, or **toggle a camera off / kill a feed**. This is the verb that actually changes information and device state in the Wired, not a Ping nudge. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |"
+      "text": "These 9 abilities aren't unique to the Hacker -- *any* hero with a **Wire interface** has them (commlink, cyberdeck, datajack / trodes, **Rigger’s Harness** / RCC, **Wire Kit** on an NPC or pack drone, or Technomancer Resonance). They're the baseline vocabulary of doing anything in the Wired. All 9 cost exactly 1 Maneuver. Two are automatic (no roll); the other seven are genuine Power Rolls, and **having the Hacking skill grants an edge on all seven** (instead of the usual skill bonus on tests)."
     },
     {
       "id": "21-the-wire#matrix-verbs-universal#18",
@@ -5075,10 +5075,19 @@
       "chapter": "The Wire",
       "heading": "Matrix Verbs (Universal)",
       "kind": "rules",
+      "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Connect** | Plug your avatar into the Wired at your current location -- lands you in **Linked** (on-net for comms / ID / packets). Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs still need Overlay or Jacked In (Toggle). Requires a Wire interface (commlink / deck / chrome, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer). | Instinct | Yes | Refunds the Maneuver |\n| **Jack Out** | Disconnect cleanly from any on-net state (**Linked**, Overlay, or Jacked In) and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |\n| **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |\n| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |\n| **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |\n| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple **Track 1** thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Track 1 only (no ICE) -- ICE is **Track 2**. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is the wrong tool (Programs / payload Runs / real breach). Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Overlay or Jacked In. Not Console Wire ping/spoof (B106). | Logic | Yes | Refunds the Maneuver |\n| **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |\n| **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |\n| **Read/Write** | Change data, settings, or state -- read a file, alter a record, plant or delete evidence, forge a credential, **unlock a maglock for entry**, or **toggle a camera off / kill a feed**. This is the verb that actually changes information and device state in the Wired, not a Ping nudge. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |"
+    },
+    {
+      "id": "21-the-wire#matrix-verbs-universal#19",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Matrix Verbs (Universal)",
+      "kind": "rules",
       "text": "**Low (≤11)** on any rolling verb generally means “it works, but something goes wrong” — by default **+1 Trace Alert** (see Trace Alert defaults above). **Middle (12–16)** is a clean success with **no Alert increase**. **High (17+)** is a clean success plus the bonus listed above, and never raises Alert."
     },
     {
-      "id": "21-the-wire#ping-vs-read-write#19",
+      "id": "21-the-wire#ping-vs-read-write#20",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5087,7 +5096,7 @@
       "text": "**Ping** is the lightest “touch this system” Matrix Verb — a nudge, not a deep hack. Use it when you want a simple Track 1 thing within Reach to do one small thing, without a Program or a full Read/Write:\n\n- Flick the hallway lights off (or on) — lights are the classic Ping.\n- Tap a maglock to see if it’s live / soft jolt (**not** unlock for entry — that’s **Read/Write**).\n- Test whether a camera or door bus answers / brief glitch (**not** lasting cam-off — that’s **Read/Write**).\n- Trigger a trivial system response (“does this socket wake up?”).\n- **Not ICE.** Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nLogic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.\n\n**Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.\n\nPing is **not** the Director Console Wire ping/spoof (B106)."
     },
     {
-      "id": "21-the-wire#ping-vs-ice#20",
+      "id": "21-the-wire#ping-vs-ice#21",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5096,7 +5105,7 @@
       "text": "Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nTrying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system."
     },
     {
-      "id": "21-the-wire#wire-atlas-topology#21",
+      "id": "21-the-wire#wire-atlas-topology#22",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5105,7 +5114,7 @@
       "text": "Device tokens answer **what is this socket**. Atlas tokens answer **where am I on the Wire map**. Directors place atlas tokens by hand. Room-scale auto-nodes (lights, maglocks) never appear on a district or facility graph."
     },
     {
-      "id": "21-the-wire#three-altitudes#22",
+      "id": "21-the-wire#three-altitudes#23",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5114,7 +5123,7 @@
       "text": "| Altitude | Scene example | Token family |\n|---|---|---|\n| **Region / district graph** | Switchboard district map | **Relay**, **Host** |\n| **Site / facility graph** | Power Company Wire scene | **Segment** (+ **Host** as the site root) |\n| **Room / device graph** | Office, Gold Line car, maintenance room | **Device** (existing library: Light, Maglock, Cam, ICE, …) |\n\nGhostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do not call a Host a “server farm” in player text."
     },
     {
-      "id": "21-the-wire#reach-is-hops-on-the-current-scene#23",
+      "id": "21-the-wire#reach-is-hops-on-the-current-scene#24",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5123,7 +5132,7 @@
       "text": "**Scan** and **Navigate** **Reach** is a number of **node-hops on the graph of the Scene you are on**, not the whole district and not Ossian Reach the campaign region. When the crew changes altitude (district → facility → room), Reach recounts from the new graph. A runner with Reach 2 on the Switchboard district map can hop two Relays/Hosts; they cannot see the Power Co substation or a maintenance-room maglock until that scene is loaded."
     },
     {
-      "id": "21-the-wire#relay-vs-host-vs-segment#24",
+      "id": "21-the-wire#relay-vs-host-vs-segment#25",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5132,7 +5141,7 @@
       "text": "| Token | Role | Rules hook |\n|---|---|---|\n| **Relay** | Major Wired highway / backbone traffic — a **path**, not a place | Navigate along it. Trace can travel fast on a Relay. Usually **not** Seize-for-loot. Node Rating is optional (traffic density). Track 1 unless something is hunting the backbone. |\n| **Host** | Destination place (corp, civic, street). Faction is name and color, not a new token type. | May have Node Rating, ICE, Watchdog. Entering a Host **may change scene** (load the facility graph). |\n| **Segment** | Child of a Host (substation, wing, server hall) | Same mechanical class as Host, nested. **Name includes the parent** (`Power Co — North Substation`). |\n| **Endpoint** *(optional v1.1)* | Dig-down leaf that opens a meatspace room | Not a fourth mechanical class. Until its own art exists, reuse Host with a depth pip. |\n| **Device** | Room socket: Light, Maglock, Cam, ICE, … | **Room-only.** Never place device tokens on a region graph. |"
     },
     {
-      "id": "21-the-wire#dig-down-procedure#25",
+      "id": "21-the-wire#dig-down-procedure#26",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5141,7 +5150,7 @@
       "text": "1. **District scene:** place **Relays** and **Hosts** only.\n2. **Enter Host** (Navigate, Seize, or story) → load the **facility** scene; place **Segments**. The Host may remain as the site root.\n3. **Enter Segment** (or Endpoint) → load the **room** scene; place **Device** tokens. Auto-nodes from named lights and doors belong here.\n4. Auto-nodes stay **room-scale only**. Atlas tokens are Director-placed (a Console picker is later)."
     },
     {
-      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#26",
+      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#27",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5150,16 +5159,16 @@
       "text": "**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.\n\n**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.\n\n**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.\n\n> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Art is drop-in; placeholders ship until Michael tokens land. Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`."
     },
     {
-      "id": "21-the-wire#connection-state-modifiers-summary#27",
+      "id": "21-the-wire#connection-state-modifiers-summary#28",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
       "heading": "Connection-state modifiers (summary)",
       "kind": "rules",
-      "text": "**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.\n\n| State | Wired abilities (Wired keyword) | Real-world abilities and tests |\n|---|---|---|\n| Disconnected | Only **Connect** can be used | Normal |\n| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs or payload Runs | Normal |\n| Overlay | Normal (full Connected) | **Bane** |\n| Jacked In | **Edge** | Can’t be used (body inert) |\n\n- **Connect** works only while Disconnected (plus a Wire interface) and puts you in **Linked** on any result.\n- **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.\n- **Jack Out** (any on-net state) returns you to Disconnected.\n- **Broadcast** works from any on-net state, including Linked.\n- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs require Overlay or Jacked In.\n- Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.\n\n**Anyone vs Hacker.** Any hero with a commlink or cyberdeck can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs."
+      "text": "**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.\n\n| State | Wired abilities (Wired keyword) | Real-world abilities and tests |\n|---|---|---|\n| Disconnected | Only **Connect** can be used | Normal |\n| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs or payload Runs | Normal |\n| Overlay | Normal (full Connected) | **Bane** |\n| Jacked In | **Edge** | Can’t be used (body inert) |\n\n- **Connect** works only while Disconnected (plus a Wire interface) and puts you in **Linked** on any result.\n- **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.\n- **Jack Out** (any on-net state) returns you to Disconnected.\n- **Broadcast** works from any on-net state, including Linked.\n- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs require Overlay or Jacked In.\n- Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.\n\n**Anyone vs Hacker.** Any hero with a **Wire interface** (commlink, cyberdeck, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer Resonance) can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs."
     },
     {
-      "id": "21-the-wire#deck-software-suites-vs-payloads#28",
+      "id": "21-the-wire#deck-software-suites-vs-payloads#29",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5168,7 +5177,7 @@
       "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
     },
     {
-      "id": "21-the-wire#suites#29",
+      "id": "21-the-wire#suites#30",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5177,7 +5186,7 @@
       "text": "A suite is installed into a free slot as a downtime **Craft (Hacking)** Project and stays there until you swap it out. An installed suite can be switched on or off in the field (the field toggle); it keeps its slot either way. Suites give edges to Matrix Verbs and standing benefits. They have no attack of their own."
     },
     {
-      "id": "21-the-wire#payloads-magazines#30",
+      "id": "21-the-wire#payloads-magazines#31",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5186,7 +5195,7 @@
       "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free **host slot** as a magazine:\n\n- **Cyberdeck.** One free deck slot, shared with suites.\n- **Technomancer (no deck).** Compile onto **Wired Native** — Resonance / body-as-interface. The class feature is a 2-slot `resonance` / `body` host. Do not auto-grant any payload; compiling is still a Craft Project (Sabbat Vane’s playtest Whiteout×2 is a pregen loadout, not a class grant).\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |"
     },
     {
-      "id": "21-the-wire#payloads-magazines#31",
+      "id": "21-the-wire#payloads-magazines#32",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5195,7 +5204,7 @@
       "text": "**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.\n\n> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`."
     },
     {
-      "id": "21-the-wire#payloads-magazines#32",
+      "id": "21-the-wire#payloads-magazines#33",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5204,7 +5213,7 @@
       "text": "**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant."
     },
     {
-      "id": "21-the-wire#director-tools#33",
+      "id": "21-the-wire#director-tools#34",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5213,7 +5222,7 @@
       "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
     },
     {
-      "id": "21-the-wire#voidmark-wired-presence#34",
+      "id": "21-the-wire#voidmark-wired-presence#35",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5498,16 +5507,16 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Control modes",
       "kind": "rules",
-      "text": "Every drone runs in one of three modes. Mode is a property of the **link**, not only the chassis.\n\n| Mode | Who | What it feels like | Mechanical spine |\n|---|---|---|---|\n| **Remote** | Anyone with a link; Wrenches via RCC | Handheld or deck-fed camera/stick control | Rigging (or Logic + Rigging) to Direct; Gunnery for mounts if allowed |\n| **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per `16-wrench.md`; Reflex or Logic; biofeedback risk; temporary Integrity buffer |\n| **Street Eye** (Companion Link) | Any class with a qualifying scout drone | Soft follow / watch / hold / scout leash | One soft program; max 1 active; no fleet orchestration; no Jump-In |\n\n**Autonomous vs Commanded (Wrench table language):** a fielded machine may act on a canned behavior loop (Autonomous) or take orders through Deploy & Command / Rigged Fire (Commanded). Jump-In overrides both for the frame you inhabit.\n\n**Hardware gate (¥ side):**\n- **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band).\n- **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall).\n\n---"
+      "text": "Every drone runs in one of three modes. Mode is a property of the **link**, not only the chassis.\n\n| Mode | Who | What it feels like | Mechanical spine |\n|---|---|---|---|\n| **Remote** | Anyone with a link; Wrenches via RCC | Handheld or deck-fed camera/stick control | Rigging (or Logic + Rigging) to Direct; Gunnery for mounts if allowed |\n| **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per `16-wrench.md`; Reflex or Logic; biofeedback risk; temporary Integrity buffer |\n| **Street Eye** (Companion Link) | Any class with a qualifying scout drone | Soft follow / watch / hold / scout leash | One soft program; max 1 active; no fleet orchestration; no Jump-In |\n\n**Autonomous vs Commanded (Wrench table language):** a fielded machine may act on a canned behavior loop (Autonomous) or take orders through Deploy & Command / Rigged Fire (Commanded). Jump-In overrides both for the frame you inhabit.\n\n**Hardware gate (¥ side):**\n- **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see `21-the-wire.md`).\n- **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not."
     },
     {
-      "id": "23-machines#anyone-vs-wrench#3",
+      "id": "23-machines#control-modes#3",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Anyone vs Wrench",
+      "heading": "Control modes",
       "kind": "rules",
-      "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Active drones** | **Max 1** active at a time — **even a Street clunker counts as that one non-Wrench drone** |\n| **Jump-In** | **Forbidden** |\n| **RCC fleet features** | **Cannot** use Fleet Deck / War Table / Command Rig / Hydra swarm features (even if purchased — they sit inert or Director may allow Remote-Box behavior only) |\n| **Rolls** | **Bane** on all **Rigging** and **Gunnery-through-drone** Power Rolls |\n| **Uptime / bandwidth** | No Uptime pool. **Street Eye** (Companion Link) lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |\n| **Integrity buffer** | Soft buffer only: **+2 temporary Integrity** while the link is live (does not stack with Jump-In buffers; lost when the link drops) |\n| **Actions** | **Soft actions only** by default: Move, Observe/Mark (sensor), Carry/Drop (if cargo-capable), Stabilize assist (Medic-grade chassis only), simple Interact. **Weapon mounts:** may fire **Street / Professional** soft/nonlethal or light personal mounts only; **Restricted+ combat hardpoints** require a Wrench or stay locked |\n| **Autosofts** | May run **one** basic Pilot/Sensor autosoft if the chassis has a free slot — no swarm / Focus Fire / Override packages |\n| **Heroic resource** | Cannot spend Uptime; cannot use Wrench Deploy & Command / Focus Fire / subclass swarm features |"
+      "text": "**Pack drones.** Ghostwire Summons drone band templates (micro / small / medium) ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Full interface list: `21-the-wire.md`.\n\n---"
     },
     {
       "id": "23-machines#anyone-vs-wrench#4",
@@ -5516,16 +5525,16 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Anyone vs Wrench",
       "kind": "rules",
-      "text": "**Intent:** a Scout's eye-in-the-sky or a Medic's trauma mule is supported; a second Operator does not become a discount Wrench. Buying a taped-together junk mote still burns the one-drone slot.\n\n#### Wrench\n\n| Rule | Align to `16-wrench.md` (do not invent parallel names) |\n|---|---|\n| **Fleet** | Field multiple machines up to **Fleet Size** cap (baseline 3 @ L1 → 6 @ L10; Drone Jockey raises further) |\n| **Resource** | **Uptime** — banked from fielded presence / deploy / maintenance / salvage; drained by body damage, asset hits, jamming, destruction; spent on Deploy, Command, Override, burst-buffs |\n| **Jump-In** | Full Jump-In Plumbing (maneuver; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Gunnery** | Full **Gunnery** / Rigged Fire through drones and mounts |\n| **RCC / autosofts** | Full use of owned RCC ladder + autosoft slots |\n| **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (`16-wrench.md`). “Overheat pressure” on high-end RCCs is narrative only. |\n\n**Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime."
+      "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Active drones** | **Max 1** active at a time — **even a Street clunker counts as that one non-Wrench drone** |\n| **Jump-In** | **Forbidden** |\n| **RCC fleet features** | **Cannot** use Fleet Deck / War Table / Command Rig / Hydra swarm features (even if purchased — they sit inert or Director may allow Remote-Box behavior only) |\n| **Rolls** | **Bane** on all **Rigging** and **Gunnery-through-drone** Power Rolls |\n| **Uptime / bandwidth** | No Uptime pool. **Street Eye** (Companion Link) lasts **one scene** (or until Integrity 0 / jam / Director cut), then the drone drops to standby and needs a short reset (≈ 10 minutes / between scenes) |\n| **Integrity buffer** | Soft buffer only: **+2 temporary Integrity** while the link is live (does not stack with Jump-In buffers; lost when the link drops) |\n| **Actions** | **Soft actions only** by default: Move, Observe/Mark (sensor), Carry/Drop (if cargo-capable), Stabilize assist (Medic-grade chassis only), simple Interact. **Weapon mounts:** may fire **Street / Professional** soft/nonlethal or light personal mounts only; **Restricted+ combat hardpoints** require a Wrench or stay locked |\n| **Autosofts** | May run **one** basic Pilot/Sensor autosoft if the chassis has a free slot — no swarm / Focus Fire / Override packages |\n| **Heroic resource** | Cannot spend Uptime; cannot use Wrench Deploy & Command / Focus Fire / subclass swarm features |"
     },
     {
-      "id": "23-machines#street-eye-companion-link#5",
+      "id": "23-machines#anyone-vs-wrench#5",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
-      "heading": "Street Eye (Companion Link)",
+      "heading": "Anyone vs Wrench",
       "kind": "rules",
-      "text": "**Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in `16-wrench.md`. A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.\n\n**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag.\n\nThe Companion Link **limits** in the Non-Wrench table still apply if you field a drone that is not on that v1 list (Director-ruled). Foundry only auto-grants the Street Eye ability for qualifying air scouts."
+      "text": "**Intent:** a Scout's eye-in-the-sky or a Medic's trauma mule is supported; a second Operator does not become a discount Wrench. Buying a taped-together junk mote still burns the one-drone slot.\n\n#### Wrench\n\n| Rule | Align to `16-wrench.md` (do not invent parallel names) |\n|---|---|\n| **Fleet** | Field multiple machines up to **Fleet Size** cap (baseline 3 @ L1 → 6 @ L10; Drone Jockey raises further) |\n| **Resource** | **Uptime** — banked from fielded presence / deploy / maintenance / salvage; drained by body damage, asset hits, jamming, destruction; spent on Deploy, Command, Override, burst-buffs |\n| **Jump-In** | Full Jump-In Plumbing (maneuver; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Gunnery** | Full **Gunnery** / Rigged Fire through drones and mounts |\n| **RCC / autosofts** | Full use of owned RCC ladder + autosoft slots |\n| **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (`16-wrench.md`). “Overheat pressure” on high-end RCCs is narrative only. |\n\n**Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime."
     },
     {
       "id": "23-machines#street-eye-companion-link#6",
@@ -5534,10 +5543,19 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Street Eye (Companion Link)",
       "kind": "rules",
+      "text": "**Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in `16-wrench.md`. A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.\n\n**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag.\n\nThe Companion Link **limits** in the Non-Wrench table still apply if you field a drone that is not on that v1 list (Director-ruled). Foundry only auto-grants the Street Eye ability for qualifying air scouts."
+    },
+    {
+      "id": "23-machines#street-eye-companion-link#7",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Street Eye (Companion Link)",
+      "kind": "rules",
       "text": "> **Street Eye**\n> *Companion Link · Maneuver · Range 10*\n> Target: 1 qualifying scout drone you own (stowed or already fielded)\n> **Power Roll** — none to deploy or issue a soft order; **2d10 + Logic** (Rigging applies; non-Wrench: **bane**) only if the Director calls for a contested read, mark, or jammed link\n>\n> Soft orders (pick one when you use this maneuver): **follow**, **watch**, **hold**, **scout**, **surveillance**, or **minor support** (spot/mark, watch a corner, light carry if the chassis can).\n>\n> *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*\n\n> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system.\n\n---"
     },
     {
-      "id": "23-machines#scale-bands-drones#7",
+      "id": "23-machines#scale-bands-drones#8",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5546,7 +5564,7 @@
       "text": "| Scale | Plain meaning | Examples |\n|---|---|---|\n| **Personal** | Palm to torso; stows in a pack or on a harness; fits vents / crowds | Micro-spies, taser-bees, anthro infiltrators |\n| **Light** | Dog to motorcycle; carried awkwardly or rolled; corridor-viable | Quads, crawlers, med/repair bots, sentry dogs |\n| **Vehicle (drone)** | No crew seats, but chassis mass of a small vehicle; hardpoints + real armor possible | Gun-drones, cargo mules, heavy assault frames |\n\n**Vehicle (drone)** entries stay in the drone inventory so fleet play stays on one list; **crewed** platforms are under Vehicles below.\n\n**Domain:** Air (drone) / Ground (drone) / Water (drone). Domain gates terrain and chase language; it does not replace Scale.\n\n**Chassis → mod slots (doctrine):** slots climb with Availability / Echelon (same shape as Gear master). Micro/Street ≈ 1; Professional ≈ 2; Restricted ≈ 3; Military ≈ 4; Prototype ≈ 5. A chassis cannot exceed its published slot count — buy a bigger frame for more capacity. **Clunkers** sit at Street ¥ / **1 slot** even when the scale looks Light — inefficient frames waste capacity.\n\n---"
     },
     {
-      "id": "23-machines#full-drone-inventory#8",
+      "id": "23-machines#full-drone-inventory#9",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5555,7 +5573,7 @@
       "text": "**Reading the tables:** prices climb with Availability + Echelon. Integrity / Speed / Armor numbers are not yet published — profiles are qualitative.\n\n#### Echelon shopping guidance\n\nShop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky” (those air scouts grant **Street Eye**). Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).\n\n**Clunker / Unreliable (Director cue):** once per scene when it matters, impose an extra **bane** on a Rigging/Gunnery roll **or** stall the frame for a beat (misses a Move, drops a package, camera blacks out). Do not punish every action — make the junk feel lived-in.\n\n#### Inventory by Echelon\n\n##### Echelon 1 — Street / Professional (clunkers + starter frames)"
     },
     {
-      "id": "23-machines#full-drone-inventory#9",
+      "id": "23-machines#full-drone-inventory#10",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5564,7 +5582,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |\n|---|---|---|---|---|---|---|---|\n| Tape-Eye / Junk-Mote / taped-together spy mote | Air (drone) | Personal | Street | 80 | 1 | Phone-cam on scavenged fans; dies if you sneeze wrong. | Recon, Clunker, Unreliable, Expendable, Wired |\n| Sink-Floater / Wet-Junk / leaking wet scout | Water (drone) | Personal | Street | 180 | 1 | Sealed with epoxy and prayer; floats, sometimes submerges. | Aquatic, Recon, Clunker, Unreliable, Wired |\n| Junkbug / Scrap-Crawler / taped crawler | Ground (drone) | Personal | Street | 120 | 1 | Mismatched legs, magnet scrap, cable-tray vermin. | Recon, Climb, Clunker, Unreliable, Wired |\n| Rustbucket / Rusted Quad / scrap aerial | Air (drone) | Light | Street | 250 | 1 | Bent arms, patched batteries; loud and proud to stay aloft. | Recon, Clunker, Unreliable, Wired |\n| Sputter-Sled / Cargo Clunker / sputtering cargo sled | Ground (drone) | Light | Street | 350 | 1 | Hauls a duffel until the motor coughs; corridor blocker on a good day. | Cargo, Clunker, Unreliable, Wired |\n| Rattlebox / Scrap-Sentry / junk perimeter walker | Ground (drone) | Light | Street | 400 | 1 | Motion chirp + flashlight mount; panics at shadows. | Sentry, Clunker, Unreliable, Wired |\n| Fly / Micro-Drone / insect-scale recon mote | Air (drone) | Personal | Street | 200 | 1 | Palm spy — vents, perches, live video relay. | Recon, Expendable, Wired |\n| Skitter / Vent-Rat / crawl-mote chassis | Ground (drone) | Personal | Street | 280 | 1 | Magnetic belly + whisker cams; lives in cable trays. | Recon, Climb, Wired |\n| Needle / Pin-Eye / kamikaze microframe | Air (drone) | Personal | Street | 350 | 1 | One-shot buzz or bang; cheap swarm filler. | Recon, Kamikaze, Expendable, Wired |\n| Buzz / Ad-Moth / decoy holomote | Air (drone) | Personal | Street | 400 | 1 | Throws false AR / heat chirps; dies if shot. | EW, Decoy, Wired |\n| Taser-Bee / Shock-Mote / contact stunner | Air (drone) | Personal | Professional | 750 | 2 | Close shock payload; soft takedown favorite. | Nonlethal, Swarm, Wired |\n| Crawler / Recon Drone / quadruped sensor unit | Ground (drone) | Light | Professional | 800 | 2 | Climbs, maps, plants taps — forward sensor for Scout/Hacker. | Recon, Climb, Wired |\n| Rotor / Quad-Drone / aerial recon quadcopter | Air (drone) | Light | Professional | 900 | 2 | Default eye-in-the-sky; overwatch, cheap swarm body. | Recon, Swarm, Wired |\n| Spotter / Mark-Eye / designator quad | Air (drone) | Light | Professional | 1,100 | 2 | Paints targets for crew fire; poor brawler. | Recon, Mark, Wired |\n| Mule-Bot / Cargo Drone / autonomous hauler | Ground (drone) | Vehicle (drone) | Professional | 1,100 | 2 | Hauls kits, extracts wounded, blocks a corridor. | Cargo, Cover, Wired |"
     },
     {
-      "id": "23-machines#full-drone-inventory#10",
+      "id": "23-machines#full-drone-inventory#11",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5573,7 +5591,7 @@
       "text": "**E1 count:** **15** chassis (6 Clunker / Junk + 9 cleaner Street/Professional). Roles: recon, EW/decoy, nonlethal, cargo, sentry, aquatic.\n\n##### Echelon 2 — Restricted (support / denial / specialist)"
     },
     {
-      "id": "23-machines#full-drone-inventory#11",
+      "id": "23-machines#full-drone-inventory#12",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5582,7 +5600,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |\n|---|---|---|---|---|---|---|---|\n| Netcaster / Snare-Drone / capture frame | Ground (drone) | Light | Restricted | 2,800 | 3 | Foam / monofil net — take alive, not apart. | Nonlethal, Capture, Wired |\n| Wrenchbot / Repair Drone / field maintenance unit | Ground (drone) | Light | Restricted | 3,000 | 3 | Mobile toolkit — feeds Field Repair / rearm loops. | Repair, Support, Wired |\n| Guard-Dog / Patrol Drone / autonomous sentry | Ground (drone) | Light | Restricted | 3,200 | 3 | Perimeter walk: light mount, motion net, area denial. | Sentry, Mount, Wired |\n| Medbot / Trauma Drone / field-medic unit | Ground (drone) | Light | Restricted | 3,500 | 3 | Runs a stabilize package to a downed ally under fire. | Medic, Support, Wired |\n| Choir-Box / Spoof-Drone / local EW kite | Air (drone) | Light | Restricted | 3,600 | 3 | Jam / spoof bubble for a room or alley mouth. | EW, Wired |\n| Nest / Hardpoint Sentry / deployable turret-drone | Ground (drone) | Light | Restricted | 3,800 | 3 | Drops, braces, becomes a temporary autogun nest. | Sentry, Mount, Wired |\n| Barracuda / Aquadrone / submersible saboteur | Water (drone) | Light | Restricted | 4,000 | 3 | Silent wet recon; plants charges on hulls and intakes. | Aquatic, Sabotage, Wired |\n| Ghost-Courier / Shade-Mule / low-obs cargo kite | Air (drone) | Light | Restricted | 4,500 | 3 | Quiet package runner between Flats shafts and Grid roofs. | Cargo, Stealth, Wired |"
     },
     {
-      "id": "23-machines#full-drone-inventory#12",
+      "id": "23-machines#full-drone-inventory#13",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5591,7 +5609,7 @@
       "text": "**E2 count:** **8** chassis. Roles: repair, medic, sentry, EW, cargo/stealth, aquatic sabotage, nonlethal capture.\n\n##### Echelon 3 — Military (hard mounts / Jump-In combat)\n\n| Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |\n|---|---|---|---|---|---|---|---|\n| Ripper / Breach-Drone / door-cracker | Ground (drone) | Light | Military | 11,000 | 4 | Charges, cutters, or shaped punch for hard portals. | Breach, Assault, Wired |\n| Pallbearer / Extraction Hauler / armored mule | Ground (drone) | Vehicle (drone) | Military | 12,000 | 4 | Armored cargo bay for downed runners; light defensive mount. | Cargo, Armor, Medic, Wired |\n| Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle (drone) | Military | 13,000 | 4 | Real hardpoint gunner — fleet's flying damage dealer. | Combat, Mount, Jump-In-Capable, Wired |\n| Skulker / Anthro-Drone / humanoid infiltrator | Ground (drone) | Personal | Military | 14,000 | 4 | Passes as a body at distance; tools or a sidearm mount. | Anthro, Infiltrate, Jump-In-Capable, Wired |\n| Hellkite / Strafe-Wing / gunship microframe | Air (drone) | Vehicle (drone) | Military | 15,500 | 4 | Twin light mounts, dive strafe; loud and hated in the Grid. | Combat, Mount, Jump-In-Capable, Wired |\n| Deep-Viper / Hunter Aquadron / wet hunter | Water (drone) | Vehicle (drone) | Military | 16,000 | 4 | Deeper hull, torpedo/spear mount, chase boats from below. | Aquatic, Combat, Jump-In-Capable, Wired |"
     },
     {
-      "id": "23-machines#full-drone-inventory#13",
+      "id": "23-machines#full-drone-inventory#14",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5600,7 +5618,7 @@
       "text": "**E3 count:** **6** chassis. Roles: breach, extract/medic, aerial combat, anthro infiltrate, aquatic combat.\n\n##### Echelon 4 — Prototype (elite specialists + apex combat)"
     },
     {
-      "id": "23-machines#full-drone-inventory#14",
+      "id": "23-machines#full-drone-inventory#15",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5609,7 +5627,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |\n|---|---|---|---|---|---|---|---|\n| Phantom / Glass-Eye / elite recon kite | Air (drone) | Light | Prototype | 28,000 | 5 | Near-silent sensor apex; paints through smoke and spoof. | Recon, Stealth, Mark, Jump-In-Capable, Wired |\n| Whisper-Run / Black-Courier / elite stealth courier | Air (drone) | Light | Prototype | 32,000 | 5 | Ghost-lane package runner; low-obs hull, sealed bay. | Cargo, Stealth, Jump-In-Capable, Wired |\n| Lifeline / Apex-Medic / elite extract frame | Ground (drone) | Vehicle (drone) | Prototype | 35,000 | 5 | Armored trauma bay + stabilize suite; pulls bodies out loud zones. | Medic, Armor, Cargo, Jump-In-Capable, Wired |\n| Choir-King / Fog-Crown / EW apex kite | Air (drone) | Light | Prototype | 38,000 | 5 | Block-scale jam / spoof crown; eats cheap sensors for lunch. | EW, Jump-In-Capable, Wired |\n| Warhound / Combat Drone / heavy assault unit | Ground (drone) | Vehicle (drone) | Prototype | 40,000 | 5 | Apex walker/roller — heavy mounts, real armor, one-machine push. | Combat, Heavy, Jump-In-Capable, Wired |\n| Razorwing / Blade-Falcon / elite strike wing | Air (drone) | Vehicle (drone) | Prototype | 42,000 | 5 | Precision hardpoint predator — quieter than Hellkite, meaner than Stinger. | Combat, Mount, Stealth, Jump-In-Capable, Wired |\n| Iron Mantis / Siege-Frame / heavy assault walker-drone | Ground (drone) | Vehicle (drone) | Prototype | 45,000 | 5 | Limb-climber siege body; dual hardpoints; corridor nightmare. | Combat, Heavy, Climb, Jump-In-Capable, Wired |"
     },
     {
-      "id": "23-machines#full-drone-inventory#15",
+      "id": "23-machines#full-drone-inventory#16",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5618,7 +5636,7 @@
       "text": "**E4 count:** **7** chassis. Roles: elite recon, elite courier, elite medic/extract, EW apex, heavy combat ×2, elite aerial strike.\n\n**Published total:** **36** chassis (15 + 8 + 6 + 7).\n\n#### Role quick-index\n\n| Role | Chassis |\n|---|---|\n| Clunker / Junk (E1) | Tape-Eye, Sink-Floater, Junkbug, Rustbucket, Sputter-Sled, Rattlebox |\n| Recon / spy | Tape-Eye, Sink-Floater, Junkbug, Rustbucket, Fly, Skitter, Needle, Rotor, Crawler, Spotter, Phantom |\n| EW / decoy | Buzz, Choir-Box, Choir-King |\n| Nonlethal / capture | Taser-Bee, Netcaster |\n| Cargo / extract | Sputter-Sled, Mule-Bot, Ghost-Courier, Pallbearer, Whisper-Run, Lifeline |\n| Medic / repair | Medbot, Wrenchbot, Pallbearer, Lifeline |\n| Sentry | Rattlebox, Guard-Dog, Nest |\n| Aquatic | Sink-Floater, Barracuda, Deep-Viper |\n| Breach / assault support | Ripper |\n| Combat / gun | Stinger, Hellkite, Warhound, Razorwing, Iron Mantis |\n| Anthro | Skulker |\n\n#### Availability and Echelon\n\n| Availability | Typical Echelon |\n|---|---|\n| Street | 1 |\n| Professional | 1 |\n| Restricted | 2 |\n| Military | 3 |\n| Prototype | 4 |\n\n---"
     },
     {
-      "id": "23-machines#integrity-destruction-recovery#16",
+      "id": "23-machines#integrity-destruction-recovery#17",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5627,7 +5645,7 @@
       "text": "Drones use a short **Integrity** track (numbers not yet published). For now, Directors may treat Street/Professional frames as fragile (a few solid hits) and Military/Prototype as sturdy. **Clunkers** are especially fragile — treat as one solid hit from serious fire unless the Director is feeling generous.\n\n| Event | Effect |\n|---|---|\n| **Hit while fielded** | Integrity damage; Wrench loses **1 Uptime** per hit (per `16-wrench.md`). Non-Wrench: no Uptime, but link jitter — Director may impose a bane next Remote action |\n| **0 Integrity** | **Wrecked** — offline, not vaporized. Wrench lump **3 Uptime** drain. Salvage Sense / salvage maneuver still apply for Wrenches |\n| **Recovery** | Field Repair (Wrench signature / Repair skill) restores Integrity in the fight per class text. Between scenes: §Craft **Repair** Project or short bench time + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild; clunkers are cheap to patch and cheap to write off) |\n| **Total loss** | If the wreck is seized, burned, or dropped into the Sinks, the ¥ is gone — buy or craft another |\n| **Non-Wrench scene end** | Street Eye / Companion Link drops; drone standbys. Wrecked drones still need Repair / ¥ |\n\n**Expendable tags (Needle, Buzz, Tape-Eye, etc.):** some Street micros are meant to die — Kamikaze / Decoy / Clunker runs destroy the chassis by design (see Drone Jockey abilities).\n\n---"
     },
     {
-      "id": "23-machines#modding#17",
+      "id": "23-machines#modding#18",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5636,7 +5654,7 @@
       "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.\n- Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.\n\n---"
     },
     {
-      "id": "23-machines#scale-bands-crewed-vehicles#18",
+      "id": "23-machines#scale-bands-crewed-vehicles#19",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5645,7 +5663,7 @@
       "text": "| Scale | Plain meaning | Examples |\n|---|---|---|\n| **Light** | Bike, small rotor, open skiff — one or two bodies, exposed or cramped | Sport bike, junk rotor, harbor skiff |\n| **Vehicle** | Car / van / light aircraft / patrol boat mass — a crew seats and real cover | Sedan, panel van, tiltjet, wetsub, orbital pod |\n| **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |\n| **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |\n\n**Vs drone Scale (`15-drones.md`):** drones use **Personal / Light / Vehicle (drone)**. A Vehicle-scale **drone** (Stinger, Warhound, etc.) remains on the **drone** inventory so swarm/fleet play stays one list. This chapter is **crewed** platforms — seats, stations, passengers — even when a Wrench Jump-In runs the shell solo.\n\n**Domain:** Ground / Air / Water / Space. Domain gates terrain, chase language, and wreck consequences; it does not replace Scale.\n\n**Chassis → mod slots (doctrine):** slots climb with Availability / Echelon (same shape as Gear master Cat 5A–5D). Street ≈ 1; Professional ≈ 2; Restricted ≈ 3; Military ≈ 4; Prototype ≈ 5. A chassis cannot exceed its published slot count — buy a bigger frame (or Invent a Mod + Director gate) for more capacity.\n\n---"
     },
     {
-      "id": "23-machines#stat-card-fields#19",
+      "id": "23-machines#stat-card-fields#20",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5654,7 +5672,7 @@
       "text": "Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitative**; Integrity / Speed / Armor numbers are not yet published.\n\n| Field | Description |\n|---|---|\n| **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |\n| **Scale** | Light / Vehicle / Heavy / Capital |\n| **Domain** | Ground / Air / Water / Space |\n| **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |\n| **Integrity** | Damage track (numbers not yet published). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress) |\n| **Armor** | Flat damage reduction feel; stacks defensively with Scale |\n| **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |\n| **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |\n| **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |\n| **Mod slots** | Per Availability/Echelon (published count) |\n| **Availability** | Street → Prototype |\n| **Echelon** | 1–4 |\n| **Cost ¥** | Object price; never buys class power |\n\n**Mounted weapons** come from Category 3; installs are §Craft Projects (`10-mods.md`). Hardpoints usually need a **Gun Rack** mod (§5F) unless the profile already includes a factory mount.\n\n---"
     },
     {
-      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#20",
+      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#21",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5663,7 +5681,7 @@
       "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Vehicles in play** | May **drive/pilot one** vehicle at a time using **Piloting** (or a Director-approved Drive fantasy equivalent) |\n| **Jump-In** | **Forbidden** — no sensor merge, no inert-body Jump-In, no temporary Jump-In Integrity buffer |\n| **RCC / fleet-vehicle features** | **Cannot** use advanced RCC fleet-vehicle features (Fleet Deck+ vehicle orchestration, multi-platform Command, War Table / Hydra-style vehicle swarm tools) even if the hardware is owned — inert or Remote-Box-equivalent at Director discretion |\n| **Risky chase / combat Piloting** | **Bane** on risky chase stunts, combat Piloting, and evasive driving Power Rolls **if not trained** in Piloting (untrained driver can still putter in traffic) |\n| **Gunnery from mounts** | Passengers/gunners may fire personal weapons and Street/Professional soft mounts; **Restricted+ combat hardpoints** prefer a trained Gunner or a Wrench — Director may allow with bane |\n| **Uptime** | No Uptime pool; no Deploy & Command / Rigged Fire vehicle spend |\n| **Heroic resource** | Cannot spend Uptime; cannot use Vehicle Rig-Pilot signature Jump-In discounts |\n\n**Intent:** an Operator can steal a sedan and run a chase; a Scout can fly a buzzcopter on a quiet insertion. Neither becomes a discount Vehicle Rig-Pilot.\n\n#### Wrench"
     },
     {
-      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#21",
+      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#22",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5672,7 +5690,7 @@
       "text": "| Rule | Align to `16-wrench.md` (do not invent parallel names) |\n|---|---|\n| **Jump-In** | Full Jump-In Plumbing into **Jump-In Capable** vehicles (maneuver; Logic or Reflex; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Rigging / Piloting** | Full excellence — Rigging and/or Piloting as class/subclass grants; no untrained bane on combat stunts |\n| **Solo / Jumped-In** | While Jumped-In, act as **pilot and gunner** simultaneously through the control rig (Vehicle Rig-Pilot default mode) |\n| **Uptime** | Asset hits / wrecks drain Uptime per Wrench chapter; Field Repair / Deploy interactions unchanged |\n| **RCC** | Full use of owned RCC ladder for vehicle-linked command where the Wrench chapter already allows it |\n| **Subclass** | **Vehicle Rig-Pilot** — signature platform, One With the Machine discounts, Ram Speed / Redline ladders — as printed in `16-wrench.md` |\n\n**Firewall reminder:** ¥ buys frames and mods. Uptime runs the fight. Chrome (control rig) improves Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.\n\n**Rigger Cocoon (§5F):** upgrades a frame to accept Jump-In cleanly. It does **not** grant Jump-In to non-Wrenches.\n\n---"
     },
     {
-      "id": "23-machines#customize-modding#22",
+      "id": "23-machines#customize-modding#23",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5681,7 +5699,7 @@
       "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or Gun Rack).\n\n---"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#23",
+      "id": "23-machines#vehicle-combat-chase#24",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5690,7 +5708,7 @@
       "text": "**Chosen lean system for this chapter:** **abstract range bands** (cinematic pursuits and most vehicle fights). When vehicles share a tactical map with foot combat, Directors may instead use **positional** mode as already sketched in `16-wrench.md` — same skills, same wreck language.\n\n#### Abstract range track\n\n```\nBroken off ← Extreme → Long → Medium → Close → Ramming / Boarding\n```\n\n- Each round, the **pilot** makes an opposed **Piloting** or **Rigging** Power Roll (Handling modifies) against the lead pursuer / quarry.\n- **Middle / High:** advance one band toward your goal (close the gap or open it).\n- **Low:** stall or lose a band (Director: traffic, wake, lane crosswind, dock clutter).\n- **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).\n- **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.\n- **Broken off:** chase ends (escape or lost contact).\n\n**Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per `16-wrench.md`.\n\n#### Crash, wreck, ram"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#24",
+      "id": "23-machines#vehicle-combat-chase#25",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5699,7 +5717,7 @@
       "text": "| Event | Effect |\n|---|---|\n| **Hit while underway** | Integrity damage; Wrench loses **1 Uptime** per hit if the vehicle is their fielded asset. Non-Wrench: no Uptime; Director may impose a bane on the next risky Piloting action |\n| **0 Integrity** | **Wrecked** — domain catastrophe (ground crash, air downing, hull flood, decompress). Occupants take a Personal-scale crash hit and must escape. Wrench: lump **3 Uptime** drain |\n| **Ram** | Opposed Piloting/Rigging. Damage basis = **Scale + Speed band** (heavier/faster party takes less). On success, force a band shift and/or apply **Crippled** / Integrity loss. Full numeric multipliers deferred |\n| **Recovery** | Field Repair (Wrench) in the fight per class text. Between scenes: §Craft **Repair** Project + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild) |\n| **Total loss** | Seized, burned, sunk, or dropped into the Sinks — the ¥ is gone |\n\n**Conditions (reskin):** **Crippled** (Handling/Speed penalty), **Systems Down** (a station offline), **On Fire/Leaking** (ongoing), **Stalled/Dead-stick** (immobilized). Called shots inflict conditions instead of raw Integrity.\n\n#### Crew roles"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#25",
+      "id": "23-machines#vehicle-combat-chase#26",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5708,7 +5726,7 @@
       "text": "| Station | Does |\n|---|---|\n| **Pilot / Driver** | Moves the vehicle; only the pilot advances the chase track or positional Speed. Evasive driving = defensive edge. Stunts = risky Piloting/Rigging |\n| **Gunner** | Fires mounted weapons with **Gunnery** on their turn |\n| **Systems / Sensors / EW** | Locks, terrain reads, jams — feed an edge to pilot/gunner or a bane to a foe |\n| **Passenger** | Acts normally at a speed bane (shoot out a window, hack, reload); uses the hull as cover |\n| **Solo / Jumped-In (Wrench)** | Pilot **and** gunner simultaneously via control rig |\n\n---"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#26",
+      "id": "23-machines#full-inventory-by-echelon#27",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5717,7 +5735,7 @@
       "text": "**Reading the table:** prices climb with Availability + Echelon. Integrity / Speed / Armor numbers are not yet published — profiles are qualitative. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).\n\n#### Inventory (28 crewed platforms)"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#27",
+      "id": "23-machines#full-inventory-by-echelon#28",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5726,7 +5744,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater |\n| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater |\n| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater |\n| Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |\n| Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile |\n| Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |\n| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit |\n| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit |\n| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop |\n| Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion |\n| Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |\n| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction |\n| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit |\n| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy |\n| Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount |\n| Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit |\n| Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |\n| Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |\n| Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |\n| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit |\n| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount |\n| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor |\n| River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |\n| Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy |\n| Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean |\n| Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | 3 | Military | 22,000 | 4 | 2+8 | Extreme | Yes | Heavy transit/boarding craft with docking collar. | Sealed, Boarding, Heavy |\n| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker |\n| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy |\n| Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy |\n| Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |\n| Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |\n| Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#28",
+      "id": "23-machines#full-inventory-by-echelon#29",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5735,7 +5753,7 @@
       "text": "**Count:** **32** published crewed platforms.\n\n#### Role quick-index\n\n| Role | Chassis |\n|---|---|\n| Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |\n| Courier / bike | Scrap-Bike, Crotch-Rocket, Warbike |\n| Crew-car / transit | Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |\n| Cargo / workshop | Clunker, Workhorse, Flatbed |\n| Armor / extraction / troop | Hardtop, Brick, Cage |\n| Air recon / insertion | Buzzcopter, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |\n| Gunship / combat air | Skyhunter |\n| Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter |\n| Water pursuit / attack | Cigarette, River-Fang, Leviathan |\n| Wet infiltrate | Wetsub |\n| Walker / siege ground | Iron Giant, Spider-Frame |\n| Space / sealed | Pod, Mule, Void-Runner, Reaver |\n\n#### Availability and Echelon\n\n| Availability | Typical Echelon |\n|---|---|\n| Street | 1 |\n| Professional | 1 |\n| Restricted | 2 |\n| Military | 3 |\n| Prototype | 4 |\n\n---"
     },
     {
-      "id": "23-machines#buildings#29",
+      "id": "23-machines#buildings#30",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -5744,7 +5762,7 @@
       "text": "Buildings are a Wrench system: the **Building Stat Card**, upgrade slots, Node reference, and downtime fabrication are in `16-wrench.md` (The Machines). No shared building inventory is published yet."
     },
     {
-      "id": "23-machines#hands-off-accords-setting-law#30",
+      "id": "23-machines#hands-off-accords-setting-law#31",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
