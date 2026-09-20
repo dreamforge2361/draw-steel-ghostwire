@@ -1,6 +1,8 @@
 // B119 — kiosk type presets. Foundry-free so tools/kiosk-smoke.mjs can resolve stock lists
 // from src/packs JSON. Armor/Weapons/Drones match kind or folder glob; Food/Chems match
 // folder + StreetFood/Chem tags so new SKUs auto-include.
+// 0.3.77 — Vehicles (crewed, inverse of Drones), Decks (Cat 4A), Programs (4B suites +
+// 4C payloads on one shelf), Ammo (gear/general/ammunition magazines — not Ammo Bin mods).
 
 export const MODULE_ID = "draw-steel-ghostwire";
 
@@ -14,7 +16,15 @@ export const FOLDER_IDS = Object.freeze({
   survival: "qSfpu7tiC7qo9mKV",
   armor: "A7Gw6BuWxXH2Vp6l",
   weapons: "XLspd2sc9I6l34wi",
+  ammunition: "ahyua5QA62c6lUKF",
   drones: "HSPY6qKApuVToghV",
+  vehiclesGround: "lR5kGzV7snDN9arQ",
+  vehiclesAir: "a7XeWmGqPhQSlDcK",
+  vehiclesWater: "NowzLYKCGDkEWIwh",
+  vehiclesSpace: "UDrdYfXpBDCUE3Tr",
+  decks: "7PqOYWHMxEowPWJc",
+  programs: "PTNQJZBUr1ZFR36p",
+  payloads: "rPSzM2YqrQBEstrv",
 });
 
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? doc?.flags?.["draw-steel-ghostwire"] ?? {};
@@ -83,6 +93,55 @@ export const KIOSK_PRESETS = Object.freeze([
       folderIds: [FOLDER_IDS.drones],
     },
   },
+  {
+    id: "vehicles",
+    langKey: "Vehicles",
+    match: {
+      packs: ["vehicles"],
+      pathPrefixes: ["ground", "air", "water", "space"],
+      vehicleCrewed: true,
+      excludeTags: ["Plot"],
+      folderIds: [
+        FOLDER_IDS.vehiclesGround,
+        FOLDER_IDS.vehiclesAir,
+        FOLDER_IDS.vehiclesWater,
+        FOLDER_IDS.vehiclesSpace,
+      ],
+    },
+  },
+  {
+    id: "decks",
+    langKey: "Decks",
+    match: {
+      packs: ["matrix"],
+      pathPrefixes: ["decks"],
+      matrixRoles: ["deck"],
+      folderIds: [FOLDER_IDS.decks],
+    },
+  },
+  {
+    // Cat 4B persistent suites + Cat 4C attack payloads share one Programs shelf in v1.
+    // Both are buyable matrix Items that fill deck slots. Autosofts (drone/RCC software)
+    // also carry the Program tag, so this preset keys on role + programs/payloads folders
+    // — never tagsAny: ["Program"]. Hacker class Program abilities live in classes, not here.
+    id: "programs",
+    langKey: "Programs",
+    match: {
+      packs: ["matrix"],
+      pathPrefixes: ["programs", "payloads"],
+      matrixRoles: ["program", "payload"],
+      folderIds: [FOLDER_IDS.programs, FOLDER_IDS.payloads],
+    },
+  },
+  {
+    id: "ammo",
+    langKey: "Ammo",
+    match: {
+      packs: ["gear"],
+      pathPrefixes: ["general/ammunition"],
+      folderIds: [FOLDER_IDS.ammunition],
+    },
+  },
 ]);
 
 export function listPresets() {
@@ -119,7 +178,8 @@ function folderOf(item) {
 /**
  * True when a catalog row belongs on this preset shelf.
  * `path` is the src-relative file path without `.json` (Node smoke).
- * Runtime Foundry rows omit path and match kind / tags / folder / drone flag.
+ * Runtime Foundry rows omit path and match kind / tags / folder / drone /
+ * crewed-vehicle / matrix.role flags.
  */
 export function matchPresetItem(item, preset) {
   if (!item || !preset?.match) return false;
@@ -131,11 +191,22 @@ export function matchPresetItem(item, preset) {
     if (item.documentName && item.documentName !== "Item") return false;
   }
 
+  const flags = gwFlags(item);
+  const allTags = [
+    ...tagsOf(item),
+    ...(Array.isArray(flags.vehicle?.tags) ? flags.vehicle.tags : []),
+    ...(Array.isArray(flags.matrix?.tags) ? flags.matrix.tags : []),
+  ];
+  if (match.excludeTags?.some(tag => allTags.includes(tag))) return false;
+
   const kind = item.system?.kind;
   if (match.kinds?.length && match.kinds.includes(kind)) return true;
-
-  const flags = gwFlags(item);
   if (match.vehicleDrone && flags.vehicle?.drone) return true;
+  if (match.vehicleCrewed) {
+    if (flags.vehicle?.drone) return false;
+    if (flags.vehicle) return true;
+  }
+  if (match.matrixRoles?.length && match.matrixRoles.includes(flags.matrix?.role)) return true;
 
   const tags = tagsOf(item);
   if (match.tagsAny?.some(tag => tags.includes(tag))) return true;

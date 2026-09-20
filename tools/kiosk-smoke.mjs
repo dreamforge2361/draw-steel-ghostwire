@@ -173,16 +173,22 @@ const b119 = readFileSync("docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md", "utf8
 note(b119.includes("0.3.65") && b119.includes("SHIPPED"), "B119 spike shipped 0.3.65");
 note(b119.includes("kiosks/kiosk-merchant.webp"), "B119 spike documents art path");
 note(director.includes("Street Food Kiosk") && director.includes("Armor Locker"), "Director note names type defaults");
+note(director.includes("Vehicle Lot") && director.includes("Deck Vendor") && director.includes("Software Stall") && director.includes("Ammo Counter"), "Director note names 0.3.77 type defaults");
 note(boot.includes("registerConsumableUse()"), "module registers registerConsumableUse");
-note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones", "six preset ids");
+note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones,vehicles,decks,programs,ammo", "ten preset ids");
 note(getPreset("food")?.match.pathPrefixes.includes("consumables/food"), "food filter is consumables/food");
 note(getPreset("armor")?.match.kinds.includes("armor"), "armor filter is kind=armor");
 note(getPreset("weapons")?.match.kinds.includes("weapon"), "weapons filter is kind=weapon");
 note(getPreset("drones")?.match.vehicleDrone === true, "drones filter is vehicle.drone");
+note(getPreset("vehicles")?.match.vehicleCrewed === true, "vehicles filter is crewed (not drone)");
+note(getPreset("decks")?.match.matrixRoles.includes("deck"), "decks filter is matrix.role=deck");
+note(JSON.stringify(getPreset("programs")?.match.matrixRoles) === '["program","payload"]', "programs shelf is 4B suites + 4C payloads");
+note(getPreset("ammo")?.match.pathPrefixes.includes("general/ammunition"), "ammo filter is general/ammunition");
+note(!getPreset("programs")?.match.tagsAny, "programs does not match the Program tag (autosofts share it)");
 
 function scanSrcCatalog() {
   const items = [];
-  for (const pack of ["gear", "vehicles"]) {
+  for (const pack of ["gear", "vehicles", "matrix", "mods"]) {
     const base = join("src/packs", pack);
     const files = readdirSync(base, { recursive: true }).filter(f => String(f).endsWith(".json") && !String(f).endsWith("_folder.json"));
     for (const file of files) {
@@ -213,6 +219,10 @@ const tools = listingsFromItems(catalog, "tools");
 const armor = listingsFromItems(catalog, "armor");
 const weapons = listingsFromItems(catalog, "weapons");
 const drones = listingsFromItems(catalog, "drones");
+const vehicles = listingsFromItems(catalog, "vehicles");
+const decks = listingsFromItems(catalog, "decks");
+const programs = listingsFromItems(catalog, "programs");
+const ammo = listingsFromItems(catalog, "ammo");
 note(food.length === 6, `food stocks 6 SKUs (got ${food.length})`);
 note(food.every(row => row.price === null), "food listings use catalog ¥");
 note(medical.length >= 9, `medical is chems + existing kits (got ${medical.length})`);
@@ -220,12 +230,48 @@ note(tools.length >= 10, `tools stocks infiltration/sensors/survival (got ${tool
 note(armor.length >= 20, `armor stocks all armor Items (got ${armor.length})`);
 note(weapons.length >= 40, `weapons stocks all weapon Items (got ${weapons.length})`);
 note(drones.length >= 30, `drones stocks vehicle.drone Items (got ${drones.length})`);
+note(vehicles.length >= 1, `vehicles stocks ≥1 crewed platform (got ${vehicles.length})`);
+note(decks.length >= 1, `decks stocks ≥1 cyberdeck (got ${decks.length})`);
+note(programs.length >= 1, `programs stocks ≥1 suite/payload (got ${programs.length})`);
+note(ammo.length >= 1, `ammo stocks ≥1 magazine SKU (got ${ammo.length})`);
+note(vehicles.length >= 30, `vehicles stocks ground/air/water/space minus plot (got ${vehicles.length})`);
+note(decks.length >= 5, `decks stocks Cat 4A cyberdecks (got ${decks.length})`);
+note(programs.length >= 10, `programs stocks 4B suites + 4C payloads (got ${programs.length})`);
+note(ammo.length >= 6, `ammo stocks Cat 1F magazines / thrown (got ${ammo.length})`);
 const foodIds = new Set(food.map(r => r.uuid.split(".").pop()));
 note(foodIds.has("GwBuzzCan0000001") && foodIds.has("GwStallRamen0001"), "food includes Buzz-Can + Stall Ramen");
 const medIds = new Set(medical.map(r => r.uuid.split(".").pop()));
 note(medIds.has("GwKickwire000001") && medIds.has("Rv0BEDaaCZ14x6GV"), "medical includes Kickwire + Stim Patch");
 note(armor.every(row => row.uuid.includes(".gear.Item.")), "armor UUIDs are gear pack");
 note(drones.every(row => row.uuid.includes(".vehicles.Item.")), "drone UUIDs are vehicles pack");
+note(vehicles.every(row => row.uuid.includes(".vehicles.Item.")), "vehicle UUIDs are vehicles pack");
+note(vehicles.every(row => row.price === null) && decks.every(row => row.price === null) && programs.every(row => row.price === null) && ammo.every(row => row.price === null), "new presets use catalog ¥");
+const vehicleIds = new Set(vehicles.map(r => r.uuid.split(".").pop()));
+const droneIds = new Set(drones.map(r => r.uuid.split(".").pop()));
+note(vehicleIds.has("gwLaneHopperItm0") && vehicleIds.has("gwStarChopItm000") && vehicleIds.has("gwBulldogItm0000"), "vehicles include Lane-Hopper + Star-Chopper + Bulldog");
+note([...vehicleIds].every(id => !droneIds.has(id)), "vehicles and drones shelves do not overlap");
+note(!vehicleIds.has("rY3Ccc5vQtl75GkV"), "vehicles exclude Buzz drone");
+note(!vehicleIds.has("gwNoxTrashFrgt00"), "vehicles exclude Nox plot freighter");
+const deckIds = new Set(decks.map(r => r.uuid.split(".").pop()));
+const programIds = new Set(programs.map(r => r.uuid.split(".").pop()));
+note(deckIds.has("6XVXN8DuHNp3HkDH"), "decks include Street Deck");
+note(programIds.has("1NvjDKxm7AuK6hN3") && programIds.has("nmPnddhr5SDWKUWo"), "programs include Guardian suite + Zap payload");
+note(!programIds.has("J9dt33fDzpVDSHGM") && !deckIds.has("J9dt33fDzpVDSHGM"), "autosofts are not on Programs or Decks");
+note([...deckIds].every(id => !programIds.has(id)), "decks and programs shelves do not overlap");
+note(decks.every(row => row.uuid.includes(".matrix.Item.")), "deck UUIDs are matrix pack");
+note(programs.every(row => row.uuid.includes(".matrix.Item.")), "program UUIDs are matrix pack");
+const ammoIds = new Set(ammo.map(r => r.uuid.split(".").pop()));
+note(ammoIds.has("cTpPZ97zeRzqECqV") && ammoIds.has("Hywgfz62xDjSB39d"), "ammo includes Standard Rounds + AP Rounds");
+note(!ammoIds.has("GwKickwire000001") && !ammoIds.has("GwBuzzCan0000001"), "ammo excludes chems and food");
+note(!ammoIds.has("YRFhnTnCJkrAjRAi") && ammo.every(row => row.uuid.includes(".gear.Item.")), "ammo is gear magazines, not mods Ammo Bin");
+const runtimeCatalog = catalog.map(({ path, ...row }) => row);
+note(listingsFromItems(runtimeCatalog, "vehicles").length === vehicles.length, "vehicles match without src path (Foundry rows)");
+note(listingsFromItems(runtimeCatalog, "decks").length === decks.length, "decks match without src path (Foundry rows)");
+note(listingsFromItems(runtimeCatalog, "programs").length === programs.length, "programs match without src path (Foundry rows)");
+note(listingsFromItems(runtimeCatalog, "ammo").length === ammo.length, "ammo match without src path (Foundry rows)");
+note(listingsFromItems(runtimeCatalog, "drones").length === drones.length, "drones still match without src path");
+note(lang.GHOSTWIRE.Kiosk.Presets.Vehicles.Name === "Vehicles" && lang.GHOSTWIRE.Kiosk.Presets.Decks.Name === "Decks" && lang.GHOSTWIRE.Kiosk.Presets.Programs.Name === "Programs" && lang.GHOSTWIRE.Kiosk.Presets.Ammo.Name === "Ammo", "lang Presets.* Name keys for new types");
+note(typeof module.version === "string" && module.version >= "0.3.77", `module.json is ≥ 0.3.77 (got ${module.version})`);
 
 const buzzCan = JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8"));
 const boughtFood = applyPurchase({
