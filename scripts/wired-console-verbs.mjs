@@ -19,6 +19,35 @@ import {
 
 export const ALERT_MAX = 12;
 
+/** Flag on a Matrix Verb Item that exists only for one AbilityModel#use, then is deleted. */
+export const TEMP_CONSOLE_VERB_FLAG = "temporaryConsoleVerb";
+
+export function isTemporaryConsoleVerb(item, moduleId = MODULE_ID) {
+  if (typeof item?.getFlag === "function") return !!item.getFlag(moduleId, TEMP_CONSOLE_VERB_FLAG);
+  return !!item?.flags?.[moduleId]?.[TEMP_CONSOLE_VERB_FLAG];
+}
+
+/**
+ * Stamp compendium source data as a temporary embedded verb.
+ * Drops `_id` so Foundry assigns a new id (no collision with a leftover temp).
+ */
+export function markTemporaryConsoleVerbData(data, moduleId = MODULE_ID) {
+  const next = JSON.parse(JSON.stringify(data ?? {}));
+  delete next._id;
+  delete next.folder;
+  next.flags = { ...(next.flags ?? {}) };
+  next.flags[moduleId] = { ...(next.flags[moduleId] ?? {}), [TEMP_CONSOLE_VERB_FLAG]: true };
+  return next;
+}
+
+/**
+ * Draw Steel 1.1.2 AbilityModel#use merges `messageOptions.data` into the chat message.
+ * Top-level `messageOptions.flags` is a create-operation option and does not land on the card.
+ */
+export function verbUseMessageOptions(consoleVerb, moduleId = MODULE_ID) {
+  return { data: { flags: { [moduleId]: { consoleVerb } } } };
+}
+
 /**
  * All nine Matrix Verbs as the node panel and Console fire them.
  * characteristic is the Draw Steel key on the verb card (null = no power roll).

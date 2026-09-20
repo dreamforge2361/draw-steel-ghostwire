@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B117 Matrix Verbs smoke — all nine on the node-facing applet (shipped 0.3.53; module 0.3.55).
+ * B117 Matrix Verbs smoke — all nine on the node-facing applet (shipped 0.3.53; fire path 0.3.60).
  *
  * Run: node tools/b117-console-verbs-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
@@ -19,15 +19,20 @@ import {
 } from "../scripts/wired-verbs.mjs";
 import {
   CONSOLE_SLICE,
+  TEMP_CONSOLE_VERB_FLAG,
   abilityTierFromMessage,
   actorHasConnectInterface,
   consoleVerbGate,
+  isTemporaryConsoleVerb,
   itemIsConnectInterface,
+  markTemporaryConsoleVerbData,
   nextAlert,
   pickConsoleActor,
   pickPlayerVerbActor,
   softTraceDelta,
+  verbUseMessageOptions,
 } from "../scripts/wired-console-verbs.mjs";
+import { abilityPowerRollModifiers } from "../scripts/wired-state.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -43,13 +48,13 @@ function readBomFreeJson(path) {
 
 const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matrix-scan,matrix-navigate,matrix-ping,matrix-broadcast,matrix-search,matrix-read-write";
 
-console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.55)\n");
+console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.60)\n");
 
 const moduleJson = readBomFreeJson("module.json");
 ok((() => {
   const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
-  return maj === 0 && min === 3 && pat >= 53;
-})(), `module.json is 0.3.53+ (got ${moduleJson.version})`);
+  return maj === 0 && min === 3 && pat >= 60;
+})(), `module.json is 0.3.60+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -121,6 +126,12 @@ ok(consoleSrc.includes("useConsoleVerb") && consoleSrc.includes("verbStripView")
 ok(consoleSrc.includes("hasInterface") && consoleSrc.includes("actorHasConnectInterface"), "Console passes Connect interface into the gate");
 ok(consoleSrc.includes("VerbNeed${gate.reason}"), "Console warns with gate reason");
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
+ok(!consoleSrc.includes("new CONFIG.Item.documentClass"), "resolveVerbItem does not construct ephemeral Items");
+ok(consoleSrc.includes("createEmbeddedDocuments") && consoleSrc.includes("deleteEmbeddedDocuments"), "temporary embed + delete after use");
+ok(consoleSrc.includes("finally") && consoleSrc.includes("releaseTemporaryVerbItem"), "deletes the temp in finally");
+ok(consoleSrc.includes("verbUseMessageOptions"), "use() gets DS 1.1.2 messageOptions.data flags");
+ok(consoleSrc.includes("render: false"), "temp embed does not force a sheet redraw");
+ok(consoleSrc.includes("hideTemporaryConsoleVerbs"), "hides in-flight temps on the hero/NPC sheet");
 
 const nodeSrc = readFileSync("scripts/wired-node-verbs.mjs", "utf8");
 ok(nodeSrc.includes("useConsoleVerb") && nodeSrc.includes("pickPlayerVerbActor"), "node panel shares fire path");
@@ -135,6 +146,8 @@ ok(moduleSrc.includes("matrixVerbsApplet") && moduleSrc.includes("MATRIX_VERB_DS
 ok(moduleSrc.includes("defaultItems.delete") && moduleSrc.includes("MATRIX_VERBS"), "defaultItems deletes Matrix Verbs");
 ok(!/defaultItems\.add\(uuid\)/.test(moduleSrc) && !/for \(const uuid of SHEET_VERBS\)/.test(moduleSrc), "defaultItems does not add Matrix Verbs");
 ok(moduleSrc.includes("NeedInterface") && moduleSrc.includes("actorHasConnectInterface"), "AbilityModel#use also gates Connect on interface");
+ok(moduleSrc.includes("abilityPowerRollModifiers"), "Wired use patch uses shared modifier helper");
+ok(moduleSrc.includes("isTemporaryConsoleVerb"), "ready hook strips leftover temporary verbs");
 
 const kitSrc = readFileSync("scripts/wired-kit.mjs", "utf8");
 ok(kitSrc.includes("grantMatrixVerbs") && kitSrc.includes("return 0"), "Wire Kit grant is a no-op");
@@ -224,6 +237,38 @@ const journal = readBomFreeJson("src/packs/rulebook/ghostwire-systems/21-the-wir
 const overview = journal.pages?.find(p => /Scan/.test(p.text?.markdown ?? "") && /Wired Console/.test(p.text?.markdown ?? ""));
 ok(!!overview, "Wire journal still has a Wired Console aside");
 ok(/all nine Matrix Verbs/.test(overview?.text?.markdown ?? ""), "Wire journal aside names all nine");
+
+console.log("\n5) resolveVerbItem + use path (0.3.60)");
+const stamped = markTemporaryConsoleVerbData({
+  _id: "keepMeNot",
+  folder: "folderId",
+  name: "Search",
+  type: "ability",
+  flags: { other: { x: 1 } },
+  system: { _dsid: "matrix-search" },
+});
+ok(!stamped._id && !stamped.folder, "temp verb data drops _id and folder");
+ok(stamped.flags["draw-steel-ghostwire"]?.[TEMP_CONSOLE_VERB_FLAG] === true, "temp flag is set");
+ok(stamped.flags.other?.x === 1, "unrelated flags are preserved");
+ok(isTemporaryConsoleVerb(stamped), "isTemporaryConsoleVerb reads stamped data");
+ok(!isTemporaryConsoleVerb({ flags: {} }), "unflagged item is not temporary");
+
+const msgOpts = verbUseMessageOptions({ dsid: "matrix-search", nodeId: "n1" });
+ok(msgOpts.data?.flags?.["draw-steel-ghostwire"]?.consoleVerb?.dsid === "matrix-search", "messageOptions.data carries consoleVerb");
+ok(!Object.hasOwn(msgOpts, "flags"), "does not put flags on the create-operation options");
+
+const overlaySearch = abilityPowerRollModifiers({ wired: true, hasHacking: true, softwareEdges: 0, state: "overlay" });
+ok(overlaySearch.edges === 1 && overlaySearch.banes === 0, "Overlay Search: Hacking edge, no Overlay meat bane");
+const jackedSearch = abilityPowerRollModifiers({ wired: true, hasHacking: true, softwareEdges: 1, state: "jackedIn" });
+ok(jackedSearch.edges === 3 && jackedSearch.banes === 0, "Jacked In Search: Hacking + Jacked In + Reader");
+const overlayMeat = abilityPowerRollModifiers({ wired: false, hasHacking: true, state: "overlay" });
+ok(overlayMeat.edges === 0 && overlayMeat.banes === 1, "Overlay meat bane only on non-Wired rolls");
+const linkedWired = abilityPowerRollModifiers({ wired: true, hasHacking: false, state: "linked" });
+ok(linkedWired.edges === 0 && linkedWired.banes === 0, "Linked Wired rolls add neither edge nor bane");
+
+ok(/0\.3\.60/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.60");
+ok(/temporarily embeds|temporaryConsoleVerb/.test(readFileSync("docs/rulebook/18-wired-foundry.md", "utf8")), "Foundry notes document temp embed");
+ok(/0\.3\.60/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names 0.3.60 fire path");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

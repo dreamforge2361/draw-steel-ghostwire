@@ -10,6 +10,8 @@ The nine Matrix Verbs still exist (Ghostwire Abilities › **Matrix Verbs**). Th
 
 **Node fires (player path):** all nine — Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write. The player opens the **Wired node facing them** (node token, Token HUD, minimap click, or node sheet). **Connect** is on that applet (works while Disconnected) and requires a **Wire interface**: tagged comms (Burner, street **Commlink**, Pocket Sec, Ghost Relay, Corp Blacklink), a deck / RCC / kit deck, chrome datajack / trodes / Hot-Sim, or **Technomancer** class (deckless Resonance). Without one, Connect warns in chat: “Need a comlink, deck, datajack, or trodes — or be a Technomancer.” Draw Steel’s ability power-roll path uses **that player’s actor**. **Hacking** and **Jacked In** edges, plus a running **Reader** program, still apply through the existing Wired `AbilityModel#use` patch — a Hacker with Padlock-6 + Reader still rolls better than a street punk with a Burner. Hacker Bandwidth Programs stay on the sheet. Connection status icons stay on the token.
 
+**0.3.60 fire path:** `useConsoleVerb` temporarily embeds the verb on the actor (flag `temporaryConsoleVerb`, `render: false`), calls `AbilityModel#use`, then deletes it. Draw Steel 1.1.2 will not complete a power roll / chat card for a parented-but-unembedded Item. The verb is hidden if the sheet redraws during the dialog. Leftover temps are stripped on ready. Do **not** grant the nine as permanent sheet abilities.
+
 **Director Console** still shows the board and connection roster, and can fire the same nine verbs. Console and node panel share `useConsoleVerb`. Players do **not** depend on the GM owning or clicking the Console.
 
 | Verb | Home | Action | Roll |

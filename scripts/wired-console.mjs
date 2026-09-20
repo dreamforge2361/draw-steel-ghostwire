@@ -21,10 +21,13 @@ import {
   consoleVerbGate,
   consoleVerbMetaFromMessage,
   hintVerbDsid,
+  isTemporaryConsoleVerb,
+  markTemporaryConsoleVerbData,
   nextAlert,
   pickConsoleActor,
   pickPlayerVerbActor,
   softTraceDelta,
+  verbUseMessageOptions,
 } from "./wired-console-verbs.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -713,14 +716,56 @@ export function verbStripView(ctx = {}) {
   });
 }
 
+const TEMP_EMBED_OPTIONS = { render: false };
+
+/**
+ * Draw Steel 1.1.2 AbilityModel#use requires a real embedded Item:
+ *   "Abilities can only be used while embedded"
+ * Chat `abilityUse.abilityUuid` is a DocumentUUIDField; an ephemeral
+ * `new Item(data, { parent })` is not in the actor collection, so confirm
+ * throws and no card is created. Embed for the use, then delete.
+ *
+ * @returns {Promise<{ item: Item|null, ephemeral: boolean }>}
+ */
 async function resolveVerbItem(actor, dsid) {
-  const owned = [...(actor?.items ?? [])].find(item => item.system?._dsid === dsid);
-  if (owned) return owned;
+  const owned = [...(actor?.items ?? [])].find(item => item.system?._dsid === dsid && !isTemporaryConsoleVerb(item));
+  if (owned) return { item: owned, ephemeral: false };
+
   const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);
   const source = spec ? await fromUuid(spec.uuid) : null;
-  if (!source) return null;
-  const data = game.items.fromCompendium(source, { clearFolder: true });
-  return new CONFIG.Item.documentClass(data, { parent: actor });
+  if (!source || !actor?.createEmbeddedDocuments) return { item: null, ephemeral: false };
+
+  const leftover = [...actor.items].filter(item => item.system?._dsid === dsid && isTemporaryConsoleVerb(item));
+  if (leftover.length) {
+    await actor.deleteEmbeddedDocuments("Item", leftover.map(item => item.id), TEMP_EMBED_OPTIONS);
+  }
+
+  const data = markTemporaryConsoleVerbData(game.items.fromCompendium(source, { clearFolder: true }));
+  const [created] = await actor.createEmbeddedDocuments("Item", [data], TEMP_EMBED_OPTIONS);
+  return { item: created ?? null, ephemeral: true };
+}
+
+async function releaseTemporaryVerbItem(actor, item) {
+  if (!item?.id || !actor?.items?.get(item.id) || !isTemporaryConsoleVerb(item)) return;
+  try {
+    await actor.deleteEmbeddedDocuments("Item", [item.id], TEMP_EMBED_OPTIONS);
+  } catch (err) {
+    console.warn(`${MODULE_ID} | could not drop temporary Matrix Verb`, err);
+  }
+}
+
+/** Hide the in-flight temp verb so it never appears as a sheet ability (B117). */
+function hideTemporaryConsoleVerbs(app, element) {
+  const root = element instanceof HTMLElement ? element : element?.[0];
+  const actor = app?.document;
+  if (!root?.querySelectorAll || !actor?.items) return;
+  for (const item of actor.items) {
+    if (!isTemporaryConsoleVerb(item)) continue;
+    for (const node of root.querySelectorAll(`[data-item-id="${item.id}"], [data-entry-id="${item.id}"]`)) {
+      const row = node.closest("li, article, .item, .document") ?? node;
+      row.hidden = true;
+    }
+  }
 }
 
 /**
@@ -756,19 +801,25 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     ui.notifications.warn(game.i18n.localize("GHOSTWIRE.WiredConsole.VerbUnknown"));
     return null;
   }
-  const item = await resolveVerbItem(actor, dsid);
-  if (!item?.system?.use) {
-    ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.VerbMissing", { name: spec.lang }));
-    return null;
+  let acquired = { item: null, ephemeral: false };
+  try {
+    acquired = await resolveVerbItem(actor, dsid);
+    const item = acquired.item;
+    if (!item?.system?.use) {
+      ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.VerbMissing", { name: spec.lang }));
+      return null;
+    }
+    const consoleVerb = { dsid, nodeId: node?.id ?? null, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
+    const message = await item.system.use({}, {}, verbUseMessageOptions(consoleVerb));
+    if (message?.setFlag && !consoleVerbMetaFromMessage(message)) {
+      try { await message.setFlag(MODULE_ID, "consoleVerb", consoleVerb); }
+      catch (err) { console.warn(`${MODULE_ID} | could not flag Console verb chat`, err); }
+    }
+    await applyConsoleVerbTrace(message);
+    return message;
+  } finally {
+    if (acquired.ephemeral) await releaseTemporaryVerbItem(actor, acquired.item);
   }
-  const consoleVerb = { dsid, nodeId: node?.id ?? null, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
-  const message = await item.system.use({}, {}, { flags: { [MODULE_ID]: { consoleVerb } } });
-  if (message?.setFlag && !consoleVerbMetaFromMessage(message)) {
-    try { await message.setFlag(MODULE_ID, "consoleVerb", consoleVerb); }
-    catch (err) { console.warn(`${MODULE_ID} | could not flag Console verb chat`, err); }
-  }
-  await applyConsoleVerbTrace(message);
-  return message;
 }
 
 /** GM applies soft Trace once the power-roll tier is on the chat card. */
@@ -884,6 +935,9 @@ export function registerWiredConsole({ getWiredState }) {
     applyConsoleVerbTrace(message).catch(err => console.warn(`${MODULE_ID} | Console verb Trace`, err));
   });
 
+  Hooks.on("renderDrawSteelHeroSheet", hideTemporaryConsoleVerbs);
+  Hooks.on("renderDrawSteelNPCSheet", hideTemporaryConsoleVerbs);
+
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
     if (module) {
@@ -891,6 +945,7 @@ export function registerWiredConsole({ getWiredState }) {
         ...(module.api ?? {}),
         openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings,
         applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor, actorHasConnectInterface,
+        isTemporaryConsoleVerb,
       };
     }
   });
