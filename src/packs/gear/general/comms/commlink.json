@@ -1,12 +1,12 @@
 {
-  "_id": "6XVXN8DuHNp3HkDH",
-  "_key": "!items!6XVXN8DuHNp3HkDH",
-  "name": "GHOSTWIRE.Matrix.Items.StreetDeck.Name",
+  "_id": "GwCommlinkPhone1",
+  "_key": "!items!GwCommlinkPhone1",
+  "name": "GHOSTWIRE.Gear.Items.Commlink.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/console-steel.webp",
+  "img": "icons/commodities/tech/phone-smart-tablet.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Matrix.Items.StreetDeck.Description",
+      "value": "GHOSTWIRE.Gear.Items.Commlink.Description",
       "director": ""
     },
     "source": {
@@ -14,7 +14,7 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "street-deck",
+    "_dsid": "commlink",
     "kind": "other",
     "category": "trinket",
     "echelon": 1,
@@ -32,8 +32,8 @@
     }
   },
   "effects": [],
-  "folder": "7PqOYWHMxEowPWJc",
-  "sort": 0,
+  "folder": "onsSFZfzViokfkSC",
+  "sort": 500,
   "ownership": {
     "default": 0
   },
@@ -42,18 +42,18 @@
       "wired": {
         "connectInterface": true
       },
-      "matrix": {
+      "gear": {
         "echelon": 1,
-        "availability": "professional",
-        "price": 1200,
-        "modSlots": 2,
+        "availability": "street",
+        "price": 150,
+        "modSlots": 1,
         "tags": [
           "Wired"
         ],
         "modFamily": [
-          "deck"
-        ],
-        "role": "deck"
+          "comms",
+          "wired"
+        ]
       }
     }
   }

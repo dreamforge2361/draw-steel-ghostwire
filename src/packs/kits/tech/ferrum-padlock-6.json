@@ -73,5 +73,11 @@
   "ownership": {
     "default": 0
   },
-  "flags": {}
+  "flags": {
+    "draw-steel-ghostwire": {
+      "wired": {
+        "connectInterface": true
+      }
+    }
+  }
 }

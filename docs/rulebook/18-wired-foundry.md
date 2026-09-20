@@ -1,6 +1,6 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20** (pending Michael’s Foundry test).
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53** (pending Michael’s Foundry test).
 **Source of record for rules text:** `docs/rulebook/08-hacker.md` — *The Wired System* (Connection States) and *Matrix Verbs (Universal)*. This page only describes how Foundry implements them; if the two disagree, 08-hacker.md wins and this page (and the pack) gets fixed.
 **Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 
@@ -8,7 +8,7 @@
 
 The nine Matrix Verbs still exist (Ghostwire Abilities › **Matrix Verbs**). They all have the **Wired** keyword and cost no heroic resource: they’re universal, not Hacker Programs, so Bandwidth isn’t involved. They do **not** live on the hero sheet.
 
-**Node fires (player path):** all nine — Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write. The player opens the **Wired node facing them** (node token, Token HUD, minimap click, or node sheet). **Connect** is on that applet (works while Disconnected). Draw Steel’s ability power-roll path uses **that player’s actor**. **Hacking** and **Jacked In** edges, plus a running **Reader** program, still apply through the existing Wired `AbilityModel#use` patch. Hacker Bandwidth Programs stay on the sheet. Connection status icons stay on the token.
+**Node fires (player path):** all nine — Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write. The player opens the **Wired node facing them** (node token, Token HUD, minimap click, or node sheet). **Connect** is on that applet (works while Disconnected) and requires a **Wire interface**: tagged comms (Burner, street **Commlink**, Pocket Sec, Ghost Relay, Corp Blacklink), a deck / RCC / kit deck, chrome datajack / trodes / Hot-Sim, or **Technomancer** class (deckless Resonance). Without one, Connect warns in chat: “Need a comlink, deck, datajack, or trodes — or be a Technomancer.” Draw Steel’s ability power-roll path uses **that player’s actor**. **Hacking** and **Jacked In** edges, plus a running **Reader** program, still apply through the existing Wired `AbilityModel#use` patch — a Hacker with Padlock-6 + Reader still rolls better than a street punk with a Burner. Hacker Bandwidth Programs stay on the sheet. Connection status icons stay on the token.
 
 **Director Console** still shows the board and connection roster, and can fire the same nine verbs. Console and node panel share `useConsoleVerb`. Players do **not** depend on the GM owning or clicking the Console.
 
@@ -32,7 +32,7 @@ Existing worlds: the first GM load strips **all nine** Matrix Verbs off every ac
 
 A hero is **Disconnected**, in **Overlay**, or **Jacked In**. The state shows as a status icon on the hero’s token (Overlay: eye, Jacked In: lightning), in the sheet’s status list, and in a **Wired** box on the Stats tab.
 
-- **Connect** (only while Disconnected) → Overlay, on any result.
+- **Connect** (only while Disconnected, and only with a Wire interface or Technomancer Resonance) → Overlay, on any result.
 - **Toggle Connection State** (only while connected) → Overlay ↔ Jacked In.
 - **Jack Out** (only while connected) → Disconnected.
 - The other verbs refuse to run while Disconnected.
@@ -61,7 +61,7 @@ A popout window that makes the net a shared place for the scene everyone is view
 ### Panels
 
 - **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Disconnected). Click a row to select the runner who will fire Console verbs (defaults to the active combatant, else the first Connected actor). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
-- **Matrix Verbs (B117)** — all nine. **Players fire these from the node they’re facing** (token / node panel), including Connect. The Console strip is the Director roster path. Connect works while Disconnected; the other eight need Overlay / Jacked In. Rolls that actor’s Instinct or Logic where the card rolls; Hacking / Jacked In / Reader edges apply. Soft Trace on a tier-1 active rolled verb (not Scan).
+- **Matrix Verbs (B117)** — all nine. **Players fire these from the node they’re facing** (token / node panel), including Connect. The Console strip is the Director roster path. Connect works while Disconnected if the runner has a commlink / deck / datajack / trodes (or is a Technomancer); the other eight need Overlay / Jacked In. Rolls that actor’s Instinct or Logic where the card rolls; Hacking / Jacked In / Reader edges apply. Soft Trace on a tier-1 active rolled verb (not Scan).
 - **Nodes** — the scene’s nodes: Track, Rating, an Integrity bar (Track 2), and a mini Trace Alert track. The eye icon (Director only) shows whether players can see the node.
 - **Selected node** — the System Stat Card read off the Node Rating (08-hacker.md): Breach DC, ICE layers, Biofeedback Value with the Overlay (×0.5, min 1) and Jacked In (×1.5) figures, Integrity, and the 12-step Trace Alert with what the current band does. Track 1 nodes have no Integrity or ICE.
 - **Wire (B106 ping/spoof)** — a log of the last ~20 Director pings, visible to anyone with the Console open. The Director types a short line and **Send**. Chat is **public** or a **whisper** to users whose controlled token is Overlay or Jacked In. Stored on `flags.draw-steel-ghostwire.wiredPings` (also reads `wiredBoard.pings`). Does not move Trace. Players cannot send.

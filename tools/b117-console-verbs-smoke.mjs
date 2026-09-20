@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B117 Matrix Verbs smoke — all nine on the node-facing applet (module 0.3.52).
+ * B117 Matrix Verbs smoke — all nine on the node-facing applet (module 0.3.53).
  *
  * Run: node tools/b117-console-verbs-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
@@ -20,7 +20,9 @@ import {
 import {
   CONSOLE_SLICE,
   abilityTierFromMessage,
+  actorHasConnectInterface,
   consoleVerbGate,
+  itemIsConnectInterface,
   nextAlert,
   pickConsoleActor,
   pickPlayerVerbActor,
@@ -41,10 +43,10 @@ function readBomFreeJson(path) {
 
 const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matrix-scan,matrix-navigate,matrix-ping,matrix-broadcast,matrix-search,matrix-read-write";
 
-console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.52)\n");
+console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.53)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.52", `module.json is 0.3.52 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.53", `module.json is 0.3.53 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -93,8 +95,9 @@ ok(pickPlayerVerbActor({ candidates: [{ uuid: "Actor.disc", connected: false, ow
 ok(!consoleVerbGate({}).ok && consoleVerbGate({}).reason === "Actor", "no actor");
 ok(consoleVerbGate({ actorUuid: "Actor.b", owned: false, nodeId: "n1", connected: true, dsid: "matrix-scan" }).reason === "Owner", "not owner");
 ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true, dsid: "matrix-scan" }).reason === "Node", "Scan needs a node");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: false, dsid: "matrix-connect" }).ok, "Connect works while Disconnected without a node");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true, dsid: "matrix-connect" }).reason === "AlreadyConnected", "Connect disabled while already connected");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: false, dsid: "matrix-connect", hasInterface: true }).ok, "Connect works while Disconnected without a node");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: false, dsid: "matrix-connect", hasInterface: false }).reason === "Interface", "Connect needs a Wire interface");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true, dsid: "matrix-connect", hasInterface: true }).reason === "AlreadyConnected", "Connect disabled while already connected");
 ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: false, nodeId: "n1", dsid: "matrix-scan" }).reason === "Disconnected", "Scan while Disconnected");
 ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true, revealed: false, isGM: false, dsid: "matrix-scan" }).reason === "Hidden", "player cannot fire on a hidden node");
 ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true, dsid: "matrix-broadcast" }).ok, "Broadcast while Connected + node");
@@ -112,11 +115,13 @@ ok(abilityTierFromMessage({ system: { parts: [{ type: "abilityResult", tier: 1 }
 console.log("\n3) Node panel / Console / kit / defaultItems / packs");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("useConsoleVerb") && consoleSrc.includes("verbStripView"), "shared fire + strip");
-ok(consoleSrc.includes("dsid"), "useConsoleVerb passes per-verb dsid into the gate");
+ok(consoleSrc.includes("hasInterface") && consoleSrc.includes("actorHasConnectInterface"), "Console passes Connect interface into the gate");
+ok(consoleSrc.includes("VerbNeed${gate.reason}"), "Console warns with gate reason");
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
 
 const nodeSrc = readFileSync("scripts/wired-node-verbs.mjs", "utf8");
 ok(nodeSrc.includes("useConsoleVerb") && nodeSrc.includes("pickPlayerVerbActor"), "node panel shares fire path");
+ok(nodeSrc.includes("hasInterface") && nodeSrc.includes("actorHasConnectInterface"), "node panel passes Connect interface");
 ok(nodeSrc.includes("openWiredNodePanel"), "node panel opens");
 const nodeTpl = readFileSync("templates/wired-node-panel.hbs", "utf8");
 ok(nodeTpl.includes("data-action=\"fireVerb\"") && nodeTpl.includes("{{#each verbs}}"), "node panel has the verb strip");
@@ -126,7 +131,7 @@ const moduleSrc = readFileSync("scripts/module.mjs", "utf8");
 ok(moduleSrc.includes("matrixVerbsApplet") && moduleSrc.includes("MATRIX_VERB_DSIDS"), "world strip uses matrixVerbsApplet + all nine dsids");
 ok(moduleSrc.includes("defaultItems.delete") && moduleSrc.includes("MATRIX_VERBS"), "defaultItems deletes Matrix Verbs");
 ok(!/defaultItems\.add\(uuid\)/.test(moduleSrc) && !/for \(const uuid of SHEET_VERBS\)/.test(moduleSrc), "defaultItems does not add Matrix Verbs");
-ok(!moduleSrc.includes("isWireKitVerb"), "ready-hook is not limited to kit-granted copies");
+ok(moduleSrc.includes("NeedInterface") && moduleSrc.includes("actorHasConnectInterface"), "AbilityModel#use also gates Connect on interface");
 
 const kitSrc = readFileSync("scripts/wired-kit.mjs", "utf8");
 ok(kitSrc.includes("grantMatrixVerbs") && kitSrc.includes("return 0"), "Wire Kit grant is a no-op");
@@ -146,6 +151,39 @@ for (const file of pregenFiles) {
 }
 ok(pregenHits === 0, "pregen actors do not embed Matrix Verbs");
 
+function walkJson(dir) {
+  const out = [];
+  for (const name of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, name.name);
+    if (name.isDirectory()) out.push(...walkJson(path));
+    else if (name.name.endsWith(".json")) out.push(path);
+  }
+  return out;
+}
+const taggedDsids = new Set();
+for (const path of walkJson("src/packs")) {
+  const text = readFileSync(path, "utf8");
+  if (!text.includes('"connectInterface": true')) continue;
+  const json = JSON.parse(text);
+  if (json.system?._dsid) taggedDsids.add(json.system._dsid);
+}
+const requiredTags = [
+  "burner", "commlink", "pocket-sec", "ghost-relay", "corp-blacklink",
+  "scrapdeck", "street-deck", "blackdeck", "ghostbox", "fairlight-ghost",
+  "fleet-deck",
+  "datajack", "datajack-soft", "datajack-dongle", "trode-net", "hot-sim-module",
+  "nyx-switchblade", "ferrum-padlock-6", "meridian-lookout",
+];
+ok(requiredTags.every(d => taggedDsids.has(d)), `connectInterface tags (${[...taggedDsids].sort().join(",")})`);
+ok(!taggedDsids.has("spoof-kit"), "Spoof Kit is not a Connect interface");
+const commlink = readBomFreeJson("src/packs/gear/general/comms/commlink.json");
+ok(commlink.system._dsid === "commlink" && commlink.flags["draw-steel-ghostwire"].wired.connectInterface, "street Commlink SKU");
+ok(itemIsConnectInterface(commlink), "itemIsConnectInterface sees Commlink");
+ok(actorHasConnectInterface({ items: [commlink] }), "actor with Commlink can Connect");
+ok(!actorHasConnectInterface({ items: [] }), "empty actor cannot Connect");
+ok(actorHasConnectInterface({ classDsid: "technomancer", items: [] }), "Technomancer Connects deckless");
+ok(!actorHasConnectInterface({ classDsid: "hacker", items: [] }), "Hacker still needs a deck or comms");
+
 const css = readFileSync("styles/ghostwire.css", "utf8");
 ok(css.includes(".wc-verb-strip") && css.includes(".ghostwire-wired-node-panel"), "CSS for verb strip + node panel");
 
@@ -157,21 +195,27 @@ ok(!lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("sheet"), "lang Di
 ok(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected.includes("connected"), "lang AlreadyConnected");
 ok(lang.GHOSTWIRE.WiredConsole.VerbTooltipAuto.includes("no roll"), "lang auto tooltip");
 ok(lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("all nine") || lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("nine"), "lang migration names all nine");
-ok(lang.GHOSTWIRE.WiredNode.NeedActor.includes("Connect"), "lang node NeedActor");
+ok(lang.GHOSTWIRE.WiredConsole.VerbNeedInterface.includes("Technomancer"), "lang Interface names Technomancer");
+ok(lang.GHOSTWIRE.Wired.Warnings.NeedInterface.includes("comlink"), "lang Wired NeedInterface");
+ok(lang.GHOSTWIRE.Gear.Items.Commlink.Name === "Commlink", "lang street Commlink");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does <strong>not</strong> copy") || lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does not"), "Wire Kit does not copy verbs");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("Read/Write"), "Wire Kit description names all nine");
 
 const spike = readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8");
-ok(/LOCKED 2026-09-20/.test(spike) && /0\.3\.52/.test(spike), "spike is locked and names 0.3.52");
+ok(/LOCKED 2026-09-20/.test(spike) && /0\.3\.53/.test(spike), "spike is locked and names 0.3.53");
 ok(/all nine|all 9/.test(spike) && /Mama/.test(spike) && /defaultItems/.test(spike) && /Wire Kit/.test(spike), "spike locks all 9 on applet and sheet cleanup");
 ok(/pregens/i.test(spike), "spike names pregens");
+ok(/Anyone vs Hacker vs Technomancer/.test(spike) && /Padlock-6/.test(spike), "spike documents anyone vs Hacker vs Technomancer");
+ok(/connectInterface/.test(spike) && /Commlink/.test(spike) && /Technomancer/.test(spike), "spike documents Connect interface allow-list");
+ok(/No new/.test(spike) && /everyone gets Programs/.test(spike), "spike refuses everyone-gets-Programs");
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
+ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry), "Foundry notes name Connect interface");
 ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the sheet");
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
 ok(!/stay on the sheet/.test(raw), "Wire RAW no longer parks Connect on the sheet");
-ok(/0\.3\.52/.test(readFileSync("README.md", "utf8")) && /all nine/i.test(readFileSync("README.md", "utf8")), "README changelog 0.3.52 all nine");
+ok(/0\.3\.53/.test(readFileSync("README.md", "utf8")) && /all nine/i.test(readFileSync("README.md", "utf8")), "README changelog 0.3.53 all nine");
 
 const journal = readBomFreeJson("src/packs/rulebook/ghostwire-systems/21-the-wire.json");
 const overview = journal.pages?.find(p => /Scan/.test(p.text?.markdown ?? "") && /Wired Console/.test(p.text?.markdown ?? ""));

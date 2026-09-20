@@ -1,4 +1,5 @@
 import { MATRIX_VERB_DSIDS, MATRIX_VERBS } from "./wired-verbs.mjs";
+import { actorHasConnectInterface } from "./wired-console-verbs.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
@@ -172,6 +173,7 @@ function patchWiredAbilities() {
     };
 
     if ((verb === "connect") && (state !== "disconnected")) return warn("AlreadyConnected");
+    if ((verb === "connect") && !actorHasConnectInterface(actor)) return warn("NeedInterface");
     if (verb && (verb !== "connect") && (state === "disconnected")) return warn("NotConnected");
     if ((state === "jackedIn") && !wired && this.power.roll.enabled) return warn("JackedInPhysical");
 

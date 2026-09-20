@@ -152,13 +152,48 @@ export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, ch
   return rows[0]?.uuid ?? null;
 }
 
+const MODULE_FLAG = "draw-steel-ghostwire";
+const CONNECT_ROLES = new Set(["deck", "rcc", "interface"]);
+
+function actorItems(actor) {
+  const items = actor?.items;
+  if (!items) return [];
+  if (Array.isArray(items)) return items;
+  if (typeof items[Symbol.iterator] === "function") return [...items];
+  return [];
+}
+
+export function actorClassDsid(actor) {
+  return actor?.system?.class?.system?._dsid
+    ?? actor?.classDsid
+    ?? actorItems(actor).find(item => item.type === "class")?.system?._dsid
+    ?? null;
+}
+
+/** Tagged `flags.draw-steel-ghostwire.wired.connectInterface`, or a matrix deck / RCC / interface. */
+export function itemIsConnectInterface(item) {
+  const gw = item?.flags?.[MODULE_FLAG] ?? {};
+  if (gw.wired?.connectInterface === true) return true;
+  return CONNECT_ROLES.has(gw.matrix?.role);
+}
+
+/**
+ * Connect (and thus the rest of the applet) needs a Wire interface:
+ * tagged comms / deck / RCC / chrome / kit, or Technomancer class (deckless Resonance).
+ */
+export function actorHasConnectInterface(actor) {
+  if (actorClassDsid(actor) === "technomancer") return true;
+  return actorItems(actor).some(itemIsConnectInterface);
+}
+
 /**
  * @returns {{ ok: boolean, reason: string|null }}
  * reason is a GHOSTWIRE.WiredConsole.VerbNeed* key suffix
- * (Actor / Node / Owner / Hidden / Disconnected / AlreadyConnected).
+ * (Actor / Node / Owner / Hidden / Disconnected / AlreadyConnected / Interface).
  * Pass dsid for per-verb rules (Connect while disconnected; action verbs need a node).
+ * hasInterface defaults true so older callers stay permissive; production always passes the live actor check.
  */
-export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed = true, isGM = true, dsid = null } = {}) {
+export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed = true, isGM = true, dsid = null, hasInterface = true } = {}) {
   if (!actorUuid) return { ok: false, reason: "Actor" };
   if (!owned) return { ok: false, reason: "Owner" };
   const spec = dsid ? consoleSliceByDsid(dsid) : null;
@@ -167,6 +202,7 @@ export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed 
   if (nodeId && !isGM && !revealed) return { ok: false, reason: "Hidden" };
   if (dsid === "matrix-connect") {
     if (connected) return { ok: false, reason: "AlreadyConnected" };
+    if (!hasInterface) return { ok: false, reason: "Interface" };
     return { ok: true, reason: null };
   }
   if (!connected) return { ok: false, reason: "Disconnected" };

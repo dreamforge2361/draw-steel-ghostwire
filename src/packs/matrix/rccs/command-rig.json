@@ -39,6 +39,9 @@
   },
   "flags": {
     "draw-steel-ghostwire": {
+      "wired": {
+        "connectInterface": true
+      },
       "matrix": {
         "echelon": 3,
         "availability": "military",

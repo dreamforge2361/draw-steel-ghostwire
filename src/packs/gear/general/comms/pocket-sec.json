@@ -39,6 +39,9 @@
   },
   "flags": {
     "draw-steel-ghostwire": {
+      "wired": {
+        "connectInterface": true
+      },
       "gear": {
         "echelon": 1,
         "availability": "professional",

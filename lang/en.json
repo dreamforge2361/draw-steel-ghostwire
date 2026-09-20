@@ -4287,6 +4287,10 @@
           "Name": "Burner",
           "Description": "<p><em>Burner · DataStick Comm · disposable transceiver</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥60 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Wired, Consumable-ish</p><p><strong>Profile:</strong> Basic encrypted call/text; no trace-hardening. Ditch after a run.</p><p><strong>Mod slots (1):</strong> Fill them with comms / Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.TnVSQXLfnExVYdp0]{Encryption Dongle}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.dfRgtkQz5MjqzA9G]{Burner Mode Chip}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
         },
+        "Commlink": {
+          "Name": "Commlink",
+          "Description": "<p><em>Commlink · Street Phone · everyday wireless</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥150 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Wired</p><p><strong>Profile:</strong> The default everyday phone. Voice, text, and a thin Matrix persona — enough to Connect. Not a deck; does not replace Pocket Sec or a Burner.</p><p><strong>Mod slots (1):</strong> Fill them with comms / Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.TnVSQXLfnExVYdp0]{Encryption Dongle}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.dfRgtkQz5MjqzA9G]{Burner Mode Chip}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
+        },
         "PocketSec": {
           "Name": "Pocket Sec",
           "Description": "<p><em>Pocket Sec · CommLink Mk II · personal network node</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥500 · <strong>Mod slots:</strong> 2 · <strong>Tags:</strong> Wired</p><p><strong>Profile:</strong> Standard runner's phone-computer-node; runs your Matrix persona; holds up to 2 program mods.</p><p><strong>Mod slots (2):</strong> Fill them with comms / Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.TnVSQXLfnExVYdp0]{Encryption Dongle}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.dfRgtkQz5MjqzA9G]{Burner Mode Chip}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
@@ -6234,6 +6238,7 @@
       "Warnings": {
         "NotConnected": "{actor} isn’t connected to the Wired. Use Connect first.",
         "AlreadyConnected": "{actor} is already connected to the Wired ({state}). Use Toggle Connection State or Jack Out.",
+        "NeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
         "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle to Overlay or Jack Out first."
       },
       "Changed": "{actor}: {state}.",
@@ -6366,6 +6371,7 @@
       "VerbNeedOwner": "You don't control that runner.",
       "VerbNeedDisconnected": "Disconnected — use Connect on this node first.",
       "VerbNeedAlreadyConnected": "Already connected — Jack Out or Toggle, or pick another verb.",
+      "VerbNeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
       "VerbNeedHidden": "That node is hidden from runners.",
       "VerbPlayerPath": "Players: open the node token facing you. Connect lives there with the other eight verbs. This strip is the Director roster path.",
       "VerbUnknown": "Unknown Matrix Verb.",

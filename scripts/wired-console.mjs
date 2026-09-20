@@ -16,6 +16,7 @@ import { addWireKitToSelected } from "./wired-kit.mjs";
 import {
   CONSOLE_SLICE,
   abilityTierFromMessage,
+  actorHasConnectInterface,
   consoleVerbGate,
   consoleVerbMetaFromMessage,
   hintVerbDsid,
@@ -200,6 +201,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         stateLabel: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`),
         connected: state !== "disconnected",
         owned: isGM || actor.isOwner,
+        hasInterface: actorHasConnectInterface(actor),
       });
     }
     const order = { jackedIn: 0, overlay: 1, disconnected: 2 };
@@ -221,6 +223,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       owned: !!verbActor?.owned,
       revealed: selected ? !!selected.revealed : true,
       isGM,
+      hasInterface: !!verbActor?.hasInterface,
     };
     const verbs = verbStripView(verbCtx);
     const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
@@ -730,9 +733,17 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     revealed: node ? !!node.revealed : true,
     isGM: !!game.user.isGM,
     dsid,
+    hasInterface: actorHasConnectInterface(actor),
   });
   if (!gate.ok) {
-    ui.notifications.warn(game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`));
+    const warn = game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`);
+    ui.notifications.warn(warn);
+    if (gate.reason === "Interface") {
+      await ChatMessage.implementation.create({
+        speaker: ChatMessage.implementation.getSpeaker({ actor }),
+        content: `<p>${warn}</p>`,
+      });
+    }
     return null;
   }
   const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);
@@ -874,7 +885,7 @@ export function registerWiredConsole({ getWiredState }) {
       module.api = {
         ...(module.api ?? {}),
         openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings,
-        applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor,
+        applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor, actorHasConnectInterface,
       };
     }
   });

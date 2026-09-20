@@ -4,7 +4,7 @@
 
 import { RATING } from "./wired-node-templates.mjs";
 import { getBoard, useConsoleVerb, verbStripView } from "./wired-console.mjs";
-import { consoleVerbGate, hintVerbDsid, pickPlayerVerbActor } from "./wired-console-verbs.mjs";
+import { actorHasConnectInterface, consoleVerbGate, hintVerbDsid, pickPlayerVerbActor } from "./wired-console-verbs.mjs";
 import { boardScene, isNodeActor, nodeRefFromToken, placedNodeActor } from "./wired-node-tokens.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -36,6 +36,7 @@ function playerVerbCandidates() {
       stateLabel: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`),
       connected: state !== "disconnected",
       owned: game.user.isGM || actor.isOwner,
+      hasInterface: actorHasConnectInterface(actor),
     });
   };
   for (const token of canvas?.tokens?.controlled ?? []) add(token.actor);
@@ -109,6 +110,7 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
       owned: !!runner?.owned,
       revealed: !!node.revealed,
       isGM,
+      hasInterface: !!runner?.hasInterface,
     };
     const gate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
     const card = RATING[node.rating] ?? RATING[1];
