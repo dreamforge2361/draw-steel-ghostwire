@@ -7324,9 +7324,10 @@
         "Name": "Gold Line",
         "Folder": "Deadhead",
         "LevelInterior": "Interior",
-        "RoofsTile": "Roofs (overhead)",
-        "Injected": "Gold Line is ready under Scenes → Deadhead. Roofs sit on the Tiles layer (elevation 1, FADE — clear under tokens).",
-        "Refreshed": "Gold Line restamped to stills and the locked roof (3232, 475, 6472×958, elev 1, FADE). Re-activate the Scene if the canvas is already open."
+        "InteriorTile": "Interior (motion)",
+        "RoofsTile": "Roofs (motion)",
+        "Injected": "Gold Line is ready under Scenes → Deadhead. Two Tiles play the loops. Hide Roofs (motion) when the crew goes inside.",
+        "Refreshed": "Gold Line restamped to two motion tiles (Level background cleared). Hide Roofs (motion) when the crew goes inside. Re-activate the Scene if it is already open."
       }
     },
     "Lore": {

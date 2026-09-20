@@ -7,15 +7,15 @@ Interior / venue play surfaces (not district overviews). **Native resolution pre
 | `mama-cassavir-club.webp` | Mama Cassavir's club (Switchboard) | 1280×720 | Michael-approved still **B3**. Foundry 5 ft–friendly furniture scale. |
 | `mama-cassavir-club-loop.webm` | same (animated) | 1280×720, VP9, 24 fps, ~4.2 s | **Preferred Foundry** loop v1 (Michael thumbs-up). Neon brightness/saturation ping-pong; no layout drift. |
 | `mama-cassavir-club-loop.mp4` | same (animated) | 1280×720, H.264, 24 fps, ~4.2 s | Fallback / preview of the same loop. |
-| `gold-line/map-gold-line-interior.webp` | Gold Line (Deadhead) | 6472×958 | Dual Hammerhead interior still (CyberMaps stitch). **Default** Level background until video is proven. |
-| `gold-line/map-gold-line-interior-loop.mp4` | same (animated BG) | 6472×958, H.264, 24 fps, 8 s | Opt-in loop (finite duration). World inject: **Scenes → Deadhead → Gold Line**. |
-| `gold-line/map-gold-line-interior-loop.webm` | same (animated BG) | 6472×958, VP9, 24 fps, 8 s | Last video choice. Stream `duration=N/A` — Foundry can throw on `currentTime`. |
-| `gold-line/map-gold-line-roofs.webp` | same (overhead) | 6472×958 | **Default** roof tile. FADE occlusion — clear under tokens. |
-| `gold-line/map-gold-line-roofs-loop.mp4` | same (overhead, animated) | 6472×958, H.264, 24 fps, 8 s | Opt-in loop (finite duration). |
-| `gold-line/map-gold-line-roofs-loop.webm` | same (overhead, animated) | 6472×958, VP9, 24 fps, 8 s | Last video choice. Stream `duration=N/A`. |
+| `gold-line/map-gold-line-interior.webp` | Gold Line (Deadhead) | 6472×958 | Dual Hammerhead interior still (CyberMaps stitch). Fallback if MP4 missing. |
+| `gold-line/map-gold-line-interior-loop.mp4` | same (Interior tile) | 6472×958, H.264, 24 fps, 8 s | **Preferred** Interior (motion) tile. World inject: **Scenes → Deadhead → Gold Line**. |
+| `gold-line/map-gold-line-interior-loop.webm` | same | 6472×958, VP9, 24 fps, 8 s | After mp4. Stream `duration=N/A`. |
+| `gold-line/map-gold-line-roofs.webp` | same (Roofs tile) | 6472×958 | Roofs still fallback. |
+| `gold-line/map-gold-line-roofs-loop.mp4` | same | 6472×958, H.264, 24 fps, 8 s | **Preferred** Roofs (motion) tile. |
+| `gold-line/map-gold-line-roofs-loop.webm` | same | 6472×958, VP9, 24 fps, 8 s | After mp4. Stream `duration=N/A`. |
 
 Foundry path: `modules/draw-steel-ghostwire/assets/maps/battlemaps/<file>`
 
-Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene from `data/scenes/gold-line.json` (grid 208 / 5 ft). **Stills default** until video is proven. Roofs tile is on the **Tiles** layer at Michael lock **x=3232, y=475, 6472×958, elevation 1, locked, occlusion FADE (mode 1, alpha 0)** — clear under tokens (Tile registration is not 0,0). If a 0.3.36–0.3.37 world has a drifted or mis-scaled roof, `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
+Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene from `data/scenes/gold-line.json` (grid 208 / 5 ft). **Do not use Level background video.** Two Tiles: Interior (motion) at 0,0 and Roofs (motion) at **3232, 475** (prefer `*-loop.mp4`). Director hides roofs when the crew goes inside. `await game.ghostwire.ensureGoldLineScene({ force: true })` restamps. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
 
 PNG originals stay local under `_png-backup/` (gitignored), same policy as `assets/maps/districts/`.

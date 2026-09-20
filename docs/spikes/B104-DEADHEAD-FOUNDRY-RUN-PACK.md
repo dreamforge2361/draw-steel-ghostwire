@@ -101,7 +101,7 @@ There is **no** Scene pack in this module (B72 / B99 / B100 drop files onto worl
 | Crew hangout | Rundown flat, wrecked bad neighborhood |
 | Mama’s Club | **Reuse** B99 (`assets/maps/battlemaps/mama-cassavir-club.webp` / `-loop.webm`) |
 | Canyon approach / drone sling strip | Board beat; garbage-truck-sized trash freighter |
-| Gold Line (dual Hammerhead) | **SHIPPED 0.3.36 (B106) / duration + roof-lock hotfix 0.3.39.** World inject **Scenes → Deadhead → Gold Line**. Stills default until video is proven. Roof baked at x=3232, y=475, 6472×958, elev 1, locked, occlusion FADE (mode 1, alpha 0) — clear under tokens. Grid 208 / 5 ft. Beat remap L1 tail → R3 cab in the SoR + **Gold Line — Map Notes** journal. CyberMaps stitch only — do not drop a generated train. |
+| Gold Line (dual Hammerhead) | **SHIPPED 0.3.36 (B106) / two-tile working setup 0.3.39.** World inject **Scenes → Deadhead → Gold Line**. Empty Level background (video broken). Interior tile `goldLineInterior` at 0,0 + roofs tile `goldLineRoofs` at 3232, 475 (prefer `*-loop.mp4`). Occlusion NONE — Director hides roofs when the crew goes inside. Grid 208 / 5 ft. Beat remap L1 tail → R3 cab in the SoR + **Gold Line — Map Notes** journal. CyberMaps stitch only — do not drop a generated train. |
 
 Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG uniform stylization reusable.
 
