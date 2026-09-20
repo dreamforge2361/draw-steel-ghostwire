@@ -1,8 +1,8 @@
 # Spike B104 — Deadhead Foundry run pack
 
 **Date:** 2026-09-19  
-**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded)  
-**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). Remaining journals / items / other scenes still to build.  
+**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded) · **0.3.41** (live-scene lock) · **0.3.42** (Director journal)  
+**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). **Director journal shipped 0.3.42.** Remaining: wafers as Gear items, hangout / canyon scenes.  
 **Cargo lock (2026-09-20):** Gold Line is a **cargo maglev**, not a passenger train. Ignore leftover passenger-car / passenger-PA wording below. Live SoR + sidecar: `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, `GOLD-LINE-CARGO-REMAP.md` (LOCKED / folded).  
 **Journals (rulebook / lore / handbook / flats / pregen-fiction):** **not** regenerated.  
 **Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B39 Run Generator world folder, B99 Mama’s Club map, **B106 Gold Line map pack**.
@@ -58,7 +58,7 @@ One Journal Entry in folder **Deadhead** (or one journal per group if a mega-pag
 | Overview | Logline, pay table, hard rules, cast & kit, consist |
 | Trace 1 | Stir — cam / HUD tick |
 | Trace 2 | Stir — maglock LED |
-| Trace 3 | Stir — passenger PA glitch |
+| Trace 3 | Stir — freight intercom glitch |
 | Trace 4 | Stir — Watchdog stirs |
 | Trace 5 | Malice — heat / meat Alert may wake |
 | Trace 6 | Malice — ICE spooling; telegraph monitors |
@@ -70,7 +70,7 @@ One Journal Entry in folder **Deadhead** (or one journal per group if a mega-pag
 | Trace 12 | Lockout — forced stop; wipe if nested; reset track to 6 |
 | Beat 0 | Hangout + Mama wafer + discovery + call Nox |
 | Beat 1 | Canyon drone sling board |
-| Beat 2 | Passenger → security crawl / search |
+| Beat 2 | Freight crawl → L3 security / search |
 | Beat 3 | Wire + capsule crack; call-home ~7–8 |
 | Beat 4 | Wafer-out clock + roof Recall bail |
 | Beat 5 | Return + moral choice |
@@ -80,7 +80,7 @@ One Journal Entry in folder **Deadhead** (or one journal per group if a mega-pag
 
 Also keep Overview (or a short Trace 0 page) stating the **+1 Trace max per round** cap, bands (quiet 0 / stir 1–4 / malice 5–8 / hunting 9–11 / lockout 12), and what does **not** raise Trace.
 
-Prefer a generator (`tools/deadhead-to-journals.mjs`) that reads the SoR markdown the same way B42b / B46 do, so the md stays single source of truth. 16-char alphanumeric `_id`s. Lang keys for journal / page names.
+Generator: `tools/deadhead-to-journals.mjs` (reads the SoR + cargo remap sidecar). 16-char alphanumeric `_id`s. Lang keys for journal / page names. Smoke: `node tools/deadhead-director-smoke.mjs`.
 
 ## Items (content pass)
 
@@ -88,7 +88,7 @@ Ship as `type: "treasure"` in **Ghostwire Gear** (`src/packs/gear/…`), then `@
 
 | Item | Notes from SoR |
 |---|---|
-| Mama’s Deadhead Brief (Gold Line) | Data wafer / portable gear. ~¥50; worthless to fence (Mama-marked). Baseline: job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, 5-car Gold Line **without** naming the capsule car. **Not** on the wafer: exact car; R2–3 / R3 Watchdog; +1 Trace / 2 rounds wafer-out; full faction doors until discovery D. |
+| Mama’s Deadhead Brief (Gold Line) | Data wafer / portable gear. ~¥50; worthless to fence (Mama-marked). Baseline: job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev **without** naming the capsule chamber. **Not** on the wafer: exact chamber; R1 Watchdog / R2 cams; +1 Trace / 2 rounds wafer-out; full faction doors until discovery D. |
 | ARG courier capsule / live wafer | Plothook notes for the three buyers (Mama / corp / Signal). Wipe if the train stops while the live wafer is still in the capsule. |
 
 Placeholder `icons/` art is fine until an item-art pass. **Do not generate art in the content PR unless Michael drops files.**
@@ -117,7 +117,7 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 - Pay: Mama **¥8,000** / corp **¥14,000** / Signal **¥2,000 + weird**. Discovery = **intel only** (no cash bonuses). Half base only if the prize was wiped/lost.
 - Wipe if the train **stops while the live wafer is still inside its carry capsule**. After extract the train **will** stop. Bail before ARG response. No intentional early emergency stop while nested.
 - Trace **+1 max per round**; full ladder **1–12** (track 0–12). ICE call-home ~**7–8**; **Block success → Trace −1**. Failed / unmonitored call-home does **not** auto +1 Trace.
-- ARG uniforms; **Nox** garbage-truck freighter; **5 cars, 20 ft**; exact car only on **great success** in discovery.
+- ARG uniforms; **Nox** garbage-truck freighter; **cargo maglev L1–R3, 20 ft**; exact chamber only on **great success** in discovery.
 - **No rival twist** (v1 clean heist). **4h** clock, beats **0–5**.
 - L1 Hacker / Technomancer do **not** ship a class “Trace −1” button. Deadhead’s call-home **Block** is the scenario Trace −1. **Do not invent Trace −1 class abilities.**
 
@@ -132,16 +132,16 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 
 ## Done when (content pass)
 
-- Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist.
-- Both wafers exist as Gear items and are linked from the Items page.
-- Four scenes listed above exist in the world (Mama reused; **Gold Line injected 0.3.36**); pack journal points at them.
-- Design locks above match the SoR verbatim (¥ / wipe / Trace cap / ARG / Nox / 5×20 ft / no twist / 4h / ping-spoof mention).
+- Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist. **Shipped 0.3.42.**
+- Both wafers exist as Gear items and are linked from the Items page. *(journal notes shipped; Gear SKUs still open)*
+- Four scenes listed above exist in the world (Mama reused; **Gold Line = Michael’s live Scene**); pack journal points at them. Hangout / canyon still to set up.
+- Design locks above match the SoR verbatim (¥ / wipe / Trace cap / ARG / Nox / L1–R3 cargo / 20 ft / no twist / 4h / ping-spoof mention).
 - No new class abilities. No unrelated journal regen. One module patch.
 
 ## Michael checklist
 
 1. SoR opens at `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`.
-2. Compendium **Ghostwire Runs** appears under the **Ghostwire** pack folder; players cannot see it; folder **Deadhead** is empty until the content pass.
+2. Compendium **Ghostwire Runs** appears under the **Ghostwire** pack folder; players cannot see it; folder **Deadhead** holds **Deadhead — Director** + **Gold Line — Map Notes**.
 3. Pay table is Mama ¥8k / corp ¥14k / Signal ¥2k+weird; discovery intel-only.
 4. Wipe-if-stop-while-nested and post-extract stop are both written.
 5. Trace +1/round cap + call-home ~7–8 (block → Trace −1) present; no L1 class Trace −1 invented.

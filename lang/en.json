@@ -7312,11 +7312,24 @@
         "Deadhead": "Deadhead"
       },
       "Journals": {
-        "GoldLineMap": "Gold Line — Map Notes"
+        "GoldLineMap": "Gold Line — Map Notes",
+        "DeadheadDirector": "Deadhead — Director"
       },
       "Pages": {
         "GoldLinePlate": "Plate",
-        "GoldLineBeats": "Beat remap"
+        "GoldLineBeats": "Beat remap",
+        "Overview": "Overview",
+        "TraceAlert": "Trace Alert",
+        "CastKit": "Cast & Consist",
+        "Beat0": "Beat 0 — Discovery",
+        "Beat1": "Beat 1 — Board",
+        "Beat2": "Beat 2 — Freight Crawl",
+        "Beat3": "Beat 3 — Wire",
+        "Beat4": "Beat 4 — Bail",
+        "Beat5": "Beat 5 — Choice",
+        "Items": "Items",
+        "Opposition": "Opposition",
+        "FoundryChecklist": "Foundry Checklist"
       }
     },
     "Scenes": {
