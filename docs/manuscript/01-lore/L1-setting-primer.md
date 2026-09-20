@@ -1453,7 +1453,7 @@ Ossian Reach does not drive like a twentieth-century grid. The hive's street lay
 ### Locked street picture
 
 - Most vehicles in this world are **electric**.
-- **Street / POV** (personally owned vehicles): mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground. They are **not** free-flight sky cars. A commuter skirt, a courier cycle on fans, a Hoverpad — they skim the deck, hop a flood, and stack in the low lane. The limiter is law and hardware.
+- **Street / POV** (personally owned vehicles): mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground. They are **not** free-flight sky cars. A commuter skirt, a courier cycle on fans, a **Lane-Hopper**, a Hoverpad — they skim the deck, hop a flood, and stack in the low lane. The limiter is law and hardware. The street POV family is **open 4-seat hovercars** and **hover bikes / choppers** (tandem two-seat limiter craft). Open and closed cabins both exist.
 - **Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars. When you hear rubber or tracks, someone is moving mass: flatbeds, workhorse vans, bricks, cage wagons, walkers.
 - **VTOL / flying craft** are **more expensive** but also in **common use** — corp insertion birds, licensed transit, well-funded runners. Tiltjets, buzzcopters, gunships, ghost-wings. They climb **past** the limiter band. You see them; a Low Lifestyle crew does not usually own one.
 
@@ -1463,14 +1463,20 @@ Domain still gates chase terrain and wreck language. It does not always match th
 
 | Street class | What it is | How to spot it |
 |---|---|---|
-| **Hover** | Street-layer electric POV; limiter **~25–50 ft** | Hoverpad; many Light/Vehicle “sedan / cab / bike” Ground SKUs (Getaway, Grey Cab, Rustbucket, cycles) |
+| **Hover** | Street-layer electric POV; limiter **~25–50 ft** | **Lane-Hopper** (table-token archetype); Hoverpad; hover bikes / choppers; many Light/Vehicle “sedan / cab / bike” Ground SKUs (Getaway, Grey Cab, Rustbucket, cycles) |
 | **Ground-hauler** | Tires, treads, or walker mass | Clunker, Workhorse, Flatbed, Hardtop, Brick, Cage, Iron Giant, Spider-Frame |
 | **VTOL** | Free-climb flying; costs more; common in corp/transit/runner air | Junk Rotor, Buzzcopter, Tiltjet, Skyhunter, Drop-Sled, Ghost-Wing |
 
 A **Ground** Domain hover still **hugs the street deck** for chase and wrecks — it is not a sky car. **Air** plus **VTOL** is the bird that leaves the limiter band. Water and space stay as printed (skiffs, wetsubs, pods). Inventory procedures, Integrity, and chase bands stay in Machines (`23`).
 
+### Table look — Lane-Hopper
+
+The everyday POV yes-example is the **Lane-Hopper** (Open Stripe / four-seat street hovercar). Michael’s top-down navy/white-stripe open cabin is the **table token** (`assets/tokens/vehicles/lane-hopper`). Open and closed variants exist; this plate is the open look. Four seats read from above.
+
+**Director note (Rideable — future):** those top-down seats make passenger token slots obvious. Do **not** implement Rideable yet.
+
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build**. Read this page in **Ghostwire Lore** (Setting Primer). Chassis SKUs live in **Ghostwire Vehicles & Drones**. Reach street texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats. VOIDMARK retrieves this lock from the knowledge index.
+> Enable **Draw Steel - Ghostwire Build**. Read this page in **Ghostwire Lore** (Setting Primer). Chassis SKUs live in **Ghostwire Vehicles & Drones**. Drag the **Lane-Hopper** Actor from **Ghostwire Summons & Machines** (token **2×3**) or **Deploy** the Item from a hero sheet. Reach street texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats. VOIDMARK retrieves this lock from the knowledge index.
 
 ## Timeline & History
 

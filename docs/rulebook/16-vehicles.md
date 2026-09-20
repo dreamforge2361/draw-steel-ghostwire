@@ -33,7 +33,7 @@ A rusted commuter **hover** with a bent skirt is still a getaway. A junk rotor t
 
 > **Tone:** Reach-native chrome in the rain — scarred hover skirts, LED strips, wet deck glare, dock fog, limiter-lane lights stacking into VTOL — not clean white-box miltech. Not a parking lot of tire sedans.
 
-**Street-class tags (inventory):** **Hover** = street-layer limiter POV (including many Ground-domain sedan/cab/bike SKUs). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Domain still gates chase/wreck language; a Ground hover hugs the street deck.
+**Street-class tags (inventory):** **Hover** = street-layer limiter POV (**Lane-Hopper** is the 4-seat table-token archetype; hover bikes / choppers share the family; including many Ground-domain sedan/cab/bike SKUs). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Domain still gates chase/wreck language; a Ground hover hugs the street deck. Open/closed cabins exist; Rideable passenger slots are a future pass (top-down seats make them obvious — do not implement now).
 
 **This chapter covers crewed platforms** (and optionally Jump-In Capable shells a Wrench can inhabit). Heavy combat **drones** stay on `15-drones.md` — see Scale clarification in §2.
 
@@ -44,7 +44,7 @@ A rusted commuter **hover** with a bent skirt is still a getaway. A junk rotor t
 | Scale | Plain meaning | Examples |
 |---|---|---|
 | **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Sport cycle, junk rotor, harbor skiff |
-| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
+| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
 | **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |
 | **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |
 
@@ -173,13 +173,14 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 **Spine:** Gear master Cat **5A–5D** (20 frames) + expansions to hit coverage locks.
 
-### 7.1 Inventory (28 crewed platforms)
+### 7.1 Inventory (33 crewed platforms)
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |
 | Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |
 | Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |
+| Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |
 | Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |
 | Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |
 | Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |
@@ -210,13 +211,13 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |
 
-**Count:** **32** published crewed platforms (20 Cat 5A–5D spine + 12 expansions).
+**Count:** **33** published crewed platforms (20 Cat 5A–5D spine + 13 expansions).
 
 ### 7.2 Echelon coverage check (LOCKED)
 
 | Echelon | Count | Roles (≥3) | Notes |
 |---|---|---|---|
-| **1** | **11** | Beater/Clunker, Courier/bike, Crew-car, Cargo/workshop, Air recon, Water transit/pursuit | Includes **Clunker** tags on Junk Hauler, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
+| **1** | **12** | Beater/Clunker, Courier/bike, Crew-car, Cargo/workshop, Air recon, Water transit/pursuit | Includes **Lane-Hopper** POV hovercar + **Clunker** tags on Junk Hauler, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | **2** | **8** | Armor/extraction, Covert transit, Heavy cargo, VTOL insertion, Air-car, Patrol boat, Wet infiltrate, Orbital hop | Cleaner Restricted band |
 | **3** | **7** | Assault bike, APC troop, Secure wagon, Attack boat, Gunship, Assault glider, Orbital mule | Harder mounts, Jump-In common |
 | **4** | **6** | Walker, Siege crawler, Stealth VTOL, Attack sub, Deep-orbit runner, Corvette | Apex / Prototype |
@@ -227,7 +228,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 |---|---|
 | Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | Courier / bike | Scrap-Bike, Crotch-Rocket, Warbike |
-| Crew-car / transit | Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
+| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
 | Cargo / workshop | Clunker, Workhorse, Flatbed |
 | Armor / extraction / troop | Hardtop, Brick, Cage |
 | Air recon / insertion | Buzzcopter, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |

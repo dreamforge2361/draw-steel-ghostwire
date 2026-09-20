@@ -1,0 +1,63 @@
+{
+  "_id": "gwLaneHopperItm0",
+  "_key": "!items!gwLaneHopperItm0",
+  "name": "GHOSTWIRE.Vehicles.Items.LaneHopper.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/lane-hopper.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.LaneHopper.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lane-hopper",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 50000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 500,
+        "modSlots": 1,
+        "tags": [
+          "Transit",
+          "Crew-car",
+          "Hover",
+          "POV"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "standard"
+      }
+    }
+  }
+}

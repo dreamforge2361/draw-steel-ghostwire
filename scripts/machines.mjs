@@ -29,7 +29,7 @@ const BANDS = {
 const ECHELON_MULTIPLIER = { 1: 1, 2: 1.5, 3: 2, 4: 2.5 };
 const SPEED_BAND_BONUS = { slow: -2, standard: 0, fast: 2, extreme: 4 };
 const VEHICLE_SPEED_BANDS = {
-  "crotch-rocket": "fast", "warbike": "fast", "getaway": "standard", "hardtop": "standard", "rustbucket": "standard", "workhorse": "slow",
+  "crotch-rocket": "fast", "warbike": "fast", "getaway": "standard", "lane-hopper": "standard", "hardtop": "standard", "rustbucket": "standard", "workhorse": "slow",
   "brick": "standard", "iron-giant": "standard", "buzzcopter": "fast", "hoverpad": "fast", "tiltjet": "fast", "skyhunter": "fast",
   "ghost-wing": "fast", "skiff": "standard", "cigarette": "fast", "wetsub": "slow", "leviathan": "standard", "pod": "extreme",
   "mule": "extreme", "reaver": "extreme",
@@ -122,6 +122,7 @@ export async function deployMachine(item) {
     "system.stamina": { value: stamina, max: stamina, temporary: 0 },
     "system.movement.value": speed,
     "system.movement.types": movementTypes(vehicle.domain),
+    "system.movement.hover": Array.isArray(vehicle.tags) && vehicle.tags.includes("Hover"),
     "system.monster.level": vehicle.echelon ?? 1,
     "prototypeToken.name": item.name,
     "prototypeToken.actorLink": true,

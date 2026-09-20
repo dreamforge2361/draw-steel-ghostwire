@@ -118,6 +118,7 @@ Chapter: `docs/rulebook/16-vehicles.md` §7.1. Pack folders: `src/packs/vehicles
 | 1 | Skiff | `skiff` | water | Water | Light |
 | 1 | Crotch-Rocket | `crotch-rocket` | ground | Ground | Light |
 | 1 | Getaway | `getaway` | ground | Ground | Vehicle |
+| 1 | Lane-Hopper | `lane-hopper` | ground | Ground | Vehicle |
 | 1 | Workhorse | `workhorse` | ground | Ground | Vehicle |
 | 1 | Buzzcopter | `buzzcopter` | air | Air | Light |
 | 1 | Cigarette | `cigarette` | water | Water | Vehicle |

@@ -241,17 +241,19 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 - **Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars.
 - **VTOL / flying craft** are **more expensive** but also in **common use** (corp, transit, well-funded runners).
 
-**Street-class tags:** **Hover** = limiter-band POV (Hoverpad; many Ground-domain sedan/cab/bike SKUs still hug the street deck for chase). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Water and space stay as printed.
+**Street-class tags:** **Hover** = limiter-band POV (**Lane-Hopper** table-token archetype; Hoverpad; hover bikes / choppers; many Ground-domain sedan/cab/bike SKUs still hug the street deck for chase). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Water and space stay as printed.
+
+**Lane-Hopper** is the published 4-seat street hovercar yes-example (E1 Street, Domain Ground, four seats, limiter **~25–50 ft**). Open/closed cabins exist; the shipped token is the open top-down plate. **Rideable** passenger slots are a future pass — do not implement now.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones**. Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
+> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**). Placeable token: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
 
 ### Scale bands (crewed vehicles)
 
 | Scale | Plain meaning | Examples |
 |---|---|---|
 | **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Sport cycle, junk rotor, harbor skiff |
-| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
+| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
 | **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |
 | **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |
 
@@ -376,13 +378,14 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 **Reading the table:** prices climb with Availability + Echelon. Integrity / Speed / Armor numbers are not yet published — profiles are qualitative. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).
 
-#### Inventory (28 crewed platforms)
+#### Inventory (33 crewed platforms)
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |
 | Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |
 | Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |
+| Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |
 | Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |
 | Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |
 | Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |
@@ -413,7 +416,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |
 
-**Count:** **32** published crewed platforms.
+**Count:** **33** published crewed platforms.
 
 #### Role quick-index
 
@@ -421,7 +424,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 |---|---|
 | Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | Courier / bike | Scrap-Bike, Crotch-Rocket, Warbike |
-| Crew-car / transit | Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
+| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
 | Cargo / workshop | Clunker, Workhorse, Flatbed |
 | Armor / extraction / troop | Hardtop, Brick, Cage |
 | Air recon / insertion | Buzzcopter, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |

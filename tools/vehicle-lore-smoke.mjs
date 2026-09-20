@@ -5,7 +5,7 @@
  * Run: node tools/vehicle-lore-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
  */
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { retrieve } from "../scripts/voidmark-rag.mjs";
 
@@ -39,6 +39,8 @@ ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.69", `mo
 
 const l1 = read("docs/manuscript/01-lore/L1-setting-primer.md");
 ok(/## Vehicles & Transit/.test(l1), "L1 has Vehicles & Transit");
+ok(/Lane-Hopper/.test(l1), "L1 names Lane-Hopper as POV archetype");
+ok(/Rideable/.test(l1), "L1 Director note defers Rideable");
 ok(/Most vehicles in this world are \*\*electric\*\*/.test(l1), "L1: most vehicles are electric");
 ok(/light electric hovercraft/.test(l1) && /~25–50 feet/.test(l1), "L1: street POV hover + limiter");
 ok(/not\*\* free-flight sky cars/.test(l1) || /not free-flight sky cars/.test(l1) || /They are \*\*not\*\* free-flight sky cars/.test(l1), "L1: not sky cars");
@@ -72,6 +74,18 @@ for (const f of afterFront) {
 
 const hoverpad = readJson("src/packs/vehicles/air/hoverpad.json");
 ok(hoverpad.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Hoverpad tagged Hover");
+const laneHopper = readJson("src/packs/vehicles/ground/lane-hopper.json");
+ok(laneHopper.system._dsid === "lane-hopper", "Lane-Hopper Item dsid");
+ok(laneHopper.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Lane-Hopper tagged Hover");
+ok(laneHopper.flags["draw-steel-ghostwire"].vehicle.tags.includes("POV"), "Lane-Hopper tagged POV");
+ok(laneHopper.flags["draw-steel-ghostwire"].vehicle.availability === "street", "Lane-Hopper Street availability");
+ok(laneHopper.flags["draw-steel-ghostwire"].vehicle.domain === "Ground", "Lane-Hopper Domain Ground (street-layer chase)");
+ok(laneHopper.img.endsWith("lane-hopper.webp"), "Lane-Hopper Item img is webp");
+const laneActor = readJson("src/packs/summons/machines/lane-hopper.json");
+ok(laneActor.prototypeToken?.texture?.src?.endsWith("lane-hopper.webp"), "Lane-Hopper Actor token texture");
+ok(laneActor.prototypeToken?.width === 2 && laneActor.prototypeToken?.height === 3, "Lane-Hopper token 2×3");
+ok(laneActor.system.movement.hover === true, "Lane-Hopper Actor hover");
+ok(existsSync("assets/tokens/vehicles/lane-hopper.png") && existsSync("assets/tokens/vehicles/lane-hopper.webp"), "Lane-Hopper png+webp on disk");
 const flatbed = readJson("src/packs/vehicles/ground/flatbed.json");
 ok(flatbed.flags["draw-steel-ghostwire"].vehicle.tags.includes("Ground-hauler"), "Flatbed tagged Ground-hauler");
 const tiltjet = readJson("src/packs/vehicles/air/tiltjet.json");
@@ -81,6 +95,8 @@ ok(getaway.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Getawa
 
 const lang = readJson("lang/en.json");
 ok(/limiter ~25–50 ft/.test(lang.GHOSTWIRE.Vehicles.Items.Getaway.Description), "Getaway lang names limiter hover");
+ok(/four-seat street hovercar/.test(lang.GHOSTWIRE.Vehicles.Items.LaneHopper.Description), "Lane-Hopper lang is 4-seat hovercar");
+ok(/Rideable/.test(lang.GHOSTWIRE.Summons.Machines.LaneHopper.Description), "Lane-Hopper Actor notes future Rideable");
 ok(/Ground-hauler/.test(lang.GHOSTWIRE.Vehicles.Items.Flatbed.Description), "Flatbed lang tagged Ground-hauler");
 ok(/VTOL/.test(lang.GHOSTWIRE.Vehicles.Items.Tiltjet.Description), "Tiltjet lang tagged VTOL");
 

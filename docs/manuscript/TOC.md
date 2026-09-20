@@ -118,7 +118,7 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Lifestyle (`26-lifestyle-downtime.md`) **lore fuse** 2026-09-19 (B87): hive strata ↔ bands + scrip/housing note; journals **not** regenerated.
 - Lore **VOIDMARK** (`01-lore/L4-voidmark.md`) **draft** 2026-09-19 (B90); leash-slipped MER-origin super-AI; journals **not** regenerated.
 - Lore **Hands Off Accords** (`01-lore/L5-hands-off-accords.md`) **draft** 2026-09-19 (B91); AI legal / actuators restricted; Dark bot war = escalation fuel; journals **not** regenerated.
-- Lore **Vehicles & Transit** (`01-lore/L1-setting-primer.md`) **lock** 2026-09-20; electric hover POV / ground-haulers / VTOL; journals regenerated this bump.
+- Lore **Vehicles & Transit** (`01-lore/L1-setting-primer.md`) **lock** 2026-09-20; electric hover POV / ground-haulers / VTOL; **Lane-Hopper** 4-seat table token; journals regenerated this bump.
 - Print PDF pipeline **B88** 2026-09-19 (`tools/build-pdf.mjs`, `print-art/ART-PLACEMENT.yml`); journals **not** regenerated.
 - Print PDF hotlinks **B97** 2026-09-19 (`tools/linkify-manuscript.mjs`); official rulebook PDF **0.4.0**; Foundry module **0.3.22**; journals **not** regenerated.
 - Print **L3 gang signs** **B91** 2026-09-19 (`print-art/gangs/` + `ART-PLACEMENT.yml`); eight Michael-approved emblems; `### The Undertow` one-liner; Foundry module **0.3.23**; journals **not** regenerated.
