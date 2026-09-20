@@ -9,6 +9,7 @@
 import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
+import { focusPlacedNodeOnCanvas } from "./wired-canvas-focus.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
 import { NODE_TOKEN_LIBRARY } from "./wired-node-art.mjs";
 import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs";
@@ -82,7 +83,7 @@ export function setLink(nodes, a, b, linked) {
 }
 
 export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
-  /** @param {{ getWiredState: (actor: Actor) => "disconnected"|"overlay"|"jackedIn" }} options */
+  /** @param {{ getWiredState: (actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn" }} options */
   constructor(options = {}) {
     super(options);
     this.getWiredState = options.getWiredState;
@@ -204,7 +205,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         hasInterface: actorHasConnectInterface(actor),
       });
     }
-    const order = { jackedIn: 0, overlay: 1, disconnected: 2 };
+    const order = { jackedIn: 0, overlay: 1, linked: 2, disconnected: 3 };
     roster.sort((a, b) => (order[a.state] - order[b.state]) || a.name.localeCompare(b.name, game.i18n.lang));
     this.selectedActorUuid = pickConsoleActor({
       roster,
@@ -219,6 +220,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const verbCtx = {
       actorUuid: verbActor?.uuid,
       connected: !!verbActor?.connected,
+      state: verbActor?.state ?? "disconnected",
       nodeId: selected?.id,
       owned: !!verbActor?.owned,
       revealed: selected ? !!selected.revealed : true,
@@ -226,7 +228,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       hasInterface: !!verbActor?.hasInterface,
     };
     const verbs = verbStripView(verbCtx);
-    const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
+    const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.state) });
     const pings = readPings(scene).map(ping => ({
       ...ping,
       timeLabel: ping.at ? new Date(ping.at).toLocaleTimeString(game.i18n.lang, { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "",
@@ -370,6 +372,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #onSelectNode(event, target) {
     this.selectedId = WiredConsole.#nodeId(target);
     this.render();
+    // After Place Node, list select / click / push pans to the token so the Director can find it.
+    await focusPlacedNodeOnCanvas({ boardSceneId: this.scene?.id ?? null, nodeId: this.selectedId });
   }
 
   static async #onSelectActor(event, target) {
@@ -728,6 +732,7 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
   const gate = consoleVerbGate({
     actorUuid: actor?.uuid,
     connected: state !== "disconnected",
+    state,
     nodeId: node?.id,
     owned: !!(actor && (game.user.isGM || actor.isOwner)),
     revealed: node ? !!node.revealed : true,

@@ -39,7 +39,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `10-mods.md` | Mods | Stage 3 draft (B75) | Complete lock kept; table procedure + harvested §3G/§5F; no armor/gadget SKUs |
 | `11-perks.md` | Perks | GW | `17-perks.md` |
 | `12-operator.md` … `20-technomancer.md` | Class chapters | GW | `01`–`08`, `20` rulebook (rules only; strip lore) |
-| `21-the-wire.md` | The Wire (Matrix) | GW | **RAW-locked** B66 (2026-09-18); Wire Atlas B116 (2026-09-20); Overlay/Jacked In, Rating 1–5, Trace Alert defaults, suites/payloads, Relay/Host/Segment |
+| `21-the-wire.md` | The Wire (Matrix) | GW | **RAW-locked** B66 (2026-09-18); Wire Atlas B116 (2026-09-20); Linked 2026-09-20; Disconnected/Linked/Overlay/Jacked In, Rating 1–5, Trace Alert defaults, suites/payloads, Relay/Host/Segment |
 | `22-the-veil.md` | The Veil (minimal) | GW | Only what Elementalist / Street Priest need |
 | `23-machines.md` | Drones, Vehicles (Buildings stub OK) | GW | `15-drones.md`, `16-vehicles.md` |
 | `24-advancement.md` | Advancement & echelons | Stage 3 draft (B73) | Levels 1–10, echelon bands, table timing; doctrine locked |
@@ -51,7 +51,7 @@ Class file numbers: 12 Operator, 13 Scout, 14 Commander, 15 Medic, 16 Wrench, 17
 
 ## Assembly rules
 1. **One concern per chapter** — procedures, numbers, lists, examples that teach the rule. Cut “in the Reach…” fiction unless it is a mechanical example.
-2. **Term sheet** in front matter: Director, Edgerunner/runner, ¥, Overlay, Jacked In, Node Rating, Body Integrity, Availability, Echelon.
+2. **Term sheet** in front matter: Director, Edgerunner/runner, ¥, Linked, Overlay, Jacked In, Node Rating, Body Integrity, Availability, Echelon.
 3. **Power Roll** always this book’s print order: low / middle / high (never inverted).
 4. **No ART-STYLE** links in RAW body.
 5. Mark each file header: `**RAW status:** draft | locked` and `**Sources:** …`.

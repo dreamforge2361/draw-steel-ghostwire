@@ -1,13 +1,15 @@
 # The Wire
 
-**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20)  
-**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51 (Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
+**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20)  
+**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
 
 ---
 
 ## The Wired System
 
-The Wired is the network layer every hero can touch. This chapter defines what a node is, the two connection states (**Overlay** and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth and Programs; the Technomancer (`20-technomancer.md`) builds on the same Wire spine.
+The Wired is the network layer every hero can touch. This chapter defines what a node is, the four connection states (**Disconnected**, **Linked**, **Overlay**, and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth and Programs; the Technomancer (`20-technomancer.md`) builds on the same Wire spine.
+
+**Street comms.** After radio, **the Wire is the default street channel** — ID, packets, and crew talk ride Linked by default. **Radio remains a jammable backup.** You do not need Overlay to answer a ping.
 
 ### What a Node Is
 
@@ -16,23 +18,29 @@ A **node** is any addressable point in the Wired -- a maglock, a security camera
 - **Track 1** -- objects, systems, and infrastructure: doors, lights, cameras, locks, power grids, vaults, and Wired-connected gear worn or carried by a person (a smartlink, a cyberware wireless interface). Track 1 targets resolve as a single Power Roll with no ongoing health pool -- you breach and act on it in the same activation.
 - **Track 2** -- hostile, contested, or "alive" targets: ICE, hostile AIs, rival deckers, and any node actively defended by an intelligence fighting back. Track 2 targets have their own **Integrity** pool (see below) and can hit back.
 
-### Connection States: Overlay and Jacked In
+### Connection States: Disconnected, Linked, Overlay, Jacked In
 
-You reach a node by first using the **Connect** Matrix Verb (see Matrix Verbs, below) to establish your **avatar** — your presence in the Wired — at your current location. Once connected, you exist in one of two connection states, and you can freely switch between them with the **Toggle Connection State** Matrix Verb (no roll, no contest -- your call):
+Four states. **Connect** (from Disconnected, with a Wire interface) lands you in **Linked**, not Overlay. **Toggle Connection State** (no roll) steps one rung deeper on the ladder, then wraps. **Jack Out** from any on-net state returns you to Disconnected.
 
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |
 |---|---|---|---|---|
+| **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | None |
+| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs. | None — you are not immersed |
 | **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |
 | **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |
 
-Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Access, Failsafe Cascade, Wired Guard, and others) explicitly require you or an ally to be "Jacked In or Overlaid" -- meaning either connection state satisfies the requirement, as opposed to being fully disconnected. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone, since they're addressing the higher-risk state directly.
+**On-net vs Connected.** **On-net** (the Connected-family) means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Features that say “Jacked In or Overlaid” still mean those two — Linked does not satisfy them. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone.
 
-**Ruling:** Overlay and Jacked In are a genuine mechanical tradeoff, not just a fiction toggle. **Overlaid**, you keep both worlds live but pay a **bane on real-world Power Rolls** for the split attention -- you're fighting (or talking, or driving) with half your head somewhere else. **Jacked In**, you gain an **edge on all Wired Power Rolls** (every Matrix Verb, Program, and Wired-based signature ability gets sharper), but you lose the real world entirely -- no physical perception, no physical action, nothing to roll for on that side at all. This is why the crew treats a Jacked-In Hacker's body as cargo to protect: it isn't just fictionally vulnerable, it's mechanically undefended and unable to act. **Toggle Connection State** (free, no roll) is the tool for choosing which tradeoff you want turn to turn.
+**Wire-discoverable.** Scan, Search, and Watchdog can find any non-Disconnected presence. **Linked = soft presence** (comms / ID / packets, not a full avatar). Overlay and Jacked In are full presence.
 
-You leave either connection state with the **Jack Out** Matrix Verb -- a clean disconnect that also serves as your emergency eject if a Program or Trace Alert spike goes bad.
+**Toggle ladder (Foundry UX).** One verb, one direction: **Linked → Overlay → Jacked In → Linked**. Each Toggle steps deeper; after Jacked In it wraps back to Linked (comms-only), not Disconnected. **Jack Out** is the only off-ramp.
+
+**Ruling:** Overlay and Jacked In remain a genuine mechanical tradeoff. **Linked** is the street-default on-ramp — you are on the Wire for talk and packets without paying Overlay’s meat bane or gaining Jacked In’s Wired edge. **Overlaid**, you keep both worlds live but pay a **bane on real-world Power Rolls** for the split attention. **Jacked In**, you gain an **edge on all Wired Power Rolls**, but you lose the real world entirely. This is why the crew treats a Jacked-In Hacker's body as cargo to protect.
+
+You leave any on-net state with the **Jack Out** Matrix Verb -- a clean disconnect that also serves as your emergency eject if a Program or Trace Alert spike goes bad.
 
 > **In Foundry**
-> **Overlay** and **Jacked In** are token/sheet status effects (`ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (they need a commlink, deck, datajack, trodes, or Technomancer Resonance) — they set the status. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The module applies Jacked In Wired edges, Overlay real-world banes, and refuses physical Power Rolls while Jacked In.
+> **Linked**, **Overlay**, and **Jacked In** are exclusive token/sheet status effects (`ghostwire-linked` / `ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (Connect needs a commlink, deck, datajack, trodes, or Technomancer Resonance) — they set the status. **Connect** lands in Linked. **Toggle** steps Linked → Overlay → Jacked In → Linked. **Jack Out** from any on-net state → Disconnected. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The Console roster lists all four states (Jacked In, Overlay, Linked, Disconnected). Linked applies neither Overlay’s meat bane nor Jacked In’s Wired edge. Broadcast and Wire-ping whispers work from Linked; Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs refuse until Overlay or Jacked In. Minimap and Overlay vision stay Overlay / Jacked In only.
 
 
 ### Wired-System Stats: Integrity (Not Body Integrity)
@@ -68,7 +76,7 @@ Every node, system, ICE construct, hostile AI, or rival decker in the Wired is b
 | **Breach difficulty** *(optional shortcut)* | Both Tracks | How hard the node is to force entry into, for tables that want a quick difficulty call instead of reading the full Power Roll result. | Fixed by Node Rating: **R1 easy · R2 easy with a bane · R3 medium · R4 hard · R5 hard with a bane.** The primary resolution is still the Power Roll result (low / middle / high) — this shortcut is for trivial nodes only. |
 | **ICE Layer(s)** | Track 2 (defines what's actively fighting back) | The node's active defenses -- how many layers of passive/active ICE stand between you and full access, and whether black ICE (the kind that bites back with biofeedback) is present. | Fixed by Node Rating: **R1** 1 passive layer · **R2** 2 passive layers · **R3** passive + 1 active ICE · **R4** passive + 2 active ICE, biofeedback on a failed breach · **R5** full active ICE suite + automatic counter-trace on any high (17+) roll against it. |
 | **Integrity** | Track 2 (Track 1 has none -- see note below) | The target's health pool -- the Stamina-equivalent number that Programs and abilities whittle down via your cyberdeck's Integrity Damage Bonus. Reaching 0 takes the target down. | Fixed by Node Rating: **R1** 12 · **R2** 18 · **R3** 26 · **R4** 36 · **R5** 50. |
-| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (only two states — see Connection States table, above): **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no third connection mode and no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |
+| **Biofeedback Value** | Track 2 (the damage that can bleed back to *you*) | The raw Stamina damage a hostile hit (black ICE, catastrophic failure) deals back through your deck into your own body if it connects. | Fixed by Node Rating: **R1** 3 · **R2** 5 · **R3** 8 · **R4** 13 · **R5** 22. Then scaled by **your own connection state** (see Connection States table, above): **none** while Linked (not immersed) · **×0.5 round down, min 1** if Overlaid · **×1.5 round up** if Jacked In. There is no ×1 “wired-direct” multiplier. Finally reduced by your cyberdeck's **Biofeedback Resistance** stat before it hits your Stamina. |
 | **Alert Contribution** | Both Tracks | How much heat interacting with this target generates -- not a separate number of its own, but a reminder that every Track 1/Track 2 interaction feeds the *same* 12-step Trace Alert track (see below), regardless of Rating. Higher-Rating targets don't push Alert up faster per hit, but their tougher Integrity/ICE means you're rolling against them -- and risking low (≤11) results -- more times per encounter. | Not Rating-scaled on its own. Governed entirely by the Trace Alert rules below (Power Roll result of your roll, not the target's Node Rating, decides whether Alert moves). |
 
 **Track 1 note:** Track 1 objects and systems (doors, cameras, locks, a person's smartlink) use only **Node Rating**, **Node Description**, **Breach difficulty**, and **Alert Contribution** from this card -- they resolve as a single Power Roll with no ongoing Integrity pool and no ICE layers of their own (per the Wired System's "What a Node Is" section, above). A Track 1 target is breached and acted on in the same activation; there's nothing left to "reduce to 0."
@@ -125,13 +133,13 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 
 | Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |
 |---|---|---|---|---|
-| **Connect** | Plug your avatar into the Wired at your current location -- the on-ramp for everything else on this list. Without a successful Connect, you're not Jacked In/Overlaid and can't use the other verbs, Programs, or Wired-based abilities that require that state. | Instinct | Yes | Refunds the Maneuver |
-| **Jack Out** | Disconnect cleanly from the Wired and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |
-| **Toggle Connection State** | Switch your own head-space between Overlay (partial awareness, still present physically) and Jacked In (full immersion, more vulnerable) without disconnecting entirely. No contest involved -- it's your call, always. | -- | No -- automatic | -- |
-| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. This is your general-purpose "what's here" check before deciding what to touch. | Instinct | Yes | Refunds the Maneuver |
+| **Connect** | Plug your avatar into the Wired at your current location -- lands you in **Linked** (on-net for comms / ID / packets). Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs still need Overlay or Jacked In (Toggle). Requires a Wire interface. | Instinct | Yes | Refunds the Maneuver |
+| **Jack Out** | Disconnect cleanly from any on-net state (**Linked**, Overlay, or Jacked In) and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |
+| **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |
+| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |
 | **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |
 | **Ping** | Give a simple, low-stakes nudge to one simple Track 1 object within Reach -- flick a light, tap a lock, test a system -- without needing a cyberdeck or a full Program. The lightest-weight way to interact with a system. | Logic | Yes | Refunds the Maneuver |
-| **Broadcast** | Send a message to allies you're already connected to, within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. No contest involved; it just works. | -- | No -- automatic | -- |
+| **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |
 | **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |
 | **Read/Write** | The core data-manipulation verb -- read a file's contents, alter a record, plant or delete evidence, forge a credential. This is the verb that actually changes information in the Wired, rather than just observing or moving through it. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |
 
@@ -185,18 +193,20 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 
 ## Connection-state modifiers (summary)
 
-**Connected** means you are in **Overlay** or **Jacked In**. **Disconnected** means neither. Payload Runs and many Wired features require Connected; Matrix Verbs other than Connect require Connected.
+**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.
 
 | State | Wired abilities (Wired keyword) | Real-world abilities and tests |
 |---|---|---|
 | Disconnected | Only **Connect** can be used | Normal |
-| Overlay | Normal | **Bane** |
+| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs or payload Runs | Normal |
+| Overlay | Normal (full Connected) | **Bane** |
 | Jacked In | **Edge** | Can’t be used (body inert) |
 
-- **Connect** works only while Disconnected and puts you in **Overlay** on any result.
-- **Toggle Connection State** (Connected only) switches Overlay ↔ Jacked In.
-- **Jack Out** (Connected only) returns you to Disconnected.
-- Every other Matrix Verb requires Connected.
+- **Connect** works only while Disconnected (plus a Wire interface) and puts you in **Linked** on any result.
+- **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.
+- **Jack Out** (any on-net state) returns you to Disconnected.
+- **Broadcast** works from any on-net state, including Linked.
+- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs require Overlay or Jacked In.
 - Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.
 
 **Anyone vs Hacker.** Any hero with a commlink or cyberdeck can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs.
@@ -236,10 +246,10 @@ A payload chip in your gear does nothing by itself. To use it, you compile it in
 | Middle (12–16) | 3 |
 | High (17+) | 5 |
 
-**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected refuses the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
+**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
 
 > **In Foundry**
-> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected refuses the use and spends no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.
+> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.
 
 
 The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
@@ -250,7 +260,7 @@ The payload catalog (Effects, prices, Availability) is in the Gear master, Matri
 
 At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.
 
-Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster, Overlay / Jacked In, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.
+Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.
 
 ## VOIDMARK (Wired presence)
 

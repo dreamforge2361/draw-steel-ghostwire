@@ -106,13 +106,14 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
     const verbCtx = {
       actorUuid: runner?.uuid,
       connected: !!runner?.connected,
+      state: runner?.state ?? "disconnected",
       nodeId: node.id,
       owned: !!runner?.owned,
       revealed: !!node.revealed,
       isGM,
       hasInterface: !!runner?.hasInterface,
     };
-    const gate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
+    const gate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.state) });
     const card = RATING[node.rating] ?? RATING[1];
     const actor = this.nodeActor;
     return {
@@ -244,7 +245,7 @@ function injectNodeHud(hud, html) {
 
 /**
  * Register the player-facing node verb panel. Call during init.
- * @param {{ getWiredState: (actor: Actor) => "disconnected"|"overlay"|"jackedIn" }} options
+ * @param {{ getWiredState: (actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn" }} options
  */
 export function registerWiredNodeVerbs({ getWiredState }) {
   getWiredStateFn = getWiredState;

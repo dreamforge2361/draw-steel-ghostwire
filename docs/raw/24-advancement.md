@@ -124,7 +124,7 @@ When a runner **enters a new echelon** (levels 4, 7, and 10), glance at Kit Stam
 - **Ancestry traits** are bought once at creation (`05`).
 - **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).
 - **Lifestyle band** is paid each respite (`26`). A 10th-level runner who lives Squatter still lives Squatter.
-- **Connection state** (Disconnected / Overlay / Jacked In) is a choice per scene, not a reward (`21`).
+- **Connection state** (Disconnected / Linked / Overlay / Jacked In) is a choice per scene, not a reward (`21`).
 - **Summon Rank 2+ strike ladders** stay deferred where Veil §C3 says they are deferred (`22`). Leveling a caster does not invent those numbers.
 
 If a downtime offer, chrome catalog, or fixer would sell a characteristic, a skill, a class feature, or a heroic resource, refuse it. That purchase is off-doctrine (`02`).

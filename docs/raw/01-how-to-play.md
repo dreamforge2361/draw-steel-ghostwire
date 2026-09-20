@@ -83,7 +83,7 @@ The run is the operation itself. Time compresses. Mistakes cost Stamina, Trace A
 - Infiltration and social cover while the site is still quiet.
 - Combat when cover fails or the plan calls for violence (`04`).
 - Chases on foot, in vehicles, or both (`23`).
-- Wired intrusion: Overlay support or full Jacked In (`21`). Trace Alert rises when the system notices.
+- Wired intrusion: Linked for street comms, Overlay support, or full Jacked In (`21`). Trace Alert rises when the system notices.
 - Chrome strain: Body Integrity is already spent at install; System Crisis and implant failures show up under pressure (`09`, `05`).
 - Extraction: get the package, the data, and the crew out before the net closes.
 
@@ -134,7 +134,7 @@ Ghostwire’s five characteristics are **Physique, Reflex, Logic, Instinct, Pers
 | **Heroic resource** | Every class | Adrenaline, Advantage, Influence, Reagents, Uptime, Essence, Conviction, Bandwidth, Resonance (`04`, class chapters) |
 | **¥** | Every runner / crew | Buys gear and services — never characteristic scores or class power (`08`) |
 | **Body Integrity** | Living chrome users | Starts at 20; spent on implants (`09`). Cyborgs use Frame Modules instead |
-| **Connection state** | Anyone on the Wire | Overlay vs Jacked In; Trace Alert is the system’s heat (`21`) |
+| **Connection state** | Anyone on the Wire | Linked / Overlay / Jacked In; Trace Alert is the system’s heat (`21`) |
 
 ### When systems collide
 
@@ -201,7 +201,7 @@ Keep these renames straight; they appear everywhere.
 | Culture | **Background** |
 | Career | **Profession** |
 | Wealth abstraction | **¥** (nuyen) + Availability |
-| (Ghostwire-original) | **Wire**: Overlay / Jacked In / Trace Alert |
+| (Ghostwire-original) | **Wire**: Linked / Overlay / Jacked In / Trace Alert |
 | (Ghostwire-original) | **Veil** (magic layer; Rituals + summons) |
 | (Ghostwire-original) | **Chrome** / **Body Integrity** |
 

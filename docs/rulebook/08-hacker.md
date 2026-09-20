@@ -60,6 +60,8 @@ The Wire sits at **three altitudes**. Device tokens answer **what is this socket
 
 #### Connection States: Overlay and Jacked In
 
+> **Live lock (2026-09-20):** RAW `docs/raw/21-the-wire.md` is source of record. Four states — **Disconnected | Linked | Overlay | Jacked In**. Connect lands in **Linked**. Toggle steps Linked → Overlay → Jacked In → Linked. The two-state table below is historical kit text; do not ship it over the RAW lock.
+
 You reach a node by first using the **Connect** Matrix Verb (see Matrix Verbs, below) to establish your **avatar** — your presence in the Wired — at your current location. Once connected, you exist in one of two connection states, and you can freely switch between them with the **Toggle Connection State** Matrix Verb (no roll, no contest -- your call):
 
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |

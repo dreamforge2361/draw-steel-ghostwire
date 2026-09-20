@@ -63,6 +63,12 @@ export function placedNodeActor(boardSceneId, nodeId) {
     && (actor.getFlag(MODULE_ID, "boardSceneId") === boardSceneId) && (actor.getFlag(MODULE_ID, "nodeId") === nodeId)) ?? null;
 }
 
+/** TokenDocument for a placed node on a Scene (default: viewed), or null. */
+export function placedNodeToken(boardSceneId, nodeId, scene = game.scenes?.viewed) {
+  const actor = placedNodeActor(boardSceneId, nodeId);
+  return actor ? (scene?.tokens.find(token => token.actorId === actor.id) ?? null) : null;
+}
+
 function actorTokens(actor) {
   const tokens = [];
   for (const scene of game.scenes) tokens.push(...scene.tokens.filter(token => token.actorId === actor.id));

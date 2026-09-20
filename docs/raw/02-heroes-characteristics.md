@@ -193,7 +193,7 @@ Each class fuels abilities with its own **heroic resource**. Timing follows the 
 | Hacker | Logic, Instinct | Bandwidth | 19 | +7 | 9 | Ghost in the Machine |
 | Technomancer | Logic, Persona | Resonance | 18 | +8 | 8 | Master of the Current |
 
-**Combat note:** Medic **Reagents do not reset** when a fight starts or ends (`04`, `15`). Hacker **Bandwidth** interacts with Overlay / Jacked In (`21`). Caster chrome soft-caps / Weave Strain live in `09`.
+**Combat note:** Medic **Reagents do not reset** when a fight starts or ends (`04`, `15`). Hacker **Bandwidth** interacts with Linked / Overlay / Jacked In (`21`). Caster chrome soft-caps / Weave Strain live in `09`.
 
 ---
 

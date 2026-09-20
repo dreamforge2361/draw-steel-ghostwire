@@ -48,21 +48,21 @@
           "type": "other",
           "other": {
             "tier1": {
-              "display": "You Connect and enter Overlay. It works, but something goes wrong — usually the Trace Alert rises.",
+              "display": "You Connect and enter Linked. It works, but something goes wrong — usually the Trace Alert rises.",
               "potency": {
                 "value": "@potency.weak",
                 "characteristic": "none"
               }
             },
             "tier2": {
-              "display": "You Connect cleanly and enter Overlay.",
+              "display": "You Connect cleanly and enter Linked.",
               "potency": {
                 "value": "@potency.average",
                 "characteristic": ""
               }
             },
             "tier3": {
-              "display": "You Connect cleanly and enter Overlay. You can use another maneuver this turn (the maneuver is refunded).",
+              "display": "You Connect cleanly and enter Linked. You can use another maneuver this turn (the maneuver is refunded).",
               "potency": {
                 "value": "@potency.strong",
                 "characteristic": ""

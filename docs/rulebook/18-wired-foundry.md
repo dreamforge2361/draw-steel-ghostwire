@@ -1,7 +1,7 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53** (pending Michael’s Foundry test).
-**Source of record for rules text:** `docs/rulebook/08-hacker.md` — *The Wired System* (Connection States) and *Matrix Verbs (Universal)*. This page only describes how Foundry implements them; if the two disagree, 08-hacker.md wins and this page (and the pack) gets fixed.
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56** (pending Michael’s Foundry test).
+**Source of record for rules text:** `docs/raw/21-the-wire.md` — Connection States and Matrix Verbs. This page only describes how Foundry implements them; if the two disagree, RAW wins and this page (and the pack) gets fixed.
 **Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 
 ## Matrix Verbs — node applet (B117)
@@ -30,27 +30,29 @@ Existing worlds: the first GM load strips **all nine** Matrix Verbs off every ac
 
 ## Connection states
 
-A hero is **Disconnected**, in **Overlay**, or **Jacked In**. The state shows as a status icon on the hero’s token (Overlay: eye, Jacked In: lightning), in the sheet’s status list, and in a **Wired** box on the Stats tab.
+A hero is **Disconnected**, **Linked**, **Overlay**, or **Jacked In**. The state shows as a status icon on the hero’s token (Linked: aura `ghostwire-linked`, Overlay: eye `ghostwire-overlay`, Jacked In: lightning `ghostwire-jacked-in`), in the sheet’s status list, and in a **Wired** box on the Stats tab.
 
-- **Connect** (only while Disconnected, and only with a Wire interface or Technomancer Resonance) → Overlay, on any result.
-- **Toggle Connection State** (only while connected) → Overlay ↔ Jacked In.
-- **Jack Out** (only while connected) → Disconnected.
-- The other verbs refuse to run while Disconnected.
-- The GM can also set or clear the two statuses from the token HUD; Overlay and Jacked In replace each other.
+- **Connect** (only while Disconnected, and only with a Wire interface or Technomancer Resonance) → **Linked**, on any result.
+- **Toggle Connection State** (any on-net state) steps deeper, then wraps: **Linked → Overlay → Jacked In → Linked**. One button, one direction. Jack Out is the only path to Disconnected.
+- **Jack Out** (any on-net state: Linked, Overlay, or Jacked In) → Disconnected.
+- **Broadcast** works from Linked (and Overlay / Jacked In).
+- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs refuse while Linked-only or Disconnected — they need Overlay or Jacked In.
+- The GM can also set or clear the three statuses from the token HUD; Linked, Overlay, and Jacked In replace each other.
 
 Automated modifiers on **ability** power rolls:
 
 | State | Wired abilities (Wired keyword) | Real-world abilities |
 |---|---|---|
 | Disconnected | — | — |
+| Linked | Broadcast / Toggle / Jack Out only. No Overlay bane, no Jacked In edge | — (normal) |
 | Overlay | — | Bane |
 | Jacked In | Edge | Can’t be used (body inert) |
 
-Also automated: a hero with the **Hacking** skill gets an edge on the rolling Matrix Verbs (and any other Wired ability). A running **Reader** program still edges Scan / Search / Deep Scan.
+Also automated: a hero with the **Hacking** skill gets an edge on the rolling Matrix Verbs (and any other Wired ability). A running **Reader** program still edges Scan / Search / Deep Scan. Linked is **Wire-discoverable** (soft presence) for Scan / Search / Watchdog.
 
 Not automated: the Overlay bane on tests (make it in the test dialog), biofeedback scaling. Node / Console verbs apply **soft Trace** on a tier-1 active rolled verb (not Scan), as above.
 
-For the Wired Console, the state is also stored on the actor as `flags.draw-steel-ghostwire.wired = { connected, state }`, with `state` being `"disconnected"`, `"overlay"`, or `"jackedIn"`.
+For the Wired Console, the state is also stored on the actor as `flags.draw-steel-ghostwire.wired = { connected, immersed, state }`, with `state` being `"disconnected"`, `"linked"`, `"overlay"`, or `"jackedIn"`. `connected` is true for any on-net state (Linked included). `immersed` is true only for Overlay or Jacked In.
 
 ## Wired Console (B23b)
 
@@ -60,17 +62,17 @@ A popout window that makes the net a shared place for the scene everyone is view
 
 ### Panels
 
-- **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Disconnected). Click a row to select the runner who will fire Console verbs (defaults to the active combatant, else the first Connected actor). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
-- **Matrix Verbs (B117)** — all nine. **Players fire these from the node they’re facing** (token / node panel), including Connect. The Console strip is the Director roster path. Connect works while Disconnected if the runner has a commlink / deck / datajack / trodes (or is a Technomancer); the other eight need Overlay / Jacked In. Rolls that actor’s Instinct or Logic where the card rolls; Hacking / Jacked In / Reader edges apply. Soft Trace on a tier-1 active rolled verb (not Scan).
+- **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Linked, then Disconnected). Click a row to select the runner who will fire Console verbs (defaults to the active combatant, else the first on-net actor). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
+- **Matrix Verbs (B117)** — all nine. **Players fire these from the node they’re facing** (token / node panel), including Connect. The Console strip is the Director roster path. Connect works while Disconnected if the runner has a commlink / deck / datajack / trodes (or is a Technomancer) and lands in **Linked**. Broadcast / Toggle / Jack Out work from Linked. Scan / Navigate / Ping / Search / Read-Write need Overlay or Jacked In. Rolls that actor’s Instinct or Logic where the card rolls; Hacking / Jacked In / Reader edges apply (Linked adds neither). Soft Trace on a tier-1 active rolled verb (not Scan).
 - **Nodes** — the scene’s nodes: Track, Rating, an Integrity bar (Track 2), and a mini Trace Alert track. The eye icon (Director only) shows whether players can see the node.
 - **Selected node** — the System Stat Card read off the Node Rating (08-hacker.md): Breach DC, ICE layers, Biofeedback Value with the Overlay (×0.5, min 1) and Jacked In (×1.5) figures, Integrity, and the 12-step Trace Alert with what the current band does. Track 1 nodes have no Integrity or ICE.
-- **Wire (B106 ping/spoof)** — a log of the last ~20 Director pings, visible to anyone with the Console open. The Director types a short line and **Send**. Chat is **public** or a **whisper** to users whose controlled token is Overlay or Jacked In. Stored on `flags.draw-steel-ghostwire.wiredPings` (also reads `wiredBoard.pings`). Does not move Trace. Players cannot send.
+- **Wire (B106 ping/spoof)** — a log of the last ~20 Director pings, visible to anyone with the Console open. The Director types a short line and **Send**. Chat is **public** or a **whisper** to users whose controlled token is on-net (Linked, Overlay, or Jacked In). Stored on `flags.draw-steel-ghostwire.wiredPings` (also reads `wiredBoard.pings`). Does not move Trace. Players cannot send.
 
 ### Director vs. players
 
 | | Director (GM) | Players |
 |---|---|---|
-| Matrix Verbs | Fire all nine for any roster actor they select | Fire from the **node token / panel** they’re facing (owned actor). Connect works while Disconnected. Console strip also works for owned actors |
+| Matrix Verbs | Fire all nine for any roster actor they select | Fire from the **node token / panel** they’re facing (owned actor). Connect works while Disconnected (lands Linked). Console strip also works for owned actors |
 | Nodes | All; add, **random node**, **generate cluster**, edit (name, Track, Rating), delete, reset the board | Only nodes the Director revealed; read-only |
 | Integrity | Damage / Restore by an amount | See the bar and numbers |
 | Trace Alert | −, +, **Counter-trace (12)**, and **Resolved — reset to 6** at 12 | See the track and band text |
@@ -87,6 +89,8 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 **Wired map.** When the party goes fully Jacked In and you move them to a matrix battle map, view that map and use **Wired map for** in the Console header (Director) to pick the meatspace Scene whose board it should use. The Console then shows and edits that board while you view the map; the **Connections** panel still lists the tokens on the map you're viewing. Choose **This Scene** to unlink. Stored as `flags.draw-steel-ghostwire.wiredMapFor = <board Scene id>` on the map Scene.
 
 **Place on canvas.** Select a node and press **Place on canvas** (Director): it creates a linked Actor named after the node in the **Wired Nodes** Actor folder, from the *Wired Node (Track 1/2)* template in Ghostwire Summons & Machines, and drops its token at the centre of the view (stepping right for each node already placed). The token is **hidden until the node is revealed**; revealed node Actors get **OBSERVER** default ownership so players can open them. Track 2 tokens show an **Integrity bar** (their Stamina), Track 1 tokens show none. Double-click / Token HUD / minimap opens the **Wired node panel** (Matrix Verbs), not the monster sheet. A pin icon in the node list marks placed nodes. **Remove from canvas** deletes the token and Actor; the node stays on the board.
+
+**Pan to node.** Selecting or clicking a node in the Director Console list (or a placed node on the minimap) **pans and centers** the canvas on that token (`canvas.animatePan`) and **controls** it when the user can (Director / owner). Unplaced nodes and tokens hidden from this user still select in the list with no error. Shared helper: `scripts/wired-canvas-focus.mjs`.
 
 **Auto-nodes from Scene (B112).** Director-only lightbulb on the Nodes header. On the **viewed** Scene it reads named lights and wall doors (`door != NONE`):
 
@@ -136,6 +140,6 @@ Only a GM can change it. Connection state is read from actor statuses (and mirro
 
 ## Wired vision (B23c)
 
-While a hero is **Overlaid**, their token's view gets a readable cyan/pink HUD wash; while **Jacked In**, meatspace drops into deep, desaturated shadow and only coloured light (neon, node glow) stays bright. Disconnected is normal vision. The tint follows the status, so Connect, Toggle Connection State, Jack Out, and the token HUD all switch it, and Jacked In replaces Overlay rather than stacking.
+While a hero is **Overlaid**, their token's view gets a readable cyan/pink HUD wash; while **Jacked In**, meatspace drops into deep, desaturated shadow and only coloured light (neon, node glow) stays bright. **Disconnected** and **Linked** are normal vision (Linked is comms-only; no AR wash). The tint follows the status, so Connect, Toggle Connection State, Jack Out, and the token HUD all switch it, and the three on-net statuses replace each other rather than stacking.
 
 It uses Foundry vision modes (*Wired Overlay*, *Jacked In*), so it follows Foundry's vision rules: it shows on the client looking through that token (the players who own it, or a GM who controls it), only on Scenes with **Token Vision** enabled and for tokens with vision. Other players, and a GM with no token selected, see normally. The token's own vision settings aren't changed. Code: `scripts/wired-vision.mjs`.

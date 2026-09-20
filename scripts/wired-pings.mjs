@@ -60,8 +60,9 @@ export function readPings(scene) {
 }
 
 /**
- * Users who should receive a whispered Wire ping: GMs, plus owners of Overlay / Jacked In tokens.
- * `getWiredState(actor)` returns "disconnected" | "overlay" | "jackedIn".
+ * Users who should receive a whispered Wire ping: GMs, plus owners of on-net tokens
+ * (Linked, Overlay, or Jacked In). Linked is street comms — they hear Wire messages.
+ * `getWiredState(actor)` returns "disconnected" | "linked" | "overlay" | "jackedIn".
  * @param {{ users: Iterable<{ id: string, isGM?: boolean }>, tokens: Iterable<{ actor?: object }>, getWiredState: Function, canOwn?: Function }} ctx
  */
 export function whisperRecipientIds({ users, tokens, getWiredState, canOwn }) {
@@ -73,7 +74,7 @@ export function whisperRecipientIds({ users, tokens, getWiredState, canOwn }) {
     const actor = token?.actor;
     if (!actor) continue;
     const state = getWiredState?.(actor) ?? "disconnected";
-    if (state !== "overlay" && state !== "jackedIn") continue;
+    if (state === "disconnected") continue;
     for (const user of users ?? []) {
       if (!user?.id || user.isGM) continue;
       const owns = canOwn ? canOwn(actor, user) : false;
