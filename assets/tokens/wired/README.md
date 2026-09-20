@@ -17,11 +17,11 @@ Foundry tokens for Wired Console nodes. Generic Track 1/2 templates (`summons/no
 
 Do not rename the three auto filenames (`node-light-control`, `node-maglock`, `node-cam-controls`). Auto-nodes stay **room-scale Device** tokens — never Relay / Host / Segment.
 
-## Atlas styles (B116 topology, 0.3.50) — stubs, no art yet
+## Atlas styles (B116 topology, 0.3.51) — Michael art
 
-Do **not** generate AI art. Drop Michael PNG + 1024² WebP using these exact stems, then flip `"placeholder": true` to `false` in `library.json`:
+Michael PNG + WebP landed. Catalog rows are `"placeholder": false`. Family / altitude unchanged. Do **not** regenerate.
 
-| Id (`tokenStyle`) | Label | Altitude | Files (when art lands) |
+| Id (`tokenStyle`) | Label | Altitude | Files |
 |---|---|---|---|
 | `node-relay` | Relay | Region / district graph | `node-relay.png` + `node-relay.webp` |
 | `node-host` | Host | Region graph; site root on facility graphs | `node-host.png` + `node-host.webp` |
@@ -37,12 +37,12 @@ modules/draw-steel-ghostwire/assets/tokens/wired/node-segment.webp
 
 **Endpoint** (`node-endpoint`) is optional v1.1 — a dig-down leaf that opens a meatspace room. Until then, reuse Host with a depth pip. Do not add a fourth v1 atlas row.
 
-Place on canvas falls back to the generic Track 1/2 template while `placeholder` is true.
+Place on canvas stamps the matching WebP. Generic Track 1/2 templates stay when `tokenStyle` is empty.
 
 Catalog: `library.json`. Runtime: `scripts/wired-node-art.mjs`. Console **Token art** select writes `tokenStyle`. Topology rules: `docs/spikes/B116-WIRE-ATLAS.md`. Device library spike: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.
 
 ## Drop-in
 
 1. Drop `node-<id>.png` + `node-<id>.webp` here.
-2. Append a `styles[]` row to `library.json` and `NODE_TOKEN_LIBRARY` (or flip `placeholder` on an atlas stub).
+2. Append a `styles[]` row to `library.json` and `NODE_TOKEN_LIBRARY`. Atlas Relay / Host / Segment already ship (not stubs).
 3. Reload the world — the picker lists it.

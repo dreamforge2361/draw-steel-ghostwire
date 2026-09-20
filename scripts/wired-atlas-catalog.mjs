@@ -1,6 +1,6 @@
-// Wire Atlas token catalog stubs (B116).
-// Art is not generated this pass. Drop png+webp at the paths below, then flip
-// library.json placeholder flags. Do not invent styles beyond Relay / Host / Segment.
+// Wire Atlas token catalog (B116).
+// Michael Relay / Host / Segment art ships under assets/tokens/wired/.
+// Do not invent styles beyond Relay / Host / Segment. Do not regenerate art.
 //
 // Device library + NODE_TOKEN_LIBRARY live in scripts/wired-node-art.mjs (shipped 0.3.49 / PR #34).
 // This module is atlas-only constants for smoke; not imported from module.mjs.
@@ -16,7 +16,7 @@ export const ATLAS_TOKEN_LIBRARY = [
     png: "node-relay.png",
     family: "atlas",
     altitude: "region",
-    placeholder: true,
+    placeholder: false,
   },
   {
     id: "node-host",
@@ -25,7 +25,7 @@ export const ATLAS_TOKEN_LIBRARY = [
     png: "node-host.png",
     family: "atlas",
     altitude: "region",
-    placeholder: true,
+    placeholder: false,
   },
   {
     id: "node-segment",
@@ -34,7 +34,7 @@ export const ATLAS_TOKEN_LIBRARY = [
     png: "node-segment.png",
     family: "atlas",
     altitude: "site",
-    placeholder: true,
+    placeholder: false,
   },
 ];
 

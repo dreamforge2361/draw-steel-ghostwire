@@ -1,7 +1,7 @@
 {
   "version": 1,
   "base": "modules/draw-steel-ghostwire/assets/tokens/wired",
-  "dropIn": "Add node-<id>.png (source) + node-<id>.webp (1024²) and one styles[] row. Auto-nodes use autoKind: Light Control, Maglock Door, Cam Controls. Atlas ids node-relay / node-host / node-segment are stubs (placeholder: true) until Michael art lands — do not generate AI art. Endpoint (node-endpoint) is optional v1.1.",
+  "dropIn": "Add node-<id>.png (source) + node-<id>.webp (1024²) and one styles[] row. Auto-nodes use autoKind: Light Control, Maglock Door, Cam Controls. Atlas ids node-relay / node-host / node-segment ship Michael art (placeholder: false). Endpoint (node-endpoint) is optional v1.1.",
   "styles": [
     { "id": "light-control", "name": "Light Control", "file": "node-light-control.webp", "png": "node-light-control.png", "autoKind": "light-control" },
     { "id": "maglock", "name": "Maglock Door", "file": "node-maglock.webp", "png": "node-maglock.png", "autoKind": "maglock" },
@@ -11,8 +11,8 @@
     { "id": "turret-controls", "name": "Turret Controls", "file": "node-turret-controls.webp", "png": "node-turret-controls.png" },
     { "id": "cam-controls", "name": "Cam Controls", "file": "node-cam-controls.webp", "png": "node-cam-controls.png", "autoKind": "cam-controls" },
     { "id": "data-vault", "name": "Data Vault", "file": "node-data-vault.webp", "png": "node-data-vault.png" },
-    { "id": "node-relay", "name": "Relay", "file": "node-relay.webp", "png": "node-relay.png", "family": "atlas", "altitude": "region", "placeholder": true },
-    { "id": "node-host", "name": "Host", "file": "node-host.webp", "png": "node-host.png", "family": "atlas", "altitude": "region", "placeholder": true },
-    { "id": "node-segment", "name": "Segment", "file": "node-segment.webp", "png": "node-segment.png", "family": "atlas", "altitude": "site", "placeholder": true }
+    { "id": "node-relay", "name": "Relay", "file": "node-relay.webp", "png": "node-relay.png", "family": "atlas", "altitude": "region", "placeholder": false },
+    { "id": "node-host", "name": "Host", "file": "node-host.webp", "png": "node-host.png", "family": "atlas", "altitude": "region", "placeholder": false },
+    { "id": "node-segment", "name": "Segment", "file": "node-segment.webp", "png": "node-segment.png", "family": "atlas", "altitude": "site", "placeholder": false }
   ]
 }
