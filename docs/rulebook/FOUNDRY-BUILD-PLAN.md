@@ -535,6 +535,15 @@ Michael smoke 0.3.65: food/chem kiosk rows showed no image. SKU `img` used `icon
   - [x] `node tools/kiosk-smoke.mjs`
   - [ ] Foundry-verify: Food kiosk rows show icons; Medical chems show flasks; 404 still shows a glyph
 
+### Hero / NPC token Has Vision (2026-09-20)
+Michael lock: any **Hero** or **NPC** created in Ghostwire always has token vision on (`sight.enabled` / Has Vision). World create, pack import, and compendium drag; placed tokens inherit. Existing range/angle/visionMode are not wiped. One-time GM ready migration for world actors + placed tokens still off. **Scope:** Actor type `hero` + `npc`. **Skip** `flags.draw-steel-ghostwire.kind` in `node` / `node-template` / `kiosk` / `vehicle` / `drone`. Pack stubs: bestiary + pregens + summon creatures (sprites / spirits / elementals). **SHIPPED 0.3.67.** No Gold Line `{ force: true }`. No PDF.
+- [x] **Hero/NPC Has Vision** (module **0.3.67**) — **pending Foundry-verify**. Done when:
+  - [x] `preCreateActor` / `preCreateToken` set `sight.enabled: true` for hero + npc
+  - [x] Ready migration once per world (`tokenVisionMigrated`)
+  - [x] Kiosk / Wire node / vehicle / drone stubs stay vision-off
+  - [x] Bestiary + pregen + summon-creature source JSON + `node tools/token-vision-smoke.mjs`
+  - [ ] Foundry-verify: new hero, imported bestiary NPC, and a dropped token all show Has Vision; Hotel Interface / kiosk / deployed drone do not gain it
+
 ### Street-snack food ¥ (2026-09-20)
 Michael: “30 for a brick bar is crazy.” Food was priced like T5 gear. **SHIPPED 0.3.66.** Brick Bar ¥3, Buzz-Can ¥4, Lyte-Pouch ¥5, Shift Chews ¥6, Stall Ramen ¥10, Grease Box ¥12. Chems unchanged (Kickwire ¥400 / Clearline ¥350 / Numb-Tap ¥250 / Red Dust ¥600). No Gold Line `{ force: true }`. No PDF.
 - [x] **Street-snack ¥** (module **0.3.66**) — **pending Foundry-verify**. Done when:
