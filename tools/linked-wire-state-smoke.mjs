@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Linked Wire connection state smoke — module 0.3.56.
+ * Linked Wire connection state smoke — module 0.3.57 (docs / VOIDMARK follow-up).
  *
  * Run: node tools/linked-wire-state-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
@@ -43,10 +43,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("Linked Wire connection state smoke (0.3.56)\n");
+console.log("Linked Wire connection state smoke (0.3.57)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.56", `module.json is 0.3.56 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.57", `module.json is 0.3.57 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -155,17 +155,26 @@ ok(/Does \*\*not\*\* count as full \*\*Connected\*\*/.test(raw), "RAW Linked is 
 
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/ghostwire-linked/.test(foundry) && /Linked → Overlay → Jacked In → Linked/.test(foundry), "Foundry notes document Linked + ladder");
-ok(/0\.3\.56/.test(foundry), "Foundry notes name 0.3.56");
+ok(/0\.3\.56/.test(foundry), "Foundry notes name 0.3.56 (Linked code ship)");
+ok(/0\.3\.57/.test(foundry), "Foundry notes name 0.3.57 (Linked docs / VOIDMARK)");
 ok(/Pan to node/.test(foundry) && /canvas\.animatePan/.test(foundry), "Foundry notes document Console / minimap pan-to-node");
 
-const journal = readBomFreeJson("src/packs/rulebook/ghostwire-systems/21-the-wire.json");
-const journalMd = (journal.pages ?? []).map(p => p.text?.markdown ?? "").join("\n");
-ok(/ghostwire-linked/.test(journalMd), "Wire journal names ghostwire-linked");
-ok(/Linked → Overlay → Jacked In → Linked/.test(journalMd), "Wire journal documents the Toggle ladder");
+const testsJournal = readBomFreeJson("src/packs/rulebook/shared-core/03-tests-power-rolls.json");
+const testsMd = (testsJournal.pages ?? []).map(p => p.text?.markdown ?? "").join("\n");
+ok(/\*\*Linked\*\*/.test(testsMd) && /Broadcast/.test(testsMd), "Tests journal connection-state table includes Linked");
+
+const combatJournal = readBomFreeJson("src/packs/rulebook/shared-core/04-combat.json");
+const combatMd = (combatJournal.pages ?? []).map(p => p.text?.markdown ?? "").join("\n");
+ok(/\*\*Linked:\*\* on-net for comms/.test(combatMd), "Combat journal documents Linked in combat");
 
 const readme = readFileSync("README.md", "utf8");
 ok(/0\.3\.56/.test(readme) && /Linked/.test(readme), "README changelog 0.3.56 Linked");
+ok(/0\.3\.57/.test(readme) && /VOIDMARK/.test(readme), "README changelog 0.3.57 VOIDMARK / Linked docs");
 ok(/pans\/centers/.test(readme) || /pan-to-node/.test(readme), "README changelog 0.3.56 names Console pan-to-node");
+
+const vmIndex = readBomFreeJson("data/voidmark-rules-index.json");
+ok(vmIndex.chunks.some(c => /linked/i.test(c.text) && String(c.file).includes("21-the-wire")), "VOIDMARK index Wire chunks mention Linked");
+ok(!vmIndex.chunks.some(c => /the two connection states \(\*\*Overlay\*\* and \*\*Jacked In\*\*\)/.test(c.text)), "VOIDMARK index has no two-state Overlay/Jacked In-only Wire intro");
 
 console.log("\n5) Console / minimap pan-to-node");
 ok(tokenCenter(null) === null, "tokenCenter(null) is null");

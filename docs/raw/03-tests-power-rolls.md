@@ -253,13 +253,16 @@ Technical hosts typically roll **Logic** with Hacking, Electronics, Repair, or C
 
 ### Connection states
 
-Your connection to the Wired changes your rolls. Full rules: `21-the-wire.md`.
+Your connection to the Wired changes your rolls. Four states: **Disconnected | Linked | Overlay | Jacked In**. Full rules: `21-the-wire.md`.
 
 | State | Wired Power Rolls | Real-world Power Rolls |
 |---|---|---|
-| Disconnected | — | — |
-| **Overlay** | — | **Bane** |
+| Disconnected | Only **Connect** | Normal |
+| **Linked** | **Broadcast** only (plus Toggle / Jack Out). No Programs, payload Runs, or intrusion verbs. No Jacked In Wired edge. | Normal (no Overlay bane) |
+| **Overlay** | Normal | **Bane** |
 | **Jacked In** | **Edge** | Not allowed — your body is inert |
+
+**Connect** (from Disconnected) lands in **Linked**. **Toggle Connection State** steps Linked → Overlay → Jacked In → Linked. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In. Any non-Disconnected presence is Wire-discoverable.
 
 A **Wired** roll is any Power Roll for a Matrix Verb, Program, or other ability with the **Wired** keyword.
 

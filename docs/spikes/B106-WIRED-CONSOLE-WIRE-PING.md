@@ -38,7 +38,7 @@ Auto call-home at Trace 6–8; player-sent pings; Trace Alert writes; ICE Block 
 ## Foundry notes (Director)
 
 1. Open **Wired Console** (Token controls › network).
-2. Bottom **Wire** strip: type a short ping → choose **Public chat** or **Whisper Overlay / Jacked In** → **Send**.
+2. Bottom **Wire** strip: type a short ping → choose **Public chat** or **Whisper on-net (Linked / Overlay / Jacked In)** → **Send**.
 3. Anyone else with the Console open sees the log after the Scene flag updates.
-4. Whisper goes to GMs plus owners of Overlay / Jacked In tokens on the **viewed** Scene. Disconnected players still see the Console log if they have it open.
+4. Whisper goes to GMs plus owners of **on-net** tokens (Linked, Overlay, or Jacked In) on the **viewed** Scene. Disconnected players still see the Console log if they have it open. (**0.3.56:** Linked hears Wire messages.)
 5. Last 20 pings persist on the Scene across reload. **Reset Board** does **not** clear pings.

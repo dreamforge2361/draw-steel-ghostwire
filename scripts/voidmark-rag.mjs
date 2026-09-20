@@ -13,9 +13,12 @@ const STOP = new Set([
 
 /** Street / procedure synonyms so a short table question still hits the right chapter. */
 const SYNONYMS = {
-  overlay: ["overlay", "overlaid", "connection", "wired", "ar"],
+  overlay: ["overlay", "overlaid", "connection", "wired", "ar", "linked"],
   jacked: ["jacked", "jack", "immersed", "immersion", "wired"],
-  wire: ["wire", "wired", "matrix", "node", "host", "ice", "trace", "deck", "persona"],
+  linked: ["linked", "link", "comms", "broadcast", "connection", "wired", "connect"],
+  connect: ["connect", "connection", "linked", "overlay", "wired"],
+  connection: ["connection", "connect", "linked", "overlay", "wired"],
+  wire: ["wire", "wired", "matrix", "node", "host", "ice", "trace", "deck", "persona", "linked"],
   matrix: ["wire", "wired", "node", "verb", "program", "payload", "suite"],
   combat: ["combat", "fight", "round", "turn", "stamina", "recovery", "strike"],
   fight: ["combat", "round", "turn", "stamina"],
@@ -47,7 +50,7 @@ const SYNONYMS = {
 };
 
 const FILE_HINTS = [
-  { re: /wire|wired|matrix|overlay|jack|node|ice|trace|biofeedback|deck|persona|payload|suite/, file: "21-the-wire" },
+  { re: /wire|wired|matrix|overlay|jack|linked|connect|node|ice|trace|biofeedback|deck|persona|payload|suite/, file: "21-the-wire" },
   { re: /combat|fight|round|stamina|recovery|crisis|strike|fire|maneuver/, file: "04-combat" },
   { re: /power.?roll|test|edge|bane|fortune|characteristic/, file: "03-tests-power-rolls" },
   { re: /chrome|implant|body integrity|weave/, file: "09-chrome-body-integrity" },

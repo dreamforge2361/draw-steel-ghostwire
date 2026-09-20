@@ -223,7 +223,7 @@ refuses a Run whose payload is unloaded ("isn't loaded") or at 0 ("spent").
 
 ## As built — B51c (0.1.86): Connected gate
 
-**Lock (Michael 2026-09-18).** Run {Payload} needs the hero **Connected**: Overlay or Jacked In, the same statuses the Wired Console and minimap read. Zap stays as is (Stamina biofeedback 2/5/7 + Reason): no Integrity retarget, no deck Integrity Damage Bonus scaling, no auto-delete of spent chips.
+**Lock (Michael 2026-09-18).** Run {Payload} needs the hero **Connected** (full): Overlay or Jacked In. **Linked does not count** (0.3.56): Linked is comms-only, same refusal as Disconnected. Zap stays as is (Stamina biofeedback 2/5/7 + Reason): no Integrity retarget, no deck Integrity Damage Bonus scaling, no auto-delete of spent chips.
 
 ### Code
 - `scripts/payload-use.mjs` — `registerPayloadUse({ getWiredState })` keeps the function, like `registerWiredConsole` / `registerWiredMinimap`. The `AbilityModel#use` wrapper checks spent, then loaded, then Connected, before the system roll. Not Connected → warning `GHOSTWIRE.PayloadUse.NotConnected`, returns null. Nothing is spent and the magazine stays loaded.

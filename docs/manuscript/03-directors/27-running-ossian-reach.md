@@ -21,7 +21,7 @@ If a rule and a gazetteer sentence disagree, **RAW wins** (`docs/raw/`). Gazette
 
 - **Not a gazetteer.** District writeups, NPC biographies, critter lore, and black-water fiction stay in the Reach Handbook, L3, and the Wired Flats journal. Do not paste them here.
 - **Not a bestiary.** Street-fight budget, reskin doctrine, Malice, and Trace Alert live in print Ch 26 (`25-opposition.md`). Actors live in **Ghostwire Bestiary**.
-- **Not a second Wire chapter.** Node Rating, Overlay / Jacked In, and Trace Alert defaults stay in `21`. The Flats matrix gazetteer is setting, not a second Matrix engine.
+- **Not a second Wire chapter.** Node Rating, connection states (Disconnected / Linked / Overlay / Jacked In), and Trace Alert defaults stay in `21`. The Flats matrix gazetteer is setting, not a second Matrix engine.
 - **Not Ashenreach depth.** The sister hive is a named rival on the regional map (`docs/setting/ashenreach.md`). One caravan or corp-chess hook is enough for v1.
 - **Not a Foundry manual.** Click-notes sit in the sidebar below. Director UI essays stay in `docs/directors/`.
 

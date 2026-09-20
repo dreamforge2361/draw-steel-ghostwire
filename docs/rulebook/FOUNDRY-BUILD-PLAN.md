@@ -483,6 +483,14 @@ Spec: `docs/spikes/B117-CONSOLE-MATRIX-VERBS.md`. **PLAYER UX lock:** player ope
   - [x] Connect gated on tagged comms / deck / chrome / kit or Technomancer; street Commlink SKU
   - [ ] Foundry-verify: player opens a revealed node, Connects there (with a commlink), fires the other verbs without the GM Console; no interface → Connect refuses; sheet / pregen / Mama / Wire Kit have none of the nine
 
+### Linked connection state — docs + VOIDMARK (2026-09-20)
+Spec: `docs/spikes/LINKED-CONNECTION-STATE.md`. Code + RAW `21` shipped **0.3.56**. **0.3.57** completes SoR everywhere rules/AI tools read: journals from RAW (`03`/`04`/`19`/`21`), Hacker doctrine, manuscript glossary, VOIDMARK index rebuild. Four states: Disconnected | Linked | Overlay | Jacked In. No Gold Line `{ force: true }`. No new art.
+- [x] **Linked docs / VOIDMARK** (module **0.3.57**) — **pending Foundry-verify**. Done when:
+  - [x] RAW + journals name four states; Connect→Linked; Toggle ladder
+  - [x] VOIDMARK index chunks contain Linked; smoke retrieves it on Overlay / Jacked In / Connect / connection-state queries
+  - [x] Lang / Foundry notes no longer say two-state-only for the status list
+  - [ ] Foundry-verify: VOIDMARK applet answers “what are the connection states?” with Linked
+
 ### B32 Phase 5 — Hacker node / ICE Director templates (2026-09-17)
 Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node-templates.mjs` exports **`RATING`** (System Stat Card, moved out of `wired-console.mjs` — the Console now imports it, single source of truth) and **`NODE_TEMPLATES`**: `node-t1-r1…r5` and `node-t2-r1…r5` with `id, name, track, rating, integrityMax, biofeedback, ice, breachDC, description, notes`. **Track 1** templates follow 08-hacker.md: no Integrity pool, ICE, or biofeedback (`null`; the Console hides them). **Track 2** carry Integrity 12/18/26/36/50, biofeedback 3/5/8/13/22, and the ICE sketch. **Wired Console:** GM **Add template…** button (layers icon) in the Nodes header → pick one of the 10 → a hidden node is pushed onto `wiredBoard.nodes` through the same `#makeNode` / `#updateBoard` path as Add Node, with Description and Notes pre-filled. Add Node / Random Node / Generate Cluster unchanged; `module.api.NODE_TEMPLATES` exposed. **Director reference:** `docs/directors/wired-node-templates.md` (no journals pack exists, so no Journal pages). **Deferred:** node Actor scaffolds under `summons/nodes/` (optional D, skipped).
 - [x] **B32 Phase 5** node templates (module v0.1.45) — **Foundry-verified 2026-09-17**. Done when:

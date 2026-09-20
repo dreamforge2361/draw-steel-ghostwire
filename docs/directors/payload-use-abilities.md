@@ -10,7 +10,7 @@ A payload chip (Zap, Crash, Whiteout, Ghostload, Static, Blackout, Wraith) does 
 - **Loose chip:** no Run ability. Right-click it on the hero sheet → **Load magazine (Craft)…**. Its quantity is the number of chips.
 - **Load:** pick a host with a free slot (deck, or a Technomancer’s Wired Native; skipped if only one fits) → Reason power roll in the system dialog (Hacking skill = 1 edge) → the chip installs with quantity = fires, and **Run {Payload}** appears (Ranged + Wired, Reason, Reach; plays the Wired sound). A stack of chips loads one; the rest stay loose. Cancel the roll and nothing changes.
 - **Recompile magazine (Craft)…** on a loaded one: re-roll; the new tier replaces its fires.
-- **Connected only (B51c):** Run works only while the hero is **Overlay** or **Jacked In**. Disconnected, the Run stays on the sheet but refuses with a "not Connected" warning (no roll, no fire spent, magazine stays loaded).
+- **Connected only (B51c):** Run works only while the hero is **Overlay** or **Jacked In**. Disconnected **and Linked** refuse with a "not Connected" warning (no roll, no fire spent, magazine stays loaded). Linked is comms-only.
 - **Run:** spends 1 fire. At 0 the magazine unloads at once (slot frees). The Run stays on the sheet until the next world load, so the chat card still works, but it refuses to fire. The chip sits at 0; delete it.
 - **Uninstall mod** on a magazine with fires left asks first: unloading **dumps** the remaining fires (chip goes to 0). Deleting the deck does the same without asking.
 - Payloads skip **Install onto…** and **Activate/Deactivate**; the Craft load is the only way in.
