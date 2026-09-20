@@ -1,0 +1,12 @@
+{
+  "_id": "gwBestiaryLaz000",
+  "_key": "!folders!gwBestiaryLaz000",
+  "name": "GHOSTWIRE.Bestiary.Folders.LazarusExtract",
+  "type": "Actor",
+  "folder": "gwBestiaryCorp00",
+  "sort": 110000,
+  "flags": {},
+  "color": "#8b1e2d",
+  "description": "",
+  "sorting": "a"
+}

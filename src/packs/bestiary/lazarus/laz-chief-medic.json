@@ -1,0 +1,874 @@
+{
+  "folder": "gwBestiaryLaz000",
+  "name": "GHOSTWIRE.Bestiary.Actors.ExtractChiefMedic.Name",
+  "type": "npc",
+  "_id": "GwLazChiefMed001",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/laz/lazarus-combat-medic.webp",
+  "system": {
+    "stamina": {
+      "value": 60,
+      "max": 60,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 0
+      },
+      "reason": {
+        "value": 1
+      },
+      "intuition": {
+        "value": 1
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "biography": {
+      "value": "GHOSTWIRE.Bestiary.Actors.ExtractChiefMedic.Description",
+      "director": "GHOSTWIRE.Bestiary.Actors.ExtractChiefMedic.Director",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 5,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 5,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 2,
+      "role": "support",
+      "organization": "elite"
+    },
+    "ev": 16,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "GHOSTWIRE.Bestiary.Actors.ExtractChiefMedic.Name",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/laz/lazarus-combat-medic.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Lazarus Trauma Package",
+      "type": "feature",
+      "_id": "GwLazChfImplnt01",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>If the chief medic is reduced to 0 Stamina, the Lazarus Trauma Package (secondary heart / trauma damper + toxin scrubber + wound-seal weave) fires and they can make a [[/damage @monster.freeStrike]]{Free Strike} before dying. If the target of the free strike is reduced to 0 Stamina, the chief medic is reduced to 1 Stamina instead.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "lazarus-trauma-package",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfImplnt01"
+    },
+    {
+      "name": "Extract Lead",
+      "type": "feature",
+      "img": "icons/skills/social/intimidation-impressing.webp",
+      "system": {
+        "description": {
+          "value": "<p>Each ally within 5 squares of the chief medic gains a +3 bonus to stability.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "extract-lead",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "GwLazChfLead0001",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfLead0001"
+    },
+    {
+      "name": "Stun Sidearm",
+      "type": "ability",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "power-chord",
+        "story": "Light defensive pistol — not a gun truck. Issued to keep the bag-carrier alive.",
+        "keywords": [
+          "melee",
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "meleeRanged",
+          "primary": "1",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "presence"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "q3dz0RPDzCknhPqz": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "q3dz0RPDzCknhPqz",
+              "damage": {
+                "tier1": {
+                  "value": "5",
+                  "types": [
+                    "sonic"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "value": "7",
+                  "types": [
+                    "sonic"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [
+                    "sonic"
+                  ],
+                  "ignoredImmunities": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "E9GctMb0SzxD2lTs": {
+              "name": "weakened",
+              "img": null,
+              "type": "applied",
+              "_id": "E9GctMb0SzxD2lTs",
+              "applied": {
+                "tier3": {
+                  "display": "{{potency}} weakened (save ends)",
+                  "effects": {
+                    "weakened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                },
+                "tier1": {
+                  "potency": {
+                    "characteristic": "presence",
+                    "value": "@potency.weak"
+                  },
+                  "display": "",
+                  "effects": {}
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        },
+        "effects": {}
+      },
+      "_id": "GwLazChfStrike01",
+      "img": "icons/weapons/guns/pistol-stun-energy-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfStrike01"
+    },
+    {
+      "name": "Stimulant Dart",
+      "type": "ability",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "cadenza",
+        "story": "",
+        "keywords": [
+          "ranged"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "ally",
+          "value": 1,
+          "custom": "One Ally"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "spend00000000000": {
+            "_id": "spend00000000000",
+            "type": "spend",
+            "sort": 100000,
+            "resource": {
+              "value": 3,
+              "multiple": false
+            },
+            "description": "<p>The chief medic targets a second ally.</p>",
+            "name": "",
+            "img": null,
+            "before": false
+          },
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The chief medic fires a stimulant dart into the target. The target moves up to their speed and can use a main action.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "GwLazChfDart0001",
+      "img": "icons/tools/medical/medication-pills-red-blue.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfDart0001"
+    },
+    {
+      "name": "Trauma Patch",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "rallying-ostinato",
+        "story": "",
+        "keywords": [
+          "ranged"
+        ],
+        "category": "heroic",
+        "resource": 2,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "selfAlly",
+          "value": 3,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The chief medic slaps the upgraded extract suite on each target. Each target regains [[/heal 15]] and ignores difficult terrain until the end of the encounter.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "GwLazChfPatch001",
+      "img": "icons/tools/medical/medkit-heavy.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfPatch001"
+    },
+    {
+      "name": "Stabilize",
+      "type": "ability",
+      "_id": "GwLazChfStab0001",
+      "img": "icons/magic/life/heart-cross-strong-flame-green.webp",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "stabilize",
+        "story": "",
+        "keywords": [
+          "melee"
+        ],
+        "category": "",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creature",
+          "value": 1,
+          "custom": "One dying or 0-Stamina ally"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The chief medic works the trauma bag. The target is stabilized and may spend a Recovery (or regain [[/heal @monster.freeStrike]] if they have no Recoveries).</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfStab0001"
+    },
+    {
+      "name": "Medical HUD Suite",
+      "type": "feature",
+      "_id": "GwLazChfHud00001",
+      "img": "icons/commodities/tech/watch-luminous.webp",
+      "system": {
+        "description": {
+          "value": "<p>Helmet / wrist chrome: targeting HUD, squad-net radio with a command channel, and a Wire jack. The medical HUD paints vitals, trauma tags, and nearby ally Stamina on the visor. Counts as the sensory/comms chrome this chief medic is issued — not a second Connect interface (that is the Wire Kit).</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "medical-hud-suite",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfHud00001"
+    },
+    {
+      "name": "Chief Med Suite",
+      "type": "feature",
+      "_id": "GwLazChfSuite001",
+      "img": "icons/tools/medical/needle-leech.webp",
+      "system": {
+        "description": {
+          "value": "<p>Field-lead bag: extra coagulants, a second stimulant rail, and a squad vitals overlay on the Medical HUD. Same Trauma Patch numbers as the Extract Medic (Street Doc math) — the upgrade is stamina, command, and kit fiction, not a new heal ladder.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "chief-med-suite",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfSuite001"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.Name",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwLazChfWire0001",
+      "_key": "!actors.items!GwLazChiefMed001.GwLazChfWire0001"
+    },
+    {
+      "name": "Exploit Opening",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "exploit-opening",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 5,
+        "trigger": "A human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each human acting this turn gains an edge on abilities until the end of their turn, or has a double edge on any ability that targets an enemy affected by a condition.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "LYYyN9iD2PjepIFo",
+      "img": "icons/commodities/tech/electronics-tech-sensor-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GwLazChiefMed001.LYYyN9iD2PjepIFo"
+    },
+    {
+      "name": "Staying Power",
+      "type": "ability",
+      "system": {
+        "type": "triggered",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "staying-power",
+        "story": "",
+        "keywords": [],
+        "category": "maliceAncestry",
+        "resource": 7,
+        "trigger": "a human's turn starts",
+        "distance": {
+          "type": "special",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "custom": "",
+          "value": null
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>Each non-minion human in the encounter slams a trauma stim and regains Stamina equal to 5 times their level.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "vxocmPyA9uKwrgEq",
+      "img": "icons/tools/medical/medkit-heavy.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!GwLazChiefMed001.vxocmPyA9uKwrgEq"
+    }
+  ],
+  "effects": [],
+  "sort": 20000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "faction": "laz",
+      "bestiary": {
+        "dsSourceId": "6ipD4f10bXqtf0jn",
+        "dsSourceName": "Rival Tactician (stam/org) + Street Doc (med kit)",
+        "decision": "Adapt",
+        "region": "corp",
+        "faction": "laz",
+        "corp": "Lazarus Extract",
+        "slug": "laz-chief-medic",
+        "handbookName": "Extract Chief Medic",
+        "echelon": 1
+      }
+    }
+  },
+  "_key": "!actors!GwLazChiefMed001"
+}

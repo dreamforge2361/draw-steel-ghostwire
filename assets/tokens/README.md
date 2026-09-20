@@ -10,6 +10,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
 | Bestiary humanoids + ICE | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 shipped **0.3.35** (40) |
 | ARG corp security (3) | `bestiary/arg/arg-*.webp` (+ PNG originals) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-<role>.webp` | B111 shipped **0.3.47** (Enforcer, Lieutenant, Officer) |
+| AEQ Mandate + LAZ Extract (4 Actors, 2 plates) | `bestiary/aeq/aequitas-mandate-officer.{png,webp}`, `bestiary/laz/lazarus-combat-medic.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/{aeq,laz}/…webp` | **0.3.78** — same plate on both ranks of each corp |
 | Mama Cassavir (L5 named boss) | `bestiary/mama-cassavir.webp` (+ PNG original) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-cassavir.webp` | **0.3.48** — Michael split-face (elderly organic / chrome cyborg, cyan eye, hand on deck) |
 | Wired Atlas (Relay / Host / Segment) | `wired/node-relay\|host\|segment.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-<role>.webp` | B116 Michael art **0.3.51** (Relay / Host / Segment) |
 | Megacorp Hosts (Twelve Conglomerates) | `wired/node-host-{ticker}.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-host-<ticker>.webp` | **0.3.54** Ten plates; **0.3.79** AEQ/LAZ plates (`placeholder: false`) |
@@ -57,6 +58,16 @@ node tools/apply-bestiary-portrait-art.mjs
 ```
 
 Spike: `docs/spikes/B111-ARG-TOKEN-ART.md`.
+
+## AEQ Mandate + LAZ Extract (0.3.78)
+
+Michael LE officer / combat-medic plates live under `bestiary/aeq/` and `bestiary/laz/` (1254² PNG + 1024² WebP). Both AEQ ranks share `aequitas-mandate-officer`; both LAZ ranks share `lazarus-combat-medic`. Do not regenerate. Apply-tool slugs `aeq-trooper` / `aeq-sergeant` / `laz-medic` / `laz-chief-medic` map through `ART_OVERRIDES`. Replace a WebP in place, then:
+
+```text
+node tools/apply-bestiary-portrait-art.mjs
+```
+
+Spike: `docs/spikes/B121-AEQ-LAZ-NPCS.md`.
 
 ## Mama Cassavir (0.3.48)
 

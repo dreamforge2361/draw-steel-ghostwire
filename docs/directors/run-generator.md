@@ -23,7 +23,7 @@ In a pinch, open **Run Generator**, dial parameters, hit Generate, get a themed 
 2. **Pay** — ¥ band by level + echelon + heat (align `11-economy.md`); optional corp scrip / favor / gear Availability bump.
 3. **Data value** — if Data Steal / Wire: node Rating band, ICE ladder hint (Watchdog → Scrambler → Black ICE).
 4. **Challenges** — 3–6 beats (infiltrate, social, combat, chase, Wire, Veil).
-5. **Recommended opposition** — from the Ghostwire Bestiary by stratum + run type, filtered by Actor level against hero level and heat (Colors Boss, Chrome Bruiser, Corp Enforcer, Canopy-Stalker, etc.), plus the escalation ladder above the current heat.
+5. **Recommended opposition** — from the Ghostwire Bestiary by stratum + run type, filtered by Actor level against hero level and heat (Colors Boss, Chrome Bruiser, Corp Enforcer, Mandate Trooper / Extract Medic, Canopy-Stalker, etc.), plus the escalation ladder above the current heat.
 6. **Recommended support NPCs** — per stratum: Street Doc, Mama Cassavir, Krael, the Ferryman, the Choirmother, Cael Marrow, and unnamed contacts (facilities tech, Metermen boss, Greenline scout, remnant Street Priest).
 7. **Mission Journal** — a Journal Entry in **Ghostwire Runs** with pages Brief / Pay / Beats / Opposition / Support / Scenes, linked to bestiary Actors.
 8. **Populate helpers** (phase 2) — button to open recommended Actors; optional stub Scene notes.

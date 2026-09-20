@@ -209,7 +209,20 @@ After the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`
 - **Reach Events (B48)** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security, Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables from B48) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** (B39) to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security (including **Aequitas Mandate** and **Lazarus Extract**), Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables from B48) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** (B39) to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter.
+
+### AEQ patrols and LAZ extract (Foundry pack)
+
+**Aequitas Mandate (AEQ)** and **Lazarus Extract (LAZ)** are corp-line opposition in the Bestiary — Council-mandate patrols and combat-medic extract teams. Both hold seats on the **Twelve Conglomerates** (chairs 11 and 12); the tickers double as Director opposition filters. Full profiles live in Ghostwire Lore → **Twelve Conglomerates** (`docs/rulebook/MEGACORP-TICKERS.md`).
+
+| Actor | Band | Spine (math) | Kit |
+|---|---|---|---|
+| Mandate Trooper | L1 minion | Corp Security Officer | Sidearm + baton, zip-cuffs, HUD/radio, **Wire Kit** |
+| Mandate Sergeant | L2 horde support | Ironclad Subcommander | Stronger sidearm, Hold the Line, **Wire Kit** |
+| Extract Medic | L1 platoon support | Street Doc | Trauma bag, Stabilize / patch / stim, light stunner, **Wire Kit** |
+| Extract Chief Medic | L2 elite support | Rival Commander envelope + Street Doc med kit | Same med math, more Stamina, Extract Lead, Lazarus Trauma Package, **Wire Kit** |
+
+All four start **Disconnected**. Wire Kit is the Connect interface (same as pack drones / vehicles). Token Has Vision on. Director notes: `docs/directors/conglomerate-npcs.md`.
 
 ---
 
@@ -221,4 +234,4 @@ After the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`
 - Do not treat every random Reach Event as a combat encounter.
 - Do not ignore escape and objective clocks in favor of total wipe fights every time.
 
-Cross-links: combat loop `04`, Wire `21`, advancement / old tiers `24`, lifestyle aftercare `26`, bestiary doctrine master (non-print) `docs/masters/GHOSTWIRE_BESTIARY.md`.
+Cross-links: combat loop `04`, Wire `21`, advancement / old tiers `24`, lifestyle aftercare `26`, bestiary doctrine master (non-print) `docs/masters/GHOSTWIRE_BESTIARY.md`, seated Ten `docs/rulebook/MEGACORP-TICKERS.md`, AEQ/LAZ Director note `docs/directors/conglomerate-npcs.md`.

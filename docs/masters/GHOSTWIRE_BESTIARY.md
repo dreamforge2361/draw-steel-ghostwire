@@ -145,6 +145,10 @@ Handbook names below are **SoR for Wave 2 Actors**; Handbook inverted Tier is ma
 | Ironclad Warden | T3 Elite | Black-site chief | Corp & Security | Hobgoblin Grandguard → L6 platoon defender (size 1L, Ironclad Malice) | **Wave 2a (B38b, v0.1.52)** |
 | The Ripper | T3 Elite | Black-clinic surgeon | Flats / Sinks | Medic dark Mutant | 2b |
 | Null-Prophet | T3 Solo | Rogue Technomancer | Wire | Technomancer Solo | 2b |
+| Mandate Trooper | Street enforcer | AEQ LE minion | Aequitas Mandate (Corp) | Human Guard → Corp Security Officer → L1 minion brute | **0.3.78** — Wire Kit, shared Mandate officer plate |
+| Mandate Sergeant | Squad lead | AEQ LE horde | Aequitas Mandate (Corp) | War Dog Subcommander → Ironclad Subcommander → L2 horde support | **0.3.78** — same plate as Trooper |
+| Extract Medic | Combat medic | LAZ support | Lazarus Extract (Corp) | Orc Godcaller → Street Doc → L1 platoon support | **0.3.78** — Wire Kit, shared Lazarus medic plate |
+| Extract Chief Medic | Field lead | LAZ elite support | Lazarus Extract (Corp) | Rival Commander envelope + Street Doc med kit → L2 elite | **0.3.78** — same plate as Medic |
 
 ### C. Critters of the Reach (Handbook — must create)
 Folder scheme: Warrens / Sinks / Slackwater critters live in a new **Reach Critters** folder; wilds seeds stay in **Wilds & Jungles**; ICE goes in **Wire & Machine**. Beasts and ICE keep natural / Wire attacks and carry no ancestry Malice (the Behemoth keeps its solo Malice). Handbook signatures that the spine lacked were added as short features (Chew the Line, Whiteout Roost, Pack Hunter, Ambush from the Murk).

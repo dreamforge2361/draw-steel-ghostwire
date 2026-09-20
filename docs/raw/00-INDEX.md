@@ -43,7 +43,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `22-the-veil.md` | The Veil (minimal) | GW | Only what Elementalist / Street Priest need |
 | `23-machines.md` | Drones, Vehicles (Buildings stub OK); **Vehicles & Transit street picture** 2026-09-20; **Lane-Hopper** POV + **Star-Chopper** hover-bike SKUs; **0.3.80** AEQ/LAZ service chassis (Seal Cruiser, Writ VTOL, White Door, Crash Angel) | GW | `15-drones.md`, `16-vehicles.md`, L1 Vehicles & Transit |
 | `24-advancement.md` | Advancement & echelons | Stage 3 draft (B73) | Levels 1–10, echelon bands, table timing; doctrine locked |
-| `25-opposition.md` | Opposition (Director) | Stage 3 draft | Stage 3 fill 2026-09-18 (B70); street-fight procedure; Malice + Trace Alert; no lore bestiary |
+| `25-opposition.md` | Opposition (Director) | Stage 3 draft | Stage 3 fill 2026-09-18 (B70); street-fight procedure; Malice + Trace Alert; no lore bestiary; **0.3.78** AEQ patrol + LAZ extract pack pointers |
 | `26-lifestyle-downtime.md` | Lifestyle & Downtime | GW Stage 3 draft (B67; Contacts pointer B75; B92 standalone) | Print Ch 10; upkeep ¥; Medic restock quotes; §Craft / chrome / Ritual; Contacts/hireling pointer |
 | `27-corruption-taint.md` | Corruption & Taint | GW draft (B80 lock 2026-09-19) | Shared hero Taint 0–12; Clean/Marked/Stained/Claimed/Hollowed; +1/scene except pact; rest never cleanses; chrome does not raise Taint; Mutant Load stays retired |
 

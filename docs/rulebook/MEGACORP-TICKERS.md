@@ -29,6 +29,17 @@ Each of the Twelve Conglomerates has a **three-letter ticker**. Use it in writeu
 - Sub-corps keep their names; parent ticker may prefix (e.g. FER Deepworks, AEQ Writ Inquest, LAZ White Door Flight).
 - Never invent a thirteenth seat without Michael. Kestrel Dynamics remains the seatless climber.
 
+## Bestiary faction flags (Director filters)
+
+Ghostwire Bestiary Actors carry `flags.draw-steel-ghostwire.faction` so Directors can filter opposition by corp line. These are **seated Twelve** tickers — AEQ and LAZ hold chairs 11 and 12, not separate off-Congress brands.
+
+| Ticker | Line | Domain (short) | Pack Actors (0.3.81) |
+|---|---|---|---|
+| **AEQ** | Aequitas Mandate | Council justice, investigation, security | Mandate Trooper, Mandate Sergeant |
+| **LAZ** | Lazarus Extract | Trauma rescue / hot extraction / medevac | Extract Medic, Extract Chief Medic |
+
+Cross-link: Ghostwire Lore → **Twelve Conglomerates**. RAW / Director notes: `docs/raw/25-opposition.md`, `docs/directors/conglomerate-npcs.md`.
+
 ## Locked sales & lifestyle rules
 
 - **AEQ — Council-only.** Aequitas Mandate may sell security, investigation, and justice services **only to the Council**: the Corporate Congress, the Chair, or the pooled authority of the seated Conglomerates acting as a body. Forbidden clients: private parties, runners, gangs, fixers, and **any single mega acting alone**. A Chair-signed warrant or a Congress resolution is a client. An IRN-style private contract is not. Street slang: “the Mandate,” “AEQ seal,” “Council badge.”
