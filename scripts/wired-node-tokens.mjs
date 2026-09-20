@@ -76,7 +76,7 @@ export function placementElevationAndLevel() {
  * @param {number} [options.x]  canvas x (defaults to view centre, stepped)
  * @param {number} [options.y]
  * @param {object} [options.extraFlags]  merged onto Actor flags (B112 autoFrom / autoKind; B113 tokenArt)
- * @param {string|null} [options.textureSrc]  B113 Light/Maglock art when Michael supplies it; omitted = generic Track token
+ * @param {string|null} [options.textureSrc]  B113 Light/Maglock art; omitted = generic Track 1/2 node template
  */
 export async function placeNode(board, node, options = {}) {
   const viewed = canvas.scene;

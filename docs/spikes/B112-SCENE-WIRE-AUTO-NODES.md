@@ -3,7 +3,7 @@
 **Date:** 2026-09-20  
 **Module:** **0.3.48**  
 **Status:** **SHIPPED** (pending Michael Foundry-verify)  
-**Pairs with:** B114 node-map readability, B115 NPC Wire Kit. **B113** Light/Maglock token art is Michael-supplied later — hooks only.
+**Pairs with:** B114 node-map readability, B115 NPC Wire Kit, **B113** Light/Maglock token art (shipped this module).
 
 ## Goal
 
@@ -52,9 +52,14 @@ Re-run **Skip** (default) leaves existing auto-nodes. **Replace** deletes auto-n
 
 Placement reuses `placeNode` (B108 elevation + `canvas.level`, B110 0.25 size). Optional `{ x, y, extraFlags, textureSrc }`.
 
-## B113 art hook
+## B113 token art
 
-`AUTO_NODE_TOKEN_ART = { "light-control": null, maglock: null }` in `scripts/wired-auto-nodes.mjs`. When Michael drops WebPs, set those paths; `placeNode` stamps `texture.src`. Until then, generic Track 1 node tokens. **No AI art.**
+`AUTO_NODE_TOKEN_ART` in `scripts/wired-auto-nodes.mjs` points at:
+
+- `modules/draw-steel-ghostwire/assets/tokens/wired/node-light-control.webp` (cyan lightbulb + power symbol)
+- `modules/draw-steel-ghostwire/assets/tokens/wired/node-maglock.webp` (sliding doors + padlock)
+
+`placeNode` stamps Actor `img`, `prototypeToken.texture.src`, and the placed token texture. Generic Track 1/2 templates stay for every other node. Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`.
 
 ## UI
 
@@ -62,7 +67,7 @@ Wired Console Nodes header (GM): lightbulb **Auto-nodes from Scene**. Dialog exp
 
 ## Out of scope
 
-Cameras as an auto type; Wire → meatspace light/door toggles; rewriting Gold Line; B113 art files.
+Cameras as an auto type; Wire → meatspace light/door toggles; rewriting Gold Line.
 
 ## Verify
 
@@ -70,4 +75,4 @@ Cameras as an auto type; Wire → meatspace light/door toggles; rewriting Gold L
 node tools/b112-b115-smoke.mjs
 ```
 
-Foundry (Gold Line): name lights `{Room Name} - Light Control` (e.g. `Rear Car Substation - Light Control`) → Auto-nodes → hidden tokens beside lights/doors on Interior → Console shows `Rear Car Substation - Light Control` + `Rear Car Substation - Maglock Door 1`, `… Door 2` → lights with no ` - ` warn and skip → re-run Skip adds nothing → Node Map stays readable (B114).
+Foundry (Gold Line): name lights `{Room Name} - Light Control` (e.g. `Rear Car Substation - Light Control`) → Auto-nodes → hidden tokens beside lights/doors on Interior with Light Control / Maglock art (not the generic Track 1 token) → Console shows `Rear Car Substation - Light Control` + `Rear Car Substation - Maglock Door 1`, `… Door 2` → lights with no ` - ` warn and skip → re-run Skip adds nothing → Node Map stays readable (B114).

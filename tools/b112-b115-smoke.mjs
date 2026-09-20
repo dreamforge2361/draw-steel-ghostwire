@@ -6,8 +6,8 @@
  * Does not write Scene JSON. Asserts gold-line-scene.mjs is untouched.
  */
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
-import { parseRoomName, planAutoNodes, isDoorWall, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, ROOM_SPLIT } from "../scripts/wired-auto-nodes.mjs";
+import { existsSync, readFileSync } from "node:fs";
+import { parseRoomName, planAutoNodes, isDoorWall, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, ROOM_SPLIT, tokenArtFor, tokenArtForNode } from "../scripts/wired-auto-nodes.mjs";
 import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../scripts/wired-layout.mjs";
 import { MATRIX_VERBS, MATRIX_VERB_IDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
 
@@ -31,7 +31,20 @@ ok(moduleJson.version === "0.3.48", `module.json is 0.3.48 (got ${moduleJson.ver
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
 
-ok(AUTO_NODE_TOKEN_ART["light-control"] === null && AUTO_NODE_TOKEN_ART.maglock === null, "B113 token art hooks are null placeholders");
+ok(AUTO_NODE_TOKEN_ART["light-control"]?.endsWith("/node-light-control.webp"), "B113 Light Control art path");
+ok(AUTO_NODE_TOKEN_ART.maglock?.endsWith("/node-maglock.webp"), "B113 Maglock art path");
+ok(tokenArtFor("light-control") === AUTO_NODE_TOKEN_ART["light-control"], "tokenArtFor Light Control");
+ok(tokenArtForNode({ autoFrom: { kind: AUTO_KIND.maglock } })?.endsWith("node-maglock.webp"), "tokenArtForNode Maglock");
+ok(!tokenArtForNode({ autoFrom: null }), "manual nodes keep generic Track templates");
+for (const stem of ["node-light-control", "node-maglock"]) {
+  const png = `assets/tokens/wired/${stem}.png`;
+  const webp = `assets/tokens/wired/${stem}.webp`;
+  ok(existsSync(png) && existsSync(webp), `B113 ships ${stem} png + webp`);
+  const pngBuf = readFileSync(png);
+  const webpBuf = readFileSync(webp);
+  ok(pngBuf[0] === 0x89 && pngBuf.slice(1, 4).toString() === "PNG", `${stem}.png is a PNG source`);
+  ok(webpBuf.slice(0, 4).toString() === "RIFF" && webpBuf.slice(8, 12).toString() === "WEBP", `${stem}.webp is WebP`);
+}
 
 console.log("\n1) Room naming (B112)");
 ok(ROOM_SPLIT === " - ", "ROOM_SPLIT is space-hyphen-space");
@@ -87,6 +100,8 @@ ok(plan.nodes.some(n => n.name === "Aft Freight - Maglock Door 1") && plan.nodes
 ok(plan.nodes.some(n => n.name === "Security Nest - Maglock Door 1"), "unnamed door uses nearest dashed light, not first-word door name");
 ok(!plan.nodes.some(n => n.name === "Aft Freight Maglock Door 1" || n.name === "Rear Car Substation Maglock Door 1"), "no undashed Maglock names");
 ok(maglocks.every(n => n.name.includes(ROOM_SPLIT) && / - Maglock Door \d+$/.test(n.name)), "every Maglock name is {Room} - Maglock Door N");
+ok(lightNodes.every(n => n.notes.includes("node-light-control.webp")), "Light Control notes cite B113 art");
+ok(maglocks.every(n => n.notes.includes("node-maglock.webp")), "Maglock notes cite B113 art");
 const aftLight = plan.nodes.find(n => n.name === "Aft Freight - Light Control");
 const aftDoors = plan.nodes.filter(n => n.autoFrom?.room === "Aft Freight" && n.autoFrom.kind === AUTO_KIND.maglock);
 ok(aftDoors.every(d => aftLight.links.includes(d.id) && d.links.includes(aftLight.id)), "Light Control linked to same-room maglocks");
@@ -159,6 +174,7 @@ ok(!/for \(const actor of game\.actors\)/.test(src), "no world-actor scan to sta
 console.log("\n5) Console / minimap / docs");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("autoNodes") && consoleSrc.includes("applyAutoNodesFromScene"), "Console wires Auto-nodes");
+ok(consoleSrc.includes("tokenArtForNode"), "Place on canvas stamps B113 art for auto-nodes");
 ok(consoleSrc.includes("addWireKit"), "Console wires Add Wire Kit");
 ok(consoleSrc.includes("autoFrom"), "getBoard preserves autoFrom");
 ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("ROOM_SPLIT") && !readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("first two words"), "parser is dash-split only");
@@ -169,6 +185,8 @@ const mini = readFileSync("templates/wired-minimap.hbs", "utf8");
 ok(mini.includes("wm-viewport") && mini.includes("shortName") && mini.includes("resetView"), "minimap has viewport, truncated names, reset");
 ok(readFileSync("scripts/wired-minimap.mjs", "utf8").includes("layoutNodes"), "minimap uses shared layout");
 ok(readFileSync("scripts/wired-node-tokens.mjs", "utf8").includes("textureSrc"), "placeNode accepts B113 textureSrc");
+ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-light-control.webp") && readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-maglock.webp"), "auto-nodes stamp Light/Maglock art");
+ok(!readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("placeholder (generic Track 1)"), "auto-node notes are not B113 placeholders");
 
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodes === "Auto-nodes from Scene", "lang AutoNodes");
@@ -188,7 +206,8 @@ ok(b112.includes("{Room} - Light Control"), "B112 spike Light Control dash");
 ok(b112.includes("Wrong: `Rear Car Substation Maglock Door 1`"), "B112 spike marks undashed Maglock as wrong");
 ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.3.48"), "B114 spike");
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.48"), "B115 spike");
-ok(b112.includes("B113"), "B112 notes B113 art later");
+ok(b112.includes("B113"), "B112 notes B113 art");
+ok(readFileSync("docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md", "utf8").includes("node-light-control.webp"), "B113 spike");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

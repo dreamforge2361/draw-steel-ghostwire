@@ -65,4 +65,13 @@ node tools/apply-bestiary-portrait-art.mjs
 
 ## Wired node tokens (B110 / B113)
 
-Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp`. **B113** Light Control / Maglock art is not shipped — `AUTO_NODE_TOKEN_ART` in `scripts/wired-auto-nodes.mjs` stays `null` until Michael drops files (no AI art).
+Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and still apply to hand-placed / templated nodes.
+
+**B113** Light Control / Maglock auto-node art (PNG source + 1024² WebP):
+
+| Kind | Files | Foundry `img` / token |
+|---|---|---|
+| Light Control | `wired/node-light-control.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-light-control.webp` |
+| Maglock | `wired/node-maglock.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-maglock.webp` |
+
+`AUTO_NODE_TOKEN_ART` in `scripts/wired-auto-nodes.mjs` stamps those paths onto B112 auto-nodes. Replace a WebP in place to restamp future placements (already-placed tokens keep the old texture until removed and re-placed). Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`.

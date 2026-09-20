@@ -6333,7 +6333,7 @@
       "PingChatTitle": "Wire ping",
       "PingChatSpeaker": "The Wired — {scene}",
       "AutoNodes": "Auto-nodes from Scene",
-      "AutoNodesHint": "Build Light Control and Maglock nodes from this Scene’s named lights and wall doors. Hidden 0.25-grid tokens land next to each source on the current Level. Cameras are not auto-created. The Wire does not flip lights or doors in v1.",
+      "AutoNodesHint": "Build Light Control and Maglock nodes from this Scene’s named lights and wall doors. Hidden 0.25-grid tokens (Light Control / Maglock art, not the generic Track 1 token) land next to each source on the current Level. Cameras are not auto-created. The Wire does not flip lights or doors in v1.",
       "AutoNodesRule": "Light names must be “{Room Name} - {rest…}” (space-hyphen-space). Room = everything left of the first “ - ”. Light Control stays “{Room} - Light Control” (or matches the light name). Maglocks use the same splitter: “Rear Car Substation - Maglock Door 1”, “Rear Car Substation - Maglock Door 2”, … (Track 1, R2). Example: “Rear Car Substation - Light Control” → room Rear Car Substation → node Rear Car Substation - Light Control (Track 1, R1). Lights with no “ - ” are skipped (you get a warning).",
       "AutoNodesMode": "If auto-nodes already exist",
       "AutoNodesSkip": "Skip ones already generated (idempotent)",

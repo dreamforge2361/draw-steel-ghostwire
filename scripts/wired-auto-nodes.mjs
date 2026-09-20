@@ -6,11 +6,20 @@ import { boardScene, placeNode, placedNodeActor, removePlacedNode } from "./wire
 
 const MODULE_ID = "draw-steel-ghostwire";
 
-/** B113: Light / Maglock token art — Michael supplies files later. Null = generic Track 1 node token. */
+/** B113: Light Control / Maglock token art. Generic Track 1/2 templates stay for other nodes. */
+const ART_BASE = `modules/${MODULE_ID}/assets/tokens/wired`;
 export const AUTO_NODE_TOKEN_ART = {
-  "light-control": null,
-  maglock: null,
+  "light-control": `${ART_BASE}/node-light-control.webp`,
+  maglock: `${ART_BASE}/node-maglock.webp`,
 };
+
+export function tokenArtFor(kind) {
+  return AUTO_NODE_TOKEN_ART[kind] || null;
+}
+
+export function tokenArtForNode(node) {
+  return tokenArtFor(node?.autoFrom?.kind);
+}
 
 export const AUTO_KIND = {
   light: "light-control",
@@ -138,7 +147,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
       rating: 1,
       autoFrom: { kind: AUTO_KIND.light, room: room.name, lightIds: room.lightIds },
       description: `Lighting grid for ${room.name}. Track 1 Rating 1 — a single power roll seizes the lights. The Wire does not flip them in v1; this node is the address.`,
-      notes: `Auto-node from Scene lights (${room.lightIds.join(", ")}). Token art: B113 placeholder (generic Track 1).`,
+      notes: `Auto-node from Scene lights (${room.lightIds.join(", ")}). Token art: B113 node-light-control.webp.`,
     });
     node._place = { x: room.place.x, y: room.place.y, kind: AUTO_KIND.light };
     byId.set(node.id, node);
@@ -164,7 +173,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
       rating: 2,
       autoFrom: { kind: AUTO_KIND.maglock, room, doorId: door.id },
       description: `Maglock on a ${room} door. Track 1 Rating 2 — professional lock, no Integrity pool. The Wire does not open it in v1; this node is the address.`,
-      notes: `Auto-node from wall door ${door.id}. Token art: B113 placeholder (generic Track 1).`,
+      notes: `Auto-node from wall door ${door.id}. Token art: B113 node-maglock.webp.`,
     });
     node._place = { x: door.x, y: door.y, kind: AUTO_KIND.maglock };
     byId.set(node.id, node);
@@ -270,7 +279,7 @@ export async function applyAutoNodesFromScene({ replace = false } = {}) {
     const place = plan.placements[node.id];
     if (!place) continue;
     const near = offsetNear(place.x, place.y, grid, place.kind);
-    const art = AUTO_NODE_TOKEN_ART[place.kind] ?? null;
+    const art = tokenArtFor(place.kind);
     await placeNode(scene, node, {
       x: snap(near.x - (grid * 0.125), grid / 4),
       y: snap(near.y - (grid * 0.125), grid / 4),

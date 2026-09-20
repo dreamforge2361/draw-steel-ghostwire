@@ -10,7 +10,7 @@ import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
-import { applyAutoNodesFromScene } from "./wired-auto-nodes.mjs";
+import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs";
 import { addWireKitToSelected } from "./wired-kit.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -371,7 +371,11 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #onPlaceNode(event, target) {
     const scene = this.scene;
     const node = getBoard(scene).nodes.find(n => n.id === WiredConsole.#nodeId(target));
-    await placeNode(scene, node);
+    const art = tokenArtForNode(node);
+    await placeNode(scene, node, art ? {
+      extraFlags: { autoKind: node.autoFrom.kind, autoFrom: node.autoFrom, tokenArt: art },
+      textureSrc: art,
+    } : {});
   }
 
   static async #onRemoveNode(event, target) {
