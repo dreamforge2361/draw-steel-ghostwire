@@ -102,6 +102,13 @@ ok(
   "ICE/Track 2 query retrieves Ping does not bypass ICE",
 );
 
+const agentQ = retrieve(index, "How does a Hacker compile an Agent? Overlay Jacked In");
+ok(agentQ.some(h => h.file.includes("19-hacker")), `compile-agent files: ${agentQ.map(h => h.file).join(", ")}`);
+ok(
+  agentQ.some(h => /compile agent/i.test(h.text) && /overlay|jacked in/i.test(h.text)),
+  "compile-agent query retrieves Compile Agent + Overlay/Jacked In",
+);
+
 const rwQ = retrieve(index, "How do I unlock a maglock or kill a camera feed?");
 ok(
   rwQ.some(h => /read\/write/i.test(h.text) && /unlock|kill a cam|kill a camera|cam feed/i.test(h.text)),

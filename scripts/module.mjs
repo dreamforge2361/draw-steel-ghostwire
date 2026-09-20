@@ -19,6 +19,7 @@ import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
 import { registerStreetEye } from "./street-eye.mjs";
 import { registerSprites } from "./sprites.mjs";
+import { registerAgents } from "./agents.mjs";
 import { registerVeilSummons } from "./veil-summons.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
@@ -100,6 +101,7 @@ Hooks.once("init", () => {
   registerMachines();
   registerStreetEye();
   registerSprites();
+  registerAgents();
   registerVeilSummons();
   registerMods();
   registerAbilitySfx();

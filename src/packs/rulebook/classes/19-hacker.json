@@ -147,9 +147,9 @@
       "flags": {}
     },
     {
-      "_id": "YdAe7tj1OpGmRSHZ",
-      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.YdAe7tj1OpGmRSHZ",
-      "name": "Level 1-10 Progression Table",
+      "_id": "CkZTjBtExLHSOt7s",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.CkZTjBtExLHSOt7s",
+      "name": "Agents -- Deck Daemons (not Sprites)",
       "type": "text",
       "sort": 600000,
       "title": {
@@ -165,8 +165,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |\n| **10** | Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability) | Characteristic Increase - Perk (choice) - Skill | -- |",
-        "content": "<table>\n<thead>\n<tr>\n<th id=\"level\">Level</th>\n<th id=\"class_features\">Class Features</th>\n<th id=\"perks/skills\">Perks/Skills</th>\n<th id=\"subclass_features\">Subclass Features</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Choose a 3-Cost Program (Ghost Signal)</td>\n<td>--</td>\n<td>Subclass passive + subclass triggered action (see subclass tables below)</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>Choose a 5-Cost Program (Kill Switch)</td>\n<td>Perk (choice)</td>\n<td>Subclass 2nd-level feature</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade)</td>\n<td>--</td>\n<td>Subclass 3rd-level feature</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band)</td>\n<td>Characteristic Increase - Perk (choice) - Skill</td>\n<td>--</td>\n</tr>\n<tr>\n<td><strong>5</strong></td>\n<td>Choose a 9-Cost Program (Network Purge)</td>\n<td>--</td>\n<td>Subclass 5th-level feature</td>\n</tr>\n<tr>\n<td><strong>6</strong></td>\n<td>Dual Boot (feature + Dual Boot Swap ability)</td>\n<td>Perk (choice)</td>\n<td>Subclass 6th-level feature</td>\n</tr>\n<tr>\n<td><strong>7</strong></td>\n<td>Bandwidth Overclock (+1 income, cap 6-&gt;8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability)</td>\n<td>Characteristic Increase - Skill</td>\n<td>Subclass 7th-level feature</td>\n</tr>\n<tr>\n<td><strong>8</strong></td>\n<td>Choose an 11-Cost Program (Backdoor Override)</td>\n<td>Perk (choice)</td>\n<td>Subclass 8th-level feature</td>\n</tr>\n<tr>\n<td><strong>9</strong></td>\n<td>Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values)</td>\n<td>--</td>\n<td>Subclass 9th-level feature</td>\n</tr>\n<tr>\n<td><strong>10</strong></td>\n<td>Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability)</td>\n<td>Characteristic Increase - Perk (choice) - Skill</td>\n<td>--</td>\n</tr>\n</tbody>\n</table>"
+        "markdown": "Agents are software constructs you compile from your deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world; you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.\n\n**Immersion.** Compiling an Agent requires **Overlay or Jacked In**. **Linked refuses** — Agents need immersion; a soft presence is not enough to keep a daemon running. Decompile does not require immersion: you can kill your own process while Linked or Disconnected.\n\n**Compile cost.** **Compile Agent** is a signature main action that costs **3 Bandwidth** in combat (the same number as Compile Sprite's Enhance and as Ghost Signal). Outside combat, Hacker Programs (and this compile) fire without spending, once until you earn Victories or finish a respite. There is no v1 Enhance that compiles a second Agent in the same action.\n\n**Agent cap.** At 1st level you may have up to **2 Agents** compiled at once. The cap rises to **3** at 5th level and **4** at 8th. Caps do not stack — use the single highest number you qualify for. (A later Controller \"Weaver-like\" bump is parked.)\n\n**Bands.** The Agent you compile is chosen by your current level, every time:\n\n| Rank | Levels | Behavior |\n|---|---|---|\n| **Minor (extension)** | 1–3 | Agents act on your turn. No separate initiative. |\n| **Intermediate (commanded)** | 4–7 | Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round. |\n| **Advanced (independent)** | 8–10 | Each Agent takes its own turn in the round. |\n\n**Stamina.** An Agent's Stamina is archetype base + (**Logic × Level**), stamped when it compiles:\n\n| Archetype | Minor (L1–3) | Intermediate (L4–7) | Advanced (L8–10) | Job |\n|---|---|---|---|---|\n| **Probe** | 8 + (Logic × Level) | 14 + (Logic × Level) | 20 + (Logic × Level) | Recon / Deep Scan twin. Edge on Scan, Search, or Deep Scan. |\n| **Spike** | 12 + (Logic × Level) | 18 + (Logic × Level) | 26 + (Logic × Level) | Intrusion / Integrity strike. Power roll + Logic; low no damage; middle/high 2d10 + Logic (intermediate +1d6; advanced 3d10 + Logic). |\n| **Daemon** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | System control / Track 1 puppet. Holds a breached maglock, cam, or light and fires its function. |\n| **Watchdog** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | Defend / Trace scrub. Reduces your own Trace Alert increases; bane on Wired/EW attacks against the Agent (and allies at higher bands). |\n\n**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.\n\n> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*\n>\n> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).\n\n> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.",
+        "content": "<p>Agents are software constructs you compile from your deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are <strong>not</strong> Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world; you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.</p>\n<p><strong>Immersion.</strong> Compiling an Agent requires <strong>Overlay or Jacked In</strong>. <strong>Linked refuses</strong> — Agents need immersion; a soft presence is not enough to keep a daemon running. Decompile does not require immersion: you can kill your own process while Linked or Disconnected.</p>\n<p><strong>Compile cost.</strong> <strong>Compile Agent</strong> is a signature main action that costs <strong>3 Bandwidth</strong> in combat (the same number as Compile Sprite's Enhance and as Ghost Signal). Outside combat, Hacker Programs (and this compile) fire without spending, once until you earn Victories or finish a respite. There is no v1 Enhance that compiles a second Agent in the same action.</p>\n<p><strong>Agent cap.</strong> At 1st level you may have up to <strong>2 Agents</strong> compiled at once. The cap rises to <strong>3</strong> at 5th level and <strong>4</strong> at 8th. Caps do not stack — use the single highest number you qualify for. (A later Controller \"Weaver-like\" bump is parked.)</p>\n<p><strong>Bands.</strong> The Agent you compile is chosen by your current level, every time:</p>\n<table>\n<thead>\n<tr>\n<th id=\"rank\">Rank</th>\n<th id=\"levels\">Levels</th>\n<th id=\"behavior\">Behavior</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Minor (extension)</strong></td>\n<td>1–3</td>\n<td>Agents act on your turn. No separate initiative.</td>\n</tr>\n<tr>\n<td><strong>Intermediate (commanded)</strong></td>\n<td>4–7</td>\n<td>Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round.</td>\n</tr>\n<tr>\n<td><strong>Advanced (independent)</strong></td>\n<td>8–10</td>\n<td>Each Agent takes its own turn in the round.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Stamina.</strong> An Agent's Stamina is archetype base + (<strong>Logic × Level</strong>), stamped when it compiles:</p>\n<table>\n<thead>\n<tr>\n<th id=\"archetype\">Archetype</th>\n<th id=\"minor_(l1–3)\">Minor (L1–3)</th>\n<th id=\"intermediate_(l4–7)\">Intermediate (L4–7)</th>\n<th id=\"advanced_(l8–10)\">Advanced (L8–10)</th>\n<th id=\"job\">Job</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Probe</strong></td>\n<td>8 + (Logic × Level)</td>\n<td>14 + (Logic × Level)</td>\n<td>20 + (Logic × Level)</td>\n<td>Recon / Deep Scan twin. Edge on Scan, Search, or Deep Scan.</td>\n</tr>\n<tr>\n<td><strong>Spike</strong></td>\n<td>12 + (Logic × Level)</td>\n<td>18 + (Logic × Level)</td>\n<td>26 + (Logic × Level)</td>\n<td>Intrusion / Integrity strike. Power roll + Logic; low no damage; middle/high 2d10 + Logic (intermediate +1d6; advanced 3d10 + Logic).</td>\n</tr>\n<tr>\n<td><strong>Daemon</strong></td>\n<td>10 + (Logic × Level)</td>\n<td>16 + (Logic × Level)</td>\n<td>22 + (Logic × Level)</td>\n<td>System control / Track 1 puppet. Holds a breached maglock, cam, or light and fires its function.</td>\n</tr>\n<tr>\n<td><strong>Watchdog</strong></td>\n<td>10 + (Logic × Level)</td>\n<td>16 + (Logic × Level)</td>\n<td>22 + (Logic × Level)</td>\n<td>Defend / Trace scrub. Reduces your own Trace Alert increases; bane on Wired/EW attacks against the Agent (and allies at higher bands).</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Decompile.</strong> A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to <strong>0 Stamina</strong>, and the whole roster decompiles when the encounter ends.</p>\n<blockquote>\n  <p><strong>Compile Agent</strong> <em>(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)</em></p>\n  <p><strong>Effect:</strong> <strong>Compile</strong> an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or <strong>Command</strong> your compiled Agents to move and act. On <strong>high (17+)</strong>, you compile <em>and</em> issue a free command in the same action. On <strong>middle (12–16)</strong>, the Agent compiles, or the command resolves, normally. On <strong>low (≤11)</strong>, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).</p>\n  <p><strong>Decompile Agent</strong> <em>(Class Feature Signature — free maneuver)</em></p>\n  <p><strong>Effect:</strong> Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.</p>\n</blockquote>"
       },
       "category": null,
       "ownership": {
@@ -175,11 +175,39 @@
       "flags": {}
     },
     {
-      "_id": "PVpmQAiQKdGoIxYb",
-      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.PVpmQAiQKdGoIxYb",
-      "name": "Core Class Features (Non-Subclass)",
+      "_id": "pH9KDwbhmaC0dx3q",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.pH9KDwbhmaC0dx3q",
+      "name": "Level 1-10 Progression Table",
       "type": "text",
       "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Level | Class Features | Perks/Skills | Subclass Features |\n|---|---|---|---|\n| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |\n| **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |\n| **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |\n| **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |\n| **5** | Choose a 9-Cost Program (Network Purge) | -- | Subclass 5th-level feature |\n| **6** | Dual Boot (feature + Dual Boot Swap ability) | Perk (choice) | Subclass 6th-level feature |\n| **7** | Bandwidth Overclock (+1 income, cap 6->8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability) | Characteristic Increase - Skill | Subclass 7th-level feature |\n| **8** | Choose an 11-Cost Program (Backdoor Override) | Perk (choice) | Subclass 8th-level feature |\n| **9** | Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values) | -- | Subclass 9th-level feature |\n| **10** | Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability) | Characteristic Increase - Perk (choice) - Skill | -- |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"level\">Level</th>\n<th id=\"class_features\">Class Features</th>\n<th id=\"perks/skills\">Perks/Skills</th>\n<th id=\"subclass_features\">Subclass Features</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>1</strong></td>\n<td>Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal)</td>\n<td>--</td>\n<td>Subclass passive + subclass triggered action (see subclass tables below)</td>\n</tr>\n<tr>\n<td><strong>2</strong></td>\n<td>Choose a 5-Cost Program (Kill Switch)</td>\n<td>Perk (choice)</td>\n<td>Subclass 2nd-level feature</td>\n</tr>\n<tr>\n<td><strong>3</strong></td>\n<td>Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade)</td>\n<td>--</td>\n<td>Subclass 3rd-level feature</td>\n</tr>\n<tr>\n<td><strong>4</strong></td>\n<td>Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band)</td>\n<td>Characteristic Increase - Perk (choice) - Skill</td>\n<td>--</td>\n</tr>\n<tr>\n<td><strong>5</strong></td>\n<td>Choose a 9-Cost Program (Network Purge)</td>\n<td>--</td>\n<td>Subclass 5th-level feature</td>\n</tr>\n<tr>\n<td><strong>6</strong></td>\n<td>Dual Boot (feature + Dual Boot Swap ability)</td>\n<td>Perk (choice)</td>\n<td>Subclass 6th-level feature</td>\n</tr>\n<tr>\n<td><strong>7</strong></td>\n<td>Bandwidth Overclock (+1 income, cap 6-&gt;8 x Echelon) - Ghost Protocol (feature + Pre-Encounter Sweep ability)</td>\n<td>Characteristic Increase - Skill</td>\n<td>Subclass 7th-level feature</td>\n</tr>\n<tr>\n<td><strong>8</strong></td>\n<td>Choose an 11-Cost Program (Backdoor Override)</td>\n<td>Perk (choice)</td>\n<td>Subclass 8th-level feature</td>\n</tr>\n<tr>\n<td><strong>9</strong></td>\n<td>Root Access (Dual Boot 2/encounter; Improved Cyberdeck bonus becomes +2/+2, replacing the 4th-level values)</td>\n<td>--</td>\n<td>Subclass 9th-level feature</td>\n</tr>\n<tr>\n<td><strong>10</strong></td>\n<td>Ghost in the Machine (epic capstone, feature + ability) - Infinite Loop (Bandwidth carries between encounters) - Borrowed Access (feature + ability)</td>\n<td>Characteristic Increase - Perk (choice) - Skill</td>\n<td>--</td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "ZdHZAJgRAQ5NUHBp",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.ZdHZAJgRAQ5NUHBp",
+      "name": "Core Class Features (Non-Subclass)",
+      "type": "text",
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "qGZEOh8IDbqIHGJN",
-      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.qGZEOh8IDbqIHGJN",
+      "_id": "wFG3wfl3AZ1eqXk5",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.wFG3wfl3AZ1eqXk5",
       "name": "Subclass: Disruptor -- *Striker, Damage Amplification*",
       "type": "text",
-      "sort": 800000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +259,11 @@
       "flags": {}
     },
     {
-      "_id": "eyqCBguzBUkmcKQ3",
-      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.eyqCBguzBUkmcKQ3",
+      "_id": "WFI0CsxGKJmuvQFy",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.WFI0CsxGKJmuvQFy",
       "name": "Subclass: Controller -- *Lockdown, Node Control / Holding* (\"The Sysop\")",
       "type": "text",
-      "sort": 900000,
+      "sort": 1000000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +287,11 @@
       "flags": {}
     },
     {
-      "_id": "uj7DKv0FTfJxSVJc",
-      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.uj7DKv0FTfJxSVJc",
+      "_id": "KqHYhZjnEOMboULR",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.KqHYhZjnEOMboULR",
       "name": "Subclass: Support -- *Tank/Anchor, Ally Protection* (\"Guardian Angel in the Net\")",
       "type": "text",
-      "sort": 1000000,
+      "sort": 1100000,
       "title": {
         "show": true,
         "level": 1
@@ -287,11 +315,11 @@
       "flags": {}
     },
     {
-      "_id": "jxYEEKKhzKbdwdlH",
-      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.jxYEEKKhzKbdwdlH",
+      "_id": "MJ2iQ2AHgRto3Qld",
+      "_key": "!journal.pages!CIgiBhzBOKWBKwF7.MJ2iQ2AHgRto3Qld",
       "name": "Chrome a Hacker Runs",
       "type": "text",
-      "sort": 1100000,
+      "sort": 1200000,
       "title": {
         "show": true,
         "level": 1

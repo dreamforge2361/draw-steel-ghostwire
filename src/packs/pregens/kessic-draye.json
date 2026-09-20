@@ -120,7 +120,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.webp",
+      "src": "icons/svg/mystery-man.svg",
       "scaleX": 1,
       "scaleY": 1
     },
@@ -460,6 +460,31 @@
             "description": "<p>You automatically know Seize Control and Deep Scan. (You already have the nine Matrix Verbs, like every hero.)</p>",
             "chooseN": null,
             "sort": 6000,
+            "additional": {
+              "type": "",
+              "perkType": []
+            }
+          },
+          "pPmGDKraCpKV4cOx": {
+            "_id": "pPmGDKraCpKV4cOx",
+            "img": "icons/commodities/tech/circuit-board-green.webp",
+            "repick": {},
+            "name": "Agents",
+            "type": "itemGrant",
+            "requirements": {
+              "level": 1
+            },
+            "pool": [
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J1YFmCnCn5dJfS6T"
+              },
+              {
+                "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bwJwQXSsAdo6de3U"
+              }
+            ],
+            "description": "<p>You gain Compile Agent and Decompile Agent. Agents are deck software — not Resonance sprites. Compiling costs 3 Bandwidth and requires Overlay or Jacked In (Linked refuses).</p>",
+            "chooseN": null,
+            "sort": 6500,
             "additional": {
               "type": "",
               "perkType": []
@@ -933,7 +958,7 @@
             "sort": 28000
           }
         },
-        "level": 1,
+        "level": 0,
         "primary": "Bandwidth",
         "epic": "Ghost in the Machine",
         "turnGain": "1",
@@ -1259,7 +1284,13 @@
       "ownership": {
         "default": 0
       },
-      "flags": {},
+      "flags": {
+        "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
       "effects": [],
       "_key": "!actors.items!EpoiL9RG5vvty6mT.iRwHI3THYIKTFFVt"
     },
@@ -1549,6 +1580,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "matrix": {
             "echelon": 1,
             "availability": "professional",
@@ -1817,6 +1851,184 @@
       "flags": {},
       "effects": [],
       "_key": "!actors.items!EpoiL9RG5vvty6mT.LKyCRMTeGDc67lmD"
+    },
+    {
+      "_id": "J1YFmCnCn5dJfS6T",
+      "name": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Name",
+      "type": "ability",
+      "img": "icons/commodities/tech/circuit-board-green.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "19-hacker",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "compile-agent",
+        "story": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Story",
+        "keywords": [
+          "tech",
+          "wired"
+        ],
+        "type": "main",
+        "category": "signature",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "special",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "special",
+          "value": null,
+          "custom": "The net (to compile) or your Agents (to command)"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "sAgtCmpFx0000001": {
+              "name": "",
+              "img": null,
+              "type": "other",
+              "_id": "sAgtCmpFx0000001",
+              "other": {
+                "tier1": {
+                  "display": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Tier1",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Tier2",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Tier3",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 100
+            }
+          }
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Effect_before0000000000",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "hacker"
+          ],
+          "level": null
+        }
+      },
+      "folder": "rACDDp0N9PLzhhnB",
+      "sort": 500,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!EpoiL9RG5vvty6mT.J1YFmCnCn5dJfS6T"
+    },
+    {
+      "_id": "bwJwQXSsAdo6de3U",
+      "name": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Name",
+      "type": "ability",
+      "img": "icons/commodities/tech/circuit-board.webp",
+      "system": {
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "19-hacker",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "decompile-agent",
+        "story": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Story",
+        "keywords": [
+          "tech"
+        ],
+        "type": "maneuver",
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "self",
+          "primary": "",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "self",
+          "value": null,
+          "custom": "Your compiled Agents"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [],
+            "reactive": false
+          },
+          "effects": {}
+        },
+        "spend": {
+          "text": "",
+          "value": null
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Effect_before0000000000",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [
+            "hacker"
+          ],
+          "level": null
+        }
+      },
+      "folder": "rACDDp0N9PLzhhnB",
+      "sort": 600,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!EpoiL9RG5vvty6mT.bwJwQXSsAdo6de3U"
     },
     {
       "_id": "61dSVkYIHjD0h7vb",
@@ -2416,6 +2628,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "gear": {
             "echelon": 1,
             "availability": "professional",
@@ -2591,7 +2806,9 @@
           "mod": {
             "slotCost": 1,
             "hosts": [
-              "deck"
+              "deck",
+              "resonance",
+              "body"
             ],
             "host": "deck",
             "craftSkill": [
@@ -2624,7 +2841,7 @@
         "category": "trinket",
         "echelon": 1,
         "keywords": [],
-        "quantity": 2,
+        "quantity": 1,
         "project": {
           "prerequisites": "",
           "source": "",
@@ -2668,9 +2885,7 @@
             "craftSkill": [
               "hacking"
             ],
-            "magazine": true,
-            "installedOn": "6XVXN8DuHNp3HkDH",
-            "active": true
+            "magazine": true
           }
         }
       },
@@ -2770,6 +2985,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "chrome": {
             "grade": "standard",
             "location": "head",
@@ -2909,9 +3127,7 @@
       "integrity": {
         "value": 17,
         "max": 20
-      },
-      "taint": 0,
-      "corruptionHistory": ""
+      }
     }
   }
 }
