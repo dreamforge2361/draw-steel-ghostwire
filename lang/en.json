@@ -7324,9 +7324,9 @@
         "Name": "Gold Line",
         "Folder": "Deadhead",
         "LevelInterior": "Interior",
-        "RoofsTile": "Roofs (overhead)",
-        "Injected": "Gold Line is ready under Scenes → Deadhead. Roofs sit on the Tiles layer (elevation 10).",
-        "Refreshed": "Gold Line loops refreshed. Re-activate the Scene if the canvas is already open."
+        "RoofsTile": "Roofs",
+        "Injected": "Gold Line is ready under Scenes → Deadhead. Hide the Roofs tile when the crew goes inside.",
+        "Refreshed": "Gold Line was force-restamped (overwrites walls, lights, tiles, and background). Re-activate the Scene if it is already open."
       }
     },
     "Lore": {

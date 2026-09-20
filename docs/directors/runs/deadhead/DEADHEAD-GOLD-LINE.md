@@ -131,12 +131,22 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 
 **Shipped assets** (`assets/maps/battlemaps/gold-line/`):
 
-| Role | Preferred | Fallback |
-|---|---|---|
-| Interior background | `map-gold-line-interior-loop.webm` | `map-gold-line-interior.webp` |
-| Roofs overhead | `map-gold-line-roofs-loop.webm` | `map-gold-line-roofs.webp` |
+| Role | Where | Prefer | Fallback |
+|---|---|---|---|
+| Interior (motion) | **Level background** only | `map-gold-line-interior-loop.mp4` | webm, then still |
+| Roofs (motion) | **ONE Tile** `goldLineRoofs`, x=0 y=0, 6472×958, elev 1 | `map-gold-line-roofs-loop.mp4` | webm, then still |
 
-Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile (**Tiles** layer, name **Roofs (overhead)**). **Director: hide the roofs tile when playing inside.** Walls and lights are **Michael manual** — do not inject or overwrite them. World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the background is still or roofs are missing, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate the Scene.
+`resolveSrc` order is **loop.mp4 → loop.webm → still.webp**. H.264 MP4s carry a real duration (shipped VP9 webms report `duration=N/A` and Foundry throws `Failed to set currentTime ... non-finite`). Stills are a **valid playable layout** if a loop is missing. Do not swap in a generated train.
+
+**Locked architecture (new worlds only):** Level background = interior MP4 (loop + autoplay). One roof tile. No interior motion tile. No second background. Inject deletes leftover `goldLineInterior` tiles.
+
+Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares.
+
+**Roofs tile** (**Tiles** layer, name **Roofs**): start **x=0, y=0, width=6472, height=958, elevation=1, sort=1, locked**. Occlusion is **NONE** (mode 0, alpha 1).
+
+**Director — hide roofs:** hide the roofs tile when playing inside (Tiles layer → eye / right-click Hide). Unhide for the roof Recall bail. Occlusion stays off. Walls and lights are **Michael manual**.
+
+World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line** on **new** worlds only. If a scene already has flag `goldLineScene`, the module **returns immediately** and never rewrites background, tiles, levels, walls, lights, or dimensions. `{ force: true }` is **GM-opt-in only** and overwrites the live scene — do not run it on a dressed map. Ready never passes force.
 
 ---
 
