@@ -1,0 +1,12 @@
+{
+  "_id": "gwBestiaryMama00",
+  "_key": "!folders!gwBestiaryMama00",
+  "name": "GHOSTWIRE.Bestiary.Folders.MamasClub",
+  "type": "Actor",
+  "folder": "gwBestiaryStreet",
+  "sort": 120000,
+  "flags": {},
+  "color": "#7b1e5a",
+  "description": "",
+  "sorting": "a"
+}

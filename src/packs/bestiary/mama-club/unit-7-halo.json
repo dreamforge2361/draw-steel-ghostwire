@@ -1,0 +1,446 @@
+{
+  "folder": "gwBestiaryMama00",
+  "name": "Unit-7 “Halo”",
+  "type": "npc",
+  "_id": "GwMamaHalo000000",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/unit-7-halo.webp",
+  "system": {
+    "stamina": {
+      "value": 55,
+      "max": 55,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 0
+      },
+      "reason": {
+        "value": 0
+      },
+      "intuition": {
+        "value": 1
+      },
+      "presence": {
+        "value": -1
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>A male-presenting cyborg in a heavy chrome faceplate, with a single gold ring burning around the iris — the halo that gave him his name. He stands at the top of the loft stairs and does not sit down. Ever.</p><p>Unit-7 speaks maybe forty words a night. Thirty of them are “not tonight.”</p>",
+      "director": "<p><strong>Plot hook:</strong> There is an old Ironclad serial still under that chrome, and somebody is quietly buying up scrap code that matches it. Halo does not know he is being reassembled on paper by a stranger. Whoever tells him first owns a very large favour.</p><p><strong>Running him:</strong> Neutral until the stairs are threatened, then immovable. He defends the loft, not the floor — Vexa handles the floor.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 3,
+      "patience": 7,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 4,
+      "keywords": [
+        "humanoid",
+        "cyborg"
+      ],
+      "level": 2,
+      "role": "defender",
+      "organization": "platoon"
+    },
+    "ev": 8,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Unit-7 “Halo”",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/unit-7-halo.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Top of the Stairs",
+      "type": "feature",
+      "_id": "GwMamaHalo00It01",
+      "img": "icons/environment/settlement/gate-stone.webp",
+      "system": {
+        "description": {
+          "value": "<p>While Unit-7 holds a doorway, stair, or other narrow space, enemies who start their turn adjacent to him cannot shift, and he can make a free strike against any creature that moves past him into the space he guards.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "top-of-the-stairs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaHalo000000.GwMamaHalo00It01"
+    },
+    {
+      "name": "Halo Iris",
+      "type": "feature",
+      "_id": "GwMamaHalo00It02",
+      "img": "icons/commodities/tech/electronics-sensor-eye.webp",
+      "system": {
+        "description": {
+          "value": "<p>The gold ring around Unit-7's eye is a filter array. He ignores concealment granted by a supernatural effect, and he never mistakes a Veil glamour for a paying customer.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "supernatural-insight",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaHalo000000.GwMamaHalo00It02"
+    },
+    {
+      "name": "Chrome Fists",
+      "type": "ability",
+      "_id": "GwMamaHalo00It03",
+      "img": "icons/skills/melee/unarmed-punch-fist.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "chrome-fists",
+        "story": "Plated knuckles — nothing on him to confiscate at the door.",
+        "keywords": [
+          "melee",
+          "strike"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "GwMamaHalo00Dmg0": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "GwMamaHalo00Dmg0",
+              "damage": {
+                "tier1": {
+                  "value": "5",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "8",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "11",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "GwMamaHalo00App0": {
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "GwMamaHalo00App0",
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "effects": {
+                    "taunted": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "might"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "taunted": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "effects": {
+                    "taunted": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The target is taunted (EoT).</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaHalo000000.GwMamaHalo00It03"
+    }
+  ],
+  "effects": [],
+  "sort": 200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "2LCPcUpIpDioFaFn",
+        "dsSourceName": "Human Knave → Street Punk",
+        "decision": "Adapt",
+        "region": "streets",
+        "venue": "mama-cassavir-club",
+        "slug": "unit-7-halo",
+        "handbookName": "Unit-7 “Halo”",
+        "station": "Stair Guard",
+        "people": "Cyborg",
+        "sex": "M",
+        "wired": false
+      }
+    }
+  },
+  "_key": "!actors!GwMamaHalo000000"
+}

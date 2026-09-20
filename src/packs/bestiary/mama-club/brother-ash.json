@@ -1,0 +1,447 @@
+{
+  "folder": "gwBestiaryMama00",
+  "name": "Brother Ash",
+  "type": "npc",
+  "_id": "GwMamaAsh0000000",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/brother-ash.webp",
+  "system": {
+    "stamina": {
+      "value": 55,
+      "max": 55,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 0
+      },
+      "reason": {
+        "value": 1
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 2
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 1,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>A Goliar man with a street-priest's lean — not ordained, not licensed, not quite a class. Brother Ash works the back wall with a censer on a chain and a voice pitched exactly low enough that people lean in to hear it.</p>",
+      "director": "<p><strong>Plot hook:</strong> Ash soft-recruits for a Veil cult that still drinks at this club. He never pushes, never names the group, and always finds the person in the room who has just lost something. Mama tolerates him — until she doesn't.</p><p><strong>Running him:</strong> Neutral and warm right up to the moment he isn't. He is genuinely dangerous and genuinely kind, in that order.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 7,
+      "patience": 6,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 4,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 2,
+      "role": "support",
+      "organization": "platoon"
+    },
+    "ev": 8,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Brother Ash",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/brother-ash.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Street Pulpit",
+      "type": "feature",
+      "_id": "GwMamaAsh000It01",
+      "img": "icons/magic/holy/prayer-hands-glowing-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Ash finds the grieving person in any room within minutes. He has a double edge on tests to open a conversation with someone who has recently suffered a loss, and they rarely notice they are being read.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "street-pulpit",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaAsh0000000.GwMamaAsh000It01"
+    },
+    {
+      "name": "Tolerated, For Now",
+      "type": "feature",
+      "_id": "GwMamaAsh000It02",
+      "img": "icons/environment/people/cleric-grey.webp",
+      "system": {
+        "description": {
+          "value": "<p>Brother Ash keeps his recruiting quiet enough that the house looks the other way. He will not preach on the floor, will not name the Veil aloud, and will leave the moment Vexa asks — the first time.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "tolerated-for-now",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaAsh0000000.GwMamaAsh000It02"
+    },
+    {
+      "name": "Censer Chain",
+      "type": "ability",
+      "_id": "GwMamaAsh000It03",
+      "img": "icons/weapons/maces/mace-round-spiked-gold.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "censer-chain",
+        "story": "Three feet of chain and a hot brass bowl.",
+        "keywords": [
+          "melee",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "GwMamaAsh000Dmg0": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "GwMamaAsh000Dmg0",
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "GwMamaAsh000App0": {
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "GwMamaAsh000App0",
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "effects": {
+                    "frightened": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "might"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "frightened": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "effects": {
+                    "frightened": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The target is frightened (EoT).</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaAsh0000000.GwMamaAsh000It03"
+    }
+  ],
+  "effects": [],
+  "sort": 530,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "2LCPcUpIpDioFaFn",
+        "dsSourceName": "Human Knave → Street Punk",
+        "decision": "Adapt",
+        "region": "streets",
+        "venue": "mama-cassavir-club",
+        "slug": "brother-ash",
+        "handbookName": "Brother Ash",
+        "station": "Regular — Back Wall",
+        "people": "Goliar",
+        "sex": "M",
+        "wired": false
+      }
+    }
+  },
+  "_key": "!actors!GwMamaAsh0000000"
+}

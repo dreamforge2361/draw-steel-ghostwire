@@ -1,0 +1,416 @@
+{
+  "folder": "gwBestiaryMama00",
+  "name": "Pip “Tray” Riss",
+  "type": "npc",
+  "_id": "GwMamaPip0000000",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/pip-tray-riss.webp",
+  "system": {
+    "stamina": {
+      "value": 4,
+      "max": 4,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 0
+      },
+      "agility": {
+        "value": 3
+      },
+      "reason": {
+        "value": 1
+      },
+      "intuition": {
+        "value": 1
+      },
+      "presence": {
+        "value": 0
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "S"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>A small, fast Rat-Changer who covers the whole floor without ever seeming to hurry. Pip has never dropped a tray and has never been caught with her hand in a pocket, because her hands do not go in pockets.</p>",
+      "director": "<p><strong>Plot hook:</strong> Pip steals nothing valuable — she steals <em>rumours</em>, and she sells them to Kira “Soft Trace” Bell at the corner table for drink money. Anything the heroes say on the club floor is in Soft Trace's hands within the hour.</p><p><strong>Running her:</strong> Noncombatant. Very hard to corner.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 7,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 6,
+      "patience": 4,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 1,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 1,
+      "role": "harrier",
+      "organization": "minion",
+      "withCaptainEffect": "GwMamaPip00Captn"
+    },
+    "ev": 3,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Pip “Tray” Riss",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/pip-tray-riss.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Steals Rumours",
+      "type": "feature",
+      "_id": "GwMamaPip000It01",
+      "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>Pip hears everything said within a few paces of a tray. She has a double edge on tests to overhear a conversation in a crowded room, and she remembers it verbatim for about a day — long enough to sell it.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "steals-rumours",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaPip0000000.GwMamaPip000It01"
+    },
+    {
+      "name": "Hot Tray",
+      "type": "ability",
+      "_id": "GwMamaPip000It02",
+      "img": "icons/containers/kitchenware/tray-wood-brown.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hot-tray",
+        "story": "Edge-on to the shin, then gone.",
+        "keywords": [
+          "melee",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "agility"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "GwMamaPip000Dmg0": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "GwMamaPip000Dmg0",
+              "damage": {
+                "tier1": {
+                  "value": "1",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "2",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "3",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaPip0000000.GwMamaPip000It02"
+    }
+  ],
+  "effects": [
+    {
+      "name": "With Captain",
+      "img": "icons/skills/social/intimidation-impressing.webp",
+      "type": "abilityModifier",
+      "origin": "Actor.GwMamaPip0000000",
+      "disabled": true,
+      "_id": "GwMamaPip00Captn",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "filters": {
+          "keywords": [
+            "strike"
+          ]
+        },
+        "changes": [
+          {
+            "key": "power.roll.edges",
+            "value": 1,
+            "priority": null,
+            "type": "add",
+            "phase": "initial"
+          }
+        ],
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "kind": "weapon",
+            "amount": "1",
+            "display": ""
+          }
+        }
+      },
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "description": "<p>Gain an edge on strikes.</p>",
+      "tint": "#ffffff",
+      "transfer": false,
+      "statuses": [],
+      "sort": 0,
+      "flags": {},
+      "start": {
+        "combat": null,
+        "round": null,
+        "time": 0,
+        "turn": null,
+        "combatant": null,
+        "initiative": null
+      },
+      "showIcon": 1,
+      "folder": null,
+      "_key": "!actors.effects!GwMamaPip0000000.GwMamaPip00Captn"
+    }
+  ],
+  "sort": 400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "3rIQkdmxl0kUvznF",
+        "dsSourceName": "Human Raider → Gang Raider",
+        "decision": "Adapt",
+        "region": "streets",
+        "venue": "mama-cassavir-club",
+        "slug": "pip-tray-riss",
+        "handbookName": "Pip “Tray” Riss",
+        "station": "Floor Wait",
+        "people": "Rat-Changer",
+        "sex": "F",
+        "wired": false
+      }
+    }
+  },
+  "_key": "!actors!GwMamaPip0000000"
+}

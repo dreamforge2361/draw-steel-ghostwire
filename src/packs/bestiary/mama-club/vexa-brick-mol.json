@@ -1,0 +1,447 @@
+{
+  "folder": "gwBestiaryMama00",
+  "name": "Vexa “Brick” Mol",
+  "type": "npc",
+  "_id": "GwMamaVexa000000",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/vexa-brick-mol.webp",
+  "system": {
+    "stamina": {
+      "value": 50,
+      "max": 50,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 0
+      },
+      "reason": {
+        "value": 1
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 1
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 1,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>A Goliar woman built like a loading door, running the long bar at Mama Cassavir's club. Vexa keeps the tabs, the cuts, and the temperature of the room. She pours fast, listens faster, and has never once raised her voice — the stun baton clipped under the bar has done all her shouting for eleven years.</p><p>Nobody gets up the loft stairs without Vexa deciding they should.</p>",
+      "director": "<p><strong>Plot hook:</strong> Vexa owns the bar math — she knows exactly which runners skipped a Soft Trace bill and how deep they are. A favour, a straight answer, or a very good tip gets the heroes a nod, and a nod from Vexa opens the VIP loft.</p><p><strong>Running her:</strong> Neutral. Not a fight unless the club is the fight. If it goes loud she covers the bar and the wait staff, not the door.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 6,
+      "patience": 6,
+      "motivations": [],
+      "pitfalls": [],
+      "impression": 2
+    },
+    "monster": {
+      "freeStrike": 4,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 2,
+      "role": "support",
+      "organization": "platoon"
+    },
+    "ev": 8,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Vexa “Brick” Mol",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/vexa-brick-mol.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Owns the Bar Math",
+      "type": "feature",
+      "_id": "GwMamaVexa00It01",
+      "img": "icons/skills/social/diplomacy-handshake.webp",
+      "system": {
+        "description": {
+          "value": "<p>Vexa carries every open tab, cut, and unpaid favour in her head. She always knows who in the room owes money and to whom, and she can name the figure without checking a screen.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "owns-the-bar-math",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaVexa000000.GwMamaVexa00It01"
+    },
+    {
+      "name": "Mama's Nod",
+      "type": "feature",
+      "_id": "GwMamaVexa00It02",
+      "img": "icons/environment/settlement/watchtower-cliff.webp",
+      "system": {
+        "description": {
+          "value": "<p>The loft stairs open on Vexa's say-so. While she vouches for a creature, Unit-7 and the rest of the floor treat them as a guest of the house. While she has not, they do not.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "mamas-nod",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaVexa000000.GwMamaVexa00It02"
+    },
+    {
+      "name": "Stun Baton",
+      "type": "ability",
+      "_id": "GwMamaVexa00It03",
+      "img": "icons/weapons/clubs/club-baton-blue.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "stun-baton",
+        "story": "The short black stick that lives under the register.",
+        "keywords": [
+          "melee",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "melee",
+          "primary": "1",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "GwMamaVexa00Dmg0": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "GwMamaVexa00Dmg0",
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "GwMamaVexa00App0": {
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "GwMamaVexa00App0",
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "effects": {
+                    "dazed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "might"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "dazed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "effects": {
+                    "dazed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The target is dazed (EoT).</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!GwMamaVexa000000.GwMamaVexa00It03"
+    }
+  ],
+  "effects": [],
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "dsSourceId": "2LCPcUpIpDioFaFn",
+        "dsSourceName": "Human Knave → Street Punk",
+        "decision": "Adapt",
+        "region": "streets",
+        "venue": "mama-cassavir-club",
+        "slug": "vexa-brick-mol",
+        "handbookName": "Vexa “Brick” Mol",
+        "station": "Lead Bartender",
+        "people": "Goliar",
+        "sex": "F",
+        "wired": false
+      }
+    }
+  },
+  "_key": "!actors!GwMamaVexa000000"
+}
