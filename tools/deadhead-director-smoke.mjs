@@ -157,6 +157,7 @@ ok(existsSync("assets/tokens/vehicles/nox-trash-freighter.png") && existsSync("a
 
 const actor = readBomFreeJson("src/packs/deadhead/nox-trash-freighter.json");
 ok(actor._id === "gwNoxTrashActor0" && actor.type === "npc", "Nox freighter Actor id + npc type");
+ok(actor.items?.some(i => i.system?._dsid === "wire-kit-matrix-verbs"), "Nox freighter Actor embeds Wire Kit");
 ok(actor.folder === null && actor._key === "!actors!gwNoxTrashActor0", "Nox freighter Actor is pack-root Actor (not a Journal)");
 ok(actor.img.endsWith("nox-trash-freighter.webp") && actor.prototypeToken?.texture?.src?.endsWith("nox-trash-freighter.webp"), "Actor img + prototypeToken use freighter webp");
 ok(actor.prototypeToken.width === 4 && actor.prototypeToken.height === 6, "Actor token starts at 4×6 squares");

@@ -45,7 +45,7 @@ You leave any on-net state with the **Jack Out** Matrix Verb -- a clean disconne
 
 - **Comms / deck / chrome:** a commlink, cyberdeck, datajack, trodes, or other tagged comms / chrome interface
 - **Wrench drone control:** an **RCC** (Remote Box, Fleet Deck, War Table, Command Rig, Hydra Console) or **Rigger’s Harness** (neural control-interface mount). Harness ≡ deck. Fabricator’s Bench (tool rig) and Field Chassis (turret tablet) are **not** interfaces
-- **Wire Kit — Matrix Verbs** on an NPC, drone, or vehicle (Director stamp). **Pack drones and vehicles** (all nine `machine-drone-*` / `machine-vehicle-*` band templates) ship with the kit so imports/deploys are Wire-ready; they still start **Disconnected** until Connect
+- **Wire Kit — Matrix Verbs** on an NPC, drone, or vehicle (Director stamp). **Pack drones and vehicles** (all nine `machine-drone-*` / `machine-vehicle-*` band templates, plus plot vehicles like Nox’s trash freighter) ship with the kit so imports/deploys are Wire-ready; they still start **Disconnected** until Connect
 - **Technomancer** (class) — deckless Resonance; no gear required
 
 Spoof Kit is **not** an interface. Rigger Cocoon is a vehicle Jump-In mod, not an interface. Without an interface, Connect refuses: “Need a commlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.”

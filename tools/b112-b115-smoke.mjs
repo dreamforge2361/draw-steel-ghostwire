@@ -289,6 +289,15 @@ for (const band of ["bike", "car", "heavy", "air", "water", "space"]) {
   ok(!wired?.state && wired?.connected !== true, `${band} template is not auto-Overlay / auto-Connected`);
 }
 
+console.log("\n4b3) Plot vehicles (Nox) carry Wire Kit");
+const nox = readBomFreeJson("src/packs/deadhead/nox-trash-freighter.json");
+ok(nox.flags["draw-steel-ghostwire"].kind === "vehicle", "Nox kind is vehicle");
+ok(isVehicleActor(nox) && isMachineActor(nox), "isVehicleActor sees Nox freighter");
+ok(nox.items.some(isWireKit), "Nox freighter embeds Wire Kit");
+ok(itemIsConnectInterface(nox.items.find(isWireKit)), "Nox Wire Kit is a Connect interface");
+ok(!nox.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), "Nox has none of the nine Matrix Verbs");
+ok(!nox.flags["draw-steel-ghostwire"].wired?.state, "Nox is not auto-Overlay");
+
 console.log("\n4c) Mule-Bot / Drone (Medium) cargo plate");
 const muleToken = "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp";
 const mulePng = "assets/tokens/drones/mule-bot.png";
