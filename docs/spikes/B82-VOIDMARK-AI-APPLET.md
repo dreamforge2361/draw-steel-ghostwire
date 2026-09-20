@@ -101,6 +101,8 @@ Player-facing answers must stay **Ghostwire-only** after front matter: the syste
 
 Re-index when RAW, Handbook, or manuscript lore updates.
 
+**Linked (0.3.57):** after RAW `21` gained Linked, rebuild this index so VOIDMARK no longer answers “only Overlay and Jacked In.” Smoke asserts the index contains Linked and that Overlay / Jacked In / Connect / connection-state queries retrieve it.
+
 ### API
 
 `POST {baseUrl}/chat/completions` with `Authorization: Bearer <key>`, `model`, `temperature`, optional `max_tokens`, and `messages` (system + recent thread + user). Errors are surfaced in the transcript with `Bearer` tokens stripped. The key is never written to `console`.

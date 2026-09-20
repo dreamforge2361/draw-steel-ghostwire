@@ -1,6 +1,6 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56** (pending Michael’s Foundry test).
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56**, **Linked documented in RAW journals + VOIDMARK index 2026-09-20 / 0.3.57** (pending Michael’s Foundry test).
 **Source of record for rules text:** `docs/raw/21-the-wire.md` — Connection States and Matrix Verbs. This page only describes how Foundry implements them; if the two disagree, RAW wins and this page (and the pack) gets fixed.
 **Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 

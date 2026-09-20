@@ -190,9 +190,12 @@ Disarm, confiscation, and “you woke up in a cell with a jumpsuit” are real s
 
 ## Connection states in combat
 
-- **Jacked In:** the runner’s body is inert on the meatspace board and can’t take real-world actions; allies usually guard it. Wire turns and Matrix Verbs are their fight (`21`).
+Four states (`21`): **Disconnected | Linked | Overlay | Jacked In**. Connect lands in Linked. Toggle steps Linked → Overlay → Jacked In → Linked. Jack Out is the only off-ramp.
+
+- **Linked:** on-net for comms / Broadcast only. Meat Power Rolls are **normal** (no Overlay bane). No Jacked In Wired edge. Scan, Programs, and payload Runs still need Overlay or Jacked In. Soft presence — Wire-discoverable.
 - **Overlaid:** the runner still stands on the street grid but takes a **bane** on real-world Power Rolls while the Wire hangs in their vision.
-- **Biofeedback** from the Wired deals damage to the runner’s Stamina when the Wire hits back (`21`).
+- **Jacked In:** the runner’s body is inert on the meatspace board and can’t take real-world actions; allies usually guard it. Wire turns and Matrix Verbs are their fight (`21`).
+- **Biofeedback** from the Wired deals damage to the runner’s Stamina when the Wire hits back (`21`). Linked has **none** (not immersed). Overlay is half (round down, min 1); Jacked In is ×1.5 (round up).
 
 Cutting between boards mid-round is normal. Finish one action on one board, then cut.
 

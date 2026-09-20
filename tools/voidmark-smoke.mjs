@@ -50,11 +50,29 @@ ok(index.sources?.handbook?.some(f => f.includes("04-switchboard")), "handbook s
 const heroesHits = index.chunks.filter(c => /draw steel heroes/i.test(c.text));
 ok(!heroesHits.length, "no Draw Steel Heroes in indexed rule/lore chunks");
 
+const linkedChunks = index.chunks.filter(c => /linked/i.test(c.text) && c.file.includes("21-the-wire"));
+ok(linkedChunks.length >= 1, `Wire index chunks mention Linked (${linkedChunks.length})`);
+ok(
+  index.chunks.some(c => /Disconnected.*Linked.*Overlay.*Jacked In|four connection states/i.test(c.text)),
+  "index names four connection states including Linked",
+);
+
 console.log("\n2) Retrieval");
 const wire = retrieve(index, "What's the difference between Overlay and Jacked In on the Wire?");
 ok(wire.length >= 2, `wire query returned ${wire.length} hits`);
 ok(wire.some(h => h.file.includes("21-the-wire")), `wire top files: ${wire.map(h => h.file).join(", ")}`);
 ok(wire.some(h => /overlay|jacked in/i.test(h.text)), "wire hits mention Overlay / Jacked In");
+ok(wire.some(h => /linked/i.test(h.text)), "Overlay vs Jacked In query still retrieves Linked");
+
+const linkedQ = retrieve(index, "What is Linked on the Wire?");
+ok(linkedQ.some(h => h.file.includes("21-the-wire")), `Linked query files: ${linkedQ.map(h => h.file).join(", ")}`);
+ok(linkedQ.some(h => /linked/i.test(h.text) && /broadcast|comms|connect/i.test(h.text)), "Linked query hits name Linked + comms/Broadcast");
+
+const connectQ = retrieve(index, "What does Connect do on the Wire?");
+ok(connectQ.some(h => /linked/i.test(h.text) && /connect/i.test(h.text)), "Connect query retrieves Connect + Linked");
+
+const statesQ = retrieve(index, "What are the Wire connection states?");
+ok(statesQ.some(h => /linked/i.test(h.text) && /overlay/i.test(h.text) && /jacked in/i.test(h.text)), "connection-states query names Linked, Overlay, and Jacked In");
 
 const combat = retrieve(index, "How does a combat round work? Main action maneuver move");
 ok(combat.some(h => h.file.includes("04-combat")), `combat top files: ${combat.map(h => h.file).join(", ")}`);

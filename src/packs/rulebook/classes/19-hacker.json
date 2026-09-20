@@ -25,8 +25,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "*RAW draft · Sources: `docs/rulebook/08-hacker.md`*\n\nThe Wired System (nodes, connection states, System Stat Card, Trace Alert) and the universal Matrix Verbs are in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}. This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses.",
-        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/08-hacker.md</code></em></p>\n<p>The Wired System (nodes, connection states, System Stat Card, Trace Alert) and the universal Matrix Verbs are in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}. This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses.</p>"
+        "markdown": "*RAW draft · Sources: `docs/rulebook/08-hacker.md`*\n\nThe Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}. This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**.",
+        "content": "<p><em>RAW draft · Sources: <code>docs/rulebook/08-hacker.md</code></em></p>\n<p>The Wired System (nodes, <strong>four</strong> connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.tfNDDpIs3j680lA4]{The Wire}. This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — <strong>Linked does not satisfy them</strong>.</p>"
       },
       "category": null,
       "ownership": {

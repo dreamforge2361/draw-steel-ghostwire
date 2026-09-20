@@ -21,10 +21,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("B106 / B109 playtest smoke (0.3.45)");
+console.log("B106 / B109 playtest smoke (0.3.45+)");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.45", `module.json is 0.3.45 (got ${moduleJson.version})`);
+ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.45", `module.json is ≥ 0.3.45 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -128,7 +128,8 @@ ok(readFileSync("docs/spikes/B106-WIRED-CONSOLE-WIRE-PING.md", "utf8").includes(
 
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.PingSend === "Send", "lang PingSend");
-ok(lang.GHOSTWIRE.WiredConsole.PingWhisper.includes("Overlay"), "lang whisper option names Overlay / Jacked In");
+ok(lang.GHOSTWIRE.WiredConsole.PingWhisper.includes("Linked"), "lang whisper option names Linked / Overlay / Jacked In");
+ok(lang.GHOSTWIRE.WiredConsole.PingNoConnected.includes("Linked"), "lang empty whisper names Linked");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

@@ -6358,7 +6358,7 @@
       "PingPublic": "Public chat",
       "PingWhisper": "Whisper on-net (Linked / Overlay / Jacked In)",
       "PingEmpty": "Type a short ping before sending.",
-      "PingNoConnected": "No Overlay or Jacked In runners on this scene — whispered to Directors only.",
+      "PingNoConnected": "No on-net (Linked / Overlay / Jacked In) runners on this scene — whispered to Directors only.",
       "PingChatTitle": "Wire ping",
       "PingChatSpeaker": "The Wired — {scene}",
       "AutoNodes": "Auto-nodes from Scene",

@@ -10,7 +10,7 @@
 
 Hacker Bandwidth Programs stay on the sheet. Decks, Bandwidth, Programs, Improved Cyberdeck, origins, Technomancer Resonance / sprites / deckless payloads are **unchanged**.
 
-**Who can fire:** the user’s owned actor (or the GM, from the Console roster). **Connect** works while Disconnected **and** requires a Wire interface (or Technomancer). Every other verb needs Overlay or Jacked In. Hidden nodes stay GM-only.
+**Who can fire:** the user’s owned actor (or the GM, from the Console roster). **Connect** works while Disconnected **and** requires a Wire interface (or Technomancer); it lands in **Linked**. **Broadcast / Toggle / Jack Out** work from Linked. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In. Hidden nodes stay GM-only.
 
 ## Sheet cleanup — no dual homes
 Remove Matrix Verbs from:

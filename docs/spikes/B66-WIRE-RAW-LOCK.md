@@ -41,6 +41,7 @@ Polish The Wire toward manuscript RAW-lock: scrub orphan biofeedback multiplier,
 - [x] Trace Alert middle = no Alert by default (explicit table)
 - [x] Chapter header RAW-locked
 - [x] Foundry align: Overlay/Jacked In, Connected gate, Rating 1–5, suites vs payloads
+- [x] **Linked (0.3.56 code / 0.3.57 docs):** four states Disconnected | Linked | Overlay | Jacked In. Connect→Linked. VOIDMARK index rebuilt so connection-state answers include Linked.
 - [x] Ghostwire-original prose polish (no DS Heroes paste; no new subsystems)
 - [x] STATUS / FOUNDRY-BUILD-PLAN / TOC-PROPOSAL / manuscript notes
 - [x] module.json **0.2.4**

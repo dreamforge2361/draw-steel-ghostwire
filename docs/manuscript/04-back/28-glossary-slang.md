@@ -45,7 +45,8 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | **Chrome** | Cyberware in living flesh. Costs ¥ and Body Integrity. |
 | **Soft / bioware** | Flesh-friendly chrome grade; still counts toward Integrity. |
 | **Salvage** | Cheap, ugly chrome. |
-| **Jack / datajack** | Port that lets you Overlay or Jack In. |
+| **Jack / datajack** | Port that lets you Overlay or Jack In (Connect still lands in **Linked** first). |
+| **Linked** | On-net for comms / ID / packets. No Overlay meat bane, no Jacked In Wired edge. |
 | **Jacked In** | Full immersion in the Wired. |
 | **Overlay** | Partial immersion — AR on top of meatspace. |
 | **Decked / decking** | Working the Wired through a cyberdeck (Hacker talk). |
@@ -58,6 +59,7 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | Term | Meaning |
 |---|---|
 | **The Wired** | The network layer. Chapter title in rules: **The Wire**. |
+| **Connection state** | Disconnected, **Linked**, Overlay, or Jacked In (`21`). |
 | **Avatar** | Your presence inside the Wired (not the Persona characteristic). |
 | **Node** | Anything addressable online. |
 | **Wire Atlas** | Nested Wire maps: district → facility → room. |
