@@ -1,7 +1,7 @@
 # Spike B113 — Light Control / Maglock token art
 
 **Date:** 2026-09-20  
-**Module:** **0.3.48**  
+**Module:** **0.3.49**  
 **Status:** **SHIPPED** (pending Michael Foundry-verify)  
 **Pairs with:** B112 Scene → Wire auto-nodes. Generic Track 1/2 node templates are unchanged.
 

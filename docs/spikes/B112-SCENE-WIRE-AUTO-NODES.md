@@ -1,7 +1,7 @@
 # Spike B112 — Scene → Wire auto-nodes
 
 **Date:** 2026-09-20  
-**Module:** **0.3.48**  
+**Module:** **0.3.49**  
 **Status:** **SHIPPED** (pending Michael Foundry-verify)  
 **Pairs with:** B114 node-map readability, B115 NPC Wire Kit, **B113** Light/Maglock token art (shipped this module).
 

@@ -63,7 +63,7 @@ Michael’s split-face portrait lives under `bestiary/` as `mama-cassavir` (PNG 
 node tools/apply-bestiary-portrait-art.mjs
 ```
 
-## Wired node tokens (B110 / B113)
+## Wired node tokens (B110 / B113 / B116, module 0.3.49)
 
 Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and still apply to hand-placed / templated nodes.
 

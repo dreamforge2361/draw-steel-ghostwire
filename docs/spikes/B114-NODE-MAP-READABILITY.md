@@ -1,7 +1,7 @@
 # Spike B114 — Node-map readability (dense boards)
 
 **Date:** 2026-09-20  
-**Module:** **0.3.48**  
+**Module:** **0.3.49**  
 **Status:** **SHIPPED** (pending Michael Foundry-verify)  
 **Fail-case:** Wired Node Map labels overlapped on Gold Line (20+ lights/doors/cams).
 

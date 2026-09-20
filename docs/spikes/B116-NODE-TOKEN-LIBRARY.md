@@ -1,7 +1,7 @@
 # Spike B116 — Node token library (Director picker)
 
 **Date:** 2026-09-20  
-**Module:** **0.3.48**  
+**Module:** **0.3.49**  
 **Status:** **SHIPPED** (pending Michael Foundry-verify)  
 **Pairs with:** B112 auto-nodes, B113 Light/Maglock art.
 
