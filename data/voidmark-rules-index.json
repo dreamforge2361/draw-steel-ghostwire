@@ -72,7 +72,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1381,
+  "chunkCount": 1384,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -1773,7 +1773,7 @@
       "chapter": "Mods",
       "heading": "Mods",
       "kind": "rules",
-      "text": "**RAW status:** draft (Stage 3 procedure fill / B75, 2026-09-19)  \n**Sources:** `docs/rulebook/14-mods.md` (Complete lock), `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`  \n**Print:** Chapter 12 (TOC lock)  \n**Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Armor and gadget families remain **unpublished** — do not invent SKUs here.\n\n---"
+      "text": "**RAW status:** draft (Stage 3 procedure fill / B75, 2026-09-19)  \n**Sources:** `docs/rulebook/14-mods.md` (Complete lock), `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`  \n**Print:** Chapter 12 (TOC lock)  \n**Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Wearable armor and gadget families remain **unpublished**. Vehicle/drone **Armor** and **Weaponry** each ship a 4-echelon ladder in §5F (Michael lock 2026-09-20).\n\n---"
     },
     {
       "id": "10-mods#what-this-chapter-is-for#2",
@@ -1782,7 +1782,7 @@
       "chapter": "Mods",
       "heading": "What this chapter is for",
       "kind": "rules",
-      "text": "Mods are the **object-side** upgrade layer. Kits train technique. Economy buys hosts. Chrome lives in flesh and spends Body Integrity. Mods fill **mod slots** on hosts you already own.\n\nA smartlinked Ghost-Kit pistol gets both the Kit’s doctrine *and* the mod’s effects — they never overwrite each other. This chapter tells the table **when** to spend a downtime slot on a mod, **how** to install or invent one, **which published families** exist, and how mods refuse to become chrome, Kits, or class power.\n\nIt does **not** publish armor liners, gadget suites, or new SKU ladders. Point of record for published rows is the Gear master. Point of record for deck software play is The Wire (`21`).\n\n---"
+      "text": "Mods are the **object-side** upgrade layer. Kits train technique. Economy buys hosts. Chrome lives in flesh and spends Body Integrity. Mods fill **mod slots** on hosts you already own.\n\nA smartlinked Ghost-Kit pistol gets both the Kit’s doctrine *and* the mod’s effects — they never overwrite each other. This chapter tells the table **when** to spend a downtime slot on a mod, **how** to install or invent one, **which published families** exist, and how mods refuse to become chrome, Kits, or class power.\n\nIt does **not** publish wearable armor liners or gadget suites. Vehicle/drone Armor and Weaponry ladders are harvested from Gear master **§5F**. Point of record for published rows is the Gear master. Point of record for deck software play is The Wire (`21`).\n\n---"
     },
     {
       "id": "10-mods#purpose#3",
@@ -1827,7 +1827,7 @@
       "chapter": "Mods",
       "heading": "Host families",
       "kind": "rules",
-      "text": "| Host family | Status | Notes |\n|---|---|---|\n| **Weapons** | **Published** | Core set in Gear master **§3G** (harvested below) |\n| **Armor / shields** | **Not yet published** | Do not invent liners, weaves, or plate kits |\n| **Gadgets** | **Not yet published** | Comms, sensors, B&E, survival — no family yet |\n| **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below) |\n| **Decks / RCCs** | **Published** (software) | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. Play rules: `21` |\n\nA gadget you bought from Category 1 is still a **host** only if a published family exists for it. Today it does not. You can carry the comm; you cannot legally slot a custom firmware row this chapter does not print.\n\n---"
+      "text": "| Host family | Status | Notes |\n|---|---|---|\n| **Weapons** | **Published** | Core set in Gear master **§3G** (harvested below) |\n| **Armor / shields** | **Not yet published** *(wearable)* | Do not invent liners, weaves, or plate kits for worn armor |\n| **Gadgets** | **Not yet published** | Comms, sensors, B&E, survival — no family yet |\n| **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below). Hosts: `vehicle` and `drone` |\n| **Decks / RCCs** | **Published** (software) | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. Play rules: `21` |\n\nA gadget you bought from Category 1 is still a **host** only if a published family exists for it. Today it does not. You can carry the comm; you cannot legally slot a custom firmware row this chapter does not print.\n\n---"
     },
     {
       "id": "10-mods#echelon-availability-gear-grade#8",
@@ -1917,7 +1917,7 @@
       "chapter": "Mods",
       "heading": "Mods vs Kits",
       "kind": "rules",
-      "text": "- Kit doctrine (damage by Power Roll band, distance, speed, stability, signature) is **character power**. ¥ never buys it (`08`).\n- Mods add **object** tags and edges (Quiet, Smart, a mount, a magazine).\n- A Ghost-Kit runner with a Smartlink and a Suppressor has **both** the Ghost ranged doctrine **and** those tags. Neither line overwrites the other.\n- Armor-as-Stamina and Kit Stamina still **do not double-count** (`08`). A mod cannot sneak a second Stamina bonus onto the vest."
+      "text": "- Kit doctrine (damage by Power Roll band, distance, speed, stability, signature) is **character power**. ¥ never buys it (`08`).\n- Mods add **object** tags and edges (Quiet, Smart, a mount, a magazine).\n- A Ghost-Kit runner with a Smartlink and a Suppressor has **both** the Ghost ranged doctrine **and** those tags. Neither line overwrites the other.\n- Armor-as-Stamina and Kit Stamina still **do not double-count** (`08`). A wearable-armor mod cannot sneak a second Stamina bonus onto the vest.\n- **Machine armor is different:** vehicle/drone armor kits grant Stamina (Integrity) on the machine Actor. Machines have no Kit Stamina and no armor rating. One armor kit at a time."
     },
     {
       "id": "10-mods#mods-vs-chrome#18",
@@ -1944,7 +1944,7 @@
       "chapter": "Mods",
       "heading": "Published mod families",
       "kind": "rules",
-      "text": "Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md`. Rows below are **harvested**, not invented. Armor + gadget families are omitted on purpose."
+      "text": "Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md`. Rows below are **harvested**, not invented. Wearable armor + gadget families are omitted on purpose."
     },
     {
       "id": "10-mods#weapon-mods-gear-master-3g#21",
@@ -1962,7 +1962,7 @@
       "chapter": "Mods",
       "heading": "Vehicle / drone mods — Gear master §5F",
       "kind": "rules",
-      "text": "Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repair** or **Electronics** as the tags imply (Wired rows lean Electronics). Mounted weapons themselves come from Category 3 — the Gun Rack is the hardpoint, not the gun.\n\n| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |\n|---|---|---|---|---|\n| Gun Rack / Weapon Mount / hardpoint assembly | Professional | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. | Mount |\n| Plate-Up / Armor Upgrade / composite up-armor kit | Restricted | 3,000 | Raises the machine's Armor (damage reduction); costs Handling. | — |\n| Tune Kit / Handling Package / suspension-&-control upgrade | Restricted | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |\n| Sensor Pod / Recon Suite / multi-spectral sensor array | Restricted | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |\n| Ghost Coat / Stealth Skin / low-observable coating | Military | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |\n| Runflats / Self-Seal Kit / autonomous-repair weave | Restricted | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |\n| Rigger Cocoon / Control Interface / Jump-In coupling | Military | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |\n| Ammo Bin / Rearm System / autonomous munitions feed | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. | — |"
+      "text": "Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repair** or **Electronics** as the tags imply (Wired rows lean Electronics). Hosts: **vehicle** and **drone**.\n\n**Doctrine (Michael 2026-09-20):** Ghostwire machines have **no armor rating / DR**. Armor kits work like hero armor: they grant **Stamina** (Integrity) on the machine. **One armor kit** and **one weaponry kit** installed at a time (echelon ladders). Ammo Bin stacks with a weaponry kit. Mounted Category-3 weapons need a weaponry kit (or a factory mount); fire them with **Gunnery**.\n\n#### Armor kits (one at a time)\n\n| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |\n|---|---|---|---|---|\n| Scrap-Weld / Street Plate / jury-rigged plating | Street | 400 | +6 Stamina (Integrity) on the machine. | Armor |\n| Plate-Up / Armor Upgrade / composite up-armor kit | Restricted | 3,000 | +12 Stamina (Integrity) on the machine. Does not cost Handling. | Armor |\n| Combat Plate / Milspec Hull / ballistic vehicle armor | Military | 8,000 | +18 Stamina (Integrity) on the machine. | Armor |\n| Aegis Kit / Prototype Armor / reactive composite hull | Prototype | 22,000 | +27 Stamina (Integrity) on the machine. | Armor |\n\n#### Weaponry kits (one at a time)"
     },
     {
       "id": "10-mods#vehicle-drone-mods-gear-master-5f#23",
@@ -1971,10 +1971,28 @@
       "chapter": "Mods",
       "heading": "Vehicle / drone mods — Gear master §5F",
       "kind": "rules",
-      "text": "Availability feel follows the Gear master’s legacy tier on each row (T4 Professional through T2 Military). Do not invent a second price."
+      "text": "| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |\n|---|---|---|---|---|\n| Gun Rack / Weapon Mount / hardpoint assembly | Professional | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. E1 of the ladder. | Mount, Weaponry |\n| Twin Mount / Dual Hardpoint / paired weapon rails | Restricted | 2,500 | Two light hardpoints or one dual-feed mount (scale-appropriate Category-3); fired with Gunnery. | Mount, Weaponry |\n| Turret Ring / Combat Turret / powered traverse mount | Military | 9,000 | Powered turret for a medium vehicle weapon (scale-appropriate); fired with Gunnery; wide firing arc. | Mount, Weaponry |\n| Heavy Hardpoint / Integrated Battery / heavy weapons package | Prototype | 24,000 | Heavy integrated gun package (scale-appropriate); fired with Gunnery. | Mount, Weaponry |\n\n#### Other"
     },
     {
-      "id": "10-mods#programs-and-payloads-pointer#24",
+      "id": "10-mods#vehicle-drone-mods-gear-master-5f#24",
+      "file": "10-mods.md",
+      "source": "docs/raw/10-mods.md",
+      "chapter": "Mods",
+      "heading": "Vehicle / drone mods — Gear master §5F",
+      "kind": "rules",
+      "text": "| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |\n|---|---|---|---|---|\n| Tune Kit / Handling Package / suspension-&-control upgrade | Restricted | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |\n| Sensor Pod / Recon Suite / multi-spectral sensor array | Restricted | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |\n| Ghost Coat / Stealth Skin / low-observable coating | Military | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |\n| Runflats / Self-Seal Kit / autonomous-repair weave | Restricted | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |\n| Rigger Cocoon / Control Interface / Jump-In coupling | Military | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |\n| Ammo Bin / Rearm System / autonomous munitions feed | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |"
+    },
+    {
+      "id": "10-mods#vehicle-drone-mods-gear-master-5f#25",
+      "file": "10-mods.md",
+      "source": "docs/raw/10-mods.md",
+      "chapter": "Mods",
+      "heading": "Vehicle / drone mods — Gear master §5F",
+      "kind": "rules",
+      "text": "**Foundry apply vs Director table calls.** Armor kits **do** raise the Deployed machine’s Stamina (Integrity) in Foundry. Weaponry kits **do** flag a live Gunnery hardpoint on that Actor (`installedKits.weaponry`); firing is still Gunnery / Rigged Fire / a gunner station at the table. Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, and Ammo Bin are **flagged and shown as Active Effects** on the machine, but Foundry does **not** auto-add those edges, banes, Jump-In cleanliness, or reload math to Power Rolls — the Director applies the catalog line when the roll or scene calls for it.\n\nAvailability feel follows the Gear master’s legacy tier on each row. Do not invent a second price."
+    },
+    {
+      "id": "10-mods#programs-and-payloads-pointer#26",
       "file": "10-mods.md",
       "source": "docs/raw/10-mods.md",
       "chapter": "Mods",
@@ -1983,16 +2001,16 @@
       "text": "- **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.\n- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to \"Consumables never have mod slots\": a payload *fills* a slot, it never has one."
     },
     {
-      "id": "10-mods#armor-gadget-families#25",
+      "id": "10-mods#wearable-armor-gadget-families#27",
       "file": "10-mods.md",
       "source": "docs/raw/10-mods.md",
       "chapter": "Mods",
-      "heading": "Armor + gadget families",
+      "heading": "Wearable armor + gadget families",
       "kind": "rules",
-      "text": "**Not yet published.** Slot integrity says: no family → **0** slots in play. Invent a Mod may produce a *personal* unique for a named host if it passes the firewall and echelon gate — that is not a catalog, and it does not unlock orphan armor slots for the whole table.\n\n---"
+      "text": "**Not yet published** (worn vests, liners, gadgets). Vehicle/drone **Armor** and **Weaponry** ladders above **are** published. Slot integrity says: no family → **0** slots in play for unpublished hosts. Invent a Mod may produce a *personal* unique for a named host if it passes the firewall and echelon gate — that is not a catalog, and it does not unlock orphan wearable-armor slots for the whole table.\n\n---"
     },
     {
-      "id": "10-mods#invent-a-mod-v1-locked#26",
+      "id": "10-mods#invent-a-mod-v1-locked#28",
       "file": "10-mods.md",
       "source": "docs/raw/10-mods.md",
       "chapter": "Mods",
@@ -2001,25 +2019,34 @@
       "text": "Between runs, a hero may invent a new mod as a **Project**:\n\n1. **Pitch** — name, host family, slot cost (usually **1**), one-sentence effect, Availability feel (Street → Prototype).\n2. **Firewall check (Director)** — reject anything that grants characteristics, skills, class features, heroic resources, or Kit doctrine lines.\n3. **Echelon gate** — effect power ≤ inventor’s **Echelon** (Street/Professional at E1, Restricted at E2, Military at E3, Prototype at E4).\n4. **Materials ¥** — ≈ half a comparable published mod (**floor ¥100**); spend up front.\n5. **Project Power Roll** with the skill by host (table above):\n   - **Low:** materials burned; no mod (or a flawed one-use prototype at Director whim).\n   - **Middle:** personal unique mod (works for the inventor).\n   - **High:** personal + the crew may treat it as a campaign catalog entry.\n6. **Install** is a **separate** §Craft Project onto a host with free slots.\n\nInvent a Mod does **not** bypass Availability heat, Director veto, or the firewall.\n\n**Director notes (not new SKUs):** a High result that “enters the campaign catalog” is a *this crew* unlock. It is not permission to add a row to the Gear master or to ship an armor family. If the pitch is “Climate Seal Liner for Hardshell,” and no armor family is published, either veto or keep it strictly personal-unique on that one vest.\n\n---"
     },
     {
-      "id": "10-mods#chargen-note#27",
+      "id": "10-mods#chargen-note#29",
       "file": "10-mods.md",
       "source": "docs/raw/10-mods.md",
       "chapter": "Mods",
       "heading": "Chargen note",
       "kind": "rules",
-      "text": "Starting Kit grant includes **street-band qualifying gear** only (see Kits + Economy). **Mods never auto-grant** at chargen — buy, craft, or invent them later. Merc (dual Kit) receives street-band qualifying gear for **both** Kits; still no free mods.\n\nOptional early spend (`02` step 9): leftover starting **¥5,000** may buy a Street-band published weapon mod or a Street suite after you own the host. That is a purchase, not a Kit grant. Do not pre-install chrome to “turn on” a Smartlink unless the player also pays Integrity (`09`).\n\nAdvancement never auto-installs mods when a new echelon raises Kit Stamina (`24`).\n\n---\n\n> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In — Linked refuses). Do not invent extra menus.\n\n---"
+      "text": "Starting Kit grant includes **street-band qualifying gear** only (see Kits + Economy). **Mods never auto-grant** at chargen — buy, craft, or invent them later. Merc (dual Kit) receives street-band qualifying gear for **both** Kits; still no free mods.\n\nOptional early spend (`02` step 9): leftover starting **¥5,000** may buy a Street-band published weapon mod or a Street suite after you own the host. That is a purchase, not a Kit grant. Do not pre-install chrome to “turn on” a Smartlink unless the player also pays Integrity (`09`).\n\nAdvancement never auto-installs mods when a new echelon raises Kit Stamina (`24`).\n\n---"
     },
     {
-      "id": "10-mods#what-this-chapter-is-not#28",
+      "id": "10-mods#chargen-note#30",
+      "file": "10-mods.md",
+      "source": "docs/raw/10-mods.md",
+      "chapter": "Mods",
+      "heading": "Chargen note",
+      "kind": "rules",
+      "text": "> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots, one armor kit / one weaponry kit at a time on a machine). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot.\n>\n> **Deploy the drone or vehicle first** (Item header **Deploy**, or right-click the host row). Then install. An installed, **active** armor kit writes Integrity on the **Deployed** machine Actor the same way hero armor does: stored chassis max + Active Effect `system.stamina.bonuses.treasure` (upgrade). Current Stamina rises by the bonus on install; toggle-off or uninstall drops the AE and clamps current Stamina to chassis. Weaponry kits stamp `flags.draw-steel-ghostwire.installedKits.weaponry` (hardpoints, Gunnery) plus a sheet AE. Tune Kit / Sensor Pod / Ghost Coat / Runflats / Rigger Cocoon / Ammo Bin stamp flags + a sheet AE; the **Director applies those edges/banes/convenience at the table** — Foundry does not auto-modify Piloting/Rigging/Gunnery Power Rolls for them. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In — Linked refuses). Do not invent extra menus.\n\n---"
+    },
+    {
+      "id": "10-mods#what-this-chapter-is-not#31",
       "file": "10-mods.md",
       "source": "docs/raw/10-mods.md",
       "chapter": "Mods",
       "heading": "What this chapter is not",
       "kind": "rules",
-      "text": "- Not an armor-mod or gadget-mod catalog.\n- Not a second chrome chapter (no Integrity, no implant ¥).\n- Not a second Kit chapter (no doctrine lines).\n- Not a reprint of Matrix Verbs or payload Effects (`21`).\n- Not permission to convert ¥ into characteristics, skills, or class power.\n\n---"
+      "text": "- Not a **wearable** armor-mod or gadget-mod catalog (vehicle/drone Armor + Weaponry ladders are §5F).\n- Not a second chrome chapter (no Integrity, no implant ¥).\n- Not a second Kit chapter (no doctrine lines).\n- Not a reprint of Matrix Verbs or payload Effects (`21`).\n- Not permission to convert ¥ into characteristics, skills, or class power.\n\n---"
     },
     {
-      "id": "10-mods#cross-references#29",
+      "id": "10-mods#cross-references#32",
       "file": "10-mods.md",
       "source": "docs/raw/10-mods.md",
       "chapter": "Mods",
@@ -3510,7 +3537,7 @@
       "chapter": "The Wrench",
       "heading": "Drone Stat Card",
       "kind": "rules",
-      "text": "Every drone is a **device** with a compact stat block. Drones sit at **Scale: Personal or Light** (see Vehicle Scale bands, below, for the full ladder) — small enough that a Wrench can carry several and deploy them as a swarm.\n\n**Drone Stat Card fields:**\n\n| Field | Description |\n|---|---|\n| **Name / Chassis type** | e.g. recon quadrotor, kamikaze microdrone, taser-bee, spotter-drone, autogun turret-drone |\n| **Scale** | Personal or Light (drones are never Vehicle-scale or above; a Vehicle-scale combat drone is handled on the Vehicle stat card, below) |\n| **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. |\n| **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |\n| **Speed** | Movement in squares or Speed bands. |\n| **Armor** | Flat damage reduction, if any (most small drones have 0–1). |\n| **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |\n| **Weapon / Payload** | What it shoots or carries — light gun, taser charge, breaching charge, sensor package, cargo hook. |\n| **Upgrade Slots** | See below. |\n| **Uptime Upkeep** | 1 Uptime/turn while active, contributing to your fielded-fleet drip (see Heroic Resource: Uptime, above). |\n\n**Drone Upgrade Slots — doctrine.** Every drone chassis has a fixed number of **Upgrade Slots**, gated by its size/cost band, not by level:"
+      "text": "Every drone is a **device** with a compact stat block. Drones sit at **Scale: Personal or Light** (see Vehicle Scale bands, below, for the full ladder) — small enough that a Wrench can carry several and deploy them as a swarm.\n\n**Drone Stat Card fields:**\n\n| Field | Description |\n|---|---|\n| **Name / Chassis type** | e.g. recon quadrotor, kamikaze microdrone, taser-bee, spotter-drone, autogun turret-drone |\n| **Scale** | Personal or Light (drones are never Vehicle-scale or above; a Vehicle-scale combat drone is handled on the Vehicle stat card, below) |\n| **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. An armor kit (§5F) adds Stamina. |\n| **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |\n| **Speed** | Movement in squares or Speed bands. |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |\n| **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |\n| **Weapon / Payload** | What it shoots or carries — light gun, taser charge, breaching charge, sensor package, cargo hook. |\n| **Upgrade Slots** | See below. |\n| **Uptime Upkeep** | 1 Uptime/turn while active, contributing to your fielded-fleet drip (see Heroic Resource: Uptime, above). |"
     },
     {
       "id": "16-wrench#drone-stat-card#17",
@@ -3519,7 +3546,7 @@
       "chapter": "The Wrench",
       "heading": "Drone Stat Card",
       "kind": "rules",
-      "text": "| Chassis band | Upgrade Slots | Representative examples |\n|---|---|---|\n| **Micro** | 1 slot | Taser-bee, kamikaze microdrone |\n| **Small** | 2 slots | Recon quadrotor, spotter-drone |\n| **Standard** | 3 slots | Autogun turret-drone, cargo-hauler drone |\n\nAn Upgrade Slot holds one mod (sensor package, weapon swap, armor plate, EW suite, cargo rig, etc.). **Mods are bought and installed with nuyen during downtime or at a workshop** (see Building stat card, below, for workshop upgrade-slot support). A drone cannot exceed its chassis's slot count regardless of nuyen spent; buying more capacity means buying a bigger chassis.\n\n**Fleet Size Doctrine.** How many drones can a Wrench field simultaneously is capped separately from Upgrade Slots and from the Uptime pool cap: **base fleet size is 3 machines at 1st level**, rising to **4 at 4th level**, **5 at 7th level**, and **6 at 10th level**. The Drone Jockey subclass raises this cap further (see below). Exceeding the cap is not possible — a Wrench who wants a seventh drone active must stand one down first."
+      "text": "**Drone Upgrade Slots — doctrine.** Every drone chassis has a fixed number of **Upgrade Slots**, gated by its size/cost band, not by level:\n\n| Chassis band | Upgrade Slots | Representative examples |\n|---|---|---|\n| **Micro** | 1 slot | Taser-bee, kamikaze microdrone |\n| **Small** | 2 slots | Recon quadrotor, spotter-drone |\n| **Standard** | 3 slots | Autogun turret-drone, cargo-hauler drone |\n\nAn Upgrade Slot holds one mod (sensor package, weapon swap, armor plate, EW suite, cargo rig, etc.). **Mods are bought and installed with nuyen during downtime or at a workshop** (see Building stat card, below, for workshop upgrade-slot support). A drone cannot exceed its chassis's slot count regardless of nuyen spent; buying more capacity means buying a bigger chassis.\n\n**Fleet Size Doctrine.** How many drones can a Wrench field simultaneously is capped separately from Upgrade Slots and from the Uptime pool cap: **base fleet size is 3 machines at 1st level**, rising to **4 at 4th level**, **5 at 7th level**, and **6 at 10th level**. The Drone Jockey subclass raises this cap further (see below). Exceeding the cap is not possible — a Wrench who wants a seventh drone active must stand one down first."
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#18",
@@ -3537,7 +3564,7 @@
       "chapter": "The Wrench",
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
-      "text": "| Field | Description |\n|---|---|\n| **Name / Frame type** | e.g. armored hauler, hover-gunship, spider-tank, mech-frame |\n| **Scale** | Light / Vehicle / Heavy / Capital (see above) |\n| **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). |\n| **Handling** | Edge/bane or die-step on the pilot's Rigging/Reflex roll to drive or maneuver it. |\n| **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |\n| **Armor** | Flat damage reduction; stacks with Scale defensively. |\n| **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |\n| **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |\n| **Domain** | Ground / Air / Space / Water. |\n| **Upgrade Slots** | See below. |\n| **Jump-In Capable** | Yes/No — whether this frame supports a Wrench Jumping directly into its control systems (see Jump-In Plumbing, below). |\n\n**Vehicle Upgrade Slots — doctrine.** Vehicle hardpoints scale with Scale band, not with level:\n\n| Scale band | Upgrade Slots (mounts + mods combined) |\n|---|---|\n| **Light** | 2 slots |\n| **Vehicle** | 4 slots |\n| **Heavy** | 6 slots |\n| **Capital** | 8+ slots (Director's call, campaign-scale asset) |\n\nA slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utility mod, or a passenger conversion. As with drones, slots are bought and installed with nuyen (see Nuyen Economy Doctrine, below, for cost-band language shared across all three stat cards)."
+      "text": "| Field | Description |\n|---|---|\n| **Name / Frame type** | e.g. armored hauler, hover-gunship, spider-tank, mech-frame |\n| **Scale** | Light / Vehicle / Heavy / Capital (see above) |\n| **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). An armor kit (§5F) adds Stamina. |\n| **Handling** | Edge/bane or die-step on the pilot's Rigging/Reflex roll to drive or maneuver it. |\n| **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |\n| **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |\n| **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |\n| **Domain** | Ground / Air / Space / Water. |\n| **Upgrade Slots** | See below. |\n| **Jump-In Capable** | Yes/No — whether this frame supports a Wrench Jumping directly into its control systems (see Jump-In Plumbing, below). |\n\n**Vehicle Upgrade Slots — doctrine.** Vehicle hardpoints scale with Scale band, not with level:\n\n| Scale band | Upgrade Slots (mounts + mods combined) |\n|---|---|\n| **Light** | 2 slots |\n| **Vehicle** | 4 slots |\n| **Heavy** | 6 slots |\n| **Capital** | 8+ slots (Director's call, campaign-scale asset) |"
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#20",
@@ -3546,7 +3573,7 @@
       "chapter": "The Wrench",
       "heading": "Vehicle Stat Card, Upgrade Slots, and Scale Rules",
       "kind": "rules",
-      "text": "**Crew Stations.** A vehicle's Crew field lists how many of each station it has:\n- **Pilot/Driver** — moves the vehicle (Rigging or Reflex + Handling); only the pilot moves the vehicle. Pilot-actions include evasive driving (defensive edge) and stunts.\n- **Gunner** — fires mounted weapons with **Gunnery** on their own turn (vehicle mounts scale-translate as normal). A vehicle may have multiple gunner stations.\n- **Systems/Sensors/EW** — runs sensors, electronic warfare, and comms; feeds the pilot or gunner an edge (a lock, a terrain read) or imposes a bane on an enemy (a jam).\n- **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.\n- **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform."
+      "text": "A slot can hold a weapon mount, an armor plate, a sensor/EW suite, a cargo/utility mod, or a passenger conversion. As with drones, slots are bought and installed with nuyen (see Nuyen Economy Doctrine, below, for cost-band language shared across all three stat cards).\n\n**Crew Stations.** A vehicle's Crew field lists how many of each station it has:\n- **Pilot/Driver** — moves the vehicle (Rigging or Reflex + Handling); only the pilot moves the vehicle. Pilot-actions include evasive driving (defensive edge) and stunts.\n- **Gunner** — fires mounted weapons with **Gunnery** on their own turn (vehicle mounts scale-translate as normal). A vehicle may have multiple gunner stations.\n- **Systems/Sensors/EW** — runs sensors, electronic warfare, and comms; feeds the pilot or gunner an edge (a lock, a terrain read) or imposes a bane on an enemy (a jam).\n- **Passenger** — anyone else aboard; can act normally (shoot a personal weapon out a window, hack, reload) but at a speed bane, using the vehicle's body as cover.\n- **Solo/Jumped-In** — a single Wrench Jumped-In into the vehicle is pilot **and** gunner simultaneously through the control rig (see Jump-In Plumbing, below); this is the default mode for a Vehicle Rig-Pilot's signature platform."
     },
     {
       "id": "16-wrench#vehicle-stat-card-upgrade-slots-and-scale-rules#21",
@@ -5787,7 +5814,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Street Eye (Companion Link)",
       "kind": "rules",
-      "text": "> **Street Eye**\n> *Companion Link · Maneuver · Range 10*\n> Target: 1 qualifying scout drone you own (stowed or already fielded)\n> **Power Roll** — none to deploy or issue a soft order; **2d10 + Logic** (Rigging applies; non-Wrench: **bane**) only if the Director calls for a contested read, mark, or jammed link\n>\n> Soft orders (pick one when you use this maneuver): **follow**, **watch**, **hold**, **scout**, **surveillance**, or **minor support** (spot/mark, watch a corner, light carry if the chassis can).\n>\n> *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*\n\n> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system.\n\n---"
+      "text": "> **Street Eye**\n> *Companion Link · Maneuver · Range 10*\n> Target: 1 qualifying scout drone you own (stowed or already fielded)\n> **Power Roll** — none to deploy or issue a soft order; **2d10 + Logic** (Rigging applies; non-Wrench: **bane**) only if the Director calls for a contested read, mark, or jammed link\n>\n> Soft orders (pick one when you use this maneuver): **follow**, **watch**, **hold**, **scout**, **surveillance**, or **minor support** (spot/mark, watch a corner, light carry if the chassis can).\n>\n> *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*\n\n> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.\n\n---"
     },
     {
       "id": "23-machines#scale-bands-drones#8",
@@ -5805,7 +5832,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Full drone inventory",
       "kind": "rules",
-      "text": "**Reading the tables:** prices climb with Availability + Echelon. Integrity / Speed / Armor numbers are not yet published — profiles are qualitative.\n\n#### Echelon shopping guidance\n\nShop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky” (those air scouts grant **Street Eye**). Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).\n\n**Clunker / Unreliable (Director cue):** once per scene when it matters, impose an extra **bane** on a Rigging/Gunnery roll **or** stall the frame for a beat (misses a Move, drops a package, camera blacks out). Do not punish every action — make the junk feel lived-in.\n\n#### Inventory by Echelon\n\n##### Echelon 1 — Street / Professional (clunkers + starter frames)"
+      "text": "**Reading the tables:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add **Stamina** (Integrity); machines have **no armor rating / DR**.\n\n#### Echelon shopping guidance\n\nShop the **subsection for your band first**. E1 Street clunkers are intentionally bad deals that still work — perfect for new crews, disposable scouts, and non-Wrench “one eye in the sky” (those air scouts grant **Street Eye**). Professional E1 cleans up reliability without leaving the band. E2 Restricted is the support/sentry/EW sweet spot. E3 Military brings hard mounts, Jump-In-Capable combat frames, and breach tools. E4 Prototype is apex kit: elite recon, courier, medic, EW, and heavy combat — not only siege walkers. Directors: if a hero's Echelon is N, prefer offering at least one buyable frame from that subsection (and never empty a band).\n\n**Clunker / Unreliable (Director cue):** once per scene when it matters, impose an extra **bane** on a Rigging/Gunnery roll **or** stall the frame for a beat (misses a Move, drops a package, camera blacks out). Do not punish every action — make the junk feel lived-in.\n\n#### Inventory by Echelon\n\n##### Echelon 1 — Street / Professional (clunkers + starter frames)"
     },
     {
       "id": "23-machines#full-drone-inventory#10",
@@ -5904,7 +5931,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Modding",
       "kind": "rules",
-      "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.\n- Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.\n\n---"
+      "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.\n- Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.\n\n---"
     },
     {
       "id": "23-machines#street-picture-vehicles-transit#21",
@@ -5940,7 +5967,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Stat card fields",
       "kind": "rules",
-      "text": "Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitative**; Integrity / Speed / Armor numbers are not yet published.\n\n| Field | Description |\n|---|---|\n| **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |\n| **Scale** | Light / Vehicle / Heavy / Capital |\n| **Domain** | Ground / Air / Water / Space |\n| **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |\n| **Integrity** | Damage track (numbers not yet published). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress) |\n| **Armor** | Flat damage reduction feel; stacks defensively with Scale |\n| **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |\n| **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |\n| **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |\n| **Mod slots** | Per Availability/Echelon (published count) |\n| **Availability** | Street → Prototype |\n| **Echelon** | 1–4 |\n| **Cost ¥** | Object price; never buys class power |\n\n**Mounted weapons** come from Category 3; installs are §Craft Projects (`10-mods.md`). Hardpoints usually need a **Gun Rack** mod (§5F) unless the profile already includes a factory mount.\n\n---"
+      "text": "Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitative**; Integrity / Speed numbers are not yet published. Armor kits add Stamina.\n\n| Field | Description |\n|---|---|\n| **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |\n| **Scale** | Light / Vehicle / Heavy / Capital |\n| **Domain** | Ground / Air / Water / Space |\n| **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |\n| **Integrity** | Damage track (numbers not yet published). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress). An armor kit (§5F) adds Stamina to this pool. |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina (Integrity) bonus. Kits do not stack. |\n| **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |\n| **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |\n| **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |\n| **Mod slots** | Per Availability/Echelon (published count) |\n| **Availability** | Street → Prototype |\n| **Echelon** | 1–4 |\n| **Cost ¥** | Object price; never buys class power |\n\n**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (`10-mods.md`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.\n\n---"
     },
     {
       "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#25",
@@ -5967,7 +5994,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Customize & modding",
       "kind": "rules",
-      "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or Gun Rack).\n\n---"
+      "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).\n\n---"
     },
     {
       "id": "23-machines#vehicle-combat-chase#28",
@@ -6003,7 +6030,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Full inventory by Echelon",
       "kind": "rules",
-      "text": "**Reading the table:** prices climb with Availability + Echelon. Integrity / Speed / Armor numbers are not yet published — profiles are qualitative. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).\n\n#### Inventory (35 crewed platforms)"
+      "text": "**Reading the table:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add Stamina; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).\n\n#### Inventory (35 crewed platforms)"
     },
     {
       "id": "23-machines#full-inventory-by-echelon#32",

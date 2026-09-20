@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 0.3.68 — vehicle/drone Armor = Stamina + 4+4 echelon ladders + apply-on-install.
+ * 0.3.71 — vehicle/drone Armor = Stamina + 4+4 echelon ladders + apply-on-install.
  * Smoke: install E1 armor on a drone → stamina rises; remove → reverts.
  * Run: node tools/machine-armor-smoke.mjs
  */
@@ -24,7 +24,7 @@ const ok = (cond, msg) => {
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const moduleJson = JSON.parse(readFileSync("module.json", "utf8"));
-ok(moduleJson.version === "0.3.68", `module version is 0.3.68 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.71", `module version is 0.3.71 (got ${moduleJson.version})`);
 
 const DIR = "src/packs/mods/vehicles";
 const files = readdirSync(DIR).filter(f => f.endsWith(".json") && f !== "_folder.json");
@@ -121,6 +121,8 @@ for (const f of drones) {
 ok(droneFamily === drones.length, `all ${drones.length} drones have modFamily vehicle+drone (${droneFamily})`);
 
 const machines = readFileSync("scripts/machines.mjs", "utf8");
+ok(machines.includes("addWireKit") && machines.includes("await addWireKit(actor, { notify: false })"),
+  "deploy still stamps Wire Kit from main 0.3.68");
 ok(machines.includes("syncMachineMods") && machines.includes("system.stamina.bonuses.treasure"),
   "machines.mjs applies armor via hero-armor treasure AE on the deployed Actor");
 ok(machines.includes("installedKits") && machines.includes("machineWeaponry"),
