@@ -1,0 +1,31 @@
+{
+  "id": "deadhead-hangout",
+  "version": 1,
+  "nameKey": "GHOSTWIRE.Scenes.DeadheadHangout.Name",
+  "folderKey": "GHOSTWIRE.Scenes.DeadheadHangout.Folder",
+  "width": 1920,
+  "height": 1080,
+  "padding": 0.1,
+  "backgroundColor": "#0a0a0c",
+  "tokenVision": false,
+  "navigation": true,
+  "thumb": "modules/draw-steel-ghostwire/assets/maps/battlemaps/map-deadhead-hangout.webp",
+  "grid": {
+    "type": 1,
+    "size": 80,
+    "distance": 5,
+    "units": "ft",
+    "color": "#d4af37",
+    "alpha": 0.15,
+    "style": "solidLines",
+    "thickness": 1
+  },
+  "initial": {
+    "x": 960,
+    "y": 540,
+    "scale": 0.7
+  },
+  "assets": {
+    "still": "modules/draw-steel-ghostwire/assets/maps/battlemaps/map-deadhead-hangout.webp"
+  }
+}

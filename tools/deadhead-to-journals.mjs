@@ -176,11 +176,11 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 3, "Beat0", [
-    "**Block 0 · 45–60m · Scenes: crew hangout → Mama’s Club.** Intel only. Fail = go in blind, not blocked.",
+    "**Block 0 · 45–60m · Scenes: Deadhead Hangout → Mama’s Club.** Intel only. Fail = go in blind, not blocked.",
     "",
     "### Setup",
     "",
-    "Start at the **crew hangout** (rundown flat, wrecked bad neighborhood). Hand **Mama’s Deadhead Brief**. Then run the brief / return at **Mama’s Club** (reuse the club plate). Call **Nox** before you leave the Flats — the crew **borrows** the garbage-truck-sized trash freighter. Scratch it = buy it; lose it = explain to Mama.",
+    "Start at **Scenes → Deadhead → Deadhead Hangout — Shady Workshop** (wrecked block: street stall, containers, and the crew’s open-roof workshop). The module injects it on first GM load; walls and lights are yours. Hand **Mama’s Deadhead Brief**. Then run the brief / return at **Mama’s Club** (reuse the club plate). Call **Nox** before you leave the Flats — the crew **borrows** the garbage-truck-sized trash freighter. Scratch it = buy it; lose it = explain to Mama.",
     "",
     "### Discovery table",
     "",
@@ -194,13 +194,13 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 4, "Beat1", [
-    "**Block 1 · 30–40m · Scenes: canyon sling strip → Gold Line roofs → drop into L1.**",
+    "**Block 1 · 30–40m · Scene: Gold Line — roofs → drop into L1.** Canyon approach is **narrated** — there is no canyon plate.",
     "",
     "**Board:** Deploy/Recall; Agility/Might board rolls; mixed = Alert +1; Jacked In can’t make physical board rolls.",
     "",
     "### Setup",
     "",
-    "1. Canyon approach / drone sling. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later.",
+    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later.",
     "2. Open **Gold Line** (Michael’s world Scene). **Show** the **Roofs (overhead)** tile for the board.",
     "3. Sling onto the **roof**, then drop **aft into L1** (left aft cargo / AFT FREIGHT). That is the board chamber. Work **upstream** (right) from here.",
     "4. Once the crew is **inside**, **hide the Roofs (overhead) tile**. Do not wait on Surface occlusion as the play instruction.",
@@ -286,7 +286,7 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 8, "Beat5", [
-    "**Block 5 · 20–30m · Scene: Mama’s Club (return) or hangout.** Moral choice.",
+    "**Block 5 · 20–30m · Scene: Mama’s Club (return) or Deadhead Hangout.** Moral choice.",
     "",
     "**Choice:** Mama / corp / Signal; Nox drone condition as fiction string.",
     "",
@@ -354,9 +354,9 @@ const pages = [
     "",
     "| Scene | Status | Director note |",
     "|---|---|---|",
-    "| **Crew hangout** | Set up | Rundown flat, wrecked bad neighborhood. Beat 0 start. |",
+    "| **Crew hangout** | **Shipped 0.3.43** | **Scenes → Deadhead → Deadhead Hangout — Shady Workshop** (`assets/maps/battlemaps/map-deadhead-hangout.webp`, 1920×1080, grid 80 = 5 ft). Injected on **new** worlds only; existing `deadheadHangoutScene` worlds are never rewritten. Still plate — no loop. Walls / lights / tokens are yours. Beat 0 start. |",
     "| **Mama’s Club** | Reuse | Club plate already in-module (`assets/maps/battlemaps/mama-cassavir-club.webp` / `-loop.webm`). Brief + Beat 5 return. |",
-    "| **Canyon / drone sling** | Set up | Mid-canyon strip for the garbage-truck freighter board. |",
+    "| **Canyon / drone sling** | **SKIPPED** | No plate and none planned — **narrate** the mid-canyon approach and cut straight to the Gold Line roofs. |",
     "| **Gold Line** | **Michael’s live world Scene** | **Scenes → Deadhead → Gold Line.** Walls, lights, and tiles are sacred. Do **not** inject, restamp, force-refresh, or overwrite them. Hide **Roofs (overhead)** when playing inside; show roofs for board and Recall. |",
     "",
     foundryNotes,

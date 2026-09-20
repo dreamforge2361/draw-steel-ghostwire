@@ -44,7 +44,7 @@ const PAGE_KEYS = [
 console.log("Deadhead Director journal smoke");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.42", `module.json is 0.3.42 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.43", `module.json is 0.3.43 (got ${moduleJson.version})`);
 
 const journal = readBomFreeJson(JOURNAL);
 ok(journal._id === "gwDeadheadDirJrn", "director journal id is gwDeadheadDirJrn");

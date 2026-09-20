@@ -202,6 +202,7 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 ## Foundry build list (pack together under Ghostwire Runs / Deadhead)
 
 - [x] Journal: this run (pages: Overview, Trace ladder, Beats 0–5, Items, Opposition, Foundry checklist) — **0.3.42**
+- [x] Beat 0 hangout Scene (**Shady Workshop** still, injected on new worlds) — **0.3.43**; canyon plate **SKIPPED**, narrate the approach
 - [x] Journal: Gold Line — Map Notes (plate paths + beat remap) in **Ghostwire Runs → Deadhead**
 - [ ] Item: Mama’s Deadhead Brief wafer
 - [ ] Item: ARG courier capsule / live wafer (plothook notes for three buyers)
