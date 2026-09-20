@@ -10,12 +10,12 @@ Interior / venue play surfaces (not district overviews). **Native resolution pre
 | `gold-line/map-gold-line-interior.webp` | Gold Line (Deadhead) | 6472×958 | Dual Hammerhead interior still (CyberMaps stitch). **Default** Level background until video is proven. |
 | `gold-line/map-gold-line-interior-loop.mp4` | same (animated BG) | 6472×958, H.264, 24 fps, 8 s | Opt-in loop (finite duration). World inject: **Scenes → Deadhead → Gold Line**. |
 | `gold-line/map-gold-line-interior-loop.webm` | same (animated BG) | 6472×958, VP9, 24 fps, 8 s | Last video choice. Stream `duration=N/A` — Foundry can throw on `currentTime`. |
-| `gold-line/map-gold-line-roofs.webp` | same (overhead) | 6472×958 | **Default** roof tile. Solid (no occlusion). |
+| `gold-line/map-gold-line-roofs.webp` | same (overhead) | 6472×958 | **Default** roof tile. FADE occlusion — clear under tokens. |
 | `gold-line/map-gold-line-roofs-loop.mp4` | same (overhead, animated) | 6472×958, H.264, 24 fps, 8 s | Opt-in loop (finite duration). |
 | `gold-line/map-gold-line-roofs-loop.webm` | same (overhead, animated) | 6472×958, VP9, 24 fps, 8 s | Last video choice. Stream `duration=N/A`. |
 
 Foundry path: `modules/draw-steel-ghostwire/assets/maps/battlemaps/<file>`
 
-Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene from `data/scenes/gold-line.json` (grid 208 / 5 ft). **Stills default** until video is proven. Roofs tile is on the **Tiles** layer at Michael lock **x=3232, y=475, 6472×958, elevation 1, locked, occlusion NONE** (Tile registration is not 0,0). If a 0.3.36–0.3.37 world has a drifted or mis-scaled roof, `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
+Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene from `data/scenes/gold-line.json` (grid 208 / 5 ft). **Stills default** until video is proven. Roofs tile is on the **Tiles** layer at Michael lock **x=3232, y=475, 6472×958, elevation 1, locked, occlusion FADE (mode 1, alpha 0)** — clear under tokens (Tile registration is not 0,0). If a 0.3.36–0.3.37 world has a drifted or mis-scaled roof, `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
 
 PNG originals stay local under `_png-backup/` (gitignored), same policy as `assets/maps/districts/`.

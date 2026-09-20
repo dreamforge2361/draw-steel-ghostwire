@@ -138,7 +138,7 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 
 Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares.
 
-**Roofs tile** (**Tiles** layer, name **Roofs (overhead)**), Michael-locked 2026-09-20: **x=3232, y=475, width=6472, height=958, elevation=1, locked**. Occlusion is **NONE** (mode 0, alpha 1) — roofs stay **solid**. Do not enable FADE or Surface.
+**Roofs tile** (**Tiles** layer, name **Roofs (overhead)**), Michael-locked 2026-09-20: **x=3232, y=475, width=6472, height=958, elevation=1, locked**. Occlusion is **FADE** (mode 1, alpha 0) — roofs **clear under tokens**. Do not use Surface (mode 2) unless verified on this stack. Elevation 1 sits above tokens at 0 so FADE can see them.
 
 x/y are **not 0,0**: the Level background is pinned to the scene origin and fills the plate. A Foundry Tile’s x/y is its **registration point** (center), so a full-plate roof sits near (width/2, height/2) ≈ (3236, 479). Michael nudged that to **3232, 475**. Resetting to 0,0 shifts the roof by half a plate. Elevation **1** (not 10) so Levels does not hide the tile.
 

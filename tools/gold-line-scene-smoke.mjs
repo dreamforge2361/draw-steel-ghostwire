@@ -87,12 +87,12 @@ const template = readBomFreeJson(TEMPLATE);
 ok(template.width === PLATE.width && template.height === PLATE.height, "template canvas is 6472×958");
 ok(template.grid.size === 208, "template grid size is 208");
 ok(template.grid.distance === 5 && template.grid.units === "ft", "template grid is 5 ft");
-ok(template.roofTile.occlusion.mode === 0 && template.roofTile.occlusion.alpha === 1, "roof occlusion is NONE (0) / solid alpha 1");
+ok(template.roofTile.occlusion.mode === 1 && template.roofTile.occlusion.alpha === 0, "roof occlusion is FADE (1) / alpha 0 (clear under tokens)");
 ok(template.roofTile.elevation === 1, "roof tile elevation is 1");
 ok(template.roofTile.x === 3232 && template.roofTile.y === 475, "roof tile place is Michael lock 3232, 475");
 ok(template.roofTile.locked === true, "roof tile is locked");
 ok(template.roofTile.width === PLATE.width && template.roofTile.height === PLATE.height, "roof tile matches plate");
-ok(template.version >= 4, `template version is 4+ (got ${template.version})`);
+ok(template.version >= 5, `template version is 5+ (got ${template.version})`);
 ok(template.roofTile.video.loop === true && template.roofTile.video.autoplay === true, "roof tile loops");
 ok(template.level.video?.loop === true && template.level.video?.autoplay === true, "level template has video loop/autoplay");
 
@@ -143,8 +143,8 @@ ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line 
 
 const script = readFileSync(SCRIPT, "utf8");
 ok(script.includes("ensureGoldLineScene"), "inject exports ensureGoldLineScene");
-ok(script.includes("GOLD_LINE_ROOF") && script.includes("mode: 0"), "inject bakes solid roof (occlusion NONE)");
-ok(!/occlusion\.mode["'\s:=]+2/.test(script) && !/SURFACE/.test(script), "inject does not enable Surface / FADE occlusion");
+ok(script.includes("GOLD_LINE_ROOF") && script.includes("mode: 1"), "inject bakes FADE roof occlusion (mode 1)");
+ok(!/mode:\s*2/.test(script) && !/SURFACE/.test(script), "inject does not enable Surface (2)");
 ok(!/method:\s*["']HEAD["']/.test(script), "inject does not probe media with HEAD");
 ok(!/\bsrcExists\s*\(/.test(script), "inject does not call srcExists (HEAD)");
 ok(script.includes("FilePicker.browse") && script.includes("Range"), "inject probes via FilePicker or ranged GET");
@@ -159,7 +159,7 @@ ok(/Level background/.test(script) && /registration/.test(script), "inject docum
 ok(/valid playable layout/i.test(script), "inject comments that stills are a valid playable layout");
 ok(GOLD_LINE_PLATE.width === PLATE.width && GOLD_LINE_PLATE.height === PLATE.height, "GOLD_LINE_PLATE is 6472×958");
 ok(GOLD_LINE_ROOF.x === 3232 && GOLD_LINE_ROOF.y === 475 && GOLD_LINE_ROOF.elevation === 1, "GOLD_LINE_ROOF is 3232, 475, elev 1");
-ok(GOLD_LINE_ROOF.occlusion.mode === 0 && GOLD_LINE_ROOF.occlusion.alpha === 1 && GOLD_LINE_ROOF.locked === true, "GOLD_LINE_ROOF is locked solid (NONE / alpha 1)");
+ok(GOLD_LINE_ROOF.occlusion.mode === 1 && GOLD_LINE_ROOF.occlusion.alpha === 0 && GOLD_LINE_ROOF.locked === true, "GOLD_LINE_ROOF is locked FADE (mode 1 / alpha 0)");
 ok(!isFiniteDuration(Number.NaN) && !isFiniteDuration(Infinity) && !isFiniteDuration("N/A") && isFiniteDuration(8), "isFiniteDuration rejects N/A / NaN / Infinity");
 const unseekable = { duration: Number.NaN, currentTime: 1 };
 ok(safeVideoCurrentTime(unseekable, 0) === false && unseekable.currentTime === 1, "safeVideoCurrentTime skips seek when duration is NaN");
@@ -174,6 +174,7 @@ ok(/map-gold-line-interior\.webp/.test(sor), "SoR defaults to the interior still
 ok(/3232/.test(sor) && /475/.test(sor), "SoR bakes roof place 3232, 475");
 ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout");
 ok(/registration|not 0,\s*0|not 0,0/i.test(sor), "SoR documents why roof x/y are not 0,0");
+ok(/FADE/i.test(sor) && /mode 1|mode:\s*1|mode \*\*1/i.test(sor), "SoR uses FADE occlusion (mode 1)");
 ok(!/Surface occlusion/i.test(sor), "SoR does not claim Surface occlusion");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
 
@@ -185,7 +186,8 @@ const plateMd = journal.pages[0]?.text?.markdown ?? "";
 ok(/interior\.webp/.test(plateMd) || /stills are the default/i.test(plateMd), "journal defaults to stills");
 ok(/3232/.test(plateMd) && /475/.test(plateMd), "journal bakes roof place 3232, 475");
 ok(/valid playable layout/i.test(plateMd), "journal says stills are a valid playable layout");
-ok(/NONE|no occlusion|solid/i.test(plateMd), "journal says roofs are solid (no occlusion)");
+ok(/FADE/i.test(plateMd) && /mode 1|mode \*\*1/i.test(plateMd), "journal says roofs FADE (mode 1)");
+ok(!/Surface occlusion/i.test(plateMd), "journal does not claim Surface occlusion");
 for (const page of journal.pages ?? []) {
   ok(/^[A-Za-z0-9]{16}$/.test(page._id), `page ${page.name} _id is 16 alphanumeric`);
 }

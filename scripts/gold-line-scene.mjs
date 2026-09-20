@@ -1,6 +1,6 @@
 // Deadhead Gold Line (B106 / 0.3.39 hotfix): world-inject the dual-Hammerhead train Scene.
-// Default to stills until video is proven. Roofs are a SOLID overhead tile
-// (occlusion NONE) at Michael's locked place. Template: data/scenes/gold-line.json.
+// Default to stills until video is proven. Roofs sit at Michael's locked place
+// with FADE occlusion (clear under tokens). Template: data/scenes/gold-line.json.
 // Design: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
 //
 // Do not use HEAD / foundry.utils.srcExists to probe loops — Foundry's file server
@@ -9,7 +9,7 @@
 // Shipped VP9 webms report stream duration=N/A; Foundry then throws
 // "Failed to set currentTime ... non-finite". Prefer still.webp first; mp4/webm
 // stay shipped for a later opt-in. Stills are a valid playable layout.
-// Do not change train art content. Do not enable FADE / Surface roof occlusion.
+// Do not change train art content. Occlusion is FADE (1), not Surface (2).
 
 const MODULE_ID = "draw-steel-ghostwire";
 const TEMPLATE_PATH = `modules/${MODULE_ID}/data/scenes/gold-line.json`;
@@ -29,8 +29,9 @@ export const GOLD_LINE_PLATE = Object.freeze({ width: 6472, height: 958 });
  * full-plate roof sits near (width/2, height/2) ≈ (3236, 479). Michael nudged
  * that to 3232, 475. Resetting to 0,0 shifts the roof by half a plate.
  *
- * elevation 1 (not 10) so Levels does not hide the tile. Occlusion stays
- * NONE (mode 0, alpha 1) — solid roofs; no FADE / Surface.
+ * elevation 1 (not 10) so Levels does not hide the tile and FADE still sits
+ * above tokens at elev 0. Occlusion is FADE (mode 1, alpha 0) — roofs clear
+ * under tokens. Do not use Surface (2) unless verified in Michael's stack.
  */
 export const GOLD_LINE_ROOF = Object.freeze({
   x: 3232,
@@ -39,7 +40,7 @@ export const GOLD_LINE_ROOF = Object.freeze({
   height: 958,
   elevation: 1,
   locked: true,
-  occlusion: Object.freeze({ mode: 0, alpha: 1 }),
+  occlusion: Object.freeze({ mode: 1, alpha: 0 }),
 });
 
 const loc = (key, data) => (data ? game.i18n.format(`${L}.${key}`, data) : game.i18n.localize(`${L}.${key}`));
