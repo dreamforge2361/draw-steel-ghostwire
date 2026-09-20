@@ -21,12 +21,13 @@
  *   assets/tokens/bestiary/arg/arg-<role>.webp
  * (PNG originals sit beside the WebPs; Foundry img uses WebP).
  *
- * Scope (57): 33 L1–4 corp / gang / E1 rival humanoids + veil-cultist,
+ * Scope (58): 34 L1–5 corp / gang / E1 rival humanoids + veil-cultist + Mama Cassavir,
  * 7 wire-machine ICE/constructs, 17 summons (elemental companions + rank 1,
  * three spirits, sprite minor/intermediate, two node tokens).
  *
- * Out of scope: critters, wilds, undead monsters, Mama (L5), L6 corp bosses,
+ * Out of scope: critters, wilds, undead monsters, L6 corp bosses,
  * machine band templates, elemental rank 2/3/greater, sprite-*-advanced.
+ * Mama Cassavir (L5 named boss) ships Michael’s split-face portrait (0.3.48).
  *
  * Foundry closed before a rebuild. Does not bump module.json.
  */
@@ -64,6 +65,7 @@ const BESTIARY_SLUGS = [
   "street-cutter",
   "street-doc",
   "street-punk",
+  "mama-cassavir",
   "the-choirmother",
   "the-ferryman",
   "the-warlord",
@@ -138,7 +140,6 @@ const PACKS = {
 const EXPECTED_TOTAL = BESTIARY_SLUGS.length + SUMMONS_SLUGS.length;
 
 const SKIP = new Map([
-  ["mama-cassavir", "Mama (L5) — later pass"],
   ["contract-enforcer", "L6 corp boss — later pass"],
   ["ironclad-warden", "L6 corp boss — later pass"],
   ["warden-krael", "L6 corp boss — later pass"],
@@ -378,7 +379,7 @@ Options:
                  Warn on unmatched filenames instead of failing.
 
 Stamps Actor img AND prototypeToken.texture.src. Embedded item icons are
-untouched. Scope is 57 Actors: 40 bestiary (33 humanoids + 7 ICE) and
+untouched. Scope is 58 Actors: 41 bestiary (34 humanoids + 7 ICE) and
 17 summons (companions / rank 1, spirits, sprite minor+intermediate, nodes).
 
 Close Foundry before a pack rebuild. Do not bump module.json until art ships.

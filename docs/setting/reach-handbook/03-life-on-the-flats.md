@@ -79,7 +79,7 @@ The Wired is not a place you go. It is the air the sprawl breathes — every doo
 
 What follows is word on the street, not corp record — the kind of thing a fixer tells a green crew over a ¥6 noodle bowl. Every entry is a thread a Director can pull.
 
-**Mama Cassavir, "the Switchboard" — the fixer who is the phone.** Not muscle, not a mage — indispensable. Every deal in the Flats routes through her dead transit exchange. She sits at the seam between the clean jobs that come down from the Spires and the dirty ones that come up from Nyx's Churn, and she'll let a crew choose which end to work. Sever her and a hundred quiet deals die at once, so nobody does. She is most crews' first fixer and most campaigns' first face.
+**Mama Cassavir, "the Switchboard" — the fixer who is the phone.** She looks like an elderly grandmother; she is a **cyborg hacker Controller** under cosmetics — decked, Switchboard of the Flats. Not street muscle: she sells introductions and holds nodes. Every deal in the Flats routes through her dead transit exchange. She sits at the seam between the clean jobs that come down from the Spires and the dirty ones that come up from Nyx's Churn, and she'll let a crew choose which end to work. Sever her and a hundred quiet deals die at once, so nobody does. She is most crews' first fixer and most campaigns' first face.
 
 Street heat right now: someone's been reading her encrypted deal-threads. She's quietly hiring — from herself — to find the leak.
 

@@ -10,6 +10,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
 | Bestiary humanoids + ICE | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 shipped **0.3.35** (40) |
 | ARG corp security (3) | `bestiary/arg/arg-*.webp` (+ PNG originals) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-<role>.webp` | B111 shipped **0.3.47** (Enforcer, Lieutenant, Officer) |
+| Mama Cassavir (L5 named boss) | `bestiary/mama-cassavir.webp` (+ PNG original) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-cassavir.webp` | **0.3.48** — Michael split-face (elderly organic / chrome cyborg, cyan eye, hand on deck) |
 | Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 shipped **0.3.35** (17) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
@@ -53,3 +54,11 @@ node tools/apply-bestiary-portrait-art.mjs
 ```
 
 Spike: `docs/spikes/B111-ARG-TOKEN-ART.md`.
+
+## Mama Cassavir (0.3.48)
+
+Michael’s split-face portrait lives under `bestiary/` as `mama-cassavir` (PNG original + WebP). Foundry `img` and `prototypeToken.texture.src` use the WebP, matching the B103 slug convention (not the ARG `bestiary/arg/` override). Do not regenerate. Replace the files in place, then:
+
+```text
+node tools/apply-bestiary-portrait-art.mjs
+```

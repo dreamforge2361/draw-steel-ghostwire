@@ -80,7 +80,7 @@ node tools/apply-bestiary-portrait-art.mjs --from _incoming-art
 node tools/apply-bestiary-portrait-art.mjs --list
 ```
 
-4. Confirm `art=yes` **and** `img-set=yes` **and** `token-set=yes` for all **57** slugs.
+4. Confirm `art=yes` **and** `img-set=yes` **and** `token-set=yes` for all **58** slugs (original B103 zip was 57; Mama Cassavir added in **0.3.48**).
 5. Bump `module.json` one patch only when shipping new binaries.
 
 Alternatively, copy WebPs straight into `assets/tokens/bestiary/` and `assets/tokens/summons/`, then `node tools/apply-bestiary-portrait-art.mjs` with no `--from`.
@@ -103,7 +103,7 @@ Pack root: `src/packs/bestiary/corp-security/`. Dest: `assets/tokens/bestiary/`.
 | 3 | Corp Netrunner | `corp-netrunner` | platoon | controller |
 | 3 | Ironclad Ground Commander | `ironclad-ground-commander` | leader | — |
 
-## Inventory — Reach streets L1–4 (16)
+## Inventory — Reach streets L1–5 (17)
 
 Pack root: `src/packs/bestiary/reach-streets/`. Dest: `assets/tokens/bestiary/`.
 
@@ -125,6 +125,7 @@ Pack root: `src/packs/bestiary/reach-streets/`. Dest: `assets/tokens/bestiary/`.
 | 3 | The Choirmother | `the-choirmother` | leader | — |
 | 3 | The Ferryman | `the-ferryman` | leader | — |
 | 3 | The Warlord | `the-warlord` | leader | — |
+| 5 | Mama Cassavir | `mama-cassavir` | elite | controller |
 
 ## Inventory — rivals E1 (7)
 
@@ -205,7 +206,7 @@ Pack root: `src/packs/summons/`. Dest: `assets/tokens/summons/`.
 | 3 | Wired Node (Track 1) | `node-token-track-1` | — | — |
 | 3 | Wired Node (Track 2) | `node-token-track-2` | — | — |
 
-**Counts: 9 corp + 16 streets + 7 rivals + 1 cultist + 7 wire + 17 summons = 57 Actors.** Live check: `node tools/apply-bestiary-portrait-art.mjs --list`.
+**Counts: 9 corp + 17 streets + 7 rivals + 1 cultist + 7 wire + 17 summons = 58 Actors.** Live check: `node tools/apply-bestiary-portrait-art.mjs --list`. **0.3.48** adds Mama Cassavir (L5 named boss) to the apply-tool scope; original B103 zip was 57.
 
 Today in-scope Actors still use Draw Steel role placeholders or generic icons on both `img` and `prototypeToken.texture.src`.
 
@@ -229,7 +230,6 @@ A file in a `bestiary/` or `summons/` (or nested pack-folder) subfolder still ma
 - Critters (`reach-critters/*`)
 - Wilds beasts (`wilds-jungles/*`)
 - Undead monsters (`ghost`, `ghoul`, `skeleton`, `zombie`) — **except** `veil-cultist`
-- Mama Cassavir (L5)
 - L6 corp bosses (`contract-enforcer`, `ironclad-warden`, `warden-krael`)
 - Machine band templates (`src/packs/summons/machines/*`) — Deploy already stamps chassis Item art (B101)
 - Elemental Rank 2 / Rank 3 / Greater
@@ -237,7 +237,9 @@ A file in a `bestiary/` or `summons/` (or nested pack-folder) subfolder still ma
 - Changing stats, abilities, or SFX
 - Vehicles / drones (B101) and armor / weapons (B102)
 
-Dropped skip-list filenames fail the apply (unless `--ignore-unknown`) so a mixed zip cannot silently stamp Mama, a critter, or an advanced sprite.
+Dropped skip-list filenames fail the apply (unless `--ignore-unknown`) so a mixed zip cannot silently stamp a critter, L6 boss, or an advanced sprite.
+
+**0.3.48:** Mama Cassavir’s Michael split-face portrait (`mama-cassavir.png` + `.webp`) is in-scope. Do not regenerate.
 
 ## Checklist
 

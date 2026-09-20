@@ -16,7 +16,7 @@ It shattered out.
 
 They did not call it magic, in the house. They called it a malfunction, and then a liability, and then they called the people who erase liabilities. Kaïs did not wait to be erased. He took the storm down the hive with him, one level at a time, learning on the way what the salons had spent centuries making sure his kind never learned: that the Veil is thin everywhere, not just in temples, and that a mind trained to read a room can be trained to read the charge in the air, the water in a pipe, the current in a wall. That beauty was not the only thing they had accidentally built into him.
 
-Now he paid a Corran fixer named Cassavir for the privilege of being no one.
+Now he paid a fixer named Cassavir for the privilege of being no one.
 
 The job was simple, which meant it was not. A mid-Grid data-broker had bought a piece of paydata he could not read and could not sell, and it was killing him — the seller had come back wanting it returned, and the seller had brought friends. Cassavir, who took clean contracts from above and dirty ones from below and connected the two for a fee, had offered Kaïs the retrieval because it needed someone who could walk into a corporate stratum and be assumed to belong there. You have the face for it, the old woman had said, not unkindly, over the hum of a dead switching-station wired back to life. Use the thing they built you for. Spite is a fuel like any other.
 
