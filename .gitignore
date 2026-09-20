@@ -94,3 +94,5 @@ assets/maps/battlemaps/**/*.png
 # Catch-all for local draft PDFs (named variants)
 docs/manuscript/build/*.pdf
 
+
+.tmpspike/

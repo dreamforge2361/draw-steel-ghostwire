@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 0.3.78 — AEQ Mandate + LAZ Extract conglomerate NPC smoke.
+ * 0.3.81 — AEQ Mandate + LAZ Extract conglomerate NPC smoke.
  * Foundry-free: pack JSON + art + lang + Wire Kit flags.
  *
  * Run: node tools/aeq-laz-npc-smoke.mjs
@@ -20,10 +20,10 @@ const read = p => JSON.parse(readFileSync(p, "utf8"));
 const lang = read("lang/en.json");
 const loc = key => key.split(".").reduce((o, k) => o?.[k], lang);
 
-console.log("AEQ / LAZ conglomerate NPC smoke (0.3.78)\n");
+console.log("AEQ / LAZ conglomerate NPC smoke (0.3.81)\n");
 
 const moduleJson = read("module.json");
-ok(moduleJson.version === "0.3.78", `module.json is 0.3.78 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.81", `module.json is 0.3.81 (got ${moduleJson.version})`);
 
 const ACTORS = [
   {
@@ -124,10 +124,10 @@ const director = readFileSync("docs/directors/conglomerate-npcs.md", "utf8");
 const tickers = readFileSync("docs/rulebook/MEGACORP-TICKERS.md", "utf8");
 const readme = readFileSync("README.md", "utf8");
 ok(/Aequitas Mandate/.test(raw) && /Lazarus Extract/.test(raw), "RAW 25 names AEQ + LAZ");
-ok(/Ten Conglomerates/.test(raw) && /Ten Conglomerates/.test(director), "RAW + Director cross-link Ten Conglomerates");
+ok(/Twelve Conglomerates/.test(raw) && /Twelve Conglomerates/.test(director), "RAW + Director cross-link Twelve Conglomerates");
 ok(/\*\*AEQ\*\*/.test(tickers) && /\*\*LAZ\*\*/.test(tickers), "MEGACORP-TICKERS lists AEQ / LAZ corp-line filters");
-ok(/not Congress seats|not a new Congress seat/.test(tickers), "AEQ/LAZ are not Congress seats");
-ok(/0\.3\.78/.test(readme) && /Mandate Trooper/.test(readme), "README changelog names 0.3.78");
+ok(/Twelve Conglomerates/.test(tickers) && /AEQ/.test(tickers) && /LAZ/.test(tickers), "tickers seat AEQ/LAZ on the Twelve");
+ok(/0\.3\.81/.test(readme) && /Mandate Trooper/.test(readme), "README changelog names 0.3.81");
 const opp = read("scripts/data/runs/opposition-map.json");
 ok(opp.strata.grid.includes("Mandate Trooper") && opp.types.extraction.includes("Extract Medic"), "Run Generator opposition-map names AEQ/LAZ");
 
