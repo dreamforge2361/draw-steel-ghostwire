@@ -129,26 +129,22 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 
 **Shipped assets** (`assets/maps/battlemaps/gold-line/`):
 
-| Role | Tile (working setup) | Prefer | Fallback |
+| Role | Where | Prefer | Fallback |
 |---|---|---|---|
-| Interior (motion) | flag `goldLineInterior`, x=0 y=0, elev 0, sort 0 | `map-gold-line-interior-loop.mp4` | webm, then still |
-| Roofs (motion) | flag `goldLineRoofs`, x=3232 y=475, elev 1, sort 100 | `map-gold-line-roofs-loop.mp4` | webm, then still |
+| Interior (motion) | **Level background** only | `map-gold-line-interior-loop.mp4` | webm, then still |
+| Roofs (motion) | **ONE Tile** `goldLineRoofs`, x=0 y=0, 6472×958, elev 1 | `map-gold-line-roofs-loop.mp4` | webm, then still |
 
 `resolveSrc` order is **loop.mp4 → loop.webm → still.webp**. H.264 MP4s carry a real duration (shipped VP9 webms report `duration=N/A` and Foundry throws `Failed to set currentTime ... non-finite`). Stills are a **valid playable layout** if a loop is missing. Do not swap in a generated train.
 
-**Do not use Level background video** — it is broken on this stack. The Level background src stays **empty**. Both plates are **Tiles**.
+**Locked architecture:** Level background = interior MP4 (loop + autoplay). One roof tile. No interior motion tile. No second background. Inject deletes leftover `goldLineInterior` tiles.
 
 Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares.
 
-**Interior tile** (**Tiles** layer, name **Interior (motion)**): **x=0, y=0, width=6472, height=958, elevation=0, sort=0**, MP4 loop + autoplay.
+**Roofs tile** (**Tiles** layer, name **Roofs**): start **x=0, y=0, width=6472, height=958, elevation=1, sort=1, locked**. Occlusion is **NONE** (mode 0, alpha 1). Michael may nudge x/y.
 
-**Roofs tile** (**Tiles** layer, name **Roofs (motion)**), Michael 2026-09-20 (await `GOLD_LINE_LOCKED` if numbers change): **x=3232, y=475, width=6472, height=958, elevation=1, sort=100, locked**. Occlusion is **NONE** (mode 0, alpha 1) — roofs stay **solid**.
+**Director — hide roofs:** when the crew boards / goes **inside**, hide **Roofs** (Tiles layer → eye / right-click Hide). Unhide for the roof Recall bail. Occlusion stays off.
 
-Roof x/y are **not 0,0**: a Foundry Tile’s x/y is its **registration point** (center), so a full-plate roof sits near (width/2, height/2) ≈ (3236, 479). Michael nudged that to **3232, 475**. The interior tile stays at the scene origin (0, 0).
-
-**Director — hide roofs:** when the crew boards / goes **inside**, hide **Roofs (motion)** (Tiles layer → eye / right-click Hide). Unhide for the roof Recall bail. Do not rely on FADE or Surface — occlusion stays off.
-
-World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If tiles drift, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate.
+World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the roof drifts, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate.
 
 ---
 

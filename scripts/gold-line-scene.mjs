@@ -1,61 +1,28 @@
 // Deadhead Gold Line (B106 / 0.3.39): world-inject the dual-Hammerhead train Scene.
-// WORKING SETUP (Michael 2026-09-20): do NOT use Level background video (broken).
-// Two Tiles play the duration-valid MP4s. Template: data/scenes/gold-line.json.
-// Design: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
-//
-// Do not use HEAD / foundry.utils.srcExists to probe loops — Foundry's file server
-// often rejects HEAD on webm.
-//
-// Prefer loop.mp4 → loop.webm → still.webp. Skip currentTime when duration is
-// non-finite. Stills remain a valid playable layout if video is missing.
-// Do not change train art content. Roof occlusion is NONE (solid) — the Director
-// hides the roof tile when the crew goes inside.
-//
-// Roof x/y 3232, 475 until a final GOLD_LINE_LOCKED paste.
+// LOCK (Michael 2026-09-20): Level background = interior MP4. ONE roof Tile.
+// No interior motion tile. Occlusion off — Director hides the roof to go inside.
+// Template: data/scenes/gold-line.json. Spike: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
+// Prefer loop.mp4. Skip currentTime when duration is non-finite. Never HEAD-probe.
 
 const MODULE_ID = "draw-steel-ghostwire";
 const TEMPLATE_PATH = `modules/${MODULE_ID}/data/scenes/gold-line.json`;
 const SCENE_FLAG = "goldLineScene";
-const INTERIOR_FLAG = "goldLineInterior";
 const ROOF_FLAG = "goldLineRoofs";
+const INTERIOR_TILE_FLAG = "goldLineInterior";
 const FOLDER_FLAG = "deadheadScenes";
 const L = "GHOSTWIRE.Scenes.GoldLine";
 const VIDEO_EXT = /\.(webm|mp4|m4v|ogv)$/i;
 const VIDEO_PLAYBACK = Object.freeze({ loop: true, autoplay: true, volume: 0 });
-/** Dual-Hammerhead plate. Scene canvas stays this size on force. */
+
 export const GOLD_LINE_PLATE = Object.freeze({ width: 6472, height: 958 });
-/**
- * Interior motion tile (Michael working setup 2026-09-20).
- * x/y 0,0 — this tile fills the scene like a background. Level background src
- * stays empty (Level video is broken on this stack).
- */
-export const GOLD_LINE_INTERIOR = Object.freeze({
+/** One roof tile. Start at 0,0 elev 1 — Michael may nudge. Occlusion NONE. */
+export const GOLD_LINE_ROOF = Object.freeze({
   x: 0,
   y: 0,
   width: 6472,
   height: 958,
-  elevation: 0,
-  sort: 0,
-  locked: true,
-  occlusion: Object.freeze({ mode: 0, alpha: 1 }),
-});
-/**
- * Roof motion tile (Michael live align 2026-09-20). Await GOLD_LINE_LOCKED
- * if these numbers change; use 3232/475 until then.
- *
- * x/y are not 0,0: a Foundry Tile's x/y is its registration point (center), so
- * a full-plate roof sits near (width/2, height/2) ≈ (3236, 479). Michael nudged
- * that to 3232, 475. The interior tile stays at 0,0 (scene-origin fill).
- * Occlusion is NONE (mode 0, alpha 1) — solid. Director hides this tile when
- * the crew goes inside.
- */
-export const GOLD_LINE_ROOF = Object.freeze({
-  x: 3232,
-  y: 475,
-  width: 6472,
-  height: 958,
   elevation: 1,
-  sort: 100,
+  sort: 1,
   locked: true,
   occlusion: Object.freeze({ mode: 0, alpha: 1 }),
 });
@@ -65,7 +32,6 @@ const loc = (key, data) => (data ? game.i18n.format(`${L}.${key}`, data) : game.
 let templatePromise = null;
 let seekGuardInstalled = false;
 
-/** Load the shipped scene template (paths, grid, occlusion). */
 export function loadGoldLineTemplate() {
   templatePromise ??= foundry.utils.fetchJsonWithTimeout(TEMPLATE_PATH).catch(error => {
     templatePromise = null;
@@ -82,19 +48,16 @@ function videoPlayback(src, extra = {}) {
   return isVideoSrc(src) ? { ...VIDEO_PLAYBACK, ...extra } : extra;
 }
 
-function emptyLevelBackground() {
-  return { src: "" };
+function levelBackground(src, template) {
+  const background = { src };
+  if (isVideoSrc(src)) background.video = videoPlayback(src, template?.level?.video);
+  return background;
 }
 
-/** True when a media duration (or seek target) is a real number Foundry can use. */
 export function isFiniteDuration(value) {
   return Number.isFinite(Number(value));
 }
 
-/**
- * Apply currentTime only when duration and the requested time are finite.
- * VP9 Gold Line webms report duration=N/A; seeking them throws in Chromium.
- */
 export function safeVideoCurrentTime(media, time = 0) {
   if (!media) return false;
   if (!isFiniteDuration(media.duration) || !isFiniteDuration(time)) return false;
@@ -138,10 +101,6 @@ function wrapVideoHelperPlay(helper) {
   helper.play = wrapped;
 }
 
-/**
- * When applying Gold Line video, skip currentTime writes if duration is non-finite.
- * Installs a per-element currentTime guard plus a VideoHelper.play wrapper.
- */
 export function installGoldLineSeekGuard() {
   if (seekGuardInstalled) return;
   seekGuardInstalled = true;
@@ -170,7 +129,6 @@ export function installGoldLineSeekGuard() {
   wrapVideoHelperPlay(globalThis.game?.video);
 }
 
-/** True when a module media path exists. Never uses HEAD (webm often 405s). */
 export async function mediaExists(path) {
   const slash = path.lastIndexOf("/");
   const dir = slash >= 0 ? path.slice(0, slash) : "";
@@ -194,9 +152,8 @@ export async function mediaExists(path) {
   }
 }
 
-/**
- * First existing candidate. Gold Line order is loop.mp4 → loop.webm → still.webp.
- */
+/** First existing candidate. Order: loop.mp4 → loop.webm → still.webp.
+ *  Stills are a valid playable layout if a loop is missing. */
 export async function resolveSrc(...candidates) {
   const list = candidates.flat(Infinity).filter(src => typeof src === "string" && src);
   if (!list.length) return null;
@@ -225,48 +182,53 @@ function existingGoldLineScene() {
   return game.scenes.find(s => s.getFlag(MODULE_ID, SCENE_FLAG)) ?? null;
 }
 
-function tilePayload(name, flag, place, src, videoExtra = {}) {
+function roofPayload(template, roofsSrc) {
   return {
-    name,
-    x: place.x,
-    y: place.y,
-    width: place.width,
-    height: place.height,
-    elevation: place.elevation,
-    sort: place.sort,
-    locked: place.locked,
+    name: loc("RoofsTile"),
+    x: GOLD_LINE_ROOF.x,
+    y: GOLD_LINE_ROOF.y,
+    width: GOLD_LINE_ROOF.width,
+    height: GOLD_LINE_ROOF.height,
+    elevation: GOLD_LINE_ROOF.elevation,
+    sort: GOLD_LINE_ROOF.sort,
+    locked: GOLD_LINE_ROOF.locked,
     hidden: false,
-    texture: { src },
-    occlusion: { ...place.occlusion },
-    video: videoPlayback(src, videoExtra),
-    flags: { [MODULE_ID]: { [flag]: true } },
+    texture: { src: roofsSrc },
+    occlusion: { ...GOLD_LINE_ROOF.occlusion },
+    video: videoPlayback(roofsSrc, template.roofTile.video),
+    flags: { [MODULE_ID]: { [ROOF_FLAG]: true } },
   };
 }
 
-async function applyFlaggedTile(scene, { _id, flag, name, place, src, videoExtra }) {
-  const data = tilePayload(name, flag, place, src, videoExtra);
-  const existing = scene.tiles.find(t => t.getFlag(MODULE_ID, flag));
-  if (!existing) {
-    await scene.createEmbeddedDocuments("Tile", [{ _id, ...data }]);
+async function removeStrayInteriorTiles(scene) {
+  const stray = scene.tiles.filter(t => t.getFlag(MODULE_ID, INTERIOR_TILE_FLAG));
+  if (!stray.length) return;
+  await scene.deleteEmbeddedDocuments("Tile", stray.map(t => t.id));
+}
+
+async function applyRoofTile(scene, template, roofsSrc) {
+  const data = roofPayload(template, roofsSrc);
+  const roof = scene.tiles.find(t => t.getFlag(MODULE_ID, ROOF_FLAG));
+  if (!roof) {
+    await scene.createEmbeddedDocuments("Tile", [{ _id: template.roofTile._id, ...data }]);
     return;
   }
-  await existing.update({
+  await roof.update({
     ...data,
-    x: place.x,
-    y: place.y,
-    width: place.width,
-    height: place.height,
-    elevation: place.elevation,
-    sort: place.sort,
-    locked: place.locked,
-    occlusion: { ...place.occlusion },
+    x: GOLD_LINE_ROOF.x,
+    y: GOLD_LINE_ROOF.y,
+    width: GOLD_LINE_ROOF.width,
+    height: GOLD_LINE_ROOF.height,
+    elevation: GOLD_LINE_ROOF.elevation,
+    sort: GOLD_LINE_ROOF.sort,
+    locked: GOLD_LINE_ROOF.locked,
+    occlusion: { ...GOLD_LINE_ROOF.occlusion },
   });
 }
 
 /**
  * Create or refresh the Gold Line Scene (GM only).
- * force=true (or a stale goldLineVersion) restamps both motion tiles and
- * clears the Level background (Level video is broken). Does not delete the Scene.
+ * Level background = interior MP4. One roof tile. Deletes any goldLineInterior tile.
  */
 export async function ensureGoldLineScene({ force = false } = {}) {
   if (!game.user.isGM) return existingGoldLineScene();
@@ -280,13 +242,11 @@ export async function ensureGoldLineScene({ force = false } = {}) {
 
   const interiorSrc = await resolveSrc(preferSrc(template.assets, "interiorPrefer", [
     "interiorLoopMp4",
-    "interiorLoopFixed",
     "interiorLoop",
     "interiorStill",
   ]));
   const roofsSrc = await resolveSrc(preferSrc(template.assets, "roofsPrefer", [
     "roofsLoopMp4",
-    "roofsLoopFixed",
     "roofsLoop",
     "roofsStill",
   ]));
@@ -327,7 +287,7 @@ export async function ensureGoldLineScene({ force = false } = {}) {
     name: loc("LevelInterior"),
     sort: template.level.sort,
     elevation: { ...template.level.elevation },
-    background: emptyLevelBackground(),
+    background: levelBackground(interiorSrc, template),
   };
   const level = scene.levels?.contents?.[0];
   if (level) await level.update(levelPayload);
@@ -336,27 +296,12 @@ export async function ensureGoldLineScene({ force = false } = {}) {
     if (created && scene.initialLevel !== created.id) await scene.update({ initialLevel: created.id });
   }
 
-  await applyFlaggedTile(scene, {
-    _id: template.interiorTile._id,
-    flag: INTERIOR_FLAG,
-    name: loc("InteriorTile"),
-    place: GOLD_LINE_INTERIOR,
-    src: interiorSrc,
-    videoExtra: template.interiorTile.video,
-  });
-  await applyFlaggedTile(scene, {
-    _id: template.roofTile._id,
-    flag: ROOF_FLAG,
-    name: loc("RoofsTile"),
-    place: GOLD_LINE_ROOF,
-    src: roofsSrc,
-    videoExtra: template.roofTile.video,
-  });
+  await removeStrayInteriorTiles(scene);
+  await applyRoofTile(scene, template, roofsSrc);
   if (stale && !force) ui.notifications.info(loc("Refreshed"));
   return scene;
 }
 
-/** Register ready-hook inject + module API. Call during the init hook. */
 export function registerGoldLineScene() {
   installGoldLineSeekGuard();
   Hooks.once("ready", async () => {

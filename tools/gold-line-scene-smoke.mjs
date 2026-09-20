@@ -2,6 +2,8 @@
 /**
  * B106 smoke: Gold Line plates + scene template stay locked to the dual-Hammerhead stitch.
  *
+ * LOCK: Level background = interior MP4. ONE roof Tile at 0,0 elev 1. No interior tile.
+ *
  * Run: node tools/gold-line-scene-smoke.mjs
  * Does not write pack JSON or rebuild packs.
  */
@@ -9,7 +11,6 @@ import { existsSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import {
   GOLD_LINE_PLATE,
-  GOLD_LINE_INTERIOR,
   GOLD_LINE_ROOF,
   isFiniteDuration,
   safeVideoCurrentTime,
@@ -93,21 +94,14 @@ const template = readBomFreeJson(TEMPLATE);
 ok(template.width === PLATE.width && template.height === PLATE.height, "template canvas is 6472×958");
 ok(template.grid.size === 208, "template grid size is 208");
 ok(template.grid.distance === 5 && template.grid.units === "ft", "template grid is 5 ft");
-ok(template.version >= 6, `template version is 6+ (got ${template.version})`);
-ok((template.level.background?.src ?? "") === "", "Level background src is empty (no Level video)");
-ok(!template.level.video, "level template does not set video on the Level");
+ok(template.version >= 7, `template version is 7+ (got ${template.version})`);
+ok(!template.interiorTile, "template has no interiorTile (Level background is the interior)");
+ok(template.level.video?.loop === true && template.level.video?.autoplay === true, "level video loops and autoplays");
 
-ok(template.interiorTile.x === 0 && template.interiorTile.y === 0, "interior tile is 0, 0");
-ok(template.interiorTile.width === PLATE.width && template.interiorTile.height === PLATE.height, "interior tile is 6472×958");
-ok(template.interiorTile.elevation === 0 && template.interiorTile.sort === 0, "interior tile elev 0 sort 0");
-ok(template.interiorTile.flag === "goldLineInterior", "interior tile flag is goldLineInterior");
-ok(template.interiorTile.video.loop === true && template.interiorTile.video.autoplay === true, "interior tile loops");
-
-ok(template.roofTile.x === 3232 && template.roofTile.y === 475, "roof tile place is 3232, 475");
+ok(template.roofTile.x === 0 && template.roofTile.y === 0, "roof tile starts at 0, 0");
 ok(template.roofTile.width === PLATE.width && template.roofTile.height === PLATE.height, "roof tile is 6472×958");
-ok(template.roofTile.elevation === 1 && template.roofTile.sort === 100, "roof tile elev 1 sort 100");
+ok(template.roofTile.elevation === 1 && template.roofTile.sort === 1, "roof tile elev 1 sort 1");
 ok(template.roofTile.locked === true, "roof tile is locked");
-ok(template.roofTile.flag === "goldLineRoofs", "roof tile flag is goldLineRoofs");
 ok(template.roofTile.occlusion.mode === 0 && template.roofTile.occlusion.alpha === 1, "roof occlusion is NONE (0) / solid alpha 1");
 ok(template.roofTile.video.loop === true && template.roofTile.video.autoplay === true, "roof tile loops");
 
@@ -156,22 +150,22 @@ ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line 
 
 const script = readFileSync(SCRIPT, "utf8");
 ok(script.includes("ensureGoldLineScene"), "inject exports ensureGoldLineScene");
-ok(script.includes("goldLineInterior") && script.includes("GOLD_LINE_INTERIOR"), "inject stamps interior motion tile");
-ok(script.includes("goldLineRoofs") && script.includes("GOLD_LINE_ROOF"), "inject stamps roof motion tile");
-ok(script.includes("emptyLevelBackground") && /src:\s*["']{2}/.test(script), "inject clears Level background src");
-ok(!/levelBackground\(/.test(script), "inject does not put video on the Level background");
+ok(!/\bGOLD_LINE_INTERIOR\b/.test(script), "inject has no GOLD_LINE_INTERIOR tile apply");
+ok(!/interiorTile/.test(script), "inject has no interiorTile apply");
+ok(script.includes("removeStrayInteriorTiles") && script.includes("goldLineInterior"), "inject deletes leftover goldLineInterior tiles");
+ok(script.includes("goldLineRoofs") && script.includes("GOLD_LINE_ROOF"), "inject stamps one roof motion tile");
+ok(/function levelBackground/.test(script), "inject puts interior MP4 on the Level background");
+ok(!/emptyLevelBackground/.test(script), "inject does not clear the Level background");
 ok(!/method:\s*["']HEAD["']/.test(script), "inject does not probe media with HEAD");
 ok(!/\bsrcExists\s*\(/.test(script), "inject does not call srcExists (HEAD)");
 ok(script.includes("FilePicker.browse") && script.includes("Range"), "inject probes via FilePicker or ranged GET");
 ok(script.includes("interiorLoopMp4") && script.includes("loop.mp4"), "inject prefers mp4 over webm");
 ok(script.includes("safeVideoCurrentTime") && script.includes("isFiniteDuration"), "inject skips seek when duration is non-finite");
-ok(/GOLD_LINE_ROOF[\s\S]*3232[\s\S]*475/.test(script), "force restamps roof 3232, 475");
-ok(/GOLD_LINE_INTERIOR[\s\S]*x:\s*0[\s\S]*y:\s*0/.test(script), "force restamps interior 0, 0");
+ok(!/3232/.test(script) && !/\b475\b/.test(script), "inject does not bake roof 3232, 475");
 ok(GOLD_LINE_ROOF.occlusion.mode === 0 && GOLD_LINE_ROOF.occlusion.alpha === 1, "GOLD_LINE_ROOF is solid NONE");
-ok(GOLD_LINE_INTERIOR.x === 0 && GOLD_LINE_INTERIOR.y === 0 && GOLD_LINE_INTERIOR.elevation === 0, "GOLD_LINE_INTERIOR is 0, 0, elev 0");
-ok(GOLD_LINE_ROOF.x === 3232 && GOLD_LINE_ROOF.y === 475 && GOLD_LINE_ROOF.elevation === 1 && GOLD_LINE_ROOF.sort === 100, "GOLD_LINE_ROOF is 3232, 475, elev 1, sort 100");
+ok(GOLD_LINE_ROOF.x === 0 && GOLD_LINE_ROOF.y === 0 && GOLD_LINE_ROOF.elevation === 1 && GOLD_LINE_ROOF.sort === 1, "GOLD_LINE_ROOF is 0, 0, elev 1, sort 1");
 ok(GOLD_LINE_PLATE.width === PLATE.width && GOLD_LINE_PLATE.height === PLATE.height, "GOLD_LINE_PLATE is 6472×958");
-ok(/GOLD_LINE_LOCKED/.test(script), "inject notes 3232/475 awaits GOLD_LINE_LOCKED");
+ok(!/GOLD_LINE_LOCKED/.test(script), "inject does not wait on GOLD_LINE_LOCKED");
 ok(/valid playable layout/i.test(script), "inject comments that stills are a valid playable layout");
 ok(!isFiniteDuration(Number.NaN) && !isFiniteDuration(Infinity) && !isFiniteDuration("N/A") && isFiniteDuration(8), "isFiniteDuration rejects N/A / NaN / Infinity");
 const unseekable = { duration: Number.NaN, currentTime: 1 };
@@ -181,10 +175,12 @@ ok(safeVideoCurrentTime(seekable, 0) === true && seekable.currentTime === 0, "sa
 
 const sor = readFileSync(SOR, "utf8");
 ok(/L1.*TAIL/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has dual-Hammerhead beat remap");
-ok(/interior-loop\.mp4/.test(sor) && /roofs-loop\.mp4/.test(sor), "SoR points at the mp4 tiles");
-ok(/3232/.test(sor) && /475/.test(sor), "SoR bakes roof place 3232, 475");
+ok(/interior-loop\.mp4/.test(sor) && /roofs-loop\.mp4/.test(sor), "SoR points at the mp4 assets");
+ok(/Level background/i.test(sor) && /interior/i.test(sor), "SoR says Level background is the interior");
+ok(/one tile|ONE Tile|one roof/i.test(sor), "SoR says there is one roof tile");
+ok(/deletes leftover `goldLineInterior`/.test(sor) && !/flag `goldLineInterior`/.test(sor), "SoR deletes leftover interior tiles, does not ship one");
+ok(!/3232/.test(sor) && !/\b475\b/.test(sor), "SoR does not bake roof 3232, 475");
 ok(/hide/i.test(sor) && /inside/i.test(sor), "SoR has Director hide-roof note when crew goes inside");
-ok(/Level background/i.test(sor) && /empty|cleared|do not|broken/i.test(sor), "SoR says Level background video is unused/broken");
 ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
 
@@ -193,11 +189,14 @@ ok(/^[A-Za-z0-9]{16}$/.test(journal._id), "journal _id is 16 alphanumeric");
 ok(journal.folder === "gwRunsDeadhead00", "journal sits in Deadhead folder");
 ok(journal.pages?.length >= 2, "journal has plate + beat pages");
 const plateMd = journal.pages[0]?.text?.markdown ?? "";
-ok(/goldLineInterior/.test(plateMd) && /goldLineRoofs/.test(plateMd), "journal names both tile flags");
+ok(/deletes leftover `goldLineInterior`/.test(plateMd) && !/flag `goldLineInterior`/.test(plateMd), "journal deletes leftover interior tiles, does not ship one");
+ok(/goldLineRoofs/.test(plateMd), "journal names the roof tile flag");
 ok(/loop\.mp4/.test(plateMd), "journal prefers loop.mp4");
-ok(/3232/.test(plateMd) && /475/.test(plateMd), "journal bakes roof place 3232, 475");
+ok(/Level/.test(plateMd) && /interior/i.test(plateMd), "journal says Level background is the interior");
+ok(!/3232/.test(plateMd) && !/\b475\b/.test(plateMd), "journal does not bake roof 3232, 475");
+ok(/x=0|x = 0|0, 0|0,0/.test(plateMd), "journal starts the roof at 0, 0");
 ok(/hide/i.test(plateMd) && /inside/i.test(plateMd), "journal has Director hide-roof note");
-ok(/NONE|solid/i.test(plateMd), "journal says roofs are solid (no occlusion)");
+ok(/NONE|occlusion off|occlusion stays off/i.test(plateMd), "journal says roofs have occlusion off");
 for (const page of journal.pages ?? []) {
   ok(/^[A-Za-z0-9]{16}$/.test(page._id), `page ${page.name} _id is 16 alphanumeric`);
 }
