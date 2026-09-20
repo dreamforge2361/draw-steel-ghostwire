@@ -7043,7 +7043,11 @@
           "NoTemplate": "No Summons & Machines template found for band {band}. Rebuild the summons pack.",
           "Wrecked": "{name} is at 0 Integrity: wrecked. Recall it from its Item when the table is done with it.",
           "ArmorKit": "{name} (+{bonus} Stamina)",
-          "ArmorKitHint": "<p>Installed armor kit: +{bonus} Stamina (Integrity). Ghostwire machines have no armor rating or damage reduction. One armor kit at a time.</p>"
+          "ArmorKitHint": "<p>Installed armor kit: +{bonus} Stamina (Integrity). Ghostwire machines have no armor rating or damage reduction. One armor kit at a time. Toggle off or uninstall to drop the bonus.</p>",
+          "WeaponryKit": "{name} (Gunnery hardpoint)",
+          "WeaponryKitHint": "<p>Installed weaponry kit. Fire mounted Category-3 weapons with Gunnery (Wrench Rigged Fire or a gunner station). Flags live on this Actor at flags.draw-steel-ghostwire.installedKits.weaponry. One weaponry kit at a time.</p>",
+          "OtherKit": "{name}",
+          "DirectorKitHint": "<p>Installed machine mod. Foundry flags it on this Actor (flags.draw-steel-ghostwire.installedKits). The Director applies the catalog edge, bane, or convenience at the table — Ghostwire does not auto-modify Piloting/Rigging/Gunnery Power Rolls for this kit.</p>"
         }
       },
       "Nodes": {

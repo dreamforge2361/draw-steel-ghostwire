@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 /**
- * 0.3.68 — vehicle/drone Armor = Stamina + 4+4 echelon ladders.
+ * 0.3.68 — vehicle/drone Armor = Stamina + 4+4 echelon ladders + apply-on-install.
+ * Smoke: install E1 armor on a drone → stamina rises; remove → reverts.
  * Run: node tools/machine-armor-smoke.mjs
  */
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import {
+  MACHINE_MOD_PROFILES,
+  kitProfile,
+  staminaAfterArmorChange,
+  staminaBonusFromModData,
+} from "../scripts/machines.mjs";
 
 let failed = 0;
 const ok = (cond, msg) => {
@@ -62,7 +69,7 @@ for (const row of armor) {
   const ae = row.json.effects[0];
   ok(ae.transfer === false, `${dsid} AE does not transfer onto the hero`);
   ok(ae.flags?.["draw-steel-ghostwire"]?.machineArmor === true, `${dsid} AE flagged machineArmor`);
-  ok(ae.system.changes[0]?.key === "system.stamina.bonuses.treasure", `${dsid} AE uses treasure Stamina bonus (hero armor path)`);
+  ok(ae.system.changes[0]?.key === "system.stamina.bonuses.treasure", `${dsid} item AE documents treasure Stamina bonus (hero armor path; transfer:false so it does not raise the hero)`);
   ok(Number(ae.system.changes[0]?.value) === expect.staminaBonus, `${dsid} AE value ${ae.system.changes[0]?.value}`);
 }
 
@@ -114,16 +121,54 @@ for (const f of drones) {
 ok(droneFamily === drones.length, `all ${drones.length} drones have modFamily vehicle+drone (${droneFamily})`);
 
 const machines = readFileSync("scripts/machines.mjs", "utf8");
-ok(machines.includes("armorStaminaBonus") && machines.includes("syncMachineStamina") && machines.includes("staminaBonus"),
-  "machines.mjs stamps armor staminaBonus onto deployed Integrity");
+ok(machines.includes("syncMachineMods") && machines.includes("system.stamina.bonuses.treasure"),
+  "machines.mjs applies armor via hero-armor treasure AE on the deployed Actor");
+ok(machines.includes("installedKits") && machines.includes("machineWeaponry"),
+  "machines.mjs stamps installedKits flags for the Gunnery/sheet path");
+ok(machines.includes("\"system.stamina.max\": chassis"),
+  "stored max is chassis; treasure AE adds the kit bonus");
 const modsSrc = readFileSync("scripts/mods.mjs", "utf8");
-ok(modsSrc.includes("ExclusiveKit") && modsSrc.includes("restampHostMachine"),
-  "mods.mjs exclusive armor/weaponry kits + restamp on install");
+ok(modsSrc.includes("ExclusiveKit") && modsSrc.includes("restampHostMachine") && modsSrc.includes("syncMachineMods"),
+  "mods.mjs restamps the deployed machine on install / uninstall / toggle");
+ok(modsSrc.includes("if (host) await restampHostMachine(host)"),
+  "deleting an installed mod restamps the host machine");
+ok(modsSrc.includes("machineArmor") && modsSrc.includes("return true"),
+  "item-level machineArmor AEs are suppressed on the hero");
+
+console.log("\napply: install E1 armor on a drone → stamina rises; remove → reverts");
+const e1DroneChassis = 12; // machine-drone-small band Stamina at E1 ×1
+ok(e1DroneChassis === 12, `E1 drone-small chassis is 12 (got ${e1DroneChassis})`);
+const e1Armor = staminaBonusFromModData({ staminaBonus: 6, active: true });
+ok(e1Armor === 6, "Scrap-Weld +6 while active");
+ok(staminaBonusFromModData({ staminaBonus: 6, active: false }) === 0, "toggle-off drops Scrap-Weld bonus to 0");
+const afterInstall = staminaAfterArmorChange({ value: e1DroneChassis, max: e1DroneChassis }, e1DroneChassis + e1Armor);
+ok(afterInstall.max === 18 && afterInstall.value === 18,
+  `install E1 armor on drone: 12 → ${afterInstall.max}/${afterInstall.value} (want 18/18)`);
+const afterRemove = staminaAfterArmorChange({ value: afterInstall.value, max: afterInstall.max }, e1DroneChassis);
+ok(afterRemove.max === 12 && afterRemove.value === 12,
+  `remove E1 armor: 18 → ${afterRemove.max}/${afterRemove.value} (want 12/12)`);
+const damaged = staminaAfterArmorChange({ value: 8, max: 12 }, 18);
+ok(damaged.max === 18 && damaged.value === 14, "install on a damaged drone heals only the +6 gain (8/12 → 14/18)");
+const toggleOff = staminaAfterArmorChange({ value: 14, max: 18 }, 12);
+ok(toggleOff.max === 12 && toggleOff.value === 12, "toggle-off clamps 14/18 → 12/12");
+
+const armorIds = ["scrap-weld", "plate-up", "combat-plate", "aegis-kit"];
+const weaponIds = ["gun-rack", "twin-mount", "turret-ring", "heavy-hardpoint"];
+const directorIds = ["tune-kit", "sensor-pod", "ghost-coat", "runflats", "rigger-cocoon", "ammo-bin"];
+ok(armorIds.every(id => kitProfile(id)?.applied === "stamina" && kitProfile(id)?.kind === "armor"),
+  "all 4 armor SKUs apply Stamina");
+ok(weaponIds.every(id => kitProfile(id)?.applied === "flags" && kitProfile(id)?.gunnery === true),
+  "all 4 weaponry SKUs stamp Gunnery hardpoint flags");
+ok(directorIds.every(id => kitProfile(id)?.applied === "director"),
+  "other §5F mods are flagged for the Director (not auto-rolled)");
+ok(Object.keys(MACHINE_MOD_PROFILES).length === 14, `14 vehicle/drone mod profiles (got ${Object.keys(MACHINE_MOD_PROFILES).length})`);
 
 const raw = readFileSync("docs/raw/10-mods.md", "utf8");
 ok(raw.includes("Scrap-Weld") && raw.includes("Combat Plate") && raw.includes("Aegis Kit"), "RAW 10-mods has 4 armor SKUs");
 ok(raw.includes("Twin Mount") && raw.includes("Turret Ring") && raw.includes("Heavy Hardpoint"), "RAW 10-mods has 4 weaponry SKUs");
 ok(!/Raises the machine's Armor \(damage reduction\)/.test(raw), "RAW 10-mods has no Plate-Up DR row");
+ok(raw.includes("Director applies the catalog line") && raw.includes("does **not** auto-add"),
+  "RAW documents Director-only effects for non-armor/non-weaponry kits");
 const gear = readFileSync("docs/masters/GHOSTWIRE_GEAR_MASTER.md", "utf8");
 ok(gear.includes("#### Armor kits") && gear.includes("#### Weaponry kits"), "gear master §5F has both ladders");
 ok(!/Raises the machine's Armor \(damage reduction\)/.test(gear), "gear master has no Plate-Up DR row");

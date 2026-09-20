@@ -78,7 +78,7 @@ The Companion Link **limits** in the Non-Wrench table still apply if you field a
 > *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*
 
 > **In Foundry**
-> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system.
+> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.
 
 ---
 

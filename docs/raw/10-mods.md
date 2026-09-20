@@ -257,6 +257,8 @@ Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repa
 | Rigger Cocoon / Control Interface / Jump-In coupling | Military | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |
 | Ammo Bin / Rearm System / autonomous munitions feed | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
 
+**Foundry apply vs Director table calls.** Armor kits **do** raise the Deployed machine’s Stamina (Integrity) in Foundry. Weaponry kits **do** flag a live Gunnery hardpoint on that Actor (`installedKits.weaponry`); firing is still Gunnery / Rigged Fire / a gunner station at the table. Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, and Ammo Bin are **flagged and shown as Active Effects** on the machine, but Foundry does **not** auto-add those edges, banes, Jump-In cleanliness, or reload math to Power Rolls — the Director applies the catalog line when the roll or scene calls for it.
+
 Availability feel follows the Gear master’s legacy tier on each row. Do not invent a second price.
 
 ### Programs and payloads (pointer)
@@ -301,7 +303,9 @@ Advancement never auto-installs mods when a new echelon raises Kit Stamina (`24`
 ---
 
 > **In Foundry**
-> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots, one armor kit / one weaponry kit at a time on a machine). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot. An installed, active **armor kit** restamps a **Deployed** machine's Stamina (Integrity). **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In — Linked refuses). Do not invent extra menus.
+> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots, one armor kit / one weaponry kit at a time on a machine). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot.
+>
+> **Deploy the drone or vehicle first** (Item header **Deploy**, or right-click the host row). Then install. An installed, **active** armor kit writes Integrity on the **Deployed** machine Actor the same way hero armor does: stored chassis max + Active Effect `system.stamina.bonuses.treasure` (upgrade). Current Stamina rises by the bonus on install; toggle-off or uninstall drops the AE and clamps current Stamina to chassis. Weaponry kits stamp `flags.draw-steel-ghostwire.installedKits.weaponry` (hardpoints, Gunnery) plus a sheet AE. Tune Kit / Sensor Pod / Ghost Coat / Runflats / Rigger Cocoon / Ammo Bin stamp flags + a sheet AE; the **Director applies those edges/banes/convenience at the table** — Foundry does not auto-modify Piloting/Rigging/Gunnery Power Rolls for them. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In — Linked refuses). Do not invent extra menus.
 
 ---
 

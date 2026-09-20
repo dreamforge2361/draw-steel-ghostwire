@@ -100,11 +100,11 @@ const blocked = (reason, mod, host, extra = {}) => ui.notifications.warn(game.i1
   other: "", kit: "", ...extra,
 }));
 
-/** Restamp a deployed vehicle/drone Actor after an armor kit install / uninstall / toggle. */
+/** Apply installed vehicle/drone mods onto a deployed machine Actor (Stamina, kit flags, AEs). */
 async function restampHostMachine(host) {
   if (!host) return;
-  const { machineBand, syncMachineStamina } = await import("./machines.mjs");
-  if (machineBand(host)) await syncMachineStamina(host);
+  const { machineBand, syncMachineMods } = await import("./machines.mjs");
+  if (machineBand(host)) await syncMachineMods(host);
 }
 
 /**
@@ -207,6 +207,8 @@ function patchSoftwareSuppression() {
     configurable: true,
     get() {
       if (this.getFlag?.(MODULE_ID, "software") && (this.parent instanceof Item) && !isRunning(this.parent)) return true;
+      // Machine-armor AEs on the mod Item must not raise the hero's Stamina; Integrity is stamped on the deployed Actor.
+      if (this.getFlag?.(MODULE_ID, "machineArmor") && (this.parent instanceof Item)) return true;
       return descriptor.get.call(this);
     },
   });
@@ -281,8 +283,8 @@ export function registerMods() {
     anchor.after(line);
   });
 
-  // Deleting an installed mod frees its host's list entry; deleting a host uninstalls its mods.
-  Hooks.on("deleteItem", (item, options, userId) => {
+  // Deleting an installed mod frees its host's list entry and restamps a deployed machine; deleting a host uninstalls its mods.
+  Hooks.on("deleteItem", async (item, options, userId) => {
     const actor = item.parent;
     if ((userId !== game.user.id) || !(actor instanceof Actor)) return;
     const updates = [];
@@ -294,7 +296,8 @@ export function registerMods() {
         updates.push({ _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: null });
       }
     }
-    if (updates.length) actor.updateEmbeddedDocuments("Item", updates);
+    if (updates.length) await actor.updateEmbeddedDocuments("Item", updates);
+    if (host) await restampHostMachine(host);
   });
 
   const module = game.modules.get(MODULE_ID);

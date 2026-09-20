@@ -65,83 +65,196 @@ export function chassisStamina(item) {
 }
 
 /**
+ * Catalog of vehicle/drone mod effects Foundry stamps onto a deployed machine Actor.
+ * `applied: "stamina"` uses the same AE path as hero armor (`system.stamina.bonuses.treasure`).
+ * `applied: "flags"` writes kit flags the Gunnery / sheet path can read.
+ * `applied: "director"` stamps an AE + flags; the Director still applies the edge/bane at the table.
+ */
+export const MACHINE_MOD_PROFILES = {
+  "scrap-weld": { kind: "armor", staminaBonus: 6, applied: "stamina" },
+  "plate-up": { kind: "armor", staminaBonus: 12, applied: "stamina" },
+  "combat-plate": { kind: "armor", staminaBonus: 18, applied: "stamina" },
+  "aegis-kit": { kind: "armor", staminaBonus: 27, applied: "stamina" },
+  "gun-rack": { kind: "weaponry", gunnery: true, hardpoints: 1, scale: "category-3", dualFeed: false, turret: false, heavy: false, applied: "flags" },
+  "twin-mount": { kind: "weaponry", gunnery: true, hardpoints: 2, scale: "category-3", dualFeed: true, turret: false, heavy: false, applied: "flags" },
+  "turret-ring": { kind: "weaponry", gunnery: true, hardpoints: 1, scale: "medium", dualFeed: false, turret: true, wideArc: true, heavy: false, applied: "flags" },
+  "heavy-hardpoint": { kind: "weaponry", gunnery: true, hardpoints: 1, scale: "heavy", dualFeed: false, turret: false, heavy: true, integrated: true, applied: "flags" },
+  "tune-kit": { kind: "other", handlingEdge: true, applied: "director" },
+  "sensor-pod": { kind: "other", sensorEdge: true, pierceConcealment: true, applied: "director" },
+  "ghost-coat": { kind: "other", stealthBane: true, applied: "director" },
+  "runflats": { kind: "other", resistCrippled: true, selfRepair: true, applied: "director" },
+  "rigger-cocoon": { kind: "other", jumpInCapable: true, applied: "director" },
+  "ammo-bin": { kind: "other", ammoFeed: true, applied: "director" },
+};
+
+export function kitProfile(dsid) {
+  return MACHINE_MOD_PROFILES[dsid] ?? null;
+}
+
+/** Stamina bonus from one mod's catalog flags (0 if inactive or missing). */
+export function staminaBonusFromModData(data) {
+  if (!data || data.active === false) return 0;
+  const n = Number(data.staminaBonus ?? 0);
+  return Number.isFinite(n) && n > 0 ? n : 0;
+}
+
+/**
+ * Raise/lower current Stamina when max changes.
+ * Installing heals the gain; uninstalling / toggle-off clamps to the new max.
+ */
+export function staminaAfterArmorChange({ value, max }, nextMax) {
+  const current = Number(value ?? 0);
+  const oldMax = Number(max ?? 0);
+  const target = Number(nextMax ?? 0);
+  const delta = target - oldMax;
+  const nextValue = delta >= 0 ? Math.min(target, current + delta) : Math.min(target, current);
+  return { max: target, value: nextValue };
+}
+
+export function installedHostMods(item) {
+  const actor = item?.parent;
+  if (!(actor instanceof Actor)) return [];
+  return actor.items.filter(mod => {
+    const data = mod.getFlag(MODULE_ID, "mod");
+    return data && data.installedOn === item.id;
+  });
+}
+
+export function activeHostMods(item) {
+  return installedHostMods(item).filter(mod => mod.getFlag(MODULE_ID, "mod")?.active !== false);
+}
+
+/**
  * Stamina (Integrity) from an installed, active vehicle/drone armor kit.
  * Hero armor uses staminaByEchelon on the worn Item (AE → system.stamina.bonuses.treasure).
  * Machine kits live on the hero's Item while Integrity lives on the deployed Actor, so each
  * SKU carries a flat staminaBonus (one kit at a time; exclusiveKit: "armor").
  */
 export function armorStaminaBonus(item) {
-  const actor = item?.parent;
-  if (!(actor instanceof Actor)) return 0;
-  let bonus = 0;
-  for (const mod of actor.items) {
-    const data = mod.getFlag(MODULE_ID, "mod");
-    if (!data || data.installedOn !== item.id || data.active === false) continue;
-    const n = Number(data.staminaBonus ?? 0);
-    if (Number.isFinite(n) && n > 0) bonus += n;
-  }
-  return bonus;
+  return activeHostMods(item).reduce((total, mod) => total + staminaBonusFromModData(mod.getFlag(MODULE_ID, "mod")), 0);
 }
 
 export function machineStamina(item) {
   return chassisStamina(item) + armorStaminaBonus(item);
 }
 
-const ARMOR_AE_FLAG = "machineArmor";
+/** Kit flags a Gunnery / sheet path can read off a deployed machine Actor (or null). */
+export function machineWeaponry(actor) {
+  return actor?.getFlag?.(MODULE_ID, "installedKits")?.weaponry ?? null;
+}
 
-function armorEffectPayload(item, bonus) {
-  const kit = item.parent?.items.find(mod => {
-    const data = mod.getFlag(MODULE_ID, "mod");
-    return data?.installedOn === item.id && data.active !== false && Number(data.staminaBonus) > 0;
-  });
+const MACHINE_MOD_AE = "machineMod";
+
+function baseMachineEffect(mod, extraFlags = {}) {
   return {
-    name: game.i18n.format(`${UI}.ArmorKit`, { name: kit?.name ?? item.name, bonus }),
-    img: kit?.img ?? item.img,
-    origin: kit?.uuid ?? item.uuid,
-    description: game.i18n.format(`${UI}.ArmorKitHint`, { bonus }),
+    name: mod.name,
+    img: mod.img,
+    origin: mod.uuid,
     disabled: false,
     transfer: false,
     statuses: [],
     tint: "#ffffff",
-    flags: { [MODULE_ID]: { [ARMOR_AE_FLAG]: true, staminaBonus: bonus } },
+    flags: { [MODULE_ID]: { [MACHINE_MOD_AE]: true, dsid: mod.system._dsid ?? null, modUuid: mod.uuid, ...extraFlags } },
     duration: { value: null, units: "seconds", expiry: null, expired: false },
     start: null,
     showIcon: 1,
     type: "base",
-    system: {
-      end: { roll: "1d10 + @combat.save.bonus" },
-      // Integrity is stamped onto system.stamina (same as chassis Deploy). Empty changes so a
-      // treasure-upgrade AE cannot double-count the bonus already in max.
-      changes: [],
-    },
+    system: { end: { roll: "1d10 + @combat.save.bonus" }, changes: [] },
   };
 }
 
-async function stampArmorEffect(actor, item, bonus) {
-  const existing = actor.effects.filter(effect => effect.getFlag(MODULE_ID, ARMOR_AE_FLAG));
+function armorEffectPayload(mod, bonus) {
+  const effect = baseMachineEffect(mod, { machineArmor: true, staminaBonus: bonus });
+  effect.name = game.i18n.format(`${UI}.ArmorKit`, { name: mod.name, bonus });
+  effect.description = game.i18n.format(`${UI}.ArmorKitHint`, { bonus });
+  // Mirror hero armor: Draw Steel NPC/hero prepareDerivedData adds bonuses.treasure to max.
+  effect.system.changes = [{
+    key: "system.stamina.bonuses.treasure",
+    type: "upgrade",
+    value: bonus,
+    phase: "initial",
+    priority: null,
+  }];
+  return effect;
+}
+
+function kitEffectPayload(mod, profile) {
+  const effect = baseMachineEffect(mod, { kind: profile.kind, applied: profile.applied, ...profile });
+  const hintKey = profile.kind === "weaponry" ? "WeaponryKitHint" : "DirectorKitHint";
+  effect.name = profile.kind === "weaponry"
+    ? game.i18n.format(`${UI}.WeaponryKit`, { name: mod.name })
+    : game.i18n.format(`${UI}.OtherKit`, { name: mod.name });
+  effect.description = game.i18n.format(`${UI}.${hintKey}`, { name: mod.name });
+  return effect;
+}
+
+function installedKitsFlag(item) {
+  const kits = { armor: null, weaponry: null, others: [] };
+  for (const mod of activeHostMods(item)) {
+    const dsid = mod.system._dsid;
+    const data = mod.getFlag(MODULE_ID, "mod") ?? {};
+    const profile = kitProfile(dsid) ?? {};
+    const row = { dsid, name: mod.name, uuid: mod.uuid, ...profile };
+    if (profile.kind === "armor" || staminaBonusFromModData(data)) {
+      kits.armor = { ...row, staminaBonus: staminaBonusFromModData(data) || profile.staminaBonus || 0 };
+    } else if (profile.kind === "weaponry" || data.exclusiveKit === "weaponry") {
+      kits.weaponry = row;
+    } else {
+      kits.others.push(row);
+    }
+  }
+  return kits;
+}
+
+async function stampMachineModEffects(actor, item) {
+  const existing = actor.effects.filter(effect => effect.getFlag(MODULE_ID, MACHINE_MOD_AE) || effect.getFlag(MODULE_ID, "machineArmor"));
   if (existing.length) await actor.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
-  if (bonus > 0) await actor.createEmbeddedDocuments("ActiveEffect", [armorEffectPayload(item, bonus)]);
+  const payloads = [];
+  for (const mod of activeHostMods(item)) {
+    const dsid = mod.system._dsid;
+    const data = mod.getFlag(MODULE_ID, "mod") ?? {};
+    const profile = kitProfile(dsid);
+    const bonus = staminaBonusFromModData(data);
+    if (bonus > 0) payloads.push(armorEffectPayload(mod, bonus));
+    else if (profile) payloads.push(kitEffectPayload(mod, profile));
+  }
+  if (payloads.length) await actor.createEmbeddedDocuments("ActiveEffect", payloads);
 }
 
 /**
- * Restamp a deployed machine's Integrity after an armor kit install / uninstall / field toggle.
- * Preserves damage taken: raising max heals the gain; lowering max clamps.
+ * Apply installed, active vehicle/drone mods onto a deployed machine Actor.
+ * Armor: chassis max + treasure AE (hero-armor path); current Stamina heals on install and clamps on remove.
+ * Weaponry / other: AE + `flags.installedKits` for the Gunnery/sheet path. Toggle-off and uninstall rebuild this set.
  */
-export async function syncMachineStamina(item) {
+export async function syncMachineMods(item) {
   const actor = deployedMachine(item);
-  if (!actor) return;
-  const max = machineStamina(item);
+  if (!actor) return null;
+  const chassis = chassisStamina(item);
   const bonus = armorStaminaBonus(item);
+  const nextMax = chassis + bonus;
   const current = Number(actor.system.stamina.value ?? 0);
   const oldMax = Number(actor.system.stamina.max ?? 0);
-  const delta = max - oldMax;
-  const value = delta >= 0 ? Math.min(max, current + delta) : Math.min(max, current);
+  const next = staminaAfterArmorChange({ value: current, max: oldMax }, nextMax);
+  const kits = installedKitsFlag(item);
+  // Wipe kit AEs first so a leftover treasure upgrade cannot double-count while we rewrite stored max.
+  const existing = actor.effects.filter(effect => effect.getFlag(MODULE_ID, MACHINE_MOD_AE) || effect.getFlag(MODULE_ID, "machineArmor"));
+  if (existing.length) await actor.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
+  // Stored max is chassis only; the armor AE adds bonuses.treasure during prepareDerivedData.
+  // Do not write current Stamina yet: writing value > stored max can clamp before the treasure AE lands.
   await actor.update({
-    "system.stamina.max": max,
-    "system.stamina.value": value,
+    "system.stamina.max": chassis,
+    [`flags.${MODULE_ID}.chassisStamina`]: chassis,
     [`flags.${MODULE_ID}.armorStaminaBonus`]: bonus,
+    [`flags.${MODULE_ID}.installedKits`]: kits,
   });
-  await stampArmorEffect(actor, item, bonus);
+  await stampMachineModEffects(actor, item);
+  await actor.update({ "system.stamina.value": next.value });
+  return { chassis, bonus, max: nextMax, value: next.value, kits };
+}
+
+/** @deprecated use syncMachineMods — kept so existing API callers restamp Integrity. */
+export async function syncMachineStamina(item) {
+  return syncMachineMods(item);
 }
 
 const movementTypes = domain => {
@@ -195,8 +308,9 @@ export async function deployMachine(item) {
   const vehicle = item.getFlag(MODULE_ID, "vehicle");
   const owner = item.parent instanceof Actor ? item.parent : null;
   const base = BANDS[band];
+  const chassis = chassisStamina(item);
   const armorBonus = armorStaminaBonus(item);
-  const stamina = machineStamina(item);
+  const stamina = chassis + armorBonus;
   const speedBand = vehicle.speedBand ?? VEHICLE_SPEED_BANDS[item.system._dsid];
   const speed = base.speed + (vehicle.drone ? 0 : (SPEED_BAND_BONUS[speedBand] ?? 0));
   // The owner's players own the machine, so they can move its token and track its Integrity.
@@ -208,7 +322,7 @@ export async function deployMachine(item) {
   const data = game.actors.fromCompendium(template);
   foundry.utils.mergeObject(data, {
     name: item.name, img: item.img, folder: (await deployFolder())?.id ?? null, ownership,
-    "system.stamina": { value: stamina, max: stamina, temporary: 0 },
+    "system.stamina": { value: chassis, max: chassis, temporary: 0 },
     "system.movement.value": speed,
     "system.movement.types": movementTypes(vehicle.domain),
     "system.movement.hover": Array.isArray(vehicle.tags) && vehicle.tags.includes("Hover"),
@@ -219,18 +333,20 @@ export async function deployMachine(item) {
     [`flags.${MODULE_ID}`]: {
       kind: vehicle.drone ? "drone" : "vehicle", band, ownerUuid: owner?.uuid ?? null, gearItemUuid: item.uuid,
       dsid: `machine-${band}`, gearDsid: item.system._dsid ?? null, echelon: vehicle.echelon ?? null, speedBand: speedBand ?? null,
+      chassisStamina: chassis,
       armorStaminaBonus: armorBonus,
+      installedKits: { armor: null, weaponry: null, others: [] },
     },
   });
   const actor = await Actor.create(data);
   if (!actor) return;
   await addWireKit(actor, { notify: false });
-  if (armorBonus > 0) await stampArmorEffect(actor, item, armorBonus);
+  await item.setFlag(MODULE_ID, "deployed", { actorUuid: actor.uuid });
+  await syncMachineMods(item);
 
   const size = actor.system.combat.size.value;
   const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });
   await canvas.scene.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
-  await item.setFlag(MODULE_ID, "deployed", { actorUuid: actor.uuid });
   ui.notifications.info(game.i18n.format(`${UI}.Deployed`, { name: item.name, stamina, speed }));
   return actor;
 }
@@ -333,6 +449,14 @@ export function registerMachines() {
   });
 
   const module = game.modules.get(MODULE_ID);
-  if (module) module.api = { ...(module.api ?? {}), machineBand, deployMachine, recallMachine, deployedMachine, chassisStamina, armorStaminaBonus, machineStamina, syncMachineStamina };
+  if (module) {
+    module.api = {
+      ...(module.api ?? {}),
+      machineBand, deployMachine, recallMachine, deployedMachine,
+      chassisStamina, armorStaminaBonus, machineStamina, machineWeaponry,
+      staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
+      syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
+    };
+  }
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);
 }

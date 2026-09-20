@@ -18,7 +18,7 @@
 3. **Recall** (same row menu or header button) deletes the machine's tokens on every Scene and its Actor; the Item stays.
 4. **Guardrails:** one deployed Actor per Item (Deploy refuses a second); deleting the deployed Actor by hand also removes its tokens and clears the Item link; deleting the Item recalls its machine; a machine dropping to 0 Stamina posts a **wrecked** warning (Recall stays a table decision).
 5. **Permissions:** Deploy creates an Actor and a Token, so it needs the Create Actors and Create Tokens permissions — the Director by default. Recall works for the Actor's owners.
-6. Macro API: `game.modules.get("draw-steel-ghostwire").api` → `machineBand(item)`, `deployMachine(item)`, `recallMachine(item)`, `deployedMachine(item)`.
+6. Macro API: `game.modules.get("draw-steel-ghostwire").api` → `machineBand(item)`, `deployMachine(item)`, `recallMachine(item)`, `deployedMachine(item)`, `syncMachineMods(item)`, `machineWeaponry(actor)`.
 
 Control modes (Remote / Jump-In / crew stations), Fleet Size, Uptime drain, and the non-Wrench single-drone link remain chapter text in v1.
 
@@ -26,7 +26,9 @@ Control modes (Remote / Jump-In / crew stations), Fleet Size, Uptime drain, and 
 
 The Machines numeric pass hasn't published Integrity / Speed numbers yet. Until it does:
 
-- **Deploy Stamina** = template Stamina × echelon multiplier (E1 ×1, E2 ×1.5, E3 ×2, E4 ×2.5), rounded, **plus** an installed, active armor kit's `staminaBonus` (Scrap-Weld +6 / Plate-Up +12 / Combat Plate +18 / Aegis Kit +27). One armor kit at a time. Ghostwire machines have no armor rating / DR.
+- **Deploy Stamina** = template Stamina × echelon multiplier (E1 ×1, E2 ×1.5, E3 ×2, E4 ×2.5), rounded, stored as the Actor's chassis `system.stamina.max`. An installed, **active** armor kit then applies `system.stamina.bonuses.treasure` (upgrade) on that Actor — the same path as hero armor. Foundry also writes current Stamina (`value`) up by the bonus on install and clamps it on toggle-off / uninstall. Kits: Scrap-Weld +6 / Plate-Up +12 / Combat Plate +18 / Aegis Kit +27. One armor kit at a time. Ghostwire machines have no armor rating / DR.
+- **Installed mods actually apply** on the Deployed Actor (`scripts/machines.mjs` `syncMachineMods`, called from install / uninstall / field toggle / deleting the mod). Armor = Stamina as above. Weaponry kits stamp `flags.draw-steel-ghostwire.installedKits.weaponry` (Gunnery hardpoint profile) plus a sheet Active Effect. Other §5F mods stamp flags + a sheet AE.
+- **Director table calls (narrative / roll edges Foundry does not auto-apply):** Tune Kit (edge on Piloting/Rigging), Sensor Pod (edge on detection / pierce smoke-dark), Ghost Coat (bane on detect/lock/trace), Runflats (resist Crippled; slow Integrity repair between scenes), Rigger Cocoon (Jump-In cleanliness), Ammo Bin (sustained fire / faster field-rearm). The kit is flagged on the machine; the Director grants the edge or bane when those rolls happen. Firing a mount is still **Gunnery** / Wrench **Rigged Fire** (or a gunner station) — the Weaponry flag records that a hardpoint is live.
 - **Deploy speed** = template speed; crewed vehicles add their chapter Speed band (Slow −2, Standard +0, Fast +2, Extreme +4). Drones have no Speed band in `15-drones.md`, so they keep the template speed.
 - **Movement type** from domain: Ground → walk, Air / Space → fly, Water → swim.
 
