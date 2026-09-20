@@ -91,6 +91,10 @@ Avoid: flat white daylight; candy pastels; pure green Matrix rain as the whole l
 
 ---
 
+## NPC / token portraits (Foundry)
+
+LOCKED notes from Michael’s B103 Corp & Security review: [`ART-NPC-PORTRAIT-NOTES.md`](./ART-NPC-PORTRAIT-NOTES.md). Do not invent extra portrait rules. Sex-balance and pink-as-accent-only apply to future humanoid NPC/token gens; the B103 palette/gender regen pass stays backlog.
+
 ## Reference pages sampled
 
 - Core cover / shared city plate (golden halo over rainy neon canyon)

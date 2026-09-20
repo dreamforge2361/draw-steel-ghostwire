@@ -241,6 +241,10 @@ Dropped skip-list filenames fail the apply (unless `--ignore-unknown`) so a mixe
 
 **0.3.48:** Mama Cassavir’s Michael split-face portrait (`mama-cassavir.png` + `.webp`) is in-scope. Do not regenerate.
 
+## Portrait design notes (LOCKED)
+
+Michael review of the B103 Corp & Security folder after 0.3.35: [`docs/rulebook/ART-NPC-PORTRAIT-NOTES.md`](../rulebook/ART-NPC-PORTRAIT-NOTES.md) (also linked from [`ART-STYLE.md`](../rulebook/ART-STYLE.md)). **Do not invent extra rules.** Future humanoid NPC/token gens follow those notes. The B103 portrait pass (palette desat + gender rebalance) is backlog — do not full-regen this week.
+
 ## Checklist
 
 - [x] Spike inventory + path convention + Actor `img` / token update rule

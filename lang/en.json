@@ -4267,6 +4267,7 @@
         "GeneralMedical": "Medical Consumables",
         "GeneralAmmunition": "Ammunition & Thrown",
         "GeneralLifestyle": "Lifestyle Goods & Services",
+        "GeneralPlot": "Plot & Run Hooks",
         "Armor": "Armor",
         "ArmorLight": "Light Armor",
         "ArmorMedium": "Medium Armor",
@@ -4425,6 +4426,14 @@
         "FixerRetainer": {
           "Name": "Fixer Retainer",
           "Description": "<p><em>Fixer Retainer · Contact Introduction · brokered network access</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥6,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Service</p><p><strong>Profile:</strong> Buys a one-time introduction to a new Contact, or an Availability re-roll on a restricted acquisition.</p>"
+        },
+        "MamaDeadheadBrief": {
+          "Name": "Mama’s Deadhead Brief (Gold Line)",
+          "Description": "<p><em>Mama’s Deadhead Brief (Gold Line) · Data wafer · Mama-marked portable brief</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥50 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Plot</p><p><strong>Profile:</strong> Portable data wafer. Negligible as loot (~¥50); worthless to fence (Mama-marked).</p><p><strong>On the wafer (baseline):</strong> job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev without naming the capsule chamber, vague meat/Wire/clock, bail = same bird, return for choice.</p><p><strong>Not on the wafer:</strong> exact chamber; R1 Watchdog / R2 cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.</p>"
+        },
+        "ArgCourierCapsule": {
+          "Name": "ARG Courier Capsule (Gold Line)",
+          "Description": "<p><em>ARG Courier Capsule (Gold Line) · Sealed courier case · Faraday capsule for a live ARG transaction wafer</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> plot prize · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Plot</p><p><strong>Profile:</strong> Sealed Faraday capsule for a live ARG transaction wafer (ghost ledger mirror).</p><p><strong>Wipe:</strong> If the train <strong>stops while the live wafer is still inside its carry capsule</strong>, the wafer is <strong>wiped and fragged</strong> (prize destroyed). After the wafer is removed from the capsule, the train <strong>will</strong> stop. That post-extract stop is expected. Bail before ARG response.</p><p><strong>Buyers:</strong> Mama Cassavir wants the contract (¥8,000). Corp reclaim or rival flip (¥14,000). Signal / Hands Off pays ¥2,000 + weird.</p>"
         },
         "SecureThreads": {
           "Name": "Secure Threads",
