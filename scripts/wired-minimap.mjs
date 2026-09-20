@@ -362,7 +362,7 @@ function registerSettings() {
 /**
  * Register the Wired node minimap: settings, scene control button, keybinding, auto-open and live-refresh hooks.
  * Call during init.
- * @param {{ getWiredState: (actor: Actor) => "disconnected"|"overlay"|"jackedIn" }} options
+ * @param {{ getWiredState: (actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn" }} options
  */
 export function registerWiredMinimap({ getWiredState }) {
   getWiredStateFn = getWiredState;

@@ -70,22 +70,22 @@
         "Connect": {
           "Name": "Connect",
           "Story": "You plug your Persona into the Wired where you stand.",
-          "Effect": "<p>You establish a Persona in the Wired at your current location and enter the <strong>Overlay</strong> connection state. Until you Connect, you can’t use the other Matrix Verbs, Programs, or Wired abilities that require you to be Overlaid or Jacked In.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+          "Effect": "<p>You establish a Persona in the Wired at your current location and enter the <strong>Linked</strong> connection state — on-net for comms, ID, and packets. <strong>Broadcast</strong> works from Linked. Scan, Navigate, Ping, Search, Read/Write, Programs, and payload Runs still need <strong>Overlay</strong> or <strong>Jacked In</strong> (use Toggle Connection State). Radio is a jammable backup; Wire is default street comms.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge.</p>"
         },
         "JackOut": {
           "Name": "Jack Out",
           "Story": "Eject. Your full attention slams back into your body.",
-          "Effect": "<p>You disconnect from the Wired, leaving Overlay or Jacked In, and return your full attention to the physical world. This is your emergency eject when biofeedback spikes or hostile ICE locks on.</p><p><strong>Emergency:</strong> in a genuine emergency, you can use Jack Out as a free triggered action instead of a maneuver.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+          "Effect": "<p>You disconnect from the Wired from any on-net state (<strong>Linked</strong>, <strong>Overlay</strong>, or <strong>Jacked In</strong>) and return your full attention to the physical world. This is your emergency eject when biofeedback spikes or hostile ICE locks on.</p><p><strong>Emergency:</strong> in a genuine emergency, you can use Jack Out as a free triggered action instead of a maneuver.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
         },
         "ToggleConnectionState": {
           "Name": "Toggle Connection State",
-          "Story": "Half in, or all the way under. Your call, always.",
-          "Effect": "<p>While you are connected to the Wired, you switch between <strong>Overlay</strong> and <strong>Jacked In</strong> without disconnecting. No roll and no contest.</p><ul><li><p><strong>Overlay:</strong> the Wired rides over your physical senses. You can still see, move, speak, and act physically, but your real-world power rolls take a bane.</p></li><li><p><strong>Jacked In:</strong> full immersion. Your Wired power rolls gain an edge, but your body is inert: you can’t perceive, move, or act in the physical world, and you can’t make real-world power rolls.</p></li></ul><p>You can’t use this ability while disconnected.</p>"
+          "Story": "Step deeper — Linked, Overlay, or all the way under. Your call, always.",
+          "Effect": "<p>While you are on-net, <strong>Toggle Connection State</strong> steps one rung deeper on the ladder, then wraps. No roll and no contest.</p><p><strong>Ladder:</strong> Linked → Overlay → Jacked In → Linked. <strong>Jack Out</strong> is the only path to Disconnected.</p><ul><li><p><strong>Linked:</strong> on-net for comms / ID / packets. Meat Power Rolls are normal. No Jacked In Wired edge. Broadcast works. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs do not.</p></li><li><p><strong>Overlay:</strong> the Wired rides over your physical senses. You can still see, move, speak, and act physically, but your real-world power rolls take a bane.</p></li><li><p><strong>Jacked In:</strong> full immersion. Your Wired power rolls gain an edge, but your body is inert: you can’t perceive, move, or act in the physical world, and you can’t make real-world power rolls.</p></li></ul><p>You can’t use this ability while disconnected.</p>"
         },
         "Scan": {
           "Name": "Scan",
           "Story": "What’s here? Doors, cameras, locks, drones — everything with a signal.",
-          "Effect": "<p>You get a read on the nodes within your Reach: doors, cameras, locks, drones, and any other Wired-connected system in range. Passive observation doesn’t raise the Trace Alert on its own.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+          "Effect": "<p>You get a read on the nodes within your Reach: doors, cameras, locks, drones, and any other Wired-connected system in range. You must be <strong>Overlaid</strong> or <strong>Jacked In</strong> — Linked-only refuses Scan. Scan / Search / Watchdog can find any on-net presence (Linked is a soft presence). Passive observation doesn’t raise the Trace Alert on its own.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
         },
         "Navigate": {
           "Name": "Navigate",
@@ -100,7 +100,7 @@
         "Broadcast": {
           "Name": "Broadcast",
           "Story": "A private channel nobody outside the link can hear.",
-          "Effect": "<p>You send a message to allies you’re already connected to, within your Reach or Ghost Distance, over a private Wired-only channel no one outside the link can intercept. No roll and no contest; it just works.</p>"
+          "Effect": "<p>You send a message to allies who are on-net (<strong>Linked</strong>, Overlay, or Jacked In), within your Reach or Ghost Distance, over a private Wired-only channel no one outside the link can intercept. Works from Linked. No roll and no contest; it just works.</p>"
         },
         "Search": {
           "Name": "Search",
@@ -3620,7 +3620,7 @@
         "Items": {
           "Class": {
             "Name": "Hacker",
-            "Description": "<p>You are a Hacker — a ghost in the machine who fights wars in the Wired before the first physical shot is fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. Outside combat you are the crew’s key to any door, camera, lock, drone, or vault with a wire running to it; inside combat you are a second front the enemy usually can’t see coming.</p><p><strong>The Wired:</strong> every hero has the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write) and the Overlay / Jacked In connection states. Your <strong>Hacking</strong> skill gives you an edge on every rolled Matrix Verb, and Jacked In adds an edge on Wired power rolls. Programs that require you or an ally to be “Jacked In or Overlaid” read those same statuses.</p><p>Your kit is a <strong>cyberdeck</strong>, not a weapon. Your subclass is your Hacking Doctrine: <strong>Disruptor</strong> (striker), <strong>Controller</strong> (the sysop), or <strong>Support</strong> (guardian angel in the net).</p><p>You are <strong>chrome-positive</strong>: Wired implants (Sub-Dermal Radio, Encephalon, Simsense Booster, Signal Ghost) make you better, and Cyborgs make superb Hackers.</p><p><strong>Core characteristics:</strong> Logic, Instinct · <strong>Heroic resource:</strong> Bandwidth · <strong>Starting Stamina:</strong> 19 (+7 per level) · <strong>Recoveries:</strong> 9 · <strong>Kit:</strong> cyberdeck. <em>Quick Build:</em> Disruptor, Nyx Cartel “Switchblade”.</p>"
+            "Description": "<p>You are a Hacker — a ghost in the machine who fights wars in the Wired before the first physical shot is fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. Outside combat you are the crew’s key to any door, camera, lock, drone, or vault with a wire running to it; inside combat you are a second front the enemy usually can’t see coming.</p><p><strong>The Wired:</strong> every hero has the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write) and the Disconnected / Linked / Overlay / Jacked In connection states. Your <strong>Hacking</strong> skill gives you an edge on every rolled Matrix Verb, and Jacked In adds an edge on Wired power rolls. Programs that require you or an ally to be “Jacked In or Overlaid” read those same statuses.</p><p>Your kit is a <strong>cyberdeck</strong>, not a weapon. Your subclass is your Hacking Doctrine: <strong>Disruptor</strong> (striker), <strong>Controller</strong> (the sysop), or <strong>Support</strong> (guardian angel in the net).</p><p>You are <strong>chrome-positive</strong>: Wired implants (Sub-Dermal Radio, Encephalon, Simsense Booster, Signal Ghost) make you better, and Cyborgs make superb Hackers.</p><p><strong>Core characteristics:</strong> Logic, Instinct · <strong>Heroic resource:</strong> Bandwidth · <strong>Starting Stamina:</strong> 19 (+7 per level) · <strong>Recoveries:</strong> 9 · <strong>Kit:</strong> cyberdeck. <em>Quick Build:</em> Disruptor, Nyx Cartel “Switchblade”.</p>"
           },
           "Bandwidth": {
             "Name": "Bandwidth",
@@ -6233,22 +6233,25 @@
     },
     "Wired": {
       "Label": "Wired",
-      "Hint": "Your connection to the Wired. Connect enters Overlay; Toggle Connection State switches Overlay and Jacked In; Jack Out disconnects.",
+      "Hint": "Your connection to the Wired. Connect enters Linked. Toggle steps Linked → Overlay → Jacked In → Linked. Jack Out disconnects.",
       "States": {
         "disconnected": "Disconnected",
+        "linked": "Linked",
         "overlay": "Overlay",
         "jackedIn": "Jacked In"
       },
       "StateHints": {
-        "disconnected": "Not connected to the Wired.",
+        "disconnected": "Not connected to the Wired. Radio is a jammable backup.",
+        "linked": "Linked: on-net for comms / ID / packets. Meat rolls normal. Broadcast works. Scan and Runs need Overlay or Jacked In.",
         "overlay": "Overlay: bane on real-world ability power rolls.",
         "jackedIn": "Jacked In: edge on Wired power rolls; body inert, no real-world power rolls."
       },
       "Warnings": {
         "NotConnected": "{actor} isn’t connected to the Wired. Use Connect first.",
-        "AlreadyConnected": "{actor} is already connected to the Wired ({state}). Use Toggle Connection State or Jack Out.",
+        "AlreadyConnected": "{actor} is already on-net ({state}). Use Toggle Connection State or Jack Out.",
         "NeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
-        "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle to Overlay or Jack Out first."
+        "NeedImmersion": "{actor} is only Linked. Toggle to Overlay or Jacked In before using {name}.",
+        "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle toward Overlay or Jack Out first."
       },
       "Changed": "{actor}: {state}.",
       "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es).",
@@ -6353,7 +6356,7 @@
       "PingPlaceholder": "Short ping / spoof…",
       "PingSend": "Send",
       "PingPublic": "Public chat",
-      "PingWhisper": "Whisper Overlay / Jacked In",
+      "PingWhisper": "Whisper on-net (Linked / Overlay / Jacked In)",
       "PingEmpty": "Type a short ping before sending.",
       "PingNoConnected": "No Overlay or Jacked In runners on this scene — whispered to Directors only.",
       "PingChatTitle": "Wire ping",
@@ -6379,8 +6382,9 @@
       "VerbNeedNode": "Select a node, then fire a Matrix Verb.",
       "VerbNeedOwner": "You don't control that runner.",
       "VerbNeedDisconnected": "Disconnected — use Connect on this node first.",
-      "VerbNeedAlreadyConnected": "Already connected — Jack Out or Toggle, or pick another verb.",
+      "VerbNeedAlreadyConnected": "Already on-net — Jack Out or Toggle, or pick another verb.",
       "VerbNeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
+      "VerbNeedImmersion": "Linked only — Toggle to Overlay or Jacked In for Scan / Navigate / Ping / Search / Read-Write.",
       "VerbNeedHidden": "That node is hidden from runners.",
       "VerbPlayerPath": "Players: open the node token facing you. Connect lives there with the other eight verbs. This strip is the Director roster path.",
       "VerbUnknown": "Unknown Matrix Verb.",

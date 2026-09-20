@@ -1,5 +1,15 @@
 import { MATRIX_VERB_DSIDS, MATRIX_VERBS } from "./wired-verbs.mjs";
 import { actorHasConnectInterface } from "./wired-console-verbs.mjs";
+import {
+  WIRED_STATUS_DEFS,
+  connectTargetState,
+  isFullyConnected,
+  isLinkedOkVerb,
+  isOnNet,
+  meatPowerRollModifier,
+  nextToggleState,
+  wiredPowerRollModifier,
+} from "./wired-state.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
@@ -40,11 +50,9 @@ const DEFAULT_ITEM_SWAPS = {
   "Compendium.draw-steel.abilities.Item.Xb3S5N1fZyICD58D": `Compendium.${MODULE_ID}.abilities.Item.Lc7LhoqWg9ydP5Jm`,
 };
 
-// Wired connection states: the token/sheet statuses are the source of truth, mirrored to flags.<module>.wired for the Wired Console.
-const WIRED_STATUSES = {
-  overlay: { id: "ghostwire-overlay", _id: "gwOverlayStatus0", name: "GHOSTWIRE.Wired.States.overlay", img: "icons/svg/eye.svg" },
-  jackedIn: { id: "ghostwire-jacked-in", _id: "gwJackedInStatus", name: "GHOSTWIRE.Wired.States.jackedIn", img: "icons/svg/lightning.svg" },
-};
+// Wired connection states: token/sheet statuses are the source of truth, mirrored to flags.<module>.wired.
+// Lock 2026-09-20: Disconnected | Linked | Overlay | Jacked In.
+const WIRED_STATUSES = WIRED_STATUS_DEFS;
 
 Hooks.once("init", () => {
   console.log(`${MODULE_ID} | Draw Steel - Ghostwire Build initialized`);
@@ -105,18 +113,20 @@ Hooks.once("init", () => {
 
 // ---------- Wired connection states ----------
 
-/** @returns {"disconnected"|"overlay"|"jackedIn"} */
+/** @returns {"disconnected"|"linked"|"overlay"|"jackedIn"} */
 function getWiredState(actor) {
   if (actor.statuses.has(WIRED_STATUSES.jackedIn.id)) return "jackedIn";
   if (actor.statuses.has(WIRED_STATUSES.overlay.id)) return "overlay";
+  if (actor.statuses.has(WIRED_STATUSES.linked.id)) return "linked";
   return "disconnected";
 }
 
 async function syncWiredFlag(actor) {
   const state = getWiredState(actor);
+  const onNet = isOnNet(state);
   const flag = actor.getFlag(MODULE_ID, "wired");
-  if ((flag?.state === state) && (flag?.connected === (state !== "disconnected"))) return;
-  await actor.update({ [`flags.${MODULE_ID}.wired`]: { connected: state !== "disconnected", state } });
+  if ((flag?.state === state) && (flag?.connected === onNet) && (flag?.immersed === isFullyConnected(state))) return;
+  await actor.update({ [`flags.${MODULE_ID}.wired`]: { connected: onNet, immersed: isFullyConnected(state), state } });
 }
 
 async function setWiredState(actor, state) {
@@ -128,14 +138,15 @@ async function setWiredState(actor, state) {
   ui.notifications.info(game.i18n.format("GHOSTWIRE.Wired.Changed", { actor: actor.name, state: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`) }));
 }
 
-// Statuses toggled from the token HUD: Overlay and Jacked In are exclusive, and the flag follows.
+// Token HUD: Linked / Overlay / Jacked In are exclusive; the flag follows.
 const wiredStatusKey = effect => Object.keys(WIRED_STATUSES).find(key => effect.statuses?.has(WIRED_STATUSES[key].id));
 Hooks.on("createActiveEffect", async (effect, options, userId) => {
   const actor = effect.parent;
   const key = wiredStatusKey(effect);
   if ((userId !== game.user.id) || !key || !(actor instanceof Actor)) return;
-  const other = (key === "overlay") ? WIRED_STATUSES.jackedIn : WIRED_STATUSES.overlay;
-  if (actor.statuses.has(other.id)) await actor.toggleStatusEffect(other.id, { active: false });
+  for (const [otherKey, status] of Object.entries(WIRED_STATUSES)) {
+    if (otherKey !== key && actor.statuses.has(status.id)) await actor.toggleStatusEffect(status.id, { active: false });
+  }
   await syncWiredFlag(actor);
 });
 Hooks.on("deleteActiveEffect", async (effect, options, userId) => {
@@ -145,10 +156,11 @@ Hooks.on("deleteActiveEffect", async (effect, options, userId) => {
 });
 
 // Matrix Verbs drive the connection state, and connection states modify power rolls:
-// - Connect needs you disconnected and enters Overlay; every other verb needs you connected.
-// - Toggle Connection State flips Overlay and Jacked In; Jack Out disconnects.
-// - Wired abilities gain an edge with the Hacking skill and an edge while Jacked In.
-// - Real-world abilities take a bane while Overlaid and can't make power rolls at all while Jacked In.
+// - Connect needs you disconnected (+ interface) and enters Linked.
+// - Broadcast / Toggle / Jack Out work from any on-net state (Linked, Overlay, Jacked In).
+// - Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In.
+// - Toggle steps Linked → Overlay → Jacked In → Linked. Jack Out disconnects.
+// - Linked applies neither Overlay meat bane nor Jacked In Wired edge.
 function patchWiredAbilities() {
   const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
   if (!AbilityModel?.prototype.use) {
@@ -170,9 +182,11 @@ function patchWiredAbilities() {
       return null;
     };
 
-    if ((verb === "connect") && (state !== "disconnected")) return warn("AlreadyConnected");
+    if ((verb === "connect") && isOnNet(state)) return warn("AlreadyConnected");
     if ((verb === "connect") && !actorHasConnectInterface(actor)) return warn("NeedInterface");
-    if (verb && (verb !== "connect") && (state === "disconnected")) return warn("NotConnected");
+    if (verb && (verb !== "connect") && !isOnNet(state)) return warn("NotConnected");
+    if (verb && (verb !== "connect") && !isFullyConnected(state) && !isLinkedOkVerb(verb)) return warn("NeedImmersion");
+    if (wired && !verb && !isFullyConnected(state)) return warn("NeedImmersion");
     if ((state === "jackedIn") && !wired && this.power.roll.enabled) return warn("JackedInPhysical");
 
     if (this.power.roll.enabled) {
@@ -180,8 +194,10 @@ function patchWiredAbilities() {
       let edges = softwareEdges(actor, dsid);
       let banes = 0;
       if (wired && actor.system.skills?.value?.has?.("hacking")) edges += 1;
-      if (wired && (state === "jackedIn")) edges += 1;
-      if (!wired && (state === "overlay")) banes += 1;
+      const wiredMod = wiredPowerRollModifier(state);
+      const meatMod = meatPowerRollModifier(state);
+      if (wired) edges += wiredMod.edges;
+      if (!wired) banes += meatMod.banes;
       if (edges || banes) {
         const modifiers = config.modifiers ?? {};
         config = { ...config, modifiers: { ...modifiers, edges: (modifiers.edges ?? 0) + edges, banes: (modifiers.banes ?? 0) + banes } };
@@ -190,9 +206,9 @@ function patchWiredAbilities() {
 
     const message = await use.call(this, config, dialogOptions, messageOptions);
     if (message && verb) {
-      if (verb === "connect") await setWiredState(actor, "overlay");
+      if (verb === "connect") await setWiredState(actor, connectTargetState());
       else if (verb === "jack-out") await setWiredState(actor, "disconnected");
-      else if (verb === "toggle-connection-state") await setWiredState(actor, (state === "jackedIn") ? "overlay" : "jackedIn");
+      else if (verb === "toggle-connection-state") await setWiredState(actor, nextToggleState(state));
     }
     return message;
   };
@@ -545,7 +561,7 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
     [`flags.${MODULE_ID}.matrixVerbs`]: true,
     [`flags.${MODULE_ID}.matrixVerbsConsole`]: true,
     [`flags.${MODULE_ID}.matrixVerbsApplet`]: true,
-    [`flags.${MODULE_ID}.wired`]: { connected: false, state: "disconnected" },
+    [`flags.${MODULE_ID}.wired`]: { connected: false, immersed: false, state: "disconnected" },
   };
   if (foundry.utils.getProperty(data, "system.hero.wealth") === undefined) updates["system.hero.wealth"] = STARTING_NUYEN;
   actor.updateSource(updates);

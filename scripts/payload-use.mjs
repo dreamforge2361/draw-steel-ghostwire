@@ -336,7 +336,7 @@ export async function loadMagazine(payload) {
 
 /* -------------------------------------------- consumption */
 
-/** @type {((actor: Actor) => "disconnected"|"overlay"|"jackedIn") | null} */
+/** @type {((actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn") | null} */
 let getWiredStateFn = null;
 
 /** Wrap AbilityModel#use: refuse an unloaded or spent magazine or a Disconnected hero, and spend one fire after a successful Run. */
@@ -386,7 +386,7 @@ function patchPayloadConsumption() {
 /* -------------------------------------------- registration */
 
 /**
- * @param {{ getWiredState?: (actor: Actor) => "disconnected"|"overlay"|"jackedIn" }} [options]
+ * @param {{ getWiredState?: (actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn" }} [options]
  */
 export function registerPayloadUse({ getWiredState } = {}) {
   getWiredStateFn = getWiredState ?? null;

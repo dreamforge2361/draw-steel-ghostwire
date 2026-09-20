@@ -11,6 +11,11 @@ import {
   MODULE_ID,
   verbUuid,
 } from "./wired-verbs.mjs";
+import {
+  isOnNet,
+  resolveWiredState,
+  verbAllowedAtState,
+} from "./wired-state.mjs";
 
 export const ALERT_MAX = 12;
 
@@ -189,29 +194,40 @@ export function actorHasConnectInterface(actor) {
 /**
  * @returns {{ ok: boolean, reason: string|null }}
  * reason is a GHOSTWIRE.WiredConsole.VerbNeed* key suffix
- * (Actor / Node / Owner / Hidden / Disconnected / AlreadyConnected / Interface).
+ * (Actor / Node / Owner / Hidden / Disconnected / AlreadyConnected / Interface / Immersion).
  * Pass dsid for per-verb rules (Connect while disconnected; action verbs need a node).
+ * Pass `state` (preferred). Legacy `connected: true` without state = Overlay (full Connected).
  * hasInterface defaults true so older callers stay permissive; production always passes the live actor check.
  */
-export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed = true, isGM = true, dsid = null, hasInterface = true } = {}) {
+export function consoleVerbGate({ actorUuid, connected, state, nodeId, owned, revealed = true, isGM = true, dsid = null, hasInterface = true } = {}) {
   if (!actorUuid) return { ok: false, reason: "Actor" };
   if (!owned) return { ok: false, reason: "Owner" };
   const spec = dsid ? consoleSliceByDsid(dsid) : null;
   const needsNode = spec ? spec.needsNode !== false : true;
   if (needsNode && !nodeId) return { ok: false, reason: "Node" };
   if (nodeId && !isGM && !revealed) return { ok: false, reason: "Hidden" };
+  const resolved = resolveWiredState({ state, connected });
   if (dsid === "matrix-connect") {
-    if (connected) return { ok: false, reason: "AlreadyConnected" };
+    if (isOnNet(resolved)) return { ok: false, reason: "AlreadyConnected" };
     if (!hasInterface) return { ok: false, reason: "Interface" };
     return { ok: true, reason: null };
   }
-  if (!connected) return { ok: false, reason: "Disconnected" };
+  if (!isOnNet(resolved)) return { ok: false, reason: "Disconnected" };
+  if (dsid && !verbAllowedAtState(dsid, resolved)) return { ok: false, reason: "Immersion" };
   return { ok: true, reason: null };
 }
 
-/** Hint dsid: Connect when disconnected, else Scan (an action verb that needs a node). */
-export function hintVerbDsid(connected) {
-  return connected ? "matrix-scan" : "matrix-connect";
+/**
+ * Hint dsid: Connect when disconnected; Toggle when Linked (step deeper to Scan);
+ * Scan once Overlay / Jacked In. Accepts a boolean (legacy) or a state string.
+ */
+export function hintVerbDsid(connectedOrState) {
+  const state = typeof connectedOrState === "string"
+    ? connectedOrState
+    : (connectedOrState ? "overlay" : "disconnected");
+  if (state === "disconnected") return "matrix-connect";
+  if (state === "linked") return "matrix-toggle-connection-state";
+  return "matrix-scan";
 }
 
 /** +1 Trace on tier 1 for verbs whose shipped card is an active intrusion; Scan stays 0. */

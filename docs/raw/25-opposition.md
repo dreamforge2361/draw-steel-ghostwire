@@ -82,7 +82,7 @@ Open the Ghostwire Bestiary (or any Actor card you are about to reskin) and appl
 
 ### 4. Place boards and clocks
 
-Decide which board is primary: meatspace, Wire, or both. If both are live, note who is Overlay / Jacked In and which node’s Trace Alert matters (`21`). Optional: a short escape or extraction clock so the fight has an ending condition besides “everyone drops.”
+Decide which board is primary: meatspace, Wire, or both. If both are live, note who is Linked / Overlay / Jacked In and which node’s Trace Alert matters (`21`). Optional: a short escape or extraction clock so the fight has an ending condition besides “everyone drops.”
 
 ---
 
@@ -163,7 +163,7 @@ ICE, hostile AIs, and rival deckers are stated on the **System Stat Card** by **
 
 Many Ghostwire fights are **two-board**:
 
-1. **Declare both boards** when the fight starts (`04`). Who is Overlay, who is Jacked In, which node is hostile.
+1. **Declare both boards** when the fight starts (`04`). Who is Linked, who is Overlay, who is Jacked In, which node is hostile.
 2. **Budget once.** Count meatspace monsters and Wired pressure toward the same difficulty feel. A Rating 4 host plus a full street squad is a climax, not a warm-up.
 3. **Cut turns.** Use the turn order in `04`. Cut to the Jacked In runner between meatspace turns when both boards matter.
 4. **Let Malice cross boards.** Trace Alert Malice may fuel a street Malice feature (reinforcements, suppression) or a Wire feature (ICE surge, lockdown). Say which board pays the fiction.

@@ -137,7 +137,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **§Craft** | The downtime Project procedure for installing, removing, or inventing mods and gear. Not a skill. | `08`, `10` |
 | **Perk** | A trick of the trade; six types. | `11` |
 | **The Wired** | The network layer. The chapter about it is The Wire. | `21` |
-| **Connection state** | Disconnected, **Overlay** (partial immersion), or **Jacked In** (full immersion). | `21` |
+| **Connection state** | Disconnected, **Linked** (on-net comms), **Overlay** (partial immersion), or **Jacked In** (full immersion). | `21` |
 | **Avatar** | Your presence in the Wired. (**Persona** always means the characteristic.) | `21` |
 | **Node** | Anything addressable in the Wired. **Track 1** = objects and systems; **Track 2** = things that fight back. | `21` |
 | **Wire Atlas** | How Wired scenes nest: district graph → facility graph → room graph. | `21` |

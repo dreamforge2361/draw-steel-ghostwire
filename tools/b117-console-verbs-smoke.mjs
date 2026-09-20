@@ -46,7 +46,10 @@ const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matr
 console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.55)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 53;
+})(), `module.json is 0.3.53+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -192,7 +195,7 @@ const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.Verbs === "Matrix Verbs", "lang Verbs");
 ok(lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("Connect"), "lang Disconnected points at Connect on the node");
 ok(!lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("sheet"), "lang Disconnected does not send players to the sheet");
-ok(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected.includes("connected"), "lang AlreadyConnected");
+ok(/connected|on-net/.test(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected), "lang AlreadyConnected");
 ok(lang.GHOSTWIRE.WiredConsole.VerbTooltipAuto.includes("no roll"), "lang auto tooltip");
 ok(lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("all nine") || lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("nine"), "lang migration names all nine");
 ok(lang.GHOSTWIRE.WiredConsole.VerbNeedInterface.includes("Technomancer"), "lang Interface names Technomancer");

@@ -43,10 +43,10 @@ Overlay: canvas + floating node map. Jacked In: dark scene + node map primary. V
 
 **Data — no parallel model.** Board = `getBoard(boardScene(game.scenes.viewed))`, exactly the Console's resolution (a matrix map Scene with `wiredMapFor` shows its board Scene's nodes). Players see `node.revealed` nodes only (the Console's player rule; placed tokens mirror it as `hidden: !revealed`). A GM opening it by hand sees every node; unrevealed ones are dashed and tagged *Hidden from runners* in the tooltip.
 
-**Who is "on the Wired".** Status ids from `module.mjs` `WIRED_STATUSES` (`ghostwire-overlay`, `ghostwire-jacked-in`) via the same `getWiredState` the Console and B23c use. The viewer's state is the strongest over: controlled tokens' actors (owned), the user's assigned character, and owned tokens on the viewed Scene. Jacked In beats Overlay.
+**Who is "on the Wired".** Status ids from `WIRED_STATUS_DEFS` (`ghostwire-linked`, `ghostwire-overlay`, `ghostwire-jacked-in`) via the same `getWiredState` the Console and B23c use. The viewer's state is the strongest over: controlled tokens' actors (owned), the user's assigned character, and owned tokens on the viewed Scene. Jacked In beats Overlay beats Linked. **Linked does not auto-open the minimap** (comms-only; no AR overlay).
 
 **Open / close.**
-- Players: auto-opens when that state becomes Overlay or Jacked In; resizes when it flips; auto-closes on Disconnected. Closing it by hand while connected keeps it closed until the state changes again (or the player reopens it).
+- Players: auto-opens when that state becomes Overlay or Jacked In; resizes when it flips; auto-closes on Disconnected or Linked. Closing it by hand while Overlay / Jacked In keeps it closed until the state changes again (or the player reopens it).
 - Manual: Token controls button *Wired Node Map* (`fa-diagram-project`), an unbound keybinding (*Toggle the Wired Node Map*), and `game.modules.get("draw-steel-ghostwire").api.openWiredMinimap()`.
 - GMs never auto-open (the Console is theirs).
 

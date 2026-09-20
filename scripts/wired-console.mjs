@@ -82,7 +82,7 @@ export function setLink(nodes, a, b, linked) {
 }
 
 export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
-  /** @param {{ getWiredState: (actor: Actor) => "disconnected"|"overlay"|"jackedIn" }} options */
+  /** @param {{ getWiredState: (actor: Actor) => "disconnected"|"linked"|"overlay"|"jackedIn" }} options */
   constructor(options = {}) {
     super(options);
     this.getWiredState = options.getWiredState;
@@ -204,7 +204,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         hasInterface: actorHasConnectInterface(actor),
       });
     }
-    const order = { jackedIn: 0, overlay: 1, disconnected: 2 };
+    const order = { jackedIn: 0, overlay: 1, linked: 2, disconnected: 3 };
     roster.sort((a, b) => (order[a.state] - order[b.state]) || a.name.localeCompare(b.name, game.i18n.lang));
     this.selectedActorUuid = pickConsoleActor({
       roster,
@@ -219,6 +219,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const verbCtx = {
       actorUuid: verbActor?.uuid,
       connected: !!verbActor?.connected,
+      state: verbActor?.state ?? "disconnected",
       nodeId: selected?.id,
       owned: !!verbActor?.owned,
       revealed: selected ? !!selected.revealed : true,
@@ -226,7 +227,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       hasInterface: !!verbActor?.hasInterface,
     };
     const verbs = verbStripView(verbCtx);
-    const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
+    const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.state) });
     const pings = readPings(scene).map(ping => ({
       ...ping,
       timeLabel: ping.at ? new Date(ping.at).toLocaleTimeString(game.i18n.lang, { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "",
@@ -728,6 +729,7 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
   const gate = consoleVerbGate({
     actorUuid: actor?.uuid,
     connected: state !== "disconnected",
+    state,
     nodeId: node?.id,
     owned: !!(actor && (game.user.isGM || actor.isOwner)),
     revealed: node ? !!node.revealed : true,

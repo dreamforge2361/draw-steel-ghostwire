@@ -169,6 +169,10 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   text-transform: uppercase;
 }
 
+.ghostwire-wired.state-linked .ghostwire-wired-state {
+  color: #8fd4a8;
+}
+
 .ghostwire-wired.state-overlay .ghostwire-wired-state {
   color: var(--ghostwire-accent, #3fc1c9);
 }
@@ -409,6 +413,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 .ghostwire-wired-console .wc-roster-row img { width: 26px; height: 26px; border: none; border-radius: 4px; object-fit: cover; }
 .ghostwire-wired-console .wc-roster-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ghostwire-wired-console .wc-roster-row.state-linked { border-left-color: #6ecf9a; }
 .ghostwire-wired-console .wc-roster-row.state-overlay { border-left-color: var(--wc-cyan); }
 .ghostwire-wired-console .wc-roster-row.state-jackedIn { border-left-color: var(--wc-hot); }
 .ghostwire-wired-console .wc-state-chip {
@@ -421,6 +426,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   color: var(--wc-muted);
   white-space: nowrap;
 }
+.ghostwire-wired-console .wc-state-chip.state-linked { color: #6ecf9a; border-color: #6ecf9a; box-shadow: 0 0 6px color-mix(in srgb, #6ecf9a 40%, transparent); }
 .ghostwire-wired-console .wc-state-chip.state-overlay { color: var(--wc-cyan); border-color: var(--wc-cyan); box-shadow: 0 0 6px color-mix(in srgb, var(--wc-cyan) 40%, transparent); }
 .ghostwire-wired-console .wc-state-chip.state-jackedIn { color: var(--wc-hot); border-color: var(--wc-hot); box-shadow: 0 0 6px color-mix(in srgb, var(--wc-hot) 45%, transparent); }
 

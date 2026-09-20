@@ -11,7 +11,7 @@
 Combat begins when someone draws, opens fire, or the Director says the quiet part is over. The fiction has already decided *why*; the table now needs a clock.
 
 1. **Declare the fight.** Who is hostile, who is caught in the middle, and which board matters first — meatspace grid, Wire topology, or both cutting between each other (`21`).
-2. **Place people.** Runners, drones, vehicles, and opposition on the active board. Note connection state for anyone Overlaid or Jacked In.
+2. **Place people.** Runners, drones, vehicles, and opposition on the active board. Note connection state for anyone Linked, Overlaid, or Jacked In.
 3. **Surprise.** If one side had the drop — silent approach, ambush, a Matrix Verb that never tipped Trace Alert — that side acts first for the opening beat. Otherwise everyone is already in the soup.
 4. **Turn order.** Each combatant who can act takes one turn per round. If surprise is unclear, the Director picks who starts from the fiction (the side that opened fire, the runner who jacked in first). Then alternate **crew** and **opposition** in an order the table can track — or use the Foundry combat tracker if you are on Foundry. Ghostwire does not invent a second initiative stat. The Director may cut to a Jacked In runner’s Wire turn between meatspace turns when both boards are live.
 5. **Resources tick.** Classes that gain heroic resource at the start of combat or the start of their turn do so per their class chapter. **Medic Reagents do not reset** when a fight starts or ends.
@@ -158,7 +158,7 @@ Ghostwire-only fail states that are *not* that list:
 
 - **Chrome Suppressed / Damaged / Destroyed** (`09`) — implant status, not a condition from the glossary above.
 - **System Crisis** (Cyborg) and **inert** (Revenant) — ancestry fail states (`05`).
-- **Connection Overlay / Jacked In** — Wire states with combat riders (`21`), not conditions.
+- **Connection Linked / Overlay / Jacked In** — Wire states with combat riders (`21`), not conditions.
 
 If a Medic, Priest, or Program “clears a condition,” it means a row from the glossary above unless the text names chrome or Wire state explicitly.
 
