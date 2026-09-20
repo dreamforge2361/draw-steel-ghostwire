@@ -10,6 +10,7 @@ import {
   CONNECTION_VERB_DSIDS,
   MATRIX_VERB_DSIDS,
   MODULE_ID,
+  WIRE_KIT_DSID,
   verbUuid,
 } from "./wired-verbs.mjs";
 import {
@@ -364,6 +365,16 @@ export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, ch
 const MODULE_FLAG = "draw-steel-ghostwire";
 const CONNECT_ROLES = new Set(["deck", "rcc", "interface"]);
 
+/** Wrench drone control: Rigger’s Harness + RCC SKUs (≡ deck for Connect). */
+export const RIGGER_INTERFACE_DSIDS = new Set([
+  "riggers-harness",
+  "remote-box",
+  "fleet-deck",
+  "war-table",
+  "command-rig",
+  "hydra-console",
+]);
+
 function actorItems(actor) {
   const items = actor?.items;
   if (!items) return [];
@@ -379,16 +390,29 @@ export function actorClassDsid(actor) {
     ?? null;
 }
 
-/** Tagged `flags.draw-steel-ghostwire.wired.connectInterface`, or a matrix deck / RCC / interface. */
+/**
+ * Tagged `flags.draw-steel-ghostwire.wired.connectInterface`, Wire Kit
+ * (`kind: "wire-kit"` / `_dsid` wire-kit-matrix-verbs), a matrix deck / RCC / interface,
+ * or Wrench drone control (Rigger’s Harness / RCC SKU / `modFamily: rcc`).
+ * Wire Kit alone is the Director stamp path for drones — do not also require an RCC role.
+ */
 export function itemIsConnectInterface(item) {
   const gw = item?.flags?.[MODULE_FLAG] ?? {};
-  if (gw.wired?.connectInterface === true) return true;
-  return CONNECT_ROLES.has(gw.matrix?.role);
+  const kind = gw.kind ?? item?.getFlag?.(MODULE_FLAG, "kind");
+  const wired = gw.wired ?? item?.getFlag?.(MODULE_FLAG, "wired");
+  const matrix = gw.matrix ?? item?.getFlag?.(MODULE_FLAG, "matrix") ?? {};
+  const dsid = item?.system?._dsid ?? gw.dsid;
+  if (wired?.connectInterface === true) return true;
+  if (kind === "wire-kit" || dsid === WIRE_KIT_DSID) return true;
+  if (RIGGER_INTERFACE_DSIDS.has(dsid)) return true;
+  if (CONNECT_ROLES.has(matrix.role)) return true;
+  const family = matrix.modFamily;
+  return Array.isArray(family) && family.includes("rcc");
 }
 
 /**
  * Connect (and thus the rest of the applet) needs a Wire interface:
- * tagged comms / deck / RCC / chrome / kit, or Technomancer class (deckless Resonance).
+ * tagged comms / deck / RCC / chrome / Wire Kit / Rigger’s Harness, or Technomancer class.
  */
 export function actorHasConnectInterface(actor) {
   if (actorClassDsid(actor) === "technomancer") return true;

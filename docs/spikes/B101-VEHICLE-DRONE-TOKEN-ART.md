@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-19  
 **Module:** **0.3.31**  
-**Status:** **SHIPPED** — 36 drone + 32 vehicle WebPs; vehicles-pack `img` + LevelDB rebuilt. *Pending Michael Foundry-verify (Deploy).*  
+**Status:** **SHIPPED** — 36 drone + 32 vehicle WebPs; vehicles-pack `img` + LevelDB rebuilt. **0.3.68:** Mule-Bot cargo plate (PNG + 1024² WebP) also on generic **Drone (Medium)**. *Pending Michael Foundry-verify (Deploy / Drone Medium).*  
 **Pairs with:** `docs/rulebook/15-drones.md`, `16-vehicles.md`, `docs/spikes/B36b-VEHICLES-PACK-FULL-SYNC.md`, `docs/masters/GHOSTWIRE_MACHINE_BANDS.md`
 
 ## Goal
@@ -15,7 +15,7 @@ Chassis token art for every published drone and crewed vehicle, named by slang s
 |---|---|---|
 | JSON sources | `src/packs/vehicles/**/*.json` | **Edit here.** Item documents (`type: treasure`) with `system._dsid` and top-level `img`. Same pattern as gear / pregen `img` updates. |
 | LevelDB | `packs/vehicles` | Compiled by `node tools/build-packs.mjs vehicles`. Do not hand-edit. Close Foundry first. |
-| Deploy templates | `src/packs/summons/machines/machine-*.json` | Nine **generic** scale-band Actors. `scripts/machines.mjs` `deployMachine()` overwrites `img` and `prototypeToken.texture.src` from the **Item**. Band templates stay placeholder icons. |
+| Deploy templates | `src/packs/summons/machines/machine-*.json` | Nine **generic** scale-band Actors. `scripts/machines.mjs` `deployMachine()` overwrites `img` and `prototypeToken.texture.src` from the **Item**. Other bands stay placeholder icons. **0.3.68:** `machine-drone-medium` (generic **Drone (Medium)**) uses the Mule-Bot cargo plate (`assets/tokens/drones/mule-bot.{png,webp}`). |
 | Gear / mods | `src/packs/gear`, `src/packs/mods` | **Not chassis.** Only related SKU is `sensor-sweep-drone-eye` (a sensor gadget). Do not retarget it. |
 | Pregens | `src/packs/pregens` | No embedded drone/vehicle Items today. No pack rebuild needed for B101 art. |
 
@@ -151,10 +151,12 @@ Primary: kebab-case slang = `_dsid`. Also: no-hyphen forms (`irongiant` → `iro
 
 ## Out of scope
 
-- Rewriting band-template Actor art
+- Rewriting band-template Actor art **except** `machine-drone-medium` (0.3.68 Mule-Bot cargo plate)
 - Gear / chrome / bestiary tokens
 - Changing Deploy / Recall mechanics
 - Mama / Switchboard map walls
+
+**0.3.68 Mule-Bot / Drone (Medium):** Michael’s circular industrial yellow forklift-tread cargo plate replaces `assets/tokens/drones/mule-bot.webp` (PNG original 1254² beside it). Item `mule-bot` already pointed at that WebP. Generic Actor `machine-drone-medium` `img` + `prototypeToken.texture.src` use the same path so a dragged **Drone (Medium)** is not the steel-blue robotics placeholder. Deploy from a named SKU still stamps that Item’s art. No Gold Line `{ force: true }`. No PDF.
 
 ## Checklist
 

@@ -196,7 +196,48 @@
       "alphaThreshold": 0.75
     }
   },
-  "items": [],
+  "items": [
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.Name",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwWkVehSpace0001",
+      "_key": "!actors.items!5pisxUysoa5xKaDh.GwWkVehSpace0001"
+    }
+  ],
   "effects": [],
   "folder": "gwSummonsMachine",
   "sort": 9000,

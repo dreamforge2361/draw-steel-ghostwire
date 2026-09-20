@@ -1,7 +1,8 @@
-// Wire Kit — Matrix Verbs (B115, B117).
-// Dropping this feature (Ghostwire Matrix › Support) onto an NPC marks them Wire-capable.
-// It does not stamp Matrix Verb abilities — all nine fire from the node applet (B117).
-// Heroes use the same applet. Meat-only opposition stays clean. No bestiary default.
+// Wire Kit — Matrix Verbs (B115, B117, 0.3.68).
+// Dropping this feature (Ghostwire Matrix › Support) onto an NPC marks them Wire-capable
+// and counts as a Connect interface (no extra commlink). It does not stamp Matrix Verb
+// abilities — all nine fire from the node applet (B117). Heroes use the same applet.
+// Meat-only opposition stays clean. No bestiary default.
 
 import { MATRIX_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
 
@@ -16,7 +17,34 @@ export const isWireKitVerb = item =>
   item?.type === "ability"
   && !!(item?.flags?.[MODULE_ID]?.wireKitGranted || item?.getFlag?.(MODULE_ID, "wireKitGranted"));
 
-const actorHasKit = actor => [...(actor?.items ?? [])].some(isWireKit);
+export const actorHasKit = actor => [...(actor?.items ?? [])].some(isWireKit);
+
+function machineKind(actor) {
+  const gw = actor?.flags?.[MODULE_ID] ?? {};
+  return gw.kind ?? actor?.getFlag?.(MODULE_ID, "kind");
+}
+
+function machineDsid(actor) {
+  const gw = actor?.flags?.[MODULE_ID] ?? {};
+  return gw.dsid ?? actor?.getFlag?.(MODULE_ID, "dsid");
+}
+
+/** Deployed / pack drone Actors (`kind: "drone"` or `machine-drone-*` band templates). */
+export function isDroneActor(actor) {
+  if (machineKind(actor) === "drone") return true;
+  const dsid = machineDsid(actor);
+  return typeof dsid === "string" && dsid.startsWith("machine-drone-");
+}
+
+/** Deployed / pack vehicle Actors (`kind: "vehicle"` or `machine-vehicle-*` band templates). */
+export function isVehicleActor(actor) {
+  if (machineKind(actor) === "vehicle") return true;
+  const dsid = machineDsid(actor);
+  return typeof dsid === "string" && dsid.startsWith("machine-vehicle-");
+}
+
+/** Pack/world drones and vehicles that should ship with Wire Kit (Connect without a commlink). */
+export const isMachineActor = actor => isDroneActor(actor) || isVehicleActor(actor);
 
 /**
  * B117: Matrix Verbs live on the node applet. Wire Kit does not stamp abilities.
@@ -34,6 +62,8 @@ async function kitSource() {
   }
   const data = game.items.fromCompendium(source, { clearFolder: true });
   foundry.utils.setProperty(data, `flags.${MODULE_ID}.kind`, "wire-kit");
+  foundry.utils.setProperty(data, `flags.${MODULE_ID}.dsid`, WIRE_KIT_DSID);
+  foundry.utils.setProperty(data, `flags.${MODULE_ID}.wired.connectInterface`, true);
   return data;
 }
 
@@ -99,6 +129,27 @@ export async function addWireKitToSelected() {
   return results;
 }
 
+/**
+ * Stamp Wire Kit onto drone and vehicle Actors that are missing it.
+ * Does not set Overlay / Linked. Connect is still required. Idempotent.
+ * GM-only when `actors` is the world collection.
+ */
+export async function stampWireKitOnMachines(actors = [], { notify = true } = {}) {
+  let stamped = 0;
+  for (const actor of actors) {
+    if (!isMachineActor(actor) || actorHasKit(actor)) continue;
+    const result = await addWireKit(actor, { notify: false });
+    if (result.kit) stamped += 1;
+  }
+  if (notify && stamped && typeof ui !== "undefined") {
+    ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.DroneMigrated", { count: stamped }));
+  }
+  return stamped;
+}
+
+/** @deprecated Use stampWireKitOnMachines — drones and vehicles both get Wire Kit. */
+export const stampWireKitOnDrones = stampWireKitOnMachines;
+
 export function registerWiredKit() {
   Hooks.on("createItem", (item, options, userId) => {
     if (userId !== game.user.id || options.ghostwireWireKit) return;
@@ -135,17 +186,23 @@ export function registerWiredKit() {
     col.appendChild(btn);
   });
 
-  Hooks.once("ready", () => {
+  Hooks.once("ready", async () => {
     const module = game.modules.get(MODULE_ID);
     if (module) {
       module.api = {
         ...(module.api ?? {}),
         addWireKit,
         addWireKitToSelected,
+        stampWireKitOnMachines,
+        stampWireKitOnDrones,
+        isDroneActor,
+        isVehicleActor,
+        isMachineActor,
         grantMatrixVerbs,
         WIRE_KIT_UUID,
         MATRIX_VERBS,
       };
     }
+    if (game.user.isGM) await stampWireKitOnMachines(game.actors);
   });
 }

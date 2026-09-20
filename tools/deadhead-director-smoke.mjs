@@ -44,7 +44,10 @@ const PAGE_KEYS = [
 console.log("Deadhead Director journal smoke");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 55;
+})(), `module.json is 0.3.55+ (got ${moduleJson.version})`);
 ok(!existsSync("scripts/deadhead-hangout-scene.mjs"), "hangout inject script is gone");
 ok(!existsSync("data/scenes/deadhead-hangout.json"), "hangout scene template is gone");
 ok(!existsSync("assets/maps/battlemaps/map-deadhead-hangout.webp"), "hangout plate is gone");
@@ -157,6 +160,7 @@ ok(existsSync("assets/tokens/vehicles/nox-trash-freighter.png") && existsSync("a
 
 const actor = readBomFreeJson("src/packs/deadhead/nox-trash-freighter.json");
 ok(actor._id === "gwNoxTrashActor0" && actor.type === "npc", "Nox freighter Actor id + npc type");
+ok(actor.items?.some(i => i.system?._dsid === "wire-kit-matrix-verbs"), "Nox freighter Actor embeds Wire Kit");
 ok(actor.folder === null && actor._key === "!actors!gwNoxTrashActor0", "Nox freighter Actor is pack-root Actor (not a Journal)");
 ok(actor.img.endsWith("nox-trash-freighter.webp") && actor.prototypeToken?.texture?.src?.endsWith("nox-trash-freighter.webp"), "Actor img + prototypeToken use freighter webp");
 ok(actor.prototypeToken.width === 4 && actor.prototypeToken.height === 6, "Actor token starts at 4×6 squares");

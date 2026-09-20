@@ -10,7 +10,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { parseRoomName, planAutoNodes, isDoorWall, isCamName, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, camControlsName, ROOM_SPLIT, tokenArtFor, tokenArtForNode } from "../scripts/wired-auto-nodes.mjs";
 import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../scripts/wired-layout.mjs";
 import { NODE_TOKEN_LIBRARY, tokenSrcForStyle } from "../scripts/wired-node-art.mjs";
-import { MATRIX_VERBS, MATRIX_VERB_IDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
+import { MATRIX_VERBS, MATRIX_VERB_IDS, MATRIX_VERB_DSIDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
+import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
+import { actorHasKit, isDroneActor, isMachineActor, isVehicleActor, isWireKit } from "../scripts/wired-kit.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -27,7 +29,10 @@ function readBomFreeJson(path) {
 console.log("B112 / B114 / B115 Wired Gold Line smoke (0.3.55)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 55;
+})(), `module.json is 0.3.55+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -242,12 +247,81 @@ const kit = readBomFreeJson("src/packs/matrix/support/wire-kit-matrix-verbs.json
 ok(kit._id === WIRE_KIT_ID && kit.system._dsid === WIRE_KIT_DSID, "pack JSON id/dsid match");
 ok(kit.type === "feature", "Wire Kit is a droppable feature");
 ok(kit.flags["draw-steel-ghostwire"].kind === "wire-kit", "kind flag is wire-kit");
+ok(kit.flags["draw-steel-ghostwire"].wired.connectInterface === true, "Wire Kit pack stamps connectInterface");
 ok(kit.folder === "coyCmRxnu5opxytj", "lives in Matrix Support folder");
+ok(itemIsConnectInterface(kit), "itemIsConnectInterface sees pack Wire Kit");
+ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { kind: "wire-kit" } } }), "kind wire-kit is a Connect interface");
+ok(actorHasConnectInterface({ items: [{ system: { _dsid: WIRE_KIT_DSID }, flags: { "draw-steel-ghostwire": { kind: "wire-kit" } } }] }), "NPC/drone with Wire Kit can Connect without a commlink");
 
 const src = readFileSync("scripts/wired-kit.mjs", "utf8");
 ok(src.includes("grantMatrixVerbs") && src.includes("addWireKitToSelected"), "wired-kit grants + selected-token helper");
+ok(src.includes("wired.connectInterface"), "HUD grant stamps connectInterface");
+ok(src.includes("stampWireKitOnMachines") && src.includes("stampWireKitOnDrones"), "world ready migrates drone and vehicle Actors missing the kit");
 ok(src.includes("actor.type === \"hero\""), "heroes are not auto-stamped");
-ok(!/for \(const actor of game\.actors\)/.test(src), "no world-actor scan to stamp kits");
+ok(!/for \(const actor of game\.actors\)/.test(src) || src.includes("stampWireKitOnDrones"), "drone migration is kit-stamp only, not a verb grant scan");
+ok(readFileSync("scripts/machines.mjs", "utf8").includes("addWireKit"), "Deploy stamps Wire Kit on drone and vehicle Actors");
+
+console.log("\n4b) Pack drone templates carry Wire Kit (not Overlay)");
+for (const band of ["micro", "small", "medium"]) {
+  const drone = readBomFreeJson(`src/packs/summons/machines/machine-drone-${band}.json`);
+  ok(drone.flags["draw-steel-ghostwire"].kind === "drone", `${band} template kind is drone`);
+  ok(isDroneActor(drone), `isDroneActor sees ${band} template`);
+  ok(drone.items.some(isWireKit), `${band} template embeds Wire Kit`);
+  ok(actorHasKit(drone), `actorHasKit sees ${band} Wire Kit`);
+  ok(itemIsConnectInterface(drone.items.find(isWireKit)), `${band} Wire Kit is a Connect interface`);
+  ok(!drone.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), `${band} template has none of the nine Matrix Verbs`);
+  const wired = drone.flags["draw-steel-ghostwire"].wired;
+  ok(!wired?.state && wired?.connected !== true, `${band} template is not auto-Overlay / auto-Connected`);
+}
+ok(isVehicleActor(readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json")), "isVehicleActor sees car template");
+ok(!isDroneActor(readBomFreeJson("src/packs/summons/machines/machine-vehicle-car.json")), "vehicle templates are not drones");
+
+console.log("\n4b2) Pack vehicle templates carry Wire Kit (not Overlay)");
+for (const band of ["bike", "car", "heavy", "air", "water", "space"]) {
+  const vehicle = readBomFreeJson(`src/packs/summons/machines/machine-vehicle-${band}.json`);
+  ok(vehicle.flags["draw-steel-ghostwire"].kind === "vehicle", `${band} template kind is vehicle`);
+  ok(isVehicleActor(vehicle) && isMachineActor(vehicle), `isVehicleActor/isMachineActor sees ${band} template`);
+  ok(vehicle.items.some(isWireKit), `${band} template embeds Wire Kit`);
+  ok(actorHasKit(vehicle), `actorHasKit sees ${band} Wire Kit`);
+  ok(itemIsConnectInterface(vehicle.items.find(isWireKit)), `${band} Wire Kit is a Connect interface`);
+  ok(!vehicle.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), `${band} template has none of the nine Matrix Verbs`);
+  const wired = vehicle.flags["draw-steel-ghostwire"].wired;
+  ok(!wired?.state && wired?.connected !== true, `${band} template is not auto-Overlay / auto-Connected`);
+}
+
+console.log("\n4b3) Plot vehicles (Nox) carry Wire Kit");
+const nox = readBomFreeJson("src/packs/deadhead/nox-trash-freighter.json");
+ok(nox.flags["draw-steel-ghostwire"].kind === "vehicle", "Nox kind is vehicle");
+ok(isVehicleActor(nox) && isMachineActor(nox), "isVehicleActor sees Nox freighter");
+ok(nox.items.some(isWireKit), "Nox freighter embeds Wire Kit");
+ok(itemIsConnectInterface(nox.items.find(isWireKit)), "Nox Wire Kit is a Connect interface");
+ok(!nox.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), "Nox has none of the nine Matrix Verbs");
+ok(!nox.flags["draw-steel-ghostwire"].wired?.state, "Nox is not auto-Overlay");
+
+console.log("\n4c) Mule-Bot / Drone (Medium) cargo plate");
+const muleToken = "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp";
+const mulePng = "assets/tokens/drones/mule-bot.png";
+const muleWebp = "assets/tokens/drones/mule-bot.webp";
+ok(existsSync(mulePng) && existsSync(muleWebp), "mule-bot png + webp ship");
+const mulePngBuf = readFileSync(mulePng);
+const muleWebpBuf = readFileSync(muleWebp);
+ok(mulePngBuf[0] === 0x89 && mulePngBuf.slice(1, 4).toString() === "PNG", "mule-bot.png is a PNG source");
+ok(mulePngBuf.readUInt32BE(16) === 1254 && mulePngBuf.readUInt32BE(20) === 1254, "mule-bot.png is Michael 1254² source");
+ok(muleWebpBuf.slice(0, 4).toString() === "RIFF" && muleWebpBuf.slice(8, 12).toString() === "WEBP", "mule-bot.webp is WebP");
+ok(muleWebpBuf.slice(12, 16).toString() === "VP8X", "mule-bot.webp is VP8X");
+{
+  const w = 1 + muleWebpBuf.readUIntLE(24, 3);
+  const h = 1 + muleWebpBuf.readUIntLE(27, 3);
+  ok(w === 1024 && h === 1024, "mule-bot.webp is 1024² Foundry token");
+}
+ok(readBomFreeJson("src/packs/vehicles/drones/mule-bot.json").img === muleToken, "Mule-Bot Item img is the cargo plate");
+const medium = readBomFreeJson("src/packs/summons/machines/machine-drone-medium.json");
+ok(medium.img === muleToken, "Drone (Medium) Actor img is the cargo plate");
+ok(medium.prototypeToken?.texture?.src === muleToken, "Drone (Medium) prototypeToken uses the cargo plate");
+ok(medium.items.some(isWireKit), "Drone (Medium) still embeds Wire Kit");
+ok(!medium.img.includes("robotics-frame-steel-blue"), "Drone (Medium) is not the steel-blue placeholder");
+ok(/mule-bot/.test(readFileSync("docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md", "utf8")), "B101 documents Mule-Bot cargo plate");
+ok(/mule-bot/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 documents Mule-Bot / Drone (Medium) art");
 
 console.log("\n5) Console / minimap / docs");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
@@ -291,6 +365,10 @@ ok(b112.includes("{Room} - Light Control"), "B112 spike Light Control dash");
 ok(b112.includes("Wrong: `Rear Car Substation Maglock Door 1`"), "B112 spike marks undashed Maglock as wrong");
 ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.3.49"), "B114 spike");
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.49"), "B115 spike");
+ok(/Connect interface/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Connect interface");
+ok(/pack drone/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents pack drone Wire Kit stamp");
+ok(/machine-vehicle|pack drone and vehicle|vehicles/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents pack vehicle Wire Kit stamp");
+ok(/Wrench drone control/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Wrench drone control as Connect");
 ok(b112.includes("B113"), "B112 notes B113 art");
 ok(b112.includes("Cam Controls"), "B112 spike cameras-in-scope");
 ok(readFileSync("docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md", "utf8").includes("node-light-control.webp"), "B113 spike");

@@ -31,7 +31,10 @@
   "flags": {
     "draw-steel-ghostwire": {
       "kind": "wire-kit",
-      "dsid": "wire-kit-matrix-verbs"
+      "dsid": "wire-kit-matrix-verbs",
+      "wired": {
+        "connectInterface": true
+      }
     }
   }
 }

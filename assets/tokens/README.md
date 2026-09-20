@@ -5,7 +5,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Kind | Files | Foundry `img` | Status |
 |---|---|---|---|
 | Crewed vehicles | `vehicles/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/vehicles/<dsid>.webp` | B101 shipped **0.3.31** (32) |
-| Drones | `drones/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/drones/<dsid>.webp` | B101 shipped **0.3.31** (36) |
+| Drones | `drones/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/drones/<dsid>.webp` | B101 shipped **0.3.31** (36). **0.3.68:** Mule-Bot / generic Drone (Medium) is Michael’s circular cargo plate (`mule-bot.{png,webp}` — 1254² PNG + 1024² WebP) |
 | Armor + shields | `armor/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/armor/<dsid>.webp` | B102 shipped **0.3.32** (22) |
 | Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
 | Bestiary humanoids + ICE | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 shipped **0.3.35** (40) |

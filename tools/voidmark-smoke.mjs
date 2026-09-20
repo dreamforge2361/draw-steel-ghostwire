@@ -71,6 +71,17 @@ ok(linkedQ.some(h => /linked/i.test(h.text) && /broadcast|comms|connect/i.test(h
 const connectQ = retrieve(index, "What does Connect do on the Wire?");
 ok(connectQ.some(h => /linked/i.test(h.text) && /connect/i.test(h.text)), "Connect query retrieves Connect + Linked");
 
+const kitQ = retrieve(index, "Does Wire Kit count as a Connect interface?");
+ok(kitQ.some(h => h.file.includes("21-the-wire") && /wire kit/i.test(h.text)), "Wire Kit query retrieves RAW 21");
+ok(kitQ.some(h => /pack drones and vehicles|pack drones/i.test(h.text) || /wire kit/i.test(h.text) && /connect/i.test(h.text)), "Wire Kit query names Connect / pack drones");
+
+const vehQ = retrieve(index, "Do pack vehicles and drones ship with Wire Kit?");
+ok(vehQ.some(h => /wire kit/i.test(h.text) && /vehicle/i.test(h.text)), "pack vehicles query retrieves Wire Kit");
+ok(index.chunks.some(c => c.file.includes("21-the-wire") && /wire kit/i.test(c.text) && /pack drones and vehicles/i.test(c.text)), "RAW 21 Wire interface chunk names pack drones and vehicles");
+
+const harnessQ = retrieve(index, "Does Rigger's Harness count as a Connect interface or deck?");
+ok(harnessQ.some(h => /rigger.?s harness/i.test(h.text) && /connect|interface|deck/i.test(h.text)), "Rigger's Harness query retrieves Harness as Connect");
+
 const statesQ = retrieve(index, "What are the Wire connection states?");
 ok(statesQ.some(h => /linked/i.test(h.text) && /overlay/i.test(h.text) && /jacked in/i.test(h.text)), "connection-states query names Linked, Overlay, and Jacked In");
 

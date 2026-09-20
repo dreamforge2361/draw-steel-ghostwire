@@ -565,7 +565,7 @@ Officially nothing — Drone Jockeys rarely have corp paperwork at all. Street n
 
 The Vehicle Rig-Pilot put everything into one machine. Maybe it was the truck they drove freight in for six years before the corp cut their route and they kept the truck. Maybe it's a spider-tank frame they pulled out of a scrapyard and rebuilt system by system over eighteen months. Maybe it's stolen outright, papers scrubbed, VIN burned off, running on a jury-rigged control stack because the original rig died with the last owner. Whatever it is, when the Rig-Pilot Jumps in, the line between driver and machine gets thin enough that most people stop being able to say which one they're shooting at.
 
-Officially nothing — no corp built this. Street name: **the driver**, **the rig**, or (if the platform has a name, and it usually does) whatever they call the machine. Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; +1 to Jump-In checks).
+Officially nothing — no corp built this. Street name: **the driver**, **the rig**, or (if the platform has a name, and it usually does) whatever they call the machine. Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; +1 to Jump-In checks). The Harness is a **Connect** interface (≡ deck; see `docs/raw/21-the-wire.md`).
 
 **Signature reskin:** Deploy & Command, for a Rig-Pilot, is really "wake the platform up" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline (the Rig-Pilot knows every bolt in the thing).
 
@@ -732,7 +732,7 @@ Officially nothing — no corp built this. Street name: **the driver**, **the ri
 >
 > *Once per encounter, when your platform would drop to 0 Integrity, it instead drops to 1 and you may immediately spend a maneuver to Full Stabilization at no Uptime cost.*
 
-**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; +1 to Jump-In checks). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.
+**Skill grants:** Piloting (1st). **Contact grant:** a chop-shop/transport contact. **Kit grant:** Rigger's Harness (light Kit; direct-neural control interface mount; +1 to Jump-In checks; **Connect** interface ≡ deck). **Signature chrome:** the **control rig** — a deep-Jump vehicle-interface implant (Body Integrity spend) that is this subclass's defining piece of gear; it enables and deepens Jump-In and grants Rigging/Gunnery edges. See Kit & Chrome Interaction, below.
 
 ---
 

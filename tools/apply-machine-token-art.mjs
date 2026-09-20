@@ -4,8 +4,9 @@
  *
  * Source of truth for pack docs is src/packs/vehicles (nested JSON; LevelDB under
  * `packs/vehicles` is compiled). Deploy (`scripts/machines.mjs`) copies Item `img`
- * onto the stamped Actor + token, so chassis art lives on the Item, not the
- * nine generic band templates in `src/packs/summons/machines/`.
+ * onto the stamped Actor + token, so chassis art lives on the Item. Exception
+ * (0.3.68): generic `machine-drone-medium` uses the Mule-Bot cargo plate so a
+ * dragged **Drone (Medium)** matches Michael’s hauling token.
  *
  *   node tools/apply-machine-token-art.mjs --list
  *   node tools/apply-machine-token-art.mjs
