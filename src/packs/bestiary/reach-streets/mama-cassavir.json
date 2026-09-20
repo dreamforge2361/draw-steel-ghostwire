@@ -202,7 +202,16 @@
       "ownership": {
         "default": 0
       },
-      "flags": {},
+      "flags": {
+        "draw-steel-ghostwire": {
+          "matrix": {
+            "role": "deck"
+          },
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
       "_key": "!actors.items!5ZEEypQH7DtZIFM0.BBa55klxsZIjZZH0"
     },
     {
@@ -234,7 +243,16 @@
       "ownership": {
         "default": 0
       },
-      "flags": {},
+      "flags": {
+        "draw-steel-ghostwire": {
+          "matrix": {
+            "role": "interface"
+          },
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
       "_key": "!actors.items!5ZEEypQH7DtZIFM0.tMttAnpzTbYBfgpn"
     },
     {
