@@ -312,6 +312,18 @@ for (const [file, label] of [
   ok(!actor.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), `${label} has none of the nine Matrix Verbs`);
 }
 
+console.log("\n4b5) Named Mule-Bot drone Actor (not treasure-only)");
+const muleActor = readBomFreeJson("src/packs/summons/machines/mule-bot.json");
+ok(muleActor.type === "npc", "Mule-Bot pack document is an Actor");
+ok(muleActor.flags["draw-steel-ghostwire"].kind === "drone", "Mule-Bot kind is drone");
+ok(muleActor.flags["draw-steel-ghostwire"].dsid === "mule-bot", "Mule-Bot Actor dsid is mule-bot");
+ok(isDroneActor(muleActor) && isMachineActor(muleActor), "isDroneActor sees Mule-Bot");
+ok(!isVehicleActor(muleActor), "Mule-Bot is not a crewed vehicle Actor");
+ok(muleActor.items.some(isWireKit), "Mule-Bot embeds Wire Kit");
+ok(itemIsConnectInterface(muleActor.items.find(isWireKit)), "Mule-Bot Wire Kit is a Connect interface");
+ok(!muleActor.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), "Mule-Bot has none of the nine Matrix Verbs");
+ok(muleActor.flags["draw-steel-ghostwire"].gearItemUuid?.endsWith("KBZhF1Z1L67t1gU4"), "Mule-Bot Actor links the Vehicles SKU");
+
 console.log("\n4c) Mule-Bot / Drone (Medium) cargo plate");
 const muleToken = "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp";
 const mulePng = "assets/tokens/drones/mule-bot.png";
@@ -329,11 +341,17 @@ ok(muleWebpBuf.slice(12, 16).toString() === "VP8X", "mule-bot.webp is VP8X");
   ok(w === 1024 && h === 1024, "mule-bot.webp is 1024² Foundry token");
 }
 ok(readBomFreeJson("src/packs/vehicles/drones/mule-bot.json").img === muleToken, "Mule-Bot Item img is the cargo plate");
+ok(readBomFreeJson("src/packs/vehicles/drones/mule-bot.json").type === "treasure", "Mule-Bot buy SKU remains treasure");
+ok(muleActor.img === muleToken, "named Mule-Bot Actor img is the cargo plate");
+ok(muleActor.prototypeToken?.texture?.src === muleToken, "named Mule-Bot prototypeToken uses the cargo plate");
+ok(muleActor.prototypeToken?.actorLink === true, "named Mule-Bot token is actor-linked");
 const medium = readBomFreeJson("src/packs/summons/machines/machine-drone-medium.json");
 ok(medium.img === muleToken, "Drone (Medium) Actor img is the cargo plate");
 ok(medium.prototypeToken?.texture?.src === muleToken, "Drone (Medium) prototypeToken uses the cargo plate");
 ok(medium.items.some(isWireKit), "Drone (Medium) still embeds Wire Kit");
 ok(!medium.img.includes("robotics-frame-steel-blue"), "Drone (Medium) is not the steel-blue placeholder");
+ok(medium.flags["draw-steel-ghostwire"].dsid === "machine-drone-medium", "Drone (Medium) stays the generic band");
+ok(medium.name !== muleActor.name, "Drone (Medium) is not named Mule-Bot");
 ok(/mule-bot/.test(readFileSync("docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md", "utf8")), "B101 documents Mule-Bot cargo plate");
 ok(/mule-bot/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 documents Mule-Bot / Drone (Medium) art");
 

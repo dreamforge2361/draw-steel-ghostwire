@@ -2,7 +2,7 @@
 
 **Status:** Stage 3 draft for Michael review — 2026-09-16 (ET)  
 **Pairs with:** `05-wrench.md` (Uptime / Jump-In / Machines), `14-mods.md`, `11-economy.md`, Gear master Cat **4D / 5E / 5F**  
-**Foundry:** inventory + rules text only this pass; packs deferred to Claude/B19+  
+**Foundry:** dual Item + Actor. Buy SKUs live in **Ghostwire Vehicles & Drones** (`treasure`). Placeable tokens live in **Ghostwire Summons & Machines › Drones & Vehicles**. **Mule-Bot** has a named Actor (not treasure-only). Other chassis Deploy from the matching scale-band template unless a named SKU Actor exists.  
 **Lore notes:** `docs/masters/_drone_lore_extract.md`
 
 **Design locks (do not reopen in this draft):**

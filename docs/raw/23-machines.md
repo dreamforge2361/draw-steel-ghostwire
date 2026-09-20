@@ -25,7 +25,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 - **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see `21-the-wire.md`).
 - **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not.
 
-**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**) ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Full interface list: `21-the-wire.md`.
+**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and named pack Actors (Nox’s trash freighter, **Mule-Bot**, **Lane-Hopper**, **Star-Chopper**, **Bulldog**) ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. **Mule-Bot** is a placeable drone Actor (industrial hauler plate); the Vehicles pack SKU is the buy path, not treasure-only. Full interface list: `21-the-wire.md`.
 
 ---
 
@@ -78,7 +78,7 @@ The Companion Link **limits** in the Non-Wrench table still apply if you field a
 > *You wake a carried scout on a soft leash, or tell one already in the air what to do. This is not a gun platform and not Jump-In. Max one drone active. The link lasts about one scene, then the drone standbys (≈ 10 minutes / between scenes to reset). You may run one basic Pilot or Sensor program. Soft buffer: +2 temporary Integrity while the link is live (does not stack with Jump-In buffers).*
 
 > **In Foundry**
-> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.
+> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** (cargo hauler) is a named Actor in **Ghostwire Summons & Machines › Drones & Vehicles** — drag it onto a Scene, or Deploy the Vehicles SKU; do not use generic **Drone (Medium)** as the Mule-Bot. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.
 
 ---
 

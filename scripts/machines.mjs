@@ -1,6 +1,7 @@
 // Drones & vehicles: dual Item + Actor (docs/masters/GHOSTWIRE_SUPPORT_ENTITIES.md, GHOSTWIRE_MACHINE_BANDS.md).
-// The Item (Ghostwire Vehicles & Drones) is ownership, ¥, mods, and echelon. Deploy stamps a scale-band Actor template from
-// Ghostwire Summons & Machines › Drones & Vehicles into a linked world Actor and places its token next to the owner;
+// The Item (Ghostwire Vehicles & Drones) is ownership, ¥, mods, and echelon. Deploy stamps a named SKU Actor when one
+// exists (Mule-Bot, Lane-Hopper, …) else the scale-band template from Ghostwire Summons & Machines › Drones & Vehicles
+// into a linked world Actor and places its token next to the owner;
 // Recall deletes the token and Actor, and the Item stays. The link lives in flags on both sides:
 // - Actor: flags.<module> = { kind, band, ownerUuid, gearItemUuid, dsid, gearDsid }
 // - Item:  flags.<module>.deployed = { actorUuid }
@@ -271,10 +272,13 @@ export function deployedMachine(item) {
   return actor instanceof Actor ? actor : null;
 }
 
-async function templateFor(band) {
+async function templateFor(item, band) {
   const pack = game.packs.get(PACK_ID);
   const index = await pack.getIndex({ fields: [`flags.${MODULE_ID}.dsid`] });
-  const entry = index.find(e => foundry.utils.getProperty(e, `flags.${MODULE_ID}.dsid`) === `machine-${band}`);
+  const dsidOf = entry => foundry.utils.getProperty(entry, `flags.${MODULE_ID}.dsid`);
+  // Named SKU Actors (Mule-Bot, Lane-Hopper, …) when present; else the scale-band template.
+  const named = item?.system?._dsid ? index.find(entry => dsidOf(entry) === item.system._dsid) : null;
+  const entry = named ?? index.find(e => dsidOf(e) === `machine-${band}`);
   return entry ? pack.getDocument(entry._id) : null;
 }
 
@@ -302,7 +306,7 @@ export async function deployMachine(item) {
   const existing = deployedMachine(item);
   if (existing) return ui.notifications.warn(game.i18n.format(`${UI}.AlreadyDeployed`, { name: item.name }));
 
-  const template = await templateFor(band);
+  const template = await templateFor(item, band);
   if (!template) return ui.notifications.error(game.i18n.format(`${UI}.NoTemplate`, { band }));
 
   const vehicle = item.getFlag(MODULE_ID, "vehicle");
