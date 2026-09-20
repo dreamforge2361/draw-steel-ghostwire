@@ -1,6 +1,6 @@
 # The Wire
 
-**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20)  
+**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62)  
 **Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
 
 ---
@@ -138,12 +138,27 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 | **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |
 | **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |
 | **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |
-| **Ping** | Give a simple, low-stakes nudge to one simple Track 1 object within Reach -- flick a light, tap a lock, test a system -- without needing a cyberdeck or a full Program. The lightest-weight way to interact with a system. | Logic | Yes | Refunds the Maneuver |
+| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple Track 1 thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Overlay or Jacked In. Not Console Wire ping/spoof (B106). | Logic | Yes | Refunds the Maneuver |
 | **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |
 | **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |
-| **Read/Write** | The core data-manipulation verb -- read a file's contents, alter a record, plant or delete evidence, forge a credential. This is the verb that actually changes information in the Wired, rather than just observing or moving through it. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |
+| **Read/Write** | Change data, settings, or state -- read a file, alter a record, plant or delete evidence, forge a credential, **unlock a maglock for entry**, or **toggle a camera off / kill a feed**. This is the verb that actually changes information and device state in the Wired, not a Ping nudge. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |
 
 **Low (≤11)** on any rolling verb generally means “it works, but something goes wrong” — by default **+1 Trace Alert** (see Trace Alert defaults above). **Middle (12–16)** is a clean success with **no Alert increase**. **High (17+)** is a clean success plus the bonus listed above, and never raises Alert.
+
+### Ping vs Read/Write
+
+**Ping** is the lightest “touch this system” Matrix Verb — a nudge, not a deep hack. Use it when you want a simple Track 1 thing within Reach to do one small thing, without a Program or a full Read/Write:
+
+- Flick the hallway lights off (or on) — lights are the classic Ping.
+- Tap a maglock to see if it’s live / soft jolt (**not** unlock for entry — that’s **Read/Write**).
+- Test whether a camera or door bus answers / brief glitch (**not** lasting cam-off — that’s **Read/Write**).
+- Trigger a trivial system response (“does this socket wake up?”).
+
+Logic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.
+
+**Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK).
+
+Ping is **not** the Director Console Wire ping/spoof (B106).
 
 ## Wire Atlas / topology
 
