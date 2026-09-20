@@ -1,6 +1,6 @@
 # Corruption & Taint — Director notes (B80)
 
-**Module 0.3.36 · spike `docs/spikes/B80-CORRUPTION-TAINT-TRACK.md` (DESIGN LOCKED)**  
+**Module 0.3.37 · spike `docs/spikes/B80-CORRUPTION-TAINT-TRACK.md` (DESIGN LOCKED)**  
 **Player RAW:** `docs/raw/27-corruption-taint.md`
 
 Use this page to run the track. Do not invent a second meter. Band math, the +1/scene cap, the pact exception, and the cleanse ladder are locked in RAW `27`.
