@@ -30,6 +30,7 @@ const UUID = {
   mamaBrief: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwMamaBriefWafer]{Mama’s Deadhead Brief (Gold Line)}`,
   argCapsule: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwArgCourierCap0]{ARG Courier Capsule (Gold Line)}`,
   noxFreighter: `@UUID[Compendium.${MODULE_ID}.vehicles.Item.gwNoxTrashFrgt00]{Nox’s Trash Freighter}`,
+  noxFreighterActor: `@UUID[Compendium.${MODULE_ID}.deadhead.Actor.gwNoxTrashActor0]{Nox’s Trash Freighter}`,
 };
 
 const PAGE_IDS = [
@@ -208,7 +209,7 @@ const pages = [
     "",
     "### Setup",
     "",
-    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later. Token: " + UUID.noxFreighter + " in **Ghostwire Vehicles → Air** (`assets/tokens/vehicles/nox-trash-freighter.webp`). Drag it onto Gold Line roofs for board / Recall; do not force-rewrite the live Scene.",
+    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later. **Place the Actor** " + UUID.noxFreighterActor + " from **Ghostwire Runs — Deadhead Actors** onto Gold Line roofs (suggested token **4×6** squares, grid 208 px = 5 ft; resize; **5×8** if it reads small). Friendly, no ring. Library SKU: " + UUID.noxFreighter + " in **Ghostwire Vehicles → Air**. Do not force-rewrite the live Scene.",
     "2. Open **Gold Line** (Michael’s world Scene). **Show** the **Roofs (overhead)** tile for the board.",
     "3. Sling onto the **roof**, then drop **aft into L1** (left aft cargo / AFT FREIGHT). That is the board chamber. Work **upstream** (right) from here.",
     "4. Once the crew is **inside**, **hide the Roofs (overhead) tile**. Do not wait on Surface occlusion as the play instruction.",
@@ -352,7 +353,7 @@ const pages = [
     "",
     "Courier stays sealed until Alert. Watchdog is Wire, not a meat token unless you want a Console piece on R1.",
     "",
-    "Tokens still to drop on the Gold Line Scene (Michael’s plate): ARG Security, Lieutenant, Enforcers. Nox freighter token ships in **Ghostwire Vehicles → Air** — " + UUID.noxFreighter + ". Wired Console preset (nodes + Trace 0–12) is still a backlog item — narrate nodes until it ships.",
+    "Tokens still to drop on the Gold Line Scene (Michael’s plate): ARG Security, Lieutenant, Enforcers. Nox freighter **Actor** " + UUID.noxFreighterActor + " ships in **Ghostwire Runs — Deadhead Actors** (drag onto roofs; suggested **4×6**). Library Item: " + UUID.noxFreighter + ". Wired Console preset (nodes + Trace 0–12) is still a backlog item — narrate nodes until it ships.",
   ].join("\n")),
 
   page(ENTRY_ID, 11, "FoundryChecklist", [
@@ -376,7 +377,10 @@ const pages = [
     "",
     "### Vehicles (shipped 0.3.54)",
     "",
-    "- " + UUID.noxFreighter + " — **Ghostwire Vehicles → Air** · `assets/tokens/vehicles/nox-trash-freighter.webp`. Drag onto Gold Line / hangout. Tags: Deadhead / Plot / Cargo.",
+    "- " + UUID.noxFreighterActor + " — **Ghostwire Runs — Deadhead Actors**. Placeable token (`assets/tokens/vehicles/nox-trash-freighter.webp`). Drag onto Gold Line roofs for Beat 1 board / Beat 4 Recall. Suggested size **4×6** squares (208 px = 5 ft); resize as needed; **5×8** if it reads small. Friendly, no ring. Plot / non-hostile. Integrity 80 / fly 12 are Heavy-air placeholders.",
+    "- " + UUID.noxFreighter + " — **Ghostwire Vehicles → Air** library SKU. Tags: Deadhead / Plot / Cargo. Keep this Item; the Actor is the board token.",
+    "",
+    "Ghostwire **Runs** is JournalEntry-only (Director journals + handouts). Foundry cannot store Actors there, so the freighter Actor is the sibling GM-only pack listed next to Runs.",
     "",
     "### Handouts (shipped 0.3.54)",
     "",

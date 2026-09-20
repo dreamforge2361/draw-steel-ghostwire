@@ -31,7 +31,8 @@
       "encounters": "Ghostwire Reach Events",
       "reachHandbook": "Ghostwire — Ossian Reach Handbook",
       "lore": "Ghostwire Lore",
-      "runs": "Ghostwire Runs"
+      "runs": "Ghostwire Runs",
+      "deadhead": "Ghostwire Runs — Deadhead Actors"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -5353,7 +5354,7 @@
         },
         "NoxTrashFreighter": {
           "Name": "Nox’s Trash Freighter",
-          "Description": "<p><em>Nox’s Trash Freighter · Municipal Hauler · garbage-truck-sized air freighter</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street (borrowed) · <strong>Tags:</strong> Deadhead, Plot, Cargo</p><p><strong>Domain:</strong> Air · <strong>Scale:</strong> Heavy</p><p><strong>Profile:</strong> Nox’s (Flats wrangler) garbage-truck-sized trash freighter for the Deadhead canyon board and roof Recall bail. Crew borrows it; scratch it = buy it; lose it = explain to Mama. Drag onto the Deadhead Gold Line board from <strong>Ghostwire Vehicles → Air</strong>.</p><p><strong>Stat block:</strong> Integrity, Handling, Speed, and Armor numbers come in the damage/status pass. Mounted weapons come from Weapons.</p>"
+          "Description": "<p><em>Nox’s Trash Freighter · Municipal Hauler · garbage-truck-sized air freighter</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street (borrowed) · <strong>Tags:</strong> Deadhead, Plot, Cargo</p><p><strong>Domain:</strong> Air · <strong>Scale:</strong> Heavy</p><p><strong>Profile:</strong> Nox’s (Flats wrangler) garbage-truck-sized trash freighter for the Deadhead canyon board and roof Recall bail. Crew borrows it; scratch it = buy it; lose it = explain to Mama. This Item is the library SKU (Vehicles → Air). The placeable Scene token is the Actor in <strong>Ghostwire Runs — Deadhead Actors</strong>.</p><p><strong>Stat block:</strong> Integrity, Handling, Speed, and Armor numbers come in the damage/status pass. Mounted weapons come from Weapons.</p>"
         },
         "GreyCab": {
           "Name": "Grey Cab",
@@ -7419,6 +7420,14 @@
         "Items": "Items",
         "Opposition": "Opposition",
         "FoundryChecklist": "Foundry Checklist"
+      }
+    },
+    "Deadhead": {
+      "Actors": {
+        "NoxTrashFreighter": {
+          "Name": "Nox’s Trash Freighter",
+          "Description": "<p><em>Nox’s Trash Freighter · Borrowed municipal hauler · garbage-truck-sized air freighter</em></p><p><strong>Plot / non-hostile.</strong> Deadhead Beat 1 board and Beat 4 roof Recall. Crew borrows it from Nox; scratch it = buy it; lose it = explain to Mama. Tags: Deadhead, Plot.</p><p><strong>Place:</strong> Drag this Actor from <strong>Ghostwire Runs — Deadhead Actors</strong> onto <strong>Scenes → Deadhead → Gold Line</strong> (show roofs for board / bail). Linked token, friendly disposition, no ring (unframed cutout). Do not force-rewrite the live Gold Line Scene.</p><p><strong>Suggested token size:</strong> <strong>4×6</strong> squares (width×height). Gold Line grid is 208 px = 5 ft. Resize on the Scene. Use <strong>5×8</strong> if 4×6 reads small. Art is a square cutout with <code>fit: contain</code>.</p><p><strong>Placeholder stats:</strong> Integrity (Stamina) 80, speed 12 fly (Heavy air / standard). Handling and the full vehicle damage pass are not done — treat Integrity as a fiction bar.</p><p><strong>Library SKU:</strong> the Vehicles Item in <strong>Ghostwire Vehicles → Air</strong>. Journals stay in <strong>Ghostwire Runs → Deadhead</strong> (that pack is JournalEntry-only; Foundry cannot store Actors there).</p>"
+        }
       }
     },
     "Scenes": {

@@ -92,6 +92,7 @@ ok(/gwDhAerialRecon0/.test(text) && /gwGoldLineRecon0/.test(text), "Director jou
 ok(/Handouts \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks aerial recon handout shipped");
 ok(/Gear SKUs \(shipped 0\.3\.52\)/.test(text), "Foundry checklist marks Gear SKUs shipped");
 ok(/gwNoxTrashFrgt00/.test(text) && /nox-trash-freighter/.test(text), "Director journal UUID-hooks Nox trash freighter");
+ok(/gwNoxTrashActor0/.test(text) && /Deadhead Actors/.test(text), "Director journal UUID-hooks Nox freighter Actor pack");
 ok(/Vehicles \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks Nox freighter shipped");
 ok(/ARG Corporate Enforcer/.test(text) && /ARG Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
 ok(/Crew hangout/.test(text) && /Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist lists hangout / Mama / canyon");
@@ -140,6 +141,23 @@ ok(freighter.flags?.["draw-steel-ghostwire"]?.vehicle?.drone === false, "Nox fre
 ok(freighter.flags?.["draw-steel-ghostwire"]?.vehicle?.tags?.includes("Deadhead") && freighter.flags["draw-steel-ghostwire"].vehicle.tags.includes("Plot"), "Nox freighter has Deadhead + Plot tags");
 ok(freighter.img.endsWith("nox-trash-freighter.webp"), "Nox freighter img is the shipped webp");
 ok(existsSync("assets/tokens/vehicles/nox-trash-freighter.png") && existsSync("assets/tokens/vehicles/nox-trash-freighter.webp"), "Nox freighter png+webp on disk");
+
+const actor = readBomFreeJson("src/packs/deadhead/nox-trash-freighter.json");
+ok(actor._id === "gwNoxTrashActor0" && actor.type === "npc", "Nox freighter Actor id + npc type");
+ok(actor.folder === null && actor._key === "!actors!gwNoxTrashActor0", "Nox freighter Actor is pack-root Actor (not a Journal)");
+ok(actor.img.endsWith("nox-trash-freighter.webp") && actor.prototypeToken?.texture?.src?.endsWith("nox-trash-freighter.webp"), "Actor img + prototypeToken use freighter webp");
+ok(actor.prototypeToken.width === 4 && actor.prototypeToken.height === 6, "Actor token starts at 4×6 squares");
+ok(actor.prototypeToken.disposition === 1 && actor.prototypeToken.ring?.enabled === false, "Actor is friendly with no token ring");
+ok(actor.prototypeToken.actorLink === true, "Actor token is linked");
+ok(actor.flags?.["draw-steel-ghostwire"]?.kind === "vehicle" && actor.flags["draw-steel-ghostwire"].plot === true, "Actor is plot vehicle");
+ok(actor.flags?.["draw-steel-ghostwire"]?.tags?.includes("Deadhead") && actor.flags["draw-steel-ghostwire"].tags.includes("Plot"), "Actor has Deadhead + Plot tags");
+ok(lang.GHOSTWIRE.Deadhead.Actors.NoxTrashFreighter?.Name === "Nox’s Trash Freighter", "lang Actor name");
+ok(/4×6/.test(lang.GHOSTWIRE.Deadhead.Actors.NoxTrashFreighter.Description), "lang Actor notes suggested 4×6 size");
+ok(lang.GHOSTWIRE.COMPENDIUM.deadhead === "Ghostwire Runs — Deadhead Actors", "lang Deadhead Actor pack label");
+ok(moduleJson.packs.some(p => p.name === "deadhead" && p.type === "Actor"), "module.json registers Ghostwire Deadhead Actor pack");
+ok(moduleJson.packFolders?.[0]?.packs?.includes("deadhead"), "packFolders lists deadhead next to runs");
+ok(!existsSync("src/packs/runs/deadhead/nox-trash-freighter.json") || readBomFreeJson("src/packs/runs/deadhead/nox-trash-freighter.json").pages, "runs/deadhead does not mix an Actor into the JournalEntry pack");
+ok(/Nox trash freighter \*\*Actor\*\*/.test(sor) && /Deadhead Actors/.test(sor), "SoR checklist marks freighter Actor shipped");
 
 const recon = readBomFreeJson("src/packs/runs/deadhead/gold-line-aerial-recon.json");
 ok(recon._id === "gwDhAerialRecon0", "aerial recon journal id");

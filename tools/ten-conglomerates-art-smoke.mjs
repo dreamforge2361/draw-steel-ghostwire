@@ -97,7 +97,10 @@ const tickersDoc = readFileSync("docs/rulebook/MEGACORP-TICKERS.md", "utf8");
 ok(/assets\/brands\/megacorps/.test(tickersDoc) && /raster concept/.test(tickersDoc), "MEGACORP-TICKERS notes brand art SoR");
 
 const sor = readFileSync("docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md", "utf8");
-ok(/Nox trash freighter token/.test(sor) && /0\.3\.54/.test(sor), "SoR marks freighter token shipped");
+ok(/Nox trash freighter \*\*Item\*\*/.test(sor) && /0\.3\.54/.test(sor), "SoR marks freighter Item shipped");
+ok(/Nox trash freighter \*\*Actor\*\*/.test(sor) && /Deadhead Actors/.test(sor), "SoR marks freighter Actor shipped");
+ok(existsSync("src/packs/deadhead/nox-trash-freighter.json"), "freighter Actor JSON on disk");
+ok(lang.GHOSTWIRE.COMPENDIUM.deadhead === "Ghostwire Runs — Deadhead Actors", "lang Deadhead Actor pack");
 ok(/Handout: Gold Line aerial recon photo/.test(sor), "SoR marks aerial recon handout shipped");
 ok(existsSync("assets/items/deadhead/gold-line-aerial-recon.webp"), "aerial recon webp on disk");
 ok(lang.GHOSTWIRE.Runs.Journals.GoldLineAerialRecon === "Gold Line — Aerial Recon", "lang aerial recon journal");

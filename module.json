@@ -291,6 +291,17 @@
         "PLAYER": "NONE",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "name": "deadhead",
+      "label": "GHOSTWIRE.COMPENDIUM.deadhead",
+      "path": "packs/deadhead",
+      "type": "Actor",
+      "system": "draw-steel",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "url": "https://github.com/dreamforge2361/draw-steel-ghostwire",
@@ -325,7 +336,8 @@
         "pregen-fiction",
         "encounters",
         "reach-handbook",
-        "runs"
+        "runs",
+        "deadhead"
       ]
     }
   ]
