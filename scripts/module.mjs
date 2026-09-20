@@ -16,6 +16,7 @@ import { registerFreeStrikeStrip } from "./free-strikes.mjs";
 import { registerCasterChrome } from "./caster-chrome.mjs";
 import { registerMagicErosion } from "./magic-erosion.mjs";
 import { registerVoidmark } from "./voidmark.mjs";
+import { registerGoldLineScene } from "./gold-line-scene.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -103,6 +104,7 @@ Hooks.once("init", () => {
   const { isCasterClass } = registerCasterChrome({ isCyborg, casterClasses: VEIL_CASTER_CLASSES });
   registerMagicErosion({ isCasterClass });
   registerVoidmark();
+  registerGoldLineScene();
 });
 
 // ---------- Wired connection states ----------

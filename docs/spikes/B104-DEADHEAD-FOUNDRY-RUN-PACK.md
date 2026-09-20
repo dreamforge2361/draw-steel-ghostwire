@@ -1,10 +1,10 @@
 # Spike B104 — Deadhead Foundry run pack
 
 **Date:** 2026-09-19  
-**Module:** **0.3.33** (this drop: SoR + empty pack scaffold)  
-**Status:** **SoR LOCKED** — Foundry journals / items / scenes / art still to build.  
+**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106)  
+**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). Remaining journals / items / other scenes still to build.  
 **Journals (rulebook / lore / handbook / flats / pregen-fiction):** **not** regenerated.  
-**Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B39 Run Generator world folder, B99 Mama’s Club map.
+**Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B39 Run Generator world folder, B99 Mama’s Club map, **B106 Gold Line map pack**.
 
 ## Goal
 
@@ -101,7 +101,7 @@ There is **no** Scene pack in this module (B72 / B99 / B100 drop files onto worl
 | Crew hangout | Rundown flat, wrecked bad neighborhood |
 | Mama’s Club | **Reuse** B99 (`assets/maps/battlemaps/mama-cassavir-club.webp` / `-loop.webm`) |
 | Canyon approach / drone sling strip | Board beat; garbage-truck-sized trash freighter |
-| 5-car Gold Line | 20 ft cars, 5 ft furniture: cab · courier · security · passenger · tail |
+| Gold Line (dual Hammerhead) | **SHIPPED 0.3.36 (B106).** World inject **Scenes → Deadhead → Gold Line**. Interior loop `assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm` (fallback still). Roofs overhead `map-gold-line-roofs-loop.webm`, Surface occlusion. Grid 208 / 5 ft, 6472×958. Beat remap L1 tail → R3 cab in the SoR + **Gold Line — Map Notes** journal. CyberMaps stitch only — do not drop a generated train. |
 
 Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG uniform stylization reusable.
 
@@ -122,7 +122,7 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 
 ## Out of scope (this PR and the content pass)
 
-- Art generation (splash, tokens, maps).
+- Art generation (splash, tokens, maps). **B106 shipped the locked CyberMaps Hammerhead plates** — do not regenerate a train.
 - Trace −1 (or any new) Hacker / Technomancer class abilities.
 - Regenerating rulebook / lore / handbook / flats / pregen-fiction journals.
 - Changing B39 Run Generator tables or the world **Ghostwire Runs** folder.
@@ -133,7 +133,7 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 
 - Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist.
 - Both wafers exist as Gear items and are linked from the Items page.
-- Four scenes listed above exist in the world (Mama reused); pack journal points at them.
+- Four scenes listed above exist in the world (Mama reused; **Gold Line injected 0.3.36**); pack journal points at them.
 - Design locks above match the SoR verbatim (¥ / wipe / Trace cap / ARG / Nox / 5×20 ft / no twist / 4h / ping-spoof mention).
 - No new class abilities. No unrelated journal regen. One module patch.
 

@@ -7290,6 +7290,22 @@
     "Runs": {
       "Folders": {
         "Deadhead": "Deadhead"
+      },
+      "Journals": {
+        "GoldLineMap": "Gold Line — Map Notes"
+      },
+      "Pages": {
+        "GoldLinePlate": "Plate",
+        "GoldLineBeats": "Beat remap"
+      }
+    },
+    "Scenes": {
+      "GoldLine": {
+        "Name": "Gold Line",
+        "Folder": "Deadhead",
+        "LevelInterior": "Interior",
+        "RoofsTile": "Roofs",
+        "Injected": "Gold Line is ready under Scenes → Deadhead."
       }
     },
     "Lore": {
