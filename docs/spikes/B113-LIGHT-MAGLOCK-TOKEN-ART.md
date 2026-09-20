@@ -9,11 +9,11 @@
 
 Light Control and Maglock auto-nodes use distinct token art, not the generic Track 1 vault-wheel. Icons must read at **0.25 grid** (B110).
 
-Michael lock (2026-09-20): Light Control = cyan lightbulb + power symbol. Maglock = sliding doors + padlock. No attached upload was present in-tree; glyphs ship at the locked paths and can be replaced in place.
+Michael lock (2026-09-20): Light Control = cyan lightbulb + power symbol. Maglock = sliding doors + padlock. **YES art** attached 2026-09-20: 1254² PNG originals + 1024² WebP (same convention as B111).
 
 ## Assets
 
-PNG source + Foundry WebP (1024²), both under `assets/tokens/wired/`:
+PNG source (Michael, **1254²**) + Foundry WebP (**1024²**), both under `assets/tokens/wired/`:
 
 | Kind | Files | Foundry path |
 |---|---|---|

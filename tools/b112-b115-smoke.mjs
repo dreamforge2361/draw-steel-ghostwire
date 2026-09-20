@@ -43,6 +43,7 @@ for (const stem of ["node-light-control", "node-maglock"]) {
   const pngBuf = readFileSync(png);
   const webpBuf = readFileSync(webp);
   ok(pngBuf[0] === 0x89 && pngBuf.slice(1, 4).toString() === "PNG", `${stem}.png is a PNG source`);
+  ok(pngBuf.readUInt32BE(16) === 1254 && pngBuf.readUInt32BE(20) === 1254, `${stem}.png is Michael 1254² source`);
   ok(webpBuf.slice(0, 4).toString() === "RIFF" && webpBuf.slice(8, 12).toString() === "WEBP", `${stem}.webp is WebP`);
 }
 

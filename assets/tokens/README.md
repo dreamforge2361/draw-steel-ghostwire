@@ -67,7 +67,7 @@ node tools/apply-bestiary-portrait-art.mjs
 
 Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and still apply to hand-placed / templated nodes.
 
-**B113** Light Control / Maglock auto-node art (PNG source + 1024² WebP):
+**B113** Light Control / Maglock auto-node art — Michael’s **YES** tokens (1254² PNG source + 1024² WebP):
 
 | Kind | Files | Foundry `img` / token |
 |---|---|---|
