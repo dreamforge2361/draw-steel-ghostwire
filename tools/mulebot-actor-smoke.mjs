@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 /**
- * 0.3.73 — Mule-Bot is a placeable Actor, not treasure-only.
+ * 0.3.73 — Mule-Bot Deploy path (dual Item + Actor).
+ *
+ * Treasure SKUs in Ghostwire Vehicles & Drones are INTENTIONAL.
+ * Deploy stamps machine-drone-medium; Recall deletes the Actor; the Item stays.
  *
  * Run: node tools/mulebot-actor-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
@@ -9,7 +12,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { actorHasKit, isDroneActor, isMachineActor, isVehicleActor, isWireKit } from "../scripts/wired-kit.mjs";
 import { itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 import { MATRIX_VERB_DSIDS } from "../scripts/wired-verbs.mjs";
+import { chassisStamina, machineBand } from "../scripts/machines.mjs";
 
+const MODULE_ID = "draw-steel-ghostwire";
 const failures = [];
 const ok = (cond, msg) => {
   if (!cond) failures.push(msg);
@@ -20,82 +25,105 @@ function readJson(path) {
   return JSON.parse(readFileSync(path, "utf8"));
 }
 
-console.log("Mule-Bot Actor smoke (0.3.73)\n");
+function asItem(json) {
+  return {
+    system: json.system,
+    getFlag: (mod, key) => (mod === MODULE_ID ? json.flags?.[mod]?.[key] : undefined),
+  };
+}
+
+console.log("Mule-Bot dual Item + Actor smoke (0.3.73)\n");
 
 const moduleJson = readJson("module.json");
 ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.73", `module.json is ≥ 0.3.73 (got ${moduleJson.version})`);
 
+console.log("1) Treasure SKU is the inventory / Deploy document");
 const item = readJson("src/packs/vehicles/drones/mule-bot.json");
-ok(item.type === "treasure", "Vehicles SKU stays type treasure (buy path)");
+ok(item.type === "treasure", "Mule-Bot Vehicles SKU is type treasure (intentional, like every drone)");
 ok(item.system._dsid === "mule-bot", "Item dsid mule-bot");
 ok(item._id === "KBZhF1Z1L67t1gU4", "Item id is the published SKU");
-ok(item.flags["draw-steel-ghostwire"].vehicle.drone === true, "Item flagged drone");
-ok(item.flags["draw-steel-ghostwire"].vehicle.domain === "Ground (drone)", "Item domain Ground (drone)");
-ok(item.flags["draw-steel-ghostwire"].vehicle.scale === "Vehicle", "Item scale Vehicle");
+const v = item.flags[MODULE_ID].vehicle;
+ok(v.drone === true, "Item flagged drone");
+ok(v.domain === "Ground (drone)", "Item domain Ground (drone)");
+ok(v.scale === "Vehicle", "Item scale Vehicle (Vehicle-scale drone)");
+ok(v.echelon === 1 && v.price === 1100 && v.modSlots === 2, "Item echelon 1 / ¥1100 / 2 slots");
+ok(v.tags.includes("Cargo") && v.tags.includes("Cover") && v.tags.includes("Wired"), "Item tags Cargo, Cover, Wired");
 ok(item.img.endsWith("drones/mule-bot.webp"), "Item img is the industrial hauler plate");
+
+const stinger = readJson("src/packs/vehicles/drones/stinger.json");
+const medbot = readJson("src/packs/vehicles/drones/medbot.json");
+const fly = readJson("src/packs/vehicles/drones/fly.json");
+const warhound = readJson("src/packs/vehicles/drones/warhound.json");
+ok(stinger.type === "treasure" && medbot.type === "treasure" && fly.type === "treasure", "sibling drones stay type treasure");
+ok(stinger.flags[MODULE_ID].vehicle.drone && warhound.flags[MODULE_ID].vehicle.drone, "Stinger / Warhound still flagged drone");
+
+console.log("2) Band mapping matches sibling Vehicle-scale drones");
+ok(machineBand(asItem(item)) === "drone-medium", "Mule-Bot → drone-medium");
+ok(machineBand(asItem(stinger)) === "drone-medium", "Stinger → drone-medium (unchanged)");
+ok(machineBand(asItem(warhound)) === "drone-medium", "Warhound → drone-medium (unchanged)");
+ok(machineBand(asItem(medbot)) === "drone-small", "Medbot → drone-small (unchanged)");
+ok(machineBand(asItem(fly)) === "drone-micro", "Fly → drone-micro (unchanged)");
+ok(chassisStamina(asItem(item)) === 24, "Mule-Bot Deploy Stamina 24 (E1 × medium)");
+ok(chassisStamina(asItem(stinger)) === 48, "Stinger Deploy Stamina 48 (E3 × medium, unchanged)");
 
 const spaceMule = readJson("src/packs/vehicles/space/mule.json");
 ok(spaceMule.system._dsid === "mule", "space Mule shuttle is a different SKU");
-ok(spaceMule._id !== item._id, "Mule-Bot Item is not the space Mule");
+ok(machineBand(asItem(spaceMule)) === "vehicle-space", "space Mule still maps to vehicle-space");
 
-const actor = readJson("src/packs/summons/machines/mule-bot.json");
-ok(actor.type === "npc", "Summons document is an Actor (npc)");
-ok(actor._id === "gwMuleBotAct0000", "Actor id is 16-char stable");
-ok(/^[A-Za-z0-9]{16}$/.test(actor._id), "Actor _id is 16 alphanumeric");
-ok(actor.flags["draw-steel-ghostwire"].kind === "drone", "Actor kind drone");
-ok(actor.flags["draw-steel-ghostwire"].dsid === "mule-bot", "Actor dsid mule-bot (named SKU, not machine-drone-medium)");
-ok(actor.flags["draw-steel-ghostwire"].band === "drone-medium", "Actor band drone-medium");
-ok(actor.flags["draw-steel-ghostwire"].gearDsid === "mule-bot", "Actor gearDsid mule-bot");
-ok(actor.flags["draw-steel-ghostwire"].gearItemUuid === "Compendium.draw-steel-ghostwire.vehicles.Item.KBZhF1Z1L67t1gU4", "Actor links the Vehicles SKU UUID");
-ok(isDroneActor(actor) && isMachineActor(actor), "isDroneActor / isMachineActor see Mule-Bot");
-ok(!isVehicleActor(actor), "isVehicleActor does not treat Mule-Bot as a crewed van");
-ok(actor.system.stamina.max === 24, "Actor Stamina 24 (E1 medium drone)");
-ok(actor.system.movement.value === 7 && actor.system.movement.types.includes("walk"), "Actor speed 7 walk");
-ok(actor.system.movement.hover === false, "Actor does not hover");
-ok(actor.system.combat.size.value === 1 && actor.system.combat.size.letter === "L", "Actor size 1L");
-ok(actor.prototypeToken?.width === 1 && actor.prototypeToken?.height === 1, "token 1×1");
-ok(actor.prototypeToken?.actorLink === true, "token is actor-linked");
-ok(actor.prototypeToken?.texture?.src?.endsWith("drones/mule-bot.webp"), "token texture is the cargo plate");
-ok((actor.items ?? []).some(isWireKit), "Actor embeds Wire Kit");
-ok(actorHasKit(actor), "actorHasKit sees Wire Kit");
-ok(itemIsConnectInterface(actor.items.find(isWireKit)), "Wire Kit is a Connect interface");
-ok(!(actor.items ?? []).some(i => MATRIX_VERB_DSIDS.includes(i.system?._dsid)), "no Matrix Verbs on the Actor");
-ok(!actor.flags["draw-steel-ghostwire"].wired?.state, "not auto-Overlay / auto-Connected");
-ok(existsSync("assets/tokens/drones/mule-bot.png") && existsSync("assets/tokens/drones/mule-bot.webp"), "png+webp on disk");
+console.log("3) Deploy uses band templates, not named-SKU Actors");
+const machinesSrc = readFileSync("scripts/machines.mjs", "utf8");
+ok(machinesSrc.includes('dsid`) === `machine-${band}`') || machinesSrc.includes("`machine-${band}`"), "templateFor looks up machine-${band}");
+ok(!/item\.system\?\.\_dsid \? index\.find/.test(machinesSrc), "Deploy does not prefer named SKU dsid over the band");
+ok(/Treasure Items in Ghostwire Vehicles & Drones are INTENTIONAL/.test(machinesSrc), "machines.mjs documents treasure SKUs as intentional");
 
 const medium = readJson("src/packs/summons/machines/machine-drone-medium.json");
-ok(medium.flags["draw-steel-ghostwire"].dsid === "machine-drone-medium", "generic Drone (Medium) still exists");
-ok(medium._id !== actor._id, "named Mule-Bot is a distinct document from Drone (Medium)");
-ok(medium.name !== actor.name, "Drone (Medium) and Mule-Bot have different name keys");
+ok(medium.flags[MODULE_ID].dsid === "machine-drone-medium", "drone-medium band template exists");
+ok(medium.items.some(isWireKit), "drone-medium band embeds Wire Kit");
+ok(itemIsConnectInterface(medium.items.find(isWireKit)), "drone-medium Wire Kit is a Connect interface");
+ok(medium.img.endsWith("drones/mule-bot.webp"), "drone-medium band uses the hauler plate (Deploy stamps Item art on top)");
 
+console.log("4) Optional named Actor for Director-placed unowned mule");
+const actor = readJson("src/packs/summons/machines/mule-bot.json");
+ok(actor.type === "npc", "named Summons document is an Actor (npc)");
+ok(actor.flags[MODULE_ID].kind === "drone" && actor.flags[MODULE_ID].dsid === "mule-bot", "named Actor kind/dsid");
+ok(actor.flags[MODULE_ID].band === "drone-medium", "named Actor band drone-medium");
+ok(actor.flags[MODULE_ID].gearItemUuid === "Compendium.draw-steel-ghostwire.vehicles.Item.KBZhF1Z1L67t1gU4", "named Actor UUID-links the treasure SKU");
+ok(isDroneActor(actor) && isMachineActor(actor) && !isVehicleActor(actor), "named Actor is a drone machine");
+ok((actor.items ?? []).some(isWireKit) && actorHasKit(actor), "named Actor embeds Wire Kit");
+ok(itemIsConnectInterface(actor.items.find(isWireKit)), "named Actor Wire Kit is a Connect interface");
+ok(!(actor.items ?? []).some(i => MATRIX_VERB_DSIDS.includes(i.system?._dsid)), "no Matrix Verbs on the named Actor");
+ok(actor.prototypeToken?.texture?.src?.endsWith("drones/mule-bot.webp"), "named Actor token is the cargo plate");
+ok(existsSync("assets/tokens/drones/mule-bot.png") && existsSync("assets/tokens/drones/mule-bot.webp"), "png+webp on disk");
+ok(medium._id !== actor._id, "named Mule-Bot is distinct from the drone-medium band");
+
+console.log("5) Lang / RAW / dual-model docs");
 const lang = readJson("lang/en.json");
-ok(lang.GHOSTWIRE.Summons.Machines.MuleBot.Name === "Mule-Bot", "Actor lang Name is Mule-Bot");
-ok(/Place:/.test(lang.GHOSTWIRE.Summons.Machines.MuleBot.Description), "Actor lang has Place path");
-ok(/KBZhF1Z1L67t1gU4/.test(lang.GHOSTWIRE.Summons.Machines.MuleBot.Description), "Actor lang UUID-links the SKU");
-ok(/not the space shuttle/i.test(lang.GHOSTWIRE.Summons.Machines.MuleBot.Description), "Actor lang disambiguates space Mule");
-ok(/Placeable token/.test(lang.GHOSTWIRE.Vehicles.Items.MuleBot.Description), "Item lang points at the placeable Actor");
-ok(/Not Mule-Bot/.test(lang.GHOSTWIRE.Summons.Machines.DroneMedium.Description), "Drone (Medium) lang is not the Mule-Bot SKU");
-
-const machinesSrc = readFileSync("scripts/machines.mjs", "utf8");
-ok(machinesSrc.includes("item.system._dsid"), "Deploy templateFor prefers named SKU dsid");
-ok(machinesSrc.includes("`machine-${band}`"), "Deploy still falls back to scale-band templates");
-
-const readme = readFileSync("README.md", "utf8");
-ok(/0\.3\.73/.test(readme) && /Mule-Bot is a placeable Actor/.test(readme), "README changelog names 0.3.73 Mule-Bot Actor");
+ok(lang.GHOSTWIRE.Vehicles.Items.MuleBot.Name === "Mule-Bot", "Item lang Name");
+ok(/treasure/.test(lang.GHOSTWIRE.Vehicles.Items.MuleBot.Description), "Item lang names treasure as the inventory SKU");
+ok(/Deploy/.test(lang.GHOSTWIRE.Vehicles.Items.MuleBot.Description), "Item lang names Deploy");
+ok(/machine-drone-medium/.test(lang.GHOSTWIRE.Vehicles.Items.MuleBot.Description), "Item lang names the drone-medium band");
+ok(!/not treasure-only loot/.test(lang.GHOSTWIRE.Vehicles.Items.MuleBot.Description), "Item lang does not treat treasure as a bug");
+ok(/unowned \/ NPC/.test(lang.GHOSTWIRE.Summons.Machines.MuleBot.Description), "Actor lang is Director unowned/NPC placement");
+ok(/machine-drone-medium/.test(lang.GHOSTWIRE.Summons.Machines.MuleBot.Description), "Actor lang says Deploy uses the band");
+ok(/Not Mule-Bot/.test(lang.GHOSTWIRE.Summons.Machines.DroneMedium.Description), "Drone (Medium) lang is the band, not the SKU");
 
 const raw = readFileSync("docs/raw/23-machines.md", "utf8");
-ok(/\*\*Mule-Bot\*\* is a placeable drone Actor/.test(raw), "RAW 23 names Mule-Bot as a placeable Actor");
+ok(/treasure.*Item on purpose/i.test(raw) || /is a Draw Steel \*\*treasure\*\* Item on purpose/.test(raw), "RAW 23 states treasure SKUs are on purpose");
+ok(/mule-bot.*machine-drone-medium/.test(raw), "RAW 23 maps mule-bot → machine-drone-medium");
 
 const machinesJournal = readJson("src/packs/rulebook/ghostwire-systems/23-machines.json");
 const journalText = (machinesJournal.pages ?? []).map(p => `${p.text?.markdown ?? ""}\n${p.text?.content ?? ""}`).join("\n");
-ok(/placeable drone Actor/.test(journalText) && /Mule-Bot/.test(journalText), "Machines journal names Mule-Bot as a placeable Actor");
+ok(/treasure/.test(journalText) && /machine-drone-medium/.test(journalText), "Machines journal documents treasure SKU + mule-bot band");
 
 const index = readJson("data/voidmark-rules-index.json");
-ok(index.chunks.some(c => /placeable drone Actor/.test(c.text) && /Mule-Bot/.test(c.text)), "VOIDMARK indexes Mule-Bot as a placeable Actor");
+ok(index.chunks.some(c => /treasure/.test(c.text) && /mule-bot/.test(c.text) && /machine-drone-medium/.test(c.text)), "VOIDMARK indexes mule-bot dual model");
+
+const readme = readFileSync("README.md", "utf8");
+ok(/0\.3\.73/.test(readme) && /treasure/.test(readme) && /intentional/i.test(readme), "README 0.3.73 documents intentional treasure dual model");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);
   for (const f of failures) console.error(`  ✗ ${f}`);
   process.exit(1);
 }
-console.log("\nAll Mule-Bot Actor checks passed.");
+console.log("\nAll Mule-Bot dual-model checks passed.");

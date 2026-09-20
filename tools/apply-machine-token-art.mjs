@@ -7,8 +7,8 @@
  * onto the stamped Actor + token, so chassis art lives on the Item. Exception
  * (0.3.68): generic `machine-drone-medium` uses the Mule-Bot cargo plate so a
  * dragged **Drone (Medium)** matches Michael’s hauling token. **0.3.73:** named
- * Mule-Bot Actor (`src/packs/summons/machines/mule-bot.json`) is the placeable
- * SKU; Deploy prefers that Actor over the generic band.
+ * Mule-Bot Actor (`src/packs/summons/machines/mule-bot.json`) is optional
+ * Director placement; Deploy still uses the `drone-medium` band.
  *
  *   node tools/apply-machine-token-art.mjs --list
  *   node tools/apply-machine-token-art.mjs

@@ -11,7 +11,7 @@
 1. On a hero's sheet, **right-click the drone or vehicle row** (or click its ⋮ control) and choose **Deploy** — or open the Item and use the **Deploy** button in its header (with Stowed / Deployed status). The Item must be owned by an Actor.
 2. Deploy:
    - resolves the Item's band from its `flags.draw-steel-ghostwire.vehicle` (`drone`, `domain`, `scale`) — no Item data changes;
-   - imports a **named SKU Actor** from Ghostwire Summons & Machines when `flags.dsid` matches the Item `_dsid` (**Mule-Bot**, Lane-Hopper, Star-Chopper, Bulldog); otherwise the scale-band template — into a world Actor in the **Deployed Machines** folder, named and imaged after the Item, owned by the hero's owners;
+   - imports that band's template from Ghostwire Summons & Machines into a world Actor in the **Deployed Machines** folder, named and imaged after the Item, owned by the hero's owners;
    - stamps Stamina (Integrity), speed, movement type, and level (= echelon);
    - places a **linked** token next to the owner's token on the viewed Scene (or the centre of the view);
    - links both sides: Actor `flags.draw-steel-ghostwire = { kind: "drone"|"vehicle", band, ownerUuid, gearItemUuid, dsid: "machine-<band>", gearDsid, echelon, speedBand }`; Item `flags.draw-steel-ghostwire.deployed = { actorUuid }`.
@@ -56,7 +56,7 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 | Drone | `hellkite` | Hellkite | Air (drone) | Vehicle | 3 | `machine-drone-medium` | — | 48 | 7 fly |
 | Drone | `iron-mantis` | Iron Mantis | Ground (drone) | Vehicle | 4 | `machine-drone-medium` | — | 60 | 7 walk |
 | Drone | `lifeline` | Lifeline | Ground (drone) | Vehicle | 4 | `machine-drone-medium` | — | 60 | 7 walk |
-| Drone | `mule-bot` | Mule-Bot | Ground (drone) | Vehicle | 1 | named Actor `mule-bot` (band `machine-drone-medium`) | — | 24 | 7 walk |
+| Drone | `mule-bot` | Mule-Bot | Ground (drone) | Vehicle | 1 | `machine-drone-medium` | — | 24 | 7 walk |
 | Drone | `pallbearer` | Pallbearer | Ground (drone) | Vehicle | 3 | `machine-drone-medium` | — | 48 | 7 walk |
 | Drone | `razorwing` | Razorwing | Air (drone) | Vehicle | 4 | `machine-drone-medium` | — | 60 | 7 fly |
 | Drone | `stinger` | Stinger | Air (drone) | Vehicle | 3 | `machine-drone-medium` | — | 48 | 7 fly |
@@ -126,5 +126,6 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 
 ## 4. Later
 
-- Numeric pass: real Integrity / Speed / Armor / Handling per chassis; then more 1:1 Actors for signature SKUs. **Mule-Bot** is the first named **drone** SKU Actor (0.3.73); Lane-Hopper / Star-Chopper / Bulldog are named **vehicle** SKUs.
+- Numeric pass: real Integrity / Speed / Armor / Handling per chassis; then 1:1 Actors for signature SKUs if wanted.
+- **Mule-Bot (0.3.73):** Vehicles pack **treasure** SKU is the inventory / Deploy path (`drone-medium` band, same as Stinger / Warhound). A named Summons Actor is optional Director placement for an unowned mule — not a replacement for the treasure Item.
 - Player-side Deploy without Director permissions (socket to the GM), Wrench Deploy & Command hook, Fleet Size enforcement, Jump-In buffer automation.

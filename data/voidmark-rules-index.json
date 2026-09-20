@@ -5832,7 +5832,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Control modes",
       "kind": "rules",
-      "text": "**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and named pack Actors (Nox’s trash freighter, **Mule-Bot**, **Lane-Hopper**, **Star-Chopper**, **Bulldog**) ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. **Mule-Bot** is a placeable drone Actor (industrial hauler plate); the Vehicles pack SKU is the buy path, not treasure-only. Full interface list: `21-the-wire.md`.\n\n---"
+      "text": "**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: \"vehicle\"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**) plus named **Mule-Bot** ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Every drone/vehicle in **Ghostwire Vehicles & Drones** is a Draw Steel **treasure** Item on purpose: that SKU is ownership / ¥ / mods. **Deploy** stamps a linked Actor from the matching band (`mule-bot` → `machine-drone-medium`) and places the token; **Recall** deletes the Actor and the Item stays. Full interface list: `21-the-wire.md`.\n\n---"
     },
     {
       "id": "23-machines#anyone-vs-wrench#4",
@@ -5877,7 +5877,7 @@
       "chapter": "Machines: Drones, Vehicles & Buildings",
       "heading": "Street Eye (Companion Link)",
       "kind": "rules",
-      "text": "> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** (cargo hauler) is a named Actor in **Ghostwire Summons & Machines › Drones & Vehicles** — drag it onto a Scene, or Deploy the Vehicles SKU; do not use generic **Drone (Medium)** as the Mule-Bot. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.\n\n---"
+      "text": "> Drop a qualifying scout drone (Rotor, Tape-Eye, Fly, Spotter, …) from **Ghostwire Vehicles & Drones** onto a hero. **Street Eye** appears under Abilities. Remove the last qualifying drone and Street Eye leaves the sheet. A Wrench keeps **Deploy & Command**. Right-click the drone row → **Deploy** / **Recall** to put the token on the map — Street Eye is the leash and orders card, not a second Deploy system. **Mule-Bot** is a treasure SKU like every other drone: Deploy stamps `machine-drone-medium` (industrial hauler plate, Wire Kit). A named Summons **Mule-Bot** Actor is only for an unowned/NPC mule a Director drags in. Install §5F mods onto the **Deployed** host: armor kits raise that Actor's Stamina (Integrity); Weaponry kits flag a Gunnery hardpoint; other kits are flagged for the Director to apply at the table. Toggle-off and uninstall reverse the stamp.\n\n---"
     },
     {
       "id": "23-machines#scale-bands-drones#9",

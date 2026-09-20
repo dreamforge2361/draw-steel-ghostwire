@@ -312,7 +312,7 @@ for (const [file, label] of [
   ok(!actor.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), `${label} has none of the nine Matrix Verbs`);
 }
 
-console.log("\n4b5) Named Mule-Bot drone Actor (not treasure-only)");
+console.log("\n4b5) Named Mule-Bot Director Actor (dual Item + Actor)");
 const muleActor = readBomFreeJson("src/packs/summons/machines/mule-bot.json");
 ok(muleActor.type === "npc", "Mule-Bot pack document is an Actor");
 ok(muleActor.flags["draw-steel-ghostwire"].kind === "drone", "Mule-Bot kind is drone");
