@@ -1,0 +1,103 @@
+<div class="gw-kiosk-deck">
+  {{#if missing}}
+  <p class="gw-kiosk-empty">{{hint}}</p>
+  {{else}}
+  <header class="gw-kiosk-head">
+    {{#if img}}<img class="gw-kiosk-img" src="{{img}}" alt="">{{/if}}
+    <div class="gw-kiosk-identity">
+      <h3 class="gw-kiosk-name">{{name}}</h3>
+      {{#if tagline}}<p class="gw-kiosk-tagline">{{tagline}}</p>{{/if}}
+      <p class="gw-kiosk-meta">
+        <span class="gw-kiosk-chip">{{stocked}}</span>
+        <span class="gw-kiosk-chip {{#if inRange}}in-range{{else}}far{{/if}}">
+          {{#if inRange}}{{localize "GHOSTWIRE.Kiosk.InRange"}}{{else}}{{localize "GHOSTWIRE.Kiosk.Far"}}{{/if}}
+        </span>
+      </p>
+    </div>
+  </header>
+
+  <div class="gw-kiosk-buyer">
+    <label>
+      {{localize "GHOSTWIRE.Kiosk.Buyer"}}
+      <select data-buyer>
+        {{#each buyers}}
+        <option value="{{uuid}}" {{#if selected}}selected{{/if}}>{{name}} — {{wealthLabel}}</option>
+        {{else}}
+        <option value="">{{localize "GHOSTWIRE.Kiosk.NoBuyer"}}</option>
+        {{/each}}
+      </select>
+    </label>
+    {{#if buyerWealth}}<span class="gw-kiosk-wealth">{{buyerWealth}}</span>{{/if}}
+  </div>
+
+  {{#if isGM}}
+  <section class="gw-kiosk-config">
+    <h4>{{localize "GHOSTWIRE.Kiosk.Director"}}</h4>
+    <div class="gw-kiosk-fields">
+      <label>{{localize "GHOSTWIRE.Kiosk.MerchantName"}}
+        <input type="text" name="merchantName" data-kiosk-field value="{{name}}">
+      </label>
+      <label>{{localize "GHOSTWIRE.Kiosk.Tagline"}}
+        <input type="text" name="tagline" data-kiosk-field value="{{tagline}}" placeholder="{{localize "GHOSTWIRE.Kiosk.TaglineHint"}}">
+      </label>
+      <label data-tooltip="GHOSTWIRE.Kiosk.RangeHint">{{localize "GHOSTWIRE.Kiosk.Range"}}
+        <input type="number" name="range" data-kiosk-field min="0" step="1" value="{{range}}">
+      </label>
+    </div>
+    <p class="gw-kiosk-drop-hint">{{dropHint}}</p>
+  </section>
+  {{/if}}
+
+  <section class="gw-kiosk-stock">
+    {{#if empty}}
+    <p class="gw-kiosk-empty">{{localize "GHOSTWIRE.Kiosk.Empty"}}</p>
+    {{/if}}
+    <ul class="gw-kiosk-list">
+      {{#each listings}}
+      <li class="gw-kiosk-row {{#if missing}}missing{{/if}}">
+        <img src="{{img}}" alt="">
+        <div class="gw-kiosk-row-body">
+          <div class="gw-kiosk-row-name">{{name}}</div>
+          <div class="gw-kiosk-row-price">
+            <strong>{{priceLabel}}</strong>
+            <span class="gw-kiosk-dim">{{catalogLabel}}</span>
+          </div>
+          {{#if ../isGM}}
+          <div class="gw-kiosk-row-edit">
+            <input type="text" data-listing-uuid="{{id}}" value="{{uuid}}" placeholder="{{localize "GHOSTWIRE.Kiosk.Uuid"}}">
+            <input type="number" data-listing-price="{{id}}" min="0" step="1" value="{{overrideValue}}" placeholder="{{localize "GHOSTWIRE.Kiosk.PriceOverride"}}">
+          </div>
+          {{/if}}
+        </div>
+        <div class="gw-kiosk-row-actions">
+          <button type="button" class="gw-kiosk-btn gw-kiosk-btn-hot" data-action="buy" data-listing-id="{{id}}"
+            {{disabled (not canBuy)}}>
+            <i class="fa-solid fa-yen-sign"></i> {{localize "GHOSTWIRE.Kiosk.Buy"}}
+          </button>
+          {{#if ../isGM}}
+          <button type="button" class="gw-kiosk-btn gw-kiosk-btn-danger" data-action="removeRow" data-listing-id="{{id}}"
+            data-tooltip="{{localize "GHOSTWIRE.Kiosk.RemoveRow"}}" aria-label="{{localize "GHOSTWIRE.Kiosk.RemoveRow"}}">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+          {{/if}}
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <footer class="gw-kiosk-foot">
+    <span class="gw-kiosk-dim">{{infinite}}</span>
+    {{#if isGM}}
+    <button type="button" class="gw-kiosk-btn" data-action="addRow">
+      <i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.Kiosk.AddRow"}}
+    </button>
+    {{#if hasSheet}}
+    <button type="button" class="gw-kiosk-btn" data-action="openSheet">
+      <i class="fa-solid fa-user"></i> {{localize "GHOSTWIRE.Kiosk.OpenSheet"}}
+    </button>
+    {{/if}}
+    {{/if}}
+  </footer>
+  {{/if}}
+</div>

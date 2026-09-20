@@ -1,0 +1,11 @@
+{
+  "_id": "gwSummonsKiosk00",
+  "_key": "!folders!gwSummonsKiosk00",
+  "name": "Kiosks",
+  "type": "Actor",
+  "folder": null,
+  "sort": 500000,
+  "flags": {},
+  "color": "#00E5FF",
+  "description": ""
+}
