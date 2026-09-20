@@ -227,12 +227,13 @@ note(medIds.has("GwKickwire000001") && medIds.has("Rv0BEDaaCZ14x6GV"), "medical 
 note(armor.every(row => row.uuid.includes(".gear.Item.")), "armor UUIDs are gear pack");
 note(drones.every(row => row.uuid.includes(".vehicles.Item.")), "drone UUIDs are vehicles pack");
 
+const buzzCan = JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8"));
 const boughtFood = applyPurchase({
   wealth: 5000,
-  price: listingPrice({ price: null }, { flags: { "draw-steel-ghostwire": { gear: { price: 35 } } } }),
-  sourceItem: JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8")),
+  price: listingPrice({ price: null }, buzzCan),
+  sourceItem: buzzCan,
 });
-note(boughtFood.ok && boughtFood.wealthAfter === 4965 && boughtFood.item?.name === "GHOSTWIRE.Gear.Items.BuzzCan.Name", "purchase Buzz-Can deducts ¥35");
+note(boughtFood.ok && boughtFood.wealthAfter === 4996 && boughtFood.item?.name === "GHOSTWIRE.Gear.Items.BuzzCan.Name", "purchase Buzz-Can deducts ¥4");
 
 console.log("\n7) Chem dose plans");
 const kickwire = JSON.parse(readFileSync("src/packs/gear/consumables/chems/kickwire.json", "utf8"));
@@ -308,6 +309,16 @@ for (const path of skuFiles) {
 note(skuArtOk === 10, `all SKU img paths are module SVGs on disk (${skuArtOk}/10)`);
 note(existsSync("assets/icons/consumables/food.svg") && existsSync("assets/icons/consumables/chem.svg"), "food.svg + chem.svg fallbacks on disk");
 note(!gold.includes("kiosk"), "gold-line-scene.mjs still untouched");
+
+const foodPrices = Object.fromEntries(skuFiles.filter(p => p.includes("/food/")).map(p => {
+  const doc = JSON.parse(readFileSync(p, "utf8"));
+  return [doc.system._dsid, doc.flags["draw-steel-ghostwire"].gear.price];
+}));
+note(foodPrices["buzz-can"] === 4 && foodPrices["lyte-pouch"] === 5 && foodPrices["stall-ramen"] === 10 && foodPrices["grease-box"] === 12 && foodPrices["brick-bar"] === 3 && foodPrices["shift-chews"] === 6,
+  `food is street-snack ¥ (got ${JSON.stringify(foodPrices)})`);
+note(kickwire.flags["draw-steel-ghostwire"].gear.price === 400 && clearline.flags["draw-steel-ghostwire"].gear.price === 350 && numb.flags["draw-steel-ghostwire"].gear.price === 250 && dust.flags["draw-steel-ghostwire"].gear.price === 600, "chems keep stim ¥");
+note(/Cost:<\/strong> ¥4 /.test(lang.GHOSTWIRE.Gear.Items.BuzzCan.Description), "lang Buzz-Can is ¥4");
+note(/Cost:<\/strong> ¥3 /.test(lang.GHOSTWIRE.Gear.Items.BrickBar.Description), "lang Brick Bar is ¥3");
 
 for (const line of ok) console.log(line);
 if (fail.length) {

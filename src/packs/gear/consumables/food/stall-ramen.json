@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 1,
         "availability": "street",
-        "price": 45,
+        "price": 10,
         "modSlots": 0,
         "tags": [
           "Consumable",

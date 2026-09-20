@@ -535,6 +535,14 @@ Michael smoke 0.3.65: food/chem kiosk rows showed no image. SKU `img` used `icon
   - [x] `node tools/kiosk-smoke.mjs`
   - [ ] Foundry-verify: Food kiosk rows show icons; Medical chems show flasks; 404 still shows a glyph
 
+### Street-snack food ¥ (2026-09-20)
+Michael: “30 for a brick bar is crazy.” Food was priced like T5 gear. **SHIPPED 0.3.66.** Brick Bar ¥3, Buzz-Can ¥4, Lyte-Pouch ¥5, Shift Chews ¥6, Stall Ramen ¥10, Grease Box ¥12. Chems unchanged (Kickwire ¥400 / Clearline ¥350 / Numb-Tap ¥250 / Red Dust ¥600). No Gold Line `{ force: true }`. No PDF.
+- [x] **Street-snack ¥** (module **0.3.66**) — **pending Foundry-verify**. Done when:
+  - [x] Six food SKU `gear.price` + lang Cost lines
+  - [x] Chems not slashed
+  - [x] Gear pack rebuilt; kiosk smoke
+  - [ ] Foundry-verify: Food kiosk shows stall prices; Kickwire still ¥400
+
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B118** scene kiosk merchant (module **0.3.59**) — **pending Foundry-verify**. Done when:

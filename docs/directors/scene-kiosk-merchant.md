@@ -36,7 +36,7 @@ New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk au
 
 ## Street consumables
 
-Food and drink are meals. Chems are doses:
+Food and drink are stall snacks (Brick Bar ¥3, Buzz-Can ¥4, Lyte-Pouch ¥5, Shift Chews ¥6, Stall Ramen ¥10, Grease Box ¥12). Chems are doses:
 
 - **Kickwire** (¥400) — combat stim: temp Stamina, Speed, Physique edge; Weakened crash.
 - **Clearline** (¥350) — focus chem: Logic + Instinct edge for 2 rounds.
