@@ -1,6 +1,6 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56**, **Linked documented in RAW journals + VOIDMARK index 2026-09-20 / 0.3.57**, **Ping vs Read/Write doctrine 2026-09-20 / 0.3.62**, **node Actors always Connected on the Console roster 2026-09-20 / 0.3.63**, **Console revealed-first A–Z lists + sheet hide for temp Matrix Verbs 2026-09-20 / 0.3.64**, **ready leftover strip does not pass Array index as a flag scope 2026-09-20 / 0.3.66** (pending Michael’s Foundry test).
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56**, **Linked documented in RAW journals + VOIDMARK index 2026-09-20 / 0.3.57**, **Ping vs Read/Write doctrine 2026-09-20 / 0.3.62**, **node Actors always Connected on the Console roster 2026-09-20 / 0.3.63**, **Console revealed-first A–Z lists + sheet hide for temp Matrix Verbs 2026-09-20 / 0.3.64**, **ready leftover strip does not pass Array index as a flag scope 2026-09-20 / 0.3.66**, **hero/NPC Has Vision on (`sight.enabled`) 2026-09-20 / 0.3.67** (pending Michael’s Foundry test).
 **Source of record for rules text:** `docs/raw/21-the-wire.md` — Connection States and Matrix Verbs. This page only describes how Foundry implements them; if the two disagree, RAW wins and this page (and the pack) gets fixed.
 **Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 
@@ -151,3 +151,9 @@ Only a GM can change it. Connection state is read from actor statuses (and mirro
 While a hero is **Overlaid**, their token's view gets a readable cyan/pink HUD wash; while **Jacked In**, meatspace drops into deep, desaturated shadow and only coloured light (neon, node glow) stays bright. **Disconnected** and **Linked** are normal vision (Linked is comms-only; no AR wash). The tint follows the status, so Connect, Toggle Connection State, Jack Out, and the token HUD all switch it, and the three on-net statuses replace each other rather than stacking.
 
 It uses Foundry vision modes (*Wired Overlay*, *Jacked In*), so it follows Foundry's vision rules: it shows on the client looking through that token (the players who own it, or a GM who controls it), only on Scenes with **Token Vision** enabled and for tokens with vision. Other players, and a GM with no token selected, see normally. The token's own vision settings aren't changed. Code: `scripts/wired-vision.mjs`.
+
+### Token Has Vision (0.3.67)
+
+Ghostwire turns **Has Vision** on (`prototypeToken.sight.enabled` / the placed token’s `sight.enabled`) for every **hero** and **npc** Actor it creates — world create, import from pack, drag from the compendium. Range, angle, and vision mode already on the prototype are left alone. A one-time GM ready pass does the same for existing world heroes/NPCs and their placed tokens.
+
+**Not in scope:** Wire node Actors (`kind: node` / `node-template`), kiosks (`kind: kiosk`), and vehicle/drone machine stubs (`kind: vehicle` / `drone`). Those stay vision-off so they don’t punch fog as infrastructure tokens. Overlay / Jacked In tints still need the **Scene** Token Vision checkbox. Code: `scripts/token-vision.mjs`.

@@ -33,6 +33,7 @@ import { registerGoldLineScene } from "./gold-line-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
+import { registerTokenVision } from "./token-vision.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -112,6 +113,7 @@ Hooks.once("init", () => {
   registerGoldLineScene();
   registerKiosk();
   registerConsumableUse();
+  registerTokenVision();
 });
 
 // ---------- Wired connection states ----------
@@ -546,6 +548,7 @@ function getIntegrity(actor) {
 const setIntegrity = (actor, value) => actor.update({ [`flags.${MODULE_ID}.integrity.value`]: value });
 
 // New heroes: Integrity 20/20 and ¥5,000 starting funds. Duplicates, imports, and compendium heroes keep their data.
+// Token Has Vision for heroes/NPCs is in scripts/token-vision.mjs (preCreateActor + preCreateToken + ready).
 
 // Pregens used to store only biSpent/biRemaining. The sheet reads integrity.value/max — migrate once.
 Hooks.once("ready", async () => {
