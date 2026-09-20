@@ -23,7 +23,7 @@ Droppable **feature** in Ghostwire Matrix › Support:
 
 On create (NPC sheet drop or GM button), `scripts/wired-kit.mjs` stamps the kit feature only. It does **not** copy Matrix Verb abilities (`grantMatrixVerbs` is a no-op). Idempotent: a second click does not duplicate the kit. Removing the kit removes leftover `wireKitGranted` copies if any remain from pre-B117 worlds.
 
-**Connect interface (0.3.68).** `itemIsConnectInterface` treats Wire Kit as a Wire interface: `kind === "wire-kit"` and/or `_dsid === "wire-kit-matrix-verbs"`, plus the pack `connectInterface` stamp. Existing world copies that only have `kind: "wire-kit"` (Michael’s drone on scene) can Connect → Linked without a separate commlink, deck, datajack, or RCC `matrix.role`. RCC-linked drones may still use role `rcc` if present; do **not** require it for the Director stamp path.
+**Connect interface (0.3.68).** `itemIsConnectInterface` treats Wire Kit as a Wire interface: `kind === "wire-kit"` and/or `_dsid === "wire-kit-matrix-verbs"`, plus the pack `connectInterface` stamp. Existing world copies that only have `kind: "wire-kit"` (Michael’s drone on scene) can Connect → Linked without a separate commlink, deck, datajack, or RCC `matrix.role`. RCC-linked drones may still use role `rcc` if present; do **not** require it for the Director stamp path. **Wrench drone control (RCC or Rigger’s Harness) counts as a Connect interface.**
 
 Heroes: the kit does **not** duplicate verbs (notify and skip). Bestiary pack Actors are **not** pre-stamped (except **pack drone** templates).
 

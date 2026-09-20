@@ -320,6 +320,7 @@ ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.49"), "B115 spike");
 ok(/Connect interface/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Connect interface");
 ok(/pack drone/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents pack drone Wire Kit stamp");
+ok(/Wrench drone control/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Wrench drone control as Connect");
 ok(b112.includes("B113"), "B112 notes B113 art");
 ok(b112.includes("Cam Controls"), "B112 spike cameras-in-scope");
 ok(readFileSync("docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md", "utf8").includes("node-light-control.webp"), "B113 spike");

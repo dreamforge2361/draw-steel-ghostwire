@@ -241,10 +241,12 @@ const requiredTags = [
   "nyx-switchblade", "ferrum-padlock-6", "meridian-lookout",
   "wire-kit-matrix-verbs",
   "remote-box", "fleet-deck", "war-table", "command-rig", "hydra-console",
-  "riggers-harness", "fabricators-bench", "field-chassis",
+  "riggers-harness",
 ];
 ok(requiredTags.every(d => taggedDsids.has(d)), `connectInterface tags (${[...taggedDsids].sort().join(",")})`);
 ok(!taggedDsids.has("spoof-kit"), "Spoof Kit is not a Connect interface");
+ok(!taggedDsids.has("fabricators-bench") && !taggedDsids.has("field-chassis"), "Fabricator's Bench and Field Chassis are not Connect interfaces");
+ok(!taggedDsids.has("neural-snap-shot"), "Neural Snap Shot signature is not a Connect interface");
 const commlink = readBomFreeJson("src/packs/gear/general/comms/commlink.json");
 ok(commlink.system._dsid === "commlink" && commlink.flags["draw-steel-ghostwire"].wired.connectInterface, "street Commlink SKU");
 ok(itemIsConnectInterface(commlink), "itemIsConnectInterface sees Commlink");
@@ -279,11 +281,15 @@ ok(harness.flags["draw-steel-ghostwire"].matrix.role === "rcc", "Rigger's Harnes
 ok(itemIsConnectInterface(harness), "itemIsConnectInterface sees Rigger's Harness");
 ok(actorHasConnectInterface({ items: [harness] }), "Wrench with Rigger's Harness can Connect");
 ok(itemIsConnectInterface({ system: { _dsid: "riggers-harness" }, flags: {} }), "riggers-harness dsid is enough without flags");
+ok(!itemIsConnectInterface(readBomFreeJson("src/packs/kits/tech/fabricators-bench.json")), "Fabricator's Bench tool rig is not a Connect interface");
+ok(!itemIsConnectInterface(readBomFreeJson("src/packs/kits/tech/field-chassis.json")), "Field Chassis turret tablet is not a Connect interface");
+ok(!itemIsConnectInterface(readBomFreeJson("src/packs/kits/tech/riggers-harness-signature-ability.json")), "Neural Snap Shot is a strike, not an interface");
 const commandRig = readBomFreeJson("src/packs/matrix/rccs/command-rig.json");
 ok(commandRig.flags["draw-steel-ghostwire"].matrix.role === "rcc" && commandRig.flags["draw-steel-ghostwire"].wired.connectInterface, "Command Rig RCC is a Connect interface");
 ok(itemIsConnectInterface(commandRig), "itemIsConnectInterface sees Command Rig");
 ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { matrix: { modFamily: ["rcc"] } } } }), "matrix modFamily rcc is a Connect interface");
-ok(["remote-box", "fleet-deck", "war-table", "command-rig", "hydra-console", "riggers-harness", "fabricators-bench", "field-chassis"].every(d => RIGGER_INTERFACE_DSIDS.has(d)), "RIGGER_INTERFACE_DSIDS covers rigger Kits + RCC SKUs");
+ok(["remote-box", "fleet-deck", "war-table", "command-rig", "hydra-console", "riggers-harness"].every(d => RIGGER_INTERFACE_DSIDS.has(d)), "RIGGER_INTERFACE_DSIDS covers Rigger's Harness + RCC SKUs");
+ok(!RIGGER_INTERFACE_DSIDS.has("fabricators-bench") && !RIGGER_INTERFACE_DSIDS.has("field-chassis"), "workshop/turret kits are not in RIGGER_INTERFACE_DSIDS");
 const cocoon = readBomFreeJson("src/packs/mods/vehicles/rigger-cocoon.json");
 ok(!itemIsConnectInterface(cocoon), "Rigger Cocoon vehicle mod is not a Connect interface");
 
@@ -317,7 +323,8 @@ ok(/pregens/i.test(spike), "spike names pregens");
 ok(/Anyone vs Hacker vs Technomancer/.test(spike) && /Padlock-6/.test(spike), "spike documents anyone vs Hacker vs Technomancer");
 ok(/connectInterface/.test(spike) && /Commlink/.test(spike) && /Technomancer/.test(spike) && /Wire Kit/.test(spike), "spike documents Connect interface allow-list");
 ok(/kind: "wire-kit"|wire-kit-matrix-verbs/.test(spike) && /0\.3\.68/.test(spike), "spike names Wire Kit as Connect interface (0.3.68)");
-ok(/Rigger/.test(spike) && /≡ deck|== deck|counts as a deck/.test(spike), "spike documents Rigger interface ≡ deck");
+ok(/Rigger.?s Harness/.test(spike) && /RCC/.test(spike) && /Wrench drone control/.test(spike), "spike documents Wrench drone control (RCC or Rigger's Harness)");
+ok(/Rigger/.test(spike) && /≡ deck|== deck|counts as a deck|counts as a Connect interface/.test(spike), "spike documents Rigger interface ≡ deck");
 ok(/No new/.test(spike) && /everyone gets Programs/.test(spike), "spike refuses everyone-gets-Programs");
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");

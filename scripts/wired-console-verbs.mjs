@@ -365,11 +365,9 @@ export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, ch
 const MODULE_FLAG = "draw-steel-ghostwire";
 const CONNECT_ROLES = new Set(["deck", "rcc", "interface"]);
 
-/** Wrench rigger Kits + RCC SKUs: Rigger interface ≡ deck for Connect. */
+/** Wrench drone control: Rigger’s Harness + RCC SKUs (≡ deck for Connect). */
 export const RIGGER_INTERFACE_DSIDS = new Set([
   "riggers-harness",
-  "fabricators-bench",
-  "field-chassis",
   "remote-box",
   "fleet-deck",
   "war-table",
@@ -395,7 +393,7 @@ export function actorClassDsid(actor) {
 /**
  * Tagged `flags.draw-steel-ghostwire.wired.connectInterface`, Wire Kit
  * (`kind: "wire-kit"` / `_dsid` wire-kit-matrix-verbs), a matrix deck / RCC / interface,
- * or a Rigger interface (Wrench rigger Kit / RCC SKU / `modFamily: rcc`).
+ * or Wrench drone control (Rigger’s Harness / RCC SKU / `modFamily: rcc`).
  * Wire Kit alone is the Director stamp path for drones — do not also require an RCC role.
  */
 export function itemIsConnectInterface(item) {
@@ -414,7 +412,7 @@ export function itemIsConnectInterface(item) {
 
 /**
  * Connect (and thus the rest of the applet) needs a Wire interface:
- * tagged comms / deck / RCC / chrome / Wire Kit / Rigger interface, or Technomancer class.
+ * tagged comms / deck / RCC / chrome / Wire Kit / Rigger’s Harness, or Technomancer class.
  */
 export function actorHasConnectInterface(actor) {
   if (actorClassDsid(actor) === "technomancer") return true;
