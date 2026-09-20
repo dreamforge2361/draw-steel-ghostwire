@@ -109,7 +109,7 @@ Agents are software constructs you compile from your deck — **Probe** (recon /
 > **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.
 
 > **In Foundry**
-> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a roster anchor only). Agents are not sprites: do not drag a sprite SKU.
+> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU.
 
 ## Level 1-10 Progression Table
 

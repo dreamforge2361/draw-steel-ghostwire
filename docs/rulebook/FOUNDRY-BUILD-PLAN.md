@@ -594,12 +594,13 @@ Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **
   - [ ] Foundry-verify: Overlay **Use** Compile Agent → Spike token; Linked refuses; cap 2; **Use** Decompile removes token+Actor; sheet shows the two ability icons
 
 ### B121 Wired Console Constructs (2026-09-20)
-Spec: `docs/spikes/B121-CONSOLE-CONSTRUCTS.md`. Separate **Constructs** Console section for compiled sprites (`kind: sprite`) and Agents (`kind: agent`). Lock A: scene token is a roster anchor; Wire play is the Console; meat actions off unless an ability bridges. No construct edges on `wiredBoard` links. Face chip is a label. Command opens Compile sheet (does not spawn). Decompile uses shipped APIs. **SHIPPED 0.3.78.** No Gold Line `{ force: true }`. No PDF.
+Spec: `docs/spikes/B121-CONSOLE-CONSTRUCTS.md`. Separate **Constructs** Console section for compiled sprites (`kind: sprite`) and Agents (`kind: agent`). Lock A: scene token is a roster anchor; Wire play is the Console; meat actions off unless an ability bridges. Overlay/Jacked In compilers on the same scene see each other’s constructs without Scan (tokens stay meat-side). No construct edges on `wiredBoard` links. Face chip is a label. Command opens Compile sheet (does not spawn). Decompile uses shipped APIs. **SHIPPED 0.3.78.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B121** Console Constructs (module **0.3.78**) — **pending Foundry-verify**. Done when:
   - [x] Constructs panel + Connections filter + pan/Command/Decompile
+  - [x] Overlay/Jacked In same-scene peer visibility (no Scan; Linked refused; tokens not revealed)
   - [x] RAW 21 Lock A + Foundry notes + spike
   - [x] Smoke: `node tools/b121-console-constructs-smoke.mjs`
-  - [ ] Foundry-verify: Compile Sprite + Compile Agent appear in Constructs not Connections; pan-to-anchor; node links unchanged; Command opens Compile sheet; Decompile still removes token+Actor
+  - [ ] Foundry-verify: Compile Sprite + Compile Agent appear in Constructs not Connections; pan-to-anchor; node links unchanged; Command opens Compile sheet; Decompile still removes token+Actor; two Overlay compilers see each other’s constructs without Scan
 
 ### Mule-Bot dual Item + Actor (2026-09-20)
 Michael: “Bug: Mulebot is treasure? It should be an actor.” **Treasure is intentional** — every Ghostwire drone/vehicle SKU is Draw Steel `type: treasure` (ownership / ¥ / mods). Deploy stamps a linked Actor from the Summons **band** template (`mule-bot` → `machine-drone-medium`); Recall deletes the Actor, Item stays. Mule-Bot flags already matched sibling drones (Stinger / Warhound). **SHIPPED 0.3.75:** named Summons Actor is optional Director placement for an unowned mule (Wire Kit, hauler plate). Deploy does **not** switch to named-SKU templates (other drones unchanged). No Gold Line `{ force: true }`. No PDF.

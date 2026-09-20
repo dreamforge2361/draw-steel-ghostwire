@@ -65,7 +65,7 @@
       <p class="wc-dim wc-construct-hint">{{localize "GHOSTWIRE.WiredConsole.Constructs.LockA"}}</p>
       <ul class="wc-construct-list">
         {{#each constructs}}
-        <li class="wc-construct-row kind-{{kind}}{{#if anchored}} is-anchored{{/if}}" data-action="selectConstruct" data-actor-uuid="{{uuid}}" data-tooltip="{{panTooltip}}">
+        <li class="wc-construct-row kind-{{kind}}{{#if anchored}} is-anchored{{/if}}{{#if peerVisible}} is-peer{{/if}}" data-action="selectConstruct" data-actor-uuid="{{uuid}}" data-owned="{{#if owned}}true{{else}}false{{/if}}" data-tooltip="{{#if owned}}{{panTooltip}}{{else}}{{localize "GHOSTWIRE.WiredConsole.Constructs.PeerHint"}}{{/if}}">
           <img src="{{img}}" alt="">
           <div class="wc-construct-body">
             <div class="wc-construct-head">
@@ -85,10 +85,10 @@
               {{#if faceLabel}}<span class="wc-tag wc-face" data-tooltip="{{faceLabel}}">{{faceLabel}}</span>{{/if}}
             </div>
             <div class="wc-construct-actions">
+              {{#if owned}}
               <button type="button" class="wc-btn wc-btn-small" data-action="selectConstruct" data-actor-uuid="{{uuid}}" {{disabled (not anchored)}} data-tooltip="{{panTooltip}}" aria-label="{{panTooltip}}">
                 <i class="fa-solid fa-location-crosshairs"></i>
               </button>
-              {{#if owned}}
               <button type="button" class="wc-btn wc-btn-small" data-action="commandConstruct" data-actor-uuid="{{uuid}}" data-tooltip="{{commandTooltip}}" aria-label="{{localize "GHOSTWIRE.WiredConsole.Constructs.Command"}}">
                 <i class="fa-solid fa-terminal"></i>
               </button>

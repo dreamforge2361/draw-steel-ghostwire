@@ -12,11 +12,13 @@ import {
   compareConsoleConstructs,
   constructKind,
   constructLeavesConnections,
+  constructPeerVisible,
   constructStamina,
   isConstructActor,
   nearestFaceNode,
   resolveConstructFace,
   sortConsoleConstructs,
+  viewerImmersedOnScene,
 } from "../scripts/wired-constructs.mjs";
 
 const failures = [];
@@ -103,7 +105,63 @@ const playerRows = collectConsoleConstructs({
   canView: actor => !!actor?.isOwner,
   resolveActor: uuid => world.find(a => a.uuid === uuid) ?? null,
 });
-ok(playerRows.length === 1 && playerRows[0].kind === "sprite", "player sees owned sprite only (Agent compiler not owned)");
+ok(playerRows.length === 1 && playerRows[0].kind === "sprite", "disconnected player sees owned sprite only (Agent compiler not owned)");
+
+const states = { "Actor.tech": "overlay", "Actor.hack": "overlay" };
+const overlayPeer = collectConsoleConstructs({
+  worldActors: world,
+  sceneTokens: tokens,
+  boardNodes,
+  placedNodes,
+  isGM: false,
+  canView: actor => !!actor?.isOwner,
+  resolveActor: uuid => world.find(a => a.uuid === uuid) ?? null,
+  getWiredState: actor => states[actor?.uuid] ?? "disconnected",
+});
+ok(viewerImmersedOnScene({
+  sceneTokens: tokens,
+  canView: actor => !!actor?.isOwner,
+  getWiredState: actor => states[actor?.uuid] ?? "disconnected",
+}), "owned Overlay compiler counts as immersed on this scene");
+ok(overlayPeer.some(r => r.kind === "sprite" && r.owned), "Overlay player still sees owned sprite");
+const peerAgent = overlayPeer.find(r => r.kind === "agent");
+ok(!!peerAgent && peerAgent.owned === false && peerAgent.peerVisible === true, "Overlay player sees Overlay peer Agent without Scan");
+ok(constructPeerVisible({
+  compiler: hack,
+  compilerOnScene: true,
+  viewerImmersed: true,
+  getWiredState: actor => states[actor?.uuid] ?? "disconnected",
+}), "constructPeerVisible Overlay+Overlay");
+
+const linkedTarget = collectConsoleConstructs({
+  worldActors: world,
+  sceneTokens: tokens,
+  isGM: false,
+  canView: actor => !!actor?.isOwner,
+  resolveActor: uuid => world.find(a => a.uuid === uuid) ?? null,
+  getWiredState: actor => (actor?.uuid === "Actor.tech" ? "overlay" : actor?.uuid === "Actor.hack" ? "linked" : "disconnected"),
+});
+ok(!linkedTarget.some(r => r.kind === "agent"), "Overlay player does not see Linked compiler's Agent");
+
+const linkedViewer = collectConsoleConstructs({
+  worldActors: world,
+  sceneTokens: tokens,
+  isGM: false,
+  canView: actor => !!actor?.isOwner,
+  resolveActor: uuid => world.find(a => a.uuid === uuid) ?? null,
+  getWiredState: actor => (actor?.uuid === "Actor.tech" ? "linked" : actor?.uuid === "Actor.hack" ? "overlay" : "disconnected"),
+});
+ok(!linkedViewer.some(r => r.kind === "agent"), "Linked player does not see Overlay peer Agent");
+
+const jackedPeer = collectConsoleConstructs({
+  worldActors: world,
+  sceneTokens: tokens,
+  isGM: false,
+  canView: actor => !!actor?.isOwner,
+  resolveActor: uuid => world.find(a => a.uuid === uuid) ?? null,
+  getWiredState: actor => (actor?.uuid === "Actor.tech" || actor?.uuid === "Actor.hack" ? "jackedIn" : "disconnected"),
+});
+ok(jackedPeer.some(r => r.kind === "agent" && r.peerVisible), "Jacked In compilers see each other without Scan");
 
 const flagged = { ...sprite, flags: { "draw-steel-ghostwire": { kind: "sprite", archetype: "data", hybridTier: "minor", compiler: "Actor.tech", wiredFace: "cam" } } };
 const flaggedRows = collectConsoleConstructs({
@@ -140,6 +198,9 @@ ok(!constructsSrc.includes("setLink") && !constructsSrc.includes("wiredBoard"), 
 console.log("\n4) Console wiring / Command does not compile");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("constructLeavesConnections") && consoleSrc.includes("collectConsoleConstructs"), "Console collects Constructs and filters Connections");
+ok(consoleSrc.includes("getWiredState: actor => this.getWiredState"), "Console passes Wired state into Constructs collect");
+ok(consoleSrc.includes("dataset.owned") && consoleSrc.includes("tokens stay meat-side"), "peer rows do not pan to meat tokens");
+ok(!/token\.hidden\s*=\s*false/.test(constructsSrc) && !/DOCUMENT_OWNERSHIP/.test(constructsSrc), "construct helpers do not unhide or re-own meat tokens");
 ok(consoleSrc.includes("selectConstruct") && consoleSrc.includes("focusActorTokenOnCanvas"), "pan-to-anchor action");
 ok(consoleSrc.includes("commandConstruct") && consoleSrc.includes("decompileConstruct"), "Command / Decompile actions");
 ok(consoleSrc.includes("commandSprite") && consoleSrc.includes("commandAgent"), "Command hooks existing sprite/agent APIs");
@@ -150,6 +211,7 @@ ok(consoleSrc.includes("setLink(nodes, nodeId, otherId") && !/setLink\([^)]*cons
 const tpl = readFileSync("templates/wired-console.hbs", "utf8");
 ok(tpl.includes("wc-constructs") && tpl.includes("GHOSTWIRE.WiredConsole.Constructs.Title"), "template has Constructs section");
 ok(tpl.includes("wc-roster") && tpl.includes("wc-nodes"), "Connections and Nodes sections remain");
+ok(tpl.includes("data-owned=") && tpl.includes("GHOSTWIRE.WiredConsole.Constructs.PeerHint"), "peer rows are Console-only (no pan/Command)");
 ok(tpl.includes("data-action=\"selectConstruct\"") && tpl.includes("data-action=\"commandConstruct\"") && tpl.includes("data-action=\"decompileConstruct\""), "construct row actions");
 ok(!tpl.includes("data-link-to") || tpl.includes("data-link-to=\"{{id}}\""), "link checkboxes stay on selected node, not Constructs");
 
@@ -173,18 +235,22 @@ ok(canvasSrc.includes("export async function focusActorTokenOnCanvas"), "shared 
 console.log("\n5) Lang / docs / Lock A");
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.Constructs.Title === "Constructs", "lang Constructs title");
-ok(/roster anchor/i.test(lang.GHOSTWIRE.WiredConsole.Constructs.LockA), "lang Lock A");
+ok(/roster anchor/i.test(lang.GHOSTWIRE.WiredConsole.Constructs.LockA) && /without Scan/i.test(lang.GHOSTWIRE.WiredConsole.Constructs.LockA), "lang Lock A");
+ok(/meat-side/i.test(lang.GHOSTWIRE.WiredConsole.Constructs.PeerHint), "lang peer hint keeps tokens meat-side");
 ok(lang.GHOSTWIRE.WiredConsole.Constructs.Band.minor === "Minor", "lang band chips");
 ok(/Compile Sprite/.test(lang.GHOSTWIRE.Summons.Sprites.UI.CommandHint), "sprite CommandHint");
 ok(/Compile Agent/.test(lang.GHOSTWIRE.Summons.Agents.UI.CommandHint), "agent CommandHint");
 
 const raw21 = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/Lock A/.test(raw21) && /roster anchor/.test(raw21), "RAW 21 Lock A roster anchor");
+ok(/without Scan/.test(raw21) && /Overlay \/ Jacked In compilers/.test(raw21), "RAW 21 Overlay/Jacked In peer visibility without Scan");
+ok(/Meat-side anchors/.test(raw21) && /does \*\*not\*\* reveal/.test(raw21), "RAW 21 meat-side anchors stay off the canvas");
 ok(/Wired \/ EW/.test(raw21) && /hybrid band/.test(raw21), "RAW 21 construct-vs-construct Wire/EW + band economy");
 ok(/construct/.test(raw21) && /edges to the board graph/.test(raw21), "RAW 21 forbids construct graph edges");
 
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/Constructs \(B121/.test(foundry) && /kind: "sprite"/.test(foundry), "Foundry notes document Constructs panel");
+ok(/without Scan/.test(foundry) && /meat-side/.test(foundry), "Foundry notes document Overlay peer visibility + meat-side tokens");
 ok(!/gold-line-scene/.test(consoleSrc), "Console still does not import gold-line-scene");
 
 if (failures.length) {

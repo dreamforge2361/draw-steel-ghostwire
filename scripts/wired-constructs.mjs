@@ -5,6 +5,7 @@
 
 import { compareConsoleNames } from "./wired-console-verbs.mjs";
 import { tokenCenter } from "./wired-canvas-focus.mjs";
+import { isFullyConnected } from "./wired-state.mjs";
 
 export const MODULE_ID = "draw-steel-ghostwire";
 export const CONSTRUCT_KINDS = ["sprite", "agent"];
@@ -107,10 +108,56 @@ export function resolveConstructFace({
   };
 }
 
-function viewerSeesConstruct({ actor, compiler, isGM, canView }) {
+/** Overlay / Jacked In. Linked is soft presence and does not grant Constructs peer visibility. */
+export function compilerIsImmersed(compiler, getWiredState) {
+  if (!compiler || typeof getWiredState !== "function") return false;
+  return isFullyConnected(getWiredState(compiler));
+}
+
+/**
+ * True when this viewer owns an Overlay or Jacked In actor on the viewed scene.
+ * That presence is what lets same-scene compilers see each other's constructs without Scan.
+ */
+export function viewerImmersedOnScene({
+  sceneTokens = [],
+  canView = () => false,
+  getWiredState = () => "disconnected",
+} = {}) {
+  for (const token of Array.isArray(sceneTokens) ? sceneTokens : []) {
+    const actor = token?.actor ?? null;
+    if (!actor || !canView(actor)) continue;
+    if (compilerIsImmersed(actor, getWiredState)) return true;
+  }
+  return false;
+}
+
+/**
+ * Peer Wire visibility: both the viewer and the construct's compiler are Overlay/Jacked In
+ * on this scene. Does not require Scan. Does not grant Command/Decompile or reveal meat tokens.
+ */
+export function constructPeerVisible({
+  compiler = null,
+  compilerOnScene = false,
+  viewerImmersed = false,
+  getWiredState = () => "disconnected",
+} = {}) {
+  if (!viewerImmersed || !compilerOnScene || !compiler) return false;
+  return compilerIsImmersed(compiler, getWiredState);
+}
+
+function viewerSeesConstruct({
+  actor,
+  compiler,
+  isGM,
+  canView,
+  compilerOnScene,
+  viewerImmersed,
+  getWiredState,
+}) {
   if (isGM) return true;
   if (typeof canView !== "function") return false;
-  return !!(canView(actor) || (compiler && canView(compiler)));
+  if (canView(actor) || (compiler && canView(compiler))) return true;
+  return constructPeerVisible({ compiler, compilerOnScene, viewerImmersed, getWiredState });
 }
 
 function actorOnScene(actor, tokens) {
@@ -119,8 +166,12 @@ function actorOnScene(actor, tokens) {
 
 /**
  * Scene-scoped Constructs roster. A compiled sprite/Agent appears when its token
- * or its compiler's token is on the viewed scene. Players see owned constructs
- * (or ones whose compiler they own); Directors see all of those on the scene.
+ * or its compiler's token is on the viewed scene.
+ *
+ * Visibility: Director; owner (construct or compiler); **or** Overlay/Jacked In
+ * compilers on the same scene (peer Wire view, no Scan). Linked does not grant
+ * peer visibility. `owned` stays owner-only so Command/Decompile stay meat-side
+ * off the peer roster. Anchor tokens are not revealed on the canvas.
  */
 export function collectConsoleConstructs({
   worldActors = [],
@@ -130,11 +181,13 @@ export function collectConsoleConstructs({
   isGM = false,
   canView = () => false,
   resolveActor = () => null,
+  getWiredState = () => "disconnected",
   moduleId = MODULE_ID,
   gridSize = 100,
 } = {}) {
   const tokens = Array.isArray(sceneTokens) ? sceneTokens : [];
   const boardById = new Map((Array.isArray(boardNodes) ? boardNodes : []).map(node => [node.id, node]));
+  const viewerImmersed = isGM ? true : viewerImmersedOnScene({ sceneTokens: tokens, canView, getWiredState });
   const rows = [];
   const seen = new Set();
 
@@ -149,7 +202,9 @@ export function collectConsoleConstructs({
     const token = tokens.find(t => tokenMatchesActor(t, actor)) ?? null;
     const compilerOnScene = compiler ? actorOnScene(compiler, tokens) : false;
     if (!token && !compilerOnScene) continue;
-    if (!viewerSeesConstruct({ actor, compiler, isGM, canView })) continue;
+    if (!viewerSeesConstruct({
+      actor, compiler, isGM, canView, compilerOnScene, viewerImmersed, getWiredState,
+    })) continue;
 
     seen.add(uuid);
     const stamina = constructStamina(actor);
@@ -163,6 +218,7 @@ export function collectConsoleConstructs({
       boardById,
       isGM,
     });
+    const owned = isGM || canView(actor) || (compiler ? canView(compiler) : false);
 
     rows.push({
       uuid,
@@ -177,7 +233,10 @@ export function collectConsoleConstructs({
       stamina,
       anchored: !!token,
       face,
-      owned: isGM || canView(actor) || (compiler ? canView(compiler) : false),
+      owned,
+      peerVisible: !owned && constructPeerVisible({
+        compiler, compilerOnScene, viewerImmersed, getWiredState,
+      }),
     });
   }
   return rows;

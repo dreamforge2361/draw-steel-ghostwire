@@ -14,8 +14,10 @@ import { focusActorTokenOnCanvas, focusPlacedNodeOnCanvas } from "./wired-canvas
 import {
   collectConsoleConstructs,
   constructLeavesConnections,
+  constructPeerVisible,
   isConstructActor,
   sortConsoleConstructs,
+  viewerImmersedOnScene,
 } from "./wired-constructs.mjs";
 import { commandSprite, decompileSprite } from "./sprites.mjs";
 import { commandAgent, decompileAgent } from "./agents.mjs";
@@ -276,6 +278,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         try { return uuid ? fromUuidSync(uuid) : null; }
         catch { return null; }
       },
+      getWiredState: actor => this.getWiredState?.(actor) ?? "disconnected",
       gridSize: this.viewedScene?.grid?.size ?? 100,
     }), { lang }).map(row => ({
       ...row,
@@ -494,6 +497,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const row = target.closest("[data-actor-uuid]");
     const uuid = row?.dataset.actorUuid ?? target.dataset.actorUuid ?? null;
     if (!uuid) return;
+    // Peer Overlay/Jacked In rows are Console-only (Lock A: tokens stay meat-side).
+    if (row?.dataset.owned !== "true" && !game.user.isGM) return;
     const actor = await fromUuid(uuid);
     await focusActorTokenOnCanvas({
       actorId: actor?.id ?? null,
@@ -1170,6 +1175,7 @@ export function registerWiredConsole({ getWiredState }) {
         openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings,
         applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor, actorHasConnectInterface,
         isTemporaryConsoleVerb, collectConsoleConstructs, sortConsoleConstructs, isConstructActor,
+        viewerImmersedOnScene, constructPeerVisible,
       };
     }
   });

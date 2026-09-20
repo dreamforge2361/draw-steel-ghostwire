@@ -92,6 +92,8 @@ ok(
   constructsQ.some(h => /construct/i.test(h.text) && /lock a/i.test(h.text) && /roster anchor/i.test(h.text)),
   "Constructs query retrieves Lock A roster-anchor language",
 );
+const peerQ = retrieve(index, "Do Overlay Jacked In compilers see each other's sprites Agents without Scan?");
+ok(peerQ.some(h => /without Scan/i.test(h.text) && /Overlay/i.test(h.text)), "Constructs peer-visibility query retrieves Overlay without Scan");
 
 const statesQ = retrieve(index, "What are the Wire connection states?");
 ok(statesQ.some(h => /linked/i.test(h.text) && /overlay/i.test(h.text) && /jacked in/i.test(h.text)), "connection-states query names Linked, Overlay, and Jacked In");
