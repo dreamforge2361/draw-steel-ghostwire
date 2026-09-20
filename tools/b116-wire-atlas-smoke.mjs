@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B116 Wire Atlas smoke (module 0.3.52; atlas art 0.3.51).
+ * B116 Wire Atlas smoke (module 0.3.54; atlas art 0.3.51; megacorp Hosts 0.3.54).
  * Catalog + Michael Relay / Host / Segment art. Does not generate art or touch Gold Line.
  *
  * Run: node tools/b116-wire-atlas-smoke.mjs
@@ -20,10 +20,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("B116 Wire Atlas smoke (0.3.52)");
+console.log("B116 Wire Atlas smoke (0.3.54)");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.52", `module.json is 0.3.52 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
 
 const spike = readFileSync("docs/spikes/B116-WIRE-ATLAS.md", "utf8");
 ok(/Relay/.test(spike) && /Host/.test(spike) && /Segment/.test(spike), "spike names Relay / Host / Segment");
@@ -49,7 +49,8 @@ ok(!/!\[[^\]]*]\([^)]+\)|<img\b/.test(`${atlasPage?.text?.markdown ?? ""}\n${atl
 const lib = readBomFreeJson("assets/tokens/wired/library.json");
 ok(lib.base === "modules/draw-steel-ghostwire/assets/tokens/wired", "library.json base path");
 ok(/placeholder: false/.test(lib.dropIn) && /Michael art/.test(lib.dropIn), "library.json dropIn notes atlas art landed");
-const atlas = (lib.styles ?? []).filter(s => s.family === "atlas");
+const atlas = (lib.styles ?? []).filter(s => s.family === "atlas" && !s.hostTicker);
+const hosts = (lib.styles ?? []).filter(s => s.hostTicker);
 const ids = atlas.map(s => s.id);
 ok(ids.includes("node-relay") && ids.includes("node-host") && ids.includes("node-segment"), "catalog has three atlas ids");
 ok(!ids.includes("node-endpoint") && !(lib.styles ?? []).some(s => s.id === "node-endpoint"), "v1 catalog does not ship Endpoint");
@@ -58,6 +59,8 @@ ok(atlas.every(s => s.family === "atlas"), "atlas rows marked family=atlas");
 ok(atlas.find(s => s.id === "node-relay")?.altitude === "region", "Relay altitude is region");
 ok(atlas.find(s => s.id === "node-host")?.altitude === "region", "Host altitude is region");
 ok(atlas.find(s => s.id === "node-segment")?.altitude === "site", "Segment altitude is site");
+ok(hosts.length === 10 && hosts.every(s => s.family === "atlas" && s.placeholder === false), "ten megacorp Host skins sit beside generic Host");
+ok(!hosts.some(s => s.id === "node-host"), "generic Host is not a hostTicker row");
 
 const catalogIds = ATLAS_TOKEN_LIBRARY.map(s => s.id);
 ok(catalogIds.join(",") === ids.join(","), "scripts/wired-atlas-catalog.mjs matches library.json atlas ids");

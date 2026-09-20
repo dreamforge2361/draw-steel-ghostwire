@@ -1,0 +1,69 @@
+{
+  "_id": "gwDhAerialRecon0",
+  "_key": "!journal!gwDhAerialRecon0",
+  "name": "GHOSTWIRE.Runs.Journals.GoldLineAerialRecon",
+  "img": "modules/draw-steel-ghostwire/assets/items/deadhead/gold-line-aerial-recon.webp",
+  "folder": "gwRunsDeadhead00",
+  "sort": 150000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "gwDhAerialImg000",
+      "_key": "!journal.pages!gwDhAerialRecon0.gwDhAerialImg000",
+      "name": "GHOSTWIRE.Runs.Pages.GoldLineAerialPhoto",
+      "type": "image",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {
+        "caption": "Gold Line aerial recon — ARG cargo maglev roofs, hatches, orange markings"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": "modules/draw-steel-ghostwire/assets/items/deadhead/gold-line-aerial-recon.webp",
+      "system": {},
+      "text": {},
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "gwDhAerialNote00",
+      "_key": "!journal.pages!gwDhAerialRecon0.gwDhAerialNote00",
+      "name": "GHOSTWIRE.Runs.Pages.GoldLineAerialIntel",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Aerial recon of the Gold Line cargo maglev — roofs, hatches, orange markings. Discovery intel only (no cash). Canyon watch / Wire schedule recon / bribe can produce this before Beat 1.\n\nDirector: show the **Photo** page when recon succeeds. This is findable evidence, not a battlemap — do **not** bake it into the Gold Line Scene background. Live Gold Line walls/lights/tiles stay Michael’s.\n",
+        "content": "<p>Aerial recon of the Gold Line cargo maglev — roofs, hatches, orange markings. Discovery intel only (no cash). Canyon watch / Wire schedule recon / bribe can produce this before Beat 1.</p>\n<p>Director: show the <strong>Photo</strong> page when recon succeeds. This is findable evidence, not a battlemap — do <strong>not</strong> bake it into the Gold Line Scene background. Live Gold Line walls/lights/tiles stay Michael’s.</p>\n"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

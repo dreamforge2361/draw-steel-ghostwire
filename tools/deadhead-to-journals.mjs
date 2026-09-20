@@ -6,7 +6,8 @@
  * Run:  node tools/deadhead-to-journals.mjs
  * Then: node tools/build-packs.mjs runs   (Foundry closed)
  *
- * Does not write Scene JSON, gold-line-scene.mjs, or gold-line-map.json.
+ * Does not write Scene JSON, gold-line-scene.mjs, gold-line-map.json,
+ * or gold-line-aerial-recon.json.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { markdownToHtml } from "./lib/md-to-html.mjs";
@@ -20,12 +21,16 @@ const REMAP = "docs/directors/runs/deadhead/GOLD-LINE-CARGO-REMAP.md";
 
 const UUID = {
   mapNotes: `@UUID[Compendium.${MODULE_ID}.runs.JournalEntry.gwDeadheadGoldLn]{Gold Line — Map Notes}`,
+  aerialRecon: `@UUID[Compendium.${MODULE_ID}.runs.JournalEntry.gwDhAerialRecon0]{Gold Line — Aerial Recon}`,
+  aerialReconItem: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwGoldLineRecon0]{Gold Line Aerial Recon}`,
   enforcer: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.h3LR6HHADCpyFMsN]{ARG Corporate Enforcer}`,
   security: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.DVEibxfpEWA5RoCn]{ARG Security Officer}`,
   lieutenant: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.g7LC1G0K20UnYzkr]{ARG Response Lieutenant}`,
   watchdog: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.dNEBSb47qSV9lRRH]{Watchdog ICE}`,
   mamaBrief: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwMamaBriefWafer]{Mama’s Deadhead Brief (Gold Line)}`,
   argCapsule: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwArgCourierCap0]{ARG Courier Capsule (Gold Line)}`,
+  noxFreighter: `@UUID[Compendium.${MODULE_ID}.vehicles.Item.gwNoxTrashFrgt00]{Nox’s Trash Freighter}`,
+  noxFreighterActor: `@UUID[Compendium.${MODULE_ID}.deadhead.Actor.gwNoxTrashActor0]{Nox’s Trash Freighter}`,
 };
 
 const PAGE_IDS = [
@@ -193,6 +198,8 @@ const pages = [
     "> Mama’s wafer is warm in someone’s pocket. Gold Line cargo run, Spire depot to Switchboard terminus. Live ARG transaction wafer in a sealed courier capsule. Lift it on the Wire, get off the consist before ARG answers the stop — then decide who eats.",
     "",
     "Do **not** name the capsule chamber unless they earned **★**. Do **not** put Watchdog / R2 cam numbers, the wafer-out tick, or the corp/Signal doors on the wafer until the matching intel lands.",
+    "",
+    "If canyon watch / Wire schedule recon / bribe succeeds, show " + UUID.aerialRecon + " (Photo page). Optional sheet copy: " + UUID.aerialReconItem + ". Intel only — no cash. Do not bake the photo into the Gold Line battlemap.",
   ].join("\n")),
 
   page(ENTRY_ID, 4, "Beat1", [
@@ -202,7 +209,7 @@ const pages = [
     "",
     "### Setup",
     "",
-    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later.",
+    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later. **Place the Actor** " + UUID.noxFreighterActor + " from **Ghostwire Runs — Deadhead Actors** onto Gold Line roofs (suggested token **4×6** squares, grid 208 px = 5 ft; resize; **5×8** if it reads small). Friendly, no ring. Library SKU: " + UUID.noxFreighter + " in **Ghostwire Vehicles → Air**. Do not force-rewrite the live Scene.",
     "2. Open **Gold Line** (Michael’s world Scene). **Show** the **Roofs (overhead)** tile for the board.",
     "3. Sling onto the **roof**, then drop **aft into L1** (left aft cargo / AFT FREIGHT). That is the board chamber. Work **upstream** (right) from here.",
     "4. Once the crew is **inside**, **hide the Roofs (overhead) tile**. Do not wait on Surface occlusion as the play instruction.",
@@ -308,7 +315,7 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 9, "Items", [
-    "Director notes for the two plot wafers. **B104 Gear SKUs shipped 0.3.52.** Drag from **Ghostwire Gear → Plot & Run Hooks** (Deadhead gallery art; do not regenerate). Hand " + UUID.mamaBrief + " at Beat 0. The prize is " + UUID.argCapsule + " (Faraday; wipe if the train stops while the live wafer is nested).",
+    "Director notes for the two plot wafers. **B104 Gear SKUs shipped 0.3.52.** Drag from **Ghostwire Gear → Plot & Run Hooks** (Deadhead gallery art; do not regenerate). Hand " + UUID.mamaBrief + " at Beat 0. The prize is " + UUID.argCapsule + " (Faraday; wipe if the train stops while the live wafer is nested). Findable recon photo: " + UUID.aerialReconItem + " (sheet copy) + " + UUID.aerialRecon + " (Director handout).",
     "",
     "### Mama’s Deadhead Brief (Gold Line)",
     "",
@@ -346,11 +353,11 @@ const pages = [
     "",
     "Courier stays sealed until Alert. Watchdog is Wire, not a meat token unless you want a Console piece on R1.",
     "",
-    "Tokens still to drop on the Gold Line Scene (Michael’s plate): ARG Security, Lieutenant, Enforcers, Nox freighter. Wired Console preset (nodes + Trace 0–12) is still a backlog item — narrate nodes until it ships.",
+    "Tokens still to drop on the Gold Line Scene (Michael’s plate): ARG Security, Lieutenant, Enforcers. Nox freighter **Actor** " + UUID.noxFreighterActor + " ships in **Ghostwire Runs — Deadhead Actors** (drag onto roofs; suggested **4×6**). Library Item: " + UUID.noxFreighter + ". Wired Console preset (nodes + Trace 0–12) is still a backlog item — narrate nodes until it ships.",
   ].join("\n")),
 
   page(ENTRY_ID, 11, "FoundryChecklist", [
-    "Compendium home: **Ghostwire Runs → Deadhead**. This journal + " + UUID.mapNotes + ".",
+    "Compendium home: **Ghostwire Runs → Deadhead**. This journal + " + UUID.mapNotes + " + " + UUID.aerialRecon + ".",
     "",
     "### Scenes Michael needs",
     "",
@@ -368,10 +375,22 @@ const pages = [
     "- " + UUID.mamaBrief + " — `assets/items/deadhead/item-mama-brief-wafer.webp`",
     "- " + UUID.argCapsule + " — `assets/items/deadhead/item-arg-courier-capsule.webp`",
     "",
+    "### Vehicles (shipped 0.3.54)",
+    "",
+    "- " + UUID.noxFreighterActor + " — **Ghostwire Runs — Deadhead Actors**. Placeable token (`assets/tokens/vehicles/nox-trash-freighter.webp`). Drag onto Gold Line roofs for Beat 1 board / Beat 4 Recall. Suggested size **4×6** squares (208 px = 5 ft); resize as needed; **5×8** if it reads small. Friendly, no ring. Plot / non-hostile. Integrity 80 / fly 12 are Heavy-air placeholders.",
+    "- " + UUID.noxFreighter + " — **Ghostwire Vehicles → Air** library SKU. Tags: Deadhead / Plot / Cargo. Keep this Item; the Actor is the board token.",
+    "",
+    "Ghostwire **Runs** is JournalEntry-only (Director journals + handouts). Foundry cannot store Actors there, so the freighter Actor is the sibling GM-only pack listed next to Runs.",
+    "",
+    "### Handouts (shipped 0.3.54)",
+    "",
+    "- " + UUID.aerialRecon + " — Journal in **Ghostwire Runs → Deadhead**. Image page is the aerial recon photo (`assets/items/deadhead/gold-line-aerial-recon.webp`). Show it when canyon watch / Wire schedule recon / bribe succeeds before Beat 1. Discovery intel only (no cash). Do **not** bake into the Gold Line battlemap.",
+    "- " + UUID.aerialReconItem + " — optional Plot gear Item (`Ghostwire Gear → Plot & Run Hooks`) so the photo can sit on a character sheet as found evidence.",
+    "",
     "### Still open (do not invent in play)",
     "",
     "- Splash art (freighter + four runners over a moving consist).",
-    "- Tokens on the Gold Line Scene; Nox freight-drone token.",
+    "- ARG tokens on the Gold Line Scene (bestiary art already shipped 0.3.47).",
     "- Wired Console board preset (Track 1 **R2**, Track 2 **R1** + Watchdog, Trace host **R3**).",
     "",
     "Art locks when anything new ships: flat top-down; no people on maps; no baked grid; ARG uniform stylization reusable. **Do not** drop a generated train on Gold Line.",

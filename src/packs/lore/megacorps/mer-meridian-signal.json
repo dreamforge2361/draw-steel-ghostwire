@@ -1,0 +1,49 @@
+{
+  "_id": "H92pu65vah9UvM95",
+  "_key": "!journal!H92pu65vah9UvM95",
+  "name": "GHOSTWIRE.Lore.Journals.MeridianSignal",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-mer.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 300000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "32b58aHEtOSDBe10",
+      "_key": "!journal.pages!H92pu65vah9UvM95.32b58aHEtOSDBe10",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Meridian Signal (MER)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-mer.webp)\n\n*Meridian Signal (MER) — brand mark*\n\n**MER** — Meridian Signal\n\n**Domain:** Wired, telecom, media, information\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-mer.webp\" alt=\"Meridian Signal (MER)\" /></p>\n<p><em>Meridian Signal (MER) — brand mark</em></p>\n<p><strong>MER</strong> — Meridian Signal</p>\n<p><strong>Domain:</strong> Wired, telecom, media, information</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "MER",
+      "brand": "assets/brands/megacorps/brand-mer.webp"
+    }
+  }
+}

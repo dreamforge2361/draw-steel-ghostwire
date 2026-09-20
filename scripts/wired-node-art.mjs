@@ -1,6 +1,7 @@
 // Node token library (B113 + B116). Drop png+webp and a library.json / NODE_TOKEN_LIBRARY row.
 // Auto-nodes: Light → light-control, Maglock → maglock, Cam lights → cam-controls.
 // Atlas ids (node-relay / node-host / node-segment) ship Michael art (placeholder: false).
+// Megacorp Host skins are node-host-{ticker}; generic node-host stays the default Host.
 // tokenSrcForStyle returns the WebP path. Do not regenerate AI art.
 // Director picker writes board tokenStyle; Place on canvas stamps the matching WebP.
 
@@ -23,6 +24,16 @@ export const NODE_TOKEN_LIBRARY = [
   { id: "node-relay", name: "Relay", file: "node-relay.webp", png: "node-relay.png", family: "atlas", altitude: "region", placeholder: false },
   { id: "node-host", name: "Host", file: "node-host.webp", png: "node-host.png", family: "atlas", altitude: "region", placeholder: false },
   { id: "node-segment", name: "Segment", file: "node-segment.webp", png: "node-segment.png", family: "atlas", altitude: "site", placeholder: false },
+  { id: "node-host-hal", name: "Host — HALO Ascendant (HAL)", file: "node-host-hal.webp", png: "node-host-hal.png", family: "atlas", altitude: "region", hostTicker: "HAL", placeholder: false },
+  { id: "node-host-fer", name: "Host — Ferrum Dynastic (FER)", file: "node-host-fer.webp", png: "node-host-fer.png", family: "atlas", altitude: "region", hostTicker: "FER", placeholder: false },
+  { id: "node-host-mer", name: "Host — Meridian Signal (MER)", file: "node-host-mer.webp", png: "node-host-mer.png", family: "atlas", altitude: "region", hostTicker: "MER", placeholder: false },
+  { id: "node-host-cad", name: "Host — Caduceus Vitalis (CAD)", file: "node-host-cad.webp", png: "node-host-cad.png", family: "atlas", altitude: "region", hostTicker: "CAD", placeholder: false },
+  { id: "node-host-irn", name: "Host — Ironclad Martial (IRN)", file: "node-host-irn.webp", png: "node-host-irn.png", family: "atlas", altitude: "region", hostTicker: "IRN", placeholder: false },
+  { id: "node-host-arg", name: "Host — Argent Exchange (ARG)", file: "node-host-arg.webp", png: "node-host-arg.png", family: "atlas", altitude: "region", hostTicker: "ARG", placeholder: false },
+  { id: "node-host-ver", name: "Host — Verdant Provision (VER)", file: "node-host-ver.webp", png: "node-host-ver.png", family: "atlas", altitude: "region", hostTicker: "VER", placeholder: false },
+  { id: "node-host-obs", name: "Host — Obsidian Holdings (OBS)", file: "node-host-obs.webp", png: "node-host-obs.png", family: "atlas", altitude: "region", hostTicker: "OBS", placeholder: false },
+  { id: "node-host-san", name: "Host — Sanctum Assurance (SAN)", file: "node-host-san.webp", png: "node-host-san.png", family: "atlas", altitude: "region", hostTicker: "SAN", placeholder: false },
+  { id: "node-host-nyx", name: "Host — Nyx Cartel (NYX)", file: "node-host-nyx.webp", png: "node-host-nyx.png", family: "atlas", altitude: "region", hostTicker: "NYX", placeholder: false },
 ];
 
 export function nodeTokenSrc(file) {

@@ -45,7 +45,7 @@ modules/draw-steel-ghostwire/assets/tokens/wired/node-host.webp
 modules/draw-steel-ghostwire/assets/tokens/wired/node-segment.webp
 ```
 
-Catalog: `assets/tokens/wired/library.json` (Michael art, `placeholder: false` as of **0.3.51**). Device styles `light-control` / `maglock` live on PR #34 — merge by appending rows, do not rename B113 files.
+Catalog: `assets/tokens/wired/library.json` (Michael art, `placeholder: false` as of **0.3.51**). Device styles `light-control` / `maglock` live on PR #34 — merge by appending rows, do not rename B113 files. **0.3.54** appends megacorp Host skins (`node-host-{ticker}`); generic `node-host` stays the default Host — not a fourth atlas altitude.
 
 ## Dig-down procedure (table)
 

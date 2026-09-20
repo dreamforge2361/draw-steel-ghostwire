@@ -12,6 +12,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | ARG corp security (3) | `bestiary/arg/arg-*.webp` (+ PNG originals) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-<role>.webp` | B111 shipped **0.3.47** (Enforcer, Lieutenant, Officer) |
 | Mama Cassavir (L5 named boss) | `bestiary/mama-cassavir.webp` (+ PNG original) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-cassavir.webp` | **0.3.48** — Michael split-face (elderly organic / chrome cyborg, cyan eye, hand on deck) |
 | Wired Atlas (Relay / Host / Segment) | `wired/node-relay\|host\|segment.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-<role>.webp` | B116 Michael art **0.3.51** (Relay / Host / Segment) |
+| Megacorp Hosts (Ten Conglomerates) | `wired/node-host-{ticker}.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-host-<ticker>.webp` | **0.3.54** — generic Host stays default |
 | Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 shipped **0.3.35** (17) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
@@ -85,4 +86,4 @@ Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and s
 
 ## Wired Atlas (B116, module 0.3.51)
 
-Michael Relay / Host / Segment tokens live under `wired/` as `node-relay`, `node-host`, and `node-segment` (PNG originals + WebP). Catalog `placeholder` is **false**; family / altitude unchanged. Place on canvas stamps the WebP. Endpoint is optional v1.1. Device styles shipped **0.3.49** (PR **#34**). Topology brief shipped **0.3.50**. Spike: `docs/spikes/B116-WIRE-ATLAS.md`.
+Michael Relay / Host / Segment tokens live under `wired/` as `node-relay`, `node-host`, and `node-segment` (PNG originals + WebP). Catalog `placeholder` is **false**; family / altitude unchanged. Place on canvas stamps the WebP. Endpoint is optional v1.1. Device styles shipped **0.3.49** (PR **#34**). Topology brief shipped **0.3.50**. **0.3.54** adds megacorp Host skins (`node-host-{ticker}`) — generic Host stays default. Spike: `docs/spikes/B116-WIRE-ATLAS.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.

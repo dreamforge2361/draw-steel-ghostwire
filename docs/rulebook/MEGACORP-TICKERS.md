@@ -27,3 +27,7 @@ Each of the Ten Conglomerates has a **three-letter ticker**. Use it in writeups,
 
 ## Policy
 No third-party megacorp names (B78/B83). Ghostwire Ten only.
+
+## Brand art (SoR, 0.3.54)
+
+Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Ten Conglomerates) use the WebP as cover/image. Do not regenerate.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B117 Matrix Verbs smoke — all nine on the node-facing applet (module 0.3.53).
+ * B117 Matrix Verbs smoke — all nine on the node-facing applet (shipped 0.3.53; module 0.3.54).
  *
  * Run: node tools/b117-console-verbs-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
@@ -43,10 +43,10 @@ function readBomFreeJson(path) {
 
 const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matrix-scan,matrix-navigate,matrix-ping,matrix-broadcast,matrix-search,matrix-read-write";
 
-console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.53)\n");
+console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.54)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.53", `module.json is 0.3.53 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");

@@ -93,6 +93,12 @@ Ship as `type: "treasure"` in **Ghostwire Gear** (`src/packs/gear/…`), then `@
 
 Placeholder `icons/` art is fine until an item-art pass. **Do not generate art in the content PR unless Michael drops files.** **0.3.52:** Michael Deadhead gallery PNGs shipped as `assets/items/deadhead/item-mama-brief-wafer.{png,webp}` and `item-arg-courier-capsule.{png,webp}` — do not regenerate.
 
+**0.3.54:** Nox’s garbage-truck-sized trash freighter ships as `assets/tokens/vehicles/nox-trash-freighter.{png,webp}` + Vehicles pack Item (`src/packs/vehicles/air/nox-trash-freighter.json`, tags Deadhead / Plot). Do not regenerate. Do not force-rewrite the live Gold Line Scene.
+
+**0.3.54 (additive):** Gold Line aerial recon photo — findable Beat 0 evidence. Assets `assets/items/deadhead/gold-line-aerial-recon.{png,webp}`. Journal `src/packs/runs/deadhead/gold-line-aerial-recon.json` (image page + intel page). Optional Plot gear Item `src/packs/gear/general/plot/gold-line-aerial-recon.json` (Mama Brief pattern). Canyon watch / Wire schedule recon / bribe. Discovery intel only. Do **not** bake into the Gold Line battlemap. Do not force-rewrite the live Scene.
+
+**0.3.54 (additive):** Nox trash freighter **Actor** — Foundry **Ghostwire Runs** is JournalEntry-only, so the placeable token ships as GM-only Actor pack **Ghostwire Runs — Deadhead Actors** (`src/packs/deadhead/nox-trash-freighter.json`, `module.json` pack `deadhead`). Drag onto Gold Line. Suggested token **4×6** (resize; **5×8** if small). Friendly, no ring. Vehicles Item stays the library SKU. Do not force-rewrite the live Gold Line Scene.
+
 ## Scenes (content pass)
 
 There is **no** Scene pack in this module (B72 / B99 / B100 drop files onto world Scenes; they are not auto-created). Do **not** invent a Scene compendium for Deadhead.
@@ -108,7 +114,7 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 
 ## Tokens / Console (content pass)
 
-- ARG Corp Security, Response Lieutenant (+ Enforcers); Nox freight-drone token.
+- ARG Corp Security, Response Lieutenant (+ Enforcers); **Nox freight-drone token shipped 0.3.54** (`Ghostwire Vehicles → Air`).
 - Wired Console board preset on the train Scene (Track 1 cams/doors R2–3; Track 2 capsule lock R3 + Watchdog ICE; Trace Alert 0–12).
 - **Backlog:** Console **Wire ping/spoof** for the call-home telegraph (narrate or chat at Trace 6–7 until that ships).
 
@@ -134,6 +140,9 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 
 - Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist. **Shipped 0.3.42.** Beat 0 hangout Scene **shipped 0.3.43**; canyon **SKIPPED**.
 - Both wafers exist as Gear items and are linked from the Items page. **Shipped 0.3.52** (`src/packs/gear/general/plot/`, gallery art at `assets/items/deadhead/`).
+- Nox trash freighter token ships in Vehicles. **Shipped 0.3.54.**
+- Nox trash freighter **Actor** ships in **Ghostwire Runs — Deadhead Actors**. **Shipped 0.3.54.**
+- Gold Line aerial recon photo ships as a Runs Journal handout (+ optional Plot gear Item). **Shipped 0.3.54.**
 - Scenes listed above exist in the world (Mama reused; **Gold Line = Michael’s live Scene**; hangout injected 0.3.43); pack journal points at them. Canyon is **SKIPPED** — narrated, no plate.
 - Design locks above match the SoR verbatim (¥ / wipe / Trace cap / ARG / Nox / L1–R3 cargo / 20 ft / no twist / 4h / ping-spoof mention).
 - No new class abilities. No unrelated journal regen. One module patch.
@@ -141,7 +150,7 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 ## Michael checklist
 
 1. SoR opens at `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`.
-2. Compendium **Ghostwire Runs** appears under the **Ghostwire** pack folder; players cannot see it; folder **Deadhead** holds **Deadhead — Director** + **Gold Line — Map Notes**.
+2. Compendium **Ghostwire Runs** appears under the **Ghostwire** pack folder; players cannot see it; folder **Deadhead** holds **Deadhead — Director** + **Gold Line — Map Notes** + **Gold Line — Aerial Recon**.
 3. Pay table is Mama ¥8k / corp ¥14k / Signal ¥2k+weird; discovery intel-only.
 4. Wipe-if-stop-while-nested and post-extract stop are both written.
 5. Trace +1/round cap + call-home ~7–8 (block → Trace −1) present; no L1 class Trace −1 invented.

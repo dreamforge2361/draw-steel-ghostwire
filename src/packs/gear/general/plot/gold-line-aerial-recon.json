@@ -1,0 +1,54 @@
+{
+  "_id": "gwGoldLineRecon0",
+  "_key": "!items!gwGoldLineRecon0",
+  "name": "GHOSTWIRE.Gear.Items.GoldLineAerialRecon.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/items/deadhead/gold-line-aerial-recon.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.GoldLineAerialRecon.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Deadhead (Gold Line)",
+      "page": "Discovery (Beat 0)",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gold-line-aerial-recon",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearPlot000000",
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "Plot"
+        ],
+        "priceText": "discovery intel (no cash)"
+      }
+    }
+  }
+}

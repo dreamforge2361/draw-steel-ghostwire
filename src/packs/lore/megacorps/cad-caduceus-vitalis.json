@@ -1,0 +1,49 @@
+{
+  "_id": "ylOUWNXazgjAZEaP",
+  "_key": "!journal!ylOUWNXazgjAZEaP",
+  "name": "GHOSTWIRE.Lore.Journals.CaduceusVitalis",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-cad.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 400000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "XJB6rHxZePBnTKyT",
+      "_key": "!journal.pages!ylOUWNXazgjAZEaP.XJB6rHxZePBnTKyT",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Caduceus Vitalis (CAD)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-cad.webp)\n\n*Caduceus Vitalis (CAD) — brand mark*\n\n**CAD** — Caduceus Vitalis\n\n**Domain:** Biotech, pharma, chrome-flesh interface, medicine\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-cad.webp\" alt=\"Caduceus Vitalis (CAD)\" /></p>\n<p><em>Caduceus Vitalis (CAD) — brand mark</em></p>\n<p><strong>CAD</strong> — Caduceus Vitalis</p>\n<p><strong>Domain:</strong> Biotech, pharma, chrome-flesh interface, medicine</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "CAD",
+      "brand": "assets/brands/megacorps/brand-cad.webp"
+    }
+  }
+}

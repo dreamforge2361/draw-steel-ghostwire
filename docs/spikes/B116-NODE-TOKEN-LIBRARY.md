@@ -1,7 +1,7 @@
 # Spike B116 — Node token library (Director picker)
 
 **Date:** 2026-09-20  
-**Module:** **0.3.49**  
+**Module:** **0.3.49** (device catalog) · **0.3.54** (megacorp Host skins)  
 **Status:** **SHIPPED** (pending Michael Foundry-verify)  
 **Pairs with:** B112 auto-nodes, B113 Light/Maglock art.
 
@@ -23,6 +23,25 @@ Director picks a node token style from the Wired Console. Auto Light / Maglock /
 | `data-vault` | Data Vault | `node-data-vault.webp` | — |
 
 PNG sources sit beside each WebP (1254² originals, 1024² Foundry WebP).
+
+## Megacorp Hosts (0.3.54)
+
+Generic `node-host` stays the default Host. Ten Conglomerates Host skins append as `node-host-{ticker}` (`hostTicker` on the catalog row). Auto Light / Maglock / Cam defaults are unchanged.
+
+| Id | Label |
+|---|---|
+| `node-host-hal` | Host — HALO Ascendant (HAL) |
+| `node-host-fer` | Host — Ferrum Dynastic (FER) |
+| `node-host-mer` | Host — Meridian Signal (MER) |
+| `node-host-cad` | Host — Caduceus Vitalis (CAD) |
+| `node-host-irn` | Host — Ironclad Martial (IRN) |
+| `node-host-arg` | Host — Argent Exchange (ARG) |
+| `node-host-ver` | Host — Verdant Provision (VER) |
+| `node-host-obs` | Host — Obsidian Holdings (OBS) |
+| `node-host-san` | Host — Sanctum Assurance (SAN) |
+| `node-host-nyx` | Host — Nyx Cartel (NYX) |
+
+Tickers: `docs/rulebook/MEGACORP-TICKERS.md`. Do not regenerate art.
 
 ## Console
 

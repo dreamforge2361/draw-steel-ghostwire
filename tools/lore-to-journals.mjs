@@ -9,6 +9,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, wri
 import { basename, extname, join, resolve } from "node:path";
 import { foundryRequire } from "./lib/foundry-require.mjs";
 import { parseYaml } from "./lib/simple-yaml.mjs";
+import { megacorpIndexLinks, writeMegacorpJournals } from "./lib/megacorps-journals.mjs";
 
 const showdown = foundryRequire("showdown");
 const SHOWDOWN_OPTIONS = { disableForced4SpacesIndentedSublists: true, noHeaderId: true, parseImgDimensions: true, strikethrough: true, tables: true, tablesHeaderId: true };
@@ -208,15 +209,16 @@ FOLDERS.forEach((folder, fi) => {
   if (folder.key === "Setting") {
     const rows = FOLDERS.map(f => `| ${f.label} | ${f.files.map(x => `@UUID[Compendium.${MODULE_ID}.lore.JournalEntry.${stableId(x)}]{${titles[x]}}`).join(" · ")} |`).join("\n");
     const markdown = [
-      "Ghostwire setting harvest for the table: cosmology, peoples, Reach street color, VOIDMARK, and the Hands Off Accords.",
+      "Ghostwire setting harvest for the table: cosmology, peoples, Reach street color, Ten Conglomerates, VOIDMARK, and the Hands Off Accords.",
       "",
       "This pack is **lore, not rules**. Procedures live in the **Ghostwire Rulebook**. District maps and Handbook gazetteer pages live in **Ghostwire — Ossian Reach Handbook**. Matrix nodes live in **Ghostwire — The Wired: Flats**.",
       "",
-      "Artwork that ships with the module is placed on the matching heading. Peoples plates that are still local Dropbox files are skipped — they are not invented.",
+      "Artwork that ships with the module is placed on the matching heading. Peoples plates that are still local Dropbox files are skipped — they are not invented. Megacorp brand marks are ticker cards only (`docs/rulebook/MEGACORP-TICKERS.md`) — not deep corp profiles.",
       "",
       "| Section | Journals |",
       "|---|---|",
       rows,
+      `| Ten Conglomerates | ${megacorpIndexLinks()} |`,
     ].join("\n");
     loreLang.Journals.LoreIndex = "Lore Index";
     const entryId = stableId("lore-index");
@@ -255,11 +257,15 @@ FOLDERS.forEach((folder, fi) => {
   });
 });
 
+const megaLang = writeMegacorpJournals(OUT);
+Object.assign(loreLang.Folders, megaLang.Folders);
+Object.assign(loreLang.Journals, megaLang.Journals);
+
 lang.GHOSTWIRE.COMPENDIUM.lore = "Ghostwire Lore";
 lang.GHOSTWIRE.Lore = loreLang;
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 
-console.log(`lore: ${mapped.length + 1} journals, ${pages} pages, ${FOLDERS.length} folders`);
+console.log(`lore: ${mapped.length + 1 + 10} journals, ${pages + 10} pages, ${FOLDERS.length + 1} folders`);
 console.log(`art placed: ${artLog.placed.length}`);
 for (const p of artLog.placed) console.log(`  PLACED  ${p.id}  →  ${p.rel}  (${p.heading})`);
 console.log(`art gaps: ${artLog.gaps.length}`);

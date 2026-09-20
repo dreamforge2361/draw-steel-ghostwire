@@ -1,0 +1,49 @@
+{
+  "_id": "yBWcUIpD5FCQGG9I",
+  "_key": "!journal!yBWcUIpD5FCQGG9I",
+  "name": "GHOSTWIRE.Lore.Journals.FerrumDynastic",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-fer.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 200000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "ibCHSNj7Zl27QiP8",
+      "_key": "!journal.pages!yBWcUIpD5FCQGG9I.ibCHSNj7Zl27QiP8",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Ferrum Dynastic (FER)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-fer.webp)\n\n*Ferrum Dynastic (FER) — brand mark*\n\n**FER** — Ferrum Dynastic\n\n**Domain:** Heavy industry, construction, hive superstructure\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-fer.webp\" alt=\"Ferrum Dynastic (FER)\" /></p>\n<p><em>Ferrum Dynastic (FER) — brand mark</em></p>\n<p><strong>FER</strong> — Ferrum Dynastic</p>\n<p><strong>Domain:</strong> Heavy industry, construction, hive superstructure</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "FER",
+      "brand": "assets/brands/megacorps/brand-fer.webp"
+    }
+  }
+}

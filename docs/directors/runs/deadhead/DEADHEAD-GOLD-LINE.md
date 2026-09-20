@@ -176,6 +176,8 @@ Start from Mama’s wafer at the **crew hangout**, then chase:
 
 Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the live train yet), canyon watch, bribe/badge. Fail = go in blind, not blocked.
 
+**Aerial recon photo:** success on canyon watch, Wire schedule recon, or a bribe can yield the **Gold Line aerial recon** handout before Beat 1 (Journal in **Ghostwire Runs → Deadhead**; optional Plot gear Item so it can sit on a sheet). Discovery intel only — no cash. Do **not** bake this photo into the Gold Line battlemap. Do not force-rewrite the live Scene.
+
 ---
 
 ## 4h Director clock
@@ -211,7 +213,10 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 - [ ] Scene: canyon approach / drone sling strip
 - [x] Scene: Gold Line dual-Hammerhead (world inject; interior loop + roofs overhead)
 - [ ] Splash art: garbage-truck freighter + 4 runners over moving train
-- [ ] Tokens on Gold Line Scene: ARG Security Officer, ARG Response Lieutenant (+ ARG Corporate Enforcers); freight drone token. **Bestiary Actor art shipped 0.3.47** (`assets/tokens/bestiary/arg/`). Do not force-rewrite the live Gold Line Scene.
+- [ ] Tokens on Gold Line Scene: ARG Security Officer, ARG Response Lieutenant (+ ARG Corporate Enforcers). **Bestiary Actor art shipped 0.3.47** (`assets/tokens/bestiary/arg/`). Do not force-rewrite the live Gold Line Scene.
+- [x] Nox trash freighter **Item** — **0.3.54** (`Ghostwire Vehicles → Air`, `assets/tokens/vehicles/nox-trash-freighter.webp`). Library SKU. Do not force-rewrite the live Gold Line Scene.
+- [x] Nox trash freighter **Actor** — **0.3.54** (`Ghostwire Runs — Deadhead Actors`, `src/packs/deadhead/nox-trash-freighter.json`). Placeable token: drag onto Gold Line roofs, resize, fly in for Beat 1 / Recall on Beat 4. Suggested size **4×6** squares (grid 208 px = 5 ft; **5×8** if it reads small). Friendly, no ring. Ghostwire Runs is JournalEntry-only, so the Actor ships in a sibling GM-only Actor pack listed next to Runs. Do not force-rewrite the live Gold Line Scene.
+- [x] Handout: Gold Line aerial recon photo — **0.3.54** (Journal in **Ghostwire Runs → Deadhead**; image page + intel page; `assets/items/deadhead/gold-line-aerial-recon.webp`). Canyon watch / Wire schedule recon / bribe. Discovery intel only. Optional Plot gear Item in **Ghostwire Gear → Plot & Run Hooks**. Do not bake into the battlemap. Do not force-rewrite the live Gold Line Scene.
 - [ ] Wired Console board preset on train Scene (nodes + Trace)
 - [x] Console **Wire ping/spoof** for call-home telegraph (**0.3.45**)
 
