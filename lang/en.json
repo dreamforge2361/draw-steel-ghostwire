@@ -124,6 +124,53 @@
       "Granted": "{actor} picked up a scout drone — Street Eye is on the sheet.",
       "Revoked": "{actor} has no qualifying scout drone — Street Eye is gone."
     },
+    "Kiosk": {
+      "Title": "Kiosk",
+      "Director": "Director stock",
+      "DefaultName": "Street Vendor",
+      "Folder": "Kiosks",
+      "Hud": "Browse kiosk",
+      "Place": "Place kiosk",
+      "MerchantName": "Merchant / corp name",
+      "Range": "Range (squares)",
+      "RangeHint": "How close a hero token must stand, in scene grid squares (Chebyshev). Adjacent is 1. Default 2.",
+      "Tagline": "Tagline",
+      "TaglineHint": "Optional flavor — night market, lobby desk, back-bar.",
+      "Inventory": "Stock",
+      "Empty": "Nothing on the shelf. The Director hasn’t stocked this kiosk.",
+      "DropHint": "Drop Ghostwire Gear, Chrome, Matrix, Mods, Vehicles, or Foci here — or paste an Item UUID.",
+      "Uuid": "Item UUID",
+      "PriceOverride": "¥ override",
+      "CatalogPrice": "Catalog {price}",
+      "NoPrice": "No catalog ¥ — set an override",
+      "MissingItem": "Missing listing",
+      "Buy": "Buy",
+      "Buyer": "Buyer",
+      "OutOfRange": "Step closer. {name} only sells to tokens within {range} squares.",
+      "NoBuyer": "Select a hero token, or assign your character, before you buy.",
+      "NotHero": "{name} has no nuyen field (heroes only).",
+      "Insufficient": "{name} is short — {price} asked, {wealth} on the stick.",
+      "NoItem": "That listing is missing (broken UUID).",
+      "NoPermission": "You don’t own that hero.",
+      "Purchased": "{buyer} bought {item} from {merchant} for {price}.",
+      "Chat": {
+        "Purchased": "<p><strong>{buyer}</strong> taps {merchant} and walks with <strong>{item}</strong> — {price} off the stick.</p>"
+      },
+      "AddRow": "Add listing",
+      "RemoveRow": "Remove",
+      "OpenSheet": "Open actor sheet",
+      "Stocked": "{count} listings",
+      "InRange": "In range",
+      "Far": "Out of range",
+      "NoScene": "View a Scene before placing a kiosk.",
+      "NoTemplate": "No kiosk template in Ghostwire Summons. Rebuild the summons pack.",
+      "Placed": "Placed {name}. Rename it and stock the shelf.",
+      "InfiniteStock": "Infinite stock — v1 does not decrement.",
+      "Template": {
+        "Name": "Street Vendor (Kiosk)",
+        "Description": "<p>A placeable <strong>scene kiosk</strong>. Rename the Actor to the merchant or corp — <em>Mama’s Bar</em>, <em>ARG Lobby</em>, a street vendor — then stock Item UUIDs from Ghostwire Gear (or Chrome / Matrix / Mods / Vehicles / Foci / world items). Optional ¥ override per listing.</p><p>Players open it when their token is within <strong>range</strong> (default 2 grid squares). The Director can always open and edit. Purchase deducts <strong>nuyen</strong> (<code>system.hero.wealth</code>) and copies the Item onto the buyer. Stock is infinite in v1.</p><p><strong>Place:</strong> Token controls › cash register, or drag this Actor onto the Scene. Double-click or the HUD cash register opens the shop — not the combat sheet.</p>"
+      }
+    },
     "Skills": {
       "Groups": {
         "Action": "Action",
