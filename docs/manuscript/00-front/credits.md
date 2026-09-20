@@ -52,6 +52,7 @@ Human names are not required on AI plates. If Michael later commissions or licen
 | District battle maps (B72) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/` |
 | Switchboard district loop (B100 v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/switchboard-district-loop.webm` |
 | Mama Cassavir club (B99 still + loop v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/battlemaps/` |
+| Gold Line dual Hammerhead (B106 stills + loops) | CyberMaps Hammerhead stitch (no generated train) | In-module: `assets/maps/battlemaps/gold-line/` |
 | Handbook book plates | Ghostwire AI (AI-generated) | `assets/reach-handbook/` |
 
 ## What this page does not claim

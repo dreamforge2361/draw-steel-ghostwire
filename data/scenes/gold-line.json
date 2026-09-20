@@ -1,0 +1,63 @@
+{
+  "id": "gold-line",
+  "version": 1,
+  "nameKey": "GHOSTWIRE.Scenes.GoldLine.Name",
+  "folderKey": "GHOSTWIRE.Scenes.GoldLine.Folder",
+  "width": 6472,
+  "height": 958,
+  "padding": 0.1,
+  "backgroundColor": "#0a0a0c",
+  "tokenVision": false,
+  "navigation": true,
+  "thumb": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior.webp",
+  "grid": {
+    "type": 1,
+    "size": 208,
+    "distance": 5,
+    "units": "ft",
+    "color": "#d4af37",
+    "alpha": 0.18,
+    "style": "solidLines",
+    "thickness": 1
+  },
+  "initial": {
+    "x": 800,
+    "y": 479,
+    "scale": 0.55
+  },
+  "assets": {
+    "interiorStill": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior.webp",
+    "interiorLoop": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm",
+    "roofsStill": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs.webp",
+    "roofsLoop": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm"
+  },
+  "level": {
+    "_id": "gwGoldLineLvl000",
+    "nameKey": "GHOSTWIRE.Scenes.GoldLine.LevelInterior",
+    "sort": 0,
+    "elevation": {
+      "bottom": 0,
+      "top": 10
+    }
+  },
+  "roofTile": {
+    "_id": "gwGoldLineRoof00",
+    "nameKey": "GHOSTWIRE.Scenes.GoldLine.RoofsTile",
+    "x": 0,
+    "y": 0,
+    "width": 6472,
+    "height": 958,
+    "elevation": 10,
+    "sort": 1,
+    "locked": true,
+    "occlusion": {
+      "mode": 2,
+      "alpha": 0
+    },
+    "video": {
+      "loop": true,
+      "autoplay": true,
+      "volume": 0
+    }
+  }
+}

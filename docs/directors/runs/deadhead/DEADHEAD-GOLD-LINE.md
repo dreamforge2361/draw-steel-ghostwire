@@ -1,8 +1,8 @@
 # Deadhead on the Gold Line
 
 **Ghostwire playtest run · ~4 hours · Director journal SoR**  
-**Status:** Design-locked 2026-09-19 (art/Foundry assets still to build)  
-**Foundry home (planned):** Compendium `Ghostwire Runs` → folder `Deadhead`
+**Status:** Design-locked 2026-09-19 · Gold Line plates shipped **0.3.36** (CyberMaps Hammerhead stitch; no generated train)  
+**Foundry home:** Compendium **Ghostwire Runs** → folder **Deadhead**; world Scene inject **Scenes → Deadhead → Gold Line**
 
 Keep all Deadhead pages, items, and scenes referenced from this pack folder when shipped.
 
@@ -102,12 +102,39 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 - **Owning corp / uniforms:** **ARG Argent Exchange** (reusable ARG Security + Lieutenant look)
 - **Drone contact:** **Nox** (Flats wrangler) — crew **borrows** garbage-truck-sized trash freighter; scratch it = buy it; lose it = explain to Mama
 - **Opposition:** Passenger — cams + 2 Corp Enforcers; Security — 4 Corp Security + 1 Response Lieutenant; Courier sealed until Alert
-- **Wire:** Track 1 cams/doors R2–3; Track 2 capsule lock R3 + Watchdog ICE
+- **Wire:** Track 1 cams/doors **R2** (Wire transfer); Track 2 capsule lock **R1** + Watchdog ICE
 - **Twist:** none for v1 (clean heist)
 
 ### Consist (Director truth)
 
 5 cars, **20 ft** wide, **5 ft** furniture: **cab · courier (capsule) · security · passenger · tail**. Capsule is behind cab — crew usually boards aft and works **upstream**. **Players learn the exact car only on a great success in discovery**; otherwise they **search**.
+
+**Foundry plate (0.3.36):** dual CyberMaps Hammerhead stitch, nose-to-tail (nose right). Design truth stays 5 cars; the play surface is **2 × 3 chambers**. See beat remap below.
+
+### Beat remap — dual Hammerhead plate
+
+Left → right = aft → forward (nose right). Crew boards **aft** and works **upstream** (rightward).
+
+| Plate zone (L→R) | Hammerhead part | Deadhead beat |
+|---|---|---|
+| **L1** | Left aft cargo | **TAIL** — board here (drone sling) |
+| **L2** | Left connector | **PASSENGER** — civilian clutter / Enforcers |
+| **L3** | Left forward + cab | **SECURITY** — treat mid cab as sealed ARG booth / Lt nest; play the cargo bay |
+| *(coupler)* | Synthetic join | Non-walkable or Maglock gangway (Director call) |
+| **R1** | Right aft cargo | **COURIER** — sealed capsule stacks |
+| **R2** | Right connector | Transfer / Wire closet (cams/doors node) |
+| **R3** | Right forward + cab | **CAB** — drive end; Trace host fiction |
+
+If you need a clean sixth room, split R2 as its own Wire chase between courier and cab. Mid-consist double-cab (L3) is the Hammerhead artifact — narrate sealed engineering rather than a second drive cab.
+
+**Shipped assets** (`assets/maps/battlemaps/gold-line/`):
+
+| Role | Preferred | Fallback |
+|---|---|---|
+| Interior background | `map-gold-line-interior-loop.webm` | `map-gold-line-interior.webp` |
+| Roofs overhead | `map-gold-line-roofs-loop.webm` | `map-gold-line-roofs.webp` |
+
+Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile uses **Surface** occlusion (on until a token is inside). World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**.
 
 ---
 
@@ -119,7 +146,7 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 
 **On the wafer (baseline):** job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, 5-car Gold Line without naming the capsule car, vague meat/Wire/clock, bail = same bird, return for choice.
 
-**Not on the wafer:** exact car; R2–3 / R3 Watchdog numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.
+**Not on the wafer:** exact car; R1 Watchdog / R2 cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.
 
 ---
 
@@ -130,7 +157,7 @@ Start from Mama’s wafer at the **crew hangout**, then chase:
 | Code | Intel |
 |---|---|
 | A | Roster & Alert triggers (Enforcers / Security / Lt) |
-| B | Capsule Faraday + Track 2 R3 Watchdog; Track 1 cams/doors |
+| B | Capsule Faraday + Track 2 **R1** Watchdog; Track 1 cams/doors **R2** |
 | C | Full Trace ladder + wafer-out tick + wipe/stop rules |
 | D | Faction doors (Mama / corp sell / Signal) as real choices |
 | ★ | **Great success:** exact **car** with the capsule |
@@ -163,12 +190,13 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 ## Foundry build list (pack together under Ghostwire Runs / Deadhead)
 
 - [ ] Journal: this run (pages: Overview, Trace ladder, Beats 0–5, Items, Opposition)
+- [x] Journal: Gold Line — Map Notes (plate paths + beat remap) in **Ghostwire Runs → Deadhead**
 - [ ] Item: Mama’s Deadhead Brief wafer
 - [ ] Item: ARG courier capsule / live wafer (plothook notes for three buyers)
 - [ ] Scene: crew hangout (rundown flat, wrecked bad neighborhood)
 - [ ] Scene: Mama’s Club (reuse)
 - [ ] Scene: canyon approach / drone sling strip
-- [ ] Scene: 5-car Gold Line (20 ft cars, 5 ft furniture)
+- [x] Scene: Gold Line dual-Hammerhead (world inject; interior loop + roofs overhead)
 - [ ] Splash art: garbage-truck freighter + 4 runners over moving train
 - [ ] Tokens: ARG Corp Security, Response Lieutenant (+ Enforcers); freight drone token
 - [ ] Wired Console board preset on train Scene (nodes + Trace)
