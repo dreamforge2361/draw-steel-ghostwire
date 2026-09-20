@@ -4,7 +4,10 @@
 // Agents are software constructs / deck daemons — not Resonance sprites. They do not share sprite Actors.
 // The Compile Agent *ability* is the sheet-side handle. Compiling stamps one of the twelve band Actors from
 // Ghostwire Summons & Machines › Agents into a linked world Actor, re-stamps its Stamina from the live Hacker,
-// and places a token beside them. The link lives in flags on both sides:
+// and places a token beside them. Abilities-tab **Use** (AbilityModel#use) is the player-facing compile path:
+// Overlay/Jacked In + under cap opens the archetype picker and places the token; at cap, Use is command-only
+// (power roll, no second Agent). Item-sheet Compile / row-menu still compile without going through Use.
+// The link lives in flags on both sides:
 // - Agent Actor: flags.<module> = { kind: "agent", archetype, hybridTier, compiler: <actorUuid>, dsid, compiledAtLevel }
 // - Hacker: flags.<module>.compiledAgent = { uuids: [...] } — a roster mirror. The world scan by `compiler`
 //   is what actually decides the cap, so a hand-deleted Agent can never wedge it.
@@ -100,6 +103,23 @@ export function compileAgentGate({ hacker, state, count, cap, hasScene, canCreat
   return null;
 }
 
+/**
+ * What Abilities-tab Use of Compile Agent should do. Compile Agent is one card with two jobs:
+ * compile (main, under cap) or command (at cap). Linked / disconnected still refuse the whole Use.
+ * At-cap command does not need a Scene or create permission.
+ * @returns {{ mode: "compile"|"command"|"refuse", gate: string|null }}
+ */
+export function sheetUseCompilePlan({ hacker, state, count, cap, hasScene, canCreate }) {
+  if (!hacker) return { mode: "refuse", gate: "NotHacker" };
+  if (!compileAllowedAtState(state)) {
+    return { mode: "refuse", gate: (state === "linked") ? "LinkedRefuses" : "NeedImmersion" };
+  }
+  if (count >= cap) return { mode: "command", gate: "AtCap" };
+  const gate = compileAgentGate({ hacker, state, count, cap, hasScene, canCreate });
+  if (gate) return { mode: "refuse", gate };
+  return { mode: "compile", gate: null };
+}
+
 /** Every Agent currently compiled by this Hacker. The world is the source of truth, so deletes self-heal. */
 export function compiledAgents(actor) {
   if (!actor?.uuid) return [];
@@ -173,6 +193,27 @@ async function promptArchetype(caster, band) {
     ok: { label: game.i18n.localize(`${UI}.Compile`), callback: (event, button) => button.form.elements.archetype.value },
     rejectClose: false,
   });
+}
+
+/** Pick one compiled Agent, or the whole roster, for Decompile Agent Use. */
+async function promptDecompileTarget(caster) {
+  const agents = compiledAgents(caster);
+  if (!agents.length) return warn("None", { name: caster.name });
+  if (agents.length === 1) return agents[0];
+  const options = agents.map((agent, index) =>
+    `<option value="${agent.id}"${index === 0 ? " selected" : ""}>${foundry.utils.escapeHTML(agent.name)}</option>`);
+  options.push(`<option value="all">${game.i18n.localize(`${UI}.DecompileAll`)}</option>`);
+  const picked = await foundry.applications.api.DialogV2.prompt({
+    window: { title: game.i18n.localize(`${UI}.DecompileTitle`) },
+    content: `<p>${game.i18n.format(`${UI}.DecompilePrompt`, {
+      name: foundry.utils.escapeHTML(caster.name),
+    })}</p><div class="form-group"><label>${game.i18n.localize(`${UI}.DecompileLabel`)}</label>`
+      + `<select name="agent">${options.join("")}</select></div>`,
+    ok: { label: game.i18n.localize(`${UI}.Decompile`), callback: (event, button) => button.form.elements.agent.value },
+    rejectClose: false,
+  });
+  if (picked === "all") return "all";
+  return agents.find(agent => agent.id === picked) ?? null;
 }
 
 function warn(key, data) {
@@ -335,7 +376,77 @@ export async function refreshAgents(caster, { silent = false } = {}) {
   return changed;
 }
 
+function liveCompilePlan(caster) {
+  return sheetUseCompilePlan({
+    hacker: isHacker(caster),
+    state: actorWiredState(caster),
+    count: compiledAgents(caster).length,
+    cap: agentCap(caster),
+    hasScene: !!canvas.scene,
+    canCreate: game.user.can("ACTOR_CREATE") && game.user.can("TOKEN_CREATE"),
+  });
+}
+
+function warnPlan(caster, gate) {
+  return warn(gate, {
+    name: caster?.name,
+    cap: agentCap(caster),
+    count: compiledAgents(caster).length,
+    state: game.i18n.localize(`GHOSTWIRE.Wired.States.${actorWiredState(caster)}`),
+  });
+}
+
+/**
+ * Abilities-tab Use: pick archetype (under cap) then power-roll, then place the token.
+ * Stock Use already spends Compile Agent's 3 Bandwidth, so compileAgent skipSpend.
+ * At cap, Use is the command roll only — no second Agent.
+ */
+async function useCompileFromSheet(model, use, config, dialogOptions, messageOptions) {
+  const caster = model.actor;
+  const plan = liveCompilePlan(caster);
+  if (plan.mode === "refuse") return warnPlan(caster, plan.gate);
+
+  let archetype;
+  if (plan.mode === "compile") {
+    archetype = await promptArchetype(caster, agentBand(casterLevel(caster)));
+    if (!ARCHETYPES.includes(archetype)) return null;
+  }
+
+  const message = await use.call(model, config, dialogOptions, messageOptions);
+  if (!message) return message;
+  if (plan.mode === "compile") await compileAgent(caster, { archetype, skipSpend: true });
+  return message;
+}
+
+/** Abilities-tab Use of Decompile Agent: pick a target (or all), then dismiss after the card posts. */
+async function useDecompileFromSheet(model, use, config, dialogOptions, messageOptions) {
+  const caster = model.actor;
+  const target = await promptDecompileTarget(caster);
+  if (!target) return null;
+  const message = await use.call(model, config, dialogOptions, messageOptions);
+  if (!message) return message;
+  if (target === "all") await decompileAllAgents(caster);
+  else await decompileAgent(target);
+  return message;
+}
+
+function patchAbilityUse() {
+  const AbilityModel = CONFIG.Item.dataModels?.ability ?? ds.data?.Item?.AbilityModel;
+  if (!AbilityModel?.prototype.use) {
+    console.warn(`${MODULE_ID} | AbilityModel#use not found; Compile Agent sheet Use will not place a token`);
+    return;
+  }
+  const use = AbilityModel.prototype.use;
+  AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
+    const item = this.parent;
+    if (isCompileAbility(item)) return useCompileFromSheet(this, use, config, dialogOptions, messageOptions);
+    if (isDecompileAbility(item)) return useDecompileFromSheet(this, use, config, dialogOptions, messageOptions);
+    return use.call(this, config, dialogOptions, messageOptions);
+  };
+}
+
 export function registerAgents() {
+  patchAbilityUse();
   Hooks.on("getDocumentListContextOptions", (app, menuItems) => {
     if (typeof app._getEmbeddedDocument !== "function") return;
     const compile = target => {
@@ -472,8 +583,8 @@ export function registerAgents() {
       ...(module.api ?? {}),
       compileAgent, decompileAgent, decompileAllAgents, refreshAgents,
       compiledAgents, agentCompiler, agentCap, agentBand, agentStamina, compileAbility,
-      compileAllowedAtState, actorWiredState, compileAgentGate, COMPILE_BANDWIDTH,
+      compileAllowedAtState, actorWiredState, compileAgentGate, sheetUseCompilePlan, COMPILE_BANDWIDTH,
     };
   }
-  console.log(`${MODULE_ID} | Agents: Compile / Decompile registered (hero sheet row menu and Compile Agent item sheet)`);
+  console.log(`${MODULE_ID} | Agents: Compile / Decompile registered (sheet Use, hero sheet row menu, Compile Agent item sheet)`);
 }

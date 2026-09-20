@@ -9,7 +9,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import {
   agentBand, agentCap, agentStamina, compileAgentGate, compileAllowedAtState,
-  actorWiredState, COMPILE_BANDWIDTH,
+  actorWiredState, COMPILE_BANDWIDTH, sheetUseCompilePlan,
 } from "../scripts/agents.mjs";
 import { spriteBand, spriteCap, spriteStamina } from "../scripts/sprites.mjs";
 
@@ -70,6 +70,17 @@ ok(compileAgentGate({ hacker: true, state: "overlay", count: 0, cap: 2, hasScene
 ok(compileAgentGate({ hacker: true, state: "jackedIn", count: 0, cap: 2, hasScene: true, canCreate: false }) === "NoPermission", "no create permission");
 ok(compileAgentGate({ hacker: true, state: "overlay", count: 2, cap: 2, hasScene: true, canCreate: true }) === "AtCap", "at cap blocks compile");
 ok(compileAgentGate({ hacker: true, state: "overlay", count: 0, cap: 2, hasScene: true, canCreate: true }) === null, "Overlay + room compiles");
+
+const usePlan = args => sheetUseCompilePlan(args);
+ok(usePlan({ hacker: true, state: "overlay", count: 0, cap: 2, hasScene: true, canCreate: true }).mode === "compile", "sheet Use under cap compiles");
+ok(usePlan({ hacker: true, state: "jackedIn", count: 0, cap: 2, hasScene: true, canCreate: true }).mode === "compile", "sheet Use Jacked In compiles");
+ok(usePlan({ hacker: true, state: "overlay", count: 2, cap: 2, hasScene: true, canCreate: true }).mode === "command", "sheet Use at cap commands (no second Agent)");
+ok(usePlan({ hacker: true, state: "overlay", count: 2, cap: 2, hasScene: false, canCreate: false }).mode === "command", "at-cap command does not need a Scene");
+ok(usePlan({ hacker: true, state: "linked", count: 0, cap: 2, hasScene: true, canCreate: true }).mode === "refuse"
+  && usePlan({ hacker: true, state: "linked", count: 0, cap: 2, hasScene: true, canCreate: true }).gate === "LinkedRefuses", "sheet Use Linked refuses with LinkedRefuses");
+ok(usePlan({ hacker: true, state: "disconnected", count: 0, cap: 2, hasScene: true, canCreate: true }).gate === "NeedImmersion", "sheet Use disconnected needs immersion");
+ok(usePlan({ hacker: true, state: "overlay", count: 0, cap: 2, hasScene: false, canCreate: true }).gate === "NoScene", "sheet Use compile needs a Scene");
+ok(usePlan({ hacker: false, state: "overlay", count: 0, cap: 2, hasScene: true, canCreate: true }).gate === "NotHacker", "sheet Use non-Hacker refused");
 
 const roster = [];
 const cap = agentCap(hacker({ level: 1 }));
@@ -147,6 +158,9 @@ ok(lang.GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Name === "Compile Agent", "C
 ok(lang.GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Name === "Decompile Agent", "Decompile Agent lang");
 ok(lang.GHOSTWIRE.Summons.Agents.UI.LinkedRefuses.includes("Linked"), "UI names Linked refuse");
 ok(lang.GHOSTWIRE.Summons.Agents.UI.Compile === "Compile Agent", "UI Compile label");
+ok(lang.GHOSTWIRE.Summons.Agents.UI.None.includes("no compiled Agents"), "UI names empty decompile");
+ok(lang.GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Effect_before0000000000.includes("Use this ability"), "Compile Agent flavor names sheet Use");
+ok(lang.GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Effect_before0000000000.includes("Use this ability"), "Decompile Agent flavor names sheet Use");
 
 console.log("\n4b) Compile / Decompile sheet imgs are module assets");
 const MODULE_IMG = /^modules\/draw-steel-ghostwire\/assets\//;
@@ -164,12 +178,17 @@ const kDecompile = (kessic.items ?? []).find(i => i.system?._dsid === "decompile
 ok(kCompile?.img === compile.img, "Kessic Compile Agent img matches class pack");
 ok(kDecompile?.img === decompile.img, "Kessic Decompile Agent img matches class pack");
 ok(grant?.img === compile.img, "Hacker L1 Agents grant uses Compile Agent icon");
-ok(read("module.json").version >= "0.3.73", `module.json is ≥ 0.3.73 (got ${read("module.json").version})`);
+ok(read("module.json").version >= "0.3.76", `module.json is ≥ 0.3.76 (got ${read("module.json").version})`);
 
 console.log("\n5) Script registration + RAW");
 const mod = readFileSync("scripts/module.mjs", "utf8");
 ok(mod.includes('from "./agents.mjs"') && mod.includes("registerAgents()"), "module.mjs registers agents");
-ok(!readFileSync("scripts/agents.mjs", "utf8").includes("kind: \"sprite\""), "agents.mjs does not stamp kind sprite");
+const agentsSrc = readFileSync("scripts/agents.mjs", "utf8");
+ok(!agentsSrc.includes("kind: \"sprite\""), "agents.mjs does not stamp kind sprite");
+ok(agentsSrc.includes("AbilityModel.prototype.use"), "Compile Agent wraps AbilityModel#use");
+ok(agentsSrc.includes("skipSpend: true"), "sheet Use compile does not double-charge Bandwidth");
+ok(agentsSrc.includes("useDecompileFromSheet"), "Decompile Agent sheet Use is intercepted");
+ok(!readFileSync("scripts/sprites.mjs", "utf8").includes("AbilityModel.prototype.use"), "Compile Sprite Use path unchanged");
 const raw = readFileSync("docs/raw/19-hacker.md", "utf8");
 ok(/Compile Agent/.test(raw) && /Linked refuses/.test(raw), "RAW 19 names Compile Agent + Linked refuses");
 ok(/Probe/.test(raw) && /Spike/.test(raw) && /Daemon/.test(raw) && /Watchdog/.test(raw), "RAW names four archetypes");

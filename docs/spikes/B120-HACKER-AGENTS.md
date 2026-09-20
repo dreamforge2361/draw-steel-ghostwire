@@ -1,7 +1,7 @@
 # Spike B120 — Hacker Agents (Sprite parity)
 
 **Date:** 2026-09-20  
-**Module:** **0.3.73** (Agents shipped **0.3.72**; sheet icons **0.3.73**)  
+**Module:** **0.3.76** (Agents shipped **0.3.72**; sheet icons **0.3.73**; sheet-Use spawn **0.3.76**)  
 **Status:** **SHIPPED / DESIGN LOCKED** (pending Michael Foundry-verify; he can tune later)  
 **Lock:** Michael LOCK 2026-09-20 — *Hacker Agents as pets — implement and ship*
 
@@ -31,7 +31,7 @@ Cap is decided by a **world scan on `compiler`**, not the roster mirror.
 ### Bandwidth cost
 Shipped Compile Sprite: base compile is **free** (signature); **3 Resonance** is the Enhance that compiles a *second* sprite.
 
-**v1 Agents:** compiling **one** Agent costs **3 Bandwidth** (same number as that Enhance / Ghost Signal). Charged by the Compile sheet button / context menu **in combat**. Outside combat, Hacker Programs fire without spending — Compile Agent follows that. No v1 Enhance for a second Agent in the same action (Controller Weaver-style cap bump is parked). Michael can retune the 3.
+**v1 Agents:** compiling **one** Agent costs **3 Bandwidth** (same number as that Enhance / Ghost Signal). Charged by Abilities-tab **Use** (Draw Steel `resource: 3`) or by the Compile sheet button / context menu **in combat** (`spendBandwidth`). Outside combat, Hacker Programs fire without spending — Compile Agent follows that. No v1 Enhance for a second Agent in the same action (Controller Weaver-style cap bump is parked). Michael can retune the 3.
 
 ### Archetypes (4)
 | Agent | Sprite twin | Job |
@@ -60,11 +60,13 @@ Separate `kind: "agent"` flags, separate `src/packs/summons/agents/` Actors, Hac
 
 ## Foundry path
 
-Mirrors sprites: **sheet-button spawn**, not `abilityUse`. Compile Agent is one card with two jobs (compile / command); firing a spawn on every use would compile on a command and on a low result. Same B52 rejection.
+**0.3.72** shipped sheet-button spawn only (B52 Compile Sprite pattern). Michael smoke: Abilities-tab **Use** ran the stock Draw Steel power roll and never opened the picker or placed a token.
 
-Entry points: Compile Agent (and Decompile Agent) Item-sheet header controls + hero sheet row context menu.
+**0.3.76:** wrap `AbilityModel#use` in `scripts/agents.mjs`. Under cap + Overlay/Jacked In: archetype picker **before** the power roll, then place the token (`compileAgent({ skipSpend: true })` — Use already spent the 3 Bandwidth). At cap: Use is command-only (power roll, no second Agent). Linked / Disconnected refuse the whole Use with `LinkedRefuses` / `NeedImmersion` (not a silent no-token). A low result still compiles — RAW unstable means it manifests, it just acts next turn.
 
-Script: `scripts/agents.mjs`, registered from `module.mjs`. API: `compileAgent`, `decompileAgent`, `decompileAllAgents`, `refreshAgents`, `compiledAgents`, `agentCompiler`, `agentCap`, `agentBand`, `agentStamina`, `compileAbility`, `compileAllowedAtState`, `actorWiredState`, `compileAgentGate`, `COMPILE_BANDWIDTH`.
+**Decompile Agent** Use is intercepted the same way: pick one Agent or the whole roster, then dismiss after the card posts. Item-sheet header controls + hero sheet row context menu stay as fallbacks.
+
+Script: `scripts/agents.mjs`, registered from `module.mjs`. API: `compileAgent`, `decompileAgent`, `decompileAllAgents`, `refreshAgents`, `compiledAgents`, `agentCompiler`, `agentCap`, `agentBand`, `agentStamina`, `compileAbility`, `compileAllowedAtState`, `actorWiredState`, `compileAgentGate`, `sheetUseCompilePlan`, `COMPILE_BANDWIDTH`.
 
 ## Out of scope
 - Gold Line `{ force: true }`
@@ -73,10 +75,10 @@ Script: `scripts/agents.mjs`, registered from `module.mjs`. API: `compileAgent`,
 - Michael final token art (placeholders ship)
 
 ## Success / Michael checklist
-1. Hacker Overlay or Jacked In → Compile Agent → pick Spike → token beside caster; Actor `kind: "agent"`; counts toward cap.
-2. Linked refuses with a clear notification.
-3. Cap 2 blocks a third compile at L1.
-4. Decompile Agent / roster ✕ removes token+Actor.
+1. Hacker Overlay or Jacked In → **Use Compile Agent** from the Abilities tab → pick Spike → token beside caster; Actor `kind: "agent"`; counts toward cap. (Item-sheet Compile button still works.)
+2. Linked refuses with a clear notification (no token).
+3. Cap 2 blocks a third compile at L1; Use at cap is command-only (power roll, no extra token).
+4. **Use Decompile Agent** / roster ✕ removes token+Actor.
 5. End of encounter clears the roster.
-6. Module **0.3.73**. Compile Agent / Decompile Agent `img` is `modules/draw-steel-ghostwire/assets/icons/abilities/{compile,decompile}-agent.svg` (not Foundry core `icons/commodities/tech/…`). Smoke: `node tools/hacker-agents-smoke.mjs`.
+6. Module **0.3.76**. Compile Agent / Decompile Agent `img` is `modules/draw-steel-ghostwire/assets/icons/abilities/{compile,decompile}-agent.svg` (not Foundry core `icons/commodities/tech/…`). Abilities-tab Use opens the picker and places the token. Smoke: `node tools/hacker-agents-smoke.mjs`.
 7. RAW 19 + Wire + glossary, manuscript L1/slang/chargen, Foundry rulebook **and** lore journals, VOIDMARK index — so the table and VOIDMARK can name Compile Agent / Probe / Spike / Daemon / Watchdog. No PDF.

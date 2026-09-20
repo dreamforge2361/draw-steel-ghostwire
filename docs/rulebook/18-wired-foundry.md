@@ -62,7 +62,7 @@ Also automated: a hero with the **Hacking** skill gets an edge on the rolling Ma
 
 Not automated: the Overlay bane on tests (make it in the test dialog), biofeedback scaling. Node / Console verbs apply **soft Trace** on a tier-1 active rolled verb (not Scan), as above.
 
-**Compile Agent (B120).** Hacker L1 grant. Sheet-button spawn (`scripts/agents.mjs`) — same pattern as Compile Sprite, not `abilityUse`. Overlay or Jacked In; Linked warns and refuses. **3 Bandwidth** in combat. Dialog picks **Probe / Spike / Daemon / Watchdog** from Summons › Agents (not sprite SKUs). Cap 2 → 3@5 → 4@8. **Decompile Agent** is a free maneuver (no immersion gate). Roster ✕ / 0 Stamina / end of encounter also decompile. Watchdog Agent is the Hacker screen pet — not Watchdog ICE.
+**Compile Agent (B120).** Hacker L1 grant. **Use** from the Abilities tab opens the archetype picker and places a token (`scripts/agents.mjs`); the Compile Agent sheet button and row menu still compile. Overlay or Jacked In; Linked warns and refuses (no silent miss). **3 Bandwidth** in combat. Dialog picks **Probe / Spike / Daemon / Watchdog** from Summons › Agents (not sprite SKUs). Cap 2 → 3@5 → 4@8; Use at cap commands instead of compiling another. **Decompile Agent** Use (and the free maneuver / roster ✕) dismisses; no immersion gate. 0 Stamina / end of encounter also decompile. Watchdog Agent is the Hacker screen pet — not Watchdog ICE.
 
 For the Wired Console, the state is also stored on the actor as `flags.draw-steel-ghostwire.wired = { connected, immersed, state }`, with `state` being `"disconnected"`, `"linked"`, `"overlay"`, or `"jackedIn"`. `connected` is true for any on-net state (Linked included). `immersed` is true only for Overlay or Jacked In.
 
