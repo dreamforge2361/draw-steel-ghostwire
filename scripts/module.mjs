@@ -3,6 +3,7 @@ import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerWiredMinimap } from "./wired-minimap.mjs";
+import { registerWiredNodeVerbs } from "./wired-node-verbs.mjs";
 import { isWireKitVerb, registerWiredKit } from "./wired-kit.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
@@ -54,7 +55,7 @@ Hooks.once("init", () => {
     if (defaultItems.delete(stock)) defaultItems.add(ghostwire);
     else console.warn(`${MODULE_ID} | ${stock} not found in hero default items; ${ghostwire} not added`);
   }
-  // B117: Connect / Jack Out / Toggle stay on the sheet. Scan / Ping / Navigate fire from the Console.
+  // B117: Connect / Jack Out / Toggle stay on the sheet. Scan / Ping / Navigate fire from the node facing the Connected player (and the Console).
   for (const uuid of SHEET_VERBS) defaultItems.add(uuid);
   for (const status of Object.values(WIRED_STATUSES)) CONFIG.statusEffects[status.id] = { ...status };
 
@@ -82,6 +83,7 @@ Hooks.once("init", () => {
   patchWiredAbilities();
   registerWiredConsole({ getWiredState });
   registerWiredMinimap({ getWiredState });
+  registerWiredNodeVerbs({ getWiredState });
   registerWiredKit();
   registerRunGenerator();
   registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
@@ -198,7 +200,7 @@ function patchWiredAbilities() {
 
 // Existing heroes: add any missing sheet Matrix Verbs once (GM client), then flag the hero so it isn't re-granted.
 // B117: strip Scan / Navigate / Ping / Broadcast / Search / Read-Write off hero sheets and Wire Kit NPCs
-// once the Console path owns them (flag matrixVerbsConsole). Named bestiary copies without the kit flag stay.
+// once the node panel / Console path owns them (flag matrixVerbsConsole). Named bestiary copies without the kit flag stay.
 Hooks.once("ready", async () => {
   if (!game.user.isGM) return;
   const verbs = (await Promise.all(SHEET_VERBS.map(uuid => fromUuid(uuid)))).filter(Boolean);

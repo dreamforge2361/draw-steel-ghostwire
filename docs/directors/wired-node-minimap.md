@@ -58,7 +58,7 @@ Overlay: canvas + floating node map. Jacked In: dark scene + node map primary. V
 
 **Layout.** Placed tokens keep relative canvas positions (aspect preserved), then labels are pushed apart so pills do not stack. Unplaced nodes use a **room-prefix cluster** (Light Control above maglocks in the same room) when names share `{Room} - Light Control` / `{Room} - Maglock Door N`, otherwise a force-directed layout with link attraction. Dense boards (12+) shrink dots and truncate names (`LC` / `D2`); the tooltip still has the full name. Scroll to zoom, drag empty space to pan, double-click or the header button to reset. Node glyph: ring = Integrity % for Track 2 (conic gradient), solid rounded square for Track 1; glow colour = Trace Alert band (quiet cyan → stir violet → malice amber → hunting pink → lockout red pulse); downed nodes dim. Label = `R#` (setting) + short name.
 
-**Hover / click.** Tooltip (`data-tooltip-html`): name, Track · Rating, Integrity, Trace Alert + band. Click a placed node → pan to its token (GM also controls it); unplaced nodes do nothing.
+**Hover / click.** Tooltip (`data-tooltip-html`): name, Track · Rating, Integrity, Trace Alert + band. Click a node → open its **Wired node panel** (Scan / Ping / Navigate) and pan to its token when one is placed (GM also controls it).
 
 **Live refresh.** `updateScene` with module flags on the viewed / board Scene (Console add, reveal, edit, delete, reset, re-link), `create/update/deleteToken` on the viewed Scene (place, move, reveal, remove), node Actor create / update / delete, `canvasReady`. Connection: `create/update/deleteActiveEffect` on owned actors, `updateActor` with `flags.<module>.wired`, `controlToken`, `updateUser` (character), `canvasReady`, `ready`.
 

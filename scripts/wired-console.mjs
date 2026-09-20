@@ -20,6 +20,7 @@ import {
   consoleVerbMetaFromMessage,
   nextAlert,
   pickConsoleActor,
+  pickPlayerVerbActor,
   softTraceDelta,
 } from "./wired-console-verbs.mjs";
 
@@ -217,19 +218,10 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       connected: !!verbActor?.connected,
       nodeId: selected?.id,
       owned: !!verbActor?.owned,
+      revealed: !!selected?.revealed,
+      isGM,
     });
-    const verbs = CONSOLE_SLICE.map(verb => ({
-      dsid: verb.dsid,
-      icon: verb.icon,
-      label: game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${verb.lang}.Name`),
-      enabled: verbGate.ok,
-      tooltip: verbGate.ok
-        ? game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltip", {
-          name: game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${verb.lang}.Name`),
-          chr: verb.characteristicLabel,
-        })
-        : game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${verbGate.reason}`),
-    }));
+    const verbs = verbStripView(verbGate);
     const pings = readPings(scene).map(ping => ({
       ...ping,
       timeLabel: ping.at ? new Date(ping.at).toLocaleTimeString(game.i18n.lang, { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "",
@@ -688,7 +680,23 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 }
 
-/* ---------- Matrix Verbs from Console (B117) ---------- */
+/* ---------- Matrix Verbs from Console / node panel (B117) ---------- */
+
+/** Shared Scan / Ping / Navigate button specs for the Console strip and the node panel. */
+export function verbStripView(gate) {
+  return CONSOLE_SLICE.map(verb => {
+    const name = game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${verb.lang}.Name`);
+    return {
+      dsid: verb.dsid,
+      icon: verb.icon,
+      label: name,
+      enabled: !!gate?.ok,
+      tooltip: gate?.ok
+        ? game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltip", { name, chr: verb.characteristicLabel })
+        : game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate?.reason ?? "Actor"}`),
+    };
+  });
+}
 
 async function resolveVerbItem(actor, dsid) {
   const owned = [...(actor?.items ?? [])].find(item => item.system?._dsid === dsid);
@@ -711,6 +719,8 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     connected: state !== "disconnected",
     nodeId: node?.id,
     owned: !!(actor && (game.user.isGM || actor.isOwner)),
+    revealed: !!node?.revealed,
+    isGM: !!game.user.isGM,
   });
   if (!gate.ok) {
     ui.notifications.warn(game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`));
@@ -851,6 +861,12 @@ export function registerWiredConsole({ getWiredState }) {
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings, applyAutoNodesFromScene, useConsoleVerb, CONSOLE_SLICE };
+    if (module) {
+      module.api = {
+        ...(module.api ?? {}),
+        openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings,
+        applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor,
+      };
+    }
   });
 }

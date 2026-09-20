@@ -1,6 +1,8 @@
-// B117 Matrix Verbs in Wired Console — Foundry-free helpers (Node smoke can import this).
+// B117 Matrix Verbs — Foundry-free helpers (Node smoke can import this).
 // Thin slice: Scan / Ping / Navigate. Broadcast / Search / Read-Write stay later.
-// Soft Trace: Director-default +1 on tier 1 for active verbs. Scan is observation — no auto Trace.
+// Player path: Connect on the sheet, then fire verbs from the node facing them.
+// Director Console still has the same strip (shared gate + fire). Soft Trace: +1 on
+// tier 1 for active verbs. Scan is observation — no auto Trace.
 
 import {
   CONSOLE_SLICE_DSIDS,
@@ -12,7 +14,7 @@ import {
 export const ALERT_MAX = 12;
 
 /**
- * Scan / Ping / Navigate as the Console fires them.
+ * Scan / Ping / Navigate as the node panel and Console fire them.
  * characteristic is the Draw Steel key on the verb card (Instinct/Logic in Ghostwire lang).
  * softTraceOnTier1 follows shipped cards + Scan doctrine (no Trace on clean observation).
  */
@@ -62,13 +64,32 @@ export function pickConsoleActor({ roster = [], selectedUuid = null, combatantUu
 }
 
 /**
- * @returns {{ ok: boolean, reason: string|null }}
- * reason is a GHOSTWIRE.WiredConsole.VerbNeed* key suffix (Actor / Node / Owner / Disconnected).
+ * Player node panel: prefer the controlled Connected runner, else the assigned character
+ * if Connected, else the first Connected owned candidate. Falls back to a disconnected
+ * owned actor so the UI can say “use Connect on the sheet.”
  */
-export function consoleVerbGate({ actorUuid, connected, nodeId, owned } = {}) {
+export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, characterUuid = null } = {}) {
+  const rows = (Array.isArray(candidates) ? candidates : []).filter(row => row.owned !== false);
+  const connected = rows.filter(row => row.connected);
+  const has = (uuid, list) => !!uuid && list.some(row => row.uuid === uuid);
+  if (has(controlledUuid, connected)) return controlledUuid;
+  if (has(characterUuid, connected)) return characterUuid;
+  if (connected[0]) return connected[0].uuid;
+  if (has(controlledUuid, rows)) return controlledUuid;
+  if (has(characterUuid, rows)) return characterUuid;
+  return rows[0]?.uuid ?? null;
+}
+
+/**
+ * @returns {{ ok: boolean, reason: string|null }}
+ * reason is a GHOSTWIRE.WiredConsole.VerbNeed* key suffix (Actor / Node / Owner / Hidden / Disconnected).
+ * revealed/isGM default so existing Console callers stay Actor/Owner/Node/Disconnected.
+ */
+export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed = true, isGM = true } = {}) {
   if (!actorUuid) return { ok: false, reason: "Actor" };
   if (!owned) return { ok: false, reason: "Owner" };
   if (!nodeId) return { ok: false, reason: "Node" };
+  if (!isGM && !revealed) return { ok: false, reason: "Hidden" };
   if (!connected) return { ok: false, reason: "Disconnected" };
   return { ok: true, reason: null };
 }

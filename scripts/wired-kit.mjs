@@ -1,7 +1,7 @@
 // Wire Kit — Matrix Verbs (B115, B117).
 // Heroes already get SHEET_VERBS via ds.CONFIG.hero.defaultItems. NPCs do not.
 // Dropping this feature (Ghostwire Matrix › Support) onto an NPC stamps Connect / Jack Out / Toggle.
-// Scan / Ping / Navigate fire from the Wired Console (B117). Meat-only opposition stays clean. No bestiary default.
+// Scan / Ping / Navigate fire from the node the Connected runner is facing (B117). Meat-only opposition stays clean. No bestiary default.
 
 import { MATRIX_VERBS, SHEET_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
 
@@ -24,7 +24,7 @@ function ownedDsids(actor) {
 
 /**
  * Copy missing sheet Matrix Verbs (Connect / Jack Out / Toggle) onto an actor. Idempotent.
- * Flags copies `wireKitGranted`. Scan / Ping / Navigate fire from the Wired Console (B117).
+ * Flags copies `wireKitGranted`. Scan / Ping / Navigate fire from the node panel / Console (B117).
  * @returns {Promise<number>} how many abilities were created
  */
 export async function grantMatrixVerbs(actor, { notify = false } = {}) {
@@ -64,6 +64,7 @@ async function kitSource() {
 export async function addWireKit(actor, { notify = true } = {}) {
   if (!actor) return { kit: false, verbs: 0 };
   if (!game.user.isGM && !actor.isOwner) return { kit: false, verbs: 0 };
+  if (actor.getFlag(MODULE_ID, "kind") === "node") return { kit: false, verbs: 0 };
 
   if (actor.type === "hero") {
     if (notify) ui.notifications.info(game.i18n.format("GHOSTWIRE.WiredKit.HeroSkip", { actor: actor.name }));
@@ -99,7 +100,7 @@ export async function revokeWireKitVerbs(actor) {
 export function selectedKitTargets() {
   return [...(canvas?.tokens?.controlled ?? [])]
     .map(token => token.actor)
-    .filter(actor => actor && actor.type !== "hero");
+    .filter(actor => actor && actor.type !== "hero" && actor.getFlag(MODULE_ID, "kind") !== "node");
 }
 
 export async function addWireKitToSelected() {
@@ -139,6 +140,7 @@ export function registerWiredKit() {
     if (!game.user.isGM) return;
     const actor = hud.object?.actor;
     if (!actor || actor.type === "hero") return;
+    if (actor.getFlag(MODULE_ID, "kind") === "node") return;
     const root = html?.rootElement ?? html?.[0] ?? html;
     if (!root?.querySelector) return;
     const col = root.querySelector(".col.right") ?? root.querySelector(".right");

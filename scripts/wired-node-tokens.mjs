@@ -20,7 +20,42 @@ export function boardScene(viewed = game.scenes.viewed) {
   return (id && (id !== viewed.id) && game.scenes.get(id)) || viewed || null;
 }
 
-const isNodeActor = actor => actor?.getFlag(MODULE_ID, "kind") === "node";
+export const isNodeActor = actor => actor?.getFlag(MODULE_ID, "kind") === "node";
+
+const flagOf = (doc, key) => doc?.getFlag?.(MODULE_ID, key) ?? doc?.flags?.[MODULE_ID]?.[key];
+
+/** Observer so players can open a revealed node; None when it's hidden. */
+export function nodeDefaultOwnership(revealed) {
+  const levels = globalThis.CONST?.DOCUMENT_OWNERSHIP_LEVELS ?? { OBSERVER: 2, NONE: 0 };
+  return { default: revealed ? levels.OBSERVER : levels.NONE };
+}
+
+/** Stamp / refresh default OBSERVER on reveal so players can open the node they're facing. */
+export async function setNodePlayerAccess(actor, revealed) {
+  if (!actor) return false;
+  const want = nodeDefaultOwnership(!!revealed).default;
+  if ((actor.ownership?.default ?? 0) === want) return false;
+  await actor.update({ ownership: { ...(actor.ownership ?? {}), default: want } }, SYNC);
+  return true;
+}
+
+const nodeTokenFlags = (boardSceneId, node) => ({
+  [MODULE_ID]: { kind: "node", boardSceneId, nodeId: node.id, track: node.track },
+});
+
+/** Resolve a canvas token to the board node it represents (actor flags, else token flags). */
+export function nodeRefFromToken(token) {
+  const doc = token?.document ?? token;
+  if (!doc) return null;
+  const actor = token.actor ?? game.actors?.get?.(doc.actorId) ?? null;
+  const kind = flagOf(actor, "kind") ?? flagOf(doc, "kind");
+  if (kind !== "node") return null;
+  return {
+    actor: actor ?? null,
+    nodeId: flagOf(actor, "nodeId") ?? flagOf(doc, "nodeId") ?? null,
+    boardSceneId: flagOf(actor, "boardSceneId") ?? flagOf(doc, "boardSceneId") ?? null,
+  };
+}
 
 /** The placed Actor for a board node, or null. */
 export function placedNodeActor(boardSceneId, nodeId) {
@@ -92,7 +127,7 @@ export async function placeNode(board, node, options = {}) {
   const textureSrc = options.textureSrc || extraFlags.tokenArt || null;
   const data = game.actors.fromCompendium(template);
   foundry.utils.mergeObject(data, {
-    name: node.name, folder: (await nodeFolder())?.id ?? null, ownership: { default: 0 },
+    name: node.name, folder: (await nodeFolder())?.id ?? null, ownership: nodeDefaultOwnership(!!node.revealed),
     "system.stamina": { ...staminaFor(node), temporary: 0 },
     "system.monster.level": node.rating,
     "prototypeToken.name": node.name,
@@ -119,7 +154,10 @@ export async function placeNode(board, node, options = {}) {
   // does not inherit canvas.level the way drag-drop does (B108).
   const { elevation, level } = placementElevationAndLevel();
   // B110: node markers are ~door-control scale (0.25 grid), not full 1x1 tokens.
-  const tokenData = { x, y, elevation, width: 0.25, height: 0.25, actorLink: true, hidden: !node.revealed };
+  const tokenData = {
+    x, y, elevation, width: 0.25, height: 0.25, actorLink: true, hidden: !node.revealed,
+    flags: nodeTokenFlags(board.id, node),
+  };
   if (level) tokenData.level = level;
   if (textureSrc) foundry.utils.setProperty(tokenData, "texture.src", textureSrc);
   const tokenDocument = await actor.getTokenDocument(tokenData, { parent: viewed });
@@ -162,6 +200,7 @@ export async function syncPlacedNodes(scene) {
       actorChanges["prototypeToken.texture.src"] = art;
     }
     if (!foundry.utils.isEmpty(actorChanges)) await actor.update(actorChanges, SYNC);
+    await setNodePlayerAccess(actor, node.revealed);
 
     for (const token of actorTokens(actor)) {
       const tokenChanges = {};
@@ -169,6 +208,10 @@ export async function syncPlacedNodes(scene) {
       if (token.name !== node.name) tokenChanges.name = node.name;
       if ((token.bar1?.attribute ?? null) !== barFor(node)) tokenChanges["bar1.attribute"] = barFor(node);
       if (art && token.texture?.src !== art) tokenChanges["texture.src"] = art;
+      const flags = nodeTokenFlags(scene.id, node);
+      if (flagOf(token, "kind") !== "node" || flagOf(token, "nodeId") !== node.id) {
+        tokenChanges[`flags.${MODULE_ID}`] = flags[MODULE_ID];
+      }
       if (!foundry.utils.isEmpty(tokenChanges)) await token.update(tokenChanges, SYNC);
     }
   }
@@ -219,5 +262,11 @@ export function registerNodeTokens({ getBoard }) {
     const actor = game.actors.get(token.actorId);
     if ((userId !== game.user.id) || !isNodeActor(actor)) return;
     if (!actorTokens(actor).length) await actor.delete({ ghostwireNodeCleanup: true });
+  });
+
+  // Catch up OBSERVER on already-revealed nodes (worlds placed before B117 player path).
+  Hooks.once("ready", () => {
+    if (!game.user.isGM) return;
+    for (const scene of game.scenes) syncPlacedNodes(scene);
   });
 }

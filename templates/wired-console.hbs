@@ -20,9 +20,10 @@
   </header>
 
   <div class="wc-body">
-    {{!-- B117: Scan / Ping / Navigate fire here (Connect / Jack Out / Toggle stay on the sheet). --}}
+    {{!-- B117: Scan / Ping / Navigate. Players fire these from the node they're facing; this strip is the Director roster path. --}}
     <section class="wc-panel wc-verbs">
       <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Verbs"}}</h3>
+      <p class="wc-dim wc-verb-hint">{{localize "GHOSTWIRE.WiredConsole.VerbPlayerPath"}}</p>
       <p class="wc-verb-status">
         {{#if verbActor}}
         <span class="wc-roster-name">{{verbActor.name}}</span>

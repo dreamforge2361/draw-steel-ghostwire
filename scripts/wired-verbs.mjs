@@ -1,6 +1,7 @@
 // Matrix Verbs (08-hacker.md): the nine universal Wired abilities.
 // B117: Connect / Jack Out / Toggle stay on the sheet (hero defaultItems + NPC Wire Kit).
-// Scan / Ping / Navigate fire from the Wired Console. Broadcast / Search / Read-Write follow later.
+// Scan / Ping / Navigate fire from the node the Connected player is facing (and the Director Console).
+// Broadcast / Search / Read-Write follow later.
 // NPCs do not receive sheet verbs until the Director stamps Wire Kit (B115, scripts/wired-kit.mjs).
 
 export const MODULE_ID = "draw-steel-ghostwire";

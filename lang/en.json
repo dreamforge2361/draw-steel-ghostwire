@@ -5050,7 +5050,7 @@
         },
         "WireKit": {
           "Name": "Wire Kit — Matrix Verbs",
-          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to grant <strong>Connect</strong>, <strong>Jack Out</strong>, and <strong>Toggle Connection State</strong> — the sheet verbs every hero already has. <strong>Scan</strong>, <strong>Ping</strong>, and <strong>Navigate</strong> fire from the Wired Console once the NPC is Connected.</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes already receive the sheet verbs at creation; this kit does not duplicate them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary. Broadcast / Search / Read-Write stay later.</p>"
+          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to grant <strong>Connect</strong>, <strong>Jack Out</strong>, and <strong>Toggle Connection State</strong> — the sheet verbs every hero already has. <strong>Scan</strong>, <strong>Ping</strong>, and <strong>Navigate</strong> fire from the node a Connected runner is facing (and from the Wired Console).</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes already receive the sheet verbs at creation; this kit does not duplicate them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary. Broadcast / Search / Read-Write stay later.</p>"
         },
         "Buzzer": {
           "Name": "Buzzer",
@@ -6238,7 +6238,7 @@
       },
       "Changed": "{actor}: {state}.",
       "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es).",
-      "ConsoleMigrated": "Ghostwire: moved {count} Matrix Verb(s) off the sheet — Scan / Ping / Navigate fire from the Wired Console.",
+      "ConsoleMigrated": "Ghostwire: moved {count} Matrix Verb(s) off the sheet — Scan / Ping / Navigate fire from the node you're facing (or the Wired Console).",
       "Vision": {
         "overlay": "Wired Overlay",
         "jackedIn": "Jacked In"
@@ -6364,6 +6364,8 @@
       "VerbNeedNode": "Select a node, then fire Scan / Ping / Navigate.",
       "VerbNeedOwner": "You don't control that runner.",
       "VerbNeedDisconnected": "Disconnected — use Connect on the sheet first.",
+      "VerbNeedHidden": "That node is hidden from runners.",
+      "VerbPlayerPath": "Players: Connect on your sheet, then open the node token facing you. This strip is the Director roster path.",
       "VerbUnknown": "Unknown Matrix Verb.",
       "VerbMissing": "Matrix Verb {name} is missing from Ghostwire Abilities.",
       "VerbTrace": "{name}: Trace Alert +1 ({alert} / 12) — something went wrong."
@@ -6376,13 +6378,22 @@
       "HeroSkip": "{actor} is a hero — Connect / Jack Out / Toggle are already on the sheet.",
       "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."
     },
+    "WiredNode": {
+      "Title": "Wired Node",
+      "NeedActor": "Connect on your sheet, then come back to this node.",
+      "Hidden": "That node is hidden from runners.",
+      "Missing": "No Wired node here.",
+      "Hud": "Open Matrix Verbs for this node",
+      "OpenSheet": "Open actor sheet",
+      "LaterHint": "Broadcast / Search / Read-Write come later. Connect / Jack Out / Toggle stay on the sheet."
+    },
     "WiredMinimap": {
       "Title": "Wired Node Map",
       "Keybinding": "Toggle the Wired Node Map",
       "Director": "Director",
       "NoNodes": "No nodes revealed on this grid yet.",
       "Hidden": "Hidden from runners",
-      "FocusHint": "Click to pan to its token.",
+      "FocusHint": "Click to open its Matrix Verbs.",
       "PanHint": "Scroll to zoom, drag to pan, double-click or this button to reset.",
       "Room": "Room",
       "Settings": {

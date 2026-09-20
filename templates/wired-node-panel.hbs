@@ -1,0 +1,72 @@
+<div class="wc-deck wn-deck">
+  {{#if missing}}
+  <p class="wc-empty">{{hint}}</p>
+  {{else}}
+  <header class="wn-head">
+    {{#if img}}<img class="wn-img" src="{{img}}" alt="">{{/if}}
+    <div class="wn-title">
+      <h3 class="wn-name">{{name}}</h3>
+      <p class="wn-tags">
+        <span class="wc-tag">T{{track}}</span>
+        <span class="wc-tag">R{{rating}}</span>
+        {{#unless revealed}}<span class="wc-tag">{{localize "GHOSTWIRE.WiredConsole.Hidden"}}</span>{{/unless}}
+        {{#if down}}<span class="wc-tag wc-tag-down">{{localize "GHOSTWIRE.WiredConsole.Down"}}</span>{{/if}}
+      </p>
+    </div>
+  </header>
+
+  <div class="wn-body">
+    <section class="wc-panel wc-verbs">
+      <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Verbs"}}</h3>
+      <p class="wc-verb-status">
+        {{#if runner}}
+        <span class="wc-roster-name">{{runner.name}}</span>
+        <span class="wc-state-chip state-{{runner.state}}">{{runner.stateLabel}}</span>
+        {{else}}
+        <span class="wc-dim">{{localize "GHOSTWIRE.WiredNode.NeedActor"}}</span>
+        {{/if}}
+      </p>
+      {{!-- Thin slice Scan / Ping / Navigate; later verbs append to CONSOLE_SLICE. --}}
+      <div class="wc-verb-strip">
+        {{#each verbs}}
+        <button type="button" class="wc-btn wc-verb" data-action="fireVerb" data-verb="{{dsid}}" {{disabled (not enabled)}} data-tooltip="{{tooltip}}">
+          <i class="fa-solid {{icon}}"></i> {{label}}
+        </button>
+        {{/each}}
+      </div>
+      {{#if verbHint}}<p class="wc-dim wc-verb-hint">{{verbHint}}</p>{{/if}}
+      <p class="wc-dim wc-verb-hint">{{laterHint}}</p>
+    </section>
+
+    {{#if isTrack2}}
+    <div class="wc-block">
+      <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.Integrity"}} <span class="wc-readout">{{integrity}} / {{integrityMax}}</span></div>
+      <div class="wc-bar wc-bar-large"><span style="width: {{integrityPct}}%"></span></div>
+    </div>
+    {{/if}}
+
+    <div class="wc-block">
+      <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.TraceAlert"}} <span class="wc-readout band-{{alertBand}}">{{alert}} / 12</span></div>
+      <div class="wc-alert">
+        {{#each alertSteps}}<span class="{{#if lit}}lit{{/if}} band-{{band}}">{{step}}</span>{{/each}}
+      </div>
+      <p class="wc-alert-label band-{{alertBand}}">{{alertLabel}}</p>
+    </div>
+
+    {{#if description}}
+    <div class="wc-block">
+      <div class="wc-block-title">{{localize "GHOSTWIRE.WiredConsole.Description"}}</div>
+      <p class="wc-description">{{description}}</p>
+    </div>
+    {{/if}}
+  </div>
+
+  {{#if hasSheet}}
+  <footer class="wn-foot">
+    <button type="button" class="wc-btn wc-btn-small" data-action="openSheet">
+      <i class="fa-solid fa-user"></i> {{localize "GHOSTWIRE.WiredNode.OpenSheet"}}
+    </button>
+  </footer>
+  {{/if}}
+  {{/if}}
+</div>
