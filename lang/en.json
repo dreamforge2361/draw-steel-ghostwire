@@ -7326,7 +7326,7 @@
         "LevelInterior": "Interior",
         "RoofsTile": "Roofs (overhead)",
         "Injected": "Gold Line is ready under Scenes → Deadhead. Roofs sit on the Tiles layer (elevation 10).",
-        "Refreshed": "Gold Line loops refreshed. Re-activate the Scene if the canvas is already open."
+        "Refreshed": "Gold Line loops refreshed (mp4 first). Re-activate the Scene if the canvas is already open. Stills are a valid playable layout if video fails."
       }
     },
     "Lore": {

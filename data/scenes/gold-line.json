@@ -1,6 +1,6 @@
 {
   "id": "gold-line",
-  "version": 2,
+  "version": 3,
   "nameKey": "GHOSTWIRE.Scenes.GoldLine.Name",
   "folderKey": "GHOSTWIRE.Scenes.GoldLine.Folder",
   "width": 6472,
@@ -28,8 +28,24 @@
   "assets": {
     "interiorStill": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior.webp",
     "interiorLoop": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm",
+    "interiorLoopMp4": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.mp4",
     "roofsStill": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs.webp",
-    "roofsLoop": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm"
+    "roofsLoop": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm",
+    "roofsLoopMp4": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.mp4",
+    "interiorLoopFixed": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop-fixed.webm",
+    "roofsLoopFixed": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop-fixed.webm",
+    "interiorPrefer": [
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.mp4",
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop-fixed.webm",
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm",
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior.webp"
+    ],
+    "roofsPrefer": [
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.mp4",
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop-fixed.webm",
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm",
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs.webp"
+    ]
   },
   "level": {
     "_id": "gwGoldLineLvl000",

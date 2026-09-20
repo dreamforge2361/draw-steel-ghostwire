@@ -7,6 +7,7 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
+import { GOLD_LINE_PLATE, isFiniteDuration, safeVideoCurrentTime } from "../scripts/gold-line-scene.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -19,12 +20,15 @@ const ASSETS = {
   roofsStill: "assets/maps/battlemaps/gold-line/map-gold-line-roofs.webp",
   interiorLoop: "assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm",
   roofsLoop: "assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm",
+  interiorLoopMp4: "assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.mp4",
+  roofsLoopMp4: "assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.mp4",
 };
 const TEMPLATE = "data/scenes/gold-line.json";
 const MODULE = "module.json";
 const SOR = "docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md";
 const SCRIPT = "scripts/gold-line-scene.mjs";
 const JOURNAL = "src/packs/runs/deadhead/gold-line-map.json";
+const PLATE = { width: 6472, height: 958 };
 
 function readBomFreeJson(path) {
   const buf = readFileSync(path);
@@ -53,11 +57,21 @@ function probeVideo(path) {
   const out = execFileSync("ffprobe", [
     "-v", "error",
     "-select_streams", "v:0",
-    "-show_entries", "stream=width,height,codec_name,r_frame_rate",
+    "-show_entries", "stream=width,height,codec_name,r_frame_rate,duration",
+    "-show_entries", "format=duration",
     "-of", "json",
     path,
   ], { encoding: "utf8" });
-  return JSON.parse(out).streams[0];
+  const parsed = JSON.parse(out);
+  return {
+    ...parsed.streams[0],
+    formatDuration: parsed.format?.duration,
+  };
+}
+
+function finiteDuration(value) {
+  const n = Number(value);
+  return Number.isFinite(n) && n > 0;
 }
 
 console.log("Gold Line map pack smoke");
@@ -66,17 +80,17 @@ ok(existsSync(SCRIPT), "inject script exists");
 ok(existsSync(JOURNAL), "Deadhead journal source exists");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.37", `module.json is 0.3.37 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.39", `module.json is 0.3.39 (got ${moduleJson.version})`);
 ok(moduleJson.esmodules.includes("scripts/module.mjs"), "module still loads scripts/module.mjs");
 
 const template = readBomFreeJson(TEMPLATE);
-ok(template.width === 6472 && template.height === 958, "template canvas is 6472×958");
+ok(template.width === PLATE.width && template.height === PLATE.height, "template canvas is 6472×958");
 ok(template.grid.size === 208, "template grid size is 208");
 ok(template.grid.distance === 5 && template.grid.units === "ft", "template grid is 5 ft");
 ok(template.roofTile.occlusion.mode === 2, "roof occlusion is SURFACE (2)");
 ok(template.roofTile.elevation === 10, "roof tile elevation is 10");
-ok(template.roofTile.width === 6472 && template.roofTile.height === 958, "roof tile matches plate");
-ok(template.version >= 2, `template version is 2+ (got ${template.version})`);
+ok(template.roofTile.width === PLATE.width && template.roofTile.height === PLATE.height, "roof tile matches plate");
+ok(template.version >= 3, `template version is 3+ (got ${template.version})`);
 ok(template.roofTile.video.loop === true && template.roofTile.video.autoplay === true, "roof tile loops");
 ok(template.level.video?.loop === true && template.level.video?.autoplay === true, "level template has video loop/autoplay");
 
@@ -88,19 +102,39 @@ ok(squaresY > 4.5 && squaresY < 5, `scene is ~4.6 squares tall (got ${squaresY.t
 for (const [key, rel] of Object.entries(ASSETS)) {
   ok(existsSync(rel), `${key} shipped at ${rel}`);
   const modulePath = `modules/draw-steel-ghostwire/${rel}`;
-  const listed = Object.values(template.assets);
-  if (key.includes("Still") || key.includes("Loop")) ok(listed.includes(modulePath), `template assets list ${rel}`);
+  const listed = [
+    ...Object.values(template.assets).filter(v => typeof v === "string"),
+    ...(template.assets.interiorPrefer ?? []),
+    ...(template.assets.roofsPrefer ?? []),
+  ];
+  if (/Still|Loop/.test(key)) ok(listed.includes(modulePath), `template assets list ${rel}`);
 }
+
+ok(template.assets.interiorPrefer[0].endsWith("-loop.mp4"), "interior prefer starts with loop.mp4");
+ok(template.assets.interiorPrefer.some(p => p.endsWith("-loop-fixed.webm")), "interior prefer lists loop-fixed.webm if parent attaches one");
+ok(template.assets.interiorPrefer.some(p => p.endsWith("-loop.webm") && !p.endsWith("-loop-fixed.webm")), "interior prefer includes shipped loop.webm");
+ok(template.assets.interiorPrefer.at(-1).endsWith(".webp"), "interior prefer ends with still.webp");
+ok(template.assets.roofsPrefer[0].endsWith("-loop.mp4"), "roofs prefer starts with loop.mp4");
+ok(template.assets.roofsPrefer.some(p => p.endsWith("-loop-fixed.webm")), "roofs prefer lists loop-fixed.webm if parent attaches one");
+ok(template.assets.roofsPrefer.some(p => p.endsWith("-loop.webm") && !p.endsWith("-loop-fixed.webm")), "roofs prefer includes shipped loop.webm");
+ok(template.assets.roofsPrefer.at(-1).endsWith(".webp"), "roofs prefer ends with still.webp");
 
 const interior = webpSize(ASSETS.interiorStill);
 const roofs = webpSize(ASSETS.roofsStill);
-ok(interior.w === 6472 && interior.h === 958, `interior still is 6472×958 (got ${interior.w}×${interior.h})`);
-ok(roofs.w === 6472 && roofs.h === 958, `roofs still is 6472×958 (got ${roofs.w}×${roofs.h})`);
+ok(interior.w === PLATE.width && interior.h === PLATE.height, `interior still is 6472×958 (got ${interior.w}×${interior.h})`);
+ok(roofs.w === PLATE.width && roofs.h === PLATE.height, `roofs still is 6472×958 (got ${roofs.w}×${roofs.h})`);
 
 const interiorLoop = probeVideo(ASSETS.interiorLoop);
 const roofsLoop = probeVideo(ASSETS.roofsLoop);
-ok(interiorLoop.codec_name === "vp9" && interiorLoop.width === 6472 && interiorLoop.height === 958, "interior loop is VP9 6472×958");
-ok(roofsLoop.codec_name === "vp9" && roofsLoop.width === 6472 && roofsLoop.height === 958, "roofs loop is VP9 6472×958");
+ok(interiorLoop.codec_name === "vp9" && interiorLoop.width === PLATE.width && interiorLoop.height === PLATE.height, "interior loop is VP9 6472×958");
+ok(roofsLoop.codec_name === "vp9" && roofsLoop.width === PLATE.width && roofsLoop.height === PLATE.height, "roofs loop is VP9 6472×958");
+
+const interiorMp4 = probeVideo(ASSETS.interiorLoopMp4);
+const roofsMp4 = probeVideo(ASSETS.roofsLoopMp4);
+ok(interiorMp4.codec_name === "h264" && interiorMp4.width === PLATE.width && interiorMp4.height === PLATE.height, "interior mp4 is H.264 6472×958");
+ok(roofsMp4.codec_name === "h264" && roofsMp4.width === PLATE.width && roofsMp4.height === PLATE.height, "roofs mp4 is H.264 6472×958");
+ok(finiteDuration(interiorMp4.duration) && finiteDuration(interiorMp4.formatDuration), `interior mp4 stream duration is finite (got ${interiorMp4.duration})`);
+ok(finiteDuration(roofsMp4.duration) && finiteDuration(roofsMp4.formatDuration), `roofs mp4 stream duration is finite (got ${roofsMp4.duration})`);
 
 const moduleSrc = readFileSync("scripts/module.mjs", "utf8");
 ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line inject");
@@ -112,17 +146,34 @@ ok(!/method:\s*["']HEAD["']/.test(script), "inject does not probe media with HEA
 ok(!/\bsrcExists\s*\(/.test(script), "inject does not call srcExists (HEAD)");
 ok(script.includes("FilePicker.browse") && script.includes("Range"), "inject probes via FilePicker or ranged GET");
 ok(script.includes("levelBackground") && script.includes("background.video"), "inject sets Level background video flags for loops");
-ok(/roof\.update\(data\)/.test(script), "force updates an existing roof tile");
+ok(/roof\.update\(/.test(script), "force updates an existing roof tile");
+ok(script.includes("interiorLoopMp4") && script.includes("loop.mp4"), "inject prefers mp4 before webm");
+ok(script.includes("safeVideoCurrentTime") && script.includes("isFiniteDuration"), "inject skips seek when duration is non-finite");
+ok(script.includes("installGoldLineSeekGuard"), "inject installs a currentTime guard");
+ok(/GOLD_LINE_PLATE[\s\S]*6472[\s\S]*958/.test(script) && /width:\s*GOLD_LINE_PLATE\.width/.test(script), "force restamps width/height 6472×958");
+ok(/valid playable layout/i.test(script), "inject comments that stills are a valid playable layout");
+ok(GOLD_LINE_PLATE.width === PLATE.width && GOLD_LINE_PLATE.height === PLATE.height, "GOLD_LINE_PLATE is 6472×958");
+ok(!isFiniteDuration(Number.NaN) && !isFiniteDuration(Infinity) && !isFiniteDuration("N/A") && isFiniteDuration(8), "isFiniteDuration rejects N/A / NaN / Infinity");
+const unseekable = { duration: Number.NaN, currentTime: 1 };
+ok(safeVideoCurrentTime(unseekable, 0) === false && unseekable.currentTime === 1, "safeVideoCurrentTime skips seek when duration is NaN");
+const infinite = { duration: Infinity, currentTime: 1 };
+ok(safeVideoCurrentTime(infinite, 0) === false && infinite.currentTime === 1, "safeVideoCurrentTime skips seek when duration is Infinity");
+const seekable = { duration: 8, currentTime: 3 };
+ok(safeVideoCurrentTime(seekable, 0) === true && seekable.currentTime === 0, "safeVideoCurrentTime seeks when duration is finite");
 
 const sor = readFileSync(SOR, "utf8");
 ok(/L1.*TAIL/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has dual-Hammerhead beat remap");
-ok(/map-gold-line-interior-loop\.webm/.test(sor), "SoR points at the interior loop");
+ok(/map-gold-line-interior-loop\.mp4/.test(sor), "SoR prefers the interior mp4");
+ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout if video fails");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
 
 const journal = readBomFreeJson(JOURNAL);
 ok(/^[A-Za-z0-9]{16}$/.test(journal._id), "journal _id is 16 alphanumeric");
 ok(journal.folder === "gwRunsDeadhead00", "journal sits in Deadhead folder");
 ok(journal.pages?.length >= 2, "journal has plate + beat pages");
+const plateMd = journal.pages[0]?.text?.markdown ?? "";
+ok(/loop\.mp4/.test(plateMd), "journal prefer list includes loop.mp4");
+ok(/valid playable layout/i.test(plateMd), "journal says stills are a valid playable layout");
 for (const page of journal.pages ?? []) {
   ok(/^[A-Za-z0-9]{16}$/.test(page._id), `page ${page.name} _id is 16 alphanumeric`);
 }

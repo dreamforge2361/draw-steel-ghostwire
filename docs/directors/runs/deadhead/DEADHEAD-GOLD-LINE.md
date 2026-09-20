@@ -129,12 +129,14 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 
 **Shipped assets** (`assets/maps/battlemaps/gold-line/`):
 
-| Role | Preferred | Fallback |
-|---|---|---|
-| Interior background | `map-gold-line-interior-loop.webm` | `map-gold-line-interior.webp` |
-| Roofs overhead | `map-gold-line-roofs-loop.webm` | `map-gold-line-roofs.webp` |
+| Role | Preferred | Then | Still fallback |
+|---|---|---|---|
+| Interior background | `map-gold-line-interior-loop.mp4` | `map-gold-line-interior-loop.webm` | `map-gold-line-interior.webp` |
+| Roofs overhead | `map-gold-line-roofs-loop.mp4` | `map-gold-line-roofs-loop.webm` | `map-gold-line-roofs.webp` |
 
-Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile (**Tiles** layer, name **Roofs (overhead)**, elevation 10) uses **Surface** occlusion (on until a token is inside). World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the background is still or roofs are missing, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate the Scene.
+`resolveSrc` order is **loop.mp4 → loop.webm → still.webp**. H.264 MP4s carry a real duration (shipped VP9 webms report `duration=N/A` and Foundry throws `Failed to set currentTime ... non-finite`). **If video fails, the stills are a valid playable layout** — same 6472×958 plate, same grid. Do not swap in a generated train.
+
+Foundry paths: `modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/<file>`. Scene: **6472 × 958**, grid **208** (5 ft), ~31 × 5 squares. Roofs tile (**Tiles** layer, name **Roofs (overhead)**, elevation 10) uses **Surface** occlusion (on until a token is inside). World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold Line**. If the background is still or roofs are missing/mis-scaled, as GM run `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate the Scene (force restamps width/height **6472×958**).
 
 ---
 
