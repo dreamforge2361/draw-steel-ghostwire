@@ -1,0 +1,49 @@
+{
+  "_id": "ewRxENcrT0PUsCDK",
+  "_key": "!journal!ewRxENcrT0PUsCDK",
+  "name": "GHOSTWIRE.Lore.Journals.HaloAscendant",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-hal.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "8jmUFcHvao7kEtPk",
+      "_key": "!journal.pages!ewRxENcrT0PUsCDK.8jmUFcHvao7kEtPk",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![HALO Ascendant (HAL)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-hal.webp)\n\n*HALO Ascendant (HAL) — brand mark*\n\n**HAL** — HALO Ascendant\n\n**Domain:** Orbital, energy, and life-support\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-hal.webp\" alt=\"HALO Ascendant (HAL)\" /></p>\n<p><em>HALO Ascendant (HAL) — brand mark</em></p>\n<p><strong>HAL</strong> — HALO Ascendant</p>\n<p><strong>Domain:</strong> Orbital, energy, and life-support</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "HAL",
+      "brand": "assets/brands/megacorps/brand-hal.webp"
+    }
+  }
+}

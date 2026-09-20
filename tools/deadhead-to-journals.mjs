@@ -26,6 +26,7 @@ const UUID = {
   watchdog: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.dNEBSb47qSV9lRRH]{Watchdog ICE}`,
   mamaBrief: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwMamaBriefWafer]{Mama’s Deadhead Brief (Gold Line)}`,
   argCapsule: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwArgCourierCap0]{ARG Courier Capsule (Gold Line)}`,
+  noxFreighter: `@UUID[Compendium.${MODULE_ID}.vehicles.Item.gwNoxTrashFrgt00]{Nox’s Trash Freighter}`,
 };
 
 const PAGE_IDS = [
@@ -202,7 +203,7 @@ const pages = [
     "",
     "### Setup",
     "",
-    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later.",
+    "1. Canyon approach / drone sling — **narrate it, no map**. Nox’s trash freighter is **garbage-truck-sized** — keep it in the fiction as the bird they Recall later. Token: " + UUID.noxFreighter + " in **Ghostwire Vehicles → Air** (`assets/tokens/vehicles/nox-trash-freighter.webp`). Drag it onto Gold Line roofs for board / Recall; do not force-rewrite the live Scene.",
     "2. Open **Gold Line** (Michael’s world Scene). **Show** the **Roofs (overhead)** tile for the board.",
     "3. Sling onto the **roof**, then drop **aft into L1** (left aft cargo / AFT FREIGHT). That is the board chamber. Work **upstream** (right) from here.",
     "4. Once the crew is **inside**, **hide the Roofs (overhead) tile**. Do not wait on Surface occlusion as the play instruction.",
@@ -346,7 +347,7 @@ const pages = [
     "",
     "Courier stays sealed until Alert. Watchdog is Wire, not a meat token unless you want a Console piece on R1.",
     "",
-    "Tokens still to drop on the Gold Line Scene (Michael’s plate): ARG Security, Lieutenant, Enforcers, Nox freighter. Wired Console preset (nodes + Trace 0–12) is still a backlog item — narrate nodes until it ships.",
+    "Tokens still to drop on the Gold Line Scene (Michael’s plate): ARG Security, Lieutenant, Enforcers. Nox freighter token ships in **Ghostwire Vehicles → Air** — " + UUID.noxFreighter + ". Wired Console preset (nodes + Trace 0–12) is still a backlog item — narrate nodes until it ships.",
   ].join("\n")),
 
   page(ENTRY_ID, 11, "FoundryChecklist", [
@@ -368,10 +369,14 @@ const pages = [
     "- " + UUID.mamaBrief + " — `assets/items/deadhead/item-mama-brief-wafer.webp`",
     "- " + UUID.argCapsule + " — `assets/items/deadhead/item-arg-courier-capsule.webp`",
     "",
+    "### Vehicles (shipped 0.3.54)",
+    "",
+    "- " + UUID.noxFreighter + " — **Ghostwire Vehicles → Air** · `assets/tokens/vehicles/nox-trash-freighter.webp`. Drag onto Gold Line / hangout. Tags: Deadhead / Plot / Cargo.",
+    "",
     "### Still open (do not invent in play)",
     "",
     "- Splash art (freighter + four runners over a moving consist).",
-    "- Tokens on the Gold Line Scene; Nox freight-drone token.",
+    "- ARG tokens on the Gold Line Scene (bestiary art already shipped 0.3.47).",
     "- Wired Console board preset (Track 1 **R2**, Track 2 **R1** + Watchdog, Trace host **R3**).",
     "",
     "Art locks when anything new ships: flat top-down; no people on maps; no baked grid; ARG uniform stylization reusable. **Do not** drop a generated train on Gold Line.",

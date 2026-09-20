@@ -44,7 +44,7 @@ const PAGE_KEYS = [
 console.log("Deadhead Director journal smoke");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.52", `module.json is 0.3.52 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
 
 const journal = readBomFreeJson(JOURNAL);
 ok(journal._id === "gwDeadheadDirJrn", "director journal id is gwDeadheadDirJrn");
@@ -89,6 +89,8 @@ ok(/live transaction wafer|ghost ledger/.test(text), "capsule / live wafer notes
 ok(/B104 Gear SKUs shipped/.test(text), "Items page notes B104 Gear SKUs shipped");
 ok(/gwMamaBriefWafer/.test(text) && /gwArgCourierCap0/.test(text), "Items page UUID-hooks both Gear SKUs");
 ok(/Gear SKUs \(shipped 0\.3\.52\)/.test(text), "Foundry checklist marks Gear SKUs shipped");
+ok(/gwNoxTrashFrgt00/.test(text) && /nox-trash-freighter/.test(text), "Director journal UUID-hooks Nox trash freighter");
+ok(/Vehicles \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks Nox freighter shipped");
 ok(/ARG Corporate Enforcer/.test(text) && /ARG Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
 ok(/Crew hangout/.test(text) && /Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist lists hangout / Mama / canyon");
 ok(/Gold Line/.test(text) && /sacred|do \*\*not\*\* inject|Do \*\*not\*\* inject/i.test(text), "Gold Line checklist is manual / do not inject");
@@ -126,6 +128,13 @@ ok(capsule._id === "gwArgCourierCap0" && capsule.system?._dsid === "arg-courier-
 ok(brief.flags?.["draw-steel-ghostwire"]?.gear && capsule.flags?.["draw-steel-ghostwire"]?.gear, "both SKUs carry flags.draw-steel-ghostwire.gear");
 ok(brief.img.endsWith("item-mama-brief-wafer.webp") && capsule.img.endsWith("item-arg-courier-capsule.webp"), "SKU img paths point at deadhead webp");
 ok(existsSync("docs/rulebook/ART-NPC-PORTRAIT-NOTES.md"), "ART-NPC-PORTRAIT-NOTES.md installed");
+
+const freighter = readBomFreeJson("src/packs/vehicles/air/nox-trash-freighter.json");
+ok(freighter._id === "gwNoxTrashFrgt00" && freighter.system?._dsid === "nox-trash-freighter", "Nox freighter id + dsid");
+ok(freighter.flags?.["draw-steel-ghostwire"]?.vehicle?.drone === false, "Nox freighter is a crewed vehicle, not a drone");
+ok(freighter.flags?.["draw-steel-ghostwire"]?.vehicle?.tags?.includes("Deadhead") && freighter.flags["draw-steel-ghostwire"].vehicle.tags.includes("Plot"), "Nox freighter has Deadhead + Plot tags");
+ok(freighter.img.endsWith("nox-trash-freighter.webp"), "Nox freighter img is the shipped webp");
+ok(existsSync("assets/tokens/vehicles/nox-trash-freighter.png") && existsSync("assets/tokens/vehicles/nox-trash-freighter.webp"), "Nox freighter png+webp on disk");
 
 if (failures.length) {
   console.error("\nFAILED:");

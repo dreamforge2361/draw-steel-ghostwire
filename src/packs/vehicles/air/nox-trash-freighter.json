@@ -1,0 +1,62 @@
+{
+  "_id": "gwNoxTrashFrgt00",
+  "_key": "!items!gwNoxTrashFrgt00",
+  "name": "GHOSTWIRE.Vehicles.Items.NoxTrashFreighter.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/nox-trash-freighter.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.NoxTrashFreighter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Deadhead (Gold Line)",
+      "page": "Nox’s trash freighter",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "nox-trash-freighter",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "a7XeWmGqPhQSlDcK",
+  "sort": 100000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 0,
+        "modSlots": 1,
+        "tags": [
+          "Deadhead",
+          "Plot",
+          "Cargo"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air",
+        "scale": "Heavy",
+        "drone": false,
+        "speedBand": "standard"
+      }
+    }
+  }
+}

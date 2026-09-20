@@ -1,0 +1,49 @@
+{
+  "_id": "jKatlEXZRM9vrtLD",
+  "_key": "!journal!jKatlEXZRM9vrtLD",
+  "name": "GHOSTWIRE.Lore.Journals.NyxCartel",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-nyx.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 1000000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "99qtQOBJObaUThCj",
+      "_key": "!journal.pages!jKatlEXZRM9vrtLD.99qtQOBJObaUThCj",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Nyx Cartel (NYX)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-nyx.webp)\n\n*Nyx Cartel (NYX) — brand mark*\n\n**NYX** — Nyx Cartel\n\n**Domain:** Legitimized underworld — tenth seat\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-nyx.webp\" alt=\"Nyx Cartel (NYX)\" /></p>\n<p><em>Nyx Cartel (NYX) — brand mark</em></p>\n<p><strong>NYX</strong> — Nyx Cartel</p>\n<p><strong>Domain:</strong> Legitimized underworld — tenth seat</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "NYX",
+      "brand": "assets/brands/megacorps/brand-nyx.webp"
+    }
+  }
+}

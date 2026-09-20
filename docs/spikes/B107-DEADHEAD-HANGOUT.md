@@ -70,4 +70,4 @@ in the plate: chairs land ~2.8 ft, the sofa ~7.5 ft, the workshop bay ~24 × 36 
 
 - Walls / lights / tokens on the hangout Scene (Michael manual, by design).
 - Mama's Brief + ARG capsule as Gear pack Items (B104).
-- Nox freight-drone token.
+- Nox freight-drone token. **Shipped 0.3.54** (`Ghostwire Vehicles → Air`).

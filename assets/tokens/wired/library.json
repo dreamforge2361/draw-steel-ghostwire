@@ -1,7 +1,7 @@
 {
   "version": 1,
   "base": "modules/draw-steel-ghostwire/assets/tokens/wired",
-  "dropIn": "Add node-<id>.png (source) + node-<id>.webp (1024²) and one styles[] row. Auto-nodes use autoKind: Light Control, Maglock Door, Cam Controls. Atlas ids node-relay / node-host / node-segment ship Michael art (placeholder: false). Endpoint (node-endpoint) is optional v1.1.",
+  "dropIn": "Add node-<id>.png (source) + node-<id>.webp (1024²) and one styles[] row. Auto-nodes use autoKind: Light Control, Maglock Door, Cam Controls. Atlas ids node-relay / node-host / node-segment ship Michael art (placeholder: false). Megacorp Host styles (node-host-{ticker}) are extra Host skins; generic node-host stays the default Host. Endpoint (node-endpoint) is optional v1.1.",
   "styles": [
     { "id": "light-control", "name": "Light Control", "file": "node-light-control.webp", "png": "node-light-control.png", "autoKind": "light-control" },
     { "id": "maglock", "name": "Maglock Door", "file": "node-maglock.webp", "png": "node-maglock.png", "autoKind": "maglock" },
@@ -13,6 +13,16 @@
     { "id": "data-vault", "name": "Data Vault", "file": "node-data-vault.webp", "png": "node-data-vault.png" },
     { "id": "node-relay", "name": "Relay", "file": "node-relay.webp", "png": "node-relay.png", "family": "atlas", "altitude": "region", "placeholder": false },
     { "id": "node-host", "name": "Host", "file": "node-host.webp", "png": "node-host.png", "family": "atlas", "altitude": "region", "placeholder": false },
-    { "id": "node-segment", "name": "Segment", "file": "node-segment.webp", "png": "node-segment.png", "family": "atlas", "altitude": "site", "placeholder": false }
+    { "id": "node-segment", "name": "Segment", "file": "node-segment.webp", "png": "node-segment.png", "family": "atlas", "altitude": "site", "placeholder": false },
+    { "id": "node-host-hal", "name": "Host — HALO Ascendant (HAL)", "file": "node-host-hal.webp", "png": "node-host-hal.png", "family": "atlas", "altitude": "region", "hostTicker": "HAL", "placeholder": false },
+    { "id": "node-host-fer", "name": "Host — Ferrum Dynastic (FER)", "file": "node-host-fer.webp", "png": "node-host-fer.png", "family": "atlas", "altitude": "region", "hostTicker": "FER", "placeholder": false },
+    { "id": "node-host-mer", "name": "Host — Meridian Signal (MER)", "file": "node-host-mer.webp", "png": "node-host-mer.png", "family": "atlas", "altitude": "region", "hostTicker": "MER", "placeholder": false },
+    { "id": "node-host-cad", "name": "Host — Caduceus Vitalis (CAD)", "file": "node-host-cad.webp", "png": "node-host-cad.png", "family": "atlas", "altitude": "region", "hostTicker": "CAD", "placeholder": false },
+    { "id": "node-host-irn", "name": "Host — Ironclad Martial (IRN)", "file": "node-host-irn.webp", "png": "node-host-irn.png", "family": "atlas", "altitude": "region", "hostTicker": "IRN", "placeholder": false },
+    { "id": "node-host-arg", "name": "Host — Argent Exchange (ARG)", "file": "node-host-arg.webp", "png": "node-host-arg.png", "family": "atlas", "altitude": "region", "hostTicker": "ARG", "placeholder": false },
+    { "id": "node-host-ver", "name": "Host — Verdant Provision (VER)", "file": "node-host-ver.webp", "png": "node-host-ver.png", "family": "atlas", "altitude": "region", "hostTicker": "VER", "placeholder": false },
+    { "id": "node-host-obs", "name": "Host — Obsidian Holdings (OBS)", "file": "node-host-obs.webp", "png": "node-host-obs.png", "family": "atlas", "altitude": "region", "hostTicker": "OBS", "placeholder": false },
+    { "id": "node-host-san", "name": "Host — Sanctum Assurance (SAN)", "file": "node-host-san.webp", "png": "node-host-san.png", "family": "atlas", "altitude": "region", "hostTicker": "SAN", "placeholder": false },
+    { "id": "node-host-nyx", "name": "Host — Nyx Cartel (NYX)", "file": "node-host-nyx.webp", "png": "node-host-nyx.png", "family": "atlas", "altitude": "region", "hostTicker": "NYX", "placeholder": false }
   ]
 }

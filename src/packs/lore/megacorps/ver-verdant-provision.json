@@ -1,0 +1,49 @@
+{
+  "_id": "bKu0Z9j2ZzgT5CC7",
+  "_key": "!journal!bKu0Z9j2ZzgT5CC7",
+  "name": "GHOSTWIRE.Lore.Journals.VerdantProvision",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-ver.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 700000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "Vnz46nZSSHnxvX0X",
+      "_key": "!journal.pages!bKu0Z9j2ZzgT5CC7.Vnz46nZSSHnxvX0X",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Verdant Provision (VER)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-ver.webp)\n\n*Verdant Provision (VER) — brand mark*\n\n**VER** — Verdant Provision\n\n**Domain:** Agriculture, food, water, wasteland reclamation\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-ver.webp\" alt=\"Verdant Provision (VER)\" /></p>\n<p><em>Verdant Provision (VER) — brand mark</em></p>\n<p><strong>VER</strong> — Verdant Provision</p>\n<p><strong>Domain:</strong> Agriculture, food, water, wasteland reclamation</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "VER",
+      "brand": "assets/brands/megacorps/brand-ver.webp"
+    }
+  }
+}

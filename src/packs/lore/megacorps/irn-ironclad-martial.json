@@ -1,0 +1,49 @@
+{
+  "_id": "GhogDMAhtHyIjYar",
+  "_key": "!journal!GhogDMAhtHyIjYar",
+  "name": "GHOSTWIRE.Lore.Journals.IroncladMartial",
+  "img": "modules/draw-steel-ghostwire/assets/brands/megacorps/brand-irn.webp",
+  "folder": "gwLorePackMega00",
+  "sort": 500000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "fdxxc1rgHIDBxiNE",
+      "_key": "!journal.pages!GhogDMAhtHyIjYar.fdxxc1rgHIDBxiNE",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![Ironclad Martial (IRN)](modules/draw-steel-ghostwire/assets/brands/megacorps/brand-irn.webp)\n\n*Ironclad Martial (IRN) — brand mark*\n\n**IRN** — Ironclad Martial\n\n**Domain:** Arms, security, private military, mercenary trade\n\nTicker locked (`docs/rulebook/MEGACORP-TICKERS.md`). Brand mark is raster concept art at `assets/brands/megacorps/`, not a vector master.",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/brands/megacorps/brand-irn.webp\" alt=\"Ironclad Martial (IRN)\" /></p>\n<p><em>Ironclad Martial (IRN) — brand mark</em></p>\n<p><strong>IRN</strong> — Ironclad Martial</p>\n<p><strong>Domain:</strong> Arms, security, private military, mercenary trade</p>\n<p>Ticker locked (<code>docs/rulebook/MEGACORP-TICKERS.md</code>). Brand mark is raster concept art at <code>assets/brands/megacorps/</code>, not a vector master.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "ticker": "IRN",
+      "brand": "assets/brands/megacorps/brand-irn.webp"
+    }
+  }
+}

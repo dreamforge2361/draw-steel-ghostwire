@@ -5347,6 +5347,10 @@
           "Name": "Junk Rotor",
           "Description": "<p><em>Junk Rotor · Yard Copter · scrap autogyro</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥400 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Clunker, Beater, Fragile</p><p><strong>Domain:</strong> Air · <strong>Scale:</strong> Light</p><p><strong>Crew:</strong> 1+1 · <strong>Speed:</strong> Standard · <strong>Jump-In:</strong> No</p><p><strong>Profile:</strong> Cheap junk rotor — rattles, leaks oil, still buys altitude.</p><p><strong>Stat block:</strong> Integrity, Handling, Speed, and Armor numbers come in the damage/status pass. Mounted weapons come from Weapons.</p><p><strong>Mod slots (1):</strong> Fill them with vehicle/drone mods from <strong>Ghostwire Mods › Vehicle & Drone Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.uAceY1wfNHacnAtN]{Gun Rack}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.3Gm5TNWoneP0tI8N]{Plate-Up}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.C84pf5SAJelQ7Ur1]{Tune Kit}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.YAtDg7LUVjASb4xI]{Sensor Pod}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.BmkU18rfNLFsZFXy]{Ghost Coat}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.AcUt2kYQzvFuZy8u]{Runflats}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.yghJWLNP3Z0Ah4EH]{Rigger Cocoon}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.YRFhnTnCJkrAjRAi]{Ammo Bin}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Repair or Electronics); toggling an installed mod is a field action.</p>"
         },
+        "NoxTrashFreighter": {
+          "Name": "Nox’s Trash Freighter",
+          "Description": "<p><em>Nox’s Trash Freighter · Municipal Hauler · garbage-truck-sized air freighter</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street (borrowed) · <strong>Tags:</strong> Deadhead, Plot, Cargo</p><p><strong>Domain:</strong> Air · <strong>Scale:</strong> Heavy</p><p><strong>Profile:</strong> Nox’s (Flats wrangler) garbage-truck-sized trash freighter for the Deadhead canyon board and roof Recall bail. Crew borrows it; scratch it = buy it; lose it = explain to Mama. Drag onto the Deadhead Gold Line board from <strong>Ghostwire Vehicles → Air</strong>.</p><p><strong>Stat block:</strong> Integrity, Handling, Speed, and Armor numbers come in the damage/status pass. Mounted weapons come from Weapons.</p>"
+        },
         "GreyCab": {
           "Name": "Grey Cab",
           "Description": "<p><em>Grey Cab · Ghost Fare · discreet armored taxi</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,800 · <strong>Mod slots:</strong> 3 · <strong>Tags:</strong> Covert, Transit</p><p><strong>Domain:</strong> Ground · <strong>Scale:</strong> Vehicle</p><p><strong>Crew:</strong> 1+3 · <strong>Speed:</strong> Standard · <strong>Jump-In:</strong> No</p><p><strong>Profile:</strong> Looks street; hides plate and a panic cell. Fixer favorite.</p><p><strong>Stat block:</strong> Integrity, Handling, Speed, and Armor numbers come in the damage/status pass. Mounted weapons come from Weapons.</p><p><strong>Mod slots (3):</strong> Fill them with vehicle/drone mods from <strong>Ghostwire Mods › Vehicle & Drone Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.uAceY1wfNHacnAtN]{Gun Rack}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.3Gm5TNWoneP0tI8N]{Plate-Up}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.C84pf5SAJelQ7Ur1]{Tune Kit}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.YAtDg7LUVjASb4xI]{Sensor Pod}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.BmkU18rfNLFsZFXy]{Ghost Coat}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.AcUt2kYQzvFuZy8u]{Runflats}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.yghJWLNP3Z0Ah4EH]{Rigger Cocoon}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.YRFhnTnCJkrAjRAi]{Ammo Bin}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Repair or Electronics); toggling an installed mod is a field action.</p>"
@@ -7431,7 +7435,8 @@
         "Setting": "Setting Primer",
         "Peoples": "Peoples & World",
         "Reach": "Ossian Reach",
-        "Factions": "VOIDMARK & Accords"
+        "Factions": "VOIDMARK & Accords",
+        "Megacorps": "Ten Conglomerates"
       },
       "Journals": {
         "LoreIndex": "Lore Index",
@@ -7439,7 +7444,17 @@
         "PeoplesAndWorld": "Peoples & World",
         "OssianReachColor": "Ossian Reach — Street Color",
         "Voidmark": "VOIDMARK",
-        "HandsOffAccords": "The Hands Off Accords"
+        "HandsOffAccords": "The Hands Off Accords",
+        "HaloAscendant": "HALO Ascendant (HAL)",
+        "FerrumDynastic": "Ferrum Dynastic (FER)",
+        "MeridianSignal": "Meridian Signal (MER)",
+        "CaduceusVitalis": "Caduceus Vitalis (CAD)",
+        "IroncladMartial": "Ironclad Martial (IRN)",
+        "ArgentExchange": "Argent Exchange (ARG)",
+        "VerdantProvision": "Verdant Provision (VER)",
+        "ObsidianHoldings": "Obsidian Holdings (OBS)",
+        "SanctumAssurance": "Sanctum Assurance (SAN)",
+        "NyxCartel": "Nyx Cartel (NYX)"
       }
     },
     "Voidmark": {
