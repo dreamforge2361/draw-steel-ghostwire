@@ -229,6 +229,28 @@ export async function decompileSprite(sprite, { silent = false } = {}) {
   if (!silent) ui.notifications.info(game.i18n.format(`${UI}.Decompiled`, { sprite: name }));
 }
 
+/**
+ * Command is the Compile Sprite maneuver at the table (not a second spawn).
+ * Opens the existing Compile Sprite sheet handle; does not call compileSprite.
+ * @returns {Promise<Item|null>}
+ */
+export async function commandSprite(sprite, { notify = true } = {}) {
+  const caster = spriteCompiler(sprite);
+  const ability = compileAbility(caster);
+  if (!ability) {
+    if (notify) ui.notifications.warn(game.i18n.localize(`${UI}.CommandMissing`));
+    return null;
+  }
+  await ability.sheet?.render({ force: true });
+  if (notify) {
+    ui.notifications.info(game.i18n.format(`${UI}.CommandHint`, {
+      sprite: sprite?.name ?? "",
+      name: caster?.name ?? "",
+    }));
+  }
+  return ability;
+}
+
 /** Decompile the whole congregation — the free maneuver, and what end of encounter does on its own. */
 export async function decompileAll(caster, { silent = false } = {}) {
   const sprites = compiledSprites(caster);
@@ -421,7 +443,7 @@ export function registerSprites() {
   if (module) {
     module.api = {
       ...(module.api ?? {}),
-      compileSprite, decompileSprite, decompileAll, refreshSprites,
+      compileSprite, decompileSprite, decompileAll, refreshSprites, commandSprite,
       compiledSprites, spriteCompiler, spriteCap, spriteBand, spriteStamina, compileAbility,
     };
   }

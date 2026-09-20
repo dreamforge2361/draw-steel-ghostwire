@@ -1,4 +1,5 @@
-// Wired Console (B23b): a Scene-tied view of the Wired — connection roster, nodes, Integrity, and Trace Alert.
+// Wired Console (B23b / B121): a Scene-tied view of the Wired — connection roster, Constructs (sprites/Agents),
+// nodes, Integrity, and Trace Alert. Constructs never add edges to the node graph (Lock A).
 // Board data lives on a Scene: flags.draw-steel-ghostwire.wiredBoard = { nodes: [...], stratum, updated }. A matrix map can show another
 // Scene's board (flags.draw-steel-ghostwire.wiredMapFor); nodes can be placed on the canvas as tokens (scripts/wired-node-tokens.mjs).
 // Wire pings (B106) live on flags.draw-steel-ghostwire.wiredPings = { entries, updated } (last ~20); wiredBoard.pings is also read.
@@ -8,8 +9,18 @@
 
 import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
-import { boardScene, isNodeActor, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
-import { focusPlacedNodeOnCanvas } from "./wired-canvas-focus.mjs";
+import { boardScene, isNodeActor, placedNodeActor, placedNodeToken, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
+import { focusActorTokenOnCanvas, focusPlacedNodeOnCanvas } from "./wired-canvas-focus.mjs";
+import {
+  collectConsoleConstructs,
+  constructLeavesConnections,
+  constructPeerVisible,
+  isConstructActor,
+  sortConsoleConstructs,
+  viewerImmersedOnScene,
+} from "./wired-constructs.mjs";
+import { commandSprite, decompileSprite } from "./sprites.mjs";
+import { commandAgent, decompileAgent } from "./agents.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
 import { NODE_TOKEN_LIBRARY } from "./wired-node-art.mjs";
 import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs";
@@ -107,9 +118,12 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     id: "ghostwire-wired-console",
     classes: ["ghostwire-wired-console"],
     window: { title: "GHOSTWIRE.WiredConsole.Title", icon: "fa-solid fa-network-wired", resizable: true },
-    position: { width: 860, height: 720 },
+    position: { width: 1040, height: 740 },
     actions: {
       selectNode: WiredConsole.#onSelectNode,
+      selectConstruct: WiredConsole.#onSelectConstruct,
+      commandConstruct: WiredConsole.#onCommandConstruct,
+      decompileConstruct: WiredConsole.#onDecompileConstruct,
       addNode: WiredConsole.#onAddNode,
       randomNode: WiredConsole.#onRandomNode,
       addTemplate: WiredConsole.#onAddTemplate,
@@ -136,7 +150,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static PARTS = {
     console: {
       template: `modules/${MODULE_ID}/templates/wired-console.hbs`,
-      scrollable: [".wc-roster-list", ".wc-node-list", ".wc-detail", ".wc-ping-log", ".wc-verb-strip"],
+      scrollable: [".wc-roster-list", ".wc-construct-list", ".wc-node-list", ".wc-detail", ".wc-ping-log", ".wc-verb-strip"],
     },
   };
 
@@ -203,11 +217,13 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     };
 
     // Roster: one row per actor with a token on the scene. Players only see actors they own.
+    // Sprites/Agents are Constructs (Lock A) — keep them off Connections and the node graph.
     const roster = [];
     const seen = new Set();
     for (const token of this.viewedScene?.tokens ?? []) {
       const actor = token.actor;
       if (!actor || seen.has(actor.uuid) || (!isGM && !actor.isOwner)) continue;
+      if (constructLeavesConnections(actor)) continue;
       seen.add(actor.uuid);
       const isNode = isNodeActor(actor);
       const display = consoleRosterWireState({
@@ -232,6 +248,64 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       });
     }
     sortConsoleRoster(roster, { lang });
+    const placedNodes = [];
+    const boardSceneId = scene?.id ?? null;
+    if (boardSceneId) {
+      for (const node of board.nodes) {
+        const token = placedNodeToken(boardSceneId, node.id, this.viewedScene)
+          ?? placedNodeToken(boardSceneId, node.id, scene);
+        if (!token) continue;
+        placedNodes.push({
+          id: node.id,
+          name: node.name,
+          revealed: !!node.revealed,
+          x: token.x,
+          y: token.y,
+          width: token.width,
+          height: token.height,
+          token,
+        });
+      }
+    }
+    const constructs = sortConsoleConstructs(collectConsoleConstructs({
+      worldActors: [...(game.actors ?? [])],
+      sceneTokens: [...(this.viewedScene?.tokens ?? [])],
+      boardNodes: board.nodes,
+      placedNodes,
+      isGM,
+      canView: actor => !!(actor && (isGM || actor.isOwner)),
+      resolveActor: uuid => {
+        try { return uuid ? fromUuidSync(uuid) : null; }
+        catch { return null; }
+      },
+      getWiredState: actor => this.getWiredState?.(actor) ?? "disconnected",
+      gridSize: this.viewedScene?.grid?.size ?? 100,
+    }), { lang }).map(row => ({
+      ...row,
+      kindLabel: localize(row.kind === "agent" ? "Constructs.Agent" : "Constructs.Sprite"),
+      archetypeLabel: row.archetype
+        ? game.i18n.localize(row.kind === "agent"
+          ? `GHOSTWIRE.Summons.Agents.UI.Archetype.${row.archetype}`
+          : `GHOSTWIRE.Summons.Sprites.UI.Archetype.${row.archetype}`)
+        : "",
+      bandLabel: row.band
+        ? game.i18n.localize(`GHOSTWIRE.WiredConsole.Constructs.Band.${row.band}`)
+        : "",
+      compilerLabel: row.compilerName
+        ? game.i18n.format("GHOSTWIRE.WiredConsole.Constructs.Compiler", { name: row.compilerName })
+        : "",
+      faceLabel: row.face?.name
+        ? game.i18n.format("GHOSTWIRE.WiredConsole.Constructs.Face", { name: row.face.name })
+        : "",
+      staminaLabel: row.stamina?.label
+        ?? game.i18n.localize("GHOSTWIRE.WiredConsole.Constructs.StaminaUnknown"),
+      panTooltip: row.anchored
+        ? game.i18n.localize("GHOSTWIRE.WiredConsole.Constructs.Pan")
+        : game.i18n.localize("GHOSTWIRE.WiredConsole.Constructs.NoToken"),
+      commandTooltip: game.i18n.localize("GHOSTWIRE.WiredConsole.Constructs.CommandHint"),
+      isSprite: row.kind === "sprite",
+      isAgent: row.kind === "agent",
+    }));
     this.selectedActorUuid = pickConsoleActor({
       roster,
       selectedUuid: this.selectedActorUuid,
@@ -266,6 +340,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       hasScene: !!scene,
       stratumLabel: localize(`Strata.${board.stratum}`),
       roster,
+      constructs,
       nodes: decorated,
       selected,
       verbActor,
@@ -416,6 +491,45 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     }
     this.selectedActorUuid = row.dataset.actorUuid ?? null;
     this.render();
+  }
+
+  static async #onSelectConstruct(event, target) {
+    const row = target.closest("[data-actor-uuid]");
+    const uuid = row?.dataset.actorUuid ?? target.dataset.actorUuid ?? null;
+    if (!uuid) return;
+    // Peer Overlay/Jacked In rows are Console-only (Lock A: tokens stay meat-side).
+    if (row?.dataset.owned !== "true" && !game.user.isGM) return;
+    const actor = await fromUuid(uuid);
+    await focusActorTokenOnCanvas({
+      actorId: actor?.id ?? null,
+      actorUuid: uuid,
+      isGM: game.user.isGM,
+    });
+  }
+
+  static async #onCommandConstruct(event, target) {
+    const uuid = target.closest("[data-actor-uuid]")?.dataset.actorUuid ?? target.dataset.actorUuid;
+    const actor = uuid ? await fromUuid(uuid) : null;
+    if (!isConstructActor(actor)) return;
+    if (actor.getFlag(MODULE_ID, "kind") === "agent") await commandAgent(actor);
+    else await commandSprite(actor);
+  }
+
+  static async #onDecompileConstruct(event, target) {
+    const uuid = target.closest("[data-actor-uuid]")?.dataset.actorUuid ?? target.dataset.actorUuid;
+    const actor = uuid ? await fromUuid(uuid) : null;
+    if (!isConstructActor(actor)) return;
+    if (!(game.user.isGM || actor.isOwner)) {
+      ui.notifications.warn(game.i18n.localize("GHOSTWIRE.WiredConsole.VerbNeedOwner"));
+      return;
+    }
+    const confirmed = await foundry.applications.api.DialogV2.confirm({
+      window: { title: "GHOSTWIRE.WiredConsole.Constructs.Decompile" },
+      content: `<p>${game.i18n.format("GHOSTWIRE.WiredConsole.Constructs.DecompileConfirm", { name: foundry.utils.escapeHTML(actor.name) })}</p>`,
+    });
+    if (!confirmed) return;
+    if (actor.getFlag(MODULE_ID, "kind") === "agent") await decompileAgent(actor);
+    else await decompileSprite(actor);
   }
 
   static async #onFireVerb(event, target) {
@@ -859,7 +973,7 @@ function patchSheetHideMatrixVerbs() {
  * Edges (Hacking, Jacked In, Reader) come from the existing AbilityModel#use patch.
  */
 export async function useConsoleVerb(actor, dsid, { node = null, scene = null, getWiredState = getWiredStateFn } = {}) {
-  if (isNodeActor(actor)) {
+  if (isNodeActor(actor) || isConstructActor(actor)) {
     const warn = game.i18n.localize("GHOSTWIRE.WiredConsole.VerbNeedActor");
     ui.notifications.warn(warn);
     return;
@@ -1021,12 +1135,20 @@ export function registerWiredConsole({ getWiredState }) {
     if (((scene === viewed) || (scene === boardScene(viewed))) && foundry.utils.hasProperty(changes, `flags.${MODULE_ID}`)) rerender();
   });
   // Placed node Actors appearing or going away flip Place / Remove on canvas.
-  Hooks.on("createActor", actor => { if (actor.getFlag(MODULE_ID, "kind") === "node") rerender(); });
-  Hooks.on("deleteActor", actor => { if (actor.getFlag(MODULE_ID, "kind") === "node") rerender(); });
+  Hooks.on("createActor", actor => {
+    const kind = actor.getFlag(MODULE_ID, "kind");
+    if (kind === "node" || isConstructActor(actor)) rerender();
+  });
+  Hooks.on("deleteActor", actor => {
+    const kind = actor.getFlag(MODULE_ID, "kind");
+    if (kind === "node" || isConstructActor(actor)) rerender();
+  });
   Hooks.on("createActiveEffect", rerender);
   Hooks.on("deleteActiveEffect", rerender);
   Hooks.on("updateActor", (actor, changes) => {
-    if (foundry.utils.hasProperty(changes, `flags.${MODULE_ID}.wired`)) rerender();
+    if (foundry.utils.hasProperty(changes, `flags.${MODULE_ID}`)) rerender();
+    else if (foundry.utils.hasProperty(changes, "system.stamina")) rerender();
+    else if (isConstructActor(actor)) rerender();
   });
   Hooks.on("createToken", rerender);
   Hooks.on("deleteToken", rerender);
@@ -1052,7 +1174,8 @@ export function registerWiredConsole({ getWiredState }) {
         ...(module.api ?? {}),
         openWiredConsole, getBoard, setLink, rollNode, NODE_TEMPLATES, readPings,
         applyAutoNodesFromScene, useConsoleVerb, verbStripView, CONSOLE_SLICE, pickPlayerVerbActor, actorHasConnectInterface,
-        isTemporaryConsoleVerb,
+        isTemporaryConsoleVerb, collectConsoleConstructs, sortConsoleConstructs, isConstructActor,
+        viewerImmersedOnScene, constructPeerVisible,
       };
     }
   });

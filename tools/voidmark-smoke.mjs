@@ -86,6 +86,15 @@ ok(index.chunks.some(c => c.file.includes("21-the-wire") && /wire kit/i.test(c.t
 const harnessQ = retrieve(index, "Does Rigger's Harness count as a Connect interface or deck?");
 ok(harnessQ.some(h => /rigger.?s harness/i.test(h.text) && /connect|interface|deck/i.test(h.text)), "Rigger's Harness query retrieves Harness as Connect");
 
+const constructsQ = retrieve(index, "Where do sprites and Agents live on the Wired Console? Lock A roster anchor");
+ok(constructsQ.some(h => h.file.includes("21-the-wire")), `Constructs query files: ${constructsQ.map(h => h.file).join(", ")}`);
+ok(
+  constructsQ.some(h => /construct/i.test(h.text) && /lock a/i.test(h.text) && /roster anchor/i.test(h.text)),
+  "Constructs query retrieves Lock A roster-anchor language",
+);
+const peerQ = retrieve(index, "Do Overlay Jacked In compilers see each other's sprites Agents without Scan?");
+ok(peerQ.some(h => /without Scan/i.test(h.text) && /Overlay/i.test(h.text)), "Constructs peer-visibility query retrieves Overlay without Scan");
+
 const statesQ = retrieve(index, "What are the Wire connection states?");
 ok(statesQ.some(h => /linked/i.test(h.text) && /overlay/i.test(h.text) && /jacked in/i.test(h.text)), "connection-states query names Linked, Overlay, and Jacked In");
 

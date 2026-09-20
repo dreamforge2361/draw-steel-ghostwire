@@ -6507,6 +6507,30 @@
       "Roster": "Connections",
       "RosterNodeHint": "Wire node — always Connected. Click to select this node. Matrix Verbs still use a runner.",
       "NoTokens": "No tokens on this scene.",
+      "Constructs": {
+        "Title": "Constructs",
+        "Hint": "Compiled sprites (Technomancer) and Agents (Hacker). Separate from Connections and the node graph.",
+        "LockA": "Scene token = roster anchor (meat-side). Overlay / Jacked In compilers on this scene see each other's constructs here without Scan. Meat actions stay off unless an ability bridges.",
+        "EmptyGM": "No compiled sprites or Agents on this scene.",
+        "EmptyPlayer": "No sprites or Agents you own, and no Overlay / Jacked In compilers' constructs on this scene.",
+        "PeerHint": "Wire presence — Overlay / Jacked In compilers see this without Scan. The scene token stays meat-side (no pan).",
+        "Sprite": "Sprite",
+        "Agent": "Agent",
+        "Pan": "Pan to the scene token (roster anchor).",
+        "NoToken": "No token on this scene — compiler is here, but the construct is unplaced.",
+        "Command": "Command",
+        "CommandHint": "Opens Compile Sprite / Compile Agent — Command is that maneuver. Does not compile a new construct.",
+        "Decompile": "Decompile",
+        "DecompileConfirm": "Decompile <strong>{name}</strong>?",
+        "Compiler": "Compiler: {name}",
+        "Face": "Face: {name}",
+        "StaminaUnknown": "Stamina —",
+        "Band": {
+          "minor": "Minor",
+          "intermediate": "Int.",
+          "advanced": "Adv."
+        }
+      },
       "Nodes": "Nodes",
       "AddNode": "Add Node",
       "RandomNode": "Random Node",
@@ -6923,7 +6947,9 @@
           "NotTechnomancer": "Only a Technomancer hero can compile sprites.",
           "NoScene": "View a Scene before compiling a sprite.",
           "NoPermission": "Compiling creates an Actor and a token; ask the Director to compile it (players need Create Actors and Create Tokens permission).",
-          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack."
+          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack.",
+          "CommandHint": "Command {sprite} from {name}'s Compile Sprite sheet — that maneuver, not a new compile.",
+          "CommandMissing": "No Compile Sprite ability on the compiler — Command lives on that sheet handle."
         }
       },
       "Agents": {
@@ -7076,7 +7102,9 @@
           "NotEnoughBandwidth": "{name} needs {cost} Bandwidth to compile an Agent (has {current}).",
           "NoScene": "View a Scene before compiling an Agent.",
           "NoPermission": "Compiling creates an Actor and a token; ask the Director to compile it (players need Create Actors and Create Tokens permission).",
-          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack."
+          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack.",
+          "CommandHint": "Command {agent} from {name}'s Compile Agent sheet — that maneuver, not a new compile.",
+          "CommandMissing": "No Compile Agent ability on the compiler — Command lives on that sheet handle."
         }
       },
       "Elementals": {

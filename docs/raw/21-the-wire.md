@@ -1,6 +1,6 @@
 # The Wire
 
-**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62)  
+**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62; Constructs roster Lock A 2026-09-20 / 0.3.78)  
 **Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
 
 ---
@@ -71,7 +71,7 @@ Every Track 2 target -- and the "system" side of any Wired encounter -- tracks i
 The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating.
 
 > **In Foundry**
-> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.
+> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). **Constructs** lists compiled sprites and Agents (Lock A: scene token = meat-side roster anchor; Overlay / Jacked In compilers on this scene see each other without Scan; meat actions off unless an ability bridges). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.
 
 
 **Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above).
@@ -244,6 +244,18 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 
 **Anyone vs Hacker.** Any hero with a **Wire interface** (commlink, cyberdeck, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer Resonance) can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs** and **Compile Agent**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs. Agents (Probe / Spike / Daemon / Watchdog) are Hacker-only deck daemons, not Technomancer sprites.
 
+## Constructs (Sprites and Agents)
+
+Compiled **sprites** (Technomancer, `20`) and **Agents** (Hacker, `19`) are Wire constructs, not extra nodes on the host graph.
+
+**Lock A (2026-09-20).** A construct’s **scene token is a roster anchor only**. Wire play lives in the **Wired Console**. Meat-space attacks and other meat actions against that token stay **off** unless an ability explicitly bridges (Resonance Strike through a device, a Daemon holding a Track 1 object, and similar printed bridges). Do not treat the token as a second copy of the runner on the Connections list.
+
+**Constructs section.** The Console lists compiled sprites and Agents in a **Constructs** roster, separate from **Connections** and **Nodes**. Owner and Director see the relevant rows (name, archetype, Stamina, hybrid band, compiler). **Overlay / Jacked In compilers on the same scene see each other’s compiled sprites and Agents in that roster without Scan.** Linked is soft presence and does not. An optional chip may name the Wire node the construct is **facing** — a label only. **Do not** add construct↔node edges to the board graph; node↔node wires stay infrastructure topology.
+
+**Meat-side anchors.** Construct scene tokens stay roster anchors only (Lock A). Seeing a rival construct on the Console does **not** reveal, unhide, or grant meat-space targeting of that token. Pan / Command / Decompile stay with the owner (and Director).
+
+**Construct vs construct.** Sprite/Agent fights resolve as **Wired / EW** attacks (a physical strike that can target them at all is made with a **bane**, per `20`). Action economy follows hybrid band: **minor** = extension on the compiler’s turn; **intermediate** = own turn under a Command maneuver that round; **advanced** = independent turn. The Console does not auto-run those turns or auto-initiative constructs.
+
 ## Deck software: suites vs payloads
 
 A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.
@@ -293,7 +305,7 @@ The payload catalog (Effects, prices, Availability) is in the Gear master, Matri
 
 At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.
 
-Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.
+Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, **Constructs** roster for sprites and Agents, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). Constructs never add edges to the node graph. The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here.
 
 ## VOIDMARK (Wired presence)
 
