@@ -46,7 +46,8 @@
         "modSlots": 4,
         "tags": [
           "Insertion",
-          "Expendable-lean"
+          "Expendable-lean",
+          "VTOL"
         ],
         "modFamily": [
           "vehicle"

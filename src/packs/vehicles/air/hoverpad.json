@@ -46,7 +46,8 @@
         "modSlots": 3,
         "tags": [
           "Transit",
-          "Pursuit"
+          "Pursuit",
+          "Hover"
         ],
         "modFamily": [
           "vehicle"

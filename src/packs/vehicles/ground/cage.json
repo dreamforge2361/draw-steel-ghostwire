@@ -46,7 +46,8 @@
         "modSlots": 4,
         "tags": [
           "Secure",
-          "Armor"
+          "Armor",
+          "Ground-hauler"
         ],
         "modFamily": [
           "vehicle"

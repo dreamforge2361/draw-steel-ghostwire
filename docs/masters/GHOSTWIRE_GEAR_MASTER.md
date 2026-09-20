@@ -434,6 +434,8 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 *Governing rulings: each entry lists a Domain and Scale band plus a qualitative profile — concrete Integrity/Handling/Speed/Armor numbers are deferred to the damage/status pass. Item Tier sets price/Availability/mod-slots only, never Scale. Mounts draw from the standard §F6 mod-slot count and are all §Craft-gated; mounted weapons come from Category 3.*
 
+**Street picture (Michael 2026-09-20) — sync, not a second catalog.** Most vehicles are **electric**. Street / POV = **light electric hovercraft**, altitude limiters **~25–50 ft** (not sky cars). Ground (tires/treads) = **almost always heavy lifters, haulers, and big equipment**. **VTOL** = more expensive but common (corp, transit, well-funded runners). Player prose: L1 Vehicles & Transit. Table tags in `16-vehicles.md` / `23-machines.md`. Many 5A sedan/cab/bike SKUs are street-layer hover in fiction; Domain Ground still hugs the deck for chase.
+
 ### 5A — Ground
 
 | Name (slang / corp / sci) | Domain | Scale | Tier | Avail | Cost ¥ | Profile | Slots |

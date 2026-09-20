@@ -11,7 +11,7 @@
     },
     "source": {
       "book": "Ghostwire Deadhead (Gold Line)",
-      "page": "Nox’s trash freighter",
+      "page": "Nox\u2019s trash freighter",
       "license": "Draw Steel Creator License"
     },
     "_dsid": "nox-trash-freighter",
@@ -47,7 +47,8 @@
         "tags": [
           "Deadhead",
           "Plot",
-          "Cargo"
+          "Cargo",
+          "VTOL"
         ],
         "modFamily": [
           "vehicle"

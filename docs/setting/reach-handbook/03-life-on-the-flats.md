@@ -57,6 +57,22 @@ The Flats run on **nuyen (¥)** moved as anonymous **certified credsticks** — 
 
 **Director's frame.** Money on the Flats is **texture, not bookkeeping.** Quote a soy-bowl at ¥6 and a full meal at ¥20 and the players feel the Low-Lifestyle grind without you ever narrating it. Two rules keep it grounded: **(1)** the bright ledger sees everything — pay for anything with a traceable cred-transfer instead of a clean credstick and you've just told the Machine where you are; **(2)** the fence's real product, like the runner's, is **deniability** — a thing's price is mostly the risk that it's traceable back to whoever the corps marked it for.
 
+## Vehicles & Transit — How the Flats Move
+
+**Lock (Michael 2026-09-20).** Same street picture as Setting Primer **Vehicles & Transit** (L1). Do not invent a second ecology.
+
+Most vehicles in this world are **electric**.
+
+**Street / POV** on the Flats is mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground — **not** free-flight sky cars. Hovercabs queue at pickup gantries; courier cycles skim the wet deck; a rusted commuter skirt is still a getaway. The limiter is law and hardware. When Handbook sites mention a hovercab riding a cushion along a railing, that is this band.
+
+**Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars. Cargo-crawlers, flatbeds, bricks, cage wagons, walkers. Interchange ground-rigs grinding at Pump Row are haulers. Rubber and tracks mean mass.
+
+**VTOL / flying craft** are **more expensive** but also in **common use** — corp escorts over the Weigh Station, licensed transit, well-funded runners. They climb past the limiter. You see them; a Low Lifestyle crew does not usually own one.
+
+Vertical travel between strata is still lift-stacks, maglev spines, and grey shafts (**The Vertical & the Black Water**). Hover lanes are how you cross a district without climbing a checkpoint. Water lanes stay barges, skiffs, and hover-launches as printed.
+
+**Director's frame.** Narrate three stacked weathers: street-layer hover + crowds; hauler mass on the deck; VTOL and drones in the gaps. A stolen Getaway is a limiter hover even if the card says Domain Ground. A Flatbed is tires. A Tiltjet is the expensive bird.
+
 ## The Wired — The Overlay, the Deep Net, and the Thin Place
 
 The Wired is not a place you go. It is the air the sprawl breathes — every door, drone, cred-transfer, ad-panel, transit gate, and cortex-jack is a node on it. And it is the **thinnest place in the whole world**: a planet-spanning lattice of pure signal that, without meaning to, rhymes with the Signal creation itself is spoken from. The membrane is worn dangerously fine. That is why sprites condense out of it, why technomancers can commune with it, and why the deep net has teeth.

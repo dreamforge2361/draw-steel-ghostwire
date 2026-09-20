@@ -20,11 +20,20 @@
 
 ## 1. Lore frame — mobility in The Reach
 
-Ossian Reach does not move cleanly. The street gridlocks under neon and rain; the **stacked VTOL lanes** above them never sleep; wet docks and flood canals lace the Sinks; grey transit tunnels and freight spurs cut through the Flats; corp **skyways** hang like private weather over the Grid. Between those layers, crews live or die by what they can steal, borrow, or rebuild.
+**Lock (Michael 2026-09-20) — street picture.** Full player prose: Setting Primer **Vehicles & Transit** (`docs/manuscript/01-lore/L1-setting-primer.md`). Do not reopen here.
 
-A rustbucket with run-flats and a bent door is still a getaway. A junk rotor that rattles every bolt is still altitude when the alley goes hot. Higher up the Availability ladder, the same routes get cleaner, faster, and meaner — armored wagons, tiltjets with door-guns, silent wetsubs, sealed hoppers that punch for orbit. The Machines layer of play (drones → **vehicles** → buildings) is how Ghostwire turns that texture into table tools.
+- Most vehicles in this world are **electric**.
+- **Street / POV** (personally owned vehicles): mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground — **not** free-flight sky cars.
+- **Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars.
+- **VTOL / flying craft** are **more expensive** but also in **common use** (corp, transit, well-funded runners).
 
-> **Tone:** Reach-native chrome in the rain — scarred panels, LED strips, wet asphalt glare, dock fog, lane lights stacking into the cloud deck — not clean white-box miltech.
+Ossian Reach does not move cleanly. The **street-layer hover lane** stacks under the next level's belly — a cushioned river of limiter-capped POVs in the rain. **Tires and treads** grind where mass has to move: freight, wrecks, squads, cages. Above the limiter band, **VTOL lanes** never sleep — corp birds, licensed transit, runner tiltjets. Wet docks and flood canals lace the Sinks; grey shafts and freight spurs cut the Flats; corp skyways hang like private weather over the Grid. Crews live or die by what they can steal, borrow, or rebuild.
+
+A rusted commuter **hover** with a bent skirt is still a getaway. A junk rotor that rattles every bolt is still altitude when the alley goes hot. Higher up the Availability ladder, the same routes get cleaner, faster, and meaner — armored haulers, tiltjets with door-guns, silent wetsubs, sealed hoppers that punch for orbit. The Machines layer of play (drones → **vehicles** → buildings) is how Ghostwire turns that texture into table tools.
+
+> **Tone:** Reach-native chrome in the rain — scarred hover skirts, LED strips, wet deck glare, dock fog, limiter-lane lights stacking into VTOL — not clean white-box miltech. Not a parking lot of tire sedans.
+
+**Street-class tags (inventory):** **Hover** = street-layer limiter POV (including many Ground-domain sedan/cab/bike SKUs). **Ground-hauler** = tires / treads / walker mass. **VTOL** = free-climb flying. Domain still gates chase/wreck language; a Ground hover hugs the street deck.
 
 **This chapter covers crewed platforms** (and optionally Jump-In Capable shells a Wrench can inhabit). Heavy combat **drones** stay on `15-drones.md` — see Scale clarification in §2.
 
@@ -34,8 +43,8 @@ A rustbucket with run-flats and a bent door is still a getaway. A junk rotor tha
 
 | Scale | Plain meaning | Examples |
 |---|---|---|
-| **Light** | Bike, small rotor, open skiff — one or two bodies, exposed or cramped | Sport bike, junk rotor, harbor skiff |
-| **Vehicle** | Car / van / light aircraft / patrol boat mass — a crew seats and real cover | Sedan, panel van, tiltjet, wetsub, orbital pod |
+| **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Sport cycle, junk rotor, harbor skiff |
+| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Getaway hover, panel hauler, tiltjet, wetsub, orbital pod |
 | **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |
 | **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |
 
@@ -87,7 +96,7 @@ Align to the Vehicle Stat Card in `05-wrench.md`. Profiles here are **qualitativ
 | **Uptime** | No Uptime pool; no Deploy & Command / Rigged Fire vehicle spend |
 | **Heroic resource** | Cannot spend Uptime; cannot use Vehicle Rig-Pilot signature Jump-In discounts |
 
-**Intent:** an Operator can steal a sedan and run a chase; a Scout can fly a buzzcopter on a quiet insertion. Neither becomes a discount Vehicle Rig-Pilot.
+**Intent:** an Operator can steal a street hover and run a chase; a Scout can fly a buzzcopter on a quiet insertion. Neither becomes a discount Vehicle Rig-Pilot.
 
 ### 4B — Wrench
 
@@ -168,35 +177,35 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater |
-| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater |
-| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater |
+| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |
+| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |
+| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |
 | Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |
-| Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile |
+| Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |
 | Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |
-| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit |
-| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit |
-| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop |
-| Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion |
+| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |
+| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |
+| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |
+| Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |
 | Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |
-| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction |
-| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit |
-| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy |
-| Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount |
-| Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit |
+| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |
+| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |
+| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |
+| Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount, VTOL |
+| Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit, Hover |
 | Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |
 | Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |
 | Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |
-| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit |
-| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount |
-| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor |
+| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |
+| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |
+| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |
 | River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |
-| Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy |
-| Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean |
+| Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy, VTOL |
+| Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean, VTOL |
 | Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | 3 | Military | 22,000 | 4 | 2+8 | Extreme | Yes | Heavy transit/boarding craft with docking collar. | Sealed, Boarding, Heavy |
-| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker |
-| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy |
-| Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy |
+| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |
+| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |
+| Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy, VTOL |
 | Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |
 | Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |
@@ -261,5 +270,6 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 - Mods — `docs/rulebook/14-mods.md` (§5F pointer; Invent a Mod; §Craft skills)
 - Economy — `docs/rulebook/11-economy.md` (¥ firewall; §Craft Projects)
 - Gear master — `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (Cat 5A–5D spine, §5F mods)
+- Setting Primer — `docs/manuscript/01-lore/L1-setting-primer.md` (**Vehicles & Transit** street picture lock 2026-09-20)
 
 **Next (Machines track):** Buildings / Facility Rigger card expansion (not a full Building chapter in this pass).

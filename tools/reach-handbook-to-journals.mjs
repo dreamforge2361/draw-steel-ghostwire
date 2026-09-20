@@ -11,13 +11,14 @@
 // journal is built from the art index so every shipped map has an image page.
 //
 // Run:  node tools/reach-handbook-to-journals.mjs   then   node tools/build-packs.mjs  (Foundry closed)
-import { createRequire } from "node:module";
+// Do NOT regen this pack wholesale unless you re-inject B72 district battle-map
+// pages (they are not in the markdown sources and a full regen drops them).
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, existsSync } from "node:fs";
 import { join } from "node:path";
+import { foundryRequire } from "./lib/foundry-require.mjs";
 
-const FOUNDRY_APP = process.env.FOUNDRY_APP ?? "C:/Program Files/Foundry Virtual Tabletop/resources/app";
-const showdown = createRequire(join(FOUNDRY_APP, "package.json"))("showdown");
+const showdown = foundryRequire("showdown");
 const SHOWDOWN_OPTIONS = { disableForced4SpacesIndentedSublists: true, noHeaderId: true, parseImgDimensions: true, strikethrough: true, tables: true, tablesHeaderId: true };
 const converter = new showdown.Converter(SHOWDOWN_OPTIONS);
 
