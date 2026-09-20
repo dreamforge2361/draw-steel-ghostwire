@@ -25,7 +25,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 - **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see `21-the-wire.md`).
 - **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not.
 
-**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter) ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Full interface list: `21-the-wire.md`.
+**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**) ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Full interface list: `21-the-wire.md`.
 
 ---
 

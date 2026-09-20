@@ -298,6 +298,20 @@ ok(itemIsConnectInterface(nox.items.find(isWireKit)), "Nox Wire Kit is a Connect
 ok(!nox.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), "Nox has none of the nine Matrix Verbs");
 ok(!nox.flags["draw-steel-ghostwire"].wired?.state, "Nox is not auto-Overlay");
 
+console.log("\n4b4) Named street SKU vehicles carry Wire Kit");
+for (const [file, label] of [
+  ["src/packs/summons/machines/lane-hopper.json", "Lane-Hopper"],
+  ["src/packs/summons/machines/star-chopper.json", "Star-Chopper"],
+  ["src/packs/summons/machines/bulldog.json", "Bulldog"],
+]) {
+  const actor = readBomFreeJson(file);
+  ok(actor.flags["draw-steel-ghostwire"].kind === "vehicle", `${label} kind is vehicle`);
+  ok(isVehicleActor(actor), `isVehicleActor sees ${label}`);
+  ok(actor.items.some(isWireKit), `${label} embeds Wire Kit`);
+  ok(itemIsConnectInterface(actor.items.find(isWireKit)), `${label} Wire Kit is a Connect interface`);
+  ok(!actor.items.some(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid)), `${label} has none of the nine Matrix Verbs`);
+}
+
 console.log("\n4c) Mule-Bot / Drone (Medium) cargo plate");
 const muleToken = "modules/draw-steel-ghostwire/assets/tokens/drones/mule-bot.webp";
 const mulePng = "assets/tokens/drones/mule-bot.png";

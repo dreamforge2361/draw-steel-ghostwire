@@ -117,6 +117,14 @@ ok(!bulldog.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Bulld
 const bulldogActor = readJson("src/packs/summons/machines/bulldog.json");
 ok(bulldogActor.prototypeToken?.width === 2 && bulldogActor.prototypeToken?.height === 4, "Bulldog token 2×4");
 ok(bulldogActor.system.movement.hover === false, "Bulldog Actor does not hover");
+for (const [file, label] of [
+  ["src/packs/summons/machines/lane-hopper.json", "Lane-Hopper"],
+  ["src/packs/summons/machines/star-chopper.json", "Star-Chopper"],
+  ["src/packs/summons/machines/bulldog.json", "Bulldog"],
+]) {
+  const actor = readJson(file);
+  ok((actor.items ?? []).some(i => i.system?._dsid === "wire-kit-matrix-verbs"), `${label} Actor embeds Wire Kit`);
+}
 const flatbed = readJson("src/packs/vehicles/ground/flatbed.json");
 ok(flatbed.flags["draw-steel-ghostwire"].vehicle.tags.includes("Ground-hauler"), "Flatbed tagged Ground-hauler");
 const tiltjet = readJson("src/packs/vehicles/air/tiltjet.json");

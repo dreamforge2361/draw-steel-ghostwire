@@ -429,7 +429,7 @@ Chrome **packages** (Roadrunner, Argus, Bulwark, …) are not in the compendium 
 
 Pack sources live in `src/packs/<pack>/` (subfolders allowed). Names and descriptions are `GHOSTWIRE.*` lang keys, filled in from `lang/en.json` at build time. With Foundry closed, run `node tools/build-packs.mjs` to rebuild `packs/`. It uses the `classic-level` package bundled with Foundry; set `FOUNDRY_APP` if Foundry isn't installed in the default location.
 
-Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `assets/tokens/drones/` and `assets/tokens/vehicles/`. Re-apply after replacing files with `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). **0.3.68:** Mule-Bot cargo plate is `mule-bot.{png,webp}` and is also the generic **Drone (Medium)** Actor portrait. Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
+Vehicle and drone token art (B101, **0.3.31**): 36 drone + 32 vehicle WebPs in `assets/tokens/drones/` and `assets/tokens/vehicles/`. Re-apply after replacing files with `node tools/apply-machine-token-art.mjs` (rebuilds `packs/vehicles`). **0.3.68:** Mule-Bot cargo plate is `mule-bot.{png,webp}` and is also the generic **Drone (Medium)** Actor portrait. **0.3.69:** Lane-Hopper and Star-Chopper plates under `assets/tokens/vehicles/`. Spike: `docs/spikes/B101-VEHICLE-DRONE-TOKEN-ART.md`.
 
 Armor + weapon item art (B102, **0.3.32**): 22 armor/shield + 49 weapon WebPs in `assets/tokens/armor/` (includes shields) and `assets/tokens/weapons/`. Re-apply after replacing files with `node tools/apply-gear-token-art.mjs` (stamps Gear pack + pregen embeds; rebuilds `packs/gear` + `packs/pregens`). Spike: `docs/spikes/B102-ARMOR-WEAPON-ITEM-ART.md`.
 
