@@ -66,6 +66,7 @@ const flats = read("docs/setting/reach-handbook/03-life-on-the-flats.md");
 ok(/## Vehicles & Transit — How the Flats Move/.test(flats), "Handbook Life on the Flats has Vehicles & Transit");
 ok(/altitude limiters ~25–50 feet/.test(flats), "Handbook quotes limiter");
 ok(/Star-Chopper/.test(flats), "Handbook names Star-Chopper");
+ok(/Bulldog/.test(flats) && /not a hover/.test(flats), "Handbook names Bulldog as tires cargo van");
 
 const afterFront = [
   "docs/raw/23-machines.md",
@@ -138,12 +139,15 @@ ok(/VTOL/.test(lang.GHOSTWIRE.Vehicles.Items.Tiltjet.Description), "Tiltjet lang
 const lorePages = loadJournalPages("lore");
 ok(lorePages.some(p => /Vehicles & Transit/.test(p.text) && /light electric hovercraft/.test(p.text)), "Lore journal has Vehicles & Transit page");
 ok(lorePages.some(p => /Lane-Hopper/.test(p.text) && /Star-Chopper/.test(p.text)), "Lore journal names Lane-Hopper and Star-Chopper");
+ok(lorePages.some(p => /Bulldog/.test(p.text) && /tires/.test(p.text)), "Lore journal names Bulldog as tires hauler");
 const rulePages = loadJournalPages("rulebook");
 ok(rulePages.some(p => /Street picture/.test(p.text) && /25–50 feet/.test(p.text)), "Rulebook Machines journal has street picture");
 ok(rulePages.some(p => /Lane-Hopper/.test(p.text) && /Star-Chopper/.test(p.text)), "Rulebook journal names Lane-Hopper and Star-Chopper");
+ok(rulePages.some(p => /Bulldog/.test(p.text) && /Ground-hauler/.test(p.text)), "Rulebook journal names Bulldog Ground-hauler");
 const hbPages = loadJournalPages("reach-handbook");
 ok(hbPages.some(p => /Vehicles & Transit/.test(p.text) && /25–50 feet/.test(p.text)), "Reach Handbook journal has Vehicles & Transit");
 ok(hbPages.some(p => /Lane-Hopper/.test(p.text) && /Star-Chopper/.test(p.text)), "Reach Handbook journal names Lane-Hopper and Star-Chopper");
+ok(hbPages.some(p => /Bulldog/.test(p.text)), "Reach Handbook journal names Bulldog");
 
 const index = readJson("data/voidmark-rules-index.json");
 const indexFiles = new Set(index.chunks.map(c => c.file));
@@ -169,6 +173,9 @@ const hopperQ = retrieve(index, "Lane-Hopper street hovercar");
 ok(hopperQ.some(h => /Lane-Hopper/.test(h.text) && /L1-setting-primer/.test(h.file)), "Lane-Hopper retrieve hits L1");
 const chopQ = retrieve(index, "Star-Chopper hover bike chopper");
 ok(chopQ.some(h => /Star-Chopper/.test(h.text) && /L1-setting-primer/.test(h.file)), "Star-Chopper retrieve hits L1");
+const dogQ = retrieve(index, "Bulldog heavy hauler van tires");
+ok(dogQ.some(h => /Bulldog/.test(h.text) && /tires|cargo van|Ground-hauler/i.test(h.text)), "Bulldog retrieve hits hauler lore");
+ok(dogQ.some(h => /L1-setting-primer|03-life-on-the-flats|23-machines/.test(h.file)), "Bulldog retrieve cites primer / handbook / machines");
 const povQ = retrieve(index, "What is a street POV hover?");
 ok(povQ.some(h => /Lane-Hopper|Star-Chopper|hovercraft|25–50/.test(h.text)), "POV query retrieves street hover lock");
 

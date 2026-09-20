@@ -65,7 +65,7 @@ Most vehicles in this world are **electric**.
 
 **Street / POV** on the Flats is mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground — **not** free-flight sky cars. The yes-examples are the **Lane-Hopper** (open 4-seat street hovercar; closed cabins exist; the table token is the open navy/white-stripe plate) and the **Star-Chopper** (tandem 2-seat stretch-fork hover-bike, no wheels — not the rifle named Chopper). Hovercabs queue at pickup gantries; courier cycles skim the wet deck; a rusted commuter skirt is still a getaway. The limiter is law and hardware. When Handbook sites mention a hovercab riding a cushion along a railing, that is this band.
 
-**Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars. Cargo-crawlers, flatbeds, bricks, cage wagons, walkers. Interchange ground-rigs grinding at Pump Row are haulers. Rubber and tracks mean mass.
+**Ground vehicles** (tires / treads) still exist but are **almost always heavy lifters, haulers, and big equipment** — not everyday street cars. A **Bulldog** is the street cargo van — rubber on the deck for crates and mass, not a hover POV. Cargo-crawlers, flatbeds, bricks, cage wagons, walkers. Interchange ground-rigs grinding at Pump Row are haulers. Rubber and tracks mean mass.
 
 **VTOL / flying craft** are **more expensive** but also in **common use** — corp escorts over the Weigh Station, licensed transit, well-funded runners. They climb past the limiter. You see them; a Low Lifestyle crew does not usually own one.
 

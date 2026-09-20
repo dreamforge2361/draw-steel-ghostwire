@@ -66,6 +66,7 @@ const FILE_HINTS = [
   { re: /machine|drone|vehicle|rigger|jump-in|rcc/, file: "23-machines" },
   { re: /hovercraft|altitude limiter|street.?pov|\bpov\b|lane-hopper|star-chopper|hover bike|hover.?car|limiter band/, file: "L1-setting-primer" },
   { re: /hovercraft|altitude limiter|street.?pov|lane-hopper|star-chopper|how the flats move/, file: "03-life-on-the-flats" },
+  { re: /bulldog|heavy hauler|cargo van|ground-hauler/, file: "L1-setting-primer" },
   { re: /hover \/ pov|ground-hauler|\bvtol\b|limiter band/, file: "28-glossary-slang" },
   { re: /mod|autosoft|install/, file: "10-mods" },
   { re: /hacker|bandwidth|program/, file: "19-hacker" },
