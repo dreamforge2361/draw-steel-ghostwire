@@ -1,0 +1,12 @@
+{
+  "_id": "gwBestiaryAeq000",
+  "_key": "!folders!gwBestiaryAeq000",
+  "name": "GHOSTWIRE.Bestiary.Folders.AequitasMandate",
+  "type": "Actor",
+  "folder": "gwBestiaryCorp00",
+  "sort": 100000,
+  "flags": {},
+  "color": "#1e4d7b",
+  "description": "",
+  "sorting": "a"
+}

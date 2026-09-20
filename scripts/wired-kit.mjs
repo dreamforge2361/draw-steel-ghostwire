@@ -2,7 +2,7 @@
 // Dropping this feature (Ghostwire Matrix › Support) onto an NPC marks them Wire-capable
 // and counts as a Connect interface (no extra commlink). It does not stamp Matrix Verb
 // abilities — all nine fire from the node applet (B117). Heroes use the same applet.
-// Meat-only opposition stays clean. No bestiary default.
+// Meat-only opposition stays clean. No generic bestiary default; 0.3.78 AEQ/LAZ Actors ship with the kit.
 
 import { MATRIX_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
 

@@ -21,7 +21,7 @@
  *   assets/tokens/bestiary/arg/arg-<role>.webp
  * (PNG originals sit beside the WebPs; Foundry img uses WebP).
  *
- * Scope (58): 34 L1–5 corp / gang / E1 rival humanoids + veil-cultist + Mama Cassavir,
+ * Scope (62): 38 L1–5 corp / gang / E1 rival / AEQ / LAZ humanoids + veil-cultist + Mama Cassavir,
  * 7 wire-machine ICE/constructs, 17 summons (elemental companions + rank 1,
  * three spirits, sprite minor/intermediate, two node tokens).
  *
@@ -47,6 +47,10 @@ const BESTIARY_SLUGS = [
   "corp-enforcer",
   "corp-netrunner",
   "corp-security-officer",
+  "aeq-trooper",
+  "aeq-sergeant",
+  "laz-medic",
+  "laz-chief-medic",
   "ironclad-commando",
   "ironclad-conscript",
   "ironclad-ground-commander",
@@ -116,6 +120,10 @@ const ART_OVERRIDES = {
   "corp-enforcer": { subdir: "arg", stem: "arg-corporate-enforcer" },
   "response-lieutenant": { subdir: "arg", stem: "arg-response-lieutenant" },
   "corp-security-officer": { subdir: "arg", stem: "arg-security-officer" },
+  "aeq-trooper": { subdir: "aeq", stem: "aequitas-mandate-officer" },
+  "aeq-sergeant": { subdir: "aeq", stem: "aequitas-mandate-officer" },
+  "laz-medic": { subdir: "laz", stem: "lazarus-combat-medic" },
+  "laz-chief-medic": { subdir: "laz", stem: "lazarus-combat-medic" },
 };
 
 const PACKS = {
@@ -179,6 +187,8 @@ const SKIP = new Map([
 
 const BAND_LABEL = {
   "corp-security": "corp",
+  aequitas: "corp",
+  lazarus: "corp",
   "reach-streets": "streets",
   rivals: "rivals",
   "veil-undead": "veil",
@@ -239,7 +249,7 @@ function kindFromName(name) {
   const base = String(name).toLowerCase();
   if (base === "bestiary" || base === "npc" || base === "npcs" || base === "humanoid" || base === "humanoids") return "bestiary";
   if (base === "summon" || base === "summons") return "summons";
-  if (["corp-security", "reach-streets", "rivals", "veil-undead", "wire-machine", "portraits", "arg"].includes(base)) return "bestiary";
+  if (["corp-security", "reach-streets", "rivals", "veil-undead", "wire-machine", "portraits", "arg", "aeq", "laz", "aequitas", "lazarus"].includes(base)) return "bestiary";
   if (["elementals", "spirits", "sprites", "nodes"].includes(base)) return "summons";
   return null;
 }
@@ -330,6 +340,12 @@ function aliasMap(catalog) {
   aliases.set("arg-response-lieutenant", "response-lieutenant");
   aliases.set("arg-security-officer", "corp-security-officer");
   aliases.set("arg-corp-security-officer", "corp-security-officer");
+  aliases.set("aequitas-mandate-officer", "aeq-trooper");
+  aliases.set("mandate-trooper", "aeq-trooper");
+  aliases.set("mandate-sergeant", "aeq-sergeant");
+  aliases.set("lazarus-combat-medic", "laz-medic");
+  aliases.set("extract-medic", "laz-medic");
+  aliases.set("extract-chief-medic", "laz-chief-medic");
   return aliases;
 }
 
@@ -379,7 +395,7 @@ Options:
                  Warn on unmatched filenames instead of failing.
 
 Stamps Actor img AND prototypeToken.texture.src. Embedded item icons are
-untouched. Scope is 58 Actors: 41 bestiary (34 humanoids + 7 ICE) and
+untouched. Scope is 62 Actors: 45 bestiary (38 humanoids + 7 ICE) and
 17 summons (companions / rank 1, spirits, sprite minor+intermediate, nodes).
 
 Close Foundry before a pack rebuild. Do not bump module.json until art ships.

@@ -7377,6 +7377,8 @@
       "Folders": {
         "ReachStreets": "Reach Streets",
         "CorpSecurity": "Corp & Security",
+        "AequitasMandate": "Aequitas Mandate",
+        "LazarusExtract": "Lazarus Extract",
         "WireMachine": "Wire & Machine",
         "VeilUndead": "Veil & Undead",
         "WildsJungles": "Wilds & Jungles",
@@ -7384,6 +7386,26 @@
         "ReachCritters": "Reach Critters"
       },
       "Actors": {
+        "MandateTrooper": {
+          "Name": "Mandate Trooper",
+          "Description": "<p>Aequitas Mandate street enforcer: hardweave, a stunstick, a sidearm, zip-cuffs, and a helmet HUD on the squad net. <strong>AEQ Aequitas Mandate</strong>–aligned law enforcement. Starts <strong>Disconnected</strong> — Wire Kit is the Connect interface.</p><p><em>Adapted from the Corp Security Officer / Draw Steel Human Guard minion spine. Draw Steel math intact. Token art: Michael Aequitas Mandate officer plate (shared with Mandate Sergeant).</em></p>",
+          "Director": "<p><strong>Faction filter:</strong> <code>aeq</code> / Aequitas Mandate (AEQ). Trooper / street-enforcer band — L1 minion brute, Stamina 5, EV 3 (Corp Security Officer spine).</p><p><strong>Kit:</strong> Stunstick &amp; Sidearm, Zip-Cuffs, Mandate HUD Suite (helmet + radio), <strong>Wire Kit — Matrix Verbs</strong>. Drag from Ghostwire Bestiary → Corp &amp; Security → Aequitas Mandate. Connect from the node applet after placing. Pair with a Mandate Sergeant for Hold the Line.</p><p>Seated Ten: Ghostwire Lore → Ten Conglomerates. AEQ is a corp-line filter, not a new Congress seat.</p>"
+        },
+        "MandateSergeant": {
+          "Name": "Mandate Sergeant",
+          "Description": "<p>Aequitas Mandate squad lead: heavier duty sidearm, riot hardweave, and the voice on the net that keeps troopers on the line. <strong>AEQ Aequitas Mandate</strong>–aligned. Starts <strong>Disconnected</strong> — Wire Kit is the Connect interface.</p><p><em>Adapted from the Ironclad Subcommander / Draw Steel War Dog Subcommander horde-support spine (command aura + sidearm math). Loyalty-collar / Ironclad Malice stripped. Token art: same Michael Mandate officer plate as the Trooper.</em></p>",
+          "Director": "<p><strong>Faction filter:</strong> <code>aeq</code> / Aequitas Mandate (AEQ). Sergeant / squad-lead band — L2 horde support, Stamina 20, EV 4 (Ironclad Subcommander spine). One step up from the Trooper.</p><p><strong>Kit:</strong> Duty Sidearm (4/5/7 + ally free strike), Hold the Line (+3 stability to allies within 5), Zip-Cuffs, sergeant HUD / squad-net radio, <strong>Wire Kit</strong>. Better stamina and a stronger pistol than the Trooper; not an ARG Response Lieutenant (80 Stamina leader).</p>"
+        },
+        "ExtractMedic": {
+          "Name": "Extract Medic",
+          "Description": "<p>Lazarus Extract combat medic: white/red trauma plate, a light stun sidearm, and a bag that is the real weapon. <strong>LAZ Lazarus Extract</strong>–aligned. Starts <strong>Disconnected</strong> — Wire Kit plus the medical HUD’s patient feed.</p><p><em>Adapted from the Street Doc / Draw Steel Orc Godcaller platoon-support spine. Blight Grenade dropped (street-chem, not extract kit). Token art: Michael Lazarus combat medic plate (shared with Extract Chief Medic).</em></p>",
+          "Director": "<p><strong>Faction filter:</strong> <code>laz</code> / Lazarus Extract (LAZ). Combat-medic trooper band — L1 platoon support, Stamina 30, EV 6 (Street Doc spine).</p><p><strong>Kit:</strong> Stun Sidearm (5/7/9 sonic, light defensive — not a gun truck), Trauma Patch (heal 15), Stimulant Dart, Stabilize, Field Trauma Weave, Medical HUD, <strong>Wire Kit</strong>. Drag from Ghostwire Bestiary → Corp &amp; Security → Lazarus Extract. Neutral-ish until someone shoots the patient.</p>"
+        },
+        "ExtractChiefMedic": {
+          "Name": "Extract Chief Medic",
+          "Description": "<p>Lazarus Extract field lead: the same white/red plate as the bag-carrier, a Lazarus Trauma Package, and the vitals overlay for the whole extract team. <strong>LAZ Lazarus Extract</strong>–aligned. Starts <strong>Disconnected</strong>.</p><p><em>Street Doc medical-ability math on a Rival Commander combat envelope (L2 elite, Stamina 60, EV 16, stability 2) plus the Subcommander +3 stability aura. Token art: same Michael Lazarus medic plate as the Extract Medic.</em></p>",
+          "Director": "<p><strong>Faction filter:</strong> <code>laz</code> / Lazarus Extract (LAZ). Sergeant-equivalent field lead — elite support, Stamina 60 (Rival Commander band). Same Trauma Patch / Stimulant Dart / Stun Sidearm numbers as the Extract Medic; the upgrade is stamina, Extract Lead, and the Lazarus Trauma Package.</p><p><strong>Kit:</strong> Stun Sidearm, Trauma Patch, Stimulant Dart, Stabilize, Extract Lead (+3 stability aura), Chief Med Suite, Lazarus Trauma Package, Medical HUD, <strong>Wire Kit</strong>. Pair with Extract Medics and a meat squad (AEQ or IRN) on an extraction clock.</p>"
+        },
         "CorpSecurityOfficer": {
           "Name": "ARG Security Officer",
           "Description": "<p>Argent Exchange contract security on a Grid checkpoint, a corp lobby, or an ARG freight consist: body armor, a stunstick, a sidearm, and orders to hold the door until backup arrives. <strong>ARG Argent Exchange</strong>–aligned.</p><p><em>Reskinned from the Draw Steel level 1 Human Guard (Keep). Draw Steel math intact; ability names and rules text rethemed to Ghostwire firearms and chrome (B38c). Token art: Michael ARG Security Officer (B111).</em></p>"

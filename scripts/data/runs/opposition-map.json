@@ -3,6 +3,9 @@
   "strata": {
     "crown": [
       "ARG Security Officer",
+      "Mandate Trooper",
+      "Mandate Sergeant",
+      "Extract Medic",
       "ARG Corporate Enforcer",
       "ARG Response Lieutenant",
       "Corp Netrunner",
@@ -13,6 +16,9 @@
     ],
     "spires": [
       "ARG Security Officer",
+      "Mandate Trooper",
+      "Mandate Sergeant",
+      "Extract Medic",
       "ARG Corporate Enforcer",
       "ARG Response Lieutenant",
       "Corp Netrunner",
@@ -24,6 +30,10 @@
     ],
     "grid": [
       "ARG Security Officer",
+      "Mandate Trooper",
+      "Mandate Sergeant",
+      "Extract Medic",
+      "Extract Chief Medic",
       "Street Punk",
       "Hustler",
       "Street Cutter",
@@ -97,7 +107,10 @@
   "types": {
     "extraction": [
       "Rooftop Shooter",
-      "Street Cutter"
+      "Street Cutter",
+      "Extract Medic",
+      "Extract Chief Medic",
+      "Mandate Trooper"
     ],
     "dataSteal": [
       "Corp Netrunner"
