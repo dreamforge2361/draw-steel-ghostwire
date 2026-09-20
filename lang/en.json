@@ -5220,7 +5220,7 @@
         },
         "WireKit": {
           "Name": "Wire Kit — Matrix Verbs",
-          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to mark them as Wire-capable (ARG security, rival deckers). It does <strong>not</strong> copy Matrix Verb abilities onto the sheet — <strong>Connect</strong>, <strong>Jack Out</strong>, <strong>Toggle Connection State</strong>, <strong>Scan</strong>, <strong>Navigate</strong>, <strong>Ping</strong>, <strong>Broadcast</strong>, <strong>Search</strong>, and <strong>Read/Write</strong> fire from the node a runner is facing (and from the Wired Console).</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes use the same node applet; this kit does not duplicate verbs onto them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary.</p>"
+          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC or drone to mark them as Wire-capable (ARG security, rival deckers, Wire-capable machines). It <strong>is</strong> a Connect interface — they can Connect from the node applet / Wired Console without a separate commlink, deck, or datajack. It does <strong>not</strong> copy Matrix Verb abilities onto the sheet — <strong>Connect</strong>, <strong>Jack Out</strong>, <strong>Toggle Connection State</strong>, <strong>Scan</strong>, <strong>Navigate</strong>, <strong>Ping</strong>, <strong>Broadcast</strong>, <strong>Search</strong>, and <strong>Read/Write</strong> fire from the node a runner is facing (and from the Wired Console).</p><p><strong>Directors:</strong> stamp ARG security, drones, and any other opposition that should act on the Wire. Leave meat-only thugs without it. Heroes use the same node applet; this kit does not duplicate verbs onto them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary.</p>"
         },
         "Buzzer": {
           "Name": "Buzzer",
@@ -6557,7 +6557,7 @@
     "WiredKit": {
       "Button": "Add Wire Kit",
       "Hud": "Add Wire Kit — Matrix Verbs to the selected NPC",
-      "Granted": "{actor} stamped with Wire Kit — Matrix Verbs fire from the node they're facing.",
+      "Granted": "{actor} stamped with Wire Kit — they can Connect without a commlink. Matrix Verbs fire from the node they're facing.",
       "Already": "{actor} already has the Wire Kit.",
       "HeroSkip": "{actor} is a hero — Matrix Verbs fire from the node applet, not this kit.",
       "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."

@@ -452,11 +452,12 @@ Spec: `docs/spikes/B114-NODE-MAP-READABILITY.md`. Fail-case: overlapping labels 
   - [ ] Foundry-verify after B112 auto-nodes: pills do not stack
 
 ### B115 NPC Wire Kit (2026-09-20)
-Spec: `docs/spikes/B115-NPC-WIRE-KIT.md`. Droppable Matrix Support feature **Wire Kit — Matrix Verbs** grants the nine hero Matrix Verb UUIDs onto an NPC. Console / Token HUD **Add Wire Kit** for selected NPC tokens. Heroes skipped (already have verbs). No bestiary default. **SHIPPED 0.3.49.**
-- [x] **B115** Wire Kit (module **0.3.49**) — **pending Foundry-verify**. Done when:
+Spec: `docs/spikes/B115-NPC-WIRE-KIT.md`. Droppable Matrix Support feature **Wire Kit — Matrix Verbs** marks an NPC/drone Wire-capable. Console / Token HUD **Add Wire Kit** for selected NPC tokens. Heroes skipped (same applet). No bestiary default. **SHIPPED 0.3.49** (stamp); **B117 0.3.53** does not copy the nine onto the sheet; **0.3.68** kit is a Connect interface.
+- [x] **B115** Wire Kit (module **0.3.49** / interface **0.3.68**) — **pending Foundry-verify**. Done when:
   - [x] Pack item `wire-kit-matrix-verbs` + grant/revoke hook
   - [x] Console + HUD one-click; API `addWireKit`
-  - [ ] Foundry-verify: stamp ARG Response Lieutenant; Enforcer left meat-only
+  - [x] `itemIsConnectInterface` treats `kind: "wire-kit"` / `_dsid` as interface (0.3.68)
+  - [ ] Foundry-verify: stamp ARG Response Lieutenant or a drone; Connect enabled without a commlink; Enforcer left meat-only
 
 ### B116 Node token library (2026-09-20)
 Spec: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`. Eight Michael YES styles under `assets/tokens/wired/` (`library.json` + `NODE_TOKEN_LIBRARY`). Wired Console GM **Token art** select writes board `tokenStyle`. Auto-nodes: Light → `light-control`, Maglock → `maglock`, Cam lights / named cams → `cam-controls`. Manual place: Director picks. Generic Track 1/2 when `tokenStyle` is empty. **SHIPPED 0.3.49.** Ten Conglomerates Host skins (`node-host-{ticker}`) **0.3.54**; generic `node-host` stays default.
@@ -480,7 +481,7 @@ Spec: `docs/spikes/B117-CONSOLE-MATRIX-VERBS.md`. **PLAYER UX lock:** player ope
   - [x] Node panel verb strip (all nine); Console strip shares `useConsoleVerb`
   - [x] Roll uses the player's characteristics + existing Hacking / Jacked In / Reader edges
   - [x] Sheet cleanup: all nine off defaultItems, Wire Kit stamp, pregens, Mama
-  - [x] Connect gated on tagged comms / deck / chrome / kit or Technomancer; street Commlink SKU
+  - [x] Connect gated on tagged comms / deck / chrome / Wire Kit or Technomancer; street Commlink SKU
   - [ ] Foundry-verify: player opens a revealed node, Connects there (with a commlink), fires the other verbs without the GM Console; no interface → Connect refuses; sheet / pregen / Mama / Wire Kit have none of the nine
 
 ### Linked connection state — docs + VOIDMARK (2026-09-20)
@@ -551,6 +552,14 @@ Michael: “30 for a brick bar is crazy.” Food was priced like T5 gear. **SHIP
   - [x] Chems not slashed
   - [x] Gear pack rebuilt; kiosk smoke
   - [ ] Foundry-verify: Food kiosk shows stall prices; Kickwire still ¥400
+
+### Wire Kit is a Connect interface (2026-09-20)
+Michael smoke: drone on scene had **Wire Kit — Matrix Verbs** on Features, but Wired Console showed DISCONNECTED and all verbs disabled (“Need a comlink, deck, datajack, or trodes — or be a Technomancer.”). `itemIsConnectInterface` only accepted `wired.connectInterface` / matrix role deck|rcc|interface / Technomancer. Pack item had `kind: "wire-kit"` only. **SHIPPED 0.3.68.** Treat `kind === "wire-kit"` / `_dsid === "wire-kit-matrix-verbs"` as interface; stamp `connectInterface` on pack JSON + HUD grant. Existing world copies Connect without a commlink. Do not require RCC role. Verbs stay off the sheet. No Gold Line `{ force: true }`. No PDF. (0.3.67 is token vision in flight.)
+- [x] **Wire Kit Connect interface** (module **0.3.68**) — **pending Foundry-verify**. Done when:
+  - [x] `itemIsConnectInterface` accepts Wire Kit kind/dsid (and pack `connectInterface`)
+  - [x] B115 / B117 notes + Foundry Director notes
+  - [x] `node tools/b117-console-verbs-smoke.mjs` + B112–B115 smoke
+  - [ ] Foundry-verify: drone with Wire Kit → Connect enabled → Linked; Scan after Toggle to Overlay; nine verbs still not on the sheet
 
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.
@@ -691,8 +700,8 @@ Spec: `docs/spikes/B39-RUN-GENERATOR.md`; design + as-built: `docs/directors/run
 - [x] **B116** Node token library — **SHIPPED 0.3.49, pending Foundry-verify**. Spike: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`. Catalog `assets/tokens/wired/library.json` (8 device styles); Console Token art select; Auto Light/Maglock/Cam keep locked defaults. Megacorp Host skins **0.3.54**.
 - **B116** Wire Atlas topology — **SHIPPED 0.3.50 (docs + journal) / 0.3.51 (Michael atlas art), pending Foundry-verify**. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. RAW + Rulebook journal. Catalog `assets/tokens/wired/node-relay|host|segment` (png+webp, `placeholder: false`). Mama **0.3.48**; Wired Gold Line **0.3.49** (PR **#34**). No Gold Line rewrite. PDF later.
 - **B114** Node-map readability — **SHIPPED 0.3.49, pending Foundry-verify**. Spike: `docs/spikes/B114-NODE-MAP-READABILITY.md`. Force/cluster layout, collision, zoom/pan, dense pills.
-- **B115** NPC Wire Kit — **SHIPPED 0.3.49, pending Foundry-verify**. Spike: `docs/spikes/B115-NPC-WIRE-KIT.md`. Droppable feature grants Matrix Verbs onto NPCs; Console / HUD stamp. No bestiary default.
-- **B117** Matrix Verbs from the node the player faces — **SHIPPED 0.3.53, pending Foundry-verify**. Spike: `docs/spikes/B117-CONSOLE-MATRIX-VERBS.md`. All nine on the node applet (Console shares the fire path); stripped from sheets, pregens, defaultItems, Wire Kit stamp, and Mama. Connect needs a tagged Wire interface or Technomancer. No Gold Line rewrite.
+- **B115** NPC Wire Kit — **SHIPPED 0.3.49, Connect interface 0.3.68, pending Foundry-verify**. Spike: `docs/spikes/B115-NPC-WIRE-KIT.md`. Droppable feature marks NPCs/drones Wire-capable (and is a Connect interface); Console / HUD stamp. No bestiary default. Verbs stay on the applet.
+- **B117** Matrix Verbs from the node the player faces — **SHIPPED 0.3.53, pending Foundry-verify**. Spike: `docs/spikes/B117-CONSOLE-MATRIX-VERBS.md`. All nine on the node applet (Console shares the fire path); stripped from sheets, pregens, defaultItems, Wire Kit stamp, and Mama. Connect needs a tagged Wire interface, **Wire Kit**, or Technomancer. No Gold Line rewrite.
 - **B118** Scene kiosk merchant — **SHIPPED 0.3.59, pending Foundry-verify**. Spike: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Actor stub kiosk; proximity-gated shop; ¥ from `system.hero.wealth`; Item copied to buyer. Director note: `docs/directors/scene-kiosk-merchant.md`. No Gold Line rewrite.
 - **B119** Kiosk type presets + street consumables — **SHIPPED 0.3.65, pending Foundry-verify**. Spike: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Type picker + Restock; catalog filters; `src/packs/gear/consumables/`; chem Use maneuvers. No Gold Line rewrite.
 - **B104** Deadhead Foundry run pack — **SoR + empty pack scaffold 0.3.33**; **Gold Line map notes + Scene 0.3.36 (B106)**; **cargo remap folded 0.3.40**; **Director journal 0.3.42**; **Beat 0 hangout Scene 0.3.43 (B107) REMOVED permanently 0.3.55**; **Wire ping + Technomancer Whiteout 0.3.45**; **auto-nodes + node-map + Wire Kit + node library 0.3.49 (B112 / B113 / B114 / B115 / B116)**; **Wire Atlas 0.3.50**; **atlas token art 0.3.51**; **Gear SKUs 0.3.52**; **Nox trash freighter + aerial recon 0.3.54**. Spikes: `docs/spikes/B104-DEADHEAD-FOUNDRY-RUN-PACK.md`, `docs/spikes/B107-DEADHEAD-HANGOUT.md` (**KILLED**), `docs/spikes/B106-WIRED-CONSOLE-WIRE-PING.md`, `docs/spikes/B109-TECHNOMANCER-DECKLESS-PAYLOADS.md`, `docs/spikes/B112-SCENE-WIRE-AUTO-NODES.md`, `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`, `docs/spikes/B114-NODE-MAP-READABILITY.md`, `docs/spikes/B115-NPC-WIRE-KIT.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`, `docs/spikes/B116-WIRE-ATLAS.md`. Director SoR `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md` + sidecar `GOLD-LINE-CARGO-REMAP.md` (LOCKED). JournalEntry pack `runs` (label **Ghostwire Runs**, GM-only) with intra-pack folder **Deadhead**. **Gear SKUs shipped 0.3.52** (Mama’s Deadhead Brief + ARG Courier Capsule in **Ghostwire Gear → Plot & Run Hooks**; gallery art, not regenerated). Hangout Scene **REMOVED permanently 0.3.55** (do not reintroduce); canyon **SKIPPED** — narrated; Mama reused; Gold Line is Michael’s live Scene. No Trace −1 class abilities. Cargo maglev — not a passenger train. Do not overwrite Gold Line walls/lights/tiles.

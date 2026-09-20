@@ -238,6 +238,7 @@ const requiredTags = [
   "fleet-deck",
   "datajack", "datajack-soft", "datajack-dongle", "trode-net", "hot-sim-module",
   "nyx-switchblade", "ferrum-padlock-6", "meridian-lookout",
+  "wire-kit-matrix-verbs",
 ];
 ok(requiredTags.every(d => taggedDsids.has(d)), `connectInterface tags (${[...taggedDsids].sort().join(",")})`);
 ok(!taggedDsids.has("spoof-kit"), "Spoof Kit is not a Connect interface");
@@ -248,6 +249,26 @@ ok(actorHasConnectInterface({ items: [commlink] }), "actor with Commlink can Con
 ok(!actorHasConnectInterface({ items: [] }), "empty actor cannot Connect");
 ok(actorHasConnectInterface({ classDsid: "technomancer", items: [] }), "Technomancer Connects deckless");
 ok(!actorHasConnectInterface({ classDsid: "hacker", items: [] }), "Hacker still needs a deck or comms");
+
+const kit = readBomFreeJson("src/packs/matrix/support/wire-kit-matrix-verbs.json");
+ok(kit.system._dsid === "wire-kit-matrix-verbs" && kit.flags["draw-steel-ghostwire"].kind === "wire-kit", "Wire Kit pack kind/dsid");
+ok(kit.flags["draw-steel-ghostwire"].wired.connectInterface === true, "Wire Kit pack stamps connectInterface");
+ok(itemIsConnectInterface(kit), "itemIsConnectInterface sees pack Wire Kit");
+ok(actorHasConnectInterface({ items: [kit] }), "actor with pack Wire Kit can Connect");
+const worldKit = {
+  name: "Wire Kit — Matrix Verbs",
+  type: "feature",
+  system: { _dsid: "wire-kit-matrix-verbs" },
+  flags: { "draw-steel-ghostwire": { kind: "wire-kit", dsid: "wire-kit-matrix-verbs" } },
+};
+ok(!worldKit.flags["draw-steel-ghostwire"].wired, "pre-0.3.68 world copies have kind only");
+ok(itemIsConnectInterface(worldKit), "kind/dsid Wire Kit is a Connect interface without connectInterface stamp");
+ok(actorHasConnectInterface({ items: [worldKit] }), "drone with untagged Wire Kit can Connect");
+ok(itemIsConnectInterface({ system: { _dsid: "wire-kit-matrix-verbs" }, flags: {} }), "_dsid wire-kit-matrix-verbs is enough");
+ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { kind: "wire-kit" } } }), "kind wire-kit is enough");
+ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { matrix: { role: "rcc" } } } }), "RCC role still counts (not required for Wire Kit drones)");
+ok(!itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { kind: "spoof-kit" } } }), "spoof-kit kind is not an interface");
+ok(consoleVerbGate({ actorUuid: "Actor.drone", owned: true, connected: false, dsid: "matrix-connect", hasInterface: actorHasConnectInterface({ items: [worldKit] }) }).ok, "drone with Wire Kit: Connect gate opens");
 
 const css = readFileSync("styles/ghostwire.css", "utf8");
 ok(css.includes(".wc-verb-strip") && css.includes(".ghostwire-wired-node-panel"), "CSS for verb strip + node panel");
@@ -268,17 +289,20 @@ ok(lang.GHOSTWIRE.Wired.Warnings.NeedInterface.includes("comlink"), "lang Wired 
 ok(lang.GHOSTWIRE.Gear.Items.Commlink.Name === "Commlink", "lang street Commlink");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does <strong>not</strong> copy") || lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does not"), "Wire Kit does not copy verbs");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("Read/Write"), "Wire Kit description names all nine");
+ok(/Connect interface/.test(lang.GHOSTWIRE.Matrix.Items.WireKit.Description), "Wire Kit description names Connect interface");
 
 const spike = readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8");
 ok(/LOCKED 2026-09-20/.test(spike) && /0\.3\.53/.test(spike), "spike is locked and names 0.3.53");
 ok(/all nine|all 9/.test(spike) && /Mama/.test(spike) && /defaultItems/.test(spike) && /Wire Kit/.test(spike), "spike locks all 9 on applet and sheet cleanup");
 ok(/pregens/i.test(spike), "spike names pregens");
 ok(/Anyone vs Hacker vs Technomancer/.test(spike) && /Padlock-6/.test(spike), "spike documents anyone vs Hacker vs Technomancer");
-ok(/connectInterface/.test(spike) && /Commlink/.test(spike) && /Technomancer/.test(spike), "spike documents Connect interface allow-list");
+ok(/connectInterface/.test(spike) && /Commlink/.test(spike) && /Technomancer/.test(spike) && /Wire Kit/.test(spike), "spike documents Connect interface allow-list");
+ok(/kind: "wire-kit"|wire-kit-matrix-verbs/.test(spike) && /0\.3\.68/.test(spike), "spike names Wire Kit as Connect interface (0.3.68)");
 ok(/No new/.test(spike) && /everyone gets Programs/.test(spike), "spike refuses everyone-gets-Programs");
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
-ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry), "Foundry notes name Connect interface");
+ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name Connect interface");
+ok(/0\.3\.68/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name 0.3.68 Wire Kit interface");
 ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry), "Foundry notes: node Actors always Connected");
 ok(/revealed first/.test(foundry) && /A–Z|A-Z/.test(foundry), "Foundry notes: revealed-first then A–Z lists");
 ok(/hideInSheet/.test(foundry) && /data-document-uuid/.test(foundry), "Foundry notes: 0.3.64 sheet hide path");
@@ -419,6 +443,15 @@ ok(!isTemporaryConsoleVerb(blank, 0), "unflagged getFlag item is not temporary e
 ok([liveTemp, blank].filter(isTemporaryConsoleVerb).length === 1, "bare filter(isTemporaryConsoleVerb) does not throw Flag scope 0");
 ok([liveTemp].filter(isOffSheetMatrixVerb).length === 1, "bare filter(isOffSheetMatrixVerb) does not throw Flag scope 0");
 ok(hasHideInSheetFlag(mockGetFlagItem({ [DS_SYSTEM_ID]: { [DS_HIDE_IN_SHEET]: true } }), 0), "hasHideInSheetFlag ignores numeric systemId");
+
+console.log("\n8) 0.3.68 Wire Kit is a Connect interface");
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 68;
+})(), `module.json is 0.3.68+ (got ${moduleJson.version})`);
+ok(/0\.3\.68/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.68");
+ok(kitSrc.includes("wired.connectInterface"), "Add Wire Kit stamps connectInterface");
+ok(!kitSrc.includes("SHEET_VERBS"), "0.3.68 still does not stamp sheet verbs");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

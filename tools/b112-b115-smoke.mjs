@@ -11,6 +11,7 @@ import { parseRoomName, planAutoNodes, isDoorWall, isCamName, wallCenter, AUTO_N
 import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../scripts/wired-layout.mjs";
 import { NODE_TOKEN_LIBRARY, tokenSrcForStyle } from "../scripts/wired-node-art.mjs";
 import { MATRIX_VERBS, MATRIX_VERB_IDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
+import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -27,7 +28,10 @@ function readBomFreeJson(path) {
 console.log("B112 / B114 / B115 Wired Gold Line smoke (0.3.55)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 55;
+})(), `module.json is 0.3.55+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -242,10 +246,15 @@ const kit = readBomFreeJson("src/packs/matrix/support/wire-kit-matrix-verbs.json
 ok(kit._id === WIRE_KIT_ID && kit.system._dsid === WIRE_KIT_DSID, "pack JSON id/dsid match");
 ok(kit.type === "feature", "Wire Kit is a droppable feature");
 ok(kit.flags["draw-steel-ghostwire"].kind === "wire-kit", "kind flag is wire-kit");
+ok(kit.flags["draw-steel-ghostwire"].wired.connectInterface === true, "Wire Kit pack stamps connectInterface");
 ok(kit.folder === "coyCmRxnu5opxytj", "lives in Matrix Support folder");
+ok(itemIsConnectInterface(kit), "itemIsConnectInterface sees pack Wire Kit");
+ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { kind: "wire-kit" } } }), "kind wire-kit is a Connect interface");
+ok(actorHasConnectInterface({ items: [{ system: { _dsid: WIRE_KIT_DSID }, flags: { "draw-steel-ghostwire": { kind: "wire-kit" } } }] }), "NPC/drone with Wire Kit can Connect without a commlink");
 
 const src = readFileSync("scripts/wired-kit.mjs", "utf8");
 ok(src.includes("grantMatrixVerbs") && src.includes("addWireKitToSelected"), "wired-kit grants + selected-token helper");
+ok(src.includes("wired.connectInterface"), "HUD grant stamps connectInterface");
 ok(src.includes("actor.type === \"hero\""), "heroes are not auto-stamped");
 ok(!/for \(const actor of game\.actors\)/.test(src), "no world-actor scan to stamp kits");
 
@@ -291,6 +300,7 @@ ok(b112.includes("{Room} - Light Control"), "B112 spike Light Control dash");
 ok(b112.includes("Wrong: `Rear Car Substation Maglock Door 1`"), "B112 spike marks undashed Maglock as wrong");
 ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.3.49"), "B114 spike");
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.49"), "B115 spike");
+ok(/Connect interface/.test(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8")), "B115 spike documents Connect interface");
 ok(b112.includes("B113"), "B112 notes B113 art");
 ok(b112.includes("Cam Controls"), "B112 spike cameras-in-scope");
 ok(readFileSync("docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md", "utf8").includes("node-light-control.webp"), "B113 spike");

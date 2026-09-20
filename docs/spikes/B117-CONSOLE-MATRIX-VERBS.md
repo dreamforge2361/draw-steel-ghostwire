@@ -10,7 +10,7 @@
 
 Hacker Bandwidth Programs stay on the sheet. Decks, Bandwidth, Programs, Improved Cyberdeck, origins, Technomancer Resonance / sprites / deckless payloads are **unchanged**.
 
-**Who can fire:** the user’s owned actor (or the GM, from the Console roster). **Connect** works while Disconnected **and** requires a Wire interface (or Technomancer); it lands in **Linked**. **Broadcast / Toggle / Jack Out** work from Linked. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In. Hidden nodes stay GM-only.
+**Who can fire:** the user’s owned actor (or the GM, from the Console roster). **Connect** works while Disconnected **and** requires a Wire interface (or Technomancer); it lands in **Linked**. **Wire Kit — Matrix Verbs** on an NPC/drone is that interface (no extra commlink). **Broadcast / Toggle / Jack Out** work from Linked. Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs need Overlay or Jacked In. Hidden nodes stay GM-only.
 
 ## Sheet cleanup — no dual homes
 Remove Matrix Verbs from:
@@ -38,9 +38,10 @@ Connect fails unless the actor has at least one of:
 1. **Comms** tagged `flags.draw-steel-ghostwire.wired.connectInterface`: Burner, **Commlink** (new street SKU), Pocket Sec, Ghost Relay, Corp Blacklink
 2. **Cyberdeck / RCC / kit deck:** Scrapdeck, Street Deck, Blackdeck, Ghostbox, Fairlight Ghost; Fleet Deck / Hydra Console / Command Rig / Remote Box / War Table; Nyx Switchblade, Ferrum Padlock-6, Meridian Lookout
 3. **Chrome / interface:** Datajack, Datajack Soft, Datajack Dongle, Trode Net, Hot-Sim Module, Signal Ghost
-4. **Exception: Technomancer** (class `_dsid`) — deckless Resonance counts as interface; no gear required
+4. **Wire Kit** (`kind: "wire-kit"` / `_dsid` `wire-kit-matrix-verbs`) — Director stamp for NPCs and drones. Counts as interface even when the world copy has no `connectInterface` flag (pre-0.3.68). Do **not** also require matrix role `rcc`.
+5. **Exception: Technomancer** (class `_dsid`) — deckless Resonance counts as interface; no gear required
 
-Spoof Kit is **not** an interface. Tag is `flags.draw-steel-ghostwire.wired.connectInterface: true` (matrix `role` deck / rcc / interface is a fallback). Fail message: “Need a comlink, deck, datajack, or trodes — or be a Technomancer.”
+Spoof Kit is **not** an interface. Tag is `flags.draw-steel-ghostwire.wired.connectInterface: true` (matrix `role` deck / rcc / interface is a fallback; Wire Kit `kind` / `_dsid` is another). Fail message: “Need a comlink, deck, datajack, or trodes — or be a Technomancer.”
 
 Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the everyday phone. It does not replace Pocket Sec or Burner. Do not invent a second deck ladder.
 
@@ -55,7 +56,7 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 | Revealed node OBSERVER | `scripts/wired-node-tokens.mjs` `setNodePlayerAccess` |
 | Director Console strip + roster | `scripts/wired-console.mjs`, `templates/wired-console.hbs` |
 | Strip defaultItems + world actors | `scripts/module.mjs` (`matrixVerbsApplet`) |
-| NPC Wire Kit | `scripts/wired-kit.mjs` stamps the kit feature only |
+| NPC Wire Kit | `scripts/wired-kit.mjs` stamps the kit feature only (Connect interface as of 0.3.68) |
 | Mama | `src/packs/bestiary/reach-streets/mama-cassavir.json` — nine verbs removed |
 | Street Commlink | `src/packs/gear/general/comms/commlink.json` |
 | Foundry notes | `docs/rulebook/18-wired-foundry.md` |
@@ -83,5 +84,7 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 **0.3.64 (Michael smoke 2026-09-20):** Ping (and the other eight) showed on the Draw Steel hero ability sheet after applet use. Cause: 0.3.61 hide looked for `data-item-id` / `data-entry-id`; DS 1.1.2 rows use `data-document-uuid` and `_prepareAbilitiesContext` (`flags.draw-steel.hideInSheet`). Fix: stamp `hideInSheet` on temps, filter abilities context, CSS + sheet hooks (including ActorSheetV2), ready deletes only orphan temps not backing a chat `abilityUuid`. Do **not** re-grant verbs onto sheets. Console lists: revealed-first then A–Z; hover full name.
 
 **0.3.66 (Michael console 2026-09-20):** World ready threw `Flag scope "0" is not valid or not currently active` at `DrawSteelItem.getFlag` ← `isTemporaryConsoleVerb` ← `Array.filter` during `Game.setupGame`. Cause: `.filter(isTemporaryConsoleVerb)` / `.filter(isOffSheetMatrixVerb)` pass `(element, index)`; index `0` became `moduleId`. Fix: wrap `item => isTemporary…(item)`; if the second arg is not a non-empty string, use `MODULE_ID` (same for `hasHideInSheetFlag`). Do **not** use those helpers bare as filter/map callbacks.
+
+**0.3.68 (Michael smoke 2026-09-20):** Drone on scene had **Wire Kit — Matrix Verbs** on Features, but Wired Console showed DISCONNECTED and all verbs disabled with NeedInterface. Cause: `itemIsConnectInterface` only accepted `wired.connectInterface` / matrix role deck|rcc|interface; pack item had `kind: "wire-kit"` only. Comment said “kit” but kit was not implemented. Fix: treat `kind === "wire-kit"` and `_dsid === "wire-kit-matrix-verbs"` as interface; stamp `connectInterface` on pack JSON + HUD grant. Existing world copies Connect without a commlink. Do **not** put the nine verbs back on the sheet. (0.3.67 is token vision, in flight.)
 
 Smoke: `node tools/b117-console-verbs-smoke.mjs`. No live Foundry in this environment.

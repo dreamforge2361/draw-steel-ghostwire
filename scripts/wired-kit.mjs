@@ -1,7 +1,8 @@
-// Wire Kit — Matrix Verbs (B115, B117).
-// Dropping this feature (Ghostwire Matrix › Support) onto an NPC marks them Wire-capable.
-// It does not stamp Matrix Verb abilities — all nine fire from the node applet (B117).
-// Heroes use the same applet. Meat-only opposition stays clean. No bestiary default.
+// Wire Kit — Matrix Verbs (B115, B117, 0.3.68).
+// Dropping this feature (Ghostwire Matrix › Support) onto an NPC marks them Wire-capable
+// and counts as a Connect interface (no extra commlink). It does not stamp Matrix Verb
+// abilities — all nine fire from the node applet (B117). Heroes use the same applet.
+// Meat-only opposition stays clean. No bestiary default.
 
 import { MATRIX_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
 
@@ -34,6 +35,8 @@ async function kitSource() {
   }
   const data = game.items.fromCompendium(source, { clearFolder: true });
   foundry.utils.setProperty(data, `flags.${MODULE_ID}.kind`, "wire-kit");
+  foundry.utils.setProperty(data, `flags.${MODULE_ID}.dsid`, WIRE_KIT_DSID);
+  foundry.utils.setProperty(data, `flags.${MODULE_ID}.wired.connectInterface`, true);
   return data;
 }
 
