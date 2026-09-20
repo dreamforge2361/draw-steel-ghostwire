@@ -71,7 +71,7 @@ Most vehicles in this world are **electric**.
 
 Vertical travel between strata is still lift-stacks, maglev spines, and grey shafts (**The Vertical & the Black Water**). Hover lanes are how you cross a district without climbing a checkpoint. Water lanes stay barges, skiffs, and hover-launches as printed.
 
-**Director's frame.** Narrate three stacked weathers: street-layer hover + crowds; hauler mass on the deck; VTOL and drones in the gaps. A **Lane-Hopper** is the everyday 4-seat POV (open plate on the table; closed variants exist). A stolen Getaway is a limiter hover even if the card says Domain Ground. A Flatbed is tires. A Tiltjet is the expensive bird. **Rideable (future):** top-down seats make passenger token slots obvious — do not implement Rideable yet.
+**Director's frame.** Narrate three stacked weathers: street-layer hover + crowds; hauler mass on the deck; VTOL and drones in the gaps. A **Lane-Hopper** is the everyday 4-seat POV (open plate on the table; closed variants exist). A **Bulldog** is a tires cargo van — not a hover. A stolen Getaway is a limiter hover even if the card says Domain Ground. A Flatbed is tires. A Tiltjet is the expensive bird. **Rideable (future):** top-down seats make passenger token slots obvious — do not implement Rideable yet.
 
 ## The Wired — The Overlay, the Deep Net, and the Thin Place
 

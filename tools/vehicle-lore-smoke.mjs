@@ -40,6 +40,7 @@ ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.69", `mo
 const l1 = read("docs/manuscript/01-lore/L1-setting-primer.md");
 ok(/## Vehicles & Transit/.test(l1), "L1 has Vehicles & Transit");
 ok(/Lane-Hopper/.test(l1), "L1 names Lane-Hopper as POV archetype");
+ok(/Bulldog/.test(l1), "L1 names Bulldog as street hauler");
 ok(/Rideable/.test(l1), "L1 Director note defers Rideable");
 ok(/Most vehicles in this world are \*\*electric\*\*/.test(l1), "L1: most vehicles are electric");
 ok(/light electric hovercraft/.test(l1) && /~25–50 feet/.test(l1), "L1: street POV hover + limiter");
@@ -86,6 +87,14 @@ ok(laneActor.prototypeToken?.texture?.src?.endsWith("lane-hopper.webp"), "Lane-H
 ok(laneActor.prototypeToken?.width === 2 && laneActor.prototypeToken?.height === 3, "Lane-Hopper token 2×3");
 ok(laneActor.system.movement.hover === true, "Lane-Hopper Actor hover");
 ok(existsSync("assets/tokens/vehicles/lane-hopper.png") && existsSync("assets/tokens/vehicles/lane-hopper.webp"), "Lane-Hopper png+webp on disk");
+const bulldog = readJson("src/packs/vehicles/ground/bulldog.json");
+ok(bulldog.system._dsid === "bulldog", "Bulldog Item dsid");
+ok(bulldog.flags["draw-steel-ghostwire"].vehicle.tags.includes("Ground-hauler"), "Bulldog tagged Ground-hauler");
+ok(bulldog.flags["draw-steel-ghostwire"].vehicle.domain === "Ground", "Bulldog Domain Ground");
+ok(!bulldog.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Bulldog is not Hover/POV");
+const bulldogActor = readJson("src/packs/summons/machines/bulldog.json");
+ok(bulldogActor.prototypeToken?.width === 2 && bulldogActor.prototypeToken?.height === 4, "Bulldog token 2×4");
+ok(bulldogActor.system.movement.hover === false, "Bulldog Actor does not hover");
 const flatbed = readJson("src/packs/vehicles/ground/flatbed.json");
 ok(flatbed.flags["draw-steel-ghostwire"].vehicle.tags.includes("Ground-hauler"), "Flatbed tagged Ground-hauler");
 const tiltjet = readJson("src/packs/vehicles/air/tiltjet.json");
@@ -96,6 +105,7 @@ ok(getaway.flags["draw-steel-ghostwire"].vehicle.tags.includes("Hover"), "Getawa
 const lang = readJson("lang/en.json");
 ok(/limiter ~25–50 ft/.test(lang.GHOSTWIRE.Vehicles.Items.Getaway.Description), "Getaway lang names limiter hover");
 ok(/four-seat street hovercar/.test(lang.GHOSTWIRE.Vehicles.Items.LaneHopper.Description), "Lane-Hopper lang is 4-seat hovercar");
+ok(/street cargo van/.test(lang.GHOSTWIRE.Vehicles.Items.Bulldog.Description), "Bulldog lang is cargo van");
 ok(/Rideable/.test(lang.GHOSTWIRE.Summons.Machines.LaneHopper.Description), "Lane-Hopper Actor notes future Rideable");
 ok(/Ground-hauler/.test(lang.GHOSTWIRE.Vehicles.Items.Flatbed.Description), "Flatbed lang tagged Ground-hauler");
 ok(/VTOL/.test(lang.GHOSTWIRE.Vehicles.Items.Tiltjet.Description), "Tiltjet lang tagged VTOL");

@@ -442,6 +442,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 |---|---|---|---|---|---|---|---|
 | Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | T5 | 5 | 250 | The disposable get-around. Low Handling, no mounts. | 1 |
 | Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | T5 | 5 | 500 | Everyday POV — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token. | 1 |
+| Bulldog / Heavy Hauler / street cargo van | Ground | Vehicle | T5 | 5 | 650 | Tires-on-deck cargo van — mass, not a hover POV. Placeholder art until Michael’s plate. | 1 |
 | Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | T4 | 4 | 1,000 | Fast, nimble; weaves through traffic and foot combat. Exposed rider. | 2 |
 | Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | T4 | 4 | 1,200 | The classic crew car — seats a full team, decent Handling, self-drive option. | 2 |
 | Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | T4 | 4 | 900 | Cargo + cover + mobile safehouse/rig-nest; the rigger's rolling workshop. | 2 |

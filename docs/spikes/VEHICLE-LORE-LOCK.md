@@ -36,6 +36,7 @@ Michael delivered a 4-seat open street hovercar plate. **Lane-Hopper** (`lane-ho
 - Open/closed cabins exist; this plate is the open table look
 - **Rideable:** future only — top-down seats make passenger slots obvious; do not implement now
 - Street POV family also includes hover bikes / choppers (SKU when plate lands)
+- **Bulldog** (`bulldog`): street cargo van, Ground-hauler, tires, E1 Street ¥650. Placeholder token art. Item + Actor (`2×4`)
 
 Domain still gates chase/wrecks. **Hover** tag = limiter-band POV (including many Ground-domain sedan/cab/bike SKUs). **Ground-hauler** = tires/treads/walker mass. **VTOL** = free-climb flying.
 

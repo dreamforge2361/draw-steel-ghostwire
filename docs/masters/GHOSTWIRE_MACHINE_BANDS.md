@@ -100,6 +100,7 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 | Vehicle | `clunker` | Clunker | Ground | Vehicle | 1 | `machine-vehicle-car` | slow | 40 | 8 walk |
 | Vehicle | `getaway` | Getaway | Ground | Vehicle | 1 | `machine-vehicle-car` | standard | 40 | 10 walk |
 | Vehicle | `lane-hopper` | Lane-Hopper | Ground | Vehicle | 1 | `machine-vehicle-car` | standard | 40 | 10 walk (hover) |
+| Vehicle | `bulldog` | Bulldog | Ground | Vehicle | 1 | `machine-vehicle-car` | slow | 40 | 8 walk |
 | Vehicle | `grey-cab` | Grey Cab | Ground | Vehicle | 2 | `machine-vehicle-car` | standard | 60 | 10 walk |
 | Vehicle | `hardtop` | Hardtop | Ground | Vehicle | 2 | `machine-vehicle-car` | standard | 60 | 10 walk |
 | Vehicle | `rustbucket` | Rustbucket | Ground | Vehicle | 1 | `machine-vehicle-car` | standard | 40 | 10 walk |
