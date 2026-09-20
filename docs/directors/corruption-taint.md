@@ -64,6 +64,8 @@ At **Taint 12**, pause. Redemption quest, retirement-as-NPC, or a last-run clock
 
 Open a hero or pregen sheet. **Taint** is a visible **0–12** number input in the **sheet header** and again on **Stats** under **Body Integrity**. The band chip updates live. Owner and GM edit; the flag is `flags.draw-steel-ghostwire.taint`. **Corruption History** is a free-text field on the **Biography** tab (`flags.draw-steel-ghostwire.corruptionHistory`) — fiction notes, not a second meter. Ghostwire does **not** auto-tick on rest, chrome, or zone entry this pass. Band gifts and costs are table rules — no Active Effects.
 
+**Director Taint +1 (0.3.58).** GM-only. Token controls biohazard (same strip as Wired Console / Run Generator), token HUD on a hero, or drag **Director: Taint +1** from **Ghostwire Macros** to the hotbar. Uses targeted tokens if any, otherwise the controlled/selected token. Heroes, or any actor that already has the Taint flag. Calls `incrementTaint(actor, 1)` — clamps 0–12, chat + notify with the new score and band, warns if already at 12. The **+1 per scene** cap stays a table call; the tool does not enforce it. API: `game.modules.get("draw-steel-ghostwire").api.directorTaintPlusOne()`.
+
 If the field and the fiction disagree, the table's last award wins; then set the field to match.
 
 ## Pointers

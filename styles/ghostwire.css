@@ -139,6 +139,25 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-taint.band-hollowed .ghostwire-taint-band,
 .ghostwire-taint-header.band-hollowed .ghostwire-taint-band { color: var(--color-level-error, #d33); font-weight: 700; }
 
+.ghostwire-taint-chat {
+  border-left: 3px solid var(--color-level-warning, #c90);
+  padding: 0.35rem 0.6rem;
+}
+.ghostwire-taint-chat.band-claimed,
+.ghostwire-taint-chat.band-hollowed,
+.ghostwire-taint-chat.is-max {
+  border-left-color: var(--color-level-error, #d33);
+}
+.ghostwire-taint-chat header {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: var(--font-size-12, 12px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ghostwire-taint-chat p { margin: 0.25rem 0 0; }
+
 /* Corruption History on the Biography tab (B80) */
 .ghostwire-corruption-history {
   margin-top: 0.75rem;

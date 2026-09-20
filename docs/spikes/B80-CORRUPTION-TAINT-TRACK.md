@@ -107,5 +107,6 @@ Full mutation catalog; Foundry automation of gain/cleanse/band Active Effects; r
 | RAW | `docs/raw/27-corruption-taint.md` |
 | Director | `docs/directors/corruption-taint.md` |
 | Sheet | `scripts/taint.mjs` — header + Stats Taint 0–12; Biography tab **Corruption History** (`flags.draw-steel-ghostwire.corruptionHistory`) |
+| Director +1 | `incrementTaint(actor, delta=1)` + GM Token-control / HUD / **Ghostwire Macros** `Director: Taint +1` (0.3.58). Clamps 0–12; per-scene cap is a table call |
 | Journal | `src/packs/rulebook/ghostwire-systems/27-corruption-taint.json` |
 | Flag | `flags.draw-steel-ghostwire.taint` |
