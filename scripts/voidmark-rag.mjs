@@ -129,6 +129,19 @@ const PLACE_PHRASES = [
   "ashenreach",
 ].sort((a, b) => b.length - a.length);
 
+/** Procedure / SKU phrases so “Wire Kit” / “Compile Agent” beat generic Wire chunks. */
+const LOCK_PHRASES = [
+  "compile agent",
+  "decompile agent",
+  "watchdog agent",
+  "watchdog ice",
+  "rigger's harness",
+  "rigger’s harness",
+  "wire kit",
+  "pack drones",
+  "pack vehicles",
+].sort((a, b) => b.length - a.length);
+
 const LOREISH = /lore|district|hive|gazetteer|who is|what is|where is|ossian|flats|reach handbook|street color/;
 
 export function tokenize(text) {
@@ -192,6 +205,8 @@ export function scoreChunk(chunk, query) {
   const fileTokens = new Set(tokenize(String(chunk.file ?? "").replace(/\.md$/i, "")));
   const hints = hintedFiles(query);
   const places = placePhrases(query);
+  const qLower = String(query ?? "").toLowerCase();
+  const locks = LOCK_PHRASES.filter(p => qLower.includes(p));
   const titleHay = sourceHay(chunk);
   const bodyHay = String(chunk.text ?? "").toLowerCase();
 
@@ -217,6 +232,11 @@ export function scoreChunk(chunk, query) {
   for (const place of places) {
     if (titleHay.includes(place)) score += 12;
     else if (bodyHay.includes(place)) score += 5;
+  }
+
+  for (const lock of locks) {
+    if (titleHay.includes(lock)) score += 12;
+    else if (bodyHay.includes(lock)) score += 8;
   }
 
   if (LOREISH.test(String(query ?? "").toLowerCase()) && (chunk.kind === "lore" || chunk.kind === "setting")) {
