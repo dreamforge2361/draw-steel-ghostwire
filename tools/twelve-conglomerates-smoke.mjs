@@ -71,7 +71,7 @@ ok(/Constructs Console \(Lock A\)/.test(wire), "21 Constructs Console lock");
 ok(/Meat tokens are not Wire eyes/.test(wire), "21 meat tokens are not Wire eyes");
 
 const veil = readFileSync("docs/raw/22-the-veil.md", "utf8");
-ok(/Pet Stamina \(LOCKED\)/.test(veil) && /extension spirits/.test(veil), "22 pet Stamina lock");
+ok(/Pet Stamina \(LOCKED\)/.test(veil) && /Extension spirits/.test(veil), "22 pet Stamina lock");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);
