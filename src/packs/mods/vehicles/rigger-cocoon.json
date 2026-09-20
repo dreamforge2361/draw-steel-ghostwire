@@ -47,9 +47,13 @@
         "tags": [
           "Wired"
         ],
-        "host": "vehicle",
+        "host": [
+          "vehicle",
+          "drone"
+        ],
         "hosts": [
-          "vehicle"
+          "vehicle",
+          "drone"
         ],
         "slotCost": 1,
         "craftSkill": [

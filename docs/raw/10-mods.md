@@ -3,7 +3,7 @@
 **RAW status:** draft (Stage 3 procedure fill / B75, 2026-09-19)  
 **Sources:** `docs/rulebook/14-mods.md` (Complete lock), `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`  
 **Print:** Chapter 12 (TOC lock)  
-**Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Armor and gadget families remain **unpublished** — do not invent SKUs here.
+**Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Wearable armor and gadget families remain **unpublished**. Vehicle/drone **Armor** and **Weaponry** each ship a 4-echelon ladder in §5F (Michael lock 2026-09-20).
 
 ---
 
@@ -13,7 +13,7 @@ Mods are the **object-side** upgrade layer. Kits train technique. Economy buys h
 
 A smartlinked Ghost-Kit pistol gets both the Kit’s doctrine *and* the mod’s effects — they never overwrite each other. This chapter tells the table **when** to spend a downtime slot on a mod, **how** to install or invent one, **which published families** exist, and how mods refuse to become chrome, Kits, or class power.
 
-It does **not** publish armor liners, gadget suites, or new SKU ladders. Point of record for published rows is the Gear master. Point of record for deck software play is The Wire (`21`).
+It does **not** publish wearable armor liners or gadget suites. Vehicle/drone Armor and Weaponry ladders are harvested from Gear master **§5F**. Point of record for published rows is the Gear master. Point of record for deck software play is The Wire (`21`).
 
 ---
 
@@ -64,9 +64,9 @@ If an item publishes **modSlots > 0**, a **published mod family** must exist for
 | Host family | Status | Notes |
 |---|---|---|
 | **Weapons** | **Published** | Core set in Gear master **§3G** (harvested below) |
-| **Armor / shields** | **Not yet published** | Do not invent liners, weaves, or plate kits |
+| **Armor / shields** | **Not yet published** *(wearable)* | Do not invent liners, weaves, or plate kits for worn armor |
 | **Gadgets** | **Not yet published** | Comms, sensors, B&E, survival — no family yet |
-| **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below) |
+| **Vehicles / drones** | **Published** | Gear master **§5F** (harvested below). Hosts: `vehicle` and `drone` |
 | **Decks / RCCs** | **Published** (software) | Slots filled by **suites / autosofts** and **payload magazines** from the Matrix catalog (Gear master Category 4); install skill = **Hacking**. Play rules: `21` |
 
 A gadget you bought from Category 1 is still a **host** only if a published family exists for it. Today it does not. You can carry the comm; you cannot legally slot a custom firmware row this chapter does not print.
@@ -177,7 +177,8 @@ These three systems sit next to each other on purpose. They collide only when so
 - Kit doctrine (damage by Power Roll band, distance, speed, stability, signature) is **character power**. ¥ never buys it (`08`).
 - Mods add **object** tags and edges (Quiet, Smart, a mount, a magazine).
 - A Ghost-Kit runner with a Smartlink and a Suppressor has **both** the Ghost ranged doctrine **and** those tags. Neither line overwrites the other.
-- Armor-as-Stamina and Kit Stamina still **do not double-count** (`08`). A mod cannot sneak a second Stamina bonus onto the vest.
+- Armor-as-Stamina and Kit Stamina still **do not double-count** (`08`). A wearable-armor mod cannot sneak a second Stamina bonus onto the vest.
+- **Machine armor is different:** vehicle/drone armor kits grant Stamina (Integrity) on the machine Actor. Machines have no Kit Stamina and no armor rating. One armor kit at a time.
 
 ### Mods vs chrome
 
@@ -204,7 +205,7 @@ Deck **suites** and **payload magazines** occupy the same **mod slots** on a dec
 
 ## Published mod families
 
-Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md`. Rows below are **harvested**, not invented. Armor + gadget families are omitted on purpose.
+Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md`. Rows below are **harvested**, not invented. Wearable armor + gadget families are omitted on purpose.
 
 ### Weapon mods — Gear master §3G
 
@@ -223,29 +224,51 @@ Bench skill: **Repair** for physical weapon mods, **Electronics** for Wired / sm
 
 ### Vehicle / drone mods — Gear master §5F
 
-Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repair** or **Electronics** as the tags imply (Wired rows lean Electronics). Mounted weapons themselves come from Category 3 — the Gun Rack is the hardpoint, not the gun.
+Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repair** or **Electronics** as the tags imply (Wired rows lean Electronics). Hosts: **vehicle** and **drone**.
+
+**Doctrine (Michael 2026-09-20):** Ghostwire machines have **no armor rating / DR**. Armor kits work like hero armor: they grant **Stamina** (Integrity) on the machine. **One armor kit** and **one weaponry kit** installed at a time (echelon ladders). Ammo Bin stacks with a weaponry kit. Mounted Category-3 weapons need a weaponry kit (or a factory mount); fire them with **Gunnery**.
+
+#### Armor kits (one at a time)
 
 | Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
 |---|---|---|---|---|
-| Gun Rack / Weapon Mount / hardpoint assembly | Professional | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. | Mount |
-| Plate-Up / Armor Upgrade / composite up-armor kit | Restricted | 3,000 | Raises the machine's Armor (damage reduction); costs Handling. | — |
+| Scrap-Weld / Street Plate / jury-rigged plating | Street | 400 | +6 Stamina (Integrity) on the machine. | Armor |
+| Plate-Up / Armor Upgrade / composite up-armor kit | Restricted | 3,000 | +12 Stamina (Integrity) on the machine. Does not cost Handling. | Armor |
+| Combat Plate / Milspec Hull / ballistic vehicle armor | Military | 8,000 | +18 Stamina (Integrity) on the machine. | Armor |
+| Aegis Kit / Prototype Armor / reactive composite hull | Prototype | 22,000 | +27 Stamina (Integrity) on the machine. | Armor |
+
+#### Weaponry kits (one at a time)
+
+| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
+|---|---|---|---|---|
+| Gun Rack / Weapon Mount / hardpoint assembly | Professional | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. E1 of the ladder. | Mount, Weaponry |
+| Twin Mount / Dual Hardpoint / paired weapon rails | Restricted | 2,500 | Two light hardpoints or one dual-feed mount (scale-appropriate Category-3); fired with Gunnery. | Mount, Weaponry |
+| Turret Ring / Combat Turret / powered traverse mount | Military | 9,000 | Powered turret for a medium vehicle weapon (scale-appropriate); fired with Gunnery; wide firing arc. | Mount, Weaponry |
+| Heavy Hardpoint / Integrated Battery / heavy weapons package | Prototype | 24,000 | Heavy integrated gun package (scale-appropriate); fired with Gunnery. | Mount, Weaponry |
+
+#### Other
+
+| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
+|---|---|---|---|---|
 | Tune Kit / Handling Package / suspension-&-control upgrade | Restricted | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |
 | Sensor Pod / Recon Suite / multi-spectral sensor array | Restricted | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |
 | Ghost Coat / Stealth Skin / low-observable coating | Military | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |
 | Runflats / Self-Seal Kit / autonomous-repair weave | Restricted | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |
 | Rigger Cocoon / Control Interface / Jump-In coupling | Military | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |
-| Ammo Bin / Rearm System / autonomous munitions feed | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. | — |
+| Ammo Bin / Rearm System / autonomous munitions feed | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
 
-Availability feel follows the Gear master’s legacy tier on each row (T4 Professional through T2 Military). Do not invent a second price.
+**Foundry apply vs Director table calls.** Armor kits **do** raise the Deployed machine’s Stamina (Integrity) in Foundry. Weaponry kits **do** flag a live Gunnery hardpoint on that Actor (`installedKits.weaponry`); firing is still Gunnery / Rigged Fire / a gunner station at the table. Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, and Ammo Bin are **flagged and shown as Active Effects** on the machine, but Foundry does **not** auto-add those edges, banes, Jump-In cleanliness, or reload math to Power Rolls — the Director applies the catalog line when the roll or scene calls for it.
+
+Availability feel follows the Gear master’s legacy tier on each row. Do not invent a second price.
 
 ### Programs and payloads (pointer)
 
 - **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
 - **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
 
-### Armor + gadget families
+### Wearable armor + gadget families
 
-**Not yet published.** Slot integrity says: no family → **0** slots in play. Invent a Mod may produce a *personal* unique for a named host if it passes the firewall and echelon gate — that is not a catalog, and it does not unlock orphan armor slots for the whole table.
+**Not yet published** (worn vests, liners, gadgets). Vehicle/drone **Armor** and **Weaponry** ladders above **are** published. Slot integrity says: no family → **0** slots in play for unpublished hosts. Invent a Mod may produce a *personal* unique for a named host if it passes the firewall and echelon gate — that is not a catalog, and it does not unlock orphan wearable-armor slots for the whole table.
 
 ---
 
@@ -280,13 +303,15 @@ Advancement never auto-installs mods when a new echelon raises Kit Stamina (`24`
 ---
 
 > **In Foundry**
-> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In — Linked refuses). Do not invent extra menus.
+> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots, one armor kit / one weaponry kit at a time on a machine). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot.
+>
+> **Deploy the drone or vehicle first** (Item header **Deploy**, or right-click the host row). Then install. An installed, **active** armor kit writes Integrity on the **Deployed** machine Actor the same way hero armor does: stored chassis max + Active Effect `system.stamina.bonuses.treasure` (upgrade). Current Stamina rises by the bonus on install; toggle-off or uninstall drops the AE and clamps current Stamina to chassis. Weaponry kits stamp `flags.draw-steel-ghostwire.installedKits.weaponry` (hardpoints, Gunnery) plus a sheet AE. Tune Kit / Sensor Pod / Ghost Coat / Runflats / Rigger Cocoon / Ammo Bin stamp flags + a sheet AE; the **Director applies those edges/banes/convenience at the table** — Foundry does not auto-modify Piloting/Rigging/Gunnery Power Rolls for them. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In — Linked refuses). Do not invent extra menus.
 
 ---
 
 ## What this chapter is not
 
-- Not an armor-mod or gadget-mod catalog.
+- Not a **wearable** armor-mod or gadget-mod catalog (vehicle/drone Armor + Weaponry ladders are §5F).
 - Not a second chrome chapter (no Integrity, no implant ¥).
 - Not a second Kit chapter (no doctrine lines).
 - Not a reprint of Matrix Verbs or payload Effects (`21`).

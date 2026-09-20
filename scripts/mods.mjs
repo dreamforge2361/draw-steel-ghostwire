@@ -72,7 +72,7 @@ export function softwareEdges(actor, abilityDsid) {
   return actor.items.filter(item => (getModData(item)?.edgeAbilities ?? []).includes(abilityDsid) && isRunning(item)).length;
 }
 
-/** @returns {{ ok: boolean, reason?: string }} reason is a GHOSTWIRE.Mods.Install.Blocked.* key. */
+/** @returns {{ ok: boolean, reason?: string, extra?: object }} reason is a GHOSTWIRE.Mods.Install.Blocked.* key. */
 export function canInstall(mod, host) {
   if (!getModData(mod)) return { ok: false, reason: "NotMod" };
   const catalog = getHostCatalog(host);
@@ -81,13 +81,31 @@ export function canInstall(mod, host) {
   if (installedHost(mod)) return { ok: false, reason: "AlreadyInstalled" };
   if (!normalizeHosts(mod).some(family => catalog.modFamily.includes(family))) return { ok: false, reason: "WrongFamily" };
   if (usedSlots(host) + slotCost(mod) > catalog.modSlots) return { ok: false, reason: "NoSlots" };
+  const exclusiveKit = getModData(mod)?.exclusiveKit;
+  if (exclusiveKit) {
+    const clash = installedMods(host).find(other => other.id !== mod.id && getModData(other)?.exclusiveKit === exclusiveKit);
+    if (clash) {
+      return {
+        ok: false, reason: "ExclusiveKit",
+        extra: { other: clash.name, kit: game.i18n.localize(`${L}.Kit.${exclusiveKit}`) },
+      };
+    }
+  }
   return { ok: true };
 }
 
-const blocked = (reason, mod, host) => ui.notifications.warn(game.i18n.format(`${L}.Blocked.${reason}`, {
+const blocked = (reason, mod, host, extra = {}) => ui.notifications.warn(game.i18n.format(`${L}.Blocked.${reason}`, {
   mod: mod?.name ?? "", host: host?.name ?? "", cost: slotCost(mod), free: host ? freeSlots(host) : 0,
   families: normalizeHosts(mod).join(", "), hostFamilies: (getHostCatalog(host)?.modFamily ?? []).join(", "),
+  other: "", kit: "", ...extra,
 }));
+
+/** Apply installed vehicle/drone mods onto a deployed machine Actor (Stamina, kit flags, AEs). */
+async function restampHostMachine(host) {
+  if (!host) return;
+  const { machineBand, syncMachineMods } = await import("./machines.mjs");
+  if (machineBand(host)) await syncMachineMods(host);
+}
 
 /**
  * Install a mod onto a host on the same Actor.
@@ -97,7 +115,7 @@ const blocked = (reason, mod, host) => ui.notifications.warn(game.i18n.format(`$
 export async function installMod(mod, host, changes = {}) {
   const check = canInstall(mod, host);
   if (!check.ok) {
-    blocked(check.reason, mod, host);
+    blocked(check.reason, mod, host, check.extra);
     return false;
   }
   const ids = installedMods(host).map(m => m.id);
@@ -105,6 +123,7 @@ export async function installMod(mod, host, changes = {}) {
     { _id: host.id, [`flags.${MODULE_ID}.installedMods`]: [...ids, mod.id] },
     { ...changes, _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: host.id, [`flags.${MODULE_ID}.mod.active`]: true },
   ]);
+  await restampHostMachine(host);
   ui.notifications.info(game.i18n.format(`${L}.Installed`, { mod: mod.name, host: host.name, used: usedSlots(host), slots: getHostCatalog(host).modSlots }));
   return true;
 }
@@ -122,6 +141,7 @@ export async function uninstallMod(mod, operation = {}) {
   if (host) updates.push({ _id: host.id, [`flags.${MODULE_ID}.installedMods`]: installedMods(host).map(m => m.id).filter(id => id !== mod.id) });
   updates.push({ _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: null });
   await actor.updateEmbeddedDocuments("Item", updates, operation);
+  await restampHostMachine(host);
   ui.notifications.info(game.i18n.format(`${L}.Uninstalled`, { mod: mod.name, host: host?.name ?? "—" }));
 }
 
@@ -130,6 +150,7 @@ export async function setModActive(mod, active) {
   const host = installedHost(mod);
   if (!host) return blocked("NotInstalled", mod);
   await mod.update({ [`flags.${MODULE_ID}.mod.active`]: !!active });
+  await restampHostMachine(host);
   ui.notifications.info(game.i18n.format(`${L}.${active ? "Activated" : "Deactivated"}`, { mod: mod.name, host: host.name }));
 }
 
@@ -141,13 +162,16 @@ async function promptInstall(mod) {
     .map(host => ({ host, check: canInstall(mod, host) }))
     .sort((a, b) => (b.check.ok - a.check.ok) || a.host.name.localeCompare(b.host.name));
   if (!hosts.some(h => h.check.ok)) {
+    const clash = hosts.find(h => h.check.reason === "ExclusiveKit");
+    if (clash) return blocked("ExclusiveKit", mod, clash.host, clash.check.extra);
     const reason = hosts.some(h => h.check.reason === "NoSlots") ? "NoSlots" : (hosts.length ? "NoFamilyHost" : "NoHosts");
     return blocked(reason, mod, hosts.find(h => h.check.reason === "NoSlots")?.host);
   }
   const escape = foundry.utils.escapeHTML;
   const options = hosts.map(({ host, check }, index) => {
     const { modSlots, modFamily } = getHostCatalog(host);
-    const note = check.ok ? "" : ` — ${game.i18n.localize(`${L}.Short.${check.reason}`)}`;
+    const extra = check.extra ?? {};
+    const note = check.ok ? "" : ` — ${game.i18n.format(`${L}.Short.${check.reason}`, extra)}`;
     return `<option value="${host.id}"${index === 0 ? " selected" : ""}${check.ok ? "" : " disabled"}>${escape(host.name)} (${escape(modFamily.join(", "))}; ${usedSlots(host)} / ${modSlots})${note}</option>`;
   });
   const hostId = await foundry.applications.api.DialogV2.prompt({
@@ -183,6 +207,8 @@ function patchSoftwareSuppression() {
     configurable: true,
     get() {
       if (this.getFlag?.(MODULE_ID, "software") && (this.parent instanceof Item) && !isRunning(this.parent)) return true;
+      // Machine-armor AEs on the mod Item must not raise the hero's Stamina; Integrity is stamped on the deployed Actor.
+      if (this.getFlag?.(MODULE_ID, "machineArmor") && (this.parent instanceof Item)) return true;
       return descriptor.get.call(this);
     },
   });
@@ -257,8 +283,8 @@ export function registerMods() {
     anchor.after(line);
   });
 
-  // Deleting an installed mod frees its host's list entry; deleting a host uninstalls its mods.
-  Hooks.on("deleteItem", (item, options, userId) => {
+  // Deleting an installed mod frees its host's list entry and restamps a deployed machine; deleting a host uninstalls its mods.
+  Hooks.on("deleteItem", async (item, options, userId) => {
     const actor = item.parent;
     if ((userId !== game.user.id) || !(actor instanceof Actor)) return;
     const updates = [];
@@ -270,7 +296,8 @@ export function registerMods() {
         updates.push({ _id: mod.id, [`flags.${MODULE_ID}.mod.installedOn`]: null });
       }
     }
-    if (updates.length) actor.updateEmbeddedDocuments("Item", updates);
+    if (updates.length) await actor.updateEmbeddedDocuments("Item", updates);
+    if (host) await restampHostMachine(host);
   });
 
   const module = game.modules.get(MODULE_ID);

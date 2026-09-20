@@ -177,10 +177,10 @@ Every drone is a **device** with a compact stat block. Drones sit at **Scale: Pe
 |---|---|
 | **Name / Chassis type** | e.g. recon quadrotor, kamikaze microdrone, taser-bee, spotter-drone, autogun turret-drone |
 | **Scale** | Personal or Light (drones are never Vehicle-scale or above; a Vehicle-scale combat drone is handled on the Vehicle stat card, below) |
-| **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. |
+| **Integrity** | Its Stamina-equivalent damage track. 0 Integrity = wrecked. An armor kit (§5F) adds Stamina. |
 | **Handling** | Reflex rating; edge/bane or die-step on the controlling Wrench's Rigging rolls for this drone. |
 | **Speed** | Movement in squares or Speed bands. |
-| **Armor** | Flat damage reduction, if any (most small drones have 0–1). |
+| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |
 | **Control Mode** | Autonomous (acts on programmed behavior on your turn, no roll needed) / Commanded (acts on your turn per your Command signature) / Jumped-In (you pilot it directly — see Jump-In plumbing, below; rare for drones, common for the Vehicle Rig-Pilot's platform). |
 | **Weapon / Payload** | What it shoots or carries — light gun, taser charge, breaching charge, sensor package, cargo hook. |
 | **Upgrade Slots** | See below. |
@@ -220,10 +220,10 @@ The Vehicle Rig-Pilot's platform — and any vehicle a Wrench of any subclass bu
 |---|---|
 | **Name / Frame type** | e.g. armored hauler, hover-gunship, spider-tank, mech-frame |
 | **Scale** | Light / Vehicle / Heavy / Capital (see above) |
-| **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). |
+| **Integrity** | Damage track. 0 Integrity = wrecked (domain-appropriate catastrophe — crash, downing, flooding, depressurization). An armor kit (§5F) adds Stamina. |
 | **Handling** | Edge/bane or die-step on the pilot's Rigging/Reflex roll to drive or maneuver it. |
 | **Speed** | Movement in Speed bands (positional mode) or range-state band on the abstract chase track (see Chase Modes, below). |
-| **Armor** | Flat damage reduction; stacks with Scale defensively. |
+| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina bonus. One kit at a time. |
 | **Crew / Stations** | How many stations, of what type (see Crew Stations, below). |
 | **Mounts / Hardpoints** | Weapon and mod slots — see Upgrade Slots, below. |
 | **Domain** | Ground / Air / Space / Water. |

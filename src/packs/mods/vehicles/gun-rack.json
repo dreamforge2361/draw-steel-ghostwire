@@ -45,16 +45,22 @@
         "price": 800,
         "modSlots": 0,
         "tags": [
-          "Mount"
+          "Mount",
+          "Weaponry"
         ],
-        "host": "vehicle",
+        "host": [
+          "vehicle",
+          "drone"
+        ],
         "hosts": [
-          "vehicle"
+          "vehicle",
+          "drone"
         ],
         "slotCost": 1,
         "craftSkill": [
           "repair"
-        ]
+        ],
+        "exclusiveKit": "weaponry"
       }
     }
   }

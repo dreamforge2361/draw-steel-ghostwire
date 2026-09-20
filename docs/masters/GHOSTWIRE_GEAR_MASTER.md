@@ -505,18 +505,36 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 ### 5F — Vehicle & Drone Mods
 
-*Every entry is a §Craft-gated mod (downtime Project; skill = **Repair** / **Electronics** as appropriate) occupying the machine's §F6 mod slots. Mounted weapons themselves come from Category 3.*
+*Every entry is a §Craft-gated mod (downtime Project; skill = **Repair** / **Electronics** as appropriate) occupying the machine's mod slots. Hosts: **vehicle** and **drone**. Ghostwire machines have **no armor rating / damage reduction** — armor kits grant **Stamina** (Integrity) like hero armor. **One armor kit** and **one weaponry kit** at a time (ladders, not stacks). Ammo Bin stacks with a weaponry kit. Mounted weapons themselves come from Category 3 unless the weaponry SKU is an integrated package.*
+
+#### Armor kits (one at a time) — Stamina, not DR
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
 |---|---|---|---|---|---|
-| Gun Rack / Weapon Mount / hardpoint assembly | T4 | 4 | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. | Mount |
-| Plate-Up / Armor Upgrade / composite up-armor kit | T3 | 3 | 3,000 | Raises the machine's Armor (damage reduction); costs Handling. | — |
+| Scrap-Weld / Street Plate / jury-rigged plating | T5 | 5 | 400 | +6 Stamina (Integrity) on the machine. | Armor |
+| Plate-Up / Armor Upgrade / composite up-armor kit | T3 | 3 | 3,000 | +12 Stamina (Integrity) on the machine. Does not cost Handling. | Armor |
+| Combat Plate / Milspec Hull / ballistic vehicle armor | T2 | 2 | 8,000 | +18 Stamina (Integrity) on the machine. | Armor |
+| Aegis Kit / Prototype Armor / reactive composite hull | T1 | 1 | 22,000 | +27 Stamina (Integrity) on the machine. | Armor |
+
+#### Weaponry kits (one at a time) — Gunnery to fire
+
+| Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
+|---|---|---|---|---|---|
+| Gun Rack / Weapon Mount / hardpoint assembly | T4 | 4 | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. E1 of the ladder. | Mount, Weaponry |
+| Twin Mount / Dual Hardpoint / paired weapon rails | T3 | 3 | 2,500 | Two light hardpoints or one dual-feed mount (scale-appropriate Category-3); fired with Gunnery. | Mount, Weaponry |
+| Turret Ring / Combat Turret / powered traverse mount | T2 | 2 | 9,000 | Powered turret for a medium vehicle weapon (scale-appropriate); fired with Gunnery; wide firing arc. | Mount, Weaponry |
+| Heavy Hardpoint / Integrated Battery / heavy weapons package | T1 | 1 | 24,000 | Heavy integrated gun package (scale-appropriate); fired with Gunnery. | Mount, Weaponry |
+
+#### Other vehicle / drone mods
+
+| Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
+|---|---|---|---|---|---|
 | Tune Kit / Handling Package / suspension-&-control upgrade | T3 | 3 | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |
 | Sensor Pod / Recon Suite / multi-spectral sensor array | T3 | 3 | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |
 | Ghost Coat / Stealth Skin / low-observable coating | T2 | 2 | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |
 | Runflats / Self-Seal Kit / autonomous-repair weave | T3 | 3 | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |
 | Rigger Cocoon / Control Interface / Jump-In coupling | T2 | 2 | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |
-| Ammo Bin / Rearm System / autonomous munitions feed | T3 | 3 | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. | — |
+| Ammo Bin / Rearm System / autonomous munitions feed | T3 | 3 | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
 
 ---
 

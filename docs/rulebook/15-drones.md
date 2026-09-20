@@ -97,7 +97,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 
 ## 5. Full drone inventory
 
-**Reading the tables:** slang / corp / sci names are **Ghostwire-original**. Prices climb with Availability + Echelon. Concrete Integrity / Speed / Armor numbers deferred to the shared Machines numeric pass — profiles stay qualitative here. Mounted weapons come from Category 3; installs are §Craft Projects (`14-mods.md`).
+**Reading the tables:** slang / corp / sci names are **Ghostwire-original**. Prices climb with Availability + Echelon. Concrete Integrity / Speed numbers deferred to the shared Machines numeric pass — profiles stay qualitative here. Armor kits add Stamina (Integrity); machines have no armor rating / DR. Mounted weapons come from Category 3 or a Weaponry kit; installs are §Craft Projects (`14-mods.md`).
 
 ### Echelon shopping guidance
 
@@ -219,7 +219,7 @@ Drones use a short **Integrity** track (Machines numeric pass will publish numbe
 
 ## 7. Modding
 
-- Published **vehicle/drone mods** live in Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
+- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time. Armor kits grant Stamina (Integrity); machines have no armor rating / DR.
 - Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (`14-mods.md`).
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.
@@ -233,7 +233,7 @@ Drones use a short **Integrity** track (Machines numeric pass will publish numbe
 2. **Non-Wrench weapon lock:** soft mounts only (proposed) vs “any mount but always with bane + 1-drone cap”?
 3. **Companion link duration:** one scene (proposed) vs Integrity-buffer burn rate vs RCC Remote Box always-on while powered?
 4. **Overheat:** leave deferred (Uptime drain only) or schedule a thin Overheat rule when Hydra / War Table is in play?
-5. **Numeric pass:** Integrity / Speed / Armor / Handling per chassis — share with Vehicles chapter or ship a drone-only interim card?
+5. **Numeric pass:** Integrity / Speed / Handling per chassis — share with Vehicles chapter or ship a drone-only interim card? Armor is a Stamina kit, not a chassis rating.
 6. **Core Sourcebook PDF remount:** re-run pymupdf harvest when Dropbox path is on-box; fold any still-canon prose into `_drone_lore_extract.md`.
 7. **Clunker Unreliable pacing:** once-per-scene Director cue (current) vs a fixed bane always-on while Clunker-tagged?
 

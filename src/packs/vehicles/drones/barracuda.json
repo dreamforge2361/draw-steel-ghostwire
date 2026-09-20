@@ -50,7 +50,8 @@
           "Wired"
         ],
         "modFamily": [
-          "vehicle"
+          "vehicle",
+          "drone"
         ],
         "domain": "Water (drone)",
         "scale": "Light",
