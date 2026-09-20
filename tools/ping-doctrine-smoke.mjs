@@ -48,6 +48,7 @@ ok(/not a Ping nudge/i.test(rw.Effect), "Read/Write.Effect contrasts Ping");
 
 const wire = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/### Ping vs Read\/Write/.test(wire), "RAW 21 has Ping vs Read/Write");
+ok(/### Ping vs ICE/.test(wire), "RAW 21 has Ping vs ICE heading");
 ok(/\*\*not\*\* unlock for entry/.test(wire), "RAW 21: Ping does not unlock maglock");
 ok(/\*\*not\*\* lasting cam-off/.test(wire), "RAW 21: Ping is not lasting cam-off");
 ok(/Ping vs ICE/.test(wire), "RAW 21 has Ping vs ICE");

@@ -71,7 +71,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1320,
+  "chunkCount": 1321,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -5084,10 +5084,19 @@
       "chapter": "The Wire",
       "heading": "Ping vs Read/Write",
       "kind": "rules",
-      "text": "**Ping** is the lightest “touch this system” Matrix Verb — a nudge, not a deep hack. Use it when you want a simple Track 1 thing within Reach to do one small thing, without a Program or a full Read/Write:\n\n- Flick the hallway lights off (or on) — lights are the classic Ping.\n- Tap a maglock to see if it’s live / soft jolt (**not** unlock for entry — that’s **Read/Write**).\n- Test whether a camera or door bus answers / brief glitch (**not** lasting cam-off — that’s **Read/Write**).\n- Trigger a trivial system response (“does this socket wake up?”).\n- **Not ICE.** Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nLogic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.\n\n**Ping vs ICE.** Trying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system.\n\n**Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.\n\nPing is **not** the Director Console Wire ping/spoof (B106)."
+      "text": "**Ping** is the lightest “touch this system” Matrix Verb — a nudge, not a deep hack. Use it when you want a simple Track 1 thing within Reach to do one small thing, without a Program or a full Read/Write:\n\n- Flick the hallway lights off (or on) — lights are the classic Ping.\n- Tap a maglock to see if it’s live / soft jolt (**not** unlock for entry — that’s **Read/Write**).\n- Test whether a camera or door bus answers / brief glitch (**not** lasting cam-off — that’s **Read/Write**).\n- Trigger a trivial system response (“does this socket wake up?”).\n- **Not ICE.** Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nLogic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.\n\n**Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.\n\nPing is **not** the Director Console Wire ping/spoof (B106)."
     },
     {
-      "id": "21-the-wire#wire-atlas-topology#20",
+      "id": "21-the-wire#ping-vs-ice#20",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Ping vs ICE",
+      "kind": "rules",
+      "text": "Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nTrying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system."
+    },
+    {
+      "id": "21-the-wire#wire-atlas-topology#21",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5096,7 +5105,7 @@
       "text": "Device tokens answer **what is this socket**. Atlas tokens answer **where am I on the Wire map**. Directors place atlas tokens by hand. Room-scale auto-nodes (lights, maglocks) never appear on a district or facility graph."
     },
     {
-      "id": "21-the-wire#three-altitudes#21",
+      "id": "21-the-wire#three-altitudes#22",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5105,7 +5114,7 @@
       "text": "| Altitude | Scene example | Token family |\n|---|---|---|\n| **Region / district graph** | Switchboard district map | **Relay**, **Host** |\n| **Site / facility graph** | Power Company Wire scene | **Segment** (+ **Host** as the site root) |\n| **Room / device graph** | Office, Gold Line car, maintenance room | **Device** (existing library: Light, Maglock, Cam, ICE, …) |\n\nGhostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do not call a Host a “server farm” in player text."
     },
     {
-      "id": "21-the-wire#reach-is-hops-on-the-current-scene#22",
+      "id": "21-the-wire#reach-is-hops-on-the-current-scene#23",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5114,7 +5123,7 @@
       "text": "**Scan** and **Navigate** **Reach** is a number of **node-hops on the graph of the Scene you are on**, not the whole district and not Ossian Reach the campaign region. When the crew changes altitude (district → facility → room), Reach recounts from the new graph. A runner with Reach 2 on the Switchboard district map can hop two Relays/Hosts; they cannot see the Power Co substation or a maintenance-room maglock until that scene is loaded."
     },
     {
-      "id": "21-the-wire#relay-vs-host-vs-segment#23",
+      "id": "21-the-wire#relay-vs-host-vs-segment#24",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5123,7 +5132,7 @@
       "text": "| Token | Role | Rules hook |\n|---|---|---|\n| **Relay** | Major Wired highway / backbone traffic — a **path**, not a place | Navigate along it. Trace can travel fast on a Relay. Usually **not** Seize-for-loot. Node Rating is optional (traffic density). Track 1 unless something is hunting the backbone. |\n| **Host** | Destination place (corp, civic, street). Faction is name and color, not a new token type. | May have Node Rating, ICE, Watchdog. Entering a Host **may change scene** (load the facility graph). |\n| **Segment** | Child of a Host (substation, wing, server hall) | Same mechanical class as Host, nested. **Name includes the parent** (`Power Co — North Substation`). |\n| **Endpoint** *(optional v1.1)* | Dig-down leaf that opens a meatspace room | Not a fourth mechanical class. Until its own art exists, reuse Host with a depth pip. |\n| **Device** | Room socket: Light, Maglock, Cam, ICE, … | **Room-only.** Never place device tokens on a region graph. |"
     },
     {
-      "id": "21-the-wire#dig-down-procedure#24",
+      "id": "21-the-wire#dig-down-procedure#25",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5132,7 +5141,7 @@
       "text": "1. **District scene:** place **Relays** and **Hosts** only.\n2. **Enter Host** (Navigate, Seize, or story) → load the **facility** scene; place **Segments**. The Host may remain as the site root.\n3. **Enter Segment** (or Endpoint) → load the **room** scene; place **Device** tokens. Auto-nodes from named lights and doors belong here.\n4. Auto-nodes stay **room-scale only**. Atlas tokens are Director-placed (a Console picker is later)."
     },
     {
-      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#25",
+      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#26",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5141,7 +5150,7 @@
       "text": "**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.\n\n**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.\n\n**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.\n\n> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Art is drop-in; placeholders ship until Michael tokens land. Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`."
     },
     {
-      "id": "21-the-wire#connection-state-modifiers-summary#26",
+      "id": "21-the-wire#connection-state-modifiers-summary#27",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5150,7 +5159,7 @@
       "text": "**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.\n\n| State | Wired abilities (Wired keyword) | Real-world abilities and tests |\n|---|---|---|\n| Disconnected | Only **Connect** can be used | Normal |\n| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs or payload Runs | Normal |\n| Overlay | Normal (full Connected) | **Bane** |\n| Jacked In | **Edge** | Can’t be used (body inert) |\n\n- **Connect** works only while Disconnected (plus a Wire interface) and puts you in **Linked** on any result.\n- **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.\n- **Jack Out** (any on-net state) returns you to Disconnected.\n- **Broadcast** works from any on-net state, including Linked.\n- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs require Overlay or Jacked In.\n- Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.\n\n**Anyone vs Hacker.** Any hero with a commlink or cyberdeck can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs."
     },
     {
-      "id": "21-the-wire#deck-software-suites-vs-payloads#27",
+      "id": "21-the-wire#deck-software-suites-vs-payloads#28",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5159,7 +5168,7 @@
       "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
     },
     {
-      "id": "21-the-wire#suites#28",
+      "id": "21-the-wire#suites#29",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5168,7 +5177,7 @@
       "text": "A suite is installed into a free slot as a downtime **Craft (Hacking)** Project and stays there until you swap it out. An installed suite can be switched on or off in the field (the field toggle); it keeps its slot either way. Suites give edges to Matrix Verbs and standing benefits. They have no attack of their own."
     },
     {
-      "id": "21-the-wire#payloads-magazines#29",
+      "id": "21-the-wire#payloads-magazines#30",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5177,7 +5186,7 @@
       "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free **host slot** as a magazine:\n\n- **Cyberdeck.** One free deck slot, shared with suites.\n- **Technomancer (no deck).** Compile onto **Wired Native** — Resonance / body-as-interface. The class feature is a 2-slot `resonance` / `body` host. Do not auto-grant any payload; compiling is still a Craft Project (Sabbat Vane’s playtest Whiteout×2 is a pregen loadout, not a class grant).\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |"
     },
     {
-      "id": "21-the-wire#payloads-magazines#30",
+      "id": "21-the-wire#payloads-magazines#31",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5186,7 +5195,7 @@
       "text": "**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.\n\n> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`."
     },
     {
-      "id": "21-the-wire#payloads-magazines#31",
+      "id": "21-the-wire#payloads-magazines#32",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5195,7 +5204,7 @@
       "text": "**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant."
     },
     {
-      "id": "21-the-wire#director-tools#32",
+      "id": "21-the-wire#director-tools#33",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5204,7 +5213,7 @@
       "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
     },
     {
-      "id": "21-the-wire#voidmark-wired-presence#33",
+      "id": "21-the-wire#voidmark-wired-presence#34",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",

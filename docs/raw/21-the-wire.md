@@ -157,11 +157,15 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a commlink or c
 
 Logic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.
 
-**Ping vs ICE.** Trying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system.
-
 **Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.
 
 Ping is **not** the Director Console Wire ping/spoof (B106).
+
+### Ping vs ICE
+
+Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.
+
+Trying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system.
 
 ## Wire Atlas / topology
 

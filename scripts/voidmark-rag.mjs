@@ -33,6 +33,7 @@ const SYNONYMS = {
   stamina: ["stamina", "combat", "recovery", "crisis"],
   trace: ["trace", "alert", "ice", "wired"],
   ice: ["ice", "wired", "node", "biofeedback"],
+  ping: ["ping", "nudge", "verb"],
   biofeedback: ["biofeedback", "wired", "jacked", "overlay"],
   switchboard: ["switchboard", "cassavir", "fixer"],
   cassavir: ["cassavir", "switchboard", "mama"],
@@ -50,7 +51,7 @@ const SYNONYMS = {
 };
 
 const FILE_HINTS = [
-  { re: /wire|wired|matrix|overlay|jack|linked|connect|node|ice|trace|biofeedback|deck|persona|payload|suite/, file: "21-the-wire" },
+  { re: /wire|wired|matrix|overlay|jack|linked|connect|node|ice|trace|biofeedback|deck|persona|payload|suite|\bping\b/, file: "21-the-wire" },
   { re: /combat|fight|round|stamina|recovery|crisis|strike|fire|maneuver/, file: "04-combat" },
   { re: /power.?roll|test|edge|bane|fortune|characteristic/, file: "03-tests-power-rolls" },
   { re: /chrome|implant|body integrity|weave/, file: "09-chrome-body-integrity" },
