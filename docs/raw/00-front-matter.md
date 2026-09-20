@@ -106,7 +106,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 **E1–E4** on a **hero** means echelon. **E1–E4** on a **Wired Flats host** means ICE posture / Node Rating — not the runner’s level (`21`, print Ch 27).
 
 
-**Megacorp tickers (The Ten):** **HAL** HALO · **FER** Ferrum · **MER** Meridian · **CAD** Caduceus · **IRN** Ironclad · **ARG** Argent · **VER** Verdant · **OBS** Obsidian · **SAN** Sanctum · **NYX** Nyx — full names in lore / `docs/rulebook/MEGACORP-TICKERS.md`.
+**Megacorp tickers (The Twelve):** **HAL** HALO · **FER** Ferrum · **MER** Meridian · **CAD** Caduceus · **IRN** Ironclad · **ARG** Argent · **VER** Verdant · **OBS** Obsidian · **SAN** Sanctum · **NYX** Nyx · **AEQ** Aequitas · **LAZ** Lazarus — full names in lore / `docs/rulebook/MEGACORP-TICKERS.md`. Charter Age seated the Ten; current play uses Twelve. AEQ sells **only to the Council**. LAZ extract is bundled into Lifestyle (`26`). Brand marks `assets/brands/megacorps/brand-{ticker}.{png,webp}`; Host skins `assets/tokens/wired/node-host-{ticker}.{png,webp}` (AEQ / LAZ included).
 **T5–T1** in old drafts is a legacy ladder. Convert with the tables in Advancement (`24`). Do not say “tier” to players.
 
 ## Glossary

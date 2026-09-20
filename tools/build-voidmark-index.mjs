@@ -26,6 +26,7 @@ const SETTING_PAGES = [
   "docs/setting/wired-flats-gazetteer.md",
   "docs/manuscript/03-directors/27-running-ossian-reach.md",
   "docs/manuscript/04-back/28-glossary-slang.md",
+  "docs/rulebook/MEGACORP-TICKERS.md",
 ];
 
 const MAX_CHUNK = 1600;

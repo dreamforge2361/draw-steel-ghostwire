@@ -20,7 +20,7 @@ At the center of it, where every sightline seems to bend, an old woman sits in a
 
 #### Key NPCs
 
-**Cassavir** — the fixer the district is named for. She *appears* elderly and unarmed in a booth of dead switchgear; a good cosmetician and **soft chrome** sell the grandmother. Underneath she is a **datajacked cyborg Controller** — decked (Switchboard Deck), private overlay-cell on the hall, Seize Control and Lockout on nodes and people. Not street muscle and not a mage: backup is **implant weaponry**, not a gun on the table. She opens most sessions and can hand the crew any of the Ten's hooks. Severing her would cut a hundred quiet deals at once, so no one does.
+**Cassavir** — the fixer the district is named for. She *appears* elderly and unarmed in a booth of dead switchgear; a good cosmetician and **soft chrome** sell the grandmother. Underneath she is a **datajacked cyborg Controller** — decked (Switchboard Deck), private overlay-cell on the hall, Seize Control and Lockout on nodes and people. Not street muscle and not a mage: backup is **implant weaponry**, not a gun on the table. She opens most sessions and can hand the crew any of the Twelve's hooks — except an AEQ retainer; the Mandate does not sell to a fixer. Severing her would cut a hundred quiet deals at once, so no one does.
 
 **Tover "Two-Line" Vask** — Cassavir's floor-runner, a Corran guild-clan kid who carries messages she won't trust to the Wired. Reads every face in the hall.
 

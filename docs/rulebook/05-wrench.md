@@ -958,7 +958,7 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 
 10. **OPEN CONTENT ITEM — No Wrench-specific chrome/cyberware recommendations beyond the control rig.** Per the same open item flagged in the Scout, Operator, and Elementalist masters, a full chrome-catalog cross-reference pass is still needed.
 
-11. **OPEN LORE QUESTION — Corp-history backstory flavor text.** The subclass writeups above gesture at possible corp-history backstories (Ironclad motor-pool washout, Caduceus med-drone tech, Argent Exchange logistics driver) purely as player-choice flavor examples, per the Origin Doctrine. Confirm these corp names are still current against the Ten Conglomerates lore chapter before shipping to a player-facing document.
+11. **OPEN LORE QUESTION — Corp-history backstory flavor text.** The subclass writeups above gesture at possible corp-history backstories (Ironclad motor-pool washout, Caduceus med-drone tech, Argent Exchange logistics driver) purely as player-choice flavor examples, per the Origin Doctrine. Confirm these corp names are still current against the Twelve Conglomerates lore chapter before shipping to a player-facing document.
 
 12. **OPEN BALANCE QUESTION — Facility Rigger's mobility trade-off.** The Facility Rigger is explicitly the least mobile of the three subclasses (their power is tied to a fixed building). This document does not yet address what a Facility Rigger does in a fight that occurs away from their base of operations — likely they fall back on class-baseline Deploy & Command / Rigged Fire / Field Repair with carried drones, but this needs an explicit ruling.
 

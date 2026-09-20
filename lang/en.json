@@ -7903,7 +7903,7 @@
         "Peoples": "Peoples & World",
         "Reach": "Ossian Reach",
         "Factions": "VOIDMARK & Accords",
-        "Megacorps": "Ten Conglomerates"
+        "Megacorps": "Twelve Conglomerates"
       },
       "Journals": {
         "LoreIndex": "Lore Index",
@@ -7921,7 +7921,9 @@
         "VerdantProvision": "Verdant Provision (VER)",
         "ObsidianHoldings": "Obsidian Holdings (OBS)",
         "SanctumAssurance": "Sanctum Assurance (SAN)",
-        "NyxCartel": "Nyx Cartel (NYX)"
+        "NyxCartel": "Nyx Cartel (NYX)",
+        "AequitasMandate": "Aequitas Mandate (AEQ)",
+        "LazarusExtract": "Lazarus Extract (LAZ)"
       }
     },
     "Voidmark": {

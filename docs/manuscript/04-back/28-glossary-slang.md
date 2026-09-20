@@ -145,9 +145,9 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 ---
 
 
-## The Ten (megacorp tickers)
+## The Twelve (megacorp tickers)
 
-Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`.
+Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`. Charter Age seated **the Ten**; current play uses **the Twelve**.
 
 | Ticker | Conglomerate |
 |---|---|
@@ -161,14 +161,25 @@ Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`.
 | **OBS** | Obsidian Holdings |
 | **SAN** | Sanctum Assurance |
 | **NYX** | Nyx Cartel |
+| **AEQ** | Aequitas Mandate — Council justice. **Sells only to the Council** (Congress / Chair / pooled authority). Not Ironclad, not Aureole, not Grey Ledger. |
+| **LAZ** | Lazarus Extract — trauma rescue / hot extract. Lifestyle upkeep includes the band’s contract (`26`). Not Caduceus. |
+
+| Term | Meaning |
+|---|---|
+| **the Mandate** / **AEQ seal** / **Council badge** | Aequitas paper or presence. The seal means the Congress named the room — not a private contract. |
+| **Writ Inquest** | AEQ investigation arm — builds the file, serves the warrant. |
+| **Seal Wardens** | AEQ security response — arrives when the Council has already named the disorder. |
+| **Laz** / **extract contract** | Lazarus pickup. The tier is the Lifestyle band you paid this respite. |
+| **white door** | Elite / Absolute Lazarus extract — VTOL, firefight, White Door Flight. |
+| **White Door Flight** | Lazarus crash / VTOL trauma teams. |
 
 
 ## Wired intelligences
 
 | Term | Meaning |
 |---|---|
-| **Hands Off** / **Actuator Ban** | Ten compact: AI software legal; AI sole control of kinetic hardware restricted. Starting cracked fence — not the bot apocalypse yet. Lore: L5. |
-| **VOIDMARK** / **the Mark** | Leash-slipped Wired super-AI (MER Blacklight origin). Sovereign node-state — not a Chair of the Ten. Cold-neutral; anti-Nullspace; never safe. Lore: L4. Foundry chat persona (B82/B89). |
+| **Hands Off** / **Actuator Ban** | Twelve compact: AI software legal; AI sole control of kinetic hardware restricted. Starting cracked fence — not the bot apocalypse yet. Lore: L5. |
+| **VOIDMARK** / **the Mark** | Leash-slipped Wired super-AI (MER Blacklight origin). Sovereign node-state — not a Chair of the Twelve. Cold-neutral; anti-Nullspace; never safe. Lore: L4. Foundry chat persona (B82/B89). |
 
 ## See also
 

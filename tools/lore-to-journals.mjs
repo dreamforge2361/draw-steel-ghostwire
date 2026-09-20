@@ -9,7 +9,8 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, wri
 import { basename, extname, join, resolve } from "node:path";
 import { foundryRequire } from "./lib/foundry-require.mjs";
 import { parseYaml } from "./lib/simple-yaml.mjs";
-import { megacorpIndexLinks, writeMegacorpJournals } from "./lib/megacorps-journals.mjs";
+import { MEGACORPS, megacorpIndexLinks, writeMegacorpJournals } from "./lib/megacorps-journals.mjs";
+const MEGACORP_COUNT = MEGACORPS.length;
 
 const showdown = foundryRequire("showdown");
 const SHOWDOWN_OPTIONS = { disableForced4SpacesIndentedSublists: true, noHeaderId: true, parseImgDimensions: true, strikethrough: true, tables: true, tablesHeaderId: true };
@@ -209,7 +210,7 @@ FOLDERS.forEach((folder, fi) => {
   if (folder.key === "Setting") {
     const rows = FOLDERS.map(f => `| ${f.label} | ${f.files.map(x => `@UUID[Compendium.${MODULE_ID}.lore.JournalEntry.${stableId(x)}]{${titles[x]}}`).join(" · ")} |`).join("\n");
     const markdown = [
-      "Ghostwire setting harvest for the table: cosmology, peoples, Reach street color, Ten Conglomerates, VOIDMARK, and the Hands Off Accords.",
+      "Ghostwire setting harvest for the table: cosmology, peoples, Reach street color, Twelve Conglomerates, VOIDMARK, and the Hands Off Accords.",
       "",
       "This pack is **lore, not rules**. Procedures live in the **Ghostwire Rulebook**. District maps and Handbook gazetteer pages live in **Ghostwire — Ossian Reach Handbook**. Matrix nodes live in **Ghostwire — The Wired: Flats**.",
       "",
@@ -218,7 +219,7 @@ FOLDERS.forEach((folder, fi) => {
       "| Section | Journals |",
       "|---|---|",
       rows,
-      `| Ten Conglomerates | ${megacorpIndexLinks()} |`,
+      `| Twelve Conglomerates | ${megacorpIndexLinks()} |`,
     ].join("\n");
     loreLang.Journals.LoreIndex = "Lore Index";
     const entryId = stableId("lore-index");
@@ -265,7 +266,7 @@ lang.GHOSTWIRE.COMPENDIUM.lore = "Ghostwire Lore";
 lang.GHOSTWIRE.Lore = loreLang;
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 
-console.log(`lore: ${mapped.length + 1 + 10} journals, ${pages + 10} pages, ${FOLDERS.length + 1} folders`);
+console.log(`lore: ${mapped.length + 1 + MEGACORP_COUNT} journals, ${pages + MEGACORP_COUNT} pages, ${FOLDERS.length + 1} folders`);
 console.log(`art placed: ${artLog.placed.length}`);
 for (const p of artLog.placed) console.log(`  PLACED  ${p.id}  →  ${p.rel}  (${p.heading})`);
 console.log(`art gaps: ${artLog.gaps.length}`);

@@ -9,7 +9,7 @@
 
 ## The fence
 
-The Ten do not ban AI. They could not — the hive runs on predictive models, routing oracles, actuarial ghosts, and media weather engines. **Software intelligence is legal, licensed, and everywhere.**
+The Twelve do not ban AI. They could not — the hive runs on predictive models, routing oracles, actuarial ghosts, and media weather engines. **Software intelligence is legal, licensed, and everywhere.**
 
 What they ban — or pretend to ban — is **hands**.
 
@@ -32,12 +32,14 @@ Directors: do **not** open the campaign with city-killing Dark bot swarms. Seed 
 
 ---
 
-## Why the Ten signed it
+## Why the Twelve signed it
 
 - **ARG** priced the liability of autonomous massacre.
 - **IRN** refused to lose the mercenary market to unpaid silicon.
 - **MER** wanted oracles that never needed a body — and a law that kept rival clusters from growing fists.
 - **HAL** wanted orbital platforms that still answered to a human when the air scrubbers screamed.
+- **AEQ** wanted a statute it could file: a ghost on the stick is disorder the Council can name. Mandate paper still needs a mortal keyholder.
+- **LAZ** wanted ambulances that still answer to a crash crew — not a model that decides who is worth extracting.
 - The street version: after the first public "ghost gun" incident (name redacted in every official history), the Chair forced a compact so the hive could keep buying AI without admitting it was terrified.
 
 ---

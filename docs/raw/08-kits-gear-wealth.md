@@ -211,7 +211,7 @@ Full Invent a Mod and slot rules: `10-mods.md`.
 
 ### Lifestyle burn
 
-Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`.
+Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`. Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider.
 
 ## Part 3 — Gear
 

@@ -34,6 +34,8 @@ export const NODE_TOKEN_LIBRARY = [
   { id: "node-host-obs", name: "Host — Obsidian Holdings (OBS)", file: "node-host-obs.webp", png: "node-host-obs.png", family: "atlas", altitude: "region", hostTicker: "OBS", placeholder: false },
   { id: "node-host-san", name: "Host — Sanctum Assurance (SAN)", file: "node-host-san.webp", png: "node-host-san.png", family: "atlas", altitude: "region", hostTicker: "SAN", placeholder: false },
   { id: "node-host-nyx", name: "Host — Nyx Cartel (NYX)", file: "node-host-nyx.webp", png: "node-host-nyx.png", family: "atlas", altitude: "region", hostTicker: "NYX", placeholder: false },
+  { id: "node-host-aeq", name: "Host — Aequitas Mandate (AEQ)", file: "node-host-aeq.webp", png: "node-host-aeq.png", family: "atlas", altitude: "region", hostTicker: "AEQ", placeholder: false },
+  { id: "node-host-laz", name: "Host — Lazarus Extract (LAZ)", file: "node-host-laz.webp", png: "node-host-laz.png", family: "atlas", altitude: "region", hostTicker: "LAZ", placeholder: false },
 ];
 
 export function nodeTokenSrc(file) {
