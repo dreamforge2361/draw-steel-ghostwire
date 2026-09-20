@@ -1,15 +1,15 @@
 // Deadhead Gold Line (B106 / 0.3.39 hotfix): world-inject the dual-Hammerhead train Scene.
-// Background prefers the interior H.264 loop; roofs sit as an overhead tile with
-// Foundry v14 SURFACE occlusion (roofs on until a token is underneath).
-// Template: data/scenes/gold-line.json. Design: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
+// Default to stills until video is proven. Roofs are a SOLID overhead tile
+// (occlusion NONE) at Michael's locked place. Template: data/scenes/gold-line.json.
+// Design: docs/spikes/B106-GOLD-LINE-MAP-PACK.md.
 //
 // Do not use HEAD / foundry.utils.srcExists to probe loops — Foundry's file server
 // often rejects HEAD on webm and the old inject fell back to stills.
 //
 // Shipped VP9 webms report stream duration=N/A; Foundry then throws
-// "Failed to set currentTime ... non-finite" and the roof tile can draw as a
-// mis-scaled scrap. Prefer loop.mp4 → loop.webm → still.webp. Stills are a
-// valid playable layout if video fails. Do not change train art content.
+// "Failed to set currentTime ... non-finite". Prefer still.webp first; mp4/webm
+// stay shipped for a later opt-in. Stills are a valid playable layout.
+// Do not change train art content. Do not enable FADE / Surface roof occlusion.
 
 const MODULE_ID = "draw-steel-ghostwire";
 const TEMPLATE_PATH = `modules/${MODULE_ID}/data/scenes/gold-line.json`;
@@ -19,8 +19,28 @@ const FOLDER_FLAG = "deadheadScenes";
 const L = "GHOSTWIRE.Scenes.GoldLine";
 const VIDEO_EXT = /\.(webm|mp4|m4v|ogv)$/i;
 const VIDEO_PLAYBACK = Object.freeze({ loop: true, autoplay: true, volume: 0 });
-/** Dual-Hammerhead plate. Always restamp these on force so a failed video cannot shrink the roof. */
+/** Dual-Hammerhead plate. Scene canvas stays this size on force. */
 export const GOLD_LINE_PLATE = Object.freeze({ width: 6472, height: 958 });
+/**
+ * Michael-locked roof (live align 2026-09-20). Always restamp on force.
+ *
+ * x/y are not 0,0: the Level background is pinned to the scene origin and fills
+ * 6472×958. A Foundry Tile's x/y is its registration point (center), so a
+ * full-plate roof sits near (width/2, height/2) ≈ (3236, 479). Michael nudged
+ * that to 3232, 475. Resetting to 0,0 shifts the roof by half a plate.
+ *
+ * elevation 1 (not 10) so Levels does not hide the tile. Occlusion stays
+ * NONE (mode 0, alpha 1) — solid roofs; no FADE / Surface.
+ */
+export const GOLD_LINE_ROOF = Object.freeze({
+  x: 3232,
+  y: 475,
+  width: 6472,
+  height: 958,
+  elevation: 1,
+  locked: true,
+  occlusion: Object.freeze({ mode: 0, alpha: 1 }),
+});
 
 const loc = (key, data) => (data ? game.i18n.format(`${L}.${key}`, data) : game.i18n.localize(`${L}.${key}`));
 
@@ -159,8 +179,8 @@ export async function mediaExists(path) {
 }
 
 /**
- * First existing candidate. Gold Line order is loop.mp4 → loop.webm → still.webp.
- * Accepts a prefer list or discrete arguments. Last entry is the still fallback.
+ * First existing candidate. Gold Line default is still.webp until video is proven
+ * (then optional loop.mp4 / loop-fixed.webm / loop.webm).
  */
 export async function resolveSrc(...candidates) {
   const list = candidates.flat(Infinity).filter(src => typeof src === "string" && src);
@@ -193,16 +213,16 @@ function existingGoldLineScene() {
 function roofPayload(template, roofsSrc) {
   return {
     name: loc("RoofsTile"),
-    x: template.roofTile.x,
-    y: template.roofTile.y,
-    width: GOLD_LINE_PLATE.width,
-    height: GOLD_LINE_PLATE.height,
-    elevation: template.roofTile.elevation,
+    x: GOLD_LINE_ROOF.x,
+    y: GOLD_LINE_ROOF.y,
+    width: GOLD_LINE_ROOF.width,
+    height: GOLD_LINE_ROOF.height,
+    elevation: GOLD_LINE_ROOF.elevation,
     sort: template.roofTile.sort,
-    locked: template.roofTile.locked,
+    locked: GOLD_LINE_ROOF.locked,
     hidden: false,
     texture: { src: roofsSrc },
-    occlusion: { ...template.roofTile.occlusion },
+    occlusion: { ...GOLD_LINE_ROOF.occlusion },
     video: videoPlayback(roofsSrc, template.roofTile.video),
     flags: { [MODULE_ID]: { [ROOF_FLAG]: true } },
   };
@@ -216,11 +236,16 @@ async function applyRoofTile(scene, template, roofsSrc, { force = false } = {}) 
     return;
   }
   if (force) {
-    // Always restamp 6472×958 — a failed webm decode left a one-car scrap over the interior.
+    // Always restamp Michael's locked place — a failed video left a one-car scrap.
     await roof.update({
       ...data,
-      width: GOLD_LINE_PLATE.width,
-      height: GOLD_LINE_PLATE.height,
+      x: GOLD_LINE_ROOF.x,
+      y: GOLD_LINE_ROOF.y,
+      width: GOLD_LINE_ROOF.width,
+      height: GOLD_LINE_ROOF.height,
+      elevation: GOLD_LINE_ROOF.elevation,
+      locked: GOLD_LINE_ROOF.locked,
+      occlusion: { ...GOLD_LINE_ROOF.occlusion },
     });
   }
 }
@@ -228,7 +253,7 @@ async function applyRoofTile(scene, template, roofsSrc, { force = false } = {}) 
 /**
  * Create or refresh the Gold Line Scene (GM only).
  * force=true (or a stale goldLineVersion) restamps Level background + roof tile
- * onto the preferred loop (mp4 first) without deleting the Scene.
+ * onto the stills (default) without deleting the Scene.
  */
 export async function ensureGoldLineScene({ force = false } = {}) {
   if (!game.user.isGM) return existingGoldLineScene();
@@ -241,16 +266,16 @@ export async function ensureGoldLineScene({ force = false } = {}) {
   if (existing && !rewrite) return existing;
 
   const interiorSrc = await resolveSrc(preferSrc(template.assets, "interiorPrefer", [
+    "interiorStill",
     "interiorLoopMp4",
     "interiorLoopFixed",
     "interiorLoop",
-    "interiorStill",
   ]));
   const roofsSrc = await resolveSrc(preferSrc(template.assets, "roofsPrefer", [
+    "roofsStill",
     "roofsLoopMp4",
     "roofsLoopFixed",
     "roofsLoop",
-    "roofsStill",
   ]));
   const folder = await deadheadSceneFolder();
 

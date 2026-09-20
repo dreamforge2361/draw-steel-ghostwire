@@ -1,6 +1,6 @@
 {
   "id": "gold-line",
-  "version": 3,
+  "version": 4,
   "nameKey": "GHOSTWIRE.Scenes.GoldLine.Name",
   "folderKey": "GHOSTWIRE.Scenes.GoldLine.Folder",
   "width": 6472,
@@ -35,16 +35,16 @@
     "interiorLoopFixed": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop-fixed.webm",
     "roofsLoopFixed": "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop-fixed.webm",
     "interiorPrefer": [
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior.webp",
       "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.mp4",
       "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop-fixed.webm",
-      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm",
-      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior.webp"
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-interior-loop.webm"
     ],
     "roofsPrefer": [
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs.webp",
       "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.mp4",
       "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop-fixed.webm",
-      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm",
-      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs.webp"
+      "modules/draw-steel-ghostwire/assets/maps/battlemaps/gold-line/map-gold-line-roofs-loop.webm"
     ]
   },
   "level": {
@@ -64,16 +64,16 @@
   "roofTile": {
     "_id": "gwGoldLineRoof00",
     "nameKey": "GHOSTWIRE.Scenes.GoldLine.RoofsTile",
-    "x": 0,
-    "y": 0,
+    "x": 3232,
+    "y": 475,
     "width": 6472,
     "height": 958,
-    "elevation": 10,
+    "elevation": 1,
     "sort": 1,
     "locked": true,
     "occlusion": {
-      "mode": 2,
-      "alpha": 0
+      "mode": 0,
+      "alpha": 1
     },
     "video": {
       "loop": true,

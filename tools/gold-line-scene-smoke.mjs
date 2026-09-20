@@ -7,7 +7,7 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
-import { GOLD_LINE_PLATE, isFiniteDuration, safeVideoCurrentTime } from "../scripts/gold-line-scene.mjs";
+import { GOLD_LINE_PLATE, GOLD_LINE_ROOF, isFiniteDuration, safeVideoCurrentTime } from "../scripts/gold-line-scene.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -87,10 +87,12 @@ const template = readBomFreeJson(TEMPLATE);
 ok(template.width === PLATE.width && template.height === PLATE.height, "template canvas is 6472×958");
 ok(template.grid.size === 208, "template grid size is 208");
 ok(template.grid.distance === 5 && template.grid.units === "ft", "template grid is 5 ft");
-ok(template.roofTile.occlusion.mode === 2, "roof occlusion is SURFACE (2)");
-ok(template.roofTile.elevation === 10, "roof tile elevation is 10");
+ok(template.roofTile.occlusion.mode === 0 && template.roofTile.occlusion.alpha === 1, "roof occlusion is NONE (0) / solid alpha 1");
+ok(template.roofTile.elevation === 1, "roof tile elevation is 1");
+ok(template.roofTile.x === 3232 && template.roofTile.y === 475, "roof tile place is Michael lock 3232, 475");
+ok(template.roofTile.locked === true, "roof tile is locked");
 ok(template.roofTile.width === PLATE.width && template.roofTile.height === PLATE.height, "roof tile matches plate");
-ok(template.version >= 3, `template version is 3+ (got ${template.version})`);
+ok(template.version >= 4, `template version is 4+ (got ${template.version})`);
 ok(template.roofTile.video.loop === true && template.roofTile.video.autoplay === true, "roof tile loops");
 ok(template.level.video?.loop === true && template.level.video?.autoplay === true, "level template has video loop/autoplay");
 
@@ -110,14 +112,14 @@ for (const [key, rel] of Object.entries(ASSETS)) {
   if (/Still|Loop/.test(key)) ok(listed.includes(modulePath), `template assets list ${rel}`);
 }
 
-ok(template.assets.interiorPrefer[0].endsWith("-loop.mp4"), "interior prefer starts with loop.mp4");
+ok(template.assets.interiorPrefer[0].endsWith(".webp"), "interior prefer starts with still.webp");
+ok(template.assets.interiorPrefer.some(p => p.endsWith("-loop.mp4")), "interior prefer lists loop.mp4 after stills");
 ok(template.assets.interiorPrefer.some(p => p.endsWith("-loop-fixed.webm")), "interior prefer lists loop-fixed.webm if parent attaches one");
 ok(template.assets.interiorPrefer.some(p => p.endsWith("-loop.webm") && !p.endsWith("-loop-fixed.webm")), "interior prefer includes shipped loop.webm");
-ok(template.assets.interiorPrefer.at(-1).endsWith(".webp"), "interior prefer ends with still.webp");
-ok(template.assets.roofsPrefer[0].endsWith("-loop.mp4"), "roofs prefer starts with loop.mp4");
+ok(template.assets.roofsPrefer[0].endsWith(".webp"), "roofs prefer starts with still.webp");
+ok(template.assets.roofsPrefer.some(p => p.endsWith("-loop.mp4")), "roofs prefer lists loop.mp4 after stills");
 ok(template.assets.roofsPrefer.some(p => p.endsWith("-loop-fixed.webm")), "roofs prefer lists loop-fixed.webm if parent attaches one");
 ok(template.assets.roofsPrefer.some(p => p.endsWith("-loop.webm") && !p.endsWith("-loop-fixed.webm")), "roofs prefer includes shipped loop.webm");
-ok(template.assets.roofsPrefer.at(-1).endsWith(".webp"), "roofs prefer ends with still.webp");
 
 const interior = webpSize(ASSETS.interiorStill);
 const roofs = webpSize(ASSETS.roofsStill);
@@ -141,18 +143,23 @@ ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line 
 
 const script = readFileSync(SCRIPT, "utf8");
 ok(script.includes("ensureGoldLineScene"), "inject exports ensureGoldLineScene");
-ok(script.includes("SURFACE") || script.includes("occlusion"), "inject mentions roof occlusion");
+ok(script.includes("GOLD_LINE_ROOF") && script.includes("mode: 0"), "inject bakes solid roof (occlusion NONE)");
+ok(!/occlusion\.mode["'\s:=]+2/.test(script) && !/SURFACE/.test(script), "inject does not enable Surface / FADE occlusion");
 ok(!/method:\s*["']HEAD["']/.test(script), "inject does not probe media with HEAD");
 ok(!/\bsrcExists\s*\(/.test(script), "inject does not call srcExists (HEAD)");
 ok(script.includes("FilePicker.browse") && script.includes("Range"), "inject probes via FilePicker or ranged GET");
 ok(script.includes("levelBackground") && script.includes("background.video"), "inject sets Level background video flags for loops");
 ok(/roof\.update\(/.test(script), "force updates an existing roof tile");
-ok(script.includes("interiorLoopMp4") && script.includes("loop.mp4"), "inject prefers mp4 before webm");
+ok(/interiorStill/.test(script) && script.includes("still.webp"), "inject defaults to stills until video is proven");
 ok(script.includes("safeVideoCurrentTime") && script.includes("isFiniteDuration"), "inject skips seek when duration is non-finite");
 ok(script.includes("installGoldLineSeekGuard"), "inject installs a currentTime guard");
-ok(/GOLD_LINE_PLATE[\s\S]*6472[\s\S]*958/.test(script) && /width:\s*GOLD_LINE_PLATE\.width/.test(script), "force restamps width/height 6472×958");
+ok(/GOLD_LINE_ROOF[\s\S]*3232[\s\S]*475/.test(script), "force restamps Michael lock x=3232 y=475");
+ok(/width:\s*GOLD_LINE_ROOF\.width/.test(script) && /elevation:\s*GOLD_LINE_ROOF\.elevation/.test(script), "force restamps width/height 6472×958 and elevation 1");
+ok(/Level background/.test(script) && /registration/.test(script), "inject documents why roof x/y are not 0,0");
 ok(/valid playable layout/i.test(script), "inject comments that stills are a valid playable layout");
 ok(GOLD_LINE_PLATE.width === PLATE.width && GOLD_LINE_PLATE.height === PLATE.height, "GOLD_LINE_PLATE is 6472×958");
+ok(GOLD_LINE_ROOF.x === 3232 && GOLD_LINE_ROOF.y === 475 && GOLD_LINE_ROOF.elevation === 1, "GOLD_LINE_ROOF is 3232, 475, elev 1");
+ok(GOLD_LINE_ROOF.occlusion.mode === 0 && GOLD_LINE_ROOF.occlusion.alpha === 1 && GOLD_LINE_ROOF.locked === true, "GOLD_LINE_ROOF is locked solid (NONE / alpha 1)");
 ok(!isFiniteDuration(Number.NaN) && !isFiniteDuration(Infinity) && !isFiniteDuration("N/A") && isFiniteDuration(8), "isFiniteDuration rejects N/A / NaN / Infinity");
 const unseekable = { duration: Number.NaN, currentTime: 1 };
 ok(safeVideoCurrentTime(unseekable, 0) === false && unseekable.currentTime === 1, "safeVideoCurrentTime skips seek when duration is NaN");
@@ -163,8 +170,11 @@ ok(safeVideoCurrentTime(seekable, 0) === true && seekable.currentTime === 0, "sa
 
 const sor = readFileSync(SOR, "utf8");
 ok(/L1.*TAIL/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has dual-Hammerhead beat remap");
-ok(/map-gold-line-interior-loop\.mp4/.test(sor), "SoR prefers the interior mp4");
-ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout if video fails");
+ok(/map-gold-line-interior\.webp/.test(sor), "SoR defaults to the interior still");
+ok(/3232/.test(sor) && /475/.test(sor), "SoR bakes roof place 3232, 475");
+ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout");
+ok(/registration|not 0,\s*0|not 0,0/i.test(sor), "SoR documents why roof x/y are not 0,0");
+ok(!/Surface occlusion/i.test(sor), "SoR does not claim Surface occlusion");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
 
 const journal = readBomFreeJson(JOURNAL);
@@ -172,8 +182,10 @@ ok(/^[A-Za-z0-9]{16}$/.test(journal._id), "journal _id is 16 alphanumeric");
 ok(journal.folder === "gwRunsDeadhead00", "journal sits in Deadhead folder");
 ok(journal.pages?.length >= 2, "journal has plate + beat pages");
 const plateMd = journal.pages[0]?.text?.markdown ?? "";
-ok(/loop\.mp4/.test(plateMd), "journal prefer list includes loop.mp4");
+ok(/interior\.webp/.test(plateMd) || /stills are the default/i.test(plateMd), "journal defaults to stills");
+ok(/3232/.test(plateMd) && /475/.test(plateMd), "journal bakes roof place 3232, 475");
 ok(/valid playable layout/i.test(plateMd), "journal says stills are a valid playable layout");
+ok(/NONE|no occlusion|solid/i.test(plateMd), "journal says roofs are solid (no occlusion)");
 for (const page of journal.pages ?? []) {
   ok(/^[A-Za-z0-9]{16}$/.test(page._id), `page ${page.name} _id is 16 alphanumeric`);
 }
