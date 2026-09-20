@@ -172,7 +172,7 @@ Status: shipped as **B38b.1** (`docs/spikes/B38b1-NAMED-LORE-BOSSES.md`, module 
 
 | Working name | Role | Region / folder | Draw Steel spine (as built) | Status |
 |---|---|---|---|---|
-| Mama Cassavir, "the Switchboard" | Fixer patron / Cyborg Controller | Upper Flats / Reach Streets | Cyborg hacker Controller (identity lock 2026-09-20; original DS spine Rival Tactician, do not use as live math) → L5 elite controller; Wire kit + people; holdout is backup | **0.3.48** — shipped, pending Foundry verify |
+| Mama Cassavir, "the Switchboard" | Fixer patron / Cyborg Controller | Upper Flats / Reach Streets | Cyborg hacker Controller (identity lock 2026-09-20; original DS spine Rival Tactician, do not use as live math) → L5 elite controller; Wire kit + people; holdout is backup; Michael split-face portrait | **0.3.48** — shipped, pending Foundry verify |
 | Warden Krael, "the Landlord" | Corrupt Grid warden | Grid / Corp & Security | Devil High Judge → L6 leader; licensed sidearm, badge charm, Paper Trail weakness | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
 | The Ferryman | Tollkeeper of descent | Flats/Sinks boundary / Reach Streets | Time Raider Tyrannis → L3 leader; dead-air shotgun, mined crossing | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
 | The Choirmother | Cult-mother (tragic Light→hollow) | Flats / Reach Streets | High Elf Ordinator → L3 leader (keeps Magic); **Mid** default, Early / Mid / Late (Fallen) dial in Director bio | **B38b.1 (v0.1.53)** — shipped, pending Foundry verify |
