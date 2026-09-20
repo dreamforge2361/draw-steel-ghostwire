@@ -86,6 +86,8 @@ export async function placeNode(board, node) {
     "system.monster.level": node.rating,
     "prototypeToken.name": node.name,
     "prototypeToken.actorLink": true,
+    "prototypeToken.width": 0.25,
+    "prototypeToken.height": 0.25,
     "prototypeToken.bar1.attribute": barFor(node),
     [`flags.${MODULE_ID}`]: { kind: "node", boardSceneId: board.id, nodeId: node.id, track: node.track },
   });
@@ -101,7 +103,8 @@ export async function placeNode(board, node) {
   // Land on the Level the GM is viewing (Interior vs Roof). Scripted createEmbeddedDocuments
   // does not inherit canvas.level the way drag-drop does (B108).
   const { elevation, level } = placementElevationAndLevel();
-  const tokenData = { x, y, elevation, actorLink: true, hidden: !node.revealed };
+  // B110: node markers are ~door-control scale (0.25 grid), not full 1x1 tokens.
+  const tokenData = { x, y, elevation, width: 0.25, height: 0.25, actorLink: true, hidden: !node.revealed };
   if (level) tokenData.level = level;
   const tokenDocument = await actor.getTokenDocument(tokenData, { parent: viewed });
   await viewed.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
