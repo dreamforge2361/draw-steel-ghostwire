@@ -51,7 +51,8 @@
           "Wired"
         ],
         "modFamily": [
-          "vehicle"
+          "vehicle",
+          "drone"
         ],
         "domain": "Ground (drone)",
         "scale": "Personal",

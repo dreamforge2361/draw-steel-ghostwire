@@ -56,6 +56,94 @@ export function machineBand(item) {
 
 const bandKey = band => band.split("-").map(w => w[0].toUpperCase() + w.slice(1)).join("");
 
+/** Chassis Integrity before an armor kit: band Stamina × echelon multiplier. */
+export function chassisStamina(item) {
+  const band = machineBand(item);
+  const vehicle = item?.getFlag(MODULE_ID, "vehicle");
+  if (!band || !vehicle) return 0;
+  return Math.round(BANDS[band].stamina * (ECHELON_MULTIPLIER[vehicle.echelon] ?? 1));
+}
+
+/**
+ * Stamina (Integrity) from an installed, active vehicle/drone armor kit.
+ * Hero armor uses staminaByEchelon on the worn Item (AE → system.stamina.bonuses.treasure).
+ * Machine kits live on the hero's Item while Integrity lives on the deployed Actor, so each
+ * SKU carries a flat staminaBonus (one kit at a time; exclusiveKit: "armor").
+ */
+export function armorStaminaBonus(item) {
+  const actor = item?.parent;
+  if (!(actor instanceof Actor)) return 0;
+  let bonus = 0;
+  for (const mod of actor.items) {
+    const data = mod.getFlag(MODULE_ID, "mod");
+    if (!data || data.installedOn !== item.id || data.active === false) continue;
+    const n = Number(data.staminaBonus ?? 0);
+    if (Number.isFinite(n) && n > 0) bonus += n;
+  }
+  return bonus;
+}
+
+export function machineStamina(item) {
+  return chassisStamina(item) + armorStaminaBonus(item);
+}
+
+const ARMOR_AE_FLAG = "machineArmor";
+
+function armorEffectPayload(item, bonus) {
+  const kit = item.parent?.items.find(mod => {
+    const data = mod.getFlag(MODULE_ID, "mod");
+    return data?.installedOn === item.id && data.active !== false && Number(data.staminaBonus) > 0;
+  });
+  return {
+    name: game.i18n.format(`${UI}.ArmorKit`, { name: kit?.name ?? item.name, bonus }),
+    img: kit?.img ?? item.img,
+    origin: kit?.uuid ?? item.uuid,
+    description: game.i18n.format(`${UI}.ArmorKitHint`, { bonus }),
+    disabled: false,
+    transfer: false,
+    statuses: [],
+    tint: "#ffffff",
+    flags: { [MODULE_ID]: { [ARMOR_AE_FLAG]: true, staminaBonus: bonus } },
+    duration: { value: null, units: "seconds", expiry: null, expired: false },
+    start: null,
+    showIcon: 1,
+    type: "base",
+    system: {
+      end: { roll: "1d10 + @combat.save.bonus" },
+      // Integrity is stamped onto system.stamina (same as chassis Deploy). Empty changes so a
+      // treasure-upgrade AE cannot double-count the bonus already in max.
+      changes: [],
+    },
+  };
+}
+
+async function stampArmorEffect(actor, item, bonus) {
+  const existing = actor.effects.filter(effect => effect.getFlag(MODULE_ID, ARMOR_AE_FLAG));
+  if (existing.length) await actor.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
+  if (bonus > 0) await actor.createEmbeddedDocuments("ActiveEffect", [armorEffectPayload(item, bonus)]);
+}
+
+/**
+ * Restamp a deployed machine's Integrity after an armor kit install / uninstall / field toggle.
+ * Preserves damage taken: raising max heals the gain; lowering max clamps.
+ */
+export async function syncMachineStamina(item) {
+  const actor = deployedMachine(item);
+  if (!actor) return;
+  const max = machineStamina(item);
+  const bonus = armorStaminaBonus(item);
+  const current = Number(actor.system.stamina.value ?? 0);
+  const oldMax = Number(actor.system.stamina.max ?? 0);
+  const delta = max - oldMax;
+  const value = delta >= 0 ? Math.min(max, current + delta) : Math.min(max, current);
+  await actor.update({
+    "system.stamina.max": max,
+    "system.stamina.value": value,
+    [`flags.${MODULE_ID}.armorStaminaBonus`]: bonus,
+  });
+  await stampArmorEffect(actor, item, bonus);
+}
+
 const movementTypes = domain => {
   domain = String(domain ?? "").toLowerCase();
   if (domain.startsWith("air") || domain.startsWith("space")) return ["fly"];
@@ -107,7 +195,8 @@ export async function deployMachine(item) {
   const vehicle = item.getFlag(MODULE_ID, "vehicle");
   const owner = item.parent instanceof Actor ? item.parent : null;
   const base = BANDS[band];
-  const stamina = Math.round(base.stamina * (ECHELON_MULTIPLIER[vehicle.echelon] ?? 1));
+  const armorBonus = armorStaminaBonus(item);
+  const stamina = machineStamina(item);
   const speedBand = vehicle.speedBand ?? VEHICLE_SPEED_BANDS[item.system._dsid];
   const speed = base.speed + (vehicle.drone ? 0 : (SPEED_BAND_BONUS[speedBand] ?? 0));
   // The owner's players own the machine, so they can move its token and track its Integrity.
@@ -130,11 +219,13 @@ export async function deployMachine(item) {
     [`flags.${MODULE_ID}`]: {
       kind: vehicle.drone ? "drone" : "vehicle", band, ownerUuid: owner?.uuid ?? null, gearItemUuid: item.uuid,
       dsid: `machine-${band}`, gearDsid: item.system._dsid ?? null, echelon: vehicle.echelon ?? null, speedBand: speedBand ?? null,
+      armorStaminaBonus: armorBonus,
     },
   });
   const actor = await Actor.create(data);
   if (!actor) return;
   await addWireKit(actor, { notify: false });
+  if (armorBonus > 0) await stampArmorEffect(actor, item, armorBonus);
 
   const size = actor.system.combat.size.value;
   const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });
@@ -242,6 +333,6 @@ export function registerMachines() {
   });
 
   const module = game.modules.get(MODULE_ID);
-  if (module) module.api = { ...(module.api ?? {}), machineBand, deployMachine, recallMachine, deployedMachine };
+  if (module) module.api = { ...(module.api ?? {}), machineBand, deployMachine, recallMachine, deployedMachine, chassisStamina, armorStaminaBonus, machineStamina, syncMachineStamina };
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);
 }

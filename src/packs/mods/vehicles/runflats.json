@@ -45,9 +45,13 @@
         "price": 2000,
         "modSlots": 0,
         "tags": [],
-        "host": "vehicle",
+        "host": [
+          "vehicle",
+          "drone"
+        ],
         "hosts": [
-          "vehicle"
+          "vehicle",
+          "drone"
         ],
         "slotCost": 1,
         "craftSkill": [

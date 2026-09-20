@@ -1,23 +1,23 @@
 {
-  "_id": "z25iKBjeAyJGYvsl",
-  "_key": "!items!z25iKBjeAyJGYvsl",
-  "name": "GHOSTWIRE.Vehicles.Items.Nest.Name",
+  "_id": "C0I6LZZwrZPtZgcq",
+  "_key": "!items!C0I6LZZwrZPtZgcq",
+  "name": "GHOSTWIRE.Mods.Items.HeavyHardpoint.Name",
   "type": "treasure",
-  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/nest.webp",
+  "img": "icons/commodities/tech/metal-pistons.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Vehicles.Items.Nest.Description",
+      "value": "GHOSTWIRE.Mods.Items.HeavyHardpoint.Description",
       "director": ""
     },
     "source": {
       "book": "Ghostwire Core Rulebook",
-      "page": "15-drones",
+      "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "nest",
+    "_dsid": "heavy-hardpoint",
     "kind": "other",
     "category": "trinket",
-    "echelon": 2,
+    "echelon": 4,
     "keywords": [],
     "quantity": 1,
     "project": {
@@ -32,30 +32,35 @@
     }
   },
   "effects": [],
-  "folder": "HSPY6qKApuVToghV",
+  "folder": "aQqOJpCpotlt5MEY",
   "sort": 0,
   "ownership": {
     "default": 0
   },
   "flags": {
     "draw-steel-ghostwire": {
-      "vehicle": {
-        "echelon": 2,
-        "availability": "restricted",
-        "price": 3800,
-        "modSlots": 3,
+      "mod": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 24000,
+        "modSlots": 0,
         "tags": [
-          "Sentry",
           "Mount",
-          "Wired"
+          "Weaponry"
         ],
-        "modFamily": [
+        "host": [
           "vehicle",
           "drone"
         ],
-        "domain": "Ground (drone)",
-        "scale": "Light",
-        "drone": true
+        "hosts": [
+          "vehicle",
+          "drone"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ],
+        "exclusiveKit": "weaponry"
       }
     }
   }

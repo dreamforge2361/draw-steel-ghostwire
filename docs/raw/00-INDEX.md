@@ -36,7 +36,7 @@ When assembling, scrub: lore digressions, art briefs, “table fiction,” old t
 | `07-languages.md` | Languages (rules only) | Stage 3 draft (B75) | Chargen + check procedure; names + knowledge-only lock; lore gazetteer still non-goal (#67) |
 | `08-kits-gear-wealth.md` | Kits, Gear & Wealth (¥) | GW kits pattern | `10-kits.md`, `11-economy.md`, gear master distill |
 | `09-chrome-body-integrity.md` | Chrome & Body Integrity | GW draft (B71 catalog) | Pass A locks + implant ¥/Avail from Chrome pack + B55 Soft; packages/Frame Modules provisional |
-| `10-mods.md` | Mods | Stage 3 draft (B75) | Complete lock kept; table procedure + harvested §3G/§5F; no armor/gadget SKUs |
+| `10-mods.md` | Mods | Stage 3 draft (B75; vehicle/drone Armor=Stamina lock 2026-09-20) | Complete lock kept; table procedure + harvested §3G/§5F; wearable armor/gadget SKUs unpublished; vehicle/drone Armor + Weaponry 4-echelon ladders |
 | `11-perks.md` | Perks | GW | `17-perks.md` |
 | `12-operator.md` … `20-technomancer.md` | Class chapters | GW | `01`–`08`, `20` rulebook (rules only; strip lore) |
 | `21-the-wire.md` | The Wire (Matrix) | GW | **RAW-locked** B66 (2026-09-18); Wire Atlas B116 (2026-09-20); Linked 2026-09-20; Disconnected/Linked/Overlay/Jacked In, Rating 1–5, Trace Alert defaults, suites/payloads, Relay/Host/Segment; **0.3.68** Wire Kit / Rigger’s Harness / pack drones and vehicles = Connect |

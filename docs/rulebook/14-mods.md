@@ -75,8 +75,8 @@ Higher-grade gear costs more and has more mod slots. Hero-side benefits (Kit Sta
 Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md` + Foundry **Mods** pack.
 
 - **Weapon mods** — Gear master **§3G** (Smartlink, Suppressor, Recoil Comp, Extended Mag, Smart-Scope, Gas-Seal, Underbarrel Mount, Personalized Grip, …).
-- **Vehicle / drone mods** — Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
-- **Armor + gadget families** — expanding under Foundry spike **B20**.
+- **Vehicle / drone mods** — Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time. Armor kits grant Stamina (Integrity); machines have no armor rating / DR.
+- **Wearable armor + gadget families** — expanding under Foundry spike **B20**. Vehicle/drone Armor + Weaponry ladders are **§5F**, not this row.
 - **Programs** — occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
 - **Matrix payloads** — consumable mods (Gear master **§4C**; locked 2026-09-17). A payload fills one deck slot as a **magazine**, sharing the deck's slots with suites. Loading = Craft (Hacking) Project; the result sets its fires (**low 1 / middle 3 / high 5**, provisional). Each Run spends one; at 0 the slot frees. **Whiteout** compile is **steep / hard**. A payload fills a slot, it never has one, so the Consumables rule above still holds. Full player rule: `docs/raw/21-the-wire.md` (Deck software: suites vs payloads); doctrine: `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md`.
 

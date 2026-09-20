@@ -69,7 +69,7 @@ Align to the Vehicle Stat Card in `05-wrench.md`. Profiles here are **qualitativ
 | **Domain** | Ground / Air / Water / Space |
 | **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |
 | **Integrity** | Damage track (numeric deferred). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress) |
-| **Armor** | Flat damage reduction feel; stacks defensively with Scale |
+| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina (Integrity) bonus. Kits do not stack. |
 | **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |
 | **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |
 | **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |
@@ -78,7 +78,7 @@ Align to the Vehicle Stat Card in `05-wrench.md`. Profiles here are **qualitativ
 | **Echelon** | 1–4 |
 | **Cost ¥** | Object price; never buys class power |
 
-**Mounted weapons** come from Category 3; installs are §Craft Projects (`14-mods.md`). Hardpoints usually need a **Gun Rack** mod (§5F) unless the profile already includes a factory mount.
+**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (`14-mods.md`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.
 
 ---
 
@@ -117,10 +117,10 @@ Align to the Vehicle Stat Card in `05-wrench.md`. Profiles here are **qualitativ
 
 ## 5. Customize & modding
 
-- Published **vehicle/drone mods** live in Gear master **§5F** (Gun Rack, Plate-Up, Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …).
+- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time. Armor kits grant Stamina (Integrity); machines have no armor rating / DR.
 - Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`14-mods.md`).
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
-- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or Gun Rack).
+- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).
 
 ---
 

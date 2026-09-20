@@ -24,9 +24,9 @@ Control modes (Remote / Jump-In / crew stations), Fleet Size, Uptime drain, and 
 
 ## 2. Band templates (provisional)
 
-The Machines numeric pass hasn't published Integrity / Speed / Armor. Until it does:
+The Machines numeric pass hasn't published Integrity / Speed numbers yet. Until it does:
 
-- **Deploy Stamina** = template Stamina × echelon multiplier (E1 ×1, E2 ×1.5, E3 ×2, E4 ×2.5), rounded.
+- **Deploy Stamina** = template Stamina × echelon multiplier (E1 ×1, E2 ×1.5, E3 ×2, E4 ×2.5), rounded, **plus** an installed, active armor kit's `staminaBonus` (Scrap-Weld +6 / Plate-Up +12 / Combat Plate +18 / Aegis Kit +27). One armor kit at a time. Ghostwire machines have no armor rating / DR.
 - **Deploy speed** = template speed; crewed vehicles add their chapter Speed band (Slow −2, Standard +0, Fast +2, Extreme +4). Drones have no Speed band in `15-drones.md`, so they keep the template speed.
 - **Movement type** from domain: Ground → walk, Air / Space → fly, Water → swim.
 

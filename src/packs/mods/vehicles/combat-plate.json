@@ -1,12 +1,12 @@
 {
-  "_id": "3Gm5TNWoneP0tI8N",
-  "_key": "!items!3Gm5TNWoneP0tI8N",
-  "name": "GHOSTWIRE.Mods.Items.PlateUp.Name",
+  "_id": "yBf28QdlONHik8Tp",
+  "_key": "!items!yBf28QdlONHik8Tp",
+  "name": "GHOSTWIRE.Mods.Items.CombatPlate.Name",
   "type": "treasure",
   "img": "icons/commodities/tech/metal-pistons.webp",
   "system": {
     "description": {
-      "value": "GHOSTWIRE.Mods.Items.PlateUp.Description",
+      "value": "GHOSTWIRE.Mods.Items.CombatPlate.Description",
       "director": ""
     },
     "source": {
@@ -14,10 +14,10 @@
       "page": "Master Gear List",
       "license": "Draw Steel Creator License"
     },
-    "_dsid": "plate-up",
+    "_dsid": "combat-plate",
     "kind": "other",
     "category": "trinket",
-    "echelon": 2,
+    "echelon": 3,
     "keywords": [],
     "quantity": 1,
     "project": {
@@ -33,12 +33,12 @@
   },
   "effects": [
     {
-      "_id": "DUbwpzMtlPPGIXEr",
-      "_key": "!items.effects!3Gm5TNWoneP0tI8N.DUbwpzMtlPPGIXEr",
-      "name": "Machine Armor (+12 Stamina)",
+      "_id": "pusJGdulURuMMXxl",
+      "_key": "!items.effects!yBf28QdlONHik8Tp.pusJGdulURuMMXxl",
+      "name": "Machine Armor (+18 Stamina)",
       "img": "icons/commodities/tech/metal-pistons.webp",
-      "origin": "Compendium.draw-steel-ghostwire.mods.Item.3Gm5TNWoneP0tI8N",
-      "description": "<p>Installed on a vehicle or drone: +12 Stamina (Integrity). One armor kit at a time. Ghostwire machines have no armor rating or damage reduction.</p>",
+      "origin": "Compendium.draw-steel-ghostwire.mods.Item.yBf28QdlONHik8Tp",
+      "description": "<p>Installed on a vehicle or drone: +18 Stamina (Integrity). One armor kit at a time. Ghostwire machines have no armor rating or damage reduction.</p>",
       "disabled": false,
       "transfer": false,
       "statuses": [],
@@ -65,7 +65,7 @@
           {
             "key": "system.stamina.bonuses.treasure",
             "type": "upgrade",
-            "value": 12,
+            "value": 18,
             "phase": "initial",
             "priority": null
           }
@@ -81,9 +81,9 @@
   "flags": {
     "draw-steel-ghostwire": {
       "mod": {
-        "echelon": 2,
-        "availability": "restricted",
-        "price": 3000,
+        "echelon": 3,
+        "availability": "military",
+        "price": 8000,
         "modSlots": 0,
         "tags": [
           "Armor"
@@ -101,12 +101,12 @@
           "repair"
         ],
         "exclusiveKit": "armor",
-        "staminaBonus": 12,
+        "staminaBonus": 18,
         "staminaByEchelon": [
-          12,
-          12,
-          12,
-          12
+          18,
+          18,
+          18,
+          18
         ]
       }
     }

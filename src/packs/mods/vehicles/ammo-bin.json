@@ -44,10 +44,16 @@
         "availability": "restricted",
         "price": 2500,
         "modSlots": 0,
-        "tags": [],
-        "host": "vehicle",
+        "tags": [
+          "Ammo"
+        ],
+        "host": [
+          "vehicle",
+          "drone"
+        ],
         "hosts": [
-          "vehicle"
+          "vehicle",
+          "drone"
         ],
         "slotCost": 1,
         "craftSkill": [
