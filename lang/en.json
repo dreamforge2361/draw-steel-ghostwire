@@ -3758,7 +3758,7 @@
           "CompileAgent": {
             "Name": "Compile Agent",
             "Story": "Deck daemons. Software, not Resonance.",
-            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range. <strong>Cost:</strong> 3 Bandwidth. <strong>Requires Overlay or Jacked In</strong> — Linked refuses; Agents need immersion.</p><p><strong>Compile (main action):</strong> an Agent of your choice (Probe, Spike, Daemon, or Watchdog) manifests under your control, if you are under your Agent cap. Open this card and press <strong>Compile Agent</strong> to pick the archetype and place the token. <strong>Command (maneuver):</strong> your compiled Agents move and act (on your turn, per the extension model at minor rank).</p><p>Agents are deck software — they do not share sprite Actors and they are not compiled from Resonance.</p>",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range. <strong>Cost:</strong> 3 Bandwidth. <strong>Requires Overlay or Jacked In</strong> — Linked refuses; Agents need immersion.</p><p><strong>Compile (main action):</strong> an Agent of your choice (Probe, Spike, Daemon, or Watchdog) manifests under your control, if you are under your Agent cap. Use this ability to pick the archetype and place the token (the Compile Agent button on this card does the same). A low result still compiles — the Agent manifests unstable. <strong>Command (maneuver):</strong> your compiled Agents move and act (on your turn, per the extension model at minor rank). Use while already at cap rolls the command without compiling another.</p><p>Agents are deck software — they do not share sprite Actors and they are not compiled from Resonance.</p>",
             "Tier1": "The Agent manifests unstable (it acts next turn instead of now), or a command garbles (Director’s call).",
             "Tier2": "The Agent compiles, or the command resolves, normally.",
             "Tier3": "You compile an Agent and issue a free command in the same action."
@@ -3766,7 +3766,7 @@
           "DecompileAgent": {
             "Name": "Decompile Agent",
             "Story": "Kill the process.",
-            "Effect_before0000000000": "<p>Free maneuver. Dismiss one compiled Agent, or the whole roster. Removes the token and the world Actor. No Bandwidth refund. You can decompile while Linked or Disconnected — tearing down your own software does not need immersion.</p>"
+            "Effect_before0000000000": "<p>Free maneuver. Dismiss one compiled Agent, or the whole roster. Use this ability to pick the target (or Decompile All). Removes the token and the world Actor. No Bandwidth refund. You can decompile while Linked or Disconnected — tearing down your own software does not need immersion.</p>"
           },
           "KillSwitch": {
             "Name": "Kill Switch",
@@ -7017,6 +7017,10 @@
           "Compile": "Compile Agent",
           "Decompile": "Decompile",
           "DecompileAll": "Decompile All",
+          "DecompileTitle": "Decompile an Agent",
+          "DecompilePrompt": "Dismiss one of {name}'s compiled Agents, or the whole roster.",
+          "DecompileLabel": "Agent",
+          "None": "{name} has no compiled Agents to decompile.",
           "CompileTitle": "Compile an Agent",
           "CompilePrompt": "{name} compiles at the <strong>{band}</strong> band (level {level}, Logic {logic}). Cost: {cost} Bandwidth in combat. Overlay or Jacked In required. Stamina is stamped from the caster the moment the Agent manifests.",
           "ArchetypeLabel": "Archetype",

@@ -583,14 +583,15 @@ Spec: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picke
   - [ ] Foundry-verify: place Food / Armor / Weapons kiosks; buy; Use Kickwire on a hero; token shows the street-kiosk plate
 
 ### B120 Hacker Agents — sprite parity (2026-09-20)
-Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **Compile Agent** (3 Bandwidth, Overlay/Jacked In; Linked refuses) + **Decompile Agent** (free maneuver). 12 Actors in `src/packs/summons/agents/` (Probe/Spike/Daemon/Watchdog × minor/int/adv). `scripts/agents.mjs`. Cap 2→3@5→4@8. Distinct from sprites. **SHIPPED 0.3.72.** Sheet icons **0.3.73** (`assets/icons/abilities/compile-agent.svg` / `decompile-agent.svg`). No Gold Line `{ force: true }`. No PDF.
-- [x] **B120** Hacker Agents (module **0.3.72**, icons **0.3.73**) — **pending Foundry-verify**. Done when:
+Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **Compile Agent** (3 Bandwidth, Overlay/Jacked In; Linked refuses) + **Decompile Agent** (free maneuver). 12 Actors in `src/packs/summons/agents/` (Probe/Spike/Daemon/Watchdog × minor/int/adv). `scripts/agents.mjs`. Cap 2→3@5→4@8. Distinct from sprites. **SHIPPED 0.3.72.** Sheet icons **0.3.73** (`assets/icons/abilities/compile-agent.svg` / `decompile-agent.svg`). **0.3.76:** Abilities-tab Use opens the picker and places the token (0.3.72 sheet-button-only left Use as a bare power roll). No Gold Line `{ force: true }`. No PDF.
+- [x] **B120** Hacker Agents (module **0.3.72**, icons **0.3.73**, Use-spawn **0.3.76**) — **pending Foundry-verify**. Done when:
   - [x] 12 Agent Actors + Compile/Decompile abilities + L1 class grant
   - [x] `scripts/agents.mjs` registered; Overlay/Jacked In gate; cap; dismiss
   - [x] RAW 19 + Wire + glossary, rulebook 08/20/18, manuscript L1/slang/chargen, journals + VOIDMARK index
   - [x] Smoke: `node tools/hacker-agents-smoke.mjs`
   - [x] Compile/Decompile (and Kessic embeds) `img` is a module SVG under `assets/icons/abilities/`
-  - [ ] Foundry-verify: Overlay Compile Agent → Spike token; Linked refuses; cap 2; Decompile removes token+Actor; sheet shows the two ability icons
+  - [x] AbilityModel#use intercept: Compile Agent Use → picker + token; Decompile Agent Use → dismiss
+  - [ ] Foundry-verify: Overlay **Use** Compile Agent → Spike token; Linked refuses; cap 2; **Use** Decompile removes token+Actor; sheet shows the two ability icons
 
 ### Mule-Bot dual Item + Actor (2026-09-20)
 Michael: “Bug: Mulebot is treasure? It should be an actor.” **Treasure is intentional** — every Ghostwire drone/vehicle SKU is Draw Steel `type: treasure` (ownership / ¥ / mods). Deploy stamps a linked Actor from the Summons **band** template (`mule-bot` → `machine-drone-medium`); Recall deletes the Actor, Item stays. Mule-Bot flags already matched sibling drones (Stinger / Warhound). **SHIPPED 0.3.75:** named Summons Actor is optional Director placement for an unowned mule (Wire Kit, hauler plate). Deploy does **not** switch to named-SKU templates (other drones unchanged). No Gold Line `{ force: true }`. No PDF.
