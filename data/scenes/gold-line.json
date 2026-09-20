@@ -1,6 +1,6 @@
 {
   "id": "gold-line",
-  "version": 1,
+  "version": 2,
   "nameKey": "GHOSTWIRE.Scenes.GoldLine.Name",
   "folderKey": "GHOSTWIRE.Scenes.GoldLine.Folder",
   "width": 6472,
@@ -38,6 +38,11 @@
     "elevation": {
       "bottom": 0,
       "top": 10
+    },
+    "video": {
+      "loop": true,
+      "autoplay": true,
+      "volume": 0
     }
   },
   "roofTile": {

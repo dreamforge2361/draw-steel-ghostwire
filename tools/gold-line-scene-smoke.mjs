@@ -66,7 +66,7 @@ ok(existsSync(SCRIPT), "inject script exists");
 ok(existsSync(JOURNAL), "Deadhead journal source exists");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.36", `module.json is 0.3.36 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.37", `module.json is 0.3.37 (got ${moduleJson.version})`);
 ok(moduleJson.esmodules.includes("scripts/module.mjs"), "module still loads scripts/module.mjs");
 
 const template = readBomFreeJson(TEMPLATE);
@@ -76,7 +76,9 @@ ok(template.grid.distance === 5 && template.grid.units === "ft", "template grid 
 ok(template.roofTile.occlusion.mode === 2, "roof occlusion is SURFACE (2)");
 ok(template.roofTile.elevation === 10, "roof tile elevation is 10");
 ok(template.roofTile.width === 6472 && template.roofTile.height === 958, "roof tile matches plate");
+ok(template.version >= 2, `template version is 2+ (got ${template.version})`);
 ok(template.roofTile.video.loop === true && template.roofTile.video.autoplay === true, "roof tile loops");
+ok(template.level.video?.loop === true && template.level.video?.autoplay === true, "level template has video loop/autoplay");
 
 const squaresX = template.width / template.grid.size;
 const squaresY = template.height / template.grid.size;
@@ -106,6 +108,11 @@ ok(moduleSrc.includes("registerGoldLineScene"), "module.mjs registers Gold Line 
 const script = readFileSync(SCRIPT, "utf8");
 ok(script.includes("ensureGoldLineScene"), "inject exports ensureGoldLineScene");
 ok(script.includes("SURFACE") || script.includes("occlusion"), "inject mentions roof occlusion");
+ok(!/method:\s*["']HEAD["']/.test(script), "inject does not probe media with HEAD");
+ok(!/\bsrcExists\s*\(/.test(script), "inject does not call srcExists (HEAD)");
+ok(script.includes("FilePicker.browse") && script.includes("Range"), "inject probes via FilePicker or ranged GET");
+ok(script.includes("levelBackground") && script.includes("background.video"), "inject sets Level background video flags for loops");
+ok(/roof\.update\(data\)/.test(script), "force updates an existing roof tile");
 
 const sor = readFileSync(SOR, "utf8");
 ok(/L1.*TAIL/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has dual-Hammerhead beat remap");

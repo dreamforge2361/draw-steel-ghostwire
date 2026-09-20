@@ -14,6 +14,6 @@ Interior / venue play surfaces (not district overviews). **Native resolution pre
 
 Foundry path: `modules/draw-steel-ghostwire/assets/maps/battlemaps/<file>`
 
-Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene from `data/scenes/gold-line.json` (grid 208 / 5 ft). Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
+Mama club: drop the file onto a Scene (not auto-created). Gold Line: first GM load injects the Scene from `data/scenes/gold-line.json` (grid 208 / 5 ft). Roofs tile is on the **Tiles** layer (elevation 10, Surface). If a 0.3.36 world stuck on stills, `await game.ghostwire.ensureGoldLineScene({ force: true })` then re-activate. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
 
 PNG originals stay local under `_png-backup/` (gitignored), same policy as `assets/maps/districts/`.
