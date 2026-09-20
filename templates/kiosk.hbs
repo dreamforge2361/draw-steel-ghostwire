@@ -69,7 +69,7 @@
     <ul class="gw-kiosk-list">
       {{#each listings}}
       <li class="gw-kiosk-row {{#if missing}}missing{{/if}}">
-        <img src="{{img}}" alt="">
+        <img class="gw-kiosk-row-img" src="{{img}}" alt="" data-fallback="{{fallbackImg}}">
         <div class="gw-kiosk-row-body">
           <div class="gw-kiosk-row-name">{{name}}</div>
           <div class="gw-kiosk-row-price">

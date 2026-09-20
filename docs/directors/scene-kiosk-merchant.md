@@ -7,6 +7,8 @@ A **kiosk** is a named stall on the Scene: Mama’s Bar, an ARG lobby desk, a st
 
 **Default token art:** `modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp` (Michael circular street-kiosk plate; PNG original at `assets/tokens/kiosks/kiosk-merchant.png`). Every new place / preset uses this Actor `img` and Token texture. Already-placed world kiosks that still show the old Foundry merchant icon pick it up on reload. Custom art is left alone. Gold Line is not rewritten — if a kiosk on that Scene still shows the old icon after pull, set Actor `img` + Token texture to the WebP path.
 
+**Shelf item art (0.3.66):** street food and chem SKUs use module SVGs at `modules/draw-steel-ghostwire/assets/icons/consumables/<dsid>.svg`. Stock Foundry 14 does not ship `icons/consumables/…`. If a row img is blank or 404s, the shop shows the food or chem fallback, then `icons/svg/item-bag.svg`.
+
 ## Place
 
 1. Token controls › **cash register**. Pick a **kiosk type** (or Empty shelf) and an optional name. Blank name uses the type default (Street Food Kiosk, Armor Locker, …). You can rename after.
@@ -34,7 +36,7 @@ New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk au
 
 ## Street consumables
 
-Food and drink are meals. Chems are doses:
+Food and drink are stall snacks (Brick Bar ¥3, Buzz-Can ¥4, Lyte-Pouch ¥5, Shift Chews ¥6, Stall Ramen ¥10, Grease Box ¥12). Chems are doses:
 
 - **Kickwire** (¥400) — combat stim: temp Stamina, Speed, Physique edge; Weakened crash.
 - **Clearline** (¥350) — focus chem: Logic + Instinct edge for 2 rounds.

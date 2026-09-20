@@ -3,7 +3,7 @@
   "_key": "!items!GwShiftChews0001",
   "name": "GHOSTWIRE.Gear.Items.ShiftChews.Name",
   "type": "treasure",
-  "img": "icons/consumables/pills/pills-tube-orange.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/shift-chews.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.ShiftChews.Description",
@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 1,
         "availability": "street",
-        "price": 80,
+        "price": 6,
         "modSlots": 0,
         "tags": [
           "Consumable",

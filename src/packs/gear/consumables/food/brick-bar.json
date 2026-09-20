@@ -3,7 +3,7 @@
   "_key": "!items!GwBrickBar000001",
   "name": "GHOSTWIRE.Gear.Items.BrickBar.Name",
   "type": "treasure",
-  "img": "icons/consumables/food/candy-bar-wrapped-tan.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/brick-bar.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.BrickBar.Description",
@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 1,
         "availability": "street",
-        "price": 30,
+        "price": 3,
         "modSlots": 0,
         "tags": [
           "Consumable",

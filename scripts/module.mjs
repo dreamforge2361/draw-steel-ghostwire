@@ -225,7 +225,7 @@ Hooks.once("ready", async () => {
   let stripped = 0;
   for (const actor of game.actors) {
     if (!actor.isOwner) continue;
-    const leftoverTemps = [...actor.items].filter(isTemporaryConsoleVerb);
+    const leftoverTemps = [...actor.items].filter(item => isTemporaryConsoleVerb(item));
     const orphans = orphanTemporaryVerbs(leftoverTemps, keepUuids);
     const orphanIds = new Set(orphans.map(item => item.id));
     if (orphans.length) {

@@ -4837,27 +4837,27 @@
         },
         "BuzzCan": {
           "Name": "Buzz-Can",
-          "Description": "<p><em>Buzz-Can · Grid Cola · caffeine-taurine street soda</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥35 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> A dented can from the night stall. Keeps you upright through a long watch. No combat bonus.</p><p><strong>Consumable:</strong> bought per can and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Buzz-Can · Grid Cola · caffeine-taurine street soda</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥4 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> A dented can from the night stall. Keeps you upright through a long watch. No combat bonus.</p><p><strong>Consumable:</strong> bought per can and used up in play; no mod slots.</p>"
         },
         "LytePouch": {
           "Name": "Lyte-Pouch",
-          "Description": "<p><em>Lyte-Pouch · Electro-Salt · electrolyte gel pack</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥20 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Salty gel in a foil pouch. Replaces a missed meal on a hot shift. No combat bonus.</p><p><strong>Consumable:</strong> bought per pouch and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Lyte-Pouch · Electro-Salt · electrolyte gel pack</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥5 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Salty gel in a foil pouch. Replaces a missed meal on a hot shift. No combat bonus.</p><p><strong>Consumable:</strong> bought per pouch and used up in play; no mod slots.</p>"
         },
         "StallRamen": {
           "Name": "Stall Ramen",
-          "Description": "<p><em>Stall Ramen · Night-Market Noodles · instant protein broth</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥45 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Styrofoam bowl, mystery broth, enough salt to wake the dead. Street meal. No combat bonus.</p><p><strong>Consumable:</strong> bought per bowl and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Stall Ramen · Night-Market Noodles · instant protein broth</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥10 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Styrofoam bowl, mystery broth, enough salt to wake the dead. Street meal. No combat bonus.</p><p><strong>Consumable:</strong> bought per bowl and used up in play; no mod slots.</p>"
         },
         "GreaseBox": {
           "Name": "Grease Box",
-          "Description": "<p><em>Grease Box · Street Combo · rice and skewer takeout</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥60 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Oil-stained carton from the alley window. Fills you. No combat bonus.</p><p><strong>Consumable:</strong> bought per box and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Grease Box · Street Combo · rice and skewer takeout</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥12 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Oil-stained carton from the alley window. Fills you. No combat bonus.</p><p><strong>Consumable:</strong> bought per box and used up in play; no mod slots.</p>"
         },
         "BrickBar": {
           "Name": "Brick Bar",
-          "Description": "<p><em>Brick Bar · Cal-Block · compressed ration</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥30 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> A dense bar that tastes like cardboard and soy. One meal if you can chew it. No combat bonus.</p><p><strong>Consumable:</strong> bought per bar and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Brick Bar · Cal-Block · compressed ration</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥3 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> A dense bar that tastes like cardboard and soy. One meal if you can chew it. No combat bonus.</p><p><strong>Consumable:</strong> bought per bar and used up in play; no mod slots.</p>"
         },
         "ShiftChews": {
           "Name": "Shift Chews",
-          "Description": "<p><em>Shift Chews · Enduro Tabs · shift-long supplement</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥80 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Chalky tabs sold next to the time clock. Cover a missed meal on a double. No combat bonus.</p><p><strong>Consumable:</strong> bought per pack and used up in play; no mod slots.</p>"
+          "Description": "<p><em>Shift Chews · Enduro Tabs · shift-long supplement</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥6 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Chalky tabs sold next to the time clock. Cover a missed meal on a double. No combat bonus.</p><p><strong>Consumable:</strong> bought per pack and used up in play; no mod slots.</p>"
         },
         "Kickwire": {
           "Name": "Kickwire",

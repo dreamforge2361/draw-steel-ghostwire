@@ -3,7 +3,7 @@
   "_key": "!items!GwBuzzCan0000001",
   "name": "GHOSTWIRE.Gear.Items.BuzzCan.Name",
   "type": "treasure",
-  "img": "icons/consumables/drinks/soda-bottle-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/buzz-can.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.BuzzCan.Description",
@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 1,
         "availability": "street",
-        "price": 35,
+        "price": 4,
         "modSlots": 0,
         "tags": [
           "Consumable",

@@ -82,4 +82,6 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 
 **0.3.64 (Michael smoke 2026-09-20):** Ping (and the other eight) showed on the Draw Steel hero ability sheet after applet use. Cause: 0.3.61 hide looked for `data-item-id` / `data-entry-id`; DS 1.1.2 rows use `data-document-uuid` and `_prepareAbilitiesContext` (`flags.draw-steel.hideInSheet`). Fix: stamp `hideInSheet` on temps, filter abilities context, CSS + sheet hooks (including ActorSheetV2), ready deletes only orphan temps not backing a chat `abilityUuid`. Do **not** re-grant verbs onto sheets. Console lists: revealed-first then A–Z; hover full name.
 
+**0.3.66 (Michael console 2026-09-20):** World ready threw `Flag scope "0" is not valid or not currently active` at `DrawSteelItem.getFlag` ← `isTemporaryConsoleVerb` ← `Array.filter` during `Game.setupGame`. Cause: `.filter(isTemporaryConsoleVerb)` / `.filter(isOffSheetMatrixVerb)` pass `(element, index)`; index `0` became `moduleId`. Fix: wrap `item => isTemporary…(item)`; if the second arg is not a non-empty string, use `MODULE_ID` (same for `hasHideInSheetFlag`). Do **not** use those helpers bare as filter/map callbacks.
+
 Smoke: `node tools/b117-console-verbs-smoke.mjs`. No live Foundry in this environment.

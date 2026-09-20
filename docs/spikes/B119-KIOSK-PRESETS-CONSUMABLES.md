@@ -20,12 +20,12 @@ Treasure Items under `src/packs/gear/consumables/` with `flags.draw-steel-ghostw
 
 | SKU | ¥ | Notes |
 |---|---|---|
-| Buzz-Can | 35 | Stim soda |
-| Lyte-Pouch | 20 | Electrolyte gel |
-| Stall Ramen | 45 | Street noodles |
-| Grease Box | 60 | Rice + skewer takeout |
-| Brick Bar | 30 | Ration bar |
-| Shift Chews | 80 | Shift supplement |
+| Buzz-Can | 4 | Stim soda |
+| Lyte-Pouch | 5 | Electrolyte gel |
+| Stall Ramen | 10 | Street noodles |
+| Grease Box | 12 | Rice + skewer takeout |
+| Brick Bar | 3 | Ration bar |
+| Shift Chews | 6 | Shift supplement |
 
 Food is inventory flavor (no combat bonus).
 
@@ -82,3 +82,7 @@ node tools/kiosk-smoke.mjs
 ```
 
 Foundry: Token controls › Place kiosk › **General / Food** on a non–Gold Line scratch Scene. Shelf lists the six food SKUs. Repeat Armor / Weapons. Buy Buzz-Can. On a hero, Use Kickwire — temp Stamina + Speed AE; crash when it ends.
+
+**0.3.66 (Michael kiosk smoke 2026-09-20):** Food / chem rows showed no image. SKU `img` used Foundry game-icons (`icons/consumables/…`) that 404 on stock V14. Module SVGs ship at `assets/icons/consumables/<dsid>.svg` plus `food.svg` / `chem.svg` shelf fallbacks. Kiosk list `kioskListingImg` rejects blank / non-`icons/svg` `icons/` trees; `onerror` falls back food vs chem vs `icons/svg/item-bag.svg`. Rebuild `node tools/build-packs.mjs gear`.
+
+**0.3.66 (Michael: street-snack ¥):** Food/drink was priced like gear (Brick Bar ¥30). Stall prices: Brick Bar ¥3, Buzz-Can ¥4, Lyte-Pouch ¥5, Shift Chews ¥6, Stall Ramen ¥10, Grease Box ¥12. Chems stay Kickwire ¥400 / Clearline ¥350 / Numb-Tap ¥250 / Red Dust ¥600. Gear Master T5 ¥50 floor is for real gear, not snacks.

@@ -1354,6 +1354,11 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border: none;
   border-radius: 4px;
   object-fit: cover;
+  background: #0c141c;
+}
+.ghostwire-kiosk .gw-kiosk-row img.missing-art {
+  background: color-mix(in srgb, var(--kiosk-cyan) 14%, #0c141c);
+  border: 1px solid var(--kiosk-border);
 }
 .ghostwire-kiosk .gw-kiosk-row-name { font-weight: 600; }
 .ghostwire-kiosk .gw-kiosk-row-price { display: flex; gap: 0.45rem; align-items: baseline; font-size: 0.85rem; }

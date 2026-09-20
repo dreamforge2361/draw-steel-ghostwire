@@ -14,6 +14,14 @@ export const KIOSK_TOKEN_ART = `modules/${MODULE_ID}/assets/tokens/kiosks/kiosk-
 export const LEGACY_KIOSK_ART = Object.freeze([
   "icons/skills/trades/academics-merchant-scribe.webp",
 ]);
+/** Core Foundry 14 always ships `icons/svg`. Game-icons trees (`icons/consumables/…`) 404. */
+export const KIOSK_CORE_ITEM_IMG = "icons/svg/item-bag.svg";
+export const KIOSK_CONSUMABLE_ICON_DIR = `modules/${MODULE_ID}/assets/icons/consumables`;
+export const kioskConsumableIcon = dsid => `${KIOSK_CONSUMABLE_ICON_DIR}/${dsid}.svg`;
+export const KIOSK_SHELF_FALLBACK_IMG = Object.freeze({
+  food: kioskConsumableIcon("food"),
+  chem: kioskConsumableIcon("chem"),
+});
 export const DEFAULT_KIOSK_RANGE = 2;
 export const CATALOG_PRICE_FLAGS = Object.freeze(["gear", "chrome", "matrix", "mod", "vehicle", "focus"]);
 export const WEALTH_PATH = "system.hero.wealth";
@@ -29,6 +37,57 @@ export function isKioskActor(actor) {
 
 export function isHeroActor(actor) {
   return actor?.type === "hero";
+}
+
+/** Food vs chem shelf for kiosk row art. Tags cover SKUs that omit kioskShelf. */
+export function kioskShelfOf(item) {
+  const gear = gwFlags(item).gear ?? {};
+  const shelf = String(gear.kioskShelf ?? "").toLowerCase();
+  if (shelf === "food" || shelf === "chem") return shelf;
+  const tags = Array.isArray(gear.tags) ? gear.tags : [];
+  if (tags.includes("StreetFood")) return "food";
+  if (tags.includes("Chem")) return "chem";
+  return "";
+}
+
+/**
+ * True when Foundry 14 can load this path without a game-icons pack.
+ * Blank / `icons/consumables/…` (and other non-svg `icons/` trees) 404 on stock V14.
+ */
+export function isUsableKioskImg(img) {
+  const src = typeof img === "string" ? img.trim() : "";
+  if (!src) return false;
+  if (/^icons\//i.test(src) && !/^icons\/svg\//i.test(src)) return false;
+  return true;
+}
+
+export function kioskListingFallbackImg(item) {
+  const shelf = kioskShelfOf(item);
+  return KIOSK_SHELF_FALLBACK_IMG[shelf] ?? KIOSK_CORE_ITEM_IMG;
+}
+
+export function kioskListingImg(item) {
+  const src = typeof item?.img === "string" ? item.img.trim() : "";
+  if (isUsableKioskImg(src)) return src;
+  return kioskListingFallbackImg(item);
+}
+
+function bindKioskImgFallback(img) {
+  if (!(img instanceof HTMLImageElement) || img.dataset.kioskImgBound) return;
+  img.dataset.kioskImgBound = "true";
+  img.addEventListener("error", () => {
+    const fallback = img.dataset.fallback;
+    const current = img.getAttribute("src") ?? "";
+    if (fallback && current !== fallback) {
+      img.src = fallback;
+      return;
+    }
+    if (current !== KIOSK_CORE_ITEM_IMG) {
+      img.src = KIOSK_CORE_ITEM_IMG;
+      return;
+    }
+    img.classList.add("missing-art");
+  });
 }
 
 export function getWealth(actor) {
@@ -478,7 +537,8 @@ function defineKioskShop() {
           id: row.id,
           uuid: row.uuid,
           name: source?.name ?? loc("MissingItem"),
-          img: source?.img ?? "icons/svg/item-bag.svg",
+          img: source ? kioskListingImg(source) : KIOSK_CORE_ITEM_IMG,
+          fallbackImg: source ? kioskListingFallbackImg(source) : KIOSK_CORE_ITEM_IMG,
           price,
           priceLabel: formatYen(price),
           catalog,
@@ -547,6 +607,7 @@ function defineKioskShop() {
           input.addEventListener("change", event => this.#saveUuid(event.currentTarget));
         }
       }
+      for (const img of root.querySelectorAll(".gw-kiosk-row-img")) bindKioskImgFallback(img);
     }
 
     async #saveConfig() {

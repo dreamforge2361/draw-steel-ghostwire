@@ -9,6 +9,8 @@ import { join } from "node:path";
 import {
   DEFAULT_KIOSK_RANGE,
   KIOSK_ACTOR_ID,
+  KIOSK_CORE_ITEM_IMG,
+  KIOSK_SHELF_FALLBACK_IMG,
   KIOSK_TOKEN_ART,
   KIOSK_UUID,
   WEALTH_PATH,
@@ -18,8 +20,13 @@ import {
   formatYen,
   isBuyerInRange,
   isKioskActor,
+  isUsableKioskImg,
   isWithinKioskRange,
   itemCreateData,
+  kioskConsumableIcon,
+  kioskListingFallbackImg,
+  kioskListingImg,
+  kioskShelfOf,
   listingPrice,
   normalizeInventory,
   planPurchase,
@@ -220,12 +227,13 @@ note(medIds.has("GwKickwire000001") && medIds.has("Rv0BEDaaCZ14x6GV"), "medical 
 note(armor.every(row => row.uuid.includes(".gear.Item.")), "armor UUIDs are gear pack");
 note(drones.every(row => row.uuid.includes(".vehicles.Item.")), "drone UUIDs are vehicles pack");
 
+const buzzCan = JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8"));
 const boughtFood = applyPurchase({
   wealth: 5000,
-  price: listingPrice({ price: null }, { flags: { "draw-steel-ghostwire": { gear: { price: 35 } } } }),
-  sourceItem: JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8")),
+  price: listingPrice({ price: null }, buzzCan),
+  sourceItem: buzzCan,
 });
-note(boughtFood.ok && boughtFood.wealthAfter === 4965 && boughtFood.item?.name === "GHOSTWIRE.Gear.Items.BuzzCan.Name", "purchase Buzz-Can deducts ¥35");
+note(boughtFood.ok && boughtFood.wealthAfter === 4996 && boughtFood.item?.name === "GHOSTWIRE.Gear.Items.BuzzCan.Name", "purchase Buzz-Can deducts ¥4");
 
 console.log("\n7) Chem dose plans");
 const kickwire = JSON.parse(readFileSync("src/packs/gear/consumables/chems/kickwire.json", "utf8"));
@@ -258,6 +266,59 @@ note(numb.flags["draw-steel-ghostwire"].gear.consumableUse.tempStamina === 8, "N
 note(lang.GHOSTWIRE.ConsumableUse.AbilityName === "Use {item}", "lang Use {item}");
 note(!JSON.stringify(lang.GHOSTWIRE.Gear.Items.Kickwire).includes("Draw Steel Heroes"), "Kickwire player text is Ghostwire-only");
 note(lang.GHOSTWIRE.Gear.Items.Kickwire.Description.includes("Physique"), "Kickwire names Physique, not Might");
+
+console.log("\n8) Consumable kiosk art (0.3.66)");
+const kioskSrc = readFileSync("scripts/kiosk.mjs", "utf8");
+const kioskTpl = readFileSync("templates/kiosk.hbs", "utf8");
+note(!kioskSrc.includes("gold-line-scene"), "kiosk.mjs does not import gold-line-scene");
+note(kioskTpl.includes("data-fallback") && kioskTpl.includes("gw-kiosk-row-img"), "kiosk rows have img fallback hook");
+note(kioskSrc.includes("bindKioskImgFallback") && kioskSrc.includes("kioskListingImg"), "shop binds onerror fallback");
+note(KIOSK_CORE_ITEM_IMG === "icons/svg/item-bag.svg", "core fallback is icons/svg/item-bag.svg");
+note(KIOSK_SHELF_FALLBACK_IMG.food.endsWith("/food.svg") && KIOSK_SHELF_FALLBACK_IMG.chem.endsWith("/chem.svg"), "shelf fallbacks are food.svg / chem.svg");
+note(!isUsableKioskImg("") && !isUsableKioskImg("icons/consumables/drinks/soda-bottle-blue.webp"), "blank + icons/consumables are unusable");
+note(!isUsableKioskImg("icons/tools/medical/bandages-gauze.webp"), "non-svg icons/ trees are unusable");
+note(isUsableKioskImg("icons/svg/item-bag.svg") && isUsableKioskImg(kioskConsumableIcon("buzz-can")), "core svg + module svg are usable");
+const foodSku = JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8"));
+const chemSku = JSON.parse(readFileSync("src/packs/gear/consumables/chems/kickwire.json", "utf8"));
+note(kioskShelfOf(foodSku) === "food" && kioskShelfOf(chemSku) === "chem", "shelf from kioskShelf flag");
+note(kioskListingImg({ img: "icons/consumables/food/soup-broth-bowl-brown.webp", flags: foodSku.flags }) === KIOSK_SHELF_FALLBACK_IMG.food, "broken food game-icon falls back to food.svg");
+note(kioskListingImg({ img: "", flags: chemSku.flags }) === KIOSK_SHELF_FALLBACK_IMG.chem, "blank chem img falls back to chem.svg");
+note(kioskListingImg({ img: kioskConsumableIcon("stall-ramen") }) === kioskConsumableIcon("stall-ramen"), "module svg passes through");
+note(kioskListingFallbackImg({}) === KIOSK_CORE_ITEM_IMG, "unknown shelf falls back to item-bag");
+note(kioskListingImg(null) === KIOSK_CORE_ITEM_IMG, "missing item uses item-bag");
+
+function walkConsumables(dir) {
+  const out = [];
+  for (const name of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, name.name);
+    if (name.isDirectory()) out.push(...walkConsumables(path));
+    else if (name.name.endsWith(".json") && name.name !== "_folder.json") out.push(path);
+  }
+  return out;
+}
+const skuFiles = walkConsumables("src/packs/gear/consumables");
+note(skuFiles.length === 10, `ten consumable SKUs (got ${skuFiles.length})`);
+let skuArtOk = 0;
+for (const path of skuFiles) {
+  const doc = JSON.parse(readFileSync(path, "utf8"));
+  const dsid = doc.system?._dsid;
+  const expected = kioskConsumableIcon(dsid);
+  const disk = join("assets/icons/consumables", `${dsid}.svg`);
+  if (doc.img === expected && existsSync(disk) && !String(doc.img).startsWith("icons/")) skuArtOk += 1;
+}
+note(skuArtOk === 10, `all SKU img paths are module SVGs on disk (${skuArtOk}/10)`);
+note(existsSync("assets/icons/consumables/food.svg") && existsSync("assets/icons/consumables/chem.svg"), "food.svg + chem.svg fallbacks on disk");
+note(!gold.includes("kiosk"), "gold-line-scene.mjs still untouched");
+
+const foodPrices = Object.fromEntries(skuFiles.filter(p => p.includes("/food/")).map(p => {
+  const doc = JSON.parse(readFileSync(p, "utf8"));
+  return [doc.system._dsid, doc.flags["draw-steel-ghostwire"].gear.price];
+}));
+note(foodPrices["buzz-can"] === 4 && foodPrices["lyte-pouch"] === 5 && foodPrices["stall-ramen"] === 10 && foodPrices["grease-box"] === 12 && foodPrices["brick-bar"] === 3 && foodPrices["shift-chews"] === 6,
+  `food is street-snack ¥ (got ${JSON.stringify(foodPrices)})`);
+note(kickwire.flags["draw-steel-ghostwire"].gear.price === 400 && clearline.flags["draw-steel-ghostwire"].gear.price === 350 && numb.flags["draw-steel-ghostwire"].gear.price === 250 && dust.flags["draw-steel-ghostwire"].gear.price === 600, "chems keep stim ¥");
+note(/Cost:<\/strong> ¥4 /.test(lang.GHOSTWIRE.Gear.Items.BuzzCan.Description), "lang Buzz-Can is ¥4");
+note(/Cost:<\/strong> ¥3 /.test(lang.GHOSTWIRE.Gear.Items.BrickBar.Description), "lang Brick Bar is ¥3");
 
 for (const line of ok) console.log(line);
 if (fail.length) {
