@@ -1,5 +1,7 @@
 // Node token library (B113 + B116). Drop png+webp and a library.json / NODE_TOKEN_LIBRARY row.
 // Auto-nodes: Light → light-control, Maglock → maglock, Cam lights → cam-controls.
+// Atlas ids (node-relay / node-host / node-segment) are placeholder:true until Michael art lands —
+// tokenSrcForStyle returns null so Place falls back to generic Track 1/2. Do not generate AI art.
 // Director picker writes board tokenStyle; Place on canvas stamps the matching WebP.
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -18,6 +20,9 @@ export const NODE_TOKEN_LIBRARY = [
   { id: "turret-controls", name: "Turret Controls", file: "node-turret-controls.webp", png: "node-turret-controls.png" },
   { id: "cam-controls", name: "Cam Controls", file: "node-cam-controls.webp", png: "node-cam-controls.png", autoKind: "cam-controls" },
   { id: "data-vault", name: "Data Vault", file: "node-data-vault.webp", png: "node-data-vault.png" },
+  { id: "node-relay", name: "Relay", file: "node-relay.webp", png: "node-relay.png", family: "atlas", altitude: "region", placeholder: true },
+  { id: "node-host", name: "Host", file: "node-host.webp", png: "node-host.png", family: "atlas", altitude: "region", placeholder: true },
+  { id: "node-segment", name: "Segment", file: "node-segment.webp", png: "node-segment.png", family: "atlas", altitude: "site", placeholder: true },
 ];
 
 export function nodeTokenSrc(file) {
@@ -36,6 +41,7 @@ export function tokenSrcForStyle(id) {
   const raw = String(id ?? "").trim();
   if (!raw) return null;
   const known = nodeTokenStyle(raw);
+  if (known?.placeholder) return null;
   if (known) return nodeTokenSrc(known.file);
   if (STYLE_ID.test(raw)) return nodeTokenSrc(`${raw}.webp`);
   return null;

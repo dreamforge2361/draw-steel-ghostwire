@@ -56,7 +56,7 @@
 
 | Item | Notes |
 |---|---|
-| **Stage 4 — The Wire (Matrix)** standalone chapter | **RAW-locked 2026-09-18 (B66)** — `docs/raw/21-the-wire.md`. Nodes, Overlay/Jacked In, Track 1/2, Node Rating 1–5 System Stat Card, Trace Alert (middle = no Alert by default), Matrix Verbs for everyone, suites vs payloads + Connected gate. Orphan ×1 wired-direct scrubbed. Hacker Programs/Bandwidth stay in `19-hacker.md`. Journals **not** regenerated this bump. |
+| **Stage 4 — The Wire (Matrix)** standalone chapter | **RAW-locked 2026-09-18 (B66)** — `docs/raw/21-the-wire.md`. **Wire Atlas B116 (2026-09-20):** three altitudes, Reach = current-scene hops, Relay / Host / Segment, dig-down, devices room-only. Nodes, Overlay/Jacked In, Track 1/2, Node Rating 1–5 System Stat Card, Trace Alert (middle = no Alert by default), Matrix Verbs for everyone, suites vs payloads + Connected gate. Orphan ×1 wired-direct scrubbed. Hacker Programs/Bandwidth stay in `19-hacker.md`. Journal page regenerated with the Atlas section (**0.3.50**). PDF redo later. |
 | Wire Foundry pack (thin) | Matrix Verbs + node templates already shipped (B23/B32). RAW chapter locked B66. Journals regenerated **B98** (`0.3.24`) — rules text-only + lore pack with in-tree art. |
 | Vehicles Foundry sync | `16-vehicles.md` → expand `vehicles` pack to full per-echelon inventory |
 | Drones Foundry sync | `15-drones.md` (36 chassis) → expand drones in vehicles or dedicated pack |

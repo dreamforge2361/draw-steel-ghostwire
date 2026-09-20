@@ -60,11 +60,18 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | **The Wired** | The network layer. Chapter title in rules: **The Wire**. |
 | **Avatar** | Your presence inside the Wired (not the Persona characteristic). |
 | **Node** | Anything addressable online. |
+| **Wire Atlas** | Nested Wire maps: district → facility → room. |
+| **Relay** | Atlas token: a Wired highway (a path, not a place). |
+| **Host** | A destination place on the Wire (corp, civic, street). |
+| **Segment** | Nested child of a Host (substation, wing). Name includes the parent. |
+| **Endpoint** | Optional leaf that opens a meatspace room. |
+| **Device** | Room-only socket (Light, Maglock, Cam, ICE, …). |
+| **Reach (Wired)** | Scan/Navigate hops on the **current scene’s** graph — not Ossian Reach. |
 | **ICE** | Intrusion countermeasures — the node fighting back. |
 | **Biofeedback** | When Wired pain hits the body. |
 | **Trace / Trace Alert** | The node’s detection track climbing toward trouble. |
 | **Sprite** | Technomancer code-spirit. |
-| **Host / Flats host** | A big Wired site; Wired Flats is the Reach’s famous one. |
+| **Host / Flats host** | A destination Host; Wired Flats is the Reach’s famous public layer. |
 
 ---
 

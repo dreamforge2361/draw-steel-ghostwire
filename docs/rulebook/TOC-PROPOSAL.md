@@ -46,7 +46,7 @@ Completeness key:
 | `18-street-priest.md` | Street Priest | Partial | Damage values filled (Pass C). §C3 / spirit stamps aligned. Rank 2+ strikes **deferred** |
 | `19-hacker.md` | Hacker | Partial | Class-only after Wire extract; shorter than peers. Some flag leftovers (`@chr`, tier phrasing scrub debt) |
 | `20-technomancer.md` | Technomancer | Partial | Stage 2 extract; sprites/biofeedback largely filled post–Pass C |
-| `21-the-wire.md` | The Wire (Matrix) | **RAW-locked** (B66, 2026-09-18) | Orphan ×1 wired-direct scrubbed. Trace Alert middle = no Alert by default (locked). Overlay/Jacked In, Rating 1–5, suites/payloads + Connected gate aligned to Foundry. |
+| `21-the-wire.md` | The Wire (Matrix) | **RAW-locked** (B66, 2026-09-18; Atlas B116 2026-09-20) | Orphan ×1 wired-direct scrubbed. Trace Alert middle = no Alert by default (locked). Overlay/Jacked In, Rating 1–5, suites/payloads + Connected gate aligned to Foundry. Wire Atlas: Relay / Host / Segment; Reach = hops on the current scene graph. PDF redo later. |
 | `22-the-veil.md` | The Veil | Partial (strong) | **B43 Ritual Workings locked**; **§C3 Summon Entities locked** (0.1.95). **B80 Taint ladder** lives in `27-corruption-taint.md` (not a new print-Ch number). Open: thin-place gazetteer, Rank 2+ strike ladders, defense stamps |
 | `23-machines.md` | Drones, Vehicles & Buildings | Partial | Inventories present; Integrity/Speed often qualitative. Buildings = stub pointer to Wrench. Ramming cites §6.2 without full print procedure |
 | `24-advancement.md` | Advancement & Echelons | Complete (B73 Stage 3 fill) | Levels 1–10, Echelon 1–4, cadence table, table timing, legacy tier conversion. Doctrine locked |

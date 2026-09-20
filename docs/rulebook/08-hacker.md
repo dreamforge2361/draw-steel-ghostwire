@@ -46,6 +46,18 @@ A **node** is any addressable point in the Wired -- a maglock, a security camera
 - **Track 1** -- objects, systems, and infrastructure: doors, lights, cameras, locks, power grids, vaults, and Wired-connected gear worn or carried by a person (a smartlink, a cyberware wireless interface). Track 1 targets resolve as a single Power Roll with no ongoing health pool -- you breach and act on it in the same activation.
 - **Track 2** -- hostile, contested, or "alive" targets: ICE, hostile AIs, rival deckers, and any node actively defended by an intelligence fighting back. Track 2 targets have their own **Integrity** pool (see below) and can hit back.
 
+#### Wire Atlas / topology
+
+The Wire sits at **three altitudes**. Device tokens answer **what is this socket**; atlas tokens answer **where am I on the map**. Full procedure: `docs/raw/21-the-wire.md` (Wire Atlas / topology) and `docs/spikes/B116-WIRE-ATLAS.md`.
+
+| Altitude | Tokens | Reach |
+|---|---|---|
+| Region / district graph | **Relay**, **Host** | Hops on **this** scene’s graph |
+| Site / facility graph | **Segment** (+ **Host** as site root) | Recounted on the facility graph |
+| Room / device graph | **Device** (Light, Maglock, Cam, ICE, …) | Room only; auto-nodes stay here |
+
+**Relay** is a path (Navigate along; Trace can travel fast; usually not Seize-for-loot). **Host** is a destination (Rating / ICE / Watchdog; entering may change scene). **Segment** is the same mechanical class as Host, nested — name includes the parent (`Power Co — North Substation`). **Endpoint** is optional v1.1 (opens a meatspace room). Do not put Devices on a district graph.
+
 #### Connection States: Overlay and Jacked In
 
 You reach a node by first using the **Connect** Matrix Verb (see Matrix Verbs, below) to establish your **avatar** — your presence in the Wired — at your current location. Once connected, you exist in one of two connection states, and you can freely switch between them with the **Toggle Connection State** Matrix Verb (no roll, no contest -- your call):

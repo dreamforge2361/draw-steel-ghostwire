@@ -2,7 +2,7 @@
 
 Foundry tokens for Wired Console nodes. Generic Track 1/2 templates (`summons/node-token-track-*.webp`) stay the default when `tokenStyle` is empty.
 
-## Catalog (Michael YES art)
+## Device catalog (Michael YES art, 0.3.49)
 
 | Id | Label | PNG source (1254²) | Foundry WebP (1024²) | Auto-node |
 |---|---|---|---|---|
@@ -15,12 +15,34 @@ Foundry tokens for Wired Console nodes. Generic Track 1/2 templates (`summons/no
 | `turret-controls` | Turret Controls | `node-turret-controls.png` | `node-turret-controls.webp` | — |
 | `data-vault` | Data Vault | `node-data-vault.png` | `node-data-vault.webp` | — |
 
-Catalog: `library.json`. Runtime: `scripts/wired-node-art.mjs`. Console **Token art** select writes `tokenStyle`; Place on canvas stamps the WebP.
+Do not rename the three auto filenames (`node-light-control`, `node-maglock`, `node-cam-controls`). Auto-nodes stay **room-scale Device** tokens — never Relay / Host / Segment.
+
+## Atlas styles (B116 topology, 0.3.50) — stubs, no art yet
+
+Do **not** generate AI art. Drop Michael PNG + 1024² WebP using these exact stems, then flip `"placeholder": true` to `false` in `library.json`:
+
+| Id (`tokenStyle`) | Label | Altitude | Files (when art lands) |
+|---|---|---|---|
+| `node-relay` | Relay | Region / district graph | `node-relay.png` + `node-relay.webp` |
+| `node-host` | Host | Region graph; site root on facility graphs | `node-host.png` + `node-host.webp` |
+| `node-segment` | Segment | Site / facility graph | `node-segment.png` + `node-segment.webp` |
+
+Foundry paths:
+
+```text
+modules/draw-steel-ghostwire/assets/tokens/wired/node-relay.webp
+modules/draw-steel-ghostwire/assets/tokens/wired/node-host.webp
+modules/draw-steel-ghostwire/assets/tokens/wired/node-segment.webp
+```
+
+**Endpoint** (`node-endpoint`) is optional v1.1 — a dig-down leaf that opens a meatspace room. Until then, reuse Host with a depth pip. Do not add a fourth v1 atlas row.
+
+Place on canvas falls back to the generic Track 1/2 template while `placeholder` is true.
+
+Catalog: `library.json`. Runtime: `scripts/wired-node-art.mjs`. Console **Token art** select writes `tokenStyle`. Topology rules: `docs/spikes/B116-WIRE-ATLAS.md`. Device library spike: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.
 
 ## Drop-in
 
 1. Drop `node-<id>.png` + `node-<id>.webp` here.
-2. Append a `styles[]` row to `library.json` and `NODE_TOKEN_LIBRARY`.
+2. Append a `styles[]` row to `library.json` and `NODE_TOKEN_LIBRARY` (or flip `placeholder` on an atlas stub).
 3. Reload the world — the picker lists it.
-
-Do not rename the three auto filenames (`node-light-control`, `node-maglock`, `node-cam-controls`).

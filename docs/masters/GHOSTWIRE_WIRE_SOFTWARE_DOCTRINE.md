@@ -35,8 +35,17 @@ Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith.
 - Separate payload-only slot bay unless Michael reopens that lever
 - Blurring class Bandwidth Programs with deck suite/payload SKUs in UI copy
 
+## Wire Atlas (topology, not software)
+
+This doctrine is **suites vs payloads vs class Programs**. It does not invent atlas tokens.
+
+The Wire still has a **map**. Device tokens (Light, Maglock, Cam, ICE) answer **what is this socket**. Atlas tokens answer **where am I**: **Relay** (highway), **Host** (destination), **Segment** (nested child of a Host). Scan Reach is hops on the **current scene graph**. Dig-down is district (Relays + Hosts) → facility (Segments) → room (Devices). Room-scale auto-nodes stay off region graphs.
+
+Lock + Director example (Switchboard → Power Co Host → North Substation Segment → maintenance room): `docs/spikes/B116-WIRE-ATLAS.md`. Player/Director rules: `docs/raw/21-the-wire.md` (Wire Atlas / topology). Foundry catalog stubs: `assets/tokens/wired/`.
+
 ## Related
 
 - Catalog: `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B / §4C
-- RAW: `docs/raw/21-the-wire.md` (Deck software section)
-- Foundry: B51 / B51b (`docs/spikes/B51-PROGRAM-PAYLOAD-EXECUTE.md`)
+- RAW: `docs/raw/21-the-wire.md` (Deck software section; Wire Atlas / topology)
+- Foundry: B51 / B51b (`docs/spikes/B51-PROGRAM-PAYLOAD-EXECUTE.md`); atlas stubs B116 (`docs/spikes/B116-WIRE-ATLAS.md`)
+- Director node templates / minimap: `docs/directors/wired-node-templates.md`, `docs/directors/wired-node-minimap.md`

@@ -78,7 +78,7 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 
 | Ch | Print title | Source |
 |---|---|---|
-| 23 | The Wire | `raw:` `21-the-wire.md` — **RAW-locked** B66 (2026-09-18) |
+| 23 | The Wire | `raw:` `21-the-wire.md` — **RAW-locked** B66 (2026-09-18); Wire Atlas B116 (2026-09-20) |
 | 24 | The Veil | `raw:` `22-the-veil.md` |
 | 25 | Machines (Drones & Vehicles) | `raw:` `23-machines.md` — Buildings remain Wrench stub for v1 |
 
@@ -106,7 +106,7 @@ Lore harvest is **pre-rules** (not in the locked 5-part rules TOC). Rules Parts 
 - Print numbering may differ from `docs/raw/` filenames (Advancement = print Ch 5 / file `24-advancement.md`). Journals keep raw filenames.
 - Optional fold (TOC-PROPOSAL): skip print Ch 10 and Ch 27 — **not** applied; Ch 10 points at raw `26`; Ch 27 is a Stage 3 pointer (B73), not a gazetteer.
 - `00-INDEX.md` is meta only — **not** a print chapter.
-- Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66).
+- Wire (`21-the-wire.md`) **RAW-locked** 2026-09-18 (B66); **Wire Atlas / topology** B116 (2026-09-20). PDF redo still later.
 - Lifestyle (`26-lifestyle-downtime.md`) **draft Stage 3 fill** 2026-09-18 (B67); journals **not** regenerated.
 - Opposition (`25-opposition.md`) **draft Stage 3 fill** 2026-09-18 (B70); journals **not** regenerated.
 - Chrome (`09-chrome-body-integrity.md`) **implant ¥ + Availability catalog** 2026-09-18 (B71); journals **not** regenerated.
