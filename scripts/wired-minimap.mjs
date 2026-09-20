@@ -11,6 +11,7 @@
 
 import { getBoard } from "./wired-console.mjs";
 import { boardScene, placedNodeActor } from "./wired-node-tokens.mjs";
+import { layoutNodes, shortNodeName, roomPrefix } from "./wired-layout.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.WiredMinimap";
@@ -56,45 +57,16 @@ function nodeToken(board, node) {
   return actor ? (game.scenes.viewed?.tokens.find(token => token.actorId === actor.id) ?? null) : null;
 }
 
-/** Percent positions (0–100) for each node id. */
-function layout(nodes, tokens) {
-  const positions = new Map();
-  const placed = nodes.filter(node => tokens.get(node.id));
-  const unplaced = nodes.filter(node => !tokens.get(node.id));
-
-  if (placed.length) {
-    // Token centres scaled into the map, keeping the canvas aspect so the shape reads like the Scene.
-    const centres = placed.map(node => {
-      const token = tokens.get(node.id);
-      const size = game.scenes.viewed?.grid.size ?? 100;
-      return { id: node.id, x: token.x + ((token.width * size) / 2), y: token.y + ((token.height * size) / 2) };
-    });
-    const xs = centres.map(c => c.x);
-    const ys = centres.map(c => c.y);
-    const minX = Math.min(...xs);
-    const minY = Math.min(...ys);
-    const span = Math.max(Math.max(...xs) - minX, Math.max(...ys) - minY) || 1;
-    const bottom = unplaced.length ? 70 : 88;
-    const box = bottom - 12;
-    const offsetX = (box - (((Math.max(...xs) - minX) / span) * box)) / 2;
-    const offsetY = (box - (((Math.max(...ys) - minY) / span) * box)) / 2;
-    for (const c of centres) {
-      const x = (placed.length === 1) ? 50 : (50 - (box / 2)) + offsetX + (((c.x - minX) / span) * box);
-      const y = (placed.length === 1) ? ((12 + bottom) / 2) : 12 + offsetY + (((c.y - minY) / span) * box);
-      positions.set(c.id, { x, y });
-    }
-    // Unplaced nodes line up along the bottom.
-    unplaced.forEach((node, i) => positions.set(node.id, { x: ((i + 1) * 100) / (unplaced.length + 1), y: 88 }));
-    return positions;
+/** Canvas centres for placed tokens, fed into layoutNodes. */
+function tokenCentres(nodes, tokens) {
+  const centres = new Map();
+  const size = game.scenes.viewed?.grid.size ?? 100;
+  for (const node of nodes) {
+    const token = tokens.get(node.id);
+    if (!token) continue;
+    centres.set(node.id, { x: token.x + ((token.width * size) / 2), y: token.y + ((token.height * size) / 2) });
   }
-
-  // Nothing placed: a ring in board order, starting at the top.
-  if (unplaced.length === 1) positions.set(unplaced[0].id, { x: 50, y: 50 });
-  else unplaced.forEach((node, i) => {
-    const angle = (-Math.PI / 2) + ((2 * Math.PI * i) / unplaced.length);
-    positions.set(node.id, { x: 50 + (36 * Math.cos(angle)), y: 50 + (36 * Math.sin(angle)) });
-  });
-  return positions;
+  return centres;
 }
 
 /** Unique undirected wires between the given (visible) nodes, in percent coordinates. */
@@ -127,6 +99,7 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
     position: { ...SIZES.overlay },
     actions: {
       focusNode: WiredMinimap.#onFocusNode,
+      resetView: WiredMinimap.#onResetView,
     },
   };
 
@@ -137,6 +110,9 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
   /** "overlay" | "jackedIn" | "director" (a GM opened it by hand). */
   mode = "overlay";
 
+  /** Pan/zoom of the node field (percent-space transform). Survives live re-renders. */
+  view = { scale: 1, x: 0, y: 0 };
+
   /** @override */
   async _prepareContext(options) {
     const isGM = game.user.isGM;
@@ -144,25 +120,31 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
     const board = getBoard(scene);
     const nodes = board.nodes.filter(node => isGM || node.revealed);
     const tokens = new Map(nodes.map(node => [node.id, nodeToken(scene, node)]));
-    const positions = layout(nodes, tokens);
+    const { positions, dense, mode: layoutMode } = layoutNodes(nodes, tokenCentres(nodes, tokens));
     const showRatings = game.settings.get(MODULE_ID, "wiredMinimapRatings");
     const localize = key => game.i18n.localize(`${L}.${key}`);
     const esc = foundry.utils.escapeHTML;
 
     return {
       mode: this.mode,
+      layoutMode,
+      dense,
       modeLabel: (this.mode === "director") ? localize("Director") : game.i18n.localize(`GHOSTWIRE.Wired.States.${this.mode}`),
       sceneName: scene?.name ?? game.i18n.localize("GHOSTWIRE.WiredConsole.NoScene"),
+      panHint: localize("PanHint"),
       showRatings,
+      viewportTransform: viewStyle(this.view),
       edges: edges(nodes, positions),
       nodes: nodes.map(node => {
         const band = alertBand(node.alert);
         const { x, y } = positions.get(node.id);
         const token = tokens.get(node.id);
         const integrity = (node.track === 2) ? `${node.integrity} / ${node.integrityMax}` : game.i18n.localize("GHOSTWIRE.WiredConsole.NoIce");
+        const room = roomPrefix(node.name);
         const tooltip = `
           <div class="gw-minimap-tip">
             <strong>${esc(node.name)}</strong>
+            ${room ? `<div>${esc(localize("Room"))}: ${esc(room)}</div>` : ""}
             <div>${esc(game.i18n.localize(`GHOSTWIRE.WiredConsole.Track${node.track}`))} · R${node.rating}</div>
             <div>${esc(game.i18n.localize("GHOSTWIRE.WiredConsole.Integrity"))}: ${esc(integrity)}</div>
             <div>${esc(game.i18n.localize("GHOSTWIRE.WiredConsole.TraceAlert"))}: ${node.alert} / ${ALERT_MAX} — ${esc(game.i18n.localize(`GHOSTWIRE.WiredConsole.AlertBands.${band}`))}</div>
@@ -172,6 +154,7 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
         return {
           id: node.id,
           name: node.name,
+          shortName: shortNodeName(node.name, { dense }),
           rating: node.rating,
           track: node.track,
           band,
@@ -200,6 +183,59 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
   _onRender(context, options) {
     super._onRender(context, options);
     this.element.classList.toggle("mode-jackedIn", this.mode === "jackedIn");
+    this.element.classList.toggle("is-dense", !!context.dense);
+    this.#bindPanZoom();
+  }
+
+  #bindPanZoom() {
+    const field = this.element.querySelector(".wm-field");
+    if (!field || field.dataset.gwPanBound) return;
+    field.dataset.gwPanBound = "1";
+    field.addEventListener("wheel", event => {
+      event.preventDefault();
+      const delta = event.deltaY < 0 ? 1.12 : (1 / 1.12);
+      const next = Math.min(3, Math.max(0.6, this.view.scale * delta));
+      const rect = field.getBoundingClientRect();
+      const cx = ((event.clientX - rect.left) / rect.width) * 100;
+      const cy = ((event.clientY - rect.top) / rect.height) * 100;
+      const k = next / this.view.scale;
+      this.view.x = cx - ((cx - this.view.x) * k);
+      this.view.y = cy - ((cy - this.view.y) * k);
+      this.view.scale = next;
+      this.#applyView();
+    }, { passive: false });
+
+    let drag = null;
+    field.addEventListener("pointerdown", event => {
+      if (event.button !== 0) return;
+      if (event.target.closest(".wm-node")) return;
+      drag = { x: event.clientX, y: event.clientY, ox: this.view.x, oy: this.view.y };
+      field.setPointerCapture(event.pointerId);
+    });
+    field.addEventListener("pointermove", event => {
+      if (!drag) return;
+      const rect = field.getBoundingClientRect();
+      this.view.x = drag.ox + (((event.clientX - drag.x) / rect.width) * 100);
+      this.view.y = drag.oy + (((event.clientY - drag.y) / rect.height) * 100);
+      this.#applyView();
+    });
+    field.addEventListener("pointerup", () => { drag = null; });
+    field.addEventListener("pointercancel", () => { drag = null; });
+    field.addEventListener("dblclick", event => {
+      if (event.target.closest(".wm-node")) return;
+      this.view = { scale: 1, x: 0, y: 0 };
+      this.#applyView();
+    });
+  }
+
+  #applyView() {
+    const viewport = this.element.querySelector(".wm-viewport");
+    if (viewport) viewport.style.transform = viewStyle(this.view);
+  }
+
+  static #onResetView() {
+    this.view = { scale: 1, x: 0, y: 0 };
+    this.#applyView();
   }
 
   /** @override */
@@ -219,6 +255,14 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
     await canvas.animatePan({ x: token.center.x, y: token.center.y });
     if (game.user.isGM) token.control({ releaseOthers: true });
   }
+}
+
+/** CSS transform for the pan/zoom viewport (percent-space). */
+function viewStyle(view) {
+  const scale = Number(view?.scale) || 1;
+  const x = Number(view?.x) || 0;
+  const y = Number(view?.y) || 0;
+  return `translate(${x.toFixed(2)}%, ${y.toFixed(2)}%) scale(${scale})`;
 }
 
 /** Overlay: compact, bottom-right above the hotbar. Jacked In: large and centred. Both scaled by the size setting. */
@@ -387,6 +431,6 @@ export function registerWiredMinimap({ getWiredState }) {
 
   Hooks.once("ready", () => {
     const module = game.modules.get(MODULE_ID);
-    if (module) module.api = { ...(module.api ?? {}), openWiredMinimap };
+    if (module) module.api = { ...(module.api ?? {}), openWiredMinimap, layoutNodes };
   });
 }

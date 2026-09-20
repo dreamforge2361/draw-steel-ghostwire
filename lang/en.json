@@ -5039,6 +5039,10 @@
           "Name": "Tap Kit",
           "Description": "<p><em>Tap Kit · Data-Tap · physical line-intercept clamp</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥200 · <strong>Mod slots:</strong> 1 · <strong>Tags:</strong> Wired, Concealable</p><p><strong>Profile:</strong> Physically clamp a data line to give the decker a wired-direct edge on that node.</p><p><strong>Mod slots (1):</strong> Fill them with Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
         },
+        "WireKit": {
+          "Name": "Wire Kit — Matrix Verbs",
+          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to grant the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write) — the same abilities every hero already has.</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes already receive the verbs at creation; this kit does not duplicate them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary.</p>"
+        },
         "Buzzer": {
           "Name": "Buzzer",
           "Description": "<p><em>Buzzer · Signal Jammer · broadband denial emitter</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥900 · <strong>Mod slots:</strong> 2 · <strong>Tags:</strong> Wired</p><p><strong>Profile:</strong> Deployable jammer: bane on all wireless Matrix/comm actions in an area (friend and foe).</p><p><strong>Mod slots (2):</strong> Fill them with Wired gadget mods from <strong>Ghostwire Mods › Gadget Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.vLkWjZOFLXuaeil1]{Beacon Squelch}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics); toggling an installed mod is a field action.</p>"
@@ -6266,6 +6270,8 @@
       "Track1": "Track 1 — object / system",
       "Track2": "Track 2 — ICE / defended",
       "Rating": "Node Rating",
+      "TokenStyle": "Token art",
+      "TokenStyleGeneric": "Generic Track 1/2",
       "BreachDC": "Breach DC",
       "BreachDCHint": "(optional shortcut)",
       "Ice": "ICE layers",
@@ -6327,7 +6333,28 @@
       "PingEmpty": "Type a short ping before sending.",
       "PingNoConnected": "No Overlay or Jacked In runners on this scene — whispered to Directors only.",
       "PingChatTitle": "Wire ping",
-      "PingChatSpeaker": "The Wired — {scene}"
+      "PingChatSpeaker": "The Wired — {scene}",
+      "AutoNodes": "Auto-nodes from Scene",
+      "AutoNodesHint": "Build Light Control, Maglock, and Cam Controls nodes from this Scene’s named lights and wall doors. Hidden 0.25-grid tokens use library art (not the generic Track 1 token). Cam lights / named cams become Cam Controls. The Wire does not flip lights, doors, or cameras in v1.",
+      "AutoNodesRule": "Light names must be “{Room Name} - {rest…}” (space-hyphen-space). Room = everything left of the first “ - ”. Light Control stays “{Room} - Light Control”. Example: “Rear Car Substation - Light Control” → room Rear Car Substation → node Rear Car Substation - Light Control (Track 1, R1). Maglocks: “Rear Car Substation - Maglock Door 1”, “Rear Car Substation - Maglock Door 2”, … (Track 1, R2). Cam lights (rest contains Cam / Camera) become “{Room} - Cam Controls 1”, … (Track 1, R1, cam-controls art). Lights with no “ - ” are skipped (you get a warning).",
+      "AutoNodesMode": "If auto-nodes already exist",
+      "AutoNodesSkip": "Skip ones already generated (idempotent)",
+      "AutoNodesReplace": "Replace existing auto-nodes",
+      "AutoNodesConfirm": "Build nodes",
+      "AutoNodesExisting": "{count} auto-node(s) already on this board.",
+      "AutoNodesEmpty": "This Scene has no named lights and no wall doors to turn into nodes.",
+      "AutoNodesUnnamed": "(unnamed)",
+      "AutoNodesUnsplit": "Skipped {count} light(s) with no “ - ” in the name: {names}. Rename them “{Room} - Light Control” and run again.",
+      "AutoNodesDone": "Added {count} auto-node(s) across {rooms} room(s) ({skipped} already present).",
+      "AutoNodesSkipped": "All {skipped} auto-node(s) were already on this board. Choose Replace to rebuild them."
+    },
+    "WiredKit": {
+      "Button": "Add Wire Kit",
+      "Hud": "Add Wire Kit — Matrix Verbs to the selected NPC",
+      "Granted": "{actor} stamped with Wire Kit ({count} Matrix Verbs).",
+      "Already": "{actor} already has the Wire Kit.",
+      "HeroSkip": "{actor} is a hero — Matrix Verbs are already on the sheet.",
+      "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."
     },
     "WiredMinimap": {
       "Title": "Wired Node Map",
@@ -6336,6 +6363,8 @@
       "NoNodes": "No nodes revealed on this grid yet.",
       "Hidden": "Hidden from runners",
       "FocusHint": "Click to pan to its token.",
+      "PanHint": "Scroll to zoom, drag to pan, double-click or this button to reset.",
+      "Room": "Room",
       "Settings": {
         "Enabled": {
           "Name": "Wired Node Map for players",

@@ -5,6 +5,8 @@
 // - The board is the source of truth: board changes sync name / Rating / Integrity / track / revealed onto placed tokens;
 //   a GM changing a Track 2 node's Stamina writes Integrity back. Deleted nodes and reset boards remove their Actors.
 
+import { tokenSrcForStyle } from "./wired-node-art.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
 const L = "GHOSTWIRE.WiredConsole";
@@ -70,8 +72,15 @@ export function placementElevationAndLevel() {
   return { elevation: 0, level: null };
 }
 
-/** Place a board node on the viewed Scene as a linked token. GM only. */
-export async function placeNode(board, node) {
+/**
+ * Place a board node on the viewed Scene as a linked token. GM only.
+ * @param {object} [options]
+ * @param {number} [options.x]  canvas x (defaults to view centre, stepped)
+ * @param {number} [options.y]
+ * @param {object} [options.extraFlags]  merged onto Actor flags (B112 autoFrom / autoKind; B113 tokenArt)
+ * @param {string|null} [options.textureSrc]  B113 Light/Maglock art; omitted = generic Track 1/2 node template
+ */
+export async function placeNode(board, node, options = {}) {
   const viewed = canvas.scene;
   if (!game.user.isGM || !board || !node) return;
   if (!viewed) return ui.notifications.warn(game.i18n.localize(`${L}.NoCanvasScene`));
@@ -79,6 +88,8 @@ export async function placeNode(board, node) {
   const template = await templateFor(node.track);
   if (!template) return ui.notifications.error(game.i18n.localize(`${L}.NoNodeTemplate`));
 
+  const extraFlags = options.extraFlags && typeof options.extraFlags === "object" ? options.extraFlags : {};
+  const textureSrc = options.textureSrc || extraFlags.tokenArt || null;
   const data = game.actors.fromCompendium(template);
   foundry.utils.mergeObject(data, {
     name: node.name, folder: (await nodeFolder())?.id ?? null, ownership: { default: 0 },
@@ -89,8 +100,12 @@ export async function placeNode(board, node) {
     "prototypeToken.width": 0.25,
     "prototypeToken.height": 0.25,
     "prototypeToken.bar1.attribute": barFor(node),
-    [`flags.${MODULE_ID}`]: { kind: "node", boardSceneId: board.id, nodeId: node.id, track: node.track },
+    [`flags.${MODULE_ID}`]: { kind: "node", boardSceneId: board.id, nodeId: node.id, track: node.track, ...extraFlags },
   });
+  if (textureSrc) {
+    data.img = textureSrc;
+    foundry.utils.setProperty(data, "prototypeToken.texture.src", textureSrc);
+  }
   const actor = await Actor.create(data);
   if (!actor) return;
 
@@ -98,14 +113,15 @@ export async function placeNode(board, node) {
   const grid = canvas.grid.size;
   const placed = viewed.tokens.filter(token => isNodeActor(token.actor)).length;
   const snap = value => Math.round(value / grid) * grid;
-  const x = snap(canvas.stage.pivot.x - (grid / 2)) + (placed * grid);
-  const y = snap(canvas.stage.pivot.y - (grid / 2));
+  const x = Number.isFinite(options.x) ? options.x : snap(canvas.stage.pivot.x - (grid / 2)) + (placed * grid);
+  const y = Number.isFinite(options.y) ? options.y : snap(canvas.stage.pivot.y - (grid / 2));
   // Land on the Level the GM is viewing (Interior vs Roof). Scripted createEmbeddedDocuments
   // does not inherit canvas.level the way drag-drop does (B108).
   const { elevation, level } = placementElevationAndLevel();
   // B110: node markers are ~door-control scale (0.25 grid), not full 1x1 tokens.
   const tokenData = { x, y, elevation, width: 0.25, height: 0.25, actorLink: true, hidden: !node.revealed };
   if (level) tokenData.level = level;
+  if (textureSrc) foundry.utils.setProperty(tokenData, "texture.src", textureSrc);
   const tokenDocument = await actor.getTokenDocument(tokenData, { parent: viewed });
   await viewed.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
 }
@@ -140,6 +156,11 @@ export async function syncPlacedNodes(scene) {
       actorChanges[`flags.${MODULE_ID}.track`] = node.track;
       actorChanges["prototypeToken.bar1.attribute"] = barFor(node);
     }
+    const art = tokenSrcForStyle(node.tokenStyle);
+    if (art && actor.img !== art) {
+      actorChanges.img = art;
+      actorChanges["prototypeToken.texture.src"] = art;
+    }
     if (!foundry.utils.isEmpty(actorChanges)) await actor.update(actorChanges, SYNC);
 
     for (const token of actorTokens(actor)) {
@@ -147,6 +168,7 @@ export async function syncPlacedNodes(scene) {
       if (token.hidden === node.revealed) tokenChanges.hidden = !node.revealed;
       if (token.name !== node.name) tokenChanges.name = node.name;
       if ((token.bar1?.attribute ?? null) !== barFor(node)) tokenChanges["bar1.attribute"] = barFor(node);
+      if (art && token.texture?.src !== art) tokenChanges["texture.src"] = art;
       if (!foundry.utils.isEmpty(tokenChanges)) await token.update(tokenChanges, SYNC);
     }
   }

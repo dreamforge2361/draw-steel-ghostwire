@@ -82,7 +82,16 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 
 **Place on canvas.** Select a node and press **Place on canvas** (Director): it creates a linked Actor named after the node in the **Wired Nodes** Actor folder, from the *Wired Node (Track 1/2)* template in Ghostwire Summons & Machines, and drops its token at the centre of the view (stepping right for each node already placed). The token is **hidden until the node is revealed**; Track 2 tokens show an **Integrity bar** (their Stamina), Track 1 tokens show none. A pin icon in the node list marks placed nodes. **Remove from canvas** deletes the token and Actor; the node stays on the board.
 
-**Sync.** The board is the source of truth. Console edits (name, Track, Rating, Integrity damage/restore, reveal/hide) update the placed token and Actor; damage applied to a Track 2 node token (Draw Steel's damage buttons, the sheet, or the bar) writes Integrity back to the board. Deleting a node or resetting the board removes its token and Actor; deleting a node token by hand removes its Actor, and the Console offers **Place on canvas** again. Actor flags: `{ kind: "node", boardSceneId, nodeId, track }`. Trace Alert, Description, and Notes stay in the Console.
+**Auto-nodes from Scene (B112).** Director-only lightbulb on the Nodes header. On the **viewed** Scene it reads named lights and wall doors (`door != NONE`):
+
+- **Lights.** Name pattern **`{Room Name} - {rest…}`** (space-hyphen-space required). Room = everything left of the first ` - `. Light Control node stays **`{Room} - Light Control`** (or matches the light name). Example: `Rear Car Substation - Light Control` → **Rear Car Substation - Light Control** (Track 1 Rating 1). Lights with no ` - ` are **skipped** and the GM gets a warning. Hidden token next to the first non-cam light in that room.
+- **Doors.** Assigned to the nearest light’s room (or the wall’s own name). **Track 1 Rating 2** `{Room} - Maglock Door 1`, `{Room} - Maglock Door 2`, … per room (same ` - ` splitter; not `{Room} Maglock Door 1`); hidden token next to the door. Light Control ↔ maglocks in the same room are linked.
+- **Cam lights.** If `rest` contains Cam / Camera, that light becomes **`{Room} - Cam Controls N`** (Track 1 Rating 1, `cam-controls` art) instead of joining the Light Control `lightIds`. Linked to the same-room Light Control when one exists.
+- Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). The Wire does not flip lights, doors, or cameras in v1. Auto-node tokens use B113 library art (`assets/tokens/wired/node-light-control.webp`, `node-maglock.webp`, `node-cam-controls.webp`). Generic Track 1/2 templates stay when `tokenStyle` is empty. Director **Token art** select (B116) picks any of the eight catalog styles for a selected node. Does not rewrite Gold Line walls/lights/tiles.
+
+**Wire Kit (B115).** NPCs do not receive Matrix Verbs by default. Drop **Wire Kit — Matrix Verbs** (Ghostwire Matrix › Support) onto an NPC, or use the Console / token HUD **Add Wire Kit** on selected NPC tokens. Stamp ARG security that should act on the Wire; leave meat-only thugs clean. Heroes already have the verbs.
+
+**Sync.** The board is the source of truth. Console edits (name, Track, Rating, Integrity damage/restore, reveal/hide) update the placed token and Actor; damage applied to a Track 2 node token (Draw Steel's damage buttons, the sheet, or the bar) writes Integrity back to the board. Deleting a node or resetting the board removes its token and Actor; deleting a node token by hand removes the Actor, and the Console offers **Place on canvas** again. Actor flags: `{ kind: "node", boardSceneId, nodeId, track }` plus `autoFrom` / `autoKind` for B112. Trace Alert, Description, and Notes stay in the Console.
 
 ### Data
 
@@ -90,7 +99,7 @@ The board is stored on the Scene, so it persists across reloads and belongs to t
 
 ```
 flags.draw-steel-ghostwire.wiredBoard = {
-  nodes: [{ id, name, track: 1|2, rating: 1–5, integrity, integrityMax, alert: 0–12, revealed, description, notes }],
+  nodes: [{ id, name, track: 1|2, rating: 1–5, integrity, integrityMax, alert: 0–12, revealed, description, notes, links, autoFrom?, tokenStyle? }],
   stratum: "random" | "spires" | "grid" | "flats" | "warrens" | "sinks",
   updated: <timestamp>
 }
