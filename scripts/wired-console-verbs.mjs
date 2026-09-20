@@ -191,14 +191,29 @@ export const CONSOLE_SLICE = [
 
 export const consoleSliceByDsid = dsid => CONSOLE_SLICE.find(verb => verb.dsid === dsid) ?? null;
 
-/** Keep a live selection if it's still on the roster; else combatant; else first Connected; else first row. */
+/**
+ * Connections chip for one token. Wire node Actors (`kind: "node"`) are infrastructure:
+ * always show Connected, never Disconnected, and are not verb runners.
+ */
+export function consoleRosterWireState({ isNode = false, runnerState = "disconnected" } = {}) {
+  if (isNode) return { state: "connected", connected: true, verbSelectable: false };
+  const state = runnerState || "disconnected";
+  return { state, connected: state !== "disconnected", verbSelectable: true };
+}
+
+/** Runners only — skip Wire node Actors even if their chip reads Connected. */
+export function consoleVerbRoster(roster = []) {
+  return (Array.isArray(roster) ? roster : []).filter(row => row.verbSelectable !== false && !row.isNode);
+}
+
+/** Keep a live runner selection if it's still on the roster; else combatant; else first Connected runner; else first runner. */
 export function pickConsoleActor({ roster = [], selectedUuid = null, combatantUuid = null } = {}) {
-  const rows = Array.isArray(roster) ? roster : [];
-  const has = uuid => !!uuid && rows.some(row => row.uuid === uuid);
+  const pool = consoleVerbRoster(roster);
+  const has = uuid => !!uuid && pool.some(row => row.uuid === uuid);
   if (has(selectedUuid)) return selectedUuid;
   if (has(combatantUuid)) return combatantUuid;
-  const connected = rows.find(row => row.connected);
-  return connected?.uuid ?? rows[0]?.uuid ?? null;
+  const connected = pool.find(row => row.connected);
+  return connected?.uuid ?? pool[0]?.uuid ?? null;
 }
 
 /**

@@ -20,9 +20,9 @@ export function boardScene(viewed = game.scenes.viewed) {
   return (id && (id !== viewed.id) && game.scenes.get(id)) || viewed || null;
 }
 
-export const isNodeActor = actor => actor?.getFlag(MODULE_ID, "kind") === "node";
-
 const flagOf = (doc, key) => doc?.getFlag?.(MODULE_ID, key) ?? doc?.flags?.[MODULE_ID]?.[key];
+
+export const isNodeActor = actor => flagOf(actor, "kind") === "node";
 
 /** Observer so players can open a revealed node; None when it's hidden. */
 export function nodeDefaultOwnership(revealed) {

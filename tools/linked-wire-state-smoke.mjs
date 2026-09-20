@@ -100,7 +100,8 @@ ok(moduleSrc.includes("NeedImmersion") && moduleSrc.includes("isLinkedOkVerb"), 
 ok(moduleSrc.includes("abilityPowerRollModifiers"), "power-roll helpers (Linked applies neither)");
 
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
-ok(consoleSrc.includes("state: verbActor?.state") && consoleSrc.includes("linked: 2"), "Console roster + gate pass state; Linked sorts after Overlay");
+ok(consoleSrc.includes("state: verbActor?.state") && consoleSrc.includes("linked: 2") && consoleSrc.includes("connected: 3"), "Console roster + gate pass state; Linked sorts after Overlay; nodes chip as Connected");
+ok(consoleSrc.includes("isNodeActor") && consoleSrc.includes("consoleRosterWireState"), "Console roster treats kind:node as always Connected");
 ok(consoleSrc.includes("state,"), "useConsoleVerb passes state into the gate");
 ok(/focusPlacedNodeOnCanvas/.test(consoleSrc) && /#onSelectNode/.test(consoleSrc), "Console list select calls focusPlacedNodeOnCanvas");
 

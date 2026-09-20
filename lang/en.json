@@ -6301,7 +6301,8 @@
         "disconnected": "Disconnected",
         "linked": "Linked",
         "overlay": "Overlay",
-        "jackedIn": "Jacked In"
+        "jackedIn": "Jacked In",
+        "connected": "Connected"
       },
       "StateHints": {
         "disconnected": "Not connected to the Wired. Radio is a jammable backup.",
@@ -6331,6 +6332,7 @@
       "PlayerMode": "Runner",
       "NoScene": "No scene",
       "Roster": "Connections",
+      "RosterNodeHint": "Wire node — always Connected. Click to select this node. Matrix Verbs still use a runner.",
       "NoTokens": "No tokens on this scene.",
       "Nodes": "Nodes",
       "AddNode": "Add Node",

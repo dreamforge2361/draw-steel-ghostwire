@@ -435,6 +435,8 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-roster-row.state-linked { border-left-color: #6ecf9a; }
 .ghostwire-wired-console .wc-roster-row.state-overlay { border-left-color: var(--wc-cyan); }
 .ghostwire-wired-console .wc-roster-row.state-jackedIn { border-left-color: var(--wc-hot); }
+.ghostwire-wired-console .wc-roster-row.state-connected { border-left-color: #7ad4c0; }
+.ghostwire-wired-console .wc-roster-row.is-node { opacity: 0.92; }
 .ghostwire-wired-console .wc-state-chip {
   font-size: 0.65rem;
   text-transform: uppercase;
@@ -448,6 +450,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-state-chip.state-linked { color: #6ecf9a; border-color: #6ecf9a; box-shadow: 0 0 6px color-mix(in srgb, #6ecf9a 40%, transparent); }
 .ghostwire-wired-console .wc-state-chip.state-overlay { color: var(--wc-cyan); border-color: var(--wc-cyan); box-shadow: 0 0 6px color-mix(in srgb, var(--wc-cyan) 40%, transparent); }
 .ghostwire-wired-console .wc-state-chip.state-jackedIn { color: var(--wc-hot); border-color: var(--wc-hot); box-shadow: 0 0 6px color-mix(in srgb, var(--wc-hot) 45%, transparent); }
+.ghostwire-wired-console .wc-state-chip.state-connected { color: #7ad4c0; border-color: #7ad4c0; box-shadow: 0 0 6px color-mix(in srgb, #7ad4c0 40%, transparent); }
 
 /* Node list */
 .ghostwire-wired-console .wc-node {

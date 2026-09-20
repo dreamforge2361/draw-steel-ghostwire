@@ -8,7 +8,7 @@
 
 import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
-import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
+import { boardScene, isNodeActor, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
 import { focusPlacedNodeOnCanvas } from "./wired-canvas-focus.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
 import { NODE_TOKEN_LIBRARY } from "./wired-node-art.mjs";
@@ -26,6 +26,7 @@ import {
   nextAlert,
   shouldReleaseTemporaryVerb,
   splitReusableTemporaryVerbs,
+  consoleRosterWireState,
   pickConsoleActor,
   pickPlayerVerbActor,
   softTraceDelta,
@@ -198,19 +199,26 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       const actor = token.actor;
       if (!actor || seen.has(actor.uuid) || (!isGM && !actor.isOwner)) continue;
       seen.add(actor.uuid);
-      const state = this.getWiredState?.(actor) ?? "disconnected";
+      const isNode = isNodeActor(actor);
+      const display = consoleRosterWireState({
+        isNode,
+        runnerState: this.getWiredState?.(actor) ?? "disconnected",
+      });
       roster.push({
         uuid: actor.uuid,
         name: token.name || actor.name,
         img: token.texture?.src || actor.img,
-        state,
-        stateLabel: game.i18n.localize(`GHOSTWIRE.Wired.States.${state}`),
-        connected: state !== "disconnected",
+        state: display.state,
+        stateLabel: game.i18n.localize(`GHOSTWIRE.Wired.States.${display.state}`),
+        connected: display.connected,
+        verbSelectable: display.verbSelectable,
+        isNode,
+        nodeId: isNode ? (actor.getFlag(MODULE_ID, "nodeId") ?? "") : "",
         owned: isGM || actor.isOwner,
-        hasInterface: actorHasConnectInterface(actor),
+        hasInterface: !isNode && actorHasConnectInterface(actor),
       });
     }
-    const order = { jackedIn: 0, overlay: 1, linked: 2, disconnected: 3 };
+    const order = { jackedIn: 0, overlay: 1, linked: 2, connected: 3, disconnected: 4 };
     roster.sort((a, b) => (order[a.state] - order[b.state]) || a.name.localeCompare(b.name, game.i18n.lang));
     this.selectedActorUuid = pickConsoleActor({
       roster,
@@ -382,7 +390,19 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   }
 
   static async #onSelectActor(event, target) {
-    this.selectedActorUuid = target.closest("[data-actor-uuid]")?.dataset.actorUuid ?? null;
+    const row = target.closest("[data-actor-uuid]");
+    if (!row) return;
+    // Node rows are infrastructure: pan/select the board node, never the verb actor.
+    if (row.dataset.isNode === "true") {
+      const nodeId = row.dataset.nodeId || null;
+      if (nodeId) {
+        this.selectedId = nodeId;
+        this.render();
+        await focusPlacedNodeOnCanvas({ boardSceneId: this.scene?.id ?? null, nodeId });
+      }
+      return;
+    }
+    this.selectedActorUuid = row.dataset.actorUuid ?? null;
     this.render();
   }
 
@@ -778,6 +798,11 @@ function hideTemporaryConsoleVerbs(app, element) {
  * Edges (Hacking, Jacked In, Reader) come from the existing AbilityModel#use patch.
  */
 export async function useConsoleVerb(actor, dsid, { node = null, scene = null, getWiredState = getWiredStateFn } = {}) {
+  if (isNodeActor(actor)) {
+    const warn = game.i18n.localize("GHOSTWIRE.WiredConsole.VerbNeedActor");
+    ui.notifications.warn(warn);
+    return;
+  }
   const state = getWiredState?.(actor) ?? "disconnected";
   const gate = consoleVerbGate({
     actorUuid: actor?.uuid,
