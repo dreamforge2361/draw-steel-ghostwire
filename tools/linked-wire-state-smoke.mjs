@@ -29,6 +29,7 @@ import {
   wiredAbilityAllowedAtState,
   wiredPowerRollModifier,
 } from "../scripts/wired-state.mjs";
+import { canvasFocusPlan, tokenCenter } from "../scripts/wired-canvas-focus.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -101,6 +102,7 @@ ok(moduleSrc.includes("meatPowerRollModifier") && moduleSrc.includes("wiredPower
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("state: verbActor?.state") && consoleSrc.includes("linked: 2"), "Console roster + gate pass state; Linked sorts after Overlay");
 ok(consoleSrc.includes("state,"), "useConsoleVerb passes state into the gate");
+ok(/focusPlacedNodeOnCanvas/.test(consoleSrc) && /#onSelectNode/.test(consoleSrc), "Console list select calls focusPlacedNodeOnCanvas");
 
 const nodeSrc = readFileSync("scripts/wired-node-verbs.mjs", "utf8");
 ok(nodeSrc.includes("state: runner?.state") && nodeSrc.includes("hintVerbDsid(verbCtx.state)"), "node panel passes state");
@@ -154,6 +156,7 @@ ok(/Does \*\*not\*\* count as full \*\*Connected\*\*/.test(raw), "RAW Linked is 
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/ghostwire-linked/.test(foundry) && /Linked → Overlay → Jacked In → Linked/.test(foundry), "Foundry notes document Linked + ladder");
 ok(/0\.3\.56/.test(foundry), "Foundry notes name 0.3.56");
+ok(/Pan to node/.test(foundry) && /canvas\.animatePan/.test(foundry), "Foundry notes document Console / minimap pan-to-node");
 
 const journal = readBomFreeJson("src/packs/rulebook/ghostwire-systems/21-the-wire.json");
 const journalMd = (journal.pages ?? []).map(p => p.text?.markdown ?? "").join("\n");
@@ -162,6 +165,33 @@ ok(/Linked → Overlay → Jacked In → Linked/.test(journalMd), "Wire journal 
 
 const readme = readFileSync("README.md", "utf8");
 ok(/0\.3\.56/.test(readme) && /Linked/.test(readme), "README changelog 0.3.56 Linked");
+ok(/pans\/centers/.test(readme) || /pan-to-node/.test(readme), "README changelog 0.3.56 names Console pan-to-node");
+
+console.log("\n5) Console / minimap pan-to-node");
+ok(tokenCenter(null) === null, "tokenCenter(null) is null");
+ok(tokenCenter({ x: Number.NaN, y: 0 }) === null, "tokenCenter rejects NaN coords");
+const live = tokenCenter({ center: { x: 640, y: 480 } });
+ok(live?.x === 640 && live?.y === 480, "tokenCenter prefers Token#center");
+const doc = tokenCenter({ x: 0, y: 0, width: 0.25, height: 0.25 }, 100);
+ok(doc?.x === 12.5 && doc?.y === 12.5, "tokenCenter uses document x/y + 0.25 grid");
+
+const missing = canvasFocusPlan({ hasCenter: false, isGM: true });
+ok(!missing.pan && !missing.control, "unplaced node: no pan, no control");
+const hiddenPlayer = canvasFocusPlan({ hasCenter: true, hidden: true, isGM: false, canControl: false });
+ok(!hiddenPlayer.pan && !hiddenPlayer.control, "hidden token: player does not pan");
+const hiddenGM = canvasFocusPlan({ hasCenter: true, hidden: true, isGM: true, canControl: true });
+ok(hiddenGM.pan && hiddenGM.control, "hidden token: GM pans and controls");
+const revealedPlayer = canvasFocusPlan({ hasCenter: true, hidden: false, isGM: false, canControl: false });
+ok(revealedPlayer.pan && !revealedPlayer.control, "revealed token: player pans, no control unless owner");
+const ownerPlayer = canvasFocusPlan({ hasCenter: true, hidden: false, isGM: false, canControl: true });
+ok(ownerPlayer.pan && ownerPlayer.control, "revealed token: owner pans and controls");
+const notReady = canvasFocusPlan({ hasCenter: true, isGM: true, canControl: true, canvasReady: false });
+ok(!notReady.pan && !notReady.control, "canvas not ready: no-op");
+
+ok(/data-action="selectNode"/.test(readFileSync("templates/wired-console.hbs", "utf8")), "Console list row is selectNode");
+const minimapSrc = readFileSync("scripts/wired-minimap.mjs", "utf8");
+ok(/focusPlacedNodeOnCanvas/.test(minimapSrc) && /#onFocusNode/.test(minimapSrc), "Minimap node click uses the same pan helper");
+ok(/data-action="focusNode"/.test(readFileSync("templates/wired-minimap.hbs", "utf8")), "Minimap node click is focusNode");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

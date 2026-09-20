@@ -9,6 +9,7 @@
 import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
+import { focusPlacedNodeOnCanvas } from "./wired-canvas-focus.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
 import { NODE_TOKEN_LIBRARY } from "./wired-node-art.mjs";
 import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs";
@@ -371,6 +372,8 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
   static async #onSelectNode(event, target) {
     this.selectedId = WiredConsole.#nodeId(target);
     this.render();
+    // After Place Node, list select / click / push pans to the token so the Director can find it.
+    await focusPlacedNodeOnCanvas({ boardSceneId: this.scene?.id ?? null, nodeId: this.selectedId });
   }
 
   static async #onSelectActor(event, target) {

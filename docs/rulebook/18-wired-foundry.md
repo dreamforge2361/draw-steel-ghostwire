@@ -1,6 +1,6 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state 2026-09-20 / 0.3.56** (pending Michael’s Foundry test).
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56** (pending Michael’s Foundry test).
 **Source of record for rules text:** `docs/raw/21-the-wire.md` — Connection States and Matrix Verbs. This page only describes how Foundry implements them; if the two disagree, RAW wins and this page (and the pack) gets fixed.
 **Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 
@@ -89,6 +89,8 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 **Wired map.** When the party goes fully Jacked In and you move them to a matrix battle map, view that map and use **Wired map for** in the Console header (Director) to pick the meatspace Scene whose board it should use. The Console then shows and edits that board while you view the map; the **Connections** panel still lists the tokens on the map you're viewing. Choose **This Scene** to unlink. Stored as `flags.draw-steel-ghostwire.wiredMapFor = <board Scene id>` on the map Scene.
 
 **Place on canvas.** Select a node and press **Place on canvas** (Director): it creates a linked Actor named after the node in the **Wired Nodes** Actor folder, from the *Wired Node (Track 1/2)* template in Ghostwire Summons & Machines, and drops its token at the centre of the view (stepping right for each node already placed). The token is **hidden until the node is revealed**; revealed node Actors get **OBSERVER** default ownership so players can open them. Track 2 tokens show an **Integrity bar** (their Stamina), Track 1 tokens show none. Double-click / Token HUD / minimap opens the **Wired node panel** (Matrix Verbs), not the monster sheet. A pin icon in the node list marks placed nodes. **Remove from canvas** deletes the token and Actor; the node stays on the board.
+
+**Pan to node.** Selecting or clicking a node in the Director Console list (or a placed node on the minimap) **pans and centers** the canvas on that token (`canvas.animatePan`) and **controls** it when the user can (Director / owner). Unplaced nodes and tokens hidden from this user still select in the list with no error. Shared helper: `scripts/wired-canvas-focus.mjs`.
 
 **Auto-nodes from Scene (B112).** Director-only lightbulb on the Nodes header. On the **viewed** Scene it reads named lights and wall doors (`door != NONE`):
 

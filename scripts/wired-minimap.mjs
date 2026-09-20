@@ -10,9 +10,10 @@
 //   both ends are revealed; the GM Director view also draws wires touching hidden nodes, dashed like the hidden node itself.
 
 import { getBoard } from "./wired-console.mjs";
-import { boardScene, placedNodeActor } from "./wired-node-tokens.mjs";
+import { boardScene, placedNodeToken } from "./wired-node-tokens.mjs";
 import { layoutNodes, shortNodeName, roomPrefix } from "./wired-layout.mjs";
 import { openWiredNodePanel } from "./wired-node-verbs.mjs";
+import { focusPlacedNodeOnCanvas } from "./wired-canvas-focus.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.WiredMinimap";
@@ -54,8 +55,7 @@ const enabled = () => game.settings.get(MODULE_ID, "wiredMinimapEnabled");
 
 /** The token for a placed node on the viewed Scene, or null. */
 function nodeToken(board, node) {
-  const actor = board && placedNodeActor(board.id, node.id);
-  return actor ? (game.scenes.viewed?.tokens.find(token => token.actorId === actor.id) ?? null) : null;
+  return (board && node) ? placedNodeToken(board.id, node.id) : null;
 }
 
 /** Canvas centres for placed tokens, fed into layoutNodes. */
@@ -247,16 +247,14 @@ export class WiredMinimap extends HandlebarsApplicationMixin(ApplicationV2) {
     if (!options.ghostwireAuto && (viewerState() !== "disconnected")) dismissedState = viewerState();
   }
 
-  // Pan the canvas to a placed node's token, then open the node-facing verb panel.
+  // Pan the canvas to a placed node's token (same helper as Console list select), then open the node panel.
   static async #onFocusNode(event, target) {
     const scene = boardScene(game.scenes.viewed);
     const node = getBoard(scene).nodes.find(n => n.id === target.dataset.nodeId);
-    const token = node && nodeToken(scene, node)?.object;
-    if (token && canvas.ready && (!token.document.hidden || game.user.isGM)) {
-      await canvas.animatePan({ x: token.center.x, y: token.center.y });
-      if (game.user.isGM) token.control({ releaseOthers: true });
+    if (node) {
+      await focusPlacedNodeOnCanvas({ boardSceneId: scene?.id ?? null, nodeId: node.id });
+      openWiredNodePanel({ nodeId: node.id, boardSceneId: scene?.id ?? null });
     }
-    if (node) openWiredNodePanel({ nodeId: node.id, boardSceneId: scene?.id ?? null });
   }
 }
 
