@@ -364,6 +364,8 @@ export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, ch
 
 const MODULE_FLAG = "draw-steel-ghostwire";
 const CONNECT_ROLES = new Set(["deck", "rcc", "interface"]);
+/** Mama Switchboard + any embedded deck SKU that forgot matrix.role flags. */
+const CONNECT_DSIDS = new Set(["switchboard-deck", "switchboard-suite"]);
 
 /** Wrench drone control: Rigger’s Harness + RCC SKUs (≡ deck for Connect). */
 export const RIGGER_INTERFACE_DSIDS = new Set([
@@ -406,6 +408,7 @@ export function itemIsConnectInterface(item) {
   if (kind === "wire-kit" || dsid === WIRE_KIT_DSID) return true;
   if (RIGGER_INTERFACE_DSIDS.has(dsid)) return true;
   if (CONNECT_ROLES.has(matrix.role)) return true;
+  if (CONNECT_DSIDS.has(dsid)) return true;
   const family = matrix.modFamily;
   return Array.isArray(family) && family.includes("rcc");
 }
