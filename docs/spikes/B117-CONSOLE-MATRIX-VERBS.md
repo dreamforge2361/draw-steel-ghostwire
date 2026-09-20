@@ -80,4 +80,6 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 
 **0.3.61 (Michael smoke 2026-09-20):** Overlay Search rolled (SFX OK) but the chat card said **Failed to Find Item for this ability roll** and printed no Search tier flavor. Cause: 0.3.60 deleted the temp embed in `useConsoleVerb`'s `finally` before Draw Steel 1.1.2 AbilityUsePart / AbilityResultPart `fromUuidSync(abilityUuid)` (`toEmbed` + `powerRollText` from `power.effects` display strings). Fix: keep the temp after a successful card, reuse it on the next fire, delete only a temp this call created when the dialog cancels. Sheet hide + ready leftover strip stay.
 
+**0.3.64 (Michael smoke 2026-09-20):** Ping (and the other eight) showed on the Draw Steel hero ability sheet after applet use. Cause: 0.3.61 hide looked for `data-item-id` / `data-entry-id`; DS 1.1.2 rows use `data-document-uuid` and `_prepareAbilitiesContext` (`flags.draw-steel.hideInSheet`). Fix: stamp `hideInSheet` on temps, filter abilities context, CSS + sheet hooks (including ActorSheetV2), ready deletes only orphan temps not backing a chat `abilityUuid`. Do **not** re-grant verbs onto sheets. Console lists: revealed-first then A–Z; hover full name.
+
 Smoke: `node tools/b117-console-verbs-smoke.mjs`. No live Foundry in this environment.

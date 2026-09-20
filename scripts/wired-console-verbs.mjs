@@ -8,6 +8,7 @@ import {
   CONSOLE_SLICE_DSIDS,
   CONSOLE_SLICE_VERB_IDS,
   CONNECTION_VERB_DSIDS,
+  MATRIX_VERB_DSIDS,
   MODULE_ID,
   verbUuid,
 } from "./wired-verbs.mjs";
@@ -22,9 +23,35 @@ export const ALERT_MAX = 12;
 /** Flag on a Matrix Verb Item embedded only so AbilityModel#use / chat can resolve it. */
 export const TEMP_CONSOLE_VERB_FLAG = "temporaryConsoleVerb";
 
+/** Draw Steel 1.1.2 ActorSheet `_prepareAbilitiesContext` skips items with this flag. */
+export const DS_SYSTEM_ID = "draw-steel";
+export const DS_HIDE_IN_SHEET = "hideInSheet";
+
 export function isTemporaryConsoleVerb(item, moduleId = MODULE_ID) {
   if (typeof item?.getFlag === "function") return !!item.getFlag(moduleId, TEMP_CONSOLE_VERB_FLAG);
   return !!item?.flags?.[moduleId]?.[TEMP_CONSOLE_VERB_FLAG];
+}
+
+/** B117: all nine Matrix Verbs stay off hero/NPC sheets (permanent leftover or temp embed). */
+export function isOffSheetMatrixVerb(item, moduleId = MODULE_ID) {
+  const dsid = item?.system?._dsid ?? item?.item?.system?._dsid;
+  return MATRIX_VERB_DSIDS.includes(dsid) || isTemporaryConsoleVerb(item, moduleId);
+}
+
+/**
+ * Stamp DS `hideInSheet` so `_prepareAbilitiesContext` never lists the temp.
+ * Chat still `fromUuidSync(abilityUuid)` against the embed.
+ */
+export function applyHideInSheetFlag(data, systemId = DS_SYSTEM_ID) {
+  const next = data && typeof data === "object" ? data : {};
+  next.flags = { ...(next.flags ?? {}) };
+  next.flags[systemId] = { ...(next.flags[systemId] ?? {}), [DS_HIDE_IN_SHEET]: true };
+  return next;
+}
+
+export function hasHideInSheetFlag(item, systemId = DS_SYSTEM_ID) {
+  if (typeof item?.getFlag === "function") return !!item.getFlag(systemId, DS_HIDE_IN_SHEET);
+  return !!item?.flags?.[systemId]?.[DS_HIDE_IN_SHEET];
 }
 
 function iterableItems(items) {
@@ -69,7 +96,95 @@ export function markTemporaryConsoleVerbData(data, moduleId = MODULE_ID) {
   delete next.folder;
   next.flags = { ...(next.flags ?? {}) };
   next.flags[moduleId] = { ...(next.flags[moduleId] ?? {}), [TEMP_CONSOLE_VERB_FLAG]: true };
+  return applyHideInSheetFlag(next);
+}
+
+/**
+ * Draw Steel 1.1.2 ability rows use `data-document-uuid`, not `data-item-id`.
+ * Keep the older selectors so a custom sheet still matches.
+ */
+export function offSheetVerbDomSelectors(item) {
+  const id = item?.id ?? item?._id ?? "";
+  const uuid = item?.uuid ?? "";
+  const selectors = [];
+  if (id) {
+    selectors.push(
+      `[data-item-id="${id}"]`,
+      `[data-entry-id="${id}"]`,
+      `[data-document-id="${id}"]`,
+      `[data-ability-id="${id}"]`,
+    );
+  }
+  if (uuid) {
+    selectors.push(`[data-document-uuid="${uuid}"]`, `[data-uuid="${uuid}"]`);
+  }
+  return selectors;
+}
+
+export function abilityUuidsFromMessages(messages = []) {
+  const uuids = new Set();
+  for (const message of messages) {
+    for (const part of partsOf(message)) {
+      if (part?.abilityUuid) uuids.add(part.abilityUuid);
+    }
+  }
+  return uuids;
+}
+
+/** Temps whose uuid is not on a live chat card can be deleted on ready. */
+export function orphanTemporaryVerbs(items, keepUuids, isTemp = isTemporaryConsoleVerb) {
+  const keep = keepUuids instanceof Set ? keepUuids : new Set(keepUuids ?? []);
+  return iterableItems(items).filter(item => {
+    if (!isTemp(item)) return false;
+    const uuid = item?.uuid;
+    if (!uuid) return true;
+    return !keep.has(uuid);
+  });
+}
+
+/**
+ * Drop Matrix Verbs from a Draw Steel `_prepareAbilitiesContext` result.
+ * Play-mode empty groups (no Add) are removed so Ping cannot leave a blank Maneuver header.
+ */
+export function filterOffSheetAbilitiesContext(context) {
+  if (!context || typeof context !== "object") return context;
+  const next = { ...context };
+  for (const [key, group] of Object.entries(next)) {
+    if (!Array.isArray(group?.abilities)) continue;
+    const abilities = group.abilities.filter(row => !isOffSheetMatrixVerb(row?.item ?? row));
+    if (!abilities.length && group.showAdd !== true) {
+      delete next[key];
+      continue;
+    }
+    next[key] = { ...group, abilities };
+  }
   return next;
+}
+
+export function compareConsoleNames(a, b, lang) {
+  return String(a ?? "").localeCompare(String(b ?? ""), lang, { sensitivity: "base" });
+}
+
+/** Revealed node Actors (or board nodes) sort above everyone else, then A–Z by name. */
+export function compareConsoleListRows(a = {}, b = {}, { lang } = {}) {
+  const rank = row => (row.isNode && row.revealed) ? 0 : 1;
+  const delta = rank(a) - rank(b);
+  if (delta) return delta;
+  return compareConsoleNames(a.name, b.name, lang);
+}
+
+export function sortConsoleNodes(nodes = [], { lang } = {}) {
+  const list = Array.isArray(nodes) ? nodes : [];
+  return list.sort((a, b) => compareConsoleListRows(
+    { name: a?.name, isNode: true, revealed: !!a?.revealed },
+    { name: b?.name, isNode: true, revealed: !!b?.revealed },
+    { lang },
+  ));
+}
+
+export function sortConsoleRoster(roster = [], { lang } = {}) {
+  const list = Array.isArray(roster) ? roster : [];
+  return list.sort((a, b) => compareConsoleListRows(a, b, { lang }));
 }
 
 /**

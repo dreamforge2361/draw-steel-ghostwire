@@ -508,6 +508,15 @@ Michael: Hotel Interface and other placed Wire node Actors showed **Disconnected
   - [x] Foundry notes + B117 smoke
   - [ ] Foundry-verify: Hotel Interface / Light Control show Connected; Ping still rolls from a hero
 
+### Console sort + hover + Matrix Verb sheet hide (2026-09-20)
+Michael: Nodes/Connections lists need **revealed first, then A–Z by name**, plus hover for truncated full names. Smoke 0.3.63: **Ping is back on the hero ability sheet** after use (B117 lock — all nine must stay on the node applet / Console strip). **SHIPPED 0.3.64.** Temp embeds stay for chat `abilityUuid`; hide via `flags.draw-steel.hideInSheet` + `_prepareAbilitiesContext` filter + CSS/DOM (`data-document-uuid`). Ready deletes only temps that are not backing a chat card. No Gold Line `{ force: true }`. No PDF. No Ping doctrine rewrite.
+- [x] **Console UX + sheet hide** (module **0.3.64**) — **pending Foundry-verify**. Done when:
+  - [x] Nodes: revealed A–Z then hidden A–Z; Connections: revealed node Actors first, then everyone else A–Z
+  - [x] Name hover (`title` + `data-tooltip`) on node and Connections labels
+  - [x] Temp/permanent Matrix Verbs filtered from DS hero/NPC sheets; chat `abilityUuid` still resolves
+  - [x] B117 smoke + Foundry notes
+  - [ ] Foundry-verify: long node names tooltip; revealed nodes on top; Ping does not appear on the hero sheet after use; Search chat still prints tier text
+
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B118** scene kiosk merchant (module **0.3.59**) — **pending Foundry-verify**. Done when:

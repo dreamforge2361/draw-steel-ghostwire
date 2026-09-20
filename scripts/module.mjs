@@ -1,5 +1,5 @@
 import { MATRIX_VERB_DSIDS, MATRIX_VERBS } from "./wired-verbs.mjs";
-import { actorHasConnectInterface, isTemporaryConsoleVerb } from "./wired-console-verbs.mjs";
+import { actorHasConnectInterface, abilityUuidsFromMessages, hasHideInSheetFlag, isTemporaryConsoleVerb, orphanTemporaryVerbs, DS_HIDE_IN_SHEET, DS_SYSTEM_ID } from "./wired-console-verbs.mjs";
 import {
   WIRED_STATUS_DEFS,
   abilityPowerRollModifiers,
@@ -215,17 +215,27 @@ function patchWiredAbilities() {
 }
 
 // Existing worlds: strip every Matrix Verb off sheets (heroes, pregens, Wire Kit NPCs, Mama).
-// B117 applet-only — flag matrixVerbsApplet so this runs once even if matrixVerbsConsole already fired.
+// B117 applet-only — flag matrixVerbsApplet so the one-time permanent strip runs once.
+// 0.3.64: leftover `temporaryConsoleVerb` embeds are stripped every ready unless a chat
+// card still points at their abilityUuid (Draw Steel fromUuidSync). Keepers get hideInSheet.
 Hooks.once("ready", async () => {
+  const keepUuids = abilityUuidsFromMessages(game.messages ?? []);
   let stripped = 0;
   for (const actor of game.actors) {
     if (!actor.isOwner) continue;
     const leftoverTemps = [...actor.items].filter(isTemporaryConsoleVerb);
-    if (leftoverTemps.length) {
-      await actor.deleteEmbeddedDocuments("Item", leftoverTemps.map(item => item.id));
+    const orphans = orphanTemporaryVerbs(leftoverTemps, keepUuids);
+    const orphanIds = new Set(orphans.map(item => item.id));
+    if (orphans.length) {
+      await actor.deleteEmbeddedDocuments("Item", orphans.map(item => item.id));
+    }
+    for (const item of leftoverTemps) {
+      if (orphanIds.has(item.id) || hasHideInSheetFlag(item)) continue;
+      try { await item.setFlag(DS_SYSTEM_ID, DS_HIDE_IN_SHEET, true); }
+      catch (err) { console.warn(`${MODULE_ID} | could not stamp hideInSheet on leftover Matrix Verb`, err); }
     }
     if (!game.user.isGM || actor.getFlag(MODULE_ID, "matrixVerbsApplet")) continue;
-    const offSheet = [...actor.items].filter(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid));
+    const offSheet = [...actor.items].filter(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid) && !isTemporaryConsoleVerb(item));
     if (offSheet.length) {
       await actor.deleteEmbeddedDocuments("Item", offSheet.map(item => item.id));
       stripped += offSheet.length;

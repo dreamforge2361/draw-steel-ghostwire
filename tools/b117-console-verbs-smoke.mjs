@@ -19,21 +19,31 @@ import {
 } from "../scripts/wired-verbs.mjs";
 import {
   CONSOLE_SLICE,
+  DS_HIDE_IN_SHEET,
+  DS_SYSTEM_ID,
   TEMP_CONSOLE_VERB_FLAG,
   abilityTierFromMessage,
+  abilityUuidsFromMessages,
   actorHasConnectInterface,
   consoleVerbGate,
+  filterOffSheetAbilitiesContext,
+  hasHideInSheetFlag,
+  isOffSheetMatrixVerb,
   isTemporaryConsoleVerb,
   itemIsConnectInterface,
   leftoverTemporaryVerbs,
   markTemporaryConsoleVerbData,
   nextAlert,
+  offSheetVerbDomSelectors,
+  orphanTemporaryVerbs,
   consoleRosterWireState,
   consoleVerbRoster,
   pickConsoleActor,
   pickPlayerVerbActor,
   shouldReleaseTemporaryVerb,
   softTraceDelta,
+  sortConsoleNodes,
+  sortConsoleRoster,
   splitReusableTemporaryVerbs,
   verbUseMessageOptions,
 } from "../scripts/wired-console-verbs.mjs";
@@ -54,13 +64,13 @@ function readBomFreeJson(path) {
 
 const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matrix-scan,matrix-navigate,matrix-ping,matrix-broadcast,matrix-search,matrix-read-write";
 
-console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.61)\n");
+console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.64)\n");
 
 const moduleJson = readBomFreeJson("module.json");
 ok((() => {
   const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
-  return maj === 0 && min === 3 && pat >= 61;
-})(), `module.json is 0.3.61+ (got ${moduleJson.version})`);
+  return maj === 0 && min === 3 && pat >= 64;
+})(), `module.json is 0.3.64+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -157,6 +167,11 @@ ok(consoleSrc.includes("splitReusableTemporaryVerbs"), "reuses leftover temps of
 ok(consoleSrc.includes("verbUseMessageOptions"), "use() gets DS 1.1.2 messageOptions.data flags");
 ok(consoleSrc.includes("render: false"), "temp embed does not force a sheet redraw");
 ok(consoleSrc.includes("hideTemporaryConsoleVerbs"), "hides in-flight temps on the hero/NPC sheet");
+ok(consoleSrc.includes("data-document-uuid"), "sheet hide matches DS data-document-uuid");
+ok(consoleSrc.includes("filterOffSheetAbilitiesContext") && consoleSrc.includes("patchSheetHideMatrixVerbs"), "wraps DS _prepareAbilitiesContext");
+ok(consoleSrc.includes("renderActorSheetV2") && consoleSrc.includes("renderDrawSteelRetainerSheet"), "sheet hide hooks AppV2 + retainer fallback");
+ok(consoleSrc.includes("sortConsoleNodes") && consoleSrc.includes("sortConsoleRoster"), "Console sorts nodes + Connections");
+ok(consoleSrc.includes("ensureTempHiddenOnSheet") && consoleSrc.includes("hideInSheet"), "temps stamp DS hideInSheet");
 ok(consoleSrc.includes("consoleRosterWireState") && consoleSrc.includes("isNodeActor"), "roster chips node Actors as Connected");
 ok(/if \(isNodeActor\(actor\)\)/.test(consoleSrc), "useConsoleVerb refuses a node actor");
 ok(/dataset.isNode === "true"/.test(consoleSrc), "node roster click does not become the verb actor");
@@ -176,6 +191,8 @@ ok(!/defaultItems\.add\(uuid\)/.test(moduleSrc) && !/for \(const uuid of SHEET_V
 ok(moduleSrc.includes("NeedInterface") && moduleSrc.includes("actorHasConnectInterface"), "AbilityModel#use also gates Connect on interface");
 ok(moduleSrc.includes("abilityPowerRollModifiers"), "Wired use patch uses shared modifier helper");
 ok(moduleSrc.includes("isTemporaryConsoleVerb"), "ready hook strips leftover temporary verbs");
+ok(moduleSrc.includes("orphanTemporaryVerbs") && moduleSrc.includes("abilityUuidsFromMessages"), "ready keeps temps backing chat abilityUuid");
+ok(moduleSrc.includes("hideInSheet"), "ready stamps hideInSheet on chat-backed temps");
 
 const kitSrc = readFileSync("scripts/wired-kit.mjs", "utf8");
 ok(kitSrc.includes("grantMatrixVerbs") && kitSrc.includes("return 0"), "Wire Kit grant is a no-op");
@@ -230,6 +247,7 @@ ok(!actorHasConnectInterface({ classDsid: "hacker", items: [] }), "Hacker still 
 
 const css = readFileSync("styles/ghostwire.css", "utf8");
 ok(css.includes(".wc-verb-strip") && css.includes(".ghostwire-wired-node-panel"), "CSS for verb strip + node panel");
+ok(css.includes("ghostwire-off-sheet-verb"), "CSS hides off-sheet Matrix Verb rows");
 
 console.log("\n4) Docs / lang");
 const lang = readBomFreeJson("lang/en.json");
@@ -258,6 +276,9 @@ const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
 ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry), "Foundry notes name Connect interface");
 ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry), "Foundry notes: node Actors always Connected");
+ok(/revealed first/.test(foundry) && /A–Z|A-Z/.test(foundry), "Foundry notes: revealed-first then A–Z lists");
+ok(/hideInSheet/.test(foundry) && /data-document-uuid/.test(foundry), "Foundry notes: 0.3.64 sheet hide path");
+ok(/0\.3\.64/.test(foundry), "Foundry notes name 0.3.64");
 ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the sheet");
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
@@ -281,8 +302,10 @@ const stamped = markTemporaryConsoleVerbData({
 ok(!stamped._id && !stamped.folder, "temp verb data drops _id and folder");
 ok(stamped.flags["draw-steel-ghostwire"]?.[TEMP_CONSOLE_VERB_FLAG] === true, "temp flag is set");
 ok(stamped.flags.other?.x === 1, "unrelated flags are preserved");
-ok(isTemporaryConsoleVerb(stamped), "isTemporaryConsoleVerb reads stamped data");
-ok(!isTemporaryConsoleVerb({ flags: {} }), "unflagged item is not temporary");
+ok(stamped.flags[DS_SYSTEM_ID]?.[DS_HIDE_IN_SHEET] === true, "temp data stamps DS hideInSheet");
+ok(hasHideInSheetFlag(stamped), "hasHideInSheetFlag reads stamped data");
+ok(isOffSheetMatrixVerb(stamped) && isOffSheetMatrixVerb({ system: { _dsid: "matrix-ping" } }), "temps and all nine dsids are off-sheet");
+ok(!isOffSheetMatrixVerb({ system: { _dsid: "seize-control" } }), "Hacker Programs stay on-sheet");
 
 const msgOpts = verbUseMessageOptions({ dsid: "matrix-search", nodeId: "n1" });
 ok(msgOpts.data?.flags?.["draw-steel-ghostwire"]?.consoleVerb?.dsid === "matrix-search", "messageOptions.data carries consoleVerb");
@@ -321,6 +344,46 @@ ok(/Failed to Find Item/.test(readFileSync("README.md", "utf8")), "README names 
 ok(/fromUuidSync/.test(readFileSync("docs/rulebook/18-wired-foundry.md", "utf8")), "Foundry notes name DS fromUuidSync");
 ok(/0\.3\.61/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names 0.3.61 fire path");
 ok(/Failed to Find Item/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names the Failed to Find Item card");
+
+console.log("\n6) 0.3.64 Console sort + hover + sheet hide");
+const nodeSort = sortConsoleNodes([
+  { name: "Zebra Host", revealed: false },
+  { name: "Alpha Light", revealed: true },
+  { name: "Mid Cam", revealed: true },
+  { name: "Beta Door", revealed: false },
+]);
+ok(nodeSort.map(n => n.name).join(",") === "Alpha Light,Mid Cam,Beta Door,Zebra Host", "nodes: revealed A–Z then hidden A–Z");
+
+const rosterSort = sortConsoleRoster([
+  { name: "Nyx", isNode: false, revealed: false, state: "jackedIn" },
+  { name: "Zebra Host", isNode: true, revealed: false },
+  { name: "Hotel Interface", isNode: true, revealed: true },
+  { name: "Kessic", isNode: false, revealed: false, state: "disconnected" },
+]);
+ok(rosterSort.map(r => r.name).join(",") === "Hotel Interface,Kessic,Nyx,Zebra Host", "Connections: revealed nodes first, then everyone else A–Z");
+
+pingTemp.uuid = "Actor.a.Item.temp-ping";
+ok(orphanTemporaryVerbs([pingTemp], new Set()).length === 1, "unreferenced temp is an orphan");
+ok(orphanTemporaryVerbs([pingTemp], new Set(["Actor.a.Item.temp-ping"])).length === 0, "chat-backed temp is kept");
+ok(abilityUuidsFromMessages([{ system: { parts: [{ type: "abilityUse", abilityUuid: "Actor.a.Item.temp-ping" }] } }]).has("Actor.a.Item.temp-ping"), "parses abilityUuid from chat parts");
+
+const filtered = filterOffSheetAbilitiesContext({
+  maneuver: { label: "Maneuver", showAdd: false, abilities: [{ item: stamped }, { item: { system: { _dsid: "field-repair" } } }] },
+  emptyPing: { label: "Ping only", showAdd: false, abilities: [{ item: { system: { _dsid: "matrix-ping" } } }] },
+});
+ok(filtered.maneuver.abilities.length === 1 && filtered.maneuver.abilities[0].item.system._dsid === "field-repair", "abilities context drops Matrix Verbs");
+ok(!filtered.emptyPing, "play-mode empty group after dropping Ping is removed");
+
+const selectors = offSheetVerbDomSelectors({ id: "abc", uuid: "Actor.a.Item.abc" });
+ok(selectors.includes('[data-document-uuid="Actor.a.Item.abc"]') && selectors.includes('[data-item-id="abc"]'), "DOM hide includes data-document-uuid and data-item-id");
+
+const consoleTpl = readFileSync("templates/wired-console.hbs", "utf8");
+ok(/class="wc-node-name"[^>]*title="\{\{name\}\}"/.test(consoleTpl) && /data-tooltip="\{\{name\}\}"/.test(consoleTpl), "node names have title + data-tooltip");
+ok(/class="wc-roster-name"[^>]*title="\{\{name\}\}"/.test(consoleTpl), "Connections names have title tooltip");
+
+ok(/0\.3\.64/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.64");
+ok(/hideInSheet/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names hideInSheet");
+ok(!/gold-line-scene/.test(readFileSync("scripts/wired-console.mjs", "utf8")), "0.3.64 still does not import gold-line-scene");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

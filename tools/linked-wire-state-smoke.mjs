@@ -46,7 +46,10 @@ function readBomFreeJson(path) {
 console.log("Linked Wire connection state smoke (0.3.57)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.57", `module.json is 0.3.57 (got ${moduleJson.version})`);
+ok((() => {
+  const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 57;
+})(), `module.json is 0.3.57+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -100,7 +103,7 @@ ok(moduleSrc.includes("NeedImmersion") && moduleSrc.includes("isLinkedOkVerb"), 
 ok(moduleSrc.includes("abilityPowerRollModifiers"), "power-roll helpers (Linked applies neither)");
 
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
-ok(consoleSrc.includes("state: verbActor?.state") && consoleSrc.includes("linked: 2") && consoleSrc.includes("connected: 3"), "Console roster + gate pass state; Linked sorts after Overlay; nodes chip as Connected");
+ok(consoleSrc.includes("state: verbActor?.state") && consoleSrc.includes("sortConsoleRoster") && consoleSrc.includes("consoleRosterWireState"), "Console roster + gate pass state; Connections sort revealed-first then A–Z; nodes chip as Connected");
 ok(consoleSrc.includes("isNodeActor") && consoleSrc.includes("consoleRosterWireState"), "Console roster treats kind:node as always Connected");
 ok(consoleSrc.includes("state,"), "useConsoleVerb passes state into the gate");
 ok(/focusPlacedNodeOnCanvas/.test(consoleSrc) && /#onSelectNode/.test(consoleSrc), "Console list select calls focusPlacedNodeOnCanvas");
