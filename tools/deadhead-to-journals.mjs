@@ -24,6 +24,8 @@ const UUID = {
   security: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.DVEibxfpEWA5RoCn]{ARG Security Officer}`,
   lieutenant: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.g7LC1G0K20UnYzkr]{ARG Response Lieutenant}`,
   watchdog: `@UUID[Compendium.${MODULE_ID}.bestiary.Actor.dNEBSb47qSV9lRRH]{Watchdog ICE}`,
+  mamaBrief: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwMamaBriefWafer]{Mama’s Deadhead Brief (Gold Line)}`,
+  argCapsule: `@UUID[Compendium.${MODULE_ID}.gear.Item.gwArgCourierCap0]{ARG Courier Capsule (Gold Line)}`,
 };
 
 const PAGE_IDS = [
@@ -306,7 +308,7 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 9, "Items", [
-    "Director notes for the two plot wafers. Gear SKUs can wait; do not invent art. Hand these as a wafer Item or a journal excerpt.",
+    "Director notes for the two plot wafers. **B104 Gear SKUs shipped 0.3.52.** Drag from **Ghostwire Gear → Plot & Run Hooks** (Deadhead gallery art; do not regenerate). Hand " + UUID.mamaBrief + " at Beat 0. The prize is " + UUID.argCapsule + " (Faraday; wipe if the train stops while the live wafer is nested).",
     "",
     "### Mama’s Deadhead Brief (Gold Line)",
     "",
@@ -361,9 +363,13 @@ const pages = [
     "",
     foundryNotes,
     "",
+    "### Gear SKUs (shipped 0.3.52)",
+    "",
+    "- " + UUID.mamaBrief + " — `assets/items/deadhead/item-mama-brief-wafer.webp`",
+    "- " + UUID.argCapsule + " — `assets/items/deadhead/item-arg-courier-capsule.webp`",
+    "",
     "### Still open (do not invent in play)",
     "",
-    "- Mama’s Brief + ARG capsule as Gear pack Items (notes are on the Items page).",
     "- Splash art (freighter + four runners over a moving consist).",
     "- Tokens on the Gold Line Scene; Nox freight-drone token.",
     "- Wired Console board preset (Track 1 **R2**, Track 2 **R1** + Watchdog, Trace host **R3**).",

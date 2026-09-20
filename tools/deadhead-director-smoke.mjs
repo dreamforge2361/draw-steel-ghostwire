@@ -5,7 +5,7 @@
  * Run: node tools/deadhead-director-smoke.mjs
  * Does not write Scene JSON or touch Gold Line inject.
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -44,7 +44,7 @@ const PAGE_KEYS = [
 console.log("Deadhead Director journal smoke");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.51", `module.json is 0.3.51 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.52", `module.json is 0.3.52 (got ${moduleJson.version})`);
 
 const journal = readBomFreeJson(JOURNAL);
 ok(journal._id === "gwDeadheadDirJrn", "director journal id is gwDeadheadDirJrn");
@@ -86,6 +86,9 @@ ok(!/Draw Steel Heroes|MCDM/i.test(text), "Ghostwire-only (no Draw Steel Heroes 
 ok(!/\bdecker\b/i.test(text) && !/\bMatrix\b/.test(text) && !/\bShadowrun\b/i.test(text), "Ghostwire-only player wording");
 ok(/Mama’s Deadhead Brief|Mama's Deadhead Brief/.test(text), "Mama brief notes");
 ok(/live transaction wafer|ghost ledger/.test(text), "capsule / live wafer notes");
+ok(/B104 Gear SKUs shipped/.test(text), "Items page notes B104 Gear SKUs shipped");
+ok(/gwMamaBriefWafer/.test(text) && /gwArgCourierCap0/.test(text), "Items page UUID-hooks both Gear SKUs");
+ok(/Gear SKUs \(shipped 0\.3\.52\)/.test(text), "Foundry checklist marks Gear SKUs shipped");
 ok(/ARG Corporate Enforcer/.test(text) && /ARG Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
 ok(/Crew hangout/.test(text) && /Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist lists hangout / Mama / canyon");
 ok(/Gold Line/.test(text) && /sacred|do \*\*not\*\* inject|Do \*\*not\*\* inject/i.test(text), "Gold Line checklist is manual / do not inject");
@@ -99,6 +102,30 @@ const map = readBomFreeJson(MAP);
 const mapText = map.pages.map(p => `${p.text?.markdown ?? ""}\n${p.text?.content ?? ""}`).join("\n");
 ok(/AFT FREIGHT/.test(mapText) && /freight Enforcers/.test(mapText), "map-notes beat page is cargo remap");
 ok(!/\bPASSENGER\b/.test(mapText) && !/5 cars/.test(mapText), "map-notes beat page has no passenger consist");
+
+const mama = readBomFreeJson("src/packs/bestiary/reach-streets/mama-cassavir.json");
+const ghostItemNames = (mama.items ?? []).filter(i => String(i.name).startsWith("GHOSTWIRE."));
+ok(ghostItemNames.length === 0, `mama-cassavir has zero item names starting with GHOSTWIRE. (found ${ghostItemNames.map(i => i.name).join(", ") || "none"})`);
+
+const gearFiles = [
+  "src/packs/gear/general/plot/_folder.json",
+  "src/packs/gear/general/plot/mama-deadhead-brief.json",
+  "src/packs/gear/general/plot/arg-courier-capsule.json",
+  "assets/items/deadhead/item-mama-brief-wafer.png",
+  "assets/items/deadhead/item-mama-brief-wafer.webp",
+  "assets/items/deadhead/item-arg-courier-capsule.png",
+  "assets/items/deadhead/item-arg-courier-capsule.webp",
+];
+for (const file of gearFiles) {
+  ok(existsSync(file), `${file} exists`);
+}
+const brief = readBomFreeJson("src/packs/gear/general/plot/mama-deadhead-brief.json");
+const capsule = readBomFreeJson("src/packs/gear/general/plot/arg-courier-capsule.json");
+ok(brief._id === "gwMamaBriefWafer" && brief.system?._dsid === "mama-deadhead-brief", "Mama brief SKU id + dsid");
+ok(capsule._id === "gwArgCourierCap0" && capsule.system?._dsid === "arg-courier-capsule", "ARG capsule SKU id + dsid");
+ok(brief.flags?.["draw-steel-ghostwire"]?.gear && capsule.flags?.["draw-steel-ghostwire"]?.gear, "both SKUs carry flags.draw-steel-ghostwire.gear");
+ok(brief.img.endsWith("item-mama-brief-wafer.webp") && capsule.img.endsWith("item-arg-courier-capsule.webp"), "SKU img paths point at deadhead webp");
+ok(existsSync("docs/rulebook/ART-NPC-PORTRAIT-NOTES.md"), "ART-NPC-PORTRAIT-NOTES.md installed");
 
 if (failures.length) {
   console.error("\nFAILED:");

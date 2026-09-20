@@ -1,8 +1,8 @@
 # Spike B104 — Deadhead Foundry run pack
 
 **Date:** 2026-09-19  
-**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded) · **0.3.41** (live-scene lock) · **0.3.42** (Director journal) · **0.3.43** (Beat 0 hangout Scene — B107)  
-**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). **Director journal shipped 0.3.42. Beat 0 hangout Scene shipped 0.3.43 (B107); canyon SKIPPED — narrated.** Remaining: wafers as Gear items.  
+**Module:** **0.3.33** (SoR + empty pack scaffold) · **0.3.36** (Gold Line map pack — B106) · **0.3.40** (cargo remap folded) · **0.3.41** (live-scene lock) · **0.3.42** (Director journal) · **0.3.43** (Beat 0 hangout Scene — B107) · **0.3.52** (Gear SKUs)  
+**Status:** **SoR LOCKED** — Gold Line plates + Scene inject + map-notes journal shipped (B106). **Director journal shipped 0.3.42. Beat 0 hangout Scene shipped 0.3.43 (B107); canyon SKIPPED — narrated. Gear SKUs shipped 0.3.52** (Mama’s Deadhead Brief + ARG Courier Capsule).  
 **Cargo lock (2026-09-20):** Gold Line is a **cargo maglev**, not a passenger train. Ignore leftover passenger-car / passenger-PA wording below. Live SoR + sidecar: `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, `GOLD-LINE-CARGO-REMAP.md` (LOCKED / folded).  
 **Journals (rulebook / lore / handbook / flats / pregen-fiction):** **not** regenerated.  
 **Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B39 Run Generator world folder, B99 Mama’s Club map, **B106 Gold Line map pack**.
@@ -91,7 +91,7 @@ Ship as `type: "treasure"` in **Ghostwire Gear** (`src/packs/gear/…`), then `@
 | Mama’s Deadhead Brief (Gold Line) | Data wafer / portable gear. ~¥50; worthless to fence (Mama-marked). Baseline: job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev **without** naming the capsule chamber. **Not** on the wafer: exact chamber; R1 Watchdog / R2 cams; +1 Trace / 2 rounds wafer-out; full faction doors until discovery D. |
 | ARG courier capsule / live wafer | Plothook notes for the three buyers (Mama / corp / Signal). Wipe if the train stops while the live wafer is still in the capsule. |
 
-Placeholder `icons/` art is fine until an item-art pass. **Do not generate art in the content PR unless Michael drops files.**
+Placeholder `icons/` art is fine until an item-art pass. **Do not generate art in the content PR unless Michael drops files.** **0.3.52:** Michael Deadhead gallery PNGs shipped as `assets/items/deadhead/item-mama-brief-wafer.{png,webp}` and `item-arg-courier-capsule.{png,webp}` — do not regenerate.
 
 ## Scenes (content pass)
 
@@ -133,7 +133,7 @@ Art locks when maps ship: flat top-down; no people on maps; no baked grid; ARG u
 ## Done when (content pass)
 
 - Compendium **Ghostwire Runs** → **Deadhead** shows Overview, Trace 1–12, Beats 0–5, Items, Opposition, Foundry checklist. **Shipped 0.3.42.** Beat 0 hangout Scene **shipped 0.3.43**; canyon **SKIPPED**.
-- Both wafers exist as Gear items and are linked from the Items page. *(journal notes shipped; Gear SKUs still open)*
+- Both wafers exist as Gear items and are linked from the Items page. **Shipped 0.3.52** (`src/packs/gear/general/plot/`, gallery art at `assets/items/deadhead/`).
 - Scenes listed above exist in the world (Mama reused; **Gold Line = Michael’s live Scene**; hangout injected 0.3.43); pack journal points at them. Canyon is **SKIPPED** — narrated, no plate.
 - Design locks above match the SoR verbatim (¥ / wipe / Trace cap / ARG / Nox / L1–R3 cargo / 20 ft / no twist / 4h / ping-spoof mention).
 - No new class abilities. No unrelated journal regen. One module patch.
