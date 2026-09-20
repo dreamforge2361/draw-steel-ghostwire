@@ -492,10 +492,11 @@ Spec: `docs/spikes/LINKED-CONNECTION-STATE.md`. Code + RAW `21` shipped **0.3.56
   - [ ] Foundry-verify: VOIDMARK applet answers “what are the connection states?” with Linked
 
 ### Ping vs Read/Write doctrine (2026-09-20)
-Lang Ping/Read/Write Story+Effect + RAW `21` Matrix Verbs + `08-hacker.md` sync + Foundry notes one-liner. **SHIPPED 0.3.62.** Ping = touch/test nudge (lights; “does it answer?”; one-frame glitch). Read/Write = change data/settings/state (unlock maglock, kill cam feed). Not B106 Console Wire ping/spoof. VOIDMARK index rebuilt. No Gold Line `{ force: true }`. No PDF.
+Lang Ping/Read/Write Story+Effect + RAW `21` Matrix Verbs + `08-hacker.md` sync + Foundry notes one-liner. **SHIPPED 0.3.62.** Ping = touch/test nudge (lights; “does it answer?”; one-frame glitch). Read/Write = change data/settings/state (unlock maglock, kill cam feed). **Ping vs ICE:** Track 1 only (no ICE); ICE is Track 2; Ping does not bypass or defeat ICE. Not B106 Console Wire ping/spoof. VOIDMARK index rebuilt. No Gold Line `{ force: true }`. No PDF.
 - [x] **Ping vs Read/Write** (module **0.3.62**) — **pending Foundry-verify**. Done when:
   - [x] Ping card names maglock-not-unlock and cam-not-lasting-off
   - [x] Read/Write card names unlock maglock / kill cam feed
+  - [x] Ping card / RAW: Track 1 only, ICE is Track 2, Ping does not bypass ICE
   - [x] RAW `21` + Hacker doctrine + VOIDMARK retrieve the distinction
   - [ ] Foundry-verify: Ping / Read/Write ability text on the node applet matches lang
 

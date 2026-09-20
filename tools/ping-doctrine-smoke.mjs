@@ -29,9 +29,14 @@ const ping = lang.GHOSTWIRE.Abilities.MatrixVerbs.Ping;
 const rw = lang.GHOSTWIRE.Abilities.MatrixVerbs.ReadWrite;
 
 ok(/nudge, not a deep hack/i.test(ping.Story), "Ping.Story is a nudge, not a deep hack");
+ok(/Track 1 only/i.test(ping.Story), "Ping.Story is Track 1 only");
 ok(/does <strong>not<\/strong> unlock it for entry/i.test(ping.Effect), "Ping.Effect: maglock tap is not unlock for entry");
 ok(/lasting cam-off/i.test(ping.Effect), "Ping.Effect: cam test is not lasting cam-off");
 ok(/Read\/Write/.test(ping.Effect), "Ping.Effect points those jobs at Read/Write");
+ok(/Ping vs ICE/i.test(ping.Effect), "Ping.Effect has Ping vs ICE");
+ok(/does not bypass or defeat ICE/i.test(ping.Effect), "Ping.Effect: Ping does not bypass or defeat ICE");
+ok(/Track 2/.test(ping.Effect), "Ping.Effect: ICE is Track 2");
+ok(/never opens or controls the guarded system/i.test(ping.Effect), "Ping.Effect: Ping never opens the guarded system");
 ok(/B106/.test(ping.Effect), "Ping.Effect is not Console Wire ping/spoof (B106)");
 ok(/touch\/test nudge/i.test(ping.Effect), "Ping.Effect states Ping = touch/test nudge");
 ok(/Overlaid/.test(ping.Effect) && /Jacked In/.test(ping.Effect), "Ping.Effect requires Overlay or Jacked In");
@@ -45,6 +50,9 @@ const wire = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/### Ping vs Read\/Write/.test(wire), "RAW 21 has Ping vs Read/Write");
 ok(/\*\*not\*\* unlock for entry/.test(wire), "RAW 21: Ping does not unlock maglock");
 ok(/\*\*not\*\* lasting cam-off/.test(wire), "RAW 21: Ping is not lasting cam-off");
+ok(/Ping vs ICE/.test(wire), "RAW 21 has Ping vs ICE");
+ok(/does not bypass or defeat ICE/.test(wire), "RAW 21: Ping does not bypass ICE");
+ok(/never opens or controls the guarded system/.test(wire), "RAW 21: Ping never opens the guarded system");
 ok(/unlock a maglock for entry/.test(wire) && /kill a feed/.test(wire), "RAW 21 Read/Write names unlock and cam-off");
 ok(/B106/.test(wire), "RAW 21 names B106 Console Wire ping/spoof");
 
@@ -52,9 +60,12 @@ const hacker = readFileSync("docs/rulebook/08-hacker.md", "utf8");
 ok(/Ping vs Read\/Write/.test(hacker), "08-hacker syncs Ping vs Read/Write");
 ok(/not\*\* unlock for entry/.test(hacker) || /not unlock for entry/.test(hacker), "08-hacker: Ping does not unlock");
 ok(/lasting cam-off/.test(hacker), "08-hacker: Ping is not lasting cam-off");
+ok(/Ping vs ICE/.test(hacker), "08-hacker syncs Ping vs ICE");
+ok(/does not bypass or defeat ICE/.test(hacker), "08-hacker: Ping does not bypass ICE");
 
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/Ping vs Read\/Write/.test(foundry), "Foundry notes include Ping vs Read/Write one-liner");
+ok(/Ping vs ICE/.test(foundry), "Foundry notes include Ping vs ICE");
 ok(/B106/.test(foundry), "Foundry notes: Ping is not Console Wire ping/spoof");
 
 const readme = readFileSync("README.md", "utf8");
