@@ -3,7 +3,7 @@
   "_key": "!items!GwGreaseBox00001",
   "name": "GHOSTWIRE.Gear.Items.GreaseBox.Name",
   "type": "treasure",
-  "img": "icons/consumables/food/bowl-rice-meat-peas.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/grease-box.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.GreaseBox.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!GwClearline00001",
   "name": "GHOSTWIRE.Gear.Items.Clearline.Name",
   "type": "treasure",
-  "img": "icons/consumables/potions/bottle-round-corked-blue.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/clearline.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.Clearline.Description",

@@ -3,7 +3,7 @@
   "_key": "!items!GwRedDust0000001",
   "name": "GHOSTWIRE.Gear.Items.RedDust.Name",
   "type": "treasure",
-  "img": "icons/consumables/potions/potion-bottle-corked-labeled-red.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/red-dust.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.RedDust.Description",

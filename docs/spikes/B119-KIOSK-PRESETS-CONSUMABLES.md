@@ -82,3 +82,5 @@ node tools/kiosk-smoke.mjs
 ```
 
 Foundry: Token controls › Place kiosk › **General / Food** on a non–Gold Line scratch Scene. Shelf lists the six food SKUs. Repeat Armor / Weapons. Buy Buzz-Can. On a hero, Use Kickwire — temp Stamina + Speed AE; crash when it ends.
+
+**0.3.66 (Michael kiosk smoke 2026-09-20):** Food / chem rows showed no image. SKU `img` used Foundry game-icons (`icons/consumables/…`) that 404 on stock V14. Module SVGs ship at `assets/icons/consumables/<dsid>.svg` plus `food.svg` / `chem.svg` shelf fallbacks. Kiosk list `kioskListingImg` rejects blank / non-`icons/svg` `icons/` trees; `onerror` falls back food vs chem vs `icons/svg/item-bag.svg`. Rebuild `node tools/build-packs.mjs gear`.

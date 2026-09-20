@@ -3,7 +3,7 @@
   "_key": "!items!GwLytePouch00001",
   "name": "GHOSTWIRE.Gear.Items.LytePouch.Name",
   "type": "treasure",
-  "img": "icons/consumables/drinks/tea-jug-gourd-brown.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/lyte-pouch.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.LytePouch.Description",

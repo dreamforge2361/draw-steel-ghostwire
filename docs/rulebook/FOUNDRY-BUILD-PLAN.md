@@ -526,6 +526,15 @@ Michael console 0.3.65: `Uncaught (in promise) Error: Flag scope "0" is not vali
   - [x] B117 smoke: bare `filter(isTemporaryConsoleVerb)` does not throw
   - [ ] Foundry-verify: world `Game.setupGame` no longer throws Flag scope "0"
 
+### Kiosk food/chem row art (2026-09-20)
+Michael smoke 0.3.65: food/chem kiosk rows showed no image. SKU `img` used `icons/consumables/…` game-icons that 404 on stock Foundry 14. **SHIPPED 0.3.66.** Module SVGs at `assets/icons/consumables/`; shop `onerror` falls back food vs chem vs `icons/svg/item-bag.svg`. No Gold Line `{ force: true }`. No PDF.
+- [x] **Consumable kiosk art** (module **0.3.66**) — **pending Foundry-verify**. Done when:
+  - [x] All `src/packs/gear/consumables/**` Item `img` are module SVGs on disk
+  - [x] Kiosk listing helper rejects blank / game-icons `icons/` trees
+  - [x] Template `data-fallback` + render `onerror`
+  - [x] `node tools/kiosk-smoke.mjs`
+  - [ ] Foundry-verify: Food kiosk rows show icons; Medical chems show flasks; 404 still shows a glyph
+
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B118** scene kiosk merchant (module **0.3.59**) — **pending Foundry-verify**. Done when:

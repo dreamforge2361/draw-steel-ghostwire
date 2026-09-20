@@ -3,7 +3,7 @@
   "_key": "!items!GwNumbTap0000001",
   "name": "GHOSTWIRE.Gear.Items.NumbTap.Name",
   "type": "treasure",
-  "img": "icons/consumables/potions/potion-bottle-corked-labeled-green.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/consumables/numb-tap.svg",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Gear.Items.NumbTap.Description",
