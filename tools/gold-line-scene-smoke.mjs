@@ -66,7 +66,7 @@ ok(existsSync(SCRIPT), "inject script exists");
 ok(existsSync(JOURNAL), "Deadhead journal source exists");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.37", `module.json is 0.3.37 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.40", `module.json is 0.3.40 (got ${moduleJson.version})`);
 ok(moduleJson.esmodules.includes("scripts/module.mjs"), "module still loads scripts/module.mjs");
 
 const template = readBomFreeJson(TEMPLATE);
@@ -115,7 +115,11 @@ ok(script.includes("levelBackground") && script.includes("background.video"), "i
 ok(/roof\.update\(data\)/.test(script), "force updates an existing roof tile");
 
 const sor = readFileSync(SOR, "utf8");
-ok(/L1.*TAIL/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has dual-Hammerhead beat remap");
+ok(/L1.*AFT FREIGHT/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has cargo dual-Hammerhead beat remap");
+ok(/freight Enforcers \*\*L1–L2\*\*/i.test(sor) && /Security \*\*L3\*\*/.test(sor), "SoR opposition is freight Enforcers L1–L2 + Security L3");
+ok(/Trace host \*\*R3\*\*/.test(sor) && /cams\/doors \*\*R2\*\*/.test(sor) && /Watchdog ICE/.test(sor), "SoR Wire is R2 cams/doors, R1 capsule+Watchdog, R3 Trace/cab");
+ok(!/passenger PA/i.test(sor) && !/\bPASSENGER\b/.test(sor) && !/Passenger —/.test(sor), "SoR has no passenger-train consist/beat/PA");
+ok(/hide the roofs tile when playing inside/i.test(sor), "SoR tells Director to hide roofs when inside");
 ok(/map-gold-line-interior-loop\.webm/.test(sor), "SoR points at the interior loop");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
 
@@ -123,6 +127,11 @@ const journal = readBomFreeJson(JOURNAL);
 ok(/^[A-Za-z0-9]{16}$/.test(journal._id), "journal _id is 16 alphanumeric");
 ok(journal.folder === "gwRunsDeadhead00", "journal sits in Deadhead folder");
 ok(journal.pages?.length >= 2, "journal has plate + beat pages");
+const journalText = journal.pages.map(p => `${p.text?.markdown ?? ""}\n${p.text?.content ?? ""}`).join("\n");
+ok(/AFT FREIGHT/.test(journalText) && /freight Enforcers/.test(journalText), "journal beat remap is cargo");
+ok(/hide the roofs tile when playing inside/.test(journalText), "journal: Director hides roofs when inside");
+ok(/Michael manual/.test(journalText), "journal: walls/lights are Michael manual");
+ok(!/\bPASSENGER\b/.test(journalText) && !/5 cars/.test(journalText), "journal has no passenger-car remap");
 for (const page of journal.pages ?? []) {
   ok(/^[A-Za-z0-9]{16}$/.test(page._id), `page ${page.name} _id is 16 alphanumeric`);
 }
