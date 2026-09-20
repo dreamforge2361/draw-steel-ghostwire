@@ -32,7 +32,8 @@
       "reachHandbook": "Ghostwire — Ossian Reach Handbook",
       "lore": "Ghostwire Lore",
       "runs": "Ghostwire Runs",
-      "deadhead": "Ghostwire Runs — Deadhead Actors"
+      "deadhead": "Ghostwire Runs — Deadhead Actors",
+      "macros": "Ghostwire Macros"
     },
     "Abilities": {
       "NotEnoughResource": "{name} costs {cost} {resource}, and you have {current}. You can’t use it in combat until you have enough.",
@@ -240,6 +241,21 @@
         "Label": "Corruption History",
         "Hint": "Fiction notes: how Taint was gained, visible tells, cleanses, pacts, and debts. Not a second meter.",
         "Placeholder": "How the stain landed, what it looks like, what you still owe…"
+      },
+      "Director": {
+        "Title": "Director: Taint +1",
+        "MacroName": "Director: Taint +1",
+        "Keybinding": "Director Taint +1",
+        "Hud": "Taint +1",
+        "Hint": "Award +1 Taint to the targeted or selected hero. Clamps 0–12. The per-scene cap is a table call.",
+        "GMOnly": "Only the Director can award Taint.",
+        "NoTarget": "Target or select a hero token first.",
+        "NotEligible": "{actor} is not a hero and has no Taint flag.",
+        "Speaker": "Director",
+        "ChatTitle": "Taint +1",
+        "ChatLine": "{actor}: Taint {value} ({band})",
+        "Notify": "{actor}: Taint {value} ({band})",
+        "AtMax": "{actor} is already Hollowed at Taint 12. The track does not go past 12."
       }
     },
     "Integrity": {

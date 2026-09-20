@@ -2,6 +2,7 @@
 // Visible hero-sheet control: Stats tab under Body Integrity + compact header row.
 // Flag: flags.<module>.taint (0–12). Bands Clean / Marked / Stained / Claimed / Hollowed.
 // Owner + GM edit; observers read. No rest hook, no chrome hook, no band Active Effects.
+// Director Taint +1 (0.3.58): GM scene-control / token HUD / Ghostwire Macros. incrementTaint clamps 0–12.
 
 export const MODULE_ID = "draw-steel-ghostwire";
 export const TAINT_MIN = 0;
@@ -32,6 +33,130 @@ export function getTaint(actor) {
   const flag = actor?.getFlag?.(MODULE_ID, "taint") ?? actor?.flags?.[MODULE_ID]?.taint;
   if (flag && typeof flag === "object") return clampTaint(flag.value);
   return clampTaint(flag);
+}
+
+/** True when the actor already stores `flags.<module>.taint` (including 0). */
+export function hasTaintFlag(actor) {
+  if (actor?.getFlag) {
+    const via = actor.getFlag(MODULE_ID, "taint");
+    if (via !== undefined) return true;
+  }
+  const bag = actor?.flags?.[MODULE_ID];
+  return Boolean(bag && Object.prototype.hasOwnProperty.call(bag, "taint"));
+}
+
+/** Heroes, or any actor that already carries the Taint flag. */
+export function actorAcceptsTaint(actor) {
+  if (!actor) return false;
+  return actor.type === "hero" || hasTaintFlag(actor);
+}
+
+/**
+ * Preview a Taint write: clamp 0–12, no actor I/O.
+ * `atMax` is true when the track was already 12 and delta tried to raise it.
+ */
+export function previewTaintDelta(current, delta = 1) {
+  const previous = clampTaint(current);
+  const n = Number(delta);
+  const step = Number.isFinite(n) ? Math.trunc(n) : 0;
+  const value = clampTaint(previous + step);
+  return {
+    previous,
+    value,
+    delta: value - previous,
+    band: taintBandId(value),
+    previousBand: taintBandId(previous),
+    unchanged: value === previous,
+    atMax: previous === TAINT_MAX && step > 0,
+  };
+}
+
+/**
+ * Add `delta` (default +1) to an actor's Taint and persist the clamped score.
+ * Does not enforce the per-scene cap — that is a table / Director call.
+ */
+export async function incrementTaint(actor, delta = 1) {
+  const result = previewTaintDelta(getTaint(actor), delta);
+  if (!actor || result.unchanged || typeof actor.update !== "function") return result;
+  await actor.update({ [`flags.${MODULE_ID}.taint`]: result.value });
+  return result;
+}
+
+/** Targeted tokens first; otherwise controlled/selected tokens. Dedupes by actor id. */
+export function collectTaintTargets({ targeted = [], controlled = [] } = {}) {
+  const pick = list => {
+    const seen = new Set();
+    const out = [];
+    for (const entry of list) {
+      const actor = entry?.actor ?? entry;
+      if (!actor) continue;
+      const id = actor.id ?? actor._id ?? actor.uuid ?? actor.name;
+      if (id != null && seen.has(id)) continue;
+      if (id != null) seen.add(id);
+      out.push(actor);
+    }
+    return out;
+  };
+  const fromTargeted = pick(targeted);
+  return fromTargeted.length ? fromTargeted : pick(controlled);
+}
+
+function locDirector(key, data) {
+  const path = `GHOSTWIRE.Taint.Director.${key}`;
+  return data ? game.i18n.format(path, data) : game.i18n.localize(path);
+}
+
+async function announceTaint(actor, result) {
+  const band = bandLabel(result.band);
+  const data = { actor: actor.name, value: result.value, band, max: TAINT_MAX };
+  if (result.atMax) {
+    ui.notifications.warn(locDirector("AtMax", data));
+  } else {
+    ui.notifications.info(locDirector("Notify", data));
+  }
+  const esc = foundry.utils.escapeHTML;
+  const line = result.atMax ? locDirector("AtMax", data) : locDirector("ChatLine", data);
+  const content = `
+      <div class="ghostwire-taint-chat band-${result.band}${result.atMax ? " is-max" : ""}">
+        <header>
+          <i class="fa-solid fa-biohazard"></i>
+          <span class="gw-taint-kicker">${esc(locDirector("ChatTitle"))}</span>
+        </header>
+        <p>${esc(line)}</p>
+      </div>`;
+  await ChatMessage.implementation.create({
+    speaker: { alias: locDirector("Speaker") },
+    content,
+  });
+}
+
+/**
+ * GM-only: +1 Taint on targeted tokens' actors, else controlled/selected tokens.
+ * Heroes, or any actor that already has the Taint flag. Clamps 0–12.
+ */
+export async function directorTaintPlusOne() {
+  if (!game.user?.isGM) {
+    ui.notifications.warn(locDirector("GMOnly"));
+    return [];
+  }
+  const targeted = [...(game.user.targets ?? [])];
+  const controlled = [...(canvas?.tokens?.controlled ?? [])];
+  const actors = collectTaintTargets({ targeted, controlled });
+  if (!actors.length) {
+    ui.notifications.warn(locDirector("NoTarget"));
+    return [];
+  }
+  const results = [];
+  for (const actor of actors) {
+    if (!actorAcceptsTaint(actor)) {
+      ui.notifications.warn(locDirector("NotEligible", { actor: actor.name }));
+      continue;
+    }
+    const result = await incrementTaint(actor, 1);
+    results.push({ actor: actor.name, id: actor.id, ...result });
+    await announceTaint(actor, result);
+  }
+  return results;
 }
 
 function sheetRoot(app, element) {
@@ -272,6 +397,55 @@ function injectTaintControls(app, element) {
 }
 
 export function registerTaint() {
+  game.keybindings.register(MODULE_ID, "directorTaintPlusOne", {
+    name: "GHOSTWIRE.Taint.Director.Keybinding",
+    editable: [],
+    restricted: true,
+    onDown: () => {
+      directorTaintPlusOne();
+      return true;
+    },
+    precedence: CONST.KEYBINDING_PRECEDENCE.NORMAL,
+  });
+
+  Hooks.on("getSceneControlButtons", controls => {
+    const tools = controls.tokens?.tools;
+    if (!tools || !game.user?.isGM) return;
+    tools.ghostwireTaintPlusOne = {
+      name: "ghostwireTaintPlusOne",
+      title: "GHOSTWIRE.Taint.Director.Title",
+      icon: "fa-solid fa-biohazard",
+      order: Object.keys(tools).length,
+      button: true,
+      visible: true,
+      onChange: () => directorTaintPlusOne(),
+    };
+  });
+
+  Hooks.on("renderTokenHUD", (hud, html) => {
+    if (!game.user.isGM) return;
+    const actor = hud.object?.actor;
+    if (!actorAcceptsTaint(actor)) return;
+    const root = html?.rootElement ?? html?.[0] ?? html;
+    if (!root?.querySelector) return;
+    const col = root.querySelector(".col.right") ?? root.querySelector(".right");
+    if (!col || col.querySelector(".ghostwire-taint-plus")) return;
+    const btn = document.createElement("div");
+    btn.className = "control-icon ghostwire-taint-plus";
+    btn.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Taint.Director.Hud");
+    btn.innerHTML = `<i class="fa-solid fa-biohazard"></i>`;
+    btn.addEventListener("click", async event => {
+      event.preventDefault();
+      if (!game.user.isGM) {
+        ui.notifications.warn(locDirector("GMOnly"));
+        return;
+      }
+      const result = await incrementTaint(actor, 1);
+      await announceTaint(actor, result);
+    });
+    col.appendChild(btn);
+  });
+
   Hooks.on("preCreateActor", (actor, data, options, userId) => {
     if ((userId !== game.user.id) || (actor.type !== "hero")) return;
     const stats = data._stats ?? {};
@@ -298,6 +472,20 @@ export function registerTaint() {
       await Promise.all(pending);
       console.log(`${MODULE_ID} | stamped Taint 0 onto ${pending.length} hero(es)`);
     }
+
+    const module = game.modules.get(MODULE_ID);
+    if (module) {
+      module.api = {
+        ...(module.api ?? {}),
+        getTaint,
+        clampTaint,
+        taintBandId,
+        incrementTaint,
+        actorAcceptsTaint,
+        directorTaintPlusOne,
+      };
+    }
+    game.ghostwire = { ...(game.ghostwire ?? {}), incrementTaint, directorTaintPlusOne };
   });
 
   // Same overlay family as Body Integrity / Wired (Draw Steel hero sheet, AppV2).
@@ -308,5 +496,5 @@ export function registerTaint() {
     injectTaintControls(app, element);
   });
 
-  console.log(`${MODULE_ID} | Taint: hero sheet 0–${TAINT_MAX} registered (flags.${MODULE_ID}.taint)`);
+  console.log(`${MODULE_ID} | Taint: hero sheet 0–${TAINT_MAX} + Director +1 registered (flags.${MODULE_ID}.taint)`);
 }
