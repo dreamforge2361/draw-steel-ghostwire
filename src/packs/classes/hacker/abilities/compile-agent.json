@@ -3,7 +3,7 @@
   "_key": "!items!J1YFmCnCn5dJfS6T",
   "name": "GHOSTWIRE.Classes.Hacker.Items.CompileAgent.Name",
   "type": "ability",
-  "img": "icons/commodities/tech/circuit-board-green.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/abilities/compile-agent.svg",
   "system": {
     "source": {
       "book": "Ghostwire Core Rulebook",

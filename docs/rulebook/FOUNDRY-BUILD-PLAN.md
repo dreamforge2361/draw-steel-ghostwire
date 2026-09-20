@@ -583,13 +583,14 @@ Spec: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picke
   - [ ] Foundry-verify: place Food / Armor / Weapons kiosks; buy; Use Kickwire on a hero; token shows the street-kiosk plate
 
 ### B120 Hacker Agents — sprite parity (2026-09-20)
-Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **Compile Agent** (3 Bandwidth, Overlay/Jacked In; Linked refuses) + **Decompile Agent** (free maneuver). 12 Actors in `src/packs/summons/agents/` (Probe/Spike/Daemon/Watchdog × minor/int/adv). `scripts/agents.mjs`. Cap 2→3@5→4@8. Distinct from sprites. **SHIPPED 0.3.72.** No Gold Line `{ force: true }`. No PDF.
-- [x] **B120** Hacker Agents (module **0.3.72**) — **pending Foundry-verify**. Done when:
+Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **Compile Agent** (3 Bandwidth, Overlay/Jacked In; Linked refuses) + **Decompile Agent** (free maneuver). 12 Actors in `src/packs/summons/agents/` (Probe/Spike/Daemon/Watchdog × minor/int/adv). `scripts/agents.mjs`. Cap 2→3@5→4@8. Distinct from sprites. **SHIPPED 0.3.72.** Sheet icons **0.3.73** (`assets/icons/abilities/compile-agent.svg` / `decompile-agent.svg`). No Gold Line `{ force: true }`. No PDF.
+- [x] **B120** Hacker Agents (module **0.3.72**, icons **0.3.73**) — **pending Foundry-verify**. Done when:
   - [x] 12 Agent Actors + Compile/Decompile abilities + L1 class grant
   - [x] `scripts/agents.mjs` registered; Overlay/Jacked In gate; cap; dismiss
   - [x] RAW 19 + Wire + glossary, rulebook 08/20/18, manuscript L1/slang/chargen, journals + VOIDMARK index
   - [x] Smoke: `node tools/hacker-agents-smoke.mjs`
-  - [ ] Foundry-verify: Overlay Compile Agent → Spike token; Linked refuses; cap 2; Decompile removes token+Actor
+  - [x] Compile/Decompile (and Kessic embeds) `img` is a module SVG under `assets/icons/abilities/`
+  - [ ] Foundry-verify: Overlay Compile Agent → Spike token; Linked refuses; cap 2; Decompile removes token+Actor; sheet shows the two ability icons
 
 ### B32 Phase 5 — Hacker node / ICE Director templates (2026-09-17)
 Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node-templates.mjs` exports **`RATING`** (System Stat Card, moved out of `wired-console.mjs` — the Console now imports it, single source of truth) and **`NODE_TEMPLATES`**: `node-t1-r1…r5` and `node-t2-r1…r5` with `id, name, track, rating, integrityMax, biofeedback, ice, breachDC, description, notes`. **Track 1** templates follow 08-hacker.md: no Integrity pool, ICE, or biofeedback (`null`; the Console hides them). **Track 2** carry Integrity 12/18/26/36/50, biofeedback 3/5/8/13/22, and the ICE sketch. **Wired Console:** GM **Add template…** button (layers icon) in the Nodes header → pick one of the 10 → a hidden node is pushed onto `wiredBoard.nodes` through the same `#makeNode` / `#updateBoard` path as Add Node, with Description and Notes pre-filled. Add Node / Random Node / Generate Cluster unchanged; `module.api.NODE_TEMPLATES` exposed. **Director reference:** `docs/directors/wired-node-templates.md` (no journals pack exists, so no Journal pages). **Deferred:** node Actor scaffolds under `summons/nodes/` (optional D, skipped).

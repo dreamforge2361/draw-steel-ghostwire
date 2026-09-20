@@ -1,7 +1,7 @@
 # Spike B120 — Hacker Agents (Sprite parity)
 
 **Date:** 2026-09-20  
-**Module:** **0.3.72**  
+**Module:** **0.3.73** (Agents shipped **0.3.72**; sheet icons **0.3.73**)  
 **Status:** **SHIPPED / DESIGN LOCKED** (pending Michael Foundry-verify; he can tune later)  
 **Lock:** Michael LOCK 2026-09-20 — *Hacker Agents as pets — implement and ship*
 
@@ -78,5 +78,5 @@ Script: `scripts/agents.mjs`, registered from `module.mjs`. API: `compileAgent`,
 3. Cap 2 blocks a third compile at L1.
 4. Decompile Agent / roster ✕ removes token+Actor.
 5. End of encounter clears the roster.
-6. Module **0.3.72**. Smoke: `node tools/hacker-agents-smoke.mjs`.
+6. Module **0.3.73**. Compile Agent / Decompile Agent `img` is `modules/draw-steel-ghostwire/assets/icons/abilities/{compile,decompile}-agent.svg` (not Foundry core `icons/commodities/tech/…`). Smoke: `node tools/hacker-agents-smoke.mjs`.
 7. RAW 19 + Wire + glossary, manuscript L1/slang/chargen, Foundry rulebook **and** lore journals, VOIDMARK index — so the table and VOIDMARK can name Compile Agent / Probe / Spike / Daemon / Watchdog. No PDF.

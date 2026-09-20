@@ -3,7 +3,7 @@
   "_key": "!items!bwJwQXSsAdo6de3U",
   "name": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Name",
   "type": "ability",
-  "img": "icons/commodities/tech/circuit-board.webp",
+  "img": "modules/draw-steel-ghostwire/assets/icons/abilities/decompile-agent.svg",
   "system": {
     "source": {
       "book": "Ghostwire Core Rulebook",

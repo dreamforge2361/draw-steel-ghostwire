@@ -148,6 +148,24 @@ ok(lang.GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Name === "Decompile Agent"
 ok(lang.GHOSTWIRE.Summons.Agents.UI.LinkedRefuses.includes("Linked"), "UI names Linked refuse");
 ok(lang.GHOSTWIRE.Summons.Agents.UI.Compile === "Compile Agent", "UI Compile label");
 
+console.log("\n4b) Compile / Decompile sheet imgs are module assets");
+const MODULE_IMG = /^modules\/draw-steel-ghostwire\/assets\//;
+const imgOnDisk = img => {
+  if (!img || !MODULE_IMG.test(img)) return false;
+  return existsSync(img.replace(/^modules\/draw-steel-ghostwire\//, ""));
+};
+ok(imgOnDisk(compile.img) && !compile.img.startsWith("icons/"), `Compile Agent img is a module path (${compile.img})`);
+ok(imgOnDisk(decompile.img) && !decompile.img.startsWith("icons/"), `Decompile Agent img is a module path (${decompile.img})`);
+ok(compile.img.includes("compile-agent.svg"), "Compile Agent img is compile-agent.svg");
+ok(decompile.img.includes("decompile-agent.svg"), "Decompile Agent img is decompile-agent.svg");
+const kessic = read("src/packs/pregens/kessic-draye.json");
+const kCompile = (kessic.items ?? []).find(i => i.system?._dsid === "compile-agent");
+const kDecompile = (kessic.items ?? []).find(i => i.system?._dsid === "decompile-agent");
+ok(kCompile?.img === compile.img, "Kessic Compile Agent img matches class pack");
+ok(kDecompile?.img === decompile.img, "Kessic Decompile Agent img matches class pack");
+ok(grant?.img === compile.img, "Hacker L1 Agents grant uses Compile Agent icon");
+ok(read("module.json").version === "0.3.73", "module.json is 0.3.73");
+
 console.log("\n5) Script registration + RAW");
 const mod = readFileSync("scripts/module.mjs", "utf8");
 ok(mod.includes('from "./agents.mjs"') && mod.includes("registerAgents()"), "module.mjs registers agents");
