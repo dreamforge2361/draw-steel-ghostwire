@@ -127,5 +127,5 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 ## 4. Later
 
 - Numeric pass: real Integrity / Speed / Armor / Handling per chassis; then 1:1 Actors for signature SKUs if wanted.
-- **Mule-Bot (0.3.73):** Vehicles pack **treasure** SKU is the inventory / Deploy path (`drone-medium` band, same as Stinger / Warhound). A named Summons Actor is optional Director placement for an unowned mule — not a replacement for the treasure Item.
+- **Mule-Bot (0.3.75):** Vehicles pack **treasure** SKU is the inventory / Deploy path (`drone-medium` band, same as Stinger / Warhound). A named Summons Actor is optional Director placement for an unowned mule — not a replacement for the treasure Item.
 - Player-side Deploy without Director permissions (socket to the GM), Wrench Deploy & Command hook, Fleet Size enforcement, Jump-In buffer automation.

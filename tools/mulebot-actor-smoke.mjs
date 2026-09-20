@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 0.3.73 — Mule-Bot Deploy path (dual Item + Actor).
+ * 0.3.75 — Mule-Bot Deploy path (dual Item + Actor).
  *
  * Treasure SKUs in Ghostwire Vehicles & Drones are INTENTIONAL.
  * Deploy stamps machine-drone-medium; Recall deletes the Actor; the Item stays.
@@ -32,10 +32,10 @@ function asItem(json) {
   };
 }
 
-console.log("Mule-Bot dual Item + Actor smoke (0.3.73)\n");
+console.log("Mule-Bot dual Item + Actor smoke (0.3.75)\n");
 
 const moduleJson = readJson("module.json");
-ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.73", `module.json is ≥ 0.3.73 (got ${moduleJson.version})`);
+ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.75", `module.json is ≥ 0.3.75 (got ${moduleJson.version})`);
 
 console.log("1) Treasure SKU is the inventory / Deploy document");
 const item = readJson("src/packs/vehicles/drones/mule-bot.json");
@@ -119,7 +119,7 @@ const index = readJson("data/voidmark-rules-index.json");
 ok(index.chunks.some(c => /treasure/.test(c.text) && /mule-bot/.test(c.text) && /machine-drone-medium/.test(c.text)), "VOIDMARK indexes mule-bot dual model");
 
 const readme = readFileSync("README.md", "utf8");
-ok(/0\.3\.73/.test(readme) && /treasure/.test(readme) && /intentional/i.test(readme), "README 0.3.73 documents intentional treasure dual model");
+ok(/0\.3\.75/.test(readme) && /treasure/.test(readme) && /intentional/i.test(readme), "README 0.3.75 documents intentional treasure dual model");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

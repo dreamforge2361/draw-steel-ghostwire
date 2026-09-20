@@ -593,8 +593,8 @@ Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **
   - [ ] Foundry-verify: Overlay Compile Agent → Spike token; Linked refuses; cap 2; Decompile removes token+Actor; sheet shows the two ability icons
 
 ### Mule-Bot dual Item + Actor (2026-09-20)
-Michael: “Bug: Mulebot is treasure? It should be an actor.” **Treasure is intentional** — every Ghostwire drone/vehicle SKU is Draw Steel `type: treasure` (ownership / ¥ / mods). Deploy stamps a linked Actor from the Summons **band** template (`mule-bot` → `machine-drone-medium`); Recall deletes the Actor, Item stays. Mule-Bot flags already matched sibling drones (Stinger / Warhound). **SHIPPED 0.3.73:** named Summons Actor is optional Director placement for an unowned mule (Wire Kit, hauler plate). Deploy does **not** switch to named-SKU templates (other drones unchanged). No Gold Line `{ force: true }`. No PDF.
-- [x] **Mule-Bot Deploy path** (module **0.3.73**) — **pending Foundry-verify**. Done when:
+Michael: “Bug: Mulebot is treasure? It should be an actor.” **Treasure is intentional** — every Ghostwire drone/vehicle SKU is Draw Steel `type: treasure` (ownership / ¥ / mods). Deploy stamps a linked Actor from the Summons **band** template (`mule-bot` → `machine-drone-medium`); Recall deletes the Actor, Item stays. Mule-Bot flags already matched sibling drones (Stinger / Warhound). **SHIPPED 0.3.75:** named Summons Actor is optional Director placement for an unowned mule (Wire Kit, hauler plate). Deploy does **not** switch to named-SKU templates (other drones unchanged). No Gold Line `{ force: true }`. No PDF.
+- [x] **Mule-Bot Deploy path** (module **0.3.75**) — **pending Foundry-verify**. Done when:
   - [x] Vehicles SKU remains `treasure`; flags `drone` + Ground + Scale Vehicle → `drone-medium`
   - [x] Optional named Actor in Summons › Machines (Director drag); UUID link to the SKU
   - [x] Wire Kit on named Actor + `machine-drone-medium` band
