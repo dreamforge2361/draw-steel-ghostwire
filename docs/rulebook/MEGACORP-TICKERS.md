@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-20  
 **Status:** LOCKED  
-**Module:** 0.3.78  
+**Module:** 0.3.79  
 
 Each of the Twelve Conglomerates has a **three-letter ticker**. Use it in writeups, Director notes, gear flavor, and table talk (e.g. “an **IRN** contract,” “**MER** Blacklight leak,” “an **AEQ** seal,” “a **LAZ** extract”).
 
@@ -38,7 +38,7 @@ Each of the Twelve Conglomerates has a **three-letter ticker**. Use it in writeu
 ## Policy
 No third-party megacorp names (B78/B83). Ghostwire Twelve only.
 
-## Brand art (SoR, 0.3.54 / 0.3.78)
+## Brand art (SoR, 0.3.54 / 0.3.79)
 
 Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Twelve Conglomerates) use the WebP as cover/image.
 
@@ -47,4 +47,4 @@ Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`
 | Brand | `brand-hal` … `brand-nyx` plus **`brand-aeq`** / **`brand-laz`** |
 | Wired Host skin | `node-host-hal` … `node-host-nyx` plus **`node-host-aeq`** / **`node-host-laz`** under `assets/tokens/wired/` |
 
-AEQ/LAZ plates shipped **0.3.78** (Michael). Catalog rows are `placeholder: false`. Generic `node-host` stays the default Host. Do not regenerate brand art in-repo.
+AEQ/LAZ plates shipped **0.3.79** (Michael). Catalog rows are `placeholder: false`. Generic `node-host` stays the default Host. Do not regenerate brand art in-repo.

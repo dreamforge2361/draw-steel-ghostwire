@@ -1,7 +1,7 @@
 # B84 — Megacorp three-letter tickers
 
 **Date:** 2026-09-19  
-**Module:** 0.3.10 → **0.3.78** (Twelve)  
+**Module:** 0.3.10 → **0.3.79** (Twelve)  
 **Status:** LOCKED
 
 See `docs/rulebook/MEGACORP-TICKERS.md`. Twelfth-seat expansion: `docs/spikes/B121-TWELVE-CONGLOMERATES.md`.

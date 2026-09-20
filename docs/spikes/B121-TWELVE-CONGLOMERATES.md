@@ -1,7 +1,7 @@
 # B121 — Twelve Conglomerates (AEQ + LAZ)
 
 **Date:** 2026-09-20  
-**Module:** 0.3.78  
+**Module:** 0.3.79  
 **Status:** LOCKED (Michael names 2026-09-20)
 
 Charter Age seated **the Ten**. Current play seats **the Twelve**. Tickers: `docs/rulebook/MEGACORP-TICKERS.md`. Profiles: L1 Conglomerate Profiles. Lifestyle extract: `docs/raw/26-lifestyle-downtime.md`.
@@ -17,8 +17,8 @@ Charter Age seated **the Ten**. Current play seats **the Twelve**. Tickers: `doc
 - **AEQ Council-only.** Client = Congress / Chair / pooled authority of the Conglomerates. Forbidden: private parties, runners, gangs, a single mega acting alone. Not Ironclad (open-market PMC), not Aureole (HALO army), not Sanctum / Grey Ledger (surveillance and private law).
 - **LAZ Lifestyle bundle.** Upkeep ¥ for a band includes that band’s Lazarus tier. No separate ¥ unless a premium rider. Not Caduceus (clinics / chrome-flesh).
 - **Kestrel** stays seatless — the thirteenth-chair climber. Do not give it a ticker seat.
-- **Art:** Michael plates shipped **0.3.78**. `brand-aeq` / `brand-laz` and `node-host-aeq` / `node-host-laz` (PNG 1254² + 1024² WebP). Host catalog rows `placeholder: false`.
-- **Version:** this PR is **0.3.78** (after kiosk **0.3.77**). Constructs Console UI PR **#61** should take **0.3.79** if this merges first.
+- **Art:** Michael plates shipped **0.3.79**. `brand-aeq` / `brand-laz` and `node-host-aeq` / `node-host-laz` (PNG 1254² + 1024² WebP). Host catalog rows `placeholder: false`.
+- **Version:** this PR is **0.3.79**, rebased onto main after Constructs Console UI PR **#61** landed as **0.3.78**.
 
 ## Sub-corps (house style)
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Twelve Conglomerates lore/rules smoke (0.3.78).
+ * Twelve Conglomerates lore/rules smoke (0.3.79).
  * Tickers, Council-only AEQ, Lazarus Lifestyle tiers, Twelve roster.
  *
  * Run: node tools/twelve-conglomerates-smoke.mjs

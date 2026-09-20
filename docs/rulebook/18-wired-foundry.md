@@ -128,7 +128,7 @@ Topology rules live in RAW (`docs/raw/21-the-wire.md`, Wire Atlas / topology) an
 | Site / facility | Power Co Wire scene | `node-segment` (+ Host as site root) | Never |
 | Room / device | Office, Gold Line car, maintenance room | Existing device library | **Yes** (B112, room-scale only) |
 
-Catalog: `assets/tokens/wired/library.json`. Atlas files: `assets/tokens/wired/node-relay.webp`, `node-host.webp`, `node-segment.webp` (png source + webp; `"placeholder": false`). Eight device styles shipped **0.3.49**. Twelve Conglomerates Host skins: HAL…NYX shipped **0.3.54**; **AEQ** / **LAZ** plates shipped **0.3.78** (`node-host-aeq` / `node-host-laz`, `placeholder: false`). Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`. **Endpoint** is optional v1.1.
+Catalog: `assets/tokens/wired/library.json`. Atlas files: `assets/tokens/wired/node-relay.webp`, `node-host.webp`, `node-segment.webp` (png source + webp; `"placeholder": false`). Eight device styles shipped **0.3.49**. Twelve Conglomerates Host skins: HAL…NYX shipped **0.3.54**; **AEQ** / **LAZ** plates shipped **0.3.79** (`node-host-aeq` / `node-host-laz`, `placeholder: false`). Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`. **Endpoint** is optional v1.1.
 
 Directors place atlas tokens by hand on the matching Scene. Scan **Reach** is hops on **that** Scene’s board, not the whole district. Do not force-overwrite Gold Line to stamp atlas tokens.
 
