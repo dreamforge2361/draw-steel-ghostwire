@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-19  
 **Status:** DESIGN LOCKED — do not redesign  
-**Bump:** module **0.3.37**  
+**Bump:** module **0.3.38**  
 **Depends on:** cosmos plate (B79) helpful but not required
 
 This file is the SoR for the hero Taint track. Implement it; do not invent a second meter, a mutation catalog, or rest/chrome cleansing.
@@ -93,7 +93,7 @@ Apply while current Taint sits in that band. Table rules this pass — **no** Fo
 3. Director guidance `docs/directors/corruption-taint.md` (corrupted zones as run hooks).
 4. Slang glossary: Taint band names; Corruption row points at the track.
 5. Foundry: Rulebook journal from RAW; hero sheet **Taint 0–12** + band label on `flags.draw-steel-ghostwire.taint`. New heroes start at 0. No rest hook. No chrome hook.
-6. `module.json` **0.3.37**, BOM-free JSON.
+6. `module.json` **0.3.38**, BOM-free JSON.
 
 ## Non-goals (still)
 

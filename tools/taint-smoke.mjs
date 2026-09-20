@@ -20,7 +20,7 @@ const veil = readFileSync("docs/raw/22-the-veil.md", "utf8");
 const ancestry = readFileSync("docs/raw/05-ancestries.md", "utf8");
 const mapping = readFileSync("tools/raw-to-journals.mjs", "utf8");
 
-note(module.version === "0.3.37", `module.json is 0.3.37 (got ${module.version})`);
+note(module.version === "0.3.38", `module.json is 0.3.38 (got ${module.version})`);
 note(spike.includes("DESIGN LOCKED"), "spike is DESIGN LOCKED");
 note(/Clean|Marked|Stained|Claimed|Hollowed/.test(raw) && raw.includes("0") && raw.includes("12"), "RAW names all five bands and 0–12");
 note(raw.includes("+1 Taint maximum per scene") || raw.includes("+1 Taint maximum per scene"), "RAW prints the per-scene cap");
