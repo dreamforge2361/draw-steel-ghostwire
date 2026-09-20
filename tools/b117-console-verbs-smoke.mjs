@@ -40,6 +40,7 @@ import {
   consoleVerbRoster,
   pickConsoleActor,
   pickPlayerVerbActor,
+  RIGGER_INTERFACE_DSIDS,
   shouldReleaseTemporaryVerb,
   softTraceDelta,
   sortConsoleNodes,
@@ -239,6 +240,8 @@ const requiredTags = [
   "datajack", "datajack-soft", "datajack-dongle", "trode-net", "hot-sim-module",
   "nyx-switchblade", "ferrum-padlock-6", "meridian-lookout",
   "wire-kit-matrix-verbs",
+  "remote-box", "fleet-deck", "war-table", "command-rig", "hydra-console",
+  "riggers-harness", "fabricators-bench", "field-chassis",
 ];
 ok(requiredTags.every(d => taggedDsids.has(d)), `connectInterface tags (${[...taggedDsids].sort().join(",")})`);
 ok(!taggedDsids.has("spoof-kit"), "Spoof Kit is not a Connect interface");
@@ -270,6 +273,20 @@ ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { matrix: { role: "
 ok(!itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { kind: "spoof-kit" } } }), "spoof-kit kind is not an interface");
 ok(consoleVerbGate({ actorUuid: "Actor.drone", owned: true, connected: false, dsid: "matrix-connect", hasInterface: actorHasConnectInterface({ items: [worldKit] }) }).ok, "drone with Wire Kit: Connect gate opens");
 
+const harness = readBomFreeJson("src/packs/kits/tech/riggers-harness.json");
+ok(harness.system._dsid === "riggers-harness" && harness.flags["draw-steel-ghostwire"].wired.connectInterface, "Rigger's Harness stamps connectInterface");
+ok(harness.flags["draw-steel-ghostwire"].matrix.role === "rcc", "Rigger's Harness matrix role is rcc (≡ deck)");
+ok(itemIsConnectInterface(harness), "itemIsConnectInterface sees Rigger's Harness");
+ok(actorHasConnectInterface({ items: [harness] }), "Wrench with Rigger's Harness can Connect");
+ok(itemIsConnectInterface({ system: { _dsid: "riggers-harness" }, flags: {} }), "riggers-harness dsid is enough without flags");
+const commandRig = readBomFreeJson("src/packs/matrix/rccs/command-rig.json");
+ok(commandRig.flags["draw-steel-ghostwire"].matrix.role === "rcc" && commandRig.flags["draw-steel-ghostwire"].wired.connectInterface, "Command Rig RCC is a Connect interface");
+ok(itemIsConnectInterface(commandRig), "itemIsConnectInterface sees Command Rig");
+ok(itemIsConnectInterface({ flags: { "draw-steel-ghostwire": { matrix: { modFamily: ["rcc"] } } } }), "matrix modFamily rcc is a Connect interface");
+ok(["remote-box", "fleet-deck", "war-table", "command-rig", "hydra-console", "riggers-harness", "fabricators-bench", "field-chassis"].every(d => RIGGER_INTERFACE_DSIDS.has(d)), "RIGGER_INTERFACE_DSIDS covers rigger Kits + RCC SKUs");
+const cocoon = readBomFreeJson("src/packs/mods/vehicles/rigger-cocoon.json");
+ok(!itemIsConnectInterface(cocoon), "Rigger Cocoon vehicle mod is not a Connect interface");
+
 const css = readFileSync("styles/ghostwire.css", "utf8");
 ok(css.includes(".wc-verb-strip") && css.includes(".ghostwire-wired-node-panel"), "CSS for verb strip + node panel");
 ok(css.includes("ghostwire-off-sheet-verb"), "CSS hides off-sheet Matrix Verb rows");
@@ -285,7 +302,9 @@ ok(/connected|on-net/.test(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected)
 ok(lang.GHOSTWIRE.WiredConsole.VerbTooltipAuto.includes("no roll"), "lang auto tooltip");
 ok(lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("all nine") || lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("nine"), "lang migration names all nine");
 ok(lang.GHOSTWIRE.WiredConsole.VerbNeedInterface.includes("Technomancer"), "lang Interface names Technomancer");
+ok(lang.GHOSTWIRE.WiredConsole.VerbNeedInterface.includes("rigger"), "lang Interface names rigger interface");
 ok(lang.GHOSTWIRE.Wired.Warnings.NeedInterface.includes("comlink"), "lang Wired NeedInterface");
+ok(lang.GHOSTWIRE.WiredKit.DroneMigrated.includes("Disconnected") || lang.GHOSTWIRE.WiredKit.DroneMigrated.includes("Connect"), "lang drone migration does not auto-Overlay");
 ok(lang.GHOSTWIRE.Gear.Items.Commlink.Name === "Commlink", "lang street Commlink");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does <strong>not</strong> copy") || lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does not"), "Wire Kit does not copy verbs");
 ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("Read/Write"), "Wire Kit description names all nine");
@@ -298,11 +317,13 @@ ok(/pregens/i.test(spike), "spike names pregens");
 ok(/Anyone vs Hacker vs Technomancer/.test(spike) && /Padlock-6/.test(spike), "spike documents anyone vs Hacker vs Technomancer");
 ok(/connectInterface/.test(spike) && /Commlink/.test(spike) && /Technomancer/.test(spike) && /Wire Kit/.test(spike), "spike documents Connect interface allow-list");
 ok(/kind: "wire-kit"|wire-kit-matrix-verbs/.test(spike) && /0\.3\.68/.test(spike), "spike names Wire Kit as Connect interface (0.3.68)");
+ok(/Rigger/.test(spike) && /≡ deck|== deck|counts as a deck/.test(spike), "spike documents Rigger interface ≡ deck");
 ok(/No new/.test(spike) && /everyone gets Programs/.test(spike), "spike refuses everyone-gets-Programs");
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
 ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name Connect interface");
 ok(/0\.3\.68/.test(foundry) && /Wire Kit/.test(foundry), "Foundry notes name 0.3.68 Wire Kit interface");
+ok(/Rigger/.test(foundry) && /pack drone/.test(foundry), "Foundry notes name Rigger interface + pack drones");
 ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry), "Foundry notes: node Actors always Connected");
 ok(/revealed first/.test(foundry) && /A–Z|A-Z/.test(foundry), "Foundry notes: revealed-first then A–Z lists");
 ok(/hideInSheet/.test(foundry) && /data-document-uuid/.test(foundry), "Foundry notes: 0.3.64 sheet hide path");
@@ -452,6 +473,8 @@ ok((() => {
 ok(/0\.3\.68/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.68");
 ok(kitSrc.includes("wired.connectInterface"), "Add Wire Kit stamps connectInterface");
 ok(!kitSrc.includes("SHEET_VERBS"), "0.3.68 still does not stamp sheet verbs");
+ok(kitSrc.includes("stampWireKitOnDrones"), "0.3.68 migrates world drones missing Wire Kit");
+ok(readFileSync("scripts/machines.mjs", "utf8").includes("addWireKit"), "Deploy stamps Wire Kit on drones");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

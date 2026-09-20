@@ -554,12 +554,14 @@ Michael: “30 for a brick bar is crazy.” Food was priced like T5 gear. **SHIP
   - [ ] Foundry-verify: Food kiosk shows stall prices; Kickwire still ¥400
 
 ### Wire Kit is a Connect interface (2026-09-20)
-Michael smoke: drone on scene had **Wire Kit — Matrix Verbs** on Features, but Wired Console showed DISCONNECTED and all verbs disabled (“Need a comlink, deck, datajack, or trodes — or be a Technomancer.”). `itemIsConnectInterface` only accepted `wired.connectInterface` / matrix role deck|rcc|interface / Technomancer. Pack item had `kind: "wire-kit"` only. **SHIPPED 0.3.68.** Treat `kind === "wire-kit"` / `_dsid === "wire-kit-matrix-verbs"` as interface; stamp `connectInterface` on pack JSON + HUD grant. Existing world copies Connect without a commlink. Do not require RCC role. Verbs stay off the sheet. No Gold Line `{ force: true }`. No PDF. (0.3.67 is token vision in flight.)
+Michael smoke: drone on scene had **Wire Kit — Matrix Verbs** on Features, but Wired Console showed DISCONNECTED and all verbs disabled (“Need a comlink, deck, datajack, or trodes — or be a Technomancer.”). `itemIsConnectInterface` only accepted `wired.connectInterface` / matrix role deck|rcc|interface / Technomancer. Pack item had `kind: "wire-kit"` only. **SHIPPED 0.3.68.** Treat `kind === "wire-kit"` / `_dsid === "wire-kit-matrix-verbs"` as interface; stamp `connectInterface` on pack JSON + HUD grant. **Pack drones** embed the kit (Wire-ready imports; still Disconnected until Connect). World ready stamps missing kits onto `kind: "drone"` actors. **Rigger interface ≡ deck:** Wrench rigger Kits + RCC SKUs. Existing world copies Connect without a commlink. Do not require RCC role for the kit path. Verbs stay off the sheet. No Gold Line `{ force: true }`. No PDF. (0.3.67 is token vision in flight.)
 - [x] **Wire Kit Connect interface** (module **0.3.68**) — **pending Foundry-verify**. Done when:
   - [x] `itemIsConnectInterface` accepts Wire Kit kind/dsid (and pack `connectInterface`)
+  - [x] Pack drone templates + Deploy + world migration stamp the kit (not Overlay)
+  - [x] Rigger Kits / RCC SKUs count as Connect interfaces
   - [x] B115 / B117 notes + Foundry Director notes
   - [x] `node tools/b117-console-verbs-smoke.mjs` + B112–B115 smoke
-  - [ ] Foundry-verify: drone with Wire Kit → Connect enabled → Linked; Scan after Toggle to Overlay; nine verbs still not on the sheet
+  - [ ] Foundry-verify: pack drone Connects → Linked; Wrench with Rigger’s Harness Connects without a commlink; Scan after Toggle to Overlay; nine verbs still not on the sheet
 
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.

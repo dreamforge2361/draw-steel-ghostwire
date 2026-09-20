@@ -25,7 +25,11 @@ On create (NPC sheet drop or GM button), `scripts/wired-kit.mjs` stamps the kit 
 
 **Connect interface (0.3.68).** `itemIsConnectInterface` treats Wire Kit as a Wire interface: `kind === "wire-kit"` and/or `_dsid === "wire-kit-matrix-verbs"`, plus the pack `connectInterface` stamp. Existing world copies that only have `kind: "wire-kit"` (Michael’s drone on scene) can Connect → Linked without a separate commlink, deck, datajack, or RCC `matrix.role`. RCC-linked drones may still use role `rcc` if present; do **not** require it for the Director stamp path.
 
-Heroes: the kit does **not** duplicate verbs (notify and skip). Bestiary pack Actors are **not** pre-stamped.
+Heroes: the kit does **not** duplicate verbs (notify and skip). Bestiary pack Actors are **not** pre-stamped (except **pack drone** templates).
+
+## Pack drones (0.3.68)
+
+Ghostwire Summons › Machines drone band templates (`machine-drone-micro`, `machine-drone-small`, `machine-drone-medium`) embed Wire Kit so a Deploy / import is Wire-ready. **Not** auto-Overlay and **not** auto-Linked — Connect is still required. Vehicle band templates stay meat. `scripts/machines.mjs` `deployMachine` stamps the kit if a copy is missing it. World ready (`stampWireKitOnDrones`) stamps existing world Actors with `kind: "drone"` that lack the kit.
 
 ## GM convenience
 
@@ -44,4 +48,4 @@ node tools/b112-b115-smoke.mjs
 node tools/b117-console-verbs-smoke.mjs
 ```
 
-Foundry: drag a drone or ARG Response Lieutenant onto a **non–Gold Line** scratch Scene (this does not rewrite Gold Line). Select the token → Console **Add Wire Kit** (or HUD) → Features shows the kit, **none** of the nine Matrix Verbs on the sheet. Wired Console: Connect enabled (not DISCONNECTED / NeedInterface). Connect lands **Linked**. Toggle to Overlay, then Scan etc. A second click does not duplicate. Freight Enforcer left unstamped has no kit and cannot Connect.
+Foundry: drag a drone or ARG Response Lieutenant onto a **non–Gold Line** scratch Scene (this does not rewrite Gold Line). Pack drones already have the kit. Select an unstamped token → Console **Add Wire Kit** (or HUD) → Features shows the kit, **none** of the nine Matrix Verbs on the sheet. Wired Console: Connect enabled (not DISCONNECTED / NeedInterface). Connect lands **Linked**. Toggle to Overlay, then Scan etc. A second click does not duplicate. Freight Enforcer left unstamped has no kit and cannot Connect. A Wrench with **Rigger’s Harness** (no commlink) can Connect.

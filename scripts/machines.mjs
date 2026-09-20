@@ -5,6 +5,8 @@
 // - Actor: flags.<module> = { kind, band, ownerUuid, gearItemUuid, dsid, gearDsid }
 // - Item:  flags.<module>.deployed = { actorUuid }
 
+import { addWireKit } from "./wired-kit.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
 const UI = "GHOSTWIRE.Summons.Machines.UI";
@@ -131,6 +133,7 @@ export async function deployMachine(item) {
   });
   const actor = await Actor.create(data);
   if (!actor) return;
+  if (vehicle.drone) await addWireKit(actor, { notify: false });
 
   const size = actor.system.combat.size.value;
   const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });

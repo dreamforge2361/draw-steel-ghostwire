@@ -6411,7 +6411,7 @@
       "Warnings": {
         "NotConnected": "{actor} isn’t connected to the Wired. Use Connect first.",
         "AlreadyConnected": "{actor} is already on-net ({state}). Use Toggle Connection State or Jack Out.",
-        "NeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
+        "NeedInterface": "Need a comlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.",
         "NeedImmersion": "{actor} is only Linked. Toggle to Overlay or Jacked In before using {name}.",
         "JackedInPhysical": "{actor} is Jacked In: their body is inert and can’t use {name}. Toggle toward Overlay or Jack Out first."
       },
@@ -6546,7 +6546,7 @@
       "VerbNeedOwner": "You don't control that runner.",
       "VerbNeedDisconnected": "Disconnected — use Connect on this node first.",
       "VerbNeedAlreadyConnected": "Already on-net — Jack Out or Toggle, or pick another verb.",
-      "VerbNeedInterface": "Need a comlink, deck, datajack, or trodes — or be a Technomancer.",
+      "VerbNeedInterface": "Need a comlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.",
       "VerbNeedImmersion": "Linked only — Toggle to Overlay or Jacked In for Scan / Navigate / Ping / Search / Read-Write.",
       "VerbNeedHidden": "That node is hidden from runners.",
       "VerbPlayerPath": "Players: open the node token facing you. Connect lives there with the other eight verbs. This strip is the Director roster path.",
@@ -6559,6 +6559,7 @@
       "Hud": "Add Wire Kit — Matrix Verbs to the selected NPC",
       "Granted": "{actor} stamped with Wire Kit — they can Connect without a commlink. Matrix Verbs fire from the node they're facing.",
       "Already": "{actor} already has the Wire Kit.",
+      "DroneMigrated": "Ghostwire: stamped Wire Kit on {count} drone(s) — they can Connect (still start Disconnected).",
       "HeroSkip": "{actor} is a hero — Matrix Verbs fire from the node applet, not this kit.",
       "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."
     },
