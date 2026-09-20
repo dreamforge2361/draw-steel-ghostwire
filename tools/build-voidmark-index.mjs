@@ -25,6 +25,7 @@ const SKIP_LORE = new Set(["README.md"]);
 const SETTING_PAGES = [
   "docs/setting/wired-flats-gazetteer.md",
   "docs/manuscript/03-directors/27-running-ossian-reach.md",
+  "docs/manuscript/04-back/28-glossary-slang.md",
 ];
 
 const MAX_CHUNK = 1600;
@@ -98,6 +99,55 @@ function splitByHeading(markdown, depth) {
   return parts;
 }
 
+function looksLikeTable(text) {
+  const lines = String(text ?? "").split("\n").filter(l => l.trim());
+  if (lines.length < 3) return false;
+  const tableLines = lines.filter(l => /^\|/.test(l.trim()));
+  return tableLines.length >= 3 && tableLines.length >= lines.length - 1;
+}
+
+/** Oversized markdown tables are one paragraph — split on body rows so retrieve can budget them. */
+function splitMarkdownTable(text, heading) {
+  const lines = String(text ?? "").split("\n");
+  const pre = [];
+  const rows = [];
+  const post = [];
+  let phase = "pre";
+  for (const line of lines) {
+    if (phase === "pre") {
+      if (/^\|/.test(line.trim())) {
+        phase = "table";
+        rows.push(line);
+      } else pre.push(line);
+    } else if (phase === "table") {
+      if (/^\|/.test(line.trim())) rows.push(line);
+      else {
+        phase = "post";
+        post.push(line);
+      }
+    } else post.push(line);
+  }
+  if (rows.length < 3) return [{ heading, text: String(text ?? "").trim() }].filter(p => p.text);
+  const header = rows.slice(0, 2);
+  const body = rows.slice(2);
+  const intro = pre.join("\n").trim();
+  const outro = post.join("\n").trim();
+  const chunks = [];
+  let buf = [...header];
+  const flush = last => {
+    const parts = [intro, buf.join("\n"), last ? outro : ""].filter(Boolean);
+    const piece = parts.join("\n\n");
+    if (piece.length >= MIN_CHUNK) chunks.push({ heading, text: piece });
+    buf = [...header];
+  };
+  for (const row of body) {
+    if (buf.length > 2 && intro.length + buf.join("\n").length + row.length + 2 > MAX_CHUNK) flush(false);
+    buf.push(row);
+  }
+  if (buf.length > 2) flush(true);
+  return chunks.length ? chunks : [{ heading, text: String(text ?? "").trim() }];
+}
+
 function splitParagraphs(text, heading) {
   const paras = text.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
   const out = [];
@@ -107,6 +157,11 @@ function splitParagraphs(text, heading) {
     buf = "";
   };
   for (const para of paras) {
+    if (para.length > MAX_CHUNK && looksLikeTable(para)) {
+      if (buf) push();
+      out.push(...splitMarkdownTable(para, heading));
+      continue;
+    }
     if ((buf + "\n\n" + para).length > MAX_CHUNK && buf) push();
     buf = buf ? `${buf}\n\n${para}` : para;
   }

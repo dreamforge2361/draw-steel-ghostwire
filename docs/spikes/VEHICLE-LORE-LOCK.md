@@ -24,7 +24,7 @@
 | Director pointer | `docs/manuscript/03-directors/27-running-ossian-reach.md` |
 | Glossary | `docs/manuscript/04-back/28-glossary-slang.md` |
 | Gear master sync | `docs/masters/GHOSTWIRE_GEAR_MASTER.md` Cat 5 intro |
-| Foundry | Lore / Rulebook / Reach Handbook journals; VOIDMARK index |
+| Foundry | Lore / Rulebook / Reach Handbook journals; VOIDMARK index (L1 + RAW 23 + handbook + glossary slang) |
 
 ## Inventory + table token (Lane-Hopper, Star-Chopper, 2026-09-20 follow-on)
 

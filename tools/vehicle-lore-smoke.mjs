@@ -137,25 +137,40 @@ ok(/VTOL/.test(lang.GHOSTWIRE.Vehicles.Items.Tiltjet.Description), "Tiltjet lang
 
 const lorePages = loadJournalPages("lore");
 ok(lorePages.some(p => /Vehicles & Transit/.test(p.text) && /light electric hovercraft/.test(p.text)), "Lore journal has Vehicles & Transit page");
-ok(lorePages.some(p => /Star-Chopper/.test(p.text)), "Lore journal names Star-Chopper");
+ok(lorePages.some(p => /Lane-Hopper/.test(p.text) && /Star-Chopper/.test(p.text)), "Lore journal names Lane-Hopper and Star-Chopper");
 const rulePages = loadJournalPages("rulebook");
 ok(rulePages.some(p => /Street picture/.test(p.text) && /25–50 feet/.test(p.text)), "Rulebook Machines journal has street picture");
-ok(rulePages.some(p => /Star-Chopper/.test(p.text)), "Rulebook journal names Star-Chopper");
+ok(rulePages.some(p => /Lane-Hopper/.test(p.text) && /Star-Chopper/.test(p.text)), "Rulebook journal names Lane-Hopper and Star-Chopper");
 const hbPages = loadJournalPages("reach-handbook");
 ok(hbPages.some(p => /Vehicles & Transit/.test(p.text) && /25–50 feet/.test(p.text)), "Reach Handbook journal has Vehicles & Transit");
-ok(hbPages.some(p => /Star-Chopper/.test(p.text)), "Reach Handbook journal names Star-Chopper");
+ok(hbPages.some(p => /Lane-Hopper/.test(p.text) && /Star-Chopper/.test(p.text)), "Reach Handbook journal names Lane-Hopper and Star-Chopper");
 
 const index = readJson("data/voidmark-rules-index.json");
+const indexFiles = new Set(index.chunks.map(c => c.file));
+ok(indexFiles.has("L1-setting-primer.md"), "VOIDMARK indexes L1 primer");
+ok(indexFiles.has("23-machines.md"), "VOIDMARK indexes RAW machines");
+ok(indexFiles.has("03-life-on-the-flats.md"), "VOIDMARK indexes handbook Flats");
+ok(indexFiles.has("28-glossary-slang.md"), "VOIDMARK indexes Hover/POV glossary");
+ok(index.chunks.some(c => /Table look — Lane-Hopper/.test(c.heading) && /Lane-Hopper/.test(c.text)), "VOIDMARK has Lane-Hopper table look");
+ok(index.chunks.some(c => /Table look — Star-Chopper/.test(c.heading) && /Star-Chopper/.test(c.text)), "VOIDMARK has Star-Chopper table look");
+ok(!index.chunks.some(c => /draw steel heroes/i.test(c.text)), "VOIDMARK vehicle-era chunks have no Draw Steel Heroes");
+
 const q = retrieve(index, "What vehicles do people drive? hovercraft altitude limiter VTOL ground hauler");
-ok(q.length >= 1, `vehicle query returned ${q.length} hits`);
+ok(q.length >= 2, `vehicle query returned ${q.length} hits`);
 ok(
   q.some(h => /hovercraft|limiter|25–50|VTOL|ground-hauler|heavy lifters/i.test(h.text)),
   `vehicle hits mention lock terms (${q.map(h => h.file).join(", ")})`,
 );
-ok(
-  q.some(h => /L1-setting-primer|23-machines|03-life-on-the-flats|16-vehicles/.test(h.file)),
-  "vehicle query cites primer / machines / handbook",
-);
+ok(q.some(h => /L1-setting-primer/.test(h.file)), "vehicle query cites L1 primer");
+ok(q.some(h => /23-machines/.test(h.file)), "vehicle query cites RAW machines");
+ok(q.some(h => /03-life-on-the-flats/.test(h.file)), "vehicle query cites Reach handbook");
+
+const hopperQ = retrieve(index, "Lane-Hopper street hovercar");
+ok(hopperQ.some(h => /Lane-Hopper/.test(h.text) && /L1-setting-primer/.test(h.file)), "Lane-Hopper retrieve hits L1");
+const chopQ = retrieve(index, "Star-Chopper hover bike chopper");
+ok(chopQ.some(h => /Star-Chopper/.test(h.text) && /L1-setting-primer/.test(h.file)), "Star-Chopper retrieve hits L1");
+const povQ = retrieve(index, "What is a street POV hover?");
+ok(povQ.some(h => /Lane-Hopper|Star-Chopper|hovercraft|25–50/.test(h.text)), "POV query retrieves street hover lock");
 
 const readme = read("README.md");
 ok(/0\.3\.69/.test(readme) && /Vehicle lore lock/.test(readme), "README changelog names 0.3.69 vehicle lore");

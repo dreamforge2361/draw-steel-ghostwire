@@ -25,7 +25,14 @@ const SYNONYMS = {
   chrome: ["chrome", "implant", "integrity"],
   implant: ["chrome", "integrity"],
   drone: ["machine", "drone", "rigger", "jump"],
-  vehicle: ["machine", "vehicle", "drive"],
+  vehicle: ["machine", "vehicle", "drive", "hover"],
+  hover: ["hover", "hovercraft", "limiter", "pov"],
+  hovercraft: ["hover", "hovercraft", "limiter", "pov"],
+  pov: ["pov", "hover", "hovercraft", "street"],
+  limiter: ["limiter", "hover", "altitude"],
+  chopper: ["chopper", "bike", "hover"],
+  hauler: ["hauler", "cargo", "tires", "ground"],
+  vtol: ["vtol", "flying", "air"],
   voidmark: ["voidmark", "mark", "mer", "blacklight"],
   accords: ["hands", "accords", "actuator", "ai"],
   hands: ["hands", "accords", "actuator"],
@@ -57,6 +64,9 @@ const FILE_HINTS = [
   { re: /chrome|implant|body integrity|weave/, file: "09-chrome-body-integrity" },
   { re: /kit|gear|nuyen|wealth|armor|weapon/, file: "08-kits-gear-wealth" },
   { re: /machine|drone|vehicle|rigger|jump-in|rcc/, file: "23-machines" },
+  { re: /hovercraft|altitude limiter|street.?pov|\bpov\b|lane-hopper|star-chopper|hover bike|hover.?car|limiter band/, file: "L1-setting-primer" },
+  { re: /hovercraft|altitude limiter|street.?pov|lane-hopper|star-chopper|how the flats move/, file: "03-life-on-the-flats" },
+  { re: /hover \/ pov|ground-hauler|\bvtol\b|limiter band/, file: "28-glossary-slang" },
   { re: /mod|autosoft|install/, file: "10-mods" },
   { re: /hacker|bandwidth|program/, file: "19-hacker" },
   { re: /voidmark|the mark|blacklight/, file: "L4-voidmark" },
@@ -229,6 +239,7 @@ export function retrieve(index, query, options = {}) {
     if (picked.length >= k) break;
     const text = String(row.chunk.text ?? "");
     if (!text) continue;
+    if (text.length > maxChars) continue;
     if (picked.length && (used + text.length > maxChars)) continue;
     picked.push({
       id: row.chunk.id,
