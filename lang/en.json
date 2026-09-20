@@ -6317,7 +6317,17 @@
       "NoNodeTemplate": "No Wired node token template found in Ghostwire Summons & Machines. Rebuild the summons pack.",
       "Links": "Links",
       "LinksHint": "Check a node to wire it to this one (both ends link). Runners see a wire on the Wired Node Map only when both nodes are revealed.",
-      "LinksNone": "Add another node to link it to this one."
+      "LinksNone": "Add another node to link it to this one.",
+      "Pings": "Wire",
+      "PingEmptyLog": "No Wire pings yet.",
+      "PingPlaceholder": "Short ping / spoof…",
+      "PingSend": "Send",
+      "PingPublic": "Public chat",
+      "PingWhisper": "Whisper Overlay / Jacked In",
+      "PingEmpty": "Type a short ping before sending.",
+      "PingNoConnected": "No Overlay or Jacked In runners on this scene — whispered to Directors only.",
+      "PingChatTitle": "Wire ping",
+      "PingChatSpeaker": "The Wired — {scene}"
     },
     "WiredMinimap": {
       "Title": "Wired Node Map",
@@ -7234,7 +7244,7 @@
     },
     "PayloadUse": {
       "AbilityName": "Run {payload}",
-      "AbilityDescription": "<p>Fire the {payload} magazine loaded in your deck.</p>{effect}<p><em>This ability exists while the payload is loaded in a deck as a magazine (Load magazine (Craft) on the chip). Each successful run spends one fire; at 0 the magazine is spent and its deck slot frees. A loose chip in your gear cannot be run.</em></p>",
+      "AbilityDescription": "<p>Fire the {payload} magazine compiled on your deck or Wired Native body-interface.</p>{effect}<p><em>This ability exists while the payload is loaded as a magazine (Load magazine (Craft) on the chip). Each successful run spends one fire; at 0 the magazine is spent and its host slot frees. A loose chip in your gear cannot be run.</em></p>",
       "Spent": "The {payload} magazine is spent (0 fires). Load a new chip with a Craft (Hacking) Project before you run it.",
       "Consumed": "{actor} runs {payload} — {left} fire(s) left.",
       "Payloads": {
@@ -7286,7 +7296,7 @@
           "Target": "Special"
         }
       },
-      "NotLoaded": "{payload} isn’t loaded in a deck. Use Load magazine (Craft) on the chip first.",
+      "NotLoaded": "{payload} isn’t loaded as a magazine. Use Load magazine (Craft) on the chip first.",
       "NotConnected": "{actor} isn’t Connected. Go Overlay or Jacked In before you run {payload}.",
       "Menu": {
         "Load": "Load magazine (Craft)…",
@@ -7294,13 +7304,13 @@
       },
       "Load": {
         "Title": "Load {payload} magazine",
-        "PickDeck": "Compile <strong>{payload}</strong> into a free slot on which deck? This is a downtime Craft (Hacking) Project: the power roll sets the magazine’s fires (tier 1: 1, tier 2: 3, tier 3: 5).",
-        "Deck": "Deck",
+        "PickDeck": "Compile <strong>{payload}</strong> into a free slot on which host? Cyberdecks and a Technomancer’s Wired Native (body-as-interface) both count. This is a downtime Craft (Hacking) Project: the power roll sets the magazine’s fires (tier 1: 1, tier 2: 3, tier 3: 5).",
+        "Deck": "Host",
         "Confirm": "Roll Craft",
         "RollTitle": "Craft (Hacking): {payload} magazine → {deck}",
-        "NoDeck": "{payload} needs a deck to load into; this hero owns none.",
-        "NoSlots": "{payload} needs a free deck slot; every deck this hero owns is full. Uninstall a suite or a spent magazine first.",
-        "NotLoaded": "{payload} is no longer loaded in a deck; nothing to recompile.",
+        "NoDeck": "{payload} needs a cyberdeck or a Wired Native body-interface to compile into; this hero has neither.",
+        "NoSlots": "{payload} needs a free host slot; every legal host this hero owns is full. Uninstall a suite or a spent magazine first.",
+        "NotLoaded": "{payload} is no longer loaded as a magazine; nothing to recompile.",
         "Loaded": "{actor} compiles {payload} into {deck} ({tier}): {fires} fire(s) loaded.",
         "Recompiled": "{actor} recompiles the {payload} magazine in {deck} ({tier}): now {fires} fire(s).",
         "NoChip": "{payload} is spent (quantity 0): there is no chip left to compile. Get a new chip first."

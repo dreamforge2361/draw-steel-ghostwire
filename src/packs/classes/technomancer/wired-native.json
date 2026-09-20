@@ -28,5 +28,15 @@
   "ownership": {
     "default": 0
   },
-  "flags": {}
+  "flags": {
+    "draw-steel-ghostwire": {
+      "matrix": {
+        "modSlots": 2,
+        "modFamily": [
+          "resonance",
+          "body"
+        ]
+      }
+    }
+  }
 }

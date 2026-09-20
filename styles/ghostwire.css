@@ -505,6 +505,44 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-btn-hot:hover { background: color-mix(in srgb, var(--wc-hot) 16%, #0f1c26); box-shadow: 0 0 8px color-mix(in srgb, var(--wc-hot) 40%, transparent); }
 .ghostwire-wired-console .wc-btn-danger { color: var(--wc-danger); border-color: color-mix(in srgb, var(--wc-danger) 60%, var(--wc-border)); }
 
+/* Wire ping / spoof (B106) */
+.ghostwire-wired-console .wc-pings {
+  flex: 0 0 auto;
+  max-height: 11rem;
+  margin: 0 0.5rem 0.5rem;
+}
+.ghostwire-wired-console .wc-ping-log {
+  max-height: 6.5rem;
+  overflow-y: auto;
+}
+.ghostwire-wired-console .wc-ping {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.25rem 0.35rem;
+  border-left: 2px solid var(--wc-cyan);
+  margin-bottom: 0.2rem;
+}
+.ghostwire-wired-console .wc-ping.is-whisper { border-left-color: var(--wc-violet); }
+.ghostwire-wired-console .wc-ping-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--wc-muted);
+}
+.ghostwire-wired-console .wc-ping-text { white-space: pre-wrap; word-break: break-word; }
+.ghostwire-wired-console .wc-ping-compose {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.4rem 0.5rem 0.5rem;
+  border-top: 1px solid var(--wc-border);
+  align-items: center;
+}
+.ghostwire-wired-console .wc-ping-input { flex: 1 1 12rem; min-width: 8rem; }
+.ghostwire-wired-console .wc-ping-chat { flex: 0 0 auto; max-width: 16rem; }
+
 /* Wired Console: node reveal chat card */
 .ghostwire-node-reveal {
   background: var(--ghostwire-bg);
@@ -544,6 +582,29 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 .ghostwire-node-reveal .gw-reveal-description p { margin: 0 0 0.35rem; }
 .ghostwire-node-reveal .gw-reveal-description p:last-child { margin-bottom: 0; }
+
+.ghostwire-wire-ping {
+  background: var(--ghostwire-bg);
+  color: var(--ghostwire-text);
+  border: 1px solid color-mix(in srgb, var(--ghostwire-accent) 55%, var(--ghostwire-border));
+  border-radius: var(--ghostwire-radius);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--ghostwire-accent) 25%, transparent);
+  padding: 0.45rem 0.6rem;
+}
+.ghostwire-wire-ping.is-whisper {
+  border-color: color-mix(in srgb, var(--ghostwire-accent-2) 55%, var(--ghostwire-border));
+}
+.ghostwire-wire-ping header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ghostwire-accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.ghostwire-wire-ping .gw-ping-mode { margin-left: auto; color: var(--ghostwire-text-muted); }
+.ghostwire-wire-ping .gw-ping-text { margin: 0.35rem 0 0; white-space: pre-wrap; }
 
 /* ============================================================
  * Wired node minimap (B41) — player topology view; shares the Console's net-deck variables

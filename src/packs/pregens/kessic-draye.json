@@ -2660,7 +2660,9 @@
           "mod": {
             "slotCost": 1,
             "hosts": [
-              "deck"
+              "deck",
+              "resonance",
+              "body"
             ],
             "host": "deck",
             "craftSkill": [

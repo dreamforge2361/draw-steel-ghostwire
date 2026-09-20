@@ -10,6 +10,7 @@
 // B51b: matrix payloads are mods with mod.magazine. They install only through Load magazine (Craft) in scripts/payload-use.mjs,
 // which sets their fires, so the generic Install onto… and the field toggle are hidden for them. Uninstall still works, after a
 // confirm when fires are left: unloading dumps them (payload-use.mjs).
+// B109: payload hosts may include resonance/body (Technomancer Wired Native / body-as-interface), not only deck.
 
 const MODULE_ID = "draw-steel-ghostwire";
 const L = "GHOSTWIRE.Mods.Install";
