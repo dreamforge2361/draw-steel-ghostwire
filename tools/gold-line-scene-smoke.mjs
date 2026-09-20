@@ -87,7 +87,7 @@ ok(existsSync(SCRIPT), "inject script exists");
 ok(existsSync(JOURNAL), "Deadhead journal source exists");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.42", `module.json is 0.3.42 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.43", `module.json is 0.3.43 (got ${moduleJson.version})`);
 ok(moduleJson.esmodules.includes("scripts/module.mjs"), "module still loads scripts/module.mjs");
 
 const template = readBomFreeJson(TEMPLATE);
