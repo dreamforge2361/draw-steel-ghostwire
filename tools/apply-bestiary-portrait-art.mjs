@@ -17,6 +17,10 @@
  *   modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp
  *   modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp
  *
+ * B111 ARG portraits override three corp-security slugs into
+ *   assets/tokens/bestiary/arg/arg-<role>.webp
+ * (PNG originals sit beside the WebPs; Foundry img uses WebP).
+ *
  * Scope (57): 33 L1–4 corp / gang / E1 rival humanoids + veil-cultist,
  * 7 wire-machine ICE/constructs, 17 summons (elemental companions + rank 1,
  * three spirits, sprite minor/intermediate, two node tokens).
@@ -104,6 +108,13 @@ const SUMMONS_SLUGS = [
   "node-token-track-1",
   "node-token-track-2",
 ];
+
+/** Michael ARG portraits (B111): keep pack slugs, ship art under bestiary/arg/. */
+const ART_OVERRIDES = {
+  "corp-enforcer": { subdir: "arg", stem: "arg-corporate-enforcer" },
+  "response-lieutenant": { subdir: "arg", stem: "arg-response-lieutenant" },
+  "corp-security-officer": { subdir: "arg", stem: "arg-security-officer" },
+};
 
 const PACKS = {
   bestiary: {
@@ -227,7 +238,7 @@ function kindFromName(name) {
   const base = String(name).toLowerCase();
   if (base === "bestiary" || base === "npc" || base === "npcs" || base === "humanoid" || base === "humanoids") return "bestiary";
   if (base === "summon" || base === "summons") return "summons";
-  if (["corp-security", "reach-streets", "rivals", "veil-undead", "wire-machine", "portraits"].includes(base)) return "bestiary";
+  if (["corp-security", "reach-streets", "rivals", "veil-undead", "wire-machine", "portraits", "arg"].includes(base)) return "bestiary";
   if (["elementals", "spirits", "sprites", "nodes"].includes(base)) return "summons";
   return null;
 }
@@ -313,6 +324,11 @@ function aliasMap(catalog) {
   aliases.set("wired-node-track-2", "node-token-track-2");
   aliases.set("wired-node-track1", "node-token-track-1");
   aliases.set("wired-node-track2", "node-token-track-2");
+  aliases.set("arg-corporate-enforcer", "corp-enforcer");
+  aliases.set("arg-corp-enforcer", "corp-enforcer");
+  aliases.set("arg-response-lieutenant", "response-lieutenant");
+  aliases.set("arg-security-officer", "corp-security-officer");
+  aliases.set("arg-corp-security-officer", "corp-security-officer");
   return aliases;
 }
 
@@ -325,11 +341,20 @@ function resolveSlug(stem, kind, catalog, aliases) {
   return entry;
 }
 
+function artRel(kind, slug, ext = PREFERRED_EXT) {
+  const over = ART_OVERRIDES[slug];
+  const folder = PACKS[kind].folder;
+  if (over) return `${folder}/${over.subdir}/${over.stem}${ext}`;
+  return `${folder}/${slug}${ext}`;
+}
+
 function moduleImg(kind, slug, ext = PREFERRED_EXT) {
-  return `modules/${MODULE_ID}/assets/tokens/${PACKS[kind].folder}/${slug}${ext}`;
+  return `modules/${MODULE_ID}/assets/tokens/${artRel(kind, slug, ext)}`;
 }
 
 function destPath(kind, slug, ext = PREFERRED_EXT) {
+  const over = ART_OVERRIDES[slug];
+  if (over) return join(PACKS[kind].dest, over.subdir, `${over.stem}${ext}`);
   return join(PACKS[kind].dest, `${slug}${ext}`);
 }
 

@@ -2,9 +2,9 @@
   "_note": "Names must match Actors in the Ghostwire Bestiary pack. Tiers come from each Actor's Draw Steel organization; named bosses are patrons and support, never opposition.",
   "strata": {
     "crown": [
-      "Corp Security Officer",
-      "Corp Enforcer",
-      "Response Lieutenant",
+      "ARG Security Officer",
+      "ARG Corporate Enforcer",
+      "ARG Response Lieutenant",
       "Corp Netrunner",
       "Contract Enforcer",
       "Rival Commander (Echelon 1)",
@@ -12,9 +12,9 @@
       "Rival Scout (Echelon 1)"
     ],
     "spires": [
-      "Corp Security Officer",
-      "Corp Enforcer",
-      "Response Lieutenant",
+      "ARG Security Officer",
+      "ARG Corporate Enforcer",
+      "ARG Response Lieutenant",
       "Corp Netrunner",
       "Contract Enforcer",
       "Ironclad Commando",
@@ -23,12 +23,12 @@
       "Rival Technomancer (Echelon 1)"
     ],
     "grid": [
-      "Corp Security Officer",
+      "ARG Security Officer",
       "Street Punk",
       "Hustler",
       "Street Cutter",
-      "Corp Enforcer",
-      "Response Lieutenant",
+      "ARG Corporate Enforcer",
+      "ARG Response Lieutenant",
       "Chrome Bruiser",
       "Corp Netrunner",
       "Wrench Rigger"
@@ -157,7 +157,7 @@
   "ladders": {
     "corp": {
       "medium": [
-        "Response Lieutenant"
+        "ARG Response Lieutenant"
       ],
       "high": [
         "Contract Enforcer"

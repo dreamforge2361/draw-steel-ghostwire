@@ -9,6 +9,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Armor + shields | `armor/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/armor/<dsid>.webp` | B102 shipped **0.3.32** (22) |
 | Weapons | `weapons/<dsid>.webp` | `modules/draw-steel-ghostwire/assets/tokens/weapons/<dsid>.webp` | B102 shipped **0.3.32** (49) |
 | Bestiary humanoids + ICE | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 shipped **0.3.35** (40) |
+| ARG corp security (3) | `bestiary/arg/arg-*.webp` (+ PNG originals) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-<role>.webp` | B111 shipped **0.3.47** (Enforcer, Lieutenant, Officer) |
 | Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 shipped **0.3.35** (17) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
@@ -42,3 +43,13 @@ node tools/apply-bestiary-portrait-art.mjs --from _incoming-art
 ```
 
 Stamps Actor `img` **and** `prototypeToken.texture.src` (40 bestiary + 17 summons = 57), then rebuilds the pack(s) that changed. Spike + inventory: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.
+
+## ARG corp security (B111)
+
+Michael ARG portraits live under `bestiary/arg/` as `arg-corporate-enforcer`, `arg-response-lieutenant`, and `arg-security-officer` (PNG originals + 1024² WebP). The apply tool maps those onto pack slugs `corp-enforcer` / `response-lieutenant` / `corp-security-officer`. Replace a WebP in `arg/`, then:
+
+```text
+node tools/apply-bestiary-portrait-art.mjs
+```
+
+Spike: `docs/spikes/B111-ARG-TOKEN-ART.md`.

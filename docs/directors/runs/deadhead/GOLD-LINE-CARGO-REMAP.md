@@ -24,7 +24,7 @@ Left → right = aft → forward (nose right).
 |---|---|---|
 | **L1** | Left aft cargo | **AFT FREIGHT** — board here (drone sling); freight Enforcers |
 | **L2** | Left connector | **FREIGHT** — crate clutter / freight Enforcers |
-| **L3** | Left forward + cab | **SECURITY** — 4 Corp Security + Response Lieutenant nest |
+| **L3** | Left forward + cab | **SECURITY** — 4 ARG Security Officers + ARG Response Lieutenant nest |
 | *(coupler)* | Synthetic join | Non-walkable or Maglock gangway (Director call) |
 | **R1** | Right aft cargo | **COURIER** — sealed capsule + Watchdog ICE |
 | **R2** | Right connector | Transfer / Wire closet (cams/doors node) |
@@ -48,8 +48,8 @@ If you need a clean sixth room, split R2 as its own Wire chase between courier a
 
 | Zone | Meat |
 |---|---|
-| **L1–L2** | Freight **Enforcers** (cams + 2 Corp Enforcers on the aft freight) |
-| **L3** | **4** Corp Security + **1** Response Lieutenant |
+| **L1–L2** | Freight **Enforcers** (cams + 2 ARG Corporate Enforcers on the aft freight) |
+| **L3** | **4** ARG Security Officers + **1** ARG Response Lieutenant |
 | **R1** | Courier sealed until Alert (Watchdog on the Wire) |
 
 No **Passenger** opposition band. No civilian clutter beat.
