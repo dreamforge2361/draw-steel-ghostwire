@@ -160,7 +160,7 @@
       },
       "pPmGDKraCpKV4cOx": {
         "_id": "pPmGDKraCpKV4cOx",
-        "img": "icons/commodities/tech/circuit-board-green.webp",
+        "img": "modules/draw-steel-ghostwire/assets/icons/abilities/compile-agent.svg",
         "repick": {},
         "name": "Agents",
         "type": "itemGrant",
