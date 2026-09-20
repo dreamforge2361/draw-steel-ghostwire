@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /**
- * B118 smoke: kiosk price deduct + item create helpers (no live Foundry).
+ * B118 / B119 smoke: kiosk purchase helpers + preset inventory building (no live Foundry).
  *
  * Run: node tools/kiosk-smoke.mjs
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 import {
   DEFAULT_KIOSK_RANGE,
   KIOSK_ACTOR_ID,
@@ -25,6 +26,8 @@ import {
   readKioskConfig,
   tokenDistanceSquares,
 } from "../scripts/kiosk.mjs";
+import { KIOSK_PRESETS, getPreset, listingsFromItems } from "../scripts/kiosk-presets.mjs";
+import { buffEffectsOf, crashEffectsOf, isConsumableTreasure, planConsumableUse } from "../scripts/consumable-use.mjs";
 
 const fail = [];
 const ok = [];
@@ -38,10 +41,10 @@ const gold = readFileSync("scripts/gold-line-scene.mjs", "utf8");
 const actor = JSON.parse(readFileSync("src/packs/summons/kiosks/kiosk-merchant.json", "utf8"));
 const folder = JSON.parse(readFileSync("src/packs/summons/kiosks/_folder.json", "utf8"));
 
-console.log("B118 scene kiosk merchant smoke\n");
+console.log("B118 / B119 scene kiosk merchant + presets smoke\n");
 
 console.log("1) Ship surface");
-note(module.version === "0.3.59", `module.json is 0.3.59 (got ${module.version})`);
+note(typeof module.version === "string" && module.version >= "0.3.65", `module.json is ≥ 0.3.65 (got ${module.version})`);
 note(spike.includes("DESIGN LOCKED") || spike.includes("SHIPPED"), "spike is locked/shipped");
 note(spike.includes("kind === \"kiosk\"") || spike.includes('kind === "kiosk"') || spike.includes("kind: kiosk") || spike.includes('kind === "kiosk"'), "spike documents Actor stub");
 note(boot.includes("registerKiosk()"), "module registers registerKiosk");
@@ -148,6 +151,104 @@ const inv = normalizeInventory([
 ]);
 note(inv.length === 2, `dedupes + drops blank UUID (got ${inv.length})`);
 note(inv[0].price === 120 && inv[1].price === null, "override vs catalog null");
+
+console.log("\n6) B119 preset inventory (src/packs catalog)");
+const b119 = readFileSync("docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md", "utf8");
+const director = readFileSync("docs/directors/scene-kiosk-merchant.md", "utf8");
+note(b119.includes("0.3.65") && b119.includes("SHIPPED"), "B119 spike shipped 0.3.65");
+note(director.includes("Street Food Kiosk") && director.includes("Armor Locker"), "Director note names type defaults");
+note(boot.includes("registerConsumableUse()"), "module registers registerConsumableUse");
+note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones", "six preset ids");
+note(getPreset("food")?.match.pathPrefixes.includes("consumables/food"), "food filter is consumables/food");
+note(getPreset("armor")?.match.kinds.includes("armor"), "armor filter is kind=armor");
+note(getPreset("weapons")?.match.kinds.includes("weapon"), "weapons filter is kind=weapon");
+note(getPreset("drones")?.match.vehicleDrone === true, "drones filter is vehicle.drone");
+
+function scanSrcCatalog() {
+  const items = [];
+  for (const pack of ["gear", "vehicles"]) {
+    const base = join("src/packs", pack);
+    const files = readdirSync(base, { recursive: true }).filter(f => String(f).endsWith(".json") && !String(f).endsWith("_folder.json"));
+    for (const file of files) {
+      const rel = String(file).replaceAll("\\", "/");
+      const data = JSON.parse(readFileSync(join(base, rel), "utf8"));
+      if (!data._id || data._key?.startsWith("!folders!")) continue;
+      items.push({
+        pack,
+        path: rel.replace(/\.json$/, ""),
+        id: data._id,
+        uuid: `Compendium.draw-steel-ghostwire.${pack}.Item.${data._id}`,
+        folder: data.folder,
+        system: data.system,
+        flags: data.flags,
+        type: data.type,
+        name: data.name,
+        effects: data.effects ?? [],
+      });
+    }
+  }
+  return items;
+}
+
+const catalog = scanSrcCatalog();
+const food = listingsFromItems(catalog, "food");
+const medical = listingsFromItems(catalog, "medical");
+const tools = listingsFromItems(catalog, "tools");
+const armor = listingsFromItems(catalog, "armor");
+const weapons = listingsFromItems(catalog, "weapons");
+const drones = listingsFromItems(catalog, "drones");
+note(food.length === 6, `food stocks 6 SKUs (got ${food.length})`);
+note(food.every(row => row.price === null), "food listings use catalog ¥");
+note(medical.length >= 9, `medical is chems + existing kits (got ${medical.length})`);
+note(tools.length >= 10, `tools stocks infiltration/sensors/survival (got ${tools.length})`);
+note(armor.length >= 20, `armor stocks all armor Items (got ${armor.length})`);
+note(weapons.length >= 40, `weapons stocks all weapon Items (got ${weapons.length})`);
+note(drones.length >= 30, `drones stocks vehicle.drone Items (got ${drones.length})`);
+const foodIds = new Set(food.map(r => r.uuid.split(".").pop()));
+note(foodIds.has("GwBuzzCan0000001") && foodIds.has("GwStallRamen0001"), "food includes Buzz-Can + Stall Ramen");
+const medIds = new Set(medical.map(r => r.uuid.split(".").pop()));
+note(medIds.has("GwKickwire000001") && medIds.has("Rv0BEDaaCZ14x6GV"), "medical includes Kickwire + Stim Patch");
+note(armor.every(row => row.uuid.includes(".gear.Item.")), "armor UUIDs are gear pack");
+note(drones.every(row => row.uuid.includes(".vehicles.Item.")), "drone UUIDs are vehicles pack");
+
+const boughtFood = applyPurchase({
+  wealth: 5000,
+  price: listingPrice({ price: null }, { flags: { "draw-steel-ghostwire": { gear: { price: 35 } } } }),
+  sourceItem: JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8")),
+});
+note(boughtFood.ok && boughtFood.wealthAfter === 4965 && boughtFood.item?.name === "GHOSTWIRE.Gear.Items.BuzzCan.Name", "purchase Buzz-Can deducts ¥35");
+
+console.log("\n7) Chem dose plans");
+const kickwire = JSON.parse(readFileSync("src/packs/gear/consumables/chems/kickwire.json", "utf8"));
+const clearline = JSON.parse(readFileSync("src/packs/gear/consumables/chems/clearline.json", "utf8"));
+const numb = JSON.parse(readFileSync("src/packs/gear/consumables/chems/numb-tap.json", "utf8"));
+const dust = JSON.parse(readFileSync("src/packs/gear/consumables/chems/red-dust.json", "utf8"));
+note(isConsumableTreasure(kickwire) && isConsumableTreasure(dust), "chems carry consumableUse");
+note(!isConsumableTreasure(JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8"))), "food is not a dose");
+note(buffEffectsOf(kickwire).length === 1 && crashEffectsOf(kickwire).length === 1, "Kickwire has buff + crash AE");
+note(buffEffectsOf(clearline).length === 1 && crashEffectsOf(clearline).length === 0, "Clearline is buff-only");
+const dose = planConsumableUse({
+  quantity: 1,
+  staminaValue: 20,
+  staminaMax: 30,
+  staminaTemporary: 0,
+  taint: 0,
+  use: kickwire.flags["draw-steel-ghostwire"].gear.consumableUse,
+});
+note(dose.ok && dose.tempGranted === 5 && dose.quantityAfter === 0, `Kickwire grants 5 temp Stamina and spends the dose`);
+const spent = planConsumableUse({ quantity: 0, use: kickwire.flags["draw-steel-ghostwire"].gear.consumableUse });
+note(spent.ok === false && spent.reason === "spent", "spent dose refuses");
+const spice = planConsumableUse({
+  quantity: 2,
+  staminaTemporary: 0,
+  taint: 2,
+  use: dust.flags["draw-steel-ghostwire"].gear.consumableUse,
+});
+note(spice.ok && spice.tempGranted === 10 && spice.taint.delta === 1 && spice.quantityAfter === 1, "Red Dust +10 temp Stamina and +1 Taint");
+note(numb.flags["draw-steel-ghostwire"].gear.consumableUse.tempStamina === 8, "Numb-Tap is +8 temp Stamina");
+note(lang.GHOSTWIRE.ConsumableUse.AbilityName === "Use {item}", "lang Use {item}");
+note(!JSON.stringify(lang.GHOSTWIRE.Gear.Items.Kickwire).includes("Draw Steel Heroes"), "Kickwire player text is Ghostwire-only");
+note(lang.GHOSTWIRE.Gear.Items.Kickwire.Description.includes("Physique"), "Kickwire names Physique, not Might");
 
 for (const line of ok) console.log(line);
 if (fail.length) {

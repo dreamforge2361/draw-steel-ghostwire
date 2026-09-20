@@ -1,0 +1,56 @@
+{
+  "_id": "GwStallRamen0001",
+  "_key": "!items!GwStallRamen0001",
+  "name": "GHOSTWIRE.Gear.Items.StallRamen.Name",
+  "type": "treasure",
+  "img": "icons/consumables/food/soup-broth-bowl-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.StallRamen.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "stall-ramen",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "GwFoodFolder0000",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 45,
+        "modSlots": 0,
+        "tags": [
+          "Consumable",
+          "StreetFood"
+        ],
+        "consumable": true,
+        "kioskShelf": "food"
+      }
+    }
+  }
+}

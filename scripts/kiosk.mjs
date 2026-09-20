@@ -1,9 +1,11 @@
-// Scene kiosk merchant (B118): a placeable NPC Actor stub that sells curated gear for ¥.
+// Scene kiosk merchant (B118 / B119): a placeable NPC Actor stub that sells curated gear for ¥.
 // Choice: dedicated Actor (flags.draw-steel-ghostwire.kind === "kiosk") + linked token — not a Tile
 // or Drawing. Matches Wired node / machine stubs so Directors can drop several named kiosks on one
 // Scene (Mama’s Bar, ARG Lobby, street vendor). Inventory and range live on the Actor.
 //
 // Helpers below are Foundry-free so tools/kiosk-smoke.mjs can run them in Node.
+
+import { getPreset, listPresets, listingsFromItems, matchPresetItem } from "./kiosk-presets.mjs";
 
 export const MODULE_ID = "draw-steel-ghostwire";
 export const KIOSK_ACTOR_ID = "GwKioskMerchant1";
@@ -312,14 +314,73 @@ function placementOnView() {
   return { x, y, elevation, level };
 }
 
-export async function placeKiosk({ name } = {}) {
+/** Load pack index rows and build catalog-price listings for one preset. */
+export async function resolvePresetListings(presetId) {
+  const preset = getPreset(presetId);
+  if (!preset) return [];
+  const items = [];
+  for (const packName of preset.match.packs) {
+    const pack = game.packs.get(`${MODULE_ID}.${packName}`);
+    if (!pack) continue;
+    const docs = await pack.getDocuments();
+    for (const doc of docs) {
+      const row = {
+        pack: packName,
+        id: doc.id,
+        uuid: doc.uuid,
+        folder: doc.folder?.id ?? doc.folder,
+        system: doc.system,
+        flags: doc.flags,
+        type: doc.type,
+      };
+      if (matchPresetItem(row, preset)) items.push(row);
+    }
+  }
+  return listingsFromItems(items, preset, { listingId: () => newListingId() });
+}
+
+export async function restockKioskFromPreset(kiosk, presetId) {
+  if (!game.user.isGM || !isKioskActor(kiosk)) return [];
+  const inventory = normalizeInventory(await resolvePresetListings(presetId));
+  await kiosk.update({ [`flags.${MODULE_ID}.inventory`]: inventory });
+  return inventory;
+}
+
+export async function promptPlaceKiosk() {
+  if (!game.user.isGM) return null;
+  const options = [
+    `<option value="">${loc("Presets.Empty")}</option>`,
+    ...listPresets().map(preset => `<option value="${preset.id}">${loc(`Presets.${preset.langKey}.Name`)}</option>`),
+  ].join("");
+  const data = await foundry.applications.api.DialogV2.input({
+    window: { title: `${L}.Place`, icon: "fa-solid fa-cash-register" },
+    content: `
+      <p>${loc("Presets.Hint")}</p>
+      <div class="form-group">
+        <label>${loc("Presets.Type")}</label>
+        <select name="preset">${options}</select>
+      </div>
+      <div class="form-group">
+        <label>${loc("MerchantName")}</label>
+        <input type="text" name="name" placeholder="${loc("DefaultName")}">
+      </div>`,
+    ok: { label: `${L}.PlaceConfirm`, icon: "fa-solid fa-plus" },
+  });
+  if (!data) return null;
+  return placeKiosk({ name: data.name, preset: data.preset || null });
+}
+
+export async function placeKiosk({ name, preset } = {}) {
   if (!game.user.isGM) return null;
   const viewed = canvas.scene;
   if (!viewed) return ui.notifications.warn(loc("NoScene"));
   const template = await fromUuid(KIOSK_UUID);
   if (!template) return ui.notifications.error(loc("NoTemplate"));
   const data = game.actors.fromCompendium(template);
-  const merchant = name || loc("DefaultName");
+  const def = preset ? getPreset(preset) : null;
+  const merchant = String(name ?? "").trim() || (def ? loc(`Presets.${def.langKey}.ActorName`) : loc("DefaultName"));
+  const tagline = def ? loc(`Presets.${def.langKey}.Tagline`) : "";
+  const inventory = def ? normalizeInventory(await resolvePresetListings(def.id)) : [];
   foundry.utils.mergeObject(data, {
     name: merchant,
     folder: (await kioskFolder())?.id ?? null,
@@ -327,7 +388,7 @@ export async function placeKiosk({ name } = {}) {
     "prototypeToken.name": merchant,
     "prototypeToken.actorLink": true,
     "prototypeToken.displayName": CONST.TOKEN_DISPLAY_MODES.ALWAYS,
-    [`flags.${MODULE_ID}`]: { kind: "kiosk", range: DEFAULT_KIOSK_RANGE, tagline: "", inventory: [] },
+    [`flags.${MODULE_ID}`]: { kind: "kiosk", range: DEFAULT_KIOSK_RANGE, tagline, inventory, preset: def?.id ?? "" },
   });
   const actor = await Actor.create(data);
   if (!actor) return null;
@@ -336,7 +397,7 @@ export async function placeKiosk({ name } = {}) {
   if (level) tokenData.level = level;
   const tokenDocument = await actor.getTokenDocument(tokenData, { parent: viewed });
   await viewed.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
-  ui.notifications.info(loc("Placed", { name: merchant }));
+  ui.notifications.info(loc(def ? "PlacedPreset" : "Placed", { name: merchant, type: def ? loc(`Presets.${def.langKey}.Name`) : "", count: inventory.length }));
   return actor;
 }
 
@@ -354,6 +415,7 @@ function defineKioskShop() {
         buy: GhostwireKioskShop.#onBuy,
         addRow: GhostwireKioskShop.#onAddRow,
         removeRow: GhostwireKioskShop.#onRemoveRow,
+        restock: GhostwireKioskShop.#onRestock,
         openSheet: GhostwireKioskShop.#onOpenSheet,
       },
     };
@@ -443,6 +505,11 @@ function defineKioskShop() {
         dropHint: loc("DropHint"),
         infinite: loc("InfiniteStock"),
         hasSheet: isGM,
+        presets: listPresets().map(preset => ({
+          id: preset.id,
+          label: loc(`Presets.${preset.langKey}.Name`),
+        })),
+        restockHint: loc("Presets.RestockHint"),
       };
     }
 
@@ -581,6 +648,19 @@ function defineKioskShop() {
       await this.#writeInventory(cfg.inventory.filter(row => row.id !== id));
     }
 
+    static async #onRestock() {
+      const kiosk = this.kiosk;
+      if (!game.user.isGM || !kiosk) return;
+      const presetId = this.element.querySelector("[name='preset']")?.value;
+      const def = getPreset(presetId);
+      if (!def) return ui.notifications.warn(loc("Presets.PickType"));
+      const inventory = await restockKioskFromPreset(kiosk, def.id);
+      ui.notifications.info(loc("Presets.Restocked", {
+        type: loc(`Presets.${def.langKey}.Name`),
+        count: inventory.length,
+      }));
+    }
+
     static async #onOpenSheet() {
       const kiosk = this.kiosk;
       if (!game.user.isGM || !kiosk) return;
@@ -684,6 +764,9 @@ export function registerKiosk() {
         ...(module.api ?? {}),
         openKiosk,
         placeKiosk,
+        promptPlaceKiosk,
+        restockKioskFromPreset,
+        resolvePresetListings,
         executePurchase,
         isKioskActor,
         planPurchase,
@@ -706,7 +789,7 @@ export function registerKiosk() {
       order: Object.keys(tools).length,
       button: true,
       visible: game.user.isGM,
-      onChange: () => placeKiosk(),
+      onChange: () => promptPlaceKiosk(),
     };
   });
 

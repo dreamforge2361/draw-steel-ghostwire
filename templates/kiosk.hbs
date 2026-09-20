@@ -44,6 +44,20 @@
         <input type="number" name="range" data-kiosk-field min="0" step="1" value="{{range}}">
       </label>
     </div>
+    <div class="gw-kiosk-preset">
+      <label>{{localize "GHOSTWIRE.Kiosk.Presets.Type"}}
+        <select name="preset">
+          <option value="">{{localize "GHOSTWIRE.Kiosk.Presets.Empty"}}</option>
+          {{#each presets}}
+          <option value="{{id}}">{{label}}</option>
+          {{/each}}
+        </select>
+      </label>
+      <button type="button" class="gw-kiosk-btn" data-action="restock">
+        <i class="fa-solid fa-boxes-stacked"></i> {{localize "GHOSTWIRE.Kiosk.Presets.Restock"}}
+      </button>
+    </div>
+    <p class="gw-kiosk-drop-hint">{{restockHint}}</p>
     <p class="gw-kiosk-drop-hint">{{dropHint}}</p>
   </section>
   {{/if}}

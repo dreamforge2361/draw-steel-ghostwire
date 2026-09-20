@@ -131,6 +131,7 @@
       "Folder": "Kiosks",
       "Hud": "Browse kiosk",
       "Place": "Place kiosk",
+      "PlaceConfirm": "Place",
       "MerchantName": "Merchant / corp name",
       "Range": "Range (squares)",
       "RangeHint": "How close a hero token must stand, in scene grid squares (Chebyshev). Adjacent is 1. Default 2.",
@@ -165,10 +166,50 @@
       "NoScene": "View a Scene before placing a kiosk.",
       "NoTemplate": "No kiosk template in Ghostwire Summons. Rebuild the summons pack.",
       "Placed": "Placed {name}. Rename it and stock the shelf.",
+      "PlacedPreset": "Placed {name} ({type}) with {count} listings. Rename it if you want.",
       "InfiniteStock": "Infinite stock — v1 does not decrement.",
+      "Presets": {
+        "Type": "Kiosk type",
+        "Hint": "Pick a type to auto-stock from the catalog (catalog ¥, infinite stock). Leave the name blank to use the type default. You can rename after.",
+        "Empty": "Empty shelf",
+        "Restock": "Restock from preset",
+        "RestockHint": "Restock replaces the current shelf with that type’s catalog list (price blank = catalog ¥).",
+        "PickType": "Pick a kiosk type before restocking.",
+        "Restocked": "Restocked {type} — {count} listings.",
+        "Food": {
+          "Name": "General / Food",
+          "ActorName": "Street Food Kiosk",
+          "Tagline": "Cans, stall bowls, and shift bars."
+        },
+        "Medical": {
+          "Name": "Medical",
+          "ActorName": "Street Clinic Kiosk",
+          "Tagline": "Patches, kits, and street chems."
+        },
+        "Tools": {
+          "Name": "Tools",
+          "ActorName": "Hardware Kiosk",
+          "Tagline": "Break-in, sensors, and field kit."
+        },
+        "Armor": {
+          "Name": "Armor",
+          "ActorName": "Armor Locker",
+          "Tagline": "Every armor SKU on the shelf."
+        },
+        "Weapons": {
+          "Name": "Weapons",
+          "ActorName": "Weapons Cage",
+          "Tagline": "Every weapon SKU on the shelf."
+        },
+        "Drones": {
+          "Name": "Drones",
+          "ActorName": "Drone Vendor",
+          "Tagline": "Buyable drone chassis from the Vehicles pack."
+        }
+      },
       "Template": {
         "Name": "Street Vendor (Kiosk)",
-        "Description": "<p>A placeable <strong>scene kiosk</strong>. Rename the Actor to the merchant or corp — <em>Mama’s Bar</em>, <em>ARG Lobby</em>, a street vendor — then stock Item UUIDs from Ghostwire Gear (or Chrome / Matrix / Mods / Vehicles / Foci / world items). Optional ¥ override per listing.</p><p>Players open it when their token is within <strong>range</strong> (default 2 grid squares). The Director can always open and edit. Purchase deducts <strong>nuyen</strong> (<code>system.hero.wealth</code>) and copies the Item onto the buyer. Stock is infinite in v1.</p><p><strong>Place:</strong> Token controls › cash register, or drag this Actor onto the Scene. Double-click or the HUD cash register opens the shop — not the combat sheet.</p>"
+        "Description": "<p>A placeable <strong>scene kiosk</strong>. Rename the Actor to the merchant or corp — <em>Mama’s Bar</em>, <em>ARG Lobby</em>, a street vendor — then stock Item UUIDs from Ghostwire Gear (or Chrome / Matrix / Mods / Vehicles / Foci / world items). Optional ¥ override per listing.</p><p>Directors can pick a <strong>kiosk type</strong> (Food, Medical, Tools, Armor, Weapons, Drones) when placing from Token controls, or restock an existing kiosk from that preset. Price blank = catalog ¥. Stock is infinite in v1.</p><p>Players open it when their token is within <strong>range</strong> (default 2 grid squares). The Director can always open and edit. Purchase deducts <strong>nuyen</strong> and copies the Item onto the buyer.</p><p><strong>Place:</strong> Token controls › cash register (type picker), or drag this Actor onto the Scene. Double-click or the HUD cash register opens the shop — not the combat sheet.</p>"
       }
     },
     "Skills": {
@@ -4332,6 +4373,9 @@
         "GeneralAmmunition": "Ammunition & Thrown",
         "GeneralLifestyle": "Lifestyle Goods & Services",
         "GeneralPlot": "Plot & Run Hooks",
+        "Consumables": "Street Consumables",
+        "ConsumablesFood": "Food & Drink",
+        "ConsumablesChems": "Chems & Stims",
         "Armor": "Armor",
         "ArmorLight": "Light Armor",
         "ArmorMedium": "Medium Armor",
@@ -4790,6 +4834,60 @@
         "GaussNeedler": {
           "Name": "Gauss Needler",
           "Description": "<p><em>Gauss Needler · Renraku Railspike · coilgun prototype</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥28,000 · <strong>Mod slots:</strong> 5 · <strong>Tags:</strong> [Medium], Quiet, Smart-ready</p><p><strong>Weapon Base:</strong> 6 AP (Medium band) · <strong>Range:</strong> Long</p><p><em>Kit doctrine (if any) still supplies Draw Steel damage/Stamina bands; this item’s Weapon Base / armor profile is the object. Gear costs ¥; Kit doctrine never does.</em></p><p><strong>Mod slots (5):</strong> Fill them with weapon mods from <strong>Ghostwire Mods › Weapon Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.jtVTepYrWmTwfzNJ]{Smartlink}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.98UNcvBWHLroYAWA]{Suppressor}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.fHmRuh92kBkUJyA2]{Recoil Comp}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.KvmcpBf0TQElFGuh]{Extended Mag}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.NMhaEkNDiDEIeIxx]{Smart-Scope}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.3XE8fdbl3slh9W5D]{Gas-Seal Kit}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.KSErZpMGtrAf8OWq]{Underbarrel Mount}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.ZQGpCYRch5xML8iS]{Personalized Grip}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics or Repair); toggling an installed mod is a field action.</p>"
+        },
+        "BuzzCan": {
+          "Name": "Buzz-Can",
+          "Description": "<p><em>Buzz-Can · Grid Cola · caffeine-taurine street soda</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥35 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> A dented can from the night stall. Keeps you upright through a long watch. No combat bonus.</p><p><strong>Consumable:</strong> bought per can and used up in play; no mod slots.</p>"
+        },
+        "LytePouch": {
+          "Name": "Lyte-Pouch",
+          "Description": "<p><em>Lyte-Pouch · Electro-Salt · electrolyte gel pack</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥20 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Salty gel in a foil pouch. Replaces a missed meal on a hot shift. No combat bonus.</p><p><strong>Consumable:</strong> bought per pouch and used up in play; no mod slots.</p>"
+        },
+        "StallRamen": {
+          "Name": "Stall Ramen",
+          "Description": "<p><em>Stall Ramen · Night-Market Noodles · instant protein broth</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥45 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Styrofoam bowl, mystery broth, enough salt to wake the dead. Street meal. No combat bonus.</p><p><strong>Consumable:</strong> bought per bowl and used up in play; no mod slots.</p>"
+        },
+        "GreaseBox": {
+          "Name": "Grease Box",
+          "Description": "<p><em>Grease Box · Street Combo · rice and skewer takeout</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥60 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Oil-stained carton from the alley window. Fills you. No combat bonus.</p><p><strong>Consumable:</strong> bought per box and used up in play; no mod slots.</p>"
+        },
+        "BrickBar": {
+          "Name": "Brick Bar",
+          "Description": "<p><em>Brick Bar · Cal-Block · compressed ration</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥30 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> A dense bar that tastes like cardboard and soy. One meal if you can chew it. No combat bonus.</p><p><strong>Consumable:</strong> bought per bar and used up in play; no mod slots.</p>"
+        },
+        "ShiftChews": {
+          "Name": "Shift Chews",
+          "Description": "<p><em>Shift Chews · Enduro Tabs · shift-long supplement</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥80 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable</p><p><strong>Profile:</strong> Chalky tabs sold next to the time clock. Cover a missed meal on a double. No combat bonus.</p><p><strong>Consumable:</strong> bought per pack and used up in play; no mod slots.</p>"
+        },
+        "Kickwire": {
+          "Name": "Kickwire",
+          "Description": "<p><em>Kickwire · Adrenal Spike · combat stim injector</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥400 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable, Chem</p><p><strong>Profile:</strong> Maneuver. Gain <strong>5 temporary Stamina</strong>, <strong>+1 Speed</strong>, and an <strong>edge on Physique tests</strong> for 2 rounds. When the spike fades you are <strong>weakened</strong> for 1 round (Physique bane).</p><p><strong>Consumable:</strong> bought per dose and used up in play; no mod slots. Use the <strong>Use Kickwire</strong> maneuver on your sheet.</p>",
+          "BuffName": "Kickwire spike",
+          "BuffDescription": "<p>+1 Speed and an edge on Physique tests for 2 rounds.</p>",
+          "CrashName": "Kickwire crash",
+          "CrashDescription": "<p>Weakened, with a bane on Physique tests, for 1 round after the spike.</p>"
+        },
+        "Clearline": {
+          "Name": "Clearline",
+          "Description": "<p><em>Clearline · Focus Ampoule · nootropic chem</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥350 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable, Chem</p><p><strong>Profile:</strong> Maneuver. Gain an <strong>edge on Logic and Instinct tests</strong> for 2 rounds — the short Wired-focus window street deckers buy when the board gets loud.</p><p><strong>Consumable:</strong> bought per dose and used up in play; no mod slots. Use the <strong>Use Clearline</strong> maneuver on your sheet.</p>",
+          "BuffName": "Clearline focus",
+          "BuffDescription": "<p>Edge on Logic and Instinct tests for 2 rounds.</p>"
+        },
+        "NumbTap": {
+          "Name": "Numb-Tap",
+          "Description": "<p><em>Numb-Tap · Analgesic Slap · painkiller patch</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥250 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable, Chem</p><p><strong>Profile:</strong> Maneuver. Gain <strong>8 temporary Stamina</strong> for 2 rounds — the wound still happened; you just stop hearing it. When it fades, take a <strong>bane on Instinct tests</strong> for 2 rounds.</p><p><strong>Consumable:</strong> bought per patch and used up in play; no mod slots. Use the <strong>Use Numb-Tap</strong> maneuver on your sheet.</p>",
+          "BuffName": "Numb-Tap",
+          "BuffDescription": "<p>Temporary Stamina holds the line for 2 rounds. You ignore the worst of a wound until it fades.</p>",
+          "CrashName": "Numb-Tap fog",
+          "CrashDescription": "<p>Bane on Instinct tests for 2 rounds after the numb lifts.</p>"
+        },
+        "RedDust": {
+          "Name": "Red Dust",
+          "Description": "<p><em>Red Dust · Street Spice · unlicensed combat cocktail</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥600 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Consumable, Chem</p><p><strong>Profile:</strong> Maneuver. Gain <strong>10 temporary Stamina</strong>, <strong>+2 Speed</strong>, and an <strong>edge on Physique and Reflex tests</strong> for 2 rounds. The dose also marks you: <strong>+1 Taint</strong> (0–12 track). When it fades you are <strong>weakened</strong> for 2 rounds (Physique and Reflex bane).</p><p><strong>Consumable:</strong> bought per hit and used up in play; no mod slots. Use the <strong>Use Red Dust</strong> maneuver on your sheet.</p>",
+          "BuffName": "Red Dust high",
+          "BuffDescription": "<p>+2 Speed and an edge on Physique and Reflex tests for 2 rounds.</p>",
+          "CrashName": "Red Dust crash",
+          "CrashDescription": "<p>Weakened, with a bane on Physique and Reflex tests, for 2 rounds after the high.</p>"
         }
       },
       "Availability": {
@@ -7387,6 +7485,17 @@
       "VerbRanged": "Fire",
       "AbilityName": "{verb} {weapon}",
       "AbilityDescription": "<p>A free strike with your {weapon} ({band} range, {damage} {type} damage on a middle result). Kit bonuses for strikes apply as normal.</p><p><em>This ability is generated from the weapon in your inventory. Remove the weapon and it goes away.</em></p>"
+    },
+    "ConsumableUse": {
+      "AbilityName": "Use {item}",
+      "AbilityDescription": "<p>Take the dose. The chem’s Active Effect and any temporary Stamina or Taint land when this maneuver resolves.</p><p><em>This ability is generated from the consumable in your inventory. Using it spends the dose.</em></p>",
+      "AbilityEffect": "<p>You take the {item}.</p>",
+      "Used": "{actor} takes {item}.",
+      "Spent": "{item} is already spent.",
+      "Crash": "{actor} comes down off {item}.",
+      "Chat": {
+        "Used": "<p><strong>{actor}</strong> takes <strong>{item}</strong>.</p>"
+      }
     },
     "PayloadUse": {
       "AbilityName": "Run {payload}",

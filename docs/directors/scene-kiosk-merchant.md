@@ -1,17 +1,45 @@
 # Scene kiosk merchant
 
-**Module 0.3.59 · spike `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md` (DESIGN LOCKED)**
+**Module 0.3.59 · spike `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md` (DESIGN LOCKED)**  
+**Presets + street consumables 0.3.65 · spike `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`**
 
 A **kiosk** is a named stall on the Scene: Mama’s Bar, an ARG lobby desk, a street vendor. It is a Ghostwire Summons Actor (`kind: kiosk`), not a Tile.
 
 ## Place
 
-1. Token controls › **cash register**, or drag **Street Vendor (Kiosk)** from Ghostwire Summons & Machines › Kiosks.
-2. Rename the Actor to the merchant or corp. Optional tagline under the name.
+1. Token controls › **cash register**. Pick a **kiosk type** (or Empty shelf) and an optional name. Blank name uses the type default (Street Food Kiosk, Armor Locker, …). You can rename after.
+2. Or drag **Street Vendor (Kiosk)** from Ghostwire Summons & Machines › Kiosks, then **Restock from preset** on the Director shop.
 3. Set **Range (squares)** — default **2**. Adjacent is 1.
-4. Stock the shelf: drop Gear / Chrome / Matrix / Mods / Vehicles / Foci, or paste Item UUIDs. Optional ¥ override per row (blank = catalog price).
+4. Stock is pre-filled from catalog UUIDs when you pick a type. You can still drop Gear / Chrome / Matrix / Mods / Vehicles / Foci, or paste Item UUIDs. Optional ¥ override per row (blank = catalog price).
 
 Players see the token name. They do not need the combat sheet.
+
+### Types (auto-stock)
+
+| Type | Default name | What lands on the shelf |
+|---|---|---|
+| **General / Food** | Street Food Kiosk | New street food / drink / supplement SKUs (Buzz-Can, Lyte-Pouch, Stall Ramen, Grease Box, Brick Bar, Shift Chews) |
+| **Medical** | Street Clinic Kiosk | Kickwire, Clearline, Numb-Tap, Red Dust **plus** existing medical gear (Trauma Patch, Stim Patch, Field Surgery Kit, Antidote, Slap-Doc) |
+| **Tools** | Hardware Kiosk | Break-in, sensors, and survival / field kit from General gear |
+| **Armor** | Armor Locker | **All** armor Items in Ghostwire Gear › Armor |
+| **Weapons** | Weapons Cage | **All** weapons in Ghostwire Gear › Weapons |
+| **Drones** | Drone Vendor | Buyable drone chassis in Ghostwire Vehicles › Drones |
+| Empty shelf | Street Vendor | Nothing — stock by hand |
+
+New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones.
+
+**Restock from preset** on an open kiosk **replaces** the current list. Infinite stock still (B118).
+
+## Street consumables
+
+Food and drink are meals. Chems are doses:
+
+- **Kickwire** (¥400) — combat stim: temp Stamina, Speed, Physique edge; Weakened crash.
+- **Clearline** (¥350) — focus chem: Logic + Instinct edge for 2 rounds.
+- **Numb-Tap** (¥250) — painkiller: temp Stamina; Instinct bane when it fades.
+- **Red Dust** (¥600) — street spice: bigger buff + **+1 Taint** (existing 0–12 track) + crash.
+
+A hero who owns a chem gets a **Use {item}** maneuver. Using it spends the dose, applies the Active Effect, and posts chat.
 
 ## Play
 

@@ -1,0 +1,12 @@
+{
+  "_id": "GwChemFolder0000",
+  "_key": "!folders!GwChemFolder0000",
+  "name": "GHOSTWIRE.Gear.Folders.ConsumablesChems",
+  "type": "Item",
+  "folder": "GwConsumables000",
+  "description": "",
+  "color": null,
+  "sorting": "a",
+  "sort": 2000,
+  "flags": {}
+}

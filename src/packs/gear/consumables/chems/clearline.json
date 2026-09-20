@@ -1,0 +1,112 @@
+{
+  "_id": "GwClearline00001",
+  "_key": "!items!GwClearline00001",
+  "name": "GHOSTWIRE.Gear.Items.Clearline.Name",
+  "type": "treasure",
+  "img": "icons/consumables/potions/bottle-round-corked-blue.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Clearline.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "clearline",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "GwClearlineBuff1",
+      "_key": "!items.effects!GwClearline00001.GwClearlineBuff1",
+      "name": "GHOSTWIRE.Gear.Items.Clearline.BuffName",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwClearline00001",
+      "description": "GHOSTWIRE.Gear.Items.Clearline.BuffDescription",
+      "disabled": true,
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "draw-steel-ghostwire": {
+          "consumablePhase": "buff",
+          "consumableDsid": "clearline"
+        }
+      },
+      "duration": {
+        "value": 2,
+        "units": "rounds",
+        "expiry": "roundEnd",
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.characteristics.reason.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.characteristics.intuition.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "GwChemFolder0000",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 350,
+        "modSlots": 0,
+        "tags": [
+          "Consumable",
+          "Chem"
+        ],
+        "consumable": true,
+        "kioskShelf": "chem",
+        "consumableUse": {
+          "action": "maneuver",
+          "tempStamina": 0,
+          "taint": 0,
+          "spend": true,
+          "crash": false
+        }
+      }
+    }
+  }
+}

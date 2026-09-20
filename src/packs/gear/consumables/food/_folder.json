@@ -1,0 +1,12 @@
+{
+  "_id": "GwFoodFolder0000",
+  "_key": "!folders!GwFoodFolder0000",
+  "name": "GHOSTWIRE.Gear.Folders.ConsumablesFood",
+  "type": "Item",
+  "folder": "GwConsumables000",
+  "description": "",
+  "color": null,
+  "sorting": "a",
+  "sort": 1000,
+  "flags": {}
+}

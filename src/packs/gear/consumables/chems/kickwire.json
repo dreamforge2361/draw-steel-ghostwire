@@ -1,0 +1,155 @@
+{
+  "_id": "GwKickwire000001",
+  "_key": "!items!GwKickwire000001",
+  "name": "GHOSTWIRE.Gear.Items.Kickwire.Name",
+  "type": "treasure",
+  "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Kickwire.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "kickwire",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [
+    {
+      "_id": "GwKickwireBuff01",
+      "_key": "!items.effects!GwKickwire000001.GwKickwireBuff01",
+      "name": "GHOSTWIRE.Gear.Items.Kickwire.BuffName",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwKickwire000001",
+      "description": "GHOSTWIRE.Gear.Items.Kickwire.BuffDescription",
+      "disabled": true,
+      "transfer": false,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {
+        "draw-steel-ghostwire": {
+          "consumablePhase": "buff",
+          "consumableDsid": "kickwire"
+        }
+      },
+      "duration": {
+        "value": 2,
+        "units": "rounds",
+        "expiry": "roundEnd",
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.movement.value",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "key": "system.characteristics.might.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    },
+    {
+      "_id": "GwKickwireCrash1",
+      "_key": "!items.effects!GwKickwire000001.GwKickwireCrash1",
+      "name": "GHOSTWIRE.Gear.Items.Kickwire.CrashName",
+      "img": "icons/magic/control/energy-stream-link-blue.webp",
+      "origin": "Compendium.draw-steel-ghostwire.gear.Item.GwKickwire000001",
+      "description": "GHOSTWIRE.Gear.Items.Kickwire.CrashDescription",
+      "disabled": true,
+      "transfer": false,
+      "statuses": [
+        "weakened"
+      ],
+      "tint": "#ffffff",
+      "flags": {
+        "draw-steel-ghostwire": {
+          "consumablePhase": "crash",
+          "consumableDsid": "kickwire"
+        }
+      },
+      "duration": {
+        "value": 1,
+        "units": "rounds",
+        "expiry": "roundEnd",
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.characteristics.might.banes",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "GwChemFolder0000",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 400,
+        "modSlots": 0,
+        "tags": [
+          "Consumable",
+          "Chem"
+        ],
+        "consumable": true,
+        "kioskShelf": "chem",
+        "consumableUse": {
+          "action": "maneuver",
+          "tempStamina": 5,
+          "taint": 0,
+          "spend": true,
+          "crash": true
+        }
+      }
+    }
+  }
+}

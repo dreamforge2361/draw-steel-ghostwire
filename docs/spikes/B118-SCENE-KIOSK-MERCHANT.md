@@ -1,7 +1,7 @@
 # Spike B118 — Scene kiosk merchant
 
 **Date:** 2026-09-20  
-**Module:** **0.3.59**  
+**Module:** **0.3.59** (presets + street consumables **0.3.65 / B119**)  
 **Status:** **SHIPPED / DESIGN LOCKED** (pending Michael Foundry-verify)  
 **Lock:** Michael backlog LOCK 2026-09-20
 
@@ -75,6 +75,10 @@ Token HUD cash-register icon (players + GM). Double-click is patched the same wa
 - `lang/en.json` → `GHOSTWIRE.Kiosk.*`
 - `src/packs/summons/kiosks/`
 - Director note: `docs/directors/scene-kiosk-merchant.md`
+
+## B119 follow-on (0.3.65)
+
+Type presets + street consumable SKUs: `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`. Token controls type picker; Restock from preset on the shop. Catalog filters in `scripts/kiosk-presets.mjs`. New Gear folder `src/packs/gear/consumables/`.
 
 ## Out of scope
 

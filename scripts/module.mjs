@@ -32,6 +32,7 @@ import { registerVoidmark } from "./voidmark.mjs";
 import { registerGoldLineScene } from "./gold-line-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerKiosk } from "./kiosk.mjs";
+import { registerConsumableUse } from "./consumable-use.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -110,6 +111,7 @@ Hooks.once("init", () => {
   registerVoidmark();
   registerGoldLineScene();
   registerKiosk();
+  registerConsumableUse();
 });
 
 // ---------- Wired connection states ----------
