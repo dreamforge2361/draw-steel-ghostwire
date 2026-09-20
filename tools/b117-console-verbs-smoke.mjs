@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * B117 Matrix Verbs smoke — all nine on the node-facing applet (shipped 0.3.53; fire path 0.3.60).
+ * B117 Matrix Verbs smoke — all nine on the node-facing applet (shipped 0.3.53; fire path 0.3.61).
  *
  * Run: node tools/b117-console-verbs-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
@@ -25,11 +25,14 @@ import {
   consoleVerbGate,
   isTemporaryConsoleVerb,
   itemIsConnectInterface,
+  leftoverTemporaryVerbs,
   markTemporaryConsoleVerbData,
   nextAlert,
   pickConsoleActor,
   pickPlayerVerbActor,
+  shouldReleaseTemporaryVerb,
   softTraceDelta,
+  splitReusableTemporaryVerbs,
   verbUseMessageOptions,
 } from "../scripts/wired-console-verbs.mjs";
 import { abilityPowerRollModifiers } from "../scripts/wired-state.mjs";
@@ -48,13 +51,13 @@ function readBomFreeJson(path) {
 
 const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matrix-scan,matrix-navigate,matrix-ping,matrix-broadcast,matrix-search,matrix-read-write";
 
-console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.60)\n");
+console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.61)\n");
 
 const moduleJson = readBomFreeJson("module.json");
 ok((() => {
   const [maj, min, pat] = String(moduleJson.version).split(".").map(Number);
-  return maj === 0 && min === 3 && pat >= 60;
-})(), `module.json is 0.3.60+ (got ${moduleJson.version})`);
+  return maj === 0 && min === 3 && pat >= 61;
+})(), `module.json is 0.3.61+ (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
@@ -127,8 +130,10 @@ ok(consoleSrc.includes("hasInterface") && consoleSrc.includes("actorHasConnectIn
 ok(consoleSrc.includes("VerbNeed${gate.reason}"), "Console warns with gate reason");
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
 ok(!consoleSrc.includes("new CONFIG.Item.documentClass"), "resolveVerbItem does not construct ephemeral Items");
-ok(consoleSrc.includes("createEmbeddedDocuments") && consoleSrc.includes("deleteEmbeddedDocuments"), "temporary embed + delete after use");
-ok(consoleSrc.includes("finally") && consoleSrc.includes("releaseTemporaryVerbItem"), "deletes the temp in finally");
+ok(consoleSrc.includes("createEmbeddedDocuments") && consoleSrc.includes("deleteEmbeddedDocuments"), "temporary embed for AbilityModel#use");
+ok(consoleSrc.includes("shouldReleaseTemporaryVerb") && consoleSrc.includes("releaseTemporaryVerbItem"), "release is gated so chat cards keep abilityUuid");
+ok(!consoleSrc.includes("if (acquired.ephemeral) await releaseTemporaryVerbItem"), "does not always delete the temp after use");
+ok(consoleSrc.includes("splitReusableTemporaryVerbs"), "reuses leftover temps of the same verb");
 ok(consoleSrc.includes("verbUseMessageOptions"), "use() gets DS 1.1.2 messageOptions.data flags");
 ok(consoleSrc.includes("render: false"), "temp embed does not force a sheet redraw");
 ok(consoleSrc.includes("hideTemporaryConsoleVerbs"), "hides in-flight temps on the hero/NPC sheet");
@@ -238,7 +243,7 @@ const overview = journal.pages?.find(p => /Scan/.test(p.text?.markdown ?? "") &&
 ok(!!overview, "Wire journal still has a Wired Console aside");
 ok(/all nine Matrix Verbs/.test(overview?.text?.markdown ?? ""), "Wire journal aside names all nine");
 
-console.log("\n5) resolveVerbItem + use path (0.3.60)");
+console.log("\n5) resolveVerbItem + use path (0.3.60 / 0.3.61)");
 const stamped = markTemporaryConsoleVerbData({
   _id: "keepMeNot",
   folder: "folderId",
@@ -266,9 +271,30 @@ ok(overlayMeat.edges === 0 && overlayMeat.banes === 1, "Overlay meat bane only o
 const linkedWired = abilityPowerRollModifiers({ wired: true, hasHacking: false, state: "linked" });
 ok(linkedWired.edges === 0 && linkedWired.banes === 0, "Linked Wired rolls add neither edge nor bane");
 
-ok(/0\.3\.60/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.60");
-ok(/temporarily embeds|temporaryConsoleVerb/.test(readFileSync("docs/rulebook/18-wired-foundry.md", "utf8")), "Foundry notes document temp embed");
-ok(/0\.3\.60/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names 0.3.60 fire path");
+ok(!shouldReleaseTemporaryVerb({ created: true, hasChatCard: true }), "successful card keeps the temp (DS fromUuidSync)");
+ok(shouldReleaseTemporaryVerb({ created: true, hasChatCard: false }), "cancelled dialog drops a temp this call created");
+ok(!shouldReleaseTemporaryVerb({ created: false, hasChatCard: false }), "reused leftover is not dropped on cancel");
+ok(!shouldReleaseTemporaryVerb({}), "default is keep");
+
+const first = markTemporaryConsoleVerbData({ name: "Search", system: { _dsid: "matrix-search" } });
+first.id = "temp-a";
+const extra = markTemporaryConsoleVerbData({ name: "Search", system: { _dsid: "matrix-search" } });
+extra.id = "temp-b";
+const pingTemp = markTemporaryConsoleVerbData({ name: "Ping", system: { _dsid: "matrix-ping" } });
+pingTemp.id = "temp-ping";
+const split = splitReusableTemporaryVerbs([first, extra, pingTemp], "matrix-search");
+ok(split.keep?.id === "temp-a" && split.extras.map(i => i.id).join(",") === "temp-b", "reuses first Search leftover, extras are the rest");
+ok(leftoverTemporaryVerbs([first, pingTemp], "matrix-search").length === 1, "leftover filter is per dsid");
+ok(splitReusableTemporaryVerbs([], "matrix-search").keep == null, "no leftover is null keep");
+
+const searchCard = readBomFreeJson("src/packs/abilities/matrix-verbs/search.json");
+ok(searchCard.system.power.effects.verbSearch000000.other.tier2.display.includes("find it cleanly"), "Search card still has tier2 flavor");
+
+ok(/0\.3\.61/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.61");
+ok(/Failed to Find Item/.test(readFileSync("README.md", "utf8")), "README names the Failed to Find Item card");
+ok(/fromUuidSync/.test(readFileSync("docs/rulebook/18-wired-foundry.md", "utf8")), "Foundry notes name DS fromUuidSync");
+ok(/0\.3\.61/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names 0.3.61 fire path");
+ok(/Failed to Find Item/.test(readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8")), "spike names the Failed to Find Item card");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);
