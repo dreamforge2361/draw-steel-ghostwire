@@ -1,4 +1,4 @@
-// Deadhead Gold Line (B106 / 0.3.39): world-inject the dual-Hammerhead train Scene.
+// Deadhead Gold Line (B106 / 0.3.41): world-inject the dual-Hammerhead train Scene.
 // LOCK (Michael 2026-09-20): Level background = interior MP4. ONE roof Tile.
 // No interior motion tile. Occlusion off — Director hides the roof to go inside.
 // SACRED: if a world already has flag goldLineScene, never rewrite it on ready.

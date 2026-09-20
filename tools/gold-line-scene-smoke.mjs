@@ -87,7 +87,7 @@ ok(existsSync(SCRIPT), "inject script exists");
 ok(existsSync(JOURNAL), "Deadhead journal source exists");
 
 const moduleJson = readBomFreeJson(MODULE);
-ok(moduleJson.version === "0.3.39", `module.json is 0.3.39 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.41", `module.json is 0.3.41 (got ${moduleJson.version})`);
 ok(moduleJson.esmodules.includes("scripts/module.mjs"), "module still loads scripts/module.mjs");
 
 const template = readBomFreeJson(TEMPLATE);
@@ -180,7 +180,8 @@ const seekable = { duration: 8, currentTime: 3 };
 ok(safeVideoCurrentTime(seekable, 0) === true && seekable.currentTime === 0, "safeVideoCurrentTime seeks when duration is finite");
 
 const sor = readFileSync(SOR, "utf8");
-ok(/L1.*TAIL/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has dual-Hammerhead beat remap");
+ok(/L1.*AFT FREIGHT/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has cargo dual-Hammerhead beat remap");
+ok(/freight Enforcers \*\*L1–L2\*\*/i.test(sor) && /Security \*\*L3\*\*/.test(sor), "SoR opposition is freight Enforcers L1–L2 + Security L3");
 ok(/interior-loop\.mp4/.test(sor) && /roofs-loop\.mp4/.test(sor), "SoR points at the mp4 assets");
 ok(/Level background/i.test(sor) && /interior/i.test(sor), "SoR says Level background is the interior");
 ok(/one tile|ONE Tile|one roof/i.test(sor), "SoR says there is one roof tile");
@@ -190,6 +191,7 @@ ok(/returns immediately|never rewrites/i.test(sor), "SoR says existing goldLineS
 ok(/GM-opt-in/i.test(sor), "SoR says force is GM-opt-in only");
 ok(/hide/i.test(sor) && /inside/i.test(sor), "SoR has Director hide-roof note when crew goes inside");
 ok(/valid playable layout/i.test(sor), "SoR says stills are a valid playable layout");
+ok(/Michael manual/.test(sor), "SoR says walls/lights are Michael manual");
 ok(!/Draw Steel|MCDM/i.test(sor), "SoR stays Ghostwire-only (no Draw Steel / MCDM)");
 
 const journal = readBomFreeJson(JOURNAL);
@@ -197,6 +199,7 @@ ok(/^[A-Za-z0-9]{16}$/.test(journal._id), "journal _id is 16 alphanumeric");
 ok(journal.folder === "gwRunsDeadhead00", "journal sits in Deadhead folder");
 ok(journal.pages?.length >= 2, "journal has plate + beat pages");
 const plateMd = journal.pages[0]?.text?.markdown ?? "";
+const journalText = journal.pages.map(p => `${p.text?.markdown ?? ""}\n${p.text?.content ?? ""}`).join("\n");
 ok(/deletes leftover `goldLineInterior`/.test(plateMd) && !/flag `goldLineInterior`/.test(plateMd), "journal deletes leftover interior tiles, does not ship one");
 ok(/goldLineRoofs/.test(plateMd), "journal names the roof tile flag");
 ok(/loop\.mp4/.test(plateMd), "journal prefers loop.mp4");
@@ -207,6 +210,10 @@ ok(/never rewrites/i.test(plateMd), "journal says existing worlds are never rewr
 ok(/GM-opt-in/i.test(plateMd), "journal says force is GM-opt-in only");
 ok(/hide/i.test(plateMd) && /inside/i.test(plateMd), "journal has Director hide-roof note");
 ok(/NONE|occlusion off|occlusion stays off/i.test(plateMd), "journal says roofs have occlusion off");
+ok(/AFT FREIGHT/.test(journalText) && /freight Enforcers/.test(journalText), "journal beat remap is cargo");
+ok(/hide the roofs tile when playing inside/.test(journalText), "journal: Director hides roofs when inside");
+ok(/Michael manual/.test(journalText), "journal: walls/lights are Michael manual");
+ok(!/\bPASSENGER\b/.test(journalText) && !/5 cars/.test(journalText), "journal has no passenger-car remap");
 for (const page of journal.pages ?? []) {
   ok(/^[A-Za-z0-9]{16}$/.test(page._id), `page ${page.name} _id is 16 alphanumeric`);
 }

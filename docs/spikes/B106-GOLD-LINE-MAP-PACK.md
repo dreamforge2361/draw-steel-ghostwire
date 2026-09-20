@@ -1,8 +1,9 @@
 # Spike B106 — Deadhead Gold Line dual-Hammerhead map pack
 
 **Date:** 2026-09-20  
-**Module:** **0.3.36** (plates + inject) · **0.3.37** (loop/roof hotfix) · **0.3.39** (Level-interior MP4 + one roof tile; 0.3.38 is B80)  
-**Status:** **SHIPPED** — stills + VP9 webm + H.264 mp4 loops + world Scene inject + Deadhead journal notes. **0.3.39 LOCK:** new worlds get Level interior MP4 + one roof tile at 0,0 elev 1. Existing `goldLineScene` worlds are **never rewritten**. `{ force: true }` is GM-opt-in only. Director hides roofs when the crew goes inside.  
+**Module:** **0.3.36** (plates + inject) · **0.3.37** (loop/roof hotfix) · **0.3.40** (cargo remap) · **0.3.41** (never rewrite live `goldLineScene`)  
+**Status:** **SHIPPED.** **0.3.41 LOCK:** new worlds get Level interior MP4 + one roof tile at 0,0 elev 1. Existing `goldLineScene` worlds are **never rewritten**. `{ force: true }` is GM-opt-in only. Director hides roofs when the crew goes inside.  
+**Cargo lock (2026-09-20):** consist is cargo chambers L1–R3, **not** a passenger train. See `docs/directors/runs/deadhead/GOLD-LINE-CARGO-REMAP.md` (LOCKED / folded). Do **not** touch Scene walls/lights.
 **Pairs with:** `docs/directors/runs/deadhead/DEADHEAD-GOLD-LINE.md`, B104, B99 Mama club battlemap.  
 **Lock:** Michael 2026-09-19 — “ship it!” CyberMaps Hammerhead stitch. **Do not regenerate** a train plate. Architecture locked 2026-09-20.
 
@@ -72,11 +73,13 @@ Thumb uses the interior still so the sidebar does not depend on video decode.
 
 ## Beat remap
 
-Design truth stays **5 cars**. Plate is **2 × 3 Hammerhead chambers**:
+**Cargo lock (0.3.40):** design truth is the **cargo maglev** (L1–R3), not 5 passenger cars. See `GOLD-LINE-CARGO-REMAP.md`.
 
-L1 tail (board) → L2 passenger → L3 security → coupler → R1 courier → R2 Wire transfer → R3 cab.
+Plate is **2 × 3 Hammerhead chambers**:
 
-Wire on this plate: Track 1 cams/doors **R2**; Track 2 capsule lock **R1** + Watchdog ICE.
+L1 aft freight (board + Enforcers) → L2 freight → L3 security (4 Security + Lt) → coupler → R1 courier → R2 Wire transfer → R3 cab (Trace host).
+
+Wire on this plate: Track 1 cams/doors **R2**; Track 2 capsule lock **R1** + Watchdog ICE; Trace host **R3**.
 
 ## Out of scope
 
@@ -105,5 +108,5 @@ node tools/build-packs.mjs runs
 - [x] B104 pointed at shipped assets
 - [x] `module.json` **0.3.36** (UTF-8 no BOM)
 - [x] **0.3.37** loop hotfix: no HEAD probe; Level video flags; force restamps roof tile; console snippet above
-- [x] **0.3.39** lock: Level background = interior MP4; one roof tile at 0,0 elev 1; delete `goldLineInterior` on **new** worlds only; existing `goldLineScene` never rewritten; `{ force: true }` is GM-opt-in only; occlusion NONE; Director hide-roof; prefer mp4
+- [x] **0.3.41** lock: Level background = interior MP4; one roof tile at 0,0 elev 1 on **new** worlds only; existing `goldLineScene` never rewritten; `{ force: true }` is GM-opt-in only; cargo remap from 0.3.40 kept
 - [x] No generated train; no unrelated journal regen
