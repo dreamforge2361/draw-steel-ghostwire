@@ -1,0 +1,64 @@
+{
+  "_id": "gwWhiteDoorItm00",
+  "_key": "!items!gwWhiteDoorItm00",
+  "name": "GHOSTWIRE.Vehicles.Items.WhiteDoor.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/white-door.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.WhiteDoor.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "white-door",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 62000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 1300,
+        "modSlots": 2,
+        "tags": [
+          "Medical",
+          "Extraction",
+          "Hover",
+          "LAZ"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "standard",
+        "faction": "LAZ"
+      }
+    }
+  }
+}

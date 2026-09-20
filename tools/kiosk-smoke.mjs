@@ -249,6 +249,7 @@ note(vehicles.every(row => row.price === null) && decks.every(row => row.price =
 const vehicleIds = new Set(vehicles.map(r => r.uuid.split(".").pop()));
 const droneIds = new Set(drones.map(r => r.uuid.split(".").pop()));
 note(vehicleIds.has("gwLaneHopperItm0") && vehicleIds.has("gwStarChopItm000") && vehicleIds.has("gwBulldogItm0000"), "vehicles include Lane-Hopper + Star-Chopper + Bulldog");
+note(vehicleIds.has("gwSealCruiserItm") && vehicleIds.has("gwWritVtolItem00") && vehicleIds.has("gwWhiteDoorItm00") && vehicleIds.has("gwCrashAngelItm0"), "vehicles include AEQ Seal Cruiser / Writ VTOL + LAZ White Door / Crash Angel");
 note([...vehicleIds].every(id => !droneIds.has(id)), "vehicles and drones shelves do not overlap");
 note(!vehicleIds.has("rY3Ccc5vQtl75GkV"), "vehicles exclude Buzz drone");
 note(!vehicleIds.has("gwNoxTrashFrgt00"), "vehicles exclude Nox plot freighter");

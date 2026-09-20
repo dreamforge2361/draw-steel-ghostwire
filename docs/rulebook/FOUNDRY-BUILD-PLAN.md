@@ -611,6 +611,15 @@ Michael: “Bug: Mulebot is treasure? It should be an actor.” **Treasure is in
   - [x] Smoke: `node tools/mulebot-actor-smoke.mjs`
   - [ ] Foundry-verify: drop Mule-Bot Item on a hero → Deploy places a linked token (hauler plate); Recall removes Actor; Fly / Medbot / Stinger still Deploy from their bands
 
+### Conglomerate service vehicles — AEQ / LAZ (2026-09-20)
+Four dual-model SKUs with Michael top-down plates. **Aequitas Mandate (AEQ):** Seal Cruiser (ground hover pursuit, `vehicle-car`) + Writ VTOL (patrol/insert, `vehicle-air`). **Lazarus Extract (LAZ):** White Door (hover ambulance, `vehicle-car`) + Crash Angel (medevac VTOL + hoist, `vehicle-air`). Treasure Items + named Summons Actors, Wire Kit, start Disconnected. E1 Professional so the kiosk Vehicles preset stocks them (non-Plot). Twelve Conglomerates lore is a separate PR — descriptions/flags name AEQ/LAZ only. **SHIPPED 0.3.80.** No Gold Line `{ force: true }`. No PDF.
+- [x] **AEQ/LAZ service chassis** (module **0.3.80**) — **pending Foundry-verify**. Done when:
+  - [x] Four Items + four Actors; art `assets/tokens/vehicles/{seal-cruiser,writ-vtol,white-door,crash-angel}.{png,webp}`
+  - [x] Deploy bands: ground → `vehicle-car`, VTOLs → `vehicle-air`
+  - [x] RAW 23 / 16-vehicles / gear master inventory 39; director pointer
+  - [x] Smoke: `node tools/service-vehicles-smoke.mjs`
+  - [ ] Foundry-verify: Deploy Seal Cruiser / White Door (hover car) and Writ VTOL / Crash Angel (fly); Recall keeps the Item; kiosk Vehicles shelf lists all four
+
 ### B32 Phase 5 — Hacker node / ICE Director templates (2026-09-17)
 Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node-templates.mjs` exports **`RATING`** (System Stat Card, moved out of `wired-console.mjs` — the Console now imports it, single source of truth) and **`NODE_TEMPLATES`**: `node-t1-r1…r5` and `node-t2-r1…r5` with `id, name, track, rating, integrityMax, biofeedback, ice, breachDC, description, notes`. **Track 1** templates follow 08-hacker.md: no Integrity pool, ICE, or biofeedback (`null`; the Console hides them). **Track 2** carry Integrity 12/18/26/36/50, biofeedback 3/5/8/13/22, and the ICE sketch. **Wired Console:** GM **Add template…** button (layers icon) in the Nodes header → pick one of the 10 → a hidden node is pushed onto `wiredBoard.nodes` through the same `#makeNode` / `#updateBoard` path as Add Node, with Description and Notes pre-filled. Add Node / Random Node / Generate Cluster unchanged; `module.api.NODE_TEMPLATES` exposed. **Director reference:** `docs/directors/wired-node-templates.md` (no journals pack exists, so no Journal pages). **Deferred:** node Actor scaffolds under `summons/nodes/` (optional D, skipped).
 - [x] **B32 Phase 5** node templates (module v0.1.45) — **Foundry-verified 2026-09-17**. Done when:

@@ -1,0 +1,64 @@
+{
+  "_id": "gwCrashAngelItm0",
+  "_key": "!items!gwCrashAngelItm0",
+  "name": "GHOSTWIRE.Vehicles.Items.CrashAngel.Name",
+  "type": "treasure",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/crash-angel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.CrashAngel.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crash-angel",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "a7XeWmGqPhQSlDcK",
+  "sort": 21000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 2200,
+        "modSlots": 2,
+        "tags": [
+          "Medical",
+          "Extraction",
+          "VTOL",
+          "LAZ"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "fast",
+        "faction": "LAZ"
+      }
+    }
+  }
+}
