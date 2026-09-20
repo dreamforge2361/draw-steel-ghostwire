@@ -81,6 +81,27 @@ HP formulas below are **playtest placeholders** (Technomancer Known Bugs #13) �
 
 **Defenses (all):** Wired defense = Technomancer Persona; Reflex/Physique baseline **10** (code, not flesh).
 
+### 3.1b Hacker — Agents (B120 / 0.3.72) — **12 SKUs**
+
+Deck software, not Resonance. Compile Agent **3 Bandwidth**, Overlay or Jacked In (Linked refuses). Cap **2 → 3@5 → 4@8**. Stamina = archetype base + (Logic × Level). Distinct Actors from sprites (`kind: "agent"`).
+
+| SKU `_dsid` | Archetype | Hybrid tier | Agent Stamina | Primary effect |
+|---|---|---|---|---|
+| `agent-probe-minor` | Probe | Minor (L1–3) | 8 + (Logic × Level) | Edge on 1 Scan/Search/Deep Scan per round |
+| `agent-probe-intermediate` | Probe | Intermediate (L4–7) | 14 + (Logic × Level) | Edge on 2 recon roll types/round |
+| `agent-probe-advanced` | Probe | Advanced (L8–10) | 20 + (Logic × Level) | Edge on all Wired recon vs a target it can see |
+| `agent-spike-minor` | Spike | Minor | 12 + (Logic × Level) | Integrity Spike 2d10 + Logic |
+| `agent-spike-intermediate` | Spike | Intermediate | 18 + (Logic × Level) | 2d10 + Logic + 1d6 |
+| `agent-spike-advanced` | Spike | Advanced | 26 + (Logic × Level) | 3d10 + Logic |
+| `agent-daemon-minor` | Daemon | Minor | 10 + (Logic × Level) | Puppet 1 Track 1 object |
+| `agent-daemon-intermediate` | Daemon | Intermediate | 16 + (Logic × Level) | Puppet + optional +1 Track 1 |
+| `agent-daemon-advanced` | Daemon | Advanced | 22 + (Logic × Level) | Puppet as Seize Control high |
+| `agent-watchdog-minor` | Watchdog | Minor | 10 + (Logic × Level) | Trace −1; bane vs self |
+| `agent-watchdog-intermediate` | Watchdog | Intermediate | 16 + (Logic × Level) | Trace −1; bane vs self + 1 ally |
+| `agent-watchdog-advanced` | Watchdog | Advanced | 22 + (Logic × Level) | Trace −2; double bane vs self + adjacent |
+
+Foundry: `scripts/agents.mjs`. Spike: `docs/spikes/B120-HACKER-AGENTS.md`.
+
 ### 3.2 Elementalist — Companions & elementals (Phase 2)
 
 | SKU | Notes |
@@ -134,7 +155,7 @@ Operator, Scout, Commander, Medic — narrative contacts/followers only (Command
 
 | Pack | Contents |
 |---|---|
-| **`summons`** (Actor pack) | Technomancer sprites; Elementalist companions/elementals; Street Priest spirits; **drone/vehicle Actor templates** under `machines/`; optional later hacker node Actors |
+| **`summons`** (Actor pack) | Technomancer sprites; **Hacker Agents** (`agents/`); Elementalist companions/elementals; Street Priest spirits; **drone/vehicle Actor templates** under `machines/`; optional later hacker node Actors |
 | **`vehicles`** (Item pack, existing) | Drone + vehicle **gear catalog** (¥, mods, ownership) |
 | **Hacker templates (v1)** | Journal + Wired Console (Actors later) |
 

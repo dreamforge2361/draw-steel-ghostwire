@@ -201,11 +201,25 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 - **Network Purge** -- Tier 1: Alert only. Tier 2: both targets take Integrity damage (Tier 2 bonus). Tier 3: as Tier 2, plus a bane on both targets' next Power Roll.
 - **Backdoor Override** -- No roll, by design. On a Track 1 object: automatic Tier 3 breach, no roll. On a Track 2 target: guaranteed Integrity damage (Tier 2 bonus value) with **zero Alert Track increase**. Outside combat, this is an automatic clean breach of any lock, vault, or system -- no roll, no Alert cost.
 
+### Agents -- Deck Daemons (not Sprites)
+
+**Lock 2026-09-20 (B120 / 0.3.72).** Agents are software constructs a Hacker compiles from the deck — recon probes, intrusion spikes, control daemons, watchdog screens. They are **not** Resonance sprites. Different Actors (`src/packs/summons/agents/`), different art, different language. They never share a sprite SKU.
+
+**Immersion.** Compile requires **Overlay or Jacked In**. **Linked refuses.** Decompile does not require immersion.
+
+**Compile cost.** **Compile Agent** costs **3 Bandwidth** in combat (mirrors Compile Sprite's 3 Resonance Enhance / Ghost Signal). Outside combat, no spend (same as other Hacker Programs). No v1 second-Agent Enhance. Cap: **2** base → **3** at 5th → **4** at 8th (non-Weaver Technomancer baseline; Controller Weaver-style bump parked).
+
+**Bands.** Minor L1–3 (extension) / Intermediate L4–7 (commanded) / Advanced L8–10 (independent). Stamina = archetype base + (Logic × Level): Probe 8/14/20, Spike 12/18/26, Daemon 10/16/22, Watchdog 10/16/22.
+
+**Decompile Agent** is a free maneuver (token + Actor). 0 Stamina and end of encounter also decompile.
+
+Foundry: `scripts/agents.mjs` (sheet button + context menu, same pattern as `scripts/sprites.mjs`). Spike: `docs/spikes/B120-HACKER-AGENTS.md`.
+
 ### Level 1-10 Progression Table
 
 | Level | Class Features | Perks/Skills | Subclass Features |
 |---|---|---|---|
-| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
+| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
 | **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |
 | **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |
 | **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every tier) | Characteristic Increase - Perk (choice) - Skill | -- |

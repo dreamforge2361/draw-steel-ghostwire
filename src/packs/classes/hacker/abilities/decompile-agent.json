@@ -1,0 +1,72 @@
+{
+  "_id": "bwJwQXSsAdo6de3U",
+  "_key": "!items!bwJwQXSsAdo6de3U",
+  "name": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Name",
+  "type": "ability",
+  "img": "icons/commodities/tech/circuit-board.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "19-hacker",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "decompile-agent",
+    "story": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Story",
+    "keywords": [
+      "tech"
+    ],
+    "type": "maneuver",
+    "category": "signature",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "self",
+      "primary": "",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "melee",
+    "target": {
+      "type": "self",
+      "value": null,
+      "custom": "Your compiled Agents"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [],
+        "reactive": false
+      },
+      "effects": {}
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Hacker.Items.DecompileAgent.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "hacker"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "rACDDp0N9PLzhhnB",
+  "sort": 600,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -41,6 +41,13 @@ const SYNONYMS = {
   trace: ["trace", "alert", "ice", "wired"],
   ice: ["ice", "wired", "node", "biofeedback"],
   ping: ["ping", "nudge", "verb"],
+  agent: ["agent", "agents", "compile", "hacker", "daemon", "probe", "spike", "watchdog", "bandwidth"],
+  probe: ["probe", "agent", "recon", "hacker", "scan"],
+  spike: ["spike", "agent", "integrity", "hacker"],
+  daemon: ["daemon", "agent", "puppet", "hacker"],
+  watchdog: ["watchdog", "agent", "trace", "hacker"],
+  compile: ["compile", "agent", "hacker"],
+  decompile: ["decompile", "agent", "hacker"],
   biofeedback: ["biofeedback", "wired", "jacked", "overlay"],
   switchboard: ["switchboard", "cassavir", "fixer"],
   cassavir: ["cassavir", "switchboard", "mama"],
@@ -69,7 +76,7 @@ const FILE_HINTS = [
   { re: /bulldog|heavy hauler|cargo van|ground-hauler/, file: "L1-setting-primer" },
   { re: /hover \/ pov|ground-hauler|\bvtol\b|limiter band/, file: "28-glossary-slang" },
   { re: /mod|autosoft|install/, file: "10-mods" },
-  { re: /hacker|bandwidth|program/, file: "19-hacker" },
+  { re: /hacker|bandwidth|program|compile agent|decompile agent|\bagents?\b|probe agent|spike agent|daemon agent|watchdog agent|integrity spike/, file: "19-hacker" },
   { re: /voidmark|the mark|blacklight/, file: "L4-voidmark" },
   { re: /hands off|accord|actuator/, file: "L5-hands-off-accords" },
   { re: /lifestyle|downtime|respite|upkeep/, file: "26-lifestyle-downtime" },
@@ -120,6 +127,19 @@ const PLACE_PHRASES = [
   "wireside",
   "cassavir",
   "ashenreach",
+].sort((a, b) => b.length - a.length);
+
+/** Procedure / SKU phrases so “Wire Kit” / “Compile Agent” beat generic Wire chunks. */
+const LOCK_PHRASES = [
+  "compile agent",
+  "decompile agent",
+  "watchdog agent",
+  "watchdog ice",
+  "rigger's harness",
+  "rigger’s harness",
+  "wire kit",
+  "pack drones",
+  "pack vehicles",
 ].sort((a, b) => b.length - a.length);
 
 const LOREISH = /lore|district|hive|gazetteer|who is|what is|where is|ossian|flats|reach handbook|street color/;
@@ -185,6 +205,8 @@ export function scoreChunk(chunk, query) {
   const fileTokens = new Set(tokenize(String(chunk.file ?? "").replace(/\.md$/i, "")));
   const hints = hintedFiles(query);
   const places = placePhrases(query);
+  const qLower = String(query ?? "").toLowerCase();
+  const locks = LOCK_PHRASES.filter(p => qLower.includes(p));
   const titleHay = sourceHay(chunk);
   const bodyHay = String(chunk.text ?? "").toLowerCase();
 
@@ -210,6 +232,11 @@ export function scoreChunk(chunk, query) {
   for (const place of places) {
     if (titleHay.includes(place)) score += 12;
     else if (bodyHay.includes(place)) score += 5;
+  }
+
+  for (const lock of locks) {
+    if (titleHay.includes(lock)) score += 12;
+    else if (bodyHay.includes(lock)) score += 8;
   }
 
   if (LOREISH.test(String(query ?? "").toLowerCase()) && (chunk.kind === "lore" || chunk.kind === "setting")) {

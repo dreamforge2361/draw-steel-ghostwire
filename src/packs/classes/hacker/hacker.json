@@ -158,6 +158,31 @@
           "perkType": []
         }
       },
+      "pPmGDKraCpKV4cOx": {
+        "_id": "pPmGDKraCpKV4cOx",
+        "img": "icons/commodities/tech/circuit-board-green.webp",
+        "repick": {},
+        "name": "Agents",
+        "type": "itemGrant",
+        "requirements": {
+          "level": 1
+        },
+        "pool": [
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.J1YFmCnCn5dJfS6T"
+          },
+          {
+            "uuid": "Compendium.draw-steel-ghostwire.classes.Item.bwJwQXSsAdo6de3U"
+          }
+        ],
+        "description": "<p>You gain Compile Agent and Decompile Agent. Agents are deck software — not Resonance sprites. Compiling costs 3 Bandwidth and requires Overlay or Jacked In (Linked refuses).</p>",
+        "chooseN": null,
+        "sort": 6500,
+        "additional": {
+          "type": "",
+          "perkType": []
+        }
+      },
       "19GCBks4XC2lxuqT": {
         "_id": "19GCBks4XC2lxuqT",
         "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",

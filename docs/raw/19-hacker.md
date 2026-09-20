@@ -3,7 +3,7 @@
 **RAW status:** draft  
 **Sources:** `docs/rulebook/08-hacker.md`
 
-The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**.
+The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.
 
 ---
 
@@ -69,11 +69,53 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 - **Network Purge** -- low (≤11): Alert only. middle (12–16): both targets take Integrity damage (middle-band bonus). high (17+): as middle, plus a bane on both targets' next Power Roll.
 - **Backdoor Override** -- No roll, by design. On a Track 1 object: automatic high (17+) breach, no roll. On a Track 2 target: guaranteed Integrity damage (middle-band bonus value) with **zero Alert Track increase**. Outside combat, this is an automatic clean breach of any lock, vault, or system -- no roll, no Alert cost.
 
+## Agents -- Deck Daemons (not Sprites)
+
+Agents are software constructs you compile from your deck — **Probe** (recon / Deep Scan twin), **Spike** (intrusion / Integrity strike), **Daemon** (system control / Track 1 puppet), **Watchdog** (defend / Trace scrub / screen). They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world (`20`); you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.
+
+**Watchdog Agent is not Watchdog ICE.** Watchdog ICE is opposition on a Track 2 node (`21`, `25`). A Watchdog Agent is *your* compiled screen — Trace scrub and a bane on Wired/EW attacks — not the node's teeth.
+
+**Immersion.** Compiling an Agent requires **Overlay or Jacked In**. **Linked refuses** — Agents need immersion; a soft presence is not enough to keep a daemon running. Decompile does not require immersion: you can kill your own process while Linked or Disconnected.
+
+**Compile cost.** **Compile Agent** is a signature main action that costs **3 Bandwidth** in combat (the same number as Compile Sprite's Enhance and as Ghost Signal). Outside combat, Hacker Programs (and this compile) fire without spending, once until you earn Victories or finish a respite. There is no v1 Enhance that compiles a second Agent in the same action.
+
+**Agent cap.** At 1st level you may have up to **2 Agents** compiled at once. The cap rises to **3** at 5th level and **4** at 8th. Caps do not stack — use the single highest number you qualify for. (A later Controller "Weaver-like" bump is parked.)
+
+**Bands.** The Agent you compile is chosen by your current level, every time:
+
+| Rank | Levels | Behavior |
+|---|---|---|
+| **Minor (extension)** | 1–3 | Agents act on your turn. No separate initiative. |
+| **Intermediate (commanded)** | 4–7 | Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round. |
+| **Advanced (independent)** | 8–10 | Each Agent takes its own turn in the round. |
+
+**Stamina.** An Agent's Stamina is archetype base + (**Logic × Level**), stamped when it compiles:
+
+| Archetype | Minor (L1–3) | Intermediate (L4–7) | Advanced (L8–10) | Job |
+|---|---|---|---|---|
+| **Probe** | 8 + (Logic × Level) | 14 + (Logic × Level) | 20 + (Logic × Level) | Recon / Deep Scan twin. Edge on Scan, Search, or Deep Scan. |
+| **Spike** | 12 + (Logic × Level) | 18 + (Logic × Level) | 26 + (Logic × Level) | Intrusion / Integrity strike. Power roll + Logic; low no damage; middle/high 2d10 + Logic (intermediate +1d6; advanced 3d10 + Logic). |
+| **Daemon** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | System control / Track 1 puppet. Holds a breached maglock, cam, or light and fires its function. |
+| **Watchdog** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | Defend / Trace scrub. Reduces your own Trace Alert increases; bane on Wired/EW attacks against the Agent (and allies at higher bands). |
+
+**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.
+
+> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*
+>
+> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).
+
+> **Decompile Agent** *(Class Feature Signature — free maneuver)*
+>
+> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.
+
+> **In Foundry**
+> Open **Compile Agent** on the Hacker sheet (or the ability’s Item sheet). Press **Compile Agent**, pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. **Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. Agents are not sprites: do not drag a sprite SKU.
+
 ## Level 1-10 Progression Table
 
 | Level | Class Features | Perks/Skills | Subclass Features |
 |---|---|---|---|
-| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
+| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
 | **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |
 | **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |
 | **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |

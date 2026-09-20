@@ -17,7 +17,7 @@
 
 ### Who You Are
 
-You are a **Hacker** -- a ghost in the machine who fights wars in the Wired before the first physical shot is ever fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. Whether you specialize as a **Disruptor**, **Controller**, or **Support**, you turn digital infrastructure into a battlefield only you can truly see.
+You are a **Hacker** -- a ghost in the machine who fights wars in the Wired before the first physical shot is ever fired. Your cyberdeck is your weapon, Bandwidth is your fuel, and Programs are your spells. You also compile **Agents** — deck daemons (Probe, Spike, Daemon, Watchdog), software not Resonance sprites. Whether you specialize as a **Disruptor**, **Controller**, or **Support**, you turn digital infrastructure into a battlefield only you can truly see.
 
 Outside combat, you are the party's key into any door, camera, lock, drone, or vault that has a wire running to it. Inside combat, you are a second front the enemy has to defend -- one they usually can't even see coming.
 
@@ -67,11 +67,11 @@ You reach a node by first using the **Connect** Matrix Verb (see Matrix Verbs, b
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |
 |---|---|---|---|---|
 | **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | None |
-| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs. | None — you are not immersed |
+| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | None — you are not immersed |
 | **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |
 | **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |
 
-**On-net vs Connected.** **On-net** means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Access, Failsafe Cascade, Wired Guard, and others) explicitly require you or an ally to be "Jacked In or Overlaid" -- Linked does **not** satisfy them. A handful of higher-tier features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone. Scan, Search, and Watchdog can find any non-Disconnected presence (**Linked = soft presence**).
+**On-net vs Connected.** **On-net** means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Some Programs, features, and abilities (Ghost Protocol, Chokepoint, Borrowed Access, Failsafe Cascade, Wired Guard, **Compile Agent**, and others) explicitly require you or an ally to be "Jacked In or Overlaid" -- Linked does **not** satisfy them. A handful of higher-tier features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone. Scan, Search, and Watchdog ICE can find any non-Disconnected presence (**Linked = soft presence**). A Hacker’s **Watchdog Agent** is a compiled screen, not Watchdog ICE.
 
 **Ruling (Michael, 2026-07-28, Linked addendum 2026-09-20):** Overlay and Jacked In remain a genuine mechanical tradeoff. **Linked** is the street-default on-ramp — comms and packets without Overlay’s meat bane or Jacked In’s Wired edge. **Overlaid**, you keep both worlds live but pay a **bane on real-world Power Rolls**. **Jacked In**, you gain an **edge on all Wired Power Rolls**, but you lose the real world entirely. **Toggle Connection State** (free, no roll) steps Linked → Overlay → Jacked In → Linked. **Jack Out** is the only off-ramp.
 
@@ -220,11 +220,53 @@ Programs are the Hacker's spell-equivalent -- learned automatically or chosen by
 - **Network Purge** -- low (≤11): Alert only. middle (12–16): both targets take Integrity damage (middle-band bonus). high (17+): as middle, plus a bane on both targets' next Power Roll.
 - **Backdoor Override** -- No roll, by design. On a Track 1 object: automatic high (17+) breach, no roll. On a Track 2 target: guaranteed Integrity damage (middle-band bonus value) with **zero Alert Track increase**. Outside combat, this is an automatic clean breach of any lock, vault, or system -- no roll, no Alert cost.
 
+### Agents -- Deck Daemons (not Sprites)
+
+Agents are software constructs you compile from your deck — **Probe** (recon / Deep Scan twin), **Spike** (intrusion / Integrity strike), **Daemon** (system control / Track 1 puppet), **Watchdog** (defend / Trace scrub / screen). They are **not** Resonance sprites. A Technomancer compiles sprites from the Wired's spirit world (`20`); you compile Agents as running processes. Different Actors, different art, different language. They never share a sprite SKU.
+
+**Watchdog Agent is not Watchdog ICE.** Watchdog ICE is opposition on a Track 2 node. A Watchdog Agent is *your* compiled screen — Trace scrub and a bane on Wired/EW attacks — not the node's teeth.
+
+**Immersion.** Compiling an Agent requires **Overlay or Jacked In**. **Linked refuses** — Agents need immersion; a soft presence is not enough to keep a daemon running. Decompile does not require immersion: you can kill your own process while Linked or Disconnected.
+
+**Compile cost.** **Compile Agent** is a signature main action that costs **3 Bandwidth** in combat (the same number as Compile Sprite's Enhance and as Ghost Signal). Outside combat, Hacker Programs (and this compile) fire without spending, once until you earn Victories or finish a respite. There is no v1 Enhance that compiles a second Agent in the same action.
+
+**Agent cap.** At 1st level you may have up to **2 Agents** compiled at once. The cap rises to **3** at 5th level and **4** at 8th. Caps do not stack — use the single highest number you qualify for. (A later Controller "Weaver-like" bump is parked.)
+
+**Bands.** The Agent you compile is chosen by your current level, every time:
+
+| Rank | Levels | Behavior |
+|---|---|---|
+| **Minor (extension)** | 1–3 | Agents act on your turn. No separate initiative. |
+| **Intermediate (commanded)** | 4–7 | Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round. |
+| **Advanced (independent)** | 8–10 | Each Agent takes its own turn in the round. |
+
+**Stamina.** An Agent's Stamina is archetype base + (**Logic × Level**), stamped when it compiles:
+
+| Archetype | Minor (L1–3) | Intermediate (L4–7) | Advanced (L8–10) | Job |
+|---|---|---|---|---|
+| **Probe** | 8 + (Logic × Level) | 14 + (Logic × Level) | 20 + (Logic × Level) | Recon / Deep Scan twin. Edge on Scan, Search, or Deep Scan. |
+| **Spike** | 12 + (Logic × Level) | 18 + (Logic × Level) | 26 + (Logic × Level) | Intrusion / Integrity strike. Power roll + Logic; low no damage; middle/high 2d10 + Logic (intermediate +1d6; advanced 3d10 + Logic). |
+| **Daemon** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | System control / Track 1 puppet. Holds a breached maglock, cam, or light and fires its function. |
+| **Watchdog** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | Defend / Trace scrub. Reduces your own Trace Alert increases; bane on Wired/EW attacks against the Agent (and allies at higher bands). |
+
+**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.
+
+> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*
+>
+> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).
+
+> **Decompile Agent** *(Class Feature Signature — free maneuver)*
+>
+> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.
+
+> **In Foundry**
+> Open **Compile Agent** on the Hacker sheet (or the ability’s Item sheet). Press **Compile Agent**, pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. **Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. Agents are not sprites: do not drag a sprite SKU.
+
 ### Level 1-10 Progression Table
 
 | Level | Class Features | Perks/Skills | Subclass Features |
 |---|---|---|---|
-| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
+| **1** | Hacking Doctrine (choose subclass) - Bandwidth (heroic resource) - Cyberdeck (Kit choice) - Seize Control (automatic Program) - Deep Scan (automatic Program) - Compile Agent / Decompile Agent - Choose a 3-Cost Program (Ghost Signal) | -- | Subclass passive + subclass triggered action (see subclass tables below) |
 | **2** | Choose a 5-Cost Program (Kill Switch) | Perk (choice) | Subclass 2nd-level feature |
 | **3** | Ghost Step (feature + ability) - Choose a 7-Cost Program (Failsafe Cascade) | -- | Subclass 3rd-level feature |
 | **4** | Exploit the Breach - Improved Cyberdeck (+1 Intrusion Roll Mod / +1 Integrity Damage Bonus at every result band) | Characteristic Increase - Perk (choice) - Skill | -- |

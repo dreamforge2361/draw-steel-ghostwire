@@ -71,7 +71,7 @@
     {
       "id": "wired-compile",
       "label": "Compile / sprite summon",
-      "match": "compile|sprite|recompile|zephyr|summon elemental|summon spirit|invoke the pact",
+      "match": "compile|sprite|recompile|zephyr|summon elemental|summon spirit|invoke the pact|\\\\bagent\\\\b|decompile",
       "src": "modules/draw-steel-ghostwire/assets/sfx/spell-summon.ogg"
     },
     {

@@ -3755,6 +3755,19 @@
             "Story": "Untraceable, unlisted.",
             "Effect_before0000000000": "<p><strong>Distance:</strong> Reach.</p><p>No roll. The target is untraceable and unlisted on the Wired until the end of the encounter, or until they take a hostile Wired action themselves.</p><p><strong>Outside combat:</strong> scrub a commlink signature from local logs and cameras for a scene.</p>"
           },
+          "CompileAgent": {
+            "Name": "Compile Agent",
+            "Story": "Deck daemons. Software, not Resonance.",
+            "Effect_before0000000000": "<p><strong>Distance:</strong> Wired range. <strong>Cost:</strong> 3 Bandwidth. <strong>Requires Overlay or Jacked In</strong> — Linked refuses; Agents need immersion.</p><p><strong>Compile (main action):</strong> an Agent of your choice (Probe, Spike, Daemon, or Watchdog) manifests under your control, if you are under your Agent cap. Open this card and press <strong>Compile Agent</strong> to pick the archetype and place the token. <strong>Command (maneuver):</strong> your compiled Agents move and act (on your turn, per the extension model at minor rank).</p><p>Agents are deck software — they do not share sprite Actors and they are not compiled from Resonance.</p>",
+            "Tier1": "The Agent manifests unstable (it acts next turn instead of now), or a command garbles (Director’s call).",
+            "Tier2": "The Agent compiles, or the command resolves, normally.",
+            "Tier3": "You compile an Agent and issue a free command in the same action."
+          },
+          "DecompileAgent": {
+            "Name": "Decompile Agent",
+            "Story": "Kill the process.",
+            "Effect_before0000000000": "<p>Free maneuver. Dismiss one compiled Agent, or the whole roster. Removes the token and the world Actor. No Bandwidth refund. You can decompile while Linked or Disconnected — tearing down your own software does not need immersion.</p>"
+          },
           "KillSwitch": {
             "Name": "Kill Switch",
             "Story": "Cut the target’s legs out from under it.",
@@ -6889,6 +6902,155 @@
           "AtCap": "{name} is at the sprite cap ({count} / {cap}). Decompile a sprite before compiling another.",
           "NotTechnomancer": "Only a Technomancer hero can compile sprites.",
           "NoScene": "View a Scene before compiling a sprite.",
+          "NoPermission": "Compiling creates an Actor and a token; ask the Director to compile it (players need Create Actors and Create Tokens permission).",
+          "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack."
+        }
+      },
+      "Agents": {
+        "AgentProbeMinor": {
+          "Name": "Probe Agent (Minor)",
+          "Description": "<p><em>A recon daemon — Deep Scan’s twin. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter. Distinct from Technomancer sprites: different Actors, different art, deck-side only.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 8 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 10, baked for a 1st-level Hacker with Logic 2 (8 + 2 × 1). Compile Agent stamps the owner’s Logic × level automatically.</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed — an AR overlay, not a meatspace flyer.</em></p>",
+          "Feature": {
+            "Name": "Probe Sweep",
+            "Description": "<p>Once per round, grant an edge on one Scan, Search, or Deep Scan made by the Hacker or an ally directing the Agent.</p>"
+          }
+        },
+        "AgentProbeIntermediate": {
+          "Name": "Probe Agent (Intermediate)",
+          "Description": "<p><em>A recon daemon — Deep Scan’s twin. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 14 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 26, baked for a 4th-level Hacker with Logic 3 (14 + 3 × 4).</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the Agent acts on its own turn, but only within the Hacker’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Probe Sweep",
+            "Description": "<p>Once per round, grant an edge on two recon roll types (Scan, Search, Deep Scan, or breach) made by the Hacker or an ally directing the Agent.</p>"
+          }
+        },
+        "AgentProbeAdvanced": {
+          "Name": "Probe Agent (Advanced)",
+          "Description": "<p><em>A recon daemon — Deep Scan’s twin. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 20 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 52, baked for an 8th-level Hacker with Logic 4 (20 + 4 × 8).</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the Agent takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Probe Sweep",
+            "Description": "<p>The Hacker and allies gain an edge on every Wired recon roll (Scan, Search, Deep Scan) against a target this Agent can see.</p>"
+          }
+        },
+        "AgentSpikeMinor": {
+          "Name": "Spike Agent (Minor)",
+          "Description": "<p><em>An intrusion daemon — Integrity strike. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 12 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 14, baked for a 1st-level Hacker with Logic 2 (12 + 2 × 1).</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Strike": {
+            "Name": "Integrity Spike",
+            "Effect": "<p><strong>Distance:</strong> a Track 2 Wired target within the Hacker’s Reach, or a Track 1 object the Agent can touch. Untyped Integrity damage. Agents acting on the Hacker’s turn never trigger biofeedback.</p>",
+            "Tier1": "The spike fails to connect: no damage.",
+            "Tier2": "",
+            "Tier3": ""
+          }
+        },
+        "AgentSpikeIntermediate": {
+          "Name": "Spike Agent (Intermediate)",
+          "Description": "<p><em>An intrusion daemon — Integrity strike. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 18 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 30, baked for a 4th-level Hacker with Logic 3 (18 + 3 × 4).</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the Agent acts on its own turn, but only within the Hacker’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Strike": {
+            "Name": "Integrity Spike",
+            "Effect": "<p><strong>Distance:</strong> a Track 2 Wired target within the Hacker’s Reach, or a Track 1 object the Agent can touch. Untyped Integrity damage.</p>",
+            "Tier1": "The spike fails to connect: no damage.",
+            "Tier2": "",
+            "Tier3": ""
+          }
+        },
+        "AgentSpikeAdvanced": {
+          "Name": "Spike Agent (Advanced)",
+          "Description": "<p><em>An intrusion daemon — Integrity strike. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 26 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 58, baked for an 8th-level Hacker with Logic 4 (26 + 4 × 8).</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the Agent takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Strike": {
+            "Name": "Integrity Spike",
+            "Effect": "<p><strong>Distance:</strong> a Track 2 Wired target within the Hacker’s Reach, or a Track 1 object the Agent can touch. Untyped Integrity damage.</p>",
+            "Tier1": "The spike fails to connect: no damage.",
+            "Tier2": "",
+            "Tier3": ""
+          }
+        },
+        "AgentDaemonMinor": {
+          "Name": "Daemon Agent (Minor)",
+          "Description": "<p><em>A system-control daemon — Track 1 puppet. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 10 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 12, baked for a 1st-level Hacker with Logic 2 (10 + 2 × 1).</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Puppet Thread",
+            "Description": "<p>Once per round, the Agent holds one Track 1 object the Hacker has breached (a maglock, cam, or light) and can fire that object’s normal function as a puppet.</p>"
+          }
+        },
+        "AgentDaemonIntermediate": {
+          "Name": "Daemon Agent (Intermediate)",
+          "Description": "<p><em>A system-control daemon — Track 1 puppet. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 16 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 28, baked for a 4th-level Hacker with Logic 3 (16 + 3 × 4).</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the Agent acts on its own turn, but only within the Hacker’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Puppet Thread",
+            "Description": "<p>The Agent holds one Track 1 object the Hacker has breached and can fire its normal function, and may optionally puppet one additional Track 1 object the same way.</p>"
+          }
+        },
+        "AgentDaemonAdvanced": {
+          "Name": "Daemon Agent (Advanced)",
+          "Description": "<p><em>A system-control daemon — Track 1 puppet. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 22 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 54, baked for an 8th-level Hacker with Logic 4 (22 + 4 × 8).</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the Agent takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Puppet Thread",
+            "Description": "<p>The Agent puppets as a full Seize Control high (17+) result on one Track 1 object: lasting control, no extra Bandwidth, no extra Alert from the puppet itself.</p>"
+          }
+        },
+        "AgentWatchdogMinor": {
+          "Name": "Watchdog Agent (Minor)",
+          "Description": "<p><em>A defend daemon — Trace scrub and screen. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 10 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 12, baked for a 1st-level Hacker with Logic 2 (10 + 2 × 1).</p><h4>Hybrid band: Minor</h4><p><strong>Extension (1st–3rd level):</strong> the Agent is an extension of the Hacker. It acts on the Hacker’s turn and has no initiative of its own.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Watchdog Screen",
+            "Description": "<p>Trace Alert increases from the Hacker’s own actions are reduced by 1 (minimum 0). Wired and electronic-warfare attacks against the Agent take a bane.</p>"
+          }
+        },
+        "AgentWatchdogIntermediate": {
+          "Name": "Watchdog Agent (Intermediate)",
+          "Description": "<p><em>A defend daemon — Trace scrub and screen. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 16 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 28, baked for a 4th-level Hacker with Logic 3 (16 + 3 × 4).</p><h4>Hybrid band: Intermediate</h4><p><strong>Commanded (4th–7th level):</strong> the Agent acts on its own turn, but only within the Hacker’s standing orders.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Watchdog Screen",
+            "Description": "<p>Trace Alert increases from the Hacker’s own actions are reduced by 1 (minimum 0). Wired and electronic-warfare attacks against the Agent or one adjacent ally take a bane.</p>"
+          }
+        },
+        "AgentWatchdogAdvanced": {
+          "Name": "Watchdog Agent (Advanced)",
+          "Description": "<p><em>A defend daemon — Trace scrub and screen. Software, not Resonance.</em> A Hacker Agent compiled from Bandwidth (Compile Agent). It decompiles when dismissed, reduced to 0 Stamina, or at the end of the encounter.</p><h4>Agent Stamina</h4><p><strong>Live formula:</strong> 22 + (Hacker’s Logic × Hacker’s level). <strong>This template:</strong> 54, baked for an 8th-level Hacker with Logic 4 (22 + 4 × 8).</p><h4>Hybrid band: Advanced</h4><p><strong>Independent (8th–10th level):</strong> the Agent takes its own turn in the round and acts independently.</p><p><em>Speed 5 (fly, hover) is a placeholder token speed.</em></p>",
+          "Feature": {
+            "Name": "Watchdog Screen",
+            "Description": "<p>Trace Alert increases from the Hacker’s own actions are reduced by 2 (minimum 0). Wired and electronic-warfare attacks against the Agent or any adjacent ally take a double bane.</p>"
+          }
+        },
+        "UI": {
+          "Folder": "Compiled Agents",
+          "Compile": "Compile Agent",
+          "Decompile": "Decompile",
+          "DecompileAll": "Decompile All",
+          "CompileTitle": "Compile an Agent",
+          "CompilePrompt": "{name} compiles at the <strong>{band}</strong> band (level {level}, Logic {logic}). Cost: {cost} Bandwidth in combat. Overlay or Jacked In required. Stamina is stamped from the caster the moment the Agent manifests.",
+          "ArchetypeLabel": "Archetype",
+          "ArchetypeLine": "{stamina} Stamina, {hint}",
+          "Archetype": {
+            "probe": "Probe",
+            "spike": "Spike",
+            "daemon": "Daemon",
+            "watchdog": "Watchdog"
+          },
+          "ArchetypeHint": {
+            "probe": "recon / Deep Scan twin",
+            "spike": "intrusion / Integrity strike",
+            "daemon": "system control / Track 1 puppet",
+            "watchdog": "defend / Trace scrub"
+          },
+          "Band": {
+            "minor": "minor (extension, levels 1–3)",
+            "intermediate": "intermediate (commanded, levels 4–7)",
+            "advanced": "advanced (independent, levels 8–10)"
+          },
+          "Status": "Agents: {count} / {cap} compiled — level {level} compiles at the {band} band.",
+          "Compiled": "{agent} compiled: {stamina} Stamina, {band}. Roster {count} / {cap}.",
+          "Decompiled": "{agent} decompiled.",
+          "DecompiledAll": "{name}'s Agents decompiled ({count}).",
+          "Destroyed": "{agent} is at 0 Stamina: destroyed, and it decompiles.",
+          "Refreshed": "{name} is now level {level}: {count} Agent(s) refreshed to the {band} band.",
+          "RefreshDeferred": "{name} levelled with {count} Agent(s) in the old band, but they can’t be re-compiled right now (no Scene in view, no create permission, or the roster is over the new cap). Decompile and compile again to pick up the new band.",
+          "AtCap": "{name} is at the Agent cap ({count} / {cap}). Decompile an Agent before compiling another.",
+          "NotHacker": "Only a Hacker hero can compile Agents.",
+          "LinkedRefuses": "{name} is only Linked. Agents need immersion — Toggle to Overlay or Jacked In before compiling.",
+          "NeedImmersion": "{name} is {state}. Compile Agent requires Overlay or Jacked In (Linked refuses).",
+          "NotEnoughBandwidth": "{name} needs {cost} Bandwidth to compile an Agent (has {current}).",
+          "NoScene": "View a Scene before compiling an Agent.",
           "NoPermission": "Compiling creates an Actor and a token; ask the Director to compile it (players need Create Actors and Create Tokens permission).",
           "NoTemplate": "No Summons & Machines template found for {dsid}. Rebuild the summons pack."
         }

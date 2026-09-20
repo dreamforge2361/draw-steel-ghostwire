@@ -1,0 +1,11 @@
+{
+  "_id": "gwSummonsAgents0",
+  "_key": "!folders!gwSummonsAgents0",
+  "name": "Agents",
+  "type": "Actor",
+  "folder": null,
+  "sort": 50000,
+  "flags": {},
+  "color": "#00C4D2",
+  "description": ""
+}

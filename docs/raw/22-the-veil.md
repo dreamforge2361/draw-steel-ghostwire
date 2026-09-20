@@ -198,7 +198,7 @@ Numbers are starting points for playtest. Director may scale yen and Goal points
 Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.
 
 > **In Foundry**
-> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. (Technomancer sprites use the same pack pattern on **Compile Sprite** — see `20`.)
+> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. Technomancer sprites use the same pack pattern on **Compile Sprite** (`20`). Hacker **Agents** (Probe / Spike / Daemon / Watchdog) use **Compile Agent** (`19`) — software, not Resonance, not a sprite SKU.
 
 
 ### Elemental Stamina

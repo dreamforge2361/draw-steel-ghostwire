@@ -7,7 +7,7 @@
 
 ## The Wired System
 
-The Wired is the network layer every hero can touch. This chapter defines what a node is, the four connection states (**Disconnected**, **Linked**, **Overlay**, and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth and Programs; the Technomancer (`20-technomancer.md`) builds on the same Wire spine.
+The Wired is the network layer every hero can touch. This chapter defines what a node is, the four connection states (**Disconnected**, **Linked**, **Overlay**, and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth, Programs, and **Agents** (Compile Agent — Probe / Spike / Daemon / Watchdog; software daemons, not sprites). The Technomancer (`20-technomancer.md`) builds on the same Wire spine and compiles **sprites** from Resonance. Same net, different posture: the Hacker operates it; the Technomancer communes with it.
 
 **Street comms.** After radio, **the Wire is the default street channel** — ID, packets, and crew talk ride Linked by default. **Radio remains a jammable backup.** You do not need Overlay to answer a ping.
 
@@ -25,13 +25,13 @@ Four states. **Connect** (from Disconnected, with a Wire interface) lands you in
 | State | What It Means | Physical Awareness | Power Roll Tradeoff | Biofeedback Exposure |
 |---|---|---|---|---|
 | **Disconnected** | Off-net. Radio is a jammable backup. | Full | Normal meat rolls. Only **Connect** is a Wired verb. | None |
-| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs. | None — you are not immersed |
+| **Linked** | On-net for comms / ID / packets — the post-radio Wire default. Soft presence. | Full | Meat Power Rolls **normal** (no Overlay bane). No Jacked In Wired edge. **Broadcast** (and receiving Wire messages) works. Does **not** count as full **Connected** for Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent**. | None — you are not immersed |
 | **Overlay** | Partial immersion -- your avatar rides alongside your physical senses. You see the Wired layered over the real world (an AR-style heads-up view of nearby nodes, marks, and traffic). | Full -- you can still see, move, speak, and react physically while Overlaid. | **Bane on real-world (physical) Power Rolls** -- the AR overlay is a genuine distraction competing for your attention with whatever's happening in front of you. No modifier either way on Wired Power Rolls. | Reduced. Biofeedback damage while Overlaid is **half** the node's listed Biofeedback value (round down, minimum 1). |
 | **Jacked In** | Full immersion -- your avatar *is* your primary presence, and your body goes inert and exposed in the physical world (the reason your crew guards your body while you're under). | None. You cannot perceive, move, or act in the physical world while Jacked In, and you're an easy physical target. | **Edge on all Wired Power Rolls** -- full immersion sharpens every Matrix Verb, Program, and Wired-based signature ability. You cannot make real-world Power Rolls at all while Jacked In (no physical awareness means no physical action to roll for), and you cannot perceive or interact with the physical world in any way. | Full. Biofeedback damage while Jacked In is multiplied **x1.5 (round up)** against the node's listed Biofeedback value -- the tradeoff for full-immersion speed and power. |
 
-**On-net vs Connected.** **On-net** (the Connected-family) means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Features that say “Jacked In or Overlaid” still mean those two — Linked does not satisfy them. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone.
+**On-net vs Connected.** **On-net** (the Connected-family) means Linked, Overlay, or Jacked In. **Connected** (full) means Overlay or Jacked In only. Features that say “Jacked In or Overlaid” still mean those two — Linked does not satisfy them. **Compile Agent** (`19`) is the same gate: Overlay or Jacked In; Linked refuses. A handful of higher-echelon features (Anchor Point, Emergency Patch's biofeedback-cancel clause) key specifically off **Jacked In** alone.
 
-**Wire-discoverable.** Scan, Search, and Watchdog can find any non-Disconnected presence. **Linked = soft presence** (comms / ID / packets, not a full avatar). Overlay and Jacked In are full presence.
+**Wire-discoverable.** Scan, Search, and Watchdog ICE can find any non-Disconnected presence. **Linked = soft presence** (comms / ID / packets, not a full avatar). Overlay and Jacked In are full presence. A Hacker’s **Watchdog Agent** (`19`) is a compiled screen, not Watchdog ICE.
 
 **Toggle ladder (Foundry UX).** One verb, one direction: **Linked → Overlay → Jacked In → Linked**. Each Toggle steps deeper; after Jacked In it wraps back to Linked (comms-only), not Disconnected. **Jack Out** is the only off-ramp.
 
@@ -51,7 +51,7 @@ You leave any on-net state with the **Jack Out** Matrix Verb -- a clean disconne
 Spoof Kit is **not** an interface. Rigger Cocoon is a vehicle Jump-In mod, not an interface. Without an interface, Connect refuses: “Need a commlink, deck, rigger interface, datajack, or trodes — or be a Technomancer.”
 
 > **In Foundry**
-> **Linked**, **Overlay**, and **Jacked In** are exclusive token/sheet status effects (`ghostwire-linked` / `ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer Resonance) — they set the status. **Connect** lands in Linked. **Toggle** steps Linked → Overlay → Jacked In → Linked. **Jack Out** from any on-net state → Disconnected. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The Console roster lists all four states (Jacked In, Overlay, Linked, Disconnected). Linked applies neither Overlay’s meat bane nor Jacked In’s Wired edge. Broadcast and Wire-ping whispers work from Linked; Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs refuse until Overlay or Jacked In. Minimap and Overlay vision stay Overlay / Jacked In only.
+> **Linked**, **Overlay**, and **Jacked In** are exclusive token/sheet status effects (`ghostwire-linked` / `ghostwire-overlay` / `ghostwire-jacked-in`). Use **Connect**, **Toggle Connection State**, and **Jack Out** from the node applet (Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer Resonance) — they set the status. **Connect** lands in Linked. **Toggle** steps Linked → Overlay → Jacked In → Linked. **Jack Out** from any on-net state → Disconnected. The hero sheet **Stats** tab shows a read-only Wired state under Body Integrity. The Console roster lists all four states (Jacked In, Overlay, Linked, Disconnected). Linked applies neither Overlay’s meat bane nor Jacked In’s Wired edge. Broadcast and Wire-ping whispers work from Linked; Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent** refuse until Overlay or Jacked In. Minimap and Overlay vision stay Overlay / Jacked In only.
 
 
 ### Wired-System Stats: Integrity (Not Body Integrity)
@@ -226,12 +226,12 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 
 ## Connection-state modifiers (summary)
 
-**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.
+**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, **Compile Agent**, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.
 
 | State | Wired abilities (Wired keyword) | Real-world abilities and tests |
 |---|---|---|
 | Disconnected | Only **Connect** can be used | Normal |
-| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs or payload Runs | Normal |
+| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs, payload Runs, or **Compile Agent** | Normal |
 | Overlay | Normal (full Connected) | **Bane** |
 | Jacked In | **Edge** | Can’t be used (body inert) |
 
@@ -239,10 +239,10 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 - **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.
 - **Jack Out** (any on-net state) returns you to Disconnected.
 - **Broadcast** works from any on-net state, including Linked.
-- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs require Overlay or Jacked In.
+- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs / **Compile Agent** require Overlay or Jacked In.
 - Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.
 
-**Anyone vs Hacker.** Any hero with a **Wire interface** (commlink, cyberdeck, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer Resonance) can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs.
+**Anyone vs Hacker.** Any hero with a **Wire interface** (commlink, cyberdeck, **Rigger’s Harness** / RCC, **Wire Kit**, or Technomancer Resonance) can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs** and **Compile Agent**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs. Agents (Probe / Spike / Daemon / Watchdog) are Hacker-only deck daemons, not Technomancer sprites.
 
 ## Deck software: suites vs payloads
 

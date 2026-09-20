@@ -154,11 +154,13 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **Trace Alert** | A node’s 12-step detection track. | `21` |
 | **Matrix Verbs** | The nine Wired actions every hero has. | `21` |
 | **Program** | A Hacker ability that runs on a cyberdeck. | `19` |
+| **Agent** | A Hacker’s compiled deck daemon — **Probe**, **Spike**, **Daemon**, or **Watchdog**. Software, not a Resonance sprite. | `19` |
+| **Compile Agent** | Hacker signature that compiles or commands Agents. **3 Bandwidth** in combat; Overlay or Jacked In. Linked refuses. | `19` |
 | **Cyberdeck / RCC** | Wired hardware for Hackers / riggers’ drone command. | `19`, `23` |
 | **Jump-In** | A Wrench fully inhabiting a machine. | `16`, `23` |
 | **Machine** | A drone, vehicle, or building. | `23` |
 | **The Veil** | The boundary Ghostwire’s magic reaches across. | `22` |
 | **Pact** | A Street Priest’s Light or Dark alignment. | `18`, `22` |
-| **Sprite** | A Technomancer’s conjured code-spirit. | `20` |
+| **Sprite** | A Technomancer’s conjured code-spirit (Resonance). Not a Hacker Agent. | `20` |
 | **Malice** | The Director’s combat budget. Trace Alert can feed it. | `25` |
 | **Keywords added by Ghostwire** | **Tech**, **Chrome**, **Optics**, **Wired**, **Command** — used alongside other ability keywords. | `04` |

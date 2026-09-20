@@ -55,6 +55,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 - [ ] **+ Add** Class → **Ghostwire Classes**. One class. Run subclass / doctrine / pact prompts.
 - [ ] Record on the sheet: heroic resource, starting Stamina, Recoveries, signature + first heroic abilities.
 - [ ] Cores (glance): Operator Physique/Reflex · Scout Reflex/Logic · Commander Persona/Instinct · Medic Instinct/Logic · Wrench Logic/Reflex · Elementalist Logic/Persona · Street Priest Persona/Instinct · Hacker Logic/Instinct · Technomancer Logic/Persona.
+- [ ] **Hacker:** Compile Agent / Decompile Agent come with the class. Compiling needs Overlay or Jacked In (**Linked refuses**). Pick Probe / Spike / Daemon / Watchdog — software daemons, not sprites.
 
 > **In Foundry**  
 > Dropping a Veil caster on a Cyborg (or the reverse) is blocked. If the drop refuses, pick another class — don’t force it.
