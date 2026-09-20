@@ -2,7 +2,7 @@
 
 **Status:** Stage 3 draft for Michael review — 2026-09-16 (ET)  
 **Pairs with:** `05-wrench.md` (Uptime / Jump-In / Machines), `14-mods.md`, `11-economy.md`, Gear master Cat **4D / 5E / 5F**  
-**Foundry:** inventory + rules text only this pass; packs deferred to Claude/B19+  
+**Foundry:** dual Item + Actor. **Treasure** SKUs in **Ghostwire Vehicles & Drones** are intentional (ownership / ¥ / mods / echelon). **Deploy** stamps a linked Actor from the matching Summons band template and places the token; **Recall** deletes the Actor, Item stays. **Mule-Bot** (`drone: true`, Ground, Scale Vehicle) → `machine-drone-medium`. A named Mule-Bot Actor is optional Director placement, not a replacement for the treasure SKU.  
 **Lore notes:** `docs/masters/_drone_lore_extract.md`
 
 **Design locks (do not reopen in this draft):**

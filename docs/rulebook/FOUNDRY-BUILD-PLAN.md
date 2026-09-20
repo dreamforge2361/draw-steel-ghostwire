@@ -592,6 +592,15 @@ Spec: `docs/spikes/B120-HACKER-AGENTS.md`. Mirror Compile Sprite for Hackers: **
   - [x] Compile/Decompile (and Kessic embeds) `img` is a module SVG under `assets/icons/abilities/`
   - [ ] Foundry-verify: Overlay Compile Agent → Spike token; Linked refuses; cap 2; Decompile removes token+Actor; sheet shows the two ability icons
 
+### Mule-Bot dual Item + Actor (2026-09-20)
+Michael: “Bug: Mulebot is treasure? It should be an actor.” **Treasure is intentional** — every Ghostwire drone/vehicle SKU is Draw Steel `type: treasure` (ownership / ¥ / mods). Deploy stamps a linked Actor from the Summons **band** template (`mule-bot` → `machine-drone-medium`); Recall deletes the Actor, Item stays. Mule-Bot flags already matched sibling drones (Stinger / Warhound). **SHIPPED 0.3.75:** named Summons Actor is optional Director placement for an unowned mule (Wire Kit, hauler plate). Deploy does **not** switch to named-SKU templates (other drones unchanged). No Gold Line `{ force: true }`. No PDF.
+- [x] **Mule-Bot Deploy path** (module **0.3.75**) — **pending Foundry-verify**. Done when:
+  - [x] Vehicles SKU remains `treasure`; flags `drone` + Ground + Scale Vehicle → `drone-medium`
+  - [x] Optional named Actor in Summons › Machines (Director drag); UUID link to the SKU
+  - [x] Wire Kit on named Actor + `machine-drone-medium` band
+  - [x] Smoke: `node tools/mulebot-actor-smoke.mjs`
+  - [ ] Foundry-verify: drop Mule-Bot Item on a hero → Deploy places a linked token (hauler plate); Recall removes Actor; Fly / Medbot / Stinger still Deploy from their bands
+
 ### B32 Phase 5 — Hacker node / ICE Director templates (2026-09-17)
 Spec: `docs/spikes/B32-PHASE5-HACKER-NODE-TEMPLATES.md`. New `scripts/wired-node-templates.mjs` exports **`RATING`** (System Stat Card, moved out of `wired-console.mjs` — the Console now imports it, single source of truth) and **`NODE_TEMPLATES`**: `node-t1-r1…r5` and `node-t2-r1…r5` with `id, name, track, rating, integrityMax, biofeedback, ice, breachDC, description, notes`. **Track 1** templates follow 08-hacker.md: no Integrity pool, ICE, or biofeedback (`null`; the Console hides them). **Track 2** carry Integrity 12/18/26/36/50, biofeedback 3/5/8/13/22, and the ICE sketch. **Wired Console:** GM **Add template…** button (layers icon) in the Nodes header → pick one of the 10 → a hidden node is pushed onto `wiredBoard.nodes` through the same `#makeNode` / `#updateBoard` path as Add Node, with Description and Notes pre-filled. Add Node / Random Node / Generate Cluster unchanged; `module.api.NODE_TEMPLATES` exposed. **Director reference:** `docs/directors/wired-node-templates.md` (no journals pack exists, so no Journal pages). **Deferred:** node Actor scaffolds under `summons/nodes/` (optional D, skipped).
 - [x] **B32 Phase 5** node templates (module v0.1.45) — **Foundry-verified 2026-09-17**. Done when:

@@ -31,7 +31,7 @@ Anything that occupies space and moves on the Scene is an **Actor + token**, not
 
 **Deploy** (Wrench Deploy & Command, or anyone’s single-drone link) spawns or links the Actor to the Item + owner via `flags.draw-steel-ghostwire` (`ownerUuid`, `gearItemUuid`, `kind: drone|vehicle`). **Recall / wreck** removes or parks the Actor; the Item remains.
 
-**v1 stamping:** prefer scale-band Actor templates (micro/small/medium drone; bike/car/truck/…) stamped from Item data on Deploy, then expand to 1:1 SKU Actors. Conjured sprites/elementals/spirits remain **Actor-only** (no Item).
+**v1 stamping:** prefer scale-band Actor templates (micro/small/medium drone; bike/car/truck/…) stamped from Item data on Deploy. Treasure Items in the `vehicles` pack are **intentional** (ownership / ¥ / mods). Named SKU Actors (Mule-Bot, Lane-Hopper, Star-Chopper, Bulldog) are optional Director placement for unowned machines — Deploy still uses the band. Conjured sprites/elementals/spirits remain **Actor-only** (no Item).
 
 
 ## 2. Shared Foundry schema (proposed)

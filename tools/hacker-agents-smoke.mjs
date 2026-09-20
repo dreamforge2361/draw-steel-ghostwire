@@ -164,7 +164,7 @@ const kDecompile = (kessic.items ?? []).find(i => i.system?._dsid === "decompile
 ok(kCompile?.img === compile.img, "Kessic Compile Agent img matches class pack");
 ok(kDecompile?.img === decompile.img, "Kessic Decompile Agent img matches class pack");
 ok(grant?.img === compile.img, "Hacker L1 Agents grant uses Compile Agent icon");
-ok(read("module.json").version === "0.3.73", "module.json is 0.3.73");
+ok(read("module.json").version >= "0.3.73", `module.json is ≥ 0.3.73 (got ${read("module.json").version})`);
 
 console.log("\n5) Script registration + RAW");
 const mod = readFileSync("scripts/module.mjs", "utf8");

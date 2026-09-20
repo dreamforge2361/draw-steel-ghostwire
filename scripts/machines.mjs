@@ -1,6 +1,7 @@
 // Drones & vehicles: dual Item + Actor (docs/masters/GHOSTWIRE_SUPPORT_ENTITIES.md, GHOSTWIRE_MACHINE_BANDS.md).
-// The Item (Ghostwire Vehicles & Drones) is ownership, ¥, mods, and echelon. Deploy stamps a scale-band Actor template from
-// Ghostwire Summons & Machines › Drones & Vehicles into a linked world Actor and places its token next to the owner;
+// Treasure Items in Ghostwire Vehicles & Drones are INTENTIONAL: ownership, ¥, mods, echelon.
+// Deploy stamps a scale-band Actor template from Ghostwire Summons & Machines › Drones & Vehicles
+// into a linked world Actor and places its token next to the owner;
 // Recall deletes the token and Actor, and the Item stays. The link lives in flags on both sides:
 // - Actor: flags.<module> = { kind, band, ownerUuid, gearItemUuid, dsid, gearDsid }
 // - Item:  flags.<module>.deployed = { actorUuid }
