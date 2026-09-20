@@ -121,6 +121,19 @@ export function wiredPowerRollModifier(state) {
 }
 
 /**
+ * Edges / banes Ghostwire injects into AbilityModel#use `config.modifiers`.
+ * Hacking and Jacked In apply only to Wired rolls. Overlay meat bane applies only to non-Wired rolls.
+ */
+export function abilityPowerRollModifiers({ wired = false, hasHacking = false, softwareEdges = 0, state } = {}) {
+  let edges = Math.max(0, Number(softwareEdges) || 0);
+  let banes = 0;
+  if (wired && hasHacking) edges += 1;
+  if (wired) edges += wiredPowerRollModifier(state).edges;
+  else banes += meatPowerRollModifier(state).banes;
+  return { edges, banes };
+}
+
+/**
  * Strongest of several states (HUD / minimap). Jacked In beats Overlay beats Linked.
  * @param {Iterable<string>} states
  */

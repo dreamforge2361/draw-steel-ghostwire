@@ -1,14 +1,13 @@
 import { MATRIX_VERB_DSIDS, MATRIX_VERBS } from "./wired-verbs.mjs";
-import { actorHasConnectInterface } from "./wired-console-verbs.mjs";
+import { actorHasConnectInterface, isTemporaryConsoleVerb } from "./wired-console-verbs.mjs";
 import {
   WIRED_STATUS_DEFS,
+  abilityPowerRollModifiers,
   connectTargetState,
   isFullyConnected,
   isLinkedOkVerb,
   isOnNet,
-  meatPowerRollModifier,
   nextToggleState,
-  wiredPowerRollModifier,
 } from "./wired-state.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
@@ -193,13 +192,12 @@ function patchWiredAbilities() {
 
     if (this.power.roll.enabled) {
       // Installed, running deck programs and RCC autosofts that name this ability (B20d, scripts/mods.mjs).
-      let edges = softwareEdges(actor, dsid);
-      let banes = 0;
-      if (wired && actor.system.skills?.value?.has?.("hacking")) edges += 1;
-      const wiredMod = wiredPowerRollModifier(state);
-      const meatMod = meatPowerRollModifier(state);
-      if (wired) edges += wiredMod.edges;
-      if (!wired) banes += meatMod.banes;
+      const { edges, banes } = abilityPowerRollModifiers({
+        wired,
+        hasHacking: !!actor.system.skills?.value?.has?.("hacking"),
+        softwareEdges: softwareEdges(actor, dsid),
+        state,
+      });
       if (edges || banes) {
         const modifiers = config.modifiers ?? {};
         config = { ...config, modifiers: { ...modifiers, edges: (modifiers.edges ?? 0) + edges, banes: (modifiers.banes ?? 0) + banes } };
@@ -219,10 +217,14 @@ function patchWiredAbilities() {
 // Existing worlds: strip every Matrix Verb off sheets (heroes, pregens, Wire Kit NPCs, Mama).
 // B117 applet-only — flag matrixVerbsApplet so this runs once even if matrixVerbsConsole already fired.
 Hooks.once("ready", async () => {
-  if (!game.user.isGM) return;
   let stripped = 0;
   for (const actor of game.actors) {
-    if (actor.getFlag(MODULE_ID, "matrixVerbsApplet")) continue;
+    if (!actor.isOwner) continue;
+    const leftoverTemps = [...actor.items].filter(isTemporaryConsoleVerb);
+    if (leftoverTemps.length) {
+      await actor.deleteEmbeddedDocuments("Item", leftoverTemps.map(item => item.id));
+    }
+    if (!game.user.isGM || actor.getFlag(MODULE_ID, "matrixVerbsApplet")) continue;
     const offSheet = [...actor.items].filter(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid));
     if (offSheet.length) {
       await actor.deleteEmbeddedDocuments("Item", offSheet.map(item => item.id));

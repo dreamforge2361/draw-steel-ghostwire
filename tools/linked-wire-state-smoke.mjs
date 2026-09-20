@@ -97,7 +97,7 @@ const moduleSrc = readFileSync("scripts/module.mjs", "utf8");
 ok(moduleSrc.includes("ghostwire-linked") || moduleSrc.includes("WIRED_STATUS_DEFS"), "module registers Linked status");
 ok(moduleSrc.includes("connectTargetState") && moduleSrc.includes("nextToggleState"), "module uses Connect→Linked and Toggle ladder");
 ok(moduleSrc.includes("NeedImmersion") && moduleSrc.includes("isLinkedOkVerb"), "AbilityModel#use gates Linked vs immersion");
-ok(moduleSrc.includes("meatPowerRollModifier") && moduleSrc.includes("wiredPowerRollModifier"), "power-roll helpers (Linked applies neither)");
+ok(moduleSrc.includes("abilityPowerRollModifiers"), "power-roll helpers (Linked applies neither)");
 
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("state: verbActor?.state") && consoleSrc.includes("linked: 2"), "Console roster + gate pass state; Linked sorts after Overlay");

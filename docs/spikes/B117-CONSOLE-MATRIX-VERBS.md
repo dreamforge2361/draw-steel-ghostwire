@@ -76,4 +76,6 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 - Gold Line force overwrite
 - A second deck ladder
 
+**0.3.60 (Michael smoke 2026-09-20):** Overlay Search opened the configure dialog with no bonuses and produced no dice / no chat card. Cause: `resolveVerbItem` used `new CONFIG.Item.documentClass(data, { parent: actor })` — Draw Steel 1.1.2 `AbilityModel#use` requires a **collection-embedded** Item (`abilityUse.abilityUuid` is a DocumentUUIDField). Fix: temporary embed + delete after use. Verbs stay off the sheet.
+
 Smoke: `node tools/b117-console-verbs-smoke.mjs`. No live Foundry in this environment.
