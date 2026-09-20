@@ -6,8 +6,8 @@
   "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-club/club-patron-female-corran.webp",
   "system": {
     "stamina": {
-      "value": 15,
-      "max": 15,
+      "value": 4,
+      "max": 4,
       "temporary": 0
     },
     "characteristics": {
@@ -84,8 +84,8 @@
       "license": "Draw Steel Creator License"
     },
     "negotiation": {
-      "interest": 7,
-      "patience": 3,
+      "interest": 5,
+      "patience": 5,
       "motivations": [],
       "pitfalls": [],
       "impression": 1
@@ -96,10 +96,9 @@
         "humanoid"
       ],
       "level": 1,
-      "role": "hexer",
+      "role": "harrier",
       "organization": "minion",
-      "withCaptainEffect": "GwMamaPatFCaptn0",
-      "freestrike": 2
+      "withCaptainEffect": "GwMamaPatFeCaptn"
     },
     "ev": 3,
     "statuses": {
@@ -200,13 +199,13 @@
   },
   "items": [
     {
-      "name": "Keg Haul",
+      "name": "Face in the Crowd",
       "type": "feature",
-      "_id": "GwMamaPatFIt0100",
-      "img": "icons/commodities/materials/barrel-wood.webp",
+      "_id": "GwMamaPatFemIt01",
+      "img": "icons/environment/people/commoner.webp",
       "system": {
         "description": {
-          "value": "<p>Dren knows every service corridor, cold room, and delivery hatch behind the club, and he has a key to most of them. He can move a body's worth of weight through the back of the building without being seen.</p>",
+          "value": "<p>Just another body on the floor. The patron is easy to overlook and easy to talk to, and they remember faces far better than names — which makes them the witness a Director reaches for.</p>",
           "director": ""
         },
         "source": {
@@ -214,7 +213,7 @@
           "page": "25-opposition",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "keg-haul",
+        "_dsid": "face-in-the-crowd",
         "advancements": {},
         "prerequisites": {
           "value": "",
@@ -229,12 +228,12 @@
         "default": 0
       },
       "flags": {},
-      "_key": "!actors.items!GwMamaPatFem0000.GwMamaPatFIt0100"
+      "_key": "!actors.items!GwMamaPatFem0000.GwMamaPatFemIt01"
     },
     {
-      "name": "Empty Bottle",
+      "name": "Improvised Swing",
       "type": "ability",
-      "_id": "GwMamaPatFIt0200",
+      "_id": "GwMamaPatFemIt02",
       "img": "icons/consumables/drinks/alcohol-bottle-glass-fancy-blue.webp",
       "system": {
         "type": "main",
@@ -243,12 +242,11 @@
           "page": "25-opposition",
           "license": "Draw Steel Creator License"
         },
-        "_dsid": "empty-bottle",
-        "story": "Grabbed off the rail, swung once.",
+        "_dsid": "improvised-swing",
+        "story": "Whatever is on the table, swung once.",
         "keywords": [
           "melee",
-          "strike",
-          "weapon"
+          "strike"
         ],
         "category": "signature",
         "resource": null,
@@ -274,11 +272,11 @@
             "reactive": false
           },
           "effects": {
-            "GwMamaDren00Dmg0": {
+            "GwMamaPatFemDmg0": {
               "name": "",
               "img": null,
               "type": "damage",
-              "_id": "GwMamaDren00Dmg0",
+              "_id": "GwMamaPatFemDmg0",
               "damage": {
                 "tier1": {
                   "value": "1",
@@ -326,7 +324,7 @@
         "default": 0
       },
       "flags": {},
-      "_key": "!actors.items!GwMamaPatFem0000.GwMamaPatFIt0200"
+      "_key": "!actors.items!GwMamaPatFem0000.GwMamaPatFemIt02"
     }
   ],
   "effects": [
@@ -336,7 +334,7 @@
       "type": "abilityModifier",
       "origin": "Actor.GwMamaPatFem0000",
       "disabled": true,
-      "_id": "GwMamaPatFCaptn0",
+      "_id": "GwMamaPatFeCaptn",
       "system": {
         "end": {
           "roll": "1d10 + @combat.save.bonus"
@@ -388,18 +386,18 @@
       },
       "showIcon": 1,
       "folder": null,
-      "_key": "!actors.effects!GwMamaPatFem0000.GwMamaPatFCaptn0"
+      "_key": "!actors.effects!GwMamaPatFem0000.GwMamaPatFeCaptn"
     }
   ],
-  "sort": 510,
+  "sort": 610,
   "ownership": {
     "default": 0
   },
   "flags": {
     "draw-steel-ghostwire": {
       "bestiary": {
-        "dsSourceId": "hgK8SgOIzJ0bcAtf",
-        "dsSourceName": "Human Knave → Street Punk",
+        "dsSourceId": "3rIQkdmxl0kUvznF",
+        "dsSourceName": "Human Raider → Gang Raider",
         "decision": "Adapt",
         "region": "streets",
         "venue": "mama-cassavir-club",

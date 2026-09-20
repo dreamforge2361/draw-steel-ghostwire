@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 0.3.83 — Corp & Security Connect-interface smoke.
+ * 0.3.84 — Corp & Security Connect-interface smoke.
  * Playtest bug: corp/security NPCs could not Connect to the Wire because no Actor in
  * src/packs/bestiary/corp-security carried a Connect interface (no Wire Kit, no commlink).
  * Every Actor in that folder now embeds Wire Kit (the Director stamp — no extra commlink).
@@ -39,9 +39,9 @@ const actorsIn = dir =>
     .filter(f => f.endsWith(".json") && f !== "_folder.json")
     .map(f => ({ file: f, actor: read(join(BESTIARY, dir, f)) }));
 
-console.log("Corp & Security Wire-access smoke (0.3.83)\n");
+console.log("Corp & Security Wire-access smoke (0.3.84)\n");
 
-ok(read("module.json").version === "0.3.83", `module.json is 0.3.83 (got ${read("module.json").version})`);
+ok(read("module.json").version === "0.3.84", `module.json is 0.3.84 (got ${read("module.json").version})`);
 
 console.log("\n1) Wire Kit label resolves to a readable name");
 ok(loc(KIT_NAME_KEY) === KIT_LABEL, `${KIT_NAME_KEY} resolves to "${KIT_LABEL}"`);

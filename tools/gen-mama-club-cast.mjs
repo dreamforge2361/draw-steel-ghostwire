@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * One-shot authoring helper: write the Mama's Club floor cast (13 Actors) into
+ * One-shot authoring helper: write the Mama's Club floor cast (16 Actors) into
  * src/packs/bestiary/mama-club/ from existing Ghostwire street spines.
  *
  * Mama Cassavir herself already exists in reach-streets and is NOT touched here.
@@ -307,6 +307,40 @@ function clubActor(entry) {
     _key: `!actors!${id}`,
   };
 }
+
+// ------------------------------------------------- generic-patron shared kit
+// The three unnamed patrons are crowd texture, not characters: one flavour
+// feature and one improvised strike each, on the plain L1 minion band. They are
+// patrons, so they get none of Dren Holt's barback kit.
+
+const patronFeature = id => feature({
+  id, n: 1,
+  name: "Face in the Crowd",
+  img: "icons/environment/people/commoner.webp",
+  dsid: "face-in-the-crowd",
+  html: "<p>Just another body on the floor. The patron is easy to overlook and easy to talk to, and they remember faces far better than names — which makes them the witness a Director reaches for.</p>",
+});
+
+const coldRegular = id => feature({
+  id, n: 1,
+  name: "Cold Regular",
+  img: "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+  dsid: "cold-regular",
+  html: "<p>The drink is for the look of the thing. This patron does not breathe and does not warm his glass, and he has been coming here longer than the staff have noticed.</p>",
+});
+
+const improvisedSwing = id => strike({
+  id, n: 2,
+  name: "Improvised Swing",
+  img: "icons/consumables/drinks/alcohol-bottle-glass-fancy-blue.webp",
+  dsid: "improvised-swing",
+  story: "Whatever is on the table, swung once.",
+  keywords: ["melee", "strike"],
+  distance: MELEE,
+  characteristic: "might",
+  tiers: [1, 2, 3],
+  sort: 10,
+});
 
 // ---------------------------------------------------------------- the roster
 
@@ -878,6 +912,65 @@ const ROSTER = [
       }),
       wireKit(id, 4),
     ],
+  },
+  // ------------------------------------------------- GENERIC PATRONS (filler)
+  // Unnamed crowd texture from the same art drop. Deliberately lighter than the
+  // named cast: a one-line bio, a filler-seat hook, and plain L1 minion math.
+  // They sort after the named cast (600+) so the sidebar order stays readable.
+  {
+    key: "PatMale",
+    slug: "club-patron-male",
+    name: "Club Patron (Male)",
+    station: "Floor Regular",
+    people: "Pure Human",
+    sex: "M",
+    spineName: "Human Raider → Gang Raider",
+    level: 1, organization: "minion", role: "harrier",
+    stamina: 4, ev: 3, freeStrike: 1, speed: 5,
+    chr: [2, 1, 0, 0, 0],
+    keywords: ["humanoid", "human"],
+    negotiation: [5, 5, 1],
+    sort: 600,
+    bio: "<p>A Flats regular who drinks midweek and never asks for Mama. Smiles easy, tips mid, knows every bartender by first name and none of their real ones.</p>",
+    hook: "<p><strong>Plot hook:</strong> Filler seat / crowd texture. If the room needs a witness who saw the runners come in, he is the one.</p>",
+    items: id => [patronFeature(id), improvisedSwing(id)],
+  },
+  {
+    key: "PatFem",
+    slug: "club-patron-female-corran",
+    name: "Club Patron (Female Corran)",
+    station: "Floor Regular",
+    people: "Corran",
+    sex: "F",
+    spineName: "Human Raider → Gang Raider",
+    level: 1, organization: "minion", role: "harrier",
+    stamina: 4, ev: 3, freeStrike: 1, speed: 5,
+    chr: [2, 1, 0, 0, 0],
+    keywords: ["humanoid"],
+    negotiation: [5, 5, 1],
+    sort: 610,
+    bio: "<p>A stocky Corran woman in a studded denim vest, blue drink always half-gone. Laughs loud at the band and tips Pip in hard cash.</p>",
+    hook: "<p><strong>Plot hook:</strong> Filler seat. If a Corran Deepworks angle comes up later, she has cousins on a FER crew — she will not volunteer that.</p>",
+    items: id => [patronFeature(id), improvisedSwing(id)],
+  },
+  {
+    key: "PatRev",
+    slug: "club-patron-revenant",
+    name: "Club Patron (Revenant)",
+    station: "Floor Regular",
+    people: "Revenant",
+    sex: "M",
+    spineName: "Human Raider → Gang Raider",
+    level: 1, organization: "minion", role: "harrier",
+    stamina: 4, ev: 3, freeStrike: 1, speed: 5,
+    chr: [2, 1, 0, 0, 0],
+    keywords: ["humanoid", "undead"],
+    immunities: { corruption: 1, poison: 1 },
+    negotiation: [5, 5, 1],
+    sort: 620,
+    bio: "<p>Pale velvet and gold liquor. He does not blink often. Madame Quill nods to him once a night and that is the whole conversation.</p>",
+    hook: "<p><strong>Plot hook:</strong> Filler seat with undead texture. A soft contact for Madame Quill, or for a Reach Revenant crew if the table goes that way.</p>",
+    items: id => [coldRegular(id), improvisedSwing(id)],
   },
 ];
 

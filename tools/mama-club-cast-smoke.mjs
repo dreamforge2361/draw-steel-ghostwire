@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
- * 0.3.83 — Mama's Club floor cast smoke.
+ * 0.3.84 — Mama's Club floor cast smoke.
  *
- * Sixteen session regulars (13 named + 3 generic patrons) (staff + patrons) under Ghostwire Bestiary →
- * Reach Streets → Mama's Club. Mama Cassavir herself is NOT in this folder and
- * must stay exactly as she shipped.
+ * Sixteen Actors under Ghostwire Bestiary → Reach Streets → Mama's Club: the 13 named
+ * staff and patrons of Mama Cassavir's club, plus 3 unnamed generic patrons for crowd
+ * texture. Mama Cassavir herself is NOT in this folder and must stay exactly as she shipped.
  *
  * Guards the three things that break this cast in play:
  *   1. Plain English on the sheet — no raw GHOSTWIRE.* keys in a name or bio,
@@ -24,7 +24,7 @@ import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 
 const MODULE = "draw-steel-ghostwire";
-const VERSION = "0.3.83";
+const VERSION = "0.3.84";
 const WIRE_KIT_DSID = "wire-kit-matrix-verbs";
 const BESTIARY = "src/packs/bestiary";
 const CLUB = join(BESTIARY, "mama-club");
@@ -52,9 +52,9 @@ console.log(`Mama's Club floor cast smoke (${VERSION})\n`);
 
 console.log("1) Ship surface");
 ok(read("module.json").version === VERSION, `module.json is ${VERSION} (got ${read("module.json").version})`);
-ok(/0\.3\.83/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.83");
-ok(/Mama/i.test(readFileSync("README.md", "utf8").split("\n").find(l => l.includes("0.3.83")) ?? ""),
-  "README 0.3.83 line names the club cast");
+ok(/0\.3\.84/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.84");
+ok(/Mama/i.test(readFileSync("README.md", "utf8").split("\n").find(l => l.includes("0.3.84")) ?? ""),
+  "README 0.3.84 line names the club cast");
 
 console.log("\n2) The folder nests under Reach Streets and reads in plain English");
 const folder = read(join(CLUB, "_folder.json"));
@@ -94,6 +94,14 @@ for (const { file, actor } of cast) {
     `${file} keywords are system enum values (${(actor.system?.monster?.keywords ?? []).join(", ")})`);
   ok(actor.system?.stamina?.max === actor.system?.stamina?.value, `${file} stamina value matches max`);
   ok(actor.system?.ev > 0, `${file} has an EV`);
+  // An early hand-written draft of the patrons carried a stray lowercase
+  // "freestrike" beside freeStrike; it is schema junk the sheet ignores silently.
+  ok(!("freestrike" in (actor.system?.monster ?? {})), `${file} has no stray lowercase freestrike key`);
+  ok(Number.isInteger(actor.system?.monster?.freeStrike), `${file} freeStrike is an integer`);
+  // Minion Stamina has to stay in the street minion band or the floor stops being filler.
+  if (actor.system?.monster?.organization === "minion") {
+    ok(actor.system.stamina.max <= 6, `${file} minion Stamina stays in band (${actor.system.stamina.max})`);
+  }
 }
 
 console.log("\n5) Plain English on the sheet — no raw lang keys in names or bios");
@@ -194,6 +202,14 @@ const slugs = byStation.map(c => c.slug);
 ok(new Set(slugs).size === 16, `16 distinct slugs listed (${new Set(slugs).size})`);
 ok(byStation.filter(c => c.actor.flags[MODULE].bestiary.sex === "F").length === 8, "8 women on the floor");
 ok(byStation.filter(c => c.actor.flags[MODULE].bestiary.sex === "M").length === 8, "8 men on the floor");
+// Two Actors sharing a sort shuffle unpredictably in the compendium sidebar.
+const sorts = byStation.map(c => c.actor.sort);
+ok(new Set(sorts).size === sorts.length, `every Actor has a distinct sort (${sorts.length - new Set(sorts).size} collisions)`);
+// The folder must be reproducible: every Actor comes out of the generator.
+const genSlugs = readFileSync("tools/gen-mama-club-cast.mjs", "utf8");
+for (const { slug } of byStation) {
+  ok(genSlugs.includes(`slug: "${slug}"`), `${slug} is emitted by gen-mama-club-cast.mjs`);
+}
 
 console.log("\n11) The club does not leak a kit into the meat-only street folders");
 for (const dir of ["reach-streets", "reach-critters", "veil-undead", "wilds-jungles"]) {
