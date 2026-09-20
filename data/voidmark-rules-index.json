@@ -1,7 +1,7 @@
 {
   "version": 1,
   "role": "knowledge",
-  "built": "2026-09-19",
+  "built": "2026-09-20",
   "generator": "tools/build-voidmark-index.mjs",
   "sources": {
     "raw": [
@@ -30,7 +30,8 @@
       "23-machines.md",
       "24-advancement.md",
       "25-opposition.md",
-      "26-lifestyle-downtime.md"
+      "26-lifestyle-downtime.md",
+      "27-corruption-taint.md"
     ],
     "lore": [
       "docs/manuscript/01-lore/L1-setting-primer.md",
@@ -70,7 +71,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1293,
+  "chunkCount": 1309,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -88,7 +89,7 @@
       "chapter": "How to Play",
       "heading": "What you need",
       "kind": "rules",
-      "text": "To run Ghostwire you need:\n\n- **This book** (how the night is shaped, characteristics, Power Rolls, combat, nine classes, ¥ economy, chrome, the Wire, the Veil, machines, opposition).\n- **Players** — one **Director**, everyone else a **runner**.\n- **Dice** — two ten-sided dice per player for Power Rolls (`03`), plus one ten-sided die for saving throws.\n- **Something to track** Stamina, Recoveries, heroic resources, ¥, Body Integrity, and (when relevant) Wire connection state. Foundry or paper both work.\n\nYou do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition procedure lives in this book (`25`); Actor numbers live in Foundry packs if you use them. Setting color lives in Reach materials — not required for rules play.\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Open a hero sheet → **Stats**: Ghostwire adds **Body Integrity** (current/max), a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.\n\n---"
+      "text": "To run Ghostwire you need:\n\n- **This book** (how the night is shaped, characteristics, Power Rolls, combat, nine classes, ¥ economy, chrome, the Wire, the Veil, machines, opposition).\n- **Players** — one **Director**, everyone else a **runner**.\n- **Dice** — two ten-sided dice per player for Power Rolls (`03`), plus one ten-sided die for saving throws.\n- **Something to track** Stamina, Recoveries, heroic resources, ¥, Body Integrity, **Taint** (0–12), and (when relevant) Wire connection state. Foundry or paper both work.\n\nYou do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition procedure lives in this book (`25`); Actor numbers live in Foundry packs if you use them. Setting color lives in Reach materials — not required for rules play.\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Open a hero sheet: the **header** shows **Taint** (0–12 + band). **Stats** adds **Body Integrity** (current/max), the same **Taint** fieldset under Integrity, a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20, Taint 0, and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.\n\n---"
     },
     {
       "id": "01-how-to-play#the-table#3",
@@ -259,7 +260,7 @@
       "chapter": "Heroes and Characteristics",
       "heading": "Making a runner",
       "kind": "rules",
-      "text": "A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score.\n\n---"
+      "text": "A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). **Taint** begins at **0** for every People, Cyborgs included (`27-corruption-taint.md`). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score. Rest does not cleanse Taint.\n\n---"
     },
     {
       "id": "02-heroes-characteristics#chargen-step-order#4",
@@ -277,7 +278,7 @@
       "chapter": "Heroes and Characteristics",
       "heading": "Chargen step order",
       "kind": "rules",
-      "text": "1. **People** (ancestry) — pick a People package, take free signature traits, spend the ancestry-point budget (`05-ancestries.md`). Ghostwire calls ancestries **Peoples**.\n2. **Background** (culture) and **Profession** (career) — one of each; each grants fixed and chosen skills from the Ghostwire list below (`06-backgrounds-professions.md`).\n3. **Class** — pick one of the nine classes (`12`–`20`). Record subclass (if any), signature abilities, first heroic abilities, heroic resource, starting Stamina, Recoveries, and the class’s core characteristics.\n4. **Kit** — take **one free Kit**, including Street-grade qualifying gear for it (`08-kits-gear-wealth.md`). Pure casters and deck-bound Hackers may take a light Kit or none if the class chapter allows fighting through the Veil or the Wire instead.\n5. **Skills** — collect grants from People, Background, Profession, and class. No wasted duplicates; if a pick collides, choose another skill from the same group (then any group) per `06`. Full list below.\n6. **Languages** — `07-languages.md`.\n7. **Starting ¥** — **¥5,000** liquid on the sheet (`08`). Do not pre-spend Lifestyle; Lifestyle is paid at the first respite between runs (`26`).\n8. **Body Integrity** — **20** for every People except Cyborg (`09`). Chrome is opt-in after (or during) play — never an auto-grant at chargen.\n9. **Optional early spends** — Street-band gear (a Personal/Light air scout like Tape-Eye or Rotor grants **Street Eye** — `23`), a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`."
+      "text": "1. **People** (ancestry) — pick a People package, take free signature traits, spend the ancestry-point budget (`05-ancestries.md`). Ghostwire calls ancestries **Peoples**.\n2. **Background** (culture) and **Profession** (career) — one of each; each grants fixed and chosen skills from the Ghostwire list below (`06-backgrounds-professions.md`).\n3. **Class** — pick one of the nine classes (`12`–`20`). Record subclass (if any), signature abilities, first heroic abilities, heroic resource, starting Stamina, Recoveries, and the class’s core characteristics.\n4. **Kit** — take **one free Kit**, including Street-grade qualifying gear for it (`08-kits-gear-wealth.md`). Pure casters and deck-bound Hackers may take a light Kit or none if the class chapter allows fighting through the Veil or the Wire instead.\n5. **Skills** — collect grants from People, Background, Profession, and class. No wasted duplicates; if a pick collides, choose another skill from the same group (then any group) per `06`. Full list below.\n6. **Languages** — `07-languages.md`.\n7. **Starting ¥** — **¥5,000** liquid on the sheet (`08`). Do not pre-spend Lifestyle; Lifestyle is paid at the first respite between runs (`26`).\n8. **Body Integrity** — **20** for every People except Cyborg (`09`). Chrome is opt-in after (or during) play — never an auto-grant at chargen.\n9. **Taint** — **0** (Clean) for every People, Cyborgs included (`27-corruption-taint.md`). Chrome does not raise it. Rest does not cleanse it.\n10. **Optional early spends** — Street-band gear (a Personal/Light air scout like Tape-Eye or Rotor grants **Street Eye** — `23`), a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`."
     },
     {
       "id": "02-heroes-characteristics#chargen-step-order#6",
@@ -286,7 +287,7 @@
       "chapter": "Heroes and Characteristics",
       "heading": "Chargen step order",
       "kind": "rules",
-      "text": "When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, next Lifestyle band).\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. On the hero sheet **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20 and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29 / `docs/manuscript/04-back/29-chargen-cheat-sheet.md`).\n\n---"
+      "text": "When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, Taint, next Lifestyle band).\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. The hero sheet **header** shows **Taint** (0–12 + band). On the **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), the **Taint** fieldset under Integrity, a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20, Taint 0, and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29 / `docs/manuscript/04-back/29-chargen-cheat-sheet.md`).\n\n---"
     },
     {
       "id": "02-heroes-characteristics#characteristics#7",
@@ -421,7 +422,7 @@
       "chapter": "Heroes and Characteristics",
       "heading": "Victories, level, and what comes later",
       "kind": "rules",
-      "text": "Runners advance **Level 1–10** by the Victory and leveling procedure in `24`. Ghostwire invents no second hidden XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.\n\nWhat leveling does **not** grant: Body Integrity, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`).\n\n---"
+      "text": "Runners advance **Level 1–10** by the Victory and leveling procedure in `24`. Ghostwire invents no second hidden XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.\n\nWhat leveling does **not** grant: Body Integrity, **Taint** change, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`). Rest does not cleanse Taint (`27`).\n\n---"
     },
     {
       "id": "02-heroes-characteristics#build-firewall-restated#22",
@@ -871,7 +872,7 @@
       "chapter": "Ancestries (The Peoples)",
       "heading": "Key species constraints",
       "kind": "rules",
-      "text": "- **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.\n- **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).\n- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation.\n- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.\n\n---"
+      "text": "- **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.\n- **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).\n- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in `27-corruption-taint.md`.\n- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.\n\n---"
     },
     {
       "id": "05-ancestries#signature-trait-detect-the-supernatural-free#6",
@@ -1042,7 +1043,7 @@
       "chapter": "Ancestries (The Peoples)",
       "heading": "Corruptive Flaw (optional fiction)",
       "kind": "rules",
-      "text": "Visible taint and social “reads as wrong” are Director color layered on this package, not a second economy.\n\n**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only.\n\n---"
+      "text": "Visible taint and social “reads as wrong” are Director color layered on this package, not a second economy.\n\n**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is **not** Taint. Every People — Mutants included — uses the shared **Taint 0–12** track (`27-corruption-taint.md`). Reducing Taint does not erase a Flaw.\n\n---"
     },
     {
       "id": "05-ancestries#cyborg#25",
@@ -1582,7 +1583,7 @@
       "chapter": "Chrome & Body Integrity",
       "heading": "Core distinction — chrome vs Cyborg",
       "kind": "rules",
-      "text": "| Path | What it is | System |\n|---|---|---|\n| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |\n| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |\n\nPushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome."
+      "text": "| Path | What it is | System |\n|---|---|---|\n| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |\n| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |\n\nPushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.\n\n**Chrome does not raise Taint.** Installing or removing implants spends or refunds Body Integrity only. The shared hero stain track is **Taint 0–12** (`27-corruption-taint.md`). Cyborgs still use Taint (demons, pacts, zones); they just do not use Integrity."
     },
     {
       "id": "09-chrome-body-integrity#body-integrity-start-20#3",
@@ -1627,7 +1628,7 @@
       "chapter": "Chrome & Body Integrity",
       "heading": "Caster chrome soft-cap (LOCKED 2026-09-18)",
       "kind": "rules",
-      "text": "**Elementalist, Street Priest, and Technomancer** may spend at most **5 Body Integrity** on chrome (Soft, Standard, and Salvage all count toward this total). Soft grade remains the intended path under that ceiling.\n\nWhile Integrity spent on chrome is **greater than 5**, every **Magic / Veil / Resonance** power roll (signatures and heroic casting abilities) takes a **bane**. The bane lasts until surgical removal brings spent Integrity back to **5 or less**.\n\n**Magic erosion** (the grade table above) still applies for spent Integrity **at or under** the soft-cap. The soft-cap is a hard cliff on top of erosion, not a replacement for it.\n\n> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs see N/A). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap."
+      "text": "**Elementalist, Street Priest, and Technomancer** may spend at most **5 Body Integrity** on chrome (Soft, Standard, and Salvage all count toward this total). Soft grade remains the intended path under that ceiling.\n\nWhile Integrity spent on chrome is **greater than 5**, every **Magic / Veil / Resonance** power roll (signatures and heroic casting abilities) takes a **bane**. The bane lasts until surgical removal brings spent Integrity back to **5 or less**.\n\n**Magic erosion** (the grade table above) still applies for spent Integrity **at or under** the soft-cap. The soft-cap is a hard cliff on top of erosion, not a replacement for it.\n\n> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs see N/A). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Chrome install does **not** raise **Taint** (the 0–12 fieldset under Integrity). Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap."
     },
     {
       "id": "09-chrome-body-integrity#suppress-damage-destroy-summary#8",
@@ -1942,7 +1943,7 @@
       "chapter": "Mods",
       "heading": "Programs and payloads (pointer)",
       "kind": "rules",
-      "text": "- **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.\n- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one deck slot as a **magazine**, sharing the deck's slots with suites. Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to \"Consumables never have mod slots\": a payload *fills* a slot, it never has one."
+      "text": "- **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.\n- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to \"Consumables never have mod slots\": a payload *fills* a slot, it never has one."
     },
     {
       "id": "10-mods#armor-gadget-families#25",
@@ -1969,7 +1970,7 @@
       "chapter": "Mods",
       "heading": "Chargen note",
       "kind": "rules",
-      "text": "Starting Kit grant includes **street-band qualifying gear** only (see Kits + Economy). **Mods never auto-grant** at chargen — buy, craft, or invent them later. Merc (dual Kit) receives street-band qualifying gear for **both** Kits; still no free mods.\n\nOptional early spend (`02` step 9): leftover starting **¥5,000** may buy a Street-band published weapon mod or a Street suite after you own the host. That is a purchase, not a Kit grant. Do not pre-install chrome to “turn on” a Smartlink unless the player also pays Integrity (`09`).\n\nAdvancement never auto-installs mods when a new echelon raises Kit Stamina (`24`).\n\n---\n\n> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In). Do not invent extra menus.\n\n---"
+      "text": "Starting Kit grant includes **street-band qualifying gear** only (see Kits + Economy). **Mods never auto-grant** at chargen — buy, craft, or invent them later. Merc (dual Kit) receives street-band qualifying gear for **both** Kits; still no free mods.\n\nOptional early spend (`02` step 9): leftover starting **¥5,000** may buy a Street-band published weapon mod or a Street suite after you own the host. That is a purchase, not a Kit grant. Do not pre-install chrome to “turn on” a Smartlink unless the player also pays Integrity (`09`).\n\nAdvancement never auto-installs mods when a new echelon raises Kit Stamina (`24`).\n\n---\n\n> On the hero sheet, right-click an owned **mod** Item (or its menu) → **Install onto…**. The dialog lists legal hosts on the same actor (family overlap, free slots). Hosts show **Mod slots: used / max** and the installed names. Right-click an installed mod → **Uninstall mod** (sheet tracker only — still spend the downtime Project in fiction). Already-installed mods use **Activate / Deactivate** for the field toggle; the software keeps its slot. **Payload magazines** do **not** use generic Install: use **Load magazine (Craft)…** on the chip (Reason / Logic roll, Hacking edge; result sets fires 1 / 3 / 5). Hosts are a **cyberdeck** or a Technomancer’s **Wired Native**. Each **Run {Payload}** spends one fire and requires Connected (Overlay or Jacked In). Do not invent extra menus.\n\n---"
     },
     {
       "id": "10-mods#what-this-chapter-is-not#28",
@@ -3787,7 +3788,7 @@
       "chapter": "The Elementalist",
       "heading": "Base Band (1-5 Essence, chosen at 1st level)",
       "kind": "rules",
-      "text": "- **As an extension (lower investment, levels 1–5 / early echelons):** the elemental acts on **your turn**, using your action economy -- a lash of living flame, a stone fist, a striking wind. Low bookkeeping. Damage per its own Rank (light-band = 4+chr low / 7+chr middle / 10+chr high). Persistent 2 (-4 to your Essence intake per turn while sustained).\n- **As an independent figure (higher investment, levels 7–10 / later echelons, or a properly-bound mid-level+ Elementalist):** a properly bound elemental becomes its **own figure** on the map with its own Stamina and activation on the shared round -- the true summoner fantasy. Stamina per Veil §C3 (locked); strike damage for Rank 1 / companions uses the light-band printed above — Rank 2+ strike ladders are deferred (see Veil §C3). Bind unlocks: a 1st-level Elementalist starts with a Rank 1 extension only; a 5th-level Elementalist unlocks Rank 2 independent. Persistent 4 (-8 to your Essence intake per turn while sustained).\n- **The bind is the throttle:** a **Bind Power Roll (2d10 + Logic)** on cast, with an **edge if your Persona is equal to or higher than your Logic** (Bind Discipline's +1 still applies) -- high (17+) binds it clean and grants an edge on Command rolls; middle (12–16) binds but the elemental resists a Command once per encounter; low (≤11) **fails/breaks the bind** and the elemental becomes **hostile and free** for one round before the Veil pulls it back -- the Veil chapter's slipped-leash risk. A **heavy hit while sustaining** can also break the bind (Persona save vs. potency).\n- **The Price applies:** a willing elemental exacts a **task aligned to its nature** paid before or after (a Pyromancer honoring flame, a Geomancer restoring a fouled spring); coercing an unwilling one pays in **1 corruption + 1 spirit-attention tick per Rank** at cast -- lightest weight among casters, but never zero.\n- **Sustaining a bound elemental** reduces Essence banked each turn (Persistent 2 for extensions, Persistent 4 for independents). You cannot rain Tempests at full tilt *and* hold a greater elemental without deliberate investment.\n- **Stamina (Veil §C3 locked 2026-09-18):** a summoned elemental has **rank base + (Logic × level)** Stamina — base **15** (Rank 1 and the signature companions) / **25** (Rank 2) / **35** (Rank 3) / **50** (Rank 4) / **65** (Rank 5). Summon Elemental binds up to **Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th**. At most **2** bound non-companion elementals at once; a new bind releases the oldest. Rank 2+ / Greater / R5 strike ladders and defense stamps remain deferred (see `22-the-veil.md` §C3)."
+      "text": "- **As an extension (lower investment, levels 1–5 / early echelons):** the elemental acts on **your turn**, using your action economy -- a lash of living flame, a stone fist, a striking wind. Low bookkeeping. Damage per its own Rank (light-band = 4+chr low / 7+chr middle / 10+chr high). Persistent 2 (-4 to your Essence intake per turn while sustained).\n- **As an independent figure (higher investment, levels 7–10 / later echelons, or a properly-bound mid-level+ Elementalist):** a properly bound elemental becomes its **own figure** on the map with its own Stamina and activation on the shared round -- the true summoner fantasy. Stamina per Veil §C3 (locked); strike damage for Rank 1 / companions uses the light-band printed above — Rank 2+ strike ladders are deferred (see Veil §C3). Bind unlocks: a 1st-level Elementalist starts with a Rank 1 extension only; a 5th-level Elementalist unlocks Rank 2 independent. Persistent 4 (-8 to your Essence intake per turn while sustained).\n- **The bind is the throttle:** a **Bind Power Roll (2d10 + Logic)** on cast, with an **edge if your Persona is equal to or higher than your Logic** (Bind Discipline's +1 still applies) -- high (17+) binds it clean and grants an edge on Command rolls; middle (12–16) binds but the elemental resists a Command once per encounter; low (≤11) **fails/breaks the bind** and the elemental becomes **hostile and free** for one round before the Veil pulls it back -- the Veil chapter's slipped-leash risk. A **heavy hit while sustaining** can also break the bind (Persona save vs. potency).\n- **The Price applies:** a willing elemental exacts a **task aligned to its nature** paid before or after (a Pyromancer honoring flame, a Geomancer restoring a fouled spring); coercing an unwilling one pays in **+1 Taint + 1 spirit-attention tick per Rank** at cast (`27-corruption-taint.md`) -- lightest weight among casters, but never zero. Non-pact Taint still respects the +1-per-scene cap.\n- **Sustaining a bound elemental** reduces Essence banked each turn (Persistent 2 for extensions, Persistent 4 for independents). You cannot rain Tempests at full tilt *and* hold a greater elemental without deliberate investment.\n- **Stamina (Veil §C3 locked 2026-09-18):** a summoned elemental has **rank base + (Logic × level)** Stamina — base **15** (Rank 1 and the signature companions) / **25** (Rank 2) / **35** (Rank 3) / **50** (Rank 4) / **65** (Rank 5). Summon Elemental binds up to **Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th**. At most **2** bound non-companion elementals at once; a new bind releases the oldest. Rank 2+ / Greater / R5 strike ladders and defense stamps remain deferred (see `22-the-veil.md` §C3)."
     },
     {
       "id": "17-elementalist#7-cost-band-chosen-at-3rd-level-provisional#11",
@@ -3823,7 +3824,7 @@
       "chapter": "The Elementalist",
       "heading": "11-Cost Band (chosen at 8th level; provisional)",
       "kind": "rules",
-      "text": "| Ability | Essence Cost | Type | Effect |\n|---|---|---|---|\n| **Greater Elemental Summon** | 11 | Main Action, Veil working | Bind a **Rank 4 elemental** (Rank 5 at Echelon 4 / late career) as an independent figure. It becomes an active combatant on the shared round with its own Stamina, its own maneuvers, its own signature (an Ancient Flame, a Roaring Storm, a Living Mountain, a Devouring Void). **Persistent 6** (-12/turn). Willingly-bound: extracts a **greater task** (a season's service to a temple, a fouled land restored, a corrupted vein cleansed); coerced: pays **3 corruption + 3 spirit-attention** on cast. The full summoner fantasy realized |\n| **World-Sundering** | 11 | Main Action, area cube 8 (dist 10) | **No Power Roll** -- the damage is automatic and keyed to your Logic. Every enemy in the cube of potency **strong** or weaker takes **20+chr elemental damage** and is **prone**; every enemy of potency **weak** is **reduced to 0 Stamina**; minions in the cube are outright destroyed. The ground in the cube becomes an **elemental scar** for the rest of the session -- difficult terrain, ambient elemental damage 3/turn to any non-elemental creature crossing it |\n| **Attunement Ascendant** | 11 | Maneuver, self | No roll. Until the end of the encounter, your Channel ramp is **already at +4 on cast and does not reset when you switch attunement**. Additionally, you may attune to **two elements at once**; you gain the drip and resonance bonus of both, and your Signature abilities may combine damage types (fire + lightning = plasma; earth + water = mud; etc., Director rules on combined effects). The self-buff apex -- turns you into a walking hurricane of typed damage for the rest of the fight |\n| **Break the Veil** | 11 | Main Action, self-centered aura 5 | The Veil thins around you. Every ally within the aura may **sustain any persistent working at reduced cost** (Persistent 2 becomes Persistent 1, draining -2/turn; Persistent 4 becomes Persistent 2, draining -4/turn). **You** may sustain **one** persistent working with **no Essence cost** for the rest of the encounter. Additionally, all your Signature and Heroic ability rolls gain edge for the duration. **Persistent 4** (-8/turn) on cast. The team-wide caster apex |"
+      "text": "| Ability | Essence Cost | Type | Effect |\n|---|---|---|---|\n| **Greater Elemental Summon** | 11 | Main Action, Veil working | Bind a **Rank 4 elemental** (Rank 5 at Echelon 4 / late career) as an independent figure. It becomes an active combatant on the shared round with its own Stamina, its own maneuvers, its own signature (an Ancient Flame, a Roaring Storm, a Living Mountain, a Devouring Void). **Persistent 6** (-12/turn). Willingly-bound: extracts a **greater task** (a season's service to a temple, a fouled land restored, a corrupted vein cleansed); coerced: pays **+3 Taint + 3 spirit-attention** on cast (`27-corruption-taint.md`). The full summoner fantasy realized |\n| **World-Sundering** | 11 | Main Action, area cube 8 (dist 10) | **No Power Roll** -- the damage is automatic and keyed to your Logic. Every enemy in the cube of potency **strong** or weaker takes **20+chr elemental damage** and is **prone**; every enemy of potency **weak** is **reduced to 0 Stamina**; minions in the cube are outright destroyed. The ground in the cube becomes an **elemental scar** for the rest of the session -- difficult terrain, ambient elemental damage 3/turn to any non-elemental creature crossing it |\n| **Attunement Ascendant** | 11 | Maneuver, self | No roll. Until the end of the encounter, your Channel ramp is **already at +4 on cast and does not reset when you switch attunement**. Additionally, you may attune to **two elements at once**; you gain the drip and resonance bonus of both, and your Signature abilities may combine damage types (fire + lightning = plasma; earth + water = mud; etc., Director rules on combined effects). The self-buff apex -- turns you into a walking hurricane of typed damage for the rest of the fight |\n| **Break the Veil** | 11 | Main Action, self-centered aura 5 | The Veil thins around you. Every ally within the aura may **sustain any persistent working at reduced cost** (Persistent 2 becomes Persistent 1, draining -2/turn; Persistent 4 becomes Persistent 2, draining -4/turn). **You** may sustain **one** persistent working with **no Essence cost** for the rest of the encounter. Additionally, all your Signature and Heroic ability rolls gain edge for the duration. **Persistent 4** (-8/turn) on cast. The team-wide caster apex |"
     },
     {
       "id": "17-elementalist#element-subclasses#15",
@@ -4012,7 +4013,7 @@
       "chapter": "The Street Priest",
       "heading": "Pact Alignment (Light or Dark)",
       "kind": "rules",
-      "text": "**Both pacts always exact the Price.** A pact is the game's clearest case of \"nothing for nothing\": your patron requires a **minor quest, service, or observance aligned to its moral code**, handled before or after the aid is granted — mercy and protection for a Light patron, a darker service or offering for an infernal one. Refusing or shirking the task is a real story beat, Director-adjudicated: the patron withdraws aid, calls the debt, or turns hostile. A priest who tries to **coerce** aid rather than earn it pays the dark-path corruption cost regardless of alignment.\n\n**Choosing Light** means you play a strict conduct code in exchange for the lighter corruption load — every Smite, every ward, every summon defaults to holy damage and holy flavor, and your patron is watching how you treat the vulnerable. **Choosing Dark** means your patron grants more, faster, cheaper in the moment — but every working loads corruption and debt that come due later, and the patron's tasks trend toward harder service. The choice *is* the build.\n\n---"
+      "text": "**Both pacts always exact the Price.** A pact is the game's clearest case of \"nothing for nothing\": your patron requires a **minor quest, service, or observance aligned to its moral code**, handled before or after the aid is granted — mercy and protection for a Light patron, a darker service or offering for an infernal one. Refusing or shirking the task is a real story beat, Director-adjudicated: the patron withdraws aid, calls the debt, or turns hostile. A priest who tries to **coerce** aid rather than earn it pays the dark-path **Taint** cost (`27-corruption-taint.md`) regardless of alignment — a **pact** Price, so it ignores the +1-per-scene cap.\n\n**Choosing Light** means you play a strict conduct code in exchange for the lighter corruption load — every Smite, every ward, every summon defaults to holy damage and holy flavor, and your patron is watching how you treat the vulnerable. **Choosing Dark** means your patron grants more, faster, cheaper in the moment — but every working loads corruption and debt that come due later, and the patron's tasks trend toward harder service. The choice *is* the build.\n\n---"
     },
     {
       "id": "18-street-priest#signature-abilities-no-conviction-cost#8",
@@ -5065,7 +5066,7 @@
       "chapter": "The Wire",
       "heading": "Deck software: suites vs payloads",
       "kind": "rules",
-      "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
+      "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
     },
     {
       "id": "21-the-wire#suites#21",
@@ -5083,7 +5084,7 @@
       "chapter": "The Wire",
       "heading": "Payloads (magazines)",
       "kind": "rules",
-      "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free deck slot as a magazine:\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |\n\n**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected refuses the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again."
+      "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free **host slot** as a magazine:\n\n- **Cyberdeck.** One free deck slot, shared with suites.\n- **Technomancer (no deck).** Compile onto **Wired Native** — Resonance / body-as-interface. The class feature is a 2-slot `resonance` / `body` host. Do not auto-grant any payload; compiling is still a Craft Project (Sabbat Vane’s playtest Whiteout×2 is a pregen loadout, not a class grant).\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |"
     },
     {
       "id": "21-the-wire#payloads-magazines#23",
@@ -5092,19 +5093,28 @@
       "chapter": "The Wire",
       "heading": "Payloads (magazines)",
       "kind": "rules",
-      "text": "> Load a payload chip onto a deck (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected refuses the use and spends no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`."
+      "text": "**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected refuses the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.\n\n> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected refuses the use and spends no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`."
     },
     {
-      "id": "21-the-wire#director-tools#24",
+      "id": "21-the-wire#payloads-magazines#24",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Payloads (magazines)",
+      "kind": "rules",
+      "text": "**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant."
+    },
+    {
+      "id": "21-the-wire#director-tools#25",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
       "heading": "Director tools",
       "kind": "rules",
-      "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card; you do not invent extra Matrix subsystems beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster, Overlay / Jacked In, node templates Rating 1–5, Integrity, Trace Alert, reveal). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
+      "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card; you do not invent extra Matrix subsystems beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster, Overlay / Jacked In, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
     },
     {
-      "id": "21-the-wire#voidmark-wired-presence#25",
+      "id": "21-the-wire#voidmark-wired-presence#26",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5227,7 +5237,7 @@
       "chapter": "The Veil",
       "heading": "Effect families",
       "kind": "rules",
-      "text": "| Family | Examples | Notes |\n|---|---|---|\n| **Artifice** | Enchant weapon/armor/focus, carve runes | Output = one-off Item with Veil flags (catalog SKUs later) |\n| **Ward** | Room/flat/block barrier, anti-spirit, anti-Wire bleed | Printed duration or upkeep |\n| **Reach** | Remote sense/strike via spotter | Spotter must Overlay / Jacked In / astral-equivalent; can be traced |\n| **Calling** | Long bind, site guardian, watcher | Persistent Price while bound |\n| **Threshold** | Open/close thin places, short gates | High heat; Concord/corps notice |\n| **Unmaking** | Break curses, scrub corruption, collapse a ward | Often Magnitude at least the original |"
+      "text": "| Family | Examples | Notes |\n|---|---|---|\n| **Artifice** | Enchant weapon/armor/focus, carve runes | Output = one-off Item with Veil flags (catalog SKUs later) |\n| **Ward** | Room/flat/block barrier, anti-spirit, anti-Wire bleed | Printed duration or upkeep |\n| **Reach** | Remote sense/strike via spotter | Spotter must Overlay / Jacked In / astral-equivalent; can be traced |\n| **Calling** | Long bind, site guardian, watcher | Persistent Price while bound |\n| **Threshold** | Open/close thin places, short gates | High heat; Concord/corps notice |\n| **Unmaking** | Break curses, scrub **Taint**, collapse a ward | Often Magnitude at least the original. Taint cleanse ladder and Magnitude gates live in `27-corruption-taint.md` |"
     },
     {
       "id": "22-the-veil#detection-buildup-is-a-clock#14",
@@ -5356,13 +5366,22 @@
       "text": "Leave unset until a later Veil pass:\n\n- Rank 2+ / Greater / Rank 5 **strike damage ladders**\n- **Defense stamps** on Veil Actors (Wired / Reflex / Physique, etc.)\n\nUntil those land, use Rank 1 / companion / spirit strike bands already printed in the class chapters, and Director judgment for higher-rank strike damage and defenses. Template Actors bake **base-only** Stamina; live summon stamps apply Logic×Level / Persona×Level."
     },
     {
-      "id": "22-the-veil#not-yet-written#28",
+      "id": "22-the-veil#corruption-taint#28",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Corruption & Taint",
+      "kind": "rules",
+      "text": "The shared hero **Taint** track (0–12; Clean / Marked / Stained / Claimed / Hollowed) lives in `27-corruption-taint.md`. Class text that says \"corruption\" as a Price means **Taint** on that track. Unmaking workings above are the cleanse family; rest never cleanses; chrome does not raise Taint. Pact Prices ignore the +1-per-scene cap."
+    },
+    {
+      "id": "22-the-veil#not-yet-written#29",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
       "heading": "Not yet written",
       "kind": "rules",
-      "text": "Thin-place gazetteer mechanics, full corruption ladder, and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. Ritual Workings above are the B43 lock; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build."
+      "text": "Thin-place gazetteer mechanics and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. The hero Taint ladder is **B80** (`27`). Ritual Workings above are the B43 lock; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build."
     },
     {
       "id": "23-machines#machines-drones-vehicles-buildings#1",
@@ -5776,7 +5795,7 @@
       "chapter": "Opposition (Director)",
       "heading": "What this chapter is for",
       "kind": "rules",
-      "text": "When the quiet part of a run ends, the Director needs a **street-fight procedure**: how hard the fight should feel, what shape the threats take, how Malice and Trace Alert feed each other, and when the table should cut to escape or aftermath.\n\nGhostwire opposition uses the street-fight procedure in this chapter. Actors still carry level, organization, role, Stamina, and Malice features — you resolve them with `04` and the printed card. Ghostwire adds:\n\n- **Reskin doctrine** — Reach names, guns, chrome, and Wire fiction on existing Actor math.\n- **Trace Alert → Malice** — Wired heat that pays into the same Malice pool meatspace fights use (`21`).\n- **Two-board fights** — meatspace grid and Wired topology cutting between each other (`04`, `21`).\n- **Foundry pointers** — bestiary Actors and Reach event tables, not a lore dump in print.\n\n---"
+      "text": "When the quiet part of a run ends, the Director needs a **street-fight procedure**: how hard the fight should feel, what shape the threats take, how Malice and Trace Alert feed each other, and when the table should cut to escape or aftermath.\n\nGhostwire opposition uses the street-fight procedure in this chapter. Actors still carry level, organization, role, Stamina, and Malice features — you resolve them with `04` and the printed card. Ghostwire adds:\n\n- **Reskin doctrine** — Reach names, guns, chrome, and Wire fiction on existing Actor math.\n- **Trace Alert → Malice** — Wired heat that pays into the same Malice pool meatspace fights use (`21`).\n- **Two-board fights** — meatspace grid and Wired topology cutting between each other (`04`, `21`).\n- **Foundry pointers** — bestiary Actors and Reach event tables, not a lore dump in print.\n- **Taint leftover** — corrupted zones and pact beats can stain runners after the fight (`27-corruption-taint.md`; Director notes in `docs/directors/corruption-taint.md`). Do not invent a second Malice track for Taint.\n\n---"
     },
     {
       "id": "25-opposition#foes-are-actors#3",
@@ -6010,7 +6029,7 @@
       "chapter": "Lifestyle & Downtime",
       "heading": "Recover",
       "kind": "rules",
-      "text": "Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band."
+      "text": "Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band. **Rest never cleanses Taint** — Recoveries, Lifestyle, and respite leave the 0–12 track untouched (`27-corruption-taint.md`)."
     },
     {
       "id": "26-lifestyle-downtime#shop#13",
@@ -6101,6 +6120,123 @@
       "heading": "Cross-references",
       "kind": "rules",
       "text": "| Topic | Where |\n|---|---|\n| Wealth firewall, payouts, §Craft skills | `08-kits-gear-wealth.md` |\n| Medic Reagents restock lock | `15-medic.md` |\n| Invent a Mod / mod slots | `10-mods.md` |\n| Contacts / Fixer Retainer | This chapter (pointer); gear **1G**; class text |\n| Chrome install / BI | `09-chrome-body-integrity.md` |\n| Ritual Workings | `22-the-veil.md` |\n| Wrench Building Lifestyle Hook | `16-wrench.md` |\n| Upkeep ¥ | This chapter’s band table |"
+    },
+    {
+      "id": "27-corruption-taint#corruption-taint#1",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Corruption & Taint",
+      "kind": "rules",
+      "text": "**RAW status:** draft (B80 lock 2026-09-19)  \n**Sources:** `docs/spikes/B80-CORRUPTION-TAINT-TRACK.md` (DESIGN LOCKED), L1 Corruption & Taint (lore only — procedures live here), `docs/raw/22-the-veil.md` (Unmaking / Price), `docs/raw/05-ancestries.md` (Mutant Flaw), `docs/raw/09-chrome-body-integrity.md` (chrome is not this track)\n\n---"
+    },
+    {
+      "id": "27-corruption-taint#what-this-chapter-covers#2",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "What this chapter covers",
+      "kind": "rules",
+      "text": "**Taint** is the shared hero track for the Dark's foothold in a runner — radiation-like spiritual fallout, not a damage type and not a second Stamina pool. **Corruption** (the damage type) still exists on abilities. This chapter is the meter.\n\nEvery runner uses this track, **Cyborgs included**. Chrome, rest, and the retired Mutant **Corruption Load** do not replace it.\n\n> Open a **hero** (or pregen) sheet. **Taint** is a number input **0–12** in two places: a compact row in the **sheet header** (visible on every tab), and a **Taint** fieldset on the **Stats** tab directly under **Body Integrity** (same overlay family as Integrity / Wired). The band chip (**Clean / Marked / Stained / Claimed / Hollowed**) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes `flags.draw-steel-ghostwire.taint`. New heroes and pregens start at **0**. Rest and chrome install do not move it.\n> On the **Biography** tab, **Corruption History** is a free-text notes field next to Biography / Director notes. Write how the stain landed, tells, cleanses, pacts, and debts. It stores `flags.draw-steel-ghostwire.corruptionHistory` (empty by default). It is not a second meter."
+    },
+    {
+      "id": "27-corruption-taint#the-track#3",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "The track",
+      "kind": "rules",
+      "text": "**Taint** is an integer from **0** to **12**. Chargen default is **0**. It does not heal with rest. It must be cleansed, or it stays.\n\n| Taint | Band | Read |\n|---|---|---|\n| **0** | **Clean** | Unmarked. No gift, no cost. |\n| **1–3** | **Marked** | First foothold. Tells show under stress. |\n| **4–6** | **Stained** | Settled wrongness. Gifts and costs both show. |\n| **7–9** | **Claimed** | The Dark has a hook. Power is easy; leaving is hard. |\n| **10–12** | **Hollowed** | The Word is failing in you. Campaign-scale crisis. |\n\nBand effects apply while your current Taint sits in that band. Crossing a threshold changes the band immediately.\n\nA **scene** is what the table already calls a scene: a combat, a ritual sealing, a zone traversal beat, or the Director's cut."
+    },
+    {
+      "id": "27-corruption-taint#how-taint-is-gained#4",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "How Taint is gained",
+      "kind": "rules",
+      "text": "Taint is earned or inflicted where creation and un-speaking touch. It is not caught like a cold.\n\n| Source | Typical award | Notes |\n|---|---|---|\n| **Exposure** | **+1** | Linger in a corrupted zone, a thin place gone Null-ward, or a dead-air Wired stretch. Award when a scene of meaningful lingering ends, or after a failed **Corruption** / **Instinct** endurance test the Director calls. |\n| **Direct defacement** | **+1** unless printed higher | Demon touch, curse, Great Dark reach. |\n| **Veil Price** | As printed; else **+1** | Coerced summons and Dark-heavy or botched ritual seals. Class text that says \"1 corruption\" means **+1 Taint**. Elementalist coerced summon: **+1 Taint + 1 spirit-attention per Rank**. Greater Elemental coerced: **+3 Taint + 3 spirit-attention** (`17`, `22`). |\n| **Willing defacement** | **+1** | Director may award when a runner chooses un-speaking (murder-as-offering, feeding a thin place, and the like). |\n| **Pact** | Printed amount, or **+1** | Sealing, invoking, or paying a Dark / infernal pact Price. A Street Priest who **coerces** aid (any pact) pays the dark-path Taint cost. Dark Pact workings that \"load corruption\" are **+1 Taint** unless printed otherwise (`18`). |"
+    },
+    {
+      "id": "27-corruption-taint#per-scene-cap#5",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Per-scene cap",
+      "kind": "rules",
+      "text": "**+1 Taint maximum per scene** from all **non-pact** sources combined. A scene that includes both zone exposure and a coerced summon still awards only **+1** unless a **pact** is involved."
+    },
+    {
+      "id": "27-corruption-taint#pact-exception#6",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Pact exception",
+      "kind": "rules",
+      "text": "A **pact** Price may raise Taint by its printed amount in the same scene, even if the cap already fired. If no amount is printed, the pact Price is **+1** and still ignores the cap (so a scene can be +1 exposure +1 pact = **+2**)."
+    },
+    {
+      "id": "27-corruption-taint#what-never-moves-the-track#7",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "What never moves the track",
+      "kind": "rules",
+      "text": "These never raise Taint and never cleanse it:\n\n- **Chrome** — install, removal, Body Integrity spend or refund, Cyborg conversion, Frame Modules (`09`)\n- **Rest** — Recoveries, Lifestyle upkeep, respite, downtime Recover, spending ¥ (`04`, `26`)\n- **Advancement** — leveling, Victory, characteristic increases (`24`)\n\n**Chrome does not raise Taint.** Chrome is secular un-speaking: it spends Body Integrity and can erode magic. It does **not** stain this track. A Cyborg can still be tainted by demons, pacts, and zones."
+    },
+    {
+      "id": "27-corruption-taint#band-effects#8",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Band effects",
+      "kind": "rules",
+      "text": "Power with a price. Apply the row for your current Taint. These are table rules — apply them when they fire; do not invent a second mutation menu.\n\n| Band | Gift (+) | Cost (−) |\n|---|---|---|\n| **Clean (0)** | None | None |\n| **Marked (1–3)** | Edge on tests to sense or identify taint, thin places, demons, and corrupted zones | Once per scene in a clean corp, Concord, or \"safe\" space, when the mark shows, take a **bane** on one Persona test (Director picks the beat) |\n| **Stained (4–6)** | Once per scene, after you damage a creature with a **Magic**-keyword ability or a **corruption**-typed strike, that creature takes extra psychic or corruption damage equal to your **level** | **Bane** on tests to resist demonic influence, Dark bargains, and compulsion. Whenever you tick spirit-attention, tick **+1 extra** |\n| **Claimed (7–9)** | Once per scene, gain an **edge** on one Power Roll. If you do, the Director gains **+1 Malice** or a thin-place-sensitive notices you | Holy / Light-pact damaging abilities against you deal extra damage equal to your **level**. You cannot be reduced below **7** except by a Claimed-or-higher cleanse path |\n| **Hollowed (10–12)** | Once per scene, ignore one **bane** on a Magic-keyword or corruption-typed Power Roll, **or** gain an edge on that roll (player choice) | At the start of each combat, the Director gains **+1 Malice**. You have damage weakness **5** against holy (Light-pact) damage. At **12**, the table pauses: redemption quest, retirement-as-NPC, or a last-run clock — Director and player. Do **not** auto-remove the hero |"
+    },
+    {
+      "id": "27-corruption-taint#band-effects#9",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Band effects",
+      "kind": "rules",
+      "text": "Visible tells (greying flesh, static in the voice, features that drift) are Director color on top of the row. They are not a second economy."
+    },
+    {
+      "id": "27-corruption-taint#how-taint-is-cleansed#10",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "How Taint is cleansed",
+      "kind": "rules",
+      "text": "Rest never cleanses Taint. Cleansing is a rite, an Unmaking working, or a quest.\n\n| Current band | Typical path | Typical drop |\n|---|---|---|\n| **Marked (1–3)** | Street-Priest **Light** downtime rite, or Unmaking Ritual Working Magnitude **1** (`22`) | **−1** |\n| **Stained (4–6)** | Unmaking Magnitude **2–3**, or a short quest reagent + rite | **−1** or **−2** |\n| **Claimed (7–9)** | Unmaking Magnitude **4**, or a dedicated quest (true sacrifice / turning-back) | **−1** to **−3**. Cannot reach **Clean** in one working |\n| **Hollowed (10–12)** | Campaign quest | May drop to **Claimed**. May never fully lift in a mortal life (Director) |\n\nUnmaking is the Ritual Working family that scrubs corruption (`22`). Extra reagents, assistants, and a proper sanctum still grant edges or blunt Price on the sealing — they do not skip the Magnitude gate.\n\nA Light-pact Street Priest can lead a **Marked** cleanse as a downtime rite without a full Magnitude 1 Project when the Director agrees the stain is fresh. Deeper bands need the Unmaking ladder or a quest."
+    },
+    {
+      "id": "27-corruption-taint#mutants-and-the-retired-load#11",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Mutants and the retired Load",
+      "kind": "rules",
+      "text": "**Mutant Corruption Load is retired.** Mutants use this shared Taint track like every other People.\n\nThe optional cosmetic **Corruptive Flaw** (`05`) is ancestry fiction: tells, roleplay, scene color. It has **no Load bands**, costs no ancestry points, and is **not** Taint. Reducing Taint does not erase a Flaw. Being born in a corrupted zone does not force starting Taint; the Director may set a higher starting score as a campaign hook."
+    },
+    {
+      "id": "27-corruption-taint#director-notes-short#12",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Director notes (short)",
+      "kind": "rules",
+      "text": "Corrupted zones, thin places, and pact clocks are run hooks — how to pace them lives in `docs/directors/corruption-taint.md`. Opposition procedure stays in `25`. Do not invent a second Malice track for Taint; Claimed / Hollowed already feed Malice when their costs fire."
+    },
+    {
+      "id": "27-corruption-taint#pointers#13",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "Pointers",
+      "kind": "rules",
+      "text": "| Topic | Where |\n|---|---|\n| Unmaking / Ritual Workings / Price | `22-the-veil.md` |\n| Elementalist coerced-summon Price | `17-elementalist.md` |\n| Street Priest pact / coerce | `18-street-priest.md` |\n| Mutant Flaw; Load retired | `05-ancestries.md` |\n| Chrome is not Taint | `09-chrome-body-integrity.md` |\n| Rest / respite never cleanse | `26-lifestyle-downtime.md`, `04-combat.md` |\n| Corruption skill | `02-heroes-characteristics.md` |\n| Zone hooks | `docs/directors/corruption-taint.md` |"
     },
     {
       "id": "L1-setting-primer#setting-primer#1",
@@ -7198,7 +7334,7 @@
       "chapter": "Ossian Reach — Street Color",
       "heading": "The three fixtures of the Reach",
       "kind": "lore",
-      "text": "Every campaign hive needs three things a GM can grab on turn one: someone who hands out the work, somewhere the players should not go, and a way out of the box. Ossian Reach has all three, named and ready. The signature fixer — Mama Cassavir, “the Switchboard.” The Reach's default job-giver works out of a shuttered transit exchange on the upper Flats, a dead switching-station she's wired back to life and named herself after — an old woman (or so she appears) who sits at the junction of everything that moves through the middle of the hive. Cassavir is the seam between up and down: she takes clean-branded contracts down from the Spires and corp cut-outs above, and dirty ones up from Nyx's Churn (Ch. 8) below, and she connects the crew to whichever end pays. She is not muscle and not a mage — she is the phone, the one node everyone in the Flats routes through, and her power is that severing her would cut a hundred quiet deals at once, so no one does.\n- Her code. Cassavir sells introductions, not people. She will burn a client to protect a crew's anonymity but never the reverse, because her whole franchise is being the fixer runners trust when every corp would sell them out — and she guards that reputation like the asset it is. Cross her once and you don't get killed; you get disconnected, which in the Reach is worse..), and a relationship to spend and endanger."
+      "text": "Every campaign hive needs three things a GM can grab on turn one: someone who hands out the work, somewhere the players should not go, and a way out of the box. Ossian Reach has all three, named and ready. The signature fixer — Mama Cassavir, “the Switchboard.” The Reach's default job-giver works out of a shuttered transit exchange on the upper Flats, a dead switching-station she's wired back to life and named herself after — an old woman (or so she appears) who sits at the junction of everything that moves through the middle of the hive. Soft chrome and a good cosmetician sell the grandmother; underneath she is a datajacked cyborg Controller with a Switchboard Deck and a private overlay-cell. Cassavir is the seam between up and down: she takes clean-branded contracts down from the Spires and corp cut-outs above, and dirty ones up from Nyx's Churn (Ch. 8) below, and she connects the crew to whichever end pays. She is not street muscle and not a mage — she is the phone, the one node everyone in the Flats routes through, and her power is that severing her would cut a hundred quiet deals at once, so no one does.\n- Her code. Cassavir sells introductions, not people. She will burn a client to protect a crew's anonymity but never the reverse, because her whole franchise is being the fixer runners trust when every corp would sell them out — and she guards that reputation like the asset it is. Cross her once and you don't get killed; you get disconnected, which in the Reach is worse..), and a relationship to spend and endanger."
     },
     {
       "id": "L3-ossian-reach-color#the-worst-corrupted-zone-deadfall-nine#5",
@@ -7372,7 +7508,16 @@
       "text": "Flood-readers who keep their own timetable when the official sluice schedule lies."
     },
     {
-      "id": "L3-ossian-reach-color#sister-hive-ashenreach#24",
+      "id": "L3-ossian-reach-color#mama-cassavir-the-switchboard#24",
+      "file": "L3-ossian-reach-color.md",
+      "source": "docs/manuscript/01-lore/L3-ossian-reach-color.md",
+      "chapter": "Ossian Reach — Street Color",
+      "heading": "Mama Cassavir, “The Switchboard”",
+      "kind": "lore",
+      "text": "The crew's first fixer. She doesn't hold turf — she holds connections. Grandmother face for the table; underneath, a cyborg Controller — Switchboard Deck, overlay-cell, Seize Control and Lockout, implant backup only."
+    },
+    {
+      "id": "L3-ossian-reach-color#sister-hive-ashenreach#25",
       "file": "L3-ossian-reach-color.md",
       "source": "docs/manuscript/01-lore/L3-ossian-reach-color.md",
       "chapter": "Ossian Reach — Street Color",
@@ -7381,7 +7526,7 @@
       "text": "Ossian Reach remains the **default home hive** for play. Ashenreach exists so Directors can stage rival-city politics, long caravan runs, and \"someone else's Grid\" without inventing a nameless glow on the horizon.\n\n---"
     },
     {
-      "id": "L3-ossian-reach-color#overview#25",
+      "id": "L3-ossian-reach-color#overview#26",
       "file": "L3-ossian-reach-color.md",
       "source": "docs/manuscript/01-lore/L3-ossian-reach-color.md",
       "chapter": "Ossian Reach — Street Color",
@@ -7390,7 +7535,7 @@
       "text": "**Ashenreach** is the inland sister-hive: dryer, higher, and harder-edged than coastal Ossian Reach. Where the Reach climbs out of drowned floors and black water, Ashenreach climbs out of ash basins and old burn-scars — stacked megablocks braced into mountain shoulders, neon cutting pink and cyan through dust haze instead of sea fog. Locals call the lit core **the Ember Sprawl**; outside the walls the wastes read as charcoal and glass, not swamp.\n\nConglomerate presence skews **Ferrum / Ironclad / Meridian** in the popular story (bones, enforcement, traffic-net), but Ashenreach is not a single-corp company town. It is a full Hive: Halo and Spires overhead, a colder Grid, underlevels that choke on ash instead of floodwater. Signal light hits the upper city hard — some runners swear the halo sits closer here, or that the Wired speaks with a thinner, more brittle voice once you leave Reach Trace routes.\n\n---"
     },
     {
-      "id": "L3-ossian-reach-color#rivalry-with-ossian-reach#26",
+      "id": "L3-ossian-reach-color#rivalry-with-ossian-reach#27",
       "file": "L3-ossian-reach-color.md",
       "source": "docs/manuscript/01-lore/L3-ossian-reach-color.md",
       "chapter": "Ossian Reach — Street Color",
@@ -7738,7 +7883,7 @@
       "chapter": "Life on the Flats",
       "heading": "The Gangs & Factions — Street Knowledge",
       "kind": "setting",
-      "text": "What follows is word on the street, not corp record — the kind of thing a fixer tells a green crew over a ¥6 noodle bowl. Every entry is a thread a Director can pull.\n\n**Mama Cassavir, \"the Switchboard\" — the fixer who is the phone.** Not muscle, not a mage — indispensable. Every deal in the Flats routes through her dead transit exchange. She sits at the seam between the clean jobs that come down from the Spires and the dirty ones that come up from Nyx's Churn, and she'll let a crew choose which end to work. Sever her and a hundred quiet deals die at once, so nobody does. She is most crews' first fixer and most campaigns' first face.\n\nStreet heat right now: someone's been reading her encrypted deal-threads. She's quietly hiring — from herself — to find the leak.\n\n**The Nyx Cartel & the Churn — the legitimized underworld.** The tenth Congress seat and the one always closest to losing it. Nyx runs the Sinks, the smuggling lanes, and the **Undermarket** — a moving black-market bazaar in the dead deep levels, neutral ground for all Ten under one law: **no violence, on pain of the Widow.** Their fixer-and-smuggler web is the crew's actual supply chain and job board. Frenemy by default; they know more about the war under the floor than any Crown denier, because they live closest to it.\n\nStreet heat right now: the Churn's tax is climbing into the Flats to fund Nyx's fight against the rising eleventh chair. Merchants are angry and scared."
+      "text": "What follows is word on the street, not corp record — the kind of thing a fixer tells a green crew over a ¥6 noodle bowl. Every entry is a thread a Director can pull.\n\n**Mama Cassavir, \"the Switchboard\" — the fixer who is the phone.** She looks like an elderly grandmother; she is a **cyborg hacker Controller** under cosmetics — decked, Switchboard of the Flats. Not street muscle: she sells introductions and holds nodes. Every deal in the Flats routes through her dead transit exchange. She sits at the seam between the clean jobs that come down from the Spires and the dirty ones that come up from Nyx's Churn, and she'll let a crew choose which end to work. Sever her and a hundred quiet deals die at once, so nobody does. She is most crews' first fixer and most campaigns' first face.\n\nStreet heat right now: someone's been reading her encrypted deal-threads. She's quietly hiring — from herself — to find the leak.\n\n**The Nyx Cartel & the Churn — the legitimized underworld.** The tenth Congress seat and the one always closest to losing it. Nyx runs the Sinks, the smuggling lanes, and the **Undermarket** — a moving black-market bazaar in the dead deep levels, neutral ground for all Ten under one law: **no violence, on pain of the Widow.** Their fixer-and-smuggler web is the crew's actual supply chain and job board. Frenemy by default; they know more about the war under the floor than any Crown denier, because they live closest to it."
     },
     {
       "id": "03-life-on-the-flats#the-gangs-factions-street-knowledge#10",
@@ -7747,7 +7892,7 @@
       "chapter": "Life on the Flats",
       "heading": "The Gangs & Factions — Street Knowledge",
       "kind": "setting",
-      "text": "**The Corran guild-clans — the labor caste that stayed.** Compact, immensely strong, and long-memoried, the Corran families hold much of the Flats' grey commerce — the markets, the stalls, the informal courts. The corps still read them as \"just labor\"; the street knows better. Their power runs on the **debt-web** — who owes whom, going back thirty years. Vouch into it and you have kin; cross it and the whole district remembers.\n\n**Ironclad Martial (and its deserters) — the private army and its castoffs.** Ironclad is the milspec PMC that sells the Ten their kill-teams (the Iron Writ). Its castoff gear — salvaged combat-frames, mil-surplus arms — is worn openly in the Flats as street chrome. Just as common are **Ironclad deserters** working the Flats as enforcers-for-hire and \"insurance\": polite until they aren't. Hit a run that touches real Ironclad property and their retrieval contractors come, and they don't shop politely.\n\n**Caduceus Vitalis & the ripperdocs — you rent your body from them.** Caduceus owns health itself; its deniable black clinic (the **Grafthouse**) pushes medicine and chrome down into the Flats. Beneath it, the unlicensed **ripperdocs** are a pillar of low-Lifestyle life — cheaper, no records, no guarantees. Street chrome down here is scarred, mismatched, and proud: worn like a tattoo that says I chose this and I own it outright.\n\nStreet heat right now: a batch of grafted limbs sold recently is \"phoning home\" to Caduceus on a hidden channel — and the buyers are starting to disappear."
+      "text": "Street heat right now: the Churn's tax is climbing into the Flats to fund Nyx's fight against the rising eleventh chair. Merchants are angry and scared.\n\n**The Corran guild-clans — the labor caste that stayed.** Compact, immensely strong, and long-memoried, the Corran families hold much of the Flats' grey commerce — the markets, the stalls, the informal courts. The corps still read them as \"just labor\"; the street knows better. Their power runs on the **debt-web** — who owes whom, going back thirty years. Vouch into it and you have kin; cross it and the whole district remembers.\n\n**Ironclad Martial (and its deserters) — the private army and its castoffs.** Ironclad is the milspec PMC that sells the Ten their kill-teams (the Iron Writ). Its castoff gear — salvaged combat-frames, mil-surplus arms — is worn openly in the Flats as street chrome. Just as common are **Ironclad deserters** working the Flats as enforcers-for-hire and \"insurance\": polite until they aren't. Hit a run that touches real Ironclad property and their retrieval contractors come, and they don't shop politely.\n\n**Caduceus Vitalis & the ripperdocs — you rent your body from them.** Caduceus owns health itself; its deniable black clinic (the **Grafthouse**) pushes medicine and chrome down into the Flats. Beneath it, the unlicensed **ripperdocs** are a pillar of low-Lifestyle life — cheaper, no records, no guarantees. Street chrome down here is scarred, mismatched, and proud: worn like a tattoo that says I chose this and I own it outright."
     },
     {
       "id": "03-life-on-the-flats#the-gangs-factions-street-knowledge#11",
@@ -7756,7 +7901,7 @@
       "chapter": "Life on the Flats",
       "heading": "The Gangs & Factions — Street Knowledge",
       "kind": "setting",
-      "text": "**Aureole Security & the corp presence — the watchers from above.** HALO's immaculate white-armored peacekeepers are the PR-friendly face of the Machine; Sanctum's audit-drones sweep for anything off the ledger; Ferrum's enforcers guard the deep infrastructure. None of them hold the Flats — they sweep it. When they come, grey-tech stalls collapse and vanish in minutes and everyone with a SIN worth scanning becomes very interested in the floor.\n\n**The street-faithful — the lamp on the block.** Below the Radiant Concord's luminous corporate liturgy are the real ones: **Corran Street-Priests** and their kind working a Flats block with a lamp and a faith that costs them something. They can be lent a little of the Word — and have it withdrawn — which is exactly why they can lose, and exactly why the street half-trusts them. Never mistake the lamp for weakness."
+      "text": "Street heat right now: a batch of grafted limbs sold recently is \"phoning home\" to Caduceus on a hidden channel — and the buyers are starting to disappear.\n\n**Aureole Security & the corp presence — the watchers from above.** HALO's immaculate white-armored peacekeepers are the PR-friendly face of the Machine; Sanctum's audit-drones sweep for anything off the ledger; Ferrum's enforcers guard the deep infrastructure. None of them hold the Flats — they sweep it. When they come, grey-tech stalls collapse and vanish in minutes and everyone with a SIN worth scanning becomes very interested in the floor.\n\n**The street-faithful — the lamp on the block.** Below the Radiant Concord's luminous corporate liturgy are the real ones: **Corran Street-Priests** and their kind working a Flats block with a lamp and a faith that costs them something. They can be lent a little of the Word — and have it withdrawn — which is exactly why they can lose, and exactly why the street half-trusts them. Never mistake the lamp for weakness."
     },
     {
       "id": "03-life-on-the-flats#director-plot-hooks-seeds-for-the-flats#12",
@@ -7801,7 +7946,7 @@
       "chapter": "Switchboard",
       "heading": "Director's Section",
       "kind": "setting",
-      "text": "#### Key NPCs\n\n**Cassavir** — the fixer the district is named for; appears as an old woman, is the phone through which every deal in the Flats routes. Not muscle, not a mage — indispensable. She opens most sessions and can hand the crew any of the Ten's hooks. Severing her would cut a hundred quiet deals at once, so no one does.\n\n**Tover \"Two-Line\" Vask** — Cassavir's floor-runner, a Corran guild-clan kid who carries messages she won't trust to the Wired. Reads every face in the hall.\n\n**The Sleeper** — the hovercab driver who is never actually asleep; a Nyx set of eyes on Cassavir's ground, and everyone pretends not to know it.\n\n#### Security\n\nZone: Flats — semi-lawless. No corp presence; Cassavir's own tolerated order.\n\nCassavir keeps no visible guns, but the hall is under a dozen quiet guarantees — every gang with a deal pending has a stake in the peace. Draw a weapon here and you make a hundred enemies at once. Effective **Alert** response is social, not armed: the room turns cold, deals evaporate, and doors close across the district.\n\nTwo \"porters\" (Ironclad-trained, off the books) handle anyone who forgets the etiquette. They escalate slowly and never first.\n\n#### The Overlay (What the Wired Shows Here)\n\nDense but edited. Cassavir runs a private overlay-cell: SIN-readers at the escalator log every face, but the public AR is scrubbed of corp advertising — a rare quiet in the visual noise, and a signal that you've entered her jurisdiction."
+      "text": "#### Key NPCs\n\n**Cassavir** — the fixer the district is named for. She *appears* elderly and unarmed in a booth of dead switchgear; a good cosmetician and **soft chrome** sell the grandmother. Underneath she is a **datajacked cyborg Controller** — decked (Switchboard Deck), private overlay-cell on the hall, Seize Control and Lockout on nodes and people. Not street muscle and not a mage: backup is **implant weaponry**, not a gun on the table. She opens most sessions and can hand the crew any of the Ten's hooks. Severing her would cut a hundred quiet deals at once, so no one does.\n\n**Tover \"Two-Line\" Vask** — Cassavir's floor-runner, a Corran guild-clan kid who carries messages she won't trust to the Wired. Reads every face in the hall.\n\n**The Sleeper** — the hovercab driver who is never actually asleep; a Nyx set of eyes on Cassavir's ground, and everyone pretends not to know it.\n\n#### Security\n\nZone: Flats — semi-lawless. No corp presence; Cassavir's own tolerated order.\n\nCassavir *appears* elderly and unarmed — no visible guns on the booth. She is a cyborg Controller: the hall is under a dozen quiet guarantees, and her people plus the overlay-cell are already in position. Draw a weapon here and you make a hundred enemies at once. Effective **Alert** response is social first, then Wire: the room turns cold, deals evaporate, doors close across the district, and she can Seize Control of the hall's nodes. If it comes to a body, backup is implant weaponry — not street muscle."
     },
     {
       "id": "04-switchboard#directors-section#4",
@@ -7810,7 +7955,7 @@
       "chapter": "Switchboard",
       "heading": "Director's Section",
       "kind": "setting",
-      "text": "A hacker who pushes past the surface finds the hall's true architecture: hundreds of encrypted deal-threads knotting through Cassavir's booth. Reading them is a major score and a fast way to become a loose end.\n\nDead-drop tags float over three specific pillars — anonymous job-postings only visible to those given the key.\n\n#### Plot Hooks\n\n1. The On-Ramp. Cassavir has a job — she always has a job. The clean version came down from the Spires; the dirty version came up from Nyx's Churn. She'll let the crew choose which end they work, and the choice has teeth.\n\n2. The Loose Thread. Someone has been reading Cassavir's deal-threads. She hires the crew off the books, from herself, to find the leak — not knowing (or not saying) it leads to the Sleeper, and through him to Nyx.\n\n3. The Severance. A conglomerate finally decides the Switchboard is worth taking. If Cassavir falls, the crew loses their on-ramp — and the whole district's economy convulses. A campaign-turning event, seeded here."
+      "text": "Two \"porters\" (Ironclad-trained, off the books) handle anyone who forgets the etiquette. They escalate slowly and never first.\n\n#### The Overlay (What the Wired Shows Here)\n\nDense but edited. Cassavir runs a **private overlay-cell** from the Switchboard Deck: SIN-readers at the escalator log every face, but the public AR is scrubbed of corp advertising — a rare quiet in the visual noise, and a signal that you've entered her jurisdiction. A Controller's hall: she holds the nodes; Lockout punishes anyone who tries to take them back.\n\nA hacker who pushes past the surface finds the hall's true architecture: hundreds of encrypted deal-threads knotting through Cassavir's booth. Reading them is a major score and a fast way to become a loose end.\n\nDead-drop tags float over three specific pillars — anonymous job-postings only visible to those given the key.\n\n#### Plot Hooks\n\n1. The On-Ramp. Cassavir has a job — she always has a job. The clean version came down from the Spires; the dirty version came up from Nyx's Churn. She'll let the crew choose which end they work, and the choice has teeth.\n\n2. The Loose Thread. Someone has been reading Cassavir's deal-threads. She hires the crew off the books, from herself, to find the leak — not knowing (or not saying) it leads to the Sleeper, and through him to Nyx.\n\n3. The Severance. A conglomerate finally decides the Switchboard is worth taking. If Cassavir falls, the crew loses their on-ramp — and the whole district's economy convulses. A campaign-turning event, seeded here."
     },
     {
       "id": "04-switchboard#player-description#5",

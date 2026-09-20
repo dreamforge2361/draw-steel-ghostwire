@@ -17,7 +17,7 @@ sits, and Vera Solenne wages her campaign for it. A crew working the Reach is wo
 
 ### The three fixtures of the Reach
 
-Every campaign hive needs three things a GM can grab on turn one: someone who hands out the work, somewhere the players should not go, and a way out of the box. Ossian Reach has all three, named and ready. The signature fixer — Mama Cassavir, “the Switchboard.” The Reach's default job-giver works out of a shuttered transit exchange on the upper Flats, a dead switching-station she's wired back to life and named herself after — an old woman (or so she appears) who sits at the junction of everything that moves through the middle of the hive. Cassavir is the seam between up and down: she takes clean-branded contracts down from the Spires and corp cut-outs above, and dirty ones up from Nyx's Churn (Ch. 8) below, and she connects the crew to whichever end pays. She is not muscle and not a mage — she is the phone, the one node everyone in the Flats routes through, and her power is that severing her would cut a hundred quiet deals at once, so no one does.
+Every campaign hive needs three things a GM can grab on turn one: someone who hands out the work, somewhere the players should not go, and a way out of the box. Ossian Reach has all three, named and ready. The signature fixer — Mama Cassavir, “the Switchboard.” The Reach's default job-giver works out of a shuttered transit exchange on the upper Flats, a dead switching-station she's wired back to life and named herself after — an old woman (or so she appears) who sits at the junction of everything that moves through the middle of the hive. Soft chrome and a good cosmetician sell the grandmother; underneath she is a datajacked cyborg Controller with a Switchboard Deck and a private overlay-cell. Cassavir is the seam between up and down: she takes clean-branded contracts down from the Spires and corp cut-outs above, and dirty ones up from Nyx's Churn (Ch. 8) below, and she connects the crew to whichever end pays. She is not street muscle and not a mage — she is the phone, the one node everyone in the Flats routes through, and her power is that severing her would cut a hundred quiet deals at once, so no one does.
 - Her code. Cassavir sells introductions, not people. She will burn a client to protect a crew's anonymity but never the reverse, because her whole franchise is being the fixer runners trust when every corp would sell them out — and she guards that reputation like the asset it is. Cross her once and you don't get killed; you get disconnected, which in the Reach is worse..), and a relationship to spend and endanger.
 
 ### The worst corrupted zone — Deadfall Nine
@@ -162,7 +162,7 @@ Flood-readers who keep their own timetable when the official sluice schedule lie
 
 ### Mama Cassavir, “The Switchboard”
 
-The crew's first fixer. She doesn't hold turf — she holds connections.
+The crew's first fixer. She doesn't hold turf — she holds connections. Grandmother face for the table; underneath, a cyborg Controller — Switchboard Deck, overlay-cell, Seize Control and Lockout, implant backup only.
 
 ### Warden Krael, “The Landlord”
 

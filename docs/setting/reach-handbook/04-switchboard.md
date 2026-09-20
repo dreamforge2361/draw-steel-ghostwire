@@ -20,7 +20,7 @@ At the center of it, where every sightline seems to bend, an old woman sits in a
 
 #### Key NPCs
 
-**Cassavir** — the fixer the district is named for; appears as an old woman, is the phone through which every deal in the Flats routes. Not muscle, not a mage — indispensable. She opens most sessions and can hand the crew any of the Ten's hooks. Severing her would cut a hundred quiet deals at once, so no one does.
+**Cassavir** — the fixer the district is named for. She *appears* elderly and unarmed in a booth of dead switchgear; a good cosmetician and **soft chrome** sell the grandmother. Underneath she is a **datajacked cyborg Controller** — decked (Switchboard Deck), private overlay-cell on the hall, Seize Control and Lockout on nodes and people. Not street muscle and not a mage: backup is **implant weaponry**, not a gun on the table. She opens most sessions and can hand the crew any of the Ten's hooks. Severing her would cut a hundred quiet deals at once, so no one does.
 
 **Tover "Two-Line" Vask** — Cassavir's floor-runner, a Corran guild-clan kid who carries messages she won't trust to the Wired. Reads every face in the hall.
 
@@ -30,13 +30,13 @@ At the center of it, where every sightline seems to bend, an old woman sits in a
 
 Zone: Flats — semi-lawless. No corp presence; Cassavir's own tolerated order.
 
-Cassavir keeps no visible guns, but the hall is under a dozen quiet guarantees — every gang with a deal pending has a stake in the peace. Draw a weapon here and you make a hundred enemies at once. Effective **Alert** response is social, not armed: the room turns cold, deals evaporate, and doors close across the district.
+Cassavir *appears* elderly and unarmed — no visible guns on the booth. She is a cyborg Controller: the hall is under a dozen quiet guarantees, and her people plus the overlay-cell are already in position. Draw a weapon here and you make a hundred enemies at once. Effective **Alert** response is social first, then Wire: the room turns cold, deals evaporate, doors close across the district, and she can Seize Control of the hall's nodes. If it comes to a body, backup is implant weaponry — not street muscle.
 
 Two "porters" (Ironclad-trained, off the books) handle anyone who forgets the etiquette. They escalate slowly and never first.
 
 #### The Overlay (What the Wired Shows Here)
 
-Dense but edited. Cassavir runs a private overlay-cell: SIN-readers at the escalator log every face, but the public AR is scrubbed of corp advertising — a rare quiet in the visual noise, and a signal that you've entered her jurisdiction.
+Dense but edited. Cassavir runs a **private overlay-cell** from the Switchboard Deck: SIN-readers at the escalator log every face, but the public AR is scrubbed of corp advertising — a rare quiet in the visual noise, and a signal that you've entered her jurisdiction. A Controller's hall: she holds the nodes; Lockout punishes anyone who tries to take them back.
 
 A hacker who pushes past the surface finds the hall's true architecture: hundreds of encrypted deal-threads knotting through Cassavir's booth. Reading them is a major score and a fast way to become a loose end.
 
