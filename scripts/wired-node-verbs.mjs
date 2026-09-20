@@ -1,10 +1,10 @@
-// B117 player path: Matrix Verbs on the Wired node the Connected runner is facing.
-// Connect / Jack Out / Toggle stay on the sheet. Scan / Ping / Navigate fire through
-// the same useConsoleVerb path as the Director Console (actor characteristics + edges).
+// B117 player path: all nine Matrix Verbs on the Wired node the runner is facing.
+// Connect / Jack Out / Toggle / Scan / Navigate / Ping / Broadcast / Search / Read-Write
+// fire through the same useConsoleVerb path as the Director Console. Nothing on the sheet.
 
 import { RATING } from "./wired-node-templates.mjs";
 import { getBoard, useConsoleVerb, verbStripView } from "./wired-console.mjs";
-import { consoleVerbGate, pickPlayerVerbActor } from "./wired-console-verbs.mjs";
+import { consoleVerbGate, hintVerbDsid, pickPlayerVerbActor } from "./wired-console-verbs.mjs";
 import { boardScene, isNodeActor, nodeRefFromToken, placedNodeActor } from "./wired-node-tokens.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -53,7 +53,7 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
     id: "ghostwire-wired-node-panel",
     classes: ["ghostwire-wired-console", "ghostwire-wired-node-panel"],
     window: { title: "GHOSTWIRE.WiredNode.Title", icon: "fa-solid fa-circle-nodes", resizable: true },
-    position: { width: 420, height: 520 },
+    position: { width: 460, height: 620 },
     actions: {
       fireVerb: WiredNodePanel.#onFireVerb,
       openSheet: WiredNodePanel.#onOpenSheet,
@@ -102,14 +102,15 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
       characterUuid: game.user.character?.uuid ?? null,
     });
     const runner = candidates.find(row => row.uuid === this.runnerUuid) ?? null;
-    const gate = consoleVerbGate({
+    const verbCtx = {
       actorUuid: runner?.uuid,
       connected: !!runner?.connected,
       nodeId: node.id,
       owned: !!runner?.owned,
       revealed: !!node.revealed,
       isGM,
-    });
+    };
+    const gate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
     const card = RATING[node.rating] ?? RATING[1];
     const actor = this.nodeActor;
     return {
@@ -132,11 +133,10 @@ export class WiredNodePanel extends HandlebarsApplicationMixin(ApplicationV2) {
       description: node.description ?? "",
       revealed: !!node.revealed,
       runner,
-      verbs: verbStripView(gate),
+      verbs: verbStripView(verbCtx),
       verbHint: gate.reason
         ? (gate.reason === "Actor" ? loc("NeedActor") : game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`))
         : game.i18n.format("GHOSTWIRE.WiredConsole.VerbReady", { actor: runner.name, node: node.name }),
-      laterHint: loc("LaterHint"),
       hasSheet: isGM && !!actor,
       ice: (node.track === 2) ? card.ice : game.i18n.localize("GHOSTWIRE.WiredConsole.NoIce"),
       breachDC: card.breachDC,

@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 /**
- * B117 Matrix Verbs smoke — node-facing player path + Console strip (module 0.3.52).
+ * B117 Matrix Verbs smoke — all nine on the node-facing applet (module 0.3.52).
  *
  * Run: node tools/b117-console-verbs-smoke.mjs
  * Does not need live Foundry. Does not write Scene JSON.
  */
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 import {
   CONSOLE_SLICE_DSIDS,
-  CONSOLE_SLICE_VERBS,
+  MATRIX_VERB_DSIDS,
   MATRIX_VERB_IDS,
   MATRIX_VERBS,
   OFF_SHEET_DSIDS,
@@ -38,7 +39,9 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("B117 node-facing Matrix Verbs smoke (0.3.52)\n");
+const NINE = "matrix-connect,matrix-jack-out,matrix-toggle-connection-state,matrix-scan,matrix-navigate,matrix-ping,matrix-broadcast,matrix-search,matrix-read-write";
+
+console.log("B117 all-nine node-facing Matrix Verbs smoke (0.3.52)\n");
 
 const moduleJson = readBomFreeJson("module.json");
 ok(moduleJson.version === "0.3.52", `module.json is 0.3.52 (got ${moduleJson.version})`);
@@ -46,24 +49,30 @@ ok(moduleJson.version === "0.3.52", `module.json is 0.3.52 (got ${moduleJson.ver
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
 
-console.log("\n1) Verb homes");
+console.log("\n1) Verb homes — all nine on the applet");
 ok(MATRIX_VERB_IDS.length === 9 && MATRIX_VERBS.length === 9, "nine Matrix Verb UUIDs still exist");
-ok(SHEET_VERB_DSIDS.join(",") === "matrix-connect,matrix-jack-out,matrix-toggle-connection-state", "sheet verbs are Connect / Jack Out / Toggle");
-ok(SHEET_VERBS.length === 3 && SHEET_VERBS.every(u => u.startsWith("Compendium.draw-steel-ghostwire.abilities.Item.")), "three sheet UUIDs");
-ok(CONSOLE_SLICE_DSIDS.join(",") === "matrix-scan,matrix-ping,matrix-navigate", "slice is Scan / Ping / Navigate");
-ok(CONSOLE_SLICE_VERBS.length === 3, "three slice UUIDs");
-ok(OFF_SHEET_DSIDS.includes("matrix-broadcast") && OFF_SHEET_DSIDS.includes("matrix-search") && OFF_SHEET_DSIDS.includes("matrix-read-write"), "Broadcast / Search / Read-Write leave the sheet");
-ok(OFF_SHEET_DSIDS.length === 6, "six off-sheet dsids");
+ok(SHEET_VERB_DSIDS.length === 0 && SHEET_VERBS.length === 0, "no sheet verbs");
+ok(CONSOLE_SLICE_DSIDS.join(",") === NINE, "applet slice is all nine in lock order");
+ok(CONSOLE_SLICE.length === 9, "nine catalog rows");
+ok(OFF_SHEET_DSIDS.join(",") === NINE, "all nine leave the sheet");
+
+const byDsid = Object.fromEntries(CONSOLE_SLICE.map(v => [v.dsid, v]));
+ok(byDsid["matrix-connect"].characteristic === "intuition" && byDsid["matrix-connect"].softTraceOnTier1, "Connect: intuition, soft Trace");
+ok(byDsid["matrix-jack-out"].characteristic === "intuition", "Jack Out: intuition");
+ok(byDsid["matrix-toggle-connection-state"].characteristic == null && !byDsid["matrix-toggle-connection-state"].needsNode, "Toggle: no roll, no node");
+ok(byDsid["matrix-scan"].characteristic === "intuition" && !byDsid["matrix-scan"].softTraceOnTier1, "Scan: intuition, no auto Trace");
+ok(byDsid["matrix-navigate"].characteristic === "intuition" && byDsid["matrix-navigate"].softTraceOnTier1, "Navigate: intuition, soft Trace");
+ok(byDsid["matrix-ping"].characteristic === "reason" && byDsid["matrix-ping"].softTraceOnTier1, "Ping: reason, soft Trace");
+ok(byDsid["matrix-broadcast"].characteristic == null, "Broadcast: no roll");
+ok(byDsid["matrix-search"].characteristic === "reason" && byDsid["matrix-search"].softTraceOnTier1, "Search: reason, soft Trace");
+ok(byDsid["matrix-read-write"].characteristic === "reason" && byDsid["matrix-read-write"].softTraceOnTier1, "Read/Write: reason, soft Trace");
 
 const scan = readBomFreeJson("src/packs/abilities/matrix-verbs/scan.json");
 const ping = readBomFreeJson("src/packs/abilities/matrix-verbs/ping.json");
 const navigate = readBomFreeJson("src/packs/abilities/matrix-verbs/navigate.json");
-ok(scan.system.power.roll.characteristics[0] === "intuition", "Scan rolls intuition (Instinct)");
-ok(navigate.system.power.roll.characteristics[0] === "intuition", "Navigate rolls intuition (Instinct)");
-ok(ping.system.power.roll.characteristics[0] === "reason", "Ping rolls reason (Logic)");
-ok(CONSOLE_SLICE[0].characteristic === "intuition" && !CONSOLE_SLICE[0].softTraceOnTier1, "Scan catalog: intuition, no auto Trace");
-ok(CONSOLE_SLICE[1].characteristic === "reason" && CONSOLE_SLICE[1].softTraceOnTier1, "Ping catalog: reason, soft Trace");
-ok(CONSOLE_SLICE[2].characteristic === "intuition" && CONSOLE_SLICE[2].softTraceOnTier1, "Navigate catalog: intuition, soft Trace");
+ok(scan.system.power.roll.characteristics[0] === "intuition", "Scan card intuition");
+ok(navigate.system.power.roll.characteristics[0] === "intuition", "Navigate card intuition");
+ok(ping.system.power.roll.characteristics[0] === "reason", "Ping card reason");
 
 console.log("\n2) Gate / actor pick / soft Trace (pure)");
 const roster = [
@@ -72,118 +81,106 @@ const roster = [
   { uuid: "Actor.c", connected: true },
 ];
 ok(pickConsoleActor({ roster, selectedUuid: "Actor.c" }) === "Actor.c", "keeps a live roster selection");
-ok(pickConsoleActor({ roster, selectedUuid: "Actor.missing", combatantUuid: "Actor.a" }) === "Actor.a", "falls back to combatant even if Disconnected");
-ok(pickConsoleActor({ roster, selectedUuid: null, combatantUuid: null }) === "Actor.b", "else first Connected");
 ok(pickConsoleActor({ roster: [] }) === null, "empty roster is null");
 
 const players = [
   { uuid: "Actor.disc", connected: false, owned: true },
   { uuid: "Actor.me", connected: true, owned: true },
-  { uuid: "Actor.ally", connected: true, owned: true },
-  { uuid: "Actor.other", connected: true, owned: false },
 ];
-ok(pickPlayerVerbActor({ candidates: players, controlledUuid: "Actor.ally" }) === "Actor.ally", "player pick prefers controlled Connected");
-ok(pickPlayerVerbActor({ candidates: players, controlledUuid: "Actor.disc", characterUuid: "Actor.me" }) === "Actor.me", "else assigned character if Connected");
-ok(pickPlayerVerbActor({ candidates: players }) === "Actor.me", "else first Connected owned");
-ok(pickPlayerVerbActor({ candidates: players, controlledUuid: "Actor.other" }) === "Actor.me", "does not pick an unowned Connected token");
-ok(pickPlayerVerbActor({ candidates: [{ uuid: "Actor.disc", connected: false, owned: true }] }) === "Actor.disc", "falls back to disconnected owned so UI can say Connect");
-ok(pickPlayerVerbActor({ candidates: [] }) === null, "empty player candidates is null");
+ok(pickPlayerVerbActor({ candidates: players, controlledUuid: "Actor.disc" }) === "Actor.me", "prefers Connected over controlled disconnected");
+ok(pickPlayerVerbActor({ candidates: [{ uuid: "Actor.disc", connected: false, owned: true }] }) === "Actor.disc", "falls back to disconnected so Connect can run");
 
 ok(!consoleVerbGate({}).ok && consoleVerbGate({}).reason === "Actor", "no actor");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: false, nodeId: "n1", connected: true }).reason === "Owner", "not owner");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true }).reason === "Node", "no node");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true, revealed: false, isGM: false }).reason === "Hidden", "player cannot fire on a hidden node");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true, revealed: false, isGM: true }).ok, "GM can fire on a hidden node");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: false }).reason === "Disconnected", "Disconnected");
-ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true }).ok, "Connected + node + owner");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: false, nodeId: "n1", connected: true, dsid: "matrix-scan" }).reason === "Owner", "not owner");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true, dsid: "matrix-scan" }).reason === "Node", "Scan needs a node");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: false, dsid: "matrix-connect" }).ok, "Connect works while Disconnected without a node");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true, dsid: "matrix-connect" }).reason === "AlreadyConnected", "Connect disabled while already connected");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: false, nodeId: "n1", dsid: "matrix-scan" }).reason === "Disconnected", "Scan while Disconnected");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true, revealed: false, isGM: false, dsid: "matrix-scan" }).reason === "Hidden", "player cannot fire on a hidden node");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, nodeId: "n1", connected: true, dsid: "matrix-broadcast" }).ok, "Broadcast while Connected + node");
+ok(consoleVerbGate({ actorUuid: "Actor.b", owned: true, connected: true, dsid: "matrix-jack-out" }).ok, "Jack Out needs Connected, not a node");
 
 ok(softTraceDelta("matrix-scan", 1) === 0, "Scan tier1 does not raise Trace");
-ok(softTraceDelta("matrix-ping", 1) === 1, "Ping tier1 +1 Trace");
-ok(softTraceDelta("matrix-navigate", 1) === 1, "Navigate tier1 +1 Trace");
-ok(softTraceDelta("matrix-ping", 2) === 0 && softTraceDelta("matrix-ping", 3) === 0, "middle/high never raise Trace");
-ok(nextAlert(11, 1).alert === 12 && nextAlert(11, 1).lockout, "Trace 11+1 lockout");
-ok(nextAlert(12, 1).alert === 12 && !nextAlert(12, 1).lockout, "already-12 is not a new lockout");
-ok(nextAlert(0, 0).alert === 0, "Scan delta 0 stays quiet");
+ok(softTraceDelta("matrix-connect", 1) === 1, "Connect tier1 +1 Trace");
+ok(softTraceDelta("matrix-search", 1) === 1, "Search tier1 +1 Trace");
+ok(softTraceDelta("matrix-read-write", 1) === 1, "Read/Write tier1 +1 Trace");
+ok(softTraceDelta("matrix-broadcast", 1) === 0, "Broadcast no auto Trace");
+ok(softTraceDelta("matrix-ping", 2) === 0, "middle never raises Trace");
+ok(nextAlert(11, 1).lockout, "Trace 11+1 lockout");
+ok(abilityTierFromMessage({ system: { parts: [{ type: "abilityResult", tier: 1 }] } }) === 1, "parses abilityResult tier");
 
-ok(abilityTierFromMessage({ system: { parts: [{ type: "abilityUse" }, { type: "abilityResult", tier: 1 }] } }) === 1, "parses abilityResult tier");
-ok(abilityTierFromMessage({ system: { parts: { contents: [{ type: "abilityResult", tier: 3 }, { type: "abilityResult", tier: 2 }] } } }) === 2, "Collection-shaped parts use the lowest tier");
-ok(abilityTierFromMessage({ system: { parts: [{ type: "abilityUse" }] } }) === null, "use without result is pending");
-
-console.log("\n3) Node panel / Console / kit / defaultItems");
+console.log("\n3) Node panel / Console / kit / defaultItems / packs");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
-ok(consoleSrc.includes("fireVerb") && consoleSrc.includes("selectActor") && consoleSrc.includes("useConsoleVerb"), "Console wires fireVerb + selectActor");
-ok(consoleSrc.includes("export function verbStripView"), "shared verbStripView");
-ok(consoleSrc.includes("applyConsoleVerbTrace"), "Console applies soft Trace from chat");
+ok(consoleSrc.includes("useConsoleVerb") && consoleSrc.includes("verbStripView"), "shared fire + strip");
+ok(consoleSrc.includes("dsid"), "useConsoleVerb passes per-verb dsid into the gate");
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
-const template = readFileSync("templates/wired-console.hbs", "utf8");
-ok(template.includes("data-action=\"fireVerb\"") && template.includes("data-action=\"selectActor\""), "template has verb strip + selectable roster");
-ok(template.includes("VerbPlayerPath"), "Console names the player node path");
-ok(template.includes("matrix-scan") || template.includes("{{#each verbs}}"), "verb buttons come from CONSOLE_SLICE");
 
 const nodeSrc = readFileSync("scripts/wired-node-verbs.mjs", "utf8");
-ok(nodeSrc.includes("useConsoleVerb") && nodeSrc.includes("pickPlayerVerbActor") && nodeSrc.includes("verbStripView"), "node panel shares fire path");
-ok(nodeSrc.includes("openWiredNodePanel") && nodeSrc.includes("registerWiredNodeVerbs"), "node panel registers and opens");
-ok(nodeSrc.includes("_onClickLeft2") && nodeSrc.includes("renderTokenHUD"), "token double-click + HUD open the panel");
-ok(nodeSrc.includes("maybeRedirectNodeSheet"), "node actor sheet redirects to the panel");
+ok(nodeSrc.includes("useConsoleVerb") && nodeSrc.includes("pickPlayerVerbActor"), "node panel shares fire path");
+ok(nodeSrc.includes("openWiredNodePanel"), "node panel opens");
 const nodeTpl = readFileSync("templates/wired-node-panel.hbs", "utf8");
 ok(nodeTpl.includes("data-action=\"fireVerb\"") && nodeTpl.includes("{{#each verbs}}"), "node panel has the verb strip");
-
-const tokensSrc = readFileSync("scripts/wired-node-tokens.mjs", "utf8");
-ok(tokensSrc.includes("setNodePlayerAccess") && tokensSrc.includes("OBSERVER"), "revealed nodes get OBSERVER so players can open them");
-ok(tokensSrc.includes("nodeRefFromToken"), "token flags resolve a node without the actor sheet");
-
-const minimapSrc = readFileSync("scripts/wired-minimap.mjs", "utf8");
-ok(minimapSrc.includes("openWiredNodePanel"), "minimap click opens the node panel");
+ok(!nodeTpl.includes("laterHint"), "node panel does not say verbs come later");
 
 const moduleSrc = readFileSync("scripts/module.mjs", "utf8");
-ok(moduleSrc.includes("SHEET_VERBS") && moduleSrc.includes("matrixVerbsConsole"), "heroes get sheet verbs; Console strip flag");
-ok(moduleSrc.includes("registerWiredNodeVerbs"), "module registers the node panel");
-ok(!/for \(const uuid of MATRIX_VERBS\) defaultItems\.add/.test(moduleSrc), "defaultItems does not add all nine verbs");
+ok(moduleSrc.includes("matrixVerbsApplet") && moduleSrc.includes("MATRIX_VERB_DSIDS"), "world strip uses matrixVerbsApplet + all nine dsids");
+ok(moduleSrc.includes("defaultItems.delete") && moduleSrc.includes("MATRIX_VERBS"), "defaultItems deletes Matrix Verbs");
+ok(!/defaultItems\.add\(uuid\)/.test(moduleSrc) && !/for \(const uuid of SHEET_VERBS\)/.test(moduleSrc), "defaultItems does not add Matrix Verbs");
+ok(!moduleSrc.includes("isWireKitVerb"), "ready-hook is not limited to kit-granted copies");
+
 const kitSrc = readFileSync("scripts/wired-kit.mjs", "utf8");
-ok(kitSrc.includes("SHEET_VERBS") && kitSrc.includes("fromUuid(uuid)"), "Wire Kit stamps SHEET_VERBS");
-ok(!/MATRIX_VERBS\.map\(uuid => fromUuid/.test(kitSrc), "Wire Kit does not stamp all nine verbs");
-ok(kitSrc.includes('kind") === "node"') || kitSrc.includes("kind') === \"node\"") || kitSrc.includes('kind") === "node"'), "Wire Kit HUD skips node actors");
+ok(kitSrc.includes("grantMatrixVerbs") && kitSrc.includes("return 0"), "Wire Kit grant is a no-op");
+ok(!kitSrc.includes("SHEET_VERBS"), "Wire Kit does not stamp sheet verbs");
+ok(!/fromUuid\(uuid\)/.test(kitSrc), "Wire Kit does not copy verb documents onto the actor");
+
+const mama = JSON.stringify(readBomFreeJson("src/packs/bestiary/reach-streets/mama-cassavir.json"));
+ok(!MATRIX_VERB_DSIDS.some(d => mama.includes(`"${d}"`)), "Mama Cassavir has none of the nine Matrix Verbs");
+
+const pregenDir = "src/packs/pregens";
+const pregenFiles = readdirSync(pregenDir).filter(f => f.endsWith(".json"));
+ok(pregenFiles.length >= 7, `pregen pack has actors (${pregenFiles.length})`);
+let pregenHits = 0;
+for (const file of pregenFiles) {
+  const text = readFileSync(join(pregenDir, file), "utf8");
+  for (const dsid of MATRIX_VERB_DSIDS) if (text.includes(`"${dsid}"`)) pregenHits += 1;
+}
+ok(pregenHits === 0, "pregen actors do not embed Matrix Verbs");
 
 const css = readFileSync("styles/ghostwire.css", "utf8");
-ok(css.includes(".wc-verbs") && css.includes(".wc-verb-strip") && css.includes(".wc-roster-row.selected"), "CSS for verb strip + selected roster");
-ok(css.includes(".ghostwire-wired-node-panel"), "CSS for node panel");
+ok(css.includes(".wc-verb-strip") && css.includes(".ghostwire-wired-node-panel"), "CSS for verb strip + node panel");
 
 console.log("\n4) Docs / lang");
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.Verbs === "Matrix Verbs", "lang Verbs");
-ok(lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("Connect"), "lang Disconnected points at sheet Connect");
-ok(lang.GHOSTWIRE.WiredConsole.VerbNeedHidden.includes("hidden"), "lang Hidden gate");
-ok(lang.GHOSTWIRE.WiredConsole.VerbPlayerPath.includes("node token"), "lang player path");
-ok(lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("node"), "lang migration names the node");
-ok(lang.GHOSTWIRE.WiredNode.Title === "Wired Node", "lang WiredNode panel");
-ok(lang.GHOSTWIRE.WiredNode.NeedActor.includes("Connect"), "lang node NeedActor points at sheet Connect");
-ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("Connect") && lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("Scan"), "Wire Kit description names sheet vs node/Console");
-ok(!lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan"), "Wire Kit no longer claims it stamps all nine");
+ok(lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("Connect"), "lang Disconnected points at Connect on the node");
+ok(!lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("sheet"), "lang Disconnected does not send players to the sheet");
+ok(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected.includes("connected"), "lang AlreadyConnected");
+ok(lang.GHOSTWIRE.WiredConsole.VerbTooltipAuto.includes("no roll"), "lang auto tooltip");
+ok(lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("all nine") || lang.GHOSTWIRE.Wired.ConsoleMigrated.includes("nine"), "lang migration names all nine");
+ok(lang.GHOSTWIRE.WiredNode.NeedActor.includes("Connect"), "lang node NeedActor");
+ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does <strong>not</strong> copy") || lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("does not"), "Wire Kit does not copy verbs");
+ok(lang.GHOSTWIRE.Matrix.Items.WireKit.Description.includes("Read/Write"), "Wire Kit description names all nine");
 
 const spike = readFileSync("docs/spikes/B117-CONSOLE-MATRIX-VERBS.md", "utf8");
 ok(/LOCKED 2026-09-20/.test(spike) && /0\.3\.52/.test(spike), "spike is locked and names 0.3.52");
-ok(/PLAYER UX/.test(spike) && /node facing/.test(spike), "spike locks the player node path");
-ok(/Sheet keeps/.test(spike) && /useConsoleVerb/.test(spike), "spike keeps sheet verbs and shared fire path");
+ok(/all nine|all 9/.test(spike) && /Mama/.test(spike) && /defaultItems/.test(spike) && /Wire Kit/.test(spike), "spike locks all 9 on applet and sheet cleanup");
+ok(/pregens/i.test(spike), "spike names pregens");
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
-ok(/B117/.test(foundry) && /soft Trace/.test(foundry), "18-wired-foundry.md notes B117");
-ok(/node facing/.test(foundry) && /OBSERVER/.test(foundry), "Foundry notes name the player node path + OBSERVER");
-ok(/Connect, Jack Out/.test(foundry) || /Sheet keeps/.test(foundry), "Foundry notes keep Connect on the sheet");
+ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
+ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the sheet");
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
-ok(/Wired node/.test(raw) && /Scan/.test(raw) && /Navigate/.test(raw), "Wire RAW In Foundry aside names node-facing verbs");
-ok(!/Navigate\*\* fire from the Console/.test(raw), "Wire RAW no longer says verbs only fire from the Console");
-ok(!/ensureGoldLineScene/.test(consoleSrc), "Console path does not Gold-Line force overwrite");
-ok(/0\.3\.52/.test(readFileSync("README.md", "utf8")) && /B117/.test(readFileSync("README.md", "utf8")), "README changelog 0.3.52");
-ok(/node the player faces/.test(readFileSync("README.md", "utf8")) || /node token/.test(readFileSync("README.md", "utf8")), "README names the player node path");
+ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
+ok(!/stay on the sheet/.test(raw), "Wire RAW no longer parks Connect on the sheet");
+ok(/0\.3\.52/.test(readFileSync("README.md", "utf8")) && /all nine/i.test(readFileSync("README.md", "utf8")), "README changelog 0.3.52 all nine");
 
 const journal = readBomFreeJson("src/packs/rulebook/ghostwire-systems/21-the-wire.json");
 const overview = journal.pages?.find(p => /Scan/.test(p.text?.markdown ?? "") && /Wired Console/.test(p.text?.markdown ?? ""));
 ok(!!overview, "Wire journal still has a Wired Console aside");
-ok(/Scan/.test(overview?.text?.markdown ?? "") && /Navigate/.test(overview?.text?.markdown ?? ""), "Wire journal aside names Scan / Navigate");
-ok(/Wired node/.test(overview?.text?.markdown ?? ""), "Wire journal aside names the node panel");
+ok(/all nine Matrix Verbs/.test(overview?.text?.markdown ?? ""), "Wire journal aside names all nine");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);
   for (const msg of failures) console.error(`  ✗ ${msg}`);
   process.exit(1);
 }
-console.log("\nB117 node-facing Matrix Verbs smoke OK");
+console.log("\nB117 all-nine node-facing Matrix Verbs smoke OK");

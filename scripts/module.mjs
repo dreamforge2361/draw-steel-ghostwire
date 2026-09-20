@@ -1,10 +1,10 @@
-import { OFF_SHEET_DSIDS, SHEET_VERBS } from "./wired-verbs.mjs";
+import { MATRIX_VERB_DSIDS, MATRIX_VERBS } from "./wired-verbs.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
 import { registerWiredConsole } from "./wired-console.mjs";
 import { registerWiredMinimap } from "./wired-minimap.mjs";
 import { registerWiredNodeVerbs } from "./wired-node-verbs.mjs";
-import { isWireKitVerb, registerWiredKit } from "./wired-kit.mjs";
+import { registerWiredKit } from "./wired-kit.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
 import { registerStreetEye } from "./street-eye.mjs";
@@ -55,8 +55,8 @@ Hooks.once("init", () => {
     if (defaultItems.delete(stock)) defaultItems.add(ghostwire);
     else console.warn(`${MODULE_ID} | ${stock} not found in hero default items; ${ghostwire} not added`);
   }
-  // B117: Connect / Jack Out / Toggle stay on the sheet. Scan / Ping / Navigate fire from the node facing the Connected player (and the Console).
-  for (const uuid of SHEET_VERBS) defaultItems.add(uuid);
+  // B117: Matrix Verbs fire from the node applet. Strip any leftover defaultItems grants.
+  for (const uuid of MATRIX_VERBS) defaultItems.delete(uuid);
   for (const status of Object.values(WIRED_STATUSES)) CONFIG.statusEffects[status.id] = { ...status };
 
   // Tech: non-Magic, non-Psionic ability keyword for machine abilities (Cyborg Installed Suite).
@@ -198,38 +198,20 @@ function patchWiredAbilities() {
   };
 }
 
-// Existing heroes: add any missing sheet Matrix Verbs once (GM client), then flag the hero so it isn't re-granted.
-// B117: strip Scan / Navigate / Ping / Broadcast / Search / Read-Write off hero sheets and Wire Kit NPCs
-// once the node panel / Console path owns them (flag matrixVerbsConsole). Named bestiary copies without the kit flag stay.
+// Existing worlds: strip every Matrix Verb off sheets (heroes, pregens, Wire Kit NPCs, Mama).
+// B117 applet-only — flag matrixVerbsApplet so this runs once even if matrixVerbsConsole already fired.
 Hooks.once("ready", async () => {
   if (!game.user.isGM) return;
-  const verbs = (await Promise.all(SHEET_VERBS.map(uuid => fromUuid(uuid)))).filter(Boolean);
-  if (verbs.length !== SHEET_VERBS.length) console.warn(`${MODULE_ID} | Some sheet Matrix Verbs are missing from the abilities pack`);
-  let granted = 0;
   let stripped = 0;
   for (const actor of game.actors) {
-    if (actor.type === "hero" && !actor.getFlag(MODULE_ID, "matrixVerbs")) {
-      const owned = new Set(actor.items.map(i => i.system._dsid));
-      const missing = verbs.filter(v => !owned.has(v.system._dsid)).map(v => game.items.fromCompendium(v, { clearFolder: true }));
-      if (missing.length) {
-        await actor.createEmbeddedDocuments("Item", missing);
-        granted += 1;
-      }
-      await actor.setFlag(MODULE_ID, "matrixVerbs", true);
-    }
-    if (actor.getFlag(MODULE_ID, "matrixVerbsConsole")) continue;
-    const offSheet = [...actor.items].filter(item => {
-      if (!OFF_SHEET_DSIDS.includes(item.system?._dsid)) return false;
-      if (actor.type === "hero") return true;
-      return isWireKitVerb(item);
-    });
+    if (actor.getFlag(MODULE_ID, "matrixVerbsApplet")) continue;
+    const offSheet = [...actor.items].filter(item => MATRIX_VERB_DSIDS.includes(item.system?._dsid));
     if (offSheet.length) {
       await actor.deleteEmbeddedDocuments("Item", offSheet.map(item => item.id));
       stripped += offSheet.length;
     }
-    if (actor.type === "hero" || offSheet.length) await actor.setFlag(MODULE_ID, "matrixVerbsConsole", true);
+    await actor.setFlag(MODULE_ID, "matrixVerbsApplet", true);
   }
-  if (granted) ui.notifications.info(game.i18n.format("GHOSTWIRE.Wired.Migrated", { count: granted }));
   if (stripped) ui.notifications.info(game.i18n.format("GHOSTWIRE.Wired.ConsoleMigrated", { count: stripped }));
 });
 
@@ -559,9 +541,10 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
     // Taint is a separate 0–12 stain track (B80). Chrome install never writes this flag.
     [`flags.${MODULE_ID}.taint`]: 0,
     [`flags.${MODULE_ID}.corruptionHistory`]: "",
-    // New heroes get the sheet Matrix Verbs from defaultItems, so they skip both grants and the Console strip.
+    // New heroes skip sheet Matrix Verb grants — verbs live on the node applet.
     [`flags.${MODULE_ID}.matrixVerbs`]: true,
     [`flags.${MODULE_ID}.matrixVerbsConsole`]: true,
+    [`flags.${MODULE_ID}.matrixVerbsApplet`]: true,
     [`flags.${MODULE_ID}.wired`]: { connected: false, state: "disconnected" },
   };
   if (foundry.utils.getProperty(data, "system.hero.wealth") === undefined) updates["system.hero.wealth"] = STARTING_NUYEN;

@@ -18,6 +18,7 @@ import {
   abilityTierFromMessage,
   consoleVerbGate,
   consoleVerbMetaFromMessage,
+  hintVerbDsid,
   nextAlert,
   pickConsoleActor,
   pickPlayerVerbActor,
@@ -213,15 +214,16 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     const decorated = nodes.map(decorate);
     const selected = decorated.find(node => node.selected) ?? null;
     const verbActor = roster.find(row => row.selected) ?? null;
-    const verbGate = consoleVerbGate({
+    const verbCtx = {
       actorUuid: verbActor?.uuid,
       connected: !!verbActor?.connected,
       nodeId: selected?.id,
       owned: !!verbActor?.owned,
-      revealed: !!selected?.revealed,
+      revealed: selected ? !!selected.revealed : true,
       isGM,
-    });
-    const verbs = verbStripView(verbGate);
+    };
+    const verbs = verbStripView(verbCtx);
+    const verbGate = consoleVerbGate({ ...verbCtx, dsid: hintVerbDsid(verbCtx.connected) });
     const pings = readPings(scene).map(ping => ({
       ...ping,
       timeLabel: ping.at ? new Date(ping.at).toLocaleTimeString(game.i18n.lang, { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "",
@@ -240,7 +242,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
       verbs,
       verbHint: verbGate.reason
         ? game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${verbGate.reason}`)
-        : game.i18n.format("GHOSTWIRE.WiredConsole.VerbReady", { actor: verbActor.name, node: selected.name }),
+        : game.i18n.format("GHOSTWIRE.WiredConsole.VerbReady", { actor: verbActor.name, node: selected?.name ?? "—" }),
       pings,
       pingDraft: this.pingDraft ?? "",
       pingWhisper: !!this.pingWhisper,
@@ -682,18 +684,24 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
 
 /* ---------- Matrix Verbs from Console / node panel (B117) ---------- */
 
-/** Shared Scan / Ping / Navigate button specs for the Console strip and the node panel. */
-export function verbStripView(gate) {
+/** Shared Matrix Verb button specs for the Console strip and the node panel (all nine). */
+export function verbStripView(ctx = {}) {
   return CONSOLE_SLICE.map(verb => {
+    const gate = consoleVerbGate({ ...ctx, dsid: verb.dsid });
     const name = game.i18n.localize(`GHOSTWIRE.Abilities.MatrixVerbs.${verb.lang}.Name`);
+    let tooltip;
+    if (!gate.ok) tooltip = game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`);
+    else if (verb.characteristicLabel) {
+      tooltip = game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltip", { name, chr: verb.characteristicLabel });
+    } else {
+      tooltip = game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltipAuto", { name });
+    }
     return {
       dsid: verb.dsid,
       icon: verb.icon,
       label: name,
-      enabled: !!gate?.ok,
-      tooltip: gate?.ok
-        ? game.i18n.format("GHOSTWIRE.WiredConsole.VerbTooltip", { name, chr: verb.characteristicLabel })
-        : game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate?.reason ?? "Actor"}`),
+      enabled: gate.ok,
+      tooltip,
     };
   });
 }
@@ -709,7 +717,7 @@ async function resolveVerbItem(actor, dsid) {
 }
 
 /**
- * Fire Scan / Ping / Navigate through Draw Steel AbilityModel#use on the selected actor.
+ * Fire a Matrix Verb through Draw Steel AbilityModel#use on the selected actor.
  * Edges (Hacking, Jacked In, Reader) come from the existing AbilityModel#use patch.
  */
 export async function useConsoleVerb(actor, dsid, { node = null, scene = null, getWiredState = getWiredStateFn } = {}) {
@@ -719,8 +727,9 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     connected: state !== "disconnected",
     nodeId: node?.id,
     owned: !!(actor && (game.user.isGM || actor.isOwner)),
-    revealed: !!node?.revealed,
+    revealed: node ? !!node.revealed : true,
     isGM: !!game.user.isGM,
+    dsid,
   });
   if (!gate.ok) {
     ui.notifications.warn(game.i18n.localize(`GHOSTWIRE.WiredConsole.VerbNeed${gate.reason}`));
@@ -736,7 +745,7 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.VerbMissing", { name: spec.lang }));
     return null;
   }
-  const consoleVerb = { dsid, nodeId: node.id, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
+  const consoleVerb = { dsid, nodeId: node?.id ?? null, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
   const message = await item.system.use({}, {}, { flags: { [MODULE_ID]: { consoleVerb } } });
   if (message?.setFlag && !consoleVerbMetaFromMessage(message)) {
     try { await message.setFlag(MODULE_ID, "consoleVerb", consoleVerb); }

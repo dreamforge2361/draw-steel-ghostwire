@@ -1,34 +1,32 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 node-facing verbs 2026-09-20** (pending Michael’s Foundry test).
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20** (pending Michael’s Foundry test).
 **Source of record for rules text:** `docs/rulebook/08-hacker.md` — *The Wired System* (Connection States) and *Matrix Verbs (Universal)*. This page only describes how Foundry implements them; if the two disagree, 08-hacker.md wins and this page (and the pack) gets fixed.
-**Console:** B23b — see *Wired Console* below. **B117** — Scan / Ping / Navigate fire from the **node facing the Connected player** (Director Console still has the same strip).
+**Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 
-## Matrix Verbs — sheet vs node (B117)
+## Matrix Verbs — node applet (B117)
 
-The nine Matrix Verbs still exist (Ghostwire Abilities › **Matrix Verbs**). They all have the **Wired** keyword and cost no heroic resource: they’re universal, not Hacker Programs, so Bandwidth isn’t involved.
+The nine Matrix Verbs still exist (Ghostwire Abilities › **Matrix Verbs**). They all have the **Wired** keyword and cost no heroic resource: they’re universal, not Hacker Programs, so Bandwidth isn’t involved. They do **not** live on the hero sheet.
 
-**Sheet keeps:** Connect, Jack Out (emergency eject), Toggle Connection State. Connection status icons stay on the token. New heroes get those three via `ds.CONFIG.hero.defaultItems`. NPC **Wire Kit** stamps the same three.
+**Node fires (player path):** all nine — Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write. The player opens the **Wired node facing them** (node token, Token HUD, minimap click, or node sheet). **Connect** is on that applet (works while Disconnected). Draw Steel’s ability power-roll path uses **that player’s actor**. **Hacking** and **Jacked In** edges, plus a running **Reader** program, still apply through the existing Wired `AbilityModel#use` patch. Hacker Bandwidth Programs stay on the sheet. Connection status icons stay on the token.
 
-**Node fires (player path):** Scan, Ping, Navigate (this thin slice). The player **Connects on their sheet**, then opens the **Wired node facing them** (node token, Token HUD, minimap click, or node sheet). The node panel shows the verb strip. Draw Steel’s ability power-roll path uses **that player’s actor** (Scan / Navigate = Instinct / Intuition, Ping = Logic / Reason). **Hacking** and **Jacked In** edges, plus a running **Reader** program, still apply through the existing Wired `AbilityModel#use` patch. Broadcast / Search / Read-Write stay later. Hacker Bandwidth Programs stay on the sheet.
-
-**Director Console** still shows the board and connection roster, and can fire the same verbs for a selected Connected actor + node. Console and node panel share `useConsoleVerb`. Players do **not** depend on the GM owning or clicking the Console.
+**Director Console** still shows the board and connection roster, and can fire the same nine verbs. Console and node panel share `useConsoleVerb`. Players do **not** depend on the GM owning or clicking the Console.
 
 | Verb | Home | Action | Roll |
 |---|---|---|---|
-| Connect | Sheet | Maneuver | Instinct |
-| Jack Out | Sheet | Maneuver (free triggered action in an emergency, per its text) | Instinct |
-| Toggle Connection State | Sheet | Free maneuver | None — automatic |
+| Connect | Node panel (and Console) | Maneuver | Instinct |
+| Jack Out | Node panel (and Console) | Maneuver (free triggered action in an emergency, per its text) | Instinct |
+| Toggle Connection State | Node panel (and Console) | Free maneuver | None — automatic |
 | Scan | Node panel (and Console) | Maneuver | Instinct |
 | Navigate | Node panel (and Console) | Maneuver | Instinct |
 | Ping | Node panel (and Console) | Maneuver | Logic |
-| Broadcast | later node / Console | Maneuver | None — automatic |
-| Search | later node / Console | Maneuver | Logic |
-| Read/Write | later node / Console | Maneuver | Logic |
+| Broadcast | Node panel (and Console) | Maneuver | None — automatic |
+| Search | Node panel (and Console) | Maneuver | Logic |
+| Read/Write | Node panel (and Console) | Maneuver | Logic |
 
-Rolling those verbs shows the low / middle / high result text from the shipped verb cards (incomplete / clean / maneuver refund). **Soft Trace:** a tier-1 Ping or Navigate may +1 Trace Alert on the selected node (Director default: something went wrong). **Scan** does not auto-move Trace — observation doctrine. Middle and high never raise Trace.
+Rolling verbs show the low / middle / high result text from the shipped verb cards (incomplete / clean / maneuver refund). **Soft Trace:** a tier-1 Connect / Jack Out / Ping / Navigate / Search / Read-Write may +1 Trace Alert on the selected node. **Scan** does not auto-move Trace — observation doctrine. Toggle and Broadcast have no roll. Middle and high never raise Trace.
 
-Existing worlds: the first GM load strips Scan / Navigate / Ping / Broadcast / Search / Read-Write off hero sheets and off Wire-Kit-granted NPC copies so they don’t have two homes. Named bestiary Actors that already embed those verbs (no kit flag) are left alone. Revealed node tokens get **OBSERVER** default ownership so players can open the node they’re facing.
+Existing worlds: the first GM load strips **all nine** Matrix Verbs off every actor (heroes, imported pregens, Wire Kit NPCs, Mama) so they don’t have two homes (`matrixVerbsApplet`). They are gone from hero `defaultItems`, the NPC Wire Kit stamp, pregen pack actors (none were embedded), and Mama Cassavir’s bestiary items. Revealed node tokens get **OBSERVER** default ownership so players can open the node they’re facing.
 
 ## Connection states
 
@@ -50,7 +48,7 @@ Automated modifiers on **ability** power rolls:
 
 Also automated: a hero with the **Hacking** skill gets an edge on the rolling Matrix Verbs (and any other Wired ability). A running **Reader** program still edges Scan / Search / Deep Scan.
 
-Not automated: the Overlay bane on tests (make it in the test dialog), biofeedback scaling. Node / Console Scan / Ping / Navigate apply **soft Trace** on a tier-1 active verb (not Scan), as above.
+Not automated: the Overlay bane on tests (make it in the test dialog), biofeedback scaling. Node / Console verbs apply **soft Trace** on a tier-1 active rolled verb (not Scan), as above.
 
 For the Wired Console, the state is also stored on the actor as `flags.draw-steel-ghostwire.wired = { connected, state }`, with `state` being `"disconnected"`, `"overlay"`, or `"jackedIn"`.
 
@@ -63,7 +61,7 @@ A popout window that makes the net a shared place for the scene everyone is view
 ### Panels
 
 - **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Disconnected). Click a row to select the runner who will fire Console verbs (defaults to the active combatant, else the first Connected actor). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
-- **Matrix Verbs (B117)** — Scan / Ping / Navigate. **Players fire these from the node they’re facing** (token / node panel). The Console strip is the Director roster path: pick a Connected actor and a node, then press the verb. Disabled while Disconnected (Connect lives on the sheet). Rolls that actor’s Instinct or Logic; Hacking / Jacked In / Reader edges apply. Soft Trace on a tier-1 Ping or Navigate.
+- **Matrix Verbs (B117)** — all nine. **Players fire these from the node they’re facing** (token / node panel), including Connect. The Console strip is the Director roster path. Connect works while Disconnected; the other eight need Overlay / Jacked In. Rolls that actor’s Instinct or Logic where the card rolls; Hacking / Jacked In / Reader edges apply. Soft Trace on a tier-1 active rolled verb (not Scan).
 - **Nodes** — the scene’s nodes: Track, Rating, an Integrity bar (Track 2), and a mini Trace Alert track. The eye icon (Director only) shows whether players can see the node.
 - **Selected node** — the System Stat Card read off the Node Rating (08-hacker.md): Breach DC, ICE layers, Biofeedback Value with the Overlay (×0.5, min 1) and Jacked In (×1.5) figures, Integrity, and the 12-step Trace Alert with what the current band does. Track 1 nodes have no Integrity or ICE.
 - **Wire (B106 ping/spoof)** — a log of the last ~20 Director pings, visible to anyone with the Console open. The Director types a short line and **Send**. Chat is **public** or a **whisper** to users whose controlled token is Overlay or Jacked In. Stored on `flags.draw-steel-ghostwire.wiredPings` (also reads `wiredBoard.pings`). Does not move Trace. Players cannot send.
@@ -72,7 +70,7 @@ A popout window that makes the net a shared place for the scene everyone is view
 
 | | Director (GM) | Players |
 |---|---|---|
-| Matrix Verbs | Fire Scan / Ping / Navigate for any Connected actor on the roster | Fire from the **node token / panel** they’re facing (owned Connected actor); Disconnected disables the strip. Console strip also works for owned actors |
+| Matrix Verbs | Fire all nine for any roster actor they select | Fire from the **node token / panel** they’re facing (owned actor). Connect works while Disconnected. Console strip also works for owned actors |
 | Nodes | All; add, **random node**, **generate cluster**, edit (name, Track, Rating), delete, reset the board | Only nodes the Director revealed; read-only |
 | Integrity | Damage / Restore by an amount | See the bar and numbers |
 | Trace Alert | −, +, **Counter-trace (12)**, and **Resolved — reset to 6** at 12 | See the track and band text |
@@ -97,7 +95,7 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 - **Cam lights.** If `rest` contains Cam / Camera, that light becomes **`{Room} - Cam Controls N`** (Track 1 Rating 1, `cam-controls` art) instead of joining the Light Control `lightIds`. Linked to the same-room Light Control when one exists.
 - Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). The Wire does not flip lights, doors, or cameras in v1. Auto-node tokens use B113 library art (`assets/tokens/wired/node-light-control.webp`, `node-maglock.webp`, `node-cam-controls.webp`). Generic Track 1/2 templates stay when `tokenStyle` is empty. Director **Token art** select (B116) picks any catalog style (eight device arts plus atlas Relay / Host / Segment). Does not rewrite Gold Line walls/lights/tiles.
 
-**Wire Kit (B115 / B117).** NPCs do not receive Matrix Verbs by default. Drop **Wire Kit — Matrix Verbs** (Ghostwire Matrix › Support) onto an NPC, or use the Console / token HUD **Add Wire Kit** on selected NPC tokens. The kit stamps **Connect / Jack Out / Toggle**. Scan / Ping / Navigate fire from the node a Connected runner is facing (and from the Console). Stamp ARG security that should act on the Wire; leave meat-only thugs clean. Heroes already have the sheet verbs. Node tokens do not get Add Wire Kit.
+**Wire Kit (B115 / B117).** NPCs do not receive Matrix Verbs by default. Drop **Wire Kit — Matrix Verbs** (Ghostwire Matrix › Support) onto an NPC, or use the Console / token HUD **Add Wire Kit** on selected NPC tokens. The kit marks them Wire-capable; it does **not** copy the nine verbs onto the sheet. All nine fire from the node a runner is facing (and from the Console). Stamp ARG security that should act on the Wire; leave meat-only thugs clean. Heroes use the same applet. Node tokens do not get Add Wire Kit.
 
 **Sync.** The board is the source of truth. Console edits (name, Track, Rating, Integrity damage/restore, reveal/hide) update the placed token and Actor; damage applied to a Track 2 node token (Draw Steel's damage buttons, the sheet, or the bar) writes Integrity back to the board. Deleting a node or resetting the board removes its token and Actor; deleting a node token by hand removes the Actor, and the Console offers **Place on canvas** again. Actor flags: `{ kind: "node", boardSceneId, nodeId, track }` plus `autoFrom` / `autoKind` for B112. Trace Alert, Description, and Notes stay in the Console.
 
@@ -134,7 +132,7 @@ flags.draw-steel-ghostwire.wiredPings = {
 
 Only a GM can change it. Connection state is read from actor statuses (and mirrored to `flags.draw-steel-ghostwire.wired`), not stored on the board. Wire pings persist separately from **Reset Board**.
 
-**Not in this slice:** Broadcast / Search / Read-Write still live in the abilities pack but are not on the sheet, node panel, or Console yet; no ICE automation; no Bandwidth display. (Cross-scene Wired maps and node tokens shipped in B32 Phase 5b, above. Wire ping/spoof shipped in 0.3.45. Node-facing Scan / Ping / Navigate + soft Trace shipped in B117.)
+**Not in this slice:** no ICE automation; no Bandwidth display. All nine Matrix Verbs are on the node applet. (Cross-scene Wired maps and node tokens shipped in B32 Phase 5b, above. Wire ping/spoof shipped in 0.3.45. Node-facing Matrix Verbs + soft Trace shipped in B117.)
 
 ## Wired vision (B23c)
 

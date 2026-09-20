@@ -26,7 +26,7 @@
         <span class="wc-dim">{{localize "GHOSTWIRE.WiredNode.NeedActor"}}</span>
         {{/if}}
       </p>
-      {{!-- Thin slice Scan / Ping / Navigate; later verbs append to CONSOLE_SLICE. --}}
+      {{!-- All nine Matrix Verbs. Connect while disconnected; the rest need Overlay / Jacked In. --}}
       <div class="wc-verb-strip">
         {{#each verbs}}
         <button type="button" class="wc-btn wc-verb" data-action="fireVerb" data-verb="{{dsid}}" {{disabled (not enabled)}} data-tooltip="{{tooltip}}">
@@ -35,7 +35,6 @@
         {{/each}}
       </div>
       {{#if verbHint}}<p class="wc-dim wc-verb-hint">{{verbHint}}</p>{{/if}}
-      <p class="wc-dim wc-verb-hint">{{laterHint}}</p>
     </section>
 
     {{#if isTrack2}}

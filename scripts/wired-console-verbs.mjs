@@ -1,12 +1,13 @@
 // B117 Matrix Verbs — Foundry-free helpers (Node smoke can import this).
-// Thin slice: Scan / Ping / Navigate. Broadcast / Search / Read-Write stay later.
-// Player path: Connect on the sheet, then fire verbs from the node facing them.
-// Director Console still has the same strip (shared gate + fire). Soft Trace: +1 on
-// tier 1 for active verbs. Scan is observation — no auto Trace.
+// All nine fire from the node-facing applet (Director Console shares the strip).
+// Player path: open the node facing you → Connect if needed → fire verbs from your actor.
+// Soft Trace: +1 on tier 1 for active rolled verbs. Scan is observation — no auto Trace.
+// Broadcast / Toggle have no power roll.
 
 import {
   CONSOLE_SLICE_DSIDS,
   CONSOLE_SLICE_VERB_IDS,
+  CONNECTION_VERB_DSIDS,
   MODULE_ID,
   verbUuid,
 } from "./wired-verbs.mjs";
@@ -14,40 +15,111 @@ import {
 export const ALERT_MAX = 12;
 
 /**
- * Scan / Ping / Navigate as the node panel and Console fire them.
- * characteristic is the Draw Steel key on the verb card (Instinct/Logic in Ghostwire lang).
+ * All nine Matrix Verbs as the node panel and Console fire them.
+ * characteristic is the Draw Steel key on the verb card (null = no power roll).
+ * needsNode: connection verbs can fire without a selected node (Console roster);
+ *   action verbs need the node the runner is facing.
  * softTraceOnTier1 follows shipped cards + Scan doctrine (no Trace on clean observation).
  */
 export const CONSOLE_SLICE = [
   {
-    dsid: "matrix-scan",
+    dsid: "matrix-connect",
     id: CONSOLE_SLICE_VERB_IDS[0],
     uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[0]),
     characteristic: "intuition",
     characteristicLabel: "Instinct",
+    softTraceOnTier1: true,
+    needsNode: false,
+    icon: "fa-plug",
+    lang: "Connect",
+  },
+  {
+    dsid: "matrix-jack-out",
+    id: CONSOLE_SLICE_VERB_IDS[1],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[1]),
+    characteristic: "intuition",
+    characteristicLabel: "Instinct",
+    softTraceOnTier1: true,
+    needsNode: false,
+    icon: "fa-right-from-bracket",
+    lang: "JackOut",
+  },
+  {
+    dsid: "matrix-toggle-connection-state",
+    id: CONSOLE_SLICE_VERB_IDS[2],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[2]),
+    characteristic: null,
+    characteristicLabel: null,
     softTraceOnTier1: false,
+    needsNode: false,
+    icon: "fa-shuffle",
+    lang: "ToggleConnectionState",
+  },
+  {
+    dsid: "matrix-scan",
+    id: CONSOLE_SLICE_VERB_IDS[3],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[3]),
+    characteristic: "intuition",
+    characteristicLabel: "Instinct",
+    softTraceOnTier1: false,
+    needsNode: true,
     icon: "fa-magnifying-glass",
     lang: "Scan",
   },
   {
+    dsid: "matrix-navigate",
+    id: CONSOLE_SLICE_VERB_IDS[4],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[4]),
+    characteristic: "intuition",
+    characteristicLabel: "Instinct",
+    softTraceOnTier1: true,
+    needsNode: true,
+    icon: "fa-route",
+    lang: "Navigate",
+  },
+  {
     dsid: "matrix-ping",
-    id: CONSOLE_SLICE_VERB_IDS[1],
-    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[1]),
+    id: CONSOLE_SLICE_VERB_IDS[5],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[5]),
     characteristic: "reason",
     characteristicLabel: "Logic",
     softTraceOnTier1: true,
+    needsNode: true,
     icon: "fa-tower-broadcast",
     lang: "Ping",
   },
   {
-    dsid: "matrix-navigate",
-    id: CONSOLE_SLICE_VERB_IDS[2],
-    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[2]),
-    characteristic: "intuition",
-    characteristicLabel: "Instinct",
+    dsid: "matrix-broadcast",
+    id: CONSOLE_SLICE_VERB_IDS[6],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[6]),
+    characteristic: null,
+    characteristicLabel: null,
+    softTraceOnTier1: false,
+    needsNode: true,
+    icon: "fa-comments",
+    lang: "Broadcast",
+  },
+  {
+    dsid: "matrix-search",
+    id: CONSOLE_SLICE_VERB_IDS[7],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[7]),
+    characteristic: "reason",
+    characteristicLabel: "Logic",
     softTraceOnTier1: true,
-    icon: "fa-route",
-    lang: "Navigate",
+    needsNode: true,
+    icon: "fa-file-lines",
+    lang: "Search",
+  },
+  {
+    dsid: "matrix-read-write",
+    id: CONSOLE_SLICE_VERB_IDS[8],
+    uuid: verbUuid(CONSOLE_SLICE_VERB_IDS[8]),
+    characteristic: "reason",
+    characteristicLabel: "Logic",
+    softTraceOnTier1: true,
+    needsNode: true,
+    icon: "fa-pen-to-square",
+    lang: "ReadWrite",
   },
 ];
 
@@ -66,7 +138,7 @@ export function pickConsoleActor({ roster = [], selectedUuid = null, combatantUu
 /**
  * Player node panel: prefer the controlled Connected runner, else the assigned character
  * if Connected, else the first Connected owned candidate. Falls back to a disconnected
- * owned actor so the UI can say “use Connect on the sheet.”
+ * owned actor so Connect on this applet can run.
  */
 export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, characterUuid = null } = {}) {
   const rows = (Array.isArray(candidates) ? candidates : []).filter(row => row.owned !== false);
@@ -82,16 +154,28 @@ export function pickPlayerVerbActor({ candidates = [], controlledUuid = null, ch
 
 /**
  * @returns {{ ok: boolean, reason: string|null }}
- * reason is a GHOSTWIRE.WiredConsole.VerbNeed* key suffix (Actor / Node / Owner / Hidden / Disconnected).
- * revealed/isGM default so existing Console callers stay Actor/Owner/Node/Disconnected.
+ * reason is a GHOSTWIRE.WiredConsole.VerbNeed* key suffix
+ * (Actor / Node / Owner / Hidden / Disconnected / AlreadyConnected).
+ * Pass dsid for per-verb rules (Connect while disconnected; action verbs need a node).
  */
-export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed = true, isGM = true } = {}) {
+export function consoleVerbGate({ actorUuid, connected, nodeId, owned, revealed = true, isGM = true, dsid = null } = {}) {
   if (!actorUuid) return { ok: false, reason: "Actor" };
   if (!owned) return { ok: false, reason: "Owner" };
-  if (!nodeId) return { ok: false, reason: "Node" };
-  if (!isGM && !revealed) return { ok: false, reason: "Hidden" };
+  const spec = dsid ? consoleSliceByDsid(dsid) : null;
+  const needsNode = spec ? spec.needsNode !== false : true;
+  if (needsNode && !nodeId) return { ok: false, reason: "Node" };
+  if (nodeId && !isGM && !revealed) return { ok: false, reason: "Hidden" };
+  if (dsid === "matrix-connect") {
+    if (connected) return { ok: false, reason: "AlreadyConnected" };
+    return { ok: true, reason: null };
+  }
   if (!connected) return { ok: false, reason: "Disconnected" };
   return { ok: true, reason: null };
+}
+
+/** Hint dsid: Connect when disconnected, else Scan (an action verb that needs a node). */
+export function hintVerbDsid(connected) {
+  return connected ? "matrix-scan" : "matrix-connect";
 }
 
 /** +1 Trace on tier 1 for verbs whose shipped card is an active intrusion; Scan stays 0. */
@@ -132,3 +216,5 @@ export function consoleVerbMetaFromMessage(message) {
     ?? message?.getFlag?.(MODULE_ID, "consoleVerb")
     ?? null;
 }
+
+export { CONSOLE_SLICE_DSIDS, CONNECTION_VERB_DSIDS };
