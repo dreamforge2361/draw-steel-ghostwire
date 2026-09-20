@@ -19,20 +19,21 @@ PNG source (Michael, **1254²**) + Foundry WebP (**1024²**), both under `assets
 |---|---|---|
 | Light Control | `node-light-control.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-light-control.webp` |
 | Maglock | `node-maglock.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-maglock.webp` |
+| Cam Controls | `node-cam-controls.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-cam-controls.webp` |
 
 ## Placement
 
 `AUTO_NODE_TOKEN_ART` / `tokenArtFor` / `tokenArtForNode` in `scripts/wired-auto-nodes.mjs`.
 
-When B112 creates or re-places a Light Control / Maglock node, `placeNode` stamps:
+When B112 creates or re-places a Light Control / Maglock / Cam Controls node, `placeNode` stamps:
 
 - Actor `img`
 - `prototypeToken.texture.src`
 - placed token `texture.src`
 
-from the matching WebP. Console **Place on canvas** uses the same map when the board node has `autoFrom.kind`. Other nodes keep the Track 1/2 summons templates.
+from the matching WebP. Console **Place on canvas** uses `tokenArtForNode` (`tokenStyle`, then auto kind). Other nodes keep the Track 1/2 summons templates until the Director picks a style.
 
-Does **not** rewrite Gold Line walls/lights/tiles. Does **not** change generic node-template art. Further styles: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md` (catalog only in 0.3.48).
+Does **not** rewrite Gold Line walls/lights/tiles. Does **not** change generic node-template art. Full 8-style catalog + Director picker: `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.
 
 ## Verify
 
@@ -40,4 +41,4 @@ Does **not** rewrite Gold Line walls/lights/tiles. Does **not** change generic n
 node tools/b112-b115-smoke.mjs
 ```
 
-Foundry: Auto-nodes from Scene → hidden 0.25 tokens beside lights show the cyan bulb, beside doors show sliding doors + padlock. A hand-placed Track 1/2 node still uses the generic template.
+Foundry: Auto-nodes from Scene → hidden 0.25 tokens beside lights show the cyan bulb, beside doors show sliding doors + padlock, beside cam lights show the security cam. A hand-placed Track 1/2 node still uses the generic template until Token art is set.

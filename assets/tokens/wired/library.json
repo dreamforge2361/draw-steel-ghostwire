@@ -1,23 +1,15 @@
 {
   "version": 1,
   "base": "modules/draw-steel-ghostwire/assets/tokens/wired",
-  "dropIn": "Add <id>.png (source) + <id>.webp (1024² Foundry token) in this folder, then one styles[] row. Id is the tokenStyle slug. Locked autoKind rows are B113 defaults — do not rename files.",
+  "dropIn": "Add node-<id>.png (source) + node-<id>.webp (1024²) and one styles[] row. Auto-nodes use autoKind: Light Control, Maglock Door, Cam Controls.",
   "styles": [
-    {
-      "id": "light-control",
-      "name": "Light Control",
-      "file": "node-light-control.webp",
-      "png": "node-light-control.png",
-      "autoKind": "light-control",
-      "locked": true
-    },
-    {
-      "id": "maglock",
-      "name": "Maglock Door",
-      "file": "node-maglock.webp",
-      "png": "node-maglock.png",
-      "autoKind": "maglock",
-      "locked": true
-    }
+    { "id": "light-control", "name": "Light Control", "file": "node-light-control.webp", "png": "node-light-control.png", "autoKind": "light-control" },
+    { "id": "maglock", "name": "Maglock Door", "file": "node-maglock.webp", "png": "node-maglock.png", "autoKind": "maglock" },
+    { "id": "black-ice", "name": "Black ICE", "file": "node-black-ice.webp", "png": "node-black-ice.png" },
+    { "id": "normal-ice", "name": "Normal ICE", "file": "node-normal-ice.webp", "png": "node-normal-ice.png" },
+    { "id": "mechanical", "name": "Mechanical interface", "file": "node-mechanical.webp", "png": "node-mechanical.png" },
+    { "id": "turret-controls", "name": "Turret Controls", "file": "node-turret-controls.webp", "png": "node-turret-controls.png" },
+    { "id": "cam-controls", "name": "Cam Controls", "file": "node-cam-controls.webp", "png": "node-cam-controls.png", "autoKind": "cam-controls" },
+    { "id": "data-vault", "name": "Data Vault", "file": "node-data-vault.webp", "png": "node-data-vault.png" }
   ]
 }

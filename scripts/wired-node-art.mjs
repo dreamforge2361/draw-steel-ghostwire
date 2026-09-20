@@ -1,6 +1,6 @@
-// Node token library (B113 defaults + B116 drop-in catalog).
-// Auto Light/Maglock keep locked filenames. Extra styles: drop png+webp and a library.json row.
-// Console picker UI is B116 follow-up — this module only resolves paths.
+// Node token library (B113 + B116). Drop png+webp and a library.json / NODE_TOKEN_LIBRARY row.
+// Auto-nodes: Light → light-control, Maglock → maglock, Cam lights → cam-controls.
+// Director picker writes board tokenStyle; Place on canvas stamps the matching WebP.
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -8,10 +8,16 @@ export const NODE_TOKEN_ART_BASE = `modules/${MODULE_ID}/assets/tokens/wired`;
 
 const STYLE_ID = /^[A-Za-z0-9][A-Za-z0-9_-]{0,62}$/;
 
-/** Locked auto-node styles (B113). Ids match AUTO_KIND / library.json. */
+/** Full Director catalog. `autoKind` marks Scene auto-node defaults. */
 export const NODE_TOKEN_LIBRARY = [
-  { id: "light-control", name: "Light Control", file: "node-light-control.webp", autoKind: "light-control", locked: true },
-  { id: "maglock", name: "Maglock Door", file: "node-maglock.webp", autoKind: "maglock", locked: true },
+  { id: "light-control", name: "Light Control", file: "node-light-control.webp", png: "node-light-control.png", autoKind: "light-control" },
+  { id: "maglock", name: "Maglock Door", file: "node-maglock.webp", png: "node-maglock.png", autoKind: "maglock" },
+  { id: "black-ice", name: "Black ICE", file: "node-black-ice.webp", png: "node-black-ice.png" },
+  { id: "normal-ice", name: "Normal ICE", file: "node-normal-ice.webp", png: "node-normal-ice.png" },
+  { id: "mechanical", name: "Mechanical interface", file: "node-mechanical.webp", png: "node-mechanical.png" },
+  { id: "turret-controls", name: "Turret Controls", file: "node-turret-controls.webp", png: "node-turret-controls.png" },
+  { id: "cam-controls", name: "Cam Controls", file: "node-cam-controls.webp", png: "node-cam-controls.png", autoKind: "cam-controls" },
+  { id: "data-vault", name: "Data Vault", file: "node-data-vault.webp", png: "node-data-vault.png" },
 ];
 
 export function nodeTokenSrc(file) {

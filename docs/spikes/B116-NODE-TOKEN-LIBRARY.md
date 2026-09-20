@@ -1,40 +1,43 @@
 # Spike B116 — Node token library (Director picker)
 
 **Date:** 2026-09-20  
-**Module:** catalog + asset layout in **0.3.48**; picker UI **follow-up**  
-**Status:** **SPIKE LIVE** (do not block B112 / B113 / B114 / B115)  
-**Pairs with:** B113 Light Control / Maglock art (shipped).
+**Module:** **0.3.48**  
+**Status:** **SHIPPED** (pending Michael Foundry-verify)  
+**Pairs with:** B112 auto-nodes, B113 Light/Maglock art.
 
 ## Goal
 
-Michael will send more node token styles. Directors pick a style from the **Wired Console** when placing or editing a node. Auto Light Control / Maglock keep their B113 defaults.
+Director picks a node token style from the Wired Console. Auto Light / Maglock / Cam keep locked defaults. Michael ships more styles into `assets/tokens/wired/`.
 
-## This module (0.3.48) — drop-in only
+## Catalog (8)
 
-No picker UI. Structure so adding art is drop-in:
+| Id | Label | File | Auto |
+|---|---|---|---|
+| `light-control` | Light Control | `node-light-control.webp` | named lights |
+| `maglock` | Maglock Door | `node-maglock.webp` | wall doors |
+| `cam-controls` | Cam Controls | `node-cam-controls.webp` | cam lights / named cams (`rest` contains Cam / Camera) |
+| `black-ice` | Black ICE | `node-black-ice.webp` | — |
+| `normal-ice` | Normal ICE | `node-normal-ice.webp` | — |
+| `mechanical` | Mechanical interface | `node-mechanical.webp` | — |
+| `turret-controls` | Turret Controls | `node-turret-controls.webp` | — |
+| `data-vault` | Data Vault | `node-data-vault.webp` | — |
 
-| Path | Role |
-|---|---|
-| `assets/tokens/wired/` | All node styles (png source + 1024² webp) |
-| `assets/tokens/wired/library.json` | Catalog. Append a `styles[]` row when a file lands. |
-| `assets/tokens/wired/README.md` | Drop-in steps |
-| `scripts/wired-node-art.mjs` | Path helper + locked B113 ids |
-| Board node `tokenStyle` | Optional slug, preserved by `getBoard`. Auto-nodes set `light-control` / `maglock`. |
+PNG sources sit beside each WebP (1254² originals, 1024² Foundry WebP).
 
-**Drop-in:** `<id>.png` + `<id>.webp` + `library.json` row. `tokenArtForNode` resolves locked ids via B113 filenames, other ids as `assets/tokens/wired/<id>.webp`. Place on canvas already uses that helper.
+## Console
 
-## Follow-up (picker)
+GM selected-node **Token art** `<select>` (plus Generic Track 1/2). Writes `tokenStyle`. Place / re-place / board sync stamps Actor `img`, `prototypeToken.texture.src`, and token `texture.src`.
 
-Wired Console selected-node panel: style `<select>` from `library.json` (fetch at render). Write `tokenStyle`. Place / re-place stamps `texture.src`. Empty / “Generic Track” = summons Track 1/2 template.
+Auto-nodes set `tokenStyle` to the locked id and ignore the picker until the Director changes it.
 
-Auto-nodes: if `tokenStyle` is unset, keep B113 `AUTO_NODE_TOKEN_ART`. Do not overwrite a Director override on Skip re-run.
+## Drop-in
 
-Out of scope until then: minimap glyphs per style; B113 file renames; Gold Line live-scene rewrite.
+`node-<id>.{png,webp}` + `library.json` row + `NODE_TOKEN_LIBRARY` row.
 
-## Verify (now)
+## Verify
 
 ```text
 node tools/b112-b115-smoke.mjs
 ```
 
-Library JSON is BOM-free; every listed style has png + webp; locked autoKind paths match `AUTO_NODE_TOKEN_ART`.
+Foundry: Auto-nodes stamps Light / Maglock / Cam defaults. Select a hand-placed node → **Token art** → Black ICE / Data Vault / etc. → Place or re-sync shows that WebP. Generic Track 1/2 when the select is empty.

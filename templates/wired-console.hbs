@@ -120,6 +120,15 @@
           <span>R{{rating}}</span>
           {{/if}}
 
+          <label>{{localize "GHOSTWIRE.WiredConsole.TokenStyle"}}</label>
+          {{#if ../isGM}}
+          <select class="wc-input" data-field="tokenStyle">
+            {{#each tokenStyleOptions}}<option value="{{value}}" {{#if isSelected}}selected{{/if}}>{{label}}</option>{{/each}}
+          </select>
+          {{else}}
+          <span>{{#if tokenStyle}}{{tokenStyle}}{{else}}{{localize "GHOSTWIRE.WiredConsole.TokenStyleGeneric"}}{{/if}}</span>
+          {{/if}}
+
           <label>{{localize "GHOSTWIRE.WiredConsole.BreachDC"}}</label>
           <span>{{breachDC}} <em class="wc-dim">{{localize "GHOSTWIRE.WiredConsole.BreachDCHint"}}</em></span>
 

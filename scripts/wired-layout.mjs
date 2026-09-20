@@ -49,7 +49,8 @@ export function shortNodeName(name, { dense = false, max = 18 } = {}) {
   let short = raw
     .replace(/\s+-?\s*Light Control$/i, " LC")
     .replace(/\s+-?\s*Maglock Door\s+/i, " D")
-    .replace(/\s+-?\s*Maglock Door$/i, " D");
+    .replace(/\s+-?\s*Maglock Door$/i, " D")
+    .replace(/\s+-?\s*Cam Controls(?:\s+\d+)?$/i, " Cam");
   const limit = dense ? Math.min(max, 14) : max;
   if (short.length <= limit) return short;
   return `${short.slice(0, Math.max(1, limit - 1)).trimEnd()}…`;

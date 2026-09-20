@@ -10,6 +10,7 @@ import { rollNode, STRATA } from "./wired-node-table.mjs";
 import { RATING, NODE_TEMPLATES } from "./wired-node-templates.mjs";
 import { boardScene, placedNodeActor, placeNode, removePlacedNode, registerNodeTokens } from "./wired-node-tokens.mjs";
 import { PING_MAX_LENGTH, appendPing, readPings, whisperRecipientIds } from "./wired-pings.mjs";
+import { NODE_TOKEN_LIBRARY } from "./wired-node-art.mjs";
 import { applyAutoNodesFromScene, tokenArtForNode } from "./wired-auto-nodes.mjs";
 import { addWireKitToSelected } from "./wired-kit.mjs";
 
@@ -157,6 +158,10 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         // Core Handlebars has no "selected" helper, so options carry their own selected state.
         trackOptions: [1, 2].map(track => ({ value: track, label: localize(`Track${track}`), isSelected: node.track === track })),
         ratingOptions: [1, 2, 3, 4, 5].map(rating => ({ value: rating, label: `R${rating}`, isSelected: node.rating === rating })),
+        tokenStyleOptions: [
+          { value: "", label: localize("TokenStyleGeneric"), isSelected: !node.tokenStyle },
+          ...NODE_TOKEN_LIBRARY.map(style => ({ value: style.id, label: style.name, isSelected: node.tokenStyle === style.id })),
+        ],
         // Links (B41b): every other node on the board as a checkbox; the Director sees them all, hidden ones marked.
         linkOptions: board.nodes.filter(other => other.id !== node.id)
           .map(other => ({ id: other.id, name: other.name, rating: other.rating, hidden: !other.revealed, linked: node.links.includes(other.id) })),
@@ -272,6 +277,9 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
         case "description":
         case "notes":
           node[field] = input.value;
+          break;
+        case "tokenStyle":
+          node.tokenStyle = String(input.value ?? "").trim() || null;
           break;
         case "track":
           node.track = Number(input.value) === 1 ? 1 : 2;
@@ -419,7 +427,7 @@ export class WiredConsole extends HandlebarsApplicationMixin(ApplicationV2) {
     });
   }
 
-  // B112: one Light Control per named-light room + one Maglock per wall door, hidden tokens on the canvas.
+  // B112: Light Control per room, Maglock per door, Cam Controls per cam light; hidden tokens on the canvas.
   static async #onAutoNodes() {
     if (!this.scene) return;
     const localize = key => game.i18n.localize(`GHOSTWIRE.WiredConsole.${key}`);

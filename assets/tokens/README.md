@@ -67,11 +67,17 @@ node tools/apply-bestiary-portrait-art.mjs
 
 Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and still apply to hand-placed / templated nodes.
 
-**B113** Light Control / Maglock auto-node art — Michael’s **YES** tokens (1254² PNG source + 1024² WebP):
+**B113** Light Control / Maglock / Cam Controls auto-node art — Michael’s **YES** tokens (1254² PNG source + 1024² WebP):
 
 | Kind | Files | Foundry `img` / token |
 |---|---|---|
 | Light Control | `wired/node-light-control.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-light-control.webp` |
 | Maglock | `wired/node-maglock.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-maglock.webp` |
+| Cam Controls | `wired/node-cam-controls.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-cam-controls.webp` |
+| Black ICE | `wired/node-black-ice.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-black-ice.webp` |
+| Normal ICE | `wired/node-normal-ice.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-normal-ice.webp` |
+| Mechanical interface | `wired/node-mechanical.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-mechanical.webp` |
+| Turret Controls | `wired/node-turret-controls.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-turret-controls.webp` |
+| Data Vault | `wired/node-data-vault.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-data-vault.webp` |
 
-`AUTO_NODE_TOKEN_ART` stamps those onto B112 auto-nodes. **B116** drop-in library: `assets/tokens/wired/library.json` + README — add `<id>.png`/`.webp` and a catalog row; Console picker is a follow-up. Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.
+`AUTO_NODE_TOKEN_ART` stamps Light / Maglock / Cam onto B112 auto-nodes. **B116** Director picker: Wired Console **Token art** select writes `tokenStyle`; Place / sync stamps the WebP. Drop-in: `assets/tokens/wired/library.json` + README — add `node-<id>.png`/`.webp` and a catalog row. Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.

@@ -7,7 +7,7 @@
  */
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
-import { parseRoomName, planAutoNodes, isDoorWall, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, ROOM_SPLIT, tokenArtFor, tokenArtForNode } from "../scripts/wired-auto-nodes.mjs";
+import { parseRoomName, planAutoNodes, isDoorWall, isCamName, wallCenter, AUTO_NODE_TOKEN_ART, AUTO_KIND, lightControlName, maglockName, camControlsName, ROOM_SPLIT, tokenArtFor, tokenArtForNode } from "../scripts/wired-auto-nodes.mjs";
 import { layoutNodes, shortNodeName, minSeparation, roomPrefix } from "../scripts/wired-layout.mjs";
 import { NODE_TOKEN_LIBRARY, tokenSrcForStyle } from "../scripts/wired-node-art.mjs";
 import { MATRIX_VERBS, MATRIX_VERB_IDS, WIRE_KIT_ID, WIRE_KIT_DSID, WIRE_KIT_UUID } from "../scripts/wired-verbs.mjs";
@@ -34,29 +34,42 @@ ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");
 
 ok(AUTO_NODE_TOKEN_ART["light-control"]?.endsWith("/node-light-control.webp"), "B113 Light Control art path");
 ok(AUTO_NODE_TOKEN_ART.maglock?.endsWith("/node-maglock.webp"), "B113 Maglock art path");
+ok(AUTO_NODE_TOKEN_ART["cam-controls"]?.endsWith("/node-cam-controls.webp"), "B113 Cam Controls art path");
 ok(tokenArtFor("light-control") === AUTO_NODE_TOKEN_ART["light-control"], "tokenArtFor Light Control");
 ok(tokenArtForNode({ autoFrom: { kind: AUTO_KIND.maglock } })?.endsWith("node-maglock.webp"), "tokenArtForNode Maglock");
+ok(tokenArtForNode({ autoFrom: { kind: AUTO_KIND.cam } })?.endsWith("node-cam-controls.webp"), "tokenArtForNode Cam Controls");
 ok(!tokenArtForNode({ autoFrom: null }), "manual nodes keep generic Track templates");
 ok(tokenArtForNode({ tokenStyle: "light-control" })?.endsWith("node-light-control.webp"), "tokenStyle light-control uses B113 filename");
+ok(tokenArtForNode({ tokenStyle: "black-ice" })?.endsWith("/node-black-ice.webp"), "tokenStyle black-ice uses catalog file");
 ok(tokenArtForNode({ tokenStyle: "camera-grid" })?.endsWith("/camera-grid.webp"), "unknown tokenStyle is drop-in <id>.webp");
 ok(!tokenArtForNode({ tokenStyle: "../secret" }), "tokenStyle rejects path junk");
 const library = readBomFreeJson("assets/tokens/wired/library.json");
-ok(Array.isArray(library.styles) && library.styles.length >= 2, "B116 library.json has styles");
-ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.locked)), "mjs catalog matches locked library.json rows");
+const catalogIds = ["light-control", "maglock", "black-ice", "normal-ice", "mechanical", "turret-controls", "cam-controls", "data-vault"];
+ok(NODE_TOKEN_LIBRARY.length === 8 && library.styles.length === 8, "B116 catalog is 8 styles");
+ok(NODE_TOKEN_LIBRARY.map(s => s.id).join(",") === catalogIds.join(","), "catalog id order is the locked full set");
+ok(NODE_TOKEN_LIBRARY.every(s => library.styles.some(row => row.id === s.id && row.file === s.file && row.png === s.png && row.name === s.name && row.autoKind === s.autoKind)), "mjs catalog matches library.json rows");
+ok(library.styles.filter(s => s.autoKind).map(s => s.id).join(",") === "light-control,maglock,cam-controls", "autoKinds are Light / Maglock / Cam only");
 for (const style of library.styles) {
   ok(existsSync(`assets/tokens/wired/${style.file}`) && existsSync(`assets/tokens/wired/${style.png}`), `library style ${style.id} has png+webp`);
   if (style.autoKind) ok(AUTO_NODE_TOKEN_ART[style.autoKind]?.endsWith(`/${style.file}`), `${style.id} autoKind matches AUTO_NODE_TOKEN_ART`);
 }
 ok(tokenSrcForStyle("maglock") === AUTO_NODE_TOKEN_ART.maglock, "tokenSrcForStyle maglock");
-for (const stem of ["node-light-control", "node-maglock"]) {
-  const png = `assets/tokens/wired/${stem}.png`;
-  const webp = `assets/tokens/wired/${stem}.webp`;
-  ok(existsSync(png) && existsSync(webp), `B113 ships ${stem} png + webp`);
+ok(tokenSrcForStyle("data-vault")?.endsWith("/node-data-vault.webp"), "tokenSrcForStyle data-vault");
+for (const style of library.styles) {
+  const stem = style.png.replace(/\.png$/i, "");
+  const png = `assets/tokens/wired/${style.png}`;
+  const webp = `assets/tokens/wired/${style.file}`;
+  ok(existsSync(png) && existsSync(webp), `B113/B116 ships ${stem} png + webp`);
   const pngBuf = readFileSync(png);
   const webpBuf = readFileSync(webp);
   ok(pngBuf[0] === 0x89 && pngBuf.slice(1, 4).toString() === "PNG", `${stem}.png is a PNG source`);
   ok(pngBuf.readUInt32BE(16) === 1254 && pngBuf.readUInt32BE(20) === 1254, `${stem}.png is Michael 1254² source`);
   ok(webpBuf.slice(0, 4).toString() === "RIFF" && webpBuf.slice(8, 12).toString() === "WEBP", `${stem}.webp is WebP`);
+  if (webpBuf.slice(12, 16).toString() === "VP8X") {
+    const w = 1 + webpBuf.readUIntLE(24, 3);
+    const h = 1 + webpBuf.readUIntLE(27, 3);
+    ok(w === 1024 && h === 1024, `${stem}.webp is 1024² Foundry token`);
+  }
 }
 
 console.log("\n1) Room naming (B112)");
@@ -65,6 +78,11 @@ ok(lightControlName("Rear Car Substation") === "Rear Car Substation - Light Cont
 ok(maglockName("Rear Car Substation", 1) === "Rear Car Substation - Maglock Door 1", "Maglock Door 1 uses dash after room");
 ok(maglockName("Rear Car Substation", 2) === "Rear Car Substation - Maglock Door 2", "Maglock Door 2 uses dash after room");
 ok(maglockName("Rear Car Substation", 1) !== "Rear Car Substation Maglock Door 1", "Maglock names are not undashed");
+ok(camControlsName("Security Nest", 1) === "Security Nest - Cam Controls 1", "Cam Controls 1 uses dash after room");
+ok(camControlsName("Security Nest", 2) === "Security Nest - Cam Controls 2", "Cam Controls 2 numbers per room");
+ok(isCamName("Security Nest - Cam 1") && isCamName("Cab - Camera") && isCamName("Aft Freight - Cam Controls"), "rest with Cam / Camera / Cam Controls is a cam");
+ok(isCamName("Cab - Cams") && isCamName("Nest - cameras"), "plural cam / cameras match");
+ok(!isCamName("Aft Freight - Work Light") && !isCamName("Cab - Light Control"), "ordinary lights are not cams");
 ok(parseRoomName("Rear Car Substation - Light Control") === "Rear Car Substation", "Rear Car Substation - Light Control → Rear Car Substation");
 ok(parseRoomName("Aft Freight - Work Light") === "Aft Freight", "Aft Freight - Work Light → Aft Freight");
 ok(parseRoomName("Cab - Light Control") === "Cab", "Cab - Light Control → Cab");
@@ -86,6 +104,8 @@ const lights = [
   { id: "L1", name: "Aft Freight - Work Light", x: 100, y: 50 },
   { id: "L1b", name: "Aft Freight - Work Light 2", x: 120, y: 50 },
   { id: "L2", name: "Security Nest - Light", x: 400, y: 50 },
+  { id: "C1", name: "Security Nest - Cam 1", x: 420, y: 50 },
+  { id: "C2", name: "Security Nest - Camera", x: 430, y: 55 },
   { id: "L3", name: "Cab - Light Control", x: 800, y: 40 },
   { id: "L4", name: "Rear Car Substation - Light Control", x: 900, y: 40 },
   { id: "skip", name: "Cab Light", x: 0, y: 0 },
@@ -117,9 +137,33 @@ ok(lightNodes.every(n => n.tokenStyle === AUTO_KIND.light), "Light Control token
 ok(maglocks.every(n => n.tokenStyle === AUTO_KIND.maglock), "Maglock tokenStyle is maglock");
 ok(lightNodes.every(n => n.notes.includes("node-light-control.webp")), "Light Control notes cite B113 art");
 ok(maglocks.every(n => n.notes.includes("node-maglock.webp")), "Maglock notes cite B113 art");
+const nestLight = plan.nodes.find(n => n.name === "Security Nest - Light Control");
+ok(nestLight?.autoFrom.lightIds.join(",") === "L2", "cam light ids are not on Light Control");
+ok(!nestLight.autoFrom.lightIds.includes("C1") && !nestLight.autoFrom.lightIds.includes("C2"), "Security Nest cams stay off the lighting grid");
+const cams = plan.created.filter(n => n.autoFrom.kind === AUTO_KIND.cam);
+ok(cams.length === 2, `one Cam Controls per cam light (got ${cams.length})`);
+ok(cams.every(n => n.track === 1 && n.rating === 1), "Cam Controls is T1 R1");
+ok(plan.nodes.some(n => n.name === "Security Nest - Cam Controls 1") && plan.nodes.some(n => n.name === "Security Nest - Cam Controls 2"), "per-room cam numbering with dash");
+ok(cams.every(n => n.name.includes(ROOM_SPLIT) && / - Cam Controls \d+$/.test(n.name)), "every Cam Controls name is {Room} - Cam Controls N");
+ok(cams.every(n => n.tokenStyle === AUTO_KIND.cam), "Cam Controls tokenStyle is cam-controls");
+ok(cams.every(n => n.notes.includes("node-cam-controls.webp")), "Cam Controls notes cite B113 art");
+ok(cams.every(n => nestLight.links.includes(n.id) && n.links.includes(nestLight.id)), "Light Control linked to same-room Cam Controls");
 const aftLight = plan.nodes.find(n => n.name === "Aft Freight - Light Control");
 const aftDoors = plan.nodes.filter(n => n.autoFrom?.room === "Aft Freight" && n.autoFrom.kind === AUTO_KIND.maglock);
 ok(aftDoors.every(d => aftLight.links.includes(d.id) && d.links.includes(aftLight.id)), "Light Control linked to same-room maglocks");
+
+ids = 200;
+const camOnly = planAutoNodes({
+  lights: [{ id: "C3", name: "Courier Bay - Cam 1", x: 10, y: 10 }],
+  doors: [{ id: "D9", name: "", x: 12, y: 20 }],
+  existing: [],
+  replace: false,
+  idFactory,
+});
+ok(camOnly.rooms.includes("Courier Bay"), "cam-only room still seeds roomMap");
+ok(!camOnly.created.some(n => n.autoFrom.kind === AUTO_KIND.light), "cam-only room has no Light Control");
+ok(camOnly.created.some(n => n.name === "Courier Bay - Cam Controls 1"), "cam-only room still gets Cam Controls");
+ok(camOnly.created.some(n => n.name === "Courier Bay - Maglock Door 1"), "nearest-room maglock uses cam-only room");
 
 ids = 0;
 const again = planAutoNodes({ lights, doors, existing: plan.nodes, replace: false, idFactory });
@@ -155,6 +199,7 @@ ok(laid.positions.size === 24, "every node has a position");
 const sep = minSeparation(laid.positions);
 ok(sep >= 7, `min centre separation ≥ 7 (got ${sep.toFixed(2)})`);
 ok(shortNodeName("Rear Bay - Light Control", { dense: true }).includes("LC"), "Light Control compresses to LC");
+ok(shortNodeName("Security Nest - Cam Controls 1").includes("Cam"), "Cam Controls compresses to Cam");
 ok(shortNodeName("Cab - Maglock Door 2", { dense: true }).length <= 14, "dense labels truncate");
 ok(roomPrefix("Rear Bay - Maglock Door 1") === "Rear Bay", "roomPrefix splits Maglock names on “ - ”");
 ok(roomPrefix("Rear Car Substation - Maglock Door 2") === "Rear Car Substation", "roomPrefix keeps full room left of first “ - ”");
@@ -190,6 +235,7 @@ console.log("\n5) Console / minimap / docs");
 const consoleSrc = readFileSync("scripts/wired-console.mjs", "utf8");
 ok(consoleSrc.includes("autoNodes") && consoleSrc.includes("applyAutoNodesFromScene"), "Console wires Auto-nodes");
 ok(consoleSrc.includes("tokenArtForNode"), "Place on canvas stamps B113 art for auto-nodes");
+ok(consoleSrc.includes("NODE_TOKEN_LIBRARY"), "Console lists the node token library");
 ok(consoleSrc.includes("addWireKit"), "Console wires Add Wire Kit");
 ok(consoleSrc.includes("autoFrom"), "getBoard preserves autoFrom");
 ok(consoleSrc.includes("tokenStyle"), "getBoard preserves tokenStyle");
@@ -197,11 +243,13 @@ ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("ROOM_SPLIT") &
 ok(!consoleSrc.includes("gold-line-scene"), "Console does not import gold-line-scene");
 const template = readFileSync("templates/wired-console.hbs", "utf8");
 ok(template.includes("data-action=\"autoNodes\"") && template.includes("data-action=\"addWireKit\""), "Console template has both GM buttons");
+ok(template.includes("data-field=\"tokenStyle\"") && template.includes("tokenStyleOptions"), "Console Token art select");
 const mini = readFileSync("templates/wired-minimap.hbs", "utf8");
 ok(mini.includes("wm-viewport") && mini.includes("shortName") && mini.includes("resetView"), "minimap has viewport, truncated names, reset");
 ok(readFileSync("scripts/wired-minimap.mjs", "utf8").includes("layoutNodes"), "minimap uses shared layout");
 ok(readFileSync("scripts/wired-node-tokens.mjs", "utf8").includes("textureSrc"), "placeNode accepts B113 textureSrc");
-ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-light-control.webp") && readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-maglock.webp"), "auto-nodes stamp Light/Maglock art");
+ok(readFileSync("scripts/wired-node-tokens.mjs", "utf8").includes("tokenSrcForStyle"), "sync stamps tokenStyle art onto placed tokens");
+ok(readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-light-control.webp") && readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-maglock.webp") && readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("node-cam-controls.webp"), "auto-nodes stamp Light/Maglock/Cam art");
 ok(!readFileSync("scripts/wired-auto-nodes.mjs", "utf8").includes("placeholder (generic Track 1)"), "auto-node notes are not B113 placeholders");
 
 const lang = readBomFreeJson("lang/en.json");
@@ -209,6 +257,9 @@ ok(lang.GHOSTWIRE.WiredConsole.AutoNodes === "Auto-nodes from Scene", "lang Auto
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation - Light Control"), "lang documents locked room rule");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation - Maglock Door 1"), "lang Maglock names use dash after room");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("{Room} - Light Control"), "lang Light Control stays {Room} - Light Control");
+ok(lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("{Room} - Cam Controls 1"), "lang Cam Controls names use dash after room");
+ok(lang.GHOSTWIRE.WiredConsole.TokenStyle === "Token art", "lang TokenStyle");
+ok(lang.GHOSTWIRE.WiredConsole.TokenStyleGeneric.includes("Generic"), "lang TokenStyleGeneric");
 ok(!lang.GHOSTWIRE.WiredConsole.AutoNodesRule.includes("Rear Car Substation Maglock Door"), "lang does not document undashed Maglock names");
 ok(lang.GHOSTWIRE.WiredConsole.AutoNodesUnsplit.includes("{Room} - Light Control"), "lang warns on missing splitter");
 ok(lang.GHOSTWIRE.WiredMinimap.PanHint.toLowerCase().includes("zoom"), "lang pan/zoom hint");
@@ -223,8 +274,11 @@ ok(b112.includes("Wrong: `Rear Car Substation Maglock Door 1`"), "B112 spike mar
 ok(readFileSync("docs/spikes/B114-NODE-MAP-READABILITY.md", "utf8").includes("0.3.48"), "B114 spike");
 ok(readFileSync("docs/spikes/B115-NPC-WIRE-KIT.md", "utf8").includes("0.3.48"), "B115 spike");
 ok(b112.includes("B113"), "B112 notes B113 art");
+ok(b112.includes("Cam Controls"), "B112 spike cameras-in-scope");
 ok(readFileSync("docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md", "utf8").includes("node-light-control.webp"), "B113 spike");
 ok(readFileSync("docs/spikes/B116-NODE-TOKEN-LIBRARY.md", "utf8").includes("library.json"), "B116 spike");
+ok(readFileSync("docs/spikes/B116-NODE-TOKEN-LIBRARY.md", "utf8").includes("data-vault"), "B116 spike lists Data Vault");
+ok(readFileSync("docs/spikes/B116-NODE-TOKEN-LIBRARY.md", "utf8").includes("SHIPPED"), "B116 spike is shipped");
 
 if (failures.length) {
   console.error(`\n${failures.length} failure(s):`);

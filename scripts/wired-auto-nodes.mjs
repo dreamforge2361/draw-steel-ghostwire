@@ -7,17 +7,18 @@ import { tokenSrcForStyle } from "./wired-node-art.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
-/** B113: Light Control / Maglock defaults. Generic Track 1/2 templates stay for other nodes. */
+/** B113: Light Control / Maglock / Cam Controls defaults. Generic Track 1/2 templates stay for other nodes. */
 export const AUTO_NODE_TOKEN_ART = {
   "light-control": tokenSrcForStyle("light-control"),
   maglock: tokenSrcForStyle("maglock"),
+  "cam-controls": tokenSrcForStyle("cam-controls"),
 };
 
 export function tokenArtFor(kind) {
   return AUTO_NODE_TOKEN_ART[kind] || null;
 }
 
-/** Director `tokenStyle` (B116) wins; else locked auto Light/Maglock art. */
+/** Director `tokenStyle` (B116) wins; else locked auto Light/Maglock/Cam art. */
 export function tokenArtForNode(node) {
   return tokenSrcForStyle(node?.tokenStyle) || tokenArtFor(node?.autoFrom?.kind);
 }
@@ -25,6 +26,7 @@ export function tokenArtForNode(node) {
 export const AUTO_KIND = {
   light: "light-control",
   maglock: "maglock",
+  cam: "cam-controls",
 };
 
 /** Michael lock (2026-09-20): `{Room Name} - {rest…}` — space-hyphen-space, first occurrence. */
@@ -51,6 +53,21 @@ export function parseRoomName(name) {
 export const lightControlName = room => `${room}${ROOM_SPLIT}Light Control`;
 /** `{Room} - Maglock Door N` — same ` - ` after the room (never `{Room} Maglock Door N`). */
 export const maglockName = (room, n) => `${room}${ROOM_SPLIT}Maglock Door ${n}`;
+
+/** `{Room} - Cam Controls N` — one node per cam light / named cam. */
+export const camControlsName = (room, n) => `${room}${ROOM_SPLIT}Cam Controls ${n}`;
+
+/**
+ * True when the name’s rest (right of first ` - `) is a camera, not a light.
+ * Examples: “Security Nest - Cam 1”, “Cab - Camera”, “Aft Freight - Cam Controls”.
+ */
+export function isCamName(name) {
+  const raw = String(name ?? "").trim();
+  const idx = raw.indexOf(ROOM_SPLIT);
+  const rest = (idx >= 0 ? raw.slice(idx + ROOM_SPLIT.length) : raw).trim();
+  if (!rest) return false;
+  return /\bcam(?:era)?s?\b/i.test(rest);
+}
 
 export function isDoorWall(wall, noneValue = 0) {
   const door = wall?.door;
@@ -97,6 +114,9 @@ const matchLight = (node, room) =>
 const matchMaglock = (node, doorId) =>
   node?.autoFrom?.kind === AUTO_KIND.maglock && node.autoFrom.doorId === doorId;
 
+const matchCam = (node, lightId) =>
+  node?.autoFrom?.kind === AUTO_KIND.cam && node.autoFrom.lightId === lightId;
+
 function makeNode({ id, name, track, rating, autoFrom, tokenStyle = null, links = [], description = "", notes = "" }) {
   const integrity = RATING[rating]?.integrity ?? 12;
   return {
@@ -108,7 +128,7 @@ function makeNode({ id, name, track, rating, autoFrom, tokenStyle = null, links 
 }
 
 /**
- * Plan Light Control + Maglock nodes for a Scene snapshot.
+ * Plan Light Control + Maglock + Cam Controls nodes for a Scene snapshot.
  *
  * @param {{ lights: {id,name,x,y}[], doors: {id,name,x,y}[], existing?: object[], replace?: boolean, idFactory?: () => string }} input
  * @returns {{ nodes: object[], skipped: object[], created: object[], skippedLights: {id:string,name:string,reason:string}[], rooms: string[], placements: object }}
@@ -119,6 +139,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
 
   const roomMap = new Map();
   const skippedLights = [];
+  const camLights = [];
   for (const light of lights) {
     const room = parseRoomName(light.name);
     if (!room) {
@@ -129,6 +150,11 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
       roomMap.set(room, { name: room, lightIds: [], anchor: { x: light.x, y: light.y }, place: { x: light.x, y: light.y } });
     }
     const entry = roomMap.get(room);
+    if (isCamName(light.name)) {
+      camLights.push({ ...light, room });
+      continue;
+    }
+    if (!entry.lightIds.length) entry.place = { x: light.x, y: light.y };
     entry.lightIds.push(light.id);
   }
   const rooms = [...roomMap.values()];
@@ -137,6 +163,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
   const skipped = [];
 
   for (const room of rooms) {
+    if (!room.lightIds.length) continue;
     const prior = [...byId.values()].find(n => matchLight(n, room.name));
     if (prior && !replace) {
       skipped.push(prior);
@@ -149,7 +176,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
       rating: 1,
       autoFrom: { kind: AUTO_KIND.light, room: room.name, lightIds: room.lightIds },
       description: `Lighting grid for ${room.name}. Track 1 Rating 1 — a single power roll seizes the lights. The Wire does not flip them in v1; this node is the address.`,
-      notes: `Auto-node from Scene lights (${room.lightIds.join(", ")}). Token art: B113 node-light-control.webp.`,
+      notes: `Auto-node from Scene lights (${room.lightIds.join(", ")}). Token art: node-light-control.webp.`,
     });
     node._place = { x: room.place.x, y: room.place.y, kind: AUTO_KIND.light };
     byId.set(node.id, node);
@@ -175,19 +202,43 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
       rating: 2,
       autoFrom: { kind: AUTO_KIND.maglock, room, doorId: door.id },
       description: `Maglock on a ${room} door. Track 1 Rating 2 — professional lock, no Integrity pool. The Wire does not open it in v1; this node is the address.`,
-      notes: `Auto-node from wall door ${door.id}. Token art: B113 node-maglock.webp.`,
+      notes: `Auto-node from wall door ${door.id}. Token art: node-maglock.webp.`,
     });
     node._place = { x: door.x, y: door.y, kind: AUTO_KIND.maglock };
     byId.set(node.id, node);
     created.push(node);
   }
 
-  // Light Control ↔ Maglocks in the same room.
+  const camCounts = new Map();
+  const sortedCams = [...camLights].sort((a, b) => (a.x - b.x) || (a.y - b.y) || String(a.id).localeCompare(String(b.id)));
+  for (const cam of sortedCams) {
+    camCounts.set(cam.room, (camCounts.get(cam.room) ?? 0) + 1);
+    const n = camCounts.get(cam.room);
+    const prior = [...byId.values()].find(node => matchCam(node, cam.id));
+    if (prior && !replace) {
+      skipped.push(prior);
+      continue;
+    }
+    const node = makeNode({
+      id: idFactory(),
+      name: camControlsName(cam.room, n),
+      track: 1,
+      rating: 1,
+      autoFrom: { kind: AUTO_KIND.cam, room: cam.room, lightId: cam.id },
+      description: `Camera feed for ${cam.room}. Track 1 Rating 1 — a single power roll seizes the cam. The Wire does not pan it in v1; this node is the address.`,
+      notes: `Auto-node from Scene cam ${cam.id}. Token art: node-cam-controls.webp.`,
+    });
+    node._place = { x: cam.x, y: cam.y, kind: AUTO_KIND.cam };
+    byId.set(node.id, node);
+    created.push(node);
+  }
+
+  // Light Control ↔ Maglocks and Cam Controls in the same room.
   const list = [...byId.values()];
   for (const light of list.filter(n => n.autoFrom?.kind === AUTO_KIND.light)) {
-    for (const door of list.filter(n => n.autoFrom?.kind === AUTO_KIND.maglock && n.autoFrom.room === light.autoFrom.room)) {
-      if (!light.links.includes(door.id)) light.links.push(door.id);
-      if (!door.links.includes(light.id)) door.links.push(light.id);
+    for (const other of list.filter(n => (n.autoFrom?.kind === AUTO_KIND.maglock || n.autoFrom?.kind === AUTO_KIND.cam) && n.autoFrom.room === light.autoFrom.room)) {
+      if (!light.links.includes(other.id)) light.links.push(other.id);
+      if (!other.links.includes(light.id)) other.links.push(light.id);
     }
   }
 
@@ -207,6 +258,7 @@ export function planAutoNodes({ lights = [], doors = [], existing = [], replace 
 function offsetNear(x, y, grid, kind) {
   const step = (grid || 100) * 0.4;
   if (kind === AUTO_KIND.maglock) return { x: x + step, y: y - step };
+  if (kind === AUTO_KIND.cam) return { x: x - step, y: y + step };
   return { x: x + step, y };
 }
 

@@ -5,6 +5,8 @@
 // - The board is the source of truth: board changes sync name / Rating / Integrity / track / revealed onto placed tokens;
 //   a GM changing a Track 2 node's Stamina writes Integrity back. Deleted nodes and reset boards remove their Actors.
 
+import { tokenSrcForStyle } from "./wired-node-art.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
 const L = "GHOSTWIRE.WiredConsole";
@@ -154,6 +156,11 @@ export async function syncPlacedNodes(scene) {
       actorChanges[`flags.${MODULE_ID}.track`] = node.track;
       actorChanges["prototypeToken.bar1.attribute"] = barFor(node);
     }
+    const art = tokenSrcForStyle(node.tokenStyle);
+    if (art && actor.img !== art) {
+      actorChanges.img = art;
+      actorChanges["prototypeToken.texture.src"] = art;
+    }
     if (!foundry.utils.isEmpty(actorChanges)) await actor.update(actorChanges, SYNC);
 
     for (const token of actorTokens(actor)) {
@@ -161,6 +168,7 @@ export async function syncPlacedNodes(scene) {
       if (token.hidden === node.revealed) tokenChanges.hidden = !node.revealed;
       if (token.name !== node.name) tokenChanges.name = node.name;
       if ((token.bar1?.attribute ?? null) !== barFor(node)) tokenChanges["bar1.attribute"] = barFor(node);
+      if (art && token.texture?.src !== art) tokenChanges["texture.src"] = art;
       if (!foundry.utils.isEmpty(tokenChanges)) await token.update(tokenChanges, SYNC);
     }
   }
