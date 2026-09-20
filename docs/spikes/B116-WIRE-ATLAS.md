@@ -2,9 +2,9 @@
 
 **Date:** 2026-09-20  
 **Locked:** 2026-09-20 (Michael)  
-**Module:** **0.3.50**  
-**Status:** **SHIPPED** (docs + journal text + catalog stubs; art drop-in later)  
-**Pairs with:** B116 node-token library drop-in, **shipped 0.3.49** (PR **#34** merged). Device catalog + Token art picker are on main; this patch adds topology + atlas stubs at **0.3.50**. Mama is **0.3.48**.  
+**Module:** **0.3.51** (art drop; topology brief **0.3.50**)  
+**Status:** **SHIPPED** (docs + journal text **0.3.50**; Michael Relay / Host / Segment art **0.3.51**)  
+**Pairs with:** B116 node-token library drop-in, **shipped 0.3.49** (PR **#34** merged). Device catalog + Token art picker are on main; topology + catalog stubs shipped **0.3.50**; this patch drops Michael atlas art at **0.3.51**. Mama is **0.3.48**.  
 **Out of scope:** PDF rulebook redo (Michael: later). Gold Line `{ force: true }`. Regenerating art. New token types beyond Relay / Host / Segment (+ optional Endpoint note).
 
 ## Ask
@@ -45,7 +45,7 @@ modules/draw-steel-ghostwire/assets/tokens/wired/node-host.webp
 modules/draw-steel-ghostwire/assets/tokens/wired/node-segment.webp
 ```
 
-Catalog: `assets/tokens/wired/library.json` (stubs, `placeholder: true` until Michael art lands). Device styles `light-control` / `maglock` live on PR #34 — merge by appending rows, do not rename B113 files.
+Catalog: `assets/tokens/wired/library.json` (Michael art, `placeholder: false` as of **0.3.51**). Device styles `light-control` / `maglock` live on PR #34 — merge by appending rows, do not rename B113 files.
 
 ## Dig-down procedure (table)
 
@@ -109,7 +109,7 @@ Enter **Power Co — North Substation** (or an Endpoint pip on that Segment). Lo
 
 B112 auto-nodes from named lights/doors belong **here**, never on Scene A or B.
 
-## Foundry this pass (0.3.50)
+## Foundry this pass (0.3.51 art; topology 0.3.50)
 
 | Ship | Skip |
 |---|---|
@@ -118,9 +118,9 @@ B112 auto-nodes from named lights/doors belong **here**, never on Scene A or B.
 | Short sections in `08-hacker.md`, `18-wired-foundry.md` | Regenerating device or atlas art |
 | Cross-links on doctrine + Director wired-node docs | Endpoint as a fourth v1 style |
 | Rulebook journal page from RAW (`21-the-wire.json`) | |
-| `assets/tokens/wired/library.json` atlas stubs + README | |
+| `assets/tokens/wired/library.json` + Michael `node-relay` / `node-host` / `node-segment` png+webp | |
 
-**Version:** module **0.3.50**. Mama **0.3.48** (#35). Wired Gold Line **0.3.49** (PR **#34** merged). This patch is the next free number.
+**Version:** module **0.3.51**. Topology brief **0.3.50**. Mama **0.3.48** (#35). Wired Gold Line **0.3.49** (PR **#34** merged).
 
 ## Files
 
@@ -143,7 +143,7 @@ node tools/raw-to-journals.mjs          # then
 node tools/build-packs.mjs rulebook     # Foundry closed
 ```
 
-Foundry (after update to **0.3.50**, world reload): Ghostwire Rulebook → **The Wire** → page **Wire Atlas / topology**. Confirm the three altitudes, Reach = current-scene hops, dig-down, and the Switchboard → Power Co example. Do **not** run Gold Line `{ force: true }`. Atlas tokens have no art yet — catalog rows are placeholders.
+Foundry (after update to **0.3.51**, world reload): Ghostwire Rulebook → **The Wire** → page **Wire Atlas / topology**. Confirm the three altitudes, Reach = current-scene hops, dig-down, and the Switchboard → Power Co example. Token art picker: Relay / Host / Segment stamp `assets/tokens/wired/node-*.webp`. Do **not** run Gold Line `{ force: true }`.
 
 ## Naming lock
 

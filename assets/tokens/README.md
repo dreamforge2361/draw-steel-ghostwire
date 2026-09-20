@@ -11,7 +11,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Bestiary humanoids + ICE | `bestiary/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/bestiary/<slug>.webp` | B103 shipped **0.3.35** (40) |
 | ARG corp security (3) | `bestiary/arg/arg-*.webp` (+ PNG originals) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/arg/arg-<role>.webp` | B111 shipped **0.3.47** (Enforcer, Lieutenant, Officer) |
 | Mama Cassavir (L5 named boss) | `bestiary/mama-cassavir.webp` (+ PNG original) | `modules/draw-steel-ghostwire/assets/tokens/bestiary/mama-cassavir.webp` | **0.3.48** — Michael split-face (elderly organic / chrome cyborg, cyan eye, hand on deck) |
-| Wired Atlas (Relay / Host / Segment) | `wired/node-relay\|host\|segment.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-<role>.webp` | B116 catalog stubs **0.3.50** — **no art yet** (do not generate) |
+| Wired Atlas (Relay / Host / Segment) | `wired/node-relay\|host\|segment.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-<role>.webp` | B116 Michael art **0.3.51** (Relay / Host / Segment) |
 | Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 shipped **0.3.35** (17) |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
@@ -83,6 +83,6 @@ Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and s
 
 `AUTO_NODE_TOKEN_ART` stamps Light / Maglock / Cam onto B112 auto-nodes. **B116** Director picker: Wired Console **Token art** select writes `tokenStyle`; Place / sync stamps the WebP. Drop-in: `assets/tokens/wired/library.json` + README — add `node-<id>.png`/`.webp` and a catalog row. Spike: `docs/spikes/B113-LIGHT-MAGLOCK-TOKEN-ART.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`.
 
-## Wired Atlas (B116, module 0.3.50)
+## Wired Atlas (B116, module 0.3.51)
 
-Relay / Host / Segment catalog stubs live under `wired/`. **No art this pass** — drop Michael PNG + 1024² WebP as `node-relay.webp`, `node-host.webp`, `node-segment.webp` and flip `library.json` `placeholder` flags. Place on canvas falls back to the generic Track 1/2 template while `placeholder` is true. Endpoint is optional v1.1. Device styles shipped **0.3.49** (PR **#34**). Spike: `docs/spikes/B116-WIRE-ATLAS.md`.
+Michael Relay / Host / Segment tokens live under `wired/` as `node-relay`, `node-host`, and `node-segment` (PNG originals + WebP). Catalog `placeholder` is **false**; family / altitude unchanged. Place on canvas stamps the WebP. Endpoint is optional v1.1. Device styles shipped **0.3.49** (PR **#34**). Topology brief shipped **0.3.50**. Spike: `docs/spikes/B116-WIRE-ATLAS.md`.

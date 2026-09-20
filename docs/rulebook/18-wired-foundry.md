@@ -87,7 +87,7 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 - **Lights.** Name pattern **`{Room Name} - {rest…}`** (space-hyphen-space required). Room = everything left of the first ` - `. Light Control node stays **`{Room} - Light Control`** (or matches the light name). Example: `Rear Car Substation - Light Control` → **Rear Car Substation - Light Control** (Track 1 Rating 1). Lights with no ` - ` are **skipped** and the GM gets a warning. Hidden token next to the first non-cam light in that room.
 - **Doors.** Assigned to the nearest light’s room (or the wall’s own name). **Track 1 Rating 2** `{Room} - Maglock Door 1`, `{Room} - Maglock Door 2`, … per room (same ` - ` splitter; not `{Room} Maglock Door 1`); hidden token next to the door. Light Control ↔ maglocks in the same room are linked.
 - **Cam lights.** If `rest` contains Cam / Camera, that light becomes **`{Room} - Cam Controls N`** (Track 1 Rating 1, `cam-controls` art) instead of joining the Light Control `lightIds`. Linked to the same-room Light Control when one exists.
-- Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). The Wire does not flip lights, doors, or cameras in v1. Auto-node tokens use B113 library art (`assets/tokens/wired/node-light-control.webp`, `node-maglock.webp`, `node-cam-controls.webp`). Generic Track 1/2 templates stay when `tokenStyle` is empty. Director **Token art** select (B116) picks any catalog style (eight device arts plus atlas stubs). Does not rewrite Gold Line walls/lights/tiles.
+- Re-run **skips** nodes already flagged `autoFrom` (or **Replace** to rebuild). The Wire does not flip lights, doors, or cameras in v1. Auto-node tokens use B113 library art (`assets/tokens/wired/node-light-control.webp`, `node-maglock.webp`, `node-cam-controls.webp`). Generic Track 1/2 templates stay when `tokenStyle` is empty. Director **Token art** select (B116) picks any catalog style (eight device arts plus atlas Relay / Host / Segment). Does not rewrite Gold Line walls/lights/tiles.
 
 **Wire Kit (B115).** NPCs do not receive Matrix Verbs by default. Drop **Wire Kit — Matrix Verbs** (Ghostwire Matrix › Support) onto an NPC, or use the Console / token HUD **Add Wire Kit** on selected NPC tokens. Stamp ARG security that should act on the Wire; leave meat-only thugs clean. Heroes already have the verbs.
 
@@ -95,7 +95,7 @@ Reveal is manual in v1: when a runner Scans, the Director reveals what they foun
 
 ### Wire Atlas tokens (B116)
 
-Topology rules live in RAW (`docs/raw/21-the-wire.md`, Wire Atlas / topology) and the spike (`docs/spikes/B116-WIRE-ATLAS.md`). Foundry this pass is **text + catalog stubs**. The **Token art** picker already shipped in **0.3.49** (PR **#34**); atlas rows list in that select. Place / sync fall back to generic Track 1/2 while `"placeholder": true`. Do **not** generate art.
+Topology rules live in RAW (`docs/raw/21-the-wire.md`, Wire Atlas / topology) and the spike (`docs/spikes/B116-WIRE-ATLAS.md`). Michael atlas art shipped **0.3.51**. The **Token art** picker already shipped in **0.3.49** (PR **#34**); atlas rows list in that select. Place / sync stamps `node-relay.webp` / `node-host.webp` / `node-segment.webp`. Do **not** regenerate art.
 
 | Altitude | Scene | Token styles | Auto-nodes |
 |---|---|---|---|
@@ -103,7 +103,7 @@ Topology rules live in RAW (`docs/raw/21-the-wire.md`, Wire Atlas / topology) an
 | Site / facility | Power Co Wire scene | `node-segment` (+ Host as site root) | Never |
 | Room / device | Office, Gold Line car, maintenance room | Existing device library | **Yes** (B112, room-scale only) |
 
-Catalog: `assets/tokens/wired/library.json`. Drop-in files (when Michael art lands): `assets/tokens/wired/node-relay.webp`, `node-host.webp`, `node-segment.webp` (png source + 1024² webp). Until then the rows are `"placeholder": true`. Eight device styles shipped **0.3.49**. **Endpoint** is optional v1.1.
+Catalog: `assets/tokens/wired/library.json`. Atlas files: `assets/tokens/wired/node-relay.webp`, `node-host.webp`, `node-segment.webp` (png source + webp; `"placeholder": false`). Eight device styles shipped **0.3.49**. **Endpoint** is optional v1.1.
 
 Directors place atlas tokens by hand on the matching Scene. Scan **Reach** is hops on **that** Scene’s board, not the whole district. Do not force-overwrite Gold Line to stamp atlas tokens.
 
