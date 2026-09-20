@@ -28,9 +28,13 @@ Players see the token name. They do not need the combat sheet.
 | **Armor** | Armor Locker | **All** armor Items in Ghostwire Gear › Armor |
 | **Weapons** | Weapons Cage | **All** weapons in Ghostwire Gear › Weapons |
 | **Drones** | Drone Vendor | Buyable drone chassis in Ghostwire Vehicles › Drones |
+| **Vehicles** | Vehicle Lot | Crewed platforms in Ghostwire Vehicles (ground / air / water / space). **Not** drones — `flags.vehicle` present and `drone` falsy. Plot SKUs (Nox’s Trash Freighter) stay off the lot |
+| **Decks** | Deck Vendor | Cyberdecks in Ghostwire Matrix › Decks (Cat 4A, `matrix.role === "deck"`) |
+| **Programs** | Software Stall | Buyable deck software: Cat **4B** persistent suites **and** Cat **4C** attack payloads on one shelf (v1). Autosofts and Hacker class Program abilities stay off this stall |
+| **Ammo** | Ammo Counter | Gear › General › Ammunition magazines / one-shot specialty rounds (Standard Rounds, AP, Gel, grenades, smoke). **Not** machine Ammo Bin mods |
 | Empty shelf | Street Vendor | Nothing — stock by hand |
 
-New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones.
+New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones. New crewed vehicles (`flags.vehicle` and not `drone`) join Vehicles. New Matrix decks (`role: deck`) join Decks. New `programs/` suites and `payloads/` chips join Programs. New `general/ammunition` SKUs join Ammo.
 
 **Restock from preset** on an open kiosk **replaces** the current list. Infinite stock still (B118).
 

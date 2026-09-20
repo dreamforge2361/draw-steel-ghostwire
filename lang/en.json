@@ -205,11 +205,31 @@
           "Name": "Drones",
           "ActorName": "Drone Vendor",
           "Tagline": "Buyable drone chassis from the Vehicles pack."
+        },
+        "Vehicles": {
+          "Name": "Vehicles",
+          "ActorName": "Vehicle Lot",
+          "Tagline": "Crewed platforms — hoppers, bikes, haulers. Not drones."
+        },
+        "Decks": {
+          "Name": "Decks",
+          "ActorName": "Deck Vendor",
+          "Tagline": "Buyable cyberdecks from the Matrix pack."
+        },
+        "Programs": {
+          "Name": "Programs",
+          "ActorName": "Software Stall",
+          "Tagline": "Deck suites and attack payloads. Not Hacker class Programs."
+        },
+        "Ammo": {
+          "Name": "Ammo",
+          "ActorName": "Ammo Counter",
+          "Tagline": "Magazines and one-shot specialty rounds. Not Ammo Bin mods."
         }
       },
       "Template": {
         "Name": "Street Vendor (Kiosk)",
-        "Description": "<p>A placeable <strong>scene kiosk</strong>. Rename the Actor to the merchant or corp — <em>Mama’s Bar</em>, <em>ARG Lobby</em>, a street vendor — then stock Item UUIDs from Ghostwire Gear (or Chrome / Matrix / Mods / Vehicles / Foci / world items). Optional ¥ override per listing.</p><p>Directors can pick a <strong>kiosk type</strong> (Food, Medical, Tools, Armor, Weapons, Drones) when placing from Token controls, or restock an existing kiosk from that preset. Price blank = catalog ¥. Stock is infinite in v1.</p><p>Players open it when their token is within <strong>range</strong> (default 2 grid squares). The Director can always open and edit. Purchase deducts <strong>nuyen</strong> and copies the Item onto the buyer.</p><p><strong>Place:</strong> Token controls › cash register (type picker), or drag this Actor onto the Scene. Double-click or the HUD cash register opens the shop — not the combat sheet.</p>"
+        "Description": "<p>A placeable <strong>scene kiosk</strong>. Rename the Actor to the merchant or corp — <em>Mama’s Bar</em>, <em>ARG Lobby</em>, a street vendor — then stock Item UUIDs from Ghostwire Gear (or Chrome / Matrix / Mods / Vehicles / Foci / world items). Optional ¥ override per listing.</p><p>Directors can pick a <strong>kiosk type</strong> (Food, Medical, Tools, Armor, Weapons, Drones, Vehicles, Decks, Programs, Ammo) when placing from Token controls, or restock an existing kiosk from that preset. Price blank = catalog ¥. Stock is infinite in v1.</p><p>Players open it when their token is within <strong>range</strong> (default 2 grid squares). The Director can always open and edit. Purchase deducts <strong>nuyen</strong> and copies the Item onto the buyer.</p><p><strong>Place:</strong> Token controls › cash register (type picker), or drag this Actor onto the Scene. Double-click or the HUD cash register opens the shop — not the combat sheet.</p>"
       }
     },
     "Skills": {

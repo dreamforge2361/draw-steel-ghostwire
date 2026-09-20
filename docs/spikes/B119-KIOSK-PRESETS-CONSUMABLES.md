@@ -52,6 +52,12 @@ Data: `scripts/kiosk-presets.mjs`. Filters resolve pack UUIDs so new gear auto-i
 | Armor | Armor Locker | all `system.kind === "armor"` / `gear/armor/**` |
 | Weapons | Weapons Cage | all `system.kind === "weapon"` / `gear/weapons/**` |
 | Drones | Drone Vendor | Vehicles pack `flags.vehicle.drone` / `vehicles/drones/**` |
+| Vehicles | Vehicle Lot | Vehicles pack `flags.vehicle` and not `drone` / `ground|air|water|space/**`. Exclude `Plot` (Nox freighter) |
+| Decks | Deck Vendor | Matrix pack `matrix.role === "deck"` / `decks/**` (Cat 4A) |
+| Programs | Software Stall | Matrix pack `role` program + payload / `programs/**` + `payloads/**` (4B + 4C, one shelf) |
+| Ammo | Ammo Counter | Gear `general/ammunition/**` (magazines / one-shot). Not mods Ammo Bin |
+
+**Programs v1 choice:** Cat 4C payloads are Items in the matrix pack and share deck slots with 4B suites, so they stock on the same Programs shelf. A separate Payloads stall would split one software vendor for little gain. Autosofts also tag `Program` but `role: autosoft` — they stay off this shelf (RCC / drone software). Hacker class Program abilities are classes-pack features, not buyable SKUs.
 
 Price on every preset row is `null` (catalog ¥). Stock stays infinite (B118).
 
