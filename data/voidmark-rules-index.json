@@ -71,7 +71,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1318,
+  "chunkCount": 1321,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -4922,7 +4922,7 @@
       "chapter": "The Wire",
       "heading": "The Wire",
       "kind": "rules",
-      "text": "**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20)  \n**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)\n\n---"
+      "text": "**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62)  \n**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)\n\n---"
     },
     {
       "id": "21-the-wire#the-wired-system#2",
@@ -5066,7 +5066,7 @@
       "chapter": "The Wire",
       "heading": "Matrix Verbs (Universal)",
       "kind": "rules",
-      "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Connect** | Plug your avatar into the Wired at your current location -- lands you in **Linked** (on-net for comms / ID / packets). Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs still need Overlay or Jacked In (Toggle). Requires a Wire interface. | Instinct | Yes | Refunds the Maneuver |\n| **Jack Out** | Disconnect cleanly from any on-net state (**Linked**, Overlay, or Jacked In) and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |\n| **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |\n| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |\n| **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |\n| **Ping** | Give a simple, low-stakes nudge to one simple Track 1 object within Reach -- flick a light, tap a lock, test a system -- without needing a cyberdeck or a full Program. The lightest-weight way to interact with a system. | Logic | Yes | Refunds the Maneuver |\n| **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |\n| **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |\n| **Read/Write** | The core data-manipulation verb -- read a file's contents, alter a record, plant or delete evidence, forge a credential. This is the verb that actually changes information in the Wired, rather than just observing or moving through it. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |"
+      "text": "| Verb | What It Lets You Do | Roll Characteristic | Roll? | High (17+) Bonus |\n|---|---|---|---|---|\n| **Connect** | Plug your avatar into the Wired at your current location -- lands you in **Linked** (on-net for comms / ID / packets). Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs still need Overlay or Jacked In (Toggle). Requires a Wire interface. | Instinct | Yes | Refunds the Maneuver |\n| **Jack Out** | Disconnect cleanly from any on-net state (**Linked**, Overlay, or Jacked In) and return your full attention to the physical world -- your emergency eject button when things go wrong on the Wired side (biofeedback spikes, hostile ICE lock-on). Also usable as a Free Triggered Action in a genuine emergency, on top of its normal Maneuver use. | Instinct | Yes (also usable as a Free Triggered Action in an emergency, layered on top of the Maneuver cost) | Refunds the Maneuver |\n| **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |\n| **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |\n| **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |\n| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple **Track 1** thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Track 1 only (no ICE) -- ICE is **Track 2**. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is the wrong tool (Programs / payload Runs / real breach). Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Overlay or Jacked In. Not Console Wire ping/spoof (B106). | Logic | Yes | Refunds the Maneuver |\n| **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |\n| **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |\n| **Read/Write** | Change data, settings, or state -- read a file, alter a record, plant or delete evidence, forge a credential, **unlock a maglock for entry**, or **toggle a camera off / kill a feed**. This is the verb that actually changes information and device state in the Wired, not a Ping nudge. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |"
     },
     {
       "id": "21-the-wire#matrix-verbs-universal#18",
@@ -5078,7 +5078,25 @@
       "text": "**Low (≤11)** on any rolling verb generally means “it works, but something goes wrong” — by default **+1 Trace Alert** (see Trace Alert defaults above). **Middle (12–16)** is a clean success with **no Alert increase**. **High (17+)** is a clean success plus the bonus listed above, and never raises Alert."
     },
     {
-      "id": "21-the-wire#wire-atlas-topology#19",
+      "id": "21-the-wire#ping-vs-read-write#19",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Ping vs Read/Write",
+      "kind": "rules",
+      "text": "**Ping** is the lightest “touch this system” Matrix Verb — a nudge, not a deep hack. Use it when you want a simple Track 1 thing within Reach to do one small thing, without a Program or a full Read/Write:\n\n- Flick the hallway lights off (or on) — lights are the classic Ping.\n- Tap a maglock to see if it’s live / soft jolt (**not** unlock for entry — that’s **Read/Write**).\n- Test whether a camera or door bus answers / brief glitch (**not** lasting cam-off — that’s **Read/Write**).\n- Trigger a trivial system response (“does this socket wake up?”).\n- **Not ICE.** Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nLogic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace; tier 3 is clean and refunds the Maneuver.\n\n**Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.\n\nPing is **not** the Director Console Wire ping/spoof (B106)."
+    },
+    {
+      "id": "21-the-wire#ping-vs-ice#20",
+      "file": "21-the-wire.md",
+      "source": "docs/raw/21-the-wire.md",
+      "chapter": "The Wire",
+      "heading": "Ping vs ICE",
+      "kind": "rules",
+      "text": "Ping targets simple **Track 1** only (no ICE). ICE is **Track 2**. Ping does not bypass or defeat ICE.\n\nTrying Ping on an ICE-guarded / Track 2 host is the wrong tool — use Programs / payload Runs / a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system."
+    },
+    {
+      "id": "21-the-wire#wire-atlas-topology#21",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5087,7 +5105,7 @@
       "text": "Device tokens answer **what is this socket**. Atlas tokens answer **where am I on the Wire map**. Directors place atlas tokens by hand. Room-scale auto-nodes (lights, maglocks) never appear on a district or facility graph."
     },
     {
-      "id": "21-the-wire#three-altitudes#20",
+      "id": "21-the-wire#three-altitudes#22",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5096,7 +5114,7 @@
       "text": "| Altitude | Scene example | Token family |\n|---|---|---|\n| **Region / district graph** | Switchboard district map | **Relay**, **Host** |\n| **Site / facility graph** | Power Company Wire scene | **Segment** (+ **Host** as the site root) |\n| **Room / device graph** | Office, Gold Line car, maintenance room | **Device** (existing library: Light, Maglock, Cam, ICE, …) |\n\nGhostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do not call a Host a “server farm” in player text."
     },
     {
-      "id": "21-the-wire#reach-is-hops-on-the-current-scene#21",
+      "id": "21-the-wire#reach-is-hops-on-the-current-scene#23",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5105,7 +5123,7 @@
       "text": "**Scan** and **Navigate** **Reach** is a number of **node-hops on the graph of the Scene you are on**, not the whole district and not Ossian Reach the campaign region. When the crew changes altitude (district → facility → room), Reach recounts from the new graph. A runner with Reach 2 on the Switchboard district map can hop two Relays/Hosts; they cannot see the Power Co substation or a maintenance-room maglock until that scene is loaded."
     },
     {
-      "id": "21-the-wire#relay-vs-host-vs-segment#22",
+      "id": "21-the-wire#relay-vs-host-vs-segment#24",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5114,7 +5132,7 @@
       "text": "| Token | Role | Rules hook |\n|---|---|---|\n| **Relay** | Major Wired highway / backbone traffic — a **path**, not a place | Navigate along it. Trace can travel fast on a Relay. Usually **not** Seize-for-loot. Node Rating is optional (traffic density). Track 1 unless something is hunting the backbone. |\n| **Host** | Destination place (corp, civic, street). Faction is name and color, not a new token type. | May have Node Rating, ICE, Watchdog. Entering a Host **may change scene** (load the facility graph). |\n| **Segment** | Child of a Host (substation, wing, server hall) | Same mechanical class as Host, nested. **Name includes the parent** (`Power Co — North Substation`). |\n| **Endpoint** *(optional v1.1)* | Dig-down leaf that opens a meatspace room | Not a fourth mechanical class. Until its own art exists, reuse Host with a depth pip. |\n| **Device** | Room socket: Light, Maglock, Cam, ICE, … | **Room-only.** Never place device tokens on a region graph. |"
     },
     {
-      "id": "21-the-wire#dig-down-procedure#23",
+      "id": "21-the-wire#dig-down-procedure#25",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5123,7 +5141,7 @@
       "text": "1. **District scene:** place **Relays** and **Hosts** only.\n2. **Enter Host** (Navigate, Seize, or story) → load the **facility** scene; place **Segments**. The Host may remain as the site root.\n3. **Enter Segment** (or Endpoint) → load the **room** scene; place **Device** tokens. Auto-nodes from named lights and doors belong here.\n4. Auto-nodes stay **room-scale only**. Atlas tokens are Director-placed (a Console picker is later)."
     },
     {
-      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#24",
+      "id": "21-the-wire#worked-example-switchboard-to-the-maintenance-room#26",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5132,7 +5150,7 @@
       "text": "**District (Switchboard).** Relays: Flats Backbone, Melt Market Trunk. Hosts: Power Co, Cassavir’s Booth. No devices.\n\n**Facility (Power Co).** Site-root Host: Power Co. Segments: **Power Co — North Substation**, Power Co — South Bay. Reach is hops among these, not back to the district Relays.\n\n**Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.\n\n> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Art is drop-in; placeholders ship until Michael tokens land. Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`."
     },
     {
-      "id": "21-the-wire#connection-state-modifiers-summary#25",
+      "id": "21-the-wire#connection-state-modifiers-summary#27",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5141,7 +5159,7 @@
       "text": "**On-net** means **Linked**, **Overlay**, or **Jacked In**. **Connected** (full) means **Overlay** or **Jacked In** only. **Disconnected** means off-net. Payload Runs, Programs, and Scan / Navigate / Ping / Search / Read-Write require Connected. **Broadcast** is allowed from Linked.\n\n| State | Wired abilities (Wired keyword) | Real-world abilities and tests |\n|---|---|---|\n| Disconnected | Only **Connect** can be used | Normal |\n| Linked | **Broadcast** only (plus Toggle / Jack Out). No Programs or payload Runs | Normal |\n| Overlay | Normal (full Connected) | **Bane** |\n| Jacked In | **Edge** | Can’t be used (body inert) |\n\n- **Connect** works only while Disconnected (plus a Wire interface) and puts you in **Linked** on any result.\n- **Toggle Connection State** (on-net only) steps **Linked → Overlay → Jacked In → Linked**.\n- **Jack Out** (any on-net state) returns you to Disconnected.\n- **Broadcast** works from any on-net state, including Linked.\n- Scan / Navigate / Ping / Search / Read-Write / Programs / payload Runs require Overlay or Jacked In.\n- Having the **Hacking** skill gives an edge on every rolling Matrix Verb and other Wired ability.\n\n**Anyone vs Hacker.** Any hero with a commlink or cyberdeck can use the nine Matrix Verbs. Only the Hacker (and Wired class features that say so) spends **Bandwidth** on **Programs**. Deck **suites** and **payloads** are gear software any deck owner can install; they are not class Programs."
     },
     {
-      "id": "21-the-wire#deck-software-suites-vs-payloads#26",
+      "id": "21-the-wire#deck-software-suites-vs-payloads#28",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5150,7 +5168,7 @@
       "text": "A cyberdeck has **mod slots** (Street Deck 2, up to 5 on an apex deck). Two kinds of deck software fill them, and they share the same slots. Neither is the Hacker's class Programs: those are Bandwidth abilities from class progression and take no slots.\n\n| | Suites | Payloads |\n|---|---|---|\n| **Role** | Utility and defense | Offense and disruption |\n| **Examples** | Reader, Sneak, Mirror, Scrubber, Overlord (utility); Skeleton (standing Breach edge); Guardian (defense) | Zap, Crash, Whiteout, Static, Ghostload, Blackout, Wraith |\n| **In a slot** | One suite per slot, persistent | One **magazine** of a single payload kind per slot |\n| **Loading** | Craft (Hacking) Project installs it | Craft (Hacking) Project compiles it; the tier sets its fires |\n| **In play** | Switch on or off in the field; grants standing edges and benefits. Suites are never fired. | **Run** it as an action; each Run spends 1 fire |\n| **Ends** | Stays until you uninstall it | At 0 fires the magazine is spent and the slot frees |"
     },
     {
-      "id": "21-the-wire#suites#27",
+      "id": "21-the-wire#suites#29",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5159,7 +5177,7 @@
       "text": "A suite is installed into a free slot as a downtime **Craft (Hacking)** Project and stays there until you swap it out. An installed suite can be switched on or off in the field (the field toggle); it keeps its slot either way. Suites give edges to Matrix Verbs and standing benefits. They have no attack of their own."
     },
     {
-      "id": "21-the-wire#payloads-magazines#28",
+      "id": "21-the-wire#payloads-magazines#30",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5168,7 +5186,7 @@
       "text": "A payload chip in your gear does nothing by itself. To use it, you compile it into a free **host slot** as a magazine:\n\n- **Cyberdeck.** One free deck slot, shared with suites.\n- **Technomancer (no deck).** Compile onto **Wired Native** — Resonance / body-as-interface. The class feature is a 2-slot `resonance` / `body` host. Do not auto-grant any payload; compiling is still a Craft Project (Sabbat Vane’s playtest Whiteout×2 is a pregen loadout, not a class grant).\n\n- **Craft (Hacking) Project.** In downtime, make a Project power roll with **Logic** (Reason). Having the Hacking skill gives an edge on this roll, as with other Wired rolls. The chip is the Project's target.\n- **Tier sets fires.** The result sets how many fires the magazine holds (table below). A better roll means more fires in the same slot.\n- **One kind, one slot.** A magazine holds one payload kind. Loading a second kind takes a second free slot.\n- **Recompile.** You can recompile a loaded magazine as a new downtime Project. The new result **replaces** its fires.\n\n| Project result | Fires loaded |\n|---|---|\n| Low (≤11) | 1 |\n| Middle (12–16) | 3 |\n| High (17+) | 5 |"
     },
     {
-      "id": "21-the-wire#payloads-magazines#29",
+      "id": "21-the-wire#payloads-magazines#31",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5177,7 +5195,7 @@
       "text": "**Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.\n\n> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.\n\nThe payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`."
     },
     {
-      "id": "21-the-wire#payloads-magazines#30",
+      "id": "21-the-wire#payloads-magazines#32",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5186,7 +5204,7 @@
       "text": "**Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant."
     },
     {
-      "id": "21-the-wire#director-tools#31",
+      "id": "21-the-wire#director-tools#33",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -5195,7 +5213,7 @@
       "text": "At the table, track each hostile host’s Trace Alert (0–12), each Track 2 target’s Integrity, and which nodes the crew has revealed. Node Rating **1–5** fills the System Stat Card. Place the Wire Atlas at the right altitude (district Relays/Hosts, facility Segments, room Devices) — you do not invent extra Matrix subsystems or extra token types beyond this chapter.\n\nTables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Console (connection roster: Linked / Overlay / Jacked In / Disconnected, node templates Rating 1–5, Integrity, Trace Alert, reveal, **Wire ping/spoof**). The rules are the ones in this chapter; Console operation lives in the module’s Foundry notes, not here."
     },
     {
-      "id": "21-the-wire#voidmark-wired-presence#32",
+      "id": "21-the-wire#voidmark-wired-presence#34",
       "file": "21-the-wire.md",
       "source": "docs/raw/21-the-wire.md",
       "chapter": "The Wire",
@@ -6218,10 +6236,19 @@
       "chapter": "Corruption & Taint",
       "heading": "What this chapter covers",
       "kind": "rules",
-      "text": "**Taint** is the shared hero track for the Dark's foothold in a runner — radiation-like spiritual fallout, not a damage type and not a second Stamina pool. **Corruption** (the damage type) still exists on abilities. This chapter is the meter.\n\nEvery runner uses this track, **Cyborgs included**. Chrome, rest, and the retired Mutant **Corruption Load** do not replace it.\n\n> Open a **hero** (or pregen) sheet. **Taint** is a number input **0–12** in two places: a compact row in the **sheet header** (visible on every tab), and a **Taint** fieldset on the **Stats** tab directly under **Body Integrity** (same overlay family as Integrity / Wired). The band chip (**Clean / Marked / Stained / Claimed / Hollowed**) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes `flags.draw-steel-ghostwire.taint`. New heroes and pregens start at **0**. Rest and chrome install do not move it.\n> On the **Biography** tab, **Corruption History** is a free-text notes field next to Biography / Director notes. Write how the stain landed, tells, cleanses, pacts, and debts. It stores `flags.draw-steel-ghostwire.corruptionHistory` (empty by default). It is not a second meter."
+      "text": "**Taint** is the shared hero track for the Dark's foothold in a runner — radiation-like spiritual fallout, not a damage type and not a second Stamina pool. **Corruption** (the damage type) still exists on abilities. This chapter is the meter.\n\nEvery runner uses this track, **Cyborgs included**. Chrome, rest, and the retired Mutant **Corruption Load** do not replace it."
     },
     {
-      "id": "27-corruption-taint#the-track#3",
+      "id": "27-corruption-taint#what-this-chapter-covers#3",
+      "file": "27-corruption-taint.md",
+      "source": "docs/raw/27-corruption-taint.md",
+      "chapter": "Corruption & Taint",
+      "heading": "What this chapter covers",
+      "kind": "rules",
+      "text": "> Open a **hero** (or pregen) sheet. **Taint** is a number input **0–12** in two places: a compact row in the **sheet header** (visible on every tab), and a **Taint** fieldset on the **Stats** tab directly under **Body Integrity** (same overlay family as Integrity / Wired). The band chip (**Clean / Marked / Stained / Claimed / Hollowed**) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes `flags.draw-steel-ghostwire.taint`. New heroes and pregens start at **0**. Rest and chrome install do not move it.\n> On the **Biography** tab, **Corruption History** is a free-text notes field next to Biography / Director notes. Write how the stain landed, tells, cleanses, pacts, and debts. It stores `flags.draw-steel-ghostwire.corruptionHistory` (empty by default). It is not a second meter.\n> **Director Taint +1 (GM).** Token controls biohazard button (or the token HUD), or drag **Director: Taint +1** from **Ghostwire Macros** to the hotbar. Target or select a hero token (or any actor that already has the Taint flag). Adds **+1**, clamps **0–12**, and posts the new score plus band. Already at 12 warns and stays 12. The **+1 per scene** cap is a table call — this tool does not enforce it."
+    },
+    {
+      "id": "27-corruption-taint#the-track#4",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6230,7 +6257,7 @@
       "text": "**Taint** is an integer from **0** to **12**. Chargen default is **0**. It does not heal with rest. It must be cleansed, or it stays.\n\n| Taint | Band | Read |\n|---|---|---|\n| **0** | **Clean** | Unmarked. No gift, no cost. |\n| **1–3** | **Marked** | First foothold. Tells show under stress. |\n| **4–6** | **Stained** | Settled wrongness. Gifts and costs both show. |\n| **7–9** | **Claimed** | The Dark has a hook. Power is easy; leaving is hard. |\n| **10–12** | **Hollowed** | The Word is failing in you. Campaign-scale crisis. |\n\nBand effects apply while your current Taint sits in that band. Crossing a threshold changes the band immediately.\n\nA **scene** is what the table already calls a scene: a combat, a ritual sealing, a zone traversal beat, or the Director's cut."
     },
     {
-      "id": "27-corruption-taint#how-taint-is-gained#4",
+      "id": "27-corruption-taint#how-taint-is-gained#5",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6239,7 +6266,7 @@
       "text": "Taint is earned or inflicted where creation and un-speaking touch. It is not caught like a cold.\n\n| Source | Typical award | Notes |\n|---|---|---|\n| **Exposure** | **+1** | Linger in a corrupted zone, a thin place gone Null-ward, or a dead-air Wired stretch. Award when a scene of meaningful lingering ends, or after a failed **Corruption** / **Instinct** endurance test the Director calls. |\n| **Direct defacement** | **+1** unless printed higher | Demon touch, curse, Great Dark reach. |\n| **Veil Price** | As printed; else **+1** | Coerced summons and Dark-heavy or botched ritual seals. Class text that says \"1 corruption\" means **+1 Taint**. Elementalist coerced summon: **+1 Taint + 1 spirit-attention per Rank**. Greater Elemental coerced: **+3 Taint + 3 spirit-attention** (`17`, `22`). |\n| **Willing defacement** | **+1** | Director may award when a runner chooses un-speaking (murder-as-offering, feeding a thin place, and the like). |\n| **Pact** | Printed amount, or **+1** | Sealing, invoking, or paying a Dark / infernal pact Price. A Street Priest who **coerces** aid (any pact) pays the dark-path Taint cost. Dark Pact workings that \"load corruption\" are **+1 Taint** unless printed otherwise (`18`). |"
     },
     {
-      "id": "27-corruption-taint#per-scene-cap#5",
+      "id": "27-corruption-taint#per-scene-cap#6",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6248,7 +6275,7 @@
       "text": "**+1 Taint maximum per scene** from all **non-pact** sources combined. A scene that includes both zone exposure and a coerced summon still awards only **+1** unless a **pact** is involved."
     },
     {
-      "id": "27-corruption-taint#pact-exception#6",
+      "id": "27-corruption-taint#pact-exception#7",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6257,7 +6284,7 @@
       "text": "A **pact** Price may raise Taint by its printed amount in the same scene, even if the cap already fired. If no amount is printed, the pact Price is **+1** and still ignores the cap (so a scene can be +1 exposure +1 pact = **+2**)."
     },
     {
-      "id": "27-corruption-taint#what-never-moves-the-track#7",
+      "id": "27-corruption-taint#what-never-moves-the-track#8",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6266,7 +6293,7 @@
       "text": "These never raise Taint and never cleanse it:\n\n- **Chrome** — install, removal, Body Integrity spend or refund, Cyborg conversion, Frame Modules (`09`)\n- **Rest** — Recoveries, Lifestyle upkeep, respite, downtime Recover, spending ¥ (`04`, `26`)\n- **Advancement** — leveling, Victory, characteristic increases (`24`)\n\n**Chrome does not raise Taint.** Chrome is secular un-speaking: it spends Body Integrity and can erode magic. It does **not** stain this track. A Cyborg can still be tainted by demons, pacts, and zones."
     },
     {
-      "id": "27-corruption-taint#band-effects#8",
+      "id": "27-corruption-taint#band-effects#9",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6275,7 +6302,7 @@
       "text": "Power with a price. Apply the row for your current Taint. These are table rules — apply them when they fire; do not invent a second mutation menu.\n\n| Band | Gift (+) | Cost (−) |\n|---|---|---|\n| **Clean (0)** | None | None |\n| **Marked (1–3)** | Edge on tests to sense or identify taint, thin places, demons, and corrupted zones | Once per scene in a clean corp, Concord, or \"safe\" space, when the mark shows, take a **bane** on one Persona test (Director picks the beat) |\n| **Stained (4–6)** | Once per scene, after you damage a creature with a **Magic**-keyword ability or a **corruption**-typed strike, that creature takes extra psychic or corruption damage equal to your **level** | **Bane** on tests to resist demonic influence, Dark bargains, and compulsion. Whenever you tick spirit-attention, tick **+1 extra** |\n| **Claimed (7–9)** | Once per scene, gain an **edge** on one Power Roll. If you do, the Director gains **+1 Malice** or a thin-place-sensitive notices you | Holy / Light-pact damaging abilities against you deal extra damage equal to your **level**. You cannot be reduced below **7** except by a Claimed-or-higher cleanse path |\n| **Hollowed (10–12)** | Once per scene, ignore one **bane** on a Magic-keyword or corruption-typed Power Roll, **or** gain an edge on that roll (player choice) | At the start of each combat, the Director gains **+1 Malice**. You have damage weakness **5** against holy (Light-pact) damage. At **12**, the table pauses: redemption quest, retirement-as-NPC, or a last-run clock — Director and player. Do **not** auto-remove the hero |"
     },
     {
-      "id": "27-corruption-taint#band-effects#9",
+      "id": "27-corruption-taint#band-effects#10",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6284,7 +6311,7 @@
       "text": "Visible tells (greying flesh, static in the voice, features that drift) are Director color on top of the row. They are not a second economy."
     },
     {
-      "id": "27-corruption-taint#how-taint-is-cleansed#10",
+      "id": "27-corruption-taint#how-taint-is-cleansed#11",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6293,7 +6320,7 @@
       "text": "Rest never cleanses Taint. Cleansing is a rite, an Unmaking working, or a quest.\n\n| Current band | Typical path | Typical drop |\n|---|---|---|\n| **Marked (1–3)** | Street-Priest **Light** downtime rite, or Unmaking Ritual Working Magnitude **1** (`22`) | **−1** |\n| **Stained (4–6)** | Unmaking Magnitude **2–3**, or a short quest reagent + rite | **−1** or **−2** |\n| **Claimed (7–9)** | Unmaking Magnitude **4**, or a dedicated quest (true sacrifice / turning-back) | **−1** to **−3**. Cannot reach **Clean** in one working |\n| **Hollowed (10–12)** | Campaign quest | May drop to **Claimed**. May never fully lift in a mortal life (Director) |\n\nUnmaking is the Ritual Working family that scrubs corruption (`22`). Extra reagents, assistants, and a proper sanctum still grant edges or blunt Price on the sealing — they do not skip the Magnitude gate.\n\nA Light-pact Street Priest can lead a **Marked** cleanse as a downtime rite without a full Magnitude 1 Project when the Director agrees the stain is fresh. Deeper bands need the Unmaking ladder or a quest."
     },
     {
-      "id": "27-corruption-taint#mutants-and-the-retired-load#11",
+      "id": "27-corruption-taint#mutants-and-the-retired-load#12",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6302,7 +6329,7 @@
       "text": "**Mutant Corruption Load is retired.** Mutants use this shared Taint track like every other People.\n\nThe optional cosmetic **Corruptive Flaw** (`05`) is ancestry fiction: tells, roleplay, scene color. It has **no Load bands**, costs no ancestry points, and is **not** Taint. Reducing Taint does not erase a Flaw. Being born in a corrupted zone does not force starting Taint; the Director may set a higher starting score as a campaign hook."
     },
     {
-      "id": "27-corruption-taint#director-notes-short#12",
+      "id": "27-corruption-taint#director-notes-short#13",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",
@@ -6311,7 +6338,7 @@
       "text": "Corrupted zones, thin places, and pact clocks are run hooks — how to pace them lives in `docs/directors/corruption-taint.md`. Opposition procedure stays in `25`. Do not invent a second Malice track for Taint; Claimed / Hollowed already feed Malice when their costs fire."
     },
     {
-      "id": "27-corruption-taint#pointers#13",
+      "id": "27-corruption-taint#pointers#14",
       "file": "27-corruption-taint.md",
       "source": "docs/raw/27-corruption-taint.md",
       "chapter": "Corruption & Taint",

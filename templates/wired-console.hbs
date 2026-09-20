@@ -48,7 +48,7 @@
       <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Roster"}}</h3>
       <ul class="wc-roster-list">
         {{#each roster}}
-        <li class="wc-roster-row state-{{state}}{{#if selected}} selected{{/if}}" data-action="selectActor" data-actor-uuid="{{uuid}}">
+        <li class="wc-roster-row state-{{state}}{{#if selected}} selected{{/if}}{{#if isNode}} is-node{{/if}}" data-action="selectActor" data-actor-uuid="{{uuid}}" data-is-node="{{#if isNode}}true{{else}}false{{/if}}" data-node-id="{{nodeId}}" {{#if isNode}}data-tooltip="GHOSTWIRE.WiredConsole.RosterNodeHint"{{/if}}>
           <img src="{{img}}" alt="">
           <span class="wc-roster-name">{{name}}</span>
           <span class="wc-state-chip state-{{state}}">{{stateLabel}}</span>

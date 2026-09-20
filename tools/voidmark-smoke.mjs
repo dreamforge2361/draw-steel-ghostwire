@@ -74,6 +74,25 @@ ok(connectQ.some(h => /linked/i.test(h.text) && /connect/i.test(h.text)), "Conne
 const statesQ = retrieve(index, "What are the Wire connection states?");
 ok(statesQ.some(h => /linked/i.test(h.text) && /overlay/i.test(h.text) && /jacked in/i.test(h.text)), "connection-states query names Linked, Overlay, and Jacked In");
 
+const pingQ = retrieve(index, "What does Ping do on the Wire? maglock camera ICE");
+ok(pingQ.some(h => h.file.includes("21-the-wire")), `Ping query files: ${pingQ.map(h => h.file).join(", ")}`);
+ok(
+  pingQ.some(h => /nudge|touch/i.test(h.text) && /read\/write/i.test(h.text) && /maglock|cam/i.test(h.text)),
+  "Ping query retrieves nudge vs Read/Write (maglock/cam)",
+);
+
+const iceQ = retrieve(index, "Can Ping bypass ICE or open a Track 2 host?");
+ok(
+  iceQ.some(h => /does not bypass or defeat ICE/i.test(h.text) || (/track 1 only/i.test(h.text) && /ICE/i.test(h.text) && /track 2/i.test(h.text))),
+  "ICE/Track 2 query retrieves Ping does not bypass ICE",
+);
+
+const rwQ = retrieve(index, "How do I unlock a maglock or kill a camera feed?");
+ok(
+  rwQ.some(h => /read\/write/i.test(h.text) && /unlock|kill a cam|kill a camera|cam feed/i.test(h.text)),
+  "unlock/cam-off query points at Read/Write",
+);
+
 const combat = retrieve(index, "How does a combat round work? Main action maneuver move");
 ok(combat.some(h => h.file.includes("04-combat")), `combat top files: ${combat.map(h => h.file).join(", ")}`);
 ok(combat.some(h => /main action|maneuver|round/i.test(h.text)), "combat hits mention the action budget");

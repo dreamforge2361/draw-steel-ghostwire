@@ -1,6 +1,6 @@
 # Ghostwire Foundry Notes — The Wired (B23a sheet, B23b console, B117 node verbs)
 
-**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56**, **Linked documented in RAW journals + VOIDMARK index 2026-09-20 / 0.3.57** (pending Michael’s Foundry test).
+**Status:** v1 (2026-09-16), **B117 all-nine node-facing verbs 2026-09-20 / 0.3.53**, **Linked connection state + Console pan-to-node 2026-09-20 / 0.3.56**, **Linked documented in RAW journals + VOIDMARK index 2026-09-20 / 0.3.57**, **Ping vs Read/Write doctrine 2026-09-20 / 0.3.62**, **node Actors always Connected on the Console roster 2026-09-20 / 0.3.63** (pending Michael’s Foundry test).
 **Source of record for rules text:** `docs/raw/21-the-wire.md` — Connection States and Matrix Verbs. This page only describes how Foundry implements them; if the two disagree, RAW wins and this page (and the pack) gets fixed.
 **Console:** B23b — see *Wired Console* below. **B117** — all nine Matrix Verbs fire from the **node facing the player** (Director Console still has the same strip).
 
@@ -28,7 +28,7 @@ The nine Matrix Verbs still exist (Ghostwire Abilities › **Matrix Verbs**). Th
 | Search | Node panel (and Console) | Maneuver | Logic |
 | Read/Write | Node panel (and Console) | Maneuver | Logic |
 
-Rolling verbs show the low / middle / high result text from the shipped verb cards (incomplete / clean / maneuver refund). **Soft Trace:** a tier-1 Connect / Jack Out / Ping / Navigate / Search / Read-Write may +1 Trace Alert on the selected node. **Scan** does not auto-move Trace — observation doctrine. Toggle and Broadcast have no roll. Middle and high never raise Trace.
+Rolling verbs show the low / middle / high result text from the shipped verb cards (incomplete / clean / maneuver refund). **Soft Trace:** a tier-1 Connect / Jack Out / Ping / Navigate / Search / Read-Write may +1 Trace Alert on the selected node. **Scan** does not auto-move Trace — observation doctrine. Toggle and Broadcast have no roll. Middle and high never raise Trace. **Ping vs Read/Write:** Ping is a Track 1 nudge/test (lights; “does it answer?”; one-frame glitch) — not maglock unlock or lasting cam-off. Those are Read/Write. **Ping vs ICE:** Track 1 only (no ICE). ICE is Track 2. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is Programs / payload Runs / real breach. Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Ping is not the B106 Console Wire ping/spoof log.
 
 Existing worlds: the first GM load strips **all nine** Matrix Verbs off every actor (heroes, imported pregens, Wire Kit NPCs, Mama) so they don’t have two homes (`matrixVerbsApplet`). They are gone from hero `defaultItems`, the NPC Wire Kit stamp, pregen pack actors (none were embedded), and Mama Cassavir’s bestiary items. Revealed node tokens get **OBSERVER** default ownership so players can open the node they’re facing.
 
@@ -66,7 +66,7 @@ A popout window that makes the net a shared place for the scene everyone is view
 
 ### Panels
 
-- **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Linked, then Disconnected). Click a row to select the runner who will fire Console verbs (defaults to the active combatant, else the first on-net actor). It reads the same token statuses the Matrix Verbs set, so it always matches the token icons and updates live. Players only see actors they own.
+- **Connections** — every actor with a token on the viewed scene, with its connection state (Jacked In first, then Overlay, then Linked, then **Connected** Wire nodes, then Disconnected). Click a **runner** row to select who will fire Console verbs (defaults to the active combatant, else the first on-net runner). **Wire node Actors** (`kind: "node"` — placed board nodes, Hotel Interface, Light Control, maglocks) always chip **Connected**; they are infrastructure on the Wire, never Disconnected. They are **not** the Matrix Verb actor: clicking a node row selects/pans that board node and leaves the last runner on the verb strip. Players only see actors they own.
 - **Matrix Verbs (B117)** — all nine. **Players fire these from the node they’re facing** (token / node panel), including Connect. The Console strip is the Director roster path. Connect works while Disconnected if the runner has a commlink / deck / datajack / trodes (or is a Technomancer) and lands in **Linked**. Broadcast / Toggle / Jack Out work from Linked. Scan / Navigate / Ping / Search / Read-Write need Overlay or Jacked In. Rolls that actor’s Instinct or Logic where the card rolls; Hacking / Jacked In / Reader edges apply (Linked adds neither). Soft Trace on a tier-1 active rolled verb (not Scan).
 - **Nodes** — the scene’s nodes: Track, Rating, an Integrity bar (Track 2), and a mini Trace Alert track. The eye icon (Director only) shows whether players can see the node.
 - **Selected node** — the System Stat Card read off the Node Rating (08-hacker.md): Breach DC, ICE layers, Biofeedback Value with the Overlay (×0.5, min 1) and Jacked In (×1.5) figures, Integrity, and the 12-step Trace Alert with what the current band does. Track 1 nodes have no Integrity or ICE.
@@ -76,7 +76,7 @@ A popout window that makes the net a shared place for the scene everyone is view
 
 | | Director (GM) | Players |
 |---|---|---|
-| Matrix Verbs | Fire all nine for any roster actor they select | Fire from the **node token / panel** they’re facing (owned actor). Connect works while Disconnected (lands Linked). Console strip also works for owned actors |
+| Matrix Verbs | Fire all nine for a **runner** in Connections (Wire node rows stay Connected infrastructure and never become the verb actor) | Fire from the **node token / panel** they’re facing (owned actor). Connect works while Disconnected (lands Linked). Console strip also works for owned runners |
 | Nodes | All; add, **random node**, **generate cluster**, edit (name, Track, Rating), delete, reset the board | Only nodes the Director revealed; read-only |
 | Integrity | Damage / Restore by an amount | See the bar and numbers |
 | Trace Alert | −, +, **Counter-trace (12)**, and **Resolved — reset to 6** at 12 | See the track and band text |

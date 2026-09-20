@@ -491,6 +491,23 @@ Spec: `docs/spikes/LINKED-CONNECTION-STATE.md`. Code + RAW `21` shipped **0.3.56
   - [x] Lang / Foundry notes no longer say two-state-only for the status list
   - [ ] Foundry-verify: VOIDMARK applet answers “what are the connection states?” with Linked
 
+### Ping vs Read/Write doctrine (2026-09-20)
+Lang Ping/Read/Write Story+Effect + RAW `21` Matrix Verbs + `08-hacker.md` sync + Foundry notes one-liner. **SHIPPED 0.3.62.** Ping = touch/test nudge (lights; “does it answer?”; one-frame glitch). Read/Write = change data/settings/state (unlock maglock, kill cam feed). **Ping vs ICE:** Track 1 only (no ICE); ICE is Track 2; Ping does not bypass or defeat ICE. Not B106 Console Wire ping/spoof. VOIDMARK index rebuilt. No Gold Line `{ force: true }`. No PDF.
+- [x] **Ping vs Read/Write** (module **0.3.62**) — **pending Foundry-verify**. Done when:
+  - [x] Ping card names maglock-not-unlock and cam-not-lasting-off
+  - [x] Read/Write card names unlock maglock / kill cam feed
+  - [x] Ping card / RAW: Track 1 only, ICE is Track 2, Ping does not bypass ICE
+  - [x] RAW `21` + Hacker doctrine + VOIDMARK retrieve the distinction
+  - [ ] Foundry-verify: Ping / Read/Write ability text on the node applet matches lang
+
+### Console node Actors always Connected (2026-09-20)
+Michael: Hotel Interface and other placed Wire node Actors showed **Disconnected** in Connections. They are infrastructure (`kind: "node"`), always **Connected** on the roster chip, never the Matrix Verb actor. Click a node row to select/pan the board node; verbs keep the last runner. **SHIPPED 0.3.63.** No Gold Line `{ force: true }`. No PDF.
+- [x] **Node roster Connected** (module **0.3.63**) — **pending Foundry-verify**. Done when:
+  - [x] `kind: "node"` chips Connected; pickConsoleActor skips them
+  - [x] Click node row selects/pans the board node; `useConsoleVerb` refuses a node actor
+  - [x] Foundry notes + B117 smoke
+  - [ ] Foundry-verify: Hotel Interface / Light Control show Connected; Ping still rolls from a hero
+
 ### B118 Scene kiosk merchant (2026-09-20)
 Spec: `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md`. Placeable **NPC Actor stub** (`flags.draw-steel-ghostwire.kind === "kiosk"`), not a Tile/Drawing. Director names the merchant/corp, stocks Item UUIDs (Gear/Chrome/Matrix/Mods/Vehicles/Foci + optional ¥ override), sets Chebyshev range in grid squares (default 2). Players open when a hero token is in range; GM always. Purchase checks `system.hero.wealth`, deducts ¥, creates the Item on the buyer, chat logs. Infinite stock. Token HUD + double-click (same path as Wired node applet). Pack stub `src/packs/summons/kiosks/kiosk-merchant.json`. **SHIPPED 0.3.59.** No Gold Line `{ force: true }`. No PDF.
 - [x] **B118** scene kiosk merchant (module **0.3.59**) — **pending Foundry-verify**. Done when:

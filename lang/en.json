@@ -95,8 +95,8 @@
         },
         "Ping": {
           "Name": "Ping",
-          "Story": "A light tap on a simple system — flick a light, test a lock.",
-          "Effect": "<p>You give a simple, low-stakes nudge to one simple Track 1 object within your Reach — flick a light, tap a lock, test a system — without needing a cyberdeck or a full Program.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+          "Story": "A nudge, not a deep hack — flick a light, test if it answers. Track 1 only.",
+          "Effect": "<p>The lightest “touch this system” Matrix Verb — a nudge, not a deep hack. You give one simple <strong>Track 1</strong> object within your Reach one small thing to do, without a Program or a full Read/Write. You must be <strong>Overlaid</strong> or <strong>Jacked In</strong> — Linked-only refuses Ping.</p><p>Use it when you want a trivial response:</p><ul><li><p>Flick the hallway lights off (or on) — lights are the classic Ping.</p></li><li><p>Tap a maglock to see if it’s live, or give it a soft jolt. This does <strong>not</strong> unlock it for entry — that’s Read/Write.</p></li><li><p>Test whether a camera or door bus answers — a one-frame glitch or “does it reply?” This is <strong>not</strong> a lasting cam-off; killing a feed is Read/Write.</p></li><li><p>Trigger a trivial system response (“does this socket wake up?”).</p></li></ul><p><strong>Ping vs ICE:</strong> Ping targets simple Track 1 only (no ICE). ICE is <strong>Track 2</strong>. Ping does not bypass or defeat ICE. Trying Ping on an ICE-guarded or Track 2 host is the wrong tool — use Programs, payload Runs, or a real breach. The Director may flavor a failed poke (ICE twitches, Soft Trace), but Ping never opens or controls the guarded system.</p><p><strong>Doctrine:</strong> Ping = touch/test nudge. Read/Write = change data, settings, or state. Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). This is <strong>not</strong> the Director Console Wire ping/spoof (B106).</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
         },
         "Broadcast": {
           "Name": "Broadcast",
@@ -110,8 +110,8 @@
         },
         "ReadWrite": {
           "Name": "Read/Write",
-          "Story": "Read the file. Change the record. Plant the evidence. Forge the badge.",
-          "Effect": "<p>You read a file’s contents, alter a record, plant or delete evidence, or forge a credential in a node you’re at. This is the verb that actually changes information in the Wired.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
+          "Story": "Read the file. Unlock the maglock. Kill the cam. Forge the badge.",
+          "Effect": "<p>You change data, settings, or state in a node you’re at — read a file’s contents, alter a record, plant or delete evidence, forge a credential, <strong>unlock a maglock for entry</strong>, or <strong>toggle a camera off / kill a feed</strong>. This is the verb that actually changes information and device state in the Wired, not a Ping nudge or a Scan/Search look.</p><p><em>Hacking:</em> if you have the Hacking skill, this verb’s power roll gains an edge. <em>Jacked In:</em> the roll also gains an edge.</p>"
         }
       },
       "StreetEye": {
@@ -6301,7 +6301,8 @@
         "disconnected": "Disconnected",
         "linked": "Linked",
         "overlay": "Overlay",
-        "jackedIn": "Jacked In"
+        "jackedIn": "Jacked In",
+        "connected": "Connected"
       },
       "StateHints": {
         "disconnected": "Not connected to the Wired. Radio is a jammable backup.",
@@ -6331,6 +6332,7 @@
       "PlayerMode": "Runner",
       "NoScene": "No scene",
       "Roster": "Connections",
+      "RosterNodeHint": "Wire node — always Connected. Click to select this node. Matrix Verbs still use a runner.",
       "NoTokens": "No tokens on this scene.",
       "Nodes": "Nodes",
       "AddNode": "Add Node",

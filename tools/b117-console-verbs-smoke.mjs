@@ -28,6 +28,8 @@ import {
   leftoverTemporaryVerbs,
   markTemporaryConsoleVerbData,
   nextAlert,
+  consoleRosterWireState,
+  consoleVerbRoster,
   pickConsoleActor,
   pickPlayerVerbActor,
   shouldReleaseTemporaryVerb,
@@ -35,6 +37,7 @@ import {
   splitReusableTemporaryVerbs,
   verbUseMessageOptions,
 } from "../scripts/wired-console-verbs.mjs";
+import { isNodeActor } from "../scripts/wired-node-tokens.mjs";
 import { abilityPowerRollModifiers } from "../scripts/wired-state.mjs";
 
 const failures = [];
@@ -96,6 +99,23 @@ const roster = [
 ok(pickConsoleActor({ roster, selectedUuid: "Actor.c" }) === "Actor.c", "keeps a live roster selection");
 ok(pickConsoleActor({ roster: [] }) === null, "empty roster is null");
 
+const nodeChip = consoleRosterWireState({ isNode: true, runnerState: "disconnected" });
+ok(nodeChip.state === "connected" && nodeChip.connected && nodeChip.verbSelectable === false, "node Actors chip as Connected, not a verb runner");
+ok(consoleRosterWireState({ isNode: false, runnerState: "disconnected" }).state === "disconnected", "runners still show Disconnected");
+ok(consoleRosterWireState({ isNode: false, runnerState: "linked" }).connected, "Linked runners are connected");
+
+const mixed = [
+  { uuid: "Actor.hotel", connected: true, isNode: true, verbSelectable: false },
+  { uuid: "Actor.disc", connected: false },
+  { uuid: "Actor.runner", connected: true },
+];
+ok(pickConsoleActor({ roster: mixed }) === "Actor.runner", "skips Connected node Actors when picking the verb runner");
+ok(pickConsoleActor({ roster: mixed, selectedUuid: "Actor.hotel" }) === "Actor.runner", "stale node selection falls back to a runner");
+ok(pickConsoleActor({ roster: mixed.filter(r => r.isNode) }) === null, "nodes-only roster has no verb actor");
+ok(consoleVerbRoster(mixed).every(row => !row.isNode), "verb roster excludes nodes");
+ok(isNodeActor({ flags: { "draw-steel-ghostwire": { kind: "node" } } }), "isNodeActor reads flags.kind node");
+ok(!isNodeActor({ flags: { "draw-steel-ghostwire": { kind: "kiosk" } } }), "kiosk is not a Wire node");
+
 const players = [
   { uuid: "Actor.disc", connected: false, owned: true },
   { uuid: "Actor.me", connected: true, owned: true },
@@ -137,6 +157,9 @@ ok(consoleSrc.includes("splitReusableTemporaryVerbs"), "reuses leftover temps of
 ok(consoleSrc.includes("verbUseMessageOptions"), "use() gets DS 1.1.2 messageOptions.data flags");
 ok(consoleSrc.includes("render: false"), "temp embed does not force a sheet redraw");
 ok(consoleSrc.includes("hideTemporaryConsoleVerbs"), "hides in-flight temps on the hero/NPC sheet");
+ok(consoleSrc.includes("consoleRosterWireState") && consoleSrc.includes("isNodeActor"), "roster chips node Actors as Connected");
+ok(/if \(isNodeActor\(actor\)\)/.test(consoleSrc), "useConsoleVerb refuses a node actor");
+ok(/dataset.isNode === "true"/.test(consoleSrc), "node roster click does not become the verb actor");
 
 const nodeSrc = readFileSync("scripts/wired-node-verbs.mjs", "utf8");
 ok(nodeSrc.includes("useConsoleVerb") && nodeSrc.includes("pickPlayerVerbActor"), "node panel shares fire path");
@@ -211,6 +234,8 @@ ok(css.includes(".wc-verb-strip") && css.includes(".ghostwire-wired-node-panel")
 console.log("\n4) Docs / lang");
 const lang = readBomFreeJson("lang/en.json");
 ok(lang.GHOSTWIRE.WiredConsole.Verbs === "Matrix Verbs", "lang Verbs");
+ok(lang.GHOSTWIRE.Wired.States.connected === "Connected", "lang node chip reads Connected");
+ok(/always Connected/.test(lang.GHOSTWIRE.WiredConsole.RosterNodeHint), "lang node row hint");
 ok(lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("Connect"), "lang Disconnected points at Connect on the node");
 ok(!lang.GHOSTWIRE.WiredConsole.VerbNeedDisconnected.includes("sheet"), "lang Disconnected does not send players to the sheet");
 ok(/connected|on-net/.test(lang.GHOSTWIRE.WiredConsole.VerbNeedAlreadyConnected), "lang AlreadyConnected");
@@ -232,6 +257,7 @@ ok(/No new/.test(spike) && /everyone gets Programs/.test(spike), "spike refuses 
 const foundry = readFileSync("docs/rulebook/18-wired-foundry.md", "utf8");
 ok(/all nine/.test(foundry) && /Mama/.test(foundry), "18-wired-foundry.md names all nine + Mama strip");
 ok(/Technomancer/.test(foundry) && /Commlink/.test(foundry), "Foundry notes name Connect interface");
+ok(/kind: "node"/.test(foundry) && /always chip \*\*Connected\*\*/.test(foundry), "Foundry notes: node Actors always Connected");
 ok(!/Sheet keeps/.test(foundry), "Foundry notes no longer keep verbs on the sheet");
 const raw = readFileSync("docs/raw/21-the-wire.md", "utf8");
 ok(/all nine Matrix Verbs/.test(raw) && /Read\/Write/.test(raw), "Wire RAW aside names all nine");
