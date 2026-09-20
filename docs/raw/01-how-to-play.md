@@ -15,12 +15,12 @@ To run Ghostwire you need:
 - **This book** (how the night is shaped, characteristics, Power Rolls, combat, nine classes, ¥ economy, chrome, the Wire, the Veil, machines, opposition).
 - **Players** — one **Director**, everyone else a **runner**.
 - **Dice** — two ten-sided dice per player for Power Rolls (`03`), plus one ten-sided die for saving throws.
-- **Something to track** Stamina, Recoveries, heroic resources, ¥, Body Integrity, and (when relevant) Wire connection state. Foundry or paper both work.
+- **Something to track** Stamina, Recoveries, heroic resources, ¥, Body Integrity, **Taint** (0–12), and (when relevant) Wire connection state. Foundry or paper both work.
 
 You do **not** need lore PDFs, art packs, or a bestiary reprint to start. Opposition procedure lives in this book (`25`); Actor numbers live in Foundry packs if you use them. Setting color lives in Reach materials — not required for rules play.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Open a hero sheet → **Stats**: Ghostwire adds **Body Integrity** (current/max), a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20 and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Open a hero sheet: the **header** shows **Taint** (0–12 + band). **Stats** adds **Body Integrity** (current/max), the same **Taint** fieldset under Integrity, a read-only **Wired** connection state, and (for Changers) form buttons. New heroes start at Integrity 20/20, Taint 0, and ¥5,000 on the sheet’s Nuyen/wealth field. Matrix Verbs land on every hero; chrome, kits, and Wire tools live in this module’s packs.
 
 
 ---

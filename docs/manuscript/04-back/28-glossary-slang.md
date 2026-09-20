@@ -76,7 +76,9 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 | **Signal** | Gold / sacred light motif in Ghostwire art and some faith talk — not a rules resource. |
 | **Pact** | Street Priest Light or Dark alignment. |
 | **Radiant Concord** | Setting faith / political current (see lore). |
-| **Corruption** | Setting danger around misuse of power and the Veil (see lore) — not a second Stamina track. |
+| **Corruption** | Street word for the Dark’s stain, and a damage type on some abilities. The hero meter is **Taint** (0–12) — not a second Stamina track. |
+| **Taint** | Rules track for that stain. Bands: **Clean** 0, **Marked** 1–3, **Stained** 4–6, **Claimed** 7–9, **Hollowed** 10–12. Rest never cleanses; chrome does not raise it. |
+| **Hollowed** | Street read for a runner whose Taint has hit the last band — the Word failing in them. |
 
 ---
 

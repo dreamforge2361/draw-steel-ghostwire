@@ -53,6 +53,7 @@ Use Foundry **Install Module** / update from:
 
 ## Status
 
+- `0.3.38` — **Corruption / Taint track (B80):** RAW `docs/raw/27-corruption-taint.md` — Taint 0–12 bands Clean / Marked / Stained / Claimed / Hollowed; +1 max per scene except pact; rest never cleanses; chrome does not raise Taint; Mutant Corruption Load stays retired. Hero sheet Stats field writes `flags.draw-steel-ghostwire.taint`. Director notes: `docs/directors/corruption-taint.md`. Spike: `docs/spikes/B80-CORRUPTION-TAINT-TRACK.md`.
 - `0.3.37` — **Gold Line loop hotfix (B106):** stop HEAD-probing webm (that fell back to stills). Level background now sets video loop/autoplay; `ensureGoldLineScene({ force: true })` restamps the roof tile onto the loop. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
 - `0.3.36` — **Deadhead Gold Line map pack (B106):** CyberMaps Hammerhead dual stitch (no generated train). Stills + VP9 loops under `assets/maps/battlemaps/gold-line/`. World inject creates **Scenes → Deadhead → Gold Line** (interior loop background, roofs Surface overhead, grid 208 / 5 ft). Director SoR + **Ghostwire Runs → Deadhead** map notes carry the L1–R3 beat remap. Spike: `docs/spikes/B106-GOLD-LINE-MAP-PACK.md`.
 - `0.3.35` — **Bestiary + L≤4 summon portraits (B103):** 40 bestiary (humanoids + ICE) + 17 summon WebPs under `assets/tokens/{bestiary,summons}/`. Actor `img` and `prototypeToken.texture.src` point at `modules/draw-steel-ghostwire/assets/tokens/…/<slug>.webp`. Apply: `node tools/apply-bestiary-portrait-art.mjs`. Spike: `docs/spikes/B103-BESTIARY-HUMANOID-PORTRAITS.md`.

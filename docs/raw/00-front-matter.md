@@ -21,7 +21,7 @@ Ghostwire is an independent **derived product**. It uses the **Draw Steel** engi
 Ghostwire is playable from **this manuscript** (or the print PDF assembled from it), dice, and optional Foundry. You do **not** need *Draw Steel Heroes* or any separate Draw Steel rulebook to run a session.
 
 - **Core procedure** chapters (`01`–`04`, `24`, and the tests/combat/advancement loops they point at) are written so a table can resolve the night without opening another book.
-- **Ghostwire systems** (Peoples, Kits and gear, chrome, mods, perks, classes, the Wire, the Veil, machines) are written out in full.
+- **Ghostwire systems** (Peoples, Kits and gear, chrome, mods, perks, classes, the Wire, the Veil, Taint, machines) are written out in full.
 - When two lines in this book disagree, the more specific chapter wins (Wire beats a generic test note; a class feature beats a generic combat note). This book is the play rules.
 
 **License and attribution:**
@@ -69,6 +69,7 @@ This statement appears in every published form of this book.
 | `24-advancement.md` | Advancement and Echelons |
 | `25-opposition.md` | Opposition (Director) |
 | `26-lifestyle-downtime.md` | Lifestyle and Downtime (print Ch 10) |
+| `27-corruption-taint.md` | Corruption and Taint |
 
 ## Chapter status
 
@@ -95,6 +96,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **RAW** | Rules as written | `docs/raw/` is SoR for procedures |
 | **¥** | Nuyen | Tracked money; never character power |
 | **BI** | Body Integrity | Living chrome capacity; starts at 20 |
+| **Taint** | Taint | Shared hero stain track, 0–12 (`27`) |
 | **PR** | Power Roll | Results **low / middle / high** |
 | **ICE** | Intrusion countermeasures | Wired defenses on a node |
 | **RCC** | Rigger command console | Drone command hardware |
@@ -126,6 +128,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **Character power** | Characteristics, skills, class features, and heroic resources — gained only from People, Background, Profession, class, perks, and advancement. ¥ never buys it. | `02`, `08` |
 | **Chrome** | Cyberware implants for living heroes. Costs ¥ and Body Integrity. | `09` |
 | **Body Integrity** | A living hero’s capacity for chrome. Starts at 20. Not used by Cyborgs. | `09` |
+| **Taint** | Shared hero stain track, 0–12. Bands Clean / Marked / Stained / Claimed / Hollowed. Rest never cleanses; chrome does not raise it. | `27` |
 | **Grade (chrome)** | Salvage, Standard, or Soft / Bioware — trades ¥ against Body Integrity. | `09` |
 | **Cyborg** | A People whose body is a machine. Uses Frame Modules instead of chrome. | `05`, `09` |
 | **Arcane Severance** | Cyborgs can’t use Magic-keyword abilities or take a Magic class. | `05`, `22` |

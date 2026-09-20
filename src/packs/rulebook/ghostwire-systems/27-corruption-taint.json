@@ -1,0 +1,298 @@
+{
+  "_id": "fEwnmi3gp05vhWUc",
+  "_key": "!journal!fEwnmi3gp05vhWUc",
+  "name": "GHOSTWIRE.Rulebook.Journals.CorruptionTaint",
+  "folder": "gwRulebookSystem",
+  "sort": 300000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "uBifUnDDU92LNz0Y",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.uBifUnDDU92LNz0Y",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "*RAW draft (B80 lock 2026-09-19) · Sources: `docs/spikes/B80-CORRUPTION-TAINT-TRACK.md` (DESIGN LOCKED), L1 Corruption & Taint (lore only — procedures live here), `docs/raw/22-the-veil.md` (Unmaking / Price), `docs/raw/05-ancestries.md` (Mutant Flaw), `docs/raw/09-chrome-body-integrity.md` (chrome is not this track)*",
+        "content": "<p><em>RAW draft (B80 lock 2026-09-19) · Sources: <code>docs/spikes/B80-CORRUPTION-TAINT-TRACK.md</code> (DESIGN LOCKED), L1 Corruption & Taint (lore only — procedures live here), <code>docs/raw/22-the-veil.md</code> (Unmaking / Price), <code>docs/raw/05-ancestries.md</code> (Mutant Flaw), <code>docs/raw/09-chrome-body-integrity.md</code> (chrome is not this track)</em></p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "OfqzkTfVmrPhDF6D",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.OfqzkTfVmrPhDF6D",
+      "name": "What this chapter covers",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Taint** is the shared hero track for the Dark's foothold in a runner — radiation-like spiritual fallout, not a damage type and not a second Stamina pool. **Corruption** (the damage type) still exists on abilities. This chapter is the meter.\n\nEvery runner uses this track, **Cyborgs included**. Chrome, rest, and the retired Mutant **Corruption Load** do not replace it.\n\n> **In Foundry**\n> Open a **hero** (or pregen) sheet. **Taint** is a number input **0–12** in two places: a compact row in the **sheet header** (visible on every tab), and a **Taint** fieldset on the **Stats** tab directly under **Body Integrity** (same overlay family as Integrity / Wired). The band chip (**Clean / Marked / Stained / Claimed / Hollowed**) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes `flags.draw-steel-ghostwire.taint`. New heroes and pregens start at **0**. Rest and chrome install do not move it.\n> On the **Biography** tab, **Corruption History** is a free-text notes field next to Biography / Director notes. Write how the stain landed, tells, cleanses, pacts, and debts. It stores `flags.draw-steel-ghostwire.corruptionHistory` (empty by default). It is not a second meter.",
+        "content": "<p><strong>Taint</strong> is the shared hero track for the Dark's foothold in a runner — radiation-like spiritual fallout, not a damage type and not a second Stamina pool. <strong>Corruption</strong> (the damage type) still exists on abilities. This chapter is the meter.</p>\n<p>Every runner uses this track, <strong>Cyborgs included</strong>. Chrome, rest, and the retired Mutant <strong>Corruption Load</strong> do not replace it.</p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  Open a <strong>hero</strong> (or pregen) sheet. <strong>Taint</strong> is a number input <strong>0–12</strong> in two places: a compact row in the <strong>sheet header</strong> (visible on every tab), and a <strong>Taint</strong> fieldset on the <strong>Stats</strong> tab directly under <strong>Body Integrity</strong> (same overlay family as Integrity / Wired). The band chip (<strong>Clean / Marked / Stained / Claimed / Hollowed</strong>) sits next to the input and updates as you change the number. Owner and GM can edit; observers see it read-only. Writes <code>flags.draw-steel-ghostwire.taint</code>. New heroes and pregens start at <strong>0</strong>. Rest and chrome install do not move it.\n  On the <strong>Biography</strong> tab, <strong>Corruption History</strong> is a free-text notes field next to Biography / Director notes. Write how the stain landed, tells, cleanses, pacts, and debts. It stores <code>flags.draw-steel-ghostwire.corruptionHistory</code> (empty by default). It is not a second meter.</p>\n</blockquote>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "zfcZ2tyw0OxlqaNR",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.zfcZ2tyw0OxlqaNR",
+      "name": "The track",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Taint** is an integer from **0** to **12**. Chargen default is **0**. It does not heal with rest. It must be cleansed, or it stays.\n\n| Taint | Band | Read |\n|---|---|---|\n| **0** | **Clean** | Unmarked. No gift, no cost. |\n| **1–3** | **Marked** | First foothold. Tells show under stress. |\n| **4–6** | **Stained** | Settled wrongness. Gifts and costs both show. |\n| **7–9** | **Claimed** | The Dark has a hook. Power is easy; leaving is hard. |\n| **10–12** | **Hollowed** | The Word is failing in you. Campaign-scale crisis. |\n\nBand effects apply while your current Taint sits in that band. Crossing a threshold changes the band immediately.\n\nA **scene** is what the table already calls a scene: a combat, a ritual sealing, a zone traversal beat, or the Director's cut.",
+        "content": "<p><strong>Taint</strong> is an integer from <strong>0</strong> to <strong>12</strong>. Chargen default is <strong>0</strong>. It does not heal with rest. It must be cleansed, or it stays.</p>\n<table>\n<thead>\n<tr>\n<th id=\"taint\">Taint</th>\n<th id=\"band\">Band</th>\n<th id=\"read\">Read</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>0</strong></td>\n<td><strong>Clean</strong></td>\n<td>Unmarked. No gift, no cost.</td>\n</tr>\n<tr>\n<td><strong>1–3</strong></td>\n<td><strong>Marked</strong></td>\n<td>First foothold. Tells show under stress.</td>\n</tr>\n<tr>\n<td><strong>4–6</strong></td>\n<td><strong>Stained</strong></td>\n<td>Settled wrongness. Gifts and costs both show.</td>\n</tr>\n<tr>\n<td><strong>7–9</strong></td>\n<td><strong>Claimed</strong></td>\n<td>The Dark has a hook. Power is easy; leaving is hard.</td>\n</tr>\n<tr>\n<td><strong>10–12</strong></td>\n<td><strong>Hollowed</strong></td>\n<td>The Word is failing in you. Campaign-scale crisis.</td>\n</tr>\n</tbody>\n</table>\n<p>Band effects apply while your current Taint sits in that band. Crossing a threshold changes the band immediately.</p>\n<p>A <strong>scene</strong> is what the table already calls a scene: a combat, a ritual sealing, a zone traversal beat, or the Director's cut.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "KdG1FeZvyu04Xfyi",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.KdG1FeZvyu04Xfyi",
+      "name": "How Taint is gained",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Taint is earned or inflicted where creation and un-speaking touch. It is not caught like a cold.\n\n| Source | Typical award | Notes |\n|---|---|---|\n| **Exposure** | **+1** | Linger in a corrupted zone, a thin place gone Null-ward, or a dead-air Wired stretch. Award when a scene of meaningful lingering ends, or after a failed **Corruption** / **Instinct** endurance test the Director calls. |\n| **Direct defacement** | **+1** unless printed higher | Demon touch, curse, Great Dark reach. |\n| **Veil Price** | As printed; else **+1** | Coerced summons and Dark-heavy or botched ritual seals. Class text that says \"1 corruption\" means **+1 Taint**. Elementalist coerced summon: **+1 Taint + 1 spirit-attention per Rank**. Greater Elemental coerced: **+3 Taint + 3 spirit-attention** (`17`, `22`). |\n| **Willing defacement** | **+1** | Director may award when a runner chooses un-speaking (murder-as-offering, feeding a thin place, and the like). |\n| **Pact** | Printed amount, or **+1** | Sealing, invoking, or paying a Dark / infernal pact Price. A Street Priest who **coerces** aid (any pact) pays the dark-path Taint cost. Dark Pact workings that \"load corruption\" are **+1 Taint** unless printed otherwise (`18`). |\n\n### Per-scene cap\n\n**+1 Taint maximum per scene** from all **non-pact** sources combined. A scene that includes both zone exposure and a coerced summon still awards only **+1** unless a **pact** is involved.\n\n### Pact exception\n\nA **pact** Price may raise Taint by its printed amount in the same scene, even if the cap already fired. If no amount is printed, the pact Price is **+1** and still ignores the cap (so a scene can be +1 exposure +1 pact = **+2**).",
+        "content": "<p>Taint is earned or inflicted where creation and un-speaking touch. It is not caught like a cold.</p>\n<table>\n<thead>\n<tr>\n<th id=\"source\">Source</th>\n<th id=\"typical_award\">Typical award</th>\n<th id=\"notes\">Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Exposure</strong></td>\n<td><strong>+1</strong></td>\n<td>Linger in a corrupted zone, a thin place gone Null-ward, or a dead-air Wired stretch. Award when a scene of meaningful lingering ends, or after a failed <strong>Corruption</strong> / <strong>Instinct</strong> endurance test the Director calls.</td>\n</tr>\n<tr>\n<td><strong>Direct defacement</strong></td>\n<td><strong>+1</strong> unless printed higher</td>\n<td>Demon touch, curse, Great Dark reach.</td>\n</tr>\n<tr>\n<td><strong>Veil Price</strong></td>\n<td>As printed; else <strong>+1</strong></td>\n<td>Coerced summons and Dark-heavy or botched ritual seals. Class text that says \"1 corruption\" means <strong>+1 Taint</strong>. Elementalist coerced summon: <strong>+1 Taint + 1 spirit-attention per Rank</strong>. Greater Elemental coerced: <strong>+3 Taint + 3 spirit-attention</strong> (<code>17</code>, <code>22</code>).</td>\n</tr>\n<tr>\n<td><strong>Willing defacement</strong></td>\n<td><strong>+1</strong></td>\n<td>Director may award when a runner chooses un-speaking (murder-as-offering, feeding a thin place, and the like).</td>\n</tr>\n<tr>\n<td><strong>Pact</strong></td>\n<td>Printed amount, or <strong>+1</strong></td>\n<td>Sealing, invoking, or paying a Dark / infernal pact Price. A Street Priest who <strong>coerces</strong> aid (any pact) pays the dark-path Taint cost. Dark Pact workings that \"load corruption\" are <strong>+1 Taint</strong> unless printed otherwise (<code>18</code>).</td>\n</tr>\n</tbody>\n</table>\n<h3>Per-scene cap</h3>\n<p><strong>+1 Taint maximum per scene</strong> from all <strong>non-pact</strong> sources combined. A scene that includes both zone exposure and a coerced summon still awards only <strong>+1</strong> unless a <strong>pact</strong> is involved.</p>\n<h3>Pact exception</h3>\n<p>A <strong>pact</strong> Price may raise Taint by its printed amount in the same scene, even if the cap already fired. If no amount is printed, the pact Price is <strong>+1</strong> and still ignores the cap (so a scene can be +1 exposure +1 pact = <strong>+2</strong>).</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "EDk3dRemM4KIPzn2",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.EDk3dRemM4KIPzn2",
+      "name": "What never moves the track",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "These never raise Taint and never cleanse it:\n\n- **Chrome** — install, removal, Body Integrity spend or refund, Cyborg conversion, Frame Modules (`09`)\n- **Rest** — Recoveries, Lifestyle upkeep, respite, downtime Recover, spending ¥ (`04`, `26`)\n- **Advancement** — leveling, Victory, characteristic increases (`24`)\n\n**Chrome does not raise Taint.** Chrome is secular un-speaking: it spends Body Integrity and can erode magic. It does **not** stain this track. A Cyborg can still be tainted by demons, pacts, and zones.",
+        "content": "<p>These never raise Taint and never cleanse it:</p>\n<ul>\n<li><strong>Chrome</strong> — install, removal, Body Integrity spend or refund, Cyborg conversion, Frame Modules (<code>09</code>)</li>\n<li><strong>Rest</strong> — Recoveries, Lifestyle upkeep, respite, downtime Recover, spending ¥ (<code>04</code>, <code>26</code>)</li>\n<li><strong>Advancement</strong> — leveling, Victory, characteristic increases (<code>24</code>)</li>\n</ul>\n<p><strong>Chrome does not raise Taint.</strong> Chrome is secular un-speaking: it spends Body Integrity and can erode magic. It does <strong>not</strong> stain this track. A Cyborg can still be tainted by demons, pacts, and zones.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "3J1tc5w1HlgJz6uR",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.3J1tc5w1HlgJz6uR",
+      "name": "Band effects",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Power with a price. Apply the row for your current Taint. These are table rules — apply them when they fire; do not invent a second mutation menu.\n\n| Band | Gift (+) | Cost (−) |\n|---|---|---|\n| **Clean (0)** | None | None |\n| **Marked (1–3)** | Edge on tests to sense or identify taint, thin places, demons, and corrupted zones | Once per scene in a clean corp, Concord, or \"safe\" space, when the mark shows, take a **bane** on one Persona test (Director picks the beat) |\n| **Stained (4–6)** | Once per scene, after you damage a creature with a **Magic**-keyword ability or a **corruption**-typed strike, that creature takes extra psychic or corruption damage equal to your **level** | **Bane** on tests to resist demonic influence, Dark bargains, and compulsion. Whenever you tick spirit-attention, tick **+1 extra** |\n| **Claimed (7–9)** | Once per scene, gain an **edge** on one Power Roll. If you do, the Director gains **+1 Malice** or a thin-place-sensitive notices you | Holy / Light-pact damaging abilities against you deal extra damage equal to your **level**. You cannot be reduced below **7** except by a Claimed-or-higher cleanse path |\n| **Hollowed (10–12)** | Once per scene, ignore one **bane** on a Magic-keyword or corruption-typed Power Roll, **or** gain an edge on that roll (player choice) | At the start of each combat, the Director gains **+1 Malice**. You have damage weakness **5** against holy (Light-pact) damage. At **12**, the table pauses: redemption quest, retirement-as-NPC, or a last-run clock — Director and player. Do **not** auto-remove the hero |\n\nVisible tells (greying flesh, static in the voice, features that drift) are Director color on top of the row. They are not a second economy.",
+        "content": "<p>Power with a price. Apply the row for your current Taint. These are table rules — apply them when they fire; do not invent a second mutation menu.</p>\n<table>\n<thead>\n<tr>\n<th id=\"band\">Band</th>\n<th id=\"gift_(+)\">Gift (+)</th>\n<th id=\"cost_(−)\">Cost (−)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Clean (0)</strong></td>\n<td>None</td>\n<td>None</td>\n</tr>\n<tr>\n<td><strong>Marked (1–3)</strong></td>\n<td>Edge on tests to sense or identify taint, thin places, demons, and corrupted zones</td>\n<td>Once per scene in a clean corp, Concord, or \"safe\" space, when the mark shows, take a <strong>bane</strong> on one Persona test (Director picks the beat)</td>\n</tr>\n<tr>\n<td><strong>Stained (4–6)</strong></td>\n<td>Once per scene, after you damage a creature with a <strong>Magic</strong>-keyword ability or a <strong>corruption</strong>-typed strike, that creature takes extra psychic or corruption damage equal to your <strong>level</strong></td>\n<td><strong>Bane</strong> on tests to resist demonic influence, Dark bargains, and compulsion. Whenever you tick spirit-attention, tick <strong>+1 extra</strong></td>\n</tr>\n<tr>\n<td><strong>Claimed (7–9)</strong></td>\n<td>Once per scene, gain an <strong>edge</strong> on one Power Roll. If you do, the Director gains <strong>+1 Malice</strong> or a thin-place-sensitive notices you</td>\n<td>Holy / Light-pact damaging abilities against you deal extra damage equal to your <strong>level</strong>. You cannot be reduced below <strong>7</strong> except by a Claimed-or-higher cleanse path</td>\n</tr>\n<tr>\n<td><strong>Hollowed (10–12)</strong></td>\n<td>Once per scene, ignore one <strong>bane</strong> on a Magic-keyword or corruption-typed Power Roll, <strong>or</strong> gain an edge on that roll (player choice)</td>\n<td>At the start of each combat, the Director gains <strong>+1 Malice</strong>. You have damage weakness <strong>5</strong> against holy (Light-pact) damage. At <strong>12</strong>, the table pauses: redemption quest, retirement-as-NPC, or a last-run clock — Director and player. Do <strong>not</strong> auto-remove the hero</td>\n</tr>\n</tbody>\n</table>\n<p>Visible tells (greying flesh, static in the voice, features that drift) are Director color on top of the row. They are not a second economy.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "OojA1xbDqjjqVEug",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.OojA1xbDqjjqVEug",
+      "name": "How Taint is cleansed",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Rest never cleanses Taint. Cleansing is a rite, an Unmaking working, or a quest.\n\n| Current band | Typical path | Typical drop |\n|---|---|---|\n| **Marked (1–3)** | Street-Priest **Light** downtime rite, or Unmaking Ritual Working Magnitude **1** (`22`) | **−1** |\n| **Stained (4–6)** | Unmaking Magnitude **2–3**, or a short quest reagent + rite | **−1** or **−2** |\n| **Claimed (7–9)** | Unmaking Magnitude **4**, or a dedicated quest (true sacrifice / turning-back) | **−1** to **−3**. Cannot reach **Clean** in one working |\n| **Hollowed (10–12)** | Campaign quest | May drop to **Claimed**. May never fully lift in a mortal life (Director) |\n\nUnmaking is the Ritual Working family that scrubs corruption (`22`). Extra reagents, assistants, and a proper sanctum still grant edges or blunt Price on the sealing — they do not skip the Magnitude gate.\n\nA Light-pact Street Priest can lead a **Marked** cleanse as a downtime rite without a full Magnitude 1 Project when the Director agrees the stain is fresh. Deeper bands need the Unmaking ladder or a quest.",
+        "content": "<p>Rest never cleanses Taint. Cleansing is a rite, an Unmaking working, or a quest.</p>\n<table>\n<thead>\n<tr>\n<th id=\"current_band\">Current band</th>\n<th id=\"typical_path\">Typical path</th>\n<th id=\"typical_drop\">Typical drop</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Marked (1–3)</strong></td>\n<td>Street-Priest <strong>Light</strong> downtime rite, or Unmaking Ritual Working Magnitude <strong>1</strong> (<code>22</code>)</td>\n<td><strong>−1</strong></td>\n</tr>\n<tr>\n<td><strong>Stained (4–6)</strong></td>\n<td>Unmaking Magnitude <strong>2–3</strong>, or a short quest reagent + rite</td>\n<td><strong>−1</strong> or <strong>−2</strong></td>\n</tr>\n<tr>\n<td><strong>Claimed (7–9)</strong></td>\n<td>Unmaking Magnitude <strong>4</strong>, or a dedicated quest (true sacrifice / turning-back)</td>\n<td><strong>−1</strong> to <strong>−3</strong>. Cannot reach <strong>Clean</strong> in one working</td>\n</tr>\n<tr>\n<td><strong>Hollowed (10–12)</strong></td>\n<td>Campaign quest</td>\n<td>May drop to <strong>Claimed</strong>. May never fully lift in a mortal life (Director)</td>\n</tr>\n</tbody>\n</table>\n<p>Unmaking is the Ritual Working family that scrubs corruption (<code>22</code>). Extra reagents, assistants, and a proper sanctum still grant edges or blunt Price on the sealing — they do not skip the Magnitude gate.</p>\n<p>A Light-pact Street Priest can lead a <strong>Marked</strong> cleanse as a downtime rite without a full Magnitude 1 Project when the Director agrees the stain is fresh. Deeper bands need the Unmaking ladder or a quest.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "32famX4TTk7FI3jf",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.32famX4TTk7FI3jf",
+      "name": "Mutants and the retired Load",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Mutant Corruption Load is retired.** Mutants use this shared Taint track like every other People.\n\nThe optional cosmetic **Corruptive Flaw** (`05`) is ancestry fiction: tells, roleplay, scene color. It has **no Load bands**, costs no ancestry points, and is **not** Taint. Reducing Taint does not erase a Flaw. Being born in a corrupted zone does not force starting Taint; the Director may set a higher starting score as a campaign hook.",
+        "content": "<p><strong>Mutant Corruption Load is retired.</strong> Mutants use this shared Taint track like every other People.</p>\n<p>The optional cosmetic <strong>Corruptive Flaw</strong> (<code>05</code>) is ancestry fiction: tells, roleplay, scene color. It has <strong>no Load bands</strong>, costs no ancestry points, and is <strong>not</strong> Taint. Reducing Taint does not erase a Flaw. Being born in a corrupted zone does not force starting Taint; the Director may set a higher starting score as a campaign hook.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "dwOQQiuv4yWLmCsI",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.dwOQQiuv4yWLmCsI",
+      "name": "Director notes (short)",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Corrupted zones, thin places, and pact clocks are run hooks — how to pace them lives in `docs/directors/corruption-taint.md`. Opposition procedure stays in `25`. Do not invent a second Malice track for Taint; Claimed / Hollowed already feed Malice when their costs fire.",
+        "content": "<p>Corrupted zones, thin places, and pact clocks are run hooks — how to pace them lives in <code>docs/directors/corruption-taint.md</code>. Opposition procedure stays in <code>25</code>. Do not invent a second Malice track for Taint; Claimed / Hollowed already feed Malice when their costs fire.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "AEaWUGXPbb21jAM2",
+      "_key": "!journal.pages!fEwnmi3gp05vhWUc.AEaWUGXPbb21jAM2",
+      "name": "Pointers",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "| Topic | Where |\n|---|---|\n| Unmaking / Ritual Workings / Price | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.lbVxCseGwPRNJsZL]{The Veil} |\n| Elementalist coerced-summon Price | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.IuEpDkcu355iDblk]{The Elementalist} |\n| Street Priest pact / coerce | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.fYO3wFphPNHscaAJ]{The Street Priest} |\n| Mutant Flaw; Load retired | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)} |\n| Chrome is not Taint | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.OtC0jRxx9pr0SzEx]{Chrome & Body Integrity} |\n| Rest / respite never cleanse | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.pGj7uMaf9JBsX1Rx]{Lifestyle & Downtime}, @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.du2ZyhOYRjNGbhnj]{Combat} |\n| Corruption skill | @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics} |\n| Zone hooks | `docs/directors/corruption-taint.md` |",
+        "content": "<table>\n<thead>\n<tr>\n<th id=\"topic\">Topic</th>\n<th id=\"where\">Where</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Unmaking / Ritual Workings / Price</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.lbVxCseGwPRNJsZL]{The Veil}</td>\n</tr>\n<tr>\n<td>Elementalist coerced-summon Price</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.IuEpDkcu355iDblk]{The Elementalist}</td>\n</tr>\n<tr>\n<td>Street Priest pact / coerce</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.fYO3wFphPNHscaAJ]{The Street Priest}</td>\n</tr>\n<tr>\n<td>Mutant Flaw; Load retired</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.YL0jYpff6XtNNAop]{Ancestries (The Peoples)}</td>\n</tr>\n<tr>\n<td>Chrome is not Taint</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.OtC0jRxx9pr0SzEx]{Chrome &amp; Body Integrity}</td>\n</tr>\n<tr>\n<td>Rest / respite never cleanse</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.pGj7uMaf9JBsX1Rx]{Lifestyle &amp; Downtime}, @UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.du2ZyhOYRjNGbhnj]{Combat}</td>\n</tr>\n<tr>\n<td>Corruption skill</td>\n<td>@UUID[Compendium.draw-steel-ghostwire.rulebook.JournalEntry.susCeNktlPPcW0Dp]{Heroes and Characteristics}</td>\n</tr>\n<tr>\n<td>Zone hooks</td>\n<td><code>docs/directors/corruption-taint.md</code></td>\n</tr>\n</tbody>\n</table>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "raw": "docs/raw/27-corruption-taint.md"
+    }
+  }
+}

@@ -25,7 +25,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 ### 0 · Boot the sheet
 
 - [ ] Enable the Ghostwire module. Create Actor → **Hero**. Name the runner.
-- [ ] Confirm **Stats** already shows **¥5,000** and **Body Integrity 20/20** (Cyborg: Integrity **N/A** after People). Matrix Verbs are already on the sheet.
+- [ ] Confirm the sheet **header** shows **Taint 0** (Clean), and **Stats** shows **¥5,000**, **Body Integrity 20/20** (Cyborg: Integrity **N/A** after People), and the same **Taint** fieldset under Integrity. Matrix Verbs are already on the sheet.
 
 ---
 
@@ -88,6 +88,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 ### 8 · Body Integrity · `09`
 
 - [ ] Living Peoples: **20/20** on **Stats**. Cyborg: **N/A** — skip chrome forever at chargen.
+- [ ] **Taint 0 (Clean)** on **Stats** — every People, Cyborgs included (`27`). Chrome later does **not** raise Taint. Rest never cleanses it.
 - [ ] Leave chrome empty. Installing later spends Integrity automatically when you drop a Chrome Item.
 - [ ] **Casters (Elementalist / Street Priest / Technomancer):** if you ever chrome, Soft is the intended grade and **5 Integrity** is the soft-cap — one checkbox, not a chrome chapter.
 
@@ -112,7 +113,7 @@ Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This b
 <li><strong>Skills</strong> collected, no duplicate waste.</li>
 <li><strong>Characteristics</strong> assigned (Physique / Reflex / Logic / Instinct / Persona).</li>
 <li><strong>Class resource</strong>, Stamina, Recoveries, languages filled.</li>
-<li><strong>Integrity 20/20</strong> (or Cyborg N/A). <strong>¥5,000</strong> minus only optional gear. <strong>No chrome.</strong></li>
+<li><strong>Integrity 20/20</strong> (or Cyborg N/A). <strong>Taint 0</strong>. <strong>¥5,000</strong> minus only optional gear. <strong>No chrome.</strong></li>
 <li>Portrait / token: optional.</li>
 </ul>
 </div>

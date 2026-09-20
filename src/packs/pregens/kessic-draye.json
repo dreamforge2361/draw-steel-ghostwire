@@ -2907,7 +2907,9 @@
       "integrity": {
         "value": 17,
         "max": 20
-      }
+      },
+      "taint": 0,
+      "corruptionHistory": ""
     }
   }
 }

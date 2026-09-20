@@ -16,6 +16,8 @@ Cyborgs do not use this chapter. **Pass A locks** (Body Integrity **20**, three 
 
 Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.
 
+**Chrome does not raise Taint.** Installing or removing implants spends or refunds Body Integrity only. The shared hero stain track is **Taint 0–12** (`27-corruption-taint.md`). Cyborgs still use Taint (demons, pacts, zones); they just do not use Integrity.
+
 ## Body Integrity (start 20)
 
 - **Pool:** every non-Cyborg begins with **Body Integrity 20** (enough for roughly 3–5 mid-grade implants). Species/Background may nudge later — open.
@@ -68,7 +70,7 @@ While Integrity spent on chrome is **greater than 5**, every **Magic / Veil / Re
 **Magic erosion** (the grade table above) still applies for spent Integrity **at or under** the soft-cap. The soft-cap is a hard cliff on top of erosion, not a replacement for it.
 
 > **In Foundry**
-> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs see N/A). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap.
+> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs see N/A). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Chrome install does **not** raise **Taint** (the 0–12 fieldset under Integrity). Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap.
 
 
 

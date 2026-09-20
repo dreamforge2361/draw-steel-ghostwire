@@ -17,6 +17,7 @@ import { registerCasterChrome } from "./caster-chrome.mjs";
 import { registerMagicErosion } from "./magic-erosion.mjs";
 import { registerVoidmark } from "./voidmark.mjs";
 import { registerGoldLineScene } from "./gold-line-scene.mjs";
+import { registerTaint } from "./taint.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -103,6 +104,7 @@ Hooks.once("init", () => {
   registerFreeStrikeStrip();
   const { isCasterClass } = registerCasterChrome({ isCyborg, casterClasses: VEIL_CASTER_CLASSES });
   registerMagicErosion({ isCasterClass });
+  registerTaint();
   registerVoidmark();
   registerGoldLineScene();
 });
@@ -543,6 +545,9 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
   if (stats.duplicateSource || stats.compendiumSource || stats.exportSource) return;
   const updates = {
     [`flags.${MODULE_ID}.integrity`]: { value: INTEGRITY_START, max: INTEGRITY_START },
+    // Taint is a separate 0–12 stain track (B80). Chrome install never writes this flag.
+    [`flags.${MODULE_ID}.taint`]: 0,
+    [`flags.${MODULE_ID}.corruptionHistory`]: "",
     // New heroes get the Matrix Verbs from defaultItems, so they skip the migration.
     [`flags.${MODULE_ID}.matrixVerbs`]: true,
     [`flags.${MODULE_ID}.wired`]: { connected: false, state: "disconnected" },
@@ -624,6 +629,7 @@ Hooks.on("createItem", (item, options, userId) => {
   if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero") || isCyborg(actor)) return;
   const { value, max } = getIntegrity(actor);
   const remaining = Math.max(0, value - chrome.integrity);
+  // Chrome spends Body Integrity only. Do not write flags.<module>.taint here (B80).
   setIntegrity(actor, remaining);
   ui.notifications.info(game.i18n.format("GHOSTWIRE.Integrity.Installed", { name: item.name, cost: chrome.integrity, value: remaining, max }));
   grantChromeItems(item, chrome);

@@ -3586,7 +3586,9 @@
       "integrity": {
         "value": 20,
         "max": 20
-      }
+      },
+      "taint": 0,
+      "corruptionHistory": ""
     }
   }
 }

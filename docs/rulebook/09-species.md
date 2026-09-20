@@ -352,7 +352,7 @@ Your taint twists how your words and presence are read, giving you a better read
 
 ### Corruptive Flaw (optional fiction)
 
-Visible taint and social “reads as wrong” are **fiction / Director color** layered on this package — not a second economy. The old **Corruption Load** meter and mutation-purchase track are **retired** in favor of this ancestry menu.
+Visible taint and social “reads as wrong” are **fiction / Director color** layered on this package — not a second economy. The old **Corruption Load** meter and mutation-purchase track are **retired** in favor of this ancestry menu. Mutants use the shared hero **Taint 0–12** track (`docs/raw/27-corruption-taint.md`); the Flaw is not Taint.
 
 **Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only.
 

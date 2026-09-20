@@ -47,7 +47,7 @@ Completeness key:
 | `19-hacker.md` | Hacker | Partial | Class-only after Wire extract; shorter than peers. Some flag leftovers (`@chr`, tier phrasing scrub debt) |
 | `20-technomancer.md` | Technomancer | Partial | Stage 2 extract; sprites/biofeedback largely filled post–Pass C |
 | `21-the-wire.md` | The Wire (Matrix) | **RAW-locked** (B66, 2026-09-18) | Orphan ×1 wired-direct scrubbed. Trace Alert middle = no Alert by default (locked). Overlay/Jacked In, Rating 1–5, suites/payloads + Connected gate aligned to Foundry. |
-| `22-the-veil.md` | The Veil | Partial (strong) | **B43 Ritual Workings locked**; **§C3 Summon Entities locked** (0.1.95). Open: thin-place gazetteer, full corruption ladder, Rank 2+ strike ladders, defense stamps |
+| `22-the-veil.md` | The Veil | Partial (strong) | **B43 Ritual Workings locked**; **§C3 Summon Entities locked** (0.1.95). **B80 Taint ladder** lives in `27-corruption-taint.md` (not a new print-Ch number). Open: thin-place gazetteer, Rank 2+ strike ladders, defense stamps |
 | `23-machines.md` | Drones, Vehicles & Buildings | Partial | Inventories present; Integrity/Speed often qualitative. Buildings = stub pointer to Wrench. Ramming cites §6.2 without full print procedure |
 | `24-advancement.md` | Advancement & Echelons | Complete (B73 Stage 3 fill) | Levels 1–10, Echelon 1–4, cadence table, table timing, legacy tier conversion. Doctrine locked |
 | `25-opposition.md` | Opposition (Director) | Stage 3 draft (B70) | Street-fight procedure + reskin/Malice/Trace Alert; Foundry bestiary + B48 pointer. No printable bestiary |
@@ -144,7 +144,7 @@ Print structure. File map = existing `docs/raw/` unless marked **NEW**.
 | Ch | Title | Source |
 |---|---|---|
 | 23 | The Wire | `21-the-wire.md` |
-| 24 | The Veil | `22-the-veil.md` |
+| 24 | The Veil | `22-the-veil.md` — Taint ladder pointer to RAW `27-corruption-taint.md` (B80; not a new print-Ch number) |
 | 25 | Machines (Drones & Vehicles) | `23-machines.md` — Buildings remain Wrench stub for v1 |
 
 ### Part V — Directors

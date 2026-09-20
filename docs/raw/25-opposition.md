@@ -18,6 +18,7 @@ Ghostwire opposition uses the street-fight procedure in this chapter. Actors sti
 - **Trace Alert → Malice** — Wired heat that pays into the same Malice pool meatspace fights use (`21`).
 - **Two-board fights** — meatspace grid and Wired topology cutting between each other (`04`, `21`).
 - **Foundry pointers** — bestiary Actors and Reach event tables, not a lore dump in print.
+- **Taint leftover** — corrupted zones and pact beats can stain runners after the fight (`27-corruption-taint.md`; Director notes in `docs/directors/corruption-taint.md`). Do not invent a second Malice track for Taint.
 
 ---
 

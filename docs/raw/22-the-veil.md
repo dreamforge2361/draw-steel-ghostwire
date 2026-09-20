@@ -104,7 +104,7 @@ Replaces SR-style Force. Caps by leader **echelon** and sanctum rating (sanctum 
 | **Reach** | Remote sense/strike via spotter | Spotter must Overlay / Jacked In / astral-equivalent; can be traced |
 | **Calling** | Long bind, site guardian, watcher | Persistent Price while bound |
 | **Threshold** | Open/close thin places, short gates | High heat; Concord/corps notice |
-| **Unmaking** | Break curses, scrub corruption, collapse a ward | Often Magnitude at least the original |
+| **Unmaking** | Break curses, scrub **Taint**, collapse a ward | Often Magnitude at least the original. Taint cleanse ladder and Magnitude gates live in `27-corruption-taint.md` |
 
 ### Detection (buildup is a clock)
 
@@ -237,6 +237,10 @@ Leave unset until a later Veil pass:
 
 Until those land, use Rank 1 / companion / spirit strike bands already printed in the class chapters, and Director judgment for higher-rank strike damage and defenses. Template Actors bake **base-only** Stamina; live summon stamps apply Logic×Level / Persona×Level.
 
+## Corruption & Taint
+
+The shared hero **Taint** track (0–12; Clean / Marked / Stained / Claimed / Hollowed) lives in `27-corruption-taint.md`. Class text that says "corruption" as a Price means **Taint** on that track. Unmaking workings above are the cleanse family; rest never cleanses; chrome does not raise Taint. Pact Prices ignore the +1-per-scene cap.
+
 ## Not yet written
 
-Thin-place gazetteer mechanics, full corruption ladder, and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. Ritual Workings above are the B43 lock; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build.
+Thin-place gazetteer mechanics and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. The hero Taint ladder is **B80** (`27`). Ritual Workings above are the B43 lock; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build.
