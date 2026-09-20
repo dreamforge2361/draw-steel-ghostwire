@@ -183,11 +183,11 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 3, "Beat0", [
-    "**Block 0 · 45–60m · Scenes: Deadhead Hangout → Mama’s Club.** Intel only. Fail = go in blind, not blocked.",
+    "**Block 0 · 45–60m · Scene: Mama’s Club.** Intel only. Fail = go in blind, not blocked. There is **no hangout Scene** — Beat 0 is table procedure.",
     "",
     "### Setup",
     "",
-    "Start at **Scenes → Deadhead → Deadhead Hangout — Shady Workshop** (wrecked block: street stall, containers, and the crew’s open-roof workshop). The module injects it on first GM load; walls and lights are yours. Hand **Mama’s Deadhead Brief**. Then run the brief / return at **Mama’s Club** (reuse the club plate). Call **Nox** before you leave the Flats — the crew **borrows** the garbage-truck-sized trash freighter. Scratch it = buy it; lose it = explain to Mama.",
+    "Start from Mama’s wafer at the **crew hangout** as theater (no map, no inject). Hand **Mama’s Deadhead Brief**. Chase the discovery table. Then run the brief / return at **Mama’s Club** (reuse the club plate). Call **Nox** before you leave the Flats — the crew **borrows** the garbage-truck-sized trash freighter. Scratch it = buy it; lose it = explain to Mama.",
     "",
     "### Discovery table",
     "",
@@ -295,7 +295,7 @@ const pages = [
   ].join("\n")),
 
   page(ENTRY_ID, 8, "Beat5", [
-    "**Block 5 · 20–30m · Scene: Mama’s Club (return) or Deadhead Hangout.** Moral choice.",
+    "**Block 5 · 20–30m · Scene: Mama’s Club (return).** Moral choice.",
     "",
     "**Choice:** Mama / corp / Signal; Nox drone condition as fiction string.",
     "",
@@ -363,7 +363,7 @@ const pages = [
     "",
     "| Scene | Status | Director note |",
     "|---|---|---|",
-    "| **Crew hangout** | **Shipped 0.3.43** | **Scenes → Deadhead → Deadhead Hangout — Shady Workshop** (`assets/maps/battlemaps/map-deadhead-hangout.webp`, 1920×1080, grid 80 = 5 ft). Injected on **new** worlds only; existing `deadheadHangoutScene` worlds are never rewritten. Still plate — no loop. Walls / lights / tokens are yours. Beat 0 start. |",
+    "| **Crew hangout** | **REMOVED permanently 0.3.55** | No Scene, no plate, no inject. Do **not** reintroduce. Beat 0 is table procedure (Mama wafer, intel chase, call Nox) **without** a hangout Scene. Canyon **SKIPPED** is a different row. If a world already has an injected hangout Scene, **delete it manually** — the module will not force-delete world Scenes. |",
     "| **Mama’s Club** | Reuse | Club plate already in-module (`assets/maps/battlemaps/mama-cassavir-club.webp` / `-loop.webm`). Brief + Beat 5 return. |",
     "| **Canyon / drone sling** | **SKIPPED** | No plate and none planned — **narrate** the mid-canyon approach and cut straight to the Gold Line roofs. |",
     "| **Gold Line** | **Michael’s live world Scene** | **Scenes → Deadhead → Gold Line.** Walls, lights, and tiles are sacred. Do **not** inject, restamp, force-refresh, or overwrite them. Hide **Roofs (overhead)** when playing inside; show roofs for board and Recall. |",
@@ -404,6 +404,9 @@ for (const p of pages) {
   must(!/passenger PA/i.test(text), `${p.name} has passenger PA`);
   must(!/Draw Steel Heroes|MCDM/i.test(text), `${p.name} is not Ghostwire-only`);
   must(!/\bdecker\b|\bMatrix\b|\bShadowrun\b/i.test(text), `${p.name} uses non-Ghostwire player wording`);
+  must(!/Shady Workshop/.test(text), `${p.name} still names Shady Workshop`);
+  must(!/map-deadhead-hangout/.test(text), `${p.name} still names hangout plate`);
+  must(!/deadheadHangoutScene|registerDeadheadHangoutScene/.test(text), `${p.name} still names hangout inject`);
 }
 
 const entry = {

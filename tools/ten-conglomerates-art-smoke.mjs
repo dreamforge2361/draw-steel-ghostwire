@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Ten Conglomerates art smoke (module 0.3.54).
+ * Ten Conglomerates art smoke (module 0.3.55).
  * Host skins, brand journals, Nox trash freighter. Does not generate art.
  *
  * Run: node tools/ten-conglomerates-art-smoke.mjs
@@ -21,10 +21,10 @@ function readBomFreeJson(path) {
   return JSON.parse(buf.toString("utf8"));
 }
 
-console.log("Ten Conglomerates art smoke (0.3.54)\n");
+console.log("Ten Conglomerates art smoke (0.3.55)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version === "0.3.54", `module.json is 0.3.54 (got ${moduleJson.version})`);
+ok(moduleJson.version === "0.3.55", `module.json is 0.3.55 (got ${moduleJson.version})`);
 
 const tickers = MEGACORPS.map(c => c.ticker);
 ok(tickers.join(",") === "HAL,FER,MER,CAD,IRN,ARG,VER,OBS,SAN,NYX", "ticker order matches MEGACORP-TICKERS");

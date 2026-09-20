@@ -204,11 +204,12 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 ## Foundry build list (pack together under Ghostwire Runs / Deadhead)
 
 - [x] Journal: this run (pages: Overview, Trace ladder, Beats 0–5, Items, Opposition, Foundry checklist) — **0.3.42**
-- [x] Beat 0 hangout Scene (**Shady Workshop** still, injected on new worlds) — **0.3.43**; canyon plate **SKIPPED**, narrate the approach
+- [x] Beat 0 hangout Scene — **REMOVED permanently 0.3.55**. No plate, no inject, do not reintroduce. Beat 0 discovery (Mama wafer, intel chase, call Nox) stays as **table procedure without a hangout Scene**. This is **not** the canyon skip.
+- [x] Canyon plate **SKIPPED** — narrate the mid-canyon approach (unchanged; separate from hangout removal)
 - [x] Journal: Gold Line — Map Notes (plate paths + beat remap) in **Ghostwire Runs → Deadhead**
 - [x] Item: Mama’s Deadhead Brief wafer — **0.3.52** (`Ghostwire Gear → Plot & Run Hooks`)
 - [x] Item: ARG courier capsule / live wafer (plothook notes for three buyers) — **0.3.52**
-- [ ] Scene: crew hangout (rundown flat, wrecked bad neighborhood)
+- [x] Scene: crew hangout — **REMOVED permanently 0.3.55** (do not reintroduce; table procedure only)
 - [ ] Scene: Mama’s Club (reuse)
 - [ ] Scene: canyon approach / drone sling strip
 - [x] Scene: Gold Line dual-Hammerhead (world inject; interior loop + roofs overhead)

@@ -21,7 +21,6 @@ import { registerCasterChrome } from "./caster-chrome.mjs";
 import { registerMagicErosion } from "./magic-erosion.mjs";
 import { registerVoidmark } from "./voidmark.mjs";
 import { registerGoldLineScene } from "./gold-line-scene.mjs";
-import { registerDeadheadHangoutScene } from "./deadhead-hangout-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -102,7 +101,6 @@ Hooks.once("init", () => {
   registerTaint();
   registerVoidmark();
   registerGoldLineScene();
-  registerDeadheadHangoutScene();
 });
 
 // ---------- Wired connection states ----------
