@@ -326,6 +326,46 @@
       },
       "flags": {},
       "_key": "!actors.items!GwMamaPatMale000.GwMamaPatMalIt02"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwMamaPatMalIt03",
+      "_key": "!actors.items!GwMamaPatMale000.GwMamaPatMalIt03"
     }
   ],
   "effects": [
@@ -407,7 +447,7 @@
         "station": "Floor Regular",
         "people": "Pure Human",
         "sex": "M",
-        "wired": false
+        "wired": true
       }
     }
   },

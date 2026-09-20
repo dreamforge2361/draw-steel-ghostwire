@@ -5,7 +5,8 @@
  *
  * Mama Cassavir herself already exists in reach-streets and is NOT touched here.
  * Names are plain English (Director readability) rather than GHOSTWIRE.* lang keys.
- * Only Kira "Soft Trace" Bell is Wired — the rest of the floor is meat.
+ * Every club Actor ships a Wire Kit (0.3.85 humanoid Connect pass). Soft Trace
+ * remains the info broker; the rest of the floor can Connect too.
  *
  * Ancestry (Goliar, Elvani, Corran, Rat-Changer, Revenant) lives in the biography
  * prose and the bestiary flags, never in system.monster.keywords: that list is a
@@ -164,6 +165,12 @@ function strike({ id, n, name, img, dsid, story, keywords, distance, characteris
   };
 }
 
+/** Append Wire Kit as the last item when the roster entry did not already include one. */
+function ensureWireKit(id, items) {
+  if (items.some(i => i.system?._dsid === "wire-kit-matrix-verbs")) return items;
+  return [...items, wireKit(id, items.length + 1)];
+}
+
 /** The Director Wire Kit stamp — itself a Connect interface (see 0.3.82). */
 function wireKit(id, n) {
   return {
@@ -283,7 +290,7 @@ function clubActor(entry) {
       statuses: { immunities: [] },
     },
     prototypeToken,
-    items: entry.items(id),
+    items: ensureWireKit(id, entry.items(id)),
     effects: entry.organization === "minion" ? [captainEffect(id)] : [],
     sort: entry.sort,
     ownership: { default: 0 },
@@ -300,7 +307,7 @@ function clubActor(entry) {
           station: entry.station,
           people: entry.people,
           sex: entry.sex,
-          wired: entry.wired === true,
+          wired: true,
         },
       },
     },
@@ -736,7 +743,7 @@ const ROSTER = [
     negotiation: [6, 5, 1],
     sort: 510,
     bio: "<p>Industrial chrome, not the pretty kind — exposed hydraulics, a forearm that is mostly clamp, and a permanent smell of coolant. Torque is a retired wrench who now drinks at the same two-top every night with a case of drone scrap open on the table.</p>",
-    hook: "<p><strong>Plot hook:</strong> Torque sells drone parts and Soft Trace's leftovers at cost, and he hates Ironclad with his whole chest — they fitted him with a compliance collar that nearly took his spine out. Say the word “Ironclad” and he will talk for an hour, most of it useful.</p><p><strong>Running him:</strong> Meat. He has no Wire Kit — his rigging days ended with the collar, and he will tell you so at length.</p>",
+    hook: "<p><strong>Plot hook:</strong> Torque sells drone parts and Soft Trace's leftovers at cost, and he hates Ironclad with his whole chest — they fitted him with a compliance collar that nearly took his spine out. Say the word “Ironclad” and he will talk for an hour, most of it useful.</p><p><strong>Running him:</strong> He still carries a Wire Kit (0.3.85) even though his rigger days ended with the collar — he will tell you the collar story at length, kit or not.</p>",
     items: id => [
       feature({
         id, n: 1,
@@ -784,7 +791,7 @@ const ROSTER = [
     negotiation: [4, 6, 2],
     sort: 520,
     bio: "<p>A sharp corporate suit worn under club mesh, which fools nobody and is not meant to. Luma drinks at the bar rail two nights a week, tips correctly, and tells anyone who asks that she is “just off the clock.”</p>",
-    hook: "<p><strong>Plot hook:</strong> Luma is a Meridian Signal junior, and she is not off the clock at all — she is logging Mama Switchboard traffic from the bar rail and filing it upstairs. Vexa suspects. Mama has not decided whether Luma is a problem or a channel.</p><p><strong>Running her:</strong> Noncombatant, and deliberately <em>meat</em> — she works off a consumer handset with no deck and no Wire Kit, so a search turns up nothing.</p>",
+    hook: "<p><strong>Plot hook:</strong> Luma is a Meridian Signal junior, and she is not off the clock at all — she is logging Mama Switchboard traffic from the bar rail and filing it upstairs. Vexa suspects. Mama has not decided whether Luma is a problem or a channel.</p><p><strong>Running her:</strong> Noncombatant. She works the bar rail off a consumer handset and notes — her Wire Kit (0.3.85) is the cheap street stamp, not a deck, so a search still finds nothing interesting.</p>",
     items: id => [
       feature({
         id, n: 1,
@@ -879,7 +886,7 @@ const ROSTER = [
     negotiation: [8, 5, 2],
     sort: 540,
     bio: "<p>Hacker-adjacent, pure human, and the only regular in the building with a deck under the table. Kira works the corner two-top most nights with a cold coffee and a Wire Kit, buying rumours off Pip and selling node maps to anyone who can pay.</p><p>They call her Soft Trace because she has never once left a hard one.</p>",
-    hook: "<p><strong>Plot hook:</strong> Soft Trace is the club's info broker. She will trade a node map, a building's Wire layout, or a name — but she prices in favours, not cash, and she keeps a ledger. Several runners on this floor are already in it.</p><p><strong>Running her:</strong> <strong>Wired.</strong> Kira is the only member of the club cast who ships a Wire Kit, so she can Connect from the node applet. Everyone else on this floor is meat.</p>",
+    hook: "<p><strong>Plot hook:</strong> Soft Trace is the club's info broker. She will trade a node map, a building's Wire layout, or a name — but she prices in favours, not cash, and she keeps a ledger. Several runners on this floor are already in it.</p><p><strong>Running her:</strong> <strong>Wired.</strong> Soft Trace is still the club's info broker — she prices node maps in favours and keeps a ledger — and she ships a Wire Kit like everyone else on this floor (0.3.85).</p>",
     items: id => [
       feature({
         id, n: 1,

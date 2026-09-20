@@ -41,7 +41,7 @@
     },
     "biography": {
       "value": "<p>A sharp corporate suit worn under club mesh, which fools nobody and is not meant to. Luma drinks at the bar rail two nights a week, tips correctly, and tells anyone who asks that she is “just off the clock.”</p>",
-      "director": "<p><strong>Plot hook:</strong> Luma is a Meridian Signal junior, and she is not off the clock at all — she is logging Mama Switchboard traffic from the bar rail and filing it upstairs. Vexa suspects. Mama has not decided whether Luma is a problem or a channel.</p><p><strong>Running her:</strong> Noncombatant, and deliberately <em>meat</em> — she works off a consumer handset with no deck and no Wire Kit, so a search turns up nothing.</p>",
+      "director": "<p><strong>Plot hook:</strong> Luma is a Meridian Signal junior, and she is not off the clock at all — she is logging Mama Switchboard traffic from the bar rail and filing it upstairs. Vexa suspects. Mama has not decided whether Luma is a problem or a channel.</p><p><strong>Running her:</strong> Noncombatant. She works the bar rail off a consumer handset and notes — her Wire Kit (0.3.85) is the cheap street stamp, not a deck, so a search still finds nothing interesting.</p>",
       "languages": []
     },
     "movement": {
@@ -359,6 +359,46 @@
       },
       "flags": {},
       "_key": "!actors.items!GwMamaLuma000000.GwMamaLuma00It03"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwMamaLuma00It04",
+      "_key": "!actors.items!GwMamaLuma000000.GwMamaLuma00It04"
     }
   ],
   "effects": [
@@ -440,7 +480,7 @@
         "station": "Regular — Bar Rail",
         "people": "Pure Human",
         "sex": "F",
-        "wired": false
+        "wired": true
       }
     }
   },

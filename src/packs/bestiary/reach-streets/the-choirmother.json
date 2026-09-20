@@ -955,6 +955,46 @@
         "R75FAhxK5fADaoJF": 3
       },
       "_key": "!actors.items!hAaQsq6Gd7eaGqIu.vxocmPyA9uKwrgEq"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwWkhAaQsq6Gd7ea",
+      "_key": "!actors.items!hAaQsq6Gd7eaGqIu.GwWkhAaQsq6Gd7ea"
     }
   ],
   "folder": "gwBestiaryStreet",
@@ -1065,7 +1105,8 @@
         "region": "streets",
         "loreName": "The Choirmother",
         "role": "named-boss",
-        "echelon": 1
+        "echelon": 1,
+        "wired": true
       }
     }
   },

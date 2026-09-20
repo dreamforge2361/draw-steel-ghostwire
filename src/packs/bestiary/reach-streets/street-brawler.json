@@ -798,6 +798,46 @@
       "folder": null,
       "sort": 0,
       "_key": "!actors.items!0bGZHyvyH39mIURD.lVlwo9eIp8HBjfth"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "GwWk0bGZHyvyH39m",
+      "_key": "!actors.items!0bGZHyvyH39mIURD.GwWk0bGZHyvyH39m"
     }
   ],
   "effects": [],
@@ -811,7 +851,8 @@
         "dsSourceId": "DSEkUDEnQeS4LsWr",
         "dsSourceName": "Human Brawler",
         "decision": "Keep",
-        "region": "streets"
+        "region": "streets",
+        "wired": true
       }
     }
   },
