@@ -19,12 +19,44 @@ import {
 
 export const ALERT_MAX = 12;
 
-/** Flag on a Matrix Verb Item that exists only for one AbilityModel#use, then is deleted. */
+/** Flag on a Matrix Verb Item embedded only so AbilityModel#use / chat can resolve it. */
 export const TEMP_CONSOLE_VERB_FLAG = "temporaryConsoleVerb";
 
 export function isTemporaryConsoleVerb(item, moduleId = MODULE_ID) {
   if (typeof item?.getFlag === "function") return !!item.getFlag(moduleId, TEMP_CONSOLE_VERB_FLAG);
   return !!item?.flags?.[moduleId]?.[TEMP_CONSOLE_VERB_FLAG];
+}
+
+function iterableItems(items) {
+  if (!items) return [];
+  if (Array.isArray(items)) return items;
+  if (typeof items[Symbol.iterator] === "function") return [...items];
+  return [];
+}
+
+/** Temps for this verb dsid. Chat `abilityUse.abilityUuid` may still point at one. */
+export function leftoverTemporaryVerbs(items, dsid, isTemp = isTemporaryConsoleVerb) {
+  return iterableItems(items).filter(item => item.system?._dsid === dsid && isTemp(item));
+}
+
+/**
+ * Keep one leftover (stable uuid for Draw Steel chat). Return extras to delete.
+ * @returns {{ keep: object|null, extras: object[] }}
+ */
+export function splitReusableTemporaryVerbs(items, dsid, isTemp = isTemporaryConsoleVerb) {
+  const leftover = leftoverTemporaryVerbs(items, dsid, isTemp);
+  return { keep: leftover[0] ?? null, extras: leftover.slice(1) };
+}
+
+/**
+ * Draw Steel 1.1.2 AbilityUsePart / AbilityResultPart store `abilityUuid` and later
+ * `fromUuidSync` it for `toEmbed` and `powerRollText` (tier display strings). Deleting
+ * the embed as soon as `use()` returns yields "Failed to Find Item for this ability roll"
+ * and no Search (etc.) flavor. Drop a temp only if this call created it and no chat card
+ * captured its uuid. Leftovers are reused on the next fire and stripped on ready (B117).
+ */
+export function shouldReleaseTemporaryVerb({ created = false, hasChatCard = false } = {}) {
+  return !!created && !hasChatCard;
 }
 
 /**

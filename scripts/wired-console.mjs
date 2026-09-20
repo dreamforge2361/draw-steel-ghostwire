@@ -24,6 +24,8 @@ import {
   isTemporaryConsoleVerb,
   markTemporaryConsoleVerbData,
   nextAlert,
+  shouldReleaseTemporaryVerb,
+  splitReusableTemporaryVerbs,
   pickConsoleActor,
   pickPlayerVerbActor,
   softTraceDelta,
@@ -721,28 +723,31 @@ const TEMP_EMBED_OPTIONS = { render: false };
 /**
  * Draw Steel 1.1.2 AbilityModel#use requires a real embedded Item:
  *   "Abilities can only be used while embedded"
- * Chat `abilityUse.abilityUuid` is a DocumentUUIDField; an ephemeral
- * `new Item(data, { parent })` is not in the actor collection, so confirm
- * throws and no card is created. Embed for the use, then delete.
+ * Chat `abilityUse` / `abilityResult` store `abilityUuid` and later
+ * `fromUuidSync` it for `toEmbed` + `powerRollText` (tier display strings).
+ * A parented-but-unembedded Item is not in the actor collection, so confirm
+ * throws. Embed for the use, **keep** it while chat still points at it
+ * (hide on the sheet; ready leftover strip + extra-duplicate cleanup).
  *
- * @returns {Promise<{ item: Item|null, ephemeral: boolean }>}
+ * @returns {Promise<{ item: Item|null, ephemeral: boolean, created: boolean }>}
  */
 async function resolveVerbItem(actor, dsid) {
   const owned = [...(actor?.items ?? [])].find(item => item.system?._dsid === dsid && !isTemporaryConsoleVerb(item));
-  if (owned) return { item: owned, ephemeral: false };
+  if (owned) return { item: owned, ephemeral: false, created: false };
 
   const spec = CONSOLE_SLICE.find(verb => verb.dsid === dsid);
   const source = spec ? await fromUuid(spec.uuid) : null;
-  if (!source || !actor?.createEmbeddedDocuments) return { item: null, ephemeral: false };
+  if (!source || !actor?.createEmbeddedDocuments) return { item: null, ephemeral: false, created: false };
 
-  const leftover = [...actor.items].filter(item => item.system?._dsid === dsid && isTemporaryConsoleVerb(item));
-  if (leftover.length) {
-    await actor.deleteEmbeddedDocuments("Item", leftover.map(item => item.id), TEMP_EMBED_OPTIONS);
+  const { keep, extras } = splitReusableTemporaryVerbs(actor.items, dsid);
+  if (extras.length) {
+    await actor.deleteEmbeddedDocuments("Item", extras.map(item => item.id), TEMP_EMBED_OPTIONS);
   }
+  if (keep) return { item: keep, ephemeral: true, created: false };
 
   const data = markTemporaryConsoleVerbData(game.items.fromCompendium(source, { clearFolder: true }));
   const [created] = await actor.createEmbeddedDocuments("Item", [data], TEMP_EMBED_OPTIONS);
-  return { item: created ?? null, ephemeral: true };
+  return { item: created ?? null, ephemeral: true, created: true };
 }
 
 async function releaseTemporaryVerbItem(actor, item) {
@@ -754,7 +759,7 @@ async function releaseTemporaryVerbItem(actor, item) {
   }
 }
 
-/** Hide the in-flight temp verb so it never appears as a sheet ability (B117). */
+/** Hide the temp verb so it never appears as a sheet ability (B117). */
 function hideTemporaryConsoleVerbs(app, element) {
   const root = element instanceof HTMLElement ? element : element?.[0];
   const actor = app?.document;
@@ -801,25 +806,37 @@ export async function useConsoleVerb(actor, dsid, { node = null, scene = null, g
     ui.notifications.warn(game.i18n.localize("GHOSTWIRE.WiredConsole.VerbUnknown"));
     return null;
   }
-  let acquired = { item: null, ephemeral: false };
-  try {
-    acquired = await resolveVerbItem(actor, dsid);
-    const item = acquired.item;
-    if (!item?.system?.use) {
-      ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.VerbMissing", { name: spec.lang }));
-      return null;
+  const acquired = await resolveVerbItem(actor, dsid);
+  const item = acquired.item;
+  if (!item?.system?.use) {
+    if (shouldReleaseTemporaryVerb({ created: acquired.created, hasChatCard: false })) {
+      await releaseTemporaryVerbItem(actor, item);
     }
-    const consoleVerb = { dsid, nodeId: node?.id ?? null, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
-    const message = await item.system.use({}, {}, verbUseMessageOptions(consoleVerb));
-    if (message?.setFlag && !consoleVerbMetaFromMessage(message)) {
-      try { await message.setFlag(MODULE_ID, "consoleVerb", consoleVerb); }
-      catch (err) { console.warn(`${MODULE_ID} | could not flag Console verb chat`, err); }
-    }
-    await applyConsoleVerbTrace(message);
-    return message;
-  } finally {
-    if (acquired.ephemeral) await releaseTemporaryVerbItem(actor, acquired.item);
+    ui.notifications.warn(game.i18n.format("GHOSTWIRE.WiredConsole.VerbMissing", { name: spec.lang }));
+    return null;
   }
+  const consoleVerb = { dsid, nodeId: node?.id ?? null, sceneId: scene?.id ?? null, actorUuid: actor.uuid };
+  let message = null;
+  try {
+    message = await item.system.use({}, {}, verbUseMessageOptions(consoleVerb));
+  } catch (err) {
+    if (shouldReleaseTemporaryVerb({ created: acquired.created, hasChatCard: false })) {
+      await releaseTemporaryVerbItem(actor, item);
+    }
+    throw err;
+  }
+  // Successful use: keep the embed so DS chat can still fromUuidSync abilityUuid
+  // for Search (and the other eight) tier text. Cancelled dialog: drop only a
+  // temp this call created (reused leftovers may still back an earlier card).
+  if (shouldReleaseTemporaryVerb({ created: acquired.created, hasChatCard: !!message })) {
+    await releaseTemporaryVerbItem(actor, item);
+  }
+  if (message?.setFlag && !consoleVerbMetaFromMessage(message)) {
+    try { await message.setFlag(MODULE_ID, "consoleVerb", consoleVerb); }
+    catch (err) { console.warn(`${MODULE_ID} | could not flag Console verb chat`, err); }
+  }
+  await applyConsoleVerbTrace(message);
+  return message;
 }
 
 /** GM applies soft Trace once the power-roll tier is on the chat card. */

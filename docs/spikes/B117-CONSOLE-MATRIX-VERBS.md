@@ -76,6 +76,8 @@ Street **Commlink** (`src/packs/gear/general/comms/commlink.json`, ¥150) is the
 - Gold Line force overwrite
 - A second deck ladder
 
-**0.3.60 (Michael smoke 2026-09-20):** Overlay Search opened the configure dialog with no bonuses and produced no dice / no chat card. Cause: `resolveVerbItem` used `new CONFIG.Item.documentClass(data, { parent: actor })` — Draw Steel 1.1.2 `AbilityModel#use` requires a **collection-embedded** Item (`abilityUse.abilityUuid` is a DocumentUUIDField). Fix: temporary embed + delete after use. Verbs stay off the sheet.
+**0.3.60 (Michael smoke 2026-09-20):** Overlay Search opened the configure dialog with no bonuses and produced no dice / no chat card. Cause: `resolveVerbItem` used `new CONFIG.Item.documentClass(data, { parent: actor })` — Draw Steel 1.1.2 `AbilityModel#use` requires a **collection-embedded** Item (`abilityUse.abilityUuid` is a DocumentUUIDField). Fix: temporary embed + `use`. Verbs stay off the sheet.
+
+**0.3.61 (Michael smoke 2026-09-20):** Overlay Search rolled (SFX OK) but the chat card said **Failed to Find Item for this ability roll** and printed no Search tier flavor. Cause: 0.3.60 deleted the temp embed in `useConsoleVerb`'s `finally` before Draw Steel 1.1.2 AbilityUsePart / AbilityResultPart `fromUuidSync(abilityUuid)` (`toEmbed` + `powerRollText` from `power.effects` display strings). Fix: keep the temp after a successful card, reuse it on the next fire, delete only a temp this call created when the dialog cancels. Sheet hide + ready leftover strip stay.
 
 Smoke: `node tools/b117-console-verbs-smoke.mjs`. No live Foundry in this environment.
