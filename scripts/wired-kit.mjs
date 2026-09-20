@@ -1,9 +1,9 @@
-// Wire Kit — Matrix Verbs (B115).
-// Heroes already get MATRIX_VERBS via ds.CONFIG.hero.defaultItems. NPCs do not.
-// Dropping this feature (Ghostwire Matrix › Support) onto an NPC stamps the nine verbs.
-// Meat-only opposition stays clean until the Director stamps the kit. No bestiary default.
+// Wire Kit — Matrix Verbs (B115, B117).
+// Heroes already get SHEET_VERBS via ds.CONFIG.hero.defaultItems. NPCs do not.
+// Dropping this feature (Ghostwire Matrix › Support) onto an NPC stamps Connect / Jack Out / Toggle.
+// Scan / Ping / Navigate fire from the Wired Console (B117). Meat-only opposition stays clean. No bestiary default.
 
-import { MATRIX_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
+import { MATRIX_VERBS, SHEET_VERBS, WIRE_KIT_DSID, WIRE_KIT_UUID } from "./wired-verbs.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -23,14 +23,15 @@ function ownedDsids(actor) {
 }
 
 /**
- * Copy missing Matrix Verbs onto an actor. Idempotent. Flags copies `wireKitGranted`.
+ * Copy missing sheet Matrix Verbs (Connect / Jack Out / Toggle) onto an actor. Idempotent.
+ * Flags copies `wireKitGranted`. Scan / Ping / Navigate fire from the Wired Console (B117).
  * @returns {Promise<number>} how many abilities were created
  */
 export async function grantMatrixVerbs(actor, { notify = false } = {}) {
   if (!actor) return 0;
-  const verbs = (await Promise.all(MATRIX_VERBS.map(uuid => fromUuid(uuid)))).filter(Boolean);
-  if (verbs.length !== MATRIX_VERBS.length) {
-    console.warn(`${MODULE_ID} | Some Matrix Verbs are missing from the abilities pack`);
+  const verbs = (await Promise.all(SHEET_VERBS.map(uuid => fromUuid(uuid)))).filter(Boolean);
+  if (verbs.length !== SHEET_VERBS.length) {
+    console.warn(`${MODULE_ID} | Some sheet Matrix Verbs are missing from the abilities pack`);
   }
   const owned = ownedDsids(actor);
   const missing = verbs.filter(v => !owned.has(v.system._dsid)).map(v => {
@@ -163,6 +164,7 @@ export function registerWiredKit() {
         grantMatrixVerbs,
         WIRE_KIT_UUID,
         MATRIX_VERBS,
+        SHEET_VERBS,
       };
     }
   });

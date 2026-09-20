@@ -52,7 +52,7 @@ Every Track 2 target -- and the "system" side of any Wired encounter -- tracks i
 The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating.
 
 > **In Foundry**
-> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); GMs can open the full Director view. Click a revealed node to focus its canvas token when one is placed.
+> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). While **Connected**, **Scan**, **Ping**, and **Navigate** fire from the Console (selected runner + selected node); **Connect**, **Jack Out**, and **Toggle Connection State** stay on the sheet. The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); GMs can open the full Director view. Click a revealed node to focus its canvas token when one is placed.
 
 
 **Biofeedback bleed-through:** some hits carry an "Integrity-to-Stamina biofeedback bleed-through" clause (see Failsafe Cascade, Emergency Patch, Anchor Point) -- this is the mechanism by which damage done to a *node's* Integrity can bleed back into a *Hacker's own* Stamina, gated by your cyberdeck's Biofeedback Resistance stat and your connection state (see the table above).

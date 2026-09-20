@@ -20,12 +20,34 @@
   </header>
 
   <div class="wc-body">
+    {{!-- B117: Scan / Ping / Navigate fire here (Connect / Jack Out / Toggle stay on the sheet). --}}
+    <section class="wc-panel wc-verbs">
+      <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Verbs"}}</h3>
+      <p class="wc-verb-status">
+        {{#if verbActor}}
+        <span class="wc-roster-name">{{verbActor.name}}</span>
+        <span class="wc-state-chip state-{{verbActor.state}}">{{verbActor.stateLabel}}</span>
+        {{else}}
+        <span class="wc-dim">{{localize "GHOSTWIRE.WiredConsole.VerbNeedActor"}}</span>
+        {{/if}}
+        {{#if selected}}<span class="wc-tag">{{selected.name}}</span>{{/if}}
+      </p>
+      <div class="wc-verb-strip">
+        {{#each verbs}}
+        <button type="button" class="wc-btn wc-verb" data-action="fireVerb" data-verb="{{dsid}}" {{disabled (not enabled)}} data-tooltip="{{tooltip}}">
+          <i class="fa-solid {{icon}}"></i> {{label}}
+        </button>
+        {{/each}}
+      </div>
+      {{#if verbHint}}<p class="wc-dim wc-verb-hint">{{verbHint}}</p>{{/if}}
+    </section>
+
     {{!-- Connection roster --}}
     <section class="wc-panel wc-roster">
       <h3 class="wc-panel-title">{{localize "GHOSTWIRE.WiredConsole.Roster"}}</h3>
       <ul class="wc-roster-list">
         {{#each roster}}
-        <li class="wc-roster-row state-{{state}}">
+        <li class="wc-roster-row state-{{state}}{{#if selected}} selected{{/if}}" data-action="selectActor" data-actor-uuid="{{uuid}}">
           <img src="{{img}}" alt="">
           <span class="wc-roster-name">{{name}}</span>
           <span class="wc-state-chip state-{{state}}">{{stateLabel}}</span>

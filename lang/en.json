@@ -5050,7 +5050,7 @@
         },
         "WireKit": {
           "Name": "Wire Kit — Matrix Verbs",
-          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to grant the nine Matrix Verbs (Connect, Jack Out, Toggle Connection State, Scan, Navigate, Ping, Broadcast, Search, Read/Write) — the same abilities every hero already has.</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes already receive the verbs at creation; this kit does not duplicate them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary.</p>"
+          "Description": "<p><em>Wire Kit · Matrix Verbs · NPC net-access stamp</em></p><p>Drop this feature onto an NPC to grant <strong>Connect</strong>, <strong>Jack Out</strong>, and <strong>Toggle Connection State</strong> — the sheet verbs every hero already has. <strong>Scan</strong>, <strong>Ping</strong>, and <strong>Navigate</strong> fire from the Wired Console once the NPC is Connected.</p><p><strong>Directors:</strong> stamp ARG security (and any other opposition that should act on the Wire). Leave meat-only thugs without it. Heroes already receive the sheet verbs at creation; this kit does not duplicate them.</p><p><strong>Foundry:</strong> Ghostwire Matrix › Support, or Wired Console <em>Add Wire Kit</em> on selected NPC tokens. Does not auto-grant on the bestiary. Broadcast / Search / Read-Write stay later.</p>"
         },
         "Buzzer": {
           "Name": "Buzzer",
@@ -6238,6 +6238,7 @@
       },
       "Changed": "{actor}: {state}.",
       "Migrated": "Ghostwire: added Matrix Verbs to {count} existing hero(es).",
+      "ConsoleMigrated": "Ghostwire: moved {count} Matrix Verb(s) off the sheet — Scan / Ping / Navigate fire from the Wired Console.",
       "Vision": {
         "overlay": "Wired Overlay",
         "jackedIn": "Jacked In"
@@ -6355,14 +6356,24 @@
       "AutoNodesUnnamed": "(unnamed)",
       "AutoNodesUnsplit": "Skipped {count} light(s) with no “ - ” in the name: {names}. Rename them “{Room} - Light Control” and run again.",
       "AutoNodesDone": "Added {count} auto-node(s) across {rooms} room(s) ({skipped} already present).",
-      "AutoNodesSkipped": "All {skipped} auto-node(s) were already on this board. Choose Replace to rebuild them."
+      "AutoNodesSkipped": "All {skipped} auto-node(s) were already on this board. Choose Replace to rebuild them.",
+      "Verbs": "Matrix Verbs",
+      "VerbTooltip": "{name} · {chr} power roll (Hacking / Jacked In edges apply)",
+      "VerbReady": "{actor} → {node}",
+      "VerbNeedActor": "Select a connected runner in the roster.",
+      "VerbNeedNode": "Select a node, then fire Scan / Ping / Navigate.",
+      "VerbNeedOwner": "You don't control that runner.",
+      "VerbNeedDisconnected": "Disconnected — use Connect on the sheet first.",
+      "VerbUnknown": "Unknown Matrix Verb.",
+      "VerbMissing": "Matrix Verb {name} is missing from Ghostwire Abilities.",
+      "VerbTrace": "{name}: Trace Alert +1 ({alert} / 12) — something went wrong."
     },
     "WiredKit": {
       "Button": "Add Wire Kit",
       "Hud": "Add Wire Kit — Matrix Verbs to the selected NPC",
       "Granted": "{actor} stamped with Wire Kit ({count} Matrix Verbs).",
       "Already": "{actor} already has the Wire Kit.",
-      "HeroSkip": "{actor} is a hero — Matrix Verbs are already on the sheet.",
+      "HeroSkip": "{actor} is a hero — Connect / Jack Out / Toggle are already on the sheet.",
       "NoSelection": "Select one or more NPC tokens, then Add Wire Kit."
     },
     "WiredMinimap": {
