@@ -10,11 +10,26 @@
 
 **Lifestyle** is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys **living standard**: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.
 
-Pay Lifestyle at each **respite between runs** (or when the Director says a downtime block ends). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.
+Pay Lifestyle at each **full respite** — normally when the job ends (or when the Director says a real downtime block ends). Mid-job nights are short stops (below). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.
 
 If you **cannot or will not pay**, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.
 
 **Firewall reminder** (`08`): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.
+
+## Full respite vs short stop
+
+**Lifestyle upkeep is paid only on a full respite** — not on every night the crew sleeps mid-job.
+
+| | **Full respite** | **Short stop** |
+|---|---|---|
+| When | Default when the **job ends**; also real downtime (hospital, travel layover, week off) | Mid-job between sessions |
+| Pay Lifestyle / LAZ band | **Yes** | **No** |
+| Bank Victories → XP (`24`) | **Yes** | **No** |
+| Payday ¥ (`08`) | **Yes** | **No** |
+| Recoveries | Yes | Yes |
+
+Mid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not reset Victories, do not treat the night as payday. Advancement and the Victory→XP bank live in `24`. Campaign worked example: `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
+
 
 ---
 
@@ -25,7 +40,7 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 
 **Upkeep ¥** are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in `04`. Do not invent a second Recovery pool.
 
-**Respite.** A **respite** is the downtime breath between runs — or whenever the Director says a downtime block ends. The crew is off the clock long enough to sleep, pay Lifestyle, spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round and not a five-minute alley patch.
+**Full respite.** A **full respite** is the downtime breath when a job ends — or whenever the Director says real downtime starts (hospital, layover, week off). The crew is off the clock long enough to sleep, **pay Lifestyle**, bank Victories→XP (`24`), take payday (`08`), spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round, not a five-minute alley patch, and not a mid-job **short stop**.
 
 | Band | Name | Upkeep / respite | Housing & rest (feel) | Social doors | Medic restock eligibility |
 |---|---|---|---|---|---|
@@ -34,6 +49,8 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 | 3 | **Middle** | **¥1,200** | Private flat, crew safehouse wing, decent heat scrub. Basic security. Reliable rest (Director may grant an edge on one Recovery roll this respite). | Licensed shops, competent fixers, corp surplus windows. | Full restock is **routine**. Quote at **standard** rate; suppliers show up. |
 | 2 | **High** | **¥3,500** | Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse). | Professional doors, quiet install bays, serious fixers. | Restock is **easy**. Prefer **standard or better** quotes; black-clinic / pharma contacts are in reach. |
 | 1 | **Elite** | **¥9,000** | Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply). | Boardrooms, private clinics, Restricted introductions on a call. | Restock is **trivial logistically**. Quote still applies (supply is not free), but access is not the bottleneck. |
+
+**Suggested Director ladder** (Quiet Floor / default cadence — band ¥ unchanged): Levels **1–2** Low; **3–5** Middle; **6–8** High; **9–10** High (Elite rare / Writ-covered). See `24` and `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
 
 **Downtime capacity (this book):**
 

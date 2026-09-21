@@ -117,7 +117,19 @@ Do not invent a shadow economy. Use the faces the setting already named:
 | **Nyx / Churn** | Water, Sinks edge | Contraband routes, barge access, ugly pay | The schedule of the flood is a weapon |
 | **Cinderhold / Greenline / Marrow** | Outer gate | Frontier work, ammo, the right to come back | Kestrel’s Clean Route wants the gate civilized |
 
-**Payouts** stay on the provisional bands in `08` (street / district / corp / black-ops). Heat and Trace Alert should skew the band up; a quiet job skews down. Lifestyle burn happens **after** payout (`26`). Do not pay character power in nuyen.
+## Victories, respite, and payday
+
+Quiet Floor / default Ghostwire cadence — **do not reprint full tables here**:
+
+| Topic | Open |
+|---|---|
+| Victories dual use · XP thresholds (5 / 8) · no auto-level on job-complete · short stop vs full respite | RAW `24-advancement.md` |
+| Lifestyle upkeep only on full respite · LAZ tiers | RAW `26-lifestyle-downtime.md` |
+| Payday `U + G + ~25%` by level · L6+ half favor | RAW `08-kits-gear-wealth.md` |
+| Campaign worked example (G table, session math) | `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md` |
+
+**Payouts** follow the integrated level-band table in `08` (not only the old street/district/corp labels). Lifestyle burn happens **after** payday on a **full respite** (`26`). Do not pay character power in nuyen.
+
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "role": "knowledge",
-  "built": "2026-09-20",
+  "built": "2026-09-21",
   "generator": "tools/build-voidmark-index.mjs",
   "sources": {
     "raw": [
@@ -63,7 +63,9 @@
       "docs/setting/wired-flats-gazetteer.md",
       "docs/manuscript/03-directors/27-running-ossian-reach.md",
       "docs/manuscript/04-back/28-glossary-slang.md",
-      "docs/rulebook/MEGACORP-TICKERS.md"
+      "docs/rulebook/MEGACORP-TICKERS.md",
+      "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md"
     ],
     "skipped": [
       "00-INDEX.md",
@@ -73,7 +75,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1408,
+  "chunkCount": 1425,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -109,7 +111,7 @@
       "chapter": "How to Play",
       "heading": "Session shape",
       "kind": "rules",
-      "text": "A typical Ghostwire session moves through the same arc as a job:\n\n1. **Cold open or hook** — a fixer calls, a contact tips a score, a problem walks into the crew’s safehouse.\n2. **Legwork** — gather intel, buy gear, negotiate pay, scout the site, prep the Wire overlay.\n3. **The run** — execute: infiltrate, fight, chase, jack in, extract.\n4. **Aftermath / downtime** — get paid, spend ¥, heal, install chrome, craft mods, burn lifestyle, set up the next job.\n\nSessions can start mid-legwork or mid-run. Some nights are pure downtime. The three **modes** below tell you which Ghostwire systems are in play; they are not a rigid clock.\n\n**One job can span several sessions.** Victories, experience, and leveling live in `24`. ¥ payouts and lifestyle burn live in `08` and `26`.\n\n---"
+      "text": "A typical Ghostwire session moves through the same arc as a job:\n\n1. **Cold open or hook** — a fixer calls, a contact tips a score, a problem walks into the crew’s safehouse.\n2. **Legwork** — gather intel, buy gear, negotiate pay, scout the site, prep the Wire overlay.\n3. **The run** — execute: infiltrate, fight, chase, jack in, extract.\n4. **Aftermath / downtime** — at **full respite** (job end): get paid, bank Victories→XP / maybe level (`24`), spend ¥, heal, install chrome, craft mods, burn Lifestyle (`26`), set up the next job. Mid-job nights are **short stops** (Recoveries only).\n\nSessions can start mid-legwork or mid-run. Some nights are pure downtime. The three **modes** below tell you which Ghostwire systems are in play; they are not a rigid clock.\n\n**One job can span several sessions.** Victories, the Victory→XP bank, thresholds, and full respite vs short stop live in `24` (Ghostwire default cadence — not auto-level on job-complete). ¥ payday and Lifestyle burn live in `08` and `26`.\n\n---"
     },
     {
       "id": "01-how-to-play#three-modes-of-play#5",
@@ -1516,13 +1518,13 @@
       "text": "Gear, chrome, and some services are gated by **Availability**, not a Ghostwire tier ladder. Match Kits chapter language: progress by Availability + echelon-appropriate lists.\n\n| Band | Feel (brief) |\n|---|---|\n| **Street** | Common, gray-market, alley vendors; easy for runners |\n| **Professional** | Licensed shops, corp surplus, competent fixers |\n| **Restricted** | Permit / underworld gate; heat if careless |\n| **Military** | Milspec issue; black clinics and serious fixers |\n| **Prototype** | Unique, corp R&D, or one-off; campaign prize or ruinous buy |\n\nSoft/bioware chrome and military packages skew high-Availability by design."
     },
     {
-      "id": "08-kits-gear-wealth#run-payouts-provisional-director-guidance#18",
+      "id": "08-kits-gear-wealth#run-payouts-director-guidance-integrated-u-g-buffer#18",
       "file": "08-kits-gear-wealth.md",
       "source": "docs/raw/08-kits-gear-wealth.md",
       "chapter": "Kits, Gear & Wealth (¥)",
-      "heading": "Run payouts (provisional Director guidance)",
+      "heading": "Run payouts (Director guidance — integrated U+G+buffer)",
       "kind": "rules",
-      "text": "Provisional. Per-run (or per-job) liquid for a typical crew share before lifestyle burn:\n\n| Job scale | Provisional ¥ (crew share band) |\n|---|---|\n| Street job / gang errand | ¥500–2,000 |\n| Mid run / district score | ¥2,000–8,000 |\n| Corp run / serious extraction | ¥5,000–20,000 |\n| Black-ops / milspec / prototype prize | ¥20,000+ or unique gear instead |\n\nDirectors may pay partly in gear, chrome credits, or favors. Payouts should fund chrome/gear progression without trivializing Body Integrity or Availability gates."
+      "text": "Payday is **per hero share, per completed job**, and lands at **job complete / full respite** (`24`, `26`). Mid-job **short stops** do not pay.\n\n```\nPayout ≈ U + G + ~25%(U + G)\n```\n\n- **U** — Lifestyle upkeep for the band the hero claims this full respite (`26`). Suggested ladder: L1–2 Low (¥400); L3–5 Middle (¥1,200); L6–8 High (¥3,500); L9–10 High (Elite rare ¥9,000 / Writ-covered).\n- **G** — Gear allotment by level band (table). Funds chrome/gear progression without trivializing Body Integrity or Availability.\n- **~25%** — Buffer for bribes, ammo, Medic restock, Trace scrub, fixer skim.\n\n| Hero levels | Suggested U | **G** | ≈ Hero share `1.25×(U+G)` |\n|---|---|---|---|\n| **1–2** | ¥400 | **¥1,600** | **¥2,500** |\n| **3–5** | ¥1,200 | **¥3,600** | **¥6,000** |\n| **6–8** | ¥3,500 | **¥8,500** | **¥15,000** |\n| **9–10** | ¥3,500 (Elite rare ¥9,000) | **¥16,500** (Elite **¥15,000**) | **¥25,000** (Elite **¥30,000**) |\n\n**L6+:** the Director may pay **half ¥ / half favor** (Restricted window, Writ cover, extract credit, named introduction) instead of full liquid.\n\nSkew up for heat / Trace Alert / milspec prize; skew down for quiet cut-outs. Directors may still substitute unique gear for part of the share. Do not pay characteristics, Kits, or class features in ¥.\n\n**Campaign worked example** (same numbers): `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.\n\n*Legacy job-scale bands (street ¥500–2,000 / district ¥2,000–8,000 / corp ¥5,000–20,000 / black-ops ¥20,000+) remain useful as a heat dial on top of the level-band table — they are not a second economy.*"
     },
     {
       "id": "08-kits-gear-wealth#kits-economy-bridge#19",
@@ -1558,7 +1560,7 @@
       "chapter": "Kits, Gear & Wealth (¥)",
       "heading": "Lifestyle burn",
       "kind": "rules",
-      "text": "Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`. Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider."
+      "text": "At each **full respite** (not a mid-job short stop), heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`. Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider."
     },
     {
       "id": "08-kits-gear-wealth#part-3-gear#23",
@@ -6247,7 +6249,7 @@
       "chapter": "Advancement and Echelons",
       "heading": "What this chapter is for",
       "kind": "rules",
-      "text": "Runners get better by taking **Victories**, earning experience, and **leveling**. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.\n\nThis chapter tells the table **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.\n\n---"
+      "text": "Runners get better by taking **Victories**, earning experience, and **leveling**. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.\n\nThis chapter tells the table **when** to bank Victories into XP and **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.\n\n---"
     },
     {
       "id": "24-advancement#levels-and-echelons#3",
@@ -6265,19 +6267,37 @@
       "chapter": "Advancement and Echelons",
       "heading": "When the table levels",
       "kind": "rules",
-      "text": "**Victory (this book).** When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains **1 Victory**. Class features that “gain resource equal to your Victories” read the number you currently have.\n\n**When you level (default).** After a **completed job** (legwork + run + getaway) that earned at least one Victory, each runner **gains one level** at the respite between runs — the same breath where the crew takes payout (`08`) and pays Lifestyle (`26`). Short no-risk jobs do not level. A job that spans many sessions with more than one climax may grant a level at a mid-job respite instead of waiting.\n\n**Optional XP box.** If the table wants a numeric track (or you are on Foundry, where the stock hero sheet already has XP and Victory fields), after each respite add your Victories to **XP** (**1 Victory = 1 XP**) and reset Victories to **0**. The Director still calls the level using the default above — Ghostwire does not add a second XP ladder on top of the sheet. Do not invent a third track.\n\nThe runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current.\n\n**Allowed exceptions (Director call):**"
+      "text": "**Victory (this book).** When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains **+1 Victory**. Class features that “gain resource equal to your Victories” (e.g. Operator **Adrenaline**) read the **live count** you currently have."
     },
     {
-      "id": "24-advancement#when-the-table-levels#5",
+      "id": "24-advancement#default-victory-xp-at-full-respite#5",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
-      "heading": "When the table levels",
+      "heading": "Default: Victory → XP at full respite",
       "kind": "rules",
-      "text": "- A **mid-job** level if the XP (or milestone) already crossed the line and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit.\n- A **held** level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean respite.\n\n**Victories are not nuyen.** A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payout band (`08`), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.\n\n**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty.\n\n---"
+      "text": "Ghostwire’s default Director cadence is a **Victory→XP bank**, not auto-level on job-complete:\n\n1. Award Victories when beats matter (above).\n2. Keep the live Victory count for heroic resources during the job.\n3. At **full respite** (normally when the **job ends** — see **Full respite vs short stop** below): bank Victories into **XP** at **1 Victory = 1 XP**, then reset Victories to **0**.\n4. When XP ≥ the threshold for the next level, **level**, subtract the threshold, and **keep any remainder**. Repeat if somehow over a double threshold.\n\n**Thresholds (Ghostwire default Director cadence):**\n\n| Band | XP per level | Suggested sessions (at ~2.5 Vic/session) |\n|---|---|---|\n| Levels **1→5** | **5 XP** | ~2 sessions |\n| Levels **5→10** | **8 XP** | ~3 sessions |\n\n**Dial note:** use **6/9** for a slower table, **4/6** for a faster one. Do not invent a second XP ladder on top of Victory→XP.\n\n**Optional fast-table alternate:** the Director may treat a **completed job** (legwork + run + getaway that earned at least one Victory) as **+1 level** at the full respite instead of using thresholds — useful for one-shots and short arcs. Short no-risk jobs still do not level."
     },
     {
-      "id": "24-advancement#what-the-classes-gain#6",
+      "id": "24-advancement#full-respite-vs-short-stop#6",
+      "file": "24-advancement.md",
+      "source": "docs/raw/24-advancement.md",
+      "chapter": "Advancement and Echelons",
+      "heading": "Full respite vs short stop",
+      "kind": "rules",
+      "text": "| | **Full respite** | **Short stop** |\n|---|---|---|\n| When | Default when the **job ends**; also real downtime (hospital, travel layover, week off) | Mid-job night between sessions |\n| Recoveries / Recovery pool | Yes (`04`) | Yes |\n| Bank Victories → XP; reset Victories | **Yes** | **No** |\n| Pay Lifestyle (`26`) | **Yes** | **No** |\n| Payday ¥ (`08`) | **Yes** (job complete) | **No** |\n| Projects / Kit swap | Yes | Usually no |\n\nA short stop is a breath so the table can stop cold without pretending the job is over. Extra full respites need fiction that is actually downtime — not every safehouse nap.\n\nThe runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current (usually in the same full-respite breath as payout and Lifestyle).\n\n**Allowed exceptions (Director call):**\n\n- A **mid-job** level if XP already crossed the threshold and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit. Mid-job level does **not** by itself pay Lifestyle or reset Victories unless you are also taking a full respite.\n- A **held** level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean full respite."
+    },
+    {
+      "id": "24-advancement#full-respite-vs-short-stop#7",
+      "file": "24-advancement.md",
+      "source": "docs/raw/24-advancement.md",
+      "chapter": "Advancement and Echelons",
+      "heading": "Full respite vs short stop",
+      "kind": "rules",
+      "text": "**Victories are not nuyen.** A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payday (`08`), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.\n\n**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty. Between sessions mid-job, use a **short stop**; bank XP only at **full respite**.\n\n**Campaign worked example:** Quiet Floor thresholds, G, and session math — `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md` (implements this chapter’s default)."
+    },
+    {
+      "id": "24-advancement#what-the-classes-gain#8",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
@@ -6286,16 +6306,16 @@
       "text": "Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.\n\n| Level | Common gains |\n|---|---|\n| **1** | Subclass; signature abilities; first heroic abilities (lowest cost bands); heroic resource; Kit (or class equivalent) |\n| **2** | Perk; subclass feature |\n| **3** | A **7-cost** heroic ability |\n| **4** | Characteristic increase; skill; perk |\n| **5** | A **9-cost** heroic ability |\n| **6** | Perk; subclass feature |\n| **7** | Characteristic increase; skill |\n| **8** | An **11-cost** heroic ability; perk |\n| **9** | Subclass feature or capstone ability |\n| **10** | Characteristic increase; skill; perk; **epic resource** or capstone |\n\nHeroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resource). A cost band is not a tier. A 7-cost ability is a **level-3** unlock, not an “Echelon 2 power.”"
     },
     {
-      "id": "24-advancement#applying-a-level-at-the-table#7",
+      "id": "24-advancement#applying-a-level-at-the-table#9",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
       "heading": "Applying a level at the table",
       "kind": "rules",
-      "text": "1. **Confirm the level** with the Victory / completed-job rule above. Ghostwire does not substitute street rumor for that math.\n2. **Open the class chapter** (`12`–`20`). Take only what that level prints — no “I would have had this if I had picked the other subclass.”\n3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.\n4. **Spend the shared picks** this level grants: perk (`11`), skill (Ghostwire list in `02`), characteristic increase (the five Ghostwire names in `02`).\n5. **Re-check Kit and gear.** Kit doctrine is free and already owned; qualifying gear must still be **owned** (`08`). A new echelon can raise Kit Stamina and armor-as-Stamina **without** a shopping trip. It does **not** auto-install mods or chrome.\n6. **Do not touch** Body Integrity, liquid ¥, Node Rating, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.\n\n**Characteristic increases** use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). When a level grants a characteristic increase, raise **one** characteristic by **1**. No characteristic may go above **5** from these increases. People traits and class features that print a raise still apply if they say so. ¥, chrome, and Lifestyle never buy the point (`02` firewall)."
+      "text": "1. **Confirm the level** with the Victory→XP threshold rule above (or the optional completed-job alternate). Ghostwire does not substitute street rumor for that math.\n2. **Open the class chapter** (`12`–`20`). Take only what that level prints — no “I would have had this if I had picked the other subclass.”\n3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.\n4. **Spend the shared picks** this level grants: perk (`11`), skill (Ghostwire list in `02`), characteristic increase (the five Ghostwire names in `02`).\n5. **Re-check Kit and gear.** Kit doctrine is free and already owned; qualifying gear must still be **owned** (`08`). A new echelon can raise Kit Stamina and armor-as-Stamina **without** a shopping trip. It does **not** auto-install mods or chrome.\n6. **Do not touch** Body Integrity, liquid ¥, Node Rating, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.\n\n**Characteristic increases** use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). When a level grants a characteristic increase, raise **one** characteristic by **1**. No characteristic may go above **5** from these increases. People traits and class features that print a raise still apply if they say so. ¥, chrome, and Lifestyle never buy the point (`02` firewall)."
     },
     {
-      "id": "24-advancement#applying-a-level-at-the-table#8",
+      "id": "24-advancement#applying-a-level-at-the-table#10",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
@@ -6304,7 +6324,7 @@
       "text": "**Skills** granted by level follow the same no-duplicate rule as Background / Profession (`06`): if you already have the skill, choose another from the same Ghostwire group, then any group.\n\n**Perks** are tricks of the trade (`11`). A level that says “perk” is a perk pick, not a free mod and not a Kit.\n\n---"
     },
     {
-      "id": "24-advancement#echelon-as-street-weather#9",
+      "id": "24-advancement#echelon-as-street-weather#11",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
@@ -6313,7 +6333,7 @@
       "text": "Echelon is how hard the **world’s tools** are allowed to be, not a second character level. Use it when you are dressing opposition (`25`), quoting Restricted+ gear (`08`), or gating Invent a Mod (`10`).\n\n| Echelon | What the Reach feels like | Opposition / Wire (guidance) |\n|---|---|---|\n| **1** (Lv 1–3) | Flats and Grid. Street crews, cheap chrome, Rating 1–2 hosts | Speed bumps and first setpieces. Cassavir’s board |\n| **2** (Lv 4–6) | Spires start answering. Veteran rivals, Restricted windows | Corporate response, Rating 2–4 nodes |\n| **3** (Lv 7–9) | Black-ops weather. Military Availability is on the table | Apex crews, Rating 3–5 nodes |\n| **4** (Lv 10) | Named solos, Halo doors, Prototype heat | Level-boss fights, Rating 5 cores |\n\nThis table does **not** replace Ch 26’s encounter budget. It tells the Director which **dress** to reach for so a level-2 Flats war and a level-8 Crown extraction do not use the same Actors.\n\n---"
     },
     {
-      "id": "24-advancement#what-scales-with-echelon#10",
+      "id": "24-advancement#what-scales-with-echelon#12",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
@@ -6322,34 +6342,43 @@
       "text": "| System | How echelon applies |\n|---|---|\n| **Kit Stamina** | Scales by echelon (`08`) |\n| **Armor Stamina** | Uses the wearer’s echelon (`08`) |\n| **Gear grade** | Echelon 1–4 plus Availability sets price and mod slots (`08`) |\n| **Invent a Mod** | A new mod’s power can’t exceed the inventor’s echelon (`10`) |\n| **Class resources** | Some caps and bonuses scale by echelon; see each class |\n\nWhen a runner **enters a new echelon** (levels 4, 7, and 10), glance at Kit Stamina, armor-as-Stamina, and whether last month’s Street-band host still matches the jobs you are throwing. Upgrade gear with **¥ and Availability**, not with the level-up itself.\n\n---"
     },
     {
-      "id": "24-advancement#what-doesnt-scale-with-level#11",
+      "id": "24-advancement#what-doesnt-scale-with-level#13",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
       "heading": "What doesn’t scale with level",
       "kind": "rules",
-      "text": "- **Body Integrity** starts at 20 and never grows by leveling (`09`).\n- **¥** comes from runs, not levels (`08`).\n- **Ancestry traits** are bought once at creation (`05`).\n- **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).\n- **Lifestyle band** is paid each respite (`26`). A 10th-level runner who lives Squatter still lives Squatter.\n- **Connection state** (Disconnected / Linked / Overlay / Jacked In) is a choice per scene, not a reward (`21`).\n- **Summon Rank 2+ strike ladders** stay deferred where Veil §C3 says they are deferred (`22`). Leveling a caster does not invent those numbers.\n\nIf a downtime offer, chrome catalog, or fixer would sell a characteristic, a skill, a class feature, or a heroic resource, refuse it. That purchase is off-doctrine (`02`).\n\n---"
+      "text": "- **Body Integrity** starts at 20 and never grows by leveling (`09`).\n- **¥** comes from runs, not levels (`08`).\n- **Ancestry traits** are bought once at creation (`05`).\n- **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).\n- **Lifestyle band** is paid at each **full respite** (`26`). A 10th-level runner who lives Squatter still lives Squatter.\n- **Connection state** (Disconnected / Linked / Overlay / Jacked In) is a choice per scene, not a reward (`21`).\n- **Summon Rank 2+ strike ladders** stay deferred where Veil §C3 says they are deferred (`22`). Leveling a caster does not invent those numbers.\n\nIf a downtime offer, chrome catalog, or fixer would sell a characteristic, a skill, a class feature, or a heroic resource, refuse it. That purchase is off-doctrine (`02`).\n\n---"
     },
     {
-      "id": "24-advancement#paying-and-living-after-a-level#12",
+      "id": "24-advancement#paying-and-living-after-a-level#14",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
       "heading": "Paying and living after a level",
       "kind": "rules",
-      "text": "Leveling does not skip the ¥ loop:\n\n1. Finish the run; take heat and injuries.  \n2. Take payout (`08`).  \n3. Apply the level (this chapter).  \n4. Pay Lifestyle for the band you claim (`26`).  \n5. Shop, §Craft, chrome surgery, rituals — leftover ¥ only.\n\nA new 9-cost ability does not make Elite upkeep free. If the table’s payouts never threaten Lifestyle, raise heat or cut the band — do not grow Body Integrity or hand out Prototype as a party favor.\n\n---"
+      "text": "Leveling does not skip the ¥ loop. On a **full respite** (job end):\n\n1. Finish the run; take heat and injuries.\n2. Take **payday** (`08` — `U + G + ~25%` by level band; L6+ may be half favor).\n3. **Bank Victories → XP**, reset Victories, and **apply any level** this chapter grants.\n4. **Pay Lifestyle** for the band you claim (`26`). Suggested ladder: L1–2 Low; L3–5 Middle; L6–8 High; L9–10 High (Elite rare / Writ-covered). Band ¥ unchanged (`26`).\n5. Shop, §Craft, chrome surgery, rituals — leftover ¥ only.\n\nA **short stop** mid-job skips steps 2–4’s bank/Lifestyle/payday — Recoveries only.\n\nA new 9-cost ability does not make Elite upkeep free. If the table’s payouts never threaten Lifestyle, raise heat or cut the band — do not grow Body Integrity or hand out Prototype as a party favor.\n\n**Cross-links:** Kits/¥ `08` · Lifestyle / short stop `26` · Quiet Floor worked example `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`."
     },
     {
-      "id": "24-advancement#converting-older-ghostwire-material#13",
+      "id": "24-advancement#converting-older-ghostwire-material#15",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
       "heading": "Converting older Ghostwire material",
       "kind": "rules",
-      "text": "Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:\n\n| Old tier (hero or foe) | Level |\n|---|---|\n| T5 | 1 |\n| T4 | 3 |\n| T3 | 5 |\n| T2 | 7 |\n| T1 | 9 |\n\n| Old gear tier | Echelon | Availability |\n|---|---|---|\n| T5 | 1 | Street |\n| T4 | 1 | Professional |\n| T3 | 2 | Restricted |\n| T2 | 3 | Military |\n| T1 | 4 | Prototype |\n\n| Old node tier | Node Rating |\n|---|---|\n| T5 | 1 |\n| T4 | 2 |\n| T3 | 3 |\n| T2 | 4 |\n| T1 | 5 |\n\nOlder material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (`03`).\n\nHandbook and Flats gazetteer lines that still say “E1–E4” on a **host** mean ICE posture / Node Rating, **not** the runner’s echelon (`wired-flats` How to Read). Keep that distinction at the table.\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** is the stock hero-sheet field — Ghostwire does not add a second XP tracker. Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation.\n\n---"
+      "text": "Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:\n\n| Old tier (hero or foe) | Level |\n|---|---|\n| T5 | 1 |\n| T4 | 3 |\n| T3 | 5 |\n| T2 | 7 |\n| T1 | 9 |\n\n| Old gear tier | Echelon | Availability |\n|---|---|---|\n| T5 | 1 | Street |\n| T4 | 1 | Professional |\n| T3 | 2 | Restricted |\n| T2 | 3 | Military |\n| T1 | 4 | Prototype |\n\n| Old node tier | Node Rating |\n|---|---|\n| T5 | 1 |\n| T4 | 2 |\n| T3 | 3 |\n| T2 | 4 |\n| T1 | 5 |\n\nOlder material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (`03`).\n\nHandbook and Flats gazetteer lines that still say “E1–E4” on a **host** mean ICE posture / Node Rating, **not** the runner’s echelon (`wired-flats` How to Read). Keep that distinction at the table."
     },
     {
-      "id": "24-advancement#what-this-chapter-is-not#14",
+      "id": "24-advancement#converting-older-ghostwire-material#16",
+      "file": "24-advancement.md",
+      "source": "docs/raw/24-advancement.md",
+      "chapter": "Advancement and Echelons",
+      "heading": "Converting older Ghostwire material",
+      "kind": "rules",
+      "text": "> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** and **Victory** / **XP** fields are the stock hero-sheet fields — Ghostwire’s default is **Victory→XP at full respite** with the thresholds in this chapter (not auto-level on job-complete). Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation — bank XP and pay Lifestyle by hand at full respite.\n\n---"
+    },
+    {
+      "id": "24-advancement#what-this-chapter-is-not#17",
       "file": "24-advancement.md",
       "source": "docs/raw/24-advancement.md",
       "chapter": "Advancement and Echelons",
@@ -6490,16 +6519,25 @@
       "chapter": "Opposition (Director)",
       "heading": "Scaling, payouts, and tools",
       "kind": "rules",
-      "text": "**Paying the crew.** Use the provisional run payouts in `08-kits-gear-wealth.md`. A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down.\n\n**Prep tools (optional):**\n\n- **Run Generator (B39)** — dials level, stratum, heat, and Wired intensity; opposition resolves to bestiary Actors.\n- **Reach Events (B48)** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security, Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables from B48) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** (B39) to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter.\n\n---"
+      "text": "**Paying the crew.** Use the integrated payday table in `08-kits-gear-wealth.md` (`U + G + ~25%` by level band; L6+ half favor OK). A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down. Payday lands at **full respite** / job complete (`24`, `26`).\n\n**Prep tools (optional):**\n\n- **Run Generator (B39)** — dials level, stratum, heat, and Wired intensity; opposition resolves to bestiary Actors.\n- **Reach Events (B48)** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.\n\n> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security (including **Aequitas Mandate** and **Lazarus Extract**), Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables from B48) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** (B39) to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter."
     },
     {
-      "id": "25-opposition#what-not-to-do#16",
+      "id": "25-opposition#aeq-patrols-and-laz-extract-foundry-pack#16",
+      "file": "25-opposition.md",
+      "source": "docs/raw/25-opposition.md",
+      "chapter": "Opposition (Director)",
+      "heading": "AEQ patrols and LAZ extract (Foundry pack)",
+      "kind": "rules",
+      "text": "**Aequitas Mandate (AEQ)** and **Lazarus Extract (LAZ)** are corp-line opposition in the Bestiary — Council-mandate patrols and combat-medic extract teams. Both hold seats on the **Twelve Conglomerates** (chairs 11 and 12); the tickers double as Director opposition filters. Full profiles live in Ghostwire Lore → **Twelve Conglomerates** (`docs/rulebook/MEGACORP-TICKERS.md`).\n\n| Actor | Band | Spine (math) | Kit |\n|---|---|---|---|\n| Mandate Trooper | L1 minion | Corp Security Officer | Sidearm + baton, zip-cuffs, HUD/radio, **Wire Kit** |\n| Mandate Sergeant | L2 horde support | Ironclad Subcommander | Stronger sidearm, Hold the Line, **Wire Kit** |\n| Extract Medic | L1 platoon support | Street Doc | Trauma bag, Stabilize / patch / stim, light stunner, **Wire Kit** |\n| Extract Chief Medic | L2 elite support | Rival Commander envelope + Street Doc med kit | Same med math, more Stamina, Extract Lead, Lazarus Trauma Package, **Wire Kit** |\n\nAll four start **Disconnected**. Wire Kit is the Connect interface (same as pack drones / vehicles). Token Has Vision on. Director notes: `docs/directors/conglomerate-npcs.md`.\n\n---"
+    },
+    {
+      "id": "25-opposition#what-not-to-do#17",
       "file": "25-opposition.md",
       "source": "docs/raw/25-opposition.md",
       "chapter": "Opposition (Director)",
       "heading": "What not to do",
       "kind": "rules",
-      "text": "- Do not print a full monster manual in RAW or the manuscript.\n- Do not paste or reconstruct substantial third-party bestiary fiction.\n- Do not invent a second Malice track for the Wire — Trace Alert feeds the existing pool.\n- Do not treat every random Reach Event as a combat encounter.\n- Do not ignore escape and objective clocks in favor of total wipe fights every time.\n\nCross-links: combat loop `04`, Wire `21`, advancement / old tiers `24`, lifestyle aftercare `26`, bestiary doctrine master (non-print) `docs/masters/GHOSTWIRE_BESTIARY.md`."
+      "text": "- Do not print a full monster manual in RAW or the manuscript.\n- Do not paste or reconstruct substantial third-party bestiary fiction.\n- Do not invent a second Malice track for the Wire — Trace Alert feeds the existing pool.\n- Do not treat every random Reach Event as a combat encounter.\n- Do not ignore escape and objective clocks in favor of total wipe fights every time.\n\nCross-links: combat loop `04`, Wire `21`, advancement / old tiers `24`, lifestyle aftercare `26`, bestiary doctrine master (non-print) `docs/masters/GHOSTWIRE_BESTIARY.md`, seated Ten `docs/rulebook/MEGACORP-TICKERS.md`, AEQ/LAZ Director note `docs/directors/conglomerate-npcs.md`."
     },
     {
       "id": "26-lifestyle-downtime#lifestyle-downtime#1",
@@ -6517,16 +6555,16 @@
       "chapter": "Lifestyle & Downtime",
       "heading": "What Lifestyle is",
       "kind": "rules",
-      "text": "**Lifestyle** is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys **living standard**: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.\n\nPay Lifestyle at each **respite between runs** (or when the Director says a downtime block ends). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.\n\nIf you **cannot or will not pay**, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.\n\n**Firewall reminder** (`08`): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.\n\n---"
+      "text": "**Lifestyle** is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys **living standard**: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.\n\nPay Lifestyle at each **full respite** — normally when the job ends (or when the Director says a real downtime block ends). Mid-job nights are short stops (below). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.\n\nIf you **cannot or will not pay**, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.\n\n**Firewall reminder** (`08`): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes."
     },
     {
-      "id": "26-lifestyle-downtime#what-lifestyle-is#3",
+      "id": "26-lifestyle-downtime#full-respite-vs-short-stop#3",
       "file": "26-lifestyle-downtime.md",
       "source": "docs/raw/26-lifestyle-downtime.md",
       "chapter": "Lifestyle & Downtime",
-      "heading": "What Lifestyle is",
+      "heading": "Full respite vs short stop",
       "kind": "rules",
-      "text": "> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. **Lazarus Extract (LAZ)** contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider."
+      "text": "**Lifestyle upkeep is paid only on a full respite** — not on every night the crew sleeps mid-job.\n\n| | **Full respite** | **Short stop** |\n|---|---|---|\n| When | Default when the **job ends**; also real downtime (hospital, travel layover, week off) | Mid-job between sessions |\n| Pay Lifestyle / LAZ band | **Yes** | **No** |\n| Bank Victories → XP (`24`) | **Yes** | **No** |\n| Payday ¥ (`08`) | **Yes** | **No** |\n| Recoveries | Yes | Yes |\n\nMid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not reset Victories, do not treat the night as payday. Advancement and the Victory→XP bank live in `24`. Campaign worked example: `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.\n\n---\n\n> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. **Lazarus Extract (LAZ)** contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider."
     },
     {
       "id": "26-lifestyle-downtime#lifestyle-bands-upkeep#4",
@@ -6535,7 +6573,7 @@
       "chapter": "Lifestyle & Downtime",
       "heading": "Lifestyle bands (upkeep)",
       "kind": "rules",
-      "text": "**Upkeep ¥** are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in `04`. Do not invent a second Recovery pool.\n\n**Respite.** A **respite** is the downtime breath between runs — or whenever the Director says a downtime block ends. The crew is off the clock long enough to sleep, pay Lifestyle, spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round and not a five-minute alley patch."
+      "text": "**Upkeep ¥** are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in `04`. Do not invent a second Recovery pool.\n\n**Full respite.** A **full respite** is the downtime breath when a job ends — or whenever the Director says real downtime starts (hospital, layover, week off). The crew is off the clock long enough to sleep, **pay Lifestyle**, bank Victories→XP (`24`), take payday (`08`), spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round, not a five-minute alley patch, and not a mid-job **short stop**."
     },
     {
       "id": "26-lifestyle-downtime#lifestyle-bands-upkeep#5",
@@ -6562,7 +6600,7 @@
       "chapter": "Lifestyle & Downtime",
       "heading": "Lifestyle bands (upkeep)",
       "kind": "rules",
-      "text": "**Downtime capacity (this book):**\n\n| Band | Project slots per respite |\n|---|---|\n| **Squatter** | **1** |\n| **Low** | **1** (+1 if you have a hireling this respite) |\n| **Middle** | **2** |\n| **High** | **3** |\n| **Elite** | **4** |\n\nA **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.\n\n**Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.\n\n**Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.\n\n---"
+      "text": "**Suggested Director ladder** (Quiet Floor / default cadence — band ¥ unchanged): Levels **1–2** Low; **3–5** Middle; **6–8** High; **9–10** High (Elite rare / Writ-covered). See `24` and `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.\n\n**Downtime capacity (this book):**\n\n| Band | Project slots per respite |\n|---|---|\n| **Squatter** | **1** |\n| **Low** | **1** (+1 if you have a hireling this respite) |\n| **Middle** | **2** |\n| **High** | **3** |\n| **Elite** | **4** |\n\nA **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.\n\n**Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.\n\n**Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.\n\n---"
     },
     {
       "id": "26-lifestyle-downtime#hive-strata-lifestyle-bands#8",
@@ -12556,10 +12594,19 @@
       "chapter": "Chapter 27 — Running Ossian Reach",
       "heading": "The job board (who pays)",
       "kind": "setting",
-      "text": "Do not invent a shadow economy. Use the faces the setting already named:\n\n| Patron type | Typical meet | Pays in | Watch |\n|---|---|---|---|\n| **Mama Cassavir** (Switchboard) | Upper Flats, dead transit exchange | Introductions, clean/dirty cut-outs, grey routes | She sells connections, not people. Burn her trust and you get disconnected |\n| **Street gang / level-boss** | Their turf | Cash, passage, a war if you cross the lean | Ninth Ward Kings, Rust Saints, Glass Vipers, Metermen, Skinjobs — L3 sketches + Handbook |\n| **Corp cut-out** | Grid or Spire lobby, or a deniable Flats drop | ¥ on the high band, scrip, Restricted windows | You are deniable; Trace Alert and badges are the receipt |\n| **Nyx / Churn** | Water, Sinks edge | Contraband routes, barge access, ugly pay | The schedule of the flood is a weapon |\n| **Cinderhold / Greenline / Marrow** | Outer gate | Frontier work, ammo, the right to come back | Kestrel’s Clean Route wants the gate civilized |\n\n**Payouts** stay on the provisional bands in `08` (street / district / corp / black-ops). Heat and Trace Alert should skew the band up; a quiet job skews down. Lifestyle burn happens **after** payout (`26`). Do not pay character power in nuyen.\n\n---"
+      "text": "Do not invent a shadow economy. Use the faces the setting already named:\n\n| Patron type | Typical meet | Pays in | Watch |\n|---|---|---|---|\n| **Mama Cassavir** (Switchboard) | Upper Flats, dead transit exchange | Introductions, clean/dirty cut-outs, grey routes | She sells connections, not people. Burn her trust and you get disconnected |\n| **Street gang / level-boss** | Their turf | Cash, passage, a war if you cross the lean | Ninth Ward Kings, Rust Saints, Glass Vipers, Metermen, Skinjobs — L3 sketches + Handbook |\n| **Corp cut-out** | Grid or Spire lobby, or a deniable Flats drop | ¥ on the high band, scrip, Restricted windows | You are deniable; Trace Alert and badges are the receipt |\n| **Nyx / Churn** | Water, Sinks edge | Contraband routes, barge access, ugly pay | The schedule of the flood is a weapon |\n| **Cinderhold / Greenline / Marrow** | Outer gate | Frontier work, ammo, the right to come back | Kestrel’s Clean Route wants the gate civilized |"
     },
     {
-      "id": "27-running-ossian-reach#opposition-events-and-when-to-leave#13",
+      "id": "27-running-ossian-reach#victories-respite-and-payday#13",
+      "file": "27-running-ossian-reach.md",
+      "source": "docs/manuscript/03-directors/27-running-ossian-reach.md",
+      "chapter": "Chapter 27 — Running Ossian Reach",
+      "heading": "Victories, respite, and payday",
+      "kind": "setting",
+      "text": "Quiet Floor / default Ghostwire cadence — **do not reprint full tables here**:\n\n| Topic | Open |\n|---|---|\n| Victories dual use · XP thresholds (5 / 8) · no auto-level on job-complete · short stop vs full respite | RAW `24-advancement.md` |\n| Lifestyle upkeep only on full respite · LAZ tiers | RAW `26-lifestyle-downtime.md` |\n| Payday `U + G + ~25%` by level · L6+ half favor | RAW `08-kits-gear-wealth.md` |\n| Campaign worked example (G table, session math) | `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md` |\n\n**Payouts** follow the integrated level-band table in `08` (not only the old street/district/corp labels). Lifestyle burn happens **after** payday on a **full respite** (`26`). Do not pay character power in nuyen.\n\n---"
+    },
+    {
+      "id": "27-running-ossian-reach#opposition-events-and-when-to-leave#14",
       "file": "27-running-ossian-reach.md",
       "source": "docs/manuscript/03-directors/27-running-ossian-reach.md",
       "chapter": "Chapter 27 — Running Ossian Reach",
@@ -12568,7 +12615,7 @@
       "text": "Build the fight in Ch 26: budget → threat shape → dress the spine → boards and clocks. Then:\n\n- Match opposition **level** to the crew’s echelon (`24`). Flats street crews are Echelon 1 weather; Crown response is not.\n- Convert leftover **T5–T1** Handbook language with the tables in `24` (foes, gear, nodes). Never say “tier” to players.\n- Draw a **Reach Event** when you want the city to breathe. Most rows are flavor or RP. Combat rows are rare on purpose.\n- **Escape is a win condition.** Extraction clocks belong on Reach jobs. The hive always has another squad if you linger for the last minion.\n\nNamed fixtures that punish lingering (Deadfall Nine / the Quiet Floor, a climbing dead-air seal, a flood siren) are **clocks**, not random encounters. If you put the Nine on the table, decide what “a little larger” means this session — one more quiet block, one more dead comm — and stop.\n\n---"
     },
     {
-      "id": "27-running-ossian-reach#downtime-has-an-address#14",
+      "id": "27-running-ossian-reach#downtime-has-an-address#15",
       "file": "27-running-ossian-reach.md",
       "source": "docs/manuscript/03-directors/27-running-ossian-reach.md",
       "chapter": "Chapter 27 — Running Ossian Reach",
@@ -12577,7 +12624,7 @@
       "text": "Lifestyle bands are the same vertical you just ran (`26`). A Flats crash is **Low** unless the fiction is a condemned nest (Squatter) or a hardened loft the crew is overpaying for. Paying Middle while living in the Flats is a **safehouse story**, not a math exploit — the Director can charge heat or a lean for a flat that looks too clean.\n\nMedic restock, §Craft, chrome surgery, and Ritual Workings resolve in their own chapters. This chapter only asks: **where** did they sleep, and who can find that door?\n\n---"
     },
     {
-      "id": "27-running-ossian-reach#first-three-nights-optional#15",
+      "id": "27-running-ossian-reach#first-three-nights-optional#16",
       "file": "27-running-ossian-reach.md",
       "source": "docs/manuscript/03-directors/27-running-ossian-reach.md",
       "chapter": "Chapter 27 — Running Ossian Reach",
@@ -12586,7 +12633,7 @@
       "text": "If the table has no campaign yet, do not write a novel. Run this skeleton:\n\n1. **Night one — Flats job.** Cassavir (or the generator) hands a district score on the Flats. One board primary. Pay street or district. Burn Low Lifestyle. Leave one unpaid lean.\n2. **Night two — climb or drop.** The same lean forces a Grid SIN-scan **or** a Warrens crossing. One checkpoint scene. One fight or one Wire scrape, not both unless the table is fast.\n3. **Night three — named fixture.** Touch one fixture that cannot be a random alley: Switchboard politics, a water-lane problem, Cinderhold’s gate, or a Quiet Floor leak. Escalate heat; do not resolve the Chair or the Incursion.\n\nAfter that, the crew has turf, a patron, and a reason to care which rung they sleep on. That is enough Reach to print.\n\n> Setting journals: **Ghostwire — Ossian Reach Handbook** (`reach-handbook`, players Observer) — district journals open with a **District Map** page (B72 labeled WebP). **Ghostwire — The Wired: Flats** (`wired-flats`) is the matrix gazetteer; do not treat its E1–E4 ICE posture as hero echelon. Living-city rolls: **Ghostwire Reach Events** (`encounters`, GM-only). Job seed: Token controls › **Run Generator** (Directors only) → optional Journal in **Ghostwire Runs**. Fights: **Ghostwire Bestiary** + stock combat tracker. Wire: **Wired Console** for Node Rating, Integrity, Trace Alert (`21`). District battle-map files live under `assets/maps/districts/` (clean + labeled); Scenes are not auto-created — drop a WebP onto a Scene when you need a play surface.\n\n---"
     },
     {
-      "id": "27-running-ossian-reach#what-not-to-do#16",
+      "id": "27-running-ossian-reach#what-not-to-do#17",
       "file": "27-running-ossian-reach.md",
       "source": "docs/manuscript/03-directors/27-running-ossian-reach.md",
       "chapter": "Chapter 27 — Running Ossian Reach",
@@ -12730,7 +12777,16 @@
       "text": "- First mention in a chapter: **Ticker** — Full Name (or Full Name (**Ticker**)).\n- Thereafter: ticker alone is fine when context is clear.\n- Sub-corps keep their names; parent ticker may prefix (e.g. FER Deepworks, AEQ Writ Inquest, LAZ White Door Flight).\n- Never invent a thirteenth seat without Michael. Kestrel Dynamics remains the seatless climber."
     },
     {
-      "id": "MEGACORP-TICKERS#locked-sales-lifestyle-rules#3",
+      "id": "MEGACORP-TICKERS#bestiary-faction-flags-director-filters#3",
+      "file": "MEGACORP-TICKERS.md",
+      "source": "docs/rulebook/MEGACORP-TICKERS.md",
+      "chapter": "Megacorp tickers (LOCKED)",
+      "heading": "Bestiary faction flags (Director filters)",
+      "kind": "setting",
+      "text": "Ghostwire Bestiary Actors carry `flags.draw-steel-ghostwire.faction` so Directors can filter opposition by corp line. These are **seated Twelve** tickers — AEQ and LAZ hold chairs 11 and 12, not separate off-Congress brands.\n\n| Ticker | Line | Domain (short) | Pack Actors (0.3.81) |\n|---|---|---|---|\n| **AEQ** | Aequitas Mandate | Council justice, investigation, security | Mandate Trooper, Mandate Sergeant |\n| **LAZ** | Lazarus Extract | Trauma rescue / hot extraction / medevac | Extract Medic, Extract Chief Medic |\n\nCross-link: Ghostwire Lore → **Twelve Conglomerates**. RAW / Director notes: `docs/raw/25-opposition.md`, `docs/directors/conglomerate-npcs.md`."
+    },
+    {
+      "id": "MEGACORP-TICKERS#locked-sales-lifestyle-rules#4",
       "file": "MEGACORP-TICKERS.md",
       "source": "docs/rulebook/MEGACORP-TICKERS.md",
       "chapter": "Megacorp tickers (LOCKED)",
@@ -12739,13 +12795,112 @@
       "text": "- **AEQ — Council-only.** Aequitas Mandate may sell security, investigation, and justice services **only to the Council**: the Corporate Congress, the Chair, or the pooled authority of the seated Conglomerates acting as a body. Forbidden clients: private parties, runners, gangs, fixers, and **any single mega acting alone**. A Chair-signed warrant or a Congress resolution is a client. An IRN-style private contract is not. Street slang: “the Mandate,” “AEQ seal,” “Council badge.”\n- **AEQ is not** Ironclad Martial (open-market PMC), not HALO’s Aureole Security (private HALO army), and not Sanctum Assurance / the Grey Ledger (surveillance, records, private law and intel). AEQ is the Council’s exclusive sword.\n- **LAZ — Lifestyle extract.** Paying a Lifestyle band’s upkeep (`docs/raw/26-lifestyle-downtime.md`) **includes** that band’s Lazarus contract tier. No separate ¥ line unless the Director adds a premium rider. Distinct from Caduceus Vitalis (clinics, pharma, chrome-flesh). Street slang: “Laz,” “white door,” “extract contract.”"
     },
     {
-      "id": "MEGACORP-TICKERS#brand-art-sor-0-3-54-0-3-79#4",
+      "id": "MEGACORP-TICKERS#brand-art-sor-0-3-54-0-3-79#5",
       "file": "MEGACORP-TICKERS.md",
       "source": "docs/rulebook/MEGACORP-TICKERS.md",
       "chapter": "Megacorp tickers (LOCKED)",
       "heading": "Brand art (SoR, 0.3.54 / 0.3.79)",
       "kind": "setting",
       "text": "Raster brand marks live at **`assets/brands/megacorps/brand-{ticker}.{png,webp}`** (PNG 1254² source + 1024² WebP). Short ticker filenames only. These are **raster concept** marks, not vector masters. Foundry lore journals (Ghostwire Lore → Twelve Conglomerates) use the WebP as cover/image.\n\n| Kind | Files |\n|---|---|\n| Brand | `brand-hal` … `brand-nyx` plus **`brand-aeq`** / **`brand-laz`** |\n| Wired Host skin | `node-host-hal` … `node-host-nyx` plus **`node-host-aeq`** / **`node-host-laz`** under `assets/tokens/wired/` |\n\nAEQ/LAZ plates shipped **0.3.79** (Michael). Catalog rows are `placeholder: false`. Generic `node-host` stays the default Host. Do not regenerate brand art in-repo."
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#quiet-floor-xp-pacing-campaign-worked-example#1",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "kind": "setting",
+      "text": "**Status:** Director campaign aid (Quiet Floor table lock)  \n**Authority:** Implements the **Ghostwire default cadence** in `docs/raw/24-advancement.md` (Victories → XP at full respite). ¥ payday integrates `08` + Lifestyle `26`. This file is a **worked example**, not a second XP ladder.\n\n**Related:** `QUIET-FLOOR-OUTLINE.md` · RAW `24` / `26` / `08`\n\n---"
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#victories-dual-use#2",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "Victories (dual use)",
+      "kind": "setting",
+      "text": "1. Award **+1 Victory** when a beat mattered (fight, node, extract, negotiation that changes the job).\n2. **Live count** fuels class heroic resources (e.g. Operator Adrenaline = Victories).\n3. At **full respite**: bank Victories → XP (**1:1**), reset Victories to **0**.\n4. Level when XP ≥ threshold; subtract threshold; keep remainder. **No** auto-level on job-complete."
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#thresholds-ghostwire-default-director-cadence#3",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "Thresholds (Ghostwire default Director cadence)",
+      "kind": "setting",
+      "text": "| Band | XP per level | Suggested sessions (at ~2.5 Vic/session) |\n|---|---|---|\n| Levels **1→5** | **5 XP** | ~2 sessions |\n| Levels **5→10** | **8 XP** | ~3 sessions |\n\n**Dial:** 6/9 slower · 4/6 faster. Do not invent a second XP track."
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#full-respite-vs-short-stop#4",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "Full respite vs short stop",
+      "kind": "setting",
+      "text": "| | **Full respite** (default when the **job ends**) | **Short stop** (mid-job between sessions) |\n|---|---|---|\n| Recoveries | Yes | Yes |\n| Bank Victories → XP | **Yes** | **No** |\n| Reset Victories | **Yes** (to 0 after bank) | **No** |\n| Pay Lifestyle | **Yes** | **No** |\n| Payday (¥) | **Yes** (job complete) | **No** |\n| Projects | Yes | Usually no |\n\nExtra full respite only if fiction is real downtime (hospital, travel layover, week off)."
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#suggested-lifestyle-ladder-quiet-floor#5",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "Suggested Lifestyle ladder (Quiet Floor)",
+      "kind": "setting",
+      "text": "Band ¥ unchanged from `26` (Squatter **100** / Low **400** / Middle **1,200** / High **3,500** / Elite **9,000**) + LAZ tiers.\n\n| Levels | Suggested band |\n|---|---|\n| 1–2 | **Low** (¥400) |\n| 3–5 | **Middle** (¥1,200) |\n| 6–8 | **High** (¥3,500) |\n| 9–10 | **High** (Elite rare / Writ-covered) |"
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#payday-per-hero-share-per-completed-job#6",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "¥ payday (per hero share, per completed job)",
+      "kind": "setting",
+      "text": "```\nPayout ≈ U + G + ~25%(U + G)\n```\n\n- **U** = Lifestyle upkeep for the band the hero claims this full respite (`26`).\n- **G** = gear allotment for the crew’s level band (table below).\n- **~25%** = buffer (bribes, ammo, Medic restock, Trace scrub, fixer skim).\n\n**L6+:** Directors may pay **half ¥ / half favor** (Restricted window, Writ cover, extract credit, named introduction) instead of full liquid.\n\n### G by level (Quiet Floor default)\n\n| Hero levels | Suggested U | **G** (gear allotment) | ≈ Hero share `1.25×(U+G)` |\n|---|---|---|---|\n| **1–2** | ¥400 (Low) | **¥1,600** | **¥2,500** |\n| **3–5** | ¥1,200 (Middle) | **¥3,600** | **¥6,000** |\n| **6–8** | ¥3,500 (High) | **¥8,500** | **¥15,000** (half favor OK) |\n| **9–10** | ¥3,500 High (or ¥9,000 Elite rare) | **¥16,500** (Elite: **¥15,000**) | **¥25,000** (Elite: **¥30,000**) |\n\nSkew up for heat / Trace Alert / milspec prize; skew down for quiet cut-outs. Payday lands at **job complete / full respite** — not on a short stop. Cross-link RAW `08` integrated payout table."
+    },
+    {
+      "id": "QUIET-FLOOR-XP-NUYEN-PACING#optional-fast-table-alternate#7",
+      "file": "QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+      "chapter": "Quiet Floor — XP / ¥ pacing (campaign worked example)",
+      "heading": "Optional fast-table alternate",
+      "kind": "setting",
+      "text": "`24` still allows **completed job = +1 level** as an optional fast-table alternate. Quiet Floor uses Victory→XP thresholds as default.\n\n---\n\n**Do not** invent a second XP ladder beyond Victory→XP bank. Print naming: Ghostwire-only in player-facing text."
+    },
+    {
+      "id": "QUIET-FLOOR-OUTLINE#quiet-floor-campaign-outline-director#1",
+      "file": "QUIET-FLOOR-OUTLINE.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md",
+      "chapter": "Quiet Floor — campaign outline (Director)",
+      "heading": "Quiet Floor — campaign outline (Director)",
+      "kind": "setting",
+      "text": "**Status:** Director campaign outline  \n**XP / ¥:** Implements the **Ghostwire default cadence** in `docs/raw/24-advancement.md`. Worked numbers (thresholds, G, Lifestyle ladder, short stop vs full respite): `QUIET-FLOOR-XP-NUYEN-PACING.md`.\n\n**Setting fixture:** Deadfall Nine / the Quiet Floor — Incursion dead-air wound under the Reach (see manuscript Directors `27`, lore L1). This outline is table pacing, not a second rules chapter.\n\n---"
+    },
+    {
+      "id": "QUIET-FLOOR-OUTLINE#table-lock-pointer#2",
+      "file": "QUIET-FLOOR-OUTLINE.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md",
+      "chapter": "Quiet Floor — campaign outline (Director)",
+      "heading": "Table lock (pointer)",
+      "kind": "setting",
+      "text": "| Topic | Where |\n|---|---|\n| Victories dual use · XP thresholds · no auto-level on job-complete | RAW `24` |\n| Full respite vs short stop · Lifestyle / LAZ | RAW `26` + pacing doc |\n| ¥ payday `U + G + ~25%` · L6+ half favor | RAW `08` + pacing doc |\n| Reach Director procedures | `27-running-ossian-reach.md` |"
+    },
+    {
+      "id": "QUIET-FLOOR-OUTLINE#campaign-shape-sketch#3",
+      "file": "QUIET-FLOOR-OUTLINE.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md",
+      "chapter": "Quiet Floor — campaign outline (Director)",
+      "heading": "Campaign shape (sketch)",
+      "kind": "setting",
+      "text": "Use the Quiet Floor as a **climbing clock**, not a day-one city-killer:\n\n1. **Seed** — telemetry, one wrong drone, a dead-air block that should not be quiet.\n2. **Jobs** — Switchboard / Flats / Sinks work that brushes the Nine; award Victories when beats matter.\n3. **Short stops** between sessions mid-job — Recoveries OK; do **not** bank XP or pay Lifestyle.\n4. **Full respite** when the job ends — bank XP, maybe level, payday, Lifestyle, Projects.\n5. **Escalate** the Floor only when the fiction has earned a larger quiet.\n\nNamed fixtures that punish lingering are clocks (`27`). Do not open with city-killing Dark bot swarms."
+    },
+    {
+      "id": "QUIET-FLOOR-OUTLINE#session-budget-default-cadence#4",
+      "file": "QUIET-FLOOR-OUTLINE.md",
+      "source": "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md",
+      "chapter": "Quiet Floor — campaign outline (Director)",
+      "heading": "Session budget (default cadence)",
+      "kind": "setting",
+      "text": "~**2.5 Victories / session**. Levels **1→5** at **5 XP** (~2 sessions/level); **5→10** at **8 XP** (~3 sessions/level). Dial 6/9 or 4/6 in the pacing doc if the table wants slower/faster.\n\n---\n\nKeep player-facing print Ghostwire-only. This folder is Director-facing campaign aid."
     }
   ]
 }

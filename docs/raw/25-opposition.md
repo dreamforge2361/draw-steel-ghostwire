@@ -201,7 +201,7 @@ After the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`
 
 ## Scaling, payouts, and tools
 
-**Paying the crew.** Use the provisional run payouts in `08-kits-gear-wealth.md`. A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down.
+**Paying the crew.** Use the integrated payday table in `08-kits-gear-wealth.md` (`U + G + ~25%` by level band; L6+ half favor OK). A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down. Payday lands at **full respite** / job complete (`24`, `26`).
 
 **Prep tools (optional):**
 

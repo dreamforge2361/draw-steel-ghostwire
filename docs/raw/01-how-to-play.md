@@ -42,11 +42,11 @@ A typical Ghostwire session moves through the same arc as a job:
 1. **Cold open or hook** — a fixer calls, a contact tips a score, a problem walks into the crew’s safehouse.
 2. **Legwork** — gather intel, buy gear, negotiate pay, scout the site, prep the Wire overlay.
 3. **The run** — execute: infiltrate, fight, chase, jack in, extract.
-4. **Aftermath / downtime** — get paid, spend ¥, heal, install chrome, craft mods, burn lifestyle, set up the next job.
+4. **Aftermath / downtime** — at **full respite** (job end): get paid, bank Victories→XP / maybe level (`24`), spend ¥, heal, install chrome, craft mods, burn Lifestyle (`26`), set up the next job. Mid-job nights are **short stops** (Recoveries only).
 
 Sessions can start mid-legwork or mid-run. Some nights are pure downtime. The three **modes** below tell you which Ghostwire systems are in play; they are not a rigid clock.
 
-**One job can span several sessions.** Victories, experience, and leveling live in `24`. ¥ payouts and lifestyle burn live in `08` and `26`.
+**One job can span several sessions.** Victories, the Victory→XP bank, thresholds, and full respite vs short stop live in `24` (Ghostwire default cadence — not auto-level on job-complete). ¥ payday and Lifestyle burn live in `08` and `26`.
 
 ---
 

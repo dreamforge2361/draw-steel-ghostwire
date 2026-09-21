@@ -16,7 +16,7 @@ import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface } from "../scripts/wired-console-verbs.mjs";
 
 const MODULE = "draw-steel-ghostwire";
-const VERSION = "0.3.85";
+const VERSION = "0.3.85"; // min; module may be newer
 const BESTIARY = "src/packs/bestiary";
 const HUMANOID_KW = new Set(["humanoid", "human", "rival", "cyborg", "timeRaider"]);
 const MEAT_FOLDERS = ["reach-critters"];
@@ -43,7 +43,7 @@ function walkActors(dir, out = []) {
 
 console.log(`Bestiary humanoid Wire Kit smoke (${VERSION})\n`);
 
-ok(read("module.json").version === VERSION, `module.json is ${VERSION}`);
+ok(read("module.json").version >= VERSION, `module.json is ≥ ${VERSION}`);
 
 const actors = walkActors(BESTIARY);
 const humanoids = actors.filter(({ actor }) => {

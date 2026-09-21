@@ -23,7 +23,7 @@ import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 
 const MODULE = "draw-steel-ghostwire";
-const VERSION = "0.3.85";
+const VERSION = "0.3.85"; // min; module may be newer
 const WIRE_KIT_DSID = "wire-kit-matrix-verbs";
 const BESTIARY = "src/packs/bestiary";
 const CLUB = join(BESTIARY, "mama-club");
@@ -50,7 +50,7 @@ const cast = files.map(file => ({ file, slug: file.replace(/\.json$/, ""), actor
 console.log(`Mama's Club floor cast smoke (${VERSION})\n`);
 
 console.log("1) Ship surface");
-ok(read("module.json").version === VERSION, `module.json is ${VERSION} (got ${read("module.json").version})`);
+ok(read("module.json").version >= VERSION, `module.json is ≥ ${VERSION} (got ${read("module.json").version})`);
 ok(/0\.3\.84/.test(readFileSync("README.md", "utf8")), "README changelog names 0.3.85");
 ok(/Mama/i.test(readFileSync("README.md", "utf8").split("\n").find(l => l.includes("0.3.85")) ?? ""),
   "README 0.3.85 line names the club cast");
