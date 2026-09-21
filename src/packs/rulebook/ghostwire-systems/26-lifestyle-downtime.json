@@ -53,8 +53,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "**Lifestyle** is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys **living standard**: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.\n\nPay Lifestyle at each **respite between runs** (or when the Director says a downtime block ends). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.\n\nIf you **cannot or will not pay**, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.\n\n**Firewall reminder** (`08`): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.\n\n> **In Foundry**\n> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. **Lazarus Extract (LAZ)** contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider.",
-        "content": "<p><strong>Lifestyle</strong> is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys <strong>living standard</strong>: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.</p>\n<p>Pay Lifestyle at each <strong>respite between runs</strong> (or when the Director says a downtime block ends). The cost is the <strong>upkeep</strong> for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.</p>\n<p>If you <strong>cannot or will not pay</strong>, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a <strong>street complication</strong> (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.</p>\n<p><strong>Firewall reminder</strong> (<code>08</code>): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.</p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  There is <strong>no Lifestyle / downtime automation</strong> yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. <strong>Lazarus Extract (LAZ)</strong> contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider.</p>\n</blockquote>"
+        "markdown": "**Lifestyle** is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys **living standard**: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.\n\nPay Lifestyle at each **full respite** — normally when the job ends (or when the Director says a real downtime block ends). Mid-job nights are short stops (below). The cost is the **upkeep** for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.\n\nIf you **cannot or will not pay**, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.\n\n**Firewall reminder** (`08`): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.",
+        "content": "<p><strong>Lifestyle</strong> is the ¥ you burn between runs to keep a roof, food, heat scrub, and a place the crew can sleep without sleeping with one eye on the door. It is not a character-power purchase. It does not raise characteristics, unlock class features, or buy Kits. It buys <strong>living standard</strong>: housing quality, how safely you rest, which social doors open, and — for Medics — whether restocking the bag is routine or a scramble.</p>\n<p>Pay Lifestyle at each <strong>full respite</strong> — normally when the job ends (or when the Director says a real downtime block ends). Mid-job nights are short stops (below). The cost is the <strong>upkeep</strong> for the band you claim that respite. Leftover liquid ¥ after Lifestyle (and any quoted restock / project costs) stays on the sheet for gear, chrome, bribes, and the next score.</p>\n<p>If you <strong>cannot or will not pay</strong>, you do not get that band's benefits. Drop to a cheaper band you can afford, or take a <strong>street complication</strong> (Director pick: debt collector, illness, gear theft, unwanted attention, a burned safehouse, etc.). Paying Lifestyle is the clean path; skipping it is story pressure, not a free ride.</p>\n<p><strong>Firewall reminder</strong> (<code>08</code>): ¥ buys objects and services. Lifestyle is a service sink so chrome and gear are not the only place money goes.</p>"
       },
       "category": null,
       "ownership": {
@@ -63,9 +63,9 @@
       "flags": {}
     },
     {
-      "_id": "H425uqt3ssKkulcM",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.H425uqt3ssKkulcM",
-      "name": "Lifestyle bands (upkeep)",
+      "_id": "ZSRnXRdBVQBFXbbN",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.ZSRnXRdBVQBFXbbN",
+      "name": "Full respite vs short stop",
       "type": "text",
       "sort": 300000,
       "title": {
@@ -81,8 +81,8 @@
       "system": {},
       "text": {
         "format": 2,
-        "markdown": "**Upkeep ¥** are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in `04`. Do not invent a second Recovery pool.\n\n**Respite.** A **respite** is the downtime breath between runs — or whenever the Director says a downtime block ends. The crew is off the clock long enough to sleep, pay Lifestyle, spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round and not a five-minute alley patch.\n\n| Band | Name | Upkeep / respite | Housing & rest (feel) | Social doors | Medic restock eligibility |\n|---|---|---|---|---|---|\n| 5 | **Squatter** | **¥100** | Crash space, tent, condemned flat, alley nest. Exposed. Rest is poor — Director may limit how cleanly Recoveries land unless someone treats you elsewhere. | Street only; corp lobbies bounce you. | Full kit refill is a **scramble**. Director may quote a steep black-market cost, allow only a **partial** refill, or require a downtime Project just to find stock. |\n| 4 | **Low** | **¥400** | Capsule, shared doss, cheap motel, fixer-loaned couch. Token security. Full Recoveries, no bonus. | Neighborhood shops, low fixers, gray clinics. | Full restock **available**. Director quotes a **street** refill cost. |\n| 3 | **Middle** | **¥1,200** | Private flat, crew safehouse wing, decent heat scrub. Basic security. Reliable rest (Director may grant an edge on one Recovery roll this respite). | Licensed shops, competent fixers, corp surplus windows. | Full restock is **routine**. Quote at **standard** rate; suppliers show up. |\n| 2 | **High** | **¥3,500** | Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse). | Professional doors, quiet install bays, serious fixers. | Restock is **easy**. Prefer **standard or better** quotes; black-clinic / pharma contacts are in reach. |\n| 1 | **Elite** | **¥9,000** | Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply). | Boardrooms, private clinics, Restricted introductions on a call. | Restock is **trivial logistically**. Quote still applies (supply is not free), but access is not the bottleneck. |\n\n**Downtime capacity (this book):**\n\n| Band | Project slots per respite |\n|---|---|\n| **Squatter** | **1** |\n| **Low** | **1** (+1 if you have a hireling this respite) |\n| **Middle** | **2** |\n| **High** | **3** |\n| **Elite** | **4** |\n\nA **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.\n\n**Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.\n\n**Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.",
-        "content": "<p><strong>Upkeep ¥</strong> are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in <code>04</code>. Do not invent a second Recovery pool.</p>\n<p><strong>Respite.</strong> A <strong>respite</strong> is the downtime breath between runs — or whenever the Director says a downtime block ends. The crew is off the clock long enough to sleep, pay Lifestyle, spend Recoveries, refill the Recovery pool (<code>04</code>), and work Projects. It is not a combat round and not a five-minute alley patch.</p>\n<table>\n<thead>\n<tr>\n<th id=\"band\">Band</th>\n<th id=\"name\">Name</th>\n<th id=\"upkeep_/_respite\">Upkeep / respite</th>\n<th id=\"housing_&_rest_(feel)\">Housing &amp; rest (feel)</th>\n<th id=\"social_doors\">Social doors</th>\n<th id=\"medic_restock_eligibility\">Medic restock eligibility</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>5</td>\n<td><strong>Squatter</strong></td>\n<td><strong>¥100</strong></td>\n<td>Crash space, tent, condemned flat, alley nest. Exposed. Rest is poor — Director may limit how cleanly Recoveries land unless someone treats you elsewhere.</td>\n<td>Street only; corp lobbies bounce you.</td>\n<td>Full kit refill is a <strong>scramble</strong>. Director may quote a steep black-market cost, allow only a <strong>partial</strong> refill, or require a downtime Project just to find stock.</td>\n</tr>\n<tr>\n<td>4</td>\n<td><strong>Low</strong></td>\n<td><strong>¥400</strong></td>\n<td>Capsule, shared doss, cheap motel, fixer-loaned couch. Token security. Full Recoveries, no bonus.</td>\n<td>Neighborhood shops, low fixers, gray clinics.</td>\n<td>Full restock <strong>available</strong>. Director quotes a <strong>street</strong> refill cost.</td>\n</tr>\n<tr>\n<td>3</td>\n<td><strong>Middle</strong></td>\n<td><strong>¥1,200</strong></td>\n<td>Private flat, crew safehouse wing, decent heat scrub. Basic security. Reliable rest (Director may grant an edge on one Recovery roll this respite).</td>\n<td>Licensed shops, competent fixers, corp surplus windows.</td>\n<td>Full restock is <strong>routine</strong>. Quote at <strong>standard</strong> rate; suppliers show up.</td>\n</tr>\n<tr>\n<td>2</td>\n<td><strong>High</strong></td>\n<td><strong>¥3,500</strong></td>\n<td>Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse).</td>\n<td>Professional doors, quiet install bays, serious fixers.</td>\n<td>Restock is <strong>easy</strong>. Prefer <strong>standard or better</strong> quotes; black-clinic / pharma contacts are in reach.</td>\n</tr>\n<tr>\n<td>1</td>\n<td><strong>Elite</strong></td>\n<td><strong>¥9,000</strong></td>\n<td>Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply).</td>\n<td>Boardrooms, private clinics, Restricted introductions on a call.</td>\n<td>Restock is <strong>trivial logistically</strong>. Quote still applies (supply is not free), but access is not the bottleneck.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Downtime capacity (this book):</strong></p>\n<table>\n<thead>\n<tr>\n<th id=\"band\">Band</th>\n<th id=\"project_slots_per_respite\">Project slots per respite</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Squatter</strong></td>\n<td><strong>1</strong></td>\n</tr>\n<tr>\n<td><strong>Low</strong></td>\n<td><strong>1</strong> (+1 if you have a hireling this respite)</td>\n</tr>\n<tr>\n<td><strong>Middle</strong></td>\n<td><strong>2</strong></td>\n</tr>\n<tr>\n<td><strong>High</strong></td>\n<td><strong>3</strong></td>\n</tr>\n<tr>\n<td><strong>Elite</strong></td>\n<td><strong>4</strong></td>\n</tr>\n</tbody>\n</table>\n<p>A <strong>project slot</strong> is one downtime job you can finish or meaningfully advance this respite: a <strong>Project</strong> as <code>03</code> prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (<code>10</code>), chrome surgery (<code>09</code>), Ritual Workings (<code>22</code>), Learn New Language (<code>07</code>), Discover Lore (<code>03</code>). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.</p>\n<p><strong>Max lodge / sanctum tier (casters):</strong> Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (<code>22</code>, gear Category 6). Paying Lifestyle does not buy a lodge; it <strong>caps</strong> how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.</p>\n<p><strong>Wrench Buildings:</strong> a Building Stat Card's Lifestyle Hook plugs here (<code>16</code>). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.</p>"
+        "markdown": "**Lifestyle upkeep is paid only on a full respite** — not on every night the crew sleeps mid-job.\n\n| | **Full respite** | **Short stop** |\n|---|---|---|\n| When | Default when the **job ends**; also real downtime (hospital, travel layover, week off) | Mid-job between sessions |\n| Pay Lifestyle / LAZ band | **Yes** | **No** |\n| Bank Victories → XP (`24`) | **Yes** | **No** |\n| Payday ¥ (`08`) | **Yes** | **No** |\n| Recoveries | Yes | Yes |\n\nMid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not reset Victories, do not treat the night as payday. Advancement and the Victory→XP bank live in `24`. Campaign worked example: `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.\n\n> **In Foundry**\n> There is **no Lifestyle / downtime automation** yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. **Lazarus Extract (LAZ)** contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider.",
+        "content": "<p><strong>Lifestyle upkeep is paid only on a full respite</strong> — not on every night the crew sleeps mid-job.</p>\n<table>\n<thead>\n<tr>\n<th id=\"\"></th>\n<th id=\"**full_respite**\"><strong>Full respite</strong></th>\n<th id=\"**short_stop**\"><strong>Short stop</strong></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>When</td>\n<td>Default when the <strong>job ends</strong>; also real downtime (hospital, travel layover, week off)</td>\n<td>Mid-job between sessions</td>\n</tr>\n<tr>\n<td>Pay Lifestyle / LAZ band</td>\n<td><strong>Yes</strong></td>\n<td><strong>No</strong></td>\n</tr>\n<tr>\n<td>Bank Victories → XP (<code>24</code>)</td>\n<td><strong>Yes</strong></td>\n<td><strong>No</strong></td>\n</tr>\n<tr>\n<td>Payday ¥ (<code>08</code>)</td>\n<td><strong>Yes</strong></td>\n<td><strong>No</strong></td>\n</tr>\n<tr>\n<td>Recoveries</td>\n<td>Yes</td>\n<td>Yes</td>\n</tr>\n</tbody>\n</table>\n<p>Mid-job nights are <strong>short stops</strong>: Recoveries OK; do not burn upkeep, do not reset Victories, do not treat the night as payday. Advancement and the Victory→XP bank live in <code>24</code>. Campaign worked example: <code>docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md</code>.</p>\n<blockquote>\n  <p><strong>In Foundry</strong>\n  There is <strong>no Lifestyle / downtime automation</strong> yet. Track nuyen on the hero sheet wealth field (labeled Nuyen); the Director and players adjust ¥ by hand for upkeep, Medic restock quotes, chrome fees, and Craft spends. Starting funds are ¥5,000 on new heroes — Lifestyle burn between runs is manual table accounting. <strong>Lazarus Extract (LAZ)</strong> contract tier is the same band you paid — write it next to the Lifestyle name (Basic / Standard / Priority / White Door). No separate ¥ field unless the Director adds a premium rider.</p>\n</blockquote>"
       },
       "category": null,
       "ownership": {
@@ -91,11 +91,39 @@
       "flags": {}
     },
     {
-      "_id": "k8n9Ijwn9p3k9cHw",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.k8n9Ijwn9p3k9cHw",
-      "name": "Hive strata ↔ Lifestyle bands",
+      "_id": "TqSDcI0GbX3nmesV",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.TqSDcI0GbX3nmesV",
+      "name": "Lifestyle bands (upkeep)",
       "type": "text",
       "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Upkeep ¥** are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in `04`. Do not invent a second Recovery pool.\n\n**Full respite.** A **full respite** is the downtime breath when a job ends — or whenever the Director says real downtime starts (hospital, layover, week off). The crew is off the clock long enough to sleep, **pay Lifestyle**, bank Victories→XP (`24`), take payday (`08`), spend Recoveries, refill the Recovery pool (`04`), and work Projects. It is not a combat round, not a five-minute alley patch, and not a mid-job **short stop**.\n\n| Band | Name | Upkeep / respite | Housing & rest (feel) | Social doors | Medic restock eligibility |\n|---|---|---|---|---|---|\n| 5 | **Squatter** | **¥100** | Crash space, tent, condemned flat, alley nest. Exposed. Rest is poor — Director may limit how cleanly Recoveries land unless someone treats you elsewhere. | Street only; corp lobbies bounce you. | Full kit refill is a **scramble**. Director may quote a steep black-market cost, allow only a **partial** refill, or require a downtime Project just to find stock. |\n| 4 | **Low** | **¥400** | Capsule, shared doss, cheap motel, fixer-loaned couch. Token security. Full Recoveries, no bonus. | Neighborhood shops, low fixers, gray clinics. | Full restock **available**. Director quotes a **street** refill cost. |\n| 3 | **Middle** | **¥1,200** | Private flat, crew safehouse wing, decent heat scrub. Basic security. Reliable rest (Director may grant an edge on one Recovery roll this respite). | Licensed shops, competent fixers, corp surplus windows. | Full restock is **routine**. Quote at **standard** rate; suppliers show up. |\n| 2 | **High** | **¥3,500** | Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse). | Professional doors, quiet install bays, serious fixers. | Restock is **easy**. Prefer **standard or better** quotes; black-clinic / pharma contacts are in reach. |\n| 1 | **Elite** | **¥9,000** | Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply). | Boardrooms, private clinics, Restricted introductions on a call. | Restock is **trivial logistically**. Quote still applies (supply is not free), but access is not the bottleneck. |\n\n**Suggested Director ladder** (Quiet Floor / default cadence — band ¥ unchanged): Levels **1–2** Low; **3–5** Middle; **6–8** High; **9–10** High (Elite rare / Writ-covered). See `24` and `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.\n\n**Downtime capacity (this book):**\n\n| Band | Project slots per respite |\n|---|---|\n| **Squatter** | **1** |\n| **Low** | **1** (+1 if you have a hireling this respite) |\n| **Middle** | **2** |\n| **High** | **3** |\n| **Elite** | **4** |\n\nA **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.\n\n**Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.\n\n**Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.",
+        "content": "<p><strong>Upkeep ¥</strong> are the printed band costs in the table below (Doss Upgrade / Lifestyle Voucher point at the same numbers). Recoveries and Recovery value live in <code>04</code>. Do not invent a second Recovery pool.</p>\n<p><strong>Full respite.</strong> A <strong>full respite</strong> is the downtime breath when a job ends — or whenever the Director says real downtime starts (hospital, layover, week off). The crew is off the clock long enough to sleep, <strong>pay Lifestyle</strong>, bank Victories→XP (<code>24</code>), take payday (<code>08</code>), spend Recoveries, refill the Recovery pool (<code>04</code>), and work Projects. It is not a combat round, not a five-minute alley patch, and not a mid-job <strong>short stop</strong>.</p>\n<table>\n<thead>\n<tr>\n<th id=\"band\">Band</th>\n<th id=\"name\">Name</th>\n<th id=\"upkeep_/_respite\">Upkeep / respite</th>\n<th id=\"housing_&_rest_(feel)\">Housing &amp; rest (feel)</th>\n<th id=\"social_doors\">Social doors</th>\n<th id=\"medic_restock_eligibility\">Medic restock eligibility</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>5</td>\n<td><strong>Squatter</strong></td>\n<td><strong>¥100</strong></td>\n<td>Crash space, tent, condemned flat, alley nest. Exposed. Rest is poor — Director may limit how cleanly Recoveries land unless someone treats you elsewhere.</td>\n<td>Street only; corp lobbies bounce you.</td>\n<td>Full kit refill is a <strong>scramble</strong>. Director may quote a steep black-market cost, allow only a <strong>partial</strong> refill, or require a downtime Project just to find stock.</td>\n</tr>\n<tr>\n<td>4</td>\n<td><strong>Low</strong></td>\n<td><strong>¥400</strong></td>\n<td>Capsule, shared doss, cheap motel, fixer-loaned couch. Token security. Full Recoveries, no bonus.</td>\n<td>Neighborhood shops, low fixers, gray clinics.</td>\n<td>Full restock <strong>available</strong>. Director quotes a <strong>street</strong> refill cost.</td>\n</tr>\n<tr>\n<td>3</td>\n<td><strong>Middle</strong></td>\n<td><strong>¥1,200</strong></td>\n<td>Private flat, crew safehouse wing, decent heat scrub. Basic security. Reliable rest (Director may grant an edge on one Recovery roll this respite).</td>\n<td>Licensed shops, competent fixers, corp surplus windows.</td>\n<td>Full restock is <strong>routine</strong>. Quote at <strong>standard</strong> rate; suppliers show up.</td>\n</tr>\n<tr>\n<td>2</td>\n<td><strong>High</strong></td>\n<td><strong>¥3,500</strong></td>\n<td>Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse).</td>\n<td>Professional doors, quiet install bays, serious fixers.</td>\n<td>Restock is <strong>easy</strong>. Prefer <strong>standard or better</strong> quotes; black-clinic / pharma contacts are in reach.</td>\n</tr>\n<tr>\n<td>1</td>\n<td><strong>Elite</strong></td>\n<td><strong>¥9,000</strong></td>\n<td>Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply).</td>\n<td>Boardrooms, private clinics, Restricted introductions on a call.</td>\n<td>Restock is <strong>trivial logistically</strong>. Quote still applies (supply is not free), but access is not the bottleneck.</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Suggested Director ladder</strong> (Quiet Floor / default cadence — band ¥ unchanged): Levels <strong>1–2</strong> Low; <strong>3–5</strong> Middle; <strong>6–8</strong> High; <strong>9–10</strong> High (Elite rare / Writ-covered). See <code>24</code> and <code>docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md</code>.</p>\n<p><strong>Downtime capacity (this book):</strong></p>\n<table>\n<thead>\n<tr>\n<th id=\"band\">Band</th>\n<th id=\"project_slots_per_respite\">Project slots per respite</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Squatter</strong></td>\n<td><strong>1</strong></td>\n</tr>\n<tr>\n<td><strong>Low</strong></td>\n<td><strong>1</strong> (+1 if you have a hireling this respite)</td>\n</tr>\n<tr>\n<td><strong>Middle</strong></td>\n<td><strong>2</strong></td>\n</tr>\n<tr>\n<td><strong>High</strong></td>\n<td><strong>3</strong></td>\n</tr>\n<tr>\n<td><strong>Elite</strong></td>\n<td><strong>4</strong></td>\n</tr>\n</tbody>\n</table>\n<p>A <strong>project slot</strong> is one downtime job you can finish or meaningfully advance this respite: a <strong>Project</strong> as <code>03</code> prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (<code>10</code>), chrome surgery (<code>09</code>), Ritual Workings (<code>22</code>), Learn New Language (<code>07</code>), Discover Lore (<code>03</code>). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.</p>\n<p><strong>Max lodge / sanctum tier (casters):</strong> Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (<code>22</code>, gear Category 6). Paying Lifestyle does not buy a lodge; it <strong>caps</strong> how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.</p>\n<p><strong>Wrench Buildings:</strong> a Building Stat Card's Lifestyle Hook plugs here (<code>16</code>). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "inP1d5qUlmKXE8ik",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.inP1d5qUlmKXE8ik",
+      "name": "Hive strata ↔ Lifestyle bands",
+      "type": "text",
+      "sort": 500000,
       "title": {
         "show": true,
         "level": 1
@@ -119,11 +147,11 @@
       "flags": {}
     },
     {
-      "_id": "xKKp8XuDNO81DiGJ",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.xKKp8XuDNO81DiGJ",
+      "_id": "SouCSdhd1Yootasr",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.SouCSdhd1Yootasr",
       "name": "Corp scrip, SIN, and housing strings",
       "type": "text",
-      "sort": 500000,
+      "sort": 600000,
       "title": {
         "show": true,
         "level": 1
@@ -147,11 +175,11 @@
       "flags": {}
     },
     {
-      "_id": "qtmUlmkdJE0ZWZw1",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.qtmUlmkdJE0ZWZw1",
+      "_id": "5ywmgVkIfqJDXk7X",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.5ywmgVkIfqJDXk7X",
       "name": "Lazarus Extract contract (included in upkeep)",
       "type": "text",
-      "sort": 600000,
+      "sort": 700000,
       "title": {
         "show": true,
         "level": 1
@@ -175,11 +203,11 @@
       "flags": {}
     },
     {
-      "_id": "jPiGX7A25EM3RqSX",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.jPiGX7A25EM3RqSX",
+      "_id": "qmciVnEtz8NBo5zz",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.qmciVnEtz8NBo5zz",
       "name": "Pay Lifestyle or take the street",
       "type": "text",
-      "sort": 700000,
+      "sort": 800000,
       "title": {
         "show": true,
         "level": 1
@@ -203,11 +231,11 @@
       "flags": {}
     },
     {
-      "_id": "WjMDepFoJcFOBIip",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.WjMDepFoJcFOBIip",
+      "_id": "CcXgdlQOAx8zqijW",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.CcXgdlQOAx8zqijW",
       "name": "Medic restock lock (how Lifestyle pays for the bag)",
       "type": "text",
-      "sort": 800000,
+      "sort": 900000,
       "title": {
         "show": true,
         "level": 1
@@ -231,11 +259,11 @@
       "flags": {}
     },
     {
-      "_id": "m1cLBPeAHHc16hzb",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.m1cLBPeAHHc16hzb",
+      "_id": "4NlS1BcDCwqwqDwX",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.4NlS1BcDCwqwqDwX",
       "name": "Downtime actions (overview)",
       "type": "text",
-      "sort": 900000,
+      "sort": 1000000,
       "title": {
         "show": true,
         "level": 1
@@ -259,11 +287,11 @@
       "flags": {}
     },
     {
-      "_id": "Yqi9v6hYm0kYM2nP",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.Yqi9v6hYm0kYM2nP",
+      "_id": "9utsLhbV6HSVmJs2",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.9utsLhbV6HSVmJs2",
       "name": "The ¥ loop: run payout → Lifestyle → leftover",
       "type": "text",
-      "sort": 1000000,
+      "sort": 1100000,
       "title": {
         "show": true,
         "level": 1
@@ -287,11 +315,11 @@
       "flags": {}
     },
     {
-      "_id": "hLK0ZACmlr2KGgBj",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.hLK0ZACmlr2KGgBj",
+      "_id": "7P6HCm6M3t9zavrh",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.7P6HCm6M3t9zavrh",
       "name": "What this chapter is not",
       "type": "text",
-      "sort": 1100000,
+      "sort": 1200000,
       "title": {
         "show": true,
         "level": 1
@@ -315,11 +343,11 @@
       "flags": {}
     },
     {
-      "_id": "LScYzrCvVhCn1H9P",
-      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.LScYzrCvVhCn1H9P",
+      "_id": "6lFiefXdHuzLWsrh",
+      "_key": "!journal.pages!pGj7uMaf9JBsX1Rx.6lFiefXdHuzLWsrh",
       "name": "Cross-references",
       "type": "text",
-      "sort": 1200000,
+      "sort": 1300000,
       "title": {
         "show": true,
         "level": 1

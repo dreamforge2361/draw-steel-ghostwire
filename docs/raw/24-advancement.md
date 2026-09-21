@@ -12,7 +12,7 @@
 
 Runners get better by taking **Victories**, earning experience, and **leveling**. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.
 
-This chapter tells the table **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.
+This chapter tells the table **when** to bank Victories into XP and **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.
 
 ---
 
@@ -33,24 +33,53 @@ Ghostwire has **no separate tier ladder** for heroes. Level and echelon are the 
 
 ## When the table levels
 
-**Victory (this book).** When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains **1 Victory**. Class features that “gain resource equal to your Victories” read the number you currently have.
+**Victory (this book).** When the crew closes a beat that mattered — a fight won, a node dumped, a VIP extracted, a negotiation that changes the job — each runner gains **+1 Victory**. Class features that “gain resource equal to your Victories” (e.g. Operator **Adrenaline**) read the **live count** you currently have.
 
-**When you level (default).** After a **completed job** (legwork + run + getaway) that earned at least one Victory, each runner **gains one level** at the respite between runs — the same breath where the crew takes payout (`08`) and pays Lifestyle (`26`). Short no-risk jobs do not level. A job that spans many sessions with more than one climax may grant a level at a mid-job respite instead of waiting.
+### Default: Victory → XP at full respite
 
-**Optional XP box.** If the table wants a numeric track (or you are on Foundry, where the stock hero sheet already has XP and Victory fields), after each respite add your Victories to **XP** (**1 Victory = 1 XP**) and reset Victories to **0**. The Director still calls the level using the default above — Ghostwire does not add a second XP ladder on top of the sheet. Do not invent a third track.
+Ghostwire’s default Director cadence is a **Victory→XP bank**, not auto-level on job-complete:
 
-The runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current.
+1. Award Victories when beats matter (above).
+2. Keep the live Victory count for heroic resources during the job.
+3. At **full respite** (normally when the **job ends** — see **Full respite vs short stop** below): bank Victories into **XP** at **1 Victory = 1 XP**, then reset Victories to **0**.
+4. When XP ≥ the threshold for the next level, **level**, subtract the threshold, and **keep any remainder**. Repeat if somehow over a double threshold.
+
+**Thresholds (Ghostwire default Director cadence):**
+
+| Band | XP per level | Suggested sessions (at ~2.5 Vic/session) |
+|---|---|---|
+| Levels **1→5** | **5 XP** | ~2 sessions |
+| Levels **5→10** | **8 XP** | ~3 sessions |
+
+**Dial note:** use **6/9** for a slower table, **4/6** for a faster one. Do not invent a second XP ladder on top of Victory→XP.
+
+**Optional fast-table alternate:** the Director may treat a **completed job** (legwork + run + getaway that earned at least one Victory) as **+1 level** at the full respite instead of using thresholds — useful for one-shots and short arcs. Short no-risk jobs still do not level.
+
+### Full respite vs short stop
+
+| | **Full respite** | **Short stop** |
+|---|---|---|
+| When | Default when the **job ends**; also real downtime (hospital, travel layover, week off) | Mid-job night between sessions |
+| Recoveries / Recovery pool | Yes (`04`) | Yes |
+| Bank Victories → XP; reset Victories | **Yes** | **No** |
+| Pay Lifestyle (`26`) | **Yes** | **No** |
+| Payday ¥ (`08`) | **Yes** (job complete) | **No** |
+| Projects / Kit swap | Yes | Usually no |
+
+A short stop is a breath so the table can stop cold without pretending the job is over. Extra full respites need fiction that is actually downtime — not every safehouse nap.
+
+The runner who leveled picks features, records the new Stamina / resource bits their class prints, and shops or crafts **after** the sheet is current (usually in the same full-respite breath as payout and Lifestyle).
 
 **Allowed exceptions (Director call):**
 
-- A **mid-job** level if the XP (or milestone) already crossed the line and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit.
-- A **held** level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean respite.
+- A **mid-job** level if XP already crossed the threshold and the table wants the new 7-cost or characteristic **before** the climax. Pause, apply the printed gains, resume. Do not also invent a free chrome install or a free Kit. Mid-job level does **not** by itself pay Lifestyle or reset Victories unless you are also taking a full respite.
+- A **held** level if the fiction is a hospital, a lockup, or a burn that would make training a joke. They have earned it; they take it at the next clean full respite.
 
-**Victories are not nuyen.** A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payout band (`08`), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.
+**Victories are not nuyen.** A clean extraction and a bloody one can both be Victories. ¥ comes from the job’s payday (`08`), not from the XP line. A Director may pay partly in gear, credit, or a favor — that is still money-or-access, never a free characteristic.
 
-**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty.
+**One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty. Between sessions mid-job, use a **short stop**; bank XP only at **full respite**.
 
----
+**Campaign worked example:** Quiet Floor thresholds, G, and session math — `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md` (implements this chapter’s default).
 
 ## What the classes gain
 
@@ -73,7 +102,7 @@ Heroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resou
 
 ### Applying a level at the table
 
-1. **Confirm the level** with the Victory / completed-job rule above. Ghostwire does not substitute street rumor for that math.
+1. **Confirm the level** with the Victory→XP threshold rule above (or the optional completed-job alternate). Ghostwire does not substitute street rumor for that math.
 2. **Open the class chapter** (`12`–`20`). Take only what that level prints — no “I would have had this if I had picked the other subclass.”
 3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.
 4. **Spend the shared picks** this level grants: perk (`11`), skill (Ghostwire list in `02`), characteristic increase (the five Ghostwire names in `02`).
@@ -123,7 +152,7 @@ When a runner **enters a new echelon** (levels 4, 7, and 10), glance at Kit Stam
 - **¥** comes from runs, not levels (`08`).
 - **Ancestry traits** are bought once at creation (`05`).
 - **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).
-- **Lifestyle band** is paid each respite (`26`). A 10th-level runner who lives Squatter still lives Squatter.
+- **Lifestyle band** is paid at each **full respite** (`26`). A 10th-level runner who lives Squatter still lives Squatter.
 - **Connection state** (Disconnected / Linked / Overlay / Jacked In) is a choice per scene, not a reward (`21`).
 - **Summon Rank 2+ strike ladders** stay deferred where Veil §C3 says they are deferred (`22`). Leveling a caster does not invent those numbers.
 
@@ -133,17 +162,19 @@ If a downtime offer, chrome catalog, or fixer would sell a characteristic, a ski
 
 ## Paying and living after a level
 
-Leveling does not skip the ¥ loop:
+Leveling does not skip the ¥ loop. On a **full respite** (job end):
 
-1. Finish the run; take heat and injuries.  
-2. Take payout (`08`).  
-3. Apply the level (this chapter).  
-4. Pay Lifestyle for the band you claim (`26`).  
+1. Finish the run; take heat and injuries.
+2. Take **payday** (`08` — `U + G + ~25%` by level band; L6+ may be half favor).
+3. **Bank Victories → XP**, reset Victories, and **apply any level** this chapter grants.
+4. **Pay Lifestyle** for the band you claim (`26`). Suggested ladder: L1–2 Low; L3–5 Middle; L6–8 High; L9–10 High (Elite rare / Writ-covered). Band ¥ unchanged (`26`).
 5. Shop, §Craft, chrome surgery, rituals — leftover ¥ only.
+
+A **short stop** mid-job skips steps 2–4’s bank/Lifestyle/payday — Recoveries only.
 
 A new 9-cost ability does not make Elite upkeep free. If the table’s payouts never threaten Lifestyle, raise heat or cut the band — do not grow Body Integrity or hand out Prototype as a party favor.
 
----
+**Cross-links:** Kits/¥ `08` · Lifestyle / short stop `26` · Quiet Floor worked example `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
 
 ## Converting older Ghostwire material
 
@@ -178,7 +209,8 @@ Older material that numbered Power Roll results “Tier 1 / 2 / 3” from best t
 Handbook and Flats gazetteer lines that still say “E1–E4” on a **host** mean ICE posture / Node Rating, **not** the runner’s echelon (`wired-flats` How to Read). Keep that distinction at the table.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** is the stock hero-sheet field — Ghostwire does not add a second XP tracker. Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** and **Victory** / **XP** fields are the stock hero-sheet fields — Ghostwire’s default is **Victory→XP at full respite** with the thresholds in this chapter (not auto-level on job-complete). Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation — bank XP and pay Lifestyle by hand at full respite.
+
 
 ---
 

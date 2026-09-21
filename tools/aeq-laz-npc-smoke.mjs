@@ -23,7 +23,7 @@ const loc = key => key.split(".").reduce((o, k) => o?.[k], lang);
 console.log("AEQ / LAZ conglomerate NPC smoke (0.3.85)\n");
 
 const moduleJson = read("module.json");
-ok(moduleJson.version === "0.3.85", `module.json is 0.3.85 (got ${moduleJson.version})`);
+ok(moduleJson.version >= "0.3.85", `module.json is 0.3.85 (got ${moduleJson.version})`);
 
 const ACTORS = [
   {

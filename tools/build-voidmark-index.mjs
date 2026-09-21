@@ -27,6 +27,9 @@ const SETTING_PAGES = [
   "docs/manuscript/03-directors/27-running-ossian-reach.md",
   "docs/manuscript/04-back/28-glossary-slang.md",
   "docs/rulebook/MEGACORP-TICKERS.md",
+  // Director campaign aids (Quiet Floor implements RAW 24 default cadence)
+  "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
+  "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md",
 ];
 
 const MAX_CHUNK = 1600;

@@ -162,18 +162,32 @@ Gear, chrome, and some services are gated by **Availability**, not a Ghostwire t
 
 Soft/bioware chrome and military packages skew high-Availability by design.
 
-### Run payouts (provisional Director guidance)
+### Run payouts (Director guidance — integrated U+G+buffer)
 
-Provisional. Per-run (or per-job) liquid for a typical crew share before lifestyle burn:
+Payday is **per hero share, per completed job**, and lands at **job complete / full respite** (`24`, `26`). Mid-job **short stops** do not pay.
 
-| Job scale | Provisional ¥ (crew share band) |
-|---|---|
-| Street job / gang errand | ¥500–2,000 |
-| Mid run / district score | ¥2,000–8,000 |
-| Corp run / serious extraction | ¥5,000–20,000 |
-| Black-ops / milspec / prototype prize | ¥20,000+ or unique gear instead |
+```
+Payout ≈ U + G + ~25%(U + G)
+```
 
-Directors may pay partly in gear, chrome credits, or favors. Payouts should fund chrome/gear progression without trivializing Body Integrity or Availability gates.
+- **U** — Lifestyle upkeep for the band the hero claims this full respite (`26`). Suggested ladder: L1–2 Low (¥400); L3–5 Middle (¥1,200); L6–8 High (¥3,500); L9–10 High (Elite rare ¥9,000 / Writ-covered).
+- **G** — Gear allotment by level band (table). Funds chrome/gear progression without trivializing Body Integrity or Availability.
+- **~25%** — Buffer for bribes, ammo, Medic restock, Trace scrub, fixer skim.
+
+| Hero levels | Suggested U | **G** | ≈ Hero share `1.25×(U+G)` |
+|---|---|---|---|
+| **1–2** | ¥400 | **¥1,600** | **¥2,500** |
+| **3–5** | ¥1,200 | **¥3,600** | **¥6,000** |
+| **6–8** | ¥3,500 | **¥8,500** | **¥15,000** |
+| **9–10** | ¥3,500 (Elite rare ¥9,000) | **¥16,500** (Elite **¥15,000**) | **¥25,000** (Elite **¥30,000**) |
+
+**L6+:** the Director may pay **half ¥ / half favor** (Restricted window, Writ cover, extract credit, named introduction) instead of full liquid.
+
+Skew up for heat / Trace Alert / milspec prize; skew down for quiet cut-outs. Directors may still substitute unique gear for part of the share. Do not pay characteristics, Kits, or class features in ¥.
+
+**Campaign worked example** (same numbers): `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
+
+*Legacy job-scale bands (street ¥500–2,000 / district ¥2,000–8,000 / corp ¥5,000–20,000 / black-ops ¥20,000+) remain useful as a heat dial on top of the level-band table — they are not a second economy.*
 
 ### Kits ↔ Economy bridge
 
@@ -211,7 +225,7 @@ Full Invent a Mod and slot rules: `10-mods.md`.
 
 ### Lifestyle burn
 
-Between runs, heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`. Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider.
+At each **full respite** (not a mid-job short stop), heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`. Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider.
 
 ## Part 3 — Gear
 
