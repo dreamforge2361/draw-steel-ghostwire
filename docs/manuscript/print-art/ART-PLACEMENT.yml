@@ -284,6 +284,88 @@ slots:
     caption: Hands Off — AI legal, actuators restricted
     css_class: plate-filler
 
+  # --- L6 / L7 / L8 magical societies (0.3.93) ---
+  # Symbols land on the title heading (Overview page); HQ plates on the headquarters section.
+  # Masters live in docs/directors/lore-research/magical-societies-hq/; the shipped WebP under
+  # assets/factions/ is what Foundry loads.
+  - id: l6-measure-collegium-symbol
+    title: Measure Collegium symbol — the True Measure
+    kind: faction
+    chapter_id: L6
+    after_heading: "# The Measure Collegium"
+    files:
+      - assets/factions/magical-societies/measure-collegium-symbol-512.webp
+    search_dirs:
+      - assets/factions/magical-societies
+    match: measure-collegium-symbol
+    caption: The True Measure — Measure Collegium
+    css_class: plate-faction
+
+  - id: l6-datum-house
+    title: Datum House plate
+    kind: faction
+    chapter_id: L6
+    after_heading: "## Headquarters: Datum House"
+    files:
+      - assets/factions/magical-societies/measure-collegium-datum-house.webp
+    search_dirs:
+      - assets/factions/magical-societies
+    match: measure-collegium-datum-house
+    caption: Datum House — the Collegium's lower-Grid inspection base
+    css_class: plate-faction
+
+  - id: l7-wickkeepers-symbol
+    title: Wickkeepers symbol — the Sheltered Wick
+    kind: faction
+    chapter_id: L7
+    after_heading: "# The Wickkeepers"
+    files:
+      - assets/factions/magical-societies/wickkeepers-symbol-512.webp
+    search_dirs:
+      - assets/factions/magical-societies
+    match: wickkeepers-symbol
+    caption: The Sheltered Wick — Wickkeepers
+    css_class: plate-faction
+
+  - id: l7-last-kettle
+    title: The Last Kettle plate
+    kind: faction
+    chapter_id: L7
+    after_heading: "## Local headquarters: the Last Kettle"
+    files:
+      - assets/factions/magical-societies/wickkeepers-last-kettle.webp
+    search_dirs:
+      - assets/factions/magical-societies
+    match: wickkeepers-last-kettle
+    caption: The Last Kettle — night kitchen and local coordination hub
+    css_class: plate-faction
+
+  - id: l8-ash-survey-symbol
+    title: Ash Survey symbol — the Held Fault
+    kind: faction
+    chapter_id: L8
+    after_heading: "# The Ash Survey"
+    files:
+      - assets/factions/magical-societies/ash-survey-symbol-512.webp
+    search_dirs:
+      - assets/factions/magical-societies
+    match: ash-survey-symbol
+    caption: The Held Fault — Ash Survey
+    css_class: plate-faction
+
+  - id: l8-cinder-yard
+    title: The Cinder Yard plate
+    kind: faction
+    chapter_id: L8
+    after_heading: "## Field headquarters: the Cinder Yard"
+    files:
+      - assets/factions/magical-societies/ash-survey-cinder-yard.webp
+    search_dirs:
+      - assets/factions/magical-societies
+    match: ash-survey-cinder-yard
+    caption: The Cinder Yard — Survey field base at the Flats/Sinks threshold
+    css_class: plate-faction
+
   # --- Peoples / Ancestries (print Ch 6) ---
   - id: people-pure-human
     title: Pure Human plate

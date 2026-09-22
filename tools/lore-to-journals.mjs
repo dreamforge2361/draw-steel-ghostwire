@@ -31,6 +31,7 @@ const FOLDERS = [
   { key: "Peoples", id: "gwLorePackPeople", dir: "peoples", label: "Peoples & World", files: ["L2-peoples-and-world"] },
   { key: "Reach", id: "gwLorePackReach0", dir: "reach", label: "Ossian Reach", files: ["L3-ossian-reach-color"] },
   { key: "Factions", id: "gwLorePackFact00", dir: "factions", label: "VOIDMARK & Accords", files: ["L4-voidmark", "L5-hands-off-accords"] },
+  { key: "MagicalSocieties", id: "gwLorePackSoc000", dir: "magical-societies", label: "Magical Societies", files: ["L6-measure-collegium", "L7-wickkeepers", "L8-ash-survey"] },
 ];
 
 const FILE_CHAPTER = {
@@ -39,6 +40,9 @@ const FILE_CHAPTER = {
   "L3-ossian-reach-color": "L3",
   "L4-voidmark": "L4",
   "L5-hands-off-accords": "L5",
+  "L6-measure-collegium": "L6",
+  "L7-wickkeepers": "L7",
+  "L8-ash-survey": "L8",
 };
 
 const langKey = file => file.replace(/^L\d+-/, "").split("-").map(w => w[0].toUpperCase() + w.slice(1)).join("");

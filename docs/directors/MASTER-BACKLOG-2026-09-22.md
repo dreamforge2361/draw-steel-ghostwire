@@ -1,4 +1,4 @@
-﻿# Ghostwire master backlog — triage 2026-09-22 (updated afternoon)
+# Ghostwire master backlog — triage 2026-09-22 (updated afternoon)
 
 **Module now:** **0.3.92** on main.  
 **Just shipped:** Ritual Working applet (0.3.91) via [PR #74](https://github.com/dreamforge2361/draw-steel-ghostwire/pull/74) and **Plot & Run** top-level Gear folder (0.3.92) via [PR #75](https://github.com/dreamforge2361/draw-steel-ghostwire/pull/75) — both awaiting Michael's Foundry smoke.  
@@ -26,7 +26,8 @@
 | F1 | ~~**Plot & Run** top-level Gear folder~~ | **DONE** 0.3.92 — `gwGearPlot000000` promoted to top level (sort 20000, after Weapons); source moved to `src/packs/gear/plot/`; lang key re-keyed `Gear.Folders.PlotRun` = “Plot & Run”. Gear pack rebuilt. |
 | F2 | Ritual applet polish | Hung/fail, party-fund ¥, assistants, upkeep clocks. |
 | F3 | Formula Item art | Beyond stock scroll icon. |
-| F4 | Pregen regenerate pipeline | Keep portraits/levels/taint + Formulas. |
+| F4 | ~~Pregen regenerate pipeline~~ | **DONE** 0.3.93 — `node tools/pregens-to-actors.mjs` is safe to re-run: portraits / Changer form art / class level from the ROSTER, installed matrix mods from `loadouts.json`, Taint + Corruption History from the new `docs/masters/pregens/post-patches.json`. Reproduces `src/packs/pregens/` byte for byte; Ward the Room stays learned on Kaïs / Vessa / Sabbat. Smoke: `node tools/pregen-regen-smoke.mjs`. |
+| F5 | ~~Magical societies in Foundry + ¥250 pregens~~ | **DONE** 0.3.93 — **Magical Societies** folder in **Ghostwire Lore** with The Measure Collegium / The Wickkeepers / The Ash Survey (symbols + HQ plates + read-alouds, 0 art gaps); sources `docs/manuscript/01-lore/L6–L8`. All seven pregens start at **¥250** (`START_WEALTH`). Checklist: `docs/directors/magical-societies-foundry-smoke-0393.md`. |
 
 ---
 
@@ -90,7 +91,7 @@ Source: `docs/directors/lore-research/2026-09-22-shadowrun-inspiration-magical-f
 
 | # | Item | Notes |
 |---|---|---|
-| LR1 | Onstage three for **Price of a Safe Night**: Measure Collegium, Wickkeepers, Ash Survey | **Queued** — Michael supplying more canon lore; one-pagers then chapter 3 write. |
+| LR1 | ~~**Measure Collegium, Wickkeepers, Ash Survey**~~ | **LOCKED canon** 2026-09-22 — profiles + contacts (`2026-09-22-magical-societies-canon-three.md`) **and** symbol names, HQ names, layouts + art (`2026-09-22-magical-societies-symbols-hq.md`, locked 2026-09-22): True Measure / Datum House, Sheltered Wick / The Last Kettle, Held Fault / The Cinder Yard. **Shipped to Foundry in 0.3.93.** Open: exact atlas addresses; hooks stay optional. |
 | LR2 | **Deepen existing gangs** (Ninth Ward Kings, Rust Saints, Glass Vipers, Metermen, Skinjobs, Nightshift; Hollow Men keep horror role) | **ADOPTED backlog** 2026-09-22 — seven-field template: income / service / dependent / forbidden / internal split / outside patron / current pressure. Do before minting new gang names. |
 | LR3 | Who teaches magic outside corp employment? | Immediate lore gap |
 | LR4 | Who maintains/pays neighborhood wards? | Rent, labor, gang power |
@@ -107,7 +108,16 @@ Source: `docs/directors/lore-research/2026-09-22-shadowrun-inspiration-magical-f
 |---|---|---|
 | 1 | **Deadhead** (Gold Line) | Shipped / playtest weekend |
 | 2 | **Quiet Floor (QF-01)** | Resume after Deadhead |
-| 3 | **Price of a Safe Night** | LOCKED next after Quiet Floor — Flats ward dispute; onstage Measure Collegium, Wickkeepers, Ash Survey (canon dossiers TBD from Michael) |
+| 3 | **Price of a Safe Night** | LOCKED after Quiet Floor — **new district** (not Mama's / Slackwater / Deadhead Gold Line path) to spread hive exposure; onstage Collegium / Wickkeepers / Ash Survey; canon TBD |
 
 Source brief: `docs/directors/lore-research/2026-09-22-shadowrun-inspiration-magical-factions.md` (proposal until faction dossiers lock).
+
+---
+
+## District player journals (LOCKED ask 2026-09-22)
+
+| # | Item | Notes |
+|---|---|---|
+| DJ1 | **Player-facing district lore cards** | For each district already visited (and future ones): culture, perspective, style, lived details. Sections: Rumors, Gangs, Police-like actions, Corporate rumors. Ship as Foundry Journal entries placeable on district maps as clickable Journal cards. |
+| DJ2 | Template for district journal | Standard headings so every district card matches; Director-secret vs player page split if needed. |
 

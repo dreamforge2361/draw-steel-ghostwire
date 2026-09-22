@@ -1,0 +1,326 @@
+{
+  "_id": "J0DWDaXDVehDMZHc",
+  "_key": "!journal!J0DWDaXDVehDMZHc",
+  "name": "GHOSTWIRE.Lore.Journals.AshSurvey",
+  "folder": "gwLorePackSoc000",
+  "sort": 300000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "UBVKt1WI5ZWWKGjq",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.UBVKt1WI5ZWWKGjq",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Held Fault — Ash Survey](modules/draw-steel-ghostwire/assets/factions/magical-societies/ash-survey-symbol-512.webp)\n\n*The Held Fault — Ash Survey — Ghostwire AI (AI-generated)*\n\n**Status:** canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22  \n**Symbol:** The Held Fault · **Field headquarters:** The Cinder Yard (Flats/Sinks threshold)  \n**Contact:** Field Coordinator **Daska Venn** — full-conversion Cyborg, cannot cast  \n**Print:** Lore harvest — magical societies (L6–L8)  \n**Related:** Measure Collegium (L6), Wickkeepers (L7), Incursion & thin places (L1), Rust Saints (L3)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/factions/magical-societies/ash-survey-symbol-512.webp\" alt=\"The Held Fault — Ash Survey\" /></p>\n<p><em>The Held Fault — Ash Survey — Ghostwire AI (AI-generated)</em></p>\n<p><strong>Status:</strong> canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22<br />\n<strong>Symbol:</strong> The Held Fault · <strong>Field headquarters:</strong> The Cinder Yard (Flats/Sinks threshold)<br />\n<strong>Contact:</strong> Field Coordinator <strong>Daska Venn</strong> — full-conversion Cyborg, cannot cast<br />\n<strong>Print:</strong> Lore harvest — magical societies (L6–L8)<br />\n<strong>Related:</strong> Measure Collegium (L6), Wickkeepers (L7), Incursion &amp; thin places (L1), Rust Saints (L3)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "sVoFDDdCjVk2TZG7",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.sVoFDDdCjVk2TZG7",
+      "name": "Who they are",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Ash Survey is a field society that maps thin places, investigates contamination, and checks whether promised remediation actually occurred. Its people work where corporate reassurance, local necessity, and physical evidence fail to agree.\n\nTeams wear patched weather gear and carry dull mineral sample cases, portable instruments, and practical extraction equipment. Casters work beside medics, riggers, witnesses, and demolition crews. Their operating ground includes damaged hive sites, the Flats/Sinks boundary, and hazardous routes into the frontier.\n\n**\"A clean report is not a clean site.\"** That is the Survey's governing maxim. Its authority comes from field experience and independently preserved findings — not from permission to override civic or corporate law.\n\n---",
+        "content": "<p>The Ash Survey is a field society that maps thin places, investigates contamination, and checks whether promised remediation actually occurred. Its people work where corporate reassurance, local necessity, and physical evidence fail to agree.</p>\n<p>Teams wear patched weather gear and carry dull mineral sample cases, portable instruments, and practical extraction equipment. Casters work beside medics, riggers, witnesses, and demolition crews. Their operating ground includes damaged hive sites, the Flats/Sinks boundary, and hazardous routes into the frontier.</p>\n<p><strong>\"A clean report is not a clean site.\"</strong> That is the Survey's governing maxim. Its authority comes from field experience and independently preserved findings — not from permission to override civic or corporate law.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "PrCeUXDhTwRgm4P2",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.PrCeUXDhTwRgm4P2",
+      "name": "Evidence and responsibility",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **What it holds:** An independent incident archive, samples, observations, and practical knowledge of failed containment.\n- **What members receive:** Reconnaissance support, equipment, extraction planning, and colleagues who understand the risks.\n- **What members owe:** Uncensored findings, and a willingness to take difficult assignments — sometimes returning to sites they barely escaped.\n- **Internal dispute:** Quarantine advocates demand immediate closures. Neighborhood advocates insist that sealing a site without moving its residents is abandonment.\n- **Limits:** Survey methods do not guarantee every threat can be detected or cleansed, and a report need not contain a complete explanation of the Incursion.\n\n---",
+        "content": "<ul>\n<li><strong>What it holds:</strong> An independent incident archive, samples, observations, and practical knowledge of failed containment.</li>\n<li><strong>What members receive:</strong> Reconnaissance support, equipment, extraction planning, and colleagues who understand the risks.</li>\n<li><strong>What members owe:</strong> Uncensored findings, and a willingness to take difficult assignments — sometimes returning to sites they barely escaped.</li>\n<li><strong>Internal dispute:</strong> Quarantine advocates demand immediate closures. Neighborhood advocates insist that sealing a site without moving its residents is abandonment.</li>\n<li><strong>Limits:</strong> Survey methods do not guarantee every threat can be detected or cleansed, and a report need not contain a complete explanation of the Incursion.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "yJBzB6tx76rzJPrf",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.yJBzB6tx76rzJPrf",
+      "name": "Field Coordinator Daska Venn",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Daska Venn is a **full-conversion Cyborg** field coordinator. She cannot cast. She runs logistics and extraction, protects the team's living members, and refuses to let sponsors rewrite the casualties.\n\nDaska is a coordinator, **not** proof of a magical exception for Cyborgs — Arcane Severance still applies to her exactly as written. Her membership demonstrates that expertise, courage, and responsibility matter to the Survey even when someone cannot wield magic.\n\n---",
+        "content": "<p>Daska Venn is a <strong>full-conversion Cyborg</strong> field coordinator. She cannot cast. She runs logistics and extraction, protects the team's living members, and refuses to let sponsors rewrite the casualties.</p>\n<p>Daska is a coordinator, <strong>not</strong> proof of a magical exception for Cyborgs — Arcane Severance still applies to her exactly as written. Her membership demonstrates that expertise, courage, and responsibility matter to the Survey even when someone cannot wield magic.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "BVSacQm6TDtFZ4Hd",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.BVSacQm6TDtFZ4Hd",
+      "name": "The symbol: the Held Fault",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "A straight survey stake cuts down through fractured gray ground bands, ending in an amber point. A small cyan instrument light at its head makes the design read as observation and measurement rather than a weapon or an occult execution mark.\n\n- **Meaning:** The break is real, the observer has not looked away, and the record must stay straight even when the ground does not.\n- **Palette:** Slate, ash-silver, charcoal, oxidized amber, and a single cyan witness light. Never substitute real-world radiation, biohazard, or emergency-service insignia.\n- **Where it appears:** Sample cases, weather shells, field carriers, garage shutters, and portable observation stations.\n- **Safety rule:** The mark does **not** mean \"decontaminated\" or \"safe to enter.\" Hazard status requires separate, current information. The symbol only identifies who recorded or handled something.\n\n---",
+        "content": "<p>A straight survey stake cuts down through fractured gray ground bands, ending in an amber point. A small cyan instrument light at its head makes the design read as observation and measurement rather than a weapon or an occult execution mark.</p>\n<ul>\n<li><strong>Meaning:</strong> The break is real, the observer has not looked away, and the record must stay straight even when the ground does not.</li>\n<li><strong>Palette:</strong> Slate, ash-silver, charcoal, oxidized amber, and a single cyan witness light. Never substitute real-world radiation, biohazard, or emergency-service insignia.</li>\n<li><strong>Where it appears:</strong> Sample cases, weather shells, field carriers, garage shutters, and portable observation stations.</li>\n<li><strong>Safety rule:</strong> The mark does <strong>not</strong> mean \"decontaminated\" or \"safe to enter.\" Hazard status requires separate, current information. The symbol only identifies who recorded or handled something.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "TW87qx6Sd3RLZZ0j",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.TW87qx6Sd3RLZZ0j",
+      "name": "Field headquarters: the Cinder Yard",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Cinder Yard — Survey field base at the Flats/Sinks threshold](modules/draw-steel-ghostwire/assets/factions/magical-societies/ash-survey-cinder-yard.webp)\n\n*The Cinder Yard — Survey field base at the Flats/Sinks threshold — Ghostwire AI (AI-generated)*\n\nThe Cinder Yard is a repurposed freight-transfer garage at the industrial **Flats/Sinks threshold**. Retaining walls, drainage grates, a gantry crane, and a narrow overlook make it feel like working infrastructure adapted to a more dangerous profession.\n\nIts location supports expeditions into damaged hive levels and onward routes without putting a comfortable research campus inside an active breach. The name does not make it part of Cinderhold; the exact atlas site is still open.\n\n> **Read aloud**\n> Amber lamps catch rain running through the yard's grates. A carrier waits beneath the gantry while a narrow wash-down bay hisses beside it; beyond the rail, abandoned freight levels fall away into darkness. On the shutter, a straight instrument stake crosses fractured ground and ends in one stubborn amber point.\n\n---",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/factions/magical-societies/ash-survey-cinder-yard.webp\" alt=\"The Cinder Yard — Survey field base at the Flats/Sinks threshold\" /></p>\n<p><em>The Cinder Yard — Survey field base at the Flats/Sinks threshold — Ghostwire AI (AI-generated)</em></p>\n<p>The Cinder Yard is a repurposed freight-transfer garage at the industrial <strong>Flats/Sinks threshold</strong>. Retaining walls, drainage grates, a gantry crane, and a narrow overlook make it feel like working infrastructure adapted to a more dangerous profession.</p>\n<p>Its location supports expeditions into damaged hive levels and onward routes without putting a comfortable research campus inside an active breach. The name does not make it part of Cinderhold; the exact atlas site is still open.</p>\n<blockquote>\n  <p><strong>Read aloud</strong>\n  Amber lamps catch rain running through the yard's grates. A carrier waits beneath the gantry while a narrow wash-down bay hisses beside it; beyond the rail, abandoned freight levels fall away into darkness. On the shutter, a straight instrument stake crosses fractured ground and ends in one stubborn amber point.</p>\n</blockquote>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "Nc8ZNPytiaxSJLil",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.Nc8ZNPytiaxSJLil",
+      "name": "Spaces that matter",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **The Dirty Return:** A separate arrival lane for exposed teams and equipment. Check-in, isolation, and wash-down come before movement into other spaces — established-setting precautions, not a miraculous cleansing arch.\n- **The Sample Lock:** Controlled temporary storage and documented transfers. The main research archive is deliberately kept apart from unassessed material.\n- **The Clean Bench:** Analysis, equipment calibration, report preparation, and repair after clearance. Technicians can name uncertainty without pretending an instrument explains a supernatural event.\n- **The Gantry Bay:** Maintenance and loading for utility carriers, drones, winches, and field gear. **This is not an armory for a private army.**\n- **The Dispatch Loft:** Route planning, radio work, and extraction coordination with a clear view over the yard. It preserves field testimony as well as operating records.\n\n---",
+        "content": "<ul>\n<li><strong>The Dirty Return:</strong> A separate arrival lane for exposed teams and equipment. Check-in, isolation, and wash-down come before movement into other spaces — established-setting precautions, not a miraculous cleansing arch.</li>\n<li><strong>The Sample Lock:</strong> Controlled temporary storage and documented transfers. The main research archive is deliberately kept apart from unassessed material.</li>\n<li><strong>The Clean Bench:</strong> Analysis, equipment calibration, report preparation, and repair after clearance. Technicians can name uncertainty without pretending an instrument explains a supernatural event.</li>\n<li><strong>The Gantry Bay:</strong> Maintenance and loading for utility carriers, drones, winches, and field gear. <strong>This is not an armory for a private army.</strong></li>\n<li><strong>The Dispatch Loft:</strong> Route planning, radio work, and extraction coordination with a clear view over the yard. It preserves field testimony as well as operating records.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "qkcK7BybSC7HgynL",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.qkcK7BybSC7HgynL",
+      "name": "Access and pressure",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Daska coordinates departures and returns from here. Dirty and clean routes are deliberately separated, and visitors do not stroll into sample storage. Mechanical segregation, controlled access, trained handling, and relevant ward procedures reduce risk — they grant no automatic resistance, cure no contamination, and bypass no RAW.\n\n- **Immediate pressure:** A sponsor wants an original sample returned before the Survey finishes a comparison test.\n- **Location secret:** The Dispatch Loft holds evidence that the best emergency exit crosses a site that was never fully cleared.\n- **Job seed:** A returning team's carrier approaches with conflicting passenger counts and an intact sample seal. The crew must establish what happened without assuming the discrepancy proves possession.\n\n---",
+        "content": "<p>Daska coordinates departures and returns from here. Dirty and clean routes are deliberately separated, and visitors do not stroll into sample storage. Mechanical segregation, controlled access, trained handling, and relevant ward procedures reduce risk — they grant no automatic resistance, cure no contamination, and bypass no RAW.</p>\n<ul>\n<li><strong>Immediate pressure:</strong> A sponsor wants an original sample returned before the Survey finishes a comparison test.</li>\n<li><strong>Location secret:</strong> The Dispatch Loft holds evidence that the best emergency exit crosses a site that was never fully cleared.</li>\n<li><strong>Job seed:</strong> A returning team's carrier approaches with conflicting passenger counts and an intact sample seal. The crew must establish what happened without assuming the discrepancy proves possession.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "8JQyyIhnxC9qsExU",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.8JQyyIhnxC9qsExU",
+      "name": "Standing and liability",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Rust Saints provide heavy labor for Survey work at negotiated terms. Their established kinship loyalties and hard terms still apply: cooperation on a job is not institutional ownership and not unconditional allegiance.\n\nThe Survey's best escape corridor crosses a site that was never fully cleared. Closing the route protects future travelers but strands people who currently depend on it. Leaving it open without warning makes the Survey complicit in exactly the kind of concealment it condemns.\n\nVerdant's frontier interests and Kestrel's expanding routes can bring either corporation into contact with Survey findings, but **no standing corporate partnership is established**. A Lazarus extraction contract remains a future option, not an existing agreement.\n\n---",
+        "content": "<p>The Rust Saints provide heavy labor for Survey work at negotiated terms. Their established kinship loyalties and hard terms still apply: cooperation on a job is not institutional ownership and not unconditional allegiance.</p>\n<p>The Survey's best escape corridor crosses a site that was never fully cleared. Closing the route protects future travelers but strands people who currently depend on it. Leaving it open without warning makes the Survey complicit in exactly the kind of concealment it condemns.</p>\n<p>Verdant's frontier interests and Kestrel's expanding routes can bring either corporation into contact with Survey findings, but <strong>no standing corporate partnership is established</strong>. A Lazarus extraction contract remains a future option, not an existing agreement.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "vU9DD3QhGxafv4OF",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.vU9DD3QhGxafv4OF",
+      "name": "Director boundaries",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The material below is play fuel, not settled history.\n\n- **The Original Samples:** Escort a team into a supposedly remediated building and recover the original samples. The employer paid for testing — not necessarily for the answer.\n- **Optional escalation:** Sponsor suppresses sample → residents report symptoms → site declared inaccessible → contaminated property quietly changes hands.\n- **Hold the line:** Preserve the choice between warning, evacuation, repair, disclosure, and negotiation. **A contaminated property is not automatically a portal to the campaign's final confrontation.**\n\n---",
+        "content": "<p>The material below is play fuel, not settled history.</p>\n<ul>\n<li><strong>The Original Samples:</strong> Escort a team into a supposedly remediated building and recover the original samples. The employer paid for testing — not necessarily for the answer.</li>\n<li><strong>Optional escalation:</strong> Sponsor suppresses sample → residents report symptoms → site declared inaccessible → contaminated property quietly changes hands.</li>\n<li><strong>Hold the line:</strong> Preserve the choice between warning, evacuation, repair, disclosure, and negotiation. <strong>A contaminated property is not automatically a portal to the campaign's final confrontation.</strong></li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "cZOJ5Jc7jvQ1FQH0",
+      "_key": "!journal.pages!J0DWDaXDVehDMZHc.cZOJ5Jc7jvQ1FQH0",
+      "name": "Using all three together",
+      "type": "text",
+      "sort": 1100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "These societies have complementary skills and competing duties. The Collegium asks whether the protection meets a defensible standard; the Wickkeepers ask where the residents will sleep tonight; the Survey asks whether the danger has actually been understood. **All three can be right about part of the same crisis.** No fixed alliance, enmity, shared headquarters, or single chain of command is required for that tension to produce play.\n\nA disputed inspection begins at Datum House, displaced residents seek help at the Last Kettle, and recovered evidence goes to the Cinder Yard. The crew moves among three recognizable places while the same incident changes meaning at each stop. Players can build trust with all three without agreeing to every demand.\n\n### Optional opening: The Price of a Safe Night\n\nAn occupied Flats block has failing wards and residents who cannot afford to leave. A missing technician's records may explain why the installed protection does not match the certified work.\n\nUse the three societies as competing sources of help, evidence, and pressure. The crew may save the building, arrange an evacuation, expose fraud, or force a responsible party to fund repairs. Do not assume an unapproved faction such as the Closed Hand is behind the failure — the Quiet Relay, First Ledger Society, Ninth Knot, Gilt Table, and Closed Hand are **not** established.",
+        "content": "<p>These societies have complementary skills and competing duties. The Collegium asks whether the protection meets a defensible standard; the Wickkeepers ask where the residents will sleep tonight; the Survey asks whether the danger has actually been understood. <strong>All three can be right about part of the same crisis.</strong> No fixed alliance, enmity, shared headquarters, or single chain of command is required for that tension to produce play.</p>\n<p>A disputed inspection begins at Datum House, displaced residents seek help at the Last Kettle, and recovered evidence goes to the Cinder Yard. The crew moves among three recognizable places while the same incident changes meaning at each stop. Players can build trust with all three without agreeing to every demand.</p>\n<h3>Optional opening: The Price of a Safe Night</h3>\n<p>An occupied Flats block has failing wards and residents who cannot afford to leave. A missing technician's records may explain why the installed protection does not match the certified work.</p>\n<p>Use the three societies as competing sources of help, evidence, and pressure. The crew may save the building, arrange an evacuation, expose fraud, or force a responsible party to fund repairs. Do not assume an unapproved faction such as the Closed Hand is behind the failure — the Quiet Relay, First Ledger Society, Ninth Knot, Gilt Table, and Closed Hand are <strong>not</strong> established.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/manuscript/01-lore/L8-ash-survey.md"
+    }
+  }
+}

@@ -97,7 +97,7 @@
       "xp": 0,
       "victories": 0,
       "renown": 1,
-      "wealth": 1
+      "wealth": 250
     },
     "skills": {
       "value": [
@@ -2769,6 +2769,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "gear": {
             "echelon": 1,
             "availability": "professional",
@@ -2949,79 +2952,6 @@
       "_key": "!actors.items!KPCLV5MeIfUCbBXw.UUBHCHs9XytCOJ46"
     },
     {
-      "_id": "wHt0uT7mAgK3s1cQ",
-      "name": "GHOSTWIRE.Matrix.Items.Whiteout.Name",
-      "type": "treasure",
-      "img": "icons/commodities/tech/usb-thumb-drive.webp",
-      "system": {
-        "description": {
-          "value": "GHOSTWIRE.Matrix.Items.Whiteout.Description",
-          "director": "GHOSTWIRE.Matrix.Items.Whiteout.Director"
-        },
-        "source": {
-          "book": "Ghostwire Core Rulebook",
-          "page": "Master Gear List",
-          "license": "Draw Steel Creator License"
-        },
-        "_dsid": "whiteout",
-        "kind": "other",
-        "category": "trinket",
-        "echelon": 1,
-        "keywords": [],
-        "quantity": 2,
-        "project": {
-          "prerequisites": "",
-          "source": "",
-          "rollCharacteristic": [],
-          "yield": {
-            "amount": "1",
-            "display": ""
-          },
-          "goal": null
-        }
-      },
-      "folder": "rPSzM2YqrQBEstrv",
-      "sort": 0,
-      "ownership": {
-        "default": 0
-      },
-      "flags": {
-        "draw-steel-ghostwire": {
-          "matrix": {
-            "echelon": 1,
-            "availability": "restricted",
-            "price": 3500,
-            "modSlots": 0,
-            "tags": [
-              "Program",
-              "Consumable",
-              "Wired"
-            ],
-            "consumable": true,
-            "role": "payload",
-            "craftDifficulty": "hard"
-          },
-          "mod": {
-            "slotCost": 1,
-            "hosts": [
-              "deck",
-              "resonance",
-              "body"
-            ],
-            "host": "deck",
-            "craftSkill": [
-              "hacking"
-            ],
-            "magazine": true,
-            "installedOn": "bo3o1nPpbkYDocLz",
-            "active": true
-          }
-        }
-      },
-      "effects": [],
-      "_key": "!actors.items!KPCLV5MeIfUCbBXw.wHt0uT7mAgK3s1cQ"
-    },
-    {
       "_id": "lAnJaKK2l1ONSEbA",
       "name": "GHOSTWIRE.Chrome.CyberEarsSoft.Name",
       "type": "treasure",
@@ -3111,7 +3041,6 @@
     },
     {
       "_id": "gwRitWardRoom000",
-      "_key": "!actors.items!KPCLV5MeIfUCbBXw.gwRitWardRoom000",
       "name": "GHOSTWIRE.Gear.Items.RitualWardTheRoom.Name",
       "type": "treasure",
       "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
@@ -3142,7 +3071,6 @@
           "goal": null
         }
       },
-      "effects": [],
       "folder": "gwGearRitualForm",
       "sort": 1000,
       "ownership": {
@@ -3175,7 +3103,82 @@
             "learned": true
           }
         }
-      }
+      },
+      "effects": [],
+      "_key": "!actors.items!KPCLV5MeIfUCbBXw.gwRitWardRoom000"
+    },
+    {
+      "_id": "wHt0uT7mAgK3s1cQ",
+      "name": "GHOSTWIRE.Matrix.Items.Whiteout.Name",
+      "type": "treasure",
+      "img": "icons/commodities/tech/usb-thumb-drive.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.Whiteout.Description",
+          "director": "GHOSTWIRE.Matrix.Items.Whiteout.Director"
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "Master Gear List",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "whiteout",
+        "kind": "other",
+        "category": "trinket",
+        "echelon": 1,
+        "keywords": [],
+        "quantity": 2,
+        "project": {
+          "prerequisites": "",
+          "source": "",
+          "rollCharacteristic": [],
+          "yield": {
+            "amount": "1",
+            "display": ""
+          },
+          "goal": null
+        }
+      },
+      "folder": "rPSzM2YqrQBEstrv",
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "matrix": {
+            "echelon": 1,
+            "availability": "restricted",
+            "price": 3500,
+            "modSlots": 0,
+            "tags": [
+              "Program",
+              "Consumable",
+              "Wired"
+            ],
+            "consumable": true,
+            "role": "payload",
+            "craftDifficulty": "hard"
+          },
+          "mod": {
+            "slotCost": 1,
+            "hosts": [
+              "deck",
+              "resonance",
+              "body"
+            ],
+            "host": "deck",
+            "craftSkill": [
+              "hacking"
+            ],
+            "magazine": true,
+            "installedOn": "bo3o1nPpbkYDocLz",
+            "active": true
+          }
+        }
+      },
+      "effects": [],
+      "_key": "!actors.items!KPCLV5MeIfUCbBXw.wHt0uT7mAgK3s1cQ"
     }
   ],
   "effects": [],

@@ -8297,6 +8297,7 @@
         "Peoples": "Peoples & World",
         "Reach": "Ossian Reach",
         "Factions": "VOIDMARK & Accords",
+        "MagicalSocieties": "Magical Societies",
         "Megacorps": "Twelve Conglomerates"
       },
       "Journals": {
@@ -8306,6 +8307,9 @@
         "OssianReachColor": "Ossian Reach — Street Color",
         "Voidmark": "VOIDMARK",
         "HandsOffAccords": "The Hands Off Accords",
+        "MeasureCollegium": "The Measure Collegium",
+        "Wickkeepers": "The Wickkeepers",
+        "AshSurvey": "The Ash Survey",
         "HaloAscendant": "HALO Ascendant (HAL)",
         "FerrumDynastic": "Ferrum Dynastic (FER)",
         "MeridianSignal": "Meridian Signal (MER)",

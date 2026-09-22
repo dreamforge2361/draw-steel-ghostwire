@@ -97,7 +97,7 @@
       "xp": 0,
       "victories": 0,
       "renown": 1,
-      "wealth": 1
+      "wealth": 250
     },
     "skills": {
       "value": [
@@ -902,7 +902,7 @@
                 "uuid": "Compendium.draw-steel-ghostwire.classes.Item.PcDOAkx5P9m0a0mc"
               }
             ],
-            "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Advantage to use. (<em>Quick Build:</em> Kill Confirm.)</p>",
+            "description": "<p>Choose one heroic ability from the following options, each of which costs 5 Advantage to use. (<em>Quick Build:</em> Coup de Grâce.)</p>",
             "chooseN": 1,
             "sort": 25000,
             "additional": {
@@ -936,7 +936,7 @@
             "_id": "kXgsvoXsheWVxZ25",
             "img": null,
             "repick": {},
-            "name": "Glass the Block",
+            "name": "Careful Observation",
             "type": "itemGrant",
             "requirements": {
               "level": 3
@@ -1425,7 +1425,7 @@
             "chooseN": null
           },
           "D17R1ZQ02Fp3J2XW": {
-            "name": "Hard Tag",
+            "name": "Quarry",
             "img": null,
             "type": "itemGrant",
             "requirements": {
@@ -3388,6 +3388,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "gear": {
             "echelon": 1,
             "availability": "street",
@@ -3578,14 +3581,14 @@
       "pregen": "wren-sable-corvin",
       "biSpent": 0,
       "biRemaining": 20,
-      "changer": {
-        "humanArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin.webp",
-        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-beast.webp",
-        "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-hybrid.webp"
-      },
       "integrity": {
         "value": 20,
         "max": 20
+      },
+      "changer": {
+        "humanArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin.webp",
+        "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-hybrid.webp",
+        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/wren-sable-corvin-beast.webp"
       },
       "taint": 0,
       "corruptionHistory": ""
