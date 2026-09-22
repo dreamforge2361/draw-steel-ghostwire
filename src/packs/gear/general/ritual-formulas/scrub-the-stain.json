@@ -1,0 +1,71 @@
+{
+  "_id": "gwRitScrubStain0",
+  "_key": "!items!gwRitScrubStain0",
+  "name": "GHOSTWIRE.Gear.Items.RitualScrubTheStain.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualScrubTheStain.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-scrub-the-stain",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 21000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥100 / ¥300 / ¥1,000 / ¥4,000 / ¥12,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Unmaking",
+        "magnitude": 1,
+        "magnitudeMax": 5,
+        "magnitudeText": "1–5 (equal to or greater than the stain)",
+        "leaders": "General",
+        "form": "ritual scroll or datachip, annotated with stain taxonomy",
+        "componentsTotal": [
+          "¥100",
+          "¥300",
+          "¥1,000",
+          "¥4,000",
+          "¥12,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

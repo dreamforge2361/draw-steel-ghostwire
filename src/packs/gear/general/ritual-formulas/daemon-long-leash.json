@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitDaemonLongL",
+  "_key": "!items!gwRitDaemonLongL",
+  "name": "GHOSTWIRE.Gear.Items.RitualDaemonLongLeash.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualDaemonLongLeash.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Technomancer (Wire-rites)",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-daemon-long-leash",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 42000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,200 / ¥4,200)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Calling",
+        "magnitude": 3,
+        "magnitudeMax": 4,
+        "magnitudeText": "3–4",
+        "leaders": "Technomancer only",
+        "form": "encrypted job-stick (datachip)",
+        "componentsTotal": [
+          "¥1,200",
+          "¥4,200"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

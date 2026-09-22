@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitReagentStil",
+  "_key": "!items!gwRitReagentStil",
+  "name": "GHOSTWIRE.Gear.Items.RitualReagentStill.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualReagentStill.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-reagent-still",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 15000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥100 / ¥250)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Artifice",
+        "magnitude": 1,
+        "magnitudeMax": 2,
+        "magnitudeText": "1–2",
+        "leaders": "General",
+        "form": "scroll recipe or datachip",
+        "componentsTotal": [
+          "¥100",
+          "¥250"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

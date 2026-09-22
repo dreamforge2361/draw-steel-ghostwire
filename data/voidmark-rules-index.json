@@ -75,7 +75,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1427,
+  "chunkCount": 1489,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -5601,7 +5601,7 @@
       "chapter": "The Veil",
       "heading": "The Veil",
       "kind": "rules",
-      "text": "**RAW status:** draft (B43 Ritual Working locked 2026-09-18; §C3 Summon Entities locked 2026-09-18)  \n**Sources:** `docs/rulebook/06-elementalist.md`, `docs/rulebook/07-street-priest.md`, `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/rulebook/17-perks.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (Category 6), `docs/directors/veil-rituals-exploration.md` (B43)\n\n---"
+      "text": "**RAW status:** draft (B43 Ritual Working locked 2026-09-18, card catalog 0.3.88; §C3 Summon Entities locked 2026-09-18)  \n**Sources:** `docs/rulebook/06-elementalist.md`, `docs/rulebook/07-street-priest.md`, `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/rulebook/17-perks.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (Category 6), `docs/directors/veil-rituals-exploration.md` (B43), `docs/directors/ritual-chapter-draft.md` (0.3.88)\n\n---"
     },
     {
       "id": "22-the-veil#what-this-chapter-covers#2",
@@ -5667,142 +5667,700 @@
       "text": "Any runner can take a **supernatural perk** (`11`): small Veil and Signal gifts, not spellcasting. Veil Trick has the Magic keyword, so a Cyborg can't use it.\n\n---"
     },
     {
-      "id": "22-the-veil#ritual-workings-locked-2026-09-18-b43#9",
+      "id": "22-the-veil#ritual-workings#9",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "Ritual Workings (LOCKED 2026-09-18 — B43)",
+      "heading": "Ritual Workings",
       "kind": "rules",
-      "text": "Encounter abilities (Essence / Conviction / Resonance) are the fight toolkit. A **Ritual Working** is long-form big magic: a **Project** chain (`03`) on the same §Craft downtime spine as Invent a Mod (`08`, `10`). It spends yen, lore, reagents, and **Veil Price / spirit-attention**, and pays out effects encounter casting should not cheaply do.\n\nRituals are **between runs** (or a dedicated session beat). They never replace combat resource economy."
+      "text": "*B43 lock 2026-09-18 · full card catalog 0.3.88 (46 Workings). One chapter shape: shared rules once, then every Working as a card.*"
     },
     {
-      "id": "22-the-veil#who-leads-and-who-assists#10",
+      "id": "22-the-veil#what-a-ritual-working-is#10",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "Who leads and who assists",
+      "heading": "What a Ritual Working is",
       "kind": "rules",
-      "text": "| Role | Who |\n|---|---|\n| **Leader** | Must know the rite. Normally **Elementalist**, **Street Priest**, or **Technomancer** (Wire-rites). Director may allow a cult NPC leader. |\n| **Assistants** | Any hero (including non-casters): grant edges or Project Points on sealing per Director. |\n| **Fund only** | A crew **without** a caster may hire/fund an NPC leader who knows the rite (yen + favor / debt). |\n| **Barred** | Cyborgs cannot lead (Arcane Severance). |"
+      "text": "Your encounter abilities are the fight toolkit. A **Ritual Working** is long-form big magic: a chain of downtime **Projects** that spend yen, study, reagents, and the Veil's attention. In exchange they do things encounter casting never cheaply does — ward a flat overnight, bind a named spirit to your safehouse, open a path between two thin places, carve a relic.\n\nRituals happen **between runs** or in a **dedicated session beat** (a sealing night, a climax scene). They never replace the fight toolkit."
     },
     {
-      "id": "22-the-veil#magnitude#11",
+      "id": "22-the-veil#the-resource-firewall-every-working#11",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "The resource firewall (every Working)",
+      "kind": "rules",
+      "text": "- Rituals **never** spend **Essence**, **Conviction**, or **Resonance** — not to find, learn, gather, build, seal, maintain, or keep a payoff alive in a fight. Those pools are encounter casting only.\n- Ritual costs are: **¥**, **reagents**, **downtime** (project slots and Project progress), **Price** (personal debt, spirit-attention, favor owed — fiction, not pool points), and **Malice** ticks for the Director.\n- A Technomancer's **Resonance Price** on a Wire-rite means narrative attention and Incursion heat. It is **not** spending the Resonance pool.\n\nThe **Combat translation** line on every card says what the Working does when a fight breaks out. None of them charge a pool."
+    },
+    {
+      "id": "22-the-veil#who-may-lead-who-may-help#12",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Who may lead, who may help",
+      "kind": "rules",
+      "text": "| Role | Who |\n|---|---|\n| **Leader** | Must have **learned** the Working. Normally an **Elementalist**, **Street Priest**, or **Technomancer** (Wire-rites and Wire skins). The Director may allow an NPC cult leader. |\n| **Assistants** | Any hero, casters or not. Grant edges on the study or sealing roll, or Project progress, as the card or Director allows. |\n| **Fund only** | A crew with no caster can hire an NPC leader who knows the Working (¥ plus favor or debt). |\n| **Barred** | **Cyborgs** can never lead (Arcane Severance). They can assist with hands, muscle, and money. |\n\nEach card names its leaders:\n- **General** — Elementalist, Street Priest, or Technomancer. When a Technomancer leads, the Working takes its **Wire skin** (circuit-chalk for salt, datachip for scroll, daemon for spirit) unless the card says otherwise.\n- **Elementalist only**, **Street Priest only**, **Technomancer only** — just that class."
+    },
+    {
+      "id": "22-the-veil#magnitude#13",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
       "heading": "Magnitude",
       "kind": "rules",
-      "text": "Replaces SR-style Force. Caps by leader **echelon** and sanctum rating (sanctum rating must be greater than or equal to Magnitude).\n\n| Magnitude | Rough echelon | Example payoffs |\n|---|---|---|\n| 1 | E1 | Personal charm/rune (session), watcher-spirit hours, ward a room |\n| 2 | E1-2 | Enchant a street focus, remote viewing with spotter, seal a flat |\n| 3 | E2-3 | Permanent item (Availability Restricted+), block-scale ward, short thin-path |\n| 4 | E3-4 | Prototype relic, district gateway, bind a named spirit to a site |\n| 5 | E4 / campaign | Apex gate, unmake a major seal (Director veto heavy) |\n\n**Wire-rites** (Technomancer-led) use this **same** Magnitude ladder — no separate Resonance track."
+      "text": "**Magnitude** measures how big a Working is, from 1 to 5. It sets study time, Project goals, sanctum rating, detection range, and how hard the Working is to counter. Spell it out at the table — \"Magnitude 3\", not an abbreviation.\n\n| Magnitude | Earliest leader echelon | Example payoffs |\n|---|---|---|\n| 1 | Echelon 1 | Ward a room overnight, a session charm, a watcher for hours |\n| 2 | Echelon 1 | Charm a street focus, remote viewing through a spotter, seal a flat |\n| 3 | Echelon 2 | Permanent Restricted item, block-scale ward, a short thin-path |\n| 4 | Echelon 3 | Prototype relic, district gateway, bind a named spirit to a site |\n| 5 | Echelon 4 / campaign | Apex gate, unmake a major seal (heavy Director veto) |\n\nSealing also needs a **sanctum rating** at least equal to the Working's Magnitude (see Sanctum).\n\n**Wire-rites** use this same Magnitude ladder. There is no separate Resonance track.\n\n**Magnitude ranges.** Some cards list a range (for example \"Magnitude 2–3\"). Each Formula Item copy is written at **one** Magnitude inside that range; the Director sets it when the Item is found. That copy's Magnitude sets study time, study goal, and sanctum. A stronger copy is a new find and a new study.\n\n**\"Magnitude equal to or greater than the original.\"** Unmaking Workings that scrub or break something must meet or beat the target's Magnitude. The Formula copy's Magnitude is the ceiling of what it can scrub."
     },
     {
-      "id": "22-the-veil#stages-one-project-chain#12",
-      "file": "22-the-veil.md",
-      "source": "docs/raw/22-the-veil.md",
-      "chapter": "The Veil",
-      "heading": "Stages (one Project chain)",
-      "kind": "rules",
-      "text": "1. **Lore** — Acquire or decode the rite (library, mentor, stolen grimoire, thin-place vision). Project Power Roll (**Logic** or **Instinct**; Rituals / Occult / Religion / Matrix Theory as appropriate grant edge). Goal points scale with Magnitude.\n2. **Components** — Spend yen + Availability-gated reagents/foci parts. Optional **run** to steal a unique reagent (adventure hook). Extra reagents later grant edges or blunt Price.\n3. **Sanctum** — Claim or build working space (days about equal to Magnitude; yen for materials).\n   - **Temporary (default):** lasts until next dawn/dusk or until one sealing completes; costs more reagents if rushed.\n   - **Permanent:** crew/world asset (safehouse upgrade). Requires upfront yen + ongoing lifestyle/upkeep; rating can rise with further Projects. Sanctum rating must meet or exceed Magnitude to seal that Magnitude.\n4. **Sealing** — Leader + participants commit a downtime block or short climax scene. One collaborative Power Roll (leader's tradition characteristic: Logic / Persona / as printed; assistants grant edges or Project Points). Then **Price** resolves and **spirit-attention** ticks (Magnitude-scaled into Malice fuel).\n5. **Payoff** — Effect lands; components consumed; temporary sanctum spent (or permanent lodge remains with upkeep)."
-    },
-    {
-      "id": "22-the-veil#effect-families#13",
+      "id": "22-the-veil#effect-families#14",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
       "heading": "Effect families",
       "kind": "rules",
-      "text": "| Family | Examples | Notes |\n|---|---|---|\n| **Artifice** | Enchant weapon/armor/focus, carve runes | Output = one-off Item with Veil flags (catalog SKUs later) |\n| **Ward** | Room/flat/block barrier, anti-spirit, anti-Wire bleed | Printed duration or upkeep |\n| **Reach** | Remote sense/strike via spotter | Spotter must Overlay / Jacked In / astral-equivalent; can be traced |\n| **Calling** | Long bind, site guardian, watcher | Persistent Price while bound |\n| **Threshold** | Open/close thin places, short gates | High heat; Concord/corps notice |\n| **Unmaking** | Break curses, scrub **Taint**, collapse a ward | Often Magnitude at least the original. Taint cleanse ladder and Magnitude gates live in `27-corruption-taint.md` |"
+      "text": "| Family | What it does | Cards |\n|---|---|---|\n| **Ward** | Barriers on a room, door, flat, block, or node. Ambient banes, not walls. | Ward the Room, Seal the Flat, Door-Seal Glyph, Charged Perimeter, Lodge Keystone, Storm Ward, Confession Ward, Data Ward |\n| **Reach** | Sense (or aim) across distance through a spotter or a link. Can be traced. | Remote Sense, Hair-and-Wire Link, Keepsake Link, Effigy Link, Deep Overlay Sense |\n| **Calling** | Watchers, binds, guardians, vessels, allies. | Watcher, Site Bind, Long Leash, True-Name Collar, Vessel Dressing, Invoke Greater Shape, Nest Claim, Ally Heart, Ally Reforge, Daemon Long Leash, True-Handle Collar, Chassis Dressing |\n| **Threshold** | Open or reshape thin places. High heat. | Thin-Path, Domain Aspect, Consecrated Thin-Path, Bridge Thin-Path |\n| **Artifice** | Make or charm Items. Output is gear with Veil flags. | Street-Focus Charm, Reagent Still, True Relic Carve, Anchor Rune, Telesma Birth, Signal Charm |\n| **Unmaking** | Break curses, scrub Taint and stains, collapse wards, spoil rival rites. | Scrub the Stain, Hive Crack, Exorcist's Unmaking, Blood-Price Refusal, Uncrook the Path, Scrub the Ghost-Code, Detox Domain |\n| **Other** | Circles, charters, pacts — rules about who seals and how. | Circle of Many, Exclusive Charter Rite, Great Circle, Pact Charter |"
     },
     {
-      "id": "22-the-veil#detection-buildup-is-a-clock#14",
+      "id": "22-the-veil#veil-versus-wire-scope#15",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "Detection (buildup is a clock)",
+      "heading": "Veil versus Wire (scope)",
       "kind": "rules",
-      "text": "Each stage past **Lore** accumulates **Veil pressure** about equal to Magnitude (Director track).\n\n| Magnitude | Leak range |\n|---|---|\n| 1-2 | **District** — local casters, thin-place sensitive, nearby Overlay |\n| 3 | Hive **whisper** — sensitive casters across the Reach may notice |\n| 4-5 | Hive-wide / faction clocks — Concord, corps, rival ritualists |\n\n**Overlay / Jacked In** grants an edge to notice **Wire-rites** in the **district**. Citywide Overlay detection only at Magnitude **4+**.\n\nSuccess on a notice check reveals: working underway, rough Magnitude band, tradition flavor, direction/distance band — not the rite name unless high success or prior Lore.\n\nQuiet Lore + shopping: little leak. Sanctum raised: detectable per table. Sealing night: loud — nearby casters get a free notice check."
+      "text": "A Veil Working touches **spirits** and **Magic-keyword / Veil** targeting. It does **not** touch Wire-only things: sprites, Agents, Watchdog and other ICE, or pure Overlay / Jacked-In Matrix verbs with no Magic keyword.\n\n- **Veil wards do not stop Wire-only intrusion.** To keep sprites, Agents, and ICE out of a room or node, use a Wire-rite ward: **Data Ward**.\n- A Wire-rite ward does not stop spirits. Crews who fear both lay both.\n- Wire skins of General Workings keep the Working's scope unless the card says the skin changes it.\n\nEach card's **Scope notes** line says which side of this line it sits on."
     },
     {
-      "id": "22-the-veil#countermagic#15",
+      "id": "22-the-veil#the-formula-item-find-learn-cast#16",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "The Formula Item: find, learn, cast",
+      "kind": "rules",
+      "text": "Every Working lives on a **Formula Item** on a character sheet. The Item's description **is** the full card — everything in that Working's entry below.\n\n| Form | Feel | Typical use |\n|---|---|---|\n| **Datachip / job-stick** | Digital formula, Wire-native, easy to copy wrong | Wire-rites; Wire skins of General Workings |\n| **Ritual scroll** | A single rite on a fragile sheet | Magnitude 1–3 General and tradition Workings |\n| **Tome** (grimoire, bound volume) | Thick, detailed, often **bulky** in inventory | Magnitude 3–5, Callings, Thresholds, charters |\n\n1. **Find** the Formula Item once — a data steal, a faction or organization archive, a mentor's gift, a stolen grimoire, a thin-place vision. Formula Items are **not** sold at ordinary vendors. Reagents may be; the Formula is not.\n2. **Learn** it (study, below). Owning the Item does not let you cast. The Director marks it **learned** for you when study completes.\n3. **Cast** only with the Formula Item (or a verified copy) present at sealing **and** the learned mark."
+    },
+    {
+      "id": "22-the-veil#projects-in-one-paragraph#17",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Projects, in one paragraph",
+      "kind": "rules",
+      "text": "A Project is a downtime job with a **goal** (a number). Each Project roll uses one **project slot** from your Lifestyle band (Squatter 1, Low 1 or 2 with a hireling, Middle 2, High 3, Elite 4 per respite). Make the Power Roll the Project names, then add **progress**: **low = 1**, **middle = 2**, **high = 3**. The Project is done when progress meets the goal."
+    },
+    {
+      "id": "22-the-veil#the-five-stages#18",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "The five stages",
+      "kind": "rules",
+      "text": "Every Working runs the same chain. Only some stages are Projects.\n\n| Stage | Is it a Project? | Goal |\n|---|---|---|\n| 1. **Study** | **Yes** | **Magnitude × 2** |\n| 2. **Components** | **Usually not** — pay the ¥ total and run any fetch beats | — |\n| 3. **Sanctum** | **Only when a built sanctum is needed** | **Magnitude × 3** |\n| 4. **Sealing** | One collaborative Power Roll | — |\n| 5. **Payoff** | The effect lands | — |\n\nA card may run a stage as a Project where the shared rules don't; it prints that stage's goal. **Seal the Flat** runs study (goal 4), sanctum (goal 6), and sealing (goal 4) all as Projects — it is the worked example of the full chain.\n\n#### 1. Study\n\nAfter you find the Formula Item, you study it.\n\n**Study time** is the **least** time study can take:\n\n| Magnitude | Study time |\n|---|---|\n| 1 | 1 day |\n| 2 | 3 days |\n| 3 | 1 week |\n| 4 | 2 weeks |\n| 5 | 1 month |\n\n**Study goal = Magnitude × 2** (Magnitude 1 = 2, Magnitude 2 = 4, Magnitude 3 = 6, Magnitude 4 = 8, Magnitude 5 = 10).\n\nRoll **Logic** or **Instinct**. The Rituals, Occult, Religion, or Matrix Theory skill (Matrix Theory for Wire-rites) gives its usual benefit. Assistants with those skills may grant an edge. Study finishes when the study time has passed **and** progress meets the goal. If the time is up and the goal isn't, keep spending project slots until it is. A bad roll never loses the Formula; it just costs slots.\n\n#### 2. Components\n\nComponents are usually **not** a Project. The Formula Item lists:"
+    },
+    {
+      "id": "22-the-veil#the-five-stages#19",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "The five stages",
+      "kind": "rules",
+      "text": "- each **shoppable** reagent with its ¥ price,\n- a **Components total (¥)** — subtract it from crew funds in one hit,\n- each **fetch** reagent, marked **¥ —** (no shop price; you get it on a mission),\n- **optional** reagents, marked optional and **not** in the total.\n\nShoppable reagents still respect Availability. Hunting a Restricted reagent can eat a project slot; buying street reagents usually doesn't.\n\n**Pricing bands.** Every card below prints concrete ¥ estimates. When the Director writes a new Formula, or a copy at a different Magnitude, set its Components total inside the band for its Magnitude:\n\n| Magnitude | Components total (¥) band |\n|---|---|\n| 1 | ¥40–150 |\n| 2 | ¥150–500 |\n| 3 | ¥500–2,000 |\n| 4 | ¥2,000–8,000 |\n| 5 | ¥8,000–25,000 |\n\nExtra reagents beyond the list may grant an edge on sealing or blunt Price.\n\n#### 3. Sanctum\n\nYou need a working space with a **sanctum rating** at least equal to the Working's Magnitude."
+    },
+    {
+      "id": "22-the-veil#the-five-stages#20",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "The five stages",
+      "kind": "rules",
+      "text": "- **Temporary sanctum (default).** Claim the room, rooftop, or thin place for the sealing. No Project. Takes about a day per Magnitude to prepare (it can run alongside study). Lasts until the next dawn or dusk, or until one sealing completes. Rushing it costs more reagents. A temporary sanctum can reach rating **3** at most.\n- **Built sanctum (when needed).** A permanent crew or world asset. Build it as a Project: **goal = Magnitude × 3** (rating 4 = 12, rating 5 = 15; rating 3 = 9 when a card calls for a built one). Roll Logic, Instinct, or Persona with a fitting skill; construction trades may assist. Needs up-front ¥ for materials and ongoing Lifestyle upkeep; your Lifestyle band caps how good a sanctum an address can support (`26`).\n- **Build once, use many times.** A built sanctum you already own at the right rating costs no new Project.\n\nUnder this cap, **every Magnitude 4 or 5 Working needs a built sanctum** at that rating (or a site the card names).\n\n#### 4. Sealing\n\nThe leader and anyone helping commit a downtime block (Magnitude 1–2: an evening; Magnitude 3+: a night or a short climax scene). The Formula Item must be present and learned; components are consumed.\n\nMake **one collaborative Power Roll** with the leader's tradition characteristic:\n- **Street Priest:** Persona\n- **Elementalist:** Logic\n- **Technomancer:** Logic (Matrix Theory applies)\n\nAssistants grant edges. Results:"
+    },
+    {
+      "id": "22-the-veil#the-five-stages#21",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "The five stages",
+      "kind": "rules",
+      "text": "| Result | Outcome |\n|---|---|\n| **Low** | Partial payoff, a **hung ritual** (a time bomb the Director holds), or hostile attention. Price resolves as printed. |\n| **Middle** | Payoff lands. Price resolves as printed. |\n| **High** | Payoff lands clean. Blunt one step of Price (Director says what that means for the card). |\n\nThen **Price** resolves and **spirit-attention** ticks — about equal to Magnitude, fed to the Director as Malice.\n\n**Interrupted mid-seal:** backlash on the leader and assistants, components lost, and a Malice tick.\n\n#### 5. Payoff\n\nThe effect lands. Temporary sanctums are spent; built sanctums remain with upkeep. Watch the card's duration and counter."
+    },
+    {
+      "id": "22-the-veil#detection-the-buildup-is-a-clock#22",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Detection — the buildup is a clock",
+      "kind": "rules",
+      "text": "Each stage after Study leaks **Veil pressure** about equal to Magnitude (Director track).\n\n| Magnitude | Leak range |\n|---|---|\n| 1–2 | **District** — local casters, thin-place sensitives, nearby Overlay |\n| 3 | **Hive whisper** — sensitive casters across the Reach may notice |\n| 4–5 | **Hive-wide** — Concord, corps, rival ritualists; faction clocks move |\n\n- Quiet study and shopping: little leak. Sanctum raised: detectable per the table. **Sealing night is loud** — nearby casters get a free notice check.\n- Overlay / Jacked In gives an edge to notice **Wire-rites** in the district. Citywide Overlay detection only at Magnitude 4+.\n- A successful notice reveals: a Working is underway, rough Magnitude band, tradition flavor, rough direction and distance. Not the rite's name unless the result is high or the noticer already knows the Formula."
+    },
+    {
+      "id": "22-the-veil#countermagic#23",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
       "heading": "Countermagic",
       "kind": "rules",
-      "text": "Not a free dispel. Buildup and standing effects use Project / scene tools.\n\n**Before seal:** spoil components; break sanctum; contest Lore (false grimoire gives the leader a bane on sealing); starve assistants.\n\n**During sealing — Counterseal (universal Veil verb):** any Elementalist or Street Priest in the climax scene may spend encounter resource (Essence or Conviction; Director: typically 3+) as an action and make a contested Power Roll vs the leader. Success aborts or corrupts the payoff; failure feeds backlash. Technomancer **Wired spoof** (Scrambler / hostile ICE into the glyph-layer) is the Wire-rite analogue — Logic/Hacking contested roll, same stakes.\n\n**After payoff:** Unmaking family Projects; destroy/unbond artifice; every permanent ward/gate should list a **printed counter condition**.\n\nPrice and spirit-attention already spent are **not** erased by a successful counter."
+      "text": "There is no free dispel.\n\n- **Before sealing:** spoil or steal components; break the sanctum; feed the leader a false Formula (bane on sealing); scare, bribe, or arrest the assistants.\n- **During sealing — Counterseal:** any Elementalist or Street Priest in the scene may spend encounter resource (typically 3+; this is **their** encounter action, not the ritual's cost) and make a contested Power Roll against the leader. Success aborts or corrupts the payoff; failure feeds backlash. Technomancers and Hackers use a **Wired spoof** (Scrambler or hostile ICE into the glyph-layer): Logic with Hacking, contested, same stakes.\n- **After payoff:** Unmaking Workings, or destroy or unbond the Item. Every standing effect prints a **Counter** line.\n\nPrice and spirit-attention already paid stay paid, even if a counter wins."
     },
     {
-      "id": "22-the-veil#failure-and-heat#16",
+      "id": "22-the-veil#how-to-read-a-card#24",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "Failure and heat",
+      "heading": "How to read a card",
       "kind": "rules",
-      "text": "- Low sealing roll: partial effect, hung ritual (time bomb), or hostile attention.\n- Interrupt mid-seal: backlash + components lost + Malice tick.\n- Extra reagents / assistants / longer sanctum prep: edges or reduced Price.\n\n---"
+      "text": "- **Header:** Family · Magnitude · Who may lead · Formula Item form.\n- **Payoff** — what it does. **Duration / upkeep** — how long, and what keeps it going (never a pool).\n- **Scope notes** — Veil or Wire, and what it can't touch.\n- **Combat translation** — what it does when knives come out. No Essence, Conviction, or Resonance.\n- **Study time** by Magnitude.\n- **Project Points (stages)** — study goal, components, sanctum (and sealing, when the card runs it as a Project).\n- **Components** — each reagent with its Availability and ¥, fetch reagents at **¥ —**, optional reagents marked and left out of the **Components total**.\n- **Counter** — what breaks or ends it."
     },
     {
-      "id": "22-the-veil#sample-rites-v1-catalog#17",
+      "id": "22-the-veil#ritual-workings-card-index#25",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "Sample rites (v1 catalog)",
+      "heading": "Ritual Workings — Card Index",
       "kind": "rules",
-      "text": "Numbers are starting points for playtest. Director may scale yen and Goal points with Availability and Magnitude."
+      "text": "Every Working below is a card. The **Formula Item** for each one (compendium: *Ghostwire Gear → Ritual Formulas*) carries the same card text."
     },
     {
-      "id": "22-the-veil#1-ward-the-room-ward-magnitude-1#18",
+      "id": "22-the-veil#ritual-workings-card-index#26",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "1. Ward the Room (Ward, Magnitude 1)",
+      "heading": "Ritual Workings — Card Index",
       "kind": "rules",
-      "text": "- **Leader:** Elementalist or Street Priest.\n- **Stages:** Lore easy (common rite); Components cheap incense/salt/circuit-chalk (Street Availability); Sanctum = the room itself for one night; Sealing = one downtime evening.\n- **Payoff:** The room is a weak Veil barrier until next dawn — spirits and Magic-keyword remote targeting take a bane to enter or pierce. **Counter:** salt circle broken, or Unmaking Mag 1.\n- **Price:** Negligible personal; spirit-attention +1 if sealing in a thin place."
+      "text": "| Working | Family | Magnitude | Who may lead | Formula Item |\n|---|---|---|---|---|\n| Ward the Room | Ward | 1 | General | Scroll / datachip |\n| Seal the Flat | Ward | 2 | General | Scroll / datachip |\n| Street-Focus Charm | Artifice | 2 | General | Scroll |\n| Remote Sense | Reach | 2 | General | Datachip / scroll |\n| Watcher | Calling | 2 | General | Scroll / datachip |\n| Site Bind | Calling | 4 | General | Tome |\n| Circle of Many | Other | 2–4 | General | Scroll / tome |\n| Exclusive Charter Rite | Other | 3 | General | Tome |\n| Lodge Keystone | Ward | 2–3 | General | Tome |\n| Hair-and-Wire Link | Reach | 2–3 | General | Scroll / datachip |\n| Keepsake Link | Reach | 3 | General | Scroll |\n| Effigy Link | Reach | 3–4 | General | Tome / datachip |\n| Door-Seal Glyph | Ward | 2 | General | Scroll / datachip |\n| Charged Perimeter | Ward | 3 | General | Tome / datachip |\n| Reagent Still | Artifice | 1–2 | General | Scroll / datachip |\n| True Relic Carve | Artifice | 4–5 | General | Tome |\n| Long Leash | Calling | 3–4 | General | Tome / datachip |\n| True-Name Collar (Deep Bind) | Calling | 4–5 | General | Tome |\n| Vessel Dressing | Calling | 3 | General | Tome / datachip |\n| Great Circle | Other | 4–5 | General | Tome |\n| Scrub the Stain | Unmaking | 1–5 (≥ stain) | General | Scroll / datachip |\n| Detox Domain | Unmaking | 4–5 | General | Tome / datachip |\n| Thin-Path | Threshold | 3 | Elementalist | Tome / scroll |\n| Domain Aspect | Threshold | 3–4 | Elementalist | Tome |\n| Invoke Greater Shape | Calling | 4–5 | Elementalist | Tome |"
     },
     {
-      "id": "22-the-veil#2-street-focus-charm-artifice-magnitude-2#19",
+      "id": "22-the-veil#ritual-workings-card-index#27",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "2. Street-Focus Charm (Artifice, Magnitude 2)",
+      "heading": "Ritual Workings — Card Index",
       "kind": "rules",
-      "text": "- **Leader:** Elementalist or Street Priest (focus tradition matches).\n- **Payoff:** One existing focus or light weapon gains a **session-long** edge on one named Magic ability, or a one-off Veil-tagged Item (unique flags — not a catalog SKU yet).\n- **Price:** Light fatigue / minor corruption mark until next respite.\n- **Counter:** Unbond (downtime Project Mag 2) or destroy the item."
+      "text": "| Working | Family | Magnitude | Who may lead | Formula Item |\n|---|---|---|---|---|\n| Anchor Rune | Artifice | 3 | Elementalist | Scroll |\n| Telesma Birth | Artifice | 2–3 | Elementalist | Tome / scroll |\n| Storm Ward | Ward | 2–3 | Elementalist | Scroll |\n| Nest Claim *(optional)* | Calling | 3 | Elementalist | Scroll |\n| Hive Crack | Unmaking | 4–5 | Elementalist | Tome / datachip |\n| Consecrated Thin-Path | Threshold | 3 | Street Priest | Scroll |\n| Pact Charter | Other | 2–3 | Street Priest | Tome |\n| Ally Heart | Calling | 4–5 | Street Priest | Tome |\n| Ally Reforge | Calling | 3–4 | Street Priest | Scroll (bound into Ally Heart tome) |\n| Exorcist's Unmaking | Unmaking | 3–4 | Street Priest | Tome / scroll |\n| Blood-Price Refusal | Unmaking | 3–5 | Street Priest | Scroll / tome |\n| Confession Ward | Ward | 1–2 | Street Priest | Scroll |\n| Uncrook the Path | Unmaking | 3–5 | Street Priest | Tome / datachip |\n| Data Ward | Ward | 1–2 | Technomancer | Datachip |\n| Signal Charm | Artifice | 2 | Technomancer | Datachip |\n| Deep Overlay Sense | Reach | 2–3 | Technomancer | Datachip |\n| Daemon Long Leash | Calling | 3–4 | Technomancer | Datachip |\n| True-Handle Collar | Calling | 4–5 | Technomancer | Tome (datachip hybrid) |\n| Chassis Dressing | Calling | 3 | Technomancer | Datachip |\n| Bridge Thin-Path | Threshold | 3 | Technomancer | Datachip |\n| Scrub the Ghost-Code | Unmaking | 1–5 (≥ stain) | Technomancer | Datachip |"
     },
     {
-      "id": "22-the-veil#3-remote-sense-reach-magnitude-2#20",
+      "id": "22-the-veil#ritual-workings-general#28",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "3. Remote Sense (Reach, Magnitude 2)",
+      "heading": "Ritual Workings — General",
       "kind": "rules",
-      "text": "- **Leader:** Any ritual leader; **requires a spotter** Overlay, Jacked In, or otherwise present at the target.\n- **Payoff:** For one scene, leader perceives through the spotter's senses (or a tagged camera/spirit) within Reach/Wired range as printed.\n- **Risk:** Failed sealing or contested trace can reverse the link for a round.\n- **Price:** Spotter takes biofeedback-like jolt on a low roll."
+      "text": "*Leaders: Elementalist, Street Priest, or Technomancer (Wire skin). Cyborgs never lead. General cards the older samples gave only to Elementalists and Street Priests (Street-Focus Charm, Watcher, Site Bind) are General here: a Technomancer leads them in the Wire skin.*"
     },
     {
-      "id": "22-the-veil#4-watcher-calling-magnitude-2#21",
+      "id": "22-the-veil#ward-the-room#29",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "4. Watcher (Calling, Magnitude 2)",
+      "heading": "Ward the Room",
       "kind": "rules",
-      "text": "- **Leader:** Street Priest (Light or Dark) or Elementalist.\n- **Payoff:** A minor watcher-spirit or elemental extension guards a marked site for hours equal to 4 times Persona (or until dismissed). Alerts the leader once when triggered.\n- **Price:** No Persistent cost out of combat; if ignored when it screams, spirit-attention increases by Magnitude.\n- **Counter:** Banish / Unmaking Mag 2; or kill the watcher in a scene."
+      "text": "**Ward** · **Magnitude 1** · **General**\n\n**Formula Item form:** ritual scroll (Veil path) · datachip (Wire-chalk skin)\n\n**Payoff:** One room gets a **Veil barrier**. Spirits and Magic-keyword / Veil remote targeting take a **bane** to enter or pierce it. People, bullets, and ordinary sensors pass as normal — it is not a wall. This is the teaching floor of the Ward family; bigger wards cover more space, last longer, or bite harder.\n\n**Duration / upkeep:** Until the next dawn (or dusk, if sealed at night — pick at sealing). No upkeep.\n\n**Scope notes:** Veil only — spirits and Magic-keyword peeks. Does **not** hinder sprites, Agents, ICE, or pure Overlay / Jacked-In verbs, even with the Wire-chalk skin. For Wire protection lay **Data Ward**.\n\n**Combat translation:** Ambient bane on Veil verbs into or through the room. No summon, no wall against bullets. If a fight starts inside, the ward keeps working on Veil verbs until broken. No pool spend.\n\n**Study time:** 1 day.\n\n**Project Points (stages):**\n- **Study goal:** 2.\n- **Components:** not a Project — pick one path. **Components total ¥75 (Veil path) / ¥40 (Wire-chalk skin)** (table below).\n- **Sanctum:** temporary — the room itself (¥0). No Project.\n\n**Components**"
     },
     {
-      "id": "22-the-veil#5-thin-path-threshold-magnitude-3#22",
+      "id": "22-the-veil#ward-the-room#30",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "5. Thin-Path (Threshold, Magnitude 3)",
+      "heading": "Ward the Room",
       "kind": "rules",
-      "text": "- **Leader:** Elementalist preferred; Street Priest in a consecrated thin place.\n- **Payoff:** Open a short path between two known thin places for one traversal (crew-sized). Closes behind unless Magnitude 4+ and permanent sanctum.\n- **Heat:** Automatic district notice; Concord/corp clocks advance on Mag 3+ Threshold rites in the Reach.\n- **Price:** Each traveler pays a personal toll (Stamina or recovery debt — Director).\n- **Counter:** Collapse from either end (Unmaking Mag 3 or higher) or destroy either thin-place anchor."
+      "text": "| Component | Path | Availability | ¥ |\n|---|---|---|---|\n| Blessed salt (threshold line) | Veil | Street | 25 |\n| Resin incense | Veil | Street | 50 |\n| Circuit-chalk (glyph dust) | Wire-chalk skin | Street | 40 |\n| Thin-place ash *(optional)* | any | Fetch / mission | — |\n| **Components total — Veil path** | | | **¥75** |\n| **Components total — Wire-chalk skin** | | | **¥40** |\n\n**Sealing:** one downtime evening. **Price:** negligible; spirit-attention +1 if sealed in a thin place.\n\n**Counter:** Break the salt line or chalk circle; Unmaking at Magnitude 1; dawn."
     },
     {
-      "id": "22-the-veil#6-site-bind-calling-magnitude-4#23",
+      "id": "22-the-veil#seal-the-flat#31",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
-      "heading": "6. Site Bind (Calling, Magnitude 4)",
+      "heading": "Seal the Flat",
       "kind": "rules",
-      "text": "- **Leader:** Street Priest or Elementalist; named spirit/elemental must be known (prior Lore or encounter).\n- **Payoff:** Bind a named spirit or elemental as a **site guardian** tied to a permanent sanctum (rating 4 or higher). Guardian uses B53 summon scaling as a floor for Stamina.\n- **Price:** Ongoing favor/debt while bound; slipped leash feeds Incursion/Malice.\n- **Counter:** Printed — break the sanctum's keystone, or Unmaking Mag 4 contested with the binder.\n\n---\n\n---"
+      "text": "**Ward** · **Magnitude 2** · **General**\n\n**Formula Item form:** ritual scroll (Veil path) · datachip (Wire-chalk skin)\n\n*Seal the Flat is the full Project prototype: it is the one Magnitude 2 card that runs **study, sanctum, and sealing** as Projects, so a crew can see every stage move on a progress track.*\n\n**Payoff:** A whole flat — every room, door, window, and vent of one dwelling (a Flats unit, a safehouse floor, a coffin-cube row up to about 6 rooms) — gets a **Veil barrier**. Spirits and Magic-keyword / Veil remote targeting take a **bane** to enter or pierce **any** part of it. The first time something Veil-side pushes through (wins past the bane), the leader wakes or knows, wherever they are in the district. People, bullets, and ordinary sensors pass as normal — it is not a wall.\n\n**Duration / upkeep:** Until the **third dawn** after sealing. **Renewal:** before that dawn, re-lay the thresholds (¥60 of blessed salt, one evening, no roll) for three more dawns. Miss a renewal and the seal lapses; start again from the sealing stage (the sanctum Project stays done while the crew lives there).\n\n**Scope notes:** Veil only. Does **not** hinder sprites, Agents, ICE, or pure Overlay / Jacked-In verbs, even with the Wire-chalk skin. For Wire protection lay **Data Ward** on the flat's node too.\n\n**Combat translation:** Ambient bane on Veil verbs into or through any part of the flat. No summon, no wall against bullets. If a fight starts inside, the seal keeps working until a counter breaks it. No pool spend.\n\n**Study time:** 3 days."
     },
     {
-      "id": "22-the-veil#c3-summon-entities-locked-2026-09-18#24",
+      "id": "22-the-veil#seal-the-flat#32",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Seal the Flat",
+      "kind": "rules",
+      "text": "**Project Points (stages):**\n- **Study goal:** **4** (Project). Logic or Instinct; Rituals, Occult, or Religion (Matrix Theory for the Wire-chalk skin) gives its usual benefit.\n- **Components:** not a Project. **Components total ¥180 (Veil path) / ¥150 (Wire-chalk skin)** (table below).\n- **Sanctum:** **goal 6** (Project) — the flat itself becomes the sanctum. Each roll cleanses and chalks one or two rooms: scrub the old stains out, map every opening, bless the corners. Roll Instinct, Logic, or Persona with Rituals, Occult, or Religion; anyone who lives there may assist (edge). Once done, the flat stays a rating 2 sanctum while the crew keeps living there — later Seal the Flat castings skip this stage.\n- **Sealing:** **goal 4** (Project) — one threshold at a time, over evenings. Each sealing roll uses the leader's tradition characteristic (Persona for a Street Priest; Logic for an Elementalist; Logic with Matrix Theory for a Technomancer). The roll that reaches the goal sets the outcome (low / middle / high, see Sealing in the shared rules). Components are consumed on the first sealing roll.\n\n**Components**"
+    },
+    {
+      "id": "22-the-veil#seal-the-flat#33",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Seal the Flat",
+      "kind": "rules",
+      "text": "| Component | Path | Availability | ¥ |\n|---|---|---|---|\n| Blessed salt (every threshold, window, and vent line) | Veil | Street | 60 |\n| Resin incense (one stick per room) | Veil | Street | 50 |\n| Lintel wax seals (four) | Veil | Street | 40 |\n| Ward-thread (window and vent cords) | Veil | Street | 30 |\n| Circuit-chalk (three tins) | Wire-chalk skin | Street | 120 |\n| Conductive tape (window and vent lines) | Wire-chalk skin | Street | 30 |\n| Thin-place ash *(optional; edge on the final sealing roll)* | any | Fetch / mission | — |\n| A key or lease from the flat's owner *(optional; edge on the sanctum Project)* | any | Fetch / mission | — |\n| **Components total — Veil path** | | | **¥180** |\n| **Components total — Wire-chalk skin** | | | **¥150** |\n\n**Price:** light — spirit-attention +2 on the final sealing roll (+3 if the flat sits on a thin place). The neighbors smell incense for a week.\n\n**Counter:** Break the salt line at **every** opening, or scrub the lintel seals; Unmaking at Magnitude 2; the third dawn without a renewal. Breaking one threshold opens only that doorway or window — the rest of the flat stays sealed.\n\n**Story walkthrough — Vessa seals the Ninth-and-Fold flat**"
+    },
+    {
+      "id": "22-the-veil#seal-the-flat#34",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Seal the Flat",
+      "kind": "rules",
+      "text": "1. **The need.** After a loud job, the crew holes up in Vessa's two-room flat above Ninth-and-Fold. Something from the job followed them — a cold draft that moves against the wind, a mirror that fogs from the inside. Ward the Room would cover one room for one night. Vessa wants the whole flat, for days.\n2. **Find.** No stall sells this. A dying Shepherd deacon leaves Vessa a folded **scroll** of *Seal the Flat* in a hymnal. It goes on her sheet. It's loot until she studies it.\n3. **Study (Project, goal 4).** The Formula's study time is 3 days. Vessa rolls Instinct with Religion over two respites: a middle result (2), then another middle (2). Four progress, three days passed — the Director marks the Formula **learned**.\n4. **Components (not a Project).** The crew buys the Veil path at a Flats botanica: salt, incense, wax, thread. **¥180** comes off the crew fund in one hit.\n5. **Sanctum (Project, goal 6).** The flat has to be clean before it can be sealed. Vessa scrubs, chalks, and blesses room by room. The crew's Operator lives there too and assists (edge). Rolls: high (3), middle (2), low (1) — six progress. The flat is now a rating 2 sanctum.\n6. **Sealing (Project, goal 4).** Over two evenings, Vessa seals the thresholds: the front door and hall window first (Persona, middle — 2), then the back window and the bathroom vent (Persona with an assist, high — 3). Progress 5 meets the goal; the final roll was high, so the payoff lands clean and the Director blunts the Price to spirit-attention +1.\n7. **Payoff.** Until the third dawn, anything Veil-side takes a bane to push into any part of the flat. On the second night the cold draft hits the salt at the hall window, fails, and fades. The next evening Vessa spends ¥60 on salt to renew.\n8. **What breaks it.** A rival kicks the front-door line in: that door is open to spirits, the rest of the flat stays sealed. Or dawn number three with no renewal."
+    },
+    {
+      "id": "22-the-veil#street-focus-charm#35",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Street-Focus Charm",
+      "kind": "rules",
+      "text": "**Artifice** · **Magnitude 2** · **General**\n\n**Formula Item form:** ritual scroll or slim chapbook\n\n**Payoff:** Bonds a short-run charm to one focus, light weapon, or deck-adjacent focus the leader already owns — elemental stain, pact sheen, or Wire varnish by tradition. One named Magic (or Resonance) ability gains an **edge** when used through that Item, **or** the Item gains a one-off Veil tag.\n\n**Duration / upkeep:** One session, or until the next major respite (Director picks at sealing). No upkeep. Charm-tier only; no permanent version.\n\n**Scope notes:** Works on the ability named at sealing; the tradition matches the leader. Doesn't create new abilities.\n\n**Combat translation:** Gear flag — edge on the named ability. No pool spend to keep it. It fades when the duration ends, even mid-fight.\n\n**Study time:** 3 days.\n\n**Project Points (stages):**\n- **Study goal:** 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥250** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Street varnish, prayer-oil, or signal lacquer (by tradition) | Professional | 180 |\n| Binding thread | Street | 40 |\n| Consecration candle | Street | 30 |\n| Personal blood or handle smear (Director heat) *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥250** |\n\n**Price:** light fatigue or a minor Taint mark until next respite.\n\n**Counter:** Unbond (Unmaking at Magnitude 2); destroy the Item."
+    },
+    {
+      "id": "22-the-veil#remote-sense#36",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Remote Sense",
+      "kind": "rules",
+      "text": "**Reach** · **Magnitude 2** · **General**\n\n**Formula Item form:** datachip (Wire-native) or ritual scroll\n\n**Payoff:** For one scene, the leader perceives through a **spotter** — an Overlay or Jacked-In ally, a tagged camera, or a minor spirit's eye — within the printed Reach or Wired range.\n\n**Duration / upkeep:** One scene after sealing, or until the link is cut.\n\n**Scope notes:** Needs a spotter present at the target (or a link Working — Hair-and-Wire, Keepsake, Effigy — if none). The link can be **traced** back; a failed seal or contested trace can reverse the pipe for a round.\n\n**Combat translation:** A perception channel only — no summon, no strike. If knives come out mid-scene, the leader still just sees. No pool spend.\n\n**Study time:** 3 days.\n\n**Project Points (stages):**\n- **Study goal:** 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥300** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Chalk-link or graph-pin set | Professional | 160 |\n| Spotter's tag (marker or feed patch) | Professional | 90 |\n| Link-bath salts | Street | 50 |\n| Spotter consent or a compromised feed | Fetch / mission | — |\n| Hair or wire remnant for aim *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥300** |\n\n**Price:** the spotter takes a biofeedback-style jolt on a low sealing roll.\n\n**Counter:** Trace and spoof the link; Unmaking at Magnitude 2 on the seal-mark; knock out the spotter."
+    },
+    {
+      "id": "22-the-veil#watcher#37",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Watcher",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 2** · **General**\n\n**Formula Item form:** ritual scroll; datachip for the Wire skin\n\n**Payoff:** Calls a minor watcher-spirit, elemental extension, or (Wire skin) daemon-watcher to guard a marked site. It alerts the leader **once** when its trip condition is met, then waits for orders or fades.\n\n**Duration / upkeep:** Hours equal to **4 × Persona** (Street Priest) or **4 × Logic** (Elementalist, Technomancer), or until dismissed. No upkeep.\n\n**Scope notes:** A Veil watcher sees spirits and people; a daemon-watcher sees the node and its cameras. Neither blocks anything — it only warns.\n\n**Combat translation:** Alert fiction or **one free notice** when the trip fires. Not a combat summon. If a later Working or the Director upgrades it to a figure, treat it as an **extension** (Summon Entities rules, The Veil) — usually untargetable. No pool spend.\n\n**Study time:** 3 days.\n\n**Project Points (stages):**\n- **Study goal:** 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥220** (table below).\n- **Sanctum:** temporary — the marked site, claimed for one night. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Marking chalk or ash | Street | 40 |\n| Bait-offering | Street | 80 |\n| Binding bell or node-tag | Professional | 100 |\n| Picky spirit's special bait *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥220** |\n\n**Price:** none out of combat — but ignore its scream and spirit-attention rises by the Magnitude."
+    },
+    {
+      "id": "22-the-veil#watcher#38",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Watcher",
+      "kind": "rules",
+      "text": "**Counter:** Banish; Unmaking at Magnitude 2; kill it in a scene if it was upgraded to a figure."
+    },
+    {
+      "id": "22-the-veil#site-bind#39",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Site Bind",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 4** · **General**\n\n**Formula Item form:** tome / bound volume (bulky)\n\n**Payoff:** Binds a **named** spirit, elemental, or Wire-entity as a permanent **site guardian** tied to a built sanctum. It knows the floorplan in its bones. The name must already be known (prior study, Discover Lore, or an encounter).\n\n**Duration / upkeep:** While the sanctum keystone stands and the favor-debt is honored. A slipped leash feeds Incursion and Malice.\n\n**Scope notes:** Guards the site only. It stays home when the crew runs elsewhere unless the Formula copy says otherwise. A Wire-entity guardian guards the node side; a spirit guards the Veil side.\n\n**Combat translation:** When it fights on-site, it is an **independent** figure using the Summon Entities rules (The Veil) as a Stamina floor, run by the binder as a site asset. Not an encounter summon. Upkeep is favor and spirit-attention — no pool spend.\n\n**Study time:** 2 weeks.\n\n**Project Points (stages):**\n- **Study goal:** 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥5,000** (table below).\n- **Sanctum:** **built sanctum rating 4+ required — goal 12** (skip if the crew already owns one).\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Sanctum keystone materials | Restricted | 3,000 |\n| Binding cord or Wire collar-glyph | Restricted | 1,500 |\n| First-favor offering stock | Professional | 500 |\n| The named entity's true remnant, or a prior successful Call | Fetch / mission | — |\n| **Components total** | | **¥5,000** |"
+    },
+    {
+      "id": "22-the-veil#site-bind#40",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Site Bind",
+      "kind": "rules",
+      "text": "**Price:** ongoing favor-debt; faction notice.\n\n**Counter:** Break the sanctum keystone; Unmaking at Magnitude 4, contested by the binder."
+    },
+    {
+      "id": "22-the-veil#circle-of-many#41",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Circle of Many",
+      "kind": "rules",
+      "text": "**Other** · **Magnitude 2–4** · **General**\n\n**Formula Item form:** ritual scroll (instructions) or a lodge tome chapter\n\n**Payoff:** Formal multi-caster circle. Each assistant station becomes a sealing **edge** or adds **Project progress** on the Working the circle supports. A very large circle may ask the Director for +1 Magnitude ceiling on one sealing.\n\n**Duration / upkeep:** For the sealing night or Project block it supports. The circle marks linger as fiction until cleaned.\n\n**Scope notes:** Supports another Working; does nothing on its own. Non-casters matter here. Heat scales with Magnitude and headcount.\n\n**Combat translation:** None — a downtime or climax beat. If interrupted mid-seal: backlash, components lost, Malice tick.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥200 (Magnitude 2) / ¥800 (Magnitude 3) / ¥3,000 (Magnitude 4)** (table below).\n- **Sanctum:** uses the supported Working's sanctum. No separate Project.\n\n**Components**"
+    },
+    {
+      "id": "22-the-veil#circle-of-many#42",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Circle of Many",
+      "kind": "rules",
+      "text": "| Component | Availability | Magnitude 2 | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|---|\n| Circle chalk or ink (four stations) | Street / Professional / Restricted | 100 | 400 | 1,600 |\n| Center spike | Professional / Restricted / Restricted | 100 | 400 | 1,400 |\n| Resonance capacitors or prayer beads (per extra edge) *(optional)* | Professional | 50 | 200 | 800 |\n| Unique center spike (replaces the bought one) *(optional)* | Fetch / mission | — | — | — |\n| **Components total** | | **¥200** | **¥800** | **¥3,000** |\n\n**Counter:** Break a station; starve the circle of assistants."
+    },
+    {
+      "id": "22-the-veil#exclusive-charter-rite#43",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Exclusive Charter Rite",
+      "kind": "rules",
+      "text": "**Other** · **Magnitude 3** · **General**\n\n**Formula Item form:** bound volume (charter book), with member-list fields\n\n**Payoff:** Locks a Working (or a small slate of them) so only charter members can lead or seal it. Outsiders take a **bane** on sealing; copies go blurry for non-members.\n\n**Duration / upkeep:** Permanent until the charter is broken or Unmade.\n\n**Scope notes:** Affects who can use the chartered Formulas. Stolen copies become incomplete without membership.\n\n**Combat translation:** None — a meta-asset on who runs rites. No tokens.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,400** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Lodge seal blank | Restricted | 800 |\n| Witness offering or Wire notary daemon rental | Professional | 400 |\n| Charter vellum or cold-storage chip | Professional | 200 |\n| Charter blood or handle ink | Fetch / mission | — |\n| **Components total** | | **¥1,400** |\n\n**Counter:** Unmaking at Magnitude 3+; kill the charter's living keys."
+    },
+    {
+      "id": "22-the-veil#lodge-keystone#44",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Lodge Keystone",
+      "kind": "rules",
+      "text": "**Ward** · **Magnitude 2–3** · **General**\n\n**Formula Item form:** tome (lodge prospectus), or engraved plaque with datachip backup\n\n**Payoff:** Raises a shared lodge or group workspace as a **permanent sanctum**: +1 sanctum rating, capped at 3 unless further Projects and the Director open the ceiling. If the copy says so, the interior also carries a ward-lite (bane on hostile spirits and Magic peeks).\n\n**Duration / upkeep:** Permanent, with Lifestyle upkeep ¥. Your Lifestyle band caps the rating the address can hold.\n\n**Scope notes:** Veil ward-lite only. It doesn't stop Wire-only intrusion — lay **Data Ward** for that.\n\n**Combat translation:** Ambient ward-lite bane inside the lodge, if printed; otherwise just a sanctum rating. No pool spend.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥400 (Magnitude 2) / ¥1,600 (Magnitude 3)** (table below).\n- **Sanctum:** **this is the sanctum build — goal 6 (Magnitude 2) / 9 (Magnitude 3).**\n\n**Components**\n\n| Component | Availability | Magnitude 2 | Magnitude 3 |\n|---|---|---|---|\n| Masonry, server racks, or shrine guts | Professional / Restricted | 300 | 1,200 |\n| Ward-lite inlay | Professional | 100 | 400 |\n| The keystone relic | Fetch / mission | — | — |\n| **Components total** | | **¥400** | **¥1,600** |\n\n**Counter:** Destroy the keystone; Unmaking at the lodge's rating."
+    },
+    {
+      "id": "22-the-veil#hair-and-wire-link#45",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Hair-and-Wire Link",
+      "kind": "rules",
+      "text": "**Reach** · **Magnitude 2–3** · **General**\n\n**Formula Item form:** scroll in a shielded tube, or encrypted datachip\n\n**Payoff:** Aims a Reach Working **without a live spotter**, using a **strong remnant** of the target — tissue, blood, a god-file shard, a deep handle core. Cold, intimate, illegal in half the Reach.\n\n**Duration / upkeep:** Powers one following Reach sealing or scene.\n\n**Scope notes:** Louder trace than Remote Sense with a spotter. A false remnant fouls the seal (bane or backlash). Blood and tissue aim Veil Workings; handle cores and god-file shards aim Wire-rites.\n\n**Combat translation:** None as a summon. If used to peek into a fight, it's perception only unless chained to a separate strike Working. No pool spend.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥300 (Magnitude 2) / ¥1,000 (Magnitude 3)** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 2 | Magnitude 3 |\n|---|---|---|---|\n| Link-bath salts or graph solvent | Professional / Restricted | 200 | 800 |\n| Shielded containment tube | Street | 100 | 200 |\n| The strong remnant (almost never for sale) | Fetch / mission | — | — |\n| **Components total** | | **¥300** | **¥1,000** |\n\n**Counter:** Destroy the remnant; plant a false one."
+    },
+    {
+      "id": "22-the-veil#keepsake-link#46",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Keepsake Link",
+      "kind": "rules",
+      "text": "**Reach** · **Magnitude 3** · **General**\n\n**Formula Item form:** ritual scroll or slim sentimental booklet\n\n**Payoff:** Aims a Reach Working through a **beloved object** or personal archive of the target. Weaker than flesh, harder to seal, louder emotional trace.\n\n**Duration / upkeep:** One Reach payoff scene.\n\n**Scope notes:** For when you can't get blood. Traceable like any Reach link.\n\n**Combat translation:** None — a downtime and scene tool. No pool spend.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,200** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Binder thread | Professional | 300 |\n| Memory-bath oils | Professional | 400 |\n| Sympathy lamp | Restricted | 500 |\n| The keepsake, taken from the target's life | Fetch / mission | — |\n| **Components total** | | **¥1,200** |\n\n**Counter:** Return or destroy the keepsake; Unmaking at Magnitude 3 on the link-mark."
+    },
+    {
+      "id": "22-the-veil#effigy-link#47",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Effigy Link",
+      "kind": "rules",
+      "text": "**Reach** · **Magnitude 3–4** · **General**\n\n**Formula Item form:** tome with pattern plates, or datachip with fab instructions\n\n**Payoff:** Builds a symbolic stand-in — a doll, a model flat, a glyph-double — to aim a Reach or Unmaking Working across distance. Ugly craft. Works when remnants and keepsakes fail.\n\n**Duration / upkeep:** Until the effigy is spent on a sealing or destroyed.\n\n**Scope notes:** Scaffolding for big remote Workings. Faction clocks notice Magnitude 4 builds.\n\n**Combat translation:** The effigy is an object. Destroy it mid-fight and any active link collapses. Not a summon. No pool spend.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,200 (Magnitude 3) / ¥4,000 (Magnitude 4)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum rating 4 at Magnitude 4 — goal 12** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|\n| Craft materials | Street | 300 | 800 |\n| Pattern resin | Professional | 600 | 2,200 |\n| Binding pins | Restricted | 300 | 1,000 |\n| True detail tokens (photos, badges, chrome serials) | Fetch / mission | — | — |\n| Forbidden clay (edge on sealing) *(optional)* | Restricted | 1,500 | 1,500 |\n| **Components total** | | **¥1,200** | **¥4,000** |\n\n**Counter:** Burn the effigy; Unmaking at a Magnitude equal to or greater than the link's."
+    },
+    {
+      "id": "22-the-veil#door-seal-glyph#48",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Door-Seal Glyph",
+      "kind": "rules",
+      "text": "**Ward** · **Magnitude 2** · **General**\n\n**Formula Item form:** ritual scroll or stencil-chip\n\n**Payoff:** One doorway refuses spirits, Magic peeks, and Wire bleed. Flesh and bullets still deal with the wood and hinges.\n\n**Duration / upkeep:** Until broken or Unmade, or the expiry printed on the copy (often dawns equal to Magnitude, or while sanctum upkeep holds).\n\n**Scope notes:** Covers **both** Veil and Wire bleed — but only through that one doorway. Walls, vents, and other doors are open.\n\n**Combat translation:** Ambient bane (refusal) on Veil verbs and Wire bleed through the doorway. Breachers can still kick the physical door. No pool spend.\n\n**Study time:** 3 days.\n\n**Project Points (stages):**\n- **Study goal:** 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥200** (table below).\n- **Sanctum:** temporary — the doorway. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Glyph paint or etch-acid | Street | 120 |\n| Threshold nails (four) | Street | 40 |\n| Frame salt | Street | 40 |\n| **Components total** | | **¥200** |\n\n**Counter:** Scrape the glyph; Unmaking at Magnitude 2; destroy the door and scrub the frame."
+    },
+    {
+      "id": "22-the-veil#charged-perimeter#49",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Charged Perimeter",
+      "kind": "rules",
+      "text": "**Ward** · **Magnitude 3** · **General**\n\n**Formula Item form:** tome section or engineer's datachip\n\n**Payoff:** A quiet ward that stores potency and spends it when crossed by the wrong kind of thing: an alarm scream, a stun pulse, and/or a Malice tick, as printed on the copy.\n\n**Duration / upkeep:** Until it discharges once, or kept charged with sanctum upkeep (¥ and reagents — never pools).\n\n**Scope notes:** The copy names the breach condition (spirits, Magic peeks, named people, Wire intrusion with the ICE-capacitor build). Louder to detect than Ward the Room.\n\n**Combat translation:** Ambient until breached; on breach, the printed pulse or alarm fires once. No caster action or pool spend. Re-arming is a downtime Working, not an in-fight action.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,400** (table below).\n- **Sanctum:** temporary — the warded perimeter. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Capacitor salts, prayer batteries, or ICE capacitors | Restricted | 900 |\n| Perimeter line (wire, chalk, or salt; about 40 squares) | Professional | 300 |\n| Trigger housing | Professional | 200 |\n| Breach-condition fetish *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥1,400** |\n\n**Counter:** Discharge safely with Counterseal tools; Unmaking at Magnitude 3; send someone through to trip it."
+    },
+    {
+      "id": "22-the-veil#reagent-still#50",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Reagent Still",
+      "kind": "rules",
+      "text": "**Artifice** · **Magnitude 1–2** · **General**\n\n**Formula Item form:** scroll recipe or datachip\n\n**Payoff:** Distills a **one-use reagent pack**. Spent at a later sealing, it grants an **edge** on that sealing or blunts its Price once.\n\n**Duration / upkeep:** The pack lasts until used or until it spoils (often one season or three sessions — printed).\n\n**Scope notes:** Prep economy for big Workings. The pack is a separate consumable Item.\n\n**Combat translation:** None — downtime craft. Using the pack is part of a sealing, not a combat action.\n\n**Study time:** 1 day (Magnitude 1) · 3 days (Magnitude 2).\n\n**Project Points (stages):**\n- **Study goal:** 2 / 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥100 (Magnitude 1) / ¥250 (Magnitude 2)** (table below).\n- **Sanctum:** temporary — the still. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 1 | Magnitude 2 |\n|---|---|---|---|\n| Base solvents | Street | 60 | 150 |\n| Still rental (one night) | Street | 40 | 100 |\n| Uncommon flower, mineral, or code-seed | Fetch / mission | — | — |\n| **Components total** | | **¥100** | **¥250** |\n\n**Counter:** Spoil or steal the pack."
+    },
+    {
+      "id": "22-the-veil#true-relic-carve#51",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "True Relic Carve",
+      "kind": "rules",
+      "text": "**Artifice** · **Magnitude 4–5** · **General**\n\n**Formula Item form:** thick grimoire or fab-tome (bulky)\n\n**Payoff:** Carves a **permanent prototype relic** (Restricted+) with unique flags. Director veto applies. Campaign gravity, not a shop item.\n\n**Duration / upkeep:** Permanent until destroyed, unbonded, or corrupted.\n\n**Scope notes:** The relic's flags say whether it touches Veil, Wire, or both. Magnitude 5 carries a hive-wide whisper.\n\n**Combat translation:** Gear flags only. No ritual upkeep. If the relic grants a Persistent Magic ability, that ability uses its **class** Persistent math — never a ritual tax.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥6,000 (Magnitude 4) / ¥16,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Master tools | Restricted / Military | 2,500 | 6,000 |\n| Binding inlay (silver or chromed filament) | Restricted / Military | 2,000 | 6,000 |\n| Sealing lacquers | Restricted / Military | 1,500 | 4,000 |\n| Prototype blank (almost always a mission) | Fetch / mission | — | — |\n| A named spirit's or Wire blessing (favor) | Fetch / mission | — | — |\n| **Components total** | | **¥6,000** | **¥16,000** |\n\n**Counter:** Destroy the relic; unbond (Unmaking at Magnitude 4–5); the relic's printed doom clock."
+    },
+    {
+      "id": "22-the-veil#long-leash#52",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Long Leash",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 3–4** · **General**\n\n**Formula Item form:** bound service-contract tome or encrypted datachip\n\n**Payoff:** Long-term binding of an **already-called** entity for intermittent **services over days or weeks** — courier, watch, whisper, one dirty job. Not \"wins this fight.\"\n\n**Duration / upkeep:** Days to weeks as sealed. Renew with favor, or it lapses.\n\n**Scope notes:** Spirit or elemental (Veil); a Technomancer leading the Wire skin should use **Daemon Long Leash** instead.\n\n**Combat translation:** If present when knives come out: an **extension** by default (site helper), or **independent** if the copy says so, per the Summon Entities rules (The Veil). Stay inside the bound-count caps unless the Director agrees. Not encounter-summon spam. No pool spend.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,300 (Magnitude 3) / ¥4,500 (Magnitude 4)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum rating 4 at Magnitude 4 — goal 12** (skip if owned).\n\n**Components**"
+    },
+    {
+      "id": "22-the-veil#long-leash#53",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Long Leash",
+      "kind": "rules",
+      "text": "| Component | Availability | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|\n| Leash cord or schedule chip | Restricted | 700 | 2,500 |\n| Feeding stock (one month) | Professional | 400 | 1,200 |\n| Schedule tablet | Professional | 200 | 800 |\n| A prior successful Call or capture | Fetch / mission | — | — |\n| Special feeding offerings *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥1,300** | **¥4,500** |\n\n**Counter:** Banish; break the schedule tablet; Unmaking at Magnitude 3–4."
+    },
+    {
+      "id": "22-the-veil#true-name-collar-deep-bind#54",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "True-Name Collar (Deep Bind)",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 4–5** · **General**\n\n**Formula Item form:** heavy grimoire (bulky) plus a sealed name-folio\n\n**Payoff:** Collars an **unbound named power** by its secret name or deep handle. High Price. The copy prints its **escape conditions**. Hubris with a warranty-void sticker.\n\n**Duration / upkeep:** Until an escape condition, an Unmaking, or the binder's doom.\n\n**Scope notes:** Name-based: a true name collars a Veil power; a deep handle collars a Wire power (Technomancers can also use **True-Handle Collar**). Magnitude 5 moves faction clocks whether you like it or not.\n\n**Combat translation:** When forced into a fight: **independent** Stamina scaled to the named power (Director; floor at Rank 3+ elemental or independent spirit, Summon Entities rules). The binder commands only within the collar's terms. Escape mid-fight is a feature. No pool spend.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥6,500 (Magnitude 4) / ¥19,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (skip if owned).\n\n**Components**"
+    },
+    {
+      "id": "22-the-veil#true-name-collar-deep-bind#55",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "True-Name Collar (Deep Bind)",
+      "kind": "rules",
+      "text": "| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Collar forge materials | Restricted / Military | 4,000 | 12,000 |\n| Name-folio seal | Restricted | 1,500 | 4,000 |\n| Witness circle stations (Circle of Many) | Restricted | 1,000 | 3,000 |\n| The true name or deep handle (major quest) | Fetch / mission | — | — |\n| **Components total** | | **¥6,500** | **¥19,000** |\n\n**Counter:** The printed escape; Unmaking at Magnitude 4–5, contested; destroy the name-vessel."
+    },
+    {
+      "id": "22-the-veil#vessel-dressing#56",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Vessel Dressing",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 3** · **General**\n\n**Formula Item form:** manual tome or tech datachip\n\n**Payoff:** Prepares a body, drone shell, or object as a **legal vessel** for a called entity to wear. Without this, inhabitation is messy, hostile, or lethal to the meat.\n\n**Duration / upkeep:** Holds until inhabited, or spoils (often days equal to Magnitude — printed).\n\n**Scope notes:** Enables clean possession, drone-rides, and idol-walks for later Callings. The Technomancer-only **Chassis Dressing** is the Wire-entity version.\n\n**Combat translation:** An empty dressed vessel is a prop. Once inhabited, the rider uses the Summon Entities rules; a drone vessel keeps its machine Stamina (Machines chapter). No pool spend.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,000** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Dressing oils, etch, or Wire permission-glyphs | Professional | 600 |\n| Preservation bath | Professional | 400 |\n| The vessel (owned or stolen) | Fetch / mission | — |\n| Chrome serial *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥1,000** |\n\n**Counter:** Spoil the dressing (Unmaking at Magnitude 3); wreck the vessel."
+    },
+    {
+      "id": "22-the-veil#great-circle#57",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Great Circle",
+      "kind": "rules",
+      "text": "**Other** · **Magnitude 4–5** · **General**\n\n**Formula Item form:** Restricted grimoire (bulky), with a Director veto callout\n\n**Payoff:** Great-ritual ceiling break. With an initiate-grade leader and a full circle, **one** sealing may exceed the Magnitude cap by **+1**. A campaign lever; easy to regret.\n\n**Duration / upkeep:** Empowers a single sealing night.\n\n**Scope notes:** Supports another Working. Hive-wide detection.\n\n**Combat translation:** None — a climax ritual beat. An interruption is catastrophic (Malice plus backlash).\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥6,000 (Magnitude 4) / ¥17,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Full circle stations (eight) | Restricted / Military | 3,200 | 8,000 |\n| Ceiling-break lattice | Restricted / Military | 2,000 | 6,000 |\n| Outer-ring ward | Restricted | 800 | 3,000 |\n| Initiate credentials (quest) | Fetch / mission | — | — |\n| Rare sky-ash or deep-node spike (mission) | Fetch / mission | — | — |\n| **Components total** | | **¥6,000** | **¥17,000** |\n\n**Counter:** Interrupt the sealing; break the circle."
+    },
+    {
+      "id": "22-the-veil#scrub-the-stain#58",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Scrub the Stain",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 1–5 (equal to or greater than the stain)** · **General**\n\n**Formula Item form:** ritual scroll or datachip, annotated with stain taxonomy\n\n**Payoff:** Strips a hung curse, toxic mark, corrupted ward residue, or **Taint** (cleanse ladder in `27`). A partial result reduces the stain one clock step.\n\n**Duration / upkeep:** Instant at a successful sealing.\n\n**Scope notes:** Veil stains. For corrupted code, Overlay marks, and hung daemons, use **Scrub the Ghost-Code**.\n\n**Combat translation:** None — even mid-siege it's a Project sealing, not an encounter ability. No pool spend.\n\n**Study time:** by the copy's Magnitude — 1 day / 3 days / 1 week / 2 weeks / 1 month.\n\n**Project Points (stages):**\n- **Study goal:** Magnitude × 2 (2 to 10).\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥100 (Magnitude 1) / ¥300 (Magnitude 2) / ¥1,000 (Magnitude 3) / ¥4,000 (Magnitude 4) / ¥12,000 (Magnitude 5)** (table below).\n- **Sanctum:** temporary at Magnitude 1–3; **built sanctum at Magnitude 4–5 — goal 12 / 15** (skip if owned).\n\n**Components**"
+    },
+    {
+      "id": "22-the-veil#scrub-the-stain#59",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Scrub the Stain",
+      "kind": "rules",
+      "text": "| Component | Availability | Magnitude 1 | Magnitude 2 | Magnitude 3 | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|---|---|---|\n| Solvent matched to the stain | Street / Street / Professional / Restricted / Military | 60 | 180 | 600 | 2,500 | 7,500 |\n| Specialty solvent and scrub-sink time | Street / Professional / Professional / Restricted / Military | 40 | 120 | 400 | 1,500 | 4,500 |\n| A sample of the stain | Fetch / mission | — | — | — | — | — |\n| **Components total** | | **¥100** | **¥300** | **¥1,000** | **¥4,000** | **¥12,000** |\n\n**Price:** failure can smear the stain onto the scrubber.\n\n**Counter:** None — you are the counter. A rival can re-stain."
+    },
+    {
+      "id": "22-the-veil#detox-domain#60",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Detox Domain",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 4–5** · **General** *(threat-facing)*\n\n**Formula Item form:** hazmat grimoire or sealed datachip\n\n**Payoff:** Pushes a toxic thin-place's agenda clock back one step. Failure worsens the stain.\n\n**Duration / upkeep:** Instant clock move; the site's fiction updates.\n\n**Scope notes:** Needs Magnitude equal to or greater than the domain's stain. Veil toxicity; Wire-poisoned nodes need **Scrub the Ghost-Code** at scale.\n\n**Combat translation:** A failed or worsening seal may spawn a toxic encounter. The Working isn't maintained in the fight. No pool spend.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥5,000 (Magnitude 4) / ¥14,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15**, or the toxic site itself if the Director allows.\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Detox reagents | Restricted / Military | 3,500 | 10,000 |\n| Hazmat gear and containment | Professional | 1,500 | 4,000 |\n| A core sample (hazard mission) | Fetch / mission | — | — |\n| **Components total** | | **¥5,000** | **¥14,000** |\n\n**Counter:** The domain's agenda pushes back on its next clock tick."
+    },
+    {
+      "id": "22-the-veil#thin-path#61",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Thin-Path",
+      "kind": "rules",
+      "text": "**Threshold** · **Magnitude 3** · **Elementalist only**\n\n**Formula Item form:** weather-stained tome or scroll tube\n\n**Payoff:** Opens a short path between two **known** thin places for one crew-sized traversal. It closes behind you.\n\n**Duration / upkeep:** One traversal; the path collapses after.\n\n**Scope notes:** Veil Threshold. Both thin places must be known (prior study or visit). Automatic district notice; Concord and corp clocks advance on Magnitude 3+ Threshold Workings in the Reach.\n\n**Combat translation:** Not a lingering effect. If ambushed mid-crossing, the fight happens on the path (Director map). No pool spend.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,200** (table below).\n- **Sanctum:** temporary — the departure thin place. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Path-spikes (or fetch them) | Restricted | 800 |\n| Traveler offerings | Street | 200 |\n| Map-ink for copying both thin places | Professional | 200 |\n| Maps of both thin places (study) | Fetch / mission | — |\n| **Components total** | | **¥1,200** |\n\n**Price:** each traveler pays a personal toll (Stamina or recovery debt — Director).\n\n**Counter:** Collapse it from either end (Unmaking at Magnitude 3+); destroy either anchor."
+    },
+    {
+      "id": "22-the-veil#domain-aspect#62",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Domain Aspect",
+      "kind": "rules",
+      "text": "**Threshold** · **Magnitude 3–4** · **Elementalist only**\n\n**Formula Item form:** elemental almanac tome\n\n**Payoff:** Paints session-long **Veil weather** on a block — ash rain, static bloom, soft gravity. Matching elements and spirits gain **edges**; opposing ones take **banes**.\n\n**Duration / upkeep:** One session, or until two dawns pass (the copy picks).\n\n**Scope notes:** Veil only. Civilians feel it; the opposition plans around it.\n\n**Combat translation:** Ambient edges and banes on the block. No pool spend to keep the weather.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,300 (Magnitude 3) / ¥4,500 (Magnitude 4)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum rating 4 at Magnitude 4 — goal 12** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|\n| Domain pigment or stormglass | Restricted | 1,000 | 3,500 |\n| Block-claim corner stakes | Professional | 300 | 1,000 |\n| Weather-vane stolen from a thin place *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥1,300** | **¥4,500** |\n\n**Counter:** An opposing Domain Aspect; Unmaking at Magnitude 3–4; wait it out."
+    },
+    {
+      "id": "22-the-veil#invoke-greater-shape#63",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Invoke Greater Shape",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 4–5** · **Elementalist only**\n\n**Formula Item form:** heavy grimoire (bulky)\n\n**Payoff:** Calls a **greater-shape** elemental for one climax scene. The \"we brought a disaster on a leash\" button.\n\n**Duration / upkeep:** One climax scene or encounter; then it leaves, or unbinds violently.\n\n**Scope notes:** A set-piece summon, not a downtime servant (compare **Long Leash**). Price and Malice spike.\n\n**Combat translation:** Rank **4** elemental (Rank **5** at Magnitude 5 / level 10): **independent** Stamina **50 or 65 + Logic × level** (Summon Entities rules). The leader commands it under elemental bind rules. No ritual Persistent; it uses a class Greater Summon Persistent only if the copy says it piggybacks. No pool spend for the ritual.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥6,000 (Magnitude 4) / ¥18,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (open sky or a deep basement), skip if owned.\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Massive reagent burn | Restricted / Military | 5,000 | 15,000 |\n| Summoning brazier and circle | Restricted | 1,000 | 3,000 |\n| A greater true-sign (quest) | Fetch / mission | — | — |\n| **Components total** | | **¥6,000** | **¥18,000** |\n\n**Counter:** Contested banish; Unmaking at Magnitude 4–5; let the clock run out."
+    },
+    {
+      "id": "22-the-veil#anchor-rune#64",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Anchor Rune",
+      "kind": "rules",
+      "text": "**Artifice** · **Magnitude 3** · **Elementalist only**\n\n**Formula Item form:** ritual scroll with trigger diagrams\n\n**Payoff:** Anchors a **triggered** rune that fires one known Magic ability on a printed trigger, then is spent. Trap, deadman, or \"when the door opens, wall of fire.\"\n\n**Duration / upkeep:** Until triggered or spoiled (often a session, or until next respite).\n\n**Scope notes:** The ability must be one the leader knows. Veil only.\n\n**Combat translation:** Environment gear. When it fires, resolve the named ability **once**; the caster spends no Essence for that shot (it was paid in the ritual). No ongoing spend.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,000** (table below).\n- **Sanctum:** temporary — the anchor site. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Rune blank | Restricted | 600 |\n| Anchor nail | Professional | 200 |\n| Trigger threadwork | Professional | 200 |\n| Stain of an exotic ability's tradition *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥1,000** |\n\n**Counter:** Scrape the rune; a disarm scene; Unmaking at Magnitude 3."
+    },
+    {
+      "id": "22-the-veil#telesma-birth#65",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Telesma Birth",
+      "kind": "rules",
+      "text": "**Artifice** · **Magnitude 2–3** · **Elementalist only**\n\n**Formula Item form:** craft tome or ritual scroll\n\n**Payoff:** Creates or upgrades a **tradition focus** from prepared telesma — building a new implement, not charming an old one (compare **Street-Focus Charm**). The output is a separate focus Item.\n\n**Duration / upkeep:** Permanent until destroyed.\n\n**Scope notes:** Elementalist tradition gear. Follows the signature-focus bond limit (`08`).\n\n**Combat translation:** Gear flags. No upkeep spend.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥400 (Magnitude 2) / ¥1,300 (Magnitude 3)** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 2 | Magnitude 3 |\n|---|---|---|---|\n| Telesma blank | Professional / Restricted | 300 | 1,000 |\n| Binding wire | Professional | 100 | 300 |\n| Elemental heart-matter | Fetch / mission | — | — |\n| **Components total** | | **¥400** | **¥1,300** |\n\n**Counter:** Shatter the focus; unbond (Unmaking at Magnitude 2–3)."
+    },
+    {
+      "id": "22-the-veil#storm-ward#66",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Storm Ward",
+      "kind": "rules",
+      "text": "**Ward** · **Magnitude 2–3** · **Elementalist only**\n\n**Formula Item form:** ritual scroll or chapbook\n\n**Payoff:** An element-aspected barrier that especially punishes the **opposite** element or spirit type. Your fire-ward hates water ghosts; your stone-ward hates sky things.\n\n**Duration / upkeep:** Printed — dawn, a session, or while sanctum upkeep holds.\n\n**Scope notes:** Veil only. Doesn't stop Wire-only intrusion (use **Data Ward**).\n\n**Combat translation:** Ambient banes (opposed types) and edges (matching types) in the warded zone. No pool spend.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥280 (Magnitude 2) / ¥1,000 (Magnitude 3)** (table below).\n- **Sanctum:** temporary — the warded zone. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 2 | Magnitude 3 |\n|---|---|---|---|\n| Aspect salts | Professional | 200 | 700 |\n| Circle stones | Street | 80 | 300 |\n| Opposing-type trophy (edge) *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥280** | **¥1,000** |\n\n**Counter:** A matching Unmaking; an opposite Domain Aspect; break the circle."
+    },
+    {
+      "id": "22-the-veil#nest-claim-optional#67",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Nest Claim *(optional)*",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 3** · **Elementalist only**\n\n**Formula Item form:** field-notebook scroll\n\n*Director option: use this card if the table wants nesting fiction; otherwise treat it as an upgrade clause on **Watcher**.*\n\n**Payoff:** Claims a vermin or elemental **nest** as a living alarm lattice across a small site — many tiny watchers as one Working.\n\n**Duration / upkeep:** Days equal to Logic, or until the nest burns.\n\n**Scope notes:** Veil and meat eyes; it watches, it doesn't block. Civilians complain about \"bugs that stare.\"\n\n**Combat translation:** Alert fiction and free notices — not a swarm summon. If upgraded to fight, it's many extensions, still no pool spend.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,100** (table below).\n- **Sanctum:** temporary — the nest. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Feeding slurry | Professional | 400 |\n| Nest housing | Professional | 300 |\n| Lure pheromone or resonance chimes | Restricted | 400 |\n| A queen-mote or nest seed | Fetch / mission | — |\n| **Components total** | | **¥1,100** |\n\n**Counter:** Burn the nest; Unmaking at Magnitude 3."
+    },
+    {
+      "id": "22-the-veil#hive-crack#68",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Hive Crack",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 4–5** · **Elementalist only** *(threat-facing)*\n\n**Formula Item form:** Restricted grimoire, or a datachip scavenged from a dead exterminator-cabal\n\n**Payoff:** Collapses a nest-sanctum keystone that serves a hive or infestation agenda.\n\n**Duration / upkeep:** Instant structural and spiritual collapse at sealing; aftermath clocks linger.\n\n**Scope notes:** Needs the keystone's location. Expect a fight as payment.\n\n**Combat translation:** The Price is often a **swarm combat**. The Working itself isn't maintained — you already lit the fuse. No pool spend.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥5,000 (Magnitude 4) / ¥14,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Solvent-bomb reagents | Restricted / Military | 4,000 | 11,000 |\n| Breach gear | Professional | 1,000 | 3,000 |\n| Keystone map (quest) | Fetch / mission | — | — |\n| Bait-sacrifice (heat) *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥5,000** | **¥14,000** |\n\n**Counter:** The hive rebuilds its keystone elsewhere."
+    },
+    {
+      "id": "22-the-veil#consecrated-thin-path#69",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Consecrated Thin-Path",
+      "kind": "rules",
+      "text": "**Threshold** · **Magnitude 3** · **Street Priest only**\n\n**Formula Item form:** prayer scroll or liturgy booklet\n\n**Payoff:** A Thin-Path that seals only on **consecrated** thin ground. Lower traveler toll than the Elementalist version; Light or Dark pact flavor stains the crossing.\n\n**Duration / upkeep:** One crew traversal.\n\n**Scope notes:** Veil Threshold. Same notice and heat as Thin-Path.\n\n**Combat translation:** Same as Thin-Path — an ambush fight on the path is possible. No pool spend.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,000** (table below).\n- **Sanctum:** temporary — the consecrated thin place. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Path-spikes | Restricted | 600 |\n| Consecration oils (skip if the ground is already consecrated) | Professional | 200 |\n| Pact-witness offering | Professional | 200 |\n| **Components total** | | **¥1,000** |\n\n**Price:** a lighter traveler toll than Thin-Path (Director).\n\n**Counter:** Desecrate either end; Unmaking at Magnitude 3."
+    },
+    {
+      "id": "22-the-veil#pact-charter#70",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Pact Charter",
+      "kind": "rules",
+      "text": "**Other** · **Magnitude 2–3** · **Street Priest only**\n\n**Formula Item form:** bound charter volume (bulky), with a terms list\n\n**Payoff:** Binds the crew to **Light or Dark terms**. Keep them and gain sealing **edges** on later Workings; break them and take backlash.\n\n**Duration / upkeep:** Until broken, rewritten, or Unmade.\n\n**Scope notes:** Binds the signers. Crew identity as rules.\n\n**Combat translation:** None as a summon. Breaking terms mid-fight may trigger the printed backlash — it's still not a Conviction cost to maintain.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥350 (Magnitude 2) / ¥1,200 (Magnitude 3)** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 2 | Magnitude 3 |\n|---|---|---|---|\n| Pact ink | Restricted | 250 | 900 |\n| Charter vellum | Professional | 100 | 300 |\n| Crew signatures or blood | Fetch / mission | — | — |\n| Ministry co-sign (favor) *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥350** | **¥1,200** |\n\n**Counter:** Exorcist's Unmaking; a mutual release scene; a rival's corruption."
+    },
+    {
+      "id": "22-the-veil#ally-heart#71",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Ally Heart",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 4–5** · **Street Priest only**\n\n**Formula Item form:** thick hagiography tome (bulky), with ally power slots\n\n**Payoff:** Forges a long-term **ally companion spirit** with a short power list and ongoing favor-debt. A named ally on the crew sheet, not a disposable Watcher.\n\n**Duration / upkeep:** Campaign-long while the debt is honored.\n\n**Scope notes:** Veil spirit. Doesn't replace *Invoke the Pact* uses without a Director bridge.\n\n**Combat translation:** When it takes the field: **independent** spirit, **30 + Persona × level** Stamina (Summon Entities rules); an **extension** instead if the copy says \"whisper only.\" Upkeep is favor-debt — no Conviction.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥5,000 (Magnitude 4) / ¥15,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Reliquary housing | Restricted | 2,500 | 7,000 |\n| Offering stock | Professional | 1,500 | 5,000 |\n| Pact-witness fee | Professional | 1,000 | 3,000 |\n| A heart-seed relic (major mission) | Fetch / mission | — | — |\n| A gift of memory or chrome (personal) | Fetch / mission | — | — |\n| **Components total** | | **¥5,000** | **¥15,000** |\n\n**Counter:** A failed Ally Reforge; Unmaking at Magnitude 4–5; betray the terms."
+    },
+    {
+      "id": "22-the-veil#ally-reforge#72",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Ally Reforge",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 3–4** · **Street Priest only**\n\n**Formula Item form:** addendum scroll bound into the Ally Heart tome\n\n**Payoff:** Adds or swaps one power on an existing Ally Heart. Failure **fractures** the bond — the ally is hurt, fled, or hostile for a clock.\n\n**Duration / upkeep:** Instant change; the ally's duration is unchanged.\n\n**Scope notes:** Needs an existing Ally Heart.\n\n**Combat translation:** None — downtime. A fractured ally may become a combat problem later.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,000 (Magnitude 3) / ¥3,500 (Magnitude 4)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum rating 4 at Magnitude 4 — goal 12** (the Ally Heart's sanctum usually qualifies).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|\n| Rewrite ink | Restricted | 700 | 2,500 |\n| Binding candles | Professional | 300 | 1,000 |\n| The existing Ally Heart | Fetch / mission | — | — |\n| A trial offering matching the new power | Fetch / mission | — | — |\n| **Components total** | | **¥1,000** | **¥3,500** |\n\n**Counter:** None — failure is the counter."
+    },
+    {
+      "id": "22-the-veil#exorcists-unmaking#73",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Exorcist's Unmaking",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 3–4** · **Street Priest only**\n\n**Formula Item form:** exorcism-manual tome or scrolled rite\n\n**Payoff:** Tears a possessing entity out of a vessel or site. The vessel may not survive. The kind door with a boot behind it.\n\n**Duration / upkeep:** Instant at sealing; possession ends — or worsens on a failure.\n\n**Scope notes:** Veil possessors. A Wire-entity riding chrome needs **Scrub the Ghost-Code**. A known true name helps (edge).\n\n**Combat translation:** Often a climax scene with the possessor as the enemy, using the Summon Entities rules while it's pried out. The ritual spends no Conviction; the priest may still use encounter abilities normally in that fight.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,000 (Magnitude 3) / ¥3,500 (Magnitude 4)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum rating 4 at Magnitude 4 — goal 12** (or the haunted site, if the Director allows).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|\n| Bell, book, and a street-compatible third | Professional / Restricted | 500 | 1,800 |\n| Binding chain | Professional | 300 | 1,200 |\n| Blessed water and salt | Street | 200 | 500 |\n| A holy or unholy relic | Fetch / mission | — | — |\n| The possessor's true name (edge) *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥1,000** | **¥3,500** |\n\n**Counter:** The possessor's rival ward; interrupt the sealing."
+    },
+    {
+      "id": "22-the-veil#blood-price-refusal#74",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Blood-Price Refusal",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 3–5** · **Street Priest only**\n\n**Formula Item form:** proscribed scroll (dangerous to carry) or sealed tome\n\n**Payoff:** Spoils a rival **sacrifice-fueled** sealing mid-agenda — kicking over someone else's altar during the hymn. High heat. Enemies forever.\n\n**Duration / upkeep:** Spoils one rival Working or one clock step.\n\n**Scope notes:** Needs Magnitude equal to or greater than the rival Working's.\n\n**Combat translation:** Often lands as a raid climax. The fight uses normal encounter pools; the Refusal sealing is the Project beat before or between the knives.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,200 (Magnitude 3) / ¥4,500 (Magnitude 4) / ¥14,000 (Magnitude 5)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum at Magnitude 4–5 — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|---|\n| Refusal nail | Restricted | 500 | 1,800 | 5,000 |\n| Light or Dark counter-offering | Restricted | 700 | 2,700 | 9,000 |\n| A sample of the rival rite (mission) | Fetch / mission | — | — | — |\n| **Components total** | | **¥1,200** | **¥4,500** | **¥14,000** |\n\n**Counter:** The rival's Counterseal; being outmatched in Magnitude."
+    },
+    {
+      "id": "22-the-veil#confession-ward#75",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Confession Ward",
+      "kind": "rules",
+      "text": "**Ward** · **Magnitude 1–2** · **Street Priest only**\n\n**Formula Item form:** prayer scroll\n\n**Payoff:** A faith-keyed barrier. Allies of the pact pass easier (edge); those opposed take a **bane**. Liars who flinch at the threshold show it (fiction).\n\n**Duration / upkeep:** Until dawn, or while sanctum upkeep holds.\n\n**Scope notes:** Veil and pact only. Doesn't stop Wire-only intrusion — use **Data Ward**.\n\n**Combat translation:** Ambient edges and banes by pact tag. No Conviction.\n\n**Study time:** 1 day (Magnitude 1) · 3 days (Magnitude 2).\n\n**Project Points (stages):**\n- **Study goal:** 2 / 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥80 (Magnitude 1) / ¥200 (Magnitude 2)** (table below).\n- **Sanctum:** temporary — the room. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 1 | Magnitude 2 |\n|---|---|---|---|\n| Confession salt or ash | Street | 50 | 120 |\n| Lintel pact mark (wax, pigment, candle) | Street | 30 | 80 |\n| **Components total** | | **¥80** | **¥200** |\n\n**Counter:** Desecrate; Unmaking at Magnitude 1–2; a false-confession trick (Director)."
+    },
+    {
+      "id": "22-the-veil#uncrook-the-path#76",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Uncrook the Path",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 3–5** · **Street Priest only** *(threat-facing)*\n\n**Formula Item form:** inquisitorial tome (bulky) or deniable datachip\n\n**Payoff:** Breaks a rival **twisted or corrupted tradition** Working. May reveal the true patron behind the crooked ministry.\n\n**Duration / upkeep:** Instant against the target Working; revelation clocks linger.\n\n**Scope notes:** Needs Magnitude equal to or greater than the target's.\n\n**Combat translation:** Nothing to maintain. The spoil may trigger a guardian fight afterward.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,200 (Magnitude 3) / ¥4,500 (Magnitude 4) / ¥13,000 (Magnitude 5)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum at Magnitude 4–5 — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|---|\n| Straight-path relic | Restricted / Restricted / Military | 800 | 3,000 | 9,000 |\n| Inquisitorial seals | Professional | 400 | 1,500 | 4,000 |\n| Proof of the twist (investigation) | Fetch / mission | — | — | — |\n| **Components total** | | **¥1,200** | **¥4,500** | **¥13,000** |\n\n**Counter:** The crooked ministry's own Counterseal."
+    },
+    {
+      "id": "22-the-veil#ritual-workings-technomancer-wire-rites#77",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Ritual Workings — Technomancer (Wire-rites)",
+      "kind": "rules",
+      "text": "*Same Magnitude ladder. **Resonance Price** means narrative attention and Incursion heat — never Resonance points.*"
+    },
+    {
+      "id": "22-the-veil#data-ward#78",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Data Ward",
+      "kind": "rules",
+      "text": "**Ward** · **Magnitude 1–2** · **Technomancer only**\n\n**Formula Item form:** datachip / job-stick\n\n**Payoff:** The Wire's room ward. A local node, flat, or server closet resists Wire bleed: sprites, Agents, ICE, and Overlay intrusion into the caged volume take a **bane**. Magnitude 2 also covers Magic peeks.\n\n**Duration / upkeep:** Until the node reboots, the next dawn, or the cage breaks.\n\n**Scope notes:** The Wire answer to **Ward the Room**. Magnitude 1 doesn't stop spirits; lay **Ward the Room** too if you fear both.\n\n**Combat translation:** Ambient bane on Wire intrusion (and Magic peeks at Magnitude 2) into the caged volume. No Resonance.\n\n**Study time:** 1 day (Magnitude 1) · 3 days (Magnitude 2).\n\n**Project Points (stages):**\n- **Study goal:** 2 / 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥90 (Magnitude 1) / ¥250 (Magnitude 2)** (table below).\n- **Sanctum:** temporary — the node or room. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 1 | Magnitude 2 |\n|---|---|---|---|\n| Glyph spray or etch-stick | Street | 40 | 100 |\n| Cage capacitors | Professional | 50 | 150 |\n| Admin window on a hostile node *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥90** | **¥250** |\n\n**Counter:** A reboot storm; a Wired spoof; Unmaking at Magnitude 1–2."
+    },
+    {
+      "id": "22-the-veil#signal-charm#79",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Signal Charm",
+      "kind": "rules",
+      "text": "**Artifice** · **Magnitude 2** · **Technomancer only**\n\n**Formula Item form:** datachip\n\n**Payoff:** Short-bonds a deck or focus. It gains a session-long **edge** on one named Resonance or Magic ability.\n\n**Duration / upkeep:** One session.\n\n**Scope notes:** Wire twin of **Street-Focus Charm**.\n\n**Combat translation:** Gear flag — edge on the named ability. No Resonance to keep it.\n\n**Study time:** 3 days.\n\n**Project Points (stages):**\n- **Study goal:** 4.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥250** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Signal lacquer | Professional | 180 |\n| Handshake dongle | Professional | 70 |\n| Handle smear *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥250** |\n\n**Counter:** Unbond (Unmaking at Magnitude 2); wipe the deck."
+    },
+    {
+      "id": "22-the-veil#deep-overlay-sense#80",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Deep Overlay Sense",
+      "kind": "rules",
+      "text": "**Reach** · **Magnitude 2–3** · **Technomancer only**\n\n**Formula Item form:** datachip\n\n**Payoff:** For one scene, perceive through a Jacked-In ally or a compromised camera swarm — Remote Sense, Overlay-native.\n\n**Duration / upkeep:** One scene.\n\n**Scope notes:** Wire Reach. Traceable; a failed seal risks a trace back to the leader.\n\n**Combat translation:** A perception channel only. No sprite summon implied. No Resonance.\n\n**Study time:** 3 days (Magnitude 2) · 1 week (Magnitude 3).\n\n**Project Points (stages):**\n- **Study goal:** 4 / 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥300 (Magnitude 2) / ¥1,100 (Magnitude 3)** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | Magnitude 2 | Magnitude 3 |\n|---|---|---|---|\n| Graph-pins | Professional | 150 | 600 |\n| Swarm access lease | Professional | 150 | 500 |\n| Jacked-In consent or a compromised camera swarm | Fetch / mission | — | — |\n| Hair-and-Wire remnant for cold aim *(optional)* | Fetch / mission | — | — |\n| **Components total** | | **¥300** | **¥1,100** |\n\n**Counter:** Trace and spoof; kill the feeds; Unmaking at Magnitude 2–3."
+    },
+    {
+      "id": "22-the-veil#daemon-long-leash#81",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Daemon Long Leash",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 3–4** · **Technomancer only**\n\n**Formula Item form:** encrypted job-stick (datachip)\n\n**Payoff:** Long-term bind of a Wire-entity for intermittent downtime services — crawler jobs, watching a node, whispering through cameras. A digital familiar as contractor.\n\n**Duration / upkeep:** Days or weeks; renew or it lapses.\n\n**Scope notes:** Wire-entity only; the Veil version is **Long Leash**. Not Compile Sprite spam.\n\n**Combat translation:** If embodied when knives come out, it follows the Technomancer sprite pattern — **independent** or **extension** as the copy says (Summon Entities rules). No Resonance.\n\n**Study time:** 1 week (Magnitude 3) · 2 weeks (Magnitude 4).\n\n**Project Points (stages):**\n- **Study goal:** 6 / 8.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,200 (Magnitude 3) / ¥4,200 (Magnitude 4)** (table below).\n- **Sanctum:** temporary at Magnitude 3; **built sanctum rating 4 at Magnitude 4 — goal 12** (a hardened server room counts; skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 3 | Magnitude 4 |\n|---|---|---|---|\n| Schedule chip | Restricted | 600 | 2,200 |\n| Sandbox nest hardware | Professional | 600 | 2,000 |\n| A sample of the named Wire-entity, or a prior compile | Fetch / mission | — | — |\n| **Components total** | | **¥1,200** | **¥4,200** |\n\n**Counter:** Wipe the sandbox; Unmaking at Magnitude 3–4; the escape clause."
+    },
+    {
+      "id": "22-the-veil#true-handle-collar#82",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "True-Handle Collar",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 4–5** · **Technomancer only**\n\n**Formula Item form:** air-gapped tome-and-datachip hybrid (bulky case)\n\n**Payoff:** Collars an unbound Wire power by its secret handle. Escape feeds **Incursion**. Deep Bind for deck jockeys who think they're immortal.\n\n**Duration / upkeep:** Until escape, wipe, or Unmaking.\n\n**Scope notes:** Wire powers only; the Veil version is **True-Name Collar**.\n\n**Combat translation:** **Independent** Wire-entity Stamina (Director; floor near a Rank 3+ elemental or heavy sprite). The collar's terms limit commands. No Resonance.\n\n**Study time:** 2 weeks (Magnitude 4) · 1 month (Magnitude 5).\n\n**Project Points (stages):**\n- **Study goal:** 8 / 10.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥6,000 (Magnitude 4) / ¥17,000 (Magnitude 5)** (table below).\n- **Sanctum:** **built sanctum at the Working's Magnitude — goal 12 / 15** (air-gapped; skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|\n| Collar ICE (fab) | Restricted / Military | 4,000 | 12,000 |\n| Air-gapped witness node | Restricted | 2,000 | 5,000 |\n| The true handle (major quest) | Fetch / mission | — | — |\n| **Components total** | | **¥6,000** | **¥17,000** |\n\n**Counter:** The printed escape; Unmaking at Magnitude 4–5; a handle leak."
+    },
+    {
+      "id": "22-the-veil#chassis-dressing#83",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Chassis Dressing",
+      "kind": "rules",
+      "text": "**Calling** · **Magnitude 3** · **Technomancer only**\n\n**Formula Item form:** tech-manual datachip plus scroll printout\n\n**Payoff:** Prepares a drone or empty chrome as a **legal vessel** for a called Wire-entity — Vessel Dressing, Wire skin.\n\n**Duration / upkeep:** Until inhabited, or it spoils.\n\n**Scope notes:** Wire-entities only.\n\n**Combat translation:** An empty chassis is a machine. Once inhabited: Wire-entity plus machine Stamina rules. No Resonance.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥900** (table below).\n- **Sanctum:** temporary. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Permission-glyphs | Professional | 500 |\n| Firmware wipe rig | Professional | 400 |\n| The drone or chrome shell | Fetch / mission | — |\n| Serial-spoof kit *(optional)* | Fetch / mission | — |\n| **Components total** | | **¥900** |\n\n**Counter:** Spoil the glyphs; brick the chassis."
+    },
+    {
+      "id": "22-the-veil#bridge-thin-path#84",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Bridge Thin-Path",
+      "kind": "rules",
+      "text": "**Threshold** · **Magnitude 3** · **Technomancer only**\n\n**Formula Item form:** datachip with topology maps\n\n**Payoff:** One crew traversal between two known **deep nodes** or Wired thin places. A packet-loss pilgrimage.\n\n**Duration / upkeep:** One traversal; the bridge collapses after.\n\n**Scope notes:** Wire Threshold. District Overlay notice; corps hate this.\n\n**Combat translation:** An ambush on the bridge is a Jacked-In / Threshold hybrid fight. The toll is Price, not Resonance.\n\n**Study time:** 1 week.\n\n**Project Points (stages):**\n- **Study goal:** 6.\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥1,000** (table below).\n- **Sanctum:** temporary — the departure node. No Project.\n\n**Components**\n\n| Component | Availability | ¥ |\n|---|---|---|\n| Bridge spikes | Restricted | 700 |\n| Sanity straps (one per traveler, crew of five) | Professional | 300 |\n| Both node keys (or admin access) | Fetch / mission | — |\n| **Components total** | | **¥1,000** |\n\n**Price:** each traveler pays a toll (Stamina or recovery debt — Director).\n\n**Counter:** Collapse either node anchor; Unmaking at Magnitude 3; an ICE storm."
+    },
+    {
+      "id": "22-the-veil#scrub-the-ghost-code#85",
+      "file": "22-the-veil.md",
+      "source": "docs/raw/22-the-veil.md",
+      "chapter": "The Veil",
+      "heading": "Scrub the Ghost-Code",
+      "kind": "rules",
+      "text": "**Unmaking** · **Magnitude 1–5 (equal to or greater than the stain)** · **Technomancer only**\n\n**Formula Item form:** datachip\n\n**Payoff:** Strips a corrupted Overlay mark, a hung daemon, or a rival glyph. Cleans decks, nodes, and people with code under the skin.\n\n**Duration / upkeep:** Instant at a successful sealing.\n\n**Scope notes:** Wire stains; the Veil cousin is **Scrub the Stain**.\n\n**Combat translation:** None — a downtime or dedicated beat. No Resonance.\n\n**Study time:** by the copy's Magnitude — 1 day / 3 days / 1 week / 2 weeks / 1 month.\n\n**Project Points (stages):**\n- **Study goal:** Magnitude × 2 (2 to 10).\n- **Components:** not a Project — pay the total from crew funds and run the fetch beats. **Components total ¥100 (Magnitude 1) / ¥300 (Magnitude 2) / ¥1,000 (Magnitude 3) / ¥4,000 (Magnitude 4) / ¥12,000 (Magnitude 5)** (table below).\n- **Sanctum:** temporary at Magnitude 1–3; **built sanctum at Magnitude 4–5 — goal 12 / 15** (skip if owned).\n\n**Components**\n\n| Component | Availability | Magnitude 1 | Magnitude 2 | Magnitude 3 | Magnitude 4 | Magnitude 5 |\n|---|---|---|---|---|---|---|\n| Solvent scripts | Street / Street / Professional / Restricted / Military | 60 | 180 | 600 | 2,500 | 7,500 |\n| Clean-room node time | Street / Professional / Professional / Restricted / Military | 40 | 120 | 400 | 1,500 | 4,500 |\n| A stain sample | Fetch / mission | — | — | — | — | — |\n| **Components total** | | **¥100** | **¥300** | **¥1,000** | **¥4,000** | **¥12,000** |\n\n**Counter:** None — you are the counter. A rival can re-infect.\n\n---"
+    },
+    {
+      "id": "22-the-veil#c3-summon-entities-locked-2026-09-18#86",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
@@ -5811,7 +6369,7 @@
       "text": "Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.\n\n**Pet Stamina (LOCKED).** Hit points for compiled / summoned pets are ordinary **Stamina**. There is no separate “pet HP” unit. **Sprites** (`20`), **Agents** (`19`), and **independent spirits** (this chapter / `18`) take damage against their own Stamina and drop at 0. **Extension spirits** have **no separate pool** — they act on the caster’s turn; a token number is table convenience only, and the Director may treat the extension as untargetable. Elemental rank bases stay in the table below.\n\n> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. Technomancer sprites use the same pack pattern on **Compile Sprite** (`20`). Hacker **Agents** (Probe / Spike / Daemon / Watchdog) use **Compile Agent** (`19`) — software, not Resonance, not a sprite SKU."
     },
     {
-      "id": "22-the-veil#elemental-stamina#25",
+      "id": "22-the-veil#elemental-stamina#87",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
@@ -5820,7 +6378,7 @@
       "text": "**Formula:** rank base + (**Logic × Level**). Companions use Rank 1.\n\n| Rank | Base | Notes |\n|---|---|---|\n| 1 | **15** | Companions (Ember / Zephyr / Boulder) and Summon Elemental R1 (extension) |\n| 2 | **25** | Summon Elemental from 5th level (independent) |\n| 3 | **35** | Summon Elemental from 7th level |\n| 4 | **50** | Greater Elemental Summon |\n| 5 | **65** | Greater Elemental Summon at echelon 4 (level 10) |\n\n**Bind unlocks (Summon Elemental max rank):** Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th.\n\n**Bound count:** at most **2** non-companion bound elementals at once. A new bind **releases the oldest**."
     },
     {
-      "id": "22-the-veil#spirit-stamina#26",
+      "id": "22-the-veil#spirit-stamina#88",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
@@ -5829,7 +6387,7 @@
       "text": "**Formula:** form base + (**Persona × Level**).\n\n| Form | Base | Notes |\n|---|---|---|\n| Extension | **20** | RAW: no Stamina track of its own. Token pool is table convenience; Director may treat extension as untargetable |\n| Independent | **30** | Own figure and turn |\n\nSpirit strike (extension and independent): **4 / 7 / 10 + Persona** (holy or corruption by pact) — final."
     },
     {
-      "id": "22-the-veil#deferred-explicitly-out-of-this-lock#27",
+      "id": "22-the-veil#deferred-explicitly-out-of-this-lock#89",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
@@ -5838,7 +6396,7 @@
       "text": "Leave unset until a later Veil pass:\n\n- Rank 2+ / Greater / Rank 5 **strike damage ladders**\n- **Defense stamps** on Veil Actors (Wired / Reflex / Physique, etc.)\n\nUntil those land, use Rank 1 / companion / spirit strike bands already printed in the class chapters, and Director judgment for higher-rank strike damage and defenses. Template Actors bake **base-only** Stamina; live summon stamps apply Logic×Level / Persona×Level."
     },
     {
-      "id": "22-the-veil#corruption-taint#28",
+      "id": "22-the-veil#corruption-taint#90",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
@@ -5847,13 +6405,13 @@
       "text": "The shared hero **Taint** track (0–12; Clean / Marked / Stained / Claimed / Hollowed) lives in `27-corruption-taint.md`. Class text that says \"corruption\" as a Price means **Taint** on that track. Unmaking workings above are the cleanse family; rest never cleanses; chrome does not raise Taint. Pact Prices ignore the +1-per-scene cap."
     },
     {
-      "id": "22-the-veil#not-yet-written#29",
+      "id": "22-the-veil#not-yet-written#91",
       "file": "22-the-veil.md",
       "source": "docs/raw/22-the-veil.md",
       "chapter": "The Veil",
       "heading": "Not yet written",
       "kind": "rules",
-      "text": "Thin-place gazetteer mechanics and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. The hero Taint ladder is **B80** (`27`). Ritual Workings above are the B43 lock; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build."
+      "text": "Thin-place gazetteer mechanics and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. The hero Taint ladder is **B80** (`27`). Ritual Workings above are the B43 lock with the 0.3.88 card catalog; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build."
     },
     {
       "id": "23-machines#machines-drones-vehicles-buildings#1",

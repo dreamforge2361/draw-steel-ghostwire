@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitLongLeash00",
+  "_key": "!items!gwRitLongLeash00",
+  "name": "GHOSTWIRE.Gear.Items.RitualLongLeash.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualLongLeash.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-long-leash",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 17000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,300 / ¥4,500)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Calling",
+        "magnitude": 3,
+        "magnitudeMax": 4,
+        "magnitudeText": "3–4",
+        "leaders": "General",
+        "form": "bound service-contract tome or encrypted datachip",
+        "componentsTotal": [
+          "¥1,300",
+          "¥4,500"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

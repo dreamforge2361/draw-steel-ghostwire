@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitDeepOverlay",
+  "_key": "!items!gwRitDeepOverlay",
+  "name": "GHOSTWIRE.Gear.Items.RitualDeepOverlaySense.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualDeepOverlaySense.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Technomancer (Wire-rites)",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-deep-overlay-sense",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 41000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥300 / ¥1,100)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Reach",
+        "magnitude": 2,
+        "magnitudeMax": 3,
+        "magnitudeText": "2–3",
+        "leaders": "Technomancer only",
+        "form": "datachip",
+        "componentsTotal": [
+          "¥300",
+          "¥1,100"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

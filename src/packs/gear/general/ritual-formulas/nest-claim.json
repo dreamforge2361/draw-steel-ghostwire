@@ -1,0 +1,67 @@
+{
+  "_id": "gwRitNestClaim00",
+  "_key": "!items!gwRitNestClaim00",
+  "name": "GHOSTWIRE.Gear.Items.RitualNestClaim.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualNestClaim.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-nest-claim",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 29000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,100)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Calling",
+        "magnitude": 3,
+        "magnitudeMax": 3,
+        "magnitudeText": "3",
+        "leaders": "Elementalist only",
+        "form": "field-notebook scroll",
+        "componentsTotal": [
+          "¥1,100"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

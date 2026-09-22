@@ -1,0 +1,67 @@
+{
+  "_id": "gwRitStreetFocus",
+  "_key": "!items!gwRitStreetFocus",
+  "name": "GHOSTWIRE.Gear.Items.RitualStreetFocusCharm.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualStreetFocusCharm.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-street-focus-charm",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 3000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥250)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Artifice",
+        "magnitude": 2,
+        "magnitudeMax": 2,
+        "magnitudeText": "2",
+        "leaders": "General",
+        "form": "ritual scroll or slim chapbook",
+        "componentsTotal": [
+          "¥250"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

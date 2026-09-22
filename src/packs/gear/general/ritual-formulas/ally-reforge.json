@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitAllyReforge",
+  "_key": "!items!gwRitAllyReforge",
+  "name": "GHOSTWIRE.Gear.Items.RitualAllyReforge.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualAllyReforge.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Street Priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-ally-reforge",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 34000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,000 / ¥3,500)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Calling",
+        "magnitude": 3,
+        "magnitudeMax": 4,
+        "magnitudeText": "3–4",
+        "leaders": "Street Priest only",
+        "form": "addendum scroll bound into the Ally Heart tome",
+        "componentsTotal": [
+          "¥1,000",
+          "¥3,500"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

@@ -11,6 +11,9 @@
       "src/packs/gear/general/medical/field-surgery-kit.json",
       "src/packs/gear/general/ammunition/standard-rounds.json"
     ],
+    "rituals": [
+      "src/packs/gear/general/ritual-formulas/ward-the-room.json"
+    ],
     "chrome": [],
     "biTotal": 0,
     "languages": [
@@ -32,6 +35,9 @@
       "src/packs/gear/general/lifestyle/fake-sin-basic.json",
       "src/packs/gear/general/medical/trauma-patch.json",
       "src/packs/gear/general/ammunition/standard-rounds.json"
+    ],
+    "rituals": [
+      "src/packs/gear/general/ritual-formulas/ward-the-room.json"
     ],
     "chrome": [],
     "biTotal": 0,
@@ -108,6 +114,9 @@
       "src/packs/gear/general/lifestyle/fake-sin-basic.json",
       "src/packs/gear/general/ammunition/standard-rounds.json",
       "src/packs/matrix/support/faraday-bag.json"
+    ],
+    "rituals": [
+      "src/packs/gear/general/ritual-formulas/ward-the-room.json"
     ],
     "chrome": [
       {

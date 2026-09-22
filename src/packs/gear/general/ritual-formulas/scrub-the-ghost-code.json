@@ -1,0 +1,71 @@
+{
+  "_id": "gwRitScrubGhostC",
+  "_key": "!items!gwRitScrubGhostC",
+  "name": "GHOSTWIRE.Gear.Items.RitualScrubTheGhostCode.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualScrubTheGhostCode.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Technomancer (Wire-rites)",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-scrub-the-ghost-code",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 46000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥100 / ¥300 / ¥1,000 / ¥4,000 / ¥12,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Unmaking",
+        "magnitude": 1,
+        "magnitudeMax": 5,
+        "magnitudeText": "1–5 (equal to or greater than the stain)",
+        "leaders": "Technomancer only",
+        "form": "datachip",
+        "componentsTotal": [
+          "¥100",
+          "¥300",
+          "¥1,000",
+          "¥4,000",
+          "¥12,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitTelesmaBirt",
+  "_key": "!items!gwRitTelesmaBirt",
+  "name": "GHOSTWIRE.Gear.Items.RitualTelesmaBirth.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualTelesmaBirth.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-telesma-birth",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 27000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥400 / ¥1,300)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Artifice",
+        "magnitude": 2,
+        "magnitudeMax": 3,
+        "magnitudeText": "2–3",
+        "leaders": "Elementalist only",
+        "form": "craft tome or ritual scroll",
+        "componentsTotal": [
+          "¥400",
+          "¥1,300"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

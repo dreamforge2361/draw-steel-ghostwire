@@ -1,0 +1,67 @@
+{
+  "_id": "gwRitWatcher0000",
+  "_key": "!items!gwRitWatcher0000",
+  "name": "GHOSTWIRE.Gear.Items.RitualWatcher.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualWatcher.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-watcher",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥220)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Calling",
+        "magnitude": 2,
+        "magnitudeMax": 2,
+        "magnitudeText": "2",
+        "leaders": "General",
+        "form": "ritual scroll; datachip for the Wire skin",
+        "componentsTotal": [
+          "¥220"
+        ],
+        "learned": false
+      }
+    }
+  }
+}
