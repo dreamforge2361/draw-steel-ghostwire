@@ -13,6 +13,7 @@
 // Helpers above the app class are Foundry-free so tools/ritual-working-smoke.mjs can check the ladder in Node.
 
 import { WEALTH_PATH, formatYen, getWealth } from "./kiosk.mjs";
+import { applySealArtifact, artifactForFamily, clearSealArtifacts, registerRitualSeal } from "./ritual-seal.mjs";
 import { formulaSubtitle, isLearned, isRitualFormula, ritualData, setFormulaLearned } from "./rituals.mjs";
 
 export const MODULE_ID = "draw-steel-ghostwire";
@@ -182,6 +183,10 @@ export function normalizeWorking(raw = {}) {
     componentsPaidAmount: Math.max(0, Math.round(Number(raw.componentsPaidAmount)) || 0),
     sealTier: tier,
     sealCharacteristic: SEAL_CHARACTERISTICS.includes(raw.sealCharacteristic) ? raw.sealCharacteristic : null,
+    // The Ritual Effect a successful seal left behind (0.3.95 / F8), so the panel can link it and the Director's
+    // reset can clear it. Null on a hung seal, and on every Working sealed before 0.3.95.
+    sealArtifactUuid: raw.sealArtifactUuid ? String(raw.sealArtifactUuid) : null,
+    sealArtifactKind: raw.sealArtifactKind ? String(raw.sealArtifactKind) : null,
     started: Number(raw.started) || 0,
     completed: Number(raw.completed) || null,
   };
@@ -582,6 +587,10 @@ function defineRitualWorkingApp() {
           assistHint: loc("Seal.Assistants"),
           outcome: state.outcome ? loc(`Seal.Outcome.${state.outcome.key}`) : null,
           hung: state.outcome?.hung === true,
+          // F8: what this family leaves behind, and a link to the artifact once the seal landed.
+          artifactHint: game.i18n.localize(`GHOSTWIRE.RitualSeal.Artifact.${artifactForFamily(ritual.family || working.family)}`),
+          artifactUuid: working.sealArtifactUuid,
+          artifactLabel: working.sealArtifactUuid ? game.i18n.localize("GHOSTWIRE.RitualSeal.OpenArtifact") : null,
         },
         payoff: {
           ...stageCtx.payoff,
@@ -702,7 +711,7 @@ function defineRitualWorkingApp() {
       const outcome = sealOutcome(tier);
       if (!outcome) return;
 
-      await patchWorking(leader, working.id, { sealTier: outcome.tier, sealCharacteristic: characteristic });
+      const sealed = await patchWorking(leader, working.id, { sealTier: outcome.tier, sealCharacteristic: characteristic });
       await postCard(leader, loc("Chat.Sealed", {
         leader: esc(leader.name),
         formula: esc(working.formulaName || label(facts.formula)),
@@ -712,6 +721,13 @@ function defineRitualWorkingApp() {
       }) + `<p>${esc(loc(`Payoff.${outcome.key}`))}</p>`
         + `<p class="hint">${esc(loc("Chat.Attention", { magnitude: working.magnitude }))}</p>`
         + leakLine(working.magnitude));
+
+      // F8: a middle or high seal leaves a Ritual Effect on the table — a Ward marker on the Scene, a called
+      // thing, an enchanted Item, a Reach chip. A hung seal (tier 1) leaves nothing; applySealArtifact says so.
+      const artifact = await applySealArtifact(leader, sealed ?? working, { ritual, tier: outcome.tier });
+      if (artifact.payload) {
+        await patchWorking(leader, working.id, { sealArtifactUuid: artifact.uuid, sealArtifactKind: artifact.kind });
+      }
       this.render();
     }
 
@@ -737,6 +753,7 @@ function defineRitualWorkingApp() {
         content: `<p>${esc(loc("AbandonHint", { formula: working.formulaName }))}</p>`,
       });
       if (!confirmed) return;
+      await clearSealArtifacts(leader, working.id);
       await writeWorkings(leader, workingsOf(leader).filter(row => row.id !== working.id));
       this.render();
     }
@@ -749,10 +766,15 @@ function defineRitualWorkingApp() {
       const patch = {
         components: { componentsPaid: false, componentsPaidAmount: 0 },
         sanctum: { sanctumReady: false },
-        seal: { sealTier: null },
+        seal: { sealTier: null, sealArtifactUuid: null, sealArtifactKind: null },
         payoff: { completed: null },
       }[target.dataset.stage];
       if (!patch) return;
+      // Unwinding a seal takes its Ritual Effect with it — otherwise a Ward token stands on a Scene forever.
+      if (target.dataset.stage === "seal") {
+        const cleared = await clearSealArtifacts(leader, working.id);
+        if (cleared) ui.notifications.info(game.i18n.format("GHOSTWIRE.RitualSeal.Cleared", { count: cleared, working: working.formulaName }));
+      }
       await patchWorking(leader, working.id, patch);
       this.render();
     }
@@ -871,6 +893,7 @@ export function registerRitualWorking() {
       };
     }
     game.ghostwire = { ...(game.ghostwire ?? {}), openRitualWorking };
+    registerRitualSeal();
     console.log(`${MODULE_ID} | Ritual Working: five-stage applet registered (Projects on the Ritual Leader)`);
   });
 }

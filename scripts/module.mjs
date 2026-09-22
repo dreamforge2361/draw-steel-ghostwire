@@ -33,6 +33,7 @@ import { registerVoidmark } from "./voidmark.mjs";
 import { registerGoldLineScene } from "./gold-line-scene.mjs";
 import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
+import { registerDirectorWealth } from "./director-wealth.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
 import { registerRituals } from "./rituals.mjs";
@@ -118,6 +119,7 @@ Hooks.once("init", () => {
   registerGoldLineScene();
   registerNightjarMarketScene();
   registerKiosk();
+  registerDirectorWealth();
   registerConsumableUse();
   registerRituals();
   registerRitualWorking();

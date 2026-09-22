@@ -8325,6 +8325,103 @@
         "LazarusExtract": "Lazarus Extract (LAZ)"
       }
     },
+    "RitualSeal": {
+      "ChatTitle": "Ritual Effect",
+      "UnknownWorking": "this Working",
+      "FolderName": "Ritual Effects",
+      "ArtifactName": "{family}: {working}",
+      "OpenArtifact": "Open the Ritual Effect",
+      "Cleared": "Cleared {count} Ritual Effect(s) left by {working}.",
+      "ClearBlocked": "{artifact} is still standing — you may not delete it. Ask the Director to clear it.",
+      "Family": {
+        "ward": "Ward",
+        "threshold": "Threshold",
+        "calling": "Calling",
+        "artifice": "Artifice",
+        "reach": "Reach",
+        "unmaking": "Unmaking",
+        "other": "Working"
+      },
+      "Scope": {
+        "ward": "The warded room and its thresholds — Magnitude {magnitude}.",
+        "threshold": "One doorway, gate or seam — Magnitude {magnitude}.",
+        "calling": "What answered, and the circle that holds it — Magnitude {magnitude}.",
+        "artifice": "The worked object and whoever carries it — Magnitude {magnitude}.",
+        "reach": "The Ritual Leader and what they can reach — Magnitude {magnitude}.",
+        "unmaking": "What was unmade stays unmade — Magnitude {magnitude}.",
+        "other": "As the card reads — Magnitude {magnitude}."
+      },
+      "Fields": {
+        "Working": "Working",
+        "Family": "Family",
+        "Magnitude": "Magnitude",
+        "Leader": "Ritual Leader",
+        "Scope": "Scope",
+        "Expires": "Expires",
+        "Sealed": "Seal"
+      },
+      "Expires": {
+        "None": "until broken, dispelled or let go"
+      },
+      "Outcome": {
+        "low": "hung — the Director is holding it",
+        "middle": "held",
+        "high": "clean"
+      },
+      "Artifact": {
+        "marker": "A clean or held seal stands a non-combat marker on the Scene beside the Ritual Leader.",
+        "summon": "A clean or held seal calls its answer down the summons path, or hands the Director the placing.",
+        "item": "A clean or held seal folds the Working into an item carried by the Ritual Leader.",
+        "effect": "A clean or held seal leaves a Reach chip on the Ritual Leader — no Scene token.",
+        "chat": "This family leaves no lasting artifact — only the chat record."
+      },
+      "Card": {
+        "Marker": "Sealed — {artifact} stands on {scene}. The Working is live.",
+        "Summon": "Sealed — the Calling answered. {artifact} is on the Scene.",
+        "SummonPending": "Sealed — {working} is live and riding {leader}. No summon template is wired to this Calling yet, so the Director places what answered.",
+        "Item": "Sealed — the Working folded into {artifact}, carried by {leader}.",
+        "Effect": "Sealed — {working} rides {leader}. No token; the Reach holds as long as the Director says it does.",
+        "Chat": "Sealed — {working} is done. Nothing lasting stays behind.",
+        "NoScene": "Sealed — {working} holds, but there is no active Scene to stand its marker on. Place it by hand.",
+        "NoPermission": "Sealed — {working} holds, but you may not create Actors or Tokens here. Ask the Director to stand the marker."
+      }
+    },
+    "Wealth": {
+      "Director": {
+        "Title": "Director: Hero ¥",
+        "PayTitle": "Director: Pay Hero",
+        "SpendTitle": "Director: Spend Hero",
+        "MacroPayName": "Director: Pay Hero",
+        "MacroSpendName": "Director: Spend Hero",
+        "Keybinding": "Director Pay / Spend Hero",
+        "Hud": "Pay / Spend ¥",
+        "Hint": "Credit or debit a targeted or selected hero's ¥. Pay always lands; spend refuses what the purse cannot cover.",
+        "GMOnly": "Only the Director can move a hero's ¥.",
+        "NoTarget": "Target or select a hero token first.",
+        "NotEligible": "{actor} is not a hero and carries no ¥.",
+        "NoAmount": "Enter an amount above zero.",
+        "Insufficient": "{actor} cannot cover {amount} — only {wealth} on hand. Nothing was taken.",
+        "Speaker": "Director",
+        "Targets": "Heroes: {heroes}",
+        "Mode": "Direction",
+        "Modes": {
+          "pay": "Pay — credit the hero",
+          "spend": "Spend — debit the hero"
+        },
+        "Amount": "Amount (¥)",
+        "Reason": "Reason",
+        "ReasonPlaceholder": "job pay, fixer's cut, fine, bribe…",
+        "Submit": "Apply",
+        "ChatTitlePay": "Paid",
+        "ChatTitleSpend": "Spent",
+        "ChatLinePay": "{actor} paid {amount} — {before} → {after}",
+        "ChatLineSpend": "{actor} spent {amount} — {before} → {after}",
+        "ChatReason": "Reason: {reason}",
+        "NoReason": "no reason given",
+        "NotifyPay": "{actor} paid {amount} — now {after}",
+        "NotifySpend": "{actor} spent {amount} — now {after}"
+      }
+    },
     "Voidmark": {
       "Title": "VOIDMARK",
       "Callsign": "VOIDMARK",
