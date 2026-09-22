@@ -4405,7 +4405,6 @@
         "GeneralMedical": "Medical Consumables",
         "GeneralAmmunition": "Ammunition & Thrown",
         "GeneralLifestyle": "Lifestyle Goods & Services",
-        "GeneralPlot": "Plot & Run Hooks",
         "Consumables": "Street Consumables",
         "ConsumablesFood": "Food & Drink",
         "ConsumablesChems": "Chems & Stims",
@@ -4422,7 +4421,8 @@
         "WeaponsMelee": "Melee & Blades",
         "WeaponsThrown": "Thrown & Grenades",
         "WeaponsBowsExotic": "Bows, Crossbows & Exotic",
-        "GeneralRitualFormulas": "Ritual Formulas"
+        "GeneralRitualFormulas": "Ritual Formulas",
+        "PlotRun": "Plot & Run"
       },
       "Items": {
         "Burner": {

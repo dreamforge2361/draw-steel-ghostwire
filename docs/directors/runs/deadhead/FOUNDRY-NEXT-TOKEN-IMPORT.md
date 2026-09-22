@@ -1,4 +1,4 @@
-# Foundry next push — staged tokens (LOCKED queue 2026-09-21)
+﻿# Foundry next push — staged tokens (LOCKED queue 2026-09-21)
 
 > **Required queue IMPORTED 0.3.87** — all nine Deadhead tokens ship under `assets/tokens/deadhead/` (1254² PNG + 1024² WebP) and are linked on the Deadhead Actors (Nox portrait on the freighter Actor sheet). Optional library tokens below stay queued.
 
@@ -31,3 +31,16 @@ Do not force-rewrite live Gold Line / Mama Scenes; place as library tokens / Dea
 |---|---|---|
 | **Burning blue sedan wreck** (top-down) | `assets/tokens/props/burning-blue-sedan-wreck.png` · ref `/workspace/gw-art-refs/tokens/props/burning-blue-sedan-wreck.png` | Street prop / cover / crash beat — Deadhead Flats alleys, Quiet Floor Slackwater, any Flats Scene |
 | **Corpse — male East Asian, shot** (full-body, black bg) | `assets/tokens/corpses/corpse-male-east-asian-shot.png` · ref `/workspace/gw-art-refs/tokens/corpses/corpse-male-east-asian-shot.png` | Body token — Quiet Floor / Deadhead / street heat beats; crop to round token if needed |
+
+---
+
+## Next push — Gear sidebar (LOCKED Michael 2026-09-21 ET) — **SHIPPED 0.3.92**
+
+Promote **Plot & Run Hooks** out from under **General & Lifestyle** to a **top-level** Ghostwire Gear folder labeled **Plot & Run**.
+
+- Folder: source moved to `src/packs/gear/plot/` — **done**
+- `_folder.json` `folder` is `null` (top-level, sort 20000, after Weapons); id `gwGearPlot000000` kept — **done**
+- Lang re-keyed `GHOSTWIRE.Gear.Folders.GeneralPlot` → `…Folders.PlotRun`, display **"Plot & Run"** (was "Plot & Run Hooks") — **done**
+- Items stay: Mama's Deadhead Job Stick, ARG Courier Capsule, Gold Line Aerial Recon (+ any other plot Items in that folder)
+- Smoke: Ghostwire Gear shows **Plot & Run** beside Armor / General & Lifestyle / Street Consumables / Weapons; items searchable and drag-to-hero still work
+

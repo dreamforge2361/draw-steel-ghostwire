@@ -1,12 +1,12 @@
 {
   "_id": "gwGearPlot000000",
   "_key": "!folders!gwGearPlot000000",
-  "name": "GHOSTWIRE.Gear.Folders.GeneralPlot",
+  "name": "GHOSTWIRE.Gear.Folders.PlotRun",
   "type": "Item",
-  "folder": "JQFKRPm2gZ2IZST5",
+  "folder": null,
   "description": "",
   "color": null,
   "sorting": "a",
-  "sort": 9000,
+  "sort": 20000,
   "flags": {}
 }
