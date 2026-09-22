@@ -51,6 +51,9 @@ ok(!files.has("ART-INDEX.md"), "skips handbook art index");
 ok(!files.has("README.md"), "skips lore README");
 ok(index.sources?.handbook?.some(f => f.includes("04-switchboard")), "handbook source lists 04-switchboard");
 
+ok(index.chunks.every(c => c.audience === "player" || c.audience === "director"), "B122: every chunk carries an audience");
+ok(index.audienceCounts?.director > 0, `B122: ${index.audienceCounts?.director} Director-only chunks tagged`);
+
 const heroesHits = index.chunks.filter(c => /draw steel heroes/i.test(c.text));
 ok(!heroesHits.length, "no Draw Steel Heroes in indexed rule/lore chunks");
 
@@ -167,6 +170,10 @@ ok(
   shambles.some(h => /05-the-neon-shambles|L3-ossian-reach/.test(switchboardSrc(h))),
   `shambles sources: ${shambles.map(h => h.source || h.file).join(", ")}`,
 );
+
+const playerWire = retrieve(index, "What's the difference between Overlay and Jacked In on the Wire?", { audience: "player" });
+ok(playerWire.length >= 2, `player-audience wire query returned ${playerWire.length} hits`);
+ok(playerWire.every(h => h.audience === "player"), "player audience returns no Director chunks (detail: tools/voidmark-audience-smoke.mjs)");
 
 console.log("\n3) Prompt assembly");
 ok(/VOIDMARK/.test(DEFAULT_SYSTEM_INSTRUCTIONS), "default prompt names VOIDMARK");

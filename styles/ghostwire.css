@@ -1623,3 +1623,20 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 }
 .ghostwire-market-chat .gw-market-lines li { padding: 0.1em 0; }
 .ghostwire-market-chat .hint { font-size: 0.8em; opacity: 0.8; margin: 0.2em 0 0; }
+
+/* ---------- VOIDMARK Director-only journal mark (B122 / S6) ---------- */
+.ghostwire-voidmark-badge {
+  color: var(--ghostwire-accent-2, #a78bfa);
+  font-size: 0.85em;
+  opacity: 0.9;
+  margin-left: 0.25em;
+}
+.directory-item.ghostwire-voidmark-director-only > .entry-name,
+.directory-item.ghostwire-voidmark-director-only .document-name,
+.toc .page.ghostwire-voidmark-director-only,
+.ghostwire-voidmark-director-only .page-title {
+  color: color-mix(in srgb, var(--ghostwire-accent-2, #a78bfa) 70%, currentColor);
+}
+.ghostwire-voidmark-director-only {
+  border-left: 2px solid color-mix(in srgb, var(--ghostwire-accent-2, #a78bfa) 55%, transparent);
+}

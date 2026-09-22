@@ -1,9 +1,16 @@
 // VOIDMARK (B82): in-module AI chat applet. Players/GM talk to an OpenAI-compatible
 // Chat Completions API from Foundry — not a live Cursor/Grok Bot bridge.
 // RAG: scripts/voidmark-rag.mjs over data/voidmark-rules-index.json
-// (RAW + Reach Handbook + L1–L5 + Flats gazetteer). Design: docs/spikes/B82-VOIDMARK-AI-APPLET.md.
+// (RAW + Reach Handbook + L1–L5 + Flats gazetteer) plus world Journal pages the
+// asker may see. Design: docs/spikes/B82-VOIDMARK-AI-APPLET.md.
+// B122 / S6: only a GM asking in Director mode hears Director-only material —
+// Director campaign aids in the static index, and world journals marked
+// flags.draw-steel-ghostwire.voidmarkAudience = "director".
+// Lock: docs/spikes/B122-DIRECTOR-ONLY-LORE-VOIDMARK.md
 
 import { citationLabels, retrieve } from "./voidmark-rag.mjs";
+import { audienceForAsk } from "./voidmark-audience.mjs";
+import { worldJournalChunks } from "./voidmark-journal.mjs";
 import { DEFAULT_SYSTEM_INSTRUCTIONS, buildChatMessages, normalizeMode } from "./voidmark-prompt.mjs";
 import { buildChatRequest, redactSecrets, sendChatRequest } from "./voidmark-client.mjs";
 
@@ -67,14 +74,27 @@ function formatMessageHtml(text) {
     .replace(/\n/g, "<br>");
 }
 
-async function retrieveHits(query) {
+/**
+ * Static index + world-journal hits, filtered to what this asker may hear.
+ * @param {string} query
+ * @param {{ user?: User, mode?: string, forcePlayer?: boolean }} [spec]
+ */
+async function retrieveHits(query, { user = game.user, mode = "runner", forcePlayer = false } = {}) {
+  const audience = audienceForAsk({ user, mode, forcePlayer });
+  let staticChunks = [];
   try {
     const index = await loadIndex();
-    return retrieve(index, query, { k: 5, maxChars: 5500 });
+    staticChunks = Array.isArray(index) ? index : (index?.chunks ?? []);
   } catch (error) {
     console.warn(`${MODULE_ID} | VOIDMARK rules index failed to load`, error);
-    return [];
   }
+  let journalChunks = [];
+  try {
+    journalChunks = worldJournalChunks({ user, mode, forcePlayer });
+  } catch (error) {
+    console.warn(`${MODULE_ID} | VOIDMARK world journal scan failed`, error);
+  }
+  return retrieve([...staticChunks, ...journalChunks], query, { k: 5, maxChars: 5500, audience });
 }
 
 function readThread() {
@@ -107,8 +127,8 @@ function askPayload(query, mode, history) {
   };
 }
 
-async function completeFromSettings(query, mode, history) {
-  const hits = await retrieveHits(query);
+async function completeFromSettings(query, mode, history, asker = {}) {
+  const hits = await retrieveHits(query, { user: asker.user ?? game.user, mode, forcePlayer: asker.forcePlayer });
   const messages = buildChatMessages({
     systemInstructions: setting("systemInstructions"),
     mode,
@@ -246,7 +266,7 @@ export class VoidmarkChat extends HandlebarsApplicationMixin(ApplicationV2) {
   async #complete(query, thread) {
     const history = thread.messages.slice(0, -1);
     const body = askPayload(query, thread.mode, history);
-    if (game.user.isGM) return completeFromSettings(body.query, body.mode, body.history);
+    if (game.user.isGM) return completeFromSettings(body.query, body.mode, body.history, { user: game.user });
     return requestViaGm(body);
   }
 }
@@ -314,7 +334,8 @@ async function onSocket(payload) {
   if (!setting("enabled")) return fail("VOIDMARK_DISABLED", loc("Errors.Disabled"));
   if (!user || !canOpenVoidmark(user)) return fail("VOIDMARK_DENIED", loc("Errors.Denied"));
   try {
-    const reply = await completeFromSettings(payload.query, payload.mode, payload.history);
+    // Relay asks are always player audience, whatever mode the payload claims.
+    const reply = await completeFromSettings(payload.query, payload.mode, payload.history, { user, forcePlayer: true });
     game.socket.emit(SOCKET, { op: "voidmark.reply", id: payload.id, ok: true, ...reply });
   } catch (error) {
     fail(error.code ?? "VOIDMARK_HTTP", userFacingError(error));
@@ -461,7 +482,7 @@ export function registerVoidmark() {
       module.api = {
         ...(module.api ?? {}),
         openVoidmark,
-        voidmark: { open: openVoidmark, retrieve, loadIndex, canOpenVoidmark },
+        voidmark: { open: openVoidmark, retrieve, loadIndex, canOpenVoidmark, worldJournalChunks },
       };
     }
     game.ghostwire = { ...(game.ghostwire ?? {}), openVoidmark };

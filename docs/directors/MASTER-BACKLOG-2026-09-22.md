@@ -1,8 +1,8 @@
 # Ghostwire master backlog - triage 2026-09-22 (updated evening)
 
-**Module now:** **0.3.96** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
-**Just shipped:** F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
-**Next picks:** S6 Director-only Voidmark lore filter · N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish.  
+**Module now:** **0.3.97** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
+**Just shipped:** S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
+**Next picks:** S8 vehicle / drone build-out · N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish.  
 **Playtest:** Deadhead Saturday; Quiet Floor after. Thursday PDF reprint from assembled manuscript.  
 **Doctrine:** Claude Code on Allfather first; Cursor only if no choice.
 
@@ -54,9 +54,9 @@
 | S3 | Broader SR References reskin | Sprawl Sites, Threats, etc. |
 | S4 | ~~Sprite/Agent Lock A~~ | **DONE**. |
 | S5 | Wired Console ↔ Journal research | 3-tier topic journals. |
-| S6 | Director-only Voidmark lore filter | B122. **NEXT after 0.3.96** (F9). |
+| S6 | ~~Director-only Voidmark lore filter~~ | **DONE** 0.3.97 — B122. Right-click a Journal Entry or page → **VOIDMARK: Mark Director-only** (`flags.draw-steel-ghostwire.voidmarkAudience`); page beats entry, unmarked falls back to Foundry ownership. Static index chunks under `docs/directors/**` + `docs/manuscript/03-directors/**` tagged `audience: director`. Only **GM + Director mode** retrieves them — GM in Runner mode and every player ask (relay included) stay on the player channel; world-journal RAG honours the mark **and** ownership. Smoke `node tools/voidmark-audience-smoke.mjs`; how-to `docs/directors/voidmark-director-only-howto.md`; Foundry checklist `docs/directors/voidmark-director-only-smoke-0397.md`. |
 | S7 | ~~Agent/Sprite/Spirit action-economy FAQ~~ | **DONE** 0.3.90 — `docs/raw/28-constructs-pets-faq.md`. |
-| S8 | **Vehicle / drone build-out** (Rigger + equipment refs) | **LOCKED scope 2026-09-22.** Robust vehicles + drones; **vehicle/drone mods** first-class; **¥ on every SKU**; fabricate/install via **Project downtime**; RAW/journals/manuscript updated. **Restock table vendors:** drone vendor + vehicle vendor (existing kiosk presets) + **mod vendor** (add/harden preset) so new SKUs auto-appear on shops Directors place on scenes. After S6. Brief: docs/directors/S8-vehicle-drone-mods-brief.md. |
+| S8 | **Vehicle / drone build-out** (Rigger + equipment refs) | **NEXT after 0.3.97** (S6). **LOCKED scope 2026-09-22.** Robust vehicles + drones; **vehicle/drone mods** first-class; **¥ on every SKU**; fabricate/install via **Project downtime**; RAW/journals/manuscript updated. **Restock table vendors:** drone vendor + vehicle vendor (existing kiosk presets) + **mod vendor** (add/harden preset) so new SKUs auto-appear on shops Directors place on scenes. After S6 (**done 0.3.97**). Brief: docs/directors/S8-vehicle-drone-mods-brief.md. |
 
 ---
 
@@ -87,9 +87,9 @@
 ---
 
 ## Suggested next pick
-**In flight:** F8 Ritual Seal + F6 Director Pay/Spend (**0.3.95**).  
-**Then:** **S6** Voidmark Director-only lore filter (B122).  
-**Then:** **S8** Vehicle / drone pass from Rigger Black Book + Arsenal / Man & Machine (equipment refs).  
+**Ship lane clear.** S6 Voidmark Director-only lore filter shipped (**0.3.97**) — Foundry checklist `docs/directors/voidmark-director-only-smoke-0397.md` awaiting Michael.
+**Next:** **S8** Vehicle / drone pass (Rigger + Arsenal / Man & Machine; vendor restocks).
+**Then:** N4 Thursday PDF · DJ1 district journals.
 Also open: N4 Thursday PDF, LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday.
 
 ---
