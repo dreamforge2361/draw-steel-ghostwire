@@ -31,7 +31,8 @@
       "24-advancement.md",
       "25-opposition.md",
       "26-lifestyle-downtime.md",
-      "27-corruption-taint.md"
+      "27-corruption-taint.md",
+      "28-constructs-pets-faq.md"
     ],
     "lore": [
       "docs/manuscript/01-lore/L1-setting-primer.md",
@@ -75,7 +76,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1489,
+  "chunkCount": 1507,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -3936,7 +3937,7 @@
       "chapter": "The Elementalist",
       "heading": "Base Band (1-5 Essence, chosen at 1st level)",
       "kind": "rules",
-      "text": "**Bolt Barrage** is the blaster opener -- two targets banged for real (light-band) damage on a 3-Essence spend, or one target hit twice as hard when you need to focus fire. **Difficult Ground** is the controller opener -- a live zone that both damages on entry AND punishes enemy movement across it; sustaining it costs -2/turn out of your intake, which is a real tension when you're also trying to build for a Heavy.\n\n**Elemental Wall** and **Conflagration/Tempest** are the two Heavy workings -- the 5-Essence releases you build your ramp toward. Wall is the controller's play: block a line, force a chokepoint, punish the room. Tempest is the blaster's play: everything in the cube takes heavy damage, and if you're willing to burn Persistent 2 you can keep detonating for -4/turn.\n\n**Summon Elemental (the pet path)** is the class's defining working:"
+      "text": "**Bolt Barrage** is the blaster opener -- two targets banged for real (light-band) damage on a 3-Essence spend, or one target hit twice as hard when you need to focus fire. **Difficult Ground** is the controller opener -- a live zone that both damages on entry AND punishes enemy movement across it; sustaining it costs -2/turn out of your intake, which is a real tension when you're also trying to build for a Heavy.\n\n**Elemental Wall** and **Conflagration/Tempest** are the two Heavy workings -- the 5-Essence releases you build your ramp toward. Wall is the controller's play: block a line, force a chokepoint, punish the room. Tempest is the blaster's play: everything in the cube takes heavy damage, and if you're willing to burn Persistent 2 you can keep detonating for -4/turn.\n\n**Summon Elemental (the pet path)** is the class's defining working. *Extension vs. independent turn order at the table — see FAQ `28-constructs-pets-faq.md`.*"
     },
     {
       "id": "17-elementalist#base-band-1-5-essence-chosen-at-1st-level#10",
@@ -4368,7 +4369,7 @@
       "chapter": "The Street Priest",
       "heading": "Invoke the Pact — Deep Dive",
       "kind": "rules",
-      "text": "*The class's defining high-Conviction play, and the headline entry of the 7-cost band, unlocked at 3rd level.*\n\n> **Invoke the Pact**\n> *Main Action · Veil working (Pact + Summon/Bind) · Cost: 7 Conviction (Persistent 2 if the independent form results)*\n> **Bind Check:** 2d10 + **Instinct** — *not* Persona. This is the one core Street-Priest roll that keys off your secondary attribute rather than your primary; control-and-bind always runs on Instinct for this class.\n\n**What happens on the Bind Check** — the Power Roll result of your Instinct roll determines which of two forms your invoked aid takes:"
+      "text": "*The class's defining high-Conviction play, and the headline entry of the 7-cost band, unlocked at 3rd level.*\n\n*Extension form vs. independent form at the table — see FAQ `28-constructs-pets-faq.md`.*\n\n> **Invoke the Pact**\n> *Main Action · Veil working (Pact + Summon/Bind) · Cost: 7 Conviction (Persistent 2 if the independent form results)*\n> **Bind Check:** 2d10 + **Instinct** — *not* Persona. This is the one core Street-Priest roll that keys off your secondary attribute rather than your primary; control-and-bind always runs on Instinct for this class.\n\n**What happens on the Bind Check** — the Power Roll result of your Instinct roll determines which of two forms your invoked aid takes:"
     },
     {
       "id": "18-street-priest#invoke-the-pact-deep-dive#25",
@@ -4629,7 +4630,7 @@
       "chapter": "The Hacker",
       "heading": "Agents -- Deck Daemons (not Sprites)",
       "kind": "rules",
-      "text": "**Bands.** The Agent you compile is chosen by your current level, every time:\n\n| Rank | Levels | Behavior |\n|---|---|---|\n| **Minor (extension)** | 1–3 | Agents act on your turn. No separate initiative. |\n| **Intermediate (commanded)** | 4–7 | Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round. |\n| **Advanced (independent)** | 8–10 | Each Agent takes its own turn in the round. |\n\n**Stamina.** An Agent's hit points are ordinary **Stamina** — same pet-HP lock as sprites (`20`) and independent spirits (`22`). There is no separate Agent HP unit. Stamina is archetype base + (**Logic × Level**), stamped when it compiles:\n\n| Archetype | Minor (L1–3) | Intermediate (L4–7) | Advanced (L8–10) | Job |\n|---|---|---|---|---|\n| **Probe** | 8 + (Logic × Level) | 14 + (Logic × Level) | 20 + (Logic × Level) | Recon / Deep Scan twin. Edge on Scan, Search, or Deep Scan. |\n| **Spike** | 12 + (Logic × Level) | 18 + (Logic × Level) | 26 + (Logic × Level) | Intrusion / Integrity strike. Power roll + Logic; low no damage; middle/high 2d10 + Logic (intermediate +1d6; advanced 3d10 + Logic). |\n| **Daemon** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | System control / Track 1 puppet. Holds a breached maglock, cam, or light and fires its function. |\n| **Watchdog** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | Defend / Trace scrub. Reduces your own Trace Alert increases; bane on Wired/EW attacks against the Agent (and allies at higher bands). |"
+      "text": "**Bands.** The Agent you compile is chosen by your current level, every time. *Table question — \"when does my Agent get a turn?\" — see FAQ `28-constructs-pets-faq.md`.*\n\n| Rank | Levels | Behavior |\n|---|---|---|\n| **Minor (extension)** | 1–3 | Agents act on your turn. No separate initiative. |\n| **Intermediate (commanded)** | 4–7 | Agents act on their own turn, but only within standing orders — a Compile Agent maneuver-command each round keeps an intermediate Agent acting that round. |\n| **Advanced (independent)** | 8–10 | Each Agent takes its own turn in the round. |\n\n**Stamina.** An Agent's hit points are ordinary **Stamina** — same pet-HP lock as sprites (`20`) and independent spirits (`22`). There is no separate Agent HP unit. Stamina is archetype base + (**Logic × Level**), stamped when it compiles:"
     },
     {
       "id": "19-hacker#agents-deck-daemons-not-sprites#10",
@@ -4638,7 +4639,7 @@
       "chapter": "The Hacker",
       "heading": "Agents -- Deck Daemons (not Sprites)",
       "kind": "rules",
-      "text": "**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.\n\n> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*\n>\n> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call).\n\n> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund."
+      "text": "| Archetype | Minor (L1–3) | Intermediate (L4–7) | Advanced (L8–10) | Job |\n|---|---|---|---|---|\n| **Probe** | 8 + (Logic × Level) | 14 + (Logic × Level) | 20 + (Logic × Level) | Recon / Deep Scan twin. Edge on Scan, Search, or Deep Scan. |\n| **Spike** | 12 + (Logic × Level) | 18 + (Logic × Level) | 26 + (Logic × Level) | Intrusion / Integrity strike. Power roll + Logic; low no damage; middle/high 2d10 + Logic (intermediate +1d6; advanced 3d10 + Logic). |\n| **Daemon** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | System control / Track 1 puppet. Holds a breached maglock, cam, or light and fires its function. |\n| **Watchdog** | 10 + (Logic × Level) | 16 + (Logic × Level) | 22 + (Logic × Level) | Defend / Trace scrub. Reduces your own Trace Alert increases; bane on Wired/EW attacks against the Agent (and allies at higher bands). |\n\n**Decompile.** A free maneuver dismisses one Agent or the whole roster (token + Actor). An Agent also decompiles when reduced to **0 Stamina**, and the whole roster decompiles when the encounter ends.\n\n> **Compile Agent** *(Class Feature Signature — 3 Bandwidth, Overlay or Jacked In)*\n>\n> **Effect:** **Compile** an Agent of your choice (Probe, Spike, Daemon, or Watchdog) if you are under your Agent cap, or **Command** your compiled Agents to move and act. On **high (17+)**, you compile *and* issue a free command in the same action. On **middle (12–16)**, the Agent compiles, or the command resolves, normally. On **low (≤11)**, the Agent manifests unstable (it acts next turn) or a command garbles (Director's call)."
     },
     {
       "id": "19-hacker#agents-deck-daemons-not-sprites#11",
@@ -4647,7 +4648,7 @@
       "chapter": "The Hacker",
       "heading": "Agents -- Deck Daemons (not Sprites)",
       "kind": "rules",
-      "text": "> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU."
+      "text": "> **Decompile Agent** *(Class Feature Signature — free maneuver)*\n>\n> **Effect:** Dismiss one compiled Agent, or the whole roster. No Bandwidth refund.\n\n> **Use Compile Agent** from the Abilities tab (or press **Compile Agent** on the ability’s Item sheet). Pick Probe / Spike / Daemon / Watchdog, and the matching Summons › Agents Actor drops a token beside you. Overlay or Jacked In is required — Linked warns and refuses. At cap, Use commands the roster without compiling another. **Use Decompile Agent**, the roster ✕, 0 Stamina, or end of encounter removes the token and the world Actor. The Wired Console **Constructs** section lists compiled Agents (separate from Connections/Nodes; the scene token is a meat-side roster anchor). Overlay / Jacked In compilers on the same scene see each other’s constructs there without Scan. Agents are not sprites: do not drag a sprite SKU."
     },
     {
       "id": "19-hacker#level-1-10-progression-table#12",
@@ -4854,7 +4855,7 @@
       "chapter": "The Technomancer",
       "heading": "Hybrid Band Grammar",
       "kind": "rules",
-      "text": "The Technomancer's sprites follow the same \"extension vs. independent\" ladder the Veil chapter uses for summons. Each step on that ladder is a **sprite rank**:\n\n| Rank | Levels | Behavior |\n|---|---|---|\n| **Minor (extension)** | 1-3 | Sprites act **as extensions of the Technomancer** — on the Technomancer's own turn, sharing the Technomancer's intent. No separate initiative. This is the Compile Sprite signature's default mode. |\n| **Intermediate (commanded)** | 4-7 | Sprites act **on their own turn**, but only within standing command orders — a Compile Sprite maneuver-command must be issued each round to keep an intermediate sprite acting autonomously that round. |\n| **Advanced (independent)** | 8-10 | Sprites are **genuinely independent** — each takes **its own turn in the round**, separate from yours, like any other creature in the encounter (`04`). The shipped sprite Actors each carry one turn per round. This is the payoff rank: by the time a Technomancer reaches 8th level, their congregation is no longer just an extension of them, but a small crew of ghosts fighting alongside them. |\n\n**Sprites acting on the Technomancer's own turn never trigger biofeedback for the Technomancer** — they are the buffer between the caster and the wire, precisely because they haven't yet become independent enough to feed anything back."
+      "text": "The Technomancer's sprites follow the same \"extension vs. independent\" ladder the Veil chapter uses for summons. Each step on that ladder is a **sprite rank**:\n\n*Table question — \"when does my sprite get a turn?\" — see FAQ `28-constructs-pets-faq.md`.*\n\n| Rank | Levels | Behavior |\n|---|---|---|\n| **Minor (extension)** | 1-3 | Sprites act **as extensions of the Technomancer** — on the Technomancer's own turn, sharing the Technomancer's intent. No separate initiative. This is the Compile Sprite signature's default mode. |\n| **Intermediate (commanded)** | 4-7 | Sprites act **on their own turn**, but only within standing command orders — a Compile Sprite maneuver-command must be issued each round to keep an intermediate sprite acting autonomously that round. |\n| **Advanced (independent)** | 8-10 | Sprites are **genuinely independent** — each takes **its own turn in the round**, separate from yours, like any other creature in the encounter (`04`). The shipped sprite Actors each carry one turn per round. This is the payoff rank: by the time a Technomancer reaches 8th level, their congregation is no longer just an extension of them, but a small crew of ghosts fighting alongside them. |\n\n**Sprites acting on the Technomancer's own turn never trigger biofeedback for the Technomancer** — they are the buffer between the caster and the wire, precisely because they haven't yet become independent enough to feed anything back."
     },
     {
       "id": "20-technomancer#decompile-rules#13",
@@ -6366,7 +6367,7 @@
       "chapter": "The Veil",
       "heading": "§C3 Summon Entities (LOCKED 2026-09-18)",
       "kind": "rules",
-      "text": "Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.\n\n**Pet Stamina (LOCKED).** Hit points for compiled / summoned pets are ordinary **Stamina**. There is no separate “pet HP” unit. **Sprites** (`20`), **Agents** (`19`), and **independent spirits** (this chapter / `18`) take damage against their own Stamina and drop at 0. **Extension spirits** have **no separate pool** — they act on the caster’s turn; a token number is table convenience only, and the Director may treat the extension as untargetable. Elemental rank bases stay in the table below.\n\n> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. Technomancer sprites use the same pack pattern on **Compile Sprite** (`20`). Hacker **Agents** (Probe / Spike / Daemon / Watchdog) use **Compile Agent** (`19`) — software, not Resonance, not a sprite SKU."
+      "text": "Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.\n\n*Player-facing action-economy questions (extension vs. independent, turns, caps, 0 Stamina) — see FAQ `28-constructs-pets-faq.md`.*\n\n**Pet Stamina (LOCKED).** Hit points for compiled / summoned pets are ordinary **Stamina**. There is no separate “pet HP” unit. **Sprites** (`20`), **Agents** (`19`), and **independent spirits** (this chapter / `18`) take damage against their own Stamina and drop at 0. **Extension spirits** have **no separate pool** — they act on the caster’s turn; a token number is table convenience only, and the Director may treat the extension as untargetable. Elemental rank bases stay in the table below.\n\n> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. Technomancer sprites use the same pack pattern on **Compile Sprite** (`20`). Hacker **Agents** (Probe / Spike / Daemon / Watchdog) use **Compile Agent** (`19`) — software, not Resonance, not a sprite SKU."
     },
     {
       "id": "22-the-veil#elemental-stamina#87",
@@ -7465,6 +7466,168 @@
       "heading": "Pointers",
       "kind": "rules",
       "text": "| Topic | Where |\n|---|---|\n| Unmaking / Ritual Workings / Price | `22-the-veil.md` |\n| Elementalist coerced-summon Price | `17-elementalist.md` |\n| Street Priest pact / coerce | `18-street-priest.md` |\n| Mutant Flaw; Load retired | `05-ancestries.md` |\n| Chrome is not Taint | `09-chrome-body-integrity.md` |\n| Rest / respite never cleanse | `26-lifestyle-downtime.md`, `04-combat.md` |\n| Corruption skill | `02-heroes-characteristics.md` |\n| Zone hooks | `docs/directors/corruption-taint.md` |"
+    },
+    {
+      "id": "28-constructs-pets-faq#constructs-pets-action-economy-faq#1",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Constructs & Pets — Action Economy FAQ",
+      "kind": "rules",
+      "text": "**RAW status:** draft (S7 FAQ 2026-09-22; restates locks from `19-hacker.md`, `20-technomancer.md`, `22-the-veil.md` §C3, `17-elementalist.md`, `18-street-priest.md` — this chapter adds no new numbers)\n**Sources:** `docs/raw/19-hacker.md` (Agent bands), `docs/raw/20-technomancer.md` (sprite bands), `docs/raw/22-the-veil.md` §C3 Summon Entities (LOCKED 2026-09-18), `docs/raw/17-elementalist.md` (elementals), `docs/raw/18-street-priest.md` (Invoke the Pact), `docs/raw/21-the-wire.md` (Constructs Console, Lock A)\n\n---"
+    },
+    {
+      "id": "28-constructs-pets-faq#what-this-chapter-covers#2",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "What this chapter covers",
+      "kind": "rules",
+      "text": "Four classes put a second body on the board: the **Hacker** compiles **Agents**, the **Technomancer** compiles **sprites**, the **Elementalist** binds **elementals**, and the **Street Priest** invokes **spirits**. They all answer the same three questions at the table — *when does it act, what are its hit points, and when does it go away* — and they answer them two different ways.\n\nThis is the short version, written to be read mid-fight. The full rules stay in the class chapters and in `22-the-veil.md` §C3; nothing here overrides them.\n\n**The one thing to remember.** An **extension** acts on *your* turn and costs you nothing extra to run. An **independent** construct takes *its own* turn in the round. Everything else is detail."
+    },
+    {
+      "id": "28-constructs-pets-faq#when-does-my-sprite-or-agent-get-a-turn#3",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "When does my sprite or Agent get a turn?",
+      "kind": "rules",
+      "text": "Sprites (Technomancer) and Agents (Hacker) run the **same hybrid band ladder**, and your band is read off your own level every time you compile:\n\n| Rank | Your level | When it acts |\n|---|---|---|\n| **Minor (extension)** | 1–3 | On **your** turn, as an extension of you. **No separate initiative.** |\n| **Intermediate (commanded)** | 4–7 | On **its own turn** — but only in a round where you spend a **maneuver** to command it. No command that round, no turn that round. |\n| **Advanced (independent)** | 8–10 | On **its own turn, every round**, like any other creature in the encounter (`04-combat.md`). No command needed. |\n\nYou do not choose your band, and you cannot buy up into it early. A 3rd-level Technomancer's sprite is minor; a 4th-level Technomancer's sprite is intermediate the next time it compiles."
+    },
+    {
+      "id": "28-constructs-pets-faq#im-4th-7th-level-what-exactly-do-i-have-to-spend-each-round#4",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "I'm 4th–7th level. What exactly do I have to spend each round?",
+      "kind": "rules",
+      "text": "A **maneuver** — Compile Sprite's command mode (`20`) or Compile Agent's command mode (`19`). That maneuver is what keeps an **intermediate** construct acting on its own turn that round.\n\n- Spend the maneuver → every commanded construct takes its own turn this round.\n- Skip it → your intermediate constructs hold. They stay compiled and keep their Stamina; they just don't act.\n- Roll **high (17+)** on the compile main action and you get a **free command** in the same action — compile *and* command in one go.\n- Rolling **low (≤11)** means the construct manifests unstable (acts next turn instead of immediately) or the command garbles. Director's call on the misfire.\n\nAt **8th level and up** you stop paying this tax: advanced constructs act every round on their own, and the maneuver is free for other work."
+    },
+    {
+      "id": "28-constructs-pets-faq#do-my-constructs-act-before-or-after-me#5",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Do my constructs act before or after me?",
+      "kind": "rules",
+      "text": "**Minor (extension):** there is no \"before or after\" — they act *inside* your turn, on your intent.\n\n**Intermediate and advanced:** they are their own figures on the shared round (`04-combat.md`), so they take their own turn wherever the round puts them. The shipped sprite and Agent Actors each carry **one turn per round**."
+    },
+    {
+      "id": "28-constructs-pets-faq#how-many-can-i-have-out-at-once#6",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "How many can I have out at once?",
+      "kind": "rules",
+      "text": "Hackers and Technomancers share the same cap ladder: **2** at 1st level, **3** from 5th, **4** from 8th. Caps do **not** stack — use the single highest number you qualify for.\n\nThe Technomancer's **Sprite-Weaver** discipline is the exception: Wide Compile starts that discipline at **3** from 1st level and keeps raising it through its higher-level features (up to **6** at 8th). Hackers have no equivalent bump.\n\nElementalists cap at **2 bound non-companion elementals**; a new bind releases the oldest. Signature companions (Ember / Zephyr / Boulder) don't count against that."
+    },
+    {
+      "id": "28-constructs-pets-faq#what-are-my-constructs-hit-points#7",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "What are my construct's hit points?",
+      "kind": "rules",
+      "text": "**Stamina.** There is no separate \"pet HP\" unit anywhere in Ghostwire. Sprites, Agents, elementals, and **independent** spirits each have an ordinary **Stamina** pool, take damage against it, and drop at **0**.\n\n**Extension spirits have no Stamina track of their own** in RAW. If your table wants a number on the token, `22-the-veil.md` §C3 gives one as a convenience (**20 + Persona × level**), and the Director may simply treat the extension as untargetable instead.\n\nActual formulas live in the class chapters: sprite and Agent Stamina is **archetype base + (Logic × Level)**, elementals are **rank base + (Logic × Level)**, independent spirits are **30 + (Persona × Level)**."
+    },
+    {
+      "id": "28-constructs-pets-faq#what-happens-when-my-construct-hits-0-stamina#8",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "What happens when my construct hits 0 Stamina?",
+      "kind": "rules",
+      "text": "It **decompiles** (sprites and Agents) or is released (elementals and spirits) — the token and the world Actor both go. Sprites and Agents also decompile when you dismiss them and when the **encounter ends**; they are temporary conjurations, not gear, and you do not carry them between fights. (The Technomancer's Sprite-Weaver capstone is the one printed exception.)\n\nDismissing is cheap on purpose: **Decompile** is a **free maneuver** for one construct or the whole roster. No resource refund."
+    },
+    {
+      "id": "28-constructs-pets-faq#does-my-street-priest-spirit-get-its-own-turn#9",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Does my Street Priest spirit get its own turn?",
+      "kind": "rules",
+      "text": "It depends entirely on the **Invoke the Pact** result (`18-street-priest.md`):\n\n- **middle (12–16) — extension form.** The spirit acts **on your turn**, as an extension of your own action economy. No turn of its own, no Stamina track of its own, no sustain cost. Lasts until end of encounter or until you release it.\n- **high (17+) — independent form.** The spirit becomes **its own figure with its own turn** on the shared round, with its own Stamina. Sustaining it costs **Persistent 2** (−4 Conviction per turn).\n- **low (≤11) — failed bind.** No entity. On a dark pact it manifests just long enough to strike you once before departing.\n\nSpirit strike is **4 / 7 / 10 + Persona** (holy or corruption, by pact) in **both** forms — the form changes the action economy, not the damage."
+    },
+    {
+      "id": "28-constructs-pets-faq#does-my-elemental-get-its-own-turn#10",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Does my elemental get its own turn?",
+      "kind": "rules",
+      "text": "Same two forms, chosen by investment rather than by roll (`17-elementalist.md`):\n\n- **Extension** (the early/low-investment shape, and every signature companion): acts **on your turn**. **Persistent 2** (−4 Essence per turn).\n- **Independent** (properly bound, higher echelons): **its own figure and its own turn** on the shared round. **Persistent 4** (−8 Essence per turn).\n\nBind unlocks: **Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th**. The upkeep is the real cost — you cannot run a greater elemental at full tilt and spend freely on your own abilities in the same round."
+    },
+    {
+      "id": "28-constructs-pets-faq#are-agents-and-sprites-the-same-thing#11",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Are Agents and sprites the same thing?",
+      "kind": "rules",
+      "text": "**No, and they never share a stat block.** A Technomancer compiles **sprites** from the Wired's spirit world using **Resonance**; a Hacker compiles **Agents** as running deck processes using **Bandwidth**. Different Actors, different art, different language. Do not drag a sprite SKU onto a Hacker.\n\nThey happen to share the band ladder, the cap ladder, and the Stamina lock. That is the whole overlap.\n\nA Hacker's **Watchdog Agent** is also not **Watchdog ICE** — the ICE is opposition sitting on a node (`21-the-wire.md`, `25-opposition.md`); the Agent is your own compiled screen."
+    },
+    {
+      "id": "28-constructs-pets-faq#can-i-compile-while-linked#12",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Can I compile while Linked?",
+      "kind": "rules",
+      "text": "Hackers: **no.** Compiling an Agent needs **Overlay or Jacked In** — Linked refuses, because a soft presence can't keep a daemon running. **Decompiling** works from any state, Linked or Disconnected; you can always kill your own process."
+    },
+    {
+      "id": "28-constructs-pets-faq#does-my-constructs-attack-backfire-on-me#13",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Does my construct's attack backfire on me?",
+      "kind": "rules",
+      "text": "Constructs acting **on the Technomancer's own turn** — the minor/extension rank — **never trigger biofeedback** for the Technomancer. Being an extension is exactly what makes them a buffer between you and the wire. That buffer holds until a sprite goes independent."
+    },
+    {
+      "id": "28-constructs-pets-faq#can-i-command-someone-elses-construct#14",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Can I command someone else's construct?",
+      "kind": "rules",
+      "text": "No. Command, panning, and Decompile stay with the **owner** (and the Director). Seeing a rival's construct listed on the Wired Console does not give you a handle on it, and does not reveal, unhide, or let you target its meat-side token."
+    },
+    {
+      "id": "28-constructs-pets-faq#can-i-shoot-an-enemy-sprite-in-the-face#15",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Can I shoot an enemy sprite in the face?",
+      "kind": "rules",
+      "text": "Not with a gun. A construct's **scene token is a roster anchor only** — Wire play happens in the Wired Console, and meat-space attacks against that token are **off** unless a printed ability explicitly bridges (a Resonance Strike routed through a device, a Daemon holding a breached Track 1 object, and similar). Fight constructs with **Wired and EW** attacks.\n\nExtension spirits are a separate case: the Director may simply rule them untargetable, since RAW gives them no pool to attack."
+    },
+    {
+      "id": "28-constructs-pets-faq#what-about-the-pets-the-ritual-chapter-mentions#16",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "What about the pets the ritual chapter mentions?",
+      "kind": "rules",
+      "text": "Ritual Workings (`22-the-veil.md`) never spend Essence, Conviction, or Resonance, and most ritual entities are **not** encounter summons. When one does end up in a fight, the card says whether it fights as an **extension** or as an **independent** figure, and it then uses the §C3 Summon Entities numbers as its floor. Stay inside the bound-count caps unless the Director agrees."
+    },
+    {
+      "id": "28-constructs-pets-faq#director-note#17",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Director note",
+      "kind": "rules",
+      "text": "**Lock A (2026-09-20):** a construct's **scene token is a roster anchor only** — meat-space attacks and other meat actions against it stay **off** unless a printed ability explicitly bridges. Do not treat the token as a second copy of the runner.\n\n**Where the roster lives.** Compiled constructs — sprites, Agents, and independent spirits — are a **separate Constructs section of the Wired Console**, not entries on the node graph. Overlay / Jacked In compilers on the same scene see each other's constructs there without a Scan. At the table you can also read the roster off the summon ability's own sheet (`19` / `20` / `22`).\n\n**Two rulings worth making early.** First, whether extension spirits and extension elementals are targetable at all (RAW gives them no pool — untargetable is the clean default). Second, what a **low (≤11)** compile misfire looks like at your table, since that one is explicitly your call.\n\n**Rank 2+ strike ladders and defense stamps are deferred** (`22-the-veil.md` §C3). Use the printed Rank 1 / companion / spirit bands and your own judgment above them; don't invent a new ladder mid-session."
+    },
+    {
+      "id": "28-constructs-pets-faq#director-note#18",
+      "file": "28-constructs-pets-faq.md",
+      "source": "docs/raw/28-constructs-pets-faq.md",
+      "chapter": "Constructs & Pets — Action Economy FAQ",
+      "heading": "Director note",
+      "kind": "rules",
+      "text": "> Open the **Wired Console** from the Token scene-control tools (network icon). The **Constructs** pane is the live roster, separate from Connections / Nodes. **Use Compile Sprite** (Technomancer) or **Compile Agent** (Hacker) from the Abilities tab to drop the matching Summons Actor beside you; at cap, Use commands the roster instead of compiling another. Elementalist and Street Priest summons spawn linked Actors from the **Summons & Machines** pack — open the summon ability's Item sheet for the roster, manual Summon / Dismiss, and per-pet dismiss. Decompile, 0 Stamina, or end of encounter removes the token and the world Actor."
     },
     {
       "id": "L1-setting-primer#setting-primer#1",

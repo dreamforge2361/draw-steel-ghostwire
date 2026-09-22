@@ -53,7 +53,8 @@ const used = [...source.matchAll(/(?:["`]|\$\{L\}\.)(Menu\.[A-Za-z]+|Chat\.[A-Za
 ok(KEYS.every(k => used.includes(k)), `rituals.mjs uses every Ritual lang key (missing: ${KEYS.filter(k => !used.includes(k)).join(", ") || "none"})`);
 ok(used.every(k => typeof t(`GHOSTWIRE.Ritual.${k}`) === "string"), `every key rituals.mjs names exists (${[...new Set(used)].length} keys)`);
 ok(/registerRituals/.test(readFileSync("scripts/module.mjs", "utf8")), "module.mjs registers the hooks");
-ok(read("module.json").version === "0.3.89", "module.json is 0.3.89");
+const cmpVer = (a, b) => { const p = v => v.split(".").map(Number); const [x, y] = [p(a), p(b)]; for (let i = 0; i < 3; i++) if ((x[i] ?? 0) !== (y[i] ?? 0)) return (x[i] ?? 0) - (y[i] ?? 0); return 0; };
+ok(cmpVer(read("module.json").version, "0.3.89") >= 0, `module.json is >= 0.3.89 (Mark Learned shipped in 0.3.89; now ${read("module.json").version})`);
 
 if (failures.length) {
   console.error(`\nMark Learned smoke FAILED:\n  - ${failures.join("\n  - ")}`);

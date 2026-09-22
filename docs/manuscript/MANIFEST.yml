@@ -301,3 +301,9 @@ entries:
     kind: new
     print_ch: 29
 
+  - type: file
+    id: ch30
+    title: Constructs & Pets — Action Economy FAQ
+    path: ../raw/28-constructs-pets-faq.md
+    kind: raw
+    print_ch: 30

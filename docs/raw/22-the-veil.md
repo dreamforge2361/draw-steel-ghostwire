@@ -1843,6 +1843,8 @@ Every Working below is a card. The **Formula Item** for each one (compendium: *G
 
 Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.
 
+*Player-facing action-economy questions (extension vs. independent, turns, caps, 0 Stamina) — see FAQ `28-constructs-pets-faq.md`.*
+
 **Pet Stamina (LOCKED).** Hit points for compiled / summoned pets are ordinary **Stamina**. There is no separate “pet HP” unit. **Sprites** (`20`), **Agents** (`19`), and **independent spirits** (this chapter / `18`) take damage against their own Stamina and drop at 0. **Extension spirits** have **no separate pool** — they act on the caster’s turn; a token number is table convenience only, and the Director may treat the extension as untargetable. Elemental rank bases stay in the table below.
 
 > **In Foundry**
