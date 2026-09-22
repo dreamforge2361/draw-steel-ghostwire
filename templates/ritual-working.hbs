@@ -169,9 +169,15 @@
           </select>
         </label>
         <p class="gw-rw-dim">{{../seal.assistHint}}</p>
+        <p class="gw-rw-dim">{{../seal.artifactHint}}</p>
         {{#if done}}
         <p class="gw-rw-ok">{{../seal.outcome}}</p>
         {{#if ../seal.hung}}<p class="gw-rw-warn">{{localize "GHOSTWIRE.RitualWorking.Seal.Hung"}}</p>{{/if}}
+        {{#if ../seal.artifactUuid}}
+        <button type="button" class="gw-rw-btn" data-action="openDoc" data-uuid="{{../seal.artifactUuid}}">
+          <i class="fa-solid fa-hexagon-nodes"></i> {{../seal.artifactLabel}}
+        </button>
+        {{/if}}
         {{else}}
         <div class="gw-rw-actions">
           <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="seal" {{disabled (not (and ../seal.ready ../canAct))}}>

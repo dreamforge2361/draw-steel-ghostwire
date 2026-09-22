@@ -1,0 +1,20 @@
+{
+  "_id": "gwDirPayHero0001",
+  "_key": "!macros!gwDirPayHero0001",
+  "name": "GHOSTWIRE.Wealth.Director.MacroPayName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/commodities/currency/coins-assorted-mix-copper.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.directorWealthPrompt) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use Director: Pay Hero.\");\n} else {\n  api.directorWealthPrompt({ mode: \"pay\" });\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "wealth-pay"
+    }
+  }
+}

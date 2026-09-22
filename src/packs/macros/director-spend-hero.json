@@ -1,0 +1,20 @@
+{
+  "_id": "gwDirSpendHero01",
+  "_key": "!macros!gwDirSpendHero01",
+  "name": "GHOSTWIRE.Wealth.Director.MacroSpendName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/commodities/currency/coin-embossed-skull-silver.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.directorWealthPrompt) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use Director: Spend Hero.\");\n} else {\n  api.directorWealthPrompt({ mode: \"spend\" });\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "wealth-spend"
+    }
+  }
+}
