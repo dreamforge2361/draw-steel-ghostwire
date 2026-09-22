@@ -8531,6 +8531,17 @@
           "Name": "VOIDMARK system instructions",
           "Hint": "Editable persona + boundaries. Retrieved Ghostwire RAW is appended per ask. Leave the default unless you need a table-specific leash."
         }
+      },
+      "Audience": {
+        "MarkDirector": "VOIDMARK: Mark Director-only",
+        "AllowPlayers": "VOIDMARK: Allow for players",
+        "ClearMark": "VOIDMARK: Clear mark (use ownership)",
+        "Badge": "Director-only — VOIDMARK will not share this with players.",
+        "Notify": {
+          "Marked": "VOIDMARK will keep \"{name}\" off player channels.",
+          "Cleared": "VOIDMARK may share \"{name}\" with players who can see it.",
+          "Reset": "VOIDMARK mark cleared on \"{name}\" — Foundry ownership decides now."
+        }
       }
     }
   },

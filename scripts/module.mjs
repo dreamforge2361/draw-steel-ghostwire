@@ -30,6 +30,7 @@ import { registerFreeStrikeStrip } from "./free-strikes.mjs";
 import { registerCasterChrome } from "./caster-chrome.mjs";
 import { registerMagicErosion } from "./magic-erosion.mjs";
 import { registerVoidmark } from "./voidmark.mjs";
+import { registerVoidmarkJournal } from "./voidmark-journal.mjs";
 import { registerGoldLineScene } from "./gold-line-scene.mjs";
 import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
@@ -117,6 +118,7 @@ Hooks.once("init", () => {
   registerMagicErosion({ isCasterClass });
   registerTaint();
   registerVoidmark();
+  registerVoidmarkJournal();
   registerGoldLineScene();
   registerNightjarMarketScene();
   registerKiosk();

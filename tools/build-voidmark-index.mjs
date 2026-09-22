@@ -5,6 +5,10 @@
  * Skips front matter / INDEX / handbook extract notes so player-facing
  * retrieve stays Ghostwire-only (B92).
  *
+ * B122 / S6: every chunk carries `audience: "player" | "director"`. Anything
+ * under docs/directors/** or docs/manuscript/03-directors/** is a Director
+ * campaign aid and never reaches a player or Runner-mode retrieve.
+ *
  * Run: node tools/build-voidmark-index.mjs
  */
 import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -31,6 +35,18 @@ const SETTING_PAGES = [
   "docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md",
   "docs/directors/campaigns/QUIET-FLOOR-OUTLINE.md",
 ];
+
+/** B122: source prefixes that are Director campaign aids, never player-facing. */
+const DIRECTOR_PREFIXES = [
+  "docs/directors/",
+  "docs/manuscript/03-directors/",
+];
+
+/** @returns {"player"|"director"} */
+function audienceFor(source) {
+  const path = String(source ?? "").replaceAll("\\", "/");
+  return DIRECTOR_PREFIXES.some(prefix => path.startsWith(prefix)) ? "director" : "player";
+}
 
 const MAX_CHUNK = 1600;
 const MIN_CHUNK = 80;
@@ -182,6 +198,7 @@ function isHeroesCitationHeavy(text) {
 }
 
 function chunkMarkdown(markdown, source, kind) {
+  const audience = audienceFor(source);
   const body = stripMeta(markdown);
   const file = basename(source);
   const titleMatch = body.match(/^#\s+(.+)$/m);
@@ -210,6 +227,7 @@ function chunkMarkdown(markdown, source, kind) {
           chapter,
           heading: part.heading || heading,
           kind,
+          audience,
           text,
         });
       }
@@ -250,9 +268,14 @@ const index = {
     lore: loreFiles.map(f => `docs/manuscript/01-lore/${f}`),
     handbook: handbookFiles.map(f => `docs/setting/reach-handbook/${f}`),
     setting: [...SETTING_PAGES],
+    director: [...new Set(chunks.filter(c => c.audience === "director").map(c => c.source))].sort(),
     skipped: [...SKIP_RAW, ...SKIP_HANDBOOK, ...SKIP_LORE],
   },
   chunkCount: chunks.length,
+  audienceCounts: {
+    player: chunks.filter(c => c.audience === "player").length,
+    director: chunks.filter(c => c.audience === "director").length,
+  },
   chunks,
 };
 
@@ -260,3 +283,4 @@ mkdirSync(join(ROOT, "data"), { recursive: true });
 writeFileSync(OUT, `${JSON.stringify(index, null, 2)}\n`);
 const bytes = Buffer.byteLength(JSON.stringify(index));
 console.log(`Wrote ${chunks.length} chunks (${Math.round(bytes / 1024)} KB) → ${OUT}`);
+console.log(`  audience: ${index.audienceCounts.player} player / ${index.audienceCounts.director} director`);

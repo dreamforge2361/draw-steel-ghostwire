@@ -1,5 +1,8 @@
 // VOIDMARK knowledge RAG — embedding-free lexical retrieve over the shipped index.
 // No Foundry globals. Used by the chat applet and by tools/voidmark-smoke.mjs.
+//
+// B122 / S6: chunks carry `audience: "player" | "director"`. Pass
+// `{ audience: "player" }` to retrieve() and Director campaign aids drop out.
 
 const STOP = new Set([
   "a", "an", "the", "and", "or", "but", "if", "then", "than", "to", "of", "in", "on", "for", "from",
@@ -142,7 +145,22 @@ const LOCK_PHRASES = [
   "pack vehicles",
 ].sort((a, b) => b.length - a.length);
 
+/** Belt-and-braces: Director source paths, so a stale index without `audience` still filters. */
+const DIRECTOR_SOURCE_RE = /^docs\/(?:directors\/|manuscript\/03-directors\/)/;
+
 const LOREISH = /lore|district|hive|gazetteer|who is|what is|where is|ossian|flats|reach handbook|street color/;
+
+/**
+ * Audience tag for one chunk. Untagged chunks read as player-safe unless the
+ * source path says otherwise (legacy indexes built before B122).
+ * @returns {"player"|"director"}
+ */
+export function chunkAudience(chunk) {
+  const tagged = String(chunk?.audience ?? "").toLowerCase();
+  if (tagged === "director" || tagged === "player") return tagged;
+  const source = String(chunk?.source ?? "").replaceAll("\\", "/");
+  return DIRECTOR_SOURCE_RE.test(source) ? "director" : "player";
+}
 
 export function tokenize(text) {
   return String(text ?? "")
@@ -250,13 +268,16 @@ export function scoreChunk(chunk, query) {
 /**
  * @param {{ chunks?: object[] } | object[]} index
  * @param {string} query
- * @param {{ k?: number, maxChars?: number }} [options]
+ * @param {{ k?: number, maxChars?: number, audience?: "player"|"all" }} [options]
+ *   audience "player" drops Director-only chunks. Default "all" (back-compat).
  */
 export function retrieve(index, query, options = {}) {
   const chunks = Array.isArray(index) ? index : (index?.chunks ?? []);
   const k = Math.max(1, Number(options.k) || 5);
   const maxChars = Math.max(400, Number(options.maxChars) || 5500);
+  const audience = String(options.audience ?? "all").toLowerCase() === "player" ? "player" : "all";
   const ranked = chunks
+    .filter(chunk => audience === "all" || chunkAudience(chunk) !== "director")
     .map(chunk => ({ chunk, score: scoreChunk(chunk, query) }))
     .filter(row => row.score > 0)
     .sort((a, b) => b.score - a.score || String(a.chunk.id).localeCompare(String(b.chunk.id)));
@@ -276,6 +297,7 @@ export function retrieve(index, query, options = {}) {
       chapter: row.chunk.chapter,
       heading: row.chunk.heading,
       kind: row.chunk.kind ?? "rules",
+      audience: chunkAudience(row.chunk),
       text,
       score: Math.round(row.score * 100) / 100,
     });
