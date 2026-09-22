@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5350 in chassis salvage, drive stock, and skirt or track stock; any chop-shop bay, or a flat piece of street and no questions",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Star-Chopper chassis \u00b7 a single machine, unmodded."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

@@ -451,6 +451,8 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | T4 | 4 | 1,300 | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | 2 |
 | Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | T3 | 3 | 4,500 | Up-armored, run-flats, tinted; the corp-extraction and bodyguard vehicle. | 3 |
 | Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | T2 | 2 | 12,000 | A bike with a forward mount and light armor — milspec scout/skirmisher. | 4 |
+| Lane Bus / Shaft Shuttle / Flats public-transit hover hopper | Ground | Heavy | T3 | 3 | 5,200 | Decommissioned shaft shuttle — moves a whole crew (or a squad) in plain sight. **S8.** | 3 |
+| Ash-Crawler / Survey Tractor / sealed long-range expedition crawler | Ground | Heavy | T2 | 2 | 16,000 | Tracked, sealed, scrubbed, bunked — the hull Ash Survey crews live out of past the last lane light. **S8.** | 4 |
 | Brick / APC / armored personnel carrier | Ground | Heavy | T2 | 2 | 18,000 | Heavy-scale crew mover + weapon platform; carries a squad, mounts a turret. | 4 |
 | Iron Giant / Combat Walker / bipedal weapons platform | Ground | Vehicle–Heavy | T1 | 1 | 55,000 | The legged mech — all-terrain, multiple hardpoints, apex ground unit. | 5 |
 
@@ -465,8 +467,10 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | T4 | 4 | 2,200 | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | 2 |
 | Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | T3 | 3 | 5,000 | Workhorse insertion/exfil bird — carries a team, hovers, mounts a door-gun. | 3 |
 | Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | T3 | 3 | 4,000 | Urban low-altitude flyer; beats a ground chase by ignoring streets. | 3 |
+| Gale-Runner / Lane Interceptor / high-thrust pursuit VTOL | Air | Vehicle | T2 | 2 | 13,000 | Two-seat interceptor built to run something down and keep a gun on it. Extreme speed band. **S8.** | 4 |
 | Skyhunter / Gunship / attack rotorcraft | Air | Heavy | T2 | 2 | 20,000 | Heavy-scale strafe-and-fire-support platform — multiple hardpoints, armor, sensor suite. | 4 |
 | Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | T1 | 1 | 60,000 | Radar-and-Alert-quiet heavy insertion craft — the black-ops apex. | 5 |
+| Black Ledger / Command Deck Air / airborne command-and-EW post | Air | Heavy | T1 | 1 | 65,000 | Flying operations room — four crew stations and a jam-and-spoof crown. Owns the night's comms. **S8.** | 5 |
 
 ### 5C — Water & Submersible
 
@@ -476,7 +480,9 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 |---|---|---|---|---|---|---|---|
 | Skiff / Runabout Boat / outboard launch | Water | Light | T5 | 5 | 300 | A small open boat — river work, harbor crossings, a quiet approach. | 1 |
 | Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | T4 | 4 | 1,500 | Fast surface pursuit — high Handling on open water, forward mount option. | 2 |
+| Trauma Barge / Laz Wetwagon / Lazarus Extract (LAZ) canal ambulance | Water | Vehicle | T3 | 3 | 4,800 | LAZ flood-canal ambulance — shallow draft, patient deck, stern hoist. Works the Sinks the White Door cannot float. **S8.** | 3 |
 | Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | T3 | 3 | 6,000 | Silent infiltration below the sensor line; limited depth. | 3 |
+| Longshore / Deep Freighter / deep-draft low-observable cargo hull | Water | Heavy | T1 | 1 | 54,000 | Quiet plant, sonar-shy skin, holds that swallow a drone fleet. Slow enough that the plan has to be good. **S8.** | 5 |
 | Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | T1 | 1 | 58,000 | Heavy-scale silent hunter — deep-diving, sonar-armed, torpedo mounts. | 5 |
 
 ### 5D — Space
@@ -485,6 +491,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 | Name (slang / corp / sci) | Domain | Scale | Tier | Avail | Cost ¥ | Profile | Slots | Tags |
 |---|---|---|---|---|---|---|---|---|
+| Dock Tug / Yard Tug / short-burn pressurised dock handler | Space | Vehicle | T4 | 4 | 1,800 | Stubby sealed handler with a grapple arm — walks containers and dead hulls around a dock ring. The Street-band way off the deck. **S8.** | 2 | Sealed |
 | Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | T3 | 3 | 7,000 | Cramped short-hop capsule — station-to-station, surface-to-orbit. | 3 | Sealed |
 | Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | T2 | 2 | 22,000 | Heavy-scale transit and boarding craft with a docking collar. | 4 | Sealed |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | T1 | 1 | 80,000+ | Capital-scale warship — a mobile base with heavy mounts and a crew of stations. | 5 | Sealed |
@@ -504,7 +511,11 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Guard-Dog / Patrol Drone / autonomous sentry unit | Ground (drone) | Light | T3 | 3 | 3,200 | Perimeter sentry — light mount, motion sensors, area-denial. | 3 |
 | Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle | T2 | 2 | 13,000 | Autonomous/Jumped-In gunner — a real hardpoint, the fleet's damage dealer. | 4 |
 | Barracuda / Aquadrone / submersible sabotage unit | Water (drone) | Light | T3 | 3 | 4,000 | Underwater recon and sabotage — silent, sensor-quiet, plants charges. | 3 |
+| Kiln-Beetle / Armored Repair Drone / hardened field maintenance unit | Ground (drone) | Light | T2 | 2 | 11,500 | A Wrenchbot that can take a hit — plated shell, cutting and welding arms, feedstock hopper. **S8.** | 4 |
+| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | T2 | 2 | 12,000 | Jams a floor, spoofs a lane, paints what is left. The bridge between Choir-Box and Choir-King. **S8.** | 4 |
 | Skulker / Anthro-Drone / humanoid infiltration unit | Ground (drone) | Personal | T2 | 2 | 14,000 | A human-scale walker that passes at a distance — the "body double" drone. | 4 |
+| Tide-Wraith / Apex Aquadrone / elite silent wet hunter | Water (drone) | Vehicle | T1 | 1 | 34,000 | A Deep-Viper with the noise taken out — sits on a canal floor for a day, then takes a hull. **S8.** | 5 |
+| Second Face / Apex Anthro-Drone / elite humanoid infiltration frame | Ground (drone) | Personal | T1 | 1 | 36,000 | Skinned, weighted, warm — where a Skulker passes at a distance, this passes at a desk. **S8.** | 5 |
 | Warhound / Combat Drone / heavy autonomous weapons unit | Ground (drone) | Vehicle | T1 | 1 | 40,000 | The apex drone — heavy mounts, real armor, a one-machine assault element. | 5 |
 
 ### 5F — Vehicle & Drone Mods
@@ -531,14 +542,30 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 #### Other vehicle / drone mods
 
+*Not a ladder — install as many as the frame has free slots for. **S8** rows landed 0.3.98.*
+
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
 |---|---|---|---|---|---|
+| Burner Plates / Swap Registry / throwaway registration set | T5 | 5 | 500 | Sheds one scene of tail, tag, or lane-camera heat on this machine, then the registry entry is burned. **S8.** | Wired, Consumable-ish |
+| Lane Skirt / Limiter Tune / street-deck skirt-and-vane package | T5 | 5 | 700 | Edge on Piloting/Rigging in the stacked limiter lanes and tight street-deck traffic. Does not raise the altitude cap. **S8.** | Hover |
+| Spool Rig / Recovery Winch / powered cable-and-cradle hoist | T4 | 4 | 900 | Powered winch and cradle — lift a body, a crate, or a wrecked drone without landing. Edge on hauling and extraction. **S8.** | Cargo |
+| Drop Harness / Rapid-Egress Rack / fast-rope and cradle rack | T3 | 3 | 1,800 | Passengers deploy while the machine is still moving; it never has to set down. **S8.** | Insertion |
+| Runflats / Self-Seal Kit / autonomous-repair weave | T3 | 3 | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |
+| Signal Mule / Relay Mast / link-extension repeater mast | T3 | 3 | 2,200 | Carries Remote and Companion links further and holds them through local jam. **S8.** | Wired |
+| Ammo Bin / Rearm System / autonomous munitions feed | T3 | 3 | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
 | Tune Kit / Handling Package / suspension-&-control upgrade | T3 | 3 | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |
 | Sensor Pod / Recon Suite / multi-spectral sensor array | T3 | 3 | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |
-| Ghost Coat / Stealth Skin / low-observable coating | T2 | 2 | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |
-| Runflats / Self-Seal Kit / autonomous-repair weave | T3 | 3 | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |
+| Ghost Rein / Dampened Coupling / biofeedback-buffered control loom | T3 | 3 | 3,400 | Softens Jump-In biofeedback. **Never grants Jump-In** — Wrench-only, and the frame still needs Jump-In Capable or a Rigger Cocoon. **S8.** | Wired |
+| Deep Shell / Environment Envelope / pressure-and-vacuum sealing kit | T2 | 2 | 5,500 | Seals the machine for flood, depth, ash storm, or vacuum. **S8.** | Sealed |
+| Spoof Cowl / Transponder Forge / licensed-traffic identity skin | T2 | 2 | 6,500 | Forged licensed-traffic ID — edge to pass AEQ lane checks and corp skyway gates on paper; bane if anyone looks with their eyes. **S8.** | Wired |
 | Rigger Cocoon / Control Interface / Jump-In coupling | T2 | 2 | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |
-| Ammo Bin / Rearm System / autonomous munitions feed | T3 | 3 | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
+| Ghost Coat / Stealth Skin / low-observable coating | T2 | 2 | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |
+| Kick Drive / Overboost Coil / burst-discharge drive stage | T1 | 1 | 17,000 | Once per scene, step the Speed band up for a round (Slow → Standard → Fast → Extreme). Runs hot. **S8.** | — |
+| Storm Lattice / Fleet Sensor Mesh / networked multi-spectral lattice | T1 | 1 | 19,000 | Apex sensor mesh — pierces smoke, dark, and spoof, and shares its target lock with the crew and the fleet. **S8.** | Wired |
+
+#### Fabricating a §5F mod or a Cat 5 chassis (Project)
+
+Every mod and chassis card carries stock Draw Steel **Project** fields — goal, prerequisites, roll characteristics, yield — so fabricating one eats a Lifestyle project slot like any other Project and needs no Ghostwire tracker. Goal follows the system's trinket ladder by Echelon: **E1 150 · E2 300 · E3 450 · E4 600**. Roll is **Might or Reason** for Repair jobs and **Reason or Intuition** for Electronics jobs. Prerequisites are roughly **half the ¥ in parts** plus a bay appropriate to the Availability band. Finishing the fabricate Project yields the part; **installing it is still the separate §Craft Project**.
 
 ---
 

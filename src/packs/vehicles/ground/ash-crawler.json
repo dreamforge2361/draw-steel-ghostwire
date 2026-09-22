@@ -1,0 +1,66 @@
+{
+  "_id": "gwAshCrawlerItm0",
+  "_key": "!items!gwAshCrawlerItm0",
+  "name": "GHOSTWIRE.Vehicles.Items.AshCrawler.Name",
+  "type": "treasure",
+  "img": "icons/environment/settlement/wagon.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.AshCrawler.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ash-crawler",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a58,000 in chassis salvage, drive stock, and skirt or track stock; a military-grade bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Ash-Crawler chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 16000,
+        "modSlots": 4,
+        "tags": [
+          "Sealed",
+          "Survival",
+          "Workshop",
+          "Ground-hauler"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Heavy",
+        "drone": false,
+        "speedBand": "slow"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "gwLongshoreItm00",
+  "_key": "!items!gwLongshoreItm00",
+  "name": "GHOSTWIRE.Vehicles.Items.Longshore.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-tech-thrust-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.Longshore.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "longshore",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a527,000 in chassis salvage, drive stock, and hull and seal stock; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Longshore chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "NowzLYKCGDkEWIwh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 54000,
+        "modSlots": 5,
+        "tags": [
+          "Cargo",
+          "Stealth",
+          "Aquatic",
+          "Heavy"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water",
+        "scale": "Heavy",
+        "drone": false,
+        "speedBand": "slow"
+      }
+    }
+  }
+}

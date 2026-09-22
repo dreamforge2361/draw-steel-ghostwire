@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a529,000 in chassis salvage, drive stock, and hull and seal stock; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Leviathan chassis \u00b7 a single machine, unmodded."
       },
-      "goal": null
+      "goal": 600
     }
   },
   "effects": [],

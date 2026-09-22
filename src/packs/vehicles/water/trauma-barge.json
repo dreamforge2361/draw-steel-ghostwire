@@ -1,0 +1,66 @@
+{
+  "_id": "gwTraumaBargeItm",
+  "_key": "!items!gwTraumaBargeItm",
+  "name": "GHOSTWIRE.Vehicles.Items.TraumaBarge.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-tech-thrust-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.TraumaBarge.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "trauma-barge",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a52,400 in chassis salvage, drive stock, and hull and seal stock; a licensed bay (or a fixer who looks the other way)",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Trauma Barge chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "NowzLYKCGDkEWIwh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 4800,
+        "modSlots": 3,
+        "tags": [
+          "Medical",
+          "Extraction",
+          "Aquatic",
+          "LAZ"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Water",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "standard"
+      }
+    }
+  }
+}

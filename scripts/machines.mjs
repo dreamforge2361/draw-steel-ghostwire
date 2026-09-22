@@ -87,6 +87,19 @@ export const MACHINE_MOD_PROFILES = {
   "runflats": { kind: "other", resistCrippled: true, selfRepair: true, applied: "director" },
   "rigger-cocoon": { kind: "other", jumpInCapable: true, applied: "director" },
   "ammo-bin": { kind: "other", ammoFeed: true, applied: "director" },
+  // 0.3.98 (S8) — second wave of §5F "other" mods: mobility, cargo, insertion,
+  // link/EW, environment, sensors. All Director-applied like the first wave.
+  "lane-skirt": { kind: "other", handlingEdge: true, urbanLanes: true, applied: "director" },
+  "spool-rig": { kind: "other", cargoHoist: true, applied: "director" },
+  "burner-plates": { kind: "other", heatShed: true, applied: "director" },
+  "drop-harness": { kind: "other", rapidEgress: true, applied: "director" },
+  "signal-mule": { kind: "other", linkRelay: true, jamResist: true, applied: "director" },
+  // Softens Jump-In biofeedback; never grants Jump-In (Wrench-only, per 16-vehicles.md §4).
+  "ghost-rein": { kind: "other", biofeedbackBuffer: true, applied: "director" },
+  "deep-shell": { kind: "other", sealedEnvelope: true, applied: "director" },
+  "spoof-cowl": { kind: "other", transponderSpoof: true, applied: "director" },
+  "kick-drive": { kind: "other", speedBandBurst: true, applied: "director" },
+  "storm-lattice": { kind: "other", sensorEdge: true, pierceConcealment: true, fleetLock: true, applied: "director" },
 };
 
 export function kitProfile(dsid) {

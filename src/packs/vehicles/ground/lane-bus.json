@@ -1,0 +1,66 @@
+{
+  "_id": "gwLaneBusItm0000",
+  "_key": "!items!gwLaneBusItm0000",
+  "name": "GHOSTWIRE.Vehicles.Items.LaneBus.Name",
+  "type": "treasure",
+  "img": "icons/environment/settlement/wagon.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.LaneBus.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lane-bus",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a52,600 in chassis salvage, drive stock, and skirt or track stock; a licensed bay (or a fixer who looks the other way)",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Lane Bus chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "lR5kGzV7snDN9arQ",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 5200,
+        "modSlots": 3,
+        "tags": [
+          "Transit",
+          "Troop",
+          "Hover",
+          "Ground-hauler"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Ground",
+        "scale": "Heavy",
+        "drone": false,
+        "speedBand": "slow"
+      }
+    }
+  }
+}

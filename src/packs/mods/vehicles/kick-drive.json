@@ -1,0 +1,66 @@
+{
+  "_id": "gwModKickDrive00",
+  "_key": "!items!gwModKickDrive00",
+  "name": "GHOSTWIRE.Mods.Items.KickDrive.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.KickDrive.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "kick-drive",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a58,500 in coil stock, a discharge stage, and a heat sink that will actually hold; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Kick Drive \u00b7 installs on one vehicle or drone (1 mod slot)."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "aQqOJpCpotlt5MEY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 17000,
+        "modSlots": 0,
+        "tags": [],
+        "host": [
+          "vehicle",
+          "drone"
+        ],
+        "hosts": [
+          "vehicle",
+          "drone"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

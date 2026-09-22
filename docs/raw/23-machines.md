@@ -64,7 +64,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 
 **Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in `16-wrench.md`. A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.
 
-**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag.
+**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Static Crow**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag.
 
 The Companion Link **limits** in the Non-Wrench table still apply if you field a drone that is not on that v1 list (Director-ruled). Foundry only auto-grants the Street Eye ability for qualifying air scouts.
 
@@ -152,13 +152,15 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 | Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |
 |---|---|---|---|---|---|---|---|
 | Ripper / Breach-Drone / door-cracker | Ground (drone) | Light | Military | 11,000 | 4 | Charges, cutters, or shaped punch for hard portals. | Breach, Assault, Wired |
+| Kiln-Beetle / Armored Repair Drone / hardened maintenance unit | Ground (drone) | Light | Military | 11,500 | 4 | A Wrenchbot that can take a hit — plated shell, cutting and welding arms, feedstock hopper. | Repair, Support, Armor, Wired |
+| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | Military | 12,000 | 4 | Jams a floor, spoofs a lane, paints what is left for the crew to shoot. Loud on the Wire. | EW, Mark, Jump-In-Capable, Wired |
 | Pallbearer / Extraction Hauler / armored mule | Ground (drone) | Vehicle (drone) | Military | 12,000 | 4 | Armored cargo bay for downed runners; light defensive mount. | Cargo, Armor, Medic, Wired |
 | Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle (drone) | Military | 13,000 | 4 | Real hardpoint gunner — fleet's flying damage dealer. | Combat, Mount, Jump-In-Capable, Wired |
 | Skulker / Anthro-Drone / humanoid infiltrator | Ground (drone) | Personal | Military | 14,000 | 4 | Passes as a body at distance; tools or a sidearm mount. | Anthro, Infiltrate, Jump-In-Capable, Wired |
 | Hellkite / Strafe-Wing / gunship microframe | Air (drone) | Vehicle (drone) | Military | 15,500 | 4 | Twin light mounts, dive strafe; loud and hated in the Grid. | Combat, Mount, Jump-In-Capable, Wired |
 | Deep-Viper / Hunter Aquadron / wet hunter | Water (drone) | Vehicle (drone) | Military | 16,000 | 4 | Deeper hull, torpedo/spear mount, chase boats from below. | Aquatic, Combat, Jump-In-Capable, Wired |
 
-**E3 count:** **6** chassis. Roles: breach, extract/medic, aerial combat, anthro infiltrate, aquatic combat.
+**E3 count:** **8** chassis. Roles: breach, armored repair, EW/designator, extract/medic, aerial combat, anthro infiltrate, aquatic combat.
 
 ##### Echelon 4 — Prototype (elite specialists + apex combat)
 
@@ -167,14 +169,16 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 | Phantom / Glass-Eye / elite recon kite | Air (drone) | Light | Prototype | 28,000 | 5 | Near-silent sensor apex; paints through smoke and spoof. | Recon, Stealth, Mark, Jump-In-Capable, Wired |
 | Whisper-Run / Black-Courier / elite stealth courier | Air (drone) | Light | Prototype | 32,000 | 5 | Ghost-lane package runner; low-obs hull, sealed bay. | Cargo, Stealth, Jump-In-Capable, Wired |
 | Lifeline / Apex-Medic / elite extract frame | Ground (drone) | Vehicle (drone) | Prototype | 35,000 | 5 | Armored trauma bay + stabilize suite; pulls bodies out loud zones. | Medic, Armor, Cargo, Jump-In-Capable, Wired |
+| Tide-Wraith / Apex Aquadrone / elite silent wet hunter | Water (drone) | Vehicle (drone) | Prototype | 34,000 | 5 | A Deep-Viper with the noise taken out; sits on a canal floor for a day, then takes a hull. | Aquatic, Stealth, Combat, Jump-In-Capable, Wired |
+| Second Face / Apex Anthro-Drone / elite humanoid infiltration frame | Ground (drone) | Personal | Prototype | 36,000 | 5 | Skinned, weighted, warm — walks a badge through a lobby and hands it back at end of shift. | Anthro, Infiltrate, Stealth, Jump-In-Capable, Wired |
 | Choir-King / Fog-Crown / EW apex kite | Air (drone) | Light | Prototype | 38,000 | 5 | Block-scale jam / spoof crown; eats cheap sensors for lunch. | EW, Jump-In-Capable, Wired |
 | Warhound / Combat Drone / heavy assault unit | Ground (drone) | Vehicle (drone) | Prototype | 40,000 | 5 | Apex walker/roller — heavy mounts, real armor, one-machine push. | Combat, Heavy, Jump-In-Capable, Wired |
 | Razorwing / Blade-Falcon / elite strike wing | Air (drone) | Vehicle (drone) | Prototype | 42,000 | 5 | Precision hardpoint predator — quieter than Hellkite, meaner than Stinger. | Combat, Mount, Stealth, Jump-In-Capable, Wired |
 | Iron Mantis / Siege-Frame / heavy assault walker-drone | Ground (drone) | Vehicle (drone) | Prototype | 45,000 | 5 | Limb-climber siege body; dual hardpoints; corridor nightmare. | Combat, Heavy, Climb, Jump-In-Capable, Wired |
 
-**E4 count:** **7** chassis. Roles: elite recon, elite courier, elite medic/extract, EW apex, heavy combat ×2, elite aerial strike.
+**E4 count:** **9** chassis. Roles: elite recon, elite courier, elite medic/extract, elite wet hunter, elite anthro infiltrator, EW apex, heavy combat ×2, elite aerial strike.
 
-**Published total:** **36** chassis (15 + 8 + 6 + 7).
+**Published total:** **40** chassis (15 + 8 + 8 + 9).
 
 #### Role quick-index
 
@@ -182,15 +186,15 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 |---|---|
 | Clunker / Junk (E1) | Tape-Eye, Sink-Floater, Junkbug, Rustbucket, Sputter-Sled, Rattlebox |
 | Recon / spy | Tape-Eye, Sink-Floater, Junkbug, Rustbucket, Fly, Skitter, Needle, Rotor, Crawler, Spotter, Phantom |
-| EW / decoy | Buzz, Choir-Box, Choir-King |
+| EW / decoy | Buzz, Choir-Box, Static Crow, Choir-King |
 | Nonlethal / capture | Taser-Bee, Netcaster |
 | Cargo / extract | Sputter-Sled, Mule-Bot, Ghost-Courier, Pallbearer, Whisper-Run, Lifeline |
-| Medic / repair | Medbot, Wrenchbot, Pallbearer, Lifeline |
+| Medic / repair | Medbot, Wrenchbot, Kiln-Beetle, Pallbearer, Lifeline |
 | Sentry | Rattlebox, Guard-Dog, Nest |
-| Aquatic | Sink-Floater, Barracuda, Deep-Viper |
+| Aquatic | Sink-Floater, Barracuda, Deep-Viper, Tide-Wraith |
 | Breach / assault support | Ripper |
-| Combat / gun | Stinger, Hellkite, Warhound, Razorwing, Iron Mantis |
-| Anthro | Skulker |
+| Combat / gun | Stinger, Hellkite, Warhound, Razorwing, Iron Mantis, Tide-Wraith |
+| Anthro | Skulker, Second Face |
 
 #### Availability and Echelon
 
@@ -227,6 +231,7 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.
 - Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.
+- **Fabricate** — you can build a mod (or a whole chassis) instead of buying it. That is the stock Draw Steel crafting **Project**: every catalog card prints its Goal, prerequisites, roll characteristics, and yield, and the points come out of **Lifestyle project slots** like any other Project. Goal by Echelon: **E1 150 · E2 300 · E3 450 · E4 600**; roll **Might or Reason** for Repair jobs, **Reason or Intuition** for Electronics jobs; prerequisites run about **half the ¥ in parts** plus a bay for the band. Finishing a fabricate Project yields the part — **installing it is still the separate §Craft Project**.
 
 ---
 
@@ -345,10 +350,12 @@ Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitativ
 
 ### Customize & modding
 
-- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.
+- Published **vehicle/drone mods** live in Gear master **§5F**. Two ladders, one menu: the **armor** ladder (Scrap-Weld → Plate-Up → Combat Plate → Aegis Kit) and the **weaponry** ladder (Gun Rack → Twin Mount → Turret Ring → Heavy Hardpoint) are **one kit at a time**; everything else stacks up to your free slots — Burner Plates, Lane Skirt, Spool Rig, Drop Harness, Runflats, Signal Mule, Ammo Bin, Tune Kit, Sensor Pod, Ghost Rein, Deep Shell, Spoof Cowl, Rigger Cocoon, Ghost Coat, Kick Drive, Storm Lattice. Hosts: `vehicle` and `drone`.
 - Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).
+- **Fabricate** a mod or a chassis instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points from **Lifestyle project slots**. A finished fabricate yields the part; the install is still its own §Craft Project.
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).
+- **Ghost Rein** buffers Jump-In biofeedback; it **never grants Jump-In**. Jump-In stays Wrench-only, and the frame still has to be Jump-In Capable or wear a **Rigger Cocoon**.
 
 ---
 
@@ -399,7 +406,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 **Reading the table:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add Stamina; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).
 
-#### Inventory (39 crewed platforms)
+#### Inventory (46 crewed platforms)
 
 | Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -421,17 +428,22 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |
 | Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |
 | Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |
+| Dock Tug / Yard Tug / short-burn pressurised dock handler | Space | Vehicle | 1 | Professional | 1,800 | 2 | 1+3 (pressurised) | Slow | No | Stubby sealed handler with a grapple arm — walks containers and dead hulls around a dock ring. No guns, no legs, but it is the Street-band way off the deck. | Sealed, Cargo, Utility |
 | Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |
 | Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |
 | Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |
 | Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount, VTOL |
 | Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit, Hover |
 | Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |
+| Trauma Barge / Laz Wetwagon / Lazarus Extract (LAZ) canal ambulance | Water | Vehicle | 2 | Restricted | 4,800 | 3 | 2+2 (cab) + patient deck | Standard | No | LAZ flood-canal ambulance — hex brand, shallow draft, patient deck amidships, stern hoist. Works the Sinks where the White Door cannot float. Not a gun boat. | Medical, Extraction, Aquatic, LAZ |
+| Lane Bus / Shaft Shuttle / Flats public-transit hover hopper | Ground | Heavy | 2 | Restricted | 5,200 | 3 | 1+18 (standing and strapped) | Slow | No | Decommissioned shaft shuttle — limiter-lane hover body, two doors, grab rails, a fare plate nobody reads. Moves a whole crew in plain sight, or a squad if you own the route. | Transit, Troop, Hover, Ground-hauler |
 | Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |
 | Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |
 | Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |
 | Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |
+| Gale-Runner / Lane Interceptor / high-thrust pursuit VTOL | Air | Vehicle | 3 | Military | 13,000 | 4 | 1+1 | Extreme | Yes | Thin, loud, and far too fast for the VTOL lanes — a two-seat interceptor built to run something down and keep a gun on it. | Pursuit, Combat, Mount, VTOL |
 | Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |
+| Ash-Crawler / Survey Tractor / sealed long-range expedition crawler | Ground | Heavy | 3 | Military | 16,000 | 4 | 2+6 + bunk and bench space | Slow | Yes | Tracked, sealed, and slow as a grudge — scrubbers, bunks, a bench, and enough water to argue about. Terrible in a chase, unkillable on a week-long haul past the last lane light. | Sealed, Survival, Workshop, Ground-hauler |
 | River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |
 | Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy, VTOL |
 | Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean, VTOL |
@@ -439,11 +451,13 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |
 | Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |
 | Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy, VTOL |
+| Longshore / Deep Freighter / deep-draft low-observable cargo hull | Water | Heavy | 4 | Prototype | 54,000 | 5 | 4+6 + holds | Slow | Yes | The hull that moves what nobody will admit to moving — quiet plant, sonar-shy skin, holds that swallow a drone fleet. Slow enough that the plan has to be good. | Cargo, Stealth, Aquatic, Heavy |
 | Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |
+| Black Ledger / Command Deck Air / airborne command-and-EW post | Air | Heavy | 4 | Prototype | 65,000 | 5 | 2 flight + 4 stations (Systems / EW / Command) | Fast | Yes | A flying operations room — four crew stations under a hardened roof, a jam-and-spoof crown on the spine, and the lane authority to hold station over a job while it happens. | Command, EW, Heavy, VTOL |
 | Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |
 | Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |
 
-**Count:** **39** published crewed platforms.
+**Count:** **46** published crewed platforms.
 
 #### Role quick-index
 
@@ -451,18 +465,18 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 |---|---|
 | Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |
 | Courier / bike | Scrap-Bike, Star-Chopper, Crotch-Rocket, Warbike |
-| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |
-| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette |
-| Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed |
-| Medical / extract | White Door, Crash Angel |
-| Armor / extraction / troop | Hardtop, Brick, Cage |
+| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Lane Bus, Pod, Void-Runner |
+| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette, Gale-Runner |
+| Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed, Dock Tug, Ash-Crawler, Longshore |
+| Medical / extract | White Door, Crash Angel, Trauma Barge |
+| Armor / extraction / troop | Hardtop, Brick, Cage, Lane Bus |
 | Air recon / insertion | Buzzcopter, Writ VTOL, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |
-| Gunship / combat air | Skyhunter |
-| Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter |
-| Water pursuit / attack | Cigarette, River-Fang, Leviathan |
+| Gunship / combat air | Skyhunter, Gale-Runner |
+| Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter, Trauma Barge |
+| Water pursuit / attack | Cigarette, River-Fang, Leviathan, Longshore |
 | Wet infiltrate | Wetsub |
 | Walker / siege ground | Iron Giant, Spider-Frame |
-| Space / sealed | Pod, Mule, Void-Runner, Reaver |
+| Space / sealed | Dock Tug, Pod, Mule, Void-Runner, Reaver |
 
 #### Availability and Echelon
 

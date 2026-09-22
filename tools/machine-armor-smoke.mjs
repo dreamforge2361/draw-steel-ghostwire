@@ -163,7 +163,7 @@ ok(weaponIds.every(id => kitProfile(id)?.applied === "flags" && kitProfile(id)?.
   "all 4 weaponry SKUs stamp Gunnery hardpoint flags");
 ok(directorIds.every(id => kitProfile(id)?.applied === "director"),
   "other §5F mods are flagged for the Director (not auto-rolled)");
-ok(Object.keys(MACHINE_MOD_PROFILES).length === 14, `14 vehicle/drone mod profiles (got ${Object.keys(MACHINE_MOD_PROFILES).length})`);
+ok(Object.keys(MACHINE_MOD_PROFILES).length === 24, `24 vehicle/drone mod profiles (got ${Object.keys(MACHINE_MOD_PROFILES).length})`);
 
 const raw = readFileSync("docs/raw/10-mods.md", "utf8");
 ok(raw.includes("Scrap-Weld") && raw.includes("Combat Plate") && raw.includes("Aegis Kit"), "RAW 10-mods has 4 armor SKUs");

@@ -1,8 +1,8 @@
 # Ghostwire master backlog - triage 2026-09-22 (updated evening)
 
-**Module now:** **0.3.97** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
-**Just shipped:** S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
-**Next picks:** S8 vehicle / drone build-out · N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish.  
+**Module now:** **0.3.98** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
+**Just shipped:** S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
+**Next picks:** N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
 **Playtest:** Deadhead Saturday; Quiet Floor after. Thursday PDF reprint from assembled manuscript.  
 **Doctrine:** Claude Code on Allfather first; Cursor only if no choice.
 
@@ -50,13 +50,13 @@
 | # | Item | Notes |
 |---|---|---|
 | S1 | Ritual echelon gating | Hard vs soft Magnitude caps. |
-| S2 | SR gear reskin | Arsenal / M&M / Rigger — **vehicles/drones/mods owned by S8**; S2 remains broader gear after S8 slice. |
+| S2 | SR gear reskin | Arsenal / M&M / Rigger — **vehicles/drones/mods shipped in S8 (0.3.98)**; S2 remains the broader gear pass and is now unblocked. |
 | S3 | Broader SR References reskin | Sprawl Sites, Threats, etc. |
 | S4 | ~~Sprite/Agent Lock A~~ | **DONE**. |
 | S5 | Wired Console ↔ Journal research | 3-tier topic journals. |
 | S6 | ~~Director-only Voidmark lore filter~~ | **DONE** 0.3.97 — B122. Right-click a Journal Entry or page → **VOIDMARK: Mark Director-only** (`flags.draw-steel-ghostwire.voidmarkAudience`); page beats entry, unmarked falls back to Foundry ownership. Static index chunks under `docs/directors/**` + `docs/manuscript/03-directors/**` tagged `audience: director`. Only **GM + Director mode** retrieves them — GM in Runner mode and every player ask (relay included) stay on the player channel; world-journal RAG honours the mark **and** ownership. Smoke `node tools/voidmark-audience-smoke.mjs`; how-to `docs/directors/voidmark-director-only-howto.md`; Foundry checklist `docs/directors/voidmark-director-only-smoke-0397.md`. |
 | S7 | ~~Agent/Sprite/Spirit action-economy FAQ~~ | **DONE** 0.3.90 — `docs/raw/28-constructs-pets-faq.md`. |
-| S8 | **Vehicle / drone build-out** (Rigger + equipment refs) | **NEXT after 0.3.97** (S6). **LOCKED scope 2026-09-22.** Robust vehicles + drones; **vehicle/drone mods** first-class; **¥ on every SKU**; fabricate/install via **Project downtime**; RAW/journals/manuscript updated. **Restock table vendors:** drone vendor + vehicle vendor (existing kiosk presets) + **mod vendor** (add/harden preset) so new SKUs auto-appear on shops Directors place on scenes. After S6 (**done 0.3.97**). Brief: docs/directors/S8-vehicle-drone-mods-brief.md. |
+| S8 | **Vehicle / drone build-out** (Rigger + equipment refs) | **DONE 0.3.98.** Crewed 40→47, drones 36→40, vehicle/drone mods 14→24, ¥ on every SKU (Nox ¥0→¥2,800), stock Draw Steel Project fields on every chassis + mod, new **Mods** kiosk preset (Chop Shop). Smoke `node tools/s8-machines-smoke.mjs`; checklist `docs/directors/s8-machines-smoke-0398.md`. **LOCKED scope 2026-09-22.** Robust vehicles + drones; **vehicle/drone mods** first-class; **¥ on every SKU**; fabricate/install via **Project downtime**; RAW/journals/manuscript updated. **Restock table vendors:** drone vendor + vehicle vendor (existing kiosk presets) + **mod vendor** (add/harden preset) so new SKUs auto-appear on shops Directors place on scenes. After S6 (**done 0.3.97**). Brief: docs/directors/S8-vehicle-drone-mods-brief.md. |
 
 ---
 
@@ -87,8 +87,8 @@
 ---
 
 ## Suggested next pick
-**Ship lane clear.** S6 Voidmark Director-only lore filter shipped (**0.3.97**) — Foundry checklist `docs/directors/voidmark-director-only-smoke-0397.md` awaiting Michael.
-**Next:** **S8** Vehicle / drone pass (Rigger + Arsenal / Man & Machine; vendor restocks).
+**Ship lane clear.** S8 vehicle / drone / mods build-out shipped (**0.3.98**) — Foundry checklist `docs/directors/s8-machines-smoke-0398.md` awaiting Michael, alongside `docs/directors/voidmark-director-only-smoke-0397.md` (S6).
+**Next:** **N4** Thursday PDF reprint from the assembled manuscript.
 **Then:** N4 Thursday PDF · DJ1 district journals.
 Also open: N4 Thursday PDF, LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday.
 

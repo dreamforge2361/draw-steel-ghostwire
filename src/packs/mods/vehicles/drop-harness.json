@@ -1,0 +1,68 @@
+{
+  "_id": "gwModDropHarn000",
+  "_key": "!items!gwModDropHarn000",
+  "name": "GHOSTWIRE.Mods.Items.DropHarness.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.DropHarness.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "drop-harness",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a5900 in rack stock, rope spools, and quick-release cradles; a bay tall enough to hang the frame",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Drop Harness \u00b7 installs on one vehicle or drone (1 mod slot)."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "aQqOJpCpotlt5MEY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 1800,
+        "modSlots": 0,
+        "tags": [
+          "Insertion"
+        ],
+        "host": [
+          "vehicle",
+          "drone"
+        ],
+        "hosts": [
+          "vehicle",
+          "drone"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

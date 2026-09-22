@@ -1,0 +1,67 @@
+{
+  "_id": "gwTideWraithDrn0",
+  "_key": "!items!gwTideWraithDrn0",
+  "name": "GHOSTWIRE.Vehicles.Items.TideWraith.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-tech-thrust-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.TideWraith.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "tide-wraith",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a517,000 in chassis salvage, drive stock, and sealed hull stock and a link head; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Tide-Wraith chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 34000,
+        "modSlots": 5,
+        "tags": [
+          "Aquatic",
+          "Stealth",
+          "Combat",
+          "Jump-In-Capable",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle",
+          "drone"
+        ],
+        "domain": "Water (drone)",
+        "scale": "Vehicle",
+        "drone": true
+      }
+    }
+  }
+}

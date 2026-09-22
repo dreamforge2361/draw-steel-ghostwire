@@ -1,0 +1,65 @@
+{
+  "_id": "gwDockTugItm0000",
+  "_key": "!items!gwDockTugItm0000",
+  "name": "GHOSTWIRE.Vehicles.Items.DockTug.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.DockTug.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "dock-tug",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a5900 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a bench with a lift",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Dock Tug chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "UDrdYfXpBDCUE3Tr",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 1800,
+        "modSlots": 2,
+        "tags": [
+          "Sealed",
+          "Cargo",
+          "Utility"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Space",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "slow"
+      }
+    }
+  }
+}

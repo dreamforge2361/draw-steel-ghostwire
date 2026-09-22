@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5400 in rail stock, a pintle, and mounting hardware; any chop-shop bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Gun Rack \u00b7 installs on one vehicle or drone (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

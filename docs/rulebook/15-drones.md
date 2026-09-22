@@ -3,7 +3,8 @@
 **Status:** Stage 3 draft for Michael review — 2026-09-16 (ET)  
 **Pairs with:** `05-wrench.md` (Uptime / Jump-In / Machines), `14-mods.md`, `11-economy.md`, Gear master Cat **4D / 5E / 5F**  
 **Foundry:** dual Item + Actor. **Treasure** SKUs in **Ghostwire Vehicles & Drones** are intentional (ownership / ¥ / mods / echelon). **Deploy** stamps a linked Actor from the matching Summons band template and places the token; **Recall** deletes the Actor, Item stays. **Mule-Bot** (`drone: true`, Ground, Scale Vehicle) → `machine-drone-medium`. A named Mule-Bot Actor is optional Director placement, not a replacement for the treasure SKU.  
-**Lore notes:** `docs/masters/_drone_lore_extract.md`
+**Lore notes:** `docs/masters/_drone_lore_extract.md`  
+**0.3.98 (S8):** the drone line is **40 chassis** — E1 15 / E2 8 / E3 8 / E4 9. New this pass: **Kiln-Beetle** (E3 armored repair), **Static Crow** (E3 EW + designator), **Tide-Wraith** (E4 apex aquadrone), **Second Face** (E4 apex anthro). Every chassis SKU now carries a real ¥ and stock Draw Steel **Project** fields (goal 150 / 300 / 450 / 600 by Echelon) so fabricating a frame eats a Lifestyle project slot like any other Project. The **Drone Vendor** kiosk preset picks up new SKUs with no listing edit.
 
 **Design locks (do not reopen in this draft):**
 - Stock Draw Steel + Ghostwire module; hero Levels **1–10**, Echelon **1–4**
@@ -149,13 +150,15 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 | Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |
 |---|---|---|---|---|---|---|---|
 | Ripper / Breach-Drone / door-cracker | Ground (drone) | Light | Military | 11,000 | 4 | Charges, cutters, or shaped punch for hard portals. | Breach, Assault, Wired |
+| Kiln-Beetle / Armored Repair Drone / hardened maintenance unit | Ground (drone) | Light | Military | 11,500 | 4 | A Wrenchbot that can take a hit — plated shell, cutting and welding arms, feedstock hopper. | Repair, Support, Armor, Wired |
+| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | Military | 12,000 | 4 | Jams a floor, spoofs a lane, paints what is left for the crew to shoot. Loud on the Wire. | EW, Mark, Jump-In-Capable, Wired |
 | Pallbearer / Extraction Hauler / armored mule | Ground (drone) | Vehicle (drone) | Military | 12,000 | 4 | Armored cargo bay for downed runners; light defensive mount. | Cargo, Armor, Medic, Wired |
 | Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle (drone) | Military | 13,000 | 4 | Real hardpoint gunner — fleet's flying damage dealer. | Combat, Mount, Jump-In-Capable, Wired |
 | Skulker / Anthro-Drone / humanoid infiltrator | Ground (drone) | Personal | Military | 14,000 | 4 | Passes as a body at distance; tools or a sidearm mount. | Anthro, Infiltrate, Jump-In-Capable, Wired |
 | Hellkite / Strafe-Wing / gunship microframe | Air (drone) | Vehicle (drone) | Military | 15,500 | 4 | Twin light mounts, dive strafe; loud and hated in the Grid. | Combat, Mount, Jump-In-Capable, Wired |
 | Deep-Viper / Hunter Aquadron / wet hunter | Water (drone) | Vehicle (drone) | Military | 16,000 | 4 | Deeper hull, torpedo/spear mount, chase boats from below. | Aquatic, Combat, Jump-In-Capable, Wired |
 
-**E3 count:** **6** chassis. Roles: breach, extract/medic, aerial combat, anthro infiltrate, aquatic combat.
+**E3 count:** **8** chassis. Roles: breach, armored repair, EW/designator, extract/medic, aerial combat, anthro infiltrate, aquatic combat.
 
 #### Echelon 4 — Prototype (elite specialists + apex combat)
 
@@ -164,14 +167,16 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 | Phantom / Glass-Eye / elite recon kite | Air (drone) | Light | Prototype | 28,000 | 5 | Near-silent sensor apex; paints through smoke and spoof. | Recon, Stealth, Mark, Jump-In-Capable, Wired |
 | Whisper-Run / Black-Courier / elite stealth courier | Air (drone) | Light | Prototype | 32,000 | 5 | Ghost-lane package runner; low-obs hull, sealed bay. | Cargo, Stealth, Jump-In-Capable, Wired |
 | Lifeline / Apex-Medic / elite extract frame | Ground (drone) | Vehicle (drone) | Prototype | 35,000 | 5 | Armored trauma bay + stabilize suite; pulls bodies out loud zones. | Medic, Armor, Cargo, Jump-In-Capable, Wired |
+| Tide-Wraith / Apex Aquadrone / elite silent wet hunter | Water (drone) | Vehicle (drone) | Prototype | 34,000 | 5 | A Deep-Viper with the noise taken out; sits on a canal floor for a day, then takes a hull. | Aquatic, Stealth, Combat, Jump-In-Capable, Wired |
+| Second Face / Apex Anthro-Drone / elite humanoid infiltration frame | Ground (drone) | Personal | Prototype | 36,000 | 5 | Skinned, weighted, warm — walks a badge through a lobby and hands it back at end of shift. | Anthro, Infiltrate, Stealth, Jump-In-Capable, Wired |
 | Choir-King / Fog-Crown / EW apex kite | Air (drone) | Light | Prototype | 38,000 | 5 | Block-scale jam / spoof crown; eats cheap sensors for lunch. | EW, Jump-In-Capable, Wired |
 | Warhound / Combat Drone / heavy assault unit | Ground (drone) | Vehicle (drone) | Prototype | 40,000 | 5 | Apex walker/roller — heavy mounts, real armor, one-machine push. | Combat, Heavy, Jump-In-Capable, Wired |
 | Razorwing / Blade-Falcon / elite strike wing | Air (drone) | Vehicle (drone) | Prototype | 42,000 | 5 | Precision hardpoint predator — quieter than Hellkite, meaner than Stinger. | Combat, Mount, Stealth, Jump-In-Capable, Wired |
 | Iron Mantis / Siege-Frame / heavy assault walker-drone | Ground (drone) | Vehicle (drone) | Prototype | 45,000 | 5 | Limb-climber siege body; dual hardpoints; corridor nightmare. | Combat, Heavy, Climb, Jump-In-Capable, Wired |
 
-**E4 count:** **7** chassis. Roles: elite recon, elite courier, elite medic/extract, EW apex, heavy combat ×2, elite aerial strike.
+**E4 count:** **9** chassis. Roles: elite recon, elite courier, elite medic/extract, elite wet hunter, elite anthro infiltrator, EW apex, heavy combat ×2, elite aerial strike.
 
-**Published total:** **36** chassis (15 + 8 + 6 + 7).
+**Published total:** **40** chassis (15 + 8 + 8 + 9).
 
 ### 5.2 Role quick-index
 
@@ -179,15 +184,15 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 |---|---|
 | Clunker / Junk (E1) | Tape-Eye, Sink-Floater, Junkbug, Rustbucket, Sputter-Sled, Rattlebox |
 | Recon / spy | Tape-Eye, Sink-Floater, Junkbug, Rustbucket, Fly, Skitter, Needle, Rotor, Crawler, Spotter, Phantom |
-| EW / decoy | Buzz, Choir-Box, Choir-King |
+| EW / decoy | Buzz, Choir-Box, Static Crow, Choir-King |
 | Nonlethal / capture | Taser-Bee, Netcaster |
 | Cargo / extract | Sputter-Sled, Mule-Bot, Ghost-Courier, Pallbearer, Whisper-Run, Lifeline |
-| Medic / repair | Medbot, Wrenchbot, Pallbearer, Lifeline |
+| Medic / repair | Medbot, Wrenchbot, Kiln-Beetle, Pallbearer, Lifeline |
 | Sentry | Rattlebox, Guard-Dog, Nest |
-| Aquatic | Sink-Floater, Barracuda, Deep-Viper |
+| Aquatic | Sink-Floater, Barracuda, Deep-Viper, Tide-Wraith |
 | Breach / assault support | Ripper |
-| Combat / gun | Stinger, Hellkite, Warhound, Razorwing, Iron Mantis |
-| Anthro | Skulker |
+| Combat / gun | Stinger, Hellkite, Warhound, Razorwing, Iron Mantis, Tide-Wraith |
+| Anthro | Skulker, Second Face |
 
 ### 5.3 Availability ↔ Echelon remap (player-facing)
 
@@ -222,7 +227,8 @@ Drones use a short **Integrity** track (Machines numeric pass will publish numbe
 - Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time. Armor kits grant Stamina (Integrity); machines have no armor rating / DR.
 - Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (`14-mods.md`).
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
-- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.
+- Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches, and neither does **Ghost Rein** (it only buffers biofeedback).
+- **Fabricate** a frame or a mod instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points out of **Lifestyle project slots**. Installing the finished part is still its own §Craft Project.
 - Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.
 
 ---

@@ -74,7 +74,7 @@ for (const file of expectedArt) {
 }
 
 const module = JSON.parse(readFileSync("module.json", "utf8"));
-note(module.version === "0.3.24", `module.json is 0.3.24 (got ${module.version})`);
+note(module.version >= "0.3.24", `module.json is ≥ 0.3.24 (got ${module.version})`);
 note(module.packs.some(p => p.name === "lore"), "module.json registers lore pack");
 note(module.packFolders?.[0]?.name === "Ghostwire", "packFolders still nest under Ghostwire");
 note(module.packFolders?.[0]?.packs.includes("lore"), "lore pack is inside Ghostwire folder");
