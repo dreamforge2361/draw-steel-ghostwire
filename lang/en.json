@@ -8422,6 +8422,46 @@
         "NotifySpend": "{actor} spent {amount} — now {after}"
       }
     },
+    "BlackMarket": {
+      "Title": "Black Market — sell",
+      "SceneTool": "Black Market: sell",
+      "MacroName": "Black Market: Sell",
+      "Keybinding": "Black Market sell",
+      "Hud": "Black Market — sell gear",
+      "Hint": "{actor} — {wealth} on hand. Pick what goes on the street. The fence pays 50% of catalog ¥.",
+      "Menu": {
+        "Sell": "Black Market: Sell…"
+      },
+      "RowPrice": "{list} list → {payout}",
+      "RowNoPrice": "No catalog ¥ — cannot be fenced",
+      "Haggle": "Haggle (Power Roll)",
+      "HaggleCharacteristic": "Which characteristic the haggle is rolled on",
+      "HaggleHint": "Haggle rolls one Power Roll: low pays 50%, middle 55%, high 60%. A low tier costs nothing but pride.",
+      "HaggleRollTitle": "Black Market haggle — {actor}",
+      "HaggleCancelled": "Haggle dismissed — nothing was sold.",
+      "Outcome": {
+        "low": "hung — no bump",
+        "middle": "held — +5%",
+        "high": "clean — +10%"
+      },
+      "Total": "{count} picked — {payout} at {percent}%",
+      "TotalHaggle": "{count} picked — {payout} at 50%, up to {best} on a clean haggle",
+      "Submit": "Sell",
+      "NoSeller": "Target or select a hero token, or assign your character, before you sell.",
+      "NotHero": "{actor} is not a hero and carries no ¥.",
+      "NoPermission": "You don’t own {actor}.",
+      "NoStock": "{actor} carries nothing with a catalog ¥ to fence.",
+      "NothingPicked": "Pick at least one item to sell.",
+      "NoPrice": "That has no catalog ¥ — the street won’t price it. Nothing was sold.",
+      "NotOwnedItems": "Some items were not on that hero, or you cannot delete them. They were left alone.",
+      "SkippedUnpriced": "No catalog ¥ on {items} — left on the sheet.",
+      "ChatTitle": "Fenced",
+      "ChatHeadline": "{actor} moved {count} item(s) on the street for {payout} — {before} → {after}",
+      "ChatLine": "{item} ×{quantity} — {list} list at {percent}% → {payout}",
+      "ChatHaggle": "Haggled on {characteristic}: {outcome} — paid at {percent}%.",
+      "ChatNoHaggle": "No haggle — paid at {percent}%.",
+      "Notify": "{actor} fenced {count} item(s) for {payout} — now {after}"
+    },
     "Voidmark": {
       "Title": "VOIDMARK",
       "Callsign": "VOIDMARK",

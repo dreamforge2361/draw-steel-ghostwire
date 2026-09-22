@@ -35,6 +35,7 @@ import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerDirectorWealth } from "./director-wealth.mjs";
 import { registerKiosk } from "./kiosk.mjs";
+import { registerBlackMarket } from "./black-market.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
 import { registerRituals } from "./rituals.mjs";
 import { registerRitualWorking } from "./ritual-working.mjs";
@@ -120,6 +121,7 @@ Hooks.once("init", () => {
   registerNightjarMarketScene();
   registerKiosk();
   registerDirectorWealth();
+  registerBlackMarket();
   registerConsumableUse();
   registerRituals();
   registerRitualWorking();

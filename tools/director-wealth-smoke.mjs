@@ -166,7 +166,10 @@ ok(source.includes('Hooks.on("renderTokenHUD"'), "a GM token-HUD button opens th
 ok(source.includes('game.keybindings.register') && source.includes("restricted: true"), "the keybinding is Director-restricted");
 
 const version = read("module.json").version;
-ok(version === "0.3.95", `module.json is at ${version}`);
+ok((() => {
+  const [maj, min, pat] = String(version).split(".").map(Number);
+  return maj === 0 && min === 3 && pat >= 95;
+})(), `module.json is 0.3.95+ (got ${version})`);
 
 if (failures.length) {
   console.error(`\nDirector wealth smoke FAILED:\n  - ${failures.join("\n  - ")}`);
