@@ -255,7 +255,8 @@
       "tags": [
         "Deadhead",
         "Plot"
-      ]
+      ],
+      "contactPortrait": "modules/draw-steel-ghostwire/assets/tokens/deadhead/nox-portrait.webp"
     }
   }
 }

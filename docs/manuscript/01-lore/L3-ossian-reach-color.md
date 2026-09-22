@@ -66,6 +66,9 @@ In the Reach, altitude is the class system, and movement is **vertical first, ho
 
 **A route, licensed or grey.** Decide the direction of exposure: buy fare and speed on the spine and plan to beat the checkpoints, or buy quiet on the grey transit and plan to survive the shaft. Cassavir sells routes as readily as she sells jobs.
 
+**Horizontal Flats rides (WORKING).** Once you are already on the Flats, the short hop between districts is rarely a spine. **Grey Cab Services** (“hail a Grey”) sells quiet autocab pods — Argent meters the fare, Ferrum builds the hull, Meridian only pings the hail. **Veinline Civic** (“the Vein”) is the cheaper teal-and-gunmetal district tram hung on Ferrum rails. Crews pick privacy or crowd cover the same way they pick licensed vs grey on the vertical.
+
+
 **Chrome discipline.** Visible street chrome that reads proud on the Flats reads criminal in the Grid. Crews climbing high either run subtle 'ware or plan to talk (or hack) around the posture-check. What you wear is part of your cover.
 
 **The specialist for the gate.** Know before you leave which door-opener you're leaning on — the Face for the talk, the Hacker for the spoof, the Scout for the bypass. A crew with no answer to a checkpoint is a crew that gets turned back at the first boundary.

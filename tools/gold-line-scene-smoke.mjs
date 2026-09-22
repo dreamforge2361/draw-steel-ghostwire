@@ -182,8 +182,8 @@ const seekable = { duration: 8, currentTime: 3 };
 ok(safeVideoCurrentTime(seekable, 0) === true && seekable.currentTime === 0, "safeVideoCurrentTime seeks when duration is finite");
 
 const sor = readFileSync(SOR, "utf8");
-ok(/L1.*AFT FREIGHT/i.test(sor) && /R1.*COURIER/i.test(sor) && /R3.*CAB/i.test(sor), "SoR has cargo dual-Hammerhead beat remap");
-ok(/freight Enforcers \*\*L1–L2\*\*/i.test(sor) && /Security \*\*L3\*\*/.test(sor), "SoR opposition is freight Enforcers L1–L2 + Security L3");
+ok(/L1.*AFT FREIGHT/i.test(sor) && /R2.*SECOND-TO-LAST — COURIER/.test(sor) && /R3.*FRONT CAB/.test(sor), "SoR has cargo dual-Hammerhead zone map (courier = second-to-last)");
+ok(/5 security \+ 1 worker drone/.test(sor) && /\*\*2\*\* freight Enforcers/.test(sor) && !/4\*{0,2} ARG Security Officers/.test(sor), "SoR opposition is the 5 security + 1 drone lock (no 4-Officer nest)");
 ok(/interior-loop\.mp4/.test(sor) && /roofs-loop\.mp4/.test(sor), "SoR points at the mp4 assets");
 ok(/Level background/i.test(sor) && /interior/i.test(sor), "SoR says Level background is the interior");
 ok(/one tile|ONE Tile|one roof/i.test(sor), "SoR says there is one roof tile");

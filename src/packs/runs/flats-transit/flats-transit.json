@@ -1,0 +1,98 @@
+{
+  "_id": "gwFlatsTransit00",
+  "_key": "!journal!gwFlatsTransit00",
+  "name": "GHOSTWIRE.Runs.Journals.FlatsTransit",
+  "folder": "gwRunsFlatsTrnst",
+  "sort": 100000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "gwFlatsTrnsGm000",
+      "_key": "!journal.pages!gwFlatsTransit00.gwFlatsTrnsGm000",
+      "name": "GHOSTWIRE.Runs.Pages.FlatsTransitGM",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Status:** WORKING 2026-09-21 · stubs Michael can rename.\n\n**Locked street picture:** cushioned-river hover lanes; altitude limiter **~25–50 ft**; electric; **not** sky cars. Ferrum builds hive bones; Argent owns money/meters; Meridian owns Wire dispatch narrative. Art: flat top-down eagle’s-eye; no people on maps; no baked grid; grit tactical nocturne.\n\n### Grey Cab Services (“Grey Cab”) — WORKING\n\nAutocab hover pods. **ARG** Argent Exchange (fare/meter). Licensed **FER** Ferrum chassis. **Meridian** only sells the hail/dispatch ping.\n\n- Street: *hail a Grey*, *meter’s awake*, *pod fare*\n- Use: quieter party travel; sealed sleeve; privacy over coin\n- Token size suggestion: **2×3** / **2×4**\n- Stub SKU: `grey-cab-services` (do **not** confuse with Restricted Item **Grey Cab** / Ghost Fare `grey-cab`)\n\n### Veinline Civic (“the Vein”) — WORKING\n\nDistrict tram. Parent: **FER** Ferrum Dynastic. Elevated / culvert-hung rails; civic teal + ferrum gunmetal.\n\n- Street: *ride the Vein*, *teal car*, *culvert line*\n- Use: cheaper; crowd cover; more eyes\n- Token size suggestion: **1×4** / **2×5**\n- Stub SKU: `veinline-civic`\n\n### QF-01 use\n\nSession A **Scene 2** — Switchboard → Slackwater party-token travel. Table picks Grey or Vein; A2 Slackwater is **after disembark**. Full beats: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md`. Primer: L1 **Public Flats transit (WORKING)**. Machines: **Public transit (Flats)**.\n\nNo full chassis math in this pass. Do not regenerate art.\n",
+        "content": "<p><strong>Status:</strong> WORKING 2026-09-21 · stubs Michael can rename.</p>\n<p><strong>Locked street picture:</strong> cushioned-river hover lanes; altitude limiter <strong>~25–50 ft</strong>; electric; <strong>not</strong> sky cars. Ferrum builds hive bones; Argent owns money/meters; Meridian owns Wire dispatch narrative. Art: flat top-down eagle’s-eye; no people on maps; no baked grid; grit tactical nocturne.</p>\n<h3 id=\"grey-cab-services-grey-cab-working\">Grey Cab Services (“Grey Cab”) — WORKING</h3>\n<p>Autocab hover pods. <strong>ARG</strong> Argent Exchange (fare/meter). Licensed <strong>FER</strong> Ferrum chassis. <strong>Meridian</strong> only sells the hail/dispatch ping.</p>\n<ul>\n<li>Street: <em>hail a Grey</em>, <em>meter’s awake</em>, <em>pod fare</em></li>\n<li>Use: quieter party travel; sealed sleeve; privacy over coin</li>\n<li>Token size suggestion: <strong>2×3</strong> / <strong>2×4</strong></li>\n<li>Stub SKU: <code>grey-cab-services</code> (do <strong>not</strong> confuse with Restricted Item <strong>Grey Cab</strong> / Ghost Fare <code>grey-cab</code>)</li>\n</ul>\n<h3 id=\"veinline-civic-the-vein-working\">Veinline Civic (“the Vein”) — WORKING</h3>\n<p>District tram. Parent: <strong>FER</strong> Ferrum Dynastic. Elevated / culvert-hung rails; civic teal + ferrum gunmetal.</p>\n<ul>\n<li>Street: <em>ride the Vein</em>, <em>teal car</em>, <em>culvert line</em></li>\n<li>Use: cheaper; crowd cover; more eyes</li>\n<li>Token size suggestion: <strong>1×4</strong> / <strong>2×5</strong></li>\n<li>Stub SKU: <code>veinline-civic</code></li>\n</ul>\n<h3 id=\"qf-01-use\">QF-01 use</h3>\n<p>Session A <strong>Scene 2</strong> — Switchboard → Slackwater party-token travel. Table picks Grey or Vein; A2 Slackwater is <strong>after disembark</strong>. Full beats: <code>docs/directors/campaigns/QF-01-TRANSIT-STUB.md</code>. Primer: L1 <strong>Public Flats transit (WORKING)</strong>. Machines: <strong>Public transit (Flats)</strong>.</p>\n<p>No full chassis math in this pass. Do not regenerate art.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "gwFlatsTrnsPl000",
+      "_key": "!journal.pages!gwFlatsTransit00.gwFlatsTrnsPl000",
+      "name": "GHOSTWIRE.Runs.Pages.FlatsTransitPlayer",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Flats do not ask you to walk every culvert.\n\n**Grey Cab** — a closed hover pod that answers a hail-ping. The meter wakes; the canopy seals; the street skims past under the next level’s belly. Quiet. Paid. Limiter-low — not a sky car.\n\n**The Vein** — a teal-and-gunmetal district tram hung on Ferrum rails. Cheap seats, wet windows, every shift-change face in the hive. Public. Seen.\n\nBoth stay in the cushioned river. Both get you from Switchboard to Slackwater without inventing wings.\n",
+        "content": "<p>The Flats do not ask you to walk every culvert.</p>\n<p><strong>Grey Cab</strong> — a closed hover pod that answers a hail-ping. The meter wakes; the canopy seals; the street skims past under the next level’s belly. Quiet. Paid. Limiter-low — not a sky car.</p>\n<p><strong>The Vein</strong> — a teal-and-gunmetal district tram hung on Ferrum rails. Cheap seats, wet windows, every shift-change face in the hive. Public. Seen.</p>\n<p>Both stay in the cushioned river. Both get you from Switchboard to Slackwater without inventing wings.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {}
+    },
+    {
+      "_id": "gwFlatsTrnsArt00",
+      "_key": "!journal.pages!gwFlatsTransit00.gwFlatsTrnsArt00",
+      "name": "GHOSTWIRE.Runs.Pages.FlatsTransitArt",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "**Do not generate in this pass.** Prompts held for Michael’s later plate run.\n\n**Style lock:** Ghostwire cinematic cyberpunk-fantasy nocturne; charcoal wet metal; pink/cyan neon; grit tactical; STRICT flat top-down / eagle’s-eye orthographic; no people; no baked grid; no sky cars.\n\n**Grey Cab Services:** closed electric autocab hover pod, Ferrum gunmetal, Argent meter glow, Meridian hail LED, cushioned-river underbelly light, no wheels, limiter craft.\n\n**Veinline Civic:** long elevated tram car on culvert-hung Ferrum rails, civic teal + ferrum gunmetal, wet windows, sodium/neon rain sheen.\n\nSuggested sizes: Grey **2×3/2×4**; Vein **1×4/2×5**.\n",
+        "content": "<p><strong>Do not generate in this pass.</strong> Prompts held for Michael’s later plate run.</p>\n<p><strong>Style lock:</strong> Ghostwire cinematic cyberpunk-fantasy nocturne; charcoal wet metal; pink/cyan neon; grit tactical; STRICT flat top-down / eagle’s-eye orthographic; no people; no baked grid; no sky cars.</p>\n<p><strong>Grey Cab Services:</strong> closed electric autocab hover pod, Ferrum gunmetal, Argent meter glow, Meridian hail LED, cushioned-river underbelly light, no wheels, limiter craft.</p>\n<p><strong>Veinline Civic:</strong> long elevated tram car on culvert-hung Ferrum rails, civic teal + ferrum gunmetal, wet windows, sodium/neon rain sheen.</p>\n<p>Suggested sizes: Grey <strong>2×3/2×4</strong>; Vein <strong>1×4/2×5</strong>.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

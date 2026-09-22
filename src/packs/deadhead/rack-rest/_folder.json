@@ -1,0 +1,12 @@
+{
+  "_id": "gwDeadheadRackRs",
+  "_key": "!folders!gwDeadheadRackRs",
+  "name": "GHOSTWIRE.Deadhead.Folders.RackRest",
+  "type": "Actor",
+  "folder": null,
+  "sort": 300000,
+  "flags": {},
+  "color": "#6b4f9e",
+  "description": "",
+  "sorting": "m"
+}

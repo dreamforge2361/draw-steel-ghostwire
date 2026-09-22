@@ -94,7 +94,7 @@ ok(/Michael’s live|Michael's live|Michael’s world|Michael manual/.test(text)
 ok(!/ensureGoldLineScene/.test(text), "director journal does not tell Michael to force-inject Gold Line");
 ok(!/Draw Steel Heroes|MCDM/i.test(text), "Ghostwire-only (no Draw Steel Heroes / MCDM)");
 ok(!/\bdecker\b/i.test(text) && !/\bMatrix\b/.test(text) && !/\bShadowrun\b/i.test(text), "Ghostwire-only player wording");
-ok(/Mama’s Deadhead Brief|Mama's Deadhead Brief/.test(text), "Mama brief notes");
+ok(/Mama’s Deadhead Job Stick|Mama's Deadhead Job Stick/.test(text), "Mama Job Stick notes");
 ok(/live transaction wafer|ghost ledger/.test(text), "capsule / live wafer notes");
 ok(/B104 Gear SKUs shipped/.test(text), "Items page notes B104 Gear SKUs shipped");
 ok(/gwMamaBriefWafer/.test(text) && /gwArgCourierCap0/.test(text), "Items page UUID-hooks both Gear SKUs");
@@ -105,9 +105,9 @@ ok(/gwNoxTrashFrgt00/.test(text) && /nox-trash-freighter/.test(text), "Director 
 ok(/gwNoxTrashActor0/.test(text) && /Deadhead Actors/.test(text), "Director journal UUID-hooks Nox freighter Actor pack");
 ok(/Vehicles \(shipped 0\.3\.54\)/.test(text), "Foundry checklist marks Nox freighter shipped");
 ok(/ARG Corporate Enforcer/.test(text) && /ARG Response Lieutenant/.test(text) && /Watchdog ICE/.test(text), "opposition cheat sheet");
-ok(/Crew hangout/.test(text) && /REMOVED permanently 0\.3\.55/.test(text), "scene checklist marks hangout REMOVED permanently");
+ok(/crew hangout/i.test(text) && /REMOVED permanently 0\.3\.55/.test(text), "scene checklist marks module-injected hangout REMOVED permanently");
 ok(/Mama’s Club|Mama's Club/.test(text) && /Canyon/.test(text), "scene checklist still lists Mama / canyon");
-ok(/no hangout Scene/i.test(text) && /table procedure/.test(text), "Beat 0 is table procedure without a hangout Scene");
+ok(/Rack & Rest/.test(text) && /not a module inject/i.test(text), "Beat 0 discovery runs at Rack & Rest (Michael world Scene, not a module inject)");
 ok(!/Shady Workshop/.test(text), "Director journal does not name Shady Workshop");
 ok(!/map-deadhead-hangout/.test(text), "Director journal has no hangout plate path");
 ok(!/deadheadHangoutScene/.test(text), "Director journal has no hangout scene flag");
@@ -125,7 +125,8 @@ ok(/AFT FREIGHT/.test(mapText) && /freight Enforcers/.test(mapText), "map-notes 
 ok(!/\bPASSENGER\b/.test(mapText) && !/5 cars/.test(mapText), "map-notes beat page has no passenger consist");
 
 const mama = readBomFreeJson("src/packs/bestiary/reach-streets/mama-cassavir.json");
-const ghostItemNames = (mama.items ?? []).filter(i => String(i.name).startsWith("GHOSTWIRE."));
+// The 0.3.85 Wire Kit ships a lang-key name on purpose (build-packs resolves it).
+const ghostItemNames = (mama.items ?? []).filter(i => String(i.name).startsWith("GHOSTWIRE.") && i.system?._dsid !== "wire-kit-matrix-verbs");
 ok(ghostItemNames.length === 0, `mama-cassavir has zero item names starting with GHOSTWIRE. (found ${ghostItemNames.map(i => i.name).join(", ") || "none"})`);
 
 const gearFiles = [

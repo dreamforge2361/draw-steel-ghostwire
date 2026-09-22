@@ -4573,8 +4573,8 @@
           "Description": "<p><em>Fixer Retainer · Contact Introduction · brokered network access</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥6,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Service</p><p><strong>Profile:</strong> Buys a one-time introduction to a new Contact, or an Availability re-roll on a restricted acquisition.</p>"
         },
         "MamaDeadheadBrief": {
-          "Name": "Mama’s Deadhead Brief (Gold Line)",
-          "Description": "<p><em>Mama’s Deadhead Brief (Gold Line) · Data wafer · Mama-marked portable brief</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥50 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Plot</p><p><strong>Profile:</strong> Portable data wafer. Negligible as loot (~¥50); worthless to fence (Mama-marked).</p><p><strong>On the wafer (baseline):</strong> job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev without naming the capsule chamber, vague meat/Wire/clock, bail = same bird, return for choice.</p><p><strong>Not on the wafer:</strong> exact chamber; R1 Watchdog / R2 cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.</p>"
+          "Name": "Mama’s Deadhead Job Stick (Gold Line)",
+          "Description": "<p><em>Mama’s Deadhead Job Stick (Gold Line) · Briefing chip · Mama-marked portable job stick</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥50 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Plot</p><p><strong>Profile:</strong> Portable briefing chip / job stick. Negligible as loot (~¥50); worthless to fence (Mama-marked).</p><p><strong>On the stick (baseline):</strong> job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev without naming the capsule chamber, vague meat/Wire/clock, bail = same bird, return for choice.</p><p><strong>Not on the stick:</strong> exact chamber; Watchdog / cams numbers; +1 Trace / 2 rounds outside-case clock; full faction doors (corp/Signal) until discovery D.</p>"
         },
         "ArgCourierCapsule": {
           "Name": "ARG Courier Capsule (Gold Line)",
@@ -7909,12 +7909,15 @@
     },
     "Runs": {
       "Folders": {
-        "Deadhead": "Deadhead"
+        "Deadhead": "Deadhead",
+        "FlatsTransit": "Flats Transit"
       },
       "Journals": {
         "GoldLineMap": "Gold Line — Map Notes",
         "GoldLineAerialRecon": "Gold Line — Aerial Recon",
-        "DeadheadDirector": "Deadhead — Director"
+        "DeadheadDirector": "Deadhead — Director",
+        "FlatsTransit": "Flats Transit — Grey Cab & Veinline",
+        "DeadheadSessionChapters": "Deadhead — Session Chapters"
       },
       "Pages": {
         "GoldLinePlate": "Plate",
@@ -7929,18 +7932,33 @@
         "Beat2": "Beat 2 — Freight Crawl",
         "Beat3": "Beat 3 — Wire",
         "Beat4": "Beat 4 — Bail",
-        "Beat5": "Beat 5 — Choice",
+        "Beat5": "Beat 5 — Nightjar Market",
         "Items": "Items",
         "Opposition": "Opposition",
-        "FoundryChecklist": "Foundry Checklist"
+        "FoundryChecklist": "Foundry Checklist",
+        "FlatsTransitGM": "GM — Brands & QF-01",
+        "FlatsTransitPlayer": "Street read (player-safe)",
+        "FlatsTransitArt": "Art prompts (WORKING)",
+        "SessionOpening": "Opening — Why tonight",
+        "SessionMamasClub": "Scene — Mama’s Club",
+        "SessionFlatsTransit": "Scene — Flats Transit",
+        "SessionRackRest": "Scene — Rack & Rest",
+        "SessionFreighterMeet": "Scene — Freighter Meet (Call Nox)",
+        "SessionGoldLine": "Scene — Gold Line",
+        "SessionNightjar": "Scene — Nightjar Market",
+        "SessionCarByCar": "Gold Line — Car-by-Car (Director)"
       }
     },
     "Deadhead": {
       "Actors": {
         "NoxTrashFreighter": {
           "Name": "Nox’s Trash Freighter",
-          "Description": "<p><em>Nox’s Trash Freighter · Borrowed municipal hauler · garbage-truck-sized air freighter</em></p><p><strong>Plot / non-hostile.</strong> Deadhead Beat 1 board and Beat 4 roof Recall. Crew borrows it from Nox; scratch it = buy it; lose it = explain to Mama. Tags: Deadhead, Plot.</p><p><strong>Place:</strong> Drag this Actor from <strong>Ghostwire Runs — Deadhead Actors</strong> onto <strong>Scenes → Deadhead → Gold Line</strong> (show roofs for board / bail). Linked token, friendly disposition, no ring (unframed cutout). Do not force-rewrite the live Gold Line Scene.</p><p><strong>Suggested token size:</strong> <strong>4×6</strong> squares (width×height). Gold Line grid is 208 px = 5 ft. Resize on the Scene. Use <strong>5×8</strong> if 4×6 reads small. Art is a square cutout with <code>fit: contain</code>.</p><p><strong>Placeholder stats:</strong> Integrity (Stamina) 80, speed 12 fly (Heavy air / standard). Handling and the full vehicle damage pass are not done — treat Integrity as a fiction bar.</p><p><strong>Library SKU:</strong> the Vehicles Item in <strong>Ghostwire Vehicles → Air</strong>. Journals stay in <strong>Ghostwire Runs → Deadhead</strong> (that pack is JournalEntry-only; Foundry cannot store Actors there).</p>"
+          "Description": "<p><em>Nox’s Trash Freighter · Borrowed municipal hauler · garbage-truck-sized air freighter</em></p><p><strong>Plot / non-hostile.</strong> Deadhead Beat 1 board and Beat 4 roof Recall. Crew borrows it from Nox; scratch it = buy it; lose it = explain to Mama. Tags: Deadhead, Plot.</p><p><strong>Place:</strong> Drag this Actor from <strong>Ghostwire Runs — Deadhead Actors</strong> onto <strong>Scenes → Deadhead → Gold Line</strong> (show roofs for board / bail). Linked token, friendly disposition, no ring (unframed cutout). Do not force-rewrite the live Gold Line Scene.</p><p><strong>Suggested token size:</strong> <strong>4×6</strong> squares (width×height). Gold Line grid is 208 px = 5 ft. Resize on the Scene. Use <strong>5×8</strong> if 4×6 reads small. Art is a square cutout with <code>fit: contain</code>.</p><p><strong>Placeholder stats:</strong> Integrity (Stamina) 80, speed 12 fly (Heavy air / standard). Handling and the full vehicle damage pass are not done — treat Integrity as a fiction bar.</p><p><strong>Library SKU:</strong> the Vehicles Item in <strong>Ghostwire Vehicles → Air</strong>. Journals stay in <strong>Ghostwire Runs → Deadhead</strong> (that pack is JournalEntry-only; Foundry cannot store Actors there).</p><p><strong>Contact — Nox (Corran):</strong> Mama’s Flats wrangler. Stocky engineered-labor build, salt-and-pepper beard, yellow-hazard coveralls, goggles on a sweat-stained cap, boom mic, handheld diagnostic. Texas street slang (<em>y’all</em>, <em>reckon</em>, <em>fixin’ to</em>) — grit, not costume. Meat on the pad or voice-only on the channel.</p><p><img src=\"modules/draw-steel-ghostwire/assets/tokens/deadhead/nox-portrait.webp\" alt=\"Nox\" width=\"256\" height=\"256\" /></p>"
         }
+      },
+      "Folders": {
+        "NightjarMarket": "Nightjar Market",
+        "RackRest": "Rack & Rest"
       }
     },
     "Scenes": {
@@ -7951,6 +7969,10 @@
         "RoofsTile": "Roofs",
         "Injected": "Gold Line is ready under Scenes → Deadhead. Hide the Roofs tile when the crew goes inside.",
         "Refreshed": "Gold Line was force-restamped (overwrites walls, lights, tiles, and background). Re-activate the Scene if it is already open."
+      },
+      "NightjarMarket": {
+        "Name": "Nightjar Market",
+        "Injected": "Nightjar Market is ready under Scenes → Deadhead (after Gold Line). Dress walls and lights from the plate; seat the chosen buyer at the counter."
       }
     },
     "Lore": {

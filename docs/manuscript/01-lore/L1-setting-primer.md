@@ -1620,6 +1620,18 @@ The street POV hover-bike yes-example is the **Star-Chopper** (Long-Fork / tande
 
 **Director note (Rideable — future):** tandem seats read from above. Do **not** implement Rideable yet.
 
+### Public Flats transit (WORKING)
+
+**Status:** WORKING 2026-09-21 · names are stubs Michael can rename.
+
+Licensed **horizontal** Flats travel — still the cushioned river, still limiter **~25–50 ft**, still electric, still **not** sky cars. Vertical spines stay the corp arteries above; this is how a Switchboard crew crosses districts without walking every culvert.
+
+**Grey Cab Services (“Grey Cab”).** Autocab hover pods. **ARG** Argent Exchange owns the fare meter; **FER** Ferrum licenses the chassis; **Meridian** only sells the hail/dispatch ping. Street: *hail a Grey*, *meter’s awake*. Quieter, more private, costs more — the ride you take when the sleeve stays sealed and you do not want a car full of wage-bodies. *(Not the Restricted **Grey Cab / Ghost Fare** armored taxi SKU — that fixer plate is a different card; rename either side later if the table confuses them.)*
+
+**Veinline Civic (“the Vein”).** District tram on elevated / culvert-hung Ferrum rails — civic teal + ferrum gunmetal. Parent: **FER** Ferrum Dynastic. Street: *ride the Vein*, *teal car*. Cheaper, louder, more eyes — crowd cover for Low Lifestyle crews.
+
+Crews use Greys for privacy and Veins for coin and camouflage. Director travel beats: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md`. Machine notes: `docs/raw/23-machines.md` › Public transit (Flats).
+
 ### Bulldog-class — street heavy hauler
 
 A **Bulldog** is the cargo-van exception that still uses **tires**. It is not a hover POV. Rubber on the Flats means mass: crates, wrecks, a crew’s stolen safe. Token art is a placeholder until Michael’s plate.

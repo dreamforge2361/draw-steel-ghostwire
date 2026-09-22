@@ -1,0 +1,396 @@
+{
+  "folder": "gwDeadheadNtjar0",
+  "name": "Nim",
+  "type": "npc",
+  "_id": "gwDhNim000000000",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/deadhead/nim-token.webp",
+  "system": {
+    "stamina": {
+      "value": 30,
+      "max": 30,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 0
+      },
+      "agility": {
+        "value": 1
+      },
+      "reason": {
+        "value": 3
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 1
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>Androgynous and slim, ash-brown skin with faint cyan memory seams at the temples and one hand, short uneven black hair, dark eyes ringed in blue-white static. An oversized graphite hooded raincoat with cyan repair stitching, an old single-ear receiver and a throat transceiver, an insulated shopping bag. Uncanny and political — not monstrous.</p><p>Soft and sideways. “Two thousand. And we make the train forget you a little.”</p>",
+      "director": "<p><strong>Role:</strong> the Signal / Hands Off buyer at Nightjar Market — a frequency more than a chair, often listening from the east <strong>BREAKING NEWS</strong> building. Pays <strong>~¥2,000 + weird</strong> (Trace scrub, a Soft favor, or a SIN forget). Political heat; MER/Signal notice; Mama cool. May never take Iona's seat.</p><p><strong>Drive:</strong> move the wafer into Hands Off custody and deniability. <strong>Pitfall:</strong> corp ¥ matching; painting MER Blacklight; forcing a meat fight in the aisle.</p><p><strong>Posture:</strong> avoids meat. Spoof, scrub, Static, gone. <strong>Retreat:</strong> any sustained meat pressure or fire damage → jack out and leave by the east intersection.</p><p><strong>Secret:</strong> Nim may already be listening on the east crawl before the crew arrives.</p><p><strong>Director tags:</strong> Hacking (Wired edge), Matrix Theory, Stealth, Deception, Insight, Streetwise. Wire Kit + Street Deck fiction; Overlay for the meet, Jacked In only if the body is hidden. Will not match corp ¥.</p><p><strong>Kit by reference</strong> (do not duplicate Items): @UUID[Compendium.draw-steel-ghostwire.matrix.Item.wHt0uT7mAgK3s1cQ]{Whiteout} (Trace scrub weird pay) · @UUID[Compendium.draw-steel-ghostwire.matrix.Item.OepS68mz9km9j8EU]{Static} (local jam escape).</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 1,
+        "corruption": 1,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 1,
+        "poison": 1,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 5,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Deadhead (Gold Line)",
+      "page": "Session Chapters",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 6,
+      "patience": 3,
+      "motivations": [
+        "freedom"
+      ],
+      "pitfalls": [
+        "greed"
+      ],
+      "impression": 1
+    },
+    "monster": {
+      "freeStrike": 2,
+      "keywords": [
+        "humanoid",
+        "undead"
+      ],
+      "level": 1,
+      "role": "controller",
+      "organization": "platoon"
+    },
+    "ev": 6,
+    "statuses": {
+      "immunities": [
+        "bleeding"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "Nim",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/deadhead/nim-token.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Tough But Withered",
+      "type": "feature",
+      "_id": "gwDhNim00000It01",
+      "img": "icons/magic/death/hand-undead-skeleton-fire-green.webp",
+      "system": {
+        "description": {
+          "value": "<p>Nim has immunity 1 to cold, corruption, lightning, and poison, and fire weakness 5. At negative winded Stamina, Nim is inert rather than dying; fire damage while inert destroys the body. <strong>Bloodless:</strong> Nim can't be made bleeding.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "tough-but-withered",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhNim000000000.gwDhNim00000It01"
+    },
+    {
+      "name": "Soft Frequency",
+      "type": "feature",
+      "_id": "gwDhNim00000It02",
+      "img": "icons/magic/sonic/scream-wail-shout-teal.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Maneuver · social / Wire.</strong> While on Overlay or Jacked In, Nim hushes one runner over Broadcast or Linked, then makes a Presence or Reason test (Deception) to sell Signal terms.</p><ul><li><strong>≤11:</strong> Nim cools.</li><li><strong>12–16:</strong> a weird-package tease — one scrub flavor, still ~¥2,000.</li><li><strong>17+:</strong> a fuller weird package — two of Trace scrub, Soft favor, SIN forget — still ~¥2,000.</li></ul>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "soft-frequency",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhNim000000000.gwDhNim00000It02"
+    },
+    {
+      "name": "Trace Scrub Offer",
+      "type": "feature",
+      "_id": "gwDhNim00000It03",
+      "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Procedure.</strong> If the deal closes, the Director can run one Whiteout-style scrub (@UUID[Compendium.draw-steel-ghostwire.matrix.Item.wHt0uT7mAgK3s1cQ]{Whiteout}) on a named host log or on the crew's Trace fiction, moving Trace or logs by hand. This is a farewell weird, not a mid-fight program.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "trace-scrub-offer",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhNim000000000.gwDhNim00000It03"
+    },
+    {
+      "name": "Static Escape",
+      "type": "feature",
+      "_id": "gwDhNim00000It04",
+      "img": "icons/magic/lightning/bolt-strike-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Main action or maneuver · Wire.</strong> While Connected on Overlay or Jacked In, Nim runs @UUID[Compendium.draw-steel-ghostwire.matrix.Item.OepS68mz9km9j8EU]{Static} by reference: suppress one enemy device, camera, smartlink, or watcher ping for a round (a strong result may hit several). Nim then shifts and leaves by the east intersection. A low Wire result is a soft civic scrape, never live-train Trace.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "static-escape",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 30,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhNim000000000.gwDhNim00000It04"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "gwDhNim00000It05",
+      "_key": "!actors.items!gwDhNim000000000.gwDhNim00000It05"
+    }
+  ],
+  "effects": [],
+  "sort": 300000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "deadhead": {
+        "run": "deadhead",
+        "scene": "nightjar-market",
+        "role": "Buyer — Signal / Hands Off",
+        "slug": "nim-token",
+        "proposedId": "gwDhNim00000000",
+        "people": "Revenant (former Pure Human)",
+        "sex": "X",
+        "wired": true
+      }
+    }
+  },
+  "_key": "!actors!gwDhNim000000000"
+}
