@@ -101,12 +101,19 @@ console.log("\n9) post-patches.json carries the non-gear, non-identity fields");
 ok(postPatches._all?.flags?.[MODULE_ID]?.taint === 0, "_all patches taint");
 ok(postPatches._all?.flags?.[MODULE_ID]?.corruptionHistory === "", "_all patches Corruption History");
 
-console.log("\n10) Round trip — regenerating reproduces the committed actors byte for byte");
+/**
+ * Compare ignoring CRLF/LF. core.autocrlf is true here and .gitattributes only pins `packs/**`,
+ * so a fresh checkout hands us CRLF under src/packs/ while the generator always writes LF. Without
+ * this the round trip "fails" on line endings alone every time anyone switches branches.
+ */
+const sameText = (a, b) => a.toString("utf8").replace(/\r\n/g, "\n") === b.toString("utf8").replace(/\r\n/g, "\n");
+
+console.log("\n10) Round trip — regenerating reproduces the committed actors (line endings aside)");
 const snapshot = new Map([...files.map(f => [join(OUT, f), readFileSync(join(OUT, f))]), [LANG, readFileSync(LANG)]]);
 let changed = [];
 try {
   execFileSync(process.execPath, ["tools/pregens-to-actors.mjs"], { stdio: "pipe" });
-  changed = [...snapshot].filter(([p, before]) => !existsSync(p) || !readFileSync(p).equals(before)).map(([p]) => p);
+  changed = [...snapshot].filter(([p, before]) => !existsSync(p) || !sameText(readFileSync(p), before)).map(([p]) => p);
   const added = readdirSync(OUT).filter(f => !snapshot.has(join(OUT, f)));
   ok(!changed.length && !added.length, `regen is a no-op${changed.length ? ` — changed: ${changed.join(", ")}` : ""}${added.length ? ` — added: ${added.join(", ")}` : ""}`);
 } catch (err) {
