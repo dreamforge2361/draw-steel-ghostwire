@@ -1,0 +1,20 @@
+{
+  "_id": "gwBlackMktSell01",
+  "_key": "!macros!gwBlackMktSell01",
+  "name": "GHOSTWIRE.BlackMarket.MacroName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/commodities/currency/coins-assorted-mix-silver.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.blackMarketPrompt) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use Black Market: Sell.\");\n} else {\n  api.blackMarketPrompt();\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "black-market-sell"
+    }
+  }
+}
