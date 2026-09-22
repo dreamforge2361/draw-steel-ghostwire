@@ -1,0 +1,718 @@
+{
+  "folder": "gwBestiaryMagSoc",
+  "name": "Edda Marr",
+  "type": "npc",
+  "_id": "gwBesEddaMarr000",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/magical-societies/edda-marr.webp",
+  "system": {
+    "stamina": {
+      "value": 60,
+      "max": 60,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 0
+      },
+      "agility": {
+        "value": 0
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 1
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>A Corran woman in a charcoal survey coat, cuffs inked, a worn brass measuring loop clipped where a corp badge would sit. She sets her instruments down before she shakes a hand, and she reads the maintenance plate on a door before she reads the room.</p><p>She is an Elementalist — Essence, trained, supervised and logged, the Collegium way — and she will tell you the casting is the least interesting part of the job. What matters is whether the ward that was installed matches the ward that was certified. Testimony is what people remember. Measurements are what happened.</p>",
+      "director": "<p><strong>Role:</strong> Senior Examiner of the Measure Collegium and the crew's field contact at <strong>Datum House</strong>. She is <strong>not</strong> the sole leader of the Collegium and cannot overrule every sponsor, inspector and property owner in the Reach.</p><p><strong>Drive:</strong> Discovery — get the real number. <strong>Pitfall:</strong> Authority. Several Collegium inspectors have approved failing wards because an honest closure order would put thousands of residents on the street. She knows. It is the one place her courage runs out: she is brave in front of physical and magical danger, and much less brave when the evidence threatens the institution that trained her.</p><p><strong>What she can do:</strong> open a classroom, arrange specialist consultation, get a damaged component into the Test Bay intact, ask a crew to recover records, point at the Failure Archive. <strong>What she cannot do:</strong> certify a building safe on her signature alone, launder the Metermen, waive anyone's Arcane Severance, or promise a site can be cleansed.</p><p><strong>Posture:</strong> she does not start fights and does not run from measurable danger. She retreats from a political one. If it goes loud she anchors the ground and gets civilians off the floor; she is an examiner, not a war-caster.</p><p><strong>If pressed:</strong> “The arch is not the claim. The line is the claim.” / “I can tell you what is there. I cannot tell you it is safe.” / “Bring it to me intact, or do not bring it.”</p><p><strong>Director tags:</strong> Architecture, Magic, Interrogation, Search. Wire Kit — Linked by default; she logs, she does not intrude.</p><p><strong>Canon:</strong> @UUID[Compendium.draw-steel-ghostwire.lore.JournalEntry.2VPrYRQCdrZ45Cdh]{The Measure Collegium}. Hooks, escalation ladders and job seeds in that journal are play fuel, not settled history.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 6,
+      "patience": 6,
+      "motivations": [
+        "discovery"
+      ],
+      "pitfalls": [
+        "authority"
+      ],
+      "impression": 2
+    },
+    "monster": {
+      "freeStrike": 4,
+      "keywords": [
+        "humanoid"
+      ],
+      "level": 2,
+      "role": "controller",
+      "organization": "elite"
+    },
+    "ev": 16,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Edda Marr",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/magical-societies/edda-marr.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "The True Measure",
+      "type": "feature",
+      "_id": "gwBesEddaMarIt01",
+      "img": "icons/sundries/documents/blueprint.webp",
+      "system": {
+        "description": {
+          "value": "<p>Edda carries the Collegium's guild mark — brass caliper arch, silver plumb, one cyan datum line — on her coat patch and her instrument case. She has an edge on tests to be admitted to a site as an inspector, to read an annotated maintenance plate, or to tell a genuine certification from a forged badge or an expired one.</p><p>The mark identifies a claimed affiliation. It does not prove an inspector is honest, and it never declares a building safe.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "the-true-measure",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesEddaMarr000.gwBesEddaMarIt01"
+    },
+    {
+      "name": "Measurements Over Testimony",
+      "type": "feature",
+      "_id": "gwBesEddaMarIt02",
+      "img": "icons/skills/trades/academics-investigation-study-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Given an hour, her instruments and access to the installed work, Edda can say whether a ward matches the work it was certified for, and roughly how it is failing. She has an edge on Reason tests to reproduce a known ward failure or to spot a component that has been swapped for an identical-looking part that will pass.</p><p>She will not state a conclusion she has not measured, and she will say so out loud rather than guess for a client.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "measurements-over-testimony",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesEddaMarr000.gwBesEddaMarIt02"
+    },
+    {
+      "name": "The Institution That Trained Her",
+      "type": "feature",
+      "_id": "gwBesEddaMarIt03",
+      "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Director-facing.</strong> Any negotiation that asks Edda to publish against the Collegium itself, name a sponsor, or hand an inspection ledger to someone who will use it for mass eviction loses 1 Patience immediately and cannot reach its final tier on the first attempt.</p><p>Show her the residents' side of the closure order — who sleeps where tonight — and the pitfall lifts for that scene.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "the-institution-that-trained-her",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesEddaMarr000.gwBesEddaMarIt03"
+    },
+    {
+      "name": "Plumb Drop",
+      "type": "ability",
+      "_id": "gwBesEddaMarIt04",
+      "img": "icons/magic/earth/projectile-stone-ball-orange.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "plumb-drop",
+        "story": "She lets the line out and the weight finds true. Whatever was standing between is no longer standing.",
+        "keywords": [
+          "magic",
+          "ranged",
+          "strike"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "gwBesEddaMarDmg0": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "gwBesEddaMarDmg0",
+              "damage": {
+                "tier1": {
+                  "value": "6",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "9",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "12",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "gwBesEddaMarApp0": {
+              "name": "",
+              "img": null,
+              "type": "applied",
+              "_id": "gwBesEddaMarApp0",
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "reason"
+                  }
+                },
+                "tier2": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "",
+                  "effects": {
+                    "slowed": {
+                      "condition": "always",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            },
+            "gwBesEddaMarFrc0": {
+              "name": "slide",
+              "img": null,
+              "type": "forced",
+              "_id": "gwBesEddaMarFrc0",
+              "forced": {
+                "tier1": {
+                  "movement": [
+                    "slide"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "1",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "movement": [
+                    "slide"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "2",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "movement": [
+                    "slide"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "3",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The target is slowed (EoT), and the square it occupies is marked with a cyan datum line until the end of the encounter.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 30,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesEddaMarr000.gwBesEddaMarIt04"
+    },
+    {
+      "name": "Bring It to True",
+      "type": "ability",
+      "_id": "gwBesEddaMarIt05",
+      "img": "icons/magic/earth/barrier-stone-explosion-debris.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "bring-it-to-true",
+        "story": "Brass threshold lines snap across the floor. The ground stops lying about which way is down.",
+        "keywords": [
+          "area",
+          "magic",
+          "ranged"
+        ],
+        "category": "heroic",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "cube",
+          "primary": "3",
+          "secondary": "10",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "reason"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "gwBesEddaMarDmg0": {
+              "name": "Damage",
+              "img": null,
+              "type": "damage",
+              "_id": "gwBesEddaMarDmg0",
+              "damage": {
+                "tier1": {
+                  "value": "3",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "5",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "8",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "gwBesEddaMarApp0": {
+              "name": "Slowed",
+              "img": null,
+              "type": "applied",
+              "_id": "gwBesEddaMarApp0",
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "effects": {},
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "display": "slowed (EoT)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "display": "slowed (EoT)",
+                  "effects": {
+                    "slowed": {
+                      "condition": "failure",
+                      "end": "turn",
+                      "properties": []
+                    }
+                  },
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>The area is difficult terrain for enemies until the end of the encounter. Allies who start their turn in the area ignore that difficult terrain — the datum lines read the same for everyone who knows what they are for.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 40,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesEddaMarr000.gwBesEddaMarIt05"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "gwBesEddaMarIt06",
+      "_key": "!actors.items!gwBesEddaMarr000.gwBesEddaMarIt06"
+    }
+  ],
+  "effects": [],
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "region": "magical-societies",
+        "society": "measure-collegium",
+        "slug": "edda-marr",
+        "handbookName": "Edda Marr",
+        "station": "Senior Examiner — Datum House",
+        "people": "Corran",
+        "sex": "F",
+        "casting": true,
+        "loreJournal": "Compendium.draw-steel-ghostwire.lore.JournalEntry.2VPrYRQCdrZ45Cdh",
+        "wired": true
+      }
+    }
+  },
+  "_key": "!actors!gwBesEddaMarr000"
+}
