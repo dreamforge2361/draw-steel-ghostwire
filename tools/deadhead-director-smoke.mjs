@@ -130,10 +130,10 @@ const ghostItemNames = (mama.items ?? []).filter(i => String(i.name).startsWith(
 ok(ghostItemNames.length === 0, `mama-cassavir has zero item names starting with GHOSTWIRE. (found ${ghostItemNames.map(i => i.name).join(", ") || "none"})`);
 
 const gearFiles = [
-  "src/packs/gear/general/plot/_folder.json",
-  "src/packs/gear/general/plot/mama-deadhead-brief.json",
-  "src/packs/gear/general/plot/arg-courier-capsule.json",
-  "src/packs/gear/general/plot/gold-line-aerial-recon.json",
+  "src/packs/gear/plot/_folder.json",
+  "src/packs/gear/plot/mama-deadhead-brief.json",
+  "src/packs/gear/plot/arg-courier-capsule.json",
+  "src/packs/gear/plot/gold-line-aerial-recon.json",
   "assets/items/deadhead/item-mama-brief-wafer.png",
   "assets/items/deadhead/item-mama-brief-wafer.webp",
   "assets/items/deadhead/item-arg-courier-capsule.png",
@@ -144,8 +144,8 @@ const gearFiles = [
 for (const file of gearFiles) {
   ok(existsSync(file), `${file} exists`);
 }
-const brief = readBomFreeJson("src/packs/gear/general/plot/mama-deadhead-brief.json");
-const capsule = readBomFreeJson("src/packs/gear/general/plot/arg-courier-capsule.json");
+const brief = readBomFreeJson("src/packs/gear/plot/mama-deadhead-brief.json");
+const capsule = readBomFreeJson("src/packs/gear/plot/arg-courier-capsule.json");
 ok(brief._id === "gwMamaBriefWafer" && brief.system?._dsid === "mama-deadhead-brief", "Mama brief SKU id + dsid");
 ok(capsule._id === "gwArgCourierCap0" && capsule.system?._dsid === "arg-courier-capsule", "ARG capsule SKU id + dsid");
 ok(brief.flags?.["draw-steel-ghostwire"]?.gear && capsule.flags?.["draw-steel-ghostwire"]?.gear, "both SKUs carry flags.draw-steel-ghostwire.gear");
@@ -189,7 +189,7 @@ ok(lang.GHOSTWIRE.Runs.Journals.GoldLineAerialRecon === "Gold Line — Aerial Re
 ok(lang.GHOSTWIRE.Runs.Pages.GoldLineAerialPhoto === "Photo" && lang.GHOSTWIRE.Runs.Pages.GoldLineAerialIntel === "Intel", "lang aerial recon page names");
 ok(lang.GHOSTWIRE.Gear.Items.GoldLineAerialRecon?.Name === "Gold Line Aerial Recon", "lang aerial recon item name");
 
-const reconItem = readBomFreeJson("src/packs/gear/general/plot/gold-line-aerial-recon.json");
+const reconItem = readBomFreeJson("src/packs/gear/plot/gold-line-aerial-recon.json");
 ok(reconItem._id === "gwGoldLineRecon0" && reconItem.system?._dsid === "gold-line-aerial-recon", "aerial recon Plot Item id + dsid");
 ok(reconItem.flags?.["draw-steel-ghostwire"]?.gear?.tags?.includes("Plot"), "aerial recon Item is Plot gear");
 ok(reconItem.img.endsWith("gold-line-aerial-recon.webp"), "aerial recon Item img is the shipped webp");
