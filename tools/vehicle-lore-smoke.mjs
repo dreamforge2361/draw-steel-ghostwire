@@ -59,8 +59,8 @@ ok(/almost always heavy lifters/.test(raw), "RAW 23 quotes ground-haulers");
 const vehCh = read("docs/rulebook/16-vehicles.md");
 ok(/Lock \(Michael 2026-09-20\)/.test(vehCh), "16-vehicles lore frame is the lock");
 ok(/light electric hovercraft/.test(vehCh), "16-vehicles quotes hover POV");
-ok(/Inventory \(39 crewed platforms\)/.test(raw) && /Star-Chopper/.test(raw) && /Seal Cruiser/.test(raw), "RAW 23 inventory includes Star-Chopper + Seal Cruiser and count 39");
-ok(/Inventory \(39 crewed platforms\)/.test(vehCh) && /Star-Chopper/.test(vehCh) && /Crash Angel/.test(vehCh), "16-vehicles inventory includes Star-Chopper + Crash Angel and count 39");
+ok(/Inventory \(46 crewed platforms\)/.test(raw) && /Star-Chopper/.test(raw) && /Seal Cruiser/.test(raw), "RAW 23 inventory includes Star-Chopper + Seal Cruiser and count 46");
+ok(/Inventory \(46 crewed platforms\)/.test(vehCh) && /Star-Chopper/.test(vehCh) && /Crash Angel/.test(vehCh), "16-vehicles inventory includes Star-Chopper + Crash Angel and count 46");
 
 const flats = read("docs/setting/reach-handbook/03-life-on-the-flats.md");
 ok(/## Vehicles & Transit — How the Flats Move/.test(flats), "Handbook Life on the Flats has Vehicles & Transit");

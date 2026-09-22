@@ -1,6 +1,6 @@
 # Ghostwire print-art gap report
 
-**Generated:** 2026-09-19T03:23:49.293Z
+**Generated:** 2026-09-22T23:40:27.629Z
 **Tool:** `tools/inject-print-art.mjs`
 **Placement map:** `docs/manuscript/print-art/ART-PLACEMENT.yml`
 **Credit:** Ghostwire AI (AI-generated) (B76). No external IP name-checks (B78/B83).
@@ -8,9 +8,9 @@
 
 | | Count |
 |---|---:|
-| Slots in map | 49 |
-| Placed | 23 |
-| ART GAP (file missing) | 26 |
+| Slots in map | 55 |
+| Placed | 54 |
+| ART GAP (file missing) | 1 |
 | Chapter anchor missing | 0 |
 
 ## Placed
@@ -36,6 +36,37 @@
 | `gang-undertow` | gang | `docs/manuscript/print-art/gangs/undertow.webp` |
 | `l4-voidmark` | filler | `docs/manuscript/print-art/filler/voidmark.webp` |
 | `l5-hands-off` | filler | `docs/manuscript/print-art/filler/hands-off.webp` |
+| `l6-measure-collegium-symbol` | faction | `assets/factions/magical-societies/measure-collegium-symbol-512.webp` |
+| `l6-datum-house` | faction | `assets/factions/magical-societies/measure-collegium-datum-house.webp` |
+| `l7-wickkeepers-symbol` | faction | `assets/factions/magical-societies/wickkeepers-symbol-512.webp` |
+| `l7-last-kettle` | faction | `assets/factions/magical-societies/wickkeepers-last-kettle.webp` |
+| `l8-ash-survey-symbol` | faction | `assets/factions/magical-societies/ash-survey-symbol-512.webp` |
+| `l8-cinder-yard` | faction | `assets/factions/magical-societies/ash-survey-cinder-yard.webp` |
+| `people-pure-human` | species | `docs/manuscript/print-art/species/pure-human.png` |
+| `people-corran` | species | `docs/manuscript/print-art/species/corran.png` |
+| `people-elvani` | species | `docs/manuscript/print-art/species/elvani.png` |
+| `people-goliar` | species | `docs/manuscript/print-art/species/goliar.png` |
+| `people-changer` | species | `docs/manuscript/print-art/species/changer.png` |
+| `people-revenant` | species | `docs/manuscript/print-art/species/revenant.png` |
+| `people-mutant` | species | `docs/manuscript/print-art/species/mutant.png` |
+| `people-cyborg` | species | `docs/manuscript/print-art/species/cyborg.png` |
+| `people-pure-human-rules` | species | `docs/manuscript/print-art/species/pure-human.png` |
+| `people-corran-rules` | species | `docs/manuscript/print-art/species/corran.png` |
+| `people-elvani-rules` | species | `docs/manuscript/print-art/species/elvani.png` |
+| `people-goliar-rules` | species | `docs/manuscript/print-art/species/goliar.png` |
+| `people-changer-rules` | species | `docs/manuscript/print-art/species/changer.png` |
+| `people-revenant-rules` | species | `docs/manuscript/print-art/species/revenant.png` |
+| `people-mutant-rules` | species | `docs/manuscript/print-art/species/mutant.png` |
+| `people-cyborg-rules` | species | `docs/manuscript/print-art/species/cyborg.png` |
+| `class-operator` | class | `docs/manuscript/print-art/classes/operator.png` |
+| `class-scout` | class | `docs/manuscript/print-art/classes/scout.png` |
+| `class-commander` | class | `docs/manuscript/print-art/classes/commander.png` |
+| `class-medic` | class | `docs/manuscript/print-art/classes/medic.png` |
+| `class-wrench` | class | `docs/manuscript/print-art/classes/wrench.png` |
+| `class-elementalist` | class | `docs/manuscript/print-art/classes/elementalist.png` |
+| `class-street-priest` | class | `docs/manuscript/print-art/classes/street-priest.png` |
+| `class-hacker` | class | `docs/manuscript/print-art/classes/hacker.png` |
+| `class-technomancer` | class | `docs/manuscript/print-art/classes/technomancer.png` |
 | `veil-opener` | filler | `docs/manuscript/print-art/filler/veil-opener.webp` |
 | `machines-opener` | filler | `docs/manuscript/print-art/filler/machines-opener.webp` |
 | `ch27-flats-overview` | map | `assets/maps/districts/labeled/00_flats_overview_L.webp` |
@@ -45,31 +76,6 @@
 
 | Slot | Kind | Chapter | Expected / search |
 |---|---|---|---|
-| `people-pure-human` | species | `L2` | `docs/manuscript/print-art/species/pure-human.png` |
-| `people-corran` | species | `L2` | `docs/manuscript/print-art/species/corran.png` |
-| `people-elvani` | species | `L2` | `docs/manuscript/print-art/species/elvani.png` |
-| `people-goliar` | species | `L2` | `docs/manuscript/print-art/species/goliar.png` |
-| `people-changer` | species | `L2` | `docs/manuscript/print-art/species/changer.png` |
-| `people-revenant` | species | `L2` | `docs/manuscript/print-art/species/revenant.png` |
-| `people-mutant` | species | `L2` | `docs/manuscript/print-art/species/mutant.png` |
-| `people-cyborg` | species | `L2` | `docs/manuscript/print-art/species/cyborg.png` |
-| `people-pure-human-rules` | species | `ch6` | `docs/manuscript/print-art/species/pure-human.png` |
-| `people-corran-rules` | species | `ch6` | `docs/manuscript/print-art/species/corran.png` |
-| `people-elvani-rules` | species | `ch6` | `docs/manuscript/print-art/species/elvani.png` |
-| `people-goliar-rules` | species | `ch6` | `docs/manuscript/print-art/species/goliar.png` |
-| `people-changer-rules` | species | `ch6` | `docs/manuscript/print-art/species/changer.png` |
-| `people-revenant-rules` | species | `ch6` | `docs/manuscript/print-art/species/revenant.png` |
-| `people-mutant-rules` | species | `ch6` | `docs/manuscript/print-art/species/mutant.png` |
-| `people-cyborg-rules` | species | `ch6` | `docs/manuscript/print-art/species/cyborg.png` |
-| `class-operator` | class | `ch14` | `docs/manuscript/print-art/classes/operator.webp` |
-| `class-scout` | class | `ch15` | `docs/manuscript/print-art/classes/scout.webp` |
-| `class-commander` | class | `ch16` | `docs/manuscript/print-art/classes/commander.webp` |
-| `class-medic` | class | `ch17` | `docs/manuscript/print-art/classes/medic.webp` |
-| `class-wrench` | class | `ch18` | `docs/manuscript/print-art/classes/wrench.webp` |
-| `class-elementalist` | class | `ch19` | `docs/manuscript/print-art/classes/elementalist.webp` |
-| `class-street-priest` | class | `ch20` | `docs/manuscript/print-art/classes/street-priest.webp` |
-| `class-hacker` | class | `ch21` | `docs/manuscript/print-art/classes/hacker.webp` |
-| `class-technomancer` | class | `ch22` | `docs/manuscript/print-art/classes/technomancer.webp` |
 | `wire-opener` | filler | `ch23` | `docs/manuscript/print-art/filler/wire-opener.webp` |
 
 Fill gaps by copying Michael’s Dropbox art tree (see `docs/manuscript/print-art/README.md`), then re-run inject + build.

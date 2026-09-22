@@ -3,6 +3,8 @@
 // folder + StreetFood/Chem tags so new SKUs auto-include.
 // 0.3.77 — Vehicles (crewed, inverse of Drones), Decks (Cat 4A), Programs (4B suites +
 // 4C payloads on one shelf), Ammo (gear/general/ammunition magazines — not Ammo Bin mods).
+// 0.3.98 (S8) — Mods (the chop shop): every Mods-pack SKU, vehicle/drone §5F kits plus
+// the weapon / armor / gadget families. Matches on flags.mod so new SKUs auto-stock.
 
 export const MODULE_ID = "draw-steel-ghostwire";
 
@@ -25,6 +27,10 @@ export const FOLDER_IDS = Object.freeze({
   decks: "7PqOYWHMxEowPWJc",
   programs: "PTNQJZBUr1ZFR36p",
   payloads: "rPSzM2YqrQBEstrv",
+  modsVehicles: "aQqOJpCpotlt5MEY",
+  modsArmor: "B4auJ3Tjl5Ueylf3",
+  modsWeapons: "lS0Fe0Hu8lN3LKEC",
+  modsGadgets: "WPSNKYe2217TSF7m",
 });
 
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? doc?.flags?.["draw-steel-ghostwire"] ?? {};
@@ -142,6 +148,25 @@ export const KIOSK_PRESETS = Object.freeze([
       folderIds: [FOLDER_IDS.ammunition],
     },
   },
+  {
+    // 0.3.98 (S8) — the chop shop. Every buyable mod in the Mods pack: vehicle/drone
+    // §5F kits first-class, plus the already-packed weapon / armor / gadget families.
+    // `modAny` keys on flags.mod so a new SKU under src/packs/mods/** auto-stocks with
+    // no listing edit, in Foundry index rows as well as the Node smoke catalog.
+    id: "mods",
+    langKey: "Mods",
+    match: {
+      packs: ["mods"],
+      pathPrefixes: ["vehicles", "weapons", "armor", "gadgets"],
+      modAny: true,
+      folderIds: [
+        FOLDER_IDS.modsVehicles,
+        FOLDER_IDS.modsWeapons,
+        FOLDER_IDS.modsArmor,
+        FOLDER_IDS.modsGadgets,
+      ],
+    },
+  },
 ]);
 
 export function listPresets() {
@@ -196,6 +221,7 @@ export function matchPresetItem(item, preset) {
     ...tagsOf(item),
     ...(Array.isArray(flags.vehicle?.tags) ? flags.vehicle.tags : []),
     ...(Array.isArray(flags.matrix?.tags) ? flags.matrix.tags : []),
+    ...(Array.isArray(flags.mod?.tags) ? flags.mod.tags : []),
   ];
   if (match.excludeTags?.some(tag => allTags.includes(tag))) return false;
 
@@ -207,6 +233,7 @@ export function matchPresetItem(item, preset) {
     if (flags.vehicle) return true;
   }
   if (match.matrixRoles?.length && match.matrixRoles.includes(flags.matrix?.role)) return true;
+  if (match.modAny && flags.mod) return true;
 
   const tags = tagsOf(item);
   if (match.tagsAny?.some(tag => tags.includes(tag))) return true;

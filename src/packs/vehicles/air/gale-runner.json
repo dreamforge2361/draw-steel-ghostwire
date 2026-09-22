@@ -1,0 +1,66 @@
+{
+  "_id": "gwGaleRunnerItm0",
+  "_key": "!items!gwGaleRunnerItm0",
+  "name": "GHOSTWIRE.Vehicles.Items.GaleRunner.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.GaleRunner.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "gale-runner",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a56,500 in chassis salvage, drive stock, and rotor and thrust stock; a military-grade bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Gale-Runner chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "a7XeWmGqPhQSlDcK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 13000,
+        "modSlots": 4,
+        "tags": [
+          "Pursuit",
+          "Combat",
+          "Mount",
+          "VTOL"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air",
+        "scale": "Vehicle",
+        "drone": false,
+        "speedBand": "extreme"
+      }
+    }
+  }
+}

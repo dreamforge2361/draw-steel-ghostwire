@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a54,000 in milspec hull plate and a bonded backing layer; a military-grade bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Combat Plate \u00b7 installs on one vehicle or drone (1 mod slot)."
       },
-      "goal": null
+      "goal": 450
     }
   },
   "effects": [

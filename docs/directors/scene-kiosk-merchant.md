@@ -1,7 +1,8 @@
 # Scene kiosk merchant
 
 **Module 0.3.59 · spike `docs/spikes/B118-SCENE-KIOSK-MERCHANT.md` (DESIGN LOCKED)**  
-**Presets + street consumables 0.3.65 · spike `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`**
+**Presets + street consumables 0.3.65 · spike `docs/spikes/B119-KIOSK-PRESETS-CONSUMABLES.md`**  
+**S8 machine vendors 0.3.98 · brief `docs/directors/S8-vehicle-drone-mods-brief.md`**
 
 A **kiosk** is a named stall on the Scene: Mama’s Bar, an ARG lobby desk, a street vendor. It is a Ghostwire Summons Actor (`kind: kiosk`), not a Tile.
 
@@ -11,7 +12,7 @@ A **kiosk** is a named stall on the Scene: Mama’s Bar, an ARG lobby desk, a st
 
 ## Place
 
-1. Token controls › **cash register**. Pick a **kiosk type** (or Empty shelf) and an optional name. Blank name uses the type default (Street Food Kiosk, Armor Locker, …). You can rename after.
+1. Token controls › **cash register**. Pick a **kiosk type** (or Empty shelf) and an optional name. Blank name uses the type default (Street Food Kiosk, Armor Locker, Chop Shop, …). You can rename after.
 2. Or drag **Street Vendor (Kiosk)** from Ghostwire Summons & Machines › Kiosks, then **Restock from preset** on the Director shop.
 3. Set **Range (squares)** — default **2**. Adjacent is 1.
 4. Stock is pre-filled from catalog UUIDs when you pick a type. You can still drop Gear / Chrome / Matrix / Mods / Vehicles / Foci, or paste Item UUIDs. Optional ¥ override per row (blank = catalog price).
@@ -32,9 +33,26 @@ Players see the token name. They do not need the combat sheet.
 | **Decks** | Deck Vendor | Cyberdecks in Ghostwire Matrix › Decks (Cat 4A, `matrix.role === "deck"`) |
 | **Programs** | Software Stall | Buyable deck software: Cat **4B** persistent suites **and** Cat **4C** attack payloads on one shelf (v1). Autosofts and Hacker class Program abilities stay off this stall |
 | **Ammo** | Ammo Counter | Gear › General › Ammunition magazines / one-shot specialty rounds (Standard Rounds, AP, Gel, grenades, smoke). **Not** machine Ammo Bin mods |
+| **Mods** | Chop Shop | **All** mod SKUs in Ghostwire Mods: vehicle/drone §5F kits (armor ladder, weaponry ladder, and the stacking "other" menu) **plus** the weapon, armor, and gadget mod families. Matches on `flags.mod`, so anything new under `src/packs/mods/**` auto-stocks |
 | Empty shelf | Street Vendor | Nothing — stock by hand |
 
-New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones. New crewed vehicles (`flags.vehicle` and not `drone`) join Vehicles. New Matrix decks (`role: deck`) join Decks. New `programs/` suites and `payloads/` chips join Programs. New `general/ammunition` SKUs join Ammo.
+New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones. New crewed vehicles (`flags.vehicle` and not `drone`) join Vehicles. New Matrix decks (`role: deck`) join Decks. New `programs/` suites and `payloads/` chips join Programs. New `general/ammunition` SKUs join Ammo. New mod SKUs anywhere in the Mods pack join **Mods**.
+
+### The three machine vendors (S8, 0.3.98)
+
+Drop these three and a crew can buy a frame, a fleet, and everything that bolts onto both:
+
+| Vendor | Type to pick | Sells |
+|---|---|---|
+| **Drone Vendor** | Drones | All **40** drone chassis, E1 clunkers through E4 apex frames |
+| **Vehicle Lot** | Vehicles | All **46** buyable crewed platforms — ground, air, water, space. Plot hulls (Nox’s Trash Freighter) stay off the lot even though the SKU now carries a ¥2,800 replacement price |
+| **Chop Shop** | Mods | All **47** mod SKUs — 24 vehicle/drone §5F kits plus the weapon / armor / gadget families |
+
+All three are the same placeable Actor: **Token controls › cash register → pick the type**. The preset id is stamped on the Actor (`flags.draw-steel-ghostwire.preset`), so **Restock from preset** on an open kiosk re-pulls the current catalog after a module update — no listing UUID is ever hand-edited. Verify with `node tools/s8-machines-smoke.mjs`.
+
+**Fabricate, not just buy.** Every chassis and machine-mod card prints its **Fabricate (§Craft Project)** line — goal (150 / 300 / 450 / 600 by Echelon), prerequisites, roll characteristics, and yield — and the Item carries those in `system.project`, so a hero can start it as a stock Draw Steel crafting Project out of a Lifestyle project slot. Installing the finished part is still its own §Craft Project.
+
+**Art gap (open).** The eleven S8 chassis ship with core Foundry placeholder icons. Drop `‹dsid›.webp` plates into `_incoming-art/` and run `node tools/apply-machine-token-art.mjs --from _incoming-art` to swap them in: `dock-tug`, `trauma-barge`, `lane-bus`, `gale-runner`, `ash-crawler`, `black-ledger`, `longshore`, `static-crow`, `kiln-beetle`, `second-face`, `tide-wraith` (plus the long-standing `bulldog` gap).
 
 **Restock from preset** on an open kiosk **replaces** the current list. Infinite stock still (B118).
 

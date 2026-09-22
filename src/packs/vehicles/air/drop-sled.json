@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a55,500 in chassis salvage, drive stock, and rotor and thrust stock; a military-grade bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Drop-Sled chassis \u00b7 a single machine, unmodded."
       },
-      "goal": null
+      "goal": 450
     }
   },
   "effects": [],

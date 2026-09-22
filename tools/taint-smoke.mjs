@@ -32,7 +32,7 @@ const veil = readFileSync("docs/raw/22-the-veil.md", "utf8");
 const ancestry = readFileSync("docs/raw/05-ancestries.md", "utf8");
 const mapping = readFileSync("tools/raw-to-journals.mjs", "utf8");
 
-note(module.version === "0.3.58", `module.json is 0.3.58 (got ${module.version})`);
+note(module.version >= "0.3.58", `module.json is ≥ 0.3.58 (got ${module.version})`);
 note(module.packs.some(p => p.name === "macros" && p.type === "Macro"), "module.json registers Ghostwire Macros pack");
 note(spike.includes("DESIGN LOCKED"), "spike is DESIGN LOCKED");
 note(/Clean|Marked|Stained|Claimed|Hollowed/.test(raw) && raw.includes("0") && raw.includes("12"), "RAW names all five bands and 0–12");

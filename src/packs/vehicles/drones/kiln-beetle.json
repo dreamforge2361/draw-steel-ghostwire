@@ -1,0 +1,66 @@
+{
+  "_id": "gwKilnBeetleDrn0",
+  "_key": "!items!gwKilnBeetleDrn0",
+  "name": "GHOSTWIRE.Vehicles.Items.KilnBeetle.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/creature-tank-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.KilnBeetle.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "kiln-beetle",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a55,750 in chassis salvage, drive stock, and frame, leg stock, and a link head; a military-grade bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Kiln-Beetle chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 11500,
+        "modSlots": 4,
+        "tags": [
+          "Repair",
+          "Support",
+          "Armor",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle",
+          "drone"
+        ],
+        "domain": "Ground (drone)",
+        "scale": "Light",
+        "drone": true
+      }
+    }
+  }
+}

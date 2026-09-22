@@ -1,0 +1,68 @@
+{
+  "_id": "gwModLaneSkirt00",
+  "_key": "!items!gwModLaneSkirt00",
+  "name": "GHOSTWIRE.Mods.Items.LaneSkirt.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.LaneSkirt.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "lane-skirt",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a5350 in skirt fabric, vane stock, and lane-legal reflector strip; a lift bay or a flat piece of deck",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Lane Skirt \u00b7 installs on one vehicle or drone (1 mod slot)."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "aQqOJpCpotlt5MEY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 700,
+        "modSlots": 0,
+        "tags": [
+          "Hover"
+        ],
+        "host": [
+          "vehicle",
+          "drone"
+        ],
+        "hosts": [
+          "vehicle",
+          "drone"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

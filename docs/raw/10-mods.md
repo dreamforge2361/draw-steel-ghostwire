@@ -246,20 +246,45 @@ Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repa
 | Turret Ring / Combat Turret / powered traverse mount | Military | 9,000 | Powered turret for a medium vehicle weapon (scale-appropriate); fired with Gunnery; wide firing arc. | Mount, Weaponry |
 | Heavy Hardpoint / Integrated Battery / heavy weapons package | Prototype | 24,000 | Heavy integrated gun package (scale-appropriate); fired with Gunnery. | Mount, Weaponry |
 
-#### Other
+#### Other (armor and weaponry are ladders; everything else is a menu)
 
-| Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
-|---|---|---|---|---|
-| Tune Kit / Handling Package / suspension-&-control upgrade | Restricted | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |
-| Sensor Pod / Recon Suite / multi-spectral sensor array | Restricted | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |
-| Ghost Coat / Stealth Skin / low-observable coating | Military | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |
-| Runflats / Self-Seal Kit / autonomous-repair weave | Restricted | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |
-| Rigger Cocoon / Control Interface / Jump-In coupling | Military | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |
-| Ammo Bin / Rearm System / autonomous munitions feed | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
+Armor and weaponry are **one at a time**. The rows below are not — install as many as the frame has slots for.
 
-**Foundry apply vs Director table calls.** Armor kits **do** raise the Deployed machine’s Stamina (Integrity) in Foundry. Weaponry kits **do** flag a live Gunnery hardpoint on that Actor (`installedKits.weaponry`); firing is still Gunnery / Rigged Fire / a gunner station at the table. Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, and Ammo Bin are **flagged and shown as Active Effects** on the machine, but Foundry does **not** auto-add those edges, banes, Jump-In cleanliness, or reload math to Power Rolls — the Director applies the catalog line when the roll or scene calls for it.
+| Name *(slang / corp / sci)* | Echelon | Avail feel | ¥ | Effect | Tags |
+|---|---|---|---|---|---|
+| Burner Plates / Swap Registry / throwaway registration set | 1 | Street | 500 | Swap plates and a bought registry entry. Sheds **one scene** of tail, tag, or lane-camera heat on this machine, then the entry is burned and the plates are trash. | Wired, Consumable-ish |
+| Lane Skirt / Limiter Tune / street-deck skirt-and-vane package | 1 | Street | 700 | Edge on Piloting or Rigging in the stacked limiter lanes and tight street-deck traffic. Does **not** raise the altitude cap. | Hover |
+| Spool Rig / Recovery Winch / powered cable-and-cradle hoist | 1 | Professional | 900 | Powered winch and cradle: lift a body, a crate, or a wrecked drone without landing or leaving cover. Edge on hauling and extraction. | Cargo |
+| Drop Harness / Rapid-Egress Rack / fast-rope and cradle rack | 2 | Restricted | 1,800 | Passengers deploy while the machine is still moving; it never has to set down. | Insertion |
+| Runflats / Self-Seal Kit / autonomous-repair weave | 2 | Restricted | 2,000 | Resists Crippled (blown tires, punctures); slowly self-repairs minor Integrity between scenes. | — |
+| Signal Mule / Relay Mast / link-extension repeater mast | 2 | Restricted | 2,200 | Carries the crew’s Remote and Companion links further and holds them through local jam. | Wired |
+| Ammo Bin / Rearm System / autonomous munitions feed | 2 | Restricted | 2,500 | Extends a mounted weapon's sustained fire; faster Wrench field-rearm. Feeds any E1–E4 Weaponry kit on the same machine. | Ammo |
+| Tune Kit / Handling Package / suspension-&-control upgrade | 2 | Restricted | 2,500 | Improves Handling (edge on Piloting/Rigging & evasive driving). | — |
+| Sensor Pod / Recon Suite / multi-spectral sensor array | 2 | Restricted | 3,000 | Edge on detection/target-lock; pierces smoke/dark. | Wired |
+| Ghost Rein / Dampened Coupling / biofeedback-buffered control loom | 2 | Restricted | 3,400 | Softens Jump-In biofeedback on this machine. **Does not grant Jump-In** — that stays Wrench-only, and the frame still has to be Jump-In Capable or wear a Rigger Cocoon. | Wired |
+| Deep Shell / Environment Envelope / pressure-and-vacuum sealing kit | 3 | Military | 5,500 | Seals the machine for flood, depth, ash storm, or vacuum. | Sealed |
+| Spoof Cowl / Transponder Forge / licensed-traffic identity skin | 3 | Military | 6,500 | Forged licensed-traffic ID: edge to pass AEQ lane checks, corp skyway gates, and dock manifests **on paper**. Bane the moment anyone looks with their eyes. | Wired |
+| Rigger Cocoon / Control Interface / Jump-In coupling | 3 | Military | 7,000 | Upgrades a vehicle to accept a Jumped-In pilot cleanly. | Wired |
+| Ghost Coat / Stealth Skin / low-observable coating | 3 | Military | 9,000 | Bane on enemy attempts to detect, sensor-lock, or trace the machine. | Wired |
+| Kick Drive / Overboost Coil / burst-discharge drive stage | 4 | Prototype | 17,000 | Once per scene, step the machine’s Speed band up for a round (Slow → Standard → Fast → Extreme). Runs hot. | — |
+| Storm Lattice / Fleet Sensor Mesh / networked multi-spectral lattice | 4 | Prototype | 19,000 | Apex sensor mesh: pierces smoke, dark, and spoof, and shares its target lock with the crew and the fleet. | Wired |
+
+**Foundry apply vs Director table calls.** Armor kits **do** raise the Deployed machine’s Stamina (Integrity) in Foundry. Weaponry kits **do** flag a live Gunnery hardpoint on that Actor (`installedKits.weaponry`); firing is still Gunnery / Rigged Fire / a gunner station at the table. Every row in the **Other** table is **flagged and shown as an Active Effect** on the machine, but Foundry does **not** auto-add those edges, banes, Jump-In cleanliness, heat-shedding, speed steps, or reload math to Power Rolls — the Director applies the catalog line when the roll or scene calls for it.
 
 Availability feel follows the Gear master’s legacy tier on each row. Do not invent a second price.
+
+#### Project Goal — fabricating a mod or a chassis
+
+Building a published mod (or a whole chassis) from parts is the **stock Draw Steel crafting Project**, not a Ghostwire tracker. Every catalog card prints its own goal, prerequisites, and yield; the ladder is the system's trinket ladder by Echelon:
+
+| Echelon | Project Goal | Roll | Prerequisites (on the card) |
+|---|---|---|---|
+| **1** — Street / Professional | **150** | Repair → Might or Reason · Electronics → Reason or Intuition | roughly half the ¥ in parts, plus a bay |
+| **2** — Restricted | **300** | as above | as above |
+| **3** — Military | **450** | as above | as above, plus a military-grade bay |
+| **4** — Prototype | **600** | as above | as above, plus a Director-gated parts list |
+
+Project points come from **Lifestyle project slots** (`26`) like any other Project. A finished fabricate Project yields the part; **installing** it is still the separate §Craft Project in the table procedure above. Buying the mod outright skips the fabricate Project entirely — it never skips the install.
 
 ### Programs and payloads (pointer)
 

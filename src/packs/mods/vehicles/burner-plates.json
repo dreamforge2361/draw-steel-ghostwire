@@ -1,0 +1,69 @@
+{
+  "_id": "gwModBurnerPlt00",
+  "_key": "!items!gwModBurnerPlt00",
+  "name": "GHOSTWIRE.Mods.Items.BurnerPlates.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/metal-pistons.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.BurnerPlates.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "burner-plates",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a5250 in blank plates and one bought registry slot from a Flats fixer; a deck and a quiet hour",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Burner Plates \u00b7 installs on one vehicle or drone (1 mod slot)."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "aQqOJpCpotlt5MEY",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 500,
+        "modSlots": 0,
+        "tags": [
+          "Wired",
+          "Consumable-ish"
+        ],
+        "host": [
+          "vehicle",
+          "drone"
+        ],
+        "hosts": [
+          "vehicle",
+          "drone"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}

@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a512,000 in battery mount, a recoil stage, and an integrated feed; a prototype bench",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Heavy Hardpoint \u00b7 installs on one vehicle or drone (1 mod slot)."
       },
-      "goal": null
+      "goal": 600
     }
   },
   "effects": [],

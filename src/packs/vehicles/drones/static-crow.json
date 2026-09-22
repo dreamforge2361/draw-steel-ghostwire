@@ -1,0 +1,66 @@
+{
+  "_id": "gwStaticCrowDrn0",
+  "_key": "!items!gwStaticCrowDrn0",
+  "name": "GHOSTWIRE.Vehicles.Items.StaticCrow.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-tech-thrust-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.StaticCrow.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "static-crow",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a56,000 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; a military-grade bay",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Static Crow chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "HSPY6qKApuVToghV",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 12000,
+        "modSlots": 4,
+        "tags": [
+          "EW",
+          "Mark",
+          "Jump-In-Capable",
+          "Wired"
+        ],
+        "modFamily": [
+          "vehicle",
+          "drone"
+        ],
+        "domain": "Air (drone)",
+        "scale": "Light",
+        "drone": true
+      }
+    }
+  }
+}

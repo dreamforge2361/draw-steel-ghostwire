@@ -1,0 +1,66 @@
+{
+  "_id": "gwBlackLedgerItm",
+  "_key": "!items!gwBlackLedgerItm",
+  "name": "GHOSTWIRE.Vehicles.Items.BlackLedger.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.BlackLedger.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "black-ledger",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a532,500 in chassis salvage, drive stock, and rotor and thrust stock; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Black Ledger chassis \u00b7 a single machine, unmodded."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "a7XeWmGqPhQSlDcK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 65000,
+        "modSlots": 5,
+        "tags": [
+          "Command",
+          "EW",
+          "Heavy",
+          "VTOL"
+        ],
+        "modFamily": [
+          "vehicle"
+        ],
+        "domain": "Air",
+        "scale": "Heavy",
+        "drone": false,
+        "speedBand": "fast"
+      }
+    }
+  }
+}

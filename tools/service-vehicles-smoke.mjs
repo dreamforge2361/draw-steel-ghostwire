@@ -206,9 +206,9 @@ const raw = readFileSync("docs/raw/23-machines.md", "utf8");
 const vehCh = readFileSync("docs/rulebook/16-vehicles.md", "utf8");
 const gear = readFileSync("docs/masters/GHOSTWIRE_GEAR_MASTER.md", "utf8");
 const director = readFileSync("docs/manuscript/03-directors/27-running-ossian-reach.md", "utf8");
-ok(/Inventory \(39 crewed platforms\)/.test(raw) && /Seal Cruiser/.test(raw) && /Crash Angel/.test(raw), "RAW 23 inventory is 39 and names the four");
+ok(/Inventory \(46 crewed platforms\)/.test(raw) && /Seal Cruiser/.test(raw) && /Crash Angel/.test(raw), "RAW 23 inventory is 46 and names the four");
 ok(/Aequitas Mandate \(AEQ\)/.test(raw) && /Lazarus Extract \(LAZ\)/.test(raw), "RAW 23 names AEQ and LAZ");
-ok(/Inventory \(39 crewed platforms\)/.test(vehCh) && /Writ VTOL/.test(vehCh) && /White Door/.test(vehCh), "16-vehicles inventory is 39");
+ok(/Inventory \(46 crewed platforms\)/.test(vehCh) && /Writ VTOL/.test(vehCh) && /White Door/.test(vehCh), "16-vehicles inventory is 46");
 ok(/Seal Cruiser/.test(gear) && /Crash Angel/.test(gear) && /White Door/.test(gear) && /Writ VTOL/.test(gear), "gear master lists all four");
 ok(/Seal Cruiser/.test(director) && /Crash Angel/.test(director) && /AEQ/.test(director) && /LAZ/.test(director), "director pointer names AEQ/LAZ SKUs");
 
