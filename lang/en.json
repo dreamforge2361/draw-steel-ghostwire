@@ -8017,6 +8017,20 @@
         "Used": "<p><strong>{actor}</strong> takes <strong>{item}</strong>.</p>"
       }
     },
+    "Ritual": {
+      "Menu": {
+        "MarkLearned": "Mark learned",
+        "MarkUnlearned": "Mark unlearned"
+      },
+      "Learned": "{actor} has learned {item}.",
+      "Unlearned": "{item} is no longer learned.",
+      "SheetLearned": "Learned — may be sealed with the Formula present.",
+      "SheetNotLearned": "Not learned — study it until the Director marks it learned.",
+      "Chat": {
+        "Learned": "<p><strong>{actor}</strong> has learned <strong>{item}</strong>. The Formula must still be present at sealing.</p>",
+        "Unlearned": "<p><strong>{item}</strong> is no longer learned — the study does not hold.</p>"
+      }
+    },
     "PayloadUse": {
       "AbilityName": "Run {payload}",
       "AbilityDescription": "<p>Fire the {payload} magazine compiled on your deck or Wired Native body-interface.</p>{effect}<p><em>This ability exists while the payload is loaded as a magazine (Load magazine (Craft) on the chip). Each successful run spends one fire; at 0 the magazine is spent and its host slot frees. A loose chip in your gear cannot be run.</em></p>",
