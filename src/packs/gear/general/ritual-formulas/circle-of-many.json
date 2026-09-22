@@ -1,0 +1,69 @@
+{
+  "_id": "gwRitCircleMany0",
+  "_key": "!items!gwRitCircleMany0",
+  "name": "GHOSTWIRE.Gear.Items.RitualCircleOfMany.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualCircleOfMany.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-circle-of-many",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥200 / ¥800 / ¥3,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Other",
+        "magnitude": 2,
+        "magnitudeMax": 4,
+        "magnitudeText": "2–4",
+        "leaders": "General",
+        "form": "ritual scroll (instructions) or a lodge tome chapter",
+        "componentsTotal": [
+          "¥200",
+          "¥800",
+          "¥3,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "_id": "gwRitUncrookPath",
+  "_key": "!items!gwRitUncrookPath",
+  "name": "GHOSTWIRE.Gear.Items.RitualUncrookThePath.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualUncrookThePath.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Street Priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-uncrook-the-path",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 38000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,200 / ¥4,500 / ¥13,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Unmaking",
+        "magnitude": 3,
+        "magnitudeMax": 5,
+        "magnitudeText": "3–5",
+        "leaders": "Street Priest only",
+        "form": "inquisitorial tome (bulky) or deniable datachip",
+        "componentsTotal": [
+          "¥1,200",
+          "¥4,500",
+          "¥13,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "gwRitAnchorRune0",
+  "_key": "!items!gwRitAnchorRune0",
+  "name": "GHOSTWIRE.Gear.Items.RitualAnchorRune.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualAnchorRune.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-anchor-rune",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 26000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Artifice",
+        "magnitude": 3,
+        "magnitudeMax": 3,
+        "magnitudeText": "3",
+        "leaders": "Elementalist only",
+        "form": "ritual scroll with trigger diagrams",
+        "componentsTotal": [
+          "¥1,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

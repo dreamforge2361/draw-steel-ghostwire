@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitDetoxDomain",
+  "_key": "!items!gwRitDetoxDomain",
+  "name": "GHOSTWIRE.Gear.Items.RitualDetoxDomain.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualDetoxDomain.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-detox-domain",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 22000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥5,000 / ¥14,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Unmaking",
+        "magnitude": 4,
+        "magnitudeMax": 5,
+        "magnitudeText": "4–5",
+        "leaders": "General",
+        "form": "hazmat grimoire or sealed datachip",
+        "componentsTotal": [
+          "¥5,000",
+          "¥14,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

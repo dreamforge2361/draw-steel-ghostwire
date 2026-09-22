@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitHiveCrack00",
+  "_key": "!items!gwRitHiveCrack00",
+  "name": "GHOSTWIRE.Gear.Items.RitualHiveCrack.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualHiveCrack.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Elementalist",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-hive-crack",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 30000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥5,000 / ¥14,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Unmaking",
+        "magnitude": 4,
+        "magnitudeMax": 5,
+        "magnitudeText": "4–5",
+        "leaders": "Elementalist only",
+        "form": "Restricted grimoire, or a datachip scavenged from a dead exterminator-cabal",
+        "componentsTotal": [
+          "¥5,000",
+          "¥14,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

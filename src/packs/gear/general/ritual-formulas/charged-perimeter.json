@@ -1,0 +1,67 @@
+{
+  "_id": "gwRitChargedPeri",
+  "_key": "!items!gwRitChargedPeri",
+  "name": "GHOSTWIRE.Gear.Items.RitualChargedPerimeter.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualChargedPerimeter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-charged-perimeter",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 14000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,400)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Ward",
+        "magnitude": 3,
+        "magnitudeMax": 3,
+        "magnitudeText": "3",
+        "leaders": "General",
+        "form": "tome section or engineer's datachip",
+        "componentsTotal": [
+          "¥1,400"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

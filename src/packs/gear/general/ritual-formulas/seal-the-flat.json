@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitSealFlat000",
+  "_key": "!items!gwRitSealFlat000",
+  "name": "GHOSTWIRE.Gear.Items.RitualSealTheFlat.Name",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualSealTheFlat.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-seal-the-flat",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 2000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥180 / ¥150)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Ward",
+        "magnitude": 2,
+        "magnitudeMax": 2,
+        "magnitudeText": "2",
+        "leaders": "General",
+        "form": "ritual scroll (Veil path) · datachip (Wire-chalk skin)",
+        "componentsTotal": [
+          "¥180",
+          "¥150"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

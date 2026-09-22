@@ -1,0 +1,67 @@
+{
+  "_id": "gwRitBridgeThinP",
+  "_key": "!items!gwRitBridgeThinP",
+  "name": "GHOSTWIRE.Gear.Items.RitualBridgeThinPath.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-chip-data.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualBridgeThinPath.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Technomancer (Wire-rites)",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-bridge-thin-path",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 45000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥1,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Threshold",
+        "magnitude": 3,
+        "magnitudeMax": 3,
+        "magnitudeText": "3",
+        "leaders": "Technomancer only",
+        "form": "datachip with topology maps",
+        "componentsTotal": [
+          "¥1,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

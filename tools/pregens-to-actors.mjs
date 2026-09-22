@@ -264,6 +264,13 @@ for (const [i, hero] of ROSTER.entries()) {
     if (!existsSync(p)) { warn.push(`loadout item ${p} missing`); return null; }
     return read(p);
   }).filter(Boolean);
+  // 0.3.88: Ritual Formula Items the caster has already studied (flagged learned).
+  for (const p of loadout.rituals ?? []) {
+    if (!existsSync(p)) { warn.push(`loadout ritual ${p} missing`); continue; }
+    const formula = read(p);
+    formula.flags[MODULE_ID].ritual.learned = true;
+    kitItems.push(formula);
+  }
 
   const core = cls.system.characteristics?.core ?? [];
   const ordered = [...core, ...ALL_CHARS.filter(c => !core.includes(c))];

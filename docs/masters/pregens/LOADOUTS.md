@@ -71,3 +71,7 @@ Every hero's Body Integrity is legal: the most spent is Barak's 9 of 20.
    none, was given a light Armored Jacket per the spike's "Light / none" direction — flag if you want her bare too.
 6. Above-Professional picks are limited to Wren's Longshot rifle and Barak's credstick and Chatterbox. Everything else is Street or Professional.
 7. **Kessic’s Whiteout magazine is hand-compiled.** `loadouts.json` lists the SKU; `kessic-draye.json` then sets quantity **2**, `mod.installedOn` the Street Deck, and `mod.active` (B105). A full `pregens-to-actors.mjs` run would drop that compile unless re-applied.
+
+## Ritual Formulas (0.3.88)
+
+The three Veil/Wire casters — Kaes (Elementalist), Vessa (Street Priest), Sabbat (Technomancer) — start with the **Ward the Room** Formula Item already studied (`rituals` in `loadouts.json`; the embed carries `flags.draw-steel-ghostwire.ritual.learned: true`). It is the teaching Working in The Veil (`docs/raw/22-the-veil.md`, Ritual Workings).

@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitLodgeKeysto",
+  "_key": "!items!gwRitLodgeKeysto",
+  "name": "GHOSTWIRE.Gear.Items.RitualLodgeKeystone.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualLodgeKeystone.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — General",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-lodge-keystone",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 9000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥400 / ¥1,600)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Ward",
+        "magnitude": 2,
+        "magnitudeMax": 3,
+        "magnitudeText": "2–3",
+        "leaders": "General",
+        "form": "tome (lodge prospectus), or engraved plaque with datachip backup",
+        "componentsTotal": [
+          "¥400",
+          "¥1,600"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitTrueHandleC",
+  "_key": "!items!gwRitTrueHandleC",
+  "name": "GHOSTWIRE.Gear.Items.RitualTrueHandleCollar.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualTrueHandleCollar.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Technomancer (Wire-rites)",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-true-handle-collar",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 43000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥6,000 / ¥17,000)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Calling",
+        "magnitude": 4,
+        "magnitudeMax": 5,
+        "magnitudeText": "4–5",
+        "leaders": "Technomancer only",
+        "form": "air-gapped tome-and-datachip hybrid (bulky case)",
+        "componentsTotal": [
+          "¥6,000",
+          "¥17,000"
+        ],
+        "learned": false
+      }
+    }
+  }
+}

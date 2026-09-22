@@ -1,0 +1,68 @@
+{
+  "_id": "gwRitPactCharter",
+  "_key": "!items!gwRitPactCharter",
+  "name": "GHOSTWIRE.Gear.Items.RitualPactCharter.Name",
+  "type": "treasure",
+  "img": "icons/sundries/books/book-embossed-clasp-gold-brown.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.RitualPactCharter.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core — The Veil",
+      "page": "Ritual Workings — Street Priest",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ritual-pact-charter",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearRitualForm",
+  "sort": 32000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": null,
+        "modSlots": 0,
+        "tags": [
+          "RitualFormula"
+        ],
+        "priceText": "Not sold — found (Components ¥350 / ¥1,200)"
+      },
+      "ritual": {
+        "formula": true,
+        "family": "Other",
+        "magnitude": 2,
+        "magnitudeMax": 3,
+        "magnitudeText": "2–3",
+        "leaders": "Street Priest only",
+        "form": "bound charter volume (bulky), with a terms list",
+        "componentsTotal": [
+          "¥350",
+          "¥1,200"
+        ],
+        "learned": false
+      }
+    }
+  }
+}
