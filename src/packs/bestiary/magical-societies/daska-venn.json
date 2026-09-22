@@ -1,0 +1,548 @@
+{
+  "folder": "gwBestiaryMagSoc",
+  "name": "Daska Venn",
+  "type": "npc",
+  "_id": "gwBesDaskaVenn00",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/bestiary/magical-societies/daska-venn.webp",
+  "system": {
+    "stamina": {
+      "value": 80,
+      "max": 80,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 2
+      },
+      "agility": {
+        "value": 1
+      },
+      "reason": {
+        "value": 2
+      },
+      "intuition": {
+        "value": 1
+      },
+      "presence": {
+        "value": 1
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 2,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>A full-conversion Cyborg in a patched weather shell over a sealed frame, a dull mineral sample case at her hip and the gantry lamp catching the seams. She coordinates departures and returns at <strong>the Cinder Yard</strong>: who goes out, by which route, who comes back, and what comes back with them.</p><p>She cannot cast. Arcane Severance applies to her exactly as written, and she has no interest in being anyone's exception. She runs logistics, extraction and the wash-down line, and she keeps the living members of the team alive.</p>",
+      "director": "<p><strong>Role:</strong> Field Coordinator of the Ash Survey and the crew's contact at the Cinder Yard. Her authority comes from field experience and an independently preserved archive, not from permission to override civic or corporate law.</p><p><strong>Drive:</strong> Protection — everyone who went out comes back, and the casualty list stays as written. <strong>Pitfall:</strong> Greed. Offer her money to release an original sample early, shave a passenger count, or let a sponsor edit a report, and the negotiation is over.</p><p><strong>What she can do:</strong> reconnaissance support, field equipment, a planned extraction, heavy labour negotiated through the Rust Saints, and a straight answer about what a site did to the last team. <strong>What she cannot do:</strong> cast anything, cleanse contamination, guarantee a site is clear, or declare a property safe. “A clean report is not a clean site.”</p><p><strong>Pressure right now:</strong> a sponsor wants an original sample back before the comparison test finishes, and the Dispatch Loft holds evidence that the Survey's best emergency corridor crosses a site that was never fully cleared. Closing it protects future travellers and strands the people who currently depend on it.</p><p><strong>Posture:</strong> she fights only to break contact. She takes the hit, clears the lane, and gets the meat out; the yard is not an armoury and she does not hold ground for its own sake.</p><p><strong>If pressed:</strong> “Dirty lane is left. Do not improvise.” / “I will write what happened. You can decide what to do about it.” / “You are paying for the test, not for the answer.”</p><p><strong>Director tags:</strong> Nature, Search, Repair, Drive, Endurance. Wire Kit — Linked; route work, telemetry and the Dispatch Loft board.</p><p><strong>Canon:</strong> @UUID[Compendium.draw-steel-ghostwire.lore.JournalEntry.J0DWDaXDVehDMZHc]{The Ash Survey}. Rust Saints cooperation is negotiated per job; no standing contract with Verdant, Kestrel or Lazarus is established.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 1
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "25-opposition",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 5,
+      "patience": 7,
+      "motivations": [
+        "protection"
+      ],
+      "pitfalls": [
+        "greed"
+      ],
+      "impression": 2
+    },
+    "monster": {
+      "freeStrike": 4,
+      "keywords": [
+        "humanoid",
+        "cyborg"
+      ],
+      "level": 2,
+      "role": "defender",
+      "organization": "elite"
+    },
+    "ev": 16,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Daska Venn",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/bestiary/magical-societies/daska-venn.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Arcane Severance",
+      "type": "feature",
+      "_id": "gwBesDaskaVeIt01",
+      "img": "icons/magic/control/silhouette-aura-energy.webp",
+      "system": {
+        "description": {
+          "value": "<p>Daska is a full-conversion Cyborg. She <strong>cannot cast</strong> — no Essence, no Conviction, no Resonance, no ritual role beyond hands and logistics — and membership in the Ash Survey does not waive that or any other casting restriction.</p><p>She is not evidence of a magical exception for Cyborgs. She is evidence that the Survey cares about expertise, courage and responsibility in people who will never wield magic at all.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "arcane-severance-daska-venn",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesDaskaVenn00.gwBesDaskaVeIt01"
+    },
+    {
+      "name": "Sealed Frame",
+      "type": "feature",
+      "_id": "gwBesDaskaVeIt02",
+      "img": "icons/commodities/tech/robotics-frame-steel-blue.webp",
+      "system": {
+        "description": {
+          "value": "<p>Daska's shell is rated for the Dirty Return. She ignores the need to breathe, eat, drink or sleep, and airborne contaminants, smoke and foul atmosphere do not force her out of a space that would drive a living team back.</p><p>This buys her time in a bad room. It does not make the room safe, does not detect what is in it, and grants no resistance to anything the sheet does not already list.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "sealed-frame",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesDaskaVenn00.gwBesDaskaVeIt02"
+    },
+    {
+      "name": "The Dirty Return",
+      "type": "feature",
+      "_id": "gwBesDaskaVeIt03",
+      "img": "icons/commodities/tech/console-steel.webp",
+      "system": {
+        "description": {
+          "value": "<p>Exposed teams and equipment come back down a separate lane: check-in, isolation, wash-down, then documented transfer into the Sample Lock. Daska runs it personally.</p><p>She has an edge on tests to plan an extraction route, to bring an exposed crew back inside without spreading what they picked up, or to notice that a returning carrier's passenger count does not match the one she dispatched. The procedure is ordinary mechanical segregation and trained handling — there is no cleansing arch, and nothing here cures contamination.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "the-dirty-return",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesDaskaVenn00.gwBesDaskaVeIt03"
+    },
+    {
+      "name": "A Clean Report Is Not a Clean Site",
+      "type": "feature",
+      "_id": "gwBesDaskaVeIt04",
+      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Director-facing.</strong> Daska preserves the original findings and the original samples, and she will not let a sponsor rewrite the casualties. Any offer that asks her to soften a report, release an original sample before its comparison test, or lose a name from a list ends the negotiation at once — treat it as her Greed pitfall, triggered.</p><p>She will trade almost anything else: routes, gear, labour, her own time in a corridor she barely escaped.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "a-clean-report-is-not-a-clean-site",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 30,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesDaskaVenn00.gwBesDaskaVeIt04"
+    },
+    {
+      "name": "Winch Line",
+      "type": "ability",
+      "_id": "gwBesDaskaVeIt05",
+      "img": "icons/sundries/survival/rope-wrapped-loops-grey.webp",
+      "system": {
+        "type": "main",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "25-opposition",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "winch-line",
+        "story": "The gantry hook goes out, bites, and the drum takes up the slack. It was built to pull carriers.",
+        "keywords": [
+          "ranged",
+          "strike",
+          "weapon"
+        ],
+        "category": "signature",
+        "resource": null,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "5",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "creatureObject",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "might"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "gwBesDaskaVeDmg0": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "gwBesDaskaVeDmg0",
+              "damage": {
+                "tier1": {
+                  "value": "5",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "8",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "11",
+                  "types": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              },
+              "sort": 0
+            },
+            "gwBesDaskaVeFrc0": {
+              "name": "pull",
+              "img": null,
+              "type": "forced",
+              "_id": "gwBesDaskaVeFrc0",
+              "forced": {
+                "tier1": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "1",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  }
+                },
+                "tier2": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "2",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  }
+                },
+                "tier3": {
+                  "movement": [
+                    "pull"
+                  ],
+                  "display": "{{forced}}",
+                  "distance": "3",
+                  "properties": [],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  }
+                }
+              },
+              "sort": 0
+            }
+          }
+        },
+        "effects": {
+          "after00000000000": {
+            "_id": "after00000000000",
+            "type": "base",
+            "description": "<p>Daska can pull the target toward her instead of dragging it clear — she uses this to get people <em>out</em> far more often than to put anyone down.</p>",
+            "name": "",
+            "img": null,
+            "sort": 0,
+            "before": false
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 40,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwBesDaskaVenn00.gwBesDaskaVeIt05"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "gwBesDaskaVeIt06",
+      "_key": "!actors.items!gwBesDaskaVenn00.gwBesDaskaVeIt06"
+    }
+  ],
+  "effects": [],
+  "sort": 300,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "bestiary": {
+        "region": "magical-societies",
+        "society": "ash-survey",
+        "slug": "daska-venn",
+        "handbookName": "Daska Venn",
+        "station": "Field Coordinator — the Cinder Yard",
+        "people": "Cyborg (full conversion)",
+        "sex": "F",
+        "casting": false,
+        "loreJournal": "Compendium.draw-steel-ghostwire.lore.JournalEntry.J0DWDaXDVehDMZHc",
+        "wired": true
+      }
+    }
+  },
+  "_key": "!actors!gwBesDaskaVenn00"
+}
