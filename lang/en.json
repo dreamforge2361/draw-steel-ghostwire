@@ -8032,6 +8032,122 @@
         "Unlearned": "<p><strong>{item}</strong> is no longer learned — the study does not hold.</p>"
       }
     },
+    "RitualWorking": {
+      "Title": "Ritual Working",
+      "Keybinding": "Open the Ritual Working panel",
+      "Menu": {
+        "Start": "Start Ritual Working"
+      },
+      "Formula": "Ritual Formula",
+      "Unknown": "this Formula",
+      "PickNone": "— pick a Formula —",
+      "PickHint": "Pick a Ritual Formula. Whoever owns it leads the Working: every Project roll, the sealing Power Roll and the components ¥ land on that hero.",
+      "NoFormulas": "No hero you own carries a Ritual Formula. Formulas are found, never sold.",
+      "Leader": "Ritual Leader",
+      "Learned": "Learned",
+      "NotLearned": "Not learned",
+      "Magnitude": "Magnitude",
+      "Start": "Start Working",
+      "Restart": "Work it again",
+      "StartHint": "Starting a Working opens the five stages. Study may run before the Formula is learned; sealing may not.",
+      "Progress": "Progress {points} / {goal}",
+      "RollProject": "Roll Project",
+      "OpenProject": "Open Project",
+      "OpenFormula": "Open Formula",
+      "ProjectCreated": "{name} added to the Ritual Leader's Projects.",
+      "NoProject": "That stage has no Project yet.",
+      "NoFormulaItem": "The Formula Item is no longer on the Ritual Leader — sealing needs it present.",
+      "NoPrice": "This card prints no ¥ total — settle the components at the table.",
+      "NoPermission": "You do not own the Ritual Leader.",
+      "Insufficient": "{actor} cannot cover {price} — only {wealth} on hand.",
+      "CannotAfford": "Not enough ¥ on the Ritual Leader for this components total.",
+      "ComponentsPath": "Components path",
+      "ComponentsLadderOption": "Magnitude {magnitude} — {price}",
+      "ComponentsPathOption": "Path {index} — {price}",
+      "ComponentsDue": "Components total {price} — comes off the Ritual Leader's ¥ in one hit.",
+      "ComponentsPaid": "Components bought — {amount} paid.",
+      "PayComponents": "Pay {price}",
+      "SanctumMode": "Sanctum",
+      "ClaimSanctum": "Claim the space",
+      "SealCharacteristic": "Sealing characteristic",
+      "SealRitual": "Seal Ritual",
+      "Complete": "Payoff lands",
+      "Abandon": "Abandon Working",
+      "AbandonHint": "Drop the Working for {formula}? Projects already on the sheet stay — delete them yourself if you want them gone.",
+      "Reset": "Reset (Director)",
+      "TraditionWarning": "This card is {leaders} — {actor} is not of that tradition. The Director may still allow it.",
+      "Firewall": "A Working never spends Essence, Conviction or Resonance.",
+      "Stage": {
+        "study": {
+          "Name": "1. Study",
+          "Hint": "A Project at goal Magnitude × 2. Logic or Instinct; Rituals, Occult, Religion or Matrix Theory gives its usual benefit. Study finishes when the study time has passed and the goal is met — then the Formula is marked learned.",
+          "Create": "Create Study Project"
+        },
+        "components": {
+          "Name": "2. Components",
+          "Hint": "Not a Project. Pay the card's ¥ total off the Ritual Leader in one hit, and run any fetch beats at the table. Components are consumed on the first sealing roll."
+        },
+        "sanctum": {
+          "Name": "3. Sanctum",
+          "Hint": "A working space rated at least the Working's Magnitude. A claimed room is free but caps at rating 3; a built sanctum is a Project at goal Magnitude × 3.",
+          "Create": "Create Sanctum Project"
+        },
+        "seal": {
+          "Name": "4. Sealing",
+          "Hint": "One collaborative Power Roll on the Ritual Leader's tradition characteristic. The Formula must be present and learned, the components bought, the sanctum ready."
+        },
+        "payoff": {
+          "Name": "5. Payoff",
+          "Hint": "The effect lands. Temporary sanctums are spent; built sanctums remain with upkeep. Watch the card's duration and Counter line."
+        }
+      },
+      "Study": {
+        "GoalMet": "Study goal met — mark the Formula learned when the Director says the study time has passed.",
+        "Complete": "Study complete",
+        "CompleteHint": "{actor} has met the study goal for {formula}. Mark it learned?"
+      },
+      "Sanctum": {
+        "temporary": "Temporary — claim the space (rating 3 max)",
+        "built": "Built — a Project, goal Magnitude × 3",
+        "ForcedBuilt": "Magnitude {magnitude} is past the temporary cap of 3 — this Working needs a built sanctum."
+      },
+      "Seal": {
+        "RollTitle": "Seal {formula}",
+        "Blocked": "Sealing waits on the Formula being learned, the components bought, and the sanctum ready.",
+        "Assistants": "Assistants grant edges — add them in the roll dialog. Nobody spends a heroic resource to help.",
+        "Hung": "Low result: a hung ritual, a partial payoff, or hostile attention — the Director holds it.",
+        "Outcome": {
+          "low": "Low — partial payoff, a hung ritual, or hostile attention. Price resolves as printed.",
+          "middle": "Middle — the payoff lands. Price resolves as printed.",
+          "high": "High — the payoff lands clean. Blunt one step of Price."
+        }
+      },
+      "Payoff": {
+        "low": "The Working closes ragged. The Director says what landed and what is still hanging.",
+        "middle": "The Working lands as the card prints it.",
+        "high": "The Working lands clean, and one step of Price is blunted.",
+        "Upkeep": "Temporary sanctums are spent. Built sanctums stay, with Lifestyle upkeep. Read the card's Duration and Counter."
+      },
+      "Leak": {
+        "district": "Veil pressure ≈ {magnitude}: district leak — local casters, thin-place sensitives, nearby Overlay.",
+        "hive": "Veil pressure ≈ {magnitude}: hive whisper — sensitive casters across the Reach may notice.",
+        "hivewide": "Veil pressure ≈ {magnitude}: hive-wide — Concord, corps and rival ritualists; faction clocks move."
+      },
+      "Project": {
+        "StudyName": "Study: {formula}",
+        "SanctumName": "Sanctum: {formula}",
+        "StudyHint": "Study Project for {formula} — goal Magnitude {magnitude} × 2. Roll Logic or Instinct; Rituals, Occult, Religion or Matrix Theory gives its usual benefit.",
+        "SanctumHint": "Built sanctum for {formula} — goal Magnitude {magnitude} × 3, rating {magnitude}. Roll Logic, Instinct or Persona; construction trades may assist. Needs up-front ¥ and Lifestyle upkeep."
+      },
+      "Chat": {
+        "Started": "<p><strong>{leader}</strong> begins a Ritual Working: <strong>{formula}</strong> at Magnitude {magnitude}.</p>",
+        "Paid": "<p><strong>{leader}</strong> buys the components for <strong>{formula}</strong> — <strong>{price}</strong> off the crew fund.</p>",
+        "Sanctum": "<p><strong>{leader}</strong> has a sanctum ready for <strong>{formula}</strong> at rating {magnitude}.</p>",
+        "Sealed": "<p><strong>{leader}</strong> seals <strong>{formula}</strong> (Magnitude {magnitude}, {characteristic}).</p><p><strong>{outcome}</strong></p>",
+        "Attention": "Spirit-attention ticks about {magnitude} — the Director takes it as Malice.",
+        "Payoff": "<p>The Working <strong>{formula}</strong> closes for <strong>{leader}</strong>. {outcome}</p>"
+      }
+    },
     "PayloadUse": {
       "AbilityName": "Run {payload}",
       "AbilityDescription": "<p>Fire the {payload} magazine compiled on your deck or Wired Native body-interface.</p>{effect}<p><em>This ability exists while the payload is loaded as a magazine (Load magazine (Craft) on the chip). Each successful run spends one fire; at 0 the magazine is spent and its host slot frees. A loose chip in your gear cannot be run.</em></p>",

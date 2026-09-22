@@ -1,0 +1,223 @@
+<div class="gw-rw">
+  <section class="gw-rw-pick">
+    <label>
+      {{localize "GHOSTWIRE.RitualWorking.Formula"}}
+      <select data-formula-pick>
+        <option value="">{{localize "GHOSTWIRE.RitualWorking.PickNone"}}</option>
+        {{#each formulas}}
+        <option value="{{uuid}}" {{#if selected}}selected{{/if}}>{{actor}} — {{name}}{{#unless learned}} ({{localize "GHOSTWIRE.RitualWorking.NotLearned"}}){{/unless}}</option>
+        {{/each}}
+      </select>
+    </label>
+    {{#unless hasFormulas}}<p class="gw-rw-dim">{{noFormulasHint}}</p>{{/unless}}
+  </section>
+
+  {{#if pickHint}}
+  <p class="gw-rw-dim">{{pickHint}}</p>
+  {{else}}
+
+  <header class="gw-rw-head">
+    {{#if formulaImg}}<img class="gw-rw-img" src="{{formulaImg}}" alt="">{{/if}}
+    <div class="gw-rw-identity">
+      <h3 class="gw-rw-name">{{formulaName}}</h3>
+      {{#if subtitle}}<p class="gw-rw-dim">{{subtitle}}</p>{{/if}}
+      <p class="gw-rw-meta">
+        <span class="gw-rw-chip">{{localize "GHOSTWIRE.RitualWorking.Leader"}}: {{leaderName}}</span>
+        <span class="gw-rw-chip">{{wealthLabel}}</span>
+        <span class="gw-rw-chip {{#if learned}}ok{{else}}warn{{/if}}">
+          {{#if learned}}{{localize "GHOSTWIRE.RitualWorking.Learned"}}{{else}}{{localize "GHOSTWIRE.RitualWorking.NotLearned"}}{{/if}}
+        </span>
+      </p>
+      {{#if traditionWarning}}<p class="gw-rw-warn">{{traditionWarning}}</p>{{/if}}
+    </div>
+  </header>
+
+  {{#unless hasWorking}}
+  <section class="gw-rw-start">
+    <p class="gw-rw-dim">{{startHint}}</p>
+    <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="startWorking" {{disabled (not canStart)}}>
+      <i class="fa-solid fa-play"></i> {{localize "GHOSTWIRE.RitualWorking.Start"}}
+    </button>
+  </section>
+  {{else}}
+
+  <section class="gw-rw-dials">
+    <label>
+      {{localize "GHOSTWIRE.RitualWorking.Magnitude"}}
+      <select data-magnitude {{disabled magnitudeLocked}}>
+        {{#each magnitudeOptions}}
+        <option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>
+        {{/each}}
+      </select>
+    </label>
+    <span class="gw-rw-dim">{{leak}}</span>
+  </section>
+
+  <ol class="gw-rw-stages">
+    {{#each stages}}
+    <li class="gw-rw-stage {{key}} {{#if done}}done{{/if}} {{#if current}}current{{/if}}">
+      <div class="gw-rw-stage-head">
+        <span class="gw-rw-step">{{step}}</span>
+        <span class="gw-rw-stage-name">{{label}}</span>
+        <span class="gw-rw-stage-mark">{{#if done}}<i class="fa-solid fa-circle-check"></i>{{else}}<i class="fa-regular fa-circle"></i>{{/if}}</span>
+      </div>
+      <p class="gw-rw-dim">{{hint}}</p>
+
+      {{#if (eq key "study")}}
+      <div class="gw-rw-stage-body">
+        <p class="gw-rw-progress">{{../study.progress}}</p>
+        <div class="gw-rw-actions">
+          {{#unless ../study.hasProject}}
+          <button type="button" class="gw-rw-btn" data-action="createProject" data-stage="study" {{disabled (not ../canAct)}}>
+            <i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.RitualWorking.Stage.study.Create"}}
+          </button>
+          {{else}}
+          <button type="button" class="gw-rw-btn" data-action="rollProject" data-stage="study" {{disabled (not ../canAct)}}>
+            <i class="fa-solid fa-dice-d10"></i> {{localize "GHOSTWIRE.RitualWorking.RollProject"}}
+          </button>
+          <button type="button" class="gw-rw-btn" data-action="openDoc" data-uuid="{{../study.projectUuid}}">
+            <i class="fa-solid fa-up-right-from-square"></i> {{localize "GHOSTWIRE.RitualWorking.OpenProject"}}
+          </button>
+          {{/unless}}
+          {{#unless done}}
+          <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="markLearned" {{disabled (not ../canAct)}}>
+            <i class="fa-solid fa-book-sparkles"></i> {{localize "GHOSTWIRE.Ritual.Menu.MarkLearned"}}
+          </button>
+          {{/unless}}
+        </div>
+        {{#if ../study.goalMet}}{{#unless done}}<p class="gw-rw-ok">{{localize "GHOSTWIRE.RitualWorking.Study.GoalMet"}}</p>{{/unless}}{{/if}}
+      </div>
+      {{/if}}
+
+      {{#if (eq key "components")}}
+      <div class="gw-rw-stage-body">
+        {{#if ../components.showChoices}}
+        <label>
+          {{localize "GHOSTWIRE.RitualWorking.ComponentsPath"}}
+          <select data-components-index {{disabled ../components.paid}}>
+            {{#each ../components.choices}}
+            <option value="{{index}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+            {{/each}}
+          </select>
+        </label>
+        {{/if}}
+        {{#if done}}
+        <p class="gw-rw-ok">{{localize "GHOSTWIRE.RitualWorking.ComponentsPaid" amount=../components.paidLabel}}</p>
+        {{else}}
+        <p class="gw-rw-progress">{{localize "GHOSTWIRE.RitualWorking.ComponentsDue" price=../components.priceLabel}}</p>
+        <div class="gw-rw-actions">
+          <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="payComponents" {{disabled (not (and ../components.hasPrice ../canAct))}}>
+            <i class="fa-solid fa-yen-sign"></i> {{localize "GHOSTWIRE.RitualWorking.PayComponents" price=../components.priceLabel}}
+          </button>
+        </div>
+        {{#unless ../components.canAfford}}<p class="gw-rw-warn">{{localize "GHOSTWIRE.RitualWorking.CannotAfford"}}</p>{{/unless}}
+        {{/if}}
+        {{#if ../isGM}}
+        <button type="button" class="gw-rw-btn gw-rw-btn-ghost" data-action="resetStage" data-stage="components">{{localize "GHOSTWIRE.RitualWorking.Reset"}}</button>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if (eq key "sanctum")}}
+      <div class="gw-rw-stage-body">
+        <label>
+          {{localize "GHOSTWIRE.RitualWorking.SanctumMode"}}
+          <select data-sanctum-mode {{disabled done}}>
+            {{#each ../sanctum.modes}}
+            <option value="{{value}}" {{#if selected}}selected{{/if}} {{disabled locked}}>{{label}}</option>
+            {{/each}}
+          </select>
+        </label>
+        {{#if ../sanctum.forcedHint}}<p class="gw-rw-warn">{{../sanctum.forcedHint}}</p>{{/if}}
+        {{#if ../sanctum.built}}
+        <p class="gw-rw-progress">{{../sanctum.progress}}</p>
+        <div class="gw-rw-actions">
+          {{#unless ../sanctum.hasProject}}
+          <button type="button" class="gw-rw-btn" data-action="createProject" data-stage="sanctum" {{disabled (not ../canAct)}}>
+            <i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.RitualWorking.Stage.sanctum.Create"}}
+          </button>
+          {{else}}
+          <button type="button" class="gw-rw-btn" data-action="rollProject" data-stage="sanctum" {{disabled (not ../canAct)}}>
+            <i class="fa-solid fa-dice-d10"></i> {{localize "GHOSTWIRE.RitualWorking.RollProject"}}
+          </button>
+          <button type="button" class="gw-rw-btn" data-action="openDoc" data-uuid="{{../sanctum.projectUuid}}">
+            <i class="fa-solid fa-up-right-from-square"></i> {{localize "GHOSTWIRE.RitualWorking.OpenProject"}}
+          </button>
+          {{/unless}}
+        </div>
+        {{else}}
+        <div class="gw-rw-actions">
+          <button type="button" class="gw-rw-btn" data-action="claimSanctum" {{disabled (or done (not ../canAct))}}>
+            <i class="fa-solid fa-circle-nodes"></i> {{localize "GHOSTWIRE.RitualWorking.ClaimSanctum"}}
+          </button>
+        </div>
+        {{/if}}
+        {{#if ../isGM}}
+        <button type="button" class="gw-rw-btn gw-rw-btn-ghost" data-action="resetStage" data-stage="sanctum">{{localize "GHOSTWIRE.RitualWorking.Reset"}}</button>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if (eq key "seal")}}
+      <div class="gw-rw-stage-body">
+        <label>
+          {{localize "GHOSTWIRE.RitualWorking.SealCharacteristic"}}
+          <select data-seal-characteristic {{disabled done}}>
+            {{#each ../seal.characteristics}}
+            <option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>
+            {{/each}}
+          </select>
+        </label>
+        <p class="gw-rw-dim">{{../seal.assistHint}}</p>
+        {{#if done}}
+        <p class="gw-rw-ok">{{../seal.outcome}}</p>
+        {{#if ../seal.hung}}<p class="gw-rw-warn">{{localize "GHOSTWIRE.RitualWorking.Seal.Hung"}}</p>{{/if}}
+        {{else}}
+        <div class="gw-rw-actions">
+          <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="seal" {{disabled (not (and ../seal.ready ../canAct))}}>
+            <i class="fa-solid fa-fire-flame-curved"></i> {{localize "GHOSTWIRE.RitualWorking.SealRitual"}}
+          </button>
+        </div>
+        {{#if ../seal.blockedHint}}<p class="gw-rw-warn">{{../seal.blockedHint}}</p>{{/if}}
+        {{/if}}
+        {{#if ../isGM}}
+        <button type="button" class="gw-rw-btn gw-rw-btn-ghost" data-action="resetStage" data-stage="seal">{{localize "GHOSTWIRE.RitualWorking.Reset"}}</button>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      {{#if (eq key "payoff")}}
+      <div class="gw-rw-stage-body">
+        {{#if ../payoff.outcome}}<p class="gw-rw-progress">{{../payoff.outcome}}</p>{{/if}}
+        <p class="gw-rw-dim">{{../payoff.upkeep}}</p>
+        <div class="gw-rw-actions">
+          <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="completeWorking" {{disabled (not (and ../payoff.ready (and ../canAct (not done))))}}>
+            <i class="fa-solid fa-flag-checkered"></i> {{localize "GHOSTWIRE.RitualWorking.Complete"}}
+          </button>
+          {{#if ../isGM}}
+          <button type="button" class="gw-rw-btn gw-rw-btn-ghost" data-action="resetStage" data-stage="payoff">{{localize "GHOSTWIRE.RitualWorking.Reset"}}</button>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
+    </li>
+    {{/each}}
+  </ol>
+
+  <footer class="gw-rw-foot">
+    <span class="gw-rw-dim">{{firewall}}</span>
+    <button type="button" class="gw-rw-btn" data-action="openDoc" data-uuid="{{working.formulaUuid}}">
+      <i class="fa-solid fa-scroll"></i> {{localize "GHOSTWIRE.RitualWorking.OpenFormula"}}
+    </button>
+    {{#if canRestart}}
+    <button type="button" class="gw-rw-btn gw-rw-btn-hot" data-action="startWorking">
+      <i class="fa-solid fa-rotate-right"></i> {{localize "GHOSTWIRE.RitualWorking.Restart"}}
+    </button>
+    {{/if}}
+    <button type="button" class="gw-rw-btn gw-rw-btn-danger" data-action="abandonWorking" {{disabled (not canAct)}}>
+      <i class="fa-solid fa-ban"></i> {{localize "GHOSTWIRE.RitualWorking.Abandon"}}
+    </button>
+  </footer>
+  {{/unless}}
+  {{/if}}
+</div>

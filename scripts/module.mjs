@@ -36,6 +36,7 @@ import { registerTaint } from "./taint.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
 import { registerRituals } from "./rituals.mjs";
+import { registerRitualWorking } from "./ritual-working.mjs";
 import { registerTokenVision } from "./token-vision.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -119,6 +120,7 @@ Hooks.once("init", () => {
   registerKiosk();
   registerConsumableUse();
   registerRituals();
+  registerRitualWorking();
   registerTokenVision();
 });
 
