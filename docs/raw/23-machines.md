@@ -254,6 +254,21 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 > **In Foundry**
 > Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**, Item **Star-Chopper**, Item **Bulldog**, Item **Seal Cruiser**, Item **Writ VTOL**, Item **White Door**, Item **Crash Angel**). Placeable tokens: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**), Star-Chopper (**1×3**), Bulldog (**2×4**, placeholder art), Seal Cruiser (**2×3**), Writ VTOL (**2×4**), White Door (**2×4**), Crash Angel (**3×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
 
+### Public transit (Flats)
+
+**Status:** WORKING 2026-09-21 · stub SKUs for later Foundry Actors · full chassis math deferred.
+
+World texture for licensed Flats rides. Full prose: Setting Primer **Public Flats transit (WORKING)** (L1). Director Scene 2: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md`.
+
+| Stub SKU | Street | Domain feel | Party-token guidance | Lifestyle / Availability color |
+|---|---|---|---|---|
+| **Grey Cab Services** (`grey-cab-services`) | Autocab hover pod | **Hover** — Ground-domain limiter craft (~25–50 ft); not VTOL | Place one closed-pod token (**2×3** / **2×4**); crew rides as party token; narrate or skim a travel strip | Professional-leaning fare; **quieter**; ARG meter + FER chassis + MER hail ping |
+| **Veinline Civic** (`veinline-civic`) | District tram car | Tram-as-**vehicle** token on elevated / culvert-hung FER rails (not a Spire maglev spine) | Place one long car (**1×4** / **2×5**); party rides the car | **Street / cheaper**; louder; more eyes; civic teal + gunmetal |
+
+**Director:** These are travel fixtures first, chase platforms second. Do not invent sky-car altitudes. Do **not** collide naming with existing Restricted Item **Grey Cab** (`grey-cab` / Ghost Fare) — public brand vs fixer plate.
+
+**Cross-link:** Primer L1 › Vehicles & Transit › Public Flats transit (WORKING). Runs journal (after `tools/build-packs.mjs runs`): **Flats Transit — Grey Cab & Veinline** (`gwFlatsTransit00`).
+
 ### Scale bands (crewed vehicles)
 
 | Scale | Plain meaning | Examples |

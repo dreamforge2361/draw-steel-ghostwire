@@ -1,0 +1,394 @@
+{
+  "folder": "gwDeadheadNtjar0",
+  "name": "Rhen Calder",
+  "type": "npc",
+  "_id": "gwDhRhenCalder00",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/deadhead/rhen-calder-token.webp",
+  "system": {
+    "stamina": {
+      "value": 30,
+      "max": 30,
+      "temporary": 0
+    },
+    "characteristics": {
+      "might": {
+        "value": 0
+      },
+      "agility": {
+        "value": 1
+      },
+      "reason": {
+        "value": 1
+      },
+      "intuition": {
+        "value": 2
+      },
+      "presence": {
+        "value": 3
+      }
+    },
+    "combat": {
+      "save": {
+        "threshold": 6,
+        "bonus": ""
+      },
+      "size": {
+        "value": 1,
+        "letter": "M"
+      },
+      "stability": 0,
+      "turns": 1
+    },
+    "biography": {
+      "value": "<p>An Elvani man in his early forties, tall and narrow, warm bronze skin and sharply tapered ears, close dark hair with one precise silver streak, pale gold glamor eyes. Charcoal raincoat over an ivory collarless suit, black gloves, a restrained ARG-gold pin. He carries a ledger slate and a sealed payment case, and no visible weapon.</p><p>Courteous, distant, ledger-polite. “Fourteen. Heat is yours. Curb or counter. Your clock.”</p>",
+      "director": "<p><strong>Role:</strong> the corp buyer at Nightjar Market — ARG reclaim or a rival flip. Pays <strong>~¥14,000</strong>; Mama is pissed after, and ARG/SAN heat sticks to SINs and pads. Meets at the counter, in a sealed Grey Cab on the south road, or at the west bay.</p><p><strong>Drive:</strong> reclaim or flip the wafer and contain the ARG/SAN story. <strong>Pitfall:</strong> justice — exposing the Switchboard as dirty; the crew flashing chamber intel as leverage.</p><p><strong>Posture:</strong> defensive withdrawal. He logs SINs and calls security; he never draws a heavy weapon. <strong>Retreat:</strong> the first solid hit on him, or the crew drawing firearms in a public aisle → sealed Grey Cab or west bay extract, with ARG/SAN heat later.</p><p><strong>Secret:</strong> rival flip or ARG reclaim is his call — the crew may never learn which.</p><p><strong>Director tags:</strong> Corporate, Negotiation, Persuasion, Insight, Perception. Wire Kit — stays Linked for meter and hail chrome; Overlay is rare. No offensive Wire kit. Will not pay Signal-weird.</p><p><strong>Purchased traits (fiction):</strong> High Senses, Graceful Retreat.</p>",
+      "languages": []
+    },
+    "movement": {
+      "value": 5,
+      "types": [
+        "walk"
+      ],
+      "hover": false,
+      "disengage": 2
+    },
+    "damage": {
+      "immunities": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      },
+      "weaknesses": {
+        "all": 0,
+        "acid": 0,
+        "cold": 0,
+        "corruption": 0,
+        "fire": 0,
+        "holy": 0,
+        "lightning": 0,
+        "poison": 0,
+        "psychic": 0,
+        "sonic": 0
+      }
+    },
+    "source": {
+      "book": "Ghostwire Deadhead (Gold Line)",
+      "page": "Session Chapters",
+      "license": "Draw Steel Creator License"
+    },
+    "negotiation": {
+      "interest": 4,
+      "patience": 5,
+      "motivations": [
+        "authority"
+      ],
+      "pitfalls": [
+        "justice"
+      ],
+      "impression": 2
+    },
+    "monster": {
+      "freeStrike": 2,
+      "keywords": [
+        "humanoid",
+        "human"
+      ],
+      "level": 1,
+      "role": "controller",
+      "organization": "platoon"
+    },
+    "ev": 6,
+    "statuses": {
+      "immunities": []
+    }
+  },
+  "prototypeToken": {
+    "name": "Rhen Calder",
+    "displayName": 20,
+    "actorLink": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/draw-steel-ghostwire/assets/tokens/deadhead/rhen-calder-token.webp",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": true,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": 0,
+    "displayBars": 20,
+    "bar1": {
+      "attribute": "stamina"
+    },
+    "bar2": {
+      "attribute": "hero.resources"
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": {},
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null,
+    "flags": {},
+    "randomImg": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "depth": 1
+  },
+  "items": [
+    {
+      "name": "Corp Glamor",
+      "type": "feature",
+      "_id": "gwDhRhenCaldIt01",
+      "img": "icons/magic/perception/eye-ringed-green.webp",
+      "system": {
+        "description": {
+          "value": "<p>Rhen has an edge on Presence tests that use Persuasion. His appearance engages, but he never appears as anyone but himself.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "corp-glamor",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhRhenCalder00.gwDhRhenCaldIt01"
+    },
+    {
+      "name": "Ledger Terms",
+      "type": "feature",
+      "_id": "gwDhRhenCaldIt02",
+      "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Maneuver · social.</strong> Rhen makes a Presence test (Negotiation) against the crew's speaker.</p><ul><li><strong>≤11:</strong> he cools.</li><li><strong>12–16:</strong> +¥1,000, or a cleaner drop.</li><li><strong>17+:</strong> +¥2,000.</li></ul><p>He will not pay Signal-weird at any result.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "ledger-terms",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 10,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhRhenCalder00.gwDhRhenCaldIt02"
+    },
+    {
+      "name": "Graceful Withdrawal",
+      "type": "feature",
+      "_id": "gwDhRhenCaldIt03",
+      "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Triggered.</strong> When Rhen is targeted by a strike or the aisle goes loud, he can shift up to 2 squares, then move toward the cab or the bay. He has an edge on his next Stealth or Deception test this round to break line of sight.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "graceful-withdrawal",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 20,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhRhenCalder00.gwDhRhenCaldIt03"
+    },
+    {
+      "name": "Call Security",
+      "type": "feature",
+      "_id": "gwDhRhenCaldIt04",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>Maneuver · once per scene · noncombat.</strong> Rhen marks the crew for ARG/SAN follow-up. The Director may feed this into the Nightjar heat table. It never spawns the Gold Line roster at Nightjar, and it is not an attack.</p>",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Deadhead (Gold Line)",
+          "page": "Session Chapters",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "call-security",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 30,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "_key": "!actors.items!gwDhRhenCalder00.gwDhRhenCaldIt04"
+    },
+    {
+      "name": "GHOSTWIRE.Matrix.Items.WireKit.ShortName",
+      "type": "feature",
+      "img": "icons/commodities/tech/cable-end.webp",
+      "system": {
+        "description": {
+          "value": "GHOSTWIRE.Matrix.Items.WireKit.Description",
+          "director": ""
+        },
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "21-the-wire",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "wire-kit-matrix-verbs",
+        "advancements": {},
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "draw-steel-ghostwire": {
+          "kind": "wire-kit",
+          "dsid": "wire-kit-matrix-verbs",
+          "wired": {
+            "connectInterface": true
+          }
+        }
+      },
+      "_id": "gwDhRhenCaldIt05",
+      "_key": "!actors.items!gwDhRhenCalder00.gwDhRhenCaldIt05"
+    }
+  ],
+  "effects": [],
+  "sort": 200000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "deadhead": {
+        "run": "deadhead",
+        "scene": "nightjar-market",
+        "role": "Buyer — Corp",
+        "slug": "rhen-calder-token",
+        "proposedId": "gwDhRhenCalder0",
+        "people": "Elvani",
+        "sex": "M",
+        "wired": true
+      }
+    }
+  },
+  "_key": "!actors!gwDhRhenCalder00"
+}

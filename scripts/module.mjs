@@ -31,6 +31,7 @@ import { registerCasterChrome } from "./caster-chrome.mjs";
 import { registerMagicErosion } from "./magic-erosion.mjs";
 import { registerVoidmark } from "./voidmark.mjs";
 import { registerGoldLineScene } from "./gold-line-scene.mjs";
+import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
@@ -113,6 +114,7 @@ Hooks.once("init", () => {
   registerTaint();
   registerVoidmark();
   registerGoldLineScene();
+  registerNightjarMarketScene();
   registerKiosk();
   registerConsumableUse();
   registerTokenVision();

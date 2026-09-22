@@ -1,7 +1,11 @@
 # Deadhead on the Gold Line
 
+> **Session chapters (playtest table pack):** [`DEADHEAD-SESSION-CHAPTERS.md`](./DEADHEAD-SESSION-CHAPTERS.md) — official Ghostwire session package (Michael lock 2026-09-21). Foundry Scene order: **Mama’s Club → (Flats Transit, narrate) → Rack & Rest (Cube Hotel) → (Freighter Meet / Call Nox, narrate) → Gold Line → Nightjar Market**. Stamped as the **Deadhead — Session Chapters** Journal (`gwDhSessionChap0`) in **Ghostwire Runs → Deadhead** (**0.3.87**). Deadhead is the TRUE first adventure; QF-01 paused on backlog.
+> **Transit cross-link:** Scene 1.15 reuses [`../../campaigns/QF-01-TRANSIT-STUB.md`](../../campaigns/QF-01-TRANSIT-STUB.md) and Runs journal `gwFlatsTransit00` for the licensed Mama’s alley → Rack & Rest hop.
+
+
 **Ghostwire playtest run · ~4 hours · Director journal SoR**  
-**Status:** Design-locked 2026-09-19 · **cargo remap LOCKED 2026-09-20** (Michael: RUN WITH) · folded **0.3.40**  
+**Status:** Design-locked 2026-09-19 · **cargo remap LOCKED 2026-09-20** (Michael: RUN WITH) · folded **0.3.40** · **opposition + wafer + handoff re-locked 2026-09-21** to Session Chapters (5 security + 1 worker drone; wafer = second-to-last; handoff = Nightjar Market) · folded **0.3.87**  
 **Consist:** ARG **cargo maglev** — **not** a passenger train. Sidecar: [`GOLD-LINE-CARGO-REMAP.md`](./GOLD-LINE-CARGO-REMAP.md)  
 **Foundry home:** Compendium **Ghostwire Runs** → folder **Deadhead**; world Scene inject **Scenes → Deadhead → Gold Line**  
 **Plate lock:** Gold Line plates shipped **0.3.36** (CyberMaps Hammerhead stitch; no generated train). Walls/lights = Michael manual — do not touch.
@@ -100,16 +104,17 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 
 ## Cast & kit
 
-- **Patron:** Mama Cassavir (Mama’s Club brief / return)
+- **Patron:** Mama Cassavir (Mama’s Club brief). The prize never goes back to her club — the Mama path hands off to **Iona Vale** at **Nightjar Market**.
 - **Owning corp / uniforms:** **ARG Argent Exchange** (reusable ARG Security + Lieutenant look)
 - **Drone contact:** **Nox** (Flats wrangler) — crew **borrows** garbage-truck-sized trash freighter; scratch it = buy it; lose it = explain to Mama
-- **Opposition:** Freight Enforcers **L1–L2** (cams + 2 ARG Corporate Enforcers); Security **L3** — 4 ARG Security Officers + 1 ARG Response Lieutenant; Courier **R1** sealed until Alert
-- **Wire:** Track 1 cams/doors **R2**; Track 2 capsule lock **R1** + Watchdog ICE; Trace host **R3** cab
+- **Opposition (LOCK — 5 security + 1 worker drone):** **2** ARG Corporate Enforcers (freight Enforcers) in **L1** aft freight; **1** worker drone (Medium, Integrity/Stamina **24**) in the **L2** passage; **1** ARG Security Officer at the **mid console booth**; **1** ARG guard (a second ARG Security Officer token) with the capsule in the **second-to-last** car; **1** ARG Response Lieutenant in the **R3** front cab. Black-container aisle = **0** native meat (spill only on Alert).
+- **Wire:** Track 1 cams / doors / lights on every chamber (mid booth = local overrides, not the host); Track 2 capsule lock + Watchdog ICE in the **second-to-last** car; Trace host **R3** cab
+- **Buyers (Nightjar Market):** **Iona Vale** (Mama, ¥8,000) · **Rhen Calder** (corp, ~¥14,000) · **Nim** (Signal / Hands Off, ~¥2,000 + weird)
 - **Twist:** none for v1 (clean heist)
 
 ### Consist (Director truth)
 
-**Cargo maglev** — not a passenger train. Hull **20 ft** wide, **5 ft** furniture. Play surface is **dual Hammerhead chambers L1–R3** (aft freight · freight connector · security · coupler · courier · Wire transfer · cab). Capsule is **R1** — crew usually boards **L1** and works **upstream**. **Players learn the exact chamber only on a great success in discovery**; otherwise they **search**.
+**Cargo maglev** — not a passenger train. Hull **20 ft** wide, **5 ft** furniture. Play surface is the **dual Hammerhead plate**, read as six zones aft → nose: **L1 aft freight → L2 passage → mid console booth → black-container aisle → second-to-last (courier) → R3 front cab**. The capsule rides in the **second-to-last** car — crew usually boards **L1** and works **upstream**. **Players learn the exact chamber only on a great success in discovery**; otherwise they **search**.
 
 **Foundry plate (0.3.36):** dual CyberMaps Hammerhead stitch, nose-to-tail (nose right). Cargo remap sidecar [`GOLD-LINE-CARGO-REMAP.md`](./GOLD-LINE-CARGO-REMAP.md) is LOCKED / folded here.
 
@@ -117,17 +122,17 @@ Onboard ICE tries to send an **off-train** “something’s amiss” packet.
 
 Left → right = aft → forward (nose right). Crew boards **aft** and works **upstream** (rightward).
 
-| Plate zone (L→R) | Hammerhead part | Deadhead beat |
-|---|---|---|
-| **L1** | Left aft cargo | **AFT FREIGHT** — board here (drone sling); freight Enforcers |
-| **L2** | Left connector | **FREIGHT** — crate clutter / freight Enforcers |
-| **L3** | Left forward + cab | **SECURITY** — 4 ARG Security Officers + ARG Response Lieutenant nest |
-| *(coupler)* | Synthetic join | Non-walkable or Maglock gangway (Director call) |
-| **R1** | Right aft cargo | **COURIER** — sealed capsule + Watchdog ICE |
-| **R2** | Right connector | Transfer / Wire closet (cams/doors node) |
-| **R3** | Right forward + cab | **CAB** — drive end; Trace host |
+| Plate zone (L→R) | Hammerhead part | Deadhead zone | Meat |
+|---|---|---|---|
+| **L1** | Left aft cargo | **AFT FREIGHT** — board here (drone sling) | **2** freight Enforcers (ARG Corporate Enforcer) + cams |
+| **L2** | Left connector | **FREIGHT PASSAGE** — ridged containers, clear lane | **1** worker drone (Medium, Integrity 24) |
+| **L3** | Left forward + cab | **MID CONSOLE BOOTH** — sealed ARG booth (not a drive cab, not the host) | **1** ARG Security Officer |
+| *(coupler)* | Synthetic join | Maglock gangway or non-walkable (Director call) | 0 |
+| **R1** | Right aft cargo | **BLACK-CONTAINER AISLE** | **0** native (spill on Alert) |
+| **R2** | Right connector | **SECOND-TO-LAST — COURIER** (green crates; sealed capsule + wafer; Track 2 + Watchdog ICE) | **1** ARG guard (second Security Officer token) |
+| **R3** | Right forward + cab | **FRONT CAB** — drive end; Trace host | **1** ARG Response Lieutenant |
 
-If you need a clean sixth room, split R2 as its own Wire chase between courier and cab. Mid-consist double-cab (L3) is the Hammerhead artifact — narrate sealed engineering / ARG booth rather than a second drive cab.
+Six zones, no seventh car. Mid-consist double-cab (L3) is the Hammerhead artifact — narrate a sealed ARG booth rather than a second drive cab. Players call the capsule car “second-to-last”; the Hammerhead label is Director bookkeeping only.
 
 **Shipped assets** (`assets/maps/battlemaps/gold-line/`):
 
@@ -150,29 +155,29 @@ World inject: `scripts/gold-line-scene.mjs` → **Scenes → Deadhead → Gold L
 
 ---
 
-## Mama’s Deadhead Brief (mission wafer) — Item
+## Mama’s Deadhead Job Stick (mission wafer) — Item
 
-**Name:** Mama’s Deadhead Brief (Gold Line)  
-**Type:** Data wafer / gear (portable)  
+**Name:** Mama’s Deadhead Job Stick (Gold Line)  
+**Type:** Briefing chip / gear (portable)  
 **¥:** Negligible as loot (~¥50); worthless to fence (Mama-marked)
 
-**On the wafer (baseline):** job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev without naming the capsule chamber, vague meat/Wire/clock, bail = same bird, return for choice.
+**On the stick (baseline):** job, pay, wipe-if-stop-while-nested, ARG, Nox borrow, Gold Line cargo maglev without naming the capsule chamber, vague meat/Wire/clock, bail = same bird, return for choice.
 
-**Not on the wafer:** exact chamber; R1 Watchdog / R2 cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.
+**Not on the stick:** exact chamber; Watchdog / cams numbers; +1 Trace / 2 rounds wafer-out; full faction doors (corp/Signal) until discovery D.
 
 ---
 
 ## Discovery (Beat 0)
 
-Start from Mama’s wafer at the **crew hangout**, then chase:
+Start from Mama’s job stick at **Rack & Rest / Cube Hotel commons** (full Foundry Scene — see Session Chapters 1.2), then chase:
 
 | Code | Intel |
 |---|---|
-| A | Roster & Alert triggers (Enforcers / Security / Lt) |
-| B | Capsule Faraday + Track 2 **R1** Watchdog; Track 1 cams/doors **R2** |
+| A | Roster & Alert triggers (5 security + 1 worker drone; Lt advances on Hunting) |
+| B | Capsule Faraday + Track 2 Watchdog; Track 1 cams/doors; Trace host **R3** |
 | C | Full Trace ladder + wafer-out tick + wipe/stop rules |
-| D | Faction doors (Mama / corp sell / Signal) as real choices |
-| ★ | **Great success:** exact **chamber** with the capsule |
+| D | Faction doors (Mama / corp sell / Signal) as real choices — Mama path meets **Iona Vale** at **Nightjar Market**, not the club |
+| ★ | **Great success:** exact **chamber** with the capsule (**second-to-last** car) |
 
 Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the live train yet), canyon watch, bribe/badge. Fail = go in blind, not blocked.
 
@@ -184,12 +189,12 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 
 | Block | Time | Beat |
 |---|---|---|
-| 0 | 45–60m | Hangout + Mama wafer + discovery + call Nox |
+| 0 | 55–75m | Mama’s → Flats transit → **Rack & Rest (Cube Hotel) commons** discovery/prep + patron interrupt → call Nox |
 | 1 | 30–40m | Canyon drone sling board (garbage-truck freighter) |
-| 2 | 40–50m | Freight crawl → L3 security / search |
+| 2 | 40–50m | Freight crawl → mid booth → search upstream |
 | 3 | 30–40m | Wire + capsule crack; call-home if Trace ~7–8 |
 | 4 | 25–35m | Wafer-out clock + roof Recall bail |
-| 5 | 20–30m | Return + moral choice |
+| 5 | 20–30m | **Nightjar Market** exchange + moral choice (separate Scene — not a Gold Line Beat) |
 
 ### Beat rule callouts (short)
 
@@ -197,21 +202,24 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 **2 Crawl:** Stealth vs violence through aft freight (L1–L2); cams; ARG firearms; don’t emergency-stop while nested. Search if no ★ chamber intel.  
 **3 Wire:** Overlay/Jacked In; Console nodes; Watchdog; open case starts post-extract clock; wipe if stop while nested.  
 **4 Bail:** +1 Trace / 2 rounds out of case (respect +1/round cap); Recall freighter; be gone before stop + response.  
-**5 Choice:** Mama / corp / Signal; Nox drone condition as fiction string.
+**5 Nightjar:** Mama (Iona) / corp (Rhen) / Signal (Nim) at Nightjar Market; Nox drone condition as fiction string.
 
 ---
 
 ## Foundry build list (pack together under Ghostwire Runs / Deadhead)
 
 - [x] Journal: this run (pages: Overview, Trace ladder, Beats 0–5, Items, Opposition, Foundry checklist) — **0.3.42**
-- [x] Beat 0 hangout Scene — **REMOVED permanently 0.3.55**. No plate, no inject, do not reintroduce. Beat 0 discovery (Mama wafer, intel chase, call Nox) stays as **table procedure without a hangout Scene**. This is **not** the canyon skip.
-- [x] Canyon plate **SKIPPED** — narrate the mid-canyon approach (unchanged; separate from hangout removal)
+- [ ] **Rack & Rest / Cube Hotel Scene** — **LOCKED 2026-09-21** for Deadhead Session chapters. Michael’s world Scene based on CyberMaps Cube Hotel 4K plate (`worlds/ghostwire-v2/scenes/Cube Hotel 4K [doors] - Gridless.mp4`). Commons = planning board; patron interrupt required mid-1.2. ~~Beat 0 hangout Scene REMOVED permanently 0.3.55~~ **struck for Deadhead** — do **not** revive a generic module-injected “crew hangout”; this is specifically **Rack & Rest / Cube Hotel**. Docs lock only; Actors/Items not created this run.
+- [x] Canyon plate **SKIPPED** — narrate the mid-canyon approach (**still stands**; unchanged; separate from the Rack & Rest Scene lock)
 - [x] Journal: Gold Line — Map Notes (plate paths + beat remap) in **Ghostwire Runs → Deadhead**
-- [x] Item: Mama’s Deadhead Brief wafer — **0.3.52** (`Ghostwire Gear → Plot & Run Hooks`)
+- [x] Item: Mama’s Deadhead Job Stick — **0.3.52** (`Ghostwire Gear → Plot & Run Hooks`)
 - [x] Item: ARG courier capsule / live wafer (plothook notes for three buyers) — **0.3.52**
-- [x] Scene: crew hangout — **REMOVED permanently 0.3.55** (do not reintroduce; table procedure only)
-- [ ] Scene: Mama’s Club (reuse)
-- [ ] Scene: canyon approach / drone sling strip
+- [ ] Scene: **Rack & Rest / Cube Hotel** (Michael world Scene; commons planning + patron interrupt) — replaces struck “crew hangout REMOVED 0.3.55” row for Deadhead. Not a generic module hangout inject.
+- [x] Scene: Mama’s Club (reuse — Michael world Scene; do not restamp)
+- [x] Scene: **Nightjar Market** — **0.3.87** create-once world inject **Scenes → Deadhead → Nightjar Market** (plate `assets/maps/battlemaps/nightjar-market/nightjar-market.webp`, 1579×915). Never rewrites an existing Nightjar Scene. Walls/lights/tokens = Michael dress pass; do not invent furniture.
+- [x] Journal: **Deadhead — Session Chapters** — **0.3.87** (`gwDhSessionChap0`, Ghostwire Runs → Deadhead). READ ALOUD visible; Director material in secret blocks.
+- [x] Actors: Rack & Rest Faces (Vesper / Tam / Sera / Vell / Juno) + Nightjar buyers (Iona / Rhen / Nim) — **0.3.87** in **Ghostwire Runs — Deadhead Actors**; tokens `assets/tokens/deadhead/`. Nox portrait on the freighter Actor.
+- [ ] Scene: canyon approach / drone sling strip (**SKIPPED** plate — narrate; still stands)
 - [x] Scene: Gold Line dual-Hammerhead (world inject; interior loop + roofs overhead)
 - [ ] Splash art: garbage-truck freighter + 4 runners over moving train
 - [ ] Tokens on Gold Line Scene: ARG Security Officer, ARG Response Lieutenant (+ ARG Corporate Enforcers). **Bestiary Actor art shipped 0.3.47** (`assets/tokens/bestiary/arg/`). Do not force-rewrite the live Gold Line Scene.
@@ -224,6 +232,18 @@ Methods: Mama back-room, Wire recon (Overlay on a schedule mirror — not the li
 Art locks: flat top-down maps; no people on maps; no baked grid; ARG uniform stylization reusable.
 
 ---
+
+---
+
+## Related — Flats infrastructure (WORKING)
+
+Street-layer licensed rides used elsewhere in Ghostwire (not part of the Gold Line consist):
+
+- **Grey Cab Services** (“Grey Cab”) — autocab hover pods (ARG meter / FER chassis / MER hail ping)
+- **Veinline Civic** (“the Vein”) — Ferrum district tram (civic teal + gunmetal)
+
+Director stub: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md` · Source: `docs/directors/flats-transit-grey-cab-veinline.md` · Runs journal (after build): @UUID[Compendium.draw-steel-ghostwire.runs.JournalEntry.gwFlatsTransit00]{Flats Transit — Grey Cab & Veinline}
+
 
 ## L1 Trace tools note (playtest)
 

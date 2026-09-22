@@ -1,0 +1,36 @@
+{
+  "id": "nightjar-market",
+  "version": 1,
+  "nameKey": "GHOSTWIRE.Scenes.NightjarMarket.Name",
+  "width": 1579,
+  "height": 915,
+  "padding": 0.1,
+  "backgroundColor": "#0a0a0c",
+  "tokenVision": false,
+  "navigation": true,
+  "background": "modules/draw-steel-ghostwire/assets/maps/battlemaps/nightjar-market/nightjar-market.webp",
+  "thumb": "modules/draw-steel-ghostwire/assets/maps/battlemaps/nightjar-market/nightjar-market.webp",
+  "grid": {
+    "type": 1,
+    "size": 63,
+    "distance": 5,
+    "units": "ft",
+    "color": "#d4af37",
+    "alpha": 0.15,
+    "style": "solidLines",
+    "thickness": 1
+  },
+  "initial": {
+    "x": 790,
+    "y": 458,
+    "scale": 0.9
+  },
+  "level": {
+    "_id": "gwNightjarLvl000",
+    "sort": 0,
+    "elevation": {
+      "bottom": 0,
+      "top": 10
+    }
+  }
+}

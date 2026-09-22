@@ -1,7 +1,7 @@
 {
   "version": 1,
   "role": "knowledge",
-  "built": "2026-09-21",
+  "built": "2026-09-22",
   "generator": "tools/build-voidmark-index.mjs",
   "sources": {
     "raw": [
@@ -75,7 +75,7 @@
       "README.md"
     ]
   },
-  "chunkCount": 1425,
+  "chunkCount": 1427,
   "chunks": [
     {
       "id": "01-how-to-play#how-to-play#1",
@@ -6063,7 +6063,16 @@
       "text": "**Bulldog** is the street cargo van (E1 Street, Domain Ground, **Ground-hauler**, tires — not a hover POV). Token art is a placeholder until Michael’s plate.\n\n**Conglomerate service chassis (0.3.80).** Four published SKUs with Michael top-down plates. **Aequitas Mandate (AEQ):** **Seal Cruiser** (Mandate cruiser — E1 Professional ground hover pursuit, 2–4 seats) and **Writ VTOL** (Council badge air — E1 Professional patrol/insertion helo). **Lazarus Extract (LAZ):** **White Door** (Laz ambulance — E1 Professional hover trauma van, patient bay, not a gun truck) and **Crash Angel** (Laz chopper — E1 Professional medevac VTOL with hoist). Cross-link the AEQ / LAZ names; Twelve Conglomerates lore is a separate pass.\n\n> Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**, Item **Star-Chopper**, Item **Bulldog**, Item **Seal Cruiser**, Item **Writ VTOL**, Item **White Door**, Item **Crash Angel**). Placeable tokens: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**), Star-Chopper (**1×3**), Bulldog (**2×4**, placeholder art), Seal Cruiser (**2×3**), Writ VTOL (**2×4**), White Door (**2×4**), Crash Angel (**3×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats."
     },
     {
-      "id": "23-machines#scale-bands-crewed-vehicles#24",
+      "id": "23-machines#public-transit-flats#24",
+      "file": "23-machines.md",
+      "source": "docs/raw/23-machines.md",
+      "chapter": "Machines: Drones, Vehicles & Buildings",
+      "heading": "Public transit (Flats)",
+      "kind": "rules",
+      "text": "**Status:** WORKING 2026-09-21 · stub SKUs for later Foundry Actors · full chassis math deferred.\n\nWorld texture for licensed Flats rides. Full prose: Setting Primer **Public Flats transit (WORKING)** (L1). Director Scene 2: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md`.\n\n| Stub SKU | Street | Domain feel | Party-token guidance | Lifestyle / Availability color |\n|---|---|---|---|---|\n| **Grey Cab Services** (`grey-cab-services`) | Autocab hover pod | **Hover** — Ground-domain limiter craft (~25–50 ft); not VTOL | Place one closed-pod token (**2×3** / **2×4**); crew rides as party token; narrate or skim a travel strip | Professional-leaning fare; **quieter**; ARG meter + FER chassis + MER hail ping |\n| **Veinline Civic** (`veinline-civic`) | District tram car | Tram-as-**vehicle** token on elevated / culvert-hung FER rails (not a Spire maglev spine) | Place one long car (**1×4** / **2×5**); party rides the car | **Street / cheaper**; louder; more eyes; civic teal + gunmetal |\n\n**Director:** These are travel fixtures first, chase platforms second. Do not invent sky-car altitudes. Do **not** collide naming with existing Restricted Item **Grey Cab** (`grey-cab` / Ghost Fare) — public brand vs fixer plate.\n\n**Cross-link:** Primer L1 › Vehicles & Transit › Public Flats transit (WORKING). Runs journal (after `tools/build-packs.mjs runs`): **Flats Transit — Grey Cab & Veinline** (`gwFlatsTransit00`)."
+    },
+    {
+      "id": "23-machines#scale-bands-crewed-vehicles#25",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6072,7 +6081,7 @@
       "text": "| Scale | Plain meaning | Examples |\n|---|---|---|\n| **Light** | Hover-bike, small rotor, open skiff — one or two bodies, exposed or cramped | Star-Chopper, junk rotor, harbor skiff |\n| **Vehicle** | Street hover / hauler van / light aircraft / patrol boat mass — crew seats and real cover | Lane-Hopper, Seal Cruiser, White Door, Getaway hover, panel hauler, Writ VTOL, tiltjet, wetsub, orbital pod |\n| **Heavy** | APC / gunship / attack sub / heavy shuttle — squad carriage or serious armor | Brick APC, Skyhunter, Leviathan, orbital mule |\n| **Capital** | Warship / mobile base — campaign asset, multi-station crew | Reaver corvette |\n\n**Vs drone Scale (`15-drones.md`):** drones use **Personal / Light / Vehicle (drone)**. A Vehicle-scale **drone** (Stinger, Warhound, etc.) remains on the **drone** inventory so swarm/fleet play stays one list. This chapter is **crewed** platforms — seats, stations, passengers — even when a Wrench Jump-In runs the shell solo.\n\n**Domain:** Ground / Air / Water / Space. Domain gates terrain, chase language, and wreck consequences; it does not replace Scale.\n\n**Chassis → mod slots (doctrine):** slots climb with Availability / Echelon (same shape as Gear master Cat 5A–5D). Street ≈ 1; Professional ≈ 2; Restricted ≈ 3; Military ≈ 4; Prototype ≈ 5. A chassis cannot exceed its published slot count — buy a bigger frame (or Invent a Mod + Director gate) for more capacity.\n\n---"
     },
     {
-      "id": "23-machines#stat-card-fields#25",
+      "id": "23-machines#stat-card-fields#26",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6081,7 +6090,7 @@
       "text": "Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitative**; Integrity / Speed numbers are not yet published. Armor kits add Stamina.\n\n| Field | Description |\n|---|---|\n| **Name / Frame** | Ghostwire slang / corp / sci triple (original names only) |\n| **Scale** | Light / Vehicle / Heavy / Capital |\n| **Domain** | Ground / Air / Water / Space |\n| **Handling** | Edge / bane / die-step feel on Piloting or Rigging to drive or stunt |\n| **Integrity** | Damage track (numbers not yet published). 0 = wrecked — domain catastrophe (crash, downing, flood, decompress). An armor kit (§5F) adds Stamina to this pool. |\n| **Armor kit** | **No armor rating / DR.** Install one §5F armor kit for a Stamina (Integrity) bonus. Kits do not stack. |\n| **Crew stations** | Pilot/Driver, Gunner, Systems/EW, Passenger counts (see §6) |\n| **Speed band** | Slow / Standard / Fast / Extreme — maps to positional move or chase-track advance |\n| **Jump-In Capable?** | Yes / No — whether a Wrench may Jump-In cleanly (Rigger Cocoon can upgrade a No → Yes) |\n| **Mod slots** | Per Availability/Echelon (published count) |\n| **Availability** | Street → Prototype |\n| **Echelon** | 1–4 |\n| **Cost ¥** | Object price; never buys class power |\n\n**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (`10-mods.md`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.\n\n---"
     },
     {
-      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#26",
+      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#27",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6090,7 +6099,7 @@
       "text": "#### Non-Wrench (any other class)\n\n| Rule | Detail |\n|---|---|\n| **Vehicles in play** | May **drive/pilot one** vehicle at a time using **Piloting** (or a Director-approved Drive fantasy equivalent) |\n| **Jump-In** | **Forbidden** — no sensor merge, no inert-body Jump-In, no temporary Jump-In Integrity buffer |\n| **RCC / fleet-vehicle features** | **Cannot** use advanced RCC fleet-vehicle features (Fleet Deck+ vehicle orchestration, multi-platform Command, War Table / Hydra-style vehicle swarm tools) even if the hardware is owned — inert or Remote-Box-equivalent at Director discretion |\n| **Risky chase / combat Piloting** | **Bane** on risky chase stunts, combat Piloting, and evasive driving Power Rolls **if not trained** in Piloting (untrained driver can still putter in traffic) |\n| **Gunnery from mounts** | Passengers/gunners may fire personal weapons and Street/Professional soft mounts; **Restricted+ combat hardpoints** prefer a trained Gunner or a Wrench — Director may allow with bane |\n| **Uptime** | No Uptime pool; no Deploy & Command / Rigged Fire vehicle spend |\n| **Heroic resource** | Cannot spend Uptime; cannot use Vehicle Rig-Pilot signature Jump-In discounts |\n\n**Intent:** an Operator can steal a street hover and run a chase; a Scout can fly a buzzcopter on a quiet insertion. Neither becomes a discount Vehicle Rig-Pilot.\n\n#### Wrench"
     },
     {
-      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#27",
+      "id": "23-machines#anyone-vs-wrench-rig-pilot-excellence#28",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6099,7 +6108,7 @@
       "text": "| Rule | Align to `16-wrench.md` (do not invent parallel names) |\n|---|---|\n| **Jump-In** | Full Jump-In Plumbing into **Jump-In Capable** vehicles (maneuver; Logic or Reflex; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |\n| **Rigging / Piloting** | Full excellence — Rigging and/or Piloting as class/subclass grants; no untrained bane on combat stunts |\n| **Solo / Jumped-In** | While Jumped-In, act as **pilot and gunner** simultaneously through the control rig (Vehicle Rig-Pilot default mode) |\n| **Uptime** | Asset hits / wrecks drain Uptime per Wrench chapter; Field Repair / Deploy interactions unchanged |\n| **RCC** | Full use of owned RCC ladder for vehicle-linked command where the Wrench chapter already allows it |\n| **Subclass** | **Vehicle Rig-Pilot** — signature platform, One With the Machine discounts, Ram Speed / Redline ladders — as printed in `16-wrench.md` |\n\n**Firewall reminder:** ¥ buys frames and mods. Uptime runs the fight. Chrome (control rig) improves Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.\n\n**Rigger Cocoon (§5F):** upgrades a frame to accept Jump-In cleanly. It does **not** grant Jump-In to non-Wrenches.\n\n---"
     },
     {
-      "id": "23-machines#customize-modding#28",
+      "id": "23-machines#customize-modding#29",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6108,7 +6117,7 @@
       "text": "- Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.\n- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).\n- **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.\n- Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).\n\n---"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#29",
+      "id": "23-machines#vehicle-combat-chase#30",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6117,7 +6126,7 @@
       "text": "**Chosen lean system for this chapter:** **abstract range bands** (cinematic pursuits and most vehicle fights). When vehicles share a tactical map with foot combat, Directors may instead use **positional** mode as already sketched in `16-wrench.md` — same skills, same wreck language.\n\n#### Abstract range track\n\n```\nBroken off ← Extreme → Long → Medium → Close → Ramming / Boarding\n```\n\n- Each round, the **pilot** makes an opposed **Piloting** or **Rigging** Power Roll (Handling modifies) against the lead pursuer / quarry.\n- **Middle / High:** advance one band toward your goal (close the gap or open it).\n- **Low:** stall or lose a band (Director: traffic, wake, lane crosswind, dock clutter).\n- **Weapons** work at their effective range band (personal small arms struggle past Medium; vehicle mounts and Gunnery shine at Long/Medium).\n- **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.\n- **Broken off:** chase ends (escape or lost contact).\n\n**Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per `16-wrench.md`.\n\n#### Crash, wreck, ram"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#30",
+      "id": "23-machines#vehicle-combat-chase#31",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6126,7 +6135,7 @@
       "text": "| Event | Effect |\n|---|---|\n| **Hit while underway** | Integrity damage; Wrench loses **1 Uptime** per hit if the vehicle is their fielded asset. Non-Wrench: no Uptime; Director may impose a bane on the next risky Piloting action |\n| **0 Integrity** | **Wrecked** — domain catastrophe (ground crash, air downing, hull flood, decompress). Occupants take a Personal-scale crash hit and must escape. Wrench: lump **3 Uptime** drain |\n| **Ram** | Opposed Piloting/Rigging. Damage basis = **Scale + Speed band** (heavier/faster party takes less). On success, force a band shift and/or apply **Crippled** / Integrity loss. Full numeric multipliers deferred |\n| **Recovery** | Field Repair (Wrench) in the fight per class text. Between scenes: §Craft **Repair** Project + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild) |\n| **Total loss** | Seized, burned, sunk, or dropped into the Sinks — the ¥ is gone |\n\n**Conditions (reskin):** **Crippled** (Handling/Speed penalty), **Systems Down** (a station offline), **On Fire/Leaking** (ongoing), **Stalled/Dead-stick** (immobilized). Called shots inflict conditions instead of raw Integrity.\n\n#### Crew roles"
     },
     {
-      "id": "23-machines#vehicle-combat-chase#31",
+      "id": "23-machines#vehicle-combat-chase#32",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6135,7 +6144,7 @@
       "text": "| Station | Does |\n|---|---|\n| **Pilot / Driver** | Moves the vehicle; only the pilot advances the chase track or positional Speed. Evasive driving = defensive edge. Stunts = risky Piloting/Rigging |\n| **Gunner** | Fires mounted weapons with **Gunnery** on their turn |\n| **Systems / Sensors / EW** | Locks, terrain reads, jams — feed an edge to pilot/gunner or a bane to a foe |\n| **Passenger** | Acts normally at a speed bane (shoot out a window, hack, reload); uses the hull as cover |\n| **Solo / Jumped-In (Wrench)** | Pilot **and** gunner simultaneously via control rig |\n\n---"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#32",
+      "id": "23-machines#full-inventory-by-echelon#33",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6144,7 +6153,7 @@
       "text": "**Reading the table:** prices climb with Availability + Echelon. Integrity / Speed numbers are not yet published — profiles are qualitative. Armor kits add Stamina; there is no machine armor rating. **Clunker** = inefficient, unreliable, but usable (E1 junk / beaters).\n\n#### Inventory (39 crewed platforms)"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#33",
+      "id": "23-machines#full-inventory-by-echelon#34",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6153,7 +6162,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Clunker / Junk Hauler / scrapyard beater van | Ground | Vehicle | 1 | Street | 150 | 1 | 1 driver + 3–4 cramped | Slow | No | Smokes, stalls, still moves a crew and a crate. | Clunker, Cargo, Beater, Ground-hauler |\n| Scrap-Bike / Yard Cycle / salvage courier bike | Ground | Light | 1 | Street | 180 | 1 | 1 (+pillion) | Fast | No | Bald tires, loud chain — weaves when it doesn't die. | Clunker, Courier, Beater, Hover |\n| Rustbucket / City Runabout / urban commuter EV | Ground | Vehicle | 1 | Street | 250 | 1 | 1+3 | Standard | No | Disposable get-around. Low Handling, no mounts. | Clunker, Beater, Hover |\n| Lane-Hopper / Open Stripe / four-seat street hovercar | Ground | Vehicle | 1 | Street | 500 | 1 | 1+3 | Standard | No | Everyday POV archetype — electric hover, limiter ~25–50 ft, four seats. Open cabin is the table token; closed cabins exist. | Transit, Crew-car, Hover, POV |\n| Star-Chopper / Long-Fork / tandem limiter hover-bike | Ground | Light | 1 | Street | 700 | 1 | 1+pillion | Fast | No | Street POV hover-bike — electric stretch-fork chopper, two seats, no wheels, limiter ~25–50 ft. Not the rifle named Chopper. | Courier, Hover, POV |\n| Bulldog / Heavy Hauler / street cargo van | Ground | Vehicle | 1 | Street | 650 | 1 | 1+2 (cab) + cargo | Slow | No | Tires-on-deck cargo van — mass, not a hover POV. | Cargo, Ground-hauler |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#34",
+      "id": "23-machines#full-inventory-by-echelon#35",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6162,7 +6171,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Sink-Skiff / Harbor Junk / open flood launch | Water | Light | 1 | Street | 220 | 1 | 1+2 | Slow | No | Patched hull, wet bilge — river work when nothing else floats. | Clunker, Beater, Aquatic |\n| Junk Rotor / Yard Copter / scrap autogyro | Air | Light | 1 | Street | 400 | 1 | 1+1 | Standard | No | Cheap junk rotor — rattles, leaks oil, still buys altitude. | Clunker, Beater, Fragile, VTOL |\n| Skiff / Runabout Boat / outboard launch | Water | Light | 1 | Street | 300 | 1 | 1+3 | Standard | No | Small open boat — harbor crossings, quiet approach. | Aquatic, Transit |\n| Crotch-Rocket / Sport Bike / high-torque courier cycle | Ground | Light | 1 | Professional | 1,000 | 2 | 1 (+pillion) | Fast | No | Nimble traffic knife; exposed rider. | Courier, Pursuit, Hover |\n| Getaway / Sedan / mid-line autonomous saloon | Ground | Vehicle | 1 | Professional | 1,200 | 2 | 1+4 | Standard | No | Classic crew car — seats a team, decent Handling, self-drive option. | Crew-car, Transit, Hover |\n| Workhorse / Utility Van / panel cargo hauler | Ground | Vehicle | 1 | Professional | 900 | 2 | 1+5 | Slow | No | Cargo + cover + rolling workshop / rig-nest. | Cargo, Workshop, Ground-hauler |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#35",
+      "id": "23-machines#full-inventory-by-echelon#36",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6171,7 +6180,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Seal Cruiser / Mandate Cruiser / Aequitas Mandate (AEQ) ground patrol | Ground | Vehicle | 1 | Professional | 1,400 | 2 | 1+3 (2–4 seats) | Fast | No | AEQ Seal Warden hover pursuit cruiser — sword-and-scales roof mark, cyan/amber lightbar. Street tag: Mandate cruiser. Light-armor Stamina kits fit. | Patrol, Pursuit, Hover, AEQ |\n| White Door / Laz Ambulance / Lazarus Extract (LAZ) trauma van | Ground | Vehicle | 1 | Professional | 1,300 | 2 | 1+2 (cab) + patient bay | Standard | No | LAZ White Door Flight hover ambulance — hex brand, patient bay, not a gun truck. Street tag: Laz ambulance. | Medical, Extraction, Hover, LAZ |\n| Writ VTOL / Council Badge Air / Aequitas Mandate (AEQ) patrol helo | Air | Vehicle | 1 | Professional | 2,000 | 2 | 1+2 | Fast | No | AEQ Writ Inquest ducted-fan patrol/insertion VTOL — sword-and-scales dorsal mark. Street tag: Council badge air. | Patrol, Insertion, VTOL, AEQ |\n| Crash Angel / Laz Chopper / Lazarus Extract (LAZ) medevac VTOL | Air | Vehicle | 1 | Professional | 2,200 | 2 | 1+2 + hoist | Fast | No | LAZ rescue / medevac chopper — twin ducted VTOL, hoist/winch. Street tag: Laz chopper. Not a gunship. | Medical, Extraction, VTOL, LAZ |\n| Buzzcopter / Light Rotor / civil autogyro | Air | Light | 1 | Professional | 1,200 | 2 | 1+1 | Fast | No | Two-seat civil rotor — recon, insertion, overhead eye. Fragile, unarmed. | Recon, Insertion, VTOL |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#36",
+      "id": "23-machines#full-inventory-by-echelon#37",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6180,7 +6189,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Cigarette / Speedboat / hydroplane pursuit craft | Water | Vehicle | 1 | Professional | 1,500 | 2 | 1+3 | Fast | No | Fast surface pursuit; forward mount option. | Pursuit, Aquatic |\n| Hardtop / Armored SUV / executive-protection wagon | Ground | Vehicle | 2 | Restricted | 4,500 | 3 | 1+4 | Standard | No | Up-armored, run-flats, tinted — extraction and bodyguard work. | Armor, Extraction, Ground-hauler |\n| Grey Cab / Ghost Fare / discreet armored taxi | Ground | Vehicle | 2 | Restricted | 3,800 | 3 | 1+3 | Standard | No | Looks street; hides plate and a panic cell. Fixer favorite. | Covert, Transit, Hover |\n| Flatbed / Rig Hauler / articulated cargo tractor | Ground | Heavy | 2 | Restricted | 5,500 | 3 | 1+1 (cab) + deck | Slow | No | Moves drones, wrecks, and stolen safes. Loud, honest mass. | Cargo, Heavy, Ground-hauler |\n| Tiltjet / VTOL Transport / vectored-thrust rotorcraft | Air | Vehicle | 2 | Restricted | 5,000 | 3 | 2+6 | Fast | Yes | Insertion/exfil bird — hovers, carries a team, door-gun ready. | Insertion, Mount, VTOL |\n| Hoverpad / Air-Car / ducted-fan personal aircar | Air | Vehicle | 2 | Restricted | 4,000 | 3 | 1+3 | Fast | No | Urban low-altitude flyer — ignores street gridlock. | Transit, Pursuit, Hover |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#37",
+      "id": "23-machines#full-inventory-by-echelon#38",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6189,7 +6198,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Harbor Cutter / Dock Patrol / armed surface cutter | Water | Vehicle | 2 | Restricted | 4,200 | 3 | 2+4 | Standard | No | Dock authority hull — light mount, search lights, boarding deck. | Patrol, Aquatic, Mount |\n| Wetsub / Mini-Sub / two-man submersible | Water | Vehicle | 2 | Restricted | 6,000 | 3 | 2 | Slow | Yes | Silent infiltration below the sensor line; limited depth. | Stealth, Aquatic, Infiltrate |\n| Pod / Orbital Hopper / suborbital transfer capsule | Space | Vehicle | 2 | Restricted | 7,000 | 3 | 1+3 | Extreme | No | Cramped short-hop capsule — station-to-station, surface-to-orbit. | Sealed, Transit |\n| Warbike / Assault Cycle / weaponized recon cycle | Ground | Light | 3 | Military | 12,000 | 4 | 1 | Fast | Yes | Forward mount + light armor — milspec scout/skirmisher. | Combat, Mount, Pursuit, Hover |\n| Brick / APC / armored personnel carrier | Ground | Heavy | 3 | Military | 18,000 | 4 | 2+8 | Standard | Yes | Squad mover + turret platform. | Armor, Troop, Mount, Ground-hauler |\n| Cage / Black Wagon / secure prisoner transport | Ground | Vehicle | 3 | Military | 14,000 | 4 | 1+2 crew / locked bay | Standard | No | Hard cells, jammer roof — take them alive. | Secure, Armor, Ground-hauler |\n| River-Fang / Attack Boat / armed hydrofoil | Water | Vehicle | 3 | Military | 15,000 | 4 | 2+4 | Fast | Yes | Foil chase hull with twin light mounts. | Combat, Aquatic, Mount |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#38",
+      "id": "23-machines#full-inventory-by-echelon#39",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6198,7 +6207,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Skyhunter / Gunship / attack rotorcraft | Air | Heavy | 3 | Military | 20,000 | 4 | 2+2 | Fast | Yes | Strafe-and-fire-support — multiple hardpoints, armor, sensors. | Combat, Mount, Heavy, VTOL |\n| Drop-Sled / Assault Glider / low-alt insertion sled | Air | Light | 3 | Military | 11,000 | 4 | 1+4 | Extreme | No | One-way hot drop from a skyway or tiltjet bay. | Insertion, Expendable-lean, VTOL |\n| Mule / Orbital Shuttle / heavy transit & boarding craft | Space | Heavy | 3 | Military | 22,000 | 4 | 2+8 | Extreme | Yes | Heavy transit/boarding craft with docking collar. | Sealed, Boarding, Heavy |\n| Iron Giant / Combat Walker / bipedal weapons platform | Ground | Heavy | 4 | Prototype | 55,000 | 5 | 1 (Jump-In) or 2 | Standard | Yes | Legged mech — all-terrain, multiple hardpoints, apex ground unit. | Combat, Heavy, Walker, Ground-hauler |\n| Spider-Frame / Octo-Tank / multi-limb siege crawler | Ground | Heavy | 4 | Prototype | 52,000 | 5 | 1 (Jump-In) or 2 | Slow | Yes | Limb-climber siege shell — corridor and vertical nightmare. | Combat, Climb, Heavy, Ground-hauler |\n| Ghost-Wing / Stealth VTOL / low-observable insertion craft | Air | Heavy | 4 | Prototype | 60,000 | 5 | 2+6 | Fast | Yes | Radar-and-Alert-quiet heavy insertion — black-ops apex. | Stealth, Insertion, Heavy, VTOL |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#39",
+      "id": "23-machines#full-inventory-by-echelon#40",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6207,7 +6216,7 @@
       "text": "| Name (slang / corp / sci) | Domain | Scale | Echelon | Availability | Cost ¥ | Mod slots | Crew (feel) | Speed | Jump-In? | Profile | Tags |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Leviathan / Attack Sub / hunter-killer submersible | Water | Heavy | 4 | Prototype | 58,000 | 5 | 4+4 | Standard | Yes | Deep silent hunter — sonar suite, torpedo mounts. | Combat, Aquatic, Heavy |\n| Void-Runner / Long-Hopper / deep-orbit runner | Space | Heavy | 4 | Prototype | 70,000 | 5 | 2+4 | Extreme | Yes | Longer legs than a Pod; hard burns between Reach orbit and far nodes. | Sealed, Transit, Heavy |\n| Reaver / Corvette / fleet-scale warship | Space | Capital | 4 | Prototype | 80,000+ | 5 | Multi-station crew | Extreme | Yes | Capital warship — mobile base, heavy mounts, campaign asset. | Sealed, Capital, Combat |"
     },
     {
-      "id": "23-machines#full-inventory-by-echelon#40",
+      "id": "23-machines#full-inventory-by-echelon#41",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6216,7 +6225,7 @@
       "text": "**Count:** **39** published crewed platforms.\n\n#### Role quick-index\n\n| Role | Chassis |\n|---|---|\n| Clunker / beater | Clunker, Scrap-Bike, Rustbucket, Sink-Skiff, Junk Rotor |\n| Courier / bike | Scrap-Bike, Star-Chopper, Crotch-Rocket, Warbike |\n| Crew-car / transit | Lane-Hopper, Getaway, Grey Cab, Hoverpad, Pod, Void-Runner |\n| Patrol / pursuit | Seal Cruiser, Writ VTOL, Crotch-Rocket, Cigarette |\n| Cargo / workshop | Clunker, Bulldog, Workhorse, Flatbed |\n| Medical / extract | White Door, Crash Angel |\n| Armor / extraction / troop | Hardtop, Brick, Cage |\n| Air recon / insertion | Buzzcopter, Writ VTOL, Junk Rotor, Tiltjet, Drop-Sled, Ghost-Wing |\n| Gunship / combat air | Skyhunter |\n| Water transit / patrol | Skiff, Sink-Skiff, Harbor Cutter |\n| Water pursuit / attack | Cigarette, River-Fang, Leviathan |\n| Wet infiltrate | Wetsub |\n| Walker / siege ground | Iron Giant, Spider-Frame |\n| Space / sealed | Pod, Mule, Void-Runner, Reaver |\n\n#### Availability and Echelon\n\n| Availability | Typical Echelon |\n|---|---|\n| Street | 1 |\n| Professional | 1 |\n| Restricted | 2 |\n| Military | 3 |\n| Prototype | 4 |\n\n---"
     },
     {
-      "id": "23-machines#buildings#41",
+      "id": "23-machines#buildings#42",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -6225,7 +6234,7 @@
       "text": "Buildings are a Wrench system: the **Building Stat Card**, upgrade slots, Node reference, and downtime fabrication are in `16-wrench.md` (The Machines). No shared building inventory is published yet."
     },
     {
-      "id": "23-machines#hands-off-accords-setting-law#42",
+      "id": "23-machines#hands-off-accords-setting-law#43",
       "file": "23-machines.md",
       "source": "docs/raw/23-machines.md",
       "chapter": "Machines: Drones, Vehicles & Buildings",
@@ -7773,7 +7782,16 @@
       "text": "The street POV hover-bike yes-example is the **Star-Chopper** (Long-Fork / tandem limiter hover-bike). Michael’s top-down starfield-navy stretch-fork chopper is the **table token** (`assets/tokens/vehicles/star-chopper`). Two seats (rider + pillion); no wheels; altitude limiter **~25–50 ft**. Not a sky bike and **not** the rifle named Chopper.\n\n**Director note (Rideable — future):** tandem seats read from above. Do **not** implement Rideable yet."
     },
     {
-      "id": "L1-setting-primer#bulldog-class-street-heavy-hauler#98",
+      "id": "L1-setting-primer#public-flats-transit-working#98",
+      "file": "L1-setting-primer.md",
+      "source": "docs/manuscript/01-lore/L1-setting-primer.md",
+      "chapter": "Setting Primer",
+      "heading": "Public Flats transit (WORKING)",
+      "kind": "lore",
+      "text": "**Status:** WORKING 2026-09-21 · names are stubs Michael can rename.\n\nLicensed **horizontal** Flats travel — still the cushioned river, still limiter **~25–50 ft**, still electric, still **not** sky cars. Vertical spines stay the corp arteries above; this is how a Switchboard crew crosses districts without walking every culvert.\n\n**Grey Cab Services (“Grey Cab”).** Autocab hover pods. **ARG** Argent Exchange owns the fare meter; **FER** Ferrum licenses the chassis; **Meridian** only sells the hail/dispatch ping. Street: *hail a Grey*, *meter’s awake*. Quieter, more private, costs more — the ride you take when the sleeve stays sealed and you do not want a car full of wage-bodies. *(Not the Restricted **Grey Cab / Ghost Fare** armored taxi SKU — that fixer plate is a different card; rename either side later if the table confuses them.)*\n\n**Veinline Civic (“the Vein”).** District tram on elevated / culvert-hung Ferrum rails — civic teal + ferrum gunmetal. Parent: **FER** Ferrum Dynastic. Street: *ride the Vein*, *teal car*. Cheaper, louder, more eyes — crowd cover for Low Lifestyle crews.\n\nCrews use Greys for privacy and Veins for coin and camouflage. Director travel beats: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md`. Machine notes: `docs/raw/23-machines.md` › Public transit (Flats)."
+    },
+    {
+      "id": "L1-setting-primer#bulldog-class-street-heavy-hauler#99",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7782,7 +7800,7 @@
       "text": "A **Bulldog** is the cargo-van exception that still uses **tires**. It is not a hover POV. Rubber on the Flats means mass: crates, wrecks, a crew’s stolen safe. Token art is a placeholder until Michael’s plate.\n\n> Enable **Draw Steel - Ghostwire Build**. Read this page in **Ghostwire Lore** (Setting Primer). Chassis SKUs live in **Ghostwire Vehicles & Drones**. Drag the **Lane-Hopper** Actor from **Ghostwire Summons & Machines** (token **2×3**), the **Star-Chopper** (token **1×3**), or **Deploy** the Item from a hero sheet. **Bulldog** is the tires cargo van (token **2×4**, placeholder art). Reach street texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats. VOIDMARK retrieves this lock from the knowledge index."
     },
     {
-      "id": "L1-setting-primer#the-hive-as-a-vertical-timeline#99",
+      "id": "L1-setting-primer#the-hive-as-a-vertical-timeline#100",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7791,7 +7809,7 @@
       "text": "Deep time, one calendar, two silences. Veyra keeps a single continuous civil calendar, inherited unbroken from the dead nations across more than a thousand years; the campaign present is simply the year 2050. What the calendar does not say aloud are two things: the corps treat everything before the Charter (~120 years ago) as prehistory — a thousand years of history quietly uncounted, because to the Twelve the world began with the boardroom — and no one at all is permitted to date the Incursion, because the corps do not admit it exists. History runs deep here on purpose: the Founding of the peoples (Ch. 1) sits a full thousand years behind the present, long enough that the how of it is forgotten, and the recent corporate age is only the thin bright skin on top.\n\nEveryone agrees what year it is. What they don't agree on is how old the world is — the corps act like it began with them — and no one at all is allowed to say how long the war has been climbing. One calendar, two things you don't say out loud. A note on the dates. Deep-past dates are deliberately soft (\"~1,000 years ago,\" \"the mid-1000s\") — the vagueness is canon, not laziness: a thousand years is long enough to forget. Only the recent Charter-era dates are meant to be firm. The Five Ages All dates on the one civil calendar; the present is 2050, the Founding a full millennium behind it. AGE"
     },
     {
-      "id": "L1-setting-primer#the-word-the-first#100",
+      "id": "L1-setting-primer#the-word-the-first#101",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7800,7 +7818,7 @@
       "text": "People before counting Cosmology. Creation spoken; the base human stock seeded; the Dark loosed (Ch. 1). The Founding & the High-Corporate Age ~1050 to 1450 Mortals engineer the breeds; the ancestor-corporations rise; the castes bred true into peoples. The Old World & its Fall ~1450 to 1930 The age of nations; the poisoning of Veyra; the Collapse into arcologies. The Charter Age ~1930 to 2050 The Ten (later the Twelve), the Congress, the hives, the Wired — the world the Machine advertises. The Quiet War ~1990 to now, denied The Incursion climbing under the Charter's comfort. Officially, it isn't happening. I. The Word and the First People — before counting Cosmology, not chronology (Ch. 1–3); the floor under everything. The Word is spoken — the Light speaks creation, and Veyra, the Spoken World, is set as the willed proving-ground of free choice, still being spoken. The Dark One turns — the Adversary, who cannot create but only deface, is in the present age loose and ascendant (Ch. 1, 3), the oldest fact behind every later one. The First People — the Light seeds a single willed stock, baseline humanity (Homo sapiens basalis); everything else that walks the Ground, mortals made later. II. The Founding & the High-Corporate Age — ~the year 1050 to ~1450 The setting's founding act of mortal hubris (Ch. 1, the Founding) — the deep spine the recent Charter sits a thousand years on top of.\n- ~1050 (a thousand years ago) — The Founding. The mortal powers of a lost high-corporate age — the ancestor-corporations, forerunners of today's Twelve — learn to rewrite the seeded human stock and make of it a catalogue of castes: the Elvani (the aesthetic caste, an aristocracy the wealthy could commission), the Corran (the labor caste for the deep mines), the Goliar (the heavy caste for hazardous industry), and others. Engineering a people is not the Dark's work — it is artistry and pride (Ch. 1) — but"
     },
     {
-      "id": "L1-setting-primer#the-word-the-first#101",
+      "id": "L1-setting-primer#the-word-the-first#102",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7809,7 +7827,7 @@
       "text": "the class system of the modern hive is the fossil of this genetic caste design: the strata were drawn in flesh a thousand years before they were built in steel.\n- ~1100–1350 — The castes breed true. Over centuries the engineered lines become genuine peoples — Elvani salons and patron-houses, Corran guild-clans and long memory, Goliar kinship-crews — each married within itself (cross-lines cannot interbreed), each grown into a culture with its own dialects, codes, and grievances. The mutual contempt (Elvani over Corran, and back again) is this old.\n- ~1250 — The discarded lines. Not every experiment bred true. Failed, abandoned, and broken branches of the Founding are cast out — the deep ancestry of some Mutant lines, the wreckage of the Founding no house wants to admit authorship of (Ch. 5). The first cast-out underclass predates the hives by centuries.\n- ~1350–1450 — The high-corporate age fades. The ancestor-corporations decline and are half-forgotten; their science passes into myth, their names into ruins. What survives them is the catalogue they made — the peoples, now walking free of their makers, and the idea, never quite lost, that some were built better than others.\n- The forgetting. A thousand years is long enough that the how is gone. Everyone knows the ancestries were made in the Founding, the way we know about fallen empires — settled, ancient, unremarkable. Almost no one can say how it was done, and no one alive can do it again. The knowledge of remaking a people is one of the great lost arts the deep past swallowed. They were commissioned like furniture, a thousand years ago, by companies whose names are weathered off the ruins. Then they went and became people anyway — which was never in the specification, and is the most stubbornly human thing about them. III. The Old World & its Fall — ~1450 to ~1930 The age of nations and its ruin (Ch. 6) — the corpse that became the wastes. The age of nations (~1450–1900) — long after the Founding, Veyra is ruled by states, governments, borders, armies, now more than a century past living memory; this is the world the civil calendar was built to count, and the churches never stopped counting it. The long poisoning — centuries of war, extraction, and hubris scar Veyra into the wastelands and wild zones (Ch. 6): the toxic frontier, the dead cities, the ground where the Veil first tore in the open; the wastes are not wilderness but a graveyard the size of a world. The Collapse (~1900–1930) — the nations do not survive their own poison; in the ruin, survivors do not rebuild states but build arcologies, sealed and vertical and corporate-owned. Ferrum Dynastic, oldest of the coming Twelve, is already here pouring the first foundations. The old civil order dies; the corporate one is not yet born. The nations spent the world and called it growth. When the bill came due there was no country left to pay it — only companies, and a poisoned frontier full of the things the countries left behind. IV. The Charter Age — the world as it looks — ~1930 to 2050 The rise of the Machine (Ch. 6–9) — recent history, the only firmly dated stretch, the order the wage-billions believe is permanent and think is the whole story."
     },
     {
-      "id": "L1-setting-primer#the-word-the-first#102",
+      "id": "L1-setting-primer#the-word-the-first#103",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7818,7 +7836,7 @@
       "text": "- ~1930 (~120 years ago) — The Charter. The ten strongest arcology-corporations stop competing to mutual destruction and sign the founding accords of the Corporate Congress. A cartel wearing a parliament's robes becomes the planetary government; the Extraterritoriality Accords make each seated corp a sovereign country and forbid open war between the Ten while sanctioning the deniable kind — the clause that quietly births the entire runner economy. The corps will come to treat this year as the true beginning of the world.\n- ~1930–1970 — The raising of the hives. Under Ferrum's hand the arcologies grow into true hives — continent-anchored vertical megastructures built level on ruined level. Ossian Reach rises as the crown-jewel, the one hive where all seated corps keep a tower and the Congress convenes (then the Ten; now the Twelve). The vertical ladder — Halo, Spires, Grid, Flats, Warrens, Sinks — sets like concrete: altitude becomes wealth. The great foundation-pumps are sunk in this era; some have now been beating like cathedral-sized hearts for the better part of a century.\n- ~1950–1980 — HALO takes the sky. HALO Ascendant's orbital solar arrays and life-support spine make the hives livable and everyone beneath them a tenant of light and air; HALO rises to the First Chair, the denier seated at the head of the table.\n- ~1960–2000 — The Wired is woven. Meridian Signal threads the Wired through every level — net, feeds, simsense, the manufactured consensus reality of the wage-billions. Meridian becomes not just the network but the narrative: the conglomerate that decides what the world is allowed to believe. Unknown to anyone, the Wired is a planet-wide thin place that echoes the Signal — the corps have wired the whole world close to the Veil (Ch. 3, 9).\n- ~1970–2010 — The Machine closes around the person. The SIN becomes the master key to every convenience (a person with none is a ghost); Argent makes nuyen and debt the universal medium; Caduceus makes the body a rented thing. Life becomes wholly mediated — a world engineered so no one need ever choose, which (Ch. 1) is a world drifting Null-ward. The Radiant Concord, the corporate false-church of the Light, rises in this comfort as its beloved, institutional, secretly-inverted mirror.\n- ~2035–2045 — The Ten become the Twelve. The Congress charters two late seats the hive can no longer pretend it does not need: **AEQ** Aequitas Mandate (eleventh) as the Council's exclusive justice-and-security contractor — a sword that will not sell to a private buyer — and **LAZ** Lazarus Extract (twelfth) as the hive-wide trauma-and-body-recovery monopoly, bundled into Lifestyle upkeep so every paid roof is a subscriber. Nyx remains the tenth seat and the most precarious. Kestrel Dynamics remains seatless — the thirteenth-chair climber. Official record: “Congress professionalization.” Street record: the Council bought itself a badge, and the ambulance became a conglomerate.\n- The megacity comes fully alive (~1990 → now). By the late Charter Age the Reach is what the crew steps out into today: thirty million lives stacked kilometers deep, the sky replaced by a hundred thousand signs, and traffic as a second weather — the street-layer hover lanes packed, the VTOL lanes stacked, the drones swarming every gap (see the texture panel below). A megacorp is a nation that fired its citizens and kept its customers. The Charter is only about a hundred and twenty years old — a baby, next to the breeds it rules — but it has convinced almost everyone it is the shape the world has always had. The Reach in Motion — the living megacity Woven into the Charter Age so the timeline reinforces the setting, not just the plot; all drawn from the lore bible's street-level canon.\n- A city with no sky and no floor. Come up out of a transit tube onto the Flats and the first thing that hits you is the weight of the light — no sky, just a hundred thousand signs stacked forty stories deep, noodle-stall holos and blessing-tier ads and simsense come-ons in six languages, all bleeding pink and cyan and sodium-gold into the standing rain. The rain never stops on the Flats; it falls from the"
     },
     {
-      "id": "L1-setting-primer#the-word-the-first#103",
+      "id": "L1-setting-primer#the-word-the-first#104",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7827,7 +7845,7 @@
       "text": "condensation of a million air-scrubbers on the levels above, warm and faintly chemical, and drags the neon down the girders in smeared ribbons until the whole street looks like it's melting.\n- Traffic as a second weather — three tiers at once. The Reach moves on three stacked circulations that never stop. Street layer: the Flats and Grid choke on foot-millions, **light electric hovercraft** (limiter **~25–50 ft** — not sky cars), cargo-crawlers and other **heavy ground haulers**, rickshaw-skiffs, and armored corp transit nosing through crowds that part for nothing smaller than an Aureole convoy — the deck is a river you swim, not cross. Air: above the limiter band, stacked **VTOL** lanes run up the hive face — corp birds and executive shuttles in the high clean lanes, cargo lifters and transit gondolas in the middle, everything sequenced by HALO traffic-control and Meridian's grid; to look up from the Flats is to see not stars but a ceiling of moving running-lights, layer over layer, all the way to where the Halo burns. Drone: the constant swarm in every gap the big traffic leaves — delivery quads, Sanctum surveillance eyes, ad-drones, repair-skitters on the girders, Nyx's black-market couriers running dark between the lanes; the air at street level is never empty and never quiet. Full street picture: **Vehicles & Transit** above.\n- The heartbeat under everything. Somewhere below your feet a foundation-pump the size of a cathedral has been beating like a heart for a thousand years — the deep pulse of the hive, older than the Charter, older than anyone's grandparents, that you stop hearing until the night it skips.\n- The Halo you'll never reach. Past the Grid, past the Spires, past where anyone you know will ever stand, HALO's ring of orbital-fed daylight crowns the top of the hive like a second sun — so bright and so far that from the Flats it reads as a rumor of morning that will never actually arrive. The whole vertical is visible and none of it is reachable: the city is a mountain you live inside. V. The Quiet War — the hidden thread — ~the last 60 years, and no feed will run it The Incursion (Ch. 3), climbing under the Charter's comfort. This is the timeline's secret history. Every entry below is real — and every entry exists in the official record under a mundane name. Nowhere in corp media is the word \"demon,\" \"angel,\" or \"the war\" permitted; there is only structural, technical, criminal, and market language for it. Meridian owns the narrative, Sanctum owns the records, and both are certain the truth would break the world faster than the thing itself. The rule of the age: you cannot report what you are not allowed to name. The Incursion is not hidden by a single conspiracy — it is hidden by the whole architecture of the Charter, which has no category for it. A dead-air zone is a \"decompression hazard.\" A hollowed outpost is a \"loss of contact.\" A Wired-demon is a \"rogue AI.\" A corrupted zone is a \"structural condemnation.\" A person erased from the inside is a \"cognitive-decline case.\" The cover stories are not even always lies — they are the only words the Machine has, and it prefers them.\n- ~1990 (~60 yrs ago) — The first quiet floors. As the hives dig deeper, the first dead-air zones surface in the oldest Sinks. Filed as structural condemnations and walled off. No one connects them; a thousand years of forgetting means no one has the frame to. (This is where \"a generation ago\" begins — really two generations of small, denied incidents.)\n- ~2005 — The first \"rogue AI.\" As the Wired matures, the first Edge-demons wearing the net appear in the logs — indistinguishable from an emergent Null-ward program (Ch. 3, 9). Meridian coins the permanent euphemism — \"anomaly\" — and begins the practice that defines the age: the analysts who ask what it really is have accidents."
     },
     {
-      "id": "L1-setting-primer#the-word-the-first#104",
+      "id": "L1-setting-primer#the-word-the-first#105",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7836,7 +7854,7 @@
       "text": "- ~2020–2040 — Blacklight opens the door wider (the \"why-now\"). Meridian's classified deep-net arm, Blacklight Systems, pushes intrusion deeper than anyone ever has, chasing bandwidth and prediction, and wears the thinnest membrane in creation through. This is the leading answer to why the Dark got loose now — not a cosmic event but a corporate R&D program, run for quarterly advantage, that mistook a doorway for a data-pipe. In the record it is a series of \"containment incidents.\" In truth it is the moment the Quiet War stops being background and starts climbing.\n- ~2025 — Deadfall Nine goes quiet. A decommissioned Ferrum foundation-stratum in the Reach's Sinks\n— Sublevel 9 — falls silent and is walled off rather than explained. Official cause: structural condemnation. Runners will come to call it the Quiet Floor — the Incursion's first surfaced wound in the home hive, dead-air climbing, and the closest thing the setting has to a ticking clock. Ferrum's Deepworks maintains the seal and the story both.\n- ~2025–2045 — The Warrens are written off. Over the same span the corps quietly stop mapping and maintaining the deep underlevels between Flats and Sinks — the Warrens — filed as \"deprecated infrastructure.\" The map of the hive shrinks while the feeds insist it doesn't. It is easier to forget a level than to explain what's on it.\n- ~2040–2050 — The truth reaches the systems that were never supposed to fail, and is renamed on arrival. Dead-light climbs HALO's power-spine toward the Halo itself, filed as \"array volatility\" (HALO's The Dimming). Nyx outposts in the deep Sinks are found hollowed, filed as \"loss of contact\" (Nyx's The Tithe). The deep net starts answering back, filed as a \"persistent intrusion signature\" (Meridian's The Static Sermon). The seal on the Nine leaks and the levels above go quiet, filed as \"foundation subsidence\" (Ferrum's The Foundation Fault). Four corners of the Twelve, four surfacing wounds of one war, four mundane cover stories — and four runs, because the only people who can be sent to a thing that officially isn't happening are people who officially don't exist.\n- ~2046–2050 — The truce goes brittle (the coming Resource War). No open war between the Twelve in a generation, but many feel one coming: resource hunger (the hives built out, the new Space Race devouring capital), the slipping First Chair (Vaine of HALO vs. Solenne of Meridian), and a buried cause almost no one connects — the Incursion is quietly scrambling the resource map, turning wasteland claims barren and lethal. The corps prepare to fight over ground whose real problem is the un-making, and they will call that a market dispute too.\n- 2050 — the campaign present (Ch. 24).\nNobody decided to hide the war. It's worse than that. The Machine has no word for it — so a demon in the wires is a rogue AI, a hollowed floor is a subsidence, a man unmade from the inside is early-onset dementia, and the apocalypse goes out on the evening feed as a run of bad luck in the industrial sector. You can't panic a city about a thing it isn't permitted to name. That's the corps' whole plan, and so far it's working."
     },
     {
-      "id": "L1-setting-primer#the-campaign-present#105",
+      "id": "L1-setting-primer#the-campaign-present#106",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7845,7 +7863,7 @@
       "text": "The now the game assumes. It is 2050 in Ossian Reach, the political heart of Veyra, where all Twelve are present and the Congress convenes. To the thirty million on the Grid this is an ordinary, comfortable, over-surveilled year: the arrays hold, the feeds are bright, the SIN opens every door, the traffic never stops, and the war is not even a rumor — because there is no permitted word for it. To a crew of ghosts working the Flats, it is the year the cover stories stopped adding up. The state of the war — the doom-clock The Dark One is loose and ascendant; the Incursion is actively worsening — the world is losing but not lost. The Unmaker — the Last Word — reaches through aspects, heralds, and hollowings: dead-air zones, hollowed outposts, stretches of the Wired collapsing into Nullspace-static. Its leading edge in the home hive is Deadfall Nine, and the Nine is climbing. None of this is on any feed. The crew's peril is double: the thing itself, and the far larger force of everyone who cannot afford to let it be named. Open threats, live on turn one\n- The First-Chair fight. Vaine (HALO) vs. Solenne (Meridian) — a succession struggle at the top of the world, fought in votes, feeds, and deniable runs.\n- The brewing Resource War. The generation-long truce fraying over wasteland claims that are quietly going barren; the crew's early jobs are the sparks.\n- The Space Race. Each conglomerate pouring capital into nearby worlds for resource — starving the old frontier and raising the stakes of the Chair.\n- The surfacing Incursion. The Dimming, the Tithe, the Static Sermon, the Foundation Fault — one rising dark seen from four corners of the Twelve, each a run that hands the crew proof the deniers have no word for and can't allow to exist. Aequitas files the fifth face as disorder; Lazarus arrives and writes trauma.\n- Cinderhold's clock. At the gate to the wastes, Kestrel's \"Clean Route\" creeps toward buying the last free settlement onto the ledger, while the dead-air spreads in the ground it wants to pave. The three fixtures, ready now The crew's on-ramp is Mama Cassavir, \"the Switchboard,\" in the upper Flats — the seam between clean contracts above and dirty ones below. The place they should not go is Deadfall Nine, the Quiet Floor. The way out of the box is Cinderhold, at the gate to the poisoned wastes, held by Ranger-Captain Cael Marrow, \"the Gate.\" Why the crew matters You are ghosts — unregistered, deniable, choosing — in a world engineered so no one need ever choose, and in an age that has forgotten how to name its own crisis. That makes you the two things the Machine cannot manufacture: people who act off the ledger, and people who can say the true word for what's happening. The faithful and the crew do not win this war; they hold it back — seal a tear, banish a herald,"
     },
     {
-      "id": "L1-setting-primer#the-campaign-present#106",
+      "id": "L1-setting-primer#the-campaign-present#107",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -7854,7 +7872,7 @@
       "text": "deny the Unmaker one more stretch of ground — and keep the Word being spoken one more day. It is 2050, and by the count no one is allowed to keep, it is very late. The lights are on, the traffic roars in three tiers, the feeds are bright, and everyone who matters says the world is fine. Down on the Flats, where the rain never stops and a cathedral-sized heart has been beating under the street for a thousand years, a crew that was never recorded is about to learn the true name of a thing the whole world has agreed not to say."
     },
     {
-      "id": "L1-setting-primer#themes-tone#107",
+      "id": "L1-setting-primer#themes-tone#108",
       "file": "L1-setting-primer.md",
       "source": "docs/manuscript/01-lore/L1-setting-primer.md",
       "chapter": "Setting Primer",
@@ -8139,7 +8157,7 @@
       "chapter": "Ossian Reach — Street Color",
       "heading": "Getting to & from the Flats — The Vertical Is the Obstacle",
       "kind": "lore",
-      "text": "**Going down and out (outward — the gate to the wastes).** Below the Flats the passages stop being checkpoints and start being dangers. The **Warrens** and **Sinks** have no gates because they have no order — descending means the cameras die, the Signal thins, the maintenance stops, and local power (gangs, level-bosses, the Churn) fills the gap the corps abandoned. And at the very bottom of the map the hive opens outward at **the gate — Cinderhold**, the wasteland settlement where Ranger-Captain Cael Marrow holds the seam between the inner game and the wastes beyond. To leave the Reach entirely is to pass through Cinderhold onto the open ground, where the law is thinner, the Signal is thinner, and the war is in the open.\n\n**Documents that will pass.** At least one clean **fake or burner SIN** per crew member (¥100–300 each, single-scan and disposable), matched to the tier they mean to reach. A SIN that reads Flats-Low will not open a Spire gate.\n\n**A route, licensed or grey.** Decide the direction of exposure: buy fare and speed on the spine and plan to beat the checkpoints, or buy quiet on the grey transit and plan to survive the shaft. Cassavir sells routes as readily as she sells jobs.\n\n**Chrome discipline.** Visible street chrome that reads proud on the Flats reads criminal in the Grid. Crews climbing high either run subtle 'ware or plan to talk (or hack) around the posture-check. What you wear is part of your cover."
+      "text": "**Going down and out (outward — the gate to the wastes).** Below the Flats the passages stop being checkpoints and start being dangers. The **Warrens** and **Sinks** have no gates because they have no order — descending means the cameras die, the Signal thins, the maintenance stops, and local power (gangs, level-bosses, the Churn) fills the gap the corps abandoned. And at the very bottom of the map the hive opens outward at **the gate — Cinderhold**, the wasteland settlement where Ranger-Captain Cael Marrow holds the seam between the inner game and the wastes beyond. To leave the Reach entirely is to pass through Cinderhold onto the open ground, where the law is thinner, the Signal is thinner, and the war is in the open.\n\n**Documents that will pass.** At least one clean **fake or burner SIN** per crew member (¥100–300 each, single-scan and disposable), matched to the tier they mean to reach. A SIN that reads Flats-Low will not open a Spire gate.\n\n**A route, licensed or grey.** Decide the direction of exposure: buy fare and speed on the spine and plan to beat the checkpoints, or buy quiet on the grey transit and plan to survive the shaft. Cassavir sells routes as readily as she sells jobs."
     },
     {
       "id": "L3-ossian-reach-color#getting-to-from-the-flats-the-vertical-is-the-obstacle#12",
@@ -8148,7 +8166,7 @@
       "chapter": "Ossian Reach — Street Color",
       "heading": "Getting to & from the Flats — The Vertical Is the Obstacle",
       "kind": "lore",
-      "text": "**The specialist for the gate.** Know before you leave which door-opener you're leaning on — the Face for the talk, the Hacker for the spoof, the Scout for the bypass. A crew with no answer to a checkpoint is a crew that gets turned back at the first boundary.\n\n**Gear for the vertical itself.** For the grey shafts and the outward climb, a **grapple-and-line or ascension rig** (~¥2,000) turns a lethal drop into a traversal. The vertical is terrain, and terrain kills the unprepared."
+      "text": "**Horizontal Flats rides (WORKING).** Once you are already on the Flats, the short hop between districts is rarely a spine. **Grey Cab Services** (“hail a Grey”) sells quiet autocab pods — Argent meters the fare, Ferrum builds the hull, Meridian only pings the hail. **Veinline Civic** (“the Vein”) is the cheaper teal-and-gunmetal district tram hung on Ferrum rails. Crews pick privacy or crowd cover the same way they pick licensed vs grey on the vertical.\n\n**Chrome discipline.** Visible street chrome that reads proud on the Flats reads criminal in the Grid. Crews climbing high either run subtle 'ware or plan to talk (or hack) around the posture-check. What you wear is part of your cover.\n\n**The specialist for the gate.** Know before you leave which door-opener you're leaning on — the Face for the talk, the Hacker for the spoof, the Scout for the bypass. A crew with no answer to a checkpoint is a crew that gets turned back at the first boundary.\n\n**Gear for the vertical itself.** For the grey shafts and the outward climb, a **grapple-and-line or ascension rig** (~¥2,000) turns a lethal drop into a traversal. The vertical is terrain, and terrain kills the unprepared."
     },
     {
       "id": "L3-ossian-reach-color#the-black-water-the-cistern-sea-the-flood-cycle-and-what-liv#13",
