@@ -97,7 +97,7 @@
       "xp": 0,
       "victories": 0,
       "renown": 1,
-      "wealth": 1
+      "wealth": 250
     },
     "skills": {
       "value": [
@@ -2540,6 +2540,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "gear": {
             "echelon": 1,
             "availability": "professional",
@@ -2721,7 +2724,6 @@
     },
     {
       "_id": "gwRitWardRoom000",
-      "_key": "!actors.items!QCFUb5jVFgHVJx6R.gwRitWardRoom000",
       "name": "GHOSTWIRE.Gear.Items.RitualWardTheRoom.Name",
       "type": "treasure",
       "img": "icons/sundries/scrolls/scroll-bound-red-tan.webp",
@@ -2752,7 +2754,6 @@
           "goal": null
         }
       },
-      "effects": [],
       "folder": "gwGearRitualForm",
       "sort": 1000,
       "ownership": {
@@ -2785,7 +2786,9 @@
             "learned": true
           }
         }
-      }
+      },
+      "effects": [],
+      "_key": "!actors.items!QCFUb5jVFgHVJx6R.gwRitWardRoom000"
     }
   ],
   "effects": [],

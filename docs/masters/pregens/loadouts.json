@@ -118,6 +118,15 @@
     "rituals": [
       "src/packs/gear/general/ritual-formulas/ward-the-room.json"
     ],
+    "mods": [
+      {
+        "path": "src/packs/matrix/payloads/whiteout.json",
+        "quantity": 2,
+        "installedOn": "bo3o1nPpbkYDocLz",
+        "active": true,
+        "why": "0.3.45 — a Technomancer has no deck, so his Whiteout magazine is compiled into Wired Native (the class Item that is his host); two fires loaded."
+      }
+    ],
     "chrome": [
       {
         "path": "src/packs/chrome/cyber-ears-soft.json",

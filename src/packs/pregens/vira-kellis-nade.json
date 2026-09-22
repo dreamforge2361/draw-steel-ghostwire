@@ -97,7 +97,7 @@
       "xp": 0,
       "victories": 0,
       "renown": 1,
-      "wealth": 1
+      "wealth": 250
     },
     "skills": {
       "value": [
@@ -1639,7 +1639,6 @@
     },
     {
       "_id": "odaoLD5Zsk55krGJ",
-      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.odaoLD5Zsk55krGJ",
       "name": "GHOSTWIRE.Kits.FabricatorsBench.Name",
       "type": "kit",
       "img": "icons/tools/hand/wrench-steel-grey.webp",
@@ -1708,13 +1707,14 @@
           "disengage": 1
         }
       },
-      "effects": [],
       "folder": "lTAM6n9BAFj6DzOA",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "flags": {}
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.odaoLD5Zsk55krGJ"
     },
     {
       "_id": "38GL2Yy4oPm8tSZw",
@@ -2697,7 +2697,6 @@
     },
     {
       "_id": "IYZfD6QGPHPpFknO",
-      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.IYZfD6QGPHPpFknO",
       "name": "GHOSTWIRE.Kits.FabricatorsBench.Signature.Name",
       "type": "ability",
       "img": "icons/weapons/guns/gun-pistol-flintlock-metal.webp",
@@ -2825,13 +2824,14 @@
           }
         }
       },
-      "effects": [],
       "folder": "lTAM6n9BAFj6DzOA",
       "sort": 0,
       "ownership": {
         "default": 0
       },
-      "flags": {}
+      "flags": {},
+      "effects": [],
+      "_key": "!actors.items!8jyyJ1eq3XQnJ95X.IYZfD6QGPHPpFknO"
     },
     {
       "_id": "uPwkJ2WIJaWhNvLH",
@@ -3420,6 +3420,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "matrix": {
             "echelon": 1,
             "availability": "professional",
@@ -3593,6 +3596,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "gear": {
             "echelon": 1,
             "availability": "street",
@@ -3707,6 +3713,9 @@
       },
       "flags": {
         "draw-steel-ghostwire": {
+          "wired": {
+            "connectInterface": true
+          },
           "chrome": {
             "grade": "standard",
             "location": "head",
@@ -3755,14 +3764,14 @@
       "pregen": "vira-kellis-nade",
       "biSpent": 1,
       "biRemaining": 19,
+      "integrity": {
+        "value": 19,
+        "max": 20
+      },
       "changer": {
         "humanArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.webp",
         "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-hybrid.webp",
         "beastArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-beast.webp"
-      },
-      "integrity": {
-        "value": 19,
-        "max": 20
       },
       "taint": 0,
       "corruptionHistory": ""

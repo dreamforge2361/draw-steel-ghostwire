@@ -1,0 +1,18 @@
+{
+  "_note": [
+    "F4 (0.3.93) — post-build field patches for tools/pregens-to-actors.mjs.",
+    "Anything you would otherwise hand-edit onto a built src/packs/pregens/*.json belongs here, so",
+    "`node tools/pregens-to-actors.mjs` stays safe to re-run. The generator deep-merges `_all` into",
+    "every hero and then the per-slug block (per-slug wins); arrays and scalars replace wholesale.",
+    "Identity (class, kit, ancestry, abilities, portrait) belongs in the generator's ROSTER instead,",
+    "and gear / chrome / rituals / installed mods belong in loadouts.json. Smoke: node tools/pregen-regen-smoke.mjs"
+  ],
+  "_all": {
+    "flags": {
+      "draw-steel-ghostwire": {
+        "taint": 0,
+        "corruptionHistory": ""
+      }
+    }
+  }
+}

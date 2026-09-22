@@ -22,9 +22,15 @@ Lore prose harvested for the Ghostwire print booklet. Artwork/lore from master P
 | `L3-ossian-reach-color.md` | Reach fixtures, Flats/black-water color, street gangs, Ashenreach sister-hive |
 | `L4-voidmark.md` | **VOIDMARK** — leash-slipped Wired super-AI (MER origin); Foundry chat persona |
 | `L5-hands-off-accords.md` | **Hands Off Accords** — AI legal; AI-on-actuators restricted; Dark bot war = escalation fuel |
+| `L6-measure-collegium.md` | **Measure Collegium** — ward inspectors; the True Measure; Datum House; Senior Examiner Edda Marr (locked 2026-09-22) |
+| `L7-wickkeepers.md` | **Wickkeepers** — mutual-aid shelter network; the Sheltered Wick; the Last Kettle; Tavi Sorn (locked 2026-09-22) |
+| `L8-ash-survey.md` | **Ash Survey** — contamination and thin-place fieldwork; the Held Fault; the Cinder Yard; Daska Venn (locked 2026-09-22) |
 
 ## Policy
 
 - Lore prose OK to carry; do **not** paste Draw Steel Heroes rules or overwrite `docs/raw/`.
+- L6–L8 are **Director canon supplements**, not PDF harvest — sources of record are
+  `docs/directors/lore-research/2026-09-22-magical-societies-canon-three.md` and `…-symbols-hq.md`.
+  Their adventure hooks stay optional; do not promote them to settled history.
 - Strip page chrome / repeated headers / TOC junk.
 - Reach Handbook journals are **not** reprinted here — L3 is optional street color only.

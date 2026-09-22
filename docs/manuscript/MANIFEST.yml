@@ -67,6 +67,24 @@ entries:
     path: 01-lore/L5-hands-off-accords.md
     kind: lore
 
+  - type: file
+    id: L6
+    title: The Measure Collegium
+    path: 01-lore/L6-measure-collegium.md
+    kind: lore
+
+  - type: file
+    id: L7
+    title: The Wickkeepers
+    path: 01-lore/L7-wickkeepers.md
+    kind: lore
+
+  - type: file
+    id: L8
+    title: The Ash Survey
+    path: 01-lore/L8-ash-survey.md
+    kind: lore
+
   - type: part
     id: I
     title: Part I — Core Rules

@@ -9,6 +9,12 @@
 // B59: advancement recursion and roster ability seeds are level-gated (see tools/lib/pregen-level-gate.mjs).
 // Smoke: node tools/pregen-level-gate-smoke.mjs
 //
+// F4 (0.3.93): a regen is safe to re-run. Everything that used to be hand-patched onto the built
+// actors — portraits, Changer form art, class level, Taint/Corruption History, Sabbat's installed
+// Whiteout — now comes from this roster, docs/masters/pregens/loadouts.json or
+// docs/masters/pregens/post-patches.json, so this script reproduces src/packs/pregens/ byte for
+// byte. Smoke: node tools/pregen-regen-smoke.mjs
+//
 // Run:  node tools/pregens-to-actors.mjs   then   node tools/build-packs.mjs   (Foundry closed)
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from "node:fs";
@@ -22,6 +28,10 @@ import {
 const MODULE_ID = "draw-steel-ghostwire";
 const OUT = "src/packs/pregens";
 const LOADOUTS = "docs/masters/pregens/loadouts.json";
+const POST_PATCHES = "docs/masters/pregens/post-patches.json";
+// Starting yen on every pregen sheet. scripts/kiosk.mjs spends system.hero.wealth against Gear
+// prices, so this is a balance the table can actually shop with, not a Draw Steel wealth tier.
+const START_WEALTH = 250;
 const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const stableId = seed => [...createHash("sha256").update("gw-pregens:" + seed).digest()].slice(0, 16).map(b => B62[b % 62]).join("");
 const read = p => JSON.parse(readFileSync(p, "utf8"));
@@ -58,7 +68,9 @@ const ROSTER = [
     kit: "ranged/saturation", background: "sprawl-district", profession: "fixer",
     skills: ["command", "negotiation", "streetwise", "intimidation"],
     bio: "Nine feet of grey demolition plate and a voice that gets crews paid. The Foreman brokers work in the sprawl and expects the word he gives to be kept.",
-    abilities: ["a-word", "battle-cry", "command-presence"],
+    // 0.1.92: Battle Cry is the Street Fixer's table presence; Command Persona / Fearful Awe was
+    // stripped off the built actor by hand. Dropping it here keeps a regen from re-adding it.
+    abilities: ["a-word", "battle-cry"],
   },
   {
     key: "Wren", slug: "wren-sable-corvin", name: "Wren Sable-Corvin", handle: "the Kite",
@@ -66,7 +78,7 @@ const ROSTER = [
     traits: ["changer-forms-trait", "raven-lineage-trait", "beast-movement-trait"],
     kit: "ranged/longshot", background: "transit-hub", profession: "courier",
     skills: ["stealth", "perception", "survival", "acrobatics"],
-    beastArt: "wren-sable-corvin-beast.webp",
+    changerArt: { hybrid: "wren-sable-corvin-hybrid", beast: "wren-sable-corvin-beast" },
     bio: "A Changer of the Raven lineage who works the rooftops and the sightlines above the Flats. She sees the run before the crew walks into it.",
     abilities: ["quarry", "steady-the-scope"], // careful-observation is L3 (B59 level-gate)
   },
@@ -83,8 +95,12 @@ const ROSTER = [
     key: "Vira", slug: "vira-kellis-nade", name: "Vira Kellis-Nade", handle: "the Warren-Wire",
     cls: "wrench", subclass: "drone-jockey", ancestry: "changer",
     traits: ["changer-forms-trait", "rat-lineage-trait", "beast-hide-trait"],
-    kit: "tech/riggers-harness", background: "undercity-barrens", profession: "rig-tech",
+    // 0.1.92: Rigger's Harness -> Fabricator's Bench for the Drone Jockey (was a hand-edit on the
+    // built actor; it lives here now so a regen keeps it). See PREGEN-WALKTHROUGH-AUDIT.md.
+    kit: "tech/fabricators-bench", background: "undercity-barrens", profession: "rig-tech",
     skills: ["rigging", "gunnery", "repair", "electronics"],
+    art: "vira-kellis-nade-human",
+    changerArt: { hybrid: "vira-kellis-nade-hybrid", beast: "vira-kellis-nade-beast" },
     bio: "A Changer of the Rat lineage who fights through a fleet she built herself, in warrens she knows nine ways out of. Every drone is a door she left open.",
     abilities: ["deploy-and-command", "rigged-fire", "field-repair"],
   },
@@ -202,8 +218,34 @@ function embed(actorId, source, warn) {
   };
 }
 
+/**
+ * Portrait art lives in assets/pregens/. It shipped as PNG and was compressed to WebP in 0.1.87, and a
+ * hero may point at a file that is not <slug> (Vira's portrait is her Changer human form). Trying both
+ * extensions, and honouring `hero.art`, is what stops a regen from stamping every sheet with
+ * mystery-man — the single worst thing a re-run used to do. (F4)
+ */
+function artPath(base) {
+  if (!base) return null;
+  const stem = String(base).replace(/\.(webp|png)$/i, "");
+  for (const ext of [".webp", ".png"]) if (existsSync(`assets/pregens/${stem}${ext}`)) return `modules/${MODULE_ID}/assets/pregens/${stem}${ext}`;
+  return null;
+}
+
+/** Recursive object merge used by the post-patch step; arrays and scalars replace wholesale. */
+function deepMerge(target, patch) {
+  for (const [k, v] of Object.entries(patch ?? {})) {
+    if (v && typeof v === "object" && !Array.isArray(v)) target[k] = deepMerge(target[k] && typeof target[k] === "object" && !Array.isArray(target[k]) ? target[k] : {}, v);
+    else target[k] = v;
+  }
+  return target;
+}
+
 const loadouts = existsSync(LOADOUTS) ? read(LOADOUTS) : {};
 if (!existsSync(LOADOUTS)) console.log(`(no ${LOADOUTS} — building without gear, chrome or languages)`);
+// F4: post-build field patches that are not gear and not roster identity (Taint, Corruption History,
+// anything a future pass would otherwise hand-edit onto the built JSON). `_all` applies to every
+// hero, then the per-slug block. See post-patches.json's own `_note`.
+const postPatches = existsSync(POST_PATCHES) ? read(POST_PATCHES) : {};
 
 mkdirSync(OUT, { recursive: true });
 for (const entry of readdirSync(OUT)) rmSync(join(OUT, entry), { recursive: true, force: true });
@@ -271,6 +313,20 @@ for (const [i, hero] of ROSTER.entries()) {
     formula.flags[MODULE_ID].ritual.learned = true;
     kitItems.push(formula);
   }
+  // F4 (0.3.93): matrix mods/payloads that ship already installed on a host Item the hero holds —
+  // Sabbat's Whiteout magazine sits in his Wired Native slot (0.3.45), which used to be a hand-edit.
+  for (const m of loadout.mods ?? []) {
+    if (!existsSync(m.path)) { warn.push(`loadout mod ${m.path} missing`); continue; }
+    const mod = read(m.path);
+    if (m.quantity != null) mod.system.quantity = m.quantity;
+    Object.assign(mod.flags[MODULE_ID].mod, {
+      ...(m.installedOn ? { installedOn: m.installedOn } : {}),
+      ...(m.active != null ? { active: m.active } : {}),
+    });
+    if (m.installedOn && !kitItems.some(k => k._id === m.installedOn) && !granted.items.some(g => g._id === m.installedOn))
+      warn.push(`mod ${mod.system._dsid} installs on ${m.installedOn}, which this hero does not hold`);
+    kitItems.push(mod);
+  }
 
   const core = cls.system.characteristics?.core ?? [];
   const ordered = [...core, ...ALL_CHARS.filter(c => !core.includes(c))];
@@ -280,7 +336,7 @@ for (const [i, hero] of ROSTER.entries()) {
   const stamina = Number(cls.system.stamina?.starting ?? 20) + kitStamina;
   const recoveries = Number(cls.system.recoveries ?? 8);
 
-  const img = existsSync(`assets/pregens/${hero.slug}.png`) ? `modules/${MODULE_ID}/assets/pregens/${hero.slug}.png` : "icons/svg/mystery-man.svg";
+  const img = artPath(hero.art ?? hero.slug) ?? "icons/svg/mystery-man.svg";
   if (img.endsWith("mystery-man.svg")) warn.push("no portrait — placeholder art");
 
   const nameKey = `GHOSTWIRE.Pregens.Actors.${hero.key}.Name`;
@@ -292,6 +348,10 @@ for (const [i, hero] of ROSTER.entries()) {
 
   const languages = [...new Set([...(loadout.languages ?? []), ...granted.languages])];
   const items = [...granted.items, ...kitItems].map(s => embed(actorId, s, warn)).filter(Boolean);
+  // Draw Steel stores the hero's level on the class Item, not the Actor. This used to run *after*
+  // writeFileSync, so it never reached disk (0.1.89 patched the built JSON by hand and 0.1.91 lost
+  // it again on Kessic) — it has to happen before the Actor is assembled. (F4)
+  for (const it of items) if (it.type === "class") it.system = { ...(it.system ?? {}), level: targetLevel };
   const biSpent = (loadout.chrome ?? []).reduce((n, c) => n + Number(c.bi ?? 0), 0);
   if (biSpent > 20) warn.push(`chrome spends ${biSpent} Body Integrity — over the 20 cap`);
 
@@ -311,7 +371,10 @@ for (const [i, hero] of ROSTER.entries()) {
       source: { book: "Ghostwire Dossiers & Fiction", page: hero.name, license: "Draw Steel Creator License" },
       negotiation: { interest: 5, patience: 5, motivations: [], pitfalls: [], impression: 1 },
       recoveries: { value: recoveries },
-      hero: { primary: { value: 0 }, epic: { value: 0 }, surges: 0, xp: 0, victories: 0, renown: 1, wealth: 1 },
+      // 0.3.93: every hero walks in with ¥250 of spending money (Michael's lock). Wealth 1 is the
+      // Draw Steel starting *tier*; Ghostwire sheets read this field as yen, so the roster carries
+      // cash a crew can actually spend between runs. Living here keeps a regen from resetting it.
+      hero: { primary: { value: 0 }, epic: { value: 0 }, surges: 0, xp: 0, victories: 0, renown: 1, wealth: START_WEALTH },
       skills: { value: granted.skills },
       statuses: { immunities: [] },
     },
@@ -328,17 +391,21 @@ for (const [i, hero] of ROSTER.entries()) {
           biRemaining: 20 - biSpent,
           // Sheet reads integrity.value/max (not biRemaining alone) — keep both in sync.
           integrity: { value: 20 - biSpent, max: 20 },
-        // Changer form art: the sheet and default token use the human portrait; Beast form art
-        // lives here so a form-change pass (or a Director) can swap the token texture to it.
-        ...(hero.beastArt ? { changer: { humanArt: img, beastArt: `modules/${MODULE_ID}/assets/pregens/${hero.beastArt}` } } : {}),
+        // Changer form art: the sheet and default token use the human portrait; Hybrid and Beast
+        // art live here so syncChangerFormArt (B50) can swap the sheet and token textures to them.
+        ...(hero.changerArt ? { changer: {
+          humanArt: img,
+          ...(artPath(hero.changerArt.hybrid) ? { hybridArt: artPath(hero.changerArt.hybrid) } : {}),
+          ...(artPath(hero.changerArt.beast) ? { beastArt: artPath(hero.changerArt.beast) } : {}),
+        } } : {}),
       },
     },
   };
+  // F4: `_all` first, then this hero's block, so a per-hero value wins.
+  deepMerge(actor, postPatches._all ?? {});
+  deepMerge(actor, postPatches[hero.slug] ?? {});
+
   writeFileSync(join(OUT, `${hero.slug}.json`), JSON.stringify(actor, null, 2) + "\n");
-  // Ensure Draw Steel class level is 1 (DS stores level on the class item, not the actor).
-  for (const it of items) {
-    if (it.type === "class") it.system = { ...(it.system ?? {}), level: 1 };
-  }
 
   report.push({ hero: hero.name, stamina, items: items.length, skills: granted.skills.length, languages: languages.length, biSpent, warn, log });
 }

@@ -1,0 +1,298 @@
+{
+  "_id": "Avl7X1CKsjuCInNJ",
+  "_key": "!journal!Avl7X1CKsjuCInNJ",
+  "name": "GHOSTWIRE.Lore.Journals.Wickkeepers",
+  "folder": "gwLorePackSoc000",
+  "sort": 200000,
+  "categories": [],
+  "pages": [
+    {
+      "_id": "qpeP5zw2JKFJD4g7",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.qpeP5zw2JKFJD4g7",
+      "name": "Overview",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Sheltered Wick — Wickkeepers](modules/draw-steel-ghostwire/assets/factions/magical-societies/wickkeepers-symbol-512.webp)\n\n*The Sheltered Wick — Wickkeepers — Ghostwire AI (AI-generated)*\n\n**Status:** canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22  \n**Symbol:** The Sheltered Wick · **Local hub:** The Last Kettle (the Flats)  \n**Contact:** **Tavi Sorn** — Pure Human kitchen organizer, no casting ability  \n**Print:** Lore harvest — magical societies (L6–L8)  \n**Related:** Measure Collegium (L6), Ash Survey (L8), Religion & the dispersed faithful (L1)",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/factions/magical-societies/wickkeepers-symbol-512.webp\" alt=\"The Sheltered Wick — Wickkeepers\" /></p>\n<p><em>The Sheltered Wick — Wickkeepers — Ghostwire AI (AI-generated)</em></p>\n<p><strong>Status:</strong> canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22<br />\n<strong>Symbol:</strong> The Sheltered Wick · <strong>Local hub:</strong> The Last Kettle (the Flats)<br />\n<strong>Contact:</strong> <strong>Tavi Sorn</strong> — Pure Human kitchen organizer, no casting ability<br />\n<strong>Print:</strong> Lore harvest — magical societies (L6–L8)<br />\n<strong>Related:</strong> Measure Collegium (L6), Ash Survey (L8), Religion &amp; the dispersed faithful (L1)</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "mdbg9Fw8JJ16P21w",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.mdbg9Fw8JJ16P21w",
+      "name": "Who they are",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Wickkeepers are a decentralized mutual-aid network providing safe rooms, meals, transport, and witness routes for people that sanctioned institutions refuse or endanger. Their promise is practical, and deliberately small: **\"Keep someone else here until morning.\"**\n\nA chipped amber lamp behind a counter can mark a local point of contact. Shelter information is kept offline, contacts are personal, and neighbors do most of the work. Casters are a minority, not a ruling caste within the network.\n\n---",
+        "content": "<p>The Wickkeepers are a decentralized mutual-aid network providing safe rooms, meals, transport, and witness routes for people that sanctioned institutions refuse or endanger. Their promise is practical, and deliberately small: <strong>\"Keep someone else here until morning.\"</strong></p>\n<p>A chipped amber lamp behind a counter can mark a local point of contact. Shelter information is kept offline, contacts are personal, and neighbors do most of the work. Casters are a minority, not a ruling caste within the network.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "mh9KQtqUqTDMCd7X",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.mh9KQtqUqTDMCd7X",
+      "name": "Aid without a new church",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Wickkeepers support genuinely faithful people without claiming to speak for the Light. **No central authority can declare a member holy, grant Conviction, or command every local group.** Faith stays personal.\n\n- **What they hold:** Trusted doors, small stores of supplies, local knowledge, and people willing to take an inconvenient shift.\n- **What members receive:** Requests for shelter, introductions, food, transport, or help moving vulnerable people — answered as resources allow.\n- **What members owe:** Time, discretion, practical help, and a willingness to aid people who cannot repay them.\n- **Internal dispute:** Some local groups want public legitimacy to protect their shelters; others fear registration would become a list of future disappearances.\n- **Religious boundary:** The network is not identical to the hidden remnant and does not represent all Street-Priests. Cooperation is personal and voluntary.\n\n---",
+        "content": "<p>The Wickkeepers support genuinely faithful people without claiming to speak for the Light. <strong>No central authority can declare a member holy, grant Conviction, or command every local group.</strong> Faith stays personal.</p>\n<ul>\n<li><strong>What they hold:</strong> Trusted doors, small stores of supplies, local knowledge, and people willing to take an inconvenient shift.</li>\n<li><strong>What members receive:</strong> Requests for shelter, introductions, food, transport, or help moving vulnerable people — answered as resources allow.</li>\n<li><strong>What members owe:</strong> Time, discretion, practical help, and a willingness to aid people who cannot repay them.</li>\n<li><strong>Internal dispute:</strong> Some local groups want public legitimacy to protect their shelters; others fear registration would become a list of future disappearances.</li>\n<li><strong>Religious boundary:</strong> The network is not identical to the hidden remnant and does not represent all Street-Priests. Cooperation is personal and voluntary.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "5O8ZoObAhzSXlzes",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.5O8ZoObAhzSXlzes",
+      "name": "Tavi Sorn",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Tavi Sorn is a **Pure Human** kitchen organizer with no casting ability. Her strengths are remembering names, organizing scarce resources, and recognizing when official help will make a frightened person's situation worse.\n\nTavi coordinates local work rather than commanding the whole network. She can ask for volunteers and negotiate access, but a request from her does not obligate every Wickkeeper cell in the Reach.\n\n---",
+        "content": "<p>Tavi Sorn is a <strong>Pure Human</strong> kitchen organizer with no casting ability. Her strengths are remembering names, organizing scarce resources, and recognizing when official help will make a frightened person's situation worse.</p>\n<p>Tavi coordinates local work rather than commanding the whole network. She can ask for volunteers and negotiate access, but a request from her does not obligate every Wickkeeper cell in the Reach.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "Tyff7FrE0NiCdhjg",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.Tyff7FrE0NiCdhjg",
+      "name": "The symbol: the Sheltered Wick",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "A small amber flame sits above a dark wick and chipped lamp bowl, protected by two separated hood-like strokes. The roughened bowl and imperfect symmetry make it feel maintained by people rather than issued by a corporate identity office.\n\n- **Meaning:** Shelter does not create the flame, own it, or promise it will never go out. It keeps the weather off long enough for someone to make it through the night.\n- **Palette:** Aged amber brass and charcoal. No dazzling white aura, no holy halo, no corporate cyan rim, no mandatory magical effect.\n- **Where it appears:** A small mark inside a door jamb, an apron patch, the reverse of a pantry tag, or a palm-sized plate visible only after approaching a trusted entrance.\n- **Safety rule:** There is no public citywide shelter directory and no large emblem identifying every refuge. The symbol alone is never enough to establish trust — recognition is personal, and revocable.\n\n---",
+        "content": "<p>A small amber flame sits above a dark wick and chipped lamp bowl, protected by two separated hood-like strokes. The roughened bowl and imperfect symmetry make it feel maintained by people rather than issued by a corporate identity office.</p>\n<ul>\n<li><strong>Meaning:</strong> Shelter does not create the flame, own it, or promise it will never go out. It keeps the weather off long enough for someone to make it through the night.</li>\n<li><strong>Palette:</strong> Aged amber brass and charcoal. No dazzling white aura, no holy halo, no corporate cyan rim, no mandatory magical effect.</li>\n<li><strong>Where it appears:</strong> A small mark inside a door jamb, an apron patch, the reverse of a pantry tag, or a palm-sized plate visible only after approaching a trusted entrance.</li>\n<li><strong>Safety rule:</strong> There is no public citywide shelter directory and no large emblem identifying every refuge. The symbol alone is never enough to establish trust — recognition is personal, and revocable.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "RZh4CX4sDXZtSyS3",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.RZh4CX4sDXZtSyS3",
+      "name": "Local headquarters: the Last Kettle",
+      "type": "text",
+      "sort": 600000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "![The Last Kettle — night kitchen and local coordination hub](modules/draw-steel-ghostwire/assets/factions/magical-societies/wickkeepers-last-kettle.webp)\n\n*The Last Kettle — night kitchen and local coordination hub — Ghostwire AI (AI-generated)*\n\nThe Last Kettle is a converted laundromat and night kitchen beneath an old lift concourse in the **Flats**. It is Tavi Sorn's local coordination hub and one useful home for the network — **not** the Wickkeepers' global headquarters, central church, or authority over other cells.\n\nIts public work is ordinary and visible: hot food, washing, dry clothes, and a place to sit briefly out of the rain. Private assistance is arranged through people rather than displayed on a front-door menu.\n\n> **Read aloud**\n> Amber steam clouds the kitchen window while old washing drums turn behind the next pane. A dry bench fits beneath a patched awning, and someone has set clean cups beside a kettle too battered to belong in a licensed café. The little lamp mark is inside the doorway, where you would only notice it after deciding to step in.\n\n---",
+        "content": "<p><img src=\"modules/draw-steel-ghostwire/assets/factions/magical-societies/wickkeepers-last-kettle.webp\" alt=\"The Last Kettle — night kitchen and local coordination hub\" /></p>\n<p><em>The Last Kettle — night kitchen and local coordination hub — Ghostwire AI (AI-generated)</em></p>\n<p>The Last Kettle is a converted laundromat and night kitchen beneath an old lift concourse in the <strong>Flats</strong>. It is Tavi Sorn's local coordination hub and one useful home for the network — <strong>not</strong> the Wickkeepers' global headquarters, central church, or authority over other cells.</p>\n<p>Its public work is ordinary and visible: hot food, washing, dry clothes, and a place to sit briefly out of the rain. Private assistance is arranged through people rather than displayed on a front-door menu.</p>\n<blockquote>\n  <p><strong>Read aloud</strong>\n  Amber steam clouds the kitchen window while old washing drums turn behind the next pane. A dry bench fits beneath a patched awning, and someone has set clean cups beside a kettle too battered to belong in a licensed café. The little lamp mark is inside the doorway, where you would only notice it after deciding to step in.</p>\n</blockquote>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "58LJpBV4uSSdO3JT",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.58LJpBV4uSSdO3JT",
+      "name": "Spaces that matter",
+      "type": "text",
+      "sort": 700000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "- **The Night Window:** A public serving counter and dry waiting bench. No testimony, conversion, or confession is required to receive a meal.\n- **The Wash Room:** Laundry machines, drying racks, repair supplies, and the everyday excuse for coming and going. Practical cover — not proof that every customer knows about the network.\n- **The Back Table:** A small room for private conversations and short-term coordination. It holds current needs, not a master list of every Wickkeeper in the city.\n- **The Upstairs Rooms:** A limited number of temporary beds behind plain curtains and ordinary doors. Capacity is finite, and someone must decide what happens when every bed is occupied.\n- **The Service Passage:** A rear delivery route into the local maintenance circulation. Another way out — neither secret to everyone, nor guaranteed clear.\n\n---",
+        "content": "<ul>\n<li><strong>The Night Window:</strong> A public serving counter and dry waiting bench. No testimony, conversion, or confession is required to receive a meal.</li>\n<li><strong>The Wash Room:</strong> Laundry machines, drying racks, repair supplies, and the everyday excuse for coming and going. Practical cover — not proof that every customer knows about the network.</li>\n<li><strong>The Back Table:</strong> A small room for private conversations and short-term coordination. It holds current needs, not a master list of every Wickkeeper in the city.</li>\n<li><strong>The Upstairs Rooms:</strong> A limited number of temporary beds behind plain curtains and ordinary doors. Capacity is finite, and someone must decide what happens when every bed is occupied.</li>\n<li><strong>The Service Passage:</strong> A rear delivery route into the local maintenance circulation. Another way out — neither secret to everyone, nor guaranteed clear.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "HPj59CObNz9xoZIA",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.HPj59CObNz9xoZIA",
+      "name": "Access and pressure",
+      "type": "text",
+      "sort": 800000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "Tavi coordinates this site through persuasion, work, and local trust. She cannot order distant groups to accept a guest, and the Last Kettle does not replace the scattered faithful or Choirmother's established community.\n\nSafety comes from watchful volunteers, discreet introductions, shutters, ordinary locks, limited records, and contingency plans. The building is not a fortress, and safety never depends on pretending that a chalk symbol can protect everyone.\n\n- **Immediate pressure:** A growing queue competes with shrinking fuel and food stocks. Help offered on generous terms arrives with invasive conditions.\n- **Location secret:** A restricted aid agreement grants more access to delivery and recipient records than the local volunteers understood. If used, this makes the Last Kettle the shelter implicated in the network's established supply compromise — do not duplicate that plot across every refuge.\n- **Job seed:** Bring back a missing delivery without exposing the people waiting for it. The driver is hiding because the cargo paperwork would identify a protected witness.\n\n---",
+        "content": "<p>Tavi coordinates this site through persuasion, work, and local trust. She cannot order distant groups to accept a guest, and the Last Kettle does not replace the scattered faithful or Choirmother's established community.</p>\n<p>Safety comes from watchful volunteers, discreet introductions, shutters, ordinary locks, limited records, and contingency plans. The building is not a fortress, and safety never depends on pretending that a chalk symbol can protect everyone.</p>\n<ul>\n<li><strong>Immediate pressure:</strong> A growing queue competes with shrinking fuel and food stocks. Help offered on generous terms arrives with invasive conditions.</li>\n<li><strong>Location secret:</strong> A restricted aid agreement grants more access to delivery and recipient records than the local volunteers understood. If used, this makes the Last Kettle the shelter implicated in the network's established supply compromise — do not duplicate that plot across every refuge.</li>\n<li><strong>Job seed:</strong> Bring back a missing delivery without exposing the people waiting for it. The driver is hiding because the cargo paperwork would identify a protected witness.</li>\n</ul>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "6W00Ih0oTUyctLyN",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.6W00Ih0oTUyctLyN",
+      "name": "Standing and liability",
+      "type": "text",
+      "sort": 900000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The Wickkeepers work the same neighborhoods as fixers, territorial gangs, unlicensed healers, and the Radiant Concord's charitable operations. They must negotiate practical access without surrendering the people they shelter.\n\nOne shelter accepted Concord supplies during a shortage. Its volunteers do not know how much information the aid agreement exposes. **That compromise does not make the whole network a Concord front.**\n\nChoirmother remains a separate established character with her own story — not the Wickkeepers' founder or secret commander. Referrals through Mama and personal connections to Brother Ash are available campaign connections, not automatic membership and not new biography. Fixers may send people here through trusted contacts; Mama's ownership, Brother Ash's membership, and any permanent gang agreement are **not** implied by the location.\n\n---",
+        "content": "<p>The Wickkeepers work the same neighborhoods as fixers, territorial gangs, unlicensed healers, and the Radiant Concord's charitable operations. They must negotiate practical access without surrendering the people they shelter.</p>\n<p>One shelter accepted Concord supplies during a shortage. Its volunteers do not know how much information the aid agreement exposes. <strong>That compromise does not make the whole network a Concord front.</strong></p>\n<p>Choirmother remains a separate established character with her own story — not the Wickkeepers' founder or secret commander. Referrals through Mama and personal connections to Brother Ash are available campaign connections, not automatic membership and not new biography. Fixers may send people here through trusted contacts; Mama's ownership, Brother Ash's membership, and any permanent gang agreement are <strong>not</strong> implied by the location.</p>\n<hr />"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    },
+    {
+      "_id": "6Wl9XfPVWdjQJSL3",
+      "_key": "!journal.pages!Avl7X1CKsjuCInNJ.6Wl9XfPVWdjQJSL3",
+      "name": "Director boundaries",
+      "type": "text",
+      "sort": 1000000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "text": {
+        "format": 2,
+        "markdown": "The material below is play fuel, not settled history.\n\n- **Before Protective Relocation:** Move an unlicensed healer and several patients before officials collect them for \"protective relocation.\" The healer's work is genuine, but an embarrassing lie complicates any public defense of them.\n- **Optional escalation:** Resource shortage → conditional charity accepted → shelter names exposed → residents targeted for removal.\n- **Hold the line:** Aid can be genuinely helpful without concealing a trap. **Do not make every safe room another false refuge.**\n\nCharitable aid does not remove the Veil's Price and does not guarantee a dangerous site can be cleansed. Costs stay real.",
+        "content": "<p>The material below is play fuel, not settled history.</p>\n<ul>\n<li><strong>Before Protective Relocation:</strong> Move an unlicensed healer and several patients before officials collect them for \"protective relocation.\" The healer's work is genuine, but an embarrassing lie complicates any public defense of them.</li>\n<li><strong>Optional escalation:</strong> Resource shortage → conditional charity accepted → shelter names exposed → residents targeted for removal.</li>\n<li><strong>Hold the line:</strong> Aid can be genuinely helpful without concealing a trap. <strong>Do not make every safe room another false refuge.</strong></li>\n</ul>\n<p>Charitable aid does not remove the Veil's Price and does not guarantee a dangerous site can be cleansed. Costs stay real.</p>"
+      },
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {}
+    }
+  ],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "source": "docs/manuscript/01-lore/L7-wickkeepers.md"
+    }
+  }
+}
