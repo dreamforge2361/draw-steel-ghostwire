@@ -113,6 +113,8 @@ Each archetype scales along the same hybrid band ladder described below, but its
 
 The Technomancer's sprites follow the same "extension vs. independent" ladder the Veil chapter uses for summons. Each step on that ladder is a **sprite rank**:
 
+*Table question — "when does my sprite get a turn?" — see FAQ `28-constructs-pets-faq.md`.*
+
 | Rank | Levels | Behavior |
 |---|---|---|
 | **Minor (extension)** | 1-3 | Sprites act **as extensions of the Technomancer** — on the Technomancer's own turn, sharing the Technomancer's intent. No separate initiative. This is the Compile Sprite signature's default mode. |

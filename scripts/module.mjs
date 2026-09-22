@@ -35,6 +35,7 @@ import { registerNightjarMarketScene } from "./nightjar-market-scene.mjs";
 import { registerTaint } from "./taint.mjs";
 import { registerKiosk } from "./kiosk.mjs";
 import { registerConsumableUse } from "./consumable-use.mjs";
+import { registerRituals } from "./rituals.mjs";
 import { registerTokenVision } from "./token-vision.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -117,6 +118,7 @@ Hooks.once("init", () => {
   registerNightjarMarketScene();
   registerKiosk();
   registerConsumableUse();
+  registerRituals();
   registerTokenVision();
 });
 

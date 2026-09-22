@@ -7897,7 +7897,8 @@
         "CorruptionTaint": "Corruption & Taint",
         "Machines": "Machines: Drones, Vehicles & Buildings",
         "Opposition": "Opposition (Director)",
-        "LifestyleDowntime": "Lifestyle & Downtime"
+        "LifestyleDowntime": "Lifestyle & Downtime",
+        "ConstructsPetsFaq": "Constructs & Pets — Action Economy FAQ"
       }
     },
     "WiredFlats": {
@@ -8015,6 +8016,20 @@
       "Crash": "{actor} comes down off {item}.",
       "Chat": {
         "Used": "<p><strong>{actor}</strong> takes <strong>{item}</strong>.</p>"
+      }
+    },
+    "Ritual": {
+      "Menu": {
+        "MarkLearned": "Mark learned",
+        "MarkUnlearned": "Mark unlearned"
+      },
+      "Learned": "{actor} has learned {item}.",
+      "Unlearned": "{item} is no longer learned.",
+      "SheetLearned": "Learned — may be sealed with the Formula present.",
+      "SheetNotLearned": "Not learned — study it until the Director marks it learned.",
+      "Chat": {
+        "Learned": "<p><strong>{actor}</strong> has learned <strong>{item}</strong>. The Formula must still be present at sealing.</p>",
+        "Unlearned": "<p><strong>{item}</strong> is no longer learned — the study does not hold.</p>"
       }
     },
     "PayloadUse": {

@@ -81,7 +81,7 @@ Agents are software constructs you compile from your deck — **Probe** (recon /
 
 **Agent cap.** At 1st level you may have up to **2 Agents** compiled at once. The cap rises to **3** at 5th level and **4** at 8th. Caps do not stack — use the single highest number you qualify for. (A later Controller "Weaver-like" bump is parked.)
 
-**Bands.** The Agent you compile is chosen by your current level, every time:
+**Bands.** The Agent you compile is chosen by your current level, every time. *Table question — "when does my Agent get a turn?" — see FAQ `28-constructs-pets-faq.md`.*
 
 | Rank | Levels | Behavior |
 |---|---|---|

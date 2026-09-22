@@ -80,7 +80,7 @@ Heroic Abilities are the Elementalist's workings -- chosen by cost band as you l
 
 **Elemental Wall** and **Conflagration/Tempest** are the two Heavy workings -- the 5-Essence releases you build your ramp toward. Wall is the controller's play: block a line, force a chokepoint, punish the room. Tempest is the blaster's play: everything in the cube takes heavy damage, and if you're willing to burn Persistent 2 you can keep detonating for -4/turn.
 
-**Summon Elemental (the pet path)** is the class's defining working:
+**Summon Elemental (the pet path)** is the class's defining working. *Extension vs. independent turn order at the table — see FAQ `28-constructs-pets-faq.md`.*
 
 - **As an extension (lower investment, levels 1–5 / early echelons):** the elemental acts on **your turn**, using your action economy -- a lash of living flame, a stone fist, a striking wind. Low bookkeeping. Damage per its own Rank (light-band = 4+chr low / 7+chr middle / 10+chr high). Persistent 2 (-4 to your Essence intake per turn while sustained).
 - **As an independent figure (higher investment, levels 7–10 / later echelons, or a properly-bound mid-level+ Elementalist):** a properly bound elemental becomes its **own figure** on the map with its own Stamina and activation on the shared round -- the true summoner fantasy. Stamina per Veil §C3 (locked); strike damage for Rank 1 / companions uses the light-band printed above — Rank 2+ strike ladders are deferred (see Veil §C3). Bind unlocks: a 1st-level Elementalist starts with a Rank 1 extension only; a 5th-level Elementalist unlocks Rank 2 independent. Persistent 4 (-8 to your Essence intake per turn while sustained).

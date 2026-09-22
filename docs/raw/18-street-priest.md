@@ -256,6 +256,8 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 *The class's defining high-Conviction play, and the headline entry of the 7-cost band, unlocked at 3rd level.*
 
+*Extension form vs. independent form at the table — see FAQ `28-constructs-pets-faq.md`.*
+
 > **Invoke the Pact**
 > *Main Action · Veil working (Pact + Summon/Bind) · Cost: 7 Conviction (Persistent 2 if the independent form results)*
 > **Bind Check:** 2d10 + **Instinct** — *not* Persona. This is the one core Street-Priest roll that keys off your secondary attribute rather than your primary; control-and-bind always runs on Instinct for this class.
