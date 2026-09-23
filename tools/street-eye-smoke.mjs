@@ -18,12 +18,13 @@ const EXPECTED = new Set([
   "rustbucket-drone",
   "rotor",
   "spotter",
-  // 0.3.98 (S8): Static Crow is a Light Air frame tagged Mark, so it satisfies the
-  // locked v1 predicate the same way Spotter and Phantom do.
-  "static-crow",
   "phantom",
 ]);
 const MUST_EXCLUDE = new Set([
+  // 0.3.99: Static Crow is a Light Air frame, but Michael dropped its Mark tag rather than
+  // widen the Street Eye gate. Its lane-painting is an EW artefact, not a scout designation,
+  // so it must stay OUT of the qualify list while Spotter (E1) and Phantom (E4) stay in.
+  "static-crow",
   "skitter",
   "junkbug",
   "crawler",

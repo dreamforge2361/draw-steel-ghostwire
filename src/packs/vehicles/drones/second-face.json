@@ -3,7 +3,7 @@
   "_key": "!items!gwSecondFaceDrn0",
   "name": "GHOSTWIRE.Vehicles.Items.SecondFace.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/creature-tank-green.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/second-face.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.SecondFace.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a518,000 in chassis salvage, drive stock, and frame, leg stock, and a link head; a prototype bench and a Director-gated parts list",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥18,000 in chassis salvage, drive stock, and frame, leg stock, and a link head; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Second Face chassis \u00b7 a single machine, unmodded."
+        "display": "one Second Face chassis · a single machine, unmodded."
       },
       "goal": 600
     }

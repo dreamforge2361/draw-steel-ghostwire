@@ -143,6 +143,8 @@ Every new hero starts with:
 - Street-band qualifying gear auto-grants **at chargen only** with the free Kit (Economy object side of the doctrine).
 - **Merc** (Operator dual-Kit): street-band qualifying gear for **both** Kits.
 - **Mods** and **chrome** are opt-in — never auto-grant. Buy with ¥ (chrome also spends Body Integrity). See `10-mods.md` and `09-chrome-body-integrity.md`.
+- A Kit taken **later** (respite swap, learned later) grants nothing — the hero owns what they own and buys the new category through ¥ + Availability.
+- **In Foundry (0.3.99):** taking the free Kit at 1st level copies that Kit's street package onto the sheet automatically, once per Kit. Which SKU answers which category: `docs/directors/kit-street-band-grants.md`. Unarmed Kits are handed nothing — fists are already the qualifying weapon — and the Hacker deck-Kits and Rigger's Harness need no host, because the Kit *is* the host.
 
 **No free starting chrome.** Buy chrome with ¥ + Body Integrity if allowed.
 

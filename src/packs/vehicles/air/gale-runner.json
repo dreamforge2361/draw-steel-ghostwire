@@ -3,7 +3,7 @@
   "_key": "!items!gwGaleRunnerItm0",
   "name": "GHOSTWIRE.Vehicles.Items.GaleRunner.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/gale-runner.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.GaleRunner.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a56,500 in chassis salvage, drive stock, and rotor and thrust stock; a military-grade bay",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥6,500 in chassis salvage, drive stock, and rotor and thrust stock; a military-grade bay",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Gale-Runner chassis \u00b7 a single machine, unmodded."
+        "display": "one Gale-Runner chassis · a single machine, unmodded."
       },
       "goal": 450
     }

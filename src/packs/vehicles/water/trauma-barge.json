@@ -3,7 +3,7 @@
   "_key": "!items!gwTraumaBargeItm",
   "name": "GHOSTWIRE.Vehicles.Items.TraumaBarge.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/trauma-barge.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.TraumaBarge.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a52,400 in chassis salvage, drive stock, and hull and seal stock; a licensed bay (or a fixer who looks the other way)",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥2,400 in chassis salvage, drive stock, and hull and seal stock; a licensed bay (or a fixer who looks the other way)",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Trauma Barge chassis \u00b7 a single machine, unmodded."
+        "display": "one Trauma Barge chassis · a single machine, unmodded."
       },
       "goal": 300
     }

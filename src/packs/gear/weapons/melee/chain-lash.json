@@ -1,0 +1,63 @@
+{
+  "_id": "GwChainLash00001",
+  "_key": "!items!GwChainLash00001",
+  "name": "GHOSTWIRE.Gear.Items.ChainLash.Name",
+  "type": "treasure",
+  "img": "icons/weapons/misc/whip-leather.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.ChainLash.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chain-lash",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "medium",
+      "whip"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "11xwXjBw1kFPjKuK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 200,
+        "modSlots": 1,
+        "tags": [
+          "Concealable"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 5,
+        "damageType": "kinetic",
+        "range": "Adjacent",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

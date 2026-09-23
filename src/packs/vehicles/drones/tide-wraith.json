@@ -3,7 +3,7 @@
   "_key": "!items!gwTideWraithDrn0",
   "name": "GHOSTWIRE.Vehicles.Items.TideWraith.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/tide-wraith.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.TideWraith.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a517,000 in chassis salvage, drive stock, and sealed hull stock and a link head; a prototype bench and a Director-gated parts list",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥17,000 in chassis salvage, drive stock, and sealed hull stock and a link head; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Tide-Wraith chassis \u00b7 a single machine, unmodded."
+        "display": "one Tide-Wraith chassis · a single machine, unmodded."
       },
       "goal": 600
     }

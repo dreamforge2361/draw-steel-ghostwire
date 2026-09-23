@@ -3,7 +3,7 @@
   "_key": "!items!gwLaneBusItm0000",
   "name": "GHOSTWIRE.Vehicles.Items.LaneBus.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/lane-bus.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.LaneBus.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a52,600 in chassis salvage, drive stock, and skirt or track stock; a licensed bay (or a fixer who looks the other way)",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥2,600 in chassis salvage, drive stock, and skirt or track stock; a licensed bay (or a fixer who looks the other way)",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Lane Bus chassis \u00b7 a single machine, unmodded."
+        "display": "one Lane Bus chassis · a single machine, unmodded."
       },
       "goal": 300
     }

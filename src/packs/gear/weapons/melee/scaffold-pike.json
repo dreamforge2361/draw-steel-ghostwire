@@ -1,0 +1,63 @@
+{
+  "_id": "GwScaffoldPike01",
+  "_key": "!items!GwScaffoldPike01",
+  "name": "GHOSTWIRE.Gear.Items.ScaffoldPike.Name",
+  "type": "treasure",
+  "img": "icons/weapons/polearms/spear-pike-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.ScaffoldPike.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "scaffold-pike",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "medium",
+      "polearm"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "11xwXjBw1kFPjKuK",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 250,
+        "modSlots": 1,
+        "tags": [
+          "Two-handed"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 6,
+        "damageType": "kinetic",
+        "range": "Adjacent",
+        "weaponBand": "medium"
+      }
+    }
+  }
+}

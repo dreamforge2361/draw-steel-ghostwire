@@ -3,7 +3,7 @@
   "_key": "!items!gwAshCrawlerItm0",
   "name": "GHOSTWIRE.Vehicles.Items.AshCrawler.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/ash-crawler.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.AshCrawler.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a58,000 in chassis salvage, drive stock, and skirt or track stock; a military-grade bay",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥8,000 in chassis salvage, drive stock, and skirt or track stock; a military-grade bay",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Ash-Crawler chassis \u00b7 a single machine, unmodded."
+        "display": "one Ash-Crawler chassis · a single machine, unmodded."
       },
       "goal": 450
     }

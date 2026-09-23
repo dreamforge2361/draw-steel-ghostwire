@@ -3,7 +3,7 @@
   "_key": "!items!gwBulldogItm0000",
   "name": "GHOSTWIRE.Vehicles.Items.Bulldog.Name",
   "type": "treasure",
-  "img": "icons/environment/settlement/wagon.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/bulldog.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.Bulldog.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a5325 in chassis salvage, drive stock, and skirt or track stock; any chop-shop bay, or a flat piece of street and no questions",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥325 in chassis salvage, drive stock, and skirt or track stock; any chop-shop bay, or a flat piece of street and no questions",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Bulldog chassis \u00b7 a single machine, unmodded."
+        "display": "one Bulldog chassis · a single machine, unmodded."
       },
       "goal": 150
     }

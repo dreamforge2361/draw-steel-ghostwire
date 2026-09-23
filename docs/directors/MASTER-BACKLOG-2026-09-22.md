@@ -1,7 +1,7 @@
 # Ghostwire master backlog - triage 2026-09-22 (updated evening)
 
-**Module now:** **0.3.98** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
-**Just shipped:** S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
+**Module now:** **0.3.99** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
+**Just shipped:** G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
 **Next picks:** N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
 **Playtest:** Deadhead Saturday; Quiet Floor after. Thursday PDF reprint from assembled manuscript.  
 **Doctrine:** Claude Code on Allfather first; Cursor only if no choice.
@@ -61,7 +61,12 @@
 ---
 
 ## Gear / chargen
-**G1** street-band auto-grants · **G2** armor/gadget mod families · **G3** lang + style tokens
+
+| # | Item | Notes |
+|---|---|---|
+| G1 | ~~**Kit street-band auto-grants**~~ | **DONE 0.3.99** — `scripts/kit-grants.mjs`. All **28** Kits map to street SKUs; the free starting Kit copies its package onto the sheet at chargen so the Kit is live on day one. Gate: kit Item on a `hero`, mapped `_dsid`, `system.level <= 1`, and never granted before for that `_dsid` (ledger `flags.draw-steel-ghostwire.kitStreetGrants` + per-Item `kitStreetGrant` stamp). **Merc** needs no special case — its Kits advancement is `chooseN: 2`, so both packages land. Later Kits grant nothing; the **ownership rule still bites** (sell it, Kit goes inert). **Never** mods, chrome, or anything above Street; owned SKUs are skipped, not duplicated; **no back-fill sweep**. Unarmed Kits (Brawler, Mantis) get nothing — fists qualify by rule — and the three Hacker **deck-Kits** + **Rigger's Harness** get no host, because the Kit *is* the host. Needed a gear floor: **street weapons 7 → 14** (Slugger, Pipe Rifle, Scrap Cleaver, Slab-Hammer, Scaffold Pike, Chain Lash, Weighted Net — all E1/Street/1 slot) because the Street column had no heavy, polearm, whip, ensnaring, medium-melee or medium sidearm, and `polearm` existed at **no** Availability. Table `docs/directors/kit-street-band-grants.md`; smoke `node tools/kit-grants-smoke.mjs` (467 checks); checklist `docs/directors/kit-grants-smoke-0399.md`. |
+| G2 | **Armor / gadget mod families** | Next gear pick. Also inherits the one gap G1 left: **no medium bow/crossbow/dartgun at Street** (Hexshot's second slot — Hunting Bow and Heavy Crossbow are Restricted). |
+| G3 | lang + style tokens | |
 
 ## Art
 **R1** inside-cover · **R2** round pregen tokens · **R3** B103 palette/gender · **R4** B89 Foundry token · **R5** Reach Events thumbs · **R6** wire-opener
@@ -75,6 +80,8 @@
 ---
 
 ## Recently shipped
+- **0.3.99** **G1 Kit chargen street-band grants** + 7 new Street weapon SKUs + **Static Crow drops Mark**
+- **0.3.98** S8 vehicle / drone / mods build-out
 - **0.3.95** **Ritual Seal artifacts (F8)** + **Director Pay / Spend Hero (F6)**
 - **0.3.92** **Plot & Run** promoted to a top-level Ghostwire Gear folder
 - **0.3.91** **Ritual Working applet** — five stages on linked Draw Steel Projects
@@ -87,8 +94,8 @@
 ---
 
 ## Suggested next pick
-**Ship lane clear.** S8 vehicle / drone / mods build-out shipped (**0.3.98**) — Foundry checklist `docs/directors/s8-machines-smoke-0398.md` awaiting Michael, alongside `docs/directors/voidmark-director-only-smoke-0397.md` (S6).
-**Next:** **N4** Thursday PDF reprint from the assembled manuscript.
+**Ship lane clear.** G1 Kit chargen street-band grants shipped (**0.3.99**) — checklist `docs/directors/kit-grants-smoke-0399.md` awaiting Michael, alongside `docs/directors/s8-machines-smoke-0398.md` (S8) and `docs/directors/voidmark-director-only-smoke-0397.md` (S6).
+**Next:** **G2** armor / gadget mod families — then **G3**, **S1**, **L1**.
 **Then:** N4 Thursday PDF · DJ1 district journals.
 Also open: N4 Thursday PDF, LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday.
 

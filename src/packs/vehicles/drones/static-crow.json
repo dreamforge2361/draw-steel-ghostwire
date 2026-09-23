@@ -3,7 +3,7 @@
   "_key": "!items!gwStaticCrowDrn0",
   "name": "GHOSTWIRE.Vehicles.Items.StaticCrow.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-green.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/drones/static-crow.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.StaticCrow.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a56,000 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; a military-grade bay",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥6,000 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; a military-grade bay",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Static Crow chassis \u00b7 a single machine, unmodded."
+        "display": "one Static Crow chassis · a single machine, unmodded."
       },
       "goal": 450
     }
@@ -49,7 +49,6 @@
         "modSlots": 4,
         "tags": [
           "EW",
-          "Mark",
           "Jump-In-Capable",
           "Wired"
         ],
