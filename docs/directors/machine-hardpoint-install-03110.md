@@ -1,5 +1,7 @@
 # Heavy Hardpoint on the Machine sheet — 0.3.110
 
+**0.3.111:** The install chat card from this build was created and then hidden by Draw Steel. See `mod-install-chat-03111.md`.
+
 **Lock:** Michael smoke on Allfather after 0.3.108–0.3.109. Install Heavy Hardpoint onto a Bulldog reported success, then the deployed Machine sheet did not show it.
 
 ## Cause

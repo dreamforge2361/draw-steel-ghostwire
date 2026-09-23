@@ -7,6 +7,7 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { atLeast } from "./lib/module-version.mjs";
+import { standardContentChatData } from "../scripts/mods.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const fail = [];
@@ -316,6 +317,16 @@ const modsSrc = readFileSync("scripts/mods.mjs", "utf8");
 note(modsSrc.includes("ghostwire-mod-install-chat"), "successful mod install posts a chat card");
 note(modsSrc.includes("announceModInstalled"), "install announcement names actor, mod, and host");
 note(modsSrc.includes("if (!isMagazine(mod)) await announceModInstalled"), "payload magazines keep their own Load card");
+note(modsSrc.includes("standardContentChatData"), "install chat goes through the Draw Steel content-part helper");
+const installChat = standardContentChatData({
+  speaker: { alias: "Hex" },
+  content: "<div class=\"ghostwire-mod-install-chat\">installed</div>",
+  style: 0,
+});
+note(installChat.type === "standard" && installChat.style === 0, "install chat is a standard OTHER message");
+note(installChat.system?.parts?.[0]?.type === "content" && installChat.content.includes("ghostwire-mod-install-chat"),
+  "install chat carries a content part so Draw Steel will render it");
+note(atLeast(module.version, "0.3.111"), `module.json ≥ 0.3.111 (got ${module.version})`);
 note(css.includes("ghostwire-mod-install-chat"), "install chat card has Ghostwire chat styling");
 for (const key of ["ChatTitle", "ChatBody", "ChatSlots", "ChatFielded"]) {
   note(typeof lang.GHOSTWIRE?.Mods?.Install?.[key] === "string", `lang Mods.Install.${key}`);
