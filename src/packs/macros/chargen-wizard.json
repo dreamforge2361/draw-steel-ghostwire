@@ -1,0 +1,20 @@
+{
+  "_id": "gwChargenWiz0001",
+  "_key": "!macros!gwChargenWiz0001",
+  "name": "GHOSTWIRE.Chargen.MacroName",
+  "type": "script",
+  "author": "gwghostwire00000",
+  "img": "icons/sundries/documents/document-official-capital.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"draw-steel-ghostwire\")?.api;\nif (!api?.openChargenWizard) {\n  ui.notifications.error(\"Enable Draw Steel - Ghostwire Build to use the Chargen Wizard.\");\n} else {\n  api.openChargenWizard(actor ?? null);\n}\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "directorTool": "chargen-wizard"
+    }
+  }
+}

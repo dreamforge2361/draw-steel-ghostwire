@@ -1,0 +1,408 @@
+{{!-- B95 — Chargen Wizard. One part: a step rail, the active step, the shared picker, and the footer. --}}
+<div class="gw-cg">
+  {{#if missing}}
+  <p class="gw-cg-empty">{{missingHint}}</p>
+  {{else}}
+
+  <header class="gw-cg-head">
+    <img class="gw-cg-portrait" src="{{actorImg}}" alt="">
+    <div class="gw-cg-identity">
+      <h3 class="gw-cg-name">{{actorName}}</h3>
+      <p class="gw-cg-meta">
+        <span class="gw-cg-chip">{{wealthLabel}}</span>
+        <span class="gw-cg-chip">{{localize "GHOSTWIRE.Chargen.TaintChip"}} {{taint}}</span>
+        <span class="gw-cg-chip {{#if complete}}ok{{/if}}">{{stepNumber}} / {{stepCount}}</span>
+      </p>
+    </div>
+    <button type="button" class="gw-cg-btn" data-action="openSheet">
+      <i class="fa-solid fa-user"></i> {{localize "GHOSTWIRE.Chargen.OpenSheet"}}
+    </button>
+  </header>
+
+  {{#if readOnly}}
+  <p class="gw-cg-readonly"><i class="fa-solid fa-lock"></i> {{readOnlyHint}}</p>
+  {{/if}}
+
+  <ol class="gw-cg-rail">
+    {{#each rail}}
+    <li>
+      <button type="button" class="gw-cg-railbtn {{#if current}}current{{/if}} {{#if done}}done{{/if}} {{#if optional}}optional{{/if}}"
+        data-action="goStep" data-step="{{key}}" data-tooltip="{{label}}" aria-label="{{label}}">
+        <span class="gw-cg-railnum">{{number}}</span>
+        <span class="gw-cg-raillabel">{{label}}</span>
+      </button>
+    </li>
+    {{/each}}
+  </ol>
+
+  <section class="gw-cg-body">
+    <h4 class="gw-cg-steptitle">{{stepNumber}}. {{stepLabel}}</h4>
+    <p class="gw-cg-dim">{{stepHint}}</p>
+    {{#if warn}}<p class="gw-cg-warn"><i class="fa-solid fa-triangle-exclamation"></i> {{warn}}</p>{{/if}}
+
+    {{!-- 1 · Biography brainstorm --------------------------------------------------------- --}}
+    {{#if is.bio}}
+    <div class="gw-cg-step">
+      <label class="gw-cg-field">
+        {{localize "GHOSTWIRE.Chargen.Bio.Label"}}
+        <textarea data-bio rows="8" placeholder="{{localize "GHOSTWIRE.Chargen.Bio.Placeholder"}}" {{disabled readOnly}}>{{bio}}</textarea>
+      </label>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="askVoidmark" {{disabled (not voidmarkReady)}}>
+          <i class="fa-solid fa-ghost"></i> {{localize "GHOSTWIRE.Chargen.Bio.Ask"}}
+        </button>
+        <button type="button" class="gw-cg-btn" data-action="saveBio" {{disabled readOnly}}>
+          <i class="fa-solid fa-floppy-disk"></i> {{localize "GHOSTWIRE.Chargen.Bio.Save"}}
+        </button>
+        <button type="button" class="gw-cg-btn {{#if acked}}on{{/if}}" data-action="ack" data-ack="bio" {{disabled readOnly}}>
+          <i class="fa-solid fa-forward"></i> {{localize "GHOSTWIRE.Chargen.Bio.Skip"}}
+        </button>
+      </div>
+      <p class="gw-cg-dim">{{voidmarkHint}}</p>
+    </div>
+    {{/if}}
+
+    {{!-- 2 · Hero name -------------------------------------------------------------------- --}}
+    {{#if is.name}}
+    <div class="gw-cg-step">
+      <label class="gw-cg-field">
+        {{localize "GHOSTWIRE.Chargen.Name.Label"}}
+        <input type="text" data-name value="{{nameDraft}}" placeholder="{{localize "GHOSTWIRE.Chargen.Name.Placeholder"}}" {{disabled readOnly}}>
+      </label>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="saveName" {{disabled readOnly}}>
+          <i class="fa-solid fa-signature"></i> {{localize "GHOSTWIRE.Chargen.Name.Save"}}
+        </button>
+      </div>
+      {{#if namePlaceholder}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.Name.Unnamed"}}</p>{{/if}}
+    </div>
+    {{/if}}
+
+    {{!-- 3 · People ----------------------------------------------------------------------- --}}
+    {{#if is.people}}
+    <div class="gw-cg-step">
+      {{#if isCyborg}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.People.CyborgLocks"}} {{blockedClasses}}</p>{{/if}}
+      {{#if isChanger}}<p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.People.ChangerHint"}}</p>{{/if}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.People.Hint"}}</p>
+    </div>
+    {{/if}}
+
+    {{!-- 4 · Background + Profession ------------------------------------------------------- --}}
+    {{#if is.background}}
+    <div class="gw-cg-step">
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Background.Hint"}}</p>
+    </div>
+    {{/if}}
+
+    {{!-- 5 · Class ------------------------------------------------------------------------ --}}
+    {{#if is.class}}
+    <div class="gw-cg-step">
+      {{#if hasClass}}
+      {{#if subclassName}}<p class="gw-cg-current">{{localize "GHOSTWIRE.Chargen.Class.Subclass"}} <strong>{{subclassName}}</strong></p>{{/if}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Class.Replace"}}</p>
+      {{else}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Class.PromptHint"}}</p>
+      {{/if}}
+      {{#if isCyborg}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.Class.CyborgBlocked"}}</p>{{/if}}
+    </div>
+    {{/if}}
+
+    {{!-- 6 · Kit -------------------------------------------------------------------------- --}}
+    {{#if is.kit}}
+    <div class="gw-cg-step">
+      {{#if kits.length}}
+      <ul class="gw-cg-list">
+        {{#each kits}}
+        <li class="gw-cg-row">
+          <span class="gw-cg-row-name">{{name}}</span>
+          {{#if needsGear}}<span class="gw-cg-chip">{{localize "GHOSTWIRE.Chargen.Kit.NeedsGear"}}</span>{{/if}}
+          <button type="button" class="gw-cg-link" data-action="openDoc" data-uuid="{{uuid}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+        </li>
+        {{/each}}
+      </ul>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Kit.Granted"}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Kit.StreetGearCount"}} {{streetGearCount}}</p>
+      {{else}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Kit.NoKitHint"}}</p>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn {{#if acked}}on{{/if}}" data-action="ack" data-ack="kit" {{disabled readOnly}}>
+          <i class="fa-solid fa-ban"></i> {{localize "GHOSTWIRE.Chargen.Kit.NoKit"}}
+        </button>
+      </div>
+      {{/if}}
+    </div>
+    {{/if}}
+
+    {{!-- the shared picker, used by steps 3–6 ---------------------------------------------- --}}
+    {{#if sections}}
+    <div class="gw-cg-step">
+      {{#each sections}}
+      {{#if head}}<h5 class="gw-cg-subhead">{{head}}</h5>{{/if}}
+      {{#if current}}
+      <p class="gw-cg-current">
+        <strong>{{current}}</strong>
+        {{#if currentUuid}}
+        <button type="button" class="gw-cg-link" data-action="openDoc" data-uuid="{{currentUuid}}"
+          data-tooltip="{{localize "GHOSTWIRE.Chargen.OpenItem"}}"><i class="fa-solid fa-up-right-from-square"></i></button>
+        {{/if}}
+      </p>
+      {{/if}}
+      <ul class="gw-cg-picks">
+        {{#each choices}}
+        <li class="gw-cg-pick {{#if selected}}selected{{/if}} {{#if blocked}}blocked{{/if}}">
+          <img class="gw-cg-pick-img" src="{{img}}" alt="">
+          <span class="gw-cg-pick-name">{{name}}</span>
+          <button type="button" class="gw-cg-link" data-action="openDoc" data-uuid="{{uuid}}"
+            data-tooltip="{{localize "GHOSTWIRE.Chargen.OpenItem"}}"><i class="fa-solid fa-book-open"></i></button>
+          <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="pick" data-uuid="{{uuid}}" {{disabled disabled}}>
+            <i class="fa-solid fa-hand-pointer"></i> {{localize "GHOSTWIRE.Chargen.Take"}}
+          </button>
+        </li>
+        {{else}}
+        <li class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.PackMissing"}}</li>
+        {{/each}}
+      </ul>
+      {{/each}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.PromptHandoff"}}</p>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn" data-action="refresh">
+          <i class="fa-solid fa-rotate"></i> {{localize "GHOSTWIRE.Chargen.Recheck"}}
+        </button>
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- 7 · Skills ----------------------------------------------------------------------- --}}
+    {{#if is.skills}}
+    <div class="gw-cg-step">
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Skills.Collected"}} {{count}}</p>
+      {{#each groups}}
+      <h5 class="gw-cg-subhead">{{label}}</h5>
+      <ul class="gw-cg-tags">
+        {{#each skills}}
+        <li class="gw-cg-tag">
+          {{label}}
+          <button type="button" class="gw-cg-link" data-action="removeSkill" data-skill="{{key}}"
+            data-tooltip="{{localize "GHOSTWIRE.Chargen.Skills.Remove"}}" {{disabled disabled}}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </li>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Skills.Empty"}}</p>
+      {{/each}}
+      <div class="gw-cg-actions">
+        <select data-skill-pick {{disabled readOnly}}>
+          {{#each addOptions}}<option value="{{key}}">{{label}}</option>{{/each}}
+        </select>
+        <button type="button" class="gw-cg-btn" data-action="addSkill" {{disabled readOnly}}>
+          <i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.Chargen.Skills.Add"}}
+        </button>
+      </div>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Skills.SwapHint"}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Skills.Firewall"}}</p>
+    </div>
+    {{/if}}
+
+    {{!-- 8 · Characteristics --------------------------------------------------------------- --}}
+    {{#if is.characteristics}}
+    <div class="gw-cg-step">
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Characteristics.Array"}} {{arrayLabel}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Characteristics.Remaining"}} {{remaining}}</p>
+      <ul class="gw-cg-chars">
+        {{#each rows}}
+        <li class="gw-cg-char {{#if core}}core{{/if}}">
+          <label>
+            <span>{{label}}{{#if core}} <i class="fa-solid fa-star" data-tooltip="{{localize "GHOSTWIRE.Chargen.Characteristics.Core"}}"></i>{{/if}}</span>
+            <select data-characteristic="{{key}}" {{disabled ../readOnly}}>
+              <option value="">—</option>
+              {{#each options}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{value}}</option>{{/each}}
+            </select>
+          </label>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="autoAssign" {{disabled (not canAuto)}}>
+          <i class="fa-solid fa-wand-magic-sparkles"></i> {{localize "GHOSTWIRE.Chargen.Characteristics.Auto"}}
+        </button>
+        <button type="button" class="gw-cg-btn" data-action="clearArray" {{disabled readOnly}}>
+          <i class="fa-solid fa-eraser"></i> {{localize "GHOSTWIRE.Chargen.Characteristics.Clear"}}
+        </button>
+      </div>
+      {{#if canAuto}}<p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Characteristics.Cores"}} {{coreLabel}}</p>{{/if}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Characteristics.Firewall"}}</p>
+    </div>
+    {{/if}}
+
+    {{!-- 9 · Languages -------------------------------------------------------------------- --}}
+    {{#if is.languages}}
+    <div class="gw-cg-step">
+      <ul class="gw-cg-tags">
+        {{#each known}}
+        <li class="gw-cg-tag">
+          {{label}}
+          <button type="button" class="gw-cg-link" data-action="removeLanguage" data-language="{{key}}"
+            data-tooltip="{{localize "GHOSTWIRE.Chargen.Languages.Remove"}}" {{disabled disabled}}>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </li>
+        {{else}}
+        <li class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Languages.Empty"}}</li>
+        {{/each}}
+      </ul>
+      <div class="gw-cg-actions">
+        <select data-language-pick {{disabled readOnly}}>
+          {{#each addOptions}}<option value="{{key}}">{{label}}</option>{{/each}}
+        </select>
+        <button type="button" class="gw-cg-btn" data-action="addLanguage" {{disabled readOnly}}>
+          <i class="fa-solid fa-plus"></i> {{localize "GHOSTWIRE.Chargen.Languages.Add"}}
+        </button>
+        <button type="button" class="gw-cg-btn {{#if acked}}on{{/if}}" data-action="ack" data-ack="languages" {{disabled readOnly}}>
+          <i class="fa-solid fa-check"></i> {{localize "GHOSTWIRE.Chargen.Languages.Ack"}}
+        </button>
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- 10 · Resources ------------------------------------------------------------------- --}}
+    {{#if is.resources}}
+    <div class="gw-cg-step">
+      {{#unless hasClass}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.Resources.NeedClass"}}</p>{{/unless}}
+      <ul class="gw-cg-facts">
+        <li><span>{{localize "GHOSTWIRE.Chargen.Resources.Primary"}}</span><strong>{{resource.primary}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Resources.Stamina"}}</span><strong>{{resource.stamina}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Resources.Recoveries"}}</span><strong>{{resource.recoveries}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Resources.Speed"}}</span><strong>{{resource.speed}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Resources.Stability"}}</span><strong>{{resource.stability}}</strong></li>
+      </ul>
+      {{#if kitNames}}<p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Resources.FromKit"}} {{kitNames}}</p>{{/if}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Resources.NoDoubleCount"}}</p>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn gw-cg-btn-hot {{#if acked}}on{{/if}}" data-action="ack" data-ack="resources" {{disabled readOnly}}>
+          <i class="fa-solid fa-check"></i> {{localize "GHOSTWIRE.Chargen.Resources.Ack"}}
+        </button>
+        <button type="button" class="gw-cg-btn" data-action="refresh">
+          <i class="fa-solid fa-rotate"></i> {{localize "GHOSTWIRE.Chargen.Recheck"}}
+        </button>
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- 11 · Body Integrity / Taint / chrome ---------------------------------------------- --}}
+    {{#if is.integrity}}
+    <div class="gw-cg-step">
+      <ul class="gw-cg-facts">
+        <li>
+          <span>{{localize "GHOSTWIRE.Chargen.Integrity.Body"}}</span>
+          <strong>{{#if isCyborg}}{{localize "GHOSTWIRE.Chargen.Integrity.CyborgNA"}}{{else}}{{integrity.value}}/{{integrity.max}}{{/if}}</strong>
+        </li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Taint"}}</span><strong>{{taint}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Chrome"}}</span><strong>{{chromeCount}}</strong></li>
+      </ul>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Integrity.Hint"}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Integrity.CasterHint"}}</p>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn" data-action="openSheet">
+          <i class="fa-solid fa-user"></i> {{localize "GHOSTWIRE.Chargen.Integrity.FixOnSheet"}}
+        </button>
+        <button type="button" class="gw-cg-btn" data-action="refresh">
+          <i class="fa-solid fa-rotate"></i> {{localize "GHOSTWIRE.Chargen.Recheck"}}
+        </button>
+      </div>
+    </div>
+    {{/if}}
+
+    {{!-- 12 · Optional early spends ------------------------------------------------------- --}}
+    {{#if is.spends}}
+    <div class="gw-cg-step">
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.Hint"}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.NoChromeNoMods"}}</p>
+      <div class="gw-cg-filters">
+        <input type="search" data-spend-filter="search" value="{{spend.search}}" placeholder="{{localize "GHOSTWIRE.Chargen.Spends.Search"}}">
+        <select data-spend-filter="pack">
+          <option value="">{{localize "GHOSTWIRE.Chargen.Spends.AllPacks"}}</option>
+          {{#each packOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+        </select>
+        <select data-spend-filter="band" data-tooltip="{{localize "GHOSTWIRE.Chargen.Spends.BandHint"}}">
+          {{#each bandOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+        </select>
+      </div>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.Spent"}} {{spentLabel}} · {{rowCount}}</p>
+      <ul class="gw-cg-catalog">
+        {{#each rows}}
+        <li class="gw-cg-row">
+          <img class="gw-cg-row-img" src="{{img}}" alt="">
+          <div class="gw-cg-row-body">
+            <div class="gw-cg-row-name">{{name}}</div>
+            <div class="gw-cg-row-meta">
+              <strong>{{priceLabel}}</strong>
+              <span class="gw-cg-dim">{{packLabel}}{{#if availabilityLabel}} · {{availabilityLabel}}{{/if}}</span>
+            </div>
+          </div>
+          <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="buy" data-uuid="{{uuid}}" data-price="{{price}}"
+            {{disabled (not canAfford)}}>
+            <i class="fa-solid fa-yen-sign"></i> {{localize "GHOSTWIRE.Chargen.Spends.Buy"}}
+          </button>
+        </li>
+        {{else}}
+        <li class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.Empty"}}</li>
+        {{/each}}
+      </ul>
+      {{#if truncated}}<p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.Truncated"}}</p>{{/if}}
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.NoLifestyle"}}</p>
+    </div>
+    {{/if}}
+
+    {{!-- 13 · Done ------------------------------------------------------------------------ --}}
+    {{#if is.done}}
+    <div class="gw-cg-step">
+      <ul class="gw-cg-done">
+        {{#each checklist}}
+        <li class="{{#if done}}ok{{else}}{{#if optional}}optional{{else}}missing{{/if}}{{/if}}">
+          <i class="fa-solid {{#if done}}fa-circle-check{{else}}fa-circle{{/if}}"></i> {{label}}
+        </li>
+        {{/each}}
+      </ul>
+      <h5 class="gw-cg-subhead">{{localize "GHOSTWIRE.Chargen.Done.Summary"}}</h5>
+      <ul class="gw-cg-facts">
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.people.Name"}}</span><strong>{{summary.people}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Background.BackgroundHead"}}</span><strong>{{summary.background}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Background.ProfessionHead"}}</span><strong>{{summary.profession}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.class.Name"}}</span><strong>{{summary.className}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.kit.Name"}}</span><strong>{{summary.kits}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.characteristics.Name"}}</span><strong>{{summary.array}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.skills.Name"}}</span><strong>{{summary.skills}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.languages.Name"}}</span><strong>{{summary.languages}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Body"}}</span><strong>{{summary.integrity}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Taint"}}</span><strong>{{summary.taint}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Chrome"}}</span><strong>{{summary.chrome}}</strong></li>
+        <li><span>{{localize "GHOSTWIRE.Chargen.Done.Wealth"}}</span><strong>{{summary.wealth}}</strong></li>
+      </ul>
+      {{#if alreadyComplete}}<p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Done.AlreadyComplete"}}</p>{{/if}}
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="finish" {{disabled readOnly}}>
+          <i class="fa-solid fa-flag-checkered"></i> {{localize "GHOSTWIRE.Chargen.Done.Finish"}}
+        </button>
+        <button type="button" class="gw-cg-btn" data-action="refresh">
+          <i class="fa-solid fa-rotate"></i> {{localize "GHOSTWIRE.Chargen.Recheck"}}
+        </button>
+      </div>
+    </div>
+    {{/if}}
+  </section>
+
+  <footer class="gw-cg-foot">
+    <button type="button" class="gw-cg-btn" data-action="retreat" {{disabled atStart}}>
+      <i class="fa-solid fa-chevron-left"></i> {{localize "GHOSTWIRE.Chargen.Back"}}
+    </button>
+    <span class="gw-cg-dim {{#if stepDone}}ok{{/if}}">
+      {{#if stepDone}}{{localize "GHOSTWIRE.Chargen.StepDone"}}{{else}}{{localize "GHOSTWIRE.Chargen.StepOpen"}}{{/if}}
+    </span>
+    <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="advance" {{disabled atEnd}}>
+      {{localize "GHOSTWIRE.Chargen.Next"}} <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </footer>
+  {{/if}}
+</div>

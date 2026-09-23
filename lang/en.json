@@ -8750,6 +8750,254 @@
       "ChatBody": "{actor} takes the free starting Kit, and the Economy hands over the object that makes it live: {items}.",
       "Ownership": "Kit doctrine never costs ¥. Sell, drop, or lose these and the Kit’s bonuses go inert until a qualifying item is owned again — better Availability gear upgrades the object, never the Kit line.",
       "NoGear": "{kit} needs no purchased object to be live — its doctrine runs on what the hero already carries."
+    },
+    "Chargen": {
+      "Title": "Chargen",
+      "TitleFor": "Chargen — {name}",
+      "Launch": "Chargen",
+      "LaunchHint": "Build this runner step by step: concept, People, Background, Class, Kit, the rest.",
+      "LaunchDoneHint": "Chargen is finished for this runner. Opens as a read-only record.",
+      "Keybinding": "Open the Chargen Wizard",
+      "MacroName": "Ghostwire: Chargen Wizard",
+      "OpenSheet": "Sheet",
+      "OpenItem": "Open the card",
+      "Take": "Take",
+      "Back": "Back",
+      "Next": "Next",
+      "Recheck": "Re-check",
+      "StepDone": "Step done.",
+      "StepOpen": "Step still open.",
+      "TaintChip": "Taint",
+      "PackMissing": "Nothing in this pack. Is the Ghostwire module fully installed?",
+      "PromptHandoff": "Picking here opens the sheet's own prompt. Finish that, come back, and hit Re-check.",
+      "Steps": {
+        "bio": {
+          "Name": "Concept",
+          "Hint": "Who is this runner before the numbers? Type a few lines, or talk it through with VOIDMARK first. Optional — but the rest of the list goes faster once it exists."
+        },
+        "name": {
+          "Name": "Name",
+          "Hint": "Street name, legal name, or both. Whatever the table will shout across a rooftop."
+        },
+        "people": {
+          "Name": "People",
+          "Hint": "Take one People and spend the point budget in the prompt. Take the free signature traits."
+        },
+        "background": {
+          "Name": "Background + Profession",
+          "Hint": "One Background: a fixed skill and a choice. One Profession: a fixed skill and two choices."
+        },
+        "class": {
+          "Name": "Class",
+          "Hint": "One class. The prompt handles subclass, doctrine and pact picks, and writes your resource, Stamina and Recoveries."
+        },
+        "kit": {
+          "Name": "Kit",
+          "Hint": "One Kit (a Merc Operator takes two). The street-band gear that makes it live arrives with it, and costs nothing."
+        },
+        "skills": {
+          "Name": "Skills",
+          "Hint": "Everything People, Background, Profession and class handed over. No wasted duplicates."
+        },
+        "characteristics": {
+          "Name": "Characteristics",
+          "Hint": "Assign 2, 2, 1, 1, 0 across Physique, Reflex, Logic, Instinct and Persona."
+        },
+        "languages": {
+          "Name": "Languages",
+          "Hint": "What this runner speaks. Most of it arrived with your People and Background."
+        },
+        "resources": {
+          "Name": "Resource + numbers",
+          "Hint": "Read back what the class and Kit wrote, then confirm. Kit Stamina is the armour's Stamina — it is not a second number."
+        },
+        "integrity": {
+          "Name": "Body Integrity",
+          "Hint": "Integrity 20/20, Taint 0, no chrome. That is the whole of it at chargen."
+        },
+        "spends": {
+          "Name": "Early spends",
+          "Hint": "Optional. Buy a deck, a focus, extra Street gear, or a small air scout out of the ¥5,000. Or save it."
+        },
+        "done": {
+          "Name": "Done",
+          "Hint": "The Done-when list, and the runner's card for the table."
+        }
+      },
+      "Characteristics": {
+        "Physique": "Physique",
+        "Reflex": "Reflex",
+        "Logic": "Logic",
+        "Instinct": "Instinct",
+        "Persona": "Persona",
+        "Array": "The spread:",
+        "Remaining": "Still unspent:",
+        "PoolEmpty": "nothing — all five are placed",
+        "Core": "A core characteristic for this class.",
+        "Cores": "Class cores:",
+        "Auto": "Lean on the class cores",
+        "Clear": "Clear",
+        "NoCores": "Pick a class first — the auto-spread leans on its two core characteristics.",
+        "Firewall": "¥ never buys a characteristic. Neither does chrome."
+      },
+      "Bio": {
+        "Label": "Concept",
+        "Placeholder": "Where they came up, what they are running from, what they will not do for money…",
+        "Ask": "Ask VOIDMARK",
+        "Save": "Save to the sheet",
+        "Saved": "Concept saved onto {name}.",
+        "Skip": "Skip for now",
+        "VoidmarkHint": "VOIDMARK opens with the question already typed. Read it, change it, send it.",
+        "VoidmarkOffline": "VOIDMARK is not open to you right now. Write the concept yourself, or ask your Director to switch it on.",
+        "VoidmarkSeeded": "VOIDMARK is open with a chargen question loaded."
+      },
+      "Name": {
+        "Label": "Runner name",
+        "Placeholder": "The name that goes on the job",
+        "Save": "Set the name",
+        "Saved": "Runner named {name}.",
+        "Unnamed": "This runner is still wearing a placeholder name."
+      },
+      "People": {
+        "Hint": "Fiction first, then the package. The Director can call your People; the sheet only needs the card and the trait picks.",
+        "CyborgLocks": "Machine-first: no Body Integrity, no chrome, and Arcane Severance closes these classes —",
+        "ChangerHint": "Pick Raven, Rat or Wolf. Forms (Human / Hybrid / Beast) live on the sheet's Stats tab, after chargen."
+      },
+      "Background": {
+        "BackgroundHead": "Background",
+        "ProfessionHead": "Profession",
+        "Hint": "Community edge is fiction plus a test edge inside that community — not a second skill."
+      },
+      "Class": {
+        "PromptHint": "One class. The prompt that opens is the sheet's own — subclass, doctrine and pact picks all happen there.",
+        "Subclass": "Subclass:",
+        "Replace": "A class is already on this sheet. To change it, delete it on the sheet first — the wizard will not run the grants twice.",
+        "CyborgBlocked": "Arcane Severance: a Cyborg cannot take a Veil caster or the Technomancer. Those rows are closed."
+      },
+      "Classes": {
+        "elementalist": "Elementalist",
+        "street-priest": "Street Priest",
+        "technomancer": "Technomancer"
+      },
+      "Kit": {
+        "NeedsGear": "wants gear",
+        "Granted": "Street-band gear for a starting Kit arrives on the sheet by itself. Kit Stamina is that armour's Stamina — do not add it twice.",
+        "StreetGearCount": "Street-band weapons and armour on the sheet:",
+        "NoKitHint": "No Kit yet. A pure caster or a deck-bound Hacker may be legal with none — the class chapter says so if it is.",
+        "NoKit": "No Kit is right for this runner"
+      },
+      "Skills": {
+        "Collected": "Collected:",
+        "Empty": "No skills yet. They arrive with People, Background, Profession and class.",
+        "Add": "Add",
+        "Remove": "Drop this skill",
+        "SwapHint": "No wasted duplicates. If a pick collides, take another from the same group first, then any group.",
+        "Duplicate": "Already on the sheet. Take another skill from the same group instead.",
+        "Firewall": "¥, chrome and Lifestyle never add a skill."
+      },
+      "Languages": {
+        "Empty": "Nothing yet. Most runners get theirs from People and Background.",
+        "Add": "Add",
+        "Remove": "Drop this language",
+        "Ack": "That is the list"
+      },
+      "Resources": {
+        "Primary": "Heroic resource",
+        "Stamina": "Stamina",
+        "Recoveries": "Recoveries",
+        "Speed": "Speed",
+        "Stability": "Stability",
+        "NoResource": "—",
+        "NeedClass": "No class on the sheet yet, so there is no resource to read back.",
+        "FromKit": "From the Kit:",
+        "NoDoubleCount": "Kit Stamina is the armour's Stamina. It is already inside the number above — do not add it again.",
+        "Ack": "Confirmed"
+      },
+      "Integrity": {
+        "Body": "Body Integrity",
+        "Taint": "Taint",
+        "Chrome": "Chrome installed",
+        "CyborgNA": "N/A",
+        "Hint": "Leave chrome empty. Installing it later spends Body Integrity the moment the card lands on the sheet.",
+        "CasterHint": "Casters: if you ever chrome, Soft is the intended grade and 5 Integrity is the soft cap. One checkbox, not a chapter.",
+        "FixOnSheet": "Fix it on the sheet"
+      },
+      "Spends": {
+        "Hint": "Optional. A deck, a focus, extra Street gear, or a Personal/Light air scout — a scout grants Street Eye on the sheet. Save the rest.",
+        "NoChromeNoMods": "Chrome and mods are not sold here. Chrome costs Body Integrity as well as ¥, and installing a mod is a later job.",
+        "NoLifestyle": "Lifestyle is not paid at chargen.",
+        "Search": "Search",
+        "AllPacks": "Everything",
+        "BandHint": "Availability ceiling. Everything at or below this band is shown. What a runner can actually source is the Director's call.",
+        "Spent": "Spent here:",
+        "Buy": "Buy",
+        "Bought": "Bought {name} for {price}.",
+        "Empty": "Nothing matches.",
+        "Truncated": "Showing the first 150 rows — narrow the search.",
+        "Packs": {
+          "gear": "Gear",
+          "matrix": "Matrix",
+          "foci": "Foci",
+          "vehicles": "Vehicles & Drones"
+        },
+        "Bands": {
+          "street": "Street",
+          "professional": "Professional",
+          "restricted": "Restricted",
+          "military": "Military",
+          "prototype": "Prototype"
+        }
+      },
+      "Done": {
+        "Summary": "The runner",
+        "Finish": "Finish chargen",
+        "Wealth": "Wealth",
+        "NoKit": "no Kit",
+        "AlreadyComplete": "This runner's chargen is already stamped finished.",
+        "Notify": "{name} is on the street.",
+        "IncompleteTitle": "Finish anyway?",
+        "IncompleteHint": "Part of the Done-when list is still open for {name}. Finishing now stamps chargen complete and locks this wizard to read-only. Carry on?",
+        "Items": "People, Background, Profession and Class are on the sheet.",
+        "Kit": "Kit (or an allowed no-Kit), plus the Street-grade gear it needs.",
+        "Skills": "Skills collected, no duplicate waste.",
+        "Characteristics": "Characteristics assigned.",
+        "Resources": "Resource, Stamina, Recoveries and languages filled.",
+        "Firewall": "Integrity 20/20 (or Cyborg N/A), Taint 0, no chrome. {wealth} left.",
+        "Spends": "Optional early spends: {spent}.",
+        "Portrait": "Portrait / token — optional.",
+        "Card": {
+          "Title": "{name} is on the street",
+          "People": "People",
+          "Background": "Background / Profession",
+          "Class": "Class",
+          "Kit": "Kit",
+          "Wealth": "Wealth",
+          "Foot": "No chrome, Taint 0. Everything after this costs something."
+        }
+      },
+      "Warnings": {
+        "ChangerLineage": "Changer with no lineage pick. Choose Raven, Rat or Wolf on the sheet.",
+        "ArcaneSeverance": "Arcane Severance: this class and this People cannot sit on the same sheet.",
+        "KitNeedsGear": "This Kit wants a qualifying weapon or armour to be live, and none is on the sheet yet.",
+        "ResourcesNeedClass": "No class yet — go back and pick one, and these numbers fill themselves in.",
+        "ChromeAtChargen": "Chrome is on this sheet. A new runner starts with none — chrome is later, and it costs ¥ and Body Integrity.",
+        "TaintNotZero": "Taint is not 0. Every new runner starts Clean.",
+        "IntegrityOff": "Body Integrity is not 20/20. Set it on the sheet's Stats tab."
+      },
+      "ReadOnly": {
+        "Completed": "{name} has finished chargen. This is the record, not the build — nothing here writes to the sheet.",
+        "PastFirstLevel": "{name} is past 1st level. Chargen is closed: re-running it would hand out the same grants twice.",
+        "NotOwner": "You do not own {name}, so this is read-only.",
+        "Blocked": "Chargen is closed for {name}. Nothing was changed."
+      },
+      "Errors": {
+        "NoHero": "Open this on a Hero. Create one, open the sheet, and press Chargen.",
+        "NoPermission": "You do not own {name}.",
+        "ClassAlready": "{name} is already the class on this sheet.",
+        "ClassReplace": "{existing} is already on this sheet. Delete it there first if you mean to run {name} instead.",
+        "NoChrome": "{name} is chrome. A new runner starts with none — that is a purchase for after chargen.",
+        "Insufficient": "Not enough ¥ for {name}: it costs {price} and you have {wealth}."
+      }
     }
   },
   "DRAW_STEEL": {
