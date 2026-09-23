@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Ghostwire sigil">
+  <!-- R0 (0.3.120) Hero sheet corner sigil. Ghostwire original: a wire lattice closing on itself.
+       Drawn in opaque black on transparent because the sheet uses it as a CSS mask-image, so the
+       colour comes from --ghostwire-sheet-steel and never drifts from the palette. -->
+  <g fill="none" stroke="#000000" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="32" cy="32" r="29" stroke-width="0.9"/>
+    <path d="M32 8 L50 32 L32 56 L14 32 Z"/>
+    <path d="M8 32 L32 14 L56 32 L32 50 Z"/>
+    <rect x="26" y="26" width="12" height="12" transform="rotate(45 32 32)"/>
+    <path d="M32 3 v6 M32 55 v6 M3 32 h6 M55 32 h6" stroke-width="0.9"/>
+    <path d="M13.5 13.5 l4 4 M50.5 13.5 l-4 4 M13.5 50.5 l4 -4 M50.5 50.5 l-4 -4" stroke-width="0.9"/>
+  </g>
+  <circle cx="32" cy="32" r="2.2" fill="#000000"/>
+</svg>

@@ -11,9 +11,14 @@
  *      palette moves — several already had (an accent fallback still read #3fc1c9).
  *   2. No bare colour literal anywhere below that duplicates a token declared here.
  *
- * Not tokenised yet, and left for R0's design pass rather than guessed at here: the letter-spacing
- * scale (nine values between 0.03em and 0.16em) and the panel darks (#0a1118, #0c141c, #0e161f …),
- * which are per-applet shades rather than one ladder.
+ * R0 (0.3.120) closed the two G3 deferrals. The letter-spacing scale is now the `--ghostwire-track-*`
+ * ladder and the panel darks are one measured `--ghostwire-panel-*` ramp, so the same two rules cover
+ * them: a tracking value and a panel dark are read from the ladder, never re-typed.
+ *
+ * R0 also adds the `--ghostwire-sheet-*` group — the cold-steel Hero sheet skin. It is deliberately a
+ * *separate* accent family rather than a repaint of `--ghostwire-accent`: the Wired Console, Chargen
+ * Wizard, Run Generator and Ritual Working applets keep their neon cyan, and only Hero sheet chrome
+ * reads the steel. No existing token changed value in R0: see `docs/directors/r0-hero-sheet-skin.md`.
  */
 
 :root,
@@ -63,6 +68,69 @@ body.ghostwire-theme {
      `monospace` and `ui-monospace, monospace`, which render differently on Windows. */
   --ghostwire-font-ui: "Segoe UI", system-ui, sans-serif;
   --ghostwire-font-mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Consolas, monospace;
+  /* R0: the one display face. Newsreader ships with Draw Steel (--font-secondary / --font-h2), so
+     the Hero sheet's name line and the GHOSTWIRE watermark are set in a face the table already has;
+     Georgia and the generic serif carry a client that somehow does not. */
+  --ghostwire-font-display: Newsreader, Georgia, "Times New Roman", serif;
+
+  /* R0 — tracking ladder. G3 counted the values and left the naming; these are exactly the values
+     already in the file, in order, with 0.04em (the most-used, 15 rules) holding the bare name.
+     A literal `letter-spacing: 0` stays a literal: that is "none", not a rung. */
+  --ghostwire-track-xs: 0.02em;
+  --ghostwire-track-sm: 0.03em;
+  --ghostwire-track: 0.04em;
+  --ghostwire-track-md: 0.05em;
+  --ghostwire-track-lg: 0.06em;
+  --ghostwire-track-xl: 0.08em;
+  --ghostwire-track-2xl: 0.1em;
+  --ghostwire-track-3xl: 0.12em;
+  --ghostwire-track-4xl: 0.14em;
+  --ghostwire-track-5xl: 0.16em;
+
+  /* R0 — panel dark ramp. The ten per-applet darks G3 left, sorted by relative luminance rather
+     than by hex: the near-twins #0a1018 / #0a1118 are a point of luminance apart, and the visibly
+     bluer #06121a lands just above both of them rather than where a hex sort would put it. Step 0
+     is new: the deep ink ground the Hero sheet skin is drawn on. */
+  --ghostwire-panel-0: #05080c;
+  --ghostwire-panel-1: #031017;
+  --ghostwire-panel-2: #0a1018;
+  --ghostwire-panel-3: #0a1118;
+  --ghostwire-panel-4: #06121a;
+  --ghostwire-panel-5: #0c141c;
+  --ghostwire-panel-6: #0e161f;
+  --ghostwire-panel-7: #0f1c26;
+  --ghostwire-panel-8: #10202c;
+  --ghostwire-panel-9: #102030;
+  --ghostwire-panel-10: #16202b;
+
+  /* R0 — wire-state colours. The sheet/HUD green and the Wired Console green are two different
+     greens and stay that way: the console rung is read inside the applet against its own cyan, the
+     sheet rung against steel, and merging them would be an applet repaint R0 has no remit for.
+     Named rather than merged, so the next pass can decide with the values in front of it. */
+  --ghostwire-wire-linked: #8fd4a8;
+  --ghostwire-wire-linked-console: #6ecf9a;
+  --ghostwire-wire-connected: #7ad4c0;
+  --ghostwire-wire-jacked: #e0457b;
+
+  /* R0 — Hero sheet skin (cold steel on deep ink). Sheet-scoped on purpose: nothing outside the
+     Hero sheet reads these, so the applets keep --ghostwire-accent's neon cyan. */
+  --ghostwire-sheet-ink: var(--ghostwire-panel-0);
+  --ghostwire-sheet-panel: var(--ghostwire-panel-3);
+  --ghostwire-sheet-panel-2: var(--ghostwire-panel-6);
+  --ghostwire-sheet-steel: #6a8a9a;
+  --ghostwire-sheet-steel-bright: #9fb7c4;
+  --ghostwire-sheet-steel-dim: #3a4f5e;
+  --ghostwire-sheet-text: #c6d2dc;
+  --ghostwire-sheet-text-dim: #7d8f9d;
+  /* Ember. Integrity and warning-adjacent chrome only — a sheet that is ember all over is a
+     different design than the one Michael locked. */
+  --ghostwire-sheet-ember: #8a5a3a;
+  --ghostwire-sheet-ember-bright: #b87a4c;
+  /* Atmosphere: the GHOSTWIRE watermark fill and the hairline the wire frame is drawn in. */
+  --ghostwire-sheet-watermark: #0d1620;
+  --ghostwire-sheet-wire: color-mix(in srgb, var(--ghostwire-sheet-steel) 38%, transparent);
+  --ghostwire-sheet-wire-soft: color-mix(in srgb, var(--ghostwire-sheet-steel) 16%, transparent);
+  --ghostwire-sheet-sigil: url("../assets/brands/ghostwire-sigil.svg");
 }
 
 /* Soft theme hooks — scoped, non-destructive */
@@ -131,7 +199,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-chrome-line {
   font-size: var(--font-size-12, 12px);
   color: var(--ghostwire-accent);
-  letter-spacing: 0.02em;
+  letter-spacing: var(--ghostwire-track-xs);
 }
 
 /* Taint 0–12: Stats fieldset (under Body Integrity) + always-visible header row (B80) */
@@ -151,7 +219,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   margin: 0;
   align-self: center;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--ghostwire-track-sm);
 }
 
 .ghostwire-taint-header {
@@ -164,7 +232,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 
 .ghostwire-taint-header label {
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   text-transform: uppercase;
   font-size: var(--font-size-12, 12px);
 }
@@ -192,13 +260,13 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   gap: 0.4rem;
   align-items: center;
   font-size: var(--font-size-12, 12px);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   text-transform: uppercase;
 }
 .ghostwire-taint-chat p { margin: 0.25rem 0 0; }
 
 .ghostwire-mod-install-chat {
-  border-left: 3px solid var(--ghostwire-accent, #3d9c9c);
+  border-left: 3px solid var(--ghostwire-accent);
   padding: 0.35rem 0.6rem;
 }
 .ghostwire-mod-install-chat header {
@@ -206,7 +274,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   gap: 0.4rem;
   align-items: center;
   font-size: var(--font-size-12, 12px);
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   text-transform: uppercase;
 }
 .ghostwire-mod-install-chat p { margin: 0.25rem 0 0; }
@@ -237,12 +305,12 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 
 .ghostwire-wired .ghostwire-wired-state {
   font-weight: bold;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   text-transform: uppercase;
 }
 
 .ghostwire-wired.state-linked .ghostwire-wired-state {
-  color: #8fd4a8;
+  color: var(--ghostwire-wire-linked);
 }
 
 .ghostwire-wired.state-overlay .ghostwire-wired-state {
@@ -250,7 +318,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 
 .ghostwire-wired.state-jackedIn .ghostwire-wired-state {
-  color: #e0457b;
+  color: var(--ghostwire-wire-jacked);
 }
 
 /* Changer form control on the hero Stats tab (B50b) */
@@ -335,10 +403,10 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 
 .ghostwire-wired-console .window-header {
-  background: linear-gradient(90deg, #06121a, #10202c 60%, #1a1024);
+  background: linear-gradient(90deg, var(--ghostwire-panel-4), var(--ghostwire-panel-8) 60%, #1a1024);
   color: var(--wc-cyan);
   border-bottom: 1px solid color-mix(in srgb, var(--wc-cyan) 45%, transparent);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ghostwire-track-xl);
   text-transform: uppercase;
 }
 
@@ -346,7 +414,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   padding: 0;
   background:
     repeating-linear-gradient(0deg, rgb(110 231 255 / 0.025) 0 1px, transparent 1px 3px),
-    radial-gradient(ellipse at top, #102030 0%, var(--wc-bg) 70%);
+    radial-gradient(ellipse at top, var(--ghostwire-panel-9) 0%, var(--wc-bg) 70%);
   color: var(--wc-text);
   font-family: var(--ghostwire-font-ui);
 }
@@ -368,7 +436,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 
 .ghostwire-wired-console .wc-sigil { color: var(--wc-cyan); text-shadow: 0 0 8px var(--wc-cyan); }
-.ghostwire-wired-console .wc-scene { font-weight: 600; letter-spacing: 0.04em; flex: 1; }
+.ghostwire-wired-console .wc-scene { font-weight: 600; letter-spacing: var(--ghostwire-track); flex: 1; }
 .ghostwire-wired-console .wc-wired-map {
   display: flex;
   align-items: center;
@@ -381,7 +449,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-mode {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--ghostwire-track-3xl);
   color: var(--wc-violet);
   border: 1px solid color-mix(in srgb, var(--wc-violet) 50%, transparent);
   border-radius: var(--ghostwire-radius-pill);
@@ -419,7 +487,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 
 .ghostwire-wired-console .wc-verb {
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   text-transform: uppercase;
 }
 
@@ -433,7 +501,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 .ghostwire-wired-node-panel .wn-title { min-width: 0; flex: 1; }
 .ghostwire-wired-node-panel .wn-name {
-  margin: 0; font-size: 1.05rem; letter-spacing: 0.04em; color: var(--wc-cyan); overflow: hidden;
+  margin: 0; font-size: 1.05rem; letter-spacing: var(--ghostwire-track); color: var(--wc-cyan); overflow: hidden;
   text-overflow: ellipsis; white-space: nowrap;
 }
 .ghostwire-wired-node-panel .wn-tags { display: flex; flex-wrap: wrap; gap: 0.25rem; margin: 0.2rem 0 0; }
@@ -462,7 +530,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   border-bottom: 1px solid var(--wc-border);
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--ghostwire-track-4xl);
   color: var(--wc-cyan);
 }
 
@@ -485,10 +553,10 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 .ghostwire-wired-console .wc-roster-row img { width: 26px; height: 26px; border: none; border-radius: var(--ghostwire-radius-sm); object-fit: cover; }
 .ghostwire-wired-console .wc-roster-name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ghostwire-wired-console .wc-roster-row.state-linked { border-left-color: #6ecf9a; }
+.ghostwire-wired-console .wc-roster-row.state-linked { border-left-color: var(--ghostwire-wire-linked-console); }
 .ghostwire-wired-console .wc-roster-row.state-overlay { border-left-color: var(--wc-cyan); }
 .ghostwire-wired-console .wc-roster-row.state-jackedIn { border-left-color: var(--wc-hot); }
-.ghostwire-wired-console .wc-roster-row.state-connected { border-left-color: #7ad4c0; }
+.ghostwire-wired-console .wc-roster-row.state-connected { border-left-color: var(--ghostwire-wire-connected); }
 .ghostwire-wired-console .wc-roster-row.is-node { opacity: 0.92; }
 .ghostwire-wired-console .wc-constructs { min-height: 0; }
 .ghostwire-wired-console .wc-construct-hint { margin: 0 0.6rem 0.15rem; font-size: 0.75rem; }
@@ -525,17 +593,17 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-state-chip {
   font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ghostwire-track-xl);
   padding: 0.05rem 0.4rem;
   border-radius: var(--ghostwire-radius-pill);
   border: 1px solid var(--wc-border);
   color: var(--wc-muted);
   white-space: nowrap;
 }
-.ghostwire-wired-console .wc-state-chip.state-linked { color: #6ecf9a; border-color: #6ecf9a; box-shadow: 0 0 6px color-mix(in srgb, #6ecf9a 40%, transparent); }
+.ghostwire-wired-console .wc-state-chip.state-linked { color: var(--ghostwire-wire-linked-console); border-color: var(--ghostwire-wire-linked-console); box-shadow: 0 0 6px color-mix(in srgb, var(--ghostwire-wire-linked-console) 40%, transparent); }
 .ghostwire-wired-console .wc-state-chip.state-overlay { color: var(--wc-cyan); border-color: var(--wc-cyan); box-shadow: 0 0 6px color-mix(in srgb, var(--wc-cyan) 40%, transparent); }
 .ghostwire-wired-console .wc-state-chip.state-jackedIn { color: var(--wc-hot); border-color: var(--wc-hot); box-shadow: 0 0 6px color-mix(in srgb, var(--wc-hot) 45%, transparent); }
-.ghostwire-wired-console .wc-state-chip.state-connected { color: #7ad4c0; border-color: #7ad4c0; box-shadow: 0 0 6px color-mix(in srgb, #7ad4c0 40%, transparent); }
+.ghostwire-wired-console .wc-state-chip.state-connected { color: var(--ghostwire-wire-connected); border-color: var(--ghostwire-wire-connected); box-shadow: 0 0 6px color-mix(in srgb, var(--ghostwire-wire-connected) 40%, transparent); }
 
 /* Node list */
 .ghostwire-wired-console .wc-node {
@@ -566,7 +634,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 .ghostwire-wired-console .wc-bar {
   height: 5px;
   margin-top: 0.3rem;
-  background: #0a1118;
+  background: var(--ghostwire-panel-3);
   border: 1px solid var(--wc-border);
   border-radius: var(--ghostwire-radius-xs);
   overflow: hidden;
@@ -581,7 +649,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 
 /* Trace Alert track */
 .ghostwire-wired-console .wc-alert-mini { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; margin-top: 0.3rem; }
-.ghostwire-wired-console .wc-alert-mini span { height: 4px; background: #16202b; border-radius: 1px; }
+.ghostwire-wired-console .wc-alert-mini span { height: 4px; background: var(--ghostwire-panel-10); border-radius: 1px; }
 .ghostwire-wired-console .wc-alert { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; margin: 0.35rem 0; }
 .ghostwire-wired-console .wc-alert span {
   text-align: center;
@@ -590,10 +658,10 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   border: 1px solid var(--wc-border);
   border-radius: var(--ghostwire-radius-xs);
   color: var(--wc-muted);
-  background: #0e161f;
+  background: var(--ghostwire-panel-6);
 }
 .ghostwire-wired-console .wc-alert span.lit.band-stir,
-.ghostwire-wired-console .wc-alert-mini span.lit.band-stir { background: color-mix(in srgb, var(--wc-cyan) 55%, #0e161f); color: #031017; }
+.ghostwire-wired-console .wc-alert-mini span.lit.band-stir { background: color-mix(in srgb, var(--wc-cyan) 55%, var(--ghostwire-panel-6)); color: var(--ghostwire-panel-1); }
 .ghostwire-wired-console .wc-alert span.lit.band-malice,
 .ghostwire-wired-console .wc-alert-mini span.lit.band-malice { background: var(--wc-warn); color: #1a1200; }
 .ghostwire-wired-console .wc-alert span.lit.band-hunting,
@@ -615,14 +683,14 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   align-items: center;
   margin-bottom: 0.6rem;
 }
-.ghostwire-wired-console .wc-grid label { color: var(--wc-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.ghostwire-wired-console .wc-grid label { color: var(--wc-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-lg); }
 .ghostwire-wired-console .wc-block { border-top: 1px solid var(--wc-border); padding-top: 0.5rem; margin-top: 0.5rem; }
 .ghostwire-wired-console .wc-block-title {
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--ghostwire-track-3xl);
   color: var(--wc-cyan);
 }
 .ghostwire-wired-console .wc-readout { font-family: var(--ghostwire-font-mono); color: var(--wc-text); }
@@ -631,7 +699,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 
 /* Inputs and buttons */
 .ghostwire-wired-console .wc-input {
-  background: #0a1118;
+  background: var(--ghostwire-panel-3);
   color: var(--wc-text);
   border: 1px solid var(--wc-border);
   border-radius: var(--ghostwire-radius-sm);
@@ -652,19 +720,19 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   width: auto;
   line-height: 1.6;
   padding: 0 0.6rem;
-  background: #0f1c26;
+  background: var(--ghostwire-panel-7);
   color: var(--wc-cyan);
   border: 1px solid color-mix(in srgb, var(--wc-cyan) 55%, var(--wc-border));
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
 }
-.ghostwire-wired-console .wc-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--wc-cyan) 18%, #0f1c26); box-shadow: 0 0 8px color-mix(in srgb, var(--wc-cyan) 40%, transparent); }
+.ghostwire-wired-console .wc-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--wc-cyan) 18%, var(--ghostwire-panel-7)); box-shadow: 0 0 8px color-mix(in srgb, var(--wc-cyan) 40%, transparent); }
 .ghostwire-wired-console .wc-btn-small { font-size: 0.7rem; padding: 0 0.4rem; }
 .ghostwire-wired-console .wc-title-actions { display: flex; gap: 0.25rem; }
 .ghostwire-wired-console .wc-btn-hot { color: var(--wc-hot); border-color: color-mix(in srgb, var(--wc-hot) 60%, var(--wc-border)); }
-.ghostwire-wired-console .wc-btn-hot:hover { background: color-mix(in srgb, var(--wc-hot) 16%, #0f1c26); box-shadow: 0 0 8px color-mix(in srgb, var(--wc-hot) 40%, transparent); }
+.ghostwire-wired-console .wc-btn-hot:hover { background: color-mix(in srgb, var(--wc-hot) 16%, var(--ghostwire-panel-7)); box-shadow: 0 0 8px color-mix(in srgb, var(--wc-hot) 40%, transparent); }
 .ghostwire-wired-console .wc-btn-danger { color: var(--wc-danger); border-color: color-mix(in srgb, var(--wc-danger) 60%, var(--wc-border)); }
 
 /* Wire ping / spoof (B106) */
@@ -721,7 +789,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   color: var(--ghostwire-accent);
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--ghostwire-track-4xl);
 }
 .ghostwire-node-reveal h3 {
   margin: 0.2rem 0;
@@ -763,7 +831,7 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   color: var(--ghostwire-accent);
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--ghostwire-track-4xl);
 }
 .ghostwire-wire-ping .gw-ping-mode { margin-left: auto; color: var(--ghostwire-text-muted); }
 .ghostwire-wire-ping .gw-ping-text { margin: 0.35rem 0 0; white-space: pre-wrap; }
@@ -779,7 +847,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   background:
     radial-gradient(circle at center, color-mix(in srgb, var(--wc-cyan) 7%, transparent) 0 1px, transparent 1px) 0 0 / 22px 22px,
     repeating-linear-gradient(0deg, rgb(110 231 255 / 0.025) 0 1px, transparent 1px 3px),
-    radial-gradient(ellipse at center, #102030 0%, var(--wc-bg) 75%);
+    radial-gradient(ellipse at center, var(--ghostwire-panel-9) 0%, var(--wc-bg) 75%);
 }
 .ghostwire-wired-minimap.mode-jackedIn {
   border-color: var(--wc-hot);
@@ -795,7 +863,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   background: color-mix(in srgb, var(--wc-surface) 80%, transparent);
   font-size: 0.8rem;
 }
-.ghostwire-wired-minimap .wm-scene { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: 0.04em; }
+.ghostwire-wired-minimap .wm-scene { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; letter-spacing: var(--ghostwire-track); }
 .ghostwire-wired-minimap .wm-reset {
   flex: 0 0 auto;
   width: 1.6rem;
@@ -899,16 +967,16 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: 50%;
   font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   color: var(--wm-band);
   background:
-    radial-gradient(circle, #0a1118 58%, transparent 60%),
-    conic-gradient(var(--wm-band) var(--wm-integrity, 100%), color-mix(in srgb, var(--wm-band) 18%, #0a1118) 0);
+    radial-gradient(circle, var(--ghostwire-panel-3) 58%, transparent 60%),
+    conic-gradient(var(--wm-band) var(--wm-integrity, 100%), color-mix(in srgb, var(--wm-band) 18%, var(--ghostwire-panel-3)) 0);
   box-shadow: 0 0 10px color-mix(in srgb, var(--wm-band) 55%, transparent);
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
 .ghostwire-wired-minimap .wm-node.track-1 .wm-dot {
-  background: radial-gradient(circle, #0a1118 58%, transparent 60%), var(--wm-band);
+  background: radial-gradient(circle, var(--ghostwire-panel-3) 58%, transparent 60%), var(--wm-band);
   border-radius: 25%;
 }
 .ghostwire-wired-minimap .wm-node:hover .wm-dot,
@@ -960,10 +1028,10 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--rg-hot) 25%, transparent), 0 0 28px color-mix(in srgb, var(--rg-hot) 18%, transparent);
 }
 .ghostwire-run-generator .window-header {
-  background: linear-gradient(90deg, #1a0a14, #10202c 60%, #06121a);
+  background: linear-gradient(90deg, #1a0a14, var(--ghostwire-panel-8) 60%, var(--ghostwire-panel-4));
   color: var(--rg-hot);
   border-bottom: 1px solid color-mix(in srgb, var(--rg-hot) 45%, transparent);
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ghostwire-track-xl);
   text-transform: uppercase;
 }
 .ghostwire-run-generator .window-content {
@@ -985,8 +1053,8 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 }
 .ghostwire-run-generator .rg-field { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .ghostwire-run-generator .rg-field-wide { grid-column: 1 / -1; }
-.ghostwire-run-generator .rg-field label { color: var(--rg-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
-.ghostwire-run-generator .rg-input { background: #0a1118; color: var(--rg-text); border: 1px solid var(--rg-border); border-radius: var(--ghostwire-radius-sm); }
+.ghostwire-run-generator .rg-field label { color: var(--rg-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-xl); }
+.ghostwire-run-generator .rg-input { background: var(--ghostwire-panel-3); color: var(--rg-text); border: 1px solid var(--rg-border); border-radius: var(--ghostwire-radius-sm); }
 .ghostwire-run-generator .rg-input:focus { border-color: var(--rg-hot); box-shadow: 0 0 6px color-mix(in srgb, var(--rg-hot) 45%, transparent); }
 .ghostwire-run-generator .rg-actions { grid-column: 1 / -1; display: flex; gap: 0.4rem; justify-content: flex-end; }
 .ghostwire-run-generator .rg-btn {
@@ -994,21 +1062,21 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   width: auto;
   line-height: 1.8;
   padding: 0 0.75rem;
-  background: #0f1c26;
+  background: var(--ghostwire-panel-7);
   color: var(--rg-cyan);
   border: 1px solid color-mix(in srgb, var(--rg-cyan) 55%, var(--rg-border));
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
 }
-.ghostwire-run-generator .rg-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--rg-cyan) 18%, #0f1c26); box-shadow: 0 0 8px color-mix(in srgb, var(--rg-cyan) 40%, transparent); }
+.ghostwire-run-generator .rg-btn:hover:not(:disabled) { background: color-mix(in srgb, var(--rg-cyan) 18%, var(--ghostwire-panel-7)); box-shadow: 0 0 8px color-mix(in srgb, var(--rg-cyan) 40%, transparent); }
 .ghostwire-run-generator .rg-btn-hot { color: var(--rg-hot); border-color: color-mix(in srgb, var(--rg-hot) 60%, var(--rg-border)); }
-.ghostwire-run-generator .rg-btn-hot:hover:not(:disabled) { background: color-mix(in srgb, var(--rg-hot) 16%, #0f1c26); box-shadow: 0 0 8px color-mix(in srgb, var(--rg-hot) 40%, transparent); }
+.ghostwire-run-generator .rg-btn-hot:hover:not(:disabled) { background: color-mix(in srgb, var(--rg-hot) 16%, var(--ghostwire-panel-7)); box-shadow: 0 0 8px color-mix(in srgb, var(--rg-hot) 40%, transparent); }
 .ghostwire-run-generator .rg-btn:disabled { opacity: 0.45; }
 .ghostwire-run-generator .rg-result { flex: 1; min-height: 0; overflow-y: auto; padding: 0.6rem 0.75rem 0.9rem; }
 .ghostwire-run-generator .rg-empty { color: var(--rg-muted); font-style: italic; text-align: center; margin-top: 3rem; }
-.ghostwire-run-generator .rg-run-head h2 { margin: 0; border: none; color: var(--rg-hot); text-shadow: 0 0 10px color-mix(in srgb, var(--rg-hot) 45%, transparent); letter-spacing: 0.04em; }
+.ghostwire-run-generator .rg-run-head h2 { margin: 0; border: none; color: var(--rg-hot); text-shadow: 0 0 10px color-mix(in srgb, var(--rg-hot) 45%, transparent); letter-spacing: var(--ghostwire-track); }
 .ghostwire-run-generator .rg-run-head p { margin: 0.1rem 0 0.5rem; }
 .ghostwire-run-generator .rg-dim { color: var(--rg-muted); font-size: 0.85em; }
 .ghostwire-run-generator .rg-missing { color: var(--rg-warn); font-size: 0.8em; }
@@ -1026,9 +1094,9 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   color: var(--rg-cyan);
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--ghostwire-track-3xl);
 }
-.ghostwire-run-generator .rg-card h4 { margin: 0.5rem 0 0.2rem; color: var(--rg-violet); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; border: none; }
+.ghostwire-run-generator .rg-card h4 { margin: 0.5rem 0 0.2rem; color: var(--rg-violet); font-size: 0.75rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-2xl); border: none; }
 .ghostwire-run-generator .rg-card p { margin: 0.2rem 0; }
 .ghostwire-run-generator .rg-objective { color: var(--rg-text); }
 .ghostwire-run-generator .rg-yen { font-size: 1.35rem; font-weight: 700; color: var(--rg-ok); margin: 0.1rem 0; font-family: var(--ghostwire-font-mono); }
@@ -1046,7 +1114,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-xs);
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--ghostwire-track-lg);
   text-align: center;
   color: var(--rg-muted);
 }
@@ -1115,7 +1183,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-voidmark-chat .vm-identity { flex: 1; min-width: 0; }
 .ghostwire-voidmark-chat .vm-callsign {
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: var(--ghostwire-track-5xl);
   text-transform: uppercase;
   color: var(--vm-violet);
   text-shadow: 0 0 10px color-mix(in srgb, var(--vm-violet) 45%, transparent);
@@ -1129,7 +1197,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ghostwire-track-xl);
   padding: 0.25rem 0.45rem;
 }
 .ghostwire-voidmark-chat .vm-mode.active {
@@ -1197,7 +1265,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   width: 100%;
   color: var(--vm-cyan);
   font-size: 0.7rem;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   text-transform: uppercase;
 }
 .ghostwire-voidmark-chat .vm-cites li { padding: 0.05rem 0; }
@@ -1219,7 +1287,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   width: 100%;
   resize: vertical;
   min-height: 4.2rem;
-  background: #0a1018;
+  background: var(--ghostwire-panel-2);
   color: var(--vm-text);
   border: 1px solid var(--vm-border);
   border-radius: var(--ghostwire-radius);
@@ -1234,7 +1302,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
 }
 .ghostwire-voidmark-chat .vm-btn-hot { color: var(--vm-hot); border-color: color-mix(in srgb, var(--vm-hot) 60%, var(--vm-border)); }
 .ghostwire-voidmark-chat .vm-btn:disabled { opacity: 0.45; }
@@ -1298,7 +1366,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border: none;
   color: var(--kiosk-cyan);
   font-size: 1.15rem;
-  letter-spacing: 0.03em;
+  letter-spacing: var(--ghostwire-track-sm);
 }
 .ghostwire-kiosk .gw-kiosk-tagline {
   margin: 0.15rem 0 0;
@@ -1308,7 +1376,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-kiosk .gw-kiosk-meta { display: flex; gap: 0.35rem; margin: 0.35rem 0 0; flex-wrap: wrap; }
 .ghostwire-kiosk .gw-kiosk-chip {
   font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--ghostwire-track-lg);
   text-transform: uppercase;
   border: 1px solid var(--kiosk-border);
   border-radius: var(--ghostwire-radius-pill);
@@ -1336,11 +1404,11 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   color: var(--kiosk-muted);
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--ghostwire-track-lg);
 }
 .ghostwire-kiosk .gw-kiosk-buyer select,
 .ghostwire-kiosk .gw-kiosk-config input {
-  background: #0a1018;
+  background: var(--ghostwire-panel-2);
   color: var(--kiosk-text);
   border: 1px solid var(--kiosk-border);
   border-radius: var(--ghostwire-radius-sm);
@@ -1361,14 +1429,14 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border: 1px solid var(--kiosk-border);
   border-radius: var(--ghostwire-radius);
   padding: 0.55rem 0.65rem;
-  background: color-mix(in srgb, var(--kiosk-cyan) 5%, #0c141c);
+  background: color-mix(in srgb, var(--kiosk-cyan) 5%, var(--ghostwire-panel-5));
 }
 .ghostwire-kiosk .gw-kiosk-config h4 {
   margin: 0 0 0.4rem;
   color: var(--kiosk-cyan);
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ghostwire-track-xl);
 }
 .ghostwire-kiosk .gw-kiosk-fields {
   display: grid;
@@ -1382,7 +1450,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   color: var(--kiosk-muted);
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
 }
 .ghostwire-kiosk .gw-kiosk-fields input[name="range"] { width: 4.5rem; text-align: center; }
 .ghostwire-kiosk .gw-kiosk-preset {
@@ -1423,7 +1491,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border: 1px solid var(--kiosk-border);
   border-radius: var(--ghostwire-radius);
   padding: 0.45rem 0.5rem;
-  background: #0c141c;
+  background: var(--ghostwire-panel-5);
 }
 .ghostwire-kiosk .gw-kiosk-row.missing { opacity: 0.65; }
 .ghostwire-kiosk .gw-kiosk-row img {
@@ -1432,10 +1500,10 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border: none;
   border-radius: var(--ghostwire-radius-sm);
   object-fit: cover;
-  background: #0c141c;
+  background: var(--ghostwire-panel-5);
 }
 .ghostwire-kiosk .gw-kiosk-row img.missing-art {
-  background: color-mix(in srgb, var(--kiosk-cyan) 14%, #0c141c);
+  background: color-mix(in srgb, var(--kiosk-cyan) 14%, var(--ghostwire-panel-5));
   border: 1px solid var(--kiosk-border);
 }
 .ghostwire-kiosk .gw-kiosk-row-name { font-weight: 600; }
@@ -1452,7 +1520,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   margin-top: 0.3rem;
 }
 .ghostwire-kiosk .gw-kiosk-row-edit input {
-  background: #0a1018;
+  background: var(--ghostwire-panel-2);
   color: var(--kiosk-text);
   border: 1px solid var(--kiosk-border);
   border-radius: var(--ghostwire-radius-sm);
@@ -1467,7 +1535,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
   padding: 0.2rem 0.45rem;
 }
 .ghostwire-kiosk .gw-kiosk-btn-hot { color: var(--kiosk-hot); border-color: color-mix(in srgb, var(--kiosk-hot) 60%, var(--kiosk-border)); }
@@ -1520,9 +1588,9 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   padding: 0.6rem 0.7rem;
   font-size: 0.82rem;
 }
-.ghostwire-ritual-working label { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--rw-muted); }
+.ghostwire-ritual-working label { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--rw-muted); }
 .ghostwire-ritual-working select {
-  background: #0a1018;
+  background: var(--ghostwire-panel-2);
   color: var(--rw-text);
   border: 1px solid var(--rw-border);
   border-radius: var(--ghostwire-radius-sm);
@@ -1575,7 +1643,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   font-size: 0.68rem;
   color: var(--rw-muted);
 }
-.ghostwire-ritual-working .gw-rw-stage-name { flex: 1; font-weight: 600; letter-spacing: 0.03em; }
+.ghostwire-ritual-working .gw-rw-stage-name { flex: 1; font-weight: 600; letter-spacing: var(--ghostwire-track-sm); }
 .ghostwire-ritual-working .gw-rw-stage.done .gw-rw-stage-mark { color: var(--rw-ok); }
 .ghostwire-ritual-working .gw-rw-stage-body { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.35rem; }
 .ghostwire-ritual-working .gw-rw-actions { display: flex; flex-wrap: wrap; gap: 0.3rem; }
@@ -1587,7 +1655,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
   padding: 0.2rem 0.45rem;
   width: auto;
 }
@@ -1661,7 +1729,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 }
 .ghostwire-market-chat .gw-market-kicker {
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ghostwire-track-xl);
   font-size: 0.78rem;
   font-weight: 600;
 }
@@ -1707,7 +1775,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-pill);
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--ghostwire-track-lg);
   line-height: 1.5;
 }
 .ghostwire-chargen-launch:hover { box-shadow: 0 0 8px color-mix(in srgb, var(--ghostwire-accent) 35%, transparent); }
@@ -1800,7 +1868,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   color: var(--cg-muted);
   font-size: 0.66rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ghostwire-track);
   line-height: 1.6;
 }
 .ghostwire-chargen .gw-cg-railbtn.done { color: var(--cg-ok); border-color: color-mix(in srgb, var(--cg-ok) 40%, var(--cg-border)); }
@@ -1824,18 +1892,18 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   margin: 0.6rem 0 0.25rem;
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: var(--ghostwire-track-lg);
   color: var(--cg-muted);
 }
 .ghostwire-chargen .gw-cg-step { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.45rem; }
 .ghostwire-chargen .gw-cg-current { margin: 0; font-size: 0.82rem; }
 .ghostwire-chargen .gw-cg-actions { display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center; }
-.ghostwire-chargen .gw-cg-field { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cg-muted); }
+.ghostwire-chargen .gw-cg-field { display: flex; flex-direction: column; gap: 0.2rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--cg-muted); }
 .ghostwire-chargen textarea,
 .ghostwire-chargen input[type="text"],
 .ghostwire-chargen input[type="search"],
 .ghostwire-chargen select {
-  background: #0a1018;
+  background: var(--ghostwire-panel-2);
   color: var(--cg-text);
   border: 1px solid var(--cg-border);
   border-radius: var(--ghostwire-radius-sm);
@@ -1859,7 +1927,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-sm);
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--ghostwire-track-md);
   padding: 0.2rem 0.45rem;
 }
 .ghostwire-chargen .gw-cg-btn-hot { color: var(--cg-hot); border-color: color-mix(in srgb, var(--cg-hot) 60%, var(--cg-border)); }
@@ -1934,7 +2002,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   font-size: 0.72rem;
 }
 .ghostwire-chargen .gw-cg-chars { list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0; padding: 0; }
-.ghostwire-chargen .gw-cg-char label { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--cg-muted); }
+.ghostwire-chargen .gw-cg-char label { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.68rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track-md); color: var(--cg-muted); }
 .ghostwire-chargen .gw-cg-char.core label { color: var(--cg-cyan); }
 .ghostwire-chargen .gw-cg-char select { width: 4.2rem; text-align: center; }
 .ghostwire-chargen .gw-cg-facts { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.15rem; }
@@ -1970,16 +2038,16 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 /* Portrait and token art are two distinct, captioned slots — not one picture printed twice. */
 .ghostwire-machine-sheet .gw-m-art { gap: 0.5rem; align-items: flex-end; }
 .ghostwire-machine-sheet .gw-m-art figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
-.ghostwire-machine-sheet .gw-m-art figcaption { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.7; }
+.ghostwire-machine-sheet .gw-m-art figcaption { font-size: 0.7rem; text-transform: uppercase; letter-spacing: var(--ghostwire-track); opacity: 0.7; }
 .ghostwire-machine-sheet .gw-m-art img { object-fit: cover; border: 1px solid var(--color-border-light-primary, #666); cursor: pointer; }
-.ghostwire-machine-sheet .gw-m-portrait img.profile { width: 96px; height: 96px; border-radius: 4px; }
+.ghostwire-machine-sheet .gw-m-portrait img.profile { width: 96px; height: 96px; border-radius: var(--ghostwire-radius-sm); }
 .ghostwire-machine-sheet .gw-m-token img.token-art { width: 48px; height: 48px; border-radius: 50%; }
 .ghostwire-machine-sheet .gw-m-identity { flex: 1; gap: 0.35rem; }
 .ghostwire-machine-sheet .gw-m-name { font-size: 1.25rem; font-weight: 700; }
 .ghostwire-machine-sheet .gw-m-kind { gap: 0.5rem; }
 .ghostwire-machine-sheet nav.gw-m-tabs { gap: 0.25rem; flex-wrap: wrap; border-bottom: 1px solid var(--color-border-light-primary, #666); padding-bottom: 0.25rem; }
-.ghostwire-machine-sheet nav.gw-m-tabs button.item { flex: 0 0 auto; width: auto; padding: 0.2rem 0.55rem; border: none; border-radius: 3px; background: none; cursor: pointer; line-height: 1.4; }
-.ghostwire-machine-sheet nav.gw-m-tabs button.item.active { background: var(--ghostwire-accent, #2a6f97); color: #fff; }
+.ghostwire-machine-sheet nav.gw-m-tabs button.item { flex: 0 0 auto; width: auto; padding: 0.2rem 0.55rem; border: none; border-radius: var(--ghostwire-radius-xs); background: none; cursor: pointer; line-height: 1.4; }
+.ghostwire-machine-sheet nav.gw-m-tabs button.item.active { background: var(--ghostwire-accent); color: #fff; }
 /* Core hides .tab[data-tab]:not(.active); these keep the active panel laid out like the old single-panel body. */
 .ghostwire-machine-sheet section.gw-m-tab { display: none; }
 .ghostwire-machine-sheet section.gw-m-tab.active { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -1994,14 +2062,14 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 /* Machine Inventory — embedded Actor.items (0.3.108) */
 .ghostwire-machine-sheet .gw-m-inventory { gap: 0.5rem; }
 .ghostwire-machine-sheet .gw-m-item-header { align-items: center; justify-content: space-between; }
-.ghostwire-machine-sheet .gw-m-item-title { font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.8rem; opacity: 0.85; }
+.ghostwire-machine-sheet .gw-m-item-title { font-weight: 600; text-transform: uppercase; letter-spacing: var(--ghostwire-track); font-size: 0.8rem; opacity: 0.85; }
 .ghostwire-machine-sheet .gw-m-item-create { padding: 0.15rem 0.4rem; }
-.ghostwire-machine-sheet .gw-m-item-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.2rem; border: 1px solid var(--color-border-light-primary, #666); border-radius: 4px; max-height: 22rem; overflow: auto; }
+.ghostwire-machine-sheet .gw-m-item-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.2rem; border: 1px solid var(--color-border-light-primary, #666); border-radius: var(--ghostwire-radius-sm); max-height: 22rem; overflow: auto; }
 .ghostwire-machine-sheet .gw-m-item { align-items: center; gap: 0.35rem; padding: 0.25rem 0.4rem; border-bottom: 1px solid var(--color-border-light-tertiary, #4444); }
 .ghostwire-machine-sheet .gw-m-item:last-child { border-bottom: none; }
 .ghostwire-machine-sheet .gw-m-item-main { flex: 1; align-items: center; gap: 0.45rem; min-width: 0; text-decoration: none; color: inherit; cursor: pointer; }
 .ghostwire-machine-sheet .gw-m-item-main:hover .gw-m-item-name { text-decoration: underline; }
-.ghostwire-machine-sheet .gw-m-item-img { width: 28px; height: 28px; object-fit: cover; border-radius: 3px; border: 1px solid var(--color-border-light-primary, #666); flex: 0 0 auto; }
+.ghostwire-machine-sheet .gw-m-item-img { width: 28px; height: 28px; object-fit: cover; border-radius: var(--ghostwire-radius-xs); border: 1px solid var(--color-border-light-primary, #666); flex: 0 0 auto; }
 .ghostwire-machine-sheet .gw-m-item-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
 .ghostwire-machine-sheet .gw-m-item-type { flex: 0 0 auto; font-size: 0.75rem; opacity: 0.7; text-transform: capitalize; }
 .ghostwire-machine-sheet .gw-m-item-qty { flex: 0 0 auto; font-variant-numeric: tabular-nums; opacity: 0.85; }
@@ -2036,20 +2104,20 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-locker .gw-locker-tagline { margin: 0.15rem 0 0; color: var(--locker-muted); font-size: var(--font-size-12, 12px); }
 .ghostwire-locker .gw-locker-meta { display: flex; gap: 0.35rem; margin: 0.35rem 0 0; flex-wrap: wrap; }
 .ghostwire-locker .gw-locker-chip {
-  padding: 0.05rem 0.4rem; border-radius: 999px; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 0.05rem 0.4rem; border-radius: var(--ghostwire-radius-pill); font-size: 0.7rem; letter-spacing: var(--ghostwire-track); text-transform: uppercase;
   border: 1px solid color-mix(in srgb, var(--locker-accent) 45%, transparent); color: var(--locker-accent);
 }
 .ghostwire-locker .gw-locker-hero label { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; color: var(--locker-muted); }
 .ghostwire-locker .gw-locker-hero select { flex: 1; min-width: 0; }
 .ghostwire-locker .gw-locker-stock,
 .ghostwire-locker .gw-locker-carry { display: flex; flex-direction: column; gap: 0.3rem; min-height: 0; overflow: auto; }
-.ghostwire-locker h4 { margin: 0; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--locker-muted); }
+.ghostwire-locker h4 { margin: 0; font-size: 0.8rem; letter-spacing: var(--ghostwire-track-lg); text-transform: uppercase; color: var(--locker-muted); }
 .ghostwire-locker .gw-locker-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; }
 .ghostwire-locker .gw-locker-row {
   display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.4rem;
   border: 1px solid var(--locker-border); border-radius: var(--ghostwire-radius);
 }
-.ghostwire-locker .gw-locker-row-img { width: 28px; height: 28px; object-fit: cover; border-radius: 3px; flex: 0 0 auto; }
+.ghostwire-locker .gw-locker-row-img { width: 28px; height: 28px; object-fit: cover; border-radius: var(--ghostwire-radius-xs); flex: 0 0 auto; }
 .ghostwire-locker .gw-locker-row-body { flex: 1; min-width: 0; }
 .ghostwire-locker .gw-locker-row-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ghostwire-locker .gw-locker-row-meta { font-size: 0.72rem; color: var(--locker-muted); text-transform: capitalize; }
@@ -2068,7 +2136,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 /* F12 chrome condition line, under .ghostwire-chrome-line on the item sheet */
 .ghostwire-chrome-condition {
   font-size: var(--font-size-12, 12px);
-  letter-spacing: 0.02em;
+  letter-spacing: var(--ghostwire-track-xs);
   font-weight: 600;
 }
 .ghostwire-chrome-suppressed { color: var(--ghostwire-accent); }
@@ -2077,16 +2145,16 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-chrome-locked { margin: 0.35rem 0 0; color: var(--color-level-error, #c4453c); font-size: var(--font-size-12, 12px); }
 
 /* F17 identity band line, same slot as the chrome lines */
-.ghostwire-identity-line { font-size: var(--font-size-12, 12px); letter-spacing: 0.02em; color: var(--ghostwire-text-muted); }
+.ghostwire-identity-line { font-size: var(--font-size-12, 12px); letter-spacing: var(--ghostwire-track-xs); color: var(--ghostwire-text-muted); }
 
 /* F18 Workshop benches — sheet line + the respite report card */
 .ghostwire-bench-line {
-  font-size: var(--font-size-12, 12px); letter-spacing: 0.02em;
+  font-size: var(--font-size-12, 12px); letter-spacing: var(--ghostwire-track-xs);
   color: var(--ghostwire-text-muted);
 }
 .ghostwire-bench-card h3 {
   margin: 0 0 0.25rem; font-size: var(--font-size-14, 14px);
-  letter-spacing: 0.08em; text-transform: uppercase;
+  letter-spacing: var(--ghostwire-track-xl); text-transform: uppercase;
 }
 .ghostwire-bench-card p { margin: 0.15rem 0; }
 .ghostwire-bench-card .hint { font-size: var(--font-size-11, 11px); color: var(--ghostwire-text-muted); }
@@ -2099,35 +2167,35 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 
 /* S9 Wire-state toggle: token HUD button, hero sheet chip, picker, chat card.
    Colours follow the Wired Console roster so a rung reads the same everywhere. */
-.control-icon.ghostwire-wire-toggle-hud.state-linked { color: #8fd4a8; }
+.control-icon.ghostwire-wire-toggle-hud.state-linked { color: var(--ghostwire-wire-linked); }
 .control-icon.ghostwire-wire-toggle-hud.state-overlay { color: var(--ghostwire-accent); }
 .control-icon.ghostwire-wire-toggle-hud.state-jackedIn,
-.control-icon.ghostwire-wire-toggle-hud.state-jumpedIn { color: #e0457b; }
+.control-icon.ghostwire-wire-toggle-hud.state-jumpedIn { color: var(--ghostwire-wire-jacked); }
 
 .ghostwire-wire-toggle-chip {
   display: inline-flex; align-items: center; gap: 0.35rem;
   margin: 0.15rem 0 0; padding: 0.1rem 0.5rem;
-  border: 1px solid currentColor; border-radius: 999px; background: none;
-  font-size: var(--font-size-11, 11px); letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid currentColor; border-radius: var(--ghostwire-radius-pill); background: none;
+  font-size: var(--font-size-11, 11px); letter-spacing: var(--ghostwire-track-lg); text-transform: uppercase;
   color: var(--ghostwire-text-muted); cursor: pointer; width: auto;
 }
-.ghostwire-wire-toggle-chip.state-linked { color: #8fd4a8; }
+.ghostwire-wire-toggle-chip.state-linked { color: var(--ghostwire-wire-linked); }
 .ghostwire-wire-toggle-chip.state-overlay { color: var(--ghostwire-accent); }
 .ghostwire-wire-toggle-chip.state-jackedIn,
-.ghostwire-wire-toggle-chip.state-jumpedIn { color: #e0457b; }
+.ghostwire-wire-toggle-chip.state-jumpedIn { color: var(--ghostwire-wire-jacked); }
 .ghostwire-wire-toggle-chip:hover { box-shadow: 0 0 6px color-mix(in srgb, currentColor 45%, transparent); }
 
 .ghostwire-wire-toggle .ghostwire-wire-toggle-option {
   display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem;
   align-items: baseline; margin: 0.3rem 0; padding: 0.3rem 0.4rem;
-  border: 1px solid color-mix(in srgb, var(--ghostwire-accent) 20%, transparent); border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--ghostwire-accent) 20%, transparent); border-radius: var(--ghostwire-radius-sm);
 }
 .ghostwire-wire-toggle .ghostwire-wire-toggle-name { font-weight: 600; }
 .ghostwire-wire-toggle .hint { grid-column: 2; margin: 0.1rem 0 0; font-size: var(--font-size-11, 11px); }
 
-.ghostwire-wire-toggle-card.state-linked { border-left: 3px solid #8fd4a8; padding-left: 0.5rem; }
+.ghostwire-wire-toggle-card.state-linked { border-left: 3px solid var(--ghostwire-wire-linked); padding-left: 0.5rem; }
 .ghostwire-wire-toggle-card.state-overlay { border-left: 3px solid var(--ghostwire-accent); padding-left: 0.5rem; }
-.ghostwire-wire-toggle-card.state-jumpedIn { border-left: 3px solid #e0457b; padding-left: 0.5rem; }
+.ghostwire-wire-toggle-card.state-jumpedIn { border-left: 3px solid var(--ghostwire-wire-jacked); padding-left: 0.5rem; }
 
 /* F11 Critical Roll feedback. The flash is the VFX: a short vignette over the interface,
    pure CSS so nothing depends on a VFX module being installed. */
@@ -2150,7 +2218,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .chat-message.ghostwire-crit-rulecard { border-left: 3px solid var(--ghostwire-accent-hot); }
 .ghostwire-crit-card h3 {
   margin: 0 0 0.25rem; font-size: var(--font-size-14, 14px);
-  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ghostwire-accent-hot);
+  letter-spacing: var(--ghostwire-track-xl); text-transform: uppercase; color: var(--ghostwire-accent-hot);
 }
 .ghostwire-crit-card ul { margin: 0.25rem 0; padding-left: 1.1rem; }
 .ghostwire-crit-card li { margin: 0.15rem 0; }
@@ -2164,7 +2232,7 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   display: inline-block; margin-right: 0.4rem; padding: 0 0.35rem;
   border: 1px solid var(--ghostwire-accent-hot); border-radius: 2px;
   font-size: var(--font-size-10, 10px); font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase;
+  letter-spacing: var(--ghostwire-track-xl); text-transform: uppercase;
   color: var(--ghostwire-accent-hot);
   background: color-mix(in srgb, var(--ghostwire-accent-hot) 12%, transparent);
 }
@@ -2182,4 +2250,431 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-crit-extra-taken { margin: 0; }
 
 /* F13 Cover/Conceal chat line */
-.ghostwire-cover-conceal-card { margin: 0; border-left: 3px solid #8fd4a8; padding-left: 0.5rem; }
+.ghostwire-cover-conceal-card { margin: 0; border-left: 3px solid var(--ghostwire-wire-linked); padding-left: 0.5rem; }
+
+/* ================================================================
+ * R0 (0.3.120) — Hero sheet Ghostwire skin
+ *
+ * Scope is one class: `scripts/module.mjs` stamps `.ghostwire-hero-sheet` on the Hero sheet root and
+ * nothing else in the module ever gets it. Everything below reads the `--ghostwire-sheet-*` group, so
+ * the Wired Console / Chargen / Ritual / Run Generator applets keep the neon `--ghostwire-accent`
+ * they were designed around. No Draw Steel layout HTML is touched — this is colour, type and chrome.
+ *
+ * The lever that does most of the work is the first block: Draw Steel styles its whole sheet against
+ * `--draw-steel-c-*`, declared per theme in the system's `@scope (.theme-light / .theme-dark)` rules.
+ * Re-pointing those on the Hero sheet root carries tags, rules, tables and item stripes into deep ink
+ * in one move, and means a Director on the light Foundry theme sees the same sheet as one on dark.
+ * ================================================================ */
+
+.application.ghostwire-hero-sheet {
+  --draw-steel-c-dark: var(--ghostwire-sheet-text);
+  --draw-steel-c-faint: var(--ghostwire-sheet-panel-2);
+  --draw-steel-c-beige: var(--ghostwire-sheet-wire);
+  --draw-steel-c-tan: var(--ghostwire-sheet-text-dim);
+  --draw-steel-c-white: var(--ghostwire-sheet-panel);
+  --draw-steel-c-groove: var(--ghostwire-sheet-wire-soft);
+  --draw-steel-c-laserline: var(--ghostwire-sheet-steel);
+  --draw-steel-c-laserline-rev: var(--ghostwire-sheet-steel-dim);
+  --draw-steel-c-item-header-bg: var(--ghostwire-sheet-panel-2);
+  --draw-steel-c-item-alternating-bg: color-mix(in srgb, var(--ghostwire-sheet-steel) 4%, transparent);
+  --draw-steel-c-thead-bg: var(--ghostwire-sheet-panel-2);
+  --color-fieldset-border: var(--ghostwire-sheet-wire);
+  --input-placeholder-color: var(--ghostwire-sheet-text-dim);
+  --color-shadow-primary: var(--ghostwire-sheet-wire);
+  --button-hover-background-color: color-mix(in srgb, var(--ghostwire-sheet-steel) 22%, transparent);
+  --button-focus-outline-color: var(--ghostwire-sheet-steel);
+  color: var(--ghostwire-sheet-text);
+}
+
+/* ---------------------------------------------------------------- the window shell */
+
+/* The module-wide theme hook glows every Draw Steel app in neon cyan. The Hero sheet is the one
+   surface that steps out of it — same properties, cold steel, one selector later in the file. */
+body.ghostwire-theme .application.ghostwire-hero-sheet {
+  border-color: var(--ghostwire-sheet-wire);
+  box-shadow: 0 0 0 1px var(--ghostwire-sheet-wire-soft),
+    0 10px 34px color-mix(in srgb, var(--ghostwire-panel-1) 70%, transparent);
+  background: var(--ghostwire-sheet-ink);
+}
+
+body.ghostwire-theme .application.ghostwire-hero-sheet .window-header {
+  border-bottom: 1px solid var(--ghostwire-sheet-wire);
+  background: linear-gradient(180deg, var(--ghostwire-sheet-panel), var(--ghostwire-sheet-ink));
+}
+
+body.ghostwire-theme .application.ghostwire-hero-sheet a:hover {
+  color: var(--ghostwire-sheet-steel-bright);
+}
+
+body.ghostwire-theme .application.ghostwire-hero-sheet :focus-visible {
+  outline: 1px solid var(--ghostwire-sheet-steel);
+  outline-offset: 2px;
+}
+
+.ghostwire-hero-sheet .window-header .window-title {
+  font-family: var(--ghostwire-font-ui);
+  font-size: var(--font-size-12, 12px);
+  letter-spacing: var(--ghostwire-track-xl);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text-dim);
+}
+
+.ghostwire-hero-sheet .window-content {
+  position: relative;
+  background: radial-gradient(ellipse at 70% 0%,
+      color-mix(in srgb, var(--ghostwire-sheet-panel) 85%, transparent) 0%,
+      var(--ghostwire-sheet-ink) 62%);
+  color: var(--ghostwire-sheet-text);
+}
+
+/* The sheet's own content has to sit above the watermark, which is a positioned pseudo-element.
+   These three are the Hero sheet's top-level parts; nothing else is a direct child. */
+.ghostwire-hero-sheet .window-content > .sheet-header,
+.ghostwire-hero-sheet .window-content > nav.tabs,
+.ghostwire-hero-sheet .window-content > section.tab {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------------- watermark, wire frame, sigil */
+
+/* Atmosphere, not a logo stamp: the word is set in the display serif across the top of the sheet, in
+   a fill barely off the ink, and clipped by its own box so it never widens the sheet or scrolls it. */
+.ghostwire-hero-sheet .window-content::before {
+  content: "GHOSTWIRE";
+  position: absolute;
+  inset: -0.75rem 0 auto 0;
+  height: 8.5rem;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  text-align: right;
+  white-space: nowrap;
+  font-family: var(--ghostwire-font-display);
+  font-size: 6.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: var(--ghostwire-track-sm);
+  color: var(--ghostwire-sheet-watermark);
+}
+
+/* One small glyph, bottom right, as an eye resting point. Masked rather than drawn so the sigil
+   takes --ghostwire-sheet-steel and can never drift from the palette the way a coloured PNG would. */
+.ghostwire-hero-sheet .window-content::after {
+  content: "";
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  width: 74px;
+  height: 74px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background: var(--ghostwire-sheet-steel);
+  -webkit-mask-image: var(--ghostwire-sheet-sigil);
+  mask-image: var(--ghostwire-sheet-sigil);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Hairline wire frame over the whole window, with a node dot at each corner. One pseudo-element:
+   the rule is the border, the four dots are radial-gradient backgrounds pinned to the corners. */
+.ghostwire-hero-sheet::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius-sm);
+  background-image:
+    radial-gradient(circle, var(--ghostwire-sheet-steel) 1.6px, transparent 1.8px),
+    radial-gradient(circle, var(--ghostwire-sheet-steel) 1.6px, transparent 1.8px),
+    radial-gradient(circle, var(--ghostwire-sheet-steel) 1.6px, transparent 1.8px),
+    radial-gradient(circle, var(--ghostwire-sheet-steel) 1.6px, transparent 1.8px);
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  background-position: left top, right top, left bottom, right bottom;
+}
+
+/* The trace: a short run off the top-left and bottom-right nodes in each direction, so the frame
+   reads as wire rather than as a plain rectangle. Four strokes — the mock is hairline, not a PCB. */
+.ghostwire-hero-sheet::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, var(--ghostwire-sheet-wire), transparent),
+    linear-gradient(180deg, var(--ghostwire-sheet-wire), transparent),
+    linear-gradient(270deg, var(--ghostwire-sheet-wire), transparent),
+    linear-gradient(0deg, var(--ghostwire-sheet-wire), transparent);
+  background-size: 64px 1px, 1px 64px, 64px 1px, 1px 64px;
+  background-repeat: no-repeat;
+  background-position: left 14px top 14px, left 14px top 14px,
+    right 14px bottom 14px, right 14px bottom 14px;
+}
+
+/* ---------------------------------------------------------------- header block */
+
+.ghostwire-hero-sheet .sheet-header .profile-img {
+  border: 1px solid var(--ghostwire-sheet-wire);
+  border-radius: var(--ghostwire-radius);
+  background: var(--ghostwire-panel-1);
+  box-shadow: inset 0 0 40px color-mix(in srgb, var(--ghostwire-panel-1) 80%, transparent);
+}
+
+.ghostwire-hero-sheet .sheet-header .header-center .document-name h2,
+.ghostwire-hero-sheet .sheet-header .header-center .document-name input {
+  font-family: var(--ghostwire-font-display);
+  font-size: 2.1rem;
+  font-weight: 500;
+  letter-spacing: var(--ghostwire-track-lg);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-steel-bright);
+  background: none;
+}
+
+/* The origin tags are the small-caps line under the name: the mock reads them as one quiet run of
+   text, so they lose the system's filled chip and keep a hairline. */
+.ghostwire-hero-sheet .sheet-header .header-center .tags .tag {
+  background: color-mix(in srgb, var(--ghostwire-sheet-panel) 70%, transparent);
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius-sm);
+  color: var(--ghostwire-sheet-text-dim);
+  font-weight: 500;
+  font-size: var(--font-size-11, 11px);
+  letter-spacing: var(--ghostwire-track-lg);
+  text-transform: uppercase;
+}
+
+.ghostwire-hero-sheet .sheet-header .header-center .tags .tag a.filled {
+  color: var(--ghostwire-sheet-text);
+}
+
+.ghostwire-hero-sheet .sheet-header .header-right dt {
+  font-size: var(--font-size-11, 11px);
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-xl);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text-dim);
+}
+
+.ghostwire-hero-sheet .sheet-header .header-right dd {
+  font-family: var(--ghostwire-font-display);
+  font-size: var(--font-size-16, 16px);
+  color: var(--ghostwire-sheet-steel-bright);
+}
+
+/* ---------------------------------------------------------------- tabs */
+
+.ghostwire-hero-sheet .window-content > nav.tabs {
+  border-style: solid none;
+  border-width: 1px;
+  border-color: var(--ghostwire-sheet-wire-soft);
+  margin: 0 0 0.5rem;
+  gap: 0;
+}
+
+.ghostwire-hero-sheet nav.tabs .item {
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--ghostwire-radius-sm) var(--ghostwire-radius-sm) 0 0;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-11, 11px);
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-xl);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text-dim);
+  text-shadow: none;
+}
+
+.ghostwire-hero-sheet nav.tabs .item:hover {
+  color: var(--ghostwire-sheet-steel-bright);
+  background: color-mix(in srgb, var(--ghostwire-sheet-steel) 8%, transparent);
+}
+
+.ghostwire-hero-sheet nav.tabs .item.active {
+  border-color: var(--ghostwire-sheet-wire);
+  background: color-mix(in srgb, var(--ghostwire-sheet-steel) 26%, transparent);
+  color: var(--ghostwire-sheet-text);
+  text-shadow: none;
+}
+
+/* ---------------------------------------------------------------- panels, labels, controls */
+
+.ghostwire-hero-sheet fieldset {
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius);
+  background: color-mix(in srgb, var(--ghostwire-sheet-panel) 55%, transparent);
+}
+
+.ghostwire-hero-sheet fieldset > legend {
+  font-size: var(--font-size-11, 11px);
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-xl);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-steel);
+}
+
+.ghostwire-hero-sheet .form-group > label,
+.ghostwire-hero-sheet .resource-label,
+.ghostwire-hero-sheet .input-placeholder-label,
+.ghostwire-hero-sheet .item-header .item-column {
+  font-size: var(--font-size-11, 11px);
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-lg);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text-dim);
+}
+
+.ghostwire-hero-sheet .window-content input,
+.ghostwire-hero-sheet .window-content select,
+.ghostwire-hero-sheet .window-content textarea,
+.ghostwire-hero-sheet .window-content prose-mirror,
+.ghostwire-hero-sheet .window-content multi-select,
+.ghostwire-hero-sheet .window-content .input-placeholder {
+  background: var(--ghostwire-panel-1);
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius-sm);
+  color: var(--ghostwire-sheet-text);
+}
+
+.ghostwire-hero-sheet .window-content input:focus,
+.ghostwire-hero-sheet .window-content select:focus,
+.ghostwire-hero-sheet .window-content textarea:focus {
+  border-color: var(--ghostwire-sheet-steel);
+  box-shadow: 0 0 0 1px var(--ghostwire-sheet-wire);
+}
+
+.ghostwire-hero-sheet .window-content button {
+  background: color-mix(in srgb, var(--ghostwire-sheet-panel) 80%, transparent);
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius-sm);
+  color: var(--ghostwire-sheet-text);
+  letter-spacing: var(--ghostwire-track);
+}
+
+.ghostwire-hero-sheet .window-content button:hover:not(:disabled) {
+  border-color: var(--ghostwire-sheet-steel);
+  background: color-mix(in srgb, var(--ghostwire-sheet-steel) 18%, transparent);
+  color: var(--ghostwire-sheet-steel-bright);
+}
+
+/* ---------------------------------------------------------------- characteristics + resources */
+
+/* Five boxed cells with the label beside the number, which is how the mock reads them. The markup is
+   one anchor per characteristic, so the box is the anchor — no template change. */
+.ghostwire-hero-sheet fieldset.characteristics .characteristic {
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius);
+  background: color-mix(in srgb, var(--ghostwire-sheet-panel) 70%, transparent);
+  padding: 0.35rem 0.25rem;
+  font-size: var(--font-size-11, 11px);
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-lg);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text-dim);
+  text-shadow: none;
+}
+
+.ghostwire-hero-sheet fieldset.characteristics .characteristic:hover:not(.disabled) {
+  border-color: var(--ghostwire-sheet-steel);
+  color: var(--ghostwire-sheet-steel-bright);
+}
+
+.ghostwire-hero-sheet fieldset.resources .resource input,
+.ghostwire-hero-sheet fieldset.resources .resource .input-placeholder {
+  font-family: var(--ghostwire-font-display);
+  font-size: var(--font-size-18, 18px);
+  color: var(--ghostwire-sheet-steel-bright);
+  text-align: center;
+}
+
+.ghostwire-hero-sheet fieldset.resources .resource-label button {
+  background: none;
+  border: none;
+  font-size: var(--font-size-11, 11px);
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-lg);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text-dim);
+}
+
+/* ---------------------------------------------------------------- item lists */
+
+.ghostwire-hero-sheet .item-list-container .item-header {
+  border-bottom: 1px solid var(--ghostwire-sheet-wire-soft);
+  background: color-mix(in srgb, var(--ghostwire-sheet-panel-2) 80%, transparent);
+}
+
+.ghostwire-hero-sheet .item-list > .item {
+  border-bottom: 1px solid var(--ghostwire-sheet-wire-soft);
+}
+
+.ghostwire-hero-sheet .item-list > .item:hover {
+  background: color-mix(in srgb, var(--ghostwire-sheet-steel) 7%, transparent);
+}
+
+.ghostwire-hero-sheet .item-list .item-name .name .label {
+  font-weight: 600;
+  letter-spacing: var(--ghostwire-track-lg);
+  text-transform: uppercase;
+  color: var(--ghostwire-sheet-text);
+}
+
+.ghostwire-hero-sheet .item-list .item-name .name .keywords {
+  letter-spacing: var(--ghostwire-track-xs);
+  color: var(--ghostwire-sheet-text-dim);
+}
+
+.ghostwire-hero-sheet .item-list .item-image {
+  border: 1px solid var(--ghostwire-sheet-wire-soft);
+  border-radius: var(--ghostwire-radius-sm);
+}
+
+/* ---------------------------------------------------------------- Ghostwire's own sheet chrome */
+
+/* Ember lives here and nowhere else on the sheet: Body Integrity, the Taint bands, and the caster
+   soft-cap / erosion warnings that hang off the same fieldset. Everything else stays cold steel. */
+.ghostwire-hero-sheet .ghostwire-integrity {
+  border-color: color-mix(in srgb, var(--ghostwire-sheet-ember) 45%, transparent);
+  background: color-mix(in srgb, var(--ghostwire-sheet-ember) 7%, transparent);
+}
+
+.ghostwire-hero-sheet .ghostwire-integrity > legend {
+  color: var(--ghostwire-sheet-ember-bright);
+}
+
+.ghostwire-hero-sheet .ghostwire-integrity input {
+  font-family: var(--ghostwire-font-display);
+  font-size: var(--font-size-16, 16px);
+  color: var(--ghostwire-sheet-ember-bright);
+  border-color: color-mix(in srgb, var(--ghostwire-sheet-ember) 40%, transparent);
+}
+
+.ghostwire-hero-sheet .ghostwire-taint > legend,
+.ghostwire-hero-sheet .ghostwire-taint-header label {
+  color: var(--ghostwire-sheet-ember-bright);
+}
+
+.ghostwire-hero-sheet .ghostwire-wired > legend,
+.ghostwire-hero-sheet .ghostwire-changer-forms > legend {
+  color: var(--ghostwire-sheet-steel);
+}
+
+/* The wire-state word keeps its own state colour — it is a readout, not sheet chrome — but the
+   Overlay rung read the module's neon accent, which is the one cyan left on a cold-steel sheet. */
+.ghostwire-hero-sheet .ghostwire-wired.state-overlay .ghostwire-wired-state {
+  color: var(--ghostwire-sheet-steel-bright);
+}
+
+/* ---------------------------------------------------------------- scrollbars */
+
+.ghostwire-hero-sheet section.tab {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ghostwire-sheet-steel-dim) transparent;
+}

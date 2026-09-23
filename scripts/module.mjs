@@ -898,6 +898,14 @@ Hooks.on("renderDrawSteelItemSheet", (app, element) => {
   name.after(line);
 });
 
+// R0 (0.3.120): the Hero sheet Ghostwire skin hangs off one marker class, and this is the whole of
+// the JS it needs. Styling against Draw Steel's own `.application.draw-steel.actor.hero` chain would
+// work today, but that chain is three of the system's DEFAULT_OPTIONS away from us; the class is ours.
+// Everything else the skin does lives in `styles/ghostwire.css` under `.ghostwire-hero-sheet`.
+Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
+  element.classList.add("ghostwire-hero-sheet");
+});
+
 // Hero sheet: a Body Integrity fieldset at the top of the Stats tab (current / max). Cyborgs use 25 max.
 Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   const stats = element.querySelector("section.tab[data-tab='stats']");
