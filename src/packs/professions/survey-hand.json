@@ -1,0 +1,72 @@
+{
+  "_id": "HBgDMFcSAAKxlbs0",
+  "_key": "!items!HBgDMFcSAAKxlbs0",
+  "name": "GHOSTWIRE.Professions.SurveyHand.Name",
+  "type": "career",
+  "img": "icons/tools/navigation/map-chart-tan.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.SurveyHand.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "survey-hand",
+    "advancements": {
+      "HiOXGLjNpn1swzgx": {
+        "_id": "HiOXGLjNpn1swzgx",
+        "name": "GHOSTWIRE.Skills.List.Perception",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "perception"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "DmfCmPIAFes3gKbW": {
+        "_id": "DmfCmPIAFes3gKbW",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "survival",
+            "occult",
+            "streetwise",
+            "insight"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
