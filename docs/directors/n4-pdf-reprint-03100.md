@@ -60,4 +60,4 @@ Front matter touched (tracked, honest status only — no marketing rewrite):
 
 ## Next
 
-**G3** lang + style tokens → then **S1**, then **L1**. Module stays **0.3.100**.
+**Chargen Wizard (I2 / 0.3.101)** → **G4 B49 skill-on-weapon rolls** → **G3** lang + style tokens → **S1** → **L1**. Module stays **0.3.100** until Chargen ships.
