@@ -1,0 +1,67 @@
+{
+  "_id": "1pWnPIKxzcYSmnUk",
+  "_key": "!items!1pWnPIKxzcYSmnUk",
+  "name": "GHOSTWIRE.Gear.Items.Ashwalker.Name",
+  "type": "treasure",
+  "img": "icons/weapons/artillery/mount-weapon-sprayer-chem-green-purple.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Ashwalker.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ashwalker",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 2,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "njXhmoAVQCSiEekh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 4200,
+        "modSlots": 3,
+        "tags": [
+          "Mounted",
+          "Vehicle",
+          "Blast",
+          "Loud"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 9,
+        "damageType": "fire",
+        "range": "Short",
+        "weaponBand": "heavy",
+        "mountScale": "category-3",
+        "vehicleMount": true
+      }
+    }
+  }
+}

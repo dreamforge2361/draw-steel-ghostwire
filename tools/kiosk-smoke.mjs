@@ -176,7 +176,7 @@ note(b119.includes("kiosks/kiosk-merchant.webp"), "B119 spike documents art path
 note(director.includes("Street Food Kiosk") && director.includes("Armor Locker"), "Director note names type defaults");
 note(director.includes("Vehicle Lot") && director.includes("Deck Vendor") && director.includes("Software Stall") && director.includes("Ammo Counter"), "Director note names 0.3.77 type defaults");
 note(boot.includes("registerConsumableUse()"), "module registers registerConsumableUse");
-note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones,vehicles,decks,programs,ammo,mods,armorMods,gadgetMods", "thirteen preset ids");
+note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,vehicleWeapons,drones,vehicles,decks,programs,ammo,mods,armorMods,gadgetMods", "fourteen preset ids");
 note(getPreset("food")?.match.pathPrefixes.includes("consumables/food"), "food filter is consumables/food");
 note(getPreset("armor")?.match.kinds.includes("armor"), "armor filter is kind=armor");
 note(getPreset("weapons")?.match.kinds.includes("weapon"), "weapons filter is kind=weapon");
@@ -186,6 +186,9 @@ note(getPreset("decks")?.match.matrixRoles.includes("deck"), "decks filter is ma
 note(JSON.stringify(getPreset("programs")?.match.matrixRoles) === '["program","payload"]', "programs shelf is 4B suites + 4C payloads");
 note(getPreset("ammo")?.match.pathPrefixes.includes("general/ammunition"), "ammo filter is general/ammunition");
 note(getPreset("mods")?.match.modAny === true && getPreset("mods")?.match.packs.join() === "mods", "mods filter is flags.mod on the mods pack");
+note(getPreset("vehicleWeapons")?.match.pathPrefixes.includes("weapons/mounted")
+  && getPreset("vehicleWeapons")?.match.tagsAny.includes("Mounted")
+  && !getPreset("vehicleWeapons")?.match.kinds, "Hardpoint Bay is weapons/mounted + the Mounted tag, not every weapon");
 note(!getPreset("programs")?.match.tagsAny, "programs does not match the Program tag (autosofts share it)");
 
 function scanSrcCatalog() {

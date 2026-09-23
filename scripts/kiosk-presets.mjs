@@ -31,6 +31,7 @@ export const FOLDER_IDS = Object.freeze({
   modsArmor: "B4auJ3Tjl5Ueylf3",
   modsWeapons: "lS0Fe0Hu8lN3LKEC",
   modsGadgets: "WPSNKYe2217TSF7m",
+  weaponsMounted: "njXhmoAVQCSiEekh",
 });
 
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? doc?.flags?.["draw-steel-ghostwire"] ?? {};
@@ -87,6 +88,19 @@ export const KIOSK_PRESETS = Object.freeze([
       packs: ["gear"],
       pathPrefixes: ["weapons"],
       kinds: ["weapon"],
+    },
+  },
+  {
+    // 0.3.112 — the Hardpoint Bay. Vehicle / drone mount SKUs (gear/weapons/mounted) plus the
+    // Category-3 heavies that already ship tagged Mounted (Wallbreaker, Siege Missile), because a
+    // mount vendor sells both. Deliberately NOT kinds: ["weapon"] — that is the whole Weapons Cage.
+    id: "vehicleWeapons",
+    langKey: "VehicleWeapons",
+    match: {
+      packs: ["gear"],
+      pathPrefixes: ["weapons/mounted"],
+      folderIds: [FOLDER_IDS.weaponsMounted],
+      tagsAny: ["Mounted"],
     },
   },
   {

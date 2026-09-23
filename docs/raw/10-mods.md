@@ -295,6 +295,8 @@ Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repa
 
 #### Weaponry kits (one at a time)
 
+**0.3.112 — the kit is the mount, not the gun.** A weaponry kit adds hardpoints; a concrete Category-3 weapon goes into them. Buy that gun from Gear master **§3H** (the dedicated vehicle-mount SKUs) or use a Mounted-tagged heavy from **§3C** (Wallbreaker, Siege Missile). Scale ladder: **category-3 < medium < heavy** — a mount takes any gun at its own scale or below. A **turret** gun needs a Turret Ring; an **integrated** package needs a Heavy Hardpoint. However it got there, a gun on a hardpoint is fired with **Gunnery**, never its hand-held weapon skill. In Foundry: *Mount on…* / *Unmount weapon* on the weapon’s row; Deploy mirrors the mounted gun onto the machine Actor.
+
 | Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
 |---|---|---|---|---|
 | Gun Rack / Weapon Mount / hardpoint assembly | Professional | 800 | Adds a hardpoint to fit one Category-3 weapon (scale-appropriate); fired with Gunnery. E1 of the ladder. | Mount, Weaponry |

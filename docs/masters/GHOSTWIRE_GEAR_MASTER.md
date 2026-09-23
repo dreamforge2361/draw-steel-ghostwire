@@ -404,6 +404,43 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 
 ---
 
+### 3H — Vehicle & Mounted Weapons (hardpoint hardware)
+
+*New in 0.3.112. §5F says it plainly: "Mounted weapons themselves come from Category 3 unless the
+weaponry SKU is an integrated package." These are those weapons — guns with no hand-held mode, bought
+to be bolted onto an installed **Weaponry kit** (§5F) on a drone or vehicle. Every row is fired with
+**Gunnery**, which in play means the pilot's **Rigged Fire** (or the machine's own action), never Heavy
+Weapons. Category-3 heavies that already ship tagged **Mounted** — Wallbreaker, Siege Missile — remain
+mountable and are still Heavy Weapons in a hero's hands; the skill follows where the gun sits.*
+
+**Mount scale** is the ladder the kit has to reach: **category-3 < medium < heavy**. A mount takes any
+gun at its own scale or below, so a Turret Ring carries a Category-3 gun happily and a Gun Rack cannot
+swallow an anti-vehicle cannon. Two extra requirements run the other way: a **turret** gun needs a
+powered ring (Turret Ring only), and an **integrated** package needs the battery mount (Heavy Hardpoint
+only). Kit capacity is the same table §5F prints — Gun Rack 1, Twin Mount 2, Turret Ring 1, Heavy
+Hardpoint 1.
+
+| Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Mount | Tags |
+|---|---|---|---|---|---|---|---|---|
+| Hornet Pod / Kestrel Swarmcaster / drone-scale burst pod | T4 | 4 | 900 | 6 kinetic | Short | 2 | category-3 | [Medium] Vehicle Drone-scale Auto |
+| Roadspike / Ferrum Lane-Sweeper / pintle vehicle machine gun | T4 | 4 | 1,200 | 9 kinetic | Medium | 2 | category-3 | [Heavy] Vehicle Auto Loud |
+| Streetlash / Ironclad Coaxial Pair / twinned vehicle machine guns | T3 | 3 | 3,400 | 9 kinetic | Long | 3 | category-3 | [Heavy] Vehicle Auto Loud Dual-feed |
+| Ashwalker / Ferrum Hull-Clearer / vehicle flame projector | T3 | 3 | 4,200 | 9 fire | Short | 3 | category-3 | [Heavy] Vehicle Blast Loud |
+| Lanternhead / Nyx Streetlight / turret grenade thrower | T2 | 2 | 9,500 | 10 fire | Medium | 4 | medium turret | [Heavy] Turret Vehicle Blast Loud |
+| Crownfire / Ironclad Traverse Autocannon / powered turret autocannon | T2 | 2 | 13,000 | 11 AP | Long | 4 | medium turret | [Heavy] Turret Vehicle Auto Loud |
+| Hailstorm / Ironclad Rotary Battery / integrated rotary gun battery | T1 | 1 | 30,000 | 14 kinetic | Long | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Auto Loud |
+| God’s-Finger / Ferrum Breach Cannon / integrated anti-vehicle cannon | T1 | 1 | 38,000 | 14 AP | Extreme | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Loud |
+| Quiverframe / Kestrel Guided Rack / integrated missile rack | T1 | 1 | 44,000 | 14 fire | Extreme | 5 | heavy integrated | [Anti-veh] Integrated Vehicle Blast Smart-ready |
+
+*(Availability, price band and mod slots still come from Item Tier alone, §F5/§F6. Weapon Base still
+reads through the Damage-Bridge: Heavy ≈ 9, Anti-veh ≈ 14, ±1–2 within band. **Auto** rows want an
+**Ammo Bin** (§5F) on the same machine for sustained fire. Buying one: the **Hardpoint Bay** kiosk
+preset stocks this whole table plus the Mounted heavies.)*
+
+---
+
+---
+
 ## Category 4 — Matrix Gear (the jacked-in hardware)
 
 *Governing rulings: (1) Decks are force-multipliers, not weapons — combat always rolls Cognition + the relevant Wired skill; a better deck buys Bandwidth capacity and situational edges, never raw power. (2) Programs are deck mods occupying mod slots — persistent programs (4B) stay resident; attack payloads (4C) are Consumable "ammo" — Craft-loaded magazines sharing the same slots. (3) This is the shared home for both the Hacker's gear and the Wrench's rigger-command hardware (RCCs, 4D) — the drones/vehicles they command live in Category 5.*
@@ -597,6 +634,8 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Aegis Kit / Prototype Armor / reactive composite hull | T1 | 1 | 22,000 | +27 Stamina (Integrity) on the machine. | Armor |
 
 #### Weaponry kits (one at a time) — Gunnery to fire
+
+*A kit is the **mount**, not the gun. Bolt a Category-3 weapon into it — the dedicated vehicle-mount SKUs in **§3H**, or a Mounted-tagged heavy (Wallbreaker, Siege Missile) — and the hardpoint answers to **Gunnery**. Capacity and scale are below; the scale ladder is category-3 < medium < heavy. **0.3.112:** mounting is recorded in Foundry (*Mount on…* / *Unmount weapon* on the weapon’s row), and Deploy mirrors the mounted gun onto the machine Actor’s Inventory.*
 
 | Name (slang / corp / sci) | Tier | Avail | Cost ¥ | Effect | Tags |
 |---|---|---|---|---|---|

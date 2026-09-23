@@ -1,0 +1,69 @@
+{
+  "_id": "5ucJrCXQiUR5NWDl",
+  "_key": "!items!5ucJrCXQiUR5NWDl",
+  "name": "GHOSTWIRE.Gear.Items.Crownfire.Name",
+  "type": "treasure",
+  "img": "icons/weapons/artillery/mount-weapon-cannon-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Crownfire.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "crownfire",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 3,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "njXhmoAVQCSiEekh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 13000,
+        "modSlots": 4,
+        "tags": [
+          "Mounted",
+          "Turret",
+          "Vehicle",
+          "Auto",
+          "Loud"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 11,
+        "damageType": "AP",
+        "range": "Long",
+        "weaponBand": "heavy",
+        "mountScale": "medium",
+        "vehicleMount": true,
+        "mountType": "turret"
+      }
+    }
+  }
+}

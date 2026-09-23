@@ -1,0 +1,67 @@
+{
+  "_id": "w0lLUei7Na0hjAy3",
+  "_key": "!items!w0lLUei7Na0hjAy3",
+  "name": "GHOSTWIRE.Gear.Items.HornetPod.Name",
+  "type": "treasure",
+  "img": "icons/weapons/artillery/mount-weapon-auto-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.HornetPod.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hornet-pod",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 1,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "njXhmoAVQCSiEekh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "professional",
+        "price": 900,
+        "modSlots": 2,
+        "tags": [
+          "Mounted",
+          "Vehicle",
+          "Drone-scale",
+          "Auto"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 6,
+        "damageType": "kinetic",
+        "range": "Short",
+        "weaponBand": "medium",
+        "mountScale": "category-3",
+        "vehicleMount": true
+      }
+    }
+  }
+}

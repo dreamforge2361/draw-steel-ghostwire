@@ -442,6 +442,23 @@ function inactiveMark() {
 }
 
 /**
+ * Mount records are owned by scripts/mounts.mjs. The flag key is repeated here rather than imported:
+ * mounts.mjs imports this file for MACHINE_MOD_PROFILES / kitProfile, and an import cycle is not worth
+ * one string. tools/mount-weapons-smoke.mjs asserts the two stay identical.
+ */
+const MOUNT_FLAG = "mount";
+
+/** The weapon Items on this kit's Actor bolted to it (0.3.112). */
+export function mountedWeaponsOn(mod) {
+  const actor = mod?.parent;
+  if (!(actor instanceof Actor) || !mod?.id) return [];
+  return [...actor.items].filter(item => {
+    const mount = item.getFlag?.(MODULE_ID, MOUNT_FLAG) ?? item.flags?.[MODULE_ID]?.[MOUNT_FLAG];
+    return mount?.mountedOn === mod.id;
+  });
+}
+
+/**
  * Build-tab line for one weaponry / hardpoint kit.
  * Empty for armor and Director mods — those already show as Integrity or their own kit AE.
  * @returns {string}
@@ -462,6 +479,12 @@ export function describeWeaponryKit(mod) {
   if (p.dualFeed) bits.push("dual-feed");
   if (p.wideArc) bits.push("wide arc");
   if (p.gunnery || data?.exclusiveKit === "weaponry") bits.push("Gunnery");
+  // 0.3.112: an empty hardpoint still reads as a kit; a loaded one names its gun(s).
+  const guns = mountedWeaponsOn(mod);
+  if (guns.length) {
+    const capacity = Number(p.hardpoints ?? guns.length) || guns.length;
+    bits.push(`${guns.map(gun => gun.name).join(", ")} (${guns.length} / ${capacity})`);
+  }
   return bits.join(" · ");
 }
 
@@ -488,11 +511,8 @@ export function machineModSheetFields(item) {
   };
 }
 
-/**
- * Plain Item data for a machine-Actor copy of a mod installed on the hero's chassis.
- * The hero Item stays the slot record. `machineModMirror` is the source uuid so Deploy / sync can refresh the list.
- */
-export function machineModMirrorData(source) {
+/** An id-stripped clone of a hero Item, ready to embed on a machine Actor. */
+function mirrorItemBase(source) {
   const raw = typeof source.toObject === "function" ? source.toObject() : source;
   const data = foundry?.utils?.deepClone ? foundry.utils.deepClone(raw) : structuredClone(raw);
   delete data._id;
@@ -508,24 +528,59 @@ export function machineModMirrorData(source) {
   }
   data.flags ??= {};
   data.flags[MODULE_ID] ??= {};
-  data.flags[MODULE_ID].mod ??= {};
-  data.flags[MODULE_ID].mod.installedOn = null;
   data.flags[MODULE_ID].machineModMirror = source.uuid ?? source.id ?? null;
   return data;
 }
 
-/** Embed installed chassis mods on the machine Actor; drop mirrors whose source mod is gone. */
+/**
+ * Plain Item data for a machine-Actor copy of a mod installed on the hero's chassis.
+ * The hero Item stays the slot record. `machineModMirror` is the source uuid so Deploy / sync can refresh the list.
+ */
+export function machineModMirrorData(source) {
+  const data = mirrorItemBase(source);
+  data.flags[MODULE_ID].mod ??= {};
+  data.flags[MODULE_ID].mod.installedOn = null;
+  return data;
+}
+
+/**
+ * Plain Item data for a machine-Actor copy of a weapon mounted on an installed weaponry kit (0.3.112).
+ * Deliberately NOT machineModMirrorData: stamping an empty `mod` block onto a gun would make the hero
+ * mod UX treat the copy as a mod. `mount.mountedOn` is cleared because it names a hero-sheet kit id;
+ * the machine Actor's own kind + band is what makes the copy read as Gunnery (weapon-skills.mjs).
+ */
+export function machineMountMirrorData(source) {
+  const data = mirrorItemBase(source);
+  const mount = data.flags[MODULE_ID][MOUNT_FLAG];
+  data.flags[MODULE_ID][MOUNT_FLAG] = {
+    ...(mount && typeof mount === "object" ? mount : {}),
+    mountedOn: null,
+  };
+  data.flags[MODULE_ID].machineMountMirror = true;
+  return data;
+}
+
+/**
+ * Embed installed chassis mods — and the weapons mounted on its live weaponry kit — on the machine
+ * Actor; drop mirrors whose source Item is gone. A kit switched off in the field keeps its slot but
+ * stops feeding, so its guns are not mirrored.
+ */
 async function syncMachineModMirrors(actor, chassisItem) {
   if (!actor?.createEmbeddedDocuments) return;
   const mods = installedHostMods(chassisItem).filter(mod => mod.uuid || mod.id);
-  const wanted = new Set(mods.map(mod => mod.uuid ?? mod.id));
+  const guns = activeHostMods(chassisItem)
+    .flatMap(mod => mountedWeaponsOn(mod))
+    .filter(gun => gun.uuid || gun.id);
+  const key = doc => doc.uuid ?? doc.id;
+  const wanted = new Set([...mods, ...guns].map(key));
   const mirrors = [...actor.items].filter(item => item.getFlag?.(MODULE_ID, "machineModMirror"));
   const stale = mirrors.filter(item => !wanted.has(item.getFlag(MODULE_ID, "machineModMirror")));
   if (stale.length) await actor.deleteEmbeddedDocuments("Item", stale.map(item => item.id));
   const present = new Set(mirrors.map(item => item.getFlag(MODULE_ID, "machineModMirror")));
-  const create = mods
-    .filter(mod => !present.has(mod.uuid ?? mod.id))
-    .map(machineModMirrorData);
+  const create = [
+    ...mods.filter(mod => !present.has(key(mod))).map(machineModMirrorData),
+    ...guns.filter(gun => !present.has(key(gun))).map(machineMountMirrorData),
+  ];
   if (create.length) await actor.createEmbeddedDocuments("Item", create);
 }
 
@@ -1068,7 +1123,7 @@ export function registerMachines() {
       chassisStamina, armorStaminaBonus, machineStamina, machineWeaponry,
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
-      describeWeaponryKit, machineModSheetFields, machineModMirrorData,
+      describeWeaponryKit, machineModSheetFields, machineModMirrorData, machineMountMirrorData, mountedWeaponsOn,
       fleetSizeCap, fieldedMachineCount, fleetIdleWirePlan, machineTokenSize, isDeployedMachineActor, hasAnyToken,
       applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
       isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
