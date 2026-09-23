@@ -2078,3 +2078,70 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-identity-paper { color: var(--color-level-warning, #d08a2a); }
 .ghostwire-identity-deep,
 .ghostwire-identity-seeded { color: var(--ghostwire-accent); }
+
+/* ---------------------------------------------------------------- 0.3.116 */
+
+/* S9 Wire-state toggle: token HUD button, hero sheet chip, picker, chat card.
+   Colours follow the Wired Console roster so a rung reads the same everywhere. */
+.control-icon.ghostwire-wire-toggle-hud.state-linked { color: #8fd4a8; }
+.control-icon.ghostwire-wire-toggle-hud.state-overlay { color: var(--ghostwire-accent); }
+.control-icon.ghostwire-wire-toggle-hud.state-jackedIn,
+.control-icon.ghostwire-wire-toggle-hud.state-jumpedIn { color: #e0457b; }
+
+.ghostwire-wire-toggle-chip {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  margin: 0.15rem 0 0; padding: 0.1rem 0.5rem;
+  border: 1px solid currentColor; border-radius: 999px; background: none;
+  font-size: var(--font-size-11, 11px); letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ghostwire-text-muted); cursor: pointer; width: auto;
+}
+.ghostwire-wire-toggle-chip.state-linked { color: #8fd4a8; }
+.ghostwire-wire-toggle-chip.state-overlay { color: var(--ghostwire-accent); }
+.ghostwire-wire-toggle-chip.state-jackedIn,
+.ghostwire-wire-toggle-chip.state-jumpedIn { color: #e0457b; }
+.ghostwire-wire-toggle-chip:hover { box-shadow: 0 0 6px color-mix(in srgb, currentColor 45%, transparent); }
+
+.ghostwire-wire-toggle .ghostwire-wire-toggle-option {
+  display: grid; grid-template-columns: auto 1fr; gap: 0 0.5rem;
+  align-items: baseline; margin: 0.3rem 0; padding: 0.3rem 0.4rem;
+  border: 1px solid color-mix(in srgb, var(--ghostwire-accent) 20%, transparent); border-radius: 4px;
+}
+.ghostwire-wire-toggle .ghostwire-wire-toggle-name { font-weight: 600; }
+.ghostwire-wire-toggle .hint { grid-column: 2; margin: 0.1rem 0 0; font-size: var(--font-size-11, 11px); }
+
+.ghostwire-wire-toggle-card.state-linked { border-left: 3px solid #8fd4a8; padding-left: 0.5rem; }
+.ghostwire-wire-toggle-card.state-overlay { border-left: 3px solid var(--ghostwire-accent); padding-left: 0.5rem; }
+.ghostwire-wire-toggle-card.state-jumpedIn { border-left: 3px solid #e0457b; padding-left: 0.5rem; }
+
+/* F11 Critical Roll feedback. The flash is the VFX: a short vignette over the interface,
+   pure CSS so nothing depends on a VFX module being installed. */
+.ghostwire-crit-flash {
+  position: absolute; inset: 0; z-index: 100; pointer-events: none;
+  background: radial-gradient(ellipse at center,
+    transparent 45%,
+    color-mix(in srgb, var(--ghostwire-accent-hot) 28%, transparent) 100%);
+  animation: ghostwire-crit-flash 0.9s ease-out forwards;
+}
+@keyframes ghostwire-crit-flash {
+  0% { opacity: 0; }
+  18% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.chat-message.ghostwire-crit {
+  box-shadow: 0 0 10px color-mix(in srgb, var(--ghostwire-accent-hot) 55%, transparent);
+  border-color: var(--ghostwire-accent-hot);
+}
+.chat-message.ghostwire-crit-rulecard { border-left: 3px solid var(--ghostwire-accent-hot); }
+.ghostwire-crit-card h3 {
+  margin: 0 0 0.25rem; font-size: var(--font-size-14, 14px);
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ghostwire-accent-hot);
+}
+.ghostwire-crit-card ul { margin: 0.25rem 0; padding-left: 1.1rem; }
+.ghostwire-crit-card li { margin: 0.15rem 0; }
+.ghostwire-crit-card .ghostwire-crit-nat20 {
+  margin: 0.25rem 0 0; font-weight: 600; color: var(--ghostwire-accent-hot);
+}
+.ghostwire-crit-card .hint { margin: 0.35rem 0 0; font-size: var(--font-size-11, 11px); }
+
+/* F13 Cover/Conceal chat line */
+.ghostwire-cover-conceal-card { margin: 0; border-left: 3px solid #8fd4a8; padding-left: 0.5rem; }

@@ -5231,39 +5231,39 @@
         },
         "BurnSin": {
           "Name": "Burn SIN",
-          "Description": "<p><em>Burn SIN · quality 1 · one checkpoint, maybe</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥400 · <strong>Tags:</strong> Identity</p><p>A number bought off a stall printer, good for one walk past one bored guard. The history behind it is forty minutes of generated filler and a birth record that points at a district that burned down.</p><p><strong>On a scan:</strong> Burn paper — the bearer rolls the check with <strong>a double bane</strong>. Burn risk 3: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Burn SIN · quality 1 · one checkpoint, maybe</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥500 · <strong>Tags:</strong> Identity</p><p>A number bought off a stall printer, good for one walk past one bored guard. The history behind it is forty minutes of generated filler and a birth record that points at a district that burned down.</p><p><strong>On a scan:</strong> Burn paper — the bearer rolls the check with <strong>a double bane</strong>. Burn risk 3: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "BrokerSin": {
           "Name": "Broker SIN",
-          "Description": "<p><em>Broker SIN · quality 3 · clean enough to bank on</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥6,000 · <strong>Tags:</strong> Identity</p><p>Bought through a fixer who buys in volume: a retired person’s record, scrubbed and re-dated, with a credit history that pays its own small bills. This is where a working runner starts.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Broker SIN · quality 3 · clean enough to bank on</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥15,000 · <strong>Tags:</strong> Identity</p><p>Bought through a fixer who buys in volume: a retired person’s record, scrubbed and re-dated, with a credit history that pays its own small bills. This is where a working runner starts.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "DeepCoverSin": {
           "Name": "Deep Cover SIN",
-          "Description": "<p><em>Deep Cover SIN · quality 4 · a life somebody built</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥25,000 · <strong>Tags:</strong> Identity</p><p>A decade of consistent, boring existence: taxes, a lease, a gym membership nobody used. Built slowly by people who charge for patience. Checkers who follow the trail find more trail.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Deep Cover SIN · quality 4 · a life somebody built</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥45,000 · <strong>Tags:</strong> Identity</p><p>A decade of consistent, boring existence: taxes, a lease, a gym membership nobody used. Built slowly by people who charge for patience. Checkers who follow the trail find more trail.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "CradleSeededSin": {
           "Name": "Cradle-Seeded SIN",
-          "Description": "<p><em>Cradle-Seeded SIN · quality 5 · seeded at the registry</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥90,000 · <strong>Tags:</strong> Identity</p><p>Not a forgery. Somebody with registry access wrote a person into the civic record at birth and let them age there. The only people who can sell you this are the people who can take it back.</p><p><strong>On a scan:</strong> Cradle-seeded paper — the bearer rolls the check with <strong>a double edge</strong>. Burn risk 0: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Cradle-Seeded SIN · quality 5 · seeded at the registry</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥110,000 · <strong>Tags:</strong> Identity</p><p>Not a forgery. Somebody with registry access wrote a person into the civic record at birth and let them age there. The only people who can sell you this are the people who can take it back.</p><p><strong>On a scan:</strong> Cradle-seeded paper — the bearer rolls the check with <strong>a double edge</strong>. Burn risk 0: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "LanyardForgery": {
           "Name": "Lanyard Forgery",
-          "Description": "<p><em>Lanyard Forgery · quality 2 · corp badge, wrong corp</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥1,200 · <strong>Tags:</strong> Identity</p><p>A contractor badge on a printed lanyard, cloned off a photo. Good for a lobby, a loading dock, and exactly as long as nobody swipes it against a live reader.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Lanyard Forgery · quality 2 · corp badge, wrong corp</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥2,500 · <strong>Tags:</strong> Identity</p><p>A contractor badge on a printed lanyard, cloned off a photo. Good for a lobby, a loading dock, and exactly as long as nobody swipes it against a live reader.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "CarryPermitForgery": {
           "Name": "Carry Permit (Forged)",
-          "Description": "<p><em>Carry Permit · quality 3 · forged firearms paper</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥4,000 · <strong>Tags:</strong> Identity</p><p>The document that turns “arrested” into “moved along” when a patrol finds a longarm in the trunk. Forged against a real registry template, which is why it costs what it costs.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Carry Permit · quality 3 · forged firearms paper</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥12,000 · <strong>Tags:</strong> Identity</p><p>The document that turns “arrested” into “moved along” when a patrol finds a longarm in the trunk. Forged against a real registry template, which is why it costs what it costs.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "ClinicCredentialForgery": {
           "Name": "Clinic Credential (Forged)",
-          "Description": "<p><em>Clinic Credential · quality 3 · forged medical licence</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,500 · <strong>Tags:</strong> Identity</p><p>A street-doc’s licence number and a clinic affiliation, both borrowed. Buys access to controlled chems, a surgical suite after hours, and the benefit of the doubt in an intake queue.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Clinic Credential · quality 3 · forged medical licence</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥8,000 · <strong>Tags:</strong> Identity</p><p>A street-doc’s licence number and a clinic affiliation, both borrowed. Buys access to controlled chems, a surgical suite after hours, and the benefit of the doubt in an intake queue.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "WireTicketForgery": {
           "Name": "Wire Operator’s Ticket (Forged)",
-          "Description": "<p><em>Wire Ticket · quality 4 · forged Wired-side licence</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥15,000 · <strong>Tags:</strong> Identity</p><p>Licensed network-operator credentials — the paper a corp expects from anyone jacking into their infrastructure on purpose. Deep enough that the Wired-side records pull comes back clean.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Wire Ticket · quality 4 · forged Wired-side licence</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥28,000 · <strong>Tags:</strong> Identity</p><p>Licensed network-operator credentials — the paper a corp expects from anyone jacking into their infrastructure on purpose. Deep enough that the Wired-side records pull comes back clean.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "PaperGhostSin": {
           "Name": "Paper Ghost SIN",
-          "Description": "<p><em>Paper Ghost SIN · quality 2 · thin, but real-shaped</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥1,500 · <strong>Tags:</strong> Identity</p><p>A working forgery with a shallow paper trail: three years of employment, a clinic visit, a lapsed transit pass. It survives a bored scanner. It does not survive anyone who cares. The papermill’s own build of the same grade of paper a street fixer sells as a Fake SIN — a little dearer, a little better made.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>, and a hot check makes it a <strong>double bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Paper Ghost SIN · quality 2 · thin, but real-shaped</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥3,500 · <strong>Tags:</strong> Identity</p><p>A working forgery with a shallow paper trail: three years of employment, a clinic visit, a lapsed transit pass. It survives a bored scanner. It does not survive anyone who cares. The papermill’s own build of the same grade of paper a street fixer sells as a Fake SIN — a little dearer, a little better made.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>, and a hot check makes it a <strong>double bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         }
       },
       "Availability": {
@@ -9564,6 +9564,103 @@
       "Chat": {
         "Scanned": "<strong>{bearer}</strong> runs <strong>{identity}</strong> past {checker} — {band} paper, <strong>{scan}</strong> on the check, burn risk {burnRisk}.",
         "Burned": "<strong>{identity}</strong> is burned. It reads as a street forgery from here on."
+      }
+    },
+    "WireToggle": {
+      "Label": "Wire state",
+      "Title": "Wire state",
+      "Hint": "Switch between Jumped In, Linked and Overlay. Connect is what puts you on-net; Jack Out is what takes you off.",
+      "Hud": "Wire state: {state}. Click to switch.",
+      "Current": "current",
+      "Prompt": "{actor} is <strong>{state}</strong>. Pick a rung.",
+      "Set": "Switch",
+      "SeatReady": "Jump-In would take the seat in <strong>{name}</strong>.",
+      "SeatNone": "No single Jump-In-capable machine is targeted, controlled, or fielded — Jumped In will refuse until there is one.",
+      "States": {
+        "jumpedIn": "Jumped In"
+      },
+      "Hints": {
+        "jumpedIn": "Jumped In: you are the machine. Wired edge and the seat’s guns; the meat body is inert and makes no real-world power rolls."
+      },
+      "Refuse": {
+        "same": "{actor} is already {state}.",
+        "unknown": "That is not a Wire state this toggle offers.",
+        "notConnected": "{actor} is {state}. Use Connect to get on-net first — this toggle moves between rungs, it is not an on-ramp.",
+        "noMachine": "No machine to jump into. Target or control one Jump-In-capable frame, or field one, first."
+      },
+      "Chat": {
+        "Changed": "{actor}: {from} → {to}."
+      },
+      "Settings": {
+        "Hud": {
+          "Name": "Wire state toggle on the token HUD",
+          "Hint": "Show the Wire state button on a hero token’s HUD. It opens the Jumped In / Linked / Overlay picker."
+        },
+        "Sheet": {
+          "Name": "Wire state chip on the hero sheet",
+          "Hint": "Show the current Wire state next to the hero’s name on their sheet. Clicking it opens the same picker."
+        },
+        "Chat": {
+          "Name": "Announce Wire state changes in chat",
+          "Hint": "Post a short card when a hero switches between Jumped In, Linked and Overlay. The toast always fires."
+        }
+      }
+    },
+    "Crit": {
+      "Kinds": {
+        "ability": "Roll",
+        "test": "Test"
+      },
+      "Card": {
+        "Title": "Critical Roll",
+        "Lead": "Natural {natural} on the dice — that is a Critical {kind}.",
+        "Nat20": "Natural 20. The dice do not do better than this.",
+        "Natural": "Only the natural result on the two dice counts — 19 or 20. Edges, banes, bonuses and a target’s Cover/Conceal move the total, but they never make or unmake a critical.",
+        "ability": {
+          "Tier3": "Read the ability at its <strong>tier 3</strong> line, whatever the total came to.",
+          "Action": "Your turn is not over: take <strong>another main action</strong> right now, before the initiative moves on.",
+          "Stack": "Everything the ability already does at tier 3 still happens — potency, effects, the lot."
+        },
+        "test": {
+          "Tier3": "Read the test at its <strong>tier 3</strong> line.",
+          "Reward": "And take something extra on top: a detail nobody offered, a shortcut, somebody who now owes you. The Director says what — a critical test should hand back more than a clean success would."
+        }
+      },
+      "Settings": {
+        "Sfx": {
+          "Name": "Critical Roll sound",
+          "Hint": "Play a sting when a power roll comes up a natural 19 or 20. Uses the same volume as ability SFX."
+        },
+        "SfxSrc": {
+          "Name": "Critical Roll sound file",
+          "Hint": "The sound a critical plays. Ships with Ghostwire; any audio file works."
+        },
+        "Vfx": {
+          "Name": "Critical Roll flash",
+          "Hint": "Flash the screen edge and light up the chat card when a critical lands. Per-client — turn it off for yourself without affecting the table."
+        },
+        "RuleCard": {
+          "Name": "Critical Roll rule card",
+          "Hint": "Post a short card explaining what that critical lets the roller do."
+        },
+        "RuleCardWhisper": {
+          "Name": "Whisper the Critical Roll rule card",
+          "Hint": "Send the rule card only to the roller and the Director instead of the whole table."
+        }
+      }
+    },
+    "CoverConceal": {
+      "Label": "Cover/Conceal",
+      "Hint": "Behind cover, or hidden from sight. Ranged attack power rolls targeting this token take a bane. Melee is unaffected.",
+      "Chat": {
+        "Taken": "{actor} is behind Cover/Conceal — ranged attacks against them take a bane.",
+        "Dropped": "{actor} is out of Cover/Conceal."
+      },
+      "Settings": {
+        "Chat": {
+          "Name": "Announce Cover/Conceal in chat",
+          "Hint": "Post a short card when a token takes or drops Cover/Conceal. The toast always fires."
+        }
       }
     }
   },

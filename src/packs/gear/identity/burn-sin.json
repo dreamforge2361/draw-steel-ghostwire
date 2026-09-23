@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 1,
         "availability": "street",
-        "price": 400,
+        "price": 500,
         "modSlots": 0,
         "tags": [
           "Identity",

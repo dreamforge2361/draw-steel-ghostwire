@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 4,
         "availability": "military",
-        "price": 90000,
+        "price": 110000,
         "modSlots": 0,
         "tags": [
           "Identity",

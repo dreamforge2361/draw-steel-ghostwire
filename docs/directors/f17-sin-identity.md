@@ -25,17 +25,20 @@ A **hot check** — Military-grade security, a corp-side records pull, a Wired-s
 
 Five SIN rungs and four forged credentials, all in Ghostwire Gear › **Identity**.
 
+> **Prices re-cut in 0.3.116 (F23).** The ladder below is the current one. See
+> `docs/directors/papermill-pricing-03116.md` for what moved and why.
+
 | Item | Q | E | ¥ | Availability |
 |---|---:|---:|---:|---|
-| **Burn SIN** | 1 | 1 | 400 | Street |
-| **Paper Ghost SIN** | 2 | 1 | 1,500 | Street |
-| **Broker SIN** | 3 | 2 | 6,000 | Restricted |
-| **Deep Cover SIN** | 4 | 3 | 25,000 | Restricted |
-| **Cradle-Seeded SIN** | 5 | 4 | 90,000 | Military |
-| **Lanyard Forgery** (corp badge) | 2 | 1 | 1,200 | Street |
-| **Clinic Credential (Forged)** | 3 | 2 | 3,500 | Restricted |
-| **Carry Permit (Forged)** (firearms) | 3 | 2 | 4,000 | Restricted |
-| **Wire Operator's Ticket (Forged)** | 4 | 3 | 15,000 | Restricted |
+| **Burn SIN** | 1 | 1 | 500 | Street |
+| **Paper Ghost SIN** | 2 | 1 | 3,500 | Street |
+| **Broker SIN** | 3 | 2 | 15,000 | Restricted |
+| **Deep Cover SIN** | 4 | 3 | 45,000 | Restricted |
+| **Cradle-Seeded SIN** | 5 | 4 | 110,000 | Military |
+| **Lanyard Forgery** (corp badge) | 2 | 1 | 2,500 | Street |
+| **Clinic Credential (Forged)** | 3 | 2 | 8,000 | Restricted |
+| **Carry Permit (Forged)** (firearms) | 3 | 2 | 12,000 | Restricted |
+| **Wire Operator's Ticket (Forged)** | 4 | 3 | 28,000 | Restricted |
 
 Plus the pre-0.3.113 **Fake SIN (basic)** (¥1,000, Professional), which stays where it is in Gear › General › Lifestyle.
 
@@ -65,8 +68,8 @@ It is announced rather than auto-applied on purpose: Draw Steel resolves edges a
 
 ## Running it
 
-- **Give the crew a floor.** A runner with no SIN at all cannot check into a clinic, rent a room, or ride a corp elevator. Burn SIN at ¥400 is the price of existing.
+- **Give the crew a floor.** A runner with no SIN at all cannot check into a clinic, rent a room, or ride a corp elevator. Burn SIN at ¥500 is the price of existing.
 - **Make quality bite before you make it fail.** A bane is a story, not a wall. A burned SIN is a wall — hold it for when the failure should matter.
 - **Credentials stack with SINs, they do not replace them.** A Carry Permit answers "why is there a longarm in the trunk", not "who are you".
-- **Cradle-seeded paper is a plot item at ¥90,000.** The people who can sell it can take it back. That is the hook.
+- **Cradle-seeded paper is a plot item at ¥110,000.** The people who can sell it can take it back. That is the hook.
 - **A hot check is your dial.** Same SIN, same runner, different room: the lobby turnstile is routine, the executive floor is hot.
