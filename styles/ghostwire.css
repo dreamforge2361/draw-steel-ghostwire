@@ -382,6 +382,28 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
   line-height: 1.2;
 }
 
+/* R2 (0.3.121): portrait and canvas token are two different pictures per form, so each form slot
+ * carries two pickers. The token thumb is round because the token file is. */
+.ghostwire-changer-form-art-kind {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: stretch;
+}
+
+.ghostwire-changer-form-art-kind-label {
+  font-size: 0.7em;
+  letter-spacing: var(--ghostwire-track-sm);
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.ghostwire-changer-form-art-token img {
+  border-radius: 50%;
+  object-fit: contain;
+  background: transparent;
+}
+
 /* ============================================================
  * Wired Console (B23b) — net-deck look
  * ============================================================ */

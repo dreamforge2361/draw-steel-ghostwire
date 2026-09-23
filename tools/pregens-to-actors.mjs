@@ -15,6 +15,12 @@
 // docs/masters/pregens/post-patches.json, so this script reproduces src/packs/pregens/ byte for
 // byte. Smoke: node tools/pregen-regen-smoke.mjs
 //
+// R2 (0.3.121): portrait and canvas token are no longer the same file. `img` keeps the square
+// dossier plate under assets/pregens/; `prototypeToken.texture.src` takes the round transparent
+// WebP under assets/tokens/pregens/ built by tools/pregen-round-tokens.mjs. Changer flags carry
+// both halves (`humanArt`/`hybridArt`/`beastArt` vs `humanToken`/`hybridToken`/`beastToken`).
+// Smoke: node tools/r2-pregen-round-tokens-smoke.mjs
+//
 // Run:  node tools/pregens-to-actors.mjs   then   node tools/build-packs.mjs   (Foundry closed)
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from "node:fs";
@@ -231,6 +237,21 @@ function artPath(base) {
   return null;
 }
 
+/**
+ * R2 (0.3.121): canvas token art is a *different file* from the sheet portrait — a 1024² circular
+ * WebP with alpha under assets/tokens/pregens/, cut by tools/pregen-round-tokens.mjs, matching the
+ * bestiary / ARG / mule-bot plates. Before R2 both fields pointed at the same square dossier plate,
+ * which read as a photo dropped on the battle map.
+ *
+ * Falls back to the portrait when a stem has no round token yet, so a new pregen still builds.
+ */
+function tokenPath(base) {
+  if (!base) return null;
+  const stem = String(base).replace(/\.(webp|png)$/i, "");
+  for (const ext of [".webp", ".png"]) if (existsSync(`assets/tokens/pregens/${stem}${ext}`)) return `modules/${MODULE_ID}/assets/tokens/pregens/${stem}${ext}`;
+  return null;
+}
+
 /** Recursive object merge used by the post-patch step; arrays and scalars replace wholesale. */
 function deepMerge(target, patch) {
   for (const [k, v] of Object.entries(patch ?? {})) {
@@ -338,6 +359,8 @@ for (const [i, hero] of ROSTER.entries()) {
 
   const img = artPath(hero.art ?? hero.slug) ?? "icons/svg/mystery-man.svg";
   if (img.endsWith("mystery-man.svg")) warn.push("no portrait — placeholder art");
+  const token = tokenPath(hero.art ?? hero.slug) ?? img;
+  if (token === img && !img.endsWith("mystery-man.svg")) warn.push("no round token — canvas falls back to the square portrait");
 
   const nameKey = `GHOSTWIRE.Pregens.Actors.${hero.key}.Name`;
   actorsLang[hero.key] = {
@@ -380,7 +403,7 @@ for (const [i, hero] of ROSTER.entries()) {
     },
     prototypeToken: {
       name: nameKey, displayName: 20, actorLink: true, width: 1, height: 1,
-      texture: { src: img, scaleX: 1, scaleY: 1 },
+      texture: { src: token, scaleX: 1, scaleY: 1 },
       sight: { enabled: true }, disposition: 1,
     },
     items, effects: [],
@@ -391,12 +414,18 @@ for (const [i, hero] of ROSTER.entries()) {
           biRemaining: 20 - biSpent,
           // Sheet reads integrity.value/max (not biRemaining alone) — keep both in sync.
           integrity: { value: 20 - biSpent, max: 20 },
-        // Changer form art: the sheet and default token use the human portrait; Hybrid and Beast
-        // art live here so syncChangerFormArt (B50) can swap the sheet and token textures to them.
+        // Changer form art: the sheet portrait and the canvas token are two different files per
+        // form (R2, 0.3.121). `*Art` is the square dossier plate the Hero sheet shows; `*Token` is
+        // the round WebP the canvas uses. syncChangerFormArt (B50) reads both and never forces one
+        // onto the other. A form with no round token yet simply has no `*Token` key, and the
+        // runtime falls back to that form's `*Art`.
         ...(hero.changerArt ? { changer: {
           humanArt: img,
           ...(artPath(hero.changerArt.hybrid) ? { hybridArt: artPath(hero.changerArt.hybrid) } : {}),
           ...(artPath(hero.changerArt.beast) ? { beastArt: artPath(hero.changerArt.beast) } : {}),
+          humanToken: token,
+          ...(tokenPath(hero.changerArt.hybrid) ? { hybridToken: tokenPath(hero.changerArt.hybrid) } : {}),
+          ...(tokenPath(hero.changerArt.beast) ? { beastToken: tokenPath(hero.changerArt.beast) } : {}),
         } } : {}),
       },
     },

@@ -120,7 +120,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/kessic-draye.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/pregens/kessic-draye.webp",
       "scaleX": 1,
       "scaleY": 1
     },

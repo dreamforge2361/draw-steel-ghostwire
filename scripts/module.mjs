@@ -576,25 +576,50 @@ async function setChangerForm(effects, form, actor) {
   if (actor) await syncChangerFormArt(actor, form);
 }
 
-// Changer form art: swap the portrait and token art to the form's image from flags.changer (beastArt / humanArt /
-// hybridArt). Changers without beastArt or humanArt keep their art; the forms still work mechanically.
+// Changer form art: swap the sheet portrait and the canvas token to the form's images from flags.changer.
+//
+// R2 (0.3.121) splits the two. `humanArt` / `hybridArt` / `beastArt` are the square dossier plates the Hero sheet
+// shows; `humanToken` / `hybridToken` / `beastToken` are the round transparent WebPs the canvas uses. They are
+// deliberately different files and this function must never force one onto the other — that is exactly what the
+// pre-R2 version did, which is why every pregen walked onto the map as a rectangular photo.
+//
+// A Changer with no `*Token` for a form falls back to that form's `*Art`, so hand-built Changers (and anyone who
+// only filled the sheet's art pickers) keep working. Changers without beastArt or humanArt keep their art entirely;
+// the forms still work mechanically.
+const CHANGER_ART_KEYS = { human: "humanArt", hybrid: "hybridArt", beast: "beastArt" };
+const CHANGER_TOKEN_KEYS = { human: "humanToken", hybrid: "hybridToken", beast: "beastToken" };
+
 async function syncChangerFormArt(actor, form) {
   const art = actor.getFlag(MODULE_ID, "changer") ?? {};
   if (!art.beastArt && !art.humanArt) return;
-  // Snapshot the current portrait as the human form before the first Beast swap, so Human can swap back.
+  // Snapshot the current portrait / token as the human form before the first Beast swap, so Human can swap back.
   if ((form === "beast") && art.beastArt && !art.humanArt && (actor.img !== art.beastArt)) {
     await actor.setFlag(MODULE_ID, "changer.humanArt", actor.img);
     art.humanArt = actor.img;
+    const canvasSrc = actor.isToken ? actor.token?.texture?.src : actor.prototypeToken?.texture?.src;
+    if (canvasSrc && (canvasSrc !== art.beastToken)) {
+      await actor.setFlag(MODULE_ID, "changer.humanToken", canvasSrc);
+      art.humanToken = canvasSrc;
+    }
   }
-  const src = { beast: art.beastArt, human: art.humanArt, hybrid: art.hybridArt ?? art.humanArt }[form] ?? null;
-  if (!src) return;
+  const plate = f => art[CHANGER_ART_KEYS[f]] ?? null;
+  const circle = f => art[CHANGER_TOKEN_KEYS[f]] ?? null;
+  // Hybrid has always fallen back to Human when it has no plate of its own — keep that on both halves.
+  const fallback = (form === "hybrid") ? "human" : null;
+  const portrait = plate(form) ?? (fallback && plate(fallback)) ?? null;
+  // A form with no round token of its own still swaps the canvas, but it takes *this* form's portrait
+  // before it takes another form's token: being in the right form matters more than being round.
+  const token = circle(form) ?? plate(form) ?? (fallback && circle(fallback)) ?? portrait;
+  if (!portrait && !token) return;
+
   const update = {};
-  if (actor.img !== src) update.img = src;
-  if (!actor.isToken && (actor.prototypeToken.texture.src !== src)) update["prototypeToken.texture.src"] = src;
+  if (portrait && (actor.img !== portrait)) update.img = portrait;
+  if (token && !actor.isToken && (actor.prototypeToken.texture.src !== token)) update["prototypeToken.texture.src"] = token;
   if (!foundry.utils.isEmpty(update)) await actor.update(update);
+  if (!token) return;
   const tokens = actor.isToken ? [actor.token] : actor.getActiveTokens(false, true);
-  for (const token of tokens) {
-    if (token && (token.texture.src !== src)) await token.update({ "texture.src": src });
+  for (const placed of tokens) {
+    if (placed && (placed.texture.src !== token)) await placed.update({ "texture.src": token });
   }
 }
 
@@ -1009,53 +1034,68 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
 
   const artRow = document.createElement("div");
   artRow.className = "ghostwire-changer-form-art";
-  const artKeys = { human: "humanArt", hybrid: "hybridArt", beast: "beastArt" };
+  // R2 (0.3.121): each form owns two pictures — the square sheet portrait and the round canvas
+  // token — so each slot gets its own picker. Clearing one never touches the other.
+  const ART_KINDS = [
+    { kind: "portrait", keys: CHANGER_ART_KEYS, label: "Portrait", hint: "Hint", fallback: () => actor.img },
+    { kind: "token", keys: CHANGER_TOKEN_KEYS, label: "Token", hint: "TokenHint", fallback: () => actor.prototypeToken?.texture?.src ?? actor.img },
+  ];
   for (const form of CHANGER_FORMS) {
-    const flagKey = artKeys[form];
-    const path = art[flagKey] ?? "";
     const cell = document.createElement("div");
     cell.className = "ghostwire-changer-form-art-slot";
     const label = document.createElement("label");
     label.textContent = game.i18n.localize(`GHOSTWIRE.Peoples.Changer.Forms.${form.capitalize()}.Label`);
-    const thumb = document.createElement("img");
-    thumb.alt = "";
-    if (path) thumb.src = path;
-    else thumb.classList.add("empty");
-    const pick = document.createElement("button");
-    Object.assign(pick, {
-      type: "button",
-      textContent: game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Pick"),
-      disabled: !actor.isOwner,
-    });
-    pick.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Hint");
-    pick.addEventListener("click", event => {
-      event.preventDefault();
-      event.stopPropagation();
-      const fp = new FilePicker({
-        type: "image",
-        current: path || actor.img,
-        callback: async src => {
-          await actor.setFlag(MODULE_ID, `changer.${flagKey}`, src);
-          const activeNow = CHANGER_FORMS.find(isActive);
-          if (activeNow === form) await syncChangerFormArt(actor, form);
-          else if (app.rendered) app.render();
-        },
+    cell.append(label);
+
+    for (const { kind, keys, label: kindLabel, hint, fallback } of ART_KINDS) {
+      const flagKey = keys[form];
+      const path = art[flagKey] ?? "";
+      const box = document.createElement("div");
+      box.className = `ghostwire-changer-form-art-kind ghostwire-changer-form-art-${kind}`;
+      const kindText = document.createElement("span");
+      kindText.className = "ghostwire-changer-form-art-kind-label";
+      kindText.textContent = game.i18n.localize(`GHOSTWIRE.Peoples.Changer.Forms.Art.${kindLabel}`);
+      const thumb = document.createElement("img");
+      thumb.alt = "";
+      if (path) thumb.src = path;
+      else thumb.classList.add("empty");
+      const pick = document.createElement("button");
+      Object.assign(pick, {
+        type: "button",
+        textContent: game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Pick"),
+        disabled: !actor.isOwner,
       });
-      fp.browse();
-    });
-    const clear = document.createElement("button");
-    Object.assign(clear, {
-      type: "button",
-      textContent: game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Clear"),
-      disabled: !actor.isOwner || !path,
-    });
-    clear.addEventListener("click", async event => {
-      event.preventDefault();
-      event.stopPropagation();
-      await actor.unsetFlag(MODULE_ID, `changer.${flagKey}`);
-      if (app.rendered) app.render();
-    });
-    cell.append(label, thumb, pick, clear);
+      pick.dataset.tooltip = game.i18n.localize(`GHOSTWIRE.Peoples.Changer.Forms.Art.${hint}`);
+      pick.addEventListener("click", event => {
+        event.preventDefault();
+        event.stopPropagation();
+        const fp = new FilePicker({
+          type: "image",
+          current: path || fallback(),
+          callback: async src => {
+            await actor.setFlag(MODULE_ID, `changer.${flagKey}`, src);
+            const activeNow = CHANGER_FORMS.find(isActive);
+            if (activeNow === form) await syncChangerFormArt(actor, form);
+            else if (app.rendered) app.render();
+          },
+        });
+        fp.browse();
+      });
+      const clear = document.createElement("button");
+      Object.assign(clear, {
+        type: "button",
+        textContent: game.i18n.localize("GHOSTWIRE.Peoples.Changer.Forms.Art.Clear"),
+        disabled: !actor.isOwner || !path,
+      });
+      clear.addEventListener("click", async event => {
+        event.preventDefault();
+        event.stopPropagation();
+        await actor.unsetFlag(MODULE_ID, `changer.${flagKey}`);
+        if (app.rendered) app.render();
+      });
+      box.append(kindText, thumb, pick, clear);
+      cell.append(box);
+    }
     artRow.append(cell);
   }
   fieldset.append(artRow);

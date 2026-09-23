@@ -6674,7 +6674,10 @@
           "Art": {
             "Pick": "Choose Art",
             "Clear": "Clear",
-            "Hint": "Portrait and token art used when this form is active."
+            "Hint": "Square sheet portrait used when this form is active.",
+            "Portrait": "Portrait",
+            "Token": "Token",
+            "TokenHint": "Round canvas token used when this form is active (assets/tokens/pregens/ style)."
           }
         },
         "Warnings": {

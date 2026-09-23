@@ -33,17 +33,37 @@ const localArt = src => src?.startsWith(`modules/${MODULE_ID}/`) && existsSync(s
 
 console.log(`F4 pregen regenerate smoke — ${files.length} actors\n`);
 
-console.log("1) Portraits and token art resolve to shipped assets");
+/**
+ * R2 (0.3.121): portrait and canvas token are no longer the same file. The sheet keeps the square
+ * dossier plate under assets/pregens/; the token is the round transparent WebP under
+ * assets/tokens/pregens/. The old assertion here — `prototypeToken.texture.src === img` — is the
+ * exact thing R2 removes, so it is replaced by a *split* assertion: both resolve, neither is the
+ * other, and each lives in its own folder. Depth lives in tools/r2-pregen-round-tokens-smoke.mjs.
+ */
+const PORTRAIT_DIR = `modules/${MODULE_ID}/assets/pregens/`;
+const TOKEN_DIR = `modules/${MODULE_ID}/assets/tokens/pregens/`;
+
+console.log("1) Portraits stay square under assets/pregens; tokens are round under assets/tokens/pregens");
 for (const [slug, a] of Object.entries(actors)) {
-  ok(localArt(a.img), `${slug}: portrait ${a.img.replace(/.*\//, "")}`);
-  ok(a.prototypeToken.texture.src === a.img, `${slug}: prototype token uses the same art`);
+  const src = a.prototypeToken.texture.src;
+  ok(localArt(a.img) && a.img.startsWith(PORTRAIT_DIR), `${slug}: portrait ${a.img.replace(/.*\//, "")}`);
+  ok(localArt(src) && src.startsWith(TOKEN_DIR), `${slug}: round token ${src.replace(/.*\//, "")}`);
+  ok(src !== a.img, `${slug}: token art is a different file from the sheet portrait`);
 }
 
-console.log("\n2) Changer form art (B50 syncChangerFormArt reads these flags)");
+console.log("\n2) Changer form art — portrait (*Art) vs round token (*Token), B50 syncChangerFormArt reads both");
 for (const slug of ["wren-sable-corvin", "vira-kellis-nade"]) {
   const c = gw(actors[slug]).changer ?? {};
   ok(c.humanArt === actors[slug].img, `${slug}: humanArt matches the sheet portrait`);
-  for (const form of ["hybridArt", "beastArt"]) ok(localArt(c[form]), `${slug}: ${form} ${String(c[form]).replace(/.*\//, "")}`);
+  ok(c.humanToken === actors[slug].prototypeToken.texture.src, `${slug}: humanToken matches the prototype token`);
+  for (const form of ["hybridArt", "beastArt"]) {
+    ok(localArt(c[form]) && c[form].startsWith(PORTRAIT_DIR), `${slug}: ${form} ${String(c[form]).replace(/.*\//, "")}`);
+  }
+  for (const form of ["humanToken", "hybridToken", "beastToken"]) {
+    ok(localArt(c[form]) && c[form].startsWith(TOKEN_DIR), `${slug}: ${form} ${String(c[form]).replace(/.*\//, "")}`);
+  }
+  for (const [art, tok] of [["humanArt", "humanToken"], ["hybridArt", "hybridToken"], ["beastArt", "beastToken"]])
+    ok(c[art] !== c[tok], `${slug}: ${art} and ${tok} are not the same file`);
 }
 
 console.log("\n3) Draw Steel level lives on the class Item, and it is Level 1");
