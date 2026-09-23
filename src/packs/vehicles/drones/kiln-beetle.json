@@ -46,7 +46,7 @@
         "echelon": 3,
         "availability": "military",
         "price": 11500,
-        "modSlots": 4,
+        "modSlots": 5,
         "tags": [
           "Repair",
           "Support",

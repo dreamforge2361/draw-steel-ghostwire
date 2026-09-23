@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a53,500 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a licensed bay (or a fixer who looks the other way)",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥3,500 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a licensed bay (or a fixer who looks the other way)",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Pod chassis \u00b7 a single machine, unmodded."
+        "display": "one Pod chassis · a single machine, unmodded."
       },
       "goal": 300
     }
@@ -46,7 +46,7 @@
         "echelon": 2,
         "availability": "restricted",
         "price": 7000,
-        "modSlots": 3,
+        "modSlots": 5,
         "tags": [
           "Sealed",
           "Transit"

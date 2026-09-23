@@ -11,7 +11,7 @@
     },
     "source": {
       "book": "Ghostwire Deadhead (Gold Line)",
-      "page": "Nox\u2019s trash freighter",
+      "page": "Nox’s trash freighter",
       "license": "Draw Steel Creator License"
     },
     "_dsid": "nox-trash-freighter",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a51,400 in chassis salvage, drive stock, and rotor and thrust stock; any chop-shop bay, or a flat piece of street and no questions",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥1,400 in chassis salvage, drive stock, and rotor and thrust stock; any chop-shop bay, or a flat piece of street and no questions",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Nox\u2019s Trash Freighter chassis \u00b7 a single machine, unmodded."
+        "display": "one Nox’s Trash Freighter chassis · a single machine, unmodded."
       },
       "goal": 150
     }
@@ -46,7 +46,7 @@
         "echelon": 1,
         "availability": "street",
         "price": 2800,
-        "modSlots": 1,
+        "modSlots": 4,
         "tags": [
           "Deadhead",
           "Plot",

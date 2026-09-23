@@ -1970,3 +1970,26 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-machine-sheet .gw-m-actions { gap: 0.5rem; grid-column: 1 / -1; }
 .ghostwire-machine-sheet .gw-m-footer { justify-content: flex-end; margin-top: 0.5rem; }
 .ghostwire-machine-sheet .flexrow.gap { gap: 0.35rem; align-items: center; }
+
+/* Machine Inventory — embedded Actor.items (0.3.108) */
+.ghostwire-machine-sheet .gw-m-inventory { gap: 0.5rem; }
+.ghostwire-machine-sheet .gw-m-item-header { align-items: center; justify-content: space-between; }
+.ghostwire-machine-sheet .gw-m-item-title { font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.8rem; opacity: 0.85; }
+.ghostwire-machine-sheet .gw-m-item-create { padding: 0.15rem 0.4rem; }
+.ghostwire-machine-sheet .gw-m-item-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.2rem; border: 1px solid var(--color-border-light-primary, #666); border-radius: 4px; max-height: 22rem; overflow: auto; }
+.ghostwire-machine-sheet .gw-m-item { align-items: center; gap: 0.35rem; padding: 0.25rem 0.4rem; border-bottom: 1px solid var(--color-border-light-tertiary, #4444); }
+.ghostwire-machine-sheet .gw-m-item:last-child { border-bottom: none; }
+.ghostwire-machine-sheet .gw-m-item-main { flex: 1; align-items: center; gap: 0.45rem; min-width: 0; text-decoration: none; color: inherit; cursor: pointer; }
+.ghostwire-machine-sheet .gw-m-item-main:hover .gw-m-item-name { text-decoration: underline; }
+.ghostwire-machine-sheet .gw-m-item-img { width: 28px; height: 28px; object-fit: cover; border-radius: 3px; border: 1px solid var(--color-border-light-primary, #666); flex: 0 0 auto; }
+.ghostwire-machine-sheet .gw-m-item-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.ghostwire-machine-sheet .gw-m-item-type { flex: 0 0 auto; font-size: 0.75rem; opacity: 0.7; text-transform: capitalize; }
+.ghostwire-machine-sheet .gw-m-item-qty { flex: 0 0 auto; font-variant-numeric: tabular-nums; opacity: 0.85; }
+.ghostwire-machine-sheet .gw-m-item-delete { flex: 0 0 auto; opacity: 0.7; padding: 0.15rem 0.35rem; }
+.ghostwire-machine-sheet .gw-m-item-delete:hover { opacity: 1; color: var(--color-level-error, #c44); }
+.ghostwire-machine-sheet .gw-m-item-empty { padding: 0.75rem; opacity: 0.65; font-style: italic; text-align: center; }
+.ghostwire-machine-sheet .gw-m-drop-hint { margin: 0; font-size: 0.75rem; opacity: 0.65; }
+.ghostwire-machine-sheet .gw-m-inventory-notes { margin-top: 0.25rem; }
+.ghostwire-machine-sheet .gw-m-inventory-notes > summary { cursor: pointer; font-size: 0.8rem; opacity: 0.85; }
+.ghostwire-machine-sheet .gw-m-inventory-notes[open] > summary { margin-bottom: 0.35rem; }
+.ghostwire-machine-sheet .gw-m-inventory-notes .gw-m-grid { margin-top: 0.25rem; }

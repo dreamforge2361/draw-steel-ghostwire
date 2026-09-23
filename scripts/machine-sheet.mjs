@@ -45,6 +45,9 @@ export function defineMachineSheet() {
       actions: {
         jumpIn: GhostwireMachineSheet.#onJumpIn,
         jumpOut: GhostwireMachineSheet.#onJumpOut,
+        openItem: GhostwireMachineSheet.#onOpenItem,
+        deleteItem: GhostwireMachineSheet.#onDeleteItem,
+        createItem: GhostwireMachineSheet.#onCreateItem,
       },
     };
 
@@ -127,6 +130,22 @@ export function defineMachineSheet() {
         tokenImg: actor.prototypeToken?.texture?.src ?? actor.img,
         jumpedIn,
         canJumpIn: !!machine.jumpInCapable && !jumpedIn && !!ownerUuid,
+        inventoryItems: [...actor.items]
+          .map(item => {
+            const typeKey = `TYPES.Item.${item.type}`;
+            const typeLabel = game.i18n.has(typeKey) ? game.i18n.localize(typeKey) : item.type;
+            const quantity = item.system?.quantity;
+            return {
+              id: item.id,
+              uuid: item.uuid,
+              name: item.name,
+              img: item.img,
+              type: item.type,
+              typeLabel,
+              quantity: (quantity != null && Number(quantity) !== 1) ? Number(quantity) : null,
+            };
+          })
+          .sort((a, b) => a.name.localeCompare(b.name, game.i18n.lang)),
       };
     }
 
@@ -161,6 +180,72 @@ export function defineMachineSheet() {
       await jumpOut(owner);
       this.render();
     }
+    static async #onOpenItem(event, target) {
+      const itemId = target.dataset.itemId || target.closest("[data-item-id]")?.dataset.itemId;
+      const item = this.document.items.get(itemId);
+      if (!item) return;
+      item.sheet?.render(true);
+    }
+
+    static async #onDeleteItem(event, target) {
+      event.preventDefault?.();
+      event.stopPropagation?.();
+      if (!this.isEditable) return;
+      const itemId = target.dataset.itemId || target.closest("[data-item-id]")?.dataset.itemId;
+      const item = this.document.items.get(itemId);
+      if (!item) return;
+      const confirmed = await foundry.applications.api.DialogV2.confirm({
+        window: { title: game.i18n.localize(`${UI}.DeleteItem`) },
+        content: `<p>${game.i18n.format(`${UI}.DeleteItemConfirm`, { name: item.name })}</p>`,
+      });
+      if (!confirmed) return;
+      await item.delete();
+      this.render();
+    }
+
+    static async #onCreateItem() {
+      if (!this.isEditable) return;
+      const cls = getDocumentClass("Item");
+      await cls.createDialog({}, { parent: this.document, pack: null, renderSheet: true });
+    }
+
+    /** Right-click Open / Delete on inventory rows (AppV2 ContextMenu). */
+    _getInventoryContextOptions() {
+      return [
+        {
+          label: `${UI}.OpenItem`,
+          icon: "<i class=\"fa-solid fa-eye\"></i>",
+          onClick: (_event, target) => {
+            const item = this.document.items.get(target.dataset.itemId || target.closest("[data-item-id]")?.dataset.itemId);
+            item?.sheet?.render(true);
+          },
+        },
+        {
+          label: `${UI}.DeleteItem`,
+          icon: "<i class=\"fa-solid fa-trash\"></i>",
+          visible: () => this.isEditable,
+          onClick: async (_event, target) => {
+            const item = this.document.items.get(target.dataset.itemId || target.closest("[data-item-id]")?.dataset.itemId);
+            if (!item) return;
+            const confirmed = await foundry.applications.api.DialogV2.confirm({
+              window: { title: game.i18n.localize(`${UI}.DeleteItem`) },
+              content: `<p>${game.i18n.format(`${UI}.DeleteItemConfirm`, { name: item.name })}</p>`,
+            });
+            if (!confirmed) return;
+            await item.delete();
+            this.render();
+          },
+        },
+      ];
+    }
+
+    async _onFirstRender(context, options) {
+      await super._onFirstRender(context, options);
+      this._createContextMenu(this._getInventoryContextOptions.bind(this), ".gw-m-item", {
+        fixed: true,
+      });
+    }
+
   };
 }
 

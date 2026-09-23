@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a511,000 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a military-grade bay",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥11,000 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a military-grade bay",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Mule chassis \u00b7 a single machine, unmodded."
+        "display": "one Mule chassis · a single machine, unmodded."
       },
       "goal": 450
     }
@@ -46,7 +46,7 @@
         "echelon": 3,
         "availability": "military",
         "price": 22000,
-        "modSlots": 4,
+        "modSlots": 6,
         "tags": [
           "Sealed",
           "Boarding",

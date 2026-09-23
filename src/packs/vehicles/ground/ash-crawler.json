@@ -46,7 +46,7 @@
         "echelon": 3,
         "availability": "military",
         "price": 16000,
-        "modSlots": 4,
+        "modSlots": 6,
         "tags": [
           "Sealed",
           "Survival",

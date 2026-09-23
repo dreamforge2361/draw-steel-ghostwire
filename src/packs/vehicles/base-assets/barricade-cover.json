@@ -46,7 +46,7 @@
         "echelon": 1,
         "availability": "street",
         "price": 400,
-        "modSlots": 0,
+        "modSlots": 1,
         "tags": [
           "Cover",
           "Fixed"

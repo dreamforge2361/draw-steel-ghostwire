@@ -46,7 +46,7 @@
         "echelon": 1,
         "availability": "street",
         "price": 650,
-        "modSlots": 1,
+        "modSlots": 3,
         "tags": [
           "Cargo",
           "Ground-hauler"

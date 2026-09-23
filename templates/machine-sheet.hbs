@@ -107,16 +107,51 @@
     </section>
 
     <section class="tab gw-m-tab {{tabs.inventory.cssClass}}" data-group="primary" data-tab="inventory">
-      <div class="gw-m-grid">
-        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Cargo"}}
-          <textarea name="flags.draw-steel-ghostwire.machine.cargo" rows="2">{{machine.cargo}}</textarea>
-        </label>
-        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Mounts"}}
-          <textarea name="flags.draw-steel-ghostwire.machine.mounts" rows="2">{{machine.mounts}}</textarea>
-        </label>
-        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Sensors"}}
-          <textarea name="flags.draw-steel-ghostwire.machine.sensors" rows="2">{{machine.sensors}}</textarea>
-        </label>
+      <div class="gw-m-inventory flexcol">
+        <div class="gw-m-item-header flexrow">
+          <span class="gw-m-item-title">{{localize "GHOSTWIRE.Summons.Machines.UI.EmbeddedItems"}}</span>
+          {{#if editable}}
+          <a class="gw-m-item-create" data-action="createItem" data-tooltip="{{localize 'GHOSTWIRE.Summons.Machines.UI.CreateItem'}}" aria-label="{{localize 'GHOSTWIRE.Summons.Machines.UI.CreateItem'}}">
+            <i class="fa-solid fa-plus"></i>
+          </a>
+          {{/if}}
+        </div>
+        <ol class="gw-m-item-list">
+          {{#each inventoryItems as |item|}}
+          <li class="gw-m-item flexrow" data-item-id="{{item.id}}" data-document-uuid="{{item.uuid}}">
+            <a class="gw-m-item-main flexrow" data-action="openItem" data-item-id="{{item.id}}">
+              <img class="gw-m-item-img" src="{{item.img}}" alt="" />
+              <span class="gw-m-item-name">{{item.name}}</span>
+              <span class="gw-m-item-type">{{item.typeLabel}}</span>
+              {{#if item.quantity}}
+              <span class="gw-m-item-qty">&times;{{item.quantity}}</span>
+              {{/if}}
+            </a>
+            {{#if ../editable}}
+            <a class="gw-m-item-delete" data-action="deleteItem" data-item-id="{{item.id}}" data-tooltip="{{localize 'GHOSTWIRE.Summons.Machines.UI.DeleteItem'}}" aria-label="{{localize 'GHOSTWIRE.Summons.Machines.UI.DeleteItem'}}">
+              <i class="fa-solid fa-trash"></i>
+            </a>
+            {{/if}}
+          </li>
+          {{else}}
+          <li class="gw-m-item-empty">{{localize "GHOSTWIRE.Summons.Machines.UI.EmptyInventory"}}</li>
+          {{/each}}
+        </ol>
+        <p class="gw-m-drop-hint">{{localize "GHOSTWIRE.Summons.Machines.UI.DropItemHint"}}</p>
+        <details class="gw-m-inventory-notes">
+          <summary>{{localize "GHOSTWIRE.Summons.Machines.UI.InventoryNotes"}}</summary>
+          <div class="gw-m-grid">
+            <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Cargo"}}
+              <textarea name="flags.draw-steel-ghostwire.machine.cargo" rows="2">{{machine.cargo}}</textarea>
+            </label>
+            <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Mounts"}}
+              <textarea name="flags.draw-steel-ghostwire.machine.mounts" rows="2">{{machine.mounts}}</textarea>
+            </label>
+            <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Sensors"}}
+              <textarea name="flags.draw-steel-ghostwire.machine.sensors" rows="2">{{machine.sensors}}</textarea>
+            </label>
+          </div>
+        </details>
       </div>
     </section>
 

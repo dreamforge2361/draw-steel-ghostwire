@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a5125 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; any chop-shop bay, or a flat piece of street and no questions",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥125 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; any chop-shop bay, or a flat piece of street and no questions",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Rustbucket (Drone) chassis \u00b7 a single machine, unmodded."
+        "display": "one Rustbucket (Drone) chassis · a single machine, unmodded."
       },
       "goal": 150
     }
@@ -46,7 +46,7 @@
         "echelon": 1,
         "availability": "street",
         "price": 250,
-        "modSlots": 1,
+        "modSlots": 2,
         "tags": [
           "Recon",
           "Clunker",
