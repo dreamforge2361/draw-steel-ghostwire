@@ -69,6 +69,7 @@
 | G3 | lang + style tokens | **Suggested next** (then S1, then L1). N4 PDF reprint is done and no longer ahead of it in the queue. |
 
 ## Art
+**R0** **Hero sheet Ghostwire skin** — color, logo, and sheet styling so the Draw Steel Hero sheet *feels* Ghostwire (chrome/neon grit, GW wordmark/mark, tab chrome, not a stock DS reskin). Design pass + CSS/theme tokens; complements G3 lang/style tokens. Backlogged 2026-09-22 (Michael).
 **R1** inside-cover · **R2** round pregen tokens · **R3** B103 palette/gender · **R4** B89 Foundry token · **R5** Reach Events thumbs · **R6** wire-opener
 
 ## Lore
@@ -98,7 +99,7 @@
 **Ship lane clear.** G2 armor / gadget mod families shipped (**0.3.100**) and the **N4 PDF reprint is out** (0.4.0 @ 0.3.100, 316 pages — `docs/directors/n4-pdf-reprint-03100.md`). Michael Foundry smoke **PASS** on G2 (`g2-armor-gadget-mods-smoke-03100.md`) and G1 (`kit-grants-smoke-0399.md`). Still optional / deferred: `docs/directors/s8-machines-smoke-0398.md` (S8), `docs/directors/voidmark-director-only-smoke-0397.md` (S6 — already signed earlier).
 **Next:** **G3** lang + style tokens — then **S1**, then **L1**. Module stays **0.3.100**.
 **Then:** DJ1 district journals.
-Also open: LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday, `wire-opener` art gap (Ch 23 filler).
+Also open: **R0 Hero sheet Ghostwire skin**; LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday, `wire-opener` art gap (Ch 23 filler).
 
 ---
 
