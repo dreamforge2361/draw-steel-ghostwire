@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5100 in a blank chip and one bought scrub routine from a Flats fixer; a deck and a quiet hour",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Burner Mode Chip \u00b7 installs on one comm (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

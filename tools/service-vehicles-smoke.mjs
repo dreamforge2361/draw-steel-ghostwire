@@ -12,6 +12,7 @@ import { actorHasKit, isMachineActor, isVehicleActor, isWireKit } from "../scrip
 import { itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 import { MATRIX_VERB_DSIDS } from "../scripts/wired-verbs.mjs";
 import { chassisStamina, machineBand } from "../scripts/machines.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const failures = [];
@@ -129,7 +130,7 @@ const SKUS = [
 console.log("Conglomerate service vehicles smoke (0.3.80)\n");
 
 const moduleJson = readJson("module.json");
-ok(moduleJson.version === "0.3.80" || moduleJson.version >= "0.3.80", `module.json is ≥ 0.3.80 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.80"), `module.json is ≥ 0.3.80 (got ${moduleJson.version})`);
 
 const lang = readJson("lang/en.json");
 const lane = readJson("src/packs/vehicles/ground/lane-hopper.json");

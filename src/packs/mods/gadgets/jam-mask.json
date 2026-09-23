@@ -1,0 +1,68 @@
+{
+  "_id": "gwModJamMask0000",
+  "_key": "!items!gwModJamMask0000",
+  "name": "GHOSTWIRE.Mods.Items.JamMask.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.JamMask.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "jam-mask",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a5800 in a hardened transceiver stage and filter cans; an electronics bench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Jam Mask \u00b7 installs on one comm or Wired gadget (1 mod slot)."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 1600,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": [
+          "comms",
+          "wired"
+        ],
+        "hosts": [
+          "comms",
+          "wired"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}

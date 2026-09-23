@@ -91,6 +91,6 @@ Open **Ghostwire Gear › Weapons** and check the seven new cards:
 
 ## Known and deliberate
 
-- **Hexshot's second slot is empty.** It asks for a bow/crossbow/dartgun in the light *and* medium slots; the Street band has only the light one (Hunting Bow and Heavy Crossbow are Restricted). The Kit is live on the **Street-Bow**. A street medium bow is a **G2/S2** gear-pass line, not a grant bug.
+- ~~**Hexshot's second slot is empty.**~~ **Closed by G2 / 0.3.100:** the Street band gained the **Scrap-Bow** (¥300, medium band), and `kit-grants.mjs` now grants **Street-Bow + Scrap-Bow**, so both of Hexshot's weapon slots are live at chargen. See `docs/directors/g2-armor-gadget-mods-smoke-03100.md`.
 - **A level-1 hero who swaps Kits gets both packages.** That is the chargen rule as written, and Merc depends on it. Clear `flags.draw-steel-ghostwire.kitStreetGrants` or delete the extra Items if you want it tighter.
 - **No back-fill.** Heroes who already exist in the world get nothing retroactively — the grant only fires when a Kit Item lands. Run `game.modules.get("draw-steel-ghostwire").api.grantKitStreetPackage(actor, kitItem)` by hand if you want to top one up.

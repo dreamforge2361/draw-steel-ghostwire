@@ -1,0 +1,65 @@
+{
+  "_id": "gwModArmorSealKi",
+  "_key": "!items!gwModArmorSealKi",
+  "name": "GHOSTWIRE.Mods.Items.ArmorSealKit.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.ArmorSealKit.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "armor-seal-kit",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a53,000 in gasket stock, a rated collar ring, and one scrubber cartridge; a military-grade sealed bay and a pressure test",
+      "source": "Ghostwire Gear master \u00a72F / Cat 2 \u2014 armorer's bench, tailor's table, or a safehouse workbench",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Seal Kit \u00b7 installs on one suit of armor (1 mod slot)."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "B4auJ3Tjl5Ueylf3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 6000,
+        "modSlots": 0,
+        "tags": [
+          "Sealed",
+          "Pressure"
+        ],
+        "host": "armor",
+        "hosts": [
+          "armor"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

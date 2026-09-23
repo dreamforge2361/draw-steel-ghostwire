@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5250 in a hardware crypto module and a keyed housing; an electronics bench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Encryption Dongle \u00b7 installs on one comm (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

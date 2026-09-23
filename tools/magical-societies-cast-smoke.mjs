@@ -24,6 +24,7 @@ import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "
 import { join } from "node:path";
 import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE = "draw-steel-ghostwire";
 const VERSION = "0.3.94"; // min; module may be newer
@@ -61,7 +62,7 @@ console.log(`Magical Societies contact Actors smoke (${VERSION})\n`);
 console.log("1) Ship surface");
 const moduleVersion = read("module.json").version;
 const readme = readFileSync("README.md", "utf8");
-ok(moduleVersion >= VERSION, `module.json is ≥ ${VERSION} (got ${moduleVersion})`);
+ok(atLeast(moduleVersion, VERSION), `module.json is ≥ ${VERSION} (got ${moduleVersion})`);
 ok(readme.includes(`\`${VERSION}\``), `README changelog names ${VERSION}`);
 ok(/Magical Societies|society contacts/i.test(readme.split("\n").find(l => l.includes(`\`${VERSION}\``)) ?? ""),
   `README ${VERSION} line names the society contacts`);

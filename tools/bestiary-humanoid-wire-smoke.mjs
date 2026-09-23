@@ -14,6 +14,7 @@ import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface } from "../scripts/wired-console-verbs.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE = "draw-steel-ghostwire";
 const VERSION = "0.3.85"; // min; module may be newer
@@ -43,7 +44,7 @@ function walkActors(dir, out = []) {
 
 console.log(`Bestiary humanoid Wire Kit smoke (${VERSION})\n`);
 
-ok(read("module.json").version >= VERSION, `module.json is ≥ ${VERSION}`);
+ok(atLeast(read("module.json").version, VERSION), `module.json is ≥ ${VERSION}`);
 
 const actors = walkActors(BESTIARY);
 const humanoids = actors.filter(({ actor }) => {

@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5350 in multiband lens blanks and a selector ring; an electronics bench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Spectrum Filter \u00b7 installs on one sensor or optic (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],
@@ -52,7 +55,8 @@
         "slotCost": 1,
         "craftSkill": [
           "electronics"
-        ]
+        ],
+        "exclusiveKit": "optic-stage"
       }
     }
   }

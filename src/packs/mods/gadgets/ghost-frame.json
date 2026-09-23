@@ -1,0 +1,71 @@
+{
+  "_id": "gwModGhostFrame0",
+  "_key": "!items!gwModGhostFrame0",
+  "name": "GHOSTWIRE.Mods.Items.GhostFrame.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.GhostFrame.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ghost-frame",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a511,500 in null-signature frames, a log-forging stub, and residue-free tooling; a prototype bay and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Ghost Frame \u00b7 installs on one break-in tool or Wired gadget (1 mod slot)."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 23000,
+        "modSlots": 0,
+        "tags": [
+          "Quiet",
+          "Wired"
+        ],
+        "host": [
+          "bne-mechanical",
+          "bne-electronic",
+          "wired"
+        ],
+        "hosts": [
+          "bne-mechanical",
+          "bne-electronic",
+          "wired"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}

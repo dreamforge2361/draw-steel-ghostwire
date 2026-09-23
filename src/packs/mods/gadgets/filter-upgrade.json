@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5100 in layered filter media and a cartridge shell; a workbench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Filter Upgrade \u00b7 installs on one survival kit (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

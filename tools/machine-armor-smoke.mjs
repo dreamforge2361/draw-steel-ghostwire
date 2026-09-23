@@ -12,6 +12,7 @@ import {
   staminaAfterArmorChange,
   staminaBonusFromModData,
 } from "../scripts/machines.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 let failed = 0;
 const ok = (cond, msg) => {
@@ -24,7 +25,7 @@ const ok = (cond, msg) => {
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const moduleJson = JSON.parse(readFileSync("module.json", "utf8"));
-ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.71", `module.json is ≥ 0.3.71 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.71"), `module.json is ≥ 0.3.71 (got ${moduleJson.version})`);
 
 const DIR = "src/packs/mods/vehicles";
 const files = readdirSync(DIR).filter(f => f.endsWith(".json") && f !== "_folder.json");

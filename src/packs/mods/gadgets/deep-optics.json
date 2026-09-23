@@ -1,0 +1,102 @@
+{
+  "_id": "gwModDeepOptics0",
+  "_key": "!items!gwModDeepOptics0",
+  "name": "GHOSTWIRE.Mods.Items.DeepOptics.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.DeepOptics.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deep-optics",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a53,700 in a multi-spectral stage, a cooled sensor die, and an alignment jig; a military-grade bench and a calibration target",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Deep Optics \u00b7 installs on one sensor or optic (1 mod slot)."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [
+    {
+      "_id": "gwAeDeepOptics00",
+      "_key": "!items.effects!gwModDeepOptics0.gwAeDeepOptics00",
+      "name": "Installed \u2014 Perception edge",
+      "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+      "origin": "Compendium.draw-steel-ghostwire.mods.Item.gwModDeepOptics0",
+      "description": "<p>Edge on Perception tests to spot hidden, cloaked, or living targets while the stage is installed and on. It pierces smoke, dark, and thin cover.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.perception.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 7500,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": "sensors",
+        "hosts": [
+          "sensors"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ],
+        "exclusiveKit": "optic-stage"
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "gwModRadBaffle00",
+  "_key": "!items!gwModRadBaffle00",
+  "name": "GHOSTWIRE.Mods.Items.RadBaffle.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.RadBaffle.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "rad-baffle",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a51,300 in isotope baffle layers and a calibrated dosimeter head; a shop bench and a licensed source to calibrate against",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Rad Baffle \u00b7 installs on one survival kit (1 mod slot)."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2600,
+        "modSlots": 0,
+        "tags": [
+          "Rad-Shielded"
+        ],
+        "host": "survival",
+        "hosts": [
+          "survival"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}

@@ -103,11 +103,8 @@ console.log("\n4) each package satisfies the Kit's own system.equipment");
 const ARMOR_KEYWORD = { light: "light", medium: "medium", heavy: "heavy" };
 // Documented gaps: the object the Kit needs does not exist at Street in the published catalog.
 // Each entry is a slot the grant deliberately leaves empty, mirrored in the table's `note`.
-const DOCUMENTED_GAPS = {
-  // Hexshot asks for a bow/crossbow/dartgun in the light AND medium slots; the Street band has only
-  // the light one (Hunting Bow / Heavy Crossbow are Restricted). It is live on Street-Bow.
-  hexshot: ["medium"],
-};
+// G2 (0.3.100) closed the last one — Hexshot's medium slot now takes the Street-band Scrap-Bow.
+const DOCUMENTED_GAPS = {};
 
 for (const kit of kits) {
   const plan = KIT_STREET_GRANTS[kit.dsid];
@@ -252,7 +249,7 @@ ok(!/Hooks\.once\(\s*"ready"/.test(grantSrc), "no ready-hook sweep: existing her
 ok(grantSrc.includes("isChargenHero"), "the grant is gated on chargen level");
 
 const gearMaster = readFileSync("docs/masters/GHOSTWIRE_GEAR_MASTER.md", "utf8");
-for (const name of ["Scrap Cleaver", "Slugger", "Pipe Rifle", "Slab-Hammer", "Scaffold Pike", "Chain Lash", "Weighted Net"]) {
+for (const name of ["Scrap Cleaver", "Slugger", "Pipe Rifle", "Slab-Hammer", "Scaffold Pike", "Chain Lash", "Weighted Net", "Scrap-Bow"]) {
   ok(gearMaster.includes(name), `Gear master lists the new street SKU ${name}`);
 }
 

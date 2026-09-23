@@ -7,6 +7,7 @@
  */
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { ATLAS_TOKEN_LIBRARY, atlasTokenSrc } from "../scripts/wired-atlas-catalog.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -23,7 +24,7 @@ function readBomFreeJson(path) {
 console.log("B116 Wire Atlas smoke (0.3.55)");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(moduleJson.version >= "0.3.55", `module.json is ≥ 0.3.55 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.55"), `module.json is ≥ 0.3.55 (got ${moduleJson.version})`);
 
 const spike = readFileSync("docs/spikes/B116-WIRE-ATLAS.md", "utf8");
 ok(/Relay/.test(spike) && /Host/.test(spike) && /Segment/.test(spike), "spike names Relay / Host / Segment");

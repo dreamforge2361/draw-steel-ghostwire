@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5500 in an emission mask stage and a squelch driver; an electronics bench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Beacon Squelch \u00b7 installs on one Wired gadget (1 mod slot)."
       },
-      "goal": null
+      "goal": 300
     }
   },
   "effects": [],

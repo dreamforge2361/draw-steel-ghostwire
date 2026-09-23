@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5300 in heat-exchange membrane and seam tape; a tailor's table and a heat gun",
+      "source": "Ghostwire Gear master \u00a72F / Cat 2 \u2014 armorer's bench, tailor's table, or a safehouse workbench",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Climate Seal Liner \u00b7 installs on one suit of armor (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],
@@ -54,7 +57,8 @@
         "slotCost": 1,
         "craftSkill": [
           "repair"
-        ]
+        ],
+        "exclusiveKit": "liner"
       }
     }
   }

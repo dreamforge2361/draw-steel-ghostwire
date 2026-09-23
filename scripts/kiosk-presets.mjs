@@ -167,6 +167,28 @@ export const KIOSK_PRESETS = Object.freeze([
       ],
     },
   },
+  {
+    // 0.3.100 (G2) — the two wearable-side vendors, now that §2F and §1H are published families.
+    // The Chop Shop still carries every mod; these are the focused shelves a Director drops when
+    // the crew walks into an armorer's back room or a gadget fence, not a garage. Deliberately
+    // NOT `modAny` — that matches every mod in the pack; folder + path is what narrows the shelf.
+    id: "armorMods",
+    langKey: "ArmorMods",
+    match: {
+      packs: ["mods"],
+      pathPrefixes: ["armor"],
+      folderIds: [FOLDER_IDS.modsArmor],
+    },
+  },
+  {
+    id: "gadgetMods",
+    langKey: "GadgetMods",
+    match: {
+      packs: ["mods"],
+      pathPrefixes: ["gadgets"],
+      folderIds: [FOLDER_IDS.modsGadgets],
+    },
+  },
 ]);
 
 export function listPresets() {

@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5175 in a ground lens element and a threaded stage; a workbench and a clean cloth",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Focus Magnifier \u00b7 installs on one sensor or optic (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

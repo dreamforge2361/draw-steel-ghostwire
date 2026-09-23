@@ -1,0 +1,70 @@
+{
+  "_id": "gwModPasskeyStac",
+  "_key": "!items!gwModPasskeyStac",
+  "name": "GHOSTWIRE.Mods.Items.PasskeyStack.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.PasskeyStack.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "passkey-stack",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a54,200 in a secure element, a credential dump bought off a fixer, and signing keys; a military-grade bench and a quiet week",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Passkey Stack \u00b7 installs on one electronic break-in tool or Wired gadget (1 mod slot)."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 8500,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": [
+          "bne-electronic",
+          "wired"
+        ],
+        "hosts": [
+          "bne-electronic",
+          "wired"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "hacking",
+          "electronics"
+        ],
+        "exclusiveKit": "lock-soft"
+      }
+    }
+  }
+}

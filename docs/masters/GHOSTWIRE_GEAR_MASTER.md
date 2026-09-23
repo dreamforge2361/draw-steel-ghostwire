@@ -162,6 +162,34 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Doss Upgrade / Lifestyle Voucher / prepaid habitation contract | — | varies | per §F3 | Pays/steps up Lifestyle upkeep for a respite (Squatter ¥100 → Elite ¥9,000). Service, not an item. | — | Service |
 | Fixer Retainer / Contact Introduction / brokered network access | T2 | 2 | 6,000 | Buys a one-time introduction to a new Contact, or an Availability re-roll on a restricted acquisition. | — | Service |
 
+### 1H — Gadget Mods
+
+*Bench work under the §Craft **procedure** (downtime Project; skill = **Electronics** for sensors, comms and Wired devices, **Repair** for the physical kit, **Hacking** for lock software). Every row costs **1 slot** of the gadget's Category-1 mod slots. Hosts are the Category-1 gadgets themselves, by family: `comms`, `sensors`, `bne-mechanical`, `bne-electronic`, `survival`, and `wired` (anything carrying the Wired tag). Field exception: an already-installed mod toggles on/off as a normal action; installing, swapping, or removing is always a downtime Project.*
+
+| Mod *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Host family | Effect | §Craft Skill | Tags |
+|---|---|---|---|---|---|---|---|
+| Filter Upgrade / Fine-Particle Stage / layered toxin filter | T5 | 5 | 150 | survival kit | One extra automatic success against an airborne-toxin tick. | Repair | Filtered |
+| Burner Mode Chip / Identity Scrub / one-shot trail-wipe firmware | T5 | 5 | 200 | comms | Once, after a run, scrub this device's identity trail for free. Spent until reset as a downtime Project. | Electronics | Wired, Consumable-ish |
+| Quiet Picks / Hush Tension Set / sound-damped pick tools | T5 | 5 | 250 | mechanical B&E | Edge on Stealth while you pick or work a mechanical lock; masks tool noise. | Repair | Quiet |
+| Focus Magnifier / Zoom Stage / precision optical element | T5 | 5 | 350 | sensors & optics | Edge on one Perception test per scene. | Repair | — |
+| Encryption Dongle / Cipher Key / hardware crypto module | T4 | 4 | 500 | comms | Bane on enemy attempts to tap or trace this device's channel. | Electronics | Wired |
+| Spectrum Filter / Multiband Lens / selectable optical filter | T4 | 4 | 700 | sensors & optics | Choose one at install: ignore smoke concealment, or edge on Perception in darkness. **One optical stage at a time.** | Electronics | — |
+| Skeleton Key Soft / Lock Exploit Pack / maglock cracking firmware | T4 | 4 | 900 | electronic B&E | Edge against electronic locks of Professional grade or lower. **One lock-cracking package at a time.** | Hacking / Electronics | Wired |
+| Beacon Squelch / Emission Mask / locator-suppression firmware | T3 | 3 | 1,000 | any Wired gadget | Bane on enemy attempts to remotely locate this device. | Electronics | Wired |
+| Jam Mask / Hardened Modem / jam-resistant transceiver stage | T3 | 3 | 1,600 | comms, Wired | Holds its channel through local jamming and crowd-band noise; bane on enemy attempts to cut, drown, or drop the link. **G2.** | Electronics | Wired |
+| Breach Jack / Spreader Set / hydraulic door spreader | T3 | 3 | 1,900 | mechanical B&E | Edge to force a mechanical door, gate, grate, or hatch, and it holds one open. Loud, unless the same kit also runs Quiet Picks. **G2.** | Repair | — |
+| Sniffer Head / Bus Tap / passive bus-tap probe | T3 | 3 | 2,400 | electronic B&E, Wired | Tap a lock for a minute first: edge on the first Security-Systems test against it, and you learn whether it reports failures upstream. **G2.** | Electronics | Wired |
+| Rad Baffle / Isotope Curtain / layered isotope baffle | T3 | 3 | 2,600 | survival kit | Adds Rad-Shielded and slows the radiation Exposure clock one step further than the kit alone; the dosimeter calls thresholds early. **G2.** | Repair | Rad-Shielded |
+| Habitat Stage / Envelope Module / inflatable habitat module | T2 | 2 | 6,800 | survival kit | Deploys a sealed two-person shelter: the crew takes a respite through an ash storm, a rad front, or a vacuum night without ticking Exposure. **G2.** | Repair | Sealed |
+| Deep Optics / Penetrator Stage / multi-spectral penetrator stage | T2 | 2 | 7,500 | sensors & optics | Pierces smoke, dark, and thin cover; edge on Perception to spot hidden, cloaked, or living targets. **One optical stage at a time. G2.** | Electronics | Wired |
+| Passkey Stack / Credential Cache / rolling-credential cache | T2 | 2 | 8,500 | electronic B&E, Wired | Edge against electronic locks of Military grade or lower, and one free retry per scene when a lock rejects you. **One lock-cracking package at a time. G2.** | Hacking / Electronics | Wired |
+| Quantum Link / Executive Uplink Stage / entangled-pair link stage | T1 | 1 | 21,000 | comms, Wired | This device's channel cannot be tapped or traced by anything short of prototype-grade kit. It is a link, not a SIN — it opens no doors on paper. **G2.** | Electronics | Wired |
+| Ghost Frame / Null Entry Frame / null-signature entry frame | T1 | 1 | 23,000 | B&E, Wired | Entries the kit makes do not log, alarm, or scar, and the crew has an edge on Stealth while it works. It still does not open the lock for you. **G2.** | Electronics | Quiet, Wired |
+
+**Exclusive groups (do not stack on the same host):** *optical stage* — Spectrum Filter / Deep Optics. *lock-cracking package* — Skeleton Key Soft / Passkey Stack. Everything else stacks to the host's free slots.
+
+*Fabricating a §1H mod is the stock Draw Steel Project — same ladder as §5F: goal **E1 150 · E2 300 · E3 450 · E4 600**, prerequisites roughly **half the ¥ in parts** plus a bench for the band, roll **Might or Reason** for Repair jobs and **Reason or Intuition** for Electronics / Hacking jobs. Finishing the fabricate Project yields the part; **installing it is still the separate §Craft Project**.*
+
 ---
 
 ## Category 2 — Armor
@@ -226,6 +254,33 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Riot Shield / Wall Line / polycarbonate breach shield | T5 | 5 | 200 | +Shield Stamina; grants cover to yourself and one adjacent ally vs. ranged. One hand. | 1 | — |
 | Ballistic Board / Barrier Kit / composite assault shield | T3 | 3 | 3,000 | +Shield Stamina; cover as above; edge vs. forced movement while braced. One hand. | 3 | — |
 | Smart-Shield / Praetorian / powered active-denial shield | T1 | 1 | 40,000 | +Shield Stamina; cover as above; once per scene, negate one ranged hit entirely. One hand. | 5 | Wired |
+
+### 2F — Wearable Armor & Shield Mods
+
+*Bench work under the §Craft **procedure** (downtime Project; skill = **Repair** for physical liners, plates and struts, **Electronics** for Wired/powered rows). Every row costs **1 slot** of the armor's or shield's mod slots (§Armor-5 shifts those by class: Heavy +1, Light −1, Medium unchanged). Hosts are `armor` and `shield`.*
+
+**The one hard line:** worn armor already grants **Stamina** by class and wearer Echelon (the Armor-as-Stamina Rule above). **No armor or shield mod adds Stamina.** These rows buy tags, edges, convenience, and small **typed** immunities — never a second Stamina bonus on the vest.
+
+| Mod *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Host | Effect | §Craft Skill | Tags |
+|---|---|---|---|---|---|---|---|
+| Soft Armor Insert / Discreet Liner / slim aramid panel | T5 | 5 | 300 | armor | Edge on tests to conceal that you are armored. | Repair | Concealable |
+| Mag-Harness / Retention Rig / magnetic weapon tether | T5 | 5 | 400 | armor, shield | Edge on tests to avoid being disarmed or dropping a held weapon when you are force moved. | Repair | — |
+| Climate Seal Liner / Thermal Membrane / heat-exchange liner | T5 | 5 | 600 | armor | Adds the Thermal tag; edge against hostile-environment cold or heat ticks. **One inner liner at a time.** | Repair | Thermal |
+| Trauma Plates / Impact Insert / ceramic strike plates | T4 | 4 | 800 | armor, shield | Immunity 1 against kinetic weapon hits (untyped weapon damage counts as kinetic). Adds no Stamina. | Repair | — |
+| Stealth Weave / Shadowline Overlay / adaptive low-profile fabric | T4 | 4 | 1,200 | armor | Edge on Stealth tests; while motionless, cancel one source of armor Stealth bane. **One outer camouflage layer at a time.** | Repair | Stealth |
+| Reactive Flash Comp / Glare Shutter / photochromic reflex visor | T3 | 3 | 1,500 | armor | Once per scene, when a flash or dazzle effect targets you, ignore the condition it would impose. | Electronics | Wired |
+| Brace Struts / Bulwark Frame / braced load-path struts | T3 | 3 | 1,800 | armor, shield | Edge on tests to resist forced movement and to avoid being knocked prone while braced. **G2.** | Repair | — |
+| Shield Capacitor / Denial Cell / active-denial power pack | T3 | 3 | 2,000 | shield | Once per scene, negate one ranged hit against you entirely — a lighter Smart-Shield. **One active-denial cell at a time.** | Electronics | Wired |
+| Insulator Liner / Dielectric Weave / dielectric armor liner | T3 | 3 | 2,200 | armor | Lightning immunity 1 while worn. It insulates — it adds no Stamina. **One inner liner at a time. G2.** | Repair | — |
+| Seal Kit / Envelope Upgrade / hostile-environment sealing kit | T2 | 2 | 6,000 | armor | Adds Sealed and Pressure to armor that was not sealed already: one scene of breathable air against vacuum, flood, ash, or a gassed room. Carries no typed immunity of its own. **G2.** | Repair | Sealed, Pressure |
+| Scanner Null / Null Weave / detection-defeating signature weave | T2 | 2 | 9,000 | armor | Edge to defeat a pat-down, a weapon-detection arch, or a standard armor scanner — the Whisperweave trick on armor you already own. **G2.** | Electronics | Wired, Concealable |
+| Thermoptic Skin / Chameleon Overlay / adaptive thermoptic overlay | T2 | 2 | 11,000 | armor | Edge on Stealth tests; hold still and enemy sensor sweeps take a bane to find you. **One outer camouflage layer at a time. G2.** | Electronics | Stealth, Wired |
+| Reactive Plating / Adaptive Shell / prototype reactive composite | T1 | 1 | 24,000 | armor, shield | Choose fire, cold, lightning, or poison at install: immunity 2 against that type while worn. Re-choosing is its own Project. Adds no Stamina. **G2.** | Repair | — |
+| Denial Field / Praetorian Halo / powered active-denial emitter | T1 | 1 | 26,000 | shield | Once per scene, negate one ranged hit entirely against yourself or one adjacent ally. **One active-denial cell at a time. G2.** | Electronics | Wired |
+
+**Exclusive groups (do not stack on the same host):** *inner liner* — Climate Seal Liner / Insulator Liner. *outer camouflage layer* — Stealth Weave / Thermoptic Skin. *active-denial cell* — Shield Capacitor / Denial Field. Everything else stacks to the host's free slots.
+
+*Fabricating a §2F mod is the stock Draw Steel Project — same ladder as §5F: goal **E1 150 · E2 300 · E3 450 · E4 600**, prerequisites roughly **half the ¥ in parts** plus a bench for the band, roll **Might or Reason** for Repair jobs and **Reason or Intuition** for Electronics jobs. Finishing the fabricate Project yields the part; **installing it is still the separate §Craft Project**.*
 
 ---
 
@@ -323,6 +378,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
 | Street-Bow / Cavalier Silent / recurve bow | T5 | 5 | 200 | 4 kinetic | Medium | 1 | [Light] Two-handed Quiet |
+| Scrap-Bow / Reclaim Draw / shop-built composite longbow | T5 | 5 | 300 | 5 kinetic | Medium | 1 | [Medium] Two-handed Quiet |
 | Weighted Net / Lone Star Snarecast / hand-thrown capture net | T5 | 5 | 120 | — | Short | 1 | [Light] Restraining Non-lethal-capable |
 | Hand-Crossbow / Fichetti Sting / pistol crossbow | T4 | 4 | 400 | 4 kinetic | Short | 2 | [Light] Concealable Quiet |
 | Hunting Bow / Ranger Arms Draw / compound bow | T3 | 3 | 1,500 | 6 kinetic | Long | 3 | [Medium] Two-handed Quiet |
@@ -739,4 +795,6 @@ The full GHOSTWIRE gear catalog (Categories 1–6) was drafted and completed on 
 - **Category 5 — Vehicles & Drones**: ~40 entries across 6 domain/function sub-lists (5A–5F), including the Wrench's signature ~11-entry Drone list (5E).
 - **Category 6 — Magical Foci & Ritual Components**: ~40 entries across 6 sub-lists (6A–6F): Elementalist, Street-Priest, and Technomancer foci, shared ritual tools, material components, and consumable reagent packages.
 
-**Deferred to later passes:** concrete numeric magnitudes for foci/vehicle stat blocks and Matrix Bandwidth/Uptime values (the damage/status pass); Necromancer foci (reserved to the Necromancer class pass); and dedicated Weapon-Mods, Armor-Mods, Matrix-Programs, and Vehicle-Mods sub-passes for expanded depth beyond the core sets listed here.
+**Shipped since:** the **Vehicle-Mods** sub-pass (§5F, 24 SKUs — S8 / 0.3.98) and the **Armor-Mods** and **Gadget-Mods** sub-passes (§2F 14 SKUs + §1H 17 SKUs — G2 / 0.3.100). Wearable armor, shields, and Category-1 gadgets are now **published** mod host families.
+
+**Deferred to later passes:** concrete numeric magnitudes for foci/vehicle stat blocks and Matrix Bandwidth/Uptime values (the damage/status pass); Necromancer foci (reserved to the Necromancer class pass); and dedicated Weapon-Mods and Matrix-Programs sub-passes for expanded depth beyond the core sets listed here.
