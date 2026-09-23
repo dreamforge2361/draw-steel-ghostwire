@@ -1,13 +1,10 @@
 # The Wire
 
-**RAW status:** locked (2026-09-18, B66; Wire Atlas B116 2026-09-20; Linked connection state 2026-09-20; Ping vs Read/Write doctrine 2026-09-20 / 0.3.62; Constructs roster Lock A 2026-09-20 / 0.3.78)  
-**Sources:** `docs/rulebook/08-hacker.md` (The Wired System; Matrix Verbs), `docs/masters/GHOSTWIRE_WIRE_SOFTWARE_DOCTRINE.md` + `docs/masters/GHOSTWIRE_GEAR_MASTER.md` §4B/§4C (Deck software), `docs/rulebook/18-wired-foundry.md` (rules only), `docs/rulebook/DS-ALIGNMENT.md` (Node Rating), `docs/spikes/B116-WIRE-ATLAS.md` (topology), shipped Foundry B23/B32/B51/B117 (Linked / Overlay / Jacked In, node Rating 1–5, suites vs payloads, Connected gate)
-
 ---
 
 ## The Wired System
 
-The Wired is the network layer every hero can touch. This chapter defines what a node is, the four connection states (**Disconnected**, **Linked**, **Overlay**, and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. The Hacker (`19-hacker.md`) adds Bandwidth, Programs, and **Agents** (Compile Agent — Probe / Spike / Daemon / Watchdog; software daemons, not sprites). The Technomancer (`20-technomancer.md`) builds on the same Wire spine and compiles **sprites** from Resonance. Same net, different posture: the Hacker operates it; the Technomancer communes with it.
+The Wired is the network layer every hero can touch. This chapter defines what a node is, the four connection states (**Disconnected**, **Linked**, **Overlay**, and **Jacked In**), the System Stat Card (Node Rating **1–5**), Trace Alert, the **Wire Atlas** (how scenes nest), and the nine **Matrix Verbs** every hero has. Deck software (**suites** vs **payloads**) lives here too. **The Hacker** (`19`) adds Bandwidth, Programs, and **Agents** (Compile Agent — Probe / Spike / Daemon / Watchdog; software daemons, not sprites). **The Technomancer** (`20`) builds on the same Wire spine and compiles **sprites** from Resonance. Same net, different posture: the Hacker operates it; the Technomancer communes with it.
 
 **Street comms.** After radio, **the Wire is the default street channel** — ID, packets, and crew talk ride Linked by default. **Radio remains a jammable backup.** You do not need Overlay to answer a ping.
 
@@ -60,7 +57,7 @@ Spoof Kit is **not** an interface. Rigger Cocoon is a vehicle Jump-In mod, not a
 
 Every Track 2 target -- and the "system" side of any Wired encounter -- tracks its own **Integrity**: a Stamina-equivalent health pool that Programs and abilities damage directly (via your cyberdeck's Integrity Damage Bonus) rather than dealing physical damage. Reducing a Track 2 target to 0 Integrity takes it down, exactly as reducing a creature to 0 Stamina does.
 
-**Do not confuse this with Body Integrity** (`09-chrome-body-integrity.md`). They share a name but are different systems: Body Integrity is a permanent capacity for how much chrome a living hero can carry; Wired-system Integrity is an encounter-scoped health pool belonging to nodes, ICE, hostile Personas, and rival deckers.
+**Do not confuse this with Body Integrity** (**Chrome & Body Integrity**, `09`). They share a name but are different systems: Body Integrity is a permanent capacity for how much chrome a living hero can carry; Wired-system Integrity is an encounter-scoped health pool belonging to nodes, ICE, hostile Personas, and rival deckers.
 
 | Node Rating | Integrity |
 |---|---|
@@ -73,7 +70,7 @@ Every Track 2 target -- and the "system" side of any Wired encounter -- tracks i
 The same Integrity table scales ICE, hostile AIs, and rival-decker Track 2 targets by Node Rating.
 
 > **In Foundry**
-> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires** (B41b). **Constructs** lists compiled sprites and Agents (Lock A: scene token = meat-side roster anchor; Overlay / Jacked In compilers on this scene see each other without Scan; meat actions off unless an ability bridges). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.
+> Open the **Wired Console** from the Token scene-control tools (network icon) or a keybinding under Configure Controls. Directors edit Scene-tied boards: nodes, Rating 1–5 templates, Integrity, Trace Alert, reveal, and **node↔node wires**. **Constructs** lists compiled sprites and Agents (Lock A: scene token = meat-side roster anchor; Overlay / Jacked In compilers on this scene see each other without Scan; meat actions off unless an ability bridges). Players open the **Wired node** facing them (token / node panel) to fire all nine Matrix Verbs — **Connect**, **Jack Out**, **Toggle Connection State**, **Scan**, **Ping**, **Navigate**, **Broadcast**, **Search**, **Read/Write**. Connect needs a commlink, deck, datajack, trodes, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer. The roll uses that runner (Instinct / Logic, Hacking, Jacked In, Reader). The Director Console still shows the board and roster (and can fire the same verbs). The **Wired minimap** auto-opens when you own an Overlay or Jacked In actor (compact Overlay / larger Jacked In); click a revealed node to open its verb panel.
 >
 > **Constructs Console (Lock A).** Compiled constructs — sprites, Agents, and independent spirits — are a **separate Console section** from the node graph. Do not list them as nodes. The Console **Constructs** pane is the roster; at the table you can also track it on the summon ability sheet (`19` / `20` / `22`). Pet hit points are **Stamina** (sprites, Agents, independent spirits). Extension spirits have **no separate pool**.
 
@@ -135,7 +132,7 @@ Unless an ability's printed text says otherwise, every Wired Power Roll (Matrix 
 - Ability clauses that zero Alert gain entirely (example: **Backdoor Override**'s Track 2 application leaves no trace).
 - Pure observation verbs that only look (**Scan**; class Deep Scan) — they do not raise Alert on their own. Active intrusion, contested, or hostile verbs use the defaults above.
 
-**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see `19-hacker.md`):
+**Managing Trace Alert.** The Hacker has tools to lower or freeze the track rather than only avoid raising it (see **The Hacker**, `19`):
 
 - **Ghost Step** (3rd level) — as a Free Triggered Action, when the Alert Track increases from your own action, cancel that specific increase (once per encounter).
 - Higher-level Hacker Programs and capstone features extend this further, up to freezing the Alert Track for the whole crew.
@@ -153,7 +150,7 @@ These 9 abilities aren't unique to the Hacker -- *any* hero with a **Wire interf
 | **Toggle Connection State** | Step one rung deeper on the ladder, then wrap: **Linked → Overlay → Jacked In → Linked**. No contest -- it's your call, always. Jack Out is the only path to Disconnected. | -- | No -- automatic | -- |
 | **Scan** | Get a read on what Nodes exist near you within Reach -- doors, cameras, locks, drones, any Wired-connected system in range. Requires Overlay or Jacked In (Linked-only refuses). Scan can find any on-net presence; Linked reads as a soft presence. | Instinct | Yes | Refunds the Maneuver |
 | **Navigate** | Move through the Wired itself, up to your Reach in Nodes -- the Matrix-side equivalent of physical movement, letting you reposition to reach a node, ally, or target you couldn't otherwise touch. | Instinct | Yes | Refunds the Maneuver |
-| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple **Track 1** thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Track 1 only (no ICE) -- ICE is **Track 2**. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is the wrong tool (Programs / payload Runs / real breach). Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Overlay or Jacked In. Not Console Wire ping/spoof (B106). | Logic | Yes | Refunds the Maneuver |
+| **Ping** | The lightest “touch this system” verb -- a nudge, not a deep hack. One simple **Track 1** thing within Reach does one small thing, without a Program or a full Read/Write: flick lights (the classic Ping); tap a maglock to see if it’s live / soft jolt (**not** unlock for entry); test whether a camera or door bus answers / brief glitch (**not** lasting cam-off); trigger a trivial system response. Unlock and lasting cam-off are **Read/Write**. Track 1 only (no ICE) -- ICE is **Track 2**. Ping does not bypass or defeat ICE; an ICE-guarded / Track 2 host is the wrong tool (Programs / payload Runs / real breach). Director may flavor a failed poke (ICE twitches, Soft Trace) but Ping never opens or controls the guarded system. Overlay or Jacked In. Not Console Wire ping/spoof. | Logic | Yes | Refunds the Maneuver |
 | **Broadcast** | Send a message to allies who are on-net (**Linked**, Overlay, or Jacked In), within Reach or Ghost Distance -- a private, Wired-only comms channel no one outside the link can intercept. Works from Linked. No contest; it just works. | -- | No -- automatic | -- |
 | **Search** | Dig into a node you're already at to find something specific hiding inside it -- the follow-up to Scan (which tells you what's around) when you need to know what's buried in one particular place. | Logic | Yes | Refunds the Maneuver + extra intel |
 | **Read/Write** | Change data, settings, or state -- read a file, alter a record, plant or delete evidence, forge a credential, **unlock a maglock for entry**, or **toggle a camera off / kill a feed**. This is the verb that actually changes information and device state in the Wired, not a Ping nudge. | Logic | Yes | Leaves **zero forensic trace** (does NOT refund the Maneuver -- this verb trades the refund for a clean exit instead) |
@@ -174,7 +171,7 @@ Logic, Maneuver, Overlay or Jacked In. Tier 2 is clean; tier 1 often Soft Trace;
 
 **Doctrine:** Ping = touch/test nudge. Read/Write = change data, settings, or state (unlock a maglock, kill a cam feed). Scan = what’s near; Search = what’s inside; Broadcast = Wire talk (Linked OK). Programs / payload Runs / real breach = ICE and Track 2.
 
-Ping is **not** the Director Console Wire ping/spoof (B106).
+Ping is **not** the Director Console Wire ping/spoof.
 
 ### Ping vs ICE
 
@@ -226,7 +223,7 @@ Ghostwire words: **Relay**, **Host**, **Segment**, **Endpoint**, **Device**. Do 
 **Room (North Substation maintenance).** Devices: `North Substation - Light Control`, `North Substation - Maglock Door 1`. This is the only altitude where auto-nodes and the eight device styles belong.
 
 > **In Foundry**
-> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX plus **AEQ** / **LAZ** — `node-host-aeq` / `node-host-laz`, `placeholder: false`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Console operation: `docs/rulebook/18-wired-foundry.md`. Spike: `docs/spikes/B116-WIRE-ATLAS.md`. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`.
+> Atlas styles are `node-relay` / `node-host` / `node-segment` under `assets/tokens/wired/` (catalog in `library.json`). Twelve Conglomerates Host skins are `node-host-{ticker}` (HAL…NYX plus **AEQ** / **LAZ** — `node-host-aeq` / `node-host-laz`, `placeholder: false`). Device styles (Light Control, Maglock) stay room-scale. Do not run Gold Line `{ force: true }` to place atlas tokens. Brand marks: `assets/brands/megacorps/brand-{ticker}.{png,webp}`.
 
 ## Connection-state modifiers (summary)
 
@@ -298,10 +295,10 @@ A payload chip in your gear does nothing by itself. To use it, you compile it in
 **Running a payload.** You must be **Connected** (Overlay or Jacked In) to **Run** a payload — Disconnected **and Linked** refuse the Run; the magazine stays loaded and no fire is spent. Each payload is a Wired, ranged ability with a Power Roll using Logic (Reason), targeting within your Reach. The middle result delivers the payload's listed Effect; the low result is partial and the high result is the strong version. Trace Alert follows the defaults above unless the payload's Effect says otherwise. A Run spends 1 fire whatever it rolls. When a magazine reaches 0 fires it is spent: the slot frees, and you need a new Craft Project to load that payload again.
 
 > **In Foundry**
-> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire (B51c). Suites stay Activate/Deactivate via mod install, not Run.
+> Load a payload chip onto a deck **or** a Technomancer’s Wired Native (Craft magazine) to spawn a **Run {payload}** ability on the sheet. **Run** only works while **Connected** (Overlay or Jacked In) — Disconnected and Linked refuse the use and spend no fire. Suites stay Activate/Deactivate via mod install, not Run.
 
 
-The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in `10-mods.md`.
+The payload catalog (Effects, prices, Availability) is in the Gear master, Matrix Gear §4C; suites are §4B. Installing any deck software follows the Craft procedure in **Mods** (`10`).
 
 **Whiteout** (locked 2026-09-19) is the Echelon 1 Restricted Trace-scrub payload. Compiling it is a **steep / hard** Craft (Hacking) Project. Its Run spends 1 fire and **overrides** the default Trace table: low leaves Trace unchanged; middle is Trace −1 (min 0); high is Trace −1 and cancels the next Trace increase before the end of your next turn (once). Foundry v1: the Director moves Trace on the Wired Console by hand. Technomancers compile Whiteout onto Wired Native rather than a deck; it is **not** a class grant.
 
@@ -313,7 +310,7 @@ Tables running Ghostwire in Foundry VTT can mirror those numbers in the Wired Co
 
 ## VOIDMARK (Wired presence)
 
-Some hosts answer with a voice that is not MER support and not ICE. Street callsign **VOIDMARK** (the Mark): a leash-slipped intelligence that treats the Wired as territory. Full lore: `docs/manuscript/01-lore/L4-voidmark.md`.
+Some hosts answer with a voice that is not MER support and not ICE. Street callsign **VOIDMARK** (the Mark): a leash-slipped intelligence that treats the Wired as territory. Full lore: the **VOIDMARK** chapter (L4).
 
 > **In Foundry**
 > Open **VOIDMARK** from Token controls (ghost) or a keybinding under Configure Controls. Module Configuration holds the API endpoint, secret key, model, temperature, player access, and **Edit VOIDMARK instructions**. Rules answers are retrieved from the shipped Ghostwire RAW index. Canvas token art when the Mark takes scene presence is a later hook (`assets/ai-persona/`).

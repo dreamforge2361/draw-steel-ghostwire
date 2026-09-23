@@ -12,7 +12,7 @@
 **Author / setting:** Michael Frantz (`dreamforge2361`)  
 **Foundry module:** *Draw Steel — Ghostwire Build* (`draw-steel-ghostwire`) — reskin, localization, and compendium packs. It does **not** replace the Draw Steel system.
 
-**Manuscript:** Markdown source of record under `docs/manuscript/` (lore harvest + assemble pointers) and `docs/raw/` (rules). **Version 0.4.0** is the first official rulebook PDF (playtest edition). Foundry module version is `module.json` (**0.3.23**) and is independent of the PDF.
+**Manuscript:** **Version 0.4.0** is the first official rulebook PDF (playtest edition). The Foundry module carries its own version (**0.3.119**), tracked independently of the PDF.
 
 **Copyright:** © 2026 Michael Frantz / dreamforge2361 / Ghostwire project contributors. All rights reserved unless a license line below says otherwise.
 
@@ -48,11 +48,11 @@ Human names are not required on AI plates. If Michael later commissions or licen
 |---|---|---|
 | Cover / title wrap | Ghostwire AI (AI-generated) | Ghostwire project |
 | Part openers / class plates | Ghostwire AI (AI-generated) | Ghostwire project |
-| Reach gang signs (B91) | Ghostwire AI (AI-generated) | `docs/manuscript/print-art/gangs/` |
-| District battle maps (B72) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/` |
-| Switchboard district loop (B100 v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/switchboard-district-loop.webm` |
-| Mama Cassavir club (B99 still + loop v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/battlemaps/` |
-| Gold Line dual Hammerhead (B106 stills + loops) | CyberMaps Hammerhead stitch (no generated train) | In-module: `assets/maps/battlemaps/gold-line/` |
+| Reach gang signs | Ghostwire AI (AI-generated) | Ghostwire project |
+| District battle maps | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/` |
+| Switchboard district loop (v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/districts/switchboard-district-loop.webm` |
+| Mama Cassavir club (still + loop v1) | Ghostwire AI (AI-generated) | In-module: `assets/maps/battlemaps/` |
+| Gold Line dual Hammerhead (stills + loops) | CyberMaps Hammerhead stitch (no generated train) | In-module: `assets/maps/battlemaps/gold-line/` |
 | Handbook book plates | Ghostwire AI (AI-generated) | `assets/reach-handbook/` |
 
 ## What this page does not claim

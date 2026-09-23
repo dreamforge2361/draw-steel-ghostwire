@@ -1,11 +1,9 @@
 # Languages
 
-**RAW status:** draft (Stage 3 chargen/play fill / B75, 2026-09-19)  
-**Sources:** `docs/rulebook/19-languages.md`, `docs/masters/GHOSTWIRE_LANGUAGES.md` (names + knowledge-only lock), `docs/raw/02-heroes-characteristics.md`, `docs/raw/03-tests-power-rolls.md`, `docs/raw/11-perks.md` (Polyglot)  
 **Engine:** Ghostwire language procedures in this chapter. Playable without a separate rulebook. Ghostwire **renames** every language below; do not invent tongue histories here.  
 
 **Print:** Chapter 8 (TOC lock)  
-**Lore gazetteer:** **non-goal** for RAW / v1 PDF. Per-language history and purpose is backlog with Michael (issue #67). This chapter is procedure + the locked name lists.
+**Lore gazetteer:** **non-goal** for RAW / v1 PDF. Per-language history and purpose is a later pass. This chapter is procedure + the locked name lists.
 
 ---
 
@@ -36,7 +34,7 @@ It does **not** invent a history for Trade Cant, Saint-Cant, or Corran Work-Cant
 
 Languages create access and secrecy, not constant blockage: everyday scenes run in shared tongues, while archives, rites, black sites, and enclaves open to those who know the words.
 
-Each Ghostwire language has a locked key → name map in `docs/masters/GHOSTWIRE_LANGUAGES.md` (42 of 42 keys). **Do not rename keys.** A printed grant that names a tongue grants the **Ghostwire name** for that key. Foundry still stores the system key and **shows** the Ghostwire name.
+Each Ghostwire language has a locked key → name map (42 of 42 keys). **Do not rename keys.** A printed grant that names a tongue grants the **Ghostwire name** for that key. Foundry still stores the system key and **shows** the Ghostwire name.
 
 ---
 
@@ -115,7 +113,7 @@ Record known languages on the sheet. In Foundry, use the hero language picker �
 
 ## Language list
 
-Point of record for names: `docs/masters/GHOSTWIRE_LANGUAGES.md`. The table below is the play list.
+The table below is the play list and the point of record for names.
 
 | Category | Languages |
 |---|---|
@@ -190,7 +188,7 @@ Harvested from the languages master. These lines teach **when to ask for the ton
 
 ## What this chapter is not
 
-- Not a lore gazetteer. History and purpose per tongue = **backlog #67** (Michael). Do not draft those essays into RAW.
+- Not a lore gazetteer. History and purpose per tongue is **backlog**. Do not draft those essays into RAW.
 - Not a second skills chapter. Languages are not bought with skill points.
 - Not Auto-grants for Backgrounds or Peoples (follow-up; not this fill).
 - Not a Foundry UI manual beyond the picker note above.
@@ -201,11 +199,10 @@ Harvested from the languages master. These lines teach **when to ask for the ton
 
 | Topic | Where |
 |---|---|
-| Chargen step order | `02-heroes-characteristics.md` |
-| Tests, edges, skills on rolls | `03-tests-power-rolls.md` |
-| Background / Profession (no language rows yet) | `06-backgrounds-professions.md` |
-| Peoples (Voice, Beast Form) | `05-ancestries.md` |
-| Polyglot; Wire Whisper | `11-perks.md` |
-| Wire forensics | `21-the-wire.md` |
-| Ritual / Veil research | `22-the-veil.md` |
-| Locked names + key map | `docs/masters/GHOSTWIRE_LANGUAGES.md` |
+| Chargen step order | **Heroes and Characteristics** (`02`) |
+| Tests, edges, skills on rolls | **Tests and Power Rolls** (`03`) |
+| Background / Profession (no language rows yet) | **Backgrounds & Professions** (`06`) |
+| Peoples (Voice, Beast Form) | **Ancestries** (`05`) |
+| Polyglot; Wire Whisper | **Perks** (`11`) |
+| Wire forensics | **The Wire** (`21`) |
+| Ritual / Veil research | **The Veil** (`22`) |

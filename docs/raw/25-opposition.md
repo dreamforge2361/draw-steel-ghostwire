@@ -1,10 +1,8 @@
 # Opposition (Director)
 
-**RAW status:** draft (Stage 3 fill 2026-09-18)  
-**Sources:** `docs/masters/GHOSTWIRE_BESTIARY.md` (doctrine sections only), `docs/raw/21-the-wire.md` (System Stat Card, Trace Alert), `docs/raw/04-combat.md`, `docs/raw/24-advancement.md`, `docs/raw/08-kits-gear-wealth.md` (run payouts), `docs/rulebook/DS-ALIGNMENT.md`, `docs/directors/random-encounter-tables.md` (B48), `docs/directors/run-generator.md` (B39)  
 **Engine:** Ghostwire street-fight, Malice, and encounter-shape procedures in this chapter. Playable without a separate rulebook. Actor numbers live in the Ghostwire Bestiary (Foundry) or on the card you put on the table.
 
-**Non-goal:** This chapter is **not** a printable bestiary. Do not paste monster lore, full stat blocks, or setting vignettes here. Actors live in the Foundry **Ghostwire Bestiary** pack; random street texture lives in **Ghostwire Reach Events** RollTables (B48).
+**Non-goal:** This chapter is **not** a printable bestiary. Do not paste monster lore, full stat blocks, or setting vignettes here. Actors live in the Foundry **Ghostwire Bestiary** pack; random street texture lives in **Ghostwire Reach Events** RollTables.
 
 ---
 
@@ -18,7 +16,7 @@ Ghostwire opposition uses the street-fight procedure in this chapter. Actors sti
 - **Trace Alert → Malice** — Wired heat that pays into the same Malice pool meatspace fights use (`21`).
 - **Two-board fights** — meatspace grid and Wired topology cutting between each other (`04`, `21`).
 - **Foundry pointers** — bestiary Actors and Reach event tables, not a lore dump in print.
-- **Taint leftover** — corrupted zones and pact beats can stain runners after the fight (`27-corruption-taint.md`; Director notes in `docs/directors/corruption-taint.md`). Do not invent a second Malice track for Taint.
+- **Taint leftover** — corrupted zones and pact beats can stain runners after the fight (**Corruption & Taint**). Do not invent a second Malice track for Taint.
 
 ---
 
@@ -60,8 +58,6 @@ Match opposition **level** to the crew’s echelon band (`24`):
 | Level 7–9 (Echelon 3) | Black ops, apex creatures, Rating 3–5 nodes |
 | Level 10 (Echelon 4) | Level-boss solos, Rating 5 cores |
 
-Convert older Ghostwire foe tiers with the table in `24-advancement.md` (T5 = Level 1 … T1 = Level 9).
-
 ### 2. Pick the threat shape
 
 Before you name gangs or corps, choose **organization mix**:
@@ -78,14 +74,14 @@ Do not over-stack leaders and solos in the same beat unless the fiction is a tru
 
 ### 3. Dress the spine
 
-Open the Ghostwire Bestiary (or any Actor card you are about to reskin) and apply the firearms / chrome doctrine below. Prefer existing Actors over inventing math at the table. If the Run Generator (B39) already named opposition, use those Actors and escalate from there.
+Open the Ghostwire Bestiary (or any Actor card you are about to reskin) and apply the firearms / chrome doctrine below. Prefer existing Actors over inventing math at the table. If the Run Generator already named opposition, use those Actors and escalate from there.
 
 **Corp security flavors (do not invent Actors here):**
 
 - **IRN** Ironclad Martial / the Iron Writ — open-market PMC. The usual private-corp response and the crew’s most common hired rival muscle.
 - **HAL** Aureole Security — HALO’s private army. Lit-world peacekeepers; not for sale to other seats.
 - **SAN** Grey Ledger — surveillance, records, private law and intel. They audit you; they do not sell a Council badge.
-- **AEQ** Aequitas Mandate / Seal Wardens — **Council-only.** Congress, Chair, or pooled Conglomerate authority. Never a private party, runner, gang, or a single mega acting alone. If the warrant is real, Wardens are the opposition; if a corp wants deniable muscle, they hired Ironclad. Lore: L1; tickers: `docs/rulebook/MEGACORP-TICKERS.md`.
+- **AEQ** Aequitas Mandate / Seal Wardens — **Council-only.** Congress, Chair, or pooled Conglomerate authority. Never a private party, runner, gang, or a single mega acting alone. If the warrant is real, Wardens are the opposition; if a corp wants deniable muscle, they hired Ironclad. Lore: L1.
 - **LAZ** Lazarus Extract / White Door Flight — trauma extract, not security. They arrive for a contracted body (`26`). Do not run them as a PMC unless the extract is the fight.
 
 ### 4. Place boards and clocks
@@ -96,7 +92,7 @@ Decide which board is primary: meatspace, Wire, or both. If both are live, note 
 
 ## Reskin rules for Ghostwire foes
 
-Standing doctrine (also in `docs/masters/GHOSTWIRE_BESTIARY.md`):
+Standing doctrine:
 
 - **People fight with guns.** Street, corporate, and military humanoids use pistols, SMGs, carbines, rifles, and shotguns, plus grenades, stims, chrome, and cyberdecks. Melee is rare: stun batons, monowire, mono-knives, and cyberarms.
 - **A melee-only weapon ability reskinned as a gun** becomes **Melee X or Ranged 5** with the same damage and effects.
@@ -201,19 +197,19 @@ After the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`
 
 ## Scaling, payouts, and tools
 
-**Paying the crew.** Use the integrated payday table in `08-kits-gear-wealth.md` (`U + G + ~25%` by level band; L6+ half favor OK). A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down. Payday lands at **full respite** / job complete (`24`, `26`).
+**Paying the crew.** Use the integrated payday table in **Kits, Gear & Wealth** (`08`) (`U + G + ~25%` by level band; L6+ half favor OK). A patron may pay partly in gear, chrome credit, or favors. Harder opposition and hotter Trace Alert should skew the band up; a clean quiet job skews down. Payday lands at **full respite** / job complete (`24`, `26`).
 
 **Prep tools (optional):**
 
-- **Run Generator (B39)** — dials level, stratum, heat, and Wired intensity; opposition resolves to bestiary Actors.
-- **Reach Events (B48)** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.
+- **Run Generator** — dials level, stratum, heat, and Wired intensity; opposition resolves to bestiary Actors.
+- **Reach Events** — zone RollTables for Flats / City / Wilds. Most rows are flavor or RP; combat rows are rare and link bestiary Actors. Not an auto-spawn combat engine.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security (including **Aequitas Mandate** and **Lazarus Extract**), Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables from B48) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** (B39) to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Opposition Actors live in the **Ghostwire Bestiary** compendium (`bestiary`, Director-only by default) — folders such as Reach Streets, Corp & Security (including **Aequitas Mandate** and **Lazarus Extract**), Wire & Machine, Veil & Undead, Wilds & Jungles, Rivals, and Reach Critters. Drag Actors to the canvas; use the Foundry combat tracker. For living-city texture, open **Ghostwire Reach Events** (`encounters` pack, GM-only RollTables) and draw a Flats / City / Wilds row — combat results may `@UUID`-link bestiary Actors. Optional: Token controls › **Run Generator** to seed a whole run’s opposition list. Wired pressure: **Wired Console** for Node Rating, Integrity, and Trace Alert (`21`). Do not paste bestiary biographies into this RAW chapter.
 
 ### AEQ patrols and LAZ extract (Foundry pack)
 
-**Aequitas Mandate (AEQ)** and **Lazarus Extract (LAZ)** are corp-line opposition in the Bestiary — Council-mandate patrols and combat-medic extract teams. Both hold seats on the **Twelve Conglomerates** (chairs 11 and 12); the tickers double as Director opposition filters. Full profiles live in Ghostwire Lore → **Twelve Conglomerates** (`docs/rulebook/MEGACORP-TICKERS.md`).
+**Aequitas Mandate (AEQ)** and **Lazarus Extract (LAZ)** are corp-line opposition in the Bestiary — Council-mandate patrols and combat-medic extract teams. Both hold seats on the **Twelve Conglomerates** (chairs 11 and 12); the tickers double as Director opposition filters. Full profiles live in Ghostwire Lore → **Twelve Conglomerates**.
 
 | Actor | Band | Spine (math) | Kit |
 |---|---|---|---|
@@ -222,7 +218,7 @@ After the fight: Trace Alert, heat, and clocks do **not** auto-clear (`04`, `21`
 | Extract Medic | L1 platoon support | Street Doc | Trauma bag, Stabilize / patch / stim, light stunner, **Wire Kit** |
 | Extract Chief Medic | L2 elite support | Rival Commander envelope + Street Doc med kit | Same med math, more Stamina, Extract Lead, Lazarus Trauma Package, **Wire Kit** |
 
-All four start **Disconnected**. Wire Kit is the Connect interface (same as pack drones / vehicles). Token Has Vision on. Director notes: `docs/directors/conglomerate-npcs.md`.
+All four start **Disconnected**. Wire Kit is the Connect interface (same as pack drones / vehicles). Token Has Vision on.
 
 ---
 
@@ -234,4 +230,4 @@ All four start **Disconnected**. Wire Kit is the Connect interface (same as pack
 - Do not treat every random Reach Event as a combat encounter.
 - Do not ignore escape and objective clocks in favor of total wipe fights every time.
 
-Cross-links: combat loop `04`, Wire `21`, advancement / old tiers `24`, lifestyle aftercare `26`, bestiary doctrine master (non-print) `docs/masters/GHOSTWIRE_BESTIARY.md`, seated Ten `docs/rulebook/MEGACORP-TICKERS.md`, AEQ/LAZ Director note `docs/directors/conglomerate-npcs.md`.
+Cross-links: combat loop `04`, Wire `21`, advancement `24`, lifestyle aftercare `26`, the seated Ten and the Twelve Conglomerates in lore L1.

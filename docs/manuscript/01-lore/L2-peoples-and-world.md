@@ -1,7 +1,6 @@
 # Peoples & World
 
-**Source:** *GHOSTWIRE — Lore Source (V1 rules stripped)* → Book One Part III (Peoples) + Founding (Part I); aligned with *GHOSTWIRE-Lore-Book-V2-FINAL* peoples plates (`docs/masters/_lore_extract/GHOSTWIRE-Lore-Book-V2-FINAL_hits.txt`).  
-**Harvested:** 2026-09-18 (ET) · fiction / world color only. Mechanical ancestry packages remain in `docs/raw/05-ancestries.md`. Images not embedded this pass.
+*Fiction and world color only — the mechanical ancestry packages are in* **Ancestries** *(`05`).*
 
 Eight kindreds, engineered or made, each a people with memory, pride, and contempt.
 

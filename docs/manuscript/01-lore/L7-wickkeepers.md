@@ -1,6 +1,5 @@
 # The Wickkeepers
 
-**Status:** canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22  
 **Symbol:** The Sheltered Wick · **Local hub:** The Last Kettle (the Flats)  
 **Contact:** **Tavi Sorn** — Pure Human kitchen organizer, no casting ability  
 **Print:** Lore harvest — magical societies (L6–L8)  

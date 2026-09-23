@@ -1,14 +1,12 @@
 # Backgrounds & Professions
 
-**RAW status:** draft (Stage 3 fill 2026-09-19 / B73)  
-**Sources:** `docs/rulebook/13-backgrounds-professions.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, `docs/raw/02-heroes-characteristics.md`  
 **Print:** Chapter 7 (TOC lock)
 
 ---
 
 ## What these picks are
 
-Every hero picks one **Background** (where you grew up) and one **Profession** (what you did before the job). Both grant skills from the Ghostwire skill list (see `02-heroes-characteristics.md`). Neither grants Build Points, attributes, class features, heroic resources, Kits, chrome, or ¥ as character power.
+Every hero picks one **Background** (where you grew up) and one **Profession** (what you did before the job). Both grant skills from the Ghostwire skill list (see **Heroes and Characteristics**, `02`). Neither grants Build Points, attributes, class features, heroic resources, Kits, chrome, or ¥ as character power.
 
 **Background** is the water you were raised in: which rung of a hive, which kind of waste, which kind of prayer. It is still true after you take the job.
 
@@ -114,7 +112,7 @@ Starting funds remain **¥5,000** liquid + one free starting Kit (`08`). The opt
 - Not the Reach Handbook. A Sprawl District runner is not automatically a Ninth Ward King.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Put the matching Background and Profession Items on the hero (module localization + this chapter’s skill lists). Skills land on the hero sheet; Ghostwire does not add a second skill grid. Pregens in **Ghostwire Pregens** already have their Background / Profession grants applied at level 1 (B59). There is no Lifestyle automation — if you set a starting band from Background, adjust Nuyen by hand at the first respite (`26`).
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Put the matching Background and Profession Items on the hero (module localization + this chapter’s skill lists). Skills land on the hero sheet; Ghostwire does not add a second skill grid. Pregens in **Ghostwire Pregens** already have their Background / Profession grants applied at level 1. There is no Lifestyle automation — if you set a starting band from Background, adjust Nuyen by hand at the first respite (`26`).
 
 ---
 
@@ -122,10 +120,10 @@ Starting funds remain **¥5,000** liquid + one free starting Kit (`08`). The opt
 
 | Topic | Where |
 |---|---|
-| Chargen order, skill groups, firewall | `02-heroes-characteristics.md` |
-| People packages | `05-ancestries.md` |
-| Languages | `07-languages.md` |
-| ¥, Kit, optional Profession cash | `08-kits-gear-wealth.md` |
-| Perks (later skill-adjacent picks) | `11-perks.md` |
-| Lifestyle starting band | `26-lifestyle-downtime.md` |
-| Reach dress for communities | print Ch 27 / `docs/manuscript/03-directors/27-running-ossian-reach.md` |
+| Chargen order, skill groups, firewall | **Heroes and Characteristics** (`02`) |
+| People packages | **Ancestries** (`05`) |
+| Languages | **Languages** (`07`) |
+| ¥, Kit, optional Profession cash | **Kits, Gear & Wealth** (`08`) |
+| Perks (later skill-adjacent picks) | **Perks** (`11`) |
+| Lifestyle starting band | **Lifestyle & Downtime** (`26`) |
+| Reach dress for communities | print Ch 27 — Running Ossian Reach |

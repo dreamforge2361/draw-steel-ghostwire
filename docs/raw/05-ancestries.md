@@ -1,8 +1,5 @@
 # Ancestries (The Peoples)
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/09-species.md`, `docs/rulebook/SPECIES-DS-MAP.md`
-
 ---
 
 ## Structural rule
@@ -49,7 +46,7 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
 - **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).
-- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in `27-corruption-taint.md`.
+- **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in **Corruption & Taint**.
 - **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina (2d6 severity table in `04`). Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
 ---
@@ -166,7 +163,7 @@ Lineage and form each have a small mechanical effect (below). They cost no ances
 Changing form is a **maneuver**. Exactly **one** form is active at a time; a new Changer starts in **Human Form**. All traits and Beast-Hide work in every form unless a form’s rules or fiction obviously forbid it (Director’s call).
 
 > **In Foundry**
-> Changer heroes get a **Forms** control on the sheet **Stats** tab (under Wired). Click **Human**, **Hybrid**, or **Beast** to enable that form’s Active Effects (exactly one form at a time) and swap portrait/token art when `beastArt` / `humanArt` / `hybridArt` are set on the actor (B50). Changing form in fiction is still a maneuver — the buttons apply the mechanical form switch.
+> Changer heroes get a **Forms** control on the sheet **Stats** tab (under Wired). Click **Human**, **Hybrid**, or **Beast** to enable that form’s Active Effects (exactly one form at a time) and swap portrait/token art when `beastArt` / `humanArt` / `hybridArt` are set on the actor. Changing form in fiction is still a maneuver — the buttons apply the mechanical form switch.
 
 
 | Form | Mechanics | Limits / fiction |
@@ -265,7 +262,7 @@ Your taint twists how your words and presence are read, giving you a better read
 
 Visible taint and social “reads as wrong” are Director color layered on this package, not a second economy.
 
-**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is **not** Taint. Every People — Mutants included — uses the shared **Taint 0–12** track (`27-corruption-taint.md`). Reducing Taint does not erase a Flaw.
+**Optional:** at creation, pick a cosmetic **Corruptive Flaw** (examples: Visible Taint, Hungering Cells, Unstable Form, Taint Sink, Fractured Mind). It has **no mechanical Load bands** and does not cost ancestry points. Director and player use it for tells, roleplay, and scene color only. It is **not** Taint. Every People — Mutants included — uses the shared **Taint 0–12** track (**Corruption & Taint**). Reducing Taint does not erase a Flaw.
 
 ---
 

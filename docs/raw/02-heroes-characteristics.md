@@ -1,7 +1,5 @@
 # Heroes and Characteristics
 
-**RAW status:** draft (Stage 3 fill 2026-09-18)  
-**Sources:** `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/SPECIES-DS-MAP.md`, `docs/masters/GHOSTWIRE_SKILLS_MASTER.md`, class chapters (chassis tables), `docs/rulebook/11-economy.md`, `docs/rulebook/12-chrome.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`, `docs/raw/26-lifestyle-downtime.md`  
 **Engine:** Ghostwire chargen and characteristic procedures in this chapter. Playable without a separate rulebook.
 
 ---
@@ -14,16 +12,16 @@ Making a runner means assembling four layers that never replace each other:
 
 | Layer | What it answers | Where it lives |
 |---|---|---|
-| **People** | What body and birthright you start with | `05-ancestries.md` |
-| **Background + Profession** | Where you grew up and what you did before the job | `06-backgrounds-professions.md` |
+| **People** | What body and birthright you start with | **Ancestries** (`05`) |
+| **Background + Profession** | Where you grew up and what you did before the job | **Backgrounds & Professions** (`06`) |
 | **Class** | How you fight, jack in, heal, lead, or call the Veil | `12`–`20` |
-| **Kit + gear + ¥** | Martial doctrine and starting kit on the street | `08-kits-gear-wealth.md` |
+| **Kit + gear + ¥** | Martial doctrine and starting kit on the street | **Kits, Gear & Wealth** (`08`) |
 
 Characteristics and skills sit under all of that. Characteristics are the five scores you add to Power Rolls (`03`). Skills are the named specialties that grant edges or allow tests the Director would otherwise refuse. Class features, heroic resources, Stamina, and Recoveries come from your class chassis — not from ¥, chrome, or Lifestyle.
 
 **Firewall (chargen and forever):** characteristics, skills, class features, and heroic resources come only from People, Background, Profession, class, perks, and advancement. **¥ never buys character power.** Chrome and gear never grant characteristics, skills, or class features (`08`, `09`, `10`). Lifestyle buys living standard between runs, not sheet power (`26`).
 
-A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). **Taint** begins at **0** for every People, Cyborgs included (`27-corruption-taint.md`). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score. Rest does not cleanse Taint.
+A new runner starts with **no chrome** and **no mods**. Body Integrity begins at **20** for every People except Cyborg (`09`). **Taint** begins at **0** for every People, Cyborgs included (**Corruption & Taint**). Starting liquid funds are **¥5,000** (`08`). Between runs, burn ¥ on Lifestyle upkeep (`26`); leftover nuyen funds gear, chrome, bribes, and the next score. Rest does not cleanse Taint.
 
 ---
 
@@ -31,21 +29,21 @@ A new runner starts with **no chrome** and **no mods**. Body Integrity begins at
 
 Assign scores with the array in **Characteristics** below. Ghostwire’s **step order** at the table is:
 
-1. **People** (ancestry) — pick a People package, take free signature traits, spend the ancestry-point budget (`05-ancestries.md`). Ghostwire calls ancestries **Peoples**.
-2. **Background** (culture) and **Profession** (career) — one of each; each grants fixed and chosen skills from the Ghostwire list below (`06-backgrounds-professions.md`).
+1. **People** (ancestry) — pick a People package, take free signature traits, spend the ancestry-point budget (**Ancestries**, `05`). Ghostwire calls ancestries **Peoples**.
+2. **Background** (culture) and **Profession** (career) — one of each; each grants fixed and chosen skills from the Ghostwire list below (**Backgrounds & Professions**, `06`).
 3. **Class** — pick one of the nine classes (`12`–`20`). Record subclass (if any), signature abilities, first heroic abilities, heroic resource, starting Stamina, Recoveries, and the class’s core characteristics.
-4. **Kit** — take **one free Kit**, including Street-grade qualifying gear for it (`08-kits-gear-wealth.md`). Pure casters and deck-bound Hackers may take a light Kit or none if the class chapter allows fighting through the Veil or the Wire instead.
+4. **Kit** — take **one free Kit**, including Street-grade qualifying gear for it (**Kits, Gear & Wealth**, `08`). Pure casters and deck-bound Hackers may take a light Kit or none if the class chapter allows fighting through the Veil or the Wire instead.
 5. **Skills** — collect grants from People, Background, Profession, and class. No wasted duplicates; if a pick collides, choose another skill from the same group (then any group) per `06`. Full list below.
-6. **Languages** — `07-languages.md`.
+6. **Languages** — **Languages** (`07`).
 7. **Starting ¥** — **¥5,000** liquid on the sheet (`08`). Do not pre-spend Lifestyle; Lifestyle is paid at the first respite between runs (`26`).
 8. **Body Integrity** — **20** for every People except Cyborg (`09`). Chrome is opt-in after (or during) play — never an auto-grant at chargen.
-9. **Taint** — **0** (Clean) for every People, Cyborgs included (`27-corruption-taint.md`). Chrome does not raise it. Rest does not cleanse it.
+9. **Taint** — **0** (Clean) for every People, Cyborgs included (**Corruption & Taint**). Chrome does not raise it. Rest does not cleanse it.
 10. **Optional early spends** — Street-band gear (a Personal/Light air scout like Tape-Eye or Rotor grants **Street Eye** — `23`), a cyberdeck or focus if needed, or save cash. Mods and chrome cost ¥ (chrome also spends Body Integrity) — `08`, `09`, `10`, Wire tools in `21`.
 
 When you finish, you should know: who you are (People), where you came from (Background/Profession), how you work a job (class + Kit), what you are good at (characteristics + skills), and what you still owe the street (¥, Integrity, Taint, next Lifestyle band).
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. The hero sheet **header** shows **Taint** (0–12 + band). On the **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), the **Taint** fieldset under Integrity, a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20, Taint 0, and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29 / `docs/manuscript/04-back/29-chargen-cheat-sheet.md`).
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. The hero sheet **header** shows **Taint** (0–12 + band). On the **Stats** tab, Ghostwire shows the five characteristics under their Ghostwire names (**Physique**, **Reflex**, **Logic**, **Instinct**, **Persona**). The same tab carries **Body Integrity** (current/max), the **Taint** fieldset under Integrity, a read-only **Wired** connection state, and the sheet’s Nuyen/wealth field (new heroes start at Integrity 20/20, Taint 0, and ¥5,000). Assign the **2, 2, 1, 1, 0** array from this chapter onto those five fields. Punch-list: **Appendix B** (print Ch 29).
 
 ---
 
@@ -93,7 +91,7 @@ Ghostwire names are **primary** in this book. Foundry Hero sheet fields are soft
 
 Ghostwire’s skill list and skill groups are the ones in this chapter. Skills work on tests as `03` prints them: the Director names a characteristic; a relevant skill applies a **+2** skill benefit when you have it (Hacking on Wired rolls grants an **edge** instead); edges/banes stack per Power Roll rules. There are **44 skills in six groups**.
 
-Gain skills from **People**, **Background**, **Profession**, and **class** (later from advancement). Background and Profession use fixed + chosen picks with a no-duplicate rule (`06`). Perk skill groups: Crafting → **Technical**, Exploration → **Action**, Interpersonal → **Social**, Lore → **Knowledge** (`11-perks.md`). Skills never come from ¥, chrome, or Lifestyle.
+Gain skills from **People**, **Background**, **Profession**, and **class** (later from advancement). Background and Profession use fixed + chosen picks with a no-duplicate rule (`06`). Perk skill groups: Crafting → **Technical**, Exploration → **Action**, Interpersonal → **Social**, Lore → **Knowledge** (**Perks**, `11`). Skills never come from ¥, chrome, or Lifestyle.
 
 ### Action skills
 
@@ -122,7 +120,7 @@ Gain skills from **People**, **Background**, **Profession**, and **class** (late
 | Demolitions | Breaching charges, bombs, traps, and controlled destruction |
 | Security Systems | Locks, alarms, bypass tools, surveillance nets, and physical security architecture |
 
-**Hacking** and Wire procedures live in `21-the-wire.md`. **Cybertech** is how you talk about chrome on the table; installing still costs ¥ + Body Integrity per `09`.
+**Hacking** and Wire procedures live in **The Wire** (`21`). **Cybertech** is how you talk about chrome on the table; installing still costs ¥ + Body Integrity per `09`.
 
 ### Knowledge skills
 
@@ -160,7 +158,7 @@ Gain skills from **People**, **Background**, **Profession**, and **class** (late
 | Gunnery | Vehicle-mounted weapons, drone weapon systems, and turret control |
 | Navigation | Route planning, pursuit lines, safe corridors, and hazard reading |
 
-Machines rules: `23-machines.md`. A qualifying air scout in inventory grants **Street Eye** (Companion Link); Wrenches still use Deploy & Command (`16`).
+Machines rules: **Machines** (`23`). A qualifying air scout in inventory grants **Street Eye** (Companion Link); Wrenches still use Deploy & Command (`16`).
 
 ### Magic and supernatural skills
 
@@ -199,9 +197,9 @@ Each class fuels abilities with its own **heroic resource**. Timing follows the 
 
 ## Victories, level, and what comes later
 
-Runners advance **Level 1–10** by the Victory and leveling procedure in `24`. Ghostwire invents no second hidden XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in `24-advancement.md`.
+Runners advance **Level 1–10** by the Victory and leveling procedure in `24`. Ghostwire invents no second hidden XP track. Levels group into four **echelons** (1–3, 4–6, 7–9, 10). Characteristic increases, skills, perks, and higher-cost abilities follow the shared cadence — full table in **Advancement** (`24`).
 
-What leveling does **not** grant: Body Integrity, **Taint** change, liquid ¥, or Wire Node Rating. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`). Rest does not cleanse Taint (`27`).
+What leveling does **not** grant: Body Integrity, **Taint** change, or liquid ¥. Between jobs, pay Lifestyle or take street pressure (`26`); shop, craft, and chrome surgery are downtime choices (`08`, `09`, `10`). Rest does not cleanse Taint (`27`).
 
 ---
 
@@ -211,6 +209,6 @@ What leveling does **not** grant: Body Integrity, **Taint** change, liquid ¥, o
 - **Heroic resources and class features** — class chapters only.
 - **¥** — objects and services: gear, chrome hardware, installs, bribes, Wire access, Lifestyle upkeep (`08`, `26`).
 - **Chrome** — ¥ + Body Integrity; never a characteristic or skill grant (`09`).
-- **Wire** — decks, programs, connection state, Node Rating (`21`); Hacking skill + Logic/Instinct still sit on this chapter’s sheet.
+- **Wire** — decks, programs, and connection state (`21`); Hacking skill + Logic/Instinct still sit on this chapter’s sheet.
 
 If a shop, chrome catalog, or downtime offer would raise a characteristic, add a skill, or unlock a class feature for cash, refuse it. That purchase is off-doctrine.

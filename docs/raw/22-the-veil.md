@@ -1,8 +1,5 @@
 # The Veil
 
-**RAW status:** draft (B43 Ritual Working locked 2026-09-18, card catalog 0.3.88; §C3 Summon Entities locked 2026-09-18)  
-**Sources:** `docs/rulebook/06-elementalist.md`, `docs/rulebook/07-street-priest.md`, `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/rulebook/17-perks.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (Category 6), `docs/directors/veil-rituals-exploration.md` (B43), `docs/directors/ritual-chapter-draft.md` (0.3.88)
-
 ---
 
 ## What this chapter covers
@@ -58,7 +55,7 @@ Any runner can take a **supernatural perk** (`11`): small Veil and Signal gifts,
 
 ## Ritual Workings
 
-*B43 lock 2026-09-18 · full card catalog 0.3.88 (46 Workings). One chapter shape: shared rules once, then every Working as a card.*
+*Locked · full card catalog (46 Workings). One chapter shape: shared rules once, then every Working as a card.*
 
 ### What a Ritual Working is
 
@@ -1839,16 +1836,16 @@ Every Working below is a card. The **Formula Item** for each one (compendium: *G
 
 ---
 
-## §C3 Summon Entities (LOCKED 2026-09-18)
+## §C3 Summon Entities (LOCKED)
 
-Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and Foundry (`scripts/veil-summons.mjs`, B53/B60) follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.
+Shared Stamina and bind-count rules for Elementalist elementals and Street Priest pact spirits. Class chapters (`17`, `18`) and the Foundry module follow these numbers. Persistent costs, bind unlocks, companion / Rank 1 / spirit strike bands already printed in RAW are **final**, not provisional.
 
-*Player-facing action-economy questions (extension vs. independent, turns, caps, 0 Stamina) — see FAQ `28-constructs-pets-faq.md`.*
+*Player-facing action-economy questions (extension vs. independent, turns, caps, 0 Stamina) — see the **Constructs & Pets FAQ** (`28`).*
 
 **Pet Stamina (LOCKED).** Hit points for compiled / summoned pets are ordinary **Stamina**. There is no separate “pet HP” unit. **Sprites** (`20`), **Agents** (`19`), and **independent spirits** (this chapter / `18`) take damage against their own Stamina and drop at 0. **Extension spirits** have **no separate pool** — they act on the caster’s turn; a token number is table convenience only, and the Director may treat the extension as untargetable. Elemental rank bases stay in the table below.
 
 > **In Foundry**
-> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack (B53). Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. Technomancer sprites use the same pack pattern on **Compile Sprite** (`20`). Hacker **Agents** (Probe / Spike / Daemon / Watchdog) use **Compile Agent** (`19`) — software, not Resonance, not a sprite SKU.
+> Elementalist and Street Priest summon abilities spawn linked Actors from the **Summons & Machines** pack. Open the summon ability’s Item sheet for the live roster, manual **Summon** / **Dismiss**, and per-pet dismiss. Using the ability can auto-summon when the module setting allows; pets drop at 0 Stamina. Technomancer sprites use the same pack pattern on **Compile Sprite** (`20`). Hacker **Agents** (Probe / Spike / Daemon / Watchdog) use **Compile Agent** (`19`) — software, not Resonance, not a sprite SKU.
 
 
 ### Elemental Stamina
@@ -1889,8 +1886,8 @@ Until those land, use Rank 1 / companion / spirit strike bands already printed i
 
 ## Corruption & Taint
 
-The shared hero **Taint** track (0–12; Clean / Marked / Stained / Claimed / Hollowed) lives in `27-corruption-taint.md`. Class text that says "corruption" as a Price means **Taint** on that track. Unmaking workings above are the cleanse family; rest never cleanses; chrome does not raise Taint. Pact Prices ignore the +1-per-scene cap.
+The shared hero **Taint** track (0–12; Clean / Marked / Stained / Claimed / Hollowed) lives in **Corruption & Taint**. Class text that says "corruption" as a Price means **Taint** on that track. Unmaking workings above are the cleanse family; rest never cleanses; chrome does not raise Taint. Pact Prices ignore the +1-per-scene cap.
 
 ## Not yet written
 
-Thin-place gazetteer mechanics and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. The hero Taint ladder is **B80** (`27`). Ritual Workings above are the B43 lock with the 0.3.88 card catalog; §C3 Summon Entities (Stamina + bind count) is locked 2026-09-18 — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build.
+Thin-place gazetteer mechanics and fuller Veil entity stat cards (beyond §C3 Stamina / bind-cap) remain open. The hero Taint ladder lives in **Corruption & Taint**. Ritual Workings above are locked, with the full card catalog; §C3 Summon Entities (Stamina + bind count) is locked — see above. Deferred from §C3: Rank 2+ strike ladders and defense stamps. Foundry automation of Persistent drain / Command edge remains a later build.

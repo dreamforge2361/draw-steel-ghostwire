@@ -1,8 +1,5 @@
 # The Commander / Face
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/03-commander-face.md`
-
 ---
 
 ## Class Chassis

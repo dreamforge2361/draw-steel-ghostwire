@@ -1,9 +1,6 @@
 # The Hacker
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/08-hacker.md`
-
-The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in `21-the-wire.md`. **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.
+The Wired System (nodes, **four** connection states — Disconnected | Linked | Overlay | Jacked In — System Stat Card, Trace Alert) and the universal Matrix Verbs are in **The Wire** (`21`). **Connect** needs a Wire interface (commlink / deck / chrome, **Wire Kit**, **Rigger’s Harness** / RCC, or Technomancer). This chapter keeps the Hacker's own rules: Bandwidth, cyberdecks, Programs, **Agents** (Compile Agent / Decompile Agent), progression, and subclasses. Programs that require “Jacked In or Overlaid” still mean those two — **Linked does not satisfy them**. **Compile Agent** is the same: Overlay or Jacked In; Linked refuses.
 
 ---
 
@@ -81,7 +78,7 @@ Agents are software constructs you compile from your deck — **Probe** (recon /
 
 **Agent cap.** At 1st level you may have up to **2 Agents** compiled at once. The cap rises to **3** at 5th level and **4** at 8th. Caps do not stack — use the single highest number you qualify for. (A later Controller "Weaver-like" bump is parked.)
 
-**Bands.** The Agent you compile is chosen by your current level, every time. *Table question — "when does my Agent get a turn?" — see FAQ `28-constructs-pets-faq.md`.*
+**Bands.** The Agent you compile is chosen by your current level, every time. *Table question — "when does my Agent get a turn?" — see FAQ **Constructs & Pets FAQ** (`28`).*
 
 | Rank | Levels | Behavior |
 |---|---|---|
@@ -189,13 +186,13 @@ The Hacker whose value extends to the whole team, feeding allies edges and softe
 
 ## Chrome a Hacker Runs
 
-Cyberware relevant to the Wired -- from the Matrix & Signals implant category (chrome grades Salvage / Standard / Soft; higher-end implants are gated by Availability — `09-chrome-body-integrity.md`):
+Cyberware relevant to the Wired -- from the Matrix & Signals implant category (chrome grades Salvage / Standard / Soft; higher-end implants are gated by Availability — **Chrome & Body Integrity**, `09`):
 
 - **Sub-Dermal Radio / Ghost Antenna** -- Wired signal-boosting implants.
 - **Encephalon / Cerebral Datastore** -- grants +1 Bandwidth/Uptime cap at E3, +2 Logic on Matrix rolls at E4.
 - **Simsense Booster / Hot-Sim Adapter** -- sensory/interface boosters for deeper Wired immersion.
 - **Signal Ghost** -- signature-masking implant.
 
-Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero — see `09-chrome-body-integrity.md` for install rules and grades.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero — see **Chrome & Body Integrity** (`09`) for install rules and grades.
 
 ---

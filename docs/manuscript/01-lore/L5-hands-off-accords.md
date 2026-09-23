@@ -1,9 +1,8 @@
 # The Hands Off Accords
 
-**Status:** draft lore (B91, 2026-09-19)  
 **Print:** Lore harvest — after VOIDMARK (L4)  
 **Theme:** Starting law of the age — not the end-state crisis  
-**Related:** Machines (`docs/raw/23-machines.md`), Wire (`21`), VOIDMARK (L4), Incursion / Nullspace (L1)
+**Related:** **Machines** (`23`) · Wire (`21`) · VOIDMARK (L4) · Incursion / Nullspace (L1)
 
 ---
 
@@ -64,13 +63,12 @@ Use this as escalation scaffolding. Do not declare the bot war already won or lo
 ---
 
 > **In Foundry**
-> Machine / drone play still uses Wrench Jump-In, RCC, and Machine rules (`23`). Hands Off is fiction and Director pressure (IRN response, Trace, lifestyle heat) until a later automation pass. VOIDMARK chat (B82) should know the Accords via the rules/lore pack and may refuse to "take the stick" in-character unless the table's Director mode allows a breach.
+> Machine / drone play still uses Wrench Jump-In, RCC, and Machine rules (`23`). Hands Off is fiction and Director pressure (IRN response, Trace, lifestyle heat) until a later automation pass. VOIDMARK chat should know the Accords via the rules/lore pack and may refuse to "take the stick" in-character unless the table's Director mode allows a breach.
 
 ---
 
 ## Cross-references
 
 - VOIDMARK — L4  
-- Machines / Jump-In — `docs/raw/23-machines.md`  
-- MER / IRN tickers — `docs/rulebook/MEGACORP-TICKERS.md`  
+- Machines / Jump-In — **Machines** (`23`)  
 - Incursion / Nullspace — L1  

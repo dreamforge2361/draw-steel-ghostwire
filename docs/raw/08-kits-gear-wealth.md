@@ -1,8 +1,5 @@
 # Kits, Gear & Wealth (¥)
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/10-kits.md`, `docs/rulebook/11-economy.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (rules header, remapped per its DS alignment override)
-
 ---
 
 ## Part 1 — Kits
@@ -102,7 +99,7 @@ Three light Kits built for the Wrench's subclasses (any class with light-Kit acc
 | **Fabricator's Bench** | Light sidearm + mobile tool rig; light armor | Stamina +3 · Speed +1 · Disengage +1 · Melee +1/+1/+1 · Ranged +1/+1/+1 · Ranged distance +5 | **Bench-Rigged Shot** — a machine you control within 5 regains 1/2/3 Integrity | +1 on Field Repair Power Rolls targeting your own drones | Drone Jockey |
 | **Rigger's Harness** | Light sidearm + neural control-interface mount; light armor | Stamina +3 · Speed +2 · Disengage +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Neural Snap Shot** — shift 1/2/2 (high: the target has a bane on its next strike against you) | +1 on Jump-In checks | Vehicle Rig-Pilot |
 
-**Connect.** **Rigger’s Harness** is a Wire interface (≡ deck). Fabricator’s Bench and Field Chassis are not. Full list: `21-the-wire.md`.
+**Connect.** **Rigger’s Harness** is a Wire interface (≡ deck). Fabricator’s Bench and Field Chassis are not. Full list: **The Wire** (`21`).
 | **Field Chassis** | Light sidearm + portable turret-control tablet; light armor | Stamina +3 · Speed +1 · Stability +1 · Ranged +1/+1/+1 · Ranged distance +5 | **Tablet Crossfire** — middle/high: a machine or pre-placed asset you control gains an edge on its next strike against the target (high: target slowed) | +1 on Deploy checks for pre-placed assets | Facility Rigger |
 
 ---
@@ -114,9 +111,9 @@ Three light Kits built for the Wrench's subclasses (any class with light-Kit acc
 | Spend | Notes |
 |---|---|
 | **Gear** | Weapons, armor, tools that satisfy Kit categories or standalone use |
-| **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) — full rules: `10-mods.md` |
+| **Mods** | Smartlink, silencer, armor weave, etc. (stack with Kit doctrine) — full rules: **Mods** (`10`) |
 | **Chrome** | Implants and chrome packages — **also** spends Body Integrity (Chrome chapter) |
-| **Lifestyle** | Pay upkeep band or take a street complication — full table: `26-lifestyle-downtime.md` |
+| **Lifestyle** | Pay upkeep band or take a street complication — full table: **Lifestyle & Downtime** (`26`) |
 | **Bribes / favors** | Access, silence, fixers, corp doors |
 | **Wired access** | Decks, hosts, illegal node time, black-clinic install facilities |
 
@@ -142,9 +139,9 @@ Every new hero starts with:
 
 - Street-band qualifying gear auto-grants **at chargen only** with the free Kit (Economy object side of the doctrine).
 - **Merc** (Operator dual-Kit): street-band qualifying gear for **both** Kits.
-- **Mods** and **chrome** are opt-in — never auto-grant. Buy with ¥ (chrome also spends Body Integrity). See `10-mods.md` and `09-chrome-body-integrity.md`.
+- **Mods** and **chrome** are opt-in — never auto-grant. Buy with ¥ (chrome also spends Body Integrity). See **Mods** (`10`) and **Chrome & Body Integrity** (`09`).
 - A Kit taken **later** (respite swap, learned later) grants nothing — the hero owns what they own and buys the new category through ¥ + Availability.
-- **In Foundry (0.3.99):** taking the free Kit at 1st level copies that Kit's street package onto the sheet automatically, once per Kit. Which SKU answers which category: `docs/directors/kit-street-band-grants.md`. Unarmed Kits are handed nothing — fists are already the qualifying weapon — and the Hacker deck-Kits and Rigger's Harness need no host, because the Kit *is* the host.
+- **In Foundry:** taking the free Kit at 1st level copies that Kit's street package onto the sheet automatically, once per Kit. Unarmed Kits are handed nothing — fists are already the qualifying weapon — and the Hacker deck-Kits and Rigger's Harness need no host, because the Kit *is* the host.
 
 **No free starting chrome.** Buy chrome with ¥ + Body Integrity if allowed.
 
@@ -152,7 +149,7 @@ A Director may grant a small ¥ bonus from Background or Profession, as liquid c
 
 ### Availability bands
 
-Gear, chrome, and some services are gated by **Availability**, not a Ghostwire tier ladder. Match Kits chapter language: progress by Availability + echelon-appropriate lists.
+Gear, chrome, and some services are gated by **Availability**. Match Kits chapter language: progress by Availability + echelon-appropriate lists.
 
 | Band | Feel (brief) |
 |---|---|
@@ -187,8 +184,6 @@ Payout ≈ U + G + ~25%(U + G)
 
 Skew up for heat / Trace Alert / milspec prize; skew down for quiet cut-outs. Directors may still substitute unique gear for part of the share. Do not pay characteristics, Kits, or class features in ¥.
 
-**Campaign worked example** (same numbers): `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
-
 *Legacy job-scale bands (street ¥500–2,000 / district ¥2,000–8,000 / corp ¥5,000–20,000 / black-ops ¥20,000+) remain useful as a heat dial on top of the level-band table — they are not a second economy.*
 
 ### Kits ↔ Economy bridge
@@ -208,7 +203,7 @@ Skew up for heat / Trace Alert / milspec prize; skew down for quiet cut-outs. Di
 
 ### Link to Chrome / Body Integrity
 
-Chrome purchases spend **¥ + Body Integrity**. Grades trade cheap Salvage (Integrity ×1.5) vs Soft-Bioware (Integrity ×0.4 round up). Cyborgs do **not** use Chrome/Body Integrity. Full rules: `09-chrome-body-integrity.md`.
+Chrome purchases spend **¥ + Body Integrity**. Grades trade cheap Salvage (Integrity ×1.5) vs Soft-Bioware (Integrity ×0.4 round up). Cyborgs do **not** use Chrome/Body Integrity. Full rules: **Chrome & Body Integrity** (`09`).
 
 ### §Craft (downtime Projects)
 
@@ -223,11 +218,11 @@ Power Rolls on those Projects use ordinary Ghostwire skills by job:
 | **Repair** | Weapons, armor, vehicles/drones — physical mods |
 | **Cybertech** | Chrome-adjacent only |
 
-Full Invent a Mod and slot rules: `10-mods.md`.
+Full Invent a Mod and slot rules: **Mods** (`10`).
 
 ### Lifestyle burn
 
-At each **full respite** (not a mid-job short stop), heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** `26-lifestyle-downtime.md`. Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider.
+At each **full respite** (not a mid-job short stop), heroes either **pay lifestyle** (safehouse grade, food, heat scrub, and that band’s **Lazarus Extract** contract) or take a **street complication** (Director pick: debt collector, illness, gear theft, unwanted attention, etc.). **Full bands, Lazarus tiers, Medic restock quotes, and downtime overview:** **Lifestyle & Downtime** (`26`). Extract is bundled into upkeep — no second ¥ line unless the Director adds a premium rider.
 
 ## Part 3 — Gear
 
@@ -280,6 +275,6 @@ Ghostwire has no armor class and no to-hit-versus-defense roll. Worn armor **rai
 | General & lifestyle | Comms and credentials, sensors and optics, break-in tools, survival kit, medical consumables, ammunition and thrown, lifestyle goods and services |
 | Armor | Light, medium, heavy, sealed and hardened, shields and riot gear |
 | Weapons | Light firearms, longarms, heavy weapons, melee and blades, thrown and grenades, bows and exotic, weapon mods |
-| Wired gear | Cyberdecks, programs and utilities, intrusion payloads, RCCs, cyberjacks and interfaces, Wired support gear (see `21-the-wire.md`) |
-| Vehicles & drones | Ground, air, water, space, drones, vehicle and drone mods (see `23-machines.md`) |
+| Wired gear | Cyberdecks, programs and utilities, intrusion payloads, RCCs, cyberjacks and interfaces, Wired support gear (see **The Wire**, `21`) |
+| Vehicles & drones | Ground, air, water, space, drones, vehicle and drone mods (see **Machines**, `23`) |
 | Magical foci | Elementalist, Street Priest, and Technomancer foci; shared ritual tools; material components; reagent packages |

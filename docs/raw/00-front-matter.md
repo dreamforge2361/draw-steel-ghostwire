@@ -1,8 +1,6 @@
 # Front Matter
 
-**RAW status:** draft (print-front expand B74, 2026-09-19)  
-**Sources:** `docs/raw/00-INDEX.md`, `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/00-STAGE1-skeleton.md`  
-**Print:** Chapter 0 — license, conventions, abbreviations, glossary. Title plate / credits / print how-to live in `docs/manuscript/00-front/` and assemble **before** lore.
+**Print:** Chapter 0 — license, conventions, abbreviations, glossary. The title plate, credits, and *How to Use This Book* pages come first, ahead of the lore chapters.
 
 ---
 
@@ -30,50 +28,46 @@ Ghostwire is playable from **this manuscript** (or the print PDF assembled from 
 
 This statement appears in every published form of this book.
 
-**Artwork:** All Ghostwire artwork is AI-generated (Ghostwire AI), unless a caption names a different credit. See print credits (`docs/manuscript/00-front/credits.md`). The Draw Steel compatibility logo is permitted and encouraged, but not required, and no logo art ships with this draft.
+**Artwork:** All Ghostwire artwork is AI-generated (Ghostwire AI), unless a caption names a different credit. See the credits page at the front of this book. The Draw Steel compatibility logo is permitted and encouraged, but not required, and no logo art ships with this draft.
 
 ## How to use this book
 
-1. **Players** start with `02-heroes-characteristics.md`, then pick a People (`05`), Background and Profession (`06`), a class (`12`–`20`), and a Kit (`08`).
+1. **Players** start with **Heroes and Characteristics** (`02`), then pick a People (`05`), Background and Profession (`06`), a class (`12`–`20`), and a Kit (`08`).
 2. **Everyone** reads the procedure chapters in `01`–`04` once, so Ghostwire’s names and loops are familiar.
-3. **Directors** add `21-the-wire.md`, `23-machines.md`, `25-opposition.md`, and print Ch 27 (Running Ossian Reach — manuscript pointer, not a gazetteer).
+3. **Directors** add **The Wire** (`21`), **Machines** (`23`), **Opposition** (`25`), and print Ch 27 (Running Ossian Reach — manuscript pointer, not a gazetteer).
 
 ## Chapter list
 
-| File | Chapter |
+| Ref | Chapter |
 |---|---|
-| `00-front-matter.md` | Front matter and glossary |
-| `01-how-to-play.md` | How to Play |
-| `02-heroes-characteristics.md` | Heroes and Characteristics |
-| `03-tests-power-rolls.md` | Tests and Power Rolls |
-| `04-combat.md` | Combat |
-| `05-ancestries.md` | Ancestries (the Peoples) |
-| `06-backgrounds-professions.md` | Backgrounds and Professions |
-| `07-languages.md` | Languages |
-| `08-kits-gear-wealth.md` | Kits, Gear, and Wealth (¥) |
-| `09-chrome-body-integrity.md` | Chrome and Body Integrity |
-| `10-mods.md` | Mods |
-| `11-perks.md` | Perks |
-| `12-operator.md` | The Operator |
-| `13-scout.md` | The Scout |
-| `14-commander.md` | The Commander / Face |
-| `15-medic.md` | The Medic |
-| `16-wrench.md` | The Wrench |
-| `17-elementalist.md` | The Elementalist |
-| `18-street-priest.md` | The Street Priest |
-| `19-hacker.md` | The Hacker |
-| `20-technomancer.md` | The Technomancer |
-| `21-the-wire.md` | The Wire |
-| `22-the-veil.md` | The Veil |
-| `23-machines.md` | Machines: Drones, Vehicles, and Buildings |
-| `24-advancement.md` | Advancement and Echelons |
-| `25-opposition.md` | Opposition (Director) |
-| `26-lifestyle-downtime.md` | Lifestyle and Downtime (print Ch 10) |
-| `27-corruption-taint.md` | Corruption and Taint |
-
-## Chapter status
-
-Each chapter’s header shows **RAW status: draft** or **RAW status: locked**, and the source documents it was assembled from. Only locked chapters are final rules.
+| **Front Matter** (`00`) | Front matter and glossary |
+| **How to Play** (`01`) | How to Play |
+| **Heroes and Characteristics** (`02`) | Heroes and Characteristics |
+| **Tests and Power Rolls** (`03`) | Tests and Power Rolls |
+| **Combat** (`04`) | Combat |
+| **Ancestries** (`05`) | Ancestries (the Peoples) |
+| **Backgrounds & Professions** (`06`) | Backgrounds and Professions |
+| **Languages** (`07`) | Languages |
+| **Kits, Gear & Wealth** (`08`) | Kits, Gear, and Wealth (¥) |
+| **Chrome & Body Integrity** (`09`) | Chrome and Body Integrity |
+| **Mods** (`10`) | Mods |
+| **Perks** (`11`) | Perks |
+| **The Operator** (`12`) | The Operator |
+| **The Scout** (`13`) | The Scout |
+| **The Commander** (`14`) | The Commander / Face |
+| **The Medic** (`15`) | The Medic |
+| **The Wrench** (`16`) | The Wrench |
+| **The Elementalist** (`17`) | The Elementalist |
+| **The Street Priest** (`18`) | The Street Priest |
+| **The Hacker** (`19`) | The Hacker |
+| **The Technomancer** (`20`) | The Technomancer |
+| **The Wire** (`21`) | The Wire |
+| **The Veil** (`22`) | The Veil |
+| **Machines** (`23`) | Machines: Drones, Vehicles, and Buildings |
+| **Advancement** (`24`) | Advancement and Echelons |
+| **Opposition** (`25`) | Opposition (Director) |
+| **Lifestyle & Downtime** (`26`) | Lifestyle and Downtime (print Ch 10) |
+| **Corruption & Taint** | Corruption and Taint |
 
 ## Conventions
 
@@ -82,7 +76,7 @@ Each chapter’s header shows **RAW status: draft** or **RAW status: locked**, a
 - **Progression** is **Level 1–10**, grouped into **Echelon 1–4**. Ghostwire has no separate tier ladder for heroes, gear, or foes.
 - **Currency** is nuyen, written **¥**.
 - A **provisional** number is playable but not yet tuned.
-- **In Foundry** callouts (B68) name shipped *Draw Steel — Ghostwire Build* UI only. They are click-notes, not a second rule. Ignore any control that is not in the module.
+- **In Foundry** callouts name shipped *Draw Steel — Ghostwire Build* UI only. They are click-notes, not a second rule. Ignore any control that is not in the module.
 
 ## Abbreviations
 
@@ -92,8 +86,8 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 |---|---|---|
 | **DS** | Draw Steel | Engine this book sits on (Creator License). Play from this book, not a second rulebook. |
 | **GW** | Ghostwire | This setting and this module |
-| **HTP** | How to Play | Print Ch 1 / `01-how-to-play.md` |
-| **RAW** | Rules as written | `docs/raw/` is SoR for procedures |
+| **HTP** | How to Play | Print Ch 1 / **How to Play** (`01`) |
+| **RAW** | Rules as written | The procedure text in this book; it wins over flavour |
 | **¥** | Nuyen | Tracked money; never character power |
 | **BI** | Body Integrity | Living chrome capacity; starts at 20 |
 | **Taint** | Taint | Shared hero stain track, 0–12 (`27`) |
@@ -101,13 +95,12 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **ICE** | Intrusion countermeasures | Wired defenses on a node |
 | **RCC** | Rigger command console | Drone command hardware |
 | **EV** | Encounter budget | Street-fight feel in `25` — Ghostwire does not invent a second XP ladder |
-| **SoR** | Source of record | Rules = raw; print assemble = manuscript + raw pointers |
 
-**E1–E4** on a **hero** means echelon. **E1–E4** on a **Wired Flats host** means ICE posture / Node Rating — not the runner’s level (`21`, print Ch 27).
+**E1–E4** on a **hero** means echelon. **E1–E4** on a **Wired host** means that host’s ICE posture / Node Rating (`21`, print Ch 27).
 
 
-**Megacorp tickers (The Twelve):** **HAL** HALO · **FER** Ferrum · **MER** Meridian · **CAD** Caduceus · **IRN** Ironclad · **ARG** Argent · **VER** Verdant · **OBS** Obsidian · **SAN** Sanctum · **NYX** Nyx · **AEQ** Aequitas · **LAZ** Lazarus — full names in lore / `docs/rulebook/MEGACORP-TICKERS.md`. Charter Age seated the Ten; current play uses Twelve. AEQ sells **only to the Council**. LAZ extract is bundled into Lifestyle (`26`). Brand marks `assets/brands/megacorps/brand-{ticker}.{png,webp}`; Host skins `assets/tokens/wired/node-host-{ticker}.{png,webp}` (AEQ / LAZ included).
-**T5–T1** in old drafts is a legacy ladder. Convert with the tables in Advancement (`24`). Do not say “tier” to players.
+**Megacorp tickers (The Twelve):** **HAL** HALO · **FER** Ferrum · **MER** Meridian · **CAD** Caduceus · **IRN** Ironclad · **ARG** Argent · **VER** Verdant · **OBS** Obsidian · **SAN** Sanctum · **NYX** Nyx · **AEQ** Aequitas · **LAZ** Lazarus — full names in the lore chapters. Charter Age seated the Ten; current play uses Twelve. AEQ sells **only to the Council**. LAZ extract is bundled into Lifestyle (`26`). Brand marks `assets/brands/megacorps/brand-{ticker}.{png,webp}`; Host skins `assets/tokens/wired/node-host-{ticker}.{png,webp}` (AEQ / LAZ included).
+Do not say “tier” to players — Ghostwire progression is **level** and **echelon**.
 
 ## Glossary
 
@@ -147,7 +140,7 @@ Short forms used in headers, tables, and sidebars. The glossary below still wins
 | **Endpoint** | Optional atlas leaf that opens a meatspace room (v1.1). | `21` |
 | **Device** | Room-only socket token (Light, Maglock, Cam, ICE, …). | `21` |
 | **Reach (Wired)** | Scan/Navigate range in **node-hops on the current scene’s graph**, not the whole district and not Ossian Reach. | `21` |
-| **Node Rating** | A node’s defense grade, 1 (street) to 5 (alpha). Not a level or echelon. | `21` |
+| **Node Rating** | A node’s defense grade, 1 (street) to 5 (alpha). A property of the node, never of a runner. | `21` |
 | **Integrity (Wired)** | A Track 2 node’s health pool. Not Body Integrity. | `21` |
 | **ICE** | Intrusion countermeasures: active defenses on a node. | `21` |
 | **Biofeedback** | Damage that bleeds from the Wired into your body. | `21` |

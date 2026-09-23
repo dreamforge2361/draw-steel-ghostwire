@@ -1,9 +1,7 @@
 # Mods
 
-**RAW status:** draft (Stage 3 procedure fill / B75, 2026-09-19; armor + gadget families published G2, 2026-09-22)  
-**Sources:** `docs/rulebook/14-mods.md` (Complete lock), `docs/masters/GHOSTWIRE_GEAR_MASTER.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`  
 **Print:** Chapter 12 (TOC lock)  
-**Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Vehicle/drone **Armor** and **Weaponry** each ship a 4-echelon ladder in §5F (Michael lock 2026-09-20). Wearable **armor / shields** (§2F) and **gadgets** (§1H) are **published** as of G2 / 0.3.100 — and a wearable armor mod still never adds Stamina.
+**Design locks (do not reopen):** ¥ cost; stack with Kit doctrine on different numbers; §Craft = Project procedure, not a skill; field toggle for already-installed mods; install/swap/remove = downtime Project; slot integrity; firewall; Invent a Mod (v1); chargen never auto-grants mods. Vehicle/drone **Armor** and **Weaponry** each ship a 4-echelon ladder in §5F. Wearable **armor / shields** (§2F) and **gadgets** (§1H) are **published** — and a wearable armor mod still never adds Stamina.
 
 ---
 
@@ -75,19 +73,19 @@ A gadget you bought from Category 1 is a **host** when a published family exists
 
 ## Echelon + Availability (gear grade)
 
-**No Item Tier / T5–T1 in player-facing text.** The Gear master’s Item Tier column is a **legacy label** for gear grade only. Map:
+A gear host’s grade is **Echelon + Availability**. There is no separate item-tier ladder:
 
-| Legacy Item Tier | Echelon | Availability feel | Typical mod slots (`08`) |
-|---|---|---|---|
-| T5 | Echelon 1 | Street | 1 |
-| T4 | Echelon 1 | Professional | 2 |
-| T3 | Echelon 2 | Restricted | 3 |
-| T2 | Echelon 3 | Military | 4 |
-| T1 | Echelon 4 | Prototype | 5 |
+| Echelon | Availability feel | Typical mod slots (`08`) |
+|---|---|---|
+| Echelon 1 | Street | 1 |
+| Echelon 1 | Professional | 2 |
+| Echelon 2 | Restricted | 3 |
+| Echelon 3 | Military | 4 |
+| Echelon 4 | Prototype | 5 |
 
-Higher-grade gear costs more and has more mod slots. Hero-side benefits (Kit Stamina per echelon; Armor-as-Stamina by wearer **Echelon**) scale with the hero’s echelon (`24`) — not with a leftover item-tier ladder.
+Higher-grade gear costs more and has more mod slots. Hero-side benefits (Kit Stamina per echelon; Armor-as-Stamina by wearer **Echelon**) scale with the hero’s echelon (`24`).
 
-**Do not confuse** Power Roll **outcome bands** (low / middle / high) with Item Tier / gear grade.
+**Do not confuse** Power Roll **outcome bands** (low / middle / high) with gear grade.
 
 Price bands for the host sit in `08`. A Street pistol with one slot is not a Prototype just because you invented a clever mod for it.
 
@@ -165,7 +163,7 @@ Payloads are **not** a field toggle. You **Run** a loaded magazine; each Run spe
 
 ### 5. After the bench
 
-Record the install on the sheet (or in Foundry — sidebar below). Kit numbers do not change. Body Integrity does not change. Node Rating does not change.
+Record the install on the sheet (or in Foundry — sidebar below). Kit numbers do not change. Body Integrity does not change.
 
 ---
 
@@ -206,7 +204,7 @@ Deck **suites** and **payload magazines** occupy the same **mod slots** on a dec
 
 ## Published mod families
 
-Point of record: `docs/masters/GHOSTWIRE_GEAR_MASTER.md`. Rows below are **harvested**, not invented. Four families ship: weapons (§3G), wearable armor + shields (§2F), gadgets (§1H), and vehicles / drones (§5F).
+Rows below are **harvested**, not invented. Four families ship: weapons (§3G), wearable armor + shields (§2F), gadgets (§1H), and vehicles / drones (§5F).
 
 ### Weapon mods — Gear master §3G
 
@@ -276,7 +274,7 @@ Bench skill: **Electronics** for sensors, comms and Wired devices, **Repair** fo
 
 **Foundry apply vs Director table calls.** **Thermoptic Skin** and **Deep Optics** carry a real Active Effect (a Stealth and a Perception edge), shipped **off** so the player switches it on when the mod is installed and the condition holds — the same pattern **Stealth Weave** already used. Every other row in both tables is **flagged and printed on the card**, and Foundry does **not** auto-add its edges, banes, immunities, tags, or once-per-scene saves to Power Rolls: the Director applies the catalog line when the roll or the scene calls for it. No wearable mod writes Stamina anywhere.
 
-Availability feel follows the Gear master's legacy tier on each row. Do not invent a second price.
+Availability feel follows the band printed on each row. Do not invent a second price.
 
 ### Vehicle / drone mods — Gear master §5F
 
@@ -295,7 +293,7 @@ Every row is a §Craft-gated mod occupying the machine’s slots. Skill = **Repa
 
 #### Weaponry kits (one at a time)
 
-**0.3.112 — the kit is the mount, not the gun.** A weaponry kit adds hardpoints; a concrete Category-3 weapon goes into them. Buy that gun from Gear master **§3H** (the dedicated vehicle-mount SKUs) or use a Mounted-tagged heavy from **§3C** (Wallbreaker, Siege Missile). Scale ladder: **category-3 < medium < heavy** — a mount takes any gun at its own scale or below. A **turret** gun needs a Turret Ring; an **integrated** package needs a Heavy Hardpoint. However it got there, a gun on a hardpoint is fired with **Gunnery**, never its hand-held weapon skill. In Foundry: *Mount on…* / *Unmount weapon* on the weapon’s row; Deploy mirrors the mounted gun onto the machine Actor.
+**The kit is the mount, not the gun.** A weaponry kit adds hardpoints; a concrete Category-3 weapon goes into them. Buy that gun from Gear master **§3H** (the dedicated vehicle-mount SKUs) or use a Mounted-tagged heavy from **§3C** (Wallbreaker, Siege Missile). Scale ladder: **category-3 < medium < heavy** — a mount takes any gun at its own scale or below. A **turret** gun needs a Turret Ring; an **integrated** package needs a Heavy Hardpoint. However it got there, a gun on a hardpoint is fired with **Gunnery**, never its hand-held weapon skill. In Foundry: *Mount on…* / *Unmount weapon* on the weapon’s row; Deploy mirrors the mounted gun onto the machine Actor.
 
 | Name *(slang / corp / sci)* | Avail feel | ¥ | Effect | Tags |
 |---|---|---|---|---|
@@ -329,7 +327,7 @@ Armor and weaponry are **one at a time**. The rows below are not — install as 
 
 **Foundry apply vs Director table calls.** Armor kits **do** raise the Deployed machine’s Stamina (Integrity) in Foundry. Weaponry kits **do** flag a live Gunnery hardpoint on that Actor (`installedKits.weaponry`); firing is still Gunnery / Rigged Fire / a gunner station at the table. Every row in the **Other** table is **flagged and shown as an Active Effect** on the machine, but Foundry does **not** auto-add those edges, banes, Jump-In cleanliness, heat-shedding, speed steps, or reload math to Power Rolls — the Director applies the catalog line when the roll or scene calls for it.
 
-Availability feel follows the Gear master’s legacy tier on each row. Do not invent a second price.
+Availability feel follows the band printed on each row. Do not invent a second price.
 
 #### Project Goal — fabricating a mod or a chassis
 
@@ -347,7 +345,7 @@ Project points come from **Lifestyle project slots** (`26`) like any other Proje
 ### Programs and payloads (pointer)
 
 - **Programs / suites / autosofts** occupy deck / RCC slots (Category 4B+); §Craft Project skill = **Hacking**.
-- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: `21-the-wire.md` (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
+- **Matrix payloads** — consumable mods (Gear master **§4C**). A payload occupies one **host slot** as a **magazine** (cyberdeck, shared with suites; or a Technomancer’s **Wired Native** body-interface). Loading it is a Craft (Hacking) Project whose result sets its fires (low 1, middle 3, high 5); each Run spends one, and at 0 the slot frees. **Whiteout** is the exception-grade compile: same Hacking Project, **steep / hard**. Full rule: **The Wire** (`21`) (Deck software: suites vs payloads). This is the one exception to "Consumables never have mod slots": a payload *fills* a slot, it never has one.
 
 ---
 
@@ -404,10 +402,10 @@ Advancement never auto-installs mods when a new echelon raises Kit Stamina (`24`
 
 | Topic | Where |
 |---|---|
-| Kit doctrine vs object; chargen gear; grade / slot table | `08-kits-gear-wealth.md` |
-| Chrome, Integrity, implant weapons | `09-chrome-body-integrity.md` |
-| Lifestyle project slots | `26-lifestyle-downtime.md` |
-| Suites vs payloads; Run; Connected | `21-the-wire.md` |
-| Machines as hosts | `23-machines.md` |
+| Kit doctrine vs object; chargen gear; grade / slot table | **Kits, Gear & Wealth** (`08`) |
+| Chrome, Integrity, implant weapons | **Chrome & Body Integrity** (`09`) |
+| Lifestyle project slots | **Lifestyle & Downtime** (`26`) |
+| Suites vs payloads; Run; Connected | **The Wire** (`21`) |
+| Machines as hosts | **Machines** (`23`) |
 | Published rows | Gear master **§3G** (weapons), **§2F** (armor / shields), **§1H** (gadgets), **§5F** (vehicles / drones), Category **4** (software) |
 | Skills | `02` / skills master |

@@ -1,7 +1,5 @@
 # Advancement and Echelons
 
-**RAW status:** draft (Stage 3 fill 2026-09-19 / B73)  
-**Sources:** `docs/rulebook/DS-ALIGNMENT.md`, class progression tables (`docs/rulebook/01`–`08`, `20`), `docs/rulebook/17-perks.md`, `docs/rulebook/14-mods.md`, `docs/rulebook/10-kits.md`, `docs/raw/02-heroes-characteristics.md`, `docs/raw/08-kits-gear-wealth.md`  
 **Engine:** Ghostwire Victory, leveling, and echelon procedures in this chapter. Playable without a separate rulebook.  
 
 **Print:** Chapter 5 (TOC lock) — file numbered `24` so Journals keep a stable filename.
@@ -12,7 +10,7 @@
 
 Runners get better by taking **Victories**, earning experience, and **leveling**. Ghostwire does not invent a street-rep meter that replaces leveling, or a hidden tier ladder.
 
-This chapter tells the table **when** to bank Victories into XP and **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, **which Ghostwire numbers refuse to grow**, and how to read leftover **T5–T1** material. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.
+This chapter tells the table **when** to bank Victories into XP and **when** to apply a level in a Ghostwire campaign, **what** the shared cadence actually hands you, and **which Ghostwire numbers refuse to grow**. Class chapters still list the exact features. Economy, chrome, Wire, and Lifestyle still live in their own files.
 
 ---
 
@@ -79,8 +77,6 @@ The runner who leveled picks features, records the new Stamina / resource bits t
 
 **One job, several sessions.** Count Victories when the **job’s fiction** says the crew won a beat worth counting. Do not withhold a Victory because the fight was “only street” or award two because the Halo was pretty. Between sessions mid-job, use a **short stop**; bank XP only at **full respite**.
 
-**Campaign worked example:** Quiet Floor thresholds, G, and session math — `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md` (implements this chapter’s default).
-
 ## What the classes gain
 
 Every class follows the same cadence. Class chapters list the exact features, choices, and restrictions.
@@ -104,10 +100,10 @@ Heroic ability costs come in **bands** (1, 3, 5, 7, 9, 11 of the class’s resou
 
 1. **Confirm the level** with the Victory→XP threshold rule above (or the optional completed-job alternate). Ghostwire does not substitute street rumor for that math.
 2. **Open the class chapter** (`12`–`20`). Take only what that level prints — no “I would have had this if I had picked the other subclass.”
-3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants (B59); a live hero still applies the printed row by hand if Foundry’s class item has not caught up.
+3. **Record sheet numbers** the class changes (Stamina per level, Recoveries if printed, resource cap, new abilities). Pregen and robust-fill tools gate future grants; a live hero still applies the printed row by hand if Foundry’s class item has not caught up.
 4. **Spend the shared picks** this level grants: perk (`11`), skill (Ghostwire list in `02`), characteristic increase (the five Ghostwire names in `02`).
 5. **Re-check Kit and gear.** Kit doctrine is free and already owned; qualifying gear must still be **owned** (`08`). A new echelon can raise Kit Stamina and armor-as-Stamina **without** a shopping trip. It does **not** auto-install mods or chrome.
-6. **Do not touch** Body Integrity, liquid ¥, Node Rating, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.
+6. **Do not touch** Body Integrity, liquid ¥, or Lifestyle band as part of the level. Those change by play, spend, or Director fiction.
 
 **Characteristic increases** use Ghostwire names (Physique, Reflex, Logic, Instinct, Persona). When a level grants a characteristic increase, raise **one** characteristic by **1**. No characteristic may go above **5** from these increases. People traits and class features that print a raise still apply if they say so. ¥, chrome, and Lifestyle never buy the point (`02` firewall).
 
@@ -151,7 +147,6 @@ When a runner **enters a new echelon** (levels 4, 7, and 10), glance at Kit Stam
 - **Body Integrity** starts at 20 and never grows by leveling (`09`).
 - **¥** comes from runs, not levels (`08`).
 - **Ancestry traits** are bought once at creation (`05`).
-- **Node Rating** (1–5) is a Wired defense grade, not a level or echelon (`21`).
 - **Lifestyle band** is paid at each **full respite** (`26`). A 10th-level runner who lives Squatter still lives Squatter.
 - **Connection state** (Disconnected / Linked / Overlay / Jacked In) is a choice per scene, not a reward (`21`).
 - **Summon Rank 2+ strike ladders** stay deferred where Veil §C3 says they are deferred (`22`). Leveling a caster does not invent those numbers.
@@ -174,42 +169,10 @@ A **short stop** mid-job skips steps 2–4’s bank/Lifestyle/payday — Recover
 
 A new 9-cost ability does not make Elite upkeep free. If the table’s payouts never threaten Lifestyle, raise heat or cut the band — do not grow Body Integrity or hand out Prototype as a party favor.
 
-**Cross-links:** Kits/¥ `08` · Lifestyle / short stop `26` · Quiet Floor worked example `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
-
-## Converting older Ghostwire material
-
-Earlier Ghostwire drafts used a descending tier ladder (T5 weakest → T1 strongest). Read it this way:
-
-| Old tier (hero or foe) | Level |
-|---|---|
-| T5 | 1 |
-| T4 | 3 |
-| T3 | 5 |
-| T2 | 7 |
-| T1 | 9 |
-
-| Old gear tier | Echelon | Availability |
-|---|---|---|
-| T5 | 1 | Street |
-| T4 | 1 | Professional |
-| T3 | 2 | Restricted |
-| T2 | 3 | Military |
-| T1 | 4 | Prototype |
-
-| Old node tier | Node Rating |
-|---|---|
-| T5 | 1 |
-| T4 | 2 |
-| T3 | 3 |
-| T2 | 4 |
-| T1 | 5 |
-
-Older material that numbered Power Roll results “Tier 1 / 2 / 3” from best to worst is inverted: always use low / middle / high (`03`).
-
-Handbook and Flats gazetteer lines that still say “E1–E4” on a **host** mean ICE posture / Node Rating, **not** the runner’s echelon (`wired-flats` How to Read). Keep that distinction at the table.
+**Cross-links:** Kits/¥ `08` · Lifestyle / short stop `26`.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** and **Victory** / **XP** fields are the stock hero-sheet fields — Ghostwire’s default is **Victory→XP at full respite** with the thresholds in this chapter (not auto-level on job-complete). Class items and robust-fill honor a **level gate** (B59): 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation — bank XP and pay Lifestyle by hand at full respite.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Hero **level** and **Victory** / **XP** fields are the stock hero-sheet fields — Ghostwire’s default is **Victory→XP at full respite** with the thresholds in this chapter (not auto-level on job-complete). Class items and robust-fill honor a **level gate**: 1st-level pregens in **Ghostwire Pregens** (`pregens`) do not ship future subclass grants. After a live level-up, add the printed abilities from the class Item / this module’s packs if the sheet did not apply them automatically. Opposition level should track the crew’s echelon when you drag Actors from **Ghostwire Bestiary** or seed a job with **Run Generator** (hero level + echelon dials). There is no Lifestyle or Victory automation — bank XP and pay Lifestyle by hand at full respite.
 
 
 ---
@@ -218,7 +181,7 @@ Handbook and Flats gazetteer lines that still say “E1–E4” on a **host** me
 
 - Not a street-rep meter that replaces levels.
 - Not a second class chapter — open `12`–`20` for the actual features.
-- Not permission to grow Body Integrity, Node Rating, or ¥ by leveling.
+- Not permission to grow Body Integrity or ¥ by leveling.
 - Not a Rank 2+ summon-math pass.
 
 **Cross-links:** Heroes `02` · Tests `03` · Combat `04` · Kits/¥ `08` · Chrome `09` · Mods `10` · Perks `11` · Wire `21` · Veil `22` · Opposition `25` · Lifestyle `26` · print Ch 27 (Reach pointer).
