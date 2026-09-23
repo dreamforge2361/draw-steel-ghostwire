@@ -20,6 +20,7 @@ import { join } from "node:path";
 import { catalogPrice } from "../scripts/kiosk.mjs";
 import { getPreset, listingsFromItems } from "../scripts/kiosk-presets.mjs";
 import { KIT_STREET_GRANTS } from "../scripts/kit-grants.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const fail = [];
@@ -69,7 +70,9 @@ console.log("G2 wearable armor / shield + gadget mod families smoke (0.3.100)\n"
 
 /* ---------------------------------------------------------------- 1) ship surface */
 console.log("1) Ship surface");
-note(module.version === "0.3.100", `module.json is 0.3.100 (got ${module.version})`);
+// The G2 surface shipped at 0.3.100 and stays shipped through later bumps — compare numerically, never
+// as a string (the 0.3.99 → 0.3.100 trap this very release fixed in eighteen other smokes).
+note(atLeast(module.version, "0.3.100"), `module.json is at least 0.3.100 (got ${module.version})`);
 note(armorMods.length >= 14, `armor / shield mods published (got ${armorMods.length})`);
 note(gadgetMods.length >= 17, `gadget mods published (got ${gadgetMods.length})`);
 note(modsPack.length === 63, `the Mods pack ships 63 SKUs total (got ${modsPack.length})`);

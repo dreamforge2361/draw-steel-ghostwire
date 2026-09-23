@@ -42,6 +42,7 @@ import { registerConsumableUse } from "./consumable-use.mjs";
 import { registerRituals } from "./rituals.mjs";
 import { registerRitualWorking } from "./ritual-working.mjs";
 import { registerTokenVision } from "./token-vision.mjs";
+import { registerChargenWizard } from "./chargen-wizard.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -130,6 +131,7 @@ Hooks.once("init", () => {
   registerRituals();
   registerRitualWorking();
   registerTokenVision();
+  registerChargenWizard();
 });
 
 // ---------- Wired connection states ----------

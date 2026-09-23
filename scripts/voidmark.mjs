@@ -174,6 +174,18 @@ export class VoidmarkChat extends HandlebarsApplicationMixin(ApplicationV2) {
   #draft = "";
   #error = "";
 
+  /**
+   * Drop text into the prompt box without sending it (B95: the Chargen Wizard's "Ask VOIDMARK").
+   * The thread's mode is deliberately untouched, so a seeded player stays a runner (B122 / S6).
+   * @param {string} text
+   */
+  seed(text) {
+    const value = String(text ?? "").trim();
+    if (!value) return this;
+    this.#draft = value;
+    return this;
+  }
+
   /** @override */
   async _prepareContext() {
     const thread = readThread();
@@ -427,7 +439,7 @@ function registerSettings() {
 
 /* ---------- open / register ---------- */
 
-export function openVoidmark() {
+export function openVoidmark({ seed } = {}) {
   if (!setting("enabled")) {
     notifyWarn("Errors.Disabled");
     return null;
@@ -437,8 +449,9 @@ export function openVoidmark() {
     return null;
   }
   const existing = foundry.applications.instances.get(VoidmarkChat.DEFAULT_OPTIONS.id);
-  if (existing) return existing.render({ force: true });
-  return new VoidmarkChat().render({ force: true });
+  const app = existing ?? new VoidmarkChat();
+  if (seed) app.seed(seed);
+  return app.render({ force: true });
 }
 
 function toggleVoidmark() {
