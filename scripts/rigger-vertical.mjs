@@ -10,6 +10,7 @@ import {
   deployedMachine,
   fleetSizeCap,
   fieldedMachineCount,
+  isJumpInCapable,
 } from "./machines.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -58,9 +59,7 @@ export function isJumpedInto(machineActor) {
 export async function jumpIn(pilot, machineActor) {
   if (!(pilot instanceof Actor) || !(machineActor instanceof Actor)) return;
   const machine = machineActor.getFlag(MODULE_ID, "machine") ?? {};
-  const capable = machine.jumpInCapable
-    || [...(machineActor.items ?? [])].some(i => i.system?._dsid === "rigger-cocoon");
-  if (!capable) {
+  if (!isJumpInCapable(machineActor)) {
     return ui.notifications.warn(game.i18n.format(`${UI}.JumpInNotCapable`, { name: machineActor.name }));
   }
   const prior = pilot.getFlag(MODULE_ID, "jumpedInto");

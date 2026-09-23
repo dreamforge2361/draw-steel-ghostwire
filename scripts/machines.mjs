@@ -86,6 +86,44 @@ export function isMachineKindDocument(doc) {
 }
 
 /**
+ * Jump-In gate. Drones always pass. Vehicles and base assets pass only with their own
+ * jumpInCapable / jumpIn flag or a Rigger Cocoon on the machine Actor.
+ */
+export function isJumpInCapable(actor) {
+  if (machineKindOf(actor) === "drone") return true;
+  const machine = (typeof actor?.getFlag === "function" ? actor.getFlag(MODULE_ID, "machine") : null)
+    ?? actor?.flags?.[MODULE_ID]?.machine
+    ?? {};
+  if (machine.jumpInCapable || machine.jumpIn) return true;
+  return [...(actor?.items ?? [])].some(item => item?.system?._dsid === "rigger-cocoon");
+}
+
+/**
+ * Chassis-side Jump-In stamp used by Deploy.
+ * A drone chassis is capable even when the Item omits the flag. Base assets stay on their own flag
+ * (a Door Lock is not a drone). Vehicles stay on the flag or an installed Rigger Cocoon.
+ */
+export function chassisJumpInCapable(vehicleFlags = {}, { cocoon = false } = {}) {
+  if (vehicleFlags?.baseAsset) return !!(vehicleFlags.jumpInCapable || vehicleFlags.jumpIn || cocoon);
+  if (vehicleFlags?.drone) return true;
+  return !!(vehicleFlags?.jumpInCapable || vehicleFlags?.jumpIn || cocoon);
+}
+
+/** preCreateActor patch so a new drone Actor stores Jump-In Capable. Null when it already does, or it is not a drone. */
+export function droneJumpInSourceUpdate(doc) {
+  if (machineKindOf(doc) !== "drone") return null;
+  const flags = doc?.flags?.[MODULE_ID] ?? {};
+  const machine = flags.machine
+    ?? (typeof doc?.getFlag === "function" ? doc.getFlag(MODULE_ID, "machine") : null)
+    ?? {};
+  if (machine.jumpInCapable === true) return null;
+  return {
+    [`flags.${MODULE_ID}.kind`]: flags.kind ?? machine.kind ?? "drone",
+    [`flags.${MODULE_ID}.machine.jumpInCapable`]: true,
+  };
+}
+
+/**
  * Stamp Scorch Marks onto a plain prototypeToken or Token data object.
  * Other monks-bloodsplats keys (colour, size, index) stay.
  * Uses foundry.utils.mergeObject when Foundry is present.
@@ -156,6 +194,20 @@ export async function migrateMachineScorch() {
   if (actors || tokens) {
     console.log(`${MODULE_ID} | Scorch Marks on ${actors} machine prototype(s) and ${tokens} placed token(s)`);
   }
+}
+
+/** World drones deployed before 0.3.110 may lack machine.jumpInCapable. The gate already treats kind drone as capable; this stores the flag. */
+async function migrateDroneJumpIn() {
+  if (!game.user?.isGM) return;
+  const updates = [];
+  for (const actor of game.actors ?? []) {
+    const patch = droneJumpInSourceUpdate(actor);
+    if (!patch) continue;
+    updates.push({ _id: actor.id, ...patch });
+  }
+  if (!updates.length) return;
+  await Actor.updateDocuments(updates);
+  console.log(`${MODULE_ID} | Jump-In Capable stamped on ${updates.length} drone Actor(s)`);
 }
 
 
@@ -371,6 +423,112 @@ function installedKitsFlag(item) {
   return kits;
 }
 
+/** Catalog flag on a mod Item (Document or plain data). */
+function modFlag(mod) {
+  if (typeof mod?.getFlag === "function") {
+    const flagged = mod.getFlag(MODULE_ID, "mod");
+    if (flagged) return flagged;
+  }
+  return mod?.flags?.[MODULE_ID]?.mod ?? null;
+}
+
+const modIsActive = mod => modFlag(mod)?.active !== false;
+
+function inactiveMark() {
+  const key = `${UI}.ModOff`;
+  const label = globalThis.game?.i18n?.localize?.(key);
+  const word = label && label !== key ? label : "off";
+  return ` (${word})`;
+}
+
+/**
+ * Build-tab line for one weaponry / hardpoint kit.
+ * Empty for armor and Director mods — those already show as Integrity or their own kit AE.
+ * @returns {string}
+ */
+export function describeWeaponryKit(mod) {
+  const dsid = mod?.system?._dsid ?? null;
+  const profile = kitProfile(dsid);
+  const data = modFlag(mod);
+  if (profile?.kind !== "weaponry" && data?.exclusiveKit !== "weaponry") return "";
+  const name = mod?.name || dsid || "Hardpoint";
+  const p = profile ?? {};
+  const bits = [name];
+  if (p.hardpoints) bits.push(p.hardpoints === 1 ? "1 hardpoint" : `${p.hardpoints} hardpoints`);
+  if (p.scale && p.scale !== "heavy") bits.push(String(p.scale));
+  if (p.heavy) bits.push("heavy");
+  if (p.integrated) bits.push("integrated");
+  if (p.turret) bits.push("turret");
+  if (p.dualFeed) bits.push("dual-feed");
+  if (p.wideArc) bits.push("wide arc");
+  if (p.gunnery || data?.exclusiveKit === "weaponry") bits.push("Gunnery");
+  return bits.join(" · ");
+}
+
+/**
+ * Sheet fields derived from mods installed on the chassis Item.
+ * Hardpoints keeps a factory `vehicle.hardpoints` string and appends the live weaponry kit.
+ * Installed-mods text lists every installed mod (inactive ones marked off).
+ */
+export function machineModSheetFields(item) {
+  const vehicle = item?.getFlag?.(MODULE_ID, "vehicle") ?? {};
+  const factory = String(vehicle.hardpoints ?? vehicle.weaponMounts ?? "").trim();
+  const lines = [];
+  let weaponry = "";
+  for (const mod of installedHostMods(item)) {
+    const name = mod.name || mod.system?._dsid || "mod";
+    lines.push(modIsActive(mod) ? name : `${name}${inactiveMark()}`);
+    if (!modIsActive(mod)) continue;
+    const line = describeWeaponryKit(mod);
+    if (line) weaponry = line;
+  }
+  return {
+    hardpoints: [factory, weaponry].filter(Boolean).join("; "),
+    installedModsText: lines.join("\n"),
+  };
+}
+
+/**
+ * Plain Item data for a machine-Actor copy of a mod installed on the hero's chassis.
+ * The hero Item stays the slot record. `machineModMirror` is the source uuid so Deploy / sync can refresh the list.
+ */
+export function machineModMirrorData(source) {
+  const raw = typeof source.toObject === "function" ? source.toObject() : source;
+  const data = foundry?.utils?.deepClone ? foundry.utils.deepClone(raw) : structuredClone(raw);
+  delete data._id;
+  delete data.folder;
+  delete data.sort;
+  delete data.ownership;
+  delete data._stats;
+  if (Array.isArray(data.effects)) {
+    for (const effect of data.effects) {
+      delete effect._id;
+      delete effect._key;
+    }
+  }
+  data.flags ??= {};
+  data.flags[MODULE_ID] ??= {};
+  data.flags[MODULE_ID].mod ??= {};
+  data.flags[MODULE_ID].mod.installedOn = null;
+  data.flags[MODULE_ID].machineModMirror = source.uuid ?? source.id ?? null;
+  return data;
+}
+
+/** Embed installed chassis mods on the machine Actor; drop mirrors whose source mod is gone. */
+async function syncMachineModMirrors(actor, chassisItem) {
+  if (!actor?.createEmbeddedDocuments) return;
+  const mods = installedHostMods(chassisItem).filter(mod => mod.uuid || mod.id);
+  const wanted = new Set(mods.map(mod => mod.uuid ?? mod.id));
+  const mirrors = [...actor.items].filter(item => item.getFlag?.(MODULE_ID, "machineModMirror"));
+  const stale = mirrors.filter(item => !wanted.has(item.getFlag(MODULE_ID, "machineModMirror")));
+  if (stale.length) await actor.deleteEmbeddedDocuments("Item", stale.map(item => item.id));
+  const present = new Set(mirrors.map(item => item.getFlag(MODULE_ID, "machineModMirror")));
+  const create = mods
+    .filter(mod => !present.has(mod.uuid ?? mod.id))
+    .map(machineModMirrorData);
+  if (create.length) await actor.createEmbeddedDocuments("Item", create);
+}
+
 async function stampMachineModEffects(actor, item) {
   const existing = actor.effects.filter(effect => effect.getFlag(MODULE_ID, MACHINE_MOD_AE) || effect.getFlag(MODULE_ID, "machineArmor"));
   if (existing.length) await actor.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
@@ -389,7 +547,10 @@ async function stampMachineModEffects(actor, item) {
 /**
  * Apply installed, active vehicle/drone mods onto a deployed machine Actor.
  * Armor: chassis max + treasure AE (hero-armor path); current Stamina heals on install and clamps on remove.
- * Weaponry / other: AE + `flags.installedKits` for the Gunnery/sheet path. Toggle-off and uninstall rebuild this set.
+ * Weaponry / other: AE + `flags.installedKits` for the Gunnery path.
+ * The Machine sheet Inventory lists embedded Items, not those flags — so each installed mod is also
+ * mirrored onto the Actor, and Build → Hardpoints / Installed mods is filled from the same set.
+ * Toggle-off and uninstall rebuild this set.
  */
 export async function syncMachineMods(item) {
   const actor = deployedMachine(item);
@@ -401,6 +562,7 @@ export async function syncMachineMods(item) {
   const oldMax = Number(actor.system.stamina.max ?? 0);
   const next = staminaAfterArmorChange({ value: current, max: oldMax }, nextMax);
   const kits = installedKitsFlag(item);
+  const sheet = machineModSheetFields(item);
   // Wipe kit AEs first so a leftover treasure upgrade cannot double-count while we rewrite stored max.
   const existing = actor.effects.filter(effect => effect.getFlag(MODULE_ID, MACHINE_MOD_AE) || effect.getFlag(MODULE_ID, "machineArmor"));
   if (existing.length) await actor.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
@@ -411,10 +573,13 @@ export async function syncMachineMods(item) {
     [`flags.${MODULE_ID}.chassisStamina`]: chassis,
     [`flags.${MODULE_ID}.armorStaminaBonus`]: bonus,
     [`flags.${MODULE_ID}.installedKits`]: kits,
+    [`flags.${MODULE_ID}.machine.hardpoints`]: sheet.hardpoints,
+    [`flags.${MODULE_ID}.machine.installedModsText`]: sheet.installedModsText,
   });
   await stampMachineModEffects(actor, item);
+  await syncMachineModMirrors(actor, item);
   await actor.update({ "system.stamina.value": next.value });
-  return { chassis, bonus, max: nextMax, value: next.value, kits };
+  return { chassis, bonus, max: nextMax, value: next.value, kits, ...sheet };
 }
 
 /** @deprecated use syncMachineMods — kept so existing API callers restamp Integrity. */
@@ -633,12 +798,14 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
 
   // Chassis-specific stamp from Item flags (Integrity/Speed/Jump-In/Handling); bands stay fallback.
   const vehicleFlags = item.getFlag(MODULE_ID, "vehicle") ?? {};
-  const jumpInCapable = !!(vehicleFlags.jumpInCapable || vehicleFlags.jumpIn)
-    || [...(owner?.items ?? [])].some(mod => {
-      const data = mod.getFlag(MODULE_ID, "mod");
-      return data && data.installedOn === item.id && (mod.system?._dsid === "rigger-cocoon" || data.jumpInCapable);
-    });
+  const cocoon = [...(owner?.items ?? [])].some(mod => {
+    const data = mod.getFlag(MODULE_ID, "mod");
+    return data && data.installedOn === item.id && (mod.system?._dsid === "rigger-cocoon" || data.jumpInCapable);
+  });
   const kind = vehicleFlags.baseAsset ? "baseAsset" : (vehicle.drone ? "drone" : "vehicle");
+  const jumpInCapable = chassisJumpInCapable(vehicleFlags, { cocoon });
+  // syncMachineMods already wrote these. Repeat them here so this patch cannot blank the kit line.
+  const modSheet = machineModSheetFields(item);
   const machinePatch = {
     [`flags.${MODULE_ID}.kind`]: kind,
     [`flags.${MODULE_ID}.machine`]: {
@@ -647,12 +814,12 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
       movementMode: vehicleFlags.movementMode ?? "",
       jumpInCapable,
       stations: vehicleFlags.stations ?? vehicleFlags.crewStations ?? "",
-      hardpoints: vehicleFlags.hardpoints ?? vehicleFlags.weaponMounts ?? "",
+      hardpoints: modSheet.hardpoints,
       controlMode: vehicleFlags.controlMode ?? (vehicle.drone ? "remote" : "crew"),
       handling: vehicleFlags.handling ?? "standard",
       domain: vehicleFlags.domain ?? vehicle.domain ?? "",
       modSlots: Number(vehicleFlags.modSlots ?? vehicleFlags.slots ?? 0) || 0,
-      installedModsText: "",
+      installedModsText: modSheet.installedModsText,
       cargo: "",
       mounts: "",
       sensors: "",
@@ -752,11 +919,15 @@ export function registerMachines() {
       ...(data?.flags?.[MODULE_ID] ?? {}),
       ...(actor.flags?.[MODULE_ID] ?? {}),
     };
-    const update = actorBloodsplatUpdate({
+    const subject = {
       flags: { [MODULE_ID]: gw },
       prototypeToken: actor.prototypeToken ?? data.prototypeToken,
-    });
-    if (update) actor.updateSource(update);
+    };
+    const update = {
+      ...(actorBloodsplatUpdate(subject) ?? {}),
+      ...(droneJumpInSourceUpdate(subject) ?? {}),
+    };
+    if (Object.keys(update).length) actor.updateSource(update);
   });
   Hooks.on("preCreateToken", (token, data, _options, userId) => {
     if (userId !== game.user.id) return;
@@ -767,6 +938,7 @@ export function registerMachines() {
     if (update) token.updateSource(update);
   });
   Hooks.once("ready", migrateMachineScorch);
+  Hooks.once("ready", migrateDroneJumpIn);
 
   // Hero sheet: right-click a drone or vehicle row (or its ⋮ control) → Deploy / Recall.
   Hooks.on("getDocumentListContextOptions", (app, menuItems) => {
@@ -868,8 +1040,10 @@ export function registerMachines() {
       chassisStamina, armorStaminaBonus, machineStamina, machineWeaponry,
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
+      describeWeaponryKit, machineModSheetFields, machineModMirrorData,
       fleetSizeCap, fieldedMachineCount, machineTokenSize, isDeployedMachineActor, hasAnyToken,
       applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
+      isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
     };
   }
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);

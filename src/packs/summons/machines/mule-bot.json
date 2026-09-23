@@ -260,7 +260,11 @@
         "Cargo",
         "Cover",
         "Wired"
-      ]
+      ],
+      "machine": {
+        "kind": "drone",
+        "jumpInCapable": true
+      }
     }
   }
 }

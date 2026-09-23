@@ -106,16 +106,29 @@ class FakeActor {
   }
 }
 class FakeItem {
-  constructor({ dsid = null, vehicle = null, deployedUuid = null, parent = null, ownerUuid = null } = {}) {
+  constructor({ dsid = null, vehicle = null, deployedUuid = null, parent = null, ownerUuid = null, id = null, name = "", mod = null } = {}) {
+    this.id = id;
+    this.name = name;
+    this.uuid = id ? `Item.${id}` : null;
     this.system = { _dsid: dsid };
     this.parent = parent;
     this._flags = {};
     if (vehicle) this._flags.vehicle = vehicle;
     if (deployedUuid) this._flags.deployed = { actorUuid: deployedUuid };
     if (ownerUuid) this._flags.ownerUuid = ownerUuid;
+    if (mod) this._flags.mod = mod;
   }
   getFlag(scope, key) {
     return scope === MODULE_ID ? this._flags[key] : undefined;
+  }
+  toObject() {
+    return {
+      name: this.name,
+      type: "treasure",
+      system: { ...this.system },
+      effects: [],
+      flags: { [MODULE_ID]: structuredClone(this._flags) },
+    };
   }
 }
 
@@ -130,6 +143,8 @@ globalThis.foundry = { utils: { getProperty: () => undefined, setProperty: () =>
 const {
   fleetSizeCap, fieldedMachineCount, isMachineFielded, machineOwner,
   applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
+  describeWeaponryKit, machineModSheetFields, machineModMirrorData, kitProfile,
+  isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
 } = await import("../scripts/machines.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
@@ -292,6 +307,113 @@ for (const file of walk("src/packs")) {
 }
 note(machineActors >= 25 && machineMiss === 0, `machine Actor prototypes stamped (got ${machineActors}, missing ${machineMiss})`);
 note(otherActors > 10 && otherScorch === 0, `non-machine Actor prototypes are not Scorch (checked ${otherActors})`);
+
+/* ------------------------------------------------------------------ */
+/*  0.3.110 — Hardpoint mods on the Machine sheet + install chat       */
+/* ------------------------------------------------------------------ */
+note(atLeast(module.version, "0.3.110"), `module.json ≥ 0.3.110 (got ${module.version})`);
+const modsSrc = readFileSync("scripts/mods.mjs", "utf8");
+note(modsSrc.includes("ghostwire-mod-install-chat"), "successful mod install posts a chat card");
+note(modsSrc.includes("announceModInstalled"), "install announcement names actor, mod, and host");
+note(modsSrc.includes("if (!isMagazine(mod)) await announceModInstalled"), "payload magazines keep their own Load card");
+note(css.includes("ghostwire-mod-install-chat"), "install chat card has Ghostwire chat styling");
+for (const key of ["ChatTitle", "ChatBody", "ChatSlots", "ChatFielded"]) {
+  note(typeof lang.GHOSTWIRE?.Mods?.Install?.[key] === "string", `lang Mods.Install.${key}`);
+}
+note(lang.GHOSTWIRE.Mods.Install.ChatBody.includes("{actor}") && lang.GHOSTWIRE.Mods.Install.ChatBody.includes("{mod}")
+  && lang.GHOSTWIRE.Mods.Install.ChatBody.includes("{host}"), "install chat names who, the mod, and the host");
+note(ui.ModOff === "off", "lang UI.ModOff");
+
+const weaponryDsids = ["gun-rack", "twin-mount", "turret-ring", "heavy-hardpoint"];
+for (const dsid of weaponryDsids) {
+  const line = describeWeaponryKit({ name: dsid, system: { _dsid: dsid }, flags: { [MODULE_ID]: { mod: { exclusiveKit: "weaponry" } } } });
+  note(line.length > 0 && line.includes("Gunnery"), `${dsid} describes a Gunnery hardpoint (${line})`);
+  note(kitProfile(dsid)?.kind === "weaponry", `${dsid} is a weaponry profile`);
+}
+const heavyLine = describeWeaponryKit({
+  name: "Heavy Hardpoint", system: { _dsid: "heavy-hardpoint" },
+  flags: { [MODULE_ID]: { mod: { exclusiveKit: "weaponry" } } },
+});
+note(heavyLine.includes("Heavy Hardpoint") && heavyLine.includes("heavy") && heavyLine.includes("integrated"),
+  `Heavy Hardpoint line names the kit (${heavyLine})`);
+note(describeWeaponryKit({ name: "Scrap-Weld", system: { _dsid: "scrap-weld" }, flags: { [MODULE_ID]: { mod: { exclusiveKit: "armor" } } } }) === "",
+  "armor kits do not take the hardpoints line");
+
+const wrench = new FakeActor({ name: "Wrench" });
+const bulldog = new FakeItem({
+  id: "bull", name: "Bulldog", dsid: "bulldog", parent: wrench,
+  vehicle: { drone: false, domain: "Ground", scale: "Vehicle", hardpoints: "pintle" },
+});
+const heavy = new FakeItem({
+  id: "hh", name: "Heavy Hardpoint", dsid: "heavy-hardpoint", parent: wrench,
+  mod: { installedOn: "bull", active: true, exclusiveKit: "weaponry" },
+});
+const plate = new FakeItem({
+  id: "sw", name: "Scrap-Weld", dsid: "scrap-weld", parent: wrench,
+  mod: { installedOn: "bull", active: true, exclusiveKit: "armor", staminaBonus: 6 },
+});
+wrench.items.push(bulldog, heavy, plate);
+const stamped = machineModSheetFields(bulldog);
+note(stamped.hardpoints.includes("pintle") && stamped.hardpoints.includes("Heavy Hardpoint"),
+  `Build hardpoints keeps the factory mount and the kit (${stamped.hardpoints})`);
+note(stamped.installedModsText.includes("Heavy Hardpoint") && stamped.installedModsText.includes("Scrap-Weld"),
+  "Installed mods lists the hardpoint and the armor kit");
+
+heavy._flags.mod.active = false;
+const toggled = machineModSheetFields(bulldog);
+note(!toggled.hardpoints.includes("Heavy Hardpoint") && toggled.hardpoints.includes("pintle"),
+  "a switched-off hardpoint leaves the factory mount and drops the kit line");
+note(toggled.installedModsText.includes("Heavy Hardpoint") && toggled.installedModsText.includes("(off)"),
+  "a switched-off hardpoint stays in the installed-mods list");
+heavy._flags.mod.active = true;
+
+const mirror = machineModMirrorData(heavy);
+note(mirror.flags[MODULE_ID].machineModMirror === "Item.hh", "mirror records the hero mod uuid");
+note(mirror.flags[MODULE_ID].mod.installedOn === null, "mirror does not copy the hero installedOn id");
+note(mirror.name === "Heavy Hardpoint" && !mirror._id, "mirror is a nameless-id copy of the hardpoint Item");
+note(heavy.getFlag(MODULE_ID, "mod").installedOn === "bull", "building a mirror does not uninstall the hero mod");
+
+/* ------------------------------------------------------------------ */
+/*  0.3.110 — Drones are always Jump-In capable                        */
+/* ------------------------------------------------------------------ */
+const gw = kind => ({ flags: { [MODULE_ID]: kind } });
+note(isJumpInCapable(gw({ kind: "drone" })) === true, "a drone with no Jump-In flag is capable");
+note(isJumpInCapable(gw({ kind: "drone", machine: { jumpInCapable: false } })) === true, "a drone stays capable if the flag is off");
+note(isJumpInCapable(gw({ kind: "vehicle" })) === false, "a vehicle without the flag is not Jump-In capable");
+note(isJumpInCapable(gw({ kind: "baseAsset", machine: { jumpInCapable: false } })) === false, "a base asset is not forced Jump-In capable");
+note(isJumpInCapable(gw({ kind: "vehicle", machine: { jumpInCapable: true } })) === true, "a vehicle flag still grants Jump-In");
+note(isJumpInCapable({ ...gw({ kind: "vehicle" }), items: [{ system: { _dsid: "rigger-cocoon" } }] }) === true,
+  "Rigger Cocoon still grants Jump-In on a vehicle");
+note(chassisJumpInCapable({ drone: true }) === true, "Deploy treats a drone chassis as Jump-In capable");
+note(chassisJumpInCapable({ drone: true, jumpInCapable: false }) === true, "a drone chassis cannot opt out of Jump-In");
+note(chassisJumpInCapable({ drone: false, scale: "Vehicle" }) === false, "Deploy does not force Jump-In on a vehicle chassis");
+note(chassisJumpInCapable({ baseAsset: "door-lock", jumpInCapable: false }) === false, "Deploy does not force Jump-In on a base asset");
+note(chassisJumpInCapable({ baseAsset: "safehouse-beacon", jumpInCapable: true }) === true, "a beacon keeps its own Jump-In flag");
+note(chassisJumpInCapable({ jumpInCapable: true }) === true, "a vehicle chassis flag still stamps Jump-In");
+note(chassisJumpInCapable({}, { cocoon: true }) === true, "Rigger Cocoon still stamps Jump-In on Deploy");
+const droneCreate = droneJumpInSourceUpdate(gw({ kind: "drone" }));
+note(droneCreate?.[`flags.${MODULE_ID}.machine.jumpInCapable`] === true, "create hook stamps Jump-In on a new drone");
+note(droneJumpInSourceUpdate(gw({ kind: "drone", machine: { jumpInCapable: true } })) === null, "create hook leaves an already-capable drone alone");
+note(droneJumpInSourceUpdate(gw({ kind: "vehicle" })) === null, "create hook does not stamp vehicles");
+note(droneJumpInSourceUpdate(gw({ kind: "baseAsset", machine: { jumpInCapable: false } })) === null, "create hook does not stamp base assets");
+for (const file of ["machine-drone-micro.json", "machine-drone-small.json", "machine-drone-medium.json", "mule-bot.json"]) {
+  const doc = readJson(`src/packs/summons/machines/${file}`);
+  note(doc.flags[MODULE_ID].kind === "drone" && doc.flags[MODULE_ID].machine?.jumpInCapable === true,
+    `${file} prototype is Jump-In capable`);
+}
+const carProto = readJson("src/packs/summons/machines/machine-vehicle-car.json");
+note(carProto.flags[MODULE_ID].kind === "vehicle" && carProto.flags[MODULE_ID].machine?.jumpInCapable !== true,
+  "vehicle prototype is not forced Jump-In capable");
+const doorProto = readJson("src/packs/summons/machines/machine-base-door-lock.json");
+note(doorProto.flags[MODULE_ID].machine?.jumpInCapable === false, "Door Lock prototype stays not Jump-In capable");
+const riggerSrc = readFileSync("scripts/rigger-vertical.mjs", "utf8");
+note(riggerSrc.includes("isJumpInCapable(machineActor)"), "jumpIn uses the drone gate");
+note(sheetSrc.includes('machineKindOf(actor) === "drone"'), "Machine sheet shows drones as Jump-In capable");
+note(machinesSrc.includes("migrateDroneJumpIn"), "ready pass stores Jump-In on world drones");
+
+note(machinesSrc.includes("syncMachineModMirrors"), "syncMachineMods embeds installed mods on the machine Actor");
+note(machinesSrc.includes("machineModSheetFields(item)"), "Deploy stamp reuses the kit hardpoints line");
+note(!machinesSrc.includes('installedModsText: ""'), "Deploy no longer blanks Installed mods");
 
 console.log(ok.join("\n"));
 if (fail.length) {
