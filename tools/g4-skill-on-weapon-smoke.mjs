@@ -46,6 +46,7 @@ const FOLDER_SKILL = {
   "light-firearms": "firearms",
   "longarms": "firearms",
   "melee": "melee",               // even when the kit band says heavy
+  "mounted": "gunnery",           // 0.3.112 vehicle/drone hardpoint SKUs — no hand-held way to fire one
   "thrown": null,                 // only the two placed charges are named; see below
 };
 // The named exceptions inside a folder.
@@ -72,7 +73,8 @@ function scanWeapons() {
 }
 
 const weapons = scanWeapons();
-note(weapons.length === 57, `read ${weapons.length} weapon SKUs out of src/packs/gear/weapons (expected 57)`);
+const EXPECTED_SKUS = 66;   // 57 through 0.3.111 + the nine 0.3.112 mounted/ SKUs
+note(weapons.length === EXPECTED_SKUS, `read ${weapons.length} weapon SKUs out of src/packs/gear/weapons (expected ${EXPECTED_SKUS})`);
 
 const expected = Object.fromEntries(weapons.map(w =>
   [w.dsid, (w.dsid in SKU_OVERRIDE) ? SKU_OVERRIDE[w.dsid] : FOLDER_SKILL[w.folder]]));
@@ -103,6 +105,14 @@ note(mounted.length >= 2, `heavy/ ships ${mounted.length} "Mounted"-tagged SKUs 
 note(mounted.every(w => WEAPON_SKILLS[w.dsid] === "heavyWeapons"),
   "a Mounted-tagged heavy weapon in a hero's hands is still Heavy Weapons — Gunnery is the chassis, not the tag");
 note(byFolder("heavy").every(w => WEAPON_SKILLS[w.dsid] === "heavyWeapons"), "every heavy/ SKU is Heavy Weapons");
+
+// 0.3.112 — mounted/ is the other side of the same coin: hardpoint hardware, Gunnery by SKU.
+const mountedFolder = byFolder("mounted");
+note(mountedFolder.length >= 8, `mounted/ ships ${mountedFolder.length} vehicle-mount SKUs`);
+note(mountedFolder.every(w => WEAPON_SKILLS[w.dsid] === MOUNTED_SKILL),
+  "every mounted/ SKU answers to Gunnery even off a hardpoint — it has no hand-held mode");
+note(mountedFolder.every(w => (w.gear.tags ?? []).includes("Mounted") && !!w.gear.mountScale),
+  "every mounted/ SKU carries the Mounted tag and a gear.mountScale");
 
 const bows = byFolder("bows-exotic").filter(w => w.keywords.includes("bow"));
 note(bows.length >= 5 && bows.every(w => WEAPON_SKILLS[w.dsid] === "firearms"),
@@ -145,6 +155,16 @@ note(isMachineActor(machineStub()) && !isMachineActor(heroStub("firearms")),
   "a deployed machine Actor is told apart from a hero");
 note(weaponSkillKey(gearStub("wallbreaker", {}, machineStub())) === "gunnery",
   "a Wallbreaker bolted to a deployed vehicle answers to Gunnery, not Heavy Weapons");
+// 0.3.112 — bolting a hand-held heavy onto a hardpoint swings it to Gunnery without moving the Item.
+const mountedStub = gearStub("wallbreaker");
+mountedStub.flags[MODULE_ID].mount = { mountedOn: "kit-gun-rack" };
+note(weaponSkillKey(mountedStub) === "gunnery",
+  "a Wallbreaker mounted on a Gun Rack answers to Gunnery while still on the hero's sheet");
+const unmountedStub = gearStub("wallbreaker");
+unmountedStub.flags[MODULE_ID].mount = { mountedOn: null };
+note(weaponSkillKey(unmountedStub) === "heavyWeapons",
+  "and unmounting it swings back to Heavy Weapons");
+
 note(weaponSkillKey(gearStub("warhammer", { weaponSkill: "brawl" })) === "brawl",
   "a Director's gear.weaponSkill flag beats the table");
 note(weaponSkillKey(gearStub("workhorse", { weaponSkill: null })) === null,

@@ -48,6 +48,18 @@ export const WEAPON_SKILLS = {
   "tank-cracker": "heavyWeapons",
   "wallbreaker": "heavyWeapons",
 
+  // mounted/ -> Gunnery. These are vehicle / drone hardpoint SKUs (0.3.112): there is no hand-held
+  // way to fire one, so Gunnery is the answer whether or not the gun is currently on a hardpoint.
+  "ashwalker": "gunnery",
+  "crownfire": "gunnery",
+  "godsfinger": "gunnery",
+  "hailstorm": "gunnery",
+  "hornet-pod": "gunnery",
+  "lanternhead": "gunnery",
+  "quiverframe": "gunnery",
+  "roadspike": "gunnery",
+  "streetlash": "gunnery",
+
   // light-firearms/ -> Firearms
   "buzz-gun": "firearms",
   "chatter": "firearms",
@@ -105,6 +117,17 @@ export const MOUNTED_SKILL = "gunnery";
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? null;
 
 /**
+ * Is this gun bolted to a §5F Weaponry kit right now (0.3.112, scripts/mounts.mjs)?
+ *
+ * The flag is read straight off the Item rather than imported from mounts.mjs: this file must stay
+ * Foundry-free for tools/g4-skill-on-weapon-smoke.mjs, and mounts.mjs imports machines.mjs, which
+ * would make an import cycle out of one flag name. tools/mount-weapons-smoke.mjs asserts the two agree.
+ */
+export function isMountedWeapon(gearItem) {
+  return !!gwFlags(gearItem)?.mount?.mountedOn;
+}
+
+/**
  * Is this document a deployed machine Actor (scripts/machines.mjs stamps kind + band on deploy)?
  * A weapon carried by one is on a hardpoint, not in a hand.
  */
@@ -117,8 +140,9 @@ export function isMachineActor(actor) {
 /**
  * The skill key that backs one Ghostwire weapon treasure.
  *
- * Resolution order — a Director's explicit flag, then where the weapon actually sits, then the SKU
- * table. `gear.weaponSkill` lets homebrew gear opt in (or out, with `null`) without touching code.
+ * Resolution order — a Director's explicit flag, then where the weapon actually sits (on a hardpoint,
+ * or carried by a deployed machine), then the SKU table. `gear.weaponSkill` lets homebrew gear opt in
+ * (or out, with `null`) without touching code.
  *
  * @param {Item|object} gearItem  A Ghostwire weapon treasure, Document or plain data.
  * @returns {string|null}         Ghostwire skill key, or null when no skill backs this weapon.
@@ -127,6 +151,7 @@ export function weaponSkillKey(gearItem) {
   const gear = gwFlags(gearItem)?.gear;
   if (!gear) return null;
   if ("weaponSkill" in gear) return gear.weaponSkill || null;
+  if (isMountedWeapon(gearItem)) return MOUNTED_SKILL;
   if (isMachineActor(gearItem.parent)) return MOUNTED_SKILL;
   return WEAPON_SKILLS[gearItem?.system?._dsid] ?? null;
 }

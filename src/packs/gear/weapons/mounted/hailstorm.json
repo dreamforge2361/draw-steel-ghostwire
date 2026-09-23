@@ -1,0 +1,69 @@
+{
+  "_id": "ow2LcvaOxsKkJtPJ",
+  "_key": "!items!ow2LcvaOxsKkJtPJ",
+  "name": "GHOSTWIRE.Gear.Items.Hailstorm.Name",
+  "type": "treasure",
+  "img": "icons/weapons/guns/gun-chain-gatling-heavy.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Hailstorm.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "hailstorm",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "njXhmoAVQCSiEekh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 30000,
+        "modSlots": 5,
+        "tags": [
+          "Mounted",
+          "Integrated",
+          "Vehicle",
+          "Auto",
+          "Loud"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 14,
+        "damageType": "kinetic",
+        "range": "Long",
+        "weaponBand": "anti-veh",
+        "mountScale": "heavy",
+        "vehicleMount": true,
+        "mountType": "integrated"
+      }
+    }
+  }
+}

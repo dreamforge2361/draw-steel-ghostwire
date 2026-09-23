@@ -1,0 +1,69 @@
+{
+  "_id": "TQdGZffK4LXehBIo",
+  "_key": "!items!TQdGZffK4LXehBIo",
+  "name": "GHOSTWIRE.Gear.Items.Quiverframe.Name",
+  "type": "treasure",
+  "img": "icons/weapons/artillery/missile-rocket-launch-orange.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.Quiverframe.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "quiverframe",
+    "kind": "weapon",
+    "category": "",
+    "echelon": 4,
+    "keywords": [
+      "heavy"
+    ],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "njXhmoAVQCSiEekh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 44000,
+        "modSlots": 5,
+        "tags": [
+          "Mounted",
+          "Integrated",
+          "Vehicle",
+          "Blast",
+          "Smart-ready"
+        ],
+        "modFamily": [
+          "weapon"
+        ],
+        "damage": 14,
+        "damageType": "fire",
+        "range": "Extreme",
+        "weaponBand": "anti-veh",
+        "mountScale": "heavy",
+        "vehicleMount": true,
+        "mountType": "integrated"
+      }
+    }
+  }
+}

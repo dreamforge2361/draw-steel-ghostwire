@@ -26,6 +26,7 @@ import { registerSprites } from "./sprites.mjs";
 import { registerAgents } from "./agents.mjs";
 import { registerVeilSummons } from "./veil-summons.mjs";
 import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
+import { registerMounts } from "./mounts.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
@@ -119,6 +120,7 @@ Hooks.once("init", () => {
   registerAgents();
   registerVeilSummons();
   registerMods();
+  registerMounts();
   registerAbilitySfx();
   registerEquipmentUse();
   registerPayloadUse({ getWiredState });
