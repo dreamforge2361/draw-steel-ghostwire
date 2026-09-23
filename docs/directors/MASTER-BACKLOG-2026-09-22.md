@@ -2,8 +2,8 @@
 
 **Module now:** **0.3.100** on main (0.3.99 Michael Foundry smoke **PASS** — G1 Kit street-band grants).  
 **Just shipped:** G2 armor / gadget mod families + Hexshot's Street medium bow (0.3.100); G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
-**Next picks:** **G3** lang + style tokens, then **S1**, then **L1** (locked queue) · N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
-**Playtest:** Deadhead Saturday; Quiet Floor after. Thursday PDF reprint from assembled manuscript.  
+**Next picks:** **G3** lang + style tokens, then **S1**, then **L1** (locked queue) · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
+**Playtest:** Deadhead Saturday; Quiet Floor after. **PDF reprint DONE 2026-09-22** (N4) — 0.4.0 @ 0.3.100, 316 pages.  
 **Doctrine:** Claude Code on Allfather first; Cursor only if no choice.
 
 ---
@@ -15,7 +15,7 @@
 | N1 | ~~Mark Learned~~ | **DONE** 0.3.89 — right-click Formula → Mark learned / Mark unlearned + chat. |
 | N2 | ~~Ritual Working applet~~ | **DONE** 0.3.91 — all players can open; the Formula owner who selects it is **Ritual Leader** (Project rolls, sealing roll, ¥); Pay Components off `system.hero.wealth`; Study and built-sanctum stages are stock Draw Steel Project Items. Smoke `node tools/ritual-working-smoke.mjs`; Foundry checklist `docs/directors/ritual-working-applet-smoke-0391.md`. |
 | N3 | ~~Foundry smoke 0.3.88 rituals~~ | **DONE** — Michael signed off. |
-| N4 | Thursday **PDF reprint** | `docs/manuscript/build/Ghostwire-Manuscript.md` (+ Appendix FAQ ch30). |
+| N4 | ~~**PDF reprint**~~ | **DONE 2026-09-22.** `node tools/build-pdf.mjs` → `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` — **95.4 MB / 316 pages** (Sep-18 build was 75.6 MB / 249 — **+67 pages**). Print version stays **0.4.0**: a reprint of the official edition, **not** a new number. Because rules chapters assemble by pointer at `docs/raw/*.md`, the reprint picked up everything since the first print with no manuscript forking: Ritual Workings / Formula / Magnitude (Ch 24), Machines — drones / vehicles / mods (Ch 25, S8), Kit street-band chargen grants (Ch 9, G1), wearable armor/shield **§2F** + gadget **§1H** families **Published** (Ch 12, G2), Constructs & Pets FAQ (Ch 30), and lore L6–L8 **with faction plates placed**. Front matter told the truth (title page + manuscript README → "through 0.3.100"); no marketing rewrite. Art: **54/55 slots placed**, one standing gap — `wire-opener` (Ch 23 filler) — not a blocker. Two deliberate non-changes recorded in the note: `27-corruption-taint.md` stays out of the MANIFEST (locked TOC calls Taint a pointer inside Ch 24, "not a new print-Ch number"), and **Scrap-Bow is absent by design** (RAW Ch 9 lists Kits + gear *categories*, never SKUs — so a SKU-name grep will always fail; grep the grant procedure instead). Packs untouched, journals not regenerated. Note `docs/directors/n4-pdf-reprint-03100.md`; log `docs/directors/_claude-n4-pdf-reprint-log.txt`. |
 
 ---
 
@@ -66,7 +66,7 @@
 |---|---|---|
 | G1 | ~~**Kit street-band auto-grants**~~ | **DONE 0.3.99** — `scripts/kit-grants.mjs`. All **28** Kits map to street SKUs; the free starting Kit copies its package onto the sheet at chargen so the Kit is live on day one. Gate: kit Item on a `hero`, mapped `_dsid`, `system.level <= 1`, and never granted before for that `_dsid` (ledger `flags.draw-steel-ghostwire.kitStreetGrants` + per-Item `kitStreetGrant` stamp). **Merc** needs no special case — its Kits advancement is `chooseN: 2`, so both packages land. Later Kits grant nothing; the **ownership rule still bites** (sell it, Kit goes inert). **Never** mods, chrome, or anything above Street; owned SKUs are skipped, not duplicated; **no back-fill sweep**. Unarmed Kits (Brawler, Mantis) get nothing — fists qualify by rule — and the three Hacker **deck-Kits** + **Rigger's Harness** get no host, because the Kit *is* the host. Needed a gear floor: **street weapons 7 → 14** (Slugger, Pipe Rifle, Scrap Cleaver, Slab-Hammer, Scaffold Pike, Chain Lash, Weighted Net — all E1/Street/1 slot) because the Street column had no heavy, polearm, whip, ensnaring, medium-melee or medium sidearm, and `polearm` existed at **no** Availability. Table `docs/directors/kit-street-band-grants.md`; smoke `node tools/kit-grants-smoke.mjs` (467 checks); checklist `docs/directors/kit-grants-smoke-0399.md`. |
 | G2 | ~~**Armor / gadget mod families**~~ | **DONE 0.3.100.** Both remaining unpublished host families ship: wearable **armor / shields** → Gear master **§2F** (7 stubs → **14** SKUs) and **gadgets** → **§1H** (8 → **17**), Mods pack **47 → 63**, every SKU with ¥ + stock Draw Steel **Project** fields (E1 150 / E2 300 / E3 450 / E4 600) and a real **Street → Prototype** spread. RAW `10-mods.md` flipped to **Published** and lost every “treat wearable armor modSlots as 0” / “do not invent liners” instruction. **The lock held: no wearable mod adds Stamina** — asserted on the flag, in every AE change key, and in the card text. Only **Thermoptic Skin** and **Deep Optics** carry an AE (Stealth / Perception edge, shipped **off**, the Stealth Weave pattern); every other row is a Director card, no invented Power Roll math. Five **exclusiveKit** groups refuse to double up (*inner liner*, *outer camouflage layer*, *active-denial cell*, *optical stage*, *lock-cracking package*). New `tools/regen-mod-slot-cards.mjs` derives the **Mod slots (N)** paragraph on all **89** host gear cards (it reproduced the 47 weapon cards byte-for-byte first). Kiosk presets **11 → 13**: **Armorer** + **Gadgeteer**. **Part B closed G1's last gap** — **Scrap-Bow** (¥300, medium band, E1/Street/1 slot) in §3F, and `kit-grants.mjs` grants Hexshot both bows; the G1 smoke's documented-gap list is now empty. Also fixed a latent repo-wide bug the bump exposed: **18 smokes compared `module.version` as a string**, so 0.3.99 → 0.3.100 read `"1" < "9"` — they now share `tools/lib/module-version.mjs`. Smoke `node tools/g2-armor-gadget-mods-smoke.mjs` (792 checks); checklist `docs/directors/g2-armor-gadget-mods-smoke-03100.md`; log `docs/directors/_claude-g2-armor-gadget-mods-log.txt`. |
-| G3 | lang + style tokens | **Suggested next** (then S1, then L1). |
+| G3 | lang + style tokens | **Suggested next** (then S1, then L1). N4 PDF reprint is done and no longer ahead of it in the queue. |
 
 ## Art
 **R1** inside-cover · **R2** round pregen tokens · **R3** B103 palette/gender · **R4** B89 Foundry token · **R5** Reach Events thumbs · **R6** wire-opener
@@ -95,10 +95,10 @@
 ---
 
 ## Suggested next pick
-**Ship lane clear.** G1 Kit chargen street-band grants shipped (**0.3.99**) — checklist `docs/directors/kit-grants-smoke-0399.md` awaiting Michael, alongside `docs/directors/s8-machines-smoke-0398.md` (S8) and `docs/directors/voidmark-director-only-smoke-0397.md` (S6).
-**Next:** **G2** armor / gadget mod families — then **G3**, **S1**, **L1**.
-**Then:** N4 Thursday PDF · DJ1 district journals.
-Also open: N4 Thursday PDF, LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday.
+**Ship lane clear.** G2 armor / gadget mod families shipped (**0.3.100**) and the **N4 PDF reprint is out** (0.4.0 @ 0.3.100, 316 pages — `docs/directors/n4-pdf-reprint-03100.md`). Checklists awaiting Michael: `docs/directors/g2-armor-gadget-mods-smoke-03100.md` (G2), `docs/directors/kit-grants-smoke-0399.md` (G1), `docs/directors/s8-machines-smoke-0398.md` (S8), `docs/directors/voidmark-director-only-smoke-0397.md` (S6).
+**Next:** **G3** lang + style tokens — then **S1**, then **L1**. Module stays **0.3.100**.
+**Then:** DJ1 district journals.
+Also open: LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday, `wire-opener` art gap (Ch 23 filler).
 
 ---
 
