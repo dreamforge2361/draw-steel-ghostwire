@@ -232,7 +232,7 @@ Every drone is a **device** (Wired-spine convention) with a compact stat block. 
 
 An Upgrade Slot holds one mod (sensor package, weapon swap, armor plate, EW suite, cargo rig, etc.). **The mod catalog itself lives in the gear doc — this document defines only that slots exist, how many a chassis tier gets, and that mods are bought and installed with nuyen during downtime or at a workshop** (see Building stat card, below, for workshop upgrade-slot support). A drone cannot exceed its chassis's slot count regardless of nuyen spent; buying more capacity means buying a bigger chassis.
 
-**Fleet Size Doctrine.** How many drones can a Wrench field simultaneously is capped separately from Upgrade Slots and from the Uptime pool cap: **base fleet size is 3 machines at 1st level** *(v1 estimate)*, rising to **4 at 4th level**, **5 at 7th level**, and **6 at 10th level** *(v1 estimate — mirrors the old §E6 fleet-cap shape, now expressed as clean DS-level milestones instead of Echelon bands)*. The Drone Jockey subclass raises this cap further (see below). Exceeding the cap is not possible — a Wrench who wants a seventh drone active must stand one down first.
+**Fleet Size Doctrine.** How many drones can a Wrench field simultaneously is capped separately from Upgrade Slots and from the Uptime pool cap: **base fleet size is 1 machine at 1st level** *(v1 estimate)*, rising to **2 at 4th level**, **3 at 7th level**, and **4 at 10th level** *(v1 estimate — mirrors the old §E6 fleet-cap shape, now expressed as clean DS-level milestones instead of Echelon bands)*. The Drone Jockey subclass raises this cap further (see below). Exceeding the cap is not possible — a Wrench who wants a seventh drone active must stand one down first.
 
 #### Vehicle Stat Card, Upgrade Slots, and Scale Rules
 
@@ -380,13 +380,13 @@ Officially nothing — Drone Jockeys rarely have corp paperwork at all. Street n
 
 | Level | Feature | Effect |
 |---|---|---|
-| 1 | **Wide Band** (passive) | Fleet size cap raised by +2 over the class baseline; a single Deploy & Command maneuver can Command the entire swarm at once regardless of count |
+| 1 | **Wide Band** (passive) | Fleet size cap raised by +1 over the class baseline; a single Deploy & Command maneuver can Command the entire swarm at once regardless of count |
 | 1 | **Salvage Sense** (passive, triggered) | When a drone you control is wrecked, you may immediately strip it for parts as a free triggered action (grants the standard Salvage Tick Uptime, see Heroic Resource: Uptime, above) |
 | 2 | **Suppressing Volume** (passive) | Focus Fire with 3+ drones auto-suppresses the target regardless of individual roll results |
 | 3 | **Cheap and Many** (passive) | A wrecked Micro-tier drone can be redeployed from spare parts as a maneuver instead of a main action, once per encounter |
 | 5 | **Swarm Sense** (passive) | While 3+ drones are active, you gain an edge on Instinct tests to notice ambushes or hidden threats (distributed sensor coverage) |
 | 6 | **Overwhelm** (passive) | When 4 or more drones you control target the same creature in one Focus Fire, that target's Armor is treated as 1 lower for that action |
-| 7 | **Endless Swarm** (passive) | Fleet size cap raised by a further +2 (total +4 over baseline); Deploy Momentum income doubles |
+| 7 | **Endless Swarm** (passive) | Fleet size cap raised by a further +2 (total +3 over baseline); Deploy Momentum income doubles |
 | 8 | **Wide Band, Redoubled** (passive) *(9th-level ability tier companion — see below)* | The Wide Band Command-the-whole-swarm maneuver no longer requires all drones be within Range; it reaches any drone you currently control |
 | 9 | **Total Coverage** (passive) | Your recon and sensor drones grant the whole crew (not just you) the Swarm Sense edge to notice ambushes while 3+ of your drones are active |
 
@@ -901,15 +901,15 @@ Officially nothing — squatters don't get corp paperwork. Street name: **the wa
 | Level | Class Features | Perks/Skills | Subclass Features |
 |---|---|---|---|
 | **1** | Uptime resource (heroic resource) - Deploy & Command / Rigged Fire / Field Repair / Override Ping (signatures) - Kit - Choose subclass - Choose a Base Tier (1-5 Uptime) ability | -- | Subclass passive + subclass triggered action |
-| **2** | Fleet Size Doctrine online (base 3) | Perk (choice) | Subclass 2nd-level feature |
+| **2** | Fleet Size Doctrine online (base 1) | Perk (choice) | Subclass 2nd-level feature |
 | **3** | Focus Fire (7-Cost band, unlocked) - Choose a 7-Cost ability | -- | Subclass 3rd-level feature |
-| **4** | Fleet Cap +1 (fleet size 4) | Characteristic Increase - Perk (choice) - Skill | -- |
+| **4** | Fleet Cap +1 (fleet size 2) | Characteristic Increase - Perk (choice) - Skill | -- |
 | **5** | Choose a 9-Cost ability - Uptime cap 10→12 | -- | Subclass 5th-level feature |
 | **6** | Jump-In Buffer Increase (+4 → +5) | Perk (choice) | Subclass 6th-level feature |
-| **7** | Fleet Cap +1 (fleet size 5) - Jump-In Buffer Increase (+5 → +6) | Characteristic Increase - Skill | Subclass 7th-level feature |
+| **7** | Fleet Cap +1 (fleet size 3) - Jump-In Buffer Increase (+5 → +6) | Characteristic Increase - Skill | Subclass 7th-level feature |
 | **8** | Choose an 11-Cost ability | Perk (choice) | Subclass 8th-level feature |
 | **9** | Uptime Economy Mastery (once-per-encounter +2 drip tick) | -- | Subclass 9th-level feature |
-| **10** | Overclock (epic capstone) - Fleet Cap +1 (fleet size 6) - Uptime cap 12→14 | Characteristic Increase - Perk (choice) - Skill | -- |
+| **10** | Overclock (epic capstone) - Fleet Cap +1 (fleet size 4) - Uptime cap 12→14 | Characteristic Increase - Perk (choice) - Skill | -- |
 
 *Design note: this table intentionally mirrors the Hacker/Elementalist/Operator progression table's density (features/perks/characteristic-increases per level) rather than the older Echelon-banded shape. Fleet Size, Uptime cap, and Jump-In buffer milestones are v1 estimates carried forward from the old §E6 fleet-cap shape but converted onto clean DS-level milestones per the current structural pass — see Cleanup Notes in the governing rework spec for the exact conversion. A future numeric pass should validate these level placements once the shared numeric-calibration pass runs.*
 
