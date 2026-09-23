@@ -1,6 +1,6 @@
-# Ghostwire master backlog - triage 2026-09-22 (updated evening)
+﻿# Ghostwire master backlog - triage 2026-09-22 (updated evening)
 
-**Module now:** **0.3.100** on main (0.3.99 Michael Foundry smoke **PASS** — G1 Kit street-band grants).  
+**Module now:** **0.3.100** on main (Michael Foundry smoke **PASS** — G2 armor/gadget mods + G1 Kit street-band grants).  
 **Just shipped:** G2 armor / gadget mod families + Hexshot's Street medium bow (0.3.100); G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
 **Next picks:** **G3** lang + style tokens, then **S1**, then **L1** (locked queue) · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
 **Playtest:** Deadhead Saturday; Quiet Floor after. **PDF reprint DONE 2026-09-22** (N4) — 0.4.0 @ 0.3.100, 316 pages.  
@@ -95,7 +95,7 @@
 ---
 
 ## Suggested next pick
-**Ship lane clear.** G2 armor / gadget mod families shipped (**0.3.100**) and the **N4 PDF reprint is out** (0.4.0 @ 0.3.100, 316 pages — `docs/directors/n4-pdf-reprint-03100.md`). Checklists awaiting Michael: `docs/directors/g2-armor-gadget-mods-smoke-03100.md` (G2), `docs/directors/kit-grants-smoke-0399.md` (G1), `docs/directors/s8-machines-smoke-0398.md` (S8), `docs/directors/voidmark-director-only-smoke-0397.md` (S6).
+**Ship lane clear.** G2 armor / gadget mod families shipped (**0.3.100**) and the **N4 PDF reprint is out** (0.4.0 @ 0.3.100, 316 pages — `docs/directors/n4-pdf-reprint-03100.md`). Michael Foundry smoke **PASS** on G2 (`g2-armor-gadget-mods-smoke-03100.md`) and G1 (`kit-grants-smoke-0399.md`). Still optional / deferred: `docs/directors/s8-machines-smoke-0398.md` (S8), `docs/directors/voidmark-director-only-smoke-0397.md` (S6 — already signed earlier).
 **Next:** **G3** lang + style tokens — then **S1**, then **L1**. Module stays **0.3.100**.
 **Then:** DJ1 district journals.
 Also open: LR2 gangs, DJ1 district journals, A1 Quiet Floor after Deadhead Saturday, `wire-opener` art gap (Ch 23 filler).
