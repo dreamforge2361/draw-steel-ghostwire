@@ -125,9 +125,27 @@ export async function installMod(mod, host, changes = {}) {
   ]);
   await restampHostMachine(host);
   ui.notifications.info(game.i18n.format(`${L}.Installed`, { mod: mod.name, host: host.name, used: usedSlots(host), slots: getHostCatalog(host).modSlots }));
-  // Magazines already post their own Load card from payload-use.mjs.
+  // Magazines already post their own Load card from payload-use.mjs. installMod is the only
+  // writer of mod.installedOn; the sheet prompt calls this, so there is no second install path.
   if (!isMagazine(mod)) await announceModInstalled(mod, host);
   return true;
+}
+
+/**
+ * Draw Steel's only ChatMessage subtype is `standard`. Its model renders `system.parts` and
+ * treats a message with no visible part as hidden (`DrawSteelChatMessage#visible`). `content`
+ * is drawn only by a part of type `content`. A create of `{ speaker, content }` succeeds and
+ * never reaches the log. Style OTHER keeps the card out of the v14 in-character token bubble.
+ * @param {{ speaker?: object, content?: string, style?: number }} data
+ */
+export function standardContentChatData({ speaker, content, style = 0 } = {}) {
+  return {
+    type: "standard",
+    style,
+    speaker,
+    content,
+    system: { parts: [{ type: "content" }] },
+  };
 }
 
 /** Public chat card for a successful Install onto… (who, mod, host, slots, fielded machine when there is one). */
@@ -155,10 +173,11 @@ async function announceModInstalled(mod, host) {
       ${fielded}
     </div>`;
   const Chat = ChatMessage.implementation ?? ChatMessage;
-  await Chat.create({
-    speaker: Chat.getSpeaker?.({ actor }) ?? undefined,
+  await Chat.create(standardContentChatData({
+    speaker: Chat.getSpeaker({ actor }),
     content,
-  });
+    style: CONST.CHAT_MESSAGE_STYLES.OTHER,
+  }));
 }
 
 /**

@@ -7,6 +7,7 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { atLeast } from "./lib/module-version.mjs";
+import { standardContentChatData } from "../scripts/mods.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const fail = [];
@@ -145,7 +146,10 @@ const {
   applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
   describeWeaponryKit, machineModSheetFields, machineModMirrorData, kitProfile,
   isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
+  fleetIdleWirePlan,
 } = await import("../scripts/machines.mjs");
+const { jumpInCandidates, jumpInUsePlan, jumpInDenialKey } = await import("../scripts/rigger-vertical.mjs");
+const { jumpedInBlocksAbility } = await import("../scripts/wired-state.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
 
@@ -316,6 +320,16 @@ const modsSrc = readFileSync("scripts/mods.mjs", "utf8");
 note(modsSrc.includes("ghostwire-mod-install-chat"), "successful mod install posts a chat card");
 note(modsSrc.includes("announceModInstalled"), "install announcement names actor, mod, and host");
 note(modsSrc.includes("if (!isMagazine(mod)) await announceModInstalled"), "payload magazines keep their own Load card");
+note(modsSrc.includes("standardContentChatData"), "install chat goes through the Draw Steel content-part helper");
+const installChat = standardContentChatData({
+  speaker: { alias: "Hex" },
+  content: "<div class=\"ghostwire-mod-install-chat\">installed</div>",
+  style: 0,
+});
+note(installChat.type === "standard" && installChat.style === 0, "install chat is a standard OTHER message");
+note(installChat.system?.parts?.[0]?.type === "content" && installChat.content.includes("ghostwire-mod-install-chat"),
+  "install chat carries a content part so Draw Steel will render it");
+note(atLeast(module.version, "0.3.111"), `module.json ≥ 0.3.111 (got ${module.version})`);
 note(css.includes("ghostwire-mod-install-chat"), "install chat card has Ghostwire chat styling");
 for (const key of ["ChatTitle", "ChatBody", "ChatSlots", "ChatFielded"]) {
   note(typeof lang.GHOSTWIRE?.Mods?.Install?.[key] === "string", `lang Mods.Install.${key}`);
@@ -408,6 +422,69 @@ const doorProto = readJson("src/packs/summons/machines/machine-base-door-lock.js
 note(doorProto.flags[MODULE_ID].machine?.jumpInCapable === false, "Door Lock prototype stays not Jump-In capable");
 const riggerSrc = readFileSync("scripts/rigger-vertical.mjs", "utf8");
 note(riggerSrc.includes("isJumpInCapable(machineActor)"), "jumpIn uses the drone gate");
+note(riggerSrc.includes("jump-in-signature-platform"), "signature Jump-In ability is intercepted before its power roll");
+note(riggerSrc.includes('picked?.action === "jumpIn"') && riggerSrc.includes("return null"),
+  "Deploy & Command Jump-In does not fall through into the power roll");
+const machineActor = (id, name, kind, machine = {}, items = []) => ({
+  id, name, items,
+  flags: { [MODULE_ID]: { kind, machine } },
+});
+const plainBulldog = machineActor("bull", "Bulldog", "vehicle", { jumpInCapable: false });
+const flaggedBulldog = machineActor("flag", "Bulldog", "vehicle", { jumpInCapable: true });
+const cocoonBulldog = machineActor("cocoon", "Bulldog", "vehicle", {}, [{ system: { _dsid: "rigger-cocoon" } }]);
+const rotor = machineActor("rot", "Rotor", "drone", {});
+const meatHero = machineActor("hex", "Hex", "hero");
+const incapablePlan = jumpInUsePlan(jumpInCandidates({ fielded: [plainBulldog] }), { capable: isJumpInCapable });
+note(incapablePlan.reason === "incapable" && jumpInDenialKey(incapablePlan) === "JumpInNotCapable",
+  "a lone non-capable Bulldog is denied before any roll");
+const targetedPlan = jumpInUsePlan(jumpInCandidates({ targets: [plainBulldog], fielded: [rotor] }), { capable: isJumpInCapable });
+note(targetedPlan.machine?.id === "bull" && jumpInDenialKey(targetedPlan) === "JumpInNotCapable",
+  "a targeted Bulldog is the Jump-In target even when a drone is also fielded");
+const heroTargetPlan = jumpInUsePlan(jumpInCandidates({ targets: [meatHero], fielded: [plainBulldog] }), { capable: isJumpInCapable });
+note(heroTargetPlan.machine?.id === "bull" && heroTargetPlan.reason === "incapable",
+  "a targeted hero falls through to the fielded Bulldog");
+const dronePlan = jumpInUsePlan(jumpInCandidates({ targets: [rotor] }), { capable: isJumpInCapable });
+note(dronePlan.proceed === true && jumpInDenialKey(dronePlan) === null, "a drone Jump-In is allowed");
+const flagPlan = jumpInUsePlan(jumpInCandidates({ fielded: [flaggedBulldog] }), { capable: isJumpInCapable });
+note(flagPlan.proceed === true, "a flagged vehicle Jump-In is allowed");
+const cocoonPlan = jumpInUsePlan(jumpInCandidates({ fielded: [cocoonBulldog] }), { capable: isJumpInCapable });
+note(cocoonPlan.proceed === true, "a Rigger Cocoon vehicle Jump-In is allowed");
+const manyPlan = jumpInUsePlan(jumpInCandidates({ fielded: [plainBulldog, rotor] }), { capable: isJumpInCapable });
+note(manyPlan.reason === "many" && jumpInDenialKey(manyPlan) === "JumpInPickOne",
+  "two fielded machines ask for a target instead of rolling");
+const nonePlan = jumpInUsePlan(jumpInCandidates({}), { capable: isJumpInCapable });
+note(nonePlan.reason === "none" && jumpInDenialKey(nonePlan) === "JumpInNoTarget", "no machine refuses Jump-In");
+note(ui.JumpInNotCapable?.includes("{name}"), "lang JumpInNotCapable names the machine");
+note(typeof ui.JumpInNoTarget === "string" && typeof ui.JumpInPickOne === "string", "lang JumpInNoTarget and JumpInPickOne");
+note(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "deploy-and-command", rollEnabled: true }),
+  "Deploy & Command is not a meat lock while Jacked In");
+note(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "rigged-fire", rollEnabled: true }),
+  "Rigged Fire is not a meat lock while Jacked In");
+note(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "field-repair", rollEnabled: true }),
+  "Field Repair is not a meat lock while Jacked In");
+note(jumpedInBlocksAbility({ state: "jackedIn", dsid: "scrap-bow", rollEnabled: true }),
+  "a personal weapon stays blocked while Jacked In");
+note(moduleSrc.includes("jumpedInBlocksAbility"), "Jacked In use patch consults the seat allowlist");
+const idleJacked = fleetIdleWirePlan({ fielded: 0, state: "jackedIn", jumpedIn: true });
+note(idleJacked.jumpOut && idleJacked.linked, "empty fleet clears Jump-In and returns to Linked");
+note(!fleetIdleWirePlan({ fielded: 0, state: "linked" }).linked
+  && !fleetIdleWirePlan({ fielded: 0, state: "linked" }).jumpOut, "already Linked stays Linked");
+note(!fleetIdleWirePlan({ fielded: 0, state: "overlay" }).linked, "Overlay is not forced to Linked");
+note(!fleetIdleWirePlan({ fielded: 0, state: "disconnected" }).linked, "a pure-meat hero is not forced onto the wire");
+note(fleetIdleWirePlan({ fielded: 1, state: "jackedIn", jumpedIn: true }).jumpOut === false, "a remaining fielded machine does not Jump-Out");
+note(fleetIdleWirePlan({ fielded: 0, state: "disconnected", fleetLinked: true }).linked, "fleet-command with the status missing still returns to Linked");
+// Jacked In is also reachable with no machine at all (Connect / Toggle Connection State, scripts/module.mjs).
+// Recalling the last drone must not jack a deep-immersion pilot out of the Matrix.
+const matrixJacked = fleetIdleWirePlan({ fielded: 0, state: "jackedIn", jumpedIn: false });
+note(!matrixJacked.jumpOut && !matrixJacked.linked, "a Matrix Jacked In pilot with no seat is not jacked out by an empty fleet");
+note(fleetIdleWirePlan({ fielded: 0, state: "jackedIn", jumpedIn: false, fleetLinked: true }).jumpOut === false,
+  "fleet-command Linked history does not jack a Matrix Jacked In pilot out");
+note(machinesSrc.includes("fleetIdleWirePlan"), "Recall and Actor delete share the empty-fleet wire plan");
+note((machinesSrc.match(/clearFleetLinkedIfIdle\(owner\)/g) ?? []).length >= 2,
+  "the deleteActor hook runs the empty-fleet wire plan, not just Recall");
+note(/deleteActor[\s\S]{0,900}?clearFleetLinkedIfIdle/.test(machinesSrc),
+  "deleting the deployed Actor returns the pilot to Linked");
+note(!machinesSrc.includes("WIRED_STATUS_DEFS.linked.id, { active: false }"), "Recall no longer clears Linked");
 note(sheetSrc.includes('machineKindOf(actor) === "drone"'), "Machine sheet shows drones as Jump-In capable");
 note(machinesSrc.includes("migrateDroneJumpIn"), "ready pass stores Jump-In on world drones");
 

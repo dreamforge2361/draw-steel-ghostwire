@@ -7761,6 +7761,8 @@
           "HomeGroundEdge": "Facility Rigger — Home Ground Edge",
           "HomeGroundEdgeHint": "Jacked into your Safehouse Beacon / Home Ground: edge on rolls in this base.",
           "JumpInNotCapable": "{name} is not Jump-In Capable (needs the flag or a Rigger Cocoon).",
+          "JumpInNoTarget": "Jump-In needs a fielded machine. Target its token, or field one first.",
+          "JumpInPickOne": "Target the machine you are jumping into.",
           "JumpInOk": "{pilot} jumps into {machine} (Jacked In; meat inert).",
           "JumpOutOk": "{pilot} drops Jump-In.",
           "UptimeDrainManual": "Uptime drain {amount} on {pilot} ({reason}) — apply manually.",
