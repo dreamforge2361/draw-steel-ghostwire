@@ -371,7 +371,7 @@ Visible taint and social “reads as wrong” are **fiction / Director color** l
 
 ### Origin and nature
 
-A Cyborg is the far end of the chrome spectrum: effectively all organic Body Integrity spent, frame and cortex first. Living, non-Cyborg heroes who want implants use the Chrome chapter (when drafted); the Cyborg does **not**. Full-conversion is made, not bred — surgery, battlefield salvage, corp programs, or voluntary upload into a shell.
+A Cyborg is the far end of the chrome spectrum: machine-first frame and cortex, with **Body Integrity 25** (living Peoples start at 20). Cyborgs **may install living Chrome** from the chrome pack — Integrity debits on install like everyone else. **Frame Modules** may later retag chrome SKUs; there is no separate Frame Modules pack yet. Full-conversion is made, not bred — surgery, battlefield salvage, corp programs, or voluntary upload into a shell.
 
 ### Signature Trait — Cortical Firewall (free)
 
@@ -431,6 +431,7 @@ Hardened cortex shielding and trauma-scarred processors blunt psychic assault. Y
 
 These limits are **Ghostwire setting and chargen rules**. They do **not** cost ancestry points and are not cheats against the Time Raider budget.
 
+- **Body Integrity 25 + living Chrome:** You start at **25/25** Body Integrity and may buy chrome implants from the Ghostwire Chrome pack. Install spends Integrity; removal refunds 75%. Frame Modules are a later retag stub, not a separate pack.
 - **Arcane Severance:** You cannot use **Magic**-keyword abilities. You are barred from **Elementalist** and **Street Priest**, and from any Veil-casting path that requires Magic. **Psionic/Tech** suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.
 - **Tech-only recovery:** You are healed by tech / Wrench-style repair / Medic tech procedures as your table defines — **not** by Magic healing (Director call on Troubadour-style and similar effects).
 - **System Crisis:** When you would die under the usual 0 Stamina / dying rules, you instead enter Director-facing **System Crisis** (machine failure) rather than a normal organic death spiral. Treat this as a short rule pointer for the Director; a full Crisis table is not defined in this chapter.
@@ -442,7 +443,7 @@ These limits are **Ghostwire setting and chargen rules**. They do **not** cost a
 ## Related chapters
 
 - Kits (`docs/rulebook/10-kits.md`)
-- Chrome (cyber-implants for non-Cyborg heroes — when drafted)
+- Chrome & Body Integrity (living 20 / Cyborg 25; Cyborgs may install living Chrome)
 - The Veil / The Wired (setting layers)
 - DS alignment brief (`docs/rulebook/DS-ALIGNMENT.md`)
 

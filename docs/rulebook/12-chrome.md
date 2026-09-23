@@ -7,9 +7,10 @@
 
 **Design locks:**
 - Chrome costs **¥ + Body Integrity**, never XP or any other character power
-- **Cyborgs do NOT use this chapter** (machine-first; Arcane Severance; **Frame Modules** bought with ¥)
+- **Cyborgs use this chapter** with Body Integrity **25** (machine-first; Arcane Severance unchanged; living Chrome allowed)
 - Living chrome ≠ Cyborg species; Integrity 0 does not become Cyborg — it kills/flatlines
-- Body Integrity starts at **20** for non-Cyborgs
+- Body Integrity starts at **20** for living (non-Cyborg) Peoples; **25** for Cyborgs
+- **Frame Modules** = deferred later retag of chrome SKUs — no separate pack in this ship
 - Grades: Salvage / Standard / Soft-Bioware
 - Removal returns 75% Integrity (round down), 25% scar loss
 - Magic erosion (one shared formula for every caster): −1 cast-resource cap per 2 Integrity (Standard); per 3 Soft; per 1 Salvage
@@ -21,7 +22,7 @@
 | Path | What it is | System |
 |---|---|---|
 | **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |
-| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |
+| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | **This chapter** — ¥ + Body Integrity **25** + living Chrome; **Arcane Severance**; Frame Modules = later retag stub |
 
 Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.
 
@@ -33,9 +34,9 @@ Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyb
 4. **Chrome and magic are at war.** Integrity spent erodes casting capacity (shared formula below).
 5. **Chrome can fail you.** Suppressed / Damaged / Destroyed via conditions + Wired biofeedback.
 
-## Body Integrity (start 20)
+## Body Integrity (living 20 / Cyborg 25)
 
-- **Pool:** every non-Cyborg begins with **Body Integrity 20** (enough for roughly 3–5 mid-grade implants). Species/Background may nudge later — open.
+- **Pool:** every living (non-Cyborg) People begins with **Body Integrity 20**. **Cyborgs** begin with **Body Integrity 25**. Species/Background may nudge later — open.
 - **Spend:** installing an implant permanently reduces remaining Integrity by its cost. Insufficient Integrity = cannot install.
 - **Recover:** only by surgical **removal** (downtime). Returns **75%** of that implant's spent Integrity (**round down**); **25%** permanent scar loss.
 - **Integrity 0:** cannot install past flesh; flirting with zero via battle-damage replacement is horror pressure, not a species change.
@@ -138,12 +139,12 @@ Exact ¥ and Availability: gear pass.
 - **Hacker** — attack others' chrome across the Wired more than wear it.
 - **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.
 - **Casters (Elementalist / Street-Priest / …)** — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.
-- **Cyborg** — **excluded** from this chapter entirely.
+- **Cyborg** — **included**: Body Integrity **25**, living Chrome, Arcane Severance + Cortical Firewall unchanged.
 
 
-## Cyborg Frame Modules (stub — separate track)
+## Cyborg Frame Modules (stub — deferred retag)
 
-Cyborgs do **not** spend Body Integrity or buy living Chrome implants. “More machine” uses **Frame Modules**:
+**Lock (2026-09-23):** Cyborgs use Body Integrity **25** and **may buy living Chrome** from the chrome pack. Frame Modules are **not** a separate pack yet — a later pass may retag chrome SKUs. Until then:
 
 | Rule | v1 stub |
 |---|---|
@@ -155,7 +156,7 @@ Cyborgs do **not** spend Body Integrity or buy living Chrome implants. “More m
 
 **Sample modules (catalog later):** Reinforced Plating · Actuator Overdrive · Integrated Weapon Mount · Expanded Battery · Cortical Firewall+ · Drone Hard-Link.
 
-Full module list, hardpoint caps, and ¥ schedule = later pass. Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.
+Full module list / hardpoint rename = later pass. Until then Cyborgs buy Chrome against BI 25 like living runners against BI 20.
 
 ## Point to full master
 

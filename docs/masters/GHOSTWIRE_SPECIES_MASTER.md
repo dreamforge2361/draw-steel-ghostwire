@@ -423,7 +423,7 @@ Three linked parts:
 
 **Tagline:** Human-machine threshold beings — integrated, augmented, existentially unstable. Machine-first, distinct from cyber-augmented humans.
 
-*Chrome distinction: a living, non-Cyborg hero who wants implants uses the Chrome chapter (nuyen + Body Integrity). The Cyborg is the far end of that same spectrum — effectively all Body Integrity spent — and uses **Frame Modules** (bought with ¥) instead; it does NOT use the Chrome chapter.*
+*Chrome distinction (2026-09-23): living heroes use the Chrome chapter (¥ + Body Integrity **20**). Cyborgs use the same chrome pack with Body Integrity **25**. **Frame Modules** may later retag chrome SKUs — no separate pack yet. Arcane Severance + Cortical Firewall unchanged.*
 
 **Attribute Profile:** +1 Cognition; choose +1 Physique or +1 Reflex; -1 Presence or -1 Resolve. Carries a Presence ceiling (species cap below the normal tier cap).
 

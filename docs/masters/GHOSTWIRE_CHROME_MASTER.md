@@ -12,7 +12,7 @@
 This is the load-bearing line of the whole chapter.
 
 - **Cyber-augmented hero** = a living person (human, elf, ogre, revenant, etc.) whose implants **overlay** their natural chassis. They remain their species, keep their soul and their capacity for magic (though chrome erodes it), and are healed by ordinary means for the flesh parts. **Uses this chapter.**
-- **Full-Conversion Cyborg** (*Machina sapiens*, the species) = a **machine-first being** on an artificial chassis that has **replaced** the person — permanently Arcane-Severed, tech-only healing, capped humanity. **Does NOT use this chapter** — uses **Frame Modules** (bought with ¥) instead.
+- **Full-Conversion Cyborg** (*Machina sapiens*, the species) = a **machine-first being** on an artificial chassis that has **replaced** the person — permanently Arcane-Severed, tech-only healing, capped humanity. Uses this chapter with Body Integrity **25** and living Chrome; Frame Modules = later retag stub.
 - Pushing Body Integrity to zero does **not** turn a hero into a Cyborg — they flatline/die. Becoming a Cyborg is a character-creation species choice, never a chrome outcome. The two systems rhyme deliberately (both use slots, both trade humanity for power) but never merge.
 
 ## Design pillars

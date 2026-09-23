@@ -300,12 +300,13 @@
       <ul class="gw-cg-facts">
         <li>
           <span>{{localize "GHOSTWIRE.Chargen.Integrity.Body"}}</span>
-          <strong>{{#if isCyborg}}{{localize "GHOSTWIRE.Chargen.Integrity.CyborgNA"}}{{else}}{{integrity.value}}/{{integrity.max}}{{/if}}</strong>
+          <strong>{{integrity.value}}/{{integrity.max}}</strong>
         </li>
         <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Taint"}}</span><strong>{{taint}}</strong></li>
         <li><span>{{localize "GHOSTWIRE.Chargen.Integrity.Chrome"}}</span><strong>{{chromeCount}}</strong></li>
       </ul>
       <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Integrity.Hint"}}</p>
+      {{#if isCyborg}}<p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Integrity.CyborgHint"}}</p>{{/if}}
       <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Integrity.CasterHint"}}</p>
       <div class="gw-cg-actions">
         <button type="button" class="gw-cg-btn" data-action="openSheet">
@@ -343,12 +344,17 @@
         <li class="gw-cg-row">
           <img class="gw-cg-row-img" src="{{img}}" alt="">
           <div class="gw-cg-row-body">
-            <div class="gw-cg-row-name">{{name}}</div>
+            <button type="button" class="gw-cg-row-name gw-cg-link" data-action="openDoc" data-uuid="{{uuid}}"
+              data-tooltip="{{localize "GHOSTWIRE.Chargen.Spends.ViewHint"}}">{{name}}</button>
             <div class="gw-cg-row-meta">
               <strong>{{priceLabel}}</strong>
               <span class="gw-cg-dim">{{packLabel}}{{#if availabilityLabel}} · {{availabilityLabel}}{{/if}}{{#if integrityLabel}} · {{integrityLabel}}{{/if}}</span>
             </div>
           </div>
+          <button type="button" class="gw-cg-link" data-action="openDoc" data-uuid="{{uuid}}"
+            data-tooltip="{{localize "GHOSTWIRE.Chargen.Spends.ViewHint"}}" aria-label="{{localize "GHOSTWIRE.Chargen.Spends.View"}}">
+            <i class="fa-solid fa-eye"></i>
+          </button>
           <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="buy" data-uuid="{{uuid}}" data-price="{{price}}"
             {{disabled (not canAfford)}}>
             <i class="fa-solid fa-yen-sign"></i> {{localize "GHOSTWIRE.Chargen.Spends.Buy"}}

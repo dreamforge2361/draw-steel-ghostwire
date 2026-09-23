@@ -133,7 +133,7 @@ Ghostwire’s five characteristics are **Physique, Reflex, Logic, Instinct, Pers
 | **Stamina / Recoveries** | Every runner | Shared engine (`04`) |
 | **Heroic resource** | Every class | Adrenaline, Advantage, Influence, Reagents, Uptime, Essence, Conviction, Bandwidth, Resonance (`04`, class chapters) |
 | **¥** | Every runner / crew | Buys gear and services — never characteristic scores or class power (`08`) |
-| **Body Integrity** | Living chrome users | Starts at 20; spent on implants (`09`). Cyborgs use Frame Modules instead |
+| **Body Integrity** | Chrome users (living + Cyborg) | Living start **20**; Cyborgs start **25**; spent on implants (`09`). Frame Modules = later retag stub |
 | **Connection state** | Anyone on the Wire | Linked / Overlay / Jacked In; Trace Alert is the system’s heat (`21`) |
 
 ### When systems collide
@@ -183,7 +183,7 @@ Resolve the night from **this book**. The left column is the procedure; the righ
 ## Ghostwire’s additions at a glance
 
 - **Money is real.** Runners track ¥ and buy the gear their Kits need (`08`).
-- **Chrome costs flesh.** Living runners spend Body Integrity on implants (`09`). Cyborgs take Frame Modules and cannot cast Veil magic.
+- **Chrome costs flesh (or frame).** Living runners start Body Integrity **20**; Cyborgs start **25** and may install living Chrome (`09`). Cyborgs cannot cast Veil magic (Arcane Severance).
 - **The Wired is a second battlefield.** Every runner can connect; Hackers and Technomancers live there (`21`).
 - **Magic is rare and costly.** Veil casters fight chrome erosion; Cyborgs are severed from the Veil (`22`).
 - **Machines are allies.** Anyone with a qualifying air scout drone gets **Street Eye** (Companion Link); Wrenches still run fleets, Jump-In, and Deploy & Command (`23`, `16`).

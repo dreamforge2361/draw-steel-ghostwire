@@ -27,6 +27,8 @@ import {
   CHARGEN_STEPS,
   CYBORG_BLOCKED_CLASSES,
   INTEGRITY_START,
+  CYBORG_INTEGRITY_START,
+  integrityStartFor,
   OPTIONAL_STEPS,
   STARTING_NUYEN,
   arrayOptionsFor,
@@ -223,10 +225,21 @@ ok(characteristicsAssigned(autoAssignArray(["reason", "intuition", "presence"]))
 console.log("\n7) the ¥ firewall: one wealth path, no chrome, no mods");
 ok(STARTING_NUYEN === 5000, "a runner starts on ¥5,000");
 ok(INTEGRITY_START === 20, "living Peoples start on Body Integrity 20");
+ok(CYBORG_INTEGRITY_START === 25, "Cyborgs start on Body Integrity 25");
+ok(integrityStartFor({ isCyborg: false }) === 20 && integrityStartFor({ isCyborg: true }) === 25,
+  "integrityStartFor switches living 20 / Cyborg 25");
 const moduleStart = /const STARTING_NUYEN = (\d+);/.exec(moduleSrc)?.[1];
 const moduleIntegrity = /const INTEGRITY_START = (\d+);/.exec(moduleSrc)?.[1];
+const moduleCyborgIntegrity = /const CYBORG_INTEGRITY_START = (\d+);/.exec(moduleSrc)?.[1];
 ok(Number(moduleStart) === STARTING_NUYEN, `module.mjs agrees on ¥${moduleStart}`);
 ok(Number(moduleIntegrity) === INTEGRITY_START, `module.mjs agrees on Integrity ${moduleIntegrity}`);
+ok(Number(moduleCyborgIntegrity) === CYBORG_INTEGRITY_START, `module.mjs agrees on Cyborg Integrity ${moduleCyborgIntegrity}`);
+ok(!/format\("CyborgBlocked"\)/.test(moduleSrc),
+  "module.mjs no longer warns CyborgBlocked on chrome install");
+ok(/isCyborg\(actor\) \? "GHOSTWIRE\.Integrity\.CyborgHint"/.test(moduleSrc),
+  "hero sheet Integrity tooltip uses CyborgHint for Cyborgs");
+ok(!/localize\("GHOSTWIRE\.Integrity\.CyborgNA"\)/.test(moduleSrc),
+  "hero sheet no longer renders Integrity as CyborgNA / Not used");
 ok(WEALTH_PATH === "system.hero.wealth", `the kiosk wealth path is ${WEALTH_PATH}`);
 ok(scriptSrc.includes('import { WEALTH_PATH, catalogPrice, formatYen, getWealth, planPurchase } from "./kiosk.mjs"'),
   "the wizard debits ¥ through the kiosk's path and plan, not its own arithmetic");
@@ -344,10 +357,16 @@ ok(!stepStatus({ ...finishedHero, chromeCount: 1, integrity: { value: 18, max: 2
   "G10: chrome with Integrity below start still fails the honest Integrity check");
 ok(!stepStatus({ ...finishedHero, taint: 1 }).integrity.done, "Taint 1 fails the firewall");
 ok(!stepStatus({ ...finishedHero, integrity: { value: 18, max: 20 } }).integrity.done, "18/20 fails the firewall");
-ok(stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: null, max: null } }).integrity.done,
-  "a Cyborg passes with no Integrity at all — Integrity is N/A for them");
-ok(stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: null, max: null }, chromeCount: 1 }).integrity.done,
-  "G10: Cyborg + chrome does not fail Integrity (Integrity is N/A)");
+ok(stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: 25, max: 25 } }).integrity.done,
+  "a Cyborg at 25/25 clears the Integrity step");
+ok(!stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: null, max: null } }).integrity.done,
+  "a Cyborg with missing Integrity fails until stamped 25/25");
+ok(!stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: 20, max: 20 } }).integrity.done,
+  "a Cyborg still on living 20/20 fails until migrated to 25");
+ok(!stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: 23, max: 25 }, chromeCount: 1 }).integrity.done,
+  "Cyborg chrome that spent Integrity fails the honest Integrity check (same as living)");
+ok(stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: 25, max: 25 }, chromeCount: 1 }).integrity.done,
+  "Cyborg with chromeCount but Integrity still at start can clear (debit pending / edge)");
 ok(chargenComplete({ ...finishedHero, chromeCount: 1, integrity: { value: 20, max: 20 }, taint: 0 }),
   "G10: chromed runner with Integrity at start can complete");
 
@@ -368,6 +387,26 @@ for (const key of ["ChangerLineage", "ArcaneSeverance", "KitNeedsGear", "Resourc
   "ChromeAtChargen", "TaintNotZero", "IntegrityOff"]) {
   ok(typeof localize(`GHOSTWIRE.Chargen.Warnings.${key}`) === "string", `warning "${key}" has a lang key`);
 }
+
+/* -------------------------------------------- 8b) chargen spend preview-before-buy */
+
+console.log("\n8b) early-spend rows can open the Item card without buying");
+ok(templateSrc.includes('data-action="openDoc"') && templateSrc.includes('data-action="buy"'),
+  "spend rows expose openDoc and buy as separate actions");
+ok(templateSrc.includes('data-action="openDoc"') && templateSrc.includes('data-uuid="{{uuid}}"'),
+  "openDoc carries the catalog UUID");
+ok((templateSrc.match(/data-action="openDoc"/g) || []).length >= 2,
+  "spend rows offer more than one openDoc affordance (name + eye)");
+ok(scriptSrc.includes("#onOpenDoc") && scriptSrc.includes("doc?.sheet?.render"),
+  "openDoc renders the Item sheet without creating an owned copy");
+ok(typeof localize("GHOSTWIRE.Chargen.Spends.View") === "string",
+  "Spends.View lang key exists");
+ok(typeof localize("GHOSTWIRE.Chargen.Spends.ViewHint") === "string",
+  "Spends.ViewHint lang key exists");
+ok(typeof localize("GHOSTWIRE.Integrity.CyborgHint") === "string",
+  "Integrity.CyborgHint lang key exists");
+ok(localize("GHOSTWIRE.Chargen.People.CyborgLocks").includes("25"),
+  "People.CyborgLocks mentions Body Integrity 25");
 
 /* -------------------------------------------- 9) the Done-when box */
 
