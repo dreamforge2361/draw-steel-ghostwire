@@ -1944,18 +1944,25 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   .ghostwire-chargen .gw-cg-chars { flex-direction: column; }
 }
 
-/* —— Ghostwire Machine sheet (0.3.105) —— */
+/* —— Ghostwire Machine sheet (0.3.106) —— */
 .ghostwire-machine-sheet { padding: 0.5rem 0.75rem; gap: 0.5rem; }
 .ghostwire-machine-sheet .gw-m-header { gap: 0.75rem; align-items: flex-start; }
-.ghostwire-machine-sheet .gw-m-portrait img.profile { width: 96px; height: 96px; object-fit: cover; border: 1px solid var(--color-border-light-primary, #666); border-radius: 4px; cursor: pointer; }
-.ghostwire-machine-sheet .gw-m-token-row { gap: 0.35rem; align-items: center; margin-top: 0.35rem; }
-.ghostwire-machine-sheet .gw-m-token-row img.token-art { width: 36px; height: 36px; object-fit: cover; border-radius: 3px; }
+/* Portrait and token art are two distinct, captioned slots — not one picture printed twice. */
+.ghostwire-machine-sheet .gw-m-art { gap: 0.5rem; align-items: flex-end; }
+.ghostwire-machine-sheet .gw-m-art figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+.ghostwire-machine-sheet .gw-m-art figcaption { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.7; }
+.ghostwire-machine-sheet .gw-m-art img { object-fit: cover; border: 1px solid var(--color-border-light-primary, #666); cursor: pointer; }
+.ghostwire-machine-sheet .gw-m-portrait img.profile { width: 96px; height: 96px; border-radius: 4px; }
+.ghostwire-machine-sheet .gw-m-token img.token-art { width: 48px; height: 48px; border-radius: 50%; }
 .ghostwire-machine-sheet .gw-m-identity { flex: 1; gap: 0.35rem; }
 .ghostwire-machine-sheet .gw-m-name { font-size: 1.25rem; font-weight: 700; }
 .ghostwire-machine-sheet .gw-m-kind { gap: 0.5rem; }
-.ghostwire-machine-sheet .gw-m-tabs { gap: 0.25rem; flex-wrap: wrap; border-bottom: 1px solid var(--color-border-light-primary, #666); padding-bottom: 0.25rem; }
-.ghostwire-machine-sheet .gw-m-tabs a { padding: 0.2rem 0.55rem; border-radius: 3px; cursor: pointer; }
-.ghostwire-machine-sheet .gw-m-tabs a.active { background: var(--ghostwire-accent, #2a6f97); color: #fff; }
+.ghostwire-machine-sheet nav.gw-m-tabs { gap: 0.25rem; flex-wrap: wrap; border-bottom: 1px solid var(--color-border-light-primary, #666); padding-bottom: 0.25rem; }
+.ghostwire-machine-sheet nav.gw-m-tabs button.item { flex: 0 0 auto; width: auto; padding: 0.2rem 0.55rem; border: none; border-radius: 3px; background: none; cursor: pointer; line-height: 1.4; }
+.ghostwire-machine-sheet nav.gw-m-tabs button.item.active { background: var(--ghostwire-accent, #2a6f97); color: #fff; }
+/* Core hides .tab[data-tab]:not(.active); these keep the active panel laid out like the old single-panel body. */
+.ghostwire-machine-sheet section.gw-m-tab { display: none; }
+.ghostwire-machine-sheet section.gw-m-tab.active { display: flex; flex-direction: column; gap: 0.5rem; }
 .ghostwire-machine-sheet .gw-m-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 0.75rem; }
 .ghostwire-machine-sheet .gw-m-grid label.checkbox { display: flex; gap: 0.4rem; align-items: center; }
 .ghostwire-machine-sheet .gw-m-story textarea,
