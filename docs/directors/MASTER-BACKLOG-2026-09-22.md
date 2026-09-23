@@ -4,6 +4,7 @@
 **Just shipped:** G2 armor / gadget mod families + Hexshot's Street medium bow (0.3.100); G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
 **Next picks:** **G3** lang + style tokens, then **S1**, then **L1** (locked queue) · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
 **Playtest:** Deadhead Saturday; Quiet Floor after. **PDF reprint DONE 2026-09-22** (N4) — 0.4.0 @ 0.3.100, 316 pages.  
+**Next print queue:** N5 player-facing reference scrub.
 **Doctrine:** Claude Code on Allfather first; Cursor only if no choice.
 
 ---
@@ -16,6 +17,7 @@
 | N2 | ~~Ritual Working applet~~ | **DONE** 0.3.91 — all players can open; the Formula owner who selects it is **Ritual Leader** (Project rolls, sealing roll, ¥); Pay Components off `system.hero.wealth`; Study and built-sanctum stages are stock Draw Steel Project Items. Smoke `node tools/ritual-working-smoke.mjs`; Foundry checklist `docs/directors/ritual-working-applet-smoke-0391.md`. |
 | N3 | ~~Foundry smoke 0.3.88 rituals~~ | **DONE** — Michael signed off. |
 | N4 | ~~**PDF reprint**~~ | **DONE 2026-09-22.** `node tools/build-pdf.mjs` → `docs/manuscript/build/Ghostwire-Rulebook-0.4.0.pdf` — **95.4 MB / 316 pages** (Sep-18 build was 75.6 MB / 249 — **+67 pages**). Print version stays **0.4.0**: a reprint of the official edition, **not** a new number. Because rules chapters assemble by pointer at `docs/raw/*.md`, the reprint picked up everything since the first print with no manuscript forking: Ritual Workings / Formula / Magnitude (Ch 24), Machines — drones / vehicles / mods (Ch 25, S8), Kit street-band chargen grants (Ch 9, G1), wearable armor/shield **§2F** + gadget **§1H** families **Published** (Ch 12, G2), Constructs & Pets FAQ (Ch 30), and lore L6–L8 **with faction plates placed**. Front matter told the truth (title page + manuscript README → "through 0.3.100"); no marketing rewrite. Art: **54/55 slots placed**, one standing gap — `wire-opener` (Ch 23 filler) — not a blocker. Two deliberate non-changes recorded in the note: `27-corruption-taint.md` stays out of the MANIFEST (locked TOC calls Taint a pointer inside Ch 24, "not a new print-Ch number"), and **Scrap-Bow is absent by design** (RAW Ch 9 lists Kits + gear *categories*, never SKUs — so a SKU-name grep will always fail; grep the grant procedure instead). Packs untouched, journals not regenerated. Note `docs/directors/n4-pdf-reprint-03100.md`; log `docs/directors/_claude-n4-pdf-reprint-log.txt`. |
+| N5 | **PDF rulebook player-facing reference scrub** | Next PDF reprint: remove all document/director references from the shipped PDF — markdown paths/links, `docs/directors` mentions, and any other outside/internal references that should not appear in the player-facing book. Keep those references in the markdown sources only. Backlogged 2026-09-22 (Michael). |
 
 ---
 
