@@ -207,6 +207,7 @@
         "keywords": [
           "magic",
           "melee",
+          "psychic",
           "strike"
         ],
         "distance": {
@@ -239,7 +240,9 @@
               "damage": {
                 "tier1": {
                   "value": "4 + @chr",
-                  "types": [],
+                  "types": [
+                    "psychic"
+                  ],
                   "potency": {
                     "value": "@potency.weak",
                     "characteristic": "none"
@@ -248,7 +251,9 @@
                 },
                 "tier2": {
                   "value": "7 + @chr",
-                  "types": [],
+                  "types": [
+                    "psychic"
+                  ],
                   "potency": {
                     "value": "@potency.average",
                     "characteristic": ""
@@ -257,7 +262,9 @@
                 },
                 "tier3": {
                   "value": "10 + @chr",
-                  "types": [],
+                  "types": [
+                    "psychic"
+                  ],
                   "potency": {
                     "value": "@potency.strong",
                     "characteristic": ""

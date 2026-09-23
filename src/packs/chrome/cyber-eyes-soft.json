@@ -82,6 +82,26 @@
         "integrity": 1,
         "price": 8000,
         "availability": "restricted"
+      },
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "basicSight",
+            "range": 10,
+            "enabled": true
+          },
+          {
+            "id": "seeAll",
+            "range": 5,
+            "enabled": true
+          }
+        ],
+        "visionMode": "darkvision",
+        "priority": 1,
+        "claims": [
+          "nightOptics",
+          "thermal"
+        ]
       }
     }
   }

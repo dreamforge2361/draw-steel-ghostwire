@@ -459,6 +459,166 @@
       "_key": "!actors.items!3FW9As2fW7ekq4mv.4apoUEwowcUiVq2t"
     },
     {
+      "name": "Show Them the Debt",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "veil-undead",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "show-them-the-debt",
+        "story": "The cultist reads a name off the ledger and lets the mark watch what they signed away.",
+        "keywords": [
+          "magic",
+          "psychic",
+          "ranged"
+        ],
+        "category": "heroic",
+        "resource": 2,
+        "trigger": "",
+        "distance": {
+          "type": "ranged",
+          "primary": "10",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": 1,
+          "custom": ""
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "presence"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "gwShowDebtDamage": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "gwShowDebtDamage",
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "4",
+                  "types": [
+                    "psychic"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "6",
+                  "types": [
+                    "psychic"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "9",
+                  "types": [
+                    "psychic"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              }
+            },
+            "gwShowDebtApplie": {
+              "name": "Frightened",
+              "img": null,
+              "type": "applied",
+              "_id": "gwShowDebtApplie",
+              "sort": 0,
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "effects": {}
+                },
+                "tier2": {
+                  "display": "{{potency}} frightened of the cultist (save ends)",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": "presence"
+                  },
+                  "effects": {
+                    "frightened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier3": {
+                  "display": "{{potency}} frightened of the cultist (save ends)",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "presence"
+                  },
+                  "effects": {
+                    "frightened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The cultist names a debt the target never knew they carried and shows them the collection. No line of effect is needed to a target the cultist can hear — this is <strong>psychic</strong> damage, and psychic immunity (a Cyborg’s Cortical Firewall) reduces it.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "gwCultShowDebt00",
+      "img": "icons/magic/death/hand-dirt-undead-zombie.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0,
+        "ZJ4Z3nifR8NNIWxP": 3,
+        "R75FAhxK5fADaoJF": 3
+      },
+      "_key": "!actors.items!3FW9As2fW7ekq4mv.gwCultShowDebt00"
+    },
+    {
       "name": "Exploit Opening",
       "type": "ability",
       "system": {

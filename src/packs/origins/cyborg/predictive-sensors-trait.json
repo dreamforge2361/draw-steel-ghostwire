@@ -29,5 +29,21 @@
   "ownership": {
     "default": 0
   },
-  "flags": {}
+  "flags": {
+    "draw-steel-ghostwire": {
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "seeInvisibility",
+            "range": 20,
+            "enabled": true
+          }
+        ],
+        "priority": 1,
+        "claims": [
+          "veilGlimpse"
+        ]
+      }
+    }
+  }
 }

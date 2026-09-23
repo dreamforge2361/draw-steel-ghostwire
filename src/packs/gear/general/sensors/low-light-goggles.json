@@ -48,6 +48,20 @@
         "modFamily": [
           "sensors"
         ]
+      },
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "basicSight",
+            "range": 10,
+            "enabled": true
+          }
+        ],
+        "visionMode": "darkvision",
+        "priority": 1,
+        "claims": [
+          "nightOptics"
+        ]
       }
     }
   }

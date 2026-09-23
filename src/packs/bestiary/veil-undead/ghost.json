@@ -276,6 +276,7 @@
         "story": "",
         "keywords": [
           "magic",
+          "psychic",
           "ranged",
           "strike"
         ],
@@ -312,7 +313,7 @@
                 "tier1": {
                   "value": "7",
                   "types": [
-                    "cold"
+                    "psychic"
                   ],
                   "potency": {
                     "value": "@potency.weak",
@@ -323,7 +324,7 @@
                 "tier2": {
                   "value": "10",
                   "types": [
-                    "cold"
+                    "psychic"
                   ],
                   "potency": {
                     "value": "@potency.average",
@@ -334,7 +335,7 @@
                 "tier3": {
                   "value": "13",
                   "types": [
-                    "cold"
+                    "psychic"
                   ],
                   "potency": {
                     "value": "@potency.strong",
@@ -407,6 +408,15 @@
             "img": null,
             "sort": 0,
             "before": false
+          },
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The ghost replays the last minute of its own death inside the target’s skull. The cold is remembered, not real — this is <strong>psychic</strong> damage, and psychic immunity (a Cyborg’s Cortical Firewall) reduces it.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
           }
         },
         "prerequisites": {
@@ -821,7 +831,8 @@
         "story": "",
         "keywords": [
           "area",
-          "magic"
+          "magic",
+          "psychic"
         ],
         "category": "",
         "resource": null,
@@ -856,7 +867,7 @@
                 "tier1": {
                   "value": "3",
                   "types": [
-                    "sonic"
+                    "psychic"
                   ],
                   "potency": {
                     "value": "@potency.weak",
@@ -867,7 +878,7 @@
                 "tier2": {
                   "value": "5",
                   "types": [
-                    "sonic"
+                    "psychic"
                   ],
                   "potency": {
                     "value": "@potency.average",
@@ -878,7 +889,7 @@
                 "tier3": {
                   "value": "8",
                   "types": [
-                    "sonic"
+                    "psychic"
                   ],
                   "potency": {
                     "value": "@potency.strong",
@@ -900,6 +911,15 @@
             "img": null,
             "sort": 0,
             "before": false
+          },
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The wail never moves air. Every enemy in the burst hears it from the inside — <strong>psychic</strong> damage, so psychic immunity reduces it and a sonic-sealed helmet does nothing.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
           }
         },
         "prerequisites": {

@@ -399,6 +399,164 @@
       "_key": "!actors.items!bM2g2njTIsMYXA5n.cuDz18vafhxuWfMg"
     },
     {
+      "name": "Hunger Bleed",
+      "type": "ability",
+      "system": {
+        "type": "maneuver",
+        "source": {
+          "book": "Ghostwire Core Rulebook",
+          "page": "veil-undead",
+          "license": "Draw Steel Creator License"
+        },
+        "_dsid": "hunger-bleed",
+        "story": "The ghoul stops chewing and lets everyone nearby feel exactly how hungry it is.",
+        "keywords": [
+          "area",
+          "magic",
+          "psychic"
+        ],
+        "category": "heroic",
+        "resource": 3,
+        "trigger": "",
+        "distance": {
+          "type": "burst",
+          "primary": "2",
+          "secondary": "1",
+          "tertiary": "1"
+        },
+        "damageDisplay": "melee",
+        "target": {
+          "type": "enemy",
+          "value": null,
+          "custom": "Each enemy in the area"
+        },
+        "power": {
+          "roll": {
+            "formula": "@chr",
+            "characteristics": [
+              "intuition"
+            ],
+            "reactive": false
+          },
+          "effects": {
+            "gwHungerBleedDmg": {
+              "name": "",
+              "img": null,
+              "type": "damage",
+              "_id": "gwHungerBleedDmg",
+              "sort": 0,
+              "damage": {
+                "tier1": {
+                  "value": "2",
+                  "types": [
+                    "psychic"
+                  ],
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier2": {
+                  "value": "3",
+                  "types": [
+                    "psychic"
+                  ],
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                },
+                "tier3": {
+                  "value": "4",
+                  "types": [
+                    "psychic"
+                  ],
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": ""
+                  },
+                  "ignoredImmunities": []
+                }
+              }
+            },
+            "gwHungerBleedApp": {
+              "name": "Weakened and Frightened",
+              "img": null,
+              "type": "applied",
+              "_id": "gwHungerBleedApp",
+              "sort": 0,
+              "applied": {
+                "tier1": {
+                  "display": "",
+                  "potency": {
+                    "value": "@potency.weak",
+                    "characteristic": "none"
+                  },
+                  "effects": {}
+                },
+                "tier2": {
+                  "display": "{{potency}} weakened (save ends)",
+                  "potency": {
+                    "value": "@potency.average",
+                    "characteristic": "intuition"
+                  },
+                  "effects": {
+                    "weakened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                },
+                "tier3": {
+                  "display": "{{potency}} frightened (save ends)",
+                  "potency": {
+                    "value": "@potency.strong",
+                    "characteristic": "intuition"
+                  },
+                  "effects": {
+                    "frightened": {
+                      "condition": "failure",
+                      "end": "save",
+                      "properties": []
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "effects": {
+          "before0000000000": {
+            "_id": "before0000000000",
+            "type": "base",
+            "description": "<p>The ghoul’s starvation bleeds out of it. Every enemy in the burst feels their own body as meat for a moment — <strong>psychic</strong> damage, so psychic immunity reduces it.</p>",
+            "before": true,
+            "name": "",
+            "img": null,
+            "sort": 0
+          }
+        },
+        "prerequisites": {
+          "value": "",
+          "dsid": [],
+          "level": null
+        }
+      },
+      "_id": "gwGhoulHungerBle",
+      "img": "icons/magic/death/skull-horned-goat-pentagram-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "ownership": {
+        "default": 0
+      },
+      "_key": "!actors.items!bM2g2njTIsMYXA5n.gwGhoulHungerBle"
+    },
+    {
       "name": "Hunger",
       "type": "feature",
       "_id": "v31nKF7iZFLMCOwj",

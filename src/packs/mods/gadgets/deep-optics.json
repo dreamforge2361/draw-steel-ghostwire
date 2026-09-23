@@ -41,7 +41,7 @@
       "name": "Installed \u2014 Perception edge",
       "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
       "origin": "Compendium.draw-steel-ghostwire.mods.Item.gwModDeepOptics0",
-      "description": "<p>Edge on Perception tests to spot hidden, cloaked, or living targets while the stage is installed and on. It pierces smoke, dark, and thin cover.</p>",
+      "description": "<p>Edge on Perception tests to spot hidden, cloaked, or living targets while the stage is installed and on. On the canvas it grants <strong>thermal 5 squares</strong> (Foundry <code>seeAll</code>) and <strong>see invisible 5 squares</strong> (<code>seeInvisibility</code>) to whoever carries the host optic. Switch the mod off and both come straight back off the token.</p>",
       "disabled": true,
       "transfer": true,
       "statuses": [],
@@ -96,6 +96,25 @@
           "electronics"
         ],
         "exclusiveKit": "optic-stage"
+      },
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "seeAll",
+            "range": 5,
+            "enabled": true
+          },
+          {
+            "id": "seeInvisibility",
+            "range": 5,
+            "enabled": true
+          }
+        ],
+        "priority": 1,
+        "claims": [
+          "thermal",
+          "veilGlimpse"
+        ]
       }
     }
   }

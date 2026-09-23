@@ -51,6 +51,26 @@
           "sensors",
           "wired"
         ]
+      },
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "basicSight",
+            "range": 10,
+            "enabled": true
+          },
+          {
+            "id": "seeAll",
+            "range": 10,
+            "enabled": true
+          }
+        ],
+        "visionMode": "darkvision",
+        "priority": 2,
+        "claims": [
+          "nightOptics",
+          "thermal"
+        ]
       }
     }
   }

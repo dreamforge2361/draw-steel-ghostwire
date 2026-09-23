@@ -164,3 +164,32 @@ It uses Foundry vision modes (*Wired Overlay*, *Jacked In*), so it follows Found
 Ghostwire turns **Has Vision** on (`prototypeToken.sight.enabled` / the placed token’s `sight.enabled`) for every **hero** and **npc** Actor it creates — world create, import from pack, drag from the compendium. Range, angle, and vision mode already on the prototype are left alone. A one-time GM ready pass does the same for existing world heroes/NPCs and their placed tokens.
 
 **Not in scope:** Wire node Actors (`kind: node` / `node-template`), kiosks (`kind: kiosk`), and vehicle/drone machine stubs (`kind: vehicle` / `drone`). Those stay vision-off so they don’t punch fog as infrastructure tokens. Overlay / Jacked In tints still need the **Scene** Token Vision checkbox. Code: `scripts/token-vision.mjs`.
+### Canvas sights (F20, 0.3.119)
+
+`scripts/token-vision.mjs` owns **whether** a token sees. `scripts/sights.mjs` owns **what** it sees. A sight SKU declares its canvas effect on the Item:
+
+```
+flags.draw-steel-ghostwire.sightGrant = {
+  modes: [{ id: "basicSight", range: 10, enabled: true }, { id: "seeAll", range: 5, enabled: true }],
+  visionMode: "darkvision",
+  priority: 1,
+  claims: ["nightOptics", "thermal"],
+  enableVision: false
+}
+```
+
+Only **stock** Foundry ids are writable (`basicSight`, `lightPerception`, `seeInvisibility`, `senseInvisibility`, `feelTremor`, `seeAll`, `senseAll`; vision modes `basic`, `darkvision`, `monochromatic`, `blindness`, `tremorsense`, `lightAmplification`). Anything else in the flag is dropped rather than handed to Foundry. Ranges are in **squares** (the Draw Steel grid is `distance: 1`, `units: "sq"`), and `null` means unlimited.
+
+**Three claims, three mappings.** A card may only claim what the canvas can do:
+
+| Claim | Foundry | Printed as |
+|---|---|---|
+| `nightOptics` | `basicSight` (`DetectionModeDarkvision`) + the `darkvision` vision mode | "Darkvision N squares" |
+| `thermal` | `seeAll` (`DetectionModeAll`, walls still block) | "Thermal N squares" |
+| `veilGlimpse` | `seeInvisibility` | "See invisible N squares" |
+
+Foundry ships **no thermal imager**, so Ghostwire defines thermal as `seeAll` at a printed range — one rule, on every card that claims heat. Through-wall and type-filtered detection (Penetration Optics, Detect the Supernatural, Cold Read) have **no** stock mode, so their cards say *Director call* instead of pretending.
+
+Recompute runs on `createItem` / `updateItem` / `deleteItem` and on the Active Effect hooks (an installed mod ships its AE disabled), then writes `prototypeToken.detectionModes` plus every placed token of that Actor. A grant is live only while its source is: **F12 suppressed or destroyed chrome sees nothing**, and a mod grants nothing until it is installed and switched on. Everything written is recorded in `flags.draw-steel-ghostwire.sightApplied`, so removing the implant removes exactly those modes and restores the Director's own vision mode underneath. A one-time GM ready pass covers worlds from before 0.3.119.
+
+`enableVision` is opt-in and shipped on exactly one SKU — the **Sensor Pod**, because a drone or vehicle with no Has Vision would read nothing through its own sensor. It never overrides token-vision's scope for heroes and NPCs. Code: `scripts/sights.mjs`, smoke `tools/f20-foundry-sights-smoke.mjs`.

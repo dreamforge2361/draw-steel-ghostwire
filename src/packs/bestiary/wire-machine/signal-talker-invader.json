@@ -287,7 +287,8 @@
         "category": "heroic",
         "keywords": [
           "area",
-          "psionic"
+          "psionic",
+          "psychic"
         ],
         "distance": {
           "type": "burst",
@@ -965,6 +966,7 @@
         "story": "",
         "keywords": [
           "psionic",
+          "psychic",
           "ranged"
         ],
         "effects": {

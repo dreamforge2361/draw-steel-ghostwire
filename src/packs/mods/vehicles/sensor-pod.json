@@ -62,6 +62,27 @@
         "craftSkill": [
           "electronics"
         ]
+      },
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "basicSight",
+            "range": 10,
+            "enabled": true
+          },
+          {
+            "id": "seeAll",
+            "range": 5,
+            "enabled": true
+          }
+        ],
+        "visionMode": "darkvision",
+        "priority": 1,
+        "claims": [
+          "nightOptics",
+          "thermal"
+        ],
+        "enableVision": true
       }
     }
   }
