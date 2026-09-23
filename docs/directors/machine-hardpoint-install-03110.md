@@ -15,13 +15,22 @@ Gun Rack, Twin Mount, and Turret Ring used the same path.
 - Build → **Installed mods** lists every installed mod. Switched-off kits stay in the list marked off and drop out of the Hardpoints line.
 - A successful **Install onto…** posts a chat card: who, mod, host, slots, and the fielded machine when one is already out. Failures stay notifications. Payload magazine loads keep their own card.
 
+## Drones are Jump-In capable
+
+Jump-In checks `flags.draw-steel-ghostwire.machine.jumpInCapable` (or a Rigger Cocoon on the machine). Drone chassis Items never set that flag, and the drone Actor prototypes did not either, so Jump-In refused.
+
+Kind `drone` now passes the gate even if the stored flag is missing or off. Deploy stamps it. `preCreateActor` stamps it when a drone Actor is created (compendium drag included). A GM ready pass writes it onto world drones that predate this. Prototypes: Drone (Micro / Small / Medium) and Mule-Bot.
+
+Vehicles and base assets are unchanged. A Bulldog still needs the flag or a Rigger Cocoon. Door Lock stays off. Safehouse Beacon stays on. Ghost Rein still does not grant Jump-In.
+
 ## Automated
 
 ```bash
 node tools/rigger-vertical-smoke.mjs
+node tools/build-packs.mjs summons
 ```
 
-No pack rebuild.
+Summons pack rebuilt so the drone prototypes carry the flag. Foundry closed.
 
 ## In Foundry
 
@@ -31,3 +40,5 @@ No pack rebuild.
 4. **Stowed, then Deploy:** same sheet after Deploy. Wire Kit is still there. The hardpoint is too.
 5. Peer check, one of **Gun Rack / Twin Mount / Turret Ring** (one weaponry kit at a time — uninstall Heavy Hardpoint first).
 6. Uninstall: the Inventory row leaves with the next sync. Scrap-Weld still raises Integrity and now also lists under Inventory.
+7. **Drone Jump-In** — Deploy any drone (Rotor, Stinger, Mule-Bot). Do not install Rigger Cocoon and do not tick Jump-In Capable by hand. Machine sheet Control shows Jump-In Capable. Jump-In sets the pilot **Jacked In**, meat inert, and the usual biofeedback / Uptime-on-hit path.
+8. **Not forced** — Deploy a Bulldog or Door Lock with no cocoon. Jump-In stays disabled. A beacon still allows it.

@@ -144,6 +144,7 @@ const {
   fleetSizeCap, fieldedMachineCount, isMachineFielded, machineOwner,
   applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
   describeWeaponryKit, machineModSheetFields, machineModMirrorData, kitProfile,
+  isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
 } = await import("../scripts/machines.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
@@ -371,6 +372,44 @@ note(mirror.flags[MODULE_ID].machineModMirror === "Item.hh", "mirror records the
 note(mirror.flags[MODULE_ID].mod.installedOn === null, "mirror does not copy the hero installedOn id");
 note(mirror.name === "Heavy Hardpoint" && !mirror._id, "mirror is a nameless-id copy of the hardpoint Item");
 note(heavy.getFlag(MODULE_ID, "mod").installedOn === "bull", "building a mirror does not uninstall the hero mod");
+
+/* ------------------------------------------------------------------ */
+/*  0.3.110 — Drones are always Jump-In capable                        */
+/* ------------------------------------------------------------------ */
+const gw = kind => ({ flags: { [MODULE_ID]: kind } });
+note(isJumpInCapable(gw({ kind: "drone" })) === true, "a drone with no Jump-In flag is capable");
+note(isJumpInCapable(gw({ kind: "drone", machine: { jumpInCapable: false } })) === true, "a drone stays capable if the flag is off");
+note(isJumpInCapable(gw({ kind: "vehicle" })) === false, "a vehicle without the flag is not Jump-In capable");
+note(isJumpInCapable(gw({ kind: "baseAsset", machine: { jumpInCapable: false } })) === false, "a base asset is not forced Jump-In capable");
+note(isJumpInCapable(gw({ kind: "vehicle", machine: { jumpInCapable: true } })) === true, "a vehicle flag still grants Jump-In");
+note(isJumpInCapable({ ...gw({ kind: "vehicle" }), items: [{ system: { _dsid: "rigger-cocoon" } }] }) === true,
+  "Rigger Cocoon still grants Jump-In on a vehicle");
+note(chassisJumpInCapable({ drone: true }) === true, "Deploy treats a drone chassis as Jump-In capable");
+note(chassisJumpInCapable({ drone: true, jumpInCapable: false }) === true, "a drone chassis cannot opt out of Jump-In");
+note(chassisJumpInCapable({ drone: false, scale: "Vehicle" }) === false, "Deploy does not force Jump-In on a vehicle chassis");
+note(chassisJumpInCapable({ baseAsset: "door-lock", jumpInCapable: false }) === false, "Deploy does not force Jump-In on a base asset");
+note(chassisJumpInCapable({ baseAsset: "safehouse-beacon", jumpInCapable: true }) === true, "a beacon keeps its own Jump-In flag");
+note(chassisJumpInCapable({ jumpInCapable: true }) === true, "a vehicle chassis flag still stamps Jump-In");
+note(chassisJumpInCapable({}, { cocoon: true }) === true, "Rigger Cocoon still stamps Jump-In on Deploy");
+const droneCreate = droneJumpInSourceUpdate(gw({ kind: "drone" }));
+note(droneCreate?.[`flags.${MODULE_ID}.machine.jumpInCapable`] === true, "create hook stamps Jump-In on a new drone");
+note(droneJumpInSourceUpdate(gw({ kind: "drone", machine: { jumpInCapable: true } })) === null, "create hook leaves an already-capable drone alone");
+note(droneJumpInSourceUpdate(gw({ kind: "vehicle" })) === null, "create hook does not stamp vehicles");
+note(droneJumpInSourceUpdate(gw({ kind: "baseAsset", machine: { jumpInCapable: false } })) === null, "create hook does not stamp base assets");
+for (const file of ["machine-drone-micro.json", "machine-drone-small.json", "machine-drone-medium.json", "mule-bot.json"]) {
+  const doc = readJson(`src/packs/summons/machines/${file}`);
+  note(doc.flags[MODULE_ID].kind === "drone" && doc.flags[MODULE_ID].machine?.jumpInCapable === true,
+    `${file} prototype is Jump-In capable`);
+}
+const carProto = readJson("src/packs/summons/machines/machine-vehicle-car.json");
+note(carProto.flags[MODULE_ID].kind === "vehicle" && carProto.flags[MODULE_ID].machine?.jumpInCapable !== true,
+  "vehicle prototype is not forced Jump-In capable");
+const doorProto = readJson("src/packs/summons/machines/machine-base-door-lock.json");
+note(doorProto.flags[MODULE_ID].machine?.jumpInCapable === false, "Door Lock prototype stays not Jump-In capable");
+const riggerSrc = readFileSync("scripts/rigger-vertical.mjs", "utf8");
+note(riggerSrc.includes("isJumpInCapable(machineActor)"), "jumpIn uses the drone gate");
+note(sheetSrc.includes('machineKindOf(actor) === "drone"'), "Machine sheet shows drones as Jump-In capable");
+note(machinesSrc.includes("migrateDroneJumpIn"), "ready pass stores Jump-In on world drones");
 
 note(machinesSrc.includes("syncMachineModMirrors"), "syncMachineMods embeds installed mods on the machine Actor");
 note(machinesSrc.includes("machineModSheetFields(item)"), "Deploy stamp reuses the kit hardpoints line");

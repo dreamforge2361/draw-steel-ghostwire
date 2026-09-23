@@ -254,7 +254,11 @@
       "band": "drone-micro",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-drone-micro"
+      "dsid": "machine-drone-micro",
+      "machine": {
+        "kind": "drone",
+        "jumpInCapable": true
+      }
     }
   }
 }

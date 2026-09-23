@@ -254,7 +254,11 @@
       "band": "drone-small",
       "ownerUuid": null,
       "gearItemUuid": null,
-      "dsid": "machine-drone-small"
+      "dsid": "machine-drone-small",
+      "machine": {
+        "kind": "drone",
+        "jumpInCapable": true
+      }
     }
   }
 }

@@ -86,6 +86,44 @@ export function isMachineKindDocument(doc) {
 }
 
 /**
+ * Jump-In gate. Drones always pass. Vehicles and base assets pass only with their own
+ * jumpInCapable / jumpIn flag or a Rigger Cocoon on the machine Actor.
+ */
+export function isJumpInCapable(actor) {
+  if (machineKindOf(actor) === "drone") return true;
+  const machine = (typeof actor?.getFlag === "function" ? actor.getFlag(MODULE_ID, "machine") : null)
+    ?? actor?.flags?.[MODULE_ID]?.machine
+    ?? {};
+  if (machine.jumpInCapable || machine.jumpIn) return true;
+  return [...(actor?.items ?? [])].some(item => item?.system?._dsid === "rigger-cocoon");
+}
+
+/**
+ * Chassis-side Jump-In stamp used by Deploy.
+ * A drone chassis is capable even when the Item omits the flag. Base assets stay on their own flag
+ * (a Door Lock is not a drone). Vehicles stay on the flag or an installed Rigger Cocoon.
+ */
+export function chassisJumpInCapable(vehicleFlags = {}, { cocoon = false } = {}) {
+  if (vehicleFlags?.baseAsset) return !!(vehicleFlags.jumpInCapable || vehicleFlags.jumpIn || cocoon);
+  if (vehicleFlags?.drone) return true;
+  return !!(vehicleFlags?.jumpInCapable || vehicleFlags?.jumpIn || cocoon);
+}
+
+/** preCreateActor patch so a new drone Actor stores Jump-In Capable. Null when it already does, or it is not a drone. */
+export function droneJumpInSourceUpdate(doc) {
+  if (machineKindOf(doc) !== "drone") return null;
+  const flags = doc?.flags?.[MODULE_ID] ?? {};
+  const machine = flags.machine
+    ?? (typeof doc?.getFlag === "function" ? doc.getFlag(MODULE_ID, "machine") : null)
+    ?? {};
+  if (machine.jumpInCapable === true) return null;
+  return {
+    [`flags.${MODULE_ID}.kind`]: flags.kind ?? machine.kind ?? "drone",
+    [`flags.${MODULE_ID}.machine.jumpInCapable`]: true,
+  };
+}
+
+/**
  * Stamp Scorch Marks onto a plain prototypeToken or Token data object.
  * Other monks-bloodsplats keys (colour, size, index) stay.
  * Uses foundry.utils.mergeObject when Foundry is present.
@@ -156,6 +194,20 @@ export async function migrateMachineScorch() {
   if (actors || tokens) {
     console.log(`${MODULE_ID} | Scorch Marks on ${actors} machine prototype(s) and ${tokens} placed token(s)`);
   }
+}
+
+/** World drones deployed before 0.3.110 may lack machine.jumpInCapable. The gate already treats kind drone as capable; this stores the flag. */
+async function migrateDroneJumpIn() {
+  if (!game.user?.isGM) return;
+  const updates = [];
+  for (const actor of game.actors ?? []) {
+    const patch = droneJumpInSourceUpdate(actor);
+    if (!patch) continue;
+    updates.push({ _id: actor.id, ...patch });
+  }
+  if (!updates.length) return;
+  await Actor.updateDocuments(updates);
+  console.log(`${MODULE_ID} | Jump-In Capable stamped on ${updates.length} drone Actor(s)`);
 }
 
 
@@ -746,12 +798,12 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
 
   // Chassis-specific stamp from Item flags (Integrity/Speed/Jump-In/Handling); bands stay fallback.
   const vehicleFlags = item.getFlag(MODULE_ID, "vehicle") ?? {};
-  const jumpInCapable = !!(vehicleFlags.jumpInCapable || vehicleFlags.jumpIn)
-    || [...(owner?.items ?? [])].some(mod => {
-      const data = mod.getFlag(MODULE_ID, "mod");
-      return data && data.installedOn === item.id && (mod.system?._dsid === "rigger-cocoon" || data.jumpInCapable);
-    });
+  const cocoon = [...(owner?.items ?? [])].some(mod => {
+    const data = mod.getFlag(MODULE_ID, "mod");
+    return data && data.installedOn === item.id && (mod.system?._dsid === "rigger-cocoon" || data.jumpInCapable);
+  });
   const kind = vehicleFlags.baseAsset ? "baseAsset" : (vehicle.drone ? "drone" : "vehicle");
+  const jumpInCapable = chassisJumpInCapable(vehicleFlags, { cocoon });
   // syncMachineMods already wrote these. Repeat them here so this patch cannot blank the kit line.
   const modSheet = machineModSheetFields(item);
   const machinePatch = {
@@ -867,11 +919,15 @@ export function registerMachines() {
       ...(data?.flags?.[MODULE_ID] ?? {}),
       ...(actor.flags?.[MODULE_ID] ?? {}),
     };
-    const update = actorBloodsplatUpdate({
+    const subject = {
       flags: { [MODULE_ID]: gw },
       prototypeToken: actor.prototypeToken ?? data.prototypeToken,
-    });
-    if (update) actor.updateSource(update);
+    };
+    const update = {
+      ...(actorBloodsplatUpdate(subject) ?? {}),
+      ...(droneJumpInSourceUpdate(subject) ?? {}),
+    };
+    if (Object.keys(update).length) actor.updateSource(update);
   });
   Hooks.on("preCreateToken", (token, data, _options, userId) => {
     if (userId !== game.user.id) return;
@@ -882,6 +938,7 @@ export function registerMachines() {
     if (update) token.updateSource(update);
   });
   Hooks.once("ready", migrateMachineScorch);
+  Hooks.once("ready", migrateDroneJumpIn);
 
   // Hero sheet: right-click a drone or vehicle row (or its ⋮ control) → Deploy / Recall.
   Hooks.on("getDocumentListContextOptions", (app, menuItems) => {
@@ -986,6 +1043,7 @@ export function registerMachines() {
       describeWeaponryKit, machineModSheetFields, machineModMirrorData,
       fleetSizeCap, fieldedMachineCount, machineTokenSize, isDeployedMachineActor, hasAnyToken,
       applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
+      isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
     };
   }
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);

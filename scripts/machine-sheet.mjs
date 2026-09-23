@@ -12,6 +12,7 @@
 //   ClientDocument#_getSheetClass honours and which makes core swap an already-open sheet for us.
 
 import { jumpIn, jumpOut, isJumpedInto } from "./rigger-vertical.mjs";
+import { isJumpInCapable, machineKindOf } from "./machines.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const SHEET_CLASS_NAME = "GhostwireMachineSheet";
@@ -97,6 +98,8 @@ export function defineMachineSheet() {
         tags: "",
       }, actor.getFlag(MODULE_ID, "machine") ?? {}, { inplace: false });
       if (!machine.kind) machine.kind = actor.getFlag(MODULE_ID, "kind") ?? "drone";
+      // Drones are always Jump-In capable. The checkbox shows that even when an older Actor never stored the flag.
+      if (machineKindOf(actor) === "drone") machine.jumpInCapable = true;
       const ownerUuid = actor.getFlag(MODULE_ID, "ownerUuid") ?? "";
       const jumpedIn = isJumpedInto(actor);
       return {
@@ -129,7 +132,7 @@ export function defineMachineSheet() {
         isGM: game.user.isGM,
         tokenImg: actor.prototypeToken?.texture?.src ?? actor.img,
         jumpedIn,
-        canJumpIn: !!machine.jumpInCapable && !jumpedIn && !!ownerUuid,
+        canJumpIn: isJumpInCapable(actor) && !jumpedIn && !!ownerUuid,
         inventoryItems: [...actor.items]
           .map(item => {
             const typeKey = `TYPES.Item.${item.type}`;
