@@ -64,6 +64,14 @@ const drones = chassis.filter(doc => gw(doc).vehicle.drone);
 const crewed = chassis.filter(doc => !gw(doc).vehicle.drone);
 const machineMods = modsPack.filter(doc => doc.path.startsWith("vehicles/"));
 
+// F18 Base Assets (Door Lock, Beacon, benches, …) ride the vehicles pack as placeable Items, not
+// buildable chassis: they deliberately ship with no Fabricate Project card and no machine-mod-slot
+// paragraph, so §7 carves them out of both rules. Price and Project-field checks still cover them
+// — the benches carry real Project goals. The flag is truthy-not-boolean on the beacon
+// (`baseAsset: "safehouse-beacon"`, read by scripts/machines.mjs), so test it the way the rest of
+// the codebase does rather than `=== true`.
+const buildableChassis = chassis.filter(doc => !gw(doc).vehicle.baseAsset);
+
 console.log("S8 vehicles / drones / machine mods smoke (0.3.98)\n");
 
 console.log("1) Ship surface");
@@ -177,11 +185,11 @@ for (const doc of modsPack) {
   if (!entry?.Name || !entry?.Description) missingLang.push(doc.system._dsid);
 }
 note(missingLang.length === 0, `every SKU resolves a lang Name + Description (offenders: ${missingLang.join(", ") || "none"})`);
-const noFabricate = chassis.filter(doc => !langVehicles[langKeyOf(doc)].Description.includes("Fabricate (§Craft Project)"));
-note(noFabricate.length === 0, `every chassis card prints its Fabricate Project (offenders: ${noFabricate.map(d => d.system._dsid).join(", ") || "none"})`);
+const noFabricate = buildableChassis.filter(doc => !langVehicles[langKeyOf(doc)].Description.includes("Fabricate (§Craft Project)"));
+note(noFabricate.length === 0, `every buildable chassis card prints its Fabricate Project (base assets carved out; offenders: ${noFabricate.map(d => d.system._dsid).join(", ") || "none"})`);
 const modLinkCount = desc => (desc.match(/@UUID\[Compendium\.draw-steel-ghostwire\.mods\.Item\./g) ?? []).length;
-const staleSlots = chassis.filter(doc => modLinkCount(langVehicles[langKeyOf(doc)].Description) !== machineMods.length);
-note(staleSlots.length === 0, `every chassis mod-slot paragraph links all ${machineMods.length} machine mods (offenders: ${staleSlots.map(d => d.system._dsid).join(", ") || "none"})`);
+const staleSlots = buildableChassis.filter(doc => modLinkCount(langVehicles[langKeyOf(doc)].Description) !== machineMods.length);
+note(staleSlots.length === 0, `every buildable chassis mod-slot paragraph links all ${machineMods.length} machine mods (base assets carved out; offenders: ${staleSlots.map(d => d.system._dsid).join(", ") || "none"})`);
 const noProjectLine = machineMods.filter(doc => !langMods[langKeyOf(doc)].Description.includes("Fabricate (§Craft Project)"));
 note(noProjectLine.length === 0, `every machine-mod card prints its Fabricate Project (offenders: ${noProjectLine.map(d => d.system._dsid).join(", ") || "none"})`);
 

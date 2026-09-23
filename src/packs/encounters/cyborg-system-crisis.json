@@ -2,7 +2,7 @@
   "_id": "694pALMZYaADjUoh",
   "_key": "!tables!694pALMZYaADjUoh",
   "name": "GHOSTWIRE.Encounters.Tables.CyborgSystemCrisis",
-  "img": "icons/commodities/tech/blue-cog-bolt.webp",
+  "img": "icons/commodities/tech/cog-brass.webp",
   "description": "<p>F15 — the Cyborg death-spiral replacement. A full Cyborg who would enter the dying track enters <strong>System Crisis</strong> instead: no dying saves, no dying strikes, and magic healing does nothing. Roll <strong>2d6</strong> once, here, for severity.</p><p><em>Optional modifiers:</em> <strong>−1</strong> for a soft or scrapheap chassis, <strong>+1</strong> for a military or overclocked one.</p><p><em>Reboot:</em> an adjacent ally with Repair, Medicine, or Cybertech — or a Wrench or Medic — spends a <strong>maneuver</strong> and makes a Power Roll. Brick never field-reboots.</p><p><em>Not F12.</em> Crisis is not the Suppressed / Damaged / Destroyed chrome track applied to the Cyborg as a whole, it is not a Body Integrity debit, and it never deletes an Item. Only the Cascade row touches living Chrome, and it does so through the ordinary chrome track.</p>",
   "results": [
     {
