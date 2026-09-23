@@ -26,6 +26,7 @@ import { registerMods, modSlotsLabel, softwareEdges } from "./mods.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
+import { weaponSkillBonus } from "./weapon-skills.mjs";
 import { registerPayloadUse } from "./payload-use.mjs";
 import { registerFreeStrikeStrip } from "./free-strikes.mjs";
 import { registerCasterChrome } from "./caster-chrome.mjs";
@@ -223,6 +224,21 @@ function patchWiredAbilities() {
       if (edges || banes) {
         const modifiers = config.modifiers ?? {};
         config = { ...config, modifiers: { ...modifiers, edges: (modifiers.edges ?? 0) + edges, banes: (modifiers.banes ?? 0) + banes } };
+      }
+
+      // G4 / B49 — the skill that backs this weapon is worth RAW's flat +2 on its own attack roll,
+      // the same benefit Draw Steel's skill dropdown grants on a test. A spawned weapon ability has
+      // no skill dropdown to pick from, so the mapping applies it (scripts/weapon-skills.mjs).
+      //
+      // It has to ride in on `dialogOptions`, not `config`: AbilityModel#use copies `config.modifiers`
+      // for edges and banes only, and then does `context.modifiers.bonuses ??= 0`. Seeding the
+      // dialog context is the one path the system leaves open, and it also means the player *sees*
+      // the +2 sitting in the roll dialog and can clear it if the Director rules otherwise.
+      const { bonus, skill } = weaponSkillBonus(this.parent, actor);
+      if (bonus) {
+        const seeded = (dialogOptions.context?.modifiers?.bonuses ?? 0) + bonus;
+        dialogOptions = foundry.utils.mergeObject(dialogOptions, { context: { modifiers: { bonuses: seeded } } }, { inplace: false });
+        console.debug(`${MODULE_ID} | ${actor.name}: ${this.parent.name} +${bonus} from ${skill}`);
       }
     }
 

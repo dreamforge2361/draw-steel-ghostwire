@@ -13,6 +13,8 @@
 //
 // Using it goes through the normal ability pipeline, so it produces the `abilityUse` chat part that
 // B40 listens for and the sound plays with no extra wiring.
+import { weaponSkillKey } from "./weapon-skills.mjs";
+
 const MODULE_ID = "draw-steel-ghostwire";
 const TEMPLATES_PATH = `modules/${MODULE_ID}/scripts/data/weapon-use-templates.json`;
 const L = "GHOSTWIRE.EquipmentUse";
@@ -109,7 +111,9 @@ export function buildUseAbility(gearItem) {
         },
       },
     },
-    flags: { [MODULE_ID]: { fromGearId: gearItem.id, fromGearUuid: gearItem.uuid } },
+    // `weaponSkill` caches the G4 mapping so the roll patch in module.mjs does not have to walk back
+    // to the gear on every use; `null` is a real answer (grenades, nets) and is stored as one.
+    flags: { [MODULE_ID]: { fromGearId: gearItem.id, fromGearUuid: gearItem.uuid, weaponSkill: weaponSkillKey(gearItem) } },
   };
 }
 
@@ -201,5 +205,5 @@ export function registerEquipmentUse() {
   });
 
   const module = game.modules.get(MODULE_ID);
-  if (module) module.api = { ...(module.api ?? {}), syncWeaponAbilities: syncActor, buildUseAbility, isWeaponTreasure };
+  if (module) module.api = { ...(module.api ?? {}), syncWeaponAbilities: syncActor, buildUseAbility, isWeaponTreasure, weaponSkillKey };
 }
