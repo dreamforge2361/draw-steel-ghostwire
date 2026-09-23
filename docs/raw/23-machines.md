@@ -501,3 +501,5 @@ Fiction lock (L5): software AI is legal; **direct AI control of kinetic hardware
 > **In Foundry**
 > No separate Hands Off automation yet. Use Machine/Wrench rules as printed; treat Accords as lifestyle/Trace/opposition pressure.
 
+
+> **Foundry 0.3.105:** E1 Door Lock / Safehouse Beacon / Camera-Sensor Mast (plus thin Sentry Turret, Mesh-Web, Barricade, Workshop Bench) ship as dual Items+Actors under Vehicles › Base Assets. Machine sheet is the pared Ghostwire sheet (Description/Notes/portrait required).

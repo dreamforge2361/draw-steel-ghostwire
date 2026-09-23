@@ -133,3 +133,12 @@ No drone needs a large band yet (the heaviest drones are Vehicle scale). One air
 - Numeric pass: real Integrity / Speed / Armor / Handling per chassis; then 1:1 Actors for signature SKUs if wanted.
 - **Mule-Bot (0.3.75):** Vehicles pack **treasure** SKU is the inventory / Deploy path (`drone-medium` band, same as Stinger / Warhound). A named Summons Actor is optional Director placement for an unowned mule — not a replacement for the treasure Item.
 - Player-side Deploy without Director permissions (socket to the GM), Wrench Deploy & Command hook, Fleet Size enforcement, Jump-In buffer automation.
+
+
+## 5. Rigger vertical (0.3.105)
+
+- **Ghostwire Machine sheet** for Actors flagged `kind` = `drone` | `vehicle` | `baseAsset`. Required fields: portrait, token art, Description, Notes (plus Integrity/Speed/Jump-In/Handling/Build/Inventory/Links).
+- **Fleet Size refuse** in `deployMachine`: 3@L1 / 4@L4 / 5@L7 / 6@L10; Drone Jockey Wide Band +2 / Redoubled +4.
+- **Chassis stamp:** Item `flags.draw-steel-ghostwire.vehicle.integrity|speed|jumpInCapable|handling` override band defaults when present.
+- **Base assets** live under Vehicles › Base Assets (Door Lock, Safehouse Beacon, Camera/Sensor Mast + thin Sentry / Mesh-Web / Barricade / Workshop Bench). Dual Item + Actor; `vehicle.baseAsset` resolves band `drone-small` as scaffold.
+- **Jump-In / Deploy & Command:** see `scripts/rigger-vertical.mjs`. Control rig chrome remains bonus-only; Jump-In Capable frame **or** Rigger Cocoon required.

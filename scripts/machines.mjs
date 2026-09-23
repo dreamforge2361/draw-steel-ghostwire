@@ -41,6 +41,9 @@ const VEHICLE_SPEED_BANDS = {
 export function machineBand(item) {
   const vehicle = item?.getFlag(MODULE_ID, "vehicle");
   if (!vehicle) return null;
+  // Base assets (Door Lock / Beacon / Mast / …) use the small-drone band as a stamp scaffold;
+  // Item integrity/speed overrides still win in deployMachine.
+  if (vehicle.baseAsset) return "drone-small";
   const domain = String(vehicle.domain ?? "").toLowerCase();
   const scale = String(vehicle.scale ?? "").toLowerCase();
   if (vehicle.drone) {
@@ -308,6 +311,25 @@ function placement(owner, size) {
   return { x: Math.round((x - ((size * grid) / 2)) / grid) * grid, y: Math.round((y - ((size * grid) / 2)) / grid) * grid };
 }
 
+
+/** Fleet Size: 3@L1, 4@L4, 5@L7, 6@L10. Drone Jockey Wide Band +2 / Redoubled +4. */
+export function fleetSizeCap(actor) {
+  const level = Number(actor?.system?.level ?? 1) || 1;
+  let cap = 3;
+  if (level >= 10) cap = 6;
+  else if (level >= 7) cap = 5;
+  else if (level >= 4) cap = 4;
+  const ids = new Set([...(actor?.items ?? [])].map(i => i.system?._dsid).filter(Boolean));
+  if (ids.has("wide-band-redoubled")) cap += 4;
+  else if (ids.has("wide-band")) cap += 2;
+  return cap;
+}
+
+export function fieldedMachineCount(actor) {
+  if (!(actor instanceof Actor)) return 0;
+  return [...actor.items].filter(item => machineBand(item) && deployedMachine(item)).length;
+}
+
 /** Deploy a drone or vehicle Item: stamp its band template into a linked Actor and place a token. */
 export async function deployMachine(item) {
   const band = machineBand(item);
@@ -316,6 +338,17 @@ export async function deployMachine(item) {
   if (!game.user.can("ACTOR_CREATE") || !game.user.can("TOKEN_CREATE")) return ui.notifications.warn(game.i18n.localize(`${UI}.NoPermission`));
   const existing = deployedMachine(item);
   if (existing) return ui.notifications.warn(game.i18n.format(`${UI}.AlreadyDeployed`, { name: item.name }));
+
+  const ownerForFleet = item.parent instanceof Actor ? item.parent : null;
+  if (ownerForFleet) {
+    const cap = fleetSizeCap(ownerForFleet);
+    const fielded = fieldedMachineCount(ownerForFleet);
+    if (fielded >= cap) {
+      return ui.notifications.warn(game.i18n.format(`${UI}.FleetFull`, {
+        name: ownerForFleet.name, fielded, cap,
+      }));
+    }
+  }
 
   const template = await templateFor(band);
   if (!template) return ui.notifications.error(game.i18n.format(`${UI}.NoTemplate`, { band }));
@@ -358,6 +391,50 @@ export async function deployMachine(item) {
   await addWireKit(actor, { notify: false });
   await item.setFlag(MODULE_ID, "deployed", { actorUuid: actor.uuid });
   await syncMachineMods(item);
+
+  // Chassis-specific stamp from Item flags (Integrity/Speed/Jump-In/Handling); bands stay fallback.
+  const vehicleFlags = item.getFlag(MODULE_ID, "vehicle") ?? {};
+  const jumpInCapable = !!(vehicleFlags.jumpInCapable || vehicleFlags.jumpIn)
+    || [...(owner?.items ?? [])].some(mod => {
+      const data = mod.getFlag(MODULE_ID, "mod");
+      return data && data.installedOn === item.id && (mod.system?._dsid === "rigger-cocoon" || data.jumpInCapable);
+    });
+  const kind = vehicleFlags.baseAsset ? "baseAsset" : (vehicle.drone ? "drone" : "vehicle");
+  const machinePatch = {
+    [`flags.${MODULE_ID}.kind`]: kind,
+    [`flags.${MODULE_ID}.machine`]: {
+      kind,
+      sizeScale: vehicleFlags.scale ?? vehicleFlags.sizeScale ?? "",
+      movementMode: vehicleFlags.movementMode ?? "",
+      jumpInCapable,
+      controlMode: vehicleFlags.controlMode ?? (vehicle.drone ? "remote" : "crew"),
+      handling: vehicleFlags.handling ?? "standard",
+      domain: vehicleFlags.domain ?? vehicle.domain ?? "",
+      modSlots: Number(vehicleFlags.modSlots ?? vehicleFlags.slots ?? 0) || 0,
+      installedModsText: "",
+      cargo: "",
+      mounts: "",
+      sensors: "",
+      homeGround: !!(vehicleFlags.homeGround || vehicleFlags.beacon),
+      beacon: !!(vehicleFlags.beacon || vehicleFlags.baseAsset === "safehouse-beacon"),
+      profile: vehicleFlags.profile ?? "",
+      tags: Array.isArray(vehicleFlags.tags) ? vehicleFlags.tags : [],
+    },
+    [`flags.${MODULE_ID}.ownerUuid`]: owner?.uuid ?? null,
+    [`flags.${MODULE_ID}.gearItemUuid`]: item.uuid,
+  };
+  if (vehicleFlags.speed != null || vehicleFlags.speedValue != null) {
+    machinePatch["system.movement.value"] = Number(vehicleFlags.speed ?? vehicleFlags.speedValue);
+  }
+  if (vehicleFlags.integrity != null || vehicleFlags.stamina != null) {
+    const chassisOverride = Number(vehicleFlags.integrity ?? vehicleFlags.stamina);
+    const total = chassisOverride + armorBonus;
+    machinePatch["system.stamina"] = { value: total, max: chassisOverride, temporary: 0 };
+    machinePatch[`flags.${MODULE_ID}.chassisStamina`] = chassisOverride;
+  }
+  const itemDesc = item.system?.description?.value;
+  if (itemDesc && !actor.system.biography?.value) machinePatch["system.biography.value"] = itemDesc;
+  await actor.update(machinePatch);
 
   const size = actor.system.combat.size.value;
   const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });
@@ -471,6 +548,7 @@ export function registerMachines() {
       chassisStamina, armorStaminaBonus, machineStamina, machineWeaponry,
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
+      fleetSizeCap, fieldedMachineCount,
     };
   }
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);

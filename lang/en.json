@@ -5684,7 +5684,8 @@
         "Air": "Air",
         "Water": "Water & Submersible",
         "Space": "Space",
-        "Drones": "Drones"
+        "Drones": "Drones",
+        "BaseAssets": "Base Assets"
       },
       "Items": {
         "Rustbucket": {
@@ -6034,6 +6035,34 @@
         "TideWraith": {
           "Name": "Tide-Wraith",
           "Description": "<p><em>Tide-Wraith · Apex Aquadrone · elite silent wet hunter</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥34,000 · <strong>Mod slots:</strong> 5 · <strong>Tags:</strong> Aquatic, Stealth, Combat, Jump-In-Capable, Wired</p><p><strong>Domain:</strong> Water (drone) · <strong>Scale:</strong> Vehicle</p><p><strong>Profile:</strong> A Deep-Viper with the noise taken out. Sits on the floor of a flood canal for a day, then takes a hull, a diver, or a Leviathan’s screw and is gone before the sonar settles.</p><p><strong>Stat block:</strong> Integrity (Stamina), Handling, and Speed numbers come in the damage/status pass. Armor kits add Stamina, not damage reduction. Mounted weapons come from a Weaponry kit (Gunnery) or a factory mount.</p><p><strong>Fabricate (§Craft Project):</strong> Goal 600 · Repair (Might or Reason) · <strong>Prerequisites:</strong> ¥17,000 in chassis salvage, drive stock, and sealed hull stock and a link head; a prototype bench and a Director-gated parts list · <strong>Yield:</strong> one Tide-Wraith chassis · a single machine, unmodded. Project points come from Lifestyle project slots like any other Draw Steel Project.</p><p><strong>Mod slots (5):</strong> Fill them with vehicle/drone mods from <strong>Ghostwire Mods — Vehicle &amp; Drone Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.eQecSEZsQbEha9NC]{Scrap-Weld}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.3Gm5TNWoneP0tI8N]{Plate-Up}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.yBf28QdlONHik8Tp]{Combat Plate}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.ncSy3J7Ig64vmOeI]{Aegis Kit}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.uAceY1wfNHacnAtN]{Gun Rack}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.XVW0fos7O7NuW9Ix]{Twin Mount}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.W1Qoa7BRh4WvHXvT]{Turret Ring}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.C0I6LZZwrZPtZgcq]{Heavy Hardpoint}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModBurnerPlt00]{Burner Plates}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModLaneSkirt00]{Lane Skirt}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModSpoolRig000]{Spool Rig}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModDropHarn000]{Drop Harness}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.AcUt2kYQzvFuZy8u]{Runflats}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModSignalMule0]{Signal Mule}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.YRFhnTnCJkrAjRAi]{Ammo Bin}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.C84pf5SAJelQ7Ur1]{Tune Kit}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.YAtDg7LUVjASb4xI]{Sensor Pod}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModGhostRein00]{Ghost Rein}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModDeepShell00]{Deep Shell}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModSpoofCowl00]{Spoof Cowl}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.yghJWLNP3Z0Ah4EH]{Rigger Cocoon}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.BmkU18rfNLFsZFXy]{Ghost Coat}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModKickDrive00]{Kick Drive}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.gwModStormLatt00]{Storm Lattice}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Repair or Electronics); toggling an installed mod is a field action.</p>"
+        },
+        "DoorLock": {
+          "Name": "Door Lock",
+          "Description": "<p>E1 mag-lock plate. Dual Item + Actor. Anyone may place it.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "SafehouseBeacon": {
+          "Name": "Safehouse Beacon",
+          "Description": "<p>E1 Home Ground beacon. Facility Riggers jacked in gain edge in the base.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "CameraSensorMast": {
+          "Name": "Camera/Sensor Mast",
+          "Description": "<p>E1 sensor mast. Surveillance feed; anyone may place it.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "SentryTurret": {
+          "Name": "Sentry Turret",
+          "Description": "<p>Thin E1+ hardpoint. Rigged Fire stays ability rolls.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "MeshWeb": {
+          "Name": "Mesh-Web",
+          "Description": "<p>Thin corridor tripwire mesh.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "BarricadeCover": {
+          "Name": "Barricade/Cover",
+          "Description": "<p>Thin fold-out cover screen.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "WorkshopBench": {
+          "Name": "Workshop Bench",
+          "Description": "<p>Stub fabricator bench — Projects only.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
         }
       }
     },
@@ -7665,7 +7694,7 @@
           "Folder": "Deployed Machines",
           "Deployed": "{name} deployed: Stamina (Integrity) {stamina}, speed {speed}.",
           "Recalled": "{name} recalled; the Item stays in the inventory.",
-          "AlreadyDeployed": "{name} is already deployed. Recall it first.",
+          "AlreadyDeployed": "{name} is already fielded.",
           "NotMachine": "Only drone and vehicle Items from Ghostwire Vehicles & Drones can be deployed.",
           "NoScene": "View a Scene before deploying a machine.",
           "NoPermission": "Deploying creates an Actor and a token; ask the Director to deploy it (players need Create Actors and Create Tokens permission).",
@@ -7676,7 +7705,69 @@
           "WeaponryKit": "{name} (Gunnery hardpoint)",
           "WeaponryKitHint": "<p>Installed weaponry kit. Fire mounted Category-3 weapons with Gunnery (Wrench Rigged Fire or a gunner station). Flags live on this Actor at flags.draw-steel-ghostwire.installedKits.weaponry. One weaponry kit at a time.</p>",
           "OtherKit": "{name}",
-          "DirectorKitHint": "<p>Installed machine mod. Foundry flags it on this Actor (flags.draw-steel-ghostwire.installedKits). The Director applies the catalog edge, bane, or convenience at the table — Ghostwire does not auto-modify Piloting/Rigging/Gunnery Power Rolls for this kit.</p>"
+          "DirectorKitHint": "<p>Installed machine mod. Foundry flags it on this Actor (flags.draw-steel-ghostwire.installedKits). The Director applies the catalog edge, bane, or convenience at the table — Ghostwire does not auto-modify Piloting/Rigging/Gunnery Power Rolls for this kit.</p>",
+          "SheetTitle": "Ghostwire Machine",
+          "PortraitHint": "Click to change portrait",
+          "TokenArt": "Token art",
+          "Kind": "Kind",
+          "KindDrone": "Drone",
+          "KindVehicle": "Vehicle",
+          "KindBaseAsset": "Base Asset",
+          "Band": "Band",
+          "Tags": "Tags",
+          "TabCombat": "Combat",
+          "TabControl": "Control",
+          "TabBuild": "Build",
+          "TabInventory": "Inventory",
+          "TabLinks": "Links",
+          "TabStory": "Story",
+          "Integrity": "Integrity (Stamina)",
+          "SizeScale": "Size / Scale",
+          "Speed": "Speed",
+          "MovementMode": "Movement mode",
+          "JumpInCapable": "Jump-In Capable",
+          "ControlMode": "Control mode",
+          "Handling": "Handling",
+          "JumpIn": "Jump-In",
+          "JumpOut": "Jump-Out",
+          "Echelon": "Echelon",
+          "Domain": "Domain",
+          "ModSlots": "Mod slots",
+          "InstalledMods": "Installed mods",
+          "Cargo": "Cargo",
+          "Mounts": "Mounts",
+          "Sensors": "Sensors",
+          "OwnerUuid": "Owner UUID",
+          "GearItemUuid": "Gear Item UUID",
+          "HomeGround": "Home Ground",
+          "Beacon": "Safehouse Beacon",
+          "Profile": "Short profile",
+          "Description": "Description",
+          "Notes": "Notes",
+          "NoOwner": "No owner linked — set Owner UUID before Jump-In.",
+          "FleetFull": "{name} is at Fleet Size cap ({fielded}/{cap}). Stand one down before Deploy.",
+          "MeatInert": "Meat Body Inert",
+          "MeatInertHint": "While Jump-In is live, the meat body is inert and exposed.",
+          "HomeGroundEdge": "Facility Rigger — Home Ground Edge",
+          "HomeGroundEdgeHint": "Jacked into your Safehouse Beacon / Home Ground: edge on rolls in this base.",
+          "JumpInNotCapable": "{name} is not Jump-In Capable (needs the flag or a Rigger Cocoon).",
+          "JumpInOk": "{pilot} jumps into {machine} (Jacked In; meat inert).",
+          "JumpOutOk": "{pilot} drops Jump-In.",
+          "UptimeDrainManual": "Uptime drain {amount} on {pilot} ({reason}) — apply manually.",
+          "UptimeDrained": "{pilot} loses {amount} Uptime (now {current}) — {reason}.",
+          "NoOwnedMachines": "No owned machine Items to Deploy or Command.",
+          "FleetStatus": "Fleet {fielded} / {cap}",
+          "PickMachine": "Machine",
+          "DeployCommandHint": "Deploy places a new token. Command opens a fielded machine. Jump-In deploys if needed, then jacks in.",
+          "DeployCommandTitle": "Deploy & Command",
+          "Command": "Command",
+          "StatusDeployedShort": "fielded",
+          "StatusStowedShort": "stowed",
+          "NotDeployed": "{name} is not fielded.",
+          "CommandOpen": "Commanding {name}.",
+          "MachineHit": "hit on {name}",
+          "Biofeedback": "Biofeedback: {pilot} takes {amount} Stamina.",
+          "BiofeedbackManual": "Biofeedback on {pilot} (lost {lost}) — apply manually."
         },
         "SealCruiser": {
           "Name": "Seal Cruiser",
@@ -7693,6 +7784,34 @@
         "CrashAngel": {
           "Name": "Crash Angel",
           "Description": "<p><em>Crash Angel · Laz Chopper · Lazarus Extract (LAZ) medevac VTOL</em></p><p><strong>Lazarus Extract (LAZ) rescue / medevac chopper.</strong> White/red twin ducted VTOL, hoist/winch visible. Street tag: Laz chopper. Domain Air. Free-climb flying. Suggested token <strong>3×3</strong> (art is 1254², fit contain). Friendly, no ring.</p><p><strong>Place:</strong> Drag this Actor from <strong>Ghostwire Summons &amp; Machines › Drones &amp; Vehicles</strong> onto a Scene. Linked token. Hero-owned copies: Vehicles pack Item → <strong>Deploy</strong> (band <code>vehicle-air</code>).</p><p><strong>Placeholder stats:</strong> Integrity (Stamina) 40, speed 14 fly (fast). Numeric pass not done.</p><p><strong>Wire:</strong> Ships with Wire Kit — Matrix Verbs (Connect interface). Starts Disconnected until Connect.</p><p><strong>Library SKU:</strong> @UUID[Compendium.draw-steel-ghostwire.vehicles.Item.gwCrashAngelItm0]{Crash Angel} in Ghostwire Vehicles &amp; Drones.</p>"
+        },
+        "DoorLock": {
+          "Name": "Door Lock",
+          "Description": "<p>E1 mag-lock plate. Dual Item + Actor. Anyone may place it.</p>"
+        },
+        "SafehouseBeacon": {
+          "Name": "Safehouse Beacon",
+          "Description": "<p>E1 Home Ground beacon. Facility Riggers jacked in gain edge in the base.</p>"
+        },
+        "CameraSensorMast": {
+          "Name": "Camera/Sensor Mast",
+          "Description": "<p>E1 sensor mast. Surveillance feed; anyone may place it.</p>"
+        },
+        "SentryTurret": {
+          "Name": "Sentry Turret",
+          "Description": "<p>Thin E1+ hardpoint. Rigged Fire stays ability rolls.</p>"
+        },
+        "MeshWeb": {
+          "Name": "Mesh-Web",
+          "Description": "<p>Thin corridor tripwire mesh.</p>"
+        },
+        "BarricadeCover": {
+          "Name": "Barricade/Cover",
+          "Description": "<p>Thin fold-out cover screen.</p>"
+        },
+        "WorkshopBench": {
+          "Name": "Workshop Bench",
+          "Description": "<p>Stub fabricator bench — Projects only.</p>"
         }
       },
       "Nodes": {

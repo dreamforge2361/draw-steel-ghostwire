@@ -1,0 +1,77 @@
+{
+  "_id": "kB0V7GKK7WOik8wr",
+  "_key": "!items!kB0V7GKK7WOik8wr",
+  "name": "GHOSTWIRE.Vehicles.Items.SafehouseBeacon.Name",
+  "type": "treasure",
+  "img": "icons/magic/symbols/rune-sigil-green.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.SafehouseBeacon.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "23-machines",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "safehouse-beacon",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥600 in scrap, fasteners, and a Wire splice; any flat wall or floor",
+      "source": "Ghostwire Machines — Base Assets",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Safehouse Beacon · placed as a dual Item + Actor."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 1200,
+        "modSlots": 2,
+        "tags": [
+          "Beacon",
+          "Home Ground",
+          "Fixed"
+        ],
+        "modFamily": [
+          "vehicle",
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": "safehouse-beacon",
+        "integrity": 20,
+        "stamina": 20,
+        "speed": 0,
+        "jumpInCapable": true,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": true,
+        "homeGround": true,
+        "profile": "Home Ground anchor. Link it to a hero. A Facility Rigger jacked into this beacon gains edge on everything in the base.",
+        "sizeScale": "S"
+      }
+    }
+  }
+}

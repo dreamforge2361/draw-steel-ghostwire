@@ -17,6 +17,8 @@ import { registerWiredNodeVerbs } from "./wired-node-verbs.mjs";
 import { registerWiredKit } from "./wired-kit.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
 import { registerMachines } from "./machines.mjs";
+import { registerRiggerVertical } from "./rigger-vertical.mjs";
+import { registerMachineSheet } from "./machine-sheet.mjs";
 import { registerStreetEye } from "./street-eye.mjs";
 import { registerKitGrants } from "./kit-grants.mjs";
 import { registerSprites } from "./sprites.mjs";
@@ -108,6 +110,8 @@ Hooks.once("init", () => {
   registerRunGenerator();
   registerWiredVision({ statusIds: { overlay: WIRED_STATUSES.overlay.id, jackedIn: WIRED_STATUSES.jackedIn.id } });
   registerMachines();
+  registerRiggerVertical();
+  registerMachineSheet();
   registerStreetEye();
   registerKitGrants();
   registerSprites();

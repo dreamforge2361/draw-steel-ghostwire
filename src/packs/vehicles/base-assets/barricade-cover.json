@@ -1,0 +1,76 @@
+{
+  "_id": "tpbOVdhud5XZmqVl",
+  "_key": "!items!tpbOVdhud5XZmqVl",
+  "name": "GHOSTWIRE.Vehicles.Items.BarricadeCover.Name",
+  "type": "treasure",
+  "img": "icons/environment/settlement/palisade.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.BarricadeCover.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "23-machines",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "barricade-cover",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥200 in scrap, fasteners, and a Wire splice; any flat wall or floor",
+      "source": "Ghostwire Machines — Base Assets",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Barricade/Cover · placed as a dual Item + Actor."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 400,
+        "modSlots": 0,
+        "tags": [
+          "Cover",
+          "Fixed"
+        ],
+        "modFamily": [
+          "vehicle",
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 24,
+        "stamina": 24,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Fold-out ballistic screen. Gives cover; dies loud when Integrity hits 0.",
+        "sizeScale": "L"
+      }
+    }
+  }
+}

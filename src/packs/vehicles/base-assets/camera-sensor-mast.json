@@ -1,0 +1,77 @@
+{
+  "_id": "T97IWdcEfje2op9p",
+  "_key": "!items!T97IWdcEfje2op9p",
+  "name": "GHOSTWIRE.Vehicles.Items.CameraSensorMast.Name",
+  "type": "treasure",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.CameraSensorMast.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "23-machines",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "camera-sensor-mast",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥300 in scrap, fasteners, and a Wire splice; any flat wall or floor",
+      "source": "Ghostwire Machines — Base Assets",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Camera/Sensor Mast · placed as a dual Item + Actor."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 600,
+        "modSlots": 2,
+        "tags": [
+          "Sensors",
+          "Surveillance",
+          "Fixed"
+        ],
+        "modFamily": [
+          "vehicle",
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 10,
+        "stamina": 10,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Telescoping mast with a cheap optic and a Wire ping. Anyone can place it; Riggers get cleaner feeds.",
+        "sizeScale": "S"
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "N7s6fWaoiJnThTdZ",
+  "_key": "!items!N7s6fWaoiJnThTdZ",
+  "name": "GHOSTWIRE.Vehicles.Items.DoorLock.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/dial-lock-steel.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.DoorLock.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "23-machines",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "door-lock",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥125 in scrap, fasteners, and a Wire splice; any flat wall or floor",
+      "source": "Ghostwire Machines — Base Assets",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Door Lock · placed as a dual Item + Actor."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 250,
+        "modSlots": 1,
+        "tags": [
+          "Security",
+          "Fixed"
+        ],
+        "modFamily": [
+          "vehicle",
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 8,
+        "stamina": 8,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Mag-lock plate bolted to a doorframe. Anyone can place it; it holds a door until cut or spoofed.",
+        "sizeScale": "T"
+      }
+    }
+  }
+}
