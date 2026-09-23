@@ -33,22 +33,23 @@ the rim is clean after the resample. Everything else is cut from the highest-res
 repo: the pre-compress PNG masters under `assets/pregens/_pre-compress-backup/`, or the 1024×1536
 print portraits for Wren (who has no `*_circle` in the bundle at all).
 
-## One thing to look at, Michael
+## Vira's human token — open call, now closed (0.3.121 R2b)
 
-The brief locked `vira_circle → vira-kellis-nade-human`, and that is what shipped. But `vira_circle`
-is cut from the **hybrid** plate — it has the rat ears. So today Vira's *human*-form token reads
-hybrid, and it is near-identical to her hybrid token, which makes her human↔hybrid swap invisible on
-the canvas (her sheet portrait still swaps correctly).
+The original brief locked `vira_circle → vira-kellis-nade-human`, and that is what first shipped. But
+`vira_circle` is cut from the **hybrid** plate — it has the rat ears — so Vira's *human*-form token
+read hybrid, and her human↔hybrid swap was invisible on the canvas (the sheet portrait always swapped
+correctly). Michael called it: cut the human token from the human plate.
 
-If that is not what you want, it is one row in `SOURCES` (`tools/pregen-round-tokens.mjs`):
+**Fixed.** That one row in `SOURCES` (`tools/pregen-round-tokens.mjs`) now reads:
 
 ```js
-{ stem: "vira-kellis-nade-human", circle: `${PRINT}/vira_circle.png` },
-// becomes
 { stem: "vira-kellis-nade-human", plate: `${MASTERS}/vira-kellis-nade-human.png` },
 ```
 
-then `node tools/pregen-round-tokens.mjs --force` and the rebuild below. Nothing else changes.
+`assets/tokens/pregens/vira-kellis-nade-human.webp` was rebuilt from
+`assets/pregens/_pre-compress-backup/vira-kellis-nade-human.png` (1280×720 → centred 720² crop →
+1024² disc). `vira_circle.png` is no longer read by the tool. Nothing else changed — no version bump,
+no pack rebuild, and the actor JSON already pointed at this file name.
 
 ## Runtime
 

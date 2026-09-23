@@ -51,13 +51,12 @@ export const SOURCES = [
   { stem: "kessic-draye", circle: `${PRINT}/null_circle.png` },
   { stem: "sabbat-vane", circle: `${PRINT}/sabbat_circle.png` },
   { stem: "vessa-corran-dov", circle: `${PRINT}/vessa_circle.png` },
-  // Michael's locked mapping (brief 0.3.121 R2, step 3). NOTE for the next art pass: vira_circle
-  // is cut from the *hybrid* plate (rat ears), so Vira's human-form token reads hybrid. Swapping
-  // this one row to `{ stem: "vira-kellis-nade-human", plate: `${MASTERS}/vira-kellis-nade-human.png` }`
-  // is the whole fix if Michael wants the human plate instead — see the director note.
-  { stem: "vira-kellis-nade-human", circle: `${PRINT}/vira_circle.png` },
 
   // --- cut from square plates --------------------------------------------------------------
+  // Vira's human form is cut from her own human master, not from vira_circle: that print circle is
+  // cut off the *hybrid* plate (rat ears), so the human token read as hybrid (fixed in 0.3.121 R2b).
+  // Her head sits on the centre line of the 1280×720 plate, so the default centred crop lands it.
+  { stem: "vira-kellis-nade-human", plate: `${MASTERS}/vira-kellis-nade-human.png` },
   { stem: "vira-kellis-nade-hybrid", plate: `${MASTERS}/vira-kellis-nade-hybrid.png` },
   // The rat sits right of centre on a 16:9 plate — pan the crop onto its head without losing the body.
   { stem: "vira-kellis-nade-beast", plate: `${MASTERS}/vira-kellis-nade-beast.png`, focusX: 0.62 },

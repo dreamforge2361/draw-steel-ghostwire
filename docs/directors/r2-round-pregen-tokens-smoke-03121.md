@@ -67,11 +67,10 @@ Stats tab → **Changer Forms** box.
 ## 4. Changer form swaps — Vira
 
 - [ ] Same three clicks on **Vira Kellis-Nade**. Sheet and token both follow the form.
-- [ ] **Known, flagged:** Vira's **Human** token is currently cut from the *hybrid* plate (it has the
-      rat ears), because the brief locked `vira_circle → vira-kellis-nade-human` and `vira_circle` is a
-      crop of the hybrid art. Her human↔hybrid swap therefore looks nearly identical **on the canvas**
-      (the sheet portrait swaps correctly). One row in `tools/pregen-round-tokens.mjs` flips it —
-      see the director note. **Michael's call.**
+- [ ] **Fixed in 0.3.121 R2b:** Vira's **Human** token used to be cut from the *hybrid* plate (rat
+      ears), so her human↔hybrid swap looked nearly identical on the canvas. It is now cut from
+      `assets/pregens/_pre-compress-backup/vira-kellis-nade-human.png`. Check that the **Human**
+      token has **no rat ears** and is visibly a different picture from the **Hybrid** token.
 
 ## 5. The form art pickers
 
