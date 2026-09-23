@@ -1,4 +1,4 @@
-# Mod Install chat card — 0.3.111
+# Mod Install chat card and Jump-In denial — 0.3.111
 
 **Lock:** Michael smoke on Allfather after 0.3.110. Install onto… put Heavy Hardpoint on the Bulldog sheet and the toast fired. The chat card did not.
 
@@ -17,3 +17,18 @@ A successful Install onto… posts `type: "standard"`, style OTHER (so v14 does 
 1. Update to **0.3.111** and F5.
 2. On a hero, Install onto… **Heavy Hardpoint** on a **Bulldog**. The chat log shows the card (who, mod, host, slots). The toast can still appear. If the Bulldog is already fielded, the card names that machine.
 3. A refused install (no slots, wrong family) stays a notification and does not post a card.
+
+## Jump-In on a non-capable vehicle
+
+**Lock:** Same smoke. Jump-In on a Bulldog with Jump-In Capable unchecked and no Rigger Cocoon rolled, showed no denial, and did not set Jacked In.
+
+The Machine sheet button and `jumpIn()` already warn. Two other paths rolled anyway:
+
+- **Jump-In (Signature Platform)** (`jump-in-signature-platform`) is a Draw Steel power roll. Nothing called `jumpIn`.
+- **Deploy & Command** opened the picker, `jumpIn` could warn, then the ability's power roll still ran.
+
+Both now stop before that roll. A single targeted or fielded machine that is not capable shows `JumpInNotCapable`. Drones still pass. A vehicle with the flag or a Rigger Cocoon still sets Jacked In and meat inert (the signature ability does that after its test completes; the picker does it directly and does not also roll).
+
+4. Field a **Bulldog**. Leave Jump-In Capable off. Do not install Rigger Cocoon. Use **Jump-In (Signature Platform)**, and use Deploy & Command → Jump-In. Each shows the denial. No power-roll card. Jacked In stays off.
+5. Tick Jump-In Capable, or install **Rigger Cocoon**, and Jump-In again. The pilot is Jacked In and meat-inert.
+6. A drone still Jump-Ins with the flag off.

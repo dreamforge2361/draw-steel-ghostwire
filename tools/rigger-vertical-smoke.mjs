@@ -147,6 +147,7 @@ const {
   describeWeaponryKit, machineModSheetFields, machineModMirrorData, kitProfile,
   isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
 } = await import("../scripts/machines.mjs");
+const { jumpInCandidates, jumpInUsePlan, jumpInDenialKey } = await import("../scripts/rigger-vertical.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
 
@@ -419,6 +420,40 @@ const doorProto = readJson("src/packs/summons/machines/machine-base-door-lock.js
 note(doorProto.flags[MODULE_ID].machine?.jumpInCapable === false, "Door Lock prototype stays not Jump-In capable");
 const riggerSrc = readFileSync("scripts/rigger-vertical.mjs", "utf8");
 note(riggerSrc.includes("isJumpInCapable(machineActor)"), "jumpIn uses the drone gate");
+note(riggerSrc.includes("jump-in-signature-platform"), "signature Jump-In ability is intercepted before its power roll");
+note(riggerSrc.includes('picked?.action === "jumpIn"') && riggerSrc.includes("return null"),
+  "Deploy & Command Jump-In does not fall through into the power roll");
+const machineActor = (id, name, kind, machine = {}, items = []) => ({
+  id, name, items,
+  flags: { [MODULE_ID]: { kind, machine } },
+});
+const plainBulldog = machineActor("bull", "Bulldog", "vehicle", { jumpInCapable: false });
+const flaggedBulldog = machineActor("flag", "Bulldog", "vehicle", { jumpInCapable: true });
+const cocoonBulldog = machineActor("cocoon", "Bulldog", "vehicle", {}, [{ system: { _dsid: "rigger-cocoon" } }]);
+const rotor = machineActor("rot", "Rotor", "drone", {});
+const meatHero = machineActor("hex", "Hex", "hero");
+const incapablePlan = jumpInUsePlan(jumpInCandidates({ fielded: [plainBulldog] }), { capable: isJumpInCapable });
+note(incapablePlan.reason === "incapable" && jumpInDenialKey(incapablePlan) === "JumpInNotCapable",
+  "a lone non-capable Bulldog is denied before any roll");
+const targetedPlan = jumpInUsePlan(jumpInCandidates({ targets: [plainBulldog], fielded: [rotor] }), { capable: isJumpInCapable });
+note(targetedPlan.machine?.id === "bull" && jumpInDenialKey(targetedPlan) === "JumpInNotCapable",
+  "a targeted Bulldog is the Jump-In target even when a drone is also fielded");
+const heroTargetPlan = jumpInUsePlan(jumpInCandidates({ targets: [meatHero], fielded: [plainBulldog] }), { capable: isJumpInCapable });
+note(heroTargetPlan.machine?.id === "bull" && heroTargetPlan.reason === "incapable",
+  "a targeted hero falls through to the fielded Bulldog");
+const dronePlan = jumpInUsePlan(jumpInCandidates({ targets: [rotor] }), { capable: isJumpInCapable });
+note(dronePlan.proceed === true && jumpInDenialKey(dronePlan) === null, "a drone Jump-In is allowed");
+const flagPlan = jumpInUsePlan(jumpInCandidates({ fielded: [flaggedBulldog] }), { capable: isJumpInCapable });
+note(flagPlan.proceed === true, "a flagged vehicle Jump-In is allowed");
+const cocoonPlan = jumpInUsePlan(jumpInCandidates({ fielded: [cocoonBulldog] }), { capable: isJumpInCapable });
+note(cocoonPlan.proceed === true, "a Rigger Cocoon vehicle Jump-In is allowed");
+const manyPlan = jumpInUsePlan(jumpInCandidates({ fielded: [plainBulldog, rotor] }), { capable: isJumpInCapable });
+note(manyPlan.reason === "many" && jumpInDenialKey(manyPlan) === "JumpInPickOne",
+  "two fielded machines ask for a target instead of rolling");
+const nonePlan = jumpInUsePlan(jumpInCandidates({}), { capable: isJumpInCapable });
+note(nonePlan.reason === "none" && jumpInDenialKey(nonePlan) === "JumpInNoTarget", "no machine refuses Jump-In");
+note(ui.JumpInNotCapable?.includes("{name}"), "lang JumpInNotCapable names the machine");
+note(typeof ui.JumpInNoTarget === "string" && typeof ui.JumpInPickOne === "string", "lang JumpInNoTarget and JumpInPickOne");
 note(sheetSrc.includes('machineKindOf(actor) === "drone"'), "Machine sheet shows drones as Jump-In capable");
 note(machinesSrc.includes("migrateDroneJumpIn"), "ready pass stores Jump-In on world drones");
 

@@ -11,6 +11,7 @@ import {
   fleetSizeCap,
   fieldedMachineCount,
   isJumpInCapable,
+  isMachineKindDocument,
 } from "./machines.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -57,10 +58,11 @@ export function isJumpedInto(machineActor) {
 }
 
 export async function jumpIn(pilot, machineActor) {
-  if (!(pilot instanceof Actor) || !(machineActor instanceof Actor)) return;
+  if (!(pilot instanceof Actor) || !(machineActor instanceof Actor)) return false;
   const machine = machineActor.getFlag(MODULE_ID, "machine") ?? {};
   if (!isJumpInCapable(machineActor)) {
-    return ui.notifications.warn(game.i18n.format(`${UI}.JumpInNotCapable`, { name: machineActor.name }));
+    ui.notifications.warn(game.i18n.format(`${UI}.JumpInNotCapable`, { name: machineActor.name }));
+    return false;
   }
   const prior = pilot.getFlag(MODULE_ID, "jumpedInto");
   if (prior) {
@@ -75,6 +77,86 @@ export async function jumpIn(pilot, machineActor) {
   await machineActor.setFlag(MODULE_ID, "jumpedInBy", pilot.uuid);
   if (machine.beacon || machine.homeGround) await ensureHomeGroundEdge(pilot, machineActor);
   ui.notifications.info(game.i18n.format(`${UI}.JumpInOk`, { pilot: pilot.name, machine: machineActor.name }));
+  return true;
+}
+
+const JUMP_IN_ABILITY_DSID = "jump-in-signature-platform";
+
+function uniqueActors(list) {
+  const seen = new Set();
+  const out = [];
+  for (const actor of list) {
+    if (!actor) continue;
+    const id = actor.id ?? actor.uuid;
+    if (id && seen.has(id)) continue;
+    if (id) seen.add(id);
+    out.push(actor);
+  }
+  return out;
+}
+
+/**
+ * Machines a Jump-In can land on, most specific first.
+ * A targeted machine token beats a controlled one, which beats every fielded owned machine.
+ * Non-machines in the target set are ignored so a targeted hero falls through to the fielded frame.
+ */
+export function jumpInCandidates({ targets = [], controlled = [], fielded = [] } = {}) {
+  const machines = list => uniqueActors(list.filter(actor => isMachineKindDocument(actor)));
+  const targeted = machines(targets);
+  if (targeted.length) return targeted;
+  const held = machines(controlled);
+  if (held.length) return held;
+  return machines(fielded);
+}
+
+/**
+ * Whether an ability use may roll. One incapable machine is a denial, not a roll.
+ * Several machines and none targeted is also a denial — guessing would jack the wrong frame.
+ * @param {object[]} candidates
+ * @param {{ capable?: (actor: object) => boolean }} [options]
+ */
+export function jumpInUsePlan(candidates, { capable = () => false } = {}) {
+  const list = Array.isArray(candidates) ? candidates : [];
+  if (!list.length) return { proceed: false, reason: "none" };
+  if (list.length > 1) return { proceed: false, reason: "many" };
+  const machine = list[0];
+  if (!capable(machine)) return { proceed: false, reason: "incapable", machine };
+  return { proceed: true, machine };
+}
+
+/** Lang key under GHOSTWIRE.Summons.Machines.UI for a refused plan, or null when the use may roll. */
+export function jumpInDenialKey(plan) {
+  if (!plan || plan.proceed) return null;
+  if (plan.reason === "incapable") return "JumpInNotCapable";
+  if (plan.reason === "many") return "JumpInPickOne";
+  return "JumpInNoTarget";
+}
+
+function tokenActors(tokens) {
+  const out = [];
+  for (const token of tokens ?? []) {
+    const actor = token?.actor ?? token?.document?.actor ?? null;
+    if (actor) out.push(actor);
+  }
+  return out;
+}
+
+function planJumpInUse(pilot) {
+  return jumpInUsePlan(jumpInCandidates({
+    targets: tokenActors(game.user?.targets),
+    controlled: tokenActors(canvas?.tokens?.controlled),
+    fielded: ownedMachineItems(pilot).map(item => deployedMachine(item)).filter(Boolean),
+  }), { capable: isJumpInCapable });
+}
+
+function denyJumpIn(plan) {
+  const key = jumpInDenialKey(plan);
+  if (key === "JumpInNotCapable") {
+    ui.notifications.warn(game.i18n.format(`${UI}.JumpInNotCapable`, { name: plan.machine?.name ?? "" }));
+  } else if (key) {
+    ui.notifications.warn(game.i18n.localize(`${UI}.${key}`));
+  }
+  return null;
 }
 
 export async function jumpOut(pilot) {
@@ -203,8 +285,10 @@ export async function openDeployCommandPicker(actor) {
   if (result.action === "jumpIn") {
     let deployed = deployedMachine(item);
     if (!deployed) deployed = await deployMachine(item);
+    // jumpIn warns and returns false when the frame is not capable. Either way this action
+    // is finished: the caller must not fall through into Deploy & Command's power roll.
     if (deployed) await jumpIn(actor, deployed);
-    return deployed;
+    return { action: "jumpIn" };
   }
 }
 
@@ -217,8 +301,19 @@ function patchDeployAndCommandUse() {
   const prior = AbilityModel.prototype.use;
   AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
     const dsid = this._dsid ?? this.parent?.system?._dsid;
-    if (dsid === "deploy-and-command" && this.actor) {
-      await openDeployCommandPicker(this.actor);
+    // Jump-In (Signature Platform) is a real power roll. The sheet never called jumpIn, so a
+    // non-capable Bulldog rolled, posted a card, and left Jacked In untouched.
+    if ((dsid === JUMP_IN_ABILITY_DSID) && this.actor) {
+      const plan = planJumpInUse(this.actor);
+      if (!plan.proceed) return denyJumpIn(plan);
+      const message = await prior.call(this, config, dialogOptions, messageOptions);
+      if (!message) return message;
+      await jumpIn(this.actor, plan.machine);
+      return message;
+    }
+    if ((dsid === "deploy-and-command") && this.actor) {
+      const picked = await openDeployCommandPicker(this.actor);
+      if (picked?.action === "jumpIn") return null;
     }
     return prior.call(this, config, dialogOptions, messageOptions);
   };
