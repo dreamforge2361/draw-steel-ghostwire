@@ -176,7 +176,11 @@
       "disposition": false
     },
     "movementAction": null,
-    "flags": {},
+    "flags": {
+      "monks-bloodsplats": {
+        "bloodsplat-type": "scorch"
+      }
+    },
     "randomImg": false,
     "appendNumber": false,
     "prependAdjective": false,
