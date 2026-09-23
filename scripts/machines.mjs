@@ -702,16 +702,19 @@ export async function ensureFleetLinked(pilot) {
 
 /**
  * What an empty fleet should do to the pilot's wire.
- * Jump-In clears and the pilot returns to Linked. Already-Linked stays Linked
- * (Recall must not drop fleet command to Disconnected). Overlay stays.
+ * Jump-In clears and the pilot returns to Linked. Any state the pilot chose stays:
+ * already-Linked stays Linked (Recall must not drop fleet command to Disconnected),
+ * Overlay stays, and a Matrix Jacked In — deep immersion with no machine, reached from
+ * the Toggle Connection State ladder — is NOT a Jump-In and must not be jacked out here.
+ * Only the `jumpedInto` flag / meat-inert effect marks a seat to leave.
  * A hero who was never on the wire stays disconnected.
  * Base assets count toward `fielded` the same way Fleet Size does.
  * @returns {{ jumpOut: boolean, linked: boolean }}
  */
 export function fleetIdleWirePlan({ fielded = 0, state = "disconnected", jumpedIn = false, fleetLinked = false } = {}) {
   if (fielded > 0) return { jumpOut: false, linked: false };
-  if (state === "jackedIn" || jumpedIn) return { jumpOut: true, linked: true };
-  if (state === "linked" || state === "overlay") return { jumpOut: false, linked: false };
+  if (jumpedIn) return { jumpOut: true, linked: true };
+  if (ON_NET_STATES.includes(state)) return { jumpOut: false, linked: false };
   if (fleetLinked) return { jumpOut: false, linked: true };
   return { jumpOut: false, linked: false };
 }

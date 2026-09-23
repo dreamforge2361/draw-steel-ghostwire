@@ -47,6 +47,9 @@ Seat abilities stay usable while Jacked In: Deploy & Command, Rigged Fire, Field
 
 Recall, last-token delete, and deleting the deployed Actor all go through `clearFleetLinkedIfIdle`. When `fieldedMachineCount` hits 0 (base assets count, same as Fleet Size), Jump-Out clears meat inert and the jumped-into flags, then `ensureFleetLinked` stamps **Linked**. Already Linked stays Linked. Overlay stays Overlay. A hero who was never Linked or Jacked In stays disconnected.
 
+Only a real machine seat is left. The seat is read off the `jumpedInto` flag and the meat-inert effect, not off the Jacked In status: **Jacked In** is also reachable with no machine at all, from Connect or the Toggle Connection State ladder (Linked → Overlay → Jacked In). A Wrench deep in the Matrix who Recalls their last drone stays Jacked In — an empty fleet never drops a wire state the pilot chose.
+
 8. Jump into a fielded Bulldog. Recall it (or delete its token or Actor) so nothing is fielded. Jacked In and meat inert are gone. The pilot is **Linked**.
 9. Deploy while Disconnected, then Recall the last machine. The pilot stays **Linked**.
 10. A hero who never Deployed and is not on the wire stays disconnected after an unrelated delete.
+11. Jack into the Matrix with Toggle Connection State (no Jump-In), with one drone fielded. Recall it. The pilot stays **Jacked In** — no "drops Jump-In" toast.

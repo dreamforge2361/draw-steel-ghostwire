@@ -473,7 +473,17 @@ note(!fleetIdleWirePlan({ fielded: 0, state: "overlay" }).linked, "Overlay is no
 note(!fleetIdleWirePlan({ fielded: 0, state: "disconnected" }).linked, "a pure-meat hero is not forced onto the wire");
 note(fleetIdleWirePlan({ fielded: 1, state: "jackedIn", jumpedIn: true }).jumpOut === false, "a remaining fielded machine does not Jump-Out");
 note(fleetIdleWirePlan({ fielded: 0, state: "disconnected", fleetLinked: true }).linked, "fleet-command with the status missing still returns to Linked");
+// Jacked In is also reachable with no machine at all (Connect / Toggle Connection State, scripts/module.mjs).
+// Recalling the last drone must not jack a deep-immersion pilot out of the Matrix.
+const matrixJacked = fleetIdleWirePlan({ fielded: 0, state: "jackedIn", jumpedIn: false });
+note(!matrixJacked.jumpOut && !matrixJacked.linked, "a Matrix Jacked In pilot with no seat is not jacked out by an empty fleet");
+note(fleetIdleWirePlan({ fielded: 0, state: "jackedIn", jumpedIn: false, fleetLinked: true }).jumpOut === false,
+  "fleet-command Linked history does not jack a Matrix Jacked In pilot out");
 note(machinesSrc.includes("fleetIdleWirePlan"), "Recall and Actor delete share the empty-fleet wire plan");
+note((machinesSrc.match(/clearFleetLinkedIfIdle\(owner\)/g) ?? []).length >= 2,
+  "the deleteActor hook runs the empty-fleet wire plan, not just Recall");
+note(/deleteActor[\s\S]{0,900}?clearFleetLinkedIfIdle/.test(machinesSrc),
+  "deleting the deployed Actor returns the pilot to Linked");
 note(!machinesSrc.includes("WIRED_STATUS_DEFS.linked.id, { active: false }"), "Recall no longer clears Linked");
 note(sheetSrc.includes('machineKindOf(actor) === "drone"'), "Machine sheet shows drones as Jump-In capable");
 note(machinesSrc.includes("migrateDroneJumpIn"), "ready pass stores Jump-In on world drones");
