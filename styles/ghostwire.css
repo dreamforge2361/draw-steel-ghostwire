@@ -1439,6 +1439,10 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border: 1px solid var(--kiosk-border);
 }
 .ghostwire-kiosk .gw-kiosk-row-name { font-weight: 600; }
+/* F23b — the name is the second way into the item card; the Card button is the first. */
+.ghostwire-kiosk .gw-kiosk-row-name[data-action="viewListing"] { cursor: pointer; }
+.ghostwire-kiosk .gw-kiosk-row-name[data-action="viewListing"]:hover { text-decoration: underline; }
+.ghostwire-kiosk .gw-kiosk-btn-view { color: var(--kiosk-muted); }
 .ghostwire-kiosk .gw-kiosk-row-price { display: flex; gap: 0.45rem; align-items: baseline; font-size: 0.85rem; }
 .ghostwire-kiosk .gw-kiosk-row-price strong { color: var(--kiosk-cyan); }
 .ghostwire-kiosk .gw-kiosk-row-edit {
@@ -2074,6 +2078,18 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 
 /* F17 identity band line, same slot as the chrome lines */
 .ghostwire-identity-line { font-size: var(--font-size-12, 12px); letter-spacing: 0.02em; color: var(--ghostwire-text-muted); }
+
+/* F18 Workshop benches — sheet line + the respite report card */
+.ghostwire-bench-line {
+  font-size: var(--font-size-12, 12px); letter-spacing: 0.02em;
+  color: var(--ghostwire-text-muted);
+}
+.ghostwire-bench-card h3 {
+  margin: 0 0 0.25rem; font-size: var(--font-size-14, 14px);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.ghostwire-bench-card p { margin: 0.15rem 0; }
+.ghostwire-bench-card .hint { font-size: var(--font-size-11, 11px); color: var(--ghostwire-text-muted); }
 .ghostwire-identity-burn,
 .ghostwire-identity-paper { color: var(--color-level-warning, #d08a2a); }
 .ghostwire-identity-deep,
@@ -2142,6 +2158,28 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   margin: 0.25rem 0 0; font-weight: 600; color: var(--ghostwire-accent-hot);
 }
 .ghostwire-crit-card .hint { margin: 0.35rem 0 0; font-size: var(--font-size-11, 11px); }
+
+/* F11 (0.3.117) — Critical badge + the extra-main-action affordance */
+.ghostwire-crit-badge {
+  display: inline-block; margin-right: 0.4rem; padding: 0 0.35rem;
+  border: 1px solid var(--ghostwire-accent-hot); border-radius: 2px;
+  font-size: var(--font-size-10, 10px); font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ghostwire-accent-hot);
+  background: color-mix(in srgb, var(--ghostwire-accent-hot) 12%, transparent);
+}
+.ghostwire-crit-card .ghostwire-crit-extra { margin: 0.35rem 0 0; }
+.ghostwire-crit-card .ghostwire-crit-extra button {
+  width: 100%; line-height: 1.6;
+  border: 1px solid var(--ghostwire-accent-hot);
+  color: var(--ghostwire-accent-hot);
+  background: color-mix(in srgb, var(--ghostwire-accent-hot) 10%, transparent);
+}
+.ghostwire-crit-card .ghostwire-crit-extra button:disabled { opacity: 0.5; cursor: default; }
+.ghostwire-crit-card .ghostwire-crit-warn {
+  margin: 0.35rem 0 0; font-size: var(--font-size-11, 11px); color: #e2a33c;
+}
+.ghostwire-crit-extra-taken { margin: 0; }
 
 /* F13 Cover/Conceal chat line */
 .ghostwire-cover-conceal-card { margin: 0; border-left: 3px solid #8fd4a8; padding-left: 0.5rem; }

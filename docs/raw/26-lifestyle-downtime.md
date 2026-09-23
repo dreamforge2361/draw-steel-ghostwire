@@ -62,11 +62,27 @@ Mid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not re
 | **High** | **3** |
 | **Elite** | **4** |
 
-A **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots.
+A **project slot** is one downtime job you can finish or meaningfully advance this respite: a **Project** as `03` prints it (Power Roll, progress 1 / 2 / 3 toward a goal), or an equivalent block the Director folds into a montage. Typical Projects: §Craft installs (`10`), chrome surgery (`09`), Ritual Workings (`22`), Learn New Language (`07`), Discover Lore (`03`). The Director may collapse or expand slots for montage pacing. ¥ does not buy extra slots — the one printed exception is a **workshop bench** you already own and have installed at the crew’s base (below), and that is capped at **+1**.
 
 **Max lodge / sanctum tier (casters):** Squatter — improvised only; Low → Middle → High → Elite map to rising lodge ceilings in Veil / foci text (`22`, gear Category 6). Paying Lifestyle does not buy a lodge; it **caps** how good a permanent sanctum that address can support. Portable lodge-kits still respect this cap.
 
 **Wrench Buildings:** a Building Stat Card's Lifestyle Hook plugs here (`16`). A Killbox or workshop designation can raise security or project capacity at the cost of comfort — Director adjudicates; do not invent Building ¥ in this chapter.
+
+**Workshop benches (project aids).** A bench is a bought, installed, placeable piece of base infrastructure — not a service and not a skill. While at least one bench is available at the crew’s base or on the scene for that respite:
+
+- You get **+1 Lifestyle project slot**. This is capped at **+1 in total no matter how many benches are placed** — six benches are not six slots — and it does not stack with another “extra slot” source unless that source explicitly says it stacks with workshop benches.
+- A Project Power Roll whose craft family **matches** the bench gains **one edge**. A wrong-family bench gives nothing, and several matching benches still give only the one edge.
+
+| Bench | Craft family it helps | E | Availability | ¥ |
+|---|---|---:|---|---:|
+| **Armorer's Bench** | Armor, ballistic, and personal-defense Craft & Repair | 1 | Restricted | 8,000 |
+| **Weaponeer's Bench** | Weapons, ammunition, and weapon mods | 1 | Restricted | 10,000 |
+| **Chrome Bay** | Chrome install, removal, and repair (`09`) | 2 | Restricted | 18,000 |
+| **Matrix / Deck Lab** | Electronics, Hacking, and Program Craft | 2 | Restricted | 15,000 |
+| **Vehicle Depot** | Vehicle and drone Repair and mod installation | 2 | Restricted | 22,000 |
+| **Ritual Sanctum Tools** | Ritual Working Projects (`22`) | 2 | Restricted | 16,000 |
+
+A bench never waives **¥**, **Body Integrity**, or **Availability** on what the Project makes or installs; it buys a slot and an edge, nothing else. Sanctum tools do not raise a lodge ceiling — that cap still comes from your Lifestyle band above. The Facility Rigger's Home Ground / Safehouse Beacon stays a separate system (`16`, `23`). In Foundry a bench is a dual Item + Actor placeable like the other base assets; see `docs/directors/f18-workshop-benches.md`.
 
 ---
 

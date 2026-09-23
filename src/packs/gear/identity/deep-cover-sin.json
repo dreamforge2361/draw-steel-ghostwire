@@ -42,7 +42,7 @@
       "gear": {
         "echelon": 3,
         "availability": "restricted",
-        "price": 45000,
+        "price": 30000,
         "modSlots": 0,
         "tags": [
           "Identity",

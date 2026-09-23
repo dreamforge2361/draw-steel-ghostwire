@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 /**
- * F11 smoke (0.3.116): Critical Roll detection, feedback wiring, and the rule card.
+ * F11 smoke (0.3.117): Critical Roll detection, feedback wiring, the rule card, and automation.
+ *
+ * 0.3.117 retired natural doubles from RAW and made Ghostwire Criticals Draw Steel Criticals: a
+ * natural 19 or 20, always read at tier 3, and a main-action ability hands back a main action.
+ * Sections 14 and 15 assert that pass end to end, including that no doubles rule survives in RAW.
  *
  * Detection is executed for real against fake message shapes built to match what Draw Steel 1.1.2
  * actually creates (`message.rolls` plus `system.parts[].rolls`, PowerRoll-shaped objects carrying
@@ -14,8 +18,13 @@ import {
   CRIT_KINDS,
   CRIT_SOUND,
   CRIT_THRESHOLD,
+  CRIT_TIER,
+  MAIN_ACTION_TYPE,
   criticalFromNatural,
   criticalFromNaturals,
+  criticalTier,
+  criticalTierProblems,
+  grantsExtraMainAction,
   critKindFromParts,
   isPowerRollLike,
   messageCritical,
@@ -58,10 +67,10 @@ const testMessage = natural => ({
   system: { parts: { test000000000000: { type: "test", rolls: [powerRoll(natural)] } } },
 });
 
-console.log("F11 Critical Roll feedback smoke (0.3.116)\n");
+console.log("F11 Critical Roll feedback + automation smoke (0.3.117)\n");
 
 console.log("1) Ship surface");
-note(atLeast(module.version, "0.3.116"), `module.json is >= 0.3.116 (got ${module.version})`);
+note(atLeast(module.version, "0.3.117"), `module.json is >= 0.3.117 (got ${module.version})`);
 note(boot.includes("registerCritFeedback()"), "module.mjs registers registerCritFeedback");
 note(boot.includes('import { registerCritFeedback } from "./crit-feedback.mjs"'), "and imports it");
 note(CRIT_THRESHOLD === 19, `threshold is Draw Steel's 19 (got ${CRIT_THRESHOLD})`);
@@ -209,6 +218,70 @@ note(director.length > 1500, "docs/directors/crit-feedback-03116.md exists and i
 note(/natural 19 or 20/i.test(director), "the note states the trigger");
 note(/never reads a roll total/i.test(director), "and that a total can never fake a critical");
 note(/sword-crit\.ogg/.test(director), "and names the in-tree sound");
+
+console.log("\n14) 0.3.117 — Ghostwire Criticals are Draw Steel Criticals");
+note(CRIT_TIER === 3, `a critical is read at tier ${CRIT_TIER}`);
+note(criticalTier(true, 1) === 3, "a critical reported at tier 1 is still read at tier 3");
+note(criticalTier(true, undefined) === 3, "and a critical with no reported tier is tier 3");
+note(criticalTier(false, 2) === 2, "an ordinary roll keeps the tier the system reported");
+note(criticalTier(false, 9) === 3 && criticalTier(false, 0) === 1, "and a nonsense tier is clamped into 1-3");
+note(criticalTier(false, null) === 1, "an absent tier reads tier 1");
+note(criticalTierProblems([{ type: "abilityResult", tier: 3 }]).length === 0,
+  "a tier-3 ability result on a critical is no problem — the system already did the work");
+note(criticalTierProblems([{ type: "abilityResult", tier: 1 }]).join() === "1",
+  "a tier-1 ability result IS reported, so a system change cannot quietly pay tier-1 damage on a nat 20");
+note(criticalTierProblems([{ type: "test", tier: 1 }]).length === 0, "non-ability parts are not tier problems");
+note(criticalTierProblems().length === 0, "nothing-shaped is not a tier problem");
+note(messageCritical(abilityMessage(20)).tier === 3, "a critical ability message reports tier 3");
+note(messageCritical(abilityMessage(11)).tier === 3, "and a non-critical reports the tier the system built");
+
+// The extra main action: an ability used as a main action, and nothing else.
+note(MAIN_ACTION_TYPE === "main", `the ability type that earns another one is "${MAIN_ACTION_TYPE}"`);
+note(grantsExtraMainAction({ kind: "ability", abilityType: "main" }), "a main-action ability hands back a main action");
+note(!grantsExtraMainAction({ kind: "ability", abilityType: "maneuver" }), "a maneuver does not");
+note(!grantsExtraMainAction({ kind: "ability", abilityType: "triggered" }), "a triggered action does not");
+note(!grantsExtraMainAction({ kind: "ability", abilityType: "free" }), "a free action does not");
+note(!grantsExtraMainAction({ kind: "test", abilityType: "main" }), "a critical on a TEST does not — there is no main action to repeat");
+note(!grantsExtraMainAction({}) && !grantsExtraMainAction(), "nothing-shaped hands back nothing");
+note(src.includes("data-ghostwire-crit-extra"), "the rule card carries the extra-main-action affordance");
+note(typeof lang.GHOSTWIRE.Crit.Card.ExtraAction === "string", "and it has a label");
+note(/main action/i.test(lang.GHOSTWIRE.Crit.Chat.ExtraTaken), "taking it says so in chat");
+note(src.includes("ghostwire-crit-badge"), "the roll's own card gets a Critical badge");
+note(/tier 3/i.test(lang.GHOSTWIRE.Crit.BadgeHint), "whose tooltip states the tier-3 rule");
+note(css.includes(".ghostwire-crit-badge"), "CSS for the badge");
+note(css.includes(".ghostwire-crit-extra"), "and for the affordance");
+
+// A natural double is now just a number. [7,7] is 14.
+const doubles = face => ({
+  dice: [{ total: face * 2, results: [{ result: face, active: true }, { result: face, active: true }] }],
+  options: { criticalThreshold: CRIT_THRESHOLD },
+});
+const doublesMessage = face => ({
+  rolls: [doubles(face)],
+  system: { parts: { test000000000000: { type: "test", rolls: [doubles(face)] } } },
+});
+for (const face of [1, 3, 5, 7, 9]) {
+  note(!messageCritical(doublesMessage(face)).critical, `a natural [${face},${face}] is NOT a critical — doubles are retired`);
+}
+note(messageCritical(doublesMessage(10)).critical, "a natural [10,10] is a critical because it is a 20, not because it matched");
+// Source with every comment stripped: the file still *mentions* retired doubles in its header,
+// and that prose is the record of the change, not a rule.
+const critCode = src.replace(/^\s*\/\/.*$/gm, "").replace(/^\s*\*.*$/gm, "");
+note(!/double/i.test(critCode), "crit-feedback.mjs holds no doubles rule");
+
+console.log("\n15) RAW retired natural doubles");
+const tests = readFileSync("docs/raw/03-tests-power-rolls.md", "utf8");
+note(/^## Criticals$/m.test(tests), "03-tests has a Criticals section");
+note(!/^## Natural doubles and criticals$/m.test(tests), "and no Natural-doubles-and-criticals section");
+note(/A \*\*critical\*\* is a natural \*\*19 or 20\*\*/.test(tests), "it defines a critical as a natural 19 or 20");
+note(/gain \*\*another main action\*\*/.test(tests), "and that a main-action ability hands back a main action");
+note(/\*\*tier 3\*\* result/.test(tests), "and that the roll is read at tier 3");
+note(!/natural double is Ghostwire/.test(tests), "the old doubles-are-the-cue sentence is gone");
+note(!/is two matching faces on the first two dice/.test(tests), "and so is the doubles definition");
+note(/only the natural 19 or 20 is a critical/.test(tests), "RAW says so out loud, so nobody house-rules doubles back in");
+note(!/extra damage equal to your highest characteristic/.test(tests), "and the retired characteristic-damage rider is gone");
+note(/Natural \*\*19 or 20\*\*/.test(tests), "the chapter summary table prints the new rule");
+note(!/Natural doubles \/ criticals/.test(tests), "and no longer prints the old one");
 
 for (const line of ok) console.log(line);
 if (fail.length) {

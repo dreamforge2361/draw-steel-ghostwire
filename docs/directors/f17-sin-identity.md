@@ -25,20 +25,22 @@ A **hot check** — Military-grade security, a corp-side records pull, a Wired-s
 
 Five SIN rungs and four forged credentials, all in Ghostwire Gear › **Identity**.
 
-> **Prices re-cut in 0.3.116 (F23).** The ladder below is the current one. See
-> `docs/directors/papermill-pricing-03116.md` for what moved and why.
+> **Prices re-cut again in 0.3.117 (F23b).** The ladder below is the current one. 0.3.116 priced
+> illegal paper like crime and it played too steep, so the Restricted and Military bands took a soft
+> cut. See `docs/directors/papermill-pricing-03117.md` for what moved and why, and
+> `docs/directors/papermill-pricing-03116.md` for the pass before it.
 
 | Item | Q | E | ¥ | Availability |
 |---|---:|---:|---:|---|
 | **Burn SIN** | 1 | 1 | 500 | Street |
-| **Paper Ghost SIN** | 2 | 1 | 3,500 | Street |
-| **Broker SIN** | 3 | 2 | 15,000 | Restricted |
-| **Deep Cover SIN** | 4 | 3 | 45,000 | Restricted |
-| **Cradle-Seeded SIN** | 5 | 4 | 110,000 | Military |
-| **Lanyard Forgery** (corp badge) | 2 | 1 | 2,500 | Street |
-| **Clinic Credential (Forged)** | 3 | 2 | 8,000 | Restricted |
-| **Carry Permit (Forged)** (firearms) | 3 | 2 | 12,000 | Restricted |
-| **Wire Operator's Ticket (Forged)** | 4 | 3 | 28,000 | Restricted |
+| **Paper Ghost SIN** | 2 | 1 | 2,200 | Street |
+| **Broker SIN** | 3 | 2 | 9,000 | Restricted |
+| **Deep Cover SIN** | 4 | 3 | 30,000 | Restricted |
+| **Cradle-Seeded SIN** | 5 | 4 | 75,000 | Military |
+| **Lanyard Forgery** (corp badge) | 2 | 1 | 1,800 | Street |
+| **Clinic Credential (Forged)** | 3 | 2 | 5,000 | Restricted |
+| **Carry Permit (Forged)** (firearms) | 3 | 2 | 7,000 | Restricted |
+| **Wire Operator's Ticket (Forged)** | 4 | 3 | 18,000 | Restricted |
 
 Plus the pre-0.3.113 **Fake SIN (basic)** (¥1,000, Professional), which stays where it is in Gear › General › Lifestyle.
 

@@ -1,0 +1,84 @@
+{
+  "_id": "yaD2s581ThhnC3dX",
+  "_key": "!items!yaD2s581ThhnC3dX",
+  "name": "GHOSTWIRE.Vehicles.Items.ChromeBay.Name",
+  "type": "treasure",
+  "img": "icons/tools/medical/toolkit-surgical-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.ChromeBay.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "26-lifestyle-downtime",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chrome-bay",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥18,000 of fittings, power, and a floor that can take it; a Physical Upgrade Slot at the crew’s base (`16`)",
+      "source": "Ghostwire Lifestyle & Downtime — Workshop Benches",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Chrome Bay · placed as a dual Item + Actor."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 7200,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 18000,
+        "modSlots": 0,
+        "tags": [
+          "Workshop",
+          "Bench",
+          "Project",
+          "Fixed",
+          "Restricted"
+        ],
+        "modFamily": [
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 24,
+        "stamina": 24,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Workshop bench — Chrome install, removal, and repair. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.",
+        "sizeScale": "L"
+      },
+      "workshopBench": {
+        "family": "chrome",
+        "grantsExtraProjectSlot": true,
+        "slotCap": 1,
+        "edge": 1
+      }
+    }
+  }
+}

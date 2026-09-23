@@ -33,6 +33,7 @@ export const FOLDER_IDS = Object.freeze({
   modsGadgets: "WPSNKYe2217TSF7m",
   weaponsMounted: "njXhmoAVQCSiEekh",
   identity: "gwGearIdentity00",
+  baseAssets: "gwVehBaseAssets0",
 });
 
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? doc?.flags?.["draw-steel-ghostwire"] ?? {};
@@ -205,6 +206,20 @@ export const KIOSK_PRESETS = Object.freeze([
     },
   },
   {
+    // 0.3.117 (F18) — the fitters' yard. Workshop benches only: Restricted, expensive, and matched
+    // on `flags.workshopBench` so a seventh bench dropped into base-assets auto-stocks. Deliberately
+    // NOT the whole base-assets folder — Door Locks and Beacons are not Project aids and belong on
+    // a Safehouse shelf, not this one.
+    id: "benches",
+    langKey: "Benches",
+    match: {
+      packs: ["vehicles"],
+      pathPrefixes: ["base-assets"],
+      folderIds: [FOLDER_IDS.baseAssets],
+      workshopBench: true,
+    },
+  },
+  {
     // 0.3.113 (F17) — the papermill. SIN and forged-credential SKUs from gear/identity.
     // Matches the Identity folder + the Identity tag, so a new forgery auto-stocks.
     id: "identity",
@@ -258,6 +273,9 @@ function folderOf(item) {
 export function matchPresetItem(item, preset) {
   if (!item || !preset?.match) return false;
   const match = preset.match;
+  // `workshopBench` is a *gate*, not another any-of hit: the base-assets folder and path also hold
+  // Door Locks and Safehouse Beacons, which are not Project aids and must not reach this shelf.
+  if (match.workshopBench && !gwFlags(item).workshopBench) return false;
   const pack = packOf(item);
   if (match.packs?.length && pack && !match.packs.includes(pack)) return false;
   if (item.type && item.type !== "treasure" && item.type !== "Item") {

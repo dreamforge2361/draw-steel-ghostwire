@@ -1,0 +1,130 @@
+{
+  "_id": "694pALMZYaADjUoh",
+  "_key": "!tables!694pALMZYaADjUoh",
+  "name": "GHOSTWIRE.Encounters.Tables.CyborgSystemCrisis",
+  "img": "icons/commodities/tech/blue-cog-bolt.webp",
+  "description": "<p>F15 — the Cyborg death-spiral replacement. A full Cyborg who would enter the dying track enters <strong>System Crisis</strong> instead: no dying saves, no dying strikes, and magic healing does nothing. Roll <strong>2d6</strong> once, here, for severity.</p><p><em>Optional modifiers:</em> <strong>−1</strong> for a soft or scrapheap chassis, <strong>+1</strong> for a military or overclocked one.</p><p><em>Reboot:</em> an adjacent ally with Repair, Medicine, or Cybertech — or a Wrench or Medic — spends a <strong>maneuver</strong> and makes a Power Roll. Brick never field-reboots.</p><p><em>Not F12.</em> Crisis is not the Suppressed / Damaged / Destroyed chrome track applied to the Cyborg as a whole, it is not a Body Integrity debit, and it never deletes an Item. Only the Cascade row touches living Chrome, and it does so through the ordinary chrome track.</p>",
+  "results": [
+    {
+      "_id": "FN1CpGkCbdKf67Ml",
+      "_key": "!tables.results!694pALMZYaADjUoh.FN1CpGkCbdKf67Ml",
+      "type": "text",
+      "name": "Brick",
+      "description": "<p><strong>The chassis locks.</strong> Every actuator goes rigid, the optics go dark, and the Cyborg is an object. Treat them as unconscious. They can be carried, dragged, or loaded into a van, and nothing at the table brings them back in the field.</p><p><em>Recovery:</em> a <strong>Repair Project</strong> — goal 60, parts running about half a week of Middle Lifestyle — or a Machine God’s Rite or equivalent named ability. There is no field reboot.</p><p><em>Director:</em> this is the row that ends a runner’s night, not their career. Let the crew decide what carrying them costs.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        2,
+        3
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "severity": "brick",
+          "band": "2-3"
+        }
+      }
+    },
+    {
+      "_id": "XQ6CVp0zYUTCuzOK",
+      "_key": "!tables.results!694pALMZYaADjUoh.XQ6CVp0zYUTCuzOK",
+      "type": "text",
+      "name": "Cascade",
+      "description": "<p><strong>One system takes the surge.</strong> Pick one installed living Chrome Item at random: it escalates <strong>one step</strong> on the chrome damage track — Suppressed → Damaged → Destroyed — stopping at Destroyed. Then resolve the Crisis as <strong>Limp-Home</strong>.</p><p>If the Cyborg has no living Chrome installed, it is Limp-Home with a <strong>bane</strong> on the reboot roll instead.</p><p><em>Recovery:</em> reboot as Limp-Home, then deal with the chrome on its own terms in downtime.</p><p><em>Director:</em> this is the only row that touches Chrome at all, and it goes through the ordinary chrome track. Crisis is not chrome damage applied to the whole Cyborg.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        4,
+        5
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "severity": "cascade",
+          "band": "4-5"
+        }
+      }
+    },
+    {
+      "_id": "jFDeTVmBghVhcihD",
+      "_key": "!tables.results!694pALMZYaADjUoh.jFDeTVmBghVhcihD",
+      "type": "text",
+      "name": "Limp-Home",
+      "description": "<p><strong>Down until somebody reboots them.</strong> The chassis is intact but running on a degraded profile.</p><p><em>After the reboot:</em> Stamina equal to the Recoveries spent (minimum 1), <strong>speed halved</strong>, and a <strong>bane on tests</strong> until a full respite or a Field Repair clears it.</p><p><em>Recovery:</em> reboot now — an adjacent ally’s maneuver.</p><p><em>Director:</em> the most common result, and the one that keeps a Cyborg in the fight while making the rest of it hurt.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        6,
+        8
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "severity": "limp-home",
+          "band": "6-8"
+        }
+      }
+    },
+    {
+      "_id": "gjH5olLOlwhSrxkI",
+      "_key": "!tables.results!694pALMZYaADjUoh.gjH5olLOlwhSrxkI",
+      "type": "text",
+      "name": "Soft Reboot",
+      "description": "<p><strong>Down until rebooted, and nothing broke.</strong></p><p><em>After the reboot:</em> Stamina from Recoveries spent, no lasting bane. The reboot itself costs <strong>1 Recovery</strong>.</p><p><em>Recovery:</em> an ally’s maneuver reboot, or a printed self-reboot path if the Cyborg has one and has a Recovery left.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        9,
+        10
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "severity": "soft-reboot",
+          "band": "9-10"
+        }
+      }
+    },
+    {
+      "_id": "ZQ5KSyvtbf9UVCAb",
+      "_key": "!tables.results!694pALMZYaADjUoh.ZQ5KSyvtbf9UVCAb",
+      "type": "text",
+      "name": "Failover",
+      "description": "<p><strong>A redundant core catches it.</strong> Spend <strong>1 Recovery</strong>, stand with that Stamina, no aftermath. The Cyborg does not go down at all.</p><p><em>Once per respite.</em> A second System Crisis in the same respite is <strong>Limp-Home</strong> instead, whatever the dice say.</p><p><em>Recovery:</em> the Recovery is the recovery.</p>",
+      "img": null,
+      "weight": 1,
+      "range": [
+        11,
+        12
+      ],
+      "drawn": false,
+      "flags": {
+        "draw-steel-ghostwire": {
+          "severity": "failover",
+          "band": "11-12"
+        }
+      }
+    }
+  ],
+  "formula": "2d6",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 400000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "kind": "cyborg-system-crisis",
+      "feature": "F15",
+      "severities": [
+        "Brick",
+        "Cascade",
+        "Limp-Home",
+        "Soft Reboot",
+        "Failover"
+      ]
+    }
+  }
+}

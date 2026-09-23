@@ -1,0 +1,84 @@
+{
+  "_id": "vkd2QDlnZbQkxjGT",
+  "_key": "!items!vkd2QDlnZbQkxjGT",
+  "name": "GHOSTWIRE.Vehicles.Items.VehicleDepot.Name",
+  "type": "treasure",
+  "img": "icons/tools/hand/wrench-steel-grey.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.VehicleDepot.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "26-lifestyle-downtime",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "vehicle-depot",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥22,000 of fittings, power, and a floor that can take it; a Physical Upgrade Slot at the crew’s base (`16`)",
+      "source": "Ghostwire Lifestyle & Downtime — Workshop Benches",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Vehicle Depot · placed as a dual Item + Actor."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 7400,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 22000,
+        "modSlots": 0,
+        "tags": [
+          "Workshop",
+          "Bench",
+          "Project",
+          "Fixed",
+          "Restricted"
+        ],
+        "modFamily": [
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 28,
+        "stamina": 28,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Workshop bench — Vehicle and drone Repair and mod installation. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.",
+        "sizeScale": "L"
+      },
+      "workshopBench": {
+        "family": "vehicles",
+        "grantsExtraProjectSlot": true,
+        "slotCap": 1,
+        "edge": 1
+      }
+    }
+  }
+}

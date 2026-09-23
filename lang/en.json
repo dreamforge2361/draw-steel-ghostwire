@@ -250,12 +250,20 @@
           "Name": "Identity",
           "ActorName": "Papermill",
           "Tagline": "SINs and forged credentials — you get the quality you pay for."
+        },
+        "Benches": {
+          "Name": "Workshop Benches",
+          "ActorName": "The Fitters' Yard",
+          "Tagline": "Benches, bays and lifts. Restricted, expensive, and bolted down once it's yours."
         }
       },
       "Template": {
         "Name": "Street Vendor (Kiosk)",
         "Description": "<p>A placeable <strong>scene kiosk</strong>. Rename the Actor to the merchant or corp — <em>Mama’s Bar</em>, <em>ARG Lobby</em>, a street vendor — then stock Item UUIDs from Ghostwire Gear (or Chrome / Matrix / Mods / Vehicles / Foci / world items). Optional ¥ override per listing.</p><p>Directors can pick a <strong>kiosk type</strong> (Food, Medical, Tools, Armor, Weapons, Drones, Vehicles, Decks, Programs, Ammo, Mods) when placing from Token controls, or restock an existing kiosk from that preset. Price blank = catalog ¥. Stock is infinite in v1.</p><p>Players open it when their token is within <strong>range</strong> (default 2 grid squares). The Director can always open and edit. Purchase deducts <strong>nuyen</strong> and copies the Item onto the buyer.</p><p><strong>Place:</strong> Token controls › cash register (type picker), or drag this Actor onto the Scene. Double-click or the HUD cash register opens the shop — not the combat sheet.</p>"
-      }
+      },
+      "View": "Card",
+      "ViewHint": "Open the item card and read the rules — no ¥ changes hands.",
+      "PriceLocked": "Only the Director can change a catalog price."
     },
     "Skills": {
       "Groups": {
@@ -5235,35 +5243,35 @@
         },
         "BrokerSin": {
           "Name": "Broker SIN",
-          "Description": "<p><em>Broker SIN · quality 3 · clean enough to bank on</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥15,000 · <strong>Tags:</strong> Identity</p><p>Bought through a fixer who buys in volume: a retired person’s record, scrubbed and re-dated, with a credit history that pays its own small bills. This is where a working runner starts.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Broker SIN · quality 3 · clean enough to bank on</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥9,000 · <strong>Tags:</strong> Identity</p><p>Bought through a fixer who buys in volume: a retired person’s record, scrubbed and re-dated, with a credit history that pays its own small bills. This is where a working runner starts.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "DeepCoverSin": {
           "Name": "Deep Cover SIN",
-          "Description": "<p><em>Deep Cover SIN · quality 4 · a life somebody built</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥45,000 · <strong>Tags:</strong> Identity</p><p>A decade of consistent, boring existence: taxes, a lease, a gym membership nobody used. Built slowly by people who charge for patience. Checkers who follow the trail find more trail.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Deep Cover SIN · quality 4 · a life somebody built</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥30,000 · <strong>Tags:</strong> Identity</p><p>A decade of consistent, boring existence: taxes, a lease, a gym membership nobody used. Built slowly by people who charge for patience. Checkers who follow the trail find more trail.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "CradleSeededSin": {
           "Name": "Cradle-Seeded SIN",
-          "Description": "<p><em>Cradle-Seeded SIN · quality 5 · seeded at the registry</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥110,000 · <strong>Tags:</strong> Identity</p><p>Not a forgery. Somebody with registry access wrote a person into the civic record at birth and let them age there. The only people who can sell you this are the people who can take it back.</p><p><strong>On a scan:</strong> Cradle-seeded paper — the bearer rolls the check with <strong>a double edge</strong>. Burn risk 0: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Cradle-Seeded SIN · quality 5 · seeded at the registry</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥75,000 · <strong>Tags:</strong> Identity</p><p>Not a forgery. Somebody with registry access wrote a person into the civic record at birth and let them age there. The only people who can sell you this are the people who can take it back.</p><p><strong>On a scan:</strong> Cradle-seeded paper — the bearer rolls the check with <strong>a double edge</strong>. Burn risk 0: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "LanyardForgery": {
           "Name": "Lanyard Forgery",
-          "Description": "<p><em>Lanyard Forgery · quality 2 · corp badge, wrong corp</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥2,500 · <strong>Tags:</strong> Identity</p><p>A contractor badge on a printed lanyard, cloned off a photo. Good for a lobby, a loading dock, and exactly as long as nobody swipes it against a live reader.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Lanyard Forgery · quality 2 · corp badge, wrong corp</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥1,800 · <strong>Tags:</strong> Identity</p><p>A contractor badge on a printed lanyard, cloned off a photo. Good for a lobby, a loading dock, and exactly as long as nobody swipes it against a live reader.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "CarryPermitForgery": {
           "Name": "Carry Permit (Forged)",
-          "Description": "<p><em>Carry Permit · quality 3 · forged firearms paper</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥12,000 · <strong>Tags:</strong> Identity</p><p>The document that turns “arrested” into “moved along” when a patrol finds a longarm in the trunk. Forged against a real registry template, which is why it costs what it costs.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Carry Permit · quality 3 · forged firearms paper</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥7,000 · <strong>Tags:</strong> Identity</p><p>The document that turns “arrested” into “moved along” when a patrol finds a longarm in the trunk. Forged against a real registry template, which is why it costs what it costs.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "ClinicCredentialForgery": {
           "Name": "Clinic Credential (Forged)",
-          "Description": "<p><em>Clinic Credential · quality 3 · forged medical licence</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥8,000 · <strong>Tags:</strong> Identity</p><p>A street-doc’s licence number and a clinic affiliation, both borrowed. Buys access to controlled chems, a surgical suite after hours, and the benefit of the doubt in an intake queue.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Clinic Credential · quality 3 · forged medical licence</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥5,000 · <strong>Tags:</strong> Identity</p><p>A street-doc’s licence number and a clinic affiliation, both borrowed. Buys access to controlled chems, a surgical suite after hours, and the benefit of the doubt in an intake queue.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "WireTicketForgery": {
           "Name": "Wire Operator’s Ticket (Forged)",
-          "Description": "<p><em>Wire Ticket · quality 4 · forged Wired-side licence</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥28,000 · <strong>Tags:</strong> Identity</p><p>Licensed network-operator credentials — the paper a corp expects from anyone jacking into their infrastructure on purpose. Deep enough that the Wired-side records pull comes back clean.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Wire Ticket · quality 4 · forged Wired-side licence</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥18,000 · <strong>Tags:</strong> Identity</p><p>Licensed network-operator credentials — the paper a corp expects from anyone jacking into their infrastructure on purpose. Deep enough that the Wired-side records pull comes back clean.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "PaperGhostSin": {
           "Name": "Paper Ghost SIN",
-          "Description": "<p><em>Paper Ghost SIN · quality 2 · thin, but real-shaped</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥3,500 · <strong>Tags:</strong> Identity</p><p>A working forgery with a shallow paper trail: three years of employment, a clinic visit, a lapsed transit pass. It survives a bored scanner. It does not survive anyone who cares. The papermill’s own build of the same grade of paper a street fixer sells as a Fake SIN — a little dearer, a little better made.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>, and a hot check makes it a <strong>double bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+          "Description": "<p><em>Paper Ghost SIN · quality 2 · thin, but real-shaped</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥2,200 · <strong>Tags:</strong> Identity</p><p>A working forgery with a shallow paper trail: three years of employment, a clinic visit, a lapsed transit pass. It survives a bored scanner. It does not survive anyone who cares. The papermill’s own build of the same grade of paper a street fixer sells as a Fake SIN — a little dearer, a little better made.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>, and a hot check makes it a <strong>double bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         }
       },
       "Availability": {
@@ -6225,6 +6233,30 @@
         "WorkshopBench": {
           "Name": "Workshop Bench",
           "Description": "<p>Stub fabricator bench — Projects only.</p><p><strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "ArmorersBench": {
+          "Name": "Armorer’s Bench",
+          "Description": "<p><em>Armorer’s Bench · workshop bench · Armor, ballistic, and personal-defense Craft &amp; Repair</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥8,000 · <strong>Tags:</strong> Workshop, Bench</p><p>A plate press, a ballistic-gel block, and a stitching rig on a bench that has seen a lot of somebody else’s blood come off armor.</p><p><strong>+1 Lifestyle project slot</strong> while this bench is available at the crew’s base or on the scene for the respite — <strong>capped at +1 in total, once per base</strong>, however many benches are placed.</p><p><strong>One edge</strong> on a Project Power Roll in this bench’s craft family: armor plates, weave, helmets, shield rigs, ballistic liners, and the Repair work that keeps them rated. A wrong-family bench gives nothing, and several matching benches still give only the one edge.</p><p>A bench never waives ¥, Body Integrity, or Availability. <strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "WeaponeersBench": {
+          "Name": "Weaponeer’s Bench",
+          "Description": "<p><em>Weaponeer’s Bench · workshop bench · Weapons, ammunition, and weapon mods</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥10,000 · <strong>Tags:</strong> Workshop, Bench</p><p>A vise, a barrel lathe, a press for loading your own, and a locked drawer that is the reason the crew pays for the room it lives in.</p><p><strong>+1 Lifestyle project slot</strong> while this bench is available at the crew’s base or on the scene for the respite — <strong>capped at +1 in total, once per base</strong>, however many benches are placed.</p><p><strong>One edge</strong> on a Project Power Roll in this bench’s craft family: weapons, magazines and loads, and weapon mods — including the mounted families. A wrong-family bench gives nothing, and several matching benches still give only the one edge.</p><p>A bench never waives ¥, Body Integrity, or Availability. <strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "ChromeBay": {
+          "Name": "Chrome Bay",
+          "Description": "<p><em>Chrome Bay · workshop bench · Chrome install, removal, and repair</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥18,000 · <strong>Tags:</strong> Workshop, Bench</p><p>A clean table, a sterile field, a tray of interface tools, and a rack of fluids nobody on the crew can read the labels of. Not a clinic. Close enough at 3 a.m.</p><p><strong>+1 Lifestyle project slot</strong> while this bench is available at the crew’s base or on the scene for the respite — <strong>capped at +1 in total, once per base</strong>, however many benches are placed.</p><p><strong>One edge</strong> on a Project Power Roll in this bench’s craft family: installing, removing, and repairing Chrome. Body Integrity, ¥, and Availability are unchanged — the bay buys a slot and an edge, not a waiver. A wrong-family bench gives nothing, and several matching benches still give only the one edge.</p><p>A bench never waives ¥, Body Integrity, or Availability. <strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "MatrixDeckLab": {
+          "Name": "Matrix / Deck Lab",
+          "Description": "<p><em>Matrix / Deck Lab · workshop bench · Electronics, Hacking, and Program Craft</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥15,000 · <strong>Tags:</strong> Workshop, Bench</p><p>Bench power, a logic analyser, a cold-boot rig, and enough shielded cable to make the room hum. The air smells like flux.</p><p><strong>+1 Lifestyle project slot</strong> while this bench is available at the crew’s base or on the scene for the respite — <strong>capped at +1 in total, once per base</strong>, however many benches are placed.</p><p><strong>One edge</strong> on a Project Power Roll in this bench’s craft family: decks, programs, payloads, autosofts, and the Electronics / Hacking side of §Craft. A wrong-family bench gives nothing, and several matching benches still give only the one edge.</p><p>A bench never waives ¥, Body Integrity, or Availability. <strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "VehicleDepot": {
+          "Name": "Vehicle Depot",
+          "Description": "<p><em>Vehicle Depot · workshop bench · Vehicle and drone Repair and mod installation</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥22,000 · <strong>Tags:</strong> Workshop, Bench</p><p>A lift, a compressor, a drone charging wall, and a floor drain. It takes a whole bay, which is exactly why a crew that has one stops losing drones.</p><p><strong>+1 Lifestyle project slot</strong> while this bench is available at the crew’s base or on the scene for the respite — <strong>capped at +1 in total, once per base</strong>, however many benches are placed.</p><p><strong>One edge</strong> on a Project Power Roll in this bench’s craft family: vehicle and drone Repair, and installing the §5F vehicle / drone mod kits. A wrong-family bench gives nothing, and several matching benches still give only the one edge.</p><p>A bench never waives ¥, Body Integrity, or Availability. <strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
+        },
+        "RitualSanctumTools": {
+          "Name": "Ritual Sanctum Tools",
+          "Description": "<p><em>Ritual Sanctum Tools · workshop bench · Ritual Working Projects</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥16,000 · <strong>Tags:</strong> Workshop, Bench</p><p>Ground chalk, a scale that measures in grains, cold-stored reagents, and a working surface that has never been used for anything else.</p><p><strong>+1 Lifestyle project slot</strong> while this bench is available at the crew’s base or on the scene for the respite — <strong>capped at +1 in total, once per base</strong>, however many benches are placed.</p><p><strong>One edge</strong> on a Project Power Roll in this bench’s craft family: Ritual Working Projects. It does not raise your lodge or sanctum ceiling — that cap still comes from your Lifestyle band. A wrong-family bench gives nothing, and several matching benches still give only the one edge.</p><p>A bench never waives ¥, Body Integrity, or Availability. <strong>Integrity</strong> stamps from the Item; Stamina = Integrity.</p>"
         }
       }
     },
@@ -6401,6 +6433,15 @@
         "ApexWorkingCase": {
           "Name": "Apex working case",
           "Description": "<p><em>Apex working case · Magnum Oblatio · near-unique component set</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥30,000+ · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Ritual, Consumable</p><p><strong>What It Is:</strong> The Prototype-grade (Echelon 4) apex component set assembled for a world-shaking ritual; rarely simply bought.</p><p><strong>Consumable:</strong> bought per unit and used up in play; no mod slots.</p>"
+        }
+      }
+    },
+    "Flanking": {
+      "Label": "Flanked",
+      "Settings": {
+        "Marker": {
+          "Name": "Show the Flanked marker",
+          "Hint": "Mark a token while two enemies hold opposite sides of it. Computed from token positions and cleared the moment the geometry breaks — it is not a toggle. The melee edge applies either way."
         }
       }
     },
@@ -7990,6 +8031,30 @@
         "WorkshopBench": {
           "Name": "Workshop Bench",
           "Description": "<p>Stub fabricator bench — Projects only.</p>"
+        },
+        "ArmorersBench": {
+          "Name": "Armorer’s Bench",
+          "Description": "<p>Workshop bench — Armor, ballistic, and personal-defense Craft &amp; Repair. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
+        },
+        "WeaponeersBench": {
+          "Name": "Weaponeer’s Bench",
+          "Description": "<p>Workshop bench — Weapons, ammunition, and weapon mods. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
+        },
+        "ChromeBay": {
+          "Name": "Chrome Bay",
+          "Description": "<p>Workshop bench — Chrome install, removal, and repair. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
+        },
+        "MatrixDeckLab": {
+          "Name": "Matrix / Deck Lab",
+          "Description": "<p>Workshop bench — Electronics, Hacking, and Program Craft. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
+        },
+        "VehicleDepot": {
+          "Name": "Vehicle Depot",
+          "Description": "<p>Workshop bench — Vehicle and drone Repair and mod installation. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
+        },
+        "RitualSanctumTools": {
+          "Name": "Ritual Sanctum Tools",
+          "Description": "<p>Workshop bench — Ritual Working Projects. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.</p>"
         }
       },
       "Nodes": {
@@ -8452,7 +8517,8 @@
       "Tables": {
         "Flats": "Reach Events — Flats / Hive",
         "City": "Reach Events — City / Grid-adjacent",
-        "Wilds": "Reach Events — Wilds / Outer Wall"
+        "Wilds": "Reach Events — Wilds / Outer Wall",
+        "CyborgSystemCrisis": "Cyborg System Crisis"
       }
     },
     "ReachHandbook": {
@@ -9606,6 +9672,40 @@
         }
       }
     },
+    "WorkshopBench": {
+      "Families": {
+        "armor": "Armor & personal defense",
+        "weapons": "Weapons & ammunition",
+        "chrome": "Chrome",
+        "matrix": "Electronics, Hacking & Programs",
+        "vehicles": "Vehicles & drones",
+        "ritual": "Ritual Workings"
+      },
+      "SheetLine": "Workshop bench — {family}. +{cap} Lifestyle project slot (once per base, however many benches) and one edge on matching Projects.",
+      "Menu": {
+        "Family": "Workshop bench family…",
+        "Report": "Report bench benefits"
+      },
+      "Prompt": {
+        "Title": "Project craft family",
+        "Hint": "Which craft family is <strong>{name}</strong>? A matching workshop bench gives this Project an edge automatically; leave it untagged and the Director adds the edge in the roll dialog.",
+        "Family": "Craft family",
+        "None": "Untagged — no automatic edge",
+        "Confirm": "Tag Project"
+      },
+      "Notify": {
+        "Tagged": "{name} is now a {family} Project — a matching bench will edge its rolls.",
+        "Untagged": "{name} is untagged; bench edges are back to a Director call."
+      },
+      "Report": {
+        "Title": "Workshop benches",
+        "Slots": "<strong>+{slots}</strong> Lifestyle project slot this respite, from {count} bench(es) in reach.",
+        "Edges": "Matching-Project edge available for: <strong>{families}</strong>.",
+        "NoFamilies": "nothing — no benches in reach",
+        "Capped": "{count} benches are in reach. The project-slot bonus is capped at +1 in total; the extra benches only widen which Projects get the edge.",
+        "Hint": "A bench never waives ¥, Body Integrity, or Availability."
+      }
+    },
     "Crit": {
       "Kinds": {
         "ability": "Roll",
@@ -9618,13 +9718,15 @@
         "Natural": "Only the natural result on the two dice counts — 19 or 20. Edges, banes, bonuses and a target’s Cover/Conceal move the total, but they never make or unmake a critical.",
         "ability": {
           "Tier3": "Read the ability at its <strong>tier 3</strong> line, whatever the total came to.",
-          "Action": "Your turn is not over: take <strong>another main action</strong> right now, before the initiative moves on.",
+          "Action": "Your turn is not over: take <strong>another main action</strong> right now, before the initiative moves on. The card below has the button.",
           "Stack": "Everything the ability already does at tier 3 still happens — potency, effects, the lot."
         },
         "test": {
           "Tier3": "Read the test at its <strong>tier 3</strong> line.",
           "Reward": "And take something extra on top: a detail nobody offered, a shortcut, somebody who now owes you. The Director says what — a critical test should hand back more than a clean success would."
-        }
+        },
+        "ExtraAction": "Take the extra main action",
+        "TierWarning": "<strong>Director:</strong> this critical came through at tier {tiers}. Read it at tier {tier} — the natural 19 or 20 outranks the total."
       },
       "Settings": {
         "Sfx": {
@@ -9647,6 +9749,11 @@
           "Name": "Whisper the Critical Roll rule card",
           "Hint": "Send the rule card only to the roller and the Director instead of the whole table."
         }
+      },
+      "Badge": "Critical — natural {natural}",
+      "BadgeHint": "A natural 19 or 20. This roll is read at tier 3 whatever the total came to.",
+      "Chat": {
+        "ExtraTaken": "<strong>{name}</strong> spends the extra main action their Critical Roll paid out."
       }
     },
     "CoverConceal": {
