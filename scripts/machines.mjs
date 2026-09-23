@@ -687,7 +687,7 @@ export function pilotWiredState(actor) {
 /**
  * First successful Deploy while Disconnected → Linked on the Wrench pilot.
  * Never sets Jacked In. Never downgrades Linked / Overlay / Jacked In.
- * Marks flags.<module>.fleetLinked so Recall can clear only what Deploy set.
+ * Marks flags.<module>.fleetLinked. An empty fleet keeps this Linked state; it does not disconnect.
  */
 export async function ensureFleetLinked(pilot) {
   if (!(pilot instanceof Actor)) return;
@@ -701,20 +701,43 @@ export async function ensureFleetLinked(pilot) {
 }
 
 /**
- * When no machines remain fielded, clear Linked only if we set it for fleet command.
- * Never strips Overlay / Jacked In.
+ * What an empty fleet should do to the pilot's wire.
+ * Jump-In clears and the pilot returns to Linked. Already-Linked stays Linked
+ * (Recall must not drop fleet command to Disconnected). Overlay stays.
+ * A hero who was never on the wire stays disconnected.
+ * Base assets count toward `fielded` the same way Fleet Size does.
+ * @returns {{ jumpOut: boolean, linked: boolean }}
+ */
+export function fleetIdleWirePlan({ fielded = 0, state = "disconnected", jumpedIn = false, fleetLinked = false } = {}) {
+  if (fielded > 0) return { jumpOut: false, linked: false };
+  if (state === "jackedIn" || jumpedIn) return { jumpOut: true, linked: true };
+  if (state === "linked" || state === "overlay") return { jumpOut: false, linked: false };
+  if (fleetLinked) return { jumpOut: false, linked: true };
+  return { jumpOut: false, linked: false };
+}
+
+/**
+ * Last fielded machine left (Recall, last-token delete, or Actor delete).
+ * Reuses Jump-Out for the meat-inert / jumpedInto / jumpedInBy cleanup, then
+ * `ensureFleetLinked` so the pilot is Linked instead of Disconnected or still Jacked In.
  */
 export async function clearFleetLinkedIfIdle(pilot) {
   if (!(pilot instanceof Actor)) return;
-  if (!pilot.getFlag(MODULE_ID, "fleetLinked")) return;
-  if (fieldedMachineCount(pilot) > 0) return;
-  const state = pilotWiredState(pilot);
-  await pilot.unsetFlag(MODULE_ID, "fleetLinked");
-  if (state !== "linked") return;
-  await pilot.toggleStatusEffect(WIRED_STATUS_DEFS.linked.id, { active: false });
-  await pilot.update({
-    [`flags.${MODULE_ID}.wired`]: { connected: false, immersed: false, state: "disconnected" },
+  const plan = fleetIdleWirePlan({
+    fielded: fieldedMachineCount(pilot),
+    state: pilotWiredState(pilot),
+    jumpedIn: !!(
+      pilot.getFlag(MODULE_ID, "jumpedInto")
+      || [...(pilot.effects ?? [])].some(effect => effect.getFlag?.(MODULE_ID, "meatInert"))
+    ),
+    fleetLinked: !!pilot.getFlag(MODULE_ID, "fleetLinked"),
   });
+  if (!plan.jumpOut && !plan.linked) return;
+  if (plan.jumpOut) {
+    const { jumpOut } = await import("./rigger-vertical.mjs");
+    await jumpOut(pilot);
+  }
+  if (plan.linked) await ensureFleetLinked(pilot);
 }
 
 /** Deploy a drone or vehicle Item: stamp its band template into a linked Actor and place a token. */
@@ -1018,6 +1041,8 @@ export function registerMachines() {
     if (item?.getFlag(MODULE_ID, "deployed")?.actorUuid === actor.uuid) {
       await item.unsetFlag(MODULE_ID, "deployed");
     }
+    const owner = machineActorOwner(actor) ?? machineOwner(item);
+    if (owner) await clearFleetLinkedIfIdle(owner);
   });
   Hooks.on("deleteItem", async (item, options, userId) => {
     if ((userId !== game.user.id) || !machineBand(item)) return;
@@ -1041,7 +1066,7 @@ export function registerMachines() {
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
       describeWeaponryKit, machineModSheetFields, machineModMirrorData,
-      fleetSizeCap, fieldedMachineCount, machineTokenSize, isDeployedMachineActor, hasAnyToken,
+      fleetSizeCap, fieldedMachineCount, fleetIdleWirePlan, machineTokenSize, isDeployedMachineActor, hasAnyToken,
       applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
       isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
     };

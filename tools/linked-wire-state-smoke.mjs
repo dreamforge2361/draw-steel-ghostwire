@@ -22,6 +22,7 @@ import {
   isLinkedOkVerb,
   isOnNet,
   isWireDiscoverable,
+  jumpedInBlocksAbility,
   meatPowerRollModifier,
   nextToggleState,
   resolveWiredState,
@@ -77,6 +78,12 @@ ok(isLinkedOkVerb("broadcast") && isLinkedOkVerb("matrix-jack-out"), "Linked-ok 
 ok(meatPowerRollModifier("linked").banes === 0 && !meatPowerRollModifier("linked").blocked, "Linked meat rolls normal");
 ok(meatPowerRollModifier("overlay").banes === 1, "Overlay meat bane");
 ok(meatPowerRollModifier("jackedIn").blocked, "Jacked In meat blocked");
+ok(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "deploy-and-command", rollEnabled: true }), "Deploy & Command stays usable while Jacked In");
+ok(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "rigged-fire", rollEnabled: true }), "Rigged Fire stays usable while Jacked In");
+ok(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "focus-fire", rollEnabled: true }), "Focus Fire stays usable while Jacked In");
+ok(jumpedInBlocksAbility({ state: "jackedIn", dsid: "scrap-bow", rollEnabled: true }), "a personal weapon is still blocked while Jacked In");
+ok(!jumpedInBlocksAbility({ state: "jackedIn", wired: true, dsid: "matrix-scan", rollEnabled: true }), "Wired rolls are not the meat lock");
+ok(!jumpedInBlocksAbility({ state: "overlay", dsid: "scrap-bow", rollEnabled: true }), "Overlay does not use the Jacked In lock");
 ok(wiredPowerRollModifier("linked").edges === 0 && wiredPowerRollModifier("overlay").edges === 0 && wiredPowerRollModifier("jackedIn").edges === 1, "Jacked In Wired edge only");
 ok(resolveWiredState({ connected: true }) === "overlay" && resolveWiredState({ state: "linked" }) === "linked", "legacy connected:true = Overlay; explicit state wins");
 

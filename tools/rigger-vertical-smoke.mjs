@@ -146,8 +146,10 @@ const {
   applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
   describeWeaponryKit, machineModSheetFields, machineModMirrorData, kitProfile,
   isJumpInCapable, chassisJumpInCapable, droneJumpInSourceUpdate,
+  fleetIdleWirePlan,
 } = await import("../scripts/machines.mjs");
 const { jumpInCandidates, jumpInUsePlan, jumpInDenialKey } = await import("../scripts/rigger-vertical.mjs");
+const { jumpedInBlocksAbility } = await import("../scripts/wired-state.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
 
@@ -454,6 +456,25 @@ const nonePlan = jumpInUsePlan(jumpInCandidates({}), { capable: isJumpInCapable 
 note(nonePlan.reason === "none" && jumpInDenialKey(nonePlan) === "JumpInNoTarget", "no machine refuses Jump-In");
 note(ui.JumpInNotCapable?.includes("{name}"), "lang JumpInNotCapable names the machine");
 note(typeof ui.JumpInNoTarget === "string" && typeof ui.JumpInPickOne === "string", "lang JumpInNoTarget and JumpInPickOne");
+note(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "deploy-and-command", rollEnabled: true }),
+  "Deploy & Command is not a meat lock while Jacked In");
+note(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "rigged-fire", rollEnabled: true }),
+  "Rigged Fire is not a meat lock while Jacked In");
+note(!jumpedInBlocksAbility({ state: "jackedIn", dsid: "field-repair", rollEnabled: true }),
+  "Field Repair is not a meat lock while Jacked In");
+note(jumpedInBlocksAbility({ state: "jackedIn", dsid: "scrap-bow", rollEnabled: true }),
+  "a personal weapon stays blocked while Jacked In");
+note(moduleSrc.includes("jumpedInBlocksAbility"), "Jacked In use patch consults the seat allowlist");
+const idleJacked = fleetIdleWirePlan({ fielded: 0, state: "jackedIn", jumpedIn: true });
+note(idleJacked.jumpOut && idleJacked.linked, "empty fleet clears Jump-In and returns to Linked");
+note(!fleetIdleWirePlan({ fielded: 0, state: "linked" }).linked
+  && !fleetIdleWirePlan({ fielded: 0, state: "linked" }).jumpOut, "already Linked stays Linked");
+note(!fleetIdleWirePlan({ fielded: 0, state: "overlay" }).linked, "Overlay is not forced to Linked");
+note(!fleetIdleWirePlan({ fielded: 0, state: "disconnected" }).linked, "a pure-meat hero is not forced onto the wire");
+note(fleetIdleWirePlan({ fielded: 1, state: "jackedIn", jumpedIn: true }).jumpOut === false, "a remaining fielded machine does not Jump-Out");
+note(fleetIdleWirePlan({ fielded: 0, state: "disconnected", fleetLinked: true }).linked, "fleet-command with the status missing still returns to Linked");
+note(machinesSrc.includes("fleetIdleWirePlan"), "Recall and Actor delete share the empty-fleet wire plan");
+note(!machinesSrc.includes("WIRED_STATUS_DEFS.linked.id, { active: false }"), "Recall no longer clears Linked");
 note(sheetSrc.includes('machineKindOf(actor) === "drone"'), "Machine sheet shows drones as Jump-In capable");
 note(machinesSrc.includes("migrateDroneJumpIn"), "ready pass stores Jump-In on world drones");
 

@@ -32,3 +32,21 @@ Both now stop before that roll. A single targeted or fielded machine that is not
 4. Field a **Bulldog**. Leave Jump-In Capable off. Do not install Rigger Cocoon. Use **Jump-In (Signature Platform)**, and use Deploy & Command → Jump-In. Each shows the denial. No power-roll card. Jacked In stays off.
 5. Tick Jump-In Capable, or install **Rigger Cocoon**, and Jump-In again. The pilot is Jacked In and meat-inert.
 6. A drone still Jump-Ins with the flag off.
+
+## Deploy & Command while Jacked In
+
+**Lock:** After a Cocoon Jump-In, Deploy & Command would not fire. Jacked In refuses every non-Wired power roll (`JackedInPhysical` in `scripts/module.mjs`). Deploy & Command rolls, and it is not a Wired ability, so the meat lock caught it. The meat-inert effect stays; it is not what turned the ability off.
+
+Seat abilities stay usable while Jacked In: Deploy & Command, Rigged Fire, Field Repair, Focus Fire, Override Ping, and the Wrench fleet / platform / building actions. A personal weapon or another class's power roll still gets the inert-body warning.
+
+7. Jump into the Bulldog (Cocoon or the flag). Use **Deploy & Command**. The picker opens and the ability is not refused as a meat action. **Rigged Fire** likewise. A personal weapon still warns and does not roll.
+
+## Empty fleet returns to Linked
+
+**Lock:** With every drone and vehicle Recalled or deleted, the Wrench stayed Jacked In, or Recall dropped a fleet-command Linked pilot to Disconnected.
+
+Recall, last-token delete, and deleting the deployed Actor all go through `clearFleetLinkedIfIdle`. When `fieldedMachineCount` hits 0 (base assets count, same as Fleet Size), Jump-Out clears meat inert and the jumped-into flags, then `ensureFleetLinked` stamps **Linked**. Already Linked stays Linked. Overlay stays Overlay. A hero who was never Linked or Jacked In stays disconnected.
+
+8. Jump into a fielded Bulldog. Recall it (or delete its token or Actor) so nothing is fielded. Jacked In and meat inert are gone. The pilot is **Linked**.
+9. Deploy while Disconnected, then Recall the last machine. The pilot stays **Linked**.
+10. A hero who never Deployed and is not on the wire stays disconnected after an unrelated delete.

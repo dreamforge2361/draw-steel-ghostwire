@@ -7,6 +7,7 @@ import {
   isFullyConnected,
   isLinkedOkVerb,
   isOnNet,
+  jumpedInBlocksAbility,
   nextToggleState,
 } from "./wired-state.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
@@ -228,7 +229,9 @@ function patchWiredAbilities() {
     if (verb && (verb !== "connect") && !isOnNet(state)) return warn("NotConnected");
     if (verb && (verb !== "connect") && !isFullyConnected(state) && !isLinkedOkVerb(verb)) return warn("NeedImmersion");
     if (wired && !verb && !isFullyConnected(state)) return warn("NeedImmersion");
-    if ((state === "jackedIn") && !wired && this.power.roll.enabled) return warn("JackedInPhysical");
+    // Jacked In locks the meat body. Deploy & Command, Rigged Fire, and the other seat
+    // abilities still have to fire — they are the machine, not a personal weapon.
+    if (jumpedInBlocksAbility({ state, wired, dsid, rollEnabled: !!this.power?.roll?.enabled })) return warn("JackedInPhysical");
 
     if (this.power.roll.enabled) {
       // Installed, running deck programs and RCC autosofts that name this ability (B20d, scripts/mods.mjs).

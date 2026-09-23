@@ -114,6 +114,75 @@ export function meatPowerRollModifier(state) {
   return { edges: 0, banes: 0, blocked: false };
 }
 
+/**
+ * Wrench abilities used from the Jump-In seat (fleet, platform, swarm, building).
+ * Jacked In still blocks every other non-Wired power roll — personal weapons and other classes.
+ * Wired abilities are not in this set; they already pass the Jacked In gate on the Wired keyword.
+ */
+export const JUMP_IN_SEAT_DSIDS = Object.freeze(new Set([
+  "adaptive-net",
+  "autogun-lockdown",
+  "bee-storm",
+  "boarding-repel",
+  "building-scale-volley",
+  "buzzsaw-pass",
+  "collapse-the-corridor",
+  "crossfire-grid",
+  "decoy-chirp",
+  "deploy-and-command",
+  "emergency-reinforcement",
+  "evasive-burn",
+  "feedback-loop",
+  "field-repair",
+  "focus-fire",
+  "focus-sting",
+  "fortify-node",
+  "full-broadside",
+  "full-stabilization",
+  "ghost-in-the-walls",
+  "ghost-signature",
+  "ghost-swarm",
+  "jump-in-signature-platform",
+  "kamikaze-run",
+  "kamikaze-volley",
+  "kill-ram",
+  "lockdown-protocol",
+  "one-machine-one-will",
+  "overdrive-charge",
+  "overpressure-vent",
+  "override-ping",
+  "ram-speed",
+  "recon-loop",
+  "redline-barrage",
+  "rigged-fire",
+  "salvage-sense",
+  "sensor-fusion-lock",
+  "sensor-ghost",
+  "sentry-fire",
+  "spotter-lock",
+  "swarm-reposition",
+  "systems-purge",
+  "taser-swarm",
+  "terrain-breaker",
+  "total-lockdown",
+  "total-swarm-protocol",
+  "trip-the-web",
+  "turn-the-building-ability",
+  "twin-mount-volley",
+  "wake-the-walls",
+  "web-the-corridor",
+  "wide-eyes",
+  "wrench-breach-charge",
+  "wrench-emergency-patch",
+  "wrench-saturation-fire",
+]));
+
+/** True when Jacked In should refuse this ability before it rolls. Machine-seat and Wired uses stay open. */
+export function jumpedInBlocksAbility({ state, wired = false, dsid = "", rollEnabled = false } = {}) {
+  if (state !== "jackedIn" || !rollEnabled || wired) return false;
+  return !JUMP_IN_SEAT_DSIDS.has(dsid);
+}
+
 /** Wired Power Rolls: Jacked In edge only. Linked and Overlay add neither. */
 export function wiredPowerRollModifier(state) {
   if (state === "jackedIn") return { edges: 1, banes: 0 };
