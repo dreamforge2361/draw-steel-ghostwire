@@ -20,6 +20,11 @@
     "static": { "lang": "Static", "target": { "type": "special" }, "before": true },
     "blackout": { "lang": "Blackout", "target": { "type": "special" } },
     "wraith": { "lang": "Wraith", "target": { "type": "self" }, "before": true },
-    "generic": { "lang": "Generic", "target": { "type": "special" }, "roll": false }
+    "generic": { "lang": "Generic", "target": { "type": "special" }, "roll": false },
+
+    "_f12Note": "F12 chrome strike — Pulse / System Rot / Sunder Spike target one implant on a wireless mark. The Run ability is shaped like any other payload; the Suppress / Damage / Destroy ladder rides the chip's flags.draw-steel-ghostwire.chromeStrike and is applied by scripts/chrome-damage.mjs when the use card posts.",
+    "pulse": { "lang": "Pulse", "target": { "type": "special" }, "before": true },
+    "system-rot": { "lang": "SystemRot", "target": { "type": "special" }, "before": true },
+    "sunder-spike": { "lang": "SunderSpike", "target": { "type": "special" }, "before": true }
   }
 }

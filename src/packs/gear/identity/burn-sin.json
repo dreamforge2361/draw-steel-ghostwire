@@ -1,0 +1,62 @@
+{
+  "_id": "GwF17BurnSin0001",
+  "_key": "!items!GwF17BurnSin0001",
+  "name": "GHOSTWIRE.Gear.Items.BurnSin.Name",
+  "type": "treasure",
+  "img": "icons/sundries/documents/document-sealed-brown-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.BurnSin.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "burn-sin",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearIdentity00",
+  "sort": 1000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 400,
+        "modSlots": 0,
+        "tags": [
+          "Identity",
+          "SIN"
+        ]
+      },
+      "identity": {
+        "kind": "sin",
+        "quality": 1,
+        "band": "burn",
+        "scan": "double-bane",
+        "echelon": 1,
+        "burnRisk": 3
+      }
+    }
+  }
+}

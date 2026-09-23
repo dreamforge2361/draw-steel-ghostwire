@@ -245,6 +245,11 @@
           "Name": "Vehicle weapons",
           "ActorName": "Hardpoint Bay",
           "Tagline": "Guns that bolt on — vehicle and drone mount SKUs, plus the Mounted heavies."
+        },
+        "Identity": {
+          "Name": "Identity",
+          "ActorName": "Papermill",
+          "Tagline": "SINs and forged credentials — you get the quality you pay for."
         }
       },
       "Template": {
@@ -4314,6 +4319,24 @@
           "ApexCurrent": {
             "Name": "Apex Current",
             "Description": "<p>Your capstone. Once per encounter, treat a failed biofeedback save as a success. The Resonance spent isn’t refunded.</p>"
+          },
+          "ResonancePulse": {
+            "Name": "Resonance Pulse",
+            "Story": "Every implant is listening. You ask one of them to stop.",
+            "Tier1": "The implant holds. You spend the Resonance anyway.",
+            "Tier2": "One piece of the target’s chrome is <strong>Suppressed</strong> until they reboot it.",
+            "Tier3": "One piece of the target’s chrome is <strong>Suppressed</strong>, and they cannot reboot it until the end of their next turn.",
+            "Effect_before0000000000": "<p>Pick one implant the target is carrying — it does not need to be wireless; you are speaking to the machine, not its radio. Ghostwire opens the Chrome strike prompt when the use card posts.</p><p><strong>Grade matters:</strong> <em>Soft</em> (bioware) chrome takes one step less than the tier says; <em>Salvage</em> chrome takes one step more.</p>",
+            "Effect_spend00000000000": "<p><strong>1 Resonance:</strong> the pulse reaches a second implant on the same target at one step milder. <strong>3 Resonance:</strong> the implant you named is <strong>Damaged</strong> instead of Suppressed on a tier 2 or 3 result.</p>"
+          },
+          "ChromeSunder": {
+            "Name": "Chrome Sunder",
+            "Story": "You do not ask this time.",
+            "Tier1": "The implant is <strong>Damaged</strong>.",
+            "Tier2": "The implant is <strong>Damaged</strong>, and the target is bleeding heat — the Director may call a biofeedback jolt.",
+            "Tier3": "The implant is <strong>Destroyed</strong>. Its benefit is gone and its Body Integrity is locked out until the wreck is repaired or replaced. The implant is not removed from the body.",
+            "Effect_before0000000000": "<p>Pick one implant the target is carrying. Ghostwire opens the Chrome strike prompt when the use card posts, and never deletes the Item — a Destroyed implant stays in the flesh, benefits dead, Integrity spent.</p><p><strong>Grade matters:</strong> <em>Soft</em> chrome takes one step less; <em>Salvage</em> chrome one step more. At the table, one implant per target may be Destroyed per encounter.</p>",
+            "Effect_spend00000000000": "<p><strong>5 Resonance.</strong> You take the Director’s biofeedback for tearing a machine apart from inside a living body: a hard Physique test, and on a failure [[/damage @P]]{damage equal to your Persona score} that bypasses temporary Stamina. <strong>Resonance Mending</strong> is the answer to this ability, including on your own crew.</p>"
           }
         }
       }
@@ -4452,7 +4475,8 @@
         "WeaponsBowsExotic": "Bows, Crossbows & Exotic",
         "GeneralRitualFormulas": "Ritual Formulas",
         "PlotRun": "Plot & Run",
-        "WeaponsMounted": "Vehicle & Mounted Weapons"
+        "WeaponsMounted": "Vehicle & Mounted Weapons",
+        "Identity": "Identity"
       },
       "Items": {
         "Burner": {
@@ -4585,7 +4609,7 @@
         },
         "FakeSinBasic": {
           "Name": "Fake SIN (basic)",
-          "Description": "<p><em>Fake SIN (basic) · Provisional ID · low-grade synthetic identity</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥1,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Concealable</p><p><strong>Profile:</strong> Passes casual checks; edge on avoiding routine ID scrutiny. Burns if scanned by Military-grade (or better) security.</p>"
+          "Description": "<p><em>Fake SIN (basic) · Provisional ID · quality 2 · low-grade synthetic identity</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Professional · <strong>Cost:</strong> ¥1,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Concealable</p><p><strong>Profile:</strong> the working runner’s default, bought off a street fixer rather than a papermill. It walks you past a bored guard and a turnstile without anyone looking twice — but the record underneath is thin, and it does not survive somebody who actually pulls it.</p><p><strong>On a scan:</strong> Paper paper — quality 2 on the identity ladder, the same grade as a <strong>Paper Ghost SIN</strong>. The bearer rolls the check with <strong>a bane</strong>, and a hot check (Military-grade security, a corp-side records pull) makes it a <strong>double bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         },
         "CertifiedCredstick": {
           "Name": "Certified Credstick",
@@ -5204,6 +5228,42 @@
         "Quiverframe": {
           "Name": "Quiverframe",
           "Description": "<p><em>Quiverframe · Kestrel Guided Rack · integrated missile rack</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Prototype · <strong>Cost:</strong> ¥44,000 · <strong>Mod slots:</strong> 5 · <strong>Tags:</strong> [Anti-veh], Mounted, Integrated, Vehicle, Blast, Smart-ready</p><p><strong>Weapon Base:</strong> 14 fire (Anti-veh band) · <strong>Range:</strong> Extreme</p><p>A flush rack of guided tubes faired into the hull, cued off the rig’s own sensor lock. Kestrel sells it as a survey package. The survey it performs is of a rooftop, briefly.</p><p><em>Kit doctrine (if any) still supplies Draw Steel damage/Stamina bands; this item’s Weapon Base / armor profile is the object. Gear costs ¥; Kit doctrine never does.</em></p><p><strong>Vehicle mount (heavy scale):</strong> hardpoint hardware, not a gun you carry. Bolt it onto an installed <strong>Heavy Hardpoint</strong> on a drone or vehicle (§5F Weaponry kit — one kit at a time) with <em>Mount on…</em> from the weapon’s row; <em>Unmount weapon</em> frees the hardpoint. Fired with <strong>Gunnery</strong> — Rigged Fire from the pilot’s seat. Deploy mirrors it onto the machine’s Inventory.</p><p><strong>Integrated:</strong> a package the frame is rebuilt around — only a <strong>Heavy Hardpoint</strong> will take it.</p><p><strong>Blast:</strong> hits an area.</p><p><strong>Smart-ready:</strong> takes a Smartlink / Smart-Scope cleanly, and rides the machine’s own sensor lock.</p><p><strong>Mod slots (5):</strong> Fill them with weapon mods from <strong>Ghostwire Mods · Weapon Mods</strong>: @UUID[Compendium.draw-steel-ghostwire.mods.Item.jtVTepYrWmTwfzNJ]{Smartlink}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.98UNcvBWHLroYAWA]{Suppressor}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.fHmRuh92kBkUJyA2]{Recoil Comp}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.KvmcpBf0TQElFGuh]{Extended Mag}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.NMhaEkNDiDEIeIxx]{Smart-Scope}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.3XE8fdbl3slh9W5D]{Gas-Seal Kit}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.KSErZpMGtrAf8OWq]{Underbarrel Mount}, @UUID[Compendium.draw-steel-ghostwire.mods.Item.ZQGpCYRch5xML8iS]{Personalized Grip}. Installing is a downtime Project (§Craft) keyed to each mod’s skill (Electronics or Repair); toggling an installed mod is a field action.</p>"
+        },
+        "BurnSin": {
+          "Name": "Burn SIN",
+          "Description": "<p><em>Burn SIN · quality 1 · one checkpoint, maybe</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥400 · <strong>Tags:</strong> Identity</p><p>A number bought off a stall printer, good for one walk past one bored guard. The history behind it is forty minutes of generated filler and a birth record that points at a district that burned down.</p><p><strong>On a scan:</strong> Burn paper — the bearer rolls the check with <strong>a double bane</strong>. Burn risk 3: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "BrokerSin": {
+          "Name": "Broker SIN",
+          "Description": "<p><em>Broker SIN · quality 3 · clean enough to bank on</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥6,000 · <strong>Tags:</strong> Identity</p><p>Bought through a fixer who buys in volume: a retired person’s record, scrubbed and re-dated, with a credit history that pays its own small bills. This is where a working runner starts.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "DeepCoverSin": {
+          "Name": "Deep Cover SIN",
+          "Description": "<p><em>Deep Cover SIN · quality 4 · a life somebody built</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥25,000 · <strong>Tags:</strong> Identity</p><p>A decade of consistent, boring existence: taxes, a lease, a gym membership nobody used. Built slowly by people who charge for patience. Checkers who follow the trail find more trail.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "CradleSeededSin": {
+          "Name": "Cradle-Seeded SIN",
+          "Description": "<p><em>Cradle-Seeded SIN · quality 5 · seeded at the registry</em></p><p><strong>Echelon</strong> 4 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥90,000 · <strong>Tags:</strong> Identity</p><p>Not a forgery. Somebody with registry access wrote a person into the civic record at birth and let them age there. The only people who can sell you this are the people who can take it back.</p><p><strong>On a scan:</strong> Cradle-seeded paper — the bearer rolls the check with <strong>a double edge</strong>. Burn risk 0: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "LanyardForgery": {
+          "Name": "Lanyard Forgery",
+          "Description": "<p><em>Lanyard Forgery · quality 2 · corp badge, wrong corp</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥1,200 · <strong>Tags:</strong> Identity</p><p>A contractor badge on a printed lanyard, cloned off a photo. Good for a lobby, a loading dock, and exactly as long as nobody swipes it against a live reader.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "CarryPermitForgery": {
+          "Name": "Carry Permit (Forged)",
+          "Description": "<p><em>Carry Permit · quality 3 · forged firearms paper</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥4,000 · <strong>Tags:</strong> Identity</p><p>The document that turns “arrested” into “moved along” when a patrol finds a longarm in the trunk. Forged against a real registry template, which is why it costs what it costs.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "ClinicCredentialForgery": {
+          "Name": "Clinic Credential (Forged)",
+          "Description": "<p><em>Clinic Credential · quality 3 · forged medical licence</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,500 · <strong>Tags:</strong> Identity</p><p>A street-doc’s licence number and a clinic affiliation, both borrowed. Buys access to controlled chems, a surgical suite after hours, and the benefit of the doubt in an intake queue.</p><p><strong>On a scan:</strong> Broker paper — the bearer rolls the check with <strong>no modifier</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "WireTicketForgery": {
+          "Name": "Wire Operator’s Ticket (Forged)",
+          "Description": "<p><em>Wire Ticket · quality 4 · forged Wired-side licence</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥15,000 · <strong>Tags:</strong> Identity</p><p>Licensed network-operator credentials — the paper a corp expects from anyone jacking into their infrastructure on purpose. Deep enough that the Wired-side records pull comes back clean.</p><p><strong>On a scan:</strong> Deep cover paper — the bearer rolls the check with <strong>an edge</strong>. Burn risk 1: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
+        },
+        "PaperGhostSin": {
+          "Name": "Paper Ghost SIN",
+          "Description": "<p><em>Paper Ghost SIN · quality 2 · thin, but real-shaped</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Street · <strong>Cost:</strong> ¥1,500 · <strong>Tags:</strong> Identity</p><p>A working forgery with a shallow paper trail: three years of employment, a clinic visit, a lapsed transit pass. It survives a bored scanner. It does not survive anyone who cares. The papermill’s own build of the same grade of paper a street fixer sells as a Fake SIN — a little dearer, a little better made.</p><p><strong>On a scan:</strong> Paper paper — the bearer rolls the check with <strong>a bane</strong>, and a hot check makes it a <strong>double bane</strong>. Burn risk 2: on a failed check the Director may burn the record, after which it always reads as a street forgery.</p><p><em>Validate:</em> right-click the Item on the sheet → <strong>Validate / scan identity</strong>. Ghostwire posts the modifier; the Director applies it in the power-roll dialog.</p>"
         }
       },
       "Availability": {
@@ -5765,6 +5825,18 @@
           "Name": "Repair Tick Autosoft",
           "Description": "<p><em>Repair Tick Autosoft · Self-Maintenance Routine · drone repair daemon</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥1,200 · <strong>Slot cost:</strong> 1 · <strong>Tags:</strong> Program, Wired, Autosoft</p><p><strong>Effect:</strong> Between scenes, one linked drone slowly regains a little Integrity (Integrity numbers come in the damage/status pass).</p><p><strong>Autosoft:</strong> a program for an RCC’s mod slots. Install or swap as a downtime Project (§Craft) keyed to Hacking or Rigging. Toggle already-loaded autosofts in the field; loading into a free RCC slot is downtime. Uses one RCC mod slot.</p>",
           "SoftwareEffect": "<p><strong>Effect:</strong> Between scenes, one linked drone slowly regains a little Integrity (Integrity numbers come in the damage/status pass).</p><p><em>Between-scene Integrity recovery is applied by the table (no automation in v1). Installed software that is switched off, or not installed, applies nothing.</em></p>"
+        },
+        "Pulse": {
+          "Name": "Pulse",
+          "Description": "<p><em>Pulse · induction spike · single-implant brownout</em></p><p><strong>Echelon</strong> 1 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥1,200 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired, Chrome</p><p><strong>Effect:</strong> the cheapest way to make a chromed runner flinch. Pulse rides a wireless implant’s own handshake and browns it out: the benefit goes offline until the mark reboots it. It does not cut, burn, or cost anyone Body Integrity — it just turns the lights off.</p><p><strong>Chrome ladder:</strong> tier 1 nothing · tier 2–3 <strong>Suppressed</strong>. <em>Soft</em> (bioware) chrome is one step milder, so a soft implant shrugs Pulse off entirely; <em>Salvage</em> chrome is one step worse and comes out <strong>Damaged</strong>.</p><p><strong>Payload:</strong> a consumable magazine. Load it into one free deck slot (shared with suites) as a downtime Craft (Hacking) Project; the power roll sets its fires (tier 1: 1, tier 2: 3, tier 3: 5). Each Run spends one fire.</p>"
+        },
+        "SystemRot": {
+          "Name": "System Rot",
+          "Description": "<p><em>System Rot · firmware corruptor · slow implant failure</em></p><p><strong>Echelon</strong> 2 · <strong>Availability:</strong> Restricted · <strong>Cost:</strong> ¥3,500 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired, Chrome</p><p><strong>Effect:</strong> Rot does not switch an implant off — it writes garbage into the firmware and walks away. The chrome keeps working, badly: the Director applies a bane to anything it drives until somebody repairs it in downtime.</p><p><strong>Chrome ladder:</strong> tier 1 <strong>Suppressed</strong> · tier 2–3 <strong>Damaged</strong>. <em>Soft</em> chrome takes one step less; <em>Salvage</em> chrome one step more.</p><p><strong>Payload:</strong> a consumable magazine, loaded and fired like any other chip.</p>"
+        },
+        "SunderSpike": {
+          "Name": "Sunder Spike",
+          "Description": "<p><em>Sunder Spike · thermal overrun · one-shot implant kill</em></p><p><strong>Echelon</strong> 3 · <strong>Availability:</strong> Military · <strong>Cost:</strong> ¥9,000 · <strong>Mod slots:</strong> — · <strong>Tags:</strong> Program, Consumable, Wired, Chrome</p><p><strong>Effect:</strong> the expensive, ugly one. Sunder drives an implant’s own power budget past its thermal limit until something inside lets go. The chrome stays in the body — it is simply scrap, and its Body Integrity stays spent until a surgeon cuts the wreck out and puts a new one in.</p><p><strong>Chrome ladder:</strong> tier 1–2 <strong>Damaged</strong> · tier 3 <strong>Destroyed</strong>. <em>Soft</em> chrome takes one step less (so Sunder can never Destroy bioware on anything but a salvage-grade body); <em>Salvage</em> chrome one step more.</p><p><strong>Table guardrail:</strong> one Destroyed implant per target per encounter. Destroying chrome is a scene beat, not a rate of fire.</p><p><strong>Payload:</strong> a consumable magazine, loaded and fired like any other chip.</p>"
         }
       }
     },
@@ -8635,6 +8707,27 @@
         },
         "Generic": {
           "Target": "Special"
+        },
+        "Pulse": {
+          "Target": "1 piece of wireless chrome on a creature within Reach",
+          "Before": "You must be Connected (Overlay or Jacked In) and the mark’s implant must be wireless. Spend 1 fire, then pick the implant on the Chrome strike prompt. Soft (bioware) chrome resists one step; Salvage chrome fails one step worse.",
+          "Tier1": "The handshake holds. Nothing happens — the fire is spent.",
+          "Tier2": "The implant is <strong>Suppressed</strong>: its benefit is offline until the mark reboots it (a maneuver, or free at the start of their next turn).",
+          "Tier3": "The implant is <strong>Suppressed</strong>, and the mark cannot reboot it until the end of their next turn."
+        },
+        "SystemRot": {
+          "Target": "1 piece of wireless chrome on a creature within Reach",
+          "Before": "You must be Connected (Overlay or Jacked In). Spend 1 fire, then pick the implant on the Chrome strike prompt. Soft chrome resists one step; Salvage chrome fails one step worse.",
+          "Tier1": "The implant is <strong>Suppressed</strong> until the mark reboots it.",
+          "Tier2": "The implant is <strong>Damaged</strong>: it works at a bane until a downtime repair Project fixes it.",
+          "Tier3": "The implant is <strong>Damaged</strong>, and the rot is quiet — the mark does not notice until they next rely on it."
+        },
+        "SunderSpike": {
+          "Target": "1 piece of wireless chrome on a creature within Reach",
+          "Before": "You must be Connected (Overlay or Jacked In). Spend 1 fire, then pick the implant on the Chrome strike prompt. Soft chrome resists one step; Salvage chrome fails one step worse. One implant per target may be Destroyed per encounter.",
+          "Tier1": "The implant is <strong>Damaged</strong>.",
+          "Tier2": "The implant is <strong>Damaged</strong>, and the mark takes the Director’s biofeedback jolt for the overrun.",
+          "Tier3": "The implant is <strong>Destroyed</strong>. Its benefit is gone and its Body Integrity stays locked out until the wreck is repaired or replaced in downtime. The Item is <em>not</em> removed from the sheet."
         }
       },
       "NotLoaded": "{payload} isn’t loaded as a magazine. Use Load magazine (Craft) on the chip first.",
@@ -9265,6 +9358,186 @@
         "Title": "Start this step over?",
         "Confirm": "Clear the {step} step? Spine Items granted by this step will be removed when possible.",
         "ClassHint": "Class can’t be auto-cleared here — delete it on the sheet, then pick again."
+      }
+    },
+    "Locker": {
+      "Title": "Locker",
+      "DefaultName": "Locker",
+      "UnknownHero": "Somebody",
+      "Folder": "Ghostwire Lockers",
+      "Hud": "Open locker",
+      "Place": "Place Locker",
+      "PlaceConfirm": "Place",
+      "Placed": "{name} bolted down. Double-click the token to open it.",
+      "NoScene": "Open a scene before placing a locker.",
+      "NoTemplate": "The Ghostwire locker stub is missing from the summons compendium.",
+      "NoHero": "Pick a hero before moving gear.",
+      "Denied": "That locker is locked. Only its owner, a shared key-holder, or the Director can open it.",
+      "ReadOnly": "You can read this locker but not move gear in or out of it.",
+      "Hero": "Hero",
+      "Deposit": "Stow",
+      "Withdraw": "Take",
+      "StockHeading": "In the locker ({count})",
+      "CarryHeading": "Carried by {name}",
+      "StockEmpty": "Empty. Stow something or drag an Item onto this panel.",
+      "CarryEmpty": "Nothing stowable on this hero. Chrome, kits, and class gear stay on the sheet.",
+      "DropHint": "Drag an Item onto this panel to stash it. No ¥ changes hands — a locker is storage, not a shop.",
+      "ToggleShare": "Party key",
+      "OpenSheet": "Actor sheet",
+      "PlaceForm": {
+        "Hint": "A locker is player-locked storage. Give it an owner, or hand the whole crew a key.",
+        "Name": "Locker name",
+        "Owner": "Owner",
+        "NoOwner": "Director only",
+        "PartyShare": "Party key (everyone can open it)"
+      },
+      "Share": {
+        "OnParty": "Party key",
+        "OffParty": "Owner only"
+      },
+      "Via": {
+        "director": "Director",
+        "owner": "Owner",
+        "shared": "Shared key",
+        "party": "Party key",
+        "unlocked": "Unlocked"
+      },
+      "Errors": {
+        "empty": "Nothing left in that stack.",
+        "no-item": "That Item is gone.",
+        "not-storable": "That can’t go in a locker. Chrome, kits, and class features stay on the sheet.",
+        "no-permission": "You don’t have write access on both sides of that move."
+      },
+      "Chat": {
+        "Deposited": "<strong>{hero}</strong> stows <strong>{item}</strong> ×{count} in {locker}.",
+        "Withdrew": "<strong>{hero}</strong> pulls <strong>{item}</strong> ×{count} out of {locker}."
+      },
+      "Template": {
+        "Name": "Locker",
+        "Description": "<p>A player-locked stash: a wall locker, a floor safe, a welded crate in the back of a squat. Drop it on a map, name an owner, and the crew has somewhere to leave the gear they can’t carry through a checkpoint.</p><p>Nothing here is for sale. A locker moves Items between a hero’s inventory and its own shelf, both directions. Only the owner, a shared key-holder, or the Director can open it.</p>"
+      }
+    },
+    "ChromeDamage": {
+      "UnknownSource": "something in the Wire",
+      "States": {
+        "ok": "Online",
+        "suppressed": "Suppressed",
+        "damaged": "Damaged",
+        "destroyed": "Destroyed"
+      },
+      "Paths": {
+        "reboot": "Reboot",
+        "mend": "Resonance Mending",
+        "mendDeep": "Resonance Mending (2 Resonance)",
+        "rite": "Machine God’s Rite",
+        "project": "downtime repair Project",
+        "director": "Director"
+      },
+      "SheetLine": {
+        "Plain": "Chrome condition: {state}",
+        "WithProject": "Chrome condition: {state} — repair Project goal {goal}, parts ¥{cost}"
+      },
+      "LockedIntegrity": "{locked} Body Integrity is locked out by Destroyed chrome. Repair or replace the implant to free it.",
+      "Menu": {
+        "Reboot": "Reboot chrome",
+        "Repair": "Repair chrome (downtime)",
+        "Replace": "Replace destroyed chrome",
+        "SetState": "Set chrome condition…"
+      },
+      "SetState": {
+        "Hint": "Set the condition on <strong>{name}</strong>. Suppressed and Destroyed switch its benefits off; Damaged leaves them on at a bane.",
+        "Label": "Condition",
+        "Confirm": "Set"
+      },
+      "Strike": {
+        "Title": "Chrome strike",
+        "Hint": "{source} bites into one implant. Pick the target and the tier your power roll came up.",
+        "Target": "Implant",
+        "Tier": "Power roll tier",
+        "Tier1": "Tier 1 (≤11)",
+        "Tier2": "Tier 2 (12–16)",
+        "Tier3": "Tier 3 (17+)",
+        "Confirm": "Apply"
+      },
+      "Mend": {
+        "Title": "Mend chrome",
+        "Target": "Implant",
+        "Confirm": "Mend",
+        "Hint": {
+          "reboot": "A reboot clears a Suppressed implant and nothing else.",
+          "mend": "Resonance Mending clears Suppressed chrome.",
+          "mendDeep": "Two Resonance restores failed chrome to minimal function: Damaged comes back online, Destroyed drops to Damaged.",
+          "rite": "The Machine God’s Rite restores an implant to full, whatever state it was in.",
+          "project": "A downtime repair Project restores the implant to full."
+        }
+      },
+      "Replace": {
+        "Title": "Replace destroyed chrome",
+        "Content": "Pull the wreck of <strong>{name}</strong> off the sheet. Its Body Integrity is <em>not</em> refunded — the socket stays spent until a fresh implant goes in."
+      },
+      "Notify": {
+        "Changed": "{name}: chrome condition is now {state}.",
+        "Resisted": "{name} shrugs it off — {grade} chrome rides out the pulse.",
+        "Replaced": "{name} removed as scrap. No Body Integrity returned.",
+        "NoRefund": "{name} was Destroyed: its {cost} Body Integrity stays spent. Install a replacement to use the socket again.",
+        "DeleteBlocked": "{name} is Destroyed — it can’t be deleted for a refund. Repair it, or use Replace destroyed chrome.",
+        "NoTarget": "Target a token (or select one) that carries chrome first.",
+        "Relayed": "Chrome strike handed to the Director.",
+        "NoGm": "No Director is online to apply that chrome strike.",
+        "MendNoPermission": "You can’t write to {name}. Ask the Director to apply the mend."
+      },
+      "Chat": {
+        "Worsened": "<strong>{name}</strong> on {actor} goes {from} → <strong>{to}</strong> ({source}).",
+        "Repaired": "<strong>{name}</strong> on {actor} comes back {from} → <strong>{to}</strong> ({source})."
+      }
+    },
+    "Identity": {
+      "UnknownBearer": "The bearer",
+      "UnknownChecker": "a checkpoint",
+      "Bands": {
+        "burn": "Burn",
+        "paper": "Paper",
+        "broker": "Broker",
+        "deep": "Deep cover",
+        "seeded": "Cradle-seeded"
+      },
+      "Scan": {
+        "double-bane": "double bane",
+        "bane": "bane",
+        "none": "no modifier",
+        "edge": "edge",
+        "double-edge": "double edge"
+      },
+      "Hint": {
+        "double-bane": "The record falls apart on contact. The bearer rolls with a double bane, and the checker has a name to file.",
+        "bane": "Thin paper. The bearer rolls with a bane.",
+        "none": "It holds up. No modifier either way.",
+        "edge": "A clean history the checker can follow. The bearer rolls with an edge.",
+        "double-edge": "Seeded at the registry. The bearer rolls with a double edge, and a routine check usually waves them straight through."
+      },
+      "SheetLine": {
+        "Clean": "Identity: {band} (quality {quality}) · scans at {scan} · burn risk {burnRisk}",
+        "Burned": "Identity: burned — flagged in the registry, scans at {scan}"
+      },
+      "Menu": {
+        "Scan": "Validate / scan identity",
+        "Burn": "Burn this identity",
+        "Unburn": "Clear burned flag"
+      },
+      "Prompt": {
+        "Title": "Validate identity",
+        "Hint": "Run <strong>{name}</strong> past a check. Ghostwire announces the edge or bane; the Director applies it in the power-roll dialog.",
+        "Checker": "Who is checking?",
+        "CheckerHint": "lobby gate, street patrol, clinic intake…",
+        "Hot": "Hot check (deep records pull, corp-side verification)",
+        "Confirm": "Scan"
+      },
+      "Notify": {
+        "Scanned": "{name} scanned: {scan}."
+      },
+      "Chat": {
+        "Scanned": "<strong>{bearer}</strong> runs <strong>{identity}</strong> past {checker} — {band} paper, <strong>{scan}</strong> on the check, burn risk {burnRisk}.",
+        "Burned": "<strong>{identity}</strong> is burned. It reads as a street forgery from here on."
       }
     }
   },

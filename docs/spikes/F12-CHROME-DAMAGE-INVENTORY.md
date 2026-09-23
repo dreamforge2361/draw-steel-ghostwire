@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-22 (ET)  
 **Module:** **0.3.101** @ `9f11b27` (F11 Critical Roll on main; Chargen merge `f010874`)  
-**Status:** **READ-ONLY inventory** — seeds the F12 design brief. **No Foundry chrome-damage code in this pass.**  
+**Status:** **SHIPPED — implemented 0.3.113.** This file stays as the read-only inventory that seeded the design; the implementation lives in `scripts/chrome-damage.mjs`, the Director note is `docs/directors/f12-chrome-damage.md`, and the smoke is `node tools/f12-chrome-damage-smoke.mjs`. Every gap listed below is closed except where the sketch says the Director adjudicates.  
 **Backlog:** `docs/directors/MASTER-BACKLOG-2026-09-22.md` → **F12**  
 **RAW spine:** `docs/raw/09-chrome-body-integrity.md` § Suppress / Damage / Destroy (draft); master Track 5 in `docs/masters/GHOSTWIRE_CHROME_MASTER.md`
 

@@ -1,0 +1,127 @@
+{
+  "_id": "GwF12ChromeSund1",
+  "_key": "!items!GwF12ChromeSund1",
+  "name": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Name",
+  "type": "ability",
+  "img": "icons/magic/unholy/strike-body-explode-disintegrate.webp",
+  "system": {
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "20-technomancer",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "chrome-sunder",
+    "story": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Story",
+    "keywords": [
+      "magic",
+      "wired"
+    ],
+    "type": "main",
+    "category": "heroic",
+    "resource": null,
+    "trigger": "",
+    "distance": {
+      "type": "ranged",
+      "primary": "5",
+      "secondary": "1",
+      "tertiary": "1"
+    },
+    "damageDisplay": "ranged",
+    "target": {
+      "type": "special",
+      "value": null,
+      "custom": "1 creature within 5 carrying chrome"
+    },
+    "power": {
+      "roll": {
+        "formula": "@chr",
+        "characteristics": [
+          "reason"
+        ],
+        "reactive": false
+      },
+      "effects": {
+        "RwF12ChromeSund1": {
+          "name": "",
+          "img": null,
+          "type": "other",
+          "_id": "RwF12ChromeSund1",
+          "sort": 100,
+          "other": {
+            "tier1": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Tier1",
+              "potency": {
+                "value": "@potency.weak",
+                "characteristic": "none"
+              }
+            },
+            "tier2": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Tier2",
+              "potency": {
+                "value": "@potency.average",
+                "characteristic": ""
+              }
+            },
+            "tier3": {
+              "display": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Tier3",
+              "potency": {
+                "value": "@potency.strong",
+                "characteristic": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "spend": {
+      "text": "",
+      "value": null
+    },
+    "effects": {
+      "before0000000000": {
+        "_id": "before0000000000",
+        "type": "base",
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Effect_before0000000000",
+        "before": true,
+        "name": "",
+        "img": null,
+        "sort": 0
+      },
+      "spend00000000000": {
+        "_id": "spend00000000000",
+        "type": "spend",
+        "sort": 100000,
+        "resource": {
+          "value": 5,
+          "multiple": false
+        },
+        "description": "GHOSTWIRE.Classes.Technomancer.Items.ChromeSunder.Effect_spend00000000000",
+        "name": "",
+        "img": null,
+        "before": false
+      }
+    },
+    "prerequisites": {
+      "value": "",
+      "dsid": [
+        "technomancer"
+      ],
+      "level": null
+    }
+  },
+  "effects": [],
+  "folder": "yGJtc2su0yOsHFhh",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "chromeStrike": {
+        "ladder": "destroy",
+        "intent": "destroy",
+        "wirelessOnly": false
+      }
+    }
+  }
+}

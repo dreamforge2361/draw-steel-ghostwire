@@ -1,0 +1,12 @@
+{
+  "_id": "gwGearIdentity00",
+  "_key": "!folders!gwGearIdentity00",
+  "name": "GHOSTWIRE.Gear.Folders.Identity",
+  "type": "Item",
+  "folder": null,
+  "description": "",
+  "color": null,
+  "sorting": "a",
+  "sort": 21000,
+  "flags": {}
+}

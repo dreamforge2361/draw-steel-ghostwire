@@ -32,6 +32,7 @@ export const FOLDER_IDS = Object.freeze({
   modsWeapons: "lS0Fe0Hu8lN3LKEC",
   modsGadgets: "WPSNKYe2217TSF7m",
   weaponsMounted: "njXhmoAVQCSiEekh",
+  identity: "gwGearIdentity00",
 });
 
 const gwFlags = doc => doc?.flags?.[MODULE_ID] ?? doc?.flags?.["draw-steel-ghostwire"] ?? {};
@@ -201,6 +202,18 @@ export const KIOSK_PRESETS = Object.freeze([
       packs: ["mods"],
       pathPrefixes: ["gadgets"],
       folderIds: [FOLDER_IDS.modsGadgets],
+    },
+  },
+  {
+    // 0.3.113 (F17) — the papermill. SIN and forged-credential SKUs from gear/identity.
+    // Matches the Identity folder + the Identity tag, so a new forgery auto-stocks.
+    id: "identity",
+    langKey: "Identity",
+    match: {
+      packs: ["gear"],
+      pathPrefixes: ["identity"],
+      folderIds: [FOLDER_IDS.identity],
+      tagsAny: ["Identity"],
     },
   },
 ]);
