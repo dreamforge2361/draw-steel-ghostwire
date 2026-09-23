@@ -1,0 +1,78 @@
+{
+  "_id": "SuudCn4RJCXO7nxX",
+  "_key": "!items!SuudCn4RJCXO7nxX",
+  "name": "GHOSTWIRE.Vehicles.Items.WorkshopBench.Name",
+  "type": "treasure",
+  "img": "icons/tools/smithing/anvil.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.WorkshopBench.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "23-machines",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "workshop-bench",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥400 in scrap, fasteners, and a Wire splice; any flat wall or floor",
+      "source": "Ghostwire Machines — Base Assets",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Workshop Bench · placed as a dual Item + Actor."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "street",
+        "price": 800,
+        "modSlots": 3,
+        "tags": [
+          "Workshop",
+          "Project",
+          "Fixed",
+          "Stub"
+        ],
+        "modFamily": [
+          "vehicle",
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 16,
+        "stamina": 16,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Stub fabricator bench. Install/fabricate still use Projects — no parallel Uptime UI.",
+        "sizeScale": "L"
+      }
+    }
+  }
+}

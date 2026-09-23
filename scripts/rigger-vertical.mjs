@@ -1,0 +1,290 @@
+// Rigger vertical (0.3.105): Deploy & Command picker, Jump-In (Jacked In + meat inert),
+// biofeedback / Uptime drain, Facility Rigger Home Ground edge.
+// Fleet refuse + chassis stamp live in machines.mjs deployMachine.
+
+import { WIRED_STATUS_DEFS } from "./wired-state.mjs";
+import {
+  machineBand,
+  deployMachine,
+  recallMachine,
+  deployedMachine,
+  fleetSizeCap,
+  fieldedMachineCount,
+} from "./machines.mjs";
+
+const MODULE_ID = "draw-steel-ghostwire";
+const UI = "GHOSTWIRE.Summons.Machines.UI";
+const MEAT_INERT = "ghostwire-meat-inert";
+const HOME_GROUND_EDGE = "ghostwire-home-ground-edge";
+
+export function ownedMachineItems(actor) {
+  if (!(actor instanceof Actor)) return [];
+  return [...actor.items].filter(item => !!item.getFlag(MODULE_ID, "vehicle") || !!machineBand(item));
+}
+
+async function setJackedIn(actor, active) {
+  for (const [key, status] of Object.entries(WIRED_STATUS_DEFS)) {
+    if (key === "jackedIn") continue;
+    if (actor.statuses.has(status.id)) await actor.toggleStatusEffect(status.id, { active: false });
+  }
+  await actor.toggleStatusEffect(WIRED_STATUS_DEFS.jackedIn.id, { active: !!active });
+  await actor.update({
+    [`flags.${MODULE_ID}.wired`]: {
+      connected: true,
+      immersed: !!active,
+      state: active ? "jackedIn" : "disconnected",
+    },
+  });
+}
+
+function meatInertEffect(originUuid) {
+  return {
+    name: game.i18n.localize(`${UI}.MeatInert`),
+    img: "icons/svg/sleep.svg",
+    origin: originUuid,
+    disabled: false,
+    transfer: false,
+    statuses: [MEAT_INERT],
+    description: game.i18n.localize(`${UI}.MeatInertHint`),
+    flags: { [MODULE_ID]: { meatInert: true } },
+    changes: [],
+  };
+}
+
+export function isJumpedInto(machineActor) {
+  return !!machineActor?.getFlag(MODULE_ID, "jumpedInBy");
+}
+
+export async function jumpIn(pilot, machineActor) {
+  if (!(pilot instanceof Actor) || !(machineActor instanceof Actor)) return;
+  const machine = machineActor.getFlag(MODULE_ID, "machine") ?? {};
+  const capable = machine.jumpInCapable
+    || [...(machineActor.items ?? [])].some(i => i.system?._dsid === "rigger-cocoon");
+  if (!capable) {
+    return ui.notifications.warn(game.i18n.format(`${UI}.JumpInNotCapable`, { name: machineActor.name }));
+  }
+  const prior = pilot.getFlag(MODULE_ID, "jumpedInto");
+  if (prior) {
+    const old = await fromUuid(prior);
+    if (old) await old.unsetFlag(MODULE_ID, "jumpedInBy");
+  }
+  await setJackedIn(pilot, true);
+  const existing = pilot.effects.filter(e => e.getFlag(MODULE_ID, "meatInert"));
+  if (existing.length) await pilot.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
+  await pilot.createEmbeddedDocuments("ActiveEffect", [meatInertEffect(machineActor.uuid)]);
+  await pilot.setFlag(MODULE_ID, "jumpedInto", machineActor.uuid);
+  await machineActor.setFlag(MODULE_ID, "jumpedInBy", pilot.uuid);
+  if (machine.beacon || machine.homeGround) await ensureHomeGroundEdge(pilot, machineActor);
+  ui.notifications.info(game.i18n.format(`${UI}.JumpInOk`, { pilot: pilot.name, machine: machineActor.name }));
+}
+
+export async function jumpOut(pilot) {
+  if (!(pilot instanceof Actor)) return;
+  const machineUuid = pilot.getFlag(MODULE_ID, "jumpedInto");
+  if (machineUuid) {
+    const machine = await fromUuid(machineUuid);
+    if (machine) await machine.unsetFlag(MODULE_ID, "jumpedInBy");
+  }
+  await pilot.unsetFlag(MODULE_ID, "jumpedInto");
+  const inert = pilot.effects.filter(e => e.getFlag(MODULE_ID, "meatInert"));
+  if (inert.length) await pilot.deleteEmbeddedDocuments("ActiveEffect", inert.map(e => e.id));
+  const edge = pilot.effects.filter(e => e.getFlag(MODULE_ID, "homeGroundEdge"));
+  if (edge.length) await pilot.deleteEmbeddedDocuments("ActiveEffect", edge.map(e => e.id));
+  if (pilot.statuses.has(WIRED_STATUS_DEFS.jackedIn.id)) {
+    await pilot.toggleStatusEffect(WIRED_STATUS_DEFS.jackedIn.id, { active: false });
+  }
+  ui.notifications.info(game.i18n.format(`${UI}.JumpOutOk`, { pilot: pilot.name }));
+}
+
+async function ensureHomeGroundEdge(pilot, beaconActor) {
+  const isFacility = [...(pilot.items ?? [])].some(i =>
+    i.system?._dsid === "facility-rigger"
+    || (i.type === "subclass" && /facility/i.test(i.name)));
+  if (!isFacility) return;
+  const existing = pilot.effects.filter(e => e.getFlag(MODULE_ID, "homeGroundEdge"));
+  if (existing.length) await pilot.deleteEmbeddedDocuments("ActiveEffect", existing.map(e => e.id));
+  await pilot.createEmbeddedDocuments("ActiveEffect", [{
+    name: game.i18n.localize(`${UI}.HomeGroundEdge`),
+    img: "icons/svg/upgrade.svg",
+    origin: beaconActor.uuid,
+    disabled: false,
+    transfer: false,
+    statuses: [HOME_GROUND_EDGE],
+    description: game.i18n.localize(`${UI}.HomeGroundEdgeHint`),
+    flags: { [MODULE_ID]: { homeGroundEdge: true, beaconUuid: beaconActor.uuid } },
+    changes: [],
+  }]);
+}
+
+async function drainUptime(pilot, amount, reason) {
+  const resource = pilot.system?.coreResource;
+  if (!resource?.path || !resource?.target) {
+    ui.notifications.warn(game.i18n.format(`${UI}.UptimeDrainManual`, {
+      pilot: pilot.name, amount, reason,
+    }));
+    return;
+  }
+  const current = Number(foundry.utils.getProperty(resource.target, resource.path)) || 0;
+  const next = Math.max(0, current - amount);
+  await resource.target.update({ [resource.path]: next });
+  ui.notifications.info(game.i18n.format(`${UI}.UptimeDrained`, {
+    pilot: pilot.name, amount, current: next, reason,
+  }));
+}
+
+export async function openDeployCommandPicker(actor) {
+  if (!(actor instanceof Actor)) return;
+  const machines = ownedMachineItems(actor);
+  if (!machines.length) return ui.notifications.warn(game.i18n.localize(`${UI}.NoOwnedMachines`));
+  const cap = fleetSizeCap(actor);
+  const fielded = fieldedMachineCount(actor);
+  const options = machines.map(item => {
+    const deployed = deployedMachine(item);
+    const vehicle = item.getFlag(MODULE_ID, "vehicle") ?? {};
+    const kind = vehicle.baseAsset ? "baseAsset" : (vehicle.drone ? "drone" : "vehicle");
+    const state = deployed
+      ? game.i18n.localize(`${UI}.StatusDeployedShort`)
+      : game.i18n.localize(`${UI}.StatusStowedShort`);
+    return `<option value="${item.id}">${foundry.utils.escapeHTML(item.name)} [${kind}] — ${state}</option>`;
+  }).join("");
+
+  const content = `
+    <form class="ghostwire-deploy-command flexcol">
+      <p>${game.i18n.format(`${UI}.FleetStatus`, { fielded, cap })}</p>
+      <label>${game.i18n.localize(`${UI}.PickMachine`)}
+        <select name="itemId">${options}</select>
+      </label>
+      <p class="hint">${game.i18n.localize(`${UI}.DeployCommandHint`)}</p>
+    </form>`;
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: game.i18n.localize(`${UI}.DeployCommandTitle`) },
+    content,
+    buttons: [
+      {
+        action: "deploy",
+        label: game.i18n.localize(`${UI}.Deploy`),
+        icon: "fa-solid fa-location-dot",
+        default: true,
+        callback: (_e, button) => ({ action: "deploy", itemId: button.form.elements.itemId.value }),
+      },
+      {
+        action: "command",
+        label: game.i18n.localize(`${UI}.Command`),
+        icon: "fa-solid fa-satellite-dish",
+        callback: (_e, button) => ({ action: "command", itemId: button.form.elements.itemId.value }),
+      },
+      {
+        action: "jumpIn",
+        label: game.i18n.localize(`${UI}.JumpIn`),
+        icon: "fa-solid fa-plug",
+        callback: (_e, button) => ({ action: "jumpIn", itemId: button.form.elements.itemId.value }),
+      },
+      { action: "cancel", label: game.i18n.localize("Cancel"), icon: "fa-solid fa-xmark" },
+    ],
+  });
+  if (!result || result === "cancel" || !result.itemId) return;
+  const item = actor.items.get(result.itemId);
+  if (!item) return;
+  if (result.action === "deploy") {
+    if (deployedMachine(item)) {
+      return ui.notifications.warn(game.i18n.format(`${UI}.AlreadyDeployed`, { name: item.name }));
+    }
+    return deployMachine(item);
+  }
+  if (result.action === "command") {
+    const deployed = deployedMachine(item);
+    if (!deployed) {
+      return ui.notifications.warn(game.i18n.format(`${UI}.NotDeployed`, { name: item.name }));
+    }
+    deployed.sheet?.render(true);
+    ui.notifications.info(game.i18n.format(`${UI}.CommandOpen`, { name: deployed.name }));
+    return deployed;
+  }
+  if (result.action === "jumpIn") {
+    let deployed = deployedMachine(item);
+    if (!deployed) deployed = await deployMachine(item);
+    if (deployed) await jumpIn(actor, deployed);
+    return deployed;
+  }
+}
+
+function patchDeployAndCommandUse() {
+  const AbilityModel = CONFIG.Item.dataModels?.ability ?? globalThis.ds?.data?.Item?.AbilityModel;
+  if (!AbilityModel?.prototype.use) {
+    console.warn(`${MODULE_ID} | AbilityModel#use missing; Deploy & Command picker not hooked`);
+    return;
+  }
+  const prior = AbilityModel.prototype.use;
+  AbilityModel.prototype.use = async function(config = {}, dialogOptions = {}, messageOptions = {}) {
+    const dsid = this._dsid ?? this.parent?.system?._dsid;
+    if (dsid === "deploy-and-command" && this.actor) {
+      await openDeployCommandPicker(this.actor);
+    }
+    return prior.call(this, config, dialogOptions, messageOptions);
+  };
+}
+
+function registerJumpInDamageHooks() {
+  Hooks.on("updateActor", async (actor, changes, _options, userId) => {
+    if (userId !== game.user.id) return;
+    const stamina = foundry.utils.getProperty(changes, "system.stamina.value");
+    if (stamina === undefined) return;
+    const pilotUuid = actor.getFlag(MODULE_ID, "jumpedInBy");
+    if (!pilotUuid) {
+      actor._ghostwireLastStamina = Number(stamina);
+      return;
+    }
+    const pilot = await fromUuid(pilotUuid);
+    if (!(pilot instanceof Actor)) return;
+    const newVal = Number(stamina);
+    const last = actor._ghostwireLastStamina;
+    actor._ghostwireLastStamina = newVal;
+    if (last != null && newVal >= last) return;
+    const lost = last != null ? Math.max(1, last - newVal) : 1;
+    await drainUptime(pilot, 1, game.i18n.format(`${UI}.MachineHit`, { name: actor.name }));
+    const buffered = [...(pilot.items ?? [])].some(i => i.system?._dsid === "ghost-rein");
+    if (!buffered) {
+      const cur = Number(pilot.system?.stamina?.value ?? 0);
+      if (Number.isFinite(cur) && cur > 0) {
+        await pilot.update({ "system.stamina.value": Math.max(0, cur - 1) });
+        ui.notifications.warn(game.i18n.format(`${UI}.Biofeedback`, { pilot: pilot.name, amount: 1 }));
+      } else {
+        ui.notifications.warn(game.i18n.format(`${UI}.BiofeedbackManual`, { pilot: pilot.name, lost }));
+      }
+    }
+  });
+}
+
+export function registerRiggerVertical() {
+  CONFIG.statusEffects[MEAT_INERT] ??= {
+    id: MEAT_INERT,
+    name: `${UI}.MeatInert`,
+    img: "icons/svg/sleep.svg",
+  };
+  CONFIG.statusEffects[HOME_GROUND_EDGE] ??= {
+    id: HOME_GROUND_EDGE,
+    name: `${UI}.HomeGroundEdge`,
+    img: "icons/svg/upgrade.svg",
+  };
+
+  patchDeployAndCommandUse();
+  registerJumpInDamageHooks();
+
+  const module = game.modules.get(MODULE_ID);
+  if (module) {
+    module.api = {
+      ...(module.api ?? {}),
+      fleetSizeCap,
+      fieldedMachineCount,
+      ownedMachineItems,
+      deployMachine,
+      recallMachine,
+      openDeployCommandPicker,
+      jumpIn,
+      jumpOut,
+      isJumpedInto,
+    };
+  }
+  console.log(`${MODULE_ID} | Rigger vertical: Deploy&Command / Jump-In registered`);
+}

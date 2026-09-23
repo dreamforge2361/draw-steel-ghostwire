@@ -875,3 +875,6 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 - **The fleet is nuyen gear.** Drones, vehicles, turrets, and mesh-web generators are bought with ¥ and improved via the Upgrade Slot subsystem (THE MACHINES, above). Building and modding hardware is the Wrench's signature **downtime project**, most fully expressed by the Facility Rigger's Downtime Fabrication.
 - **Favored Kits.** Light-to-moderate — a hands-on Wrench likes a fabricator/rigging-adjacent Kit (Fabricator's Bench, Rigger's Harness, Field Chassis, per subclass) but carries their real weight through the fleet, not their own loadout.
 - **Wired / Machines access, no Veil.** The Wrench lives across Combat, the Wired, and the Machines vehicle-combat sub-system, with fleet command as its emphasis. A **Cyborg can be a Wrench** — a machine commanding machines — and is a strong Full-Conversion build.
+
+
+> **Foundry 0.3.105:** Fleet Size refuse, Deploy & Command picker, and Jump-In (Jacked In + meat inert + Uptime/biofeedback) ship in `scripts/machines.mjs` + `scripts/rigger-vertical.mjs`. Safehouse Beacon Home Ground edge AE for Facility Riggers.

@@ -1,0 +1,12 @@
+{
+  "_id": "gwVehBaseAssets0",
+  "_key": "!folders!gwVehBaseAssets0",
+  "name": "GHOSTWIRE.Vehicles.Folders.BaseAssets",
+  "type": "Item",
+  "folder": null,
+  "description": "E1 base assets \u2014 Door Lock, Safehouse Beacon, Camera/Sensor Mast, and thin follow-ons.",
+  "color": "#4a6d8c",
+  "sorting": "a",
+  "sort": 6000,
+  "flags": {}
+}
