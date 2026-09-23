@@ -46,7 +46,7 @@
         "echelon": 4,
         "availability": "prototype",
         "price": 65000,
-        "modSlots": 5,
+        "modSlots": 6,
         "tags": [
           "Command",
           "EW",

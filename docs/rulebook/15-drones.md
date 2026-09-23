@@ -116,18 +116,18 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 | Tape-Eye / Junk-Mote / taped-together spy mote | Air (drone) | Personal | Street | 80 | 1 | Phone-cam on scavenged fans; dies if you sneeze wrong. | Recon, Clunker, Unreliable, Expendable, Wired |
 | Sink-Floater / Wet-Junk / leaking wet scout | Water (drone) | Personal | Street | 180 | 1 | Sealed with epoxy and prayer; floats, sometimes submerges. | Aquatic, Recon, Clunker, Unreliable, Wired |
 | Junkbug / Scrap-Crawler / taped crawler | Ground (drone) | Personal | Street | 120 | 1 | Mismatched legs, magnet scrap, cable-tray vermin. | Recon, Climb, Clunker, Unreliable, Wired |
-| Rustbucket / Rusted Quad / scrap aerial | Air (drone) | Light | Street | 250 | 1 | Bent arms, patched batteries; loud and proud to stay aloft. | Recon, Clunker, Unreliable, Wired |
-| Sputter-Sled / Cargo Clunker / sputtering cargo sled | Ground (drone) | Light | Street | 350 | 1 | Hauls a duffel until the motor coughs; corridor blocker on a good day. | Cargo, Clunker, Unreliable, Wired |
-| Rattlebox / Scrap-Sentry / junk perimeter walker | Ground (drone) | Light | Street | 400 | 1 | Motion chirp + flashlight mount; panics at shadows. | Sentry, Clunker, Unreliable, Wired |
+| Rustbucket / Rusted Quad / scrap aerial | Air (drone) | Light | Street | 250 | 3 | Bent arms, patched batteries; loud and proud to stay aloft. | Recon, Clunker, Unreliable, Wired |
+| Sputter-Sled / Cargo Clunker / sputtering cargo sled | Ground (drone) | Light | Street | 350 | 2 | Hauls a duffel until the motor coughs; corridor blocker on a good day. | Cargo, Clunker, Unreliable, Wired |
+| Rattlebox / Scrap-Sentry / junk perimeter walker | Ground (drone) | Light | Street | 400 | 2 | Motion chirp + flashlight mount; panics at shadows. | Sentry, Clunker, Unreliable, Wired |
 | Fly / Micro-Drone / insect-scale recon mote | Air (drone) | Personal | Street | 200 | 1 | Palm spy — vents, perches, live video relay. | Recon, Expendable, Wired |
 | Skitter / Vent-Rat / crawl-mote chassis | Ground (drone) | Personal | Street | 280 | 1 | Magnetic belly + whisker cams; lives in cable trays. | Recon, Climb, Wired |
 | Needle / Pin-Eye / kamikaze microframe | Air (drone) | Personal | Street | 350 | 1 | One-shot buzz or bang; cheap swarm filler. | Recon, Kamikaze, Expendable, Wired |
 | Buzz / Ad-Moth / decoy holomote | Air (drone) | Personal | Street | 400 | 1 | Throws false AR / heat chirps; dies if shot. | EW, Decoy, Wired |
 | Taser-Bee / Shock-Mote / contact stunner | Air (drone) | Personal | Professional | 750 | 2 | Close shock payload; soft takedown favorite. | Nonlethal, Swarm, Wired |
-| Crawler / Recon Drone / quadruped sensor unit | Ground (drone) | Light | Professional | 800 | 2 | Climbs, maps, plants taps — forward sensor for Scout/Hacker. | Recon, Climb, Wired |
-| Rotor / Quad-Drone / aerial recon quadcopter | Air (drone) | Light | Professional | 900 | 2 | Default eye-in-the-sky; overwatch, cheap swarm body. | Recon, Swarm, Wired |
-| Spotter / Mark-Eye / designator quad | Air (drone) | Light | Professional | 1,100 | 2 | Paints targets for crew fire; poor brawler. | Recon, Mark, Wired |
-| Mule-Bot / Cargo Drone / autonomous hauler | Ground (drone) | Vehicle (drone) | Professional | 1,100 | 2 | Hauls kits, extracts wounded, blocks a corridor. | Cargo, Cover, Wired |
+| Crawler / Recon Drone / quadruped sensor unit | Ground (drone) | Light | Professional | 800 | 3 | Climbs, maps, plants taps — forward sensor for Scout/Hacker. | Recon, Climb, Wired |
+| Rotor / Quad-Drone / aerial recon quadcopter | Air (drone) | Light | Professional | 900 | 3 | Default eye-in-the-sky; overwatch, cheap swarm body. | Recon, Swarm, Wired |
+| Spotter / Mark-Eye / designator quad | Air (drone) | Light | Professional | 1,100 | 3 | Paints targets for crew fire; poor brawler. | Recon, Mark, Wired |
+| Mule-Bot / Cargo Drone / autonomous hauler | Ground (drone) | Vehicle (drone) | Professional | 1,100 | 4 | Hauls kits, extracts wounded, blocks a corridor. | Cargo, Cover, Wired |
 
 **E1 count:** **15** chassis (6 Clunker / Junk + 9 cleaner Street/Professional). Roles: recon, EW/decoy, nonlethal, cargo, sentry, aquatic.
 
@@ -135,14 +135,14 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 
 | Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |
 |---|---|---|---|---|---|---|---|
-| Netcaster / Snare-Drone / capture frame | Ground (drone) | Light | Restricted | 2,800 | 3 | Foam / monofil net — take alive, not apart. | Nonlethal, Capture, Wired |
-| Wrenchbot / Repair Drone / field maintenance unit | Ground (drone) | Light | Restricted | 3,000 | 3 | Mobile toolkit — feeds Field Repair / rearm loops. | Repair, Support, Wired |
-| Guard-Dog / Patrol Drone / autonomous sentry | Ground (drone) | Light | Restricted | 3,200 | 3 | Perimeter walk: light mount, motion net, area denial. | Sentry, Mount, Wired |
-| Medbot / Trauma Drone / field-medic unit | Ground (drone) | Light | Restricted | 3,500 | 3 | Runs a stabilize package to a downed ally under fire. | Medic, Support, Wired |
-| Choir-Box / Spoof-Drone / local EW kite | Air (drone) | Light | Restricted | 3,600 | 3 | Jam / spoof bubble for a room or alley mouth. | EW, Wired |
-| Nest / Hardpoint Sentry / deployable turret-drone | Ground (drone) | Light | Restricted | 3,800 | 3 | Drops, braces, becomes a temporary autogun nest. | Sentry, Mount, Wired |
-| Barracuda / Aquadrone / submersible saboteur | Water (drone) | Light | Restricted | 4,000 | 3 | Silent wet recon; plants charges on hulls and intakes. | Aquatic, Sabotage, Wired |
-| Ghost-Courier / Shade-Mule / low-obs cargo kite | Air (drone) | Light | Restricted | 4,500 | 3 | Quiet package runner between Flats shafts and Grid roofs. | Cargo, Stealth, Wired |
+| Netcaster / Snare-Drone / capture frame | Ground (drone) | Light | Restricted | 2,800 | 4 | Foam / monofil net — take alive, not apart. | Nonlethal, Capture, Wired |
+| Wrenchbot / Repair Drone / field maintenance unit | Ground (drone) | Light | Restricted | 3,000 | 4 | Mobile toolkit — feeds Field Repair / rearm loops. | Repair, Support, Wired |
+| Guard-Dog / Patrol Drone / autonomous sentry | Ground (drone) | Light | Restricted | 3,200 | 4 | Perimeter walk: light mount, motion net, area denial. | Sentry, Mount, Wired |
+| Medbot / Trauma Drone / field-medic unit | Ground (drone) | Light | Restricted | 3,500 | 4 | Runs a stabilize package to a downed ally under fire. | Medic, Support, Wired |
+| Choir-Box / Spoof-Drone / local EW kite | Air (drone) | Light | Restricted | 3,600 | 4 | Jam / spoof bubble for a room or alley mouth. | EW, Wired |
+| Nest / Hardpoint Sentry / deployable turret-drone | Ground (drone) | Light | Restricted | 3,800 | 4 | Drops, braces, becomes a temporary autogun nest. | Sentry, Mount, Wired |
+| Barracuda / Aquadrone / submersible saboteur | Water (drone) | Light | Restricted | 4,000 | 4 | Silent wet recon; plants charges on hulls and intakes. | Aquatic, Sabotage, Wired |
+| Ghost-Courier / Shade-Mule / low-obs cargo kite | Air (drone) | Light | Restricted | 4,500 | 4 | Quiet package runner between Flats shafts and Grid roofs. | Cargo, Stealth, Wired |
 
 **E2 count:** **8** chassis. Roles: repair, medic, sentry, EW, cargo/stealth, aquatic sabotage, nonlethal capture.
 
@@ -150,14 +150,14 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 
 | Name (slang / corp / sci) | Domain | Scale | Availability | Cost ¥ | Mod slots | Profile | Tags |
 |---|---|---|---|---|---|---|---|
-| Ripper / Breach-Drone / door-cracker | Ground (drone) | Light | Military | 11,000 | 4 | Charges, cutters, or shaped punch for hard portals. | Breach, Assault, Wired |
-| Kiln-Beetle / Armored Repair Drone / hardened maintenance unit | Ground (drone) | Light | Military | 11,500 | 4 | A Wrenchbot that can take a hit — plated shell, cutting and welding arms, feedstock hopper. | Repair, Support, Armor, Wired |
-| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | Military | 12,000 | 4 | Jams a floor, spoofs a lane, paints what is left for the crew to shoot. Loud on the Wire. | EW, Jump-In-Capable, Wired |
-| Pallbearer / Extraction Hauler / armored mule | Ground (drone) | Vehicle (drone) | Military | 12,000 | 4 | Armored cargo bay for downed runners; light defensive mount. | Cargo, Armor, Medic, Wired |
-| Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle (drone) | Military | 13,000 | 4 | Real hardpoint gunner — fleet's flying damage dealer. | Combat, Mount, Jump-In-Capable, Wired |
+| Ripper / Breach-Drone / door-cracker | Ground (drone) | Light | Military | 11,000 | 5 | Charges, cutters, or shaped punch for hard portals. | Breach, Assault, Wired |
+| Kiln-Beetle / Armored Repair Drone / hardened maintenance unit | Ground (drone) | Light | Military | 11,500 | 5 | A Wrenchbot that can take a hit — plated shell, cutting and welding arms, feedstock hopper. | Repair, Support, Armor, Wired |
+| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | Military | 12,000 | 5 | Jams a floor, spoofs a lane, paints what is left for the crew to shoot. Loud on the Wire. | EW, Jump-In-Capable, Wired |
+| Pallbearer / Extraction Hauler / armored mule | Ground (drone) | Vehicle (drone) | Military | 12,000 | 6 | Armored cargo bay for downed runners; light defensive mount. | Cargo, Armor, Medic, Wired |
+| Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle (drone) | Military | 13,000 | 6 | Real hardpoint gunner — fleet's flying damage dealer. | Combat, Mount, Jump-In-Capable, Wired |
 | Skulker / Anthro-Drone / humanoid infiltrator | Ground (drone) | Personal | Military | 14,000 | 4 | Passes as a body at distance; tools or a sidearm mount. | Anthro, Infiltrate, Jump-In-Capable, Wired |
-| Hellkite / Strafe-Wing / gunship microframe | Air (drone) | Vehicle (drone) | Military | 15,500 | 4 | Twin light mounts, dive strafe; loud and hated in the Grid. | Combat, Mount, Jump-In-Capable, Wired |
-| Deep-Viper / Hunter Aquadron / wet hunter | Water (drone) | Vehicle (drone) | Military | 16,000 | 4 | Deeper hull, torpedo/spear mount, chase boats from below. | Aquatic, Combat, Jump-In-Capable, Wired |
+| Hellkite / Strafe-Wing / gunship microframe | Air (drone) | Vehicle (drone) | Military | 15,500 | 6 | Twin light mounts, dive strafe; loud and hated in the Grid. | Combat, Mount, Jump-In-Capable, Wired |
+| Deep-Viper / Hunter Aquadron / wet hunter | Water (drone) | Vehicle (drone) | Military | 16,000 | 6 | Deeper hull, torpedo/spear mount, chase boats from below. | Aquatic, Combat, Jump-In-Capable, Wired |
 
 **E3 count:** **8** chassis. Roles: breach, armored repair, EW/designator, extract/medic, aerial combat, anthro infiltrate, aquatic combat.
 
@@ -167,13 +167,13 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 |---|---|---|---|---|---|---|---|
 | Phantom / Glass-Eye / elite recon kite | Air (drone) | Light | Prototype | 28,000 | 5 | Near-silent sensor apex; paints through smoke and spoof. | Recon, Stealth, Mark, Jump-In-Capable, Wired |
 | Whisper-Run / Black-Courier / elite stealth courier | Air (drone) | Light | Prototype | 32,000 | 5 | Ghost-lane package runner; low-obs hull, sealed bay. | Cargo, Stealth, Jump-In-Capable, Wired |
-| Lifeline / Apex-Medic / elite extract frame | Ground (drone) | Vehicle (drone) | Prototype | 35,000 | 5 | Armored trauma bay + stabilize suite; pulls bodies out loud zones. | Medic, Armor, Cargo, Jump-In-Capable, Wired |
-| Tide-Wraith / Apex Aquadrone / elite silent wet hunter | Water (drone) | Vehicle (drone) | Prototype | 34,000 | 5 | A Deep-Viper with the noise taken out; sits on a canal floor for a day, then takes a hull. | Aquatic, Stealth, Combat, Jump-In-Capable, Wired |
-| Second Face / Apex Anthro-Drone / elite humanoid infiltration frame | Ground (drone) | Personal | Prototype | 36,000 | 5 | Skinned, weighted, warm — walks a badge through a lobby and hands it back at end of shift. | Anthro, Infiltrate, Stealth, Jump-In-Capable, Wired |
+| Lifeline / Apex-Medic / elite extract frame | Ground (drone) | Vehicle (drone) | Prototype | 35,000 | 6 | Armored trauma bay + stabilize suite; pulls bodies out loud zones. | Medic, Armor, Cargo, Jump-In-Capable, Wired |
+| Tide-Wraith / Apex Aquadrone / elite silent wet hunter | Water (drone) | Vehicle (drone) | Prototype | 34,000 | 6 | A Deep-Viper with the noise taken out; sits on a canal floor for a day, then takes a hull. | Aquatic, Stealth, Combat, Jump-In-Capable, Wired |
+| Second Face / Apex Anthro-Drone / elite humanoid infiltration frame | Ground (drone) | Personal | Prototype | 36,000 | 4 | Skinned, weighted, warm — walks a badge through a lobby and hands it back at end of shift. | Anthro, Infiltrate, Stealth, Jump-In-Capable, Wired |
 | Choir-King / Fog-Crown / EW apex kite | Air (drone) | Light | Prototype | 38,000 | 5 | Block-scale jam / spoof crown; eats cheap sensors for lunch. | EW, Jump-In-Capable, Wired |
-| Warhound / Combat Drone / heavy assault unit | Ground (drone) | Vehicle (drone) | Prototype | 40,000 | 5 | Apex walker/roller — heavy mounts, real armor, one-machine push. | Combat, Heavy, Jump-In-Capable, Wired |
-| Razorwing / Blade-Falcon / elite strike wing | Air (drone) | Vehicle (drone) | Prototype | 42,000 | 5 | Precision hardpoint predator — quieter than Hellkite, meaner than Stinger. | Combat, Mount, Stealth, Jump-In-Capable, Wired |
-| Iron Mantis / Siege-Frame / heavy assault walker-drone | Ground (drone) | Vehicle (drone) | Prototype | 45,000 | 5 | Limb-climber siege body; dual hardpoints; corridor nightmare. | Combat, Heavy, Climb, Jump-In-Capable, Wired |
+| Warhound / Combat Drone / heavy assault unit | Ground (drone) | Vehicle (drone) | Prototype | 40,000 | 6 | Apex walker/roller — heavy mounts, real armor, one-machine push. | Combat, Heavy, Jump-In-Capable, Wired |
+| Razorwing / Blade-Falcon / elite strike wing | Air (drone) | Vehicle (drone) | Prototype | 42,000 | 6 | Precision hardpoint predator — quieter than Hellkite, meaner than Stinger. | Combat, Mount, Stealth, Jump-In-Capable, Wired |
+| Iron Mantis / Siege-Frame / heavy assault walker-drone | Ground (drone) | Vehicle (drone) | Prototype | 45,000 | 6 | Limb-climber siege body; dual hardpoints; corridor nightmare. | Combat, Heavy, Climb, Jump-In-Capable, Wired |
 
 **E4 count:** **9** chassis. Roles: elite recon, elite courier, elite medic/extract, elite wet hunter, elite anthro infiltrator, EW apex, heavy combat ×2, elite aerial strike.
 

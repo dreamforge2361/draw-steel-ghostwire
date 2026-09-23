@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a5450 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; a bench with a lift",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥450 in chassis salvage, drive stock, and airframe, rotor stock, and a link head; a bench with a lift",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Rotor chassis \u00b7 a single machine, unmodded."
+        "display": "one Rotor chassis · a single machine, unmodded."
       },
       "goal": 150
     }
@@ -46,7 +46,7 @@
         "echelon": 1,
         "availability": "professional",
         "price": 900,
-        "modSlots": 2,
+        "modSlots": 3,
         "tags": [
           "Recon",
           "Swarm",

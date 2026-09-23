@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a52,000 in chassis salvage, drive stock, and rotor and thrust stock; a licensed bay (or a fixer who looks the other way)",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥2,000 in chassis salvage, drive stock, and rotor and thrust stock; a licensed bay (or a fixer who looks the other way)",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Hoverpad chassis \u00b7 a single machine, unmodded."
+        "display": "one Hoverpad chassis · a single machine, unmodded."
       },
       "goal": 300
     }
@@ -46,7 +46,7 @@
         "echelon": 2,
         "availability": "restricted",
         "price": 4000,
-        "modSlots": 3,
+        "modSlots": 5,
         "tags": [
           "Transit",
           "Pursuit",

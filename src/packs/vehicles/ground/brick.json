@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a59,000 in chassis salvage, drive stock, and skirt or track stock; a military-grade bay",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥9,000 in chassis salvage, drive stock, and skirt or track stock; a military-grade bay",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Brick chassis \u00b7 a single machine, unmodded."
+        "display": "one Brick chassis · a single machine, unmodded."
       },
       "goal": 450
     }
@@ -46,7 +46,7 @@
         "echelon": 3,
         "availability": "military",
         "price": 18000,
-        "modSlots": 4,
+        "modSlots": 6,
         "tags": [
           "Armor",
           "Troop",

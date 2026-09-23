@@ -257,7 +257,7 @@
         "controlMode": "remote",
         "handling": "fixed",
         "domain": "Ground",
-        "modSlots": 2,
+        "modSlots": 1,
         "installedModsText": "",
         "cargo": "",
         "mounts": "",

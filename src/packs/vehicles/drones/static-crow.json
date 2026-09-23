@@ -46,7 +46,7 @@
         "echelon": 3,
         "availability": "military",
         "price": 12000,
-        "modSlots": 4,
+        "modSlots": 5,
         "tags": [
           "EW",
           "Jump-In-Capable",

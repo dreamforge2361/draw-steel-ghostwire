@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a530,000 in chassis salvage, drive stock, and rotor and thrust stock; a prototype bench and a Director-gated parts list",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥30,000 in chassis salvage, drive stock, and rotor and thrust stock; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Ghost-Wing chassis \u00b7 a single machine, unmodded."
+        "display": "one Ghost-Wing chassis · a single machine, unmodded."
       },
       "goal": 600
     }
@@ -46,7 +46,7 @@
         "echelon": 4,
         "availability": "prototype",
         "price": 60000,
-        "modSlots": 5,
+        "modSlots": 6,
         "tags": [
           "Stealth",
           "Insertion",

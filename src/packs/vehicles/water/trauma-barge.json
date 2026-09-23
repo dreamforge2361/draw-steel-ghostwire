@@ -46,7 +46,7 @@
         "echelon": 2,
         "availability": "restricted",
         "price": 4800,
-        "modSlots": 3,
+        "modSlots": 5,
         "tags": [
           "Medical",
           "Extraction",
