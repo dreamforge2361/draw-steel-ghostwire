@@ -55,7 +55,7 @@ export const CYBORG_BLOCKED_CLASSES = Object.freeze(["elementalist", "street-pri
  * Appendix B spine, then the optional ¥ spends, then Done.
  */
 export const CHARGEN_STEPS = Object.freeze([
-  "bio", "name", "people", "background", "class", "kit",
+  "bio", "name", "people", "background", "class", "kit", "drone",
   "skills", "characteristics", "languages", "resources", "integrity", "spends", "done",
 ]);
 
@@ -63,7 +63,80 @@ export const CHARGEN_STEPS = Object.freeze([
 export const OPTIONAL_STEPS = Object.freeze(["bio", "spends"]);
 
 /** Steps that are a *read and confirm*, not a pick — they finish on the runner's acknowledgement. */
-export const ACK_STEPS = Object.freeze(["bio", "kit", "languages", "resources"]);
+export const ACK_STEPS = Object.freeze(["bio", "kit", "drone", "languages", "resources"]);
+
+/* -------------------------------------------- the Wrench's free E1 drone (0.3.115) */
+
+/** The Ghostwire Rigging class, by `system._dsid` (src/packs/classes/wrench/wrench.json). */
+export const WRENCH_CLASS_DSID = "wrench";
+/**
+ * Steps only one class ever sees. A step listed here is *absent* from the ladder for everybody else —
+ * not a greyed-out row, not an optional row: `visibleSteps()` drops it, so the rail, the step counter,
+ * next/prev and the Done gate all behave as though it were never on the list.
+ */
+export const WRENCH_ONLY_STEPS = Object.freeze(["drone"]);
+/** The pack the free drone comes out of. Same pack the ¥ spend step offers vehicles from. */
+export const FREE_DRONE_PACK = "vehicles";
+/** Echelon the free chargen pick is fixed at (Michael lock 2026-09-23): E1 chassis, nothing above. */
+export const FREE_DRONE_ECHELON = 1;
+/**
+ * `flags.draw-steel-ghostwire.chargenFreeDrone` — stamped on the granted Item *and* on the Actor as the
+ * "already had their free chassis" ledger, so the pick can only ever land once. Mirrors kit-grants.mjs.
+ */
+export const FREE_DRONE_FLAG = "chargenFreeDrone";
+
+/** Is this runner a Wrench? The one gate on the whole feature. */
+export const isWrenchChargen = (facts = {}) => String(facts?.classDsid ?? "") === WRENCH_CLASS_DSID;
+
+/** Does this runner see this step at all? */
+export function stepVisible(step, facts = {}) {
+  if (!CHARGEN_STEPS.includes(String(step))) return false;
+  if (WRENCH_ONLY_STEPS.includes(String(step))) return isWrenchChargen(facts);
+  return true;
+}
+
+/** The ladder this runner actually walks, in order. Non-Wrenches never see the drone step. */
+export function visibleSteps(facts = {}) {
+  return CHARGEN_STEPS.filter(step => stepVisible(step, facts));
+}
+
+/**
+ * May this catalog row be taken as the Wrench's free chargen drone?
+ *
+ * Three refusals: a row from any pack but vehicles, a row that is not flagged a drone chassis, and any
+ * echelon but 1. Price is never consulted — the pick is free, and an unpriced chassis is still legal here
+ * (unlike `isChargenSpendable`, which refuses rows it cannot price).
+ *
+ * @param {{pack?: string, drone?: boolean, echelon?: number|string|null}} row
+ */
+export function isFreeDroneRow({ pack, drone, echelon } = {}) {
+  if (String(pack) !== FREE_DRONE_PACK) return false;
+  if (drone !== true) return false;
+  return Number(echelon) === FREE_DRONE_ECHELON;
+}
+
+/**
+ * Echelon for a vehicle row, vehicle flag first and `system.echelon` behind it. Every shipped drone has
+ * both and they agree; reading the flag first keeps a Director's hand-tuned chassis authoritative.
+ */
+export function droneEchelonOf({ vehicleEchelon = null, systemEchelon = null } = {}) {
+  for (const raw of [vehicleEchelon, systemEchelon]) {
+    const n = Number(raw);
+    if (Number.isFinite(n) && (n > 0)) return n;
+  }
+  return null;
+}
+
+/** The E1 chassis on offer, name-sorted. Pure, so the smoke can drive it off pack JSON. */
+export function freeDroneRows(rows = [], collator = null) {
+  const byName = collator
+    ? (a, b) => collator(a.name, b.name)
+    : (a, b) => String(a.name).localeCompare(String(b.name));
+  return rows.filter(isFreeDroneRow).sort(byName);
+}
+
+/** Has the free chassis already landed on this runner? Reads the Actor ledger in `heroFacts()` shape. */
+export const hasFreeDrone = (facts = {}) => !!facts?.freeDrone?.dsid;
 
 /**
  * Packs the ¥5,000 may be spent in (Appendix B §9: deck, focus, extra Street gear, Personal/Light air scout).
@@ -96,16 +169,31 @@ export const CHARGEN_PICKS = Object.freeze({
 
 export const stepIndex = key => CHARGEN_STEPS.indexOf(String(key));
 
-export function nextStep(key) {
-  const i = stepIndex(key);
-  if (i < 0) return CHARGEN_STEPS[0];
-  return CHARGEN_STEPS[Math.min(CHARGEN_STEPS.length - 1, i + 1)];
+/**
+ * The step after this one *on this runner's ladder*.
+ *
+ * `facts` is optional and only ever narrows: with no facts the class is unknown, so the Wrench-only steps
+ * stay hidden. Hiding by default is the safe direction — a non-Wrench can never be walked onto a step that
+ * does not apply to them, and the wizard always has real facts to hand.
+ */
+export function nextStep(key, facts = {}) {
+  const ladder = visibleSteps(facts);
+  const i = ladder.indexOf(String(key));
+  if (i >= 0) return ladder[Math.min(ladder.length - 1, i + 1)];
+  // A step that exists but is hidden for this runner — they were standing on the drone step and dropped the
+  // Wrench class. Walk on from where it sat in the full ladder rather than snapping back to step 1.
+  const at = stepIndex(key);
+  if (at < 0) return ladder[0];
+  return ladder.find(step => stepIndex(step) > at) ?? ladder.at(-1);
 }
 
-export function prevStep(key) {
-  const i = stepIndex(key);
-  if (i <= 0) return CHARGEN_STEPS[0];
-  return CHARGEN_STEPS[i - 1];
+export function prevStep(key, facts = {}) {
+  const ladder = visibleSteps(facts);
+  const i = ladder.indexOf(String(key));
+  if (i >= 0) return ladder[Math.max(0, i - 1)];
+  const at = stepIndex(key);
+  if (at < 0) return ladder[0];
+  return [...ladder].reverse().find(step => stepIndex(step) < at) ?? ladder[0];
 }
 
 /** Fill in every field a stored record may be missing, and clamp the step onto the ladder. */
@@ -288,11 +376,11 @@ export function isPlaceholderName(name) {
  */
 export function stepStatus(facts = {}) {
   const spine = spineStatus(facts);
-  return { ...spine, done: { done: spineComplete(spine), warn: null, optional: false } };
+  return { ...spine, done: { done: spineComplete(spine, facts), warn: null, optional: false } };
 }
 
 /**
- * The twelve steps before Done. Split out because Done's own state is "every other step is finished", and
+ * Every step before Done. Split out because Done's own state is "every other step is finished", and
  * folding that back into one function would have `stepStatus` call itself forever.
  */
 function spineStatus(facts = {}) {
@@ -315,6 +403,10 @@ function spineStatus(facts = {}) {
       (cyborg && CYBORG_BLOCKED_CLASSES.includes(String(facts.classDsid))) ? "ArcaneSeverance" : null),
     kit: row((kits.length > 0) || acked("kit"),
       (kitWantsGear && !Number(facts.streetGearCount)) ? "KitNeedsGear" : null),
+    // 0.3.115 — the Wrench's one free E1 chassis. Hidden entirely for everyone else (`visibleSteps()`),
+    // so the row a non-Wrench never reads is reported done rather than left as a phantom blocker.
+    drone: row(!isWrenchChargen(facts) || hasFreeDrone(facts) || acked("drone"),
+      (isWrenchChargen(facts) && !hasFreeDrone(facts) && !acked("drone")) ? "FreeDroneWaiting" : null),
     skills: row(Array.isArray(facts.skills) && (facts.skills.length > 0)),
     characteristics: row(characteristicsAssigned(chars)),
     languages: row((Array.isArray(facts.languages) && (facts.languages.length > 0)) || acked("languages")),
@@ -324,8 +416,8 @@ function spineStatus(facts = {}) {
   };
 }
 
-/** Every non-optional step in a computed spine is done. */
-const spineComplete = spine => CHARGEN_STEPS
+/** Every non-optional step *on this runner's ladder* is done. A hidden step is never a blocker. */
+const spineComplete = (spine, facts = {}) => visibleSteps(facts)
   .filter(key => (key !== "done") && !OPTIONAL_STEPS.includes(key))
   .every(key => spine[key]?.done);
 
@@ -363,6 +455,10 @@ export function doneChecklist(facts = {}) {
   return [
     { key: "Items", done: status.people.done && status.background.done && status.class.done, optional: false },
     { key: "Kit", done: status.kit.done && kitGearOk, optional: false },
+    // A Wrench-only bullet: the free E1 chassis, named when it has landed. Absent for every other class.
+    ...(isWrenchChargen(facts)
+      ? [{ key: "FreeDrone", done: status.drone.done, optional: false, drone: facts.freeDroneName ?? null }]
+      : []),
     { key: "Skills", done: status.skills.done, optional: false },
     { key: "Characteristics", done: status.characteristics.done, optional: false },
     { key: "Resources", done: status.resources.done && status.languages.done, optional: false },
@@ -374,7 +470,7 @@ export function doneChecklist(facts = {}) {
 
 /** Every non-optional step is done. */
 export function chargenComplete(facts = {}) {
-  return spineComplete(spineStatus(facts));
+  return spineComplete(spineStatus(facts), facts);
 }
 
 /**
@@ -442,6 +538,19 @@ function streetGearCount(actor) {
   }).length;
 }
 
+/** The "already had their free chassis" ledger on one hero, or null. */
+function freeDroneLedger(actor) {
+  const record = actor?.getFlag?.(MODULE_ID, FREE_DRONE_FLAG)
+    ?? actor?.flags?.[MODULE_ID]?.[FREE_DRONE_FLAG]
+    ?? null;
+  return record?.dsid ? { dsid: String(record.dsid), grantedAt: record.grantedAt ?? null } : null;
+}
+
+/** The stamped free-drone Item still on the sheet, or null when the runner has deleted it. */
+function freeDroneItem(actor) {
+  return [...(actor?.items ?? [])].find(item => !!item?.flags?.[MODULE_ID]?.[FREE_DRONE_FLAG]) ?? null;
+}
+
 /**
  * One hero, flattened into the Foundry-free shape every pure helper above takes.
  * @param {Actor} actor
@@ -487,6 +596,10 @@ export function heroFacts(actor) {
       needsGear: (packageDsids(dsidOf(kit)) ?? []).length > 0,
     })),
     streetGearCount: streetGearCount(actor),
+
+    // 0.3.115 — the Wrench's free E1 chassis. Ledger on the Actor, name off the Item still on the sheet.
+    freeDrone: freeDroneLedger(actor),
+    freeDroneName: freeDroneItem(actor)?.name ?? null,
 
     skills: [...(system.skills?.value ?? [])],
     characteristics: Object.fromEntries(CHARACTERISTIC_KEYS.map(key =>
@@ -604,6 +717,38 @@ async function spendCatalog() {
   return rows.sort((a, b) => (a.price - b.price) || a.name.localeCompare(b.name, game.i18n.lang));
 }
 
+/**
+ * The Wrench's free-pick catalog: every Echelon 1 drone chassis in the vehicles pack, name-sorted.
+ * `price` rides along for display only — the grant never reads it, and never debits it.
+ */
+async function freeDroneCatalog() {
+  const compendium = game.packs.get(`${MODULE_ID}.${FREE_DRONE_PACK}`);
+  if (!compendium) return [];
+  const index = await compendium.getIndex({
+    fields: ["type", "img", "system._dsid", "system.echelon", `flags.${MODULE_ID}.vehicle`],
+  });
+  const rows = [];
+  for (const entry of index) {
+    const vehicle = foundry.utils.getProperty(entry, `flags.${MODULE_ID}.vehicle`) ?? {};
+    const echelon = droneEchelonOf({
+      vehicleEchelon: vehicle.echelon,
+      systemEchelon: foundry.utils.getProperty(entry, "system.echelon"),
+    });
+    rows.push({
+      uuid: entry.uuid ?? `Compendium.${MODULE_ID}.${FREE_DRONE_PACK}.Item.${entry._id}`,
+      name: entry.name,
+      img: entry.img,
+      pack: FREE_DRONE_PACK,
+      dsid: foundry.utils.getProperty(entry, "system._dsid") ?? null,
+      drone: vehicle.drone === true,
+      echelon,
+      price: Number(vehicle.price) || 0,
+      domain: vehicle.domain ?? "",
+    });
+  }
+  return freeDroneRows(rows, (a, b) => String(a).localeCompare(String(b), game.i18n.lang));
+}
+
 /* -------------------------------------------- Foundry: writes */
 
 /** Appendix B §0: a runner starts on ¥5,000 unless the field already carries a number. */
@@ -653,6 +798,92 @@ export async function buyChargenItem(actor, uuid, price) {
   return { ok: true, reason: null, price: plan.price, wealthAfter: plan.wealthAfter };
 }
 
+/**
+ * 0.3.115 — hand a Wrench their one free Echelon 1 drone chassis.
+ *
+ * The Item path is `buyChargenItem`'s, character for character: `game.items.fromCompendium` then
+ * `Item.create` with the hero as parent. What is *deliberately absent* is the whole economy half —
+ * no `getWealth`, no `planChargenSpend`, no `WEALTH_PATH` update, no `state.spent` bump. A Wrench's
+ * ¥5,000 reads exactly the same before and after. This is a class grant, not a purchase, and it sits
+ * beside the Kit street-band package (kit-grants.mjs) rather than inside the spend firewall.
+ *
+ * Granting is once-only, on the same two-lock pattern kit-grants uses: an Actor-level ledger flag, and
+ * the same flag stamped on the Item itself so a world whose flags were wiped is still self-describing.
+ *
+ * @param {Actor} actor
+ * @param {string} uuid   A vehicles-pack Item uuid.
+ * @returns {Promise<{ok: boolean, reason: string|null, name?: string, dsid?: string}>}
+ */
+export async function grantFreeChargenDrone(actor, uuid) {
+  if (!isHeroActor(actor) || !actor.isOwner) return { ok: false, reason: "no-permission" };
+
+  const facts = heroFacts(actor);
+  // Gate 1 — class. A non-Wrench never sees the step, so reaching here means the API was called directly.
+  if (!isWrenchChargen(facts)) {
+    ui.notifications.warn(loc("Errors.FreeDroneNotWrench", { name: actor.name }));
+    return { ok: false, reason: "not-wrench" };
+  }
+  // Gate 2 — once. The ledger, then the stamped Item, then the flag write at the end of this function.
+  if (hasFreeDrone(facts)) {
+    ui.notifications.warn(loc("Errors.FreeDroneTaken", {
+      name: actor.name, drone: facts.freeDroneName ?? facts.freeDrone.dsid,
+    }));
+    return { ok: false, reason: "already-granted" };
+  }
+  if (!rerunGate(facts).writable) {
+    ui.notifications.warn(loc("ReadOnly.Blocked", { name: actor.name }));
+    return { ok: false, reason: "read-only" };
+  }
+
+  const source = await fromUuid(uuid);
+  if (!source) return { ok: false, reason: "no-item" };
+
+  // Gate 3 — the row. E1 drone chassis out of the vehicles pack, and nothing else, whatever was clicked.
+  const vehicle = source.flags?.[MODULE_ID]?.vehicle ?? {};
+  const row = {
+    pack: FREE_DRONE_PACK,
+    drone: vehicle.drone === true,
+    echelon: droneEchelonOf({ vehicleEchelon: vehicle.echelon, systemEchelon: source.system?.echelon }),
+  };
+  if (!String(source.pack ?? "").endsWith(`.${FREE_DRONE_PACK}`) || !isFreeDroneRow(row)) {
+    ui.notifications.warn(loc("Errors.FreeDroneNotE1", { name: source.name }));
+    return { ok: false, reason: "not-e1-drone" };
+  }
+
+  const dsid = source.system?._dsid ?? null;
+  const grantedAt = new Date().toISOString();
+  const itemData = game.items.fromCompendium(source, { clearFolder: true });
+  foundry.utils.setProperty(itemData, `flags.${MODULE_ID}.${FREE_DRONE_FLAG}`, { dsid, grantedAt });
+  await getDocumentClass("Item").create(itemData, { parent: actor });
+  await actor.setFlag(MODULE_ID, FREE_DRONE_FLAG, { dsid, grantedAt });
+
+  ui.notifications.info(loc("Drone.Granted", { name: actor.name, drone: source.name }));
+  await postFreeDroneCard(actor, source);
+  return { ok: true, reason: null, name: source.name, dsid };
+}
+
+/** Give back the free pick so a Wrench can change their mind (G6 Start over on the drone step). */
+export async function clearFreeChargenDrone(actor) {
+  if (!isHeroActor(actor) || !actor.isOwner) return { ok: false, reason: "no-permission" };
+  const item = freeDroneItem(actor);
+  if (item) await item.delete();
+  await actor.unsetFlag(MODULE_ID, FREE_DRONE_FLAG);
+  return { ok: true, reason: null, name: item?.name ?? null };
+}
+
+/** A short line so the table sees the Wrench roll out with something. */
+async function postFreeDroneCard(actor, source) {
+  const data = { name: actor.name, drone: source.name };
+  return ChatMessage.implementation.create({
+    speaker: ChatMessage.implementation.getSpeaker({ actor }),
+    content: `<div class="ghostwire-chargen-card">`
+      + `<p><strong>${esc(loc("Drone.CardTitle", data))}</strong></p>`
+      + `<p>${esc(loc("Drone.CardBody", data))}</p>`
+      + `<p class="hint">${esc(loc("Drone.CardFoot"))}</p>`
+      + `</div>`,
+  });
+}
+
 /* -------------------------------------------- app */
 
 let ChargenWizardApp = null;
@@ -682,6 +913,7 @@ function defineChargenWizardApp() {
         addLanguage: GhostwireChargenWizard.#onAddLanguage,
         removeLanguage: GhostwireChargenWizard.#onRemoveLanguage,
         ack: GhostwireChargenWizard.#onAck,
+        takeFreeDrone: GhostwireChargenWizard.#onTakeFreeDrone,
         buy: GhostwireChargenWizard.#onBuy,
         refresh: GhostwireChargenWizard.#onRefresh,
         openSheet: GhostwireChargenWizard.#onOpenSheet,
@@ -738,6 +970,10 @@ function defineChargenWizardApp() {
       const status = stepStatus(facts);
       const gate = rerunGate(facts);
       const writable = gate.writable && actor.isOwner;
+      // A stored step may have gone out from under the runner — they were on the Wrench drone step and then
+      // dropped the class. Land on the nearest step they can still see rather than rendering a ghost.
+      const ladder = visibleSteps(facts);
+      if (!ladder.includes(this.step)) this.step = nextStep(this.step, facts);
       const warnKey = status[this.step]?.warn ?? null;
 
       const context = {
@@ -752,13 +988,14 @@ function defineChargenWizardApp() {
         wealthLabel: formatYen(facts.wealth),
         taint: facts.taint,
         step: this.step,
-        stepNumber: stepIndex(this.step) + 1,
-        stepCount: CHARGEN_STEPS.length,
+        // Numbered against the runner's own ladder, so a non-Wrench still reads "6 / 13" and never a gap.
+        stepNumber: ladder.indexOf(this.step) + 1,
+        stepCount: ladder.length,
         stepLabel: loc(`Steps.${this.step}.Name`),
         stepHint: loc(`Steps.${this.step}.Hint`),
-        atStart: this.step === CHARGEN_STEPS[0],
-        atEnd: this.step === CHARGEN_STEPS[CHARGEN_STEPS.length - 1],
-        rail: CHARGEN_STEPS.map((key, index) => ({
+        atStart: this.step === ladder[0],
+        atEnd: this.step === ladder[ladder.length - 1],
+        rail: ladder.map((key, index) => ({
           key,
           number: index + 1,
           label: loc(`Steps.${key}.Name`),
@@ -771,6 +1008,7 @@ function defineChargenWizardApp() {
         complete: chargenComplete(facts),
         // Each step's markup is guarded by `is.<step>` rather than a chain of {{#if (eq …)}}.
         is: Object.fromEntries(CHARGEN_STEPS.map(key => [key, key === this.step])),
+        isWrench: isWrenchChargen(facts),
       };
 
       await this.#stepContext(context, actor, facts);
@@ -857,6 +1095,24 @@ function defineChargenWizardApp() {
           context.streetGearCount = facts.streetGearCount;
           context.acked = acked("kit");
           break;
+
+        // 0.3.115 — the Wrench's free E1 chassis. Same picker furniture as the spine steps, no ¥ column.
+        case "drone": {
+          context.isWrench = isWrenchChargen(facts);
+          context.hasFreeDrone = hasFreeDrone(facts);
+          context.freeDroneName = facts.freeDroneName ?? facts.freeDrone?.dsid ?? null;
+          context.acked = acked("drone");
+          const taken = context.hasFreeDrone;
+          context.droneRows = context.isWrench
+            ? (await freeDroneCatalog()).map(row => ({
+              ...row,
+              selected: !!facts.freeDrone && (row.dsid === facts.freeDrone.dsid),
+              priceLabel: row.price ? formatYen(row.price) : "",
+              disabled: !writable || taken,
+            }))
+            : [];
+          break;
+        }
 
         case "skills": {
           const budget = spineSkillBudget(actor);
@@ -949,6 +1205,7 @@ function defineChargenWizardApp() {
             label: loc(`Done.${row.key}`, {
               spent: formatYen(row.spent ?? 0),
               wealth: formatYen(facts.wealth),
+              drone: row.drone ?? loc("Done.NoDrone"),
             }),
           }));
           context.summary = {
@@ -964,6 +1221,8 @@ function defineChargenWizardApp() {
             array: CHARACTERISTIC_KEYS
               .map(key => `${loc(`Characteristics.${CHARACTERISTIC_LABELS[key]}`)} ${facts.characteristics[key] ?? "—"}`)
               .join(" · "),
+            isWrench: isWrenchChargen(facts),
+            freeDrone: facts.freeDroneName ?? facts.freeDrone?.dsid ?? loc("Done.NoDrone"),
             integrity: `${facts.integrity.value ?? "—"}/${facts.integrity.max ?? "—"}`,
             taint: facts.taint,
             chrome: facts.chromeCount,
@@ -1011,6 +1270,8 @@ function defineChargenWizardApp() {
 
     async #goto(step) {
       if (!CHARGEN_STEPS.includes(step)) return;
+      // A Wrench-only step is not reachable by anyone else, even through a stale rail button.
+      if (!stepVisible(step, this.#facts())) return;
       this.step = step;
       const actor = this.actor;
       if (actor?.isOwner) {
@@ -1030,11 +1291,17 @@ function defineChargenWizardApp() {
       // Leaving step 1 or 2 with unsaved text should keep it, not drop it.
       if (this.step === "bio") await this.#saveBio({ quiet: true });
       if (this.step === "name") await this.#saveName({ quiet: true });
-      this.#goto(nextStep(this.step));
+      this.#goto(nextStep(this.step, this.#facts()));
     }
 
     static #onRetreat() {
-      this.#goto(prevStep(this.step));
+      this.#goto(prevStep(this.step, this.#facts()));
+    }
+
+    /** Current hero facts, or an empty shape — next/prev need the class to know which ladder to walk. */
+    #facts() {
+      const actor = this.actor;
+      return isHeroActor(actor) ? heroFacts(actor) : {};
     }
 
     static #onRefresh() {
@@ -1224,6 +1491,18 @@ function defineChargenWizardApp() {
       this.render();
     }
 
+    /** 0.3.115 — the free E1 chassis. No ¥ prompt, because there is no ¥ in it. */
+    static async #onTakeFreeDrone(event, target) {
+      const actor = this.actor;
+      if (!actor?.isOwner) return;
+      target.disabled = true;
+      try {
+        await grantFreeChargenDrone(actor, target.dataset.uuid);
+      } finally {
+        this.render();
+      }
+    }
+
     static async #onBuy(event, target) {
       const actor = this.actor;
       if (!actor?.isOwner) return;
@@ -1342,6 +1621,11 @@ async function resetChargenStep(actor, step) {
       acked.delete("kit");
       break;
     }
+    // 0.3.115 — hand the free chassis back. Nothing to refund: the pick never cost ¥ in the first place.
+    case "drone":
+      await clearFreeChargenDrone(actor);
+      acked.delete("drone");
+      break;
     case "skills":
       await actor.update({ "system.skills.value": [] });
       break;
@@ -1596,13 +1880,23 @@ export function registerChargenWizard() {
           buyChargenItem,
           ensureStartingWealth,
           isChargenSpendable,
+          // 0.3.115 — the Wrench's free E1 chassis.
+          grantFreeChargenDrone,
+          clearFreeChargenDrone,
+          isWrenchChargen,
+          isFreeDroneRow,
+          visibleSteps,
           CHARGEN_STEPS,
           CHARGEN_SPEND_PACKS,
           CHARACTERISTIC_ARRAY,
+          WRENCH_ONLY_STEPS,
+          WRENCH_CLASS_DSID,
+          FREE_DRONE_FLAG,
         },
       };
     }
     game.ghostwire = { ...(game.ghostwire ?? {}), openChargenWizard };
-    console.log(`${MODULE_ID} | Chargen Wizard: ${CHARGEN_STEPS.length}-step hero applet registered (flags.${MODULE_ID}.${CHARGEN_FLAG})`);
+    console.log(`${MODULE_ID} | Chargen Wizard: ${CHARGEN_STEPS.length}-step hero applet registered `
+      + `(flags.${MODULE_ID}.${CHARGEN_FLAG}; ${WRENCH_ONLY_STEPS.join(", ")} is ${WRENCH_CLASS_DSID}-only)`);
   });
 }

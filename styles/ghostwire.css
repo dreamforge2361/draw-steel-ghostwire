@@ -1897,7 +1897,9 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
   border-radius: var(--ghostwire-radius-sm);
   padding: 0.22rem 0.4rem;
 }
-.ghostwire-chargen .gw-cg-pick.selected { border-left-color: var(--cg-ok); }
+/* 0.3.115: the Wrench's free drone step uses the catalog row, so `selected` has to read there too. */
+.ghostwire-chargen .gw-cg-pick.selected,
+.ghostwire-chargen .gw-cg-row.selected { border-left-color: var(--cg-ok); }
 .ghostwire-chargen .gw-cg-pick.blocked { opacity: 0.5; }
 .ghostwire-chargen .gw-cg-pick-img,
 .ghostwire-chargen .gw-cg-row-img {

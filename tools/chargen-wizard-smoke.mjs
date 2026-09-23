@@ -115,8 +115,10 @@ if (existsSync(macroSrc)) {
 /* -------------------------------------------- 3) the step ladder */
 
 console.log("\n3) the FULL step order Michael locked (2026-09-22)");
+// 0.3.115 inserts the Wrench-only "drone" step after kit. It is on the master ladder for everyone and
+// *visible* only to a Wrench — tools/wrench-free-drone-smoke.mjs drives that half.
 const EXPECTED_STEPS = [
-  "bio", "name", "people", "background", "class", "kit",
+  "bio", "name", "people", "background", "class", "kit", "drone",
   "skills", "characteristics", "languages", "resources", "integrity", "spends", "done",
 ];
 ok(CHARGEN_STEPS.join(",") === EXPECTED_STEPS.join(","), `the ladder is ${EXPECTED_STEPS.join(" → ")}`);

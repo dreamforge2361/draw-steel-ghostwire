@@ -133,6 +133,54 @@
     </div>
     {{/if}}
 
+    {{!-- 7 · Wrench only — one free Echelon 1 drone chassis (0.3.115) ---------------------- --}}
+    {{#if is.drone}}
+    <div class="gw-cg-step">
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Drone.Hint"}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Drone.FreeHint"}}</p>
+      {{#if hasFreeDrone}}
+      <p class="gw-cg-current"><strong>{{freeDroneName}}</strong> — {{localize "GHOSTWIRE.Chargen.Drone.Taken"}}</p>
+      {{else}}
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn {{#if acked}}on{{/if}}" data-action="ack" data-ack="drone" {{disabled readOnly}}>
+          <i class="fa-solid fa-ban"></i> {{localize "GHOSTWIRE.Chargen.Drone.NoDrone"}}
+        </button>
+      </div>
+      {{/if}}
+      <ul class="gw-cg-catalog">
+        {{#each droneRows}}
+        <li class="gw-cg-row {{#if selected}}selected{{/if}}">
+          <img class="gw-cg-row-img" src="{{img}}" alt="">
+          <div class="gw-cg-row-body">
+            <button type="button" class="gw-cg-row-name gw-cg-link" data-action="openDoc" data-uuid="{{uuid}}"
+              data-tooltip="{{localize "GHOSTWIRE.Chargen.OpenItem"}}">{{name}}</button>
+            <div class="gw-cg-row-meta">
+              <strong>{{localize "GHOSTWIRE.Chargen.Drone.Free"}}</strong>
+              <span class="gw-cg-dim">{{#if domain}}{{domain}} · {{/if}}{{localize "GHOSTWIRE.Chargen.Drone.EchelonOne"}}{{#if priceLabel}} · {{localize "GHOSTWIRE.Chargen.Drone.ListPrice"}} {{priceLabel}}{{/if}}</span>
+            </div>
+          </div>
+          <button type="button" class="gw-cg-link" data-action="openDoc" data-uuid="{{uuid}}"
+            data-tooltip="{{localize "GHOSTWIRE.Chargen.OpenItem"}}" aria-label="{{localize "GHOSTWIRE.Chargen.OpenItem"}}">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="takeFreeDrone" data-uuid="{{uuid}}"
+            {{disabled disabled}}>
+            <i class="fa-solid fa-hand-pointer"></i> {{localize "GHOSTWIRE.Chargen.Drone.Take"}}
+          </button>
+        </li>
+        {{else}}
+        <li class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Drone.Empty"}}</li>
+        {{/each}}
+      </ul>
+      <div class="gw-cg-actions">
+        <button type="button" class="gw-cg-btn" data-action="refresh">
+          <i class="fa-solid fa-rotate"></i> {{localize "GHOSTWIRE.Chargen.Recheck"}}
+        </button>
+      </div>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Drone.NotASpend"}}</p>
+    </div>
+    {{/if}}
+
     {{!-- the shared picker, used by steps 3–6 ---------------------------------------------- --}}
     {{#if sections}}
     <div class="gw-cg-step">
@@ -386,6 +434,9 @@
         <li><span>{{localize "GHOSTWIRE.Chargen.Background.ProfessionHead"}}</span><strong>{{summary.profession}}</strong></li>
         <li><span>{{localize "GHOSTWIRE.Chargen.Steps.class.Name"}}</span><strong>{{summary.className}}</strong></li>
         <li><span>{{localize "GHOSTWIRE.Chargen.Steps.kit.Name"}}</span><strong>{{summary.kits}}</strong></li>
+        {{#if summary.isWrench}}
+        <li><span>{{localize "GHOSTWIRE.Chargen.Steps.drone.Name"}}</span><strong>{{summary.freeDrone}}</strong></li>
+        {{/if}}
         <li><span>{{localize "GHOSTWIRE.Chargen.Steps.characteristics.Name"}}</span><strong>{{summary.array}}</strong></li>
         <li><span>{{localize "GHOSTWIRE.Chargen.Steps.skills.Name"}}</span><strong>{{summary.skills}}</strong></li>
         <li><span>{{localize "GHOSTWIRE.Chargen.Steps.languages.Name"}}</span><strong>{{summary.languages}}</strong></li>
