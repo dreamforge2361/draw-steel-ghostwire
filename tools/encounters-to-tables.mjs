@@ -31,8 +31,8 @@ const B62 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 const stableId = seed => [...createHash("sha256").update("gw-encounters:" + seed).digest()].slice(0, 16).map(b => B62[b % 62]).join("");
 
 const ZONES = [
-  { file: "flats.md", key: "Flats", label: "Reach Events — Flats / Hive", img: "icons/environment/city/city-night.webp", min: 60 },
-  { file: "city.md", key: "City", label: "Reach Events — City / Grid-adjacent", img: "icons/environment/city/skyline.webp", min: 50 },
+  { file: "flats.md", key: "Flats", label: "Reach Events — Flats / Hive", img: "icons/environment/settlement/city-night.webp", min: 60 },
+  { file: "city.md", key: "City", label: "Reach Events — City / Grid-adjacent", img: "icons/environment/settlement/city-night-spire.webp", min: 50 },
   { file: "wilds.md", key: "Wilds", label: "Reach Events — Wilds / Outer Wall", img: "icons/environment/wilderness/tree-oak.webp", min: 20 },
 ];
 const KINDS = ["Flavor", "RP", "Complication", "Action", "Combat"];
@@ -124,7 +124,11 @@ for (const [z, zone] of ZONES.entries()) {
 
 writeFileSync(MASTER, master.join("\n") + "\n");
 lang.GHOSTWIRE.COMPENDIUM.encounters = "Ghostwire Reach Events";
-lang.GHOSTWIRE.Encounters = { Tables: tablesLang };
+// Hand-authored KEEP tables have lang keys too, and nothing in the zone loop above regenerates
+// them — carry over every Tables key the loop did not write, or a regen leaves F15's Cyborg System
+// Crisis table showing its raw i18n key as its name.
+const keptLang = Object.fromEntries(Object.entries(lang.GHOSTWIRE.Encounters?.Tables ?? {}).filter(([k]) => !(k in tablesLang)));
+lang.GHOSTWIRE.Encounters = { ...lang.GHOSTWIRE.Encounters, Tables: { ...tablesLang, ...keptLang } };
 writeFileSync("lang/en.json", JSON.stringify(lang, null, 2) + "\n");
 console.log(summary.join("\n"));
 console.log(`master list: ${MASTER}`);

@@ -1,13 +1,15 @@
 // Hero / NPC token Has Vision (prototypeToken.sight.enabled).
 // Michael lock 2026-09-20: every Ghostwire hero and NPC is created with Token Vision on.
 // Scope is Actor type hero + npc. Skip infrastructure / machines: kind node, node-template,
-// kiosk, vehicle, drone. Only flips `sight.enabled` — range / angle / visionMode stay as-is.
+// kiosk, vehicle, drone, baseAsset, locker. Base Assets (Door Lock, Beacon, benches) and F10
+// Lockers are placeable stubs, not sighted creatures, so they stay Has Vision off.
+// Only flips `sight.enabled` — range / angle / visionMode stay as-is.
 //
 // Helpers below are Foundry-free so tools/token-vision-smoke.mjs can run them in Node.
 
 export const MODULE_ID = "draw-steel-ghostwire";
 export const TOKEN_VISION_SETTING = "tokenVisionMigrated";
-export const SKIP_TOKEN_VISION_KINDS = Object.freeze(["node", "node-template", "kiosk", "vehicle", "drone"]);
+export const SKIP_TOKEN_VISION_KINDS = Object.freeze(["node", "node-template", "kiosk", "vehicle", "drone", "baseAsset", "locker"]);
 
 const SKIP = new Set(SKIP_TOKEN_VISION_KINDS);
 
