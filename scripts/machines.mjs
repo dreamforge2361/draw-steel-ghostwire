@@ -7,6 +7,7 @@
 // - Item:  flags.<module>.deployed = { actorUuid }
 
 import { addWireKit } from "./wired-kit.mjs";
+import { WIRED_STATUS_DEFS, ON_NET_STATES } from "./wired-state.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
@@ -365,6 +366,49 @@ export function machineOwner(item, owner = null) {
   return resolved instanceof Actor ? resolved : null;
 }
 
+
+/** Pilot wire state from Foundry statuses (Linked soft on-net; no status named Connected). */
+export function pilotWiredState(actor) {
+  if (!(actor instanceof Actor)) return "disconnected";
+  if (actor.statuses?.has?.(WIRED_STATUS_DEFS.jackedIn.id)) return "jackedIn";
+  if (actor.statuses?.has?.(WIRED_STATUS_DEFS.overlay.id)) return "overlay";
+  if (actor.statuses?.has?.(WIRED_STATUS_DEFS.linked.id)) return "linked";
+  return "disconnected";
+}
+
+/**
+ * First successful Deploy while Disconnected → Linked on the Wrench pilot.
+ * Never sets Jacked In. Never downgrades Linked / Overlay / Jacked In.
+ * Marks flags.<module>.fleetLinked so Recall can clear only what Deploy set.
+ */
+export async function ensureFleetLinked(pilot) {
+  if (!(pilot instanceof Actor)) return;
+  const state = pilotWiredState(pilot);
+  if (ON_NET_STATES.includes(state)) return;
+  await pilot.toggleStatusEffect(WIRED_STATUS_DEFS.linked.id, { active: true });
+  await pilot.update({
+    [`flags.${MODULE_ID}.fleetLinked`]: true,
+    [`flags.${MODULE_ID}.wired`]: { connected: true, immersed: false, state: "linked" },
+  });
+}
+
+/**
+ * When no machines remain fielded, clear Linked only if we set it for fleet command.
+ * Never strips Overlay / Jacked In.
+ */
+export async function clearFleetLinkedIfIdle(pilot) {
+  if (!(pilot instanceof Actor)) return;
+  if (!pilot.getFlag(MODULE_ID, "fleetLinked")) return;
+  if (fieldedMachineCount(pilot) > 0) return;
+  const state = pilotWiredState(pilot);
+  await pilot.unsetFlag(MODULE_ID, "fleetLinked");
+  if (state !== "linked") return;
+  await pilot.toggleStatusEffect(WIRED_STATUS_DEFS.linked.id, { active: false });
+  await pilot.update({
+    [`flags.${MODULE_ID}.wired`]: { connected: false, immersed: false, state: "disconnected" },
+  });
+}
+
 /** Deploy a drone or vehicle Item: stamp its band template into a linked Actor and place a token. */
 export async function deployMachine(item, { owner: ownerOverride = null } = {}) {
   const band = machineBand(item);
@@ -447,6 +491,8 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
       sizeScale: vehicleFlags.scale ?? vehicleFlags.sizeScale ?? "",
       movementMode: vehicleFlags.movementMode ?? "",
       jumpInCapable,
+      stations: vehicleFlags.stations ?? vehicleFlags.crewStations ?? "",
+      hardpoints: vehicleFlags.hardpoints ?? vehicleFlags.weaponMounts ?? "",
       controlMode: vehicleFlags.controlMode ?? (vehicle.drone ? "remote" : "crew"),
       handling: vehicleFlags.handling ?? "standard",
       domain: vehicleFlags.domain ?? vehicle.domain ?? "",
@@ -482,6 +528,7 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
   const deployedMsg = game.i18n.format(`${UI}.Deployed`, { name: item.name, stamina, speed });
   const fleetMsg = fleet ? ` ${game.i18n.format(`${UI}.FleetStatus`, fleet)}.` : "";
   ui.notifications.info(`${deployedMsg}${fleetMsg}`);
+  if (owner) await ensureFleetLinked(owner);
   return actor;
 }
 
@@ -497,6 +544,8 @@ export async function recallMachine(item, { actor } = {}) {
   }
   if (item?.getFlag(MODULE_ID, "deployed")) await item.unsetFlag(MODULE_ID, "deployed");
   if (item) ui.notifications.info(game.i18n.format(`${UI}.Recalled`, { name: item.name }));
+  const owner = machineOwner(item);
+  if (owner) await clearFleetLinkedIfIdle(owner);
 }
 
 export function registerMachines() {

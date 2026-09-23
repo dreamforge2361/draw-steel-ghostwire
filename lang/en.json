@@ -7736,6 +7736,8 @@
           "Echelon": "Echelon",
           "Domain": "Domain",
           "ModSlots": "Mod slots",
+          "Stations": "Stations",
+          "Hardpoints": "Hardpoints",
           "InstalledMods": "Installed mods",
           "Cargo": "Cargo",
           "Mounts": "Mounts",

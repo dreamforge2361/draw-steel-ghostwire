@@ -166,6 +166,8 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 | **Passenger** | Acts normally at a speed bane (shoot out a window, hack, reload); uses the hull as cover |
 | **Solo / Jumped-In (Wrench)** | Pilot **and** gunner simultaneously via control rig |
 
+Linked while driving vs Linked remote vs Jump-In. A Wrench who is Linked and seated as Pilot drives with normal Piloting/Rigging Power Rolls (Handling applies); meat stays active; they fill only the Pilot station unless another crew member takes Gunner/Systems. A Wrench who is Linked and commanding a fielded vehicle remotely (not in the seat) still uses Piloting/Rigging + Handling for chase and stunts, but does not gain Jump-In benefits (no dual Pilot+Gunner, no Jump-In Integrity buffer, no weapon-lock edge, no meat-inert, no hull biofeedback). Jump-In (Jump-In Capable frame or Rigger Cocoon) is the only path to Jacked In: meat inert, Pilot+Gunner through the control rig, buffer and Jump-In edges per Wrench. Linked never equals Jacked In.
+
 ---
 
 ## 7. Full inventory by Echelon
