@@ -16,6 +16,7 @@ Portraits stamped onto Foundry `img` fields (Items for machines/gear; Actor `img
 | Megacorp Hosts (Twelve Conglomerates) | `wired/node-host-{ticker}.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/wired/node-host-<ticker>.webp` | **0.3.54** Ten plates; **0.3.79** AEQ/LAZ plates (`placeholder: false`) |
 | Summons L≤4 | `summons/<slug>.webp` | `modules/draw-steel-ghostwire/assets/tokens/summons/<slug>.webp` | B103 shipped **0.3.35** (17) |
 | Scene kiosk | `kiosks/kiosk-merchant.{png,webp}` | `modules/draw-steel-ghostwire/assets/tokens/kiosks/kiosk-merchant.webp` | **0.3.65** — Michael circular street-kiosk plate (1254² PNG + 1024² WebP) |
+| Pregens + Changer forms (11) | `pregens/<stem>.webp` | `modules/draw-steel-ghostwire/assets/tokens/pregens/<stem>.webp` | **R2 0.3.121** — round 1024² `yuva420p` plates for the canvas only. The **sheet portrait stays the square file** under `assets/pregens/` — these two are deliberately different paths |
 
 The drone named Rustbucket is `rustbucket-drone.webp` so it does not collide with the crewed `rustbucket.webp`. Firearm **Workhorse** is `weapons/workhorse.webp`; the van is `vehicles/workhorse.webp`.
 
@@ -99,3 +100,40 @@ Generic Track 1/2 node tokens live under `summons/node-token-track-*.webp` and s
 ## Wired Atlas (B116, module 0.3.51)
 
 Michael Relay / Host / Segment tokens live under `wired/` as `node-relay`, `node-host`, and `node-segment` (PNG originals + WebP). Catalog `placeholder` is **false**; family / altitude unchanged. Place on canvas stamps the WebP. Endpoint is optional v1.1. Device styles shipped **0.3.49** (PR **#34**). Topology brief shipped **0.3.50**. **0.3.54** adds megacorp Host skins (`node-host-{ticker}`) — generic Host stays default. **0.3.79** ships AEQ/LAZ Host + brand plates (`placeholder: false`). Spike: `docs/spikes/B116-WIRE-ATLAS.md`, `docs/spikes/B116-NODE-TOKEN-LIBRARY.md`, `docs/spikes/B121-TWELVE-CONGLOMERATES.md`.
+
+## Pregens + Changer forms (R2, module 0.3.121)
+
+Round **canvas tokens** for the seven pregens and for every Changer form. Portraits are untouched: the
+Hero sheet still shows the square dossier plate under `assets/pregens/`, and `assets/tokens/pregens/`
+is only ever read by `prototypeToken.texture.src` and the Changer `*Token` flags.
+
+| Stem | Source it is cut from |
+|---|---|
+| `barak-voss-hallor` | `docs/manuscript/print-art/pregens/barak_circle.png` |
+| `kaes-vahn-estal` | `…/kais_circle.png` |
+| `kessic-draye` | `…/null_circle.png` |
+| `sabbat-vane` | `…/sabbat_circle.png` |
+| `vessa-corran-dov` | `…/vessa_circle.png` |
+| `vira-kellis-nade-human` | `…/vira_circle.png` (Michael's locked mapping) |
+| `vira-kellis-nade-hybrid` | `assets/pregens/_pre-compress-backup/vira-kellis-nade-hybrid.png` |
+| `vira-kellis-nade-beast` | `assets/pregens/_pre-compress-backup/vira-kellis-nade-beast.png` |
+| `wren-sable-corvin` | `docs/manuscript/print-art/pregens/wren_portrait.png` |
+| `wren-sable-corvin-hybrid` | `assets/pregens/_pre-compress-backup/wren-sable-corvin-hybrid.png` |
+| `wren-sable-corvin-beast` | `docs/manuscript/print-art/pregens/wren_beast_portrait.png` |
+
+Rebuild (ffmpeg only — Windows `convert.exe` is **not** ImageMagick and must never be used):
+
+```text
+node tools/pregen-round-tokens.mjs --force
+node tools/pregens-to-actors.mjs
+node tools/build-packs.mjs pregens          # Foundry closed
+node tools/r2-pregen-round-tokens-smoke.mjs
+node tools/pregen-regen-smoke.mjs
+```
+
+To reframe one token, edit its row in `SOURCES` (`tools/pregen-round-tokens.mjs`): `focusX` / `focusY`
+pan the square crop across the free axis of a rectangular plate (0 = left/top, 0.5 = centre, 1 = right/bottom).
+A tall plate defaults to the **top** edge, matching how the print circles were cut. To replace a token with
+hand art instead, drop a 1024² WebP with alpha in place and skip the first command.
+
+Director note: `docs/directors/r2-round-pregen-tokens.md`.

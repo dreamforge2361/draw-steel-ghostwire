@@ -120,7 +120,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/pregens/vira-kellis-nade-human.webp",
       "scaleX": 1,
       "scaleY": 1
     },
@@ -3771,7 +3771,10 @@
       "changer": {
         "humanArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-human.webp",
         "hybridArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-hybrid.webp",
-        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-beast.webp"
+        "beastArt": "modules/draw-steel-ghostwire/assets/pregens/vira-kellis-nade-beast.webp",
+        "humanToken": "modules/draw-steel-ghostwire/assets/tokens/pregens/vira-kellis-nade-human.webp",
+        "hybridToken": "modules/draw-steel-ghostwire/assets/tokens/pregens/vira-kellis-nade-hybrid.webp",
+        "beastToken": "modules/draw-steel-ghostwire/assets/tokens/pregens/vira-kellis-nade-beast.webp"
       },
       "taint": 0,
       "corruptionHistory": ""

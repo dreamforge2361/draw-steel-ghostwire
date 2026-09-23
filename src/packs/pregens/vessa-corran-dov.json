@@ -119,7 +119,7 @@
     "width": 1,
     "height": 1,
     "texture": {
-      "src": "modules/draw-steel-ghostwire/assets/pregens/vessa-corran-dov.webp",
+      "src": "modules/draw-steel-ghostwire/assets/tokens/pregens/vessa-corran-dov.webp",
       "scaleX": 1,
       "scaleY": 1
     },
