@@ -3,7 +3,7 @@
   "_key": "!items!gwBlackLedgerItm",
   "name": "GHOSTWIRE.Vehicles.Items.BlackLedger.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-thrust-jet.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/black-ledger.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.BlackLedger.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a532,500 in chassis salvage, drive stock, and rotor and thrust stock; a prototype bench and a Director-gated parts list",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥32,500 in chassis salvage, drive stock, and rotor and thrust stock; a prototype bench and a Director-gated parts list",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Black Ledger chassis \u00b7 a single machine, unmodded."
+        "display": "one Black Ledger chassis · a single machine, unmodded."
       },
       "goal": 600
     }

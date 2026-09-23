@@ -239,6 +239,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 |---|---|---|---|---|---|---|---|
 | Sleeve-Gun / Streek Vanish / holdout pistol | T5 | 5 | 150 | 3 kinetic | Short | 1 | [Light] Concealable |
 | Popper / Ares Viper / compact pistol | T5 | 5 | 250 | 4 kinetic | Short | 1 | [Light] Concealable |
+| Slugger / Ares Bulldog / heavy revolver | T5 | 5 | 300 | 6 kinetic | Short | 1 | [Medium] Loud |
 | Workhorse / Ceska Duty / service pistol | T4 | 4 | 500 | 4 kinetic | Short | 2 | [Light] |
 | Hand-Cannon / Ruger MaxForce / heavy pistol | T4 | 4 | 900 | 5 kinetic | Short | 2 | [Light] Loud |
 | Zapper / Defiance Shock / capacitive pistol | T4 | 4 | 800 | 4 electrical | Short | 2 | [Light] Non-lethal-capable |
@@ -252,6 +253,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
 | Boomstick / Remington Roomsweeper / pump shotgun | T5 | 5 | 300 | 6 kinetic | Short | 1 | [Medium] Two-handed Spread |
+| Pipe Rifle / Streek Longpipe / single-shot marksman rifle | T5 | 5 | 300 | 6 kinetic | Long | 1 | [Medium] Two-handed Loud |
 | Brush-Gun / Ruger Ranger / hunting carbine | T4 | 4 | 700 | 6 kinetic | Medium | 2 | [Medium] Two-handed |
 | Chopper / AK-Kalash Endura / assault rifle | T4 | 4 | 1,100 | 6 kinetic | Medium | 2 | [Medium] Two-handed Auto |
 | Streetline Carbine / Ares Alpha-Lite / bullpup carbine | T3 | 3 | 2,400 | 6 kinetic | Medium | 3 | [Medium] Two-handed Auto |
@@ -283,6 +285,10 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 |---|---|---|---|---|---|---|
 | Knuckles / Ares Persuader / impact baton | T5 | 5 | 80 | 3 kinetic | 1 | [Light] Concealable Non-lethal-capable |
 | Street-Blade / Cavalier Combat / combat knife | T5 | 5 | 120 | 4 kinetic | 1 | [Light] Concealable |
+| Scrap Cleaver / Cavalier Warblade / forged broad blade | T5 | 5 | 280 | 5 kinetic | 1 | [Medium] |
+| Chain Lash / Fichetti Coilwork / weighted chain whip | T5 | 5 | 200 | 5 kinetic | 1 | [Medium] Concealable |
+| Scaffold Pike / Cavalier Longstaff / rebar pike-staff | T5 | 5 | 250 | 6 kinetic | 1 | [Medium] Two-handed |
+| Slab-Hammer / Ares Roughneck / demolition maul | T5 | 5 | 300 | 8 kinetic | 1 | [Heavy] Two-handed |
 | Shock-Stick / Defiance Prod / stun baton | T4 | 4 | 450 | 4 electrical | 2 | [Light] Non-lethal-capable |
 | Machete / Ares Bushmaster / survival blade | T4 | 4 | 300 | 5 kinetic | 2 | [Light] |
 | Monoblade / Renraku Edge / monofilament sword | T3 | 3 | 3,000 | 6 AP | 3 | [Medium] |
@@ -292,6 +298,8 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Powered Greatsword / Ares Paladin / servo-blade | T1 | 1 | 26,000 | 10 AP | 5 | [Heavy] Two-handed |
 
 *(Implant melee is installed via the Chrome chapter — Body Integrity cost, not just nuyen — and cannot be disarmed. Dangerous weapons risk the wielder on a fumble.)*
+
+*(**0.3.99 — G1 street floor.** The Street column had no heavy, polearm, whip, ensnaring, medium-melee or medium-band sidearm, so six Kits had no object the Economy could hand them at chargen. The T5 rows added this pass close that floor. Band damage follows the Damage-Bridge and the firewall holds: a T5 street piece can share a band with a pricier item — what ¥ buys is mod slots, quiet, and not being **Loud**. See `docs/directors/kit-street-band-grants.md`.)*
 
 ### 3E — Thrown & Grenades
 
@@ -315,6 +323,7 @@ The **only** true damage reduction in the game is **typed Immunity** (fire/poiso
 | Name *(slang / corp / sci)* | Tier | Avail | Cost ¥ | Damage | Range | Mod Slots | Tags |
 |---|---|---|---|---|---|---|---|
 | Street-Bow / Cavalier Silent / recurve bow | T5 | 5 | 200 | 4 kinetic | Medium | 1 | [Light] Two-handed Quiet |
+| Weighted Net / Lone Star Snarecast / hand-thrown capture net | T5 | 5 | 120 | — | Short | 1 | [Light] Restraining Non-lethal-capable |
 | Hand-Crossbow / Fichetti Sting / pistol crossbow | T4 | 4 | 400 | 4 kinetic | Short | 2 | [Light] Concealable Quiet |
 | Hunting Bow / Ranger Arms Draw / compound bow | T3 | 3 | 1,500 | 6 kinetic | Long | 3 | [Medium] Two-handed Quiet |
 | Heavy Crossbow / NYX Bolt / tactical crossbow | T3 | 3 | 2,200 | 6 AP | Medium | 3 | [Medium] Two-handed Quiet |

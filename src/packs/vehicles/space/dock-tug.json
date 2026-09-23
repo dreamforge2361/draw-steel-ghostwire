@@ -3,7 +3,7 @@
   "_key": "!items!gwDockTugItm0000",
   "name": "GHOSTWIRE.Vehicles.Items.DockTug.Name",
   "type": "treasure",
-  "img": "icons/commodities/tech/engine-tech-thrust-jet-teal.webp",
+  "img": "modules/draw-steel-ghostwire/assets/tokens/vehicles/dock-tug.webp",
   "system": {
     "description": {
       "value": "GHOSTWIRE.Vehicles.Items.DockTug.Description",
@@ -21,15 +21,15 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "\u00a5900 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a bench with a lift",
-      "source": "Ghostwire Gear master \u00a75F / Cat 5 \u2014 chop-shop bench, lift bay, or rig-nest",
+      "prerequisites": "¥900 in chassis salvage, drive stock, and hull plate and one certified life-support cartridge; a bench with a lift",
+      "source": "Ghostwire Gear master §5F / Cat 5 — chop-shop bench, lift bay, or rig-nest",
       "rollCharacteristic": [
         "might",
         "reason"
       ],
       "yield": {
         "amount": "1",
-        "display": "one Dock Tug chassis \u00b7 a single machine, unmodded."
+        "display": "one Dock Tug chassis · a single machine, unmodded."
       },
       "goal": 150
     }

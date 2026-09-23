@@ -64,7 +64,7 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 
 **Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in `16-wrench.md`. A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.
 
-**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Static Crow**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag.
+**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag. **Static Crow does not qualify** (0.3.99): it paints a lane as a side effect of its EW suite, not as a scout **Mark**, so it carries no Mark tag — an EW kite is not a pair of eyes you can borrow.
 
 The Companion Link **limits** in the Non-Wrench table still apply if you field a drone that is not on that v1 list (Director-ruled). Foundry only auto-grants the Street Eye ability for qualifying air scouts.
 
@@ -153,7 +153,7 @@ Shop the **subsection for your band first**. E1 Street clunkers are intentionall
 |---|---|---|---|---|---|---|---|
 | Ripper / Breach-Drone / door-cracker | Ground (drone) | Light | Military | 11,000 | 4 | Charges, cutters, or shaped punch for hard portals. | Breach, Assault, Wired |
 | Kiln-Beetle / Armored Repair Drone / hardened maintenance unit | Ground (drone) | Light | Military | 11,500 | 4 | A Wrenchbot that can take a hit — plated shell, cutting and welding arms, feedstock hopper. | Repair, Support, Armor, Wired |
-| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | Military | 12,000 | 4 | Jams a floor, spoofs a lane, paints what is left for the crew to shoot. Loud on the Wire. | EW, Mark, Jump-In-Capable, Wired |
+| Static Crow / Spoof-Raven / mid-band EW and designator kite | Air (drone) | Light | Military | 12,000 | 4 | Jams a floor, spoofs a lane, paints what is left for the crew to shoot. Loud on the Wire. | EW, Jump-In-Capable, Wired |
 | Pallbearer / Extraction Hauler / armored mule | Ground (drone) | Vehicle (drone) | Military | 12,000 | 4 | Armored cargo bay for downed runners; light defensive mount. | Cargo, Armor, Medic, Wired |
 | Stinger / Gun-Drone / aerial weapons platform | Air (drone) | Vehicle (drone) | Military | 13,000 | 4 | Real hardpoint gunner — fleet's flying damage dealer. | Combat, Mount, Jump-In-Capable, Wired |
 | Skulker / Anthro-Drone / humanoid infiltrator | Ground (drone) | Personal | Military | 14,000 | 4 | Passes as a body at distance; tools or a sidearm mount. | Anthro, Infiltrate, Jump-In-Capable, Wired |
