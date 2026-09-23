@@ -86,6 +86,8 @@ export function defineMachineSheet() {
         cargo: "",
         mounts: "",
         sensors: "",
+        stations: "",
+        hardpoints: "",
         homeGround: false,
         beacon: false,
         profile: "",
