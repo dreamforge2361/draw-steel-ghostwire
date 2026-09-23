@@ -1,0 +1,84 @@
+{
+  "_id": "YqVbZICeeg5VTTL3",
+  "_key": "!items!YqVbZICeeg5VTTL3",
+  "name": "GHOSTWIRE.Vehicles.Items.ArmorersBench.Name",
+  "type": "treasure",
+  "img": "icons/tools/smithing/anvil.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Vehicles.Items.ArmorersBench.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "26-lifestyle-downtime",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "armorers-bench",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 1,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "¥8,000 of fittings, power, and a floor that can take it; a Physical Upgrade Slot at the crew’s base (`16`)",
+      "source": "Ghostwire Lifestyle & Downtime — Workshop Benches",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Armorer’s Bench · placed as a dual Item + Actor."
+      },
+      "goal": 150
+    }
+  },
+  "effects": [],
+  "folder": "gwVehBaseAssets0",
+  "sort": 7000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "vehicle": {
+        "echelon": 1,
+        "availability": "restricted",
+        "price": 8000,
+        "modSlots": 0,
+        "tags": [
+          "Workshop",
+          "Bench",
+          "Project",
+          "Fixed",
+          "Restricted"
+        ],
+        "modFamily": [
+          "base-asset"
+        ],
+        "domain": "Ground",
+        "scale": "Personal",
+        "drone": false,
+        "baseAsset": true,
+        "integrity": 16,
+        "stamina": 16,
+        "speed": 0,
+        "jumpInCapable": false,
+        "handling": "fixed",
+        "controlMode": "remote",
+        "movementMode": "none",
+        "beacon": false,
+        "homeGround": false,
+        "profile": "Workshop bench — Armor, ballistic, and personal-defense Craft & Repair. +1 Lifestyle project slot (capped once per base) and an edge on matching Projects.",
+        "sizeScale": "L"
+      },
+      "workshopBench": {
+        "family": "armor",
+        "grantsExtraProjectSlot": true,
+        "slotCap": 1,
+        "edge": 1
+      }
+    }
+  }
+}

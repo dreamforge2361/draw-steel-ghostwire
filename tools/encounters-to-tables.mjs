@@ -54,8 +54,17 @@ function parseZone(path) {
   return rows;
 }
 
+// Hand-authored tables that are NOT generated from docs/masters/encounters and must survive a
+// regen. F15's Cyborg System Crisis is a 2d6 severity table authored against docs/raw/04-combat.md,
+// not a weighted zone event list, so it has no zone markdown to be rebuilt from — wiping it here
+// would silently delete the table the Director rolls when a Cyborg goes down.
+const KEEP = new Set(["cyborg-system-crisis.json"]);
+
 mkdirSync(OUT, { recursive: true });
-for (const entry of readdirSync(OUT)) rmSync(join(OUT, entry), { recursive: true, force: true });
+for (const entry of readdirSync(OUT)) {
+  if (KEEP.has(entry)) continue;
+  rmSync(join(OUT, entry), { recursive: true, force: true });
+}
 
 const lang = JSON.parse(readFileSync("lang/en.json", "utf8"));
 const tablesLang = {};

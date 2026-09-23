@@ -176,7 +176,7 @@ note(b119.includes("kiosks/kiosk-merchant.webp"), "B119 spike documents art path
 note(director.includes("Street Food Kiosk") && director.includes("Armor Locker"), "Director note names type defaults");
 note(director.includes("Vehicle Lot") && director.includes("Deck Vendor") && director.includes("Software Stall") && director.includes("Ammo Counter"), "Director note names 0.3.77 type defaults");
 note(boot.includes("registerConsumableUse()"), "module registers registerConsumableUse");
-note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,vehicleWeapons,drones,vehicles,decks,programs,ammo,mods,armorMods,gadgetMods,identity", "fifteen preset ids (0.3.113 adds the F17 papermill)");
+note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,vehicleWeapons,drones,vehicles,decks,programs,ammo,mods,armorMods,gadgetMods,benches,identity", "sixteen preset ids (0.3.117 adds the F18 bench yard)");
 note(getPreset("food")?.match.pathPrefixes.includes("consumables/food"), "food filter is consumables/food");
 note(getPreset("armor")?.match.kinds.includes("armor"), "armor filter is kind=armor");
 note(getPreset("weapons")?.match.kinds.includes("weapon"), "weapons filter is kind=weapon");

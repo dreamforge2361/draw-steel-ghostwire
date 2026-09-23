@@ -90,7 +90,7 @@ An **edge** means the situation favors you. A **bane** means it fights you. Edge
 4. **Bane / double bane:** drop the highest die (or two highest dice), then add the two you keep to the characteristic.
 5. Read **low / middle / high** from that final total.
 
-A **natural double** is two matching faces on the first two dice you rolled, before drops. Extra edge/bane dice do not create or cancel that double.
+The **natural result** is the total of the two dice you keep, before the characteristic and before any flat bonus. That number — not the final total — is what a **critical** reads (below).
 
 ### Common Ghostwire sources
 
@@ -110,20 +110,22 @@ If two rules both want to give “an edge on this roll,” they stack until canc
 
 ---
 
-## Natural doubles and criticals
+## Criticals
 
-When both ten-sided dice show the **same face** before modifiers, that is a **natural double**.
+A **critical** is a natural **19 or 20**: the two dice you keep add up to 19 or 20 before the characteristic and before any flat bonus.
 
-A natural double is Ghostwire’s cue for a **critical** on that Power Roll. In practice:
+When a Power Roll is a critical:
 
-- Treat the roll as the ability’s **high** result if the total would not already be high.
-- If the ability already lists a special line for criticals, use that line instead (or in addition, if it says so).
-- On a damaging roll with no other critical rider, add **extra damage equal to your highest characteristic** (minimum +1).
-- On Wired rolls, a critical often means a **clean** intrusion: the Verb or Program lands at its best printed effect, and Trace Alert usually does **not** tick from that roll unless the ability’s high or critical clause says otherwise (`21`).
+- Read the ability or test at its **tier 3** result, whatever the total came to.
+- If the ability was a **main action**, you immediately gain **another main action** on this turn. Take it before the initiative moves on.
+- Everything tier 3 already prints still happens — damage, potency, effects, riders, the lot.
+- On Wired rolls, a critical is a **clean** intrusion: the Verb or Program lands at its best printed effect, and Trace Alert does **not** tick from that roll unless the ability’s tier 3 or critical clause says otherwise (`21`).
 
-A natural double is about the **dice faces**, not the final total. Adding a characteristic cannot create a double; canceling edges and banes cannot remove one that already showed.
+The **natural** result is the whole rule. Edges, banes, skill bonuses, gear, chrome, and a target’s cover or concealment all move the total, but they never make or unmake a critical — an edge that drops your lowest die can change *which* dice you keep, and it is those kept dice that are read. A natural 11 that totals 31 is not a critical; a natural 19 that totals 19 is.
 
-Director fiat can still narrate a stylish high without a double. The double is the mechanical guarantee.
+A critical is not a separate damage rider: there is no extra characteristic damage bolted onto it. Nor do matching dice faces mean anything on their own — in Ghostwire only the natural 19 or 20 is a critical.
+
+Director fiat can still narrate a stylish tier 3. The natural 19 or 20 is the mechanical guarantee.
 
 ---
 
@@ -292,7 +294,7 @@ Abilities, perks, and gear print effects by **low / middle / high**. Where a Wir
 | Power Roll dice and result bands | Always print **low / middle / high** (≤11 / 12–16 / 17+) |
 | Edges and banes (including doubles) | Extra-dice procedure above; connection states; Hacking edge; GW gear/chrome |
 | Skills in tests | **+2** skill benefit; Ghostwire skill list (`02`); Hacking exception (`21`) |
-| Natural doubles / criticals | High result + optional characteristic damage; Wired clean-crit note above |
+| Criticals | Natural **19 or 20** → always the **tier 3** result; a main-action ability also hands back a main action |
 | Opposed, group, and montage tests | Contested / group / montage procedures above; perk spends (`11`) |
 | Potency and resisting effects | Weak / average / strong table above |
 | Saving throws | 1d10, succeed on 6+ |

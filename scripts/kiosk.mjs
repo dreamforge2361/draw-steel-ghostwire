@@ -138,6 +138,48 @@ export function readKioskConfig(actor) {
   };
 }
 
+/**
+ * F23b (0.3.117) — who may rewrite a catalog price.
+ *
+ * `flags.draw-steel-ghostwire.<family>.price` is the shelf price of a SKU, not a property of the
+ * copy someone bought: it is what `catalogPrice()` reads for the kiosk, the black market, chargen
+ * early spends and the Locker. Opening an item card from a kiosk to read the rules must therefore
+ * never be a way to retype the number. Directors only.
+ *
+ * Deliberately a plain predicate over `{isGM}` so tools/kiosk-smoke.mjs can run it in Node.
+ * @param {{isGM?: boolean}|null} user
+ * @returns {boolean}
+ */
+export function canEditCatalogPrice(user) {
+  return user?.isGM === true;
+}
+
+/** The `flags.<module>.<family>.price` paths a catalog price can live at. */
+export const CATALOG_PRICE_PATHS = Object.freeze(
+  CATALOG_PRICE_FLAGS.map(family => `flags.${MODULE_ID}.${family}.price`),
+);
+
+/**
+ * Catalog-price writes inside a `preUpdateItem` change set.
+ * Reads the nested shape as well as the flattened dot-path shape, because both reach Foundry:
+ * a sheet submit sends `flags.draw-steel-ghostwire.gear.price`, and `item.update({flags: {…}})`
+ * from a macro sends the object.
+ * @param {object} changes
+ * @returns {string[]} The offending paths, in CATALOG_PRICE_FLAGS order.
+ */
+export function catalogPriceWrites(changes) {
+  const hits = [];
+  const flags = changes?.flags?.[MODULE_ID];
+  for (const family of CATALOG_PRICE_FLAGS) {
+    const path = `flags.${MODULE_ID}.${family}.price`;
+    const nested = flags?.[family];
+    const touched = (nested && typeof nested === "object" && ("price" in nested))
+      || (changes && Object.hasOwn(changes, path));
+    if (touched) hits.push(path);
+  }
+  return hits;
+}
+
 export function catalogPrice(item) {
   const flags = gwFlags(item);
   for (const key of CATALOG_PRICE_FLAGS) {
@@ -486,6 +528,7 @@ function defineKioskShop() {
         removeRow: GhostwireKioskShop.#onRemoveRow,
         restock: GhostwireKioskShop.#onRestock,
         openSheet: GhostwireKioskShop.#onOpenSheet,
+        viewListing: GhostwireKioskShop.#onViewListing,
       },
     };
 
@@ -548,6 +591,9 @@ function defineKioskShop() {
           missing,
           canAfford: !!buyer && wealth >= price,
           canBuy: !missing && !!buyer && inRangePreview,
+          // F23b: reading the rules is not a purchase. Any browser may open the card, in range or
+          // not, buyer selected or not — the only gate is that the source document still resolves.
+          canView: !missing,
         });
       }
       const inRange = inRangePreview;
@@ -737,6 +783,23 @@ function defineKioskShop() {
       if (!game.user.isGM || !kiosk) return;
       return kiosk.sheet.render({ force: true, ghostwireAllowKioskSheet: true });
     }
+
+    /**
+     * F23b — read the rules without buying.
+     *
+     * Renders the compendium Item's own sheet, exactly as chargen's Open-document affordance does
+     * (`chargen-wizard.mjs` #onOpenDoc). The document is a compendium copy, so Foundry already opens
+     * it read-only for a player; `canEditCatalogPrice` + the `preUpdateItem` guard are what stop a
+     * player who *can* edit a world copy from retyping the shelf price from here.
+     */
+    static async #onViewListing(event, target) {
+      const kiosk = this.kiosk;
+      const listing = readKioskConfig(kiosk).inventory.find(row => row.id === target.dataset.listingId);
+      if (!listing?.uuid) return ui.notifications.warn(loc("NoItem"));
+      const source = await fromUuid(listing.uuid).catch(() => null);
+      if (!source) return ui.notifications.warn(loc("NoItem"));
+      return source.sheet?.render({ force: true });
+    }
   };
 }
 
@@ -791,6 +854,31 @@ function patchTokenDoubleClick() {
     }
     return original?.call(this, event);
   };
+}
+
+/**
+ * F23b — Director-only catalog prices.
+ *
+ * A player browsing a kiosk can now open the item card. The card is a full Item sheet, and on a
+ * world copy a player with ownership could otherwise retype `gear.price` — which is the number the
+ * whole ¥ economy reads. Refuse the write and say why; the rest of the update still goes through.
+ *
+ * The price is **stripped from the change set** rather than the whole update being cancelled:
+ * returning false from `preUpdateItem` would throw away every other field the sheet submitted with
+ * it. Everything else the player legitimately edited still saves; the price snaps back on re-render.
+ */
+function guardCatalogPrice(item, changes, options, userId) {
+  if (userId !== game.user.id) return;
+  if (canEditCatalogPrice(game.user)) return;
+  const writes = catalogPriceWrites(changes);
+  if (!writes.length) return;
+  for (const path of writes) {
+    foundry.utils.deleteProperty(changes, path);
+    const family = path.split(".").at(-2);
+    delete changes?.flags?.[MODULE_ID]?.[family]?.price;
+  }
+  ui.notifications.warn(loc("PriceLocked"));
+  console.warn(`${MODULE_ID} | refused a non-Director catalog price write on ${item?.name}: ${writes.join(", ")}`);
 }
 
 function injectKioskHud(hud, html) {
@@ -855,6 +943,8 @@ export function registerKiosk() {
         applyPurchase,
         listingPrice,
         catalogPrice,
+        canEditCatalogPrice,
+        catalogPriceWrites,
         KIOSK_UUID,
         KIOSK_TOKEN_ART,
       };
@@ -879,6 +969,7 @@ export function registerKiosk() {
     };
   });
 
+  Hooks.on("preUpdateItem", guardCatalogPrice);
   Hooks.on("renderTokenHUD", injectKioskHud);
   Hooks.on("renderActorSheet", maybeRedirectKioskSheet);
   Hooks.on("renderActorSheetV2", maybeRedirectKioskSheet);

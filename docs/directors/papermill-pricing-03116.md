@@ -1,5 +1,10 @@
 # Papermill — identity pricing pass (0.3.116, F23)
 
+> **Superseded by 0.3.117 (F23b).** This pass priced illegal paper like crime and it played too
+> steep at the table, so the Restricted and Military bands took a soft cut one version later. The
+> current ladder lives in `docs/directors/papermill-pricing-03117.md`. Everything below is the
+> reasoning for the climb, kept because the 0.3.117 cut is measured against it.
+
 **Michael lock, 2026-09-23.** Illegal, Restricted and Military paper has to *feel* expensive.
 The 0.3.113 ladder was priced like tools; it is now priced like crime.
 

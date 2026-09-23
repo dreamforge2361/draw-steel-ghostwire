@@ -71,7 +71,7 @@
       <li class="gw-kiosk-row {{#if missing}}missing{{/if}}">
         <img class="gw-kiosk-row-img" src="{{img}}" alt="" data-fallback="{{fallbackImg}}">
         <div class="gw-kiosk-row-body">
-          <div class="gw-kiosk-row-name">{{name}}</div>
+          <div class="gw-kiosk-row-name" data-action="viewListing" data-listing-id="{{id}}" role="button" tabindex="0">{{name}}</div>
           <div class="gw-kiosk-row-price">
             <strong>{{priceLabel}}</strong>
             <span class="gw-kiosk-dim">{{catalogLabel}}</span>
@@ -84,6 +84,11 @@
           {{/if}}
         </div>
         <div class="gw-kiosk-row-actions">
+          <button type="button" class="gw-kiosk-btn gw-kiosk-btn-view" data-action="viewListing" data-listing-id="{{id}}"
+            {{disabled (not canView)}}
+            data-tooltip="{{localize "GHOSTWIRE.Kiosk.ViewHint"}}" aria-label="{{localize "GHOSTWIRE.Kiosk.View"}}">
+            <i class="fa-solid fa-book-open"></i> {{localize "GHOSTWIRE.Kiosk.View"}}
+          </button>
           <button type="button" class="gw-kiosk-btn gw-kiosk-btn-hot" data-action="buy" data-listing-id="{{id}}"
             {{disabled (not canBuy)}}>
             <i class="fa-solid fa-yen-sign"></i> {{localize "GHOSTWIRE.Kiosk.Buy"}}

@@ -293,6 +293,8 @@ The Facility Rigger's signature system — but any Wrench who sets up a safehous
 | Headquarters | 4 |
 | Killbox | 5 (defense-weighted; Facility Rigger subclass raises this further, see below) |
 
+A Physical Upgrade Slot spent on **bench capacity** is where a purchased **workshop bench** lives — Armorer's, Weaponeer's, Chrome Bay, Matrix / Deck Lab, Vehicle Depot, or Ritual Sanctum Tools. The bench is bought with ¥ like any other base asset; what it gives the crew (**+1 Lifestyle project slot, capped once**, plus an edge on matching-family Project rolls) is printed in `26`, not here. Designation sets how many benches the site can hold; it does not grant one.
+
 **Node Reference (Wired engagement).** Every building's Node is itself a slot-bearing asset — the building's Node is not a separate line item but **takes upgrades directly**, the way a drone or vehicle chassis takes Upgrade Slots. The Node is how hackers, Elementalists working Wired-adjacent effects, or any Wired-side actor reaches (or is kept out of) the building through the Mesh. A building's Node has its own **Wired Upgrade Slots**:
 
 | Designation | Wired Upgrade Slots |

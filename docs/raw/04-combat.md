@@ -131,6 +131,7 @@ Combat uses a square grid in meatspace unless the Director switches to theater-o
 - **Cover:** if a barrier blocks part of the line from attacker to target, the target has **cover** — the attacker takes a **bane** on the strike. Street clutter — cars, drones, neon pillars — is ordinary cover unless a Wire Overlay or Optics ability says it isn’t.
 - **Concealment:** you cannot be seen clearly (smoke, dark, Overlay glare). Strikes against you take a **bane**; you may attempt Hide (`03`).
 - **Flanking:** if two allies stand on opposite sides of a target (adjacent, facing through the target), melee strikes against that target gain an **edge**.
+  Opposite sides means a straight line through the target: north–south, east–west, or either diagonal. Two allies crowding the same corner are not flanking. A creature that “can’t be flanked” (Mutant **Prehensile Mutation**, and anything else that prints the line) never grants that edge, and a body that is unconscious, defeated, or **meat-inert** (`21`) is not holding a side. Ranged strikes never gain the flanking edge. In Foundry this is detected from token positions automatically — see `docs/directors/f14-flanking.md`.
 - **Forced movement** (push, pull, slide) moves the target the printed number of squares. **Stability** reduces forced movement by that many squares (minimum 0). If leftover movement would go through a solid wall, the target stops unless the ability says they break through.
 - **Wire distances** are topology and node ranges, not street squares — see `21`. A Jacked In body does not walk the grid while the mind is in the Wire.
 
@@ -224,9 +225,27 @@ Allies can **stabilize** them (a Medicine test, a printed heal, or Catch Breath 
 
 ### Cyborgs — System Crisis
 
-**Full Cyborgs** do not take the normal organic death spiral when they would die under the usual 0 Stamina / dying rules. They enter **System Crisis** — machine failure, Director-facing — instead (`05`). They also use **tech-only recovery**: Magic healing does not restore them; Wrench repair, Medic tech procedures, and similar do.
+**Full Cyborgs** do not take the normal organic death spiral when they would die under the usual 0 Stamina / dying rules. They enter **System Crisis** — machine failure — instead (`05`). There are no dying saves and no dying strikes: a Cyborg in Crisis is a collapsed chassis, not a bleeding body. They also use **tech-only recovery**: Magic healing does nothing for them; Wrench repair, Medic tech procedures, and similar do.
 
-A full System Crisis table is not locked yet; the Director adjudicates severity (reboot, limp-home mode, brick). Point players at `05` and `09` when Crisis triggers.
+**Trigger.** A Cyborg hero — or a Director-flagged full Cyborg NPC — enters System Crisis the moment they would enter the dying track.
+
+**While in Crisis.** Down, chassis locked, not dead. Magic healing does nothing. Tech repair is the recovery path. The body can be carried.
+
+**Severity — roll 2d6.** The Director rolls once when Crisis triggers. Optional modifiers: **−1** for a soft or scrapheap chassis, **+1** for a military or overclocked one.
+
+| 2d6 | Severity | Immediate result | Tech recovery |
+|---:|---|---|---|
+| 2–3 | **Brick** | The chassis locks. Treat as unconscious until a Repair Project (goal 60, parts about half a week of Middle Lifestyle) or a Machine God’s Rite or equivalent finishes. Can be carried. | No field reboot |
+| 4–5 | **Cascade** | One random installed living Chrome Item escalates **one** step on the chrome damage track (`09`), stopping at Destroyed. Then treat the Crisis as **Limp-Home**. If no living Chrome is installed, it is Limp-Home with a bane on the reboot roll. | Limp-Home, then deal with the chrome |
+| 6–8 | **Limp-Home** | Down until rebooted. After the reboot: Stamina equal to the Recoveries spent (minimum 1), speed halved, and a bane on tests until a full respite or a Field Repair. | Reboot now |
+| 9–10 | **Soft Reboot** | Down until rebooted. After the reboot: Stamina from Recoveries, no lasting bane. The reboot itself spends 1 Recovery. | Ally maneuver reboot, or a printed self-reboot |
+| 11–12 | **Failover** | Spend 1 Recovery, stand with that Stamina, no aftermath. Once per respite — a second Crisis in the same respite is **Limp-Home** instead. | Recovery only |
+
+**Reboot procedure.** An adjacent ally with Repair, Medicine, or Cybertech — or a Wrench or Medic — spends a **maneuver** and makes a Power Roll to bring the chassis back online. A Cyborg can self-reboot only on **Soft Reboot** or **Failover**, and only with at least 1 Recovery left. A **Brick** never field-reboots without the Project or a named ability that says so.
+
+**What Crisis is not.** It is not organic dying saves. It is not chrome Suppressed / Damaged / Destroyed applied to the Cyborg as a whole (`09`) — Cascade is the only row that touches living Chrome at all, and it does so through the ordinary chrome track. It is not a Body Integrity debit, and it never deletes an Item.
+
+In Foundry the severity table ships as the **Cyborg System Crisis** RollTable in the Ghostwire encounters compendium; see `docs/directors/f15-cyborg-system-crisis.md`.
 
 ### Revenants — inert
 

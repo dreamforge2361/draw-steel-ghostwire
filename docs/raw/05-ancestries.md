@@ -50,7 +50,7 @@ Ghostwire Peoples are **creation-time ancestry packages**:
 - **Changers** are one People with three **lineages** (Raven, Rat, Wolf) chosen at creation, and three **forms** (Human / Hybrid / Beast). Changing form is a **maneuver** and grants no mechanical bonus by itself.
 - **Revenants** are embodied undead. They use this chapter’s **Former Life** and **Tough But Withered** traits (inert instead of dying; fire while inert = permanent destruction).
 - **Mutants** can be born or made (no mechanical difference). Visible taint and social “reads as wrong” are Director color. An optional cosmetic **Corruptive Flaw** may be picked at creation. The retired **Corruption Load** is not used — Mutants share the hero **Taint** track in `27-corruption-taint.md`.
-- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina. Installed Suite Psionic/Tech abilities from this ancestry are allowed.
+- **Full Cyborgs** are machine-first. Hard chargen/setting limits (not ancestry-point costs): **Arcane Severance** (no Magic-keyword abilities; barred from Elementalist, Street Priest, and Technomancer / any Veil-casting Magic path), **tech-only recovery**, and **System Crisis** instead of a normal organic death spiral at 0 Stamina (2d6 severity table in `04`). Installed Suite Psionic/Tech abilities from this ancestry are allowed.
 
 ---
 
@@ -334,5 +334,5 @@ These limits are chargen rules. They do **not** cost ancestry points.
 
 - **Arcane Severance:** You cannot use **Magic**-keyword abilities. You are barred from **Elementalist**, **Street Priest**, and **Technomancer**, and from any other path that requires Magic. **Psionic/Tech** suite abilities from this ancestry are allowed. You can still be targeted, harmed, or protected by magic.
 - **Tech-only recovery:** You are healed by tech / Wrench-style repair / Medic tech procedures as your table defines — **not** by Magic healing (Director call on Troubadour-style and similar effects).
-- **System Crisis:** When you would die under the usual 0 Stamina / dying rules, you instead enter Director-facing **System Crisis** (machine failure) rather than a normal organic death spiral. A full System Crisis table is not yet defined; the Director adjudicates.
+- **System Crisis:** When you would die under the usual 0 Stamina / dying rules, you instead enter **System Crisis** (machine failure) rather than a normal organic death spiral. You make no dying saves and take no dying strikes. The Director rolls **2d6** on the System Crisis severity table (`04`) for Brick / Cascade / Limp-Home / Soft Reboot / Failover, and an ally’s adjacent maneuver reboot — Repair, Medicine, Cybertech, Wrench, or Medic — is the way back up. Crisis does not open a second Integrity track: Body Integrity 25 and your living Chrome purchases are unchanged (`09`), and Crisis never deletes an Item.
 
