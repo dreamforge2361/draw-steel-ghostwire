@@ -1,0 +1,22 @@
+Ghostwire ship 0.3.104 — LOCK A + LOCK B (Michael 2026-09-23)
+
+Outcome shipped in this branch (implement if missing):
+
+LOCK A — Cyborg Body Integrity 25 + living Chrome
+1. Cyborg heroes: Body Integrity max/start 25 (living stay 20).
+2. Cyborgs MAY buy living Chrome; install debits Integrity; removal refunds 75%.
+3. Remove isCyborg chrome install block in scripts/module.mjs; no Frame-Modules-only chargen hide.
+4. Chargen Integrity step: Cyborgs show 25/25 not N/A.
+5. Sheet Stats Integrity: Cyborgs show value/max not "Not used".
+6. Arcane Severance + Cortical Firewall / psychic immunity UNCHANGED.
+7. Docs/RAW/lang: Cyborg chrome prose matches; Frame Modules = deferred retag stub only.
+8. New Cyborgs get integrity 25/25 when People is Cyborg; migrate existing Cyborgs once if N/A / missing / max 20.
+9. Version 0.3.104, README, smoke, director checklist.
+
+LOCK B — Chargen early-spend gear card preview
+1. Each spendable row: name click and/or eye / View opens Item sheet for catalog UUID without buying.
+2. Purchase button stays separate.
+3. Works for gear/matrix/foci/vehicles/chrome.
+4. Smoke note in director checklist.
+
+Do NOT rebuild LevelDB packs unless mandatory. Prefer JS/lang/templates/docs.
