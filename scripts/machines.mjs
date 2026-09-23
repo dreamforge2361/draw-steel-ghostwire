@@ -11,6 +11,10 @@ import { addWireKit } from "./wired-kit.mjs";
 const MODULE_ID = "draw-steel-ghostwire";
 const PACK_ID = `${MODULE_ID}.summons`;
 const UI = "GHOSTWIRE.Summons.Machines.UI";
+// Mirrors MACHINE_SHEET_ID in machine-sheet.mjs. Declared here rather than imported: machine-sheet.mjs
+// already imports rigger-vertical.mjs, which imports this file, and an import cycle is not worth one string.
+// tools/rigger-vertical-smoke.mjs asserts the two stay identical.
+const MACHINE_SHEET_ID = `${MODULE_ID}.GhostwireMachineSheet`;
 
 // Band templates (must match gen-machines.mjs): base Stamina and speed before the Item stamps them.
 const BANDS = {
@@ -282,11 +286,30 @@ const movementTypes = domain => {
   return ["walk"];
 };
 
+/** The UUID this gear Item claims it is deployed as, without resolving it. */
+export function deployedMachineUuid(item) {
+  return item?.getFlag(MODULE_ID, "deployed")?.actorUuid ?? null;
+}
+
 /** The deployed Actor for a gear Item, or null if it isn’t deployed (or its Actor was deleted). */
 export function deployedMachine(item) {
-  const uuid = item?.getFlag(MODULE_ID, "deployed")?.actorUuid;
+  const uuid = deployedMachineUuid(item);
   const actor = uuid ? fromUuidSync(uuid) : null;
   return actor instanceof Actor ? actor : null;
+}
+
+/**
+ * Is this gear Item fielded right now?
+ * Counts the `deployed` flag rather than a successful fromUuidSync, so an Actor the current client
+ * cannot resolve (permissions, a compendium-scoped UUID, a mid-load race) can never silently zero the
+ * fleet count and wave a refused Deploy through. A world Actor we know is gone still does not count.
+ */
+export function isMachineFielded(item) {
+  const uuid = deployedMachineUuid(item);
+  if (!uuid) return false;
+  const worldId = uuid.startsWith("Actor.") ? uuid.slice("Actor.".length) : null;
+  if (worldId && game.actors) return game.actors.has(worldId);
+  return true;
 }
 
 async function templateFor(band) {
@@ -312,7 +335,11 @@ function placement(owner, size) {
 }
 
 
-/** Fleet Size: 3@L1, 4@L4, 5@L7, 6@L10. Drone Jockey Wide Band +2 / Redoubled +4. */
+/**
+ * Fleet Size: 3@L1, 4@L4, 5@L7, 6@L10, plus Drone Jockey Wide Band (+2, granted at 1st level).
+ * Wide Band, Redoubled carries NO further cap: per the Wrench master it only drops the distance
+ * requirement on Wide Band's whole-swarm Command. Do not re-add a boost for it.
+ */
 export function fleetSizeCap(actor) {
   const level = Number(actor?.system?.level ?? 1) || 1;
   let cap = 3;
@@ -320,18 +347,26 @@ export function fleetSizeCap(actor) {
   else if (level >= 7) cap = 5;
   else if (level >= 4) cap = 4;
   const ids = new Set([...(actor?.items ?? [])].map(i => i.system?._dsid).filter(Boolean));
-  if (ids.has("wide-band-redoubled")) cap += 4;
-  else if (ids.has("wide-band")) cap += 2;
+  if (ids.has("wide-band")) cap += 2;
   return cap;
 }
 
 export function fieldedMachineCount(actor) {
   if (!(actor instanceof Actor)) return 0;
-  return [...actor.items].filter(item => machineBand(item) && deployedMachine(item)).length;
+  return [...actor.items].filter(item => machineBand(item) && isMachineFielded(item)).length;
+}
+
+/** The Actor whose Fleet Size a Deploy of this Item spends against. */
+export function machineOwner(item, owner = null) {
+  if (owner instanceof Actor) return owner;
+  if (item?.parent instanceof Actor) return item.parent;
+  const uuid = item?.getFlag(MODULE_ID, "ownerUuid");
+  const resolved = uuid ? fromUuidSync(uuid) : null;
+  return resolved instanceof Actor ? resolved : null;
 }
 
 /** Deploy a drone or vehicle Item: stamp its band template into a linked Actor and place a token. */
-export async function deployMachine(item) {
+export async function deployMachine(item, { owner: ownerOverride = null } = {}) {
   const band = machineBand(item);
   if (!band) return ui.notifications.warn(game.i18n.localize(`${UI}.NotMachine`));
   if (!canvas.scene) return ui.notifications.warn(game.i18n.localize(`${UI}.NoScene`));
@@ -339,7 +374,8 @@ export async function deployMachine(item) {
   const existing = deployedMachine(item);
   if (existing) return ui.notifications.warn(game.i18n.format(`${UI}.AlreadyDeployed`, { name: item.name }));
 
-  const ownerForFleet = item.parent instanceof Actor ? item.parent : null;
+  const ownerForFleet = machineOwner(item, ownerOverride);
+  let fleet = null;
   if (ownerForFleet) {
     const cap = fleetSizeCap(ownerForFleet);
     const fielded = fieldedMachineCount(ownerForFleet);
@@ -348,13 +384,14 @@ export async function deployMachine(item) {
         name: ownerForFleet.name, fielded, cap,
       }));
     }
+    fleet = { fielded: fielded + 1, cap };
   }
 
   const template = await templateFor(band);
   if (!template) return ui.notifications.error(game.i18n.format(`${UI}.NoTemplate`, { band }));
 
   const vehicle = item.getFlag(MODULE_ID, "vehicle");
-  const owner = item.parent instanceof Actor ? item.parent : null;
+  const owner = ownerForFleet;
   const base = BANDS[band];
   const chassis = chassisStamina(item);
   const armorBonus = armorStaminaBonus(item);
@@ -370,6 +407,9 @@ export async function deployMachine(item) {
   const data = game.actors.fromCompendium(template);
   foundry.utils.mergeObject(data, {
     name: item.name, img: item.img, folder: (await deployFolder())?.id ?? null, ownership,
+    // Per-Actor sheet preference: ClientDocument#_getSheetClass honours flags.core.sheetClass, and the
+    // Draw Steel NPC sheet would otherwise win as the registered default for type "npc".
+    "flags.core.sheetClass": MACHINE_SHEET_ID,
     "system.stamina": { value: chassis, max: chassis, temporary: 0 },
     "system.movement.value": speed,
     "system.movement.types": movementTypes(vehicle.domain),
@@ -439,7 +479,9 @@ export async function deployMachine(item) {
   const size = actor.system.combat.size.value;
   const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });
   await canvas.scene.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
-  ui.notifications.info(game.i18n.format(`${UI}.Deployed`, { name: item.name, stamina, speed }));
+  const deployedMsg = game.i18n.format(`${UI}.Deployed`, { name: item.name, stamina, speed });
+  const fleetMsg = fleet ? ` ${game.i18n.format(`${UI}.FleetStatus`, fleet)}.` : "";
+  ui.notifications.info(`${deployedMsg}${fleetMsg}`);
   return actor;
 }
 

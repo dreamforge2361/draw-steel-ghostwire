@@ -1,13 +1,19 @@
+{{!-- Core (v14) toggles .active on nav [data-group] and .tab[data-group] without a re-render, so every
+      panel stays in the DOM and a Save from any tab writes every field. --}}
 <form class="ghostwire-machine-sheet flexcol" autocomplete="off">
   <header class="gw-m-header flexrow">
-    <div class="gw-m-portrait">
-      <a data-action="editImage" title="{{localize 'GHOSTWIRE.Summons.Machines.UI.PortraitHint'}}">
-        <img class="profile" src="{{actor.img}}" alt="{{actor.name}}" />
-      </a>
-      <div class="gw-m-token-row flexrow">
-        <img class="token-art" src="{{tokenImg}}" alt="token" />
-        <button type="button" data-action="editToken"><i class="fa-solid fa-circle-user"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.TokenArt"}}</button>
-      </div>
+    <div class="gw-m-art flexrow">
+      <figure class="gw-m-portrait">
+        <img class="profile" data-action="editImage" data-edit="img" src="{{actor.img}}" alt="{{actor.name}}"
+             title="{{localize 'GHOSTWIRE.Summons.Machines.UI.PortraitHint'}}" />
+        <figcaption>{{localize "GHOSTWIRE.Summons.Machines.UI.Portrait"}}</figcaption>
+      </figure>
+      <figure class="gw-m-token">
+        <img class="token-art" data-action="editImage" data-edit="prototypeToken.texture.src" src="{{tokenImg}}"
+             alt="{{localize 'GHOSTWIRE.Summons.Machines.UI.TokenArt'}}"
+             title="{{localize 'GHOSTWIRE.Summons.Machines.UI.TokenArtHint'}}" />
+        <figcaption>{{localize "GHOSTWIRE.Summons.Machines.UI.TokenArt"}}</figcaption>
+      </figure>
     </div>
     <div class="gw-m-identity flexcol">
       <input class="gw-m-name" type="text" name="name" value="{{actor.name}}" />
@@ -29,122 +35,124 @@
     </div>
   </header>
 
-  <nav class="gw-m-tabs flexrow">
-    <a data-action="tab" data-tab="combat" class="{{#if (eq tab "combat")}}active{{/if}}">{{localize "GHOSTWIRE.Summons.Machines.UI.TabCombat"}}</a>
-    <a data-action="tab" data-tab="control" class="{{#if (eq tab "control")}}active{{/if}}">{{localize "GHOSTWIRE.Summons.Machines.UI.TabControl"}}</a>
-    <a data-action="tab" data-tab="build" class="{{#if (eq tab "build")}}active{{/if}}">{{localize "GHOSTWIRE.Summons.Machines.UI.TabBuild"}}</a>
-    <a data-action="tab" data-tab="inventory" class="{{#if (eq tab "inventory")}}active{{/if}}">{{localize "GHOSTWIRE.Summons.Machines.UI.TabInventory"}}</a>
-    <a data-action="tab" data-tab="links" class="{{#if (eq tab "links")}}active{{/if}}">{{localize "GHOSTWIRE.Summons.Machines.UI.TabLinks"}}</a>
-    <a data-action="tab" data-tab="story" class="{{#if (eq tab "story")}}active{{/if}}">{{localize "GHOSTWIRE.Summons.Machines.UI.TabStory"}}</a>
+  <nav class="tabs gw-m-tabs flexrow" data-group="primary">
+    {{#each tabs as |t|}}
+    <button type="button" class="item {{t.cssClass}}" data-action="tab" data-group="{{t.group}}" data-tab="{{t.id}}"
+            aria-pressed="{{#if t.active}}true{{else}}false{{/if}}">{{localize t.label}}</button>
+    {{/each}}
   </nav>
 
   <section class="gw-m-body">
-    {{#if (eq tab "combat")}}
-    <div class="gw-m-grid">
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Integrity"}}
-        <div class="flexrow gap">
-          <input type="number" name="system.stamina.value" value="{{stamina.value}}" />
-          <span>/</span>
-          <input type="number" name="system.stamina.max" value="{{stamina.max}}" />
-        </div>
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.SizeScale"}}
-        <input type="text" name="flags.draw-steel-ghostwire.machine.sizeScale" value="{{machine.sizeScale}}" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Speed"}}
-        <input type="number" name="system.movement.value" value="{{movement.value}}" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.MovementMode"}}
-        <input type="text" name="flags.draw-steel-ghostwire.machine.movementMode" value="{{machine.movementMode}}" />
-      </label>
-    </div>
-    {{/if}}
-
-    {{#if (eq tab "control")}}
-    <div class="gw-m-grid">
-      <label class="checkbox">
-        <input type="checkbox" name="flags.draw-steel-ghostwire.machine.jumpInCapable" {{checked machine.jumpInCapable}} />
-        {{localize "GHOSTWIRE.Summons.Machines.UI.JumpInCapable"}}
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.ControlMode"}}
-        <input type="text" name="flags.draw-steel-ghostwire.machine.controlMode" value="{{machine.controlMode}}" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Handling"}}
-        <input type="text" name="flags.draw-steel-ghostwire.machine.handling" value="{{machine.handling}}" />
-      </label>
-      <div class="gw-m-actions flexrow">
-        <button type="button" data-action="jumpIn" {{#unless canJumpIn}}disabled{{/unless}}><i class="fa-solid fa-plug"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.JumpIn"}}</button>
-        <button type="button" data-action="jumpOut" {{#unless jumpedIn}}disabled{{/unless}}><i class="fa-solid fa-plug-circle-xmark"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.JumpOut"}}</button>
+    <section class="tab gw-m-tab {{tabs.combat.cssClass}}" data-group="primary" data-tab="combat">
+      <div class="gw-m-grid">
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Integrity"}}
+          <div class="flexrow gap">
+            <input type="number" name="system.stamina.value" value="{{stamina.value}}" />
+            <span>/</span>
+            <input type="number" name="system.stamina.max" value="{{stamina.max}}" />
+          </div>
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.SizeScale"}}
+          <input type="text" name="flags.draw-steel-ghostwire.machine.sizeScale" value="{{machine.sizeScale}}" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Speed"}}
+          <input type="number" name="system.movement.value" value="{{movement.value}}" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.MovementMode"}}
+          <input type="text" name="flags.draw-steel-ghostwire.machine.movementMode" value="{{machine.movementMode}}" />
+        </label>
       </div>
-    </div>
-    {{/if}}
+    </section>
 
-    {{#if (eq tab "build")}}
-    <div class="gw-m-grid">
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Echelon"}}
-        <input type="number" name="flags.draw-steel-ghostwire.echelon" value="{{echelon}}" min="1" max="4" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Domain"}}
-        <input type="text" name="flags.draw-steel-ghostwire.machine.domain" value="{{machine.domain}}" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.ModSlots"}}
-        <input type="number" name="flags.draw-steel-ghostwire.machine.modSlots" value="{{machine.modSlots}}" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.InstalledMods"}}
-        <textarea name="flags.draw-steel-ghostwire.machine.installedModsText" rows="3">{{machine.installedModsText}}</textarea>
-      </label>
-    </div>
-    {{/if}}
+    <section class="tab gw-m-tab {{tabs.control.cssClass}}" data-group="primary" data-tab="control">
+      <div class="gw-m-grid">
+        <label class="checkbox">
+          <input type="checkbox" name="flags.draw-steel-ghostwire.machine.jumpInCapable" {{checked machine.jumpInCapable}} />
+          {{localize "GHOSTWIRE.Summons.Machines.UI.JumpInCapable"}}
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.ControlMode"}}
+          <input type="text" name="flags.draw-steel-ghostwire.machine.controlMode" value="{{machine.controlMode}}" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Handling"}}
+          <input type="text" name="flags.draw-steel-ghostwire.machine.handling" value="{{machine.handling}}" />
+        </label>
+        <div class="gw-m-actions flexrow">
+          <button type="button" data-action="jumpIn" {{#unless canJumpIn}}disabled{{/unless}}><i class="fa-solid fa-plug"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.JumpIn"}}</button>
+          <button type="button" data-action="jumpOut" {{#unless jumpedIn}}disabled{{/unless}}><i class="fa-solid fa-plug-circle-xmark"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.JumpOut"}}</button>
+        </div>
+      </div>
+    </section>
 
-    {{#if (eq tab "inventory")}}
-    <div class="gw-m-grid">
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Cargo"}}
-        <textarea name="flags.draw-steel-ghostwire.machine.cargo" rows="2">{{machine.cargo}}</textarea>
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Mounts"}}
-        <textarea name="flags.draw-steel-ghostwire.machine.mounts" rows="2">{{machine.mounts}}</textarea>
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Sensors"}}
-        <textarea name="flags.draw-steel-ghostwire.machine.sensors" rows="2">{{machine.sensors}}</textarea>
-      </label>
-    </div>
-    {{/if}}
+    <section class="tab gw-m-tab {{tabs.build.cssClass}}" data-group="primary" data-tab="build">
+      <div class="gw-m-grid">
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Echelon"}}
+          <input type="number" name="flags.draw-steel-ghostwire.echelon" value="{{echelon}}" min="1" max="4" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Domain"}}
+          <input type="text" name="flags.draw-steel-ghostwire.machine.domain" value="{{machine.domain}}" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.ModSlots"}}
+          <input type="number" name="flags.draw-steel-ghostwire.machine.modSlots" value="{{machine.modSlots}}" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.InstalledMods"}}
+          <textarea name="flags.draw-steel-ghostwire.machine.installedModsText" rows="3">{{machine.installedModsText}}</textarea>
+        </label>
+      </div>
+    </section>
 
-    {{#if (eq tab "links")}}
-    <div class="gw-m-grid">
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.OwnerUuid"}}
-        <input type="text" name="flags.draw-steel-ghostwire.ownerUuid" value="{{ownerUuid}}" />
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.GearItemUuid"}}
-        <input type="text" name="flags.draw-steel-ghostwire.gearItemUuid" value="{{gearItemUuid}}" />
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" name="flags.draw-steel-ghostwire.machine.homeGround" {{checked machine.homeGround}} />
-        {{localize "GHOSTWIRE.Summons.Machines.UI.HomeGround"}}
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" name="flags.draw-steel-ghostwire.machine.beacon" {{checked machine.beacon}} />
-        {{localize "GHOSTWIRE.Summons.Machines.UI.Beacon"}}
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Profile"}}
-        <textarea name="flags.draw-steel-ghostwire.machine.profile" rows="3">{{machine.profile}}</textarea>
-      </label>
-    </div>
-    {{/if}}
+    <section class="tab gw-m-tab {{tabs.inventory.cssClass}}" data-group="primary" data-tab="inventory">
+      <div class="gw-m-grid">
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Cargo"}}
+          <textarea name="flags.draw-steel-ghostwire.machine.cargo" rows="2">{{machine.cargo}}</textarea>
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Mounts"}}
+          <textarea name="flags.draw-steel-ghostwire.machine.mounts" rows="2">{{machine.mounts}}</textarea>
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Sensors"}}
+          <textarea name="flags.draw-steel-ghostwire.machine.sensors" rows="2">{{machine.sensors}}</textarea>
+        </label>
+      </div>
+    </section>
 
-    {{#if (eq tab "story")}}
-    <div class="gw-m-story flexcol">
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Description"}}
-        <textarea name="system.biography.value" rows="8">{{biography}}</textarea>
-      </label>
-      <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Notes"}}
-        <textarea name="system.biography.director" rows="6">{{notes}}</textarea>
-      </label>
-    </div>
-    {{/if}}
+    <section class="tab gw-m-tab {{tabs.links.cssClass}}" data-group="primary" data-tab="links">
+      <div class="gw-m-grid">
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.OwnerUuid"}}
+          <input type="text" name="flags.draw-steel-ghostwire.ownerUuid" value="{{ownerUuid}}" />
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.GearItemUuid"}}
+          <input type="text" name="flags.draw-steel-ghostwire.gearItemUuid" value="{{gearItemUuid}}" />
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="flags.draw-steel-ghostwire.machine.homeGround" {{checked machine.homeGround}} />
+          {{localize "GHOSTWIRE.Summons.Machines.UI.HomeGround"}}
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="flags.draw-steel-ghostwire.machine.beacon" {{checked machine.beacon}} />
+          {{localize "GHOSTWIRE.Summons.Machines.UI.Beacon"}}
+        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Profile"}}
+          <textarea name="flags.draw-steel-ghostwire.machine.profile" rows="3">{{machine.profile}}</textarea>
+        </label>
+      </div>
+    </section>
+
+    <section class="tab gw-m-tab {{tabs.story.cssClass}}" data-group="primary" data-tab="story">
+      <div class="gw-m-story flexcol">
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Description"}}
+          <textarea name="system.biography.value" rows="8">{{biography}}</textarea>
+        </label>
+        {{!-- Director notes are gmOnly: a player's client never receives them, so never let a player
+              submit the field back empty and wipe them. --}}
+        {{#if isGM}}
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Notes"}}
+          <textarea name="system.biography.director" rows="6">{{notes}}</textarea>
+        </label>
+        {{/if}}
+      </div>
+    </section>
   </section>
 
   <footer class="gw-m-footer flexrow">
-    <button type="submit"><i class="fa-solid fa-floppy-disk"></i> {{localize "Save Changes"}}</button>
+    <button type="submit"><i class="fa-solid fa-floppy-disk"></i> {{localize "GHOSTWIRE.Summons.Machines.UI.SaveChanges"}}</button>
   </footer>
 </form>

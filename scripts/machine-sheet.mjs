@@ -1,14 +1,34 @@
 // Ghostwire Machine sheet — pared Actor UI for drone / vehicle / baseAsset.
 // Required (Michael 2026-09-23): Description, Notes, Image/portrait + token art.
+//
+// Foundry v14 facts that drove the 0.3.106 hot-fix:
+// - ApplicationV2 intercepts data-action="tab" BEFORE options.actions, routing it to _onClickTab →
+//   changeTab(tab, group). A custom `tab` action is therefore never called, so this sheet uses the core
+//   tab machinery (static TABS + tabGroups) instead of re-rendering on every tab click.
+// - DocumentSheetV2#_processSubmitData receives an ALREADY-EXPANDED submitData object, not a
+//   FormDataExtended. Per-field massaging belongs in _processFormData, which runs before validation.
+// - The Draw Steel NPC sheet extends DocumentSheetV2 directly, NOT ActorSheetV2, so renderActorSheetV2
+//   never fires for it. Sheet preference is stamped into flags.core.sheetClass instead, which
+//   ClientDocument#_getSheetClass honours and which makes core swap an already-open sheet for us.
 
 import { jumpIn, jumpOut, isJumpedInto } from "./rigger-vertical.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
+const SHEET_CLASS_NAME = "GhostwireMachineSheet";
+const UI = "GHOSTWIRE.Summons.Machines.UI";
+
+/** The DocumentSheetConfig id for this sheet; also the value stamped into flags.core.sheetClass. */
+export const MACHINE_SHEET_ID = `${MODULE_ID}.${SHEET_CLASS_NAME}`;
+
+export const MACHINE_KINDS = ["drone", "vehicle", "baseAsset"];
+
+const TAB_IDS = ["combat", "control", "build", "inventory", "links", "story"];
+const tabLabel = id => `${UI}.Tab${id.charAt(0).toUpperCase()}${id.slice(1)}`;
 
 export function isMachineActor(actor) {
   if (!(actor instanceof Actor)) return false;
   const kind = actor.getFlag(MODULE_ID, "kind") ?? actor.getFlag(MODULE_ID, "machine")?.kind;
-  return ["drone", "vehicle", "baseAsset"].includes(kind);
+  return MACHINE_KINDS.includes(kind);
 }
 
 export function defineMachineSheet() {
@@ -23,11 +43,18 @@ export function defineMachineSheet() {
       window: { resizable: true, contentClasses: ["standard-form"] },
       form: { submitOnChange: false, closeOnSubmit: false },
       actions: {
-        tab: GhostwireMachineSheet.#onTab,
-        editImage: GhostwireMachineSheet.#onEditImage,
-        editToken: GhostwireMachineSheet.#onEditToken,
         jumpIn: GhostwireMachineSheet.#onJumpIn,
         jumpOut: GhostwireMachineSheet.#onJumpOut,
+      },
+    };
+
+    // One tab group, driven by core: nav buttons carry data-action="tab" data-group="primary", panels
+    // carry class="tab" data-group="primary". Core toggles .active without a re-render, so every tab's
+    // fields stay in the form and a Save from any tab writes the whole sheet.
+    static TABS = {
+      primary: {
+        tabs: TAB_IDS.map(id => ({ id, label: tabLabel(id) })),
+        initial: "combat",
       },
     };
 
@@ -38,13 +65,12 @@ export function defineMachineSheet() {
       },
     };
 
-    #tab = "combat";
-
     get title() {
-      return `${this.document.name} — ${game.i18n.localize("GHOSTWIRE.Summons.Machines.UI.SheetTitle")}`;
+      return `${this.document.name} — ${game.i18n.localize(`${UI}.SheetTitle`)}`;
     }
 
     async _prepareContext(options) {
+      // super also prepares `tabs` for the single TABS group.
       const context = await super._prepareContext(options);
       const actor = this.document;
       const machine = foundry.utils.mergeObject({
@@ -81,59 +107,33 @@ export function defineMachineSheet() {
         movement: actor.system.movement ?? { value: 0 },
         biography: actor.system.biography?.value ?? "",
         notes: actor.system.biography?.director ?? "",
+        isGM: game.user.isGM,
         tokenImg: actor.prototypeToken?.texture?.src ?? actor.img,
-        tab: this.#tab,
         jumpedIn,
         canJumpIn: !!machine.jumpInCapable && !jumpedIn && !!ownerUuid,
       };
     }
 
-    async _processSubmitData(_event, _form, formData) {
-      const data = foundry.utils.expandObject(formData.object);
-      const tags = data.flags?.[MODULE_ID]?.machine?.tags;
-      if (typeof tags === "string") {
-        data.flags[MODULE_ID].machine.tags = tags.split(",").map(s => s.trim()).filter(Boolean);
+    /**
+     * Normalise the expanded form object before core validates and writes it.
+     * What arrives downstream in _processSubmitData is already expanded — never reach for formData.object there.
+     */
+    _processFormData(event, form, formData) {
+      const submitData = super._processFormData(event, form, formData);
+      const machine = foundry.utils.getProperty(submitData, `flags.${MODULE_ID}.machine`);
+      if (!machine || (typeof machine !== "object")) return submitData;
+      if (typeof machine.tags === "string") {
+        machine.tags = machine.tags.split(",").map(s => s.trim()).filter(Boolean);
       }
-      if (data.flags?.[MODULE_ID]?.machine?.kind) {
-        data.flags[MODULE_ID].kind = data.flags[MODULE_ID].machine.kind;
-      }
-      await this.document.update(data);
-    }
-
-    static #onTab(_event, target) {
-      this.#tab = target.dataset.tab || "combat";
-      this.render();
-    }
-
-    static async #onEditImage() {
-      const fp = new FilePicker({
-        type: "image",
-        current: this.document.img,
-        callback: async path => {
-          await this.document.update({ img: path });
-          this.render();
-        },
-      });
-      return fp.browse();
-    }
-
-    static async #onEditToken() {
-      const current = this.document.prototypeToken?.texture?.src ?? this.document.img;
-      const fp = new FilePicker({
-        type: "image",
-        current,
-        callback: async path => {
-          await this.document.update({ "prototypeToken.texture.src": path });
-          this.render();
-        },
-      });
-      return fp.browse();
+      // Keep the top-level kind flag — what isMachineActor and the sheet preference read — in step.
+      if (machine.kind) foundry.utils.setProperty(submitData, `flags.${MODULE_ID}.kind`, machine.kind);
+      return submitData;
     }
 
     static async #onJumpIn() {
       const ownerUuid = this.document.getFlag(MODULE_ID, "ownerUuid");
       const owner = ownerUuid ? await fromUuid(ownerUuid) : null;
-      if (!owner) return ui.notifications.warn(game.i18n.localize("GHOSTWIRE.Summons.Machines.UI.NoOwner"));
+      if (!owner) return ui.notifications.warn(game.i18n.localize(`${UI}.NoOwner`));
       await jumpIn(owner, this.document);
       this.render();
     }
@@ -148,29 +148,60 @@ export function defineMachineSheet() {
   };
 }
 
+// One attempt per Actor per session, so a failed write can never spin the render hook.
+const attempted = new WeakSet();
+
+/**
+ * Make the Ghostwire Machine sheet this Actor's sheet by stamping the per-Actor sheet preference.
+ * Core's ClientDocument#_onUpdate sees flags.core.sheetClass change and re-opens on the new class.
+ * @returns {Promise<boolean>} Whether the preference was written.
+ */
+export async function ensureMachineSheetPreference(actor) {
+  if (!isMachineActor(actor) || !actor.isOwner) return false;
+  if (actor.getFlag("core", "sheetClass") === MACHINE_SHEET_ID) return false;
+  if (attempted.has(actor)) return false;
+  attempted.add(actor);
+  await actor.setFlag("core", "sheetClass", MACHINE_SHEET_ID);
+  return true;
+}
+
+/** Back-fill the sheet preference on machines deployed before 0.3.106. GM only, once per load. */
+async function sweepMachineSheetPreference() {
+  if (!game.user.isGM) return 0;
+  const updates = game.actors
+    .filter(actor => isMachineActor(actor) && (actor.getFlag("core", "sheetClass") !== MACHINE_SHEET_ID))
+    .map(actor => ({ _id: actor.id, "flags.core.sheetClass": MACHINE_SHEET_ID }));
+  if (!updates.length) return 0;
+  await Actor.updateDocuments(updates);
+  console.log(`${MODULE_ID} | Machine sheet preference stamped on ${updates.length} machine Actor(s)`);
+  return updates.length;
+}
+
 export function registerMachineSheet() {
   const Sheet = defineMachineSheet();
-  DocumentSheetConfig.registerSheet(CONFIG.Actor.documentClass, MODULE_ID, Sheet, {
+  const SheetConfig = foundry.applications.apps.DocumentSheetConfig;
+  SheetConfig.registerSheet(CONFIG.Actor.documentClass, MODULE_ID, Sheet, {
     types: ["npc"],
-    label: "GHOSTWIRE.Summons.Machines.UI.SheetTitle",
+    label: `${UI}.SheetTitle`,
     makeDefault: false,
   });
 
-  const openMachine = async actor => {
-    if (!isMachineActor(actor)) return false;
-    new Sheet({ document: actor }).render(true);
-    return true;
-  };
+  Hooks.once("ready", () => sweepMachineSheetPreference());
+  Hooks.on("createActor", actor => ensureMachineSheetPreference(actor));
 
-  const redirect = async app => {
-    if (!isMachineActor(app.document)) return;
-    if (app.constructor.name === "GhostwireMachineSheet") return;
+  // Belt and braces: if a machine still opens on another sheet (stale cached instance, or a sheet opened by
+  // another module), stamp the preference — core swaps it — or swap it by hand when the flag is already right.
+  Hooks.on("renderDocumentSheetV2", async app => {
+    if (app.constructor.name === SHEET_CLASS_NAME) return;
+    const actor = app.document;
+    if (!isMachineActor(actor)) return;
+    if (await ensureMachineSheetPreference(actor)) return;
+    if (actor.getFlag("core", "sheetClass") !== MACHINE_SHEET_ID) return;
     await app.close({ force: true });
-    await openMachine(app.document);
-  };
+    actor._sheet = null;
+    actor.sheet?.render(true);
+  });
 
-  Hooks.on("renderActorSheetV2", redirect);
-  Hooks.on("renderActorSheet", redirect);
-  console.log(`${MODULE_ID} | Ghostwire Machine sheet registered`);
+  console.log(`${MODULE_ID} | Ghostwire Machine sheet registered (${MACHINE_SHEET_ID})`);
   return Sheet;
 }
