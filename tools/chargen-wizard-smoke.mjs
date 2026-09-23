@@ -6,7 +6,11 @@
  * Run: node tools/chargen-wizard-smoke.mjs
  * Reads only. Does not write pack JSON, rebuild packs, or touch a world.
  */
-import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
+import {
+  readFileSync,
+  readdirSync,
+  statSync,
+  existsSync } from "node:fs";
 import { join } from "node:path";
 import { atLeast } from "./lib/module-version.mjs";
 import { WEALTH_PATH } from "../scripts/kiosk.mjs";
@@ -31,6 +35,11 @@ import {
   chargenComplete,
   doneChecklist,
   isChargenSpendable,
+  spendCategoryOf,
+  chromeIntegrityCost,
+  skillPickBudget,
+  languagePickBudget,
+  SPEND_CATEGORIES,
   isPlaceholderName,
   nextStep,
   normalizeChargenState,
@@ -40,7 +49,7 @@ import {
   rerunGate,
   stepIndex,
   stepStatus,
-  voidmarkSeed,
+  voidmarkSeed
 } from "../scripts/chargen-wizard.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
@@ -67,8 +76,8 @@ console.log("B95 Chargen Wizard smoke\n");
 
 /* -------------------------------------------- 1) it ships */
 
-console.log("1) the module ships the wizard at 0.3.101");
-ok(atLeast(moduleJson.version, "0.3.101"), `module.json is at least 0.3.101 (${moduleJson.version})`);
+console.log("1) the module ships the wizard at 0.3.103");
+ok(atLeast(moduleJson.version, "0.3.103"), `module.json is at least 0.3.103 (${moduleJson.version})`);
 ok(existsSync(SCRIPT), `${SCRIPT} exists`);
 ok(existsSync(TEMPLATE), `${TEMPLATE} exists`);
 ok(moduleSrc.includes('import { registerChargenWizard } from "./chargen-wizard.mjs";'),
@@ -229,17 +238,17 @@ const plan = planChargenSpend({ wealth: 5000, price: 300 });
 ok(plan.ok && (plan.wealthAfter === 4700), "¥5,000 less ¥300 leaves ¥4,700");
 ok(!planChargenSpend({ wealth: 100, price: 300 }).ok, "an unaffordable row is refused");
 
-ok(CHARGEN_SPEND_PACKS.join(",") === "gear,matrix,foci,vehicles",
-  "the spend catalog reads gear, matrix, foci and vehicles — the Appendix B §9 list");
-ok(CHARGEN_FORBIDDEN_PACKS.includes("chrome"), "the chrome pack is named as forbidden");
+ok(CHARGEN_SPEND_PACKS.join(",") === "gear,matrix,foci,vehicles,chrome",
+  "G10: the spend catalog reads gear, matrix, foci, vehicles, and chrome");
+ok(!CHARGEN_FORBIDDEN_PACKS.includes("chrome"), "G10: chrome pack is no longer forbidden");
 ok(CHARGEN_FORBIDDEN_PACKS.includes("mods"), "the mods pack is named as forbidden");
 for (const pack of CHARGEN_FORBIDDEN_PACKS) {
   ok(!CHARGEN_SPEND_PACKS.includes(pack), `"${pack}" is not in the spend catalog`);
   ok(!isChargenSpendable({ pack, price: 100 }), `a priced "${pack}" row is still refused`);
 }
 ok(isChargenSpendable({ pack: "gear", price: 300 }), "a priced Street gear row is spendable");
-ok(!isChargenSpendable({ pack: "gear", price: 300, chrome: { integrity: 2 } }),
-  "a chrome-flagged row is refused even from an allowed pack");
+ok(isChargenSpendable({ pack: "chrome", price: 300, chrome: { integrity: 2 } }),
+  "G10: a chrome pack row with Integrity cost is spendable");
 ok(!isChargenSpendable({ pack: "gear", price: null }), "an unpriced row is refused — the wizard never guesses at ¥");
 ok(!isChargenSpendable({ pack: "gear", price: 0 }), "a ¥0 row is refused");
 ok(!isChargenSpendable({ pack: "bestiary", price: 100 }), "a pack nobody listed is refused");
@@ -266,19 +275,19 @@ for (const pack of CHARGEN_SPEND_PACKS) {
   };
   walk(dir);
 }
-ok(chromeFlagged === 0, `no chrome-flagged Item lives in the spendable packs (found ${chromeFlagged})`);
+ok(chromeFlagged > 0, `G10: chrome Items are reachable from spendable packs (found ${chromeFlagged})`);
 ok(priced > 100, `the spendable packs carry real ¥ (${priced} priced rows)`);
 
 console.log("\n   └ the wizard cannot install chrome or spend Body Integrity");
 ok(!/flags\.\$\{MODULE_ID\}\.integrity|"flags\.draw-steel-ghostwire\.integrity"/.test(scriptSrc),
   "the wizard never writes the Body Integrity flag");
 ok(!/grantChromeItems|setIntegrity/.test(scriptSrc), "the wizard never calls the chrome install path");
-ok(/\.chrome\b[\s\S]{0,200}Errors\.NoChrome/.test(scriptSrc),
-  "buyChargenItem refuses a chrome source before creating it");
+ok(/IntegrityConfirm/.test(scriptSrc),
+  "G10: buyChargenItem confirms Integrity cost before creating chrome");
 ok(!/"\$\{MODULE_ID\}\.chrome"|\.chrome`|packs\.get\(`\$\{MODULE_ID\}\.chrome/.test(scriptSrc),
   "the wizard never opens the chrome compendium");
-ok(typeof localize("GHOSTWIRE.Chargen.Spends.NoChromeNoMods") === "string",
-  "the spends step says out loud that chrome and mods are not sold here");
+ok(typeof localize("GHOSTWIRE.Chargen.Spends.ChromeOkModsNo") === "string",
+  "G10: the spends step says Programs+Chrome are sold, mods are not");
 ok(typeof localize("GHOSTWIRE.Chargen.Spends.NoLifestyle") === "string",
   "the spends step says Lifestyle is not pre-paid");
 ok(AVAILABILITY_BANDS.join(",") === "street,professional,restricted,military,prototype",
@@ -328,15 +337,19 @@ ok(isPlaceholderName("New Actor") && isPlaceholderName("  ") && !isPlaceholderNa
   "placeholder names are recognised, real ones are not");
 
 console.log("\n   └ the firewall bites");
-ok(!stepStatus({ ...finishedHero, chromeCount: 1 }).integrity.done, "chrome on the sheet fails the firewall");
-ok(stepStatus({ ...finishedHero, chromeCount: 1 }).integrity.warn === "ChromeAtChargen", "and says why");
+ok(stepStatus({ ...finishedHero, chromeCount: 1, integrity: { value: 20, max: 20 } }).integrity.done !== false
+  || stepStatus({ ...finishedHero, chromeCount: 1, integrity: { value: 20, max: 20 } }).integrity.warn !== "ChromeAtChargen",
+  "G10: chrome alone no longer raises ChromeAtChargen");
+ok(!stepStatus({ ...finishedHero, chromeCount: 1, integrity: { value: 18, max: 20 } }).integrity.done,
+  "G10: chrome with Integrity below start still fails the honest Integrity check");
 ok(!stepStatus({ ...finishedHero, taint: 1 }).integrity.done, "Taint 1 fails the firewall");
 ok(!stepStatus({ ...finishedHero, integrity: { value: 18, max: 20 } }).integrity.done, "18/20 fails the firewall");
 ok(stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: null, max: null } }).integrity.done,
   "a Cyborg passes with no Integrity at all — Integrity is N/A for them");
-ok(!stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: null, max: null }, chromeCount: 1 }).integrity.done,
-  "a Cyborg still fails if chrome somehow landed");
-ok(!chargenComplete({ ...finishedHero, chromeCount: 1 }), "a chromed runner is never complete");
+ok(stepStatus({ ...finishedHero, isCyborg: true, peopleDsid: "cyborg", integrity: { value: null, max: null }, chromeCount: 1 }).integrity.done,
+  "G10: Cyborg + chrome does not fail Integrity (Integrity is N/A)");
+ok(chargenComplete({ ...finishedHero, chromeCount: 1, integrity: { value: 20, max: 20 }, taint: 0 }),
+  "G10: chromed runner with Integrity at start can complete");
 
 console.log("\n   └ the advisory warnings");
 ok(stepStatus({ ...finishedHero, peopleDsid: "changer", changerLineage: false }).people.warn === "ChangerLineage",
@@ -459,6 +472,30 @@ ok(localize("GHOSTWIRE.Chargen.Background.ProfessionHead") === "Profession", "th
 /* -------------------------------------------- done */
 
 console.log("");
+
+/* -------------------------------------------- G5–G10 / 0.3.103 */
+
+console.log("G5–G10 chargen wave (0.3.103)");
+ok(CHARGEN_SPEND_PACKS.includes("chrome"), "G10: CHARGEN_SPEND_PACKS includes chrome");
+ok(!CHARGEN_FORBIDDEN_PACKS.includes("chrome"), "G10: chrome is not forbidden");
+ok(CHARGEN_FORBIDDEN_PACKS.includes("mods"), "G10: mods remain forbidden");
+ok(isChargenSpendable({ pack: "chrome", price: 500, chrome: { integrity: 2 } }), "G10: chrome row is spendable");
+ok(!isChargenSpendable({ pack: "mods", price: 100 }), "G10: mods row still refused");
+ok(typeof spendCategoryOf === "function", "G8: spendCategoryOf exported");
+ok(spendCategoryOf({ pack: "matrix" }) === "wired", "G8: matrix maps to wired");
+ok(spendCategoryOf({ pack: "chrome" }) === "chrome", "G8: chrome category");
+ok(chromeIntegrityCost({ chrome: { integrity: 3 } }) === 3, "G10: chromeIntegrityCost reads integrity");
+ok(skillPickBudget([{ type: "skill", chooseN: 2 }, { type: "skill", skills: { choices: ["occult"] } }]) === 3, "G7: skillPickBudget sums chooseN + fixed");
+ok(languagePickBudget([]) >= 1, "G7: languagePickBudget floor");
+ok(scriptSrc.includes("startOver"), "G6: startOver action registered");
+ok(scriptSrc.includes("G9:"), "G9: hide-after-finish lock present");
+ok(templateSrc.includes('data-action="startOver"'), "G6: Start over control in template");
+ok(templateSrc.includes('data-spend-filter="category"'), "G8: category filter in template");
+ok(templateSrc.includes("ChromeOkModsNo"), "G10: spend copy allows chrome");
+ok(existsSync("src/packs/professions/ward-apprentice.json"), "G5: ward-apprentice profession source");
+ok(existsSync("src/packs/professions/survey-hand.json"), "G5: survey-hand profession source");
+ok(atLeast(moduleJson.version, "0.3.103"), `module.json is at least 0.3.103 (${moduleJson.version})`);
+
 if (failures.length) {
   console.error(`FAILED (${failures.length}):`);
   for (const failure of failures) console.error(`  ✗ ${failure}`);

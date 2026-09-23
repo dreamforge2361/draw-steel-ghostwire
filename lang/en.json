@@ -4408,6 +4408,14 @@
       "ChopDocAssistant": {
         "Name": "Chop-Doc Assistant",
         "Description": "<p>You assisted a black-clinic chop-doc: holding patients down, sterilizing salvaged chrome, and knowing which gang would pay for which part.</p><p><strong>Skills:</strong> you gain <strong>Cybertech</strong>, and choose two of Medicine, Streetwise, Demolitions, or Electronics. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> no Renown or ¥ from the Profession itself. A Director may grant a small ¥ bonus (for example ¥500) as liquid cash — never as skills, perks, or other character-power budget.</p>"
+      },
+      "WardApprentice": {
+        "Name": "Ward Apprentice",
+        "Description": "<p>You apprenticed under a society ward — Measure Collegium chalk-lines, Wickkeeper hearth-rights, or an Ash Survey field seal — learning to hold a threshold when the Veil thins.</p><p><strong>Skills:</strong> you gain <strong>Warding</strong>, and choose two of Occult, Insight, Religion, or Rituals. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> society letters of introduction, a chalk kit or wick-tin, and the habit of checking doors twice.</p><p><em>Magical Profession (G5). Does not invent a fourth magic source — you serve an existing Reach society craft.</em></p>"
+      },
+      "SurveyHand": {
+        "Name": "Survey Hand",
+        "Description": "<p>You walked Ash Survey grids and Veil craft perimeter walks — sampling grit, tagging bleed sites, and filing what the street pretends not to see.</p><p><strong>Skills:</strong> you gain <strong>Perception</strong>, and choose two of Survival, Occult, Streetwise, or Insight. Skills you already have are left out of the picker; if too few remain, it also offers other skills from the same Ghostwire groups.</p><p><strong>Starting resources:</strong> a field slate, sample vials, and a reputation for coming back with receipts.</p><p><em>Magical Profession (G5). Street-facing survey craft under existing society umbrellas — not a new magic source.</em></p>"
       }
     },
     "Gear": {
@@ -8893,13 +8901,19 @@
         "Remove": "Drop this skill",
         "SwapHint": "No wasted duplicates. If a pick collides, take another from the same group first, then any group.",
         "Duplicate": "Already on the sheet. Take another skill from the same group instead.",
-        "Firewall": "¥, chrome and Lifestyle never add a skill."
+        "Firewall": "¥, chrome and Lifestyle never add a skill.",
+        "Budget": "Skills on sheet: {count} / budget {budget}",
+        "BudgetSpent": "Skill budget spent ({budget}). Clear a skill or Start over on this step.",
+        "AtCap": "Skill budget spent. Remove a skill or Start over to pick again."
       },
       "Languages": {
         "Empty": "Nothing yet. Most runners get theirs from People and Background.",
         "Add": "Add",
         "Remove": "Drop this language",
-        "Ack": "That is the list"
+        "Ack": "That is the list",
+        "Budget": "Languages on sheet: {count} / budget {budget}",
+        "BudgetSpent": "Language budget spent ({budget}).",
+        "AtCap": "Language budget spent. Remove a language or Start over to pick again."
       },
       "Resources": {
         "Primary": "Heroic resource",
@@ -8938,7 +8952,8 @@
           "gear": "Gear",
           "matrix": "Matrix",
           "foci": "Foci",
-          "vehicles": "Vehicles & Drones"
+          "vehicles": "Vehicles & Drones",
+          "chrome": "Chrome"
         },
         "Bands": {
           "street": "Street",
@@ -8946,6 +8961,21 @@
           "restricted": "Restricted",
           "military": "Military",
           "prototype": "Prototype"
+        },
+        "ChromeOkModsNo": "Programs and Chrome are allowed at chargen (Integrity still drops when Chrome lands). Mods stay out.",
+        "AllCategories": "All categories",
+        "IntegrityHit": "Integrity −{cost}",
+        "IntegrityConfirmTitle": "Install Chrome?",
+        "IntegrityConfirm": "{name} costs {cost} Body Integrity on install. Continue?",
+        "Categories": {
+          "armor": "Armor",
+          "weapon": "Weapon",
+          "foci": "Foci",
+          "wired": "Wired",
+          "food": "Food",
+          "medical": "Medical",
+          "chrome": "Chrome",
+          "vehicles": "Vehicles"
         }
       },
       "Done": {
@@ -8996,7 +9026,16 @@
         "ClassAlready": "{name} is already the class on this sheet.",
         "ClassReplace": "{existing} is already on this sheet. Delete it there first if you mean to run {name} instead.",
         "NoChrome": "{name} is chrome. A new runner starts with none — that is a purchase for after chargen.",
-        "Insufficient": "Not enough ¥ for {name}: it costs {price} and you have {wealth}."
+        "Insufficient": "Not enough ¥ for {name}: it costs {price} and you have {wealth}.",
+        "AlreadyComplete": "{name} already finished Chargen. Create a new Hero to run Chargen again.",
+        "NoMods": "Mods stay out of Chargen ({name})."
+      },
+      "StartOver": {
+        "Label": "Start over",
+        "Hint": "Clear only this step’s picks and drafts.",
+        "Title": "Start this step over?",
+        "Confirm": "Clear the {step} step? Spine Items granted by this step will be removed when possible.",
+        "ClassHint": "Class can’t be auto-cleared here — delete it on the sheet, then pick again."
       }
     }
   },

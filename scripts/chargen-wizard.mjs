@@ -7,11 +7,11 @@
 //      `system.applyAdvancements()` for anything else carrying advancements, plain Item.create otherwise. The
 //      stock advancement dialog runs, the wizard awaits it, and no grant math is re-implemented here. G1
 //      `kit-grants.mjs` therefore fires on its own when a Kit lands; the wizard never grants street gear.
-//   2. The ¥ firewall is absolute. ¥ buys objects and nothing else — never a characteristic, a skill, or class
-//      power — and the spend catalog is *incapable* of reaching chrome: CHARGEN_SPEND_PACKS excludes the chrome
-//      and mods packs, and `isChargenSpendable()` refuses anything carrying a chrome flag on top of that.
-//      (module.mjs debits Body Integrity the instant a chrome Item lands on a hero, so "no chrome at chargen"
-//      has to be enforced at the catalog, not at the click.)
+//   2. The ¥ firewall is absolute for *stats*: ¥ buys objects and nothing else — never a characteristic, a skill,
+//      or class power. G10 (0.3.103) *reopens* Programs + Chrome at chargen: CHARGEN_SPEND_PACKS includes
+//      chrome alongside gear/matrix/foci/vehicles; mods stay forbidden. `isChargenSpendable()` still refuses
+//      unpriced rows and mods. module.mjs debits Body Integrity when chrome lands — the spend UI surfaces that
+//      Integrity hit before buy.
 //   3. Player-facing copy carries no Draw Steel / MCDM name-checks (B93 lock). Ancestry→People,
 //      Culture→Background, Career→Profession everywhere a player can read it.
 //   4. Everything above the app class is Foundry-free, so tools/chargen-wizard-smoke.mjs can drive the step
@@ -65,13 +65,18 @@ export const ACK_STEPS = Object.freeze(["bio", "kit", "languages", "resources"])
  * The chrome and mods packs are deliberately absent — chrome costs Body Integrity as well as ¥, and installing
  * a mod is a later job. This list is the firewall; `isChargenSpendable()` is the second lock behind it.
  */
-export const CHARGEN_SPEND_PACKS = Object.freeze(["gear", "matrix", "foci", "vehicles"]);
-/** Packs the wizard must never offer at chargen, whatever else changes. */
-export const CHARGEN_FORBIDDEN_PACKS = Object.freeze(["chrome", "mods"]);
-/** Catalog flag families a spendable row may carry. The chrome family is not here on purpose. */
-export const CATALOG_KEYS = Object.freeze(["gear", "matrix", "vehicle", "focus"]);
+export const CHARGEN_SPEND_PACKS = Object.freeze(["gear", "matrix", "foci", "vehicles", "chrome"]);
+/** Packs the wizard must never offer at chargen, whatever else changes. Mods stay out (G10). */
+export const CHARGEN_FORBIDDEN_PACKS = Object.freeze(["mods"]);
+/** Catalog flag families a spendable row may carry. Chrome is allowed at chargen as of G10 / 0.3.103. */
+export const CATALOG_KEYS = Object.freeze(["gear", "matrix", "vehicle", "focus", "chrome"]);
 /** Availability bands, widest-first, for the spend filter. */
 export const AVAILABILITY_BANDS = Object.freeze(["street", "professional", "restricted", "military", "prototype"]);
+/**
+ * Player-facing early-spend category chips (G8). "wired" is the Ghostwire name for matrix/programs.
+ * Vehicles stay as their own chip alongside these.
+ */
+export const SPEND_CATEGORIES = Object.freeze(["armor", "weapon", "foci", "wired", "food", "medical", "chrome", "vehicles"]);
 
 /** The pick each spine step drives: pack name and Item type. */
 export const CHARGEN_PICKS = Object.freeze({
@@ -182,9 +187,70 @@ export function autoAssignArray(coreKeys = []) {
 export function isChargenSpendable({ pack, price, chrome } = {}) {
   if (CHARGEN_FORBIDDEN_PACKS.includes(String(pack))) return false;
   if (!CHARGEN_SPEND_PACKS.includes(String(pack))) return false;
-  if (chrome) return false;
+  // G10: chrome rows are allowed; Integrity debit still happens on Item create in module.mjs.
+  void chrome;
   const n = Number(price);
   return Number.isFinite(n) && (n > 0);
+}
+
+/** Integrity hit shown in the spend row before buy (G10). */
+export function chromeIntegrityCost(row = {}) {
+  const chrome = row?.chrome;
+  if (!chrome) return 0;
+  const n = Number(chrome.integrity ?? chrome.cost ?? 0);
+  return Number.isFinite(n) ? Math.max(0, n) : 0;
+}
+
+/**
+ * Map a spend catalog row onto a G8 player-facing category.
+ * Wired = matrix/programs; chrome is its own chip; food/medical from gear tags / names.
+ */
+export function spendCategoryOf(row = {}) {
+  const pack = String(row.pack ?? "");
+  if (pack === "chrome") return "chrome";
+  if (pack === "vehicles") return "vehicles";
+  if (pack === "foci") return "foci";
+  if (pack === "matrix") return "wired";
+  const kind = String(row.kind ?? row.gearKind ?? row.armorClass ?? "").toLowerCase();
+  const tags = (row.tags ?? []).map(t => String(t).toLowerCase());
+  const name = String(row.name ?? "").toLowerCase();
+  if (kind === "armor" || kind === "shield" || tags.includes("armor") || row.armorClass) return "armor";
+  if (kind === "weapon" || tags.includes("weapon")) return "weapon";
+  if (tags.includes("food") || /ration|meal|noodle|caff|stims?\b/.test(name)) return "food";
+  if (tags.includes("medical") || tags.includes("medicine") || /medkit|bandage|traum|stimpack|antidote/.test(name)) return "medical";
+  return "";
+}
+
+/**
+ * Skill pick budget from spine Items' skill advancements (G7).
+ * Fixed skill advancements count as 1; chooseN counts as N.
+ */
+export function skillPickBudget(advancements = []) {
+  let total = 0;
+  for (const adv of advancements) {
+    if (!adv || adv.type !== "skill") continue;
+    const choose = Number(adv.chooseN);
+    if (Number.isFinite(choose) && choose > 0) total += choose;
+    else {
+      const fixed = adv.skills?.choices?.length ?? 0;
+      total += Math.max(1, fixed);
+    }
+  }
+  return total;
+}
+
+/** Language pick budget (G7). Prefer explicit language advancements; default floor of 1. */
+export function languagePickBudget(advancements = []) {
+  let total = 0;
+  for (const adv of advancements) {
+    if (!adv) continue;
+    const type = String(adv.type ?? "");
+    if (type !== "language" && type !== "languages") continue;
+    const choose = Number(adv.chooseN);
+    if (Number.isFinite(choose) && choose > 0) total += choose;
+    else total += Math.max(1, adv.languages?.choices?.length ?? adv.choices?.length ?? 1);
+  }
+  return Math.max(total, 1);
 }
 
 /** Wrapper over the kiosk's plan, so the wizard and the shop debit ¥ by the same arithmetic. */
@@ -260,7 +326,7 @@ const spineComplete = spine => CHARGEN_STEPS
 
 /** Appendix B §8: Integrity 20/20 (Cyborg N/A), Taint 0, no chrome. */
 export function integrityClean(facts = {}) {
-  if (Number(facts.chromeCount) > 0) return false;
+  // G10: chrome is allowed at chargen; Integrity value must still match living-People start unless Cyborg.
   if (Number(facts.taint) !== 0) return false;
   if (facts.isCyborg) return true;
   const integrity = facts.integrity ?? {};
@@ -269,11 +335,13 @@ export function integrityClean(facts = {}) {
 
 /** The lang suffix under `GHOSTWIRE.Chargen.Warnings` for whatever is off, or null when the firewall holds. */
 export function integrityWarning(facts = {}) {
-  if (Number(facts.chromeCount) > 0) return "ChromeAtChargen";
+  // G10: chrome at chargen is allowed. Still warn when Integrity is off the living-People start,
+  // or when taint is already on the sheet, so the Integrity step stays honest.
   if (Number(facts.taint) !== 0) return "TaintNotZero";
   if (facts.isCyborg) return null;
   const integrity = facts.integrity ?? {};
   if ((Number(integrity.value) !== INTEGRITY_START) || (Number(integrity.max) !== INTEGRITY_START)) return "IntegrityOff";
+  if (Number(facts.chromeCount) > 0 && Number(integrity.value) < INTEGRITY_START) return "IntegrityOff";
   return null;
 }
 
@@ -493,27 +561,38 @@ async function pickChoices({ pack, type }) {
     .sort((a, b) => a.name.localeCompare(b.name, game.i18n.lang));
 }
 
-/** The chargen spend catalog: the four allowed packs, priced, chrome-free, cheapest first. */
+/** The chargen spend catalog: allowed packs (incl. chrome/Programs per G10), priced, cheapest first. */
 async function spendCatalog() {
   const rows = [];
   for (const pack of CHARGEN_SPEND_PACKS) {
     const compendium = game.packs.get(`${MODULE_ID}.${pack}`);
     if (!compendium) continue;
-    const index = await compendium.getIndex({ fields: ["type", "img", "system._dsid", `flags.${MODULE_ID}`] });
+    const index = await compendium.getIndex({
+      fields: ["type", "img", "system._dsid", "system.kind", "system.category", `flags.${MODULE_ID}`],
+    });
     for (const entry of index) {
       const flags = foundry.utils.getProperty(entry, `flags.${MODULE_ID}`) ?? {};
       const price = catalogPrice({ flags: { [MODULE_ID]: flags } });
       if (!isChargenSpendable({ pack, price, chrome: flags.chrome })) continue;
       const catalog = CATALOG_KEYS.map(key => flags[key]).find(Boolean) ?? {};
-      rows.push({
+      const row = {
         uuid: entry.uuid ?? `Compendium.${MODULE_ID}.${pack}.Item.${entry._id}`,
         name: entry.name,
         img: entry.img,
         pack,
         price,
-        availability: String(catalog.availability ?? "").toLowerCase(),
+        availability: String(catalog.availability ?? flags.chrome?.availability ?? "").toLowerCase(),
         echelon: Number(catalog.echelon) || null,
-      });
+        kind: foundry.utils.getProperty(entry, "system.kind")
+          ?? foundry.utils.getProperty(entry, "system.category")
+          ?? catalog.armorClass
+          ?? "",
+        armorClass: catalog.armorClass ?? null,
+        tags: Array.isArray(catalog.tags) ? catalog.tags : [],
+        chrome: flags.chrome ?? null,
+      };
+      row.category = spendCategoryOf(row);
+      rows.push(row);
     }
   }
   return rows.sort((a, b) => (a.price - b.price) || a.name.localeCompare(b.name, game.i18n.lang));
@@ -535,10 +614,22 @@ export async function buyChargenItem(actor, uuid, price) {
   if (!isHeroActor(actor) || !actor.isOwner) return { ok: false, reason: "no-permission" };
   const source = await fromUuid(uuid);
   if (!source) return { ok: false, reason: "no-item" };
-  // Second lock behind CHARGEN_SPEND_PACKS: a chrome Item would debit Body Integrity on create.
-  if (source.flags?.[MODULE_ID]?.chrome) {
-    ui.notifications.warn(loc("Errors.NoChrome", { name: source.name }));
-    return { ok: false, reason: "chrome" };
+  // G10: chrome is purchasable; module.mjs still debits Body Integrity on create.
+  // Surface the Integrity cost so the runner sees the hit before the Item lands.
+  const chrome = source.flags?.[MODULE_ID]?.chrome;
+  if (chrome) {
+    const cost = Number(chrome.integrity ?? 0) || 0;
+    if (cost > 0) {
+      const proceed = await foundry.applications.api.DialogV2.confirm({
+        window: { title: loc("Spends.IntegrityConfirmTitle") },
+        content: `<p>${esc(loc("Spends.IntegrityConfirm", { name: source.name, cost }))}</p>`,
+      });
+      if (!proceed) return { ok: false, reason: "integrity-cancel" };
+    }
+  }
+  if (source.flags?.[MODULE_ID]?.mod || String(source.pack ?? "").endsWith(".mods")) {
+    ui.notifications.warn(loc("Errors.NoMods", { name: source.name }));
+    return { ok: false, reason: "mods" };
   }
   const wealth = getWealth(actor);
   const plan = planChargenSpend({ wealth, price: price ?? catalogPrice(source) ?? 0 });
@@ -589,6 +680,7 @@ function defineChargenWizardApp() {
         refresh: GhostwireChargenWizard.#onRefresh,
         openSheet: GhostwireChargenWizard.#onOpenSheet,
         finish: GhostwireChargenWizard.#onFinish,
+        startOver: GhostwireChargenWizard.#onStartOver,
       },
     };
 
@@ -608,7 +700,7 @@ function defineChargenWizardApp() {
     /** Unsaved name text from step 2. */
     #nameDraft = null;
     /** Spend-step filters. */
-    #spend = { search: "", pack: "", band: "street" };
+    #spend = { search: "", pack: "", band: "street", category: "" };
 
     get actor() {
       return this.actorUuid ? fromUuidSync(this.actorUuid) : null;
@@ -760,11 +852,18 @@ function defineChargenWizardApp() {
           context.acked = acked("kit");
           break;
 
-        case "skills":
+        case "skills": {
+          const budget = spineSkillBudget(actor);
+          const count = facts.skills.length;
+          const atCap = Number.isFinite(budget) && budget > 0 && count >= budget && !game.user.isGM;
           context.groups = skillGroupContext(facts.skills, !context.readOnly);
-          context.addOptions = addableSkills(facts.skills);
-          context.count = facts.skills.length;
+          context.addOptions = atCap ? [] : addableSkills(facts.skills);
+          context.count = count;
+          context.budget = budget;
+          context.atCap = atCap;
+          context.budgetLabel = loc("Skills.Budget", { count, budget: budget || "—" });
           break;
+        }
 
         case "characteristics": {
           const chars = facts.characteristics;
@@ -782,13 +881,20 @@ function defineChargenWizardApp() {
           break;
         }
 
-        case "languages":
+        case "languages": {
+          const budget = spineLanguageBudget(actor);
+          const count = facts.languages.length;
+          const atCap = Number.isFinite(budget) && budget > 0 && count >= budget && !game.user.isGM;
           context.known = facts.languages
             .map(key => ({ key, label: languageLabel(key), disabled: context.readOnly }))
             .sort((a, b) => a.label.localeCompare(b.label, game.i18n.lang));
-          context.addOptions = addableLanguages(facts.languages);
+          context.addOptions = atCap ? [] : addableLanguages(facts.languages);
           context.acked = acked("languages");
+          context.budget = budget;
+          context.atCap = atCap;
+          context.budgetLabel = loc("Languages.Budget", { count, budget: budget || "—" });
           break;
+        }
 
         case "resources":
           context.resource = {
@@ -819,6 +925,9 @@ function defineChargenWizardApp() {
           }));
           context.bandOptions = AVAILABILITY_BANDS.map(band => ({
             value: band, label: loc(`Spends.Bands.${band}`), selected: this.#spend.band === band,
+          }));
+          context.categoryOptions = SPEND_CATEGORIES.map(category => ({
+            value: category, label: loc(`Spends.Categories.${category}`), selected: this.#spend.category === category,
           }));
           const rows = filterSpendRows(catalog, this.#spend, facts.wealth);
           context.rows = rows.slice(0, 150);
@@ -1055,6 +1164,11 @@ function defineChargenWizardApp() {
         ui.notifications.warn(loc("Skills.Duplicate"));
         return;
       }
+      const budget = spineSkillBudget(actor);
+      if (!game.user.isGM && budget > 0 && known.size >= budget) {
+        ui.notifications.warn(loc("Skills.BudgetSpent", { budget }));
+        return;
+      }
       known.add(key);
       await actor.update({ "system.skills.value": [...known] });
       this.render();
@@ -1074,6 +1188,11 @@ function defineChargenWizardApp() {
       const key = this.element.querySelector("[data-language-pick]")?.value;
       if (!actor?.isOwner || !key) return;
       const known = new Set(actor.system.biography?.languages ?? []);
+      const budget = spineLanguageBudget(actor);
+      if (!game.user.isGM && budget > 0 && known.size >= budget) {
+        ui.notifications.warn(loc("Languages.BudgetSpent", { budget }));
+        return;
+      }
       known.add(key);
       await actor.update({ "system.biography.languages": [...known] });
       this.render();
@@ -1113,7 +1232,25 @@ function defineChargenWizardApp() {
       this.actor?.sheet?.render({ force: true });
     }
 
+    /** G6: clear only this step's picks / drafts so a runner can change their mind. */
+    static async #onStartOver() {
+      const actor = this.actor;
+      if (!actor?.isOwner || this.readOnly) return;
+      const step = this.step;
+      const proceed = await foundry.applications.api.DialogV2.confirm({
+        window: { title: loc("StartOver.Title") },
+        content: `<p>${esc(loc("StartOver.Confirm", { step: loc(`Steps.${step}.Name`) }))}</p>`,
+      });
+      if (!proceed) return;
+      await resetChargenStep(actor, step);
+      if (step === "spends") this.#spend = { search: "", pack: "", band: "street", category: "" };
+      if (step === "bio") this.#bioDraft = "";
+      if (step === "name") this.#nameDraft = actor.name;
+      this.render();
+    }
+
     static async #onFinish() {
+
       const actor = this.actor;
       if (!actor?.isOwner) return;
       const facts = heroFacts(actor);
@@ -1134,6 +1271,97 @@ function defineChargenWizardApp() {
 }
 
 /* -------------------------------------------- context helpers */
+
+
+/** Collect skill/language advancements off the spine Items currently on the hero. */
+function spineAdvancements(actor) {
+  const items = [];
+  const system = actor?.system ?? {};
+  for (const ref of [system.ancestry, system.culture, system.career, system.class]) {
+    if (ref) items.push(ref);
+  }
+  for (const kit of actor?.items ?? []) {
+    if (kit?.type === "kit") items.push(kit);
+  }
+  const out = [];
+  for (const item of items) {
+    const advancements = item.system?.advancements ?? item.system?.advancement ?? {};
+    const list = Array.isArray(advancements) ? advancements : Object.values(advancements);
+    out.push(...list);
+  }
+  return out;
+}
+
+function spineSkillBudget(actor) {
+  return skillPickBudget(spineAdvancements(actor));
+}
+
+function spineLanguageBudget(actor) {
+  return languagePickBudget(spineAdvancements(actor));
+}
+
+/**
+ * G6 — reverse one step's local state. Spine picks delete the Item (with the stock replacement prompt
+ * path already used by Take). Skills/languages clear the sheet lists. Characteristics zero the array.
+ * Spends only reset filters (purchases stay — ¥ does not refund here).
+ */
+async function resetChargenStep(actor, step) {
+  const state = chargenStateOf(actor);
+  const acked = new Set(state.acked);
+  acked.delete(step);
+
+  switch (step) {
+    case "bio":
+      await writeChargenState(actor, { bio: "", acked: [...acked] });
+      await actor.update({ "system.biography.value": "" });
+      return;
+    case "name":
+      await actor.update({ name: game.i18n.localize("DOCUMENT.Actor") });
+      return;
+    case "people":
+      if (actor.system.ancestry) await actor.system.ancestry.advancementDeletionPrompt?.({ replacement: true })
+        ?? actor.system.ancestry.delete();
+      break;
+    case "background": {
+      if (actor.system.culture) await actor.system.culture.advancementDeletionPrompt?.({ replacement: true })
+        ?? actor.system.culture.delete();
+      if (actor.system.career) await actor.system.career.advancementDeletionPrompt?.({ replacement: true })
+        ?? actor.system.career.delete();
+      break;
+    }
+    case "class":
+      ui.notifications.warn(loc("StartOver.ClassHint"));
+      break;
+    case "kit": {
+      const kits = [...(actor.items ?? [])].filter(i => i.type === "kit");
+      for (const kit of kits) await kit.delete();
+      acked.delete("kit");
+      break;
+    }
+    case "skills":
+      await actor.update({ "system.skills.value": [] });
+      break;
+    case "characteristics":
+      await actor.update(Object.fromEntries(
+        CHARACTERISTIC_KEYS.map(key => [`system.characteristics.${key}.value`, 0]),
+      ));
+      break;
+    case "languages":
+      await actor.update({ "system.biography.languages": [] });
+      acked.delete("languages");
+      break;
+    case "resources":
+    case "integrity":
+      acked.delete(step);
+      break;
+    case "spends":
+      // Filters only — purchased Items stay on the sheet.
+      break;
+    default:
+      break;
+  }
+  await writeChargenState(actor, { acked: [...acked] });
+}
 
 function skillLabel(key) {
   const config = globalThis.ds?.CONFIG?.skills?.list?.[key];
@@ -1188,12 +1416,17 @@ function addableLanguages(known = []) {
  * Search / pack / Availability-band filter over the spend catalog.
  * The band is a *ceiling*: picking Professional still shows Street.
  */
-export function filterSpendRows(rows = [], { search = "", pack = "", band = "" } = {}, wealth = 0) {
+export function filterSpendRows(rows = [], { search = "", pack = "", band = "", category = "" } = {}, wealth = 0) {
   const needle = String(search).trim().toLowerCase();
   const ceiling = AVAILABILITY_BANDS.indexOf(String(band));
+  const want = String(category || "");
   return rows
     .filter(row => {
       if (pack && (row.pack !== pack)) return false;
+      if (want) {
+        const cat = row.category || spendCategoryOf(row);
+        if (cat !== want) return false;
+      }
       if (needle && !String(row.name).toLowerCase().includes(needle)) return false;
       if (ceiling >= 0) {
         const at = AVAILABILITY_BANDS.indexOf(row.availability);
@@ -1201,13 +1434,19 @@ export function filterSpendRows(rows = [], { search = "", pack = "", band = "" }
       }
       return true;
     })
-    .map(row => ({
-      ...row,
-      priceLabel: formatYen(row.price),
-      availabilityLabel: row.availability ? game.i18n.localize(`${L}.Spends.Bands.${row.availability}`) : "",
-      packLabel: game.i18n.localize(`${L}.Spends.Packs.${row.pack}`),
-      canAfford: row.price <= Number(wealth),
-    }));
+    .map(row => {
+      const integrityCost = chromeIntegrityCost(row);
+      return {
+        ...row,
+        category: row.category || spendCategoryOf(row),
+        priceLabel: formatYen(row.price),
+        availabilityLabel: row.availability ? game.i18n.localize(`${L}.Spends.Bands.${row.availability}`) : "",
+        packLabel: game.i18n.localize(`${L}.Spends.Packs.${row.pack}`),
+        canAfford: row.price <= Number(wealth),
+        integrityCost,
+        integrityLabel: integrityCost > 0 ? game.i18n.format(`${L}.Spends.IntegrityHit`, { cost: integrityCost }) : "",
+      };
+    });
 }
 
 /** A short "there's a new face on the street" card. The table should see the runner arrive. */
@@ -1256,6 +1495,15 @@ export async function openChargenWizard(target = null) {
     ui.notifications.warn(loc("Errors.NoPermission", { name: actor.name }));
     return null;
   }
+  // G9: once stamped complete (or past 1st), refuse — build another runner on a new Hero.
+  {
+    const state = chargenStateOf(actor);
+    const level = Number(actor.system?.level ?? 0);
+    if (state.completed || level > 1) {
+      ui.notifications.warn(loc("Errors.AlreadyComplete", { name: actor.name }));
+      return null;
+    }
+  }
   await ensureStartingWealth(actor);
 
   ChargenWizardApp ??= defineChargenWizardApp();
@@ -1268,6 +1516,10 @@ export async function openChargenWizard(target = null) {
 function injectChargenButton(app, element) {
   const actor = app?.document ?? app?.actor;
   if (!isHeroActor(actor) || !canOpenChargen(actor)) return;
+  // G9: Chargen is once per Hero — never inject the launcher after Finish, or past 1st level.
+  const state = chargenStateOf(actor);
+  const level = Number(actor.system?.level ?? 0);
+  if (state.completed || level > 1) return;
   const root = element?.rootElement ?? element?.[0] ?? element ?? app?.element;
   if (!root?.querySelector) return;
   if (root.querySelector(".ghostwire-chargen-launch")) return;
@@ -1277,11 +1529,10 @@ function injectChargenButton(app, element) {
     ?? root.querySelector(".window-content .profile");
   if (!header) return;
 
-  const state = chargenStateOf(actor);
   const button = document.createElement("button");
   button.type = "button";
-  button.className = state.completed ? "ghostwire-chargen-launch done" : "ghostwire-chargen-launch";
-  button.dataset.tooltip = game.i18n.localize(state.completed ? `${L}.LaunchDoneHint` : `${L}.LaunchHint`);
+  button.className = "ghostwire-chargen-launch";
+  button.dataset.tooltip = game.i18n.localize(`${L}.LaunchHint`);
   button.setAttribute("aria-label", game.i18n.localize(`${L}.Launch`));
   button.innerHTML = `<i class="fa-solid fa-id-card-clip"></i><span>${esc(game.i18n.localize(`${L}.Launch`))}</span>`;
   button.addEventListener("click", event => {

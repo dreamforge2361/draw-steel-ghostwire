@@ -176,6 +176,8 @@
     {{#if is.skills}}
     <div class="gw-cg-step">
       <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Skills.Collected"}} {{count}}</p>
+      {{#if budgetLabel}}<p class="gw-cg-dim">{{budgetLabel}}</p>{{/if}}
+      {{#if atCap}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.Skills.AtCap"}}</p>{{/if}}
       {{#each groups}}
       <h5 class="gw-cg-subhead">{{label}}</h5>
       <ul class="gw-cg-tags">
@@ -239,6 +241,8 @@
     {{!-- 9 · Languages -------------------------------------------------------------------- --}}
     {{#if is.languages}}
     <div class="gw-cg-step">
+      {{#if budgetLabel}}<p class="gw-cg-dim">{{budgetLabel}}</p>{{/if}}
+      {{#if atCap}}<p class="gw-cg-warn">{{localize "GHOSTWIRE.Chargen.Languages.AtCap"}}</p>{{/if}}
       <ul class="gw-cg-tags">
         {{#each known}}
         <li class="gw-cg-tag">
@@ -318,9 +322,13 @@
     {{#if is.spends}}
     <div class="gw-cg-step">
       <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.Hint"}}</p>
-      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.NoChromeNoMods"}}</p>
+      <p class="gw-cg-dim">{{localize "GHOSTWIRE.Chargen.Spends.ChromeOkModsNo"}}</p>
       <div class="gw-cg-filters">
         <input type="search" data-spend-filter="search" value="{{spend.search}}" placeholder="{{localize "GHOSTWIRE.Chargen.Spends.Search"}}">
+        <select data-spend-filter="category">
+          <option value="">{{localize "GHOSTWIRE.Chargen.Spends.AllCategories"}}</option>
+          {{#each categoryOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
+        </select>
         <select data-spend-filter="pack">
           <option value="">{{localize "GHOSTWIRE.Chargen.Spends.AllPacks"}}</option>
           {{#each packOptions}}<option value="{{value}}" {{#if selected}}selected{{/if}}>{{label}}</option>{{/each}}
@@ -338,7 +346,7 @@
             <div class="gw-cg-row-name">{{name}}</div>
             <div class="gw-cg-row-meta">
               <strong>{{priceLabel}}</strong>
-              <span class="gw-cg-dim">{{packLabel}}{{#if availabilityLabel}} · {{availabilityLabel}}{{/if}}</span>
+              <span class="gw-cg-dim">{{packLabel}}{{#if availabilityLabel}} · {{availabilityLabel}}{{/if}}{{#if integrityLabel}} · {{integrityLabel}}{{/if}}</span>
             </div>
           </div>
           <button type="button" class="gw-cg-btn gw-cg-btn-hot" data-action="buy" data-uuid="{{uuid}}" data-price="{{price}}"
@@ -396,6 +404,10 @@
   <footer class="gw-cg-foot">
     <button type="button" class="gw-cg-btn" data-action="retreat" {{disabled atStart}}>
       <i class="fa-solid fa-chevron-left"></i> {{localize "GHOSTWIRE.Chargen.Back"}}
+    </button>
+    <button type="button" class="gw-cg-btn" data-action="startOver" {{disabled readOnly}}
+      data-tooltip="{{localize "GHOSTWIRE.Chargen.StartOver.Hint"}}">
+      <i class="fa-solid fa-rotate-left"></i> {{localize "GHOSTWIRE.Chargen.StartOver.Label"}}
     </button>
     <span class="gw-cg-dim {{#if stepDone}}ok{{/if}}">
       {{#if stepDone}}{{localize "GHOSTWIRE.Chargen.StepDone"}}{{else}}{{localize "GHOSTWIRE.Chargen.StepOpen"}}{{/if}}

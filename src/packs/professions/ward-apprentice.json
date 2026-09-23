@@ -1,0 +1,72 @@
+{
+  "_id": "0bgpLjdYT3Vf4XZa",
+  "_key": "!items!0bgpLjdYT3Vf4XZa",
+  "name": "GHOSTWIRE.Professions.WardApprentice.Name",
+  "type": "career",
+  "img": "icons/magic/symbols/rune-sigil-black-pink.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Professions.WardApprentice.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "13-backgrounds-professions",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "ward-apprentice",
+    "advancements": {
+      "QSEvHYTvZuIIYzyR": {
+        "_id": "QSEvHYTvZuIIYzyR",
+        "name": "GHOSTWIRE.Skills.List.Warding",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": null,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "warding"
+          ]
+        },
+        "sort": 0,
+        "description": "",
+        "repick": {}
+      },
+      "UUJ9TaznDw6lWtGO": {
+        "_id": "UUJ9TaznDw6lWtGO",
+        "name": "GHOSTWIRE.Professions.PickName",
+        "img": null,
+        "type": "skill",
+        "requirements": {
+          "level": null
+        },
+        "chooseN": 2,
+        "skills": {
+          "groups": [],
+          "choices": [
+            "occult",
+            "insight",
+            "religion",
+            "rituals"
+          ]
+        },
+        "sort": 1,
+        "description": "",
+        "repick": {}
+      }
+    },
+    "projectPoints": 0,
+    "renown": 0,
+    "wealth": 0
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}
