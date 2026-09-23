@@ -48,6 +48,7 @@ import { registerConsumableUse } from "./consumable-use.mjs";
 import { registerRituals } from "./rituals.mjs";
 import { registerRitualWorking } from "./ritual-working.mjs";
 import { registerTokenVision } from "./token-vision.mjs";
+import { registerSights } from "./sights.mjs";
 import { registerChargenWizard } from "./chargen-wizard.mjs";
 import { registerChromeDamage, chromeRefundBlocked } from "./chrome-damage.mjs";
 import { registerLocker } from "./locker.mjs";
@@ -102,6 +103,11 @@ Hooks.once("init", () => {
   ds.CONFIG.abilities.keywords.wired ??= { label: "GHOSTWIRE.Abilities.Keywords.Wired" };
   // Command: Commander abilities driven by command presence (orders, rallies, reads).
   ds.CONFIG.abilities.keywords.command ??= { label: "GHOSTWIRE.Abilities.Keywords.Command" };
+  // F21 Psychic: an attack whose only medium is the mind. Draw Steel ships `psionic`, but that is the
+  // Talent class keyword — a Veil ghost's wail and an Incursion horror's reach are not Talent powers,
+  // and Cyborg Cortical Firewall keys off psychic *damage*, not off psionic. Keyword marks the attack,
+  // the psychic damage type is what the firewall actually absorbs.
+  ds.CONFIG.abilities.keywords.psychic ??= { label: "GHOSTWIRE.Abilities.Keywords.Psychic" };
 
   registerGhostwireSkills();
   registerGhostwireLanguages();
@@ -148,6 +154,9 @@ Hooks.once("init", () => {
   registerRituals();
   registerRitualWorking();
   registerTokenVision();
+  // F20 — the canvas half of Has Vision. token-vision owns sight.enabled; this owns detectionModes
+  // and sight.visionMode, driven by flags.draw-steel-ghostwire.sightGrant on the granting Item.
+  registerSights();
   registerChargenWizard();
   registerChromeDamage();
   registerLocker();
@@ -653,6 +662,8 @@ const setIntegrity = (actor, value) => actor.update({ [`flags.${MODULE_ID}.integ
 
 // New heroes: Integrity 20/20 and ¥5,000 starting funds. Duplicates, imports, and compendium heroes keep their data.
 // Token Has Vision for heroes/NPCs is in scripts/token-vision.mjs (preCreateActor + preCreateToken + ready).
+// What a token can see once it has vision — detectionModes + sight.visionMode from a sight SKU — is F20
+// in scripts/sights.mjs (createItem/updateItem/deleteItem + Active Effect hooks + preCreateToken + ready).
 
 // Pregens used to store only biSpent/biRemaining. The sheet reads integrity.value/max — migrate once.
 Hooks.once("ready", async () => {

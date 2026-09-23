@@ -48,6 +48,19 @@
         "modFamily": [
           "sensors"
         ]
+      },
+      "sightGrant": {
+        "modes": [
+          {
+            "id": "seeAll",
+            "range": 10,
+            "enabled": true
+          }
+        ],
+        "priority": 1,
+        "claims": [
+          "thermal"
+        ]
       }
     }
   }
