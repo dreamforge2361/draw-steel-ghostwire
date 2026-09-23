@@ -177,10 +177,63 @@ export const JUMP_IN_SEAT_DSIDS = Object.freeze(new Set([
   "wrench-saturation-fire",
 ]));
 
+/** The Rigger seat's own Fire ability, and the Vehicle Rig-Pilot feature that sharpens it. */
+export const RIGGED_FIRE_DSID = "rigged-fire";
+export const PILOT_AND_GUNNER_DSID = "pilot-and-gunner";
+
+/** A weapon use-ability spawned by equipment-use.mjs (`gear-use-<sku>`). */
+export function isGearUseDsid(dsid = "") {
+  return typeof dsid === "string" && dsid.startsWith("gear-use-");
+}
+
+/**
+ * 0.3.114 — is this trigger-pull *seat fire* rather than a personal weapon?
+ *
+ * A gun bolted to a §5F Weaponry kit hardpoint (0.3.112, `flags.<module>.mount.mountedOn`) is part
+ * of the machine. A pilot who is Jumped In (`jumpedInto`) is the machine, so firing it is the same
+ * act as Rigged Fire — the meat body never moves. A gun still *in the pilot's hands* is not seat
+ * fire and stays blocked, which is why this is a predicate on the gear rather than another row in
+ * JUMP_IN_SEAT_DSIDS: mounting is a runtime fact, not a SKU fact.
+ *
+ * @param {object} opts
+ * @param {boolean} opts.jumpedIn     Pilot carries the `jumpedInto` flag.
+ * @param {string}  opts.dsid         Ability `_dsid`.
+ * @param {boolean} opts.gearMounted  The ability's source gear is mounted right now.
+ * @param {boolean} opts.fromGear     The ability was spawned from a gear Item (`fromGearId`).
+ */
+export function isMountedSeatFire({ jumpedIn = false, dsid = "", gearMounted = false, fromGear = false } = {}) {
+  if (!jumpedIn || !gearMounted) return false;
+  return isGearUseDsid(dsid) || !!fromGear;
+}
+
 /** True when Jacked In should refuse this ability before it rolls. Machine-seat and Wired uses stay open. */
-export function jumpedInBlocksAbility({ state, wired = false, dsid = "", rollEnabled = false } = {}) {
+export function jumpedInBlocksAbility({
+  state, wired = false, dsid = "", rollEnabled = false,
+  jumpedIn = false, gearMounted = false, fromGear = false,
+} = {}) {
   if (state !== "jackedIn" || !rollEnabled || wired) return false;
-  return !JUMP_IN_SEAT_DSIDS.has(dsid);
+  if (JUMP_IN_SEAT_DSIDS.has(dsid)) return false;
+  return !isMountedSeatFire({ jumpedIn, dsid, gearMounted, fromGear });
+}
+
+/**
+ * Edges Jump-In hands the pilot on a Fire roll.
+ *
+ * RAW (Wrench master / Jump-In Plumbing): Jump-In grants **one weapon-lock edge** while Jumped In.
+ * It rides on the seat's guns — Rigged Fire, and a mounted weapon fired from the seat (0.3.114).
+ * The Vehicle Rig-Pilot feature **Pilot and Gunner** adds the RAW *extra* edge on Rigged Fire made
+ * this way, so a Rig-Pilot rolls two edges there and one on a plain mounted Fire.
+ *
+ * @returns {number} 0, 1 or 2.
+ */
+export function jumpInFireEdges({ jumpedIn = false, dsid = "", gearMounted = false, hasPilotAndGunner = false } = {}) {
+  if (!jumpedIn) return 0;
+  const riggedFire = dsid === RIGGED_FIRE_DSID;
+  const mountedFire = isMountedSeatFire({ jumpedIn, dsid, gearMounted });
+  if (!riggedFire && !mountedFire) return 0;
+  let edges = 1; // weapon lock
+  if (riggedFire && hasPilotAndGunner) edges += 1; // Pilot and Gunner
+  return edges;
 }
 
 /** Wired Power Rolls: Jacked In edge only. Linked and Overlay add neither. */
@@ -193,12 +246,16 @@ export function wiredPowerRollModifier(state) {
  * Edges / banes Ghostwire injects into AbilityModel#use `config.modifiers`.
  * Hacking and Jacked In apply only to Wired rolls. Overlay meat bane applies only to non-Wired rolls.
  */
-export function abilityPowerRollModifiers({ wired = false, hasHacking = false, softwareEdges = 0, state } = {}) {
+export function abilityPowerRollModifiers({
+  wired = false, hasHacking = false, softwareEdges = 0, state,
+  jumpedIn = false, dsid = "", gearMounted = false, hasPilotAndGunner = false,
+} = {}) {
   let edges = Math.max(0, Number(softwareEdges) || 0);
   let banes = 0;
   if (wired && hasHacking) edges += 1;
   if (wired) edges += wiredPowerRollModifier(state).edges;
   else banes += meatPowerRollModifier(state).banes;
+  edges += jumpInFireEdges({ jumpedIn, dsid, gearMounted, hasPilotAndGunner });
   return { edges, banes };
 }
 

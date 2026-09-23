@@ -9,6 +9,7 @@ import {
   isOnNet,
   jumpedInBlocksAbility,
   nextToggleState,
+  PILOT_AND_GUNNER_DSID,
 } from "./wired-state.mjs";
 import { registerGhostwireSkills } from "./skills.mjs";
 import { registerGhostwireLanguages } from "./languages.mjs";
@@ -30,7 +31,7 @@ import { registerMounts } from "./mounts.mjs";
 import { registerWiredVision } from "./wired-vision.mjs";
 import { registerAbilitySfx } from "./sfx.mjs";
 import { registerEquipmentUse } from "./equipment-use.mjs";
-import { weaponSkillBonus } from "./weapon-skills.mjs";
+import { isMountedWeapon, weaponSkillBonus } from "./weapon-skills.mjs";
 import { registerPayloadUse } from "./payload-use.mjs";
 import { registerFreeStrikeStrip } from "./free-strikes.mjs";
 import { registerCasterChrome } from "./caster-chrome.mjs";
@@ -237,17 +238,36 @@ function patchWiredAbilities() {
     if (verb && (verb !== "connect") && !isOnNet(state)) return warn("NotConnected");
     if (verb && (verb !== "connect") && !isFullyConnected(state) && !isLinkedOkVerb(verb)) return warn("NeedImmersion");
     if (wired && !verb && !isFullyConnected(state)) return warn("NeedImmersion");
+
+    // 0.3.114 — a Jumped-In pilot firing a gun that is bolted to the machine's hardpoint is doing
+    // seat fire, not swinging the meat body around. Resolve the ability's source gear (the hero keeps
+    // the gun; Deploy only mirrors it) and ask whether it is mounted *right now*. Unmounted personal
+    // gear-use stays blocked, so a scrap-bow in hand is still JackedInPhysical.
+    const fromGearId = this.parent.getFlag?.(MODULE_ID, "fromGearId") ?? null;
+    const sourceGear = fromGearId ? actor.items?.get?.(fromGearId) ?? null : null;
+    const gearMounted = !!sourceGear && isMountedWeapon(sourceGear);
+    const jumpedIn = !!actor.getFlag?.(MODULE_ID, "jumpedInto");
+    const hasPilotAndGunner = jumpedIn && !!actor.items?.some?.(item => item.system?._dsid === PILOT_AND_GUNNER_DSID);
+
     // Jacked In locks the meat body. Deploy & Command, Rigged Fire, and the other seat
     // abilities still have to fire — they are the machine, not a personal weapon.
-    if (jumpedInBlocksAbility({ state, wired, dsid, rollEnabled: !!this.power?.roll?.enabled })) return warn("JackedInPhysical");
+    if (jumpedInBlocksAbility({
+      state, wired, dsid, rollEnabled: !!this.power?.roll?.enabled,
+      jumpedIn, gearMounted, fromGear: !!fromGearId,
+    })) return warn("JackedInPhysical");
 
     if (this.power.roll.enabled) {
-      // Installed, running deck programs and RCC autosofts that name this ability (B20d, scripts/mods.mjs).
+      // Installed, running deck programs and RCC autosofts that name this ability (B20d, scripts/mods.mjs),
+      // plus the Jump-In weapon-lock edge and Pilot and Gunner's extra edge on Rigged Fire (0.3.114).
       const { edges, banes } = abilityPowerRollModifiers({
         wired,
         hasHacking: !!actor.system.skills?.value?.has?.("hacking"),
         softwareEdges: softwareEdges(actor, dsid),
         state,
+        jumpedIn,
+        dsid,
+        gearMounted,
+        hasPilotAndGunner,
       });
       if (edges || banes) {
         const modifiers = config.modifiers ?? {};
