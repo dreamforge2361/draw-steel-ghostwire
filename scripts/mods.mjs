@@ -125,7 +125,40 @@ export async function installMod(mod, host, changes = {}) {
   ]);
   await restampHostMachine(host);
   ui.notifications.info(game.i18n.format(`${L}.Installed`, { mod: mod.name, host: host.name, used: usedSlots(host), slots: getHostCatalog(host).modSlots }));
+  // Magazines already post their own Load card from payload-use.mjs.
+  if (!isMagazine(mod)) await announceModInstalled(mod, host);
   return true;
+}
+
+/** Public chat card for a successful Install onto… (who, mod, host, slots, fielded machine when there is one). */
+async function announceModInstalled(mod, host) {
+  const actor = mod.parent;
+  const catalog = getHostCatalog(host);
+  const data = {
+    actor: actor?.name ?? game.user?.name ?? "",
+    mod: mod.name,
+    host: host.name,
+    used: usedSlots(host),
+    slots: catalog?.modSlots ?? 0,
+  };
+  const esc = value => foundry.utils.escapeHTML(String(value ?? ""));
+  let fielded = "";
+  const { deployedMachine, machineBand } = await import("./machines.mjs");
+  if (machineBand(host)) {
+    const machine = deployedMachine(host);
+    if (machine) fielded = `<p class="hint">${esc(game.i18n.format(`${L}.ChatFielded`, { machine: machine.name }))}</p>`;
+  }
+  const content = `<div class="ghostwire-mod-install-chat">
+      <header><i class="fa-solid fa-screwdriver-wrench"></i> <span>${esc(game.i18n.localize(`${L}.ChatTitle`))}</span></header>
+      <p>${esc(game.i18n.format(`${L}.ChatBody`, data))}</p>
+      <p class="hint">${esc(game.i18n.format(`${L}.ChatSlots`, data))}</p>
+      ${fielded}
+    </div>`;
+  const Chat = ChatMessage.implementation ?? ChatMessage;
+  await Chat.create({
+    speaker: Chat.getSpeaker?.({ actor }) ?? undefined,
+    content,
+  });
 }
 
 /**

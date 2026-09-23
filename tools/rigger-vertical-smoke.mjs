@@ -106,16 +106,29 @@ class FakeActor {
   }
 }
 class FakeItem {
-  constructor({ dsid = null, vehicle = null, deployedUuid = null, parent = null, ownerUuid = null } = {}) {
+  constructor({ dsid = null, vehicle = null, deployedUuid = null, parent = null, ownerUuid = null, id = null, name = "", mod = null } = {}) {
+    this.id = id;
+    this.name = name;
+    this.uuid = id ? `Item.${id}` : null;
     this.system = { _dsid: dsid };
     this.parent = parent;
     this._flags = {};
     if (vehicle) this._flags.vehicle = vehicle;
     if (deployedUuid) this._flags.deployed = { actorUuid: deployedUuid };
     if (ownerUuid) this._flags.ownerUuid = ownerUuid;
+    if (mod) this._flags.mod = mod;
   }
   getFlag(scope, key) {
     return scope === MODULE_ID ? this._flags[key] : undefined;
+  }
+  toObject() {
+    return {
+      name: this.name,
+      type: "treasure",
+      system: { ...this.system },
+      effects: [],
+      flags: { [MODULE_ID]: structuredClone(this._flags) },
+    };
   }
 }
 
@@ -130,6 +143,7 @@ globalThis.foundry = { utils: { getProperty: () => undefined, setProperty: () =>
 const {
   fleetSizeCap, fieldedMachineCount, isMachineFielded, machineOwner,
   applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
+  describeWeaponryKit, machineModSheetFields, machineModMirrorData, kitProfile,
 } = await import("../scripts/machines.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
@@ -292,6 +306,75 @@ for (const file of walk("src/packs")) {
 }
 note(machineActors >= 25 && machineMiss === 0, `machine Actor prototypes stamped (got ${machineActors}, missing ${machineMiss})`);
 note(otherActors > 10 && otherScorch === 0, `non-machine Actor prototypes are not Scorch (checked ${otherActors})`);
+
+/* ------------------------------------------------------------------ */
+/*  0.3.110 — Hardpoint mods on the Machine sheet + install chat       */
+/* ------------------------------------------------------------------ */
+note(atLeast(module.version, "0.3.110"), `module.json ≥ 0.3.110 (got ${module.version})`);
+const modsSrc = readFileSync("scripts/mods.mjs", "utf8");
+note(modsSrc.includes("ghostwire-mod-install-chat"), "successful mod install posts a chat card");
+note(modsSrc.includes("announceModInstalled"), "install announcement names actor, mod, and host");
+note(modsSrc.includes("if (!isMagazine(mod)) await announceModInstalled"), "payload magazines keep their own Load card");
+note(css.includes("ghostwire-mod-install-chat"), "install chat card has Ghostwire chat styling");
+for (const key of ["ChatTitle", "ChatBody", "ChatSlots", "ChatFielded"]) {
+  note(typeof lang.GHOSTWIRE?.Mods?.Install?.[key] === "string", `lang Mods.Install.${key}`);
+}
+note(lang.GHOSTWIRE.Mods.Install.ChatBody.includes("{actor}") && lang.GHOSTWIRE.Mods.Install.ChatBody.includes("{mod}")
+  && lang.GHOSTWIRE.Mods.Install.ChatBody.includes("{host}"), "install chat names who, the mod, and the host");
+note(ui.ModOff === "off", "lang UI.ModOff");
+
+const weaponryDsids = ["gun-rack", "twin-mount", "turret-ring", "heavy-hardpoint"];
+for (const dsid of weaponryDsids) {
+  const line = describeWeaponryKit({ name: dsid, system: { _dsid: dsid }, flags: { [MODULE_ID]: { mod: { exclusiveKit: "weaponry" } } } });
+  note(line.length > 0 && line.includes("Gunnery"), `${dsid} describes a Gunnery hardpoint (${line})`);
+  note(kitProfile(dsid)?.kind === "weaponry", `${dsid} is a weaponry profile`);
+}
+const heavyLine = describeWeaponryKit({
+  name: "Heavy Hardpoint", system: { _dsid: "heavy-hardpoint" },
+  flags: { [MODULE_ID]: { mod: { exclusiveKit: "weaponry" } } },
+});
+note(heavyLine.includes("Heavy Hardpoint") && heavyLine.includes("heavy") && heavyLine.includes("integrated"),
+  `Heavy Hardpoint line names the kit (${heavyLine})`);
+note(describeWeaponryKit({ name: "Scrap-Weld", system: { _dsid: "scrap-weld" }, flags: { [MODULE_ID]: { mod: { exclusiveKit: "armor" } } } }) === "",
+  "armor kits do not take the hardpoints line");
+
+const wrench = new FakeActor({ name: "Wrench" });
+const bulldog = new FakeItem({
+  id: "bull", name: "Bulldog", dsid: "bulldog", parent: wrench,
+  vehicle: { drone: false, domain: "Ground", scale: "Vehicle", hardpoints: "pintle" },
+});
+const heavy = new FakeItem({
+  id: "hh", name: "Heavy Hardpoint", dsid: "heavy-hardpoint", parent: wrench,
+  mod: { installedOn: "bull", active: true, exclusiveKit: "weaponry" },
+});
+const plate = new FakeItem({
+  id: "sw", name: "Scrap-Weld", dsid: "scrap-weld", parent: wrench,
+  mod: { installedOn: "bull", active: true, exclusiveKit: "armor", staminaBonus: 6 },
+});
+wrench.items.push(bulldog, heavy, plate);
+const stamped = machineModSheetFields(bulldog);
+note(stamped.hardpoints.includes("pintle") && stamped.hardpoints.includes("Heavy Hardpoint"),
+  `Build hardpoints keeps the factory mount and the kit (${stamped.hardpoints})`);
+note(stamped.installedModsText.includes("Heavy Hardpoint") && stamped.installedModsText.includes("Scrap-Weld"),
+  "Installed mods lists the hardpoint and the armor kit");
+
+heavy._flags.mod.active = false;
+const toggled = machineModSheetFields(bulldog);
+note(!toggled.hardpoints.includes("Heavy Hardpoint") && toggled.hardpoints.includes("pintle"),
+  "a switched-off hardpoint leaves the factory mount and drops the kit line");
+note(toggled.installedModsText.includes("Heavy Hardpoint") && toggled.installedModsText.includes("(off)"),
+  "a switched-off hardpoint stays in the installed-mods list");
+heavy._flags.mod.active = true;
+
+const mirror = machineModMirrorData(heavy);
+note(mirror.flags[MODULE_ID].machineModMirror === "Item.hh", "mirror records the hero mod uuid");
+note(mirror.flags[MODULE_ID].mod.installedOn === null, "mirror does not copy the hero installedOn id");
+note(mirror.name === "Heavy Hardpoint" && !mirror._id, "mirror is a nameless-id copy of the hardpoint Item");
+note(heavy.getFlag(MODULE_ID, "mod").installedOn === "bull", "building a mirror does not uninstall the hero mod");
+
+note(machinesSrc.includes("syncMachineModMirrors"), "syncMachineMods embeds installed mods on the machine Actor");
+note(machinesSrc.includes("machineModSheetFields(item)"), "Deploy stamp reuses the kit hardpoints line");
+note(!machinesSrc.includes('installedModsText: ""'), "Deploy no longer blanks Installed mods");
 
 console.log(ok.join("\n"));
 if (fail.length) {

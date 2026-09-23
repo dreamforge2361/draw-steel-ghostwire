@@ -197,6 +197,20 @@ body.ghostwire-theme .application.ds-sheet :focus-visible {
 }
 .ghostwire-taint-chat p { margin: 0.25rem 0 0; }
 
+.ghostwire-mod-install-chat {
+  border-left: 3px solid var(--ghostwire-accent, #3d9c9c);
+  padding: 0.35rem 0.6rem;
+}
+.ghostwire-mod-install-chat header {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: var(--font-size-12, 12px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ghostwire-mod-install-chat p { margin: 0.25rem 0 0; }
+
 /* Corruption History on the Biography tab (B80) */
 .ghostwire-corruption-history {
   margin-top: 0.75rem;
