@@ -18,6 +18,7 @@ import { join } from "node:path";
 import { catalogPrice } from "../scripts/kiosk.mjs";
 import { getPreset, listingsFromItems } from "../scripts/kiosk-presets.mjs";
 import { MACHINE_MOD_PROFILES, kitProfile } from "../scripts/machines.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const fail = [];
@@ -66,7 +67,7 @@ const machineMods = modsPack.filter(doc => doc.path.startsWith("vehicles/"));
 console.log("S8 vehicles / drones / machine mods smoke (0.3.98)\n");
 
 console.log("1) Ship surface");
-note(typeof module.version === "string" && module.version >= "0.3.98", `module.json is ≥ 0.3.98 (got ${module.version})`);
+note(atLeast(module.version, "0.3.98"), `module.json is ≥ 0.3.98 (got ${module.version})`);
 note(crewed.length >= 47, `crewed platforms published (got ${crewed.length})`);
 note(drones.length >= 40, `drone chassis published (got ${drones.length})`);
 note(machineMods.length >= 24, `vehicle/drone mods published (got ${machineMods.length})`);

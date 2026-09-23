@@ -8,6 +8,7 @@
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { appendPing, clampPingText, normalizePings, PING_CAP, PING_MAX_LENGTH, readPings, whisperRecipientIds } from "../scripts/wired-pings.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -24,7 +25,7 @@ function readBomFreeJson(path) {
 console.log("B106 / B109 playtest smoke (0.3.45+)");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.45", `module.json is ≥ 0.3.45 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.45"), `module.json is ≥ 0.3.45 (got ${moduleJson.version})`);
 
 const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs"], { encoding: "utf8" });
 ok(!goldDiff.trim(), "scripts/gold-line-scene.mjs is unmodified");

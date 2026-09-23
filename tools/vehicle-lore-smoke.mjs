@@ -8,6 +8,7 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { retrieve } from "../scripts/voidmark-rag.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -35,7 +36,7 @@ function loadJournalPages(pack) {
 console.log("Vehicle lore lock smoke (0.3.69)\n");
 
 const moduleJson = readJson("module.json");
-ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.69", `module.json is ≥ 0.3.69 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.69"), `module.json is ≥ 0.3.69 (got ${moduleJson.version})`);
 
 const l1 = read("docs/manuscript/01-lore/L1-setting-primer.md");
 ok(/## Vehicles & Transit/.test(l1), "L1 has Vehicles & Transit");

@@ -1,0 +1,68 @@
+{
+  "_id": "gwModQuantumLink",
+  "_key": "!items!gwModQuantumLink",
+  "name": "GHOSTWIRE.Mods.Items.QuantumLink.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.QuantumLink.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "quantum-link",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a510,500 in an entangled-pair cartridge and a cryo stage; a prototype bay and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Quantum Link \u00b7 installs on one comm or Wired gadget (1 mod slot)."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 21000,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": [
+          "comms",
+          "wired"
+        ],
+        "hosts": [
+          "comms",
+          "wired"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}

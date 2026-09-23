@@ -1,0 +1,65 @@
+{
+  "_id": "gwModDenialField",
+  "_key": "!items!gwModDenialField",
+  "name": "GHOSTWIRE.Mods.Items.DenialField.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.DenialField.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "denial-field",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a513,000 in emitter rings, a discharge cell, and a shaped field coil; a prototype bay and a Director-gated parts list",
+      "source": "Ghostwire Gear master \u00a72F / Cat 2 \u2014 armorer's bench, tailor's table, or a safehouse workbench",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Denial Field \u00b7 installs on one shield (1 mod slot)."
+      },
+      "goal": 600
+    }
+  },
+  "effects": [],
+  "folder": "B4auJ3Tjl5Ueylf3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 4,
+        "availability": "prototype",
+        "price": 26000,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": "shield",
+        "hosts": [
+          "shield"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ],
+        "exclusiveKit": "denial"
+      }
+    }
+  }
+}

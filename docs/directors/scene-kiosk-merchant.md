@@ -34,9 +34,11 @@ Players see the token name. They do not need the combat sheet.
 | **Programs** | Software Stall | Buyable deck software: Cat **4B** persistent suites **and** Cat **4C** attack payloads on one shelf (v1). Autosofts and Hacker class Program abilities stay off this stall |
 | **Ammo** | Ammo Counter | Gear › General › Ammunition magazines / one-shot specialty rounds (Standard Rounds, AP, Gel, grenades, smoke). **Not** machine Ammo Bin mods |
 | **Mods** | Chop Shop | **All** mod SKUs in Ghostwire Mods: vehicle/drone §5F kits (armor ladder, weaponry ladder, and the stacking "other" menu) **plus** the weapon, armor, and gadget mod families. Matches on `flags.mod`, so anything new under `src/packs/mods/**` auto-stocks |
+| **Armor mods** | Armorer | Wearable armor + shield mods only — Ghostwire Mods › Armor & Shield Mods (§2F). New SKUs under `src/packs/mods/armor/` auto-stock |
+| **Gadget mods** | Gadgeteer | Gadget mods only — Ghostwire Mods › Gadget Mods (§1H). New SKUs under `src/packs/mods/gadgets/` auto-stock |
 | Empty shelf | Street Vendor | Nothing — stock by hand |
 
-New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones. New crewed vehicles (`flags.vehicle` and not `drone`) join Vehicles. New Matrix decks (`role: deck`) join Decks. New `programs/` suites and `payloads/` chips join Programs. New `general/ammunition` SKUs join Ammo. New mod SKUs anywhere in the Mods pack join **Mods**.
+New food SKUs under `consumables/food` (tag `StreetFood`) join the Food kiosk automatically. New chems under `consumables/chems` (tag `Chem`) join Medical. New armor/weapon Items join those shelves by `system.kind`. New drone Items with `flags.vehicle.drone` join Drones. New crewed vehicles (`flags.vehicle` and not `drone`) join Vehicles. New Matrix decks (`role: deck`) join Decks. New `programs/` suites and `payloads/` chips join Programs. New `general/ammunition` SKUs join Ammo. New mod SKUs anywhere in the Mods pack join **Mods**; ones under `mods/armor/` also join **Armor mods** and ones under `mods/gadgets/` also join **Gadget mods**.
 
 ### The three machine vendors (S8, 0.3.98)
 
@@ -46,11 +48,24 @@ Drop these three and a crew can buy a frame, a fleet, and everything that bolts 
 |---|---|---|
 | **Drone Vendor** | Drones | All **40** drone chassis, E1 clunkers through E4 apex frames |
 | **Vehicle Lot** | Vehicles | All **46** buyable crewed platforms — ground, air, water, space. Plot hulls (Nox’s Trash Freighter) stay off the lot even though the SKU now carries a ¥2,800 replacement price |
-| **Chop Shop** | Mods | All **47** mod SKUs — 24 vehicle/drone §5F kits plus the weapon / armor / gadget families |
+| **Chop Shop** | Mods | All **63** mod SKUs — 24 vehicle/drone §5F kits, 8 weapon mods (§3G), 14 armor / shield mods (§2F), 17 gadget mods (§1H) |
 
 All three are the same placeable Actor: **Token controls › cash register → pick the type**. The preset id is stamped on the Actor (`flags.draw-steel-ghostwire.preset`), so **Restock from preset** on an open kiosk re-pulls the current catalog after a module update — no listing UUID is ever hand-edited. Verify with `node tools/s8-machines-smoke.mjs`.
 
 **Fabricate, not just buy.** Every chassis and machine-mod card prints its **Fabricate (§Craft Project)** line — goal (150 / 300 / 450 / 600 by Echelon), prerequisites, roll characteristics, and yield — and the Item carries those in `system.project`, so a hero can start it as a stock Draw Steel crafting Project out of a Lifestyle project slot. Installing the finished part is still its own §Craft Project.
+
+### The two wearable vendors (G2, 0.3.100)
+
+Wearable armor / shield mods (§2F) and gadget mods (§1H) became **published** families in 0.3.100, so they get their own shelves beside the Chop Shop:
+
+| Vendor | Type to pick | Sells |
+|---|---|---|
+| **Armorer** | Armor mods | All **14** §2F rows — Street inserts and liners through the Prototype Reactive Plating and Denial Field. Fits `armor` and `shield` hosts |
+| **Gadgeteer** | Gadget mods | All **17** §1H rows — across comms, sensors & optics, mechanical and electronic B&E, survival kit, and any Wired gadget |
+
+Both are the same placeable Actor as the rest, and both auto-stock from the pack, so a later gear pass needs no listing edit. Verify with `node tools/g2-armor-gadget-mods-smoke.mjs`.
+
+**No mod ever sells Stamina.** A wearable armor mod buys tags, edges, convenience, and small typed immunities; the vest's Stamina stays on the armor Item, by class and wearer Echelon. Three armor groups and two gadget groups refuse to stack on the same host — *inner liner*, *outer camouflage layer*, *active-denial cell*, *optical stage*, *lock-cracking package* — and Foundry names the clash when a player tries.
 
 **Art gap (open).** The eleven S8 chassis ship with core Foundry placeholder icons. Drop `‹dsid›.webp` plates into `_incoming-art/` and run `node tools/apply-machine-token-art.mjs --from _incoming-art` to swap them in: `dock-tug`, `trauma-barge`, `lane-bus`, `gale-runner`, `ash-crawler`, `black-ledger`, `longshore`, `static-crow`, `kiln-beetle`, `second-face`, `tide-wraith` (plus the long-standing `bulldog` gap).
 

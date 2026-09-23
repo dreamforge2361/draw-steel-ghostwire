@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5450 in a lock exploit dump bought off a fixer and a signing stub; a deck and an electronics bench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Skeleton Key Soft \u00b7 installs on one electronic break-in tool (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],
@@ -55,7 +58,8 @@
         "craftSkill": [
           "hacking",
           "electronics"
-        ]
+        ],
+        "exclusiveKit": "lock-soft"
       }
     }
   }

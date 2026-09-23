@@ -1,0 +1,68 @@
+{
+  "_id": "gwModSnifferHead",
+  "_key": "!items!gwModSnifferHead",
+  "name": "GHOSTWIRE.Mods.Items.SnifferHead.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.SnifferHead.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "sniffer-head",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 2,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a51,200 in probe heads, an isolation amp, and a logging stub; an electronics bench",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Sniffer Head \u00b7 installs on one electronic break-in tool or Wired gadget (1 mod slot)."
+      },
+      "goal": 300
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 2,
+        "availability": "restricted",
+        "price": 2400,
+        "modSlots": 0,
+        "tags": [
+          "Wired"
+        ],
+        "host": [
+          "bne-electronic",
+          "wired"
+        ],
+        "hosts": [
+          "bne-electronic",
+          "wired"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ]
+      }
+    }
+  }
+}

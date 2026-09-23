@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5125 in pick stock, a damping sleeve, and a tension bar; a workbench and a vise",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Quiet Picks \u00b7 installs on one mechanical break-in tool (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

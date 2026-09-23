@@ -18,6 +18,7 @@ import {
   needsSightEnabled,
   tokenVisionUpdate,
 } from "../scripts/token-vision.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const fail = [];
 const ok = [];
@@ -35,7 +36,7 @@ const goldDiff = execFileSync("git", ["diff", "--", "scripts/gold-line-scene.mjs
 console.log("Hero / NPC token Has Vision smoke (0.3.67)\n");
 
 console.log("1) Ship surface");
-note(moduleJson.version >= "0.3.67", `module.json is ≥ 0.3.67 (got ${moduleJson.version})`);
+note(atLeast(moduleJson.version, "0.3.67"), `module.json is ≥ 0.3.67 (got ${moduleJson.version})`);
 note(boot.includes("registerTokenVision()"), "module.mjs registers registerTokenVision");
 note(boot.includes("./token-vision.mjs"), "module.mjs imports token-vision.mjs");
 note(vision.includes("preCreateActor") && vision.includes("preCreateToken"), "hooks cover actor and token create");

@@ -1,8 +1,8 @@
 # Ghostwire master backlog - triage 2026-09-22 (updated evening)
 
-**Module now:** **0.3.99** on main (0.3.93 Michael Foundry smoke **PASS** — Magical Societies lore, ¥250 pregens, F4 regen).  
-**Just shipped:** G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
-**Next picks:** N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
+**Module now:** **0.3.100** on main (0.3.99 Michael Foundry smoke **PASS** — G1 Kit street-band grants).  
+**Just shipped:** G2 armor / gadget mod families + Hexshot's Street medium bow (0.3.100); G1 Kit chargen street-band grants + Static Crow Mark drop (0.3.99); S8 vehicle / drone / mods build-out (0.3.98); S6 Voidmark Director-only lore filter (0.3.97); F9 Black Market sell (0.3.96); F8 Ritual Seal artifacts + F6 Director Pay / Spend Hero (0.3.95).  
+**Next picks:** **G3** lang + style tokens, then **S1**, then **L1** (locked queue) · N4 Thursday PDF · DJ1 district journals · F2 ritual applet polish · S2 broader SR gear reskin (now unblocked).  
 **Playtest:** Deadhead Saturday; Quiet Floor after. Thursday PDF reprint from assembled manuscript.  
 **Doctrine:** Claude Code on Allfather first; Cursor only if no choice.
 
@@ -65,8 +65,8 @@
 | # | Item | Notes |
 |---|---|---|
 | G1 | ~~**Kit street-band auto-grants**~~ | **DONE 0.3.99** — `scripts/kit-grants.mjs`. All **28** Kits map to street SKUs; the free starting Kit copies its package onto the sheet at chargen so the Kit is live on day one. Gate: kit Item on a `hero`, mapped `_dsid`, `system.level <= 1`, and never granted before for that `_dsid` (ledger `flags.draw-steel-ghostwire.kitStreetGrants` + per-Item `kitStreetGrant` stamp). **Merc** needs no special case — its Kits advancement is `chooseN: 2`, so both packages land. Later Kits grant nothing; the **ownership rule still bites** (sell it, Kit goes inert). **Never** mods, chrome, or anything above Street; owned SKUs are skipped, not duplicated; **no back-fill sweep**. Unarmed Kits (Brawler, Mantis) get nothing — fists qualify by rule — and the three Hacker **deck-Kits** + **Rigger's Harness** get no host, because the Kit *is* the host. Needed a gear floor: **street weapons 7 → 14** (Slugger, Pipe Rifle, Scrap Cleaver, Slab-Hammer, Scaffold Pike, Chain Lash, Weighted Net — all E1/Street/1 slot) because the Street column had no heavy, polearm, whip, ensnaring, medium-melee or medium sidearm, and `polearm` existed at **no** Availability. Table `docs/directors/kit-street-band-grants.md`; smoke `node tools/kit-grants-smoke.mjs` (467 checks); checklist `docs/directors/kit-grants-smoke-0399.md`. |
-| G2 | **Armor / gadget mod families** | Next gear pick. Also inherits the one gap G1 left: **no medium bow/crossbow/dartgun at Street** (Hexshot's second slot — Hunting Bow and Heavy Crossbow are Restricted). |
-| G3 | lang + style tokens | |
+| G2 | ~~**Armor / gadget mod families**~~ | **DONE 0.3.100.** Both remaining unpublished host families ship: wearable **armor / shields** → Gear master **§2F** (7 stubs → **14** SKUs) and **gadgets** → **§1H** (8 → **17**), Mods pack **47 → 63**, every SKU with ¥ + stock Draw Steel **Project** fields (E1 150 / E2 300 / E3 450 / E4 600) and a real **Street → Prototype** spread. RAW `10-mods.md` flipped to **Published** and lost every “treat wearable armor modSlots as 0” / “do not invent liners” instruction. **The lock held: no wearable mod adds Stamina** — asserted on the flag, in every AE change key, and in the card text. Only **Thermoptic Skin** and **Deep Optics** carry an AE (Stealth / Perception edge, shipped **off**, the Stealth Weave pattern); every other row is a Director card, no invented Power Roll math. Five **exclusiveKit** groups refuse to double up (*inner liner*, *outer camouflage layer*, *active-denial cell*, *optical stage*, *lock-cracking package*). New `tools/regen-mod-slot-cards.mjs` derives the **Mod slots (N)** paragraph on all **89** host gear cards (it reproduced the 47 weapon cards byte-for-byte first). Kiosk presets **11 → 13**: **Armorer** + **Gadgeteer**. **Part B closed G1's last gap** — **Scrap-Bow** (¥300, medium band, E1/Street/1 slot) in §3F, and `kit-grants.mjs` grants Hexshot both bows; the G1 smoke's documented-gap list is now empty. Also fixed a latent repo-wide bug the bump exposed: **18 smokes compared `module.version` as a string**, so 0.3.99 → 0.3.100 read `"1" < "9"` — they now share `tools/lib/module-version.mjs`. Smoke `node tools/g2-armor-gadget-mods-smoke.mjs` (792 checks); checklist `docs/directors/g2-armor-gadget-mods-smoke-03100.md`; log `docs/directors/_claude-g2-armor-gadget-mods-log.txt`. |
+| G3 | lang + style tokens | **Suggested next** (then S1, then L1). |
 
 ## Art
 **R1** inside-cover · **R2** round pregen tokens · **R3** B103 palette/gender · **R4** B89 Foundry token · **R5** Reach Events thumbs · **R6** wire-opener
@@ -80,6 +80,7 @@
 ---
 
 ## Recently shipped
+- **0.3.100** **G2 wearable armor / shield (§2F, 14) + gadget (§1H, 17) mod families published** + **Scrap-Bow** closes Hexshot's medium slot
 - **0.3.99** **G1 Kit chargen street-band grants** + 7 new Street weapon SKUs + **Static Crow drops Mark**
 - **0.3.98** S8 vehicle / drone / mods build-out
 - **0.3.95** **Ritual Seal artifacts (F8)** + **Director Pay / Spend Hero (F6)**

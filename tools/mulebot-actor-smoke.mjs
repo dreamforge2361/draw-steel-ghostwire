@@ -13,6 +13,7 @@ import { actorHasKit, isDroneActor, isMachineActor, isVehicleActor, isWireKit } 
 import { itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
 import { MATRIX_VERB_DSIDS } from "../scripts/wired-verbs.mjs";
 import { chassisStamina, machineBand } from "../scripts/machines.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 const failures = [];
@@ -35,7 +36,7 @@ function asItem(json) {
 console.log("Mule-Bot dual Item + Actor smoke (0.3.75)\n");
 
 const moduleJson = readJson("module.json");
-ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.75", `module.json is ≥ 0.3.75 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.75"), `module.json is ≥ 0.3.75 (got ${moduleJson.version})`);
 
 console.log("1) Treasure SKU is the inventory / Deploy document");
 const item = readJson("src/packs/vehicles/drones/mule-bot.json");

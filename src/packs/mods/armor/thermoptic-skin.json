@@ -1,0 +1,103 @@
+{
+  "_id": "gwModThermopticS",
+  "_key": "!items!gwModThermopticS",
+  "name": "GHOSTWIRE.Mods.Items.ThermopticSkin.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.ThermopticSkin.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "thermoptic-skin",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a55,500 in thermoptic panel, a driver loom, and a calibration rig; a military-grade bench and a dark room",
+      "source": "Ghostwire Gear master \u00a72F / Cat 2 \u2014 armorer's bench, tailor's table, or a safehouse workbench",
+      "rollCharacteristic": [
+        "reason",
+        "intuition"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Thermoptic Skin \u00b7 installs on one suit of armor (1 mod slot)."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [
+    {
+      "_id": "gwAeThermopticSk",
+      "_key": "!items.effects!gwModThermopticS.gwAeThermopticSk",
+      "name": "Installed \u2014 Stealth edge",
+      "img": "icons/commodities/tech/plating-metal-armor-tech-red.webp",
+      "origin": "Compendium.draw-steel-ghostwire.mods.Item.gwModThermopticS",
+      "description": "<p>Edge on Stealth tests while the overlay is installed and on. While you are motionless, enemy sensor sweeps take a bane to find you.</p>",
+      "disabled": true,
+      "transfer": true,
+      "statuses": [],
+      "tint": "#ffffff",
+      "flags": {},
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "start": null,
+      "showIcon": 1,
+      "type": "base",
+      "system": {
+        "end": {
+          "roll": "1d10 + @combat.save.bonus"
+        },
+        "changes": [
+          {
+            "key": "system.skills.modifiers.stealth.edges",
+            "type": "add",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ]
+      }
+    }
+  ],
+  "folder": "B4auJ3Tjl5Ueylf3",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 11000,
+        "modSlots": 0,
+        "tags": [
+          "Stealth",
+          "Wired"
+        ],
+        "host": "armor",
+        "hosts": [
+          "armor"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "electronics"
+        ],
+        "exclusiveKit": "camo"
+      }
+    }
+  }
+}

@@ -21,14 +21,17 @@
     "keywords": [],
     "quantity": 1,
     "project": {
-      "prerequisites": "",
-      "source": "",
-      "rollCharacteristic": [],
+      "prerequisites": "\u00a5200 in rare-earth magnets, webbing, and a tether spool; a workbench",
+      "source": "Ghostwire Gear master \u00a72F / Cat 2 \u2014 armorer's bench, tailor's table, or a safehouse workbench",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
       "yield": {
         "amount": "1",
-        "display": ""
+        "display": "one Mag-Harness \u00b7 installs on one suit of armor or one shield (1 mod slot)."
       },
-      "goal": null
+      "goal": 150
     }
   },
   "effects": [],

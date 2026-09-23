@@ -36,6 +36,7 @@ import {
 } from "../scripts/kiosk.mjs";
 import { KIOSK_PRESETS, getPreset, listingsFromItems } from "../scripts/kiosk-presets.mjs";
 import { buffEffectsOf, crashEffectsOf, isConsumableTreasure, planConsumableUse } from "../scripts/consumable-use.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const fail = [];
 const ok = [];
@@ -53,7 +54,7 @@ const folder = JSON.parse(readFileSync("src/packs/summons/kiosks/_folder.json", 
 console.log("B118 / B119 scene kiosk merchant + presets smoke\n");
 
 console.log("1) Ship surface");
-note(typeof module.version === "string" && module.version >= "0.3.65", `module.json is ≥ 0.3.65 (got ${module.version})`);
+note(atLeast(module.version, "0.3.65"), `module.json is ≥ 0.3.65 (got ${module.version})`);
 note(spike.includes("DESIGN LOCKED") || spike.includes("SHIPPED"), "spike is locked/shipped");
 note(spike.includes("kind === \"kiosk\"") || spike.includes('kind === "kiosk"') || spike.includes("kind: kiosk") || spike.includes('kind === "kiosk"'), "spike documents Actor stub");
 note(boot.includes("registerKiosk()"), "module registers registerKiosk");
@@ -175,7 +176,7 @@ note(b119.includes("kiosks/kiosk-merchant.webp"), "B119 spike documents art path
 note(director.includes("Street Food Kiosk") && director.includes("Armor Locker"), "Director note names type defaults");
 note(director.includes("Vehicle Lot") && director.includes("Deck Vendor") && director.includes("Software Stall") && director.includes("Ammo Counter"), "Director note names 0.3.77 type defaults");
 note(boot.includes("registerConsumableUse()"), "module registers registerConsumableUse");
-note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones,vehicles,decks,programs,ammo,mods", "eleven preset ids");
+note(KIOSK_PRESETS.map(p => p.id).join(",") === "food,medical,tools,armor,weapons,drones,vehicles,decks,programs,ammo,mods,armorMods,gadgetMods", "thirteen preset ids");
 note(getPreset("food")?.match.pathPrefixes.includes("consumables/food"), "food filter is consumables/food");
 note(getPreset("armor")?.match.kinds.includes("armor"), "armor filter is kind=armor");
 note(getPreset("weapons")?.match.kinds.includes("weapon"), "weapons filter is kind=weapon");
@@ -284,7 +285,7 @@ note(listingsFromItems(runtimeCatalog, "drones").length === drones.length, "dron
 note(listingsFromItems(runtimeCatalog, "mods").length === mods.length, "mods match without src path (Foundry rows)");
 note(lang.GHOSTWIRE.Kiosk.Presets.Mods.Name === "Mods" && lang.GHOSTWIRE.Kiosk.Presets.Mods.ActorName === "Chop Shop", "lang Presets.Mods names the Chop Shop");
 note(lang.GHOSTWIRE.Kiosk.Presets.Vehicles.Name === "Vehicles" && lang.GHOSTWIRE.Kiosk.Presets.Decks.Name === "Decks" && lang.GHOSTWIRE.Kiosk.Presets.Programs.Name === "Programs" && lang.GHOSTWIRE.Kiosk.Presets.Ammo.Name === "Ammo", "lang Presets.* Name keys for new types");
-note(typeof module.version === "string" && module.version >= "0.3.77", `module.json is ≥ 0.3.77 (got ${module.version})`);
+note(atLeast(module.version, "0.3.77"), `module.json is ≥ 0.3.77 (got ${module.version})`);
 
 const buzzCan = JSON.parse(readFileSync("src/packs/gear/consumables/food/buzz-can.json", "utf8"));
 const boughtFood = applyPurchase({

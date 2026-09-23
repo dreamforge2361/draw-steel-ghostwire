@@ -79,7 +79,7 @@ One armor SKU when the Kit wants armor, **Riot Shield** when it wants a shield, 
 | Kit | `_dsid` | Category asked | Street package | List ¥ | Note |
 |---|---|---|---|---|---|
 | **Ghost** | `ghost` | light armor + light | **Secure Threads** (¥250) · **Sleeve-Gun** (¥150) | ¥400 | The holdout is the quiet one — Ghost is an infiltration doctrine. |
-| **Hexshot** | `hexshot` | no armor + light + medium | **Street-Bow** (¥200) | ¥200 | **Documented gap:** bow in the light slot only. The Street band has no medium bow/crossbow/dartgun (Hunting Bow and Heavy Crossbow are Restricted). The Kit is live on the bow; buy up when ¥ allows. |
+| **Hexshot** | `hexshot` | no armor + light + medium | **Street-Bow** (¥200) · **Scrap-Bow** (¥300) | ¥500 | Both slots live since **G2 / 0.3.100** — the Scrap-Bow is the Street-band medium bow the catalog was missing. |
 | **Longshot** | `longshot` | no armor + medium | **Pipe Rifle** (¥300) | ¥300 | A precision rifle, not the Boomstick — Longshot's whole doctrine is holding still at range. |
 | **Saturation** | `saturation` | light armor + light + medium | **Secure Threads** (¥250) · **Popper** (¥250) · **Boomstick** (¥300) | ¥800 | |
 
@@ -116,7 +116,7 @@ So 0.3.99 adds seven **Echelon 1 / Street / 1 mod slot** weapons to Gear master 
 
 **Art gap (open).** All seven ship with core Foundry icons. Drop `‹dsid›.webp` plates into `_incoming-art/` and run `node tools/apply-gear-token-art.mjs --from _incoming-art` to swap them in.
 
-**Still open after this pass:** no medium bow/crossbow/dartgun at Street (Hexshot's second slot). That is a **G2/S2** gear-pass line, not a grant bug.
+**Closed by G2 / 0.3.100:** the Street band gained the **Scrap-Bow** (¥300, medium band, 1 slot), so Hexshot's second weapon slot is filled and the grant table has **no documented gaps left**.
 
 ---
 

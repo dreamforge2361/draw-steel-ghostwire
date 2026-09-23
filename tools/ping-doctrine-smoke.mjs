@@ -6,6 +6,7 @@
  * Does not need live Foundry. Does not write Scene JSON.
  */
 import { readFileSync } from "node:fs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const failures = [];
 const ok = (cond, msg) => {
@@ -22,7 +23,7 @@ function readBomFreeJson(path) {
 console.log("Ping vs Read/Write doctrine smoke (0.3.62)\n");
 
 const moduleJson = readBomFreeJson("module.json");
-ok(typeof moduleJson.version === "string" && moduleJson.version >= "0.3.62", `module.json is ≥ 0.3.62 (got ${moduleJson.version})`);
+ok(atLeast(moduleJson.version, "0.3.62"), `module.json is ≥ 0.3.62 (got ${moduleJson.version})`);
 
 const lang = readBomFreeJson("lang/en.json");
 const ping = lang.GHOSTWIRE.Abilities.MatrixVerbs.Ping;

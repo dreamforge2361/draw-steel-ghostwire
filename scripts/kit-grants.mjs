@@ -58,9 +58,9 @@ export const KIT_STREET_GRANTS = {
   "staff-adept": { armor: "secure-threads", shield: null, weapons: ["scaffold-pike"] },
   // --- ranged
   ghost: { armor: "secure-threads", shield: null, weapons: ["sleeve-gun"] },
-  // Hexshot wants a bow/crossbow/dartgun in both the light and medium slots; the Street band has
-  // only the light one (Hunting Bow and Heavy Crossbow are Restricted). The Kit is live on the bow.
-  hexshot: { armor: null, shield: null, weapons: ["street-bow"], note: "partial-medium-bow" },
+  // Hexshot wants a bow/crossbow/dartgun in both the light and medium slots. G1 could only fill the
+  // light one; G2 (0.3.100) added the Street-band Scrap-Bow so the medium slot is no longer a gap.
+  hexshot: { armor: null, shield: null, weapons: ["street-bow", "scrap-bow"] },
   longshot: { armor: null, shield: null, weapons: ["pipe-rifle"] },
   saturation: { armor: "secure-threads", shield: null, weapons: ["popper", "boomstick"] },
   // --- tech

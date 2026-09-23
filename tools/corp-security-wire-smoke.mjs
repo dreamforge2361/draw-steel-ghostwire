@@ -15,6 +15,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { actorHasKit, isWireKit } from "../scripts/wired-kit.mjs";
 import { actorHasConnectInterface, itemIsConnectInterface } from "../scripts/wired-console-verbs.mjs";
+import { atLeast } from "./lib/module-version.mjs";
 
 const MODULE = "draw-steel-ghostwire";
 const WIRE_KIT_DSID = "wire-kit-matrix-verbs";
@@ -41,7 +42,7 @@ const actorsIn = dir =>
 
 console.log("Corp & Security Wire-access smoke (0.3.85)\n");
 
-ok(read("module.json").version >= "0.3.85", `module.json is 0.3.85 (got ${read("module.json").version})`);
+ok(atLeast(read("module.json").version, "0.3.85"), `module.json is 0.3.85 (got ${read("module.json").version})`);
 
 console.log("\n1) Wire Kit label resolves to a readable name");
 ok(loc(KIT_NAME_KEY) === KIT_LABEL, `${KIT_NAME_KEY} resolves to "${KIT_LABEL}"`);

@@ -1,0 +1,64 @@
+{
+  "_id": "gwModHabitatStag",
+  "_key": "!items!gwModHabitatStag",
+  "name": "GHOSTWIRE.Mods.Items.HabitatStage.Name",
+  "type": "treasure",
+  "img": "icons/commodities/tech/electronics-tech-sensor-teal.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Mods.Items.HabitatStage.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "habitat-stage",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "\u00a53,400 in envelope fabric, a blower, and a scrubber stack; a military-grade bay and a pressure test",
+      "source": "Ghostwire Gear master \u00a71H / Cat 1 \u2014 electronics bench, shop bench, or a deck nest",
+      "rollCharacteristic": [
+        "might",
+        "reason"
+      ],
+      "yield": {
+        "amount": "1",
+        "display": "one Habitat Stage \u00b7 installs on one survival kit (1 mod slot)."
+      },
+      "goal": 450
+    }
+  },
+  "effects": [],
+  "folder": "WPSNKYe2217TSF7m",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "mod": {
+        "echelon": 3,
+        "availability": "military",
+        "price": 6800,
+        "modSlots": 0,
+        "tags": [
+          "Sealed"
+        ],
+        "host": "survival",
+        "hosts": [
+          "survival"
+        ],
+        "slotCost": 1,
+        "craftSkill": [
+          "repair"
+        ]
+      }
+    }
+  }
+}
