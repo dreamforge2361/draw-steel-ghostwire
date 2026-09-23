@@ -16,7 +16,7 @@ import { registerWiredMinimap } from "./wired-minimap.mjs";
 import { registerWiredNodeVerbs } from "./wired-node-verbs.mjs";
 import { registerWiredKit } from "./wired-kit.mjs";
 import { registerRunGenerator } from "./run-generator.mjs";
-import { registerMachines } from "./machines.mjs";
+import { registerMachines, isDeployedMachineActor, hasAnyToken } from "./machines.mjs";
 import { registerRiggerVertical } from "./rigger-vertical.mjs";
 import { registerMachineSheet } from "./machine-sheet.mjs";
 import { registerStreetEye } from "./street-eye.mjs";
@@ -143,9 +143,22 @@ Hooks.once("init", () => {
 
 /** @returns {"disconnected"|"linked"|"overlay"|"jackedIn"} */
 function getWiredState(actor) {
-  if (actor.statuses.has(WIRED_STATUSES.jackedIn.id)) return "jackedIn";
-  if (actor.statuses.has(WIRED_STATUSES.overlay.id)) return "overlay";
-  if (actor.statuses.has(WIRED_STATUSES.linked.id)) return "linked";
+  if (!actor) return "disconnected";
+  if (actor.statuses?.has?.(WIRED_STATUSES.jackedIn.id)) return "jackedIn";
+  if (actor.statuses?.has?.(WIRED_STATUSES.overlay.id)) return "overlay";
+  if (actor.statuses?.has?.(WIRED_STATUSES.linked.id)) return "linked";
+  // Fielded machine under an on-net owner displays LINKED in Wired Console Connections.
+  if (isDeployedMachineActor(actor) && hasAnyToken(actor)) {
+    const ownerUuid = actor.getFlag(MODULE_ID, "ownerUuid");
+    const owner = ownerUuid ? fromUuidSync(ownerUuid) : null;
+    if (owner instanceof Actor) {
+      if (owner.statuses?.has?.(WIRED_STATUSES.jackedIn.id)
+        || owner.statuses?.has?.(WIRED_STATUSES.overlay.id)
+        || owner.statuses?.has?.(WIRED_STATUSES.linked.id)) {
+        return "linked";
+      }
+    }
+  }
   return "disconnected";
 }
 

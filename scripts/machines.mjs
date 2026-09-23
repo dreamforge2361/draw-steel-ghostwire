@@ -17,6 +17,52 @@ const UI = "GHOSTWIRE.Summons.Machines.UI";
 // tools/rigger-vertical-smoke.mjs asserts the two stay identical.
 const MACHINE_SHEET_ID = `${MODULE_ID}.GhostwireMachineSheet`;
 
+// Kinds a deployed machine Actor can carry. Mirrors MACHINE_KINDS in machine-sheet.mjs (same no-cycle
+// reason as MACHINE_SHEET_ID above); base assets count, or a deleted Door Lock token strands its Item.
+const MACHINE_KINDS = ["drone", "vehicle", "baseAsset"];
+
+/** Is this Actor a machine Ghostwire deployed? Reads both the flat kind flag and the sheet's machine block. */
+export function isDeployedMachineActor(actor) {
+  if (!(actor instanceof Actor)) return false;
+  const kind = actor.getFlag(MODULE_ID, "kind") ?? actor.getFlag(MODULE_ID, "machine")?.kind;
+  return MACHINE_KINDS.includes(kind) && !!actor.getFlag(MODULE_ID, "gearItemUuid");
+}
+
+/** Every Token of this Actor across every Scene, as { scene, ids } batches. */
+function tokenBatches(actor) {
+  if (!actor?.id || !game.scenes) return [];
+  return game.scenes
+    .map(scene => ({ scene, ids: scene.tokens.filter(t => t.actorId === actor.id).map(t => t.id) }))
+    .filter(batch => batch.ids.length);
+}
+
+/** Does this Actor still have a Token anywhere? Called from deleteToken, after the doc left its collection. */
+export function hasAnyToken(actor) {
+  return tokenBatches(actor).length > 0;
+}
+
+/** Grid squares for a machine token from its band / Item scale. Fly (drone-small) must be hero-sized. */
+export function machineTokenSize(band, item = null) {
+  const vehicle = item?.getFlag?.(MODULE_ID, "vehicle") ?? {};
+  const scale = String(vehicle.scale ?? vehicle.sizeScale ?? "").toLowerCase();
+  if (scale.startsWith("personal") || scale.includes("micro")) return 1;
+  if (scale.startsWith("heavy") || scale.includes("capital")) return 4;
+  if (scale.startsWith("vehicle") && !vehicle.drone) return 3;
+  switch (band) {
+    case "drone-micro": return 1;
+    case "drone-small": return 1;
+    case "drone-medium": return 2;
+    case "vehicle-bike": return 2;
+    case "vehicle-car": return 3;
+    case "vehicle-heavy": return 4;
+    case "vehicle-air":
+    case "vehicle-water":
+    case "vehicle-space": return 3;
+    default: return vehicle.drone ? 1 : 2;
+  }
+}
+
+
 // Band templates (must match gen-machines.mjs): base Stamina and speed before the Item stamps them.
 const BANDS = {
   "drone-micro": { stamina: 5, speed: 6 },
@@ -337,18 +383,19 @@ function placement(owner, size) {
 
 
 /**
- * Fleet Size: 3@L1, 4@L4, 5@L7, 6@L10, plus Drone Jockey Wide Band (+2, granted at 1st level).
- * Wide Band, Redoubled carries NO further cap: per the Wrench master it only drops the distance
- * requirement on Wide Band's whole-swarm Command. Do not re-add a boost for it.
+ * Fleet Size: 1@L1, 2@L4, 3@L7, 4@L10.
+ * Drone Jockey Wide Band +1 (1st). Endless Swarm +2 further (7th).
+ * Wide Band, Redoubled carries NO further cap — distance drop only.
  */
 export function fleetSizeCap(actor) {
   const level = Number(actor?.system?.level ?? 1) || 1;
-  let cap = 3;
-  if (level >= 10) cap = 6;
-  else if (level >= 7) cap = 5;
-  else if (level >= 4) cap = 4;
+  let cap = 1;
+  if (level >= 10) cap = 4;
+  else if (level >= 7) cap = 3;
+  else if (level >= 4) cap = 2;
   const ids = new Set([...(actor?.items ?? [])].map(i => i.system?._dsid).filter(Boolean));
-  if (ids.has("wide-band")) cap += 2;
+  if (ids.has("wide-band")) cap += 1;
+  if (ids.has("endless-swarm")) cap += 2;
   return cap;
 }
 
@@ -415,7 +462,16 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
   if (!band) return ui.notifications.warn(game.i18n.localize(`${UI}.NotMachine`));
   if (!canvas.scene) return ui.notifications.warn(game.i18n.localize(`${UI}.NoScene`));
   if (!game.user.can("ACTOR_CREATE") || !game.user.can("TOKEN_CREATE")) return ui.notifications.warn(game.i18n.localize(`${UI}.NoPermission`));
-  const existing = deployedMachine(item);
+  // Stale / orphan deployed flag: Actor gone, or Actor exists with zero tokens anywhere.
+  const flaggedUuid = deployedMachineUuid(item);
+  let existing = deployedMachine(item);
+  if (flaggedUuid && !existing) {
+    await item.unsetFlag(MODULE_ID, "deployed");
+    existing = null;
+  } else if (existing && !hasAnyToken(existing)) {
+    await recallMachine(item, { actor: existing, notify: false });
+    existing = null;
+  }
   if (existing) return ui.notifications.warn(game.i18n.format(`${UI}.AlreadyDeployed`, { name: item.name }));
 
   const ownerForFleet = machineOwner(item, ownerOverride);
@@ -522,9 +578,23 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
   if (itemDesc && !actor.system.biography?.value) machinePatch["system.biography.value"] = itemDesc;
   await actor.update(machinePatch);
 
-  const size = actor.system.combat.size.value;
-  const tokenDocument = await actor.getTokenDocument({ ...placement(owner, size), actorLink: true });
+  const tokenSize = machineTokenSize(band, item);
+  await actor.update({
+    "system.combat.size.value": tokenSize,
+    "prototypeToken.width": tokenSize,
+    "prototypeToken.height": tokenSize,
+  });
+  const tokenDocument = await actor.getTokenDocument({
+    ...placement(owner, tokenSize),
+    actorLink: true,
+    width: tokenSize,
+    height: tokenSize,
+  });
   await canvas.scene.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
+  // Fielded machine under an on-net owner shows LINKED in the Wired Console.
+  if (owner && ["linked", "overlay", "jackedIn"].includes(pilotWiredState(owner))) {
+    await actor.toggleStatusEffect(WIRED_STATUS_DEFS.linked.id, { active: true });
+  }
   const deployedMsg = game.i18n.format(`${UI}.Deployed`, { name: item.name, stamina, speed });
   const fleetMsg = fleet ? ` ${game.i18n.format(`${UI}.FleetStatus`, fleet)}.` : "";
   ui.notifications.info(`${deployedMsg}${fleetMsg}`);
@@ -533,19 +603,36 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
 }
 
 /** Recall a deployed machine: delete its tokens on every Scene and its Actor. The Item stays. */
-export async function recallMachine(item, { actor } = {}) {
+export async function recallMachine(item, { actor, notify = true } = {}) {
   actor ??= deployedMachine(item);
+  // Recall may be entered from the Actor side (deleteItem, the deleteToken auto-Recall); find the gear
+  // Item from the Actor's back-link so the `deployed` flag is always cleared, whichever side started it.
+  item ??= gearItemFor(actor);
   if (actor) {
-    for (const scene of game.scenes) {
-      const ids = scene.tokens.filter(t => t.actorId === actor.id).map(t => t.id);
-      if (ids.length) await scene.deleteEmbeddedDocuments("Token", ids);
+    // ghostwireRecall on both deletes: our own cleanup must not re-enter the deleteToken auto-Recall.
+    for (const { scene, ids } of tokenBatches(actor)) {
+      await scene.deleteEmbeddedDocuments("Token", ids, { ghostwireRecall: true });
     }
     await actor.delete({ ghostwireRecall: true });
   }
   if (item?.getFlag(MODULE_ID, "deployed")) await item.unsetFlag(MODULE_ID, "deployed");
-  if (item) ui.notifications.info(game.i18n.format(`${UI}.Recalled`, { name: item.name }));
-  const owner = machineOwner(item);
+  if (item && notify) ui.notifications.info(game.i18n.format(`${UI}.Recalled`, { name: item.name }));
+  const owner = machineOwner(item) ?? machineActorOwner(actor);
   if (owner) await clearFleetLinkedIfIdle(owner);
+}
+
+/** The gear Item a deployed machine Actor came from, via its `gearItemUuid` back-link. */
+export function gearItemFor(actor) {
+  const uuid = actor?.getFlag?.(MODULE_ID, "gearItemUuid");
+  const item = uuid ? fromUuidSync(uuid) : null;
+  return item instanceof Item ? item : null;
+}
+
+/** The pilot a deployed machine Actor answers to, for Fleet / Linked cleanup when the Item is gone. */
+function machineActorOwner(actor) {
+  const uuid = actor?.getFlag?.(MODULE_ID, "ownerUuid");
+  const owner = uuid ? fromUuidSync(uuid) : null;
+  return owner instanceof Actor ? owner : null;
 }
 
 export function registerMachines() {
@@ -607,16 +694,26 @@ export function registerMachines() {
   });
 
   // Deleting a deployed Actor (wreck cleanup, or by hand) clears the Item's link; deleting the Item recalls its machine.
+  // Last machine token deleted by hand → full Recall (clear Item deployed flag + delete Actor).
+  Hooks.on("deleteToken", async (tokenDocument, options, userId) => {
+    if ((userId !== game.user.id) || options.ghostwireRecall) return;
+    const actor = tokenDocument.actor;
+    if (!isDeployedMachineActor(actor)) return;
+    if (hasAnyToken(actor)) return;
+    await recallMachine(null, { actor, notify: true });
+  });
+
+  // Deleting a deployed Actor (wreck cleanup, or by hand) clears the Item's link.
   Hooks.on("deleteActor", async (actor, options, userId) => {
     if ((userId !== game.user.id) || options.ghostwireRecall) return;
-    const uuid = actor.getFlag(MODULE_ID, "gearItemUuid");
-    if (!uuid || !["drone", "vehicle"].includes(actor.getFlag(MODULE_ID, "kind"))) return;
-    for (const scene of game.scenes) {
-      const ids = scene.tokens.filter(t => t.actorId === actor.id).map(t => t.id);
-      if (ids.length) await scene.deleteEmbeddedDocuments("Token", ids);
+    if (!isDeployedMachineActor(actor)) return;
+    for (const { scene, ids } of tokenBatches(actor)) {
+      await scene.deleteEmbeddedDocuments("Token", ids, { ghostwireRecall: true });
     }
-    const item = await fromUuid(uuid);
-    if (item?.getFlag(MODULE_ID, "deployed")?.actorUuid === actor.uuid) await item.unsetFlag(MODULE_ID, "deployed");
+    const item = gearItemFor(actor);
+    if (item?.getFlag(MODULE_ID, "deployed")?.actorUuid === actor.uuid) {
+      await item.unsetFlag(MODULE_ID, "deployed");
+    }
   });
   Hooks.on("deleteItem", async (item, options, userId) => {
     if ((userId !== game.user.id) || !machineBand(item)) return;
@@ -639,7 +736,7 @@ export function registerMachines() {
       chassisStamina, armorStaminaBonus, machineStamina, machineWeaponry,
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
-      fleetSizeCap, fieldedMachineCount,
+      fleetSizeCap, fieldedMachineCount, machineTokenSize, isDeployedMachineActor, hasAnyToken,
     };
   }
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);

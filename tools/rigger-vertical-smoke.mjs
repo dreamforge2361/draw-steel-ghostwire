@@ -131,15 +131,17 @@ const { fleetSizeCap, fieldedMachineCount, isMachineFielded, machineOwner } = aw
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
 
-note(fleetSizeCap(new FakeActor({ level: 1 })) === 3, "Fleet cap 3 at L1");
-note(fleetSizeCap(new FakeActor({ level: 4 })) === 4, "Fleet cap 4 at L4");
-note(fleetSizeCap(new FakeActor({ level: 7 })) === 5, "Fleet cap 5 at L7");
-note(fleetSizeCap(new FakeActor({ level: 10 })) === 6, "Fleet cap 6 at L10");
-note(fleetSizeCap(new FakeActor({ level: 1, dsids: ["wide-band"] })) === 5, "Wide Band adds +2 (L1 Drone Jockey → 5)");
+note(fleetSizeCap(new FakeActor({ level: 1 })) === 1, "Fleet cap 1 at L1");
+note(fleetSizeCap(new FakeActor({ level: 4 })) === 2, "Fleet cap 2 at L4");
+note(fleetSizeCap(new FakeActor({ level: 7 })) === 3, "Fleet cap 3 at L7");
+note(fleetSizeCap(new FakeActor({ level: 10 })) === 4, "Fleet cap 4 at L10");
+note(fleetSizeCap(new FakeActor({ level: 1, dsids: ["wide-band"] })) === 2, "Wide Band adds +1 (L1 Drone Jockey => 2)");
 // Wide Band, Redoubled only drops the distance requirement on the whole-swarm Command — no extra cap.
-note(fleetSizeCap(new FakeActor({ level: 1, dsids: ["wide-band", "wide-band-redoubled"] })) === 5,
+note(fleetSizeCap(new FakeActor({ level: 1, dsids: ["wide-band", "wide-band-redoubled"] })) === 2,
   "Wide Band, Redoubled adds no further cap");
 note(!machinesSrc.includes('ids.has("wide-band-redoubled")'), "invented Redoubled cap boost removed");
+note(fleetSizeCap(new FakeActor({ level: 7, dsids: ["wide-band", "endless-swarm"] })) === 6,
+  "Endless Swarm +2 on L7 Wide Band (3+1+2 => 6)");
 
 // Counting is by the `deployed` flag, not by a successful UUID resolve.
 globalThis.game.actors = new Map([["alive1", {}], ["alive2", {}], ["alive3", {}]]);
@@ -148,7 +150,7 @@ const fleeted = new FakeActor({
   machines: [drone("Actor.alive1"), drone("Actor.alive2"), drone("Actor.alive3"), drone(null)],
 });
 note(fieldedMachineCount(fleeted) === 3, "fieldedMachineCount counts the three fielded drones");
-note(fieldedMachineCount(fleeted) >= fleetSizeCap(fleeted), "L1 rigger with 3 out is at cap (Deploy refuses)");
+note(fieldedMachineCount(fleeted) >= fleetSizeCap(fleeted), "L1 rigger at or over fleetSizeCap (Deploy refuses)");
 
 // A UUID this client cannot resolve must still count — under-counting waved refused Deploys through.
 globalThis.fromUuidSync = () => null;

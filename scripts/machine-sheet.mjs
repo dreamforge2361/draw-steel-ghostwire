@@ -109,6 +109,20 @@ export function defineMachineSheet() {
         movement: actor.system.movement ?? { value: 0 },
         biography: actor.system.biography?.value ?? "",
         notes: actor.system.biography?.director ?? "",
+        enrichedBiography: await (foundry.applications?.ux?.TextEditor?.implementation?.enrichHTML
+          ?? TextEditor.enrichHTML).call(
+          foundry.applications?.ux?.TextEditor?.implementation ?? TextEditor,
+          actor.system.biography?.value ?? "",
+          { async: true, relativeTo: actor, secrets: actor.isOwner },
+        ),
+        enrichedNotes: game.user.isGM
+          ? await (foundry.applications?.ux?.TextEditor?.implementation?.enrichHTML
+            ?? TextEditor.enrichHTML).call(
+            foundry.applications?.ux?.TextEditor?.implementation ?? TextEditor,
+            actor.system.biography?.director ?? "",
+            { async: true, relativeTo: actor, secrets: true },
+          )
+          : "",
         isGM: game.user.isGM,
         tokenImg: actor.prototypeToken?.texture?.src ?? actor.img,
         jumpedIn,

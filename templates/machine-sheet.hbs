@@ -144,15 +144,13 @@
 
     <section class="tab gw-m-tab {{tabs.story.cssClass}}" data-group="primary" data-tab="story">
       <div class="gw-m-story flexcol">
-        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Description"}}
-          <textarea name="system.biography.value" rows="8">{{biography}}</textarea>
-        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Description"}}</label>
+        {{editor enrichedBiography target="system.biography.value" button=true editable=editable engine="prosemirror" collaborate=false}}
         {{!-- Director notes are gmOnly: a player's client never receives them, so never let a player
               submit the field back empty and wipe them. --}}
         {{#if isGM}}
-        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Notes"}}
-          <textarea name="system.biography.director" rows="6">{{notes}}</textarea>
-        </label>
+        <label>{{localize "GHOSTWIRE.Summons.Machines.UI.Notes"}}</label>
+        {{editor enrichedNotes target="system.biography.director" button=true editable=editable engine="prosemirror" collaborate=false}}
         {{/if}}
       </div>
     </section>

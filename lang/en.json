@@ -2501,7 +2501,7 @@
           },
           "WideBand": {
             "Name": "Wide Band",
-            "Description": "<p>Your fleet size cap is 2 higher than the class baseline. A single Command (Deploy &amp; Command as a maneuver) commands your entire swarm at once, however many machines it has.</p>"
+            "Description": "<p>Your fleet size cap is 1 higher than the class baseline. A single Command (Deploy &amp; Command as a maneuver) commands your entire swarm at once, however many machines it has.</p>"
           },
           "SwarmLaunch": {
             "Name": "Swarm Launch",
@@ -2525,7 +2525,7 @@
           },
           "EndlessSwarm": {
             "Name": "Endless Swarm",
-            "Description": "<p>Your fleet size cap increases by a further 2 (4 above the class baseline in total), and your Deploy momentum income is doubled.</p>"
+            "Description": "<p>Your fleet size cap increases by a further 2 (3 above the class baseline in total), and your Deploy momentum income is doubled.</p>"
           },
           "WideBandRedoubled": {
             "Name": "Wide Band, Redoubled",
