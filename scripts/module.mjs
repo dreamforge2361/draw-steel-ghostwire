@@ -52,6 +52,9 @@ import { registerChargenWizard } from "./chargen-wizard.mjs";
 import { registerChromeDamage, chromeRefundBlocked } from "./chrome-damage.mjs";
 import { registerLocker } from "./locker.mjs";
 import { registerIdentity } from "./identity.mjs";
+import { registerWireStateToggle } from "./wire-state-toggle.mjs";
+import { registerCritFeedback } from "./crit-feedback.mjs";
+import { registerCoverConceal } from "./cover-conceal.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -147,6 +150,11 @@ Hooks.once("init", () => {
   registerChromeDamage();
   registerLocker();
   registerIdentity();
+  // S9 — the player-facing Wire-state door. It writes nothing of its own: getWiredState and
+  // setWiredState below are the same pair the Wired Console and the Matrix Verbs already use.
+  registerWireStateToggle({ getWiredState, setWiredState });
+  registerCritFeedback();
+  registerCoverConceal();
 });
 
 // ---------- Wired connection states ----------
