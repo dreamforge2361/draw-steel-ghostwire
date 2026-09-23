@@ -565,18 +565,23 @@ Hooks.on("createItem", (item, options, userId) => {
   ui.notifications.warn(message, { permanent: true });
 });
 
-// Body Integrity (Chrome chapter): living heroes start at 20/20, stored as an actor flag.
-// Cyborgs don't use Integrity or chrome implants; they upgrade with Frame Modules.
+// Body Integrity (Chrome chapter): living heroes start at 20/20; Cyborgs start at 25/25 (Michael 2026-09-23).
+// Cyborgs MAY buy living Chrome from the chrome pack — install debits Integrity like everyone else.
+// Frame Modules = deferred later retag of chrome SKUs (no separate pack in this ship).
 const INTEGRITY_START = 20;
+const CYBORG_INTEGRITY_START = 25;
 const STARTING_NUYEN = 5000;
 // Implants per body location (Chrome chapter); arms and legs are 2 per limb, so 4 total.
 const CHROME_SLOT_CAPS = { head: 3, eyes: 1, ears: 1, torso: 3, arms: 4, legs: 4, nervous: 1 };
 
 const isCyborg = actor => actor.items.some(i => (i.type === "ancestry") && (i.system._dsid === "cyborg"));
 
+const integrityStartFor = actor => (isCyborg(actor) ? CYBORG_INTEGRITY_START : INTEGRITY_START);
+
 function getIntegrity(actor) {
   const flag = actor.getFlag(MODULE_ID, "integrity") ?? {};
-  return { value: flag.value ?? INTEGRITY_START, max: flag.max ?? INTEGRITY_START };
+  const start = integrityStartFor(actor);
+  return { value: flag.value ?? start, max: flag.max ?? start };
 }
 
 const setIntegrity = (actor, value) => actor.update({ [`flags.${MODULE_ID}.integrity.value`]: value });
@@ -587,18 +592,44 @@ const setIntegrity = (actor, value) => actor.update({ [`flags.${MODULE_ID}.integ
 // Pregens used to store only biSpent/biRemaining. The sheet reads integrity.value/max — migrate once.
 Hooks.once("ready", async () => {
   let fixed = 0;
+  let cyborgFixed = 0;
   for (const actor of game.actors) {
     if (actor.type !== "hero") continue;
     const flag = actor.getFlag(MODULE_ID, "integrity");
-    if (flag?.value !== undefined) continue;
-    const remaining = actor.getFlag(MODULE_ID, "biRemaining");
-    if (remaining === undefined || remaining === null) continue;
+    // Legacy biRemaining → integrity.value/max (living start 20).
+    if (flag?.value === undefined) {
+      const remaining = actor.getFlag(MODULE_ID, "biRemaining");
+      if (remaining !== undefined && remaining !== null) {
+        await actor.update({
+          [`flags.${MODULE_ID}.integrity`]: { value: Number(remaining), max: INTEGRITY_START },
+        });
+        fixed += 1;
+      }
+    }
+    // Cyborg BI25 once: N/A / missing / max 20 → max 25. Never rewrite living heroes.
+    if (!isCyborg(actor)) continue;
+    const after = actor.getFlag(MODULE_ID, "integrity") ?? {};
+    const max = Number(after.max);
+    const value = Number(after.value);
+    if (Number.isFinite(max) && (max === CYBORG_INTEGRITY_START)) continue;
+    let nextMax = CYBORG_INTEGRITY_START;
+    let nextValue;
+    if (!Number.isFinite(max) || !Number.isFinite(value)) {
+      nextValue = CYBORG_INTEGRITY_START;
+    } else if (max === INTEGRITY_START) {
+      // Give the +5 headroom; keep spent chrome as spent.
+      nextValue = Math.min(CYBORG_INTEGRITY_START, value + (CYBORG_INTEGRITY_START - INTEGRITY_START));
+    } else {
+      // Odd/missing max (old N/A path): start clean at 25/25.
+      nextValue = CYBORG_INTEGRITY_START;
+    }
     await actor.update({
-      [`flags.${MODULE_ID}.integrity`]: { value: Number(remaining), max: INTEGRITY_START },
+      [`flags.${MODULE_ID}.integrity`]: { value: nextValue, max: nextMax },
     });
-    fixed += 1;
+    cyborgFixed += 1;
   }
   if (fixed) console.log(`${MODULE_ID} | migrated Body Integrity onto ${fixed} hero(es) from biRemaining`);
+  if (cyborgFixed) console.log(`${MODULE_ID} | migrated ${cyborgFixed} Cyborg hero(es) to Body Integrity max ${CYBORG_INTEGRITY_START}`);
 });
 
 Hooks.on("preCreateActor", (actor, data, options, userId) => {
@@ -618,6 +649,30 @@ Hooks.on("preCreateActor", (actor, data, options, userId) => {
   };
   if (foundry.utils.getProperty(data, "system.hero.wealth") === undefined) updates["system.hero.wealth"] = STARTING_NUYEN;
   actor.updateSource(updates);
+});
+
+
+// Cyborg People: stamp Body Integrity 25/25 when the ancestry lands (chargen or drop).
+// Only upgrades living defaults / missing — never clobber a Cyborg who already spent chrome past max 25.
+Hooks.on("createItem", async (item, options, userId) => {
+  if ((userId !== game.user.id) || (item.type !== "ancestry") || (item.system._dsid !== "cyborg")) return;
+  const actor = item.parent;
+  if (!actor || (actor.type !== "hero")) return;
+  const flag = actor.getFlag(MODULE_ID, "integrity") ?? {};
+  const max = Number(flag.max);
+  const value = Number(flag.value);
+  const atLivingDefault = (max === INTEGRITY_START) && (value === INTEGRITY_START);
+  const missing = !Number.isFinite(max) || !Number.isFinite(value);
+  if (!missing && !atLivingDefault && (max === CYBORG_INTEGRITY_START)) return;
+  if (!missing && !atLivingDefault && (max > CYBORG_INTEGRITY_START)) return;
+  // Upgrade living 20/20 or missing → 25/25; if max was 20 with spend, add +5 headroom.
+  let nextValue = CYBORG_INTEGRITY_START;
+  if (Number.isFinite(max) && Number.isFinite(value) && (max === INTEGRITY_START) && (value < INTEGRITY_START)) {
+    nextValue = Math.min(CYBORG_INTEGRITY_START, value + (CYBORG_INTEGRITY_START - INTEGRITY_START));
+  }
+  await actor.update({
+    [`flags.${MODULE_ID}.integrity`]: { value: nextValue, max: CYBORG_INTEGRITY_START },
+  });
 });
 
 // Arcane Severance (09-species.md, 06-elementalist.md, 20-technomancer.md): Cyborgs can never take a magic class
@@ -664,16 +719,13 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
   return false;
 });
 
-// Chrome install: block Cyborgs and installs the hero can't afford, then spend Integrity once the implant is on the sheet.
+// Chrome install: block installs the hero can't afford, then spend Integrity once the implant is on the sheet.
+// Cyborgs may install living Chrome (BI25 lock); Arcane Severance + Cortical Firewall stay unchanged.
 Hooks.on("preCreateItem", (item, data, options, userId) => {
   const chrome = item.getFlag(MODULE_ID, "chrome");
   const actor = item.parent;
   if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero")) return;
   const format = key => game.i18n.format(`GHOSTWIRE.Integrity.${key}`, { actor: actor.name, name: item.name, cost: chrome.integrity, value: getIntegrity(actor).value });
-  if (isCyborg(actor)) {
-    ui.notifications.warn(format("CyborgBlocked"));
-    return false;
-  }
   if (getIntegrity(actor).value < chrome.integrity) {
     ui.notifications.warn(format("Insufficient"));
     return false;
@@ -690,7 +742,7 @@ Hooks.on("preCreateItem", (item, data, options, userId) => {
 Hooks.on("createItem", (item, options, userId) => {
   const chrome = item.getFlag(MODULE_ID, "chrome");
   const actor = item.parent;
-  if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero") || isCyborg(actor)) return;
+  if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero")) return;
   const { value, max } = getIntegrity(actor);
   const remaining = Math.max(0, value - chrome.integrity);
   // Chrome spends Body Integrity only. Do not write flags.<module>.taint here (B80).
@@ -715,7 +767,7 @@ async function grantChromeItems(item, chrome) {
 Hooks.on("deleteItem", (item, options, userId) => {
   const chrome = item.getFlag(MODULE_ID, "chrome");
   const actor = item.parent;
-  if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero") || isCyborg(actor)) return;
+  if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero")) return;
   const { value, max } = getIntegrity(actor);
   const refund = Math.floor(chrome.integrity * 0.75);
   const restored = Math.min(max, value + refund);
@@ -762,7 +814,7 @@ Hooks.on("renderDrawSteelItemSheet", (app, element) => {
   name.after(line);
 });
 
-// Hero sheet: a Body Integrity fieldset at the top of the Stats tab (current / max inputs, or N/A for Cyborgs).
+// Hero sheet: a Body Integrity fieldset at the top of the Stats tab (current / max). Cyborgs use 25 max.
 Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   const stats = element.querySelector("section.tab[data-tab='stats']");
   if (!stats || stats.querySelector(".ghostwire-integrity")) return;
@@ -772,32 +824,27 @@ Hooks.on("renderDrawSteelHeroSheet", (app, element) => {
   fieldset.className = "ghostwire-integrity flexrow";
   const legend = document.createElement("legend");
   legend.textContent = game.i18n.localize("GHOSTWIRE.Integrity.Label");
-  legend.dataset.tooltip = game.i18n.localize("GHOSTWIRE.Integrity.Hint");
+  legend.dataset.tooltip = game.i18n.localize(
+    isCyborg(actor) ? "GHOSTWIRE.Integrity.CyborgHint" : "GHOSTWIRE.Integrity.Hint",
+  );
   fieldset.append(legend);
 
-  if (isCyborg(actor)) {
-    const note = document.createElement("p");
-    note.className = "hint";
-    note.textContent = game.i18n.localize("GHOSTWIRE.Integrity.CyborgNA");
-    fieldset.append(note);
-  } else {
-    const integrity = getIntegrity(actor);
-    for (const key of ["value", "max"]) {
-      const group = document.createElement("div");
-      group.className = "form-group stacked";
-      const label = document.createElement("label");
-      label.textContent = game.i18n.localize(`GHOSTWIRE.Integrity.${key === "value" ? "Current" : "Max"}`);
-      const input = document.createElement("input");
-      Object.assign(input, { type: "number", min: 0, step: 1, value: integrity[key], disabled: !app.isEditable });
-      // Unnamed input handled here, so the sheet's own form submit never sees it.
-      input.addEventListener("change", event => {
-        event.stopPropagation();
-        const number = Math.max(0, Math.floor(Number(input.value) || 0));
-        actor.update({ [`flags.${MODULE_ID}.integrity.${key}`]: number });
-      });
-      group.append(label, input);
-      fieldset.append(group);
-    }
+  const integrity = getIntegrity(actor);
+  for (const key of ["value", "max"]) {
+    const group = document.createElement("div");
+    group.className = "form-group stacked";
+    const label = document.createElement("label");
+    label.textContent = game.i18n.localize(`GHOSTWIRE.Integrity.${key === "value" ? "Current" : "Max"}`);
+    const input = document.createElement("input");
+    Object.assign(input, { type: "number", min: 0, step: 1, value: integrity[key], disabled: !app.isEditable });
+    // Unnamed input handled here, so the sheet's own form submit never sees it.
+    input.addEventListener("change", event => {
+      event.stopPropagation();
+      const number = Math.max(0, Math.floor(Number(input.value) || 0));
+      actor.update({ [`flags.${MODULE_ID}.integrity.${key}`]: number });
+    });
+    group.append(label, input);
+    fieldset.append(group);
   }
 
   const resources = stats.querySelector("fieldset.resources");

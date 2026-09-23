@@ -3,7 +3,7 @@
 **RAW status:** draft (implant ¥ + Availability catalog 2026-09-18, B71)  
 **Sources:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, Ghostwire Chrome pack (`src/packs/chrome/`), Soft SKUs per `docs/spikes/B55-SOFT-CHROME-KIT-RETAGS.md`, Availability bands per `docs/raw/08-kits-gear-wealth.md`
 
-Cyborgs do not use this chapter. **Pass A locks** (Body Integrity **20**, three grades, magic erosion, removal scar 75%/25%) stay intact below. This pass publishes the living-hero **implant ¥ + Availability** catalog from the shipped Chrome pack and B55 Soft SKUs — not from invented numbers.
+**Pass A locks** (living Body Integrity **20**, three grades, magic erosion, removal scar 75%/25%) stay intact below. **Cyborgs** use this chapter too: Body Integrity **25** start and living Chrome from the same pack (Michael 2026-09-23). This pass publishes the **implant ¥ + Availability** catalog from the shipped Chrome pack and B55 Soft SKUs — not from invented numbers.
 
 ---
 
@@ -11,16 +11,16 @@ Cyborgs do not use this chapter. **Pass A locks** (Body Integrity **20**, three 
 
 | Path | What it is | System |
 |---|---|---|
-| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity |
-| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | Species rules — **Frame Modules** (¥); **Arcane Severance**; **no Body Integrity** |
+| **Cyber-augmented hero** | Living person (any non-Cyborg People); implants **overlay** flesh | **This chapter** — ¥ + Body Integrity **20** |
+| **Full-Conversion Cyborg** (*Machina sapiens*) | Machine-first chassis; person **replaced** | **This chapter** — ¥ + Body Integrity **25** + living Chrome; **Arcane Severance**; Frame Modules = later retag stub |
 
 Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.
 
-**Chrome does not raise Taint.** Installing or removing implants spends or refunds Body Integrity only. The shared hero stain track is **Taint 0–12** (`27-corruption-taint.md`). Cyborgs still use Taint (demons, pacts, zones); they just do not use Integrity.
+**Chrome does not raise Taint.** Installing or removing implants spends or refunds Body Integrity only. The shared hero stain track is **Taint 0–12** (`27-corruption-taint.md`). Cyborgs still use Taint (demons, pacts, zones) **and** Body Integrity.
 
-## Body Integrity (start 20)
+## Body Integrity (living 20 / Cyborg 25)
 
-- **Pool:** every non-Cyborg begins with **Body Integrity 20** (enough for roughly 3–5 mid-grade implants). Species/Background may nudge later — open.
+- **Pool:** every living (non-Cyborg) People begins with **Body Integrity 20**. **Cyborgs** begin with **Body Integrity 25**. Species/Background may nudge later — open.
 - **Spend:** installing an implant permanently reduces remaining Integrity by its cost. Insufficient Integrity = cannot install.
 - **Recover:** only by surgical **removal** (downtime). Returns **75%** of that implant's spent Integrity (**round down**); **25%** permanent scar loss.
 - **Integrity 0:** cannot install past flesh; flirting with zero via battle-damage replacement is horror pressure, not a species change.
@@ -70,7 +70,7 @@ While Integrity spent on chrome is **greater than 5**, every **Magic / Veil / Re
 **Magic erosion** (the grade table above) still applies for spent Integrity **at or under** the soft-cap. The soft-cap is a hard cliff on top of erosion, not a replacement for it.
 
 > **In Foundry**
-> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs see N/A). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Chrome install does **not** raise **Taint** (the 0–12 fieldset under Integrity). Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap.
+> On the hero sheet **Stats** tab, the **Body Integrity** fieldset shows current/max (Cyborgs **25** max). Installing a chrome Item spends Integrity automatically when you can afford the cost and slot; removal refunds 75%. Chrome install does **not** raise **Taint** (the 0–12 fieldset under Integrity). Casters (Elementalist, Street Priest, Technomancer) also see a soft-cap line (**Chrome spent X / 5**); over the cap adds the **Weave Strain** Active Effect and a bane on Magic/Veil/Resonance power rolls. A second hint shows casting-resource **cap after magic erosion**; primary resource updates clamp to that cap. Cyborgs remain **Arcane Severance** (no caster classes) — the soft-cap line does not apply to them.
 
 
 
@@ -175,7 +175,7 @@ Mark these **PROVISIONAL** until a later chrome / economy pass cites a source:
 | **All Salvage ¥ + Availability** | Grade rule locked; no pack SKUs |
 | **Soft variants** of Wired Reflexes, Reaction Enhancer, Muscle/Bone Lacing, Dermal Plating, Cyberlimb, Implant Weapon, Running Gear, Skillwires, Internal Air | B55 only shipped the six Soft rows above |
 | **Chrome Package** bundle ¥ + total Integrity | Six signature lines named; totals open |
-| **Cyborg Frame Module** ¥ + hardpoint caps | Sample names only; Cyborgs never buy living chrome |
+| **Cyborg Frame Module** ¥ + hardpoint caps | Deferred: may later **retag** chrome SKUs — do not invent a separate pack yet |
 | Soft ¥ multiplier as final Appendix lock | B55 provisional 4× + one Avail step; revisit when Soft prices are appendix-locked |
 
 ## Class hooks (short)
@@ -186,20 +186,19 @@ Mark these **PROVISIONAL** until a later chrome / economy pass cites a source:
 - **Hacker** — attack others' chrome across the Wired more than wear it.
 - **Commander / Face** — light Soft social chrome; wary of visible metal vs Persona.
 - **Casters (Elementalist / Street-Priest / …)** — magic erosion (the shared formula above) discourages; Soft grade only, late and expensive.
-- **Cyborg** — **excluded** from this chapter entirely.
+- **Cyborg** — **included**: Body Integrity **25**, living Chrome from this pack, Arcane Severance + Cortical Firewall unchanged.
 
-## Cyborg Frame Modules
+## Cyborg Frame Modules (stub — deferred)
 
-Cyborgs do **not** spend Body Integrity or buy living Chrome implants. “More machine” uses **Frame Modules**:
+**Lock (2026-09-23):** Cyborgs **use Body Integrity (max/start 25)** and **MAY buy living Chrome** from the chrome pack. Install debits Integrity; removal refunds 75% as for living heroes.
 
-| Rule | Detail |
+**Frame Modules** are **not** a separate pack in this ship. A later pass may **retag** existing chrome SKUs as Frame Modules for Cyborg fiction — do not invent new Frame Module SKUs here.
+
+| Rule (future retag) | Detail |
 |---|---|
-| Currency | **¥** (+ Availability); downtime install (Wrench / machine-doc) |
-| Capacity | **Hardpoints** by location (Head / Torso / Arms / Legs / Core OS) — rhyme with chrome slots, **not** Integrity |
-| Effect | Modules upgrade the frame (plating, actuators, weapon mounts, battery, Firewall, drone-link, redundant cortex) |
-| Magic | Still **Arcane Severance** — modules never restore Magic casting |
-| Fail state | Module damage / **System Crisis** (not implant Suppress/Destroy from this chapter) |
+| Currency | Same chrome ¥ + Availability for now |
+| Capacity | Chrome location slots today; hardpoints may rename later |
+| Magic | Still **Arcane Severance** — chrome never restores Magic casting |
+| Signature | **Cortical Firewall** (psychic immunity = level) unchanged |
 
-**Sample modules:** Reinforced Plating · Actuator Overdrive · Integrated Weapon Mount · Expanded Battery · Cortical Firewall+ · Drone Hard-Link.
-
-The full module list, hardpoint caps, and ¥ prices remain **PROVISIONAL** (not published). Living heroes never buy Frame Modules; Cyborgs never buy Chrome implants.
+Until that retag, Directors and players buy Chrome for Cyborgs exactly like living runners, against the 25 Integrity pool.

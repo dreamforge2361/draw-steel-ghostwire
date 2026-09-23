@@ -185,7 +185,7 @@ These three systems sit next to each other on purpose. They collide only when so
 
 | | Mod | Chrome |
 |---|---|---|
-| Lives on | An object (host Item) | Living flesh (or a Cyborg Frame Module — different system) |
+| Lives on | An object (host Item) | Living flesh or Cyborg frame (Chrome / BI — `09`) |
 | Costs | ¥ + Project | ¥ + **Body Integrity** |
 | Skill on the bench | Repair / Electronics / Hacking | Surgery loop in `09` (Medic / Wrench / ripperdoc) |
 | Example | Smartlink on a pistol; Gun Rack on a bike | Datajack; Implant Weapon (Spur); Wired Reflexes |
@@ -196,7 +196,7 @@ These three systems sit next to each other on purpose. They collide only when so
 
 **Cybertech** on a §Craft Project is only for chrome-adjacent interfaces (an implanted mount that is still chrome-side). Living chrome still spends Body Integrity. Do not use Cybertech to install a Suppressor.
 
-Cyborgs do not spend Body Integrity. Their **Frame Modules** are a species track (`09`, Peoples). They are not mods and this chapter does not price them.
+Cyborgs spend Body Integrity (**25** start) on living Chrome (`09`). **Frame Modules** may later retag chrome SKUs — they are not mods and this chapter does not price them.
 
 ### Mods vs the Wire
 

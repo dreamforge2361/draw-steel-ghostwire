@@ -385,13 +385,14 @@
       "Label": "Body Integrity",
       "Current": "Current",
       "Max": "Max",
-      "Hint": "Flesh left for chrome. Installing an implant spends its Integrity; removing it returns 75% (round down). Integrity doesn’t recover with rest.",
-      "CyborgNA": "Not used — Cyborgs upgrade with Frame Modules, not chrome.",
+      "Hint": "Flesh (or frame) left for chrome. Installing an implant spends its Integrity; removing it returns 75% (round down). Integrity doesn't recover with rest.",
+      "CyborgNA": "Cyborgs use Body Integrity 25/25 and may install living Chrome.",
       "Installed": "{name} installed: {cost} Body Integrity spent ({value}/{max} left).",
       "Removed": "{name} removed: {refund} Body Integrity returned ({value}/{max}).",
       "Insufficient": "{actor} can’t install {name}: it needs {cost} Body Integrity and only {value} is left.",
-      "CyborgBlocked": "{actor} is a Cyborg and can’t install chrome implants like {name}. Cyborgs use Frame Modules.",
-      "SlotFull": "{actor} can’t install {name}: the {location} location already holds {count} of {cap} implants."
+      "CyborgBlocked": "{actor} can't install {name}: insufficient Body Integrity or a full location — Cyborgs may install living Chrome.",
+      "SlotFull": "{actor} can’t install {name}: the {location} location already holds {count} of {cap} implants.",
+      "CyborgHint": "Cyborgs start at Body Integrity 25/25 and may install living Chrome from the chrome pack (Integrity debit on install). Frame Modules may later retag chrome SKUs — no separate pack yet."
     },
     "ArcaneSeverance": {
       "ClassBlocked": "{actor} is a Cyborg: Arcane Severance bars all magic, so they can’t take the {name} class.",
@@ -8868,7 +8869,7 @@
       },
       "People": {
         "Hint": "Fiction first, then the package. The Director can call your People; the sheet only needs the card and the trait picks.",
-        "CyborgLocks": "Machine-first: no Body Integrity, no chrome, and Arcane Severance closes these classes —",
+        "CyborgLocks": "Machine-first: Body Integrity 25/25, living Chrome allowed, and Arcane Severance closes these classes —",
         "ChangerHint": "Pick Raven, Rat or Wolf. Forms (Human / Hybrid / Beast) live on the sheet's Stats tab, after chargen."
       },
       "Background": {
@@ -8931,10 +8932,11 @@
         "Body": "Body Integrity",
         "Taint": "Taint",
         "Chrome": "Chrome installed",
-        "CyborgNA": "N/A",
-        "Hint": "Leave chrome empty. Installing it later spends Body Integrity the moment the card lands on the sheet.",
+        "CyborgNA": "25/25",
+        "Hint": "Integrity starts full for your People (living 20 / Cyborg 25). Chrome at early spends spends Integrity the moment the card lands on the sheet.",
         "CasterHint": "Casters: if you ever chrome, Soft is the intended grade and 5 Integrity is the soft cap. One checkbox, not a chapter.",
-        "FixOnSheet": "Fix it on the sheet"
+        "FixOnSheet": "Fix it on the sheet",
+        "CyborgHint": "Cyborgs start at 25/25 (living Peoples at 20/20). Chrome still spends Integrity when the card lands."
       },
       "Spends": {
         "Hint": "Optional. A deck, a focus, extra Street gear, or a Personal/Light air scout — a scout grants Street Eye on the sheet. Save the rest.",
@@ -8976,7 +8978,9 @@
           "medical": "Medical",
           "chrome": "Chrome",
           "vehicles": "Vehicles"
-        }
+        },
+        "View": "View",
+        "ViewHint": "Open the Item card without buying."
       },
       "Done": {
         "Summary": "The runner",

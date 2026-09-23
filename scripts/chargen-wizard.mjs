@@ -32,6 +32,11 @@ const L = "GHOSTWIRE.Chargen";
 export const STARTING_NUYEN = 5000;
 /** Appendix B §8: living Peoples start 20/20. Mirrors module.mjs INTEGRITY_START. */
 export const INTEGRITY_START = 20;
+/** Cyborgs start 25/25 (Michael 2026-09-23 BI25 lock). Mirrors module.mjs CYBORG_INTEGRITY_START. */
+export const CYBORG_INTEGRITY_START = 25;
+
+/** Body Integrity start for this runner (Cyborg 25, living 20). */
+export const integrityStartFor = (facts = {}) => (facts.isCyborg ? CYBORG_INTEGRITY_START : INTEGRITY_START);
 
 /** Appendix B §6: the one legal starting spread. Order is irrelevant; the multiset is not. */
 export const CHARACTERISTIC_ARRAY = Object.freeze([2, 2, 1, 1, 0]);
@@ -62,7 +67,7 @@ export const ACK_STEPS = Object.freeze(["bio", "kit", "languages", "resources"])
 
 /**
  * Packs the ¥5,000 may be spent in (Appendix B §9: deck, focus, extra Street gear, Personal/Light air scout).
- * The chrome and mods packs are deliberately absent — chrome costs Body Integrity as well as ¥, and installing
+ * Mods stay absent from early spends. Chrome is allowed (G10 / BI25); Integrity still debits on install. Installing
  * a mod is a later job. This list is the firewall; `isChargenSpendable()` is the second lock behind it.
  */
 export const CHARGEN_SPEND_PACKS = Object.freeze(["gear", "matrix", "foci", "vehicles", "chrome"]);
@@ -324,24 +329,25 @@ const spineComplete = spine => CHARGEN_STEPS
   .filter(key => (key !== "done") && !OPTIONAL_STEPS.includes(key))
   .every(key => spine[key]?.done);
 
-/** Appendix B §8: Integrity 20/20 (Cyborg N/A), Taint 0, no chrome. */
+/** Appendix B §8: Integrity at People start (living 20 / Cyborg 25), Taint 0. */
 export function integrityClean(facts = {}) {
-  // G10: chrome is allowed at chargen; Integrity value must still match living-People start unless Cyborg.
+  // G10: chrome is allowed at chargen; the Integrity step still expects People-start value/max
+  // (module.mjs debits on chrome create — a chromed sheet below start fails this honest check).
   if (Number(facts.taint) !== 0) return false;
-  if (facts.isCyborg) return true;
+  const start = integrityStartFor(facts);
   const integrity = facts.integrity ?? {};
-  return (Number(integrity.value) === INTEGRITY_START) && (Number(integrity.max) === INTEGRITY_START);
+  return (Number(integrity.value) === start) && (Number(integrity.max) === start);
 }
 
 /** The lang suffix under `GHOSTWIRE.Chargen.Warnings` for whatever is off, or null when the firewall holds. */
 export function integrityWarning(facts = {}) {
-  // G10: chrome at chargen is allowed. Still warn when Integrity is off the living-People start,
+  // G10: chrome at chargen is allowed. Still warn when Integrity is off this People's start,
   // or when taint is already on the sheet, so the Integrity step stays honest.
   if (Number(facts.taint) !== 0) return "TaintNotZero";
-  if (facts.isCyborg) return null;
+  const start = integrityStartFor(facts);
   const integrity = facts.integrity ?? {};
-  if ((Number(integrity.value) !== INTEGRITY_START) || (Number(integrity.max) !== INTEGRITY_START)) return "IntegrityOff";
-  if (Number(facts.chromeCount) > 0 && Number(integrity.value) < INTEGRITY_START) return "IntegrityOff";
+  if ((Number(integrity.value) !== start) || (Number(integrity.max) !== start)) return "IntegrityOff";
+  if (Number(facts.chromeCount) > 0 && Number(integrity.value) < start) return "IntegrityOff";
   return null;
 }
 
@@ -912,7 +918,7 @@ function defineChargenWizardApp() {
         case "integrity":
           context.isCyborg = facts.isCyborg;
           context.integrity = facts.integrity;
-          context.integrityTarget = INTEGRITY_START;
+          context.integrityTarget = integrityStartFor(facts);
           context.chromeCount = facts.chromeCount;
           context.taint = facts.taint;
           break;
@@ -958,9 +964,7 @@ function defineChargenWizardApp() {
             array: CHARACTERISTIC_KEYS
               .map(key => `${loc(`Characteristics.${CHARACTERISTIC_LABELS[key]}`)} ${facts.characteristics[key] ?? "—"}`)
               .join(" · "),
-            integrity: facts.isCyborg
-              ? loc("Integrity.CyborgNA")
-              : `${facts.integrity.value ?? "—"}/${facts.integrity.max ?? "—"}`,
+            integrity: `${facts.integrity.value ?? "—"}/${facts.integrity.max ?? "—"}`,
             taint: facts.taint,
             chrome: facts.chromeCount,
             wealth: formatYen(facts.wealth),

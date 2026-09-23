@@ -1892,6 +1892,11 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 }
 .ghostwire-chargen .gw-cg-pick-name,
 .ghostwire-chargen .gw-cg-row-name { flex: 1; min-width: 0; font-weight: 600; }
+.ghostwire-chargen button.gw-cg-row-name.gw-cg-link {
+  display: block; width: 100%; text-align: left; background: transparent; border: 0;
+  padding: 0; color: inherit; font: inherit; font-weight: 600; cursor: pointer;
+}
+.ghostwire-chargen button.gw-cg-row-name.gw-cg-link:hover { color: var(--cg-cyan); text-decoration: underline; }
 .ghostwire-chargen .gw-cg-row-body { flex: 1; min-width: 0; }
 .ghostwire-chargen .gw-cg-row-meta { display: flex; gap: 0.4rem; align-items: baseline; font-size: 0.75rem; }
 .ghostwire-chargen .gw-cg-filters { display: flex; flex-wrap: wrap; gap: 0.3rem; }
