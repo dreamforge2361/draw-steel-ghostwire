@@ -1,11 +1,13 @@
 # Ghostwire Print Manuscript (Markdown SoR)
 
-**Status:** Official rulebook PDF **Version 0.4.0** (first official / playtest edition · B88 + B97 hotlinks) — Foundry module **0.3.24** (B98 journal regen: rules text-only + lore with in-tree art); Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates + L3 gang signs (B91) in-tree  
+**Status:** Official rulebook PDF **Version 0.4.0** — **reprint 2026-09-22 (N4)** covering module content through **0.3.100** (G2 armor/gadget mods published). Same edition number; no renumber. Playtest edition · B88 + B97 hotlinks. Michael-approved cover + L1/L2/L4/L5/Veil/Machines plates + L3 gang signs (B91) in-tree  
 **Path:** `docs/manuscript/`  
 **Spikes:** `docs/spikes/B64-MANUSCRIPT-SOR.md` · B73–B75 · **B88** PDF pipeline · **B91** gang signs · **B97** PDF hotlinks  
 **Print TOC lock:** `docs/rulebook/TOC-PROPOSAL.md` (LOCKED 2026-09-18, recommended 5-part package)
 
 This folder is the **single Markdown source of record** for the official **Version 0.4.0** rulebook PDF: lore harvested from the original Ghostwire master PDFs, plus rules pointed at `docs/raw/` (no dual-edit copies).
+
+**Reprint note (N4, 2026-09-22).** The 0.4.0 PDF was re-assembled against module **0.3.100**. Because rules chapters assemble by pointer, the reprint picks up everything RAW gained since the first print: Ritual Workings / Formula / Magnitude (Ch 24), Machines — drones, vehicles, mods (Ch 25, S8), Kit street-band grants + Scrap-Bow (Ch 9, G1), wearable armor/shield + gadget mod families published (Ch 12, G2), the Constructs & Pets FAQ (Ch 30), and lore harvest L6–L8. Version number is unchanged — this is a reprint, not a new edition.
 
 ---
 
