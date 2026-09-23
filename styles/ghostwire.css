@@ -2007,3 +2007,72 @@ body.ghostwire-minimap-jacked-in #board { filter: brightness(0.3) saturate(0.25)
 .ghostwire-machine-sheet .gw-m-inventory-notes > summary { cursor: pointer; font-size: 0.8rem; opacity: 0.85; }
 .ghostwire-machine-sheet .gw-m-inventory-notes[open] > summary { margin-bottom: 0.35rem; }
 .ghostwire-machine-sheet .gw-m-inventory-notes .gw-m-grid { margin-top: 0.25rem; }
+
+/* F10 Chest / Locker (0.3.113) — same deck shell as the kiosk, two shelves instead of a stock list */
+.ghostwire-locker {
+  --locker-accent: var(--ghostwire-accent);
+  --locker-hot: var(--ghostwire-accent-hot);
+  --locker-border: var(--ghostwire-border);
+  --locker-muted: var(--ghostwire-text-muted);
+  --locker-text: var(--ghostwire-text);
+  --locker-surface: var(--ghostwire-surface);
+}
+.ghostwire-locker .window-header { border-bottom: 1px solid color-mix(in srgb, var(--locker-accent) 40%, transparent); }
+.ghostwire-locker .window-content { padding: 0; background: var(--locker-surface); color: var(--locker-text); }
+.ghostwire-locker .gw-locker-deck { display: flex; flex-direction: column; gap: 0.65rem; min-height: 100%; padding: 0.75rem 0.85rem 0.9rem; }
+.ghostwire-locker .gw-locker-head { display: flex; gap: 0.7rem; align-items: center; }
+.ghostwire-locker .gw-locker-img {
+  width: 52px; height: 52px; border-radius: var(--ghostwire-radius); object-fit: contain;
+  border: 1px solid color-mix(in srgb, var(--locker-accent) 40%, var(--locker-border));
+}
+.ghostwire-locker .gw-locker-identity { flex: 1; min-width: 0; }
+.ghostwire-locker .gw-locker-name { margin: 0; border: none; color: var(--locker-accent); font-size: 1.15rem; }
+.ghostwire-locker .gw-locker-tagline { margin: 0.15rem 0 0; color: var(--locker-muted); font-size: var(--font-size-12, 12px); }
+.ghostwire-locker .gw-locker-meta { display: flex; gap: 0.35rem; margin: 0.35rem 0 0; flex-wrap: wrap; }
+.ghostwire-locker .gw-locker-chip {
+  padding: 0.05rem 0.4rem; border-radius: 999px; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--locker-accent) 45%, transparent); color: var(--locker-accent);
+}
+.ghostwire-locker .gw-locker-hero label { display: flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; color: var(--locker-muted); }
+.ghostwire-locker .gw-locker-hero select { flex: 1; min-width: 0; }
+.ghostwire-locker .gw-locker-stock,
+.ghostwire-locker .gw-locker-carry { display: flex; flex-direction: column; gap: 0.3rem; min-height: 0; overflow: auto; }
+.ghostwire-locker h4 { margin: 0; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--locker-muted); }
+.ghostwire-locker .gw-locker-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; }
+.ghostwire-locker .gw-locker-row {
+  display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.4rem;
+  border: 1px solid var(--locker-border); border-radius: var(--ghostwire-radius);
+}
+.ghostwire-locker .gw-locker-row-img { width: 28px; height: 28px; object-fit: cover; border-radius: 3px; flex: 0 0 auto; }
+.ghostwire-locker .gw-locker-row-body { flex: 1; min-width: 0; }
+.ghostwire-locker .gw-locker-row-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ghostwire-locker .gw-locker-row-meta { font-size: 0.72rem; color: var(--locker-muted); text-transform: capitalize; }
+.ghostwire-locker .gw-locker-row-actions { display: flex; align-items: center; gap: 0.3rem; flex: 0 0 auto; }
+.ghostwire-locker .gw-locker-count { width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+.ghostwire-locker .gw-locker-btn {
+  padding: 0.2rem 0.5rem; font-size: 0.75rem; white-space: nowrap;
+  border: 1px solid color-mix(in srgb, var(--locker-accent) 45%, var(--locker-border)); color: var(--locker-text);
+}
+.ghostwire-locker .gw-locker-btn-hot { border-color: color-mix(in srgb, var(--locker-hot) 55%, var(--locker-border)); color: var(--locker-hot); }
+.ghostwire-locker .gw-locker-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+.ghostwire-locker .gw-locker-empty { margin: 0; padding: 0.5rem; font-style: italic; color: var(--locker-muted); text-align: center; }
+.ghostwire-locker .gw-locker-foot { display: flex; align-items: center; gap: 0.5rem; margin-top: auto; }
+.ghostwire-locker .gw-locker-dim { flex: 1; min-width: 0; font-size: 0.72rem; color: var(--locker-muted); }
+
+/* F12 chrome condition line, under .ghostwire-chrome-line on the item sheet */
+.ghostwire-chrome-condition {
+  font-size: var(--font-size-12, 12px);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+.ghostwire-chrome-suppressed { color: var(--ghostwire-accent); }
+.ghostwire-chrome-damaged { color: var(--color-level-warning, #d08a2a); }
+.ghostwire-chrome-destroyed { color: var(--color-level-error, #c4453c); }
+.ghostwire-chrome-locked { margin: 0.35rem 0 0; color: var(--color-level-error, #c4453c); font-size: var(--font-size-12, 12px); }
+
+/* F17 identity band line, same slot as the chrome lines */
+.ghostwire-identity-line { font-size: var(--font-size-12, 12px); letter-spacing: 0.02em; color: var(--ghostwire-text-muted); }
+.ghostwire-identity-burn,
+.ghostwire-identity-paper { color: var(--color-level-warning, #d08a2a); }
+.ghostwire-identity-deep,
+.ghostwire-identity-seeded { color: var(--ghostwire-accent); }

@@ -82,7 +82,16 @@ Reuses conditions + Wired biofeedback (not a bespoke ladder):
 - **Damaged** — works at a penalty until downtime repair.
 - **Destroyed** — benefit gone; Integrity **locked out** until repair-or-replace downtime; neural destroy can wound hard.
 
-Exact numbers for called shots and anti-cyber effects are not yet published; the Director adjudicates.
+**Implemented 0.3.113 (F12).** The ladder is live in Foundry: each chrome Item carries a condition at `flags.draw-steel-ghostwire.chromeState` (Online / Suppressed / Damaged / Destroyed), *adjacent* to the catalog `chrome` flag, which stays untouched.
+
+- **Grade shifts the outcome.** **Soft / Bioware** takes one step milder (a pulse that suppresses standard chrome does nothing to bioware); **Salvage / Used** takes one step worse. **Standard** is the baseline. Nothing can Destroy Soft chrome outright.
+- **Suppressed** switches the implant's Active Effects off until a reboot (a maneuver, or free at the start of the mark's next turn).
+- **Damaged** leaves the benefit running at a **bane** until a downtime repair Project (goal 30 + 10 × Integrity cost; parts 25% of its ¥). Natural menders: **Wrench**, **Medic / street-doc**, **Technomancer**.
+- **Destroyed** switches the benefit off and **locks its Body Integrity out**. The Item is **never deleted** — a bare delete is refused, because deletion would hand back the 75% removal refund. Repair-or-replace is a harder Project (goal 60 + 20 × Integrity cost; parts 60% of its ¥), or the Director uses **Replace destroyed chrome**, which refunds nothing.
+
+**What writes it.** Hacker 1-shot magazine chips — **Pulse** (E1, Suppress), **System Rot** (E2, Damage), **Sunder Spike** (E3, Destroy) — against wireless chrome while Connected. Technomancer **Resonance Pulse** (Suppress) and **Chrome Sunder** (5 Resonance, Destroy), neither of which needs the implant to be wireless. **Resonance Mending** and **Machine God’s Rite** clear what RAW already said they clear.
+
+**Table guardrail:** one implant Destroyed per target per encounter. Exact numbers for called shots and other anti-cyber effects are still unpublished; the Director adjudicates with **Set chrome condition…**. Director note: `docs/directors/f12-chrome-damage.md`.
 
 ## Install / remove / repair (downtime loop)
 

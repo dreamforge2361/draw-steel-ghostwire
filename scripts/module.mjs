@@ -48,6 +48,9 @@ import { registerRituals } from "./rituals.mjs";
 import { registerRitualWorking } from "./ritual-working.mjs";
 import { registerTokenVision } from "./token-vision.mjs";
 import { registerChargenWizard } from "./chargen-wizard.mjs";
+import { registerChromeDamage, chromeRefundBlocked } from "./chrome-damage.mjs";
+import { registerLocker } from "./locker.mjs";
+import { registerIdentity } from "./identity.mjs";
 
 const MODULE_ID = "draw-steel-ghostwire";
 
@@ -140,6 +143,9 @@ Hooks.once("init", () => {
   registerRitualWorking();
   registerTokenVision();
   registerChargenWizard();
+  registerChromeDamage();
+  registerLocker();
+  registerIdentity();
 });
 
 // ---------- Wired connection states ----------
@@ -790,6 +796,14 @@ Hooks.on("deleteItem", (item, options, userId) => {
   const chrome = item.getFlag(MODULE_ID, "chrome");
   const actor = item.parent;
   if (!chrome || (userId !== game.user.id) || (actor?.type !== "hero")) return;
+  // F12: a Destroyed implant returns nothing. Its Integrity stays locked out until a fresh implant
+  // is installed — the whole reason Destroyed never deletes the Item by itself.
+  if (chromeRefundBlocked(item, options)) {
+    const granted = actor.items.filter(i => i.getFlag(MODULE_ID, "grantedBy") === item.id).map(i => i.id);
+    if (granted.length) actor.deleteEmbeddedDocuments("Item", granted);
+    ui.notifications.info(game.i18n.format("GHOSTWIRE.ChromeDamage.Notify.NoRefund", { name: item.name, cost: chrome.integrity }));
+    return;
+  }
   const { value, max } = getIntegrity(actor);
   const refund = Math.floor(chrome.integrity * 0.75);
   const restored = Math.min(max, value + refund);

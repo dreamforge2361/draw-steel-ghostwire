@@ -1,0 +1,62 @@
+{
+  "_id": "GwF17CradleSeed1",
+  "_key": "!items!GwF17CradleSeed1",
+  "name": "GHOSTWIRE.Gear.Items.CradleSeededSin.Name",
+  "type": "treasure",
+  "img": "icons/sundries/documents/document-sealed-signatures-red.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.CradleSeededSin.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "cradle-seeded-sin",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 4,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearIdentity00",
+  "sort": 5000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 4,
+        "availability": "military",
+        "price": 90000,
+        "modSlots": 0,
+        "tags": [
+          "Identity",
+          "SIN"
+        ]
+      },
+      "identity": {
+        "kind": "sin",
+        "quality": 5,
+        "band": "seeded",
+        "scan": "double-edge",
+        "echelon": 4,
+        "burnRisk": 0
+      }
+    }
+  }
+}

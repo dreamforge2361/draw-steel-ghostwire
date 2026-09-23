@@ -1,0 +1,101 @@
+<div class="gw-locker-deck">
+  {{#if missing}}
+  <p class="gw-locker-empty">{{hint}}</p>
+  {{else if denied}}
+  <header class="gw-locker-head">
+    <div class="gw-locker-identity">
+      <h3 class="gw-locker-name">{{name}}</h3>
+      <p class="gw-locker-tagline">{{hint}}</p>
+    </div>
+  </header>
+  {{else}}
+  <header class="gw-locker-head">
+    {{#if img}}<img class="gw-locker-img" src="{{img}}" alt="">{{/if}}
+    <div class="gw-locker-identity">
+      <h3 class="gw-locker-name">{{name}}</h3>
+      {{#if tagline}}<p class="gw-locker-tagline">{{tagline}}</p>{{/if}}
+      <p class="gw-locker-meta">
+        <span class="gw-locker-chip">{{via}}</span>
+        <span class="gw-locker-chip">{{shareLabel}}</span>
+      </p>
+    </div>
+  </header>
+
+  <div class="gw-locker-hero">
+    <label>
+      {{localize "GHOSTWIRE.Locker.Hero"}}
+      <select data-hero>
+        {{#each heroes}}
+        <option value="{{uuid}}" {{#if selected}}selected{{/if}}>{{name}}</option>
+        {{else}}
+        <option value="">{{localize "GHOSTWIRE.Locker.NoHero"}}</option>
+        {{/each}}
+      </select>
+    </label>
+  </div>
+
+  {{#unless canWrite}}<p class="gw-locker-empty">{{readOnlyHint}}</p>{{/unless}}
+
+  <section class="gw-locker-stock">
+    <h4>{{stockHeading}}</h4>
+    {{#if stockEmpty}}
+    <p class="gw-locker-empty">{{localize "GHOSTWIRE.Locker.StockEmpty"}}</p>
+    {{/if}}
+    <ul class="gw-locker-list">
+      {{#each stock}}
+      <li class="gw-locker-row">
+        <img class="gw-locker-row-img" src="{{img}}" alt="">
+        <div class="gw-locker-row-body">
+          <div class="gw-locker-row-name">{{name}}</div>
+          <div class="gw-locker-row-meta">{{type}} · ×{{quantity}}</div>
+        </div>
+        <div class="gw-locker-row-actions">
+          <input type="number" class="gw-locker-count" data-count="{{id}}" min="1" step="1" max="{{quantity}}" value="1">
+          <button type="button" class="gw-locker-btn gw-locker-btn-hot" data-action="withdraw" data-item-id="{{id}}"
+            {{disabled (not ../canWrite)}}>
+            <i class="fa-solid fa-hand-holding"></i> {{localize "GHOSTWIRE.Locker.Withdraw"}}
+          </button>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <section class="gw-locker-carry">
+    <h4>{{carryHeading}}</h4>
+    {{#if carryEmpty}}
+    <p class="gw-locker-empty">{{localize "GHOSTWIRE.Locker.CarryEmpty"}}</p>
+    {{/if}}
+    <ul class="gw-locker-list">
+      {{#each carry}}
+      <li class="gw-locker-row">
+        <img class="gw-locker-row-img" src="{{img}}" alt="">
+        <div class="gw-locker-row-body">
+          <div class="gw-locker-row-name">{{name}}</div>
+          <div class="gw-locker-row-meta">{{type}} · ×{{quantity}}</div>
+        </div>
+        <div class="gw-locker-row-actions">
+          <input type="number" class="gw-locker-count" data-count="{{id}}" min="1" step="1" max="{{quantity}}" value="1">
+          <button type="button" class="gw-locker-btn" data-action="deposit" data-item-id="{{id}}"
+            {{disabled (not ../canWrite)}}>
+            <i class="fa-solid fa-box-archive"></i> {{localize "GHOSTWIRE.Locker.Deposit"}}
+          </button>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  <footer class="gw-locker-foot">
+    <span class="gw-locker-dim">{{dropHint}}</span>
+    {{#if isGM}}
+    <button type="button" class="gw-locker-btn" data-action="toggleShare">
+      <i class="fa-solid fa-users"></i> {{localize "GHOSTWIRE.Locker.ToggleShare"}}
+    </button>
+    <button type="button" class="gw-locker-btn" data-action="openSheet">
+      <i class="fa-solid fa-user"></i> {{localize "GHOSTWIRE.Locker.OpenSheet"}}
+    </button>
+    {{/if}}
+  </footer>
+  {{/if}}
+</div>

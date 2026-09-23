@@ -1,0 +1,62 @@
+{
+  "_id": "GwF17DeepCover01",
+  "_key": "!items!GwF17DeepCover01",
+  "name": "GHOSTWIRE.Gear.Items.DeepCoverSin.Name",
+  "type": "treasure",
+  "img": "icons/sundries/documents/document-official-capital.webp",
+  "system": {
+    "description": {
+      "value": "GHOSTWIRE.Gear.Items.DeepCoverSin.Description",
+      "director": ""
+    },
+    "source": {
+      "book": "Ghostwire Core Rulebook",
+      "page": "Master Gear List",
+      "license": "Draw Steel Creator License"
+    },
+    "_dsid": "deep-cover-sin",
+    "kind": "other",
+    "category": "trinket",
+    "echelon": 3,
+    "keywords": [],
+    "quantity": 1,
+    "project": {
+      "prerequisites": "",
+      "source": "",
+      "rollCharacteristic": [],
+      "yield": {
+        "amount": "1",
+        "display": ""
+      },
+      "goal": null
+    }
+  },
+  "effects": [],
+  "folder": "gwGearIdentity00",
+  "sort": 4000,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "draw-steel-ghostwire": {
+      "gear": {
+        "echelon": 3,
+        "availability": "restricted",
+        "price": 25000,
+        "modSlots": 0,
+        "tags": [
+          "Identity",
+          "SIN"
+        ]
+      },
+      "identity": {
+        "kind": "sin",
+        "quality": 4,
+        "band": "deep",
+        "scan": "edge",
+        "echelon": 3,
+        "burnRisk": 1
+      }
+    }
+  }
+}
