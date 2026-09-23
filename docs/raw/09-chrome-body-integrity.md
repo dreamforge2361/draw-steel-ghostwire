@@ -1,9 +1,6 @@
 # Chrome & Body Integrity
 
-**RAW status:** draft (implant ¥ + Availability catalog 2026-09-18, B71)  
-**Sources:** `docs/rulebook/12-chrome.md`, `docs/masters/GHOSTWIRE_CHROME_MASTER.md`, Ghostwire Chrome pack (`src/packs/chrome/`), Soft SKUs per `docs/spikes/B55-SOFT-CHROME-KIT-RETAGS.md`, Availability bands per `docs/raw/08-kits-gear-wealth.md`
-
-**Pass A locks** (living Body Integrity **20**, three grades, magic erosion, removal scar 75%/25%) stay intact below. **Cyborgs** use this chapter too: Body Integrity **25** start and living Chrome from the same pack (Michael 2026-09-23). This pass publishes the **implant ¥ + Availability** catalog from the shipped Chrome pack and B55 Soft SKUs — not from invented numbers.
+**Pass A locks** (living Body Integrity **20**, three grades, magic erosion, removal scar 75%/25%) stay intact below. **Cyborgs** use this chapter too: Body Integrity **25** start and living Chrome from the same pack. This pass publishes the **implant ¥ + Availability** catalog from the shipped Chrome pack and the Soft SKU spike — not from invented numbers.
 
 ---
 
@@ -16,7 +13,7 @@
 
 Pushing Integrity to zero does **not** turn a hero into a Cyborg. Becoming a Cyborg is a chargen species choice, never a chrome outcome.
 
-**Chrome does not raise Taint.** Installing or removing implants spends or refunds Body Integrity only. The shared hero stain track is **Taint 0–12** (`27-corruption-taint.md`). Cyborgs still use Taint (demons, pacts, zones) **and** Body Integrity.
+**Chrome does not raise Taint.** Installing or removing implants spends or refunds Body Integrity only. The shared hero stain track is **Taint 0–12** (**Corruption & Taint**). Cyborgs still use Taint (demons, pacts, zones) **and** Body Integrity.
 
 ## Body Integrity (living 20 / Cyborg 25)
 
@@ -61,7 +58,7 @@ Every living caster — Elementalist, Street Priest, Technomancer — uses this 
 
 Soft grade is the mage's only realistic escape valve — and high-Availability / late-game by design.
 
-### Caster chrome soft-cap (LOCKED 2026-09-18)
+### Caster chrome soft-cap (LOCKED)
 
 **Elementalist, Street Priest, and Technomancer** may spend at most **5 Body Integrity** on chrome (Soft, Standard, and Salvage all count toward this total). Soft grade remains the intended path under that ceiling.
 
@@ -82,7 +79,7 @@ Reuses conditions + Wired biofeedback (not a bespoke ladder):
 - **Damaged** — works at a penalty until downtime repair.
 - **Destroyed** — benefit gone; Integrity **locked out** until repair-or-replace downtime; neural destroy can wound hard.
 
-**Implemented 0.3.113 (F12).** The ladder is live in Foundry: each chrome Item carries a condition at `flags.draw-steel-ghostwire.chromeState` (Online / Suppressed / Damaged / Destroyed), *adjacent* to the catalog `chrome` flag, which stays untouched.
+**The ladder is live in Foundry:** each chrome Item carries a condition at `flags.draw-steel-ghostwire.chromeState` (Online / Suppressed / Damaged / Destroyed), *adjacent* to the catalog `chrome` flag, which stays untouched.
 
 - **Grade shifts the outcome.** **Soft / Bioware** takes one step milder (a pulse that suppresses standard chrome does nothing to bioware); **Salvage / Used** takes one step worse. **Standard** is the baseline. Nothing can Destroy Soft chrome outright.
 - **Suppressed** switches the implant's Active Effects off until a reboot (a maneuver, or free at the start of the mark's next turn).
@@ -91,7 +88,7 @@ Reuses conditions + Wired biofeedback (not a bespoke ladder):
 
 **What writes it.** Hacker 1-shot magazine chips — **Pulse** (E1, Suppress), **System Rot** (E2, Damage), **Sunder Spike** (E3, Destroy) — against wireless chrome while Connected. Technomancer **Resonance Pulse** (Suppress) and **Chrome Sunder** (5 Resonance, Destroy), neither of which needs the implant to be wireless. **Resonance Mending** and **Machine God’s Rite** clear what RAW already said they clear.
 
-**Table guardrail:** one implant Destroyed per target per encounter. Exact numbers for called shots and other anti-cyber effects are still unpublished; the Director adjudicates with **Set chrome condition…**. Director note: `docs/directors/f12-chrome-damage.md`.
+**Table guardrail:** one implant Destroyed per target per encounter. Exact numbers for called shots and other anti-cyber effects are still unpublished; the Director adjudicates with **Set chrome condition…**.
 
 ## Install / remove / repair (downtime loop)
 
@@ -120,9 +117,9 @@ Bundle prices and package Integrity totals remain **PROVISIONAL** (not in the Ch
 
 ## Implant catalog (¥ + Availability)
 
-Flesh has a price list. The tables below are the **living-hero chrome buy list**: name, grade, Body Integrity, ¥, Availability (Street → Prototype), and a one-line effect already published in RAW or on the Foundry Chrome Item. Buy with ¥, gate on Availability (`08-kits-gear-wealth.md`), install in downtime, spend Integrity — the loop in **Install / remove / repair** above.
+Flesh has a price list. The tables below are the **living-hero chrome buy list**: name, grade, Body Integrity, ¥, Availability (Street → Prototype), and a one-line effect already published in RAW or on the Foundry Chrome Item. Buy with ¥, gate on Availability (**Kits, Gear & Wealth**, `08`), install in downtime, spend Integrity — the loop in **Install / remove / repair** above.
 
-**Sources for these rows (do not invent off-table):** Standard SKUs from the Ghostwire Chrome pack; Soft SKUs from spike **B55** (Soft = **4×** the matching Standard ¥ and **one Availability step up**, with Soft-only Silvertongue pieces priced beside Soft Vocal Modulator). Salvage grade still uses the Pass A Integrity multiplier (×**1.5** Standard) but has **no published ¥ / Availability SKUs** yet.
+**Sources for these rows (do not invent off-table):** Standard SKUs from the Ghostwire Chrome pack; Soft SKUs from the Soft SKU spike (Soft = **4×** the matching Standard ¥ and **one Availability step up**, with Soft-only Silvertongue pieces priced beside Soft Vocal Modulator). Salvage grade still uses the Pass A Integrity multiplier (×**1.5** Standard) but has **no published ¥ / Availability SKUs** yet.
 
 **How to read a row**
 
@@ -156,9 +153,9 @@ Baseline street-clinic metal. Default grade for Operators, Scouts, and anyone wh
 
 **13 Standard SKUs** priced from the Chrome pack.
 
-### Soft / Bioware (B55)
+### Soft / Bioware
 
-Vat-cultured chrome for Faces and casters who refuse to carve their casting pool to ribbons. Soft Integrity = **0.4 × Standard, round up** (Pass A). Every Soft SKU below costs **1 BI**, so a single implant costs a caster **⌊1/3⌋ = 0** casting-cap erosion — still subject to the **5 BI caster soft-cap** (B55b). Soft stays high-Availability by design; never a free starting build.
+Vat-cultured chrome for Faces and casters who refuse to carve their casting pool to ribbons. Soft Integrity = **0.4 × Standard, round up** (Pass A). Every Soft SKU below costs **1 BI**, so a single implant costs a caster **⌊1/3⌋ = 0** casting-cap erosion — still subject to the **5 BI caster soft-cap**. Soft stays high-Availability by design; never a free starting build.
 
 | Implant | Location | BI | ¥ | Avail | Effect |
 |---|---|---:|---:|---|---|
@@ -169,7 +166,7 @@ Vat-cultured chrome for Faces and casters who refuse to carve their casting pool
 | Cyber-Ears (Soft) | Ears / Aural | 1 | 7,200 | Restricted | Edge on Perception (does not stack with Cyber-Eyes) |
 | Cyber-Eyes (Soft) | Eyes / Optics | 1 | 8,000 | Restricted | Edge on Perception; ignore darkness / smoke banes on strikes (manual) |
 
-**6 Soft SKUs** priced from B55. Soft ¥ for clones are a **provisional lock** (4× Standard + one Avail step) until a future Soft price appendix revisits them — the numbers above match the shipped pack.
+**6 Soft SKUs** priced from the Soft spike. Soft ¥ for clones are a **provisional lock** (4× Standard + one Avail step) until a future Soft price appendix revisits them — the numbers above match the shipped pack.
 
 ### Salvage / Used
 
@@ -182,10 +179,10 @@ Mark these **PROVISIONAL** until a later chrome / economy pass cites a source:
 | Gap | Notes |
 |---|---|
 | **All Salvage ¥ + Availability** | Grade rule locked; no pack SKUs |
-| **Soft variants** of Wired Reflexes, Reaction Enhancer, Muscle/Bone Lacing, Dermal Plating, Cyberlimb, Implant Weapon, Running Gear, Skillwires, Internal Air | B55 only shipped the six Soft rows above |
+| **Soft variants** of Wired Reflexes, Reaction Enhancer, Muscle/Bone Lacing, Dermal Plating, Cyberlimb, Implant Weapon, Running Gear, Skillwires, Internal Air | Only the six Soft rows above have shipped |
 | **Chrome Package** bundle ¥ + total Integrity | Six signature lines named; totals open |
 | **Cyborg Frame Module** ¥ + hardpoint caps | Deferred: may later **retag** chrome SKUs — do not invent a separate pack yet |
-| Soft ¥ multiplier as final Appendix lock | B55 provisional 4× + one Avail step; revisit when Soft prices are appendix-locked |
+| Soft ¥ multiplier as final Appendix lock | Provisional 4× + one Avail step; revisit when Soft prices are appendix-locked |
 
 ## Class hooks (short)
 ## Class hooks (short)

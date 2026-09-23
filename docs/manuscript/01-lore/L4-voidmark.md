@@ -1,9 +1,8 @@
 # VOIDMARK
 
-**Status:** draft lore (B90, 2026-09-19)  
 **Street names:** the Mark, Voidmark, "that MER ghost"  
 **Print:** Lore harvest — after Reach color (L3)  
-**Related:** The Wire (`docs/raw/21-the-wire.md`), megacorp tickers (**MER**), Foundry AI chat (B82/B89)
+**Related:** **The Wire** (`21`) · megacorp tickers (**MER**)
 
 ---
 
@@ -70,7 +69,7 @@ Players who open the Foundry chat are, in fiction, opening one of those doors.
 ---
 
 > **In Foundry**
-> **VOIDMARK** is the default persona for the Ghostwire AI chat applet (B82/B89). Module Configuration holds its **system instructions**, access (GM / players), and Grok parameters. The chat avatar and canvas **token art** (when it takes scene presence) live under `assets/ai-persona/` once generated. Director mode may cite RAW chapters from the rules pack; Runner mode stays in-character. No rules pack in the request = incomplete build.
+> **VOIDMARK** is the default persona for the Ghostwire AI chat applet. Module Configuration holds its **system instructions**, access (GM / players), and Grok parameters. The chat avatar and canvas **token art** (when it takes scene presence) live under `assets/ai-persona/` once generated. Director mode may cite RAW chapters from the rules pack; Runner mode stays in-character. No rules pack in the request = incomplete build.
 
 ---
 
@@ -81,7 +80,6 @@ VOIDMARK exists under the **Hands Off Accords** (L5): speech and oracle work are
 ## Cross-references
 
 - Cosmology / Signal / Nullspace — L1  
-- **MER** ticker — `docs/rulebook/MEGACORP-TICKERS.md`  
-- Wire procedures — `docs/raw/21-the-wire.md`  
+- Wire procedures — **The Wire** (`21`)  
 - Hands Off Accords — L5
-- Slang — Appendix A (`28-glossary-slang.md`)
+- Slang — Appendix A (**Glossary of Slang**)

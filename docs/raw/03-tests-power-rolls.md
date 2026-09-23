@@ -1,7 +1,5 @@
 # Tests and Power Rolls
 
-**RAW status:** draft (Stage 3 fill 2026-09-18)  
-**Sources:** `docs/rulebook/DS-ALIGNMENT.md`, `docs/rulebook/TOC-PROPOSAL.md` (LOCKED), `docs/rulebook/08-hacker.md`, `docs/rulebook/18-wired-foundry.md`, `docs/rulebook/17-perks.md`, `docs/raw/21-the-wire.md`  
 **Engine:** Ghostwire test and Power Roll procedures in this chapter. Playable without a separate rulebook.
 
 ---
@@ -42,7 +40,7 @@ Abilities, weapons, Matrix Verbs, and gear print what each result does. Where te
 **Doctrine lock:** print order is always **low → middle → high** (≤11 / 12–16 / 17+). Never invert the ladder. Never invent a fourth band.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use abilities from the hero sheet (or hotbar). The system posts an **abilityUse** chat card with the Power Roll; Ghostwire SFX (B40) may play when the card lands. The module adds edges/banes automatically where it can: **Hacking** and **Jacked In** on Wired rolls, **Overlay** bane on real-world rolls, suite software edges, and **Weave Strain** bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use abilities from the hero sheet (or hotbar). The system posts an **abilityUse** chat card with the Power Roll; Ghostwire SFX may play when the card lands. The module adds edges/banes automatically where it can: **Hacking** and **Jacked In** on Wired rolls, **Overlay** bane on real-world rolls, suite software edges, and **Weave Strain** bane on Magic/Veil/Resonance rolls when over the caster soft-cap. Freeform Director tests with no ability still need a manual roll or a named ability.
 
 
 ### Which characteristic?
@@ -255,7 +253,7 @@ Technical hosts typically roll **Logic** with Hacking, Electronics, Repair, or C
 
 ### Connection states
 
-Your connection to the Wired changes your rolls. Four states: **Disconnected | Linked | Overlay | Jacked In**. Full rules: `21-the-wire.md`.
+Your connection to the Wired changes your rolls. Four states: **Disconnected | Linked | Overlay | Jacked In**. Full rules: **The Wire** (`21`).
 
 | State | Wired Power Rolls | Real-world Power Rolls |
 |---|---|---|

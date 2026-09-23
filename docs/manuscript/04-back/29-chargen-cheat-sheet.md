@@ -1,6 +1,6 @@
 # Appendix B — Character Generation Cheat Sheet
 
-**Print:** Appendix B — Foundry punch-list (B93)  
+**Print:** Appendix B — Foundry punch-list  
 **Audience:** players making a runner on the Hero sheet. Not a second rules chapter.
 
 Make the runner **in Foundry**, on the **Hero sheet**, like a punch-list. This book + the sheet are enough.

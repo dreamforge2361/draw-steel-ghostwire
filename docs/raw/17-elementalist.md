@@ -1,9 +1,6 @@
 # The Elementalist
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/06-elementalist.md`
-
-Veil workings referenced here are summarized in `22-the-veil.md`.
+Veil workings referenced here are summarized in **The Veil** (`22`).
 
 ---
 
@@ -80,14 +77,14 @@ Heroic Abilities are the Elementalist's workings -- chosen by cost band as you l
 
 **Elemental Wall** and **Conflagration/Tempest** are the two Heavy workings -- the 5-Essence releases you build your ramp toward. Wall is the controller's play: block a line, force a chokepoint, punish the room. Tempest is the blaster's play: everything in the cube takes heavy damage, and if you're willing to burn Persistent 2 you can keep detonating for -4/turn.
 
-**Summon Elemental (the pet path)** is the class's defining working. *Extension vs. independent turn order at the table — see FAQ `28-constructs-pets-faq.md`.*
+**Summon Elemental (the pet path)** is the class's defining working. *Extension vs. independent turn order at the table — see FAQ **Constructs & Pets FAQ** (`28`).*
 
 - **As an extension (lower investment, levels 1–5 / early echelons):** the elemental acts on **your turn**, using your action economy -- a lash of living flame, a stone fist, a striking wind. Low bookkeeping. Damage per its own Rank (light-band = 4+chr low / 7+chr middle / 10+chr high). Persistent 2 (-4 to your Essence intake per turn while sustained).
 - **As an independent figure (higher investment, levels 7–10 / later echelons, or a properly-bound mid-level+ Elementalist):** a properly bound elemental becomes its **own figure** on the map with its own Stamina and activation on the shared round -- the true summoner fantasy. Stamina per Veil §C3 (locked); strike damage for Rank 1 / companions uses the light-band printed above — Rank 2+ strike ladders are deferred (see Veil §C3). Bind unlocks: a 1st-level Elementalist starts with a Rank 1 extension only; a 5th-level Elementalist unlocks Rank 2 independent. Persistent 4 (-8 to your Essence intake per turn while sustained).
 - **The bind is the throttle:** a **Bind Power Roll (2d10 + Logic)** on cast, with an **edge if your Persona is equal to or higher than your Logic** (Bind Discipline's +1 still applies) -- high (17+) binds it clean and grants an edge on Command rolls; middle (12–16) binds but the elemental resists a Command once per encounter; low (≤11) **fails/breaks the bind** and the elemental becomes **hostile and free** for one round before the Veil pulls it back -- the Veil chapter's slipped-leash risk. A **heavy hit while sustaining** can also break the bind (Persona save vs. potency).
-- **The Price applies:** a willing elemental exacts a **task aligned to its nature** paid before or after (a Pyromancer honoring flame, a Geomancer restoring a fouled spring); coercing an unwilling one pays in **+1 Taint + 1 spirit-attention tick per Rank** at cast (`27-corruption-taint.md`) -- lightest weight among casters, but never zero. Non-pact Taint still respects the +1-per-scene cap.
+- **The Price applies:** a willing elemental exacts a **task aligned to its nature** paid before or after (a Pyromancer honoring flame, a Geomancer restoring a fouled spring); coercing an unwilling one pays in **+1 Taint + 1 spirit-attention tick per Rank** at cast (**Corruption & Taint**) -- lightest weight among casters, but never zero. Non-pact Taint still respects the +1-per-scene cap.
 - **Sustaining a bound elemental** reduces Essence banked each turn (Persistent 2 for extensions, Persistent 4 for independents). You cannot rain Tempests at full tilt *and* hold a greater elemental without deliberate investment.
-- **Stamina (Veil §C3 locked 2026-09-18):** a summoned elemental has **rank base + (Logic × level)** Stamina — base **15** (Rank 1 and the signature companions) / **25** (Rank 2) / **35** (Rank 3) / **50** (Rank 4) / **65** (Rank 5). Summon Elemental binds up to **Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th**. At most **2** bound non-companion elementals at once; a new bind releases the oldest. Rank 2+ / Greater / R5 strike ladders and defense stamps remain deferred (see `22-the-veil.md` §C3).
+- **Stamina (Veil §C3 locked 2026-09-18):** a summoned elemental has **rank base + (Logic × level)** Stamina — base **15** (Rank 1 and the signature companions) / **25** (Rank 2) / **35** (Rank 3) / **50** (Rank 4) / **65** (Rank 5). Summon Elemental binds up to **Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th**. At most **2** bound non-companion elementals at once; a new bind releases the oldest. Rank 2+ / Greater / R5 strike ladders and defense stamps remain deferred (see **The Veil** (`22`) §C3).
 ### 7-Cost Band (chosen at 3rd level; provisional)
 
 | Ability | Essence Cost | Type | Target | Effect Summary |
@@ -112,7 +109,7 @@ Heroic Abilities are the Elementalist's workings -- chosen by cost band as you l
 
 | Ability | Essence Cost | Type | Effect |
 |---|---|---|---|
-| **Greater Elemental Summon** | 11 | Main Action, Veil working | Bind a **Rank 4 elemental** (Rank 5 at Echelon 4 / late career) as an independent figure. It becomes an active combatant on the shared round with its own Stamina, its own maneuvers, its own signature (an Ancient Flame, a Roaring Storm, a Living Mountain, a Devouring Void). **Persistent 6** (-12/turn). Willingly-bound: extracts a **greater task** (a season's service to a temple, a fouled land restored, a corrupted vein cleansed); coerced: pays **+3 Taint + 3 spirit-attention** on cast (`27-corruption-taint.md`). The full summoner fantasy realized |
+| **Greater Elemental Summon** | 11 | Main Action, Veil working | Bind a **Rank 4 elemental** (Rank 5 at Echelon 4 / late career) as an independent figure. It becomes an active combatant on the shared round with its own Stamina, its own maneuvers, its own signature (an Ancient Flame, a Roaring Storm, a Living Mountain, a Devouring Void). **Persistent 6** (-12/turn). Willingly-bound: extracts a **greater task** (a season's service to a temple, a fouled land restored, a corrupted vein cleansed); coerced: pays **+3 Taint + 3 spirit-attention** on cast (**Corruption & Taint**). The full summoner fantasy realized |
 | **World-Sundering** | 11 | Main Action, area cube 8 (dist 10) | **No Power Roll** -- the damage is automatic and keyed to your Logic. Every enemy in the cube of potency **strong** or weaker takes **20+chr elemental damage** and is **prone**; every enemy of potency **weak** is **reduced to 0 Stamina**; minions in the cube are outright destroyed. The ground in the cube becomes an **elemental scar** for the rest of the session -- difficult terrain, ambient elemental damage 3/turn to any non-elemental creature crossing it |
 | **Attunement Ascendant** | 11 | Maneuver, self | No roll. Until the end of the encounter, your Channel ramp is **already at +4 on cast and does not reset when you switch attunement**. Additionally, you may attune to **two elements at once**; you gain the drip and resonance bonus of both, and your Signature abilities may combine damage types (fire + lightning = plasma; earth + water = mud; etc., Director rules on combined effects). The self-buff apex -- turns you into a walking hurricane of typed damage for the rest of the fight |
 | **Break the Veil** | 11 | Main Action, self-centered aura 5 | The Veil thins around you. Every ally within the aura may **sustain any persistent working at reduced cost** (Persistent 2 becomes Persistent 1, draining -2/turn; Persistent 4 becomes Persistent 2, draining -4/turn). **You** may sustain **one** persistent working with **no Essence cost** for the rest of the encounter. Additionally, all your Signature and Heroic ability rolls gain edge for the duration. **Persistent 4** (-8/turn) on cast. The team-wide caster apex |
@@ -283,10 +280,10 @@ The natural attachment points are the **magic/tech-flavored Kits** -- **Hexshot*
 
 **Warning to the player:** **A Cyborg species character can NEVER be an Elementalist -- Arcane Severance bars all magic access absolutely.** This is a species restriction, not a class restriction, and is enforced at character creation (Step 2 of the character-creation checklist). If you built a Cyborg thinking to play a hexer, rebuild your species or your class before the first session.
 
-For **all non-Cyborg** Elementalists, chrome is **strongly discouraged but not forbidden**. Cyberware collapses a mage's channeling: chrome reduces your **Essence cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). Soft is the only grade a serious Elementalist should install.
+For **all non-Cyborg** Elementalists, chrome is **strongly discouraged but not forbidden**. Cyberware collapses a mage's channeling: chrome reduces your **Essence cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (**Chrome & Body Integrity**, `09`). Soft is the only grade a serious Elementalist should install.
 
 Chrome never generates Essence and never converts into class power.
 
-Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero — see `09-chrome-body-integrity.md` for install rules and grades.
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero — see **Chrome & Body Integrity** (`09`) for install rules and grades.
 
 ---

@@ -1,8 +1,5 @@
 # The Scout
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/02-scout.md`
-
 ---
 
 ## Class Chassis

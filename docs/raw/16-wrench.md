@@ -1,9 +1,6 @@
 # The Wrench
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/05-wrench.md`
-
-Machine stat cards (drone, vehicle, building) appear in this chapter as Wrench rules; the shared drone and vehicle inventories are in `23-machines.md`. Non-Wrench (and optional redundant Wrench) scout leashes use **Street Eye** (Companion Link) in that chapter — they do **not** replace Deploy & Command, Uptime, Jump-In, or Fleet Deck+.
+Machine stat cards (drone, vehicle, building) appear in this chapter as Wrench rules; the shared drone and vehicle inventories are in **Machines** (`23`). Non-Wrench (and optional redundant Wrench) scout leashes use **Street Eye** (Companion Link) in that chapter — they do **not** replace Deploy & Command, Uptime, Jump-In, or Fleet Deck+.
 
 ---
 
@@ -84,7 +81,7 @@ Every Wrench chooses from the following baseline, no-Uptime-cost options at 1st 
 >
 > *As a main action, bring a carried drone, turret, or vehicle online — it appears in an unoccupied space within Range and is now under your control. As a maneuver instead, issue orders to every machine you already control within Range; each acts on your turn per its programmed behavior or your direct call. Uptime cost 0.*
 >
-> **Firewall:** Street Eye in `23-machines.md` is the any-class soft leash. You still use this signature (and Rigged Fire / Jump-In / fleet features) even if Street Eye also appears on the sheet because you own a scout drone.
+> **Firewall:** Street Eye in **Machines** (`23`) is the any-class soft leash. You still use this signature (and Rigged Fire / Jump-In / fleet features) even if Street Eye also appears on the sheet because you own a scout drone.
 
 > **Rigged Fire** (Signature)
 > *Command · Main Action · Range = the firing machine's weapon range*
@@ -517,7 +514,7 @@ Grants the **Electronics** skill and a **drone-parts/grey-market salvage contact
 
 ### Vehicle Rig-Pilot — *"the Driver"* — Street-Taught (No Corp Academy)
 
-Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). The Harness is a **Connect** interface (≡ deck; see `21-the-wire.md`).
+Grants the **Piloting** skill and a **chop-shop/transport contact**. Starter Kit: **Rigger's Harness** (light Kit; direct-neural control interface mount; an **edge** on Jump-In tests). The Harness is a **Connect** interface (≡ deck; see **The Wire**, `21`).
 
 **Signature reskin:** Deploy & Command, for a Rig-Pilot, is really "wake the platform up" — deploying their signature vehicle costs the same Uptime but the vehicle arrives Jumped-In-ready rather than needing a separate maneuver to jack in. Rigged Fire from a Jumped-In vehicle can strike two targets in a line if they're aligned with a mount's firing arc — the platform's weapons are bigger and often hit more than one thing. Field Repair on their own platform restores more Integrity than the class baseline.
 
@@ -881,4 +878,4 @@ Grants the **Security Systems** skill and a **parts-supplier/quartermaster conta
 - **Wired / Machines access, no Veil.** The Wrench lives across Combat, the Wired, and the Machines vehicle-combat sub-system, with fleet command as its emphasis. A **Cyborg can be a Wrench** — a machine commanding machines — and is a strong Full-Conversion build.
 
 
-> **Foundry 0.3.105:** Fleet Size refuse, Deploy & Command picker, and Jump-In (Jacked In + meat inert + Uptime/biofeedback) ship in `scripts/machines.mjs` + `scripts/rigger-vertical.mjs`. Safehouse Beacon Home Ground edge AE for Facility Riggers.
+> **In Foundry:** Fleet Size refuse, Deploy & Command picker, and Jump-In (Jacked In + meat inert + Uptime/biofeedback) all ship in the module. Safehouse Beacon Home Ground edge AE for Facility Riggers.

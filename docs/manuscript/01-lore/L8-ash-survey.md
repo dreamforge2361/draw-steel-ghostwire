@@ -1,6 +1,5 @@
 # The Ash Survey
 
-**Status:** canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22  
 **Symbol:** The Held Fault · **Field headquarters:** The Cinder Yard (Flats/Sinks threshold)  
 **Contact:** Field Coordinator **Daska Venn** — full-conversion Cyborg, cannot cast  
 **Print:** Lore harvest — magical societies (L6–L8)  

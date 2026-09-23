@@ -67,14 +67,15 @@ function separator(title) {
   ].join("\n");
 }
 
-function fileBanner(entry, absPath) {
+function fileBanner(entry) {
   const ch = entry.print_ch != null ? ` (print Ch ${entry.print_ch})` : "";
   const kind = entry.kind ? ` · kind=${entry.kind}` : "";
   return [
     "",
     `<!-- chapter: ${entry.title || entry.id}${ch}${kind} -->`,
-    `<!-- source: ${entry.path} -->`,
-    `<!-- resolved: ${absPath} -->`,
+    // N5: no source/workspace paths in the shipped manuscript — the entry id is
+    // enough to trace a chapter back to MANIFEST.yml.
+    `<!-- entry: ${entry.id || entry.title} -->`,
     "",
   ].join("\n");
 }
@@ -121,8 +122,6 @@ function main() {
       "",
       "# Ghostwire — Print Manuscript",
       "",
-      "*Assembled Markdown SoR for later Pandoc/PDF. See `docs/manuscript/README.md`.*",
-      "",
     ].join("\n")
   );
 
@@ -142,7 +141,7 @@ function main() {
       continue;
     }
     const absPath = resolve(MANIFEST_DIR, entry.path);
-    chunks.push(fileBanner(entry, absPath));
+    chunks.push(fileBanner(entry));
     if (!existsSync(absPath)) {
       missing++;
       chunks.push(missingPlaceholder(entry, absPath));

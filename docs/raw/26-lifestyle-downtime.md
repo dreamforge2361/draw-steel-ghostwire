@@ -1,7 +1,5 @@
 # Lifestyle & Downtime
 
-**RAW status:** draft (2026-09-19) / Stage 3 fill + lore fuse B87  
-**Sources:** `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (upkeep ¥ table + 1G Fixer Retainer), `docs/rulebook/11-economy.md`, `docs/raw/08-kits-gear-wealth.md`, Medic restock lock (`15-medic.md`), §Craft (`10-mods.md`), chrome surgery (`09`), Ritual Workings (`22` / B43), Wrench Lifestyle Hook (`16`)  
 **Print:** Chapter 10 (TOC lock) — file numbered `26` so Kits/Chrome/Mods (`08`–`11`) stay stable for Journals
 
 ---
@@ -28,7 +26,7 @@ If you **cannot or will not pay**, you do not get that band's benefits. Drop to 
 | Payday ¥ (`08`) | **Yes** | **No** |
 | Recoveries | Yes | Yes |
 
-Mid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not reset Victories, do not treat the night as payday. Advancement and the Victory→XP bank live in `24`. Campaign worked example: `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
+Mid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not reset Victories, do not treat the night as payday. Advancement and the Victory→XP bank live in `24`.
 
 
 ---
@@ -50,7 +48,7 @@ Mid-job nights are **short stops**: Recoveries OK; do not burn upkeep, do not re
 | 2 | **High** | **¥3,500** | Secured loft, corp-adjacent suite, hardened safehouse. Strong security (bane on casual hostile intrusion vs. the safehouse). | Professional doors, quiet install bays, serious fixers. | Restock is **easy**. Prefer **standard or better** quotes; black-clinic / pharma contacts are in reach. |
 | 1 | **Elite** | **¥9,000** | Warded compound, executive pad, milspec guest wing. Warded security (double-bane on hostile intrusion when the Director agrees the defenses apply). | Boardrooms, private clinics, Restricted introductions on a call. | Restock is **trivial logistically**. Quote still applies (supply is not free), but access is not the bottleneck. |
 
-**Suggested Director ladder** (Quiet Floor / default cadence — band ¥ unchanged): Levels **1–2** Low; **3–5** Middle; **6–8** High; **9–10** High (Elite rare / Writ-covered). See `24` and `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md`.
+**Suggested Director ladder** (Quiet Floor / default cadence — band ¥ unchanged): Levels **1–2** Low; **3–5** Middle; **6–8** High; **9–10** High (Elite rare / Writ-covered). See `24`.
 
 **Downtime capacity (this book):**
 
@@ -82,7 +80,7 @@ A **project slot** is one downtime job you can finish or meaningfully advance th
 | **Vehicle Depot** | Vehicle and drone Repair and mod installation | 2 | Restricted | 22,000 |
 | **Ritual Sanctum Tools** | Ritual Working Projects (`22`) | 2 | Restricted | 16,000 |
 
-A bench never waives **¥**, **Body Integrity**, or **Availability** on what the Project makes or installs; it buys a slot and an edge, nothing else. Sanctum tools do not raise a lodge ceiling — that cap still comes from your Lifestyle band above. The Facility Rigger's Home Ground / Safehouse Beacon stays a separate system (`16`, `23`). In Foundry a bench is a dual Item + Actor placeable like the other base assets; see `docs/directors/f18-workshop-benches.md`.
+A bench never waives **¥**, **Body Integrity**, or **Availability** on what the Project makes or installs; it buys a slot and an edge, nothing else. Sanctum tools do not raise a lodge ceiling — that cap still comes from your Lifestyle band above. The Facility Rigger's Home Ground / Safehouse Beacon stays a separate system (`16`, `23`). In Foundry a bench is a dual Item + Actor placeable like the other base assets.
 
 ---
 
@@ -112,7 +110,7 @@ Most wage-bodies do not live on liquid **¥** alone. Lore (L1): corp **scrip**, 
 - **Runners** often pay cash ¥ for Low/Squatter dens exactly to stay off those strings. That is why Flats crash-space is the default Ghost Run pad.
 - **Scrip ≠ character power.** Whether you pay ¥ or the corp "covers" the flat, you never buy characteristics, Kits, or class features with housing.
 
-Full megacorp tickers (HAL, FER, MER, … **AEQ**, **LAZ**): `docs/rulebook/MEGACORP-TICKERS.md`. Paying this chapter’s upkeep **includes** that band’s **Lazarus Extract** contract (table below). Aequitas Mandate (**AEQ**) is Council-only justice — it is not a Lifestyle service and cannot be bought with ¥.
+Full megacorp tickers (HAL, FER, MER, … **AEQ**, **LAZ**) are in the lore chapters. Paying this chapter’s upkeep **includes** that band’s **Lazarus Extract** contract (table below). Aequitas Mandate (**AEQ**) is Council-only justice — it is not a Lifestyle service and cannot be bought with ¥.
 
 ## Lazarus Extract contract (included in upkeep)
 
@@ -150,7 +148,7 @@ Directors: Lazarus arriving is a clock and a witness, not a free heal. Extract g
 
 ## Medic restock lock (how Lifestyle pays for the bag)
 
-Medic Reagents **do not** refill between encounters. Restocking to capacity is a **lifestyle / downtime-project activity** at respite (`15-medic.md`). Locked rules this chapter must not contradict:
+Medic Reagents **do not** refill between encounters. Restocking to capacity is a **lifestyle / downtime-project activity** at respite (**The Medic**, `15`). Locked rules this chapter must not contradict:
 
 - There is **no per-Reagent price list**.
 - The **Director quotes** the cost of a refill for the job at hand, in ¥ **or** in downtime (synthesize from scratch).
@@ -179,7 +177,7 @@ During a paid Lifestyle respite, spend project slots (and story time) on actions
 
 ### Recover
 
-Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band. **Rest never cleanses Taint** — Recoveries, Lifestyle, and respite leave the 0–12 track untouched (`27-corruption-taint.md`).
+Sleep, food, and medical attention at your band's housing quality. Spend Recoveries and refill the Recovery pool per `04`. Squatter rest may be incomplete; Middle+ is reliable. A Medic ally using Established Protocols or downtime care can patch Squatter misery without raising your Lifestyle band. **Rest never cleanses Taint** — Recoveries, Lifestyle, and respite leave the 0–12 track untouched (**Corruption & Taint**).
 
 ### Shop
 
@@ -187,15 +185,15 @@ Spend leftover ¥ on gear, ammo, consumables, bribes, and services (`08`, gear c
 
 ### §Craft Projects
 
-Installing, swapping, removing, inventing, or configuring gear/mods is a **Project** (`03`) during downtime. **§Craft is a procedure, not a skill** — full Invent a Mod / slot rules: `10-mods.md` (and the §Craft bridge in `08`). Skills by job: Hacking, Electronics, Repair, Cybertech as printed there. Field-toggle of already-installed mods does **not** need a Project.
+Installing, swapping, removing, inventing, or configuring gear/mods is a **Project** (`03`) during downtime. **§Craft is a procedure, not a skill** — full Invent a Mod / slot rules: **Mods** (`10`) (and the §Craft bridge in `08`). Skills by job: Hacking, Electronics, Repair, Cybertech as printed there. Field-toggle of already-installed mods does **not** need a Project.
 
 ### Chrome surgery
 
-Buy chrome with **¥ + Body Integrity**; install, remove, and repair are downtime surgery loops (`09-chrome-body-integrity.md`). Natural installers: Medic (flesh), Wrench (hardware), Technomancer-adjacent features. Ripperdoc subclass edges apply. Botches and scar Integrity on removal stay as printed in Chrome — Lifestyle does not waive Body Integrity.
+Buy chrome with **¥ + Body Integrity**; install, remove, and repair are downtime surgery loops (**Chrome & Body Integrity**, `09`). Natural installers: Medic (flesh), Wrench (hardware), Technomancer-adjacent features. Ripperdoc subclass edges apply. Botches and scar Integrity on removal stay as printed in Chrome — Lifestyle does not waive Body Integrity.
 
 ### Ritual Workings
 
-Long-form Veil magic is a **Ritual Working**: a Project chain on the same Craft downtime spine (`22-the-veil.md`, B43). Spend ¥, lore, reagents, and Veil Price / spirit-attention. Permanent sanctums require upfront yen **and** ongoing Lifestyle/upkeep; sanctum rating must meet Magnitude. Do not resolve full ritual math here — pointer only.
+Long-form Veil magic is a **Ritual Working**: a Project chain on the same Craft downtime spine (**The Veil**, `22`). Spend ¥, lore, reagents, and Veil Price / spirit-attention. Permanent sanctums require upfront yen **and** ongoing Lifestyle/upkeep; sanctum rating must meet Magnitude. Do not resolve full ritual math here — pointer only.
 
 ### Training
 
@@ -213,7 +211,7 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 
 **Chargen fiction** (`06`): ask **who still has your number?** Write one name and a lean (fixer, old badge, deck handle). That is contact **fiction**, not a mechanical roster until a printed feature or a service spends.
 
-**Fixer Retainer** (gear catalog **1G**, harvested): **¥6,000**, Military-feel Availability (legacy T2), tag **Service**. Buys **one** of: a one-time introduction to a **new** Contact, **or** an Availability re-roll on a restricted acquisition. It does not buy a permanent web, a hireling combatant, or a language.
+**Fixer Retainer** (gear catalog **1G**, harvested): **¥6,000**, Military-feel Availability, tag **Service**. Buys **one** of: a one-time introduction to a **new** Contact, **or** an Availability re-roll on a restricted acquisition. It does not buy a permanent web, a hireling combatant, or a language.
 
 **Class features that already call a contact** resolve as printed (Commander network favor, Elementalist contact hooks, Street-Fixer Covert Operations, etc.). Standing — how much they will risk — is **Director-adjudicated from fiction and the printed ability**, not from a missing Contacts chapter. Once per session per Contact where the ability says so.
 
@@ -226,7 +224,7 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 ## The ¥ loop: run payout → Lifestyle → leftover
 
 1. **Run** — complete the job; take heat and injuries.
-2. **Payout** — Director pays crew shares. Provisional guidance already in `08` / `docs/rulebook/11-economy.md` (street ¥500–2,000; mid ¥2,000–8,000; corp ¥5,000–20,000; black-ops ¥20,000+ or unique gear).
+2. **Payout** — Director pays crew shares. Provisional guidance already in `08` (street ¥500–2,000; mid ¥2,000–8,000; corp ¥5,000–20,000; black-ops ¥20,000+ or unique gear).
 3. **Lifestyle** — pay upkeep for the band you want this respite (¥ table above).
 4. **Quoted services** — Medic restock, chrome install fees, ritual components, bribes.
 5. **Projects** — spend slots on Craft, surgery, rituals, training.
@@ -238,7 +236,7 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 
 ## What this chapter is not
 
-- Not a second Economy rewrite — payouts and firewall stay in `08` / `docs/rulebook/11-economy.md`.
+- Not a second Economy rewrite — payouts and firewall stay in `08`.
 - Not full Followers / Contacts.
 - Not Building catalog numbers (Wrench stub + Lifestyle Hook only).
 - Not a second Foundry manual — only the light **In Foundry** note above (no Lifestyle automation).
@@ -250,12 +248,12 @@ Learning a new Kit doctrine, skill montage, or mentor drill is **time/story**, n
 
 | Topic | Where |
 |---|---|
-| Wealth firewall, payouts, §Craft skills | `08-kits-gear-wealth.md` |
-| Medic Reagents restock lock | `15-medic.md` |
-| Invent a Mod / mod slots | `10-mods.md` |
+| Wealth firewall, payouts, §Craft skills | **Kits, Gear & Wealth** (`08`) |
+| Medic Reagents restock lock | **The Medic** (`15`) |
+| Invent a Mod / mod slots | **Mods** (`10`) |
 | Contacts / Fixer Retainer | This chapter (pointer); gear **1G**; class text |
-| Chrome install / BI | `09-chrome-body-integrity.md` |
-| Ritual Workings | `22-the-veil.md` |
-| Wrench Building Lifestyle Hook | `16-wrench.md` |
+| Chrome install / BI | **Chrome & Body Integrity** (`09`) |
+| Ritual Workings | **The Veil** (`22`) |
+| Wrench Building Lifestyle Hook | **The Wrench** (`16`) |
 | Upkeep ¥ | This chapter’s band table |
-| Lazarus Extract contract (included in upkeep) | This chapter; lore L1; tickers `docs/rulebook/MEGACORP-TICKERS.md` |
+| Lazarus Extract contract (included in upkeep) | This chapter; lore L1 |

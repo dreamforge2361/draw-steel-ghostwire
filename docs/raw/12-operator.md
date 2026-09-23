@@ -1,8 +1,5 @@
 # The Operator
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/01-operator.md`
-
 ---
 
 ## Class Chassis
@@ -230,6 +227,6 @@ Kit choices are drawn from the same shared pool other classes draw from, not an 
 
 ## Chrome an Operator Runs
 
-Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero (`09-chrome-body-integrity.md`).
+Body Integrity (chrome capacity) starts at **20**, as for every living non-Cyborg hero (**Chrome & Body Integrity**, `09`).
 
 ---

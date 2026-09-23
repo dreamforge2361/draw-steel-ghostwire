@@ -1,6 +1,5 @@
 # The Measure Collegium
 
-**Status:** canon — societies locked 2026-09-22; symbols, HQ names and layouts locked 2026-09-22  
 **Symbol:** The True Measure · **Headquarters:** Datum House (lower Grid)  
 **Contact:** Senior Examiner **Edda Marr** — Corran Elementalist  
 **Print:** Lore harvest — magical societies (L6–L8)  

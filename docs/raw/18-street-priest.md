@@ -1,9 +1,6 @@
 # The Street Priest
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/07-street-priest.md`
-
-Veil workings referenced here are summarized in `22-the-veil.md`.
+Veil workings referenced here are summarized in **The Veil** (`22`).
 
 ---
 
@@ -70,7 +67,7 @@ Both pacts use **the same mechanical numbers** across every ability in this chap
 | **Creed echo trigger** (first qualifying act each round) | First act of **mercy, protection, or aid** | First act of **dominion, punishment, or harvest** |
 | **Invoke the Pact — failed bind** | Entity vanishes without effect; you take a **bane on your next power rolls (save ends)** | Entity **strikes you once** before departing (see Invoke the Pact — Deep Dive) |
 
-**Both pacts always exact the Price.** A pact is the game's clearest case of "nothing for nothing": your patron requires a **minor quest, service, or observance aligned to its moral code**, handled before or after the aid is granted — mercy and protection for a Light patron, a darker service or offering for an infernal one. Refusing or shirking the task is a real story beat, Director-adjudicated: the patron withdraws aid, calls the debt, or turns hostile. A priest who tries to **coerce** aid rather than earn it pays the dark-path **Taint** cost (`27-corruption-taint.md`) regardless of alignment — a **pact** Price, so it ignores the +1-per-scene cap.
+**Both pacts always exact the Price.** A pact is the game's clearest case of "nothing for nothing": your patron requires a **minor quest, service, or observance aligned to its moral code**, handled before or after the aid is granted — mercy and protection for a Light patron, a darker service or offering for an infernal one. Refusing or shirking the task is a real story beat, Director-adjudicated: the patron withdraws aid, calls the debt, or turns hostile. A priest who tries to **coerce** aid rather than earn it pays the dark-path **Taint** cost (**Corruption & Taint**) regardless of alignment — a **pact** Price, so it ignores the +1-per-scene cap.
 
 **Choosing Light** means you play a strict conduct code in exchange for the lighter corruption load — every Smite, every ward, every summon defaults to holy damage and holy flavor, and your patron is watching how you treat the vulnerable. **Choosing Dark** means your patron grants more, faster, cheaper in the moment — but every working loads corruption and debt that come due later, and the patron's tasks trend toward harder service. The choice *is* the build.
 
@@ -256,7 +253,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 *The class's defining high-Conviction play, and the headline entry of the 7-cost band, unlocked at 3rd level.*
 
-*Extension form vs. independent form at the table — see FAQ `28-constructs-pets-faq.md`.*
+*Extension form vs. independent form at the table — see FAQ **Constructs & Pets FAQ** (`28`).*
 
 > **Invoke the Pact**
 > *Main Action · Veil working (Pact + Summon/Bind) · Cost: 7 Conviction (Persistent 2 if the independent form results)*
@@ -277,7 +274,7 @@ Heroic Abilities are the Street Priest's Conviction-fueled workings — chosen b
 
 **Sustaining the independent form** costs **Persistent 2** (−4 Conviction/turn while sustained). The extension form has no ongoing sustain cost beyond the initial 7-Conviction spend; it simply expires at the end of the encounter or when you choose to release it.
 
-**Spirit Stamina (Veil §C3 locked 2026-09-18):** independent form **30 + (Persona × level)**; extension form has no Stamina track of its own in RAW — at the table its token may carry **20 + (Persona × level)** as a convenience pool, and the Director may treat the extension as untargetable. Companion + R1 spirit strike bands (**4 / 7 / 10 + Persona**) are final. Rank 2+ / Greater strike ladders and defense stamps remain deferred (see `22-the-veil.md` §C3).
+**Spirit Stamina (Veil §C3 locked 2026-09-18):** independent form **30 + (Persona × level)**; extension form has no Stamina track of its own in RAW — at the table its token may carry **20 + (Persona × level)** as a convenience pool, and the Director may treat the extension as untargetable. Companion + R1 spirit strike bands (**4 / 7 / 10 + Persona**) are final. Rank 2+ / Greater strike ladders and defense stamps remain deferred (see **The Veil** (`22`) §C3).
 
 **Summon flavor by subclass:**
 
@@ -452,7 +449,7 @@ The Veil specialist. Bonus to **banishment, warding against incursion, and sensi
 | **Exorcist's chain / Malleus Vinculum / abjuration binding-focus** | Milspec | 3 | ¥11,000 | An edge on banishing and anti-corruption rites; the **Exorcist's signature tool** against hostile spirits. | 4 · Veil, Ward |
 | **Saint's relic / Numen Cor / apex covenant reliquary** | Prototype | 4 | ¥22,000 | The Street Priest's masterwork: a broad edge across invocation, warding, and the pact, and the readiest signature-focus bond candidate (the bond deepens it). The Price still applies. | 5 · Veil, Signature-capable |
 
-**Chrome erosion rule.** Chrome reduces your **Conviction cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). It represents the pact itself growing thinner as your body fills with machine parts. A Street Priest who chromes up heavily can erode their Conviction cap to nothing, at which point the class stops functioning as a caster (Director's call on whether the pact is broken). Cyborgs cannot invoke pacts.
+**Chrome erosion rule.** Chrome reduces your **Conviction cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (**Chrome & Body Integrity**, `09`). It represents the pact itself growing thinner as your body fills with machine parts. A Street Priest who chromes up heavily can erode their Conviction cap to nothing, at which point the class stops functioning as a caster (Director's call on whether the pact is broken). Cyborgs cannot invoke pacts.
 
 **Cyborgs cannot invoke pacts — restated.** A Cyborg cannot take the Street Priest class at all, under any circumstances, per Arcane Severance. This is not the same rule as the chrome-erosion sliding scale above (which applies to non-Cyborg heroes who install cyberware) — it is an absolute bar at character creation.
 

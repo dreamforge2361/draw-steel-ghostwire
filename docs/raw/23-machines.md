@@ -1,9 +1,6 @@
 # Machines: Drones, Vehicles & Buildings
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/15-drones.md`, `docs/rulebook/16-vehicles.md`, `docs/rulebook/05-wrench.md`
-
-Wrench-specific machine rules (Uptime, Jump-In, stat cards, fleet command) are in `16-wrench.md`. This chapter holds what every hero needs: control modes, the non-Wrench limits, **Street Eye** (the Companion Link), scale bands, inventories, vehicle combat, and the **street picture** of how the hive moves.
+Wrench-specific machine rules (Uptime, Jump-In, stat cards, fleet command) are in **The Wrench** (`16`). This chapter holds what every hero needs: control modes, the non-Wrench limits, **Street Eye** (the Companion Link), scale bands, inventories, vehicle combat, and the **street picture** of how the hive moves.
 
 ---
 
@@ -16,16 +13,16 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 | Mode | Who | What it feels like | Mechanical spine |
 |---|---|---|---|
 | **Remote** | Anyone with a link; Wrenches via RCC | Handheld or deck-fed camera/stick control | Rigging (or Logic + Rigging) to Direct; Gunnery for mounts if allowed |
-| **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per `16-wrench.md`; Reflex or Logic; biofeedback risk; temporary Integrity buffer |
+| **Jump-In** | **Wrench only** (see Anyone vs Wrench) | Full sensor merge; meat body inert | Maneuver Jump-In per **The Wrench** (`16`); Reflex or Logic; biofeedback risk; temporary Integrity buffer |
 | **Street Eye** (Companion Link) | Any class with a qualifying scout drone | Soft follow / watch / hold / scout leash | One soft program; max 1 active; no fleet orchestration; no Jump-In |
 
 **Autonomous vs Commanded (Wrench table language):** a fielded machine may act on a canned behavior loop (Autonomous) or take orders through Deploy & Command / Rigged Fire (Commanded). Jump-In overrides both for the frame you inhabit.
 
 **Hardware gate (¥ side):**
-- **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see `21-the-wire.md`).
+- **Remote Box / Basic RCC** — one drone, remote only, no Jump-In (Street/Professional band). An RCC is a **Connect** interface (≡ deck; see **The Wire**, `21`).
 - **Fleet Deck and above** — multi-drone command, Jump-In when paired with a control-rig (chrome), autosoft headroom — see Gear master Cat **4D**. Non-Wrench heroes **cannot** use Fleet Deck+ features even if they own the hardware (class firewall). **Rigger’s Harness** is also a Connect interface; Fabricator’s Bench and Field Chassis are not.
 
-**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**, **Seal Cruiser**, **Writ VTOL**, **White Door**, **Crash Angel**) plus named **Mule-Bot** ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Every drone/vehicle in **Ghostwire Vehicles & Drones** is a Draw Steel **treasure** Item on purpose: that SKU is ownership / ¥ / mods. **Deploy** stamps a linked Actor from the matching band (`mule-bot` → `machine-drone-medium`) and places the token; **Recall** deletes the Actor and the Item stays. Full interface list: `21-the-wire.md`.
+**Pack drones and vehicles.** Ghostwire Summons drone and vehicle band templates (all nine `machine-*` Actors) and other `kind: "vehicle"` pack Actors (Nox’s trash freighter, **Lane-Hopper**, **Star-Chopper**, **Bulldog**, **Seal Cruiser**, **Writ VTOL**, **White Door**, **Crash Angel**) plus named **Mule-Bot** ship with **Wire Kit — Matrix Verbs** so they can Connect without a commlink. They still start **Disconnected** until Connect. Every drone/vehicle in **Ghostwire Vehicles & Drones** is a Draw Steel **treasure** Item on purpose: that SKU is ownership / ¥ / mods. **Deploy** stamps a linked Actor from the matching band (`mule-bot` → `machine-drone-medium`) and places the token; **Recall** deletes the Actor and the Item stays. Full interface list: **The Wire** (`21`).
 
 ---
 
@@ -49,22 +46,22 @@ Every drone runs in one of three modes. Mode is a property of the **link**, not 
 
 #### Wrench
 
-| Rule | Align to `16-wrench.md` (do not invent parallel names) |
+| Rule | Align to **The Wrench** (`16`) (do not invent parallel names) |
 |---|---|
 | **Fleet** | Field multiple machines up to **Fleet Size** cap (baseline 3 @ L1 → 6 @ L10; Drone Jockey raises further) |
 | **Resource** | **Uptime** — banked from fielded presence / deploy / maintenance / salvage; drained by body damage, asset hits, jamming, destruction; spent on Deploy, Command, Override, burst-buffs |
 | **Jump-In** | Full Jump-In Plumbing (maneuver; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |
 | **Gunnery** | Full **Gunnery** / Rigged Fire through drones and mounts |
 | **RCC / autosofts** | Full use of owned RCC ladder + autosoft slots |
-| **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (`16-wrench.md`). “Overheat pressure” on high-end RCCs is narrative only. |
+| **Overheat** | **Not a separate resource.** Wrench pressure comes from **Uptime drain** (**The Wrench**, `16`). “Overheat pressure” on high-end RCCs is narrative only. |
 
 **Firewall reminder:** ¥ buys frames, mods, RCCs. Uptime runs the fight. Chrome (e.g. control rig) can improve Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.
 
 ### Street Eye (Companion Link)
 
-**Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in `16-wrench.md`. A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.
+**Street Eye** is the player-facing name of the Companion Link. Any class can use it. It does **not** replace Wrench **Deploy & Command**, Uptime, Jump-In, or Fleet Deck+ features — those stay in **The Wrench** (`16`). A Wrench who also owns a scout drone may see Street Eye on the sheet as a redundant soft leash; the Wrench toolkit is unchanged.
 
-**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag. **Static Crow does not qualify** (0.3.99): it paints a lane as a side effect of its EW suite, not as a scout **Mark**, so it carries no Mark tag — an EW kite is not a pair of eyes you can borrow.
+**Qualify (v1 — flying scouts):** you have Street Eye while you carry at least one **qualifying scout drone** — a Personal or Light **Air** frame tagged **Recon**, or scout-equivalent **Mark** / **Decoy**. Published v1 frames: **Tape-Eye**, **Fly**, **Needle**, **Buzz**, **Rustbucket**, **Rotor**, **Spotter**, **Phantom**. Ground and Water recon wait for a later pass. Combat, sentry, and gun frames do not qualify unless they carry a Recon (or Mark / Decoy) tag. **Static Crow does not qualify:** it paints a lane as a side effect of its EW suite, not as a scout **Mark**, so it carries no Mark tag — an EW kite is not a pair of eyes you can borrow.
 
 The Companion Link **limits** in the Non-Wrench table still apply if you field a drone that is not on that v1 list (Director-ruled). Foundry only auto-grants the Street Eye ability for qualifying air scouts.
 
@@ -214,7 +211,7 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 
 | Event | Effect |
 |---|---|
-| **Hit while fielded** | Integrity damage; Wrench loses **1 Uptime** per hit (per `16-wrench.md`). Non-Wrench: no Uptime, but link jitter — Director may impose a bane next Remote action |
+| **Hit while fielded** | Integrity damage; Wrench loses **1 Uptime** per hit (per **The Wrench**, `16`). Non-Wrench: no Uptime, but link jitter — Director may impose a bane next Remote action |
 | **0 Integrity** | **Wrecked** — offline, not vaporized. Wrench lump **3 Uptime** drain. Salvage Sense / salvage maneuver still apply for Wrenches |
 | **Recovery** | Field Repair (Wrench signature / Repair skill) restores Integrity in the fight per class text. Between scenes: §Craft **Repair** Project or short bench time + ¥ parts (Director: ≈ 10–25% of chassis cost for a heavy rebuild; clunkers are cheap to patch and cheap to write off) |
 | **Total loss** | If the wreck is seized, burned, or dropped into the Sinks, the ¥ is gone — buy or craft another |
@@ -227,7 +224,7 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 ### Modding
 
 - Published **vehicle/drone mods** live in Gear master **§5F** (Armor ladder Scrap-Weld → Aegis Kit; Weaponry ladder Gun Rack → Heavy Hardpoint; Tune Kit, Sensor Pod, Ghost Coat, Runflats, Rigger Cocoon, Ammo Bin, …). Hosts: `vehicle` and `drone`. One armor kit and one weaponry kit at a time.
-- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).
+- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical) or **Electronics** (sensor/EW suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Rigger Cocoon upgrades Jump-In cleanliness on capable frames — it does **not** grant Jump-In to non-Wrenches.
 - Clunkers with **1 slot** rarely take serious kits — Directors should lean into jury-rig narrative rather than full §5F menus.
@@ -239,7 +236,7 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 
 ### Street picture (vehicles & transit)
 
-**Lock (Michael 2026-09-20).** World texture, not a second chase engine. Full prose: Setting Primer **Vehicles & Transit** (L1). Procedures in this chapter stay as printed.
+**Lock.** World texture, not a second chase engine. Full prose: Setting Primer **Vehicles & Transit** (L1). Procedures in this chapter stay as printed.
 
 - Most vehicles in this world are **electric**.
 - **Street / POV** (personally owned vehicles): mostly **light electric hovercraft** with **altitude limiters ~25–50 feet** off the ground — **not** free-flight sky cars.
@@ -252,18 +249,16 @@ Drones use a short **Integrity** track (numbers not yet published). For now, Dir
 
 **Star-Chopper** is the published tandem hover-bike (E1 Street/custom, Domain Ground, Scale Light, 1+pillion, limiter **~25–50 ft**, stretch forks, no wheels). Not a sky bike and not the rifle named Chopper.
 
-**Bulldog** is the street cargo van (E1 Street, Domain Ground, **Ground-hauler**, tires — not a hover POV). Token art is a placeholder until Michael’s plate.
+**Bulldog** is the street cargo van (E1 Street, Domain Ground, **Ground-hauler**, tires — not a hover POV).
 
-**Conglomerate service chassis (0.3.80).** Four published SKUs with Michael top-down plates. **Aequitas Mandate (AEQ):** **Seal Cruiser** (Mandate cruiser — E1 Professional ground hover pursuit, 2–4 seats) and **Writ VTOL** (Council badge air — E1 Professional patrol/insertion helo). **Lazarus Extract (LAZ):** **White Door** (Laz ambulance — E1 Professional hover trauma van, patient bay, not a gun truck) and **Crash Angel** (Laz chopper — E1 Professional medevac VTOL with hoist). Cross-link the AEQ / LAZ names; Twelve Conglomerates lore is a separate pass.
+**Conglomerate service chassis.** Four published SKUs with top-down plates. **Aequitas Mandate (AEQ):** **Seal Cruiser** (Mandate cruiser — E1 Professional ground hover pursuit, 2–4 seats) and **Writ VTOL** (Council badge air — E1 Professional patrol/insertion helo). **Lazarus Extract (LAZ):** **White Door** (Laz ambulance — E1 Professional hover trauma van, patient bay, not a gun truck) and **Crash Angel** (Laz chopper — E1 Professional medevac VTOL with hoist). Cross-link the AEQ / LAZ names; Twelve Conglomerates lore is a separate pass.
 
 > **In Foundry**
 > Enable **Draw Steel - Ghostwire Build**. Lore page: **Ghostwire Lore** › Setting Primer › Vehicles & Transit. Chassis: **Ghostwire Vehicles & Drones** (Item **Lane-Hopper**, Item **Star-Chopper**, Item **Bulldog**, Item **Seal Cruiser**, Item **Writ VTOL**, Item **White Door**, Item **Crash Angel**). Placeable tokens: **Ghostwire Summons & Machines** › Lane-Hopper (**2×3**), Star-Chopper (**1×3**), Bulldog (**2×4**, placeholder art), Seal Cruiser (**2×3**), Writ VTOL (**2×4**), White Door (**2×4**), Crash Angel (**3×3**). Reach texture: **Ghostwire — Ossian Reach Handbook** › Life on the Flats.
 
 ### Public transit (Flats)
 
-**Status:** WORKING 2026-09-21 · stub SKUs for later Foundry Actors · full chassis math deferred.
-
-World texture for licensed Flats rides. Full prose: Setting Primer **Public Flats transit (WORKING)** (L1). Director Scene 2: `docs/directors/campaigns/QF-01-TRANSIT-STUB.md`.
+World texture for licensed Flats rides. Full prose: Setting Primer **Public Flats transit (WORKING)** (L1).
 
 | Stub SKU | Street | Domain feel | Party-token guidance | Lifestyle / Availability color |
 |---|---|---|---|---|
@@ -272,7 +267,7 @@ World texture for licensed Flats rides. Full prose: Setting Primer **Public Flat
 
 **Director:** These are travel fixtures first, chase platforms second. Do not invent sky-car altitudes. Do **not** collide naming with existing Restricted Item **Grey Cab** (`grey-cab` / Ghost Fare) — public brand vs fixer plate.
 
-**Cross-link:** Primer L1 › Vehicles & Transit › Public Flats transit (WORKING). Runs journal (after `tools/build-packs.mjs runs`): **Flats Transit — Grey Cab & Veinline** (`gwFlatsTransit00`).
+**Cross-link:** Primer L1 › Vehicles & Transit › Public Flats transit (WORKING). Runs journal: **Flats Transit — Grey Cab & Veinline**.
 
 ### Scale bands (crewed vehicles)
 
@@ -293,7 +288,7 @@ World texture for licensed Flats rides. Full prose: Setting Primer **Public Flat
 
 ### Stat card fields
 
-Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitative**; Integrity / Speed numbers are not yet published. Armor kits add Stamina.
+Align to the Vehicle Stat Card in **The Wrench** (`16`). Profiles here are **qualitative**; Integrity / Speed numbers are not yet published. Armor kits add Stamina.
 
 | Field | Description |
 |---|---|
@@ -311,7 +306,7 @@ Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitativ
 | **Echelon** | 1–4 |
 | **Cost ¥** | Object price; never buys class power |
 
-**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (`10-mods.md`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.
+**Mounted weapons** come from Category 3 or an integrated Weaponry kit; installs are §Craft Projects (**Mods**, `10`). Hardpoints usually need a **Weaponry** kit (§5F: Gun Rack → Heavy Hardpoint) unless the profile already includes a factory mount. Fire mounts with **Gunnery**.
 
 ---
 
@@ -333,14 +328,14 @@ Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitativ
 
 #### Wrench
 
-| Rule | Align to `16-wrench.md` (do not invent parallel names) |
+| Rule | Align to **The Wrench** (`16`) (do not invent parallel names) |
 |---|---|
 | **Jump-In** | Full Jump-In Plumbing into **Jump-In Capable** vehicles (maneuver; Logic or Reflex; inert body; biofeedback; temporary Integrity buffer per Wrench chapter) |
 | **Rigging / Piloting** | Full excellence — Rigging and/or Piloting as class/subclass grants; no untrained bane on combat stunts |
 | **Solo / Jumped-In** | While Jumped-In, act as **pilot and gunner** simultaneously through the control rig (Vehicle Rig-Pilot default mode) |
 | **Uptime** | Asset hits / wrecks drain Uptime per Wrench chapter; Field Repair / Deploy interactions unchanged |
 | **RCC** | Full use of owned RCC ladder for vehicle-linked command where the Wrench chapter already allows it |
-| **Subclass** | **Vehicle Rig-Pilot** — signature platform, One With the Machine discounts, Ram Speed / Redline ladders — as printed in `16-wrench.md` |
+| **Subclass** | **Vehicle Rig-Pilot** — signature platform, One With the Machine discounts, Ram Speed / Redline ladders — as printed in **The Wrench** (`16`) |
 
 **Firewall reminder:** ¥ buys frames and mods. Uptime runs the fight. Chrome (control rig) improves Jump-In / efficiency; chrome never generates Uptime; ¥ never buys Uptime.
 
@@ -351,7 +346,7 @@ Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitativ
 ### Customize & modding
 
 - Published **vehicle/drone mods** live in Gear master **§5F**. Two ladders, one menu: the **armor** ladder (Scrap-Weld → Plate-Up → Combat Plate → Aegis Kit) and the **weaponry** ladder (Gun Rack → Twin Mount → Turret Ring → Heavy Hardpoint) are **one kit at a time**; everything else stacks up to your free slots — Burner Plates, Lane Skirt, Spool Rig, Drop Harness, Runflats, Signal Mule, Ammo Bin, Tune Kit, Sensor Pod, Ghost Rein, Deep Shell, Spoof Cowl, Rigger Cocoon, Ghost Coat, Kick Drive, Storm Lattice. Hosts: `vehicle` and `drone`.
-- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (`10-mods.md`).
+- Install / swap / remove = downtime **§Craft Project**; skill = **Repair** (physical / armor / suspension) or **Electronics** (sensor / EW / cocoon suites). Autosofts / RCC programs use **Hacking** (**Mods**, `10`).
 - **Fabricate** a mod or a chassis instead of buying it: stock Draw Steel crafting **Project**, Goal **150 / 300 / 450 / 600** by Echelon, prerequisites and yield printed on the card, points from **Lifestyle project slots**. A finished fabricate yields the part; the install is still its own §Craft Project.
 - **Invent a Mod (v1)** applies — pitch, firewall check, Echelon gate, materials ¥, Project Power Roll.
 - Slot integrity: do not publish orphan slot counts without a mod family. Mounted Category-3 weapons need a hardpoint (factory or a §5F Weaponry kit).
@@ -361,7 +356,7 @@ Align to the Vehicle Stat Card in `16-wrench.md`. Profiles here are **qualitativ
 
 ### Vehicle combat / chase
 
-**Chosen lean system for this chapter:** **abstract range bands** (cinematic pursuits and most vehicle fights). When vehicles share a tactical map with foot combat, Directors may instead use **positional** mode as already sketched in `16-wrench.md` — same skills, same wreck language.
+**Chosen lean system for this chapter:** **abstract range bands** (cinematic pursuits and most vehicle fights). When vehicles share a tactical map with foot combat, Directors may instead use **positional** mode as already sketched in **The Wrench** (`16`) — same skills, same wreck language.
 
 #### Abstract range track
 
@@ -376,7 +371,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 - **Close / Ramming:** enables boarding attempts, ramming (§6.2), and passenger melee through doors/hatches.
 - **Broken off:** chase ends (escape or lost contact).
 
-**Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per `16-wrench.md`.
+**Positional (optional):** vehicles move on the same map/zones as foot combat at vehicle Speed and Scale, sharing terrain and cover. Cross-scale edge/bane per **The Wrench** (`16`).
 
 #### Crash, wreck, ram
 
@@ -492,7 +487,7 @@ Broken off ← Extreme → Long → Medium → Close → Ramming / Boarding
 
 ## Buildings
 
-Buildings are a Wrench system: the **Building Stat Card**, upgrade slots, Node reference, and downtime fabrication are in `16-wrench.md` (The Machines). No shared building inventory is published yet.
+Buildings are a Wrench system: the **Building Stat Card**, upgrade slots, Node reference, and downtime fabrication are in **The Wrench** (`16`) (The Machines). No shared building inventory is published yet.
 
 ## Hands Off Accords (setting law)
 
@@ -502,4 +497,4 @@ Fiction lock (L5): software AI is legal; **direct AI control of kinetic hardware
 > No separate Hands Off automation yet. Use Machine/Wrench rules as printed; treat Accords as lifestyle/Trace/opposition pressure.
 
 
-> **Foundry 0.3.105:** E1 Door Lock / Safehouse Beacon / Camera-Sensor Mast (plus thin Sentry Turret, Mesh-Web, Barricade, Workshop Bench) ship as dual Items+Actors under Vehicles › Base Assets. Machine sheet is the pared Ghostwire sheet (Description/Notes/portrait required).
+> **In Foundry:** E1 Door Lock / Safehouse Beacon / Camera-Sensor Mast (plus thin Sentry Turret, Mesh-Web, Barricade, Workshop Bench) ship as dual Items+Actors under Vehicles › Base Assets. Machine sheet is the pared Ghostwire sheet (Description/Notes/portrait required).

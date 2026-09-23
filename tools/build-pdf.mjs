@@ -148,8 +148,7 @@ function wrapHtml(bodyHtml, title) {
 <body>
 <aside class="gw-print-banner">
   <strong>Ghostwire Rulebook ${RULEBOOK_VERSION}</strong> — official print PDF.
-  Assembled from <code>docs/manuscript/</code> + ART-PLACEMENT.yml.
-  Artwork credit: Ghostwire AI (AI-generated). Journals not regenerated.
+  Artwork credit: Ghostwire AI (AI-generated).
 </aside>
 <main class="gw-rulebook">
 ${bodyHtml}

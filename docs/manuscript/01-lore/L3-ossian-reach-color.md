@@ -1,7 +1,7 @@
 # Ossian Reach — Street Color
 
-**Source:** *GHOSTWIRE — Lore Source (V1 rules stripped)* → Ossian Reach fixtures (Part II Ch. 6) + street factions (Part IV Ch. 20); Flats primer color from in-repo *Ossian Reach Handbook* extracts (`docs/setting/reach-handbook/01–02`); Ashenreach from `docs/setting/ashenreach.md`. Hit-index: `docs/masters/_lore_extract/`.  
-**Harvested:** 2026-09-18 (ET) · optional print color only — **not** a gazetteer reprint of Reach Handbook journals. Print Ch. 27 stays a thin pointer. Gang signs (B91) inject after the L3 headings below.
+*Optional street color for the Flats — the district gazetteers stay in the setting journals.*  
+**Harvested:** 2026-09-18 (ET) · optional print color only — **not** a gazetteer reprint of Reach Handbook journals. Print Ch. 27 stays a thin pointer. Gang signs inject after the L3 headings below.
 
 > Street color and hive fixtures for the booklet. District dossiers, NPC stat blocks, and critter sheets stay in setting / Foundry packs.
 
@@ -206,4 +206,4 @@ Cinderhold and the Outer Gate sit on Ossian Reach's wasteland seam, not inside A
 
 ---
 
-*Ashenreach is locked in-repo (`docs/setting/ashenreach.md`) as the second named hive on the regional map (~300 miles from Ossian Reach).*
+*Ashenreach is the second named hive on the regional map (~300 miles from Ossian Reach).*

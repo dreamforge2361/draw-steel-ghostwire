@@ -1,8 +1,5 @@
 # Perks
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/17-perks.md`, Ghostwire Perks pack (`src/packs/perks/`)
-
 ---
 
 ## What a perk is

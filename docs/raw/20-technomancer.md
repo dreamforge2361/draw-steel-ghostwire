@@ -1,9 +1,6 @@
 # The Technomancer
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/20-technomancer.md`
-
-Wired rules referenced here are in `21-the-wire.md`.
+Wired rules referenced here are in **The Wire** (`21`).
 
 ---
 
@@ -92,7 +89,7 @@ A standing harmonic wrapped around the Technomancer's own exposed body.
 
 ### Sprite Stat Block Reference (by Hybrid Band)
 
-**A sprite's hit points are Stamina.** Sprites have no special damage track of their own: like every other creature on the board, a sprite has a **Stamina** pool, takes damage against it, and is destroyed (decompiles) at **0 Stamina**. There is no separate "Sprite HP" unit anywhere in these rules. Same lock as Agents (`19`) and independent spirits (`22`): pets use Stamina; extension spirits have no separate pool. The shipped sprite Actors carry exactly the Stamina formulas in the table below (`src/packs/summons/sprites/sprite-{data,attack,machine,ward}-{minor,intermediate,advanced}.json`).
+**A sprite's hit points are Stamina.** Sprites have no special damage track of their own: like every other creature on the board, a sprite has a **Stamina** pool, takes damage against it, and is destroyed (decompiles) at **0 Stamina**. There is no separate "Sprite HP" unit anywhere in these rules. Same lock as Agents (`19`) and independent spirits (`22`): pets use Stamina; extension spirits have no separate pool. The shipped sprite Actors carry exactly the Stamina formulas in the table below.
 
 Each archetype scales along the same hybrid band ladder described below, but its numbers move independently by archetype. The table gives each archetype's Stamina, its attack/effect bonus, and its screen, at each sprite rank.
 
@@ -113,7 +110,7 @@ Each archetype scales along the same hybrid band ladder described below, but its
 
 The Technomancer's sprites follow the same "extension vs. independent" ladder the Veil chapter uses for summons. Each step on that ladder is a **sprite rank**:
 
-*Table question — "when does my sprite get a turn?" — see FAQ `28-constructs-pets-faq.md`.*
+*Table question — "when does my sprite get a turn?" — see FAQ **Constructs & Pets FAQ** (`28`).*
 
 | Rank | Levels | Behavior |
 |---|---|---|
@@ -443,7 +440,7 @@ The Technomancer is a Wired class that still casts — so, unlike the Wired's ot
 | **Technomancer** | **Erodes** — chrome shrinks the Resonance cap by the shared magic-erosion formula, the same as any caster. |
 | **Elementalist / Street-Priest** | Chrome-averse — chrome shrinks their Essence / Conviction cap by the same shared formula. |
 
-**Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (`09-chrome-body-integrity.md`). No caster is exempt.
+**Mechanically:** chrome reduces your **Resonance cap** by the shared magic-erosion formula — −1 per **2** Integrity spent on Standard chrome (round down), per **3** on Soft, per **1** on Salvage (**Chrome & Body Integrity**, `09`). No caster is exempt.
 
 **Kit slot.** The Technomancer carries a **Light kit slot** (see Class Chassis, above) — appropriate gear includes light armor, a resonance-tuned focus item (a personal totem, a jury-rigged antenna, a string of compiled charms), and light defensive tools, but nothing that competes for space with the sprite congregation's own board presence. A resonance-tuned focus (Echelon-appropriate) can grant an **edge on Resonance-based Power Rolls** and causes no magic erosion, since it is a mundane/technomantic item rather than integrated chrome.
 

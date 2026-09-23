@@ -1,8 +1,5 @@
 # The Medic
 
-**RAW status:** draft  
-**Sources:** `docs/rulebook/04-medic.md`
-
 ---
 
 ## Class Chassis
@@ -51,7 +48,7 @@
 
 **Restock in downtime.** Refilling to full kit capacity is a **lifestyle / downtime-project activity** taken at respite — buying raw chemical stock, calling in a supplier, or spending downtime hours synthesizing from scratch. There is **no per-Reagent price list**: the **Director quotes the cost** of a refill for the job at hand, in ¥ or in downtime, the way any other lifestyle expense is quoted. Restocking is never a roll you can fail on its own; a shortfall is a supply problem, not a botched test.
 
-**Restock discounts** (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to **that quoted cost**. Director quote guidance and Lifestyle eligibility live in `26-lifestyle-downtime.md` (still no per-Reagent price list).
+**Restock discounts** (Scrounger's Eye −25%, Corporate Requisition −25%, Regular Customer / Pharma Supplier −15%, and the Doc Who Never Left's rescue) all apply to **that quoted cost**. Director quote guidance and Lifestyle eligibility live in **Lifestyle & Downtime** (`26`) (still no per-Reagent price list).
 
 **CRITICAL — Reagents persist across encounters.** This is the single biggest mechanical difference between the Medic and every other resource-tracked GHOSTWIRE class. A Wrench's fielded-fleet income, an Elementalist's attunement, a Street Priest's Conviction — all of those reset to zero (or refill) at the start of a fresh encounter. **Reagents do not.** The bag empties across a **run**, not a fight. A Medic who blows the whole kit trying to keep the crew alive in the first firefight of a three-fight run has a real, table-visible problem for fights two and three.
 

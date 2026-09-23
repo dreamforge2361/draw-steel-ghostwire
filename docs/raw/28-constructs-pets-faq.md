@@ -1,15 +1,12 @@
 # Constructs & Pets — Action Economy FAQ
 
-**RAW status:** draft (S7 FAQ 2026-09-22; restates locks from `19-hacker.md`, `20-technomancer.md`, `22-the-veil.md` §C3, `17-elementalist.md`, `18-street-priest.md` — this chapter adds no new numbers)
-**Sources:** `docs/raw/19-hacker.md` (Agent bands), `docs/raw/20-technomancer.md` (sprite bands), `docs/raw/22-the-veil.md` §C3 Summon Entities (LOCKED 2026-09-18), `docs/raw/17-elementalist.md` (elementals), `docs/raw/18-street-priest.md` (Invoke the Pact), `docs/raw/21-the-wire.md` (Constructs Console, Lock A)
-
 ---
 
 ## What this chapter covers
 
 Four classes put a second body on the board: the **Hacker** compiles **Agents**, the **Technomancer** compiles **sprites**, the **Elementalist** binds **elementals**, and the **Street Priest** invokes **spirits**. They all answer the same three questions at the table — *when does it act, what are its hit points, and when does it go away* — and they answer them two different ways.
 
-This is the short version, written to be read mid-fight. The full rules stay in the class chapters and in `22-the-veil.md` §C3; nothing here overrides them.
+This is the short version, written to be read mid-fight. The full rules stay in the class chapters and in **The Veil** (`22`) §C3; nothing here overrides them.
 
 **The one thing to remember.** An **extension** acts on *your* turn and costs you nothing extra to run. An **independent** construct takes *its own* turn in the round. Everything else is detail.
 
@@ -23,7 +20,7 @@ Sprites (Technomancer) and Agents (Hacker) run the **same hybrid band ladder**, 
 |---|---|---|
 | **Minor (extension)** | 1–3 | On **your** turn, as an extension of you. **No separate initiative.** |
 | **Intermediate (commanded)** | 4–7 | On **its own turn** — but only in a round where you spend a **maneuver** to command it. No command that round, no turn that round. |
-| **Advanced (independent)** | 8–10 | On **its own turn, every round**, like any other creature in the encounter (`04-combat.md`). No command needed. |
+| **Advanced (independent)** | 8–10 | On **its own turn, every round**, like any other creature in the encounter (**Combat**, `04`). No command needed. |
 
 You do not choose your band, and you cannot buy up into it early. A 3rd-level Technomancer's sprite is minor; a 4th-level Technomancer's sprite is intermediate the next time it compiles.
 
@@ -42,7 +39,7 @@ At **8th level and up** you stop paying this tax: advanced constructs act every 
 
 **Minor (extension):** there is no "before or after" — they act *inside* your turn, on your intent.
 
-**Intermediate and advanced:** they are their own figures on the shared round (`04-combat.md`), so they take their own turn wherever the round puts them. The shipped sprite and Agent Actors each carry **one turn per round**.
+**Intermediate and advanced:** they are their own figures on the shared round (**Combat**, `04`), so they take their own turn wherever the round puts them. The shipped sprite and Agent Actors each carry **one turn per round**.
 
 ### How many can I have out at once?
 
@@ -56,7 +53,7 @@ Elementalists cap at **2 bound non-companion elementals**; a new bind releases t
 
 **Stamina.** There is no separate "pet HP" unit anywhere in Ghostwire. Sprites, Agents, elementals, and **independent** spirits each have an ordinary **Stamina** pool, take damage against it, and drop at **0**.
 
-**Extension spirits have no Stamina track of their own** in RAW. If your table wants a number on the token, `22-the-veil.md` §C3 gives one as a convenience (**20 + Persona × level**), and the Director may simply treat the extension as untargetable instead.
+**Extension spirits have no Stamina track of their own** in RAW. If your table wants a number on the token, **The Veil** (`22`) §C3 gives one as a convenience (**20 + Persona × level**), and the Director may simply treat the extension as untargetable instead.
 
 Actual formulas live in the class chapters: sprite and Agent Stamina is **archetype base + (Logic × Level)**, elementals are **rank base + (Logic × Level)**, independent spirits are **30 + (Persona × Level)**.
 
@@ -68,7 +65,7 @@ Dismissing is cheap on purpose: **Decompile** is a **free maneuver** for one con
 
 ### Does my Street Priest spirit get its own turn?
 
-It depends entirely on the **Invoke the Pact** result (`18-street-priest.md`):
+It depends entirely on the **Invoke the Pact** result (**The Street Priest**, `18`):
 
 - **middle (12–16) — extension form.** The spirit acts **on your turn**, as an extension of your own action economy. No turn of its own, no Stamina track of its own, no sustain cost. Lasts until end of encounter or until you release it.
 - **high (17+) — independent form.** The spirit becomes **its own figure with its own turn** on the shared round, with its own Stamina. Sustaining it costs **Persistent 2** (−4 Conviction per turn).
@@ -78,7 +75,7 @@ Spirit strike is **4 / 7 / 10 + Persona** (holy or corruption, by pact) in **bot
 
 ### Does my elemental get its own turn?
 
-Same two forms, chosen by investment rather than by roll (`17-elementalist.md`):
+Same two forms, chosen by investment rather than by roll (**The Elementalist**, `17`):
 
 - **Extension** (the early/low-investment shape, and every signature companion): acts **on your turn**. **Persistent 2** (−4 Essence per turn).
 - **Independent** (properly bound, higher echelons): **its own figure and its own turn** on the shared round. **Persistent 4** (−8 Essence per turn).
@@ -91,7 +88,7 @@ Bind unlocks: **Rank 1 from 1st level, Rank 2 from 5th, Rank 3 from 7th**. The u
 
 They happen to share the band ladder, the cap ladder, and the Stamina lock. That is the whole overlap.
 
-A Hacker's **Watchdog Agent** is also not **Watchdog ICE** — the ICE is opposition sitting on a node (`21-the-wire.md`, `25-opposition.md`); the Agent is your own compiled screen.
+A Hacker's **Watchdog Agent** is also not **Watchdog ICE** — the ICE is opposition sitting on a node (**The Wire** (`21`), **Opposition** (`25`)); the Agent is your own compiled screen.
 
 ### Can I compile while Linked?
 
@@ -113,7 +110,7 @@ Extension spirits are a separate case: the Director may simply rule them untarge
 
 ### What about the pets the ritual chapter mentions?
 
-Ritual Workings (`22-the-veil.md`) never spend Essence, Conviction, or Resonance, and most ritual entities are **not** encounter summons. When one does end up in a fight, the card says whether it fights as an **extension** or as an **independent** figure, and it then uses the §C3 Summon Entities numbers as its floor. Stay inside the bound-count caps unless the Director agrees.
+Ritual Workings (**The Veil**, `22`) never spend Essence, Conviction, or Resonance, and most ritual entities are **not** encounter summons. When one does end up in a fight, the card says whether it fights as an **extension** or as an **independent** figure, and it then uses the §C3 Summon Entities numbers as its floor. Stay inside the bound-count caps unless the Director agrees.
 
 ## Director note
 
@@ -123,7 +120,7 @@ Ritual Workings (`22-the-veil.md`) never spend Essence, Conviction, or Resonance
 
 **Two rulings worth making early.** First, whether extension spirits and extension elementals are targetable at all (RAW gives them no pool — untargetable is the clean default). Second, what a **low (≤11)** compile misfire looks like at your table, since that one is explicitly your call.
 
-**Rank 2+ strike ladders and defense stamps are deferred** (`22-the-veil.md` §C3). Use the printed Rank 1 / companion / spirit bands and your own judgment above them; don't invent a new ladder mid-session.
+**Rank 2+ strike ladders and defense stamps are deferred** (**The Veil** (`22`) §C3). Use the printed Rank 1 / companion / spirit bands and your own judgment above them; don't invent a new ladder mid-session.
 
 > **In Foundry**
 > Open the **Wired Console** from the Token scene-control tools (network icon). The **Constructs** pane is the live roster, separate from Connections / Nodes. **Use Compile Sprite** (Technomancer) or **Compile Agent** (Hacker) from the Abilities tab to drop the matching Summons Actor beside you; at cap, Use commands the roster instead of compiling another. Elementalist and Street Priest summons spawn linked Actors from the **Summons & Machines** pack — open the summon ability's Item sheet for the roster, manual Summon / Dismiss, and per-pet dismiss. Decompile, 0 Stamina, or end of encounter removes the token and the world Actor.

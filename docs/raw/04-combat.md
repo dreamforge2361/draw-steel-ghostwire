@@ -1,7 +1,5 @@
 # Combat
 
-**RAW status:** draft (Stage 3 fill 2026-09-18)  
-**Sources:** class chapters (heroic resources), `docs/rulebook/10-kits.md`, `docs/masters/GHOSTWIRE_GEAR_MASTER.md` (armor as Stamina), `docs/rulebook/12-chrome.md`, `docs/rulebook/09-species.md`, `docs/raw/05-ancestries.md`, `docs/raw/08-kits-gear-wealth.md`, `docs/raw/09-chrome-body-integrity.md`, `docs/raw/21-the-wire.md`, `docs/raw/23-machines.md`, `docs/directors/equipment-use-abilities.md` (B49 / B44c)  
 **Engine:** Ghostwire combat procedures in this chapter. Playable without a separate rulebook.
 
 ---
@@ -96,11 +94,11 @@ Ghostwire heroes do **not** lean on generic Melee Free Strike / Ranged Free Stri
 ### What you use instead
 
 1. **Class and kit abilities** — signatures, heroics, and doctrine strikes printed in `12`–`20` and kit text (`08`).
-2. **Weapon use-abilities (B49)** — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as **Fire Chatterbox** or **Strike with Monoblade**. That ability is free-strike-*shaped* (category, keywords, kit bonus hooks) but carries **that weapon’s** range band and damage. Removing the weapon removes the ability.
+2. **Weapon use-abilities** — when a weapon treasure is on a hero, the Ghostwire module spawns a linked ability such as **Fire Chatterbox** or **Strike with Monoblade**. That ability is free-strike-*shaped* (category, keywords, kit bonus hooks) but carries **that weapon’s** range band and damage. Removing the weapon removes the ability.
 3. **Improvised fallback** — no qualifying kit weapon in hand means class weapon abilities still work, but **kit bonuses and kit signature weapon riders do not** (`08`). Bare fists, a pipe, or a grabbed pistol that isn’t your kit piece are improvised.
 
 > **In Foundry**
-> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use the Foundry **combat tracker** for turn order. Owned Ghostwire weapons spawn sheet abilities named **Fire {weapon}** or **Strike with {weapon}** (B49) — roll those, not generic free strikes. The module **strips** stock Melee/Ranged Free Strike from heroes and NPCs (B44c) so sheets stay clean. Ability SFX may play from the chat card when you fire.
+> Enable **Draw Steel - Ghostwire Build** on a compatible Foundry world. Use the Foundry **combat tracker** for turn order. Owned Ghostwire weapons spawn sheet abilities named **Fire {weapon}** or **Strike with {weapon}** — roll those, not generic free strikes. The module **strips** stock Melee/Ranged Free Strike from heroes and NPCs so sheets stay clean. Ability SFX may play from the chat card when you fire.
 
 Table fiction and class text may still say “free strike” when an ability *grants* one (Commander Overwatch, Scout decoys, hybrid Changer +1 on melee free-strike-shaped attacks, and so on). In Foundry play, resolve those grants with a weapon use-ability, an improvised strike the Director allows, or the ability’s own printed attack — not by re-adding the stripped generics.
 
@@ -125,13 +123,13 @@ AP is a gear note, not a damage type.
 Combat uses a square grid in meatspace unless the Director switches to theater-of-mind for a chase or bar brawl.
 
 - **Melee** reach is usually adjacent (1 square) unless an ability or weapon says otherwise.
-- **Ranged** abilities and B49 weapon use-abilities print a distance (Ranged 5, 10, 20, …). Kit bonuses may extend distance on abilities that carry the right keywords (`08`).
+- **Ranged** abilities and weapon use-abilities print a distance (Ranged 5, 10, 20, …). Kit bonuses may extend distance on abilities that carry the right keywords (`08`).
 - **Areas** (burst, cube, line, wall) count squares from the origin the ability names. Ghostwire Optics / Tech / Chrome keywords do not change how squares are counted.
 - **Line of effect:** you need an unblocked path to the target. Solid walls stop it; windows, gratings, and neon do not unless the Director says the shot is impossible.
 - **Cover:** if a barrier blocks part of the line from attacker to target, the target has **cover** — the attacker takes a **bane** on the strike. Street clutter — cars, drones, neon pillars — is ordinary cover unless a Wire Overlay or Optics ability says it isn’t.
 - **Concealment:** you cannot be seen clearly (smoke, dark, Overlay glare). Strikes against you take a **bane**; you may attempt Hide (`03`).
 - **Flanking:** if two allies stand on opposite sides of a target (adjacent, facing through the target), melee strikes against that target gain an **edge**.
-  Opposite sides means a straight line through the target: north–south, east–west, or either diagonal. Two allies crowding the same corner are not flanking. A creature that “can’t be flanked” (Mutant **Prehensile Mutation**, and anything else that prints the line) never grants that edge, and a body that is unconscious, defeated, or **meat-inert** (`21`) is not holding a side. Ranged strikes never gain the flanking edge. In Foundry this is detected from token positions automatically — see `docs/directors/f14-flanking.md`.
+  Opposite sides means a straight line through the target: north–south, east–west, or either diagonal. Two allies crowding the same corner are not flanking. A creature that “can’t be flanked” (Mutant **Prehensile Mutation**, and anything else that prints the line) never grants that edge, and a body that is unconscious, defeated, or **meat-inert** (`21`) is not holding a side. Ranged strikes never gain the flanking edge. In Foundry this is detected from token positions automatically.
 - **Forced movement** (push, pull, slide) moves the target the printed number of squares. **Stability** reduces forced movement by that many squares (minimum 0). If leftover movement would go through a solid wall, the target stops unless the ability says they break through.
 - **Wire distances** are topology and node ranges, not street squares — see `21`. A Jacked In body does not walk the grid while the mind is in the Wire.
 
@@ -245,7 +243,7 @@ Allies can **stabilize** them (a Medicine test, a printed heal, or Catch Breath 
 
 **What Crisis is not.** It is not organic dying saves. It is not chrome Suppressed / Damaged / Destroyed applied to the Cyborg as a whole (`09`) — Cascade is the only row that touches living Chrome at all, and it does so through the ordinary chrome track. It is not a Body Integrity debit, and it never deletes an Item.
 
-In Foundry the severity table ships as the **Cyborg System Crisis** RollTable in the Ghostwire encounters compendium; see `docs/directors/f15-cyborg-system-crisis.md`.
+In Foundry the severity table ships as the **Cyborg System Crisis** RollTable in the Ghostwire encounters compendium.
 
 ### Revenants — inert
 
@@ -297,4 +295,3 @@ If the crew Jacked out mid-fight, resolve whether bodies left behind were secure
 | Wire boards and biofeedback | `21` |
 | Drones / vehicles | `23` |
 | Opposition / Malice | `25` |
-| Foundry free-strike strip + weapon Fire/Use | B44c / B49 (`docs/directors/equipment-use-abilities.md`) |

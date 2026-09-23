@@ -1,10 +1,9 @@
 # Glossary of Slang & Setting Jargon
 
-**RAW status:** draft (B77, 2026-09-19)  
 **Print:** Appendix A — back-of-book  
 **Audience:** players and Directors who need street talk without hunting the lore chapters.
 
-This appendix is **setting slang and jargon**, not the rules glossary. Rules terms (Power Roll, echelon, Body Integrity, Trace Alert, and so on) stay in print Ch 0 (`docs/raw/00-front-matter.md`). If a word is both slang and a rules keyword, the rules chapter wins for procedure; this page wins for flavor.
+This appendix is **setting slang and jargon**, not the rules glossary. Rules terms (Power Roll, echelon, Body Integrity, Trace Alert, and so on) stay in print Ch 0. If a word is both slang and a rules keyword, the rules chapter wins for procedure; this page wins for flavor.
 
 ---
 
@@ -147,7 +146,7 @@ Older drafts sometimes said *edgerunner*. That word still appears in harvested l
 
 ## The Twelve (megacorp tickers)
 
-Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`. Charter Age seated **the Ten**; current play uses **the Twelve**.
+Street and Director shorthand. Charter Age seated **the Ten**; current play uses **the Twelve**.
 
 | Ticker | Conglomerate |
 |---|---|
@@ -179,12 +178,12 @@ Street and Director shorthand. Full lock: `docs/rulebook/MEGACORP-TICKERS.md`. C
 | Term | Meaning |
 |---|---|
 | **Hands Off** / **Actuator Ban** | Twelve compact: AI software legal; AI sole control of kinetic hardware restricted. Starting cracked fence — not the bot apocalypse yet. Lore: L5. |
-| **VOIDMARK** / **the Mark** | Leash-slipped Wired super-AI (MER Blacklight origin). Sovereign node-state — not a Chair of the Twelve. Cold-neutral; anti-Nullspace; never safe. Lore: L4. Foundry chat persona (B82/B89). |
+| **VOIDMARK** / **the Mark** | Leash-slipped Wired super-AI (MER Blacklight origin). Sovereign node-state — not a Chair of the Twelve. Cold-neutral; anti-Nullspace; never safe. Lore: L4. Foundry chat persona. |
 
 ## See also
 
-- Rules glossary and abbreviations: print Ch 0 / `docs/raw/00-front-matter.md`
-- How to Play for session shape and safety: `01-how-to-play.md`
+- Rules glossary and abbreviations: print Ch 0
+- How to Play for session shape and safety: **How to Play** (`01`)
 - Art credit: all Ghostwire artwork is AI-generated (Ghostwire AI) — print credits
 
 > **In Foundry:** This appendix is manuscript-only for now. Journal regen (deferred) can mirror it later as a Handbook page.

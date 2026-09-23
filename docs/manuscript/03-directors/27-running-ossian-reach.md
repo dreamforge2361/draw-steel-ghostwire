@@ -1,9 +1,7 @@
 # Chapter 27 — Running Ossian Reach
 
-**Status:** draft (Stage 3 pointer fill / B73, 2026-09-19)  
-**TOC:** `docs/rulebook/TOC-PROPOSAL.md` Part V Ch 27  
 **Print:** pointer chapter — **no lore reprint**, no bestiary dump, no district gazetteer  
-**Points to:** Reach Handbook (`docs/setting/reach-handbook/` · Foundry pack `reach-handbook`) · Wired Flats gazetteer (`docs/setting/wired-flats-gazetteer.md` · pack `wired-flats`) · L3 street color (`docs/manuscript/01-lore/L3-ossian-reach-color.md`) · Opposition RAW (`25`) · Lifestyle (`26`) · Wire (`21`)
+**Points to:** the Reach Handbook and Wired Flats gazetteer (Foundry packs `reach-handbook` / `wired-flats`) · L3 street color · Opposition (`25`) · Lifestyle (`26`) · Wire (`21`)
 
 ---
 
@@ -13,17 +11,17 @@ Ossian Reach is the **default home hive** unless the table names another city. T
 
 Players do not need this chapter to make a runner. Directors need it when the question is “where are we, who calls, and which book do I open?”
 
-If a rule and a gazetteer sentence disagree, **RAW wins** (`docs/raw/`). Gazetteers win for place names, fixtures, and street color.
+If a rule and a gazetteer sentence disagree, **the rules chapters win**. Gazetteers win for place names, fixtures, and street color.
 
 ---
 
 ## What this chapter is not
 
 - **Not a gazetteer.** District writeups, NPC biographies, critter lore, and black-water fiction stay in the Reach Handbook, L3, and the Wired Flats journal. Do not paste them here.
-- **Not a bestiary.** Street-fight budget, reskin doctrine, Malice, and Trace Alert live in print Ch 26 (`25-opposition.md`). Actors live in **Ghostwire Bestiary**.
+- **Not a bestiary.** Street-fight budget, reskin doctrine, Malice, and Trace Alert live in print Ch 26 (**Opposition**, `25`). Actors live in **Ghostwire Bestiary**.
 - **Not a second Wire chapter.** Node Rating, connection states (Disconnected / Linked / Overlay / Jacked In), and Trace Alert defaults stay in `21`. The Flats matrix gazetteer is setting, not a second Matrix engine.
-- **Not Ashenreach depth.** The sister hive is a named rival on the regional map (`docs/setting/ashenreach.md`). One caravan or corp-chess hook is enough for v1.
-- **Not a Foundry manual.** Click-notes sit in the sidebar below. Director UI essays stay in `docs/directors/`.
+- **Not Ashenreach depth.** The sister hive is a named rival on the regional map. One caravan or corp-chess hook is enough for v1.
+- **Not a Foundry manual.** Click-notes sit in the sidebar below; nothing here replaces the module's own UI.
 
 ---
 
@@ -33,16 +31,16 @@ Open **one** of these when you need a fact. Do not copy the page into your notes
 
 | Need | Open | Do not |
 |---|---|---|
-| Physical place, district vibe, named fixture, map plate | **Ghostwire — Ossian Reach Handbook** (`reach-handbook`) or `docs/setting/reach-handbook/` | Reprint the chapter in RAW or this pointer |
-| Matrix nodes, Grid/Barrier, district master hosts, POI swarm | **Ghostwire — The Wired: Flats** (`wired-flats`) or `docs/setting/wired-flats-gazetteer.md` | Invent a second Node Rating ladder |
+| Physical place, district vibe, named fixture, map plate | **Ghostwire — Ossian Reach Handbook** (`reach-handbook`) | Reprint the chapter in RAW or this pointer |
+| Matrix nodes, Grid/Barrier, district master hosts, POI swarm | **Ghostwire — The Wired: Flats** (`wired-flats`) | Invent a second Node Rating ladder |
 | Street color already harvested for print (Flats rain, vertical, gangs as sketches) | Manuscript **L3** | Treat L3 as the full Handbook |
 | Cosmology, Ten seats, Founding, Chair politics | Manuscript **L1** | Dump Book One into a session brief |
 | Street vehicles (hover / hauler / VTOL) | Manuscript **L1** › Vehicles & Transit · Handbook **Life on the Flats** · Item/Actor **Lane-Hopper**, **Star-Chopper**, **Bulldog** | Invent tire sedans as everyday POVs. Do not implement Rideable yet (top-down seats are a future pass). |
 | Conglomerate service chassis (AEQ / LAZ) | Vehicles pack + Summons Actors **Seal Cruiser**, **Writ VTOL**, **White Door**, **Crash Angel** · RAW `23` / `16-vehicles` inventory | Invent a second police/ambulance catalog. Twelve Conglomerates lore (AEQ Council-only, LAZ Lifestyle extract) is a separate pass — names here are the cross-link. |
 | Peoples as fiction | Manuscript **L2** — mechanics stay in `05` | |
 | Fight math, Malice, two-board cuts | Print Ch 26 / `25` | Paste Actor biographies |
-| Living-city texture (mostly non-combat) | **Ghostwire Reach Events** (`encounters` pack, B48) | Treat every row as a fight |
-| A whole job when prep is thin | Token controls › **Run Generator** (B39) | Let the generator overwrite a planned score |
+| Living-city texture (mostly non-combat) | **Ghostwire Reach Events** (`encounters` pack) | Treat every row as a fight |
+| A whole job when prep is thin | Token controls › **Run Generator** | Let the generator overwrite a planned score |
 | Between-run ¥, rest, Medic bag, projects | Print Ch 10 / `26` | Invent a second upkeep table |
 | Shared engine (talk, tests, combat) | Print Ch 1–4 | |
 
@@ -123,10 +121,9 @@ Quiet Floor / default Ghostwire cadence — **do not reprint full tables here**:
 
 | Topic | Open |
 |---|---|
-| Victories dual use · XP thresholds (5 / 8) · no auto-level on job-complete · short stop vs full respite | RAW `24-advancement.md` |
-| Lifestyle upkeep only on full respite · LAZ tiers | RAW `26-lifestyle-downtime.md` |
-| Payday `U + G + ~25%` by level · L6+ half favor | RAW `08-kits-gear-wealth.md` |
-| Campaign worked example (G table, session math) | `docs/directors/campaigns/QUIET-FLOOR-XP-NUYEN-PACING.md` |
+| Victories dual use · XP thresholds (5 / 8) · no auto-level on job-complete · short stop vs full respite | RAW **Advancement** (`24`) |
+| Lifestyle upkeep only on full respite · LAZ tiers | RAW **Lifestyle & Downtime** (`26`) |
+| Payday `U + G + ~25%` by level · L6+ half favor | RAW **Kits, Gear & Wealth** (`08`) |
 
 **Payouts** follow the integrated level-band table in `08` (not only the old street/district/corp labels). Lifestyle burn happens **after** payday on a **full respite** (`26`). Do not pay character power in nuyen.
 
@@ -138,7 +135,7 @@ Quiet Floor / default Ghostwire cadence — **do not reprint full tables here**:
 Build the fight in Ch 26: budget → threat shape → dress the spine → boards and clocks. Then:
 
 - Match opposition **level** to the crew’s echelon (`24`). Flats street crews are Echelon 1 weather; Crown response is not.
-- Convert leftover **T5–T1** Handbook language with the tables in `24` (foes, gear, nodes). Never say “tier” to players.
+- Never say “tier” to players — Ghostwire progression is **level** and **echelon**.
 - Draw a **Reach Event** when you want the city to breathe. Most rows are flavor or RP. Combat rows are rare on purpose.
 - **Escape is a win condition.** Extraction clocks belong on Reach jobs. The hive always has another squad if you linger for the last minion.
 
@@ -165,7 +162,7 @@ If the table has no campaign yet, do not write a novel. Run this skeleton:
 After that, the crew has turf, a patron, and a reason to care which rung they sleep on. That is enough Reach to print.
 
 > **In Foundry**
-> Setting journals: **Ghostwire — Ossian Reach Handbook** (`reach-handbook`, players Observer) — district journals open with a **District Map** page (B72 labeled WebP). **Ghostwire — The Wired: Flats** (`wired-flats`) is the matrix gazetteer; do not treat its E1–E4 ICE posture as hero echelon. Living-city rolls: **Ghostwire Reach Events** (`encounters`, GM-only). Job seed: Token controls › **Run Generator** (Directors only) → optional Journal in **Ghostwire Runs**. Fights: **Ghostwire Bestiary** + stock combat tracker. Wire: **Wired Console** for Node Rating, Integrity, Trace Alert (`21`). District battle-map files live under `assets/maps/districts/` (clean + labeled); Scenes are not auto-created — drop a WebP onto a Scene when you need a play surface.
+> Setting journals: **Ghostwire — Ossian Reach Handbook** (`reach-handbook`, players Observer) — district journals open with a **District Map** page (labeled WebP). **Ghostwire — The Wired: Flats** (`wired-flats`) is the matrix gazetteer; do not treat its E1–E4 ICE posture as hero echelon. Living-city rolls: **Ghostwire Reach Events** (`encounters`, GM-only). Job seed: Token controls › **Run Generator** (Directors only) → optional Journal in **Ghostwire Runs**. Fights: **Ghostwire Bestiary** + stock combat tracker. Wire: **Wired Console** for Node Rating, Integrity, Trace Alert (`21`). District battle-map files live under `assets/maps/districts/` (clean + labeled); Scenes are not auto-created — drop a WebP onto a Scene when you need a play surface.
 
 ---
 
@@ -174,8 +171,8 @@ After that, the crew has turf, a patron, and a reason to care which rung they sl
 - Do not reprint Handbook, Wired Flats, or L3 fiction into RAW or this chapter.
 - Do not invent chrome ¥ ladders, Lifestyle upkeep, or summon Rank 2+ strike numbers here.
 - Do not run every session as “the whole hive.” One district, one rung, one job.
-- Do not treat B48 as an auto-spawn combat engine.
+- Do not treat the Reach Events tables as an auto-spawn combat engine.
 - Do not regenerate Foundry journals to satisfy this pointer — journals stay held until the pre-PDF pass.
 - Do not start the Incursion, the Sunlit Chair, or Ashenreach as session one unless the table asked for that scale.
 
-**Cross-links:** How to Play `01` · Opposition `25` · Lifestyle `26` · Advancement `24` · Wire `21` · Machines `23` · L3 color · `docs/setting/reach-handbook/` · `docs/setting/wired-flats-gazetteer.md` · `docs/setting/ashenreach.md` · `docs/directors/run-generator.md` · `docs/directors/random-encounter-tables.md`.
+**Cross-links:** How to Play `01` · Opposition `25` · Lifestyle `26` · Advancement `24` · Wire `21` · Machines `23` · L3 color · the Reach Handbook and Wired Flats setting journals.

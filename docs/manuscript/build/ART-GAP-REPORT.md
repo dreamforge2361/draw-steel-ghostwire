@@ -1,6 +1,6 @@
 # Ghostwire print-art gap report
 
-**Generated:** 2026-09-23T01:12:13.370Z
+**Generated:** 2026-09-23T20:52:44.231Z
 **Tool:** `tools/inject-print-art.mjs`
 **Placement map:** `docs/manuscript/print-art/ART-PLACEMENT.yml`
 **Credit:** Ghostwire AI (AI-generated) (B76). No external IP name-checks (B78/B83).
