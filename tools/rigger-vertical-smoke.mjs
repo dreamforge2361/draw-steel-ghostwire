@@ -127,7 +127,10 @@ globalThis.ui = { notifications: { warn() {}, info() {}, error() {} } };
 globalThis.fromUuidSync = uuid => globalThis.game.actors.get(String(uuid).replace(/^Actor\./, "")) ?? null;
 globalThis.foundry = { utils: { getProperty: () => undefined, setProperty: () => {} } };
 
-const { fleetSizeCap, fieldedMachineCount, isMachineFielded, machineOwner } = await import("../scripts/machines.mjs");
+const {
+  fleetSizeCap, fieldedMachineCount, isMachineFielded, machineOwner,
+  applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
+} = await import("../scripts/machines.mjs");
 
 const drone = (deployedUuid = null) => ({ vehicle: { drone: true, scale: "" }, deployedUuid });
 
@@ -193,6 +196,102 @@ if (existsSync(join(baseDir, "safehouse-beacon.json"))) {
   note(Number(v.integrity ?? v.stamina) > 0, "Safehouse Beacon has Integrity");
   note(Number(v.price) > 0, "Safehouse Beacon has ¥");
 }
+
+/* ------------------------------------------------------------------ */
+/*  0.3.109 — Scorch Marks on machine tokens                           */
+/* ------------------------------------------------------------------ */
+note(atLeast(module.version, "0.3.109"), `module.json ≥ 0.3.109 (got ${module.version})`);
+note(machinesSrc.includes("applyMachineTokenDefaults(data.prototypeToken"), "Deploy stamps Scorch on the new Actor prototype");
+note(machinesSrc.includes("applyMachineTokenDefaults(tokenData)"), "Deploy stamps Scorch on the placed token");
+note(machinesSrc.includes("MACHINE_BLOODSPLAT_TYPE"), "Deploy forces bloodsplat-type scorch beside the token-size update");
+note(!JSON.stringify(module.relationships ?? {}).includes("monks-bloodsplats"), "monks-bloodsplats is not a hard dependency");
+
+const kept = applyMachineTokenDefaults({
+  flags: {
+    "monks-bloodsplats": { "bloodsplat-colour": "#ff00aa", "bloodsplat-size": 2, "bloodsplat-type": "blood" },
+    "draw-steel-ghostwire": { kind: "vehicle" },
+  },
+});
+note(kept.flags["monks-bloodsplats"]["bloodsplat-type"] === "scorch", "applyMachineTokenDefaults forces scorch");
+note(kept.flags["monks-bloodsplats"]["bloodsplat-colour"] === "#ff00aa", "existing bloodsplat colour is kept");
+note(kept.flags["monks-bloodsplats"]["bloodsplat-size"] === 2, "existing bloodsplat size is kept");
+note(kept.flags["draw-steel-ghostwire"].kind === "vehicle", "other flag scopes are kept");
+const merged = [];
+globalThis.foundry.utils.mergeObject = (target, patch) => {
+  merged.push(patch);
+  target.flags = {
+    ...(target.flags ?? {}),
+    "monks-bloodsplats": {
+      ...(target.flags?.["monks-bloodsplats"] ?? {}),
+      ...(patch.flags?.["monks-bloodsplats"] ?? {}),
+    },
+  };
+  return target;
+};
+const viaMerge = applyMachineTokenDefaults({
+  flags: { "monks-bloodsplats": { "bloodsplat-index": 3, "bloodsplat-type": "blood" } },
+});
+note(merged.length === 1, "applyMachineTokenDefaults uses foundry.utils.mergeObject when present");
+note(viaMerge.flags["monks-bloodsplats"]["bloodsplat-type"] === "scorch"
+  && viaMerge.flags["monks-bloodsplats"]["bloodsplat-index"] === 3,
+  "mergeObject path keeps index and sets scorch");
+delete globalThis.foundry.utils.mergeObject;
+
+const scorchKey = "prototypeToken.flags.monks-bloodsplats.bloodsplat-type";
+const droneActor = { flags: { [MODULE_ID]: { kind: "drone" } }, prototypeToken: { flags: {} } };
+const vehicleActor = { flags: { [MODULE_ID]: { kind: "vehicle" } }, prototypeToken: { flags: {} } };
+const baseActor = { flags: { [MODULE_ID]: { machine: { kind: "baseAsset" } } }, prototypeToken: { flags: {} } };
+const hero = { type: "hero", flags: {}, prototypeToken: { flags: {} } };
+const punk = { type: "npc", flags: { [MODULE_ID]: { kind: "rival" } }, prototypeToken: { flags: {} } };
+note(actorBloodsplatUpdate(droneActor)?.[scorchKey] === "scorch", "drone prototype patch is scorch");
+note(actorBloodsplatUpdate(vehicleActor)?.[scorchKey] === "scorch", "vehicle prototype patch is scorch");
+note(actorBloodsplatUpdate(baseActor)?.[scorchKey] === "scorch", "baseAsset prototype patch is scorch");
+note(actorBloodsplatUpdate(hero) === null, "hero bloodsplat is left alone");
+note(actorBloodsplatUpdate(punk) === null, "living NPC bloodsplat is left alone");
+note(actorBloodsplatUpdate({
+  flags: { [MODULE_ID]: { kind: "drone" } },
+  prototypeToken: { flags: { "monks-bloodsplats": { "bloodsplat-type": "scorch", "bloodsplat-colour": "#111" } } },
+}) === null, "already-scorch drone is a no-op");
+note(tokenBloodsplatUpdate({ flags: {} }, droneActor)?.["flags.monks-bloodsplats.bloodsplat-type"] === "scorch",
+  "placed drone token patch is scorch");
+note(tokenBloodsplatUpdate({ flags: { "monks-bloodsplats": { "bloodsplat-colour": "#111" } } }, vehicleActor)
+  ?.["flags.monks-bloodsplats.bloodsplat-type"] === "scorch", "placed vehicle token patch sets type only");
+note(tokenBloodsplatUpdate({ flags: {} }, hero) === null, "placed hero token is left alone");
+
+const walk = (dir, out = []) => {
+  for (const name of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, name.name);
+    if (name.isDirectory()) walk(path, out);
+    else if (name.name.endsWith(".json") && name.name !== "_folder.json") out.push(path);
+  }
+  return out;
+};
+const machineKinds = new Set(["drone", "vehicle", "baseAsset"]);
+let machineActors = 0;
+let machineMiss = 0;
+let otherActors = 0;
+let otherScorch = 0;
+for (const file of walk("src/packs")) {
+  const doc = readJson(file);
+  if (doc.type !== "npc" && doc.type !== "hero") continue;
+  const kind = doc.flags?.[MODULE_ID]?.kind ?? doc.flags?.[MODULE_ID]?.machine?.kind ?? null;
+  const type = doc.prototypeToken?.flags?.["monks-bloodsplats"]?.["bloodsplat-type"];
+  if (machineKinds.has(kind)) {
+    machineActors += 1;
+    if (type !== "scorch") {
+      machineMiss += 1;
+      note(false, `${file} prototype is Scorch Marks`);
+    }
+  } else {
+    otherActors += 1;
+    if (type === "scorch") {
+      otherScorch += 1;
+      note(false, `${file} is not a machine and stays off Scorch`);
+    }
+  }
+}
+note(machineActors >= 25 && machineMiss === 0, `machine Actor prototypes stamped (got ${machineActors}, missing ${machineMiss})`);
+note(otherActors > 10 && otherScorch === 0, `non-machine Actor prototypes are not Scorch (checked ${otherActors})`);
 
 console.log(ok.join("\n"));
 if (fail.length) {

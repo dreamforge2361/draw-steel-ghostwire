@@ -62,6 +62,102 @@ export function machineTokenSize(band, item = null) {
   }
 }
 
+/** Monk's Bloodsplats damage indicator for constructs. Harmless if that module is disabled. */
+export const MACHINE_BLOODSPLAT_SCOPE = "monks-bloodsplats";
+export const MACHINE_BLOODSPLAT_TYPE = "scorch";
+/** One-time world pass so machines deployed before 0.3.109 stop using blood. */
+export const MACHINE_SCORCH_SETTING = "machineScorchMigrated";
+
+/** Drone / vehicle / base-asset kind, from the flat flag or the Machine sheet block. */
+export function machineKindOf(doc) {
+  if (!doc) return null;
+  const flags = doc.flags?.[MODULE_ID] ?? {};
+  const fromFlags = flags.kind ?? flags.machine?.kind ?? null;
+  if (fromFlags) return fromFlags;
+  if (typeof doc.getFlag === "function") {
+    return doc.getFlag(MODULE_ID, "kind") ?? doc.getFlag(MODULE_ID, "machine")?.kind ?? null;
+  }
+  return null;
+}
+
+/** True for drone, vehicle, and base-asset Actors. Living heroes and other NPCs are not machines. */
+export function isMachineKindDocument(doc) {
+  return MACHINE_KINDS.includes(machineKindOf(doc));
+}
+
+/**
+ * Stamp Scorch Marks onto a plain prototypeToken or Token data object.
+ * Other monks-bloodsplats keys (colour, size, index) stay.
+ * Uses foundry.utils.mergeObject when Foundry is present.
+ */
+export function applyMachineTokenDefaults(token = {}) {
+  if (!token || typeof token !== "object") return token;
+  const existing = token.flags?.[MACHINE_BLOODSPLAT_SCOPE];
+  const splat = {
+    ...(existing && typeof existing === "object" ? existing : {}),
+    "bloodsplat-type": MACHINE_BLOODSPLAT_TYPE,
+  };
+  const patch = { flags: { [MACHINE_BLOODSPLAT_SCOPE]: splat } };
+  if (globalThis.foundry?.utils?.mergeObject) foundry.utils.mergeObject(token, patch);
+  else {
+    token.flags ??= {};
+    token.flags[MACHINE_BLOODSPLAT_SCOPE] = splat;
+  }
+  return token;
+}
+
+/** Actor update/updateSource patch. Null when this is not a machine, or Scorch is already set. */
+export function actorBloodsplatUpdate(actor) {
+  if (!isMachineKindDocument(actor)) return null;
+  const current = actor?.prototypeToken?.flags?.[MACHINE_BLOODSPLAT_SCOPE]?.["bloodsplat-type"];
+  if (current === MACHINE_BLOODSPLAT_TYPE) return null;
+  return {
+    [`prototypeToken.flags.${MACHINE_BLOODSPLAT_SCOPE}.bloodsplat-type`]: MACHINE_BLOODSPLAT_TYPE,
+  };
+}
+
+/** Placed-token patch. `actor` is the Token's actor when the token itself has no kind. */
+export function tokenBloodsplatUpdate(token, actor) {
+  const subject = actor ?? token?.actor;
+  if (!isMachineKindDocument(subject)) return null;
+  const current = token?.flags?.[MACHINE_BLOODSPLAT_SCOPE]?.["bloodsplat-type"];
+  if (current === MACHINE_BLOODSPLAT_TYPE) return null;
+  return {
+    [`flags.${MACHINE_BLOODSPLAT_SCOPE}.bloodsplat-type`]: MACHINE_BLOODSPLAT_TYPE,
+  };
+}
+
+/** One-time GM pass: existing world machine prototypes and placed tokens get Scorch Marks. */
+export async function migrateMachineScorch() {
+  if (!game.user.isGM) return;
+  if (game.settings.get(MODULE_ID, MACHINE_SCORCH_SETTING)) return;
+
+  let actors = 0;
+  let tokens = 0;
+  for (const actor of game.actors) {
+    const update = actorBloodsplatUpdate(actor);
+    if (!update) continue;
+    await actor.update(update);
+    actors += 1;
+  }
+  for (const scene of game.scenes) {
+    const updates = [];
+    for (const token of scene.tokens) {
+      const update = tokenBloodsplatUpdate(token, token.actor);
+      if (!update) continue;
+      updates.push({ _id: token.id, ...update });
+    }
+    if (updates.length) {
+      await scene.updateEmbeddedDocuments("Token", updates);
+      tokens += updates.length;
+    }
+  }
+  await game.settings.set(MODULE_ID, MACHINE_SCORCH_SETTING, true);
+  if (actors || tokens) {
+    console.log(`${MODULE_ID} | Scorch Marks on ${actors} machine prototype(s) and ${tokens} placed token(s)`);
+  }
+}
+
 
 // Band templates (must match gen-machines.mjs): base Stamina and speed before the Item stamps them.
 const BANDS = {
@@ -526,6 +622,9 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
       installedKits: { armor: null, weaponry: null, others: [] },
     },
   });
+  // Chassis Items have no prototypeToken. Force Scorch here so Deploy never inherits blood
+  // from a band template that predates 0.3.109. Base assets are machines too.
+  applyMachineTokenDefaults(data.prototypeToken ??= {});
   const actor = await Actor.create(data);
   if (!actor) return;
   await addWireKit(actor, { notify: false });
@@ -583,6 +682,7 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
     "system.combat.size.value": tokenSize,
     "prototypeToken.width": tokenSize,
     "prototypeToken.height": tokenSize,
+    [`prototypeToken.flags.${MACHINE_BLOODSPLAT_SCOPE}.bloodsplat-type`]: MACHINE_BLOODSPLAT_TYPE,
   });
   const tokenDocument = await actor.getTokenDocument({
     ...placement(owner, tokenSize),
@@ -590,7 +690,9 @@ export async function deployMachine(item, { owner: ownerOverride = null } = {}) 
     width: tokenSize,
     height: tokenSize,
   });
-  await canvas.scene.createEmbeddedDocuments("Token", [tokenDocument.toObject()]);
+  const tokenData = tokenDocument.toObject();
+  applyMachineTokenDefaults(tokenData);
+  await canvas.scene.createEmbeddedDocuments("Token", [tokenData]);
   // Fielded machine under an on-net owner shows LINKED in the Wired Console.
   if (owner && ["linked", "overlay", "jackedIn"].includes(pilotWiredState(owner))) {
     await actor.toggleStatusEffect(WIRED_STATUS_DEFS.linked.id, { active: true });
@@ -636,6 +738,36 @@ function machineActorOwner(actor) {
 }
 
 export function registerMachines() {
+  game.settings.register(MODULE_ID, MACHINE_SCORCH_SETTING, {
+    scope: "world",
+    config: false,
+    type: Boolean,
+    default: false,
+  });
+
+  // Compendium drag, world create, and Deploy. Heroes and living NPCs are not machine kinds.
+  Hooks.on("preCreateActor", (actor, data, _options, userId) => {
+    if (userId !== game.user.id) return;
+    const gw = {
+      ...(data?.flags?.[MODULE_ID] ?? {}),
+      ...(actor.flags?.[MODULE_ID] ?? {}),
+    };
+    const update = actorBloodsplatUpdate({
+      flags: { [MODULE_ID]: gw },
+      prototypeToken: actor.prototypeToken ?? data.prototypeToken,
+    });
+    if (update) actor.updateSource(update);
+  });
+  Hooks.on("preCreateToken", (token, data, _options, userId) => {
+    if (userId !== game.user.id) return;
+    const actor = token.actor
+      ?? game.actors?.get(token.actorId ?? data.actorId)
+      ?? null;
+    const update = tokenBloodsplatUpdate({ flags: token.flags ?? data.flags }, actor);
+    if (update) token.updateSource(update);
+  });
+  Hooks.once("ready", migrateMachineScorch);
+
   // Hero sheet: right-click a drone or vehicle row (or its ⋮ control) → Deploy / Recall.
   Hooks.on("getDocumentListContextOptions", (app, menuItems) => {
     if (typeof app._getEmbeddedDocument !== "function") return;
@@ -737,6 +869,7 @@ export function registerMachines() {
       staminaAfterArmorChange, staminaBonusFromModData, kitProfile,
       syncMachineStamina, syncMachineMods, activeHostMods, installedHostMods,
       fleetSizeCap, fieldedMachineCount, machineTokenSize, isDeployedMachineActor, hasAnyToken,
+      applyMachineTokenDefaults, actorBloodsplatUpdate, tokenBloodsplatUpdate,
     };
   }
   console.log(`${MODULE_ID} | Machines: Deploy / Recall registered (hero sheet row menu and Item sheet)`);
