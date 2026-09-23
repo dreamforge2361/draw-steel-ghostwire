@@ -9122,6 +9122,10 @@
           "Name": "Kit",
           "Hint": "One Kit (a Merc Operator takes two). The street-band gear that makes it live arrives with it, and costs nothing."
         },
+        "drone": {
+          "Name": "Free drone",
+          "Hint": "Wrench only. Pick one Echelon 1 drone chassis, free — it is a Rigging class perk, not a purchase, so it costs no ¥ at all."
+        },
         "skills": {
           "Name": "Skills",
           "Hint": "Everything People, Background, Profession and class handed over. No wasted duplicates."
@@ -9325,7 +9329,9 @@
           "Kit": "Kit",
           "Wealth": "Wealth",
           "Foot": "No chrome, Taint 0. Everything after this costs something."
-        }
+        },
+        "FreeDrone": "Free Echelon 1 chassis: {drone}.",
+        "NoDrone": "not taken"
       },
       "Warnings": {
         "ChangerLineage": "Changer with no lineage pick. Choose Raven, Rat or Wolf on the sheet.",
@@ -9334,7 +9340,8 @@
         "ResourcesNeedClass": "No class yet — go back and pick one, and these numbers fill themselves in.",
         "ChromeAtChargen": "Chrome is on this sheet. A new runner starts with none — chrome is later, and it costs ¥ and Body Integrity.",
         "TaintNotZero": "Taint is not 0. Every new runner starts Clean.",
-        "IntegrityOff": "Body Integrity is not 20/20. Set it on the sheet's Stats tab."
+        "IntegrityOff": "Body Integrity is not 20/20. Set it on the sheet's Stats tab.",
+        "FreeDroneWaiting": "One free Echelon 1 chassis is still waiting. Take it, or wave it off — it costs nothing either way."
       },
       "ReadOnly": {
         "Completed": "{name} has finished chargen. This is the record, not the build — nothing here writes to the sheet.",
@@ -9350,7 +9357,10 @@
         "NoChrome": "{name} is chrome. A new runner starts with none — that is a purchase for after chargen.",
         "Insufficient": "Not enough ¥ for {name}: it costs {price} and you have {wealth}.",
         "AlreadyComplete": "{name} already finished Chargen. Create a new Hero to run Chargen again.",
-        "NoMods": "Mods stay out of Chargen ({name})."
+        "NoMods": "Mods stay out of Chargen ({name}).",
+        "FreeDroneNotWrench": "The free Echelon 1 chassis is a Rigging perk. {name} is not a Wrench.",
+        "FreeDroneTaken": "{name} already took their free chassis ({drone}). Start over on that step to change it.",
+        "FreeDroneNotE1": "{name} is not an Echelon 1 drone chassis. The free pick is E1 drones only."
       },
       "StartOver": {
         "Label": "Start over",
@@ -9358,6 +9368,22 @@
         "Title": "Start this step over?",
         "Confirm": "Clear the {step} step? Spine Items granted by this step will be removed when possible.",
         "ClassHint": "Class can’t be auto-cleared here — delete it on the sheet, then pick again."
+      },
+      "Drone": {
+        "Hint": "One Echelon 1 chassis, on the house. Rigging gives a Wrench their first machine before the first job — pick the one the runner built in a chop-shop bay.",
+        "FreeHint": "Free. Your ¥5,000 does not move, and this pick is separate from anything the Kit handed over.",
+        "Free": "Free",
+        "Take": "Take it",
+        "Taken": "already yours. The chassis is on the sheet.",
+        "NoDrone": "Skip the free chassis",
+        "EchelonOne": "Echelon 1",
+        "ListPrice": "list",
+        "Empty": "No Echelon 1 drone chassis in the vehicles compendium — rebuild the packs, or ask your Director.",
+        "NotASpend": "Later chassis are bought the ordinary way: ¥ and Availability, in the shop or on the early-spends step.",
+        "Granted": "{name} takes {drone} — free, no ¥ spent.",
+        "CardTitle": "{name} rolls out with {drone}",
+        "CardBody": "A Wrench's first chassis, out of the chop-shop and onto the street. Free — no ¥ changed hands.",
+        "CardFoot": "Rigging class perk at chargen. Every chassis after this one is bought."
       }
     },
     "Locker": {
