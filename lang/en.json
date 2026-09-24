@@ -10030,6 +10030,11 @@
       "Ability": {
         "NoGun": "{ability} fires your own gun, and {actor} is not carrying one that takes ammunition."
       },
+      "RiggedFire": {
+        "NoPlatform": "{actor} has no connected drone or vehicle with turret — Rigged Fire requires a fire platform.",
+        "NoPlatformGun": "{platform} has no gun loaded with ammunition.",
+        "PlatformEmpty": "{platform}'s gun ({gun}) is out of ammunition. Reload the platform first."
+      },
       "NoStackToReturn": "Nowhere to put {count} {type} back — add the stack to the sheet by hand.",
       "Reload": {
         "Name": "Reload",
